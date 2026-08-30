@@ -100,8 +100,9 @@ claim like any other and carries its own provenance:
 
 - **`licence`** (required). Hostable licences — CC0, public domain, CC BY,
   CC BY-SA — get a copy under `data/images/<category>/<slug>/` and a `file`
-  entry; the renderer copies it to `pages/img/`. Anything else (CC BY-NC,
-  ND, unknown) is **link-only**: leave `file` unset. A test enforces this.
+  entry (lowercase extension) plus its `file_sha256`; the renderer copies it
+  to `pages/img/`. Anything else (CC BY-NC, ND, unknown) is **link-only**:
+  leave `file` unset. Tests enforce both.
 - **`attribution`** (required), exactly as the licence demands. For CC BY
   that is author(s) + licence + source.
 - **`taxon_id`** (required) — the organism in the picture, which must already

@@ -525,9 +525,16 @@ classes:
         description: >-
           Filename of the hosted copy under data/images/<category>/<slug>/.
           Omit for licences that forbid hosting (e.g. CC BY-NC); the page then
-          links to `source_url` instead.
+          links to `source_url` instead. Lowercase extension only (png, jpg,
+          jpeg, gif, webp, svg); rename on ingest.
         range: string
         pattern: "^[A-Za-z0-9._-]+\\.(png|jpg|jpeg|gif|webp|svg)$"
+      file_sha256:
+        description: >-
+          SHA-256 of the hosted copy, so a swapped or corrupted file is caught
+          by tests/test_corpus_integrity.py. Required whenever `file` is set.
+        range: string
+        pattern: "^[0-9a-f]{64}$"
       source:
         required: true
         range: ImageSourceEnum

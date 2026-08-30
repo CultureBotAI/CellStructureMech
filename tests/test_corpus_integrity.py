@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 from collections import Counter
 
 from cellstructuremech.validation.write_validated import validate_structure
@@ -122,6 +123,10 @@ def test_hosted_images_have_hostable_licences_and_files(records, repo_root):
                 bad.append(f"{path.name}:{im['image_id']}: hosted under {im['licence']}")
             if not (img_dir / f).is_file():
                 bad.append(f"{path.name}:{im['image_id']}: missing {img_dir / f}")
+                continue
+            digest = hashlib.sha256((img_dir / f).read_bytes()).hexdigest()
+            if im.get("file_sha256") != digest:
+                bad.append(f"{path.name}:{im['image_id']}: file_sha256 {im.get('file_sha256')} != {digest}")
     assert not bad, bad
 
 
@@ -133,7 +138,10 @@ def test_image_files_on_disk_are_all_referenced(records, repo_root):
             if im.get("file"):
                 referenced.add(repo_root / "data" / "images" / path.parent.name / path.stem / im["file"])
     images_root = repo_root / "data" / "images"
-    on_disk = {p for p in images_root.rglob("*") if p.is_file()} if images_root.exists() else set()
+    on_disk = (
+        {p for p in images_root.rglob("*") if p.is_file() and not p.name.startswith(".")}
+        if images_root.exists() else set()
+    )
     orphans = sorted(str(p.relative_to(repo_root)) for p in on_disk - referenced)
     assert not orphans, f"image files not referenced by any record: {orphans}"
 
