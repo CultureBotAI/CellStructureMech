@@ -59,11 +59,11 @@ components:
 - component_id: ssu_proteins
   label: small-subunit ribosomal proteins (uS2–uS21, bS6, bS16, bS18, bS20, bS21)
   component_type: PROTEIN
-  grounding: GO:0003735
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: A paralogue set with no single family term; grounded to the molecular-function
-    term for structural constituent of ribosome until the set is split into per-protein
-    components.
+  grounding_notes: A paralogue set with no single family term. Previously grounded
+    to GO:0003735 (structural constituent of ribosome), a molecular-function term
+    that cannot denote a set of proteins; removed by the id-label gate. Split into
+    per-protein components before grounding.
   stoichiometry: ~21 in Escherichia coli
   essentiality: CONDITIONAL
   role: Stabilise 16S rRNA folding; several are individually dispensable.
@@ -74,10 +74,11 @@ components:
 - component_id: lsu_proteins
   label: large-subunit ribosomal proteins (uL1–uL30, bL9, bL12, bL17…)
   component_type: PROTEIN
-  grounding: GO:0003735
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: As for the small-subunit set — a paralogue set grounded to the
-    molecular-function term pending per-protein components.
+  grounding_notes: A paralogue set with no single family term. Previously grounded
+    to GO:0003735 (structural constituent of ribosome), a molecular-function term
+    that cannot denote a set of proteins; removed by the id-label gate. Split into
+    per-protein components before grounding.
   stoichiometry: ~33 in Escherichia coli
   essentiality: CONDITIONAL
   role: Stabilise 23S/5S rRNA; bL12 stalk recruits translation GTPases.
@@ -128,7 +129,7 @@ functions:
     notes: Schmeing & Ramakrishnan 2009 review how ribosome structures explain decoding,
       peptidyl transfer and translocation.
 - function_id: peptidyl_transferase
-  label: peptidyl transferase activity
+  label: peptidyltransferase activity
   grounding: GO:0000048
   description: Peptide bond formation catalysed by 23S rRNA in the large subunit.
   evidence:
@@ -198,8 +199,9 @@ causal_graphs:
   - node_id: rrna_23s
     label: 23S rRNA peptidyl transferase centre
     node_type: RNA
-    grounding: SO:0000651
     component_ref: rrna_23s
+    description: The peptidyl transferase centre is a region of 23S rRNA (component
+      rrna_23s), not the whole molecule, so it carries no SO grounding of its own.
   - node_id: mrna_codon
     label: mRNA codon
     node_type: RNA
@@ -207,7 +209,7 @@ causal_graphs:
     label: aminoacyl-tRNA
     node_type: RNA
   - node_id: peptide_bond
-    label: peptide bond formation
+    label: peptidyltransferase activity
     node_type: MOLECULAR_FUNCTION
     grounding: GO:0000048
   - node_id: ef_g
@@ -292,4 +294,12 @@ curation_history:
   changes: Added Commons CC0 rendering of PDB 8RD8 (P. urativorans 70S ribosome, cryo-EM,
     DOI:10.1038/s41586-024-07041-8); organism and citation verified via RCSB and Crossref.
     Added P. urativorans to taxonomic_distribution as the imaged organism.
+  llm_assisted: true
+- timestamp: '2026-08-30T05:00:00Z'
+  curator: claude
+  action: FIX_ID_LABEL_FINDINGS
+  changes: 'Vendored id-label gate (#48): removed GO:0003735 from the two ribosomal-protein
+    set components (a molecular-function term cannot ground a protein set); removed
+    SO:0000651 from the peptidyl-transferase-centre node (a part, not the whole 23S
+    rRNA); relabelled GO:0000048 uses to the canonical ''peptidyltransferase activity''.'
   llm_assisted: true

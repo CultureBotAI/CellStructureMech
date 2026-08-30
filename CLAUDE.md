@@ -37,6 +37,9 @@ just render            # regenerate the committed site under pages/
 just docs-stats        # refresh the generated README statistics block
 just new-record ...    # scaffold a record (dry-run by default; --apply to write)
 just source-queue      # the ranked data-source queue and what is unverified in it
+just new-history ...   # scaffold a repository-level history record
+just validate-products # id<->label correspondence gate via OAK (network on first run)
+just vendored-check    # claw-governed files match canon at scripts/.vendored_canon_ref
 ```
 
 `just qc` is authoritative: lint, README statistics, tests, closed-schema
@@ -75,8 +78,20 @@ Verify counts, statuses and identifiers with a live command (`just report`,
   human decision.
 - **Edit templates, not `pages/`.** Change `src/cellstructuremech/templates/`,
   run `just render`, commit the result. `pages/` is checked byte-for-byte.
-- **Do not edit `src/cellstructuremech/schema/mech_shared.yaml`.** Vendored
-  byte-identically across the Mech repos and sha-pinned.
+- **Do not edit claw-governed vendored files here** — `mech_shared.yaml`,
+  `history.yaml`, `scripts/check_vendored_sync.*`,
+  `scripts/validate_id_label_correspondence.py`, `scripts/chem_formula.py`, the
+  vendored `tests/test_*` and `prompts/backlog-loop-goal.md`. They are synced from
+  culturebotai-claw at the commit in `scripts/.vendored_canon_ref` and checked
+  byte-for-byte in CI (`just vendored-check`). Change them in claw and re-sync.
+- **Every curation change also gets a repository-level history record**:
+  `just new-history --kind record --slug <slug> --target-root data/structures/<category> ...`
+  (see history/README.md). One record per hand-curated target or per coherent
+  bulk change; records are append-only. `just validate-history` runs in qc.
+- **`just validate-products`** is the id↔label gate: every (grounding, label)
+  pair must match the ontology via OAK. It found two real modelling errors on
+  adoption. Curator-accepted label residuals go in `conf/id_label_targets.yaml`
+  with a reason; do not relabel a record just to pass.
 - **Record location is derived** from `structure_category` and `label`
   (`scripts/corpus.py`). Move or rename by changing the record and the
   filename together.

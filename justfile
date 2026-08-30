@@ -87,3 +87,41 @@ uniprot-xrefs *args:
 # `just uniprot-proteins data/structures/microcompartment/carboxysome.yaml --taxon 1140 --apply`
 uniprot-proteins record *args:
     uv run python scripts/uniprot_sl.py proteins --record {{record}} {{args}}
+
+# --- claw-governed: curation history, vendored sync, id-label gate ---
+
+# Scaffold a repository-level history record (history/<kind>/<slug>/...). See
+# history/README.md. "$@" not {{args}} — see `set positional-arguments`.
+new-history *args:
+    uv run python scripts/new_history_record.py "$@"
+
+# Validate one history record, or a directory of them, against the VENDORED
+# schema — works with no claw checkout, same as CI.
+validate-history target="history":
+    #!/usr/bin/env bash
+    set -euo pipefail
+    target="{{target}}"
+    if [ ! -e "$target" ]; then echo "validate-history: '$target' does not exist." >&2; exit 2; fi
+    if [ -d "$target" ]; then
+      if [ -z "$(find "$target" -name '*.yaml' -print -quit)" ]; then echo "No history records under '$target'."; exit 0; fi
+      uv run python scripts/validate_history_links.py "$target"
+      find "$target" -name '*.yaml' -print0 | xargs -0 uv run linkml-validate \
+        --schema src/cellstructuremech/schema/history.yaml --target-class HistoryRecord
+    else
+      uv run python scripts/validate_history_links.py "$target"
+      uv run linkml-validate --schema src/cellstructuremech/schema/history.yaml --target-class HistoryRecord "$target"
+    fi
+
+# Verify every claw-governed vendored file matches canon at scripts/.vendored_canon_ref (network).
+vendored-check:
+    bash scripts/check_vendored_sync.sh
+
+# id<->label correspondence gate (vendored): every (grounding, label) pair in the
+# records must match the ontology via OAK. Blocking in CI; downloads OAK sqlite
+# ontologies on first run. Curator-accepted residuals live in conf/id_label_targets.yaml.
+validate-products:
+    uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+
+# Same check, written to reports/label_drift.tsv without failing (CI triage artifact).
+report-label-drift:
+    uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml --report reports/label_drift.tsv || true

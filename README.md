@@ -124,6 +124,9 @@ CellStructureMech/
 ├── index.html                                # redirect to pages/ for GitHub Pages
 ├── research/                                 # research notes: evidence for curators, never record input
 ├── curation/source_queue.tsv                 # ranked data-source queue (checked in qc)
+├── conf/id_label_targets.yaml                # id<->label gate targets and accepted residuals
+├── history/<kind>/<slug>/*.yaml              # append-only curation history (claw history.yaml schema)
+├── scripts/.vendored_canon_ref               # claw commit the vendored files are pinned to
 ├── conf/sources.yaml                         # what the pipeline reads
 ├── docs/                                     # CURATION.md, SCHEMA.md, SOURCE_QUEUE.md (legend)
 ├── .claude/skills/                           # agent workflows (source-queue, review-open-issues)

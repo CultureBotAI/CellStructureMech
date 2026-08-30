@@ -31,6 +31,11 @@ COMMANDS = [
         "Tests cover corpus-wide invariants that per-record validation cannot see.",
     ),
     (
+        "history records",
+        ["bash", "-c", "just validate-history history"],
+        "Repository-level history records must validate against the vendored claw schema.",
+    ),
+    (
         "schema validation",
         [sys.executable, "scripts/validate_strict.py", "--quiet"],
         "Closed-mode validation checks every record shape; quiet mode keeps the error summary visible.",
