@@ -16,6 +16,12 @@ traitmech:
   homepage: https://github.com/CultureBotAI/TraitMech
   script: scripts/validate_strict.py      # associated_traits CURIEs; cross-repo check pending (#11)
   role: associated_traits
+wikimedia_commons:
+  name: Wikimedia Commons
+  homepage: https://commons.wikimedia.org/
+  script: scripts/fetch_commons_image.py
+  role: images
+
 cell_structure_atlas:
   name: Atlas of Bacterial & Archaeal Cell Structure (CaltechDATA records)
   homepage: https://www.cellstructureatlas.org/

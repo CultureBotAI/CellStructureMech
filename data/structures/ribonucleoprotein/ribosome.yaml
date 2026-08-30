@@ -152,27 +152,27 @@ physical_properties:
   reference: DOI:10.1038/nature08403
 images:
 - image_id: commons_purativorans_70s_cryoem
-  file: p_urativorans_70s_ribosome_balon_raia.jpg
+  file: p_urativorans_70s_ribosome_with_balon_and_raia.jpg
   file_sha256: 0bc6613ff3ccb44c576cbdeccb450a9226f3483a6a5fe2d0419fa9135f042447
   source: WIKIMEDIA_COMMONS
   source_accession: File:P. urativorans 70S ribosome with Balon and RaiA.jpg (M149208035)
   source_url: https://commons.wikimedia.org/wiki/File%3AP._urativorans_70S_ribosome_with_Balon_and_RaiA.jpg
   download_url: https://upload.wikimedia.org/wikipedia/commons/c/c0/P._urativorans_70S_ribosome_with_Balon_and_RaiA.jpg
   licence: CC0
-  licence_url: https://creativecommons.org/publicdomain/zero/1.0/
-  attribution: Helena-Bueno K, Rybak MY, Gagnon MG, Hill CH, Melnikov SV; rendering
-    of PDB 8RD8, CC0, via Wikimedia Commons
+  licence_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+  attribution: Helena-Bueno, K., Rybak, M.Y., Gagnon, M.G., Hill, C.H., Melnikov,
+    S.V.; CC0, via Wikimedia Commons
   modality: CRYO_EM
   caption: Rendering of the cryo-EM structure of a Psychrobacter urativorans 70S ribosome
     in complex with the hibernation factors Balon and RaiA (PDB 8RD8). A model derived
     from the cryo-EM map, not a raw micrograph.
   taxon_id: NCBITaxon:45610
   taxon_label: Psychrobacter urativorans
+  retrieved_on: '2026-08-30'
+  notes: 'Licence, attribution and depicted taxon read from the Commons API (extmetadata
+    + structured data P180 -> Wikidata P685) on 2026-08-30; file sha1 verified against
+    imageinfo. Source credit: https://www.rcsb.org/structure/8rd8'
   reference: DOI:10.1038/s41586-024-07041-8
-  retrieved_on: '2026-08-29'
-  notes: Licence and artist read from Commons extmetadata; organism (NCBITaxon:45610)
-    and method from the RCSB entry API for 8RD8; citation DOI resolved through Crossref
-    by title; sha1 verified against imageinfo.
 evidence:
 - reference: DOI:10.1126/science.1060089
   notes: Yusupov et al. 2001 — 5.5 Å structure of the complete T. thermophilus 70S
@@ -303,3 +303,15 @@ curation_history:
     SO:0000651 from the peptidyl-transferase-centre node (a part, not the whole 23S
     rRNA); relabelled GO:0000048 uses to the canonical ''peptidyltransferase activity''.'
   llm_assisted: true
+- timestamp: '2026-08-30T19:08:35Z'
+  curator: fetch_commons_image
+  action: ADD_IMAGE
+  changes: Updated Commons image File:P. urativorans 70S ribosome with Balon and RaiA.jpg
+    (CC0, Psychrobacter urativorans); licence, attribution and taxon read from the
+    Commons and Wikidata APIs at retrieval.
+- timestamp: '2026-08-30T19:11:14Z'
+  curator: fetch_commons_image
+  action: ADD_IMAGE
+  changes: Updated Commons image File:P. urativorans 70S ribosome with Balon and RaiA.jpg
+    (CC0, Psychrobacter urativorans); licence, attribution and taxon read from the
+    Commons and Wikidata APIs at retrieval.
