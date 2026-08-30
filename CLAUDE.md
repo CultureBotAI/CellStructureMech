@@ -18,6 +18,9 @@ Read before changing domain content:
   (legend in [docs/SOURCE_QUEUE.md](docs/SOURCE_QUEUE.md)); checked by `just source-queue`
   inside `just qc`; triaged by the `source-queue` skill. `ADOPTED` is earned by a PR that
   adds the script, not by editing the row.
+- Issue triage: the `review-open-issues` skill
+  (`.claude/skills/review-open-issues/SKILL.md`) — read-only ranking of the
+  whole queue; closing and merging stay the owner's calls.
 
 Sibling repositories use the same conventions: TraitMech, ProteinTraitsMech,
 HabitatMech, CultureMech, MediaIngredientMech, CommunityMech. The upstream
