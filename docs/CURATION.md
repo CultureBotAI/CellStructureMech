@@ -93,6 +93,29 @@ record's own components (kept in step by a test). `graph_kind` says whether
 the graph explains ASSEMBLY, FUNCTION, REGULATION or DISASSEMBLY — a record
 may carry one of each.
 
+## Images
+
+Every record should eventually show a micrograph. An `images` entry is a
+claim like any other and carries its own provenance:
+
+- **`licence`** (required). Hostable licences — CC0, public domain, CC BY,
+  CC BY-SA — get a copy under `data/images/<category>/<slug>/` and a `file`
+  entry (lowercase extension) plus its `file_sha256`; the renderer copies it
+  to `pages/img/`. Anything else (CC BY-NC, ND, unknown) is **link-only**:
+  leave `file` unset. Tests enforce both.
+- **`attribution`** (required), exactly as the licence demands. For CC BY
+  that is author(s) + licence + source.
+- **`taxon_id`** (required) — the organism in the picture, which must already
+  appear in `taxonomic_distribution` or `canonical_examples` (test-enforced);
+  an image of a taxon the record does not mention is evidence for nothing.
+- **`reference`** (required) — DOI or PMID of the paper the image comes from
+  or is described in.
+- **`retrieved_on`** — when you verified licence, attribution and taxon at the
+  source. Read the licence off the source's machine-readable metadata (Commons
+  `extmetadata`, PMC `license_code`), not off a re-hosting page.
+- **Never scrape in bulk.** Fetch one image, check the file and its metadata,
+  then the next. Prefer sources ranked in `research/`.
+
 ## Status
 
 | `mapping_status` | Meaning |

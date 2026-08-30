@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 from collections import Counter
 
 from cellstructuremech.validation.write_validated import validate_structure
@@ -103,3 +104,57 @@ def test_reviewed_records_carry_evidence_and_history(records):
             if not doc.get("curation_history"):
                 bad.append(f"{path.name}: no curation_history")
     assert not bad, bad
+
+
+HOSTABLE_LICENCES = {"CC0", "PUBLIC_DOMAIN", "CC_BY_3_0", "CC_BY_4_0", "CC_BY_SA_3_0", "CC_BY_SA_4_0"}
+
+
+def test_hosted_images_have_hostable_licences_and_files(records, repo_root):
+    """A `file` means we ship a copy, so the licence must allow that and the
+    file must exist where the renderer looks for it."""
+    bad = []
+    for path, doc in records:
+        img_dir = repo_root / "data" / "images" / path.parent.name / path.stem
+        for im in doc.get("images") or []:
+            f = im.get("file")
+            if not f:
+                continue
+            if im["licence"] not in HOSTABLE_LICENCES:
+                bad.append(f"{path.name}:{im['image_id']}: hosted under {im['licence']}")
+            if not (img_dir / f).is_file():
+                bad.append(f"{path.name}:{im['image_id']}: missing {img_dir / f}")
+                continue
+            digest = hashlib.sha256((img_dir / f).read_bytes()).hexdigest()
+            if im.get("file_sha256") != digest:
+                bad.append(f"{path.name}:{im['image_id']}: file_sha256 {im.get('file_sha256')} != {digest}")
+    assert not bad, bad
+
+
+def test_image_files_on_disk_are_all_referenced(records, repo_root):
+    """No orphan images: every file under data/images/ belongs to a record."""
+    referenced = set()
+    for path, doc in records:
+        for im in doc.get("images") or []:
+            if im.get("file"):
+                referenced.add(repo_root / "data" / "images" / path.parent.name / path.stem / im["file"])
+    images_root = repo_root / "data" / "images"
+    on_disk = (
+        {p for p in images_root.rglob("*") if p.is_file() and not p.name.startswith(".")}
+        if images_root.exists() else set()
+    )
+    orphans = sorted(str(p.relative_to(repo_root)) for p in on_disk - referenced)
+    assert not orphans, f"image files not referenced by any record: {orphans}"
+
+
+def test_image_taxa_are_named_on_the_record(records):
+    """The organism in the picture should be one the record already claims,
+    in taxonomic_distribution or canonical_examples — otherwise the image is
+    evidence for a structure in a taxon the record says nothing about."""
+    bad = []
+    for path, doc in records:
+        named = {t["taxon_id"] for t in doc.get("taxonomic_distribution") or []}
+        named |= {t["taxon_id"] for t in doc.get("canonical_examples") or []}
+        for im in doc.get("images") or []:
+            if im["taxon_id"] not in named:
+                bad.append(f"{path.name}:{im['image_id']}:{im['taxon_id']}")
+    assert not bad, f"image taxa not in taxonomic_distribution/canonical_examples: {bad}"

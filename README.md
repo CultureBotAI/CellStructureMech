@@ -57,7 +57,7 @@ records, not records; phenotypes are TraitMech records. See
 | MICROCOMPARTMENT | 1 | |  |  |
 | RIBONUCLEOPROTEIN | 1 | |  |  |
 
-4 records are grounded in GO; 0 carry minted identifiers. 4 list components, 3 carry causal graphs (16 evidence-backed edges), and 3 link to TraitMech traits.
+4 records are grounded in GO; 0 carry minted identifiers. 4 list components, 3 carry causal graphs (16 evidence-backed edges), 3 link to TraitMech traits, and 1 carry licensed, cited imaging evidence.
 <!-- END GENERATED CORPUS STATS -->
 
 Run `just report` for the live report. Every current record is

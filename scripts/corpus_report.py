@@ -27,6 +27,7 @@ def summarize(records: list[tuple[Path, dict]]) -> dict:
     with_graphs = sum(1 for _, d in records if d.get("causal_graphs"))
     with_traits = sum(1 for _, d in records if d.get("associated_traits"))
     with_functions = sum(1 for _, d in records if d.get("functions"))
+    with_images = sum(1 for _, d in records if d.get("images"))
     edges = sum(len(g.get("edges") or []) for _, d in records for g in d.get("causal_graphs") or [])
     return {
         "total": len(records),
@@ -38,6 +39,7 @@ def summarize(records: list[tuple[Path, dict]]) -> dict:
         "with_functions": with_functions,
         "with_graphs": with_graphs,
         "with_traits": with_traits,
+        "with_images": with_images,
         "edges": edges,
     }
 
@@ -62,7 +64,8 @@ def main() -> int:
     print(f"\nGrounded in GO: {s['go_grounded']}   minted cellstructuremech: {s['minted']}")
     print(
         f"With components: {s['with_components']}   functions: {s['with_functions']}   "
-        f"causal graphs: {s['with_graphs']} ({s['edges']} edges)   trait links: {s['with_traits']}"
+        f"causal graphs: {s['with_graphs']} ({s['edges']} edges)   trait links: {s['with_traits']}   "
+        f"images: {s['with_images']}"
     )
 
     if args.tsv:

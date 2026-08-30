@@ -39,7 +39,8 @@ def render_block() -> str:
         "",
         f"{s['go_grounded']} records are grounded in GO; {s['minted']} carry minted identifiers. "
         f"{s['with_components']} list components, {s['with_graphs']} carry causal graphs "
-        f"({s['edges']} evidence-backed edges), and {s['with_traits']} link to TraitMech traits.",
+        f"({s['edges']} evidence-backed edges), {s['with_traits']} link to TraitMech traits, and "
+        f"{s['with_images']} carry licensed, cited imaging evidence.",
         END,
     ]
     return "\n".join(lines)

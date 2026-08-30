@@ -237,6 +237,18 @@ classes:
         inlined_as_list: true
         range: PhysicalProperty
 
+      images:
+        description: >-
+          Microscopy or other imaging evidence for the structure. Every image
+          carries an explicit licence, a stable source URL, the taxon imaged
+          and a DOI or PMID, so the picture on the record page is itself a
+          cited, attributed claim. Images under a hostable licence (CC0,
+          public domain, CC BY, CC BY-SA) are copied into the site; others
+          are linked only. The first entry is shown at the top of the page.
+        multivalued: true
+        inlined_as_list: true
+        range: StructureImage
+
       evidence:
         description: >-
           Record-level citations backing the existence, identity and
@@ -498,6 +510,80 @@ classes:
         recommended: true
         range: string
 
+  StructureImage:
+    description: >-
+      One image of the structure with the provenance a reader needs to trust
+      and reuse it. `file` is set only when the licence permits hosting a
+      copy; the original lives under `data/images/<category>/<slug>/` and the
+      renderer copies it to `pages/img/`.
+    attributes:
+      image_id:
+        identifier: true
+        required: true
+        range: string
+      file:
+        description: >-
+          Filename of the hosted copy under data/images/<category>/<slug>/.
+          Omit for licences that forbid hosting (e.g. CC BY-NC); the page then
+          links to `source_url` instead. Lowercase extension only (png, jpg,
+          jpeg, gif, webp, svg); rename on ingest.
+        range: string
+        pattern: "^[A-Za-z0-9._-]+\\.(png|jpg|jpeg|gif|webp|svg)$"
+      file_sha256:
+        description: >-
+          SHA-256 of the hosted copy, so a swapped or corrupted file is caught
+          by tests/test_corpus_integrity.py. Required whenever `file` is set.
+        range: string
+        pattern: "^[0-9a-f]{64}$"
+      source:
+        required: true
+        range: ImageSourceEnum
+      source_accession:
+        description: The source's own identifier (Commons file title / M-id, EMPIAR-NNNNN, EMD-NNNNN, CIL:NNNNN, PMC figure id).
+        required: true
+        range: string
+      source_url:
+        description: Stable landing page for the image at the source.
+        required: true
+        range: uri
+      download_url:
+        description: Direct file URL the hosted copy was fetched from.
+        range: uri
+      licence:
+        required: true
+        range: ImageLicenceEnum
+      licence_url:
+        range: uri
+      attribution:
+        description: Author / rights-holder credit line exactly as the licence requires.
+        required: true
+        range: string
+      modality:
+        required: true
+        range: ImagingModalityEnum
+      caption:
+        description: What the image shows, including scale-bar information where the source gives it.
+        range: string
+      taxon_id:
+        description: The organism imaged.
+        required: true
+        range: string
+        pattern: "^NCBITaxon:[0-9]+$"
+      taxon_label:
+        required: true
+        range: string
+      reference:
+        description: DOI or PMID of the publication the image comes from or is described in.
+        required: true
+        range: string
+        pattern: "^(DOI|PMID):.+$"
+      retrieved_on:
+        description: Date the licence, attribution and taxon metadata were verified at the source.
+        required: true
+        range: date
+      notes:
+        range: string
+
   StructureSynonym:
     attributes:
       synonym_text:
@@ -744,6 +830,50 @@ enums:
       COPY_NUMBER_PER_CELL:
       SEDIMENTATION_COEFFICIENT:
       ROTATION_SPEED:
+      OTHER:
+
+  ImageSourceEnum:
+    permissible_values:
+      WIKIMEDIA_COMMONS:
+      PMC:
+        description: PubMed Central open-access article figure.
+      EMPIAR:
+      EMDB:
+      BIOIMAGE_ARCHIVE:
+      ETDB_CALTECH:
+      CELL_STRUCTURE_ATLAS:
+      CELL_IMAGE_LIBRARY:
+      IDR:
+      OTHER:
+
+  ImageLicenceEnum:
+    description: >-
+      Hostable: CC0, PUBLIC_DOMAIN, CC_BY_*, CC_BY_SA_*. Link-only: CC_BY_NC_*,
+      CC_BY_ND_*, OTHER. tests/test_corpus_integrity.py enforces that `file` is
+      set only for hostable licences.
+    permissible_values:
+      CC0:
+      PUBLIC_DOMAIN:
+      CC_BY_3_0:
+      CC_BY_4_0:
+      CC_BY_SA_3_0:
+      CC_BY_SA_4_0:
+      CC_BY_NC_4_0:
+      CC_BY_NC_SA_4_0:
+      CC_BY_ND_4_0:
+      OTHER:
+
+  ImagingModalityEnum:
+    permissible_values:
+      TEM:
+        description: Transmission electron microscopy, including thin section and negative stain.
+      SEM:
+      CRYO_EM:
+      CRYO_ET:
+      FLUORESCENCE:
+      LIGHT:
+      AFM:
+      SUPER_RESOLUTION:
       OTHER:
 
   SynonymTypeEnum:

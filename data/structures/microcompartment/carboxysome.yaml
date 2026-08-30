@@ -119,6 +119,29 @@ physical_properties:
   value: 100-200
   unit: UO:0000018
   reference: DOI:10.1038/nrmicro.2018.10
+images:
+- image_id: commons_carboxysomes_em
+  file: carboxysomes_em.jpg
+  file_sha256: 92ffd40eccbe10c71b6aa4d5d0cd94c8322f98e2bf76d5c92b6991702e5b931e
+  source: WIKIMEDIA_COMMONS
+  source_accession: File:Carboxysomes_EM.jpg (M4508748)
+  source_url: https://commons.wikimedia.org/wiki/File:Carboxysomes_EM.jpg
+  download_url: https://upload.wikimedia.org/wikipedia/commons/f/f5/Carboxysomes_EM.jpg
+  licence: CC_BY_3_0
+  licence_url: https://creativecommons.org/licenses/by/3.0
+  attribution: Tsai Y, Sawaya MR, Cannon GC, Cai F, Williams EB, Heinhorst S, Kerfeld
+    CA, Yeates TO (2007), PLoS Biology, CC BY 3.0, via Wikimedia Commons
+  modality: TEM
+  caption: Thin-section electron micrograph of Halothiobacillus neapolitanus cells
+    containing carboxysomes, and negatively stained isolated carboxysomes. Scale bars
+    100 nm.
+  taxon_id: NCBITaxon:927
+  taxon_label: Halothiobacillus neapolitanus
+  reference: DOI:10.1371/journal.pbio.0050144
+  retrieved_on: '2026-08-29'
+  notes: Licence, artist and depicted taxon read from the Commons API (extmetadata
+    + structured data P180 -> Wikidata P685) at retrieval; file sha1 verified against
+    imageinfo.
 evidence:
 - reference: DOI:10.1038/nrmicro.2018.10
   notes: Kerfeld et al. 2018, "Bacterial microcompartments".
@@ -209,4 +232,11 @@ curation_history:
   action: FIX_REVIEW_FINDINGS
   changes: 'PR #1 review: NCBITaxon:1117 label updated to the current name Cyanobacteriota
     (#5).'
+  llm_assisted: true
+- timestamp: '2026-08-29T02:00:00Z'
+  curator: claude
+  action: ADD_IMAGE
+  changes: 'Added Commons image File:Carboxysomes_EM.jpg (CC BY 3.0, Tsai et al. 2007
+    DOI:10.1371/journal.pbio.0050144, NCBITaxon:927) as the #15 canary; licence, attribution
+    and taxon verified against the Commons/Wikidata APIs at retrieval.'
   llm_assisted: true
