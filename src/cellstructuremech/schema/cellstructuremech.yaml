@@ -573,8 +573,14 @@ classes:
         required: true
         range: string
       reference:
-        description: DOI or PMID of the publication the image comes from or is described in.
-        required: true
+        description: >-
+          DOI or PMID of the publication the image comes from or is described
+          in. Recommended, not required (decision in issue #30): the
+          `source_accession` + `source_url` pair is always present and is the
+          citable identifier when no publication exists — for Cell Image
+          Library that pair is itself a DOI (10.7295/W9CIL…), for CDC PHIL an
+          image id. Prefer images that have both.
+        recommended: true
         range: string
         pattern: "^(DOI|PMID):.+$"
       retrieved_on:
