@@ -81,7 +81,7 @@ verify* rather than guessed.
 - SubtiWiki licence; EcoCyc complex-level GO annotations and flat-file click-through text; NCIT beyond the C13269 branch.
 - ETDB-Caltech: everything live (status, licence, metadata, API).
 - CIL licence versions, API key availability, taxid on public pages.
-- PMC: stability of CDN blob URLs; why PMC1872035 is absent from the bucket; NCBI taxid of *S. elongatus* PCC 7942 by name search.
+- PMC: stability of CDN blob URLs; why PMC1872035 is absent from the bucket. (The agent's name search for *S. elongatus* PCC 7942 failed, but the taxid is NCBITaxon:1140, verified against OLS in the PR #1 review.)
 
 ## What this implies
 
