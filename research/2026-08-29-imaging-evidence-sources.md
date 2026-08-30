@@ -31,14 +31,14 @@ is *not* uniformly openly licensed (that claim was refuted 0-3).
 
 ### Imaging repositories
 
-| Source | Licence | Per-image identifier | Taxon link | Access | Confidence |
+| Source | Licence | Identifier (granularity) | Taxon link | Access | Confidence |
 |---|---|---|---|---|---|
-| **EMPIAR** | CC0 for all data ([policy](https://www.ebi.ac.uk/empiar/policies/)) | Entry-level DOI `10.6019/EMPIAR-XXXXX` (Crossref/DataCite; verified `10.6019/EMPIAR-10028` redirects to the entry). API returns `entry_doi` plus citation DOI + PMID (e.g. EMPIAR-10025 → `10.7554/eLife.06380`, PMID 25760083). | **None in the schema** — grep for organism/taxon/ncbi returns nothing; only `scale`. Resolve via `cross_references` to EMDB. | REST: `GET /empiar/api/entry/{id}`, `POST /empiar/api/entry/` with comma-separated ids or `10060-10062` ranges ([docs](https://www.ebi.ac.uk/empiar/api/documentation/)). Raw datasets are huge: extract and host frames, do not hot-link. | high (3-0) |
-| **EMDB** | EMBL-EBI terms | Entry id `EMD-NNNNN`; map files on FTP | **Yes**: sample metadata carries NCBI taxid, strain and higher ranks (EMD-10093 → *Vibrio mimicus* CAIM 602, ncbi 1259812) | 3 REST services (archive, validation, EMICSS); PyPI `emdb` 0.1.12 (Apache-2.0, EMBL-EBI); `ftp.ebi.ac.uk/pub/databases/emdb` ([api](https://www.ebi.ac.uk/emdb/api/)) | high (3-0) |
-| **BioImage Archive** | New direct submissions CC0 or CC-BY-4.0; brokered accessions may differ — licence is a per-dataset attribute; fallback is EMBL-EBI Terms of Use ([policy](https://www.ebi.ac.uk/bioimage-archive/help-policies)) | Accession `S-BIADnnn` | Per-study metadata | BioStudies API | high (3-0) |
-| **Atlas of Bacterial & Archaeal Cell Structure** ([site](https://www.cellstructureatlas.org/), Oikonomou & Jensen, [JMBE 2021](https://doi.org/10.1128/jmbe.00128-21)) | **CC BY-NC 4.0** | Each video in CaltechDATA with a DataCite DOI (e.g. `10.22002/D1.1362`, *E. coli*), `isDerivedFrom` → the ETDB-Caltech tomogram (`etdb.caltech.edu/tomogram/b7f6a2`) | Species named per chapter; no taxid in metadata | Browse; CaltechDATA API | high (3-0) |
+| **EMPIAR** | CC0 for all data ([policy](https://www.ebi.ac.uk/empiar/policies/)) | **Entry-level, not per-image**: DOI `10.6019/EMPIAR-XXXXX` (Crossref/DataCite; verified `10.6019/EMPIAR-10028` redirects to the entry). API returns `entry_doi` plus citation DOI + PMID (e.g. EMPIAR-10025 → `10.7554/eLife.06380`, PMID 25760083). | **None in the schema** — grep for organism/taxon/ncbi returns nothing; only `scale`. Resolve via `cross_references` to EMDB. | REST: `GET /empiar/api/entry/{id}`, `POST /empiar/api/entry/` with comma-separated ids or `10060-10062` ranges ([docs](https://www.ebi.ac.uk/empiar/api/documentation/)). Raw datasets are huge: extract and host frames, do not hot-link. | high (3-0) |
+| **EMDB** | *unverified* (EMBL-EBI terms assumed) | Entry-level: `EMD-NNNNN`; map files on FTP | **Yes**: sample metadata carries NCBI taxid, strain and higher ranks (EMD-10093 → *Vibrio mimicus* CAIM 602, ncbi 1259812) | 3 REST services (archive, validation, EMICSS); PyPI `emdb` 0.1.12 (Apache-2.0, EMBL-EBI); `ftp.ebi.ac.uk/pub/databases/emdb` ([api](https://www.ebi.ac.uk/emdb/api/)) | high (3-0) |
+| **BioImage Archive** | New direct submissions CC0 or CC-BY-4.0; brokered accessions may differ — licence is a per-dataset attribute; fallback is EMBL-EBI Terms of Use ([policy](https://www.ebi.ac.uk/bioimage-archive/help-policies)) | Dataset-level: accession `S-BIADnnn` | Per-study metadata | *unverified* (BioStudies API assumed) | high (3-0) |
+| **Atlas of Bacterial & Archaeal Cell Structure** ([site](https://www.cellstructureatlas.org/), Oikonomou & Jensen, [JMBE 2021](https://doi.org/10.1128/jmbe.00128-21)) | **CC BY-NC 4.0** | Each video in CaltechDATA with a DataCite DOI (e.g. `10.22002/D1.1362`, *E. coli*), `isDerivedFrom` → the ETDB-Caltech tomogram (`etdb.caltech.edu/tomogram/b7f6a2`) | Species named per chapter; no taxid in metadata | Browse; *CaltechDATA API unverified* | high (3-0) |
 | **ETDB-Caltech / Jensen corpus** ([Dobro et al. 2017](https://journals.asm.org/doi/10.1128/jb.00100-17)) | **Unverified** | Per-tomogram URL | 88 species (2017) | 3D feature views on a figshare private-share link that returned 403 | high for the corpus, **unknown** for licence/API |
-| **IDR** ([about](https://idr.openmicroscopy.org/about/)) | **Not uniformly CC0/CC-BY** — refuted 0-3; check per study | Study/image ids | Per study | OMERO API | medium |
+| **IDR** ([about](https://idr.openmicroscopy.org/about/)) | **Not uniformly CC0/CC-BY** — refuted 0-3; check per study | Study/image ids | Per study | *unverified* (OMERO API assumed) | medium |
 
 ### Vocabularies
 
@@ -88,4 +88,7 @@ CELL_STRUCTURE_ATLAS, WIKIMEDIA_COMMONS, PMC, OTHER), `source_accession`,
 FLUORESCENCE, …), `taxon_id` + `taxon_label` (required), `reference`
 (DOI/PMID, required), `caption`, `attribution`. Rendering shows the first
 image at the top of the record page with its licence and citation line.
-Tracked in the issue tracker.
+Tracked in [#15](https://github.com/CultureBotAI/CellStructureMech/issues/15).
+
+Access-column entries marked *unverified* were added while writing up and
+did not pass through the 3-vote check (#17).

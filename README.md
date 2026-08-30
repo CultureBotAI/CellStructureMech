@@ -121,6 +121,8 @@ CellStructureMech/
 │   ├── check_docs.py                         # README stats block
 │   └── run_qc.py                             # the CI gate
 ├── pages/                                    # generated site (committed)
+├── index.html                                # redirect to pages/ for GitHub Pages
+├── research/                                 # research notes: evidence for curators, never record input
 ├── docs/                                     # CURATION.md, SCHEMA.md
 └── tests/
 ```

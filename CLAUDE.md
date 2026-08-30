@@ -73,6 +73,8 @@ Verify counts, statuses and identifiers with a live command (`just report`,
   (`scripts/corpus.py`). Move or rename by changing the record and the
   filename together.
 - Keep changes scoped; preserve unrelated work in a dirty tree.
+- **`research/` is tracked provenance**, evidence for a curator to read —
+  never automatic record input. Canary any paid research run before a batch.
 
 ## Git workflow
 
