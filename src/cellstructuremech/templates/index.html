@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Microbial cell structures</h1>
+<p>{{ total }} records — organelles, envelope layers, appendages, microcompartments and multi-protein complexes, each grounded in GO cellular component where a term exists and backed by cited evidence.</p>
+<ul class="cards">
+{% for c in categories %}
+  <li><a href="{{ c.page }}"><strong>{{ c.name }}</strong> <span class="count">{{ c.count }}</span></a><br><small>{{ c.blurb }}</small></li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,38 @@
+[
+ {
+  "identifier": "GO:0009288",
+  "label": "bacterial-type flagellum",
+  "category": "APPENDAGE",
+  "kind": "APPENDAGE",
+  "status": "PROPOSED",
+  "page": "structures/appendage/bacterial_type_flagellum.html",
+  "definition": "The rotary motility organelle of bacteria: a long helical filament of flagellin joined by a flexible hook to a basal body that spans the cell envelope. The basal body houses a rotor (MS and C rings) driven by membrane-embedded stator units that convert ion flow (H+ or Na+) into torque; the flagellar type III export apparatus at its base secretes the axial subunits. Not homologous to the archaeal archaellum or the eukaryotic cilium."
+ },
+ {
+  "identifier": "GO:0030115",
+  "label": "S-layer",
+  "category": "ENVELOPE",
+  "kind": "ENVELOPE_LAYER",
+  "status": "PROPOSED",
+  "page": "structures/envelope/s_layer.html",
+  "definition": "A paracrystalline monomolecular array of a single (glyco)protein that self-assembles on the outermost surface of the cell envelope, with oblique, square or hexagonal lattice symmetry. Nearly universal in Archaea, where it is often the sole wall component, and widespread but patchily distributed in Bacteria."
+ },
+ {
+  "identifier": "GO:0031470",
+  "label": "carboxysome",
+  "category": "MICROCOMPARTMENT",
+  "kind": "PROTEIN_SHELLED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/microcompartment/carboxysome.html",
+  "definition": "A bacterial microcompartment — a polyhedral, selectively permeable protein shell about 100–200 nm across — that encapsulates RuBisCO and carbonic anhydrase to concentrate CO2 around RuBisCO in cyanobacteria and many chemoautotrophs. Alpha-carboxysomes (cso genes) and beta-carboxysomes (ccm genes) evolved their shells and scaffolds independently."
+ },
+ {
+  "identifier": "GO:0005840",
+  "label": "ribosome",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/ribosome.html",
+  "definition": "The ribonucleoprotein particle that translates mRNA into protein. The bacterial (70S) ribosome comprises a small (30S) subunit built on 16S rRNA, which decodes the mRNA, and a large (50S) subunit built on 23S and 5S rRNA, whose 23S rRNA catalyses peptide bond formation. Archaeal and eukaryotic cytosolic ribosomes are homologous but larger."
+ }
+]

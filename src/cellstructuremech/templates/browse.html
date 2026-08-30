@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Browse · CellStructureMech{% endblock %}
+{% block content %}
+<h1>All records</h1>
+<table>
+<thead><tr><th>Label</th><th>Identifier</th><th>Category</th><th>Kind</th><th>Status</th></tr></thead>
+<tbody>
+{% for r in records %}
+<tr><td><a href="{{ r.page }}">{{ r.label }}</a></td><td><code>{{ r.identifier }}</code></td><td>{{ r.category }}</td><td>{{ r.kind or "" }}</td><td>{{ r.status }}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
