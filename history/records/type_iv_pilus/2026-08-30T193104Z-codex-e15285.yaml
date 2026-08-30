@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/type_iv_pilus.yaml
+  slug: type_iv_pilus
+session:
+  id: 2026-08-30T193104Z-codex-e15285
+  timestamp: '2026-08-30T19:31:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - evidence
+  summary: Add type IV pilus record
+  details: Added a PROPOSED literature-backed appendage record with assembly and retraction
+    components, distribution, motility function, and evidence.

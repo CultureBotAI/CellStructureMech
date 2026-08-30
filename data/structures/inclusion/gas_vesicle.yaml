@@ -1,0 +1,64 @@
+identifier: GO:0031411
+label: gas vesicle
+definition: A gas-filled, non-membrane-bounded protein organelle, usually shaped as
+  a cylindrical shell with conical end caps. Its gas-permeable, water-excluding wall
+  lowers cell density and enables buoyancy regulation in aquatic microbes.
+definition_source: PMID:8177173
+synonyms:
+- synonym_text: gas vacuole
+  synonym_type: RELATED_SYNONYM
+  source: GO:0031411
+structure_category: INCLUSION
+structure_kind: PROTEIN_SHELLED_ORGANELLE
+components:
+- component_id: gvpa
+  label: major gas vesicle protein GvpA
+  component_type: PROTEIN
+  gene_symbols:
+  - gvpA
+  essentiality: ESSENTIAL
+  role: Forms the ribbed, gas-permeable structural shell.
+  evidence:
+  - reference: PMID:22147705
+    notes: Solid-state NMR supports cross-beta assembly of the GvpA shell.
+- component_id: gvpc
+  label: gas vesicle strengthening protein GvpC
+  component_type: PROTEIN
+  gene_symbols:
+  - gvpC
+  essentiality: CONDITIONAL
+  role: Strengthens the shell against collapse in characterized systems.
+  evidence:
+  - reference: PMID:8177173
+    notes: Walsby reviews GvpC-dependent strengthening.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Occurs in several bacterial phyla, especially aquatic phototrophs.
+  reference: PMID:8177173
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: VARIABLE
+  note: Also occurs in multiple archaeal groups, including haloarchaea.
+  reference: PMID:8177173
+functions:
+- function_id: buoyancy_regulation
+  label: buoyancy regulation
+  description: Changing gas-vesicle content lets aquatic microbes alter vertical position.
+  evidence:
+  - reference: PMID:8177173
+    notes: Gas vesicles provide buoyancy and enable vertical migration.
+evidence:
+- reference: PMID:8177173
+  notes: Walsby 1994 comprehensive review.
+- reference: PMID:22147705
+  notes: Belenky et al. 2012 structural evidence for the GvpA shell.
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-08-30T19:30:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Added as a literature-backed foundational seed. Identity checked against
+    the 2026-07-01 Gene Ontology release; requires human review.
+  llm_assisted: true
