@@ -182,21 +182,22 @@ images:
   file_sha256: 370078e7879241342df889b048aaaea27468ae7ed2a8c9509e1f1b16fbdb465e
   source: WIKIMEDIA_COMMONS
   source_accession: File:Escherichia_coli_flagella_TEM.png (M4617695)
-  source_url: https://commons.wikimedia.org/wiki/File:Escherichia_coli_flagella_TEM.png
-  download_url: https://upload.wikimedia.org/wikipedia/commons/e/eb/Escherichia_coli_flagella_TEM.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+  source_url: https://commons.wikimedia.org/wiki/File%3AEscherichia_coli_flagella_TEM.png
+  download_url: https://upload.wikimedia.org/wikipedia/commons/e/eb/Escherichia_coli_flagella_TEM.png
   licence: PUBLIC_DOMAIN
-  licence_url: https://creativecommons.org/publicdomain/mark/1.0/
-  attribution: CDC Public Health Image Library / E. H. White (content provider Peggy
-    S. Hayes); public domain (US federal government work), via Wikimedia Commons
+  attribution: 'E. H. White, Content Provider: Peggy S. Hayes; Public domain, via
+    Wikimedia Commons'
   modality: TEM
   caption: Transmission electron micrograph (pseudoreplica technique) of an Escherichia
     coli O157:H7 cell with peritrichous flagella.
   taxon_id: NCBITaxon:83334
   taxon_label: Escherichia coli O157:H7
-  retrieved_on: '2026-08-29'
-  notes: 'No publication: CDC PHIL image, allowed under the #30 decision. Licence
-    and copyright status read from Commons extmetadata at retrieval; sha1 verified
-    against imageinfo.'
+  retrieved_on: '2026-08-30'
+  notes: 'Licence, attribution and depicted taxon read from the Commons API (extmetadata
+    + structured data P180 -> Wikidata P685) on 2026-08-30; file sha1 verified against
+    imageinfo. Source credit: This media comes from the Centers for Disease Control
+    and Prevention ''s Public Health Image Library (PHIL), with identification number
+    #9995. Note: Not all PHIL images are public domain; be sure to ch'
 evidence:
 - reference: DOI:10.1146/annurev.biochem.72.121801.161737
   notes: Berg 2003, "The rotary motor of bacterial flagella".
@@ -302,5 +303,17 @@ curation_history:
   action: ADD_UNIPROT_SL_XREF
   changes: Added uniprot.location:SL-0307 (Bacterial flagellum); mapping read from
     the GO line of UniProt subcell.txt.
+- timestamp: '2026-08-30T19:08:55Z'
+  curator: fetch_commons_image
+  action: ADD_IMAGE
+  changes: Updated Commons image File:Escherichia_coli_flagella_TEM.png (PUBLIC_DOMAIN,
+    Escherichia coli O157:H7); licence, attribution and taxon read from the Commons
+    and Wikidata APIs at retrieval.
+- timestamp: '2026-08-30T19:11:12Z'
+  curator: fetch_commons_image
+  action: ADD_IMAGE
+  changes: Updated Commons image File:Escherichia_coli_flagella_TEM.png (PUBLIC_DOMAIN,
+    Escherichia coli O157:H7); licence, attribution and taxon read from the Commons
+    and Wikidata APIs at retrieval.
 xrefs:
 - uniprot.location:SL-0307

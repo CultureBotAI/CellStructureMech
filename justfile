@@ -113,3 +113,9 @@ validate-products:
 # Same check, written to reports/label_drift.tsv without failing (CI triage artifact).
 report-label-drift:
     uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml --report reports/label_drift.tsv || true
+
+# Add a Wikimedia Commons image to a record, reading licence, attribution and
+# taxon from the Commons/Wikidata APIs and verifying the file hash. Dry-run by
+# default. `just commons-image --title "File:X.jpg" --record data/... --modality TEM --apply`
+commons-image *args:
+    uv run python scripts/fetch_commons_image.py "$@"
