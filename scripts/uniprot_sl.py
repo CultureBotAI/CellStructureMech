@@ -33,7 +33,11 @@ import urllib.request
 from pathlib import Path
 
 import yaml
-from corpus import REPO_ROOT, load_records
+
+try:  # run as `python scripts/uniprot_sl.py` (scripts/ on sys.path) ...
+    from corpus import REPO_ROOT, load_records
+except ImportError:  # ... or imported by the tests as scripts.uniprot_sl
+    from scripts.corpus import REPO_ROOT, load_records
 
 from cellstructuremech.curate.curation_event import record_curation_event
 from cellstructuremech.validation.write_validated import ValidationFailedError, write_validated_structure
