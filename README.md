@@ -123,7 +123,8 @@ CellStructureMech/
 ├── pages/                                    # generated site (committed)
 ├── index.html                                # redirect to pages/ for GitHub Pages
 ├── research/                                 # research notes: evidence for curators, never record input
-├── docs/                                     # CURATION.md, SCHEMA.md
+├── docs/                                     # CURATION.md, SCHEMA.md, SOURCE_QUEUE.md
+├── .claude/skills/                           # agent workflows (source-queue)
 └── tests/
 ```
 

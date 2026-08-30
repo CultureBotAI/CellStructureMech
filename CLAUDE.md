@@ -14,6 +14,8 @@ Read before changing domain content:
 - [README.md](README.md) — model and generated corpus statistics.
 - [docs/CURATION.md](docs/CURATION.md) — what is a record, identifiers, evidence rules.
 - [docs/SCHEMA.md](docs/SCHEMA.md) — field guide.
+- [docs/SOURCE_QUEUE.md](docs/SOURCE_QUEUE.md) — the ranked data-source queue; worked via the
+  `source-queue` skill (`.claude/skills/source-queue/SKILL.md`).
 
 Sibling repositories use the same conventions: TraitMech, ProteinTraitsMech,
 HabitatMech, CultureMech, MediaIngredientMech, CommunityMech. The upstream
