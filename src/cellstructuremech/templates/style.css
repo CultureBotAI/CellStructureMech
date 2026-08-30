@@ -19,3 +19,7 @@ th { background:#fafafa; }
 .evidence { margin:.2rem 0 0; padding-left:1.1rem; font-size:.88rem; color:var(--muted); }
 .history { font-size:.9rem; }
 q { font-style:italic; }
+figure.hero { margin:1rem 0; }
+figure.hero img { max-width:100%; height:auto; border:1px solid var(--line); border-radius:4px; }
+figure.hero figcaption { font-size:.85rem; color:var(--muted); margin-top:.3rem; }
+.modality { font-weight:600; }

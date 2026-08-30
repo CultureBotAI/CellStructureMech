@@ -25,6 +25,7 @@ from corpus import REPO_ROOT, load_records
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 TEMPLATES_DIR = REPO_ROOT / "src" / "cellstructuremech" / "templates"
+IMAGES_DIR = REPO_ROOT / "data" / "images"
 PAGES_DIR = REPO_ROOT / "pages"
 
 CATEGORY_BLURB = {
@@ -134,10 +135,22 @@ def render(out_dir: Path) -> None:
         name = page_name(path, records_root)
         p = out_dir / "structures" / f"{name}.html"
         p.parent.mkdir(parents=True, exist_ok=True)
-        depth = len(Path(name).parts) + 1
+        # The page sits at structures/<category>/<slug>.html: the directories
+        # below pages/ are structures/ plus every part of `name` except the
+        # file itself, i.e. exactly len(parts). Getting this wrong (#21) sent
+        # every record page one level too deep for its stylesheet and images.
+        depth = len(Path(name).parts)
+        # Hosted image copies live beside the page tree under img/<category>/<slug>/.
+        img_src = IMAGES_DIR / path.parent.name / path.stem
+        for im in doc.get("images") or []:
+            if im.get("file"):
+                dst = out_dir / "img" / name / im["file"]
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy(img_src / im["file"], dst)
         p.write_text(
             env.get_template("structure.html").render(
-                r=doc, root="../" * depth, source_path=str(path.relative_to(REPO_ROOT))
+                r=doc, root="../" * depth, source_path=str(path.relative_to(REPO_ROOT)),
+                img_base=f"img/{name}/",
             ),
             encoding="utf-8",
         )

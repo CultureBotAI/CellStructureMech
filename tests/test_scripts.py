@@ -43,3 +43,23 @@ def test_corpus_report_runs():
     out = _run("scripts/corpus_report.py")
     assert out.returncode == 0, out.stderr
     assert "structure records" in out.stdout
+
+
+def test_rendered_site_has_no_broken_local_links(tmp_path):
+    """Every relative href/src in the rendered site must resolve to a file in
+    the output tree. Caught #21, where record pages pointed one level too
+    deep for their stylesheet and hosted images."""
+    import re
+
+    out = tmp_path / "site"
+    res = _run("scripts/render_pages.py", "--out", str(out))
+    assert res.returncode == 0, res.stderr
+    broken = []
+    for html in out.rglob("*.html"):
+        for m in re.finditer(r'(?:href|src)="([^"#]+)"', html.read_text(encoding="utf-8")):
+            url = m.group(1)
+            if url.startswith(("http://", "https://", "mailto:")):
+                continue
+            if not (html.parent / url).resolve().exists():
+                broken.append(f"{html.relative_to(out)}: {url}")
+    assert not broken, broken
