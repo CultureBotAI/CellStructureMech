@@ -105,13 +105,19 @@ def render(out_dir: Path) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / ".nojekyll").write_text("")
     shutil.copy(TEMPLATES_DIR / "style.css", out_dir / "style.css")
+    # Vendored byte-identical across all seven Mech sites: reads localStorage
+    # "mech-theme", sets data-theme before paint, injects the toggle button.
+    shutil.copy(TEMPLATES_DIR / "theme-toggle.js", out_dir / "theme-toggle.js")
 
     categories = [
         {"name": c, "count": len(v), "blurb": CATEGORY_BLURB.get(c, ""), "page": f"category/{c.lower()}.html"}
         for c, v in sorted(by_category.items())
     ]
+    grounded = sum(1 for e in index if str(e["identifier"]).startswith("GO:"))
     (out_dir / "index.html").write_text(
-        env.get_template("index.html").render(categories=categories, total=len(index), root=""),
+        env.get_template("index.html").render(
+            categories=categories, total=len(index), grounded=grounded, root=""
+        ),
         encoding="utf-8",
     )
     (out_dir / "browse.html").write_text(
