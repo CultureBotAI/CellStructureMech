@@ -100,7 +100,8 @@ the nearest broader term in `parent_structures`. See
 **CellStructureRecord**; [docs/SCHEMA.md](docs/SCHEMA.md) walks through it.
 The causal-graph classes share TraitMech's vocabulary so tooling can move
 between the two. `mech_shared.yaml` (Discussions, Datasets) is vendored
-byte-identically across the Mech repos and sha-pinned by the tests.
+byte-identically across the Mech repos from culturebotai-claw, and checked
+against it by `just vendored-check`.
 
 ## Layout
 
@@ -109,7 +110,8 @@ CellStructureMech/
 ├── data/structures/<category>/<slug>.yaml   # the records
 ├── src/cellstructuremech/
 │   ├── schema/cellstructuremech.yaml         # LinkML schema
-│   ├── schema/mech_shared.yaml               # vendored, sha-pinned shared module
+│   ├── schema/mech_shared.yaml               # vendored from claw (Discussions, Datasets)
+│   ├── schema/history.yaml                   # vendored from claw (repository history records)
 │   ├── validation/write_validated.py         # write-time closed-schema gate
 │   ├── curate/curation_event.py              # append-only audit trail helper
 │   └── templates/                            # site templates
@@ -124,6 +126,9 @@ CellStructureMech/
 ├── index.html                                # redirect to pages/ for GitHub Pages
 ├── research/                                 # research notes: evidence for curators, never record input
 ├── curation/source_queue.tsv                 # ranked data-source queue (checked in qc)
+├── conf/id_label_targets.yaml                # id<->label gate targets and accepted residuals
+├── history/<kind>/<slug>/*.yaml              # append-only curation history (claw history.yaml schema)
+├── scripts/.vendored_canon_ref               # claw commit the vendored files are pinned to
 ├── conf/sources.yaml                         # what the pipeline reads
 ├── docs/                                     # CURATION.md, SCHEMA.md, SOURCE_QUEUE.md (legend)
 ├── .claude/skills/                           # agent workflows (source-queue, review-open-issues)

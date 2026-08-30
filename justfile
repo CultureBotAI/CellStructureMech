@@ -87,3 +87,29 @@ uniprot-xrefs *args:
 # `just uniprot-proteins data/structures/microcompartment/carboxysome.yaml --taxon 1140 --apply`
 uniprot-proteins record *args:
     uv run python scripts/uniprot_sl.py proteins --record {{record}} {{args}}
+
+# --- claw-governed: curation history, vendored sync, id-label gate ---
+
+# Scaffold a repository-level history record (history/<kind>/<slug>/...). See
+# history/README.md. "$@" not {{args}} — see `set positional-arguments`.
+new-history *args:
+    uv run python scripts/new_history_record.py "$@"
+
+# Validate one history record, or a directory of them, against the VENDORED
+# schema — works with no claw checkout, same as CI.
+validate-history target="history":
+    uv run python scripts/validate_history.py {{target}}
+
+# Verify every claw-governed vendored file matches canon at scripts/.vendored_canon_ref (network).
+vendored-check:
+    bash scripts/check_vendored_sync.sh
+
+# id<->label correspondence gate (vendored): every (grounding, label) pair in the
+# records must match the ontology via OAK. Blocking in CI; downloads OAK sqlite
+# ontologies on first run. Curator-accepted residuals live in conf/id_label_targets.yaml.
+validate-products:
+    uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+
+# Same check, written to reports/label_drift.tsv without failing (CI triage artifact).
+report-label-drift:
+    uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml --report reports/label_drift.tsv || true

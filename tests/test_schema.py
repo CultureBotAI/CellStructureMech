@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-import hashlib
-
 import yaml
 from linkml_runtime.utils.schemaview import SchemaView
 
@@ -27,17 +25,15 @@ def test_structure_record_is_the_only_tree_root(schema_path):
     assert roots == ["CellStructureRecord"]
 
 
-def test_mech_shared_is_vendored_byte_identical(repo_root):
-    """The shared module is vendored across the Mech repos and must not be
-    edited in one place. Pin the sha of the copy we shipped."""
-    path = repo_root / "src" / "cellstructuremech" / "schema" / "mech_shared.yaml"
-    digest = hashlib.sha256(path.read_bytes()).hexdigest()
-    expected = "1a5e21eb2ee9f3584ff6af3a6906b1d442e18c41de405b1bf907c20f44eafa2a"
-    assert digest == expected, (
-        "mech_shared.yaml has been edited locally. It is vendored byte-identical "
-        "across the Mech repos — change it once upstream and re-vendor everywhere, "
-        "then update this pin."
-    )
+def test_vendored_canon_ref_is_an_immutable_claw_commit(repo_root):
+    """mech_shared.yaml and history.yaml are vendored from claw at the commit in
+    scripts/.vendored_canon_ref, and scripts/check_vendored_sync.sh compares
+    the bytes against that commit in CI. This used to be a sha256 of the local
+    file compared with itself (#48) — green forever, even after canon moved."""
+    ref = (repo_root / "scripts" / ".vendored_canon_ref").read_text().strip()
+    assert len(ref) == 40 and all(c in "0123456789abcdef" for c in ref), ref
+    for vendored in ("mech_shared.yaml", "history.yaml"):
+        assert (repo_root / "src" / "cellstructuremech" / "schema" / vendored).is_file()
 
 
 def _permissible(view, enum_name: str) -> set[str]:

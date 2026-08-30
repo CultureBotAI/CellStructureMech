@@ -1,0 +1,56 @@
+name: label-correspondence
+
+# Blocking id<->label gate (vendored from claw): every (grounding, label) pair in
+# data/structures/ must correspond to the ontology via OAK. Kept out of the main
+# qc job because it needs a cached OAK ontology download (~2 min); the
+# vendored-sync guard has its own unfiltered workflow.
+
+on:
+  pull_request:
+    paths: &trigger_paths
+      - "data/structures/**"
+      - "scripts/validate_id_label_correspondence.py"
+      - "scripts/chem_formula.py"
+      - "conf/id_label_targets.yaml"
+      - ".github/workflows/label-correspondence.yaml"
+      - "pyproject.toml"
+      - "uv.lock"
+  push:
+    branches: [main]
+    paths: *trigger_paths
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  label-correspondence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3 # v4.0.0
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
+      - name: Set up Python
+        run: uv python install 3.12
+      - name: Install dependencies
+        run: uv sync
+      - name: Cache OAK ontologies
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.data/oaklib
+          key: oaklib-${{ runner.os }}-v1
+      - name: Generate id<->label drift report
+        run: just report-label-drift
+      - name: Upload drift report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: label-drift-report-${{ github.run_id }}
+          path: reports/label_drift.tsv
+          if-no-files-found: warn
+      - name: Enforce id<->label correspondence
+        run: just validate-products

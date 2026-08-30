@@ -17,7 +17,9 @@
 | Discourse | `Discussion`, `Dataset` | From the vendored `mech_shared` module |
 | Lifecycle | `CurationEvent` | `mapping_status` + append-only `curation_history` |
 
-`mech_shared.yaml` is vendored byte-identically across the Mech repos and
-sha-pinned by `tests/test_schema.py`. Do not edit it here.
+`mech_shared.yaml` and `history.yaml` are vendored byte-identically from
+culturebotai-claw at the commit in `scripts/.vendored_canon_ref`, and compared
+against it by `just vendored-check` in the `vendored-sync` workflow. Do not
+edit them here — change them in claw and re-sync.
 
 Regenerate Pydantic classes with `just gen-schema` (output is git-ignored).
