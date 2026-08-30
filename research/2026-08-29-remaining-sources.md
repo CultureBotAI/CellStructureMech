@@ -88,3 +88,47 @@ verify* rather than guessed.
 1. **Images**: Commons first, then PMC (CC BY, via S3), then CIL (PD/CC BY). Link-only for Atlas/CaltechDATA. Drop ETDB until reachable. The #15 schema already covers all of these via `ImageSourceEnum`.
 2. **Vocabulary**: add UniProt SL ids to `xrefs` on every record and use `cc_scl_term` + `organism_id` queries to seed `components.protein_examples` for canonical taxa — a reviewed, taxon-paired, CC BY source that ProteinTraitsMech can also link to.
 3. **Organism catalogues**: EcoCyc for *E. coli* stoichiometry, cited per component; SubtiWiki only after its licence is clarified.
+
+## Sources
+
+Wikimedia Commons: [reuse guide](https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia) ·
+[CommonsMetadata extension](https://www.mediawiki.org/wiki/Extension:CommonsMetadata) ·
+[Commons:Depicts](https://commons.wikimedia.org/wiki/Commons:Depicts) ·
+[User-Agent policy](https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_User-Agent_Policy) ·
+worked query: `https://commons.wikimedia.org/w/api.php?action=query&titles=File:Carboxysomes_EM.jpg&prop=imageinfo&iiprop=url|extmetadata|sha1&format=json` ·
+[File:Carboxysomes_EM.jpg](https://commons.wikimedia.org/wiki/File:Carboxysomes_EM.jpg) ·
+[File:Escherichia_coli_flagella_TEM.png](https://commons.wikimedia.org/wiki/File:Escherichia_coli_flagella_TEM.png)
+
+PMC: [OA service discontinued](https://pmc.ncbi.nlm.nih.gov/tools/oa-service/) ·
+[NLM Technical Bulletin, Jan–Feb 2026](https://www.nlm.nih.gov/pubs/techbull/jf26/jf26_Changes_to_PMC_ArtDsDistribServs_2026.html) ·
+[PMC on AWS](https://pmc.ncbi.nlm.nih.gov/tools/pmcaws/) · [copyright](https://pmc.ncbi.nlm.nih.gov/about/copyright/) ·
+worked listing: `https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC3762834.` ·
+[PMC1872035](https://pmc.ncbi.nlm.nih.gov/articles/PMC1872035/) · [PMC13106801](https://pmc.ncbi.nlm.nih.gov/articles/PMC13106801/)
+
+Cell Image Library: [licence policy](https://www.cellimagelibrary.org/pages/license) ·
+[notification of use](https://www.cellimagelibrary.org/pages/notification) ·
+[public API wiki](https://github.com/CRBS/CIL_RS/wiki/CIL_Public_API) ·
+[organism tree](https://www.cellimagelibrary.org/ontology_tree/ncbi_organism?lazy) ·
+[CIL:39991](https://www.cellimagelibrary.org/images/39991) · [CIL:40396](https://www.cellimagelibrary.org/images/40396) ·
+[CIL:7321](https://www.cellimagelibrary.org/images/7321) · [CIL:14652](https://www.cellimagelibrary.org/images/14652) ·
+DOI check: https://doi.org/10.7295/W9CIL37254
+
+ETDB / Atlas: [ETDB-Caltech paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0215531) ·
+[etdb-downloads](https://github.com/theJensenLab/etdb-downloads) ·
+[Atlas about](http://www.cellstructureatlas.org/about.html) · [Atlas JMBE paper](https://journals.asm.org/doi/full/10.1128/jmbe.00128-21) ·
+CaltechDATA: [D1.1500 carboxysome](https://doi.org/10.22002/D1.1500) · [D1.1355 S-layer](https://doi.org/10.22002/D1.1355) · [D1.1525 flagellum](https://doi.org/10.22002/D1.1525)
+
+UniProt SL: [subcell.txt](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/docs/subcell.txt) ·
+[SL-0034](https://www.uniprot.org/locations/SL-0034) · REST `https://rest.uniprot.org/locations/SL-0034?format=json` ·
+[Bioregistry uniprot.location](https://bioregistry.io/registry/uniprot.location)
+
+NCIT: [terms of use](https://evs.nci.nih.gov/ftp1/NCI_Thesaurus/ThesaurusTermsofUse.htm) ·
+[OBO Foundry entry](https://obofoundry.org/ontology/ncit.html) · EVS REST `https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C13269/descendants`
+
+SubtiWiki: [v5](https://subtiwiki.uni-goettingen.de/v5) · Swagger `https://subtiwiki.uni-goettingen.de/v5/api/` ·
+worked: `https://subtiwiki.uni-goettingen.de/v5/api/gene-category/387`
+
+EcoCyc / BioCyc: [web services](https://biocyc.org/web-services.shtml) ·
+[subscription terms](https://biocyc.org/subscription-terms.shtml) · [free access note](https://biocyc.org/news001-subscriptions.shtml) ·
+[account page](https://ecocyc.org/new-account.shtml) · [flat files](https://ecocyc.org/download-flatfiles.shtml) ·
+worked: `https://websvc.biocyc.org/getxml?id=ECOLI:CPLX0-7452&detail=full`
