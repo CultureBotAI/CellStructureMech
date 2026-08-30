@@ -21,6 +21,11 @@ COMMANDS = [
         "The README's current-corpus block must match the corpus that generated it.",
     ),
     (
+        "source queue",
+        [sys.executable, "scripts/check_source_queue.py"],
+        "The ranked data-source queue must describe the pipeline that exists, with verified licences.",
+    ),
+    (
         "tests",
         [sys.executable, "-m", "pytest", "-q"],
         "Tests cover corpus-wide invariants that per-record validation cannot see.",

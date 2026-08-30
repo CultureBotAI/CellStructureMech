@@ -14,8 +14,10 @@ Read before changing domain content:
 - [README.md](README.md) — model and generated corpus statistics.
 - [docs/CURATION.md](docs/CURATION.md) — what is a record, identifiers, evidence rules.
 - [docs/SCHEMA.md](docs/SCHEMA.md) — field guide.
-- [docs/SOURCE_QUEUE.md](docs/SOURCE_QUEUE.md) — the ranked data-source queue; worked via the
-  `source-queue` skill (`.claude/skills/source-queue/SKILL.md`).
+- [curation/source_queue.tsv](curation/source_queue.tsv) — the ranked data-source queue
+  (legend in [docs/SOURCE_QUEUE.md](docs/SOURCE_QUEUE.md)); checked by `just source-queue`
+  inside `just qc`; triaged by the `source-queue` skill. `ADOPTED` is earned by a PR that
+  adds the script, not by editing the row.
 - Issue triage: the `review-open-issues` skill
   (`.claude/skills/review-open-issues/SKILL.md`) — read-only ranking of the
   whole queue; closing and merging stay the owner's calls.
@@ -34,6 +36,7 @@ just validate-all      # closed-schema validation of every record
 just render            # regenerate the committed site under pages/
 just docs-stats        # refresh the generated README statistics block
 just new-record ...    # scaffold a record (dry-run by default; --apply to write)
+just source-queue      # the ranked data-source queue and what is unverified in it
 ```
 
 `just qc` is authoritative: lint, README statistics, tests, closed-schema

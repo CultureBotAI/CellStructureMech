@@ -1,45 +1,27 @@
 # Data source queue
 
-The prioritised list of external sources CellStructureMech draws on, what
-each one feeds, and where we are with it. **This file is the queue**; the
-research notes under `research/` are the evidence behind the ranking, and
-issues track the work. Keep all three in step: when a source's status changes
-here, link the PR or issue that changed it.
+**The queue is `curation/source_queue.tsv`.** This page is its legend. It is
+machine-checked by `scripts/check_source_queue.py` (`just source-queue`,
+part of `just qc`), and triaged by the `source-queue` skill.
 
-Ranking rule: (licence we can redistribute) × (per-item identifier) ×
-(taxon linkage) × (what it feeds per unit of curator effort). A source that
-fails on licence sinks regardless of the rest.
+Ranking rule: what the corpus cannot currently assert (`just report`), then
+whether we may redistribute it, then per-item identifiers and taxon linkage,
+then bulk access, then effort. A licence failure sinks a source regardless of
+everything else.
 
-Status values: `DONE` (used in the corpus, pipeline exists) · `ACTIVE` (next
-up, issue open) · `READY` (assessed, usable, not started) · `CAUTION` (usable
-with a constraint that must be honoured) · `BLOCKED` (cannot use yet; reason
-given) · `SKIP` (assessed, rejected; reason given).
+| Column | Values | Meaning |
+|---|---|---|
+| `closes_gap` | a `CellStructureRecord` field, or `identity` / `evidence` | What the source would fill. Check `just report` for what is actually empty. |
+| `use` | `SEED` copy content into records or `pages/` · `LINK_ONLY` cite by URL/DOI, never host · `CURATE_ONLY` a curator may read it, nothing is copied · `REFERENCE` identifiers only | How the source may be used. |
+| `redistribution` | `CC0_OK` · `ATTRIBUTION` (CC BY) · `SHARE_ALIKE` · `NONCOMMERCIAL` · `RESTRICTED` · `UNVERIFIED` | What the source's own licence page says. `SEED` is refused under the last three. |
+| `taxon_link` | `YES` · `PARTIAL` · `NO` · `UNVERIFIED` | Does an item carry an NCBI Taxonomy id? |
+| `item_id` | `DOI` · `CURIE` · `ACCESSION` · `URL` · `NONE` | The per-item citable identifier. |
+| `access` | `BULK` · `API` · `BOTH` · `MANUAL` · `UNVERIFIED` | |
+| `priority` | 1 (next) – 5 | |
+| `status` | `CANDIDATE` · `EVALUATING` (used by hand, no repeatable script yet) · `ADOPTED` (in `conf/sources.yaml`, `script` exists, terms verified) · `BLOCKED` (reason in rationale) · `REJECTED` | |
+| `verified_on` | date | When the licence was read at the source. |
+| `script` | path | Required for `ADOPTED`; must exist. |
 
-## Queue
-
-| # | Source | Feeds | Status | Constraint / next step | Evidence |
-|---|---|---|---|---|---|
-| 1 | **GO cellular component** | `identifier`, `parent_structures`, `part_of`, `functions` | DONE | Primary identifier; verify each CURIE against OLS (#6 wants this automated) | [note 1](../research/2026-08-29-imaging-evidence-sources.md) |
-| 2 | **Wikimedia Commons** | `images` | DONE | Per-file licence from `extmetadata`; taxon via SDC `P180`→Wikidata `P685`; descriptive User-Agent; download-and-host | [note 2](../research/2026-08-29-remaining-sources.md), PRs #22 #33 |
-| 3 | **UniProt Subcellular Location** | `xrefs`, `components.protein_examples` | DONE | `scripts/uniprot_sl.py` (`just uniprot-xrefs`, `just uniprot-proteins`); only ECO:0000269 PubMed-backed localisations, matched to components by gene symbol; unmatched proteins are a signal to add components | note 2, #28 |
-| 4 | **TraitMech** | `associated_traits` | DONE | Cross-repo id check wanted (#11) | — |
-| 5 | **PMC open access (S3 bucket)** | `images` | ACTIVE | CC BY only (`license_code`); manual panel + taxon curation; never scrape pmc.ncbi.nlm.nih.gov | note 2 |
-| 6 | **EMDB + EMPIAR** | `images`, `xrefs` (EMD ids), `physical_properties` | READY | EMPIAR CC0 but no taxon field — go through the EMDB cross-reference; extract frames, do not hot-link | note 1 |
-| 7 | **Cell Image Library** | `images` | READY | Public Domain / CC BY records only; per-image DOI `10.7295/W9CIL…`; name→taxid lookup needed; API key by request | note 2 |
-| 8 | **EcoCyc / BioCyc** | `components` (stoichiometry, *E. coli*) | CAUTION | Cite and link, do not redistribute; `getxml` works anonymously, ≤1 req/s | note 2 |
-| 9 | **Complex Portal** | `components`, `xrefs` (*E. coli* K-12 complexes) | READY | Prokaryote coverage is *E. coli* only; verify accessions — one guessed CPX id was already retracted (#2) | note 1 |
-| 10 | **Cell Structure Atlas / CaltechDATA** | `images` (link-only) | CAUTION | CC BY-NC: never host; DOI per video; no taxids on records | note 2, PR #33 |
-| 11 | **BioImage Archive** | `images` | READY | Check licence per accession | note 1 |
-| 12 | **SubtiWiki v5** | `components` (*B. subtilis*) | BLOCKED | No licence statement anywhere; ask the Stülke lab before copying | note 2 |
-| 13 | **ETDB-Caltech** | `images` | BLOCKED | Unreachable since ≥2022-12; no licence; recheck quarterly | note 2 |
-| 14 | **IDR** | `images` | CAUTION | Not uniformly open; per-study licence | note 1 |
-| 15 | **MicrO** | `xrefs` | CAUTION | Inactive at OBO Foundry; static vocabulary only | note 1 |
-| 16 | **NCIT** | — | SKIP | No prokaryotic structures, no GO xrefs | note 2 |
-
-## Not yet assessed
-
-PDB (as an `xrefs` / `physical_properties` source beyond single lookups),
-KEGG BRITE cellular-structure hierarchies, Bacterial Cell Structure
-literature atlases (e.g. Madigan-style textbook figure banks — likely
-copyrighted), NIH BioArt (public domain illustrations, not evidence).
-Add a row with status `READY`/`SKIP` once assessed, with a research note.
+Research notes under `research/` are the evidence behind each row; issues
+track the work. `ADOPTED` is earned by a pull request that adds the script and
+passes `just qc`, not by editing the row.

@@ -123,7 +123,9 @@ CellStructureMech/
 ├── pages/                                    # generated site (committed)
 ├── index.html                                # redirect to pages/ for GitHub Pages
 ├── research/                                 # research notes: evidence for curators, never record input
-├── docs/                                     # CURATION.md, SCHEMA.md, SOURCE_QUEUE.md
+├── curation/source_queue.tsv                 # ranked data-source queue (checked in qc)
+├── conf/sources.yaml                         # what the pipeline reads
+├── docs/                                     # CURATION.md, SCHEMA.md, SOURCE_QUEUE.md (legend)
 ├── .claude/skills/                           # agent workflows (source-queue, review-open-issues)
 └── tests/
 ```
