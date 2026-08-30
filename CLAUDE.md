@@ -16,6 +16,9 @@ Read before changing domain content:
 - [docs/SCHEMA.md](docs/SCHEMA.md) — field guide.
 - [docs/SOURCE_QUEUE.md](docs/SOURCE_QUEUE.md) — the ranked data-source queue; worked via the
   `source-queue` skill (`.claude/skills/source-queue/SKILL.md`).
+- Issue triage: the `review-open-issues` skill
+  (`.claude/skills/review-open-issues/SKILL.md`) — read-only ranking of the
+  whole queue; closing and merging stay the owner's calls.
 
 Sibling repositories use the same conventions: TraitMech, ProteinTraitsMech,
 HabitatMech, CultureMech, MediaIngredientMech, CommunityMech. The upstream
