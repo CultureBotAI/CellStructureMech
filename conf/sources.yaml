@@ -1,0 +1,23 @@
+# What the pipeline actually reads today. A source is ADOPTED in
+# curation/source_queue.tsv only if it is listed here with a script that
+# exists; scripts/check_source_queue.py enforces both directions.
+go:
+  name: Gene Ontology cellular component
+  homepage: http://geneontology.org/
+  script: scripts/validate_strict.py      # identifiers are GO CURIEs; verified against OLS at review time
+  role: identity
+uniprot_sl:
+  name: UniProt Subcellular Location
+  homepage: https://www.uniprot.org/locations/
+  script: scripts/uniprot_sl.py
+  role: xrefs, components.protein_examples
+traitmech:
+  name: TraitMech
+  homepage: https://github.com/CultureBotAI/TraitMech
+  script: scripts/validate_strict.py      # associated_traits CURIEs; cross-repo check pending (#11)
+  role: associated_traits
+cell_structure_atlas:
+  name: Atlas of Bacterial & Archaeal Cell Structure (CaltechDATA records)
+  homepage: https://www.cellstructureatlas.org/
+  script: scripts/validate_strict.py      # link-only images; the ImageLicenceEnum + tests forbid hosting CC BY-NC
+  role: images (link-only)

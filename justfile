@@ -70,6 +70,11 @@ lint *args:
 lint-fix:
     uv run ruff check --fix .
 
+# The prioritized data-source queue: what to adopt next, and what is still
+# unverified about it. `.claude/skills/source-queue` triages it.
+source-queue:
+    uv run python scripts/check_source_queue.py
+
 # The authoritative quality gate used both locally and in CI.
 qc:
     uv run python scripts/run_qc.py

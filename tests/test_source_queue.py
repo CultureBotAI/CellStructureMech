@@ -1,44 +1,47 @@
-"""docs/SOURCE_QUEUE.md is the operative ranking of data sources; keep it well-formed."""
+"""curation/source_queue.tsv is the operative ranking of data sources; the checker keeps it honest."""
 
 from __future__ import annotations
 
-import re
+import subprocess
+import sys
 from pathlib import Path
 
-QUEUE = Path(__file__).resolve().parents[1] / "docs" / "SOURCE_QUEUE.md"
-STATUSES = {"DONE", "ACTIVE", "READY", "CAUTION", "BLOCKED", "SKIP"}
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
-def _rows():
-    rows = []
-    for line in QUEUE.read_text(encoding="utf-8").splitlines():
-        m = re.match(r"^\|\s*(\d+)\s*\|(.*)\|\s*$", line)
-        if m:
-            cells = [c.strip() for c in m.group(2).split("|")]
-            rows.append((int(m.group(1)), cells))
-    return rows
+def test_the_source_queue_is_consistent_with_the_repository():
+    result = subprocess.run([sys.executable, "scripts/check_source_queue.py"], cwd=REPO_ROOT,
+                            capture_output=True, text=True, check=False)
+    assert result.returncode == 0, result.stderr
+    assert "source queue OK" in result.stdout
 
 
-def test_queue_has_rows():
-    assert len(_rows()) >= 10
+def test_checker_rejects_adopted_without_script(tmp_path, monkeypatch):
+    import scripts.check_source_queue as csq
+
+    queue = tmp_path / "q.tsv"
+    header = "\t".join(csq.COLUMNS)
+    row = "\t".join(["x", "X", "images", "SEED", "CC0_OK", "YES", "DOI", "BULK", "1", "ADOPTED",
+                     "2026-08-29", "", "https://x", "why"])
+    queue.write_text(header + "\n" + row + "\n")
+    conf = tmp_path / "sources.yaml"
+    conf.write_text("x:\n  name: X\n")
+    monkeypatch.setattr(csq, "QUEUE_PATH", queue)
+    monkeypatch.setattr(csq, "CONF_PATH", conf)
+    assert csq.main() == 1
 
 
-def test_ranks_are_contiguous_from_one():
-    ranks = [r for r, _ in _rows()]
-    assert ranks == list(range(1, len(ranks) + 1)), ranks
+def test_checker_rejects_seeding_noncommercial(tmp_path, monkeypatch, capsys):
+    import scripts.check_source_queue as csq
 
-
-def test_statuses_come_from_the_legend():
-    bad = [(r, c[2]) for r, c in _rows() if c[2] not in STATUSES]
-    assert not bad, f"statuses not in {sorted(STATUSES)}: {bad}"
-
-
-def test_every_row_has_a_constraint_and_evidence():
-    bad = [(r, c[0]) for r, c in _rows() if not c[3] or not c[4]]
-    assert not bad, f"rows missing constraint or evidence: {bad}"
-
-
-def test_at_most_one_active_source():
-    """ACTIVE means 'next up'; two of them is a queue without an order."""
-    active = [c[0] for _, c in _rows() if c[2] == "ACTIVE"]
-    assert len(active) <= 1, active
+    queue = tmp_path / "q.tsv"
+    header = "\t".join(csq.COLUMNS)
+    row = "\t".join(["x", "X", "images", "SEED", "NONCOMMERCIAL", "YES", "DOI", "BULK", "1", "CANDIDATE",
+                     "2026-08-29", "", "https://x", "why"])
+    queue.write_text(header + "\n" + row + "\n")
+    conf = tmp_path / "sources.yaml"
+    conf.write_text("")
+    monkeypatch.setattr(csq, "QUEUE_PATH", queue)
+    monkeypatch.setattr(csq, "CONF_PATH", conf)
+    assert csq.main() == 1
+    assert "NONCOMMERCIAL" in capsys.readouterr().err
