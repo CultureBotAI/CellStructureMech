@@ -100,7 +100,8 @@ the nearest broader term in `parent_structures`. See
 **CellStructureRecord**; [docs/SCHEMA.md](docs/SCHEMA.md) walks through it.
 The causal-graph classes share TraitMech's vocabulary so tooling can move
 between the two. `mech_shared.yaml` (Discussions, Datasets) is vendored
-byte-identically across the Mech repos and sha-pinned by the tests.
+byte-identically across the Mech repos from culturebotai-claw, and checked
+against it by `just vendored-check`.
 
 ## Layout
 
@@ -109,7 +110,8 @@ CellStructureMech/
 ├── data/structures/<category>/<slug>.yaml   # the records
 ├── src/cellstructuremech/
 │   ├── schema/cellstructuremech.yaml         # LinkML schema
-│   ├── schema/mech_shared.yaml               # vendored, sha-pinned shared module
+│   ├── schema/mech_shared.yaml               # vendored from claw (Discussions, Datasets)
+│   ├── schema/history.yaml                   # vendored from claw (repository history records)
 │   ├── validation/write_validated.py         # write-time closed-schema gate
 │   ├── curate/curation_event.py              # append-only audit trail helper
 │   └── templates/                            # site templates
