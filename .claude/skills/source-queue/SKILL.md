@@ -31,6 +31,9 @@ for it. Never keep a private ranking in your head or in a chat reply.
    → `just qc`. Confirm the side effects (file on disk, hash recorded, page
    renders, links resolve). Only then do more, one at a time or in a
    dry-run-first batch.
+   Run `just qc` bare and read its exit code — never through a pipe
+   (`| grep …` returns grep's status, and a failing suite was committed and
+   pushed that way in PR #39).
 4. **Never write a CURIE, accession or URL from memory.** Resolve it (OLS,
    Crossref, RCSB, the source API) in the same script that writes it. Three
    guessed identifiers reached PR #1 this way and one guessed download URL
