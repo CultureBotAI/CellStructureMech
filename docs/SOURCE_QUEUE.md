@@ -21,9 +21,9 @@ given) · `SKIP` (assessed, rejected; reason given).
 |---|---|---|---|---|---|
 | 1 | **GO cellular component** | `identifier`, `parent_structures`, `part_of`, `functions` | DONE | Primary identifier; verify each CURIE against OLS (#6 wants this automated) | [note 1](../research/2026-08-29-imaging-evidence-sources.md) |
 | 2 | **Wikimedia Commons** | `images` | DONE | Per-file licence from `extmetadata`; taxon via SDC `P180`→Wikidata `P685`; descriptive User-Agent; download-and-host | [note 2](../research/2026-08-29-remaining-sources.md), PRs #22 #33 |
-| 3 | **UniProt Subcellular Location** | `xrefs`, `components.protein_examples` | ACTIVE | #28: add `SL-` xrefs, seed protein examples from `cc_scl_term` + `organism_id`, canary carboxysome / PCC 7942 | note 2 |
+| 3 | **UniProt Subcellular Location** | `xrefs`, `components.protein_examples` | DONE | `scripts/uniprot_sl.py` (`just uniprot-xrefs`, `just uniprot-proteins`); only ECO:0000269 PubMed-backed localisations, matched to components by gene symbol; unmatched proteins are a signal to add components | note 2, #28 |
 | 4 | **TraitMech** | `associated_traits` | DONE | Cross-repo id check wanted (#11) | — |
-| 5 | **PMC open access (S3 bucket)** | `images` | READY | CC BY only (`license_code`); manual panel + taxon curation; never scrape pmc.ncbi.nlm.nih.gov | note 2 |
+| 5 | **PMC open access (S3 bucket)** | `images` | ACTIVE | CC BY only (`license_code`); manual panel + taxon curation; never scrape pmc.ncbi.nlm.nih.gov | note 2 |
 | 6 | **EMDB + EMPIAR** | `images`, `xrefs` (EMD ids), `physical_properties` | READY | EMPIAR CC0 but no taxon field — go through the EMDB cross-reference; extract frames, do not hot-link | note 1 |
 | 7 | **Cell Image Library** | `images` | READY | Public Domain / CC BY records only; per-image DOI `10.7295/W9CIL…`; name→taxid lookup needed; API key by request | note 2 |
 | 8 | **EcoCyc / BioCyc** | `components` (stoichiometry, *E. coli*) | CAUTION | Cite and link, do not redistribute; `getxml` works anonymously, ≤1 req/s | note 2 |
