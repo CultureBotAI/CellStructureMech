@@ -32,7 +32,7 @@ COMMANDS = [
     ),
     (
         "history records",
-        ["bash", "-c", "just validate-history history"],
+        [sys.executable, "scripts/validate_history.py"],
         "Repository-level history records must validate against the vendored claw schema.",
     ),
     (

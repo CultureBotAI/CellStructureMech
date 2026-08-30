@@ -1,62 +1,60 @@
 # Curation history
 
 Append-only provenance for curation sessions. **One record per change** — per
-target for hand curation, per *migration* for a bulk edit (see "One record per
-CHANGE" below). Written once and **never edited afterwards**; corrections go in a
-new record that references the old one in its `details`.
+target for hand curation, per *migration* for a bulk edit. Written once and
+**never edited afterwards**; corrections go in a new record that references the
+old one in its `details`.
 
 ```
 history/<kind-dir>/<slug>/<TIMESTAMP>-<actor>-<shortid>.yaml
 ```
 
+The schema (`src/cellstructuremech/schema/history.yaml`) and the scaffolder's
+contract are vendored from culturebotai-claw; the conventions below are this
+repository's.
+
 ## Why this exists
 
-Nothing else in the repo records *which model, using which tool, changed what,
-why, and under which issue*. Git tells you a commit happened; it does not tell you
-that a claim was checked against a cached abstract, or which deep-research
-provider produced an edge, or that a review deliberately changed nothing.
-
-That gap matters more as autonomous agents start doing the changing. See
-`culturebotai-claw/docs/AUTONOMOUS_LOOPS.md`.
+Per-record `curation_history` says what changed inside one record. It cannot
+say that a source's licence was re-read at the source, that a gate was adopted
+and what it found, or that a review deliberately changed nothing. Git says a
+commit happened; it does not say which model, using which tool, changed what,
+why, and under which issue. That gap matters more as agents do the changing.
 
 ## Why the layout looks like that
 
-The directory-per-slug plus unguessable `shortid` is the whole design. Two agents
-curating the same trait concurrently cannot write the same file, so this layer has
-**no merge-conflict surface**. A single shared changelog would conflict on every
-parallel PR; this never does.
+Directory-per-slug plus an unguessable `shortid`: two agents working the same
+structure concurrently cannot write the same file, so this layer has **no
+merge-conflict surface**. A shared changelog would conflict on every parallel PR.
 
 ## Writing a record
 
-Do not hand-write the filename or the timestamp — scaffold it:
+Do not hand-write the filename or timestamp — scaffold it:
 
 ```bash
-just new-history --kind record --slug cellulolysis \
-  --target-root data/traits/metabolism \
+just new-history --kind record --slug carboxysome \
+  --target-root data/structures/microcompartment \
   --event EDIT --outcome changed \
-  --sections causal_graphs,grounding \
-  --summary "Connect fragmented cellulolysis causal graph" \
-  --model claude-opus-5 --agent-tool claude-code \
-  --issue https://github.com/CultureBotAI/CellStructureMech/issues/183 \
+  --sections components,images \
+  --summary "Seed protein examples from UniProt SL and add the Commons micrograph" \
+  --model claude-fable-5 --agent-tool claude-code \
+  --issue https://github.com/CultureBotAI/CellStructureMech/issues/28 \
   --details "What was done, what evidence was used, how it was validated."
 ```
 
-Omit `--details` and you get a TODO placeholder to edit before committing —
-`just validate-history` **fails** while it is still there, so an unfilled record
-cannot slip through. The command prints the record path as its final stdout line,
-so scripts can capture it.
+Omit `--details` and you get a TODO placeholder — `just validate-history`
+**fails** while it is still there, so an unfilled record cannot slip through.
+The command prints the record path as its final stdout line.
 
-`--kind record` and `--kind schema` can derive the target path from `--slug` plus
-`--target-root`. Every other kind should pass an explicit `--path`, because only
-those two are reliably `.yaml` — mappings are `.sssom.tsv`, reports `.md`,
-infrastructure a justfile or workflow. Neither scaffolder *enforces* that: both
-will derive `<target-root>/<slug>.yaml` for any kind, so passing `--target-root`
-with `--kind mapping` silently yields a target path that does not exist.
+`--kind record` and `--kind schema` derive the target path from `--slug` plus
+`--target-root`. Every other kind should pass an explicit `--path`: only those
+two are reliably `.yaml` (a source-queue change is a `.tsv`, a research note an
+`.md`, infrastructure a justfile or workflow).
 
 Then validate and stage:
 
 ```bash
-just validate-history history/records/cellulolysis/<file>.yaml
+just validate-history history/records/carboxysome/<file>.yaml
 git add history/
 ```
 
@@ -67,151 +65,33 @@ git add history/
 `outcome`: `changed` · `no_change` · `needs_followup` · `blocked`
 
 Outcome is **orthogonal** to event on purpose. A `REVIEW` that found nothing is
-`no_change` — a real result worth recording, because it says something was
-checked. An `EDIT` that hit a wall is `blocked`, and `details` must say what the
-wall was so the next session does not rediscover it.
+`no_change` — a real result, because it says something was checked. An `EDIT`
+that hit a wall is `blocked`, and `details` must say what the wall was so the
+next session does not rediscover it.
 
 `kind`: `record` · `schema` · `mapping` · `report` · `infrastructure` · `other`
 (`other` requires an explicit `--path`).
 
 ## One record per CHANGE, not per file
 
-"One record per session per target" is the rule for **hand curation**, where the
-session and the target coincide: someone reasons about one trait and writes down
-what they concluded. The three records under `records/` are exactly that, and the
-`sulfur_globule` one is what a good record looks like.
+For hand curation the session and the target coincide: one structure is
+reasoned about and one record is written. For a mechanical change across many
+records — a re-render, a bulk grounding fix, a schema migration — write **one
+record for the migration**, with `--kind infrastructure` or `--kind schema` and
+the script as the target. A record per touched file would bury the reasoning in
+copies of itself.
 
-A **bulk change is a different animal** and the same rule read literally gives the
-wrong answer. #302 touched 128 trait records mechanically; #334 touched 15. Writing
-one record per file would produce 128 near-identical stubs and bury the handful of
-substantive records this directory exists for — destroying the signal in the name
-of provenance.
-
-So for a change that edits many records under one decision, write **one** record:
-
-| the change is | `kind` | `path` |
+| what happened | `--kind` | target |
 |---|---|---|
-| one trait, curated | `record` | that trait's YAML |
-| a migration driven by a script | `infrastructure` | the migration script |
-| a bulk change with no single script | `other` | the file that best explains it |
+| one structure, curated | `record` | that structure's YAML |
+| a bulk edit across records | `infrastructure` | the script that made it |
+| a schema change | `schema` | the schema file |
+| a source adopted or re-ranked | `other` | `curation/source_queue.tsv` |
+| a research note | `other` | the note under `research/` |
 
-Name the scope in `events[].details` — how many records, which issue, and what the
-selection rule was. The migration script is usually the honest target: it *is* the
-artifact that says what drove the change, and it is reviewable in a way that 128
-copies of the same sentence are not.
+## What is checked
 
-The per-file `curation_history:` block still records what changed in each file.
-The two are not redundant: that block has no slot for the model, the tool, or the
-issue, and — because it hangs off an edit — **it cannot record a session that
-changed nothing.** An `AUDIT` that checked a trait and correctly found nothing
-wrong is invisible without a record here. That is what `outcome: no_change` is for.
-
-## How strictly this is enforced
-
-- **Presence blocks** (#325). A PR that changes any `.yaml` under `data/traits/`
-  and adds no new history record fails CI.
-
-  This was advisory until #325, on the reasoning that a hard gate "trains people to
-  route around it". The measurement disagreed: of **134 commits** that modified
-  trait records, **2** added a history record — 1.5%. Nobody routed around the
-  gate, because there was no gate; the convention simply did not happen. Meanwhile
-  **275 trait records** carry an issue number hand-typed into a `changes` string,
-  which is the same information in a form nothing can query. An unenforced
-  convention here drifts exactly as #182, #184 and #215 drifted.
-
-  The cost is now one file per PR rather than one per changed record, which is what
-  makes the gate reasonable to impose at all — the granularity fix above had to come
-  first.
-
-- **Validity blocks too.** If you write a record it must be schema-valid, and
-  `just validate-history` fails like any other validation error. It also fails while
-  the `--details` TODO placeholder is unfilled, so scaffolding an empty record to
-  satisfy the presence gate does not work.
-
-## The vendored schema still states the old policy
-
-`src/cellstructuremech/schema/history.yaml` describes presence as *advisory* and states
-"one record per session per target" unqualified. Both are superseded by #325 and
-**neither is edited here on purpose**: that file is vendored byte-identical from
-canonical claw, and a one-copy edit would fail `scripts/check_vendored_sync.sh`.
-The canonical policy has to change in claw first and then be rolled out under a
-reviewed fleet pin; the remaining policy correction is tracked in #358.
-
-Until then this README and the `curation-history` workflow are the operative
-statements of the policy, and the schema's prose is stale by design rather than
-by neglect.
-
-## Where the schema lives
-
-The authority and consumer copies are separate on purpose:
-
-- **Canonical schema**:
-  `culturebotai-claw/src/kg_microbe_governance/artifacts/schema/history.yaml`.
-- **Vendored here**: `src/cellstructuremech/schema/history.yaml`, byte-identical and
-  selected by claw's manifest for this repository.
-- **Transitional claw compatibility copies**: `src/kg_microbe_history/` and
-  `shared/history/history.yaml`; these are not independent authorities.
-
-Check that identity rather than trusting this file — with a claw checkout:
-
-```bash
-diff "${CLAW_SRC:-../culturebotai-claw/src}/kg_microbe_governance/artifacts/schema/history.yaml" \
-     src/cellstructuremech/schema/history.yaml && echo "in sync"
-```
-
-An earlier draft of this README recorded the md5 inline. It went stale one commit
-later, when the schema gained a field and the hash was not updated — which is the
-argument against writing a hash into prose at all: nothing recomputes it, so it
-decays into a confident false negative. A runnable command cannot go stale.
-
-The vendored copy exists so validation has **no dependency on a claw checkout**.
-`just
-validate-history` and the `curation-history` workflow both use the local copy and
-work with no claw checkout at all.
-
-`just new-history` always uses `scripts/new_history_record.py`. The old recipe
-preferred claw when a checkout happened to be present, which meant the same
-command produced different `links` values on different machines: the local
-scaffolder expands bare issue and PR numbers, while claw passed them through.
-The local argument surface and record shape remain parity-tested against claw.
-
-That fallback was added in #296, after the #294 backfill wrote two records by
-hand. The prompt for it is worth keeping: this file previously asserted that
-"anyone writing curation records has claw checked out", which is an assumption
-rather than a guarantee — it does not hold for a fresh clone, for CI, or for a
-contributor outside the fleet. It also did not hold in
-practice for the reason you would expect: the recipe was *gated* on claw, so it
-was easier to hand-write than to find out whether the gate would pass.
-
-The two scaffolders take the **same arguments** and produce byte-identical
-records apart from the id's hash suffix and one deliberate difference: a bare
-`--issue 296` becomes a full URL here, because the schema declares those
-`range: uri` and every committed record carries URLs, whereas claw passes the
-string through. `just validate-history` also requires absolute HTTP(S) URLs in
-`links.issues` and `links.prs`, and an absolute URI in `links.urls`, because
-LinkML's runtime validator does not currently enforce the `uri` range by itself.
-Check scaffolder parity rather than trusting this paragraph:
-
-```bash
-# Exercise a non-`record` kind too: the layout is history/<kind-dir>/<slug>/,
-# and a fallback that hardcodes `records/` writes to the wrong place while still
-# validating, because the schema does not constrain the path.
-ARGS=(--kind infrastructure --slug curation-history --path docs/x.md \
-      --sections causal_graphs,grounding \
-      --summary "parity" --details "check" --issue 296)
-PYTHONPATH="${CLAW_SRC:-../culturebotai-claw/src}" \
-  uv run python -m kg_microbe_history new "${ARGS[@]}" --history-root /tmp/h_claw
-uv run python scripts/new_history_record.py "${ARGS[@]}" --history-root /tmp/h_local
-diff <(cat /tmp/h_claw/*/*/*.yaml) <(cat /tmp/h_local/*/*/*.yaml)
-```
-
-Omitting `--details` writes claw's placeholder **byte-for-byte**, so the record
-fails `just validate-history` until you replace it — which is the promise two
-paragraphs up, and which a near-miss wording would quietly break, since the
-schema pattern is a negative lookahead on that exact string.
-
-Changing the schema means changing claw's canonical governance artifact and
-manifest, merging a reviewed commit, and coordinating that immutable pin across
-the five Mechs. `scripts/check_vendored_sync.sh` selects the package-mapped
-`history.yaml` from that manifest, and the claw fleet audit supplies the
-cross-repository backstop. The gap recorded in #191 is therefore resolved.
+`just validate-history` (inside `just qc`) validates every record against the
+vendored schema and checks that its links resolve to this repository. Records
+are append-only by convention, not by a gate; a corrected record is a new
+record that names the old one.

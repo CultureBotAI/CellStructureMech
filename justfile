@@ -98,19 +98,7 @@ new-history *args:
 # Validate one history record, or a directory of them, against the VENDORED
 # schema — works with no claw checkout, same as CI.
 validate-history target="history":
-    #!/usr/bin/env bash
-    set -euo pipefail
-    target="{{target}}"
-    if [ ! -e "$target" ]; then echo "validate-history: '$target' does not exist." >&2; exit 2; fi
-    if [ -d "$target" ]; then
-      if [ -z "$(find "$target" -name '*.yaml' -print -quit)" ]; then echo "No history records under '$target'."; exit 0; fi
-      uv run python scripts/validate_history_links.py "$target"
-      find "$target" -name '*.yaml' -print0 | xargs -0 uv run linkml-validate \
-        --schema src/cellstructuremech/schema/history.yaml --target-class HistoryRecord
-    else
-      uv run python scripts/validate_history_links.py "$target"
-      uv run linkml-validate --schema src/cellstructuremech/schema/history.yaml --target-class HistoryRecord "$target"
-    fi
+    uv run python scripts/validate_history.py {{target}}
 
 # Verify every claw-governed vendored file matches canon at scripts/.vendored_canon_ref (network).
 vendored-check:
