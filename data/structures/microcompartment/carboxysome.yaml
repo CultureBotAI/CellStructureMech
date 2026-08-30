@@ -74,10 +74,10 @@ components:
     notes: Rae et al. 2013 describe CcmM and CsoS2 as the RuBisCO-organising proteins.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1117
-  taxon_label: Cyanobacteria
+  taxon_label: Cyanobacteriota
   presence: UNIVERSAL
-  note: Beta-carboxysomes in most lineages; alpha-carboxysomes in marine Prochlorococcus
-    and some Synechococcus.
+  note: Cyanobacteria. Beta-carboxysomes in most lineages; alpha-carboxysomes in marine
+    Prochlorococcus and some Synechococcus.
   reference: DOI:10.1128/MMBR.00061-12
 - taxon_id: NCBITaxon:1224
   taxon_label: Pseudomonadota
@@ -203,4 +203,10 @@ curation_history:
   action: CREATED_RECORD
   changes: Drafted from the cited reviews, aligned with the TraitMech carboxysome
     trait record (traitmech:000072). Not yet human-reviewed.
+  llm_assisted: true
+- timestamp: '2026-08-29T01:00:00Z'
+  curator: claude
+  action: FIX_REVIEW_FINDINGS
+  changes: 'PR #1 review: NCBITaxon:1117 label updated to the current name Cyanobacteriota
+    (#5).'
   llm_assisted: true

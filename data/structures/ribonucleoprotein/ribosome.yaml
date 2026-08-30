@@ -15,8 +15,6 @@ structure_kind: RIBONUCLEOPROTEIN_COMPLEX
 has_part:
 - GO:0015935
 - GO:0015934
-xrefs:
-- ComplexPortal:CPX-3802
 components:
 - component_id: rrna_16s
   label: 16S rRNA (small-subunit rRNA)
@@ -142,7 +140,7 @@ physical_properties:
   reference: GO:0005840
 - property: MOLECULAR_MASS
   value: ~2500
-  unit: UO:0000021
+  unit: UO:0000222
   context: Escherichia coli 70S
   reference: DOI:10.1038/nature08403
 evidence:
@@ -196,7 +194,7 @@ causal_graphs:
     description: The 30S decoding centre monitors codon–anticodon geometry and selects
       the cognate aminoacyl-tRNA.
     evidence:
-    - reference: DOI:10.1126/science.1064242
+    - reference: DOI:10.1126/science.1060612
       notes: Ogle et al. 2001 show 16S rRNA bases A1492, A1493 and G530 flip out to
         read the minor groove of the codon–anticodon helix.
   - subject: aa_trna
@@ -250,4 +248,12 @@ curation_history:
   action: CREATED_RECORD
   changes: Drafted composition, distribution, functions and elongation-cycle mechanism
     graph from the cited structural literature. Not yet human-reviewed.
+  llm_assisted: true
+- timestamp: '2026-08-29T01:00:00Z'
+  curator: claude
+  action: FIX_REVIEW_FINDINGS
+  changes: 'PR #1 review: removed unresolvable xref ComplexPortal:CPX-3802 (#2); molecular-mass
+    unit UO:0000021 (gram) -> UO:0000222 (kilodalton) (#3); Ogle 2001 DOI corrected
+    to 10.1126/science.1060612 (#4). Every CURIE and DOI in the record was resolved
+    against OLS/Crossref.'
   llm_assisted: true
