@@ -17,6 +17,10 @@ CellStructureMech is the structural counterpart of
 ontology-grounded, evidence-backed, closed-schema validated, curated
 incrementally with an append-only audit trail.
 
+**[Browse the corpus online →](https://culturebotai.github.io/CellStructureMech/)**
+— every record, by category, with components, distribution, functions and
+mechanism graphs.
+
 ## The gap it fills
 
 TraitMech says an organism is *flagellated*; ProteinTraitsMech says what
