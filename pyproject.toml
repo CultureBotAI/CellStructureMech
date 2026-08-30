@@ -1,0 +1,69 @@
+[project]
+name = "cellstructuremech"
+version = "0.1.0"
+description = "Knowledge base of microbial cell structures — organelles, envelope layers, appendages, microcompartments and multi-protein complexes — grounded in GO cellular component"
+authors = [
+    {name = "CellStructureMech Contributors"}
+]
+readme = "README.md"
+license = {text = "CC0-1.0"}
+requires-python = ">=3.10"
+keywords = [
+    "microbiology",
+    "cell structure",
+    "organelle",
+    "protein complex",
+    "gene ontology",
+    "ontology",
+    "knowledge graph",
+    "linkml",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "linkml>=1.10.0",
+    "linkml-runtime>=1.7.0",
+    "pyyaml>=6.0",
+    "click>=8.1.0",
+    "jinja2>=3.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/CultureBotAI/CellStructureMech"
+Repository = "https://github.com/CultureBotAI/CellStructureMech"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cellstructuremech"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+# extend-exclude, not exclude: `exclude` REPLACES ruff's defaults (which cover
+# .venv, .git, build/, ...), so setting it would put the whole virtualenv in scope.
+extend-exclude = ["src/cellstructuremech/schema/cellstructuremech_dataclasses.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]

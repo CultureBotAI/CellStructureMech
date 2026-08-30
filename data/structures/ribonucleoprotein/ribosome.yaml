@@ -1,0 +1,253 @@
+identifier: GO:0005840
+label: ribosome
+definition: The ribonucleoprotein particle that translates mRNA into protein. The
+  bacterial (70S) ribosome comprises a small (30S) subunit built on 16S rRNA, which
+  decodes the mRNA, and a large (50S) subunit built on 23S and 5S rRNA, whose 23S
+  rRNA catalyses peptide bond formation. Archaeal and eukaryotic cytosolic ribosomes
+  are homologous but larger.
+definition_source: GO:0005840
+synonyms:
+- synonym_text: 70S ribosome
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1126/science.1060089
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+has_part:
+- GO:0015935
+- GO:0015934
+xrefs:
+- ComplexPortal:CPX-3802
+components:
+- component_id: rrna_16s
+  label: 16S rRNA (small-subunit rRNA)
+  component_type: RNA
+  grounding: SO:0000650
+  gene_symbols:
+  - rrs
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Structural core of the 30S subunit; carries the decoding centre that monitors
+    codon–anticodon pairing.
+  evidence:
+  - reference: DOI:10.1038/35030006
+    notes: Wimberly et al. 2000 report the 3.05 Å structure of the Thermus thermophilus
+      30S subunit, with 16S rRNA forming the body, platform and head.
+- component_id: rrna_23s
+  label: 23S rRNA (large-subunit rRNA)
+  component_type: RNA
+  grounding: SO:0000651
+  gene_symbols:
+  - rrl
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Structural core of the 50S subunit; forms the peptidyl transferase centre.
+  evidence:
+  - reference: DOI:10.1126/science.289.5481.920
+    notes: Nissen et al. 2000 show the peptidyl transferase centre of the Haloarcula
+      marismortui 50S subunit is composed entirely of RNA — the ribosome is a ribozyme.
+- component_id: rrna_5s
+  label: 5S rRNA
+  component_type: RNA
+  grounding: SO:0000652
+  gene_symbols:
+  - rrf
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Small RNA of the 50S central protuberance.
+  evidence:
+  - reference: DOI:10.1126/science.289.5481.905
+    notes: Ban et al. 2000 resolve 5S rRNA within the 2.4 Å structure of the H. marismortui
+      large subunit.
+- component_id: ssu_proteins
+  label: small-subunit ribosomal proteins (uS2–uS21, bS6, bS16, bS18, bS20, bS21)
+  component_type: PROTEIN
+  grounding: GO:0003735
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: A paralogue set with no single family term; grounded to the molecular-function
+    term for structural constituent of ribosome until the set is split into per-protein
+    components.
+  stoichiometry: ~21 in Escherichia coli
+  essentiality: CONDITIONAL
+  role: Stabilise 16S rRNA folding; several are individually dispensable.
+  evidence:
+  - reference: DOI:10.1038/35030006
+    notes: Wimberly et al. 2000 place 20 proteins in the T. thermophilus 30S structure,
+      mostly on the solvent-exposed surface.
+- component_id: lsu_proteins
+  label: large-subunit ribosomal proteins (uL1–uL30, bL9, bL12, bL17…)
+  component_type: PROTEIN
+  grounding: GO:0003735
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: As for the small-subunit set — a paralogue set grounded to the
+    molecular-function term pending per-protein components.
+  stoichiometry: ~33 in Escherichia coli
+  essentiality: CONDITIONAL
+  role: Stabilise 23S/5S rRNA; bL12 stalk recruits translation GTPases.
+  evidence:
+  - reference: DOI:10.1126/science.289.5481.905
+    notes: Ban et al. 2000 describe the protein complement of the large subunit and
+      its distribution over the rRNA surface.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: UNIVERSAL
+  note: 70S form.
+  reference: DOI:10.1038/nature08403
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: UNIVERSAL
+  note: 70S sedimentation but with additional proteins; the large-subunit structure
+    of H. marismortui is the archetypal high-resolution model.
+  reference: DOI:10.1126/science.289.5481.905
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: UNIVERSAL
+  note: Cytosolic 80S ribosome; this record covers the bacterial/archaeal 70S form
+    and the shared core.
+  reference: DOI:10.1038/nature08403
+canonical_examples:
+- taxon_id: NCBITaxon:274
+  taxon_label: Thermus thermophilus
+  note: Source of the first complete 70S and 30S crystal structures.
+  reference: DOI:10.1126/science.1060089
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: The genetic and biochemical reference system for bacterial translation.
+  reference: DOI:10.1038/nature08403
+functions:
+- function_id: translation
+  label: translation
+  grounding: GO:0006412
+  description: Template-directed synthesis of polypeptides from mRNA.
+  evidence:
+  - reference: DOI:10.1038/nature08403
+    notes: Schmeing & Ramakrishnan 2009 review how ribosome structures explain decoding,
+      peptidyl transfer and translocation.
+- function_id: peptidyl_transferase
+  label: peptidyl transferase activity
+  grounding: GO:0000048
+  description: Peptide bond formation catalysed by 23S rRNA in the large subunit.
+  evidence:
+  - reference: DOI:10.1126/science.289.5481.920
+    notes: Nissen et al. 2000 locate the catalytic site entirely within 23S rRNA.
+physical_properties:
+- property: SEDIMENTATION_COEFFICIENT
+  value: '70'
+  context: bacterial ribosome (Svedberg units)
+  reference: DOI:10.1126/science.1060089
+- property: DIAMETER
+  value: ~20
+  unit: UO:0000018
+  context: intact 70S particle
+  reference: GO:0005840
+- property: MOLECULAR_MASS
+  value: ~2500
+  unit: UO:0000021
+  context: Escherichia coli 70S
+  reference: DOI:10.1038/nature08403
+evidence:
+- reference: DOI:10.1126/science.1060089
+  notes: Yusupov et al. 2001 — 5.5 Å structure of the complete T. thermophilus 70S
+    ribosome with mRNA and tRNAs.
+- reference: DOI:10.1126/science.289.5481.905
+  notes: Ban et al. 2000 — 2.4 Å structure of the H. marismortui large subunit.
+- reference: DOI:10.1038/35030006
+  notes: Wimberly et al. 2000 — structure of the T. thermophilus 30S subunit.
+causal_graphs:
+- graph_id: ribosome_elongation_cycle
+  title: How the ribosome makes a peptide bond and moves along the mRNA
+  description: Core elongation-cycle mechanism common to all ribosomes.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ribosome
+    label: ribosome
+    node_type: STRUCTURE
+    grounding: GO:0005840
+  - node_id: ssu
+    label: small ribosomal subunit
+    node_type: STRUCTURE
+    grounding: GO:0015935
+  - node_id: rrna_23s
+    label: 23S rRNA peptidyl transferase centre
+    node_type: RNA
+    grounding: SO:0000651
+    component_ref: rrna_23s
+  - node_id: mrna_codon
+    label: mRNA codon
+    node_type: RNA
+  - node_id: aa_trna
+    label: aminoacyl-tRNA
+    node_type: RNA
+  - node_id: peptide_bond
+    label: peptide bond formation
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0000048
+  - node_id: ef_g
+    label: elongation factor G
+    node_type: GENE_OR_PROTEIN
+  - node_id: translocation
+    label: ribosomal translocation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: ssu
+    predicate: decodes
+    object: mrna_codon
+    description: The 30S decoding centre monitors codon–anticodon geometry and selects
+      the cognate aminoacyl-tRNA.
+    evidence:
+    - reference: DOI:10.1126/science.1064242
+      notes: Ogle et al. 2001 show 16S rRNA bases A1492, A1493 and G530 flip out to
+        read the minor groove of the codon–anticodon helix.
+  - subject: aa_trna
+    predicate: substrate of
+    object: peptide_bond
+    evidence:
+    - reference: DOI:10.1038/nature08403
+      notes: Aminoacyl-tRNA in the A site donates its amino group to the peptidyl-tRNA
+        ester in the P site.
+  - subject: rrna_23s
+    predicate: catalyses
+    object: peptide_bond
+    predicate_id: RO:0002327
+    description: Peptidyl transfer is catalysed by RNA; no protein side chain lies
+      within 18 Å of the catalytic site.
+    evidence:
+    - reference: DOI:10.1126/science.289.5481.920
+      notes: Nissen et al. 2000, the ribozyme result.
+  - subject: ef_g
+    predicate: drives
+    object: translocation
+    description: GTP hydrolysis by EF-G moves tRNAs from A/P to P/E sites and advances
+      the mRNA by one codon.
+    evidence:
+    - reference: DOI:10.1038/nature08403
+      notes: Schmeing & Ramakrishnan 2009 summarise EF-G-driven translocation.
+  - subject: translocation
+    predicate: occurs in
+    object: ribosome
+    predicate_id: BFO:0000066
+    evidence:
+    - reference: DOI:10.1038/nature08403
+      notes: Translocation is an intrinsic ribosomal motion accelerated by EF-G.
+discussions:
+- discussion_id: split_ribosomal_proteins
+  prompt: Should each ribosomal protein family be its own component with an InterPro
+    grounding, rather than the two paralogue-set components used here?
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ssu_proteins
+  - components#lsu_proteins
+  rationale: Per-protein components are what ProteinTraitsMech can link to; the set-level
+    components are a placeholder.
+  posed_by: claude
+  posed_date: '2026-08-29'
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-08-29T00:00:00Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Drafted composition, distribution, functions and elongation-cycle mechanism
+    graph from the cited structural literature. Not yet human-reviewed.
+  llm_assisted: true

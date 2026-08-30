@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}{{ r.label }} · CellStructureMech{% endblock %}
+{% macro curie(c) %}{% set u = c | curie_url %}{% if u %}<a href="{{ u }}"><code>{{ c }}</code></a>{% else %}<code>{{ c }}</code>{% endif %}{% endmacro %}
+{% macro evid(items) %}{% if items %}<ul class="evidence">{% for e in items %}<li>{{ curie(e.reference) }}{% if e.snippet %} — <q>{{ e.snippet }}</q>{% endif %}{% if e.notes %} <small>{{ e.notes }}</small>{% endif %}</li>{% endfor %}</ul>{% endif %}{% endmacro %}
+{% block content %}
+<h1>{{ r.label }}</h1>
+<p class="meta">{{ curie(r.identifier) }} · {{ r.structure_category }}{% if r.structure_kind %} · {{ r.structure_kind }}{% endif %} · <span class="status">{{ r.mapping_status }}</span></p>
+{% if r.definition %}<p class="definition">{{ r.definition }}{% if r.definition_source %} <small>[{{ curie(r.definition_source) }}]</small>{% endif %}</p>{% endif %}
+
+{% if r.synonyms %}<p><strong>Synonyms:</strong> {% for s in r.synonyms %}{{ s.synonym_text }}{% if not loop.last %}; {% endif %}{% endfor %}</p>{% endif %}
+{% if r.part_of %}<p><strong>Part of:</strong> {% for c in r.part_of %}{{ curie(c) }} {% endfor %}</p>{% endif %}
+{% if r.has_part %}<p><strong>Has part:</strong> {% for c in r.has_part %}{{ curie(c) }} {% endfor %}</p>{% endif %}
+{% if r.xrefs %}<p><strong>Xrefs:</strong> {% for c in r.xrefs %}{{ curie(c) }} {% endfor %}</p>{% endif %}
+
+{% if r.components %}
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+{% for c in r.components %}
+<tr id="components-{{ c.component_id }}"><td>{{ c.label }}</td><td>{{ c.component_type }}</td><td>{% if c.grounding %}{{ curie(c.grounding) }}{% elif c.grounding_status %}<em>{{ c.grounding_status }}</em>{% endif %}</td><td>{{ (c.gene_symbols or []) | join(", ") }}</td><td>{{ c.stoichiometry or "" }}</td><td>{{ c.essentiality or "" }}</td><td>{{ c.role or "" }}{{ evid(c.evidence) }}</td></tr>
+{% endfor %}
+</tbody></table>
+{% endif %}
+
+{% if r.taxonomic_distribution %}
+<h2>Taxonomic distribution</h2>
+<ul>{% for t in r.taxonomic_distribution %}<li>{{ curie(t.taxon_id) }} {{ t.taxon_label }} — <strong>{{ t.presence }}</strong>{% if t.note %}: {{ t.note }}{% endif %}{% if t.reference %} [{{ curie(t.reference) }}]{% endif %}</li>{% endfor %}</ul>
+{% endif %}
+
+{% if r.canonical_examples %}
+<h2>Canonical examples</h2>
+<ul>{% for t in r.canonical_examples %}<li>{{ curie(t.taxon_id) }} <em>{{ t.taxon_label }}</em>{% if t.note %} — {{ t.note }}{% endif %}{% if t.reference %} [{{ curie(t.reference) }}]{% endif %}</li>{% endfor %}</ul>
+{% endif %}
+
+{% if r.functions %}
+<h2>Functions</h2>
+<ul>{% for f in r.functions %}<li><strong>{{ f.label }}</strong>{% if f.grounding %} {{ curie(f.grounding) }}{% endif %}{% if f.description %} — {{ f.description }}{% endif %}{{ evid(f.evidence) }}</li>{% endfor %}</ul>
+{% endif %}
+
+{% if r.associated_traits %}
+<h2>Associated traits</h2>
+<ul>{% for t in r.associated_traits %}<li>{{ t.relation }} {{ curie(t.trait_id) }} {{ t.trait_label }}{% if t.note %} — {{ t.note }}{% endif %}</li>{% endfor %}</ul>
+{% endif %}
+
+{% if r.physical_properties %}
+<h2>Physical properties</h2>
+<ul>{% for p in r.physical_properties %}<li>{{ p.property }}: {{ p.value }}{% if p.unit %} {{ curie(p.unit) }}{% endif %}{% if p.context %} ({{ p.context }}){% endif %}{% if p.reference %} [{{ curie(p.reference) }}]{% endif %}</li>{% endfor %}</ul>
+{% endif %}
+
+{% if r.causal_graphs %}
+<h2>Mechanism graphs</h2>
+{% for g in r.causal_graphs %}
+<h3 id="causal_graphs-{{ g.graph_id }}">{{ g.title or g.graph_id }}{% if g.graph_kind %} <small>({{ g.graph_kind }})</small>{% endif %}</h3>
+{% if g.description %}<p>{{ g.description }}</p>{% endif %}
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+{% set nodes = {} %}{% for n in g.nodes %}{% set _ = nodes.update({n.node_id: n}) %}{% endfor %}
+{% for e in g.edges %}
+<tr><td>{{ nodes[e.subject].label if e.subject in nodes else e.subject }}</td><td>{{ e.predicate }}{% if e.predicate_id %} <small>{{ curie(e.predicate_id) }}</small>{% endif %}</td><td>{{ nodes[e.object].label if e.object in nodes else e.object }}</td><td>{{ evid(e.evidence) }}</td></tr>
+{% endfor %}
+</tbody></table>
+{% endfor %}
+{% endif %}
+
+{% if r.discussions %}
+<h2>Discussions</h2>
+<ul>{% for d in r.discussions %}<li><strong>{{ d.kind }}</strong> ({{ d.status }}): {{ d.prompt }}{% if d.rationale %} <small>{{ d.rationale }}</small>{% endif %}</li>{% endfor %}</ul>
+{% endif %}
+
+{% if r.evidence %}
+<h2>Evidence</h2>
+{{ evid(r.evidence) }}
+{% endif %}
+
+{% if r.curation_history %}
+<h2>Curation history</h2>
+<ul class="history">{% for h in r.curation_history %}<li><code>{{ h.timestamp }}</code> {{ h.curator }} · {{ h.action }}{% if h.changes %} — {{ h.changes }}{% endif %}</li>{% endfor %}</ul>
+{% endif %}
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/{{ source_path }}"><code>{{ source_path }}</code></a></p>
+{% endblock %}

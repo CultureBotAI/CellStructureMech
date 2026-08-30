@@ -1,0 +1,206 @@
+identifier: GO:0031470
+label: carboxysome
+definition: A bacterial microcompartment — a polyhedral, selectively permeable protein
+  shell about 100–200 nm across — that encapsulates RuBisCO and carbonic anhydrase
+  to concentrate CO2 around RuBisCO in cyanobacteria and many chemoautotrophs. Alpha-carboxysomes
+  (cso genes) and beta-carboxysomes (ccm genes) evolved their shells and scaffolds
+  independently.
+definition_source: DOI:10.1038/nrmicro.2018.10
+synonyms:
+- synonym_text: polyhedral body
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro1913
+structure_category: MICROCOMPARTMENT
+structure_kind: PROTEIN_SHELLED_ORGANELLE
+parent_structures:
+- GO:0031469
+components:
+- component_id: bmc_h
+  label: BMC-H shell hexamers (CcmK / CsoS1)
+  component_type: PROTEIN
+  gene_symbols:
+  - ccmK
+  - csoS1
+  essentiality: ESSENTIAL
+  role: Tile the shell facets; central pores admit bicarbonate and RuBP.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 describe BMC-H hexamers as the main facet tile.
+- component_id: bmc_p
+  label: BMC-P shell pentamers (CcmL / CsoS4)
+  component_type: PROTEIN
+  gene_symbols:
+  - ccmL
+  - csoS4A
+  essentiality: ESSENTIAL
+  role: Cap the vertices of the icosahedral shell.
+  evidence:
+  - reference: DOI:10.1038/nrmicro1913
+    notes: Yeates et al. 2008 assign pentamers to shell vertices.
+- component_id: rubisco
+  label: ribulose-1,5-bisphosphate carboxylase/oxygenase (form I)
+  component_type: PROTEIN_COMPLEX
+  gene_symbols:
+  - rbcL
+  - rbcS
+  - cbbL
+  - cbbS
+  essentiality: ESSENTIAL
+  role: Encapsulated cargo; fixes CO2 into 3-phosphoglycerate.
+  evidence:
+  - reference: DOI:10.1128/MMBR.00061-12
+    notes: Rae et al. 2013 review RuBisCO packaging in both carboxysome types.
+- component_id: carbonic_anhydrase
+  label: carboxysomal carbonic anhydrase (CcaA / CsoSCA)
+  component_type: PROTEIN
+  gene_symbols:
+  - ccaA
+  - csoSCA
+  essentiality: ESSENTIAL
+  role: Dehydrates bicarbonate to CO2 inside the shell.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018.
+- component_id: scaffold
+  label: cargo scaffold (CcmM / CsoS2)
+  component_type: PROTEIN
+  gene_symbols:
+  - ccmM
+  - csoS2
+  essentiality: ESSENTIAL
+  role: Links RuBisCO to the shell and drives cargo condensation.
+  evidence:
+  - reference: DOI:10.1128/MMBR.00061-12
+    notes: Rae et al. 2013 describe CcmM and CsoS2 as the RuBisCO-organising proteins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteria
+  presence: UNIVERSAL
+  note: Beta-carboxysomes in most lineages; alpha-carboxysomes in marine Prochlorococcus
+    and some Synechococcus.
+  reference: DOI:10.1128/MMBR.00061-12
+- taxon_id: NCBITaxon:1224
+  taxon_label: Pseudomonadota
+  presence: VARIABLE
+  note: Alpha-carboxysomes in many chemoautotrophs (Halothiobacillus, Thiomicrospira,
+    Nitrosomonas).
+  reference: DOI:10.1128/MMBR.00061-12
+canonical_examples:
+- taxon_id: NCBITaxon:1140
+  taxon_label: Synechococcus elongatus PCC 7942
+  note: Model for beta-carboxysomes.
+  reference: DOI:10.1128/MMBR.00061-12
+- taxon_id: NCBITaxon:927
+  taxon_label: Halothiobacillus neapolitanus
+  note: Model for alpha-carboxysomes.
+  reference: DOI:10.1128/MMBR.00061-12
+functions:
+- function_id: co2_concentration
+  label: carbon dioxide concentrating mechanism
+  description: Raises the CO2 concentration at RuBisCO and limits O2 access, suppressing
+    photorespiration.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018.
+- function_id: carbon_fixation
+  label: carbon fixation
+  grounding: GO:0015977
+  evidence:
+  - reference: DOI:10.1128/MMBR.00061-12
+    notes: Rae et al. 2013.
+associated_traits:
+- trait_id: traitmech:000072
+  trait_label: carboxysome
+  relation: CONFERS
+  note: TraitMech models carboxysome possession as a morphology trait; this record
+    models the organelle.
+physical_properties:
+- property: DIAMETER
+  value: 100-200
+  unit: UO:0000018
+  reference: DOI:10.1038/nrmicro.2018.10
+evidence:
+- reference: DOI:10.1038/nrmicro.2018.10
+  notes: Kerfeld et al. 2018, "Bacterial microcompartments".
+- reference: DOI:10.1038/nrmicro1913
+  notes: Yeates et al. 2008, "Protein-based organelles in bacteria".
+- reference: DOI:10.1128/MMBR.00061-12
+  notes: Rae et al. 2013, "Functions, compositions, and evolution of the two types
+    of carboxysomes".
+causal_graphs:
+- graph_id: carboxysome_co2_concentrating
+  title: The shell and carbonic anhydrase concentrate CO2 at RuBisCO
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: shell
+    label: carboxysome shell
+    node_type: STRUCTURE
+    component_ref: bmc_h
+  - node_id: bicarbonate
+    label: bicarbonate
+    node_type: CHEMICAL
+    grounding: CHEBI:17544
+  - node_id: ca
+    label: carbonic anhydrase
+    node_type: GENE_OR_PROTEIN
+    component_ref: carbonic_anhydrase
+  - node_id: co2
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+  - node_id: rubisco
+    label: RuBisCO
+    node_type: GENE_OR_PROTEIN
+    component_ref: rubisco
+  - node_id: fixation
+    label: carbon fixation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015977
+  edges:
+  - subject: shell
+    predicate: permits passage of
+    object: bicarbonate
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Shell pores are selective for small anions such as HCO3-.
+  - subject: ca
+    predicate: converts
+    object: bicarbonate
+    description: Dehydration of HCO3- to CO2 inside the lumen.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Kerfeld et al. 2018.
+  - subject: ca
+    predicate: elevates local concentration of
+    object: co2
+    evidence:
+    - reference: DOI:10.1128/MMBR.00061-12
+      notes: Rae et al. 2013.
+  - subject: shell
+    predicate: prevents loss of
+    object: co2
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: The shell retards CO2 efflux to the cytoplasm.
+  - subject: co2
+    predicate: substrate of
+    object: rubisco
+    evidence:
+    - reference: DOI:10.1128/MMBR.00061-12
+      notes: Rae et al. 2013.
+  - subject: rubisco
+    predicate: catalyses
+    object: fixation
+    predicate_id: RO:0002327
+    evidence:
+    - reference: DOI:10.1128/MMBR.00061-12
+      notes: Rae et al. 2013.
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-08-29T00:00:00Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Drafted from the cited reviews, aligned with the TraitMech carboxysome
+    trait record (traitmech:000072). Not yet human-reviewed.
+  llm_assisted: true

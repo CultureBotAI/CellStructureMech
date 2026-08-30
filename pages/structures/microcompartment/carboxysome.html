@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>carboxysome · CellStructureMech</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="../../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../../browse.html">Browse</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>carboxysome</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031470"><code>GO:0031470</code></a> · MICROCOMPARTMENT · PROTEIN_SHELLED_ORGANELLE · <span class="status">PROPOSED</span></p>
+<p class="definition">A bacterial microcompartment — a polyhedral, selectively permeable protein shell about 100–200 nm across — that encapsulates RuBisCO and carbonic anhydrase to concentrate CO2 around RuBisCO in cyanobacteria and many chemoautotrophs. Alpha-carboxysomes (cso genes) and beta-carboxysomes (ccm genes) evolved their shells and scaffolds independently. <small>[<a href="https://doi.org/10.1038/nrmicro.2018.10"><code>DOI:10.1038/nrmicro.2018.10</code></a>]</small></p>
+<p><strong>Synonyms:</strong> polyhedral body</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-bmc_h"><td>BMC-H shell hexamers (CcmK / CsoS1)</td><td>PROTEIN</td><td></td><td>ccmK, csoS1</td><td></td><td>ESSENTIAL</td><td>Tile the shell facets; central pores admit bicarbonate and RuBP.<ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro.2018.10"><code>DOI:10.1038/nrmicro.2018.10</code></a> <small>Kerfeld et al. 2018 describe BMC-H hexamers as the main facet tile.</small></li></ul></td></tr>
+<tr id="components-bmc_p"><td>BMC-P shell pentamers (CcmL / CsoS4)</td><td>PROTEIN</td><td></td><td>ccmL, csoS4A</td><td></td><td>ESSENTIAL</td><td>Cap the vertices of the icosahedral shell.<ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro1913"><code>DOI:10.1038/nrmicro1913</code></a> <small>Yeates et al. 2008 assign pentamers to shell vertices.</small></li></ul></td></tr>
+<tr id="components-rubisco"><td>ribulose-1,5-bisphosphate carboxylase/oxygenase (form I)</td><td>PROTEIN_COMPLEX</td><td></td><td>rbcL, rbcS, cbbL, cbbS</td><td></td><td>ESSENTIAL</td><td>Encapsulated cargo; fixes CO2 into 3-phosphoglycerate.<ul class="evidence"><li><a href="https://doi.org/10.1128/MMBR.00061-12"><code>DOI:10.1128/MMBR.00061-12</code></a> <small>Rae et al. 2013 review RuBisCO packaging in both carboxysome types.</small></li></ul></td></tr>
+<tr id="components-carbonic_anhydrase"><td>carboxysomal carbonic anhydrase (CcaA / CsoSCA)</td><td>PROTEIN</td><td></td><td>ccaA, csoSCA</td><td></td><td>ESSENTIAL</td><td>Dehydrates bicarbonate to CO2 inside the shell.<ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro.2018.10"><code>DOI:10.1038/nrmicro.2018.10</code></a> <small>Kerfeld et al. 2018.</small></li></ul></td></tr>
+<tr id="components-scaffold"><td>cargo scaffold (CcmM / CsoS2)</td><td>PROTEIN</td><td></td><td>ccmM, csoS2</td><td></td><td>ESSENTIAL</td><td>Links RuBisCO to the shell and drives cargo condensation.<ul class="evidence"><li><a href="https://doi.org/10.1128/MMBR.00061-12"><code>DOI:10.1128/MMBR.00061-12</code></a> <small>Rae et al. 2013 describe CcmM and CsoS2 as the RuBisCO-organising proteins.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1117"><code>NCBITaxon:1117</code></a> Cyanobacteria — <strong>UNIVERSAL</strong>: Beta-carboxysomes in most lineages; alpha-carboxysomes in marine Prochlorococcus and some Synechococcus. [<a href="https://doi.org/10.1128/MMBR.00061-12"><code>DOI:10.1128/MMBR.00061-12</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1224"><code>NCBITaxon:1224</code></a> Pseudomonadota — <strong>VARIABLE</strong>: Alpha-carboxysomes in many chemoautotrophs (Halothiobacillus, Thiomicrospira, Nitrosomonas). [<a href="https://doi.org/10.1128/MMBR.00061-12"><code>DOI:10.1128/MMBR.00061-12</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1140"><code>NCBITaxon:1140</code></a> <em>Synechococcus elongatus PCC 7942</em> — Model for beta-carboxysomes. [<a href="https://doi.org/10.1128/MMBR.00061-12"><code>DOI:10.1128/MMBR.00061-12</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_927"><code>NCBITaxon:927</code></a> <em>Halothiobacillus neapolitanus</em> — Model for alpha-carboxysomes. [<a href="https://doi.org/10.1128/MMBR.00061-12"><code>DOI:10.1128/MMBR.00061-12</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>carbon dioxide concentrating mechanism</strong> — Raises the CO2 concentration at RuBisCO and limits O2 access, suppressing photorespiration.<ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro.2018.10"><code>DOI:10.1038/nrmicro.2018.10</code></a> <small>Kerfeld et al. 2018.</small></li></ul></li><li><strong>carbon fixation</strong> <a href="http://purl.obolibrary.org/obo/GO_0015977"><code>GO:0015977</code></a><ul class="evidence"><li><a href="https://doi.org/10.1128/MMBR.00061-12"><code>DOI:10.1128/MMBR.00061-12</code></a> <small>Rae et al. 2013.</small></li></ul></li></ul>
+
+<h2>Associated traits</h2>
+<ul><li>CONFERS <a href="https://w3id.org/traitmech/000072"><code>traitmech:000072</code></a> carboxysome — TraitMech models carboxysome possession as a morphology trait; this record models the organelle.</li></ul>
+
+<h2>Physical properties</h2>
+<ul><li>DIAMETER: 100-200 <code>UO:0000018</code> [<a href="https://doi.org/10.1038/nrmicro.2018.10"><code>DOI:10.1038/nrmicro.2018.10</code></a>]</li></ul>
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-carboxysome_co2_concentrating">The shell and carbonic anhydrase concentrate CO2 at RuBisCO <small>(FUNCTION)</small></h3>
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>carboxysome shell</td><td>permits passage of</td><td>bicarbonate</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro.2018.10"><code>DOI:10.1038/nrmicro.2018.10</code></a> <small>Shell pores are selective for small anions such as HCO3-.</small></li></ul></td></tr>
+<tr><td>carbonic anhydrase</td><td>converts</td><td>bicarbonate</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro.2018.10"><code>DOI:10.1038/nrmicro.2018.10</code></a> <small>Kerfeld et al. 2018.</small></li></ul></td></tr>
+<tr><td>carbonic anhydrase</td><td>elevates local concentration of</td><td>carbon dioxide</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/MMBR.00061-12"><code>DOI:10.1128/MMBR.00061-12</code></a> <small>Rae et al. 2013.</small></li></ul></td></tr>
+<tr><td>carboxysome shell</td><td>prevents loss of</td><td>carbon dioxide</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro.2018.10"><code>DOI:10.1038/nrmicro.2018.10</code></a> <small>The shell retards CO2 efflux to the cytoplasm.</small></li></ul></td></tr>
+<tr><td>carbon dioxide</td><td>substrate of</td><td>RuBisCO</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/MMBR.00061-12"><code>DOI:10.1128/MMBR.00061-12</code></a> <small>Rae et al. 2013.</small></li></ul></td></tr>
+<tr><td>RuBisCO</td><td>catalyses <small><code>RO:0002327</code></small></td><td>carbon fixation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/MMBR.00061-12"><code>DOI:10.1128/MMBR.00061-12</code></a> <small>Rae et al. 2013.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro.2018.10"><code>DOI:10.1038/nrmicro.2018.10</code></a> <small>Kerfeld et al. 2018, &#34;Bacterial microcompartments&#34;.</small></li><li><a href="https://doi.org/10.1038/nrmicro1913"><code>DOI:10.1038/nrmicro1913</code></a> <small>Yeates et al. 2008, &#34;Protein-based organelles in bacteria&#34;.</small></li><li><a href="https://doi.org/10.1128/MMBR.00061-12"><code>DOI:10.1128/MMBR.00061-12</code></a> <small>Rae et al. 2013, &#34;Functions, compositions, and evolution of the two types of carboxysomes&#34;.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-08-29T00:00:00Z</code> claude · CREATED_RECORD — Drafted from the cited reviews, aligned with the TraitMech carboxysome trait record (traitmech:000072). Not yet human-reviewed.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/microcompartment/carboxysome.yaml"><code>data/structures/microcompartment/carboxysome.yaml</code></a></p>
+</main>
+<footer>CellStructureMech · CC0-1.0 · generated by <code>scripts/render_pages.py</code></footer>
+</body>
+</html>

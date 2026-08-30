@@ -1,0 +1,266 @@
+identifier: GO:0009288
+label: bacterial-type flagellum
+definition: 'The rotary motility organelle of bacteria: a long helical filament of
+  flagellin joined by a flexible hook to a basal body that spans the cell envelope.
+  The basal body houses a rotor (MS and C rings) driven by membrane-embedded stator
+  units that convert ion flow (H+ or Na+) into torque; the flagellar type III export
+  apparatus at its base secretes the axial subunits. Not homologous to the archaeal
+  archaellum or the eukaryotic cilium.'
+definition_source: DOI:10.1146/annurev.biochem.72.121801.161737
+synonyms:
+- synonym_text: bacterial flagellum
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009288
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+has_part:
+- GO:0009420
+- GO:0009424
+- GO:0009425
+components:
+- component_id: flagellin
+  label: flagellin (FliC)
+  component_type: PROTEIN
+  gene_symbols:
+  - fliC
+  - fljB
+  stoichiometry: ~20,000 subunits per filament; 11 protofilaments
+  essentiality: ESSENTIAL
+  role: Polymerises into the helical propeller filament.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.57.030502.090832
+    notes: Macnab 2003 reviews filament assembly from FliC exported through the central
+      channel and capped by FliD.
+- component_id: hook
+  label: hook protein (FlgE)
+  component_type: PROTEIN
+  gene_symbols:
+  - flgE
+  essentiality: ESSENTIAL
+  role: Flexible universal joint transmitting torque from the basal body to the filament.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.57.030502.090832
+    notes: Hook length is controlled by FliK during assembly.
+- component_id: ms_ring
+  label: MS ring (FliF)
+  component_type: PROTEIN_COMPLEX
+  gene_symbols:
+  - fliF
+  essentiality: ESSENTIAL
+  role: Membrane-embedded rotor ring; the platform on which the basal body assembles.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.57.030502.090832
+    notes: The MS ring is the first substructure assembled.
+- component_id: c_ring
+  label: C ring / switch complex (FliG, FliM, FliN)
+  component_type: PROTEIN_COMPLEX
+  gene_symbols:
+  - fliG
+  - fliM
+  - fliN
+  essentiality: ESSENTIAL
+  role: Cytoplasmic rotor ring; FliG engages the stator and the complex sets rotational
+    direction in response to CheY-P.
+  evidence:
+  - reference: DOI:10.1016/j.tim.2014.12.011
+    notes: Minamino & Imada 2015 describe the rotor–stator interface at FliG.
+- component_id: stator
+  label: stator unit (MotA5MotB2)
+  component_type: PROTEIN_COMPLEX
+  gene_symbols:
+  - motA
+  - motB
+  essentiality: ESSENTIAL
+  role: Ion-driven torque generator anchored to peptidoglycan through MotB.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2020.08.016
+    notes: Santiveri et al. 2020 resolve the 5:2 MotA:MotB stoichiometry and show
+      the unit rotates.
+  - reference: DOI:10.1038/s41564-020-0788-8
+    notes: Deme et al. 2020 report the same 5:2 architecture independently.
+- component_id: rod
+  label: rod (FlgB, FlgC, FlgF, FlgG)
+  component_type: PROTEIN_COMPLEX
+  gene_symbols:
+  - flgB
+  - flgC
+  - flgF
+  - flgG
+  essentiality: ESSENTIAL
+  role: Drive shaft spanning the periplasm from MS ring to hook.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.57.030502.090832
+    notes: Rod subunits are exported by the fT3SS and polymerise in order.
+- component_id: lp_rings
+  label: L and P rings (FlgH, FlgI)
+  component_type: PROTEIN_COMPLEX
+  gene_symbols:
+  - flgH
+  - flgI
+  essentiality: CONDITIONAL
+  role: Bushing through the outer membrane and peptidoglycan in Gram-negative bacteria;
+    absent in Gram-positives.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.57.030502.090832
+    notes: The L and P rings are not rotor components but bearings.
+- component_id: export_apparatus
+  label: flagellar type III export apparatus (FlhA, FlhB, FliP, FliQ, FliR)
+  component_type: PROTEIN_COMPLEX
+  gene_symbols:
+  - flhA
+  - flhB
+  - fliP
+  - fliQ
+  - fliR
+  essentiality: ESSENTIAL
+  role: Secretes rod, hook and filament subunits through the growing structure.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.57.030502.090832
+    notes: Homologous to the injectisome export gate.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Widespread but repeatedly lost; some lineages (spirochaetes) keep the flagella
+    periplasmic.
+  reference: DOI:10.1038/nrmicro1887
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaea swim with the archaellum, a type-IV-pilus-related structure with no
+    homology to the bacterial flagellum.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  note: The genetic model for flagellar assembly and export.
+  reference: DOI:10.1146/annurev.micro.57.030502.090832
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Model for motor physics and chemotaxis.
+  reference: DOI:10.1146/annurev.biochem.72.121801.161737
+functions:
+- function_id: motility
+  label: bacterial-type flagellum-dependent cell motility
+  grounding: GO:0071973
+  evidence:
+  - reference: DOI:10.1146/annurev.biochem.72.121801.161737
+    notes: Berg 2003 reviews the rotary motor and swimming.
+associated_traits:
+- trait_id: METPO:1000704
+  trait_label: flagellated
+  relation: CONFERS
+- trait_id: METPO:1000702
+  trait_label: motile
+  relation: CONFERS
+  note: One of several motility machines; gliding and twitching motility do not use
+    it.
+physical_properties:
+- property: DIAMETER
+  value: ~20
+  unit: UO:0000018
+  context: filament
+  reference: DOI:10.1146/annurev.micro.57.030502.090832
+- property: LENGTH
+  value: 5-20
+  unit: UO:0000017
+  context: filament
+  reference: DOI:10.1146/annurev.micro.57.030502.090832
+- property: ROTATION_SPEED
+  value: ~100-300
+  unit: UO:0000106
+  context: Escherichia coli motor, proton-driven
+  reference: DOI:10.1146/annurev.biochem.72.121801.161737
+evidence:
+- reference: DOI:10.1146/annurev.biochem.72.121801.161737
+  notes: Berg 2003, "The rotary motor of bacterial flagella".
+- reference: DOI:10.1146/annurev.micro.57.030502.090832
+  notes: Macnab 2003, "How bacteria assemble flagella".
+- reference: DOI:10.1038/nrmicro1887
+  notes: Chevance & Hughes 2008, "Coordinating assembly of a bacterial macromolecular
+    machine".
+causal_graphs:
+- graph_id: flagellum_torque_generation
+  title: Ion flow through the stator turns the rotor and the filament
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: pmf
+    label: proton motive force
+    node_type: STATE
+  - node_id: stator
+    label: MotA5MotB2 stator unit
+    node_type: GENE_OR_PROTEIN
+    component_ref: stator
+  - node_id: c_ring
+    label: C ring (FliG)
+    node_type: GENE_OR_PROTEIN
+    component_ref: c_ring
+  - node_id: rotation
+    label: flagellar rotation
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: filament
+    label: flagellar filament
+    node_type: STRUCTURE
+    grounding: GO:0009420
+    component_ref: flagellin
+  - node_id: swimming
+    label: bacterial-type flagellum-dependent cell motility
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071973
+  edges:
+  - subject: pmf
+    predicate: powers
+    object: stator
+    description: Proton (or sodium) flux through the MotA/MotB channel drives rotation
+      of the MotA pentamer around MotB.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2020.08.016
+      notes: Santiveri et al. 2020 propose ion flow rotates MotA around the MotB dimer.
+  - subject: stator
+    predicate: applies torque to
+    object: c_ring
+    description: The rotating MotA ring engages FliG at the rim of the C ring.
+    evidence:
+    - reference: DOI:10.1038/s41564-020-0788-8
+      notes: Deme et al. 2020 model the stator as a gear meshing with FliG.
+  - subject: c_ring
+    predicate: drives
+    object: rotation
+    evidence:
+    - reference: DOI:10.1016/j.tim.2014.12.011
+      notes: The C ring, MS ring and rod rotate as one rigid rotor.
+  - subject: rotation
+    predicate: propels
+    object: filament
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.72.121801.161737
+      notes: Rotation of the helical filament produces thrust.
+  - subject: filament
+    predicate: enables
+    object: swimming
+    predicate_id: RO:0002327
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.72.121801.161737
+      notes: Berg 2003.
+discussions:
+- discussion_id: component_groundings
+  prompt: Assign InterPro family groundings to each protein component (flagellin,
+    FlgE, FliF, FliG/M/N, MotA/MotB, rod, FlgH/I, fT3SS).
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#flagellin
+  - components#stator
+  rationale: Groundings were deliberately left blank rather than guessed; verify each
+    accession against InterPro before adding.
+  posed_by: claude
+  posed_date: '2026-08-29'
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-08-29T00:00:00Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Drafted composition, distribution, trait links and torque-generation mechanism
+    graph from the cited reviews and stator structures. Not yet human-reviewed.
+  llm_assisted: true

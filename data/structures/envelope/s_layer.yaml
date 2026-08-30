@@ -1,0 +1,104 @@
+identifier: GO:0030115
+label: S-layer
+definition: A paracrystalline monomolecular array of a single (glyco)protein that
+  self-assembles on the outermost surface of the cell envelope, with oblique, square
+  or hexagonal lattice symmetry. Nearly universal in Archaea, where it is often the
+  sole wall component, and widespread but patchily distributed in Bacteria.
+definition_source: DOI:10.1111/1574-6976.12063
+synonyms:
+- synonym_text: surface layer
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1111/1574-6976.12063
+- synonym_text: crystalline cell surface layer
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1111/1574-6976.12063
+structure_category: ENVELOPE
+structure_kind: ENVELOPE_LAYER
+components:
+- component_id: slp
+  label: S-layer protein (SLP)
+  component_type: PROTEIN
+  stoichiometry: one protein species per lattice, typically 40–200 kDa
+  essentiality: ESSENTIAL
+  role: The lattice-forming subunit; self-assembles in vitro.
+  evidence:
+  - reference: DOI:10.1111/1574-6976.12063
+    notes: Sleytr et al. 2014 review SLP self-assembly and lattice types.
+- component_id: slh_domain
+  label: S-layer homology (SLH) domain
+  component_type: PROTEIN
+  grounding: InterPro:IPR001119
+  essentiality: CONDITIONAL
+  role: Anchors bacterial SLPs to pyruvylated secondary cell-wall polymer; other lineages
+    use different anchoring modules.
+  evidence:
+  - reference: DOI:10.1038/nrmicro3213
+    notes: Fagan & Fairweather 2014 describe SLH-mediated anchoring.
+- component_id: scwp
+  label: secondary cell-wall polymer (SCWP)
+  component_type: POLYSACCHARIDE
+  essentiality: CONDITIONAL
+  role: Peptidoglycan-linked anchor polymer recognised by the SLH domain.
+  evidence:
+  - reference: DOI:10.1111/1574-6976.12063
+    notes: Sleytr et al. 2014.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: COMMON
+  note: Frequently the only envelope layer outside the membrane.
+  reference: DOI:10.1038/nrmicro2576
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Present across many phyla but a strain-level trait, and readily lost on laboratory
+    passage.
+  reference: DOI:10.1111/1574-6976.12063
+canonical_examples:
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  note: RsaA S-layer; the best-characterised Gram-negative S-layer.
+  reference: DOI:10.1038/nrmicro3213
+- taxon_id: NCBITaxon:1422
+  taxon_label: Geobacillus stearothermophilus
+  note: SbsA/SbsB S-layers, the classic self-assembly system.
+  reference: DOI:10.1111/1574-6976.12063
+functions:
+- function_id: envelope_integrity
+  label: cell shape maintenance and envelope stabilisation
+  description: Contributes to shape and osmotic stability, especially in Archaea lacking
+    a rigid wall.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2576
+    notes: Albers & Meyer 2011.
+- function_id: molecular_sieve
+  label: molecular sieving and surface interaction
+  description: Lattice pores set a size cut-off; the outer face mediates adhesion
+    and phage or immune interactions.
+  evidence:
+  - reference: DOI:10.1038/nrmicro3213
+    notes: Fagan & Fairweather 2014.
+associated_traits:
+- trait_id: traitmech:000064
+  trait_label: S-layer
+  relation: CONFERS
+physical_properties:
+- property: THICKNESS
+  value: 5-25
+  unit: UO:0000018
+  reference: DOI:10.1111/1574-6976.12063
+evidence:
+- reference: DOI:10.1111/1574-6976.12063
+  notes: Sleytr et al. 2014, "S-layers - principles and applications".
+- reference: DOI:10.1038/nrmicro3213
+  notes: Fagan & Fairweather 2014, "Biogenesis and functions of bacterial S-layers".
+- reference: DOI:10.1038/nrmicro2576
+  notes: Albers & Meyer 2011, "The archaeal cell envelope".
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-08-29T00:00:00Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Drafted composition, distribution and functions from the cited reviews.
+    No mechanism graph yet. Not yet human-reviewed.
+  llm_assisted: true
