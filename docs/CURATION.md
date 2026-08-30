@@ -108,8 +108,12 @@ claim like any other and carries its own provenance:
 - **`taxon_id`** (required) — the organism in the picture, which must already
   appear in `taxonomic_distribution` or `canonical_examples` (test-enforced);
   an image of a taxon the record does not mention is evidence for nothing.
-- **`reference`** (required) — DOI or PMID of the paper the image comes from
-  or is described in.
+- **`reference`** (recommended) — DOI or PMID of the paper the image comes
+  from or is described in. Decision #30: the source record
+  (`source_accession` + `source_url`) is an acceptable citable identifier on
+  its own — Cell Image Library mints a DOI per image, CDC PHIL an image id —
+  so a reference-free public-domain micrograph is allowed. Prefer images
+  that have both, and never invent a reference to satisfy the field.
 - **`retrieved_on`** — when you verified licence, attribution and taxon at the
   source. Read the licence off the source's machine-readable metadata (Commons
   `extmetadata`, PMC `license_code`), not off a re-hosting page.
