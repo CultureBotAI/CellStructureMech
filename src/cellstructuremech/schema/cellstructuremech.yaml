@@ -46,6 +46,9 @@ prefixes:
   IAO: http://purl.obolibrary.org/obo/IAO_
   SO: http://purl.obolibrary.org/obo/SO_
   PR: http://purl.obolibrary.org/obo/PR_
+  # UniProt Subcellular Location vocabulary (Bioregistry prefix uniprot.location;
+  # every SL term maps 1:1 to a GO CC term and lists its member proteins)
+  uniprot.location: https://www.uniprot.org/locations/
   # Protein families / complexes / genes
   InterPro: https://www.ebi.ac.uk/interpro/entry/InterPro/
   Pfam: https://www.ebi.ac.uk/interpro/entry/pfam/

@@ -297,3 +297,10 @@ curation_history:
     CDC PHIL, NCBITaxon:83334); no publication, per decision #30. Added E. coli O157:H7
     to taxonomic_distribution as the imaged strain.'
   llm_assisted: true
+- timestamp: '2026-08-30T02:14:17Z'
+  curator: uniprot_sl
+  action: ADD_UNIPROT_SL_XREF
+  changes: Added uniprot.location:SL-0307 (Bacterial flagellum); mapping read from
+    the GO line of UniProt subcell.txt.
+xrefs:
+- uniprot.location:SL-0307

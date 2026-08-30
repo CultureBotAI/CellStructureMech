@@ -26,6 +26,61 @@ components:
   evidence:
   - reference: DOI:10.1038/nrmicro.2018.10
     notes: Kerfeld et al. 2018 describe BMC-H hexamers as the main facet tile.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03511
+    protein_label: Carboxysome shell protein CcmK2
+    gene_symbol: ccmK2
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-29'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Tile the shell facets; central pores admit bicarbonate and RuBP.'
+    evidence:
+    - reference: PMID:17675289
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q03511, as cited by UniProt.
+    - reference: PMID:20304968
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q03511, as cited by UniProt.
+    - reference: PMID:22928045
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q03511, as cited by UniProt.
+  - uniprot_id: UniProtKB:Q31RK2
+    protein_label: Carboxysome shell protein CcmK4
+    gene_symbol: ccmK4
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-29'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Tile the shell facets; central pores admit bicarbonate and RuBP.'
+    evidence:
+    - reference: PMID:25117559
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q31RK2, as cited by UniProt.
+    - reference: PMID:28616951
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q31RK2, as cited by UniProt.
+    - reference: PMID:28963440
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q31RK2, as cited by UniProt.
+  - uniprot_id: UniProtKB:Q31RK3
+    protein_label: Carboxysome shell protein CcmK3
+    gene_symbol: ccmK3
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-29'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Tile the shell facets; central pores admit bicarbonate and RuBP.'
+    evidence:
+    - reference: PMID:30389783
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q31RK3, as cited by UniProt.
+    - reference: PMID:31048338
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q31RK3, as cited by UniProt.
 - component_id: bmc_p
   label: BMC-P shell pentamers (CcmL / CsoS4)
   component_type: PROTEIN
@@ -37,6 +92,23 @@ components:
   evidence:
   - reference: DOI:10.1038/nrmicro1913
     notes: Yeates et al. 2008 assign pentamers to shell vertices.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03512
+    protein_label: Carboxysome shell vertex protein CcmL
+    gene_symbol: ccmL
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-29'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Cap the vertices of the icosahedral shell.'
+    evidence:
+    - reference: PMID:28616951
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q03512, as cited by UniProt.
+    - reference: PMID:31048338
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q03512, as cited by UniProt.
 - component_id: rubisco
   label: ribulose-1,5-bisphosphate carboxylase/oxygenase (form I)
   component_type: PROTEIN_COMPLEX
@@ -50,6 +122,45 @@ components:
   evidence:
   - reference: DOI:10.1128/MMBR.00061-12
     notes: Rae et al. 2013 review RuBisCO packaging in both carboxysome types.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q31NB3
+    protein_label: Ribulose bisphosphate carboxylase large chain
+    gene_symbol: cbbL
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-29'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Encapsulated cargo; fixes CO2 into 3-phosphoglycerate.'
+    evidence:
+    - reference: PMID:17675289
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q31NB3, as cited by UniProt.
+    - reference: PMID:20304968
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q31NB3, as cited by UniProt.
+    - reference: PMID:22928045
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q31NB3, as cited by UniProt.
+  - uniprot_id: UniProtKB:Q31NB2
+    protein_label: Ribulose bisphosphate carboxylase small subunit
+    gene_symbol: cbbS
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-29'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Encapsulated cargo; fixes CO2 into 3-phosphoglycerate.'
+    evidence:
+    - reference: PMID:17675289
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q31NB2, as cited by UniProt.
+    - reference: PMID:22928045
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q31NB2, as cited by UniProt.
+    - reference: PMID:24585024
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q31NB2, as cited by UniProt.
 - component_id: carbonic_anhydrase
   label: carboxysomal carbonic anhydrase (CcaA / CsoSCA)
   component_type: PROTEIN
@@ -61,6 +172,26 @@ components:
   evidence:
   - reference: DOI:10.1038/nrmicro.2018.10
     notes: Kerfeld et al. 2018.
+  protein_examples:
+  - uniprot_id: UniProtKB:P27134
+    protein_label: Carbonic anhydrase
+    gene_symbol: ccaA
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-29'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Dehydrates bicarbonate to CO2 inside the shell.'
+    evidence:
+    - reference: PMID:17675289
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        P27134, as cited by UniProt.
+    - reference: PMID:20304968
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        P27134, as cited by UniProt.
+    - reference: PMID:22928045
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        P27134, as cited by UniProt.
 - component_id: scaffold
   label: cargo scaffold (CcmM / CsoS2)
   component_type: PROTEIN
@@ -72,6 +203,26 @@ components:
   evidence:
   - reference: DOI:10.1128/MMBR.00061-12
     notes: Rae et al. 2013 describe CcmM and CsoS2 as the RuBisCO-organising proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03513
+    protein_label: Carboxysome assembly protein CcmM
+    gene_symbol: ccmM
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-29'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Links RuBisCO to the shell and drives cargo condensation.'
+    evidence:
+    - reference: PMID:17675289
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q03513, as cited by UniProt.
+    - reference: PMID:20304968
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q03513, as cited by UniProt.
+    - reference: PMID:28616951
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q03513, as cited by UniProt.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1117
   taxon_label: Cyanobacteriota
@@ -240,3 +391,16 @@ curation_history:
     DOI:10.1371/journal.pbio.0050144, NCBITaxon:927) as the #15 canary; licence, attribution
     and taxon verified against the Commons/Wikidata APIs at retrieval.'
   llm_assisted: true
+- timestamp: '2026-08-30T02:14:16Z'
+  curator: uniprot_sl
+  action: SEED_PROTEIN_EXAMPLES
+  changes: Added 8 taxon-paired protein example(s) from UniProtKB reviewed entries
+    annotated to SL-0034 (Carboxysome), matched to components by gene symbol, each
+    carrying UniProt's ECO:0000269 PubMed evidence for the localisation.
+- timestamp: '2026-08-30T02:14:17Z'
+  curator: uniprot_sl
+  action: ADD_UNIPROT_SL_XREF
+  changes: Added uniprot.location:SL-0034 (Carboxysome); mapping read from the GO
+    line of UniProt subcell.txt.
+xrefs:
+- uniprot.location:SL-0034

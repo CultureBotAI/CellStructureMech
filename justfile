@@ -73,3 +73,12 @@ lint-fix:
 # The authoritative quality gate used both locally and in CI.
 qc:
     uv run python scripts/run_qc.py
+
+# UniProt Subcellular Location (source queue #3): add SL xrefs to GO-grounded records
+uniprot-xrefs *args:
+    uv run python scripts/uniprot_sl.py xrefs {{args}}
+
+# Seed taxon-paired protein examples for ONE record from UniProt SL (dry-run by default).
+# `just uniprot-proteins data/structures/microcompartment/carboxysome.yaml --taxon 1140 --apply`
+uniprot-proteins record *args:
+    uv run python scripts/uniprot_sl.py proteins --record {{record}} {{args}}

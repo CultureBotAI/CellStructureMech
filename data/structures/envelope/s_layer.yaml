@@ -129,3 +129,10 @@ curation_history:
     CC BY-NC 4.0, Caulobacter crescentus NCBITaxon:155892); rights verified against
     the CaltechDATA API.
   llm_assisted: true
+- timestamp: '2026-08-30T02:14:17Z'
+  curator: uniprot_sl
+  action: ADD_UNIPROT_SL_XREF
+  changes: Added uniprot.location:SL-0262 (S-layer); mapping read from the GO line
+    of UniProt subcell.txt.
+xrefs:
+- uniprot.location:SL-0262

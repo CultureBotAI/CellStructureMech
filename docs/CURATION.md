@@ -73,6 +73,11 @@ to match — never one without the other.
   or GO, lipids and polysaccharides to CHEBI, RNAs to SO. **Do not guess an
   accession.** Leave `grounding` unset and open a `CURATION_TODO` discussion;
   a wrong CURIE is harder to find than a missing one.
+- `protein_examples` can be seeded from UniProt Subcellular Location
+  (`just uniprot-proteins <record> --taxon <id>`): reviewed entries in a
+  canonical taxon, matched to a component by gene symbol, carrying UniProt's
+  `ECO:0000269` PubMed evidence for the localisation. Proteins the script
+  reports as *no matching component* are candidates for new components.
 - `grounding_status: REVIEWED_LABEL_ONLY` means a curator looked and no exact
   term exists. It requires `grounding_notes` saying why.
 - `essentiality` is about whether *the structure* forms, not whether the cell
