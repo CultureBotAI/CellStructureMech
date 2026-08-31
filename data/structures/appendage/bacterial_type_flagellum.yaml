@@ -71,7 +71,10 @@ components:
   - motA
   - motB
   essentiality: DISPENSABLE
-  role: Ion-driven torque generator anchored to peptidoglycan through MotB.
+  role: 'Ion-driven torque generator anchored to peptidoglycan through MotB. A constituent
+    of the motor, not machinery acting on it: DISPENSABLE here means the flagellum
+    still assembles without MotA/MotB, but it cannot rotate (docs/CURATION.md, component
+    boundary).'
   evidence:
   - reference: DOI:10.1016/j.cell.2020.08.016
     notes: Santiveri et al. 2020 resolve the 5:2 MotA:MotB stoichiometry and show
@@ -345,6 +348,12 @@ curation_history:
   action: DOCUMENT_IMAGE_EXEMPLAR
   changes: Added the hosted-image O157:H7 taxon as a cited canonical example rather
     than overstating it as a universally flagellated taxonomic scope.
+  llm_assisted: true
+- timestamp: '2026-08-31T06:03:17Z'
+  curator: claude
+  action: APPLY_COMPONENT_BOUNDARY
+  changes: 'Component-boundary rule (#66, #72): stated in the stator role that DISPENSABLE
+    here means ''not needed for assembly'', not ''peripheral machinery''.'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0307

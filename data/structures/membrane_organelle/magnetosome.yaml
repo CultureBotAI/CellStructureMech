@@ -60,9 +60,11 @@ components:
   gene_symbols:
   - mamK
   - mamJ
-  essentiality: CONDITIONAL
-  role: Cytoskeletal filament that aligns magnetosomes into a chain; without it the
-    vesicles form but scatter.
+  essentiality: DISPENSABLE
+  role: 'Cytoskeletal filament that aligns assembled magnetosomes into a chain, with
+    MamJ connecting the vesicles to it. Machinery acting on the assembled organelle
+    rather than a constituent of it: vesicles still form and mineralise without it,
+    but they scatter (docs/CURATION.md, component boundary).'
   evidence:
   - reference: DOI:10.1038/nrmicro.2016.99
     notes: Uebe & Schüler 2016 describe MamK filaments and the MamJ connector arranging
@@ -284,6 +286,13 @@ curation_history:
   action: ADD_TRAIT_EVIDENCE
   changes: TraitLink.evidence became required in the schema; cited the review already
     backing the record for the magnetosome trait link.
+  llm_assisted: true
+- timestamp: '2026-08-31T06:02:12Z'
+  curator: claude
+  action: APPLY_COMPONENT_BOUNDARY
+  changes: 'Component-boundary rule (#66): MamK/MamJ is machinery acting on the assembled
+    magnetosome, so its essentiality moves from CONDITIONAL to DISPENSABLE — the organelle
+    forms without it.'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0510
