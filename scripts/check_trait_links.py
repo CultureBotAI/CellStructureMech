@@ -48,6 +48,10 @@ CACHE_PATH = REPO_ROOT / "build" / "traitmech_index.json"
 # corpus is wrong" from "the index did not load" (#82).
 CONTROL_GOOD = "METPO:1000702"
 CONTROL_BAD = "traitmech:999999"
+# TraitMech had 477 trait records when this was written; the floor is deliberately
+# well below that so ordinary growth or curation never trips it, while a view that
+# published only the graph subset (353) would (#90).
+MIN_INDEX_SIZE = 400
 
 
 def local_root() -> Path | None:
@@ -145,6 +149,16 @@ def main() -> int:
     if not index:
         print("TraitMech index is empty — the checkout path or the published index is wrong, "
               "not the corpus", file=sys.stderr)
+        return 2
+    # TraitMech's published index is a rendering artifact, not a contract: if its
+    # graph view ever narrowed to traits with causal graphs, real links here would
+    # start reporting as missing. A sharp drop is a signal about the index, not
+    # about this corpus (#90).
+    floor = MIN_INDEX_SIZE
+    if len(index) < floor:
+        print(f"TraitMech index has {len(index)} traits, below the floor of {floor} — the index has "
+              f"narrowed or failed to load; a 'missing' verdict here would be about the index, "
+              f"not the corpus", file=sys.stderr)
         return 2
     if CONTROL_GOOD not in index or CONTROL_BAD in index:
         print(f"index control failed against {source}: {CONTROL_GOOD} must be present and "

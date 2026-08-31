@@ -35,6 +35,7 @@ def test_an_empty_index_refuses_rather_than_passing(monkeypatch, capsys):
 def test_an_index_failing_its_control_refuses(monkeypatch, capsys):
     """A well-formed index that lacks a trait everyone has, or contains a
     fabricated one, is not the index it claims to be (#82)."""
+    monkeypatch.setattr(ctl, "MIN_INDEX_SIZE", 0)
     monkeypatch.setattr(ctl, "load_index", lambda offline=False: ({"traitmech:1": "x"}, "somewhere"))
     monkeypatch.setattr(ctl.sys, "argv", ["check_trait_links.py", "--check"])
     assert ctl.main() == 2
@@ -52,6 +53,7 @@ def _index():
     ([{"trait_id": "traitmech:000071", "trait_label": "gas vesicle"}], 1),    # label drifted
 ])
 def test_check_verdicts(monkeypatch, links, expected):
+    monkeypatch.setattr(ctl, "MIN_INDEX_SIZE", 0)
     monkeypatch.setattr(ctl, "load_index", lambda offline=False: (_index(), "fixture"))
     monkeypatch.setattr(ctl, "load_records", lambda *a, **k: _corpus(links))
     monkeypatch.setattr(ctl.sys, "argv", ["check_trait_links.py", "--check"])
@@ -89,9 +91,22 @@ def test_sibling_curies_outside_trait_links_are_collected():
 
 
 def test_a_curie_with_no_claimed_label_is_checked_for_existence_only(monkeypatch):
+    monkeypatch.setattr(ctl, "MIN_INDEX_SIZE", 0)
     monkeypatch.setattr(ctl, "load_index", lambda offline=False: ({ctl.CONTROL_GOOD: "motile",
                                                                   "traitmech:000064": "S-layer"}, "fixture"))
     monkeypatch.setattr(ctl, "load_records", lambda *a, **k:
                         [(type("P", (), {"name": "r.yaml"})(), {"xrefs": ["traitmech:000064"]})])
     monkeypatch.setattr(ctl.sys, "argv", ["check_trait_links.py", "--check"])
     assert ctl.main() == 0
+
+
+def test_a_narrowed_index_refuses_rather_than_reporting_missing_links(monkeypatch, capsys):
+    """TraitMech's published index is a rendering artifact. If its graph view
+    narrowed to traits with causal graphs, real links here would report as
+    missing — a failure in this repository caused by a cosmetic change in
+    another (#90)."""
+    small = {f"traitmech:{n:06d}": "x" for n in range(10)} | {ctl.CONTROL_GOOD: "motile"}
+    monkeypatch.setattr(ctl, "load_index", lambda offline=False: (small, "narrowed index"))
+    monkeypatch.setattr(ctl.sys, "argv", ["check_trait_links.py", "--check"])
+    assert ctl.main() == 2
+    assert "below the floor" in capsys.readouterr().err

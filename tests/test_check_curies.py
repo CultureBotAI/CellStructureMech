@@ -125,3 +125,25 @@ def test_the_gate_refuses_when_records_carry_no_identifiers(monkeypatch, capsys)
     monkeypatch.setattr(cc.sys, "argv", ["check_curies.py", "--check", "--offline"])
     assert cc.main() == 2
     assert "no identifiers found" in capsys.readouterr().err
+
+
+def test_prose_dois_are_collected_and_normalised(tmp_path, monkeypatch):
+    """research/ and curation/ cite papers in prose; a dead DOI there is the same
+    defect as a dead DOI in a record (#85)."""
+    (tmp_path / "research").mkdir()
+    (tmp_path / "research" / "n.md").write_text(
+        "See [the review](https://doi.org/10.1038/nrmicro.2018.10), and 10.1128/MMBR.00061-12.\n")
+    monkeypatch.setattr(cc, "REPO_ROOT", tmp_path)
+    got = cc.collect_prose(("research/*.md",))
+    assert got["DOI"] == {"DOI:10.1038/nrmicro.2018.10", "DOI:10.1128/MMBR.00061-12"}
+
+
+@pytest.mark.parametrize("template", [
+    "10.6019/EMPIAR-XXXXX", "10.22002/D1.NNNN", "10.7295/W9CILNNNNN", "10.1234/{id}", "10.1234/<id>",
+])
+def test_a_documented_identifier_shape_is_not_treated_as_a_citation(tmp_path, monkeypatch, template):
+    """Notes describe the form of an identifier as often as they cite one."""
+    (tmp_path / "research").mkdir()
+    (tmp_path / "research" / "n.md").write_text(f"Entries carry a DOI of the form `{template}`.\n")
+    monkeypatch.setattr(cc, "REPO_ROOT", tmp_path)
+    assert cc.collect_prose(("research/*.md",))["DOI"] == set()

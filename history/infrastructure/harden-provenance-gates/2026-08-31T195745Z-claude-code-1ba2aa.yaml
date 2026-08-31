@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/check_curies.py
+  slug: harden-provenance-gates
+session:
+  id: 2026-08-31T195745Z-claude-code-1ba2aa
+  timestamp: '2026-08-31T19:57:45Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/85
+  - https://github.com/CultureBotAI/CellStructureMech/issues/90
+  - https://github.com/CultureBotAI/CellStructureMech/issues/71
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - infrastructure
+  summary: Extend the liveness gate to cited prose, floor the trait index, bound the image
+    credit
+  details: 'Three follow-ups from the gates merged in PRs 83 and 88. Issue 85: check_curies
+    now also resolves DOIs cited in research notes, curation TSVs and docs, which is where
+    a later reader looks to decide whether a source is still usable; 11 further DOIs came
+    into scope and all resolve. Extraction skips documented identifier shapes such as 10.6019/EMPIAR-XXXXX,
+    since notes describe the form of an identifier as often as they cite one. Adding the prose
+    walk immediately reopened the vacuous-pass hole from issue 87, because a citation in research
+    would have masked an empty data/structures; the empty-corpus guard is now evaluated before
+    prose is merged, and the test written for 87 caught the regression. Issue 90: the trait
+    check refuses when TraitMech''s published index falls below a floor of 400 entries against
+    its current 477, because that index is a rendering artifact rather than a contract and
+    a narrowed graph view would otherwise make real links here report as missing. Issue 71:
+    the Commons credit is bounded again before it goes into image notes.'
