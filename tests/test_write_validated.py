@@ -113,6 +113,31 @@ def test_trait_link_without_evidence_is_rejected():
 )
 def test_claim_bearing_entries_without_provenance_are_rejected(field, value):
     assert validate_structure(dict(MINIMAL, **{field: value}))
+def test_taxon_specific_complex_composition_is_valid():
+    doc = dict(
+        MINIMAL,
+        complex_compositions=[
+            {
+                "composition_id": "complex_portal_cpx_4022",
+                "source": "COMPLEX_PORTAL",
+                "source_accession": "ComplexPortal:CPX-4022",
+                "source_url": "https://www.ebi.ac.uk/complexportal/complex/CPX-4022",
+                "complex_label": "ATP synthase complex",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli K-12",
+                "participants": [
+                    {
+                        "participant_id": "UniProtKB:P68699",
+                        "label": "ATP synthase subunit c",
+                        "participant_type": "protein",
+                        "stoichiometry": "10",
+                    }
+                ],
+                "retrieved_on": "2026-08-30",
+            }
+        ],
+    )
+    assert validate_structure(doc) == []
 
 
 def test_invalid_record_is_not_written(tmp_path):

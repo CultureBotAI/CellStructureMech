@@ -27,3 +27,21 @@ cell_structure_atlas:
   homepage: https://www.cellstructureatlas.org/
   script: scripts/validate_strict.py      # link-only images; the ImageLicenceEnum + tests forbid hosting CC BY-NC
   role: images (link-only)
+
+complex_portal:
+  name: Complex Portal
+  homepage: https://www.ebi.ac.uk/complexportal/
+  script: scripts/complex_portal.py
+  role: complex_compositions
+
+emdb_empiar:
+  name: EMDB + EMPIAR
+  homepage: https://www.ebi.ac.uk/empiar/
+  script: scripts/emdb_empiar.py
+  role: datasets, images
+
+pmc_oa:
+  name: PubMed Central Open Access on AWS
+  homepage: https://pmc.ncbi.nlm.nih.gov/tools/pmcaws/
+  script: scripts/pmc_oa.py
+  role: images
