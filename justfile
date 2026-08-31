@@ -167,3 +167,18 @@ text-map:
 # Fail when record text, cached vectors, map coordinates, or neighbours drift.
 text-map-check:
     uv run python scripts/build_text_embedding_map.py --check
+
+# Resolve every identifier in the corpus at its issuing authority (#6). Network;
+# cached under build/curie_cache.json, so a re-run is nearly free. The resolvers
+# are exercised against a known-good and known-bad id first, so a broken
+# resolver fails loudly instead of condemning the corpus.
+check-curies *args:
+    uv run python scripts/check_curies.py {{args}}
+
+# Fail if any identifier does not resolve. Blocking gate in CI.
+check-curies-strict:
+    uv run python scripts/check_curies.py --check --report reports/curie_check.tsv
+
+# Only exercise the resolvers; says nothing about the corpus.
+check-curies-self-test:
+    uv run python scripts/check_curies.py --self-test

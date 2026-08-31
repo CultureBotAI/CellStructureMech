@@ -1,0 +1,64 @@
+name: identifier-liveness
+
+# Resolves every identifier in the corpus at the authority that issued it (#6):
+# DOIs at Crossref and DataCite, PMIDs at PubMed, accessions at UniProt,
+# InterPro and Complex Portal, ontology terms at OLS. Kept out of the main qc
+# job because it needs the network; the id-label gate has the same shape.
+#
+# The resolvers are exercised against a known-good and a known-bad identifier
+# before any verdict about the corpus is believed — the first version of this
+# checker used a retired Complex Portal endpoint and reported every accession
+# as missing (#82).
+
+on:
+  pull_request:
+    paths: &trigger_paths
+      - "data/structures/**"
+      - "scripts/check_curies.py"
+      - ".github/workflows/identifier-liveness.yaml"
+      - "pyproject.toml"
+      - "uv.lock"
+  push:
+    branches: [main]
+    paths: *trigger_paths
+  workflow_dispatch:
+  schedule:
+    # Weekly: an identifier can be withdrawn or deprecated long after it was
+    # written, and nothing in a PR would reveal that.
+    - cron: "17 5 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  identifier-liveness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3 # v4.0.0
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
+      - name: Set up Python
+        run: uv python install 3.12
+      - name: Install dependencies
+        run: uv sync
+      - name: Cache resolved identifiers
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: build/curie_cache.json
+          key: curie-cache-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: curie-cache-${{ runner.os }}-
+      - name: Exercise the resolvers against known identifiers
+        run: just check-curies-self-test
+      - name: Resolve every identifier in the corpus
+        run: just check-curies-strict
+      - name: Upload the liveness report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: curie-liveness-${{ github.run_id }}
+          path: reports/curie_check.tsv
+          if-no-files-found: warn

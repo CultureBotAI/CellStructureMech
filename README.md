@@ -126,6 +126,7 @@ CellStructureMech/
 │   ├── curate/curation_event.py              # append-only audit trail helper
 │   └── templates/                            # site templates
 ├── scripts/
+│   ├── check_curies.py                       # resolve every identifier at its authority
 │   ├── new_record.py                         # scaffold a record through the gate
 │   ├── validate_strict.py                    # closed-mode corpus validation
 │   ├── render_pages.py                       # generate pages/

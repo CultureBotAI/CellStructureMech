@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/check_curies.py
+  slug: identifier-liveness
+session:
+  id: 2026-08-31T174606Z-claude-code-34cd27
+  timestamp: '2026-08-31T17:46:06Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/6
+  - https://github.com/CultureBotAI/CellStructureMech/issues/82
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - infrastructure
+  summary: Resolve every identifier in the corpus at its issuing authority
+  details: 'Issue 6. The dominant defect in this repository is a pattern-valid identifier
+    that does not exist: four reached pull requests before something caught them, including
+    CHEBI:50290 which resolves to sapphyrin PCI-2052 rather than magnetite. The id-label gate
+    covers only grounding-label pairs for OBO ontologies with an OAK adapter, which is 41
+    of the corpus''s 490 identifiers; the 221 DOIs, 68 UniProt accessions, 66 taxon ids and
+    52 PMIDs were unchecked. scripts/check_curies.py resolves all 202 unique identifiers at
+    the authority that issued each: Crossref then DataCite for DOIs, PubMed esummary in one
+    batched call for PMIDs, UniProt''s accessions endpoint batched, InterPro, Complex Portal,
+    OLS per-ontology with a global-index fallback, and the vendored subcell.txt for SL ids.
+    Verdicts are cached under build with a 30-day age and an UNREACHABLE result is never cached,
+    since a transport failure is not an answer. Building it produced four resolver bugs, all
+    caught before any verdict was trusted: the Complex Portal details endpoint 404s for every
+    accession including known-good ones, DataCite DOIs are absent from Crossref, RO and BFO
+    404 on the per-ontology OLS endpoint, and InterPro answers an unknown accession with 204
+    rather than 404. The durable answer is a control: each resolver is exercised against a
+    known-good and a known-bad identifier before the corpus is judged, and the InterPro bug
+    was caught by that control on its first run.'
