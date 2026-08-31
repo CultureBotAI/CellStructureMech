@@ -24,6 +24,7 @@ def summarize(records: list[tuple[Path, dict]]) -> dict:
     go_grounded = sum(1 for _, d in records if d["identifier"].startswith("GO:"))
     minted = sum(1 for _, d in records if d["identifier"].startswith("cellstructuremech:"))
     with_components = sum(1 for _, d in records if d.get("components"))
+    roles = Counter(c.get("component_role") for _, d in records for c in d.get("components") or [])
     with_graphs = sum(1 for _, d in records if d.get("causal_graphs"))
     with_traits = sum(1 for _, d in records if d.get("associated_traits"))
     with_functions = sum(1 for _, d in records if d.get("functions"))
@@ -40,6 +41,7 @@ def summarize(records: list[tuple[Path, dict]]) -> dict:
         "with_graphs": with_graphs,
         "with_traits": with_traits,
         "with_images": with_images,
+        "component_roles": dict(roles.most_common()),
         "edges": edges,
     }
 
@@ -62,6 +64,9 @@ def main() -> int:
     for k, v in s["by_status"].items():
         print(f"  {k:22s} {v:5d}")
     print(f"\nGrounded in GO: {s['go_grounded']}   minted cellstructuremech: {s['minted']}")
+    if s["component_roles"]:
+        parts = "   ".join(f"{role.lower()}: {n}" for role, n in s["component_roles"].items() if role)
+        print(f"\nComponents by role: {parts}")
     print(
         f"With components: {s['with_components']}   functions: {s['with_functions']}   "
         f"causal graphs: {s['with_graphs']} ({s['edges']} edges)   trait links: {s['with_traits']}   "

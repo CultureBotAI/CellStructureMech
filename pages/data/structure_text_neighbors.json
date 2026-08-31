@@ -20,7 +20,7 @@
         {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.71156171
+          "cosine_similarity": 0.70808287
         },
         {
           "identifier": "GO:1990586",
@@ -51,7 +51,7 @@
         {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.63498071
+          "cosine_similarity": 0.63268893
         },
         {
           "identifier": "GO:1990586",
@@ -75,11 +75,6 @@
       "label": "divisome complex",
       "neighbors": [
         {
-          "identifier": "GO:0030257",
-          "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.70470928
-        },
-        {
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
           "cosine_similarity": 0.7005301
@@ -88,6 +83,11 @@
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
           "cosine_similarity": 0.69748035
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.69568535
         },
         {
           "identifier": "GO:0009295",
@@ -113,7 +113,7 @@
         {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.7264988
+          "cosine_similarity": 0.72390903
         },
         {
           "identifier": "GO:1990586",
@@ -149,17 +149,17 @@
         {
           "identifier": "GO:0030115",
           "label": "S-layer",
-          "cosine_similarity": 0.7190958
+          "cosine_similarity": 0.71909581
         },
         {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.69456194
+          "cosine_similarity": 0.6911819
         },
         {
           "identifier": "GO:0031411",
           "label": "gas vesicle",
-          "cosine_similarity": 0.658214
+          "cosine_similarity": 0.65821401
         }
       ]
     },
@@ -185,7 +185,7 @@
         {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.65216458
+          "cosine_similarity": 0.65461137
         },
         {
           "identifier": "GO:1990586",
@@ -216,7 +216,7 @@
         {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.65736527
+          "cosine_similarity": 0.65569825
         },
         {
           "identifier": "GO:1990586",
@@ -242,12 +242,12 @@
         {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
-          "cosine_similarity": 0.7190958
+          "cosine_similarity": 0.71909581
         },
         {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.67948644
+          "cosine_similarity": 0.68493247
         },
         {
           "identifier": "GO:0009288",
@@ -263,7 +263,7 @@
         {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
-          "cosine_similarity": 0.658214
+          "cosine_similarity": 0.65821401
         },
         {
           "identifier": "GO:0110143",
@@ -273,7 +273,7 @@
         {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.63078948
+          "cosine_similarity": 0.63699741
         },
         {
           "identifier": "GO:0030115",
@@ -294,7 +294,7 @@
         {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.66460962
+          "cosine_similarity": 0.66990267
         },
         {
           "identifier": "GO:0031411",
@@ -314,7 +314,7 @@
         {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
-          "cosine_similarity": 0.62156337
+          "cosine_similarity": 0.62156338
         }
       ]
     },
@@ -330,7 +330,7 @@
         {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.65225746
+          "cosine_similarity": 0.65186922
         },
         {
           "identifier": "GO:0045259",
@@ -366,7 +366,7 @@
         {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.57740204
+          "cosine_similarity": 0.58667361
         },
         {
           "identifier": "GO:0110143",
@@ -385,14 +385,14 @@
       "label": "ribosome",
       "neighbors": [
         {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.63904853
+        },
+        {
           "identifier": "GO:0009295",
           "label": "nucleoid",
           "cosine_similarity": 0.62480672
-        },
-        {
-          "identifier": "GO:0030257",
-          "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.61946311
         },
         {
           "identifier": "GO:0031411",
@@ -418,27 +418,27 @@
         {
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.7264988
+          "cosine_similarity": 0.72390903
         },
         {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.71156171
+          "cosine_similarity": 0.70808287
         },
         {
           "identifier": "GO:1990586",
           "label": "divisome complex",
-          "cosine_similarity": 0.70470928
+          "cosine_similarity": 0.69568535
         },
         {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
-          "cosine_similarity": 0.69456194
+          "cosine_similarity": 0.6911819
         },
         {
           "identifier": "GO:0030115",
           "label": "S-layer",
-          "cosine_similarity": 0.67948644
+          "cosine_similarity": 0.68493247
         }
       ]
     }
