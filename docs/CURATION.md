@@ -172,7 +172,12 @@ Source-specific commands (all dry-run unless `--apply` is present):
   `pmc-oa-opendata`. Only CC BY/CC0 is hostable, and the exact CC version must
   be present in JATS and agree with the metadata family. The curator supplies
   the caption-derived taxon and explicitly acknowledges likely multi-panel figures.
-- Both image scripts verify downloaded bytes (PMC md5 where supplied, corpus
+- `scripts/cell_image_library.py` reads one CIL item's DOI, exact licence,
+  attribution and source-hosted preview from public JSON-LD. It accepts only
+  Public Domain and CC BY 3.0/4.0 items. CIL supplies an organism name but no
+  machine-readable taxid there, so the curator supplies a taxon already present
+  on the target record.
+- These image scripts verify downloaded bytes (PMC md5 where supplied, corpus
   SHA-256 always), validate the complete record mutation before touching the
   destination, and confine generated filenames to the record image directory.
 

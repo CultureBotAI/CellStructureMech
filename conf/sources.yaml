@@ -45,3 +45,9 @@ pmc_oa:
   homepage: https://pmc.ncbi.nlm.nih.gov/tools/pmcaws/
   script: scripts/pmc_oa.py
   role: images
+
+cell_image_library:
+  name: Cell Image Library
+  homepage: https://www.cellimagelibrary.org/
+  script: scripts/cell_image_library.py
+  role: images

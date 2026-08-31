@@ -232,6 +232,7 @@ dependencies = [
     { name = "oaklib" },
     { name = "pyyaml" },
     { name = "setuptools" },
+    { name = "truststore" },
 ]
 
 [package.optional-dependencies]
@@ -258,6 +259,7 @@ requires-dist = [
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.4" },
     { name = "sentence-transformers", marker = "extra == 'embeddings'", specifier = "==6.0.0" },
     { name = "setuptools", specifier = "<82" },
+    { name = "truststore", specifier = ">=0.10.4" },
 ]
 provides-extras = ["dev", "embeddings"]
 
