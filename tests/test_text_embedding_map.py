@@ -87,4 +87,8 @@ def test_committed_embedding_artifacts_cover_current_corpus():
     expected_map, expected_neighbors = text_map.derived_documents(artifact, inputs)
     text_map.check_derived(expected_map, expected_neighbors)
     assert len(expected_map["records"]) == len(inputs)
-    assert all(len(item["neighbors"]) == len(inputs) - 1 for item in expected_neighbors["records"])
+    expected_neighbor_count = min(5, len(inputs) - 1)
+    assert all(
+        len(item["neighbors"]) == expected_neighbor_count
+        for item in expected_neighbors["records"]
+    )

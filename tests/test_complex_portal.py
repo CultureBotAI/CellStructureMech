@@ -54,4 +54,3 @@ def test_unrecognized_stoichiometry_is_refused_instead_of_guessed():
 def test_unknown_nonprotein_identifier_has_no_invented_prefix():
     with pytest.raises(ValueError, match="cannot assign a CURIE prefix"):
         cp.participant_curie({"identifier": "mystery", "interactorType": "other"})
-
