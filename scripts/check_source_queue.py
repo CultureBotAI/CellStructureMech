@@ -43,7 +43,10 @@ TAXON_LINK = {"YES", "PARTIAL", "NO", "UNVERIFIED"}
 ITEM_ID = {"DOI", "CURIE", "ACCESSION", "URL", "NONE", "UNVERIFIED"}
 ACCESS = {"BULK", "API", "BOTH", "MANUAL", "UNVERIFIED"}
 STATUS = {"CANDIDATE", "EVALUATING", "ADOPTED", "REJECTED", "BLOCKED"}
-HOST_FORBIDDEN = {"UNVERIFIED", "NONCOMMERCIAL", "RESTRICTED"}
+# What LICENSE says may be copied into records or pages. SHARE_ALIKE is here
+# rather than in the hostable set because share-alike propagates to consumers
+# of this corpus, which a CC0 repository cannot promise (#93).
+HOST_FORBIDDEN = {"UNVERIFIED", "NONCOMMERCIAL", "RESTRICTED", "SHARE_ALIKE"}
 
 # Gaps that are not record fields: corpus-level things a source can close.
 EXTRA_GAPS = {"identity", "evidence"}

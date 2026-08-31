@@ -30,13 +30,26 @@ def test_html_is_reduced_to_plain_attribution_text():
 
 
 def test_hostable_licences_are_exactly_the_redistributable_ones():
-    """The schema and tests/test_corpus_integrity.py enforce the same set; if these
-    drift apart the script would download something the corpus must not host."""
-    assert {"CC0", "PUBLIC_DOMAIN", "CC_BY_3_0", "CC_BY_4_0",
-                            "CC_BY_SA_3_0", "CC_BY_SA_4_0"} == fci.HOSTABLE
+    """The schema, tests/test_corpus_integrity.py and LICENSE state the same set;
+    if these drift apart the script would download something the corpus must not
+    host. Share-alike is excluded deliberately (#93): it constrains what a
+    downstream user may do, which a CC0 repository cannot promise for them."""
+    assert {"CC0", "PUBLIC_DOMAIN", "CC_BY_3_0", "CC_BY_4_0"} == fci.HOSTABLE
     assert set(fci.LICENCES.values()) >= fci.HOSTABLE
-    for nc in ("CC BY-NC 4.0", "CC BY-NC-SA 4.0", "CC BY-ND 4.0"):
-        assert fci.LICENCES[nc] not in fci.HOSTABLE
+    for link_only in ("CC BY-SA 3.0", "CC BY-SA 4.0", "CC BY-NC 4.0",
+                      "CC BY-NC-SA 4.0", "CC BY-ND 4.0"):
+        assert fci.LICENCES[link_only] not in fci.HOSTABLE
+
+
+def test_the_hostable_set_is_the_one_the_licence_file_states():
+    """LICENSE is what a reuser actually reads; the code must not quietly differ."""
+    from pathlib import Path as _P
+
+    # Line breaks in LICENSE are prose wrapping, so compare on collapsed text.
+    text = " ".join((_P(__file__).resolve().parents[1] / "LICENSE")
+                    .read_text(encoding="utf-8").split())
+    assert "CC BY-SA — NOT hosted" in text
+    assert "Only CC0, public-domain, and CC BY material is hosted" in text
 
 
 def test_an_unmapped_licence_string_has_no_mapping():

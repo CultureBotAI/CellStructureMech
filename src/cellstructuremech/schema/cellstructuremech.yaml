@@ -1000,9 +1000,15 @@ enums:
 
   ImageLicenceEnum:
     description: >-
-      Hostable: CC0, PUBLIC_DOMAIN, CC_BY_*, CC_BY_SA_*. Link-only: CC_BY_NC_*,
+      Hostable: CC0, PUBLIC_DOMAIN, CC_BY_*. Link-only: CC_BY_SA_*, CC_BY_NC_*,
       CC_BY_ND_*, OTHER. tests/test_corpus_integrity.py enforces that `file` is
       set only for hostable licences.
+
+      CC BY-SA is deliberately NOT hostable (#93). Attribution is a label this
+      corpus can carry per item; share-alike constrains the licence of
+      derivative works, which a per-item field cannot express, and it would
+      propagate to consumers of this data — a knowledge graph incorporating a
+      share-alike image can be argued to be an adaptation. See LICENSE.
     permissible_values:
       CC0:
       PUBLIC_DOMAIN:

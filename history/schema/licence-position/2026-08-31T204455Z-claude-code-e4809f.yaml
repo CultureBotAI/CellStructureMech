@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: schema
+  path: LICENSE
+  slug: licence-position
+session:
+  id: 2026-08-31T204455Z-claude-code-e4809f
+  timestamp: '2026-08-31T20:44:55Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/46
+  - https://github.com/CultureBotAI/CellStructureMech/issues/93
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - schema
+  summary: State the CC0 scope and its exceptions; exclude share-alike from hosting
+  details: 'Issue 46, decided by the owner as option a: keep CC0 for original content and
+    state the exceptions. LICENSE gains a scope section ahead of the CC0 text saying that
+    the dedication covers what this project authored, and does not and cannot cover third-party
+    material it redistributes, because CC0 is a dedication by a rights holder and this project
+    is not the rights holder for someone else''s micrograph or for UniProt''s vocabulary text.
+    It enumerates which licences may be hosted and requires each hosted image to carry its
+    own licence and attribution in the record that displays it. Issue 93 is resolved in the
+    same change by excluding CC BY-SA from hosting. Attribution is a label the corpus can
+    carry per item, whereas share-alike constrains the licence of derivative works, which
+    a per-item field cannot express and which would reach consumers of this data: a knowledge
+    graph incorporating a share-alike image can be argued to be an adaptation, so the burden
+    would land on people who never saw the licence. Nothing share-alike is hosted today, so
+    the exclusion costs nothing now and would be expensive later. The rule is enforced in
+    four places that a test now ties together: the schema enum, the corpus integrity test,
+    the Commons fetch script, and the source-queue checker, which refuses SEED for a share-alike
+    source.'

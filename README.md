@@ -149,4 +149,12 @@ CellStructureMech/
 
 ## License
 
-CC0-1.0. See [LICENSE](LICENSE).
+CC0-1.0 for everything this project authored — records, schema, scripts,
+pages, prose. Third-party material it redistributes keeps its own licence:
+each hosted image records its licence and attribution in the record that
+displays it, and text derived from CC BY sources (UniProt Subcellular
+Location, Complex Portal) names its source in an evidence reference. Only
+CC0, public-domain and CC BY material is hosted; CC BY-SA, CC BY-NC and ND
+are cited and linked, never copied. See [LICENSE](LICENSE) for the full
+statement and [#46](https://github.com/CultureBotAI/CellStructureMech/issues/46)
+for the decision.
