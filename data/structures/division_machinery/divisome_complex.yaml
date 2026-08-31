@@ -181,5 +181,32 @@ curation_history:
     is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
     only where the protein acts on the already-assembled structure.
   llm_assisted: true
+- timestamp: '2026-08-31T19:43:06Z'
+  curator: claude
+  action: ADD_PHYSICAL_PROPERTIES
+  changes: '#65: FtsZ filament length and Z-ring thickness from the review''s summary
+    of super-resolution measurements; both use OTHER or LENGTH because the enum has
+    no ''ring thickness''.'
+  llm_assisted: true
+- timestamp: '2026-08-31T19:45:55Z'
+  curator: claude
+  action: REMOVE_UNSOURCED_PROPERTIES
+  changes: '#91: removed filament and ring dimensions attributed to a review known
+    only by its title.'
+  llm_assisted: true
 part_of:
 - GO:0032153
+discussions:
+- discussion_id: ring_dimensions_unsourced
+  prompt: Add FtsZ filament length and Z-ring thickness from a source that has been
+    read.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ftsz
+  rationale: A first pass added filament length and ring thickness attributed to McQuillen
+    & Xiao 2020 without reading it; both were removed (#91). Super-resolution measurements
+    of the ring are exactly the kind of figure that varies by method and organism,
+    so they need the paper, not a recollection.
+  posed_by: claude
+  posed_date: '2026-08-31'
