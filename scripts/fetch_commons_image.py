@@ -64,7 +64,9 @@ LICENCES = {
     "CC BY-NC-SA 4.0": "CC_BY_NC_SA_4_0",
     "CC BY-ND 4.0": "CC_BY_ND_4_0",
 }
-HOSTABLE = {"CC0", "PUBLIC_DOMAIN", "CC_BY_3_0", "CC_BY_4_0", "CC_BY_SA_3_0", "CC_BY_SA_4_0"}
+# Share-alike is link-only: it constrains what a downstream user may do, not
+# just whom they must credit (#93, and the scope section of LICENSE).
+HOSTABLE = {"CC0", "PUBLIC_DOMAIN", "CC_BY_3_0", "CC_BY_4_0"}
 
 MODALITIES = ("TEM", "SEM", "CRYO_EM", "CRYO_ET", "FLUORESCENCE", "LIGHT", "AFM", "SUPER_RESOLUTION", "OTHER")
 

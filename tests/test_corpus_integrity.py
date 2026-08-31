@@ -106,7 +106,7 @@ def test_reviewed_records_carry_evidence_and_history(records):
     assert not bad, bad
 
 
-HOSTABLE_LICENCES = {"CC0", "PUBLIC_DOMAIN", "CC_BY_3_0", "CC_BY_4_0", "CC_BY_SA_3_0", "CC_BY_SA_4_0"}
+HOSTABLE_LICENCES = {"CC0", "PUBLIC_DOMAIN", "CC_BY_3_0", "CC_BY_4_0"}
 
 
 def test_hosted_images_have_hostable_licences_and_files(records, repo_root):

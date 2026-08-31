@@ -1,3 +1,40 @@
+CellStructureMech — licence scope
+=================================
+
+The curation in this repository is dedicated to the public domain under CC0
+1.0, reproduced in full below. That covers everything this project authored:
+the records under data/structures/, the LinkML schema, the scripts, the tests,
+the rendered pages and the prose.
+
+It does NOT cover third-party material this repository redistributes, because
+CC0 is a dedication by a rights holder and we are not the rights holder for
+someone else's work. Two kinds are present:
+
+  * Hosted images under data/images/ and pages/img/. Each carries its own
+    licence, the attribution its licence requires, its source accession and
+    URL, in the `images` block of the record that displays it. Only CC0,
+    public-domain, and CC BY material is hosted; see below.
+
+  * Text and identifiers derived from CC BY sources — notably the UniProt
+    Subcellular Location vocabulary (CC BY 4.0) and Complex Portal (CC BY 4.0).
+    Every such claim names its source in an evidence reference or an xref.
+
+Which licences may be hosted:
+
+  * CC0 and public domain — no condition to carry.
+  * CC BY — hosted with the attribution its licence requires, recorded per
+    item and rendered on the record page.
+  * CC BY-SA — NOT hosted. Share-alike constrains the licence of derivative
+    works rather than merely requiring credit, so hosting it inside a CC0
+    corpus would either misstate the repository's terms or propagate
+    share-alike to consumers of this data. Cite and link instead.
+  * CC BY-NC, CC BY-ND, and anything unverified — NOT hosted. Cite and link.
+
+This split is machine-checked: the schema's licence enum, a corpus test, and
+scripts/check_source_queue.py all refuse to host a licence not listed above.
+
+----------------------------------------------------------------------
+
 CC0 1.0 Universal
 
 Statement of Purpose
