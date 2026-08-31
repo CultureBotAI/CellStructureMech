@@ -61,6 +61,10 @@ to match — never one without the other.
   curator-asserted claims nothing upstream vouches for. Image provenance is
   carried by its source accession and URL, licence, attribution, taxon, and
   (when one exists) publication reference.
+- **A placeholder is not a source.** `definition_source` is required and its
+  pattern rejects `TODO:`, `FIXME:`, `XXX:` and `TBD:` prefixes. For a
+  GO-grounded record the term id is always an honest answer; for a minted one,
+  a real citation is what justifies minting in the first place.
 - `snippet` is for **verbatim** quotes only. When you have not seen the
   source text, use `notes` to paraphrase what the source establishes. A
   fabricated quotation is worse than none.

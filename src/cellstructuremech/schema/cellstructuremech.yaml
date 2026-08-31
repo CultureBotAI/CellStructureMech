@@ -124,7 +124,10 @@ classes:
           the ontology term the definition is quoted from).
         required: true
         range: string
-        pattern: "^(?:[A-Za-z][A-Za-z0-9._-]*:\\S+|https?://\\S+)$"
+        # A placeholder must not satisfy a required provenance field: making
+        # definition_source required while TODO:add_citation validates would turn
+        # missing provenance, which is countable, into fake provenance (#70).
+        pattern: "^(?!(?:TODO|FIXME|XXX|TBD):)(?:[A-Za-z][A-Za-z0-9._-]*:\\S+|https?://\\S+)$"
 
       synonyms:
         multivalued: true

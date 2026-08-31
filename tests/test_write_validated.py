@@ -143,3 +143,12 @@ def test_every_record_round_trips_byte_identically(records):
         f"{len(drifted)} record(s) are not what emit_structure_yaml would write, "
         f"e.g. {drifted[:5]}. Reformat them through the helper rather than loosening this test."
     )
+
+
+@pytest.mark.parametrize("placeholder", ["TODO:add_citation", "FIXME:later", "XXX:none", "TBD:unknown"])
+def test_a_placeholder_does_not_satisfy_required_provenance(placeholder):
+    """definition_source is required, so a placeholder that validates would turn
+    missing provenance (countable) into fake provenance (invisible) — #70. A
+    prefix that merely starts with those letters is still a real prefix."""
+    assert validate_structure(dict(MINIMAL, definition_source=placeholder))
+    assert validate_structure(dict(MINIMAL, definition_source="TODOS:real_prefix")) == []
