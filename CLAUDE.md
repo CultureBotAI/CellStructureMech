@@ -39,6 +39,7 @@ just new-record ...    # scaffold a record (dry-run by default; --apply to write
 just source-queue      # the ranked data-source queue and what is unverified in it
 just new-history ...   # scaffold a repository-level history record
 just validate-products # id<->label correspondence gate via OAK (network on first run)
+just check-curies-strict # resolve every identifier at its issuing authority (network)
 just vendored-check    # claw-governed files match canon at scripts/.vendored_canon_ref
 ```
 

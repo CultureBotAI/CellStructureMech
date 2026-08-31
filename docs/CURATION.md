@@ -95,6 +95,14 @@ to match — never one without the other.
   to the structure and you judge it out of scope, add a `RESOLVED` discussion
   saying why (see `rbcx_not_a_component` on the carboxysome). Otherwise the
   next seeding run reports it as a gap again and the reasoning is lost.
+- **Every identifier is resolved, not read.** `just check-curies-strict` resolves
+  each DOI (Crossref, then DataCite), PMID, UniProt accession, InterPro and
+  Complex Portal id and ontology term at the authority that issued it, and the
+  resolvers themselves are exercised against a known-good and known-bad id
+  first — a resolver pointed at a retired endpoint reported every accession as
+  missing (#82). It runs in its own workflow, not `just qc`, because it needs
+  the network, and weekly on a schedule because an identifier can be withdrawn
+  long after it was written.
 - Ground proteins to InterPro / Pfam / NCBIfam, sub-complexes to ComplexPortal
   or GO, lipids and polysaccharides to CHEBI, RNAs to SO. **Do not guess an
   accession.** Leave `grounding` unset and open a `CURATION_TODO` discussion;
