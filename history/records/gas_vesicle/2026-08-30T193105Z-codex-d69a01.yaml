@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/gas_vesicle.yaml
+  slug: gas_vesicle
+session:
+  id: 2026-08-30T193105Z-codex-d69a01
+  timestamp: '2026-08-30T19:31:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - evidence
+  summary: Add gas vesicle record
+  details: Added a PROPOSED literature-backed non-membrane-bounded buoyancy organelle record
+    with GvpA/GvpC composition and bacterial/archaeal distribution.

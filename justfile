@@ -21,6 +21,10 @@ gen-schema:
 new-record *args:
     uv run python scripts/new_record.py {{args}}
 
+# One-shot, validated expansion from four seed records to ten. Dry-run by default.
+seed-foundational-structures *args:
+    uv run python scripts/seed_foundational_structures.py {{args}}
+
 # Validate a single record YAML against the schema (open mode, quick check)
 validate file:
     uv run linkml-validate -s {{schema}} --target-class CellStructureRecord {{file}}
@@ -61,6 +65,21 @@ docs-check:
 # Run the test suite
 test *args:
     uv run pytest {{args}}
+
+# Deep research for one structure. Dry-run by default; pass --apply for one
+# real canary after `just deep-research-canary <provider>`.
+research-cell-structure provider target *args="":
+    uv run python scripts/research_cell_structure.py \
+      --provider {{provider}} --target {{target}} {{args}}
+
+research-entity provider target *args="":
+    @just research-cell-structure {{provider}} {{target}} {{args}}
+
+# Non-billing configuration/capability checks.
+deep-research-canary provider="all" *args="":
+    uv run python scripts/deep_research_contract.py {{provider}} \
+      --client-command "uvx --python 3.12 --prerelease=allow --from deep-research-client[cyberian] deep-research-client" \
+      {{args}}
 
 # Lint
 lint *args:
