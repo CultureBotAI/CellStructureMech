@@ -138,3 +138,28 @@ report-label-drift:
 # default. `just commons-image --title "File:X.jpg" --record data/... --modality TEM --apply`
 commons-image *args:
     uv run python scripts/fetch_commons_image.py "$@"
+
+# Taxon-specific Complex Portal composition; exact CPX accession and dry-run by default.
+complex-composition *args:
+    uv run python scripts/complex_portal.py "$@"
+
+# Linked EMPIAR dataset + EMDB representative image, or keyword coverage.
+emdb-empiar *args:
+    uv run python scripts/emdb_empiar.py "$@"
+
+# Current-version PMC OA S3 figure ingest, or figure-level coverage.
+pmc-image *args:
+    uv run python scripts/pmc_oa.py "$@"
+
+# Refresh with the pinned local sentence-transformers model (no corpus text is
+# transmitted), then rebuild the 2D PCA map and cosine-neighbour index.
+text-embeddings-refresh:
+    uv run --extra embeddings python scripts/build_text_embedding_map.py --refresh
+
+# Rebuild derived map files from the committed vectors without network access.
+text-map:
+    uv run python scripts/build_text_embedding_map.py
+
+# Fail when record text, cached vectors, map coordinates, or neighbours drift.
+text-map-check:
+    uv run python scripts/build_text_embedding_map.py --check

@@ -352,10 +352,397 @@ curation_history:
     hosted cryo-EM rendering rather than treating one experiment as universal taxon
     presence.
   llm_assisted: true
-- timestamp: '2026-08-31T06:12:34Z'
+- timestamp: '2026-08-31T04:03:42Z'
+  curator: complex_portal
+  action: ADD_EVIDENCE
+  changes: Added taxon-specific composition ComplexPortal:CPX-3802 (22 participants);
+    exact accession and taxon verified at import.
+- timestamp: '2026-08-31T04:03:47Z'
+  curator: complex_portal
+  action: ADD_EVIDENCE
+  changes: Added taxon-specific composition ComplexPortal:CPX-3807 (36 participants);
+    exact accession and taxon verified at import.
+- timestamp: '2026-08-31T06:18:57Z'
   curator: claude
   action: SET_COMPONENT_ROLE
   changes: component_role became required (#77) so the constituent/machinery distinction
     is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
     only where the protein acts on the already-assembled structure.
   llm_assisted: true
+complex_compositions:
+- composition_id: complex_portal_cpx_3802
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-3802
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-3802
+  complex_label: 30S small ribosomal subunit
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  assembly: Hetero22-mer
+  evidence_code: ECO:0005547
+  participants:
+  - participant_id: UniProtKB:P0AG63
+    label: Small ribosomal subunit protein uS17
+    participant_type: protein
+    gene_symbol: rpsQ
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767299
+  - participant_id: RNAcentral:URS00005CADE5_83333
+    label: Ribosomal RNA 16S Escherichia coli
+    participant_type: ribosomal rna
+    gene_symbol: 16s_rrna_ecoli
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767460
+  - participant_id: UniProtKB:P02358
+    label: Small ribosomal subunit protein bS6
+    participant_type: protein
+    gene_symbol: rpsF
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767290
+  - participant_id: UniProtKB:P02359
+    label: Small ribosomal subunit protein uS7
+    participant_type: protein
+    gene_symbol: rpsG
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767292
+  - participant_id: UniProtKB:P0A7W7
+    label: Small ribosomal subunit protein uS8
+    participant_type: protein
+    gene_symbol: rpsH
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767301
+  - participant_id: UniProtKB:P0A7S9
+    label: Small ribosomal subunit protein uS13
+    participant_type: protein
+    gene_symbol: rpsM
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767293
+  - participant_id: UniProtKB:P0A7V0
+    label: Small ribosomal subunit protein uS2
+    participant_type: protein
+    gene_symbol: rpsB
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767298
+  - participant_id: UniProtKB:P0A7V8
+    label: Small ribosomal subunit protein uS4
+    participant_type: protein
+    gene_symbol: rpsD
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767295
+  - participant_id: UniProtKB:P0A7W1
+    label: Small ribosomal subunit protein uS5
+    participant_type: protein
+    gene_symbol: rpsE
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767294
+  - participant_id: UniProtKB:P0A7S3
+    label: Small ribosomal subunit protein uS12
+    participant_type: protein
+    gene_symbol: rpsL
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767296
+  - participant_id: UniProtKB:P0AG59
+    label: Small ribosomal subunit protein uS14
+    participant_type: protein
+    gene_symbol: rpsN
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767309
+  - participant_id: UniProtKB:P0A7U3
+    label: Small ribosomal subunit protein uS19
+    participant_type: protein
+    gene_symbol: rpsS
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767305
+  - participant_id: UniProtKB:P0A7U7
+    label: Small ribosomal subunit protein bS20
+    participant_type: protein
+    gene_symbol: rpsT
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767304
+  - participant_id: UniProtKB:P0A7R5
+    label: Small ribosomal subunit protein uS10
+    participant_type: protein
+    gene_symbol: rpsJ
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767308
+  - participant_id: UniProtKB:P0A7V3
+    label: Small ribosomal subunit protein uS3
+    participant_type: protein
+    gene_symbol: rpsC
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767303
+  - participant_id: UniProtKB:P0ADZ4
+    label: Small ribosomal subunit protein uS15
+    participant_type: protein
+    gene_symbol: rpsO
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767297
+  - participant_id: UniProtKB:P0A7X3
+    label: Small ribosomal subunit protein uS9
+    participant_type: protein
+    gene_symbol: rpsI
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767307
+  - participant_id: UniProtKB:P68679
+    label: Small ribosomal subunit protein bS21
+    participant_type: protein
+    gene_symbol: rpsU
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767950
+  - participant_id: UniProtKB:P0AG67
+    label: Small ribosomal subunit protein bS1
+    participant_type: protein
+    gene_symbol: rpsA
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767291
+  - participant_id: UniProtKB:P0A7T3
+    label: Small ribosomal subunit protein bS16
+    participant_type: protein
+    gene_symbol: rpsP
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767306
+  - participant_id: UniProtKB:P0A7R9
+    label: Small ribosomal subunit protein uS11
+    participant_type: protein
+    gene_symbol: rpsK
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767302
+  - participant_id: UniProtKB:P0A7T7
+    label: Small ribosomal subunit protein bS18
+    participant_type: protein
+    gene_symbol: rpsR
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767300
+  retrieved_on: '2026-08-30'
+  notes: 'Curator-scoped import: E. coli 30S subunit; part of, not equivalent to,
+    the whole ribosome. Source evidence: inferred by curator. The accession was resolved
+    through the Complex Portal accession endpoint; no equivalence xref was inferred.'
+- composition_id: complex_portal_cpx_3807
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-3807
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-3807
+  complex_label: 50S large ribosomal subunit
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  assembly: Hetero39-mer
+  evidence_code: ECO:0005547
+  participants:
+  - participant_id: UniProtKB:P0A7Q6
+    label: Large ribosomal subunit protein bL36A
+    participant_type: protein
+    gene_symbol: rpmJ
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767692
+  - participant_id: UniProtKB:P0A7N4
+    label: Large ribosomal subunit protein bL32
+    participant_type: protein
+    gene_symbol: rpmF
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767682
+  - participant_id: UniProtKB:P0A7P5
+    label: Large ribosomal subunit protein bL34
+    participant_type: protein
+    gene_symbol: rpmH
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767951
+  - participant_id: UniProtKB:P0A7M9
+    label: Large ribosomal subunit protein bL31
+    participant_type: protein
+    gene_symbol: rpmE
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767672
+  - participant_id: UniProtKB:P0AG51
+    label: Large ribosomal subunit protein uL30
+    participant_type: protein
+    gene_symbol: rpmD
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767688
+  - participant_id: UniProtKB:P0A7Q1
+    label: Large ribosomal subunit protein bL35
+    participant_type: protein
+    gene_symbol: rpmI
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767690
+  - participant_id: RNAcentral:URS00005B2216_83333
+    label: 23S ribosomal RNA
+    participant_type: ribosomal rna
+    gene_symbol: 23s_ecoli
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767697
+  - participant_id: RNAcentral:URS000002D309_83333
+    label: 5S ribosomal RNA
+    participant_type: ribosomal rna
+    gene_symbol: 5s_ecoli
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767702
+  - participant_id: UniProtKB:P60438
+    label: Large ribosomal subunit protein uL3
+    participant_type: protein
+    gene_symbol: rplC
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767676
+  - participant_id: UniProtKB:P0C018
+    label: Large ribosomal subunit protein uL18
+    participant_type: protein
+    gene_symbol: rplR
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767683
+  - participant_id: UniProtKB:P61175
+    label: Large ribosomal subunit protein uL22
+    participant_type: protein
+    gene_symbol: rplV
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767666
+  - participant_id: UniProtKB:P0ADZ0
+    label: Large ribosomal subunit protein uL23
+    participant_type: protein
+    gene_symbol: rplW
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767673
+  - participant_id: UniProtKB:P0AG48
+    label: Large ribosomal subunit protein bL21
+    participant_type: protein
+    gene_symbol: rplU
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767689
+  - participant_id: UniProtKB:P0A7N9
+    label: Large ribosomal subunit protein bL33
+    participant_type: protein
+    gene_symbol: rpmG
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767680
+  - participant_id: UniProtKB:P02413
+    label: Large ribosomal subunit protein uL15
+    participant_type: protein
+    gene_symbol: rplO
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767691
+  - participant_id: UniProtKB:P0A7M2
+    label: Large ribosomal subunit protein bL28
+    participant_type: protein
+    gene_symbol: rpmB
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767684
+  - participant_id: UniProtKB:P60422
+    label: Large ribosomal subunit protein uL2
+    participant_type: protein
+    gene_symbol: rplB
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767665
+  - participant_id: UniProtKB:P0A7K2
+    label: Large ribosomal subunit protein bL12
+    participant_type: protein
+    gene_symbol: rplL
+    stoichiometry: '4'
+    source_interactor_id: EBI-20767662
+  - participant_id: UniProtKB:P0A7L0
+    label: Large ribosomal subunit protein uL1
+    participant_type: protein
+    gene_symbol: rplA
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767668
+  - participant_id: UniProtKB:P0AA10
+    label: Large ribosomal subunit protein uL13
+    participant_type: protein
+    gene_symbol: rplM
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767686
+  - participant_id: UniProtKB:P0A7K6
+    label: Large ribosomal subunit protein bL19
+    participant_type: protein
+    gene_symbol: rplS
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767679
+  - participant_id: UniProtKB:P0AG44
+    label: Large ribosomal subunit protein bL17
+    participant_type: protein
+    gene_symbol: rplQ
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767687
+  - participant_id: UniProtKB:P0A7L3
+    label: Large ribosomal subunit protein bL20
+    participant_type: protein
+    gene_symbol: rplT
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767671
+  - participant_id: UniProtKB:P60723
+    label: Large ribosomal subunit protein uL4
+    participant_type: protein
+    gene_symbol: rplD
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767664
+  - participant_id: UniProtKB:P0ADY3
+    label: Large ribosomal subunit protein uL14
+    participant_type: protein
+    gene_symbol: rplN
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767677
+  - participant_id: UniProtKB:P62399
+    label: Large ribosomal subunit protein uL5
+    participant_type: protein
+    gene_symbol: rplE
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767661
+  - participant_id: UniProtKB:P0AG55
+    label: Large ribosomal subunit protein uL6
+    participant_type: protein
+    gene_symbol: rplF
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767663
+  - participant_id: UniProtKB:P0A7R1
+    label: Large ribosomal subunit protein bL9
+    participant_type: protein
+    gene_symbol: rplI
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767685
+  - participant_id: UniProtKB:P60624
+    label: Large ribosomal subunit protein uL24
+    participant_type: protein
+    gene_symbol: rplX
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767675
+  - participant_id: UniProtKB:P0A7M6
+    label: Large ribosomal subunit protein uL29
+    participant_type: protein
+    gene_symbol: rpmC
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767681
+  - participant_id: UniProtKB:P0A7J3
+    label: Large ribosomal subunit protein uL10
+    participant_type: protein
+    gene_symbol: rplJ
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767667
+  - participant_id: UniProtKB:P0A7L8
+    label: Large ribosomal subunit protein bL27
+    participant_type: protein
+    gene_symbol: rpmA
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767670
+  - participant_id: UniProtKB:P0A7J7
+    label: Large ribosomal subunit protein uL11
+    participant_type: protein
+    gene_symbol: rplK
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767669
+  - participant_id: UniProtKB:P0ADY7
+    label: Large ribosomal subunit protein uL16
+    participant_type: protein
+    gene_symbol: rplP
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767674
+  - participant_id: UniProtKB:P68919
+    label: Large ribosomal subunit protein bL25
+    participant_type: protein
+    gene_symbol: rplY
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767678
+  - participant_id: UniProtKB:P0A7N1
+    label: Large ribosomal subunit protein bL31B
+    participant_type: protein
+    gene_symbol: ykgM
+    stoichiometry: '1'
+    source_interactor_id: EBI-20767949
+  retrieved_on: '2026-08-30'
+  notes: 'Curator-scoped import: E. coli 50S subunit; part of, not equivalent to,
+    the whole ribosome. Source evidence: inferred by curator. The accession was resolved
+    through the Complex Portal accession endpoint; no equivalence xref was inferred.'

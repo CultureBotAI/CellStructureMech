@@ -55,11 +55,13 @@ prefixes:
   NCBIfam: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/
   ComplexPortal: https://www.ebi.ac.uk/complexportal/complex/
   UniProtKB: https://www.uniprot.org/uniprotkb/
+  RNAcentral: https://rnacentral.org/rna/
   NCBIGene: https://www.ncbi.nlm.nih.gov/gene/
   KEGG: https://www.kegg.jp/entry/
   # Structures
   PDB: https://www.rcsb.org/structure/
   EMDB: https://www.ebi.ac.uk/emdb/
+  EMPIAR: https://www.ebi.ac.uk/empiar/EMPIAR-
   # Taxonomy
   NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
   # Provenance
@@ -198,6 +200,17 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: StructuralComponent
+
+      complex_compositions:
+        description: >-
+          Taxon-specific, source-versioned composition assertions imported
+          from a curated complex database. These are deliberately separate
+          from `components`: an E. coli UniProt accession and its copy number
+          are evidence about one organism's assembly, not the identity of a
+          taxon-agnostic component family.
+        multivalued: true
+        inlined_as_list: true
+        range: ComplexComposition
 
       taxonomic_distribution:
         description: >-
@@ -431,6 +444,86 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: EvidenceItem
+
+  ComplexComposition:
+    description: >-
+      A lossless, taxon-specific composition assertion from Complex Portal.
+      The source accession is verified through the live accession endpoint;
+      its presence here does not assert that the source complex is equivalent
+      to the whole CellStructureRecord.
+    attributes:
+      composition_id:
+        identifier: true
+        required: true
+        range: string
+      source:
+        required: true
+        range: ComplexCompositionSourceEnum
+      source_accession:
+        required: true
+        range: string
+        pattern: "^ComplexPortal:CPX-[0-9]+$"
+      source_url:
+        required: true
+        range: uri
+      complex_label:
+        required: true
+        range: string
+      taxon_id:
+        required: true
+        range: string
+        pattern: "^NCBITaxon:[0-9]+$"
+      taxon_label:
+        required: true
+        range: string
+      assembly:
+        description: Source-provided assembly summary, such as Hetero22-mer.
+        range: string
+      evidence_code:
+        description: ECO CURIE supplied by the source for the complex assertion.
+        range: string
+        pattern: "^ECO:[0-9]+$"
+      participants:
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: ComplexParticipant
+      retrieved_on:
+        required: true
+        range: date
+      notes:
+        range: string
+
+  ComplexParticipant:
+    description: One participant exactly as asserted in a source complex entry.
+    attributes:
+      participant_id:
+        identifier: true
+        required: true
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+      label:
+        required: true
+        range: string
+      participant_type:
+        required: true
+        range: string
+      gene_symbol:
+        range: string
+      stoichiometry:
+        description: >-
+          Exact source range normalized as one number or `min-max`; omitted
+          when Complex Portal does not assert a value.
+        range: string
+        pattern: "^[0-9]+(?:\\.[0-9]+)?(?:-[0-9]+(?:\\.[0-9]+)?)?$"
+      source_interactor_id:
+        range: string
+        pattern: "^EBI-[0-9]+$"
+      canonical_component_ref:
+        description: >-
+          Optional curator-reviewed link to `components#<component_id>`.
+          Import never fills this by name similarity.
+        range: string
 
   TaxonomicScope:
     description: Presence of the structure in a clade.
@@ -836,6 +929,9 @@ enums:
         description: >-
           Binds the assembled structure to position, partition or maintain it.
           Cannot be ESSENTIAL: the structure forms before it acts.
+  ComplexCompositionSourceEnum:
+    permissible_values:
+      COMPLEX_PORTAL:
 
   ComponentGroundingStatusEnum:
     permissible_values:

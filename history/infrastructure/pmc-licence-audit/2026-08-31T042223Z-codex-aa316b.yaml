@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/pmc_oa.py
+  slug: pmc-licence-audit
+session:
+  id: 2026-08-31T042223Z-codex-aa316b
+  timestamp: '2026-08-31T04:22:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: AUDIT
+  outcome: changed
+  sections:
+  - licence
+  - identifiers
+  - tests
+  summary: Require exact JATS licence versions and canonical EMPIAR CURIEs
+  details: Completion audit found that PMC metadata license_code identifies the CC BY family
+    but not its version. The importer now reads a recognized CC BY 3.0, CC BY 4.0, or CC0
+    URL from JATS, requires agreement with metadata, and refuses missing or contradictory
+    terms; authors and publication identifiers were tightened. EMPIAR accessions now use the
+    canonical non-redundant EMPIAR:NNNNN CURIE. Offline contract tests cover the refusal paths.

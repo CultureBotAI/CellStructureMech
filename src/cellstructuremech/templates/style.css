@@ -24,3 +24,12 @@ figure.hero img { max-width:100%; height:auto; border:1px solid var(--line); bor
 figure.hero figcaption { font-size:.85rem; color:var(--muted); margin-top:.3rem; }
 .modality { font-weight:600; }
 .machinery { font-style:italic; color:var(--muted); }
+.map-controls { display:flex; gap:.5rem; align-items:center; margin:1rem 0 .5rem; }
+.embedding-map { border:1px solid var(--line); border-radius:6px; background:#fcfcfc; min-height:300px; }
+.embedding-map svg { display:block; width:100%; height:auto; }
+.embedding-map a { cursor:pointer; text-decoration:none; }
+.embedding-map a:hover text, .embedding-map a:focus text { text-decoration:underline; font-weight:600; }
+.embedding-map circle { stroke:#fff; stroke-width:2; }
+.embedding-map text { fill:var(--fg); font-size:15px; }
+.map-details { margin-top:1rem; border-left:4px solid var(--accent); padding:.2rem 1rem; }
+.map-details h2, .map-details h3 { margin-bottom:.2rem; }

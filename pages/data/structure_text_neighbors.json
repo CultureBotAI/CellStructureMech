@@ -1,0 +1,446 @@
+{
+  "format_version": 1,
+  "source_embeddings": "data/embeddings/structure_text_embeddings.json",
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+  "generator_library": "sentence-transformers 6.0.0",
+  "embedding_dimension": 384,
+  "text_projection_version": 1,
+  "similarity": "cosine",
+  "records": [
+    {
+      "identifier": "GO:0009288",
+      "label": "bacterial-type flagellum",
+      "neighbors": [
+        {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.72955162
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.71156171
+        },
+        {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.69748035
+        },
+        {
+          "identifier": "GO:0044096",
+          "label": "type IV pilus",
+          "cosine_similarity": 0.67810434
+        },
+        {
+          "identifier": "GO:0031470",
+          "label": "carboxysome",
+          "cosine_similarity": 0.6683107
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0044096",
+      "label": "type IV pilus",
+      "neighbors": [
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.67810434
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.63498071
+        },
+        {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.6223323
+        },
+        {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.58766792
+        },
+        {
+          "identifier": "GO:0009274",
+          "label": "peptidoglycan-based cell wall",
+          "cosine_similarity": 0.56324298
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990586",
+      "label": "divisome complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.70470928
+        },
+        {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.7005301
+        },
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.69748035
+        },
+        {
+          "identifier": "GO:0009295",
+          "label": "nucleoid",
+          "cosine_similarity": 0.63992539
+        },
+        {
+          "identifier": "GO:0031470",
+          "label": "carboxysome",
+          "cosine_similarity": 0.62446419
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0045259",
+      "label": "proton-transporting ATP synthase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.72955162
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.7264988
+        },
+        {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.7005301
+        },
+        {
+          "identifier": "GO:0031470",
+          "label": "carboxysome",
+          "cosine_similarity": 0.63497152
+        },
+        {
+          "identifier": "GO:0110143",
+          "label": "magnetosome",
+          "cosine_similarity": 0.63232894
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009279",
+      "label": "cell outer membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0009276",
+          "label": "Gram-negative-bacterium-type cell wall",
+          "cosine_similarity": 0.78063566
+        },
+        {
+          "identifier": "GO:0009274",
+          "label": "peptidoglycan-based cell wall",
+          "cosine_similarity": 0.7276013
+        },
+        {
+          "identifier": "GO:0030115",
+          "label": "S-layer",
+          "cosine_similarity": 0.7190958
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.69456194
+        },
+        {
+          "identifier": "GO:0031411",
+          "label": "gas vesicle",
+          "cosine_similarity": 0.658214
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009276",
+      "label": "Gram-negative-bacterium-type cell wall",
+      "neighbors": [
+        {
+          "identifier": "GO:0009274",
+          "label": "peptidoglycan-based cell wall",
+          "cosine_similarity": 0.87314136
+        },
+        {
+          "identifier": "GO:0009279",
+          "label": "cell outer membrane",
+          "cosine_similarity": 0.78063566
+        },
+        {
+          "identifier": "GO:0030115",
+          "label": "S-layer",
+          "cosine_similarity": 0.77730976
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.65216458
+        },
+        {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.59889234
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009274",
+      "label": "peptidoglycan-based cell wall",
+      "neighbors": [
+        {
+          "identifier": "GO:0009276",
+          "label": "Gram-negative-bacterium-type cell wall",
+          "cosine_similarity": 0.87314136
+        },
+        {
+          "identifier": "GO:0030115",
+          "label": "S-layer",
+          "cosine_similarity": 0.74233638
+        },
+        {
+          "identifier": "GO:0009279",
+          "label": "cell outer membrane",
+          "cosine_similarity": 0.7276013
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.65736527
+        },
+        {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.62062971
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030115",
+      "label": "S-layer",
+      "neighbors": [
+        {
+          "identifier": "GO:0009276",
+          "label": "Gram-negative-bacterium-type cell wall",
+          "cosine_similarity": 0.77730976
+        },
+        {
+          "identifier": "GO:0009274",
+          "label": "peptidoglycan-based cell wall",
+          "cosine_similarity": 0.74233638
+        },
+        {
+          "identifier": "GO:0009279",
+          "label": "cell outer membrane",
+          "cosine_similarity": 0.7190958
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.67948644
+        },
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.62385155
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031411",
+      "label": "gas vesicle",
+      "neighbors": [
+        {
+          "identifier": "GO:0009279",
+          "label": "cell outer membrane",
+          "cosine_similarity": 0.658214
+        },
+        {
+          "identifier": "GO:0110143",
+          "label": "magnetosome",
+          "cosine_similarity": 0.64039916
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.63078948
+        },
+        {
+          "identifier": "GO:0030115",
+          "label": "S-layer",
+          "cosine_similarity": 0.61832978
+        },
+        {
+          "identifier": "GO:0005840",
+          "label": "ribosome",
+          "cosine_similarity": 0.61608079
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0110143",
+      "label": "magnetosome",
+      "neighbors": [
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.66460962
+        },
+        {
+          "identifier": "GO:0031411",
+          "label": "gas vesicle",
+          "cosine_similarity": 0.64039916
+        },
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.63827643
+        },
+        {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.63232894
+        },
+        {
+          "identifier": "GO:0009279",
+          "label": "cell outer membrane",
+          "cosine_similarity": 0.62156337
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031470",
+      "label": "carboxysome",
+      "neighbors": [
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.6683107
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.65225746
+        },
+        {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.63497152
+        },
+        {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.62446419
+        },
+        {
+          "identifier": "GO:0031411",
+          "label": "gas vesicle",
+          "cosine_similarity": 0.60568396
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009295",
+      "label": "nucleoid",
+      "neighbors": [
+        {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.63992539
+        },
+        {
+          "identifier": "GO:0005840",
+          "label": "ribosome",
+          "cosine_similarity": 0.62480672
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.57740204
+        },
+        {
+          "identifier": "GO:0110143",
+          "label": "magnetosome",
+          "cosine_similarity": 0.5764055
+        },
+        {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.57577764
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005840",
+      "label": "ribosome",
+      "neighbors": [
+        {
+          "identifier": "GO:0009295",
+          "label": "nucleoid",
+          "cosine_similarity": 0.62480672
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.61946311
+        },
+        {
+          "identifier": "GO:0031411",
+          "label": "gas vesicle",
+          "cosine_similarity": 0.61608079
+        },
+        {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.61523638
+        },
+        {
+          "identifier": "GO:0110143",
+          "label": "magnetosome",
+          "cosine_similarity": 0.61408907
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030257",
+      "label": "type III protein secretion system complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.7264988
+        },
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.71156171
+        },
+        {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.70470928
+        },
+        {
+          "identifier": "GO:0009279",
+          "label": "cell outer membrane",
+          "cosine_similarity": 0.69456194
+        },
+        {
+          "identifier": "GO:0030115",
+          "label": "S-layer",
+          "cosine_similarity": 0.67948644
+        }
+      ]
+    }
+  ]
+}

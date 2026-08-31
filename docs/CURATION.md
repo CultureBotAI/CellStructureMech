@@ -109,6 +109,17 @@ to match — never one without the other.
 - `essentiality` is about whether *the structure* forms, not whether the cell
   lives.
 
+Complex Portal imports are a second, deliberately separate layer:
+
+- `components` remains the curated, taxon-agnostic model.
+- `complex_compositions` preserves one source's organism-specific UniProt /
+  RNAcentral participants and copy numbers without pretending those accessions
+  define a family across taxa.
+- Resolve an exact `CPX-N` through `scripts/complex_portal.py`; do not apply a
+  search result or add it to `xrefs` unless it is genuinely equivalent to the
+  entire record. A required scope note says whether the entry is the whole
+  record or a subassembly.
+
 ## Trait links
 
 `associated_traits` points at TraitMech / METPO CURIEs. The relation matters:
@@ -150,6 +161,44 @@ claim like any other and carries its own provenance:
   `extmetadata`, PMC `license_code`), not off a re-hosting page.
 - **Never scrape in bulk.** Fetch one image, check the file and its metadata,
   then the next. Prefer sources ranked in `research/`.
+
+Source-specific commands (all dry-run unless `--apply` is present):
+
+- `scripts/emdb_empiar.py image` records the CC0 raw EMPIAR dataset and the
+  small linked EMDB depositor figure. The EMDB `natural_source` taxon must
+  already be present on the record; reconstruction resolution is image
+  provenance, not a biological `physical_property`.
+- `scripts/pmc_oa.py image` reads current-version metadata, JATS and media from
+  `pmc-oa-opendata`. Only CC BY/CC0 is hostable, and the exact CC version must
+  be present in JATS and agree with the metadata family. The curator supplies
+  the caption-derived taxon and explicitly acknowledges likely multi-panel figures.
+- Both image scripts verify downloaded bytes (PMC md5 where supplied, corpus
+  SHA-256 always), validate the complete record mutation before touching the
+  destination, and confine generated filenames to the record image directory.
+
+## Text embedding map
+
+The text map is a derived discovery aid, not curated evidence. Its stable input
+contains a record's name, definition, synonyms, category/kind, canonical
+component labels and roles, functions, taxonomic scope, and physical-property
+context. It deliberately excludes identifiers, citations, images, curation
+history, taxon-specific `complex_compositions`, and protein examples so source
+verbosity does not masquerade as biological similarity.
+
+`just text-embeddings-refresh` runs the model- and library-version-pinned
+`sentence-transformers/all-MiniLM-L6-v2` model locally and commits one vector per
+record. Each labelled line is embedded independently, then the unit vectors are
+mean-pooled so the model's input-length limit cannot silently drop later
+components. No corpus text is sent to an external embedding service. The normal
+`just text-map` command uses the cache to rebuild a two-dimensional PCA view and
+full-vector cosine neighbours without network or model dependencies.
+
+`just text-map-check` is blocking in QC: exact record coverage, semantic-text
+SHA-256, model/revision/dimension, coordinates, and neighbour scores must all be
+current. PCA is used because the corpus presently has too few records for a
+stable nonlinear layout. The map explicitly warns that its two-dimensional
+distances are lossy. The derived-file comparison tolerates only tiny floating-
+point differences from platform BLAS implementations.
 
 ## Status
 

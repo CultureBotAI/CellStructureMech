@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/source_queue.tsv
+  slug: p2-source-ingestion
+session:
+  id: 2026-08-31T040819Z-codex-468451
+  timestamp: '2026-08-31T04:08:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - complex_compositions
+  - images
+  - datasets
+  - source_queue
+  summary: Adopt Complex Portal, EMDB-EMPIAR, and PMC OA ingestion
+  details: Added dry-run-by-default, validated ingestion scripts with exact identifier, licence,
+    checksum, taxon, and ambiguity gates; introduced taxon-specific complex composition assertions;
+    imported CPX-3802 and CPX-3807 on ribosome; measured live EMPIAR linkage and figure-level
+    PMC coverage; documented the evidence and regenerated the site.
