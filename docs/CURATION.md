@@ -95,6 +95,11 @@ to match — never one without the other.
   to the structure and you judge it out of scope, add a `RESOLVED` discussion
   saying why (see `rbcx_not_a_component` on the carboxysome). Otherwise the
   next seeding run reports it as a gap again and the reasoning is lost.
+- **A trait link is a claim about another repository**, so it is checked there:
+  `just check-trait-links --check` confirms the CURIE is a TraitMech record and
+  that its label still matches. A drifted label is the cross-repo form of the
+  id-label defect — the CURIE resolves and the record says something TraitMech
+  no longer says (#11).
 - **Every identifier is resolved, not read.** `just check-curies-strict` resolves
   each DOI (Crossref, then DataCite), PMID, UniProt accession, InterPro and
   Complex Portal id and ontology term at the authority that issued it, and the

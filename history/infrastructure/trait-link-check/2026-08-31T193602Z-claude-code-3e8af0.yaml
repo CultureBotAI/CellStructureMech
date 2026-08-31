@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/check_trait_links.py
+  slug: trait-link-check
+session:
+  id: 2026-08-31T193602Z-claude-code-3e8af0
+  timestamp: '2026-08-31T19:36:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/11
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - infrastructure
+  summary: Check every trait link against TraitMech, id and label
+  details: 'Issue 11. A trait link is this corpus''s only claim about another repository:
+    it asserts that traitmech:000071 exists in TraitMech and is called magnetosome. Nothing
+    verified either half, and check_curies.py deliberately skips the traitmech and METPO prefixes
+    because they resolve at no public ontology service. scripts/check_trait_links.py resolves
+    them where they actually live. It prefers a local TraitMech checkout via TRAITMECH_ROOT
+    or conf/sources.yaml, and otherwise reads TraitMech''s published trait index at pages/data/trait_graph.json,
+    which carries the id and label of all 477 trait records and needs no credentials. Both
+    halves are checked: a label that has drifted is the cross-repo form of the defect the
+    id-label gate catches inside this corpus, because the CURIE still resolves while the record
+    says something the other repository no longer says. Two lessons from the identifier work
+    are carried over: an empty index refuses with exit 2 rather than reporting a clean corpus,
+    and the index is required to contain a trait everyone has and to lack a fabricated one
+    before any verdict is believed. All five trait links in the corpus resolve with matching
+    labels through both routes.'

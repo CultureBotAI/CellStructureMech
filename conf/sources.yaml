@@ -14,7 +14,9 @@ uniprot_sl:
 traitmech:
   name: TraitMech
   homepage: https://github.com/CultureBotAI/TraitMech
-  script: scripts/validate_strict.py      # associated_traits CURIEs; cross-repo check pending (#11)
+  script: scripts/check_trait_links.py
+  # Set local_path (or TRAITMECH_ROOT) to check against a checkout instead of
+  # TraitMech's published trait index.
   role: associated_traits
 wikimedia_commons:
   name: Wikimedia Commons

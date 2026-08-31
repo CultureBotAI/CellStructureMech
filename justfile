@@ -182,3 +182,10 @@ check-curies-strict:
 # Only exercise the resolvers; says nothing about the corpus.
 check-curies-self-test:
     uv run python scripts/check_curies.py --self-test
+
+# Check every associated_traits link against TraitMech: the id must exist there
+# and the label must still match (#11). Uses a local checkout when
+# TRAITMECH_ROOT or conf/sources.yaml points at one, else TraitMech's published
+# trait index. Network unless a checkout is present.
+check-trait-links *args:
+    uv run python scripts/check_trait_links.py {{args}}

@@ -15,6 +15,7 @@ on:
     paths: &trigger_paths
       - "data/structures/**"
       - "scripts/check_curies.py"
+      - "scripts/check_trait_links.py"
       - ".github/workflows/identifier-liveness.yaml"
       - "pyproject.toml"
       - "uv.lock"
@@ -55,6 +56,11 @@ jobs:
         run: just check-curies-self-test
       - name: Resolve every identifier in the corpus
         run: just check-curies-strict
+
+      # traitmech: and METPO: are the prefixes check_curies deliberately skips —
+      # they resolve only in the sibling repository (#11).
+      - name: Check trait links against TraitMech
+        run: just check-trait-links --check
       - name: Upload the liveness report
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
