@@ -99,3 +99,17 @@ def test_a_link_only_entry_carries_no_file():
 def test_slug_is_filesystem_safe():
     assert fci.slug("P. urativorans 70S ribosome with Balon and RaiA") == \
         "p_urativorans_70s_ribosome_with_balon_and_raia"
+
+
+def test_the_commons_credit_is_bounded_in_notes():
+    """Commons credits run to full citations and template text; notes is prose a
+    reader scans (#71)."""
+    page = {"pageid": 1, "imageinfo": [{
+        "url": "https://upload.wikimedia.org/x.jpg", "sha1": "d",
+        "extmetadata": {"LicenseShortName": {"value": "CC0"}, "Artist": {"value": "A"},
+                        "Credit": {"value": "x" * 2000}},
+    }]}
+    entry = fci.build_image(page, "File:X.jpg", modality="TEM", caption=None,
+                            taxon=("NCBITaxon:1", "root"), licence="CC0", image_id="x",
+                            today="2026-08-31", file_name="x.jpg", sha256="a" * 64)
+    assert len(entry["notes"]) < 700

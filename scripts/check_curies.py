@@ -81,6 +81,31 @@ def _get(url: str, timeout: float = 30.0) -> tuple[int, bytes]:
 # ------------------------------------------------------------------ collect
 
 
+# A DOI written as prose, not as a CURIE: research notes and the source queue
+# cite papers in markdown and TSV, and a dead DOI there is the same defect as a
+# dead DOI in a record — those notes are what a later reader consults to decide
+# whether a source is still usable (#85).
+BARE_DOI = re.compile(r"\b10\.\d{4,9}/[-._;()/:A-Za-z0-9]+")
+PROSE_SOURCES = ("research/*.md", "curation/*.tsv", "docs/*.md")
+# Notes describe the *shape* of an identifier as often as they cite one:
+# "10.6019/EMPIAR-XXXXX" documents a pattern and must not be resolved as a DOI.
+DOI_TEMPLATE = re.compile(r"(?:[NX]{3,}|\{[^}]*\}|<[^>]*>)")
+
+
+def collect_prose(patterns=PROSE_SOURCES) -> dict[str, set[str]]:
+    """DOIs cited outside the record corpus, normalised to DOI: CURIEs."""
+    found: dict[str, set[str]] = defaultdict(set)
+    for pattern in patterns:
+        for path in sorted(REPO_ROOT.glob(pattern)):
+            for match in BARE_DOI.findall(path.read_text(encoding="utf-8")):
+                # Markdown link syntax and sentence punctuation cling to the tail.
+                doi = match.rstrip(").,;:'\"]>")
+                if DOI_TEMPLATE.search(doi):
+                    continue
+                found["DOI"].add(f"DOI:{doi}")
+    return found
+
+
 def collect(records) -> dict[str, set[str]]:
     """Every CURIE-shaped string in the corpus, by prefix, with where it came from."""
     found: dict[str, set[str]] = defaultdict(set)
@@ -385,6 +410,8 @@ def main() -> int:
     parser.add_argument("--max-age", type=int, default=30, help="Re-check a cached id older than N days.")
     parser.add_argument("--offline", action="store_true", help="Use the cache only; do not fetch.")
     parser.add_argument("--refresh", action="store_true", help="Ignore the cache and re-resolve everything.")
+    parser.add_argument("--records-only", action="store_true",
+                        help="Check data/structures only; skip DOIs cited in research/ and curation/.")
     parser.add_argument("--self-test", action="store_true",
                         help="Only exercise each resolver against a known-good and known-bad id.")
     args = parser.parse_args()
@@ -404,6 +431,9 @@ def main() -> int:
 
     records = load_records()
     found = collect(records)
+    # The guard below is about the RECORD corpus, so it is evaluated before
+    # prose DOIs are merged in: otherwise a citation in research/ would mask an
+    # empty or unreadable data/structures and #87's hole would reopen.
     # A gate that finds nothing must not report success: if data/structures/
     # moves or the loader breaks, "every identifier resolves" would be true and
     # meaningless (#87).
@@ -414,6 +444,9 @@ def main() -> int:
         print(f"{len(records)} record(s) but no identifiers found — the collector is not seeing "
               "the fields it should", file=sys.stderr)
         return 2
+    if not args.records_only:
+        for prefix, curies in collect_prose().items():
+            found[prefix] |= curies
     cache = {} if args.refresh else load_cache()
     verdicts: dict[str, tuple[str, str]] = {}
     to_fetch: dict[str, list[str]] = defaultdict(list)
