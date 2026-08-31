@@ -1,0 +1,69 @@
+identifier: GO:0009279
+label: cell outer membrane
+definition: The outermost lipid bilayer of a diderm cell envelope. In canonical Gram-negative
+  bacteria it is asymmetric, with phospholipid enriched in the inner leaflet and lipopolysaccharide
+  enriched in the outer leaflet, and contains beta-barrel proteins that mediate transport
+  and assembly.
+definition_source: DOI:10.1101/cshperspect.a000414
+synonyms:
+- synonym_text: outer membrane of cell
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009279
+structure_category: ENVELOPE
+structure_kind: MEMBRANE
+parent_structures:
+- GO:0016020
+components:
+- component_id: lipopolysaccharide
+  label: lipopolysaccharide-rich outer leaflet
+  component_type: LIPID
+  essentiality: CONDITIONAL
+  role: Creates the characteristic asymmetric permeability barrier in canonical Gram-negative
+    bacteria.
+  evidence:
+  - reference: DOI:10.1101/cshperspect.a000414
+    notes: Silhavy et al. describe outer-membrane lipid asymmetry.
+- component_id: outer_membrane_beta_barrels
+  label: outer-membrane beta-barrel proteins
+  component_type: PROTEIN
+  essentiality: ESSENTIAL
+  role: Provide selective transport and envelope assembly functions.
+  evidence:
+  - reference: DOI:10.1101/cshperspect.a000414
+    notes: Porins and assembly proteins are core outer-membrane components.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: A diderm feature; monoderm bacteria lack an outer membrane.
+  reference: DOI:10.1101/cshperspect.a000414
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Canonical model for outer-membrane composition and biogenesis.
+  reference: DOI:10.1101/cshperspect.a000414
+functions:
+- function_id: selective_permeability_barrier
+  label: selective permeability barrier
+  description: Limits entry of harmful compounds while porins admit selected solutes.
+  evidence:
+  - reference: DOI:10.1101/cshperspect.a000414
+    notes: The outer membrane protects against environmental insults.
+evidence:
+- reference: DOI:10.1101/cshperspect.a000414
+  notes: The bacterial cell envelope.
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-08-30T19:30:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Added as a literature-backed foundational seed. Identity checked against
+    the 2026-07-01 Gene Ontology release; requires human review.
+  llm_assisted: true
+- timestamp: '2026-08-31T03:48:23Z'
+  curator: uniprot_sl
+  action: ADD_UNIPROT_SL_XREF
+  changes: Added uniprot.location:SL-0040 (Cell outer membrane); mapping read from
+    the GO line of UniProt subcell.txt.
+xrefs:
+- uniprot.location:SL-0040

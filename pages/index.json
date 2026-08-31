@@ -9,6 +9,60 @@
   "definition": "The rotary motility organelle of bacteria: a long helical filament of flagellin joined by a flexible hook to a basal body that spans the cell envelope. The basal body houses a rotor (MS and C rings) driven by membrane-embedded stator units that convert ion flow (H+ or Na+) into torque; the flagellar type III export apparatus at its base secretes the axial subunits. Not homologous to the archaeal archaellum or the eukaryotic cilium."
  },
  {
+  "identifier": "GO:0044096",
+  "label": "type IV pilus",
+  "category": "APPENDAGE",
+  "kind": "APPENDAGE",
+  "status": "PROPOSED",
+  "page": "structures/appendage/type_iv_pilus.html",
+  "definition": "A dynamic bacterial surface filament assembled from type IV pilins by an inner-membrane ATPase machinery. Reversible extension and retraction can generate force for twitching motility, adhesion, surface sensing, and DNA uptake."
+ },
+ {
+  "identifier": "GO:1990586",
+  "label": "divisome complex",
+  "category": "DIVISION_MACHINERY",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/division_machinery/divisome_complex.html",
+  "definition": "The membrane-associated protein machine that constricts a dividing bacterial cell. It is organised by the FtsZ ring — treadmilling filaments of the tubulin homologue FtsZ tethered to the inner membrane — which positions and moves the septal peptidoglycan synthases that build the division septum."
+ },
+ {
+  "identifier": "GO:0045259",
+  "label": "proton-transporting ATP synthase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/proton_transporting_atp_synthase_complex.html",
+  "definition": "The rotary motor enzyme that makes ATP from ADP and phosphate using the ion motive force across the membrane. It has two coupled sectors: a membrane-embedded Fo, whose c-ring turns as protons cross it, and a soluble F1 (alpha3beta3gammadeltaepsilon), whose catalytic beta subunits are driven through their conformational cycle by the rotating gamma subunit."
+ },
+ {
+  "identifier": "GO:0009279",
+  "label": "cell outer membrane",
+  "category": "ENVELOPE",
+  "kind": "MEMBRANE",
+  "status": "PROPOSED",
+  "page": "structures/envelope/cell_outer_membrane.html",
+  "definition": "The outermost lipid bilayer of a diderm cell envelope. In canonical Gram-negative bacteria it is asymmetric, with phospholipid enriched in the inner leaflet and lipopolysaccharide enriched in the outer leaflet, and contains beta-barrel proteins that mediate transport and assembly."
+ },
+ {
+  "identifier": "GO:0009276",
+  "label": "Gram-negative-bacterium-type cell wall",
+  "category": "ENVELOPE",
+  "kind": "ENVELOPE_LAYER",
+  "status": "PROPOSED",
+  "page": "structures/envelope/gram_negative_bacterium_type_cell_wall.html",
+  "definition": "The relatively thin peptidoglycan layer of a Gram-negative cell envelope, located in the periplasm between the cytoplasmic and outer membranes and physically connected to the outer membrane by lipoproteins."
+ },
+ {
+  "identifier": "GO:0009274",
+  "label": "peptidoglycan-based cell wall",
+  "category": "ENVELOPE",
+  "kind": "ENVELOPE_LAYER",
+  "status": "PROPOSED",
+  "page": "structures/envelope/peptidoglycan_based_cell_wall.html",
+  "definition": "A protective, load-bearing structure outside the cytoplasmic membrane, built from glycan strands of alternating N-acetylglucosamine and N-acetylmuramic acid cross-linked by short peptides. The resulting murein sacculus surrounds the cell and resists turgor pressure."
+ },
+ {
   "identifier": "GO:0030115",
   "label": "S-layer",
   "category": "ENVELOPE",
@@ -16,6 +70,24 @@
   "status": "PROPOSED",
   "page": "structures/envelope/s_layer.html",
   "definition": "A paracrystalline monomolecular array of a single (glyco)protein that self-assembles on the outermost surface of the cell envelope, with oblique, square or hexagonal lattice symmetry. Nearly universal in Archaea, where it is often the sole wall component, and widespread but patchily distributed in Bacteria."
+ },
+ {
+  "identifier": "GO:0031411",
+  "label": "gas vesicle",
+  "category": "INCLUSION",
+  "kind": "PROTEIN_SHELLED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/inclusion/gas_vesicle.html",
+  "definition": "A gas-filled, non-membrane-bounded protein organelle, usually shaped as a cylindrical shell with conical end caps. Its gas-permeable, water-excluding wall lowers cell density and enables buoyancy regulation in aquatic microbes."
+ },
+ {
+  "identifier": "GO:0110143",
+  "label": "magnetosome",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/magnetosome.html",
+  "definition": "A membrane-bounded organelle of magnetotactic bacteria enclosing a nanocrystal of a magnetic iron mineral — magnetite (Fe3O4) or greigite (Fe3S4). Magnetosomes are invaginations of the cytoplasmic membrane that are filled with iron, and are arranged into a chain along a cytoskeletal filament so that the cell behaves as a swimming compass needle."
  },
  {
   "identifier": "GO:0031470",
@@ -27,6 +99,15 @@
   "definition": "A bacterial microcompartment — a polyhedral, selectively permeable protein shell about 100–200 nm across — that encapsulates RuBisCO and carbonic anhydrase to concentrate CO2 around RuBisCO in cyanobacteria and many chemoautotrophs. Alpha-carboxysomes (cso genes) and beta-carboxysomes (ccm genes) evolved their shells and scaffolds independently."
  },
  {
+  "identifier": "GO:0009295",
+  "label": "nucleoid",
+  "category": "NUCLEOID",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/nucleoid/nucleoid.html",
+  "definition": "The non-membrane-bounded subcellular region in which a bacterial chromosome is compacted and organized with nucleoid-associated proteins while remaining dynamically coupled to transcription and replication."
+ },
+ {
   "identifier": "GO:0005840",
   "label": "ribosome",
   "category": "RIBONUCLEOPROTEIN",
@@ -34,5 +115,14 @@
   "status": "PROPOSED",
   "page": "structures/ribonucleoprotein/ribosome.html",
   "definition": "The ribonucleoprotein particle that translates mRNA into protein. The bacterial (70S) ribosome comprises a small (30S) subunit built on 16S rRNA, which decodes the mRNA, and a large (50S) subunit built on 23S and 5S rRNA, whose 23S rRNA catalyses peptide bond formation. Archaeal and eukaryotic cytosolic ribosomes are homologous but larger."
+ },
+ {
+  "identifier": "GO:0030257",
+  "label": "type III protein secretion system complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/type_iii_protein_secretion_system_complex.html",
+  "definition": "The injectisome: a syringe-like envelope-spanning machine that delivers effector proteins from the bacterial cytoplasm directly into a eukaryotic host cell. Rings in the inner and outer membranes surround an export apparatus; an extracellular needle carries the secretion channel to a translocon pore in the host membrane. It is evolutionarily related to the flagellar export apparatus."
  }
 ]

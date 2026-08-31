@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/cell_outer_membrane.yaml
+  slug: cell_outer_membrane
+session:
+  id: 2026-08-30T193102Z-codex-65a316
+  timestamp: '2026-08-30T19:31:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - evidence
+  summary: Add cell outer membrane record
+  details: Added a PROPOSED literature-backed membrane record with diderm distribution, core
+    composition, barrier function, and evidence.

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+  slug: peptidoglycan_based_cell_wall
+session:
+  id: 2026-08-30T193100Z-codex-e2d8e9
+  timestamp: '2026-08-30T19:31:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - evidence
+  summary: Add peptidoglycan-based cell wall record
+  details: Added a PROPOSED literature-backed foundational record with exact GO identity,
+    components, distribution, functions, evidence, and LLM-assistance disclosure.
