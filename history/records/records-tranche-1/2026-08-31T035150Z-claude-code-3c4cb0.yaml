@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures
+  slug: records-tranche-1
+session:
+  id: 2026-08-31T035150Z-claude-code-3c4cb0
+  timestamp: '2026-08-31T03:51:50Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/12
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - components
+  - functions
+  - causal_graphs
+  summary: 'Add four records covering the empty categories: magnetosome, ATP synthase, injectisome,
+    divisome'
+  details: 'Categories went from 6 of 13 to 10 of 13. Each record''s GO term, function terms,
+    taxon ids and review DOI were resolved against OLS, NCBI Taxonomy and Crossref before
+    writing, and evidence notes state what the cited review says rather than implying primary-literature
+    reading. Two candidate DOIs did not resolve in Crossref and were replaced by title search.
+    The id-label gate then caught a CHEBI id written from memory: CHEBI:50290 resolves to
+    sapphyrin PCI-2052, not magnetite; corrected to the verified CHEBI:46726. UniProt SL xrefs
+    were added where a term exists (magnetosome SL-0510) and seeding for MSR-1 returned 27
+    reviewed proteins of which only MamJ carries experimental localisation evidence, which
+    is recorded as a knowledge gap on the record. No images: the CC BY magnetosome micrographs
+    on Commons identify their cells only to class or to an unnamed strain, and the schema
+    requires an image taxon the record already claims.'

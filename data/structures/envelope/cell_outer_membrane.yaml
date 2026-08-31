@@ -60,3 +60,10 @@ curation_history:
   changes: Added as a literature-backed foundational seed. Identity checked against
     the 2026-07-01 Gene Ontology release; requires human review.
   llm_assisted: true
+- timestamp: '2026-08-31T03:48:23Z'
+  curator: uniprot_sl
+  action: ADD_UNIPROT_SL_XREF
+  changes: Added uniprot.location:SL-0040 (Cell outer membrane); mapping read from
+    the GO line of UniProt subcell.txt.
+xrefs:
+- uniprot.location:SL-0040
