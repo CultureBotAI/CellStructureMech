@@ -3,7 +3,7 @@
 # exists; scripts/check_source_queue.py enforces both directions.
 go:
   name: Gene Ontology cellular component
-  homepage: http://geneontology.org/
+  homepage: https://geneontology.org/
   script: scripts/validate_strict.py      # identifiers are GO CURIEs; verified against OLS at review time
   role: identity
 uniprot_sl:

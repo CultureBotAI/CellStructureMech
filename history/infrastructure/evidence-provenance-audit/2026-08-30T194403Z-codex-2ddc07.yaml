@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/fetch_commons_image.py
+  slug: evidence-provenance-audit
+session:
+  id: 2026-08-30T194403Z-codex-2ddc07
+  timestamp: '2026-08-30T19:44:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - images
+  - workflows
+  - configuration
+  summary: Prevent provenance truncation and correct YAML infrastructure metadata
+  details: Removed silent Commons credit truncation and added regression coverage; updated
+    workflow action pins and matrix-specific failure artifact names; corrected vendored-sync
+    path commentary; normalized the GO source homepage to HTTPS; and clarified the id-label
+    configuration's actual checked surfaces.

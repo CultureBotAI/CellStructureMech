@@ -11,7 +11,7 @@
 | Distribution | `TaxonomicScope` | Clade + `presence` (UNIVERSAL / COMMON / VARIABLE / RARE / ABSENT) |
 | Exemplars | `CanonicalExample` | Reference organisms with citations |
 | Function | `StructureFunction` | GO BP / MF with required evidence |
-| Trait hand-off | `TraitLink` | TraitMech / METPO CURIE + relation (CONFERS, REQUIRED_FOR, DIAGNOSTIC_FOR, MODULATES, ASSOCIATED_WITH) |
+| Trait hand-off | `TraitLink` | TraitMech / METPO CURIE + relation (CONFERS, REQUIRED_FOR, DIAGNOSTIC_FOR, MODULATES, ASSOCIATED_WITH) + evidence for that relation |
 | Measurements | `PhysicalProperty` | Dimension / count / mass with UO unit and citation |
 | Mechanism | `CausalGraph` / `CausalNode` / `CausalEdge` | Same shape as TraitMech; `graph_kind`, `STRUCTURE` node type, `component_ref` |
 | Discourse | `Discussion`, `Dataset` | From the vendored `mech_shared` module |

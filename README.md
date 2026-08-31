@@ -63,7 +63,7 @@ records, not records; phenotypes are TraitMech records. See
 | RIBONUCLEOPROTEIN | 1 | |  |  |
 | SECRETION_SYSTEM | 1 | |  |  |
 
-14 records are grounded in GO; 0 carry minted identifiers. 14 list components, 6 carry causal graphs (40 evidence-backed edges), 4 link to TraitMech traits, and 4 carry licensed, cited imaging evidence.
+14 records are grounded in GO; 0 carry minted identifiers. 14 list components, 7 carry causal graphs (42 evidence-backed edges), 4 link to TraitMech traits, and 4 carry licensed, cited imaging evidence.
 <!-- END GENERATED CORPUS STATS -->
 
 Run `just report` for the live report. Every current record is

@@ -1,9 +1,9 @@
 identifier: GO:0030115
 label: S-layer
-definition: A paracrystalline monomolecular array of a single (glyco)protein that
-  self-assembles on the outermost surface of the cell envelope, with oblique, square
-  or hexagonal lattice symmetry. Nearly universal in Archaea, where it is often the
-  sole wall component, and widespread but patchily distributed in Bacteria.
+definition: A paracrystalline monomolecular array of one or more (glyco)protein species
+  that self-assemble on the outermost surface of the cell envelope, with oblique,
+  square or hexagonal lattice symmetry. S-layers are common in Archaea, where they
+  are often the sole wall component, and widespread but patchily distributed in Bacteria.
 definition_source: DOI:10.1111/1574-6976.12063
 synonyms:
 - synonym_text: surface layer
@@ -18,7 +18,8 @@ components:
 - component_id: slp
   label: S-layer protein (SLP)
   component_type: PROTEIN
-  stoichiometry: one protein species per lattice, typically 40–200 kDa
+  stoichiometry: typically one dominant protein species; subunits are usually 40–200
+    kDa
   essentiality: ESSENTIAL
   role: The lattice-forming subunit; self-assembles in vitro.
   evidence:
@@ -29,8 +30,9 @@ components:
   component_type: PROTEIN
   grounding: InterPro:IPR001119
   essentiality: CONDITIONAL
-  role: Anchors bacterial SLPs to pyruvylated secondary cell-wall polymer; other lineages
-    use different anchoring modules.
+  role: In many Gram-positive bacteria, tandem SLH domains within the S-layer protein
+    anchor it to pyruvylated secondary cell-wall polymer; other lineages use different
+    anchoring modules.
   evidence:
   - reference: DOI:10.1038/nrmicro3213
     notes: Fagan & Fairweather 2014 describe SLH-mediated anchoring.
@@ -82,6 +84,9 @@ associated_traits:
 - trait_id: traitmech:000064
   trait_label: S-layer
   relation: CONFERS
+  evidence:
+  - reference: DOI:10.1038/nrmicro3213
+    notes: Fagan and Fairweather 2014 define and review the bacterial S-layer phenotype.
 physical_properties:
 - property: THICKNESS
   value: 5-25
@@ -114,6 +119,41 @@ evidence:
   notes: Fagan & Fairweather 2014, "Biogenesis and functions of bacterial S-layers".
 - reference: DOI:10.1038/nrmicro2576
   notes: Albers & Meyer 2011, "The archaeal cell envelope".
+causal_graphs:
+- graph_id: s_layer_self_assembly
+  title: S-layer proteins self-assemble into a surface lattice
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: slp
+    label: S-layer (glyco)protein subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: slp
+  - node_id: lattice
+    label: S-layer
+    node_type: STRUCTURE
+    grounding: GO:0030115
+    description: The paracrystalline two-dimensional S-layer lattice.
+  - node_id: cell_surface
+    label: cell envelope outer surface
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: slp
+    predicate: self-assembles into
+    object: lattice
+    description: S-layer protein or glycoprotein subunits spontaneously form a regular
+      two-dimensional lattice.
+    evidence:
+    - reference: DOI:10.1111/1574-6976.12063
+      notes: Sleytr et al. 2014 review S-layer self-assembly and lattice symmetry.
+  - subject: lattice
+    predicate: coats
+    object: cell_surface
+    description: The assembled lattice forms the outermost cell-envelope layer.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3213
+      notes: Fagan and Fairweather 2014 describe bacterial S-layers as cell-surface
+        coats.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-29T00:00:00Z'
@@ -134,5 +174,13 @@ curation_history:
   action: ADD_UNIPROT_SL_XREF
   changes: Added uniprot.location:SL-0262 (S-layer); mapping read from the GO line
     of UniProt subcell.txt.
+- timestamp: '2026-08-30T19:29:55Z'
+  curator: codex
+  action: REVIEW_COMPOSITION_AND_ASSEMBLY
+  changes: Qualified the definition for one-or-more S-layer protein species; clarified
+    that the SLH entry denotes SLH-domain-containing S-layer proteins rather than
+    a free protein component; added evidence to the TraitMech link and an evidence-backed
+    self-assembly graph.
+  llm_assisted: true
 xrefs:
 - uniprot.location:SL-0262

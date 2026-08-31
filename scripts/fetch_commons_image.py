@@ -143,7 +143,7 @@ def build_image(page: dict, title: str, *, modality: str, caption: str | None,
         "notes": (f"Licence, attribution and depicted taxon read from the Commons API "
                   f"(extmetadata + structured data P180 -> Wikidata P685) on {today}; "
                   f"file sha1 verified against imageinfo."
-                  + (f" Source credit: {credit[:200]}" if credit else "")),
+                  + (f" Source credit: {credit}" if credit else "")),
     }
     # Commons omits LicenseUrl for public-domain files; an empty string is not a
     # uri and the write gate rejects it, so the optional field is simply absent.

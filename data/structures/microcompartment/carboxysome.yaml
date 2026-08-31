@@ -403,6 +403,11 @@ associated_traits:
   relation: CONFERS
   note: TraitMech models carboxysome possession as a morphology trait; this record
     models the organelle.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 describe the carboxysome as the archetypal bacterial
+      microcompartment; TraitMech records possession of it as the morphology trait
+      traitmech:000072.
 physical_properties:
 - property: DIAMETER
   value: 100-200
@@ -688,6 +693,12 @@ curation_history:
     in (#67) — cargo condensation on CcmM, CcmN bridging cargo to shell, CcmO recruiting
     CcmK2, shell closure, and McdB-driven spacing — and stated in the bmc_t role that
     essentiality differs between CcmO and CcmP (#68).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:09:18Z'
+  curator: claude
+  action: ADD_TRAIT_EVIDENCE
+  changes: TraitLink.evidence became required in the schema; cited the review already
+    backing the record for the carboxysome trait link.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0034

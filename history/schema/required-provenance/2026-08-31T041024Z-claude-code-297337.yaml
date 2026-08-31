@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: schema
+  path: src/cellstructuremech/schema/required-provenance.yaml
+  slug: required-provenance
+session:
+  id: 2026-08-31T041024Z-claude-code-297337
+  timestamp: '2026-08-31T04:10:24Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/9
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - schema
+  summary: Make record provenance required rather than recommended, and evidence trait links
+  details: 'Schema hardening: definition, definition_source and structure_kind become required
+    on CellStructureRecord; definition_source gains a pattern so it must be a CURIE or a URL
+    rather than free text; TraitLink.evidence and CurationEvent.changes become required. scripts/new_record.py
+    now requires the corresponding flags instead of silently scaffolding a record without
+    provenance, and record_curation_event requires a changes string. Applying the stricter
+    schema to the corpus exposed two records whose trait links carried no evidence (magnetosome,
+    carboxysome); both now cite the review already backing the record. Workflows are pinned
+    to commit SHAs and the failure artifact is named per matrix leg, so the 3.10 and 3.12
+    jobs no longer collide on upload.'

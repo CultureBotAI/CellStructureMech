@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/s_layer.yaml
+  slug: s_layer
+session:
+  id: 2026-08-30T194400Z-codex-abb967
+  timestamp: '2026-08-30T19:44:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: AUDIT
+  outcome: changed
+  sections:
+  - definition
+  - components
+  - associated_traits
+  - causal_graphs
+  summary: Audit S-layer composition, distribution wording, trait provenance, and assembly
+  details: Qualified one-protein and near-universality overstatements, preserved the canonical
+    InterPro SLH-domain label while clarifying that tandem domains anchor S-layer proteins,
+    added evidence to the TraitMech relation, and added an edge-cited self-assembly graph.

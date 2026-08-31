@@ -15,7 +15,10 @@ from cellstructuremech.validation.write_validated import (
 MINIMAL = {
     "identifier": "GO:0005840",
     "label": "ribosome",
+    "definition": "A ribonucleoprotein complex that translates messenger RNA.",
+    "definition_source": "GO:0005840",
     "structure_category": "RIBONUCLEOPROTEIN",
+    "structure_kind": "RIBONUCLEOPROTEIN_COMPLEX",
     "mapping_status": "PROPOSED",
 }
 
@@ -43,6 +46,10 @@ def test_bad_identifier_pattern_is_rejected():
     assert validate_structure(dict(MINIMAL, identifier="not a curie"))
 
 
+def test_unstructured_provenance_reference_is_rejected():
+    assert validate_structure(dict(MINIMAL, definition_source="a paper somewhere"))
+
+
 def test_causal_edge_without_evidence_is_rejected():
     """Mechanism claims are curator-asserted, so the schema requires edge-level evidence."""
     doc = dict(
@@ -50,6 +57,8 @@ def test_causal_edge_without_evidence_is_rejected():
         causal_graphs=[
             {
                 "graph_id": "g1",
+                "graph_kind": "FUNCTION",
+                "scope_status": "MECHANISTIC",
                 "nodes": [
                     {"node_id": "a", "label": "ribosome", "node_type": "STRUCTURE"},
                     {"node_id": "b", "label": "translation", "node_type": "BIOLOGICAL_PROCESS"},
@@ -64,6 +73,46 @@ def test_causal_edge_without_evidence_is_rejected():
 def test_function_without_evidence_is_rejected():
     doc = dict(MINIMAL, functions=[{"function_id": "f1", "label": "translation"}])
     assert validate_structure(doc)
+
+
+def test_trait_link_without_evidence_is_rejected():
+    doc = dict(
+        MINIMAL,
+        associated_traits=[{
+            "trait_id": "METPO:1000702",
+            "trait_label": "motile",
+            "relation": "CONFERS",
+        }],
+    )
+    assert validate_structure(doc)
+
+
+@pytest.mark.parametrize(
+    ("field", "value"),
+    [
+        ("components", [{
+            "component_id": "protein",
+            "label": "example protein",
+            "component_type": "PROTEIN",
+        }]),
+        ("taxonomic_distribution", [{
+            "taxon_id": "NCBITaxon:2",
+            "taxon_label": "Bacteria",
+            "presence": "COMMON",
+        }]),
+        ("canonical_examples", [{
+            "taxon_id": "NCBITaxon:562",
+            "taxon_label": "Escherichia coli",
+        }]),
+        ("physical_properties", [{
+            "property": "DIAMETER",
+            "value": "20",
+            "unit": "UO:0000018",
+        }]),
+    ],
+)
+def test_claim_bearing_entries_without_provenance_are_rejected(field, value):
+    assert validate_structure(dict(MINIMAL, **{field: value}))
 
 
 def test_invalid_record_is_not_written(tmp_path):
