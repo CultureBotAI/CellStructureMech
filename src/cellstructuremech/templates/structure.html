@@ -22,9 +22,9 @@
 
 {% if r.components %}
 <h2>Components</h2>
-<table><thead><tr><th>Component</th><th>Type</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 {% for c in r.components %}
-<tr id="components-{{ c.component_id }}"><td>{{ c.label }}</td><td>{{ c.component_type }}</td><td>{% if c.grounding %}{{ curie(c.grounding) }}{% elif c.grounding_status %}<em>{{ c.grounding_status }}</em>{% endif %}</td><td>{{ (c.gene_symbols or []) | join(", ") }}</td><td>{{ c.stoichiometry or "" }}</td><td>{{ c.essentiality or "" }}</td><td>{{ c.role or "" }}{{ evid(c.evidence) }}</td></tr>
+<tr id="components-{{ c.component_id }}"><td>{{ c.label }}</td><td>{{ c.component_type }}</td><td>{% if c.component_role == "ASSOCIATED_MACHINERY" %}<span class="machinery" title="Binds the assembled structure to position, partition or maintain it">acts on</span>{% else %}part of{% endif %}</td><td>{% if c.grounding %}{{ curie(c.grounding) }}{% elif c.grounding_status %}<em>{{ c.grounding_status }}</em>{% endif %}</td><td>{{ (c.gene_symbols or []) | join(", ") }}</td><td>{{ c.stoichiometry or "" }}</td><td>{{ c.essentiality or "" }}</td><td>{{ c.role or "" }}{{ evid(c.evidence) }}</td></tr>
 {% endfor %}
 </tbody></table>
 {% endif %}

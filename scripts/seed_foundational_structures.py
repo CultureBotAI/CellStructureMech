@@ -54,6 +54,7 @@ RECORDS: tuple[dict[str, Any], ...] = (
                 "component_id": "peptidoglycan",
                 "label": "peptidoglycan",
                 "component_type": "PEPTIDOGLYCAN",
+                "component_role": "CONSTITUENT",
                 "essentiality": "ESSENTIAL",
                 "role": "Forms the covalently closed, stress-bearing mesh around the cytoplasmic membrane.",
                 "evidence": evidence(PG_REVIEW, "Vollmer et al. review sacculus chemistry and architecture."),
@@ -103,6 +104,7 @@ RECORDS: tuple[dict[str, Any], ...] = (
                 "component_id": "thin_peptidoglycan",
                 "label": "thin peptidoglycan sacculus",
                 "component_type": "PEPTIDOGLYCAN",
+                "component_role": "CONSTITUENT",
                 "essentiality": "ESSENTIAL",
                 "role": "Provides mechanical integrity within the periplasm.",
                 "evidence": evidence(
@@ -113,6 +115,7 @@ RECORDS: tuple[dict[str, Any], ...] = (
                 "component_id": "outer_membrane_lipoprotein_links",
                 "label": "peptidoglycan–outer-membrane lipoprotein links",
                 "component_type": "PROTEIN",
+                "component_role": "CONSTITUENT",
                 "essentiality": "CONDITIONAL",
                 "role": "Couple the peptidoglycan layer mechanically to the outer membrane in many diderms.",
                 "evidence": evidence(ENVELOPE_REVIEW, "Envelope review describes lipoprotein coupling."),
@@ -171,6 +174,7 @@ RECORDS: tuple[dict[str, Any], ...] = (
                 "component_id": "lipopolysaccharide",
                 "label": "lipopolysaccharide-rich outer leaflet",
                 "component_type": "LIPID",
+                "component_role": "CONSTITUENT",
                 "essentiality": "CONDITIONAL",
                 "role": (
                     "Creates the characteristic asymmetric permeability barrier in "
@@ -184,6 +188,7 @@ RECORDS: tuple[dict[str, Any], ...] = (
                 "component_id": "outer_membrane_beta_barrels",
                 "label": "outer-membrane beta-barrel proteins",
                 "component_type": "PROTEIN",
+                "component_role": "CONSTITUENT",
                 "essentiality": "ESSENTIAL",
                 "role": "Provide selective transport and envelope assembly functions.",
                 "evidence": evidence(
@@ -236,6 +241,7 @@ RECORDS: tuple[dict[str, Any], ...] = (
                 "component_id": "chromosomal_dna",
                 "label": "chromosomal DNA",
                 "component_type": "DNA",
+                "component_role": "CONSTITUENT",
                 "essentiality": "ESSENTIAL",
                 "role": "The genome polymer whose compaction and spatial organization define the nucleoid.",
                 "evidence": evidence(
@@ -246,6 +252,7 @@ RECORDS: tuple[dict[str, Any], ...] = (
                 "component_id": "nucleoid_associated_proteins",
                 "label": "nucleoid-associated proteins",
                 "component_type": "PROTEIN",
+                "component_role": "CONSTITUENT",
                 "essentiality": "CONDITIONAL",
                 "role": (
                     "Bend, bridge, wrap, and constrain DNA and couple chromosome "
@@ -312,6 +319,7 @@ RECORDS: tuple[dict[str, Any], ...] = (
                 "component_id": "major_pilin",
                 "label": "major type IV pilin",
                 "component_type": "PROTEIN",
+                "component_role": "CONSTITUENT",
                 "essentiality": "ESSENTIAL",
                 "role": "Polymerizes into the extracellular pilus filament.",
                 "evidence": evidence(PILUS_REVIEW, "Hospenthal et al. review T4P filament architecture."),
@@ -320,6 +328,7 @@ RECORDS: tuple[dict[str, Any], ...] = (
                 "component_id": "extension_atpase",
                 "label": "PilB-family extension ATPase",
                 "component_type": "PROTEIN",
+                "component_role": "CONSTITUENT",
                 "essentiality": "ESSENTIAL",
                 "role": "Powers pilin polymerization and filament extension.",
                 "evidence": evidence(PILUS_REVIEW, "The cytoplasmic ATPase drives assembly."),
@@ -328,6 +337,7 @@ RECORDS: tuple[dict[str, Any], ...] = (
                 "component_id": "retraction_atpase",
                 "label": "PilT-family retraction ATPase",
                 "component_type": "PROTEIN",
+                "component_role": "CONSTITUENT",
                 "essentiality": "CONDITIONAL",
                 "role": "Powers retraction in retractile type IV pilus systems.",
                 "evidence": evidence(PILUS_REVIEW, "Retraction ATPases distinguish dynamic systems."),
@@ -385,6 +395,7 @@ RECORDS: tuple[dict[str, Any], ...] = (
                 "component_id": "gvpa",
                 "label": "major gas vesicle protein GvpA",
                 "component_type": "PROTEIN",
+                "component_role": "CONSTITUENT",
                 "gene_symbols": ["gvpA"],
                 "essentiality": "ESSENTIAL",
                 "role": "Forms the ribbed, gas-permeable structural shell.",
@@ -396,6 +407,7 @@ RECORDS: tuple[dict[str, Any], ...] = (
                 "component_id": "gvpc",
                 "label": "gas vesicle strengthening protein GvpC",
                 "component_type": "PROTEIN",
+                "component_role": "CONSTITUENT",
                 "gene_symbols": ["gvpC"],
                 "essentiality": "CONDITIONAL",
                 "role": "Strengthens the shell against collapse in characterized systems.",

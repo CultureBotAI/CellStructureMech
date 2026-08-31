@@ -76,6 +76,25 @@ to match — never one without the other.
 - A component is a **taxon-agnostic family or class**: "flagellin", not
   "FliC of *Salmonella* Typhimurium". Organism-specific accessions go in
   `protein_examples`, paired with the taxon the role was established in.
+- **Where the boundary runs.** A component is normally a constituent — one of
+  the proteins, RNAs, lipids or polysaccharides the structure is built from.
+  It may *also* be machinery that binds the **assembled** structure to
+  position, partition or maintain it (McdB on the carboxysome, the MamK/MamJ
+  filament aligning magnetosomes); such a component is `DISPENSABLE`, since the
+  structure forms without it. The converse does not hold — `essentiality` says
+  only whether the structure assembles without the component, so a genuine
+  constituent can be `DISPENSABLE` too (the flagellar stator: the flagellum is
+  built without MotA/MotB, it just cannot turn). **`component_role` carries the
+  distinction** — `CONSTITUENT` or `ASSOCIATED_MACHINERY` — and is required, so
+  a consumer asking what a structure is made of can filter on it. Machinery can
+  never be `ESSENTIAL`; a test enforces that. A protein that acts on a **subunit before
+  assembly** and then departs is **not** a component — the RuBisCO folding
+  chaperone RbcX is the worked example. Its localisation annotation says where
+  it acts, not what it belongs to.
+- **Record a decline, don't just omit it.** When a source annotates a protein
+  to the structure and you judge it out of scope, add a `RESOLVED` discussion
+  saying why (see `rbcx_not_a_component` on the carboxysome). Otherwise the
+  next seeding run reports it as a gap again and the reasoning is lost.
 - Ground proteins to InterPro / Pfam / NCBIfam, sub-complexes to ComplexPortal
   or GO, lipids and polysaccharides to CHEBI, RNAs to SO. **Do not guess an
   accession.** Leave `grounding` unset and open a `CURATION_TODO` discussion;

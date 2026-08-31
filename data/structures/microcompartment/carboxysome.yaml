@@ -18,6 +18,7 @@ components:
 - component_id: bmc_h
   label: BMC-H shell hexamers (CcmK / CsoS1)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - ccmK
   - csoS1
@@ -84,6 +85,7 @@ components:
 - component_id: bmc_t
   label: BMC-T shell pseudohexamers (CcmO, CcmP)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - ccmO
   - ccmP
@@ -149,6 +151,7 @@ components:
 - component_id: bmc_p
   label: BMC-P shell pentamers (CcmL / CsoS4)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - ccmL
   - csoS4A
@@ -177,6 +180,7 @@ components:
 - component_id: rubisco
   label: ribulose-1,5-bisphosphate carboxylase/oxygenase (form I)
   component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
   gene_symbols:
   - rbcL
   - rbcS
@@ -229,6 +233,7 @@ components:
 - component_id: carbonic_anhydrase
   label: carboxysomal carbonic anhydrase (CcaA / CsoSCA)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - ccaA
   - csoSCA
@@ -260,6 +265,7 @@ components:
 - component_id: scaffold
   label: cargo scaffold (CcmM / CsoS2)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - ccmM
   - csoS2
@@ -291,6 +297,7 @@ components:
 - component_id: assembly_adaptor
   label: assembly adaptor CcmN
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - ccmN
   essentiality: ESSENTIAL
@@ -327,6 +334,7 @@ components:
 - component_id: positioning
   label: carboxysome positioning system (McdB, with the McdA ATPase)
   component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
   gene_symbols:
   - mcdB
   essentiality: DISPENSABLE
@@ -699,6 +707,13 @@ curation_history:
   action: ADD_TRAIT_EVIDENCE
   changes: TraitLink.evidence became required in the schema; cited the review already
     backing the record for the carboxysome trait link.
+  llm_assisted: true
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0034

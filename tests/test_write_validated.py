@@ -177,3 +177,23 @@ def test_a_placeholder_does_not_satisfy_required_provenance(placeholder):
     prefix that merely starts with those letters is still a real prefix."""
     assert validate_structure(dict(MINIMAL, definition_source=placeholder))
     assert validate_structure(dict(MINIMAL, definition_source="TODOS:real_prefix")) == []
+
+
+def test_component_without_a_role_is_rejected():
+    """component_role is required: the constituent/machinery distinction is not
+    recoverable from essentiality, which only says whether the structure
+    assembles without the component (#77)."""
+    doc = dict(MINIMAL, components=[{
+        "component_id": "c", "label": "x", "component_type": "PROTEIN",
+        "evidence": [{"reference": "GO:0005840", "notes": "n"}],
+    }])
+    assert validate_structure(doc)
+
+
+def test_component_with_an_unknown_role_is_rejected():
+    doc = dict(MINIMAL, components=[{
+        "component_id": "c", "label": "x", "component_type": "PROTEIN",
+        "component_role": "SIDEKICK",
+        "evidence": [{"reference": "GO:0005840", "notes": "n"}],
+    }])
+    assert validate_structure(doc)

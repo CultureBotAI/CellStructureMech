@@ -20,6 +20,7 @@ components:
 - component_id: rrna_16s
   label: 16S rRNA (small-subunit rRNA)
   component_type: RNA
+  component_role: CONSTITUENT
   grounding: SO:0000650
   gene_symbols:
   - rrs
@@ -34,6 +35,7 @@ components:
 - component_id: rrna_23s
   label: 23S rRNA (large-subunit rRNA)
   component_type: RNA
+  component_role: CONSTITUENT
   grounding: SO:0000651
   gene_symbols:
   - rrl
@@ -47,6 +49,7 @@ components:
 - component_id: rrna_5s
   label: 5S rRNA
   component_type: RNA
+  component_role: CONSTITUENT
   grounding: SO:0000652
   gene_symbols:
   - rrf
@@ -60,6 +63,7 @@ components:
 - component_id: ssu_proteins
   label: small-subunit ribosomal proteins (21 proteins in Escherichia coli)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: A heterogeneous set of distinct protein families with no single
     exact family term. Previously grounded to GO:0003735 (structural constituent of
@@ -78,6 +82,7 @@ components:
 - component_id: lsu_proteins
   label: large-subunit ribosomal proteins (33 proteins in Escherichia coli)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: A heterogeneous set of distinct protein families with no single
     exact family term. Previously grounded to GO:0003735 (structural constituent of
@@ -357,6 +362,13 @@ curation_history:
   action: ADD_EVIDENCE
   changes: Added taxon-specific composition ComplexPortal:CPX-3807 (36 participants);
     exact accession and taxon verified at import.
+- timestamp: '2026-08-31T06:18:57Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
+  llm_assisted: true
 complex_compositions:
 - composition_id: complex_portal_cpx_3802
   source: COMPLEX_PORTAL

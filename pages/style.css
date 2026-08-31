@@ -23,6 +23,7 @@ figure.hero { margin:1rem 0; }
 figure.hero img { max-width:100%; height:auto; border:1px solid var(--line); border-radius:4px; }
 figure.hero figcaption { font-size:.85rem; color:var(--muted); margin-top:.3rem; }
 .modality { font-weight:600; }
+.machinery { font-style:italic; color:var(--muted); }
 .map-controls { display:flex; gap:.5rem; align-items:center; margin:1rem 0 .5rem; }
 .embedding-map { border:1px solid var(--line); border-radius:6px; background:#fcfcfc; min-height:300px; }
 .embedding-map svg { display:block; width:100%; height:auto; }

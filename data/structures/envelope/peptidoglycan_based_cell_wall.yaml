@@ -15,6 +15,7 @@ components:
 - component_id: peptidoglycan
   label: peptidoglycan
   component_type: PEPTIDOGLYCAN
+  component_role: CONSTITUENT
   essentiality: ESSENTIAL
   role: Forms the covalently closed, stress-bearing mesh around the cytoplasmic membrane.
   evidence:
@@ -49,4 +50,11 @@ curation_history:
   action: CREATED_RECORD
   changes: Added as a literature-backed foundational seed. Identity checked against
     the 2026-07-01 Gene Ontology release; requires human review.
+  llm_assisted: true
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
   llm_assisted: true

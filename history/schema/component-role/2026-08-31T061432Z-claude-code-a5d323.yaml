@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: schema
+  path: src/cellstructuremech/schema/cellstructuremech.yaml
+  slug: component-role
+session:
+  id: 2026-08-31T061432Z-claude-code-a5d323
+  timestamp: '2026-08-31T06:14:32Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/77
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Make the constituent / machinery distinction machine-readable
+  details: 'Issue 77 recorded the cost of choosing option b for the component boundary: DISPENSABLE
+    came to mean two different things, because it says only whether the structure assembles
+    without a component. The flagellar stator holds it as a genuine constituent that the flagellum
+    builds without and cannot rotate without, while McdB and the MamK filament hold it as
+    machinery acting on an already-assembled structure. A consumer asking what a structure
+    is made of could not tell them apart, because the distinction lived only in role prose.
+    StructuralComponent now carries a required component_role of CONSTITUENT or ASSOCIATED_MACHINERY.
+    All 53 components in the corpus were set explicitly rather than defaulted: 51 constituents
+    and 2 machinery. A corpus test rejects ASSOCIATED_MACHINERY marked ESSENTIAL, since a
+    protein acting on the assembled structure cannot be required for it to assemble, and two
+    write-gate tests reject a component with no role or an unknown one. The seed script that
+    builds foundational structures was updated too, so newly seeded records carry the field
+    rather than failing validation later.'

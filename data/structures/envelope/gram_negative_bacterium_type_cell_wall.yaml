@@ -12,6 +12,7 @@ components:
 - component_id: thin_peptidoglycan
   label: thin peptidoglycan sacculus
   component_type: PEPTIDOGLYCAN
+  component_role: CONSTITUENT
   essentiality: ESSENTIAL
   role: Provides mechanical integrity within the periplasm.
   evidence:
@@ -20,6 +21,7 @@ components:
 - component_id: outer_membrane_lipoprotein_links
   label: peptidoglycan–outer-membrane lipoprotein links
   component_type: PROTEIN
+  component_role: CONSTITUENT
   essentiality: CONDITIONAL
   role: Couple the peptidoglycan layer mechanically to the outer membrane in many
     diderms.
@@ -53,4 +55,11 @@ curation_history:
   action: CREATED_RECORD
   changes: Added as a literature-backed foundational seed. Identity checked against
     the 2026-07-01 Gene Ontology release; requires human review.
+  llm_assisted: true
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
   llm_assisted: true

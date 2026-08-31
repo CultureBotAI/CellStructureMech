@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: schema
+  path: docs/CURATION.md
+  slug: component-boundary
+session:
+  id: 2026-08-31T060409Z-claude-code-30fdcc
+  timestamp: '2026-08-31T06:04:09Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/66
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Write down where the component boundary runs, and align the records to it
+  details: 'Issue 66 asked whether McdB is a carboxysome component, given RbcX was declined
+    in the same change for acting on the structure rather than being part of it. The owner
+    chose option (b): a component is normally a constituent, but may also be machinery that
+    binds the assembled structure to position, partition or maintain it, marked DISPENSABLE;
+    a protein that acts on a subunit before assembly and departs, such as the RuBisCO chaperone
+    RbcX, is not. Declines are recorded as RESOLVED discussions so a re-seeding run does not
+    report them as gaps again. Applying the rule moved the magnetosome MamK/MamJ filament
+    from CONDITIONAL to DISPENSABLE, since vesicles form and mineralise without it and merely
+    scatter. Writing the rule exposed a second ambiguity, filed as 77: DISPENSABLE now reads
+    two ways, because the flagellar stator is a genuine constituent that the flagellum assembles
+    without. The rule states explicitly that the converse does not hold and that the distinction
+    lives in role prose, which is the known cost of choosing (b) over an explicit is_constituent
+    field.'
