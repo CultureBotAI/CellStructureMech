@@ -257,6 +257,33 @@ def resolve_uniprot_location(curies: list[str]) -> dict[str, tuple[str, str]]:
             for c in curies}
 
 
+def resolve_obo_purl(curies: list[str]) -> dict[str, tuple[str, str]]:
+    """Relation prefixes resolve at the OBO PURL, not through the OLS term index.
+
+    BFO and RO relations are indexed by OLS as *properties* of `ro`, so
+    `ontologies/bfo/terms?obo_id=` 404s for every one of them, and the global
+    search finds a BFO relation only when some other ontology happens to import
+    it — `BFO:0000050` (part of) is not found at all, while `BFO:0000066` is
+    found three times over with the label `BFO_0000066` (#84). The PURL is the
+    identifier's canonical location and answers 404 for a fabricated one.
+    """
+    out = {}
+    for curie in curies:
+        prefix, local = curie.split(":", 1)
+        url = f"http://purl.obolibrary.org/obo/{prefix}_{local}"
+        try:
+            request = urllib.request.Request(url, headers=UA, method="HEAD")
+            with urllib.request.urlopen(request, timeout=30) as response:
+                out[curie] = ("OK", response.geturl()[:90]) if response.status == 200 \
+                    else ("UNREACHABLE", f"PURL returned {response.status}")
+        except urllib.error.HTTPError as exc:
+            out[curie] = ("NOT_FOUND", "no such OBO term") if exc.code == 404 \
+                else ("UNREACHABLE", f"PURL returned {exc.code}")
+        except Exception as exc:  # noqa: BLE001
+            out[curie] = ("UNREACHABLE", f"{type(exc).__name__}: {exc}")
+    return out
+
+
 RESOLVERS = {
     "DOI": resolve_doi,
     "PMID": resolve_pmid,
@@ -264,6 +291,11 @@ RESOLVERS = {
     "InterPro": resolve_interpro,
     "ComplexPortal": resolve_complexportal,
     "uniprot.location": resolve_uniprot_location,
+    # BFO only: the RO PURL namespace redirects a fabricated id to a generic
+    # OLS page and answers 200, so it is not an authority for RO. RO resolves
+    # correctly through the OLS global index, which returns no hit for a
+    # fabricated id. The control is what separates these two cases (#84).
+    "BFO": resolve_obo_purl,
 }
 
 
@@ -274,7 +306,16 @@ RESOLVERS = {
 # resolver pointed at a retired endpoint reports every identifier as missing —
 # which is exactly what the first version of this script did (#82).
 CONTROLS: dict[str, tuple[str, str]] = {
+    # One per OLS ontology in use, not one for OLS: the ontologies are indexed
+    # separately, so a control on GO says nothing about NCBI Taxonomy (#84).
     "GO": ("GO:0005840", "GO:9999999"),
+    "CHEBI": ("CHEBI:46726", "CHEBI:99999999"),
+    "SO": ("SO:0000650", "SO:9999999"),
+    "RO": ("RO:0002327", "RO:9999999"),        # via the OLS global index
+    "BFO": ("BFO:0000050", "BFO:9999999"),     # via the OBO PURL
+    "UO": ("UO:0000018", "UO:9999999"),
+    "PATO": ("PATO:0000051", "PATO:9999999"),
+    "NCBITaxon": ("NCBITaxon:83333", "NCBITaxon:999999999"),
     "DOI": ("DOI:10.1038/nrmicro.2018.10", "DOI:10.9999/not-a-real-doi-zzq"),
     "PMID": ("PMID:17518518", "PMID:999999999"),
     "UniProtKB": ("UniProtKB:Q03511", "UniProtKB:X0X0X0"),

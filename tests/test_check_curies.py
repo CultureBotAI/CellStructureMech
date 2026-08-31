@@ -43,7 +43,13 @@ def test_every_resolver_has_a_control():
     """A resolver with no known-good/known-bad pair is a resolver nothing checks."""
     covered = set(cc.CONTROLS)
     assert set(cc.RESOLVERS) <= covered, f"no control for: {sorted(set(cc.RESOLVERS) - covered)}"
-    assert "GO" in covered, "the OLS fallback resolver needs a control too"
+
+
+def test_every_ols_ontology_has_its_own_control():
+    """OLS indexes each ontology separately, so a control on GO says nothing
+    about NCBI Taxonomy — 66 taxon references resolve through that path (#84)."""
+    missing = sorted(set(cc.OLS_ONTOLOGY) - set(cc.CONTROLS) - {"MICRO", "NCIT"})
+    assert not missing, f"OLS ontologies used by the corpus with no control: {missing}"
 
 
 def test_interpro_treats_204_as_absent(monkeypatch):
@@ -80,6 +86,26 @@ def test_a_doi_absent_from_both_registries_is_not_found(monkeypatch):
 
 
 @pytest.mark.parametrize("prefix", sorted(cc.NO_RESOLVER))
+def test_obo_purl_treats_404_as_absent(monkeypatch):
+    """BFO relations are OLS *properties*, not terms, so the term index 404s for
+    all of them and the PURL is the authority. RO is deliberately NOT routed
+    here: its PURL namespace answers 200 for a fabricated id (#84)."""
+    import urllib.error
+
+    def fake(request, timeout=30):
+        raise urllib.error.HTTPError(request.full_url, 404, "Not Found", {}, None)
+
+    monkeypatch.setattr(cc.urllib.request, "urlopen", fake)
+    assert cc.resolve_obo_purl(["BFO:9999999"])["BFO:9999999"][0] == "NOT_FOUND"
+
+
+def test_ro_is_not_routed_through_the_purl():
+    """RO_9999999 redirects to a generic OLS page and answers 200, so the PURL
+    cannot tell a real RO relation from a fabricated one (#84)."""
+    assert cc.RESOLVERS.get("RO") is not cc.resolve_obo_purl
+    assert cc.RESOLVERS.get("BFO") is cc.resolve_obo_purl
+
+
 def test_a_prefix_with_no_resolver_is_skipped_not_passed(prefix):
     """An identifier nothing can check must never be reported as OK."""
     assert cc.NO_RESOLVER[prefix], f"{prefix} is skipped without saying why"
