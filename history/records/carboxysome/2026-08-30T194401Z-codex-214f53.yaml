@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/carboxysome.yaml
+  slug: carboxysome
+session:
+  id: 2026-08-30T194401Z-codex-214f53
+  timestamp: '2026-08-30T19:44:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: AUDIT
+  outcome: changed
+  sections:
+  - definition
+  - components
+  - taxonomic_distribution
+  - associated_traits
+  - images
+  summary: Audit carboxysome evolutionary scope, component essentiality, and provenance
+  details: Corrected the unsupported claim that alpha and beta shells evolved independently;
+    completed BMC-T and BMC-P family membership; aligned essentiality values with whether
+    the shell can form; changed Cyanobacteriota presence from UNIVERSAL to COMMON for the
+    documented UCYN-A exception; added trait evidence; and repaired truncated image credit.

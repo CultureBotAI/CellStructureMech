@@ -69,7 +69,7 @@
   "kind": "ENVELOPE_LAYER",
   "status": "PROPOSED",
   "page": "structures/envelope/s_layer.html",
-  "definition": "A paracrystalline monomolecular array of a single (glyco)protein that self-assembles on the outermost surface of the cell envelope, with oblique, square or hexagonal lattice symmetry. Nearly universal in Archaea, where it is often the sole wall component, and widespread but patchily distributed in Bacteria."
+  "definition": "A paracrystalline monomolecular array of one or more (glyco)protein species that self-assemble on the outermost surface of the cell envelope, with oblique, square or hexagonal lattice symmetry. S-layers are common in Archaea, where they are often the sole wall component, and widespread but patchily distributed in Bacteria."
  },
  {
   "identifier": "GO:0031411",
@@ -114,7 +114,7 @@
   "kind": "RIBONUCLEOPROTEIN_COMPLEX",
   "status": "PROPOSED",
   "page": "structures/ribonucleoprotein/ribosome.html",
-  "definition": "The ribonucleoprotein particle that translates mRNA into protein. The bacterial (70S) ribosome comprises a small (30S) subunit built on 16S rRNA, which decodes the mRNA, and a large (50S) subunit built on 23S and 5S rRNA, whose 23S rRNA catalyses peptide bond formation. Archaeal and eukaryotic cytosolic ribosomes are homologous but larger."
+  "definition": "The ribonucleoprotein particle that translates mRNA into protein. The bacterial and archaeal 70S ribosome comprises a small (30S) subunit built on 16S rRNA, which decodes the mRNA, and a large (50S) subunit built on 23S and 5S rRNA, whose 23S rRNA catalyses peptide bond formation. This record details that 70S form and the functional core shared with the larger eukaryotic cytosolic 80S ribosome; it does not enumerate 80S-specific components."
  },
  {
   "identifier": "GO:0030257",

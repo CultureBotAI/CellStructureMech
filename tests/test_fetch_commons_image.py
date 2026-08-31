@@ -58,6 +58,23 @@ def test_build_image_reads_licence_attribution_and_hash_from_the_api():
     assert "PLoS biology" in entry["notes"]
 
 
+def test_source_credit_is_not_silently_truncated():
+    page = {"pageid": 1, "imageinfo": [{
+        "url": "https://upload.wikimedia.org/x.jpg", "sha1": "d",
+        "extmetadata": {
+            "LicenseShortName": {"value": "CC BY 3.0"},
+            "Artist": {"value": "Example Author"},
+            "Credit": {"value": "complete provenance " + "x" * 220},
+        },
+    }]}
+    entry = fci.build_image(
+        page, "File:X.jpg", modality="TEM", caption=None,
+        taxon=("NCBITaxon:1", "root"), licence="CC_BY_3_0", image_id="x",
+        today="2026-08-30", file_name="x.jpg", sha256="a" * 64,
+    )
+    assert entry["notes"].endswith("x" * 220)
+
+
 def test_missing_licence_url_is_omitted_not_empty():
     """Commons omits LicenseUrl for public-domain files; '' is not a uri and the
     write gate rejects it — caught while adding the CDC flagellum image."""

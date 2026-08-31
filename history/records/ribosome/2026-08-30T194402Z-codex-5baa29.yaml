@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/ribosome.yaml
+  slug: ribosome
+session:
+  id: 2026-08-30T194402Z-codex-5baa29
+  timestamp: '2026-08-30T19:44:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: AUDIT
+  outcome: changed
+  sections:
+  - definition
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - physical_properties
+  summary: Audit ribosome taxonomic scope, protein-set claims, exemplars, and measurements
+  details: Made the record's 70S-focused component inventory explicit within its all-domain
+    GO identity; replaced inaccurate protein-name ranges with cited Escherichia coli counts
+    and marked those lineage-specific sets CONDITIONAL; removed image-only universal-presence
+    claims while retaining the organism as a cited structural exemplar; narrowed the Thermus
+    exemplar claim; and replaced GO as a measurement citation with a review reporting the
+    particle size.

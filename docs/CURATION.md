@@ -55,9 +55,16 @@ to match — never one without the other.
 
 - **Record-level `evidence` is optional** for GO-grounded records: the term
   carries provenance.
-- **Every `function`, every `component.protein_examples` entry, and every
-  causal-graph `edge` requires evidence.** These are curator-asserted claims
-  nothing upstream vouches for.
+- **Every definition, synonym, component, taxonomic-scope assertion, canonical
+  example, function, trait link, physical property, `component.protein_examples`
+  entry, and causal-graph `edge` requires a source or evidence.** These are
+  curator-asserted claims nothing upstream vouches for. Image provenance is
+  carried by its source accession and URL, licence, attribution, taxon, and
+  (when one exists) publication reference.
+- **A placeholder is not a source.** `definition_source` is required and its
+  pattern rejects `TODO:`, `FIXME:`, `XXX:` and `TBD:` prefixes. For a
+  GO-grounded record the term id is always an honest answer; for a minted one,
+  a real citation is what justifies minting in the first place.
 - `snippet` is for **verbatim** quotes only. When you have not seen the
   source text, use `notes` to paraphrase what the source establishes. A
   fabricated quotation is worse than none.

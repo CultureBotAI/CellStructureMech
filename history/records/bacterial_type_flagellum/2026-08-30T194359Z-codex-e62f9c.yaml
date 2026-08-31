@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum.yaml
+  slug: bacterial_type_flagellum
+session:
+  id: 2026-08-30T194359Z-codex-e62f9c
+  timestamp: '2026-08-30T19:43:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: AUDIT
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - associated_traits
+  - physical_properties
+  - images
+  summary: Audit flagellum evidence, essentiality, measurement units, and image provenance
+  details: Reviewed every claim-bearing section against its cited sources. Corrected MotA/MotB
+    stator essentiality because deletion mutants retain assembled but paralysed flagella;
+    corrected rotation-speed units to turns per second; added evidence for trait relations;
+    separated the hosted image taxon from clade-level distribution and documented it as a
+    cited exemplar; and replaced a truncated Commons credit with a complete provenance summary.

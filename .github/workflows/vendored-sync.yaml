@@ -8,8 +8,8 @@ name: vendored-sync
 #
 # DELIBERATELY NO `paths:` FILTER. This job used to live in
 # label-correspondence.yaml and inherited that workflow's filter, which listed
-# only 1 of the 6 files the checker compares — so editing chem_formula.py, any
-# tests/test_id_label_*.py, or src/traitmech/schema/mech_shared.yaml never fired
+# only 1 of the governed files the checker compares — so editing chem_formula.py,
+# any tests/test_id_label_*.py, or src/cellstructuremech/schema/mech_shared.yaml never fired
 # the guard (#184). It did not even fire for edits to the checker itself or to
 # the pinned ref: #182 rewrote check_vendored_sync.sh and changed
 # .vendored_canon_ref without this job running once.

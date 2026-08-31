@@ -9,10 +9,10 @@
 #   * neither                → UNKNOWN_PREFIX (ERROR) — a typo or an unexpected
 #                              new prefix that must be triaged.
 #
-# Record identifiers are GO CC terms, and causal-graph / function nodes ground
-# to GO, SO, CHEBI, RO, BFO and UO. Those are the pairs this gate checks; the
-# record `label` is a curator label (e.g. "S-layer" for GO:0030115) and is
-# checked with the same canonical-or-synonym policy.
+# Record identifiers are normally GO CC terms. Components, functions and
+# causal-graph nodes may also carry a `grounding` paired with a curator-facing
+# `label`. Those are the id-label pairs this gate checks; predicate CURIEs,
+# measurement units and bare cross-references do not have paired labels here.
 
 adapters:
   GO: sqlite:obo:go

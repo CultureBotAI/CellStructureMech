@@ -15,7 +15,8 @@ def _run(*args, cwd=REPO_ROOT):
 
 def test_new_record_dry_run_writes_nothing(tmp_path, monkeypatch):
     out = _run("scripts/new_record.py", "--identifier", "cellstructuremech:TEST", "--label", "test thing",
-               "--category", "OTHER")
+               "--category", "OTHER", "--kind", "OTHER", "--definition", "A test structure.",
+               "--definition-source", "DOI:10.0000/example")
     assert out.returncode == 0, out.stderr
     assert "dry run" in out.stdout
     assert not (REPO_ROOT / "data" / "structures" / "other" / "test_thing.yaml").exists()
@@ -24,7 +25,8 @@ def test_new_record_dry_run_writes_nothing(tmp_path, monkeypatch):
 def test_new_record_refuses_taken_identifier(records):
     ident = records[0][1]["identifier"]
     out = _run("scripts/new_record.py", "--identifier", ident, "--label", "dup",
-               "--category", "OTHER", "--apply")
+               "--category", "OTHER", "--kind", "OTHER", "--definition", "A duplicate.",
+               "--definition-source", "DOI:10.0000/example", "--apply")
     assert out.returncode == 2
     assert "already used" in out.stderr
 

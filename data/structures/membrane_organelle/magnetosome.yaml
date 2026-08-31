@@ -123,6 +123,10 @@ associated_traits:
 - trait_id: traitmech:000071
   trait_label: magnetosome
   relation: CONFERS
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2016.99
+    notes: Uebe & Schuler 2016 describe the magnetosome as the structure whose possession
+      defines the magnetotactic phenotype TraitMech records as traitmech:000071.
 physical_properties:
 - property: DIAMETER
   value: 35-120
@@ -274,6 +278,12 @@ curation_history:
   action: ADD_CORROBORATION
   changes: Added an independent second review (#63) and the parent_structures link
     to intracellular membrane-bounded organelle (#64).
+  llm_assisted: true
+- timestamp: '2026-08-31T04:08:43Z'
+  curator: claude
+  action: ADD_TRAIT_EVIDENCE
+  changes: TraitLink.evidence became required in the schema; cited the review already
+    backing the record for the magnetosome trait link.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0510

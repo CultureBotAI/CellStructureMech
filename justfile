@@ -17,7 +17,7 @@ gen-schema:
     uv run gen-pydantic {{schema}} > src/cellstructuremech/schema/cellstructuremech_dataclasses.py
 
 # Scaffold a new record (writes through the validation gate). Dry-run by default.
-# `just new-record --category APPENDAGE --identifier GO:0009288 --label "bacterial-type flagellum" --apply`
+# `just new-record --category APPENDAGE --kind APPENDAGE --identifier GO:0009288 --label "bacterial-type flagellum" --definition "..." --definition-source GO:0009288 --apply`
 new-record *args:
     uv run python scripts/new_record.py {{args}}
 
