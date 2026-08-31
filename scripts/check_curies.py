@@ -402,7 +402,18 @@ def main() -> int:
         if args.self_test:
             return 0
 
-    found = collect(load_records())
+    records = load_records()
+    found = collect(records)
+    # A gate that finds nothing must not report success: if data/structures/
+    # moves or the loader breaks, "every identifier resolves" would be true and
+    # meaningless (#87).
+    if not records:
+        print("no records found — the corpus path or loader is wrong, not the corpus", file=sys.stderr)
+        return 2
+    if not found:
+        print(f"{len(records)} record(s) but no identifiers found — the collector is not seeing "
+              "the fields it should", file=sys.stderr)
+        return 2
     cache = {} if args.refresh else load_cache()
     verdicts: dict[str, tuple[str, str]] = {}
     to_fetch: dict[str, list[str]] = defaultdict(list)

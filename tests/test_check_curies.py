@@ -109,3 +109,19 @@ def test_ro_is_not_routed_through_the_purl():
 def test_a_prefix_with_no_resolver_is_skipped_not_passed(prefix):
     """An identifier nothing can check must never be reported as OK."""
     assert cc.NO_RESOLVER[prefix], f"{prefix} is skipped without saying why"
+
+
+def test_the_gate_refuses_to_pass_on_an_empty_corpus(monkeypatch, capsys):
+    """A check that finds nothing must not report success — otherwise a moved
+    directory or a broken loader reads as coverage (#87)."""
+    monkeypatch.setattr(cc, "load_records", lambda *a, **k: [])
+    monkeypatch.setattr(cc.sys, "argv", ["check_curies.py", "--check", "--offline"])
+    assert cc.main() == 2
+    assert "no records found" in capsys.readouterr().err
+
+
+def test_the_gate_refuses_when_records_carry_no_identifiers(monkeypatch, capsys):
+    monkeypatch.setattr(cc, "load_records", lambda *a, **k: [(None, {"label": "x"})])
+    monkeypatch.setattr(cc.sys, "argv", ["check_curies.py", "--check", "--offline"])
+    assert cc.main() == 2
+    assert "no identifiers found" in capsys.readouterr().err
