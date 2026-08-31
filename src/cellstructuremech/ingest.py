@@ -4,9 +4,16 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import urllib.parse
 import urllib.request
 from pathlib import Path
+
+from cellstructuremech.validation.write_validated import (
+    ValidationFailedError,
+    validate_structure,
+    write_validated_structure,
+)
 
 USER_AGENT = {
     "User-Agent": (
@@ -71,4 +78,26 @@ def verify_md5(data: bytes, expected: str | None, label: str) -> None:
 
 
 def image_destination(record_path: Path, filename: str, repo_root: Path) -> Path:
+    if Path(filename).name != filename or not re.fullmatch(
+        r"[a-z0-9][a-z0-9._-]*", filename
+    ):
+        raise ValueError(f"image filename must be a safe lowercase leaf name: {filename!r}")
     return repo_root / "data" / "images" / record_path.parent.name / record_path.stem / filename
+
+
+def write_image_with_validated_record(
+    record: dict,
+    record_path: Path,
+    filename: str,
+    image_bytes: bytes,
+    repo_root: Path,
+) -> Path:
+    """Validate the complete mutation before writing either record artifact."""
+    errors = validate_structure(record)
+    if errors:
+        raise ValidationFailedError(record_path, errors)
+    destination = image_destination(record_path, filename, repo_root)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_bytes(image_bytes)
+    write_validated_structure(record, record_path)
+    return destination

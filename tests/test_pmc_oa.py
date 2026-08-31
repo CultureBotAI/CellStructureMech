@@ -127,3 +127,21 @@ def test_missing_or_disagreeing_jats_licence_is_refused():
     )
     with pytest.raises(ValueError, match="disagrees"):
         pmc.article_license(cc0, "CC BY")
+
+
+def test_source_figure_id_is_normalized_to_a_safe_collision_resistant_leaf(monkeypatch):
+    root = pmc.ET.fromstring(XML.replace(b'id="F1"', b'id="F/../../escape"'))
+    monkeypatch.setattr(pmc, "get_bytes", lambda _url: IMAGE)
+    image, _ = pmc.build_image(
+        METADATA,
+        root,
+        figure_id="F/../../escape",
+        taxon_id="NCBITaxon:83333",
+        taxon_label="Escherichia coli K-12",
+        modality="TEM",
+        caption_override=None,
+        accept_multipanel=False,
+        retrieved_on="2026-08-30",
+    )
+    assert image["file"].startswith("pmc123_f_escape_")
+    assert "/" not in image["file"] and ".." not in image["file"]

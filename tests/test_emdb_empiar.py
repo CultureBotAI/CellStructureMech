@@ -34,6 +34,19 @@ def test_taxon_is_resolved_from_emdb_not_empiar():
     assert ee.empiar_xrefs(EMPIAR) == {"EMD-1234"}
 
 
+def test_only_exact_emdb_cross_references_count_as_taxon_bridges():
+    mixed = {
+        "cross_references": [
+            "PDB:1ABC",
+            {"name": "EMD-4321"},
+            {"name": "EMD-not-a-number"},
+            {"name": "PDB:2DEF"},
+        ]
+    }
+    assert ee.empiar_xrefs(mixed) == {"EMD-4321"}
+    assert ee.empiar_xrefs({"cross_references": ["PDB:1ABC"]}) == set()
+
+
 def test_entries_preserve_raw_dataset_and_representative_image_separately():
     dataset, image = ee.build_entries(
         "EMPIAR-10000",

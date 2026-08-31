@@ -27,14 +27,14 @@ from cellstructuremech.curate.curation_event import record_curation_event
 from cellstructuremech.ingest import (
     get_bytes,
     get_json,
-    image_destination,
     require_record_taxon,
     s3_https_url,
     sha256,
     upsert,
     verify_md5,
+    write_image_with_validated_record,
 )
-from cellstructuremech.validation.write_validated import ValidationFailedError, write_validated_structure
+from cellstructuremech.validation.write_validated import ValidationFailedError
 
 try:
     from corpus import REPO_ROOT
@@ -200,6 +200,17 @@ def media_object(metadata: dict, href: str) -> tuple[str, str | None]:
     return matches[0]
 
 
+def local_figure_key(figure_id: str) -> str:
+    """Make a stable safe key while retaining a hash for normalized source IDs."""
+    key = re.sub(r"[^a-z0-9]+", "_", figure_id.lower()).strip("_")
+    if not key:
+        raise ValueError(f"figure id {figure_id!r} cannot form a local identifier")
+    legacy_key = figure_id.lower().replace("-", "_")
+    if key != legacy_key:
+        key = f"{key}_{sha256(figure_id.encode())[:8]}"
+    return key
+
+
 def build_image(
     metadata: dict,
     root: ET.Element,
@@ -236,9 +247,10 @@ def build_image(
     if not doi and not pmid:
         raise ValueError(f"{pmcid}.{version} has neither DOI nor PMID")
     reference = f"DOI:{doi}" if doi else f"PMID:{pmid}"
-    filename = f"{pmcid.lower()}_{figure_id.lower().replace('-', '_')}{suffix}"
+    figure_key = local_figure_key(figure_id)
+    filename = f"{pmcid.lower()}_{figure_key}{suffix}"
     image = {
-        "image_id": f"pmc_{pmcid.lower()}_{figure_id.lower().replace('-', '_')}",
+        "image_id": f"pmc_{pmcid.lower()}_{figure_key}",
         "file": filename,
         "file_sha256": sha256(image_bytes),
         "source": "PMC",
@@ -329,9 +341,6 @@ def ingest(args: argparse.Namespace) -> int:
         print(f"# dry run — would have {action} this image on {args.record}\n")
         print(yaml.safe_dump([image], default_flow_style=False, sort_keys=False, allow_unicode=True))
         return 0
-    destination = image_destination(args.record, image["file"], REPO_ROOT)
-    destination.parent.mkdir(parents=True, exist_ok=True)
-    destination.write_bytes(image_bytes)
     record["images"] = images
     record_curation_event(
         record,
@@ -344,7 +353,9 @@ def ingest(args: argparse.Namespace) -> int:
         ),
     )
     try:
-        write_validated_structure(record, args.record)
+        write_image_with_validated_record(
+            record, args.record, image["file"], image_bytes, REPO_ROOT
+        )
     except ValidationFailedError as exc:
         print(exc.summary(), file=sys.stderr)
         return 1

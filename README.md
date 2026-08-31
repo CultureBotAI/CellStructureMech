@@ -20,7 +20,7 @@ incrementally with an append-only audit trail.
 **[Browse the corpus online →](https://culturebotai.github.io/CellStructureMech/)**
 — every record, by category, with components, distribution, functions and
 mechanism graphs. The site also includes a
-**[text embedding map](https://culturebotai.github.io/CellStructureMech/embedding-map.html)**
+**[text embedding map](https://culturebotai.github.io/CellStructureMech/pages/embedding-map.html)**
 with full-vector nearest neighbours.
 
 ## The gap it fills

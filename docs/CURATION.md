@@ -154,7 +154,8 @@ Source-specific commands (all dry-run unless `--apply` is present):
   be present in JATS and agree with the metadata family. The curator supplies
   the caption-derived taxon and explicitly acknowledges likely multi-panel figures.
 - Both image scripts verify downloaded bytes (PMC md5 where supplied, corpus
-  SHA-256 always) before a validated write.
+  SHA-256 always), validate the complete record mutation before touching the
+  destination, and confine generated filenames to the record image directory.
 
 ## Text embedding map
 

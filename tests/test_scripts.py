@@ -47,6 +47,12 @@ def test_text_embedding_map_check_is_current():
     assert out.returncode == 0, out.stderr
 
 
+def test_readme_public_map_link_matches_root_based_pages_layout():
+    readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+    assert "https://culturebotai.github.io/CellStructureMech/pages/embedding-map.html" in readme
+    assert "https://culturebotai.github.io/CellStructureMech/embedding-map.html" not in readme
+
+
 def test_corpus_report_runs():
     out = _run("scripts/corpus_report.py")
     assert out.returncode == 0, out.stderr

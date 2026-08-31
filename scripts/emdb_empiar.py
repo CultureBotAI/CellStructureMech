@@ -27,12 +27,12 @@ from cellstructuremech.curate.curation_event import record_curation_event
 from cellstructuremech.ingest import (
     get_bytes,
     get_json,
-    image_destination,
     require_record_taxon,
     sha256,
     upsert,
+    write_image_with_validated_record,
 )
-from cellstructuremech.validation.write_validated import ValidationFailedError, write_validated_structure
+from cellstructuremech.validation.write_validated import ValidationFailedError
 
 try:
     from corpus import REPO_ROOT
@@ -86,7 +86,12 @@ def emdb_taxa(payload: dict) -> dict[str, str]:
 
 def empiar_xrefs(payload: dict) -> set[str]:
     values = payload.get("cross_references") or []
-    return {value if isinstance(value, str) else value.get("name") for value in values} - {None}
+    accessions = {
+        value if isinstance(value, str) else value.get("name")
+        for value in values
+        if isinstance(value, (str, dict))
+    }
+    return {value for value in accessions if isinstance(value, str) and EMDB_RE.fullmatch(value)}
 
 
 def emdb_resolution(payload: dict) -> str | None:
@@ -251,9 +256,6 @@ def ingest(args: argparse.Namespace) -> int:
         print(yaml.safe_dump({"datasets": [dataset], "images": [image]}, sort_keys=False))
         return 0
 
-    destination = image_destination(args.record, filename, REPO_ROOT)
-    destination.parent.mkdir(parents=True, exist_ok=True)
-    destination.write_bytes(image_bytes)
     record["datasets"] = datasets
     record["images"] = images
     record_curation_event(
@@ -267,7 +269,7 @@ def ingest(args: argparse.Namespace) -> int:
         ),
     )
     try:
-        write_validated_structure(record, args.record)
+        write_image_with_validated_record(record, args.record, filename, image_bytes, REPO_ROOT)
     except ValidationFailedError as exc:
         print(exc.summary(), file=sys.stderr)
         return 1
