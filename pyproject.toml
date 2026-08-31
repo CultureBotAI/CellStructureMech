@@ -39,6 +39,8 @@ dependencies = [
     "pyyaml>=6.0",
     "click>=8.1.0",
     "jinja2>=3.1.0",
+    # Deterministic PCA and cosine similarity for the committed text map.
+    "numpy>=1.26",
 ]
 
 [project.optional-dependencies]
@@ -46,6 +48,9 @@ dev = [
     "pytest>=7.4",
     "pytest-cov>=4.1",
     "ruff>=0.4",
+]
+embeddings = [
+    "sentence-transformers==6.0.0",
 ]
 
 [project.urls]

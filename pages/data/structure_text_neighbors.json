@@ -1,0 +1,96 @@
+{
+  "format_version": 1,
+  "source_embeddings": "data/embeddings/structure_text_embeddings.json",
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+  "generator_library": "sentence-transformers 6.0.0",
+  "embedding_dimension": 384,
+  "text_projection_version": 1,
+  "similarity": "cosine",
+  "records": [
+    {
+      "identifier": "GO:0009288",
+      "label": "bacterial-type flagellum",
+      "neighbors": [
+        {
+          "identifier": "GO:0031470",
+          "label": "carboxysome",
+          "cosine_similarity": 0.67553466
+        },
+        {
+          "identifier": "GO:0030115",
+          "label": "S-layer",
+          "cosine_similarity": 0.65846442
+        },
+        {
+          "identifier": "GO:0005840",
+          "label": "ribosome",
+          "cosine_similarity": 0.63805912
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030115",
+      "label": "S-layer",
+      "neighbors": [
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.65846442
+        },
+        {
+          "identifier": "GO:0031470",
+          "label": "carboxysome",
+          "cosine_similarity": 0.6218738
+        },
+        {
+          "identifier": "GO:0005840",
+          "label": "ribosome",
+          "cosine_similarity": 0.58206914
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031470",
+      "label": "carboxysome",
+      "neighbors": [
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.67553466
+        },
+        {
+          "identifier": "GO:0030115",
+          "label": "S-layer",
+          "cosine_similarity": 0.6218738
+        },
+        {
+          "identifier": "GO:0005840",
+          "label": "ribosome",
+          "cosine_similarity": 0.61586333
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005840",
+      "label": "ribosome",
+      "neighbors": [
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.63805912
+        },
+        {
+          "identifier": "GO:0031470",
+          "label": "carboxysome",
+          "cosine_similarity": 0.61586333
+        },
+        {
+          "identifier": "GO:0030115",
+          "label": "S-layer",
+          "cosine_similarity": 0.58206914
+        }
+      ]
+    }
+  ]
+}

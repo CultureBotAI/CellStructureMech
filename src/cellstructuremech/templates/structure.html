@@ -29,6 +29,18 @@
 </tbody></table>
 {% endif %}
 
+{% if r.complex_compositions %}
+<h2>Source composition assertions</h2>
+{% for c in r.complex_compositions %}
+<h3 id="complex-compositions-{{ c.composition_id }}"><a href="{{ c.source_url }}">{{ c.complex_label }}</a> <small>({{ c.source_accession }})</small></h3>
+<p><em>{{ c.taxon_label }}</em> ({{ curie(c.taxon_id) }}){% if c.assembly %} · {{ c.assembly }}{% endif %}{% if c.evidence_code %} · {{ curie(c.evidence_code) }}{% endif %} · retrieved {{ c.retrieved_on }}</p>
+<table><thead><tr><th>Participant</th><th>Source type</th><th>Gene</th><th>Stoichiometry</th></tr></thead><tbody>
+{% for p in c.participants %}<tr><td>{{ curie(p.participant_id) }} — {{ p.label }}</td><td>{{ p.participant_type }}</td><td>{{ p.gene_symbol or "" }}</td><td>{{ p.stoichiometry or "not asserted" }}</td></tr>{% endfor %}
+</tbody></table>
+{% if c.notes %}<p><small>{{ c.notes }}</small></p>{% endif %}
+{% endfor %}
+{% endif %}
+
 {% if r.taxonomic_distribution %}
 <h2>Taxonomic distribution</h2>
 <ul>{% for t in r.taxonomic_distribution %}<li>{{ curie(t.taxon_id) }} {{ t.taxon_label }} — <strong>{{ t.presence }}</strong>{% if t.note %}: {{ t.note }}{% endif %}{% if t.reference %} [{{ curie(t.reference) }}]{% endif %}</li>{% endfor %}</ul>

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -41,6 +42,11 @@ def test_render_check_is_current():
     assert out.returncode == 0, out.stderr
 
 
+def test_text_embedding_map_check_is_current():
+    out = _run("scripts/build_text_embedding_map.py", "--check")
+    assert out.returncode == 0, out.stderr
+
+
 def test_corpus_report_runs():
     out = _run("scripts/corpus_report.py")
     assert out.returncode == 0, out.stderr
@@ -65,3 +71,6 @@ def test_rendered_site_has_no_broken_local_links(tmp_path):
             if not (html.parent / url).resolve().exists():
                 broken.append(f"{html.relative_to(out)}: {url}")
     assert not broken, broken
+    map_data = json.loads((out / "data" / "structure_text_map.json").read_text())
+    assert (out / "embedding-map.html").exists()
+    assert all((out / item["page"]).exists() for item in map_data["records"])

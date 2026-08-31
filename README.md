@@ -19,7 +19,9 @@ incrementally with an append-only audit trail.
 
 **[Browse the corpus online →](https://culturebotai.github.io/CellStructureMech/)**
 — every record, by category, with components, distribution, functions and
-mechanism graphs.
+mechanism graphs. The site also includes a
+**[text embedding map](https://culturebotai.github.io/CellStructureMech/embedding-map.html)**
+with full-vector nearest neighbours.
 
 ## The gap it fills
 
@@ -78,6 +80,7 @@ just report           # corpus stats
 just validate-all     # closed-mode schema validation of every record
 just test             # unit + corpus-integrity tests
 just render           # regenerate the site under pages/
+just text-map-check   # cached text vectors and derived map match the corpus
 just qc               # everything CI runs
 ```
 
@@ -114,6 +117,7 @@ against it by `just vendored-check`.
 ```
 CellStructureMech/
 ├── data/structures/<category>/<slug>.yaml   # the records
+├── data/embeddings/                          # pinned text vectors, PCA map, neighbours
 ├── src/cellstructuremech/
 │   ├── schema/cellstructuremech.yaml         # LinkML schema
 │   ├── schema/mech_shared.yaml               # vendored from claw (Discussions, Datasets)
@@ -125,6 +129,7 @@ CellStructureMech/
 │   ├── new_record.py                         # scaffold a record through the gate
 │   ├── validate_strict.py                    # closed-mode corpus validation
 │   ├── render_pages.py                       # generate pages/
+│   ├── build_text_embedding_map.py           # local embeddings + deterministic map
 │   ├── corpus_report.py                      # stats
 │   ├── check_docs.py                         # README stats block
 │   └── run_qc.py                             # the CI gate
