@@ -14,6 +14,7 @@ components:
 - component_id: gvpa
   label: major gas vesicle protein GvpA
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - gvpA
   essentiality: ESSENTIAL
@@ -24,6 +25,7 @@ components:
 - component_id: gvpc
   label: gas vesicle strengthening protein GvpC
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - gvpC
   essentiality: CONDITIONAL
@@ -67,5 +69,12 @@ curation_history:
   action: ADD_UNIPROT_SL_XREF
   changes: Added uniprot.location:SL-0125 (Gas vesicle); mapping read from the GO
     line of UniProt subcell.txt.
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
+  llm_assisted: true
 xrefs:
 - uniprot.location:SL-0125

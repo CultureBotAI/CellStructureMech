@@ -12,6 +12,7 @@ components:
 - component_id: magnetosome_membrane
   label: magnetosome membrane
   component_type: LIPID
+  component_role: CONSTITUENT
   essentiality: ESSENTIAL
   role: Invagination of the cytoplasmic membrane that encloses the mineral crystal
     and carries the Mam proteins.
@@ -22,6 +23,7 @@ components:
 - component_id: mam_proteins
   label: magnetosome membrane proteins (Mam/Mms)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - mamA
   - mamB
@@ -45,6 +47,7 @@ components:
 - component_id: magnetite
   label: magnetite
   component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
   grounding: CHEBI:46726
   essentiality: ESSENTIAL
   role: The magnetic mineral core (Fe3O4), biomineralised to a species-specific size
@@ -57,6 +60,7 @@ components:
 - component_id: mamk_filament
   label: MamK actin-like filament
   component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
   gene_symbols:
   - mamK
   - mamJ
@@ -293,6 +297,13 @@ curation_history:
   changes: 'Component-boundary rule (#66): MamK/MamJ is machinery acting on the assembled
     magnetosome, so its essentiality moves from CONDITIONAL to DISPENSABLE — the organelle
     forms without it.'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0510

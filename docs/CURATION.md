@@ -84,8 +84,10 @@ to match — never one without the other.
   structure forms without it. The converse does not hold — `essentiality` says
   only whether the structure assembles without the component, so a genuine
   constituent can be `DISPENSABLE` too (the flagellar stator: the flagellum is
-  built without MotA/MotB, it just cannot turn). Say which it is in `role`;
-  the field does not carry it (#77). A protein that acts on a **subunit before
+  built without MotA/MotB, it just cannot turn). **`component_role` carries the
+  distinction** — `CONSTITUENT` or `ASSOCIATED_MACHINERY` — and is required, so
+  a consumer asking what a structure is made of can filter on it. Machinery can
+  never be `ESSENTIAL`; a test enforces that. A protein that acts on a **subunit before
   assembly** and then departs is **not** a component — the RuBisCO folding
   chaperone RbcX is the worked example. Its localisation annotation says where
   it acts, not what it belongs to.

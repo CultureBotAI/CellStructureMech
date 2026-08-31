@@ -158,3 +158,14 @@ def test_image_taxa_are_named_on_the_record(records):
             if im["taxon_id"] not in named:
                 bad.append(f"{path.name}:{im['image_id']}:{im['taxon_id']}")
     assert not bad, f"image taxa not in taxonomic_distribution/canonical_examples: {bad}"
+
+
+def test_associated_machinery_is_never_essential(records):
+    """A component that acts on the assembled structure cannot be required for
+    that structure to assemble; the two statements contradict each other (#77)."""
+    bad = []
+    for path, doc in records:
+        for c in doc.get("components") or []:
+            if c.get("component_role") == "ASSOCIATED_MACHINERY" and c.get("essentiality") == "ESSENTIAL":
+                bad.append(f"{path.name}:{c['component_id']}")
+    assert not bad, f"ASSOCIATED_MACHINERY components marked ESSENTIAL: {bad}"

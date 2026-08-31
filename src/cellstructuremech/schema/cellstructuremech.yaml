@@ -341,6 +341,15 @@ classes:
       component_type:
         required: true
         range: ComponentTypeEnum
+      component_role:
+        description: >-
+          Whether the component is part of what the structure is made of, or
+          machinery that acts on the assembled structure. `essentiality` cannot
+          carry this: it says only whether the structure assembles without the
+          component, so a constituent can be DISPENSABLE too — the flagellar
+          stator is, and the flagellum still cannot rotate without it (#77).
+        required: true
+        range: ComponentRoleEnum
       grounding:
         description: >-
           Taxon-agnostic CURIE: InterPro / Pfam / NCBIfam for a protein family,
@@ -814,6 +823,19 @@ enums:
       SMALL_MOLECULE:
         description: A cofactor, pigment, mineral or storage polymer.
       OTHER:
+
+  ComponentRoleEnum:
+    description: >-
+      Where a component sits relative to the assembled structure. See the
+      component boundary in docs/CURATION.md: a protein acting on a subunit
+      before assembly and then departing is not a component at all.
+    permissible_values:
+      CONSTITUENT:
+        description: Part of what the structure is built from.
+      ASSOCIATED_MACHINERY:
+        description: >-
+          Binds the assembled structure to position, partition or maintain it.
+          Cannot be ESSENTIAL: the structure forms before it acts.
 
   ComponentGroundingStatusEnum:
     permissible_values:

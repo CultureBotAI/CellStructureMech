@@ -15,6 +15,7 @@ components:
 - component_id: ftsz
   label: FtsZ filaments
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - ftsZ
   essentiality: ESSENTIAL
@@ -27,6 +28,7 @@ components:
 - component_id: membrane_tethers
   label: membrane tethers (FtsA, ZipA/SepF)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - ftsA
   - zipA
@@ -42,6 +44,7 @@ components:
 - component_id: septal_pg_synthase
   label: septal peptidoglycan synthase (FtsW-FtsI)
   component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
   gene_symbols:
   - ftsW
   - ftsI
@@ -170,6 +173,13 @@ curation_history:
   action: ADD_CORROBORATION
   changes: Added Egan & Vollmer 2012 as an independent second source (#63) and part_of
     the cell division site (#64).
+  llm_assisted: true
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
   llm_assisted: true
 part_of:
 - GO:0032153

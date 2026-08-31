@@ -10,6 +10,7 @@ components:
 - component_id: chromosomal_dna
   label: chromosomal DNA
   component_type: DNA
+  component_role: CONSTITUENT
   essentiality: ESSENTIAL
   role: The genome polymer whose compaction and spatial organization define the nucleoid.
   evidence:
@@ -18,6 +19,7 @@ components:
 - component_id: nucleoid_associated_proteins
   label: nucleoid-associated proteins
   component_type: PROTEIN
+  component_role: CONSTITUENT
   essentiality: CONDITIONAL
   role: Bend, bridge, wrap, and constrain DNA and couple chromosome structure to gene
     expression.
@@ -60,5 +62,12 @@ curation_history:
   action: ADD_UNIPROT_SL_XREF
   changes: Added uniprot.location:SL-0187 (Nucleoid); mapping read from the GO line
     of UniProt subcell.txt.
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
+  llm_assisted: true
 xrefs:
 - uniprot.location:SL-0187

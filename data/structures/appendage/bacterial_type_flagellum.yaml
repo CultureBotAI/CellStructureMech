@@ -21,6 +21,7 @@ components:
 - component_id: flagellin
   label: flagellin (FliC)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - fliC
   - fljB
@@ -34,6 +35,7 @@ components:
 - component_id: hook
   label: hook protein (FlgE)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - flgE
   essentiality: ESSENTIAL
@@ -44,6 +46,7 @@ components:
 - component_id: ms_ring
   label: MS ring (FliF)
   component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
   gene_symbols:
   - fliF
   essentiality: ESSENTIAL
@@ -54,6 +57,7 @@ components:
 - component_id: c_ring
   label: C ring / switch complex (FliG, FliM, FliN)
   component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
   gene_symbols:
   - fliG
   - fliM
@@ -67,6 +71,7 @@ components:
 - component_id: stator
   label: stator unit (MotA5MotB2)
   component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
   gene_symbols:
   - motA
   - motB
@@ -88,6 +93,7 @@ components:
 - component_id: rod
   label: rod (FlgB, FlgC, FlgF, FlgG)
   component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
   gene_symbols:
   - flgB
   - flgC
@@ -101,6 +107,7 @@ components:
 - component_id: lp_rings
   label: L and P rings (FlgH, FlgI)
   component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
   gene_symbols:
   - flgH
   - flgI
@@ -113,6 +120,7 @@ components:
 - component_id: export_apparatus
   label: flagellar type III export apparatus (FlhA, FlhB, FliP, FliQ, FliR)
   component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
   gene_symbols:
   - flhA
   - flhB
@@ -354,6 +362,13 @@ curation_history:
   action: APPLY_COMPONENT_BOUNDARY
   changes: 'Component-boundary rule (#66, #72): stated in the stator role that DISPENSABLE
     here means ''not needed for assembly'', not ''peripheral machinery''.'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0307

@@ -19,6 +19,7 @@ components:
 - component_id: major_pilin
   label: major type IV pilin
   component_type: PROTEIN
+  component_role: CONSTITUENT
   essentiality: ESSENTIAL
   role: Polymerizes into the extracellular pilus filament.
   evidence:
@@ -27,6 +28,7 @@ components:
 - component_id: extension_atpase
   label: PilB-family extension ATPase
   component_type: PROTEIN
+  component_role: CONSTITUENT
   essentiality: ESSENTIAL
   role: Powers pilin polymerization and filament extension.
   evidence:
@@ -35,6 +37,7 @@ components:
 - component_id: retraction_atpase
   label: PilT-family retraction ATPase
   component_type: PROTEIN
+  component_role: CONSTITUENT
   essentiality: CONDITIONAL
   role: Powers retraction in retractile type IV pilus systems.
   evidence:
@@ -77,4 +80,11 @@ curation_history:
   changes: Corrected the type IV pilus motility grounding from GO:0009290 (DNA import
     during transformation) to current GO:0043107 (type IV pilus-dependent motility),
     verified in QuickGO.
+  llm_assisted: true
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
   llm_assisted: true
