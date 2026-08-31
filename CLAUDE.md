@@ -40,6 +40,7 @@ just source-queue      # the ranked data-source queue and what is unverified in 
 just new-history ...   # scaffold a repository-level history record
 just validate-products # id<->label correspondence gate via OAK (network on first run)
 just check-curies-strict # resolve every identifier at its issuing authority (network)
+just check-trait-links --check # associated_traits ids and labels against TraitMech
 just vendored-check    # claw-governed files match canon at scripts/.vendored_canon_ref
 ```
 

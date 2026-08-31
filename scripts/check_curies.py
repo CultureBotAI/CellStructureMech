@@ -58,8 +58,8 @@ OLS_ONTOLOGY = {"GO": "go", "CHEBI": "chebi", "SO": "so", "RO": "ro", "BFO": "bf
                 "UO": "uo", "PATO": "pato", "NCBITaxon": "ncbitaxon", "MICRO": "micro",
                 "NCIT": "ncit"}
 NO_RESOLVER = {
-    "traitmech": "sibling repository; covered by the cross-repo trait check (#11)",
-    "METPO": "sibling ontology, not in the OLS set used here (#11)",
+    "traitmech": "sibling repository; covered by scripts/check_trait_links.py (#11)",
+    "METPO": "sibling ontology; covered by scripts/check_trait_links.py (#11)",
     "proteintraitsmech": "sibling repository",
     "cellstructuremech": "minted in this repository",
     "biolink": "model slot, not an ontology term",
