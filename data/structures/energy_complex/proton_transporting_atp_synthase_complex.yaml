@@ -1,0 +1,233 @@
+identifier: GO:0045259
+label: proton-transporting ATP synthase complex
+definition: 'The rotary motor enzyme that makes ATP from ADP and phosphate using the
+  ion motive force across the membrane. It has two coupled sectors: a membrane-embedded
+  Fo, whose c-ring turns as protons cross it, and a soluble F1 (alpha3beta3gammadeltaepsilon),
+  whose catalytic beta subunits are driven through their conformational cycle by the
+  rotating gamma subunit.'
+definition_source: GO:0045259
+synonyms:
+- synonym_text: F1Fo ATP synthase
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1146/annurev-biochem-013118-110903
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+components:
+- component_id: f1_head
+  label: F1 catalytic head (alpha3beta3)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - atpA
+  - atpD
+  stoichiometry: three alpha and three beta subunits, alternating
+  essentiality: ESSENTIAL
+  role: Carries the three catalytic sites; ATP is made as each beta subunit passes
+    through its conformational cycle.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 describes the alpha3beta3 head and its three catalytic
+      sites.
+  - reference: DOI:10.1042/bst20110773
+    notes: Walker 2013 reviews the same sector composition, and the variable c-ring
+      stoichiometry across species.
+- component_id: central_stalk
+  label: central stalk (gamma, epsilon)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - atpG
+  - atpC
+  essentiality: ESSENTIAL
+  role: Rotates inside the alpha3beta3 head, driving the catalytic cycle; couples
+    Fo rotation to F1.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 describes the central stalk transmitting rotation into
+      the catalytic head.
+- component_id: c_ring
+  label: Fo c-ring
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - atpE
+  stoichiometry: 8-17 c subunits depending on the organism
+  essentiality: ESSENTIAL
+  role: 'The rotor: each subunit carries an ion-binding site, and the ring turns as
+    ions pass.'
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 reviews c-ring stoichiometries and their bearing on the
+      H+/ATP ratio.
+  - reference: DOI:10.1042/bst20110773
+    notes: Walker 2013 reviews the same sector composition, and the variable c-ring
+      stoichiometry across species.
+- component_id: a_subunit
+  label: Fo subunit a
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - atpB
+  essentiality: ESSENTIAL
+  role: Provides the two offset half-channels through which ions enter and leave the
+    c-ring.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 describes the two half-channels in subunit a and the ion
+      path across the membrane.
+- component_id: peripheral_stalk
+  label: peripheral stalk (b2, delta)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - atpF
+  - atpH
+  essentiality: ESSENTIAL
+  role: 'Stator: holds the alpha3beta3 head against the torque of the rotating central
+    stalk.'
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 describes the peripheral stalk as the stator resisting
+      rotation of the head.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: UNIVERSAL
+  note: Lost only in a few lineages with no membrane bioenergetics.
+  reference: DOI:10.1146/annurev-biochem-013118-110903
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: UNIVERSAL
+  note: Archaea use the related A-type ATP synthase, homologous to the V-type ATPase.
+  reference: DOI:10.1146/annurev-biochem-013118-110903
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: The genetic and biochemical reference for the bacterial F1Fo enzyme (atp operon).
+  reference: DOI:10.1146/annurev-biochem-013118-110903
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: Reference Gram-positive enzyme.
+  reference: DOI:10.1146/annurev-biochem-013118-110903
+functions:
+- function_id: atp_synthesis
+  label: proton motive force-driven ATP synthesis
+  grounding: GO:0015986
+  description: Ion flux down the electrochemical gradient turns the rotor, and rotation
+    drives ATP synthesis in F1.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 reviews rotary catalysis and its coupling to the ion motive
+      force.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: 8-17
+  context: c subunits in the Fo rotor ring, organism-dependent
+  reference: DOI:10.1146/annurev-biochem-013118-110903
+evidence:
+- reference: DOI:10.1146/annurev-biochem-013118-110903
+  notes: Kuehlbrandt W 2019, 'Structure and Mechanisms of F-Type ATP Synthases', Annual
+    Review of Biochemistry.
+- reference: DOI:10.1042/bst20110773
+  notes: 'Walker JE 2013, ''The ATP synthase: the understood, the uncertain and the
+    unknown'', Biochemical Society Transactions — independent review of subunit composition
+    and rotary catalysis.'
+causal_graphs:
+- graph_id: rotary_catalysis
+  title: Ion flow turns the rotor and the rotor drives catalysis
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: pmf
+    label: proton motive force
+    node_type: STATE
+  - node_id: a
+    label: subunit a half-channels
+    node_type: GENE_OR_PROTEIN
+    component_ref: a_subunit
+  - node_id: cring
+    label: c-ring
+    node_type: GENE_OR_PROTEIN
+    component_ref: c_ring
+  - node_id: stalk
+    label: central stalk
+    node_type: GENE_OR_PROTEIN
+    component_ref: central_stalk
+  - node_id: head
+    label: alpha3beta3 catalytic head
+    node_type: GENE_OR_PROTEIN
+    component_ref: f1_head
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    grounding: CHEBI:15422
+  - node_id: synthesis
+    label: proton motive force-driven ATP synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015986
+  edges:
+  - subject: pmf
+    predicate: drives ion flow through
+    object: a
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      notes: 'Kuehlbrandt 2019: ions cross via the two offset half-channels in subunit
+        a.'
+  - subject: a
+    predicate: turns
+    object: cring
+    description: Protonation and deprotonation of c-subunit ion-binding sites at the
+      a/c interface rotates the ring.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      notes: Kuehlbrandt 2019 describes ion binding at the a/c interface driving c-ring
+        rotation.
+  - subject: cring
+    predicate: rotates
+    object: stalk
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      notes: 'Kuehlbrandt 2019: the c-ring and central stalk rotate as one rotor.'
+  - subject: stalk
+    predicate: drives conformational cycling of
+    object: head
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      notes: Kuehlbrandt 2019 describes the asymmetric gamma subunit imposing the
+        catalytic cycle on the beta subunits.
+  - subject: head
+    predicate: catalyses formation of
+    object: atp
+    predicate_id: RO:0002327
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      notes: 'Kuehlbrandt 2019: ATP is synthesised at the catalytic interfaces of
+        the head.'
+  - subject: head
+    predicate: participates in
+    object: synthesis
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      notes: Kuehlbrandt 2019 reviews rotary catalysis as the mechanism of ATP synthesis.
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-08-31T03:48:12Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Drafted from the cited review. Every GO term, taxon id and DOI was resolved
+    against OLS, NCBI Taxonomy and Crossref before writing; evidence notes state what
+    the review says, not a reading of primary literature. Not yet human-reviewed.
+  llm_assisted: true
+- timestamp: '2026-08-31T03:54:23Z'
+  curator: claude
+  action: ADD_CORROBORATION
+  changes: Added Walker 2013 as an independent second source for composition and rotary
+    catalysis (#63).
+  llm_assisted: true
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
+  llm_assisted: true

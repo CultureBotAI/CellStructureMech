@@ -13,6 +13,10 @@
   --line:rgba(0,0,0,.10);
   --code:rgba(0,0,0,.05);
   --surface:rgba(255,255,255,.55);
+  /* Aliases for rules written against the earlier token names, so a stylesheet
+     rule added elsewhere keeps resolving instead of silently falling back. */
+  --fg:var(--ink);
+  --bg:var(--card);
 }
 
 *{box-sizing:border-box}
@@ -115,3 +119,18 @@ figure.hero figcaption{font-size:.85rem;color:var(--muted);margin-top:.3rem}
   *{transition:none!important;animation:none!important}
   .cards li:hover{transform:none}
 }
+
+/* ---- Embedding map (added on main while this branch was open) ----
+   Reworked onto the brand tokens: the original hardcoded #fcfcfc, which is
+   invisible against the dark theme's card colour. */
+.machinery { font-style:italic; color:var(--muted); }
+.map-controls { display:flex; gap:.5rem; align-items:center; margin:1rem 0 .5rem; }
+.embedding-map { border:1px solid var(--line); border-radius:10px;
+                 background:var(--card); min-height:300px; }
+.embedding-map svg { display:block; width:100%; height:auto; }
+.embedding-map a { cursor:pointer; text-decoration:none; }
+.embedding-map a:hover text, .embedding-map a:focus text { text-decoration:underline; font-weight:600; }
+.embedding-map circle { stroke:var(--card); stroke-width:2; }
+.embedding-map text { fill:var(--ink); font-size:15px; }
+.map-details { margin-top:1rem; border-left:4px solid var(--accent); padding:.2rem 1rem; }
+.map-details h2, .map-details h3 { margin-bottom:.2rem; }

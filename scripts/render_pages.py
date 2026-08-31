@@ -26,6 +26,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 TEMPLATES_DIR = REPO_ROOT / "src" / "cellstructuremech" / "templates"
 IMAGES_DIR = REPO_ROOT / "data" / "images"
+EMBEDDINGS_DIR = REPO_ROOT / "data" / "embeddings"
 PAGES_DIR = REPO_ROOT / "pages"
 
 CATEGORY_BLURB = {
@@ -52,8 +53,11 @@ PREFIX_URL = {
     "Pfam": "https://www.ebi.ac.uk/interpro/entry/pfam/",
     "UniProtKB": "https://www.uniprot.org/uniprotkb/",
     "ComplexPortal": "https://www.ebi.ac.uk/complexportal/complex/",
+    "RNAcentral": "https://rnacentral.org/rna/",
+    "ECO": "http://purl.obolibrary.org/obo/ECO_",
     "PDB": "https://www.rcsb.org/structure/",
     "EMDB": "https://www.ebi.ac.uk/emdb/",
+    "EMPIAR": "https://www.ebi.ac.uk/empiar/EMPIAR-",
     "PMID": "https://pubmed.ncbi.nlm.nih.gov/",
     "DOI": "https://doi.org/",
     "METPO": "https://w3id.org/metpo/",
@@ -125,6 +129,17 @@ def render(out_dir: Path) -> None:
     )
     (out_dir / "index.json").write_text(
         json.dumps(index, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    embedding_map = json.loads((EMBEDDINGS_DIR / "structure_text_map.json").read_text())
+    data_dir = out_dir / "data"
+    data_dir.mkdir(exist_ok=True)
+    for name in ("structure_text_map.json", "structure_text_neighbors.json"):
+        shutil.copy(EMBEDDINGS_DIR / name, data_dir / name)
+    (out_dir / "embedding-map.html").write_text(
+        env.get_template("embedding_map.html").render(
+            root="", model=embedding_map["model"]
+        ),
+        encoding="utf-8",
     )
 
     for cat in categories:

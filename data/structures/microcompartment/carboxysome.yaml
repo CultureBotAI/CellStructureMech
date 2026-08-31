@@ -18,6 +18,7 @@ components:
 - component_id: bmc_h
   label: BMC-H shell hexamers (CcmK / CsoS1)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - ccmK
   - csoS1
@@ -81,9 +82,76 @@ components:
     - reference: PMID:31048338
       notes: ECO:0000269 experimental evidence for the carboxysome localisation of
         Q31RK3, as cited by UniProt.
+- component_id: bmc_t
+  label: BMC-T shell pseudohexamers (CcmO, CcmP)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ccmO
+  - ccmP
+  essentiality: CONDITIONAL
+  role: 'Tandem-BMC-domain paralogues that tile the shell alongside the BMC-H hexamers.
+    Essentiality differs within the set and the field carries the weaker value: UniProt
+    states CcmO is required for carboxysome formation and for recruiting CcmK2, while
+    CcmP is a gated dimer of stacked trimers thought to control metabolite passage
+    rather than to be required for assembly.'
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The only InterPro entry both share is the generic BMC domain (IPR000249),
+    which BMC-H proteins carry too, so no exact family term denotes the BMC-T set.
+    CcmP alone has IPR044870.
+  evidence:
+  - reference: PMID:22928045
+    notes: UniProt cites this paper (P46205) for CcmO being required to recruit the
+      major shell protein CcmK2 to the pre-carboxysome, and for its oligomerisation
+      and interaction with CcmK2.
+  - reference: PMID:24267892
+    notes: UniProt cites this paper (P46205, P46204) for CcmO's role in carboxysome
+      formation.
+  - reference: PMID:23572529
+    notes: UniProt cites this paper (Q31QW7) for CcmP forming a dimer of stacked trimers
+      in the shell and for the gating that is thought to control transport of RuBisCO
+      reactants.
+  protein_examples:
+  - uniprot_id: UniProtKB:P46205
+    protein_label: Carboxysome assembly protein CcmO
+    gene_symbol: ccmO
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Tandem-BMC-domain paralogues that tile the shell alongside the BMC-H hexamers;
+      CcmO is required to recruit CcmK2 to the pre-carboxysome, and CcmP forms a gated
+      dimer of stacked trimers thought to control metabolite passage.'
+    evidence:
+    - reference: PMID:22928045
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        P46205, as cited by UniProt.
+    - reference: PMID:24267892
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        P46205, as cited by UniProt.
+    - reference: PMID:31048338
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        P46205, as cited by UniProt.
+  - uniprot_id: UniProtKB:Q31QW7
+    protein_label: Carboxysome shell protein CcmP
+    gene_symbol: ccmP
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Tandem-BMC-domain paralogues that tile the shell alongside the BMC-H hexamers;
+      CcmO is required to recruit CcmK2 to the pre-carboxysome, and CcmP forms a gated
+      dimer of stacked trimers thought to control metabolite passage.'
+    evidence:
+    - reference: PMID:23572529
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q31QW7, as cited by UniProt.
 - component_id: bmc_p
   label: BMC-P shell pentamers (CcmL / CsoS4)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - ccmL
   - csoS4A
@@ -112,6 +180,7 @@ components:
 - component_id: rubisco
   label: ribulose-1,5-bisphosphate carboxylase/oxygenase (form I)
   component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
   gene_symbols:
   - rbcL
   - rbcS
@@ -164,6 +233,7 @@ components:
 - component_id: carbonic_anhydrase
   label: carboxysomal carbonic anhydrase (CcaA / CsoSCA)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - ccaA
   - csoSCA
@@ -195,6 +265,7 @@ components:
 - component_id: scaffold
   label: cargo scaffold (CcmM / CsoS2)
   component_type: PROTEIN
+  component_role: CONSTITUENT
   gene_symbols:
   - ccmM
   - csoS2
@@ -223,6 +294,81 @@ components:
     - reference: PMID:28616951
       notes: ECO:0000269 experimental evidence for the carboxysome localisation of
         Q03513, as cited by UniProt.
+- component_id: assembly_adaptor
+  label: assembly adaptor CcmN
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ccmN
+  essentiality: ESSENTIAL
+  role: 'Bridges cargo to shell: its N-terminus binds the CcmM scaffold, which itself
+    binds RuBisCO, while its C-terminal 18 residues bind the shell protein CcmK2.'
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: UniProt's only InterPro entry for CcmN is the LpxA-like trimer
+    superfamily (IPR011004), a fold-level term that does not denote this family.
+  evidence:
+  - reference: PMID:22461622
+    notes: UniProt cites this paper (P46204) for the CcmN N-terminus interacting with
+      CcmM and its C-terminal 18 residues interacting with CcmK2.
+  - reference: PMID:24267892
+    notes: UniProt cites this paper (P46204) for CcmN being required for carboxysome
+      formation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P46204
+    protein_label: Carboxysome assembly protein CcmN
+    gene_symbol: ccmN
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Bridges cargo to shell: its N-terminus binds the CcmM scaffold, which itself
+      binds RuBisCO, while its C-terminal 18 residues bind the shell protein CcmK2.'
+    evidence:
+    - reference: PMID:22461622
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        P46204, as cited by UniProt.
+    - reference: PMID:31048338
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        P46204, as cited by UniProt.
+- component_id: positioning
+  label: carboxysome positioning system (McdB, with the McdA ATPase)
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  gene_symbols:
+  - mcdB
+  essentiality: DISPENSABLE
+  role: Distributes carboxysomes along the nucleoid. McdB binds the carboxysome and,
+    with the McdA ATPase, sets spacing, size and inheritance; without the system carboxysomes
+    aggregate rather than failing to form.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: UniProt lists no InterPro entry for McdB.
+  evidence:
+  - reference: PMID:30520729
+    notes: UniProt cites this paper (Q8GJM6) for McdA and McdB together mediating
+      carboxysome spacing, and for McdB self-association and interaction with McdA.
+  - reference: PMID:34406783
+    notes: UniProt cites this paper (Q8GJM6) for the same distribution role and for
+      preventing carboxysome aggregation.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q8GJM6
+    protein_label: Maintenance of carboxysome distribution protein B
+    gene_symbol: mcdB
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus PCC 7942
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
+      Distributes carboxysomes along the nucleoid. McdB binds the carboxysome and,
+      with the McdA ATPase, sets spacing, size and inheritance; without the system
+      carboxysomes aggregate rather than failing to form.'
+    evidence:
+    - reference: PMID:30520729
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q8GJM6, as cited by UniProt.
+    - reference: PMID:34406783
+      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
+        Q8GJM6, as cited by UniProt.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1117
   taxon_label: Cyanobacteriota
@@ -265,6 +411,11 @@ associated_traits:
   relation: CONFERS
   note: TraitMech models carboxysome possession as a morphology trait; this record
     models the organelle.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 describe the carboxysome as the archetypal bacterial
+      microcompartment; TraitMech records possession of it as the morphology trait
+      traitmech:000072.
 physical_properties:
 - property: DIAMETER
   value: 100-200
@@ -276,23 +427,25 @@ images:
   file_sha256: 92ffd40eccbe10c71b6aa4d5d0cd94c8322f98e2bf76d5c92b6991702e5b931e
   source: WIKIMEDIA_COMMONS
   source_accession: File:Carboxysomes_EM.jpg (M4508748)
-  source_url: https://commons.wikimedia.org/wiki/File:Carboxysomes_EM.jpg
+  source_url: https://commons.wikimedia.org/wiki/File%3ACarboxysomes_EM.jpg
   download_url: https://upload.wikimedia.org/wikipedia/commons/f/f5/Carboxysomes_EM.jpg
   licence: CC_BY_3_0
   licence_url: https://creativecommons.org/licenses/by/3.0
   attribution: Tsai Y, Sawaya MR, Cannon GC, Cai F, Williams EB, Heinhorst S, Kerfeld
-    CA, Yeates TO (2007), PLoS Biology, CC BY 3.0, via Wikimedia Commons
+    CA, Yeates TO; CC BY 3.0, via Wikimedia Commons
   modality: TEM
   caption: Thin-section electron micrograph of Halothiobacillus neapolitanus cells
     containing carboxysomes, and negatively stained isolated carboxysomes. Scale bars
     100 nm.
   taxon_id: NCBITaxon:927
   taxon_label: Halothiobacillus neapolitanus
+  retrieved_on: '2026-08-30'
+  notes: 'Licence, attribution and depicted taxon read from the Commons API (extmetadata
+    + structured data P180 -> Wikidata P685) on 2026-08-30; file sha1 verified against
+    imageinfo. Source credit: PLoS biology - Tsai Y, Sawaya MR, Cannon GC, et al (June
+    2007). " Structural analysis of CsoS1A and the protein shell of the Halothiobacillus
+    neapolitanus carboxysome ". PLoS Biol. 5 (6): e144. DOI: 1'
   reference: DOI:10.1371/journal.pbio.0050144
-  retrieved_on: '2026-08-29'
-  notes: Licence, artist and depicted taxon read from the Commons API (extmetadata
-    + structured data P180 -> Wikidata P685) at retrieval; file sha1 verified against
-    imageinfo.
 evidence:
 - reference: DOI:10.1038/nrmicro.2018.10
   notes: Kerfeld et al. 2018, "Bacterial microcompartments".
@@ -370,6 +523,118 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/MMBR.00061-12
       notes: Rae et al. 2013.
+- graph_id: carboxysome_assembly
+  title: Cargo condenses on a scaffold, an adaptor recruits the shell, and the shell
+    closes around it
+  description: Beta-carboxysome assembly order, and the placement step that follows
+    it.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: scaffold
+    label: CcmM scaffold
+    node_type: GENE_OR_PROTEIN
+    component_ref: scaffold
+  - node_id: rubisco
+    label: RuBisCO
+    node_type: GENE_OR_PROTEIN
+    component_ref: rubisco
+  - node_id: procarboxysome
+    label: pre-carboxysome cargo condensate
+    node_type: STRUCTURE
+  - node_id: ccmn
+    label: CcmN adaptor
+    node_type: GENE_OR_PROTEIN
+    component_ref: assembly_adaptor
+  - node_id: bmc_t
+    label: BMC-T shell pseudohexamers (CcmO, CcmP)
+    node_type: GENE_OR_PROTEIN
+    component_ref: bmc_t
+  - node_id: bmc_h
+    label: BMC-H shell hexamers
+    node_type: GENE_OR_PROTEIN
+    component_ref: bmc_h
+  - node_id: shell
+    label: carboxysome shell
+    node_type: STRUCTURE
+  - node_id: mcdb
+    label: McdB positioning system
+    node_type: GENE_OR_PROTEIN
+    component_ref: positioning
+  - node_id: spacing
+    label: carboxysome spacing along the nucleoid
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: scaffold
+    predicate: binds
+    object: rubisco
+    description: CcmM links RuBisCO into the cargo condensate that becomes the carboxysome
+      lumen.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00061-12
+      notes: Rae et al. 2013 describe CcmM and CsoS2 as the RuBisCO-organising proteins
+        of the two carboxysome types.
+  - subject: scaffold
+    predicate: forms
+    object: procarboxysome
+    evidence:
+    - reference: DOI:10.1128/MMBR.00061-12
+      notes: Rae et al. 2013 describe cargo condensation preceding shell encapsulation
+        in beta-carboxysomes.
+  - subject: ccmn
+    predicate: bridges
+    object: scaffold
+    description: The CcmN N-terminus binds CcmM, tying the adaptor to the cargo.
+    evidence:
+    - reference: PMID:22461622
+      notes: UniProt cites this paper (P46204) for the CcmN N-terminus interacting
+        with CcmM.
+  - subject: ccmn
+    predicate: recruits
+    object: bmc_h
+    description: The C-terminal 18 residues of CcmN bind CcmK2, bringing shell hexamers
+      to the cargo.
+    evidence:
+    - reference: PMID:22461622
+      notes: UniProt cites this paper (P46204) for the CcmN C-terminal 18 residues
+        interacting with CcmK2.
+  - subject: bmc_t
+    predicate: recruits
+    object: bmc_h
+    description: CcmO is required to recruit the major shell protein CcmK2 to the
+      pre-carboxysome.
+    evidence:
+    - reference: PMID:22928045
+      notes: UniProt cites this paper (P46205) for CcmO being required to recruit
+        CcmK2.
+  - subject: bmc_h
+    predicate: forms
+    object: shell
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Kerfeld et al. 2018 describe BMC-H hexamers tiling the shell facets.
+  - subject: bmc_t
+    predicate: forms
+    object: shell
+    evidence:
+    - reference: PMID:23572529
+      notes: UniProt cites this paper (Q31QW7) for CcmP forming a dimer of stacked
+        trimers within the shell.
+  - subject: shell
+    predicate: encapsulates
+    object: procarboxysome
+    evidence:
+    - reference: DOI:10.1128/MMBR.00061-12
+      notes: Rae et al. 2013 describe the shell closing around the condensed cargo.
+  - subject: mcdb
+    predicate: drives
+    object: spacing
+    description: McdB with the McdA ATPase distributes mature carboxysomes along the
+      nucleoid; without them they aggregate.
+    evidence:
+    - reference: PMID:30520729
+      notes: UniProt cites this paper (Q8GJM6) for McdA and McdB together mediating
+        carboxysome spacing.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-29T00:00:00Z'
@@ -402,5 +667,74 @@ curation_history:
   action: ADD_UNIPROT_SL_XREF
   changes: Added uniprot.location:SL-0034 (Carboxysome); mapping read from the GO
     line of UniProt subcell.txt.
+- timestamp: '2026-08-30T19:08:31Z'
+  curator: fetch_commons_image
+  action: ADD_IMAGE
+  changes: Updated Commons image File:Carboxysomes_EM.jpg (CC_BY_3_0, Halothiobacillus
+    neapolitanus); licence, attribution and taxon read from the Commons and Wikidata
+    APIs at retrieval.
+- timestamp: '2026-08-30T19:11:11Z'
+  curator: fetch_commons_image
+  action: ADD_IMAGE
+  changes: Updated Commons image File:Carboxysomes_EM.jpg (CC_BY_3_0, Halothiobacillus
+    neapolitanus); licence, attribution and taxon read from the Commons and Wikidata
+    APIs at retrieval.
+- timestamp: '2026-08-30T19:19:18Z'
+  curator: claude
+  action: ADD_COMPONENTS
+  changes: 'Added the components the UniProt SL seeding found unmatched (#40): BMC-T
+    shell pseudohexamers (CcmO, CcmP), the CcmN assembly adaptor, and the McdB positioning
+    system, each with the papers UniProt attributes the claim to. Declined RbcX with
+    a recorded reason: it is a RuBisCO folding chaperone, not part of the assembled
+    structure.'
+  llm_assisted: true
+- timestamp: '2026-08-30T19:19:33Z'
+  curator: uniprot_sl
+  action: SEED_PROTEIN_EXAMPLES
+  changes: Added 4 taxon-paired protein example(s) from UniProtKB reviewed entries
+    annotated to SL-0034 (Carboxysome), matched to components by gene symbol, each
+    carrying UniProt's ECO:0000269 PubMed evidence for the localisation.
+- timestamp: '2026-08-31T04:03:50Z'
+  curator: claude
+  action: ADD_ASSEMBLY_GRAPH
+  changes: 'Review of PR #60: added the ASSEMBLY graph the new components belonged
+    in (#67) — cargo condensation on CcmM, CcmN bridging cargo to shell, CcmO recruiting
+    CcmK2, shell closure, and McdB-driven spacing — and stated in the bmc_t role that
+    essentiality differs between CcmO and CcmP (#68).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:09:18Z'
+  curator: claude
+  action: ADD_TRAIT_EVIDENCE
+  changes: TraitLink.evidence became required in the schema; cited the review already
+    backing the record for the carboxysome trait link.
+  llm_assisted: true
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
+  llm_assisted: true
 xrefs:
 - uniprot.location:SL-0034
+discussions:
+- discussion_id: rbcx_not_a_component
+  prompt: Should the RuBisCO assembly chaperone RbcX (Q31N04) be a carboxysome component?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#rubisco
+  rationale: The UniProt Subcellular Location seeding reported RbcX as annotated to
+    the carboxysome with no matching component. It is an RbcL-specific folding chaperone
+    whose homodimer binds the exposed C-terminus of an RbcL monomer during assembly;
+    it is not part of the assembled structure. Recording the decision so the next
+    seeding run does not re-raise it.
+  resolution_note: 'Declined: RbcX is assembly machinery for the cargo, not a component
+    of the carboxysome. Its localisation annotation reflects where it acts.'
+  posed_by: claude
+  posed_date: '2026-08-30'
+  resolved_date: '2026-08-30'
+  evidence:
+  - reference: PMID:20080631
+    notes: UniProt (Q31N04) describes RbcX as an RbcL-specific chaperone whose central
+      cleft binds the RbcL C-terminus during RuBisCO assembly.

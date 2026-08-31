@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/carboxysome.yaml
+  slug: carboxysome
+session:
+  id: 2026-08-30T192037Z-claude-code-c93cae
+  timestamp: '2026-08-30T19:20:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/40
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Add the three components the UniProt SL seeding found unmatched; decline RbcX
+  details: 'The UniProt Subcellular Location seeding (#28) reported five reviewed S. elongatus
+    PCC 7942 proteins annotated to the carboxysome with experimental evidence but no matching
+    component. Four belong: CcmO and CcmP are tandem-BMC-domain shell paralogues (new bmc_t
+    component; CcmO recruits CcmK2, CcmP is a gated dimer of stacked trimers), CcmN is the
+    adaptor bridging the CcmM scaffold to CcmK2 (new assembly_adaptor), and McdB with the
+    McdA ATPase distributes carboxysomes along the nucleoid (new positioning, marked DISPENSABLE
+    because carboxysomes still form without it). Each carries the papers UniProt attributes
+    the claim to, cited as UniProt''s attribution rather than as reading of the papers. RbcX
+    was declined and the decision recorded as a resolved discussion: it is an RbcL-specific
+    folding chaperone that binds the exposed C-terminus of an RbcL monomer during assembly,
+    not part of the assembled structure, so its carboxysome localisation says where it acts.
+    Re-running the seeder then attached 4 taxon-paired protein examples to the new components;
+    the record now carries 8 components and 12 examples. id-label gate and qc green.'

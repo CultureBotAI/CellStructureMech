@@ -1,0 +1,65 @@
+identifier: GO:0009276
+label: Gram-negative-bacterium-type cell wall
+definition: The relatively thin peptidoglycan layer of a Gram-negative cell envelope,
+  located in the periplasm between the cytoplasmic and outer membranes and physically
+  connected to the outer membrane by lipoproteins.
+definition_source: DOI:10.1101/cshperspect.a000414
+structure_category: ENVELOPE
+structure_kind: ENVELOPE_LAYER
+parent_structures:
+- GO:0009274
+components:
+- component_id: thin_peptidoglycan
+  label: thin peptidoglycan sacculus
+  component_type: PEPTIDOGLYCAN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Provides mechanical integrity within the periplasm.
+  evidence:
+  - reference: DOI:10.1101/cshperspect.a000414
+    notes: Silhavy et al. distinguish the thin wall from the outer membrane.
+- component_id: outer_membrane_lipoprotein_links
+  label: peptidoglycan–outer-membrane lipoprotein links
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  role: Couple the peptidoglycan layer mechanically to the outer membrane in many
+    diderms.
+  evidence:
+  - reference: DOI:10.1101/cshperspect.a000414
+    notes: Envelope review describes lipoprotein coupling.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1224
+  taxon_label: Pseudomonadota
+  presence: COMMON
+  note: Canonical diderm architecture; envelope variants occur across bacteria.
+  reference: DOI:10.1101/cshperspect.a000414
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Reference organism for Gram-negative envelope architecture.
+  reference: DOI:10.1101/cshperspect.a000414
+functions:
+- function_id: periplasmic_mechanical_integrity
+  label: cell-shape maintenance within a diderm envelope
+  evidence:
+  - reference: DOI:10.1101/cshperspect.a000414
+    notes: The peptidoglycan wall is the stress-bearing envelope layer.
+evidence:
+- reference: DOI:10.1101/cshperspect.a000414
+  notes: The bacterial cell envelope.
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-08-30T19:30:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Added as a literature-backed foundational seed. Identity checked against
+    the 2026-07-01 Gene Ontology release; requires human review.
+  llm_assisted: true
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
+  llm_assisted: true

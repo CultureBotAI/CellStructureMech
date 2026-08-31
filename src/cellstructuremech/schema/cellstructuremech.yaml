@@ -55,11 +55,13 @@ prefixes:
   NCBIfam: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/
   ComplexPortal: https://www.ebi.ac.uk/complexportal/complex/
   UniProtKB: https://www.uniprot.org/uniprotkb/
+  RNAcentral: https://rnacentral.org/rna/
   NCBIGene: https://www.ncbi.nlm.nih.gov/gene/
   KEGG: https://www.kegg.jp/entry/
   # Structures
   PDB: https://www.rcsb.org/structure/
   EMDB: https://www.ebi.ac.uk/emdb/
+  EMPIAR: https://www.ebi.ac.uk/empiar/EMPIAR-
   # Taxonomy
   NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
   # Provenance
@@ -100,7 +102,7 @@ classes:
           directly when one denotes exactly this structure (e.g. GO:0005840
           ribosome, GO:0009288 bacterial-type flagellum). Mint a
           `cellstructuremech:` identifier when no term is an exact fit; record
-          the nearest broader term in `part_of` or `xrefs` instead.
+          the nearest broader term in `parent_structures` instead.
         identifier: true
         required: true
         range: string
@@ -116,13 +118,18 @@ classes:
           Textual definition. Prefer the IAO:0000115 definition of the
           grounding term; curators may extend it with microbial specifics.
         range: string
-        recommended: true
+        required: true
 
       definition_source:
         description: >-
           IAO:0000119 — citation for the definition (PMID:..., DOI:..., or
           the ontology term the definition is quoted from).
+        required: true
         range: string
+        # A placeholder must not satisfy a required provenance field: making
+        # definition_source required while TODO:add_citation validates would turn
+        # missing provenance, which is countable, into fake provenance (#70).
+        pattern: "^(?!(?:TODO|FIXME|XXX|TBD):)(?:[A-Za-z][A-Za-z0-9._-]*:\\S+|https?://\\S+)$"
 
       synonyms:
         multivalued: true
@@ -143,7 +150,7 @@ classes:
           kind PROTEIN_SHELLED_ORGANELLE; the flagellar motor is category
           APPENDAGE and kind MULTIPROTEIN_COMPLEX.
         range: StructureKindEnum
-        recommended: true
+        required: true
 
       parent_structures:
         description: >-
@@ -194,6 +201,17 @@ classes:
         inlined_as_list: true
         range: StructuralComponent
 
+      complex_compositions:
+        description: >-
+          Taxon-specific, source-versioned composition assertions imported
+          from a curated complex database. These are deliberately separate
+          from `components`: an E. coli UniProt accession and its copy number
+          are evidence about one organism's assembly, not the identity of a
+          taxon-agnostic component family.
+        multivalued: true
+        inlined_as_list: true
+        range: ComplexComposition
+
       taxonomic_distribution:
         description: >-
           Which clades have the structure, and how consistently. A structure
@@ -243,9 +261,9 @@ classes:
       images:
         description: >-
           Microscopy or other imaging evidence for the structure. Every image
-          carries an explicit licence, a stable source URL, the taxon imaged
-          and a DOI or PMID, so the picture on the record page is itself a
-          cited, attributed claim. Images under a hostable licence (CC0,
+          carries an explicit licence, a stable source URL and the taxon imaged;
+          include a DOI or PMID when the image is tied to a publication. Images
+          under a hostable licence (CC0,
           public domain, CC BY, CC BY-SA) are copied into the site; others
           are linked only. The first entry is shown at the top of the page.
         multivalued: true
@@ -336,6 +354,15 @@ classes:
       component_type:
         required: true
         range: ComponentTypeEnum
+      component_role:
+        description: >-
+          Whether the component is part of what the structure is made of, or
+          machinery that acts on the assembled structure. `essentiality` cannot
+          carry this: it says only whether the structure assembles without the
+          component, so a constituent can be DISPENSABLE too — the flagellar
+          stator is, and the flagellum still cannot rotate without it (#77).
+        required: true
+        range: ComponentRoleEnum
       grounding:
         description: >-
           Taxon-agnostic CURIE: InterPro / Pfam / NCBIfam for a protein family,
@@ -375,6 +402,7 @@ classes:
         range: ProteinExample
       evidence:
         description: Citations supporting this component's membership and role.
+        required: true
         multivalued: true
         inlined_as_list: true
         range: EvidenceItem
@@ -417,6 +445,86 @@ classes:
         inlined_as_list: true
         range: EvidenceItem
 
+  ComplexComposition:
+    description: >-
+      A lossless, taxon-specific composition assertion from Complex Portal.
+      The source accession is verified through the live accession endpoint;
+      its presence here does not assert that the source complex is equivalent
+      to the whole CellStructureRecord.
+    attributes:
+      composition_id:
+        identifier: true
+        required: true
+        range: string
+      source:
+        required: true
+        range: ComplexCompositionSourceEnum
+      source_accession:
+        required: true
+        range: string
+        pattern: "^ComplexPortal:CPX-[0-9]+$"
+      source_url:
+        required: true
+        range: uri
+      complex_label:
+        required: true
+        range: string
+      taxon_id:
+        required: true
+        range: string
+        pattern: "^NCBITaxon:[0-9]+$"
+      taxon_label:
+        required: true
+        range: string
+      assembly:
+        description: Source-provided assembly summary, such as Hetero22-mer.
+        range: string
+      evidence_code:
+        description: ECO CURIE supplied by the source for the complex assertion.
+        range: string
+        pattern: "^ECO:[0-9]+$"
+      participants:
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: ComplexParticipant
+      retrieved_on:
+        required: true
+        range: date
+      notes:
+        range: string
+
+  ComplexParticipant:
+    description: One participant exactly as asserted in a source complex entry.
+    attributes:
+      participant_id:
+        identifier: true
+        required: true
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+      label:
+        required: true
+        range: string
+      participant_type:
+        required: true
+        range: string
+      gene_symbol:
+        range: string
+      stoichiometry:
+        description: >-
+          Exact source range normalized as one number or `min-max`; omitted
+          when Complex Portal does not assert a value.
+        range: string
+        pattern: "^[0-9]+(?:\\.[0-9]+)?(?:-[0-9]+(?:\\.[0-9]+)?)?$"
+      source_interactor_id:
+        range: string
+        pattern: "^EBI-[0-9]+$"
+      canonical_component_ref:
+        description: >-
+          Optional curator-reviewed link to `components#<component_id>`.
+          Import never fills this by name similarity.
+        range: string
+
   TaxonomicScope:
     description: Presence of the structure in a clade.
     attributes:
@@ -435,7 +543,9 @@ classes:
         range: string
       reference:
         description: PMID:..., DOI:..., or an opaque URL.
+        required: true
         range: string
+        pattern: "^(?:[A-Za-z][A-Za-z0-9._-]*:\\S+|https?://\\S+)$"
 
   CanonicalExample:
     description: A reference organism in which the structure was characterised archetypally.
@@ -450,7 +560,9 @@ classes:
       note:
         range: string
       reference:
+        required: true
         range: string
+        pattern: "^(?:[A-Za-z][A-Za-z0-9._-]*:\\S+|https?://\\S+)$"
 
   StructureFunction:
     description: A process or activity the structure carries out.
@@ -490,6 +602,12 @@ classes:
         range: TraitRelationEnum
       note:
         range: string
+      evidence:
+        description: Citations supporting the asserted structure-to-trait relation.
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
 
   PhysicalProperty:
     description: A measured dimension or count for the structure.
@@ -502,7 +620,7 @@ classes:
         required: true
         range: string
       unit:
-        description: UO CURIE (UO:0000018 nanometer, UO:0000021 kilodalton) — omit for counts.
+        description: UO CURIE (UO:0000018 nanometer, UO:0000222 kilodalton) — omit for counts.
         range: string
         pattern: "^UO:[0-9]+$"
       context:
@@ -510,8 +628,9 @@ classes:
         range: string
       reference:
         description: PMID:..., DOI:..., or an opaque URL.
-        recommended: true
+        required: true
         range: string
+        pattern: "^(?:[A-Za-z][A-Za-z0-9._-]*:\\S+|https?://\\S+)$"
 
   StructureImage:
     description: >-
@@ -601,7 +720,9 @@ classes:
       synonym_type:
         range: SynonymTypeEnum
       source:
+        required: true
         range: string
+        pattern: "^(?:[A-Za-z][A-Za-z0-9._-]*:\\S+|https?://\\S+)$"
 
   EvidenceItem:
     description: A literature or database citation supporting a claim.
@@ -610,6 +731,7 @@ classes:
         description: PMID:..., DOI:..., or an opaque URL.
         required: true
         range: string
+        pattern: "^(?:[A-Za-z][A-Za-z0-9._-]*:\\S+|https?://\\S+)$"
       snippet:
         description: Verbatim quote from the source. Only when actually verbatim.
         range: string
@@ -635,8 +757,10 @@ classes:
       graph_kind:
         description: What the graph explains — assembly, function, or regulation.
         range: GraphKindEnum
+        required: true
       scope_status:
         range: CausalGraphScopeEnum
+        required: true
       scope_notes:
         range: string
       nodes:
@@ -715,10 +839,13 @@ classes:
         pattern: "^20[0-9]{2}-"
       curator:
         range: string
+        required: true
       action:
         range: string
+        required: true
       changes:
         range: string
+        required: true
       llm_assisted:
         range: boolean
 
@@ -789,6 +916,22 @@ enums:
       SMALL_MOLECULE:
         description: A cofactor, pigment, mineral or storage polymer.
       OTHER:
+
+  ComponentRoleEnum:
+    description: >-
+      Where a component sits relative to the assembled structure. See the
+      component boundary in docs/CURATION.md: a protein acting on a subunit
+      before assembly and then departing is not a component at all.
+    permissible_values:
+      CONSTITUENT:
+        description: Part of what the structure is built from.
+      ASSOCIATED_MACHINERY:
+        description: >-
+          Binds the assembled structure to position, partition or maintain it.
+          Cannot be ESSENTIAL: the structure forms before it acts.
+  ComplexCompositionSourceEnum:
+    permissible_values:
+      COMPLEX_PORTAL:
 
   ComponentGroundingStatusEnum:
     permissible_values:

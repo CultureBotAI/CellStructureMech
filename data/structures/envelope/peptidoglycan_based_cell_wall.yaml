@@ -1,0 +1,60 @@
+identifier: GO:0009274
+label: peptidoglycan-based cell wall
+definition: A protective, load-bearing structure outside the cytoplasmic membrane,
+  built from glycan strands of alternating N-acetylglucosamine and N-acetylmuramic
+  acid cross-linked by short peptides. The resulting murein sacculus surrounds the
+  cell and resists turgor pressure.
+definition_source: DOI:10.1111/j.1574-6976.2007.00094.x
+synonyms:
+- synonym_text: murein sacculus
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1111/j.1574-6976.2007.00094.x
+structure_category: ENVELOPE
+structure_kind: ENVELOPE_LAYER
+components:
+- component_id: peptidoglycan
+  label: peptidoglycan
+  component_type: PEPTIDOGLYCAN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Forms the covalently closed, stress-bearing mesh around the cytoplasmic membrane.
+  evidence:
+  - reference: DOI:10.1111/j.1574-6976.2007.00094.x
+    notes: Vollmer et al. review sacculus chemistry and architecture.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Present in most bacteria; wall-less lineages and L-forms are exceptions.
+  reference: DOI:10.1111/j.1574-6976.2007.00094.x
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Canonical Gram-negative murein sacculus model.
+  reference: DOI:10.1111/j.1574-6976.2007.00094.x
+functions:
+- function_id: shape_and_osmotic_integrity
+  label: cell shape maintenance and resistance to turgor pressure
+  description: The cross-linked sacculus bears mechanical stress while permitting
+    growth.
+  evidence:
+  - reference: DOI:10.1111/j.1574-6976.2007.00094.x
+    notes: Structural and physical roles of the sacculus.
+evidence:
+- reference: DOI:10.1111/j.1574-6976.2007.00094.x
+  notes: Peptidoglycan structure and architecture.
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-08-30T19:30:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Added as a literature-backed foundational seed. Identity checked against
+    the 2026-07-01 Gene Ontology release; requires human review.
+  llm_assisted: true
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
+  llm_assisted: true

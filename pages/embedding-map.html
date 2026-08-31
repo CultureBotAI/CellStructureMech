@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Text embedding map · CellStructureMech</title>
+<link rel="stylesheet" href="style.css">
+<script src="theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html">CellStructureMech</a>
+  <nav>
+    <a href="browse.html">Browse</a>
+    <a href="embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>Text embedding map</h1>
+<p class="definition">An exploratory semantic view of the corpus. Each point embeds the record's
+definition, canonical components, functions, taxonomic scope, and physical-property context.</p>
+<p class="meta">The committed sentence-transformers/all-MiniLM-L6-v2 vectors are projected with PCA after unit normalization.
+Two-dimensional distance is lossy; use cosine neighbours for the full-vector comparison.</p>
+
+<div class="map-controls">
+  <label for="map-category">Category</label>
+  <select id="map-category"><option value="">All categories</option></select>
+</div>
+<div id="embedding-map" class="embedding-map" aria-label="Scatter plot of structure text embeddings"></div>
+<section id="map-details" class="map-details" aria-live="polite">
+  <h2>Select a structure</h2>
+  <p>Choose a labelled point to inspect its nearest semantic neighbours.</p>
+</section>
+
+<script>
+(() => {
+  const colors = {
+    APPENDAGE: "#b24c63", ENVELOPE: "#2f7d73", MICROCOMPARTMENT: "#a56a17",
+    RIBONUCLEOPROTEIN: "#5368a6", OTHER: "#666"
+  };
+  const ns = "http://www.w3.org/2000/svg";
+  const plot = document.getElementById("embedding-map");
+  const select = document.getElementById("map-category");
+  const details = document.getElementById("map-details");
+  Promise.all([
+    fetch("data/structure_text_map.json").then(r => r.json()),
+    fetch("data/structure_text_neighbors.json").then(r => r.json())
+  ]).then(([map, neighborData]) => {
+    const neighborById = Object.fromEntries(neighborData.records.map(r => [r.identifier, r]));
+    [...new Set(map.records.map(r => r.category))].sort().forEach(category => {
+      const option = document.createElement("option");
+      option.value = category;
+      option.textContent = category;
+      select.appendChild(option);
+    });
+    const xs = map.records.map(r => r.x), ys = map.records.map(r => r.y);
+    const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
+    const scale = (value, low, high, start, end) => high === low ? (start + end) / 2 :
+      start + (value - low) * (end - start) / (high - low);
+
+    function show(record) {
+      const nearest = neighborById[record.identifier].neighbors;
+      details.replaceChildren();
+      const heading = document.createElement("h2");
+      const link = document.createElement("a");
+      link.href = record.page;
+      link.textContent = record.label;
+      heading.appendChild(link);
+      details.appendChild(heading);
+      const id = document.createElement("p");
+      id.className = "meta";
+      id.textContent = `${record.identifier} · ${record.category}`;
+      details.appendChild(id);
+      const title = document.createElement("h3");
+      title.textContent = "Nearest by full-vector cosine similarity";
+      details.appendChild(title);
+      const list = document.createElement("ol");
+      nearest.forEach(item => {
+        const row = document.createElement("li");
+        const target = map.records.find(r => r.identifier === item.identifier);
+        const targetLink = document.createElement("a");
+        targetLink.href = target.page;
+        targetLink.textContent = item.label;
+        row.append(targetLink, ` (${item.cosine_similarity.toFixed(3)})`);
+        list.appendChild(row);
+      });
+      details.appendChild(list);
+    }
+
+    function draw() {
+      plot.replaceChildren();
+      const svg = document.createElementNS(ns, "svg");
+      svg.setAttribute("viewBox", "0 0 900 520");
+      svg.setAttribute("role", "img");
+      svg.setAttribute("aria-label", "PCA projection of structure text embeddings");
+      map.records.filter(r => !select.value || r.category === select.value).forEach(record => {
+        const x = scale(record.x, minX, maxX, 95, 805);
+        const y = scale(record.y, minY, maxY, 440, 70);
+        const group = document.createElementNS(ns, "a");
+        group.setAttribute("href", record.page);
+        group.addEventListener("click", event => { event.preventDefault(); show(record); });
+        const circle = document.createElementNS(ns, "circle");
+        circle.setAttribute("cx", x); circle.setAttribute("cy", y); circle.setAttribute("r", "9");
+        circle.setAttribute("fill", colors[record.category] || colors.OTHER);
+        const label = document.createElementNS(ns, "text");
+        label.setAttribute("x", x + 14); label.setAttribute("y", y + 5);
+        label.textContent = record.label;
+        group.append(circle, label); svg.appendChild(group);
+      });
+      plot.appendChild(svg);
+    }
+    select.addEventListener("change", draw);
+    draw();
+  }).catch(error => {
+    plot.textContent = `Could not load embedding artifacts: ${error.message}`;
+  });
+})();
+</script>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

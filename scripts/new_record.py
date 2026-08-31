@@ -5,7 +5,9 @@ Dry-run by default: prints the YAML that would be written. Pass --apply to
 write it. Refuses to overwrite an existing file or reuse an identifier.
 
     python scripts/new_record.py --category APPENDAGE --identifier GO:0009288 \
-        --label "bacterial-type flagellum" --kind APPENDAGE --curator jane --apply
+        --label "bacterial-type flagellum" --kind APPENDAGE \
+        --definition "A flagellum ..." --definition-source GO:0009288 \
+        --curator jane --apply
 """
 
 from __future__ import annotations
@@ -30,12 +32,9 @@ def build_doc(args: argparse.Namespace) -> dict:
         "label": args.label,
         "structure_category": args.category,
     }
-    if args.kind:
-        doc["structure_kind"] = args.kind
-    if args.definition:
-        doc["definition"] = args.definition
-    if args.definition_source:
-        doc["definition_source"] = args.definition_source
+    doc["structure_kind"] = args.kind
+    doc["definition"] = args.definition
+    doc["definition_source"] = args.definition_source
     doc["mapping_status"] = "PROPOSED"
     record_curation_event(
         doc,
@@ -52,9 +51,9 @@ def main() -> int:
     parser.add_argument("--identifier", required=True, help="GO:... or cellstructuremech:...")
     parser.add_argument("--label", required=True)
     parser.add_argument("--category", required=True, help="StructureCategoryEnum value")
-    parser.add_argument("--kind", help="StructureKindEnum value")
-    parser.add_argument("--definition")
-    parser.add_argument("--definition-source")
+    parser.add_argument("--kind", required=True, help="StructureKindEnum value")
+    parser.add_argument("--definition", required=True)
+    parser.add_argument("--definition-source", required=True)
     parser.add_argument("--curator", default="unknown")
     parser.add_argument("--llm-assisted", action="store_true")
     parser.add_argument("--apply", action="store_true", help="Write the file (default: dry run).")

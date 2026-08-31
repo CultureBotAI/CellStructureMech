@@ -1,0 +1,185 @@
+identifier: GO:1990586
+label: divisome complex
+definition: The membrane-associated protein machine that constricts a dividing bacterial
+  cell. It is organised by the FtsZ ring — treadmilling filaments of the tubulin homologue
+  FtsZ tethered to the inner membrane — which positions and moves the septal peptidoglycan
+  synthases that build the division septum.
+definition_source: GO:1990586
+synonyms:
+- synonym_text: Z ring
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1146/annurev-biophys-121219-081703
+structure_category: DIVISION_MACHINERY
+structure_kind: MULTIPROTEIN_COMPLEX
+components:
+- component_id: ftsz
+  label: FtsZ filaments
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ftsZ
+  essentiality: ESSENTIAL
+  role: Tubulin homologue whose GTP-dependent treadmilling filaments form the ring
+    and distribute the septal synthases.
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-121219-081703
+    notes: McQuillen & Xiao 2020 review FtsZ filament treadmilling and its role in
+      organising the ring.
+- component_id: membrane_tethers
+  label: membrane tethers (FtsA, ZipA/SepF)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ftsA
+  - zipA
+  - sepF
+  essentiality: ESSENTIAL
+  role: Anchor FtsZ filaments to the inner membrane; the anchor differs between lineages.
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-121219-081703
+    notes: McQuillen & Xiao 2020 describe FtsA and ZipA tethering FtsZ to the membrane.
+  - reference: DOI:10.1111/j.1749-6632.2012.06818.x
+    notes: Egan & Vollmer 2012 review the septal synthases and the membrane anchoring
+      of FtsZ.
+- component_id: septal_pg_synthase
+  label: septal peptidoglycan synthase (FtsW-FtsI)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ftsW
+  - ftsI
+  essentiality: ESSENTIAL
+  role: Builds the septal cell wall; its movement is guided by the treadmilling FtsZ
+    filaments.
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-121219-081703
+    notes: McQuillen & Xiao 2020 review FtsW-FtsI septal synthesis and its coupling
+      to FtsZ dynamics.
+  - reference: DOI:10.1111/j.1749-6632.2012.06818.x
+    notes: Egan & Vollmer 2012 review the septal synthases and the membrane anchoring
+      of FtsZ.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: FtsZ-based division is the norm; a few lineages (e.g. Chlamydiae, some Planctomycetes)
+    divide without FtsZ.
+  reference: DOI:10.1146/annurev-biophys-121219-081703
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: VARIABLE
+  note: Euryarchaeota use FtsZ; some other archaea divide with an ESCRT-III-related
+    system instead.
+  reference: DOI:10.1146/annurev-biophys-121219-081703
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference system for divisome assembly order and FtsZ treadmilling.
+  reference: DOI:10.1146/annurev-biophys-121219-081703
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: Reference Gram-positive divisome.
+  reference: DOI:10.1146/annurev-biophys-121219-081703
+functions:
+- function_id: cell_division
+  label: cell division
+  grounding: GO:0051301
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-121219-081703
+    notes: McQuillen & Xiao 2020 review the FtsZ ring as the organiser of bacterial
+      cytokinesis.
+- function_id: septum_assembly
+  label: division septum assembly
+  grounding: GO:0000917
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-121219-081703
+    notes: McQuillen & Xiao 2020 describe septal peptidoglycan synthesis directed
+      by the ring.
+  - reference: DOI:10.1111/j.1749-6632.2012.06818.x
+    notes: Egan & Vollmer 2012 describe septal peptidoglycan synthesis as the output
+      of the divisome.
+evidence:
+- reference: DOI:10.1146/annurev-biophys-121219-081703
+  notes: McQuillen R & Xiao J 2020, 'Insights into the Structure, Function, and Dynamics
+    of the Bacterial Cytokinetic FtsZ-Ring', Annual Review of Biophysics.
+- reference: DOI:10.1111/j.1749-6632.2012.06818.x
+  notes: Egan AJF & Vollmer W 2012, 'The physiology of bacterial cell division', Annals
+    of the New York Academy of Sciences — independent review of divisome composition
+    and septal synthesis.
+causal_graphs:
+- graph_id: treadmilling_guides_septum
+  title: FtsZ treadmilling distributes the septal synthases
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ftsz
+    label: FtsZ filaments
+    node_type: GENE_OR_PROTEIN
+    component_ref: ftsz
+  - node_id: tether
+    label: membrane tethers
+    node_type: GENE_OR_PROTEIN
+    component_ref: membrane_tethers
+  - node_id: ring
+    label: FtsZ ring
+    node_type: STRUCTURE
+  - node_id: synthase
+    label: FtsW-FtsI septal synthase
+    node_type: GENE_OR_PROTEIN
+    component_ref: septal_pg_synthase
+  - node_id: septum
+    label: division septum assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000917
+  edges:
+  - subject: tether
+    predicate: anchors
+    object: ftsz
+    evidence:
+    - reference: DOI:10.1146/annurev-biophys-121219-081703
+      notes: 'McQuillen & Xiao 2020: FtsA and ZipA hold FtsZ filaments at the membrane.'
+  - subject: ftsz
+    predicate: assembles into
+    object: ring
+    evidence:
+    - reference: DOI:10.1146/annurev-biophys-121219-081703
+      notes: McQuillen & Xiao 2020 describe filament assembly into the Z ring at midcell.
+  - subject: ring
+    predicate: distributes
+    object: synthase
+    description: Treadmilling filaments move the synthases around the division site,
+      spreading septal synthesis.
+    evidence:
+    - reference: DOI:10.1146/annurev-biophys-121219-081703
+      notes: McQuillen & Xiao 2020 review treadmilling-guided motion of the septal
+        synthases.
+  - subject: synthase
+    predicate: carries out
+    object: septum
+    evidence:
+    - reference: DOI:10.1146/annurev-biophys-121219-081703
+      notes: 'McQuillen & Xiao 2020: FtsW-FtsI builds the septal peptidoglycan.'
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-08-31T03:48:12Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Drafted from the cited review. Every GO term, taxon id and DOI was resolved
+    against OLS, NCBI Taxonomy and Crossref before writing; evidence notes state what
+    the review says, not a reading of primary literature. Not yet human-reviewed.
+  llm_assisted: true
+- timestamp: '2026-08-31T03:54:23Z'
+  curator: claude
+  action: ADD_CORROBORATION
+  changes: Added Egan & Vollmer 2012 as an independent second source (#63) and part_of
+    the cell division site (#64).
+  llm_assisted: true
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
+  llm_assisted: true
+part_of:
+- GO:0032153

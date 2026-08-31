@@ -55,9 +55,16 @@ to match — never one without the other.
 
 - **Record-level `evidence` is optional** for GO-grounded records: the term
   carries provenance.
-- **Every `function`, every `component.protein_examples` entry, and every
-  causal-graph `edge` requires evidence.** These are curator-asserted claims
-  nothing upstream vouches for.
+- **Every definition, synonym, component, taxonomic-scope assertion, canonical
+  example, function, trait link, physical property, `component.protein_examples`
+  entry, and causal-graph `edge` requires a source or evidence.** These are
+  curator-asserted claims nothing upstream vouches for. Image provenance is
+  carried by its source accession and URL, licence, attribution, taxon, and
+  (when one exists) publication reference.
+- **A placeholder is not a source.** `definition_source` is required and its
+  pattern rejects `TODO:`, `FIXME:`, `XXX:` and `TBD:` prefixes. For a
+  GO-grounded record the term id is always an honest answer; for a minted one,
+  a real citation is what justifies minting in the first place.
 - `snippet` is for **verbatim** quotes only. When you have not seen the
   source text, use `notes` to paraphrase what the source establishes. A
   fabricated quotation is worse than none.
@@ -69,6 +76,25 @@ to match — never one without the other.
 - A component is a **taxon-agnostic family or class**: "flagellin", not
   "FliC of *Salmonella* Typhimurium". Organism-specific accessions go in
   `protein_examples`, paired with the taxon the role was established in.
+- **Where the boundary runs.** A component is normally a constituent — one of
+  the proteins, RNAs, lipids or polysaccharides the structure is built from.
+  It may *also* be machinery that binds the **assembled** structure to
+  position, partition or maintain it (McdB on the carboxysome, the MamK/MamJ
+  filament aligning magnetosomes); such a component is `DISPENSABLE`, since the
+  structure forms without it. The converse does not hold — `essentiality` says
+  only whether the structure assembles without the component, so a genuine
+  constituent can be `DISPENSABLE` too (the flagellar stator: the flagellum is
+  built without MotA/MotB, it just cannot turn). **`component_role` carries the
+  distinction** — `CONSTITUENT` or `ASSOCIATED_MACHINERY` — and is required, so
+  a consumer asking what a structure is made of can filter on it. Machinery can
+  never be `ESSENTIAL`; a test enforces that. A protein that acts on a **subunit before
+  assembly** and then departs is **not** a component — the RuBisCO folding
+  chaperone RbcX is the worked example. Its localisation annotation says where
+  it acts, not what it belongs to.
+- **Record a decline, don't just omit it.** When a source annotates a protein
+  to the structure and you judge it out of scope, add a `RESOLVED` discussion
+  saying why (see `rbcx_not_a_component` on the carboxysome). Otherwise the
+  next seeding run reports it as a gap again and the reasoning is lost.
 - Ground proteins to InterPro / Pfam / NCBIfam, sub-complexes to ComplexPortal
   or GO, lipids and polysaccharides to CHEBI, RNAs to SO. **Do not guess an
   accession.** Leave `grounding` unset and open a `CURATION_TODO` discussion;
@@ -82,6 +108,17 @@ to match — never one without the other.
   term exists. It requires `grounding_notes` saying why.
 - `essentiality` is about whether *the structure* forms, not whether the cell
   lives.
+
+Complex Portal imports are a second, deliberately separate layer:
+
+- `components` remains the curated, taxon-agnostic model.
+- `complex_compositions` preserves one source's organism-specific UniProt /
+  RNAcentral participants and copy numbers without pretending those accessions
+  define a family across taxa.
+- Resolve an exact `CPX-N` through `scripts/complex_portal.py`; do not apply a
+  search result or add it to `xrefs` unless it is genuinely equivalent to the
+  entire record. A required scope note says whether the entry is the whole
+  record or a subassembly.
 
 ## Trait links
 
@@ -124,6 +161,49 @@ claim like any other and carries its own provenance:
   `extmetadata`, PMC `license_code`), not off a re-hosting page.
 - **Never scrape in bulk.** Fetch one image, check the file and its metadata,
   then the next. Prefer sources ranked in `research/`.
+
+Source-specific commands (all dry-run unless `--apply` is present):
+
+- `scripts/emdb_empiar.py image` records the CC0 raw EMPIAR dataset and the
+  small linked EMDB depositor figure. The EMDB `natural_source` taxon must
+  already be present on the record; reconstruction resolution is image
+  provenance, not a biological `physical_property`.
+- `scripts/pmc_oa.py image` reads current-version metadata, JATS and media from
+  `pmc-oa-opendata`. Only CC BY/CC0 is hostable, and the exact CC version must
+  be present in JATS and agree with the metadata family. The curator supplies
+  the caption-derived taxon and explicitly acknowledges likely multi-panel figures.
+- `scripts/cell_image_library.py` reads one CIL item's DOI, exact licence,
+  attribution and source-hosted preview from public JSON-LD. It accepts only
+  Public Domain and CC BY 3.0/4.0 items. CIL supplies an organism name but no
+  machine-readable taxid there, so the curator supplies a taxon already present
+  on the target record.
+- These image scripts verify downloaded bytes (PMC md5 where supplied, corpus
+  SHA-256 always), validate the complete record mutation before touching the
+  destination, and confine generated filenames to the record image directory.
+
+## Text embedding map
+
+The text map is a derived discovery aid, not curated evidence. Its stable input
+contains a record's name, definition, synonyms, category/kind, canonical
+component labels and roles, functions, taxonomic scope, and physical-property
+context. It deliberately excludes identifiers, citations, images, curation
+history, taxon-specific `complex_compositions`, and protein examples so source
+verbosity does not masquerade as biological similarity.
+
+`just text-embeddings-refresh` runs the model- and library-version-pinned
+`sentence-transformers/all-MiniLM-L6-v2` model locally and commits one vector per
+record. Each labelled line is embedded independently, then the unit vectors are
+mean-pooled so the model's input-length limit cannot silently drop later
+components. No corpus text is sent to an external embedding service. The normal
+`just text-map` command uses the cache to rebuild a two-dimensional PCA view and
+full-vector cosine neighbours without network or model dependencies.
+
+`just text-map-check` is blocking in QC: exact record coverage, semantic-text
+SHA-256, model/revision/dimension, coordinates, and neighbour scores must all be
+current. PCA is used because the corpus presently has too few records for a
+stable nonlinear layout. The map explicitly warns that its two-dimensional
+distances are lossy. The derived-file comparison tolerates only tiny floating-
+point differences from platform BLAS implementations.
 
 ## Status
 

@@ -22,11 +22,23 @@
 
 {% if r.components %}
 <h2>Components</h2>
-<table><thead><tr><th>Component</th><th>Type</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 {% for c in r.components %}
-<tr id="components-{{ c.component_id }}"><td>{{ c.label }}</td><td>{{ c.component_type }}</td><td>{% if c.grounding %}{{ curie(c.grounding) }}{% elif c.grounding_status %}<em>{{ c.grounding_status }}</em>{% endif %}</td><td>{{ (c.gene_symbols or []) | join(", ") }}</td><td>{{ c.stoichiometry or "" }}</td><td>{{ c.essentiality or "" }}</td><td>{{ c.role or "" }}{{ evid(c.evidence) }}</td></tr>
+<tr id="components-{{ c.component_id }}"><td>{{ c.label }}</td><td>{{ c.component_type }}</td><td>{% if c.component_role == "ASSOCIATED_MACHINERY" %}<span class="machinery" title="Binds the assembled structure to position, partition or maintain it">acts on</span>{% else %}part of{% endif %}</td><td>{% if c.grounding %}{{ curie(c.grounding) }}{% elif c.grounding_status %}<em>{{ c.grounding_status }}</em>{% endif %}</td><td>{{ (c.gene_symbols or []) | join(", ") }}</td><td>{{ c.stoichiometry or "" }}</td><td>{{ c.essentiality or "" }}</td><td>{{ c.role or "" }}{{ evid(c.evidence) }}</td></tr>
 {% endfor %}
 </tbody></table>
+{% endif %}
+
+{% if r.complex_compositions %}
+<h2>Source composition assertions</h2>
+{% for c in r.complex_compositions %}
+<h3 id="complex-compositions-{{ c.composition_id }}"><a href="{{ c.source_url }}">{{ c.complex_label }}</a> <small>({{ c.source_accession }})</small></h3>
+<p><em>{{ c.taxon_label }}</em> ({{ curie(c.taxon_id) }}){% if c.assembly %} · {{ c.assembly }}{% endif %}{% if c.evidence_code %} · {{ curie(c.evidence_code) }}{% endif %} · retrieved {{ c.retrieved_on }}</p>
+<table><thead><tr><th>Participant</th><th>Source type</th><th>Gene</th><th>Stoichiometry</th></tr></thead><tbody>
+{% for p in c.participants %}<tr><td>{{ curie(p.participant_id) }} — {{ p.label }}</td><td>{{ p.participant_type }}</td><td>{{ p.gene_symbol or "" }}</td><td>{{ p.stoichiometry or "not asserted" }}</td></tr>{% endfor %}
+</tbody></table>
+{% if c.notes %}<p><small>{{ c.notes }}</small></p>{% endif %}
+{% endfor %}
 {% endif %}
 
 {% if r.taxonomic_distribution %}

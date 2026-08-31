@@ -26,9 +26,19 @@ COMMANDS = [
         "The ranked data-source queue must describe the pipeline that exists, with verified licences.",
     ),
     (
+        "text embedding map",
+        [sys.executable, "scripts/build_text_embedding_map.py", "--check"],
+        "Cached vectors must cover the corpus and match the current semantic text projection.",
+    ),
+    (
         "tests",
         [sys.executable, "-m", "pytest", "-q"],
         "Tests cover corpus-wide invariants that per-record validation cannot see.",
+    ),
+    (
+        "history records",
+        [sys.executable, "scripts/validate_history.py"],
+        "Repository-level history records must validate against the vendored claw schema.",
     ),
     (
         "schema validation",

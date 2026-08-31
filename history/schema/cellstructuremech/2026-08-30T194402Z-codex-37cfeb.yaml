@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: schema
+  path: src/cellstructuremech/schema/cellstructuremech.yaml
+  slug: cellstructuremech
+session:
+  id: 2026-08-30T194402Z-codex-37cfeb
+  timestamp: '2026-08-30T19:44:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - provenance
+  - required_fields
+  - descriptions
+  summary: Make claim-level evidence and core record metadata enforceable
+  details: Required definitions, definition sources, structure kinds, component evidence,
+    taxonomic and exemplar references, trait-link evidence, physical-property references,
+    synonym sources, graph scope metadata, and complete curation events. Added structured-reference
+    patterns, corrected the kilodalton UO example and parent-structure wording, and aligned
+    tests, scaffolding, and curation documentation with the stricter contract.

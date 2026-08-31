@@ -40,7 +40,7 @@ def record_curation_event(
     *,
     curator: str,
     action: str,
-    changes: str | None = None,
+    changes: str,
     llm_assisted: bool = False,
     timestamp: str | None = None,
     skip_if_recent: bool = False,
@@ -64,8 +64,7 @@ def record_curation_event(
         "curator": curator,
         "action": action,
     }
-    if changes is not None:
-        event["changes"] = changes
+    event["changes"] = changes
     if llm_assisted:
         event["llm_assisted"] = True
 

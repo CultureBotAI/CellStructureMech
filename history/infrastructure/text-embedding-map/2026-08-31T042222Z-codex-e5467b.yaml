@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/build_text_embedding_map.py
+  slug: text-embedding-map
+session:
+  id: 2026-08-31T042222Z-codex-e5467b
+  timestamp: '2026-08-31T04:22:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - vectors
+  - map
+  - neighbors
+  - site
+  - qc
+  summary: Add a reproducible semantic text embedding map
+  details: Defined a provenance-free semantic text projection, generated 384-dimensional record
+    vectors locally with revision-pinned sentence-transformers/all-MiniLM-L6-v2, added deterministic
+    PCA coordinates and cosine neighbours, rendered an interactive map, and added offline
+    corpus-hash and derived-artifact gates. The external CBorg path was rejected in favor
+    of local execution so corpus text is not transmitted.

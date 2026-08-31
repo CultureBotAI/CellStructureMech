@@ -15,7 +15,10 @@ from cellstructuremech.validation.write_validated import (
 MINIMAL = {
     "identifier": "GO:0005840",
     "label": "ribosome",
+    "definition": "A ribonucleoprotein complex that translates messenger RNA.",
+    "definition_source": "GO:0005840",
     "structure_category": "RIBONUCLEOPROTEIN",
+    "structure_kind": "RIBONUCLEOPROTEIN_COMPLEX",
     "mapping_status": "PROPOSED",
 }
 
@@ -43,6 +46,10 @@ def test_bad_identifier_pattern_is_rejected():
     assert validate_structure(dict(MINIMAL, identifier="not a curie"))
 
 
+def test_unstructured_provenance_reference_is_rejected():
+    assert validate_structure(dict(MINIMAL, definition_source="a paper somewhere"))
+
+
 def test_causal_edge_without_evidence_is_rejected():
     """Mechanism claims are curator-asserted, so the schema requires edge-level evidence."""
     doc = dict(
@@ -50,6 +57,8 @@ def test_causal_edge_without_evidence_is_rejected():
         causal_graphs=[
             {
                 "graph_id": "g1",
+                "graph_kind": "FUNCTION",
+                "scope_status": "MECHANISTIC",
                 "nodes": [
                     {"node_id": "a", "label": "ribosome", "node_type": "STRUCTURE"},
                     {"node_id": "b", "label": "translation", "node_type": "BIOLOGICAL_PROCESS"},
@@ -64,6 +73,71 @@ def test_causal_edge_without_evidence_is_rejected():
 def test_function_without_evidence_is_rejected():
     doc = dict(MINIMAL, functions=[{"function_id": "f1", "label": "translation"}])
     assert validate_structure(doc)
+
+
+def test_trait_link_without_evidence_is_rejected():
+    doc = dict(
+        MINIMAL,
+        associated_traits=[{
+            "trait_id": "METPO:1000702",
+            "trait_label": "motile",
+            "relation": "CONFERS",
+        }],
+    )
+    assert validate_structure(doc)
+
+
+@pytest.mark.parametrize(
+    ("field", "value"),
+    [
+        ("components", [{
+            "component_id": "protein",
+            "label": "example protein",
+            "component_type": "PROTEIN",
+        }]),
+        ("taxonomic_distribution", [{
+            "taxon_id": "NCBITaxon:2",
+            "taxon_label": "Bacteria",
+            "presence": "COMMON",
+        }]),
+        ("canonical_examples", [{
+            "taxon_id": "NCBITaxon:562",
+            "taxon_label": "Escherichia coli",
+        }]),
+        ("physical_properties", [{
+            "property": "DIAMETER",
+            "value": "20",
+            "unit": "UO:0000018",
+        }]),
+    ],
+)
+def test_claim_bearing_entries_without_provenance_are_rejected(field, value):
+    assert validate_structure(dict(MINIMAL, **{field: value}))
+def test_taxon_specific_complex_composition_is_valid():
+    doc = dict(
+        MINIMAL,
+        complex_compositions=[
+            {
+                "composition_id": "complex_portal_cpx_4022",
+                "source": "COMPLEX_PORTAL",
+                "source_accession": "ComplexPortal:CPX-4022",
+                "source_url": "https://www.ebi.ac.uk/complexportal/complex/CPX-4022",
+                "complex_label": "ATP synthase complex",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli K-12",
+                "participants": [
+                    {
+                        "participant_id": "UniProtKB:P68699",
+                        "label": "ATP synthase subunit c",
+                        "participant_type": "protein",
+                        "stoichiometry": "10",
+                    }
+                ],
+                "retrieved_on": "2026-08-30",
+            }
+        ],
+    )
+    assert validate_structure(doc) == []
 
 
 def test_invalid_record_is_not_written(tmp_path):
@@ -94,3 +168,32 @@ def test_every_record_round_trips_byte_identically(records):
         f"{len(drifted)} record(s) are not what emit_structure_yaml would write, "
         f"e.g. {drifted[:5]}. Reformat them through the helper rather than loosening this test."
     )
+
+
+@pytest.mark.parametrize("placeholder", ["TODO:add_citation", "FIXME:later", "XXX:none", "TBD:unknown"])
+def test_a_placeholder_does_not_satisfy_required_provenance(placeholder):
+    """definition_source is required, so a placeholder that validates would turn
+    missing provenance (countable) into fake provenance (invisible) — #70. A
+    prefix that merely starts with those letters is still a real prefix."""
+    assert validate_structure(dict(MINIMAL, definition_source=placeholder))
+    assert validate_structure(dict(MINIMAL, definition_source="TODOS:real_prefix")) == []
+
+
+def test_component_without_a_role_is_rejected():
+    """component_role is required: the constituent/machinery distinction is not
+    recoverable from essentiality, which only says whether the structure
+    assembles without the component (#77)."""
+    doc = dict(MINIMAL, components=[{
+        "component_id": "c", "label": "x", "component_type": "PROTEIN",
+        "evidence": [{"reference": "GO:0005840", "notes": "n"}],
+    }])
+    assert validate_structure(doc)
+
+
+def test_component_with_an_unknown_role_is_rejected():
+    doc = dict(MINIMAL, components=[{
+        "component_id": "c", "label": "x", "component_type": "PROTEIN",
+        "component_role": "SIDEKICK",
+        "evidence": [{"reference": "GO:0005840", "notes": "n"}],
+    }])
+    assert validate_structure(doc)

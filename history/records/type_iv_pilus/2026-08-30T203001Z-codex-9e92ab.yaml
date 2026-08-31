@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/type_iv_pilus.yaml
+  slug: type_iv_pilus
+session:
+  id: 2026-08-30T203001Z-codex-9e92ab
+  timestamp: '2026-08-30T20:30:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - functions
+  - evidence
+  summary: Correct type IV pilus GO grounding
+  details: Replaced GO:0009290, which denotes DNA import during transformation, with current
+    GO:0043107 type IV pilus-dependent motility after checking QuickGO; rerendered pages.

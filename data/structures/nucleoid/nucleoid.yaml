@@ -1,0 +1,73 @@
+identifier: GO:0009295
+label: nucleoid
+definition: The non-membrane-bounded subcellular region in which a bacterial chromosome
+  is compacted and organized with nucleoid-associated proteins while remaining dynamically
+  coupled to transcription and replication.
+definition_source: DOI:10.1038/nrmicro2261
+structure_category: NUCLEOID
+structure_kind: SUBCELLULAR_REGION
+components:
+- component_id: chromosomal_dna
+  label: chromosomal DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: The genome polymer whose compaction and spatial organization define the nucleoid.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2261
+    notes: Dorman reviews chromosome organization in the bacterial nucleoid.
+- component_id: nucleoid_associated_proteins
+  label: nucleoid-associated proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  role: Bend, bridge, wrap, and constrain DNA and couple chromosome structure to gene
+    expression.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2261
+    notes: The review covers major NAP families and their regulatory roles.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: UNIVERSAL
+  note: The chromosome occupies a nucleoid rather than a membrane-bounded nucleus.
+  reference: DOI:10.1038/nrmicro2261
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Best-characterized bacterial nucleoid and NAP system.
+  reference: DOI:10.1038/nrmicro2261
+functions:
+- function_id: chromosome_organization
+  label: chromosome organization
+  grounding: GO:0051276
+  description: Compacts and spatially organizes the chromosome while preserving access
+    to DNA.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2261
+    notes: Nucleoid architecture is integrated with gene expression.
+evidence:
+- reference: DOI:10.1038/nrmicro2261
+  notes: Bacterial nucleoid-associated proteins, nucleoid structure and gene expression.
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-08-30T19:30:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Added as a literature-backed foundational seed. Identity checked against
+    the 2026-07-01 Gene Ontology release; requires human review.
+  llm_assisted: true
+- timestamp: '2026-08-31T03:48:24Z'
+  curator: uniprot_sl
+  action: ADD_UNIPROT_SL_XREF
+  changes: Added uniprot.location:SL-0187 (Nucleoid); mapping read from the GO line
+    of UniProt subcell.txt.
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
+  llm_assisted: true
+xrefs:
+- uniprot.location:SL-0187

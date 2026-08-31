@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/carboxysome.yaml
+  slug: carboxysome
+session:
+  id: 2026-08-31T040508Z-claude-code-36a6b1
+  timestamp: '2026-08-31T04:05:08Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/67
+  - https://github.com/CultureBotAI/CellStructureMech/issues/68
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  summary: 'Review of the component additions: add the assembly graph they belonged in'
+  details: 'Self-review of PR 60 found that the three components it adds (CcmN adaptor, BMC-T
+    shell paralogues, McdB positioning) described assembly and placement but appeared in no
+    causal graph, because the record carried only the CO2-concentrating FUNCTION graph. Added
+    an ASSEMBLY graph using evidence already verified in that PR: CcmM binds RuBisCO into
+    a cargo condensate, CcmN bridges cargo to shell through its two termini, CcmO recruits
+    CcmK2, BMC-H and BMC-T tile the shell which closes around the cargo, and McdB with McdA
+    spaces mature carboxysomes along the nucleoid. Also stated in the bmc_t role that essentiality
+    differs between CcmO (required) and CcmP (not), since a set component carries one value.
+    A third finding was filed rather than fixed: whether McdB is a component at all, given
+    RbcX was declined in the same PR for acting on the structure rather than being part of
+    it, needs a curator ruling and a sentence in CURATION.md.'

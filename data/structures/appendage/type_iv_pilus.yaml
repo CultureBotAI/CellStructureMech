@@ -1,0 +1,90 @@
+identifier: GO:0044096
+label: type IV pilus
+definition: A dynamic bacterial surface filament assembled from type IV pilins by
+  an inner-membrane ATPase machinery. Reversible extension and retraction can generate
+  force for twitching motility, adhesion, surface sensing, and DNA uptake.
+definition_source: DOI:10.1038/nrmicro.2017.40
+synonyms:
+- synonym_text: type 4 pilus
+  synonym_type: EXACT_SYNONYM
+  source: GO:0044096
+- synonym_text: T4P
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro.2017.40
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+parent_structures:
+- GO:0009289
+components:
+- component_id: major_pilin
+  label: major type IV pilin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Polymerizes into the extracellular pilus filament.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2017.40
+    notes: Hospenthal et al. review T4P filament architecture.
+- component_id: extension_atpase
+  label: PilB-family extension ATPase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Powers pilin polymerization and filament extension.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2017.40
+    notes: The cytoplasmic ATPase drives assembly.
+- component_id: retraction_atpase
+  label: PilT-family retraction ATPase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  role: Powers retraction in retractile type IV pilus systems.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2017.40
+    notes: Retraction ATPases distinguish dynamic systems.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Widely distributed but absent from many lineages and strains.
+  reference: DOI:10.1038/nrmicro.2017.40
+canonical_examples:
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  note: Canonical retractile T4P model for twitching motility.
+  reference: DOI:10.1038/nrmicro.2017.40
+functions:
+- function_id: twitching_motility
+  label: type IV pilus-dependent motility
+  grounding: GO:0043107
+  description: Repeated extension, surface attachment, and retraction pull the cell
+    across a surface.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2017.40
+    notes: T4P dynamics generate motility and adhesion forces.
+evidence:
+- reference: DOI:10.1038/nrmicro.2017.40
+  notes: A comprehensive guide to pilus biogenesis in Gram-negative bacteria.
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-08-30T19:30:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Added as a literature-backed foundational seed. Identity checked against
+    the 2026-07-01 Gene Ontology release; requires human review.
+  llm_assisted: true
+- timestamp: '2026-08-30T20:30:00Z'
+  curator: codex
+  action: CORRECTED_GROUNDING
+  changes: Corrected the type IV pilus motility grounding from GO:0009290 (DNA import
+    during transformation) to current GO:0043107 (type IV pilus-dependent motility),
+    verified in QuickGO.
+  llm_assisted: true
+- timestamp: '2026-08-31T06:12:34Z'
+  curator: claude
+  action: SET_COMPONENT_ROLE
+  changes: component_role became required (#77) so the constituent/machinery distinction
+    is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
+    only where the protein acts on the already-assembled structure.
+  llm_assisted: true

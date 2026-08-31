@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/.vendored_canon_ref
+  slug: vendored-governance
+session:
+  id: 2026-08-30T054404Z-claude-code-e9807c
+  timestamp: '2026-08-30T05:44:04Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/48
+  - https://github.com/CultureBotAI/CellStructureMech/issues/49
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - infrastructure
+  summary: 'Join claw''s vendored governance: 12 artifacts + history.yaml at a pinned canon
+    ref'
+  details: Vendored the claw-governed artifact set (check_vendored_sync, validate_id_label_correspondence,
+    chem_formula, the shared tests, backlog prompt, history.yaml) at claw 6f314e88 via kg-microbe-governance
+    sync; added conf/id_label_targets.yaml and ran the id-label gate, which found 9 mismatches
+    on 4 records — two were modelling errors (GO:0003735 grounding protein sets; SO:0000651
+    grounding the peptidyl-transferase centre) and were fixed, four are documented curator-label
+    exceptions. Replaced the self-referential mech_shared sha pin with the canon ref. Added
+    new-history, validate-history and validate-products recipes; this is the first history
+    record and the canary for new-history.

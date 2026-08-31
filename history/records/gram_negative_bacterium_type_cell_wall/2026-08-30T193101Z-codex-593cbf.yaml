@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+  slug: gram_negative_bacterium_type_cell_wall
+session:
+  id: 2026-08-30T193101Z-codex-593cbf
+  timestamp: '2026-08-30T19:31:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - evidence
+  summary: Add Gram-negative-bacterium-type cell wall record
+  details: Added a PROPOSED literature-backed child of the peptidoglycan wall, keeping the
+    wall distinct from the outer membrane.

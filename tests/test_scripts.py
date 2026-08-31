@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -15,7 +16,8 @@ def _run(*args, cwd=REPO_ROOT):
 
 def test_new_record_dry_run_writes_nothing(tmp_path, monkeypatch):
     out = _run("scripts/new_record.py", "--identifier", "cellstructuremech:TEST", "--label", "test thing",
-               "--category", "OTHER")
+               "--category", "OTHER", "--kind", "OTHER", "--definition", "A test structure.",
+               "--definition-source", "DOI:10.0000/example")
     assert out.returncode == 0, out.stderr
     assert "dry run" in out.stdout
     assert not (REPO_ROOT / "data" / "structures" / "other" / "test_thing.yaml").exists()
@@ -24,7 +26,8 @@ def test_new_record_dry_run_writes_nothing(tmp_path, monkeypatch):
 def test_new_record_refuses_taken_identifier(records):
     ident = records[0][1]["identifier"]
     out = _run("scripts/new_record.py", "--identifier", ident, "--label", "dup",
-               "--category", "OTHER", "--apply")
+               "--category", "OTHER", "--kind", "OTHER", "--definition", "A duplicate.",
+               "--definition-source", "DOI:10.0000/example", "--apply")
     assert out.returncode == 2
     assert "already used" in out.stderr
 
@@ -37,6 +40,17 @@ def test_validate_strict_passes_on_corpus(tmp_path):
 def test_render_check_is_current():
     out = _run("scripts/render_pages.py", "--check")
     assert out.returncode == 0, out.stderr
+
+
+def test_text_embedding_map_check_is_current():
+    out = _run("scripts/build_text_embedding_map.py", "--check")
+    assert out.returncode == 0, out.stderr
+
+
+def test_readme_public_map_link_matches_root_based_pages_layout():
+    readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+    assert "https://culturebotai.github.io/CellStructureMech/pages/embedding-map.html" in readme
+    assert "https://culturebotai.github.io/CellStructureMech/embedding-map.html" not in readme
 
 
 def test_corpus_report_runs():
@@ -63,3 +77,6 @@ def test_rendered_site_has_no_broken_local_links(tmp_path):
             if not (html.parent / url).resolve().exists():
                 broken.append(f"{html.relative_to(out)}: {url}")
     assert not broken, broken
+    map_data = json.loads((out / "data" / "structure_text_map.json").read_text())
+    assert (out / "embedding-map.html").exists()
+    assert all((out / item["page"]).exists() for item in map_data["records"])

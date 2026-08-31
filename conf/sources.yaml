@@ -3,7 +3,7 @@
 # exists; scripts/check_source_queue.py enforces both directions.
 go:
   name: Gene Ontology cellular component
-  homepage: http://geneontology.org/
+  homepage: https://geneontology.org/
   script: scripts/validate_strict.py      # identifiers are GO CURIEs; verified against OLS at review time
   role: identity
 uniprot_sl:
@@ -16,8 +16,38 @@ traitmech:
   homepage: https://github.com/CultureBotAI/TraitMech
   script: scripts/validate_strict.py      # associated_traits CURIEs; cross-repo check pending (#11)
   role: associated_traits
+wikimedia_commons:
+  name: Wikimedia Commons
+  homepage: https://commons.wikimedia.org/
+  script: scripts/fetch_commons_image.py
+  role: images
+
 cell_structure_atlas:
   name: Atlas of Bacterial & Archaeal Cell Structure (CaltechDATA records)
   homepage: https://www.cellstructureatlas.org/
   script: scripts/validate_strict.py      # link-only images; the ImageLicenceEnum + tests forbid hosting CC BY-NC
   role: images (link-only)
+
+complex_portal:
+  name: Complex Portal
+  homepage: https://www.ebi.ac.uk/complexportal/
+  script: scripts/complex_portal.py
+  role: complex_compositions
+
+emdb_empiar:
+  name: EMDB + EMPIAR
+  homepage: https://www.ebi.ac.uk/empiar/
+  script: scripts/emdb_empiar.py
+  role: datasets, images
+
+pmc_oa:
+  name: PubMed Central Open Access on AWS
+  homepage: https://pmc.ncbi.nlm.nih.gov/tools/pmcaws/
+  script: scripts/pmc_oa.py
+  role: images
+
+cell_image_library:
+  name: Cell Image Library
+  homepage: https://www.cellimagelibrary.org/
+  script: scripts/cell_image_library.py
+  role: images
