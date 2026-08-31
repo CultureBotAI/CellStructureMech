@@ -5,9 +5,12 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import ssl
 import urllib.parse
 import urllib.request
 from pathlib import Path
+
+import truststore
 
 from cellstructuremech.validation.write_validated import (
     ValidationFailedError,
@@ -21,12 +24,13 @@ USER_AGENT = {
         "(https://github.com/CultureBotAI/CellStructureMech; curation bot)"
     )
 }
+TLS_CONTEXT = truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
 
 
 def get_bytes(url: str) -> bytes:
     """Read one public source URL with the repository's identifying User-Agent."""
     request = urllib.request.Request(url, headers=USER_AGENT)
-    with urllib.request.urlopen(request, timeout=120) as response:
+    with urllib.request.urlopen(request, timeout=120, context=TLS_CONTEXT) as response:
         return response.read()
 
 

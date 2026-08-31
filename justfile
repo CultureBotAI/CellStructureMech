@@ -151,6 +151,10 @@ emdb-empiar *args:
 pmc-image *args:
     uv run python scripts/pmc_oa.py "$@"
 
+# Per-item CIL JSON-LD ingest; exact Public Domain/CC BY terms and dry-run by default.
+cell-image-library *args:
+    uv run python scripts/cell_image_library.py "$@"
+
 # Refresh with the pinned local sentence-transformers model (no corpus text is
 # transmitted), then rebuild the 2D PCA map and cosine-neighbour index.
 text-embeddings-refresh:

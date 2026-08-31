@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
+import urllib.request
 from pathlib import Path
 
 import pytest
 
+from cellstructuremech import ingest
 from cellstructuremech.ingest import image_destination, write_image_with_validated_record
 from cellstructuremech.validation.write_validated import ValidationFailedError
 
@@ -28,3 +30,27 @@ def test_invalid_record_is_rejected_before_image_bytes_are_written(tmp_path):
             {"identifier": "GO:1"}, record_path, "test.png", b"image bytes", tmp_path
         )
     assert not destination.exists()
+
+
+def test_source_fetch_uses_identity_and_verified_system_tls(monkeypatch):
+    class Response:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_args):
+            return None
+
+        def read(self):
+            return b"source bytes"
+
+    seen = {}
+
+    def fake_urlopen(request, *, timeout, context):
+        seen.update(request=request, timeout=timeout, context=context)
+        return Response()
+
+    monkeypatch.setattr(urllib.request, "urlopen", fake_urlopen)
+    assert ingest.get_bytes("https://example.org/item") == b"source bytes"
+    assert seen["request"].get_header("User-agent").startswith("CellStructureMech/")
+    assert seen["timeout"] == 120
+    assert seen["context"] is ingest.TLS_CONTEXT
