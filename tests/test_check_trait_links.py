@@ -72,3 +72,26 @@ def test_published_index_is_parsed_into_id_to_label(monkeypatch, tmp_path):
     monkeypatch.setattr(ctl.urllib.request, "urlopen", lambda *a, **k: R())
     monkeypatch.setattr(ctl, "CACHE_PATH", tmp_path / "idx.json")
     assert ctl.index_from_published() == {"METPO:1": "motile"}
+
+
+def test_sibling_curies_outside_trait_links_are_collected():
+    """check_curies skips traitmech: and METPO: because this script covers them,
+    so a sibling CURIE in any field must be walked here or checked by nothing (#89)."""
+    doc = {
+        "associated_traits": [{"trait_id": "METPO:1", "trait_label": "motile"}],
+        "xrefs": ["traitmech:000064"],
+        "causal_graphs": [{"nodes": [{"grounding": "METPO:2"}]}],
+    }
+    got = ctl.trait_links([(type("P", (), {"name": "r.yaml"})(), doc)])
+    assert ("r.yaml", "METPO:1", "motile") in got
+    assert ("r.yaml", "traitmech:000064", "") in got, "an xref was not walked"
+    assert ("r.yaml", "METPO:2", "") in got, "a causal-node grounding was not walked"
+
+
+def test_a_curie_with_no_claimed_label_is_checked_for_existence_only(monkeypatch):
+    monkeypatch.setattr(ctl, "load_index", lambda offline=False: ({ctl.CONTROL_GOOD: "motile",
+                                                                  "traitmech:000064": "S-layer"}, "fixture"))
+    monkeypatch.setattr(ctl, "load_records", lambda *a, **k:
+                        [(type("P", (), {"name": "r.yaml"})(), {"xrefs": ["traitmech:000064"]})])
+    monkeypatch.setattr(ctl.sys, "argv", ["check_trait_links.py", "--check"])
+    assert ctl.main() == 0

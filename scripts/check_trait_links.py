@@ -95,12 +95,39 @@ def load_index(offline: bool = False) -> tuple[dict[str, str], str]:
     return index_from_published(offline), PUBLISHED_INDEX
 
 
+SIBLING_PREFIXES = ("traitmech:", "METPO:")
+
+
 def trait_links(records) -> list[tuple[str, str, str]]:
-    """(record file, trait_id, trait_label) for every link in the corpus."""
+    """(record file, trait id, claimed label) for every sibling-repository CURIE.
+
+    Trait links carry a label to check; a sibling CURIE anywhere else — an
+    `xrefs` entry, a `parent_structures` entry, a causal-node grounding — has
+    no label, and is checked for existence alone. Walking the whole record
+    matters because `check_curies.py` skips these prefixes on the grounds that
+    this script covers them; a field neither one walks is checked by nothing
+    (#89).
+    """
+    def sibling_curies(node, seen: set[str], found: list[str]) -> None:
+        if isinstance(node, dict):
+            for value in node.values():
+                sibling_curies(value, seen, found)
+        elif isinstance(node, list):
+            for item in node:
+                sibling_curies(item, seen, found)
+        elif isinstance(node, str) and node.startswith(SIBLING_PREFIXES) and node not in seen:
+            seen.add(node)
+            found.append(node)
+
     out = []
     for path, doc in records:
+        seen: set[str] = set()
         for link in doc.get("associated_traits") or []:
             out.append((path.name, link["trait_id"], link.get("trait_label", "")))
+            seen.add(link["trait_id"])
+        elsewhere: list[str] = []
+        sibling_curies(doc, seen, elsewhere)
+        out.extend((path.name, curie, "") for curie in elsewhere)
     return out
 
 
@@ -132,7 +159,7 @@ def main() -> int:
     for record, trait_id, trait_label in links:
         if trait_id not in index:
             missing.append(f"{record}: {trait_id} is not a TraitMech record")
-        elif index[trait_id].strip().lower() != trait_label.strip().lower():
+        elif trait_label and index[trait_id].strip().lower() != trait_label.strip().lower():
             mislabelled.append(f"{record}: {trait_id} is '{index[trait_id]}' in TraitMech, "
                                f"not '{trait_label}'")
 
