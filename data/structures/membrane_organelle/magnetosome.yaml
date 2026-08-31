@@ -1,0 +1,263 @@
+identifier: GO:0110143
+label: magnetosome
+definition: A membrane-bounded organelle of magnetotactic bacteria enclosing a nanocrystal
+  of a magnetic iron mineral — magnetite (Fe3O4) or greigite (Fe3S4). Magnetosomes
+  are invaginations of the cytoplasmic membrane that are filled with iron, and are
+  arranged into a chain along a cytoskeletal filament so that the cell behaves as
+  a swimming compass needle.
+definition_source: GO:0110143
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+components:
+- component_id: magnetosome_membrane
+  label: magnetosome membrane
+  component_type: LIPID
+  essentiality: ESSENTIAL
+  role: Invagination of the cytoplasmic membrane that encloses the mineral crystal
+    and carries the Mam proteins.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2016.99
+    notes: Uebe & Schüler 2016 review magnetosome membrane invagination as the first
+      step of biogenesis.
+- component_id: mam_proteins
+  label: magnetosome membrane proteins (Mam/Mms)
+  component_type: PROTEIN
+  gene_symbols:
+  - mamA
+  - mamB
+  - mamE
+  - mamM
+  - mamO
+  - mms6
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: A operon-encoded protein set spanning several unrelated families;
+    no single family term denotes it.
+  role: Encoded by the magnetosome gene island; control membrane invagination, iron
+    transport, and crystal nucleation and size.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2016.99
+    notes: Uebe & Schüler 2016 describe the mam and mms genes of the magnetosome island
+      and their roles in biogenesis.
+- component_id: magnetite
+  label: magnetite
+  component_type: SMALL_MOLECULE
+  grounding: CHEBI:46726
+  essentiality: ESSENTIAL
+  role: The magnetic mineral core (Fe3O4), biomineralised to a species-specific size
+    and habit within the vesicle. Some lineages make greigite (Fe3S4, CHEBI:86238)
+    instead.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2016.99
+    notes: Uebe & Schüler 2016 describe magnetite (and greigite) biomineralisation
+      inside the magnetosome vesicle.
+- component_id: mamk_filament
+  label: MamK actin-like filament
+  component_type: PROTEIN
+  gene_symbols:
+  - mamK
+  - mamJ
+  essentiality: CONDITIONAL
+  role: Cytoskeletal filament that aligns magnetosomes into a chain; without it the
+    vesicles form but scatter.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2016.99
+    notes: Uebe & Schüler 2016 describe MamK filaments and the MamJ connector arranging
+      magnetosomes in a chain.
+  protein_examples:
+  - uniprot_id: UniProtKB:V6F519
+    protein_label: Magnetosome-associated protein MamJ
+    gene_symbol: mamJ
+    taxon_id: NCBITaxon:431944
+    taxon_label: Magnetospirillum gryphiswaldense MSR-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: 'UniProt annotates this protein to SL-0510 (magnetosome); component role:
+      Cytoskeletal filament that aligns magnetosomes into a chain; without it the
+      vesicles form but scatter.'
+    evidence:
+    - reference: PMID:14766587
+      notes: ECO:0000269 experimental evidence for the magnetosome localisation of
+        V6F519, as cited by UniProt.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:28211
+  taxon_label: Alphaproteobacteria
+  presence: VARIABLE
+  note: Magnetotaxis is confined to particular lineages; the cultured models are here.
+  reference: DOI:10.1038/nrmicro.2016.99
+- taxon_id: NCBITaxon:1236
+  taxon_label: Gammaproteobacteria
+  presence: RARE
+  note: Magnetotactic representatives are known but few.
+  reference: DOI:10.1038/nrmicro.2016.99
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: No magnetotactic archaeon has been described.
+  reference: DOI:10.1038/nrmicro.2016.99
+canonical_examples:
+- taxon_id: NCBITaxon:431944
+  taxon_label: Magnetospirillum gryphiswaldense MSR-1
+  note: The genetic model for magnetosome biogenesis.
+  reference: DOI:10.1038/nrmicro.2016.99
+- taxon_id: NCBITaxon:342108
+  taxon_label: Paramagnetospirillum magneticum AMB-1
+  note: The second cultured model; source of much of the cell-biological work.
+  reference: DOI:10.1038/nrmicro.2016.99
+functions:
+- function_id: magnetoreception
+  label: magnetoreception
+  description: The magnetosome chain gives the cell a permanent magnetic dipole, so
+    it aligns passively with the geomagnetic field while swimming.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2016.99
+    notes: Uebe & Schüler 2016 describe the chain as a compass needle aligning the
+      cell with the geomagnetic field.
+associated_traits:
+- trait_id: traitmech:000071
+  trait_label: magnetosome
+  relation: CONFERS
+physical_properties:
+- property: DIAMETER
+  value: 35-120
+  unit: UO:0000018
+  context: magnetite crystal, species-dependent
+  reference: DOI:10.1038/nrmicro.2016.99
+evidence:
+- reference: DOI:10.1038/nrmicro.2016.99
+  notes: Uebe R & Schüler D 2016, 'Magnetosome biogenesis in magnetotactic bacteria',
+    Nature Reviews Microbiology.
+causal_graphs:
+- graph_id: magnetosome_chain_alignment
+  title: Membrane invagination, mineralisation and chain assembly make the cell a
+    compass
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: mam
+    label: Mam proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: mam_proteins
+  - node_id: membrane
+    label: magnetosome membrane
+    node_type: STRUCTURE
+    component_ref: magnetosome_membrane
+  - node_id: iron
+    label: iron atom
+    node_type: CHEMICAL
+    grounding: CHEBI:18248
+  - node_id: crystal
+    label: magnetite
+    node_type: CHEMICAL
+    component_ref: magnetite
+  - node_id: mamk
+    label: MamK filament
+    node_type: GENE_OR_PROTEIN
+    component_ref: mamk_filament
+  - node_id: chain
+    label: magnetosome chain
+    node_type: STRUCTURE
+  - node_id: dipole
+    label: cellular magnetic dipole
+    node_type: STATE
+  edges:
+  - subject: mam
+    predicate: forms
+    object: membrane
+    description: Mam proteins drive invagination of the cytoplasmic membrane into
+      a vesicle.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.99
+      notes: 'Uebe & Schüler 2016: magnetosome membrane invagination is protein-directed.'
+  - subject: mam
+    predicate: transports
+    object: iron
+    description: Magnetosome membrane transporters accumulate iron inside the vesicle.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.99
+      notes: Uebe & Schüler 2016 describe MamB/MamM-type transporters supplying iron.
+  - subject: iron
+    predicate: is mineralised into
+    object: crystal
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.99
+      notes: Uebe & Schüler 2016 describe magnetite biomineralisation within the vesicle.
+  - subject: mamk
+    predicate: aligns
+    object: chain
+    description: MamK filaments, connected to vesicles by MamJ, hold the magnetosomes
+      in a linear chain.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.99
+      notes: 'Uebe & Schüler 2016: MamK/MamJ organise the chain; mamJ deletion scatters
+        magnetosomes.'
+  - subject: chain
+    predicate: produces
+    object: dipole
+    description: Summing the single-domain crystal moments along the chain gives the
+      cell a permanent dipole.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.99
+      notes: Uebe & Schüler 2016 describe the chain's summed magnetic moment orienting
+        the cell.
+discussions:
+- discussion_id: no_image_yet
+  prompt: Add a micrograph whose imaged organism is identified to species.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Commons carries CC BY 3.0 TEM images of magnetosome chains from Pósfai
+    et al. (PMC3840360), but their captions identify the cells only as 'magnetotactic
+    Alphaproteobacteria' or an unnamed strain, and the schema requires an image taxon
+    the record already claims.
+  posed_by: claude
+  posed_date: '2026-08-30'
+- discussion_id: localisation_evidence_is_thin
+  prompt: Most magnetosome proteins carry no experimental evidence for their magnetosome
+    localisation in UniProt.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - components#mam_proteins
+  rationale: Seeding UniProt SL-0510 for Magnetospirillum gryphiswaldense MSR-1 returned
+    27 reviewed proteins; only MamJ carries an ECO:0000269 PubMed citation for the
+    localisation itself, so only it produced a protein example. The rest are annotated
+    by rule or similarity. That is a statement about the annotation, not about the
+    biology — but it means per-protein localisation evidence has to come from the
+    primary literature rather than from UniProt.
+  posed_by: claude
+  posed_date: '2026-08-30'
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-08-31T03:48:12Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Drafted from the cited review. Every GO term, taxon id and DOI was resolved
+    against OLS, NCBI Taxonomy and Crossref before writing; evidence notes state what
+    the review says, not a reading of primary literature. Not yet human-reviewed.
+  llm_assisted: true
+- timestamp: '2026-08-31T03:48:24Z'
+  curator: uniprot_sl
+  action: ADD_UNIPROT_SL_XREF
+  changes: Added uniprot.location:SL-0510 (Magnetosome); mapping read from the GO
+    line of UniProt subcell.txt.
+- timestamp: '2026-08-31T03:49:12Z'
+  curator: uniprot_sl
+  action: SEED_PROTEIN_EXAMPLES
+  changes: Added 1 taxon-paired protein example(s) from UniProtKB reviewed entries
+    annotated to SL-0510 (Magnetosome), matched to components by gene symbol, each
+    carrying UniProt's ECO:0000269 PubMed evidence for the localisation.
+- timestamp: '2026-08-31T03:49:13Z'
+  curator: claude
+  action: NOTE_EVIDENCE_GAP
+  changes: Recorded that only 1 of 27 reviewed MSR-1 magnetosome proteins carries
+    experimental localisation evidence in UniProt.
+  llm_assisted: true
+- timestamp: '2026-08-31T03:50:27Z'
+  curator: claude
+  action: FIX_ID_LABEL_FINDINGS
+  changes: 'id-label gate: CHEBI:50290 was written from memory for magnetite and resolves
+    to ''sapphyrin PCI-2052''; replaced with the verified CHEBI:46726 magnetite. Node
+    labels aligned to the ontology labels (magnetite, iron atom).'
+  llm_assisted: true
+xrefs:
+- uniprot.location:SL-0510

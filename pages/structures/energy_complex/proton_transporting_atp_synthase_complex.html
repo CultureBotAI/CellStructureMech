@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>proton-transporting ATP synthase complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>proton-transporting ATP synthase complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0045259"><code>GO:0045259</code></a> · ENERGY_COMPLEX · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">The rotary motor enzyme that makes ATP from ADP and phosphate using the ion motive force across the membrane. It has two coupled sectors: a membrane-embedded Fo, whose c-ring turns as protons cross it, and a soluble F1 (alpha3beta3gammadeltaepsilon), whose catalytic beta subunits are driven through their conformational cycle by the rotating gamma subunit. <small>[<a href="http://purl.obolibrary.org/obo/GO_0045259"><code>GO:0045259</code></a>]</small></p>
+<p><strong>Synonyms:</strong> F1Fo ATP synthase</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-f1_head"><td>F1 catalytic head (alpha3beta3)</td><td>PROTEIN_COMPLEX</td><td></td><td>atpA, atpD</td><td>three alpha and three beta subunits, alternating</td><td>ESSENTIAL</td><td>Carries the three catalytic sites; ATP is made as each beta subunit passes through its conformational cycle.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a> <small>Kuehlbrandt 2019 describes the alpha3beta3 head and its three catalytic sites.</small></li></ul></td></tr>
+<tr id="components-central_stalk"><td>central stalk (gamma, epsilon)</td><td>PROTEIN_COMPLEX</td><td></td><td>atpG, atpC</td><td></td><td>ESSENTIAL</td><td>Rotates inside the alpha3beta3 head, driving the catalytic cycle; couples Fo rotation to F1.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a> <small>Kuehlbrandt 2019 describes the central stalk transmitting rotation into the catalytic head.</small></li></ul></td></tr>
+<tr id="components-c_ring"><td>Fo c-ring</td><td>PROTEIN_COMPLEX</td><td></td><td>atpE</td><td>8-17 c subunits depending on the organism</td><td>ESSENTIAL</td><td>The rotor: each subunit carries an ion-binding site, and the ring turns as ions pass.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a> <small>Kuehlbrandt 2019 reviews c-ring stoichiometries and their bearing on the H+/ATP ratio.</small></li></ul></td></tr>
+<tr id="components-a_subunit"><td>Fo subunit a</td><td>PROTEIN</td><td></td><td>atpB</td><td></td><td>ESSENTIAL</td><td>Provides the two offset half-channels through which ions enter and leave the c-ring.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a> <small>Kuehlbrandt 2019 describes the two half-channels in subunit a and the ion path across the membrane.</small></li></ul></td></tr>
+<tr id="components-peripheral_stalk"><td>peripheral stalk (b2, delta)</td><td>PROTEIN_COMPLEX</td><td></td><td>atpF, atpH</td><td></td><td>ESSENTIAL</td><td>Stator: holds the alpha3beta3 head against the torque of the rotating central stalk.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a> <small>Kuehlbrandt 2019 describes the peripheral stalk as the stator resisting rotation of the head.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2"><code>NCBITaxon:2</code></a> Bacteria — <strong>UNIVERSAL</strong>: Lost only in a few lineages with no membrane bioenergetics. [<a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2157"><code>NCBITaxon:2157</code></a> Archaea — <strong>UNIVERSAL</strong>: Archaea use the related A-type ATP synthase, homologous to the V-type ATPase. [<a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code>NCBITaxon:83333</code></a> <em>Escherichia coli K-12</em> — The genetic and biochemical reference for the bacterial F1Fo enzyme (atp operon). [<a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1423"><code>NCBITaxon:1423</code></a> <em>Bacillus subtilis</em> — Reference Gram-positive enzyme. [<a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>proton motive force-driven ATP synthesis</strong> <a href="http://purl.obolibrary.org/obo/GO_0015986"><code>GO:0015986</code></a> — Ion flux down the electrochemical gradient turns the rotor, and rotation drives ATP synthesis in F1.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a> <small>Kuehlbrandt 2019 reviews rotary catalysis and its coupling to the ion motive force.</small></li></ul></li></ul>
+
+
+<h2>Physical properties</h2>
+<ul><li>SUBUNIT_COUNT: 8-17 (c subunits in the Fo rotor ring, organism-dependent) [<a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a>]</li></ul>
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-rotary_catalysis">Ion flow turns the rotor and the rotor drives catalysis <small>(FUNCTION)</small></h3>
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>proton motive force</td><td>drives ion flow through</td><td>subunit a half-channels</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a> <small>Kuehlbrandt 2019: ions cross via the two offset half-channels in subunit a.</small></li></ul></td></tr>
+<tr><td>subunit a half-channels</td><td>turns</td><td>c-ring</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a> <small>Kuehlbrandt 2019 describes ion binding at the a/c interface driving c-ring rotation.</small></li></ul></td></tr>
+<tr><td>c-ring</td><td>rotates</td><td>central stalk</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a> <small>Kuehlbrandt 2019: the c-ring and central stalk rotate as one rotor.</small></li></ul></td></tr>
+<tr><td>central stalk</td><td>drives conformational cycling of</td><td>alpha3beta3 catalytic head</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a> <small>Kuehlbrandt 2019 describes the asymmetric gamma subunit imposing the catalytic cycle on the beta subunits.</small></li></ul></td></tr>
+<tr><td>alpha3beta3 catalytic head</td><td>catalyses formation of <small><code>RO:0002327</code></small></td><td>ATP</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a> <small>Kuehlbrandt 2019: ATP is synthesised at the catalytic interfaces of the head.</small></li></ul></td></tr>
+<tr><td>alpha3beta3 catalytic head</td><td>participates in</td><td>proton motive force-driven ATP synthesis</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a> <small>Kuehlbrandt 2019 reviews rotary catalysis as the mechanism of ATP synthesis.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-013118-110903"><code>DOI:10.1146/annurev-biochem-013118-110903</code></a> <small>Kuehlbrandt W 2019, &#39;Structure and Mechanisms of F-Type ATP Synthases&#39;, Annual Review of Biochemistry.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-08-31T03:48:12Z</code> claude · CREATED_RECORD — Drafted from the cited review. Every GO term, taxon id and DOI was resolved against OLS, NCBI Taxonomy and Crossref before writing; evidence notes state what the review says, not a reading of primary literature. Not yet human-reviewed.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/energy_complex/proton_transporting_atp_synthase_complex.yaml"><code>data/structures/energy_complex/proton_transporting_atp_synthase_complex.yaml</code></a></p>
+</main>
+<footer>CellStructureMech · CC0-1.0 · generated by <code>scripts/render_pages.py</code></footer>
+</body>
+</html>
