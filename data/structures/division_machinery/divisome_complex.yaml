@@ -36,6 +36,9 @@ components:
   evidence:
   - reference: DOI:10.1146/annurev-biophys-121219-081703
     notes: McQuillen & Xiao 2020 describe FtsA and ZipA tethering FtsZ to the membrane.
+  - reference: DOI:10.1111/j.1749-6632.2012.06818.x
+    notes: Egan & Vollmer 2012 review the septal synthases and the membrane anchoring
+      of FtsZ.
 - component_id: septal_pg_synthase
   label: septal peptidoglycan synthase (FtsW-FtsI)
   component_type: PROTEIN_COMPLEX
@@ -49,6 +52,9 @@ components:
   - reference: DOI:10.1146/annurev-biophys-121219-081703
     notes: McQuillen & Xiao 2020 review FtsW-FtsI septal synthesis and its coupling
       to FtsZ dynamics.
+  - reference: DOI:10.1111/j.1749-6632.2012.06818.x
+    notes: Egan & Vollmer 2012 review the septal synthases and the membrane anchoring
+      of FtsZ.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -86,10 +92,17 @@ functions:
   - reference: DOI:10.1146/annurev-biophys-121219-081703
     notes: McQuillen & Xiao 2020 describe septal peptidoglycan synthesis directed
       by the ring.
+  - reference: DOI:10.1111/j.1749-6632.2012.06818.x
+    notes: Egan & Vollmer 2012 describe septal peptidoglycan synthesis as the output
+      of the divisome.
 evidence:
 - reference: DOI:10.1146/annurev-biophys-121219-081703
   notes: McQuillen R & Xiao J 2020, 'Insights into the Structure, Function, and Dynamics
     of the Bacterial Cytokinetic FtsZ-Ring', Annual Review of Biophysics.
+- reference: DOI:10.1111/j.1749-6632.2012.06818.x
+  notes: Egan AJF & Vollmer W 2012, 'The physiology of bacterial cell division', Annals
+    of the New York Academy of Sciences — independent review of divisome composition
+    and septal synthesis.
 causal_graphs:
 - graph_id: treadmilling_guides_septum
   title: FtsZ treadmilling distributes the septal synthases
@@ -152,3 +165,11 @@ curation_history:
     against OLS, NCBI Taxonomy and Crossref before writing; evidence notes state what
     the review says, not a reading of primary literature. Not yet human-reviewed.
   llm_assisted: true
+- timestamp: '2026-08-31T03:54:23Z'
+  curator: claude
+  action: ADD_CORROBORATION
+  changes: Added Egan & Vollmer 2012 as an independent second source (#63) and part_of
+    the cell division site (#64).
+  llm_assisted: true
+part_of:
+- GO:0032153

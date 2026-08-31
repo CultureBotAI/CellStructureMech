@@ -39,6 +39,9 @@ components:
   - reference: DOI:10.1038/nrmicro.2016.99
     notes: Uebe & Schüler 2016 describe the mam and mms genes of the magnetosome island
       and their roles in biogenesis.
+  - reference: DOI:10.1002/pro.2827
+    notes: Barber-Zucker & Zarivach 2015 survey the magnetosome-associated proteins
+      and their assigned roles.
 - component_id: magnetite
   label: magnetite
   component_type: SMALL_MOLECULE
@@ -64,6 +67,9 @@ components:
   - reference: DOI:10.1038/nrmicro.2016.99
     notes: Uebe & Schüler 2016 describe MamK filaments and the MamJ connector arranging
       magnetosomes in a chain.
+  - reference: DOI:10.1002/pro.2827
+    notes: Barber-Zucker & Zarivach 2015 describe MamK as the actin-like filament
+      and MamJ as its connector to the vesicles.
   protein_examples:
   - uniprot_id: UniProtKB:V6F519
     protein_label: Magnetosome-associated protein MamJ
@@ -127,6 +133,10 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2016.99
   notes: Uebe R & Schüler D 2016, 'Magnetosome biogenesis in magnetotactic bacteria',
     Nature Reviews Microbiology.
+- reference: DOI:10.1002/pro.2827
+  notes: 'Barber-Zucker & Zarivach 2015, ''From invagination to navigation: the story
+    of magnetosome-associated proteins'', Protein Science — independent review of
+    the magnetosome protein complement and chain assembly.'
 causal_graphs:
 - graph_id: magnetosome_chain_alignment
   title: Membrane invagination, mineralisation and chain assembly make the cell a
@@ -259,5 +269,13 @@ curation_history:
     to ''sapphyrin PCI-2052''; replaced with the verified CHEBI:46726 magnetite. Node
     labels aligned to the ontology labels (magnetite, iron atom).'
   llm_assisted: true
+- timestamp: '2026-08-31T03:54:23Z'
+  curator: claude
+  action: ADD_CORROBORATION
+  changes: Added an independent second review (#63) and the parent_structures link
+    to intracellular membrane-bounded organelle (#64).
+  llm_assisted: true
 xrefs:
 - uniprot.location:SL-0510
+parent_structures:
+- GO:0043231

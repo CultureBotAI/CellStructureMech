@@ -27,6 +27,9 @@ components:
   - reference: DOI:10.1146/annurev-biochem-013118-110903
     notes: Kuehlbrandt 2019 describes the alpha3beta3 head and its three catalytic
       sites.
+  - reference: DOI:10.1042/bst20110773
+    notes: Walker 2013 reviews the same sector composition, and the variable c-ring
+      stoichiometry across species.
 - component_id: central_stalk
   label: central stalk (gamma, epsilon)
   component_type: PROTEIN_COMPLEX
@@ -53,6 +56,9 @@ components:
   - reference: DOI:10.1146/annurev-biochem-013118-110903
     notes: Kuehlbrandt 2019 reviews c-ring stoichiometries and their bearing on the
       H+/ATP ratio.
+  - reference: DOI:10.1042/bst20110773
+    notes: Walker 2013 reviews the same sector composition, and the variable c-ring
+      stoichiometry across species.
 - component_id: a_subunit
   label: Fo subunit a
   component_type: PROTEIN
@@ -117,6 +123,10 @@ evidence:
 - reference: DOI:10.1146/annurev-biochem-013118-110903
   notes: Kuehlbrandt W 2019, 'Structure and Mechanisms of F-Type ATP Synthases', Annual
     Review of Biochemistry.
+- reference: DOI:10.1042/bst20110773
+  notes: 'Walker JE 2013, ''The ATP synthase: the understood, the uncertain and the
+    unknown'', Biochemical Society Transactions — independent review of subunit composition
+    and rotary catalysis.'
 causal_graphs:
 - graph_id: rotary_catalysis
   title: Ion flow turns the rotor and the rotor drives catalysis
@@ -202,4 +212,10 @@ curation_history:
   changes: Drafted from the cited review. Every GO term, taxon id and DOI was resolved
     against OLS, NCBI Taxonomy and Crossref before writing; evidence notes state what
     the review says, not a reading of primary literature. Not yet human-reviewed.
+  llm_assisted: true
+- timestamp: '2026-08-31T03:54:23Z'
+  curator: claude
+  action: ADD_CORROBORATION
+  changes: Added Walker 2013 as an independent second source for composition and rotary
+    catalysis (#63).
   llm_assisted: true
