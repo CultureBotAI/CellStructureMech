@@ -85,7 +85,6 @@ def test_a_doi_absent_from_both_registries_is_not_found(monkeypatch):
     assert cc.resolve_doi(["DOI:10.9999/x"])["DOI:10.9999/x"][0] == "NOT_FOUND"
 
 
-@pytest.mark.parametrize("prefix", sorted(cc.NO_RESOLVER))
 def test_obo_purl_treats_404_as_absent(monkeypatch):
     """BFO relations are OLS *properties*, not terms, so the term index 404s for
     all of them and the PURL is the authority. RO is deliberately NOT routed
@@ -106,6 +105,7 @@ def test_ro_is_not_routed_through_the_purl():
     assert cc.RESOLVERS.get("BFO") is cc.resolve_obo_purl
 
 
+@pytest.mark.parametrize("prefix", sorted(cc.NO_RESOLVER))
 def test_a_prefix_with_no_resolver_is_skipped_not_passed(prefix):
     """An identifier nothing can check must never be reported as OK."""
     assert cc.NO_RESOLVER[prefix], f"{prefix} is skipped without saying why"
