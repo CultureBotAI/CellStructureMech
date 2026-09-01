@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/render_pages.py
+  slug: image-storage
+session:
+  id: 2026-09-01T035510Z-claude-code-023197
+  timestamp: '2026-09-01T03:55:10Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/31
+  - https://github.com/CultureBotAI/CellStructureMech/issues/26
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - images
+  summary: Serve hosted images from data/images and cap their size
+  details: 'Issues 31 and 26, coupled: the renderer copied every hosted image into pages/img,
+    so each was committed twice and data/images plus pages/img came to 1.3 megabytes of the
+    same three files. GitHub Pages publishes the repository root, so the committed copy under
+    data/images is already reachable and the second copy bought nothing. Record pages now
+    reference it directly. The rendered-link test had to change with it, and the change is
+    the honest one rather than a loosening: it now resolves every link from where the page
+    will actually be published rather than from the temporary output directory, because a
+    link into data/ legitimately escapes the rendered tree. A second test asserts each hosted
+    image''s page references the committed path, so a renderer that starts copying again is
+    caught. With one copy, the size cap becomes meaningful and is now enforced at 2 mebibytes
+    per image against a current largest of 792 kibibytes, and 20 mebibytes for the set; the
+    caps are deliberately generous so that a large upload is a decision rather than an accident.
+    A third test refuses any image file under pages, which is the regression shape.'

@@ -161,17 +161,17 @@ def render(out_dir: Path) -> None:
         # file itself, i.e. exactly len(parts). Getting this wrong (#21) sent
         # every record page one level too deep for its stylesheet and images.
         depth = len(Path(name).parts)
-        # Hosted image copies live beside the page tree under img/<category>/<slug>/.
-        img_src = IMAGES_DIR / path.parent.name / path.stem
-        for im in doc.get("images") or []:
-            if im.get("file"):
-                dst = out_dir / "img" / name / im["file"]
-                dst.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copy(img_src / im["file"], dst)
+        # Hosted images are served from data/images/ where they are committed,
+        # not copied into the page tree: GitHub Pages publishes the repository
+        # root, so one copy is reachable and two were 1.3 MB of duplication
+        # (#31). The page sits `depth` levels below pages/, and pages/ is one
+        # below the root.
+        root = "../" * depth
+        img_base = f"{root}../data/images/{path.parent.name}/{path.stem}/"
         p.write_text(
             env.get_template("structure.html").render(
-                r=doc, root="../" * depth, source_path=str(path.relative_to(REPO_ROOT)),
-                img_base=f"img/{name}/",
+                r=doc, root=root, source_path=str(path.relative_to(REPO_ROOT)),
+                img_base=img_base,
             ),
             encoding="utf-8",
         )
