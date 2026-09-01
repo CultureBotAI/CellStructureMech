@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MreB filament · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>MreB filament</h1>
+<p class="meta"><code>cellstructuremech:mreb_filament</code> · CYTOSKELETON · FILAMENT · <span class="status">PROPOSED</span></p>
+<p class="definition">The actin-like cytoskeletal filament of rod-shaped bacteria. MreB polymerises into short membrane-associated filaments that circle the cell at an angle to its long axis and move processively around it, carrying the elongasome — the peptidoglycan synthases that widen the sidewall — so that new wall material is inserted where the filaments travel. It is a homologue of eukaryotic actin by fold, not by sequence identity. <small>[<a href="https://doi.org/10.1146/annurev-genet-102108-134845"><code>DOI:10.1146/annurev-genet-102108-134845</code></a>]</small></p>
+<p><strong>Synonyms:</strong> bacterial actin</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-mreb"><td>MreB</td><td>PROTEIN</td><td>part of</td><td></td><td>mreB</td><td></td><td>ESSENTIAL</td><td>The filament subunit; an actin-fold ATPase that polymerises into short antiparallel double filaments on the membrane.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-genet-102108-134845"><code>DOI:10.1146/annurev-genet-102108-134845</code></a> <small>The Bacterial Cytoskeleton (2010) describes MreB as the actin homologue of rod-shaped bacteria.</small></li><li><a href="https://doi.org/10.1016/j.cell.2018.02.050"><code>DOI:10.1016/j.cell.2018.02.050</code></a> <small>Shi et al. 2018 review MreB filament architecture and its membrane association.</small></li></ul></td></tr>
+<tr id="components-elongasome_link"><td>elongasome coupling proteins (MreC, MreD, RodZ)</td><td>PROTEIN</td><td><span class="machinery" title="Binds the assembled structure to position, partition or maintain it">acts on</span></td><td></td><td>mreC, mreD, rodZ</td><td></td><td>CONDITIONAL</td><td>Connect the filament to the peptidoglycan synthases it guides. Machinery acting on the assembled filament rather than part of it: RodZ deletion leaves filaments that mislocalise.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2018.02.050"><code>DOI:10.1016/j.cell.2018.02.050</code></a> <small>Shi et al. 2018 describe RodZ and the Mre proteins coupling MreB to wall synthesis.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2"><code>NCBITaxon:2</code></a> Bacteria — <strong>VARIABLE</strong>: Present in rod-shaped and helical lineages and absent from most cocci, which is the point: shape and mreB track each other. [<a href="https://doi.org/10.1146/annurev-genet-102108-134845"><code>DOI:10.1146/annurev-genet-102108-134845</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2157"><code>NCBITaxon:2157</code></a> Archaea — <strong>RARE</strong>: Actin-fold proteins occur in archaea, but the MreB-elongasome system is a bacterial arrangement. [<a href="https://doi.org/10.1146/annurev-genet-102108-134845"><code>DOI:10.1146/annurev-genet-102108-134845</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code>NCBITaxon:83333</code></a> <em>Escherichia coli K-12</em> — The system in which filament motion was shown to be driven by wall synthesis. [<a href="https://doi.org/10.1016/j.cell.2018.02.050"><code>DOI:10.1016/j.cell.2018.02.050</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1423"><code>NCBITaxon:1423</code></a> <em>Bacillus subtilis</em> — Reference Gram-positive elongasome. [<a href="https://doi.org/10.1146/annurev-genet-102108-134845"><code>DOI:10.1146/annurev-genet-102108-134845</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>regulation of cell shape</strong> <a href="http://purl.obolibrary.org/obo/GO_0008360"><code>GO:0008360</code></a> — Directs where sidewall peptidoglycan is inserted, maintaining a rod.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2018.02.050"><code>DOI:10.1016/j.cell.2018.02.050</code></a> <small>Shi et al. 2018 review MreB&#39;s role in organising sidewall synthesis and rod shape.</small></li><li><a href="https://doi.org/10.1146/annurev-genet-102108-134845"><code>DOI:10.1146/annurev-genet-102108-134845</code></a> <small>The Bacterial Cytoskeleton (2010) links mreB loss to loss of rod shape.</small></li></ul></li></ul>
+
+
+
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): This is the corpus&#39;s first minted identifier — is the scheme right? <small>GO has no cellular-component term for MreB or for a bacterial actin cytoskeleton, so docs/CURATION.md requires minting with the nearest broader term as a parent. The local part is a lowercase slug of the label rather than a counter, because a slug needs no allocator and reads in a URL; the cost is that it looks stale if the preferred label ever changes, which is acceptable since identifiers are never renamed.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-genet-102108-134845"><code>DOI:10.1146/annurev-genet-102108-134845</code></a> <small>&#39;The Bacterial Cytoskeleton&#39;, Annual Review of Genetics 2010.</small></li><li><a href="https://doi.org/10.1016/j.cell.2018.02.050"><code>DOI:10.1016/j.cell.2018.02.050</code></a> <small>Shi H, Bratton BP, Gitai Z, Huang KC 2018, &#39;How to Build a Bacterial Cell: MreB as the Foreman of E. coli Construction&#39;, Cell.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-01T03:41:49Z</code> claude · CREATED_RECORD — Drafted from the cited reviews; every GO term, taxon id and DOI resolved live before writing. Not yet human-reviewed.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/mreb_filament.yaml"><code>data/structures/cytoskeleton/mreb_filament.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

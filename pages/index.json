@@ -18,6 +18,15 @@
   "definition": "A dynamic bacterial surface filament assembled from type IV pilins by an inner-membrane ATPase machinery. Reversible extension and retraction can generate force for twitching motility, adhesion, surface sensing, and DNA uptake."
  },
  {
+  "identifier": "cellstructuremech:mreb_filament",
+  "label": "MreB filament",
+  "category": "CYTOSKELETON",
+  "kind": "FILAMENT",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/mreb_filament.html",
+  "definition": "The actin-like cytoskeletal filament of rod-shaped bacteria. MreB polymerises into short membrane-associated filaments that circle the cell at an angle to its long axis and move processively around it, carrying the elongasome — the peptidoglycan synthases that widen the sidewall — so that new wall material is inserted where the filaments travel. It is a homologue of eukaryotic actin by fold, not by sequence identity."
+ },
+ {
   "identifier": "GO:1990586",
   "label": "divisome complex",
   "category": "DIVISION_MACHINERY",
@@ -124,5 +133,14 @@
   "status": "PROPOSED",
   "page": "structures/secretion_system/type_iii_protein_secretion_system_complex.html",
   "definition": "The injectisome: a syringe-like envelope-spanning machine that delivers effector proteins from the bacterial cytoplasm directly into a eukaryotic host cell. Rings in the inner and outer membranes surround an export apparatus; an extracellular needle carries the secretion channel to a translocon pore in the host membrane. It is evolutionarily related to the flagellar export apparatus."
+ },
+ {
+  "identifier": "GO:0043591",
+  "label": "endospore external encapsulating structure",
+  "category": "SPORE",
+  "kind": "ENVELOPE_LAYER",
+  "status": "PROPOSED",
+  "page": "structures/spore/endospore_external_encapsulating_structure.html",
+  "definition": "The layered envelope that surrounds a bacterial endospore and gives it its resistance: a thick modified peptidoglycan cortex, a proteinaceous coat of dozens of proteins outside it, and in some species an additional loose exosporium. It encases the dehydrated, mineralised core in which the chromosome is held."
  }
 ]

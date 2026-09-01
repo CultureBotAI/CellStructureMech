@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures
+  slug: records-tranche-2
+session:
+  id: 2026-09-01T034403Z-claude-code-5d72b9
+  timestamp: '2026-09-01T03:44:03Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/12
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - components
+  - functions
+  summary: Fill the CYTOSKELETON and SPORE categories; mint the corpus's first identifier
+  details: 'Issue 12. Two records take the corpus from 14 to 16 and from 10 to 12 of 13 categories.
+    The endospore external encapsulating structure uses GO:0043591, found by searching GO
+    for endospore rather than assuming: that search also returned the coat, cortex and outer
+    membrane terms, which are recorded as has_part. The MreB filament required the corpus''s
+    first minted identifier, because GO has no cellular-component term for MreB or for a bacterial
+    actin cytoskeleton, and GO:0005856 cytoskeleton is the whole framework of any cell and
+    so belongs in parent_structures rather than as identity. The minting scheme is now documented:
+    a lowercase slug of the label at minting time, which needs no allocator and cannot collide,
+    at the cost of looking stale if the preferred label changes, which is acceptable because
+    identifiers are never renamed. Each record carries two independent reviews per the standard
+    set in issue 63, and every GO term, taxon id and DOI was resolved live before writing.
+    OTHER is left empty deliberately, and the reason is now in CURATION.md: filling a catch-all
+    bucket to move a coverage number would place a structure in a category that describes
+    it worse than a real one.'

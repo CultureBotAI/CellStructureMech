@@ -1,0 +1,114 @@
+identifier: GO:0043591
+label: endospore external encapsulating structure
+definition: 'The layered envelope that surrounds a bacterial endospore and gives it
+  its resistance: a thick modified peptidoglycan cortex, a proteinaceous coat of dozens
+  of proteins outside it, and in some species an additional loose exosporium. It encases
+  the dehydrated, mineralised core in which the chromosome is held.'
+definition_source: GO:0043591
+synonyms:
+- synonym_text: spore coat and cortex
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro2921
+structure_category: SPORE
+structure_kind: ENVELOPE_LAYER
+has_part:
+- GO:0043593
+- GO:0043595
+- GO:0043594
+components:
+- component_id: cortex
+  label: endospore cortex peptidoglycan
+  component_type: PEPTIDOGLYCAN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: A thick, chemically modified peptidoglycan layer whose muramic-δ-lactam residues
+    make it a substrate for germination-specific lytic enzymes; it holds the core
+    dehydrated.
+  evidence:
+  - reference: DOI:10.1128/9781555819323.ch10
+    notes: Spore Resistance Properties (2016) attributes core dehydration and heat
+      resistance to the cortex.
+- component_id: coat
+  label: endospore coat proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - cotE
+  - spoIVA
+  - safA
+  stoichiometry: over 70 distinct proteins in Bacillus subtilis
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: A large set of unrelated proteins assembled in morphogenetic layers;
+    no single family term denotes it.
+  role: Self-assembling multilayered protein shell that excludes lytic enzymes and
+    large toxic molecules, built on the SpoIVA basement layer with CotE and SafA as
+    morphogenetic organisers.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2921
+    notes: McKenney et al. 2012 describe the coat's layers and the morphogenetic proteins
+      that organise them.
+- component_id: exosporium
+  label: exosporium
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - bclA
+  essentiality: DISPENSABLE
+  role: A loose outermost balloon-like layer present in some species and absent in
+    Bacillus subtilis; it carries the spore's outward-facing surface.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2921
+    notes: McKenney et al. 2012 contrast species with an exosporium against B. subtilis,
+      which lacks one.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1239
+  taxon_label: Bacillota
+  presence: COMMON
+  note: Endospore formation is essentially confined to this phylum, and lost in many
+    lineages within it.
+  reference: DOI:10.1038/nrmicro2921
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  reference: DOI:10.1038/nrmicro2921
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: The model system for coat assembly and sporulation genetics.
+  reference: DOI:10.1038/nrmicro2921
+functions:
+- function_id: resistance
+  label: spore-mediated resistance to environmental stress
+  description: The cortex dehydrates the core and the coat excludes lytic enzymes
+    and chemicals, giving decades of dormancy and resistance to heat, radiation and
+    solvents.
+  evidence:
+  - reference: DOI:10.1128/9781555819323.ch10
+    notes: Spore Resistance Properties (2016) reviews the contributions of cortex
+      and coat to resistance.
+  - reference: DOI:10.1038/nrmicro2921
+    notes: McKenney et al. 2012 describe the coat as a barrier to lytic enzymes and
+      toxic chemicals.
+associated_traits:
+- trait_id: METPO:1000870
+  trait_label: sporulation
+  relation: REQUIRED_FOR
+  evidence:
+  - reference: DOI:10.1038/nrmicro2921
+    notes: McKenney et al. 2012 describe coat and cortex assembly as stages of sporulation;
+      TraitMech records the phenotype as METPO:1000870.
+evidence:
+- reference: DOI:10.1038/nrmicro2921
+  notes: 'McKenney PT, Driks A, Eichenberger P 2012, ''The Bacillus subtilis endospore:
+    assembly and functions of the multilayered coat'', Nature Reviews Microbiology.'
+- reference: DOI:10.1128/9781555819323.ch10
+  notes: '''Spore Resistance Properties'', in The Bacterial Spore (2016).'
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-01T03:41:49Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Drafted from the cited reviews; every GO term, taxon id and DOI resolved
+    live before writing. Not yet human-reviewed.
+  llm_assisted: true

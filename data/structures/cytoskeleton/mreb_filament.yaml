@@ -1,0 +1,111 @@
+identifier: cellstructuremech:mreb_filament
+label: MreB filament
+definition: The actin-like cytoskeletal filament of rod-shaped bacteria. MreB polymerises
+  into short membrane-associated filaments that circle the cell at an angle to its
+  long axis and move processively around it, carrying the elongasome — the peptidoglycan
+  synthases that widen the sidewall — so that new wall material is inserted where
+  the filaments travel. It is a homologue of eukaryotic actin by fold, not by sequence
+  identity.
+definition_source: DOI:10.1146/annurev-genet-102108-134845
+synonyms:
+- synonym_text: bacterial actin
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev-genet-102108-134845
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+parent_structures:
+- GO:0005856
+components:
+- component_id: mreb
+  label: MreB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - mreB
+  essentiality: ESSENTIAL
+  role: The filament subunit; an actin-fold ATPase that polymerises into short antiparallel
+    double filaments on the membrane.
+  evidence:
+  - reference: DOI:10.1146/annurev-genet-102108-134845
+    notes: The Bacterial Cytoskeleton (2010) describes MreB as the actin homologue
+      of rod-shaped bacteria.
+  - reference: DOI:10.1016/j.cell.2018.02.050
+    notes: Shi et al. 2018 review MreB filament architecture and its membrane association.
+- component_id: elongasome_link
+  label: elongasome coupling proteins (MreC, MreD, RodZ)
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  gene_symbols:
+  - mreC
+  - mreD
+  - rodZ
+  essentiality: CONDITIONAL
+  role: 'Connect the filament to the peptidoglycan synthases it guides. Machinery
+    acting on the assembled filament rather than part of it: RodZ deletion leaves
+    filaments that mislocalise.'
+  evidence:
+  - reference: DOI:10.1016/j.cell.2018.02.050
+    notes: Shi et al. 2018 describe RodZ and the Mre proteins coupling MreB to wall
+      synthesis.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: 'Present in rod-shaped and helical lineages and absent from most cocci, which
+    is the point: shape and mreB track each other.'
+  reference: DOI:10.1146/annurev-genet-102108-134845
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: RARE
+  note: Actin-fold proteins occur in archaea, but the MreB-elongasome system is a
+    bacterial arrangement.
+  reference: DOI:10.1146/annurev-genet-102108-134845
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: The system in which filament motion was shown to be driven by wall synthesis.
+  reference: DOI:10.1016/j.cell.2018.02.050
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: Reference Gram-positive elongasome.
+  reference: DOI:10.1146/annurev-genet-102108-134845
+functions:
+- function_id: shape
+  label: regulation of cell shape
+  grounding: GO:0008360
+  description: Directs where sidewall peptidoglycan is inserted, maintaining a rod.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2018.02.050
+    notes: Shi et al. 2018 review MreB's role in organising sidewall synthesis and
+      rod shape.
+  - reference: DOI:10.1146/annurev-genet-102108-134845
+    notes: The Bacterial Cytoskeleton (2010) links mreB loss to loss of rod shape.
+evidence:
+- reference: DOI:10.1146/annurev-genet-102108-134845
+  notes: '''The Bacterial Cytoskeleton'', Annual Review of Genetics 2010.'
+- reference: DOI:10.1016/j.cell.2018.02.050
+  notes: 'Shi H, Bratton BP, Gitai Z, Huang KC 2018, ''How to Build a Bacterial Cell:
+    MreB as the Foreman of E. coli Construction'', Cell.'
+discussions:
+- discussion_id: first_minted_identifier
+  prompt: This is the corpus's first minted identifier — is the scheme right?
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mreb
+  rationale: GO has no cellular-component term for MreB or for a bacterial actin cytoskeleton,
+    so docs/CURATION.md requires minting with the nearest broader term as a parent.
+    The local part is a lowercase slug of the label rather than a counter, because
+    a slug needs no allocator and reads in a URL; the cost is that it looks stale
+    if the preferred label ever changes, which is acceptable since identifiers are
+    never renamed.
+  posed_by: claude
+  posed_date: '2026-09-01'
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-01T03:41:49Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Drafted from the cited reviews; every GO term, taxon id and DOI resolved
+    live before writing. Not yet human-reviewed.
+  llm_assisted: true

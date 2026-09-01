@@ -38,6 +38,20 @@ the cell*, not how many gene products build it.
 3. **Never reuse an identifier.** A superseded record stays in place with
    `mapping_status: DEPRECATED`; the successor names it in `replaces`.
 
+**The minted local part is a lowercase slug of the label at minting time** —
+`cellstructuremech:mreb_filament`, the corpus's first mint. A slug needs no
+allocator, so two curators cannot collide on a counter, and it reads in a URL.
+The cost is that it looks stale if the preferred label later changes; that is
+accepted, because rule 3 forbids renaming an identifier anyway. Before minting,
+search GO properly: `MreB` and `bacterial actin cytoskeleton` return nothing,
+which is what justified the mint, and `GO:0005856 cytoskeleton` — the whole
+framework of any cell — is the parent, not the identity.
+
+**An empty category is a fine result.** `OTHER` exists so a record that fits
+nowhere has a home, and it is currently empty. Filling it to make a coverage
+number move would mean placing a structure in a bucket that describes it worse
+than a real category would.
+
 `parent_structures` is is-a; `part_of` is parthood. The carboxysome *is a*
 bacterial microcompartment and the flagellar hook *is part of* the flagellum.
 Both must point at another record here or at a GO term; anything else fails
