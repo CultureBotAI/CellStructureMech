@@ -111,3 +111,15 @@ def test_a_hosted_image_link_points_at_the_committed_file(tmp_path):
     map_data = json.loads((out / "data" / "structure_text_map.json").read_text())
     assert (out / "embedding-map.html").exists()
     assert all((out / item["page"]).exists() for item in map_data["records"])
+
+
+def test_the_site_root_opts_out_of_jekyll():
+    """Pages publishes this repository from `/`, and record pages reference
+    images under `data/` — outside the directory that carries pages/.nojekyll.
+    Jekyll silently drops paths it considers special, and the failure mode is a
+    404 for a file that is present in the repository, which no local check
+    reproduces (#105)."""
+    assert (REPO_ROOT / ".nojekyll").exists(), (
+        "add an empty .nojekyll at the repository root: the published site now "
+        "depends on data/images/, which is outside pages/"
+    )
