@@ -67,7 +67,7 @@ records, not records; phenotypes are TraitMech records. See
 | SECRETION_SYSTEM | 1 | |  |  |
 | SPORE | 1 | |  |  |
 
-15 records are grounded in GO; 1 carry minted identifiers. 16 list components, 7 carry causal graphs (42 evidence-backed edges), 6 link to TraitMech traits, and 4 carry licensed, cited imaging evidence.
+15 records are grounded in GO; 1 carry minted identifiers. 16 list components, 7 carry causal graphs (42 evidence-backed edges), 6 link to TraitMech traits, and 5 carry licensed, cited imaging evidence.
 <!-- END GENERATED CORPUS STATS -->
 
 Run `just report` for the live report. Every current record is
