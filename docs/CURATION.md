@@ -215,6 +215,11 @@ Source-specific commands (all dry-run unless `--apply` is present):
   Public Domain and CC BY 3.0/4.0 items. CIL supplies an organism name but no
   machine-readable taxid there, so the curator supplies a taxon already present
   on the target record.
+- `scripts/bioimage_archive.py` accepts direct `S-BIAD` submissions only after
+  reading their per-accession CC0/CC BY 4.0 statement. It resolves one exact
+  file through the study-component manifests and checks the downloaded byte
+  count. Archive TIFF channels must be named by the manifest and selected
+  explicitly; the selected plane is exported losslessly to a site-ready PNG.
 - These image scripts verify downloaded bytes (PMC md5 where supplied, corpus
   SHA-256 always), validate the complete record mutation before touching the
   destination, and confine generated filenames to the record image directory.

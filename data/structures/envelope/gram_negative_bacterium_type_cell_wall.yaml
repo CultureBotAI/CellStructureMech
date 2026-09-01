@@ -63,3 +63,62 @@ curation_history:
     is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
     only where the protein acts on the already-assembled structure.
   llm_assisted: true
+- timestamp: '2026-09-01T20:06:52Z'
+  curator: bioimage_archive
+  action: ADD_IMAGE
+  changes: Added S-BIAD2294 and added exact file 'Figure 3/Replicate 1 (MW240530)
+    8 minutes/Series002_1.tif', channel 3; per-accession licence, manifest identity,
+    byte count and source taxon mapping verified at import.
+datasets:
+- accession: S-BIAD2294
+  title: Bactericidal Membrane Attack Complex formation initiates at the new pole
+    of E. coli
+  description: Human immune protection against bacteria critically depends on activation
+    of the complement system. The direct bacteriolytic activity of complement molecules
+    against Gram-negative bacteria acts via the formation of Membrane Attack Complex
+    (MAC) pores. Bactericidal MAC pores damage the bacterial outer membrane, leading
+    to destabilization of the inner membrane. Although it is well-established that
+    inner membrane damage is crucial for bacterial cell death, the critical event
+    causing MAC-mediated inner membrane damage remains elusive. Here we questioned
+    whether the bacterial cell envelope possesses vulnerable spots for MAC pores to
+    insert. We followed the localization of MAC pores on E. coli over time using fluorescence
+    microscopy and elucidate that MAC deposition initiates at the new bacterial pole,
+    which induces inner membrane damage and halts bacterial division. MAC components
+    C8 and C9 preferentially localize at new bacterial poles, while C3b localizes
+    randomly on the bacterial surface. This suggests that preferential MAC localization
+    is determined by one of the initial steps of MAC formation. These findings provide
+    valuable information about the interplay between immune components and the Gram-negative
+    cell envelope.
+  organism: NCBITaxon:562 Escherichia coli
+  dataset_type: OTHER
+  repository: OTHER
+  sample_types:
+  - phase contrast microscopy
+  - fluorescence microscopy
+  url: https://www.ebi.ac.uk/biostudies/studies/S-BIAD2294
+  publication: DOI:10.6019/S-BIAD2294
+  notes: Direct BioImage Archive submission under CC0 (https://creativecommons.org/publicdomain/zero/1.0/);
+    per-accession terms verified on 2026-09-01.
+images:
+- image_id: bia_s_biad2294_series002_1_c3_5447ba73fb
+  file: bia_s_biad2294_series002_1_c3_5447ba73fb.png
+  file_sha256: 0c1c9b9e31d3affaec5166fefa61ecd937cc0bdb55d0bcfacc5096b0af03f40a
+  source: BIOIMAGE_ARCHIVE
+  source_accession: S-BIAD2294:Figure 3/Replicate 1 (MW240530) 8 minutes/Series002_1.tif#channel=3
+  source_url: https://www.ebi.ac.uk/biostudies/studies/S-BIAD2294
+  download_url: https://www.ebi.ac.uk/biostudies/files/S-BIAD2294/Figure%203/Replicate%201%20%28MW240530%29%208%20minutes/Series002_1.tif
+  licence: CC0
+  licence_url: https://creativecommons.org/publicdomain/zero/1.0/
+  attribution: Marije van 't Wout, Dani Heesterbeek; via BioImage Archive
+  modality: FLUORESCENCE
+  caption: HADA fluorescence marking peptidoglycan in Escherichia coli MG1655 after
+    a 45-minute label-free growth period and 8 minutes of membrane attack complex
+    exposure; channel 3 of the source TIFF.
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  reference: DOI:10.6019/S-BIAD2294
+  retrieved_on: '2026-09-01'
+  notes: Exact file matched in a 69-file study-component manifest; source byte count
+    4382973 and SHA-256 da58722c4e61cf52df743d02223fb06814e0831831ee79b2bad2b11c3c15e023.
+    Source organism 'Escherichia coli' mapped by the curator to NCBITaxon:562. Named
+    TIFF channel 3 (HADA (CFP)) exported losslessly to PNG.

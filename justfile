@@ -155,6 +155,10 @@ pmc-image *args:
 cell-image-library *args:
     uv run python scripts/cell_image_library.py "$@"
 
+# Direct S-BIAD dataset + exact file/channel ingest; per-study terms and dry-run by default.
+bioimage-archive *args:
+    uv run python scripts/bioimage_archive.py "$@"
+
 # Refresh with the pinned local sentence-transformers model (no corpus text is
 # transmitted), then rebuild the 2D PCA map and cosine-neighbour index.
 text-embeddings-refresh:

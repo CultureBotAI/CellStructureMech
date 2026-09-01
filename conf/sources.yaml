@@ -53,3 +53,9 @@ cell_image_library:
   homepage: https://www.cellimagelibrary.org/
   script: scripts/cell_image_library.py
   role: images
+
+bioimage_archive:
+  name: BioImage Archive
+  homepage: https://www.ebi.ac.uk/bioimage-archive/
+  script: scripts/bioimage_archive.py
+  role: datasets, images
