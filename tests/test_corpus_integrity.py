@@ -169,3 +169,46 @@ def test_associated_machinery_is_never_essential(records):
             if c.get("component_role") == "ASSOCIATED_MACHINERY" and c.get("essentiality") == "ESSENTIAL":
                 bad.append(f"{path.name}:{c['component_id']}")
     assert not bad, f"ASSOCIATED_MACHINERY components marked ESSENTIAL: {bad}"
+
+
+# A hosted image is committed once and served from data/images/ (#31), so its
+# bytes are the repository's bytes. The cap is deliberately generous — the
+# largest today is 792 KB — and exists so a multi-megabyte upload is a decision
+# rather than an accident (#26).
+MAX_IMAGE_BYTES = 2 * 1024 * 1024
+MAX_IMAGES_TOTAL_BYTES = 20 * 1024 * 1024
+
+
+def test_no_hosted_image_exceeds_the_size_cap(records, repo_root):
+    oversized = []
+    for path, doc in records:
+        img_dir = repo_root / "data" / "images" / path.parent.name / path.stem
+        for im in doc.get("images") or []:
+            if not im.get("file"):
+                continue
+            size = (img_dir / im["file"]).stat().st_size
+            if size > MAX_IMAGE_BYTES:
+                oversized.append(f"{path.name}:{im['image_id']} is {size // 1024} KiB")
+    assert not oversized, (
+        f"hosted image over {MAX_IMAGE_BYTES // 1024} KiB; downscale it or link instead: {oversized}"
+    )
+
+
+def test_the_hosted_image_set_stays_within_budget(repo_root):
+    """Per-file caps do not bound the total; a hundred small images is also a
+    problem for a repository that is cloned to be used."""
+    images_root = repo_root / "data" / "images"
+    total = sum(p.stat().st_size for p in images_root.rglob("*")
+                if p.is_file() and not p.name.startswith("."))
+    assert total <= MAX_IMAGES_TOTAL_BYTES, (
+        f"data/images is {total // 1024} KiB, over the {MAX_IMAGES_TOTAL_BYTES // 1024} KiB budget"
+    )
+
+
+def test_no_image_is_stored_twice(repo_root):
+    """The renderer used to copy every hosted image into pages/img/, so each was
+    committed twice. Images are served from data/images/ now; a reappearing
+    copy is the regression (#31)."""
+    stray = sorted(str(p.relative_to(repo_root)) for p in (repo_root / "pages").rglob("*")
+                   if p.is_file() and p.suffix.lower() in {".png", ".jpg", ".jpeg", ".gif", ".webp"})
+    assert not stray, f"image files under pages/ duplicate data/images/: {stray}"

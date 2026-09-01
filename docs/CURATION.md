@@ -176,8 +176,12 @@ claim like any other and carries its own provenance:
 
 - **`licence`** (required). Hostable licences — CC0, public domain, CC BY,
   CC BY-SA — get a copy under `data/images/<category>/<slug>/` and a `file`
-  entry (lowercase extension) plus its `file_sha256`; the renderer copies it
-  to `pages/img/`. Anything else (CC BY-NC, ND, unknown) is **link-only**:
+  entry (lowercase extension) plus its `file_sha256`. The image is served
+  from `data/images/` where it is committed — GitHub Pages publishes the
+  repository root, so copying it into `pages/` only stored it twice (#31).
+  A hosted image must be under 2 MiB and the set under 20 MiB (#26): the caps
+  are generous, and exist so a large upload is a decision rather than an
+  accident. Anything else (CC BY-NC, ND, unknown) is **link-only**:
   leave `file` unset. Tests enforce both.
 - **`attribution`** (required), exactly as the licence demands. For CC BY
   that is author(s) + licence + source.

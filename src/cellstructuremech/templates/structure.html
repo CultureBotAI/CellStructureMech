@@ -10,7 +10,7 @@
 {% if r.images %}
 {% set im = r.images[0] %}
 <figure class="hero">
-{% if im.file %}<a href="{{ im.source_url }}"><img src="{{ root }}{{ img_base }}{{ im.file }}" alt="{{ im.caption or r.label }}"></a>
+{% if im.file %}<a href="{{ im.source_url }}"><img src="{{ img_base }}{{ im.file }}" alt="{{ im.caption or r.label }}"></a>
 {% else %}<p class="linked-image">Image (not hosted — {{ im.licence }}): <a href="{{ im.source_url }}">{{ im.source_accession }}</a></p>{% endif %}
 <figcaption>{% if im.caption %}{{ im.caption }} {% endif %}<span class="modality">{{ im.modality }}</span> · <em>{{ im.taxon_label }}</em> ({{ curie(im.taxon_id) }}) · {{ im.attribution }} · {% if im.licence_url %}<a href="{{ im.licence_url }}">{{ im.licence }}</a>{% else %}{{ im.licence }}{% endif %} · source: <a href="{{ im.source_url }}">{{ im.source }} {{ im.source_accession }}</a> · {{ curie(im.reference) }}</figcaption>
 </figure>

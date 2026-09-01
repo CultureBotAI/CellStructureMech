@@ -70,13 +70,44 @@ def test_rendered_site_has_no_broken_local_links(tmp_path):
     assert res.returncode == 0, res.stderr
     broken = []
     for html in out.rglob("*.html"):
+        # The site is published from the repository root, so a page at
+        # pages/a/b.html can legitimately reference ../../data/images/... —
+        # hosted images are served where they are committed rather than copied
+        # into the page tree (#31). Resolve every link from where the page will
+        # actually live, not from the temporary output directory.
+        published_dir = REPO_ROOT / "pages" / html.parent.relative_to(out)
         for m in re.finditer(r'(?:href|src)="([^"#]+)"', html.read_text(encoding="utf-8")):
             url = m.group(1)
             if url.startswith(("http://", "https://", "mailto:")):
                 continue
+            target = (published_dir / url).resolve()
+            # A generated page may not exist yet in the committed tree, so fall
+            # back to the freshly rendered copy for anything inside pages/.
+            if target.exists():
+                continue
             if not (html.parent / url).resolve().exists():
                 broken.append(f"{html.relative_to(out)}: {url}")
     assert not broken, broken
+
+
+def test_a_hosted_image_link_points_at_the_committed_file(tmp_path):
+    """The published page must reach the image where it is committed; if the
+    renderer ever copies images again, this keeps the reference honest (#31)."""
+    import yaml
+
+    out = tmp_path / "site"
+    assert _run("scripts/render_pages.py", "--out", str(out)).returncode == 0
+    checked = 0
+    for record in sorted((REPO_ROOT / "data" / "structures").rglob("*.yaml")):
+        doc = yaml.safe_load(record.read_text(encoding="utf-8"))
+        for image in doc.get("images") or []:
+            if not image.get("file"):
+                continue
+            page = out / "structures" / record.parent.name / f"{record.stem}.html"
+            html = page.read_text(encoding="utf-8")
+            assert f'/data/images/{record.parent.name}/{record.stem}/{image["file"]}"' in html, page
+            checked += 1
+    assert checked, "no hosted image found to check"
     map_data = json.loads((out / "data" / "structure_text_map.json").read_text())
     assert (out / "embedding-map.html").exists()
     assert all((out / item["page"]).exists() for item in map_data["records"])
