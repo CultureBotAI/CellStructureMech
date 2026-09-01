@@ -59,3 +59,9 @@ bioimage_archive:
   homepage: https://www.ebi.ac.uk/bioimage-archive/
   script: scripts/bioimage_archive.py
   role: datasets, images
+
+micro:
+  name: MicrO ontology
+  homepage: http://obofoundry.org/ontology/micro.html
+  script: scripts/micro_xrefs.py
+  role: xrefs
