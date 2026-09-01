@@ -14,6 +14,10 @@
     --muted:#555;
     --card:#ffffff;
     --line:rgba(0,0,0,.10);
+    /* Text on the accent fill. A token because it flips with the theme;
+       it was a literal in three places, which the stylesheet contract
+       could not see until its regex was de-anchored (#95). */
+    --on-accent:#fff;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -40,7 +44,7 @@
   .card .actions{margin:.55em 0 .9em;display:flex;flex-wrap:wrap;gap:.5em}
   .card h2{margin:.1em 0 .35em;font-size:1.25rem}
   .card p{margin:0;color:var(--muted);font-size:.95rem}
-  .btn{display:inline-block;background:var(--accent);color:#fff;padding:.5em 1.15em;
+  .btn{display:inline-block;background:var(--accent);color:var(--on-accent);padding:.5em 1.15em;
        border-radius:999px;font-size:.9rem;font-weight:600}
   .btn:hover{filter:brightness(.93);text-decoration:none}
   section.block{margin-top:52px}
@@ -67,6 +71,7 @@
     :root:not([data-theme="light"]){
       --pastel-a:#1d2136;
       --pastel-b:#121320;
+      --on-accent:#121320;
       --accent:#8b8fe8;
       --ink:#e9eaf6;
       --muted:#a0a3ba;
@@ -76,7 +81,6 @@
     :root:not([data-theme="light"]) .stat{background:rgba(255,255,255,.05)}
     :root:not([data-theme="light"]) a.stat:hover{background:rgba(255,255,255,.09)}
     :root:not([data-theme="light"]) footer{background:rgba(255,255,255,.04)}
-    :root:not([data-theme="light"]) .btn{color:#121320}
     :root:not([data-theme="light"]) table code{background:rgba(255,255,255,.08)}
     :root:not([data-theme="light"]) tbody tr:hover{background:rgba(139,143,232,.10)}
     /* brand pastel pair in dark: darkened-pair hero fill + vivid-pair top edge */
@@ -96,11 +100,11 @@
     --muted:#a0a3ba;
     --card:#1c1e2e;
     --line:#2c2f45;
-  }
+    --on-accent:#121320;
+}
   :root[data-theme="dark"] .stat{background:rgba(255,255,255,.05)}
   :root[data-theme="dark"] a.stat:hover{background:rgba(255,255,255,.09)}
   :root[data-theme="dark"] footer{background:rgba(255,255,255,.04)}
-  :root[data-theme="dark"] .btn{color:#121320}
   :root[data-theme="dark"] table code{background:rgba(255,255,255,.08)}
   :root[data-theme="dark"] tbody tr:hover{background:rgba(139,143,232,.10)}
   :root[data-theme="dark"] .hero{background:linear-gradient(135deg,#4D4F61,#4B5458)}
