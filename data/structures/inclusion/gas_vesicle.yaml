@@ -76,5 +76,11 @@ curation_history:
     is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
     only where the protein acts on the already-assembled structure.
   llm_assisted: true
+- timestamp: '2026-09-01T20:52:03Z'
+  curator: micro_xrefs
+  action: ADD_XREF
+  changes: Added MICRO:0000214 (gas vacuole) as a curator-reviewed identity xref;
+    exact non-obsolete MicrO id and label verified through OLS.
 xrefs:
 - uniprot.location:SL-0125
+- MICRO:0000214

@@ -159,6 +159,10 @@ cell-image-library *args:
 bioimage-archive *args:
     uv run python scripts/bioimage_archive.py "$@"
 
+# Curator-reviewed identity xrefs only; the inactive ontology is never label-searched.
+micro-xrefs *args:
+    uv run python scripts/micro_xrefs.py "$@"
+
 # Refresh with the pinned local sentence-transformers model (no corpus text is
 # transmitted), then rebuild the 2D PCA map and cosine-neighbour index.
 text-embeddings-refresh:

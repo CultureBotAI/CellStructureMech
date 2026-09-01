@@ -220,6 +220,10 @@ Source-specific commands (all dry-run unless `--apply` is present):
   file through the study-component manifests and checks the downloaded byte
   count. Archive TIFF channels must be named by the manifest and selected
   explicitly; the selected plane is exported losslessly to a site-ready PNG.
+- `scripts/micro_xrefs.py` adds only curator-reviewed identity mappings from
+  current GO-grounded records to exact, non-obsolete MicrO terms. MicrO is
+  inactive and mixes structures with whole cells and qualities, so the adapter
+  has a fixed allow-list and refuses label search or inferred mappings.
 - These image scripts verify downloaded bytes (PMC md5 where supplied, corpus
   SHA-256 always), validate the complete record mutation before touching the
   destination, and confine generated filenames to the record image directory.
