@@ -109,3 +109,26 @@ curation_history:
   changes: Drafted from the cited reviews; every GO term, taxon id and DOI resolved
     live before writing. Not yet human-reviewed.
   llm_assisted: true
+- timestamp: '2026-09-01T03:49:36Z'
+  curator: claude
+  action: ADD_TRAIT_LINKS
+  changes: 'Self-review of PR #101: linked the TraitMech phenotypes the filament confers
+    (METPO:1000681 rod shaped, METPO:1000666 cell shape), which is the whole point
+    of the structure and was missing.'
+  llm_assisted: true
+associated_traits:
+- trait_id: METPO:1000681
+  trait_label: rod shaped
+  relation: REQUIRED_FOR
+  evidence:
+  - reference: DOI:10.1016/j.cell.2018.02.050
+    notes: Shi et al. 2018 review MreB as the organiser of sidewall synthesis; losing
+      mreB loses the rod, so the filament is required for the shape rather than sufficient
+      for it.
+- trait_id: METPO:1000666
+  trait_label: cell shape
+  relation: MODULATES
+  evidence:
+  - reference: DOI:10.1146/annurev-genet-102108-134845
+    notes: The Bacterial Cytoskeleton (2010) treats MreB as the determinant that distinguishes
+      rod-shaped lineages from cocci.
