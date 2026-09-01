@@ -9,7 +9,7 @@ enough metadata for a fail-closed importer.
 Adopt direct `S-BIAD` submissions only. Each accepted study must:
 
 - be attached to the `BioImages` collection and use a `BioImages.v*` template;
-- carry the matching `10.6019/S-BIAD…` DOI;
+- carry the matching `10.6019/S-BIADNNNN` DOI pattern;
 - state exactly CC0 or CC BY 4.0 with a matching Creative Commons URL;
 - name an organism in a Biosample; and
 - declare the selected file in a Study Component's JSON manifest.
