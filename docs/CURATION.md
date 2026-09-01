@@ -95,6 +95,13 @@ to match — never one without the other.
   to the structure and you judge it out of scope, add a `RESOLVED` discussion
   saying why (see `rbcx_not_a_component` on the carboxysome). Otherwise the
   next seeding run reports it as a gap again and the reasoning is lost.
+- **Colours come from tokens, in every stylesheet.** `tests/test_stylesheet_contract.py`
+  refuses an undefined-token fallback, a duplicated selector, a colour literal
+  outside a token block, and a token declared in one theme block but not the
+  other — across `style.css` and every inline `<style>` a template ships. It
+  carries mutation tests: each check is exercised against a stylesheet broken
+  in exactly the way it exists to catch, because CSS never reports a failure
+  and a contract that has only run against a passing file proves nothing.
 - **A trait link is a claim about another repository**, so it is checked there:
   `just check-trait-links --check` confirms the CURIE is a TraitMech record and
   that its label still matches. A drifted label is the cross-repo form of the

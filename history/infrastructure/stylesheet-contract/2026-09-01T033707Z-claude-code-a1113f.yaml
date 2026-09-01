@@ -1,0 +1,43 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: tests/test_stylesheet_contract.py
+  slug: stylesheet-contract
+session:
+  id: 2026-09-01T033707Z-claude-code-a1113f
+  timestamp: '2026-09-01T03:37:07Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/95
+  - https://github.com/CultureBotAI/CellStructureMech/issues/97
+  - https://github.com/CultureBotAI/CellStructureMech/issues/99
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - infrastructure
+  summary: Port the stylesheet contract, with mutation tests and the fixes it found
+  details: 'Issue 95 asked for AntibioticMech''s four-assertion stylesheet contract, which
+    exists because CSS never reports a failure: an undefined token falls back to its literal,
+    a duplicated selector silently overrides the earlier one, and a dark value in one of two
+    dark blocks themes correctly by toggle and wrongly by OS preference. All of those render
+    and pass every page-level check. The port is not verbatim and the differences are the
+    point. First, the sibling''s colour-literal pattern is anchored to the start of a line
+    because that stylesheet puts one declaration per line; this repository writes whole rules
+    inline, so the ported pattern matched almost nothing and would have passed forever while
+    seeing nothing. De-anchoring it found two real literals in the landing page, a button
+    label painted white in light mode and dark in dark mode, which is deliberate theming done
+    with literals rather than a token; they became a single --on-accent token declared in
+    the light palette and both dark blocks. Second, my first attempt to exclude token declarations
+    stripped any rule whose selector began with :root, which removed the very rule carrying
+    that defect. Third, the contract now reads every stylesheet the site ships, including
+    inline style blocks, because the landing page is self-contained and carries its own palette.
+    The subset rule I first wrote for that was wrong, since a self-contained page legitimately
+    has components the shared stylesheet lacks; the invariant that holds is completeness within
+    each stylesheet. Six mutation tests exercise each check against a stylesheet broken in
+    exactly the way it exists to catch.'
