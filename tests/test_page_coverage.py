@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import html
 import re
+from functools import cache
 from pathlib import Path
 
 import pytest
@@ -43,6 +44,14 @@ PROBES = {
 }
 
 
+@cache
+def _records():
+    """Parsed once; the parametrised tests would otherwise re-read the corpus
+    eleven times and add five seconds to `just qc`."""
+    return load_records()
+
+
+@cache
 def _page_text(path: Path) -> str:
     page = PAGES / path.parent.name / (path.stem + ".html")
     assert page.exists(), f"no rendered page for {path.name}"
@@ -54,7 +63,7 @@ def _page_text(path: Path) -> str:
 @pytest.mark.parametrize("section", sorted(PROBES))
 def test_every_populated_section_reaches_the_page(section):
     missing = []
-    for path, record in load_records():
+    for path, record in _records():
         if section == "protein_examples":
             values = PROBES[section](record)
         elif not record.get(section):
@@ -80,7 +89,7 @@ def test_the_probe_set_covers_every_list_section_the_schema_defines():
         "part_of", "has_part", "curation_history", "causal_graphs", "grounding_status", "notes",
         "evidence", "external_links", "size_range", "abbreviations",
     }
-    seen = {key for _, record in load_records() for key in record}
+    seen = {key for _, record in _records() for key in record}
     assert not (seen - covered), (
         f"record fields with no page-coverage probe: {sorted(seen - covered)}"
     )
