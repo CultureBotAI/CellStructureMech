@@ -50,6 +50,7 @@ except ImportError:  # ... or imported by the tests as scripts.uniprot_sl
     from scripts.corpus import REPO_ROOT, load_records
 
 from cellstructuremech.curate.curation_event import record_curation_event
+from cellstructuremech.ingest import pubmed_citations
 from cellstructuremech.validation.write_validated import ValidationFailedError, write_validated_structure
 
 UA = {"User-Agent": "CellStructureMech/0.1 (https://github.com/CultureBotAI/CellStructureMech; curation bot)"}
@@ -164,9 +165,58 @@ def match_component(doc: dict, gene: str | None) -> tuple[dict | None, str]:
     return None, "no matching component" if not hits else f"ambiguous: {[h['component_id'] for h in hits]}"
 
 
+def boilerplate_note(label: str, acc: str) -> str:
+    """The note this script used to write, with nothing to tell papers apart.
+
+    One definition serves both the generator and the back-fill guard, so the
+    guard cannot drift from what it is meant to recognise.
+    """
+    return (f"ECO:0000269 experimental evidence for the {label} "
+            f"localisation of {acc}, as cited by UniProt.")
+
+
+def evidence_note(label: str, acc: str, citation: str | None) -> str:
+    """The same provenance, prefixed with which paper it actually is (#41)."""
+    base = boilerplate_note(label, acc)
+    return f"{citation} {base}" if citation else base
+
+
+def refresh_evidence_notes(doc: dict) -> list[str]:
+    """Back-fill citations onto examples this script seeded earlier.
+
+    Only a note byte-identical to ``boilerplate_note`` is touched. A curator who
+    has written their own note keeps it -- that is the difference between filling
+    a gap and overwriting someone's work.
+    """
+    pending: list[tuple[dict, str, str]] = []
+    for component in doc.get("components") or []:
+        for example in component.get("protein_examples") or []:
+            acc = (example.get("uniprot_id") or "").split(":")[-1]
+            for evidence in example.get("evidence") or []:
+                reference = evidence.get("reference") or ""
+                if not reference.startswith("PMID:"):
+                    continue
+                if evidence.get("notes") != boilerplate_note(doc["label"], acc):
+                    continue
+                pending.append((evidence, reference.split(":", 1)[1], acc))
+
+    citations = pubmed_citations([pmid for _, pmid, _ in pending]) if pending else {}
+    changed = []
+    for evidence, pmid, acc in pending:
+        citation = citations.get(pmid)
+        if not citation:
+            continue
+        evidence["notes"] = evidence_note(doc["label"], acc, citation)
+        changed.append(f"PMID:{pmid} on {acc}")
+    return changed
+
+
 def plan_proteins(doc: dict, sl: str, taxon_id: int, taxon_label: str, today: str):
     rows = []
-    for e in fetch_members(sl, taxon_id):
+    members = list(fetch_members(sl, taxon_id))
+    citations = pubmed_citations(
+        [str(p) for e in members for p in localisation_pmids(e, sl)[:MAX_EVIDENCE]])
+    for e in members:
         acc = e["primaryAccession"]
         gene = (e.get("genes") or [{}])[0].get("geneName", {}).get("value")
         desc = e.get("proteinDescription", {})
@@ -186,19 +236,42 @@ def plan_proteins(doc: dict, sl: str, taxon_id: int, taxon_label: str, today: st
                     "entry_status": "REVIEWED", "retrieved_on": today,
                     "role": f"UniProt annotates this protein to {sl} ({doc['label']}); component role: "
                             f"{comp.get('role') or comp['label']}",
-                    "evidence": [{"reference": f"PMID:{p}",
-                                  "notes": f"ECO:0000269 experimental evidence for the {doc['label']} "
-                                           f"localisation of {acc}, as cited by UniProt."}
-                                 for p in pmids[:MAX_EVIDENCE]],
+                    "evidence": [
+                        {"reference": f"PMID:{p}",
+                         "notes": evidence_note(doc["label"], acc, citations.get(str(p)))}
+                        for p in pmids[:MAX_EVIDENCE]
+                    ],
                 }
         rows.append((acc, gene, name, comp["component_id"] if comp else "", len(pmids), status, example))
     return rows
 
 
 def cmd_proteins(args) -> int:
-    go_to_sl = load_subcell(args.refresh)
     path = Path(args.record).resolve()
     doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+
+    if args.refresh_evidence:
+        changed = refresh_evidence_notes(doc)
+        for line in changed:
+            print(f"enriched\t{line}")
+        if not args.apply:
+            print(f"\ndry run: {len(changed)} evidence note(s) would gain a citation; pass --apply")
+            return 0
+        if not changed:
+            print("nothing to write")
+            return 0
+        record_curation_event(
+            doc, curator="uniprot_sl", action="ENRICH_EVIDENCE_NOTES", llm_assisted=False,
+            changes=f"#41: added the cited paper's author, year, title and journal to {len(changed)} "
+                    f"UniProt-seeded evidence note(s), fetched from PubMed esummary. The notes were "
+                    f"previously identical per accession, so a reader could not tell the cited papers "
+                    f"apart. Only notes byte-identical to the seeded boilerplate were touched.",
+        )
+        _write(doc, path)
+        print(f"\nenriched {len(changed)} evidence note(s) in {path.relative_to(REPO_ROOT)}")
+        return 0
+
+    go_to_sl = load_subcell(args.refresh)
     hit = go_to_sl.get(doc["identifier"])
     if not hit:
         print(f"{doc['identifier']} has no UniProt SL term in subcell.txt", file=sys.stderr)
@@ -262,6 +335,9 @@ def main() -> int:
     p.add_argument("--record", required=True)
     p.add_argument("--taxon", type=int, help="Restrict to one canonical taxon id.")
     p.add_argument("--apply", action="store_true")
+    p.add_argument("--refresh-evidence", action="store_true",
+                   help="Back-fill the cited paper's title onto evidence notes this script seeded "
+                        "earlier (#41). Notes a curator has rewritten are left alone.")
     p.set_defaults(func=cmd_proteins)
     args = parser.parse_args()
     return args.func(args)

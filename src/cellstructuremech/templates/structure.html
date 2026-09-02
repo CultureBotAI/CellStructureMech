@@ -29,6 +29,25 @@
 </tbody></table>
 {% endif %}
 
+{% set with_examples = r.components | selectattr("protein_examples") | list %}
+{% if with_examples %}
+<h2>Organism-specific protein examples</h2>
+<p><small>Named proteins in which each component's role was established, with the
+organism the evidence comes from. The component above is the taxon-agnostic
+family; these are the specific entries behind it.</small></p>
+{% for c in with_examples %}
+<h3 id="protein-examples-{{ c.component_id }}">{{ c.label }}</h3>
+<table><thead><tr><th>Accession</th><th>Protein</th><th>Gene</th><th>Organism</th><th>Entry</th></tr></thead><tbody>
+{% for p in c.protein_examples %}
+<tr id="protein-{{ p.uniprot_id | replace(':', '-') }}"><td>{{ curie(p.uniprot_id) }}</td><td>{{ p.protein_label }}</td><td>{{ p.gene_symbol or "" }}</td><td><em>{{ p.taxon_label }}</em> ({{ curie(p.taxon_id) }})</td><td>{{ p.entry_status or "" }}</td></tr>
+{% if p.role or p.evidence %}
+<tr><td colspan="5"><details><summary>Role and evidence{% if p.evidence %} ({{ p.evidence | length }} reference{{ "" if p.evidence | length == 1 else "s" }}){% endif %}</summary>{% if p.role %}<p>{{ p.role }}</p>{% endif %}{{ evid(p.evidence) }}</details></td></tr>
+{% endif %}
+{% endfor %}
+</tbody></table>
+{% endfor %}
+
+{% endif %}
 {% if r.complex_compositions %}
 <h2>Source composition assertions</h2>
 {% for c in r.complex_compositions %}

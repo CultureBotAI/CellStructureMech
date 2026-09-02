@@ -89,8 +89,10 @@ components:
       vesicles form but scatter.'
     evidence:
     - reference: PMID:14766587
-      notes: ECO:0000269 experimental evidence for the magnetosome localisation of
-        V6F519, as cited by UniProt.
+      notes: Grünberg K et al. 2004, ‘Biochemical and proteomic analysis of the magnetosome
+        membrane in Magnetospirillum gryphiswaldense’, Appl Environ Microbiol. ECO:0000269
+        experimental evidence for the magnetosome localisation of V6F519, as cited
+        by UniProt.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The component combines MamK and its MamJ connector. The stored
     MamJ example has IPR060787, whereas reviewed MamK Q6NE59 has IPR056546; they share
@@ -322,6 +324,13 @@ curation_history:
     identity, reviewed UniProt examples, type=family entries, and unchanged family
     consensus across curated scope examples.
   llm_assisted: true
+- timestamp: '2026-09-02T23:27:21Z'
+  curator: uniprot_sl
+  action: ENRICH_EVIDENCE_NOTES
+  changes: '#41: added the cited paper''s author, year, title and journal to 1 UniProt-seeded
+    evidence note(s), fetched from PubMed esummary. The notes were previously identical
+    per accession, so a reader could not tell the cited papers apart. Only notes byte-identical
+    to the seeded boilerplate were touched.'
 xrefs:
 - uniprot.location:SL-0510
 - MICRO:0000216

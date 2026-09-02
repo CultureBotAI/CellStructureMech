@@ -39,14 +39,20 @@ components:
       Tile the shell facets; central pores admit bicarbonate and RuBP.'
     evidence:
     - reference: PMID:17675289
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q03511, as cited by UniProt.
+      notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
+        reveals multiple Rubisco complexes with carboxysomal proteins CcmM and CcaA’,
+        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q03511, as cited by UniProt.
     - reference: PMID:20304968
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q03511, as cited by UniProt.
+      notes: Long BM et al. 2010, ‘Functional cyanobacterial beta-carboxysomes have
+        an absolute requirement for both long and short forms of the CcmM protein’,
+        Plant Physiol. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q03511, as cited by UniProt.
     - reference: PMID:22928045
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q03511, as cited by UniProt.
+      notes: 'Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes
+        in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
+        PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q03511, as cited by UniProt.'
   - uniprot_id: UniProtKB:Q31RK2
     protein_label: Carboxysome shell protein CcmK4
     gene_symbol: ccmK4
@@ -58,14 +64,18 @@ components:
       Tile the shell facets; central pores admit bicarbonate and RuBP.'
     evidence:
     - reference: PMID:25117559
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q31RK2, as cited by UniProt.
+      notes: 'Cai F et al. 2015, ‘Engineering bacterial microcompartment shells: chimeric
+        shell proteins and chimeric carboxysome shells’, ACS Synth Biol. ECO:0000269
+        experimental evidence for the carboxysome localisation of Q31RK2, as cited
+        by UniProt.'
     - reference: PMID:28616951
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q31RK2, as cited by UniProt.
+      notes: Faulkner M et al. 2017, ‘Direct characterization of the native structure
+        and mechanics of cyanobacterial carboxysomes’, Nanoscale. ECO:0000269 experimental
+        evidence for the carboxysome localisation of Q31RK2, as cited by UniProt.
     - reference: PMID:28963440
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q31RK2, as cited by UniProt.
+      notes: Niederhuber MJ et al. 2017, ‘Superresolution microscopy of the β-carboxysome
+        reveals a homogeneous matrix’, Mol Biol Cell. ECO:0000269 experimental evidence
+        for the carboxysome localisation of Q31RK2, as cited by UniProt.
   - uniprot_id: UniProtKB:Q31RK3
     protein_label: Carboxysome shell protein CcmK3
     gene_symbol: ccmK3
@@ -77,11 +87,14 @@ components:
       Tile the shell facets; central pores admit bicarbonate and RuBP.'
     evidence:
     - reference: PMID:30389783
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q31RK3, as cited by UniProt.
+      notes: Sommer M et al. 2019, ‘Heterohexamers Formed by CcmK3 and CcmK4 Increase
+        the Complexity of Beta Carboxysome Shells’, Plant Physiol. ECO:0000269 experimental
+        evidence for the carboxysome localisation of Q31RK3, as cited by UniProt.
     - reference: PMID:31048338
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q31RK3, as cited by UniProt.
+      notes: Sun Y et al. 2019, ‘Single-Organelle Quantification Reveals Stoichiometric
+        and Structural Variability of Carboxysomes Dependent on the Environment’,
+        Plant Cell. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q31RK3, as cited by UniProt.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: IPR046380 exactly covers the reviewed CcmK examples, but alpha-carboxysome
     CsoS1 proteins lack it. Their only shared family, IPR050575, is the generic bacterial
@@ -130,14 +143,19 @@ components:
       dimer of stacked trimers thought to control metabolite passage.'
     evidence:
     - reference: PMID:22928045
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        P46205, as cited by UniProt.
+      notes: 'Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes
+        in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
+        PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation
+        of P46205, as cited by UniProt.'
     - reference: PMID:24267892
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        P46205, as cited by UniProt.
+      notes: 'Cameron JC et al. 2013, ‘Biogenesis of a bacterial organelle: the carboxysome
+        assembly pathway’, Cell. ECO:0000269 experimental evidence for the carboxysome
+        localisation of P46205, as cited by UniProt.'
     - reference: PMID:31048338
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        P46205, as cited by UniProt.
+      notes: Sun Y et al. 2019, ‘Single-Organelle Quantification Reveals Stoichiometric
+        and Structural Variability of Carboxysomes Dependent on the Environment’,
+        Plant Cell. ECO:0000269 experimental evidence for the carboxysome localisation
+        of P46205, as cited by UniProt.
   - uniprot_id: UniProtKB:Q31QW7
     protein_label: Carboxysome shell protein CcmP
     gene_symbol: ccmP
@@ -151,8 +169,10 @@ components:
       dimer of stacked trimers thought to control metabolite passage.'
     evidence:
     - reference: PMID:23572529
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q31QW7, as cited by UniProt.
+      notes: Cai F et al. 2013, ‘The structure of CcmP, a tandem bacterial microcompartment
+        domain protein from the β-carboxysome, forms a subcompartment within a microcompartment’,
+        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q31QW7, as cited by UniProt.
 - component_id: bmc_p
   label: BMC-P shell pentamers (CcmL / CsoS4)
   component_type: PROTEIN
@@ -177,11 +197,14 @@ components:
       Cap the vertices of the icosahedral shell.'
     evidence:
     - reference: PMID:28616951
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q03512, as cited by UniProt.
+      notes: Faulkner M et al. 2017, ‘Direct characterization of the native structure
+        and mechanics of cyanobacterial carboxysomes’, Nanoscale. ECO:0000269 experimental
+        evidence for the carboxysome localisation of Q03512, as cited by UniProt.
     - reference: PMID:31048338
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q03512, as cited by UniProt.
+      notes: Sun Y et al. 2019, ‘Single-Organelle Quantification Reveals Stoichiometric
+        and Structural Variability of Carboxysomes Dependent on the Environment’,
+        Plant Cell. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q03512, as cited by UniProt.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: IPR046387 exactly covers CcmL, whereas CsoS4A and CsoS4B have the
     distinct IPR014076 and IPR014077 families. Their shared IPR004992 entry also includes
@@ -213,14 +236,20 @@ components:
       Encapsulated cargo; fixes CO2 into 3-phosphoglycerate.'
     evidence:
     - reference: PMID:17675289
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q31NB3, as cited by UniProt.
+      notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
+        reveals multiple Rubisco complexes with carboxysomal proteins CcmM and CcaA’,
+        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q31NB3, as cited by UniProt.
     - reference: PMID:20304968
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q31NB3, as cited by UniProt.
+      notes: Long BM et al. 2010, ‘Functional cyanobacterial beta-carboxysomes have
+        an absolute requirement for both long and short forms of the CcmM protein’,
+        Plant Physiol. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q31NB3, as cited by UniProt.
     - reference: PMID:22928045
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q31NB3, as cited by UniProt.
+      notes: 'Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes
+        in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
+        PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q31NB3, as cited by UniProt.'
   - uniprot_id: UniProtKB:Q31NB2
     protein_label: Ribulose bisphosphate carboxylase small subunit
     gene_symbol: cbbS
@@ -232,14 +261,21 @@ components:
       Encapsulated cargo; fixes CO2 into 3-phosphoglycerate.'
     evidence:
     - reference: PMID:17675289
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q31NB2, as cited by UniProt.
+      notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
+        reveals multiple Rubisco complexes with carboxysomal proteins CcmM and CcaA’,
+        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q31NB2, as cited by UniProt.
     - reference: PMID:22928045
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q31NB2, as cited by UniProt.
+      notes: 'Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes
+        in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
+        PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q31NB2, as cited by UniProt.'
     - reference: PMID:24585024
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q31NB2, as cited by UniProt.
+      notes: Nishimura T et al. 2014, ‘In vitro and in vivo analyses of the role of
+        the carboxysomal β-type carbonic anhydrase of the cyanobacterium Synechococcus
+        elongatus in carboxylation of ribulose-1,5-bisphosphate’, Photosynth Res.
+        ECO:0000269 experimental evidence for the carboxysome localisation of Q31NB2,
+        as cited by UniProt.
 - component_id: carbonic_anhydrase
   label: carboxysomal carbonic anhydrase (CcaA / CsoSCA)
   component_type: PROTEIN
@@ -264,14 +300,20 @@ components:
       Dehydrates bicarbonate to CO2 inside the shell.'
     evidence:
     - reference: PMID:17675289
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        P27134, as cited by UniProt.
+      notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
+        reveals multiple Rubisco complexes with carboxysomal proteins CcmM and CcaA’,
+        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
+        of P27134, as cited by UniProt.
     - reference: PMID:20304968
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        P27134, as cited by UniProt.
+      notes: Long BM et al. 2010, ‘Functional cyanobacterial beta-carboxysomes have
+        an absolute requirement for both long and short forms of the CcmM protein’,
+        Plant Physiol. ECO:0000269 experimental evidence for the carboxysome localisation
+        of P27134, as cited by UniProt.
     - reference: PMID:22928045
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        P27134, as cited by UniProt.
+      notes: 'Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes
+        in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
+        PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation
+        of P27134, as cited by UniProt.'
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The beta-carboxysome CcaA example has IPR045066, while alpha-carboxysome
     CsoSCA has IPR014074; they share no integrated InterPro family, so neither lineage-specific
@@ -300,14 +342,19 @@ components:
       Links RuBisCO to the shell and drives cargo condensation.'
     evidence:
     - reference: PMID:17675289
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q03513, as cited by UniProt.
+      notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
+        reveals multiple Rubisco complexes with carboxysomal proteins CcmM and CcaA’,
+        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q03513, as cited by UniProt.
     - reference: PMID:20304968
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q03513, as cited by UniProt.
+      notes: Long BM et al. 2010, ‘Functional cyanobacterial beta-carboxysomes have
+        an absolute requirement for both long and short forms of the CcmM protein’,
+        Plant Physiol. ECO:0000269 experimental evidence for the carboxysome localisation
+        of Q03513, as cited by UniProt.
     - reference: PMID:28616951
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q03513, as cited by UniProt.
+      notes: Faulkner M et al. 2017, ‘Direct characterization of the native structure
+        and mechanics of cyanobacterial carboxysomes’, Nanoscale. ECO:0000269 experimental
+        evidence for the carboxysome localisation of Q03513, as cited by UniProt.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The beta-carboxysome scaffold CcmM has IPR017156 and the alpha-carboxysome
     scaffold CsoS2 has IPR020990. They share no integrated InterPro family, so neither
@@ -344,11 +391,15 @@ components:
       binds RuBisCO, while its C-terminal 18 residues bind the shell protein CcmK2.'
     evidence:
     - reference: PMID:22461622
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        P46204, as cited by UniProt.
+      notes: Kinney JN et al. 2012, ‘Elucidating essential role of conserved carboxysomal
+        protein CcmN reveals common feature of bacterial microcompartment assembly’,
+        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
+        of P46204, as cited by UniProt.
     - reference: PMID:31048338
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        P46204, as cited by UniProt.
+      notes: Sun Y et al. 2019, ‘Single-Organelle Quantification Reveals Stoichiometric
+        and Structural Variability of Carboxysomes Dependent on the Environment’,
+        Plant Cell. ECO:0000269 experimental evidence for the carboxysome localisation
+        of P46204, as cited by UniProt.
 - component_id: positioning
   label: carboxysome positioning system (McdB, with the McdA ATPase)
   component_type: PROTEIN
@@ -383,11 +434,14 @@ components:
       carboxysomes aggregate rather than failing to form.'
     evidence:
     - reference: PMID:30520729
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q8GJM6, as cited by UniProt.
+      notes: MacCready JS et al. 2018, ‘Protein gradients on the nucleoid position
+        the carbon-fixing organelles of cyanobacteria’, Elife. ECO:0000269 experimental
+        evidence for the carboxysome localisation of Q8GJM6, as cited by UniProt.
     - reference: PMID:34406783
-      notes: ECO:0000269 experimental evidence for the carboxysome localisation of
-        Q8GJM6, as cited by UniProt.
+      notes: Hakim P et al. 2021, ‘Dissection of the ATPase active site of McdA reveals
+        the sequential steps essential for carboxysome distribution’, Mol Biol Cell.
+        ECO:0000269 experimental evidence for the carboxysome localisation of Q8GJM6,
+        as cited by UniProt.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1117
   taxon_label: Cyanobacteriota
@@ -743,6 +797,13 @@ curation_history:
     examples, type=family entries, and unchanged family consensus across curated scope
     examples.
   llm_assisted: true
+- timestamp: '2026-09-02T23:27:08Z'
+  curator: uniprot_sl
+  action: ENRICH_EVIDENCE_NOTES
+  changes: '#41: added the cited paper''s author, year, title and journal to 30 UniProt-seeded
+    evidence note(s), fetched from PubMed esummary. The notes were previously identical
+    per accession, so a reader could not tell the cited papers apart. Only notes byte-identical
+    to the seeded boilerplate were touched.'
 xrefs:
 - uniprot.location:SL-0034
 discussions:
