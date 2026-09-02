@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mreb-filament.yaml
+  slug: mreb-filament
+session:
+  id: 2026-09-02T060956Z-claude-code-abdd7f
+  timestamp: '2026-09-02T06:09:56Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/133
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Replace the trait links' paraphrase with verbatim quotation, and bound a claim
+    the source contradicts
+  details: 'A reader asked what the evidence was behind the MreB record''s two trait links.
+    The honest answer was that both carried a paraphrase attributed to papers I had not read.
+    Shi et al. 2018 is open access as PMC5846203, so I read it and replaced the attributions
+    with verbatim quotation. Rod shape is supported by the sentence that MreB depletion results
+    in loss of rod-like shape and rounding and that no Escherichia coli mutants or growth
+    conditions are known to restore rod-like shape in the absence of MreB, which supports
+    REQUIRED_FOR rather than CONFERS. Cell shape is supported by the sentence that MreB both
+    senses and changes cell shape, generating a self-organizing feedback system for shape
+    maintenance, which supports MODULATES. The second citation, an Annual Review of Genetics
+    article from 2010, was dropped from the specific claim: it has no PubMed and no PMC record,
+    so nothing of it could be read beyond a Crossref title, and the liveness gate passes it
+    because the DOI resolves. Reading the paper also bounded a taxonomic claim the record
+    had made too strongly, that shape and mreB track each other; the same source names Actinobacteria
+    and Rhizobiales as rod-like or curved lineages that lack MreB altogether, so the presence
+    value and note were corrected. The corpus-wide version of the question is filed as issue
+    133: no evidence item anywhere carried a verbatim snippet.'
