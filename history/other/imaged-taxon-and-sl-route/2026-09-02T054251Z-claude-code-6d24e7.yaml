@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: other
+  path: tests/test_corpus_integrity.py
+  slug: imaged-taxon-and-sl-route
+session:
+  id: 2026-09-02T054251Z-claude-code-6d24e7
+  timestamp: '2026-09-02T05:42:51Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/36
+  - https://github.com/CultureBotAI/CellStructureMech/issues/42
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - images
+  summary: Require an imaged organism to be a canonical example; decline the keyword route
+  details: 'Two decisions from the 2026-09-02 review. Issue 36 said the image-taxon test forced
+    strain-level rows into taxonomic_distribution, producing entries like Escherichia coli
+    O157 H7 marked UNIVERSAL, a presence value that is meaningless for one strain. Checking
+    the corpus showed the symptom had already been fixed in practice: all five image taxa
+    now sit in canonical_examples, where a note saying the taxon is depicted in the hosted
+    micrograph is exactly the right statement. The test now requires that placement rather
+    than accepting either, so the fix cannot regress, and it says why in its own failure message,
+    pointing a curator to move the row rather than add a presence. Issue 42 asked whether
+    to extend the UniProt Subcellular Location seeder to a keyword route, because the ribosome
+    has no SL term and UniProt classifies ribosomal proteins by the Ribonucleoprotein keyword
+    instead. Declined: a keyword is a classification rather than a localisation, so the experimental
+    per-localisation evidence that makes those protein examples worth having does not transfer.
+    The ribosome already has its membership from Complex Portal, which states the 30S subunit
+    with twenty-two participants and the 50S with thirty-six and carries CC BY terms. The
+    decision is recorded in the seeder''s docstring, where anyone tempted to add the route
+    will read it.'

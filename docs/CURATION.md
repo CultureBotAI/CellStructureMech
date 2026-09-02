@@ -185,9 +185,13 @@ claim like any other and carries its own provenance:
   leave `file` unset. Tests enforce both.
 - **`attribution`** (required), exactly as the licence demands. For CC BY
   that is author(s) + licence + source.
-- **`taxon_id`** (required) — the organism in the picture, which must already
-  appear in `taxonomic_distribution` or `canonical_examples` (test-enforced);
-  an image of a taxon the record does not mention is evidence for nothing.
+- **`taxon_id`** (required) — the organism in the picture, which must appear in
+  **`canonical_examples`** (test-enforced). An image of a taxon the record does
+  not mention is evidence for nothing; and it belongs there rather than in
+  `taxonomic_distribution`, because satisfying the rule from the distribution
+  produced rows like "E. coli O157:H7 — UNIVERSAL", a presence value that is
+  meaningless for one strain (#36). A canonical example carries a note and a
+  citation instead of a presence, which is what an imaged strain needs.
 - **`reference`** (recommended) — DOI or PMID of the paper the image comes
   from or is described in. Decision #30: the source record
   (`source_accession` + `source_url`) is an acceptable citable identifier on

@@ -146,18 +146,29 @@ def test_image_files_on_disk_are_all_referenced(records, repo_root):
     assert not orphans, f"image files not referenced by any record: {orphans}"
 
 
-def test_image_taxa_are_named_on_the_record(records):
-    """The organism in the picture should be one the record already claims,
-    in taxonomic_distribution or canonical_examples — otherwise the image is
-    evidence for a structure in a taxon the record says nothing about."""
+def test_an_imaged_organism_is_a_canonical_example(records):
+    """The organism in the picture must be named in `canonical_examples`.
+
+    An image of a taxon the record says nothing about is evidence for nothing,
+    which is why the taxon has to appear somewhere. It has to appear *here*
+    because the alternative went wrong in practice (#36): satisfying the rule
+    from `taxonomic_distribution` produced rows like "E. coli O157:H7 —
+    UNIVERSAL", a presence value that is meaningless for one strain and false
+    as written. `canonical_examples` means "a reference organism for this
+    structure", which is exactly what an imaged strain is, and it carries a
+    note and a citation instead of a presence.
+    """
     bad = []
     for path, doc in records:
-        named = {t["taxon_id"] for t in doc.get("taxonomic_distribution") or []}
-        named |= {t["taxon_id"] for t in doc.get("canonical_examples") or []}
+        canonical = {t["taxon_id"] for t in doc.get("canonical_examples") or []}
+        distribution = {t["taxon_id"] for t in doc.get("taxonomic_distribution") or []}
         for im in doc.get("images") or []:
-            if im["taxon_id"] not in named:
-                bad.append(f"{path.name}:{im['image_id']}:{im['taxon_id']}")
-    assert not bad, f"image taxa not in taxonomic_distribution/canonical_examples: {bad}"
+            if im["taxon_id"] in canonical:
+                continue
+            where = " (it is in taxonomic_distribution; move it, with a note)" \
+                if im["taxon_id"] in distribution else ""
+            bad.append(f"{path.name}:{im['image_id']}:{im['taxon_id']}{where}")
+    assert not bad, f"imaged organism not in canonical_examples: {bad}"
 
 
 def test_associated_machinery_is_never_essential(records):
