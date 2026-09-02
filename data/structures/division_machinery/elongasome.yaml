@@ -123,3 +123,31 @@ curation_history:
   changes: Drafted from the cited reviews; every GO term, taxon id and DOI resolved
     live before writing. Not yet human-reviewed.
   llm_assisted: true
+- timestamp: '2026-09-02T04:57:03Z'
+  curator: claude
+  action: ADD_TRAIT_LINK
+  changes: 'Self-review of PR #118: linked METPO:1000681 rod shaped, which the machine
+    is required for, and recorded the missing guided-by relation (#119).'
+  llm_assisted: true
+associated_traits:
+- trait_id: METPO:1000681
+  trait_label: rod shaped
+  relation: REQUIRED_FOR
+  evidence:
+  - reference: DOI:10.1038/nrmicro2677
+    notes: Typas et al. 2011 tie elongation-complex activity to the maintenance of
+      rod shape; losing it loses the rod, so the machine is required for the phenotype
+      rather than sufficient for it.
+discussions:
+- discussion_id: guided_by_mreb
+  prompt: This machine is guided by the MreB filament, and the schema has no relation
+    that says so.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - components#rodz
+  rationale: The partner statement to the discussion on the MreB filament record (#119).
+    RodZ couples the two, which is recorded in that component's role, but the structure-to-structure
+    relationship has no field.
+  posed_by: claude
+  posed_date: '2026-09-02'

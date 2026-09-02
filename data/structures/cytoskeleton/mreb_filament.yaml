@@ -98,6 +98,20 @@ discussions:
     never renamed.
   posed_by: claude
   posed_date: '2026-09-01'
+- discussion_id: guides_the_elongasome
+  prompt: The filament guides the elongasome, and the schema has no relation that
+    says so.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - components#elongasome_link
+  rationale: 'MreB filaments carry the RodA-PBP2 synthases around the cell; that is
+    the point of the structure. It was briefly recorded as xrefs: [cellstructuremech:elongasome],
+    but the schema defines xrefs as true equivalence and the two are not equivalent,
+    so the claim was false as written and removed (#119). Until a relation exists,
+    the link lives in the RodZ component role and in this discussion.'
+  posed_by: claude
+  posed_date: '2026-09-02'
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-01T03:41:49Z'
@@ -120,6 +134,13 @@ curation_history:
     constituents; the component here is narrowed to RodZ, which genuinely acts on
     the assembled filament. The elongasome is now cross-referenced.'
   llm_assisted: true
+- timestamp: '2026-09-02T04:57:03Z'
+  curator: claude
+  action: REMOVE_MISUSED_XREF
+  changes: '#119: removed xrefs: [cellstructuremech:elongasome]. xrefs means equivalence
+    and the filament is not equivalent to the machine it guides; the relationship
+    is stated in the component role and a discussion instead.'
+  llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped
@@ -136,5 +157,3 @@ associated_traits:
   - reference: DOI:10.1146/annurev-genet-102108-134845
     notes: The Bacterial Cytoskeleton (2010) treats MreB as the determinant that distinguishes
       rod-shaped lineages from cocci.
-xrefs:
-- cellstructuremech:elongasome
