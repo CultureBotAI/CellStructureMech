@@ -85,7 +85,9 @@ to match — never one without the other.
 - **`just evidence-verify` checks every snippet against its own source** and
   fails on any that is not there. A reference no route could reach is reported
   as unchecked and does not fail the run — a network fault is not a finding
-  about the corpus. It needs the network, so it is not part of
+  about the corpus. A snippet that is present but differs in case, quote or dash
+  style is reported as **not verbatim** rather than passed or failed: re-copy the
+  exact characters from the source. It needs the network, so it is not part of
   `just qc`; run it before committing evidence. `just evidence-audit` reports
   which references are readable at all, and `just evidence-suggest <record>`
   offers candidate sentences to choose from — it never chooses. See the
