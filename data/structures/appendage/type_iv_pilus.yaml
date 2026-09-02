@@ -54,6 +54,11 @@ canonical_examples:
   taxon_label: Pseudomonas aeruginosa
   note: Canonical retractile T4P model for twitching motility.
   reference: DOI:10.1038/nrmicro.2017.40
+- taxon_id: NCBITaxon:264462
+  taxon_label: Bdellovibrio bacteriovorus HD100
+  note: Attack-phase cells in the primary cryo-ET study include manually annotated
+    type IV pili.
+  reference: DOI:10.1038/s41564-023-01401-2
 functions:
 - function_id: twitching_motility
   label: type IV pilus-dependent motility
@@ -88,3 +93,44 @@ curation_history:
     is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
     only where the protein acts on the already-assembled structure.
   llm_assisted: true
+- timestamp: '2026-09-02T06:21:09Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLE
+  changes: Added the publication-backed Bdellovibrio bacteriovorus HD100 strain as
+    a canonical type-IV-pilus example before CryoET dataset ingestion.
+  llm_assisted: true
+- timestamp: '2026-09-02T06:29:03Z'
+  curator: cryoet_data_portal
+  action: ADD_STRUCTURAL_DATASET
+  changes: Added CryoET Data Portal dataset 10155 after exact GraphQL resolution of
+    run 7978 and annotation 30707; required the record's pre-existing exact NCBI taxon
+    and exact GO identity, preserved annotation quality metadata, and stored no imaging
+    volumes.
+  llm_assisted: true
+datasets:
+- accession: CryoETDataPortal:10155
+  title: Bdellovibrio attack-phase
+  description: Cryo-electron tomography dataset for Bdellovibrio bacteriovorus HD100,
+    linked to GO:0044096.
+  organism: NCBITaxon:264462 Bdellovibrio bacteriovorus HD100
+  dataset_type: STRUCTURAL_IMAGING
+  repository: CRYOET_DATA_PORTAL
+  sample_types:
+  - primary cell culture
+  platform: cryo-electron tomography
+  url: https://cryoetdataportal.czscience.com/datasets/10155
+  publication: DOI:10.1038/s41564-023-01401-2
+  findings: Run 7978 annotation 30707 identifies 8 GO:0044096 (type IV pilus) objects.
+  evidence:
+  - reference: DOI:10.1038/s41564-023-01401-2
+    supports: SUPPORT
+    evidence_source: publication
+    explanation: Associated primary publication for the selected CryoET dataset.
+  notes: 'CryoET Data Portal dataset 10155; canary run 7978 (ycw2012-11-14-17), one
+    of 105 portal runs; annotation 30707: method_type=manual, annotation_method=manual
+    labeling., annotation_software=IMOD, ground_truth_status=true, is_curator_recommended=true,
+    released 2024-06-03T00:00:00+00:00; deposited 2023-10-01T00:00:00+00:00; released
+    2023-12-01T00:00:00+00:00; last modified 2023-12-01T00:00:00+00:00. Public portal
+    submissions are CC0 (https://cryoetdataportal.czscience.com/data-submission-policy).
+    Metadata-only ingest: no tomogram or annotation volume was requested, downloaded
+    or hosted.'

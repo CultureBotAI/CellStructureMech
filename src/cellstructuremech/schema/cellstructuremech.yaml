@@ -62,6 +62,7 @@ prefixes:
   PDB: https://www.rcsb.org/structure/
   EMDB: https://www.ebi.ac.uk/emdb/
   EMPIAR: https://www.ebi.ac.uk/empiar/EMPIAR-
+  CryoETDataPortal: https://cryoetdataportal.czscience.com/datasets/
   # Taxonomy
   NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
   # Provenance
@@ -301,7 +302,7 @@ classes:
         description: Public datasets (structural, omics) relevant to this structure.
         multivalued: true
         inlined_as_list: true
-        range: Dataset
+        range: StructuralDataset
 
       mapping_status:
         description: >-
@@ -331,6 +332,19 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: CurationEvent
+
+  StructuralDataset:
+    is_a: Dataset
+    description: >-
+      CellStructureMech's domain extension of the shared lightweight Dataset.
+      It retains every shared omics value while adding structural-imaging
+      datasets and their specialist repositories without changing the
+      fleet-wide vendored contract.
+    slot_usage:
+      dataset_type:
+        range: StructuralDatasetTypeEnum
+      repository:
+        range: StructuralDatasetRepositoryEnum
 
   # ---------------------------------------------------------------
   # Composition, distribution, function
@@ -854,6 +868,64 @@ classes:
 # ================================================================
 
 enums:
+
+  StructuralDatasetTypeEnum:
+    description: >-
+      Shared dataset types plus CellStructureMech structural imaging. Shared
+      values are materialized below as well as inherited because the current
+      JSON-Schema generator does not expand enum inheritance; the schema test
+      requires this set to remain exactly the shared set plus the local value.
+    inherits: DatasetTypeEnum
+    permissible_values:
+      GENOMICS:
+      METAGENOMICS:
+      AMPLICON_16S:
+      AMPLICON_ITS:
+      AMPLICON_OTHER:
+      TRANSCRIPTOMICS:
+      METATRANSCRIPTOMICS:
+      PROTEOMICS:
+      METAPROTEOMICS:
+      METABOLOMICS:
+      FLUXOMICS:
+      PHENOMICS:
+      PHENOTYPE:
+      MULTI_OMICS:
+      OTHER:
+      STRUCTURAL_IMAGING:
+        description: Three-dimensional or other structural imaging data.
+
+  StructuralDatasetRepositoryEnum:
+    description: >-
+      Shared repositories plus CellStructureMech structural archives. Shared
+      values are explicitly materialized for current generator compatibility
+      and checked against the imported enum for drift.
+    inherits: DatasetRepositoryEnum
+    permissible_values:
+      NCBI_SRA:
+      NCBI_BIOPROJECT:
+      NCBI_GEO:
+      NCBI_ASSEMBLY:
+      ENA:
+      ARRAYEXPRESS:
+      MGNIFY:
+      JGI_GOLD:
+      JGI_IMG:
+      NMDC:
+      METABOLOMICS_WORKBENCH:
+      METABOLIGHTS:
+      MASSIVE:
+      GNPS:
+      PRIDE:
+      DBGAP:
+      GTEX:
+      FIGSHARE:
+      ZENODO:
+      BIOMODELS:
+      KBASE:
+      OTHER:
+      CRYOET_DATA_PORTAL:
+        description: Chan Zuckerberg Initiative CryoET Data Portal.
 
   StructureCategoryEnum:
     description: Coarse bucket — used for filesystem layout.

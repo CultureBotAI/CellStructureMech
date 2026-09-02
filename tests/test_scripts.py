@@ -42,6 +42,22 @@ def test_render_check_is_current():
     assert out.returncode == 0, out.stderr
 
 
+def test_rendered_cryoet_datasets_are_public_and_resolvable(tmp_path):
+    out = tmp_path / "site"
+    result = _run("scripts/render_pages.py", "--out", str(out))
+    assert result.returncode == 0, result.stderr
+    gas = (out / "structures" / "inclusion" / "gas_vesicle.html").read_text()
+    pilus = (out / "structures" / "appendage" / "type_iv_pilus.html").read_text()
+    assert "<h2>Datasets</h2>" in gas
+    assert "https://cryoetdataportal.czscience.com/datasets/10014" in gas
+    assert "CryoETDataPortal:10014" in gas
+    assert "across 217 runs" in gas
+    assert "https://cryoetdataportal.czscience.com/datasets/10155" in pilus
+    assert "annotation 30707" in pilus
+    assert "ground_truth_status=true" in pilus
+    assert "is_curator_recommended=true" in pilus
+
+
 def test_text_embedding_map_check_is_current():
     out = _run("scripts/build_text_embedding_map.py", "--check")
     assert out.returncode == 0, out.stderr

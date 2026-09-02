@@ -245,6 +245,13 @@ Source-specific commands (all dry-run unless `--apply` is present):
   all component scope examples. Domains and homologous superfamilies are never
   promoted to family groundings; combined alpha/beta-carboxysome components and
   MamK/MamJ are recorded as `REVIEWED_LABEL_ONLY` when their families differ.
+- `scripts/cryoet_data_portal.py` resolves fixed, curator-reviewed dataset,
+  run and annotation identifiers through the official GraphQL endpoint. It
+  requires an exact NCBI taxon already asserted by the target record and either
+  an exact dataset `cellComponentId` or exact annotation `objectId`. Annotation
+  method, ground-truth and curator-recommendation status remain explicit. The
+  adapter stores only lightweight metadata and landing-page links; it neither
+  requests nor hosts tomograms or annotation volumes.
 - These image scripts verify downloaded bytes (PMC md5 where supplied, corpus
   SHA-256 always), validate the complete record mutation before touching the
   destination, and confine generated filenames to the record image directory.

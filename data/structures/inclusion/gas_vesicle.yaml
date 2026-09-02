@@ -44,6 +44,12 @@ taxonomic_distribution:
   presence: VARIABLE
   note: Also occurs in multiple archaeal groups, including haloarchaea.
   reference: PMID:8177173
+canonical_examples:
+- taxon_id: NCBITaxon:315271
+  taxon_label: Dolichospermum flos-aquae CCAP 1403/13F
+  note: Source strain for the primary cryo-ET structural study and its public gas-vesicle
+    dataset.
+  reference: DOI:10.1016/j.str.2023.03.011
 functions:
 - function_id: buoyancy_regulation
   label: buoyancy regulation
@@ -81,6 +87,45 @@ curation_history:
   action: ADD_XREF
   changes: Added MICRO:0000214 (gas vacuole) as a curator-reviewed identity xref;
     exact non-obsolete MicrO id and label verified through OLS.
+- timestamp: '2026-09-02T06:21:09Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLE
+  changes: Added the publication-backed Dolichospermum flos-aquae CCAP 1403/13F strain
+    as a canonical gas-vesicle example before CryoET dataset ingestion.
+  llm_assisted: true
+- timestamp: '2026-09-02T06:29:03Z'
+  curator: cryoet_data_portal
+  action: ADD_STRUCTURAL_DATASET
+  changes: Added CryoET Data Portal dataset 10014 after exact GraphQL resolution of
+    run 14004; required the record's pre-existing exact NCBI taxon and exact GO identity,
+    preserved annotation quality metadata, and stored no imaging volumes.
+  llm_assisted: true
 xrefs:
 - uniprot.location:SL-0125
 - MICRO:0000214
+datasets:
+- accession: CryoETDataPortal:10014
+  title: D. flos-aquae Ana GVs (WT)
+  description: Cryo-electron tomography dataset for Dolichospermum flos-aquae CCAP
+    1403/13F, linked to GO:0031411.
+  organism: NCBITaxon:315271 Dolichospermum flos-aquae CCAP 1403/13F
+  dataset_type: STRUCTURAL_IMAGING
+  repository: CRYOET_DATA_PORTAL
+  sample_types:
+  - organelle
+  platform: cryo-electron tomography
+  url: https://cryoetdataportal.czscience.com/datasets/10014
+  publication: DOI:10.1016/j.str.2023.03.011
+  findings: The portal identifies the dataset cell component exactly as GO:0031411
+    (gas vesicle) across 217 runs.
+  evidence:
+  - reference: DOI:10.1016/j.str.2023.03.011
+    supports: SUPPORT
+    evidence_source: publication
+    explanation: Associated primary publication for the selected CryoET dataset.
+  notes: 'CryoET Data Portal dataset 10014; canary run 14004 (pda2021-06-24-66), one
+    of 217 portal runs; deposited 2023-10-01T00:00:00+00:00; released 2023-12-01T00:00:00+00:00;
+    last modified 2023-12-01T00:00:00+00:00; related entries: EMD-29922,EMD-29923,EMD-29924,EMD-29925.
+    Public portal submissions are CC0 (https://cryoetdataportal.czscience.com/data-submission-policy).
+    Metadata-only ingest: no tomogram or annotation volume was requested, downloaded
+    or hosted.'

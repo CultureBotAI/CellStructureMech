@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import urllib.request
 from pathlib import Path
 
@@ -52,5 +53,34 @@ def test_source_fetch_uses_identity_and_verified_system_tls(monkeypatch):
     monkeypatch.setattr(urllib.request, "urlopen", fake_urlopen)
     assert ingest.get_bytes("https://example.org/item") == b"source bytes"
     assert seen["request"].get_header("User-agent").startswith("CellStructureMech/")
+    assert seen["timeout"] == 120
+    assert seen["context"] is ingest.TLS_CONTEXT
+
+
+def test_json_post_uses_identity_content_type_and_verified_system_tls(monkeypatch):
+    class Response:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_args):
+            return None
+
+        def read(self):
+            return b'{"data": {"item": 7}}'
+
+    seen = {}
+
+    def fake_urlopen(request, *, timeout, context):
+        seen.update(request=request, timeout=timeout, context=context)
+        return Response()
+
+    monkeypatch.setattr(urllib.request, "urlopen", fake_urlopen)
+    assert ingest.post_json("https://example.org/graphql", {"query": "query { item }"}) == {
+        "data": {"item": 7}
+    }
+    assert seen["request"].method == "POST"
+    assert seen["request"].get_header("User-agent").startswith("CellStructureMech/")
+    assert seen["request"].get_header("Content-type") == "application/json"
+    assert json.loads(seen["request"].data) == {"query": "query { item }"}
     assert seen["timeout"] == 120
     assert seen["context"] is ingest.TLS_CONTEXT

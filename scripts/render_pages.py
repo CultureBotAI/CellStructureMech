@@ -58,6 +58,7 @@ PREFIX_URL = {
     "PDB": "https://www.rcsb.org/structure/",
     "EMDB": "https://www.ebi.ac.uk/emdb/",
     "EMPIAR": "https://www.ebi.ac.uk/empiar/EMPIAR-",
+    "CryoETDataPortal": "https://cryoetdataportal.czscience.com/datasets/",
     "PMID": "https://pubmed.ncbi.nlm.nih.gov/",
     "DOI": "https://doi.org/",
     "METPO": "https://w3id.org/metpo/",
