@@ -9,6 +9,8 @@ stops gating, so each mutation below is a fabrication the gate must still fail.
 
 from __future__ import annotations
 
+import sys
+
 from scripts import fetch_snippets as fs
 
 # Real sentence from PMC5846203, as the tag stripper delivers it.
@@ -25,7 +27,8 @@ QUOTED = ("MreB depletion results in loss of rod-like shape and rounding (Kruse 
 
 
 def _found(snippet: str, source: str = SOURCE) -> bool:
-    return fs.normalise(snippet) in fs.normalise(source)
+    """Verbatim: matched at the exact or despaced tier, not merely present."""
+    return fs.match_tier(snippet, source) in (fs.EXACT, fs.DESPACED)
 
 
 def test_a_real_quotation_is_found_despite_tag_stripping_artefacts():
@@ -33,9 +36,8 @@ def test_a_real_quotation_is_found_despite_tag_stripping_artefacts():
     assert _found(QUOTED)
 
 
-def test_case_curly_quotes_and_dash_style_do_not_defeat_a_match():
-    assert _found("MreB DEPLETION results in loss of rod–like shape")
-    assert _found("MreB depletion results in loss of rod-like shape")
+def test_an_exact_substring_matches_at_the_exact_tier():
+    assert fs.match_tier("MreB depletion results in loss of rod-like shape", SOURCE) == fs.EXACT
 
 
 # --- mutation tests: each is a way a snippet can be wrong, and must fail ---
@@ -288,3 +290,73 @@ def test_evidence_items_are_distinguished_from_bare_citations():
            "taxonomic_distribution": [{"taxon_label": "Bacteria", "reference": "PMID:2"}]}
     items = {i["reference"]: i["in_evidence"] for i in fs.evidence_items([(fs.Path("r.yaml"), doc)])}
     assert items == {"PMID:1": True, "PMID:2": False}
+
+
+# --- graded comparison: imprecise is not the same as fabricated (#143) ---
+
+def test_the_canary_case_still_passes_as_verbatim():
+    """Whitespace injected by tag stripping is an extraction artefact."""
+    assert fs.match_tier(QUOTED, SOURCE) == fs.DESPACED
+
+
+def test_curly_quotes_are_reported_as_not_verbatim_rather_than_absent():
+    """The text IS in the paper; the record's copy of it is not exact. Passing
+    this silently would let `snippet` claim verbatim while holding something else."""
+    source = 'He wrote “MreB senses shape” in the review.'
+    assert fs.match_tier('"MreB senses shape"', source) == fs.LOOSE
+
+
+def test_an_en_dash_swapped_for_a_hyphen_is_not_verbatim():
+    assert fs.match_tier("rod–like shape", "the rod-like shape of cells") == fs.LOOSE
+
+
+def test_a_case_difference_is_not_verbatim():
+    assert fs.match_tier("MREB DEPLETION RESULTS", "MreB depletion results in rounding") == fs.LOOSE
+
+
+def test_hyphens_stay_significant_unlike_the_pdf_equivalent():
+    """A PDF line-break hyphen is indistinguishable from a compound hyphen, so the
+    tool this is modelled on drops hyphens. JATS has no line breaks, so 'rodlike'
+    and 'rod-like' are genuinely different words and must not match."""
+    assert fs.match_tier("rodlike shape", "the rod-like shape of cells") == fs.ABSENT
+
+
+def test_every_fabrication_mutation_is_still_absent_at_every_tier():
+    """The loosening must not have reached the errors. Same six cases as above."""
+    for mutation in (
+        QUOTED.replace("loss of rod-like shape", "loss of spherical shape"),
+        QUOTED.replace("there are no E. coli mutants", "there are many E. coli mutants"),
+        "there are E. coli mutants or growth conditions that restore rod-like shape",
+        "MreB depletion results in immediate cell lysis and loss of viability.",
+        "MreB depletion results in loss of rod-shape determination",
+        "Rounding and loss of rod-like shape results from MreB depletion",
+    ):
+        assert fs.match_tier(mutation, SOURCE) == fs.ABSENT
+
+
+def test_an_empty_snippet_is_absent_not_trivially_present():
+    """"" is a substring of everything; it must never read as verified."""
+    assert fs.match_tier("   ", SOURCE) == fs.ABSENT
+
+
+# --- the report must be machine-readable (#151) ---
+
+def test_the_report_round_trips_through_csv_dictreader(tmp_path, monkeypatch):
+    """A '# scope:' comment line made DictReader take it as the header and
+    misparse every row -- silently, which is the worst shape for a report whose
+    job is to be counted."""
+    import csv
+
+    report = tmp_path / "readability.tsv"
+    monkeypatch.setattr(fs, "_load_texts",
+                        lambda refs, cache: {r: (fs.ABSTRACT, "PubMed/1", "text") for r in refs})
+    monkeypatch.setattr(fs, "load_records", lambda: [
+        (fs.Path("r.yaml"), {"label": "R", "components": [
+            {"label": "c", "evidence": [{"reference": "PMID:1"}]}]})])
+    monkeypatch.setattr(sys, "argv", ["fetch_snippets", "--audit", "--report", str(report)])
+    assert fs.main() == 0
+
+    rows = list(csv.DictReader(report.open(), delimiter="\t"))
+    assert [r["reference"] for r in rows] == ["PMID:1"]
+    assert rows[0]["scope"] == "whole corpus"
+    assert rows[0]["readability"] == "abstract"

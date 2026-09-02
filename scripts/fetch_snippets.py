@@ -304,24 +304,57 @@ def candidate_sentences(text: str, claim: str, notes: str, limit: int = 5) -> li
     return [s for s in scored[:limit] if words & set(re.findall(r"[a-z]{4,}", s.lower()))]
 
 
-def normalise(text: str) -> str:
-    """Reduce a quotation to what makes it *the same quotation*.
+_QUOTES = {"\u201c": '"', "\u201d": '"', "\u201e": '"', "\u2018": "'", "\u2019": "'"}
+_DASHES = {"\u2013": "-", "\u2014": "-", "\u2212": "-"}
 
-    Whitespace is dropped entirely rather than collapsed. Stripping ``<xref>``
-    tags out of PMC's XML leaves spaces inside the punctuation that surrounded
-    them — the printed "(Kruse et al., 2005)" arrives as "( Kruse et al., 2005 )"
-    — so a whitespace-sensitive comparison rejects a quotation that is genuinely
-    in the paper. A gate that fails on correct input is worse than no gate: it
-    teaches the curator to ignore it. Case, dash style and curly quotes go the
-    same way, for the same reason.
+# Tiers, strongest first. A match at EXACT or DESPACED is verbatim; a match only
+# at LOOSE is not, and says so.
+EXACT, DESPACED, LOOSE, ABSENT = "exact", "despaced", "loose", "absent"
 
-    What survives is the letters and punctuation in order, which is what a
-    fabricated or silently reworded quotation still fails.
+
+def _exact(text: str) -> str:
+    """Collapse whitespace runs. Everything else is significant."""
+    return re.sub(r"\s+", " ", text.replace("\u00a0", " ")).strip()
+
+
+def _despaced(text: str) -> str:
+    """Drop whitespace entirely; keep hyphens, case and punctuation.
+
+    Stripping ``<xref>`` tags out of JATS leaves spaces inside the punctuation
+    that surrounded them — the printed "(Kruse et al., 2005)" arrives as
+    "( Kruse et al., 2005 )". That is an extraction artefact, not a difference in
+    the text, so a match here is still verbatim.
+
+    Unlike the PDF equivalent this is modelled on, hyphens stay significant: a
+    PDF line-break hyphen is indistinguishable from a compound hyphen, but JATS
+    has no line breaks, so "rod-like" and "rodlike" really are different words.
     """
-    for fancy, plain_char in (("–", "-"), ("—", "-"), ("’", "'"),
-                              ("“", '"'), ("”", '"'), ("\u00a0", " ")):
+    return re.sub(r"\s+", "", text.replace("\u00a0", " "))
+
+
+def _loose(text: str) -> str:
+    """As ``_despaced``, and additionally unify case, quote and dash style.
+
+    A curly-quote or en-dash mismatch IS a real difference — the record does not
+    hold what the paper holds — so it is only normalised at the last tier, to
+    separate "copied imprecisely" from "not in the paper at all".
+    """
+    for fancy, plain_char in {**_QUOTES, **_DASHES}.items():
         text = text.replace(fancy, plain_char)
-    return re.sub(r"\s+", "", text).lower()
+    return _despaced(text).lower()
+
+
+def match_tier(snippet: str, source: str) -> str:
+    """The strongest tier at which ``snippet`` occurs in ``source``."""
+    if not snippet.strip():
+        return ABSENT
+    if _exact(snippet) in _exact(source):
+        return EXACT
+    if _despaced(snippet) in _despaced(source):
+        return DESPACED
+    if _loose(snippet) in _loose(source):
+        return LOOSE
+    return ABSENT
 
 
 # ------------------------------------------------------------------ modes
@@ -422,6 +455,7 @@ def main() -> int:
         texts = _load_texts(sorted({i["reference"] for i in quoted}), cache)
         IDMAP_PATH.write_text(json.dumps(cache, indent=1, sort_keys=True) + "\n")
         bad: list[str] = []
+        imprecise: list[str] = []
         unchecked: list[str] = []
         for item in quoted:
             readability, source, text = texts[item["reference"]]
@@ -434,15 +468,27 @@ def main() -> int:
             elif readability == NOT_LITERATURE:
                 bad.append(f"{item['record']}:{item['path']}: {item['reference']} is a database "
                            f"record, not a paper — a verbatim quotation cannot be checked against it")
-            elif normalise(item["snippet"]) not in normalise(text):
-                bad.append(f"{item['record']}:{item['path']}: quotation not found in {source} — "
-                           f"{item['snippet'][:70]}...")
+            else:
+                tier = match_tier(item["snippet"], text)
+                if tier == ABSENT:
+                    bad.append(f"{item['record']}:{item['path']}: quotation not found in {source} "
+                               f"at any tier — {item['snippet'][:70]}...")
+                elif tier == LOOSE:
+                    imprecise.append(
+                        f"{item['record']}:{item['path']}: present in {source} but not verbatim — "
+                        f"differs in case, quote or dash style. Re-copy the exact characters. "
+                        f"{item['snippet'][:70]}...")
         for line in bad:
-            print(f"  {line}", file=sys.stderr)
+            print(f"  [ABSENT]      {line}", file=sys.stderr)
+        for line in imprecise:
+            print(f"  [not verbatim] {line}", file=sys.stderr)
         for line in unchecked:
             print(f"  [not checked] {line}", file=sys.stderr)
-        verified = len(quoted) - len(bad) - len(unchecked)
-        print(f"\n{verified} of {len(quoted)} quotations verified against the source")
+        verified = len(quoted) - len(bad) - len(imprecise) - len(unchecked)
+        print(f"\n{verified} of {len(quoted)} quotations found verbatim in the source")
+        if imprecise:
+            print(f"{len(imprecise)} present but not verbatim — the text is in the paper, the "
+                  f"record's copy of it is not exact")
         if unchecked:
             print(f"{len(unchecked)} could not be checked because no route answered — "
                   f"not a finding about the corpus")
@@ -463,8 +509,7 @@ def main() -> int:
     with args.report.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.writer(fh, delimiter="\t", lineterminator="\n")
         scope = args.record.name if args.record else "whole corpus"
-        writer.writerow([f"# scope: {scope}"])
-        writer.writerow(["reference", "pmid", "pmcid", "readability", "source",
+        writer.writerow(["scope", "reference", "pmid", "pmcid", "readability", "source",
                          "citations", "evidence_items", "quoted", "checked_on"])
         for reference in references:
             readability, source, _ = texts[reference]
@@ -476,7 +521,7 @@ def main() -> int:
             # paper, the other is a question we failed to ask.
             if readability == UNREADABLE and quoted == 0:
                 uncheckable += len(claims)
-            writer.writerow([reference, identity.get("pmid") or "", identity.get("pmcid") or "",
+            writer.writerow([scope, reference, identity.get("pmid") or "", identity.get("pmcid") or "",
                              readability, source, len(claims),
                              sum(1 for c in claims if c["in_evidence"]), quoted,
                              date.today().isoformat()])
@@ -487,7 +532,11 @@ def main() -> int:
         print(f"  {readability:14s} {counts[readability]:3d}")
     print(f"\n{uncheckable} claim(s) cite a paper with no reachable text and carry no quotation — "
           f"nobody can check those")
-    print(f"report: {args.report.relative_to(REPO_ROOT)}")
+    try:
+        shown = args.report.relative_to(REPO_ROOT)
+    except ValueError:  # a path outside the repository is legitimate
+        shown = args.report
+    print(f"report: {shown}")
     return 0
 
 

@@ -55,7 +55,20 @@ grounding. Read the candidates, read enough of the paper around the one you
 choose to know it means what it appears to mean, then paste it verbatim.
 
 **`--verify`** is the anti-fabrication gate. Run it before every commit that
-touches a snippet.
+touches a snippet. It grades what it finds, because "copied imprecisely" and
+"not in the paper" need different responses:
+
+| verdict | meaning | action |
+|---|---|---|
+| verbatim | matches exactly, or differs only in whitespace | none |
+| **not verbatim** | the text is in the paper; the record's copy differs in case, quote or dash style | re-copy the exact characters |
+| **ABSENT** | not in the source at any tier | the quotation is fabricated or reworded — fix it |
+| not checked | no route answered | re-run when the network is back |
+
+Only ABSENT fails the run. Whitespace differences pass silently: stripping
+`<xref>` tags renders "(Kruse et al., 2005)" with spaces inside the parentheses,
+and that is an extraction artefact, not a difference in the text. Hyphens stay
+significant — "rod-like" and "rodlike" are different words.
 
 ## Rules
 
@@ -88,6 +101,14 @@ PMC search, `efetch db=pmc`, Europe PMC full text, then `efetch db=pubmed`, and
 reports what actually came back.
 
 If you assert a reference is unreadable, name the routes tried.
+
+**A 200 is not text.** Publisher text-mining endpoints answer 200 with an
+entitlement stub: Crossref's `text-mining` links for three Elsevier papers each
+returned ~1.8 KB of metadata — title, journal, `openaccess: false`, no body
+(#142). Adding that route would have registered them as full text and then
+reported their correct quotations as fabricated. Any new full-text route must be
+shown to contain body prose, not merely to return 200 — the same rule that
+retired Europe PMC's `inEPMC` flag and Semantic Scholar's `isOpenAccess`.
 
 ## Not every reference is a paper
 
