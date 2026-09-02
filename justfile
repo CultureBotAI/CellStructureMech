@@ -167,6 +167,10 @@ micro-xrefs *args:
 subtiwiki *args:
     uv run python scripts/subtiwiki.py "$@"
 
+# Exact family groundings from a reviewed UniProt-to-InterPro allow-list.
+interpro-groundings *args:
+    uv run python scripts/interpro_groundings.py "$@"
+
 # Refresh with the pinned local sentence-transformers model (no corpus text is
 # transmitted), then rebuild the 2D PCA map and cosine-neighbour index.
 text-embeddings-refresh:

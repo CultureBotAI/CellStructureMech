@@ -238,6 +238,13 @@ Source-specific commands (all dry-run unless `--apply` is present):
   to current UniProt primaries `flgG`, `ytxD` and `ytxE` rather than silently
   treated as exact symbol matches; primary literature independently supports
   the MotP/MotS stator placement.
+- `scripts/interpro_groundings.py` resolves exact UniProt accessions through
+  InterPro's combined endpoint, accepts only integrated entries whose type is
+  `family`, and requires every protein response to be reviewed. Its fixed
+  curator-reviewed allow-list must have an unchanged family consensus across
+  all component scope examples. Domains and homologous superfamilies are never
+  promoted to family groundings; combined alpha/beta-carboxysome components and
+  MamK/MamJ are recorded as `REVIEWED_LABEL_ONLY` when their families differ.
 - These image scripts verify downloaded bytes (PMC md5 where supplied, corpus
   SHA-256 always), validate the complete record mutation before touching the
   destination, and confine generated filenames to the record image directory.

@@ -91,6 +91,10 @@ components:
     - reference: PMID:14766587
       notes: ECO:0000269 experimental evidence for the magnetosome localisation of
         V6F519, as cited by UniProt.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The component combines MamK and its MamJ connector. The stored
+    MamJ example has IPR060787, whereas reviewed MamK Q6NE59 has IPR056546; they share
+    no integrated InterPro family, so a single grounding would conflate distinct roles.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:28211
   taxon_label: Alphaproteobacteria
@@ -310,6 +314,14 @@ curation_history:
   action: ADD_XREF
   changes: Added MICRO:0000216 (magnetosome) as a curator-reviewed identity xref;
     exact non-obsolete MicrO id and label verified through OLS.
+- timestamp: '2026-09-02T05:45:20Z'
+  curator: interpro_groundings
+  action: GROUND_COMPONENTS
+  changes: Applied exact integrated InterPro family groundings to none; recorded label-only
+    decisions for mamk_filament. The fixed reviewed allow-list required exact component
+    identity, reviewed UniProt examples, type=family entries, and unchanged family
+    consensus across curated scope examples.
+  llm_assisted: true
 xrefs:
 - uniprot.location:SL-0510
 - MICRO:0000216
