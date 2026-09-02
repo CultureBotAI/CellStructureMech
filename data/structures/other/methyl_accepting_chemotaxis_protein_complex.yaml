@@ -1,0 +1,117 @@
+identifier: GO:0098561
+label: methyl accepting chemotaxis protein complex
+definition: 'The chemoreceptor array: a hexagonal lattice of trimers-of-dimers of
+  methyl-accepting chemotaxis proteins, held at the membrane by the CheA kinase and
+  the CheW coupling protein. The array is the cell''s sensory organ, and its geometry
+  — a 12 nm hexagonal spacing conserved across bacteria and archaea — is what gives
+  chemotaxis its cooperativity and gain.'
+definition_source: DOI:10.1073/pnas.0905181106
+synonyms:
+- synonym_text: chemoreceptor array
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1073/pnas.0905181106
+- synonym_text: chemosensory array
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1146/annurev-biophys-070816-033555
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+components:
+- component_id: mcp
+  label: methyl-accepting chemotaxis proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - tar
+  - tsr
+  - trg
+  - tap
+  essentiality: ESSENTIAL
+  stoichiometry: trimers of dimers at each lattice vertex
+  role: Bind ligands and transmit the signal down a long coiled-coil to the kinase;
+    methylation of their helices sets adaptation.
+  evidence:
+  - reference: DOI:10.1073/pnas.0905181106
+    notes: Briegel et al. 2009 resolve the trimer-of-dimers lattice across many species.
+- component_id: chea
+  label: histidine kinase CheA
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - cheA
+  essentiality: ESSENTIAL
+  role: The output kinase; its autophosphorylation is what receptor occupancy modulates.
+  evidence:
+  - reference: DOI:10.1073/pnas.0905181106
+    notes: Briegel et al. 2009 place CheA in the baseplate beneath the receptor lattice.
+- component_id: chew
+  label: coupling protein CheW
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - cheW
+  essentiality: ESSENTIAL
+  role: Couples receptors to the kinase and, with CheA, forms the rings that hold
+    the hexagonal geometry.
+  evidence:
+  - reference: DOI:10.1073/pnas.0905181106
+    notes: Briegel et al. 2009 describe the CheA/CheW baseplate defining the 12 nm
+      spacing.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Found wherever chemotaxis is; the lattice geometry is conserved even between
+    distant lineages.
+  reference: DOI:10.1073/pnas.0905181106
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: VARIABLE
+  note: Archaeal chemotaxis uses the same array architecture, coupled to the archaellum
+    instead of a flagellum.
+  reference: DOI:10.1073/pnas.0905181106
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: The reference chemotaxis system.
+  reference: DOI:10.1073/pnas.0905181106
+functions:
+- function_id: chemotaxis_signalling
+  label: chemotaxis
+  grounding: GO:0006935
+  description: Converts occupancy of receptor binding sites into a change in CheA
+    autophosphorylation, and so into flagellar switching.
+  evidence:
+  - reference: DOI:10.1073/pnas.0905181106
+    notes: Briegel et al. 2009 relate array architecture to chemotactic signalling.
+  - reference: DOI:10.1146/annurev-biophys-070816-033555
+    notes: The cryotomography review (2017) uses the chemoreceptor array as its worked
+      example of structure resolved in situ.
+associated_traits:
+- trait_id: METPO:1000702
+  trait_label: motile
+  relation: MODULATES
+  evidence:
+  - reference: DOI:10.1073/pnas.0905181106
+    notes: Briegel et al. 2009 describe the array as the input to the flagellar switch;
+      TraitMech records motility as METPO:1000702.
+physical_properties:
+- property: OTHER
+  value: ~12
+  unit: UO:0000018
+  context: hexagonal lattice spacing, conserved across bacteria and archaea
+  reference: DOI:10.1073/pnas.0905181106
+evidence:
+- reference: DOI:10.1073/pnas.0905181106
+  notes: Briegel A et al. 2009, 'Universal architecture of bacterial chemoreceptor
+    arrays', PNAS.
+- reference: DOI:10.1146/annurev-biophys-070816-033555
+  notes: '''Progress and Potential of Electron Cryotomography as Illustrated by Its
+    Application to Bacterial Chemoreceptor Arrays'', Annual Review of Biophysics 2017.'
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-02T04:49:54Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Drafted from the cited reviews; every GO term, taxon id and DOI resolved
+    live before writing. Not yet human-reviewed.
+  llm_assisted: true

@@ -32,21 +32,18 @@ components:
   - reference: DOI:10.1016/j.cell.2018.02.050
     notes: Shi et al. 2018 review MreB filament architecture and its membrane association.
 - component_id: elongasome_link
-  label: elongasome coupling proteins (MreC, MreD, RodZ)
+  label: RodZ
   component_type: PROTEIN
   component_role: ASSOCIATED_MACHINERY
   gene_symbols:
-  - mreC
-  - mreD
   - rodZ
   essentiality: CONDITIONAL
-  role: 'Connect the filament to the peptidoglycan synthases it guides. Machinery
-    acting on the assembled filament rather than part of it: RodZ deletion leaves
-    filaments that mislocalise.'
+  role: 'Bridges the filament to the elongasome, the sidewall-synthesis machine the
+    filament guides. MreC and MreD were listed here until #102: they are constituents
+    of that machine, not of this filament, and now live on the elongasome record.'
   evidence:
   - reference: DOI:10.1016/j.cell.2018.02.050
-    notes: Shi et al. 2018 describe RodZ and the Mre proteins coupling MreB to wall
-      synthesis.
+    notes: Shi et al. 2018 describe RodZ coupling MreB to the synthetic complex.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -116,6 +113,13 @@ curation_history:
     (METPO:1000681 rod shaped, METPO:1000666 cell shape), which is the whole point
     of the structure and was missing.'
   llm_assisted: true
+- timestamp: '2026-09-02T04:50:12Z'
+  curator: claude
+  action: RESCOPE_COMPONENTS
+  changes: '#102: MreC and MreD moved to the new elongasome record, where they are
+    constituents; the component here is narrowed to RodZ, which genuinely acts on
+    the assembled filament. The elongasome is now cross-referenced.'
+  llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped
@@ -132,3 +136,5 @@ associated_traits:
   - reference: DOI:10.1146/annurev-genet-102108-134845
     notes: The Bacterial Cytoskeleton (2010) treats MreB as the determinant that distinguishes
       rod-shaped lineages from cocci.
+xrefs:
+- cellstructuremech:elongasome

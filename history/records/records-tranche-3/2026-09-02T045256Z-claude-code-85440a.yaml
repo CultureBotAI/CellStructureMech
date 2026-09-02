@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures
+  slug: records-tranche-3
+session:
+  id: 2026-09-02T045256Z-claude-code-85440a
+  timestamp: '2026-09-02T04:52:56Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/12
+  - https://github.com/CultureBotAI/CellStructureMech/issues/102
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - components
+  - functions
+  summary: Add the elongasome, chemoreceptor array and encapsulin; rescope MreB
+  details: 'Issue 12 and issue 102 together. Three records take the corpus from 16 to 19 and
+    complete all thirteen categories. The elongasome needed the corpus''s second minted identifier:
+    searches of GO for elongasome, Rod complex and peptidoglycan synthesis complex return
+    nothing that denotes the machine, so it is minted with plasma membrane protein complex
+    as the parent and the peptidoglycan-based cell wall recorded as what it is part of. Creating
+    it resolves issue 102: MreC and MreD were listed as components of the MreB filament, where
+    they were mis-scoped, and are now constituents of the machine they actually build, while
+    the filament keeps only RodZ, which genuinely acts on the assembled filament, and cross-references
+    the elongasome. The chemoreceptor array is the first record in the OTHER category, and
+    it is there for the right reason rather than to move a coverage number: it is neither
+    envelope nor appendage nor storage body, and CURATION.md says a catch-all should hold
+    a structure that genuinely fits nowhere else. The encapsulin nanocompartment uses GO:0140737,
+    whose definition was already verified when this repository''s identifier work began. Each
+    record carries two independent reviews and every GO term, taxon id and DOI was resolved
+    live before writing.'

@@ -36,6 +36,15 @@
   "definition": "The membrane-associated protein machine that constricts a dividing bacterial cell. It is organised by the FtsZ ring — treadmilling filaments of the tubulin homologue FtsZ tethered to the inner membrane — which positions and moves the septal peptidoglycan synthases that build the division septum."
  },
  {
+  "identifier": "cellstructuremech:elongasome",
+  "label": "elongasome",
+  "category": "DIVISION_MACHINERY",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/division_machinery/elongasome.html",
+  "definition": "The sidewall peptidoglycan-synthesis machine of rod-shaped bacteria, also called the Rod complex. A SEDS-family glycosyltransferase (RodA) works with a class B penicillin-binding protein (PBP2) to polymerise and crosslink new wall material into the cylinder, while MreC, MreD and RodZ couple the complex to MreB filaments, which distribute it around the circumference. It is the elongation counterpart of the divisome."
+ },
+ {
   "identifier": "GO:0045259",
   "label": "proton-transporting ATP synthase complex",
   "category": "ENERGY_COMPLEX",
@@ -108,6 +117,15 @@
   "definition": "A bacterial microcompartment — a polyhedral, selectively permeable protein shell about 100–200 nm across — that encapsulates RuBisCO and carbonic anhydrase to concentrate CO2 around RuBisCO in cyanobacteria and many chemoautotrophs. Alpha-carboxysomes (cso genes) and beta-carboxysomes (ccm genes) evolved their shells and scaffolds independently."
  },
  {
+  "identifier": "GO:0140737",
+  "label": "encapsulin nanocompartment",
+  "category": "MICROCOMPARTMENT",
+  "kind": "PROTEIN_SHELLED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/microcompartment/encapsulin_nanocompartment.html",
+  "definition": "A proteinaceous nanocompartment, 24 to 42 nm across, built from a single HK97-fold shell protein that self-assembles into an icosahedron. Cargo enzymes are packaged inside by a short targeting peptide that binds the shell interior; the commonest cargoes are ferritin-like iron-mineralising proteins and peroxidases."
+ },
+ {
   "identifier": "GO:0009295",
   "label": "nucleoid",
   "category": "NUCLEOID",
@@ -115,6 +133,15 @@
   "status": "PROPOSED",
   "page": "structures/nucleoid/nucleoid.html",
   "definition": "The non-membrane-bounded subcellular region in which a bacterial chromosome is compacted and organized with nucleoid-associated proteins while remaining dynamically coupled to transcription and replication."
+ },
+ {
+  "identifier": "GO:0098561",
+  "label": "methyl accepting chemotaxis protein complex",
+  "category": "OTHER",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/other/methyl_accepting_chemotaxis_protein_complex.html",
+  "definition": "The chemoreceptor array: a hexagonal lattice of trimers-of-dimers of methyl-accepting chemotaxis proteins, held at the membrane by the CheA kinase and the CheW coupling protein. The array is the cell's sensory organ, and its geometry — a 12 nm hexagonal spacing conserved across bacteria and archaea — is what gives chemotaxis its cooperativity and gain."
  },
  {
   "identifier": "GO:0005840",
