@@ -32,21 +32,18 @@ components:
   - reference: DOI:10.1016/j.cell.2018.02.050
     notes: Shi et al. 2018 review MreB filament architecture and its membrane association.
 - component_id: elongasome_link
-  label: elongasome coupling proteins (MreC, MreD, RodZ)
+  label: RodZ
   component_type: PROTEIN
   component_role: ASSOCIATED_MACHINERY
   gene_symbols:
-  - mreC
-  - mreD
   - rodZ
   essentiality: CONDITIONAL
-  role: 'Connect the filament to the peptidoglycan synthases it guides. Machinery
-    acting on the assembled filament rather than part of it: RodZ deletion leaves
-    filaments that mislocalise.'
+  role: 'Bridges the filament to the elongasome, the sidewall-synthesis machine the
+    filament guides. MreC and MreD were listed here until #102: they are constituents
+    of that machine, not of this filament, and now live on the elongasome record.'
   evidence:
   - reference: DOI:10.1016/j.cell.2018.02.050
-    notes: Shi et al. 2018 describe RodZ and the Mre proteins coupling MreB to wall
-      synthesis.
+    notes: Shi et al. 2018 describe RodZ coupling MreB to the synthetic complex.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -101,6 +98,20 @@ discussions:
     never renamed.
   posed_by: claude
   posed_date: '2026-09-01'
+- discussion_id: guides_the_elongasome
+  prompt: The filament guides the elongasome, and the schema has no relation that
+    says so.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - components#elongasome_link
+  rationale: 'MreB filaments carry the RodA-PBP2 synthases around the cell; that is
+    the point of the structure. It was briefly recorded as xrefs: [cellstructuremech:elongasome],
+    but the schema defines xrefs as true equivalence and the two are not equivalent,
+    so the claim was false as written and removed (#119). Until a relation exists,
+    the link lives in the RodZ component role and in this discussion.'
+  posed_by: claude
+  posed_date: '2026-09-02'
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-01T03:41:49Z'
@@ -115,6 +126,20 @@ curation_history:
   changes: 'Self-review of PR #101: linked the TraitMech phenotypes the filament confers
     (METPO:1000681 rod shaped, METPO:1000666 cell shape), which is the whole point
     of the structure and was missing.'
+  llm_assisted: true
+- timestamp: '2026-09-02T04:50:12Z'
+  curator: claude
+  action: RESCOPE_COMPONENTS
+  changes: '#102: MreC and MreD moved to the new elongasome record, where they are
+    constituents; the component here is narrowed to RodZ, which genuinely acts on
+    the assembled filament. The elongasome is now cross-referenced.'
+  llm_assisted: true
+- timestamp: '2026-09-02T04:57:03Z'
+  curator: claude
+  action: REMOVE_MISUSED_XREF
+  changes: '#119: removed xrefs: [cellstructuremech:elongasome]. xrefs means equivalence
+    and the filament is not equivalent to the machine it guides; the relationship
+    is stated in the component role and a discussion instead.'
   llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681

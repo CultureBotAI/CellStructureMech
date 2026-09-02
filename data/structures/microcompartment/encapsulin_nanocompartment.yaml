@@ -1,0 +1,105 @@
+identifier: GO:0140737
+label: encapsulin nanocompartment
+definition: A proteinaceous nanocompartment, 24 to 42 nm across, built from a single
+  HK97-fold shell protein that self-assembles into an icosahedron. Cargo enzymes are
+  packaged inside by a short targeting peptide that binds the shell interior; the
+  commonest cargoes are ferritin-like iron-mineralising proteins and peroxidases.
+definition_source: GO:0140737
+synonyms:
+- synonym_text: protein nanocompartment
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.cbpa.2016.05.013
+structure_category: MICROCOMPARTMENT
+structure_kind: PROTEIN_SHELLED_ORGANELLE
+parent_structures:
+- GO:0140535
+components:
+- component_id: shell
+  label: encapsulin shell protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - encA
+  - cfp29
+  essentiality: ESSENTIAL
+  stoichiometry: 60 subunits (T=1) or 180 (T=3), depending on the family
+  role: The single protein that forms the icosahedral shell; it shares the HK97 fold
+    with bacteriophage capsids.
+  evidence:
+  - reference: DOI:10.1016/j.cbpa.2016.05.013
+    notes: Giessen 2016 describes the HK97-fold shell and its T=1 and T=3 assemblies.
+  - reference: DOI:10.1038/nmicrobiol.2017.29
+    notes: The 2017 survey reports shell families across thousands of genomes.
+- component_id: cargo
+  label: targeted cargo enzymes
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - encB
+  - encC
+  - dyp
+  - flp
+  essentiality: DISPENSABLE
+  role: Ferritin-like proteins, dye-decolourising peroxidases and others, drawn in
+    by a C-terminal targeting peptide. The shell assembles without them, which is
+    why they are dispensable to the structure.
+  evidence:
+  - reference: DOI:10.1016/j.cbpa.2016.05.013
+    notes: Giessen 2016 describes targeting-peptide-directed cargo loading.
+  - reference: DOI:10.1038/nmicrobiol.2017.29
+    notes: The 2017 survey classifies encapsulin systems by their cargo.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Widely but patchily distributed; the 2017 survey found operons across many
+    phyla.
+  reference: DOI:10.1038/nmicrobiol.2017.29
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: RARE
+  note: Present in a minority of archaeal genomes.
+  reference: DOI:10.1038/nmicrobiol.2017.29
+canonical_examples:
+- taxon_id: NCBITaxon:1773
+  taxon_label: Mycobacterium tuberculosis
+  note: Source of the first characterised encapsulin, the 'Cfp29' shell with a DyP
+    cargo.
+  reference: DOI:10.1016/j.cbpa.2016.05.013
+functions:
+- function_id: iron_storage
+  label: iron ion sequestration
+  description: Ferritin-like cargo mineralises iron inside the shell, buffering the
+    cell against iron and oxidative stress.
+  evidence:
+  - reference: DOI:10.1016/j.cbpa.2016.05.013
+    notes: Giessen 2016 reviews iron mineralisation as the commonest encapsulin function.
+- function_id: compartmentalisation
+  label: enzyme compartmentalisation
+  description: Confines a reaction and its reactive intermediates away from the cytoplasm.
+  evidence:
+  - reference: DOI:10.1038/nmicrobiol.2017.29
+    notes: The 2017 survey frames encapsulins as a widespread compartmentalisation
+      strategy.
+physical_properties:
+- property: DIAMETER
+  value: 24-42
+  unit: UO:0000018
+  context: T=1 and T=3 shells
+  reference: DOI:10.1016/j.cbpa.2016.05.013
+evidence:
+- reference: DOI:10.1016/j.cbpa.2016.05.013
+  notes: 'Giessen TW 2016, ''Encapsulins: microbial nanocompartments with applications
+    in biomedicine, nanobiotechnology and materials science'', Current Opinion in
+    Chemical Biology.'
+- reference: DOI:10.1038/nmicrobiol.2017.29
+  notes: '''Widespread distribution of encapsulin nanocompartments reveals functional
+    diversity'', Nature Microbiology 2017.'
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-02T04:49:54Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Drafted from the cited reviews; every GO term, taxon id and DOI resolved
+    live before writing. Not yet human-reviewed.
+  llm_assisted: true

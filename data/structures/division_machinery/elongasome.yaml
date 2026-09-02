@@ -1,0 +1,153 @@
+identifier: cellstructuremech:elongasome
+label: elongasome
+definition: The sidewall peptidoglycan-synthesis machine of rod-shaped bacteria, also
+  called the Rod complex. A SEDS-family glycosyltransferase (RodA) works with a class
+  B penicillin-binding protein (PBP2) to polymerise and crosslink new wall material
+  into the cylinder, while MreC, MreD and RodZ couple the complex to MreB filaments,
+  which distribute it around the circumference. It is the elongation counterpart of
+  the divisome.
+definition_source: DOI:10.1038/nrmicro2677
+synonyms:
+- synonym_text: Rod complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/nrmicro2677
+- synonym_text: RodA-PBP2 complex
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1016/j.cell.2018.02.050
+structure_category: DIVISION_MACHINERY
+structure_kind: MULTIPROTEIN_COMPLEX
+parent_structures:
+- GO:0098797
+components:
+- component_id: roda
+  label: SEDS glycosyltransferase RodA
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - rodA
+  essentiality: ESSENTIAL
+  role: Polymerises the glycan strand; the SEDS-family partner of the class B PBP.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2677
+    notes: Typas et al. 2011 review the elongation machinery and its separation from
+      the division machinery.
+  - reference: DOI:10.1016/j.cell.2018.02.050
+    notes: Shi et al. 2018 describe RodA-PBP2 as the synthetic core the filaments
+      carry.
+- component_id: pbp2
+  label: class B penicillin-binding protein PBP2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - mrdA
+  - pbpA
+  essentiality: ESSENTIAL
+  role: Crosslinks the new glycan strands into the existing sacculus; the target of
+    mecillinam.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2677
+    notes: Typas et al. 2011 describe PBP2 as the elongation-specific crosslinking
+      enzyme.
+- component_id: mrec_mred
+  label: MreC and MreD
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - mreC
+  - mreD
+  essentiality: ESSENTIAL
+  role: 'Membrane and periplasmic subunits that hold the synthases in an active arrangement.
+    Moved here from the MreB filament record, where they were mis-scoped: they build
+    this machine, not the filament (#102).'
+  evidence:
+  - reference: DOI:10.1038/nrmicro2677
+    notes: Typas et al. 2011 place MreC and MreD within the elongation complex.
+- component_id: rodz
+  label: RodZ
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  gene_symbols:
+  - rodZ
+  essentiality: CONDITIONAL
+  role: Bridges the assembled complex to MreB filaments; acts on the machine rather
+    than forming it.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2018.02.050
+    notes: Shi et al. 2018 describe RodZ coupling MreB to the synthetic complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Present with mreB in rod-shaped lineages; cocci that lost the rod generally
+    lost both.
+  reference: DOI:10.1038/nrmicro2677
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaea build no peptidoglycan sacculus.
+  reference: DOI:10.1038/nrmicro2677
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference system for elongation-specific synthesis and its mecillinam sensitivity.
+  reference: DOI:10.1038/nrmicro2677
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: Reference Gram-positive elongation machinery.
+  reference: DOI:10.1038/nrmicro2677
+functions:
+- function_id: sidewall_synthesis
+  label: regulation of cell shape
+  grounding: GO:0008360
+  description: Inserts peptidoglycan into the cylindrical sidewall, maintaining width
+    and extending length.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2677
+    notes: Typas et al. 2011 tie elongation-complex activity to cell shape.
+  - reference: DOI:10.1016/j.cell.2018.02.050
+    notes: Shi et al. 2018 link the complex's circumferential motion to rod maintenance.
+part_of:
+- GO:0009274
+evidence:
+- reference: DOI:10.1038/nrmicro2677
+  notes: Typas A, Banzhaf M, Gross CA, Vollmer W 2011, 'From the regulation of peptidoglycan
+    synthesis to bacterial growth and morphology', Nature Reviews Microbiology.
+- reference: DOI:10.1016/j.cell.2018.02.050
+  notes: 'Shi H, Bratton BP, Gitai Z, Huang KC 2018, ''How to Build a Bacterial Cell:
+    MreB as the Foreman of E. coli Construction'', Cell.'
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-02T04:49:54Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Drafted from the cited reviews; every GO term, taxon id and DOI resolved
+    live before writing. Not yet human-reviewed.
+  llm_assisted: true
+- timestamp: '2026-09-02T04:57:03Z'
+  curator: claude
+  action: ADD_TRAIT_LINK
+  changes: 'Self-review of PR #118: linked METPO:1000681 rod shaped, which the machine
+    is required for, and recorded the missing guided-by relation (#119).'
+  llm_assisted: true
+associated_traits:
+- trait_id: METPO:1000681
+  trait_label: rod shaped
+  relation: REQUIRED_FOR
+  evidence:
+  - reference: DOI:10.1038/nrmicro2677
+    notes: Typas et al. 2011 tie elongation-complex activity to the maintenance of
+      rod shape; losing it loses the rod, so the machine is required for the phenotype
+      rather than sufficient for it.
+discussions:
+- discussion_id: guided_by_mreb
+  prompt: This machine is guided by the MreB filament, and the schema has no relation
+    that says so.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - components#rodz
+  rationale: The partner statement to the discussion on the MreB filament record (#119).
+    RodZ couples the two, which is recorded in that component's role, but the structure-to-structure
+    relationship has no field.
+  posed_by: claude
+  posed_date: '2026-09-02'

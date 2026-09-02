@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>elongasome · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>elongasome</h1>
+<p class="meta"><code>cellstructuremech:elongasome</code> · DIVISION_MACHINERY · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">The sidewall peptidoglycan-synthesis machine of rod-shaped bacteria, also called the Rod complex. A SEDS-family glycosyltransferase (RodA) works with a class B penicillin-binding protein (PBP2) to polymerise and crosslink new wall material into the cylinder, while MreC, MreD and RodZ couple the complex to MreB filaments, which distribute it around the circumference. It is the elongation counterpart of the divisome. <small>[<a href="https://doi.org/10.1038/nrmicro2677"><code>DOI:10.1038/nrmicro2677</code></a>]</small></p>
+<p><strong>Synonyms:</strong> Rod complex; RodA-PBP2 complex</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0009274"><code>GO:0009274</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-roda"><td>SEDS glycosyltransferase RodA</td><td>PROTEIN</td><td>part of</td><td></td><td>rodA</td><td></td><td>ESSENTIAL</td><td>Polymerises the glycan strand; the SEDS-family partner of the class B PBP.<ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro2677"><code>DOI:10.1038/nrmicro2677</code></a> <small>Typas et al. 2011 review the elongation machinery and its separation from the division machinery.</small></li><li><a href="https://doi.org/10.1016/j.cell.2018.02.050"><code>DOI:10.1016/j.cell.2018.02.050</code></a> <small>Shi et al. 2018 describe RodA-PBP2 as the synthetic core the filaments carry.</small></li></ul></td></tr>
+<tr id="components-pbp2"><td>class B penicillin-binding protein PBP2</td><td>PROTEIN</td><td>part of</td><td></td><td>mrdA, pbpA</td><td></td><td>ESSENTIAL</td><td>Crosslinks the new glycan strands into the existing sacculus; the target of mecillinam.<ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro2677"><code>DOI:10.1038/nrmicro2677</code></a> <small>Typas et al. 2011 describe PBP2 as the elongation-specific crosslinking enzyme.</small></li></ul></td></tr>
+<tr id="components-mrec_mred"><td>MreC and MreD</td><td>PROTEIN</td><td>part of</td><td></td><td>mreC, mreD</td><td></td><td>ESSENTIAL</td><td>Membrane and periplasmic subunits that hold the synthases in an active arrangement. Moved here from the MreB filament record, where they were mis-scoped: they build this machine, not the filament (#102).<ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro2677"><code>DOI:10.1038/nrmicro2677</code></a> <small>Typas et al. 2011 place MreC and MreD within the elongation complex.</small></li></ul></td></tr>
+<tr id="components-rodz"><td>RodZ</td><td>PROTEIN</td><td><span class="machinery" title="Binds the assembled structure to position, partition or maintain it">acts on</span></td><td></td><td>rodZ</td><td></td><td>CONDITIONAL</td><td>Bridges the assembled complex to MreB filaments; acts on the machine rather than forming it.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2018.02.050"><code>DOI:10.1016/j.cell.2018.02.050</code></a> <small>Shi et al. 2018 describe RodZ coupling MreB to the synthetic complex.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2"><code>NCBITaxon:2</code></a> Bacteria — <strong>VARIABLE</strong>: Present with mreB in rod-shaped lineages; cocci that lost the rod generally lost both. [<a href="https://doi.org/10.1038/nrmicro2677"><code>DOI:10.1038/nrmicro2677</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2157"><code>NCBITaxon:2157</code></a> Archaea — <strong>ABSENT</strong>: Archaea build no peptidoglycan sacculus. [<a href="https://doi.org/10.1038/nrmicro2677"><code>DOI:10.1038/nrmicro2677</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code>NCBITaxon:83333</code></a> <em>Escherichia coli K-12</em> — Reference system for elongation-specific synthesis and its mecillinam sensitivity. [<a href="https://doi.org/10.1038/nrmicro2677"><code>DOI:10.1038/nrmicro2677</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1423"><code>NCBITaxon:1423</code></a> <em>Bacillus subtilis</em> — Reference Gram-positive elongation machinery. [<a href="https://doi.org/10.1038/nrmicro2677"><code>DOI:10.1038/nrmicro2677</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>regulation of cell shape</strong> <a href="http://purl.obolibrary.org/obo/GO_0008360"><code>GO:0008360</code></a> — Inserts peptidoglycan into the cylindrical sidewall, maintaining width and extending length.<ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro2677"><code>DOI:10.1038/nrmicro2677</code></a> <small>Typas et al. 2011 tie elongation-complex activity to cell shape.</small></li><li><a href="https://doi.org/10.1016/j.cell.2018.02.050"><code>DOI:10.1016/j.cell.2018.02.050</code></a> <small>Shi et al. 2018 link the complex&#39;s circumferential motion to rod maintenance.</small></li></ul></li></ul>
+
+<h2>Associated traits</h2>
+<ul><li>REQUIRED_FOR <a href="https://w3id.org/metpo/1000681"><code>METPO:1000681</code></a> rod shaped</li></ul>
+
+
+
+<h2>Discussions</h2>
+<ul><li><strong>KNOWLEDGE_GAP</strong> (OPEN): This machine is guided by the MreB filament, and the schema has no relation that says so. <small>The partner statement to the discussion on the MreB filament record (#119). RodZ couples the two, which is recorded in that component&#39;s role, but the structure-to-structure relationship has no field.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro2677"><code>DOI:10.1038/nrmicro2677</code></a> <small>Typas A, Banzhaf M, Gross CA, Vollmer W 2011, &#39;From the regulation of peptidoglycan synthesis to bacterial growth and morphology&#39;, Nature Reviews Microbiology.</small></li><li><a href="https://doi.org/10.1016/j.cell.2018.02.050"><code>DOI:10.1016/j.cell.2018.02.050</code></a> <small>Shi H, Bratton BP, Gitai Z, Huang KC 2018, &#39;How to Build a Bacterial Cell: MreB as the Foreman of E. coli Construction&#39;, Cell.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-02T04:49:54Z</code> claude · CREATED_RECORD — Drafted from the cited reviews; every GO term, taxon id and DOI resolved live before writing. Not yet human-reviewed.</li><li><code>2026-09-02T04:57:03Z</code> claude · ADD_TRAIT_LINK — Self-review of PR #118: linked METPO:1000681 rod shaped, which the machine is required for, and recorded the missing guided-by relation (#119).</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/division_machinery/elongasome.yaml"><code>data/structures/division_machinery/elongasome.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
