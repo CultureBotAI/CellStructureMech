@@ -62,18 +62,32 @@ def _short_citation(summary: dict) -> str | None:
     half-citation when the title is missing: a reference the reader cannot
     identify is better left as it was than dressed up.
     """
-    title = (summary.get("title") or "").strip().rstrip(".")
+    # The title is quoted, so it is reproduced exactly. Trimming a trailing stop
+    # would rewrite "Synechococcus spp." to "spp" -- the same inexact-quotation
+    # defect fetch_snippets --verify exists to catch, one directory away (#158).
+    title = (summary.get("title") or "").strip()
     if not title:
         return None
+
     authors = summary.get("authors") or []
-    who = authors[0].get("name", "").strip() if authors else ""
-    if who and len(authors) > 1:
+    first = authors[0] if authors else {}
+    # esummary gives a consortium under collectivename, not name; reading only
+    # name threw the author away for exactly the papers where it identifies the
+    # work best (#159).
+    collective = (first.get("collectivename") or "").strip()
+    who = collective or (first.get("name") or "").strip()
+    if who and not collective and len(authors) > 1:
         who += " et al."
+
     year = (summary.get("pubdate") or "")[:4]
     journal = (summary.get("source") or "").strip()
     lead = " ".join(part for part in (who, year) if part).strip()
+    quoted = f"\u2018{title}\u2019"
     tail = f", {journal}" if journal else ""
-    return f"{lead}, \u2018{title}\u2019{tail}." if lead else f"\u2018{title}\u2019{tail}."
+    citation = f"{lead}, {quoted}{tail}" if lead else f"{quoted}{tail}"
+    # The stop terminates the citation, so it turns on how the citation ends, not
+    # on how the title does -- the journal usually comes after it.
+    return citation if citation.endswith((".", "?", "!")) else citation + "."
 
 
 def pubmed_citations(pmids: list[str], cache_path: Path | None = None) -> dict[str, str]:

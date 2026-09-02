@@ -16,7 +16,7 @@ SUMMARY = {
 def test_a_citation_names_author_year_title_and_journal():
     assert _short_citation(SUMMARY) == (
         "Rae BD et al. 2012, ‘Structural determinants of the outer shell of "
-        "beta-carboxysomes’, PLoS One."
+        "beta-carboxysomes.’, PLoS One."
     )
 
 
@@ -82,3 +82,37 @@ def test_backfill_ignores_references_that_are_not_pubmed(monkeypatch):
     doc = _doc(boilerplate_note("carboxysome", "Q03511"))
     doc["components"][0]["protein_examples"][0]["evidence"][0]["reference"] = "DOI:10.1/x"
     assert refresh_evidence_notes(doc) == []
+
+
+# --- the title is quoted, so it is reproduced exactly (#158) ---
+
+def test_a_title_ending_in_an_abbreviation_survives_verbatim():
+    """rstrip(".") rewrote 'Synechococcus spp.' to 'spp' inside quotation marks —
+    the same inexact-quotation defect fetch_snippets --verify exists to catch."""
+    citation = _short_citation({**SUMMARY, "title": "Carboxysomes in Synechococcus spp."})
+    assert "‘Carboxysomes in Synechococcus spp.’" in citation
+
+
+def test_the_citation_still_ends_in_a_stop_when_the_title_does():
+    """The stop terminates the citation, so it turns on how the citation ends —
+    the journal comes after the title."""
+    assert _short_citation({**SUMMARY, "title": "A title."}).endswith("PLoS One.")
+
+
+def test_a_title_that_is_a_question_is_not_given_a_second_terminator():
+    assert _short_citation({**SUMMARY, "title": "Why?", "source": ""}).endswith("‘Why?’.")
+
+
+# --- a consortium keeps its name (#159) ---
+
+def test_a_collective_author_is_used_when_there_is_no_personal_name():
+    """esummary puts a consortium under collectivename; reading only `name`
+    dropped the author for exactly the papers it identifies best."""
+    citation = _short_citation({**SUMMARY, "authors": [{"collectivename": "The X Consortium"}]})
+    assert citation.startswith("The X Consortium 2012,")
+
+
+def test_a_collective_author_is_not_given_et_al():
+    citation = _short_citation({**SUMMARY, "authors": [
+        {"collectivename": "The X Consortium"}, {"name": "Rae BD"}]})
+    assert "et al." not in citation
