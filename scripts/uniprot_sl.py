@@ -16,6 +16,16 @@ Two things the SL vocabulary gives a CellStructureRecord:
 Dry-run by default; ``--apply`` writes through the validation gate and appends
 a CurationEvent. Licence: CC BY 4.0 (footer of subcell.txt).
 
+**Not every structure has an SL term, and that is left alone.** ``GO:0005840``
+ribosome has none: UniProt classifies ribosomal proteins by keyword
+(``KW-0689 Ribonucleoprotein``) rather than by subcellular location. Extending
+this script to a keyword route was considered and declined (#42) — a keyword is
+a *classification*, not a localisation, so the ``ECO:0000269``-per-localisation
+evidence that makes these examples worth having does not transfer. The ribosome
+gets its membership from Complex Portal instead (``CPX-3802`` 30S with 22
+participants, ``CPX-3807`` 50S with 36), which states subunit composition
+directly and carries CC BY terms.
+
     python scripts/uniprot_sl.py xrefs                       # dry run, all records
     python scripts/uniprot_sl.py xrefs --apply
     python scripts/uniprot_sl.py proteins --record data/structures/microcompartment/carboxysome.yaml
