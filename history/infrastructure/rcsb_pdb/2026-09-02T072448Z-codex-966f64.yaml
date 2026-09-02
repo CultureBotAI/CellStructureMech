@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/rcsb_pdb.py
+session:
+  id: 2026-09-02T072448Z-codex-966f64
+  timestamp: '2026-09-02T07:24:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/123
+  - https://github.com/CultureBotAI/CellStructureMech/issues/139
+  - https://github.com/CultureBotAI/CellStructureMech/issues/140
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - datasets
+  - schema
+  - source-queue
+  summary: Adopt exact RCSB PDB experimental-structure ingestion
+  details: Implemented the PDB:6OQR canary through exact official RCSB entry, polymer-entity
+    and assembly endpoints. Added source-taxonomy gating, DOI/PMID, method, resolution, EMDB
+    and entity-to-UniProt retention, explicit non-flattening of alternate assembly stoichiometries,
+    and no coordinate/render ingestion. Adversarial review added deterministic malformed-payload
+    refusal and pinned the biological assembly's 22 polymer instances and oligomeric count.

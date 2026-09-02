@@ -58,6 +58,25 @@ def test_rendered_cryoet_datasets_are_public_and_resolvable(tmp_path):
     assert "is_curator_recommended=true" in pilus
 
 
+def test_rendered_rcsb_dataset_is_public_and_preserves_source_boundaries(tmp_path):
+    out = tmp_path / "site"
+    result = _run("scripts/render_pages.py", "--out", str(out))
+    assert result.returncode == 0, result.stderr
+    page = (
+        out
+        / "structures"
+        / "energy_complex"
+        / "proton_transporting_atp_synthase_complex.html"
+    ).read_text()
+    assert "<h2>Datasets</h2>" in page
+    assert "https://www.rcsb.org/structure/6OQR" in page
+    assert "PDB:6OQR" in page
+    assert "3.1 Å" in page
+    assert "UniProtKB:P0ABA4" in page
+    assert "alternate stoichiometries intentionally remain unflattened" in page
+    assert "not ingested as an image or counted as a micrograph" in page
+
+
 def test_text_embedding_map_check_is_current():
     out = _run("scripts/build_text_embedding_map.py", "--check")
     assert out.returncode == 0, out.stderr

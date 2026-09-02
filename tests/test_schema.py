@@ -27,12 +27,18 @@ def test_structural_dataset_extends_shared_dataset_enums(schema_path):
     assert dataset.attributes["repository"].range == "StructuralDatasetRepositoryEnum"
     shared_types = set(view.get_enum("DatasetTypeEnum").permissible_values)
     structural_types = set(view.get_enum("StructuralDatasetTypeEnum").permissible_values)
-    assert structural_types == shared_types | {"STRUCTURAL_IMAGING"}
+    assert structural_types == shared_types | {
+        "STRUCTURAL_IMAGING",
+        "EXPERIMENTAL_STRUCTURE",
+    }
     shared_repositories = set(view.get_enum("DatasetRepositoryEnum").permissible_values)
     structural_repositories = set(
         view.get_enum("StructuralDatasetRepositoryEnum").permissible_values
     )
-    assert structural_repositories == shared_repositories | {"CRYOET_DATA_PORTAL"}
+    assert structural_repositories == shared_repositories | {
+        "CRYOET_DATA_PORTAL",
+        "RCSB_PDB",
+    }
 
 
 def test_structure_record_is_the_only_tree_root(schema_path):

@@ -109,6 +109,10 @@ canonical_examples:
   taxon_label: Bacillus subtilis
   note: Reference Gram-positive enzyme.
   reference: DOI:10.1146/annurev-biochem-013118-110903
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Source organism asserted by the experimental PDB:6OQR ATP synthase entry.
+  reference: DOI:10.1038/s41467-020-16387-2
 functions:
 - function_id: atp_synthesis
   label: proton motive force-driven ATP synthesis
@@ -231,3 +235,55 @@ curation_history:
     is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
     only where the protein acts on the already-assembled structure.
   llm_assisted: true
+- timestamp: '2026-09-02T07:19:02Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLE
+  changes: Added the publication-backed NCBITaxon:562 source organism for the exact
+    PDB:6OQR ATP synthase canary before dataset ingestion; did not infer a strain
+    from the species-level RCSB source assertion.
+  llm_assisted: true
+- timestamp: '2026-09-02T07:21:58Z'
+  curator: rcsb_pdb
+  action: ADD_STRUCTURAL_DATASET
+  changes: Added exact RCSB PDB:6OQR experimental-structure metadata; required the
+    record's pre-existing exact NCBI source taxon, retained DOI/PMID, method, resolution
+    and polymer-entity links, and left alternate assembly stoichiometries unflattened
+    at RCSB. No molecular render was ingested.
+  llm_assisted: true
+datasets:
+- accession: PDB:6OQR
+  title: E. coli ATP Synthase ADP State 1a
+  description: Experimental atomic model of Escherichia coli F1Fo ATP synthase in
+    ADP state 1a.
+  organism: NCBITaxon:562 Escherichia coli
+  dataset_type: EXPERIMENTAL_STRUCTURE
+  repository: RCSB_PDB
+  sample_types:
+  - recombinant protein complex
+  platform: single-particle cryo-electron microscopy
+  url: https://www.rcsb.org/structure/6OQR
+  publication: DOI:10.1038/s41467-020-16387-2
+  findings: Released experimental electron microscopy structure at 3.1 Å resolution,
+    with 8 protein entities linked to exact UniProt accessions.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-16387-2
+    supports: SUPPORT
+    evidence_source: publication
+    explanation: Primary publication associated with the exact RCSB PDB entry.
+  notes: 'RCSB polymer entity links: 6OQR_1 (ATP synthase subunit delta) = UniProtKB:P0ABA4
+    [https://data.rcsb.org/rest/v1/core/polymer_entity/6OQR/1]; 6OQR_2 (ATP synthase
+    subunit alpha) = UniProtKB:P0ABB0 [https://data.rcsb.org/rest/v1/core/polymer_entity/6OQR/2];
+    6OQR_3 (ATP synthase subunit b) = UniProtKB:P0ABA0 [https://data.rcsb.org/rest/v1/core/polymer_entity/6OQR/3];
+    6OQR_4 (ATP synthase epsilon chain) = UniProtKB:P0A6E6 [https://data.rcsb.org/rest/v1/core/polymer_entity/6OQR/4];
+    6OQR_5 (ATP synthase gamma chain) = UniProtKB:P0ABA6 [https://data.rcsb.org/rest/v1/core/polymer_entity/6OQR/5];
+    6OQR_6 (ATP synthase subunit beta) = UniProtKB:P0ABB4 [https://data.rcsb.org/rest/v1/core/polymer_entity/6OQR/6];
+    6OQR_7 (ATP synthase subunit c) = UniProtKB:P68699 [https://data.rcsb.org/rest/v1/core/polymer_entity/6OQR/7];
+    6OQR_8 (ATP synthase subunit a) = UniProtKB:P0AB98 [https://data.rcsb.org/rest/v1/core/polymer_entity/6OQR/8].
+    Biological assembly provenance: assembly 1 has 4 RCSB symmetry annotations (Global
+    Symmetry, Local Symmetry, Pseudo Symmetry); alternate stoichiometries intentionally
+    remain unflattened at [https://data.rcsb.org/rest/v1/core/assembly/6OQR/1]. Deposited
+    2019-04-29T00:00:00.000+00:00; released 2020-06-03T00:00:00.000+00:00; revised
+    2025-06-04T00:00:00.000+00:00; primary PMID:32457314; associated EMD-20167. PDB
+    archive and API data are CC0 (https://www.rcsb.org/pages/usage-policy). Metadata-only
+    ingest: the RCSB molecular render is not ingested as an image or counted as a
+    micrograph.'

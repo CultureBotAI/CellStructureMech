@@ -175,6 +175,10 @@ interpro-groundings *args:
 cryoet-datasets *args:
     uv run python scripts/cryoet_data_portal.py "$@"
 
+# Exact RCSB PDB entry/entity/assembly canary; metadata only, no coordinate files or renders.
+rcsb-pdb *args:
+    uv run python scripts/rcsb_pdb.py "$@"
+
 # Refresh with the pinned local sentence-transformers model (no corpus text is
 # transmitted), then rebuild the 2D PCA map and cosine-neighbour index.
 text-embeddings-refresh:
