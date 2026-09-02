@@ -252,6 +252,15 @@ Source-specific commands (all dry-run unless `--apply` is present):
   to current UniProt primaries `flgG`, `ytxD` and `ytxE` rather than silently
   treated as exact symbol matches; primary literature independently supports
   the MotP/MotS stator placement.
+- `scripts/psortdb.py` is CURATE_ONLY because the PSORTdb paper says Creative
+  Commons without identifying the database licence or version. The maintainer
+  explicitly accepts responsibility for using this public source under that
+  narrow boundary. The adapter reads only a pinned ePSORTdb artifact, whose
+  nominal TSV is actually a Safari WebArchive containing an HTML-wrapped table,
+  and selects one exact experimental accession/PMID canary. It stores only the
+  third-party UniProt identifier and evidence links, independently verifies the
+  reviewed accession, gene and strain taxon at UniProtKB and the PMID at NCBI,
+  and never reads cPSORTdb predictions or copies bulk prose.
 - `scripts/interpro_groundings.py` resolves exact UniProt accessions through
   InterPro's combined endpoint, accepts only integrated entries whose type is
   `family`, and requires every protein response to be reviewed. Its fixed

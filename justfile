@@ -167,6 +167,10 @@ micro-xrefs *args:
 subtiwiki *args:
     uv run python scripts/subtiwiki.py "$@"
 
+# One exact experimental PSORTdb canary; identifiers/evidence links only.
+psortdb *args:
+    uv run python scripts/psortdb.py "$@"
+
 # Exact family groundings from a reviewed UniProt-to-InterPro allow-list.
 interpro-groundings *args:
     uv run python scripts/interpro_groundings.py "$@"

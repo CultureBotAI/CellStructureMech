@@ -6,8 +6,9 @@ part of `just qc`), and triaged by the `source-queue` skill.
 
 Ranking rule: what the corpus cannot currently assert (`just report`), then
 whether we may redistribute it, then per-item identifiers and taxon linkage,
-then bulk access, then effort. A licence failure sinks a source regardless of
-everything else.
+then bulk access, then effort. A licence failure sinks any source use that
+copies or hosts source content; identifiers-only use must remain explicitly
+bounded and keep the terms truthfully marked `UNVERIFIED`.
 
 | Column | Values | Meaning |
 |---|---|---|
@@ -34,8 +35,8 @@ than guessing `RESTRICTED`.
 | `item_id` | `DOI` · `CURIE` · `ACCESSION` · `URL` · `NONE` | The per-item citable identifier. |
 | `access` | `BULK` · `API` · `BOTH` · `MANUAL` · `UNVERIFIED` | |
 | `priority` | 1 (next) – 5 | |
-| `status` | `CANDIDATE` · `EVALUATING` (used by hand, no repeatable script yet) · `ADOPTED` (in `conf/sources.yaml`, `script` exists, terms verified) · `BLOCKED` (reason in rationale) · `REJECTED` | |
-| `verified_on` | date | When the licence was read at the source. |
+| `status` | `CANDIDATE` · `EVALUATING` (used by hand, no repeatable script yet) · `ADOPTED` (in `conf/sources.yaml`, script exists, and the permitted use boundary is documented) · `BLOCKED` (reason in rationale) · `REJECTED` | |
+| `verified_on` | date | When the source, terms and stated use boundary were last checked. |
 | `script` | path | Required for `ADOPTED`; must exist. |
 
 Research notes under `research/` are the evidence behind each row; issues

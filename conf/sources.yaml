@@ -72,6 +72,12 @@ subtiwiki:
   script: scripts/subtiwiki.py
   role: components.protein_examples (curate-only identifiers and links)
 
+psortdb:
+  name: PSORTdb 4.0 experimental localizations
+  homepage: https://db.psort.org/
+  script: scripts/psortdb.py
+  role: components.protein_examples (curate-only identifiers and evidence links)
+
 interpro:
   name: InterPro protein families
   homepage: https://www.ebi.ac.uk/interpro/
