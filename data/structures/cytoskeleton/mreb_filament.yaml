@@ -48,9 +48,10 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
   presence: VARIABLE
-  note: 'Present in rod-shaped and helical lineages and absent from most cocci, which
-    is the point: shape and mreB track each other.'
-  reference: DOI:10.1146/annurev-genet-102108-134845
+  note: 'Present in many rod-shaped and curved lineages and absent from most cocci,
+    but the correlation is not tight: Actinobacteria and Rhizobiales are rod-like
+    or curved and lack MreB altogether.'
+  reference: DOI:10.1016/j.cell.2018.02.050
 - taxon_id: NCBITaxon:2157
   taxon_label: Archaea
   presence: RARE
@@ -141,19 +142,43 @@ curation_history:
     and the filament is not equivalent to the machine it guides; the relationship
     is stated in the component role and a discussion instead.'
   llm_assisted: true
+- timestamp: '2026-09-02T06:07:45Z'
+  curator: claude
+  action: ADD_VERBATIM_EVIDENCE
+  changes: 'Replaced paraphrase-only attributions on both trait links with verbatim
+    snippets from the open-access full text of Shi et al. 2018 (PMC5846203), which
+    I read for this purpose. Dropped the Annual Review of Genetics 2010 citation from
+    the cell-shape link: it has no PubMed or PMC record, so nothing of it could be
+    read beyond a Crossref title, and citing it for a specific claim was not supportable.
+    Reading the source also bounded a taxonomic claim: the record said shape and mreB
+    track each other, and the same paper names Actinobacteria and Rhizobiales as rod-like
+    lineages without MreB.'
+  llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped
   relation: REQUIRED_FOR
   evidence:
   - reference: DOI:10.1016/j.cell.2018.02.050
-    notes: Shi et al. 2018 review MreB as the organiser of sidewall synthesis; losing
-      mreB loses the rod, so the filament is required for the shape rather than sufficient
-      for it.
+    snippet: MreB depletion results in loss of rod-like shape and rounding (Kruse
+      et al., 2005), and there are no E. coli mutants or growth conditions known to
+      restore rod-like shape in the absence of MreB.
+    notes: 'Verbatim from the open-access full text (PMC5846203). Supports REQUIRED_FOR
+      rather than CONFERS: the shape is lost without MreB, and nothing restores it,
+      but MreB alone does not produce a rod.'
+  - reference: DOI:10.1016/j.cell.2018.02.050
+    snippet: Many rod-like and curved bacterial species require MreB to elongate,
+      although there are exceptions such as the Actinobacteria and Rhizobiales that
+      lack MreB altogether.
+    notes: 'The same source bounds the claim: rod shape can be achieved without MreB
+      in some lineages, so the requirement is not universal across bacteria.'
 - trait_id: METPO:1000666
   trait_label: cell shape
   relation: MODULATES
   evidence:
-  - reference: DOI:10.1146/annurev-genet-102108-134845
-    notes: The Bacterial Cytoskeleton (2010) treats MreB as the determinant that distinguishes
-      rod-shaped lineages from cocci.
+  - reference: DOI:10.1016/j.cell.2018.02.050
+    snippet: MreB both senses and changes cell shape, thereby generating a self-organizing
+      feedback system for shape maintenance.
+    notes: 'Verbatim from the open-access full text (PMC5846203). MODULATES rather
+      than CONFERS: the filament is described as sensing and adjusting shape, not
+      dictating it.'
