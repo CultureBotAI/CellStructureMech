@@ -82,8 +82,20 @@ to match — never one without the other.
 - `snippet` is for **verbatim** quotes only. When you have not seen the
   source text, use `notes` to paraphrase what the source establishes. A
   fabricated quotation is worse than none.
+- **`just evidence-verify` checks every snippet against its own source** and
+  fails on any that is not there. It needs the network, so it is not part of
+  `just qc`; run it before committing evidence. `just evidence-audit` reports
+  which references are readable at all, and `just evidence-suggest <record>`
+  offers candidate sentences to choose from — it never chooses. See the
+  `literature-evidence` skill.
 - Prefer DOIs; PMIDs are fine. A reference the curator has not opened is not
   evidence.
+- **Unreadable is a finding.** If a cited paper's text cannot be reached, say so
+  in `notes` and leave `snippet` empty. Do not paraphrase a title into prose
+  that reads like knowledge of the paper's contents. Establish unreadability by
+  trying the routes, not by asking one index: NCBI's converter covers only PMC,
+  and reporting its silence as "no PubMed record" was wrong about a paper that
+  has one (#133).
 
 ## Components
 

@@ -207,6 +207,22 @@ check-curies-strict:
 check-curies-self-test:
     uv run python scripts/check_curies.py --self-test
 
+# Read the cited literature and report what is reachable: full text, abstract,
+# unreadable, or not a paper at all. Prints the number of claims that cite a
+# paper nobody can reach and carry no quotation (#133). Network.
+evidence-audit *args:
+    uv run python scripts/fetch_snippets.py --audit {{args}}
+
+# Candidate sentences from the source, ranked against the claim, for a curator
+# to choose from. Suggests only; choosing is the curator's judgement. Network.
+evidence-suggest record:
+    uv run python scripts/fetch_snippets.py --suggest --record {{record}}
+
+# Every snippet must occur verbatim in its own source. The anti-fabrication
+# gate; run it before committing evidence. Network, so not part of `just qc`.
+evidence-verify *args:
+    uv run python scripts/fetch_snippets.py --verify --check {{args}}
+
 # Check every associated_traits link against TraitMech: the id must exist there
 # and the label must still match (#11). Uses a local checkout when
 # TRAITMECH_ROOT or conf/sources.yaml points at one, else TraitMech's published
