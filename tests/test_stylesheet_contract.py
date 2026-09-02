@@ -252,3 +252,46 @@ def test_a_second_palette_agrees_with_the_canonical_one(repo_root):
         if differing:
             disagreements[name] = differing
     assert not disagreements, f"same token, different value from style.css: {disagreements}"
+
+
+# --- the map's data palette: a declared exception, not an invisible one -------
+
+MAP_TEMPLATE = "src/cellstructuremech/templates/embedding_map.html"
+CATEGORY_COLOUR = re.compile(r"([A-Z_]+):\s*\"(#[0-9a-fA-F]{6})\"")
+
+
+def _map_palette(repo_root) -> dict[str, str]:
+    return dict(CATEGORY_COLOUR.findall((repo_root / MAP_TEMPLATE).read_text(encoding="utf-8")))
+
+
+def test_the_map_palette_covers_every_structure_category(repo_root):
+    """Eight of thirteen categories fell through to the OTHER grey until #98, so
+    a third of the corpus rendered as one indistinguishable colour — beside a
+    genuine OTHER category that has a record in it. A category with no colour is
+    a map that shows fewer groups than the data has."""
+    import yaml
+
+    schema = yaml.safe_load((repo_root / "src" / "cellstructuremech" / "schema"
+                             / "cellstructuremech.yaml").read_text(encoding="utf-8"))
+    categories = set(schema["enums"]["StructureCategoryEnum"]["permissible_values"])
+    missing = sorted(categories - set(_map_palette(repo_root)))
+    assert not missing, f"structure categories with no colour on the map: {missing}"
+
+
+def test_the_map_palette_assigns_a_distinct_colour_to_each_category(repo_root):
+    palette = _map_palette(repo_root)
+    seen: dict[str, list[str]] = {}
+    for category, colour in palette.items():
+        seen.setdefault(colour.lower(), []).append(category)
+    shared = {c: names for c, names in seen.items() if len(names) > 1}
+    assert not shared, f"categories sharing a colour are indistinguishable on the map: {shared}"
+
+
+def test_the_only_colour_literals_in_the_map_are_the_declared_palette(repo_root):
+    """Data colours are held constant on purpose (#98) — that is the declared
+    exception. Any *other* literal in the template is chrome that has escaped
+    the token system, which is the defect #95 exists to catch."""
+    text = (repo_root / MAP_TEMPLATE).read_text(encoding="utf-8")
+    declared = {c.lower() for c in _map_palette(repo_root).values()}
+    found = {m.lower() for m in re.findall(r"#[0-9a-fA-F]{3,8}\b", text)}
+    assert found <= declared, f"colour literal outside the declared data palette: {sorted(found - declared)}"

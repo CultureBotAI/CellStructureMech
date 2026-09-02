@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: other
+  path: src/cellstructuremech/templates/embedding_map.html
+  slug: data-colours-and-ecocyc
+session:
+  id: 2026-09-02T054653Z-claude-code-79d8a1
+  timestamp: '2026-09-02T05:46:53Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/98
+  - https://github.com/CultureBotAI/CellStructureMech/issues/110
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - images
+  summary: Declare the map's data palette and complete it; decline EcoCyc's obligations
+  details: 'The last two of five decisions from the 2026-09-02 review. Issue 98 asked whether
+    qualitative data colours should respond to the theme. Decided no: a palette chosen for
+    discriminability is not chrome, and a category should look the same to two readers comparing
+    screens, so the colours are held constant and the exception is now declared rather than
+    invisible. Writing that down exposed a real defect the issue had not noticed. The palette
+    named five categories while the corpus has thirteen, so eight of them fell through to
+    the OTHER grey and rendered as one indistinguishable colour beside a genuine OTHER category
+    that now has a record in it. The palette is completed with mid-luminance hues following
+    Paul Tol''s qualitative schemes, which stay distinguishable under common colour-vision
+    deficiencies, and three contract tests now hold it: every category has a colour, no two
+    categories share one, and the declared palette is the only set of colour literals permitted
+    in that template, so chrome escaping the token system still fails. Issue 110 asked whether
+    to accept EcoCyc''s redistribution terms. Declined: the obligations are ongoing and include
+    a BioCyc logo on a CC0 corpus and an external notification the maintainer must send, while
+    Complex Portal covers the overlap under plain CC BY with three hundred and twenty-four
+    curated E. coli complexes. Reading EcoCyc to inform curation remains available, and the
+    row records the reasoning so a future reader can reopen it deliberately.'

@@ -19,9 +19,25 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
 
 <script>
 (() => {
+  // Data colours, deliberately NOT theme tokens (#98). A qualitative palette is
+  // chosen for discriminability between categories, and a category should look
+  // the same to two readers comparing screens, so these are held constant in
+  // light and dark. They are mid-luminance for that reason. The stylesheet
+  // contract knows this list and refuses any colour literal outside it, so the
+  // exception is declared rather than invisible.
+  //
+  // Hues follow Paul Tol's qualitative schemes, which are designed to stay
+  // distinguishable under the common colour-vision deficiencies.
+  //
+  // Every StructureCategoryEnum value must appear: eight categories fell through
+  // to the OTHER grey until #98, so a third of the corpus rendered as one
+  // indistinguishable colour — and OTHER is a real category with a record in it.
   const colors = {
-    APPENDAGE: "#b24c63", ENVELOPE: "#2f7d73", MICROCOMPARTMENT: "#a56a17",
-    RIBONUCLEOPROTEIN: "#5368a6", OTHER: "#666"
+    APPENDAGE: "#CC6677", ENVELOPE: "#117733", MICROCOMPARTMENT: "#DDCC77",
+    RIBONUCLEOPROTEIN: "#332288", CYTOSKELETON: "#88CCEE", DIVISION_MACHINERY: "#882255",
+    ENERGY_COMPLEX: "#44AA99", INCLUSION: "#999933", MEMBRANE_ORGANELLE: "#AA4499",
+    NUCLEOID: "#6699CC", SECRETION_SYSTEM: "#EE8866", SPORE: "#BBCC33",
+    OTHER: "#777777"
   };
   const ns = "http://www.w3.org/2000/svg";
   const plot = document.getElementById("embedding-map");
