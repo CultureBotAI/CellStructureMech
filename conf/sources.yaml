@@ -77,3 +77,9 @@ interpro:
   homepage: https://www.ebi.ac.uk/interpro/
   script: scripts/interpro_groundings.py
   role: components.grounding and reviewed label-only decisions
+
+cryoet_data_portal:
+  name: CryoET Data Portal
+  homepage: https://cryoetdataportal.czscience.com/
+  script: scripts/cryoet_data_portal.py
+  role: datasets

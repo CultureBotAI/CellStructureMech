@@ -38,6 +38,18 @@ def get_json(url: str) -> dict:
     return json.loads(get_bytes(url))
 
 
+def post_json(url: str, payload: dict) -> dict:
+    """POST JSON to one public API with the repository's standard transport."""
+    request = urllib.request.Request(
+        url,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={**USER_AGENT, "Content-Type": "application/json"},
+        method="POST",
+    )
+    with urllib.request.urlopen(request, timeout=120, context=TLS_CONTEXT) as response:
+        return json.loads(response.read())
+
+
 def named_taxa(record: dict) -> set[str]:
     """Taxa a record already claims; importers may not silently broaden this set."""
     taxa = {item["taxon_id"] for item in record.get("taxonomic_distribution") or []}

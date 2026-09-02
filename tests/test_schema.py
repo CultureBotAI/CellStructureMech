@@ -17,6 +17,22 @@ def test_schema_loads_with_its_imports(schema_path):
     # silently disappear from the record shape.
     assert "Discussion" in view.all_classes()
     assert "Dataset" in view.all_classes()
+    assert "StructuralDataset" in view.all_classes()
+
+
+def test_structural_dataset_extends_shared_dataset_enums(schema_path):
+    view = _schema(schema_path)
+    dataset = view.induced_class("StructuralDataset")
+    assert dataset.attributes["dataset_type"].range == "StructuralDatasetTypeEnum"
+    assert dataset.attributes["repository"].range == "StructuralDatasetRepositoryEnum"
+    shared_types = set(view.get_enum("DatasetTypeEnum").permissible_values)
+    structural_types = set(view.get_enum("StructuralDatasetTypeEnum").permissible_values)
+    assert structural_types == shared_types | {"STRUCTURAL_IMAGING"}
+    shared_repositories = set(view.get_enum("DatasetRepositoryEnum").permissible_values)
+    structural_repositories = set(
+        view.get_enum("StructuralDatasetRepositoryEnum").permissible_values
+    )
+    assert structural_repositories == shared_repositories | {"CRYOET_DATA_PORTAL"}
 
 
 def test_structure_record_is_the_only_tree_root(schema_path):
@@ -102,5 +118,7 @@ def test_schema_prefixes_cover_every_curie_in_the_corpus(schema_path, records):
                 add(n.get("grounding"))
             for e in g.get("edges") or []:
                 add(e.get("predicate_id"))
+        for dataset in doc.get("datasets") or []:
+            add(dataset.get("accession"))
     missing = used - declared
     assert not missing, f"prefixes used in the corpus but undeclared in the schema: {sorted(missing)}"

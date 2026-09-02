@@ -171,6 +171,10 @@ subtiwiki *args:
 interpro-groundings *args:
     uv run python scripts/interpro_groundings.py "$@"
 
+# Exact CryoET dataset/run/annotation canaries; metadata only, no volume downloads.
+cryoet-datasets *args:
+    uv run python scripts/cryoet_data_portal.py "$@"
+
 # Refresh with the pinned local sentence-transformers model (no corpus text is
 # transmitted), then rebuild the 2D PCA map and cosine-neighbour index.
 text-embeddings-refresh:

@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/source_queue.tsv
+  slug: cryoet-source-ingestion
+session:
+  id: 2026-09-02T062526Z-codex-43d628
+  timestamp: '2026-09-02T06:25:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/124
+  - https://github.com/CultureBotAI/CellStructureMech/issues/135
+  - https://github.com/CultureBotAI/CellStructureMech/issues/136
+  - https://github.com/CultureBotAI/CellStructureMech/issues/137
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - source_queue
+  - schema
+  - adapter
+  - datasets
+  - documentation
+  summary: Adopt exact CryoET structural-dataset ingestion
+  details: Adopted the CC0 CryoET Data Portal through a dry-run-by-default exact-ID GraphQL
+    adapter. Added a CellStructureMech-local extension of the shared dataset enums with compatibility
+    checks, then ingested metadata-only canaries for gas-vesicle dataset 10014/run 14004 and
+    type-IV-pilus dataset 10155/run 7978/manual ground-truth annotation 30707. Each target
+    requires a publication-backed exact strain taxon already on the record and exact GO identity;
+    no tomogram or annotation volume is queried or hosted. Added offline drift, linkage, quality,
+    transport and no-bulk-download contracts. Adversarial review separated portal run counts
+    from biological sample counts (#136) and replaced the draft accession spelling with declared,
+    resolvable CryoETDataPortal CURIEs plus corpus-wide dataset-prefix coverage (#135).
+    It also made Dataset metadata visible on generated structure pages after review found
+    that every dataset source was otherwise absent from the published site (#137).

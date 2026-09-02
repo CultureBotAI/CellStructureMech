@@ -90,6 +90,11 @@
 <ul>{% for im in r.images[1:] %}<li><a href="{{ im.source_url }}">{{ im.source }} {{ im.source_accession }}</a> — {{ im.modality }}, <em>{{ im.taxon_label }}</em>, {{ im.licence }}, {{ curie(im.reference) }}</li>{% endfor %}</ul>
 {% endif %}
 
+{%- if r.datasets %}
+<h2>Datasets</h2>
+<ul class="datasets">{% for d in r.datasets %}<li>{% if d.url %}<a href="{{ d.url }}"><strong>{{ d.title or d.accession }}</strong></a>{% else %}<strong>{{ d.title or d.accession }}</strong>{% endif %}{% if d.accession %} ({{ curie(d.accession) }}){% endif %}{% if d.repository %} · {{ d.repository }}{% endif %}{% if d.dataset_type %} · {{ d.dataset_type }}{% endif %}{% if d.organism %}<br><em>Organism:</em> {{ d.organism }}{% endif %}{% if d.platform %} · <em>Platform:</em> {{ d.platform }}{% endif %}{% if d.sample_count is defined and d.sample_count is not none %} · {{ d.sample_count }} samples{% endif %}{% if d.findings %}<p>{{ d.findings }}</p>{% endif %}{% if d.notes %}<p><small>{{ d.notes }}</small></p>{% endif %}{{ evid(d.evidence) }}</li>{% endfor %}</ul>
+{% endif %}
+
 {% if r.evidence %}
 <h2>Evidence</h2>
 {{ evid(r.evidence) }}
