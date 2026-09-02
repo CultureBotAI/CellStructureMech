@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/endospore_external_encapsulating_structure.yaml
+  slug: endospore_external_encapsulating_structure
+session:
+  id: 2026-09-02T222313Z-codex-561319
+  timestamp: '2026-09-02T22:23:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/125
+  urls:
+  - https://db.psort.org/search/results?dataset=e&refseq=P14016&show_adjust=1
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - canonical_examples
+  - curation_history
+  summary: Adopted one exact ePSORTdb CotE canary
+  details: Integrated ePSORTdb under the maintainer-approved CURATE_ONLY boundary while keeping
+    redistribution terms UNVERIFIED. The adapter pins and validates the malformed WebArchive
+    artifact, exact P14016 row, UniProt reviewed identity/gene/taxon, and PMID 3139490; it
+    added the CotE protein example and exact strain canonical example. cPSORTdb predictions,
+    source descriptions, comments, and bulk prose remain excluded. Offline contract tests,
+    live dry-run, validated apply, and idempotent live rerun passed.

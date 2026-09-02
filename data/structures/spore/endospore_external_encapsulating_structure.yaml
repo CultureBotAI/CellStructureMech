@@ -48,6 +48,23 @@ components:
   - reference: DOI:10.1038/nrmicro2921
     notes: McKenney et al. 2012 describe the coat's layers and the morphogenetic proteins
       that organise them.
+  protein_examples:
+  - uniprot_id: UniProtKB:P14016
+    protein_label: Spore coat morphogenetic protein CotE
+    gene_symbol: cotE
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-02'
+    role: 'Exact ePSORTdb experimental canary: P14016 is assigned to Spore outer coat;
+      current protein identity and taxon were independently verified in UniProtKB.'
+    evidence:
+    - reference: https://db.psort.org/search/results?dataset=e&refseq=P14016&show_adjust=1
+      notes: The exact ePSORTdb result links P14016 (Spore coat protein E) from taxon
+        224308 to secondary localization 'Spore outer coat' and PMID:3139490.
+    - reference: PMID:3139490
+      notes: Zheng et al. identify CotE as a morphogenetic protein required to assemble
+        the outer Bacillus subtilis endospore coat.
 - component_id: exosporium
   label: exosporium
   component_type: PROTEIN
@@ -77,6 +94,10 @@ canonical_examples:
   taxon_label: Bacillus subtilis
   note: The model system for coat assembly and sporulation genetics.
   reference: DOI:10.1038/nrmicro2921
+- taxon_id: NCBITaxon:224308
+  taxon_label: Bacillus subtilis subsp. subtilis str. 168
+  note: Experimental reference strain for CotE-dependent outer spore-coat assembly.
+  reference: PMID:3139490
 functions:
 - function_id: resistance
   label: spore-mediated resistance to environmental stress
@@ -111,4 +132,13 @@ curation_history:
   action: CREATED_RECORD
   changes: Drafted from the cited reviews; every GO term, taxon id and DOI resolved
     live before writing. Not yet human-reviewed.
+  llm_assisted: true
+- timestamp: '2026-09-02T22:22:21Z'
+  curator: psortdb
+  action: SEED_PROTEIN_EXAMPLE
+  changes: Added exact ePSORTdb experimental P14016/CotE spore-outer-coat example
+    with PMID:3139490; validated the pinned WebArchive-wrapped v4 artifact, then independently
+    verified reviewed protein identity, gene and strain taxon at UniProtKB and the
+    PMID at NCBI. Source licensing responsibility was accepted by the maintainer;
+    no cPSORTdb predictions or bulk prose were stored.
   llm_assisted: true
