@@ -32,6 +32,20 @@ components:
   - reference: DOI:10.1146/annurev.micro.57.030502.090832
     notes: Macnab 2003 reviews filament assembly from FliC exported through the central
       channel and capped by FliD.
+  protein_examples:
+  - uniprot_id: UniProtKB:P02968
+    protein_label: Flagellin
+    gene_symbol: hag
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the flagellin (FliC) component;
+      identity and taxon independently verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/hag
+      notes: SubtiWiki category 387 lists hag among B. subtilis flagellar proteins
+        and links UniProtKB:P02968.
 - component_id: hook
   label: hook protein (FlgE)
   component_type: PROTEIN
@@ -54,6 +68,20 @@ components:
   evidence:
   - reference: DOI:10.1146/annurev.micro.57.030502.090832
     notes: The MS ring is the first substructure assembled.
+  protein_examples:
+  - uniprot_id: UniProtKB:P23447
+    protein_label: Flagellar M-ring protein
+    gene_symbol: fliF
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the MS ring (FliF) component;
+      identity and taxon independently verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/fliF
+      notes: SubtiWiki category 387 lists fliF among B. subtilis flagellar proteins
+        and links UniProtKB:P23447.
 - component_id: c_ring
   label: C ring / switch complex (FliG, FliM, FliN)
   component_type: PROTEIN_COMPLEX
@@ -68,6 +96,49 @@ components:
   evidence:
   - reference: DOI:10.1016/j.tim.2014.12.011
     notes: Minamino & Imada 2015 describe the rotor–stator interface at FliG.
+  protein_examples:
+  - uniprot_id: UniProtKB:P23448
+    protein_label: Flagellar motor switch protein FliG
+    gene_symbol: fliG
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the C ring / switch complex
+      (FliG, FliM, FliN) component; identity and taxon independently verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/fliG
+      notes: SubtiWiki category 387 lists fliG among B. subtilis flagellar proteins
+        and links UniProtKB:P23448.
+  - uniprot_id: UniProtKB:P23453
+    protein_label: Flagellar motor switch protein FliM
+    gene_symbol: fliM
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the C ring / switch complex
+      (FliG, FliM, FliN) component; identity and taxon independently verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/fliM
+      notes: SubtiWiki category 387 lists fliM among B. subtilis flagellar proteins
+        and links UniProtKB:P23453.
+  - uniprot_id: UniProtKB:P24073
+    protein_label: Flagellar motor switch phosphatase FliY
+    gene_symbol: fliY
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the C ring / switch complex
+      (FliG, FliM, FliN) component; identity and taxon independently verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/fliY
+      notes: SubtiWiki category 387 lists fliY among B. subtilis flagellar proteins
+        and links UniProtKB:P24073.
+    - reference: DOI:10.1128/JB.00626-18
+      notes: Independent experimental literature supports the curated placement of
+        fliY in the B. subtilis C ring / switch complex (FliG, FliM, FliN) component.
 - component_id: stator
   label: stator unit (MotA5MotB2)
   component_type: PROTEIN_COMPLEX
@@ -90,6 +161,65 @@ components:
     notes: Chang et al. 2019 imaged ΔmotA and ΔmotB cells with assembled but paralysed
       flagella, showing that the stator is required for torque rather than for flagellar
       assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:P28611
+    protein_label: Motility protein A
+    gene_symbol: motA
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the stator unit (MotA5MotB2)
+      component; identity and taxon independently verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/motA
+      notes: SubtiWiki category 387 lists motA among B. subtilis flagellar proteins
+        and links UniProtKB:P28611.
+  - uniprot_id: UniProtKB:P28612
+    protein_label: Motility protein B
+    gene_symbol: motB
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the stator unit (MotA5MotB2)
+      component; identity and taxon independently verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/motB
+      notes: SubtiWiki category 387 lists motB among B. subtilis flagellar proteins
+        and links UniProtKB:P28612.
+  - uniprot_id: UniProtKB:P39063
+    protein_label: Uncharacterized protein YtxD
+    gene_symbol: ytxD
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the stator unit (MotA5MotB2)
+      component; identity and taxon independently verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/motP
+      notes: SubtiWiki category 387 lists motP among B. subtilis flagellar proteins
+        and links UniProtKB:P39063, whose current UniProt primary gene symbol is ytxD.
+    - reference: DOI:10.1016/j.jmb.2005.07.030
+      notes: Independent experimental literature supports the curated placement of
+        motP in the B. subtilis stator unit (MotA5MotB2) component.
+  - uniprot_id: UniProtKB:P39064
+    protein_label: Uncharacterized protein YtxE
+    gene_symbol: ytxE
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the stator unit (MotA5MotB2)
+      component; identity and taxon independently verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/motS
+      notes: SubtiWiki category 387 lists motS among B. subtilis flagellar proteins
+        and links UniProtKB:P39064, whose current UniProt primary gene symbol is ytxE.
+    - reference: DOI:10.1016/j.jmb.2005.07.030
+      notes: Independent experimental literature supports the curated placement of
+        motS in the B. subtilis stator unit (MotA5MotB2) component.
 - component_id: rod
   label: rod (FlgB, FlgC, FlgF, FlgG)
   component_type: PROTEIN_COMPLEX
@@ -104,6 +234,46 @@ components:
   evidence:
   - reference: DOI:10.1146/annurev.micro.57.030502.090832
     notes: Rod subunits are exported by the fT3SS and polymerise in order.
+  protein_examples:
+  - uniprot_id: UniProtKB:P23446
+    protein_label: Flagellar basal-body rod protein FlgG
+    gene_symbol: flgG
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the rod (FlgB, FlgC, FlgF,
+      FlgG) component; identity and taxon independently verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/flgE
+      notes: SubtiWiki category 387 lists flgE among B. subtilis flagellar proteins
+        and links UniProtKB:P23446, whose current UniProt primary gene symbol is flgG.
+  - uniprot_id: UniProtKB:P24500
+    protein_label: Flagellar basal body rod protein FlgB
+    gene_symbol: flgB
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the rod (FlgB, FlgC, FlgF,
+      FlgG) component; identity and taxon independently verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/flgB
+      notes: SubtiWiki category 387 lists flgB among B. subtilis flagellar proteins
+        and links UniProtKB:P24500.
+  - uniprot_id: UniProtKB:P24501
+    protein_label: Flagellar basal-body rod protein FlgC
+    gene_symbol: flgC
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the rod (FlgB, FlgC, FlgF,
+      FlgG) component; identity and taxon independently verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/flgC
+      notes: SubtiWiki category 387 lists flgC among B. subtilis flagellar proteins
+        and links UniProtKB:P24501.
 - component_id: lp_rings
   label: L and P rings (FlgH, FlgI)
   component_type: PROTEIN_COMPLEX
@@ -132,6 +302,77 @@ components:
   evidence:
   - reference: DOI:10.1146/annurev.micro.57.030502.090832
     notes: Homologous to the injectisome export gate.
+  protein_examples:
+  - uniprot_id: UniProtKB:P35620
+    protein_label: Flagellar biosynthesis protein FlhA
+    gene_symbol: flhA
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III export
+      apparatus (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
+      verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/flhA
+      notes: SubtiWiki category 387 lists flhA among B. subtilis flagellar proteins
+        and links UniProtKB:P35620.
+  - uniprot_id: UniProtKB:P35538
+    protein_label: Flagellar biosynthetic protein FlhB
+    gene_symbol: flhB
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III export
+      apparatus (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
+      verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/flhB
+      notes: SubtiWiki category 387 lists flhB among B. subtilis flagellar proteins
+        and links UniProtKB:P35538.
+  - uniprot_id: UniProtKB:P35528
+    protein_label: Flagellar biosynthetic protein FliP
+    gene_symbol: fliP
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III export
+      apparatus (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
+      verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/fliP
+      notes: SubtiWiki category 387 lists fliP among B. subtilis flagellar proteins
+        and links UniProtKB:P35528.
+  - uniprot_id: UniProtKB:P35535
+    protein_label: Flagellar biosynthetic protein FliQ
+    gene_symbol: fliQ
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III export
+      apparatus (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
+      verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/fliQ
+      notes: SubtiWiki category 387 lists fliQ among B. subtilis flagellar proteins
+        and links UniProtKB:P35535.
+  - uniprot_id: UniProtKB:P35537
+    protein_label: Flagellar biosynthetic protein FliR
+    gene_symbol: fliR
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-01'
+    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III export
+      apparatus (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
+      verified in UniProtKB.
+    evidence:
+    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/fliR
+      notes: SubtiWiki category 387 lists fliR among B. subtilis flagellar proteins
+        and links UniProtKB:P35537.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -159,6 +400,10 @@ canonical_examples:
   note: Taxon depicted in the hosted TEM; purified H7 flagellar filaments from an
     O157:H7 isolate were independently characterized by microscopy and immunoassay.
   reference: DOI:10.1128/jcm.26.7.1367-1372.1988
+- taxon_id: NCBITaxon:224308
+  taxon_label: Bacillus subtilis subsp. subtilis str. 168
+  note: SubtiWiki's reference strain and a classical genetic model for flagellar assembly.
+  reference: DOI:10.1093/nar/gkae957
 functions:
 - function_id: motility
   label: bacterial-type flagellum-dependent cell motility
@@ -370,5 +615,13 @@ curation_history:
     is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
     only where the protein acts on the already-assembled structure.
   llm_assisted: true
+- timestamp: '2026-09-02T04:28:37Z'
+  curator: subtiwiki
+  action: SEED_PROTEIN_EXAMPLES
+  changes: Added or refreshed 17 curator-reviewed B. subtilis flagellar protein examples
+    from SubtiWiki category 387; exact gene ids and UniProt outlinks were checked
+    at SubtiWiki, then reviewed status, gene identity and taxon were checked independently
+    at UniProtKB; FliY C-ring and MotP/MotS stator placements were independently literature-backed.
+    No SubtiWiki prose, sequences or bulk export was copied.
 xrefs:
 - uniprot.location:SL-0307

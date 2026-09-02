@@ -163,6 +163,10 @@ bioimage-archive *args:
 micro-xrefs *args:
     uv run python scripts/micro_xrefs.py "$@"
 
+# Fixed, curate-only B. subtilis flagellar examples; identifiers/links only.
+subtiwiki *args:
+    uv run python scripts/subtiwiki.py "$@"
+
 # Refresh with the pinned local sentence-transformers model (no corpus text is
 # transmitted), then rebuild the 2D PCA map and cosine-neighbour index.
 text-embeddings-refresh:

@@ -224,6 +224,16 @@ Source-specific commands (all dry-run unless `--apply` is present):
   current GO-grounded records to exact, non-obsolete MicrO terms. MicrO is
   inactive and mixes structures with whole cells and qualities, so the adapter
   has a fixed allow-list and refuses label search or inferred mappings.
+- `scripts/subtiwiki.py` is CURATE_ONLY because SubtiWiki publishes no database
+  redistribution licence. It reads one exact category and exact per-gene
+  UniProt outlinks for a fixed reviewed allow-list, then independently checks
+  the accession, reviewed status, current primary gene and strain taxon at
+  UniProtKB. Only identifiers and source links enter the corpus: descriptions,
+  sequences, phenotypes, interaction text and bulk exports are refused. The
+  historical SubtiWiki names `flgE`, `motP` and `motS` are explicitly reconciled
+  to current UniProt primaries `flgG`, `ytxD` and `ytxE` rather than silently
+  treated as exact symbol matches; primary literature independently supports
+  the MotP/MotS stator placement.
 - These image scripts verify downloaded bytes (PMC md5 where supplied, corpus
   SHA-256 always), validate the complete record mutation before touching the
   destination, and confine generated filenames to the record image directory.

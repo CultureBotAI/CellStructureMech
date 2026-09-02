@@ -65,3 +65,9 @@ micro:
   homepage: http://obofoundry.org/ontology/micro.html
   script: scripts/micro_xrefs.py
   role: xrefs
+
+subtiwiki:
+  name: SubtiWiki v5
+  homepage: https://www.subtiwiki.uni-goettingen.de/v5/
+  script: scripts/subtiwiki.py
+  role: components.protein_examples (curate-only identifiers and links)
