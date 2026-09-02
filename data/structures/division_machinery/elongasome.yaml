@@ -155,6 +155,23 @@ curation_history:
     RodA/SEDS finding the definition asserts. The component evidence is corrected;
     rewording the definition is left to a curator.'
   llm_assisted: true
+- timestamp: '2026-09-02T23:56:08Z'
+  curator: claude
+  action: NORMALISE_NODE_REFERENCE
+  changes: 'Self-review: the MreB node used xrefs where every other STRUCTURE node
+    in the corpus uses grounding. xrefs asserts equivalence -- the misuse #119 removed
+    from the MreB / elongasome pair -- while grounding names what the node denotes,
+    which is what was meant.'
+  llm_assisted: true
+- timestamp: '2026-09-02T23:57:26Z'
+  curator: claude
+  action: STRENGTHEN_EDGE_EVIDENCE
+  changes: 'Self-review: the pg_synthesis drives complex_motion edge rested on a sentence
+    about comparable velocities, which shows coupling rather than direction. The depletion
+    result -- stopping synthesis stops the movement -- is what supports ''drives'',
+    so it now leads the evidence and the velocity observation is labelled for what
+    it shows.'
+  llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped
@@ -210,9 +227,8 @@ causal_graphs:
   - node_id: mreb
     label: MreB filament
     node_type: STRUCTURE
-    xrefs:
-    - cellstructuremech:mreb_filament
     description: Curves-sensing actin homologue that orients the complex circumferentially.
+    grounding: cellstructuremech:mreb_filament
   - node_id: rodz
     label: RodZ
     node_type: GENE_OR_PROTEIN
@@ -269,12 +285,21 @@ causal_graphs:
       pulling it.
     evidence:
     - reference: DOI:10.1038/nrmicro2677
+      snippet: Interestingly, inhibition or depletion of the specific elongation class
+        B TPases (PBP2 in E. coli , and PBP2A and PBPH in B. subtilis) eliminates
+        filament movement in both organisms, suggesting that peptidoglycan synthesis
+        itself is the motor that drives filament movement
+      notes: 'Verbatim from PMC5433867. This is the sentence that supports the predicate:
+        stopping synthesis stops the movement. The velocity correlation below shows
+        the two are coupled, which on its own would not establish which drives which.'
+    - reference: DOI:10.1038/nrmicro2677
       snippet: Consistent with this idea, both MreB and the peptidoglycan synthesis
         complexes move with comparable velocities in roughly similar circumferential
         directions 47 – 48 , mirroring the position of glycan chains in the sacculus
         22 .
-      notes: Verbatim; comparable velocities in a shared direction are the observation
-        the coupling rests on.
+      notes: Verbatim. Comparable velocities in a shared direction show the filament
+        and the synthesis complex are coupled; they do not by themselves say which
+        moves the other.
   - subject: rodz
     predicate: couples
     object: mreb
