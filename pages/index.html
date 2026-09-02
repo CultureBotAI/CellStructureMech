@@ -33,6 +33,7 @@
   .stat{background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:12px;
         padding:12px 20px;min-width:110px;text-decoration:none;color:inherit}
   a.stat:hover{background:rgba(255,255,255,.85);text-decoration:none}
+  a.stat:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
   .stat b{display:block;font-size:1.6rem;line-height:1.1}
   .stat span{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
   .wrap{max-width:980px;margin:0 auto;padding:48px 24px}
@@ -134,8 +135,8 @@
   </p>
   <div class="stats">
     <a class="stat" href="browse.html"><b>19</b><span>structure records</span></a>
-    <div class="stat"><b>13</b><span>categories</span></div>
-    <div class="stat"><b>17</b><span>GO-grounded</span></div>
+    <a class="stat" href="index.html#categories"><b>13</b><span>categories</span></a>
+    <a class="stat" href="grounded.html"><b>17</b><span>GO-grounded</span></a>
   </div>
 </div>
 
@@ -178,7 +179,7 @@
     </div>
   </div>
 
-  <section class="block">
+  <section class="block" id="categories">
     <h2>Categories</h2>
     <p>What each category covers, and how many records currently sit in it.</p>
     <div class="tbl-scroll">

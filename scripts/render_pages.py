@@ -128,6 +128,22 @@ def render(out_dir: Path) -> None:
     (out_dir / "browse.html").write_text(
         env.get_template("browse.html").render(records=index, root=""), encoding="utf-8"
     )
+    grounded_records = [
+        entry for entry in index if str(entry["identifier"]).startswith("GO:")
+    ]
+    (out_dir / "grounded.html").write_text(
+        env.get_template("browse.html").render(
+            records=grounded_records,
+            root="",
+            page_title="GO-grounded structures",
+            heading="GO-grounded structures",
+            lede=(
+                f"{len(grounded_records)} structures use an exact Gene Ontology "
+                "cellular-component identifier."
+            ),
+        ),
+        encoding="utf-8",
+    )
     (out_dir / "index.json").write_text(
         json.dumps(index, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
     )

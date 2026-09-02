@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -98,8 +99,6 @@ def test_rendered_site_has_no_broken_local_links(tmp_path):
     """Every relative href/src in the rendered site must resolve to a file in
     the output tree. Caught #21, where record pages pointed one level too
     deep for their stylesheet and hosted images."""
-    import re
-
     out = tmp_path / "site"
     res = _run("scripts/render_pages.py", "--out", str(out))
     assert res.returncode == 0, res.stderr
@@ -123,6 +122,24 @@ def test_rendered_site_has_no_broken_local_links(tmp_path):
             if not (html.parent / url).resolve().exists():
                 broken.append(f"{html.relative_to(out)}: {url}")
     assert not broken, broken
+
+
+def test_landing_statistics_link_to_their_corresponding_views(tmp_path):
+    out = tmp_path / "site"
+    result = _run("scripts/render_pages.py", "--out", str(out))
+    assert result.returncode == 0, result.stderr
+
+    landing = (out / "index.html").read_text(encoding="utf-8")
+    assert '<a class="stat" href="browse.html">' in landing
+    assert '<a class="stat" href="index.html#categories">' in landing
+    assert '<section class="block" id="categories">' in landing
+    assert '<a class="stat" href="grounded.html">' in landing
+
+    grounded = (out / "grounded.html").read_text(encoding="utf-8")
+    assert "<h1>GO-grounded structures</h1>" in grounded
+    identifiers = re.findall(r"<td><code>([^<]+)</code></td>", grounded)
+    assert identifiers
+    assert all(identifier.startswith("GO:") for identifier in identifiers)
 
 
 def test_a_hosted_image_link_points_at_the_committed_file(tmp_path):
