@@ -154,6 +154,20 @@ curation_history:
     track each other, and the same paper names Actinobacteria and Rhizobiales as rod-like
     lineages without MreB.'
   llm_assisted: true
+- timestamp: '2026-09-02T20:18:15Z'
+  curator: claude
+  action: CORRECT_CURATION_EVENT
+  changes: '#145: the ADD_VERBATIM_EVIDENCE event above states that DOI:10.1146/annurev-genet-102108-134845
+    has no PubMed or PMC record. That is false: it is PMID 21047262 and its abstract
+    is available. The check behind the claim asked only NCBI''s PMC id converter,
+    which indexes PMC alone, and read its empty response as absence from PubMed too;
+    Europe PMC returns the record directly. The event is left standing rather than
+    rewritten, because curation_history is append-only and hiding an error is worse
+    than the error. The removal it describes still holds on its own ground: the paraphrase
+    was written without reading the paper, and the abstract does not carry the specific
+    cell-shape claim it was attached to. The paper remains cited elsewhere on this
+    record, and the three verbatim snippets are unaffected.'
+  llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped
