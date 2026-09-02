@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/uniprot-evidence-titles.yaml
+  slug: uniprot-evidence-titles
+session:
+  id: 2026-09-02T232806Z-claude-code-8fb7d9
+  timestamp: '2026-09-02T23:28:06Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add the cited paper's title to UniProt-seeded evidence notes (#41)
+  details: 31 UniProt-seeded evidence notes on carboxysome.yaml (30) and magnetosome.yaml
+    (1) carried identical per-accession boilerplate, so a reader could not tell three cited
+    PMIDs apart. Each note now leads with the paper's first author, year, title and journal,
+    fetched from PubMed esummary and cached under build/. Only notes byte-identical to the
+    seeded boilerplate were rewritten, so curator-written notes are untouched. Zero notes
+    remain duplicated.

@@ -50,6 +50,59 @@ def post_json(url: str, payload: dict) -> dict:
         return json.loads(response.read())
 
 
+ESUMMARY = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi"
+PUBMED_CACHE = Path(__file__).resolve().parents[2] / "build" / "pubmed_citations.json"
+
+
+def _short_citation(summary: dict) -> str | None:
+    """"Author et al. 2007, 'Title', Journal." from one esummary record.
+
+    Enough for a reader to tell three citations on the same accession apart,
+    which identical boilerplate does not (#41). Returns None rather than a
+    half-citation when the title is missing: a reference the reader cannot
+    identify is better left as it was than dressed up.
+    """
+    title = (summary.get("title") or "").strip().rstrip(".")
+    if not title:
+        return None
+    authors = summary.get("authors") or []
+    who = authors[0].get("name", "").strip() if authors else ""
+    if who and len(authors) > 1:
+        who += " et al."
+    year = (summary.get("pubdate") or "")[:4]
+    journal = (summary.get("source") or "").strip()
+    lead = " ".join(part for part in (who, year) if part).strip()
+    tail = f", {journal}" if journal else ""
+    return f"{lead}, \u2018{title}\u2019{tail}." if lead else f"\u2018{title}\u2019{tail}."
+
+
+def pubmed_citations(pmids: list[str], cache_path: Path | None = None) -> dict[str, str]:
+    """Short citations by PMID, batched through esummary and cached on disk.
+
+    Only PMIDs absent from the cache are fetched, so re-running a seeding script
+    costs nothing and stays usable offline once warmed.
+    """
+    cache_path = cache_path or PUBMED_CACHE
+    cache: dict[str, str] = {}
+    if cache_path.exists():
+        cache = json.loads(cache_path.read_text(encoding="utf-8"))
+
+    wanted = [str(p) for p in pmids]
+    missing = sorted({p for p in wanted if p not in cache})
+    for start in range(0, len(missing), 100):
+        batch = missing[start:start + 100]
+        payload = get_json(f"{ESUMMARY}?db=pubmed&retmode=json&id={','.join(batch)}")
+        result = payload.get("result") or {}
+        for pmid in batch:
+            citation = _short_citation(result.get(pmid) or {})
+            if citation:
+                cache[pmid] = citation
+    if missing:
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        cache_path.write_text(json.dumps(cache, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    return {p: cache[p] for p in wanted if p in cache}
+
+
 def named_taxa(record: dict) -> set[str]:
     """Taxa a record already claims; importers may not silently broaden this set."""
     taxa = {item["taxon_id"] for item in record.get("taxonomic_distribution") or []}
