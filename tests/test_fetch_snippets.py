@@ -360,3 +360,63 @@ def test_the_report_round_trips_through_csv_dictreader(tmp_path, monkeypatch):
     assert [r["reference"] for r in rows] == ["PMID:1"]
     assert rows[0]["scope"] == "whole corpus"
     assert rows[0]["readability"] == "abstract"
+
+
+# --- naming the actual difference, and gating on it (#153, #154) ---
+
+def test_the_reported_difference_names_only_what_actually_differs():
+    """_loose unifies case, quotes and dashes together, so reporting all three
+    every time sends the curator looking for two things that are not there."""
+    assert fs.describe_difference("rod–like", "rod-like shape") == "dash style"
+    assert fs.describe_difference('"MreB"', '“MreB” in the text') == "quote style"
+    assert fs.describe_difference("MREB DEPLETION", "MreB depletion follows") == "letter case"
+
+
+def test_strict_fails_on_a_snippet_that_is_present_but_not_verbatim(tmp_path, monkeypatch, capsys):
+    """Default --check passes it; --strict is the way to enforce verbatim."""
+    doc = {"label": "R", "components": [{"label": "c", "evidence": [
+        {"reference": "PMID:1", "snippet": "rod–like shape"}]}]}
+    monkeypatch.setattr(fs, "load_records", lambda *a, **k: [(fs.Path("r.yaml"), doc)])
+    monkeypatch.setattr(fs, "_load_texts",
+                        lambda refs, cache: {r: (fs.ABSTRACT, "PubMed/1", "the rod-like shape here")
+                                             for r in refs})
+    monkeypatch.setattr(fs, "IDMAP_PATH", tmp_path / "idmap.json")
+
+    monkeypatch.setattr(sys, "argv", ["fetch_snippets", "--verify", "--check"])
+    assert fs.main() == 0
+    assert "not verbatim" in capsys.readouterr().err
+
+    monkeypatch.setattr(sys, "argv", ["fetch_snippets", "--verify", "--check", "--strict"])
+    assert fs.main() == 1
+
+
+def test_strict_does_not_change_what_counts_as_fabricated(tmp_path, monkeypatch):
+    """A quotation genuinely absent must fail with or without --strict."""
+    doc = {"label": "R", "components": [{"label": "c", "evidence": [
+        {"reference": "PMID:1", "snippet": "MreB causes immediate lysis"}]}]}
+    monkeypatch.setattr(fs, "load_records", lambda *a, **k: [(fs.Path("r.yaml"), doc)])
+    monkeypatch.setattr(fs, "_load_texts",
+                        lambda refs, cache: {r: (fs.ABSTRACT, "PubMed/1", "the rod-like shape here")
+                                             for r in refs})
+    monkeypatch.setattr(fs, "IDMAP_PATH", tmp_path / "idmap.json")
+    monkeypatch.setattr(sys, "argv", ["fetch_snippets", "--verify", "--check"])
+    assert fs.main() == 1
+
+
+def test_the_snippet_count_line_names_what_each_number_counts(tmp_path, monkeypatch, capsys):
+    """'(10 of them evidence items)' read as qualifying the 3 quoted snippets
+    when it was computed over all 14 citations."""
+    doc = {"label": "R",
+           "components": [{"label": "c", "evidence": [
+               {"reference": "PMID:1", "snippet": "rod-like shape"}]}],
+           "taxonomic_distribution": [{"taxon_label": "Bacteria", "reference": "PMID:1"}]}
+    monkeypatch.setattr(fs, "load_records", lambda *a, **k: [(fs.Path("r.yaml"), doc)])
+    monkeypatch.setattr(fs, "_load_texts",
+                        lambda refs, cache: {r: (fs.ABSTRACT, "PubMed/1", "the rod-like shape here")
+                                             for r in refs})
+    monkeypatch.setattr(fs, "IDMAP_PATH", tmp_path / "idmap.json")
+    monkeypatch.setattr(sys, "argv", ["fetch_snippets", "--verify"])
+    fs.main()
+    err = capsys.readouterr().err
+    assert "1 of 2 citations carry a snippet; 1 of those are evidence items" in err
+    assert "2 citations = 1 evidence items + 1 bare references" in err

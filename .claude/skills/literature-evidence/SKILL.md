@@ -65,7 +65,9 @@ touches a snippet. It grades what it finds, because "copied imprecisely" and
 | **ABSENT** | not in the source at any tier | the quotation is fabricated or reworded — fix it |
 | not checked | no route answered | re-run when the network is back |
 
-Only ABSENT fails the run. Whitespace differences pass silently: stripping
+Only ABSENT fails the run; add `--strict` to fail on *not verbatim* too, when
+finishing a record. The report names which of case, quote or dash style actually
+differs, not all three. Whitespace differences pass silently: stripping
 `<xref>` tags renders "(Kruse et al., 2005)" with spaces inside the parentheses,
 and that is an extraction artefact, not a difference in the text. Hyphens stay
 significant — "rod-like" and "rodlike" are different words.

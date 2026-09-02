@@ -344,6 +344,26 @@ def _loose(text: str) -> str:
     return _despaced(text).lower()
 
 
+def describe_difference(snippet: str, source: str) -> str:
+    """Which of the loose-tier allowances the match actually needed.
+
+    ``_loose`` unifies case, quotes and dashes together, so reporting all three
+    every time sends the curator looking for two things that are not there.
+    """
+    def unify(text: str, quotes: bool, dashes: bool, case: bool) -> str:
+        mapping = {**(_QUOTES if quotes else {}), **(_DASHES if dashes else {})}
+        for fancy, plain_char in mapping.items():
+            text = text.replace(fancy, plain_char)
+        text = _despaced(text)
+        return text.lower() if case else text
+
+    reasons = [label for label, flags in (("quote style", (True, False, False)),
+                                          ("dash style", (False, True, False)),
+                                          ("letter case", (False, False, True)))
+               if unify(snippet, *flags) in unify(source, *flags)]
+    return " or ".join(reasons) if reasons else "case, quote or dash style"
+
+
 def match_tier(snippet: str, source: str) -> str:
     """The strongest tier at which ``snippet`` occurs in ``source``."""
     if not snippet.strip():
@@ -397,6 +417,9 @@ def main() -> int:
                         help="Default: reports/evidence_readability.tsv, or a scoped "
                              "filename when --record narrows the run.")
     parser.add_argument("--check", action="store_true", help="With --verify, exit 1 on any mismatch.")
+    parser.add_argument("--strict", action="store_true",
+                        help="With --verify --check, also fail on a snippet that is present but "
+                             "not verbatim. Off by default: imprecise is not fabricated.")
     args = parser.parse_args()
 
     # A narrowed run must not overwrite the corpus-wide report with rows that
@@ -448,8 +471,11 @@ def main() -> int:
 
     if args.verify:
         quoted = [i for i in items if i["snippet"]]
-        print(f"{len(quoted)} of {len(items)} citations carry a snippet "
-              f"({in_evidence} of them evidence items)", file=sys.stderr)
+        quoted_evidence = sum(1 for i in quoted if i["in_evidence"])
+        print(f"{len(quoted)} of {len(items)} citations carry a snippet; "
+              f"{quoted_evidence} of those are evidence items "
+              f"({len(items)} citations = {in_evidence} evidence items + "
+              f"{len(items) - in_evidence} bare references)", file=sys.stderr)
         if not quoted:
             return 0
         texts = _load_texts(sorted({i["reference"] for i in quoted}), cache)
@@ -476,8 +502,8 @@ def main() -> int:
                 elif tier == LOOSE:
                     imprecise.append(
                         f"{item['record']}:{item['path']}: present in {source} but not verbatim — "
-                        f"differs in case, quote or dash style. Re-copy the exact characters. "
-                        f"{item['snippet'][:70]}...")
+                        f"differs in {describe_difference(item['snippet'], text)}. Re-copy the "
+                        f"exact characters. {item['snippet'][:70]}...")
         for line in bad:
             print(f"  [ABSENT]      {line}", file=sys.stderr)
         for line in imprecise:
@@ -492,8 +518,10 @@ def main() -> int:
         if unchecked:
             print(f"{len(unchecked)} could not be checked because no route answered — "
                   f"not a finding about the corpus")
-        # Only a quotation absent from text we actually retrieved is a failure.
-        return 1 if bad and args.check else 0
+        # Only a quotation absent from text we actually retrieved is a failure,
+        # unless --strict also holds an imprecise copy to account.
+        failing = bad + (imprecise if args.strict else [])
+        return 1 if failing and args.check else 0
 
     # --audit (default)
     references = sorted({i["reference"] for i in items})
