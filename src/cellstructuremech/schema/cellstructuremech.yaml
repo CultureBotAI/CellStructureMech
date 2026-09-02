@@ -337,9 +337,9 @@ classes:
     is_a: Dataset
     description: >-
       CellStructureMech's domain extension of the shared lightweight Dataset.
-      It retains every shared omics value while adding structural-imaging
-      datasets and their specialist repositories without changing the
-      fleet-wide vendored contract.
+      It retains every shared omics value while adding structural imaging and
+      experimental-structure datasets and their specialist repositories without
+      changing the fleet-wide vendored contract.
     slot_usage:
       dataset_type:
         range: StructuralDatasetTypeEnum
@@ -871,10 +871,10 @@ enums:
 
   StructuralDatasetTypeEnum:
     description: >-
-      Shared dataset types plus CellStructureMech structural imaging. Shared
+      Shared dataset types plus CellStructureMech structural data. Shared
       values are materialized below as well as inherited because the current
       JSON-Schema generator does not expand enum inheritance; the schema test
-      requires this set to remain exactly the shared set plus the local value.
+      requires this set to remain exactly the shared set plus the local values.
     inherits: DatasetTypeEnum
     permissible_values:
       GENOMICS:
@@ -894,6 +894,8 @@ enums:
       OTHER:
       STRUCTURAL_IMAGING:
         description: Three-dimensional or other structural imaging data.
+      EXPERIMENTAL_STRUCTURE:
+        description: Experimentally determined atomic or molecular structure data.
 
   StructuralDatasetRepositoryEnum:
     description: >-
@@ -926,6 +928,8 @@ enums:
       OTHER:
       CRYOET_DATA_PORTAL:
         description: Chan Zuckerberg Initiative CryoET Data Portal.
+      RCSB_PDB:
+        description: RCSB Protein Data Bank experimental structure archive.
 
   StructureCategoryEnum:
     description: Coarse bucket — used for filesystem layout.

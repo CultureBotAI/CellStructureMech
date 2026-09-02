@@ -252,6 +252,15 @@ Source-specific commands (all dry-run unless `--apply` is present):
   method, ground-truth and curator-recommendation status remain explicit. The
   adapter stores only lightweight metadata and landing-page links; it neither
   requests nor hosts tomograms or annotation volumes.
+- `scripts/rcsb_pdb.py` resolves a fixed experimental PDB entry plus every
+  explicitly enumerated polymer entity and biological assembly through the
+  official RCSB Data API. It requires the exact source NCBI taxon to be already
+  asserted by the target record, and retains the primary DOI/PMID, method,
+  resolution, EMDB accession and entity-to-UniProt links. RCSB can expose
+  alternate global, pseudo and local assembly stoichiometries, so the adapter
+  verifies their continued presence but leaves them unflattened at the linked
+  assembly endpoint. It stores no coordinates and does not treat the RCSB
+  molecular render as a micrograph.
 - These image scripts verify downloaded bytes (PMC md5 where supplied, corpus
   SHA-256 always), validate the complete record mutation before touching the
   destination, and confine generated filenames to the record image directory.

@@ -83,3 +83,9 @@ cryoet_data_portal:
   homepage: https://cryoetdataportal.czscience.com/
   script: scripts/cryoet_data_portal.py
   role: datasets
+
+rcsb_pdb:
+  name: RCSB Protein Data Bank
+  homepage: https://www.rcsb.org/
+  script: scripts/rcsb_pdb.py
+  role: datasets
