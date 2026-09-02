@@ -34,9 +34,19 @@ just evidence-verify                     # every snippet occurs in its source
 ```
 
 **`--audit`** classifies every reference: `full_text`, `abstract`, `unreadable`,
-or `not_literature`. It writes `reports/evidence_readability.tsv` and prints the
-one number that matters — claims citing a paper with no reachable text *and* no
-quotation, which nobody can check.
+`not_literature`, or `unchecked`. It writes `reports/evidence_readability.tsv`
+and prints the one number that matters — claims citing a paper with no reachable
+text *and* no quotation, which nobody can check.
+
+`unchecked` means no route answered — a network fault, not a fact about the
+paper. It is excluded from that count and never fails `--verify`, because a
+question we failed to ask is not an answer. Identities resolved during an outage
+are not cached, so the next run retries them.
+
+Two populations are counted and named apart: **citations** (every field carrying
+a `reference`, including taxon notes, canonical examples, causal-graph edges and
+images) and **evidence items** (entries in an `evidence` list, the population
+#133 counts). Both are checked; only the labels differ.
 
 **`--suggest`** prints candidate sentences ranked against the claim. **It never
 picks.** Choosing which sentence supports a claim is the judgement the evidence
@@ -62,7 +72,8 @@ touches a snippet.
    such properties were removed in #91 for resting on titles alone.
 4. **Unreadable is a finding, not a dead end.** Say so in `notes` and leave
    `snippet` empty rather than paraphrasing a title into something that reads
-   like knowledge of the paper's contents.
+   like knowledge of the paper's contents. `unchecked` is *not* that finding —
+   re-run it when the network is back before concluding anything.
 5. **A quotation contradicting the record outranks the record.** File it; do not
    quietly pick a different sentence.
 

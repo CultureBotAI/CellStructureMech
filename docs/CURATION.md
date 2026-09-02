@@ -83,7 +83,9 @@ to match — never one without the other.
   source text, use `notes` to paraphrase what the source establishes. A
   fabricated quotation is worse than none.
 - **`just evidence-verify` checks every snippet against its own source** and
-  fails on any that is not there. It needs the network, so it is not part of
+  fails on any that is not there. A reference no route could reach is reported
+  as unchecked and does not fail the run — a network fault is not a finding
+  about the corpus. It needs the network, so it is not part of
   `just qc`; run it before committing evidence. `just evidence-audit` reports
   which references are readable at all, and `just evidence-suggest <record>`
   offers candidate sentences to choose from — it never chooses. See the

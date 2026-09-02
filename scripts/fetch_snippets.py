@@ -74,6 +74,8 @@ UNREADABLE, ABSTRACT, FULL_TEXT = "unreadable", "abstract", "full_text"
 # resolve is, and check_curies.py already answers it. Counting them among the
 # unreadable papers would inflate the one number this audit exists to report.
 NOT_LITERATURE = "not_literature"
+# No route answered. Neither readable nor unreadable — simply not established.
+UNCHECKED = "unchecked"
 CROSSREF = "https://api.crossref.org/works/"
 DATACITE = "https://api.datacite.org/dois/"
 # Crossref types whose text a reader could expect to reach.
@@ -81,14 +83,28 @@ LITERATURE_TYPES = {"journal-article", "book-chapter", "proceedings-article",
                     "posted-content", "book", "monograph", "reference-entry", "report"}
 
 
+# Returned as the status when no answer was obtained at all. A server that says
+# 404 has told us something; a socket that never opened has not, and the two must
+# never reach the same conclusion — that conflation is the whole reason this
+# script exists.
+TRANSPORT_FAILURE = -1
+RETRIES = 3
+
+
 def _get(url: str, timeout: float = 45.0) -> tuple[int, str]:
-    try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r:
-            return r.status, r.read().decode("utf-8", errors="replace")
-    except urllib.error.HTTPError as exc:
-        return exc.code, ""
-    except Exception:  # noqa: BLE001 — a transport failure is not a verdict
-        return 0, ""
+    """(status, body). ``TRANSPORT_FAILURE`` means no answer, not a negative one."""
+    for attempt in range(RETRIES):
+        try:
+            request = urllib.request.Request(url, headers=UA)
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return response.status, response.read().decode("utf-8", errors="replace")
+        except urllib.error.HTTPError as exc:
+            return exc.code, ""  # the server answered; that is a verdict
+        except Exception:  # noqa: BLE001 — transport; worth another try
+            if attempt == RETRIES - 1:
+                return TRANSPORT_FAILURE, ""
+            time.sleep(1.5 * (attempt + 1))
+    return TRANSPORT_FAILURE, ""
 
 
 def plain(xml: str) -> str:
@@ -127,10 +143,14 @@ def is_literature_shape(reference: str) -> bool:
 def classify_doi(doi: str) -> str:
     """Literature or deposited data, per the registration agency's own type."""
     status, body = _get(CROSSREF + urllib.parse.quote(doi))
+    if status == TRANSPORT_FAILURE:
+        return UNCHECKED
     if status == 200:
         kind = (json.loads(body).get("message") or {}).get("type", "")
         return "literature" if kind in LITERATURE_TYPES else NOT_LITERATURE
     status, _ = _get(DATACITE + urllib.parse.quote(doi))
+    if status == TRANSPORT_FAILURE:
+        return UNCHECKED
     return NOT_LITERATURE if status == 200 else "literature"
 
 
@@ -142,12 +162,14 @@ def resolve_identity(reference: str) -> dict:
     recorded as absent (#133). Europe PMC indexes both and is tried as well.
     """
     kind, _, value = reference.partition(":")
-    out = {"reference": reference, "pmid": None, "pmcid": None, "doi": value if kind == "DOI" else None}
+    out = {"reference": reference, "pmid": None, "pmcid": None,
+           "doi": value if kind == "DOI" else None, "unanswered": False}
     if kind == "PMID":
         out["pmid"] = value
 
     if out["doi"]:
         status, body = _get(IDCONV + "?format=json&ids=" + urllib.parse.quote(out["doi"]))
+        out["unanswered"] = out["unanswered"] or status == TRANSPORT_FAILURE
         if status == 200:
             record = (json.loads(body).get("records") or [{}])[0]
             out["pmid"] = out["pmid"] or record.get("pmid")
@@ -157,6 +179,7 @@ def resolve_identity(reference: str) -> dict:
         query = f"DOI:{out['doi']}" if out["doi"] else f"EXT_ID:{out['pmid']}"
         status, body = _get(f"{EUROPE_PMC}/search?format=json&pageSize=1&query="
                             + urllib.parse.quote(query))
+        out["unanswered"] = out["unanswered"] or status == TRANSPORT_FAILURE
         if status == 200:
             hits = json.loads(body).get("resultList", {}).get("result", [])
             if hits:
@@ -173,27 +196,38 @@ def fetch_text(identity: dict) -> tuple[str, str, str]:
 
     Europe PMC reports ``inEPMC: Y`` for PMC5433867 while its fullTextXML
     returns 404, so availability is whatever an actual request returns.
+
+    A route that never answered yields ``UNCHECKED``, not ``UNREADABLE``. The
+    difference is the point of the script: a 404 is a verdict about the paper, a
+    dead socket is a verdict about the network, and only the first belongs in a
+    count of claims nobody can check.
     """
+    if identity.get("not_literature"):
+        return NOT_LITERATURE, "", ""
+
+    unanswered = bool(identity.get("unanswered"))
+
     pmcid = identity.get("pmcid")
     if pmcid:
         status, body = _get(f"{EUTILS}/efetch.fcgi?db=pmc&id={pmcid}&retmode=xml")
+        unanswered = unanswered or status == TRANSPORT_FAILURE
         if status == 200 and len(body) > 4000:
             return FULL_TEXT, f"PMC/{pmcid}", plain(body)
         status, body = _get(f"{EUROPE_PMC}/{pmcid}/fullTextXML")
+        unanswered = unanswered or status == TRANSPORT_FAILURE
         if status == 200 and len(body) > 4000:
             return FULL_TEXT, f"EuropePMC/{pmcid}", plain(body)
-
-    if identity.get("not_literature"):
-        return NOT_LITERATURE, "", ""
 
     pmid = identity.get("pmid")
     if pmid:
         status, body = _get(f"{EUTILS}/efetch.fcgi?db=pubmed&id={pmid}&retmode=xml")
+        unanswered = unanswered or status == TRANSPORT_FAILURE
         if status == 200:
             match = re.search(r"<Abstract>(.*?)</Abstract>", body, re.S)
             if match:
                 return ABSTRACT, f"PubMed/{pmid}", plain(match.group(1))
-    return UNREADABLE, "", ""
+
+    return (UNCHECKED if unanswered else UNREADABLE), "", ""
 
 
 # ------------------------------------------------------------------ evidence
@@ -208,7 +242,11 @@ def evidence_items(records) -> list[dict]:
             if "reference" in node and isinstance(node["reference"], str):
                 found.append({"record": record, "path": path, "claim": claim,
                               "reference": node["reference"], "snippet": node.get("snippet"),
-                              "notes": node.get("notes", "")})
+                              "notes": node.get("notes", ""),
+                              # An `evidence` list entry is an evidence item; a bare
+                              # `reference` on a taxon note or image is a citation but
+                              # not one. #133 counts the former, this tool both.
+                              "in_evidence": "evidence[" in f"{path}."})
             label = node.get("label") or node.get("trait_label") or node.get("prompt") or claim
             for key, value in node.items():
                 walk(value, f"{path}.{key}" if path else key, record, label)
@@ -299,8 +337,15 @@ def _load_texts(references: list[str], cache: dict) -> dict[str, tuple[str, str,
             else:
                 identity = resolve_identity(reference)
                 if identity["doi"] and not (identity["pmid"] or identity["pmcid"]):
-                    identity["not_literature"] = classify_doi(identity["doi"]) == NOT_LITERATURE
-        cache[reference] = identity
+                    kind = classify_doi(identity["doi"])
+                    if kind == UNCHECKED:
+                        identity["unanswered"] = True
+                    else:
+                        identity["not_literature"] = kind == NOT_LITERATURE
+        # A resolution nothing answered would otherwise be cached forever, leaving
+        # the paper permanently unreadable with nothing to say so.
+        if not identity.get("unanswered"):
+            cache[reference] = identity
         readability, source, text = fetch_text(identity)
         texts[reference] = (readability, source, text)
         time.sleep(0.4)  # NCBI asks for a modest rate without an API key
@@ -315,9 +360,18 @@ def main() -> int:
     mode.add_argument("--suggest", action="store_true", help="Candidate sentences for one record's claims.")
     mode.add_argument("--verify", action="store_true", help="Every snippet must occur in its source.")
     parser.add_argument("--record", type=Path, help="Restrict to one record (required by --suggest).")
-    parser.add_argument("--report", type=Path, default=REPO_ROOT / "reports" / "evidence_readability.tsv")
+    parser.add_argument("--report", type=Path, default=None,
+                        help="Default: reports/evidence_readability.tsv, or a scoped "
+                             "filename when --record narrows the run.")
     parser.add_argument("--check", action="store_true", help="With --verify, exit 1 on any mismatch.")
     args = parser.parse_args()
+
+    # A narrowed run must not overwrite the corpus-wide report with rows that
+    # look complete and are not (#148).
+    default_report = REPO_ROOT / "reports" / (
+        f"evidence_readability.{args.record.stem}.tsv" if args.record
+        else "evidence_readability.tsv")
+    args.report = args.report or default_report
 
     records = load_records()
     if not records:
@@ -331,8 +385,10 @@ def main() -> int:
 
     items = evidence_items(records)
     if not items:
-        print("no evidence items found — the collector is not seeing the fields it should", file=sys.stderr)
+        print("no citations found — the collector is not seeing the fields it should",
+              file=sys.stderr)
         return 2
+    in_evidence = sum(1 for i in items if i["in_evidence"])
 
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     cache = json.loads(IDMAP_PATH.read_text()) if IDMAP_PATH.exists() else {}
@@ -359,15 +415,20 @@ def main() -> int:
 
     if args.verify:
         quoted = [i for i in items if i["snippet"]]
-        print(f"{len(quoted)} of {len(items)} evidence items carry a snippet", file=sys.stderr)
+        print(f"{len(quoted)} of {len(items)} citations carry a snippet "
+              f"({in_evidence} of them evidence items)", file=sys.stderr)
         if not quoted:
             return 0
         texts = _load_texts(sorted({i["reference"] for i in quoted}), cache)
         IDMAP_PATH.write_text(json.dumps(cache, indent=1, sort_keys=True) + "\n")
-        bad = []
+        bad: list[str] = []
+        unchecked: list[str] = []
         for item in quoted:
             readability, source, text = texts[item["reference"]]
-            if readability == UNREADABLE:
+            if readability == UNCHECKED:
+                unchecked.append(f"{item['record']}:{item['path']}: {item['reference']} — no route "
+                                 f"answered, so this quotation was not checked either way")
+            elif readability == UNREADABLE:
                 bad.append(f"{item['record']}:{item['path']}: {item['reference']} cannot be read, so its "
                            f"quotation cannot be checked")
             elif readability == NOT_LITERATURE:
@@ -378,7 +439,14 @@ def main() -> int:
                            f"{item['snippet'][:70]}...")
         for line in bad:
             print(f"  {line}", file=sys.stderr)
-        print(f"\n{len(quoted) - len(bad)} of {len(quoted)} quotations verified against the source")
+        for line in unchecked:
+            print(f"  [not checked] {line}", file=sys.stderr)
+        verified = len(quoted) - len(bad) - len(unchecked)
+        print(f"\n{verified} of {len(quoted)} quotations verified against the source")
+        if unchecked:
+            print(f"{len(unchecked)} could not be checked because no route answered — "
+                  f"not a finding about the corpus")
+        # Only a quotation absent from text we actually retrieved is a failure.
         return 1 if bad and args.check else 0
 
     # --audit (default)
@@ -394,21 +462,28 @@ def main() -> int:
     uncheckable = 0
     with args.report.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.writer(fh, delimiter="\t", lineterminator="\n")
+        scope = args.record.name if args.record else "whole corpus"
+        writer.writerow([f"# scope: {scope}"])
         writer.writerow(["reference", "pmid", "pmcid", "readability", "source",
-                         "claims", "quoted", "checked_on"])
+                         "citations", "evidence_items", "quoted", "checked_on"])
         for reference in references:
             readability, source, _ = texts[reference]
             identity = cache.get(reference, {})
             claims = by_reference[reference]
             quoted = sum(1 for c in claims if c["snippet"])
             counts[readability] += 1
-            if readability == UNREADABLE and quoted == 0:  # NOT_LITERATURE excluded on purpose
+            # NOT_LITERATURE and UNCHECKED are excluded on purpose: one is not a
+            # paper, the other is a question we failed to ask.
+            if readability == UNREADABLE and quoted == 0:
                 uncheckable += len(claims)
             writer.writerow([reference, identity.get("pmid") or "", identity.get("pmcid") or "",
-                             readability, source, len(claims), quoted, date.today().isoformat()])
+                             readability, source, len(claims),
+                             sum(1 for c in claims if c["in_evidence"]), quoted,
+                             date.today().isoformat()])
 
-    print(f"\n{len(references)} distinct references across {len(items)} evidence items")
-    for readability in (FULL_TEXT, ABSTRACT, UNREADABLE, NOT_LITERATURE):
+    print(f"\n{len(references)} distinct references across {len(items)} citations, "
+          f"of which {in_evidence} are evidence items")
+    for readability in (FULL_TEXT, ABSTRACT, UNREADABLE, NOT_LITERATURE, UNCHECKED):
         print(f"  {readability:14s} {counts[readability]:3d}")
     print(f"\n{uncheckable} claim(s) cite a paper with no reachable text and carry no quotation — "
           f"nobody can check those")

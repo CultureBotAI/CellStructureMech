@@ -187,3 +187,104 @@ def test_the_jats_abstract_is_quotable_even_though_it_sits_in_front_matter():
     assert "MreB both senses and changes cell shape." in text
     assert "0092-8674" not in text
     assert "Rotation was measured." in text
+
+
+# --- a failure to ask is not an answer (#146) ---
+
+class _Transport:
+    """Stand-in for _get: replays a scripted status per URL substring."""
+
+    def __init__(self, script):
+        self.script = script
+        self.calls = []
+
+    def __call__(self, url, timeout=45.0):
+        self.calls.append(url)
+        for fragment, result in self.script.items():
+            if fragment in url:
+                return result
+        return (fs.TRANSPORT_FAILURE, "")
+
+
+def test_a_transport_failure_is_not_the_verdict_unreadable(monkeypatch):
+    """A dead socket says nothing about the paper. Reporting `unreadable` would
+    indict the corpus for a local network fault -- demonstrated against
+    PMC5846203, whose full text is known good."""
+    monkeypatch.setattr(fs, "_get", _Transport({}))
+    identity = {"pmid": "29522748", "pmcid": "PMC5846203", "unanswered": False}
+    readability, source, text = fs.fetch_text(identity)
+    assert readability == fs.UNCHECKED
+    assert (source, text) == ("", "")
+
+
+def test_a_real_404_still_means_unreadable(monkeypatch):
+    """The server answered. That is a verdict and must not be softened."""
+    monkeypatch.setattr(fs, "_get", _Transport({"efetch": (404, ""), "fullTextXML": (404, "")}))
+    assert fs.fetch_text({"pmid": "1", "pmcid": "PMC1"})[0] == fs.UNREADABLE
+
+
+def test_an_unanswered_identity_is_never_cached(monkeypatch):
+    """Caching a failed resolution leaves the paper permanently unreadable with
+    nothing to say why -- it survives until someone deletes build/ by hand."""
+    monkeypatch.setattr(fs, "_get", _Transport({}))
+    monkeypatch.setattr(fs.time, "sleep", lambda *_: None)
+    cache = {}
+    fs._load_texts(["DOI:10.1016/j.cell.2018.02.050"], cache)
+    assert cache == {}
+
+
+def test_an_answered_identity_is_cached(monkeypatch):
+    """The guard must not disable caching altogether."""
+    monkeypatch.setattr(fs, "_get", _Transport({
+        "idconv": (200, '{"records":[{"pmid":"29522748","pmcid":"PMC5846203"}]}'),
+        "efetch.fcgi?db=pmc": (200, "<body><p>" + "x" * 5000 + "</p></body>"),
+    }))
+    monkeypatch.setattr(fs.time, "sleep", lambda *_: None)
+    cache = {}
+    fs._load_texts(["DOI:10.1016/j.cell.2018.02.050"], cache)
+    assert cache["DOI:10.1016/j.cell.2018.02.050"]["pmcid"] == "PMC5846203"
+
+
+def test_transport_failures_are_retried_before_giving_up(monkeypatch):
+    calls = {"n": 0}
+
+    def flaky(url, timeout=45.0):
+        calls["n"] += 1
+        raise OSError("connection refused")
+
+    monkeypatch.setattr(fs.urllib.request, "urlopen", flaky)
+    monkeypatch.setattr(fs.time, "sleep", lambda *_: None)
+    assert fs._get("https://example.invalid/x") == (fs.TRANSPORT_FAILURE, "")
+    assert calls["n"] == fs.RETRIES
+
+
+def test_an_http_error_is_not_retried(monkeypatch):
+    """The server already answered; retrying wastes a request and a rate limit."""
+    calls = {"n": 0}
+
+    def refused(url, timeout=45.0):
+        calls["n"] += 1
+        raise fs.urllib.error.HTTPError(url, 404, "Not Found", {}, None)
+
+    monkeypatch.setattr(fs.urllib.request, "urlopen", refused)
+    assert fs._get("https://example.invalid/x") == (404, "")
+    assert calls["n"] == 1
+
+
+def test_classify_doi_reports_unchecked_rather_than_guessing(monkeypatch):
+    """Silence from Crossref and DataCite must not become 'literature'."""
+    monkeypatch.setattr(fs, "_get", _Transport({}))
+    assert fs.classify_doi("10.1/x") == fs.UNCHECKED
+
+
+# --- the two populations are named apart (#147) ---
+
+def test_evidence_items_are_distinguished_from_bare_citations():
+    """#133 counts entries in `evidence` lists; this tool also sees a bare
+    `reference` on a taxon note or image. Reporting one number for both made a
+    changed definition look like a changed count."""
+    doc = {"label": "R",
+           "associated_traits": [{"trait_label": "t", "evidence": [{"reference": "PMID:1"}]}],
+           "taxonomic_distribution": [{"taxon_label": "Bacteria", "reference": "PMID:2"}]}
+    items = {i["reference"]: i["in_evidence"] for i in fs.evidence_items([(fs.Path("r.yaml"), doc)])}
+    assert items == {"PMID:1": True, "PMID:2": False}
