@@ -57,6 +57,38 @@ def record_fields() -> set[str]:
     return set(schema["classes"]["CellStructureRecord"]["attributes"])
 
 
+# A CURATE_ONLY source informs curation; it never becomes the identity of
+# anything, because identity is what a licence would have to cover. The prefix
+# each such source would use if it did.
+CURATE_ONLY_PREFIXES = {"subtiwiki": "subtiwiki", "ecocyc": "ecocyc", "biocyc": "biocyc"}
+
+
+def _curate_only_identities(rows: list[dict]) -> list[str]:
+    """Refuse a CURATE_ONLY source appearing as identity in the corpus.
+
+    The promise of CURATE_ONLY is that only third-party identifiers are stored.
+    A record identifier, component grounding or xref carrying the source's own
+    prefix would be that source's content under another name.
+    """
+    watched = {CURATE_ONLY_PREFIXES[r["source_id"]] for r in rows
+               if r["use"] in {"CURATE_ONLY", "REFERENCE"} and r["source_id"] in CURATE_ONLY_PREFIXES}
+    if not watched:
+        return []
+    found: list[str] = []
+    for path in sorted((REPO_ROOT / "data" / "structures").rglob("*.yaml")):
+        doc = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        for field in ("identifier", "parent_structures", "part_of", "has_part", "xrefs"):
+            for value in ([doc.get(field)] if isinstance(doc.get(field), str) else doc.get(field) or []):
+                if isinstance(value, str) and value.split(":", 1)[0] in watched:
+                    found.append(f"{path.name}: {field} uses a CURATE_ONLY source as identity: {value}")
+        for component in doc.get("components") or []:
+            grounding = component.get("grounding")
+            if isinstance(grounding, str) and grounding.split(":", 1)[0] in watched:
+                found.append(f"{path.name}: {component['component_id']} grounds to a "
+                             f"CURATE_ONLY source: {grounding}")
+    return found
+
+
 def main() -> int:
     if not QUEUE_PATH.exists():
         print(f"missing {QUEUE_PATH}", file=sys.stderr)
@@ -104,8 +136,13 @@ def main() -> int:
                                 f"not ADOPTED")
             elif not (REPO_ROOT / row["script"]).is_file():
                 problems.append(f"{sid}: script {row['script']} does not exist")
-            if row["redistribution"] == "UNVERIFIED":
-                problems.append(f"{sid}: ADOPTED with unverified redistribution terms")
+            # Unverified terms block adoption only for a use that copies the
+            # source's content. LINK_ONLY, CURATE_ONLY and REFERENCE copy
+            # nothing, so a source whose licence page does not exist can still
+            # be used that way — and recording UNVERIFIED is more honest than
+            # guessing RESTRICTED (#126).
+            if row["redistribution"] == "UNVERIFIED" and row["use"] == "SEED":
+                problems.append(f"{sid}: SEED with unverified redistribution terms")
 
         if row["use"] == "SEED" and row["status"] == "ADOPTED" and row["redistribution"] in HOST_FORBIDDEN:
             problems.append(f"{sid}: SEED under {row['redistribution']} terms — content would be hosted "
@@ -113,6 +150,8 @@ def main() -> int:
         nc_ok = {"LINK_ONLY", "CURATE_ONLY", "REFERENCE"}
         if row["redistribution"] == "NONCOMMERCIAL" and row["use"] not in nc_ok:
             problems.append(f"{sid}: NONCOMMERCIAL terms allow {sorted(nc_ok)}, not {row['use']}")
+
+    problems.extend(_curate_only_identities(rows))
 
     adopted = {r["source_id"] for r in rows if r["status"] == "ADOPTED"}
     for source in sorted(pipeline_sources - adopted):

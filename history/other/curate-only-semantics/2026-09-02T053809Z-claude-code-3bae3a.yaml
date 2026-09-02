@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/source_queue.tsv
+  slug: curate-only-semantics
+session:
+  id: 2026-09-02T053809Z-claude-code-3bae3a
+  timestamp: '2026-09-02T05:38:09Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/126
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - schema
+  summary: Say what CURATE_ONLY permits, and check the half of it that is checkable
+  details: 'The source queue defined CURATE_ONLY as nothing is copied, while subtiwiki sat
+    at ADOPTED CURATE_ONLY RESTRICTED and its adapter had written seventeen protein examples
+    into the flagellum record. The queue documented a rule the corpus did not follow. Reading
+    the adapter settled which side was wrong: it reads one exact category and exact gene endpoints,
+    stores only UniProt accessions verified independently in UniProtKB plus a link back, and
+    never descriptions, sequences, phenotypes, interaction text or a bulk export. The ingestion
+    was principled and the definition was too coarse. The distinction it was missing is between
+    a source''s expression, which needs a licence, and a fact it asserts about a third-party
+    identifier, which the identifier''s own authority is the place to verify. Two consequences
+    followed. RESTRICTED was a guess, since SubtiWiki states terms nowhere on its site, bundle,
+    Swagger spec or paper, so the row now says UNVERIFIED and the checker refuses unverified
+    terms only for SEED, the one use that copies content. And nothing checked the promise,
+    because the checker fired only on SEED; a new check refuses a CURATE_ONLY source appearing
+    as identity anywhere in the corpus, which is the mechanically checkable half of what CURATE_ONLY
+    means.'
