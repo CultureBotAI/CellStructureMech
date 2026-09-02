@@ -71,3 +71,9 @@ subtiwiki:
   homepage: https://www.subtiwiki.uni-goettingen.de/v5/
   script: scripts/subtiwiki.py
   role: components.protein_examples (curate-only identifiers and links)
+
+interpro:
+  name: InterPro protein families
+  homepage: https://www.ebi.ac.uk/interpro/
+  script: scripts/interpro_groundings.py
+  role: components.grounding and reviewed label-only decisions

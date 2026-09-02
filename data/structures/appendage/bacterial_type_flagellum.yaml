@@ -46,6 +46,7 @@ components:
     - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/hag
       notes: SubtiWiki category 387 lists hag among B. subtilis flagellar proteins
         and links UniProtKB:P02968.
+  grounding: InterPro:IPR001492
 - component_id: hook
   label: hook protein (FlgE)
   component_type: PROTEIN
@@ -623,5 +624,13 @@ curation_history:
     at SubtiWiki, then reviewed status, gene identity and taxon were checked independently
     at UniProtKB; FliY C-ring and MotP/MotS stator placements were independently literature-backed.
     No SubtiWiki prose, sequences or bulk export was copied.
+- timestamp: '2026-09-02T05:45:19Z'
+  curator: interpro_groundings
+  action: GROUND_COMPONENTS
+  changes: Applied exact integrated InterPro family groundings to flagellin; recorded
+    label-only decisions for none. The fixed reviewed allow-list required exact component
+    identity, reviewed UniProt examples, type=family entries, and unchanged family
+    consensus across curated scope examples.
+  llm_assisted: true
 xrefs:
 - uniprot.location:SL-0307

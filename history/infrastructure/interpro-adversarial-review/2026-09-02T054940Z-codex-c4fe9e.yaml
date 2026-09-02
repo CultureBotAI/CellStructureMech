@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/interpro_groundings.py
+  slug: interpro-adversarial-review
+session:
+  id: 2026-09-02T054940Z-codex-c4fe9e
+  timestamp: '2026-09-02T05:49:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/130
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - adapter
+  - tests
+  summary: Harden InterPro adapter after adversarial review
+  details: 'Adversarial review found two fail-closed defects and opened #130 and #131. The
+    adapter now compares complete UniProtKB CURIEs instead of tolerating a missing prefix,
+    and refuses label-only review when a component already carries any grounding instead of
+    deleting it. Added offline regression tests for both paths and added an exact-label contract
+    for the broad IPR004992 family cited in a decline rationale.'

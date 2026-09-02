@@ -82,6 +82,11 @@ components:
     - reference: PMID:31048338
       notes: ECO:0000269 experimental evidence for the carboxysome localisation of
         Q31RK3, as cited by UniProt.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: IPR046380 exactly covers the reviewed CcmK examples, but alpha-carboxysome
+    CsoS1 proteins lack it. Their only shared family, IPR050575, is the generic bacterial
+    microcompartment shell family and also covers non-BMC-H proteins; no exact family
+    denotes the combined CcmK / CsoS1 component.
 - component_id: bmc_t
   label: BMC-T shell pseudohexamers (CcmO, CcmP)
   component_type: PROTEIN
@@ -177,6 +182,11 @@ components:
     - reference: PMID:31048338
       notes: ECO:0000269 experimental evidence for the carboxysome localisation of
         Q03512, as cited by UniProt.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: IPR046387 exactly covers CcmL, whereas CsoS4A and CsoS4B have the
+    distinct IPR014076 and IPR014077 families. Their shared IPR004992 entry also includes
+    the ethanolamine-utilization shell protein EutN, so no exact family denotes the
+    combined carboxysome BMC-P component.
 - component_id: rubisco
   label: ribulose-1,5-bisphosphate carboxylase/oxygenase (form I)
   component_type: PROTEIN_COMPLEX
@@ -262,6 +272,10 @@ components:
     - reference: PMID:22928045
       notes: ECO:0000269 experimental evidence for the carboxysome localisation of
         P27134, as cited by UniProt.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The beta-carboxysome CcaA example has IPR045066, while alpha-carboxysome
+    CsoSCA has IPR014074; they share no integrated InterPro family, so neither lineage-specific
+    family denotes the combined component.
 - component_id: scaffold
   label: cargo scaffold (CcmM / CsoS2)
   component_type: PROTEIN
@@ -294,6 +308,10 @@ components:
     - reference: PMID:28616951
       notes: ECO:0000269 experimental evidence for the carboxysome localisation of
         Q03513, as cited by UniProt.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The beta-carboxysome scaffold CcmM has IPR017156 and the alpha-carboxysome
+    scaffold CsoS2 has IPR020990. They share no integrated InterPro family, so neither
+    lineage-specific entry denotes the combined component.
 - component_id: assembly_adaptor
   label: assembly adaptor CcmN
   component_type: PROTEIN
@@ -304,8 +322,8 @@ components:
   role: 'Bridges cargo to shell: its N-terminus binds the CcmM scaffold, which itself
     binds RuBisCO, while its C-terminal 18 residues bind the shell protein CcmK2.'
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: UniProt's only InterPro entry for CcmN is the LpxA-like trimer
-    superfamily (IPR011004), a fold-level term that does not denote this family.
+  grounding_notes: InterPro assigns only the fold-level LpxA-like homologous superfamily
+    IPR011004 to CcmN; no integrated family denotes this component.
   evidence:
   - reference: PMID:22461622
     notes: UniProt cites this paper (P46204) for the CcmN N-terminus interacting with
@@ -342,7 +360,8 @@ components:
     with the McdA ATPase, sets spacing, size and inheritance; without the system carboxysomes
     aggregate rather than failing to form.
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: UniProt lists no InterPro entry for McdB.
+  grounding_notes: InterPro assigns only the McdB C-terminal domain IPR063627 to this
+    example; no integrated family denotes the complete McdB positioning component.
   evidence:
   - reference: PMID:30520729
     notes: UniProt cites this paper (Q8GJM6) for McdA and McdB together mediating
@@ -714,6 +733,15 @@ curation_history:
   changes: component_role became required (#77) so the constituent/machinery distinction
     is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
     only where the protein acts on the already-assembled structure.
+  llm_assisted: true
+- timestamp: '2026-09-02T05:45:20Z'
+  curator: interpro_groundings
+  action: GROUND_COMPONENTS
+  changes: Applied exact integrated InterPro family groundings to none; recorded label-only
+    decisions for bmc_h, bmc_p, carbonic_anhydrase, scaffold, assembly_adaptor, positioning.
+    The fixed reviewed allow-list required exact component identity, reviewed UniProt
+    examples, type=family entries, and unchanged family consensus across curated scope
+    examples.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0034

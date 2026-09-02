@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/source_queue.tsv
+  slug: interpro-source-ingestion
+session:
+  id: 2026-09-02T054631Z-codex-178ae3
+  timestamp: '2026-09-02T05:46:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/122
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - source_queue
+  - adapter
+  - components
+  - documentation
+  summary: Adopt exact InterPro family grounding ingestion
+  details: Adopted the CC0 InterPro source through a dry-run-by-default reviewed allow-list.
+    The adapter resolves exact UniProt accessions, validates reviewed protein provenance,
+    filters strictly to integrated family entries, and requires an unchanged consensus across
+    curated scope examples. Applied IPR001492 to flagellin; recorded fail-closed label-only
+    decisions for combined alpha/beta-carboxysome components and MamK/MamJ; refreshed the
+    McdB decision after InterPro added a domain but still no family. Added offline contract
+    tests for positive canaries, negative controls, type filtering, source drift, ambiguity,
+    and PROTEIN-only proposals.
