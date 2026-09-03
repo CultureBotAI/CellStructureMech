@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/ribosome.yaml
+  slug: ribosome
+session:
+  id: 2026-09-03T002951Z-claude-code-1f62dd
+  timestamp: '2026-09-03T00:29:51Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add a real cryo-EM micrograph of E. coli 70S ribosomes (#35)
+  details: PMC9968351 Fig. 1a, CC BY 4.0, licence and md5 read from the PMC OA S3 metadata,
+    sha256 verified against the committed file. The existing PDB 8RD8 rendering is kept as
+    the issue asks. The figure is multi-panel and only panel a is imaging data; the caption
+    says so. Rendering all images through one macro also fixed additional images being hosted
+    without their attribution being displayed.
