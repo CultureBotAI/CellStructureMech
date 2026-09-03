@@ -115,3 +115,147 @@ curation_history:
   changes: Drafted from the cited reviews; every GO term, taxon id and DOI resolved
     live before writing. Not yet human-reviewed.
   llm_assisted: true
+- timestamp: '2026-09-03T00:15:13Z'
+  curator: claude
+  action: ADD_CAUSAL_GRAPH
+  changes: '#163: added the array signalling graph. The record''s two existing sources
+    could not support it -- Briegel et al. 2009 is a cryo-ET architecture paper and
+    the Annual Review is abstract-only -- so Parkinson, Hazelbauer & Falke 2015 (PMC4417406)
+    was added, whose full text is open. Six edges, each with a verbatim quotation.
+    The CheA-to-CheY phosphotransfer step is not drawn because the source does not
+    state it quotably; a discussion records that.'
+  llm_assisted: true
+- timestamp: '2026-09-03T00:19:39Z'
+  curator: claude
+  action: CORRECT_NODE_LABEL
+  changes: 'CI''s id-label gate refused the array node: it was labelled ''chemosensory
+    array'' while its grounding GO:0098561 is ''methyl accepting chemotaxis protein
+    complex''. The informal name came from the source''s prose. Relabelled to the
+    canonical term rather than added to conf/id_label_targets.yaml, because there
+    is no curation reason to differ -- the exception list is for residuals a curator
+    has accepted, not for making a gate quiet.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: chemoreceptor_array_signalling
+  title: Chemoeffector binding is amplified by the array and read out as phospho-CheY
+  description: 'The array''s function is gain: binding at one receptor reaches ~35
+    kinases, and the cluster''s output is a phospho-CheY signal the flagellar motor
+    reads. The edges stop where the cited source stops -- the CheA-to-CheY phosphotransfer
+    step itself is not stated quotably here, and motor switching is a trait rather
+    than part of this structure.'
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: chemoeffector
+    label: attractant chemoeffector
+    node_type: CHEMICAL
+  - node_id: mcp
+    label: methyl-accepting chemotaxis protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: mcp
+  - node_id: chew
+    label: CheW coupling protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: chew
+  - node_id: chea
+    label: CheA histidine autokinase
+    node_type: GENE_OR_PROTEIN
+    component_ref: chea
+  - node_id: array
+    label: methyl accepting chemotaxis protein complex
+    node_type: STRUCTURE
+    grounding: GO:0098561
+    description: The assembled array. The cited source calls it the chemosensory array
+      or receptor cluster; the node carries the GO label its grounding defines.
+  - node_id: autophosphorylation
+    label: CheA autophosphorylation
+    node_type: MOLECULAR_FUNCTION
+  - node_id: phospho_chey
+    label: phospho-CheY
+    node_type: GENE_OR_PROTEIN
+  - node_id: motor_reversal
+    label: flagellar motor reversal to clockwise rotation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: chew
+    predicate: couples
+    object: chea
+    description: CheW is what puts the kinase under receptor control.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2015.03.003
+      snippet: Chemoreceptors form stable core signaling complexes with two cytoplasmic
+        proteins, CheA, a histidine autokinase, and CheW, which couples CheA to receptor
+        control.
+      notes: Verbatim from the open-access full text (PMC4417406).
+  - subject: chemoeffector
+    predicate: regulates
+    object: chea
+    description: One binding event reaches tens of kinases; this is the array's gain.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2015.03.003
+      snippet: In the chemosensory array, attractant binding to a single receptor
+        can regulate ~35 CheA kinase proteins [ 82 ].
+      notes: Verbatim. The ~35:1 ratio is the quantitative statement of why the array
+        is a structure rather than a collection of receptors.
+  - subject: mcp
+    predicate: modulates
+    object: autophosphorylation
+    description: Receptor conformation sets kinase activity over a 100-fold range.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2015.03.003
+      snippet: MCP signaling complexes modulate CheA autophosphorylation activity
+        over more than a 100-fold range, most likely through changes in receptor conformation
+        or dynamic motions that allosterically regulate P1-P4' interactions and/or
+        the kinase active site.
+      notes: Verbatim. The authors hedge the mechanism with 'most likely'; the 100-fold
+        modulation itself is reported without hedge.
+  - subject: array
+    predicate: amplifies
+    object: autophosphorylation
+    description: Cooperativity converts a small concentration change into a large
+      kinase activity change.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2015.03.003
+      snippet: These receptors operate in cooperative arrays to produce large changes
+        in the activity of a signaling kinase CheA in response to small changes in
+        chemoeffector concentration.
+      notes: Verbatim from PMC4417406.
+  - subject: array
+    predicate: produces
+    object: phospho_chey
+    description: The cluster's output signal, delivered in pulses.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2015.03.003
+      snippet: These observations imply that a cell’s receptor cluster produces phospho-CheY
+        signals in a pulsatile manner, consistent with essentially all-ON or all-OFF
+        array behavior.
+      notes: Verbatim. Stated as an implication of the observations, not a direct
+        measurement, and the edge is no stronger than that. The CheA-to-CheY phosphotransfer
+        step is not stated quotably in this source, so it is not drawn as an edge.
+  - subject: phospho_chey
+    predicate: signals
+    object: motor_reversal
+    description: Phospho-CheY diffuses to the motor and is the clockwise signal.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2015.03.003
+      snippet: The motor that was closer to the cell’s receptor cluster reversed first,
+        followed by the second motor with a time lag determined by its distance from
+        the first motor and consistent with the intracellular diffusion rate of phospho-CheY,
+        the CW rotational signal.
+      notes: Verbatim. Motor reversal is included as the readout of this structure's
+        output, not as part of the structure; the motility phenotype itself is the
+        METPO:1000702 trait link.
+discussions:
+- discussion_id: phosphotransfer_step_unquotable
+  prompt: The CheA-to-CheY phosphotransfer step is missing from the signalling graph
+    because Parkinson et al. 2015 does not state it in a quotable sentence. Should
+    a primary source for the phosphotransfer be added, or is the array's output adequately
+    described by 'the receptor cluster produces phospho-CheY signals'?
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#chemoreceptor_array_signalling
+  rationale: 'The graph deliberately stops where the source stops. Drawing the step
+    from background knowledge would be the defect #161 records.'
+  posed_by: claude
+  posed_date: '2026-09-02'
