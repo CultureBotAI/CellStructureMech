@@ -353,23 +353,58 @@ CONTROLS: dict[str, tuple[str, str]] = {
 DATACITE_CONTROL = "DOI:10.22002/D1.1355"
 
 
-def self_test() -> list[str]:
-    """Return a list of failures; empty means every resolver is trustworthy."""
-    failures = []
+SELF_TEST_RETRIES = 3
+
+
+def _control_verdicts(resolver, good: str, bad: str) -> dict:
+    """Verdicts for one control pair, retrying while the authority is unreachable.
+
+    An unreachable host is not an answer, and retrying is how a blip is told
+    apart from an outage (#173).
+    """
+    verdicts = {}
+    for attempt in range(SELF_TEST_RETRIES):
+        verdicts = resolver([good, bad])
+        states = {verdicts.get(good, ("MISSING",))[0], verdicts.get(bad, ("MISSING",))[0]}
+        if "UNREACHABLE" not in states:
+            return verdicts
+        if attempt < SELF_TEST_RETRIES - 1:
+            time.sleep(2.0 * (attempt + 1))
+    return verdicts
+
+
+def self_test() -> tuple[list[str], list[str]]:
+    """(failures, unreachable). Empty failures means every reachable resolver is sound.
+
+    A control that could not be run is reported separately from one that ran and
+    was wrong. Calling an unreachable authority "the resolver would pass
+    anything" sends a reader after a bug that does not exist, and fails a
+    blocking gate on an upstream blip -- which teaches people to re-run gates
+    instead of reading them.
+    """
+    failures: list[str] = []
+    unreachable: list[str] = []
     for prefix, (good, bad) in sorted(CONTROLS.items()):
         resolver = RESOLVERS.get(prefix) or resolve_ols
-        verdicts = resolver([good, bad])
-        if verdicts.get(good, ("", ""))[0] != "OK":
-            failures.append(f"{prefix}: known-good {good} did not resolve "
-                            f"({verdicts.get(good, ('MISSING', ''))[0]}) — the resolver is broken, "
-                            f"not the corpus")
-        if verdicts.get(bad, ("", ""))[0] != "NOT_FOUND":
-            failures.append(f"{prefix}: known-bad {bad} was not rejected "
-                            f"({verdicts.get(bad, ('MISSING', ''))[0]}) — the resolver would pass anything")
-    dc = resolve_doi([DATACITE_CONTROL]).get(DATACITE_CONTROL, ("MISSING", ""))
-    if dc[0] != "OK":
-        failures.append(f"DOI: DataCite control {DATACITE_CONTROL} did not resolve ({dc[0]})")
-    return failures
+        verdicts = _control_verdicts(resolver, good, bad)
+        good_state = verdicts.get(good, ("MISSING", ""))[0]
+        bad_state = verdicts.get(bad, ("MISSING", ""))[0]
+        if "UNREACHABLE" in (good_state, bad_state):
+            unreachable.append(f"{prefix}: the issuing authority was unreachable after "
+                               f"{SELF_TEST_RETRIES} attempts, so this resolver was not exercised")
+            continue
+        if good_state != "OK":
+            failures.append(f"{prefix}: known-good {good} did not resolve ({good_state}) — "
+                            f"the resolver is broken, not the corpus")
+        if bad_state != "NOT_FOUND":
+            failures.append(f"{prefix}: known-bad {bad} was not rejected ({bad_state}) — "
+                            f"the resolver would pass anything")
+    dc = resolve_doi([DATACITE_CONTROL]).get(DATACITE_CONTROL, ("MISSING", ""))[0]
+    if dc == "UNREACHABLE":
+        unreachable.append(f"DOI: DataCite was unreachable, so {DATACITE_CONTROL} was not exercised")
+    elif dc != "OK":
+        failures.append(f"DOI: DataCite control {DATACITE_CONTROL} did not resolve ({dc})")
+    return failures, unreachable
 
 
 # ------------------------------------------------------------------ cache
@@ -417,15 +452,24 @@ def main() -> int:
     args = parser.parse_args()
 
     if args.self_test or (args.check and not args.offline):
-        failures = self_test()
+        failures, unreachable = self_test()
+        for line in unreachable:
+            print(f"  [not exercised] {line}", file=sys.stderr)
         if failures:
             print("resolver control FAILED — verdicts about the corpus are not trustworthy:",
                   file=sys.stderr)
             for line in failures:
                 print(f"  {line}", file=sys.stderr)
             return 2
-        print("resolver control: every resolver accepts a known id and rejects a fabricated one",
-              file=sys.stderr)
+        if unreachable:
+            # An outage is not evidence that a resolver is wrong, and failing a
+            # blocking gate on one teaches people to re-run gates unread (#173).
+            print(f"resolver control: {len(unreachable)} resolver(s) could not be exercised "
+                  f"because their authority was unreachable; the rest accept a known id and "
+                  f"reject a fabricated one", file=sys.stderr)
+        else:
+            print("resolver control: every resolver accepts a known id and rejects a fabricated one",
+                  file=sys.stderr)
         if args.self_test:
             return 0
 
