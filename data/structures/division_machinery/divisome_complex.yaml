@@ -214,6 +214,14 @@ curation_history:
     vitro EM studies ( 93 , 183 )'' -- inventing reference numbers a reader could
     have chased. `just evidence-verify` refused all four before they could be committed.'
   llm_assisted: true
+- timestamp: '2026-09-03T00:10:07Z'
+  curator: claude
+  action: CORRECT_UNIT
+  changes: 'Self-review: the treadmilling speed carried unit UO:0000018 (nanometer)
+    for a value meaning nanometres per second, with the correction only in prose context.
+    The unit is dropped and the rate carried in value, so nothing false is asserted
+    in a structured field.'
+  llm_assisted: true
 part_of:
 - GO:0032153
 discussions:
@@ -254,19 +262,18 @@ physical_properties:
       on previous calculations and in vitro EM studies ( 93 , 183 ).
     notes: Verbatim; the same sentence gives filament length and diameter.
 - property: TRANSLOCATION_SPEED
-  value: 25-30
-  unit: UO:0000018
+  value: 25-30 nm/s
   context: apparent directional movement of FtsZ clusters at midcell in E. coli and
-    B. subtilis; the unit is nanometres per second
+    B. subtilis
   reference: DOI:10.1146/annurev-biophys-121219-081703
   evidence:
   - reference: DOI:10.1146/annurev-biophys-121219-081703
     snippet: In both E. coli and B. subtilis , it was also discovered that FtsZ clusters
       in the Z-ring exhibited apparent directional movement with a speed of approximately
       25–30 nm/s at midcell ( 20 , 239 ) ( Figure 5d ).
-    notes: Verbatim from PMC8610174. Recorded as a speed even though `unit` can only
-      express nanometres; the per-second denominator is stated in context because
-      no UO rate term is admitted by the pattern.
+    notes: Verbatim from PMC8610174. The rate is carried in `value` because UO has
+      no nanometre-per-second term, and tagging a speed with UO:0000018 (nanometer)
+      would state the wrong dimension.
 - property: THICKNESS
   value: ~13
   unit: UO:0000018

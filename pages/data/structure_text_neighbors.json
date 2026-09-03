@@ -35,7 +35,7 @@
         {
           "identifier": "GO:1990586",
           "label": "divisome complex",
-          "cosine_similarity": 0.69837921
+          "cosine_similarity": 0.69822812
         }
       ]
     },
@@ -66,7 +66,7 @@
         {
           "identifier": "GO:1990586",
           "label": "divisome complex",
-          "cosine_similarity": 0.59549161
+          "cosine_similarity": 0.59808279
         }
       ]
     },
@@ -97,7 +97,7 @@
         {
           "identifier": "GO:1990586",
           "label": "divisome complex",
-          "cosine_similarity": 0.69312176
+          "cosine_similarity": 0.69558611
         }
       ]
     },
@@ -108,27 +108,27 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.72163771
+          "cosine_similarity": 0.72624241
         },
         {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.69837921
-        },
-        {
-          "identifier": "GO:0030257",
-          "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.69593197
+          "cosine_similarity": 0.69822812
         },
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.69312176
+          "cosine_similarity": 0.69558611
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.69402267
         },
         {
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.6754977
+          "cosine_similarity": 0.67367131
         }
       ]
     },
@@ -149,7 +149,7 @@
         {
           "identifier": "GO:1990586",
           "label": "divisome complex",
-          "cosine_similarity": 0.72163771
+          "cosine_similarity": 0.72624241
         },
         {
           "identifier": "GO:0045259",
@@ -185,7 +185,7 @@
         {
           "identifier": "GO:1990586",
           "label": "divisome complex",
-          "cosine_similarity": 0.6754977
+          "cosine_similarity": 0.67367131
         },
         {
           "identifier": "GO:0098561",
@@ -464,7 +464,7 @@
         {
           "identifier": "GO:1990586",
           "label": "divisome complex",
-          "cosine_similarity": 0.61545451
+          "cosine_similarity": 0.61840397
         },
         {
           "identifier": "GO:0098561",
@@ -560,9 +560,9 @@
           "cosine_similarity": 0.69967707
         },
         {
-          "identifier": "GO:1990586",
-          "label": "divisome complex",
-          "cosine_similarity": 0.69593197
+          "identifier": "GO:0140737",
+          "label": "encapsulin nanocompartment",
+          "cosine_similarity": 0.69434081
         }
       ]
     },
