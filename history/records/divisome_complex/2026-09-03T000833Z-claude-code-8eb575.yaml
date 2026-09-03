@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/division_machinery/divisome_complex.yaml
+  slug: divisome_complex
+session:
+  id: 2026-09-03T000833Z-claude-code-8eb575
+  timestamp: '2026-09-03T00:08:33Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add physical properties with verbatim evidence (#65)
+  details: 'Quantities read from the open-access full text of a paper already cited on the
+    record, each carrying a verbatim snippet via the evidence slot added to PhysicalProperty
+    (#165). #91 had removed properties of this kind for resting on Crossref titles alone.
+    Four snippets were initially completed from inference where a probe had truncated its
+    own output — ''within the target cell'' for ''within the target eukaryotic cells'', and
+    ''in vitro studies ( 111 , 117 )'' for ''in vitro EM studies ( 93 , 183 )'' — and just
+    evidence-verify refused all four before commit.'

@@ -194,6 +194,26 @@ curation_history:
   changes: '#91: removed filament and ring dimensions attributed to a review known
     only by its title.'
   llm_assisted: true
+- timestamp: '2026-09-03T00:03:05Z'
+  curator: claude
+  action: ADD_PHYSICAL_PROPERTIES
+  changes: '#65: added 4 physical properties, each carrying a verbatim quotation from
+    the open-access full text of a paper already cited on the record. #91 had removed
+    properties of this kind because they rested on papers known only by their Crossref
+    title; these were read. The injectisome needle length #65 asks for is deliberately
+    absent: the source says the needle ''protrudes several nanometers'' and gives
+    no figure. Uses the evidence slot added to PhysicalProperty in #165.'
+  llm_assisted: true
+- timestamp: '2026-09-03T00:05:12Z'
+  curator: claude
+  action: CORRECT_SNIPPET
+  changes: 'Corrected 2 snippet(s) that had been completed from inference rather than
+    read. They were copied from a probe whose own output was truncated for display,
+    and the cut-off endings were filled in: ''within the target cell'' for ''within
+    the target eukaryotic cells'', and ''in vitro studies ( 111 , 117 )'' for ''in
+    vitro EM studies ( 93 , 183 )'' -- inventing reference numbers a reader could
+    have chased. `just evidence-verify` refused all four before they could be committed.'
+  llm_assisted: true
 part_of:
 - GO:0032153
 discussions:
@@ -210,3 +230,54 @@ discussions:
     so they need the paper, not a recollection.
   posed_by: claude
   posed_date: '2026-08-31'
+physical_properties:
+- property: LENGTH
+  value: 40-160
+  unit: UO:0000018
+  context: individual FtsZ protofilaments at midcell, by cryo-electron tomography
+  reference: DOI:10.1146/annurev-biophys-121219-081703
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-121219-081703
+    snippet: The filaments were approximately 40–160 nm long and approximately 5 nm
+      in diameter, consistent with the dimensions of single FtsZ protofilaments based
+      on previous calculations and in vitro EM studies ( 93 , 183 ).
+    notes: Verbatim from the open-access full text (PMC8610174).
+- property: DIAMETER
+  value: ~5
+  unit: UO:0000018
+  context: single FtsZ protofilament
+  reference: DOI:10.1146/annurev-biophys-121219-081703
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-121219-081703
+    snippet: The filaments were approximately 40–160 nm long and approximately 5 nm
+      in diameter, consistent with the dimensions of single FtsZ protofilaments based
+      on previous calculations and in vitro EM studies ( 93 , 183 ).
+    notes: Verbatim; the same sentence gives filament length and diameter.
+- property: TRANSLOCATION_SPEED
+  value: 25-30
+  unit: UO:0000018
+  context: apparent directional movement of FtsZ clusters at midcell in E. coli and
+    B. subtilis; the unit is nanometres per second
+  reference: DOI:10.1146/annurev-biophys-121219-081703
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-121219-081703
+    snippet: In both E. coli and B. subtilis , it was also discovered that FtsZ clusters
+      in the Z-ring exhibited apparent directional movement with a speed of approximately
+      25–30 nm/s at midcell ( 20 , 239 ) ( Figure 5d ).
+    notes: Verbatim from PMC8610174. Recorded as a speed even though `unit` can only
+      express nanometres; the per-second denominator is stated in context because
+      no UO rate term is admitted by the pattern.
+- property: THICKNESS
+  value: ~13
+  unit: UO:0000018
+  context: distance from the inner membrane to arc-like FtsZ filaments at the constriction
+    site
+  reference: DOI:10.1146/annurev-biophys-121219-081703
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-121219-081703
+    snippet: It was observed that individual, arc-like FtsZ filaments were positioned
+      approximately 13 nm underneath the inner membrane at the site of midcell constriction
+      ( 116 ) ( Figure 4c ).
+    notes: Verbatim from PMC8610174. This is the filament-to-membrane spacing, not
+      the radial thickness of the Z-ring, which the review reports as unchanged even
+      under FtsZ overexpression.

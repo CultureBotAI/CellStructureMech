@@ -645,6 +645,14 @@ classes:
         required: true
         range: string
         pattern: "^(?:[A-Za-z][A-Za-z0-9._-]*:\\S+|https?://\\S+)$"
+      evidence:
+        description: >-
+          Optional quotation supporting the value. A measured quantity is the
+          most checkable claim a record makes -- the number is in the paper or
+          it is not -- and this is where that check lives. Quoted entries come
+          under `just evidence-verify` like any other snippet (#165).
+        multivalued: true
+        range: Evidence
 
   StructureImage:
     description: >-
@@ -1058,6 +1066,10 @@ enums:
       COPY_NUMBER_PER_CELL:
       SEDIMENTATION_COEFFICIENT:
       ROTATION_SPEED:
+      TRANSLOCATION_SPEED:
+        description: >-
+          Speed at which a structure or its subunits move through or along
+          something, as distinct from turning in place (FtsZ treadmilling).
       OTHER:
 
   ImageSourceEnum:
