@@ -32,6 +32,17 @@ components:
   - reference: DOI:10.1146/annurev.micro.57.030502.090832
     notes: Macnab 2003 reviews filament assembly from FliC exported through the central
       channel and capped by FliD.
+  - reference: DOI:10.3390/biom11020186
+    snippet: Around 20,000 subunits of flagellin assemble to form the flagellar filament,
+      which can grow up to a 20 µm in length [ 25 , 75 ].
+    notes: 'Verbatim support for the ~20,000 subunits per filament in this component''s
+      stoichiometry, which #7 asked to be checked against Macnab 2003. It is not in
+      that review''s reachable text (#171); this open-access source states it.'
+  - reference: DOI:10.1038/s41598-019-51440-1
+    snippet: Flagellar filaments of almost all bacteria contain 11 protofilaments,
+      with the exception of Campylobacter jejuni , which only has seven 5 , 6 .
+    notes: 'Verbatim support for the 11 protofilaments in the same stoichiometry field,
+      and it bounds the claim: Campylobacter jejuni has seven, so 11 is not universal.'
   protein_examples:
   - uniprot_id: UniProtKB:P02968
     protein_label: Flagellin
@@ -437,12 +448,31 @@ physical_properties:
   value: 5-20
   unit: UO:0000017
   context: filament
-  reference: DOI:10.1146/annurev.micro.57.030502.090832
+  reference: DOI:10.3390/biom11020186
+  evidence:
+  - reference: DOI:10.3390/biom11020186
+    snippet: Around 20,000 subunits of flagellin assemble to form the flagellar filament,
+      which can grow up to a 20 µm in length [ 25 , 75 ].
+    notes: Verbatim from the open-access full text (PMC7911332). The source supports
+      the upper bound of the recorded 5-20 um range; the lower bound is not stated
+      here and remains unsourced. Replaces Macnab 2003, which is abstract-only and
+      does not contain the figure (#171).
 - property: ROTATION_SPEED
   value: ~100-300
   unit: UO:0000092
-  context: Escherichia coli motor under light load
-  reference: DOI:10.1146/annurev.biochem.72.121801.161737
+  context: Escherichia coli motor; ~125 Hz at high load with the filament attached,
+    300 Hz or faster at low load
+  reference: DOI:10.1128/jb.00353-25
+  evidence:
+  - reference: DOI:10.1128/jb.00353-25
+    snippet: When attached to the flagellar filament (high load), E. coli motors spin
+      at ~125 Hz; when the filament is absent (low load), motors rotate at 300 Hz
+      or faster ( 27 , 28 ).
+    notes: 'Verbatim from the open-access full text (PMC12713396). This corrects the
+      record: the context previously attributed the whole 100-300 Hz range to light
+      load, but the lower figure is the high-load value and only the upper is low-load.
+      Replaces the Berg 2003 review, which is abstract-only and does not contain the
+      numbers (#171).'
 images:
 - image_id: commons_ecoli_flagella_tem
   file: escherichia_coli_flagella_tem.png
@@ -631,6 +661,18 @@ curation_history:
     label-only decisions for none. The fixed reviewed allow-list required exact component
     identity, reviewed UniProt examples, type=family entries, and unchanged family
     consensus across curated scope examples.
+  llm_assisted: true
+- timestamp: '2026-09-03T00:37:47Z'
+  curator: claude
+  action: RESOURCE_CLAIMS
+  changes: '#7 item 5 and #171: the ~20,000 flagellin figure, the 11 protofilaments,
+    the filament length and the motor rotation speed all cited reviews that are abstract-only
+    and do not contain the numbers. Each is now sourced to open-access full text with
+    a verbatim quotation. Two corrections fell out of reading: the rotation-speed
+    context wrongly attributed the whole 100-300 Hz range to light load, when ~125
+    Hz is the high-load figure; and the 11-protofilament claim is not universal, since
+    Campylobacter jejuni has seven. The filament DIAMETER remains unsourced -- no
+    open-access source stating it was found -- and is left for the human review track.'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0307
