@@ -30,7 +30,7 @@ does not exist — SubtiWiki states terms nowhere on its site, bundle, Swagger
 or paper — can still be used that way, and saying `UNVERIFIED` is more honest
 than guessing `RESTRICTED`.
 
-| `redistribution` | `CC0_OK` · `ATTRIBUTION` (CC BY) · `SHARE_ALIKE` · `NONCOMMERCIAL` · `RESTRICTED` · `UNVERIFIED` | What the source's own licence page says. `SEED` is refused under the last three. |
+| `redistribution` | `CC0_OK` · `ATTRIBUTION` (attribution or licence notice required, e.g. CC BY / Apache 2.0) · `SHARE_ALIKE` · `NONCOMMERCIAL` · `RESTRICTED` · `UNVERIFIED` | What the source's own licence page says. `SEED` is refused under the last three. |
 | `taxon_link` | `YES` · `PARTIAL` · `NO` · `UNVERIFIED` | Does an item carry an NCBI Taxonomy id? |
 | `item_id` | `DOI` · `CURIE` · `ACCESSION` · `URL` · `NONE` | The per-item citable identifier. |
 | `access` | `BULK` · `API` · `BOTH` · `MANUAL` · `UNVERIFIED` | |
