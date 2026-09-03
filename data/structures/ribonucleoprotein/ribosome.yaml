@@ -185,6 +185,32 @@ images:
     + structured data P180 -> Wikidata P685) on 2026-08-30; file sha1 verified against
     imageinfo. Source credit: https://www.rcsb.org/structure/8rd8'
   reference: DOI:10.1038/s41586-024-07041-8
+- image_id: pmc_pmc9968351_fig1
+  file: pmc9968351_fig1.jpg
+  file_sha256: 188376e7e1772481ff14e9c40be9456ae43ddddd55ef7d80c00d558a56ee4935
+  source: PMC
+  source_accession: PMC9968351.1 Fig1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9968351/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9968351.1/41467_2023_36742_Fig1_HTML.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Simon A. Fromm, Kate M. O’Connor, Michael Purdy, Pramod R. Bhatt, Gary
+    Loughran, John F. Atkins, Ahmad Jomaa, Simone Mattei; CC BY, via PubMed Central
+  modality: CRYO_EM
+  caption: 'Panel a: two raw cryo-EM micrographs of E. coli 70S ribosome particles
+    on holey carbon grids, with and without a 2 nm continuous carbon layer, 50 nm
+    scale bar. Panels b-d of the same figure are a processing flowchart, an FSC resolution
+    curve and angular-distribution plots, not imaging data.'
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  reference: DOI:10.1038/s41467-023-36742-3
+  retrieved_on: '2026-09-02'
+  notes: 'Fig. 1 from article version PMC9968351.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Multi-panel: only panel a is a micrograph, and
+    the caption says so rather than letting the figure read as one. Retained over
+    a single-panel alternative because the micrograph shows individual particles at
+    a stated scale, which is what #35 asked for.'
 evidence:
 - reference: DOI:10.1126/science.1060089
   notes: Yusupov et al. 2001 — 5.5 Å structure of the complete T. thermophilus 70S
@@ -368,6 +394,20 @@ curation_history:
   changes: component_role became required (#77) so the constituent/machinery distinction
     is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
     only where the protein acts on the already-assembled structure.
+  llm_assisted: true
+- timestamp: '2026-09-03T00:27:03Z'
+  curator: pmc_oa
+  action: ADD_IMAGE
+  changes: Added PMC9968351.1 Fig1; version, CC licence, JATS figure identity and
+    media md5 verified through the PMC OA S3 dataset.
+- timestamp: '2026-09-03T00:27:41Z'
+  curator: claude
+  action: ADD_MICROGRAPH
+  changes: '#35: added a real cryo-EM micrograph of E. coli 70S ribosomes (PMC9968351
+    Fig. 1a, CC BY 4.0) alongside the existing PDB 8RD8 rendering, which is kept as
+    the issue asks. The figure is multi-panel and only panel a is imaging data; the
+    caption states that instead of letting the composite read as a micrograph. Taxon
+    NCBITaxon:83333 was already a canonical example on the record.'
   llm_assisted: true
 complex_compositions:
 - composition_id: complex_portal_cpx_3802
