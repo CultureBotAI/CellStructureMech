@@ -80,9 +80,13 @@ REVIEWS = (
         (ExpectedFamily("P75937", "IPR020013", "Flagellar hook-basal body protein, FlgE/F/G"),),
         ("IPR020013",),
         grounding_notes=(
-            "FlgE's only integrated family, IPR020013, spans FlgE, FlgF and FlgG -- the hook "
-            "and two of the rod proteins. It is broader than this component, and a broader "
-            "term is not adopted as identity. No InterPro family denotes the hook alone."
+            "IPR012835 'Flagellar hook FlgE' denotes this component exactly, but InterPro does "
+            "not apply it to the reviewed FlgE entries of either organism this record names -- "
+            "neither P75937 (E. coli K-12) nor P0A1J1 (S. Typhimurium LT2) matches it. Their "
+            "only family is the parent IPR020013, which spans FlgE, FlgF and FlgG, so it also "
+            "covers two rod proteins and is broader than the hook. Declined rather than adopting "
+            "a broader term as identity. Revisit if an organism whose FlgE does match IPR012835 "
+            "is added to the record."
         ),
     ),
     Review(
