@@ -1,7 +1,10 @@
 {% extends "base.html" %}
-{% block title %}Browse · CellStructureMech{% endblock %}
+{% block title %}{{ page_title | default("Browse") }} · CellStructureMech{% endblock %}
 {% block content %}
-<h1>All records</h1>
+<h1>{{ heading | default("All records") }}</h1>
+{% if lede %}
+<p class="lede">{{ lede }}</p>
+{% endif %}
 <table>
 <thead><tr><th>Label</th><th>Identifier</th><th>Category</th><th>Kind</th><th>Status</th></tr></thead>
 <tbody>
