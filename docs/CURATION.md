@@ -290,6 +290,27 @@ Source-specific commands (all dry-run unless `--apply` is present):
   SHA-256 always), validate the complete record mutation before touching the
   destination, and confine generated filenames to the record image directory.
 
+## Discussions
+
+A discussion is provenance, not a task description. It records a question that
+was raised, who raised it, and why it matters — so the fields age differently:
+
+- **`prompt` may be narrowed.** When part of a question is answered, rewrite it
+  to name only what is still open. A prompt that overstates what is missing
+  sends a curator after finished work.
+- **`rationale` is appended to, never replaced.** It answers "why this matters",
+  which usually means recording what went wrong. Two discussions carried the
+  fact that specific numbers had been fabricated from paper titles and removed
+  in #91; overwriting that with a note about recent progress destroyed the
+  memory that stops the mistake recurring (#179).
+- **`notes` holds current state** — what has changed since, what is done, what
+  a narrowing left behind.
+- **`posed_date` never moves.** It says how long the question has been open.
+  Narrowing a question does not re-pose it (#180). `resolved_date` is the only
+  date an edit sets, and only when `status` becomes `RESOLVED`.
+- **Issue links belong in `evidence`**, not only in prose — the schema says so
+  explicitly. Prose mentions cannot be enumerated or followed (#181).
+
 ## Text embedding map
 
 The text map is a derived discovery aid, not curated evidence. Its stable input
