@@ -69,6 +69,14 @@ components:
   evidence:
   - reference: DOI:10.1146/annurev.micro.57.030502.090832
     notes: Hook length is controlled by FliK during assembly.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: IPR012835 'Flagellar hook FlgE' denotes this component exactly,
+    but InterPro does not apply it to the reviewed FlgE entries of either organism
+    this record names -- neither P75937 (E. coli K-12) nor P0A1J1 (S. Typhimurium
+    LT2) matches it. Their only family is the parent IPR020013, which spans FlgE,
+    FlgF and FlgG, so it also covers two rod proteins and is broader than the hook.
+    Declined rather than adopting a broader term as identity. Revisit if an organism
+    whose FlgE does match IPR012835 is added to the record.
 - component_id: ms_ring
   label: MS ring (FliF)
   component_type: PROTEIN_COMPLEX
@@ -673,6 +681,22 @@ curation_history:
     Hz is the high-load figure; and the 11-protofilament claim is not universal, since
     Campylobacter jejuni has seven. The filament DIAMETER remains unsourced -- no
     open-access source stating it was found -- and is left for the human review track.'
+  llm_assisted: true
+- timestamp: '2026-09-03T07:37:09Z'
+  curator: interpro_groundings
+  action: GROUND_COMPONENTS
+  changes: Applied exact integrated InterPro family groundings to none; recorded label-only
+    decisions for hook. The fixed reviewed allow-list required exact component identity,
+    reviewed UniProt examples, type=family entries, and unchanged family consensus
+    across curated scope examples.
+  llm_assisted: true
+- timestamp: '2026-09-03T07:41:11Z'
+  curator: interpro_groundings
+  action: GROUND_COMPONENTS
+  changes: Applied exact integrated InterPro family groundings to none; recorded label-only
+    decisions for hook. The fixed reviewed allow-list required exact component identity,
+    reviewed UniProt examples, type=family entries, and unchanged family consensus
+    across curated scope examples.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0307

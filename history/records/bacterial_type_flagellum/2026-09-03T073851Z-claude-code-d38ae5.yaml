@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum.yaml
+  slug: bacterial_type_flagellum
+session:
+  id: 2026-09-03T073851Z-claude-code-d38ae5
+  timestamp: '2026-09-03T07:38:51Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Record the InterPro decision for the flagellar hook (#174)
+  details: 'FlgE''s only integrated InterPro family, IPR020013, spans FlgE, FlgF and FlgG
+    - the hook and two rod proteins - so it is broader than the component and was declined
+    rather than adopted as identity. hook is the only ungrounded flagellum component that
+    is a PROTEIN; the other six are PROTEIN_COMPLEX, which the adapter refuses by design because
+    an InterPro family denotes a protein. Split out as #182 and #183.'
