@@ -222,22 +222,34 @@ curation_history:
     The unit is dropped and the rate carried in value, so nothing false is asserted
     in a structured field.'
   llm_assisted: true
+- timestamp: '2026-09-03T06:43:42Z'
+  curator: claude
+  action: NARROW_DISCUSSION
+  changes: 'Open-issue review: the ring_dimensions_unsourced discussion asked for
+    two quantities and #65 sourced one of them, so its prompt overstated what is missing
+    and would have sent a curator after finished work. Narrowed to the half that is
+    still open.'
+  llm_assisted: true
 part_of:
 - GO:0032153
 discussions:
 - discussion_id: ring_dimensions_unsourced
-  prompt: Add FtsZ filament length and Z-ring thickness from a source that has been
-    read.
+  prompt: Z-ring radial thickness is still unsourced. FtsZ protofilament length (40-160
+    nm) and diameter (~5 nm) now carry verbatim snippets, but the review reports the
+    Z-ring's radial thickness only negatively -- it did not increase even when FtsZ
+    was overexpressed -- and gives no figure. Find a source that states it, or record
+    that the quantity is not established.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#ftsz
-  rationale: A first pass added filament length and ring thickness attributed to McQuillen
-    & Xiao 2020 without reading it; both were removed (#91). Super-resolution measurements
-    of the ring are exactly the kind of figure that varies by method and organism,
-    so they need the paper, not a recollection.
+  rationale: 'Narrowed after #65. The THICKNESS property on this record is the ~13
+    nm filament-to-membrane spacing at the constriction site, which is a different
+    quantity from the ring''s radial thickness; its evidence notes say so. Leaving
+    the original prompt would send a curator after the filament dimensions, which
+    are done.'
   posed_by: claude
-  posed_date: '2026-08-31'
+  posed_date: '2026-09-02'
 physical_properties:
 - property: LENGTH
   value: 40-160
