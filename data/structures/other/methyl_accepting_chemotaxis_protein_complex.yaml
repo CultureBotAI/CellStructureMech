@@ -125,6 +125,16 @@ curation_history:
     The CheA-to-CheY phosphotransfer step is not drawn because the source does not
     state it quotably; a discussion records that.'
   llm_assisted: true
+- timestamp: '2026-09-03T00:19:39Z'
+  curator: claude
+  action: CORRECT_NODE_LABEL
+  changes: 'CI''s id-label gate refused the array node: it was labelled ''chemosensory
+    array'' while its grounding GO:0098561 is ''methyl accepting chemotaxis protein
+    complex''. The informal name came from the source''s prose. Relabelled to the
+    canonical term rather than added to conf/id_label_targets.yaml, because there
+    is no curation reason to differ -- the exception list is for residuals a curator
+    has accepted, not for making a gate quiet.'
+  llm_assisted: true
 causal_graphs:
 - graph_id: chemoreceptor_array_signalling
   title: Chemoeffector binding is amplified by the array and read out as phospho-CheY
@@ -152,9 +162,11 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     component_ref: chea
   - node_id: array
-    label: chemosensory array
+    label: methyl accepting chemotaxis protein complex
     node_type: STRUCTURE
     grounding: GO:0098561
+    description: The assembled array. The cited source calls it the chemosensory array
+      or receptor cluster; the node carries the GO label its grounding defines.
   - node_id: autophosphorylation
     label: CheA autophosphorylation
     node_type: MOLECULAR_FUNCTION
