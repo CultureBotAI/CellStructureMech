@@ -147,3 +147,57 @@ def test_a_documented_identifier_shape_is_not_treated_as_a_citation(tmp_path, mo
     (tmp_path / "research" / "n.md").write_text(f"Entries carry a DOI of the form `{template}`.\n")
     monkeypatch.setattr(cc, "REPO_ROOT", tmp_path)
     assert cc.collect_prose(("research/*.md",))["DOI"] == set()
+
+
+# --- an unreachable authority is not a broken resolver (#173) ---
+
+def test_an_unreachable_control_is_reported_separately_not_as_a_failure(monkeypatch):
+    """CI failed a blocking gate with 'the resolver would pass anything' when the
+    OBO PURL host was briefly unreachable. Nothing was asked, so nothing was
+    learned -- and a gate that fails on an upstream blip teaches people to re-run
+    gates instead of reading them."""
+    monkeypatch.setattr(cc, "SELF_TEST_RETRIES", 1)
+    monkeypatch.setattr(cc, "RESOLVERS",
+                        dict.fromkeys(cc.CONTROLS, lambda ids: {i: ("UNREACHABLE", "") for i in ids}))
+    monkeypatch.setattr(cc, "resolve_doi", lambda ids: {i: ("UNREACHABLE", "") for i in ids})
+    failures, unreachable = cc.self_test()
+    assert failures == []
+    assert len(unreachable) == len(cc.CONTROLS) + 1
+    assert "not exercised" not in " ".join(failures)
+
+
+def test_a_resolver_that_accepts_a_fabricated_id_still_fails(monkeypatch):
+    """The loosening must not have reached the thing the control exists for."""
+    monkeypatch.setattr(cc, "SELF_TEST_RETRIES", 1)
+    monkeypatch.setattr(cc, "RESOLVERS",
+                        dict.fromkeys(cc.CONTROLS, lambda ids: {i: ("OK", "") for i in ids}))
+    monkeypatch.setattr(cc, "resolve_doi", lambda ids: {i: ("OK", "") for i in ids})
+    failures, unreachable = cc.self_test()
+    assert unreachable == []
+    assert failures and all("would pass anything" in f for f in failures)
+
+
+def test_a_broken_known_good_still_fails(monkeypatch):
+    monkeypatch.setattr(cc, "SELF_TEST_RETRIES", 1)
+    monkeypatch.setattr(cc, "RESOLVERS",
+                        dict.fromkeys(cc.CONTROLS, lambda ids: {i: ("NOT_FOUND", "") for i in ids}))
+    monkeypatch.setattr(cc, "resolve_doi", lambda ids: {i: ("OK", "") for i in ids})
+    failures, _ = cc.self_test()
+    assert failures and any("resolver is broken" in f for f in failures)
+
+
+def test_an_unreachable_control_is_retried_before_being_given_up_on(monkeypatch):
+    calls = {"n": 0}
+
+    def flaky(ids):
+        calls["n"] += 1
+        if calls["n"] < 3:
+            return {i: ("UNREACHABLE", "") for i in ids}
+        good, bad = sorted(ids)[0], sorted(ids)[1]
+        return {good: ("OK", ""), bad: ("NOT_FOUND", "")}
+
+    monkeypatch.setattr(cc, "SELF_TEST_RETRIES", 3)
+    monkeypatch.setattr(cc.time, "sleep", lambda *_: None)
+    prefix, (g, b) = sorted(cc.CONTROLS.items())[0]
+    verdicts = cc._control_verdicts(flaky, g, b)
+    assert "UNREACHABLE" not in {v[0] for v in verdicts.values()}

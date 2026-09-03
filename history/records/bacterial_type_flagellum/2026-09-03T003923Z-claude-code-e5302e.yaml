@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum.yaml
+  slug: bacterial_type_flagellum
+session:
+  id: 2026-09-03T003923Z-claude-code-e5302e
+  timestamp: '2026-09-03T00:39:23Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Re-source the flagellum''s unverifiable quantities (#7 item 5, #171)'
+  details: 'The ~20,000 flagellin figure, the 11 protofilaments, the filament length and the
+    motor rotation speed all cited reviews that are abstract-only and do not contain the numbers.
+    Each is now sourced to open-access full text with a verbatim quotation. Two corrections
+    fell out of reading: the rotation-speed context wrongly attributed the whole 100-300 Hz
+    range to light load when ~125 Hz is the high-load figure, and the 11-protofilament claim
+    is bounded by Campylobacter jejuni, which has seven. The filament diameter remains unsourced
+    and is left for human review.'
