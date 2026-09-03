@@ -77,12 +77,12 @@ family; these are the specific entries behind it.</small></p>
 
 {% if r.associated_traits %}
 <h2>Associated traits</h2>
-<ul>{% for t in r.associated_traits %}<li>{{ t.relation }} {{ curie(t.trait_id) }} {{ t.trait_label }}{% if t.note %} — {{ t.note }}{% endif %}</li>{% endfor %}</ul>
+<ul>{% for t in r.associated_traits %}<li>{{ t.relation }} {{ curie(t.trait_id) }} {{ t.trait_label }}{% if t.note %} — {{ t.note }}{% endif %}{{ evid(t.evidence) }}</li>{% endfor %}</ul>
 {% endif %}
 
 {% if r.physical_properties %}
 <h2>Physical properties</h2>
-<ul>{% for p in r.physical_properties %}<li>{{ p.property }}: {{ p.value }}{% if p.unit %} {{ curie(p.unit) }}{% endif %}{% if p.context %} ({{ p.context }}){% endif %}{% if p.reference %} [{{ curie(p.reference) }}]{% endif %}</li>{% endfor %}</ul>
+<ul>{% for p in r.physical_properties %}<li>{{ p.property }}: {{ p.value }}{% if p.unit %} {{ curie(p.unit) }}{% endif %}{% if p.context %} ({{ p.context }}){% endif %}{% if p.reference and not p.evidence %} [{{ curie(p.reference) }}]{% endif %}{{ evid(p.evidence) }}</li>{% endfor %}</ul>
 {% endif %}
 
 {% if r.causal_graphs %}

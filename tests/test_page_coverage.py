@@ -34,8 +34,11 @@ PROBES = {
     "taxonomic_distribution": lambda r: [t["taxon_label"] for t in r["taxonomic_distribution"]],
     "canonical_examples": lambda r: [t["taxon_label"] for t in r["canonical_examples"]],
     "associated_traits": lambda r: [t["trait_id"] for t in r["associated_traits"]],
-    "physical_properties": lambda r: [p.get("property_label") or p.get("property_id")
-                                      for p in r["physical_properties"]],
+    "physical_properties": lambda r: [p["value"] for p in r["physical_properties"]],
+    # A quotation that never reaches the page is evidence no reader can weigh --
+    # the same omission as #157, one level deeper, which the label probes miss
+    # because the label renders while its evidence does not.
+    "snippets": lambda r: [e["snippet"][:60] for e in _every_evidence(r) if e.get("snippet")],
     "images": lambda r: [i.get("caption") or i.get("image_id") for i in r["images"]],
     "complex_compositions": lambda r: [c["source_accession"] for c in r["complex_compositions"]],
     "datasets": lambda r: [d.get("accession") or d.get("dataset_id") for d in r["datasets"]],
@@ -51,6 +54,21 @@ def _records():
     return load_records()
 
 
+def _every_evidence(node) -> list:
+    """Every evidence entry at any depth, so a new parent cannot be forgotten."""
+    found = []
+    if isinstance(node, dict):
+        for key, value in node.items():
+            if key == "evidence" and isinstance(value, list):
+                found += [e for e in value if isinstance(e, dict)]
+            else:
+                found += _every_evidence(value)
+    elif isinstance(node, list):
+        for item in node:
+            found += _every_evidence(item)
+    return found
+
+
 @cache
 def _page_text(path: Path) -> str:
     page = PAGES / path.parent.name / (path.stem + ".html")
@@ -64,7 +82,7 @@ def _page_text(path: Path) -> str:
 def test_every_populated_section_reaches_the_page(section):
     missing = []
     for path, record in _records():
-        if section == "protein_examples":
+        if section in ("protein_examples", "snippets"):
             values = PROBES[section](record)
         elif not record.get(section):
             continue
