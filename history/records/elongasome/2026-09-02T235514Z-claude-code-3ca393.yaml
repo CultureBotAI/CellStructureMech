@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/division_machinery/elongasome.yaml
+  slug: elongasome
+session:
+  id: 2026-09-02T235514Z-claude-code-3ca393
+  timestamp: '2026-09-02T23:55:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Elongasome: correct the RodA attribution and add the sidewall-elongation causal
+    graph (#161, #120)'
+  details: 'The roda component cited Shi et al. 2018 and Typas et al. 2011 for RodA being
+    the SEDS glycosyltransferase. Neither paper contains the string RodA or SEDS; RodA was
+    shown to be the polymerase in Meeske et al. 2016, five years after Typas. Both notes replaced
+    by Meeske 2016 with verbatim snippets from PMC5161649. Added an eight-edge FUNCTION graph,
+    every edge carrying a verbatim quotation from open-access full text, all 13 corpus snippets
+    verified. Reading the sources reversed the causality #120 proposed: depleting the elongation
+    transpeptidase abolishes filament movement, so peptidoglycan synthesis is the motor and
+    MreB steers it. A discussion is open on the definition_source, which still predates the
+    RodA finding.'

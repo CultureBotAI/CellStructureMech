@@ -107,6 +107,26 @@ def _get(url: str, timeout: float = 45.0) -> tuple[int, str]:
     return TRANSPORT_FAILURE, ""
 
 
+# Below this, a <body> holds a figure caption or a permissions notice rather than
+# an article. PMC2761316 is 10 KB of XML with no <body> at all, and a length test
+# on the raw response called it full text (#162).
+MIN_BODY_PROSE = 1500
+
+
+def body_text(payload: str) -> str | None:
+    """The article's own prose, or None when the response carries no article.
+
+    A response can be long and still not be full text: PMC holds metadata and an
+    abstract for records whose publisher never deposited a body, and the author
+    list alone runs to kilobytes. The tell is whether there is a ``<body>``, so
+    that is what is asked -- not how big the response is.
+    """
+    if not re.search(r"<body[^>]*>", payload, re.I):
+        return None
+    text = plain(payload)
+    return text if len(text) >= MIN_BODY_PROSE else None
+
+
 def plain(xml: str) -> str:
     """XML/HTML to flowing text, keeping only what an author actually wrote.
 
@@ -209,14 +229,15 @@ def fetch_text(identity: dict) -> tuple[str, str, str]:
 
     pmcid = identity.get("pmcid")
     if pmcid:
-        status, body = _get(f"{EUTILS}/efetch.fcgi?db=pmc&id={pmcid}&retmode=xml")
-        unanswered = unanswered or status == TRANSPORT_FAILURE
-        if status == 200 and len(body) > 4000:
-            return FULL_TEXT, f"PMC/{pmcid}", plain(body)
-        status, body = _get(f"{EUROPE_PMC}/{pmcid}/fullTextXML")
-        unanswered = unanswered or status == TRANSPORT_FAILURE
-        if status == 200 and len(body) > 4000:
-            return FULL_TEXT, f"EuropePMC/{pmcid}", plain(body)
+        for label, url in (("PMC", f"{EUTILS}/efetch.fcgi?db=pmc&id={pmcid}&retmode=xml"),
+                           ("EuropePMC", f"{EUROPE_PMC}/{pmcid}/fullTextXML")):
+            status, payload = _get(url)
+            unanswered = unanswered or status == TRANSPORT_FAILURE
+            if status != 200:
+                continue
+            text = body_text(payload)
+            if text:
+                return FULL_TEXT, f"{label}/{pmcid}", text
 
     pmid = identity.get("pmid")
     if pmid:

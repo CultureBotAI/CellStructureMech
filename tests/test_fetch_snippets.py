@@ -420,3 +420,42 @@ def test_the_snippet_count_line_names_what_each_number_counts(tmp_path, monkeypa
     err = capsys.readouterr().err
     assert "1 of 2 citations carry a snippet; 1 of those are evidence items" in err
     assert "2 citations = 1 evidence items + 1 bare references" in err
+
+
+# --- length is not body text (#162) ---
+
+def test_a_long_response_with_no_body_is_not_full_text():
+    """PMC2761316 is 10 KB of XML with no <body> — PMC holds only the abstract
+    and an author list. A length test on the raw response called it full text."""
+    payload = "<article><front><journal-meta>" + ("Author Name " * 500) + "</journal-meta>" \
+              "<abstract><p>Chemoreceptors are key components.</p></abstract></front></article>"
+    assert len(payload) > 4000
+    assert fs.body_text(payload) is None
+
+
+def test_a_real_body_is_still_full_text():
+    payload = "<article><body><p>" + ("MreB rotates around the cell circumference. " * 60) + \
+              "</p></body></article>"
+    text = fs.body_text(payload)
+    assert text and "MreB rotates" in text
+
+
+def test_a_body_holding_only_a_permissions_notice_is_not_full_text():
+    """Some deposits carry a <body> with a rights statement and nothing else."""
+    assert fs.body_text("<article><body><p>All rights reserved.</p></body></article>") is None
+
+
+def test_an_abstract_only_record_falls_back_rather_than_being_lost(monkeypatch):
+    """Rejecting the body must not cost us the abstract we can actually read."""
+    calls = {"n": 0}
+
+    def transport(url, timeout=45.0):
+        calls["n"] += 1
+        if "db=pmc" in url or "fullTextXML" in url:
+            return (200, "<article><front>" + ("x" * 5000) + "</front></article>")
+        return (200, "<Abstract>Chemoreceptors are key components.</Abstract>")
+
+    monkeypatch.setattr(fs, "_get", transport)
+    readability, source, text = fs.fetch_text({"pmid": "19805102", "pmcid": "PMC2761316"})
+    assert readability == fs.ABSTRACT
+    assert "Chemoreceptors" in text

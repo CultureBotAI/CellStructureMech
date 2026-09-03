@@ -28,12 +28,18 @@ components:
   essentiality: ESSENTIAL
   role: Polymerises the glycan strand; the SEDS-family partner of the class B PBP.
   evidence:
-  - reference: DOI:10.1038/nrmicro2677
-    notes: Typas et al. 2011 review the elongation machinery and its separation from
-      the division machinery.
-  - reference: DOI:10.1016/j.cell.2018.02.050
-    notes: Shi et al. 2018 describe RodA-PBP2 as the synthetic core the filaments
-      carry.
+  - reference: DOI:10.1038/nature19331
+    snippet: Here, we have presented evidence that the SEDS family protein RodA is
+      the principal PGT in the Rod complex and is likely to be responsible for its
+      dynamic movement.
+    notes: Verbatim from the open-access full text (PMC5161649). This is the finding
+      that establishes RodA as the glycan polymerase; it postdates Typas et al. 2011
+      by five years, and neither that review nor Shi et al. 2018 mentions RodA or
+      SEDS at all.
+  - reference: DOI:10.1038/nature19331
+    snippet: RodA is a member of the SEDS family of proteins that play essential but
+      ill-defined roles in cell wall biogenesis during growth, division and sporulation.
+    notes: Verbatim; supports the SEDS family assignment in the component label.
 - component_id: pbp2
   label: class B penicillin-binding protein PBP2
   component_type: PROTEIN
@@ -129,6 +135,43 @@ curation_history:
   changes: 'Self-review of PR #118: linked METPO:1000681 rod shaped, which the machine
     is required for, and recorded the missing guided-by relation (#119).'
   llm_assisted: true
+- timestamp: '2026-09-02T23:48:01Z'
+  curator: claude
+  action: ADD_CAUSAL_GRAPH
+  changes: '#120: added the sidewall-elongation causal graph, every edge carrying
+    a verbatim quotation from open-access full text. Reading the sources reversed
+    the causality the issue proposed: #120 described MreB filaments moving and carrying
+    the synthases, but Typas et al. 2011 report that depleting the elongation transpeptidase
+    abolishes filament movement, so peptidoglycan synthesis is the motor and the filament
+    steers it. #161: the RodA component cited Shi et al. 2018 and Typas et al. 2011,
+    neither of which contains the strings RodA or SEDS -- RodA was shown to be the
+    polymerase in 2016, five years after Typas. Both notes are replaced by Meeske
+    et al. 2016 with verbatim support.'
+  llm_assisted: true
+- timestamp: '2026-09-02T23:48:58Z'
+  curator: claude
+  action: OPEN_DISCUSSION
+  changes: '#161: flagged that definition_source (Typas et al. 2011) predates the
+    RodA/SEDS finding the definition asserts. The component evidence is corrected;
+    rewording the definition is left to a curator.'
+  llm_assisted: true
+- timestamp: '2026-09-02T23:56:08Z'
+  curator: claude
+  action: NORMALISE_NODE_REFERENCE
+  changes: 'Self-review: the MreB node used xrefs where every other STRUCTURE node
+    in the corpus uses grounding. xrefs asserts equivalence -- the misuse #119 removed
+    from the MreB / elongasome pair -- while grounding names what the node denotes,
+    which is what was meant.'
+  llm_assisted: true
+- timestamp: '2026-09-02T23:57:26Z'
+  curator: claude
+  action: STRENGTHEN_EDGE_EVIDENCE
+  changes: 'Self-review: the pg_synthesis drives complex_motion edge rested on a sentence
+    about comparable velocities, which shows coupling rather than direction. The depletion
+    result -- stopping synthesis stops the movement -- is what supports ''drives'',
+    so it now leads the evidence and the velocity observation is labelled for what
+    it shows.'
+  llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped
@@ -151,3 +194,165 @@ discussions:
     relationship has no field.
   posed_by: claude
   posed_date: '2026-09-02'
+- discussion_id: definition_source_predates_roda
+  prompt: definition_source cites Typas et al. 2011 for a definition that names RodA
+    as a SEDS-family glycosyltransferase, but RodA was shown to be the polymerase
+    in 2016 and the string RodA does not occur in that review. Should the definition
+    be reworded to what Typas supports, or the definition_source changed to Meeske
+    et al. 2016 (DOI:10.1038/nature19331)?
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - definition
+  - definition_source
+  rationale: The RodA component now carries Meeske 2016 with verbatim support (#161),
+    so the claim itself is sourced. What remains is that the record-level definition
+    still attributes it to a review that predates the finding. Rewording a definition
+    changes what the record asserts it is, which is a curator's call, not an automatic
+    edit.
+  posed_by: claude
+  posed_date: '2026-09-02'
+causal_graphs:
+- graph_id: elongasome_sidewall_elongation
+  title: Peptidoglycan synthesis moves the complex, and the sidewall extends without
+    widening
+  description: The cited sources put the motor in the synthase, not the filament.
+    Inhibiting the elongation-specific transpeptidase stops filament movement, so
+    peptidoglycan synthesis drives the motion rather than being carried by it. MreB
+    and RodZ set where and in which direction that synthesis happens; losing either
+    gives a round cell.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: mreb
+    label: MreB filament
+    node_type: STRUCTURE
+    description: Curves-sensing actin homologue that orients the complex circumferentially.
+    grounding: cellstructuremech:mreb_filament
+  - node_id: rodz
+    label: RodZ
+    node_type: GENE_OR_PROTEIN
+    component_ref: rodz
+  - node_id: roda
+    label: SEDS glycosyltransferase RodA
+    node_type: GENE_OR_PROTEIN
+    component_ref: roda
+  - node_id: pbp2
+    label: class B penicillin-binding protein PBP2
+    node_type: GENE_OR_PROTEIN
+    component_ref: pbp2
+  - node_id: pg_synthesis
+    label: peptidoglycan biosynthetic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009252
+  - node_id: complex_motion
+    label: circumferential movement of the synthesis complex
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: sidewall
+    label: cylindrical sidewall extension
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: rod_shape
+    label: rod-shaped cell
+    node_type: STATE
+  edges:
+  - subject: roda
+    predicate: polymerises
+    object: pg_synthesis
+    description: RodA is the glycan-strand polymerase of the Rod complex.
+    evidence:
+    - reference: DOI:10.1038/nature19331
+      snippet: Here, we have presented evidence that the SEDS family protein RodA
+        is the principal PGT in the Rod complex and is likely to be responsible for
+        its dynamic movement.
+      notes: Verbatim from PMC5161649.
+  - subject: pbp2
+    predicate: is required for
+    object: complex_motion
+    description: Depleting the elongation-specific transpeptidase abolishes movement,
+      which is what identifies synthesis as the motor.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2677
+      snippet: Interestingly, inhibition or depletion of the specific elongation class
+        B TPases (PBP2 in E. coli , and PBP2A and PBPH in B. subtilis) eliminates
+        filament movement in both organisms, suggesting that peptidoglycan synthesis
+        itself is the motor that drives filament movement
+      notes: Verbatim from the open-access full text (PMC5433867). The authors hedge
+        with 'suggesting', and the edge is no stronger than that.
+  - subject: pg_synthesis
+    predicate: drives
+    object: complex_motion
+    description: Synthesis is the motor; the filament is steered by it rather than
+      pulling it.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2677
+      snippet: Interestingly, inhibition or depletion of the specific elongation class
+        B TPases (PBP2 in E. coli , and PBP2A and PBPH in B. subtilis) eliminates
+        filament movement in both organisms, suggesting that peptidoglycan synthesis
+        itself is the motor that drives filament movement
+      notes: 'Verbatim from PMC5433867. This is the sentence that supports the predicate:
+        stopping synthesis stops the movement. The velocity correlation below shows
+        the two are coupled, which on its own would not establish which drives which.'
+    - reference: DOI:10.1038/nrmicro2677
+      snippet: Consistent with this idea, both MreB and the peptidoglycan synthesis
+        complexes move with comparable velocities in roughly similar circumferential
+        directions 47 – 48 , mirroring the position of glycan chains in the sacculus
+        22 .
+      notes: Verbatim. Comparable velocities in a shared direction show the filament
+        and the synthesis complex are coupled; they do not by themselves say which
+        moves the other.
+  - subject: rodz
+    predicate: couples
+    object: mreb
+    description: RodZ bridges the filament to the wall-synthesis enzymes across the
+      membrane.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2018.02.050
+      snippet: In E. coli, RodZ’s cytoplasmic domain binds MreB ( Van den Ent et al.,
+        2010 ) while its periplasmic domain binds several cell-wall synthesis enzymes
+        ( Morgenstein et al., 2015 ; Shiomi et al., 2013 ).
+      notes: Verbatim from PMC5846203.
+  - subject: rodz
+    predicate: is required for
+    object: complex_motion
+    description: Without RodZ the filament stops rotating and the cell rounds.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2018.02.050
+      snippet: Deletion of rodZ leads to round cells, in which MreB no longer rotates
+        around the cell circumference ( Morgenstein et al., 2015 ) but instead moves
+        diffusively.
+      notes: Verbatim from PMC5846203.
+  - subject: complex_motion
+    predicate: produces
+    object: sidewall
+    description: Insertion along a circumferential track lengthens the cylinder rather
+      than widening it.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2677
+      snippet: Consistent with this idea, both MreB and the peptidoglycan synthesis
+        complexes move with comparable velocities in roughly similar circumferential
+        directions 47 – 48 , mirroring the position of glycan chains in the sacculus
+        22 .
+      notes: The circumferential direction of travel is what makes the product elongation
+        rather than widening.
+  - subject: mreb
+    predicate: is required for
+    object: rod_shape
+    description: 'Losing the filament loses the rod: cells stop elongating and widen.'
+    evidence:
+    - reference: DOI:10.1038/nrmicro2677
+      snippet: When MreB is depleted, or filament formation is specifically inhibited
+        (for example, with A22 ( S -(3,4-dichlorobenzyl)isothiourea)), cells rapidly
+        stop elongating, increase their diameter and grow with spherical morphology,
+        indicating that MreB is required for rod-shaped growth 40 – 42 .
+      notes: Verbatim from PMC5433867.
+  - subject: sidewall
+    predicate: maintains
+    object: rod_shape
+    description: Sustained circumferential insertion is what keeps the cylinder a
+      cylinder.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2018.02.050
+      snippet: MreB both senses and changes cell shape, thereby generating a self-organizing
+        feedback system for shape maintenance.
+      notes: Verbatim from PMC5846203; the same sentence grounds the MreB record's
+        MODULATES cell-shape link.
