@@ -71,6 +71,21 @@ REVIEWS = (
         grounding="InterPro:IPR001492",
     ),
     Review(
+        "GO:0009288",
+        "bacterial-type flagellum",
+        "hook",
+        "hook protein (FlgE)",
+        (),
+        ("P75937",),
+        (ExpectedFamily("P75937", "IPR020013", "Flagellar hook-basal body protein, FlgE/F/G"),),
+        ("IPR020013",),
+        grounding_notes=(
+            "FlgE's only integrated family, IPR020013, spans FlgE, FlgF and FlgG -- the hook "
+            "and two of the rod proteins. It is broader than this component, and a broader "
+            "term is not adopted as identity. No InterPro family denotes the hook alone."
+        ),
+    ),
+    Review(
         "GO:0031470",
         "carboxysome",
         "bmc_h",
