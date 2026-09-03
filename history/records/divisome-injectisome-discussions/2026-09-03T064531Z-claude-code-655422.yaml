@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/divisome-injectisome-discussions.yaml
+  slug: divisome-injectisome-discussions
+session:
+  id: 2026-09-03T064531Z-claude-code-655422
+  timestamp: '2026-09-03T06:45:31Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Narrow two discussions that #65 half-answered'
+  details: ring_dimensions_unsourced asked for FtsZ filament length and Z-ring thickness;
+    the filament length and diameter are now sourced with verbatim snippets, so the prompt
+    is narrowed to the Z-ring radial thickness, which the review reports only negatively.
+    needle_dimensions_unsourced asked for needle length and channel diameter; the channel
+    diameter, filament width and base diameter are sourced, so the prompt is narrowed to the
+    length, which the source gives only as 'several nanometers'.
