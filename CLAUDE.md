@@ -21,6 +21,10 @@ Read before changing domain content:
 - Issue triage: the `review-open-issues` skill
   (`.claude/skills/review-open-issues/SKILL.md`) — read-only ranking of the
   whole queue; closing and merging stay the owner's calls.
+- Single-record review and evidence-backed improvement: the
+  `curate-yaml-record` skill
+  (`.claude/skills/curate-yaml-record/SKILL.md`). Audit requests are read-only;
+  mutation requires an explicit curation request and the guarded writer.
 
 Sibling repositories use the same conventions: TraitMech, ProteinTraitsMech,
 HabitatMech, CultureMech, MediaIngredientMech, CommunityMech. The upstream
