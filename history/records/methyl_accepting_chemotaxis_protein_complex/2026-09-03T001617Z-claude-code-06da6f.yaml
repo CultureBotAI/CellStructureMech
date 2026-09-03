@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+  slug: methyl_accepting_chemotaxis_protein_complex
+session:
+  id: 2026-09-03T001617Z-claude-code-06da6f
+  timestamp: '2026-09-03T00:16:17Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add the chemoreceptor array signalling graph with verbatim evidence (#163)
+  details: 'Six edges from chemoeffector binding to phospho-CheY and motor reversal, each
+    carrying a verbatim quotation from Parkinson, Hazelbauer & Falke 2015 (PMC4417406), added
+    because the record''s existing sources could not support the mechanism: Briegel et al.
+    2009 is a cryo-ET architecture paper and the Annual Review is abstract-only. The CheA-to-CheY
+    phosphotransfer step is deliberately not drawn -- the source does not state it quotably
+    -- and a discussion records the gap.'
