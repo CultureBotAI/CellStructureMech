@@ -89,7 +89,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     component_ref: major_pilin
   - node_id: pilus_filament
-    label: type IV pilus filament
+    label: type IV pilus
     node_type: STRUCTURE
     grounding: GO:0044096
   - node_id: surface_bound_pilus

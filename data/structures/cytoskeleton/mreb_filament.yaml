@@ -111,7 +111,7 @@ causal_graphs:
     node_type: STRUCTURE
     grounding: cellstructuremech:elongasome
   - node_id: sidewall_synthesis
-    label: sidewall peptidoglycan biosynthetic process
+    label: peptidoglycan biosynthetic process
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0009252
   - node_id: rod_shape

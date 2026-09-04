@@ -120,7 +120,7 @@ causal_graphs:
     node_type: STRUCTURE
     grounding: GO:0140737
   - node_id: ferrous_iron
-    label: ferrous iron
+    label: iron(2+)
     node_type: CHEMICAL
     grounding: CHEBI:29033
   - node_id: ferric_mineral_core
@@ -219,7 +219,7 @@ causal_graphs:
     label: shell-interior peptide binding pocket
     node_type: STRUCTURE
   - node_id: cargo_loaded_shell
-    label: cargo-loaded encapsulin shell
+    label: encapsulin nanocompartment
     node_type: STRUCTURE
     grounding: GO:0140737
   edges:

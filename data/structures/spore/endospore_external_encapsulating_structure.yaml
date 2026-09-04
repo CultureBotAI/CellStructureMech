@@ -212,7 +212,7 @@ causal_graphs:
   scope_status: MECHANISTIC
   nodes:
   - node_id: cortex
-    label: endospore cortex peptidoglycan
+    label: endospore cortex
     node_type: STRUCTURE
     grounding: GO:0043595
     component_ref: cortex
@@ -224,7 +224,7 @@ causal_graphs:
     label: dehydrated spore core
     node_type: STATE
   - node_id: multilayered_coat
-    label: multilayered spore coat
+    label: endospore coat
     node_type: STRUCTURE
     grounding: GO:0043593
   - node_id: coat_barrier

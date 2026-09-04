@@ -68,7 +68,7 @@ causal_graphs:
     label: Lpt transenvelope LPS transport machine
     node_type: GENE_OR_PROTEIN
   - node_id: lipopolysaccharide
-    label: lipopolysaccharide-rich outer leaflet
+    label: lipopolysaccharide
     node_type: CHEMICAL
     component_ref: lipopolysaccharide
     grounding: CHEBI:16412
@@ -80,7 +80,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     component_ref: outer_membrane_beta_barrels
   - node_id: asymmetric_outer_membrane
-    label: asymmetric outer membrane
+    label: cell outer membrane
     node_type: STRUCTURE
     grounding: GO:0009279
   - node_id: permeability_barrier
@@ -143,7 +143,7 @@ causal_graphs:
   scope_status: MECHANISTIC
   nodes:
   - node_id: lipopolysaccharide
-    label: lipopolysaccharide-rich outer leaflet
+    label: lipopolysaccharide
     node_type: CHEMICAL
     component_ref: lipopolysaccharide
     grounding: CHEBI:16412
