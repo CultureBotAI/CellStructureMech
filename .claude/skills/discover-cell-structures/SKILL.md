@@ -47,16 +47,22 @@ Search to find structures, not just papers:
    `cryo-electron tomography bacterial cell`, and the candidate's synonyms.
 3. Snowball from one readable review to primary papers for one canary organism,
    one core component, one function, and one mechanistic step.
-4. Search the candidate label, exact GO CURIE, synonyms, component names,
-   canonical taxon, DOI, and PMID in this repository before writing anything:
+4. Search the exact strings that would identify the candidate in this repository
+   before writing anything: GO CURIE, label, synonyms, component names,
+   canonical taxon, DOI, and PMID.
 
    ```bash
-   rg --no-ignore --hidden -n "GO:NNNNNNN|candidate label|synonym|DOI:10\\.|PMID:" .
+   rg --no-ignore --hidden -n \
+     "<GO CURIE>|<label>|<synonym>|<component>|<taxon>|<DOI>|<PMID>" \
+     .
    ```
 
 Use `rg --no-ignore --hidden` or `rg -uu` whenever the result is meant to
 prove a record, source, identifier, or citation is absent. Ignored reports,
 research notes, generated pages, and history records still count as prior art.
+Replace every placeholder with a candidate-specific term. Never search bare
+identifier prefixes such as `DOI:10` or `PMID:` when proving absence; they match
+unrelated literature citations throughout the repository.
 
 ## Candidate gate
 
@@ -95,8 +101,10 @@ Prefer exact GO cellular component identity:
 2. Read the GO definition and relationships. A matching label on a broader term
    is not enough.
 3. Use the GO CURIE only when it denotes exactly the structure being recorded.
-4. If no exact GO term exists, mint `cellstructuremech:<slug>` and add the
-   nearest broader exact GO or local record to `parent_structures`.
+4. If no exact GO term exists, mint `cellstructuremech:<slug>`. Add a broader
+   structure to `parent_structures` only when it is an exact is-a parent. Use
+   `part_of` when the candidate is a component, layer, subassembly, or
+   substructure of an enclosing cell structure.
 
 Never guess a CURIE. If InterPro, CHEBI, SO, Complex Portal, UniProt, GO, or
 NCBI Taxonomy cannot be resolved at the issuing authority, leave the field
@@ -158,8 +166,14 @@ just new-record \
   --label "<label>" \
   --definition "<one-sentence definition>" \
   --definition-source <DOI-or-PMID-or-GO-CURIE> \
+  --curator claude \
+  --llm-assisted \
   --apply
 ```
+
+Replace `claude` with the human curator name when a person is directing the
+edit, but keep `--llm-assisted` for any record whose prose or evidence summary
+was drafted by a model.
 
 Then fill the remaining sections through `write_validated_structure` and
 `record_curation_event` so closed-mode validation happens before the file is
