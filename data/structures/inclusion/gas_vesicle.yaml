@@ -198,13 +198,13 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fmicb.2020.610179
       notes: Voelkner, Jost and Pfeifer 2020 combined pull-down and split-GFP assays
-        in Haloferax volcanii to infer a network of interactions among accessory
-        GvpF-through-GvpM proteins.
+        in Haloferax volcanii to infer a network of interactions among accessory GvpF-through-GvpM
+        proteins.
   - subject: gvpf_gvpl
     predicate: recruit
     object: gvpa
-    description: GvpF-family proteins provide an experimentally observed contact
-      between the accessory assembly network and the major GvpA-family shell protein.
+    description: GvpF-family proteins provide an experimentally observed contact between
+      the accessory assembly network and the major GvpA-family shell protein.
     evidence:
     - reference: DOI:10.3389/fmicb.2020.610179
       notes: Voelkner, Jost and Pfeifer 2020 mapped GvpF as the sole clear haloarchaeal

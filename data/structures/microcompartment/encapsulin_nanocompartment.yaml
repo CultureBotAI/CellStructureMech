@@ -152,9 +152,9 @@ causal_graphs:
       notes: Sutter et al. 2008 identified conserved binding sites inside the shell
         for short C-terminal targeting peptides on oxidative-stress enzymes.
     - reference: DOI:10.1038/s41598-021-84329-z
-      notes: Altenburg et al. 2021 dissected hydrophobic and ionic interactions
-        that govern targeting-peptide binding to Thermotoga maritima and Myxococcus
-        xanthus encapsulin shells.
+      notes: Altenburg et al. 2021 dissected hydrophobic and ionic interactions that
+        govern targeting-peptide binding to Thermotoga maritima and Myxococcus xanthus
+        encapsulin shells.
   - subject: encapsulin_shell
     predicate: encloses
     object: cargo
@@ -239,15 +239,15 @@ causal_graphs:
       without cargo and package cargo when targeting peptides are present.
     evidence:
     - reference: DOI:10.15252/embj.201488566
-      notes: McHugh et al. 2014 resolved the 180-subunit Myxococcus xanthus EncA
-        shell and its ferritin-like cargo.
+      notes: McHugh et al. 2014 resolved the 180-subunit Myxococcus xanthus EncA shell
+        and its ferritin-like cargo.
     - reference: DOI:10.1016/j.cbpa.2016.05.013
       notes: Giessen 2016 reviews T=1 and T=3 encapsulin shell architectures.
   - subject: cargo
     predicate: exposes
     object: targeting_peptide
-    description: Encapsulin cargo proteins carry terminal peptide tags that are
-      sufficient to route native or heterologous proteins into the assembling shell.
+    description: Encapsulin cargo proteins carry terminal peptide tags that are sufficient
+      to route native or heterologous proteins into the assembling shell.
     evidence:
     - reference: DOI:10.1021/acs.biochem.6b00294
       notes: Cassidy-Amstutz et al. 2016 identified minimal peptide tags that load
@@ -268,8 +268,8 @@ causal_graphs:
       and localize cargo enzymes into the nascent shell lumen.
     evidence:
     - reference: DOI:10.1038/nsmb.1473
-      notes: Sutter et al. 2008 identified conserved binding sites for targeting
-        peptides on the inside of the Thermotoga maritima shell.
+      notes: Sutter et al. 2008 identified conserved binding sites for targeting peptides
+        on the inside of the Thermotoga maritima shell.
   - subject: cargo_loaded_shell
     predicate: encloses
     object: cargo
@@ -297,7 +297,7 @@ curation_history:
 - timestamp: '2026-09-04T04:22:00Z'
   curator: codex
   action: ADD_CAUSAL_GRAPH
-  changes: Added an ASSEMBLY graph for HK97-fold shell self-assembly around
-    targeting-peptide-tagged cargo, grounded ferrous iron with ChEBI, and anchored
-    shell protein nodes with Pfam.
+  changes: Added an ASSEMBLY graph for HK97-fold shell self-assembly around targeting-peptide-tagged
+    cargo, grounded ferrous iron with ChEBI, and anchored shell protein nodes with
+    Pfam.
   llm_assisted: true

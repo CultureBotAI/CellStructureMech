@@ -186,8 +186,8 @@ causal_graphs:
   - subject: mature_lpp
     predicate: inserts into
     object: outer_membrane
-    description: The mature Lpp N-terminal lipid anchors the lipoprotein in the
-      outer membrane.
+    description: The mature Lpp N-terminal lipid anchors the lipoprotein in the outer
+      membrane.
     evidence:
     - reference: DOI:10.1038/s41467-020-15489-1
       notes: Mathelie-Guinlet and colleagues 2020 describe E. coli Lpp as embedded
@@ -199,14 +199,14 @@ causal_graphs:
       lysine of Lpp to peptidoglycan stem peptides.
     evidence:
     - reference: DOI:10.1128/JB.00084-07
-      notes: Magnet et al. 2007 identified ErfK, YcfS, and YbiS as E. coli
-        L,D-transpeptidases that can independently catalyze covalent anchoring of
-        Braun lipoprotein to peptidoglycan.
+      notes: Magnet et al. 2007 identified ErfK, YcfS, and YbiS as E. coli L,D-transpeptidases
+        that can independently catalyze covalent anchoring of Braun lipoprotein to
+        peptidoglycan.
   - subject: ldt_lpp
     predicate: uses acceptor
     object: thin_peptidoglycan
-    description: Lpp-anchoring L,D-transpeptidation uses meso-diaminopimelate in
-      the peptidoglycan stem peptide as the acceptor for the Lpp C-terminal lysine.
+    description: Lpp-anchoring L,D-transpeptidation uses meso-diaminopimelate in the
+      peptidoglycan stem peptide as the acceptor for the Lpp C-terminal lysine.
     evidence:
     - reference: DOI:10.1128/JB.00084-07
       notes: Magnet et al. 2007 mapped the E. coli Lpp-peptidoglycan linkage to the
@@ -215,8 +215,7 @@ causal_graphs:
     predicate: forms
     object: lpp_pg_tether
     description: Covalent C-terminal linkage to peptidoglycan and N-terminal lipid
-      anchoring in the outer membrane make Lpp a bridge between the two envelope
-      layers.
+      anchoring in the outer membrane make Lpp a bridge between the two envelope layers.
     evidence:
     - reference: DOI:10.1038/s41467-020-15489-1
       notes: Mathelie-Guinlet and colleagues 2020 measured the contribution of Lpp

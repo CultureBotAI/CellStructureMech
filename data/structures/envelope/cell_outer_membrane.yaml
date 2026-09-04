@@ -137,8 +137,8 @@ causal_graphs:
   title: LPS and beta-barrel porins tune selective permeability
   description: Lipopolysaccharide forms a densely packed outer leaflet that slows
     hydrophobic toxin entry, while beta-barrel porins provide size- and chemistry-limited
-    routes for hydrophilic solutes, jointly creating the selective permeability
-    barrier of the outer membrane.
+    routes for hydrophilic solutes, jointly creating the selective permeability barrier
+    of the outer membrane.
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
@@ -167,8 +167,8 @@ causal_graphs:
   - subject: lipopolysaccharide
     predicate: packs into
     object: ordered_lps_layer
-    description: LPS molecules in the outer leaflet pack into an ordered surface
-      layer that restricts diffusion through the lipid phase.
+    description: LPS molecules in the outer leaflet pack into an ordered surface layer
+      that restricts diffusion through the lipid phase.
     evidence:
     - reference: DOI:10.1128/MMBR.67.4.593-656.2003
       notes: Nikaido 2003 reviews how LPS organization makes the outer membrane a
@@ -189,8 +189,8 @@ causal_graphs:
       hydrophilic solutes that cannot readily cross the LPS-rich lipid phase.
     evidence:
     - reference: DOI:10.1128/MMBR.67.4.593-656.2003
-      notes: Nikaido 2003 reviews porin-mediated diffusion across Gram-negative
-        outer membranes.
+      notes: Nikaido 2003 reviews porin-mediated diffusion across Gram-negative outer
+        membranes.
   - subject: beta_barrel_porins
     predicate: filter
     object: hydrophilic_solutes
@@ -203,8 +203,8 @@ causal_graphs:
   - subject: ordered_lps_layer
     predicate: cooperates with
     object: beta_barrel_porins
-    description: The low-permeability LPS leaflet and selective porin channels
-      combine to admit useful hydrophilic molecules while reducing harmful influx.
+    description: The low-permeability LPS leaflet and selective porin channels combine
+      to admit useful hydrophilic molecules while reducing harmful influx.
     evidence:
     - reference: DOI:10.1101/cshperspect.a000414
       notes: Silhavy, Kahne and Walker 2010 connect outer-leaflet LPS and beta-barrel
@@ -249,8 +249,8 @@ curation_history:
   curator: codex
   action: ADD_CAUSAL_GRAPH
   changes: Added a FUNCTION graph for LPS- and beta-barrel-porin-mediated selective
-    permeability, grounded LPS nodes with ChEBI, and added Nikaido 2003 evidence
-    for hydrophobic exclusion and porin diffusion.
+    permeability, grounded LPS nodes with ChEBI, and added Nikaido 2003 evidence for
+    hydrophobic exclusion and porin diffusion.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0040

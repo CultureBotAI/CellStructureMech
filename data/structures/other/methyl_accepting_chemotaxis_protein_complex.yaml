@@ -139,9 +139,8 @@ curation_history:
   curator: codex
   action: ENHANCE_CAUSAL_GRAPH
   changes: Added a CheA/CheW ASSEMBLY graph for hexagonal array formation, anchored
-    MCP and CheW graph nodes with Pfam identifiers, added a directly cited
-    CheA-to-CheY phosphotransfer edge, and resolved the phosphotransfer curation
-    TODO.
+    MCP and CheW graph nodes with Pfam identifiers, added a directly cited CheA-to-CheY
+    phosphotransfer edge, and resolved the phosphotransfer curation TODO.
   llm_assisted: true
 causal_graphs:
 - graph_id: chea_chew_hexagonal_array_assembly
@@ -190,9 +189,9 @@ causal_graphs:
       of the lattice.
     evidence:
     - reference: DOI:10.1073/pnas.1115719109
-      notes: Briegel et al. 2012 combined crystallography with cryo-electron
-        tomography of native arrays to place receptor trimers of dimers at hexagonal
-        lattice vertices.
+      notes: Briegel et al. 2012 combined crystallography with cryo-electron tomography
+        of native arrays to place receptor trimers of dimers at hexagonal lattice
+        vertices.
   - subject: chea
     predicate: bridges
     object: receptor_trimer
@@ -215,8 +214,8 @@ causal_graphs:
   - subject: receptor_trimer
     predicate: combines with
     object: chea_chew_ring
-    description: Receptor trimer vertices surround rings of alternating CheA P5
-      regulatory domains and CheW couplers.
+    description: Receptor trimer vertices surround rings of alternating CheA P5 regulatory
+      domains and CheW couplers.
     evidence:
     - reference: DOI:10.1073/pnas.1115719109
       notes: Briegel et al. 2012 modeled the receptor trimers surrounding alternating
@@ -346,13 +345,13 @@ causal_graphs:
   - subject: chea
     predicate: transfers phosphoryl group to
     object: phospho_chey
-    description: Autophosphorylated CheA binds CheY and transfers its phosphoryl
-      group to generate the phospho-CheY signal read by the flagellar motor.
+    description: Autophosphorylated CheA binds CheY and transfers its phosphoryl group
+      to generate the phospho-CheY signal read by the flagellar motor.
     evidence:
     - reference: DOI:10.1021/bi962261k
-      notes: Stewart 1997 kinetically characterized CheA-to-CheY phosphotransfer
-        as reversible CheY binding to phospho-CheA followed by rapid reversible
-        phosphoryl transfer.
+      notes: Stewart 1997 kinetically characterized CheA-to-CheY phosphotransfer as
+        reversible CheY binding to phospho-CheA followed by rapid reversible phosphoryl
+        transfer.
   - subject: phospho_chey
     predicate: signals
     object: motor_reversal
