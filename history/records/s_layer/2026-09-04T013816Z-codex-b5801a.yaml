@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/s_layer.yaml
+  slug: s_layer
+session:
+  id: 2026-09-04T013816Z-codex-b5801a
+  timestamp: '2026-09-04T01:38:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Expand S-layer anchoring graph
+  details: Continued the causal-graph score ranking from the poorest existing graph after
+    the graphless records were curated. Expanded the S-layer ASSEMBLY graph from SLP self-assembly
+    alone to include SLH-domain carriage, secondary cell-wall polymer localization, SLH-SCWP
+    binding, and anchoring of the crystalline lattice on the Gram-positive envelope surface.

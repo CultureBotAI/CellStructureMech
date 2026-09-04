@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/gas_vesicle.yaml
+  slug: gas_vesicle
+session:
+  id: 2026-09-04T011557Z-codex-73a905
+  timestamp: '2026-09-04T01:15:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Add gas-vesicle GvpA/GvpC buoyancy graph
+  details: Continued the causal-graph score ranking and curated the next rank-1 graphless
+    record, gas vesicle. Added a FUNCTION graph linking GvpA shell polymerisation, ribbed
+    vesicle shell formation, GvpC-dependent strengthening, liquid-water exclusion by the gas-permeable
+    shell, and gas-filled buoyancy regulation, reusing the Walsby 1994 and Bayro et al. 2012
+    evidence and using the existing Dutka et al. 2023 cryo-ET structural publication as additional
+    edge-level evidence.

@@ -84,6 +84,84 @@ evidence:
 - reference: DOI:10.1016/j.cell.2018.02.050
   notes: 'Shi H, Bratton BP, Gitai Z, Huang KC 2018, ''How to Build a Bacterial Cell:
     MreB as the Foreman of E. coli Construction'', Cell.'
+causal_graphs:
+- graph_id: filament_guided_sidewall_synthesis
+  title: MreB and RodZ orient sidewall synthesis to preserve a rod
+  description: MreB subunits form membrane-associated filaments that RodZ couples
+    to the elongasome. Those filaments orient circumferential sidewall peptidoglycan
+    synthesis, and the resulting feedback keeps rod-shaped cells from widening into
+    spheres.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: mreb
+    label: MreB
+    node_type: GENE_OR_PROTEIN
+    component_ref: mreb
+  - node_id: mreb_filament
+    label: MreB filament
+    node_type: STRUCTURE
+    grounding: cellstructuremech:mreb_filament
+  - node_id: rodz
+    label: RodZ
+    node_type: GENE_OR_PROTEIN
+    component_ref: elongasome_link
+  - node_id: elongasome
+    label: elongasome
+    node_type: STRUCTURE
+    grounding: cellstructuremech:elongasome
+  - node_id: sidewall_synthesis
+    label: sidewall peptidoglycan biosynthetic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009252
+  - node_id: rod_shape
+    label: rod shaped
+    node_type: TRAIT
+    grounding: METPO:1000681
+  edges:
+  - subject: mreb
+    predicate: polymerizes into
+    object: mreb_filament
+    description: MreB monomers assemble into short membrane-bound filaments.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2018.02.050
+      notes: Shi, Bratton, Gitai and Huang 2018 review E. coli MreB filament architecture
+        and membrane association.
+  - subject: rodz
+    predicate: couples
+    object: elongasome
+    description: RodZ bridges MreB filaments to the cell-wall synthesis machinery.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2018.02.050
+      notes: Shi, Bratton, Gitai and Huang 2018 review cytoplasmic RodZ-MreB binding
+        and periplasmic RodZ contacts with wall-synthesis enzymes.
+  - subject: mreb_filament
+    predicate: orients
+    object: elongasome
+    description: Curvature-biased filaments constrain where and in which direction
+      the Rod complex inserts new wall.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2018.02.050
+      notes: Shi, Bratton, Gitai and Huang 2018 describe MreB as a curvature sensor
+        that both detects and changes local shape.
+  - subject: elongasome
+    predicate: carries out
+    object: sidewall_synthesis
+    description: The elongasome is the RodA/PBP2 peptidoglycan synthase complex that
+      builds the cylindrical sidewall.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2677
+      notes: Typas, Banzhaf, Gross and Vollmer 2011 review the elongation complex
+        that builds sidewall peptidoglycan.
+  - subject: sidewall_synthesis
+    predicate: maintains
+    object: rod_shape
+    description: Circumferential sidewall insertion elongates the cylinder and maintains
+      rod-like shape.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2018.02.050
+      notes: Shi, Bratton, Gitai and Huang 2018 describe MreB-driven cell-wall feedback
+        as the self-organizing system for rod shape maintenance.
 discussions:
 - discussion_id: first_minted_identifier
   prompt: This is the corpus's first minted identifier — is the scheme right?
@@ -167,6 +245,14 @@ curation_history:
     was written without reading the paper, and the abstract does not carry the specific
     cell-shape claim it was attached to. The paper remains cited elsewhere on this
     record, and the three verbatim snippets are unaffected.'
+  llm_assisted: true
+- timestamp: '2026-09-04T00:58:09Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a FUNCTION graph for MreB/RodZ-guided sidewall synthesis that points
+    at the separate elongasome record, cites the existing MreB shape review and the
+    elongasome's sidewall-synthesis review, and keeps the filament-to-machine relation
+    out of equivalence-only xrefs.
   llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681

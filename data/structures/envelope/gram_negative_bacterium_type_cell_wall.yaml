@@ -48,6 +48,179 @@ functions:
 evidence:
 - reference: DOI:10.1101/cshperspect.a000414
   notes: The bacterial cell envelope.
+causal_graphs:
+- graph_id: peptidoglycan_outer_membrane_tethering
+  title: Lipoprotein tethers connect the thin wall to the outer membrane
+  description: In the canonical E. coli diderm envelope, the thin peptidoglycan sacculus
+    sits in the periplasm and Braun-lipoprotein tethers connect that wall to the outer
+    membrane. This peptidoglycan-outer membrane coupling tunes the mechanical stiffness
+    of the Gram-negative envelope.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: thin_peptidoglycan
+    label: thin peptidoglycan sacculus
+    node_type: STRUCTURE
+    component_ref: thin_peptidoglycan
+  - node_id: outer_membrane_lipoprotein_links
+    label: peptidoglycan-outer-membrane lipoprotein links
+    node_type: GENE_OR_PROTEIN
+    component_ref: outer_membrane_lipoprotein_links
+    xrefs:
+    - UniProtKB:P69776
+    - Pfam:PF04728
+  - node_id: outer_membrane
+    label: cell outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009279
+  - node_id: linked_diderm_envelope
+    label: linked Gram-negative cell envelope
+    node_type: STRUCTURE
+  - node_id: envelope_stiffness
+    label: cell-envelope stiffness
+    node_type: QUALITY
+  edges:
+  - subject: thin_peptidoglycan
+    predicate: lines
+    object: outer_membrane
+    description: The Gram-negative wall is the thin peptidoglycan layer located in
+      the periplasm, inside the outer membrane.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a000414
+      notes: Silhavy, Kahne and Walker 2010 describe the Gram-negative envelope as
+        an outer membrane around a thin peptidoglycan cell wall.
+  - subject: outer_membrane_lipoprotein_links
+    predicate: anchors into
+    object: outer_membrane
+    description: Lpp is anchored in the outer membrane through its N-terminal lipid.
+    evidence:
+    - reference: DOI:10.1038/s41467-020-15489-1
+      notes: Mathelié-Guinlet and colleagues 2020 describe Lpp as inserted in the
+        E. coli outer membrane by a lipid moiety on its N-terminal cysteine.
+  - subject: outer_membrane_lipoprotein_links
+    predicate: covalently tethers
+    object: thin_peptidoglycan
+    description: A subset of Lpp molecules covalently connect the outer membrane to
+      diaminopimelic-acid residues in peptidoglycan.
+    evidence:
+    - reference: DOI:10.1038/s41467-020-15489-1
+      notes: Mathelié-Guinlet and colleagues 2020 studied E. coli Lpp mutations that
+        alter the covalent peptidoglycan linkage.
+  - subject: outer_membrane_lipoprotein_links
+    predicate: connects
+    object: linked_diderm_envelope
+    description: Lpp-like tethers physically connect the outer membrane and the thin
+      wall into one mechanically coupled envelope.
+    evidence:
+    - reference: DOI:10.1038/s41467-020-15489-1
+      notes: Mathelié-Guinlet and colleagues 2020 show that Lpp contributes to envelope
+        stiffness by covalently connecting the outer membrane to peptidoglycan.
+  - subject: linked_diderm_envelope
+    predicate: controls
+    object: envelope_stiffness
+    description: The peptidoglycan layer, the outer membrane and the proteins that
+      connect them together determine diderm cell-envelope mechanics.
+    evidence:
+    - reference: DOI:10.1038/s41467-020-15489-1
+      notes: Mathelié-Guinlet and colleagues 2020 measured E. coli envelope mechanics
+        after genetically changing Lpp length and its peptidoglycan attachment site.
+- graph_id: lpp_lol_pg_tether_assembly
+  title: Lol trafficking and L,D-transpeptidation install Lpp wall tethers
+  description: Braun lipoprotein matures as a triacylated outer-membrane lipoprotein,
+    is trafficked to the outer membrane by the Lol pathway, and is covalently attached
+    to meso-diaminopimelate in peptidoglycan by L,D-transpeptidases. The result is
+    a protein bridge from the outer membrane to the thin Gram-negative wall.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: lpp
+    label: Braun lipoprotein Lpp
+    node_type: GENE_OR_PROTEIN
+    component_ref: outer_membrane_lipoprotein_links
+    xrefs:
+    - UniProtKB:P69776
+    - Pfam:PF04728
+  - node_id: mature_lpp
+    label: triacylated mature Lpp
+    node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P69776
+    - Pfam:PF04728
+  - node_id: lol_pathway
+    label: Lol lipoprotein-trafficking pathway
+    node_type: GENE_OR_PROTEIN
+  - node_id: outer_membrane
+    label: cell outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009279
+  - node_id: ldt_lpp
+    label: Lpp-anchoring L,D-transpeptidases
+    node_type: GENE_OR_PROTEIN
+  - node_id: thin_peptidoglycan
+    label: thin peptidoglycan sacculus
+    node_type: STRUCTURE
+    component_ref: thin_peptidoglycan
+  - node_id: lpp_pg_tether
+    label: covalent Lpp-peptidoglycan tether
+    node_type: STRUCTURE
+  edges:
+  - subject: lpp
+    predicate: matures into
+    object: mature_lpp
+    description: Lpp enters the bacterial lipoprotein maturation pathway and becomes
+      a triacylated lipoprotein with an N-terminal lipidated cysteine.
+    evidence:
+    - reference: DOI:10.1098/rstb.2015.0030
+      notes: Konovalova and Silhavy 2015 review outer-membrane lipoprotein maturation
+        and trafficking through the Lol pathway.
+  - subject: lol_pathway
+    predicate: traffics
+    object: mature_lpp
+    description: LolCDE, LolA, and LolB move mature outer-membrane lipoproteins from
+      the inner membrane through the periplasm to the outer membrane.
+    evidence:
+    - reference: DOI:10.1073/pnas.1702248114
+      notes: Grabowicz and Silhavy 2017 summarize the Lol trafficking paradigm and
+        test which Lol components remain essential when lipoprotein accumulation at
+        the inner membrane is prevented.
+  - subject: mature_lpp
+    predicate: inserts into
+    object: outer_membrane
+    description: The mature Lpp N-terminal lipid anchors the lipoprotein in the
+      outer membrane.
+    evidence:
+    - reference: DOI:10.1038/s41467-020-15489-1
+      notes: Mathelie-Guinlet and colleagues 2020 describe E. coli Lpp as embedded
+        in the outer membrane through its N-terminal lipid moiety.
+  - subject: ldt_lpp
+    predicate: attaches
+    object: mature_lpp
+    description: The L,D-transpeptidases ErfK, YcfS, and YbiS can link the C-terminal
+      lysine of Lpp to peptidoglycan stem peptides.
+    evidence:
+    - reference: DOI:10.1128/JB.00084-07
+      notes: Magnet et al. 2007 identified ErfK, YcfS, and YbiS as E. coli
+        L,D-transpeptidases that can independently catalyze covalent anchoring of
+        Braun lipoprotein to peptidoglycan.
+  - subject: ldt_lpp
+    predicate: uses acceptor
+    object: thin_peptidoglycan
+    description: Lpp-anchoring L,D-transpeptidation uses meso-diaminopimelate in
+      the peptidoglycan stem peptide as the acceptor for the Lpp C-terminal lysine.
+    evidence:
+    - reference: DOI:10.1128/JB.00084-07
+      notes: Magnet et al. 2007 mapped the E. coli Lpp-peptidoglycan linkage to the
+        meso-diaminopimelate residue of a disaccharide-tripeptide muropeptide.
+  - subject: mature_lpp
+    predicate: forms
+    object: lpp_pg_tether
+    description: Covalent C-terminal linkage to peptidoglycan and N-terminal lipid
+      anchoring in the outer membrane make Lpp a bridge between the two envelope
+      layers.
+    evidence:
+    - reference: DOI:10.1038/s41467-020-15489-1
+      notes: Mathelie-Guinlet and colleagues 2020 measured the contribution of Lpp
+        outer-membrane-to-peptidoglycan tethers to E. coli envelope stiffness.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-30T19:30:00Z'
@@ -69,6 +242,20 @@ curation_history:
   changes: Added S-BIAD2294 and added exact file 'Figure 3/Replicate 1 (MW240530)
     8 minutes/Series002_1.tif', channel 3; per-accession licence, manifest identity,
     byte count and source taxon mapping verified at import.
+- timestamp: '2026-09-04T01:11:45Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a FUNCTION graph for Gram-negative peptidoglycan outer-membrane tethering,
+    using additional E. coli Lpp mechanics evidence to explain how the thin wall and
+    outer membrane are mechanically coupled.
+  llm_assisted: true
+- timestamp: '2026-09-04T04:41:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added an ASSEMBLY graph for Lpp maturation, Lol trafficking to the outer
+    membrane, and L,D-transpeptidase-mediated peptidoglycan tethering; anchored Lpp
+    nodes with exact UniProt and Pfam identifiers.
+  llm_assisted: true
 datasets:
 - accession: S-BIAD2294
   title: Bactericidal Membrane Attack Complex formation initiates at the new pole

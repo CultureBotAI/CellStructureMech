@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+  slug: encapsulin_nanocompartment
+session:
+  id: 2026-09-04T011805Z-codex-da906f
+  timestamp: '2026-09-04T01:18:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Add encapsulin cargo-loading iron-storage graph
+  details: Continued the causal-graph score ranking and curated the next rank-1 graphless
+    record, encapsulin nanocompartment. Added a FUNCTION graph linking HK97-fold shell self-assembly,
+    C-terminal targeting-peptide cargo loading, ferritin-like cargo encapsulation, Fe2+ mineralisation,
+    and iron/oxidative-stress buffering, reusing the existing encapsulin review evidence and
+    adding primary edge evidence from Sutter et al. 2008 and McHugh et al. 2014.

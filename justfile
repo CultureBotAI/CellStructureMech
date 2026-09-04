@@ -54,6 +54,10 @@ render-check:
 report *args:
     uv run python scripts/corpus_report.py {{args}}
 
+# Rank records by causal-graph coverage and evidence quality, poorest first.
+score-causal-graphs *args:
+    uv run python scripts/score_causal_graphs.py {{args}}
+
 # Refresh the generated current-corpus block in README.md.
 docs-stats:
     uv run python scripts/check_docs.py --write

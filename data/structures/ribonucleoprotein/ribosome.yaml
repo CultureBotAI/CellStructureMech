@@ -269,6 +269,8 @@ causal_graphs:
   - subject: aa_trna
     predicate: substrate of
     object: peptide_bond
+    description: The A-site aminoacyl-tRNA supplies the amino group used to form the
+      next peptide bond.
     evidence:
     - reference: DOI:10.1038/nature08403
       notes: Aminoacyl-tRNA in the A site donates its amino group to the peptidyl-tRNA
@@ -294,6 +296,8 @@ causal_graphs:
     predicate: occurs in
     object: ribosome
     predicate_id: BFO:0000066
+    description: After peptidyl transfer, EF-G accelerates ribosomal movement of tRNAs
+      and mRNA by one codon.
     evidence:
     - reference: DOI:10.1038/nature08403
       notes: Translocation is an intrinsic ribosomal motion accelerated by EF-G.
@@ -408,6 +412,12 @@ curation_history:
     the issue asks. The figure is multi-panel and only panel a is imaging data; the
     caption states that instead of letting the composite read as a micrograph. Taxon
     NCBITaxon:83333 was already a canonical example on the record.'
+  llm_assisted: true
+- timestamp: '2026-09-04T01:40:08Z'
+  curator: codex
+  action: ENHANCE_CAUSAL_GRAPH
+  changes: Added descriptions to the remaining ribosome elongation-cycle edges so
+    every edge now states the substrate or translocation step it represents.
   llm_assisted: true
 complex_compositions:
 - composition_id: complex_portal_cpx_3802

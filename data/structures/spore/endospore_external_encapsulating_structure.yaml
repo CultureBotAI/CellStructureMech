@@ -125,6 +125,175 @@ evidence:
     assembly and functions of the multilayered coat'', Nature Reviews Microbiology.'
 - reference: DOI:10.1128/9781555819323.ch10
   notes: '''Spore Resistance Properties'', in The Bacterial Spore (2016).'
+causal_graphs:
+- graph_id: spoiva_cote_coat_assembly
+  title: SpoIVA and CotE organize spore coat layer assembly
+  description: SpoIVA self-assembly creates the basement scaffold that anchors early
+    coat morphogenesis around the forespore. CotE then localizes outside that inner
+    scaffold and organizes assembly of the outer Bacillus subtilis spore coat.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: spoiva
+    label: SpoIVA
+    node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P35149
+  - node_id: basement_layer
+    label: spore coat basement layer
+    node_type: STRUCTURE
+  - node_id: inner_coat
+    label: inner spore coat
+    node_type: STRUCTURE
+  - node_id: cote
+    label: CotE
+    node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P14016
+  - node_id: outer_coat
+    label: outer spore coat
+    node_type: STRUCTURE
+  - node_id: multilayered_coat
+    label: endospore coat
+    node_type: STRUCTURE
+    grounding: GO:0043593
+  edges:
+  - subject: spoiva
+    predicate: self-assembles into
+    object: basement_layer
+    description: SpoIVA binds and hydrolyses ATP and self-assembles into higher-order
+      polymers that build the innermost basement coat layer.
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2008.05.030
+      notes: Ramamurthi and Losick 2008 reconstituted ATP-driven SpoIVA self-assembly
+        into cable-like higher-order structures.
+  - subject: basement_layer
+    predicate: recruits
+    object: inner_coat
+    description: The basement layer on the forespore surface provides the scaffold
+      on which inner-coat proteins assemble.
+    evidence:
+    - reference: DOI:10.1101/gad.8.2.234
+      notes: Driks et al. 1994 localized key coat proteins and proposed that SpoIVA
+        creates the basement layer used for coat assembly.
+  - subject: inner_coat
+    predicate: positions
+    object: cote
+    description: CotE is recruited after early inner-coat morphogenesis and marks
+      the future outer-coat layer.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      notes: McKenney, Driks and Eichenberger 2012 review CotE as a morphogenetic
+        organizer assembled outside the inner coat.
+  - subject: cote
+    predicate: organizes
+    object: outer_coat
+    description: CotE is required to organize outer coat proteins into the outer layer.
+    evidence:
+    - reference: PMID:3139490
+      notes: Zheng et al. identified CotE as a morphogenetic protein required for
+        outer Bacillus subtilis coat assembly.
+  - subject: outer_coat
+    predicate: layers with
+    object: multilayered_coat
+    description: Inner and outer coat morphogenetic modules yield the mature layered
+      endospore coat that surrounds the cortex.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      notes: McKenney, Driks and Eichenberger 2012 review the basement, inner, outer
+        and crust layers that make up the Bacillus subtilis spore coat.
+- graph_id: cortex_coat_resistance
+  title: Cortex dehydration and coat barriers make spores stress resistant
+  description: The chemically modified cortex is the peptidoglycan layer that maintains
+    a dehydrated spore core, and dehydration is a major source of wet-heat resistance.
+    Outside the cortex, morphogenetic coat proteins assemble dozens of proteins into
+    a multilayered shell that blocks lytic enzymes and large toxic molecules.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: cortex
+    label: endospore cortex peptidoglycan
+    node_type: STRUCTURE
+    grounding: GO:0043595
+    component_ref: cortex
+  - node_id: coat
+    label: endospore coat proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: coat
+  - node_id: dehydrated_core
+    label: dehydrated spore core
+    node_type: STATE
+  - node_id: multilayered_coat
+    label: multilayered spore coat
+    node_type: STRUCTURE
+    grounding: GO:0043593
+  - node_id: coat_barrier
+    label: enzyme and toxin barrier
+    node_type: CAPACITY
+  - node_id: spore_resistance
+    label: spore-mediated stress resistance
+    node_type: CAPACITY
+  - node_id: external_structure
+    label: endospore external encapsulating structure
+    node_type: STRUCTURE
+    grounding: GO:0043591
+  edges:
+  - subject: cortex
+    predicate: maintains
+    object: dehydrated_core
+    description: Modified cortex peptidoglycan keeps the spore core dehydrated.
+    evidence:
+    - reference: DOI:10.1128/9781555819323.ch10
+      notes: Setlow 2016 reviews the cortex contribution to spore core dehydration
+        and wet-heat resistance.
+  - subject: dehydrated_core
+    predicate: enables
+    object: spore_resistance
+    description: Core dehydration is a major physical basis for endospore resistance
+      to wet heat.
+    evidence:
+    - reference: DOI:10.1128/9781555819323.ch10
+      notes: Setlow 2016 reviews low core water content as a determinant of spore
+        wet-heat resistance.
+  - subject: coat
+    predicate: assembles into
+    object: multilayered_coat
+    description: SpoIVA, SafA, CotE and other morphogenetic proteins organize coat
+      proteins into the layered shell outside the cortex.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      notes: McKenney, Driks and Eichenberger 2012 review the morphogenetic hierarchy
+        that builds Bacillus subtilis spore coat layers.
+    - reference: PMID:3139490
+      notes: Zheng et al. identified CotE as a morphogenetic protein required for
+        outer Bacillus subtilis coat assembly.
+  - subject: multilayered_coat
+    predicate: forms
+    object: external_structure
+    description: The mature protein coat is one of the external layers surrounding
+      the cortex and dehydrated core.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      notes: McKenney, Driks and Eichenberger 2012 review the spore coat as a multilayered
+        shell outside the cortex.
+  - subject: multilayered_coat
+    predicate: excludes
+    object: coat_barrier
+    description: The coat restricts access of lytic enzymes and large toxic molecules
+      to the spore interior.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      notes: McKenney, Driks and Eichenberger 2012 describe the coat as a barrier
+        against lytic enzymes and large toxic molecules.
+  - subject: coat_barrier
+    predicate: contributes to
+    object: spore_resistance
+    description: Surface-layer exclusion complements cortex-driven core dehydration
+      to protect the dormant spore.
+    evidence:
+    - reference: DOI:10.1128/9781555819323.ch10
+      notes: Setlow 2016 reviews spore resistance properties contributed by external
+        endospore structures.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-01T03:41:49Z'
@@ -141,4 +310,17 @@ curation_history:
     verified reviewed protein identity, gene and strain taxon at UniProtKB and the
     PMID at NCBI. Source licensing responsibility was accepted by the maintainer;
     no cPSORTdb predictions or bulk prose were stored.
+  llm_assisted: true
+- timestamp: '2026-09-04T01:21:41Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a FUNCTION graph linking cortex-dependent core dehydration and multilayer
+    coat assembly to spore resistance.
+  llm_assisted: true
+- timestamp: '2026-09-04T03:59:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a SpoIVA/CotE ASSEMBLY graph for Bacillus subtilis spore coat
+    morphogenesis, grounded cortex and coat nodes to their exact GO part terms,
+    and added primary evidence for SpoIVA-driven basement-layer assembly.
   llm_assisted: true

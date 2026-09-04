@@ -49,6 +49,94 @@ functions:
 evidence:
 - reference: DOI:10.1038/nrmicro2261
   notes: Bacterial nucleoid-associated proteins, nucleoid structure and gene expression.
+- reference: DOI:10.1371/journal.pgen.1008456
+  notes: Verma, Qian and Adhya 2019 review multiscale Escherichia coli nucleoid architecture.
+causal_graphs:
+- graph_id: nap_supercoiling_chromosome_compaction
+  title: NAPs and supercoils compact DNA into an organized nucleoid
+  description: Nucleoid-associated proteins bind the bacterial chromosome and alter
+    its local geometry by bending, wrapping, bridging, and constraining DNA. These
+    local nucleoprotein states combine with plectonemic supercoils and topological
+    domains to compact the chromosome into a dynamic nucleoid that still supports
+    DNA replication and transcription.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: chromosomal_dna
+    label: chromosomal DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: chromosomal_dna
+  - node_id: nucleoid_associated_proteins
+    label: nucleoid-associated proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: nucleoid_associated_proteins
+  - node_id: local_dna_bridging
+    label: locally bent and bridged DNA
+    node_type: STATE
+  - node_id: plectonemic_supercoils
+    label: plectonemic supercoiled loops
+    node_type: STATE
+  - node_id: nucleoid
+    label: nucleoid
+    node_type: STRUCTURE
+    grounding: GO:0009295
+  - node_id: chromosome_organization
+    label: chromosome organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051276
+  edges:
+  - subject: nucleoid_associated_proteins
+    predicate: bind
+    object: chromosomal_dna
+    description: NAPs bind the bacterial chromosome at abundant specific and nonspecific
+      sites.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2261
+      notes: Dillon and Dorman 2010 review NAP binding across the bacterial chromosome.
+  - subject: nucleoid_associated_proteins
+    predicate: bend and bridge
+    object: local_dna_bridging
+    description: NAPs bend, wrap, bridge, and bunch DNA at the sub-kilobase scale.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1008456
+      notes: Verma, Qian and Adhya 2019 review DNA bending, looping, bridging and
+        wrapping by nucleoid-associated architectural proteins.
+  - subject: local_dna_bridging
+    predicate: constrains
+    object: plectonemic_supercoils
+    description: Architectural proteins constrain negative supercoils and help partition
+      chromosomal DNA into topological loops.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1008456
+      notes: Verma, Qian and Adhya 2019 describe NAP constraint of negative supercoils
+        as a route to chromosome topological organization.
+  - subject: chromosomal_dna
+    predicate: folds into
+    object: plectonemic_supercoils
+    description: Supercoiling folds the chromosome into plectonemic loops at the tens-of-kilobases
+      scale.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1008456
+      notes: Verma, Qian and Adhya 2019 describe larger bacterial chromosome loops
+        as plectonemic forms induced by supercoiling.
+  - subject: plectonemic_supercoils
+    predicate: compact into
+    object: nucleoid
+    description: Plectonemic loops and longer-range contacts coalesce into a compact,
+      spatially organized nucleoid.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1008456
+      notes: Verma, Qian and Adhya 2019 review hierarchical compaction of E. coli
+        chromosomal DNA into spatial domains and the nucleoid.
+  - subject: nucleoid
+    predicate: organizes
+    object: chromosome_organization
+    description: The final folded nucleoid keeps the chromosome condensed while leaving
+      DNA accessible for replication, transcription, and segregation.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2261
+      notes: Dillon and Dorman 2010 review the dynamic coupling of bacterial nucleoid
+        structure with gene expression.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-30T19:30:00Z'
@@ -68,6 +156,13 @@ curation_history:
   changes: component_role became required (#77) so the constituent/machinery distinction
     is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
     only where the protein acts on the already-assembled structure.
+  llm_assisted: true
+- timestamp: '2026-09-04T01:18:32Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a FUNCTION graph for NAP-mediated DNA binding, bending, bridging,
+    supercoil constraint, and multiscale chromosomal compaction into the nucleoid,
+    with additional evidence from Verma, Qian and Adhya 2019.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0187

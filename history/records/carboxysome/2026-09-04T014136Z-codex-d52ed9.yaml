@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/carboxysome.yaml
+  slug: carboxysome
+session:
+  id: 2026-09-04T014136Z-codex-d52ed9
+  timestamp: '2026-09-04T01:41:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Describe carboxysome graph edges
+  details: Added descriptions to the remaining carboxysome CO2-concentrating and beta-carboxysome
+    assembly graph edges so shell pore transport, CO2 retention, RuBisCO fixation, cargo condensation,
+    shell-facet formation, and shell closure are explicit while preserving the existing evidence.

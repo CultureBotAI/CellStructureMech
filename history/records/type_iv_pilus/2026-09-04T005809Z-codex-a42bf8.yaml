@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/type_iv_pilus.yaml
+  slug: type_iv_pilus
+session:
+  id: 2026-09-04T005809Z-codex-a42bf8
+  timestamp: '2026-09-04T00:58:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Add type IV pilus extension-retraction graph
+  details: Ranked the corpus with scripts/score_causal_graphs.py, selected the rank-1 graphless
+    type IV pilus record, and added a FUNCTION causal graph for PilB-driven extension, pilin
+    polymerisation, distal surface attachment, PilT-driven retraction, and twitching motility.
+    The graph cites Hospenthal et al. 2017 for Gram-negative T4P biogenesis, Skerker and Berg
+    2001 for direct extension/retraction observation, and Merz, So and Sheetz 2000 for PilT-dependent
+    force generation. Validated the edited record with linkml-validate and scripts/validate_strict.py.

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum.yaml
+  slug: bacterial_type_flagellum
+session:
+  id: 2026-09-04T014136Z-codex-b18360
+  timestamp: '2026-09-04T01:41:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Describe flagellum graph edges
+  details: Added descriptions to the remaining bacterial flagellum torque-generation graph
+    edges so the C-ring-to-rotor, motor-rotation-to-filament, and filament-to-swimming steps
+    are explicit while preserving the existing evidence.

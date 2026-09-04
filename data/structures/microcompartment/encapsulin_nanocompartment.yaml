@@ -95,6 +95,190 @@ evidence:
 - reference: DOI:10.1038/nmicrobiol.2017.29
   notes: '''Widespread distribution of encapsulin nanocompartments reveals functional
     diversity'', Nature Microbiology 2017.'
+causal_graphs:
+- graph_id: cargo_targeting_iron_storage
+  title: Targeting peptides load iron-mineralising cargo into the shell
+  description: Encapsulin shell proteins self-assemble into HK97-fold icosahedra,
+    and C-terminal targeting peptides load ferritin-like cargo proteins onto the shell
+    interior. The enclosed cargo oxidises and mineralises iron inside the nanocompartment,
+    storing iron away from the cytosol to buffer iron and oxidative stress.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: shell
+    label: encapsulin shell protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: shell
+    xrefs:
+    - Pfam:PF04454
+  - node_id: cargo
+    label: targeted ferritin-like cargo enzymes
+    node_type: GENE_OR_PROTEIN
+    component_ref: cargo
+  - node_id: encapsulin_shell
+    label: encapsulin nanocompartment
+    node_type: STRUCTURE
+    grounding: GO:0140737
+  - node_id: ferrous_iron
+    label: ferrous iron
+    node_type: CHEMICAL
+    grounding: CHEBI:29033
+  - node_id: ferric_mineral_core
+    label: ferric mineral core
+    node_type: CHEMICAL
+  - node_id: iron_stress_buffering
+    label: iron and oxidative-stress buffering
+    node_type: CAPACITY
+  edges:
+  - subject: shell
+    predicate: self-assembles into
+    object: encapsulin_shell
+    description: Encapsulin shell protomers assemble into thin icosahedral protein
+      cages.
+    evidence:
+    - reference: DOI:10.1038/nsmb.1473
+      notes: Sutter et al. 2008 resolved a Thermotoga maritima encapsulin shell made
+        from 60 shell-protein copies.
+    - reference: DOI:10.1016/j.cbpa.2016.05.013
+      notes: Giessen 2016 reviews HK97-fold encapsulin shell assembly in T=1 and T=3
+        architectures.
+  - subject: cargo
+    predicate: binds
+    object: shell
+    description: C-terminal targeting peptides on cargo enzymes bind the shell interior
+      and direct cargo loading.
+    evidence:
+    - reference: DOI:10.1038/nsmb.1473
+      notes: Sutter et al. 2008 identified conserved binding sites inside the shell
+        for short C-terminal targeting peptides on oxidative-stress enzymes.
+    - reference: DOI:10.1038/s41598-021-84329-z
+      notes: Altenburg et al. 2021 dissected hydrophobic and ionic interactions
+        that govern targeting-peptide binding to Thermotoga maritima and Myxococcus
+        xanthus encapsulin shells.
+  - subject: encapsulin_shell
+    predicate: encloses
+    object: cargo
+    description: The closed shell packages ferritin-like enzymes and separates their
+      iron chemistry from the surrounding cytosol.
+    evidence:
+    - reference: DOI:10.15252/embj.201488566
+      notes: McHugh et al. 2014 showed that Myxococcus xanthus encapsulin shells are
+        lined with ferritin-like adaptor proteins that nucleate iron-rich granules.
+  - subject: cargo
+    predicate: mineralises
+    object: ferrous_iron
+    description: Encapsulated ferritin-like cargo oxidises Fe2+ and drives ferric
+      mineral deposition in the lumen.
+    evidence:
+    - reference: DOI:10.15252/embj.201488566
+      notes: McHugh et al. 2014 linked ferritin-like encapsulin cargoes with iron
+        sequestration inside the protein shell.
+  - subject: ferrous_iron
+    predicate: becomes
+    object: ferric_mineral_core
+    description: Ferrous iron is converted into a sequestered iron-rich mineral core
+      inside the nanocompartment.
+    evidence:
+    - reference: DOI:10.15252/embj.201488566
+      notes: McHugh et al. 2014 observed dense iron-rich cores in native Myxococcus
+        xanthus encapsulins.
+  - subject: ferric_mineral_core
+    predicate: buffers
+    object: iron_stress_buffering
+    description: Internal mineralisation stores iron away from the cytosol and protects
+      cells from iron starvation and oxidative stress.
+    evidence:
+    - reference: DOI:10.15252/embj.201488566
+      notes: McHugh et al. 2014 tied the Myxococcus xanthus encapsulin system to iron
+        storage and oxidative-stress protection.
+- graph_id: hk97_targeting_peptide_shell_assembly
+  title: HK97-fold shells assemble around peptide-tagged cargo
+  description: Type 1 encapsulin shell protomers form HK97-fold icosahedral cages.
+    Short cargo targeting peptides bind pockets on the shell interior during assembly,
+    producing a closed nanocompartment that selectively encloses enzyme cargo.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: shell
+    label: encapsulin shell protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: shell
+    xrefs:
+    - Pfam:PF04454
+  - node_id: hk97_protomer
+    label: HK97-fold shell protomer
+    node_type: STRUCTURE
+  - node_id: targeting_peptide
+    label: C-terminal cargo targeting peptide
+    node_type: GENE_OR_PROTEIN
+  - node_id: cargo
+    label: targeted cargo enzymes
+    node_type: GENE_OR_PROTEIN
+    component_ref: cargo
+  - node_id: interior_binding_pocket
+    label: shell-interior peptide binding pocket
+    node_type: STRUCTURE
+  - node_id: cargo_loaded_shell
+    label: cargo-loaded encapsulin shell
+    node_type: STRUCTURE
+    grounding: GO:0140737
+  edges:
+  - subject: shell
+    predicate: folds as
+    object: hk97_protomer
+    description: Encapsulin shell proteins adopt an HK97-like fold that is reused
+      by many viral capsid proteins.
+    evidence:
+    - reference: DOI:10.1038/nsmb.1473
+      notes: Sutter et al. 2008 resolved the Thermotoga maritima encapsulin shell
+        and found an HK97-like shell-protein fold.
+  - subject: hk97_protomer
+    predicate: self-assembles into
+    object: cargo_loaded_shell
+    description: Shell protomers self-assemble into icosahedral cages that can form
+      without cargo and package cargo when targeting peptides are present.
+    evidence:
+    - reference: DOI:10.15252/embj.201488566
+      notes: McHugh et al. 2014 resolved the 180-subunit Myxococcus xanthus EncA
+        shell and its ferritin-like cargo.
+    - reference: DOI:10.1016/j.cbpa.2016.05.013
+      notes: Giessen 2016 reviews T=1 and T=3 encapsulin shell architectures.
+  - subject: cargo
+    predicate: exposes
+    object: targeting_peptide
+    description: Encapsulin cargo proteins carry terminal peptide tags that are
+      sufficient to route native or heterologous proteins into the assembling shell.
+    evidence:
+    - reference: DOI:10.1021/acs.biochem.6b00294
+      notes: Cassidy-Amstutz et al. 2016 identified minimal peptide tags that load
+        proteins into Thermotoga maritima encapsulins in vivo and in vitro.
+  - subject: targeting_peptide
+    predicate: binds
+    object: interior_binding_pocket
+    description: Hydrophobic and ionic contacts between targeting peptides and the
+      shell interior determine shell binding strength and cargo-loading specificity.
+    evidence:
+    - reference: DOI:10.1038/s41598-021-84329-z
+      notes: Altenburg et al. 2021 characterized and engineered targeting-peptide
+        interactions with Thermotoga maritima and Myxococcus xanthus shell interiors.
+  - subject: interior_binding_pocket
+    predicate: recruits
+    object: cargo
+    description: Binding sites on the inner shell surface capture targeting peptides
+      and localize cargo enzymes into the nascent shell lumen.
+    evidence:
+    - reference: DOI:10.1038/nsmb.1473
+      notes: Sutter et al. 2008 identified conserved binding sites for targeting
+        peptides on the inside of the Thermotoga maritima shell.
+  - subject: cargo_loaded_shell
+    predicate: encloses
+    object: cargo
+    description: Completion of the shell leaves the targeted enzymes packaged inside
+      the encapsulin lumen.
+    evidence:
+    - reference: DOI:10.15252/embj.201488566
+      notes: McHugh et al. 2014 showed ferritin-like cargoes enclosed inside native
+        Myxococcus xanthus encapsulin shells.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-02T04:49:54Z'
@@ -102,4 +286,18 @@ curation_history:
   action: CREATED_RECORD
   changes: Drafted from the cited reviews; every GO term, taxon id and DOI resolved
     live before writing. Not yet human-reviewed.
+  llm_assisted: true
+- timestamp: '2026-09-04T01:17:11Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a FUNCTION graph for targeting-peptide cargo loading and ferritin-like
+    iron mineralisation inside encapsulin shells, with primary evidence from Sutter
+    et al. 2008 and McHugh et al. 2014.
+  llm_assisted: true
+- timestamp: '2026-09-04T04:22:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added an ASSEMBLY graph for HK97-fold shell self-assembly around
+    targeting-peptide-tagged cargo, grounded ferrous iron with ChEBI, and anchored
+    shell protein nodes with Pfam.
   llm_assisted: true

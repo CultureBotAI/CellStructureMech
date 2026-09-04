@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+  slug: peptidoglycan_based_cell_wall
+session:
+  id: 2026-09-04T034706Z-codex-fc9767
+  timestamp: '2026-09-04T03:47:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Ground peptidoglycan Lipid II assembly graph
+  details: Continued from the causal-graph score ranking after peptidoglycan-based cell wall
+    remained the poorest record. Reviewed the Lipid II assembly graph against primary literature,
+    added the MurJ flipping step that was missing between precursor synthesis and polymerisation,
+    grounded Lipid II to CHEBI:27692, anchored the MurJ, RodA/FtsW SEDS and penicillin-binding
+    transpeptidase nodes to Pfam or InterPro, and added primary evidence for MurJ flipping
+    plus RodA and FtsW peptidoglycan polymerase activity. Validated the edited YAML with linkml-validate
+    against CellStructureRecord before recording the change.

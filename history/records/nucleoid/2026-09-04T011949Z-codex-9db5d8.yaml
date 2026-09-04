@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/nucleoid/nucleoid.yaml
+  slug: nucleoid
+session:
+  id: 2026-09-04T011949Z-codex-9db5d8
+  timestamp: '2026-09-04T01:19:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Add nucleoid NAP and supercoiling graph
+  details: Continued the causal-graph score ranking and curated the next rank-1 graphless
+    record, nucleoid. Added a FUNCTION graph linking chromosomal DNA, nucleoid-associated
+    protein binding, local DNA bending and bridging, negative-supercoil constraint, plectonemic
+    loop formation, and multiscale chromosome compaction into the nucleoid, reusing the existing
+    Dillon and Dorman 2010 evidence and adding Verma, Qian and Adhya 2019 for Escherichia
+    coli nucleoid architecture.

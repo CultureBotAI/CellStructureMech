@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/proton_transporting_atp_synthase_complex.yaml
+  slug: proton_transporting_atp_synthase_complex
+session:
+  id: 2026-09-04T014136Z-codex-90001a
+  timestamp: '2026-09-04T01:41:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Describe ATP synthase graph edges
+  details: Added descriptions to the remaining ATP synthase rotary-catalysis graph edges so
+    proton flow through subunit a, c-ring and central-stalk rotation, catalytic-head cycling,
+    ATP formation, and participation in proton-motive-force-driven ATP synthesis are explicit
+    while preserving the existing evidence.

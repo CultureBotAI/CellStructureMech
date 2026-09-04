@@ -561,6 +561,8 @@ causal_graphs:
   - subject: shell
     predicate: permits passage of
     object: bicarbonate
+    description: Selective shell pores admit cytosolic bicarbonate into the carboxysome
+      lumen.
     evidence:
     - reference: DOI:10.1038/nrmicro.2018.10
       notes: Shell pores are selective for small anions such as HCO3-.
@@ -574,18 +576,24 @@ causal_graphs:
   - subject: ca
     predicate: elevates local concentration of
     object: co2
+    description: Carbonic anhydrase enriches CO2 inside the shell by dehydrating imported
+      bicarbonate.
     evidence:
     - reference: DOI:10.1128/MMBR.00061-12
       notes: Rae et al. 2013.
   - subject: shell
     predicate: prevents loss of
     object: co2
+    description: The protein shell slows CO2 leakage to retain substrate near the
+      encapsulated RuBisCO.
     evidence:
     - reference: DOI:10.1038/nrmicro.2018.10
       notes: The shell retards CO2 efflux to the cytoplasm.
   - subject: co2
     predicate: substrate of
     object: rubisco
+    description: Locally generated CO2 is the carboxylation substrate for RuBisCO
+      inside the carboxysome.
     evidence:
     - reference: DOI:10.1128/MMBR.00061-12
       notes: Rae et al. 2013.
@@ -593,6 +601,7 @@ causal_graphs:
     predicate: catalyses
     object: fixation
     predicate_id: RO:0002327
+    description: Encapsulated RuBisCO fixes CO2 into the Calvin-Benson-Bassham cycle.
     evidence:
     - reference: DOI:10.1128/MMBR.00061-12
       notes: Rae et al. 2013.
@@ -650,6 +659,8 @@ causal_graphs:
   - subject: scaffold
     predicate: forms
     object: procarboxysome
+    description: Scaffolded RuBisCO condenses before shell recruitment to create the
+      beta-carboxysome precursor.
     evidence:
     - reference: DOI:10.1128/MMBR.00061-12
       notes: Rae et al. 2013 describe cargo condensation preceding shell encapsulation
@@ -683,12 +694,15 @@ causal_graphs:
   - subject: bmc_h
     predicate: forms
     object: shell
+    description: BMC-H hexamers tile the flat facets of the carboxysome shell.
     evidence:
     - reference: DOI:10.1038/nrmicro.2018.10
       notes: Kerfeld et al. 2018 describe BMC-H hexamers tiling the shell facets.
   - subject: bmc_t
     predicate: forms
     object: shell
+    description: CcmP-family BMC-T proteins contribute stacked trimer pseudohexamers
+      to the shell.
     evidence:
     - reference: PMID:23572529
       notes: UniProt cites this paper (Q31QW7) for CcmP forming a dimer of stacked
@@ -696,6 +710,7 @@ causal_graphs:
   - subject: shell
     predicate: encapsulates
     object: procarboxysome
+    description: Shell facets assemble around the condensed cargo to close the carboxysome.
     evidence:
     - reference: DOI:10.1128/MMBR.00061-12
       notes: Rae et al. 2013 describe the shell closing around the condensed cargo.
@@ -804,6 +819,11 @@ curation_history:
     evidence note(s), fetched from PubMed esummary. The notes were previously identical
     per accession, so a reader could not tell the cited papers apart. Only notes byte-identical
     to the seeded boilerplate were touched.'
+- timestamp: '2026-09-04T01:40:08Z'
+  curator: codex
+  action: ENHANCE_CAUSAL_GRAPH
+  changes: Added descriptions to the remaining carboxysome CO2-concentrating and assembly
+    graph edges so every causal edge now states its mechanism.
 xrefs:
 - uniprot.location:SL-0034
 discussions:

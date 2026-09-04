@@ -125,6 +125,10 @@ evidence:
 causal_graphs:
 - graph_id: s_layer_self_assembly
   title: S-layer proteins self-assemble into a surface lattice
+  description: Secreted S-layer proteins self-assemble into a crystalline two-dimensional
+    lattice that coats the outer face of the cell. In many Gram-positive S-layers,
+    SLH domains within the lattice-forming protein bind secondary cell-wall polymers
+    to retain the lattice on the peptidoglycan-linked envelope surface.
   graph_kind: ASSEMBLY
   scope_status: MECHANISTIC
   nodes:
@@ -132,6 +136,14 @@ causal_graphs:
     label: S-layer (glyco)protein subunit
     node_type: GENE_OR_PROTEIN
     component_ref: slp
+  - node_id: slh_domain
+    label: S-layer homology domain
+    node_type: GENE_OR_PROTEIN
+    component_ref: slh_domain
+  - node_id: scwp
+    label: secondary cell-wall polymer
+    node_type: CHEMICAL
+    component_ref: scwp
   - node_id: lattice
     label: S-layer
     node_type: STRUCTURE
@@ -141,6 +153,15 @@ causal_graphs:
     label: cell envelope outer surface
     node_type: CELLULAR_LOCALIZATION
   edges:
+  - subject: slh_domain
+    predicate: is part of
+    object: slp
+    description: Tandem SLH domains are N-terminal anchoring modules carried by many
+      Gram-positive bacterial S-layer proteins.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3213
+      notes: Fagan and Fairweather 2014 review SLH-domain-mediated anchoring of bacterial
+        S-layer proteins.
   - subject: slp
     predicate: self-assembles into
     object: lattice
@@ -157,6 +178,33 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro3213
       notes: Fagan and Fairweather 2014 describe bacterial S-layers as cell-surface
         coats.
+  - subject: scwp
+    predicate: localizes to
+    object: cell_surface
+    description: In SLH-mediated systems, the secondary cell-wall polymer is linked
+      to peptidoglycan at the envelope surface.
+    evidence:
+    - reference: DOI:10.1111/1574-6976.12063
+      notes: Sleytr et al. 2014 review the peptidoglycan-linked secondary cell-wall
+        polymers that anchor S-layer proteins in many Gram-positive bacteria.
+  - subject: slh_domain
+    predicate: binds
+    object: scwp
+    description: SLH domains recognize the secondary cell-wall polymer to attach the
+      S-layer protein to the wall.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3213
+      notes: Fagan and Fairweather 2014 describe the interaction between SLH domains
+        and pyruvylated secondary cell-wall polymers.
+  - subject: scwp
+    predicate: anchors
+    object: lattice
+    description: The SLH-SCWP interaction retains the assembled lattice on the outer
+      cell-envelope surface.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3213
+      notes: Fagan and Fairweather 2014 review non-covalent S-layer anchoring through
+        SLH domains and secondary cell-wall polymers.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-29T00:00:00Z'
@@ -191,6 +239,12 @@ curation_history:
   changes: component_role became required (#77) so the constituent/machinery distinction
     is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
     only where the protein acts on the already-assembled structure.
+  llm_assisted: true
+- timestamp: '2026-09-04T01:23:31Z'
+  curator: codex
+  action: ENHANCE_CAUSAL_GRAPH
+  changes: Expanded the S-layer assembly graph with SLH-domain and secondary-cell-wall
+    polymer anchoring nodes and evidence-backed edges.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0262

@@ -205,6 +205,7 @@ causal_graphs:
   - subject: iron
     predicate: is mineralised into
     object: crystal
+    description: Iron imported into the magnetosome vesicle is biomineralised as magnetite.
     evidence:
     - reference: DOI:10.1038/nrmicro.2016.99
       notes: Uebe & Schüler 2016 describe magnetite biomineralisation within the vesicle.
@@ -331,6 +332,11 @@ curation_history:
     evidence note(s), fetched from PubMed esummary. The notes were previously identical
     per accession, so a reader could not tell the cited papers apart. Only notes byte-identical
     to the seeded boilerplate were touched.'
+- timestamp: '2026-09-04T01:40:08Z'
+  curator: codex
+  action: ENHANCE_CAUSAL_GRAPH
+  changes: Added the missing description to the magnetosome iron-mineralisation edge.
+  llm_assisted: true
 xrefs:
 - uniprot.location:SL-0510
 - MICRO:0000216
