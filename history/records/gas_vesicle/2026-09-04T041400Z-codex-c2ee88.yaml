@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/gas_vesicle.yaml
+  slug: gas_vesicle
+session:
+  id: 2026-09-04T041400Z-codex-c2ee88
+  timestamp: '2026-09-04T04:14:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Added an accessory-Gvp gas-vesicle assembly graph
+  details: Added an ASSEMBLY causal graph that records accessory GvpF/GvpL-family interaction
+    evidence for recruiting GvpA-family shell proteins during gas-vesicle biogenesis, anchored
+    GvpA, GvpC, and GvpF/GvpL graph nodes with Pfam identifiers, and validated the edited
+    CellStructureRecord with linkml-validate.

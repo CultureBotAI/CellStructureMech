@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/magnetosome.yaml
+  slug: magnetosome
+session:
+  id: 2026-09-04T014136Z-codex-ea15e8
+  timestamp: '2026-09-04T01:41:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Describe magnetosome mineralisation edge
+  details: Added the missing description to the magnetosome chain-alignment graph edge that
+    converts imported iron into magnetite, preserving the existing Uebe and Schueler 2016
+    evidence.

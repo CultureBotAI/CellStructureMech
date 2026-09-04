@@ -135,7 +135,113 @@ curation_history:
     is no curation reason to differ -- the exception list is for residuals a curator
     has accepted, not for making a gate quiet.'
   llm_assisted: true
+- timestamp: '2026-09-04T04:32:00Z'
+  curator: codex
+  action: ENHANCE_CAUSAL_GRAPH
+  changes: Added a CheA/CheW ASSEMBLY graph for hexagonal array formation, anchored
+    MCP and CheW graph nodes with Pfam identifiers, added a directly cited CheA-to-CheY
+    phosphotransfer edge, and resolved the phosphotransfer curation TODO.
+  llm_assisted: true
 causal_graphs:
+- graph_id: chea_chew_hexagonal_array_assembly
+  title: CheA and CheW network receptor trimers into a hexagonal array
+  description: Methyl-accepting chemotaxis proteins assemble as receptor trimers of
+    dimers. CheA dimers and CheW couplers connect neighboring trimers through a baseplate
+    of alternating CheA regulatory domains and CheW subunits, yielding the extended
+    hexagonal array that supports cooperative chemotaxis signalling.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: mcp
+    label: methyl-accepting chemotaxis protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: mcp
+    xrefs:
+    - Pfam:PF00015
+  - node_id: receptor_trimer
+    label: MCP trimer of dimers
+    node_type: STRUCTURE
+  - node_id: chea
+    label: CheA histidine kinase dimer
+    node_type: GENE_OR_PROTEIN
+    component_ref: chea
+  - node_id: chew
+    label: CheW coupling protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: chew
+    xrefs:
+    - Pfam:PF01584
+  - node_id: chea_chew_ring
+    label: alternating CheA/CheW baseplate ring
+    node_type: STRUCTURE
+  - node_id: core_signaling_unit
+    label: chemoreceptor core signaling unit
+    node_type: STRUCTURE
+  - node_id: array
+    label: methyl accepting chemotaxis protein complex
+    node_type: STRUCTURE
+    grounding: GO:0098561
+  edges:
+  - subject: mcp
+    predicate: oligomerizes into
+    object: receptor_trimer
+    description: Chemoreceptor dimers are organized as trimers of dimers at vertices
+      of the lattice.
+    evidence:
+    - reference: DOI:10.1073/pnas.1115719109
+      notes: Briegel et al. 2012 combined crystallography with cryo-electron tomography
+        of native arrays to place receptor trimers of dimers at hexagonal lattice
+        vertices.
+  - subject: chea
+    predicate: bridges
+    object: receptor_trimer
+    description: One CheA dimer connects two receptor trimers as part of the core
+      chemotaxis signaling unit.
+    evidence:
+    - reference: DOI:10.1073/pnas.1104824108
+      notes: Li and Hazelbauer 2011 showed that purified core signaling complexes
+        contained two receptor trimers of dimers and two CheW proteins for each CheA
+        dimer.
+  - subject: chew
+    predicate: couples
+    object: receptor_trimer
+    description: CheW links receptor trimers to CheA and helps build the repeating
+      core signaling unit.
+    evidence:
+    - reference: DOI:10.1073/pnas.1104824108
+      notes: Li and Hazelbauer 2011 established the two-CheW stoichiometry of the
+        two-trimer, one-CheA-dimer core unit.
+  - subject: receptor_trimer
+    predicate: combines with
+    object: chea_chew_ring
+    description: Receptor trimer vertices surround rings of alternating CheA P5 regulatory
+      domains and CheW couplers.
+    evidence:
+    - reference: DOI:10.1073/pnas.1115719109
+      notes: Briegel et al. 2012 modeled the receptor trimers surrounding alternating
+        CheA/CheW rings in the cytoplasmic baseplate.
+  - subject: chea_chew_ring
+    predicate: forms
+    object: core_signaling_unit
+    description: The CheA/CheW ring and associated receptor trimers define the repeated
+      building block of the chemoreceptor array.
+    evidence:
+    - reference: DOI:10.1021/bi5000614
+      notes: Briegel, Li, Bilwes, Hughes, Jensen and Crane 2014 reviewed a sequential
+        assembly model in which two receptor trimers, one CheA dimer, and two CheW
+        monomers form the core functional unit before hexagons and the superlattice.
+  - subject: core_signaling_unit
+    predicate: tiles into
+    object: array
+    description: Core units share CheA/CheW linkers to produce the extended hexagonal
+      chemotaxis array with conserved 12 nm spacing.
+    evidence:
+    - reference: DOI:10.1073/pnas.0905181106
+      notes: Briegel et al. 2009 found a conserved hexagonal lattice spacing of about
+        12 nm in chemoreceptor arrays from diverse bacteria and archaea.
+    - reference: DOI:10.1073/pnas.1115719109
+      notes: Briegel et al. 2012 showed that CheA dimerization domains link neighboring
+        rings to form the extended stable array.
 - graph_id: chemoreceptor_array_signalling
   title: Chemoeffector binding is amplified by the array and read out as phospho-CheY
   description: 'The array''s function is gain: binding at one receptor reaches ~35
@@ -153,10 +259,14 @@ causal_graphs:
     label: methyl-accepting chemotaxis protein
     node_type: GENE_OR_PROTEIN
     component_ref: mcp
+    xrefs:
+    - Pfam:PF00015
   - node_id: chew
     label: CheW coupling protein
     node_type: GENE_OR_PROTEIN
     component_ref: chew
+    xrefs:
+    - Pfam:PF01584
   - node_id: chea
     label: CheA histidine autokinase
     node_type: GENE_OR_PROTEIN
@@ -232,6 +342,16 @@ causal_graphs:
       notes: Verbatim. Stated as an implication of the observations, not a direct
         measurement, and the edge is no stronger than that. The CheA-to-CheY phosphotransfer
         step is not stated quotably in this source, so it is not drawn as an edge.
+  - subject: chea
+    predicate: transfers phosphoryl group to
+    object: phospho_chey
+    description: Autophosphorylated CheA binds CheY and transfers its phosphoryl group
+      to generate the phospho-CheY signal read by the flagellar motor.
+    evidence:
+    - reference: DOI:10.1021/bi962261k
+      notes: Stewart 1997 kinetically characterized CheA-to-CheY phosphotransfer as
+        reversible CheY binding to phospho-CheA followed by rapid reversible phosphoryl
+        transfer.
   - subject: phospho_chey
     predicate: signals
     object: motor_reversal
@@ -252,10 +372,13 @@ discussions:
     a primary source for the phosphotransfer be added, or is the array's output adequately
     described by 'the receptor cluster produces phospho-CheY signals'?
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#chemoreceptor_array_signalling
   rationale: 'The graph deliberately stops where the source stops. Drawing the step
     from background knowledge would be the defect #161 records.'
+  resolution_note: Added an evidence-backed CheA-to-phospho-CheY edge from the Stewart
+    1997 kinetic characterization of CheA-to-CheY phosphotransfer.
   posed_by: claude
+  resolved_date: '2026-09-04'
   posed_date: '2026-09-02'

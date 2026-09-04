@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/ribosome.yaml
+  slug: ribosome
+session:
+  id: 2026-09-04T014136Z-codex-3472a5
+  timestamp: '2026-09-04T01:41:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Describe ribosome graph edges
+  details: Added descriptions to the remaining ribosome elongation-cycle graph edges so the
+    aminoacyl-tRNA substrate role and EF-G-accelerated translocation within the ribosome are
+    explicit while preserving the existing evidence.

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/endospore_external_encapsulating_structure.yaml
+  slug: endospore_external_encapsulating_structure
+session:
+  id: 2026-09-04T012301Z-codex-eb0cc5
+  timestamp: '2026-09-04T01:23:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Add endospore cortex and coat resistance graph
+  details: Continued the causal-graph score ranking and curated the final graphless record,
+    endospore external encapsulating structure. Added a FUNCTION graph linking cortex peptidoglycan
+    to core dehydration and heat resistance, and coat-protein assembly to the multilayered
+    enzyme and toxin barrier that protects dormant spores.

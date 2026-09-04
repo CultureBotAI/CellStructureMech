@@ -54,6 +54,170 @@ functions:
 evidence:
 - reference: DOI:10.1101/cshperspect.a000414
   notes: The bacterial cell envelope.
+causal_graphs:
+- graph_id: lps_bam_outer_membrane_barrier
+  title: Lpt and BAM assemble the asymmetric permeability barrier
+  description: The Lpt transenvelope machine delivers LPS to the cell surface, while
+    the BAM complex folds and inserts beta-barrel proteins into the outer membrane.
+    LPS concentrated in the outer leaflet and OMP beta barrels together form the asymmetric
+    permeability barrier that distinguishes the diderm envelope.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: lpt_machine
+    label: Lpt transenvelope LPS transport machine
+    node_type: GENE_OR_PROTEIN
+  - node_id: lipopolysaccharide
+    label: lipopolysaccharide
+    node_type: CHEMICAL
+    component_ref: lipopolysaccharide
+    grounding: CHEBI:16412
+  - node_id: bam_complex
+    label: beta-barrel assembly machinery complex
+    node_type: GENE_OR_PROTEIN
+  - node_id: outer_membrane_beta_barrels
+    label: outer-membrane beta-barrel proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: outer_membrane_beta_barrels
+  - node_id: asymmetric_outer_membrane
+    label: cell outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009279
+  - node_id: permeability_barrier
+    label: selective permeability barrier
+    node_type: CAPACITY
+  edges:
+  - subject: lpt_machine
+    predicate: transports to the outer leaflet
+    object: lipopolysaccharide
+    description: LptBFGC/A/DE moves LPS from the inner membrane, across the periplasm
+      and through LptD/E for insertion into the outer leaflet.
+    evidence:
+    - reference: DOI:10.1074/jbc.R117.802512
+      notes: Sperandeo, Martorana and Polissi 2017 review LPS transport across the
+        envelope and assembly at the outer-membrane outer leaflet.
+  - subject: lipopolysaccharide
+    predicate: forms
+    object: asymmetric_outer_membrane
+    description: LPS occupies the outer leaflet while phospholipids are concentrated
+      in the inner leaflet.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a000414
+      notes: Silhavy, Kahne and Walker 2010 describe the outer membrane as a lipid
+        bilayer with phospholipids confined to the inner leaflet and LPS in the outer
+        leaflet.
+  - subject: bam_complex
+    predicate: folds and inserts
+    object: outer_membrane_beta_barrels
+    description: BAM catalyzes assembly of OMP beta barrels into the outer membrane.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-061408-144611
+      notes: Hagan, Silhavy and Kahne 2011 review beta-barrel membrane-protein assembly
+        by the Bam complex.
+  - subject: outer_membrane_beta_barrels
+    predicate: embed in
+    object: asymmetric_outer_membrane
+    description: OMP beta barrels are the integral transmembrane protein class of
+      the outer membrane.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a000414
+      notes: Silhavy, Kahne and Walker 2010 describe nearly all integral transmembrane
+        outer-membrane proteins as beta barrels.
+  - subject: asymmetric_outer_membrane
+    predicate: enables
+    object: permeability_barrier
+    description: The LPS-rich outer leaflet excludes many toxic hydrophobic molecules,
+      while porin beta barrels admit selected hydrophilic solutes.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a000414
+      notes: Silhavy, Kahne and Walker 2010 tie the tightly packed LPS leaflet to
+        the hydrophobic barrier and beta-barrel porins to selected small-molecule
+        diffusion.
+- graph_id: lps_porin_selective_permeability
+  title: LPS and beta-barrel porins tune selective permeability
+  description: Lipopolysaccharide forms a densely packed outer leaflet that slows
+    hydrophobic toxin entry, while beta-barrel porins provide size- and chemistry-limited
+    routes for hydrophilic solutes, jointly creating the selective permeability barrier
+    of the outer membrane.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: lipopolysaccharide
+    label: lipopolysaccharide
+    node_type: CHEMICAL
+    component_ref: lipopolysaccharide
+    grounding: CHEBI:16412
+  - node_id: ordered_lps_layer
+    label: tightly packed LPS surface layer
+    node_type: STRUCTURE
+  - node_id: hydrophobic_compounds
+    label: hydrophobic toxic compounds
+    node_type: CHEMICAL
+  - node_id: beta_barrel_porins
+    label: beta-barrel porin channels
+    node_type: GENE_OR_PROTEIN
+    component_ref: outer_membrane_beta_barrels
+  - node_id: hydrophilic_solutes
+    label: hydrophilic solutes
+    node_type: CHEMICAL
+  - node_id: selective_permeability_barrier
+    label: selective permeability barrier
+    node_type: CAPACITY
+  edges:
+  - subject: lipopolysaccharide
+    predicate: packs into
+    object: ordered_lps_layer
+    description: LPS molecules in the outer leaflet pack into an ordered surface layer
+      that restricts diffusion through the lipid phase.
+    evidence:
+    - reference: DOI:10.1128/MMBR.67.4.593-656.2003
+      notes: Nikaido 2003 reviews how LPS organization makes the outer membrane a
+        low-permeability barrier.
+  - subject: ordered_lps_layer
+    predicate: excludes
+    object: hydrophobic_compounds
+    description: The ordered LPS layer inhibits nonspecific penetration by hydrophobic
+      antibiotics, detergents, and other toxic molecules.
+    evidence:
+    - reference: DOI:10.1128/MMBR.67.4.593-656.2003
+      notes: Nikaido 2003 explains that the outer leaflet blocks hydrophobic solutes
+        that would otherwise partition through ordinary phospholipid bilayers.
+  - subject: beta_barrel_porins
+    predicate: channel
+    object: hydrophilic_solutes
+    description: Porin beta barrels provide water-filled diffusion paths for small
+      hydrophilic solutes that cannot readily cross the LPS-rich lipid phase.
+    evidence:
+    - reference: DOI:10.1128/MMBR.67.4.593-656.2003
+      notes: Nikaido 2003 reviews porin-mediated diffusion across Gram-negative outer
+        membranes.
+  - subject: beta_barrel_porins
+    predicate: filter
+    object: hydrophilic_solutes
+    description: Pore size and channel properties limit which hydrophilic solutes
+      pass through outer-membrane porins.
+    evidence:
+    - reference: DOI:10.1128/MMBR.67.4.593-656.2003
+      notes: Nikaido 2003 describes porin permeability in terms of size exclusion,
+        channel specificity, and diffusion rate.
+  - subject: ordered_lps_layer
+    predicate: cooperates with
+    object: beta_barrel_porins
+    description: The low-permeability LPS leaflet and selective porin channels combine
+      to admit useful hydrophilic molecules while reducing harmful influx.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a000414
+      notes: Silhavy, Kahne and Walker 2010 connect outer-leaflet LPS and beta-barrel
+        porins to the outer membrane's permeability-barrier function.
+  - subject: beta_barrel_porins
+    predicate: enables
+    object: selective_permeability_barrier
+    description: Selective porin conductance superimposes controlled nutrient uptake
+      on the LPS-based exclusion barrier.
+    evidence:
+    - reference: DOI:10.1128/MMBR.67.4.593-656.2003
+      notes: Nikaido 2003 reviews how porin diffusion and outer-leaflet LPS jointly
+        determine Gram-negative outer-membrane permeability.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-30T19:30:00Z'
@@ -73,6 +237,20 @@ curation_history:
   changes: component_role became required (#77) so the constituent/machinery distinction
     is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
     only where the protein acts on the already-assembled structure.
+  llm_assisted: true
+- timestamp: '2026-09-04T01:09:39Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added an ASSEMBLY graph for Lpt-driven LPS transport, BAM-driven beta-barrel
+    OMP assembly, and the resulting asymmetric outer-membrane permeability barrier,
+    with additional DOI evidence on Lpt and BAM.
+  llm_assisted: true
+- timestamp: '2026-09-04T04:03:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a FUNCTION graph for LPS- and beta-barrel-porin-mediated selective
+    permeability, grounded LPS nodes with ChEBI, and added Nikaido 2003 evidence for
+    hydrophobic exclusion and porin diffusion.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0040

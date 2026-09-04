@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+  slug: gram_negative_bacterium_type_cell_wall
+session:
+  id: 2026-09-04T011223Z-codex-b5961f
+  timestamp: '2026-09-04T01:12:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Add Gram-negative wall tethering causal graph
+  details: Continued the causal-graph score ranking and curated the next rank-1 graphless
+    record, Gram-negative-bacterium-type cell wall. Added a FUNCTION graph for the thin periplasmic
+    peptidoglycan wall and outer-membrane lipoprotein links, bounded its mechanistic Lpp evidence
+    to canonical E. coli, and cited Mathelie-Guinlet and colleagues 2020 for peptidoglycan-outer
+    membrane coupling and envelope stiffness.

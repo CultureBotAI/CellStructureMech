@@ -95,6 +95,14 @@ def test_corpus_report_runs():
     assert "structure records" in out.stdout
 
 
+def test_score_causal_graphs_runs():
+    out = _run("scripts/score_causal_graphs.py", "--limit", "3")
+    assert out.returncode == 0, out.stderr
+    rows = out.stdout.splitlines()
+    assert rows[0].startswith("rank\tscore\tpath")
+    assert [row.split("\t", maxsplit=1)[0] for row in rows[1:]] == ["1", "2", "3"]
+
+
 def test_rendered_site_has_no_broken_local_links(tmp_path):
     """Every relative href/src in the rendered site must resolve to a file in
     the output tree. Caught #21, where record pages pointed one level too

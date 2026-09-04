@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mreb_filament.yaml
+  slug: mreb_filament
+session:
+  id: 2026-09-04T010327Z-codex-4abcd4
+  timestamp: '2026-09-04T01:03:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Add MreB sidewall-synthesis causal graph
+  details: Continued from the causal-graph score ranking after type_iv_pilus and curated the
+    next rank-1 graphless record. Added a FUNCTION graph that links MreB polymerisation, RodZ
+    coupling, the separate elongasome record, GO:0009252 sidewall peptidoglycan synthesis,
+    and the existing METPO:1000681 rod-shaped trait. The graph reuses the reviewed MreB/shape
+    literature already on the record and the sidewall-synthesis review that grounds the elongasome
+    graph, while preserving the existing decision that the filament-to-machine relation is
+    not an xref equivalence.

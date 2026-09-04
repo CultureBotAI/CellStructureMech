@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/cell_outer_membrane.yaml
+  slug: cell_outer_membrane
+session:
+  id: 2026-09-04T040500Z-codex-f9c170
+  timestamp: '2026-09-04T04:05:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Added an outer-membrane selective-permeability function graph
+  details: Added a FUNCTION causal graph for LPS and beta-barrel porin contributions to selective
+    outer-membrane permeability, grounded LPS nodes to CHEBI:16412, added Nikaido 2003 evidence
+    for hydrophobic exclusion and porin diffusion, and validated the edited CellStructureRecord
+    with linkml-validate.

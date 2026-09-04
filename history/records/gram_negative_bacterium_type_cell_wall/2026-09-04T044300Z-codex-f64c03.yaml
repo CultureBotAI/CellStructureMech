@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+  slug: gram_negative_bacterium_type_cell_wall
+session:
+  id: 2026-09-04T044300Z-codex-f64c03
+  timestamp: '2026-09-04T04:43:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Added a Gram-negative Lpp tether-assembly graph
+  details: Added an ASSEMBLY causal graph for Braun lipoprotein maturation, Lol-pathway trafficking
+    to the outer membrane, and L,D-transpeptidase-mediated covalent attachment to the thin
+    peptidoglycan wall; anchored Lpp graph nodes with exact UniProt and Pfam identifiers;
+    and validated the edited CellStructureRecord with linkml-validate.

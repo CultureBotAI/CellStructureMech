@@ -123,6 +123,9 @@ causal_graphs:
   - node_id: ring
     label: FtsZ ring
     node_type: STRUCTURE
+  - node_id: treadmilling
+    label: FtsZ treadmilling
+    node_type: BIOLOGICAL_PROCESS
   - node_id: synthase
     label: FtsW-FtsI septal synthase
     node_type: GENE_OR_PROTEIN
@@ -135,15 +138,27 @@ causal_graphs:
   - subject: tether
     predicate: anchors
     object: ftsz
+    description: FtsA, ZipA or SepF-family membrane tethers attach FtsZ protofilaments
+      to the cytoplasmic membrane at the division site.
     evidence:
     - reference: DOI:10.1146/annurev-biophys-121219-081703
       notes: 'McQuillen & Xiao 2020: FtsA and ZipA hold FtsZ filaments at the membrane.'
   - subject: ftsz
     predicate: assembles into
     object: ring
+    description: Membrane-tethered FtsZ filaments polymerize into the cytokinetic
+      Z ring at midcell.
     evidence:
     - reference: DOI:10.1146/annurev-biophys-121219-081703
       notes: McQuillen & Xiao 2020 describe filament assembly into the Z ring at midcell.
+  - subject: ftsz
+    predicate: treadmills within
+    object: ring
+    description: Dynamic FtsZ filaments treadmill around the circumference of the
+      ring.
+    evidence:
+    - reference: DOI:10.1146/annurev-biophys-121219-081703
+      notes: McQuillen & Xiao 2020 review FtsZ treadmilling around the division site.
   - subject: ring
     predicate: distributes
     object: synthase
@@ -156,6 +171,8 @@ causal_graphs:
   - subject: synthase
     predicate: carries out
     object: septum
+    description: FtsW-FtsI enzymes synthesize the septal peptidoglycan that closes
+      the division plane.
     evidence:
     - reference: DOI:10.1146/annurev-biophys-121219-081703
       notes: 'McQuillen & Xiao 2020: FtsW-FtsI builds the septal peptidoglycan.'
@@ -213,6 +230,12 @@ curation_history:
     the target eukaryotic cells'', and ''in vitro studies ( 111 , 117 )'' for ''in
     vitro EM studies ( 93 , 183 )'' -- inventing reference numbers a reader could
     have chased. `just evidence-verify` refused all four before they could be committed.'
+  llm_assisted: true
+- timestamp: '2026-09-04T01:38:58Z'
+  curator: codex
+  action: ENHANCE_CAUSAL_GRAPH
+  changes: Added an explicit FtsZ treadmilling node and descriptions to the divisome
+    graph so its septal-synthase distribution mechanism is fully represented.
   llm_assisted: true
 - timestamp: '2026-09-03T00:10:07Z'
   curator: claude

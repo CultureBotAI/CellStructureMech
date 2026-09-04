@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_iii_protein_secretion_system_complex.yaml
+  slug: type_iii_protein_secretion_system_complex
+session:
+  id: 2026-09-04T012106Z-codex-02296d
+  timestamp: '2026-09-04T01:21:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Add type III secretion export graph
+  details: Continued the causal-graph score ranking and curated the next rank-1 graphless
+    record, type III protein secretion system complex. Added a FUNCTION graph linking inner-ring
+    basal-body organization, the outer-membrane secretin, the membrane export apparatus, the
+    helical needle filament, and the host-membrane translocon to unfolded effector secretion
+    through a continuous injectisome conduit.

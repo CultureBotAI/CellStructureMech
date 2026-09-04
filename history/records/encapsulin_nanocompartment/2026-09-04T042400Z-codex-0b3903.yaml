@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+  slug: encapsulin_nanocompartment
+session:
+  id: 2026-09-04T042400Z-codex-0b3903
+  timestamp: '2026-09-04T04:24:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Added an encapsulin HK97 shell-assembly graph
+  details: Added an ASSEMBLY causal graph for HK97-fold encapsulin shell formation around
+    targeting-peptide-tagged cargo, anchored shell protein graph nodes with PF04454, grounded
+    the existing ferrous-iron node with CHEBI:29033, and validated the edited CellStructureRecord
+    with linkml-validate.

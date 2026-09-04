@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+  slug: methyl_accepting_chemotaxis_protein_complex
+session:
+  id: 2026-09-04T043400Z-codex-99020e
+  timestamp: '2026-09-04T04:34:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  summary: Added a chemoreceptor-array assembly graph and CheA-to-CheY edge
+  details: Added an ASSEMBLY causal graph for methyl-accepting chemotaxis protein trimers,
+    CheA/CheW core signaling units, and extended hexagonal array formation; anchored MCP and
+    CheW graph nodes with Pfam identifiers; added a Stewart 1997 CheA-to-CheY phosphotransfer
+    edge; resolved the phosphotransfer curation TODO; and validated the edited CellStructureRecord
+    with linkml-validate.

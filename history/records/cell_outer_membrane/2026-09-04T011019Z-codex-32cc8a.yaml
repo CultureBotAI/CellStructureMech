@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/cell_outer_membrane.yaml
+  slug: cell_outer_membrane
+session:
+  id: 2026-09-04T011019Z-codex-32cc8a
+  timestamp: '2026-09-04T01:10:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Add outer-membrane Lpt/BAM causal graph
+  details: Continued the causal-graph score ranking and curated the next rank-1 graphless
+    record, cell outer membrane. Added an ASSEMBLY graph for Lpt-mediated LPS transport to
+    the outer leaflet, BAM-mediated beta-barrel OMP assembly, and formation of the asymmetric
+    permeability barrier; the graph reuses the existing Silhavy, Kahne and Walker envelope
+    review and adds DOI-backed evidence for Lpt and BAM specificity.

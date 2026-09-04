@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+  slug: peptidoglycan_based_cell_wall
+session:
+  id: 2026-09-04T011330Z-codex-0fcf20
+  timestamp: '2026-09-04T01:13:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Add peptidoglycan Lipid II assembly graph
+  details: Continued the causal-graph score ranking and curated the next rank-1 graphless
+    record, peptidoglycan-based cell wall. Added an ASSEMBLY graph for glycosyltransferase
+    use of Lipid II precursors, glycan-strand polymerisation, DD-transpeptidase crosslinking,
+    and formation of the turgor-resistant murein sacculus, reusing the existing Vollmer, Blanot
+    and de Pedro 2008 evidence and adding Egan, Errington and Vollmer 2020 for peptidoglycan
+    synthesis regulation.

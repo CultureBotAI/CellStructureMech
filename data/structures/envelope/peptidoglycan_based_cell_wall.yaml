@@ -43,6 +43,115 @@ functions:
 evidence:
 - reference: DOI:10.1111/j.1574-6976.2007.00094.x
   notes: Peptidoglycan structure and architecture.
+causal_graphs:
+- graph_id: lipid_ii_polymerisation_crosslinking
+  title: Lipid II flipping, polymerisation and crosslinking build the sacculus
+  description: The MurJ flippase moves Lipid II from the cytoplasmic leaflet to the
+    extracytoplasmic face of the cytoplasmic membrane, where SEDS-family RodA/FtsW
+    polymerases and penicillin-binding transpeptidases turn Lipid II disaccharide-peptide
+    subunits into crosslinked peptidoglycan strands. The resulting sacculus surrounds
+    the cell as a covalently closed mesh that bears turgor stress.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: lipid_ii
+    label: Lipid II
+    node_type: CHEMICAL
+    grounding: CHEBI:27692
+    description: Cytoplasmic-leaflet lipid-linked disaccharide-pentapeptide precursor.
+  - node_id: murj_flippase
+    label: MurJ Lipid II flippase
+    node_type: GENE_OR_PROTEIN
+    xrefs:
+    - Pfam:PF03023
+  - node_id: exported_lipid_ii
+    label: lipid II
+    node_type: CHEMICAL
+    grounding: CHEBI:27692
+    description: Lipid II after translocation to the growth side of the cytoplasmic
+      membrane.
+  - node_id: seds_polymerases
+    label: RodA/FtsW SEDS peptidoglycan polymerases
+    node_type: GENE_OR_PROTEIN
+    xrefs:
+    - InterPro:IPR001182
+  - node_id: penicillin_binding_transpeptidases
+    label: penicillin-binding transpeptidases
+    node_type: GENE_OR_PROTEIN
+    xrefs:
+    - InterPro:IPR001460
+  - node_id: glycan_strands
+    label: alternating GlcNAc-MurNAc glycan strands
+    node_type: CHEMICAL
+  - node_id: peptide_crosslinks
+    label: peptide crosslinks
+    node_type: CHEMICAL
+  - node_id: peptidoglycan
+    label: peptidoglycan
+    node_type: STRUCTURE
+    component_ref: peptidoglycan
+  - node_id: turgor_resistance
+    label: resistance to turgor pressure
+    node_type: CAPACITY
+  edges:
+  - subject: murj_flippase
+    predicate: flips
+    object: exported_lipid_ii
+    description: MurJ translocates lipid-linked peptidoglycan precursors from the
+      inner to the outer leaflet of the cytoplasmic membrane so Lipid II is accessible
+      to extracytoplasmic synthases.
+    evidence:
+    - reference: DOI:10.1126/science.1254522
+      notes: Sham et al. 2014 showed that E. coli MurJ is needed for Lipid II flipping
+        during peptidoglycan biogenesis.
+  - subject: lipid_ii
+    predicate: supplies
+    object: exported_lipid_ii
+    description: Lipid II is the lipid-linked disaccharide-pentapeptide precursor
+      delivered across the cytoplasmic membrane before polymerisation.
+    evidence:
+    - reference: DOI:10.1038/s41579-020-0366-3
+      notes: Egan, Errington and Vollmer 2020 review peptidoglycan synthesis from
+        cytoplasmic lipid-linked precursors through translocation to polymerisation.
+  - subject: seds_polymerases
+    predicate: polymerise into
+    object: glycan_strands
+    description: RodA and FtsW SEDS proteins polymerise exported Lipid II into glycan
+      strands for sidewall and septal peptidoglycan assembly.
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2016.253
+      notes: Emami et al. 2017 identified Bacillus subtilis RodA as a peptidoglycan
+        glycosyltransferase.
+    - reference: DOI:10.1038/s41564-018-0345-x
+      notes: Taguchi et al. 2019 reconstituted FtsW peptidoglycan polymerase activity
+        in complex with its cognate class B penicillin-binding protein.
+  - subject: penicillin_binding_transpeptidases
+    predicate: form
+    object: peptide_crosslinks
+    description: DD-transpeptidases create peptide bridges between neighboring glycan
+      strands.
+    evidence:
+    - reference: DOI:10.1038/s41579-020-0366-3
+      notes: Egan, Errington and Vollmer 2020 review transpeptidation during peptidoglycan
+        synthesis and remodelling.
+  - subject: peptide_crosslinks
+    predicate: connect
+    object: peptidoglycan
+    description: Peptide crosslinks turn adjacent glycan chains into a single mesh-like
+      sacculus.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2007.00094.x
+      notes: Vollmer, Blanot and de Pedro 2008 describe the bacterial sacculus as
+        glycan strands crosslinked by short peptides.
+  - subject: peptidoglycan
+    predicate: resists
+    object: turgor_resistance
+    description: The closed, crosslinked sacculus is the stress-bearing layer that
+      keeps internal turgor pressure from rupturing the cell.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2007.00094.x
+      notes: Vollmer, Blanot and de Pedro 2008 review how peptidoglycan architecture
+        gives bacteria a protective, shape-maintaining wall.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-30T19:30:00Z'
@@ -57,4 +166,18 @@ curation_history:
   changes: component_role became required (#77) so the constituent/machinery distinction
     is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY
     only where the protein acts on the already-assembled structure.
+  llm_assisted: true
+- timestamp: '2026-09-04T01:12:48Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added an ASSEMBLY graph for Lipid II polymerisation, DD-transpeptidase
+    crosslinking, and formation of the turgor-resistant peptidoglycan sacculus, with
+    additional DOI evidence from Egan, Errington and Vollmer 2020.
+  llm_assisted: true
+- timestamp: '2026-09-04T02:27:00Z'
+  curator: codex
+  action: REVISE_CAUSAL_GRAPH
+  changes: Grounded the Lipid II node to ChEBI, anchored MurJ and RodA/FtsW family
+    nodes to Pfam and InterPro, inserted the MurJ flipping step, and added primary
+    evidence for RodA and FtsW peptidoglycan polymerase activity.
   llm_assisted: true

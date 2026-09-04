@@ -558,12 +558,16 @@ causal_graphs:
   - subject: c_ring
     predicate: drives
     object: rotation
+    description: Torque on FliG and the C ring turns the MS ring, rod, hook, and filament
+      as a rigid flagellar rotor.
     evidence:
     - reference: DOI:10.1016/j.tim.2014.12.011
       notes: The C ring, MS ring and rod rotate as one rigid rotor.
   - subject: rotation
     predicate: propels
     object: filament
+    description: Rotation is transmitted from the basal body through the hook to the
+      external helical filament.
     evidence:
     - reference: DOI:10.1146/annurev.biochem.72.121801.161737
       notes: Rotation of the helical filament produces thrust.
@@ -571,6 +575,8 @@ causal_graphs:
     predicate: enables
     object: swimming
     predicate_id: RO:0002327
+    description: The rotating helical filament acts as a propeller that generates
+      thrust for swimming motility.
     evidence:
     - reference: DOI:10.1146/annurev.biochem.72.121801.161737
       notes: Berg 2003.
@@ -697,6 +703,12 @@ curation_history:
     decisions for hook. The fixed reviewed allow-list required exact component identity,
     reviewed UniProt examples, type=family entries, and unchanged family consensus
     across curated scope examples.
+  llm_assisted: true
+- timestamp: '2026-09-04T01:40:08Z'
+  curator: codex
+  action: ENHANCE_CAUSAL_GRAPH
+  changes: Added descriptions to the remaining flagellar torque-generation edges so
+    every edge now states the mechanistic step it represents.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0307

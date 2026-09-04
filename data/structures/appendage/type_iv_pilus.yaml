@@ -71,6 +71,85 @@ functions:
 evidence:
 - reference: DOI:10.1038/nrmicro.2017.40
   notes: A comprehensive guide to pilus biogenesis in Gram-negative bacteria.
+causal_graphs:
+- graph_id: extension_retraction_twitching
+  title: PilB and PilT drive type IV pilus extension-retraction cycles
+  description: The extension ATPase assembles pilin subunits into the extracellular
+    filament, and the retraction ATPase pulls an attached filament back through the
+    envelope. Surface-attached retraction generates the force used for twitching motility.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: extension_atpase
+    label: PilB-family extension ATPase
+    node_type: GENE_OR_PROTEIN
+    component_ref: extension_atpase
+  - node_id: major_pilin
+    label: major type IV pilin
+    node_type: GENE_OR_PROTEIN
+    component_ref: major_pilin
+  - node_id: pilus_filament
+    label: type IV pilus
+    node_type: STRUCTURE
+    grounding: GO:0044096
+  - node_id: surface_bound_pilus
+    label: surface-bound type IV pilus
+    node_type: STATE
+  - node_id: retraction_atpase
+    label: PilT-family retraction ATPase
+    node_type: GENE_OR_PROTEIN
+    component_ref: retraction_atpase
+  - node_id: twitching_motility
+    label: type IV pilus-dependent motility
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0043107
+  edges:
+  - subject: extension_atpase
+    predicate: extends
+    object: pilus_filament
+    description: The cytoplasmic PilB-family ATPase powers pilus extension from the
+      inner-membrane assembly platform.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.40
+      notes: Hospenthal, Costa and Waksman 2017 review the PilB-family ATPase as the
+        motor that extends Gram-negative type IV pili.
+  - subject: major_pilin
+    predicate: polymerizes into
+    object: pilus_filament
+    description: Major pilin subunits form the surface-exposed type IV pilus polymer.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.40
+      notes: Hospenthal, Costa and Waksman 2017 describe T4P fibres as polymers of
+        pilin subunits assembled by the biogenesis machinery.
+  - subject: pilus_filament
+    predicate: reaches
+    object: surface_bound_pilus
+    description: Extension projects the pilus outward so its distal end can bind a
+      surface or neighboring cell.
+    evidence:
+    - reference: DOI:10.1073/pnas.121171698
+      notes: Skerker and Berg 2001 directly observed Pseudomonas aeruginosa type IV
+        pili extending, attaching at their distal ends and retracting.
+  - subject: retraction_atpase
+    predicate: retracts
+    object: surface_bound_pilus
+    description: The PilT-family ATPase depolymerizes the attached filament back into
+      the envelope.
+    evidence:
+    - reference: DOI:10.1038/35024105
+      notes: Merz, So and Sheetz 2000 measured Neisseria gonorrhoeae pilus retraction
+        and showed that force generation and motility require PilT.
+  - subject: surface_bound_pilus
+    predicate: pulls cell during
+    object: twitching_motility
+    description: Retraction of a surface-bound filament pulls the cell body forward.
+    evidence:
+    - reference: DOI:10.1038/35024105
+      notes: Merz, So and Sheetz 2000 used laser tweezers to show that T4P filaments
+        retract with enough force to move cells.
+    - reference: DOI:10.1073/pnas.121171698
+      notes: Skerker and Berg 2001 directly observed Pseudomonas aeruginosa pili alternating
+        extension and retraction during surface motility.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-30T19:30:00Z'
@@ -106,6 +185,13 @@ curation_history:
     run 7978 and annotation 30707; required the record's pre-existing exact NCBI taxon
     and exact GO identity, preserved annotation quality metadata, and stored no imaging
     volumes.
+  llm_assisted: true
+- timestamp: '2026-09-04T00:58:09Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a DOI-backed FUNCTION graph for the PilB/PilT extension-retraction
+    cycle that assembles type IV pili and pulls surface-bound cells during twitching
+    motility.
   llm_assisted: true
 datasets:
 - accession: CryoETDataPortal:10155

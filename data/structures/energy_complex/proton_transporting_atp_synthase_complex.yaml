@@ -173,6 +173,8 @@ causal_graphs:
   - subject: pmf
     predicate: drives ion flow through
     object: a
+    description: The proton motive force drives ions through offset half-channels
+      in subunit a at the a/c-ring interface.
     evidence:
     - reference: DOI:10.1146/annurev-biochem-013118-110903
       notes: 'Kuehlbrandt 2019: ions cross via the two offset half-channels in subunit
@@ -189,12 +191,16 @@ causal_graphs:
   - subject: cring
     predicate: rotates
     object: stalk
+    description: Ion-driven rotation of the membrane c-ring carries the attached central
+      stalk as one rotor.
     evidence:
     - reference: DOI:10.1146/annurev-biochem-013118-110903
       notes: 'Kuehlbrandt 2019: the c-ring and central stalk rotate as one rotor.'
   - subject: stalk
     predicate: drives conformational cycling of
     object: head
+    description: The asymmetric rotating central stalk forces catalytic beta subunits
+      in the alpha3beta3 head through sequential conformations.
     evidence:
     - reference: DOI:10.1146/annurev-biochem-013118-110903
       notes: Kuehlbrandt 2019 describes the asymmetric gamma subunit imposing the
@@ -203,6 +209,8 @@ causal_graphs:
     predicate: catalyses formation of
     object: atp
     predicate_id: RO:0002327
+    description: Catalytic nucleotide-binding interfaces in the F1 head synthesize
+      ATP from ADP and phosphate.
     evidence:
     - reference: DOI:10.1146/annurev-biochem-013118-110903
       notes: 'Kuehlbrandt 2019: ATP is synthesised at the catalytic interfaces of
@@ -210,6 +218,8 @@ causal_graphs:
   - subject: head
     predicate: participates in
     object: synthesis
+    description: The F1 head is the catalytic sector of the proton-motive-force-driven
+      ATP synthase.
     evidence:
     - reference: DOI:10.1146/annurev-biochem-013118-110903
       notes: Kuehlbrandt 2019 reviews rotary catalysis as the mechanism of ATP synthesis.
@@ -249,6 +259,12 @@ curation_history:
     record's pre-existing exact NCBI source taxon, retained DOI/PMID, method, resolution
     and polymer-entity links, and left alternate assembly stoichiometries unflattened
     at RCSB. No molecular render was ingested.
+  llm_assisted: true
+- timestamp: '2026-09-04T01:40:08Z'
+  curator: codex
+  action: ENHANCE_CAUSAL_GRAPH
+  changes: Added descriptions to ATP synthase rotary-catalysis edges so every edge
+    states the ion-flow, rotor, or catalytic step it represents.
   llm_assisted: true
 datasets:
 - accession: PDB:6OQR

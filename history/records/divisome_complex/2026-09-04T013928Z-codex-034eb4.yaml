@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/division_machinery/divisome_complex.yaml
+  slug: divisome_complex
+session:
+  id: 2026-09-04T013928Z-codex-034eb4
+  timestamp: '2026-09-04T01:39:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Expand divisome treadmilling graph
+  details: Continued the causal-graph score ranking from the poorest existing content gaps.
+    Expanded the divisome FUNCTION graph with an explicit FtsZ treadmilling process node and
+    evidence-backed edge descriptions for membrane tethering, Z-ring assembly, treadmilling
+    around the division site, synthase distribution, and septal peptidoglycan synthesis.

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/endospore_external_encapsulating_structure.yaml
+  slug: endospore_external_encapsulating_structure
+session:
+  id: 2026-09-04T034957Z-codex-d32d61
+  timestamp: '2026-09-04T03:49:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Add endospore SpoIVA and CotE coat assembly graph
+  details: Continued the causal-graph score ranking after endospore external encapsulating
+    structure became the poorest record. Reviewed the existing cortex and coat resistance
+    graph, grounded cortex and endospore-coat structure nodes with their exact GO part terms,
+    and added a Bacillus subtilis ASSEMBLY graph that separates SpoIVA basement-layer self-assembly
+    and CotE-dependent outer-coat organization from the downstream resistance graph. Added
+    primary evidence for ATP-driven SpoIVA self-assembly and Driks et al. coat-protein localization.

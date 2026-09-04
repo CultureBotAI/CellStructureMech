@@ -62,6 +62,196 @@ evidence:
   notes: Walsby 1994 comprehensive review.
 - reference: PMID:22147705
   notes: Belenky et al. 2012 structural evidence for the GvpA shell.
+causal_graphs:
+- graph_id: gvpa_gvpc_buoyancy
+  title: GvpA and GvpC build gas-filled buoyancy bodies
+  description: GvpA polymerizes into a ribbed shell around a hollow, gas-filled lumen,
+    while GvpC reinforces that shell against collapse. The hydrophobic protein wall
+    excludes liquid water, permits gases to enter, and creates low-density vesicles
+    that support buoyancy regulation.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: gvpa
+    label: major gas vesicle protein GvpA
+    node_type: GENE_OR_PROTEIN
+    component_ref: gvpa
+    xrefs:
+    - Pfam:PF00741
+  - node_id: gvpa_shell
+    label: ribbed GvpA shell
+    node_type: STRUCTURE
+  - node_id: gvpc
+    label: gas vesicle strengthening protein GvpC
+    node_type: GENE_OR_PROTEIN
+    component_ref: gvpc
+    xrefs:
+    - Pfam:PF01304
+  - node_id: gas_vesicle
+    label: gas vesicle
+    node_type: STRUCTURE
+    grounding: GO:0031411
+  - node_id: gas_filled_lumen
+    label: water-excluding gas-filled lumen
+    node_type: QUALITY
+  - node_id: buoyancy_regulation
+    label: buoyancy regulation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: gvpa
+    predicate: polymerizes into
+    object: gvpa_shell
+    description: GvpA subunits assemble into the corrugated protein ribs that form
+      the gas vesicle wall.
+    evidence:
+    - reference: PMID:22147705
+      notes: Bayro et al. 2012 used solid-state NMR to support a cross-beta assembly
+        model for GvpA in gas-vesicle shells.
+    - reference: DOI:10.1016/j.str.2023.03.011
+      notes: Dutka et al. 2023 used cryo-electron tomography of Dolichospermum gas
+        vesicles to resolve a shell assembled from a helical GvpA filament.
+  - subject: gvpa_shell
+    predicate: encloses
+    object: gas_vesicle
+    description: The ribbed protein shell forms the hollow cylindrical gas vesicle
+      body and its conical end caps.
+    evidence:
+    - reference: DOI:10.1016/j.str.2023.03.011
+      notes: Dutka et al. 2023 resolved the in situ gas-vesicle shell architecture
+        of Dolichospermum flos-aquae.
+  - subject: gvpc
+    predicate: strengthens
+    object: gvpa_shell
+    description: GvpC associates with the outside of the GvpA shell and increases
+      resistance to pressure collapse.
+    evidence:
+    - reference: PMID:8177173
+      notes: Walsby 1994 reviews experiments showing that GvpC binds the gas vesicle
+        surface and strengthens cyanobacterial vesicles.
+  - subject: gvpa_shell
+    predicate: maintains
+    object: gas_filled_lumen
+    description: The hydrophobic shell excludes liquid water while allowing gases
+      to diffuse across the vesicle wall.
+    evidence:
+    - reference: PMID:8177173
+      notes: Walsby 1994 reviews the liquid-water impermeability and high gas permeability
+        of the gas vesicle wall.
+  - subject: gas_filled_lumen
+    predicate: enables
+    object: buoyancy_regulation
+    description: Retaining gas in many low-density vesicles gives aquatic cells positive
+      buoyancy for vertical migration.
+    evidence:
+    - reference: PMID:8177173
+      notes: Walsby 1994 describes how gas vesicles lower cell density and let aquatic
+        microbes regulate position in the water column.
+- graph_id: accessory_gvp_shell_assembly
+  title: Accessory Gvp interactions scaffold shell assembly
+  description: Accessory Gvp proteins interact with one another and with the major
+    shell protein during early gas-vesicle biogenesis. In haloarchaea and the Bacillus
+    megaterium pNL29 system, GvpF/GvpL-family proteins help connect the hydrophobic
+    GvpA-family shell subunits with accessory assembly modules that organize growth
+    of the ribbed gas-vesicle wall.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: The exact order of gas-vesicle nucleation, cap growth, and cylinder
+    elongation remains incompletely resolved; this graph captures protein-protein
+    interaction evidence that supports an accessory-scaffold assembly model.
+  nodes:
+  - node_id: gvpf_gvpl
+    label: GvpF/GvpL-family accessory proteins
+    node_type: GENE_OR_PROTEIN
+    xrefs:
+    - Pfam:PF06386
+  - node_id: accessory_gvp_complex
+    label: accessory Gvp assembly complex
+    node_type: GENE_OR_PROTEIN
+  - node_id: gvpa
+    label: major gas vesicle protein GvpA
+    node_type: GENE_OR_PROTEIN
+    component_ref: gvpa
+    xrefs:
+    - Pfam:PF00741
+  - node_id: gvpa_shell_seed
+    label: incipient GvpA shell
+    node_type: STRUCTURE
+  - node_id: gvpa_shell
+    label: ribbed GvpA shell
+    node_type: STRUCTURE
+  - node_id: gvpc
+    label: gas vesicle strengthening protein GvpC
+    node_type: GENE_OR_PROTEIN
+    component_ref: gvpc
+    xrefs:
+    - Pfam:PF01304
+  - node_id: gas_vesicle
+    label: gas vesicle
+    node_type: ORGANELLE
+    grounding: GO:0031411
+  edges:
+  - subject: gvpf_gvpl
+    predicate: organize
+    object: accessory_gvp_complex
+    description: Haloarchaeal GvpL interacts with multiple accessory Gvp proteins,
+      while the related GvpF connects to GvpL and additional accessory partners.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2020.610179
+      notes: Voelkner, Jost and Pfeifer 2020 combined pull-down and split-GFP assays
+        in Haloferax volcanii to infer a network of interactions among accessory GvpF-through-GvpM
+        proteins.
+  - subject: gvpf_gvpl
+    predicate: recruit
+    object: gvpa
+    description: GvpF-family proteins provide an experimentally observed contact between
+      the accessory assembly network and the major GvpA-family shell protein.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2020.610179
+      notes: Voelkner, Jost and Pfeifer 2020 mapped GvpF as the sole clear haloarchaeal
+        accessory-Gvp partner of GvpA in split-GFP tests.
+    - reference: DOI:10.1038/s44318-024-00178-2
+      notes: Iburg et al. 2024 found that the Bacillus megaterium-derived GvpA2/GvpF
+        contact is masked by other Gvps and reappears when GvpG is removed.
+  - subject: accessory_gvp_complex
+    predicate: nucleates
+    object: gvpa_shell_seed
+    description: The accessory interaction network is consistent with a transient
+      complex that controls early GvpA shell nucleation and shields hydrophobic GvpA
+      surfaces before a hollow wall is established.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2020.610179
+      notes: Voelkner, Jost and Pfeifer 2020 propose that an accessory-Gvp complex
+        acts early in gas-vesicle formation and recruits GvpA through GvpF.
+  - subject: gvpa_shell_seed
+    predicate: elongates into
+    object: gvpa_shell
+    description: A nascent bicone grows as additional GvpA subunits add to the wall
+      and extend the ribbed shell.
+    evidence:
+    - reference: PMID:8177173
+      notes: Walsby 1994 reviews the model in which gas-vesicle assembly begins from
+        small biconical forms that enlarge into the cylindrical vesicle.
+    - reference: DOI:10.1016/j.str.2023.03.011
+      notes: Dutka et al. 2023 resolved the Dolichospermum wall as a helical assembly
+        of GvpA filaments.
+  - subject: gvpc
+    predicate: coats
+    object: gvpa_shell
+    description: GvpC is recruited to the outside of the assembled GvpA wall, where
+      it stabilizes the mature shell against pressure collapse.
+    evidence:
+    - reference: PMID:8177173
+      notes: Walsby 1994 reviews localization of cyanobacterial GvpC on the outside
+        of the gas-vesicle shell and its role in shell strengthening.
+  - subject: gvpa_shell
+    predicate: matures into
+    object: gas_vesicle
+    description: The GvpA wall closes into a hollow, gas-permeable protein organelle
+      with a water-excluding lumen.
+    evidence:
+    - reference: DOI:10.1016/j.str.2023.03.011
+      notes: Dutka et al. 2023 show the continuous GvpA-shell architecture of intact
+        Dolichospermum gas vesicles by cryo-electron tomography.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-30T19:30:00Z'
@@ -99,6 +289,20 @@ curation_history:
   changes: Added CryoET Data Portal dataset 10014 after exact GraphQL resolution of
     run 14004; required the record's pre-existing exact NCBI taxon and exact GO identity,
     preserved annotation quality metadata, and stored no imaging volumes.
+  llm_assisted: true
+- timestamp: '2026-09-04T01:15:25Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a FUNCTION graph for GvpA shell formation, GvpC shell strengthening,
+    liquid-water exclusion, gas retention, and buoyancy regulation, with additional
+    edge-level use of the Dolichospermum cryo-ET evidence.
+  llm_assisted: true
+- timestamp: '2026-09-04T04:12:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added an ASSEMBLY graph for accessory-Gvp interaction networks that recruit
+    GvpA-family shell proteins, and anchored GvpA, GvpC, and GvpF/GvpL-family graph
+    nodes with Pfam identifiers.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0125
