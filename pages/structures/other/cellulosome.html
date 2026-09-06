@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cellulosome · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>cellulosome</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0043263"><code>GO:0043263</code></a> · OTHER · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">An extracellular membraneless organelle built around scaffoldin and dockerin-bearing enzymes that synergistically degrade insoluble plant-cell-wall polysaccharides. <small>[<a href="http://purl.obolibrary.org/obo/GO_0043263"><code>GO:0043263</code></a>]</small></p>
+<p><strong>Synonyms:</strong> cellulosomal complex; multienzyme cellulolytic complex</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-primary_scaffoldin"><td>primary scaffoldin</td><td>PROTEIN</td><td>part of</td><td></td><td>cipA, scaA</td><td></td><td>ESSENTIAL</td><td>Presents cohesin modules that organize dockerin-bearing enzymes into a higher-order extracellular complex.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-091208-085603"><code>DOI:10.1146/annurev-biochem-091208-085603</code></a> <small>Fontes and Gilbert 2010 review scaffoldins as the proteins that organize cohesin-dockerin enzyme assembly in cellulosomes.</small></li></ul></td></tr>
+<tr id="components-dockerin_bearing_hydrolases"><td>dockerin-bearing plant-cell-wall hydrolases</td><td>PROTEIN</td><td>part of</td><td></td><td>celA, celS, xyn</td><td></td><td>CONDITIONAL</td><td>Catalytic cellulases, xylanases, and accessory enzymes that dock onto scaffoldin cohesins and degrade plant cell-wall polysaccharides.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.micro.57.030502.091022"><code>DOI:10.1146/annurev.micro.57.030502.091022</code></a> <small>Bayer et al. 2004 review cellulosomes as scaffoldin-organized assemblies of multiple dockerin-containing carbohydrate-active enzymes.</small></li></ul></td></tr>
+<tr id="components-cell_surface_anchoring_scaffoldins"><td>cell-surface anchoring scaffoldins</td><td>PROTEIN</td><td>part of</td><td></td><td></td><td></td><td>CONDITIONAL</td><td>Anchor scaffoldin-enzyme assemblies to bacterial surface layers in cell-associated cellulosome systems.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-091208-085603"><code>DOI:10.1146/annurev-biochem-091208-085603</code></a> <small>Fontes and Gilbert 2010 review cell-surface anchoring scaffoldins and multi-scaffoldin architectures in natural cellulosomes.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2"><code>NCBITaxon:2</code></a> Bacteria — <strong>VARIABLE</strong>: Cellulosomes occur in a subset of anaerobic plant-polysaccharide-degrading bacteria and are absent from most bacterial lineages. [<a href="https://doi.org/10.1146/annurev-biochem-091208-085603"><code>DOI:10.1146/annurev-biochem-091208-085603</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1515"><code>NCBITaxon:1515</code></a> <em>Acetivibrio thermocellus</em> — The cited literature studies this organism under the Clostridium thermocellum name; it is the prototype cellulosome-forming bacterium. [<a href="https://doi.org/10.1146/annurev.micro.57.030502.091022"><code>DOI:10.1146/annurev.micro.57.030502.091022</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>plant cell wall polysaccharide degradation</strong> — Scaffoldin-bound carbohydrate-active enzymes cooperate to hydrolyze insoluble cellulose and hemicellulose.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-091208-085603"><code>DOI:10.1146/annurev-biochem-091208-085603</code></a> <small>Fontes and Gilbert 2010 review the spatial organization of cellulosomal enzymes for synergistic plant cell-wall deconstruction.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-cohesin_dockerin_enzyme_scaffold_assembly">Cohesin-dockerin binding assembles a cellulose-degrading machine <small>(ASSEMBLY)</small></h3>
+<p>A primary scaffoldin concentrates dockerin-bearing hydrolases through cohesin-dockerin interactions, and the assembled complex binds insoluble cellulose so its enzymes can hydrolyze plant cell-wall polysaccharides cooperatively.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>dockerin-bearing hydrolases</td><td>bind</td><td>primary scaffoldin</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.1936124100"><code>DOI:10.1073/pnas.1936124100</code></a> <small>Carvalho et al. 2003 established the cohesin-dockerin complex as the structural basis of cellulosome assembly.</small></li></ul></td></tr>
+<tr><td>primary scaffoldin</td><td>organizes</td><td>cohesin-dockerin-bound enzyme scaffold</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-091208-085603"><code>DOI:10.1146/annurev-biochem-091208-085603</code></a> <small>Fontes and Gilbert 2010 review modular scaffoldins as the organizers of natural cellulosomes.</small></li></ul></td></tr>
+<tr><td>cell-surface anchoring scaffoldins</td><td>anchor</td><td>cellulosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-091208-085603"><code>DOI:10.1146/annurev-biochem-091208-085603</code></a> <small>Fontes and Gilbert 2010 review anchoring scaffoldins in cellulosome-producing bacteria.</small></li></ul></td></tr>
+<tr><td>cohesin-dockerin-bound enzyme scaffold</td><td>forms</td><td>cellulosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.micro.57.030502.091022"><code>DOI:10.1146/annurev.micro.57.030502.091022</code></a> <small>Bayer et al. 2004 review cellulosomes as multienzyme complexes assembled by cohesin-dockerin interactions.</small></li></ul></td></tr>
+<tr><td>cellulosome</td><td>binds</td><td>plant cell wall polysaccharide</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-091208-085603"><code>DOI:10.1146/annurev-biochem-091208-085603</code></a> <small>Fontes and Gilbert 2010 review the carbohydrate-binding and catalytic modules that focus cellulosomes on plant cell walls.</small></li></ul></td></tr>
+<tr><td>dockerin-bearing hydrolases</td><td>hydrolyze</td><td>plant cell wall polysaccharide</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.micro.57.030502.091022"><code>DOI:10.1146/annurev.micro.57.030502.091022</code></a> <small>Bayer et al. 2004 review cellulases and hemicellulases as catalytic constituents of cellulosomes.</small></li></ul></td></tr>
+<tr><td>cellulosome</td><td>enables</td><td>plant cell wall polysaccharide degradation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-091208-085603"><code>DOI:10.1146/annurev-biochem-091208-085603</code></a> <small>Fontes and Gilbert 2010 review cellulosomes as highly efficient nanomachines for plant cell-wall complex carbohydrate degradation.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-091208-085603"><code>DOI:10.1146/annurev-biochem-091208-085603</code></a> <small>Fontes CMGA and Gilbert HJ 2010, Cellulosomes: Highly Efficient Nanomachines Designed to Deconstruct Plant Cell Wall Complex Carbohydrates, Annual Review of Biochemistry.</small></li><li><a href="https://doi.org/10.1146/annurev.micro.57.030502.091022"><code>DOI:10.1146/annurev.micro.57.030502.091022</code></a> <small>Bayer EA, Belaich JP, Shoham Y and Lamed R 2004, The cellulosomes: multienzyme machines for degradation of plant cell wall polysaccharides, Annual Review of Microbiology.</small></li><li><a href="https://doi.org/10.1073/pnas.1936124100"><code>DOI:10.1073/pnas.1936124100</code></a> <small>Carvalho et al. 2003 solved a cohesin-dockerin complex that revealed the physical interaction used to assemble cellulosomes.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-06T07:14:05Z</code> claude · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-06T07:16:46Z</code> claude · EXPANDED_RECORD — Added synonyms, parentage, components, taxonomy, a canonical example, function, evidence, and a source-bounded mechanism graph.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/cellulosome.yaml"><code>data/structures/other/cellulosome.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

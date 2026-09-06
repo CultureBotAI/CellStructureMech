@@ -18,6 +18,15 @@
   "definition": "The rotary motility organelle of bacteria: a long helical filament of flagellin joined by a flexible hook to a basal body that spans the cell envelope. The basal body houses a rotor (MS and C rings) driven by membrane-embedded stator units that convert ion flow (H+ or Na+) into torque; the flagellar type III export apparatus at its base secretes the axial subunits. Not homologous to the archaeal archaellum or the eukaryotic cilium."
  },
  {
+  "identifier": "GO:0098774",
+  "label": "curli",
+  "category": "APPENDAGE",
+  "kind": "APPENDAGE",
+  "status": "PROPOSED",
+  "page": "structures/appendage/curli.html",
+  "definition": "Extracellular amyloid fibers assembled from CsgA by the Csg secretion and nucleation machinery that form a pilus subtype in enteric biofilm matrices."
+ },
+ {
   "identifier": "GO:0044096",
   "label": "type IV pilus",
   "category": "APPENDAGE",
@@ -189,6 +198,15 @@
   "definition": "The non-membrane-bounded subcellular region in which a bacterial chromosome is compacted and organized with nucleoid-associated proteins while remaining dynamically coupled to transcription and replication."
  },
  {
+  "identifier": "GO:0043263",
+  "label": "cellulosome",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/cellulosome.html",
+  "definition": "An extracellular membraneless organelle built around scaffoldin and dockerin-bearing enzymes that synergistically degrade insoluble plant-cell-wall polysaccharides."
+ },
+ {
   "identifier": "GO:0098561",
   "label": "methyl accepting chemotaxis protein complex",
   "category": "OTHER",
@@ -207,6 +225,24 @@
   "definition": "The ribonucleoprotein particle that translates mRNA into protein. The bacterial and archaeal 70S ribosome comprises a small (30S) subunit built on 16S rRNA, which decodes the mRNA, and a large (50S) subunit built on 23S and 5S rRNA, whose 23S rRNA catalyses peptide bond formation. This record details that 70S form and the functional core shared with the larger eukaryotic cytosolic 80S ribosome; it does not enumerate 80S-specific components."
  },
  {
+  "identifier": "GO:0030256",
+  "label": "type I protein secretion system complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/type_i_protein_secretion_system_complex.html",
+  "definition": "A Gram-negative bacterial trans-envelope protein secretion complex in which an inner-membrane ABC transporter and membrane-fusion protein recruit a TolC-like outer-membrane channel for one-step export of C-terminal-signal substrates."
+ },
+ {
+  "identifier": "GO:0015627",
+  "label": "type II protein secretion system complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/type_ii_protein_secretion_system_complex.html",
+  "definition": "A Gram-negative bacterial envelope-spanning secretion complex in which an inner-membrane platform and ATPase drive pseudopilus-mediated export of folded periplasmic substrates through an outer-membrane secretin."
+ },
+ {
   "identifier": "GO:0030257",
   "label": "type III protein secretion system complex",
   "category": "SECRETION_SYSTEM",
@@ -214,6 +250,15 @@
   "status": "PROPOSED",
   "page": "structures/secretion_system/type_iii_protein_secretion_system_complex.html",
   "definition": "The injectisome: a syringe-like envelope-spanning machine that delivers effector proteins from the bacterial cytoplasm directly into a eukaryotic host cell. Rings in the inner and outer membranes surround an export apparatus; an extracellular needle carries the secretion channel to a translocon pore in the host membrane. It is evolutionarily related to the flagellar export apparatus."
+ },
+ {
+  "identifier": "GO:0043684",
+  "label": "type IV secretion system complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/type_iv_secretion_system_complex.html",
+  "definition": "A bacterial envelope-spanning secretion complex related to conjugation machines that uses VirB-family channel, pilus, ATPase and coupling-protein subassemblies to translocate DNA and protein substrates."
  },
  {
   "identifier": "GO:0033104",

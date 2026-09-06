@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_ii_protein_secretion_system_complex.yaml
+  slug: type_ii_protein_secretion_system_complex
+session:
+  id: 2026-09-06T071751Z-claude-650c99
+  timestamp: '2026-09-06T07:17:51Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the type II secretion system record
+  details: Added GO:0015627 type II protein secretion system complex as a PROPOSED secretion-system
+    record with GspD secretin, pseudopilus, GspCFLM inner-platform, and GspE ATPase components,
+    bacterial distribution, a Vibrio cholerae Eps/Gsp example, a folded periplasmic protein
+    export function, and an ATPase-pseudopilus-secretin export graph.
