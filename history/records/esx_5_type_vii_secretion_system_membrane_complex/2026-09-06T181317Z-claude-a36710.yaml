@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/esx_5_type_vii_secretion_system_membrane_complex.yaml
+  slug: esx_5_type_vii_secretion_system_membrane_complex
+session:
+  id: 2026-09-06T181317Z-claude-a36710
+  timestamp: '2026-09-06T18:13:17Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/211
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - components
+  - taxonomic_distribution
+  - functions
+  - causal_graphs
+  summary: Narrow T7SS draft to ESX-5
+  details: 'Resolved issue #211 by replacing the draft generic mycobacterial type VII secretion
+    identity with cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex, restricting
+    exact synonyms and component gene symbols to the ESX-5 membrane complex, removing broad
+    bacterial and actinomycete taxonomic assertions that were not specific to ESX-5, grounding
+    the type VII secretion function to GO:0044315, and updating the causal graph structure
+    node and Ecc component nodes to the narrowed record identity.'
