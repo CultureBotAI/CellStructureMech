@@ -1,0 +1,203 @@
+identifier: GO:0031471
+label: ethanolamine degradation polyhedral organelle
+structure_category: MICROCOMPARTMENT
+structure_kind: PROTEIN_SHELLED_ORGANELLE
+definition: An organelle found in bacteria consisting of a proteinaceous coat containing
+  enzymes for the degradation of ethanolamine whose purpose is the protection of the
+  rest of the cell from the toxic acetaldehyde product of the enzyme ethanolamine
+  ammonia lyase.
+definition_source: GO:0031471
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-06T08:06:19Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-06T08:08:08Z'
+  curator: claude
+  action: CURATED_EUT_METABOLOSOME
+  changes: Added Eut shell components, bacterial distribution, a Salmonella example,
+    GO:0046336 function, acetaldehyde/cofactor confinement, and an assembly graph.
+  llm_assisted: true
+- timestamp: '2026-09-06T08:27:30Z'
+  curator: claude
+  action: NORMALIZE_EUT_EVIDENCE_DOI
+  changes: Replaced the Huseby and Roth PMID reference with DOI:10.1128/JB.02179-12
+    because PubMed exposes a DOI for the article.
+  llm_assisted: true
+synonyms:
+- synonym_text: Eut metabolosome
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/mbio.00066-18
+- synonym_text: ethanolamine utilization bacterial microcompartment
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/srep24359
+parent_structures:
+- GO:0031469
+components:
+- component_id: eut_bmc_domain_shell_proteins
+  label: Eut BMC-domain shell proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - eutS
+  - eutM
+  - eutL
+  - eutK
+  essentiality: UNKNOWN
+  role: Hexameric and pseudohexameric BMC-domain proteins that tile the facets and
+    pores of the ethanolamine-utilization shell.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: EutS, EutM, EutL, and EutK carry BMC domains, but the generic BMC-domain
+    families also cover carboxysome and other metabolosome shell proteins, so no exact
+    ethanolamine-metabolosome shell family was curated.
+  evidence:
+  - reference: DOI:10.1128/jb.181.17.5317-5329.1999
+    notes: Kofoid et al. identified the Salmonella eut operon and its eutS, eutM,
+      eutL, eutK, and eutN shell homologues.
+  - reference: DOI:10.1128/JB.00652-10
+    notes: Takenoya et al. solved E. coli EutL and EutM shell protein structures and
+      assigned them to the ethanolamine-utilizing microcompartment shell.
+  - reference: DOI:10.1038/srep24359
+    notes: Held et al. assembled EutS-only and EutSMNLK nanocompartments from Salmonella
+      shell proteins in E. coli and confirmed BMC-like particles by TEM.
+- component_id: eutn_vertex_shell_protein
+  label: EutN BMC-P vertex shell protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - eutN
+  essentiality: UNKNOWN
+  role: Pentameric BMV-family shell protein homologous to the pentamers that close
+    bacterial microcompartment vertices.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The BMV-domain family covers EutN and PduN but also broader carboxysome
+    and glycyl-radical metabolosome vertex proteins; no exact family for EutN alone
+    was curated.
+  evidence:
+  - reference: DOI:10.1128/jb.181.17.5317-5329.1999
+    notes: Kofoid et al. annotated eutN in the Salmonella eut locus as a carboxysome-shell
+      homologue.
+  - reference: DOI:10.1002/pro.2246
+    notes: Wheatley et al. re-examined EutN and showed that the protein is predominantly
+      pentameric in solution.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Ethanolamine-utilization bacterial microcompartment loci are patchily distributed
+    in bacterial genomes rather than universal.
+  reference: DOI:10.1038/s41467-021-24126-4
+canonical_examples:
+- taxon_id: NCBITaxon:99287
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+  note: Kofoid et al. mapped the 17-gene eut operon and Huseby and Roth dissected
+    private cofactor recycling in the Salmonella Eut microcompartment.
+  reference: DOI:10.1128/jb.181.17.5317-5329.1999
+functions:
+- function_id: ethanolamine_catabolism
+  label: ethanolamine catabolic process
+  grounding: GO:0046336
+  description: Sequesters ethanolamine-catabolic chemistry in a protein shell so the
+    cell can convert ethanolamine through acetaldehyde to acetyl-phosphate, acetyl-CoA,
+    and ethanol.
+  evidence:
+  - reference: DOI:10.1128/JB.02179-12
+    notes: Huseby and Roth used Salmonella genetics to test how the Eut microcompartment
+      routes ethanolamine catabolism and recycles private NAD and CoA pools.
+- function_id: acetaldehyde_cofactor_confinement
+  label: acetaldehyde and cofactor confinement
+  description: Restricts acetaldehyde and large NAD/CoA cofactors from freely diffusing
+    between the lumen and cytosol during ethanolamine breakdown.
+  evidence:
+  - reference: DOI:10.1128/JB.02179-12
+    notes: Genetic evidence supported retention and recycling of NAD and CoA within
+      the Eut compartment and restricted diffusion of the acetaldehyde intermediate.
+evidence:
+- reference: DOI:10.1128/mbio.00066-18
+  notes: Kaval and Garsin review bacterial ethanolamine utilization, including eut
+    loci and the Eut microcompartment in pathogens.
+- reference: DOI:10.1128/jb.181.17.5317-5329.1999
+  notes: Kofoid et al. defined the 17-gene Salmonella eut operon and recognized five
+    shell-protein homologues.
+- reference: DOI:10.1128/JB.02179-12
+  notes: Huseby and Roth provide a mechanistic genetic model of ethanolamine catabolism
+    and cofactor recycling within the Eut microcompartment.
+causal_graphs:
+- graph_id: eut_shell_assembly_and_cargo_targeting
+  title: Eut shell proteins assemble a cargo-targeting compartment
+  description: Eut BMC-domain and BMC-P shell proteins form the ethanolamine-utilization
+    protein shell. Short targeting sequences on lumen enzymes bind the shell protein
+    EutS, and EutQ modulates the number of EutSMNLK compartments in a recombinant
+    assembly system.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: eut_bmc_domain_shell_proteins
+    label: Eut BMC-domain shell proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: eut_bmc_domain_shell_proteins
+  - node_id: eutn_vertex_shell_protein
+    label: EutN BMC-P vertex shell protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: eutn_vertex_shell_protein
+  - node_id: eut_shell
+    label: ethanolamine degradation polyhedral organelle
+    node_type: STRUCTURE
+    grounding: GO:0031471
+  - node_id: eutc_targeting_peptide
+    label: EutC N-terminal targeting sequence
+    node_type: GENE_OR_PROTEIN
+  - node_id: eut_lumen_enzymes
+    label: Eut lumen enzymes
+    node_type: GENE_OR_PROTEIN
+  - node_id: eutq
+    label: EutQ assembly factor
+    node_type: GENE_OR_PROTEIN
+  edges:
+  - subject: eut_bmc_domain_shell_proteins
+    predicate: self-assemble into
+    object: eut_shell
+    description: EutS alone, and the EutSMNLK shell-protein set, can assemble BMC-like
+      shells in a heterologous E. coli system.
+    evidence:
+    - reference: DOI:10.1038/srep24359
+      notes: Held et al. observed EutS and EutSMNLK polyhedral bodies by TEM after
+        recombinant expression in E. coli.
+  - subject: eutn_vertex_shell_protein
+    predicate: contributes pentameric shell vertices to
+    object: eut_shell
+    description: EutN belongs to the vertex-protein lineage of bacterial microcompartment
+      shell proteins and is pentameric in solution.
+    evidence:
+    - reference: DOI:10.1002/pro.2246
+      notes: Wheatley et al. found that EutN is predominantly pentameric in solution
+        while studying BMC vertex proteins.
+  - subject: eutc_targeting_peptide
+    predicate: binds
+    object: eut_bmc_domain_shell_proteins
+    description: The EutC N-terminal targeting peptide binds EutS, linking ethanolamine-catabolic
+      cargo to the Eut shell.
+    evidence:
+    - reference: DOI:10.1073/pnas.1207516109
+      notes: Fan et al. showed that EutC and EutE targeting sequences bind the EutS
+        shell protein to mediate cargo encapsulation.
+  - subject: eutc_targeting_peptide
+    predicate: directs encapsulation of
+    object: eut_lumen_enzymes
+    description: An N-terminal EutC targeting sequence can route fused cargo to the
+      lumen of recombinant Eut shells.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0033342
+      notes: Choudhary et al. used the 19-residue EutC targeting sequence to localize
+        reporters to EutS and EutSMNLK compartments.
+  - subject: eutq
+    predicate: binds
+    object: eut_bmc_domain_shell_proteins
+    description: EutQ interacts with EutM in vitro and can promote multiple EutSMNLK
+      compartments in the recombinant assembly system.
+    evidence:
+    - reference: DOI:10.1038/srep24359
+      notes: Held et al. found EutQ-EutM binding in pull-down assays and linked EutQ
+        to multiple EutSMNLK compartment formation.

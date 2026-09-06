@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/propanediol_degradation_polyhedral_organelle.yaml
+  slug: propanediol_degradation_polyhedral_organelle
+session:
+  id: 2026-09-06T081056Z-claude-c5693f
+  timestamp: '2026-09-06T08:10:56Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the Pdu metabolosome record
+  details: Added GO:0031472 propanediol degradation polyhedral organelle as a PROPOSED bacterial
+    microcompartment record with BMC-H, BMC-T, BMC-P, PduM, and PduCDE components, bacterial
+    distribution, a Salmonella Typhimurium LT2 example, propanediol catabolism and propionaldehyde
+    sequestration functions, and a convergent shell/cargo Pdu metabolosome biogenesis graph.

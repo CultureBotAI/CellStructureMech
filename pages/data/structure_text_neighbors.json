@@ -421,6 +421,11 @@
           "cosine_similarity": 0.67729324
         },
         {
+          "identifier": "GO:0031472",
+          "label": "propanediol degradation polyhedral organelle",
+          "cosine_similarity": 0.67585293
+        },
+        {
           "identifier": "GO:0020022",
           "label": "acidocalcisome",
           "cosine_similarity": 0.66841702
@@ -434,11 +439,6 @@
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
           "cosine_similarity": 0.658214
-        },
-        {
-          "identifier": "GO:0140737",
-          "label": "encapsulin nanocompartment",
-          "cosine_similarity": 0.65814288
         }
       ]
     },
@@ -493,14 +493,14 @@
           "cosine_similarity": 0.64546093
         },
         {
-          "identifier": "GO:0020022",
-          "label": "acidocalcisome",
-          "cosine_similarity": 0.60824938
+          "identifier": "GO:0031471",
+          "label": "ethanolamine degradation polyhedral organelle",
+          "cosine_similarity": 0.64000559
         },
         {
-          "identifier": "GO:0009279",
-          "label": "cell outer membrane",
-          "cosine_similarity": 0.60195709
+          "identifier": "GO:0031472",
+          "label": "propanediol degradation polyhedral organelle",
+          "cosine_similarity": 0.62366986
         }
       ]
     },
@@ -607,6 +607,11 @@
           "cosine_similarity": 0.76726637
         },
         {
+          "identifier": "GO:0031472",
+          "label": "propanediol degradation polyhedral organelle",
+          "cosine_similarity": 0.70318431
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.68712035
@@ -620,11 +625,6 @@
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
           "cosine_similarity": 0.65363
-        },
-        {
-          "identifier": "GO:0033104",
-          "label": "type VI protein secretion system complex",
-          "cosine_similarity": 0.6533453
         }
       ]
     },
@@ -633,9 +633,19 @@
       "label": "encapsulin nanocompartment",
       "neighbors": [
         {
+          "identifier": "GO:0031471",
+          "label": "ethanolamine degradation polyhedral organelle",
+          "cosine_similarity": 0.76731385
+        },
+        {
           "identifier": "GO:0031470",
           "label": "carboxysome",
           "cosine_similarity": 0.76726637
+        },
+        {
+          "identifier": "GO:0031472",
+          "label": "propanediol degradation polyhedral organelle",
+          "cosine_similarity": 0.76360809
         },
         {
           "identifier": "GO:0110143",
@@ -646,16 +656,68 @@
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
           "cosine_similarity": 0.69434084
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031471",
+      "label": "ethanolamine degradation polyhedral organelle",
+      "neighbors": [
+        {
+          "identifier": "GO:0031472",
+          "label": "propanediol degradation polyhedral organelle",
+          "cosine_similarity": 0.79258479
         },
         {
-          "identifier": "GO:0030115",
-          "label": "S-layer",
-          "cosine_similarity": 0.6767793
+          "identifier": "GO:0140737",
+          "label": "encapsulin nanocompartment",
+          "cosine_similarity": 0.76731385
         },
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.67173874
+          "cosine_similarity": 0.65869962
+        },
+        {
+          "identifier": "cellstructuremech:mreb_filament",
+          "label": "MreB filament",
+          "cosine_similarity": 0.64759912
+        },
+        {
+          "identifier": "GO:0043263",
+          "label": "cellulosome",
+          "cosine_similarity": 0.64672318
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031472",
+      "label": "propanediol degradation polyhedral organelle",
+      "neighbors": [
+        {
+          "identifier": "GO:0031471",
+          "label": "ethanolamine degradation polyhedral organelle",
+          "cosine_similarity": 0.79258479
+        },
+        {
+          "identifier": "GO:0140737",
+          "label": "encapsulin nanocompartment",
+          "cosine_similarity": 0.76360809
+        },
+        {
+          "identifier": "GO:0031470",
+          "label": "carboxysome",
+          "cosine_similarity": 0.70318431
+        },
+        {
+          "identifier": "cellstructuremech:elongasome",
+          "label": "elongasome",
+          "cosine_similarity": 0.68965976
+        },
+        {
+          "identifier": "GO:0031411",
+          "label": "gas vesicle",
+          "cosine_similarity": 0.67585293
         }
       ]
     },
@@ -700,6 +762,11 @@
           "cosine_similarity": 0.65302611
         },
         {
+          "identifier": "GO:0031471",
+          "label": "ethanolamine degradation polyhedral organelle",
+          "cosine_similarity": 0.64672318
+        },
+        {
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
           "cosine_similarity": 0.62477178
@@ -713,11 +780,6 @@
           "identifier": "GO:0015627",
           "label": "type II protein secretion system complex",
           "cosine_similarity": 0.60946123
-        },
-        {
-          "identifier": "GO:0009274",
-          "label": "peptidoglycan-based cell wall",
-          "cosine_similarity": 0.59784785
         }
       ]
     },
