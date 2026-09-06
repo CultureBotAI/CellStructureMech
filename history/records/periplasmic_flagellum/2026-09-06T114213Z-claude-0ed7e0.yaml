@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/periplasmic_flagellum.yaml
+  slug: periplasmic_flagellum
+session:
+  id: 2026-09-06T114213Z-claude-0ed7e0
+  timestamp: '2026-09-06T11:42:13Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add periplasmic flagellum record
+  details: Added the GO:0055040 periplasmic flagellum as a proposed appendage with endoflagellum
+    synonyms, GO:0009288 parentage, FlaB core, FlaA sheath and spirochete basal-body motor
+    constituents, Spirochaetota and bacterial taxonomic scope, Borreliella burgdorferi as
+    a canonical example, GO-grounded bacterial-type flagellum-dependent motility, and a source-bounded
+    cell-deformation graph backed by Nakamura 2020, Qin et al. 2018, Motaleb et al. 2000,
+    Ge et al. 1998, and San Martin et al. 2023.

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/periplasmic_flagellum.yaml
+  slug: periplasmic_flagellum
+session:
+  id: 2026-09-06T123801Z-claude-cb3b36
+  timestamp: '2026-09-06T12:38:01Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/203
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Clarify periplasmic flagellum deformation graph
+  details: 'Addressed issue #203 by inserting an explicit flagellar_rotation node between
+    the basal-body motor and cell-body deformation. The graph now models the motor as driving
+    rotation, rotation as turning the sheathed filament, and rotation as producing the deformation
+    state that drives motility.'

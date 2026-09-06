@@ -1,0 +1,247 @@
+identifier: GO:0055040
+label: periplasmic flagellum
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: A bacterial-type flagellar appendage of spirochetes whose filaments reside
+  in the periplasmic space between the cytoplasmic and outer membranes, attach near
+  the cell poles, and rotate to deform the cell cylinder for motility.
+definition_source: DOI:10.3390/biom10040550
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-06T11:38:55Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-06T11:40:14Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added periplasmic flagellum synonyms, bacterial flagellum parentage, FlaB,
+    FlaA, and basal-body motor components, spirochete taxonomy, a Borrelia B31 example,
+    a motility function, record evidence, and a cell-deformation graph.
+  llm_assisted: true
+- timestamp: '2026-09-06T11:41:34Z'
+  curator: claude
+  action: TIGHTENED_SCOPE
+  changes: Moved the Borrelia canary to species-level NCBITaxon:139 and marked FlaA
+    sheath essentiality unknown to avoid a broad spirochete assertion.
+  llm_assisted: true
+- timestamp: '2026-09-06T12:37:44Z'
+  curator: claude
+  action: FIXED_CAUSAL_GRAPH
+  changes: Replaced the direct filament-to-deformation edge with flagellar rotation
+    edges so the periplasmic graph places cell-body deformation downstream of an active
+    rotation process.
+  llm_assisted: true
+synonyms:
+- synonym_text: endoflagellum
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.3390/biom10040550
+- synonym_text: periplasmic flagellar filament
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1016/j.tim.2022.09.010
+parent_structures:
+- GO:0009288
+components:
+- component_id: flaB_core
+  label: FlaB core flagellins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - flaB
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Spirochetes can encode several related FlaB core flagellins; no
+    single InterPro family was curated that exactly covers the taxon-agnostic periplasmic
+    flagellar core set.
+  role: Major flagellin class that polymerizes into the core of the periplasmic flagellar
+    filament.
+  evidence:
+  - reference: DOI:10.3390/biom10040550
+    notes: Nakamura 2020 reviews FlaB proteins as the conserved spirochete periplasmic
+      flagellar core proteins.
+  - reference: DOI:10.1073/pnas.200221797
+    notes: Motaleb et al. 2000 disrupted Borrelia burgdorferi flaB and showed that
+      periplasmic flagella are required for both motility and the normal flat-wave
+      cell shape.
+- component_id: flaA_sheath
+  label: FlaA sheath proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - flaA
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: FlaA sheath proteins are spirochete-specific periplasmic flagellar
+    constituents without a curated exact source-neutral family CURIE.
+  role: Minor flagellar proteins that form the spirochete sheath around the FlaB core
+    filament.
+  evidence:
+  - reference: DOI:10.3390/biom10040550
+    notes: Nakamura 2020 reviews the FlaA sheath plus FlaB core architecture of known
+      spirochete periplasmic flagella.
+  - reference: DOI:10.1128/JB.180.9.2418-2425.1998
+    notes: Ge et al. 1998 detected FlaA and FlaB in Borrelia burgdorferi periplasmic
+      flagella and found FlaA in several spirochete species.
+- component_id: basal_body_motor
+  label: spirochete flagellar basal body motor
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0120100 denotes the broader bacterial-type flagellum motor rather
+    than the spirochete periplasmic basal body with its lineage-specific collar and
+    cytoplasmic ATPase complex.
+  role: Polar rotary basal body that anchors the periplasmic filament and transmits
+    torque to it.
+  evidence:
+  - reference: DOI:10.1371/journal.pbio.3000050
+    notes: Qin et al. 2018 used in situ cryoET of Borrelia burgdorferi to visualize
+      the periplasmic flagellar basal body, collar, and distinct cytoplasmic ATPase
+      complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:203691
+  taxon_label: Spirochaetota
+  presence: COMMON
+  note: Periplasmic flagella are characteristic endoflagella of motile spirochetes
+    and reside between the inner and outer membranes.
+  reference: DOI:10.3390/biom10040550
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: RARE
+  note: The organelle is a spirochete-specific form of the bacterial flagellum rather
+    than a general bacterial appendage.
+  reference: DOI:10.3390/biom10040550
+canonical_examples:
+- taxon_id: NCBITaxon:139
+  taxon_label: Borreliella burgdorferi
+  note: Qin et al. imaged intact periplasmic flagella and basal-body motors in Borrelia
+    burgdorferi cells by cryo-electron tomography.
+  reference: DOI:10.1371/journal.pbio.3000050
+functions:
+- function_id: motility
+  label: bacterial-type flagellum-dependent cell motility
+  grounding: GO:0071973
+  description: Internal flagellar rotation within the periplasm deforms the spirochete
+    cell cylinder and produces swimming motility.
+  evidence:
+  - reference: DOI:10.3390/biom10040550
+    notes: Nakamura 2020 reviews propulsion by rotation of periplasmic flagella inside
+      the narrow spirochete periplasmic space.
+  - reference: DOI:10.1073/pnas.200221797
+    notes: Motaleb et al. 2000 showed that Borrelia burgdorferi periplasmic flagella
+      have both motility and skeletal roles.
+evidence:
+- reference: DOI:10.3390/biom10040550
+  notes: Nakamura 2020, Spirochete Flagella and Motility, Biomolecules.
+- reference: DOI:10.1371/journal.pbio.3000050
+  notes: Qin et al. 2018, Cryo-electron tomography of periplasmic flagella in Borrelia
+    burgdorferi reveals a distinct cytoplasmic ATPase complex, PLOS Biology.
+- reference: DOI:10.1073/pnas.200221797
+  notes: Motaleb et al. 2000, Borrelia burgdorferi periplasmic flagella have both
+    skeletal and motility functions, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1016/j.tim.2022.09.010
+  notes: San Martin et al. 2023, Diving into the complexity of the spirochetal endoflagellum,
+    Trends in Microbiology.
+causal_graphs:
+- graph_id: periplasmic_flagellum_cell_deformation
+  title: A sheathed FlaB filament rotates in the periplasm to deform the cell cylinder
+  description: FlaB proteins form the core of a sheathed periplasmic filament, the
+    polar basal body anchors and drives rotation of that filament, and internal flagellar
+    rotation changes spirochete cell shape to generate motility.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: flaB_core
+    label: FlaB core flagellins
+    node_type: GENE_OR_PROTEIN
+    component_ref: flaB_core
+  - node_id: flaA_sheath
+    label: FlaA sheath proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: flaA_sheath
+  - node_id: basal_body_motor
+    label: spirochete flagellar basal body motor
+    node_type: GENE_OR_PROTEIN
+    component_ref: basal_body_motor
+  - node_id: filament
+    label: sheathed periplasmic flagellar filament
+    node_type: STRUCTURE
+  - node_id: flagellar_rotation
+    label: flagellar rotation
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: cell_deformation
+    label: spirochete cell-body deformation
+    node_type: STATE
+  - node_id: motility
+    label: bacterial-type flagellum-dependent cell motility
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071973
+  - node_id: periplasmic_flagellum
+    label: periplasmic flagellum
+    node_type: STRUCTURE
+    grounding: GO:0055040
+  edges:
+  - subject: flaB_core
+    predicate: polymerizes into
+    object: filament
+    description: FlaB flagellins build the core of the periplasmic flagellar filament.
+    evidence:
+    - reference: DOI:10.3390/biom10040550
+      notes: Nakamura 2020 reviews the conserved FlaB core of spirochete periplasmic
+        flagellar filaments.
+  - subject: flaA_sheath
+    predicate: forms sheath around
+    object: filament
+    description: FlaA proteins form the sheath that surrounds the FlaB core in the
+      spirochete filament.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2022.09.010
+      notes: San Martin et al. 2023 review the FlaA sheath surrounding polymerized
+        FlaB protomers in the spirochete periplasmic flagellar filament.
+  - subject: filament
+    predicate: is part of
+    object: periplasmic_flagellum
+    description: The sheathed filament is the elongated axial part of the periplasmic
+      flagellum.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3000050
+      notes: Qin et al. 2018 resolved filaments connected to polar periplasmic flagellar
+        motors in Borrelia burgdorferi.
+  - subject: basal_body_motor
+    predicate: drives
+    object: flagellar_rotation
+    description: The polar spirochete basal body is the rotary motor that drives periplasmic
+      flagellar rotation.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3000050
+      notes: Qin et al. 2018 imaged Borrelia burgdorferi periplasmic flagella attached
+        to basal bodies with the spirochete collar and cytoplasmic ATPase complex.
+  - subject: flagellar_rotation
+    predicate: turns
+    object: filament
+    description: Flagellar rotation turns the internal sheathed filament in the spirochete
+      periplasm.
+    evidence:
+    - reference: DOI:10.3390/biom10040550
+      notes: Nakamura 2020 reviews rotation of endoflagella inside the spirochete
+        periplasmic space.
+  - subject: flagellar_rotation
+    predicate: produces
+    object: cell_deformation
+    description: Rotation of periplasmic filaments imposes shape changes on the spirochete
+      cell cylinder.
+    evidence:
+    - reference: DOI:10.1073/pnas.200221797
+      notes: Motaleb et al. 2000 used Borrelia burgdorferi flaB mutants to show that
+        periplasmic flagella provide a skeletal contribution to the normal flat-wave
+        cell shape.
+  - subject: cell_deformation
+    predicate: drives
+    object: motility
+    description: Periplasmic-flagellum-driven cell-body deformation produces spirochete
+      motility.
+    evidence:
+    - reference: DOI:10.3390/biom10040550
+      notes: Nakamura 2020 reviews fluid and surface propulsion driven by periplasmic
+        flagellar rotation inside spirochetes.
