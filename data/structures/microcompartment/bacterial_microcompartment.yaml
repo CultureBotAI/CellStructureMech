@@ -1,0 +1,243 @@
+identifier: GO:0031469
+label: bacterial microcompartment
+structure_category: MICROCOMPARTMENT
+structure_kind: PROTEIN_SHELLED_ORGANELLE
+definition: A bacterial protein-shelled organelle in which a selectively permeable
+  polyhedral shell encapsulates pathway enzymes to segregate segments of metabolism
+  from the cytosol.
+definition_source: GO:0031469
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-06T17:04:56Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-06T17:06:58Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added BMC synonymy, organelle parentage, generic BMC-H/BMC-T/BMC-P shell
+    and lumen-cargo components, bacterial taxonomic scope, a Haliangium ochraceum
+    shell example, encapsulation and permeability functions, core evidence, and a
+    protein-shell encapsulation graph.
+  llm_assisted: true
+- timestamp: '2026-09-06T17:08:19Z'
+  curator: claude
+  action: REVIEW_ISSUE_209
+  changes: 'Resolved issue #209 by changing metabolosome from BROAD_SYNONYM to NARROW_SYNONYM
+    because metabolosomes are the catabolic subset of bacterial microcompartments.'
+  llm_assisted: true
+synonyms:
+- synonym_text: BMC
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/nrmicro.2018.10
+- synonym_text: metabolosome
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1038/nrmicro.2018.10
+parent_structures:
+- GO:0043232
+components:
+- component_id: bmc_h_facet_shell_proteins
+  label: BMC-H facet shell proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: BMC-H proteins are single Pfam00936-domain shell proteins, but
+    the Pfam family also includes tandem-domain BMC-T proteins, so no exact family
+    CURIE was curated.
+  role: Hexameric single-domain shell proteins that tile the polyhedral shell facets
+    around the encapsulated enzyme cargo.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 review BMC-H proteins as hexameric shell tiles that
+      form microcompartment facets.
+  - reference: DOI:10.1126/science.aan3289
+    notes: Sutter et al. 2017 resolved BMC-H proteins in an intact Haliangium ochraceum
+      BMC shell.
+- component_id: bmc_t_gated_shell_proteins
+  label: BMC-T gated shell proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: BMC-T proteins contain fused BMC domains with varied gating and
+    redox specializations; no exact source-neutral family CURIE for only BMC-T shell
+    proteins was curated.
+  role: Pseudohexameric tandem-domain shell proteins that can form trimers or double
+    trimers and introduce larger gated pores.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 review BMC-T proteins as pseudohexameric tandem-domain
+      shell proteins with gated pores in some BMCs.
+  - reference: DOI:10.1016/j.str.2019.01.017
+    notes: Greber et al. 2019 used cryo-EM to analyze BMC-T interactions in the Haliangium
+      ochraceum shell.
+- component_id: bmc_p_vertex_shell_proteins
+  label: BMC-P vertex shell proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The BMV/Pfam03319 family covers BMC vertex proteins across carboxysomes
+    and metabolosomes but does not by itself denote a single lineage-neutral assembled
+    vertex component.
+  role: Pentameric shell proteins that cap polyhedral vertices and help close the
+    proteinaceous organelle shell.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 review BMC-P proteins as pentamers placed at the vertices
+      of BMC shells.
+  - reference: DOI:10.1126/science.aan3289
+    notes: Sutter et al. 2017 extracted the BMC-P vertex protein structure from the
+      intact Haliangium ochraceum shell.
+- component_id: encapsulated_lumen_enzyme_cargo
+  label: encapsulated lumen enzyme cargo
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: BMC enzyme cargo differs by metabolic locus, so no exact family
+    CURIE for the whole cargo class was curated.
+  role: Lineage- and locus-specific enzymes enclosed by the shell; their identities
+    define carboxysome, propanediol, ethanolamine, and other BMC metabolic types.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 review the different enzymes encapsulated by carboxysome
+      and metabolosome BMCs.
+  - reference: DOI:10.1038/s41467-021-24126-4
+    notes: Sutter et al. 2021 cataloged BMC locus diversity by combining shell proteins
+      with adjacent signature enzymes and auxiliary genes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Bacterial microcompartment loci are widespread but patchily distributed across
+    bacterial genomes.
+  reference: DOI:10.1038/s41467-021-24126-4
+canonical_examples:
+- taxon_id: NCBITaxon:502025
+  taxon_label: Haliangium ochraceum DSM 14365
+  note: The Haliangium ochraceum HO shell was used to solve an intact 6.5-MDa bacterial
+    microcompartment shell structure.
+  reference: DOI:10.1126/science.aan3289
+functions:
+- function_id: metabolic_pathway_encapsulation
+  label: metabolic pathway encapsulation
+  description: The protein shell spatially segregates enzyme cargo so BMCs can concentrate
+    useful pathway intermediates or retain toxic and volatile ones.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 review BMCs as organelles that encapsulate enzymes
+      for autotrophic carbon fixation and heterotrophic substrate catabolism.
+- function_id: selective_metabolite_permeability
+  label: selective metabolite permeability
+  description: Small pores through BMC-H and BMC-T shell tiles control the movement
+    of substrates, products, cofactors, and volatile intermediates across the shell.
+  evidence:
+  - reference: DOI:10.1016/j.str.2019.01.017
+    notes: Greber et al. 2019 analyzed BMC-T pores in intact Haliangium shells and
+      modeled them as a gated permeability route through the shell.
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 review BMC shell proteins as selectively permeable
+      pore-containing tiles.
+evidence:
+- reference: DOI:10.1038/nrmicro.2018.10
+  notes: Kerfeld CA, Aussignargues C, Zarzycki J, Cai F and Sutter M 2018, Bacterial
+    microcompartments, Nature Reviews Microbiology.
+- reference: DOI:10.1038/s41467-021-24126-4
+  notes: Sutter M et al. 2021, A catalog of the diversity and ubiquity of bacterial
+    microcompartments, Nature Communications.
+- reference: DOI:10.1126/science.aan3289
+  notes: Sutter M et al. 2017, Assembly principles and structure of a 6.5-MDa bacterial
+    microcompartment shell, Science.
+- reference: DOI:10.1016/j.str.2019.01.017
+  notes: Greber BJ, Sutter M and Kerfeld CA 2019, The Plasticity of Molecular Interactions
+    Governs Bacterial Microcompartment Shell Assembly, Structure.
+causal_graphs:
+- graph_id: protein_shell_encapsulation
+  title: BMC shell proteins close a selectively permeable enzyme compartment
+  description: BMC-H, BMC-T, and BMC-P proteins assemble into a closed polyhedral
+    shell. The shell encapsulates locus-specific enzymes and uses small pores through
+    its shell tiles to couple pathway sequestration with selective metabolite exchange.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: bmc_h_facet_shell_proteins
+    label: BMC-H facet shell proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: bmc_h_facet_shell_proteins
+  - node_id: bmc_t_gated_shell_proteins
+    label: BMC-T gated shell proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: bmc_t_gated_shell_proteins
+  - node_id: bmc_p_vertex_shell_proteins
+    label: BMC-P vertex shell proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: bmc_p_vertex_shell_proteins
+  - node_id: enzyme_cargo
+    label: encapsulated lumen enzyme cargo
+    node_type: GENE_OR_PROTEIN
+    component_ref: encapsulated_lumen_enzyme_cargo
+  - node_id: bacterial_microcompartment
+    label: bacterial microcompartment
+    node_type: STRUCTURE
+    grounding: GO:0031469
+  - node_id: metabolic_intermediates
+    label: metabolic intermediates
+    node_type: CHEMICAL
+  - node_id: metabolic_pathway
+    label: encapsulated metabolic pathway
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: bmc_h_facet_shell_proteins
+    predicate: tile facets of
+    object: bacterial_microcompartment
+    description: BMC-H hexamers tile the flat facets of the polyhedral BMC shell.
+    evidence:
+    - reference: DOI:10.1126/science.aan3289
+      notes: The Haliangium ochraceum intact-shell structure placed BMC-H proteins
+        in the shell facet lattice.
+  - subject: bmc_t_gated_shell_proteins
+    predicate: form gated pores in
+    object: bacterial_microcompartment
+    description: BMC-T pseudohexamers contribute larger gated pores to the shell lattice
+      in BMCs that encode them.
+    evidence:
+    - reference: DOI:10.1016/j.str.2019.01.017
+      notes: Greber et al. 2019 resolved BMC-T double trimers and the variable pores
+        in the Haliangium ochraceum shell.
+  - subject: bmc_p_vertex_shell_proteins
+    predicate: cap vertices of
+    object: bacterial_microcompartment
+    description: BMC-P pentamers provide the pentagonal units that close vertices
+      of the icosahedral shell.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Kerfeld et al. 2018 review BMC-P proteins as pentameric vertex caps.
+  - subject: bacterial_microcompartment
+    predicate: encapsulates
+    object: enzyme_cargo
+    description: BMC shells enclose pathway-specific enzyme cargo rather than leaving
+      every reaction in the cytosol.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Kerfeld et al. 2018 compare carboxysome and metabolosome enzyme cargo
+        in BMC interiors.
+  - subject: bacterial_microcompartment
+    predicate: selectively exchanges
+    object: metabolic_intermediates
+    description: Pores in the protein shell tune metabolite passage between the encapsulated
+      pathway and the cytosol.
+    evidence:
+    - reference: DOI:10.1016/j.str.2019.01.017
+      notes: Greber et al. 2019 modeled a BMC-T pore gate in the intact-shell context.
+  - subject: enzyme_cargo
+    predicate: catalyzes
+    object: metabolic_pathway
+    description: The encapsulated enzyme set carries the metabolic pathway assigned
+      to each BMC locus.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24126-4
+      notes: Sutter et al. 2021 used shell proteins, signature enzymes, and auxiliary
+        genes to classify BMC metabolic loci.
