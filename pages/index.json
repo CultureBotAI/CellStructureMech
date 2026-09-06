@@ -333,6 +333,15 @@
   "definition": "A bacterial envelope-spanning secretion complex related to conjugation machines that uses VirB-family channel, pilus, ATPase and coupling-protein subassemblies to translocate DNA and protein substrates."
  },
  {
+  "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
+  "label": "type IX protein secretion system complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/type_ix_protein_secretion_system_complex.html",
+  "definition": "A Bacteroidota trans-envelope secretion nanomachine that couples an inner-membrane PorL/PorM-family motor to PorK/PorN outer-membrane rings and a SprA/Sov translocon to export folded C-terminal-domain-bearing proteins across the outer membrane."
+ },
+ {
   "identifier": "GO:0033104",
   "label": "type VI protein secretion system complex",
   "category": "SECRETION_SYSTEM",
