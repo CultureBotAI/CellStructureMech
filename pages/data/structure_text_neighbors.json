@@ -312,9 +312,9 @@
           "cosine_similarity": 0.71154218
         },
         {
-          "identifier": "GO:0043591",
-          "label": "endospore external encapsulating structure",
-          "cosine_similarity": 0.70274537
+          "identifier": "GO:0044227",
+          "label": "methane-oxidizing organelle",
+          "cosine_similarity": 0.70538252
         }
       ]
     },
@@ -416,6 +416,11 @@
       "label": "gas vesicle",
       "neighbors": [
         {
+          "identifier": "GO:0044227",
+          "label": "methane-oxidizing organelle",
+          "cosine_similarity": 0.68648003
+        },
+        {
           "identifier": "GO:0043591",
           "label": "endospore external encapsulating structure",
           "cosine_similarity": 0.67729324
@@ -434,11 +439,6 @@
           "identifier": "GO:0097589",
           "label": "archaeal-type flagellum",
           "cosine_similarity": 0.66260401
-        },
-        {
-          "identifier": "GO:0009279",
-          "label": "cell outer membrane",
-          "cosine_similarity": 0.658214
         }
       ]
     },
@@ -478,6 +478,11 @@
       "label": "anammoxosome",
       "neighbors": [
         {
+          "identifier": "GO:0044227",
+          "label": "methane-oxidizing organelle",
+          "cosine_similarity": 0.75355552
+        },
+        {
           "identifier": "GO:0110143",
           "label": "magnetosome",
           "cosine_similarity": 0.69227249
@@ -496,11 +501,6 @@
           "identifier": "GO:0031471",
           "label": "ethanolamine degradation polyhedral organelle",
           "cosine_similarity": 0.64000559
-        },
-        {
-          "identifier": "GO:0031472",
-          "label": "propanediol degradation polyhedral organelle",
-          "cosine_similarity": 0.62366986
         }
       ]
     },
@@ -519,6 +519,11 @@
           "cosine_similarity": 0.71154218
         },
         {
+          "identifier": "GO:0044227",
+          "label": "methane-oxidizing organelle",
+          "cosine_similarity": 0.68501517
+        },
+        {
           "identifier": "GO:0030089",
           "label": "phycobilisome",
           "cosine_similarity": 0.67619712
@@ -527,11 +532,6 @@
           "identifier": "GO:0044222",
           "label": "anammoxosome",
           "cosine_similarity": 0.66711195
-        },
-        {
-          "identifier": "GO:0110143",
-          "label": "magnetosome",
-          "cosine_similarity": 0.66442177
         }
       ]
     },
@@ -563,6 +563,37 @@
           "identifier": "GO:0044222",
           "label": "anammoxosome",
           "cosine_similarity": 0.69227249
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0044227",
+      "label": "methane-oxidizing organelle",
+      "neighbors": [
+        {
+          "identifier": "GO:0044222",
+          "label": "anammoxosome",
+          "cosine_similarity": 0.75355552
+        },
+        {
+          "identifier": "GO:0009279",
+          "label": "cell outer membrane",
+          "cosine_similarity": 0.70538252
+        },
+        {
+          "identifier": "GO:0031411",
+          "label": "gas vesicle",
+          "cosine_similarity": 0.68648003
+        },
+        {
+          "identifier": "GO:0046858",
+          "label": "chlorosome",
+          "cosine_similarity": 0.68501517
+        },
+        {
+          "identifier": "GO:0031472",
+          "label": "propanediol degradation polyhedral organelle",
+          "cosine_similarity": 0.67220302
         }
       ]
     },
