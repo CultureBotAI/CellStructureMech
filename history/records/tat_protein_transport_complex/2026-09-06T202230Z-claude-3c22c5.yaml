@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/tat_protein_transport_complex.yaml
+  slug: tat_protein_transport_complex
+session:
+  id: 2026-09-06T202230Z-claude-3c22c5
+  timestamp: '2026-09-06T20:22:30Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/216
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - discussions
+  summary: Scope Tat record to TatABC systems
+  details: 'Resolved issue #216 by scoping the GO:0033281 record to three-component TatABC
+    systems, making TatB essential in that boundary, removing Bacillus minimal TatAC and archaeal
+    taxonomic assertions, and recording the minimal TatAC exclusion as a resolved boundary
+    discussion.'

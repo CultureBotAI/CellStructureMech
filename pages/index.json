@@ -297,6 +297,15 @@
   "definition": "A mycobacterial ESX-5 type VII secretion inner-membrane complex in which EccB5, EccC5, EccD5, EccE5, and MycP5 assemble into a multi-megadalton nanomachine that exports Esx and PE/PPE-family protein substrates."
  },
  {
+  "identifier": "GO:0033281",
+  "label": "TAT protein transport complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/tat_protein_transport_complex.html",
+  "definition": "A complex of three proteins integral to the cytoplasmic membrane of bacteria and membranes of organelles derived from bacteria (chloroplasts and mitochondria) involved in membrane transport of folded proteins."
+ },
+ {
   "identifier": "GO:0030256",
   "label": "type I protein secretion system complex",
   "category": "SECRETION_SYSTEM",

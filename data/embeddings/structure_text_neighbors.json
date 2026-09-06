@@ -1032,6 +1032,37 @@
       ]
     },
     {
+      "identifier": "GO:0033281",
+      "label": "TAT protein transport complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.79326402
+        },
+        {
+          "identifier": "GO:0043684",
+          "label": "type IV secretion system complex",
+          "cosine_similarity": 0.7519137
+        },
+        {
+          "identifier": "GO:0015627",
+          "label": "type II protein secretion system complex",
+          "cosine_similarity": 0.75034941
+        },
+        {
+          "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
+          "label": "type IX protein secretion system complex",
+          "cosine_similarity": 0.74046376
+        },
+        {
+          "identifier": "GO:0033104",
+          "label": "type VI protein secretion system complex",
+          "cosine_similarity": 0.7218938
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030256",
       "label": "type I protein secretion system complex",
       "neighbors": [

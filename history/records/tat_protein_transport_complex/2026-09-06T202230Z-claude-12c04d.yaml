@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/tat_protein_transport_complex.yaml
+  slug: tat_protein_transport_complex
+session:
+  id: 2026-09-06T202230Z-claude-12c04d
+  timestamp: '2026-09-06T20:22:30Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add TAT protein transport complex
+  details: Added a PROPOSED GO:0033281 TAT protein transport complex record scoped to three-component
+    bacterial TatABC systems, with TatA, TatB, and TatC components, an Escherichia coli canonical
+    example, GO:0043953 function grounding, a TatBC-TatA substrate-recognition graph, and
+    a resolved minimal TatAC boundary discussion. Identity and mechanism evidence were curated
+    from Palmer and Berks 2012, Frain et al. 2019, Behrendt and Bruser 2014, and Deme et al.
+    2026.
