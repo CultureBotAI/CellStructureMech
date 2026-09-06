@@ -288,6 +288,15 @@
   "definition": "The ribonucleoprotein particle that translates mRNA into protein. The bacterial and archaeal 70S ribosome comprises a small (30S) subunit built on 16S rRNA, which decodes the mRNA, and a large (50S) subunit built on 23S and 5S rRNA, whose 23S rRNA catalyses peptide bond formation. This record details that 70S form and the functional core shared with the larger eukaryotic cytosolic 80S ribosome; it does not enumerate 80S-specific components."
  },
  {
+  "identifier": "cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex",
+  "label": "ESX-5 type VII secretion system membrane complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/esx_5_type_vii_secretion_system_membrane_complex.html",
+  "definition": "A mycobacterial ESX-5 type VII secretion inner-membrane complex in which EccB5, EccC5, EccD5, EccE5, and MycP5 assemble into a multi-megadalton nanomachine that exports Esx and PE/PPE-family protein substrates."
+ },
+ {
   "identifier": "GO:0030256",
   "label": "type I protein secretion system complex",
   "category": "SECRETION_SYSTEM",

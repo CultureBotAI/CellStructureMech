@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/esx_5_type_vii_secretion_system_membrane_complex.yaml
+  slug: esx_5_type_vii_secretion_system_membrane_complex
+session:
+  id: 2026-09-06T181303Z-claude-65f4ba
+  timestamp: '2026-09-06T18:13:03Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Add ESX-5 type VII secretion membrane complex
+  details: Added a PROPOSED CellStructureRecord for the mycobacterial ESX-5 type VII secretion
+    system membrane complex, with ESX-5-specific EccB5, EccC5, EccD5, EccE5 and MycP5 constituent
+    components, a Mycobacterium tuberculosis H37Rv canonical example, Mycobacterium-level
+    variable taxonomic scope, GO:0044315 protein secretion function grounding, and a mechanism
+    graph for ESX-5 core assembly and substrate export. Identity and mechanism evidence were
+    curated from Bunduc et al. 2021, Houben et al. 2012, Houben et al. 2014, and Beckham et
+    al. 2017.

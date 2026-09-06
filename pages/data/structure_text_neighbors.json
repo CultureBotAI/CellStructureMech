@@ -1001,6 +1001,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex",
+      "label": "ESX-5 type VII secretion system membrane complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.78281929
+        },
+        {
+          "identifier": "GO:0033104",
+          "label": "type VI protein secretion system complex",
+          "cosine_similarity": 0.75271001
+        },
+        {
+          "identifier": "GO:0043684",
+          "label": "type IV secretion system complex",
+          "cosine_similarity": 0.74917455
+        },
+        {
+          "identifier": "GO:0015627",
+          "label": "type II protein secretion system complex",
+          "cosine_similarity": 0.73891395
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.7180698
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030256",
       "label": "type I protein secretion system complex",
       "neighbors": [
@@ -1025,9 +1056,9 @@
           "cosine_similarity": 0.82481251
         },
         {
-          "identifier": "GO:0045259",
-          "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.69148186
+          "identifier": "cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex",
+          "label": "ESX-5 type VII secretion system membrane complex",
+          "cosine_similarity": 0.78281929
         }
       ]
     },
@@ -1056,9 +1087,9 @@
           "cosine_similarity": 0.80307725
         },
         {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.70748873
+          "identifier": "cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex",
+          "label": "ESX-5 type VII secretion system membrane complex",
+          "cosine_similarity": 0.73891395
         }
       ]
     },
@@ -1118,9 +1149,9 @@
           "cosine_similarity": 0.77147716
         },
         {
-          "identifier": "GO:0045259",
-          "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.6725675
+          "identifier": "cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex",
+          "label": "ESX-5 type VII secretion system membrane complex",
+          "cosine_similarity": 0.74917455
         }
       ]
     },
@@ -1149,9 +1180,9 @@
           "cosine_similarity": 0.82407986
         },
         {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.72616419
+          "identifier": "cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex",
+          "label": "ESX-5 type VII secretion system membrane complex",
+          "cosine_similarity": 0.75271001
         }
       ]
     },
