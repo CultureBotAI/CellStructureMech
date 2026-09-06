@@ -18,6 +18,11 @@
           "cosine_similarity": 0.76041848
         },
         {
+          "identifier": "GO:0055040",
+          "label": "periplasmic flagellum",
+          "cosine_similarity": 0.74453005
+        },
+        {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.73933752
@@ -31,11 +36,6 @@
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
           "cosine_similarity": 0.70422502
-        },
-        {
-          "identifier": "GO:0110143",
-          "label": "magnetosome",
-          "cosine_similarity": 0.70276859
         }
       ]
     },
@@ -43,6 +43,11 @@
       "identifier": "GO:0009288",
       "label": "bacterial-type flagellum",
       "neighbors": [
+        {
+          "identifier": "GO:0055040",
+          "label": "periplasmic flagellum",
+          "cosine_similarity": 0.8517309
+        },
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
@@ -62,11 +67,6 @@
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
           "cosine_similarity": 0.74203794
-        },
-        {
-          "identifier": "GO:0045259",
-          "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.72643365
         }
       ]
     },
@@ -78,6 +78,11 @@
           "identifier": "GO:0044096",
           "label": "type IV pilus",
           "cosine_similarity": 0.63795789
+        },
+        {
+          "identifier": "GO:0055040",
+          "label": "periplasmic flagellum",
+          "cosine_similarity": 0.62292806
         },
         {
           "identifier": "cellstructuremech:mreb_filament",
@@ -93,11 +98,37 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.61010768
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0055040",
+      "label": "periplasmic flagellum",
+      "neighbors": [
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.8517309
         },
         {
-          "identifier": "GO:0030257",
-          "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.60782372
+          "identifier": "GO:0097589",
+          "label": "archaeal-type flagellum",
+          "cosine_similarity": 0.74453005
+        },
+        {
+          "identifier": "cellstructuremech:mreb_filament",
+          "label": "MreB filament",
+          "cosine_similarity": 0.71210531
+        },
+        {
+          "identifier": "GO:0044096",
+          "label": "type IV pilus",
+          "cosine_similarity": 0.69355783
+        },
+        {
+          "identifier": "cellstructuremech:elongasome",
+          "label": "elongasome",
+          "cosine_similarity": 0.65381758
         }
       ]
     },
@@ -105,6 +136,11 @@
       "identifier": "GO:0044096",
       "label": "type IV pilus",
       "neighbors": [
+        {
+          "identifier": "GO:0055040",
+          "label": "periplasmic flagellum",
+          "cosine_similarity": 0.69355783
+        },
         {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
@@ -124,11 +160,6 @@
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
           "cosine_similarity": 0.64187387
-        },
-        {
-          "identifier": "GO:0030257",
-          "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.63842841
         }
       ]
     },
@@ -152,14 +183,14 @@
           "cosine_similarity": 0.73933752
         },
         {
+          "identifier": "GO:0055040",
+          "label": "periplasmic flagellum",
+          "cosine_similarity": 0.71210531
+        },
+        {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
           "cosine_similarity": 0.70900641
-        },
-        {
-          "identifier": "GO:0110143",
-          "label": "magnetosome",
-          "cosine_similarity": 0.7073686
         }
       ]
     },
