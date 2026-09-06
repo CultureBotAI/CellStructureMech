@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TAT protein transport complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>TAT protein transport complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0033281"><code>GO:0033281</code></a> · SECRETION_SYSTEM · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A complex of three proteins integral to the cytoplasmic membrane of bacteria and membranes of organelles derived from bacteria (chloroplasts and mitochondria) involved in membrane transport of folded proteins. <small>[<a href="http://purl.obolibrary.org/obo/GO_0033281"><code>GO:0033281</code></a>]</small></p>
+<p><strong>Synonyms:</strong> Tat translocase; twin-arginine translocation complex; TatABC complex</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-tata_family_translocation_component"><td>TatA-family translocation component</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>tatA</td><td></td><td>ESSENTIAL</td><td>Oligomeric membrane component recruited by substrate-bound receptor complexes to form the active Tat transport site.<ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-026-02399-z"><code>DOI:10.1038/s41564-026-02399-z</code></a> <small>Deme et al. 2026 structurally resolved early Escherichia coli TatABC states containing TatA bound to substrate-loaded TatBC.</small></li><li><a href="https://doi.org/10.1021/bi500169s"><code>DOI:10.1021/bi500169s</code></a> <small>Behrendt and Bruser 2014 characterized the transition from E. coli TatBC receptor complexes to substrate-bound TatABC complexes.</small></li></ul></td></tr>
+<tr id="components-tatc_family_receptor_component"><td>TatC-family receptor component</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>tatC</td><td></td><td>ESSENTIAL</td><td>Core membrane receptor component that recognizes twin-arginine signal peptides and nucleates substrate-bound Tat translocase assembly.<ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-026-02399-z"><code>DOI:10.1038/s41564-026-02399-z</code></a> <small>Deme et al. 2026 resolved the TatC contacts that recognize the twin-arginine targeting sequence in bacterial TatBC and TatABC core complexes.</small></li></ul></td></tr>
+<tr id="components-tatb_family_receptor_component"><td>TatB-family receptor component</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>tatB</td><td></td><td>ESSENTIAL</td><td>Receptor subunit in three-component Tat systems that cooperates with TatC to bind signal peptides before TatA recruitment.<ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-026-02399-z"><code>DOI:10.1038/s41564-026-02399-z</code></a> <small>Deme et al. 2026 resolved E. coli TatBC receptor and TatABC complexes in resting and substrate-bound states.</small></li><li><a href="https://doi.org/10.1021/bi500169s"><code>DOI:10.1021/bi500169s</code></a> <small>Behrendt and Bruser 2014 biochemically characterized the E. coli TatBC complex and its substrate-triggered shift toward TatABC.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2"><code>NCBITaxon:2</code></a> Bacteria — <strong>VARIABLE</strong>: Three-component TatABC protein-transport complexes occur in many bacteria, but Tat systems are absent from some bacteria and simplified to two-component TatAC machines in some Gram-positive lineages. [<a href="https://doi.org/10.1038/nrmicro2814"><code>DOI:10.1038/nrmicro2814</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code>NCBITaxon:562</code></a> <em>Escherichia coli</em> — Reference three-component TatABC system used for bacterial TatBC and TatABC core-complex structural studies. [<a href="https://doi.org/10.1038/s41564-026-02399-z"><code>DOI:10.1038/s41564-026-02399-z</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>protein transport by the Tat complex</strong> <a href="http://purl.obolibrary.org/obo/GO_0043953"><code>GO:0043953</code></a> — The Tat complex moves folded twin-arginine-signal-bearing substrates across an energized cytoplasmic membrane.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0043953"><code>GO:0043953</code></a> <small>GO:0043953 defines folded-protein transport across bacterial cytoplasmic membranes or membranes of bacteria-derived organelles by the TAT complex.</small></li><li><a href="https://doi.org/10.1038/nrmicro2814"><code>DOI:10.1038/nrmicro2814</code></a> <small>Palmer and Berks 2012 review the bacterial Tat pathway as an export route for folded proteins.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-tat_substrate_recognition_and_tata_recruitment">TatBC recognizes folded cargo and recruits TatA <small>(FUNCTION)</small></h3>
+<p>In three-component bacterial Tat systems, TatB and TatC form a membrane receptor that recognizes a folded substrate&#39;s twin-arginine signal peptide, recruits TatA-family protomers, and forms a proton-motive-force dependent transport site.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>TatC-family receptor component</td><td>binds targeting motif on</td><td>folded twin-arginine substrate</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-026-02399-z"><code>DOI:10.1038/s41564-026-02399-z</code></a> <small>Deme et al. 2026 structurally mapped the bacterial TatC contacts with Tat signal-peptide targeting sequences.</small></li></ul></td></tr>
+<tr><td>TatB-family receptor component</td><td>clamps</td><td>folded twin-arginine substrate</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-026-02399-z"><code>DOI:10.1038/s41564-026-02399-z</code></a> <small>Deme et al. 2026 resolved TatB positions around Tat-bound signal peptides in substrate-loaded E. coli Tat core complexes.</small></li></ul></td></tr>
+<tr><td>TatC-family receptor component</td><td>assembles with</td><td>TatB-family receptor component</td><td><ul class="evidence"><li><a href="https://doi.org/10.1021/bi500169s"><code>DOI:10.1021/bi500169s</code></a> <small>Behrendt and Bruser 2014 characterized the E. coli TatBC complex and its conversion toward a substrate-bound TatABC assembly.</small></li></ul></td></tr>
+<tr><td>folded twin-arginine substrate</td><td>triggers recruitment of</td><td>TatA-family translocation component</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-026-02399-z"><code>DOI:10.1038/s41564-026-02399-z</code></a> <small>Deme et al. 2026 captured early substrate-bound TatABC states and model TatA recruitment after substrate binding.</small></li></ul></td></tr>
+<tr><td>TatA-family translocation component</td><td>completes</td><td>TAT protein transport complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1007/s10930-019-09859-y"><code>DOI:10.1007/s10930-019-09859-y</code></a> <small>Frain et al. 2019 review the TatA assembly step that follows cargo recognition by the Tat receptor.</small></li></ul></td></tr>
+<tr><td>proton motive force</td><td>powers</td><td>protein transport by the Tat complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro2814"><code>DOI:10.1038/nrmicro2814</code></a> <small>Palmer and Berks 2012 review energy coupling and folded protein movement by the bacterial Tat pathway.</small></li></ul></td></tr>
+<tr><td>TAT protein transport complex</td><td>carries out</td><td>protein transport by the Tat complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0043953"><code>GO:0043953</code></a> <small>GO:0043953 defines protein transport by the Tat complex as folded-protein movement across the relevant membrane by the TAT complex.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (RESOLVED): Do two-component Gram-positive TatAC translocases belong in this GO:0033281 TAT protein transport complex record? <small>Bacillus subtilis TatAdCd and TatAyCy are named, minimal two-component translocases whose bifunctional TatA-family proteins fill the receptor role handled by TatB in E. coli-like TatABC complexes.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro2814"><code>DOI:10.1038/nrmicro2814</code></a> <small>Palmer and Berks 2012, The twin-arginine translocation (Tat) protein export pathway, Nature Reviews Microbiology.</small></li><li><a href="https://doi.org/10.1007/s10930-019-09859-y"><code>DOI:10.1007/s10930-019-09859-y</code></a> <small>Frain et al. 2019, Transport of Folded Proteins by the Tat System.</small></li><li><a href="https://doi.org/10.1021/bi500169s"><code>DOI:10.1021/bi500169s</code></a> <small>Behrendt and Bruser 2014, The TatBC Complex of the Tat Protein Translocase in Escherichia coli and Its Transition to the Substrate-Bound TatABC Complex, Biochemistry.</small></li><li><a href="https://doi.org/10.1038/s41564-026-02399-z"><code>DOI:10.1038/s41564-026-02399-z</code></a> <small>Deme et al. 2026, Structure and substrate recognition by the bacterial twin-arginine translocation (Tat) core complex, Nature Microbiology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-06T20:18:45Z</code> claude · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-06T20:20:25Z</code> claude · EXPANDED_RECORD — Added Tat translocase synonymy, protein-complex parentage, TatA, TatB, and TatC components, bacterial and archaeal taxonomic scope, Escherichia coli and Bacillus subtilis canonical examples, GO:0043953 protein transport function grounding, record evidence, and a TatBC-TatA substrate-recognition graph.</li><li><code>2026-09-06T20:22:01Z</code> claude · REVIEW_FIX — Resolved issue #216 by scoping the GO:0033281 record to three-component TatABC systems, making TatB essential in that boundary, removing Bacillus minimal TatAC and archaeal taxonomic assertions, and recording the TatAC boundary as a resolved discussion.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/secretion_system/tat_protein_transport_complex.yaml"><code>data/structures/secretion_system/tat_protein_transport_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
