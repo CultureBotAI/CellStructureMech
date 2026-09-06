@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>curli · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>curli</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0098774"><code>GO:0098774</code></a> · APPENDAGE · APPENDAGE · <span class="status">PROPOSED</span></p>
+<p class="definition">Extracellular amyloid fibers assembled from CsgA by the Csg secretion and nucleation machinery that form a pilus subtype in enteric biofilm matrices. <small>[<a href="http://purl.obolibrary.org/obo/GO_0098774"><code>GO:0098774</code></a>]</small></p>
+<p><strong>Synonyms:</strong> curli fimbriae; bacterial amyloid fibers</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-csgA_major_curlin"><td>CsgA major curlin subunit</td><td>PROTEIN</td><td>part of</td><td></td><td>csgA</td><td></td><td>ESSENTIAL</td><td>Secreted amyloid-forming subunit that polymerizes into the curli fiber.<ul class="evidence"><li><a href="https://doi.org/10.1128/ecosalplus.ESP-0037-2018"><code>DOI:10.1128/ecosalplus.ESP-0037-2018</code></a> <small>Bhoite et al. 2019 review CsgA as the major curli subunit secreted through the type VIII curli pathway.</small></li><li><a href="https://doi.org/10.1126/science.1067484"><code>DOI:10.1126/science.1067484</code></a> <small>Chapman et al. 2002 showed that the Escherichia coli csg operons direct amyloid fiber formation.</small></li></ul></td></tr>
+<tr id="components-csgB_nucleator"><td>CsgB nucleator subunit</td><td>PROTEIN</td><td>part of</td><td></td><td>csgB</td><td></td><td>ESSENTIAL</td><td>Cell-surface nucleator that templates CsgA polymerization into curli.<ul class="evidence"><li><a href="https://doi.org/10.1128/ecosalplus.ESP-0037-2018"><code>DOI:10.1128/ecosalplus.ESP-0037-2018</code></a> <small>Bhoite et al. 2019 review CsgB-dependent nucleation during curli assembly.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2"><code>NCBITaxon:2</code></a> Bacteria — <strong>VARIABLE</strong>: Curli-family functional amyloid systems are widespread but unevenly distributed among bacterial genomes. [<a href="https://doi.org/10.1371/journal.pone.0051274"><code>DOI:10.1371/journal.pone.0051274</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code>NCBITaxon:562</code></a> <em>Escherichia coli</em> — The K-12 curli operons provided a genetic model for CsgA and CsgB amyloid-fiber assembly. [<a href="https://doi.org/10.1126/science.1067484"><code>DOI:10.1126/science.1067484</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>curli assembly</strong> <a href="http://purl.obolibrary.org/obo/GO_0098775"><code>GO:0098775</code></a> — CsgA subunits are secreted and nucleated on the cell surface to build an extracellular amyloid fiber.<ul class="evidence"><li><a href="https://doi.org/10.1128/ecosalplus.ESP-0037-2018"><code>DOI:10.1128/ecosalplus.ESP-0037-2018</code></a> <small>The EcoSal Plus review frames curli biogenesis as bacterial amyloid assembly by the type VIII secretion pathway.</small></li></ul></li><li><strong>biofilm matrix adhesion</strong> — Curli fibers contribute an adhesive amyloid scaffold to enterobacterial extracellular matrices.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.micro.60.080805.142106"><code>DOI:10.1146/annurev.micro.60.080805.142106</code></a> <small>Barnhart and Chapman 2006 review curli functions in surface adhesion, cell aggregation, and biofilm formation.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-type_viii_curli_amyloid_assembly">Csg secretion and nucleation build the curli fiber <small>(ASSEMBLY)</small></h3>
+<p>The outer-membrane CsgG pore and accessory factors move CsgA to the cell surface, CsgB nucleates CsgA polymerization, and the resulting amyloid polymer forms the curli fiber.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>CsgG outer-membrane secretion pore</td><td>exports</td><td>CsgA major curlin subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/j.1365-2958.2005.04997.x"><code>DOI:10.1111/j.1365-2958.2005.04997.x</code></a> <small>Robinson et al. 2006 established the outer-membrane CsgG protein as the secretion route for curli fiber subunits.</small></li></ul></td></tr>
+<tr><td>CsgF cell-surface adaptor</td><td>positions</td><td>CsgB nucleator subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.0812143106"><code>DOI:10.1073/pnas.0812143106</code></a> <small>Nenninger et al. 2009 showed that CsgF is needed for localized, efficient curli nucleation by the CsgB pathway.</small></li></ul></td></tr>
+<tr><td>CsgA major curlin subunit</td><td>reaches</td><td>surface-localized CsgA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-019-14145-7"><code>DOI:10.1038/s41467-019-14145-7</code></a> <small>Yan et al. 2020 analyzed substrate-bound CsgF-CsgG secretion channel complexes.</small></li></ul></td></tr>
+<tr><td>CsgB nucleator subunit</td><td>nucleates polymerization of</td><td>surface-localized CsgA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/ecosalplus.ESP-0037-2018"><code>DOI:10.1128/ecosalplus.ESP-0037-2018</code></a> <small>Bhoite et al. 2019 review CsgB nucleation of CsgA amyloid assembly.</small></li></ul></td></tr>
+<tr><td>surface-localized CsgA</td><td>polymerizes into</td><td>curli</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.1067484"><code>DOI:10.1126/science.1067484</code></a> <small>Chapman et al. 2002 connected the csg operons to extracellular amyloid fiber formation in Escherichia coli.</small></li></ul></td></tr>
+<tr><td>curli</td><td>is assembled by</td><td>curli assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/ecosalplus.ESP-0037-2018"><code>DOI:10.1128/ecosalplus.ESP-0037-2018</code></a> <small>Bhoite et al. 2019 review the type VIII secretion pathway as the route for curli fiber biogenesis.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Decide whether GO:0062155 curli secretion complex needs its own CellStructureMech record. <small>GO has an exact curli secretion complex term for the CsgEFG machinery. This curli record models that machinery only in the assembly graph because CsgEFG exports fiber subunits but is not itself part of the amyloid pilus.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.micro.60.080805.142106"><code>DOI:10.1146/annurev.micro.60.080805.142106</code></a> <small>Barnhart MM and Chapman MR 2006, Curli biogenesis and function, Annual Review of Microbiology.</small></li><li><a href="https://doi.org/10.1128/ecosalplus.ESP-0037-2018"><code>DOI:10.1128/ecosalplus.ESP-0037-2018</code></a> <small>Bhoite S, Van Gerven N, Chapman MR and Remaut H 2019, Curli Biogenesis: Bacterial Amyloid Assembly by the Type VIII Secretion Pathway, EcoSal Plus.</small></li><li><a href="https://doi.org/10.1038/s41467-019-14145-7"><code>DOI:10.1038/s41467-019-14145-7</code></a> <small>Yan et al. 2020 reconstituted and structurally analyzed curli substrate recognition by CsgF-CsgG secretion channel complexes.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-06T07:14:04Z</code> claude · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-06T07:16:44Z</code> claude · EXPANDED_RECORD — Added synonyms, parentage, components, taxonomy, a canonical example, function, evidence, and a source-bounded mechanism graph.</li><li><code>2026-09-06T07:48:00Z</code> claude · FIX_DISCUSSION_ANCHOR — Repointed the curli secretion complex boundary TODO to the curli assembly graph so its attaches_to anchor resolves.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/curli.yaml"><code>data/structures/appendage/curli.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

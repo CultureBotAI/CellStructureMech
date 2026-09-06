@@ -1,0 +1,202 @@
+identifier: GO:0043263
+label: cellulosome
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An extracellular membraneless organelle built around scaffoldin and dockerin-bearing
+  enzymes that synergistically degrade insoluble plant-cell-wall polysaccharides.
+definition_source: GO:0043263
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-06T07:14:05Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-06T07:16:46Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added synonyms, parentage, components, taxonomy, a canonical example, function,
+    evidence, and a source-bounded mechanism graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: cellulosomal complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1146/annurev-biochem-091208-085603
+- synonym_text: multienzyme cellulolytic complex
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev.micro.57.030502.091022
+parent_structures:
+- GO:0043264
+components:
+- component_id: primary_scaffoldin
+  label: primary scaffoldin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - cipA
+  - scaA
+  essentiality: ESSENTIAL
+  role: Presents cohesin modules that organize dockerin-bearing enzymes into a higher-order
+    extracellular complex.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-091208-085603
+    notes: Fontes and Gilbert 2010 review scaffoldins as the proteins that organize
+      cohesin-dockerin enzyme assembly in cellulosomes.
+- component_id: dockerin_bearing_hydrolases
+  label: dockerin-bearing plant-cell-wall hydrolases
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - celA
+  - celS
+  - xyn
+  essentiality: CONDITIONAL
+  role: Catalytic cellulases, xylanases, and accessory enzymes that dock onto scaffoldin
+    cohesins and degrade plant cell-wall polysaccharides.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.57.030502.091022
+    notes: Bayer et al. 2004 review cellulosomes as scaffoldin-organized assemblies
+      of multiple dockerin-containing carbohydrate-active enzymes.
+- component_id: cell_surface_anchoring_scaffoldins
+  label: cell-surface anchoring scaffoldins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  role: Anchor scaffoldin-enzyme assemblies to bacterial surface layers in cell-associated
+    cellulosome systems.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-091208-085603
+    notes: Fontes and Gilbert 2010 review cell-surface anchoring scaffoldins and multi-scaffoldin
+      architectures in natural cellulosomes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Cellulosomes occur in a subset of anaerobic plant-polysaccharide-degrading
+    bacteria and are absent from most bacterial lineages.
+  reference: DOI:10.1146/annurev-biochem-091208-085603
+canonical_examples:
+- taxon_id: NCBITaxon:1515
+  taxon_label: Acetivibrio thermocellus
+  note: The cited literature studies this organism under the Clostridium thermocellum
+    name; it is the prototype cellulosome-forming bacterium.
+  reference: DOI:10.1146/annurev.micro.57.030502.091022
+functions:
+- function_id: plant_cell_wall_degradation
+  label: plant cell wall polysaccharide degradation
+  description: Scaffoldin-bound carbohydrate-active enzymes cooperate to hydrolyze
+    insoluble cellulose and hemicellulose.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-091208-085603
+    notes: Fontes and Gilbert 2010 review the spatial organization of cellulosomal
+      enzymes for synergistic plant cell-wall deconstruction.
+evidence:
+- reference: DOI:10.1146/annurev-biochem-091208-085603
+  notes: 'Fontes CMGA and Gilbert HJ 2010, Cellulosomes: Highly Efficient Nanomachines
+    Designed to Deconstruct Plant Cell Wall Complex Carbohydrates, Annual Review of
+    Biochemistry.'
+- reference: DOI:10.1146/annurev.micro.57.030502.091022
+  notes: 'Bayer EA, Belaich JP, Shoham Y and Lamed R 2004, The cellulosomes: multienzyme
+    machines for degradation of plant cell wall polysaccharides, Annual Review of
+    Microbiology.'
+- reference: DOI:10.1073/pnas.1936124100
+  notes: Carvalho et al. 2003 solved a cohesin-dockerin complex that revealed the
+    physical interaction used to assemble cellulosomes.
+causal_graphs:
+- graph_id: cohesin_dockerin_enzyme_scaffold_assembly
+  title: Cohesin-dockerin binding assembles a cellulose-degrading machine
+  description: A primary scaffoldin concentrates dockerin-bearing hydrolases through
+    cohesin-dockerin interactions, and the assembled complex binds insoluble cellulose
+    so its enzymes can hydrolyze plant cell-wall polysaccharides cooperatively.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: primary_scaffoldin
+    label: primary scaffoldin
+    node_type: GENE_OR_PROTEIN
+    component_ref: primary_scaffoldin
+  - node_id: dockerin_hydrolases
+    label: dockerin-bearing hydrolases
+    node_type: GENE_OR_PROTEIN
+    component_ref: dockerin_bearing_hydrolases
+  - node_id: cohesin_dockerin_bound_state
+    label: cohesin-dockerin-bound enzyme scaffold
+    node_type: STATE
+  - node_id: anchoring_scaffoldins
+    label: cell-surface anchoring scaffoldins
+    node_type: GENE_OR_PROTEIN
+    component_ref: cell_surface_anchoring_scaffoldins
+  - node_id: cellulosome
+    label: cellulosome
+    node_type: STRUCTURE
+    grounding: GO:0043263
+  - node_id: plant_cell_wall_polysaccharide
+    label: plant cell wall polysaccharide
+    node_type: CHEMICAL
+  - node_id: polysaccharide_degradation
+    label: plant cell wall polysaccharide degradation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: dockerin_hydrolases
+    predicate: bind
+    object: primary_scaffoldin
+    description: Dockerin domains on catalytic enzymes bind cohesin modules in the
+      scaffoldin.
+    evidence:
+    - reference: DOI:10.1073/pnas.1936124100
+      notes: Carvalho et al. 2003 established the cohesin-dockerin complex as the
+        structural basis of cellulosome assembly.
+  - subject: primary_scaffoldin
+    predicate: organizes
+    object: cohesin_dockerin_bound_state
+    description: Multiple cohesin modules on scaffoldins colocalize bound catalytic
+      enzymes.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-091208-085603
+      notes: Fontes and Gilbert 2010 review modular scaffoldins as the organizers
+        of natural cellulosomes.
+  - subject: anchoring_scaffoldins
+    predicate: anchor
+    object: cellulosome
+    description: Surface-anchoring scaffoldins connect assembled cellulosomal complexes
+      to the bacterial cell surface in cell-associated systems.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-091208-085603
+      notes: Fontes and Gilbert 2010 review anchoring scaffoldins in cellulosome-producing
+        bacteria.
+  - subject: cohesin_dockerin_bound_state
+    predicate: forms
+    object: cellulosome
+    description: The cohesin-dockerin-bound enzyme scaffold is the core architecture
+      of the mature cellulosome.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.57.030502.091022
+      notes: Bayer et al. 2004 review cellulosomes as multienzyme complexes assembled
+        by cohesin-dockerin interactions.
+  - subject: cellulosome
+    predicate: binds
+    object: plant_cell_wall_polysaccharide
+    description: Cellulosomes position catalytic enzymes against insoluble cellulose
+      and related plant cell-wall polysaccharides.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-091208-085603
+      notes: Fontes and Gilbert 2010 review the carbohydrate-binding and catalytic
+        modules that focus cellulosomes on plant cell walls.
+  - subject: dockerin_hydrolases
+    predicate: hydrolyze
+    object: plant_cell_wall_polysaccharide
+    description: The enzyme cargo provides the cellulase and hemicellulase activities
+      needed to degrade the bound polysaccharide substrate.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.57.030502.091022
+      notes: Bayer et al. 2004 review cellulases and hemicellulases as catalytic constituents
+        of cellulosomes.
+  - subject: cellulosome
+    predicate: enables
+    object: polysaccharide_degradation
+    description: The assembled complex enables synergistic deconstruction of insoluble
+      plant cell-wall polysaccharides.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-091208-085603
+      notes: Fontes and Gilbert 2010 review cellulosomes as highly efficient nanomachines
+        for plant cell-wall complex carbohydrate degradation.

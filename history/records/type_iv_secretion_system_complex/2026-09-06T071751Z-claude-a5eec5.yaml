@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_iv_secretion_system_complex.yaml
+  slug: type_iv_secretion_system_complex
+session:
+  id: 2026-09-06T071751Z-claude-a5eec5
+  timestamp: '2026-09-06T07:17:51Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the type IV secretion system record
+  details: Added GO:0043684 type IV secretion system complex as a PROPOSED secretion-system
+    record with VirB outer-core, inner-membrane, ATPase, coupling-protein, and pilus components,
+    bacterial distribution, an Agrobacterium tumefaciens VirB/VirD4 example, a DNA and protein
+    translocation function, and a VirB/VirD4 substrate-transfer graph.

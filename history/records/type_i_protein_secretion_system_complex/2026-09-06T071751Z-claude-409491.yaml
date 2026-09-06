@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_i_protein_secretion_system_complex.yaml
+  slug: type_i_protein_secretion_system_complex
+session:
+  id: 2026-09-06T071751Z-claude-409491
+  timestamp: '2026-09-06T07:17:51Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the type I secretion system record
+  details: Added GO:0030256 type I protein secretion system complex as a PROPOSED secretion-system
+    record with ABC-transporter, membrane-fusion-protein, and TolC-family outer-membrane-factor
+    components, bacterial distribution, an Escherichia coli HlyB/HlyD/TolC example, a one-step
+    secretion function, and an ABC-MFP-TolC export graph.

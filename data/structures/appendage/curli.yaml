@@ -1,0 +1,208 @@
+identifier: GO:0098774
+label: curli
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: Extracellular amyloid fibers assembled from CsgA by the Csg secretion
+  and nucleation machinery that form a pilus subtype in enteric biofilm matrices.
+definition_source: GO:0098774
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-06T07:14:04Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-06T07:16:44Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added synonyms, parentage, components, taxonomy, a canonical example, function,
+    evidence, and a source-bounded mechanism graph.
+  llm_assisted: true
+- timestamp: '2026-09-06T07:48:00Z'
+  curator: claude
+  action: FIX_DISCUSSION_ANCHOR
+  changes: Repointed the curli secretion complex boundary TODO to the curli assembly
+    graph so its attaches_to anchor resolves.
+  llm_assisted: true
+synonyms:
+- synonym_text: curli fimbriae
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1146/annurev.micro.60.080805.142106
+- synonym_text: bacterial amyloid fibers
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/ecosalplus.ESP-0037-2018
+parent_structures:
+- GO:0009289
+components:
+- component_id: csgA_major_curlin
+  label: CsgA major curlin subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - csgA
+  essentiality: ESSENTIAL
+  role: Secreted amyloid-forming subunit that polymerizes into the curli fiber.
+  evidence:
+  - reference: DOI:10.1128/ecosalplus.ESP-0037-2018
+    notes: Bhoite et al. 2019 review CsgA as the major curli subunit secreted through
+      the type VIII curli pathway.
+  - reference: DOI:10.1126/science.1067484
+    notes: Chapman et al. 2002 showed that the Escherichia coli csg operons direct
+      amyloid fiber formation.
+- component_id: csgB_nucleator
+  label: CsgB nucleator subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - csgB
+  essentiality: ESSENTIAL
+  role: Cell-surface nucleator that templates CsgA polymerization into curli.
+  evidence:
+  - reference: DOI:10.1128/ecosalplus.ESP-0037-2018
+    notes: Bhoite et al. 2019 review CsgB-dependent nucleation during curli assembly.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Curli-family functional amyloid systems are widespread but unevenly distributed
+    among bacterial genomes.
+  reference: DOI:10.1371/journal.pone.0051274
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: The K-12 curli operons provided a genetic model for CsgA and CsgB amyloid-fiber
+    assembly.
+  reference: DOI:10.1126/science.1067484
+functions:
+- function_id: curli_assembly
+  label: curli assembly
+  grounding: GO:0098775
+  description: CsgA subunits are secreted and nucleated on the cell surface to build
+    an extracellular amyloid fiber.
+  evidence:
+  - reference: DOI:10.1128/ecosalplus.ESP-0037-2018
+    notes: The EcoSal Plus review frames curli biogenesis as bacterial amyloid assembly
+      by the type VIII secretion pathway.
+- function_id: biofilm_matrix_adhesion
+  label: biofilm matrix adhesion
+  description: Curli fibers contribute an adhesive amyloid scaffold to enterobacterial
+    extracellular matrices.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.60.080805.142106
+    notes: Barnhart and Chapman 2006 review curli functions in surface adhesion, cell
+      aggregation, and biofilm formation.
+evidence:
+- reference: DOI:10.1146/annurev.micro.60.080805.142106
+  notes: Barnhart MM and Chapman MR 2006, Curli biogenesis and function, Annual Review
+    of Microbiology.
+- reference: DOI:10.1128/ecosalplus.ESP-0037-2018
+  notes: 'Bhoite S, Van Gerven N, Chapman MR and Remaut H 2019, Curli Biogenesis:
+    Bacterial Amyloid Assembly by the Type VIII Secretion Pathway, EcoSal Plus.'
+- reference: DOI:10.1038/s41467-019-14145-7
+  notes: Yan et al. 2020 reconstituted and structurally analyzed curli substrate recognition
+    by CsgF-CsgG secretion channel complexes.
+causal_graphs:
+- graph_id: type_viii_curli_amyloid_assembly
+  title: Csg secretion and nucleation build the curli fiber
+  description: The outer-membrane CsgG pore and accessory factors move CsgA to the
+    cell surface, CsgB nucleates CsgA polymerization, and the resulting amyloid polymer
+    forms the curli fiber.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: csgG_pore
+    label: CsgG outer-membrane secretion pore
+    node_type: GENE_OR_PROTEIN
+  - node_id: csgF_adaptor
+    label: CsgF cell-surface adaptor
+    node_type: GENE_OR_PROTEIN
+  - node_id: csgB_nucleator
+    label: CsgB nucleator subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: csgB_nucleator
+  - node_id: csgA_major_curlin
+    label: CsgA major curlin subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: csgA_major_curlin
+  - node_id: secreted_csgA
+    label: surface-localized CsgA
+    node_type: STATE
+  - node_id: curli_fiber
+    label: curli
+    node_type: STRUCTURE
+    grounding: GO:0098774
+  - node_id: curli_assembly
+    label: curli assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0098775
+  edges:
+  - subject: csgG_pore
+    predicate: exports
+    object: csgA_major_curlin
+    description: CsgG forms the outer-membrane channel used for curli subunit secretion.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2005.04997.x
+      notes: Robinson et al. 2006 established the outer-membrane CsgG protein as the
+        secretion route for curli fiber subunits.
+  - subject: csgF_adaptor
+    predicate: positions
+    object: csgB_nucleator
+    description: CsgF promotes efficient cell-surface placement of the CsgB nucleator.
+    evidence:
+    - reference: DOI:10.1073/pnas.0812143106
+      notes: Nenninger et al. 2009 showed that CsgF is needed for localized, efficient
+        curli nucleation by the CsgB pathway.
+  - subject: csgA_major_curlin
+    predicate: reaches
+    object: secreted_csgA
+    description: The curli pathway transports CsgA to the exterior before amyloid
+      polymerization.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-14145-7
+      notes: Yan et al. 2020 analyzed substrate-bound CsgF-CsgG secretion channel
+        complexes.
+  - subject: csgB_nucleator
+    predicate: nucleates polymerization of
+    object: secreted_csgA
+    description: Surface-associated CsgB templates extracellular CsgA polymerization.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.ESP-0037-2018
+      notes: Bhoite et al. 2019 review CsgB nucleation of CsgA amyloid assembly.
+  - subject: secreted_csgA
+    predicate: polymerizes into
+    object: curli_fiber
+    description: Secreted CsgA monomers polymerize into the extracellular amyloid
+      fiber.
+    evidence:
+    - reference: DOI:10.1126/science.1067484
+      notes: Chapman et al. 2002 connected the csg operons to extracellular amyloid
+        fiber formation in Escherichia coli.
+  - subject: curli_fiber
+    predicate: is assembled by
+    object: curli_assembly
+    description: The type VIII curli biogenesis pathway is the assembly route for
+      the curli fiber.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.ESP-0037-2018
+      notes: Bhoite et al. 2019 review the type VIII secretion pathway as the route
+        for curli fiber biogenesis.
+discussions:
+- discussion_id: curli_secretion_complex_boundary
+  prompt: Decide whether GO:0062155 curli secretion complex needs its own CellStructureMech
+    record.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#type_viii_curli_amyloid_assembly
+  rationale: GO has an exact curli secretion complex term for the CsgEFG machinery.
+    This curli record models that machinery only in the assembly graph because CsgEFG
+    exports fiber subunits but is not itself part of the amyloid pilus.
+  evidence:
+  - reference: GO:0062155
+    notes: Gene Ontology carries a cellular-component term for the curli secretion
+      complex.
+  - reference: DOI:10.1038/s41467-019-14145-7
+    notes: Yan et al. 2020 structurally characterized CsgF-CsgG curli secretion channel
+      complexes.
+  posed_by: claude
+  posed_date: '2026-09-06'

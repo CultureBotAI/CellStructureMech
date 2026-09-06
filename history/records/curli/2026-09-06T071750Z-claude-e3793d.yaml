@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/curli.yaml
+  slug: curli
+session:
+  id: 2026-09-06T071750Z-claude-e3793d
+  timestamp: '2026-09-06T07:17:50Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the curli record
+  details: Added GO:0098774 curli as a PROPOSED appendage record with CsgA and CsgB fiber
+    components, bacterial distribution, an Escherichia coli example, GO:0098775 curli assembly,
+    an amyloid assembly graph using CsgG/CsgF/CsgB/CsgA steps, and a TODO for the GO:0062155
+    curli secretion complex boundary.

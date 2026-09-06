@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cellulosome.yaml
+  slug: cellulosome
+session:
+  id: 2026-09-06T071750Z-claude-71370f
+  timestamp: '2026-09-06T07:17:50Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the cellulosome record
+  details: Added GO:0043263 cellulosome as a PROPOSED extracellular membraneless-organelle
+    record with scaffoldin, dockerin-bearing hydrolase, and surface-anchoring components,
+    bacterial distribution, an Acetivibrio thermocellus canonical example, a plant cell wall
+    polysaccharide degradation function, and a cohesin-dockerin assembly graph.
