@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_protein_secretion_system_complex.yaml
+  slug: type_vi_protein_secretion_system_complex
+session:
+  id: 2026-09-04T191334Z-claude-747621
+  timestamp: '2026-09-04T19:13:34Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the type VI secretion system record
+  details: Added GO:0033104 type VI protein secretion system complex as a PROPOSED secretion-system
+    record with TssJLM membrane-complex, baseplate, Hcp-tube, TssBC-sheath, VgrG/PAAR-spike
+    and ClpV-recycler components, bacterial and archaeal scopes, a Vibrio cholerae example,
+    a GO:0033103 secretion function, a contractile-injection graph and a subassembly-splitting
+    todo backed by T6SS review, membrane-core, baseplate and dynamic-sheath studies.

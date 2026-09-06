@@ -1,0 +1,284 @@
+identifier: GO:0042651
+label: thylakoid membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The pigmented photosynthetic membrane of cyanobacteria and chloroplasts,
+  enriched in photosystems, cytochrome b6f, ATP synthase, plastoquinone and glycolipids,
+  where light-driven electron transport builds the proton motive force for photosynthetic
+  ATP synthesis.
+definition_source: GO:0042651
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-04T18:39:28Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-04T18:40:28Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added thylakoid membrane components, taxonomy, examples, functions, evidence,
+    a linear electron-transport graph, and a photosystem-splitting todo.
+  llm_assisted: true
+- timestamp: '2026-09-04T19:10:55Z'
+  curator: claude
+  action: FIXED_GROUNDING_LABEL
+  changes: Aligned the ATP synthase causal node label with GO:0045259.
+  llm_assisted: true
+- timestamp: '2026-09-04T19:25:07Z'
+  curator: claude
+  action: FIXED_MEREOLOGY
+  changes: Removed the overbroad GO:0045259 has_part link; kept ATP synthase as a
+    grounded thylakoid component.
+  llm_assisted: true
+- timestamp: '2026-09-04T19:25:35Z'
+  curator: claude
+  action: FIXED_CAUSAL_GRAPH
+  changes: Retargeted the ATP synthase edge to photosynthetic ATP synthesis instead
+    of the upstream electron-transport process.
+  llm_assisted: true
+synonyms:
+- synonym_text: TM
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41467-021-23680-1
+parent_structures:
+- GO:0034357
+has_part:
+- GO:0030089
+components:
+- component_id: thylakoid_lipids
+  label: thylakoid glycerolipid matrix
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Specialized galactolipid-, sulfolipid- and phosphatidylglycerol-rich bilayer
+    into which photosynthetic electron-transport complexes are embedded.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review thylakoids as photosynthetic membranes
+      built from proteins, lipids and pigments across cyanobacteria, algae and plants.
+- component_id: photosystem_ii
+  label: photosystem II
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0009523
+  essentiality: ESSENTIAL
+  role: Membrane complex that oxidizes water, releases oxygen, and reduces plastoquinone
+    at the start of the linear electron-transport chain.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review PSII as one of the major thylakoid electron-transport
+      complexes.
+  - reference: DOI:10.1016/j.molp.2017.09.019
+    notes: Casella et al. 2017 mapped PSII within native Synechocystis thylakoid membranes.
+- component_id: plastoquinone_pool
+  label: plastoquinone pool
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-soluble electron carrier that diffuses within the thylakoid membrane
+    between PSII and cytochrome b6f.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review plastoquinone-mediated electron transport
+      in thylakoid membranes.
+- component_id: cytochrome_b6f
+  label: cytochrome b6f complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0009512
+  essentiality: ESSENTIAL
+  role: Oxidizes plastoquinol and links electron flow to proton translocation across
+    the thylakoid membrane.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 place cytochrome b6f in the thylakoid membrane
+      electron-transport chain.
+- component_id: photosystem_i
+  label: photosystem I
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0009522
+  essentiality: ESSENTIAL
+  role: Light-driven complex that accepts electrons downstream of cytochrome b6f and
+    feeds ferredoxin reduction.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review PSI as a major thylakoid photosynthetic
+      complex.
+  - reference: DOI:10.1016/j.molp.2017.09.019
+    notes: Casella et al. 2017 mapped PSI distribution and mobility in native Synechocystis
+      thylakoid membranes.
+- component_id: atp_synthase
+  label: proton-transporting ATP synthase complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0045259
+  essentiality: ESSENTIAL
+  role: Uses the trans-thylakoid proton motive force to synthesize ATP.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 include ATP synthase among the thylakoid complexes
+      that convert light energy into ATP and reducing power.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteriota
+  presence: COMMON
+  note: Most cyanobacteria carry thylakoid membranes, while Gloeobacter-like lineages
+    perform photosynthesis at the plasma membrane and lack thylakoids.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+- taxon_id: NCBITaxon:2763
+  taxon_label: Rhodophyta
+  presence: COMMON
+  note: Red algal chloroplasts retain thylakoid membranes descended from the cyanobacterial
+    endosymbiont.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+canonical_examples:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  note: Cyanobacterial model for native photosynthetic-complex organization and thylakoid
+    membrane dynamics.
+  reference: DOI:10.1016/j.molp.2017.09.019
+functions:
+- function_id: photosynthetic_electron_transport
+  label: photosynthetic electron transport chain
+  grounding: GO:0009767
+  description: Thylakoid membrane complexes move electrons from water through plastoquinone,
+    cytochrome b6f and photosystem I, coupling light absorption to proton translocation
+    and ATP synthesis.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review thylakoid electron transport as the membrane
+      process that converts light into chemical energy.
+- function_id: photosynthetic_atp_synthesis
+  label: photosynthetic ATP synthesis
+  description: The membrane separates the thylakoid lumen from the cytoplasm or stroma
+    so proton accumulation can drive ATP synthase.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 describe proton motive force generation across
+      thylakoid membranes and ATP synthase use of that gradient.
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
+- reference: DOI:10.1016/j.molp.2017.09.019
+  notes: Casella et al. 2017, Dissecting the Native Architecture and Dynamics of Cyanobacterial
+    Photosynthetic Machinery, Molecular Plant.
+- reference: DOI:10.1038/s41467-021-23680-1
+  notes: Huokko et al. 2021, Probing the biogenesis pathway and dynamics of thylakoid
+    membranes, Nature Communications.
+causal_graphs:
+- graph_id: linear_electron_transport_proton_gradient
+  title: Linear electron transport builds a trans-thylakoid proton gradient
+  description: Photosystem II, plastoquinone, cytochrome b6f and photosystem I form
+    an electron-transport chain in the thylakoid membrane. Electron flow is coupled
+    to proton accumulation in the thylakoid lumen, and ATP synthase converts that
+    proton motive force into ATP.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: psii
+    label: photosystem II
+    node_type: GENE_OR_PROTEIN
+    component_ref: photosystem_ii
+    grounding: GO:0009523
+  - node_id: plastoquinone
+    label: plastoquinone pool
+    node_type: CHEMICAL
+    component_ref: plastoquinone_pool
+  - node_id: cytb6f
+    label: cytochrome b6f complex
+    node_type: GENE_OR_PROTEIN
+    component_ref: cytochrome_b6f
+    grounding: GO:0009512
+  - node_id: psi
+    label: photosystem I
+    node_type: GENE_OR_PROTEIN
+    component_ref: photosystem_i
+    grounding: GO:0009522
+  - node_id: proton_gradient
+    label: trans-thylakoid proton motive force
+    node_type: STATE
+  - node_id: atp_synthase
+    label: proton-transporting ATP synthase complex
+    node_type: GENE_OR_PROTEIN
+    component_ref: atp_synthase
+    grounding: GO:0045259
+  - node_id: electron_transport
+    label: photosynthetic electron transport chain
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009767
+  - node_id: atp_synthesis
+    label: photosynthetic ATP synthesis
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: psii
+    predicate: reduces
+    object: plastoquinone
+    description: Photosystem II begins linear electron transport by reducing plastoquinone
+      inside the thylakoid membrane.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review PSII and plastoquinone as upstream thylakoid
+        electron carriers.
+  - subject: plastoquinone
+    predicate: feeds electrons to
+    object: cytb6f
+    description: Reduced plastoquinone diffuses through the lipid matrix to cytochrome
+      b6f.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 describe electron transfer from plastoquinone
+        to cytochrome b6f in the thylakoid chain.
+  - subject: cytb6f
+    predicate: reduces the downstream carrier for
+    object: psi
+    description: Cytochrome b6f passes electrons to a soluble carrier that delivers
+      them to photosystem I.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 place cytochrome b6f between PSII and PSI in
+        thylakoid electron transport.
+  - subject: cytb6f
+    predicate: contributes to
+    object: proton_gradient
+    description: The cytochrome b6f complex couples plastoquinol oxidation to proton
+      movement into the thylakoid lumen.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review generation of proton motive force by
+        thylakoid electron transport.
+  - subject: proton_gradient
+    predicate: powers
+    object: atp_synthase
+    description: The trans-thylakoid proton motive force is converted to ATP by ATP
+      synthase.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 connect the thylakoid proton gradient to ATP
+        synthase activity.
+  - subject: atp_synthase
+    predicate: carries out
+    object: atp_synthesis
+    description: Thylakoid ATP synthase uses the proton motive force generated by
+      electron transport to synthesize ATP.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 describe proton motive force generation across
+        thylakoid membranes and ATP synthase use of that gradient.
+discussions:
+- discussion_id: split_photosystem_records
+  prompt: Add separate PSI, PSII and cytochrome b6f records if the corpus needs the
+    internal mechanisms of oxygen evolution, ferredoxin reduction or plastoquinol
+    oxidation.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#photosystem_ii
+  - components#photosystem_i
+  - components#cytochrome_b6f
+  rationale: They are multi-protein complexes and valid future CellStructureRecords,
+    but the first thylakoid membrane record only needs them as grounded membrane components.
+  posed_by: claude
+  posed_date: '2026-09-04'

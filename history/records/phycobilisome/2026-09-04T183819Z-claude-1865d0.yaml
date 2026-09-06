@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/phycobilisome.yaml
+  slug: phycobilisome
+session:
+  id: 2026-09-04T183819Z-claude-1865d0
+  timestamp: '2026-09-04T18:38:19Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the phycobilisome record
+  details: Added GO:0030089 phycobilisome as a PROPOSED energy-complex record with phycobiliprotein
+    rod, allophycocyanin core, linker and phycobilin components, thylakoid parthood, Cyanobacteriota
+    and Rhodophyta scopes, three cyanobacterial structural examples, light-harvesting and
+    photoprotection functions, a rod-to-core excitation-transfer graph, and a protein-family
+    grounding todo backed by phycobilisome review and cryo-EM literature.

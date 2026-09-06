@@ -1,0 +1,245 @@
+identifier: GO:0046858
+label: chlorosome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: OTHER
+definition: A large light-harvesting antenna organelle of green photosynthetic bacteria
+  in which bacteriochlorophyll aggregates self-assemble inside a lipid envelope and
+  attach to the cytoplasmic membrane through a bacteriochlorophyll a-containing CsmA
+  baseplate.
+definition_source: GO:0046858
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-04T07:48:46Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-04T07:50:00Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added chlorosome composition, taxonomy, functions, literature evidence,
+    a function graph, and a protein-family grounding todo.
+  llm_assisted: true
+parent_structures:
+- GO:0043232
+components:
+- component_id: bchl_cde_aggregates
+  label: bacteriochlorophyll c/d/e aggregates
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Principal antenna pigments in the chlorosome interior; they self-assemble
+    into lamellar aggregates without a protein scaffold.
+  evidence:
+  - reference: DOI:10.1007/s11120-013-9869-3
+    notes: Orf and Blankenship 2013 review chlorosome pigment self-assembly and identify
+      bacteriochlorophyll c, d, and e as the natural major chlorosome pigments.
+  - reference: DOI:10.1128/JB.00690-09
+    notes: Psencik et al. 2009 combined cryo-electron microscopy, X-ray scattering,
+      and pigment analysis to show lamellar bacteriochlorophyll aggregates in Chloroflexus
+      aurantiacus chlorosomes.
+- component_id: csma_baseplate
+  label: CsmA bacteriochlorophyll a baseplate
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - csmA
+  essentiality: ESSENTIAL
+  role: Forms the bacteriochlorophyll a-containing protein baseplate that couples
+    the pigment aggregate to downstream membrane reaction-center complexes.
+  evidence:
+  - reference: DOI:10.1038/ncomms12454
+    notes: Nielsen et al. 2016 resolved the CsmA-containing baseplate antenna of Chlorobaculum
+      tepidum chlorosomes in situ.
+  - reference: DOI:10.1128/JB.00690-09
+    notes: Psencik et al. 2009 visualized the crystalline baseplate lattice on one
+      face of Chloroflexus aurantiacus chlorosomes and linked its lattice dimensions
+      to a CsmA dimer building block.
+- component_id: lipid_monolayer
+  label: chlorosome lipid monolayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Surrounds the pigment aggregate as a lipid-rich monolayer that carries chlorosome
+    surface proteins.
+  evidence:
+  - reference: DOI:10.1007/s11120-013-9869-3
+    notes: Orf and Blankenship 2013 describe chlorosomes as bacteriochlorophyll aggregates
+      enclosed by a lipid monolayer with proteins confined to the surface.
+- component_id: accessory_csm_proteins
+  label: accessory chlorosome envelope proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - csmB
+  - csmC
+  - csmD
+  - csmE
+  - csmF
+  - csmH
+  - csmI
+  - csmJ
+  - csmK
+  - csmX
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This component groups several Chlorobi chlorosome-surface proteins
+    by location and structure membership; no single reviewed InterPro or Pfam family
+    was curated that exactly denotes the whole envelope-protein set.
+  role: Additional surface proteins on the chlorosome envelope whose individual roles
+    differ by family and lineage.
+  evidence:
+  - reference: DOI:10.1007/s11120-013-9869-3
+    notes: Orf and Blankenship 2013 review the CsmB, CsmC, CsmD, CsmE, CsmF, CsmH,
+      CsmI, CsmJ, CsmK, and CsmX surface proteins of Chlorobi chlorosomes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Chlorosomes are restricted to particular anoxygenic phototrophs, including
+    green sulfur bacteria, filamentous anoxygenic Chloroflexota, and a phototrophic
+    Acidobacteriota lineage.
+  reference: DOI:10.1007/s11120-013-9869-3
+canonical_examples:
+- taxon_id: NCBITaxon:1097
+  taxon_label: Chlorobaculum tepidum
+  note: Green sulfur bacterium used for in situ NMR, EM, and AFM modelling of the
+    CsmA baseplate.
+  reference: DOI:10.1038/ncomms12454
+- taxon_id: NCBITaxon:1108
+  taxon_label: Chloroflexus aurantiacus
+  note: Green filamentous Chloroflexota model whose thin chlorosomes revealed baseplate
+    and lamellar pigment architecture by cryo-EM and X-ray scattering.
+  reference: DOI:10.1128/JB.00690-09
+functions:
+- function_id: photosynthetic_light_harvesting
+  label: photosynthetic light harvesting
+  description: Chlorosomes harvest weak light with dense bacteriochlorophyll aggregates
+    and transfer excitation energy through the baseplate to membrane photosynthetic
+    reaction centers.
+  evidence:
+  - reference: DOI:10.1007/s11120-010-9533-0
+    notes: Oostergetel et al. 2010 review the chlorosome as a highly efficient photosynthetic
+      light-harvesting antenna.
+  - reference: DOI:10.1007/s11120-013-9869-3
+    notes: Orf and Blankenship 2013 describe chlorosomes as the distinguishing antenna
+      complexes of green photosynthetic bacteria.
+evidence:
+- reference: DOI:10.1007/s11120-013-9869-3
+  notes: Orf GS and Blankenship RE 2013, Chlorosome antenna complexes from green photosynthetic
+    bacteria, Photosynthesis Research.
+- reference: DOI:10.1007/s11120-010-9533-0
+  notes: 'Oostergetel GT, van Amerongen H and Boekema EJ 2010, The chlorosome: a prototype
+    for efficient light harvesting in photosynthesis, Photosynthesis Research.'
+- reference: DOI:10.1128/JB.00690-09
+  notes: Psencik J et al. 2009, Structure of chlorosomes from the green filamentous
+    bacterium Chloroflexus aurantiacus, Journal of Bacteriology.
+- reference: DOI:10.1038/ncomms12454
+  notes: Nielsen JT et al. 2016, In situ high-resolution structure of the baseplate
+    antenna complex in Chlorobaculum tepidum, Nature Communications.
+causal_graphs:
+- graph_id: pigment_baseplate_energy_transfer
+  title: Self-assembled pigments feed excitation energy into the baseplate
+  description: Bacteriochlorophyll c/d/e pigments self-assemble inside a lipid monolayer,
+    while CsmA builds a bacteriochlorophyll a-containing baseplate on one side of
+    the chlorosome. The baseplate couples the dense pigment aggregate to downstream
+    membrane reaction-center proteins so dim light can be harvested for anoxygenic
+    photosynthesis.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: bchl_cde
+    label: bacteriochlorophyll c/d/e aggregates
+    node_type: CHEMICAL
+    component_ref: bchl_cde_aggregates
+  - node_id: lipid_monolayer
+    label: chlorosome lipid monolayer
+    node_type: STRUCTURE
+    component_ref: lipid_monolayer
+  - node_id: csma_baseplate
+    label: CsmA baseplate antenna
+    node_type: GENE_OR_PROTEIN
+    component_ref: csma_baseplate
+  - node_id: chlorosome
+    label: chlorosome
+    node_type: STRUCTURE
+    grounding: GO:0046858
+  - node_id: reaction_center_acceptor
+    label: membrane reaction-center acceptor chain
+    node_type: GENE_OR_PROTEIN
+  - node_id: photosynthesis
+    label: photosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015979
+  edges:
+  - subject: bchl_cde
+    predicate: self-assembles inside
+    object: chlorosome
+    description: The major bacteriochlorophyll pigments self-assemble into lamellar
+      aggregates that fill the chlorosome interior.
+    evidence:
+    - reference: DOI:10.1007/s11120-013-9869-3
+      notes: Orf and Blankenship 2013 review pigment-pigment assembly of the main
+        chlorosome antenna bacteriochlorophylls.
+    - reference: DOI:10.1128/JB.00690-09
+      notes: Psencik et al. 2009 resolved lamellar bacteriochlorophyll aggregates
+        in Chloroflexus aurantiacus chlorosomes.
+  - subject: lipid_monolayer
+    predicate: surrounds
+    object: bchl_cde
+    description: The lipid-rich chlorosome envelope surrounds the pigment aggregate
+      rather than forming a bilayer-bounded vesicle.
+    evidence:
+    - reference: DOI:10.1007/s11120-013-9869-3
+      notes: Orf and Blankenship 2013 describe a lipid monolayer around the chlorosome
+        pigment aggregate.
+  - subject: csma_baseplate
+    predicate: forms
+    object: chlorosome
+    description: CsmA is the main protein in the bacteriochlorophyll a-containing
+      crystalline baseplate on one face of the chlorosome.
+    evidence:
+    - reference: DOI:10.1038/ncomms12454
+      notes: Nielsen et al. 2016 resolved the in situ baseplate antenna structure
+        and modelled the CsmA array of Chlorobaculum tepidum.
+  - subject: bchl_cde
+    predicate: transfers excitation to
+    object: csma_baseplate
+    description: Excitation energy from the self-assembled bacteriochlorophyll aggregate
+      passes to the bacteriochlorophyll a-CsmA baseplate.
+    evidence:
+    - reference: DOI:10.1007/s11120-010-9533-0
+      notes: Oostergetel et al. 2010 review the chlorosome-to-baseplate energy-transfer
+        step.
+  - subject: csma_baseplate
+    predicate: couples to
+    object: reaction_center_acceptor
+    description: The baseplate is the exit antenna that connects the chlorosome to
+      membrane-associated acceptors and reaction centers.
+    evidence:
+    - reference: DOI:10.1038/ncomms12454
+      notes: Nielsen et al. 2016 describe the baseplate as the high-efficiency antenna
+        between chlorosome pigments and downstream reaction-center proteins.
+  - subject: reaction_center_acceptor
+    predicate: supports
+    object: photosynthesis
+    description: Energy delivered out of the chlorosome feeds bacterial photosynthetic
+      reaction centers.
+    evidence:
+    - reference: DOI:10.1007/s11120-013-9869-3
+      notes: Orf and Blankenship 2013 place chlorosomes in the photosynthetic apparatus
+        of green bacteria as antennae feeding reaction centers.
+discussions:
+- discussion_id: ground_chlorosome_protein_families
+  prompt: Find exact InterPro or Pfam families for CsmA and for the accessory Csm
+    envelope proteins, or document why each remains reviewed-label-only.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#csma_baseplate
+  - components#accessory_csm_proteins
+  rationale: The first chlorosome record intentionally avoids guessed protein-family
+    CURIEs; resolving exact family accessions would make these components machine-linkable
+    without changing the taxon-agnostic component boundary.
+  posed_by: claude
+  posed_date: '2026-09-04'

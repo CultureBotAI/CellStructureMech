@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/anammoxosome.yaml
+  slug: anammoxosome
+session:
+  id: 2026-09-04T190930Z-claude-5d32bd
+  timestamp: '2026-09-04T19:09:30Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the anammoxosome record
+  details: Added GO:0044222 anammoxosome as a PROPOSED membrane-organelle record with ladderane
+    membrane, hydrazine synthase, HAO-family hydrazine dehydrogenase and electron-transfer
+    components, Planctomycetota and bacterial scopes, a Candidatus Kuenenia stuttgartiensis
+    example, anaerobic ammonium oxidation and energy-conservation functions, a hydrazine-loop
+    graph and an anammox subcomplex-resolution todo backed by anammoxosome review and immunogold-localization
+    literature.

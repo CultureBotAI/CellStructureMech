@@ -1,0 +1,258 @@
+identifier: GO:0044222
+label: anammoxosome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A ladderane-lipid-bounded intracytoplasmic organelle of anaerobic ammonium-oxidizing
+  Planctomycetota that localizes the hydrazine-producing anammox catabolic pathway
+  and its energy-conserving membrane reactions.
+definition_source: GO:0044222
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-04T18:43:10Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-04T19:09:15Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added anammoxosome lipid and enzyme components, taxonomic scope, Kuenenia
+    example, functions, evidence, a hydrazine-loop graph, and a subcomplex-resolution
+    todo.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+components:
+- component_id: ladderane_membrane
+  label: ladderane lipid membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Dense lipid membrane that bounds the anammoxosome and separates toxic hydrazine-pathway
+    intermediates from the cytoplasm.
+  evidence:
+  - reference: DOI:10.1111/1574-6976.12014
+    notes: Kartal et al. 2013 review ladderane lipids as the distinctive membrane
+      lipids of the anammoxosome.
+  - reference: PMID:15098544
+    notes: Sinninghe Damste et al. 2002 identified ladderane lipids as membrane lipids
+      specific to anammox bacteria.
+- component_id: hydrazine_synthase
+  label: hydrazine synthase complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hzsA
+  - hzsB
+  - hzsC
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The heterotrimeric HZS enzyme has multiple unrelated subunits and
+    no exact source-neutral complex CURIE was curated.
+  role: Anammoxosome lumen enzyme complex that condenses nitric oxide and ammonium-derived
+    reducing equivalents to hydrazine.
+  evidence:
+  - reference: DOI:10.1128/JB.00186-15
+    notes: Kartal et al. 2015 immunolocalized hydrazine synthase subunits to the anammoxosome
+      of Candidatus Kuenenia stuttgartiensis.
+  - reference: DOI:10.1111/1574-6976.12014
+    notes: Kartal et al. 2013 review hydrazine synthase as the central hydrazine-forming
+      complex of anammox catabolism.
+- component_id: hydrazine_dehydrogenase
+  label: hydrazine dehydrogenase and hydroxylamine oxidoreductase-family cytochromes
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hdh
+  - hao
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Anammox genomes encode several related octaheme hydroxylamine oxidoreductase-family
+    proteins; the first record keeps the experimentally localized HAO-family set ungrounded
+    to avoid collapsing paralogues with distinct reactions.
+  role: Octaheme cytochromes in the anammoxosome that oxidize hydrazine to dinitrogen
+    and recycle electrons to the pathway.
+  evidence:
+  - reference: DOI:10.1128/JB.00186-15
+    notes: Kartal et al. 2015 localized hydroxylamine oxidoreductase-family proteins
+      to the Candidatus Kuenenia stuttgartiensis anammoxosome.
+  - reference: DOI:10.1111/1574-6976.12014
+    notes: Kartal et al. 2013 review hydrazine dehydrogenase and related octaheme
+      cytochromes in the anammox pathway.
+- component_id: anammox_electron_transporters
+  label: anammoxosome electron-transfer proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Membrane-associated cytochromes and quinone-linked proteins that recycle electrons
+    among nitrite reduction, hydrazine synthesis and hydrazine oxidation.
+  evidence:
+  - reference: DOI:10.1111/1574-6976.12014
+    notes: Kartal et al. 2013 review the proposed anammoxosome electron-transport
+      loop linking hydrazine oxidation back to nitrite and nitric oxide reduction.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:203682
+  taxon_label: Planctomycetota
+  presence: RARE
+  note: Anammoxosomes are restricted to anaerobic ammonium-oxidizing planctomycetes
+    within the Brocadiales rather than all Planctomycetota.
+  reference: DOI:10.1111/1574-6976.12014
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: RARE
+  note: The organelle has only been described in anammox bacteria.
+  reference: DOI:10.1111/1574-6976.12014
+canonical_examples:
+- taxon_id: NCBITaxon:174633
+  taxon_label: Candidatus Kuenenia stuttgartiensis
+  note: Model anammox bacterium used for immunogold localization of hydrazine synthase
+    and hydroxylamine oxidoreductase-family proteins in the anammoxosome.
+  reference: DOI:10.1128/JB.00186-15
+functions:
+- function_id: anaerobic_ammonium_oxidation
+  label: anaerobic ammonium oxidation
+  description: The anammoxosome compartmentalizes the conversion of ammonium and nitrite
+    through nitric oxide and hydrazine intermediates to dinitrogen gas.
+  evidence:
+  - reference: DOI:10.1111/1574-6976.12014
+    notes: Kartal et al. 2013 review anaerobic ammonium oxidation as the energy metabolism
+      that occurs in the anammoxosome.
+- function_id: energy_conservation
+  label: energy conservation
+  description: Anammoxosome membrane reactions couple hydrazine oxidation and electron
+    transfer to proton motive force generation across the organelle membrane.
+  evidence:
+  - reference: DOI:10.1111/1574-6976.12014
+    notes: Kartal et al. 2013 review the proposed anammoxosome proton motive force
+      generated by pathway electron transport.
+evidence:
+- reference: DOI:10.1111/1574-6976.12014
+  notes: Kartal B, de Almeida NM, Maalcke WJ, Op den Camp HJM, Jetten MSM and Keltjens
+    JT 2013, How to make a living from anaerobic ammonium oxidation, FEMS Microbiology
+    Reviews.
+- reference: DOI:10.1128/JB.00186-15
+  notes: Kartal et al. 2015, Immunogold localization of key metabolic enzymes in the
+    anammoxosome and on the tubule-like structures of Kuenenia stuttgartiensis, Journal
+    of Bacteriology.
+- reference: PMID:15098544
+  notes: Sinninghe Damste et al. 2002 identified ladderane lipid membrane components
+    in anammox bacteria.
+causal_graphs:
+- graph_id: hydrazine_loop_energy_conservation
+  title: Hydrazine metabolism is localized inside a ladderane-bounded organelle
+  description: The ladderane membrane bounds an anammoxosome lumen enriched for hydrazine
+    synthase and HAO-family cytochromes. Nitrite-derived nitric oxide and ammonium
+    are converted to hydrazine, hydrazine is oxidized to dinitrogen, and electrons
+    recycle through membrane-associated carriers that support energy conservation.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ladderane_membrane
+    label: ladderane lipid membrane
+    node_type: STRUCTURE
+    component_ref: ladderane_membrane
+  - node_id: ammonium
+    label: ammonium
+    node_type: CHEMICAL
+  - node_id: nitric_oxide
+    label: nitric oxide
+    node_type: CHEMICAL
+  - node_id: hzs
+    label: hydrazine synthase complex
+    node_type: GENE_OR_PROTEIN
+    component_ref: hydrazine_synthase
+  - node_id: hydrazine
+    label: hydrazine
+    node_type: CHEMICAL
+  - node_id: hdh
+    label: hydrazine dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    component_ref: hydrazine_dehydrogenase
+  - node_id: electron_carriers
+    label: anammoxosome electron-transfer proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: anammox_electron_transporters
+  - node_id: anammoxosome
+    label: anammoxosome
+    node_type: ORGANELLE
+    grounding: GO:0044222
+  edges:
+  - subject: ladderane_membrane
+    predicate: bounds
+    object: anammoxosome
+    description: Ladderane-rich lipids form the membrane boundary of the anammoxosome.
+    evidence:
+    - reference: DOI:10.1111/1574-6976.12014
+      notes: Kartal et al. 2013 review ladderane lipids as the signature anammoxosome
+        membrane lipids.
+  - subject: hzs
+    predicate: condenses
+    object: ammonium
+    description: Hydrazine synthase uses ammonium-derived reducing equivalents and
+      nitric oxide to produce hydrazine in the anammoxosome.
+    evidence:
+    - reference: DOI:10.1111/1574-6976.12014
+      notes: Kartal et al. 2013 review hydrazine synthase as the enzyme that makes
+        hydrazine from nitric oxide and ammonium-derived electrons.
+  - subject: hzs
+    predicate: reduces
+    object: nitric_oxide
+    description: Nitric oxide is the nitrite-derived substrate reduced during hydrazine
+      synthesis.
+    evidence:
+    - reference: DOI:10.1111/1574-6976.12014
+      notes: Kartal et al. 2013 place nitric oxide between nitrite reduction and hydrazine
+        synthesis in the anammox pathway.
+  - subject: hzs
+    predicate: produces
+    object: hydrazine
+    description: Hydrazine synthase forms hydrazine as the characteristic toxic intermediate
+      of anammox catabolism.
+    evidence:
+    - reference: DOI:10.1128/JB.00186-15
+      notes: Kartal et al. 2015 localized HZS to the anammoxosome where hydrazine
+        metabolism is proposed to occur.
+  - subject: hdh
+    predicate: oxidizes
+    object: hydrazine
+    description: Hydrazine dehydrogenase-family cytochromes oxidize hydrazine to dinitrogen
+      and release electrons.
+    evidence:
+    - reference: DOI:10.1111/1574-6976.12014
+      notes: Kartal et al. 2013 review hydrazine oxidation to dinitrogen by hydrazine
+        dehydrogenase in the anammoxosome.
+  - subject: hdh
+    predicate: feeds electrons to
+    object: electron_carriers
+    description: Electrons from hydrazine oxidation are proposed to recycle through
+      anammoxosome membrane-associated carriers.
+    evidence:
+    - reference: DOI:10.1111/1574-6976.12014
+      notes: Kartal et al. 2013 describe an electron-transport loop that recycles
+        electrons from hydrazine oxidation toward nitrite reduction and hydrazine
+        synthesis.
+  - subject: electron_carriers
+    predicate: localize to
+    object: anammoxosome
+    description: Anammox catabolic enzymes are concentrated in or near the anammoxosome
+      rather than distributed throughout the cytoplasm.
+    evidence:
+    - reference: DOI:10.1128/JB.00186-15
+      notes: Kartal et al. 2015 immunolocalized key anammox enzymes in the anammoxosome
+        and on tubule-like structures.
+discussions:
+- discussion_id: resolve_anammox_subcomplexes
+  prompt: Resolve exact HZS, HDH, HAO and membrane electron-transfer complex identities
+    from Kuenenia proteomics and structures, then split or ground the grouped anammox
+    enzyme components accordingly.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#hydrazine_synthase
+  - components#hydrazine_dehydrogenase
+  - components#anammox_electron_transporters
+  rationale: The first organelle record captures localised enzyme classes but does
+    not yet distinguish every paralogous octaheme cytochrome or quinone-linked carrier
+    in the anammoxosome membrane.
+  posed_by: claude
+  posed_date: '2026-09-04'

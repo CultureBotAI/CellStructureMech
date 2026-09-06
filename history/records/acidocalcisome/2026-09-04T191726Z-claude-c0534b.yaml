@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/acidocalcisome.yaml
+  slug: acidocalcisome
+session:
+  id: 2026-09-04T191726Z-claude-c0534b
+  timestamp: '2026-09-04T19:17:26Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the acidocalcisome record
+  details: Added GO:0020022 acidocalcisome as a PROPOSED membrane-organelle record with polyphosphate,
+    cation, membrane, proton-pump and cation-transporter components, bacterial and eukaryotic
+    taxonomic scopes, an Agrobacterium tumefaciens example, polyphosphate and calcium storage
+    functions, an acidic-cation-store graph and a transporter-grounding todo backed by acidocalcisome
+    review and bacterial acidocalcisome literature.
