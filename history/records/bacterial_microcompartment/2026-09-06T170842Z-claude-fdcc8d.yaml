@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/bacterial_microcompartment.yaml
+  slug: bacterial_microcompartment
+session:
+  id: 2026-09-06T170842Z-claude-fdcc8d
+  timestamp: '2026-09-06T17:08:42Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add bacterial microcompartment record
+  details: Added a GO-grounded bacterial microcompartment record with BMC synonymy, generic
+    BMC-H, BMC-T, BMC-P, and lumen-enzyme-cargo components, bacterial taxonomic scope, a Haliangium
+    ochraceum shell example, encapsulation and permeability functions, and a source-backed
+    shell-assembly graph.

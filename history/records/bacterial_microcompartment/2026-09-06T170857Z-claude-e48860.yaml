@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/bacterial_microcompartment.yaml
+  slug: bacterial_microcompartment
+session:
+  id: 2026-09-06T170857Z-claude-e48860
+  timestamp: '2026-09-06T17:08:57Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/209
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  summary: Fix metabolosome synonym scope
+  details: 'Resolved issue #209 by changing metabolosome from BROAD_SYNONYM to NARROW_SYNONYM
+    because metabolosomes are the catabolic subset of bacterial microcompartments, then reran
+    write-time LinkML validation.'

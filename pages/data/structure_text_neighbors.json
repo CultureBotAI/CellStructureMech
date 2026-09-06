@@ -493,14 +493,14 @@
           "cosine_similarity": 0.67585293
         },
         {
+          "identifier": "GO:0031469",
+          "label": "bacterial microcompartment",
+          "cosine_similarity": 0.67008473
+        },
+        {
           "identifier": "GO:0020022",
           "label": "acidocalcisome",
           "cosine_similarity": 0.66841702
-        },
-        {
-          "identifier": "GO:0097589",
-          "label": "archaeal-type flagellum",
-          "cosine_similarity": 0.66260401
         }
       ]
     },
@@ -691,6 +691,37 @@
       ]
     },
     {
+      "identifier": "GO:0031469",
+      "label": "bacterial microcompartment",
+      "neighbors": [
+        {
+          "identifier": "GO:0140737",
+          "label": "encapsulin nanocompartment",
+          "cosine_similarity": 0.86859189
+        },
+        {
+          "identifier": "GO:0031472",
+          "label": "propanediol degradation polyhedral organelle",
+          "cosine_similarity": 0.85171433
+        },
+        {
+          "identifier": "GO:0031471",
+          "label": "ethanolamine degradation polyhedral organelle",
+          "cosine_similarity": 0.81036111
+        },
+        {
+          "identifier": "GO:0031470",
+          "label": "carboxysome",
+          "cosine_similarity": 0.74637963
+        },
+        {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.71798975
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031470",
       "label": "carboxysome",
       "neighbors": [
@@ -698,6 +729,11 @@
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
           "cosine_similarity": 0.76726637
+        },
+        {
+          "identifier": "GO:0031469",
+          "label": "bacterial microcompartment",
+          "cosine_similarity": 0.74637963
         },
         {
           "identifier": "GO:0031472",
@@ -713,11 +749,6 @@
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.67170606
-        },
-        {
-          "identifier": "GO:0009288",
-          "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.66798541
         }
       ]
     },
@@ -725,6 +756,11 @@
       "identifier": "GO:0140737",
       "label": "encapsulin nanocompartment",
       "neighbors": [
+        {
+          "identifier": "GO:0031469",
+          "label": "bacterial microcompartment",
+          "cosine_similarity": 0.86859189
+        },
         {
           "identifier": "GO:0031471",
           "label": "ethanolamine degradation polyhedral organelle",
@@ -744,11 +780,6 @@
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.73459489
-        },
-        {
-          "identifier": "GO:0110143",
-          "label": "magnetosome",
-          "cosine_similarity": 0.70723332
         }
       ]
     },
@@ -756,6 +787,11 @@
       "identifier": "GO:0031471",
       "label": "ethanolamine degradation polyhedral organelle",
       "neighbors": [
+        {
+          "identifier": "GO:0031469",
+          "label": "bacterial microcompartment",
+          "cosine_similarity": 0.81036111
+        },
         {
           "identifier": "GO:0031472",
           "label": "propanediol degradation polyhedral organelle",
@@ -775,11 +811,6 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.65869962
-        },
-        {
-          "identifier": "cellstructuremech:mreb_filament",
-          "label": "MreB filament",
-          "cosine_similarity": 0.64759912
         }
       ]
     },
@@ -787,6 +818,11 @@
       "identifier": "GO:0031472",
       "label": "propanediol degradation polyhedral organelle",
       "neighbors": [
+        {
+          "identifier": "GO:0031469",
+          "label": "bacterial microcompartment",
+          "cosine_similarity": 0.85171433
+        },
         {
           "identifier": "GO:0031471",
           "label": "ethanolamine degradation polyhedral organelle",
@@ -806,11 +842,6 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.68965976
-        },
-        {
-          "identifier": "GO:0031411",
-          "label": "gas vesicle",
-          "cosine_similarity": 0.67585293
         }
       ]
     },
