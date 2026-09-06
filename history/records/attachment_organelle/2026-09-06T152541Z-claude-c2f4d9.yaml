@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/attachment_organelle.yaml
+  slug: attachment_organelle
+session:
+  id: 2026-09-06T152541Z-claude-c2f4d9
+  timestamp: '2026-09-06T15:25:41Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/207
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - composition
+  - causal_graphs
+  summary: Split P65 and HMW3 terminal-button components
+  details: 'Resolved issue #207 by replacing the grouped P65/HMW3 PROTEIN_COMPLEX row with
+    separate P65 and HMW3 PROTEIN components, carrying terminal-button localization evidence
+    to both, updating the polar-core graph to reference the explicit proteins, and rerunning
+    write-time LinkML validation.'

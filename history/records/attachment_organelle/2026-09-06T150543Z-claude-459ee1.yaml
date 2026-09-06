@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/attachment_organelle.yaml
+  slug: attachment_organelle
+session:
+  id: 2026-09-06T150543Z-claude-459ee1
+  timestamp: '2026-09-06T15:05:43Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add attachment organelle record
+  details: Added a GO-grounded Mycoplasma attachment organelle record with terminal-organelle
+    synonymy, cell-projection parentage, the GO attachment-organelle membrane part, P1/P30/HMW2/terminal-button
+    components, Mollicutes and Bacteria taxonomic scope, a Mycoplasmoides pneumoniae M129
+    canonical example, cytadherence and gliding functions, and a source-backed polar-core
+    adhesion graph.
