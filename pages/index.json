@@ -189,6 +189,24 @@
   "definition": "A proteinaceous nanocompartment, 24 to 42 nm across, built from a single HK97-fold shell protein that self-assembles into an icosahedron. Cargo enzymes are packaged inside by a short targeting peptide that binds the shell interior; the commonest cargoes are ferritin-like iron-mineralising proteins and peroxidases."
  },
  {
+  "identifier": "GO:0031471",
+  "label": "ethanolamine degradation polyhedral organelle",
+  "category": "MICROCOMPARTMENT",
+  "kind": "PROTEIN_SHELLED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/microcompartment/ethanolamine_degradation_polyhedral_organelle.html",
+  "definition": "An organelle found in bacteria consisting of a proteinaceous coat containing enzymes for the degradation of ethanolamine whose purpose is the protection of the rest of the cell from the toxic acetaldehyde product of the enzyme ethanolamine ammonia lyase."
+ },
+ {
+  "identifier": "GO:0031472",
+  "label": "propanediol degradation polyhedral organelle",
+  "category": "MICROCOMPARTMENT",
+  "kind": "PROTEIN_SHELLED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/microcompartment/propanediol_degradation_polyhedral_organelle.html",
+  "definition": "An organelle found in bacteria consisting of a proteinaceous coat containing enzymes for the degradation of 1,2-propanediol whose purpose is the protection of the rest of the cell from the toxic propionaldehyde product of the enzyme diol dehydratase."
+ },
+ {
   "identifier": "GO:0009295",
   "label": "nucleoid",
   "category": "NUCLEOID",

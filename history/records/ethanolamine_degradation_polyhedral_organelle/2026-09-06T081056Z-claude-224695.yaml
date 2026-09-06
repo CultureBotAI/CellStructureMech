@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/ethanolamine_degradation_polyhedral_organelle.yaml
+  slug: ethanolamine_degradation_polyhedral_organelle
+session:
+  id: 2026-09-06T081056Z-claude-224695
+  timestamp: '2026-09-06T08:10:56Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the Eut metabolosome record
+  details: Added GO:0031471 ethanolamine degradation polyhedral organelle as a PROPOSED bacterial
+    microcompartment record with Eut BMC-domain and BMC-P shell components, bacterial distribution,
+    a Salmonella Typhimurium LT2 example, ethanolamine catabolism and acetaldehyde/cofactor
+    confinement functions, and an Eut shell assembly and cargo-targeting graph.

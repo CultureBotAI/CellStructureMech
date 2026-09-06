@@ -1,0 +1,280 @@
+identifier: GO:0031472
+label: propanediol degradation polyhedral organelle
+structure_category: MICROCOMPARTMENT
+structure_kind: PROTEIN_SHELLED_ORGANELLE
+definition: An organelle found in bacteria consisting of a proteinaceous coat containing
+  enzymes for the degradation of 1,2-propanediol whose purpose is the protection of
+  the rest of the cell from the toxic propionaldehyde product of the enzyme diol dehydratase.
+definition_source: GO:0031472
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-06T08:06:19Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-06T08:08:10Z'
+  curator: claude
+  action: CURATED_PDU_METABOLOSOME
+  changes: Added Pdu shell and PduCDE components, bacterial distribution, a Salmonella
+    example, GO:0051144 function, propionaldehyde sequestration, and a convergent
+    shell/cargo assembly graph.
+  llm_assisted: true
+- timestamp: '2026-09-06T08:26:34Z'
+  curator: claude
+  action: FIX_PDU_BIOGENESIS_SCOPE
+  changes: Reworded the Pdu assembly graph to describe convergent shell and cargo
+    biogenesis instead of a cargo-first-only pathway.
+  llm_assisted: true
+synonyms:
+- synonym_text: Pdu microcompartment
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41467-020-15888-4
+- synonym_text: propanediol-utilizing metabolosome
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41467-022-30608-w
+parent_structures:
+- GO:0031469
+components:
+- component_id: pdu_bmc_h_shell_proteins
+  label: Pdu BMC-H shell proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - pduA
+  - pduJ
+  - pduK
+  essentiality: CONDITIONAL
+  role: BMC-domain shell proteins that make the major hexameric tiles of the propanediol-utilization
+    microcompartment.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The available BMC-H domain families also cover non-Pdu shell proteins;
+    no exact family for the PduA/PduJ/PduK shell subset was curated.
+  evidence:
+  - reference: DOI:10.1128/JB.184.5.1253-1261.2002
+    notes: Havemann et al. showed that PduA is a shell protein required for normal
+      polyhedral organelle formation in Salmonella.
+  - reference: DOI:10.1128/JB.185.17.5086-5095.2003
+    notes: Havemann and Bobik purified Salmonella Pdu polyhedral organelles and detected
+      PduA and PduJ as organelle components.
+  - reference: DOI:10.1038/s41467-020-15888-4
+    notes: Yang et al. quantified the absolute abundance and organization of Pdu shell
+      proteins in native Salmonella metabolosomes.
+- component_id: pdu_bmc_t_shell_proteins
+  label: Pdu BMC-T shell proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - pduB
+  - pduT
+  - pduU
+  essentiality: CONDITIONAL
+  role: Tandem or circularly permuted BMC-domain shell proteins that tile the Pdu
+    shell and contribute pores and shell-cargo contacts.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PduB, PduT, and PduU are BMC-T shell proteins, but their domain
+    architecture is shared with other BMC shell proteins and no exact Pdu BMC-T family
+    was curated.
+  evidence:
+  - reference: DOI:10.1128/JB.185.17.5086-5095.2003
+    notes: Havemann and Bobik detected PduB and PduU in the purified Pdu organelle
+      fraction.
+  - reference: DOI:10.1038/s41467-022-30608-w
+    notes: Yang et al. connected the PduB N terminus with shell-cargo assembly during
+      Pdu metabolosome biogenesis.
+- component_id: pdun_vertex_shell_protein
+  label: PduN BMC-P vertex shell protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - pduN
+  essentiality: UNKNOWN
+  role: Pentameric shell protein that occupies vertices of the polyhedral Pdu shell.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The BMV-domain family covers several bacterial microcompartment
+    vertex proteins; no exact family for PduN alone was curated.
+  evidence:
+  - reference: DOI:10.1002/pro.2246
+    notes: Wheatley et al. identified PduN as a pentameric vertex protein of the Pdu
+      microcompartment shell.
+  - reference: DOI:10.1038/s41467-020-15888-4
+    notes: Yang et al. include PduN among the quantified structural shell proteins
+      of native Salmonella Pdu metabolosomes.
+- component_id: pdum_structural_protein
+  label: PduM structural protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - pduM
+  essentiality: UNKNOWN
+  role: Structural protein that promotes coupling between the Pdu enzyme core and
+    the closing shell during metabolosome biogenesis.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family CURIE for PduM was curated.
+  evidence:
+  - reference: DOI:10.1128/JB.06529-11
+    notes: Sinha et al. identified PduM as a structural component of the Salmonella
+      1,2-propanediol microcompartment.
+  - reference: DOI:10.1038/s41467-022-30608-w
+    notes: Yang et al. placed PduM in the shell-cargo assembly pathway that builds
+      the native Pdu metabolosome.
+- component_id: pducde_diol_dehydratase
+  label: PduCDE diol dehydratase
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - pduC
+  - pduD
+  - pduE
+  essentiality: DISPENSABLE
+  role: Encapsulated cobalamin-dependent dehydratase that converts 1,2-propanediol
+    to propionaldehyde in the lumen.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0050215 denotes propanediol dehydratase activity rather than
+    the PduCDE protein complex; no exact source-neutral complex CURIE was curated.
+  evidence:
+  - reference: DOI:10.1128/JB.179.21.6633-6639.1997
+    notes: Bobik et al. showed that pduCDE encode the three subunits necessary and
+      sufficient for propanediol dehydratase activity in Salmonella.
+  - reference: DOI:10.1128/JB.05661-11
+    notes: Fan and Bobik showed that the PduD N-terminal region packages PduCDE into
+      the Pdu microcompartment.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Propanediol-utilization bacterial microcompartment loci are patchy across
+    Bacteria and occur as one BMC type among many.
+  reference: DOI:10.1038/s41467-021-24126-4
+canonical_examples:
+- taxon_id: NCBITaxon:99287
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+  note: Salmonella Typhimurium LT2 is the source of the classic pdu locus and of the
+    native Pdu metabolosomes purified, quantified, and imaged in mechanistic studies.
+  reference: DOI:10.1128/JB.185.17.5086-5095.2003
+functions:
+- function_id: propanediol_catabolism
+  label: 1,2-propanediol catabolic process
+  grounding: GO:0051144
+  description: Compartmentalizes cobalamin-dependent 1,2-propanediol dehydration and
+    downstream propionaldehyde metabolism.
+  evidence:
+  - reference: DOI:10.1128/JB.184.5.1253-1261.2002
+    notes: Havemann et al. tied Pdu polyhedral bodies to coenzyme B12-dependent 1,2-propanediol
+      degradation in Salmonella.
+- function_id: propionaldehyde_sequestration
+  label: propionaldehyde sequestration
+  description: Keeps the reactive propionaldehyde intermediate inside the protein
+    shell to limit DNA and cellular damage.
+  evidence:
+  - reference: DOI:10.1128/JB.01925-07
+    notes: Sampson and Bobik showed that the Pdu microcompartment protects Salmonella
+      from DNA and cell damage caused by a reactive propanediol catabolism intermediate.
+evidence:
+- reference: DOI:10.1038/s41467-020-15888-4
+  notes: Yang et al. used imaging and quantitative proteomics to define the composition
+    and organization of native Salmonella Pdu metabolosomes.
+- reference: DOI:10.1038/s41467-022-30608-w
+  notes: Yang et al. dissected convergent shell and cargo assembly pathways of the
+    Salmonella Pdu metabolosome.
+- reference: DOI:10.1128/JB.185.17.5086-5095.2003
+  notes: Havemann and Bobik purified Pdu polyhedral organelles and identified shell
+    and enzymatic components.
+causal_graphs:
+- graph_id: pdu_shell_cargo_convergent_biogenesis
+  title: Pdu shell and cargo assemblies converge into a metabolosome
+  description: Pdu shell proteins and Pdu luminal enzymes can each form early assemblies
+    at the cell pole. Short terminal targeting sequences and PduM then link the enzyme
+    core to BMC-domain shell proteins so the Pdu shell closes around 1,2-propanediol-catabolic
+    cargo.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: pdu_bmc_h_shell_proteins
+    label: Pdu BMC-H shell proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: pdu_bmc_h_shell_proteins
+  - node_id: pdu_bmc_t_shell_proteins
+    label: Pdu BMC-T shell proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: pdu_bmc_t_shell_proteins
+  - node_id: pdun_vertex_shell_protein
+    label: PduN BMC-P vertex shell protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: pdun_vertex_shell_protein
+  - node_id: pducde_diol_dehydratase
+    label: PduCDE diol dehydratase
+    node_type: GENE_OR_PROTEIN
+    component_ref: pducde_diol_dehydratase
+  - node_id: pdu_lumen_enzyme_core
+    label: Pdu lumen enzyme core
+    node_type: GENE_OR_PROTEIN
+  - node_id: pdum_structural_protein
+    label: PduM structural protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: pdum_structural_protein
+  - node_id: pdu_shell_cargo_complex
+    label: Pdu shell-cargo assembly intermediate
+    node_type: STRUCTURE
+  - node_id: pdu_metabolosome
+    label: propanediol degradation polyhedral organelle
+    node_type: STRUCTURE
+    grounding: GO:0031472
+  edges:
+  - subject: pducde_diol_dehydratase
+    predicate: co-assembles with
+    object: pdu_lumen_enzyme_core
+    description: PduCDE participates in the ordered assembly of a luminal cargo core
+      that can form independently of a visible shell focus.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-30608-w
+      notes: Yang et al. observed cargo assemblies that form independently at cell
+        poles during Pdu metabolosome biogenesis.
+  - subject: pdum_structural_protein
+    predicate: bridges
+    object: pdu_shell_cargo_complex
+    description: PduM promotes shell-cargo binding between the assembled enzyme core
+      and PduB-associated shell proteins.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-30608-w
+      notes: Yang et al. placed PduM between the PduB N-terminal region and cargo
+        enzymes in the biogenesis model.
+  - subject: pdu_lumen_enzyme_core
+    predicate: binds
+    object: pdu_bmc_t_shell_proteins
+    description: Terminal targeting sequences on luminal enzymes mediate encapsulation
+      by contacting shell proteins.
+    evidence:
+    - reference: DOI:10.1073/pnas.0913199107
+      notes: Fan et al. established that short N-terminal extensions package enzymes
+        into bacterial microcompartments.
+    - reference: DOI:10.1128/JB.05661-11
+      notes: Fan and Bobik showed that PduD's N-terminal region is sufficient for
+        targeting PduCDE to Pdu microcompartments.
+  - subject: pdu_bmc_h_shell_proteins
+    predicate: tiles
+    object: pdu_shell_cargo_complex
+    description: Pdu BMC-H proteins form abundant shell tiles in native Salmonella
+      Pdu metabolosomes.
+    evidence:
+    - reference: DOI:10.1128/JB.185.17.5086-5095.2003
+      notes: Purified Salmonella Pdu polyhedral organelles contained both Pdu shell
+        proteins and 1,2-propanediol degradation enzymes.
+  - subject: pdun_vertex_shell_protein
+    predicate: caps
+    object: pdu_shell_cargo_complex
+    description: Pentameric PduN supplies the vertex geometry needed to close the
+      polyhedral Pdu shell.
+    evidence:
+    - reference: DOI:10.1002/pro.2246
+      notes: Wheatley et al. assigned PduN to the pentameric vertex-protein set of
+        bacterial microcompartment shells.
+  - subject: pdu_shell_cargo_complex
+    predicate: matures into
+    object: pdu_metabolosome
+    description: Coordination of independent shell and cargo assemblies yields the
+      closed Pdu metabolosome.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-30608-w
+      notes: Yang et al. proposed a hierarchical model in which independent shell
+        and cargo assemblies converge during native Pdu metabolosome biogenesis.
