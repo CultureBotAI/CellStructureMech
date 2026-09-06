@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_ix_protein_secretion_system_complex.yaml
+  slug: type_ix_protein_secretion_system_complex
+session:
+  id: 2026-09-06T200440Z-claude-8837fd
+  timestamp: '2026-09-06T20:04:40Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/213
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  - canonical_examples
+  - discussions
+  summary: Remove PorV from generic T9SS components
+  details: 'Resolved issue #213 by removing PorV from the generic Bacteroidota T9SS component
+    list, retaining PorV as an ungrounded causal-graph handoff participant, correcting the
+    Porphyromonas gingivalis canonical-example note, and adding an open curation todo to revisit
+    PorV-family shuttles plus PorU/PorZ cargo-processing and attachment proteins as source-specific
+    component-boundary curation.'

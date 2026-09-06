@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_ix_protein_secretion_system_complex.yaml
+  slug: type_ix_protein_secretion_system_complex
+session:
+  id: 2026-09-06T200434Z-claude-da3d95
+  timestamp: '2026-09-06T20:04:34Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add type IX protein secretion system complex
+  details: Added a PROPOSED CellStructureRecord for the Bacteroidota type IX protein secretion
+    system complex, with PorL/PorM, PorK/PorN, Sov/SprA, and PorW components, a Porphyromonas
+    gingivalis canonical example, Bacteroidota-level taxonomic scope, GO:0160303 protein secretion
+    function grounding, a T9SS outer-membrane export graph, and a PorV/PorU/PorZ component-boundary
+    curation todo. Identity and mechanism evidence were curated from Sato et al. 2010, McBride
+    2019, Gorasia et al. 2016, Gorasia et al. 2020, Lauber et al. 2018, Hennell James et al.
+    2021, and Gorasia et al. 2022.

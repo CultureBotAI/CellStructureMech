@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_ix_protein_secretion_system_complex.yaml
+  slug: type_ix_protein_secretion_system_complex
+session:
+  id: 2026-09-06T200448Z-claude-d47772
+  timestamp: '2026-09-06T20:04:48Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/214
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - canonical_examples
+  summary: Qualify PorW scope
+  details: 'Resolved issue #214 by changing PorW essentiality from ESSENTIAL to CONDITIONAL,
+    scoping the PorW linker role and grounding notes to the Porphyromonas gingivalis PorK/N-Sov
+    evidence curated from Gorasia et al. 2022, and limiting the Porphyromonas gingivalis canonical-example
+    note to the Sato et al. 2010 discovery-genetics result.'
