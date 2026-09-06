@@ -1,0 +1,251 @@
+identifier: GO:0005839
+label: proteasome core complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A barrel-shaped self-compartmentalized protease core of proteasomes, built
+  from stacked alpha- and beta-subunit rings that sequester threonine protease active
+  sites in an internal chamber for protein degradation.
+definition_source: GO:0005839
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-06T12:53:45Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-06T12:56:44Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added 20S proteasome synonyms, proteasome-complex parthood, alpha and beta
+    core subunits, archaeal and actinobacterial taxonomy, an M. tuberculosis H37Rv
+    example, protein-catabolism functions, record evidence, and a gated-barrel proteolysis
+    graph.
+  llm_assisted: true
+- timestamp: '2026-09-06T13:55:03Z'
+  curator: claude
+  action: EXPANDED_TAXONOMIC_SCOPE
+  changes: '#205: added eukaryotic 20S proteasome scope and eukaryotic architecture
+    evidence to keep the taxonomic distribution aligned with the cross-domain alpha
+    and beta subunit model.'
+  llm_assisted: true
+synonyms:
+- synonym_text: 20S proteasome
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1042/ETLS20180025
+- synonym_text: 20S proteasome core particle
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.3389/fmolb.2019.00023
+part_of:
+- GO:0000502
+components:
+- component_id: alpha_subunits
+  label: proteasome alpha-type subunits
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - prcA
+  stoichiometry: two outer heptameric rings
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Proteasome alpha-type subunits are represented in multiple families
+    across archaea, actinobacteria and eukaryotes; no single exact taxon-neutral family
+    CURIE was curated.
+  role: Forms the two outer rings of the 20S barrel and gates substrate entry into
+    the internal proteolytic chamber.
+  evidence:
+  - reference: DOI:10.1042/ETLS20180025
+    notes: Maupin-Furlow 2018 reviews archaeal 20S proteasome core particles as alpha-
+      and beta-subunit barrels.
+  - reference: DOI:10.1038/emboj.2010.95
+    notes: Li et al. 2010 structurally analyzed assembly and gate closure of the Mycobacterium
+      tuberculosis 20S proteasome alpha ring.
+  - reference: DOI:10.1146/annurev-biochem-060410-150257
+    notes: Tomko and Hochstrasser 2013 review the eukaryotic 20S core as a barrel-shaped
+      protease with alpha-subunit outer rings.
+- component_id: beta_subunits
+  label: proteasome beta-type subunits
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - prcB
+  stoichiometry: two inner heptameric rings
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Proteasome beta-type subunits are represented in multiple families
+    across archaea, actinobacteria and eukaryotes; no single exact taxon-neutral family
+    CURIE was curated.
+  role: Forms the two inner rings of the 20S core and provides the N-terminal threonine
+    protease active sites in the chamber.
+  evidence:
+  - reference: DOI:10.1042/ETLS20180025
+    notes: Maupin-Furlow 2018 reviews archaeal proteasome beta subunits as the catalytic
+      subunits of the 20S core.
+  - reference: DOI:10.1111/j.1365-2958.2005.05036.x
+    notes: Hu et al. 2006 solved the Mycobacterium tuberculosis 20S proteasome structure
+      and localized active-site chemistry to the beta subunits.
+  - reference: DOI:10.1146/annurev-biochem-060410-150257
+    notes: Tomko and Hochstrasser 2013 review the eukaryotic 20S core as a barrel-shaped
+      protease with beta-subunit inner rings.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: COMMON
+  note: 20S proteasomes are broadly conserved archaeal self-compartmentalized proteases.
+  reference: DOI:10.1042/ETLS20180025
+- taxon_id: NCBITaxon:201174
+  taxon_label: Actinomycetota
+  presence: VARIABLE
+  note: Bacterial 20S proteasomes are best characterized in actinobacteria, including
+    mycobacteria, but are not universal across bacteria.
+  reference: DOI:10.3389/fmolb.2019.00023
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: The 20S core is the proteolytic barrel of eukaryotic proteasomes and is conserved
+    in microbial eukaryotes as part of the ubiquitin-proteasome system.
+  reference: DOI:10.1146/annurev-biochem-060410-150257
+canonical_examples:
+- taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis H37Rv
+  note: Mycobacterial strain whose 20S core structure and gate-closure mechanism were
+    solved crystallographically.
+  reference: DOI:10.1038/emboj.2010.95
+functions:
+- function_id: proteasomal_protein_catabolism
+  label: proteasomal protein catabolic process
+  grounding: GO:0010498
+  description: The core complex degrades unfolded proteins or peptides inside its
+    enclosed proteolytic chamber.
+  evidence:
+  - reference: DOI:10.1042/ETLS20180025
+    notes: Maupin-Furlow 2018 reviews archaeal protein degradation by proteasomes
+      associated with AAA-ATPases.
+  - reference: DOI:10.3389/fmolb.2019.00023
+    notes: Muller et al. 2019 review bacterial proteasome core particles and activators
+      in Mycobacterium tuberculosis.
+- function_id: threonine_endopeptidase_activity
+  label: threonine-type endopeptidase activity
+  grounding: GO:0004298
+  description: Beta subunit N-terminal threonines catalyze peptide-bond hydrolysis
+    inside the 20S core.
+  evidence:
+  - reference: DOI:10.1111/j.1365-2958.2005.05036.x
+    notes: Hu et al. 2006 captured the Mycobacterium tuberculosis proteasome active
+      site and inhibitor interactions.
+evidence:
+- reference: DOI:10.1042/ETLS20180025
+  notes: 'Maupin-Furlow 2018, Proteolytic systems of archaea: slicing, dicing, and
+    mincing in the extreme, Emerging Topics in Life Sciences.'
+- reference: DOI:10.3389/fmolb.2019.00023
+  notes: Muller et al. 2019, The bacterial proteasome at the core of diverse degradation
+    pathways, Frontiers in Molecular Biosciences.
+- reference: DOI:10.1038/emboj.2010.95
+  notes: Li et al. 2010, Structural basis for the assembly and gate closure mechanisms
+    of the Mycobacterium tuberculosis 20S proteasome, The EMBO Journal.
+- reference: DOI:10.1111/j.1365-2958.2005.05036.x
+  notes: Hu et al. 2006, Structure of the Mycobacterium tuberculosis proteasome and
+    mechanism of inhibition by a peptidyl boronate, Molecular Microbiology.
+- reference: DOI:10.1146/annurev-biochem-060410-150257
+  notes: Tomko and Hochstrasser 2013, Molecular Architecture and Assembly of the Eukaryotic
+    Proteasome, Annual Review of Biochemistry.
+causal_graphs:
+- graph_id: gated_barrel_proteolysis
+  title: Stacked alpha and beta rings form a gated proteolytic barrel
+  description: Proteasome alpha subunits form the two outer rings of a gated barrel,
+    beta subunits form the two inner proteolytic rings, and unfolded substrate entering
+    the internal chamber is cleaved by beta-subunit threonine protease sites.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: alpha_subunits
+    label: proteasome alpha-type subunits
+    node_type: GENE_OR_PROTEIN
+    component_ref: alpha_subunits
+  - node_id: beta_subunits
+    label: proteasome beta-type subunits
+    node_type: GENE_OR_PROTEIN
+    component_ref: beta_subunits
+  - node_id: alpha_gate
+    label: alpha-ring axial gate
+    node_type: STRUCTURE
+  - node_id: proteolytic_chamber
+    label: proteasome proteolytic chamber
+    node_type: STRUCTURE
+  - node_id: unfolded_substrate
+    label: unfolded protein substrate
+    node_type: GENE_OR_PROTEIN
+  - node_id: peptide_products
+    label: peptide products
+    node_type: CHEMICAL
+  - node_id: protein_catabolism
+    label: proteasomal protein catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0010498
+  - node_id: proteasome_core
+    label: proteasome core complex
+    node_type: STRUCTURE
+    grounding: GO:0005839
+  edges:
+  - subject: alpha_subunits
+    predicate: form outer rings of
+    object: proteasome_core
+    description: Proteasome alpha subunits form the two outer rings of the 20S core
+      barrel.
+    evidence:
+    - reference: DOI:10.1038/emboj.2010.95
+      notes: Li et al. 2010 structurally analyzed the Mycobacterium tuberculosis 20S
+        proteasome alpha rings.
+  - subject: beta_subunits
+    predicate: form inner rings of
+    object: proteasome_core
+    description: Proteasome beta subunits form the two inner rings of the 20S core
+      barrel.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2005.05036.x
+      notes: Hu et al. 2006 solved the Mycobacterium tuberculosis 20S proteasome core
+        structure.
+  - subject: alpha_subunits
+    predicate: gate
+    object: alpha_gate
+    description: N-terminal tails of the alpha ring form a gate over the axial pore
+      into the proteolytic chamber.
+    evidence:
+    - reference: DOI:10.1038/emboj.2010.95
+      notes: Li et al. 2010 model Mycobacterium tuberculosis 20S gate closure by alpha-ring
+        N termini.
+  - subject: alpha_gate
+    predicate: controls entry to
+    object: proteolytic_chamber
+    description: The alpha-ring gate controls substrate access to the sequestered
+      proteolytic chamber.
+    evidence:
+    - reference: DOI:10.1038/emboj.2010.95
+      notes: Li et al. 2010 connect M. tuberculosis alpha-ring gate closure to substrate
+        entry into the proteolytic core.
+  - subject: beta_subunits
+    predicate: cleave
+    object: unfolded_substrate
+    description: Beta-subunit N-terminal threonine active sites cleave unfolded substrate
+      polypeptides in the central chamber.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2005.05036.x
+      notes: Hu et al. 2006 structurally localized the mycobacterial 20S proteasome
+        catalytic sites to beta subunits.
+  - subject: unfolded_substrate
+    predicate: is converted to
+    object: peptide_products
+    description: Proteasome core proteolysis converts unfolded proteins to shorter
+      peptide products.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2019.00023
+      notes: Muller et al. 2019 review degradation of proteins by the bacterial 20S
+        core and associated activator complexes.
+  - subject: proteasome_core
+    predicate: carries out
+    object: protein_catabolism
+    description: The 20S proteasome core is the self-compartmentalized protease that
+      executes proteasomal protein degradation.
+    evidence:
+    - reference: DOI:10.1042/ETLS20180025
+      notes: Maupin-Furlow 2018 reviews archaeal proteasomes as self-compartmentalized
+        proteases involved in targeted proteolysis.

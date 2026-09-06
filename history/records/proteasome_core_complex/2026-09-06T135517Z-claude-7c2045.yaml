@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/proteasome_core_complex.yaml
+  slug: proteasome_core_complex
+session:
+  id: 2026-09-06T135517Z-claude-7c2045
+  timestamp: '2026-09-06T13:55:17Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/205
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomy
+  - composition
+  summary: Add eukaryotic proteasome core scope
+  details: Addressed issue 205 by adding NCBITaxon:2759 Eukaryota to taxonomic_distribution
+    for the 20S proteasome core complex and by adding Tomko and Hochstrasser 2013 evidence
+    for eukaryotic alpha and beta 20S core architecture at both the component and record levels.
