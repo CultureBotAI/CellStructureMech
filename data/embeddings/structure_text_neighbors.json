@@ -829,6 +829,11 @@
           "cosine_similarity": 0.64672318
         },
         {
+          "identifier": "GO:0005839",
+          "label": "proteasome core complex",
+          "cosine_similarity": 0.63552326
+        },
+        {
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
           "cosine_similarity": 0.62477178
@@ -837,11 +842,6 @@
           "identifier": "GO:1990586",
           "label": "divisome complex",
           "cosine_similarity": 0.61056721
-        },
-        {
-          "identifier": "GO:0015627",
-          "label": "type II protein secretion system complex",
-          "cosine_similarity": 0.60946123
         }
       ]
     },
@@ -877,6 +877,37 @@
       ]
     },
     {
+      "identifier": "GO:0005839",
+      "label": "proteasome core complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:elongasome",
+          "label": "elongasome",
+          "cosine_similarity": 0.71078342
+        },
+        {
+          "identifier": "GO:0005840",
+          "label": "ribosome",
+          "cosine_similarity": 0.69562869
+        },
+        {
+          "identifier": "GO:0140737",
+          "label": "encapsulin nanocompartment",
+          "cosine_similarity": 0.67123578
+        },
+        {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.66739453
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.65244537
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005840",
       "label": "ribosome",
       "neighbors": [
@@ -884,6 +915,11 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.70770361
+        },
+        {
+          "identifier": "GO:0005839",
+          "label": "proteasome core complex",
+          "cosine_similarity": 0.69562869
         },
         {
           "identifier": "GO:0097589",
@@ -899,11 +935,6 @@
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
           "cosine_similarity": 0.6402918
-        },
-        {
-          "identifier": "GO:0009295",
-          "label": "nucleoid",
-          "cosine_similarity": 0.62480667
         }
       ]
     },

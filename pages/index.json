@@ -252,6 +252,15 @@
   "definition": "The chemoreceptor array: a hexagonal lattice of trimers-of-dimers of methyl-accepting chemotaxis proteins, held at the membrane by the CheA kinase and the CheW coupling protein. The array is the cell's sensory organ, and its geometry — a 12 nm hexagonal spacing conserved across bacteria and archaea — is what gives chemotaxis its cooperativity and gain."
  },
  {
+  "identifier": "GO:0005839",
+  "label": "proteasome core complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/proteasome_core_complex.html",
+  "definition": "A barrel-shaped self-compartmentalized protease core of proteasomes, built from stacked alpha- and beta-subunit rings that sequester threonine protease active sites in an internal chamber for protein degradation."
+ },
+ {
   "identifier": "GO:0005840",
   "label": "ribosome",
   "category": "RIBONUCLEOPROTEIN",

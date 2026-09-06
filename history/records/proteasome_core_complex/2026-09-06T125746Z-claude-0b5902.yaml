@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/proteasome_core_complex.yaml
+  slug: proteasome_core_complex
+session:
+  id: 2026-09-06T125746Z-claude-0b5902
+  timestamp: '2026-09-06T12:57:46Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add proteasome core complex record
+  details: Added a GO-grounded 20S proteasome core complex record with alpha and beta ring
+    components, archaeal and actinobacterial distribution, a Mycobacterium tuberculosis H37Rv
+    example, proteasomal protein catabolism and threonine-type endopeptidase functions, and
+    a source-backed gated-barrel proteolysis graph citing Maupin-Furlow 2018, Muller et al.
+    2019, Li et al. 2010, and Hu et al. 2006.
