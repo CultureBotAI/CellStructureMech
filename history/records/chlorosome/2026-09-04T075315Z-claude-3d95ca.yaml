@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/chlorosome.yaml
+  slug: chlorosome
+session:
+  id: 2026-09-04T075315Z-claude-3d95ca
+  timestamp: '2026-09-04T07:53:15Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the chlorosome record
+  details: Added GO:0046858 chlorosome as a PROPOSED membrane-organelle record with bacteriochlorophyll
+    aggregate, CsmA baseplate, lipid-monolayer and accessory Csm protein components, bacterial
+    distribution, Chlorobaculum tepidum and Chloroflexus aurantiacus examples, a photosynthetic
+    light-harvesting function graph, and a Csm-family grounding todo backed by chlorosome
+    reviews and primary structural studies.

@@ -1,5 +1,14 @@
 [
  {
+  "identifier": "GO:0097589",
+  "label": "archaeal-type flagellum",
+  "category": "APPENDAGE",
+  "kind": "APPENDAGE",
+  "status": "PROPOSED",
+  "page": "structures/appendage/archaeal_type_flagellum.html",
+  "definition": "A non-membrane-bounded archaeal motility organelle, also called the archaellum, whose ATP-powered membrane motor rotates one or more glycosylated type-IV-pilin-like archaellin filaments outside the cell to drive swimming."
+ },
+ {
   "identifier": "GO:0009288",
   "label": "bacterial-type flagellum",
   "category": "APPENDAGE",
@@ -43,6 +52,15 @@
   "status": "PROPOSED",
   "page": "structures/division_machinery/elongasome.html",
   "definition": "The sidewall peptidoglycan-synthesis machine of rod-shaped bacteria, also called the Rod complex. A SEDS-family glycosyltransferase (RodA) works with a class B penicillin-binding protein (PBP2) to polymerise and crosslink new wall material into the cylinder, while MreC, MreD and RodZ couple the complex to MreB filaments, which distribute it around the circumference. It is the elongation counterpart of the divisome."
+ },
+ {
+  "identifier": "GO:0030089",
+  "label": "phycobilisome",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/phycobilisome.html",
+  "definition": "A membrane-associated light-harvesting pigment-protein complex of cyanobacteria and red algae, built from phycobiliprotein core and rod cylinders plus linker polypeptides, that funnels phycobilin excitation energy to photosynthetic reaction centers."
  },
  {
   "identifier": "GO:0045259",
@@ -99,6 +117,33 @@
   "definition": "A gas-filled, non-membrane-bounded protein organelle, usually shaped as a cylindrical shell with conical end caps. Its gas-permeable, water-excluding wall lowers cell density and enables buoyancy regulation in aquatic microbes."
  },
  {
+  "identifier": "GO:0020022",
+  "label": "acidocalcisome",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/acidocalcisome.html",
+  "definition": "An acidic electron-dense membrane-bounded organelle found in diverse microbes that stores polyphosphate, pyrophosphate, calcium and other cations and uses proton pumps and cation transporters to maintain its ion-rich matrix."
+ },
+ {
+  "identifier": "GO:0044222",
+  "label": "anammoxosome",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/anammoxosome.html",
+  "definition": "A ladderane-lipid-bounded intracytoplasmic organelle of anaerobic ammonium-oxidizing Planctomycetota that localizes the hydrazine-producing anammox catabolic pathway and its energy-conserving membrane reactions."
+ },
+ {
+  "identifier": "GO:0046858",
+  "label": "chlorosome",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/chlorosome.html",
+  "definition": "A large light-harvesting antenna organelle of green photosynthetic bacteria in which bacteriochlorophyll aggregates self-assemble inside a lipid envelope and attach to the cytoplasmic membrane through a bacteriochlorophyll a-containing CsmA baseplate."
+ },
+ {
   "identifier": "GO:0110143",
   "label": "magnetosome",
   "category": "MEMBRANE_ORGANELLE",
@@ -106,6 +151,15 @@
   "status": "PROPOSED",
   "page": "structures/membrane_organelle/magnetosome.html",
   "definition": "A membrane-bounded organelle of magnetotactic bacteria enclosing a nanocrystal of a magnetic iron mineral — magnetite (Fe3O4) or greigite (Fe3S4). Magnetosomes are invaginations of the cytoplasmic membrane that are filled with iron, and are arranged into a chain along a cytoskeletal filament so that the cell behaves as a swimming compass needle."
+ },
+ {
+  "identifier": "GO:0042651",
+  "label": "thylakoid membrane",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/thylakoid_membrane.html",
+  "definition": "The pigmented photosynthetic membrane of cyanobacteria and chloroplasts, enriched in photosystems, cytochrome b6f, ATP synthase, plastoquinone and glycolipids, where light-driven electron transport builds the proton motive force for photosynthetic ATP synthesis."
  },
  {
   "identifier": "GO:0031470",
@@ -160,6 +214,15 @@
   "status": "PROPOSED",
   "page": "structures/secretion_system/type_iii_protein_secretion_system_complex.html",
   "definition": "The injectisome: a syringe-like envelope-spanning machine that delivers effector proteins from the bacterial cytoplasm directly into a eukaryotic host cell. Rings in the inner and outer membranes surround an export apparatus; an extracellular needle carries the secretion channel to a translocon pore in the host membrane. It is evolutionarily related to the flagellar export apparatus."
+ },
+ {
+  "identifier": "GO:0033104",
+  "label": "type VI protein secretion system complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/type_vi_protein_secretion_system_complex.html",
+  "definition": "A bacterial contractile injection machine whose envelope-spanning membrane complex anchors a baseplate and sheath-wrapped Hcp tube; sheath contraction propels the Hcp/VgrG/PAAR spike and associated effectors out of the cell into target cells."
  },
  {
   "identifier": "GO:0043591",

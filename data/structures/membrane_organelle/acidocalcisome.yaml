@@ -1,0 +1,252 @@
+identifier: GO:0020022
+label: acidocalcisome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: An acidic electron-dense membrane-bounded organelle found in diverse microbes
+  that stores polyphosphate, pyrophosphate, calcium and other cations and uses proton
+  pumps and cation transporters to maintain its ion-rich matrix.
+definition_source: GO:0020022
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-04T19:15:51Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-04T19:16:22Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added acidocalcisome synonyms, components, taxonomy, examples, functions,
+    evidence, a polyphosphate-cation-storage graph, and a transporter-grounding todo.
+  llm_assisted: true
+- timestamp: '2026-09-04T19:18:54Z'
+  curator: claude
+  action: FIXED_GROUNDING_LABEL
+  changes: Aligned CHEBI:16838 and GO:0006797 display labels with ontology canonicals.
+  llm_assisted: true
+- timestamp: '2026-09-04T19:27:49Z'
+  curator: claude
+  action: FIXED_FUNCTION_GROUNDING
+  changes: Removed the overbroad GO:0006797 function grounding from acidocalcisome
+    polyphosphate storage.
+  llm_assisted: true
+synonyms:
+- synonym_text: metachromatic granule
+  synonym_type: EXACT_SYNONYM
+  source: GO:0020022
+- synonym_text: volutin granule
+  synonym_type: EXACT_SYNONYM
+  source: GO:0020022
+- synonym_text: polyphosphate vacuole
+  synonym_type: RELATED_SYNONYM
+  source: GO:0020022
+parent_structures:
+- GO:0043231
+components:
+- component_id: polyphosphate_matrix
+  label: polyphosphate
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  grounding: CHEBI:16838
+  essentiality: ESSENTIAL
+  role: Polyanionic phosphate polymer that chelates calcium and other cations in the
+    electron-dense acidocalcisome core.
+  evidence:
+  - reference: DOI:10.1038/nrmicro1097
+    notes: Docampo et al. 2005 review polyphosphate and pyrophosphate as major anionic
+      stores in acidocalcisomes.
+  - reference: DOI:10.1074/jbc.M304548200
+    notes: Seufferheld et al. 2003 detected phosphorus-rich volutin granules with
+      acidocalcisome-like properties in Agrobacterium tumefaciens.
+- component_id: bound_cations
+  label: bound calcium and magnesium cations
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Divalent cations complexed with polyphosphate in the acidocalcisome matrix.
+  evidence:
+  - reference: DOI:10.1038/nrmicro1097
+    notes: Docampo et al. 2005 review calcium and other cations as conserved matrix
+      constituents of acidocalcisomes.
+  - reference: DOI:10.1074/jbc.M304548200
+    notes: Seufferheld et al. 2003 analysed acidocalcisome-like bacterial granules
+      as calcium- and polyphosphate-rich compartments.
+- component_id: acidocalcisome_membrane
+  label: acidocalcisome membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Membrane boundary that encloses the acidic polyphosphate and cation store.
+  evidence:
+  - reference: DOI:10.1074/jbc.M304548200
+    notes: Seufferheld et al. 2003 reported membrane-bounded acidocalcisome-like volutin
+      granules in bacteria.
+  - reference: DOI:10.1128/MMBR.00042-23
+    notes: Docampo and Huang 2024 review acidocalcisomes as membrane-bound polyphosphate
+      organelles across bacteria and eukaryotes.
+- component_id: proton_pumps
+  label: acidocalcisome proton pumps
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Acidocalcisomes can carry V-H+-PPase, V-H+-ATPase and other lineage-specific
+    pumps; no exact family denoting the acidocalcisome pump set was curated.
+  role: Membrane pumps that acidify the organelle lumen and support ion uptake.
+  evidence:
+  - reference: DOI:10.1038/nrmicro1097
+    notes: Docampo et al. 2005 review proton pumps as acidocalcisome membrane components.
+  - reference: DOI:10.1074/jbc.M304548200
+    notes: Seufferheld et al. 2003 localized vacuolar proton pyrophosphatase activity
+      to bacterial acidocalcisome-like organelles.
+- component_id: cation_transporters
+  label: acidocalcisome cation transporters
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This grouped transporter set is defined by organelle localization
+    and ion-storage role; exact protein families differ among bacteria, algae and
+    protists.
+  role: Calcium and cation transporters that move ions across the acidocalcisome membrane.
+  evidence:
+  - reference: DOI:10.1128/MMBR.00042-23
+    notes: Docampo and Huang 2024 review cation transport systems of acidocalcisome
+      membranes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Acidocalcisome-like volutin granules have been characterized in bacteria including
+    Agrobacterium tumefaciens and Rhodospirillum rubrum.
+  reference: DOI:10.1038/nrmicro1097
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: Acidocalcisomes are widespread in diverse microbial eukaryotes and metazoan
+    cell types but are not universal across all eukaryotes.
+  reference: DOI:10.1128/MMBR.00042-23
+canonical_examples:
+- taxon_id: NCBITaxon:358
+  taxon_label: Agrobacterium tumefaciens
+  note: Bacterial model in which volutin granules were shown to have acidocalcisome-like
+    membrane, cation and polyphosphate properties.
+  reference: DOI:10.1074/jbc.M304548200
+functions:
+- function_id: polyphosphate_storage
+  label: polyphosphate storage
+  description: Acidocalcisomes store a dense polyphosphate and pyrophosphate matrix
+    that buffers phosphate and bound cations.
+  evidence:
+  - reference: DOI:10.1038/nrmicro1097
+    notes: Docampo et al. 2005 review acidocalcisomes as polyphosphate-rich organelles.
+- function_id: calcium_storage
+  label: calcium storage
+  description: The organelle stores calcium and other cations complexed with polyphosphate
+    in an acidic lumen.
+  evidence:
+  - reference: DOI:10.1128/MMBR.00042-23
+    notes: Docampo and Huang 2024 review the ion storage roles of acidocalcisomes.
+evidence:
+- reference: DOI:10.1038/nrmicro1097
+  notes: Docampo R, de Souza W, Miranda K, Rohloff P and Moreno SNJ 2005, Acidocalcisomes
+    - conserved from bacteria to man, Nature Reviews Microbiology.
+- reference: DOI:10.1074/jbc.M304548200
+  notes: Seufferheld et al. 2003, Identification of organelles in bacteria similar
+    to acidocalcisomes of unicellular eukaryotes, Journal of Biological Chemistry.
+- reference: DOI:10.1128/MMBR.00042-23
+  notes: Docampo and Huang 2024 review acidocalcisome cell biology, biochemistry and
+    physiological roles.
+causal_graphs:
+- graph_id: acidic_polyphosphate_cation_store
+  title: Proton pumps and polyphosphate build an acidic cation store
+  description: The acidocalcisome membrane bounds a polyphosphate-rich matrix. Proton
+    pumps acidify the lumen, and the anionic polyphosphate matrix chelates calcium
+    and other cations to create an electron-dense storage compartment.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: membrane
+    label: acidocalcisome membrane
+    node_type: STRUCTURE
+    component_ref: acidocalcisome_membrane
+  - node_id: proton_pumps
+    label: acidocalcisome proton pumps
+    node_type: GENE_OR_PROTEIN
+    component_ref: proton_pumps
+  - node_id: acidic_lumen
+    label: acidic acidocalcisome lumen
+    node_type: STATE
+  - node_id: polyphosphate
+    label: polyphosphate
+    node_type: CHEMICAL
+    grounding: CHEBI:16838
+    component_ref: polyphosphate_matrix
+  - node_id: cations
+    label: bound calcium and magnesium cations
+    node_type: CHEMICAL
+    component_ref: bound_cations
+  - node_id: acidocalcisome
+    label: acidocalcisome
+    node_type: ORGANELLE
+    grounding: GO:0020022
+  edges:
+  - subject: membrane
+    predicate: bounds
+    object: acidocalcisome
+    description: A membrane encloses the acidocalcisome matrix and distinguishes the
+      organelle from the surrounding cytoplasm.
+    evidence:
+    - reference: DOI:10.1074/jbc.M304548200
+      notes: Seufferheld et al. 2003 reported membrane-bounded acidocalcisome-like
+        organelles in bacteria.
+  - subject: proton_pumps
+    predicate: acidify
+    object: acidic_lumen
+    description: Acidocalcisome proton pumps generate an acidic lumen across the organelle
+      membrane.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1097
+      notes: Docampo et al. 2005 review V-H+-PPase and V-H+-ATPase activities in acidocalcisome
+        membranes.
+  - subject: polyphosphate
+    predicate: accumulates in
+    object: acidocalcisome
+    description: Polyphosphate is concentrated in the acidocalcisome matrix rather
+      than dispersed through the cytoplasm.
+    evidence:
+    - reference: DOI:10.1074/jbc.M304548200
+      notes: Seufferheld et al. 2003 characterized bacterial volutin granules as phosphorus-rich
+        acidocalcisome-like organelles.
+  - subject: polyphosphate
+    predicate: chelates
+    object: cations
+    description: The polyanionic polyphosphate matrix binds calcium, magnesium and
+      other cations in the electron-dense core.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00042-23
+      notes: Docampo and Huang 2024 review cations bound to acidocalcisome polyphosphate
+        stores.
+  - subject: acidic_lumen
+    predicate: stabilizes
+    object: polyphosphate
+    description: The acidified compartment supports the acidocalcisome as a concentrated
+      polyphosphate and cation store.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1097
+      notes: Docampo et al. 2005 describe acidity and polyphosphate-rich ion storage
+        as defining acidocalcisome properties.
+discussions:
+- discussion_id: ground_acidocalcisome_transporters
+  prompt: Resolve exact bacterial and eukaryotic acidocalcisome proton-pump and cation-transporter
+    families rather than grouping all acidification and ion-transport proteins together.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#proton_pumps
+  - components#cation_transporters
+  rationale: The first record captures the transport roles required to maintain an
+    acidic cation store, but V-H+-PPase, V-H+-ATPase and calcium transporter complements
+    vary by lineage.
+  posed_by: claude
+  posed_date: '2026-09-04'

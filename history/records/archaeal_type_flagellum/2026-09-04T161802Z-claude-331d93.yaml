@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/archaeal_type_flagellum.yaml
+  slug: archaeal_type_flagellum
+session:
+  id: 2026-09-04T161802Z-claude-331d93
+  timestamp: '2026-09-04T16:18:02Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the archaeal-type flagellum record
+  details: Added GO:0097589 archaeal-type flagellum as a PROPOSED appendage record with archaellin
+    filament, ArlI/ArlJ motor-core, ArlH, ArlF/ArlG anchor and cytosolic scaffold components,
+    archaeal and bacterial taxonomic scopes, Sulfolobus acidocaldarius, Pyrococcus furiosus
+    and Methanocaldococcus villosus examples, a GO:0097590 motility function, an ATP-powered
+    base-assembly graph and a protein-family grounding todo backed by archaellum reviews and
+    structural studies.

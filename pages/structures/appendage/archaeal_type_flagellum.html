@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>archaeal-type flagellum · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>archaeal-type flagellum</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0097589"><code>GO:0097589</code></a> · APPENDAGE · APPENDAGE · <span class="status">PROPOSED</span></p>
+<p class="definition">A non-membrane-bounded archaeal motility organelle, also called the archaellum, whose ATP-powered membrane motor rotates one or more glycosylated type-IV-pilin-like archaellin filaments outside the cell to drive swimming. <small>[<a href="http://purl.obolibrary.org/obo/GO_0097589"><code>GO:0097589</code></a>]</small></p>
+<p><strong>Synonyms:</strong> archaellum; archaeal flagellum</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-archaellins"><td>archaellin filament subunits</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>arlA, arlB, flaA, flaB</td><td></td><td>ESSENTIAL</td><td>Glycosylated type-IV-pilin-like subunits that polymerize into the extracellular helical filament.<ul class="evidence"><li><a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a> <small>Albers and Jarrell 2015 review prearchaellin processing, N-glycosylation and filament assembly from archaellin subunits.</small></li><li><a href="https://doi.org/10.1038/s41467-022-28337-1"><code>DOI:10.1038/s41467-022-28337-1</code></a> <small>Gambelli et al. 2022 solved the Methanocaldococcus villosus archaellum filament and found two alternating archaellins, ArlB1 and ArlB2, in the filament.</small></li></ul></td></tr>
+<tr id="components-arli_arlj_motor"><td>ArlI/ArlJ archaellum motor core</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>arlI, arlJ, flaI, flaJ</td><td></td><td>ESSENTIAL</td><td>Cytosolic AAA+ ATPase and polytopic membrane platform that assemble and rotate the archaellum filament by ATP hydrolysis.<ul class="evidence"><li><a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a> <small>Albers and Jarrell 2015 review FlaI/ArlI as the assembly ATPase and FlaJ/ArlJ as the only polytopic membrane protein conserved in archaellum operons.</small></li><li><a href="https://doi.org/10.1111/febs.12534"><code>DOI:10.1111/febs.12534</code></a> <small>Banerjee et al. 2013 mapped interactions among Sulfolobus acidocaldarius FlaI, FlaJ and other cytoplasmic archaellum-complex proteins.</small></li></ul></td></tr>
+<tr id="components-arlh_regulator"><td>ArlH motor regulator</td><td>PROTEIN</td><td>part of</td><td></td><td>arlH, flaH</td><td></td><td>ESSENTIAL</td><td>Nucleotide-dependent motor protein that interacts with ArlI/FlaI and is required for archaellum assembly and function in the studied motor.<ul class="evidence"><li><a href="https://doi.org/10.1111/mmi.13260"><code>DOI:10.1111/mmi.13260</code></a> <small>Chaudhury et al. 2016 tested the nucleotide-dependent FlaH-FlaI interaction and its requirement for archaellum motor assembly and function.</small></li></ul></td></tr>
+<tr id="components-arlfg_anchor"><td>ArlF/ArlG S-layer anchor</td><td>PROTEIN_COMPLEX</td><td>part of</td><td></td><td>arlF, arlG, flaF, flaG</td><td></td><td>CONDITIONAL</td><td>Pseudo-periplasmic stator and anchor proteins that connect the membrane motor to the archaeal cell envelope in characterized lineages.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.str.2015.03.001"><code>DOI:10.1016/j.str.2015.03.001</code></a> <small>Banerjee et al. 2015 showed that Sulfolobus acidocaldarius FlaF binds the S-layer protein and anchors the archaellum in the cell envelope.</small></li><li><a href="https://doi.org/10.7554/eLife.27470"><code>DOI:10.7554/eLife.27470</code></a> <small>Daum et al. 2017 place archaellum machinery at the Pyrococcus furiosus cell envelope by in situ cryo-electron tomography.</small></li></ul></td></tr>
+<tr id="components-cytosolic_scaffold"><td>ArlX/ArlCDE cytosolic scaffold</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>arlX, arlC, arlD, arlE, flaX</td><td></td><td>CONDITIONAL</td><td>Lineage-specific cytosolic ring or switch module that organizes the motor ATPase and links the archaellum to chemotaxis control.<ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.M112.414383"><code>DOI:10.1074/jbc.M112.414383</code></a> <small>Banerjee et al. 2012 showed that crenarchaeal FlaX forms ring-shaped assemblies and interacts with FlaI.</small></li><li><a href="https://doi.org/10.1038/s41467-022-28337-1"><code>DOI:10.1038/s41467-022-28337-1</code></a> <small>Gambelli et al. 2022 summarize ArlX in Crenarchaeota and ArlCDE in Euryarchaeota as cytosolic ring modules surrounding the motor.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2157"><code>NCBITaxon:2157</code></a> Archaea — <strong>VARIABLE</strong>: Archaella are archaeal motility organelles whose operons are patchily distributed across archaeal genomes. [<a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2"><code>NCBITaxon:2</code></a> Bacteria — <strong>ABSENT</strong>: Bacteria use non-homologous flagella or type-IV-pilus systems rather than the archaeal-type flagellum. [<a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2285"><code>NCBITaxon:2285</code></a> <em>Sulfolobus acidocaldarius</em> — Crenarchaeal genetic and biochemical model for FlaX/FlaI/FlaJ motor assembly and S-layer anchoring. [<a href="https://doi.org/10.1074/jbc.M112.414383"><code>DOI:10.1074/jbc.M112.414383</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2261"><code>NCBITaxon:2261</code></a> <em>Pyrococcus furiosus</em> — Euryarchaeal model for in situ cryo-ET of the archaellum machinery at the cell envelope. [<a href="https://doi.org/10.7554/eLife.27470"><code>DOI:10.7554/eLife.27470</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_667126"><code>NCBITaxon:667126</code></a> <em>Methanocaldococcus villosus</em> — Source of a high-resolution heteropolymeric archaellum filament structure with alternating ArlB1 and ArlB2 subunits. [<a href="https://doi.org/10.1038/s41467-022-28337-1"><code>DOI:10.1038/s41467-022-28337-1</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>archaeal-type flagellum-dependent cell motility</strong> <a href="http://purl.obolibrary.org/obo/GO_0097590"><code>GO:0097590</code></a> — ATP-powered rotation of the archaellum filament propels swimming archaeal cells through liquid or across semi-solid surfaces.<ul class="evidence"><li><a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a> <small>Albers and Jarrell 2015 review archaellum-driven archaeal swimming and the ATP-powered motor that distinguishes it from ion-powered bacterial flagella.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-atp_powered_base_assembly_rotation">ATP-driven basal assembly builds and rotates the archaellum filament <small>(ASSEMBLY)</small></h3>
+<p>Prearchaellins are processed and added to the base of a helical filament by an ATP-powered ArlI/ArlJ motor. ArlH and lineage-specific scaffold proteins organize that motor, envelope proteins anchor it, and motor-driven rotation of the assembled filament propels archaeal cells.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>PibD/FlaK prepilin peptidase</td><td>matures</td><td>prearchaellins</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a> <small>Albers and Jarrell 2015 review class-3 signal-peptide processing of prearchaellins by PibD or FlaK-like enzymes.</small></li></ul></td></tr>
+<tr><td>mature archaellins</td><td>polymerize into</td><td>archaeal-type flagellum</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-28337-1"><code>DOI:10.1038/s41467-022-28337-1</code></a> <small>Gambelli et al. 2022 resolved the Methanocaldococcus villosus filament as a polymer of alternating ArlB1 and ArlB2 archaellins.</small></li></ul></td></tr>
+<tr><td>ArlX/ArlCDE cytosolic scaffold</td><td>organizes</td><td>ArlI/ArlJ motor core</td><td><ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.M112.414383"><code>DOI:10.1074/jbc.M112.414383</code></a> <small>Banerjee et al. 2012 showed that FlaX forms oligomeric rings and interacts with FlaI in the Sulfolobus acidocaldarius motor.</small></li><li><a href="https://doi.org/10.1038/s41467-022-28337-1"><code>DOI:10.1038/s41467-022-28337-1</code></a> <small>Gambelli et al. 2022 summarize the Crenarchaeota versus Euryarchaeota ring modules surrounding ArlI/ArlJ.</small></li></ul></td></tr>
+<tr><td>ArlH motor regulator</td><td>regulates</td><td>ArlI/ArlJ motor core</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/mmi.13260"><code>DOI:10.1111/mmi.13260</code></a> <small>Chaudhury et al. 2016 established the nucleotide-dependent FlaH-FlaI interaction and its requirement for archaellum assembly and function.</small></li></ul></td></tr>
+<tr><td>ArlF/ArlG S-layer anchor</td><td>anchors</td><td>ArlI/ArlJ motor core</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.str.2015.03.001"><code>DOI:10.1016/j.str.2015.03.001</code></a> <small>Banerjee et al. 2015 showed that FlaF binds the Sulfolobus S-layer protein and anchors the archaellum in the cell envelope.</small></li></ul></td></tr>
+<tr><td>ArlI/ArlJ motor core</td><td>assembles and rotates</td><td>archaeal-type flagellum</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a> <small>Albers and Jarrell 2015 review FlaI/ArlI as the ATPase that powers archaeal flagellum assembly and rotation.</small></li></ul></td></tr>
+<tr><td>archaeal-type flagellum</td><td>drives</td><td>archaeal-type flagellum-dependent cell motility</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a> <small>Albers and Jarrell 2015 review archaellum rotation as the archaeal swimming mechanism.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact family or complex CURIEs for archaellins, the ArlI/ArlJ motor core, ArlH, ArlF/ArlG and lineage-specific cytosolic scaffold proteins. <small>The first archaellum record follows Arl/Fla nomenclature and leaves family grounding unset where adopting a broad type-IV-pilus or ATPase family would overmerge non-archaellum proteins.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a> <small>Albers SV and Jarrell KF 2015, The archaellum: how Archaea swim, Frontiers in Microbiology.</small></li><li><a href="https://doi.org/10.1074/jbc.M112.414383"><code>DOI:10.1074/jbc.M112.414383</code></a> <small>Banerjee et al. 2012, FlaX, a unique component of the crenarchaeal archaellum, forms oligomeric ring-shaped structures and interacts with the motor ATPase FlaI, Journal of Biological Chemistry.</small></li><li><a href="https://doi.org/10.1016/j.str.2015.03.001"><code>DOI:10.1016/j.str.2015.03.001</code></a> <small>Banerjee et al. 2015, FlaF is a beta-sandwich protein that anchors the archaellum in the archaeal cell envelope by binding the S-layer protein, Structure.</small></li><li><a href="https://doi.org/10.1111/mmi.13260"><code>DOI:10.1111/mmi.13260</code></a> <small>Chaudhury et al. 2016, The nucleotide-dependent interaction of FlaH and FlaI is essential for assembly and function of the archaellum motor, Molecular Microbiology.</small></li><li><a href="https://doi.org/10.7554/eLife.27470"><code>DOI:10.7554/eLife.27470</code></a> <small>Daum et al. 2017, Structure and in situ organisation of the Pyrococcus furiosus archaellum machinery, eLife.</small></li><li><a href="https://doi.org/10.1038/s41467-022-28337-1"><code>DOI:10.1038/s41467-022-28337-1</code></a> <small>Gambelli et al. 2022, An archaellum filament composed of two alternating subunits, Nature Communications.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-04T16:17:00Z</code> claude · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-04T16:17:39Z</code> claude · EXPANDED_RECORD — Added archaeal-type flagellum synonyms, components, taxonomy, examples, function, literature evidence, a base-assembly graph, and a protein-family grounding todo.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/archaeal_type_flagellum.yaml"><code>data/structures/appendage/archaeal_type_flagellum.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
