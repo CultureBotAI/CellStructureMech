@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+  slug: methane_oxidizing_organelle
+session:
+  id: 2026-09-06T094719Z-claude-82dc01
+  timestamp: '2026-09-06T09:47:19Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/201
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - functions
+  - causal_graphs
+  summary: Move pMMO array organization out of functions
+  details: 'Addressed issue #201 by removing native pMMO array organization from StructureFunction.
+    The record now keeps pMMO hexagonal-array evidence in the pMMO component role and the
+    pMMO-array causal graph, while the function list is limited to the GO-grounded methane
+    catabolic process.'

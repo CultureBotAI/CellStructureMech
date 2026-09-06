@@ -1,0 +1,203 @@
+identifier: GO:0044227
+label: methane-oxidizing organelle
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A cytoplasmic, membrane-bounded organelle in aerobic methanotrophic bacteria,
+  built from intracytoplasmic membranes that house particulate methane monooxygenase
+  and associated electron-transfer proteins for methane catabolism.
+definition_source: GO:0044227
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-06T08:39:10Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-06T08:42:35Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added methane-oxidizing organelle synonyms, GO parent, ICM and pMMO components,
+    taxonomic scope, Methylococcus Bath example, functions, record evidence, and a
+    pMMO-array methane-oxidation graph.
+  llm_assisted: true
+- timestamp: '2026-09-06T09:46:24Z'
+  curator: claude
+  action: FIXED_FUNCTION_SCOPE
+  changes: Removed native pMMO array organization from functions; retained array packing
+    as a source-backed pMMO component and causal-graph structure.
+  llm_assisted: true
+synonyms:
+- synonym_text: methane-oxidizing compartment
+  synonym_type: EXACT_SYNONYM
+  source: GO:0044227
+- synonym_text: methanotroph intracytoplasmic membrane-bound compartment
+  synonym_type: EXACT_SYNONYM
+  source: GO:0044227
+parent_structures:
+- GO:0043231
+components:
+- component_id: intracytoplasmic_membrane_bilayer
+  label: methanotroph intracytoplasmic membrane bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Inner-membrane-derived lipid bilayer that expands into the intracytoplasmic
+    membrane network housing pMMO trimers.
+  evidence:
+  - reference: DOI:10.1038/s41467-022-32752-9
+    notes: Zhu et al. 2022 used cryoFIB/SEM volume imaging and cellular cryoET in
+      Methylococcus capsulatus Bath to show that copper-induced ICMs derive from the
+      inner cell membrane and contain embedded pMMO arrays.
+  - reference: DOI:10.1111/1751-7915.13458
+    notes: Whiddon et al. 2019 developed live-cell fluorescence staining for type
+      I methanotroph ICMs and treated the FM dye signal as labelling highly compressed
+      membrane stacks.
+- component_id: particulate_methane_monooxygenase
+  label: particulate methane monooxygenase complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - pmoA
+  - pmoB
+  - pmoC
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO methane monooxygenase terms denote molecular functions rather
+    than the membrane pMMO trimer, so no exact source-neutral complex CURIE was curated.
+  role: Copper membrane monooxygenase trimer embedded in the ICM that oxidizes methane
+    to methanol and packs into native hexagonal arrays.
+  evidence:
+  - reference: DOI:10.1038/s41467-022-32752-9
+    notes: Zhu et al. 2022 resolved native ICM-embedded pMMO trimers and higher-order
+      hexagonal pMMO arrays by cryoET and subtomogram averaging.
+  - reference: DOI:10.1128/JB.183.5.1810-1812.2001
+    notes: Stolyar et al. 2001 assayed expression of individual Methylococcus capsulatus
+      Bath pmo gene copies encoding particulate methane monooxygenase subunits.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: RARE
+  note: Methane-oxidizing organelles occur in the subset of methanotrophic bacteria
+    that build pMMO-containing intracytoplasmic membranes.
+  reference: DOI:10.1111/1751-7915.13458
+canonical_examples:
+- taxon_id: NCBITaxon:243233
+  taxon_label: Methylococcus capsulatus str. Bath
+  note: Zhu et al. imaged native ICMs and ICM-embedded pMMO arrays in copper-replete
+    Methylococcus capsulatus Bath cells.
+  reference: DOI:10.1038/s41467-022-32752-9
+functions:
+- function_id: methane_catabolism
+  label: methane catabolic process
+  grounding: GO:0046188
+  description: ICM-localized pMMO oxidizes methane to methanol as the first step in
+    aerobic bacterial methane catabolism.
+  evidence:
+  - reference: DOI:10.1038/s41467-022-32752-9
+    notes: Zhu et al. 2022 studied pMMO in native ICMs and described methane C-H bond
+      activation and oxidation to methanol as the pMMO reaction.
+evidence:
+- reference: DOI:10.1038/s41467-022-32752-9
+  notes: Zhu et al. 2022, Structure and activity of particulate methane monooxygenase
+    arrays in methanotrophs, Nature Communications.
+- reference: DOI:10.1111/1751-7915.13458
+  notes: Whiddon et al. 2019, Fluorescence-based analysis of the intracytoplasmic
+    membranes of type I methanotrophs, Microbial Biotechnology.
+- reference: DOI:10.1128/JB.183.5.1810-1812.2001
+  notes: Stolyar et al. 2001, Expression of individual copies of Methylococcus capsulatus
+    Bath particulate methane monooxygenase genes, Journal of Bacteriology.
+causal_graphs:
+- graph_id: pmmo_array_methane_oxidation
+  title: ICM-embedded pMMO trimers oxidize methane in ordered arrays
+  description: Methanotroph intracytoplasmic membranes derive from the inner cell
+    membrane, house pMMO trimers, and organize them into native hexagonal arrays.
+    pMMO carries out the membrane-bound oxidation of methane to methanol that starts
+    methane catabolism.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: icm_bilayer
+    label: methanotroph intracytoplasmic membrane bilayer
+    node_type: STRUCTURE
+    component_ref: intracytoplasmic_membrane_bilayer
+  - node_id: pmmo
+    label: particulate methane monooxygenase complex
+    node_type: GENE_OR_PROTEIN
+    component_ref: particulate_methane_monooxygenase
+  - node_id: pmmo_array
+    label: hexagonal pMMO array
+    node_type: STRUCTURE
+  - node_id: methane
+    label: methane
+    node_type: CHEMICAL
+  - node_id: methanol
+    label: methanol
+    node_type: CHEMICAL
+  - node_id: methane_catabolism
+    label: methane catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0046188
+  - node_id: methane_oxidizing_organelle
+    label: methane-oxidizing organelle
+    node_type: ORGANELLE
+    grounding: GO:0044227
+  edges:
+  - subject: icm_bilayer
+    predicate: bounds
+    object: methane_oxidizing_organelle
+    description: The methane-oxidizing organelle is built from an intracytoplasmic
+      membrane that invaginates from the inner cell membrane.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-32752-9
+      notes: Zhu et al. 2022 visualized Methylococcus capsulatus Bath cells by serial
+        cryoFIB/SEM and cryoET and interpreted ICMs as cytoplasmic-membrane invaginations.
+  - subject: icm_bilayer
+    predicate: houses
+    object: pmmo
+    description: The intracytoplasmic membrane contains embedded pMMO trimers.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-32752-9
+      notes: Zhu et al. 2022 resolved pMMO trimers within isolated native ICMs and
+        imaged pMMO particle arrays in intact-cell lamellae.
+  - subject: pmmo
+    predicate: forms
+    object: pmmo_array
+    description: Native pMMO trimers form higher-order hexagonal arrays in ICMs.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-32752-9
+      notes: Zhu et al. 2022 showed by cellular and isolated ICM cryoET that pMMO
+        trimers are arranged in hexagonal arrays.
+  - subject: pmmo_array
+    predicate: is located in
+    object: methane_oxidizing_organelle
+    description: The higher-order pMMO arrays occupy the native intracytoplasmic membranes
+      of the methane-oxidizing organelle.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-32752-9
+      notes: Zhu et al. 2022 detected pMMO hexagonal arrays covering the ICM surface
+        in intact methanotroph cells.
+  - subject: pmmo
+    predicate: oxidizes
+    object: methane
+    description: Particulate methane monooxygenase activates methane and oxidizes
+      it to methanol.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-32752-9
+      notes: Zhu et al. 2022 describe pMMO as the membrane-bound MMO that catalyzes
+        methane C-H bond activation and oxidation to methanol.
+  - subject: pmmo
+    predicate: produces
+    object: methanol
+    description: Methanol is the product of the pMMO-catalyzed methane oxidation reaction.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-32752-9
+      notes: Zhu et al. 2022 state that methane monooxygenases oxidize methane to
+        methanol in methanotrophs.
+  - subject: pmmo
+    predicate: initiates
+    object: methane_catabolism
+    description: ICM-embedded pMMO performs the first oxidative step in methane catabolism.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-32752-9
+      notes: Zhu et al. 2022 identify pMMO as the primary membrane enzyme for methane
+        oxidation in copper-replete methanotrophs.
