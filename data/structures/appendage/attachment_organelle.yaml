@@ -1,0 +1,300 @@
+identifier: GO:0033099
+label: attachment organelle
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: A membrane-bounded polar cell extension in Mycoplasma species that concentrates
+  cytadherence and cytoskeletal proteins for host-cell attachment, gliding motility,
+  and organelle-linked cell division.
+definition_source: GO:0033099
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-06T15:02:57Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-06T15:04:48Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added a terminal-organelle synonym, GO parent and membrane part, P1/P30/HMW2/terminal-button
+    components, Mollicutes and Bacteria taxonomy, a Mycoplasmoides pneumoniae M129
+    example, cytadherence and gliding functions, record evidence, and a polar-core
+    adhesion graph.
+  llm_assisted: true
+- timestamp: '2026-09-06T15:24:25Z'
+  curator: claude
+  action: REVIEW_ISSUE_207
+  changes: 'Resolved issue #207 by splitting a grouped P65/HMW3 terminal-button protein-complex
+    row into separate P65 and HMW3 protein components and updating the graph component
+    references.'
+  llm_assisted: true
+synonyms:
+- synonym_text: terminal organelle
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1046/j.1365-2958.2003.03899.x
+parent_structures:
+- GO:0042995
+has_part:
+- GO:0033111
+components:
+- component_id: p1_adhesin_surface_complex
+  label: P1 adhesin surface complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - mpn141
+  - mpn142
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Mycoplasma P1/P40/P90 adhesin surface complex has no exact
+    taxon-neutral complex CURIE curated yet.
+  role: Forms the surface nap-like adhesin layer around the attachment organelle core
+    and concentrates receptor-binding machinery at the pole.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1005299
+    notes: Nakane et al. 2015 review prior localization of P1, P40, and P90 on the
+      surface around the internal core and include them among the known organelle
+      components.
+- component_id: p30_tip_adhesin
+  label: P30 tip adhesin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - mpn453
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: P30 is a Mycoplasma pneumoniae attachment-organelle adhesin; no
+    exact source-neutral protein-family CURIE was curated.
+  role: Localizes to the front surface of the attachment organelle and supports cytadherence
+    and proper polar extension development.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1005299
+    notes: Nakane et al. 2015 mapped P30 to the surface of the front end of the attachment
+      organelle.
+  - reference: DOI:10.1128/JB.181.4.1079-1087.1999
+    notes: Romero-Arroyo et al. 1999 analyzed P30 mutants and connected P30 with cytadherence
+      and correct cell extension morphology.
+- component_id: hmw2_paired_plate_scaffold
+  label: HMW2 paired-plate scaffold
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hmw2
+  - mpn310
+  stoichiometry: parallel molecules in the paired plates
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: HMW2 is a lineage-specific attachment-organelle core protein; no
+    exact source-neutral protein-family CURIE was curated.
+  role: Acts as the length-setting internal-core scaffold of the paired plates in
+    the polar extension.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1005299
+    notes: Nakane et al. 2015 mapped HMW2 molecules along the paired plates of the
+      internal core.
+  - reference: DOI:10.1371/journal.ppat.1009621
+    notes: Nakane et al. 2021 engineered HMW2 coiled-coil lengths and showed HMW2
+      sets attachment-organelle length.
+- component_id: p65_terminal_button
+  label: P65 terminal-button protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - p65
+  - mpn309
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: P65 is a Mycoplasma pneumoniae attachment-organelle terminal-button
+    protein; no exact source-neutral protein-family CURIE was curated.
+  role: Localizes to the front terminal-button substructure that caps the paired plates
+    within the electron-dense internal core.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1005299
+    notes: Nakane et al. 2015 placed P65 in the terminal-button substructure of the
+      attachment-organelle internal core.
+- component_id: hmw3_terminal_button
+  label: HMW3 terminal-button protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hmw3
+  - mpn452
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: HMW3 is a Mycoplasma pneumoniae attachment-organelle terminal-button
+    protein; no exact source-neutral protein-family CURIE was curated.
+  role: Localizes to the terminal-button boundary with the paired plates in the electron-dense
+    internal core.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1005299
+    notes: Nakane et al. 2015 placed HMW3 at the boundary between the terminal button
+      and the paired plates.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:31969
+  taxon_label: Mollicutes
+  presence: VARIABLE
+  note: Attachment organelles are polar protrusions of the Mycoplasma pneumoniae cluster
+    rather than a universal feature of wall-less mollicutes.
+  reference: DOI:10.1186/s12866-025-04320-w
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: RARE
+  note: The characterized attachment organelle is restricted to a small mycoplasma
+    lineage and is not a general bacterial appendage.
+  reference: DOI:10.1186/s12866-025-04320-w
+canonical_examples:
+- taxon_id: NCBITaxon:272634
+  taxon_label: Mycoplasmoides pneumoniae M129
+  note: The Nakane et al. structural mapping work used the M129 type strain, named
+    Mycoplasma pneumoniae M129 in that literature.
+  reference: DOI:10.1371/journal.ppat.1005299
+functions:
+- function_id: host_cell_cytadherence
+  label: host-cell cytadherence
+  description: Polar clustering of P1-family and P30 adhesins lets cells attach to
+    host tissue surfaces.
+  evidence:
+  - reference: DOI:10.1046/j.1365-2958.2003.03899.x
+    notes: Krause and Balish 2004 review the terminal organelle as the polarized structure
+      that mediates M. pneumoniae cytadherence.
+  - reference: DOI:10.1128/JB.181.4.1079-1087.1999
+    notes: Romero-Arroyo et al. 1999 showed P30 is required for normal cytadherence.
+- function_id: attachment_organelle_gliding
+  label: attachment-organelle-dependent gliding motility
+  description: The polar protrusion couples internal-core deformation to surface adhesins
+    to move M. pneumoniae over host surfaces.
+  evidence:
+  - reference: DOI:10.1128/mBio.00243-16
+    notes: Kawamoto et al. 2016 used electron cryotomography to analyze periodicity
+      in attachment organelles during gliding.
+  - reference: DOI:10.1371/journal.ppat.1005299
+    notes: Nakane et al. 2015 integrated surface and internal-core protein maps into
+      a model for gliding motility.
+evidence:
+- reference: DOI:10.1046/j.1365-2958.2003.03899.x
+  notes: 'Krause and Balish 2004, Cellular engineering in a minimal microbe: structure
+    and assembly of the terminal organelle of Mycoplasma pneumoniae, Molecular Microbiology.'
+- reference: DOI:10.1371/journal.ppat.1005299
+  notes: Nakane et al. 2015, Systematic Structural Analyses of Attachment Organelle
+    in Mycoplasma pneumoniae, PLOS Pathogens.
+- reference: DOI:10.1128/mBio.00243-16
+  notes: Kawamoto et al. 2016, Periodicity in Attachment Organelle Revealed by Electron
+    Cryotomography Suggests Conformational Changes in Gliding Mechanism of Mycoplasma
+    pneumoniae, mBio.
+- reference: DOI:10.1371/journal.ppat.1009621
+  notes: Nakane et al. 2021, Molecular ruler of the attachment organelle in Mycoplasma
+    pneumoniae, PLOS Pathogens.
+- reference: DOI:10.1128/JB.181.4.1079-1087.1999
+  notes: Romero-Arroyo et al. 1999, Mycoplasma pneumoniae Protein P30 Is Required
+    for Cytadherence and Associated with Proper Cell Development, Journal of Bacteriology.
+- reference: DOI:10.1186/s12866-025-04320-w
+  notes: Chen et al. 2025, Unraveling the role of distinct cytoskeletal motility structures
+    in Mycoplasma pneumoniae relatives, BMC Microbiology.
+causal_graphs:
+- graph_id: polar_core_surface_adhesion
+  title: Internal-core proteins organize a polar adhesin-bearing attachment organelle
+  description: HMW2, P65, and HMW3 organize the terminal button and paired plates
+    of the internal core. The polar extension positions P1/P40/P90 and P30 adhesins
+    on the surface, coupling cytadherence with attachment-organelle-dependent gliding.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: p1_adhesin_surface_complex
+    label: P1 adhesin surface complex
+    node_type: GENE_OR_PROTEIN
+    component_ref: p1_adhesin_surface_complex
+  - node_id: p30_tip_adhesin
+    label: P30 tip adhesin
+    node_type: GENE_OR_PROTEIN
+    component_ref: p30_tip_adhesin
+  - node_id: hmw2_paired_plate_scaffold
+    label: HMW2 paired-plate scaffold
+    node_type: GENE_OR_PROTEIN
+    component_ref: hmw2_paired_plate_scaffold
+  - node_id: p65_terminal_button
+    label: P65 terminal-button protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: p65_terminal_button
+  - node_id: hmw3_terminal_button
+    label: HMW3 terminal-button protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: hmw3_terminal_button
+  - node_id: internal_core
+    label: attachment-organelle internal core
+    node_type: STRUCTURE
+  - node_id: attachment_organelle
+    label: attachment organelle
+    node_type: STRUCTURE
+    grounding: GO:0033099
+  - node_id: host_cell_cytadherence
+    label: host-cell cytadherence
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: gliding_motility
+    label: attachment-organelle-dependent gliding motility
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: hmw2_paired_plate_scaffold
+    predicate: forms scaffold within
+    object: internal_core
+    description: HMW2 molecules align along the paired plates of the attachment-organelle
+      internal core.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1005299
+      notes: Nakane et al. 2015 mapped HMW2 along the paired plates in the internal
+        core.
+  - subject: p65_terminal_button
+    predicate: localizes to
+    object: internal_core
+    description: P65 localizes to the terminal-button region of the electron-dense
+      internal core.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1005299
+      notes: Nakane et al. 2015 placed P65 in the terminal-button substructure.
+  - subject: hmw3_terminal_button
+    predicate: localizes to
+    object: internal_core
+    description: HMW3 localizes to the terminal-button boundary with the paired plates
+      of the electron-dense internal core.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1005299
+      notes: Nakane et al. 2015 placed HMW3 at the boundary with the paired plates.
+  - subject: internal_core
+    predicate: extends within
+    object: attachment_organelle
+    description: The internal core is the electron-dense structure inside the polar
+      attachment-organelle protrusion.
+    evidence:
+    - reference: DOI:10.1128/mBio.00243-16
+      notes: Kawamoto et al. 2016 resolved knoblike surface particles and an internal
+        core in the polar protrusion by electron cryotomography.
+  - subject: p1_adhesin_surface_complex
+    predicate: clusters on
+    object: attachment_organelle
+    description: The P1 adhesin, P40, and P90 surface proteins cluster around the
+      attachment-organelle core.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1005299
+      notes: Nakane et al. 2015 summarize P1, P40, and P90 as surface proteins distributed
+        around the core.
+  - subject: p30_tip_adhesin
+    predicate: localizes to
+    object: attachment_organelle
+    description: P30 is concentrated at the front surface of the attachment organelle.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1005299
+      notes: Nakane et al. 2015 mapped P30 to the front surface of the organelle.
+  - subject: p30_tip_adhesin
+    predicate: supports
+    object: host_cell_cytadherence
+    description: P30 is needed for normal host-cell cytadherence and proper development
+      of the polar extension.
+    evidence:
+    - reference: DOI:10.1128/JB.181.4.1079-1087.1999
+      notes: Romero-Arroyo et al. 1999 showed that P30 mutants are defective for cytadherence.
+  - subject: attachment_organelle
+    predicate: mediates
+    object: gliding_motility
+    description: The assembled polar organelle is the surface and internal-core machinery
+      used for gliding motility.
+    evidence:
+    - reference: DOI:10.1128/mBio.00243-16
+      notes: Kawamoto et al. 2016 analyzed attachment organelle periodicity in the
+        gliding mechanism by electron cryotomography.

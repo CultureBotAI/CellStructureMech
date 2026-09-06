@@ -40,6 +40,37 @@
       ]
     },
     {
+      "identifier": "GO:0033099",
+      "label": "attachment organelle",
+      "neighbors": [
+        {
+          "identifier": "GO:0044096",
+          "label": "type IV pilus",
+          "cosine_similarity": 0.73606457
+        },
+        {
+          "identifier": "GO:0140737",
+          "label": "encapsulin nanocompartment",
+          "cosine_similarity": 0.73459489
+        },
+        {
+          "identifier": "cellstructuremech:elongasome",
+          "label": "elongasome",
+          "cosine_similarity": 0.72826057
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.72565517
+        },
+        {
+          "identifier": "GO:0033104",
+          "label": "type VI protein secretion system complex",
+          "cosine_similarity": 0.72117086
+        }
+      ]
+    },
+    {
       "identifier": "GO:0009288",
       "label": "bacterial-type flagellum",
       "neighbors": [
@@ -80,6 +111,11 @@
           "cosine_similarity": 0.63795789
         },
         {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.63047157
+        },
+        {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
           "cosine_similarity": 0.62292806
@@ -93,11 +129,6 @@
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
           "cosine_similarity": 0.61015069
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.61010768
         }
       ]
     },
@@ -116,6 +147,11 @@
           "cosine_similarity": 0.74453005
         },
         {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.72038046
+        },
+        {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.71210531
@@ -124,11 +160,6 @@
           "identifier": "GO:0044096",
           "label": "type IV pilus",
           "cosine_similarity": 0.69355783
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.65381758
         }
       ]
     },
@@ -136,6 +167,11 @@
       "identifier": "GO:0044096",
       "label": "type IV pilus",
       "neighbors": [
+        {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.73606457
+        },
         {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
@@ -155,11 +191,6 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.65046583
-        },
-        {
-          "identifier": "GO:0033104",
-          "label": "type VI protein secretion system complex",
-          "cosine_similarity": 0.64187387
         }
       ]
     },
@@ -240,6 +271,11 @@
           "cosine_similarity": 0.75624505
         },
         {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.72826057
+        },
+        {
           "identifier": "GO:1990586",
           "label": "divisome complex",
           "cosine_similarity": 0.72624244
@@ -248,11 +284,6 @@
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
           "cosine_similarity": 0.72616419
-        },
-        {
-          "identifier": "GO:0097589",
-          "label": "archaeal-type flagellum",
-          "cosine_similarity": 0.72042229
         }
       ]
     },
@@ -405,9 +436,9 @@
           "cosine_similarity": 0.68355959
         },
         {
-          "identifier": "cellstructuremech:mreb_filament",
-          "label": "MreB filament",
-          "cosine_similarity": 0.65962875
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.67084855
         }
       ]
     },
@@ -679,14 +710,14 @@
           "cosine_similarity": 0.68712035
         },
         {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.67170606
+        },
+        {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
           "cosine_similarity": 0.66798541
-        },
-        {
-          "identifier": "GO:0030257",
-          "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.65363
         }
       ]
     },
@@ -710,14 +741,14 @@
           "cosine_similarity": 0.76360809
         },
         {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.73459489
+        },
+        {
           "identifier": "GO:0110143",
           "label": "magnetosome",
           "cosine_similarity": 0.70723332
-        },
-        {
-          "identifier": "GO:0030257",
-          "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.69434084
         }
       ]
     },
@@ -736,6 +767,11 @@
           "cosine_similarity": 0.76731385
         },
         {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.67415614
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.65869962
@@ -744,11 +780,6 @@
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.64759912
-        },
-        {
-          "identifier": "GO:0043263",
-          "label": "cellulosome",
-          "cosine_similarity": 0.64672318
         }
       ]
     },
@@ -834,14 +865,14 @@
           "cosine_similarity": 0.63552326
         },
         {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.63430549
+        },
+        {
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
           "cosine_similarity": 0.62477178
-        },
-        {
-          "identifier": "GO:1990586",
-          "label": "divisome complex",
-          "cosine_similarity": 0.61056721
         }
       ]
     },
@@ -860,6 +891,11 @@
           "cosine_similarity": 0.67199391
         },
         {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.67068435
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.66678418
@@ -868,11 +904,6 @@
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
           "cosine_similarity": 0.6632303
-        },
-        {
-          "identifier": "GO:0020022",
-          "label": "acidocalcisome",
-          "cosine_similarity": 0.66313844
         }
       ]
     },
@@ -901,9 +932,9 @@
           "cosine_similarity": 0.66739453
         },
         {
-          "identifier": "GO:0030257",
-          "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.65244537
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.66616207
         }
       ]
     },
