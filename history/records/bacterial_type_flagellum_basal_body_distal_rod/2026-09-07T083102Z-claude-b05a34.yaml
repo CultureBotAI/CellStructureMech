@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod.yaml
+  slug: bacterial_type_flagellum_basal_body_distal_rod
+session:
+  id: 2026-09-07T083102Z-claude-b05a34
+  timestamp: '2026-09-07T08:31:02Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add bacterial flagellum distal rod record
+  details: Created a PROPOSED GO:0009426 distal-rod record with GO synonymy and basal-body
+    rod parthood, FlgG composition grounded to InterPro:IPR012834, bacterial and archaeal
+    taxonomic scope, Salmonella as a canonical example, distal-rod axis and LP-ring bushing
+    functions, and a source-bounded graph for FlgG distal-rod positioning based on Homma 1990,
+    Saijo-Hamano 2004, Johnson 2021 and Yamaguchi 2021.

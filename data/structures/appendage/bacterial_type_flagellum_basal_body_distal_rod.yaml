@@ -1,0 +1,219 @@
+identifier: GO:0009426
+label: bacterial-type flagellum basal body, distal rod
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The portion of the central rod of the bacterial-type flagellar basal body
+  that is distal to the cell membrane; spans most of the distance between the inner
+  and outer membranes.
+definition_source: GO:0009426
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-07T08:28:14Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-07T08:29:30Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO distal-rod synonymy, rod parthood, FlgG composition, bacterial
+    and archaeal taxonomic scope, Salmonella as a canonical example, distal-rod axis
+    and LP-bushing functions, a FlgG distal-rod causal graph, structural literature
+    evidence, and a boundary discussion excluding LP rings, the hook and assembly
+    factors.
+  llm_assisted: true
+- timestamp: '2026-09-07T08:30:27Z'
+  curator: claude
+  action: TIGHTEN_WORDING
+  changes: Narrowed the Salmonella canonical-example note to the cryo-EM position
+    supported by Johnson et al. 2021.
+  llm_assisted: true
+- timestamp: '2026-09-07T18:08:14Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #244, #245 and #246 by narrowing the FlgG component role, replacing
+    a generic biochemical citation on the distal-axis function, and removing temporal
+    ''completes'' wording from the causal graph.'
+  llm_assisted: true
+synonyms:
+- synonym_text: flagellar basal body, distal rod
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009426
+- synonym_text: flagellin-based flagellum basal body, distal rod
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009426
+part_of:
+- GO:0030694
+components:
+- component_id: flgg
+  label: flagellar basal-body rod protein FlgG
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR012834
+  gene_symbols:
+  - flgG
+  essentiality: ESSENTIAL
+  role: Forms the FlgG polymer of the distal basal-body rod.
+  evidence:
+  - reference: DOI:10.1016/0022-2836(90)90365-S
+    notes: Homma et al. 1990 assigned Salmonella FlgG to the distal rod segment adjacent
+      to the rod-hook junction.
+  - reference: DOI:10.1038/s41564-021-00895-y
+    notes: Johnson et al. 2021 modeled the intact Salmonella basal-body rod with a
+      FlgG distal rod polymer.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Distal rods occur in bacterial-type flagellar basal bodies but are absent
+    from bacteria without flagellar loci.
+  reference: DOI:10.1038/nrmicro1887
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaeal archaella are type-IV-pilus-related appendages and do not contain
+    the FlgG bacterial-type flagellar distal rod.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  note: Cryo-EM model for FlgG distal-rod position inside the Gram-negative LP-ring
+    bushing.
+  reference: DOI:10.1038/s41564-021-00895-y
+functions:
+- function_id: periplasmic_distal_rod_axis
+  label: periplasmic distal rod axis formation
+  description: FlgG forms the distal segment of the central basal-body rod, extending
+    that axis toward the outer envelope side of the cell.
+  evidence:
+  - reference: DOI:10.1016/0022-2836(90)90365-S
+    notes: Homma et al. 1990 placed FlgG as the distal Salmonella rod protein in the
+      segmented basal-body rod.
+  - reference: DOI:10.1038/s41564-021-00895-y
+    notes: Johnson et al. 2021 structurally resolved the FlgG distal rod segment in
+      the intact Salmonella basal body.
+- function_id: lp_ring_bushing_axis
+  label: LP-ring bushing axis
+  description: In Gram-negative Salmonella, the distal rod is the rotating FlgG axis
+    surrounded by the P and L rings.
+  evidence:
+  - reference: DOI:10.1038/s41564-021-00895-y
+    notes: Johnson et al. 2021 resolved the FlgG distal rod in the intact Salmonella
+      flagellar basal body.
+  - reference: DOI:10.1038/s41467-021-24715-3
+    notes: Yamaguchi et al. 2021 resolved the Salmonella LP-ring bushing that surrounds
+      the distal rod.
+evidence:
+- reference: DOI:10.1128/JB.181.23.7149-7153.1999
+  notes: 'Macnab RM 1999, The bacterial flagellum: reversible rotary propellor and
+    type III export apparatus.'
+- reference: DOI:10.1016/0022-2836(90)90365-S
+  notes: Homma M, Kutsukake K, Hasebe M, Iino T and Macnab RM 1990, FlgB, FlgC, FlgF
+    and FlgG. A family of structurally related proteins in the flagellar basal body
+    of Salmonella typhimurium.
+- reference: PMID:15136044
+  notes: Saijo-Hamano Y, Uchida N, Namba K and Oosawa K 2004, In vitro characterization
+    of FlgB, FlgC, FlgF, FlgG, and FliE, flagellar basal body proteins of Salmonella.
+- reference: DOI:10.1038/s41564-021-00895-y
+  notes: Johnson S et al. 2021, Molecular structure of the intact bacterial flagellar
+    basal body.
+- reference: DOI:10.1038/s41467-021-24715-3
+  notes: Yamaguchi T et al. 2021, Structure of the molecular bushing of the bacterial
+    flagellar motor.
+causal_graphs:
+- graph_id: flgg_distal_rod_axis
+  title: FlgG forms the distal rod axis
+  description: FlgG forms the distal basal-body rod segment that adjoins the proximal
+    rod, completes the central rod, and runs inside the Gram-negative LP-ring bushing.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: flgg
+    label: flagellar basal-body rod protein FlgG
+    node_type: GENE_OR_PROTEIN
+    component_ref: flgg
+    grounding: InterPro:IPR012834
+  - node_id: proximal_rod
+    label: bacterial-type flagellum basal body, proximal rod
+    node_type: STRUCTURE
+    grounding: GO:0009429
+  - node_id: distal_rod
+    label: bacterial-type flagellum basal body, distal rod
+    node_type: STRUCTURE
+    grounding: GO:0009426
+  - node_id: basal_body_rod
+    label: bacterial-type flagellum basal body, rod
+    node_type: STRUCTURE
+    grounding: GO:0030694
+  - node_id: l_ring
+    label: bacterial-type flagellum basal body, distal rod, L ring
+    node_type: STRUCTURE
+    grounding: GO:0009427
+  - node_id: p_ring
+    label: bacterial-type flagellum basal body, distal rod, P ring
+    node_type: STRUCTURE
+    grounding: GO:0009428
+  edges:
+  - subject: flgg
+    predicate: builds
+    object: distal_rod
+    description: FlgG forms the distal rod segment adjacent to the rod-hook junction.
+    evidence:
+    - reference: DOI:10.1016/0022-2836(90)90365-S
+      notes: Homma et al. 1990 localized FlgG to the distal Salmonella basal-body
+        rod.
+  - subject: proximal_rod
+    predicate: adjoins
+    object: distal_rod
+    description: The proximal rod lies immediately cell-proximal to the FlgG distal
+      rod.
+    evidence:
+    - reference: DOI:10.1016/0022-2836(90)90365-S
+      notes: Homma et al. 1990 model the Salmonella rod as FlgB/FlgC/FlgF proximal
+        segments followed by the FlgG distal segment.
+  - subject: distal_rod
+    predicate: forms distal segment of
+    object: basal_body_rod
+    description: The FlgG distal rod is the outer-envelope segment of the mature central
+      basal-body rod.
+    evidence:
+    - reference: DOI:10.1038/s41564-021-00895-y
+      notes: Johnson et al. 2021 resolved the FlgG distal rod in the intact Salmonella
+        basal body.
+  - subject: p_ring
+    predicate: encircles
+    object: distal_rod
+    description: The P ring forms the peptidoglycan-proximal portion of the bushing
+      around the distal rod.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24715-3
+      notes: Yamaguchi et al. 2021 structurally assigned the FlgI P ring within the
+        Salmonella LP-ring assembly around the rod.
+  - subject: l_ring
+    predicate: encircles
+    object: distal_rod
+    description: The L ring forms the outer-membrane portion of the bushing around
+      the distal rod.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24715-3
+      notes: Yamaguchi et al. 2021 structurally assigned the FlgH L ring within the
+        Salmonella LP-ring assembly around the rod.
+discussions:
+- discussion_id: exclude_lp_rings_hook_and_assembly_factors
+  prompt: Should L/P rings, the hook, or rod assembly factors be curated as bacterial-type
+    flagellum distal-rod components?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#flgg
+  rationale: The mature GO:0009426 distal rod is scoped to the FlgG axial polymer
+    even though the GO L- and P-ring terms sit under the distal rod. The L and P rings
+    surround the distal rod as Gram-negative bushings, the hook continues the external
+    axial structure, and export or capping proteins act during assembly rather than
+    remaining mature distal-rod subunits.
+  resolution_note: 'Declined: keep FlgG as the only mature distal-rod constituent
+    and represent L/P rings, hooks, and export or capping proteins on their own records
+    or on the enclosing basal-body record.'
+  posed_by: claude
+  posed_date: '2026-09-07'
+  resolved_date: '2026-09-07'
