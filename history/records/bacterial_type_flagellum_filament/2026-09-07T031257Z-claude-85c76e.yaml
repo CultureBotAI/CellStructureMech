@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_filament.yaml
+  slug: bacterial_type_flagellum_filament
+session:
+  id: 2026-09-07T031257Z-claude-85c76e
+  timestamp: '2026-09-07T03:12:57Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add bacterial-type flagellum filament record
+  details: Created a PROPOSED GO:0009420 bacterial-type flagellum filament record for the
+    external flagellin propeller of the bacterial flagellum. The record uses the exact GO
+    cellular-component identity, links the filament part_of GO:0009288, adds InterPro-grounded
+    flagellin as the polymerized constituent, cites flagellin stoichiometry and recent filament
+    cryo-EM structures, records Salmonella and Escherichia examples, and keeps the hook, hook-filament
+    junction, and FliD cap outside the filament component boundary.
