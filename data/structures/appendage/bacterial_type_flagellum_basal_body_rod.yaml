@@ -27,6 +27,12 @@ curation_history:
   changes: Narrowed the Salmonella canonical-example note to the genetic and biochemical
     evidence supported by Homma et al. 1990.
   llm_assisted: true
+- timestamp: '2026-09-07T04:49:34Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: Removed over-specific FlgB-FlgC and FlgC-FlgF polymerization edges and
+    clarified the FliE label-only grounding note after PR review.
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, rod
   synonym_type: EXACT_SYNONYM
@@ -45,8 +51,8 @@ components:
   component_type: PROTEIN
   component_role: CONSTITUENT
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact integrated InterPro family was asserted for FliE; the
-    structural identity is curated by label and gene symbol.
+  grounding_notes: No exact integrated InterPro family was identified for FliE during
+    curation; the structural identity is curated by label and gene symbol.
   gene_symbols:
   - fliE
   essentiality: ESSENTIAL
@@ -83,7 +89,7 @@ components:
   gene_symbols:
   - flgC
   essentiality: ESSENTIAL
-  role: Polymerizes with FlgB and FlgF into the proximal rod.
+  role: Contributes to the segmented proximal rod with FlgB and FlgF.
   evidence:
   - reference: DOI:10.1016/0022-2836(90)90365-S
     notes: Homma et al. 1990 identified FlgC as a Salmonella rod protein related to
@@ -243,23 +249,6 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/JB.182.11.3029-3036.2000
       notes: Minamino et al. 2000 detected a strong Salmonella FliE-FlgB interaction.
-  - subject: flgb
-    predicate: polymerizes with
-    object: flgc
-    description: FlgB and FlgC are proximal rod proteins that assemble with FlgF into
-      the segmented proximal rod.
-    evidence:
-    - reference: PMID:15136044
-      notes: Saijo-Hamano et al. 2004 characterized purified FlgB, FlgC, FlgF, FlgG
-        and FliE together.
-  - subject: flgc
-    predicate: polymerizes with
-    object: flgf
-    description: FlgC and FlgF contribute to successive proximal rod segments.
-    evidence:
-    - reference: DOI:10.1016/0022-2836(90)90365-S
-      notes: Homma et al. 1990 placed FlgB, FlgC and FlgF in successive Salmonella
-        proximal rod segments.
   - subject: flgb
     predicate: builds
     object: proximal_rod
