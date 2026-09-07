@@ -28,6 +28,13 @@ curation_history:
   changes: Narrowed the Salmonella canonical-example note to the cryo-EM position
     supported by Johnson et al. 2021.
   llm_assisted: true
+- timestamp: '2026-09-07T18:08:14Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #244, #245 and #246 by narrowing the FlgG component role, replacing
+    a generic biochemical citation on the distal-axis function, and removing temporal
+    ''completes'' wording from the causal graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, distal rod
   synonym_type: EXACT_SYNONYM
@@ -46,8 +53,7 @@ components:
   gene_symbols:
   - flgG
   essentiality: ESSENTIAL
-  role: Forms the FlgG distal rod polymer that extends the basal-body rod through
-    the P- and L-ring bushing.
+  role: Forms the FlgG polymer of the distal basal-body rod.
   evidence:
   - reference: DOI:10.1016/0022-2836(90)90365-S
     notes: Homma et al. 1990 assigned Salmonella FlgG to the distal rod segment adjacent
@@ -78,14 +84,14 @@ functions:
 - function_id: periplasmic_distal_rod_axis
   label: periplasmic distal rod axis formation
   description: FlgG forms the distal segment of the central basal-body rod, extending
-    the rotating axis toward the hook-side end of the cell envelope.
+    that axis toward the outer envelope side of the cell.
   evidence:
   - reference: DOI:10.1016/0022-2836(90)90365-S
     notes: Homma et al. 1990 placed FlgG as the distal Salmonella rod protein in the
       segmented basal-body rod.
-  - reference: PMID:15136044
-    notes: Saijo-Hamano et al. 2004 biochemically characterized Salmonella FlgG with
-      the other exported basal-body rod proteins and FliE.
+  - reference: DOI:10.1038/s41564-021-00895-y
+    notes: Johnson et al. 2021 structurally resolved the FlgG distal rod segment in
+      the intact Salmonella basal body.
 - function_id: lp_ring_bushing_axis
   label: LP-ring bushing axis
   description: In Gram-negative Salmonella, the distal rod is the rotating FlgG axis
@@ -166,10 +172,10 @@ causal_graphs:
       notes: Homma et al. 1990 model the Salmonella rod as FlgB/FlgC/FlgF proximal
         segments followed by the FlgG distal segment.
   - subject: distal_rod
-    predicate: completes
+    predicate: forms distal segment of
     object: basal_body_rod
-    description: The FlgG distal rod extends the central rod through the outer envelope
-      side of the basal body.
+    description: The FlgG distal rod is the outer-envelope segment of the mature central
+      basal-body rod.
     evidence:
     - reference: DOI:10.1038/s41564-021-00895-y
       notes: Johnson et al. 2021 resolved the FlgG distal rod in the intact Salmonella
