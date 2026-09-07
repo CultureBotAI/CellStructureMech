@@ -509,6 +509,11 @@
       "label": "gas vesicle",
       "neighbors": [
         {
+          "identifier": "GO:0033172",
+          "label": "gas vesicle shell",
+          "cosine_similarity": 0.95156024
+        },
+        {
           "identifier": "GO:0044227",
           "label": "methane-oxidizing organelle",
           "cosine_similarity": 0.68648003
@@ -527,11 +532,37 @@
           "identifier": "GO:0031469",
           "label": "bacterial microcompartment",
           "cosine_similarity": 0.67008473
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0033172",
+      "label": "gas vesicle shell",
+      "neighbors": [
+        {
+          "identifier": "GO:0031411",
+          "label": "gas vesicle",
+          "cosine_similarity": 0.95156024
         },
         {
-          "identifier": "GO:0020022",
-          "label": "acidocalcisome",
-          "cosine_similarity": 0.66841702
+          "identifier": "GO:0043591",
+          "label": "endospore external encapsulating structure",
+          "cosine_similarity": 0.69243651
+        },
+        {
+          "identifier": "GO:0031469",
+          "label": "bacterial microcompartment",
+          "cosine_similarity": 0.68059119
+        },
+        {
+          "identifier": "GO:0031472",
+          "label": "propanediol degradation polyhedral organelle",
+          "cosine_similarity": 0.67930762
+        },
+        {
+          "identifier": "cellstructuremech:carboxysome_shell",
+          "label": "carboxysome shell",
+          "cosine_similarity": 0.67723804
         }
       ]
     },
@@ -1361,14 +1392,14 @@
           "cosine_similarity": 0.70259728
         },
         {
+          "identifier": "GO:0033172",
+          "label": "gas vesicle shell",
+          "cosine_similarity": 0.69243651
+        },
+        {
           "identifier": "GO:0009274",
           "label": "peptidoglycan-based cell wall",
           "cosine_similarity": 0.68355959
-        },
-        {
-          "identifier": "GO:0031411",
-          "label": "gas vesicle",
-          "cosine_similarity": 0.67729324
         }
       ]
     }
