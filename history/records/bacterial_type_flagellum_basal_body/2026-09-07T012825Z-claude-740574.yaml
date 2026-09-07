@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+  slug: bacterial_type_flagellum_basal_body
+session:
+  id: 2026-09-07T012825Z-claude-740574
+  timestamp: '2026-09-07T01:28:25Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Added bacterial-type flagellum basal body record
+  details: Created a GO:0009425 child record for the bacterial-type flagellum basal body with
+    MS ring, C ring, stator, rod, LP ring and export-apparatus components supported by Salmonella
+    assembly and cryo-EM literature.
