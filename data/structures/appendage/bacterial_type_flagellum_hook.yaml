@@ -1,0 +1,242 @@
+identifier: GO:0009424
+label: bacterial-type flagellum hook
+structure_category: APPENDAGE
+structure_kind: FILAMENT
+definition: The portion of the bacterial-type flagellum that connects the filament
+  to the basal body.
+definition_source: GO:0009424
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-07T03:32:32Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-07T03:33:33Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO hook synonymy, bacterial-flagellum parthood, the FlgE hook protein
+    component with the reviewed label-only grounding decision, bacterial and archaeal
+    taxonomic scope, Campylobacter and Salmonella examples, universal-joint torque-transmission
+    function, structural hook evidence, a FlgE-to-filament causal graph, and a boundary
+    discussion excluding the hook cap and hook-filament junction.
+  llm_assisted: true
+- timestamp: '2026-09-07T04:11:02Z'
+  curator: claude
+  action: FIX_REVIEW_ISSUES
+  changes: 'Resolved #233 by localizing the FlgE label-only grounding note to the
+    standalone hook scope; resolved #234 by inserting an explicit flagellar-rotation
+    process between hook torque transmission and motility.'
+  llm_assisted: true
+synonyms:
+- synonym_text: flagellar hook
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009424
+- synonym_text: flagellin-based flagellum hook
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009424
+part_of:
+- GO:0009288
+components:
+- component_id: flge
+  label: hook protein FlgE
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro:IPR020013 was declined because it spans FlgE plus the
+    rod proteins FlgF and FlgG. InterPro:IPR012835 is labeled Flagellar hook FlgE
+    but covers the epsilonproteobacterial FlgE family, so it would ground the Campylobacter
+    example without covering Salmonella-type hooks. The component stays label-only
+    until a source-neutral FlgE family can be asserted across the bacterial hook scope.
+  gene_symbols:
+  - flgE
+  essentiality: ESSENTIAL
+  role: Polymerizes into the short, curved tubular hook that connects the basal body
+    to the external filament.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.57.030502.090832
+    notes: Macnab 2003 reviews the hook as the FlgE-built flexible connector between
+      the flagellar basal body and filament.
+  - reference: DOI:10.1038/ncomms13425
+    notes: Matsunami et al. 2016 resolved the Campylobacter jejuni hook as a helical
+      tube built from FlgE.
+  - reference: DOI:10.3390/biom9090462
+    notes: Horvath et al. 2019 resolved the Salmonella flagellar hook and modeled
+      FlgE intermolecular contacts that support universal-joint mechanics.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: FlgE hooks are widespread in bacterial-type flagella but are absent from bacteria
+    without flagellar loci.
+  reference: DOI:10.1038/nrmicro1887
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaeal archaella are type-IV-pilus-related appendages and do not use the
+    FlgE hook of bacterial flagella.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:197
+  taxon_label: Campylobacter jejuni
+  note: Source species for the complete cryo-EM structure of a bacterial flagellar
+    hook.
+  reference: DOI:10.1038/ncomms13425
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  note: Model species used to resolve hook intermolecular interactions and native
+    hook supercoiling.
+  reference: DOI:10.3390/biom9090462
+functions:
+- function_id: universal_joint_torque_transmission
+  label: universal-joint torque transmission
+  description: The hook bends while remaining torsionally stiff enough to transmit
+    motor rotation from the basal body to the helical filament.
+  evidence:
+  - reference: DOI:10.1038/s41467-019-13252-9
+    notes: Kato et al. 2019 resolved the native supercoiled Salmonella hook and linked
+      its FlgE lattice to universal-joint bending and torque transmission.
+  - reference: DOI:10.3390/biom9090462
+    notes: Horvath et al. 2019 analyzed Salmonella FlgE contacts that explain hook
+      flexibility during universal-joint function.
+evidence:
+- reference: DOI:10.1146/annurev.micro.57.030502.090832
+  notes: Macnab RM 2003, How bacteria assemble flagella.
+- reference: DOI:10.1038/ncomms13425
+  notes: Matsunami H et al. 2016, Complete structure of the bacterial flagellar hook
+    reveals extensive set of stabilizing interactions.
+- reference: DOI:10.3390/biom9090462
+  notes: Horvath P, Kato T, Miyata T and Namba K 2019, Structure of Salmonella flagellar
+    hook reveals intermolecular domain interactions for the universal joint function.
+- reference: DOI:10.1038/s41467-019-13252-9
+  notes: Kato T et al. 2019, Structure of the native supercoiled flagellar hook as
+    a universal joint.
+causal_graphs:
+- graph_id: flge_hook_universal_joint
+  title: FlgE builds the torque-transmitting hook
+  description: FlgE subunits polymerize into a short curved tube. The resulting hook
+    connects the basal body and filament, bends as the filament changes angle, and
+    transmits motor torque into rotation of the filament propeller.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: flge
+    label: hook protein FlgE
+    node_type: GENE_OR_PROTEIN
+    component_ref: flge
+  - node_id: flge_interfaces
+    label: FlgE intermolecular interfaces
+    node_type: STRUCTURE
+  - node_id: hook
+    label: bacterial-type flagellum hook
+    node_type: STRUCTURE
+    grounding: GO:0009424
+  - node_id: basal_body
+    label: bacterial-type flagellum basal body
+    node_type: STRUCTURE
+    grounding: GO:0009425
+  - node_id: filament
+    label: bacterial-type flagellum filament
+    node_type: STRUCTURE
+    grounding: GO:0009420
+  - node_id: flagellar_rotation
+    label: bacterial flagellar rotation
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: motility
+    label: bacterial-type flagellum-dependent cell motility
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071973
+  edges:
+  - subject: flge
+    predicate: polymerizes into
+    object: hook
+    description: Multiple FlgE copies polymerize into the helical tube of the bacterial
+      flagellar hook.
+    evidence:
+    - reference: DOI:10.1038/ncomms13425
+      notes: Matsunami et al. 2016 resolved a complete Campylobacter jejuni hook built
+        from polymerized FlgE.
+  - subject: flge
+    predicate: forms
+    object: flge_interfaces
+    description: Adjacent FlgE subunits form lateral and axial contacts within the
+      hook lattice.
+    evidence:
+    - reference: DOI:10.3390/biom9090462
+      notes: Horvath et al. 2019 modeled Salmonella FlgE intermolecular domain interactions
+        in the hook.
+  - subject: flge_interfaces
+    predicate: stabilize
+    object: hook
+    description: FlgE contacts stabilize a tubular hook that can bend while resisting
+      twisting.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-13252-9
+      notes: Kato et al. 2019 linked the native supercoiled hook lattice to a flexible
+        universal joint.
+  - subject: hook
+    predicate: connects
+    object: basal_body
+    description: The proximal hook sits above the basal body as the flexible axial
+      connector.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.57.030502.090832
+      notes: Macnab 2003 reviews the hook as the axial substructure connecting the
+        basal body to the external filament.
+  - subject: hook
+    predicate: connects
+    object: filament
+    description: The distal hook couples to the helical filament through the hook-filament
+      junction.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.57.030502.090832
+      notes: Macnab 2003 reviews assembly of the hook, hook-filament junction and
+        filament.
+  - subject: hook
+    predicate: transmits torque to
+    object: filament
+    description: The flexible hook acts as a universal joint that carries basal-body
+      rotation to the filament.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-13252-9
+      notes: Kato et al. 2019 resolved the native hook conformation used to explain
+        universal-joint torque transmission.
+  - subject: hook
+    predicate: transmits torque into
+    object: flagellar_rotation
+    description: The flexible hook acts as a universal joint that carries basal-body
+      rotation into rotation of the filament propeller.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-13252-9
+      notes: Kato et al. 2019 resolved the native hook conformation used to explain
+        universal-joint torque transmission.
+  - subject: flagellar_rotation
+    predicate: turns
+    object: filament
+    description: Torque transmitted through the hook rotates the helical filament.
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.72.121801.161737
+      notes: Berg 2003 reviews the bacterial flagellar motor and helical filament
+        as the rotary swimming organelle.
+  - subject: flagellar_rotation
+    predicate: drives
+    object: motility
+    description: Rotation of the helical filament drives swimming motility.
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.72.121801.161737
+      notes: Berg 2003 reviews swimming by rotating helical flagellar filaments.
+discussions:
+- discussion_id: exclude_cap_and_junction
+  prompt: Should FlgD, FlgK, or FlgL be curated as bacterial-type flagellum hook components?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#flge
+  rationale: The GO:0009424 hook record is scoped to the FlgE tube. FlgD forms the
+    hook cap during assembly, and FlgK/FlgL form the hook-filament junction after
+    hook completion; each is adjacent to, rather than part of, the mature hook.
+  resolution_note: 'Declined: leave FlgD and FlgK/FlgL on the enclosing flagellum
+    or on future cap and junction substructure records.'
+  posed_by: claude
+  posed_date: '2026-09-07'
+  resolved_date: '2026-09-07'

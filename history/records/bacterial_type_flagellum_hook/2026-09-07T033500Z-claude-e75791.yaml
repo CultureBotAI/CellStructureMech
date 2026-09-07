@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_hook.yaml
+  slug: bacterial_type_flagellum_hook
+session:
+  id: 2026-09-07T033500Z-claude-e75791
+  timestamp: '2026-09-07T03:35:00Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add bacterial-type flagellum hook record
+  details: Created a PROPOSED GO:0009424 bacterial-type flagellum hook record for the FlgE
+    tube that links the basal body to the external filament. The record uses the exact GO
+    cellular-component identity, links the hook part_of GO:0009288, adds FlgE as a reviewed-label-only
+    polymer component, cites Campylobacter and Salmonella hook structures, records universal-joint
+    torque transmission, and keeps the hook cap and hook-filament junction outside the hook
+    component boundary.
