@@ -2,8 +2,8 @@ identifier: GO:0009420
 label: bacterial-type flagellum filament
 structure_category: APPENDAGE
 structure_kind: FILAMENT
-definition: The long, thin external structure of the bacterial-type flagellum, which
-  acts as a propeller.
+definition: The long (approximately 20 nm), thin external structure of the bacterial-type
+  flagellum, which acts as a propeller.
 definition_source: GO:0009420
 mapping_status: PROPOSED
 curation_history:
@@ -20,6 +20,13 @@ curation_history:
     scope, Salmonella and Escherichia examples, helical propeller function, structural
     and assembly evidence, a flagellin-to-propeller causal graph, and a boundary discussion
     excluding the hook and cap.
+  llm_assisted: true
+- timestamp: '2026-09-07T03:22:35Z'
+  curator: claude
+  action: FIX_REVIEW_ISSUES
+  changes: 'Resolved #230 by restoring the exact GO:0009420 definition text; resolved
+    #231 by adding Zhu et al. 2026 Vibrio filament cryo-EM evidence to the flagellin
+    component.'
   llm_assisted: true
 synonyms:
 - synonym_text: flagellar filament
@@ -53,6 +60,9 @@ components:
   - reference: DOI:10.1038/s41598-019-51440-1
     notes: Yonekura et al. 2019 resolved an in vivo flagellar filament with 11 protofilaments
       in Kurthia.
+  - reference: DOI:10.1038/s41467-026-71203-7
+    notes: Zhu et al. 2026 resolved Vibrio alginolyticus flagellin packing by cryo-EM
+      as independent structural evidence for flagellin as the bacterial filament constituent.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
