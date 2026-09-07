@@ -40,10 +40,16 @@ curation_history:
   changes: Narrowed the GO:0009425 definition text to identity and component scope;
     left anchoring, export and torque claims in literature-backed functions.
   llm_assisted: true
+- timestamp: '2026-09-07T02:07:09Z'
+  curator: claude
+  action: FIX_REVIEW_ISSUES
+  changes: 'Resolved #224 by sourcing basal-body wording variants from UniProt SL;
+    resolved #225 by adding C-ring rotor evidence to the C-ring rotation edge.'
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial flagellum basal body
   synonym_type: EXACT_SYNONYM
-  source: GO:0009425
+  source: uniprot.location:SL-0142
 - synonym_text: bacterial flagellar basal body
   synonym_type: EXACT_SYNONYM
   source: uniprot.location:SL-0142
@@ -319,6 +325,9 @@ causal_graphs:
     description: Torque on the C ring turns the MS ring and rod as the basal-body
       rotor.
     evidence:
+    - reference: DOI:10.1016/j.tim.2014.12.011
+      notes: Minamino and Imada 2015 describe the bacterial C ring, MS ring and rod
+        as the rotor turned by stator interactions with FliG.
     - reference: DOI:10.1016/j.cell.2021.03.057
       notes: Tan et al. 2021 resolved the structural path used to transmit torque
         from the MS ring into the rod.
