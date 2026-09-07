@@ -85,6 +85,11 @@
           "cosine_similarity": 0.88654253
         },
         {
+          "identifier": "GO:0009424",
+          "label": "bacterial-type flagellum hook",
+          "cosine_similarity": 0.86591543
+        },
+        {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
           "cosine_similarity": 0.8517309
@@ -93,11 +98,6 @@
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.78470825
-        },
-        {
-          "identifier": "GO:0097589",
-          "label": "archaeal-type flagellum",
-          "cosine_similarity": 0.76041848
         }
       ]
     },
@@ -109,6 +109,11 @@
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
           "cosine_similarity": 0.92210756
+        },
+        {
+          "identifier": "GO:0009424",
+          "label": "bacterial-type flagellum hook",
+          "cosine_similarity": 0.82612262
         },
         {
           "identifier": "GO:0055040",
@@ -124,11 +129,6 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.76509129
-        },
-        {
-          "identifier": "GO:0045259",
-          "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.75952865
         }
       ]
     },
@@ -140,6 +140,11 @@
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
           "cosine_similarity": 0.88654253
+        },
+        {
+          "identifier": "GO:0009424",
+          "label": "bacterial-type flagellum hook",
+          "cosine_similarity": 0.87146749
         },
         {
           "identifier": "GO:0055040",
@@ -155,11 +160,37 @@
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
           "cosine_similarity": 0.77883438
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009424",
+      "label": "bacterial-type flagellum hook",
+      "neighbors": [
+        {
+          "identifier": "GO:0009420",
+          "label": "bacterial-type flagellum filament",
+          "cosine_similarity": 0.87146749
         },
         {
-          "identifier": "GO:0097589",
-          "label": "archaeal-type flagellum",
-          "cosine_similarity": 0.76528737
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.86591543
+        },
+        {
+          "identifier": "GO:0055040",
+          "label": "periplasmic flagellum",
+          "cosine_similarity": 0.84723926
+        },
+        {
+          "identifier": "GO:0009425",
+          "label": "bacterial-type flagellum basal body",
+          "cosine_similarity": 0.82612262
+        },
+        {
+          "identifier": "cellstructuremech:mreb_filament",
+          "label": "MreB filament",
+          "cosine_similarity": 0.73337445
         }
       ]
     },
@@ -183,14 +214,14 @@
           "cosine_similarity": 0.62292806
         },
         {
+          "identifier": "GO:0009424",
+          "label": "bacterial-type flagellum hook",
+          "cosine_similarity": 0.61676687
+        },
+        {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.61057967
-        },
-        {
-          "identifier": "GO:0009288",
-          "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.61015069
         }
       ]
     },
@@ -209,6 +240,11 @@
           "cosine_similarity": 0.8517309
         },
         {
+          "identifier": "GO:0009424",
+          "label": "bacterial-type flagellum hook",
+          "cosine_similarity": 0.84723926
+        },
+        {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
           "cosine_similarity": 0.80095029
@@ -217,11 +253,6 @@
           "identifier": "GO:0097589",
           "label": "archaeal-type flagellum",
           "cosine_similarity": 0.74453005
-        },
-        {
-          "identifier": "GO:0033099",
-          "label": "attachment organelle",
-          "cosine_similarity": 0.72038046
         }
       ]
     },
@@ -250,9 +281,9 @@
           "cosine_similarity": 0.67353303
         },
         {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.65046583
+          "identifier": "GO:0009424",
+          "label": "bacterial-type flagellum hook",
+          "cosine_similarity": 0.65682532
         }
       ]
     },
