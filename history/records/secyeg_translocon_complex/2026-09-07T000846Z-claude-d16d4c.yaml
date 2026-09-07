@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/secyeg_translocon_complex.yaml
+  slug: secyeg_translocon_complex
+session:
+  id: 2026-09-07T000846Z-claude-d16d4c
+  timestamp: '2026-09-07T00:08:46Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - mereology
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add SecYEG translocon complex
+  details: Added a PROPOSED cellstructuremech:secyeg_translocon_complex record for the bacterial
+    SecYEG channel, with broader GO:0031522 Sec-complex parthood, SecY, SecE, and SecG components,
+    bacterial taxonomic scope, an Escherichia coli canonical example, GO:0043952 Sec-transport
+    function grounding, a SecA-driven preprotein-translocation graph, and an open Sec holo-translocon
+    boundary TODO. Identity and mechanism evidence were curated from Tsirigotaki et al. 2017,
+    Park and Rapoport 2012, Duong and Wickner 1997, Li et al. 2016, and Ma et al. 2019.

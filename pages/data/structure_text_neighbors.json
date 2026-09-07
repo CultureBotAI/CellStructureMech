@@ -1032,6 +1032,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:secyeg_translocon_complex",
+      "label": "SecYEG translocon complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.77951768
+        },
+        {
+          "identifier": "GO:0015627",
+          "label": "type II protein secretion system complex",
+          "cosine_similarity": 0.7659023
+        },
+        {
+          "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
+          "label": "type IX protein secretion system complex",
+          "cosine_similarity": 0.76164514
+        },
+        {
+          "identifier": "GO:0033104",
+          "label": "type VI protein secretion system complex",
+          "cosine_similarity": 0.72768821
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.71501564
+        }
+      ]
+    },
+    {
       "identifier": "GO:0033281",
       "label": "TAT protein transport complex",
       "neighbors": [

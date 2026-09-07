@@ -1,0 +1,255 @@
+identifier: cellstructuremech:secyeg_translocon_complex
+label: SecYEG translocon complex
+structure_category: SECRETION_SYSTEM
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A bacterial cytoplasmic-membrane Sec-pathway protein-conducting channel
+  built from SecY, SecE, and SecG, through which unfolded secretory proteins or nascent
+  membrane proteins move during translocation or membrane insertion.
+definition_source: DOI:10.1038/nrmicro.2016.161
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-07T00:06:51Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-07T00:07:36Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added SecYEG synonymy, protein-complex parentage, broader GO:0031522 Sec-complex
+    parthood, SecY, SecE, and SecG components, bacterial taxonomic scope, an Escherichia
+    coli canonical example, GO:0043952 protein transport function grounding, record
+    evidence, a SecA-driven preprotein-translocation graph, and a Sec holo-translocon
+    boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-07T00:08:20Z'
+  curator: claude
+  action: REVIEW_FIX
+  changes: 'Resolved issue #218 by narrowing the GO:0043952 function description to
+    unfolded secretory preprotein transport across the bacterial cytoplasmic membrane,
+    leaving SecYEG lateral-gate membrane insertion outside the GO-grounded function.'
+  llm_assisted: true
+synonyms:
+- synonym_text: SecYEG translocon
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/nrmicro.2016.161
+- synonym_text: SecYEG channel
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1146/annurev-biophys-050511-102312
+- synonym_text: bacterial SecYEG complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41467-019-10918-2
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0031522
+components:
+- component_id: secy_channel_subunit
+  label: SecY protein-conducting channel subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - secY
+  - prlA
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SecY is a conserved bacterial core-channel component; no exact
+    source-neutral family CURIE was curated.
+  role: Multi-pass membrane subunit that forms the hourglass-shaped protein-conducting
+    pore and lateral gate of the SecYEG channel.
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-050511-102312
+    notes: Park and Rapoport 2012 review SecY/Sec61 as the central pore-forming subunit
+      of the conserved protein-conducting channel.
+  - reference: DOI:10.1038/s41467-019-10918-2
+    notes: Ma et al. 2019 resolved a bacterial substrate-engaged SecA-SecY translocation
+      machine that shows preprotein inside SecY.
+- component_id: sece_clamp_subunit
+  label: SecE clamp subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - secE
+  - prlG
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SecE is the conserved partner that stabilizes bacterial SecY; no
+    exact source-neutral family CURIE was curated.
+  role: Membrane clamp that braces the two halves of SecY and stabilizes the protein-conducting
+    channel.
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-050511-102312
+    notes: Park and Rapoport 2012 review SecE as the subunit that embraces SecY/Sec61
+      and holds the channel together.
+  - reference: DOI:10.1093/emboj/16.10.2756
+    notes: Duong and Wickner 1997 dissected the catalytic roles of the SecYE, SecG,
+      and SecDF-YajC subunits of the E. coli preprotein translocase holoenzyme.
+- component_id: secg_accessory_subunit
+  label: SecG accessory channel subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - secG
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SecG is the third named bacterial SecYEG subunit; no exact source-neutral
+    family CURIE was curated.
+  role: Small membrane subunit that associates with SecY and SecE to form the bacterial
+    SecYEG heterotrimer.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2016.161
+    notes: Tsirigotaki et al. 2017 review SecG as a bacterial SecYEG channel subunit.
+  - reference: DOI:10.1093/emboj/16.10.2756
+    notes: Duong and Wickner 1997 separated the functions of SecYE, SecG, and SecDF-YajC
+      in purified E. coli preprotein translocase.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: The SecYEG channel is broadly conserved in bacterial cytoplasmic membranes
+    as the core of the Sec protein-export route.
+  reference: DOI:10.1038/nrmicro.2016.161
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Genetic and biochemical model for the SecYEG/SecA translocase and the SecYEG-SecDF-YajC
+    holoenzyme.
+  reference: DOI:10.1093/emboj/16.10.2756
+functions:
+- function_id: protein_transport_by_sec_complex
+  label: protein transport by the Sec complex
+  grounding: GO:0043952
+  description: The SecYEG channel translocates unfolded secretory preproteins across
+    the bacterial cytoplasmic membrane via the Sec complex.
+  evidence:
+  - reference: GO:0043952
+    notes: GO:0043952 defines unfolded-protein transport across Gram-positive and
+      Gram-negative bacterial cytoplasmic membranes by the Sec complex.
+  - reference: DOI:10.1038/nrmicro.2016.161
+    notes: Tsirigotaki et al. 2017 review the Sec pathway as the main bacterial export
+      route for unfolded secretory preproteins and membrane proteins.
+evidence:
+- reference: DOI:10.1038/nrmicro.2016.161
+  notes: Tsirigotaki et al. 2017, Protein export through the bacterial Sec pathway,
+    Nature Reviews Microbiology.
+- reference: DOI:10.1146/annurev-biophys-050511-102312
+  notes: Park and Rapoport 2012, Mechanisms of Sec61/SecY-Mediated Protein Translocation
+    Across Membranes, Annual Review of Biophysics.
+- reference: DOI:10.1093/emboj/16.10.2756
+  notes: Duong and Wickner 1997, Distinct catalytic roles of the SecYE, SecG and SecDFyajC
+    subunits of preprotein translocase holoenzyme, The EMBO Journal.
+- reference: DOI:10.1038/nature17163
+  notes: Li et al. 2016, Crystal structure of a substrate-engaged SecY protein-translocation
+    channel, Nature.
+- reference: DOI:10.1038/s41467-019-10918-2
+  notes: Ma et al. 2019, Structure of the substrate-engaged SecA-SecY protein translocation
+    machine, Nature Communications.
+causal_graphs:
+- graph_id: seca_driven_preprotein_translocation
+  title: SecA drives preproteins through SecYEG
+  description: SecY and SecE form the stabilized channel core, SecG completes the
+    bacterial SecYEG heterotrimer, and the SecA ATPase drives unfolded preproteins
+    through the SecY pore during post-translational secretion.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: secy_channel_subunit
+    label: SecY protein-conducting channel subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: secy_channel_subunit
+  - node_id: sece_clamp_subunit
+    label: SecE clamp subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sece_clamp_subunit
+  - node_id: secg_accessory_subunit
+    label: SecG accessory channel subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: secg_accessory_subunit
+  - node_id: seca_atpase
+    label: SecA ATPase
+    node_type: GENE_OR_PROTEIN
+  - node_id: unfolded_preprotein
+    label: unfolded Sec preprotein
+    node_type: GENE_OR_PROTEIN
+  - node_id: secyeg
+    label: SecYEG translocon complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:secyeg_translocon_complex
+  - node_id: sec_transport
+    label: protein transport by the Sec complex
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0043952
+  edges:
+  - subject: sece_clamp_subunit
+    predicate: stabilizes
+    object: secy_channel_subunit
+    description: SecE wraps around SecY and stabilizes the protein-conducting channel
+      fold.
+    evidence:
+    - reference: DOI:10.1146/annurev-biophys-050511-102312
+      notes: Park and Rapoport 2012 review SecE's bracing role in the SecY/Sec61 channel.
+  - subject: secy_channel_subunit
+    predicate: forms pore of
+    object: secyeg
+    description: SecY contributes the central pore and lateral gate of the SecYEG
+      translocon.
+    evidence:
+    - reference: DOI:10.1038/nature17163
+      notes: Li et al. 2016 captured a substrate-engaged SecY channel with preprotein
+        density in the pore.
+  - subject: secg_accessory_subunit
+    predicate: associates with
+    object: secy_channel_subunit
+    description: SecG associates with SecY and SecE as the third subunit of the bacterial
+      SecYEG channel.
+    evidence:
+    - reference: DOI:10.1093/emboj/16.10.2756
+      notes: Duong and Wickner 1997 characterized SecG separately from SecYE within
+        the E. coli preprotein translocase.
+  - subject: seca_atpase
+    predicate: binds
+    object: secyeg
+    description: SecA binds the SecYEG channel to form the post-translational preprotein-translocation
+      state.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-10918-2
+      notes: Ma et al. 2019 resolved a substrate-engaged bacterial SecA-SecY translocation
+        machine.
+  - subject: seca_atpase
+    predicate: pushes
+    object: unfolded_preprotein
+    description: SecA ATPase cycles drive unfolded secretory preprotein segments through
+      the SecY channel.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.161
+      notes: Tsirigotaki et al. 2017 review ATP-driven SecA motor action during Sec-dependent
+        protein export.
+  - subject: secyeg
+    predicate: carries out
+    object: sec_transport
+    description: The SecYEG channel provides the membrane conduit for Sec-dependent
+      protein transport.
+    evidence:
+    - reference: GO:0043952
+      notes: GO:0043952 defines bacterial protein transport by the Sec complex across
+        the cytoplasmic membrane.
+discussions:
+- discussion_id: sec_holotranslocon_boundary
+  prompt: Should SecDF-YajC and YidC be modeled as SecYEG components, as a SecYEG-SecDF-YajC-YidC
+    holo-translocon subrecord, or only as associated machinery?
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - part_of#GO:0031522
+  - causal_graphs#seca_driven_preprotein_translocation
+  rationale: GO:0031522 includes SecA, SecD, SecF, and YajC in the broader cell envelope
+    Sec protein transport complex, and bacterial holo-translocon papers add SecDF-YajC
+    and YidC to SecYEG. This first record captures only the named heterotrimeric channel
+    core.
+  evidence:
+  - reference: DOI:10.1073/pnas.1315901111
+    supports: SUPPORT
+    notes: Schulze et al. 2014 reconstituted the bacterial SecYEG-SecDF-YajC-YidC
+      holo-translocon.
+  posed_by: claude
+  posed_date: '2026-09-06'
