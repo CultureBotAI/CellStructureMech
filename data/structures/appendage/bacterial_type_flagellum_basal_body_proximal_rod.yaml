@@ -1,0 +1,275 @@
+identifier: GO:0009429
+label: bacterial-type flagellum basal body, proximal rod
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The portion of the central rod of the bacterial-type flagellar basal body
+  that is proximal to the cell membrane; the proximal rod connects the distal rod
+  to the flagellar motor.
+definition_source: GO:0009429
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-07T05:10:32Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-07T05:11:33Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO proximal-rod synonymy, rod parthood, FliE/FlgB/FlgC/FlgF components,
+    bacterial and archaeal taxonomic scope, Salmonella as a canonical example, proximal-rod
+    coupling and assembly functions, a proximal-rod assembly causal graph, structural
+    literature evidence, and a boundary discussion excluding FlgG, the MS ring and
+    the flagellar export apparatus.
+  llm_assisted: true
+- timestamp: '2026-09-07T05:12:36Z'
+  curator: claude
+  action: TIGHTEN_WORDING
+  changes: Changed the proximal-to-distal rod graph edge from temporal precedence
+    to spatial adjacency and clarified the proximal-rod segment-formation function.
+  llm_assisted: true
+- timestamp: '2026-09-07T06:44:24Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #240, #241 and #242 by retagging the graph as FUNCTION, narrowing
+    the FliE edge predicate, and removing overbroad temporal and canonical-example
+    wording.'
+  llm_assisted: true
+synonyms:
+- synonym_text: flagellar basal body, proximal rod
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009429
+- synonym_text: flagellin-based flagellum basal body, proximal rod
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009429
+part_of:
+- GO:0030694
+components:
+- component_id: flie
+  label: flagellar basal-body protein FliE
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact integrated InterPro family was identified for FliE during
+    curation; the structural identity is curated by label and gene symbol.
+  gene_symbols:
+  - fliE
+  essentiality: ESSENTIAL
+  role: Forms the motor-proximal junction to the FlgB rod protein.
+  evidence:
+  - reference: DOI:10.1128/JB.182.11.3029-3036.2000
+    notes: Minamino et al. 2000 showed that Salmonella FliE interacts strongly with
+      the proximal rod component FlgB.
+  - reference: DOI:10.1016/j.cell.2021.03.057
+    notes: Tan et al. 2021 resolved Salmonella FliE at the base of the rod above the
+      export gate.
+- component_id: flgb
+  label: flagellar basal-body rod protein FlgB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR006300
+  gene_symbols:
+  - flgB
+  essentiality: ESSENTIAL
+  role: Builds the cell-proximal rod segment immediately above FliE.
+  evidence:
+  - reference: DOI:10.1128/JB.182.11.3029-3036.2000
+    notes: Minamino et al. 2000 placed FlgB in the proximal rod and detected its interaction
+      with FliE.
+  - reference: PMID:15136044
+    notes: Saijo-Hamano et al. 2004 purified Salmonella FlgB with the other proximal
+      and distal rod proteins for in vitro characterization.
+- component_id: flgc
+  label: flagellar basal-body rod protein FlgC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR006299
+  gene_symbols:
+  - flgC
+  essentiality: ESSENTIAL
+  role: Contributes to the segmented proximal rod with FlgB and FlgF.
+  evidence:
+  - reference: DOI:10.1016/0022-2836(90)90365-S
+    notes: Homma et al. 1990 identified FlgC as a Salmonella rod protein related to
+      FlgB, FlgF and FlgG.
+  - reference: PMID:15136044
+    notes: Saijo-Hamano et al. 2004 characterized purified Salmonella FlgC in vitro.
+- component_id: flgf
+  label: flagellar basal-body rod protein FlgF
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro:IPR020013 was declined because it spans FlgF, FlgG and
+    the hook protein FlgE; no narrower integrated InterPro family was asserted for
+    FlgF.
+  gene_symbols:
+  - flgF
+  essentiality: ESSENTIAL
+  role: Contributes to the proximal rod segment adjacent to the distal FlgG rod.
+  evidence:
+  - reference: DOI:10.1016/0022-2836(90)90365-S
+    notes: Homma et al. 1990 assigned FlgF to the segmented Salmonella proximal rod.
+  - reference: PMID:15136044
+    notes: Saijo-Hamano et al. 2004 characterized purified Salmonella FlgF in vitro.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Proximal rods occur in bacterial-type flagellar basal bodies but are absent
+    from bacteria without flagellar loci.
+  reference: DOI:10.1128/JB.181.23.7149-7153.1999
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaeal archaella are type-IV-pilus-related appendages and do not contain
+    the FliE/FlgB/FlgC/FlgF proximal rod.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  note: Structural Salmonella model for FliE and FlgB contacts at the motor-proximal
+    base of the rod.
+  reference: DOI:10.1016/j.cell.2021.03.057
+functions:
+- function_id: motor_distal_rod_coupling
+  label: motor to distal-rod mechanical coupling
+  description: The proximal rod links the FliF/MS-ring side of the motor to the FlgG
+    distal rod to carry rotation into the external hook-filament assembly.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2021.03.057
+    notes: Tan et al. 2021 resolved FliE and FlgB contacts that couple the MS ring
+      to the helical rod.
+  - reference: DOI:10.1128/JB.182.11.3029-3036.2000
+    notes: Minamino et al. 2000 placed the FliE-FlgB junction at the proximal end
+      of the rod.
+- function_id: proximal_rod_segment_assembly
+  label: proximal rod segment formation
+  description: FliE, FlgB, FlgC and FlgF provide the motor-proximal axial subunits
+    of the segmented rod next to the distal FlgG segment.
+  evidence:
+  - reference: DOI:10.1016/0022-2836(90)90365-S
+    notes: Homma et al. 1990 model the Salmonella rod as sequential FlgB/FlgC/FlgF
+      proximal segments followed by the FlgG distal segment.
+  - reference: DOI:10.1016/0022-2836(92)90958-m
+    notes: Kubori et al. 1992 used Salmonella assembly intermediates to place FliE
+      and the FlgB/FlgC/FlgF/FlgG proteins in the rod assembly pathway.
+evidence:
+- reference: DOI:10.1128/JB.181.23.7149-7153.1999
+  notes: 'Macnab RM 1999, The bacterial flagellum: reversible rotary propellor and
+    type III export apparatus.'
+- reference: DOI:10.1128/JB.183.2.725-735.2001
+  notes: Boyd CH and Gober JW 2001, Temporal regulation of genes encoding the flagellar
+    proximal rod in Caulobacter crescentus.
+- reference: DOI:10.1016/0022-2836(90)90365-S
+  notes: Homma M, Kutsukake K, Hasebe M, Iino T and Macnab RM 1990, FlgB, FlgC, FlgF
+    and FlgG. A family of structurally related proteins in the flagellar basal body
+    of Salmonella typhimurium.
+- reference: DOI:10.1128/JB.182.11.3029-3036.2000
+  notes: Minamino T, Yamaguchi S and Macnab RM 2000, Interaction between FliE and
+    FlgB, a proximal rod component of the flagellar basal body of Salmonella.
+- reference: PMID:15136044
+  notes: Saijo-Hamano Y, Uchida N, Namba K and Oosawa K 2004, In vitro characterization
+    of FlgB, FlgC, FlgF, FlgG, and FliE, flagellar basal body proteins of Salmonella.
+- reference: DOI:10.1016/j.cell.2021.03.057
+  notes: Tan J et al. 2021, Structural basis of assembly and torque transmission of
+    the bacterial flagellar motor.
+causal_graphs:
+- graph_id: proximal_rod_assembly
+  title: Proximal rod proteins connect the motor to the distal rod
+  description: FliE, FlgB, FlgC and FlgF form the proximal basal-body rod segment
+    that links the motor-proximal FliF/MS-ring side of the basal body to the distal
+    FlgG rod.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: flie
+    label: flagellar basal-body protein FliE
+    node_type: GENE_OR_PROTEIN
+    component_ref: flie
+  - node_id: flgb
+    label: flagellar basal-body rod protein FlgB
+    node_type: GENE_OR_PROTEIN
+    component_ref: flgb
+    grounding: InterPro:IPR006300
+  - node_id: flgc
+    label: flagellar basal-body rod protein FlgC
+    node_type: GENE_OR_PROTEIN
+    component_ref: flgc
+    grounding: InterPro:IPR006299
+  - node_id: flgf
+    label: flagellar basal-body rod protein FlgF
+    node_type: GENE_OR_PROTEIN
+    component_ref: flgf
+  - node_id: distal_rod
+    label: bacterial-type flagellum basal body, distal rod
+    node_type: STRUCTURE
+    grounding: GO:0009426
+  - node_id: proximal_rod
+    label: bacterial-type flagellum basal body, proximal rod
+    node_type: STRUCTURE
+    grounding: GO:0009429
+  edges:
+  - subject: flie
+    predicate: couples
+    object: flgb
+    description: FliE contacts the FlgB proximal rod protein at the base of the assembling
+      axial rod.
+    evidence:
+    - reference: DOI:10.1128/JB.182.11.3029-3036.2000
+      notes: Minamino et al. 2000 detected a strong Salmonella FliE-FlgB interaction.
+  - subject: flie
+    predicate: forms base of
+    object: proximal_rod
+    description: FliE lies at the motor-proximal base of the rod above the export
+      gate.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2021.03.057
+      notes: Tan et al. 2021 resolved FliE at the Salmonella rod base above the export
+        gate.
+  - subject: flgb
+    predicate: builds
+    object: proximal_rod
+    description: FlgB is part of the cell-proximal rod segment.
+    evidence:
+    - reference: DOI:10.1128/JB.182.11.3029-3036.2000
+      notes: Minamino et al. 2000 describe FlgB as a proximal rod component.
+  - subject: flgc
+    predicate: builds
+    object: proximal_rod
+    description: FlgC is part of the proximal basal-body rod.
+    evidence:
+    - reference: DOI:10.1016/0022-2836(90)90365-S
+      notes: Homma et al. 1990 assigned FlgC to the Salmonella basal-body rod.
+  - subject: flgf
+    predicate: builds
+    object: proximal_rod
+    description: FlgF is part of the proximal basal-body rod.
+    evidence:
+    - reference: DOI:10.1016/0022-2836(90)90365-S
+      notes: Homma et al. 1990 assigned FlgF to the Salmonella basal-body rod.
+  - subject: proximal_rod
+    predicate: adjoins
+    object: distal_rod
+    description: The FlgB/FlgC/FlgF proximal segments lie next to the FlgG distal
+      segment in the central rod.
+    evidence:
+    - reference: DOI:10.1016/0022-2836(90)90365-S
+      notes: Homma et al. 1990 model the segmented Salmonella rod as FlgB/FlgC/FlgF
+        proximal segments followed by the FlgG distal segment.
+discussions:
+- discussion_id: exclude_distal_rod_ms_ring_and_export_gate
+  prompt: Should FlgG, the MS ring, or the flagellar export apparatus be curated as
+    proximal-rod components?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#flie
+  rationale: The mature GO:0009429 proximal rod is scoped to the FliE/FlgB/FlgC/FlgF
+    segment. FlgG forms the distal rod, the FliF MS ring is motor-proximal to FliE,
+    and the flagellar type III export apparatus secretes axial substrates but is not
+    a mature proximal-rod subunit.
+  resolution_note: 'Declined: keep FlgG on the distal rod, FliF on the MS ring, and
+    export-gate proteins on the enclosing basal-body or export-apparatus records.'
+  posed_by: claude
+  posed_date: '2026-09-07'
+  resolved_date: '2026-09-07'
