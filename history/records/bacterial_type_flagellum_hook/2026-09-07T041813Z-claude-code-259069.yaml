@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_hook.yaml
+  slug: bacterial_type_flagellum_hook
+session:
+  id: 2026-09-07T041813Z-claude-code-259069
+  timestamp: '2026-09-07T04:18:13Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/233
+  - https://github.com/CultureBotAI/CellStructureMech/issues/234
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/232
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - composition
+  - causal_graphs
+  summary: Resolve hook PR review issues
+  details: 'Resolved #233 by rewriting the FlgE grounding note so the standalone hook record
+    explicitly keeps InterPro:IPR020013 out as broader than FlgE and InterPro:IPR012835 out
+    as narrower than the bacterial-type hook scope. Resolved #234 by inserting a flagellar-rotation
+    process node between hook torque transmission and motility, so the graph no longer jumps
+    from the static filament structure directly to cell motility.'

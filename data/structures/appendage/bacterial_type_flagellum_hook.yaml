@@ -21,6 +21,13 @@ curation_history:
     function, structural hook evidence, a FlgE-to-filament causal graph, and a boundary
     discussion excluding the hook cap and hook-filament junction.
   llm_assisted: true
+- timestamp: '2026-09-07T04:11:02Z'
+  curator: claude
+  action: FIX_REVIEW_ISSUES
+  changes: 'Resolved #233 by localizing the FlgE label-only grounding note to the
+    standalone hook scope; resolved #234 by inserting an explicit flagellar-rotation
+    process between hook torque transmission and motility.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar hook
   synonym_type: EXACT_SYNONYM
@@ -36,11 +43,11 @@ components:
   component_type: PROTEIN
   component_role: CONSTITUENT
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The prior bacterial_type_flagellum component review declined InterPro:IPR020013
-    because it spans FlgE, FlgF and FlgG. InterPro:IPR012835 names Flagellar hook
-    FlgE, but was not attached to the reviewed E. coli K-12 or Salmonella Typhimurium
-    LT2 FlgE entries checked in that review, so no source-neutral family CURIE is
-    asserted.
+  grounding_notes: InterPro:IPR020013 was declined because it spans FlgE plus the
+    rod proteins FlgF and FlgG. InterPro:IPR012835 is labeled Flagellar hook FlgE
+    but covers the epsilonproteobacterial FlgE family, so it would ground the Campylobacter
+    example without covering Salmonella-type hooks. The component stays label-only
+    until a source-neutral FlgE family can be asserted across the bacterial hook scope.
   gene_symbols:
   - flgE
   essentiality: ESSENTIAL
@@ -109,7 +116,7 @@ causal_graphs:
   title: FlgE builds the torque-transmitting hook
   description: FlgE subunits polymerize into a short curved tube. The resulting hook
     connects the basal body and filament, bends as the filament changes angle, and
-    transmits motor torque to the filament propeller.
+    transmits motor torque into rotation of the filament propeller.
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
@@ -132,6 +139,9 @@ causal_graphs:
     label: bacterial-type flagellum filament
     node_type: STRUCTURE
     grounding: GO:0009420
+  - node_id: flagellar_rotation
+    label: bacterial flagellar rotation
+    node_type: BIOLOGICAL_PROCESS
   - node_id: motility
     label: bacterial-type flagellum-dependent cell motility
     node_type: BIOLOGICAL_PROCESS
@@ -191,11 +201,27 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-019-13252-9
       notes: Kato et al. 2019 resolved the native hook conformation used to explain
         universal-joint torque transmission.
-  - subject: filament
+  - subject: hook
+    predicate: transmits torque into
+    object: flagellar_rotation
+    description: The flexible hook acts as a universal joint that carries basal-body
+      rotation into rotation of the filament propeller.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-13252-9
+      notes: Kato et al. 2019 resolved the native hook conformation used to explain
+        universal-joint torque transmission.
+  - subject: flagellar_rotation
+    predicate: turns
+    object: filament
+    description: Torque transmitted through the hook rotates the helical filament.
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.72.121801.161737
+      notes: Berg 2003 reviews the bacterial flagellar motor and helical filament
+        as the rotary swimming organelle.
+  - subject: flagellar_rotation
     predicate: drives
     object: motility
-    description: Torque transmitted through the hook rotates the filament propeller
-      and drives swimming.
+    description: Rotation of the helical filament drives swimming motility.
     evidence:
     - reference: DOI:10.1146/annurev.biochem.72.121801.161737
       notes: Berg 2003 reviews swimming by rotating helical flagellar filaments.
