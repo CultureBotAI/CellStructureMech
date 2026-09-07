@@ -19,6 +19,13 @@ curation_history:
     water exclusion and pressure-resistance functions, core evidence, a GvpA/GvpC
     shell graph, and a boundary discussion excluding transient accessory Gvps.
   llm_assisted: true
+- timestamp: '2026-09-07T02:29:41Z'
+  curator: claude
+  action: FIX_REVIEW_ISSUES
+  changes: 'Resolved #227 by adding Hayes et al. 1992 primary GvpC reconstitution
+    and collapse-pressure evidence; resolved #228 by adding Walsby, Revsbech and Griffel
+    1992 primary gas-vesicle-wall permeability evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: gas vesicle wall
   synonym_type: EXACT_SYNONYM
@@ -59,6 +66,10 @@ components:
     notes: Walsby 1994 reviews biochemical and mechanical evidence that GvpC decorates
       the exterior of cyanobacterial gas vesicle shells and strengthens them against
       collapse.
+  - reference: PMID:1510555
+    notes: Hayes et al. 1992 showed that recombinant GvpC binds urea-stripped Anabaena
+      flos-aquae gas vesicles after dialysis and restores most of their critical collapse
+      pressure.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -89,6 +100,9 @@ functions:
   - reference: DOI:10.1016/j.str.2023.03.011
     notes: Dutka et al. 2023 resolved the GvpA shell geometry that surrounds the hollow
       lumen.
+  - reference: DOI:10.1099/00221287-138-4-837
+    notes: Walsby, Revsbech and Griffel 1992 directly measured oxygen movement to
+      quantify the gas permeability coefficient of cyanobacterial gas vesicle walls.
 - function_id: pressure_collapse_resistance
   label: pressure collapse resistance
   description: GvpC-coated shells withstand higher turgor or hydrostatic pressure
@@ -97,6 +111,10 @@ functions:
   - reference: PMID:8177173
     notes: Walsby 1994 reviews evidence that GvpC is released by urea, binds back
       to stripped shells and raises the pressure needed to collapse them.
+  - reference: PMID:1510555
+    notes: Hayes et al. 1992 showed that recombinant GvpC binds urea-stripped Anabaena
+      flos-aquae gas vesicles after dialysis and restores most of their critical collapse
+      pressure.
 evidence:
 - reference: PMID:8177173
   notes: Walsby AE 1994, Gas vesicles, Microbiological Reviews.
@@ -106,6 +124,12 @@ evidence:
 - reference: DOI:10.1016/j.str.2023.03.011
   notes: Dutka P et al. 2023, Structure of Anabaena flos-aquae gas vesicles revealed
     by cryo-ET, Structure.
+- reference: PMID:1510555
+  notes: Hayes PK, Buchholz B and Walsby AE 1992, Gas vesicles are strengthened by
+    the outer-surface protein, GvpC.
+- reference: DOI:10.1099/00221287-138-4-837
+  notes: Walsby AE, Revsbech NP and Griffel DH 1992, The gas permeability coefficient
+    of the cyanobacterial gas vesicle wall.
 causal_graphs:
 - graph_id: gvpa_gvpc_shell_barrier
   title: GvpA and GvpC build a water-excluding shell
@@ -171,6 +195,10 @@ causal_graphs:
     - reference: PMID:8177173
       notes: Walsby 1994 reviews evidence that GvpC is located on the outer surface
         of cyanobacterial gas vesicle shells.
+    - reference: PMID:1510555
+      notes: Hayes et al. 1992 showed that recombinant GvpC binds urea-stripped Anabaena
+        flos-aquae gas vesicles after dialysis and restores most of their critical
+        collapse pressure.
   - subject: gvpc
     predicate: strengthens
     object: shell
@@ -179,6 +207,10 @@ causal_graphs:
     - reference: PMID:8177173
       notes: Walsby 1994 reviews pressure-collapse assays showing that GvpC strengthens
         shells.
+    - reference: PMID:1510555
+      notes: Hayes et al. 1992 showed that recombinant GvpC binds urea-stripped Anabaena
+        flos-aquae gas vesicles after dialysis and restores most of their critical
+        collapse pressure.
   - subject: shell
     predicate: maintains
     object: gas_filled_lumen
@@ -188,6 +220,9 @@ causal_graphs:
     - reference: PMID:8177173
       notes: Walsby 1994 reviews the wall properties that keep the vesicle lumen gas
         filled.
+    - reference: DOI:10.1099/00221287-138-4-837
+      notes: Walsby, Revsbech and Griffel 1992 directly measured oxygen movement to
+        quantify the gas permeability coefficient of cyanobacterial gas vesicle walls.
   - subject: gas_filled_lumen
     predicate: supports
     object: buoyancy_regulation
