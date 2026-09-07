@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_rod.yaml
+  slug: bacterial_type_flagellum_basal_body_rod
+session:
+  id: 2026-09-07T043237Z-claude-code-b01ade
+  timestamp: '2026-09-07T04:32:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add bacterial-type flagellum basal-body rod record
+  details: Created a PROPOSED GO:0030694 bacterial-type flagellum basal body, rod record for
+    the FliE/FlgB/FlgC/FlgF/FlgG axial shaft inside the bacterial flagellar basal body. The
+    record uses the exact GO cellular-component identity, links the rod part_of GO:0009425
+    and has_part GO:0009429 plus GO:0009426, adds reviewed FlgB, FlgC and FlgG InterPro family
+    groundings while leaving FliE and FlgF label-only, records Salmonella rod composition
+    and torque-transmission evidence, and keeps LP rings plus assembly factors outside the
+    mature rod component boundary.

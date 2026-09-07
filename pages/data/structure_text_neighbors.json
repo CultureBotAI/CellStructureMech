@@ -95,9 +95,9 @@
           "cosine_similarity": 0.8517309
         },
         {
-          "identifier": "cellstructuremech:mreb_filament",
-          "label": "MreB filament",
-          "cosine_similarity": 0.78470825
+          "identifier": "GO:0030694",
+          "label": "bacterial-type flagellum basal body, rod",
+          "cosine_similarity": 0.82402241
         }
       ]
     },
@@ -109,6 +109,11 @@
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
           "cosine_similarity": 0.92210756
+        },
+        {
+          "identifier": "GO:0030694",
+          "label": "bacterial-type flagellum basal body, rod",
+          "cosine_similarity": 0.90150854
         },
         {
           "identifier": "GO:0009424",
@@ -124,11 +129,37 @@
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
           "cosine_similarity": 0.77883438
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030694",
+      "label": "bacterial-type flagellum basal body, rod",
+      "neighbors": [
+        {
+          "identifier": "GO:0009425",
+          "label": "bacterial-type flagellum basal body",
+          "cosine_similarity": 0.90150854
         },
         {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.76509129
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.82402241
+        },
+        {
+          "identifier": "GO:0055040",
+          "label": "periplasmic flagellum",
+          "cosine_similarity": 0.82105796
+        },
+        {
+          "identifier": "GO:0009424",
+          "label": "bacterial-type flagellum hook",
+          "cosine_similarity": 0.81237245
+        },
+        {
+          "identifier": "GO:0009420",
+          "label": "bacterial-type flagellum filament",
+          "cosine_similarity": 0.75230796
         }
       ]
     },
@@ -188,9 +219,9 @@
           "cosine_similarity": 0.82612262
         },
         {
-          "identifier": "cellstructuremech:mreb_filament",
-          "label": "MreB filament",
-          "cosine_similarity": 0.73337445
+          "identifier": "GO:0030694",
+          "label": "bacterial-type flagellum basal body, rod",
+          "cosine_similarity": 0.81237245
         }
       ]
     },
@@ -245,14 +276,14 @@
           "cosine_similarity": 0.84723926
         },
         {
+          "identifier": "GO:0030694",
+          "label": "bacterial-type flagellum basal body, rod",
+          "cosine_similarity": 0.82105796
+        },
+        {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
           "cosine_similarity": 0.80095029
-        },
-        {
-          "identifier": "GO:0097589",
-          "label": "archaeal-type flagellum",
-          "cosine_similarity": 0.74453005
         }
       ]
     },
