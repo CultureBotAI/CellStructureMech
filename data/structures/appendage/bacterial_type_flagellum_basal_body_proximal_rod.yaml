@@ -28,6 +28,13 @@ curation_history:
   changes: Changed the proximal-to-distal rod graph edge from temporal precedence
     to spatial adjacency and clarified the proximal-rod segment-formation function.
   llm_assisted: true
+- timestamp: '2026-09-07T06:44:24Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #240, #241 and #242 by retagging the graph as FUNCTION, narrowing
+    the FliE edge predicate, and removing overbroad temporal and canonical-example
+    wording.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, proximal rod
   synonym_type: EXACT_SYNONYM
@@ -98,7 +105,7 @@ components:
   gene_symbols:
   - flgF
   essentiality: ESSENTIAL
-  role: Completes the proximal rod segment before distal FlgG assembly.
+  role: Contributes to the proximal rod segment adjacent to the distal FlgG rod.
   evidence:
   - reference: DOI:10.1016/0022-2836(90)90365-S
     notes: Homma et al. 1990 assigned FlgF to the segmented Salmonella proximal rod.
@@ -120,8 +127,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:90371
   taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
-  note: Classical genetic, biochemical and structural model for proximal-rod composition
-    and its connection to FliF and FlgG.
+  note: Structural Salmonella model for FliE and FlgB contacts at the motor-proximal
+    base of the rod.
   reference: DOI:10.1016/j.cell.2021.03.057
 functions:
 - function_id: motor_distal_rod_coupling
@@ -138,7 +145,7 @@ functions:
 - function_id: proximal_rod_segment_assembly
   label: proximal rod segment formation
   description: FliE, FlgB, FlgC and FlgF provide the motor-proximal axial subunits
-    of the segmented rod upstream of the distal FlgG segment.
+    of the segmented rod next to the distal FlgG segment.
   evidence:
   - reference: DOI:10.1016/0022-2836(90)90365-S
     notes: Homma et al. 1990 model the Salmonella rod as sequential FlgB/FlgC/FlgF
@@ -172,7 +179,7 @@ causal_graphs:
   description: FliE, FlgB, FlgC and FlgF form the proximal basal-body rod segment
     that links the motor-proximal FliF/MS-ring side of the basal body to the distal
     FlgG rod.
-  graph_kind: ASSEMBLY
+  graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
   - node_id: flie
@@ -211,10 +218,10 @@ causal_graphs:
     - reference: DOI:10.1128/JB.182.11.3029-3036.2000
       notes: Minamino et al. 2000 detected a strong Salmonella FliE-FlgB interaction.
   - subject: flie
-    predicate: anchors
+    predicate: forms base of
     object: proximal_rod
-    description: FliE occupies the motor-proximal base of the rod where it couples
-      the axial polymer to the MS ring.
+    description: FliE lies at the motor-proximal base of the rod above the export
+      gate.
     evidence:
     - reference: DOI:10.1016/j.cell.2021.03.057
       notes: Tan et al. 2021 resolved FliE at the Salmonella rod base above the export
