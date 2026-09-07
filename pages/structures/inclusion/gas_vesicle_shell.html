@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gas vesicle shell · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>gas vesicle shell</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0033172"><code>GO:0033172</code></a> · INCLUSION · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">The proteinaceous structure surrounding a gas vesicle. <small>[<a href="http://purl.obolibrary.org/obo/GO_0033172"><code>GO:0033172</code></a>]</small></p>
+<p><strong>Synonyms:</strong> gas vesicle wall; gas vesicle membrane</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0031411"><code>GO:0031411</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-gvpa"><td>major gas vesicle protein GvpA</td><td>PROTEIN</td><td>part of</td><td></td><td>gvpA</td><td></td><td>ESSENTIAL</td><td>Polymerizes into the conserved, ribbed wall that forms the proteinaceous gas vesicle shell.<ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/22147705"><code>PMID:22147705</code></a> <small>Bayro et al. 2012 used solid-state NMR to support a cross-beta assembly model for GvpA in the gas vesicle shell.</small></li><li><a href="https://doi.org/10.1016/j.str.2023.03.011"><code>DOI:10.1016/j.str.2023.03.011</code></a> <small>Dutka et al. 2023 resolved the Dolichospermum gas-vesicle shell as a wall built from a helical GvpA filament.</small></li></ul></td></tr>
+<tr id="components-gvpc"><td>gas vesicle strengthening protein GvpC</td><td>PROTEIN</td><td>part of</td><td></td><td>gvpC</td><td></td><td>CONDITIONAL</td><td>Binds the outside of the GvpA shell in characterized cyanobacterial gas vesicles and increases resistance to pressure collapse.<ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/8177173"><code>PMID:8177173</code></a> <small>Walsby 1994 reviews biochemical and mechanical evidence that GvpC decorates the exterior of cyanobacterial gas vesicle shells and strengthens them against collapse.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2"><code>NCBITaxon:2</code></a> Bacteria — <strong>VARIABLE</strong>: Gas vesicle shells occur in several bacterial phyla, especially aquatic phototrophs, but are restricted to lineages that carry gas-vesicle gene clusters. [<a href="https://pubmed.ncbi.nlm.nih.gov/8177173"><code>PMID:8177173</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2157"><code>NCBITaxon:2157</code></a> Archaea — <strong>VARIABLE</strong>: Gas vesicle shells also occur in multiple archaeal groups, including haloarchaea. [<a href="https://pubmed.ncbi.nlm.nih.gov/8177173"><code>PMID:8177173</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_315271"><code>NCBITaxon:315271</code></a> <em>Dolichospermum flos-aquae CCAP 1403/13F</em> — Cyanobacterial strain used for the cryo-electron tomography study that resolved intact GvpA shells. [<a href="https://doi.org/10.1016/j.str.2023.03.011"><code>DOI:10.1016/j.str.2023.03.011</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>gas-permeable water exclusion</strong> — The protein shell excludes liquid water from the gas vesicle lumen while allowing gases to diffuse across the wall.<ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/8177173"><code>PMID:8177173</code></a> <small>Walsby 1994 reviews the gas permeability and liquid water impermeability of the gas vesicle wall.</small></li><li><a href="https://doi.org/10.1016/j.str.2023.03.011"><code>DOI:10.1016/j.str.2023.03.011</code></a> <small>Dutka et al. 2023 resolved the GvpA shell geometry that surrounds the hollow lumen.</small></li></ul></li><li><strong>pressure collapse resistance</strong> — GvpC-coated shells withstand higher turgor or hydrostatic pressure before collapsing.<ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/8177173"><code>PMID:8177173</code></a> <small>Walsby 1994 reviews evidence that GvpC is released by urea, binds back to stripped shells and raises the pressure needed to collapse them.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-gvpa_gvpc_shell_barrier">GvpA and GvpC build a water-excluding shell <small>(FUNCTION)</small></h3>
+<p>GvpA polymerizes into helical ribs that form the continuous gas vesicle wall. GvpC can coat the outside of that wall to increase collapse pressure, while the assembled shell excludes liquid water and allows gases to cross into the hollow lumen.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>major gas vesicle protein GvpA</td><td>polymerizes into</td><td>helical GvpA filament</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/22147705"><code>PMID:22147705</code></a> <small>Bayro et al. 2012 used solid-state NMR to support a cross-beta assembly model for GvpA in gas-vesicle shells.</small></li><li><a href="https://doi.org/10.1016/j.str.2023.03.011"><code>DOI:10.1016/j.str.2023.03.011</code></a> <small>Dutka et al. 2023 resolved a helical GvpA filament in the Dolichospermum gas-vesicle wall.</small></li></ul></td></tr>
+<tr><td>helical GvpA filament</td><td>forms wall of</td><td>gas vesicle shell</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.str.2023.03.011"><code>DOI:10.1016/j.str.2023.03.011</code></a> <small>Dutka et al. 2023 traced GvpA filaments through the intact Dolichospermum shell by cryo-ET.</small></li></ul></td></tr>
+<tr><td>gas vesicle strengthening protein GvpC</td><td>coats outside of</td><td>gas vesicle shell</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/8177173"><code>PMID:8177173</code></a> <small>Walsby 1994 reviews evidence that GvpC is located on the outer surface of cyanobacterial gas vesicle shells.</small></li></ul></td></tr>
+<tr><td>gas vesicle strengthening protein GvpC</td><td>strengthens</td><td>gas vesicle shell</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/8177173"><code>PMID:8177173</code></a> <small>Walsby 1994 reviews pressure-collapse assays showing that GvpC strengthens shells.</small></li></ul></td></tr>
+<tr><td>gas vesicle shell</td><td>maintains</td><td>water-excluding gas-filled lumen</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/8177173"><code>PMID:8177173</code></a> <small>Walsby 1994 reviews the wall properties that keep the vesicle lumen gas filled.</small></li></ul></td></tr>
+<tr><td>water-excluding gas-filled lumen</td><td>supports</td><td>buoyancy regulation</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/8177173"><code>PMID:8177173</code></a> <small>Walsby 1994 describes how gas vesicles lower cell density and support vertical migration.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (RESOLVED): Should GvpF/GvpL-family accessory assembly proteins be modeled as gas vesicle shell components? <small>The shell record is scoped to persistent shell material. Accessory Gvps contact GvpA during gas-vesicle biogenesis, but current interaction evidence supports an upstream assembly role that is represented on the whole gas_vesicle record rather than persistent membership in the mature shell.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/8177173"><code>PMID:8177173</code></a> <small>Walsby AE 1994, Gas vesicles, Microbiological Reviews.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/22147705"><code>PMID:22147705</code></a> <small>Bayro MJ, Daviso E, Belenky M, Griffin RG and Herzfeld J 2012, An amyloid organelle, solid-state NMR evidence for cross-beta assembly of GvpA.</small></li><li><a href="https://doi.org/10.1016/j.str.2023.03.011"><code>DOI:10.1016/j.str.2023.03.011</code></a> <small>Dutka P et al. 2023, Structure of Anabaena flos-aquae gas vesicles revealed by cryo-ET, Structure.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-07T02:17:12Z</code> claude · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-07T02:18:29Z</code> claude · EXPANDED_RECORD — Added GO shell synonymy, gas-vesicle parthood, GvpA/GvpC shell components, bacterial and archaeal taxonomic scope, a Dolichospermum canonical example, gas-permeable water exclusion and pressure-resistance functions, core evidence, a GvpA/GvpC shell graph, and a boundary discussion excluding transient accessory Gvps.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/inclusion/gas_vesicle_shell.yaml"><code>data/structures/inclusion/gas_vesicle_shell.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

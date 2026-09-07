@@ -1,0 +1,217 @@
+identifier: GO:0033172
+label: gas vesicle shell
+structure_category: INCLUSION
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The proteinaceous structure surrounding a gas vesicle.
+definition_source: GO:0033172
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-07T02:17:12Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-07T02:18:29Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO shell synonymy, gas-vesicle parthood, GvpA/GvpC shell components,
+    bacterial and archaeal taxonomic scope, a Dolichospermum canonical example, gas-permeable
+    water exclusion and pressure-resistance functions, core evidence, a GvpA/GvpC
+    shell graph, and a boundary discussion excluding transient accessory Gvps.
+  llm_assisted: true
+synonyms:
+- synonym_text: gas vesicle wall
+  synonym_type: EXACT_SYNONYM
+  source: GO:0033172
+- synonym_text: gas vesicle membrane
+  synonym_type: RELATED_SYNONYM
+  source: GO:0033172
+part_of:
+- GO:0031411
+components:
+- component_id: gvpa
+  label: major gas vesicle protein GvpA
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - gvpA
+  essentiality: ESSENTIAL
+  role: Polymerizes into the conserved, ribbed wall that forms the proteinaceous gas
+    vesicle shell.
+  evidence:
+  - reference: PMID:22147705
+    notes: Bayro et al. 2012 used solid-state NMR to support a cross-beta assembly
+      model for GvpA in the gas vesicle shell.
+  - reference: DOI:10.1016/j.str.2023.03.011
+    notes: Dutka et al. 2023 resolved the Dolichospermum gas-vesicle shell as a wall
+      built from a helical GvpA filament.
+- component_id: gvpc
+  label: gas vesicle strengthening protein GvpC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - gvpC
+  essentiality: CONDITIONAL
+  role: Binds the outside of the GvpA shell in characterized cyanobacterial gas vesicles
+    and increases resistance to pressure collapse.
+  evidence:
+  - reference: PMID:8177173
+    notes: Walsby 1994 reviews biochemical and mechanical evidence that GvpC decorates
+      the exterior of cyanobacterial gas vesicle shells and strengthens them against
+      collapse.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Gas vesicle shells occur in several bacterial phyla, especially aquatic phototrophs,
+    but are restricted to lineages that carry gas-vesicle gene clusters.
+  reference: PMID:8177173
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: VARIABLE
+  note: Gas vesicle shells also occur in multiple archaeal groups, including haloarchaea.
+  reference: PMID:8177173
+canonical_examples:
+- taxon_id: NCBITaxon:315271
+  taxon_label: Dolichospermum flos-aquae CCAP 1403/13F
+  note: Cyanobacterial strain used for the cryo-electron tomography study that resolved
+    intact GvpA shells.
+  reference: DOI:10.1016/j.str.2023.03.011
+functions:
+- function_id: gas_permeable_water_exclusion
+  label: gas-permeable water exclusion
+  description: The protein shell excludes liquid water from the gas vesicle lumen
+    while allowing gases to diffuse across the wall.
+  evidence:
+  - reference: PMID:8177173
+    notes: Walsby 1994 reviews the gas permeability and liquid water impermeability
+      of the gas vesicle wall.
+  - reference: DOI:10.1016/j.str.2023.03.011
+    notes: Dutka et al. 2023 resolved the GvpA shell geometry that surrounds the hollow
+      lumen.
+- function_id: pressure_collapse_resistance
+  label: pressure collapse resistance
+  description: GvpC-coated shells withstand higher turgor or hydrostatic pressure
+    before collapsing.
+  evidence:
+  - reference: PMID:8177173
+    notes: Walsby 1994 reviews evidence that GvpC is released by urea, binds back
+      to stripped shells and raises the pressure needed to collapse them.
+evidence:
+- reference: PMID:8177173
+  notes: Walsby AE 1994, Gas vesicles, Microbiological Reviews.
+- reference: PMID:22147705
+  notes: Bayro MJ, Daviso E, Belenky M, Griffin RG and Herzfeld J 2012, An amyloid
+    organelle, solid-state NMR evidence for cross-beta assembly of GvpA.
+- reference: DOI:10.1016/j.str.2023.03.011
+  notes: Dutka P et al. 2023, Structure of Anabaena flos-aquae gas vesicles revealed
+    by cryo-ET, Structure.
+causal_graphs:
+- graph_id: gvpa_gvpc_shell_barrier
+  title: GvpA and GvpC build a water-excluding shell
+  description: GvpA polymerizes into helical ribs that form the continuous gas vesicle
+    wall. GvpC can coat the outside of that wall to increase collapse pressure, while
+    the assembled shell excludes liquid water and allows gases to cross into the hollow
+    lumen.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: gvpa
+    label: major gas vesicle protein GvpA
+    node_type: GENE_OR_PROTEIN
+    component_ref: gvpa
+    xrefs:
+    - Pfam:PF00741
+  - node_id: helical_gvpa_filament
+    label: helical GvpA filament
+    node_type: STRUCTURE
+  - node_id: gvpc
+    label: gas vesicle strengthening protein GvpC
+    node_type: GENE_OR_PROTEIN
+    component_ref: gvpc
+    xrefs:
+    - Pfam:PF01304
+  - node_id: shell
+    label: gas vesicle shell
+    node_type: STRUCTURE
+    grounding: GO:0033172
+  - node_id: gas_filled_lumen
+    label: water-excluding gas-filled lumen
+    node_type: QUALITY
+  - node_id: buoyancy_regulation
+    label: buoyancy regulation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: gvpa
+    predicate: polymerizes into
+    object: helical_gvpa_filament
+    description: GvpA subunits assemble into a helical filament that generates the
+      ribs of the gas vesicle wall.
+    evidence:
+    - reference: PMID:22147705
+      notes: Bayro et al. 2012 used solid-state NMR to support a cross-beta assembly
+        model for GvpA in gas-vesicle shells.
+    - reference: DOI:10.1016/j.str.2023.03.011
+      notes: Dutka et al. 2023 resolved a helical GvpA filament in the Dolichospermum
+        gas-vesicle wall.
+  - subject: helical_gvpa_filament
+    predicate: forms wall of
+    object: shell
+    description: The GvpA filament forms a continuous ribbed shell around the hollow
+      gas vesicle.
+    evidence:
+    - reference: DOI:10.1016/j.str.2023.03.011
+      notes: Dutka et al. 2023 traced GvpA filaments through the intact Dolichospermum
+        shell by cryo-ET.
+  - subject: gvpc
+    predicate: coats outside of
+    object: shell
+    description: GvpC binds to the outer shell surface in cyanobacterial gas vesicles.
+    evidence:
+    - reference: PMID:8177173
+      notes: Walsby 1994 reviews evidence that GvpC is located on the outer surface
+        of cyanobacterial gas vesicle shells.
+  - subject: gvpc
+    predicate: strengthens
+    object: shell
+    description: The GvpC coat raises the pressure required to collapse the GvpA wall.
+    evidence:
+    - reference: PMID:8177173
+      notes: Walsby 1994 reviews pressure-collapse assays showing that GvpC strengthens
+        shells.
+  - subject: shell
+    predicate: maintains
+    object: gas_filled_lumen
+    description: The hydrophobic protein shell excludes liquid water while remaining
+      permeable to gases.
+    evidence:
+    - reference: PMID:8177173
+      notes: Walsby 1994 reviews the wall properties that keep the vesicle lumen gas
+        filled.
+  - subject: gas_filled_lumen
+    predicate: supports
+    object: buoyancy_regulation
+    description: Gas retention gives cells many low-density inclusions that can support
+      buoyancy regulation.
+    evidence:
+    - reference: PMID:8177173
+      notes: Walsby 1994 describes how gas vesicles lower cell density and support
+        vertical migration.
+discussions:
+- discussion_id: exclude_transient_accessory_gvps
+  prompt: Should GvpF/GvpL-family accessory assembly proteins be modeled as gas vesicle
+    shell components?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#gvpa
+  - causal_graphs#gvpa_gvpc_shell_barrier
+  rationale: The shell record is scoped to persistent shell material. Accessory Gvps
+    contact GvpA during gas-vesicle biogenesis, but current interaction evidence supports
+    an upstream assembly role that is represented on the whole gas_vesicle record
+    rather than persistent membership in the mature shell.
+  resolution_note: 'Declined: keep accessory-Gvp recruitment and nucleation on GO:0031411
+    gas vesicle until a persistent shell subcomplex is resolved.'
+  posed_by: claude
+  posed_date: '2026-09-07'
+  resolved_date: '2026-09-07'
