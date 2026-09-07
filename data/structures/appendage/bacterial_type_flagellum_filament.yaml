@@ -1,0 +1,203 @@
+identifier: GO:0009420
+label: bacterial-type flagellum filament
+structure_category: APPENDAGE
+structure_kind: FILAMENT
+definition: The long, thin external structure of the bacterial-type flagellum, which
+  acts as a propeller.
+definition_source: GO:0009420
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-07T03:11:54Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-07T03:12:34Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO filament synonymy, bacterial-flagellum parthood, the flagellin
+    polymer constituent with InterPro grounding, bacterial and archaeal taxonomic
+    scope, Salmonella and Escherichia examples, helical propeller function, structural
+    and assembly evidence, a flagellin-to-propeller causal graph, and a boundary discussion
+    excluding the hook and cap.
+  llm_assisted: true
+synonyms:
+- synonym_text: flagellar filament
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009420
+- synonym_text: flagellin-based flagellum filament
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009420
+part_of:
+- GO:0009288
+components:
+- component_id: flagellin
+  label: flagellin (FliC / FljB)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR001492
+  gene_symbols:
+  - fliC
+  - fljB
+  stoichiometry: ~20,000 subunits per filament; usually 11 protofilaments
+  essentiality: ESSENTIAL
+  role: Polymerizes into the tubular, helical propeller filament of the bacterial
+    flagellum.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.57.030502.090832
+    notes: Macnab 2003 reviews flagellin export through the central channel and polymerization
+      under the FliD cap.
+  - reference: DOI:10.3390/biom11020186
+    notes: Minamino and Namba 2021 review the approximate number of flagellin subunits
+      in a long bacterial flagellar filament.
+  - reference: DOI:10.1038/s41598-019-51440-1
+    notes: Yonekura et al. 2019 resolved an in vivo flagellar filament with 11 protofilaments
+      in Kurthia.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: External flagellin filaments are widespread among bacterial-type flagella
+    but are absent from non-flagellated bacterial lineages and from periplasmic spirochete
+    variants whose filaments sit inside the outer membrane.
+  reference: DOI:10.1038/nrmicro1887
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaea swim with archaella, which are type-IV-pilus-related appendages rather
+    than homologs of bacterial flagellin filaments.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  note: Classical genetic model for bacterial flagellum assembly, including filament
+    growth through the central channel.
+  reference: DOI:10.1146/annurev.micro.57.030502.090832
+- taxon_id: NCBITaxon:83334
+  taxon_label: Escherichia coli O157:H7
+  note: Source serotype for purified H7 flagellar filaments characterized by microscopy
+    and immunoassay.
+  reference: DOI:10.1128/jcm.26.7.1367-1372.1988
+functions:
+- function_id: helical_propeller_thrust
+  label: helical propeller thrust
+  description: Motor-driven rotation of the helical filament generates thrust for
+    swimming motility.
+  evidence:
+  - reference: DOI:10.1146/annurev.biochem.72.121801.161737
+    notes: Berg 2003 reviews how rotation of a helical bacterial flagellar filament
+      propels swimming cells.
+evidence:
+- reference: DOI:10.1146/annurev.micro.57.030502.090832
+  notes: Macnab RM 2003, How bacteria assemble flagella.
+- reference: DOI:10.1146/annurev.biochem.72.121801.161737
+  notes: Berg HC 2003, The rotary motor of bacterial flagella.
+- reference: DOI:10.1038/s41598-019-51440-1
+  notes: Yonekura K et al. 2019, The wild-type flagellar filament of the Firmicute
+    Kurthia at 2.8 A resolution in vivo.
+- reference: DOI:10.1038/s41467-026-71203-7
+  notes: Zhu et al. 2026, The structure of the Vibrio alginolyticus flagellar filament
+    suggests a mechanism for interspecies motility differences.
+causal_graphs:
+- graph_id: flagellin_helical_propeller
+  title: Flagellin protofilaments form a rotary propeller
+  description: Flagellin subunits pack into protofilaments that form a long tubular
+    helix. When the basal body transmits torque through the hook, rotation of that
+    helical filament generates thrust for swimming motility.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: flagellin
+    label: flagellin
+    node_type: GENE_OR_PROTEIN
+    component_ref: flagellin
+    grounding: InterPro:IPR001492
+  - node_id: protofilament
+    label: flagellin protofilament
+    node_type: STRUCTURE
+  - node_id: filament
+    label: bacterial-type flagellum filament
+    node_type: STRUCTURE
+    grounding: GO:0009420
+  - node_id: flagellar_rotation
+    label: flagellar rotation
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: thrust
+    label: propulsive thrust
+    node_type: CAPACITY
+  - node_id: motility
+    label: bacterial-type flagellum-dependent cell motility
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071973
+  edges:
+  - subject: flagellin
+    predicate: polymerizes into
+    object: protofilament
+    description: Flagellin molecules stack head-to-tail within longitudinal protofilaments.
+    evidence:
+    - reference: DOI:10.1038/s41598-019-51440-1
+      notes: Yonekura et al. 2019 resolved repeating flagellin subunits in an 11-protofilament
+        Kurthia filament.
+    - reference: DOI:10.1038/s41467-026-71203-7
+      notes: Zhu et al. 2026 resolved Vibrio alginolyticus flagellin packing by cryo-EM.
+  - subject: protofilament
+    predicate: packs into
+    object: filament
+    description: Protofilaments assemble laterally into the tubular bacterial flagellar
+      filament.
+    evidence:
+    - reference: DOI:10.1038/s41598-019-51440-1
+      notes: Yonekura et al. 2019 describe the Kurthia flagellar filament as a tube
+        built from 11 protofilaments.
+  - subject: flagellin
+    predicate: extends
+    object: filament
+    description: During assembly, exported flagellin molecules add below the distal
+      cap to elongate the filament.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.57.030502.090832
+      notes: Macnab 2003 reviews filament growth by flagellin export through the flagellar
+        channel and assembly beneath FliD.
+  - subject: flagellar_rotation
+    predicate: turns
+    object: filament
+    description: Basal-body torque is transmitted through the hook to rotate the external
+      filament.
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.72.121801.161737
+      notes: Berg 2003 reviews the bacterial flagellar motor and helical filament
+        as the rotary swimming organelle.
+  - subject: filament
+    predicate: generates
+    object: thrust
+    description: A rotating helical filament acts as a propeller that pushes against
+      the surrounding fluid.
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.72.121801.161737
+      notes: Berg 2003 reviews the hydrodynamic role of helical flagellar filaments
+        in swimming.
+  - subject: thrust
+    predicate: enables
+    object: motility
+    description: Filament-generated thrust drives bacterial-type flagellum-dependent
+      swimming motility.
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.72.121801.161737
+      notes: Berg 2003 reviews swimming by rotating flagellar filaments.
+discussions:
+- discussion_id: exclude_hook_and_cap
+  prompt: Should the hook, hook-filament junction, or FliD cap be curated as bacterial-type
+    flagellum filament components?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#flagellin
+  rationale: The filament record is scoped to the flagellin polymer. The hook, hook-filament
+    junction proteins and FliD cap transmit torque or template polymerization, but
+    they are distinct adjoining flagellar substructures rather than the long propeller
+    filament itself.
+  resolution_note: 'Declined: leave FlgE, FlgK/FlgL and FliD on the enclosing bacterial-type
+    flagellum record or future substructure records.'
+  posed_by: claude
+  posed_date: '2026-09-07'
+  resolved_date: '2026-09-07'
