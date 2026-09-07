@@ -216,6 +216,15 @@
   "definition": "A bacterial microcompartment — a polyhedral, selectively permeable protein shell about 100–200 nm across — that encapsulates RuBisCO and carbonic anhydrase to concentrate CO2 around RuBisCO in cyanobacteria and many chemoautotrophs. Alpha-carboxysomes (cso genes) and beta-carboxysomes (ccm genes) evolved their shells and scaffolds independently."
  },
  {
+  "identifier": "cellstructuremech:carboxysome_shell",
+  "label": "carboxysome shell",
+  "category": "MICROCOMPARTMENT",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/microcompartment/carboxysome_shell.html",
+  "definition": "The polyhedral protein coat of alpha- and beta-carboxysomes, built from BMC-H, BMC-T, and BMC-P shell proteins that enclose RuBisCO and carbonic anhydrase while controlling metabolite traffic between the lumen and cytosol."
+ },
+ {
   "identifier": "GO:0140737",
   "label": "encapsulin nanocompartment",
   "category": "MICROCOMPARTMENT",
