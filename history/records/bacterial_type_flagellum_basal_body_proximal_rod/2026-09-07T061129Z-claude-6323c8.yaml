@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_proximal_rod.yaml
+  slug: bacterial_type_flagellum_basal_body_proximal_rod
+session:
+  id: 2026-09-07T061129Z-claude-6323c8
+  timestamp: '2026-09-07T06:11:29Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add bacterial-type flagellum proximal rod record
+  details: Created a PROPOSED GO:0009429 bacterial-type flagellum basal body, proximal rod
+    record for the FliE, FlgB, FlgC and FlgF motor-proximal segment of the bacterial flagellar
+    rod. The record uses the exact GO cellular-component identity, links the proximal rod
+    part_of GO:0030694, adds FlgB and FlgC InterPro family groundings while leaving FliE and
+    FlgF label-only, records Salmonella proximal-rod composition and motor-coupling evidence,
+    and keeps FlgG, the MS ring and the export apparatus outside the mature proximal-rod component
+    boundary.
