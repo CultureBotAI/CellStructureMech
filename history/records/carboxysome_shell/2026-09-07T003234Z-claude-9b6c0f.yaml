@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/carboxysome_shell.yaml
+  slug: carboxysome_shell
+session:
+  id: 2026-09-07T003234Z-claude-9b6c0f
+  timestamp: '2026-09-07T00:32:34Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add carboxysome shell record
+  details: Created a PROPOSED carboxysome shell record for the polyhedral coat of alpha- and
+    beta-carboxysomes. The record mints cellstructuremech:carboxysome_shell because QuickGO
+    has an exact molecular-function term for structural constituents of carboxysome shells
+    but no exact cellular-component term for the shell itself; it links the shell part_of
+    GO:0031470, adds BMC-H, BMC-T and BMC-P shell constituents, cites alpha-carboxysome work
+    in Halothiobacillus neapolitanus and beta-carboxysome work in Synechococcus elongatus
+    PCC 7942, and keeps lumen cargo, scaffolds and adaptors on the enclosing carboxysome record
+    rather than duplicating them into the shell.

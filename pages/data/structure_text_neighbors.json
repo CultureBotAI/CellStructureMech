@@ -695,6 +695,11 @@
       "label": "bacterial microcompartment",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:carboxysome_shell",
+          "label": "carboxysome shell",
+          "cosine_similarity": 0.88183911
+        },
+        {
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
           "cosine_similarity": 0.86859189
@@ -713,11 +718,6 @@
           "identifier": "GO:0031470",
           "label": "carboxysome",
           "cosine_similarity": 0.74637963
-        },
-        {
-          "identifier": "GO:0033099",
-          "label": "attachment organelle",
-          "cosine_similarity": 0.71798975
         }
       ]
     },
@@ -725,6 +725,11 @@
       "identifier": "GO:0031470",
       "label": "carboxysome",
       "neighbors": [
+        {
+          "identifier": "cellstructuremech:carboxysome_shell",
+          "label": "carboxysome shell",
+          "cosine_similarity": 0.87870195
+        },
         {
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
@@ -744,11 +749,37 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.68712035
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:carboxysome_shell",
+      "label": "carboxysome shell",
+      "neighbors": [
+        {
+          "identifier": "GO:0031469",
+          "label": "bacterial microcompartment",
+          "cosine_similarity": 0.88183911
         },
         {
-          "identifier": "GO:0033099",
-          "label": "attachment organelle",
-          "cosine_similarity": 0.67170606
+          "identifier": "GO:0031470",
+          "label": "carboxysome",
+          "cosine_similarity": 0.87870195
+        },
+        {
+          "identifier": "GO:0140737",
+          "label": "encapsulin nanocompartment",
+          "cosine_similarity": 0.80891293
+        },
+        {
+          "identifier": "GO:0031472",
+          "label": "propanediol degradation polyhedral organelle",
+          "cosine_similarity": 0.76477851
+        },
+        {
+          "identifier": "GO:0031471",
+          "label": "ethanolamine degradation polyhedral organelle",
+          "cosine_similarity": 0.70207194
         }
       ]
     },
@@ -760,6 +791,11 @@
           "identifier": "GO:0031469",
           "label": "bacterial microcompartment",
           "cosine_similarity": 0.86859189
+        },
+        {
+          "identifier": "cellstructuremech:carboxysome_shell",
+          "label": "carboxysome shell",
+          "cosine_similarity": 0.80891293
         },
         {
           "identifier": "GO:0031471",
@@ -775,11 +811,6 @@
           "identifier": "GO:0031472",
           "label": "propanediol degradation polyhedral organelle",
           "cosine_similarity": 0.76360809
-        },
-        {
-          "identifier": "GO:0033099",
-          "label": "attachment organelle",
-          "cosine_similarity": 0.73459489
         }
       ]
     },
@@ -803,14 +834,14 @@
           "cosine_similarity": 0.76731385
         },
         {
+          "identifier": "cellstructuremech:carboxysome_shell",
+          "label": "carboxysome shell",
+          "cosine_similarity": 0.70207194
+        },
+        {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.67415614
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.65869962
         }
       ]
     },
@@ -829,6 +860,11 @@
           "cosine_similarity": 0.79258479
         },
         {
+          "identifier": "cellstructuremech:carboxysome_shell",
+          "label": "carboxysome shell",
+          "cosine_similarity": 0.76477851
+        },
+        {
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
           "cosine_similarity": 0.76360809
@@ -837,11 +873,6 @@
           "identifier": "GO:0031470",
           "label": "carboxysome",
           "cosine_similarity": 0.70318431
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.68965976
         }
       ]
     },

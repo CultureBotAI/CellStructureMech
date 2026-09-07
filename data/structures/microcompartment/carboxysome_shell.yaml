@@ -1,0 +1,280 @@
+identifier: cellstructuremech:carboxysome_shell
+label: carboxysome shell
+structure_category: MICROCOMPARTMENT
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The polyhedral protein coat of alpha- and beta-carboxysomes, built from
+  BMC-H, BMC-T, and BMC-P shell proteins that enclose RuBisCO and carbonic anhydrase
+  while controlling metabolite traffic between the lumen and cytosol.
+definition_source: DOI:10.1038/nrmicro.2018.10
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-07T00:20:21Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-07T00:31:45Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added shell synonymy, carboxysome parthood, BMC-H/BMC-T/BMC-P coat components,
+    bacterial taxonomic scope, alpha- and beta-carboxysome examples, shell permeability
+    functions, core literature evidence, a selective-barrier causal graph, and a boundary
+    discussion excluding lumen cargo and adaptors from the shell record.
+  llm_assisted: true
+- timestamp: '2026-09-07T00:40:25Z'
+  curator: claude
+  action: FIX_DISCUSSION_ANCHOR
+  changes: Removed the section-wide discussion anchor because discussion anchors must
+    name an existing local id such as components#bmc_h, not a bare section.
+  llm_assisted: true
+- timestamp: '2026-09-07T01:11:43Z'
+  curator: claude
+  action: FIX_REVIEW_ISSUES
+  changes: 'Resolved #221 by adding the Cai et al. 2009 primary CO2 leakage-barrier
+    paper to BMC-P, co2_retention and graph evidence; resolved #222 by adding the
+    Roberts et al. 2012 CsoS1D primary paper to BMC-T evidence.'
+  llm_assisted: true
+synonyms:
+- synonym_text: carboxysome protein shell
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/nrmicro.2018.10
+- synonym_text: alpha-carboxysome shell
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1038/nrmicro.2018.10
+- synonym_text: beta-carboxysome shell
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1038/nrmicro.2018.10
+part_of:
+- GO:0031470
+components:
+- component_id: bmc_h
+  label: BMC-H shell hexamers (CcmK / CsoS1)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ccmK
+  - csoS1
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: IPR046380 exactly covers reviewed beta-carboxysome CcmK proteins,
+    but alpha-carboxysome CsoS1 proteins lack it. Their only shared family, IPR050575,
+    is the generic bacterial microcompartment shell family and also covers non-carboxysome
+    shell proteins, so no exact family CURIE was curated.
+  role: Hexameric single-BMC-domain proteins that tile the shell facets.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 review BMC-H proteins as hexameric carboxysome shell
+      tiles built from CcmK proteins in beta-carboxysomes and CsoS1 proteins in alpha-carboxysomes.
+  - reference: DOI:10.1371/journal.pbio.0050144
+    notes: Tsai et al. 2007 structurally analyzed the Halothiobacillus neapolitanus
+      alpha-carboxysome shell protein CsoS1A.
+  - reference: DOI:10.1371/journal.pone.0043871
+    notes: Rae et al. 2012 analyzed CcmK proteins in the Synechococcus elongatus PCC
+      7942 beta-carboxysome outer shell.
+- component_id: bmc_t
+  label: BMC-T shell pseudohexamers (CcmO, CcmP, CsoS1D)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ccmO
+  - ccmP
+  - csoS1D
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: BMC-T shell proteins are tandem-BMC-domain proteins, but carboxysome
+    CcmO, CcmP and CsoS1D families are not covered by one exact source-neutral InterPro
+    or Pfam family CURIE.
+  role: Tandem-BMC-domain proteins that contribute pseudohexamers to the shell and
+    can introduce larger gated pores.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 review BMC-T paralogues as pseudohexameric shell proteins
+      in carboxysomes and other bacterial microcompartments.
+  - reference: PMID:23572529
+    notes: Cai et al. 2013 structurally analyzed Synechococcus elongatus CcmP, a beta-carboxysome
+      tandem-BMC-domain protein that forms a double-trimer pseudohexamer in the shell.
+  - reference: DOI:10.1128/JB.06444-11
+    notes: Roberts et al. 2012 isolated Prochlorococcus alpha-carboxysomes and detected
+      the tandem-BMC shell protein CsoS1D as a minor shell component.
+- component_id: bmc_p
+  label: BMC-P shell pentamers (CcmL / CsoS4)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ccmL
+  - csoS4A
+  - csoS4B
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: IPR046387 exactly covers the beta-carboxysome CcmL family, whereas
+    alpha-carboxysome CsoS4A and CsoS4B are distinct families. Their only shared candidate
+    is broader than carboxysome vertex proteins, so no exact family CURIE was curated.
+  role: Pentameric shell proteins that cap the vertices of the polyhedral shell.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 review BMC-P proteins as pentameric caps at the vertices
+      of carboxysome and other BMC shells.
+  - reference: DOI:10.1371/journal.pone.0043871
+    notes: Rae et al. 2012 found that CcmL is part of the minimum structural determinant
+      set for the Synechococcus elongatus PCC 7942 beta-carboxysome outer shell.
+  - reference: DOI:10.1371/journal.pone.0007521
+    notes: Cai et al. 2009 showed that deleting both alpha-carboxysome vertex proteins
+      CsoS4A and CsoS4B yields elongated shells and severe high-CO2-requiring phenotypes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Carboxysome shells occur in cyanobacterial and proteobacterial carboxysomes
+    but are absent from bacterial lineages and strains without carboxysome loci.
+  reference: DOI:10.1038/nrmicro.2018.10
+canonical_examples:
+- taxon_id: NCBITaxon:927
+  taxon_label: Halothiobacillus neapolitanus
+  note: Alpha-carboxysome model whose CsoS1A shell protein and isolated protein shell
+    were structurally analyzed.
+  reference: DOI:10.1371/journal.pbio.0050144
+- taxon_id: NCBITaxon:1140
+  taxon_label: Synechococcus elongatus PCC 7942
+  note: Beta-carboxysome model used to test the roles of CcmK2, CcmK3, CcmK4, CcmO,
+    and CcmL in the outer shell.
+  reference: DOI:10.1371/journal.pone.0043871
+functions:
+- function_id: selective_metabolite_permeability
+  label: selective metabolite permeability
+  description: Pores through shell facets allow small metabolites such as bicarbonate
+    to cross the shell while restricting larger or unfavorably charged solutes.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 review selective metabolite flux through pores in BMC-H
+      and BMC-T carboxysome shell proteins.
+- function_id: co2_retention
+  label: CO2 retention
+  description: The shell acts as a CO2 leakage barrier, retaining carbon dioxide generated
+    inside the lumen for fixation by encapsulated RuBisCO.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2018.10
+    notes: Kerfeld et al. 2018 describe the carboxysome shell as limiting CO2 leakage
+      from the compartment.
+  - reference: DOI:10.1371/journal.pone.0007521
+    notes: Cai et al. 2009 experimentally linked CsoS4 vertex caps to closed shells
+      that act as a CO2 leakage barrier in Halothiobacillus neapolitanus.
+evidence:
+- reference: DOI:10.1038/nrmicro.2018.10
+  notes: Kerfeld CA, Aussignargues C, Zarzycki J, Cai F and Sutter M 2018, Bacterial
+    microcompartments, Nature Reviews Microbiology.
+- reference: DOI:10.1371/journal.pbio.0050144
+  notes: Tsai Y et al. 2007, Structural Analysis of CsoS1A and the Protein Shell of
+    the Halothiobacillus neapolitanus Carboxysome, PLoS Biology.
+- reference: DOI:10.1371/journal.pone.0043871
+  notes: Rae BD, Long BM, Badger MR and Price GD 2012, Structural determinants of
+    the outer shell of beta-carboxysomes in Synechococcus elongatus PCC 7942, PLoS
+    One.
+- reference: PMID:23572529
+  notes: Cai F et al. 2013, The structure of CcmP, a tandem bacterial microcompartment
+    domain protein from the beta-carboxysome, forms a subcompartment within a microcompartment,
+    Journal of Biological Chemistry.
+- reference: DOI:10.1371/journal.pone.0007521
+  notes: Cai F, Menon BB, Cannon GC, Curry KJ, Shively JM and Heinhorst S 2009, The
+    pentameric vertex proteins are necessary for the icosahedral carboxysome shell
+    to function as a CO2 leakage barrier, PLoS One.
+- reference: DOI:10.1128/JB.06444-11
+  notes: Roberts EW, Cai F, Kerfeld CA, Cannon GC and Heinhorst S 2012, Isolation
+    and characterization of the Prochlorococcus carboxysome reveal the presence of
+    the novel shell protein CsoS1D, Journal of Bacteriology.
+causal_graphs:
+- graph_id: protein_shell_selective_barrier
+  title: Shell tiles close a selective carboxysome barrier
+  description: BMC-H, BMC-T, and BMC-P paralogues build a closed polyhedral carboxysome
+    shell. Pores in the shell allow bicarbonate entry while the shell slows CO2 escape
+    from the lumen.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: bmc_h
+    label: BMC-H shell hexamers
+    node_type: GENE_OR_PROTEIN
+    component_ref: bmc_h
+  - node_id: bmc_t
+    label: BMC-T shell pseudohexamers
+    node_type: GENE_OR_PROTEIN
+    component_ref: bmc_t
+  - node_id: bmc_p
+    label: BMC-P shell pentamers
+    node_type: GENE_OR_PROTEIN
+    component_ref: bmc_p
+  - node_id: shell
+    label: carboxysome shell
+    node_type: STRUCTURE
+    grounding: cellstructuremech:carboxysome_shell
+  - node_id: bicarbonate
+    label: bicarbonate
+    node_type: CHEMICAL
+    grounding: CHEBI:17544
+  - node_id: co2
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+  edges:
+  - subject: bmc_h
+    predicate: tiles facets of
+    object: shell
+    description: BMC-H hexamers form the flat facets of the polyhedral carboxysome
+      shell.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Kerfeld et al. 2018 review BMC-H hexamers as the dominant facet-forming
+        carboxysome shell proteins.
+  - subject: bmc_t
+    predicate: contributes pores to
+    object: shell
+    description: Tandem-BMC-domain shell proteins insert larger pseudohexamer pores
+      into the shell lattice.
+    evidence:
+    - reference: PMID:23572529
+      notes: Cai et al. 2013 resolved CcmP as a dimer of stacked trimers in the beta-carboxysome
+        shell.
+  - subject: bmc_p
+    predicate: caps vertices of
+    object: shell
+    description: BMC-P pentamers provide pentagonal caps that close shell vertices.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Kerfeld et al. 2018 review BMC-P proteins as pentameric vertex caps in
+        carboxysomes and related BMCs.
+    - reference: DOI:10.1371/journal.pone.0007521
+      notes: Cai et al. 2009 linked CsoS4 vertex pentamers to normal icosahedral shell
+        closure.
+  - subject: shell
+    predicate: permits passage of
+    object: bicarbonate
+    description: Selective pores admit bicarbonate from the cytosol into the carboxysome
+      lumen.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Kerfeld et al. 2018 review the model that positively charged shell pores
+        favor passage of bicarbonate and other anions.
+  - subject: shell
+    predicate: limits loss of
+    object: co2
+    description: The proteinaceous shell slows escape of CO2 generated around RuBisCO.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Kerfeld et al. 2018 review the shell permeability model in which carboxysome
+        pores keep CO2 from leaking back to the cytosol.
+    - reference: DOI:10.1371/journal.pone.0007521
+      notes: Cai et al. 2009 showed that CsoS4 vertex deletions compromise the carboxysome
+        shell as a CO2 leakage barrier.
+discussions:
+- discussion_id: exclude_lumen_cargo_and_adaptors
+  prompt: Should encapsulated RuBisCO, carbonic anhydrase, CcmM or CcmN be duplicated
+    as carboxysome shell components?
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: The shell record is scoped to the polyhedral protein coat. Encapsulated
+    cargo and beta-carboxysome adaptors are components of the whole carboxysome and
+    shape shell closure, but they are not shell tiles or vertex proteins.
+  resolution_note: 'Declined: leave RuBisCO, carboxysomal carbonic anhydrase, CcmM/CsoS2
+    scaffolds and CcmN adaptors on the enclosing carboxysome record.'
+  posed_by: claude
+  posed_date: '2026-09-07'
+  resolved_date: '2026-09-07'
