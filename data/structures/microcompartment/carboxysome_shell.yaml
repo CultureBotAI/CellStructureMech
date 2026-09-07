@@ -27,6 +27,13 @@ curation_history:
   changes: Removed the section-wide discussion anchor because discussion anchors must
     name an existing local id such as components#bmc_h, not a bare section.
   llm_assisted: true
+- timestamp: '2026-09-07T01:11:43Z'
+  curator: claude
+  action: FIX_REVIEW_ISSUES
+  changes: 'Resolved #221 by adding the Cai et al. 2009 primary CO2 leakage-barrier
+    paper to BMC-P, co2_retention and graph evidence; resolved #222 by adding the
+    Roberts et al. 2012 CsoS1D primary paper to BMC-T evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: carboxysome protein shell
   synonym_type: EXACT_SYNONYM
@@ -86,6 +93,9 @@ components:
   - reference: PMID:23572529
     notes: Cai et al. 2013 structurally analyzed Synechococcus elongatus CcmP, a beta-carboxysome
       tandem-BMC-domain protein that forms a double-trimer pseudohexamer in the shell.
+  - reference: DOI:10.1128/JB.06444-11
+    notes: Roberts et al. 2012 isolated Prochlorococcus alpha-carboxysomes and detected
+      the tandem-BMC shell protein CsoS1D as a minor shell component.
 - component_id: bmc_p
   label: BMC-P shell pentamers (CcmL / CsoS4)
   component_type: PROTEIN
@@ -107,6 +117,9 @@ components:
   - reference: DOI:10.1371/journal.pone.0043871
     notes: Rae et al. 2012 found that CcmL is part of the minimum structural determinant
       set for the Synechococcus elongatus PCC 7942 beta-carboxysome outer shell.
+  - reference: DOI:10.1371/journal.pone.0007521
+    notes: Cai et al. 2009 showed that deleting both alpha-carboxysome vertex proteins
+      CsoS4A and CsoS4B yields elongated shells and severe high-CO2-requiring phenotypes.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -142,6 +155,9 @@ functions:
   - reference: DOI:10.1038/nrmicro.2018.10
     notes: Kerfeld et al. 2018 describe the carboxysome shell as limiting CO2 leakage
       from the compartment.
+  - reference: DOI:10.1371/journal.pone.0007521
+    notes: Cai et al. 2009 experimentally linked CsoS4 vertex caps to closed shells
+      that act as a CO2 leakage barrier in Halothiobacillus neapolitanus.
 evidence:
 - reference: DOI:10.1038/nrmicro.2018.10
   notes: Kerfeld CA, Aussignargues C, Zarzycki J, Cai F and Sutter M 2018, Bacterial
@@ -157,6 +173,14 @@ evidence:
   notes: Cai F et al. 2013, The structure of CcmP, a tandem bacterial microcompartment
     domain protein from the beta-carboxysome, forms a subcompartment within a microcompartment,
     Journal of Biological Chemistry.
+- reference: DOI:10.1371/journal.pone.0007521
+  notes: Cai F, Menon BB, Cannon GC, Curry KJ, Shively JM and Heinhorst S 2009, The
+    pentameric vertex proteins are necessary for the icosahedral carboxysome shell
+    to function as a CO2 leakage barrier, PLoS One.
+- reference: DOI:10.1128/JB.06444-11
+  notes: Roberts EW, Cai F, Kerfeld CA, Cannon GC and Heinhorst S 2012, Isolation
+    and characterization of the Prochlorococcus carboxysome reveal the presence of
+    the novel shell protein CsoS1D, Journal of Bacteriology.
 causal_graphs:
 - graph_id: protein_shell_selective_barrier
   title: Shell tiles close a selective carboxysome barrier
@@ -217,6 +241,9 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro.2018.10
       notes: Kerfeld et al. 2018 review BMC-P proteins as pentameric vertex caps in
         carboxysomes and related BMCs.
+    - reference: DOI:10.1371/journal.pone.0007521
+      notes: Cai et al. 2009 linked CsoS4 vertex pentamers to normal icosahedral shell
+        closure.
   - subject: shell
     predicate: permits passage of
     object: bicarbonate
@@ -234,6 +261,9 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro.2018.10
       notes: Kerfeld et al. 2018 review the shell permeability model in which carboxysome
         pores keep CO2 from leaking back to the cytosol.
+    - reference: DOI:10.1371/journal.pone.0007521
+      notes: Cai et al. 2009 showed that CsoS4 vertex deletions compromise the carboxysome
+        shell as a CO2 leakage barrier.
 discussions:
 - discussion_id: exclude_lumen_cargo_and_adaptors
   prompt: Should encapsulated RuBisCO, carbonic anhydrase, CcmM or CcmN be duplicated
