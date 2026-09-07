@@ -1,0 +1,341 @@
+identifier: GO:0009425
+label: bacterial-type flagellum basal body
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The basal cell-envelope substructure of a bacterial flagellum, consisting
+  of a rod, a series of rings, Mot stator proteins, the switch complex, and the proximal
+  flagellum-specific type III export apparatus.
+definition_source: GO:0009425
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-07T01:26:03Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-07T01:27:32Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO and UniProt SL synonymy, bacterial-flagellum parthood, MS-ring,
+    C-ring, stator, rod, LP-ring and export-apparatus components, bacterial taxonomic
+    scope, Salmonella as a canonical basal-body example, anchoring and torque-transmission
+    functions, primary literature evidence, a basal-body architecture causal graph,
+    and a grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-07T01:48:39Z'
+  curator: claude
+  action: SUPPORT_EXPORT_EDGE
+  changes: Added Macnab 2003 evidence to the export-apparatus-to-rod graph edge so
+    the export action is directly supported by a flagellar assembly source.
+  llm_assisted: true
+- timestamp: '2026-09-07T01:55:21Z'
+  curator: claude
+  action: TIGHTEN_WORDING
+  changes: Clarified that stator units act on the C ring to turn the MS ring and rod,
+    and corrected the LP-ring graph predicate grammar.
+  llm_assisted: true
+- timestamp: '2026-09-07T02:01:16Z'
+  curator: claude
+  action: NARROW_DEFINITION
+  changes: Narrowed the GO:0009425 definition text to identity and component scope;
+    left anchoring, export and torque claims in literature-backed functions.
+  llm_assisted: true
+synonyms:
+- synonym_text: bacterial flagellum basal body
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009425
+- synonym_text: bacterial flagellar basal body
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0142
+xrefs:
+- uniprot.location:SL-0142
+part_of:
+- GO:0009288
+components:
+- component_id: ms_ring
+  label: MS ring (FliF)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fliF
+  stoichiometry: 34 FliF subunits in the Salmonella native MS ring
+  essentiality: ESSENTIAL
+  role: Inner-membrane ring that anchors the basal body and templates rotor and export-apparatus
+    assembly.
+  evidence:
+  - reference: DOI:10.1038/s41467-021-24507-9
+    notes: Kawamoto et al. 2021 used Salmonella cryo-EM to show that the native MS
+      ring is formed by 34 FliF subunits and acts as a core assembly template.
+- component_id: c_ring
+  label: C ring / switch complex (FliG, FliM, FliN)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fliG
+  - fliM
+  - fliN
+  essentiality: ESSENTIAL
+  role: Cytoplasmic rotor ring that engages the stator and biases motor rotation direction.
+  evidence:
+  - reference: DOI:10.1016/j.tim.2014.12.011
+    notes: Minamino and Imada 2015 review the FliG/FliM/FliN C ring as the rotor-mounted
+      switch complex that couples stator contacts to rotational switching.
+  - reference: DOI:10.1038/s41467-021-24507-9
+    notes: Kawamoto et al. 2021 measured C-ring symmetry on isolated Salmonella basal
+      bodies and related it to the 34-fold FliF MS ring.
+- component_id: stator
+  label: stator unit (MotA5MotB2)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - motA
+  - motB
+  essentiality: DISPENSABLE
+  role: Membrane ion-channel unit that anchors through MotB and applies torque to
+    FliG in the C ring.
+  evidence:
+  - reference: DOI:10.1038/s41564-020-0788-8
+    notes: Deme et al. 2020 resolved the MotA5MotB2 stator architecture and modeled
+      how MotA engages FliG to drive rotation.
+- component_id: rod
+  label: rod (FliE, FlgB, FlgC, FlgF, FlgG)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fliE
+  - flgB
+  - flgC
+  - flgF
+  - flgG
+  essentiality: ESSENTIAL
+  role: Axial drive shaft that connects the MS ring to the extracellular hook.
+  evidence:
+  - reference: DOI:10.1016/0022-2836(92)90958-m
+    notes: Kubori et al. 1992 purified Salmonella assembly intermediates and found
+      FliE, FlgB, FlgC, FlgF and FlgG assembling cooperatively into a stable rod.
+  - reference: DOI:10.1016/j.cell.2021.03.057
+    notes: Tan et al. 2021 resolved how the MS ring and FliE/FlgB proximal rod transmit
+      torque into the helical rod.
+- component_id: lp_rings
+  label: L and P rings (FlgH, FlgI)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - flgH
+  - flgI
+  essentiality: CONDITIONAL
+  role: Gram-negative outer-membrane and peptidoglycan bushing that surrounds the
+    distal rod.
+  evidence:
+  - reference: DOI:10.1038/s41467-021-24715-3
+    notes: Yamaguchi et al. 2021 resolved the Salmonella LP-ring bushing around the
+      rod and assigned FlgH to the L ring and FlgI to the P ring.
+- component_id: export_apparatus
+  label: flagellar type III export apparatus (FlhA, FlhB, FliP, FliQ, FliR)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - flhA
+  - flhB
+  - fliP
+  - fliQ
+  - fliR
+  essentiality: ESSENTIAL
+  role: Flagellum-specific type III export gate housed inside the basal body that
+    secretes axial rod, hook and filament subunits.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.57.030502.090832
+    notes: Macnab 2003 reviews export of axial flagellar substrates through the basal-body
+      export apparatus during ordered flagellum assembly.
+  - reference: DOI:10.1038/s41467-021-24507-9
+    notes: Kawamoto et al. 2021 show that the MS-ring core has a central hole sized
+      to accommodate the flagellar export gate.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Bacterial-type flagellar basal bodies are restricted to bacteria with bacterial
+    flagella and absent from strains and lineages that have lost the organelle.
+  reference: DOI:10.1038/nrmicro1887
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaea swim with archaella, which are type-IV-pilus-related machines rather
+    than bacterial-type flagellar basal bodies.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  note: Classical genetic and cryo-EM model for bacterial basal-body assembly, the
+    MS/C rotor, the LP-ring bushing, and rod-driven torque transmission.
+  reference: DOI:10.1038/s41564-021-00895-y
+functions:
+- function_id: cell_envelope_anchoring
+  label: flagellum anchoring in the cell envelope
+  description: The basal-body rings and rod span the inner membrane, peptidoglycan
+    and, in Gram-negative bacteria, the outer membrane to mount the flagellar rotor.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.57.030502.090832
+    notes: Macnab 2003 reviews assembly of the basal body as the envelope-spanning
+      foundation for the bacterial flagellum.
+  - reference: DOI:10.1038/s41564-021-00895-y
+    notes: Johnson et al. 2021 resolved the intact Salmonella basal body spanning
+      the inner membrane, cell wall and outer membrane.
+- function_id: rotary_torque_transmission
+  label: rotary torque transmission
+  description: Ion-driven stator units act on the C ring so the MS ring and basal-body
+    rod rotate and transmit torque to the hook and filament.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2021.03.057
+    notes: Tan et al. 2021 resolved structural couplings by which the MS ring, FliE,
+      FlgB, distal rod and LP ring support torque transmission through the flagellar
+      motor.
+  - reference: DOI:10.1038/s41564-020-0788-8
+    notes: Deme et al. 2020 structurally modeled the MotA5MotB2 stator as the ion-driven
+      unit that drives the FliG rotor.
+evidence:
+- reference: DOI:10.1146/annurev.micro.57.030502.090832
+  notes: Macnab RM 2003, "How bacteria assemble flagella", Annual Review of Microbiology.
+- reference: DOI:10.1016/0022-2836(92)90958-m
+  notes: Kubori T, Shimamoto N, Yamaguchi S, Namba K and Aizawa S 1992, Morphological
+    pathway of flagellar assembly in Salmonella typhimurium, Journal of Molecular
+    Biology.
+- reference: DOI:10.1038/s41564-020-0788-8
+  notes: Deme JC et al. 2020, Structures of the stator complex that drives rotation
+    of the bacterial flagellum, Nature Microbiology.
+- reference: DOI:10.1016/j.cell.2021.03.057
+  notes: Tan J et al. 2021, Structural basis of assembly and torque transmission of
+    the bacterial flagellar motor, Cell.
+- reference: DOI:10.1038/s41564-021-00895-y
+  notes: Johnson S et al. 2021, Molecular structure of the intact bacterial flagellar
+    basal body, Nature Microbiology.
+- reference: DOI:10.1038/s41467-021-24507-9
+  notes: Kawamoto A et al. 2021, Native flagellar MS ring is formed by 34 subunits
+    with 23-fold and 11-fold subsymmetries, Nature Communications.
+- reference: DOI:10.1038/s41467-021-24715-3
+  notes: Yamaguchi T et al. 2021, Structure of the molecular bushing of the bacterial
+    flagellar motor, Nature Communications.
+causal_graphs:
+- graph_id: rotary_basal_body_architecture
+  title: Basal-body rings couple ion-driven torque to the rod
+  description: FliF forms the MS ring scaffold, the export gate occupies its center
+    and builds the rod, LP rings let the distal rod spin through the Gram-negative
+    envelope, and stator units apply torque through the C ring.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ms_ring
+    label: MS ring
+    node_type: GENE_OR_PROTEIN
+    component_ref: ms_ring
+  - node_id: c_ring
+    label: C ring
+    node_type: GENE_OR_PROTEIN
+    component_ref: c_ring
+  - node_id: export_apparatus
+    label: flagellar type III export apparatus
+    node_type: GENE_OR_PROTEIN
+    component_ref: export_apparatus
+  - node_id: rod
+    label: flagellar basal-body rod
+    node_type: GENE_OR_PROTEIN
+    component_ref: rod
+  - node_id: lp_rings
+    label: L and P rings
+    node_type: GENE_OR_PROTEIN
+    component_ref: lp_rings
+  - node_id: stator
+    label: MotA5MotB2 stator unit
+    node_type: GENE_OR_PROTEIN
+    component_ref: stator
+  - node_id: basal_body
+    label: bacterial-type flagellum basal body
+    node_type: STRUCTURE
+    grounding: GO:0009425
+  - node_id: rotation
+    label: flagellar rotation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: ms_ring
+    predicate: nucleates assembly of
+    object: basal_body
+    description: The FliF MS ring is the first ring scaffold and organizes later basal-body
+      assembly around the inner membrane.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24507-9
+      notes: Kawamoto et al. 2021 support the MS ring as a basal-body core and template
+        for flagellar assembly.
+  - subject: c_ring
+    predicate: assembles on
+    object: ms_ring
+    description: The FliG/FliM/FliN C ring attaches to the cytoplasmic face of the
+      FliF MS ring.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24507-9
+      notes: Kawamoto et al. 2021 analyzed C-ring symmetry in native Salmonella basal
+        bodies relative to the FliF MS ring.
+  - subject: export_apparatus
+    predicate: is housed by
+    object: ms_ring
+    description: The export gate lies in the central opening of the MS ring to secrete
+      axial subunits.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24507-9
+      notes: Kawamoto et al. 2021 linked the 23-subunit core of the M ring to a pore
+        sized for the flagellar protein export gate.
+  - subject: export_apparatus
+    predicate: exports subunits for
+    object: rod
+    description: The flagellar export apparatus delivers the FliE, FlgB, FlgC, FlgF
+      and FlgG axial proteins used to build the rod.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.57.030502.090832
+      notes: Macnab 2003 reviews export of rod and other axial subunits through the
+        flagellum-specific type III export apparatus.
+    - reference: DOI:10.1016/0022-2836(92)90958-m
+      notes: Kubori et al. 1992 used Salmonella assembly intermediates to place FliE
+        and the FlgB/FlgC/FlgF/FlgG proteins in the rod assembly pathway.
+  - subject: lp_rings
+    predicate: form bushing around
+    object: rod
+    description: The L and P rings surround the distal rod to let it rotate through
+      the Gram-negative outer envelope.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24715-3
+      notes: Yamaguchi et al. 2021 resolved the FlgH/FlgI LP ring encircling the Salmonella
+        distal rod.
+  - subject: stator
+    predicate: applies torque to
+    object: c_ring
+    description: Ion flow through MotA/MotB drives MotA rotation, which pushes against
+      FliG in the C ring.
+    evidence:
+    - reference: DOI:10.1038/s41564-020-0788-8
+      notes: Deme et al. 2020 model the stator complex as a rotating MotA pentamer
+        meshing with FliG.
+  - subject: c_ring
+    predicate: drives
+    object: rotation
+    description: Torque on the C ring turns the MS ring and rod as the basal-body
+      rotor.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2021.03.057
+      notes: Tan et al. 2021 resolved the structural path used to transmit torque
+        from the MS ring into the rod.
+discussions:
+- discussion_id: component_groundings
+  prompt: Assign exact InterPro, Pfam or Complex Portal groundings for basal-body
+    subcomplexes and protein families.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ms_ring
+  - components#c_ring
+  - components#stator
+  - components#rod
+  - components#lp_rings
+  - components#export_apparatus
+  rationale: Groundings were left blank rather than reusing broad flagellar-family
+    terms or organism-specific structural models as source-neutral component identifiers.
+  posed_by: claude
+  posed_date: '2026-09-07'
