@@ -116,6 +116,11 @@
           "cosine_similarity": 0.89883879
         },
         {
+          "identifier": "GO:0009431",
+          "label": "bacterial-type flagellum basal body, MS ring",
+          "cosine_similarity": 0.88324325
+        },
+        {
           "identifier": "GO:0009426",
           "label": "bacterial-type flagellum basal body, distal rod",
           "cosine_similarity": 0.88260796
@@ -124,11 +129,6 @@
           "identifier": "GO:0009427",
           "label": "bacterial-type flagellum basal body, distal rod, L ring",
           "cosine_similarity": 0.87526561
-        },
-        {
-          "identifier": "GO:0009429",
-          "label": "bacterial-type flagellum basal body, proximal rod",
-          "cosine_similarity": 0.87055418
         }
       ]
     },
@@ -173,6 +173,11 @@
           "cosine_similarity": 0.95056398
         },
         {
+          "identifier": "GO:0009431",
+          "label": "bacterial-type flagellum basal body, MS ring",
+          "cosine_similarity": 0.92849268
+        },
+        {
           "identifier": "GO:0009426",
           "label": "bacterial-type flagellum basal body, distal rod",
           "cosine_similarity": 0.92159088
@@ -186,11 +191,6 @@
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
           "cosine_similarity": 0.87526561
-        },
-        {
-          "identifier": "GO:0009429",
-          "label": "bacterial-type flagellum basal body, proximal rod",
-          "cosine_similarity": 0.8730944
         }
       ]
     },
@@ -209,6 +209,11 @@
           "cosine_similarity": 0.90084275
         },
         {
+          "identifier": "GO:0009431",
+          "label": "bacterial-type flagellum basal body, MS ring",
+          "cosine_similarity": 0.89778303
+        },
+        {
           "identifier": "GO:0030694",
           "label": "bacterial-type flagellum basal body, rod",
           "cosine_similarity": 0.88342777
@@ -217,11 +222,37 @@
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
           "cosine_similarity": 0.86618057
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009431",
+      "label": "bacterial-type flagellum basal body, MS ring",
+      "neighbors": [
+        {
+          "identifier": "GO:0009427",
+          "label": "bacterial-type flagellum basal body, distal rod, L ring",
+          "cosine_similarity": 0.92849268
         },
         {
-          "identifier": "GO:0009429",
-          "label": "bacterial-type flagellum basal body, proximal rod",
-          "cosine_similarity": 0.8633747
+          "identifier": "GO:0009428",
+          "label": "bacterial-type flagellum basal body, distal rod, P ring",
+          "cosine_similarity": 0.89778303
+        },
+        {
+          "identifier": "GO:0009425",
+          "label": "bacterial-type flagellum basal body",
+          "cosine_similarity": 0.88324325
+        },
+        {
+          "identifier": "GO:0030694",
+          "label": "bacterial-type flagellum basal body, rod",
+          "cosine_similarity": 0.87453075
+        },
+        {
+          "identifier": "GO:0009426",
+          "label": "bacterial-type flagellum basal body, distal rod",
+          "cosine_similarity": 0.87143148
         }
       ]
     },
@@ -1170,6 +1201,11 @@
           "cosine_similarity": 0.63657742
         },
         {
+          "identifier": "GO:0009431",
+          "label": "bacterial-type flagellum basal body, MS ring",
+          "cosine_similarity": 0.63393225
+        },
+        {
           "identifier": "GO:0009426",
           "label": "bacterial-type flagellum basal body, distal rod",
           "cosine_similarity": 0.62832164
@@ -1178,11 +1214,6 @@
           "identifier": "GO:0005840",
           "label": "ribosome",
           "cosine_similarity": 0.62480667
-        },
-        {
-          "identifier": "cellstructuremech:mreb_filament",
-          "label": "MreB filament",
-          "cosine_similarity": 0.61966013
         }
       ]
     },
