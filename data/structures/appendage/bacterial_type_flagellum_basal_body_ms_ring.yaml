@@ -21,6 +21,13 @@ curation_history:
     evidence, a FliF MS-ring mechanism graph, and a boundary discussion excluding
     the C ring, export gate, rod and collars.
   llm_assisted: true
+- timestamp: '2026-09-08T03:03:03Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #255 by orienting C-ring and export-gate graph edges around MS-ring
+    functions; resolved #256 by dropping ambiguous GO-definition PMID carryover from
+    top-level evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, mounting plate
   synonym_type: BROAD_SYNONYM
@@ -94,12 +101,6 @@ physical_properties:
   context: FliF subunits per native Salmonella MS ring
   reference: DOI:10.1038/s41467-021-24507-9
 evidence:
-- reference: PMID:10572114
-  notes: Schoenhals GJ and Macnab RM 1999, FliL is a membrane-associated component
-    of the flagellar basal body of Salmonella.
-- reference: PMID:12624192
-  notes: Minamino T and Macnab RM 2003, Components of the Salmonella flagellar export
-    apparatus and classification of export substrates.
 - reference: DOI:10.1128/jb.171.7.3890-3900.1989
   notes: 'Jones CJ, Homma M and Macnab RM 1989, L-, P-, and M-ring proteins of the
     flagellar basal body of Salmonella typhimurium: gene sequences and deduced protein
@@ -168,19 +169,20 @@ causal_graphs:
     - reference: DOI:10.1128/JB.181.23.7149-7153.1999
       notes: Macnab 1999 reviews the MS ring as the membrane-proximal platform of
         the bacterial flagellar basal body.
-  - subject: c_ring
-    predicate: assembles on
-    object: ms_ring
-    description: The C-ring switch complex assembles on the cytoplasmic side of the
-      FliF MS ring.
+  - subject: ms_ring
+    predicate: templates assembly of
+    object: c_ring
+    description: The FliF MS ring templates assembly of the C-ring switch complex
+      on its cytoplasmic face.
     evidence:
     - reference: DOI:10.1038/s41467-021-24507-9
       notes: Kawamoto et al. 2021 measured C-ring symmetry on native Salmonella basal
         bodies relative to the FliF MS ring.
-  - subject: export_apparatus
-    predicate: is housed by
-    object: ms_ring
-    description: The flagellar export gate occupies the center of the MS ring.
+  - subject: ms_ring
+    predicate: houses
+    object: export_apparatus
+    description: The MS-ring core provides the central opening occupied by the flagellar
+      export gate.
     evidence:
     - reference: DOI:10.1038/s41467-021-24507-9
       notes: Kawamoto et al. 2021 linked the MS-ring core to an opening sized for
