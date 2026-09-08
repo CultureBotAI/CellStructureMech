@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+  slug: bacterial_type_flagellum_basal_body_distal_rod_l_ring
+session:
+  id: 2026-09-08T021531Z-claude-8368f4
+  timestamp: '2026-09-08T02:15:31Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - measurements
+  - causal_graphs
+  summary: Add bacterial flagellum L ring record
+  details: Created a PROPOSED GO:0009427 L-ring record with GO synonymy and basal-body parthood,
+    a FlgH constituent grounded to InterPro:IPR000527, bacterial and archaeal taxonomic scope,
+    Salmonella as a canonical example, outer-membrane bushing functions, a Salmonella 26-subunit
+    physical property, and a source-bounded graph for L-ring and LP-ring bushing function
+    based on Jones 1989, Cohen 2014 and Yamaguchi 2021.

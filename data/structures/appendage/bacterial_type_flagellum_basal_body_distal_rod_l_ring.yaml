@@ -1,0 +1,215 @@
+identifier: GO:0009427
+label: bacterial-type flagellum basal body, distal rod, L ring
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: One of the rings of the bacterial-type flagellar basal body; anchors the
+  basal body to the outer membrane.
+definition_source: GO:0009427
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-08T02:14:03Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-08T02:14:45Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO L-ring synonymy, basal-body parthood, FlgH composition, bacterial
+    and archaeal taxonomic scope, Salmonella as a canonical example, outer-membrane
+    bushing functions, FlgH L-ring mechanism graph, physical subunit count, structural
+    literature evidence, and a boundary discussion excluding the P ring, distal rod,
+    outer membrane and assembly factors.
+  llm_assisted: true
+- timestamp: '2026-09-08T02:35:47Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #252 by explicitly excluding lipopolysaccharide from the mature
+    L-ring component boundary; resolved #253 in the paired history record by adding
+    the measurements section.'
+  llm_assisted: true
+synonyms:
+- synonym_text: flagellar basal body, distal rod, L ring
+  synonym_type: RELATED_SYNONYM
+  source: GO:0009427
+- synonym_text: flagellin-based flagellum basal body, distal rod, L ring
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009427
+part_of:
+- GO:0009425
+components:
+- component_id: flgh
+  label: flagellar L-ring protein FlgH
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR000527
+  gene_symbols:
+  - flgH
+  stoichiometry: 26 subunits in the Salmonella L ring
+  essentiality: ESSENTIAL
+  role: Oligomerizes into the outer-membrane-embedded L ring of the LP-ring bushing.
+  evidence:
+  - reference: DOI:10.1128/jb.171.7.3890-3900.1989
+    notes: Jones et al. 1989 identified FlgH as the Salmonella L-ring protein.
+  - reference: DOI:10.1038/s41467-021-24715-3
+    notes: Yamaguchi et al. 2021 resolved Salmonella FlgH as the L-ring subunit in
+      the LP-ring bushing.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: FlgH L rings occur in Gram-negative bacterial-type flagellar basal bodies
+    and are absent from bacteria that lack LP-ring-bearing flagella.
+  reference: DOI:10.1038/nrmicro1887
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaeal archaella are type-IV-pilus-related appendages and do not contain
+    the FlgH L ring of bacterial-type flagella.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  note: Source organism for the high-resolution cryo-EM structure assigning FlgH to
+    the L ring.
+  reference: DOI:10.1038/s41467-021-24715-3
+functions:
+- function_id: outer_membrane_bushing_anchor
+  label: outer-membrane bushing anchoring
+  description: The L ring sits at the outer-membrane side of the LP-ring bushing around
+    the distal rod in Gram-negative flagellar basal bodies.
+  evidence:
+  - reference: DOI:10.1038/s41467-021-24715-3
+    notes: Yamaguchi et al. 2021 placed the Salmonella FlgH L ring at the outer side
+      of the LP ring.
+- function_id: lp_ring_bushing_support
+  label: LP-ring bushing support
+  description: Together with the P ring, the L ring forms a bushing that surrounds
+    the distal rod and supports rotation of the flagellar drive shaft.
+  evidence:
+  - reference: DOI:10.1038/s41467-021-24715-3
+    notes: Yamaguchi et al. 2021 structurally resolved the LP ring around the distal
+      rod in Salmonella hook-basal-body complexes.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '26'
+  context: FlgH subunits per Salmonella L ring
+  reference: DOI:10.1038/s41467-021-24715-3
+evidence:
+- reference: DOI:10.1128/JB.181.23.7149-7153.1999
+  notes: 'Macnab RM 1999, The bacterial flagellum: reversible rotary propellor and
+    type III export apparatus.'
+- reference: DOI:10.1128/jb.171.7.3890-3900.1989
+  notes: 'Jones CJ, Homma M and Macnab RM 1989, L-, P-, and M-ring proteins of the
+    flagellar basal body of Salmonella typhimurium: gene sequences and deduced protein
+    sequences.'
+- reference: DOI:10.1128/JB.01580-14
+  notes: Cohen et al. 2014, Rod-to-hook transition for extracellular flagellum assembly
+    is catalyzed by the L-ring-dependent rod scaffold removal.
+- reference: DOI:10.1038/s41467-021-24715-3
+  notes: Yamaguchi T et al. 2021, Structure of the molecular bushing of the bacterial
+    flagellar motor.
+causal_graphs:
+- graph_id: flgh_l_ring_bushing
+  title: FlgH builds the outer-membrane L-ring bushing
+  description: FlgH oligomers form the L ring at the outer-membrane side of the distal
+    rod. The L ring and P ring form the LP-ring bushing that supports flagellar rod
+    rotation.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: flgh
+    label: flagellar L-ring protein FlgH
+    node_type: GENE_OR_PROTEIN
+    component_ref: flgh
+    grounding: InterPro:IPR000527
+  - node_id: l_ring
+    label: bacterial-type flagellum basal body, distal rod, L ring
+    node_type: STRUCTURE
+    grounding: GO:0009427
+  - node_id: cell_outer_membrane
+    label: cell outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009279
+  - node_id: p_ring
+    label: bacterial-type flagellum basal body, distal rod, P ring
+    node_type: STRUCTURE
+    grounding: GO:0009428
+  - node_id: lp_ring
+    label: LP-ring bushing
+    node_type: STRUCTURE
+  - node_id: distal_rod
+    label: bacterial-type flagellum basal body, distal rod
+    node_type: STRUCTURE
+    grounding: GO:0009426
+  edges:
+  - subject: flgh
+    predicate: oligomerizes into
+    object: l_ring
+    description: FlgH assembles into the L-ring portion of the Salmonella LP ring.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24715-3
+      notes: Yamaguchi et al. 2021 built an atomic model of the Salmonella LP ring
+        assigning FlgH to the L ring.
+  - subject: l_ring
+    predicate: associates with
+    object: cell_outer_membrane
+    description: The L ring forms the outer-membrane-associated portion of the LP-ring
+      bushing.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24715-3
+      notes: Yamaguchi et al. 2021 placed the FlgH L ring at the outer side of the
+        LP ring.
+  - subject: l_ring
+    predicate: forms part of
+    object: lp_ring
+    description: The L ring contributes the outer-membrane layer of the LP-ring bushing.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24715-3
+      notes: Yamaguchi et al. 2021 resolved FlgH as the L-ring half of the Salmonella
+        LP ring.
+  - subject: p_ring
+    predicate: forms part of
+    object: lp_ring
+    description: The P ring contributes the peptidoglycan-side layer of the LP-ring
+      bushing.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24715-3
+      notes: Yamaguchi et al. 2021 resolved FlgI as the P-ring half of the Salmonella
+        LP ring.
+  - subject: lp_ring
+    predicate: surrounds
+    object: distal_rod
+    description: The LP ring encircles the distal basal-body rod.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24715-3
+      notes: Yamaguchi et al. 2021 resolved the LP ring as the bushing around the
+        Salmonella distal rod.
+  - subject: lp_ring
+    predicate: supports
+    object: distal_rod
+    description: The LP-ring bushing supports high-speed rotation of the distal basal-body
+      rod.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24715-3
+      notes: Yamaguchi et al. 2021 described the LP ring as the molecular bushing
+        of the bacterial flagellar motor.
+discussions:
+- discussion_id: exclude_p_ring_rod_lps_outer_membrane_and_assembly_factors
+  prompt: Should the P ring, distal rod, lipopolysaccharide, outer membrane, FlgA,
+    or FlgJ be curated as L-ring components?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#flgh
+  rationale: The mature GO:0009427 L ring is the FlgH ring at the outer-membrane side
+    of the LP-ring bushing. FlgI forms the adjacent P ring, the FlgG distal rod runs
+    through the bushing, lipopolysaccharide and the cell outer membrane host the L
+    ring, and FlgA and FlgJ act during outer-ring or rod assembly rather than remaining
+    constituents of the mature L ring.
+  resolution_note: 'Declined: keep FlgH as the only mature L-ring constituent and
+    represent the adjoining P ring, FlgG distal rod, lipopolysaccharide, outer membrane
+    and assembly factors outside this record''s component list.'
+  posed_by: claude
+  posed_date: '2026-09-08'
+  resolved_date: '2026-09-08'
