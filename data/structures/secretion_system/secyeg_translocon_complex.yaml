@@ -29,6 +29,13 @@ curation_history:
     unfolded secretory preprotein transport across the bacterial cytoplasmic membrane,
     leaving SecYEG lateral-gate membrane insertion outside the GO-grounded function.'
   llm_assisted: true
+- timestamp: '2026-09-08T04:25:39Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving the component''s declared
+    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
+    this record names. Symbols resolving to more than one reviewed entry were skipped
+    rather than chosen between.'
 synonyms:
 - synonym_text: SecYEG translocon
   synonym_type: EXACT_SYNONYM
@@ -64,6 +71,24 @@ components:
   - reference: DOI:10.1038/s41467-019-10918-2
     notes: Ma et al. 2019 resolved a bacterial substrate-engaged SecA-SecY translocation
       machine that shows preprotein inside SecY.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AGA2
+    protein_label: Protein translocase subunit SecY
+    gene_symbol: secY
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene prlA, which UniProt lists under
+      the primary name secY, in Escherichia coli (strain K12), a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0AGA2
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0AGA2, the single reviewed entry
+        for gene prlA in Escherichia coli (strain K12). Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sece_clamp_subunit
   label: SecE clamp subunit
   component_type: PROTEIN
@@ -84,6 +109,23 @@ components:
   - reference: DOI:10.1093/emboj/16.10.2756
     notes: Duong and Wickner 1997 dissected the catalytic roles of the SecYE, SecG,
       and SecDF-YajC subunits of the E. coli preprotein translocase holoenzyme.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AG96
+    protein_label: Protein translocase subunit SecE
+    gene_symbol: secE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene prlG, which UniProt lists under
+      the primary name secE, in Escherichia coli (strain K12), a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, ‘Global topology analysis of the Escherichia coli
+        inner membrane proteome.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P0AG96.
 - component_id: secg_accessory_subunit
   label: SecG accessory channel subunit
   component_type: PROTEIN

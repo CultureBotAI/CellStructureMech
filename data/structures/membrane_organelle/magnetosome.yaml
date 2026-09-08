@@ -44,6 +44,30 @@ components:
   - reference: DOI:10.1002/pro.2827
     notes: Barber-Zucker & Zarivach 2015 survey the magnetosome-associated proteins
       and their assigned roles.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q93DY9
+    protein_label: Magnetosome protein MamA
+    gene_symbol: mamA
+    taxon_id: NCBITaxon:431944
+    taxon_label: Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 / NBRC
+      15271 / MSR-1)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene mamA in Magnetospirillum gryphiswaldense
+      (strain DSM 6361 / JCM 21280 / NBRC 15271 / MSR-1), a taxon this record names.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11571158
+      notes: Grünberg K et al. 2001, ‘A large gene cluster encoding several magnetosome
+        proteins is conserved in different species of magnetotactic bacteria.’, Appl
+        Environ Microbiol. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Magnetosome membrane' localisation of Q93DY9.
+    - reference: PMID:14766587
+      notes: Grünberg K et al. 2004, ‘Biochemical and proteomic analysis of the magnetosome
+        membrane in Magnetospirillum gryphiswaldense’, Appl Environ Microbiol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Magnetosome membrane' localisation
+        of Q93DY9.
 - component_id: magnetite
   label: magnetite
   component_type: SMALL_MOLECULE
@@ -93,6 +117,29 @@ components:
         membrane in Magnetospirillum gryphiswaldense’, Appl Environ Microbiol. ECO:0000269
         experimental evidence for the magnetosome localisation of V6F519, as cited
         by UniProt.
+  - uniprot_id: UniProtKB:Q2W8Q7
+    protein_label: Magnetosome-associated protein MamJ
+    gene_symbol: mamJ
+    taxon_id: NCBITaxon:342108
+    taxon_label: Paramagnetospirillum magneticum AMB-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: 'UniProt annotates this protein to SL-0510 (magnetosome); component role:
+      Cytoskeletal filament that aligns assembled magnetosomes into a chain, with
+      MamJ connecting the vesicles to it. Machinery acting on the assembled organelle
+      rather than a constituent of it: vesicles still form and mineralise without
+      it, but they scatter (docs/CURATION.md, component boundary).'
+    evidence:
+    - reference: PMID:20212111
+      notes: Murat D et al. 2010, ‘Comprehensive genetic dissection of the magnetosome
+        gene island reveals the step-wise assembly of a prokaryotic organelle.’, Proc
+        Natl Acad Sci U S A. ECO:0000269 experimental evidence for the magnetosome
+        localisation of Q2W8Q7, as cited by UniProt.
+    - reference: PMID:27481925
+      notes: Arakaki A et al. 2016, ‘Comparative Subcellular Localization Analysis
+        of Magnetosome Proteins Reveals a Unique Localization Behavior of Mms6 Protein
+        onto Magnetite Crystals.’, J Bacteriol. ECO:0000269 experimental evidence
+        for the magnetosome localisation of Q2W8Q7, as cited by UniProt.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The component combines MamK and its MamJ connector. The stored
     MamJ example has IPR060787, whereas reviewed MamK Q6NE59 has IPR056546; they share
@@ -337,6 +384,19 @@ curation_history:
   action: ENHANCE_CAUSAL_GRAPH
   changes: Added the missing description to the magnetosome iron-mineralisation edge.
   llm_assisted: true
+- timestamp: '2026-09-08T04:24:25Z'
+  curator: uniprot_sl
+  action: SEED_PROTEIN_EXAMPLES
+  changes: Added 1 taxon-paired protein example(s) from UniProtKB reviewed entries
+    annotated to SL-0510 (Magnetosome), matched to components by gene symbol, each
+    carrying UniProt's ECO:0000269 PubMed evidence for the localisation.
+- timestamp: '2026-09-08T04:25:16Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving the component''s declared
+    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
+    this record names. Symbols resolving to more than one reviewed entry were skipped
+    rather than chosen between.'
 xrefs:
 - uniprot.location:SL-0510
 - MICRO:0000216

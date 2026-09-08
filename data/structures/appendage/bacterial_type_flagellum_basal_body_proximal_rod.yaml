@@ -35,6 +35,13 @@ curation_history:
     the FliE edge predicate, and removing overbroad temporal and canonical-example
     wording.'
   llm_assisted: true
+- timestamp: '2026-09-08T04:24:52Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving the component''s declared
+    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
+    this record names. Symbols resolving to more than one reviewed entry were skipped
+    rather than chosen between.'
 synonyms:
 - synonym_text: flagellar basal body, proximal rod
   synonym_type: EXACT_SYNONYM
@@ -63,6 +70,24 @@ components:
   - reference: DOI:10.1016/j.cell.2021.03.057
     notes: Tan et al. 2021 resolved Salmonella FliE at the base of the rod above the
       export gate.
+  protein_examples:
+  - uniprot_id: UniProtKB:P26462
+    protein_label: Flagellar hook-basal body complex protein FliE
+    gene_symbol: fliE
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene fliE in Salmonella typhimurium
+      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P26462
+      notes: UniProtKB reviewed (Swiss-Prot) entry P26462, the single reviewed entry
+        for gene fliE in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+        Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 - component_id: flgb
   label: flagellar basal-body rod protein FlgB
   component_type: PROTEIN
@@ -79,6 +104,35 @@ components:
   - reference: PMID:15136044
     notes: Saijo-Hamano et al. 2004 purified Salmonella FlgB with the other proximal
       and distal rod proteins for in vitro characterization.
+  protein_examples:
+  - uniprot_id: UniProtKB:P16437
+    protein_label: Flagellar basal body rod protein FlgB
+    gene_symbol: flgB
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene flgB in Salmonella typhimurium
+      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:10809679
+      notes: Minamino T et al. 2000, ‘Interaction between FliE and FlgB, a proximal
+        rod component of the flagellar basal body of Salmonella.’, J Bacteriol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Bacterial flagellum basal
+        body' localisation of P16437.
+    - reference: PMID:11554792
+      notes: Hirano T et al. 2001, ‘The role in flagellar rod assembly of the N-terminal
+        domain of Salmonella FlgJ, a flagellum-specific muramidase.’, J Mol Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Bacterial flagellum
+        basal body' localisation of P16437.
+    - reference: PMID:1594581
+      notes: Sosinsky GE et al. 1992, ‘Mass determination and estimation of subunit
+        stoichiometry of the bacterial hook-basal body flagellar complex of Salmonella
+        typhimurium by scanning transmission electron microscopy.’, Proc Natl Acad
+        Sci U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Bacterial
+        flagellum basal body' localisation of P16437.
 - component_id: flgc
   label: flagellar basal-body rod protein FlgC
   component_type: PROTEIN
@@ -94,6 +148,24 @@ components:
       FlgB, FlgF and FlgG.
   - reference: PMID:15136044
     notes: Saijo-Hamano et al. 2004 characterized purified Salmonella FlgC in vitro.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A1I7
+    protein_label: Flagellar basal-body rod protein FlgC
+    gene_symbol: flgC
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene flgC in Salmonella typhimurium
+      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A1I7
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A1I7, the single reviewed entry
+        for gene flgC in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+        Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 - component_id: flgf
   label: flagellar basal-body rod protein FlgF
   component_type: PROTEIN
@@ -111,6 +183,24 @@ components:
     notes: Homma et al. 1990 assigned FlgF to the segmented Salmonella proximal rod.
   - reference: PMID:15136044
     notes: Saijo-Hamano et al. 2004 characterized purified Salmonella FlgF in vitro.
+  protein_examples:
+  - uniprot_id: UniProtKB:P16323
+    protein_label: Flagellar basal-body rod protein FlgF
+    gene_symbol: flgF
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene flgF in Salmonella typhimurium
+      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P16323
+      notes: UniProtKB reviewed (Swiss-Prot) entry P16323, the single reviewed entry
+        for gene flgF in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+        Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

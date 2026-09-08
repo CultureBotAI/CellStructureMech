@@ -31,6 +31,23 @@ components:
       of rod-shaped bacteria.
   - reference: DOI:10.1016/j.cell.2018.02.050
     notes: Shi et al. 2018 review MreB filament architecture and its membrane association.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A9X4
+    protein_label: Cell shape-determining protein MreB
+    gene_symbol: mreB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene mreB in Escherichia coli (strain
+      K12), a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15612918
+      notes: Kruse T et al. 2005, ‘The morphogenetic MreBCD proteins of Escherichia
+        coli form an essential membrane-bound complex.’, Mol Microbiol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P0A9X4.
 - component_id: elongasome_link
   label: RodZ
   component_type: PROTEIN
@@ -44,6 +61,24 @@ components:
   evidence:
   - reference: DOI:10.1016/j.cell.2018.02.050
     notes: Shi et al. 2018 describe RodZ coupling MreB to the synthetic complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P27434
+    protein_label: Cytoskeleton protein RodZ
+    gene_symbol: rodZ
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene rodZ in Escherichia coli (strain
+      K12), a taxon this record names; other reviewed entries for this symbol exist
+      on sub-strain nodes and this is the one at the taxon the record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:19008860
+      notes: Shiomi D et al. 2008, ‘Determination of bacterial rod shape by a novel
+        cytoskeletal membrane protein.’, EMBO J. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cell inner membrane' localisation of P27434.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -254,6 +289,13 @@ curation_history:
     elongasome's sidewall-synthesis review, and keeps the filament-to-machine relation
     out of equivalence-only xrefs.
   llm_assisted: true
+- timestamp: '2026-09-08T04:25:02Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving the component''s declared
+    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
+    this record names. Symbols resolving to more than one reviewed entry were skipped
+    rather than chosen between.'
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped

@@ -20,6 +20,13 @@ curation_history:
     function, literature evidence, a base-assembly graph, and a protein-family grounding
     todo.
   llm_assisted: true
+- timestamp: '2026-09-08T04:24:45Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving the component''s declared
+    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
+    this record names. Symbols resolving to more than one reviewed entry were skipped
+    rather than chosen between.'
 synonyms:
 - synonym_text: archaellum
   synonym_type: EXACT_SYNONYM
@@ -89,6 +96,24 @@ components:
   - reference: DOI:10.1111/mmi.13260
     notes: Chaudhury et al. 2016 tested the nucleotide-dependent FlaH-FlaI interaction
       and its requirement for archaellum motor assembly and function.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q4J9K9
+    protein_label: Archaeal flagellar ATP-binding protein FlaH
+    gene_symbol: flaH
+    taxon_id: NCBITaxon:330779
+    taxon_label: Sulfolobus acidocaldarius (strain ATCC 33909 / DSM 639 / JCM 8929
+      / NBRC 15157 / NCIMB 11770)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene flaH in Sulfolobus acidocaldarius
+      (strain ATCC 33909 / DSM 639 / JCM 8929 / NBRC 15157 / NCIMB 11770), a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:24103130
+      notes: Banerjee A et al. 2013, ‘Insights into subunit interactions in the Sulfolobus
+        acidocaldarius archaellum cytoplasmic complex.’, FEBS J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Archaeal flagellum' localisation of Q4J9K9.
 - component_id: arlfg_anchor
   label: ArlF/ArlG S-layer anchor
   component_type: PROTEIN_COMPLEX

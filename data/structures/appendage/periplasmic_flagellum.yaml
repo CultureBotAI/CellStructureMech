@@ -33,6 +33,13 @@ curation_history:
     edges so the periplasmic graph places cell-body deformation downstream of an active
     rotation process.
   llm_assisted: true
+- timestamp: '2026-09-08T04:25:01Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving the component''s declared
+    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
+    this record names. Symbols resolving to more than one reviewed entry were skipped
+    rather than chosen between.'
 synonyms:
 - synonym_text: endoflagellum
   synonym_type: EXACT_SYNONYM
@@ -83,6 +90,25 @@ components:
   - reference: DOI:10.1128/JB.180.9.2418-2425.1998
     notes: Ge et al. 1998 detected FlaA and FlaB in Borrelia burgdorferi periplasmic
       flagella and found FlaA in several spirochete species.
+  protein_examples:
+  - uniprot_id: UniProtKB:P70856
+    protein_label: Flagellar filament outer layer protein
+    gene_symbol: flaA
+    taxon_id: NCBITaxon:224326
+    taxon_label: Borreliella burgdorferi (strain ATCC 35210 / DSM 4680 / CIP 102532
+      / B31)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene flaA in Borreliella burgdorferi
+      (strain ATCC 35210 / DSM 4680 / CIP 102532 / B31), a taxon this record names.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P70856
+      notes: UniProtKB reviewed (Swiss-Prot) entry P70856, the single reviewed entry
+        for gene flaA in Borreliella burgdorferi (strain ATCC 35210 / DSM 4680 / CIP
+        102532 / B31). Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: basal_body_motor
   label: spirochete flagellar basal body motor
   component_type: PROTEIN_COMPLEX

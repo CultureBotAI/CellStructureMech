@@ -34,6 +34,13 @@ curation_history:
     paper to BMC-P, co2_retention and graph evidence; resolved #222 by adding the
     Roberts et al. 2012 CsoS1D primary paper to BMC-T evidence.'
   llm_assisted: true
+- timestamp: '2026-09-08T04:25:20Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving the component''s declared
+    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
+    this record names. Symbols resolving to more than one reviewed entry were skipped
+    rather than chosen between.'
 synonyms:
 - synonym_text: carboxysome protein shell
   synonym_type: EXACT_SYNONYM
@@ -71,6 +78,35 @@ components:
   - reference: DOI:10.1371/journal.pone.0043871
     notes: Rae et al. 2012 analyzed CcmK proteins in the Synechococcus elongatus PCC
       7942 beta-carboxysome outer shell.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03511
+    protein_label: Carboxysome shell protein CcmK2
+    gene_symbol: ccmK2
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene ccmK, which UniProt lists under
+      the primary name ccmK2, in Synechococcus elongatus (strain ATCC 33912 / PCC
+      7942 / FACHB-805), a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: PMID:17675289
+      notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
+        reveals multiple Rubisco complexes with carboxysomal proteins CcmM and CcaA’,
+        J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome'
+        localisation of Q03511.
+    - reference: PMID:20304968
+      notes: Long BM et al. 2010, ‘Functional cyanobacterial beta-carboxysomes have
+        an absolute requirement for both long and short forms of the CcmM protein’,
+        Plant Physiol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Carboxysome' localisation of Q03511.
+    - reference: PMID:22928045
+      notes: 'Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes
+        in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
+        PLoS One. ECO:0000269 experimental evidence cited by UniProt for the ''Carboxysome''
+        localisation of Q03511.'
 - component_id: bmc_t
   label: BMC-T shell pseudohexamers (CcmO, CcmP, CsoS1D)
   component_type: PROTEIN
@@ -96,6 +132,33 @@ components:
   - reference: DOI:10.1128/JB.06444-11
     notes: Roberts et al. 2012 isolated Prochlorococcus alpha-carboxysomes and detected
       the tandem-BMC shell protein CsoS1D as a minor shell component.
+  protein_examples:
+  - uniprot_id: UniProtKB:P46205
+    protein_label: Carboxysome assembly protein CcmO
+    gene_symbol: ccmO
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene ccmO in Synechococcus elongatus
+      (strain ATCC 33912 / PCC 7942 / FACHB-805), a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:22928045
+      notes: 'Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes
+        in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
+        PLoS One. ECO:0000269 experimental evidence cited by UniProt for the ''Carboxysome''
+        localisation of P46205.'
+    - reference: PMID:24267892
+      notes: 'Cameron JC et al. 2013, ‘Biogenesis of a bacterial organelle: the carboxysome
+        assembly pathway’, Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the ''Carboxysome'' localisation of P46205.'
+    - reference: PMID:31048338
+      notes: Sun Y et al. 2019, ‘Single-Organelle Quantification Reveals Stoichiometric
+        and Structural Variability of Carboxysomes Dependent on the Environment’,
+        Plant Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome'
+        localisation of P46205.
 - component_id: bmc_p
   label: BMC-P shell pentamers (CcmL / CsoS4)
   component_type: PROTEIN
@@ -120,6 +183,28 @@ components:
   - reference: DOI:10.1371/journal.pone.0007521
     notes: Cai et al. 2009 showed that deleting both alpha-carboxysome vertex proteins
       CsoS4A and CsoS4B yields elongated shells and severe high-CO2-requiring phenotypes.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03512
+    protein_label: Carboxysome shell vertex protein CcmL
+    gene_symbol: ccmL
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene ccmL in Synechococcus elongatus
+      (strain ATCC 33912 / PCC 7942 / FACHB-805), a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:28616951
+      notes: Faulkner M et al. 2017, ‘Direct characterization of the native structure
+        and mechanics of cyanobacterial carboxysomes’, Nanoscale. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Carboxysome' localisation of Q03512.
+    - reference: PMID:31048338
+      notes: Sun Y et al. 2019, ‘Single-Organelle Quantification Reveals Stoichiometric
+        and Structural Variability of Carboxysomes Dependent on the Environment’,
+        Plant Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome'
+        localisation of Q03512.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

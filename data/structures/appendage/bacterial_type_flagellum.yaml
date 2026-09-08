@@ -77,6 +77,24 @@ components:
     FlgF and FlgG, so it also covers two rod proteins and is broader than the hook.
     Declined rather than adopting a broader term as identity. Revisit if an organism
     whose FlgE does match IPR012835 is added to the record.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A1J1
+    protein_label: Flagellar hook protein FlgE
+    gene_symbol: flgE
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene flgE in Salmonella typhimurium
+      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A1J1
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A1J1, the single reviewed entry
+        for gene flgE in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+        Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 - component_id: ms_ring
   label: MS ring (FliF)
   component_type: PROTEIN_COMPLEX
@@ -710,5 +728,12 @@ curation_history:
   changes: Added descriptions to the remaining flagellar torque-generation edges so
     every edge now states the mechanistic step it represents.
   llm_assisted: true
+- timestamp: '2026-09-08T04:24:47Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving the component''s declared
+    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
+    this record names. Symbols resolving to more than one reviewed entry were skipped
+    rather than chosen between.'
 xrefs:
 - uniprot.location:SL-0307

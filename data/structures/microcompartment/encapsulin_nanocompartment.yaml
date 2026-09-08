@@ -30,6 +30,29 @@ components:
     notes: Giessen 2016 describes the HK97-fold shell and its T=1 and T=3 assemblies.
   - reference: DOI:10.1038/nmicrobiol.2017.29
     notes: The 2017 survey reports shell families across thousands of genomes.
+  protein_examples:
+  - uniprot_id: UniProtKB:I6WZG6
+    protein_label: Type 1 encapsulin shell protein
+    gene_symbol: enc
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene cfp29, which UniProt lists
+      under the primary name enc, in Mycobacterium tuberculosis (strain ATCC 25618
+      / H37Rv), a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:24855650
+      notes: Contreras H et al. 2014, ‘Characterization of a Mycobacterium tuberculosis
+        nanocompartment and its potential cargo proteins.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Encapsulin nanocompartment'
+        localisation of I6WZG6.
+    - reference: PMID:9596740
+      notes: Rosenkrands I et al. 1998, ‘Identification and characterization of a
+        29-kilodalton protein from Mycobacterium tuberculosis culture filtrate recognized
+        by mouse memory effector cells.’, Infect Immun. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Secreted' localisation of I6WZG6.
 - component_id: cargo
   label: targeted cargo enzymes
   component_type: PROTEIN
@@ -48,6 +71,24 @@ components:
     notes: Giessen 2016 describes targeting-peptide-directed cargo loading.
   - reference: DOI:10.1038/nmicrobiol.2017.29
     notes: The 2017 survey classifies encapsulin systems by their cargo.
+  protein_examples:
+  - uniprot_id: UniProtKB:I6Y4U9
+    protein_label: Dye-decolorizing peroxidase
+    gene_symbol: dyp
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene dyp in Mycobacterium tuberculosis
+      (strain ATCC 25618 / H37Rv), a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: PMID:24855650
+      notes: Contreras H et al. 2014, ‘Characterization of a Mycobacterium tuberculosis
+        nanocompartment and its potential cargo proteins.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Encapsulin nanocompartment'
+        localisation of I6Y4U9.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -301,3 +342,10 @@ curation_history:
     cargo, grounded ferrous iron with ChEBI, and anchored shell protein nodes with
     Pfam.
   llm_assisted: true
+- timestamp: '2026-09-08T04:25:23Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving the component''s declared
+    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
+    this record names. Symbols resolving to more than one reviewed entry were skipped
+    rather than chosen between.'

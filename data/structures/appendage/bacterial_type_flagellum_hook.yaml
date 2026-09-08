@@ -28,6 +28,13 @@ curation_history:
     standalone hook scope; resolved #234 by inserting an explicit flagellar-rotation
     process between hook torque transmission and motility.'
   llm_assisted: true
+- timestamp: '2026-09-08T04:24:58Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving the component''s declared
+    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
+    this record names. Symbols resolving to more than one reviewed entry were skipped
+    rather than chosen between.'
 synonyms:
 - synonym_text: flagellar hook
   synonym_type: EXACT_SYNONYM
@@ -63,6 +70,24 @@ components:
   - reference: DOI:10.3390/biom9090462
     notes: Horvath et al. 2019 resolved the Salmonella flagellar hook and modeled
       FlgE intermolecular contacts that support universal-joint mechanics.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A1J1
+    protein_label: Flagellar hook protein FlgE
+    gene_symbol: flgE
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene flgE in Salmonella typhimurium
+      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A1J1
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A1J1, the single reviewed entry
+        for gene flgE in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+        Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
