@@ -108,6 +108,15 @@
   "definition": "The portion of the bacterial-type flagellum that connects the filament to the basal body."
  },
  {
+  "identifier": "GO:0120102",
+  "label": "bacterial-type flagellum secretion apparatus",
+  "category": "APPENDAGE",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/appendage/bacterial_type_flagellum_secretion_apparatus.html",
+  "definition": "A flagellum-specific type III export apparatus at the cytoplasmic side of the bacterial MS ring that uses a FlhA/FlhB/FliP/FliQ/FliR membrane export gate and a FliH/FliI/FliJ cytoplasmic ATPase complex to export rod, hook, and filament subunits through the growing flagellum."
+ },
+ {
   "identifier": "GO:0120101",
   "label": "bacterial-type flagellum stator complex",
   "category": "APPENDAGE",
