@@ -13,6 +13,11 @@
       "label": "archaeal-type flagellum",
       "neighbors": [
         {
+          "identifier": "GO:0120101",
+          "label": "bacterial-type flagellum stator complex",
+          "cosine_similarity": 0.77370864
+        },
+        {
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
           "cosine_similarity": 0.76528737
@@ -31,11 +36,6 @@
           "identifier": "GO:0009427",
           "label": "bacterial-type flagellum basal body, distal rod, L ring",
           "cosine_similarity": 0.75305227
-        },
-        {
-          "identifier": "GO:0055040",
-          "label": "periplasmic flagellum",
-          "cosine_similarity": 0.74453005
         }
       ]
     },
@@ -381,6 +381,37 @@
       ]
     },
     {
+      "identifier": "GO:0120101",
+      "label": "bacterial-type flagellum stator complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009428",
+          "label": "bacterial-type flagellum basal body, distal rod, P ring",
+          "cosine_similarity": 0.83710846
+        },
+        {
+          "identifier": "GO:0009425",
+          "label": "bacterial-type flagellum basal body",
+          "cosine_similarity": 0.83677628
+        },
+        {
+          "identifier": "GO:0009427",
+          "label": "bacterial-type flagellum basal body, distal rod, L ring",
+          "cosine_similarity": 0.83416798
+        },
+        {
+          "identifier": "GO:0009431",
+          "label": "bacterial-type flagellum basal body, MS ring",
+          "cosine_similarity": 0.81899768
+        },
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.81141999
+        }
+      ]
+    },
+    {
       "identifier": "GO:0098774",
       "label": "curli",
       "neighbors": [
@@ -560,9 +591,9 @@
           "cosine_similarity": 0.75624505
         },
         {
-          "identifier": "GO:0033099",
-          "label": "attachment organelle",
-          "cosine_similarity": 0.72826057
+          "identifier": "GO:0120101",
+          "label": "bacterial-type flagellum stator complex",
+          "cosine_similarity": 0.74757661
         }
       ]
     },
@@ -602,6 +633,11 @@
       "label": "proton-transporting ATP synthase complex",
       "neighbors": [
         {
+          "identifier": "GO:0120101",
+          "label": "bacterial-type flagellum stator complex",
+          "cosine_similarity": 0.7648067
+        },
+        {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
           "cosine_similarity": 0.75952865
@@ -620,11 +656,6 @@
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
           "cosine_similarity": 0.70467165
-        },
-        {
-          "identifier": "GO:0097589",
-          "label": "archaeal-type flagellum",
-          "cosine_similarity": 0.70422502
         }
       ]
     },
@@ -1258,6 +1289,11 @@
           "cosine_similarity": 0.68543971
         },
         {
+          "identifier": "GO:0120101",
+          "label": "bacterial-type flagellum stator complex",
+          "cosine_similarity": 0.67775012
+        },
+        {
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
           "cosine_similarity": 0.67199391
@@ -1271,11 +1307,6 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.66678418
-        },
-        {
-          "identifier": "GO:0033104",
-          "label": "type VI protein secretion system complex",
-          "cosine_similarity": 0.6632303
         }
       ]
     },
@@ -1330,14 +1361,14 @@
           "cosine_similarity": 0.66968091
         },
         {
+          "identifier": "GO:0120101",
+          "label": "bacterial-type flagellum stator complex",
+          "cosine_similarity": 0.66460222
+        },
+        {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.66304185
-        },
-        {
-          "identifier": "GO:0140737",
-          "label": "encapsulin nanocompartment",
-          "cosine_similarity": 0.6402918
         }
       ]
     },
