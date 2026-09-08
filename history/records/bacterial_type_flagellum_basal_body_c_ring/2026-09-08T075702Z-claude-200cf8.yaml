@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+  slug: bacterial_type_flagellum_basal_body_c_ring
+session:
+  id: 2026-09-08T075702Z-claude-200cf8
+  timestamp: '2026-09-08T07:57:02Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/274
+  - https://github.com/CultureBotAI/CellStructureMech/issues/275
+  - https://github.com/CultureBotAI/CellStructureMech/issues/276
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/273
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - composition
+  - causal_graphs
+  - functions
+  summary: Tighten bacterial C-ring review findings
+  details: 'Resolved #274 by moving morphology-level Thomas 1999 evidence off the FliN component,
+    resolved #275 by adding explicit FliG, FliM and FliN edges into the GO:0009433 C-ring
+    graph node, and resolved #276 by adding Welch et al. 1993 as direct phosphorylation-dependent
+    CheY-to-FliM binding evidence.'
