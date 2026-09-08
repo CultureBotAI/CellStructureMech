@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: data/structures
+  slug: protein-example-accessions
+session:
+  id: 2026-09-08T043348Z-claude-8ddb80
+  timestamp: '2026-09-08T04:33:48Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: claude-opus-5
+    agent_tool: Claude Code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Seed protein_examples accessions from UniProt by SL term and by gene symbol (#183)
+  details: '#183 is the prerequisite for the InterPro half of #174: interpro_groundings.py
+    matches on UniProt accessions, and most PROTEIN components carried only a gene symbol.
+    Two routes were run. uniprot_sl.py proteins, the existing route, was run across all 16
+    records whose GO term has a UniProt Subcellular Location mapping and reached 5 accessions
+    - most named taxa have no reviewed entry annotated to the location, so the route the issue
+    called ''the mechanical part'' is nearly exhausted. A new adapter, scripts/uniprot_genes.py,
+    resolves a component''s declared gene symbol to the single reviewed Swiss-Prot entry for
+    that symbol in a taxon the record itself names, and seeded 62 more across 32 records.
+    It writes only when the symbol resolves to exactly one reviewed entry: gene_exact:pilA
+    returns five reviewed pilin alleles in P. aeruginosa and the component is skipped rather
+    than chosen between. The returned entry''s own gene names are re-checked against the symbol
+    before it is accepted, and the entry''s own organism is recorded rather than the record''s
+    taxon node. PROTEIN components carrying an accession go from 12 of 114 to 76 of 114. No
+    grounding is asserted: interpro_groundings.py remains a curator-reviewed allow-list and
+    was not extended here.'

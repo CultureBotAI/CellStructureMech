@@ -1,0 +1,44 @@
+history_version: 1
+target:
+  kind: mapping
+  path: data/structures
+  slug: protein-example-accessions
+session:
+  id: 2026-09-08T074134Z-claude-495c71
+  timestamp: '2026-09-08T07:41:34Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: claude-opus-5
+    agent_tool: Claude Code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/270
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/260
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Review round 2 on PR #260: taxon_label must be NCBI''s name for the NCBITaxon
+    id (#270, #271)'
+  details: 'Second adversarial review of PR #260 found that uniprot_genes wrote UniProt''s
+    organism string as taxon_label beside an NCBITaxon id: ''Escherichia coli (strain K12)''
+    for NCBITaxon:83333 where NCBI says ''Escherichia coli K-12'', and 14 more. conf/id_label_targets.yaml
+    states the convention - taxon labels are NCBI names - and lists NCBITaxon under ignored_prefixes,
+    so just validate-products skipped every one of them and reported a green tick; check_curies
+    resolves NCBITaxon ids for liveness only, and no test anywhere compares a taxon_label
+    to its id. Fixed by adding ncbi_taxon_names() to ingest.py, batched through esummary db=taxonomy
+    and cached like pubmed_citations, and declining an example whose taxon NCBI will not name
+    rather than falling back to UniProt''s string. A taxon the record itself names keeps the
+    record''s own label, which is what uniprot_sl.py writes, so one id does not carry two
+    labels in one corpus. Also #271: entry_status now returns None when an entry carries no
+    entryType, and the example is declined, rather than writing UNREVIEWED - the query filtered
+    reviewed:true, so a missing entryType is a broken contract, not an unreviewed entry. The
+    corpus was reset to main and both routes re-run from scratch so the records are exactly
+    what the fixed adapters produce: 5 from the SL route, 109 from the gene route, 145 protein
+    examples total. All 114 examples this branch writes were checked against the live UniProt
+    entry and NCBI taxonomy for accession, gene symbol, protein label, entry status, taxon
+    id, taxon label and ECO:0000269 PubMed evidence; zero mismatches. Two mutants of the new
+    guards were checked and both die. Left filed, not fixed: #272 (an unescaped gene symbol
+    would abort a corpus run - unreachable today, every symbol in the corpus is alphanumeric)
+    and #264/#266.'

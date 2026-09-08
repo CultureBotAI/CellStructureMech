@@ -26,6 +26,13 @@ curation_history:
   changes: Replaced the Huseby and Roth PMID reference with DOI:10.1128/JB.02179-12
     because PubMed exposes a DOI for the article.
   llm_assisted: true
+- timestamp: '2026-09-08T07:39:53Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Eut metabolosome
   synonym_type: EXACT_SYNONYM
@@ -62,6 +69,80 @@ components:
   - reference: DOI:10.1038/srep24359
     notes: Held et al. assembled EutS-only and EutSMNLK nanocompartments from Salmonella
       shell proteins in E. coli and confirmed BMC-like particles by TEM.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9ZFV7
+    protein_label: Bacterial microcompartment shell protein EutS
+    gene_symbol: eutS
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene eutS in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:22428024
+      notes: Choudhary S et al. 2012, ‘Engineered protein nano-compartments for targeted
+        enzyme localization.’, PLoS One. ECO:0000269 experimental evidence cited by
+        UniProt for the 'Bacterial microcompartment' localisation of Q9ZFV7.
+    - reference: PMID:27063436
+      notes: Held M et al. 2016, ‘Engineering formation of multiple recombinant Eut
+        protein nanocompartments in E. coli.’, Sci Rep. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Bacterial microcompartment' localisation of Q9ZFV7.
+    - reference: PMID:27450681
+      notes: Quin MB et al. 2016, ‘Encapsulation of multiple cargo proteins within
+        recombinant Eut nanocompartments.’, Appl Microbiol Biotechnol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Bacterial microcompartment'
+        localisation of Q9ZFV7.
+  - uniprot_id: UniProtKB:P41791
+    protein_label: Bacterial microcompartment shell protein EutM
+    gene_symbol: eutM
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene eutM in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:27063436
+      notes: Held M et al. 2016, ‘Engineering formation of multiple recombinant Eut
+        protein nanocompartments in E. coli.’, Sci Rep. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Bacterial microcompartment' localisation of P41791.
+  - uniprot_id: UniProtKB:P0A1C9
+    protein_label: Bacterial microcompartment shell protein EutL
+    gene_symbol: eutL
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene eutL in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:27063436
+      notes: Held M et al. 2016, ‘Engineering formation of multiple recombinant Eut
+        protein nanocompartments in E. coli.’, Sci Rep. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Bacterial microcompartment' localisation of P0A1C9.
+  - uniprot_id: UniProtKB:Q9ZFU8
+    protein_label: Bacterial microcompartment shell protein EutK
+    gene_symbol: eutK
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene eutK in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:27063436
+      notes: Held M et al. 2016, ‘Engineering formation of multiple recombinant Eut
+        protein nanocompartments in E. coli.’, Sci Rep. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Bacterial microcompartment' localisation of Q9ZFU8.
 - component_id: eutn_vertex_shell_protein
   label: EutN BMC-P vertex shell protein
   component_type: PROTEIN
@@ -82,6 +163,24 @@ components:
   - reference: DOI:10.1002/pro.2246
     notes: Wheatley et al. re-examined EutN and showed that the protein is predominantly
       pentameric in solution.
+  protein_examples:
+  - uniprot_id: UniProtKB:P41792
+    protein_label: Bacterial microcompartment shell vertex protein EutN
+    gene_symbol: eutN
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene eutN in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P41792
+      notes: UniProtKB reviewed (Swiss-Prot) entry P41792, the single reviewed entry
+        for gene eutN in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

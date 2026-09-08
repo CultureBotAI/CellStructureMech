@@ -65,6 +65,49 @@ components:
     - reference: PMID:3139490
       notes: Zheng et al. identify CotE as a morphogenetic protein required to assemble
         the outer Bacillus subtilis endospore coat.
+  - uniprot_id: UniProtKB:P35149
+    protein_label: Stage IV sporulation protein A
+    gene_symbol: spoIVA
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene spoIVA in Bacillus subtilis
+      subsp. subtilis str. 168, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P35149
+      notes: UniProtKB reviewed (Swiss-Prot) entry P35149, the single reviewed entry
+        for gene spoIVA in Bacillus subtilis subsp. subtilis str. 168. Establishes
+        the accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
+  - uniprot_id: UniProtKB:O32062
+    protein_label: Spore coat morphogenetic protein SafA
+    gene_symbol: safA
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene safA in Bacillus subtilis subsp.
+      subtilis str. 168, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: PMID:11325931
+      notes: Ozin AJ et al. 2001, ‘SpoVID guides SafA to the spore coat in Bacillus
+        subtilis.’, J Bacteriol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Forespore' localisation of O32062.
+    - reference: PMID:30168214
+      notes: Nunes F et al. 2018, ‘SpoVID functions as a non-competitive hub that
+        connects the modules for assembly of the inner and outer spore coat layers
+        in Bacillus subtilis.’, Mol Microbiol. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Forespore' localisation of O32062.
+    - reference: PMID:30455281
+      notes: Pereira FC et al. 2019, ‘A LysM Domain Intervenes in Sequential Protein-Protein
+        and Protein-Peptidoglycan Interactions Important for Spore Coat Assembly in
+        Bacillus subtilis.’, J Bacteriol. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Forespore' localisation of O32062.
 - component_id: exosporium
   label: exosporium
   component_type: PROTEIN
@@ -324,3 +367,10 @@ curation_history:
     grounded cortex and coat nodes to their exact GO part terms, and added primary
     evidence for SpoIVA-driven basement-layer assembly.
   llm_assisted: true
+- timestamp: '2026-09-08T07:40:30Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'

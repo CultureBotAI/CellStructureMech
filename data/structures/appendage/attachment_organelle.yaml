@@ -28,6 +28,12 @@ curation_history:
     row into separate P65 and HMW3 protein components and updating the graph component
     references.'
   llm_assisted: true
+- timestamp: '2026-09-08T07:37:54Z'
+  curator: uniprot_sl
+  action: SEED_PROTEIN_EXAMPLES
+  changes: Added 3 taxon-paired protein example(s) from UniProtKB reviewed entries
+    annotated to SL-0020 (Attachment organelle), matched to components by gene symbol,
+    each carrying UniProt's ECO:0000269 PubMed evidence for the localisation.
 synonyms:
 - synonym_text: terminal organelle
   synonym_type: EXACT_SYNONYM
@@ -95,6 +101,28 @@ components:
   - reference: DOI:10.1371/journal.ppat.1009621
     notes: Nakane et al. 2021 engineered HMW2 coiled-coil lengths and showed HMW2
       sets attachment-organelle length.
+  protein_examples:
+  - uniprot_id: UniProtKB:P75471
+    protein_label: Cytadherence high molecular weight protein 2
+    gene_symbol: hmw2
+    taxon_id: NCBITaxon:272634
+    taxon_label: Mycoplasmoides pneumoniae M129
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: 'UniProt annotates this protein to SL-0020 (attachment organelle); component
+      role: Acts as the length-setting internal-core scaffold of the paired plates
+      in the polar extension.'
+    evidence:
+    - reference: PMID:15466048
+      notes: Kenri T et al. 2004, ‘Use of fluorescent-protein tagging to determine
+        the subcellular localization of mycoplasma pneumoniae proteins encoded by
+        the cytadherence regulatory locus.’, J Bacteriol. ECO:0000269 experimental
+        evidence for the attachment organelle localisation of P75471, as cited by
+        UniProt.
+    - reference: PMID:26633540
+      notes: Nakane D et al. 2015, ‘Systematic Structural Analyses of Attachment Organelle
+        in Mycoplasma pneumoniae.’, PLoS Pathog. ECO:0000269 experimental evidence
+        for the attachment organelle localisation of P75471, as cited by UniProt.
 - component_id: p65_terminal_button
   label: P65 terminal-button protein
   component_type: PROTEIN
@@ -111,6 +139,28 @@ components:
   - reference: DOI:10.1371/journal.ppat.1005299
     notes: Nakane et al. 2015 placed P65 in the terminal-button substructure of the
       attachment-organelle internal core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0CJ81
+    protein_label: Proline-rich P65 protein
+    gene_symbol: p65
+    taxon_id: NCBITaxon:272634
+    taxon_label: Mycoplasmoides pneumoniae M129
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: 'UniProt annotates this protein to SL-0020 (attachment organelle); component
+      role: Localizes to the front terminal-button substructure that caps the paired
+      plates within the electron-dense internal core.'
+    evidence:
+    - reference: PMID:15466048
+      notes: Kenri T et al. 2004, ‘Use of fluorescent-protein tagging to determine
+        the subcellular localization of mycoplasma pneumoniae proteins encoded by
+        the cytadherence regulatory locus.’, J Bacteriol. ECO:0000269 experimental
+        evidence for the attachment organelle localisation of P0CJ81, as cited by
+        UniProt.
+    - reference: PMID:26633540
+      notes: Nakane D et al. 2015, ‘Systematic Structural Analyses of Attachment Organelle
+        in Mycoplasma pneumoniae.’, PLoS Pathog. ECO:0000269 experimental evidence
+        for the attachment organelle localisation of P0CJ81, as cited by UniProt.
 - component_id: hmw3_terminal_button
   label: HMW3 terminal-button protein
   component_type: PROTEIN
@@ -127,6 +177,22 @@ components:
   - reference: DOI:10.1371/journal.ppat.1005299
     notes: Nakane et al. 2015 placed HMW3 at the boundary between the terminal button
       and the paired plates.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q50360
+    protein_label: Cytadherence high molecular weight protein 3
+    gene_symbol: hmw3
+    taxon_id: NCBITaxon:272634
+    taxon_label: Mycoplasmoides pneumoniae M129
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: 'UniProt annotates this protein to SL-0020 (attachment organelle); component
+      role: Localizes to the terminal-button boundary with the paired plates in the
+      electron-dense internal core.'
+    evidence:
+    - reference: PMID:26633540
+      notes: Nakane D et al. 2015, ‘Systematic Structural Analyses of Attachment Organelle
+        in Mycoplasma pneumoniae.’, PLoS Pathog. ECO:0000269 experimental evidence
+        for the attachment organelle localisation of Q50360, as cited by UniProt.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:31969
   taxon_label: Mollicutes

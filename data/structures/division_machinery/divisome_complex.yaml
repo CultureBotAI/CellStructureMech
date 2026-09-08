@@ -25,6 +25,27 @@ components:
   - reference: DOI:10.1146/annurev-biophys-121219-081703
     notes: McQuillen & Xiao 2020 review FtsZ filament treadmilling and its role in
       organising the ring.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A9A6
+    protein_label: Cell division protein FtsZ
+    gene_symbol: ftsZ
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene ftsZ in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:1944597
+      notes: Bi EF et al. 1991, ‘FtsZ ring structure associated with division in Escherichia
+        coli.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P0A9A6.
+    - reference: PMID:8917533
+      notes: Ma X et al. 1996, ‘Colocalization of cell division proteins FtsZ and
+        FtsA to cytoskeletal structures in living Escherichia coli cells by using
+        green fluorescent protein.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm' localisation of P0A9A6.
 - component_id: membrane_tethers
   label: membrane tethers (FtsA, ZipA/SepF)
   component_type: PROTEIN
@@ -41,6 +62,70 @@ components:
   - reference: DOI:10.1111/j.1749-6632.2012.06818.x
     notes: Egan & Vollmer 2012 review the septal synthases and the membrane anchoring
       of FtsZ.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABH0
+    protein_label: Cell division protein FtsA
+    gene_symbol: ftsA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene ftsA in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15752196
+      notes: Pichoff S et al. 2005, ‘Tethering the Z ring to the membrane through
+        a conserved membrane targeting sequence in FtsA.’, Mol Microbiol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell inner membrane' localisation
+        of P0ABH0.
+    - reference: PMID:2203741
+      notes: Pla J et al. 1990, ‘The native form of FtsA, a septal protein of Escherichia
+        coli, is located in the cytoplasmic membrane.’, J Bacteriol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell inner membrane' localisation of P0ABH0.
+  - uniprot_id: UniProtKB:P77173
+    protein_label: Cell division protein ZipA
+    gene_symbol: zipA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene zipA in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell inner membrane' localisation of P77173.
+    - reference: PMID:9008158
+      notes: Hale CA et al. 1997, ‘Direct binding of FtsZ to ZipA, an essential component
+        of the septal ring structure that mediates cell division in E. coli.’, Cell.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane'
+        localisation of P77173.
+  - uniprot_id: UniProtKB:O31728
+    protein_label: Cell division protein SepF
+    gene_symbol: sepF
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene sepF in Bacillus subtilis subsp.
+      subtilis str. 168, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: PMID:16420366
+      notes: Hamoen LW et al. 2006, ‘SepF, a novel FtsZ-interacting protein required
+        for a late step in cell division.’, Mol Microbiol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm' localisation of O31728.
+    - reference: PMID:16796675
+      notes: Ishikawa S et al. 2006, ‘A new FtsZ-interacting protein, YlmF, complements
+        the activity of FtsA during progression of cell division in Bacillus subtilis.’,
+        Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of O31728.
 - component_id: septal_pg_synthase
   label: septal peptidoglycan synthase (FtsW-FtsI)
   component_type: PROTEIN_COMPLEX
@@ -262,6 +347,13 @@ curation_history:
     is restored verbatim. The narrowing moves to `notes`, and posed_date returns to
     when the question was actually raised.'
   llm_assisted: true
+- timestamp: '2026-09-08T07:38:58Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 part_of:
 - GO:0032153
 discussions:

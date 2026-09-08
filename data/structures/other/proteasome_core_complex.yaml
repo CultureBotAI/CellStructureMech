@@ -28,6 +28,13 @@ curation_history:
     evidence to keep the taxonomic distribution aligned with the cross-domain alpha
     and beta subunit model.'
   llm_assisted: true
+- timestamp: '2026-09-08T07:40:07Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: 20S proteasome
   synonym_type: EXACT_SYNONYM
@@ -62,6 +69,23 @@ components:
   - reference: DOI:10.1146/annurev-biochem-060410-150257
     notes: Tomko and Hochstrasser 2013 review the eukaryotic 20S core as a barrel-shaped
       protease with alpha-subunit outer rings.
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WHU1
+    protein_label: Proteasome subunit alpha
+    gene_symbol: prcA
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis H37Rv
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene prcA in Mycobacterium tuberculosis
+      H37Rv, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P9WHU1
+      notes: UniProtKB reviewed (Swiss-Prot) entry P9WHU1, the single reviewed entry
+        for gene prcA in Mycobacterium tuberculosis H37Rv. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: beta_subunits
   label: proteasome beta-type subunits
   component_type: PROTEIN
@@ -86,6 +110,23 @@ components:
   - reference: DOI:10.1146/annurev-biochem-060410-150257
     notes: Tomko and Hochstrasser 2013 review the eukaryotic 20S core as a barrel-shaped
       protease with beta-subunit inner rings.
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WHT9
+    protein_label: Proteasome subunit beta
+    gene_symbol: prcB
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis H37Rv
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene prcB in Mycobacterium tuberculosis
+      H37Rv, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P9WHT9
+      notes: UniProtKB reviewed (Swiss-Prot) entry P9WHT9, the single reviewed entry
+        for gene prcB in Mycobacterium tuberculosis H37Rv. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2157
   taxon_label: Archaea

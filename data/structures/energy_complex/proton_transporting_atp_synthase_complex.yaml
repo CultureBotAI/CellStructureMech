@@ -75,6 +75,24 @@ components:
   - reference: DOI:10.1146/annurev-biochem-013118-110903
     notes: Kuehlbrandt 2019 describes the two half-channels in subunit a and the ion
       path across the membrane.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AB98
+    protein_label: ATP synthase subunit a
+    gene_symbol: atpB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene atpB in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, ‘Global topology analysis of the Escherichia coli
+        inner membrane proteome.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P0AB98.
 - component_id: peripheral_stalk
   label: peripheral stalk (b2, delta)
   component_type: PROTEIN_COMPLEX
@@ -266,6 +284,13 @@ curation_history:
   changes: Added descriptions to ATP synthase rotary-catalysis edges so every edge
     states the ion-flow, rotor, or catalytic step it represents.
   llm_assisted: true
+- timestamp: '2026-09-08T07:39:15Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 datasets:
 - accession: PDB:6OQR
   title: E. coli ATP Synthase ADP State 1a

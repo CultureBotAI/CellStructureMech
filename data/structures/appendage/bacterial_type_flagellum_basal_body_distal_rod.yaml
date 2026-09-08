@@ -35,6 +35,13 @@ curation_history:
     a generic biochemical citation on the distal-axis function, and removing temporal
     ''completes'' wording from the causal graph.'
   llm_assisted: true
+- timestamp: '2026-09-08T07:38:38Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: flagellar basal body, distal rod
   synonym_type: EXACT_SYNONYM
@@ -61,6 +68,24 @@ components:
   - reference: DOI:10.1038/s41564-021-00895-y
     notes: Johnson et al. 2021 modeled the intact Salmonella basal-body rod with a
       FlgG distal rod polymer.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A1J3
+    protein_label: Flagellar basal-body rod protein FlgG
+    gene_symbol: flgG
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene flgG in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A1J3
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A1J3, the single reviewed entry
+        for gene flgG in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

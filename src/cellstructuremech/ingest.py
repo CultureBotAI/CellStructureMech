@@ -52,6 +52,7 @@ def post_json(url: str, payload: dict) -> dict:
 
 ESUMMARY = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi"
 PUBMED_CACHE = Path(__file__).resolve().parents[2] / "build" / "pubmed_citations.json"
+TAXON_NAME_CACHE = Path(__file__).resolve().parents[2] / "build" / "ncbi_taxon_names.json"
 
 
 def _short_citation(summary: dict) -> str | None:
@@ -115,6 +116,39 @@ def pubmed_citations(pmids: list[str], cache_path: Path | None = None) -> dict[s
         cache_path.parent.mkdir(parents=True, exist_ok=True)
         cache_path.write_text(json.dumps(cache, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     return {p: cache[p] for p in wanted if p in cache}
+
+
+def ncbi_taxon_names(taxon_ids: list[str], cache_path: Path | None = None) -> dict[str, str]:
+    """NCBI's own scientific name per taxon id, batched through esummary and cached.
+
+    A ``taxon_label`` sits beside an ``NCBITaxon`` id, so the name has to come
+    from NCBI. Other sources give the same organism their own house string --
+    UniProt calls NCBITaxon:83333 "Escherichia coli (strain K12)" where NCBI
+    calls it "Escherichia coli K-12" -- and writing theirs beside NCBI's id
+    leaves a pair that does not correspond (#270). ``conf/id_label_targets.yaml``
+    skips the prefix, so no gate would catch it.
+
+    Ids that do not resolve are absent from the result rather than guessed at.
+    """
+    cache_path = cache_path or TAXON_NAME_CACHE
+    cache: dict[str, str] = {}
+    if cache_path.exists():
+        cache = json.loads(cache_path.read_text(encoding="utf-8"))
+
+    wanted = [str(t) for t in taxon_ids]
+    missing = sorted({t for t in wanted if t not in cache})
+    for start in range(0, len(missing), 100):
+        batch = missing[start:start + 100]
+        payload = get_json(f"{ESUMMARY}?db=taxonomy&retmode=json&id={','.join(batch)}")
+        result = payload.get("result") or {}
+        for taxon in batch:
+            name = ((result.get(taxon) or {}).get("scientificname") or "").strip()
+            if name:
+                cache[taxon] = name
+    if missing:
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        cache_path.write_text(json.dumps(cache, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    return {t: cache[t] for t in wanted if t in cache}
 
 
 def named_taxa(record: dict) -> set[str]:

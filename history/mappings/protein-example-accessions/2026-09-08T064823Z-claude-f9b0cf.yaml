@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: mapping
+  path: data/structures
+  slug: protein-example-accessions
+session:
+  id: 2026-09-08T064823Z-claude-f9b0cf
+  timestamp: '2026-09-08T06:48:23Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: claude-opus-5
+    agent_tool: Claude Code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/261
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/260
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Review round on #260: resolve every declared gene symbol, not only the first (#261,
+    #262, #263)'
+  details: 'Adversarial review of #260 found that uniprot_genes.resolve returned on the first
+    symbol that resolved, so a component declaring several distinct proteins got exactly one
+    accession presented as the example. elongasome#mrec_mred, labelled ''MreC and MreD'',
+    carried only MreC; chlorosome#accessory_csm_proteins declared ten csm genes and carried
+    CsmB; and magnetosome#mamk_filament carried only MamJ - the protein that attaches vesicles
+    to the filament, not the filament protein the component is named for. The adapter now
+    resolves every declared symbol and deduplicates by accession, since components often declare
+    synonyms of one gene (secY and prlA are one entry) and since accessions already present
+    must not be duplicated. Candidacy is now per symbol rather than per component, so a re-run
+    fills gaps a curator or the SL route left instead of skipping the component entirely -
+    which is what recovered MamK. 47 further accessions across the same records; 127 protein
+    examples on 76 of 114 PROTEIN components. Two smaller findings fixed with it: entry_status
+    is now read from the entry''s own entryType rather than asserted from the query''s reviewed:true
+    filter (#262), and an entry with no organism taxon is declined rather than written as
+    the literal string NCBITaxon:None (#263), alongside not retrying HTTP 4xx. Five mutants
+    of the new guards were checked and all die.'

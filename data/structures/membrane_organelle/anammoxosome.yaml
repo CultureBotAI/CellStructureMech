@@ -20,6 +20,12 @@ curation_history:
     example, functions, evidence, a hydrazine-loop graph, and a subcomplex-resolution
     todo.
   llm_assisted: true
+- timestamp: '2026-09-08T07:38:12Z'
+  curator: uniprot_sl
+  action: SEED_PROTEIN_EXAMPLES
+  changes: Added 1 taxon-paired protein example(s) from UniProtKB reviewed entries
+    annotated to SL-0491 (Anammoxosome), matched to components by gene symbol, each
+    carrying UniProt's ECO:0000269 PubMed evidence for the localisation.
 parent_structures:
 - GO:0043231
 components:
@@ -79,6 +85,23 @@ components:
   - reference: DOI:10.1111/1574-6976.12014
     notes: Kartal et al. 2013 review hydrazine dehydrogenase and related octaheme
       cytochromes in the anammox pathway.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q1PX48
+    protein_label: Hydroxylamine oxidoreductase
+    gene_symbol: hao
+    taxon_id: NCBITaxon:174633
+    taxon_label: Candidatus Kuenenia stuttgartiensis
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: 'UniProt annotates this protein to SL-0491 (anammoxosome); component role:
+      Octaheme cytochromes in the anammoxosome that oxidize hydrazine to dinitrogen
+      and recycle electrons to the pathway.'
+    evidence:
+    - reference: PMID:25962914
+      notes: de Almeida NM et al. 2015, ‘Immunogold Localization of Key Metabolic
+        Enzymes in the Anammoxosome and on the Tubule-Like Structures of Kuenenia
+        stuttgartiensis.’, J Bacteriol. ECO:0000269 experimental evidence for the
+        anammoxosome localisation of Q1PX48, as cited by UniProt.
 - component_id: anammox_electron_transporters
   label: anammoxosome electron-transfer proteins
   component_type: PROTEIN

@@ -20,6 +20,13 @@ curation_history:
     functions, literature evidence, a rod-core energy-transfer graph, and a protein-family
     grounding todo.
   llm_assisted: true
+- timestamp: '2026-09-08T07:39:14Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 11 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: PBS
   synonym_type: RELATED_SYNONYM
@@ -52,6 +59,41 @@ components:
   - reference: DOI:10.1038/s41467-022-30962-9
     notes: Kawakami et al. 2022 resolved phycocyanin rods in a thermophilic cyanobacterial
       phycobilisome.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q54715
+    protein_label: C-phycocyanin alpha subunit
+    gene_symbol: cpcA
+    taxon_id: NCBITaxon:1111708
+    taxon_label: Synechocystis sp. PCC 6803 substr. Kazusa
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene cpcA in Synechocystis sp. PCC
+      6803 substr. Kazusa, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q54715
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q54715, the single reviewed entry
+        for gene cpcA in Synechocystis sp. PCC 6803 substr. Kazusa. Establishes the
+        accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q54714
+    protein_label: C-phycocyanin beta subunit
+    gene_symbol: cpcB
+    taxon_id: NCBITaxon:1111708
+    taxon_label: Synechocystis sp. PCC 6803 substr. Kazusa
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene cpcB in Synechocystis sp. PCC
+      6803 substr. Kazusa, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q54714
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q54714, the single reviewed entry
+        for gene cpcB in Synechocystis sp. PCC 6803 substr. Kazusa. Establishes the
+        accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
 - component_id: allophycocyanin_core
   label: allophycocyanin core cylinders
   component_type: PROTEIN
@@ -74,6 +116,75 @@ components:
   - reference: DOI:10.1038/s41467-021-25813-y
     notes: Sauer et al. 2021 resolved the Synechocystis phycobilisome core and its
       allophycocyanin subunits by cryo-EM.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q01951
+    protein_label: Allophycocyanin alpha chain
+    gene_symbol: apcA
+    taxon_id: NCBITaxon:1111708
+    taxon_label: Synechocystis sp. PCC 6803 substr. Kazusa
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene apcA in Synechocystis sp. PCC
+      6803 substr. Kazusa, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q01951
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q01951, the single reviewed entry
+        for gene apcA in Synechocystis sp. PCC 6803 substr. Kazusa. Establishes the
+        accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q01952
+    protein_label: Allophycocyanin beta chain
+    gene_symbol: apcB
+    taxon_id: NCBITaxon:1111708
+    taxon_label: Synechocystis sp. PCC 6803 substr. Kazusa
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene apcB in Synechocystis sp. PCC
+      6803 substr. Kazusa, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q01952
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q01952, the single reviewed entry
+        for gene apcB in Synechocystis sp. PCC 6803 substr. Kazusa. Establishes the
+        accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
+  - uniprot_id: UniProtKB:P72870
+    protein_label: Allophycocyanin subunit alpha-B
+    gene_symbol: apcD
+    taxon_id: NCBITaxon:1111708
+    taxon_label: Synechocystis sp. PCC 6803 substr. Kazusa
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene apcD in Synechocystis sp. PCC
+      6803 substr. Kazusa, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P72870
+      notes: UniProtKB reviewed (Swiss-Prot) entry P72870, the single reviewed entry
+        for gene apcD in Synechocystis sp. PCC 6803 substr. Kazusa. Establishes the
+        accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
+  - uniprot_id: UniProtKB:P74551
+    protein_label: Allophycocyanin subunit beta-18
+    gene_symbol: apcF
+    taxon_id: NCBITaxon:1111708
+    taxon_label: Synechocystis sp. PCC 6803 substr. Kazusa
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene apcF in Synechocystis sp. PCC
+      6803 substr. Kazusa, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P74551
+      notes: UniProtKB reviewed (Swiss-Prot) entry P74551, the single reviewed entry
+        for gene apcF in Synechocystis sp. PCC 6803 substr. Kazusa. Establishes the
+        accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
 - component_id: linker_polypeptides
   label: phycobilisome linker polypeptides
   component_type: PROTEIN
@@ -98,6 +209,94 @@ components:
   - reference: DOI:10.1038/s41467-022-30962-9
     notes: Kawakami et al. 2022 modelled linker positions in the core and rods of
       a cyanobacterial phycobilisome.
+  protein_examples:
+  - uniprot_id: UniProtKB:P07123
+    protein_label: Phycobilisome 32.1 kDa linker polypeptide, phycocyanin-associated,
+      rod
+    gene_symbol: cpcC
+    taxon_id: NCBITaxon:103690
+    taxon_label: Nostoc sp. PCC 7120 = FACHB-418
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene cpcC in Nostoc sp. PCC 7120
+      = FACHB-418, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:24550276
+      notes: Watanabe M et al. 2014, ‘Attachment of phycobilisomes in an antenna-photosystem
+        I supercomplex of cyanobacteria.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cellular thylakoid membrane' localisation
+        of P07123.
+  - uniprot_id: UniProtKB:P73202
+    protein_label: Phycobilisome 8.9 kDa linker polypeptide, phycocyanin-associated,
+      rod
+    gene_symbol: cpcD
+    taxon_id: NCBITaxon:1111708
+    taxon_label: Synechocystis sp. PCC 6803 substr. Kazusa
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene cpcD in Synechocystis sp. PCC
+      6803 substr. Kazusa, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P73202
+      notes: UniProtKB reviewed (Swiss-Prot) entry P73202, the single reviewed entry
+        for gene cpcD in Synechocystis sp. PCC 6803 substr. Kazusa. Establishes the
+        accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
+  - uniprot_id: UniProtKB:P73093
+    protein_label: Phycobilisome rod-core linker polypeptide CpcG
+    gene_symbol: cpcG
+    taxon_id: NCBITaxon:1111708
+    taxon_label: Synechocystis sp. PCC 6803 substr. Kazusa
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene cpcG in Synechocystis sp. PCC
+      6803 substr. Kazusa, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: PMID:17468217
+      notes: 'Kondo K et al. 2007, ‘The membrane-associated CpcG2-phycobilisome in
+        Synechocystis: a new photosystem I antenna.’, Plant Physiol. ECO:0000269 experimental
+        evidence cited by UniProt for the ''Cellular thylakoid membrane'' localisation
+        of P73093.'
+  - uniprot_id: UniProtKB:Q01950
+    protein_label: Phycobilisome 7.8 kDa linker polypeptide, allophycocyanin-associated,
+      core
+    gene_symbol: apcC
+    taxon_id: NCBITaxon:1111708
+    taxon_label: Synechocystis sp. PCC 6803 substr. Kazusa
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene apcC in Synechocystis sp. PCC
+      6803 substr. Kazusa, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q01950
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q01950, the single reviewed entry
+        for gene apcC in Synechocystis sp. PCC 6803 substr. Kazusa. Establishes the
+        accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q55544
+    protein_label: Phycobiliprotein ApcE
+    gene_symbol: apcE
+    taxon_id: NCBITaxon:1111708
+    taxon_label: Synechocystis sp. PCC 6803 substr. Kazusa
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene apcE in Synechocystis sp. PCC
+      6803 substr. Kazusa, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q55544
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q55544, the single reviewed entry
+        for gene apcE in Synechocystis sp. PCC 6803 substr. Kazusa. Establishes the
+        accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
 - component_id: phycobilin_chromophores
   label: phycobilin chromophores
   component_type: SMALL_MOLECULE

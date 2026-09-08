@@ -32,6 +32,79 @@ components:
   evidence:
   - reference: DOI:10.1073/pnas.0905181106
     notes: Briegel et al. 2009 resolve the trimer-of-dimers lattice across many species.
+  protein_examples:
+  - uniprot_id: UniProtKB:P07017
+    protein_label: Methyl-accepting chemotaxis protein II
+    gene_symbol: tar
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene tar in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22380631
+      notes: Li G et al. 2012, ‘Isolation and identification of new inner membrane-associated
+        proteins that localize to cell poles in Escherichia coli.’, Mol Microbiol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane'
+        localisation of P07017.
+  - uniprot_id: UniProtKB:P02942
+    protein_label: Methyl-accepting chemotaxis protein I
+    gene_symbol: tsr
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene tsr in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, ‘Global topology analysis of the Escherichia coli
+        inner membrane proteome.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P02942.
+    - reference: PMID:22380631
+      notes: Li G et al. 2012, ‘Isolation and identification of new inner membrane-associated
+        proteins that localize to cell poles in Escherichia coli.’, Mol Microbiol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane'
+        localisation of P02942.
+  - uniprot_id: UniProtKB:P05704
+    protein_label: Methyl-accepting chemotaxis protein III
+    gene_symbol: trg
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene trg in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, ‘Global topology analysis of the Escherichia coli
+        inner membrane proteome.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P05704.
+    - reference: PMID:22380631
+      notes: Li G et al. 2012, ‘Isolation and identification of new inner membrane-associated
+        proteins that localize to cell poles in Escherichia coli.’, Mol Microbiol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane'
+        localisation of P05704.
+  - uniprot_id: UniProtKB:P07018
+    protein_label: Methyl-accepting chemotaxis protein IV
+    gene_symbol: tap
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene tap in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22380631
+      notes: Li G et al. 2012, ‘Isolation and identification of new inner membrane-associated
+        proteins that localize to cell poles in Escherichia coli.’, Mol Microbiol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane'
+        localisation of P07018.
 - component_id: chea
   label: histidine kinase CheA
   component_type: PROTEIN
@@ -43,6 +116,23 @@ components:
   evidence:
   - reference: DOI:10.1073/pnas.0905181106
     notes: Briegel et al. 2009 place CheA in the baseplate beneath the receptor lattice.
+  protein_examples:
+  - uniprot_id: UniProtKB:P07363
+    protein_label: Chemotaxis protein CheA
+    gene_symbol: cheA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene cheA in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P07363
+      notes: UniProtKB reviewed (Swiss-Prot) entry P07363, the single reviewed entry
+        for gene cheA in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: chew
   label: coupling protein CheW
   component_type: PROTEIN
@@ -56,6 +146,23 @@ components:
   - reference: DOI:10.1073/pnas.0905181106
     notes: Briegel et al. 2009 describe the CheA/CheW baseplate defining the 12 nm
       spacing.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A964
+    protein_label: Chemotaxis protein CheW
+    gene_symbol: cheW
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene cheW in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A964
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A964, the single reviewed entry
+        for gene cheW in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -142,6 +249,13 @@ curation_history:
     MCP and CheW graph nodes with Pfam identifiers, added a directly cited CheA-to-CheY
     phosphotransfer edge, and resolved the phosphotransfer curation TODO.
   llm_assisted: true
+- timestamp: '2026-09-08T07:40:05Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 causal_graphs:
 - graph_id: chea_chew_hexagonal_array_assembly
   title: CheA and CheW network receptor trimers into a hexagonal array

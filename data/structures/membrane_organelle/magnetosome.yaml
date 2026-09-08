@@ -44,6 +44,130 @@ components:
   - reference: DOI:10.1002/pro.2827
     notes: Barber-Zucker & Zarivach 2015 survey the magnetosome-associated proteins
       and their assigned roles.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q93DY9
+    protein_label: Magnetosome protein MamA
+    gene_symbol: mamA
+    taxon_id: NCBITaxon:431944
+    taxon_label: Magnetospirillum gryphiswaldense MSR-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene mamA in Magnetospirillum gryphiswaldense
+      MSR-1, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11571158
+      notes: Grünberg K et al. 2001, ‘A large gene cluster encoding several magnetosome
+        proteins is conserved in different species of magnetotactic bacteria.’, Appl
+        Environ Microbiol. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Magnetosome membrane' localisation of Q93DY9.
+    - reference: PMID:14766587
+      notes: Grünberg K et al. 2004, ‘Biochemical and proteomic analysis of the magnetosome
+        membrane in Magnetospirillum gryphiswaldense’, Appl Environ Microbiol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Magnetosome membrane' localisation
+        of Q93DY9.
+  - uniprot_id: UniProtKB:V6F510
+    protein_label: Magnetosome protein MamB
+    gene_symbol: mamB
+    taxon_id: NCBITaxon:431944
+    taxon_label: Magnetospirillum gryphiswaldense MSR-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene mamB in Magnetospirillum gryphiswaldense
+      MSR-1, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11571158
+      notes: Grünberg K et al. 2001, ‘A large gene cluster encoding several magnetosome
+        proteins is conserved in different species of magnetotactic bacteria.’, Appl
+        Environ Microbiol. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Magnetosome membrane' localisation of V6F510.
+    - reference: PMID:14766587
+      notes: Grünberg K et al. 2004, ‘Biochemical and proteomic analysis of the magnetosome
+        membrane in Magnetospirillum gryphiswaldense’, Appl Environ Microbiol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Magnetosome membrane' localisation
+        of V6F510.
+    - reference: PMID:22007638
+      notes: Uebe R et al. 2011, ‘The cation diffusion facilitator proteins MamB and
+        MamM of Magnetospirillum gryphiswaldense have distinct and complex functions,
+        and are involved in magnetite biomineralization and magnetosome membrane assembly.’,
+        Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Magnetosome membrane' localisation of V6F510.
+  - uniprot_id: UniProtKB:V6F2B6
+    protein_label: Magnetosome formation protease MamE
+    gene_symbol: mamE
+    taxon_id: NCBITaxon:431944
+    taxon_label: Magnetospirillum gryphiswaldense MSR-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene mamE in Magnetospirillum gryphiswaldense
+      MSR-1, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11571158
+      notes: Grünberg K et al. 2001, ‘A large gene cluster encoding several magnetosome
+        proteins is conserved in different species of magnetotactic bacteria.’, Appl
+        Environ Microbiol. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Magnetosome membrane' localisation of V6F2B6.
+    - reference: PMID:14766587
+      notes: Grünberg K et al. 2004, ‘Biochemical and proteomic analysis of the magnetosome
+        membrane in Magnetospirillum gryphiswaldense’, Appl Environ Microbiol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Magnetosome membrane' localisation
+        of V6F2B6.
+  - uniprot_id: UniProtKB:V6F235
+    protein_label: Magnetosome protein MamM
+    gene_symbol: mamM
+    taxon_id: NCBITaxon:431944
+    taxon_label: Magnetospirillum gryphiswaldense MSR-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene mamM in Magnetospirillum gryphiswaldense
+      MSR-1, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14766587
+      notes: Grünberg K et al. 2004, ‘Biochemical and proteomic analysis of the magnetosome
+        membrane in Magnetospirillum gryphiswaldense’, Appl Environ Microbiol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Magnetosome membrane' localisation
+        of V6F235.
+    - reference: PMID:22007638
+      notes: Uebe R et al. 2011, ‘The cation diffusion facilitator proteins MamB and
+        MamM of Magnetospirillum gryphiswaldense have distinct and complex functions,
+        and are involved in magnetite biomineralization and magnetosome membrane assembly.’,
+        Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Magnetosome membrane' localisation of V6F235.
+  - uniprot_id: UniProtKB:Q93DZ1
+    protein_label: Probable membrane transporter protein MamO
+    gene_symbol: mamO
+    taxon_id: NCBITaxon:431944
+    taxon_label: Magnetospirillum gryphiswaldense MSR-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene mamO in Magnetospirillum gryphiswaldense
+      MSR-1, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14766587
+      notes: Grünberg K et al. 2004, ‘Biochemical and proteomic analysis of the magnetosome
+        membrane in Magnetospirillum gryphiswaldense’, Appl Environ Microbiol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Magnetosome membrane' localisation
+        of Q93DZ1.
+  - uniprot_id: UniProtKB:Q6NE76
+    protein_label: Magnetite biomineralization protein Mms6
+    gene_symbol: mms6
+    taxon_id: NCBITaxon:431944
+    taxon_label: Magnetospirillum gryphiswaldense MSR-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene mms6 in Magnetospirillum gryphiswaldense
+      MSR-1, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14766587
+      notes: Grünberg K et al. 2004, ‘Biochemical and proteomic analysis of the magnetosome
+        membrane in Magnetospirillum gryphiswaldense’, Appl Environ Microbiol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Magnetosome membrane' localisation
+        of Q6NE76.
 - component_id: magnetite
   label: magnetite
   component_type: SMALL_MOLECULE
@@ -93,6 +217,50 @@ components:
         membrane in Magnetospirillum gryphiswaldense’, Appl Environ Microbiol. ECO:0000269
         experimental evidence for the magnetosome localisation of V6F519, as cited
         by UniProt.
+  - uniprot_id: UniProtKB:Q2W8Q7
+    protein_label: Magnetosome-associated protein MamJ
+    gene_symbol: mamJ
+    taxon_id: NCBITaxon:342108
+    taxon_label: Paramagnetospirillum magneticum AMB-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: 'UniProt annotates this protein to SL-0510 (magnetosome); component role:
+      Cytoskeletal filament that aligns assembled magnetosomes into a chain, with
+      MamJ connecting the vesicles to it. Machinery acting on the assembled organelle
+      rather than a constituent of it: vesicles still form and mineralise without
+      it, but they scatter (docs/CURATION.md, component boundary).'
+    evidence:
+    - reference: PMID:20212111
+      notes: Murat D et al. 2010, ‘Comprehensive genetic dissection of the magnetosome
+        gene island reveals the step-wise assembly of a prokaryotic organelle.’, Proc
+        Natl Acad Sci U S A. ECO:0000269 experimental evidence for the magnetosome
+        localisation of Q2W8Q7, as cited by UniProt.
+    - reference: PMID:27481925
+      notes: Arakaki A et al. 2016, ‘Comparative Subcellular Localization Analysis
+        of Magnetosome Proteins Reveals a Unique Localization Behavior of Mms6 Protein
+        onto Magnetite Crystals.’, J Bacteriol. ECO:0000269 experimental evidence
+        for the magnetosome localisation of Q2W8Q7, as cited by UniProt.
+  - uniprot_id: UniProtKB:Q6NE59
+    protein_label: Actin-like protein MamK
+    gene_symbol: mamK
+    taxon_id: NCBITaxon:431944
+    taxon_label: Magnetospirillum gryphiswaldense MSR-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene mamK in Magnetospirillum gryphiswaldense
+      MSR-1, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:17601786
+      notes: Scheffel A et al. 2007, ‘The acidic repetitive domain of the Magnetospirillum
+        gryphiswaldense MamJ protein displays hypervariability but is not required
+        for magnetosome chain assembly.’, J Bacteriol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm, cytoskeleton' localisation of Q6NE59.
+    - reference: PMID:20487281
+      notes: Katzmann E et al. 2010, ‘Loss of the actin-like protein MamK has pleiotropic
+        effects on magnetosome formation and chain assembly in Magnetospirillum gryphiswaldense.’,
+        Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm, cytoskeleton' localisation of Q6NE59.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The component combines MamK and its MamJ connector. The stored
     MamJ example has IPR060787, whereas reviewed MamK Q6NE59 has IPR056546; they share
@@ -337,6 +505,19 @@ curation_history:
   action: ENHANCE_CAUSAL_GRAPH
   changes: Added the missing description to the magnetosome iron-mineralisation edge.
   llm_assisted: true
+- timestamp: '2026-09-08T07:38:17Z'
+  curator: uniprot_sl
+  action: SEED_PROTEIN_EXAMPLES
+  changes: Added 1 taxon-paired protein example(s) from UniProtKB reviewed entries
+    annotated to SL-0510 (Magnetosome), matched to components by gene symbol, each
+    carrying UniProt's ECO:0000269 PubMed evidence for the localisation.
+- timestamp: '2026-09-08T07:39:32Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 7 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 xrefs:
 - uniprot.location:SL-0510
 - MICRO:0000216
