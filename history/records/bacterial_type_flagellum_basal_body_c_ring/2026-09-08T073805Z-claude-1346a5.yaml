@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+  slug: bacterial_type_flagellum_basal_body_c_ring
+session:
+  id: 2026-09-08T073805Z-claude-1346a5
+  timestamp: '2026-09-08T07:38:05Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add bacterial flagellar C-ring record
+  details: Created a PROPOSED GO:0009433 bacterial-type flagellum basal body C-ring record
+    with GO synonymy and basal-body parthood, exact FliG, FliM and FliN InterPro groundings,
+    bacterial and archaeal taxonomic scope, Salmonella as a canonical example, rotor-assembly,
+    stator-coupling and rotational-switching functions, a FliG/FliM/FliN switch-complex graph,
+    and resolved boundary discussions for Bacillus FliY and neighboring motor subcomplexes.

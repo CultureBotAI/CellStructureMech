@@ -1,0 +1,302 @@
+identifier: GO:0009433
+label: bacterial-type flagellum basal body, C ring
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The cytoplasmic FliG/FliM/FliN switch ring of the bacterial flagellar
+  basal body, assembled on the MS ring to form the rotor face that receives torque
+  from Mot/Pom stator units and changes rotational bias in response to phosphorylated
+  CheY.
+definition_source: DOI:10.1016/j.tim.2014.12.011
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-08T07:35:28Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-08T07:36:37Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO C-ring synonymy and basal-body parthood; curated FliG, FliM and
+    FliN components with exact InterPro groundings; added bacterial and archaeal taxonomic
+    scope, Salmonella as a canonical example, rotor assembly, stator coupling and
+    rotational switching functions, primary literature evidence, a FliG/FliM/FliN
+    switch-complex causal graph, and resolved boundary discussions for Bacillus FliY
+    and neighboring motor subcomplexes.
+  llm_assisted: true
+synonyms:
+- synonym_text: flagellar basal body, C ring
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009433
+- synonym_text: flagellin-based flagellum basal body, C ring
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009433
+- synonym_text: flagellar C ring
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1073/pnas.96.18.10134
+- synonym_text: flagellar switch complex
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mBio.00079-19
+part_of:
+- GO:0009425
+components:
+- component_id: flig
+  label: Flagellar motor switch protein FliG
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR000090
+  gene_symbols:
+  - fliG
+  essentiality: ESSENTIAL
+  role: Links the C ring to FliF in the MS ring and presents the rotor surface that
+    contacts stator A subunits during torque generation.
+  evidence:
+  - reference: DOI:10.1073/pnas.89.14.6304
+    notes: Francis et al. 1992 localized Salmonella FliG to the cytoplasmic face of
+      the flagellar M ring.
+  - reference: DOI:10.1016/j.tim.2014.12.011
+    notes: Minamino and Imada 2015 review FliG as the C-ring protein that contacts
+      the stator to couple ion-driven force to rotor rotation.
+- component_id: flim
+  label: Flagellar motor switch protein FliM
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR001689
+  gene_symbols:
+  - fliM
+  essentiality: ESSENTIAL
+  role: Builds the switch lattice between FliG and FliN and carries phosphorylated
+    CheY input into clockwise/counterclockwise rotational switching.
+  evidence:
+  - reference: DOI:10.1038/nature09300
+    notes: Lee et al. 2010 structurally analyzed FliG, FliM and FliN interactions
+      that underlie C-ring switching.
+  - reference: DOI:10.1128/mBio.00079-19
+    notes: Sakai et al. 2019 probed FliG-FliM rearrangements in the flagellar switch
+      complex during rotational biasing.
+- component_id: flin
+  label: Flagellar motor switch FliN
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR012826
+  gene_symbols:
+  - fliN
+  essentiality: ESSENTIAL
+  role: Forms the lower switch-complex layer with FliM to stabilize the cytoplasmic
+    C ring.
+  evidence:
+  - reference: DOI:10.1073/pnas.96.18.10134
+    notes: Thomas et al. 1999 used electron microscopy to show that the C ring is
+      a cytoplasmic ring attached to the basal body.
+  - reference: DOI:10.1038/emboj.2011.188
+    notes: Paul et al. 2011 mapped FliM and FliN beneath FliG in the Salmonella flagellar
+      rotor architecture.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: FliG/FliM/FliN-family C rings occur in bacteria that assemble bacterial-type
+    flagellar basal bodies and are absent from lineages that lack this rotary appendage.
+  reference: DOI:10.1038/nrmicro1887
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaea assemble type-IV-pilus-related archaella rather than FliG/FliM/FliN
+    bacterial flagellar C rings.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  note: Classical model organism for genetic, biochemical and cryo-EM studies of the
+    FliG/FliM/FliN C-ring switch complex.
+  reference: DOI:10.1128/JB.00552-06
+functions:
+- function_id: basal_body_rotor_assembly
+  label: basal-body rotor assembly
+  description: FliG attaches to the cytoplasmic side of the FliF MS ring and recruits
+    the FliM/FliN switch lattice to build the mature C-ring rotor.
+  evidence:
+  - reference: DOI:10.1073/pnas.89.14.6304
+    notes: Francis et al. 1992 placed FliG at the cytoplasmic face of the Salmonella
+      M ring.
+  - reference: DOI:10.1038/s41467-021-24507-9
+    notes: Kawamoto et al. 2021 measured native Salmonella C-ring symmetry relative
+      to the FliF MS-ring core.
+- function_id: rotor_stator_torque_coupling
+  label: rotor-stator torque coupling
+  description: FliG in the C ring contacts membrane stator units so Mot/Pom A-subunit
+    rotation can apply torque to the basal-body rotor.
+  evidence:
+  - reference: DOI:10.1016/j.tim.2014.12.011
+    notes: Minamino and Imada 2015 review the FliG-stator interface that transmits
+      motor torque to the C ring.
+  - reference: DOI:10.1038/s41564-020-0788-8
+    notes: Deme et al. 2020 modeled MotA/PomA-family stator subunits meshing with
+      FliG in the rotor.
+- function_id: rotational_switching
+  label: rotational switching
+  description: The switch complex changes C-ring conformation to bias the flagellar
+    motor between clockwise and counterclockwise rotation after phosphorylated CheY
+    binds FliM.
+  evidence:
+  - reference: DOI:10.1038/nature09300
+    notes: Lee et al. 2010 connected FliG/FliM/FliN structure to the molecular basis
+      of flagellar rotational switching.
+  - reference: DOI:10.1128/mBio.00079-19
+    notes: Sakai et al. 2019 experimentally examined conformational rearrangements
+      within the switch complex.
+evidence:
+- reference: DOI:10.1073/pnas.89.14.6304
+  notes: Francis et al. 1992, Localization of the Salmonella typhimurium flagellar
+    switch protein FliG to the cytoplasmic M-ring face of the basal body, Proceedings
+    of the National Academy of Sciences.
+- reference: DOI:10.1073/pnas.96.18.10134
+  notes: Thomas et al. 1999, Rotational symmetry of the C ring and a mechanism for
+    the flagellar rotary motor, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1128/JB.00552-06
+  notes: Thomas et al. 2006, The Three-Dimensional Structure of the Flagellar Rotor
+    from a Clockwise-Locked Mutant of Salmonella enterica Serovar Typhimurium, Journal
+    of Bacteriology.
+- reference: DOI:10.1038/nature09300
+  notes: Lee et al. 2010, Structure of the torque ring of the flagellar motor and
+    the molecular basis for rotational switching, Nature.
+- reference: DOI:10.1038/emboj.2011.188
+  notes: Paul et al. 2011, Architecture of the flagellar rotor, The EMBO Journal.
+- reference: DOI:10.1016/j.tim.2014.12.011
+  notes: Minamino and Imada 2015, The bacterial flagellar motor and its structural
+    diversity, Trends in Microbiology.
+- reference: DOI:10.1128/mBio.00079-19
+  notes: Sakai et al. 2019, Novel Insights into Conformational Rearrangements of the
+    Bacterial Flagellar Switch Complex, mBio.
+- reference: DOI:10.1128/JB.00626-18
+  notes: Ward et al. 2019, Organization of the Flagellar Switch Complex of Bacillus
+    subtilis, Journal of Bacteriology.
+- reference: DOI:10.1038/s41467-021-24507-9
+  notes: Kawamoto et al. 2021, Native flagellar MS ring is formed by 34 subunits with
+    23-fold and 11-fold subsymmetries, Nature Communications.
+causal_graphs:
+- graph_id: fli_switch_rotor
+  title: FliG/FliM/FliN assemble the torque-switching C ring
+  description: FliG attaches the C ring to the MS ring, FliM and FliN build the lower
+    switch complex, stators apply torque through FliG, and phosphorylated CheY biases
+    switch-complex conformation.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ms_ring
+    label: bacterial-type flagellum basal body, MS ring
+    node_type: STRUCTURE
+    grounding: GO:0009431
+  - node_id: flig
+    label: FliG
+    node_type: GENE_OR_PROTEIN
+    component_ref: flig
+  - node_id: flim
+    label: FliM
+    node_type: GENE_OR_PROTEIN
+    component_ref: flim
+  - node_id: flin
+    label: FliN
+    node_type: GENE_OR_PROTEIN
+    component_ref: flin
+  - node_id: c_ring
+    label: bacterial-type flagellum basal body, C ring
+    node_type: STRUCTURE
+    grounding: GO:0009433
+  - node_id: stator
+    label: bacterial-type flagellum stator complex
+    node_type: STRUCTURE
+    grounding: GO:0120101
+  - node_id: chey_p
+    label: phosphorylated CheY
+    node_type: GENE_OR_PROTEIN
+  - node_id: rotation
+    label: flagellar motor switching
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: flig
+    predicate: assembles on
+    object: ms_ring
+    description: FliG localizes to the cytoplasmic side of the MS ring and anchors
+      the C ring to the basal-body rotor.
+    evidence:
+    - reference: DOI:10.1073/pnas.89.14.6304
+      notes: Francis et al. 1992 placed FliG on the cytoplasmic M-ring face of the
+        basal body.
+  - subject: flim
+    predicate: assembles beneath
+    object: flig
+    description: FliM forms the middle layer of the C-ring switch complex beneath
+      the FliG rotor face.
+    evidence:
+    - reference: DOI:10.1038/emboj.2011.188
+      notes: Paul et al. 2011 mapped FliM beneath FliG in the flagellar rotor architecture.
+  - subject: flin
+    predicate: assembles with
+    object: flim
+    description: FliN associates with FliM to form the lower part of the Salmonella
+      switch complex.
+    evidence:
+    - reference: DOI:10.1038/emboj.2011.188
+      notes: Paul et al. 2011 assigned FliM and FliN to the lower C-ring architecture.
+  - subject: flig
+    predicate: contacts
+    object: stator
+    description: FliG forms the C-ring rotor surface contacted by Mot/Pom A-subunits
+      during torque generation.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2014.12.011
+      notes: Minamino and Imada 2015 review the FliG-stator interaction in the bacterial
+        flagellar motor.
+  - subject: chey_p
+    predicate: binds
+    object: flim
+    description: Phosphorylated CheY binds the switch complex through FliM and shifts
+      motor rotational bias.
+    evidence:
+    - reference: DOI:10.1128/mBio.00079-19
+      notes: Sakai et al. 2019 tested how CheY-P-dependent switching maps onto FliG-FliM
+        rearrangements.
+  - subject: c_ring
+    predicate: biases
+    object: rotation
+    description: Conformational changes across the C ring switch the flagellar motor
+      between clockwise and counterclockwise rotation.
+    evidence:
+    - reference: DOI:10.1038/nature09300
+      notes: Lee et al. 2010 linked FliG/FliM/FliN structure to the molecular basis
+        of rotational switching.
+discussions:
+- discussion_id: fliy_variant_boundary
+  prompt: Should Bacillus subtilis FliY be folded into the curated FliN component?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#flin
+  rationale: Ward et al. 2019 support FliY as the Bacillus subtilis lower switch-complex
+    protein, but the exact InterPro grounding used for this record's FliN component
+    is restricted to FliN from organisms such as Salmonella and Escherichia.
+  resolution_note: 'Declined: keep the core component grounded to exact FliN and document
+    the FliY replacement as a lineage variant until an exact B. subtilis FliY-family
+    component is modeled.'
+  posed_by: claude
+  posed_date: '2026-09-08'
+  resolved_date: '2026-09-08'
+- discussion_id: exclude_neighboring_motor_subcomplexes
+  prompt: Should the MS ring, stator units or flagellar export apparatus be components
+    of this record?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - part_of
+  - causal_graphs#fli_switch_rotor
+  rationale: GO:0009433 names only the cytoplasmic C ring. The FliF MS ring, Mot/Pom
+    stator complexes and type III export apparatus are neighboring basal-body substructures
+    that physically and functionally couple to the C ring but are not its FliG/FliM/FliN
+    constituents.
+  resolution_note: 'Declined: encode the C ring as part of the broader basal body
+    and refer to MS-ring, stator and export-apparatus structures only in functions
+    or mechanism graphs.'
+  posed_by: claude
+  posed_date: '2026-09-08'
+  resolved_date: '2026-09-08'
