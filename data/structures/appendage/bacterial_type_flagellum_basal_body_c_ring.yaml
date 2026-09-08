@@ -24,6 +24,14 @@ curation_history:
     switch-complex causal graph, and resolved boundary discussions for Bacillus FliY
     and neighboring motor subcomplexes.
   llm_assisted: true
+- timestamp: '2026-09-08T07:56:50Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #274 by moving morphology-only Thomas 1999 evidence off the FliN
+    component, resolved #275 by routing FliG/FliM/FliN graph edges into the GO:0009433
+    C-ring node, and resolved #276 by adding Welch 1993 as direct CheY-P-to-FliM binding
+    evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, C ring
   synonym_type: EXACT_SYNONYM
@@ -85,12 +93,12 @@ components:
   role: Forms the lower switch-complex layer with FliM to stabilize the cytoplasmic
     C ring.
   evidence:
-  - reference: DOI:10.1073/pnas.96.18.10134
-    notes: Thomas et al. 1999 used electron microscopy to show that the C ring is
-      a cytoplasmic ring attached to the basal body.
   - reference: DOI:10.1038/emboj.2011.188
     notes: Paul et al. 2011 mapped FliM and FliN beneath FliG in the Salmonella flagellar
       rotor architecture.
+  - reference: DOI:10.1038/nature09300
+    notes: Lee et al. 2010 structurally connected FliN to the FliG/FliM/FliN torque
+      ring.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -137,8 +145,12 @@ functions:
   label: rotational switching
   description: The switch complex changes C-ring conformation to bias the flagellar
     motor between clockwise and counterclockwise rotation after phosphorylated CheY
-    binds FliM.
+    binds primarily to FliM.
   evidence:
+  - reference: DOI:10.1073/pnas.90.19.8787
+    notes: Welch et al. 1993 showed that CheY binds the switch complex with FliM as
+      the primary docking site and that the extent of CheY-FliM binding depends on
+      CheY phosphorylation.
   - reference: DOI:10.1038/nature09300
     notes: Lee et al. 2010 connected FliG/FliM/FliN structure to the molecular basis
       of flagellar rotational switching.
@@ -153,6 +165,9 @@ evidence:
 - reference: DOI:10.1073/pnas.96.18.10134
   notes: Thomas et al. 1999, Rotational symmetry of the C ring and a mechanism for
     the flagellar rotary motor, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1073/pnas.90.19.8787
+  notes: Welch et al. 1993, Phosphorylation-dependent binding of a signal molecule
+    to the flagellar switch of bacteria, Proceedings of the National Academy of Sciences.
 - reference: DOI:10.1128/JB.00552-06
   notes: Thomas et al. 2006, The Three-Dimensional Structure of the Flagellar Rotor
     from a Clockwise-Locked Mutant of Salmonella enterica Serovar Typhimurium, Journal
@@ -176,10 +191,10 @@ evidence:
     23-fold and 11-fold subsymmetries, Nature Communications.
 causal_graphs:
 - graph_id: fli_switch_rotor
-  title: FliG/FliM/FliN assemble the torque-switching C ring
-  description: FliG attaches the C ring to the MS ring, FliM and FliN build the lower
-    switch complex, stators apply torque through FliG, and phosphorylated CheY biases
-    switch-complex conformation.
+  title: FliG/FliM/FliN assemble into the torque-switching C ring
+  description: FliG, FliM and FliN assemble into the C ring on the MS ring, stators
+    apply torque through FliG, and phosphorylated CheY binds primarily to FliM to
+    bias switch-complex conformation.
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
@@ -214,28 +229,40 @@ causal_graphs:
     label: flagellar motor switching
     node_type: BIOLOGICAL_PROCESS
   edges:
-  - subject: flig
+  - subject: c_ring
     predicate: assembles on
     object: ms_ring
-    description: FliG localizes to the cytoplasmic side of the MS ring and anchors
-      the C ring to the basal-body rotor.
+    description: The C ring assembles on the cytoplasmic face of the FliF MS ring
+      to complete the basal-body rotor.
     evidence:
     - reference: DOI:10.1073/pnas.89.14.6304
-      notes: Francis et al. 1992 placed FliG on the cytoplasmic M-ring face of the
-        basal body.
+      notes: Francis et al. 1992 placed the FliG switch protein on the cytoplasmic
+        M-ring face of the basal body.
+    - reference: DOI:10.1038/s41467-021-24507-9
+      notes: Kawamoto et al. 2021 measured C-ring symmetry relative to the FliF MS
+        ring in native Salmonella basal bodies.
+  - subject: flig
+    predicate: forms upper layer of
+    object: c_ring
+    description: FliG forms the C-ring layer adjacent to the MS ring and exposes the
+      rotor surface that contacts stators.
+    evidence:
+    - reference: DOI:10.1038/emboj.2011.188
+      notes: Paul et al. 2011 mapped FliG above FliM and FliN in the Salmonella flagellar
+        rotor architecture.
   - subject: flim
-    predicate: assembles beneath
-    object: flig
-    description: FliM forms the middle layer of the C-ring switch complex beneath
-      the FliG rotor face.
+    predicate: forms middle layer of
+    object: c_ring
+    description: FliM forms the middle layer of the C-ring switch complex between
+      FliG and FliN.
     evidence:
     - reference: DOI:10.1038/emboj.2011.188
       notes: Paul et al. 2011 mapped FliM beneath FliG in the flagellar rotor architecture.
   - subject: flin
-    predicate: assembles with
-    object: flim
-    description: FliN associates with FliM to form the lower part of the Salmonella
-      switch complex.
+    predicate: forms lower layer of
+    object: c_ring
+    description: FliN forms the lower layer of the Salmonella switch complex with
+      FliM.
     evidence:
     - reference: DOI:10.1038/emboj.2011.188
       notes: Paul et al. 2011 assigned FliM and FliN to the lower C-ring architecture.
@@ -251,12 +278,12 @@ causal_graphs:
   - subject: chey_p
     predicate: binds
     object: flim
-    description: Phosphorylated CheY binds the switch complex through FliM and shifts
-      motor rotational bias.
+    description: Phosphorylated CheY binds the switch complex primarily through FliM
+      and shifts motor rotational bias.
     evidence:
-    - reference: DOI:10.1128/mBio.00079-19
-      notes: Sakai et al. 2019 tested how CheY-P-dependent switching maps onto FliG-FliM
-        rearrangements.
+    - reference: DOI:10.1073/pnas.90.19.8787
+      notes: Welch et al. 1993 directly demonstrated phosphorylation-dependent CheY
+        binding to FliM in the bacterial switch complex.
   - subject: c_ring
     predicate: biases
     object: rotation
