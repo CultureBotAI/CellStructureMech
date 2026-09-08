@@ -1,0 +1,222 @@
+identifier: GO:0009431
+label: bacterial-type flagellum basal body, MS ring
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: One of the rings of the bacterial-type flagellar basal body; a double-flanged
+  ring that anchors the basal body to the cytoplasmic membrane.
+definition_source: GO:0009431
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-08T02:47:59Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-08T02:48:54Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO MS-ring synonymy, basal-body parthood, FliF composition, bacterial
+    and archaeal taxonomic scope, Salmonella as a canonical example, inner-membrane
+    anchoring and templating functions, physical subunit count, structural literature
+    evidence, a FliF MS-ring mechanism graph, and a boundary discussion excluding
+    the C ring, export gate, rod and collars.
+  llm_assisted: true
+synonyms:
+- synonym_text: flagellar basal body, mounting plate
+  synonym_type: BROAD_SYNONYM
+  source: GO:0009431
+- synonym_text: flagellar basal body, MS ring
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009431
+- synonym_text: flagellin-based flagellum basal body, MS ring
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009431
+part_of:
+- GO:0009425
+components:
+- component_id: flif
+  label: flagellar M-ring protein FliF
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR000067
+  gene_symbols:
+  - fliF
+  stoichiometry: 34 FliF subunits in the Salmonella native MS ring
+  essentiality: ESSENTIAL
+  role: Oligomerizes into the inner-membrane MS ring that anchors the basal body.
+  evidence:
+  - reference: DOI:10.1128/jb.171.7.3890-3900.1989
+    notes: Jones et al. 1989 identified FliF as the Salmonella M-ring protein.
+  - reference: DOI:10.1038/s41467-021-24507-9
+    notes: Kawamoto et al. 2021 resolved the native Salmonella MS ring as a 34-subunit
+      FliF assembly.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: FliF MS rings occur in bacterial-type flagellar basal bodies but are absent
+    from bacteria without flagellar loci.
+  reference: DOI:10.1038/nrmicro1887
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaeal archaella are type-IV-pilus-related appendages and do not contain
+    the FliF MS ring of bacterial-type flagella.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  note: Source organism for the native 34-FliF cryo-EM structure of the MS ring.
+  reference: DOI:10.1038/s41467-021-24507-9
+functions:
+- function_id: inner_membrane_basal_body_anchor
+  label: inner-membrane basal-body anchoring
+  description: The FliF MS ring forms the cytoplasmic-membrane platform that mounts
+    the bacterial flagellar basal body.
+  evidence:
+  - reference: DOI:10.1128/JB.181.23.7149-7153.1999
+    notes: Macnab 1999 reviews the MS ring as the membrane-embedded base of the bacterial
+      flagellar basal body.
+  - reference: DOI:10.1038/s41467-021-24507-9
+    notes: Kawamoto et al. 2021 structurally resolved the Salmonella MS ring as the
+      core ring of the native basal body.
+- function_id: rotor_export_gate_template
+  label: rotor and export-gate templating
+  description: The MS ring provides the scaffold on which the C ring assembles and
+    a central opening that accommodates the flagellar export gate.
+  evidence:
+  - reference: DOI:10.1038/s41467-021-24507-9
+    notes: Kawamoto et al. 2021 related Salmonella C-ring symmetry and the export-gate
+      opening to the 34-subunit native MS ring.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '34'
+  context: FliF subunits per native Salmonella MS ring
+  reference: DOI:10.1038/s41467-021-24507-9
+evidence:
+- reference: PMID:10572114
+  notes: Schoenhals GJ and Macnab RM 1999, FliL is a membrane-associated component
+    of the flagellar basal body of Salmonella.
+- reference: PMID:12624192
+  notes: Minamino T and Macnab RM 2003, Components of the Salmonella flagellar export
+    apparatus and classification of export substrates.
+- reference: DOI:10.1128/jb.171.7.3890-3900.1989
+  notes: 'Jones CJ, Homma M and Macnab RM 1989, L-, P-, and M-ring proteins of the
+    flagellar basal body of Salmonella typhimurium: gene sequences and deduced protein
+    sequences.'
+- reference: DOI:10.1128/JB.181.23.7149-7153.1999
+  notes: 'Macnab RM 1999, The bacterial flagellum: reversible rotary propellor and
+    type III export apparatus.'
+- reference: DOI:10.1146/annurev.micro.57.030502.090832
+  notes: Macnab RM 2003, How bacteria assemble flagella.
+- reference: DOI:10.1038/s41467-021-24507-9
+  notes: Kawamoto A et al. 2021, Native flagellar MS ring is formed by 34 subunits
+    with 23-fold and 11-fold subsymmetries.
+- reference: DOI:10.1016/j.cell.2021.03.057
+  notes: Tan J et al. 2021, Structural basis of assembly and torque transmission of
+    the bacterial flagellar motor.
+causal_graphs:
+- graph_id: flif_ms_ring_platform
+  title: FliF builds the membrane MS-ring platform
+  description: FliF oligomers form the MS ring in the cytoplasmic membrane. The resulting
+    ring anchors the basal body, templates C-ring and export-gate placement, and couples
+    to the axial rod through FliE.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: flif
+    label: flagellar M-ring protein FliF
+    node_type: GENE_OR_PROTEIN
+    component_ref: flif
+    grounding: InterPro:IPR000067
+  - node_id: ms_ring
+    label: bacterial-type flagellum basal body, MS ring
+    node_type: STRUCTURE
+    grounding: GO:0009431
+  - node_id: basal_body
+    label: bacterial-type flagellum basal body
+    node_type: STRUCTURE
+    grounding: GO:0009425
+  - node_id: c_ring
+    label: C ring
+    node_type: STRUCTURE
+  - node_id: export_apparatus
+    label: bacterial-type flagellum secretion apparatus
+    node_type: STRUCTURE
+    grounding: GO:0120102
+  - node_id: flie
+    label: flagellar basal-body protein FliE
+    node_type: GENE_OR_PROTEIN
+  - node_id: basal_body_rod
+    label: bacterial-type flagellum basal body, rod
+    node_type: STRUCTURE
+    grounding: GO:0030694
+  edges:
+  - subject: flif
+    predicate: oligomerizes into
+    object: ms_ring
+    description: FliF assembles into the native 34-subunit Salmonella MS ring.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24507-9
+      notes: Kawamoto et al. 2021 resolved the native Salmonella MS ring as a 34-FliF
+        complex.
+  - subject: ms_ring
+    predicate: anchors
+    object: basal_body
+    description: The FliF MS ring mounts the basal body at the cytoplasmic membrane.
+    evidence:
+    - reference: DOI:10.1128/JB.181.23.7149-7153.1999
+      notes: Macnab 1999 reviews the MS ring as the membrane-proximal platform of
+        the bacterial flagellar basal body.
+  - subject: c_ring
+    predicate: assembles on
+    object: ms_ring
+    description: The C-ring switch complex assembles on the cytoplasmic side of the
+      FliF MS ring.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24507-9
+      notes: Kawamoto et al. 2021 measured C-ring symmetry on native Salmonella basal
+        bodies relative to the FliF MS ring.
+  - subject: export_apparatus
+    predicate: is housed by
+    object: ms_ring
+    description: The flagellar export gate occupies the center of the MS ring.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24507-9
+      notes: Kawamoto et al. 2021 linked the MS-ring core to an opening sized for
+        the flagellar export gate.
+  - subject: ms_ring
+    predicate: couples to
+    object: flie
+    description: The FliF MS ring contacts FliE at the base of the helical rod.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2021.03.057
+      notes: Tan et al. 2021 resolved how Salmonella FliF and FliE connect the MS
+        ring to the rod.
+  - subject: flie
+    predicate: couples to
+    object: basal_body_rod
+    description: FliE links the MS-ring side of the basal body to the basal-body rod.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2021.03.057
+      notes: Tan et al. 2021 placed FliE between the MS ring and the FlgB rod in the
+        Salmonella motor.
+discussions:
+- discussion_id: exclude_c_ring_export_gate_rod_and_collars
+  prompt: Should the C ring, export apparatus, rod, or accessory collar proteins be
+    curated as MS-ring components?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#flif
+  rationale: The mature GO:0009431 MS ring is scoped to the FliF ring embedded in
+    the cytoplasmic membrane. The FliG/FliM/FliN C ring assembles on the cytoplasmic
+    face, the flagellar export gate sits in the center of the MS ring, FliE and the
+    rod extend distally from it, and species-specific collar proteins decorate broader
+    basal-body or motor assemblies rather than the core MS ring.
+  resolution_note: 'Declined: keep FliF as the only mature MS-ring constituent and
+    represent the adjoining C ring, export apparatus, rod and collars outside this
+    record''s component list.'
+  posed_by: claude
+  posed_date: '2026-09-08'
+  resolved_date: '2026-09-08'

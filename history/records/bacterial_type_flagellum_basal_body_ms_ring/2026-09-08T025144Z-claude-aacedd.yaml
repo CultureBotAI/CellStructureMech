@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_ms_ring.yaml
+  slug: bacterial_type_flagellum_basal_body_ms_ring
+session:
+  id: 2026-09-08T025144Z-claude-aacedd
+  timestamp: '2026-09-08T02:51:44Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - measurements
+  - causal_graphs
+  summary: Add bacterial flagellum MS ring record
+  details: Created a PROPOSED GO:0009431 MS-ring record with GO synonymy and basal-body parthood,
+    a FliF constituent grounded to InterPro:IPR000067, bacterial and archaeal taxonomic scope,
+    Salmonella as a canonical example, inner-membrane anchoring and rotor/export-gate templating
+    functions, a Salmonella 34-subunit physical property, and a source-bounded graph for MS-ring
+    platform function based on Jones 1989, Macnab 1999, Macnab 2003, Kawamoto 2021 and Tan
+    2021.
