@@ -381,6 +381,37 @@
       ]
     },
     {
+      "identifier": "GO:0120102",
+      "label": "bacterial-type flagellum secretion apparatus",
+      "neighbors": [
+        {
+          "identifier": "GO:0120101",
+          "label": "bacterial-type flagellum stator complex",
+          "cosine_similarity": 0.82070223
+        },
+        {
+          "identifier": "GO:0009425",
+          "label": "bacterial-type flagellum basal body",
+          "cosine_similarity": 0.81044888
+        },
+        {
+          "identifier": "GO:0009431",
+          "label": "bacterial-type flagellum basal body, MS ring",
+          "cosine_similarity": 0.78603326
+        },
+        {
+          "identifier": "GO:0030694",
+          "label": "bacterial-type flagellum basal body, rod",
+          "cosine_similarity": 0.77675689
+        },
+        {
+          "identifier": "GO:0009429",
+          "label": "bacterial-type flagellum basal body, proximal rod",
+          "cosine_similarity": 0.7730507
+        }
+      ]
+    },
+    {
       "identifier": "GO:0120101",
       "label": "bacterial-type flagellum stator complex",
       "neighbors": [
@@ -400,14 +431,14 @@
           "cosine_similarity": 0.83416798
         },
         {
+          "identifier": "GO:0120102",
+          "label": "bacterial-type flagellum secretion apparatus",
+          "cosine_similarity": 0.82070223
+        },
+        {
           "identifier": "GO:0009431",
           "label": "bacterial-type flagellum basal body, MS ring",
           "cosine_similarity": 0.81899768
-        },
-        {
-          "identifier": "GO:0009288",
-          "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.81141999
         }
       ]
     },
@@ -643,6 +674,11 @@
           "cosine_similarity": 0.75952865
         },
         {
+          "identifier": "GO:0120102",
+          "label": "bacterial-type flagellum secretion apparatus",
+          "cosine_similarity": 0.73557071
+        },
+        {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
           "cosine_similarity": 0.72643365
@@ -651,11 +687,6 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.71124191
-        },
-        {
-          "identifier": "GO:0033104",
-          "label": "type VI protein secretion system complex",
-          "cosine_similarity": 0.70467165
         }
       ]
     },

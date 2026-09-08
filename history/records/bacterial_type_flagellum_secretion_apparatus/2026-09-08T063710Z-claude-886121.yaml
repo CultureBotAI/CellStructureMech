@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_secretion_apparatus.yaml
+  slug: bacterial_type_flagellum_secretion_apparatus
+session:
+  id: 2026-09-08T063710Z-claude-886121
+  timestamp: '2026-09-08T06:37:10Z'
+  actors:
+  - type: ai_agent
+    name: claude
+events:
+- type: EDIT
+  outcome: changed
+  summary: Tighten flagellar export apparatus FliO boundary
+  details: Removed FliO from the components and causal graph because it is an assembly scaffold
+    rather than a conserved constituent of the mature FlhA/FlhB/FliP/FliQ/FliR membrane export
+    gate. Kept the FliO literature decision in the resolved boundary discussion, updated the
+    membrane-gate assembly description, and preserved FliH/FliI/FliJ as export ATPase constituents.
