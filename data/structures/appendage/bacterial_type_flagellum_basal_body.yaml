@@ -46,6 +46,12 @@ curation_history:
   changes: 'Resolved #224 by sourcing basal-body wording variants from UniProt SL;
     resolved #225 by adding C-ring rotor evidence to the C-ring rotation edge.'
   llm_assisted: true
+- timestamp: '2026-09-08T06:56:10Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #268 by renaming the five-protein flagellar export aggregate
+    as the membrane export gate rather than the full ATPase-associated secretion apparatus.'
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial flagellum basal body
   synonym_type: EXACT_SYNONYM
@@ -137,7 +143,7 @@ components:
     notes: Yamaguchi et al. 2021 resolved the Salmonella LP-ring bushing around the
       rod and assigned FlgH to the L ring and FlgI to the P ring.
 - component_id: export_apparatus
-  label: flagellar type III export apparatus (FlhA, FlhB, FliP, FliQ, FliR)
+  label: flagellar type III membrane export gate (FlhA, FlhB, FliP, FliQ, FliR)
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
@@ -147,8 +153,8 @@ components:
   - fliQ
   - fliR
   essentiality: ESSENTIAL
-  role: Flagellum-specific type III export gate housed inside the basal body that
-    secretes axial rod, hook and filament subunits.
+  role: Membrane export gate housed inside the basal body that works with the cytoplasmic
+    FliH/FliI/FliJ ATPase complex to secrete axial rod, hook and filament subunits.
   evidence:
   - reference: DOI:10.1146/annurev.micro.57.030502.090832
     notes: Macnab 2003 reviews export of axial flagellar substrates through the basal-body
@@ -239,7 +245,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     component_ref: c_ring
   - node_id: export_apparatus
-    label: flagellar type III export apparatus
+    label: flagellar type III membrane export gate
     node_type: GENE_OR_PROTEIN
     component_ref: export_apparatus
   - node_id: rod
@@ -292,8 +298,8 @@ causal_graphs:
   - subject: export_apparatus
     predicate: exports subunits for
     object: rod
-    description: The flagellar export apparatus delivers the FliE, FlgB, FlgC, FlgF
-      and FlgG axial proteins used to build the rod.
+    description: The membrane export gate delivers the FliE, FlgB, FlgC, FlgF and
+      FlgG axial proteins used to build the rod.
     evidence:
     - reference: DOI:10.1146/annurev.micro.57.030502.090832
       notes: Macnab 2003 reviews export of rod and other axial subunits through the
