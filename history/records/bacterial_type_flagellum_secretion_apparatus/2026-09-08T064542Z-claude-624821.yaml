@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_secretion_apparatus.yaml
+  slug: bacterial_type_flagellum_secretion_apparatus
+session:
+  id: 2026-09-08T064542Z-claude-624821
+  timestamp: '2026-09-08T06:45:42Z'
+  actors:
+  - type: ai_agent
+    name: claude
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reanchor flagellar export FliO boundary discussion
+  details: Moved the resolved FliO boundary discussion from the removed flio component to
+    the membrane-gate assembly function and export-apparatus causal graph, then updated its
+    resolution note so it documents the decision to keep FliO out of the conserved component
+    graph.

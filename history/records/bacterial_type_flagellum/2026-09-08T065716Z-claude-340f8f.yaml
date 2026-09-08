@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum.yaml
+  slug: bacterial_type_flagellum
+session:
+  id: 2026-09-08T065716Z-claude-340f8f
+  timestamp: '2026-09-08T06:57:16Z'
+  actors:
+  - type: ai_agent
+    name: claude
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/268
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/265
+events:
+- type: EDIT
+  outcome: changed
+  summary: Disambiguate flagellum membrane export gate
+  details: 'Resolved PR #265 review issue #268 by renaming the whole-flagellum five-protein
+    export aggregate and its Bacillus subtilis protein-example roles to the flagellar type
+    III membrane export gate, keeping that aggregate distinct from the full GO:0120102 secretion
+    apparatus.'

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_secretion_apparatus.yaml
+  slug: bacterial_type_flagellum_secretion_apparatus
+session:
+  id: 2026-09-08T055224Z-claude-bc0dba
+  timestamp: '2026-09-08T05:52:24Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add bacterial flagellum secretion apparatus record
+  details: Created a PROPOSED GO:0120102 bacterial flagellum secretion apparatus record with
+    GO export-apparatus synonymy and MS-ring parthood, FlhA/FlhB/FliP/FliQ/FliR/FliH/FliI/FliJ/FliO
+    composition with exact InterPro groundings where available, bacterial and archaeal taxonomic
+    scope, Salmonella as the canonical example, source-bounded substrate export, membrane-gate
+    assembly and energy-coupling functions, an export-gate assembly and function graph, and
+    resolved boundary discussions for FliO and FliI.

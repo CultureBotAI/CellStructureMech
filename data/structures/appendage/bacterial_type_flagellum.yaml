@@ -360,7 +360,7 @@ components:
   - reference: DOI:10.1146/annurev.micro.57.030502.090832
     notes: The L and P rings are not rotor components but bearings.
 - component_id: export_apparatus
-  label: flagellar type III export apparatus (FlhA, FlhB, FliP, FliQ, FliR)
+  label: flagellar type III membrane export gate (FlhA, FlhB, FliP, FliQ, FliR)
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
@@ -370,7 +370,8 @@ components:
   - fliQ
   - fliR
   essentiality: ESSENTIAL
-  role: Secretes rod, hook and filament subunits through the growing structure.
+  role: Membrane gate of the flagellum-specific type III export apparatus that secretes
+    rod, hook and filament subunits through the growing structure.
   evidence:
   - reference: DOI:10.1146/annurev.micro.57.030502.090832
     notes: Homologous to the injectisome export gate.
@@ -382,8 +383,8 @@ components:
     taxon_label: Bacillus subtilis subsp. subtilis str. 168
     entry_status: REVIEWED
     retrieved_on: '2026-09-01'
-    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III export
-      apparatus (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
+    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III membrane
+      export gate (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
       verified in UniProtKB.
     evidence:
     - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/flhA
@@ -396,8 +397,8 @@ components:
     taxon_label: Bacillus subtilis subsp. subtilis str. 168
     entry_status: REVIEWED
     retrieved_on: '2026-09-01'
-    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III export
-      apparatus (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
+    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III membrane
+      export gate (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
       verified in UniProtKB.
     evidence:
     - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/flhB
@@ -410,8 +411,8 @@ components:
     taxon_label: Bacillus subtilis subsp. subtilis str. 168
     entry_status: REVIEWED
     retrieved_on: '2026-09-01'
-    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III export
-      apparatus (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
+    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III membrane
+      export gate (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
       verified in UniProtKB.
     evidence:
     - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/fliP
@@ -424,8 +425,8 @@ components:
     taxon_label: Bacillus subtilis subsp. subtilis str. 168
     entry_status: REVIEWED
     retrieved_on: '2026-09-01'
-    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III export
-      apparatus (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
+    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III membrane
+      export gate (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
       verified in UniProtKB.
     evidence:
     - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/fliQ
@@ -438,8 +439,8 @@ components:
     taxon_label: Bacillus subtilis subsp. subtilis str. 168
     entry_status: REVIEWED
     retrieved_on: '2026-09-01'
-    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III export
-      apparatus (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
+    role: Curator-mapped from SubtiWiki category 387 to the flagellar type III membrane
+      export gate (FlhA, FlhB, FliP, FliQ, FliR) component; identity and taxon independently
       verified in UniProtKB.
     evidence:
     - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/fliR
@@ -762,7 +763,13 @@ curation_history:
   changes: Added descriptions to the remaining flagellar torque-generation edges so
     every edge now states the mechanistic step it represents.
   llm_assisted: true
-- timestamp: '2026-09-08T07:38:37Z'
+- timestamp: '2026-09-08T06:56:10Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #268 by renaming the five-protein flagellar export aggregate
+    as the membrane export gate rather than the full ATPase-associated secretion apparatus.'
+  llm_assisted: true
+- timestamp: '2026-09-08T07:51:38Z'
   curator: uniprot_genes
   action: SEED_PROTEIN_EXAMPLES
   changes: '#183: added 3 protein example(s) by resolving each of the component''s

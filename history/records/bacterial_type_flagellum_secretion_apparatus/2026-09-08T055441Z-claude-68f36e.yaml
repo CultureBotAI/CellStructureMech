@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_secretion_apparatus.yaml
+  slug: bacterial_type_flagellum_secretion_apparatus
+session:
+  id: 2026-09-08T055441Z-claude-68f36e
+  timestamp: '2026-09-08T05:54:41Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - causal_graphs
+  summary: Correct secretion apparatus parent
+  details: Changed the GO:0120102 bacterial flagellum secretion apparatus parent from the
+    GO:0009431 MS ring to the GO:0009425 bacterial flagellum basal body, matching the ontology
+    and preserving the MS ring relationship as a mechanism-graph housing edge rather than
+    an is-part-of assertion.
