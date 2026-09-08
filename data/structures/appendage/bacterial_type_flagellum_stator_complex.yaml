@@ -32,6 +32,19 @@ curation_history:
     clarified that PomA/PomB are sodium-stator subunit variants, not stator-associated
     scaffolds.
   llm_assisted: true
+- timestamp: '2026-09-08T04:23:21Z'
+  curator: claude
+  action: GROUNDED_GRAPH_NODE
+  changes: Grounded the stator mechanism graph's C-ring structure node to GO:0009433
+    after PR review found it was left as free text despite an exact bacterial flagellar
+    C-ring GO cellular-component term.
+  llm_assisted: true
+- timestamp: '2026-09-08T04:25:37Z'
+  curator: claude
+  action: CANONICALIZED_GRAPH_LABEL
+  changes: Renamed the GO:0009433 C-ring mechanism graph node to the exact Gene Ontology
+    canonical label after the PR-review fix surfaced an id-label correspondence mismatch.
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial-type flagellum motor force generator complex
   synonym_type: EXACT_SYNONYM
@@ -175,8 +188,9 @@ causal_graphs:
     label: proton or sodium flux
     node_type: BIOLOGICAL_PROCESS
   - node_id: c_ring
-    label: C ring
+    label: bacterial-type flagellum basal body, C ring
     node_type: STRUCTURE
+    grounding: GO:0009433
   edges:
   - subject: a_subunit
     predicate: forms pentameric ring in
