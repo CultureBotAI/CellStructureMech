@@ -28,7 +28,7 @@ curation_history:
     row into separate P65 and HMW3 protein components and updating the graph component
     references.'
   llm_assisted: true
-- timestamp: '2026-09-08T04:23:59Z'
+- timestamp: '2026-09-08T07:37:54Z'
   curator: uniprot_sl
   action: SEED_PROTEIN_EXAMPLES
   changes: Added 3 taxon-paired protein example(s) from UniProtKB reviewed entries
@@ -108,7 +108,7 @@ components:
     taxon_id: NCBITaxon:272634
     taxon_label: Mycoplasmoides pneumoniae M129
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: 'UniProt annotates this protein to SL-0020 (attachment organelle); component
       role: Acts as the length-setting internal-core scaffold of the paired plates
       in the polar extension.'
@@ -146,7 +146,7 @@ components:
     taxon_id: NCBITaxon:272634
     taxon_label: Mycoplasmoides pneumoniae M129
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: 'UniProt annotates this protein to SL-0020 (attachment organelle); component
       role: Localizes to the front terminal-button substructure that caps the paired
       plates within the electron-dense internal core.'
@@ -184,7 +184,7 @@ components:
     taxon_id: NCBITaxon:272634
     taxon_label: Mycoplasmoides pneumoniae M129
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: 'UniProt annotates this protein to SL-0020 (attachment organelle); component
       role: Localizes to the terminal-button boundary with the paired plates in the
       electron-dense internal core.'

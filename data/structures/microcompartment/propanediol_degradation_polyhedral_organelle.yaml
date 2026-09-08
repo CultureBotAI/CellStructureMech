@@ -26,17 +26,10 @@ curation_history:
   changes: Reworded the Pdu assembly graph to describe convergent shell and cargo
     biogenesis instead of a cargo-first-only pathway.
   llm_assisted: true
-- timestamp: '2026-09-08T04:25:27Z'
+- timestamp: '2026-09-08T07:39:58Z'
   curator: uniprot_genes
   action: SEED_PROTEIN_EXAMPLES
-  changes: '#183: added 4 protein example(s) by resolving the component''s declared
-    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
-    this record names. Symbols resolving to more than one reviewed entry were skipped
-    rather than chosen between.'
-- timestamp: '2026-09-08T06:47:38Z'
-  curator: uniprot_genes
-  action: SEED_PROTEIN_EXAMPLES
-  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+  changes: '#183: added 8 protein example(s) by resolving each of the component''s
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
@@ -79,11 +72,11 @@ components:
     protein_label: Bacterial microcompartment shell protein PduA
     gene_symbol: pduA
     taxon_id: NCBITaxon:99287
-    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene pduA in Salmonella typhimurium
-      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene pduA in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
       for the component's declared gene symbol; it is not itself evidence that the
       protein is part of this structure.
     evidence:
@@ -107,11 +100,11 @@ components:
     protein_label: Bacterial microcompartment shell protein PduJ
     gene_symbol: pduJ
     taxon_id: NCBITaxon:99287
-    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene pduJ in Salmonella typhimurium
-      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene pduJ in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
       for the component's declared gene symbol; it is not itself evidence that the
       protein is part of this structure.
     evidence:
@@ -129,11 +122,11 @@ components:
     protein_label: Bacterial microcompartment shell protein PduK
     gene_symbol: pduK
     taxon_id: NCBITaxon:99287
-    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene pduK in Salmonella typhimurium
-      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene pduK in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
       for the component's declared gene symbol; it is not itself evidence that the
       protein is part of this structure.
     evidence:
@@ -169,11 +162,11 @@ components:
     protein_label: Bacterial microcompartment shell protein PduB
     gene_symbol: pduB
     taxon_id: NCBITaxon:99287
-    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene pduB in Salmonella typhimurium
-      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene pduB in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
       for the component's declared gene symbol; it is not itself evidence that the
       protein is part of this structure.
     evidence:
@@ -190,11 +183,11 @@ components:
     protein_label: Bacterial microcompartment shell protein PduT
     gene_symbol: pduT
     taxon_id: NCBITaxon:99287
-    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene pduT in Salmonella typhimurium
-      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene pduT in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
       for the component's declared gene symbol; it is not itself evidence that the
       protein is part of this structure.
     evidence:
@@ -207,11 +200,11 @@ components:
     protein_label: Bacterial microcompartment shell protein PduU
     gene_symbol: pduU
     taxon_id: NCBITaxon:99287
-    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene pduU in Salmonella typhimurium
-      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene pduU in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
       for the component's declared gene symbol; it is not itself evidence that the
       protein is part of this structure.
     evidence:
@@ -247,11 +240,11 @@ components:
     protein_label: Bacterial microcompartment shell vertex protein PduN
     gene_symbol: pduN
     taxon_id: NCBITaxon:99287
-    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene pduN in Salmonella typhimurium
-      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene pduN in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
       for the component's declared gene symbol; it is not itself evidence that the
       protein is part of this structure.
     evidence:
@@ -283,11 +276,11 @@ components:
     protein_label: Bacterial microcompartment assembly protein PduM
     gene_symbol: pduM
     taxon_id: NCBITaxon:99287
-    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene pduM in Salmonella typhimurium
-      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene pduM in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
       for the component's declared gene symbol; it is not itself evidence that the
       protein is part of this structure.
     evidence:

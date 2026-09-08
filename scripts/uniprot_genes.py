@@ -36,6 +36,9 @@ declares synonyms of one gene -- ``secY`` and ``prlA`` are the same entry -- and
 accessions already on the component count, so a re-run fills gaps rather than
 duplicating what a curator or the SL route already put there.
 
+``taxon_label`` is NCBI's name for the taxon, not UniProt's organism string, so
+that it corresponds to the ``NCBITaxon`` id beside it (#270).
+
 What is written is an identifier, not a claim about the structure. The component
 already asserts the gene symbol; this adds the accession UniProt gives that
 symbol in that organism, and says so in ``role``. Where UniProt states a
@@ -71,7 +74,7 @@ except ImportError:  # ... or imported by the tests as scripts.uniprot_genes
     from scripts.corpus import REPO_ROOT, load_records
 
 from cellstructuremech.curate.curation_event import record_curation_event
-from cellstructuremech.ingest import pubmed_citations
+from cellstructuremech.ingest import ncbi_taxon_names, pubmed_citations
 from cellstructuremech.validation.write_validated import ValidationFailedError, write_validated_structure
 
 UA = {"User-Agent": "CellStructureMech/0.1 (https://github.com/CultureBotAI/CellStructureMech; curation bot)"}
@@ -113,15 +116,22 @@ def search_gene(symbol: str, taxon_id: int) -> list[dict]:
     return json.loads(_get(url)).get("results", [])
 
 
-def entry_status(entry: dict) -> str:
-    """What the entry says it is, not what the query asked for (#262).
+def entry_status(entry: dict) -> str | None:
+    """What the entry says it is, or None when it does not say (#262, #271).
 
-    ``search_gene`` filters ``reviewed:true``, so this is always REVIEWED today.
-    Reading it off the entry is what keeps that true if the query is ever widened.
+    ``search_gene`` filters ``reviewed:true``, so every entry reaching here is
+    reviewed by contract and this is always REVIEWED today. Reading it off the
+    entry is what keeps the field true if the query is ever widened. An entry
+    with no ``entryType`` is a broken contract, not an unreviewed entry, so it
+    returns None and the example is declined -- writing UNREVIEWED would be an
+    assertion made from missing data, which is the one thing this adapter is
+    otherwise careful never to do.
     """
     # "UniProtKB unreviewed (TrEMBL)" contains "reviewed"; test for the negative first.
     kind = (entry.get("entryType") or "").lower()
-    return "UNREVIEWED" if ("unreviewed" in kind or "reviewed" not in kind) else "REVIEWED"
+    if "unreviewed" in kind:
+        return "UNREVIEWED"
+    return "REVIEWED" if "reviewed" in kind else None
 
 
 def gene_names(entry: dict) -> list[str]:
@@ -236,19 +246,32 @@ def resolve(component: dict, taxa: list[tuple[int, str]]) -> tuple[list[dict], s
     return hits, "; ".join(reasons) if reasons else "nothing left to resolve"
 
 
-def build_example(hit: dict, today: str, citations: dict[str, str]) -> dict | None:
-    """The example to write, or None when the entry cannot be taxon-paired (#263).
+def build_example(hit: dict, today: str, citations: dict[str, str],
+                  taxon_names: dict[str, str], record_labels: dict[str, str] | None = None) -> dict | None:
+    """The example to write, or None when it cannot be stated honestly.
 
-    Every accession here is paired to the organism it was found in. An entry with
-    no organism taxon cannot be, so it is declined the way every other shortfall
-    in this adapter is -- reported, and the run carries on.
+    Declined when the entry carries no organism taxon (#263), when NCBI will not
+    name that taxon (#270), or when the entry does not say whether it is reviewed
+    (#271). Every accession here is paired to the organism it was found in, and a
+    pair that cannot be completed is reported rather than filled in.
+
+    ``taxon_label`` never comes from UniProt: the id is an ``NCBITaxon`` CURIE,
+    and UniProt's house string beside it would be a pair that does not correspond
+    -- one the id/label gate cannot catch, because ``conf/id_label_targets.yaml``
+    skips the prefix (#270). A taxon the record itself names keeps the record's
+    own label, which is what ``uniprot_sl.py`` writes, so one id does not end up
+    with two labels in one corpus; a strain node below it takes NCBI's name.
     """
     entry = hit["entry"]
     acc = entry["primaryAccession"]
     organism = entry.get("organism") or {}
-    if not organism.get("taxonId"):
+    taxon = organism.get("taxonId")
+    status = entry_status(entry)
+    if not taxon or status is None:
         return None
-    organism_name = organism.get("scientificName") or hit["taxon_label"]
+    organism_name = (record_labels or {}).get(str(taxon)) or taxon_names.get(str(taxon))
+    if not organism_name:
+        return None
     primary = (entry.get("genes") or [{}])[0].get("geneName", {}).get("value") or hit["symbol"]
     desc = entry.get("proteinDescription") or {}
     label = ((desc.get("recommendedName") or {}).get("fullName") or {}).get("value") or acc
@@ -280,7 +303,7 @@ def build_example(hit: dict, today: str, citations: dict[str, str]) -> dict | No
     return {
         "uniprot_id": f"UniProtKB:{acc}", "protein_label": label, "gene_symbol": primary,
         "taxon_id": f"NCBITaxon:{organism.get('taxonId')}", "taxon_label": organism_name,
-        "entry_status": entry_status(entry), "retrieved_on": today, "role": role,
+        "entry_status": status, "retrieved_on": today, "role": role,
         "evidence": unique[:MAX_EVIDENCE],
     }
 
@@ -295,12 +318,20 @@ def plan_record(doc: dict, today: str) -> list[tuple[str, str, list[dict]]]:
     citations = pubmed_citations(
         [p for _, hits, _ in resolved for hit in hits
          for _, pmids in localisations(hit["entry"]) for p in pmids[:MAX_EVIDENCE]])
+    taxon_names = ncbi_taxon_names(
+        [str((hit["entry"].get("organism") or {}).get("taxonId"))
+         for _, hits, _ in resolved for hit in hits
+         if (hit["entry"].get("organism") or {}).get("taxonId")])
+    record_labels = {t["taxon_id"].split(":")[1]: t["taxon_label"]
+                     for t in doc.get("canonical_examples") or []
+                     if t.get("taxon_id") and t.get("taxon_label")}
     rows = []
     for component, hits, why in resolved:
-        examples = [e for e in (build_example(h, today, citations) for h in hits) if e]
+        examples = [e for e in
+                    (build_example(h, today, citations, taxon_names, record_labels) for h in hits) if e]
         declined = len(hits) - len(examples)
         if declined:
-            why = f"{why}; {declined} entry(s) with no organism taxon"
+            why = f"{why}; {declined} entry(s) not statable (no taxon, unnamed taxon, or no entryType)"
         rows.append((component["component_id"], why, examples))
     return rows
 

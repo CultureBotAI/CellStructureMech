@@ -34,17 +34,10 @@ curation_history:
     paper to BMC-P, co2_retention and graph evidence; resolved #222 by adding the
     Roberts et al. 2012 CsoS1D primary paper to BMC-T evidence.'
   llm_assisted: true
-- timestamp: '2026-09-08T04:25:20Z'
+- timestamp: '2026-09-08T07:39:46Z'
   curator: uniprot_genes
   action: SEED_PROTEIN_EXAMPLES
-  changes: '#183: added 3 protein example(s) by resolving the component''s declared
-    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
-    this record names. Symbols resolving to more than one reviewed entry were skipped
-    rather than chosen between.'
-- timestamp: '2026-09-08T06:47:30Z'
-  curator: uniprot_genes
-  action: SEED_PROTEIN_EXAMPLES
-  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+  changes: '#183: added 8 protein example(s) by resolving each of the component''s
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
@@ -90,14 +83,13 @@ components:
     protein_label: Carboxysome shell protein CcmK2
     gene_symbol: ccmK2
     taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805)
+    taxon_label: Synechococcus elongatus PCC 7942
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene ccmK, which UniProt lists under
-      the primary name ccmK2, in Synechococcus elongatus (strain ATCC 33912 / PCC
-      7942 / FACHB-805), a taxon this record names. Identifier for the component's
-      declared gene symbol; it is not itself evidence that the protein is part of
-      this structure.
+      the primary name ccmK2, in Synechococcus elongatus PCC 7942, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:17675289
       notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
@@ -118,15 +110,13 @@ components:
     protein_label: Major carboxysome shell protein CsoS1A
     gene_symbol: csoS1A
     taxon_id: NCBITaxon:555778
-    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
-      104769 / NCIMB 8539 / c2)
+    taxon_label: Halothiobacillus neapolitanus c2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene csoS1, which UniProt lists
-      under the primary name csoS1A, in Halothiobacillus neapolitanus (strain ATCC
-      23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2), a taxon this record names.
-      Identifier for the component's declared gene symbol; it is not itself evidence
-      that the protein is part of this structure.
+      under the primary name csoS1A, in Halothiobacillus neapolitanus c2, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:18258595
       notes: Dou Z et al. 2008, ‘CO2 fixation kinetics of Halothiobacillus neapolitanus
@@ -167,13 +157,12 @@ components:
     protein_label: Carboxysome assembly protein CcmO
     gene_symbol: ccmO
     taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805)
+    taxon_label: Synechococcus elongatus PCC 7942
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene ccmO in Synechococcus elongatus
-      (strain ATCC 33912 / PCC 7942 / FACHB-805), a taxon this record names. Identifier
-      for the component's declared gene symbol; it is not itself evidence that the
-      protein is part of this structure.
+      PCC 7942, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:22928045
       notes: 'Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes
@@ -193,13 +182,12 @@ components:
     protein_label: Carboxysome shell protein CcmP
     gene_symbol: ccmP
     taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805)
+    taxon_label: Synechococcus elongatus PCC 7942
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene ccmP in Synechococcus elongatus
-      (strain ATCC 33912 / PCC 7942 / FACHB-805), a taxon this record names. Identifier
-      for the component's declared gene symbol; it is not itself evidence that the
-      protein is part of this structure.
+      PCC 7942, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:23572529
       notes: Cai F et al. 2013, ‘The structure of CcmP, a tandem bacterial microcompartment
@@ -210,21 +198,18 @@ components:
     protein_label: Carboxysome shell protein CsoS1D
     gene_symbol: csoS1D
     taxon_id: NCBITaxon:555778
-    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
-      104769 / NCIMB 8539 / c2)
+    taxon_label: Halothiobacillus neapolitanus c2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene csoS1D in Halothiobacillus
-      neapolitanus (strain ATCC 23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2),
-      a taxon this record names. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+      neapolitanus c2, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/D0KZ73
       notes: UniProtKB reviewed (Swiss-Prot) entry D0KZ73, the single reviewed entry
-        for gene csoS1D in Halothiobacillus neapolitanus (strain ATCC 23641 / DSM
-        15147 / CIP 104769 / NCIMB 8539 / c2). Establishes the accession and gene
-        identity only; the component's membership in this structure rests on the record's
-        own sources.
+        for gene csoS1D in Halothiobacillus neapolitanus c2. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: bmc_p
   label: BMC-P shell pentamers (CcmL / CsoS4)
   component_type: PROTEIN
@@ -254,13 +239,12 @@ components:
     protein_label: Carboxysome shell vertex protein CcmL
     gene_symbol: ccmL
     taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805)
+    taxon_label: Synechococcus elongatus PCC 7942
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene ccmL in Synechococcus elongatus
-      (strain ATCC 33912 / PCC 7942 / FACHB-805), a taxon this record names. Identifier
-      for the component's declared gene symbol; it is not itself evidence that the
-      protein is part of this structure.
+      PCC 7942, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:28616951
       notes: Faulkner M et al. 2017, ‘Direct characterization of the native structure
@@ -275,14 +259,12 @@ components:
     protein_label: Carboxysome shell vertex protein CsoS4A
     gene_symbol: csoS4A
     taxon_id: NCBITaxon:555778
-    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
-      104769 / NCIMB 8539 / c2)
+    taxon_label: Halothiobacillus neapolitanus c2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene csoS4A in Halothiobacillus
-      neapolitanus (strain ATCC 23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2),
-      a taxon this record names. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+      neapolitanus c2, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:19844578
       notes: Cai F et al. 2009, ‘The pentameric vertex proteins are necessary for
@@ -293,14 +275,12 @@ components:
     protein_label: Carboxysome shell vertex protein CsoS4B
     gene_symbol: csoS4B
     taxon_id: NCBITaxon:555778
-    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
-      104769 / NCIMB 8539 / c2)
+    taxon_label: Halothiobacillus neapolitanus c2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene csoS4B in Halothiobacillus
-      neapolitanus (strain ATCC 23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2),
-      a taxon this record names. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+      neapolitanus c2, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:18292340
       notes: Tanaka S et al. 2008, ‘Atomic-level models of the bacterial carboxysome

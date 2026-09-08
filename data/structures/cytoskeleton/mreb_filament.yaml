@@ -36,12 +36,12 @@ components:
     protein_label: Cell shape-determining protein MreB
     gene_symbol: mreB
     taxon_id: NCBITaxon:83333
-    taxon_label: Escherichia coli (strain K12)
+    taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene mreB in Escherichia coli (strain
-      K12), a taxon this record names. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene mreB in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:15612918
       notes: Kruse T et al. 2005, ‘The morphogenetic MreBCD proteins of Escherichia
@@ -66,14 +66,14 @@ components:
     protein_label: Cytoskeleton protein RodZ
     gene_symbol: rodZ
     taxon_id: NCBITaxon:83333
-    taxon_label: Escherichia coli (strain K12)
+    taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene rodZ in Escherichia coli (strain
-      K12), a taxon this record names; other reviewed entries for this symbol exist
-      on sub-strain nodes and this is the one at the taxon the record names. Identifier
-      for the component's declared gene symbol; it is not itself evidence that the
-      protein is part of this structure.
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene rodZ in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
     evidence:
     - reference: PMID:19008860
       notes: Shiomi D et al. 2008, ‘Determination of bacterial rod shape by a novel
@@ -289,13 +289,13 @@ curation_history:
     elongasome's sidewall-synthesis review, and keeps the filament-to-machine relation
     out of equivalence-only xrefs.
   llm_assisted: true
-- timestamp: '2026-09-08T04:25:02Z'
+- timestamp: '2026-09-08T07:38:55Z'
   curator: uniprot_genes
   action: SEED_PROTEIN_EXAMPLES
-  changes: '#183: added 2 protein example(s) by resolving the component''s declared
-    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
-    this record names. Symbols resolving to more than one reviewed entry were skipped
-    rather than chosen between.'
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped

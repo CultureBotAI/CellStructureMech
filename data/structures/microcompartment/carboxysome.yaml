@@ -99,15 +99,13 @@ components:
     protein_label: Major carboxysome shell protein CsoS1A
     gene_symbol: csoS1A
     taxon_id: NCBITaxon:555778
-    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
-      104769 / NCIMB 8539 / c2)
+    taxon_label: Halothiobacillus neapolitanus c2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene csoS1, which UniProt lists
-      under the primary name csoS1A, in Halothiobacillus neapolitanus (strain ATCC
-      23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2), a taxon this record names.
-      Identifier for the component's declared gene symbol; it is not itself evidence
-      that the protein is part of this structure.
+      under the primary name csoS1A, in Halothiobacillus neapolitanus c2, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:18258595
       notes: Dou Z et al. 2008, ‘CO2 fixation kinetics of Halothiobacillus neapolitanus
@@ -232,14 +230,12 @@ components:
     protein_label: Carboxysome shell vertex protein CsoS4A
     gene_symbol: csoS4A
     taxon_id: NCBITaxon:555778
-    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
-      104769 / NCIMB 8539 / c2)
+    taxon_label: Halothiobacillus neapolitanus c2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene csoS4A in Halothiobacillus
-      neapolitanus (strain ATCC 23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2),
-      a taxon this record names. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+      neapolitanus c2, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:19844578
       notes: Cai F et al. 2009, ‘The pentameric vertex proteins are necessary for
@@ -400,14 +396,12 @@ components:
     protein_label: Carboxysome assembly protein CsoS2B
     gene_symbol: csoS2
     taxon_id: NCBITaxon:555778
-    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
-      104769 / NCIMB 8539 / c2)
+    taxon_label: Halothiobacillus neapolitanus c2
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene csoS2 in Halothiobacillus neapolitanus
-      (strain ATCC 23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2), a taxon this
-      record names. Identifier for the component's declared gene symbol; it is not
-      itself evidence that the protein is part of this structure.
+      c2, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:10525740
       notes: Baker SH et al. 1999, ‘The correlation of the gene csoS2 of the carboxysome
@@ -893,7 +887,7 @@ curation_history:
   action: ENHANCE_CAUSAL_GRAPH
   changes: Added descriptions to the remaining carboxysome CO2-concentrating and assembly
     graph edges so every causal edge now states its mechanism.
-- timestamp: '2026-09-08T06:47:25Z'
+- timestamp: '2026-09-08T07:39:38Z'
   curator: uniprot_genes
   action: SEED_PROTEIN_EXAMPLES
   changes: '#183: added 3 protein example(s) by resolving each of the component''s

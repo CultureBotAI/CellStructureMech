@@ -18,17 +18,10 @@ curation_history:
   changes: Added synonyms, parentage, components, taxonomy, a canonical example, function,
     evidence, and a source-bounded mechanism graph.
   llm_assisted: true
-- timestamp: '2026-09-08T04:25:29Z'
+- timestamp: '2026-09-08T07:40:02Z'
   curator: uniprot_genes
   action: SEED_PROTEIN_EXAMPLES
-  changes: '#183: added 2 protein example(s) by resolving the component''s declared
-    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
-    this record names. Symbols resolving to more than one reviewed entry were skipped
-    rather than chosen between.'
-- timestamp: '2026-09-08T06:47:40Z'
-  curator: uniprot_genes
-  action: SEED_PROTEIN_EXAMPLES
-  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
@@ -61,22 +54,18 @@ components:
     protein_label: Cellulosomal-scaffolding protein A
     gene_symbol: cipA
     taxon_id: NCBITaxon:203119
-    taxon_label: Acetivibrio thermocellus (strain ATCC 27405 / DSM 1237 / JCM 9322
-      / NBRC 103400 / NCIMB 10682 / NRRL B-4536 / VPI 7372)
+    taxon_label: Acetivibrio thermocellus ATCC 27405
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene cipA in Acetivibrio thermocellus
-      (strain ATCC 27405 / DSM 1237 / JCM 9322 / NBRC 103400 / NCIMB 10682 / NRRL
-      B-4536 / VPI 7372), a taxon this record names. Identifier for the component's
-      declared gene symbol; it is not itself evidence that the protein is part of
-      this structure.
+      ATCC 27405, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q06851
       notes: UniProtKB reviewed (Swiss-Prot) entry Q06851, the single reviewed entry
-        for gene cipA in Acetivibrio thermocellus (strain ATCC 27405 / DSM 1237 /
-        JCM 9322 / NBRC 103400 / NCIMB 10682 / NRRL B-4536 / VPI 7372). Establishes
-        the accession and gene identity only; the component's membership in this structure
-        rests on the record's own sources.
+        for gene cipA in Acetivibrio thermocellus ATCC 27405. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: dockerin_bearing_hydrolases
   label: dockerin-bearing plant-cell-wall hydrolases
   component_type: PROTEIN
@@ -99,7 +88,7 @@ components:
     taxon_id: NCBITaxon:1515
     taxon_label: Acetivibrio thermocellus
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene celA in Acetivibrio thermocellus,
       a taxon this record names; other reviewed entries for this symbol exist on sub-strain
       nodes and this is the one at the taxon the record names. Identifier for the
@@ -117,7 +106,7 @@ components:
     taxon_id: NCBITaxon:1515
     taxon_label: Acetivibrio thermocellus
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene celS in Acetivibrio thermocellus,
       a taxon this record names; other reviewed entries for this symbol exist on sub-strain
       nodes and this is the one at the taxon the record names. Identifier for the

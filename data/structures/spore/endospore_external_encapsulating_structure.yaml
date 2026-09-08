@@ -69,28 +69,30 @@ components:
     protein_label: Stage IV sporulation protein A
     gene_symbol: spoIVA
     taxon_id: NCBITaxon:224308
-    taxon_label: Bacillus subtilis (strain 168)
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene spoIVA in Bacillus subtilis
-      (strain 168), a taxon this record names. Identifier for the component's declared
-      gene symbol; it is not itself evidence that the protein is part of this structure.
+      subsp. subtilis str. 168, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/P35149
       notes: UniProtKB reviewed (Swiss-Prot) entry P35149, the single reviewed entry
-        for gene spoIVA in Bacillus subtilis (strain 168). Establishes the accession
-        and gene identity only; the component's membership in this structure rests
-        on the record's own sources.
+        for gene spoIVA in Bacillus subtilis subsp. subtilis str. 168. Establishes
+        the accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
   - uniprot_id: UniProtKB:O32062
     protein_label: Spore coat morphogenetic protein SafA
     gene_symbol: safA
     taxon_id: NCBITaxon:224308
-    taxon_label: Bacillus subtilis (strain 168)
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene safA in Bacillus subtilis (strain
-      168), a taxon this record names. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene safA in Bacillus subtilis subsp.
+      subtilis str. 168, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
     evidence:
     - reference: PMID:11325931
       notes: Ozin AJ et al. 2001, ‘SpoVID guides SafA to the spore coat in Bacillus
@@ -365,7 +367,7 @@ curation_history:
     grounded cortex and coat nodes to their exact GO part terms, and added primary
     evidence for SpoIVA-driven basement-layer assembly.
   llm_assisted: true
-- timestamp: '2026-09-08T06:47:58Z'
+- timestamp: '2026-09-08T07:40:30Z'
   curator: uniprot_genes
   action: SEED_PROTEIN_EXAMPLES
   changes: '#183: added 2 protein example(s) by resolving each of the component''s

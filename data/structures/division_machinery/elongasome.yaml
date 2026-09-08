@@ -45,13 +45,13 @@ components:
     protein_label: Peptidoglycan glycosyltransferase MrdB
     gene_symbol: mrdB
     taxon_id: NCBITaxon:83333
-    taxon_label: Escherichia coli (strain K12)
+    taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
+    retrieved_on: '2026-09-08'
     role: The single reviewed UniProtKB entry for gene rodA, which UniProt lists under
-      the primary name mrdB, in Escherichia coli (strain K12), a taxon this record
-      names. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+      the primary name mrdB, in Escherichia coli K-12, a taxon this record names.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
     evidence:
     - reference: PMID:6348029
       notes: Stoker NG et al. 1983, ‘Identification of the rodA gene product of Escherichia
@@ -76,12 +76,12 @@ components:
     protein_label: Peptidoglycan D,D-transpeptidase MrdA
     gene_symbol: mrdA
     taxon_id: NCBITaxon:83333
-    taxon_label: Escherichia coli (strain K12)
+    taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene mrdA in Escherichia coli (strain
-      K12), a taxon this record names. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene mrdA in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:1103132
       notes: Spratt BG 1975, ‘Distinct penicillin binding proteins involved in the
@@ -112,12 +112,12 @@ components:
     protein_label: Cell shape-determining protein MreC
     gene_symbol: mreC
     taxon_id: NCBITaxon:83333
-    taxon_label: Escherichia coli (strain K12)
+    taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene mreC in Escherichia coli (strain
-      K12), a taxon this record names. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene mreC in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:15612918
       notes: Kruse T et al. 2005, ‘The morphogenetic MreBCD proteins of Escherichia
@@ -128,18 +128,18 @@ components:
     protein_label: Rod shape-determining protein MreD
     gene_symbol: mreD
     taxon_id: NCBITaxon:83333
-    taxon_label: Escherichia coli (strain K12)
+    taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene mreD in Escherichia coli (strain
-      K12), a taxon this record names. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene mreD in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/P0ABH4
       notes: UniProtKB reviewed (Swiss-Prot) entry P0ABH4, the single reviewed entry
-        for gene mreD in Escherichia coli (strain K12). Establishes the accession
-        and gene identity only; the component's membership in this structure rests
-        on the record's own sources.
+        for gene mreD in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: rodz
   label: RodZ
   component_type: PROTEIN
@@ -157,14 +157,14 @@ components:
     protein_label: Cytoskeleton protein RodZ
     gene_symbol: rodZ
     taxon_id: NCBITaxon:83333
-    taxon_label: Escherichia coli (strain K12)
+    taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene rodZ in Escherichia coli (strain
-      K12), a taxon this record names; other reviewed entries for this symbol exist
-      on sub-strain nodes and this is the one at the taxon the record names. Identifier
-      for the component's declared gene symbol; it is not itself evidence that the
-      protein is part of this structure.
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene rodZ in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
     evidence:
     - reference: PMID:19008860
       notes: Shiomi D et al. 2008, ‘Determination of bacterial rod shape by a novel
@@ -262,17 +262,10 @@ curation_history:
     so it now leads the evidence and the velocity observation is labelled for what
     it shows.'
   llm_assisted: true
-- timestamp: '2026-09-08T04:25:08Z'
+- timestamp: '2026-09-08T07:39:02Z'
   curator: uniprot_genes
   action: SEED_PROTEIN_EXAMPLES
-  changes: '#183: added 4 protein example(s) by resolving the component''s declared
-    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
-    this record names. Symbols resolving to more than one reviewed entry were skipped
-    rather than chosen between.'
-- timestamp: '2026-09-08T06:46:55Z'
-  curator: uniprot_genes
-  action: SEED_PROTEIN_EXAMPLES
-  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'

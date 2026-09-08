@@ -30,12 +30,12 @@ components:
     protein_label: Cell division protein FtsZ
     gene_symbol: ftsZ
     taxon_id: NCBITaxon:83333
-    taxon_label: Escherichia coli (strain K12)
+    taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene ftsZ in Escherichia coli (strain
-      K12), a taxon this record names. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene ftsZ in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:1944597
       notes: Bi EF et al. 1991, ‘FtsZ ring structure associated with division in Escherichia
@@ -67,12 +67,12 @@ components:
     protein_label: Cell division protein FtsA
     gene_symbol: ftsA
     taxon_id: NCBITaxon:83333
-    taxon_label: Escherichia coli (strain K12)
+    taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene ftsA in Escherichia coli (strain
-      K12), a taxon this record names. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene ftsA in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
     evidence:
     - reference: PMID:15752196
       notes: Pichoff S et al. 2005, ‘Tethering the Z ring to the membrane through
@@ -87,14 +87,14 @@ components:
     protein_label: Cell division protein ZipA
     gene_symbol: zipA
     taxon_id: NCBITaxon:83333
-    taxon_label: Escherichia coli (strain K12)
+    taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene zipA in Escherichia coli (strain
-      K12), a taxon this record names; other reviewed entries for this symbol exist
-      on sub-strain nodes and this is the one at the taxon the record names. Identifier
-      for the component's declared gene symbol; it is not itself evidence that the
-      protein is part of this structure.
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene zipA in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
     evidence:
     - reference: PMID:16079137
       notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
@@ -109,12 +109,13 @@ components:
     protein_label: Cell division protein SepF
     gene_symbol: sepF
     taxon_id: NCBITaxon:224308
-    taxon_label: Bacillus subtilis (strain 168)
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
     entry_status: REVIEWED
-    retrieved_on: '2026-09-07'
-    role: The single reviewed UniProtKB entry for gene sepF in Bacillus subtilis (strain
-      168), a taxon this record names. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene sepF in Bacillus subtilis subsp.
+      subtilis str. 168, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
     evidence:
     - reference: PMID:16420366
       notes: Hamoen LW et al. 2006, ‘SepF, a novel FtsZ-interacting protein required
@@ -346,17 +347,10 @@ curation_history:
     is restored verbatim. The narrowing moves to `notes`, and posed_date returns to
     when the question was actually raised.'
   llm_assisted: true
-- timestamp: '2026-09-08T04:25:04Z'
+- timestamp: '2026-09-08T07:38:58Z'
   curator: uniprot_genes
   action: SEED_PROTEIN_EXAMPLES
-  changes: '#183: added 2 protein example(s) by resolving the component''s declared
-    gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
-    this record names. Symbols resolving to more than one reviewed entry were skipped
-    rather than chosen between.'
-- timestamp: '2026-09-08T06:46:53Z'
-  curator: uniprot_genes
-  action: SEED_PROTEIN_EXAMPLES
-  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
