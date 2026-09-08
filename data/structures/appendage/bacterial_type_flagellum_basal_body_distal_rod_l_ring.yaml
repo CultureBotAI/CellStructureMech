@@ -21,6 +21,13 @@ curation_history:
     literature evidence, and a boundary discussion excluding the P ring, distal rod,
     outer membrane and assembly factors.
   llm_assisted: true
+- timestamp: '2026-09-08T02:35:47Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #252 by explicitly excluding lipopolysaccharide from the mature
+    L-ring component boundary; resolved #253 in the paired history record by adding
+    the measurements section.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, distal rod, L ring
   synonym_type: RELATED_SYNONYM
@@ -188,21 +195,21 @@ causal_graphs:
       notes: Yamaguchi et al. 2021 described the LP ring as the molecular bushing
         of the bacterial flagellar motor.
 discussions:
-- discussion_id: exclude_p_ring_rod_outer_membrane_and_assembly_factors
-  prompt: Should the P ring, distal rod, outer membrane, FlgA, or FlgJ be curated
-    as L-ring components?
+- discussion_id: exclude_p_ring_rod_lps_outer_membrane_and_assembly_factors
+  prompt: Should the P ring, distal rod, lipopolysaccharide, outer membrane, FlgA,
+    or FlgJ be curated as L-ring components?
   kind: CURATION_TODO
   status: RESOLVED
   attaches_to:
   - components#flgh
   rationale: The mature GO:0009427 L ring is the FlgH ring at the outer-membrane side
     of the LP-ring bushing. FlgI forms the adjacent P ring, the FlgG distal rod runs
-    through the bushing, the cell outer membrane hosts the L ring, and FlgA and FlgJ
-    act during outer-ring or rod assembly rather than remaining constituents of the
-    mature L ring.
+    through the bushing, lipopolysaccharide and the cell outer membrane host the L
+    ring, and FlgA and FlgJ act during outer-ring or rod assembly rather than remaining
+    constituents of the mature L ring.
   resolution_note: 'Declined: keep FlgH as the only mature L-ring constituent and
-    represent the adjoining P ring, FlgG distal rod, outer membrane and assembly factors
-    outside this record''s component list.'
+    represent the adjoining P ring, FlgG distal rod, lipopolysaccharide, outer membrane
+    and assembly factors outside this record''s component list.'
   posed_by: claude
   posed_date: '2026-09-08'
   resolved_date: '2026-09-08'
