@@ -29,6 +29,13 @@ sequenced sub-strain. When exactly one of those entries sits on the node the
 record itself names, that is the record's own choice of organism rather than a
 choice between equals, and it is taken. Anything else is skipped.
 
+Every declared symbol is resolved, not just the first: a component labelled
+"MreC and MreD" is two proteins, and one accession would present half of it as
+the whole. Results are deduplicated by accession, because a component often
+declares synonyms of one gene -- ``secY`` and ``prlA`` are the same entry -- and
+accessions already on the component count, so a re-run fills gaps rather than
+duplicating what a curator or the SL route already put there.
+
 What is written is an identifier, not a claim about the structure. The component
 already asserts the gene symbol; this adds the accession UniProt gives that
 symbol in that organism, and says so in ``role``. Where UniProt states a
@@ -82,6 +89,11 @@ def _get(url: str) -> bytes:
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as fh:
                 return fh.read()
+        except urllib.error.HTTPError as exc:
+            if exc.code < 500:  # a malformed query is not transient
+                raise
+            last = exc
+            time.sleep(2 * (attempt + 1))
         except (urllib.error.URLError, TimeoutError) as exc:  # transient; UniProt rate-limits
             last = exc
             time.sleep(2 * (attempt + 1))
@@ -99,6 +111,17 @@ def search_gene(symbol: str, taxon_id: int) -> list[dict]:
     url = REST + "?" + urllib.parse.urlencode(
         {"query": q, "format": "json", "size": 25, "fields": FIELDS})
     return json.loads(_get(url)).get("results", [])
+
+
+def entry_status(entry: dict) -> str:
+    """What the entry says it is, not what the query asked for (#262).
+
+    ``search_gene`` filters ``reviewed:true``, so this is always REVIEWED today.
+    Reading it off the entry is what keeps that true if the query is ever widened.
+    """
+    # "UniProtKB unreviewed (TrEMBL)" contains "reviewed"; test for the negative first.
+    kind = (entry.get("entryType") or "").lower()
+    return "UNREVIEWED" if ("unreviewed" in kind or "reviewed" not in kind) else "REVIEWED"
 
 
 def gene_names(entry: dict) -> list[str]:
@@ -143,51 +166,88 @@ def localisation_note(acc: str, location: str, citation: str | None) -> str:
     return f"{citation} {base}" if citation else base
 
 
+def missing_symbols(component: dict) -> list[str]:
+    """Declared gene symbols with no protein example of their own yet."""
+    have = {(e.get("gene_symbol") or "").lower()
+            for e in component.get("protein_examples") or []}
+    return [s for s in component.get("gene_symbols") or [] if s.lower() not in have]
+
+
 def candidates(doc: dict) -> list[dict]:
-    """Components this route could reach: PROTEIN, gene symbols, no accession yet."""
+    """Components this route could reach: PROTEIN, with a symbol still unrepresented."""
     return [c for c in doc.get("components") or []
-            if c.get("component_type") == "PROTEIN"
-            and not c.get("protein_examples")
-            and c.get("gene_symbols")]
+            if c.get("component_type") == "PROTEIN" and missing_symbols(c)]
 
 
-def resolve(component: dict, taxa: list[tuple[int, str]]) -> tuple[dict | None, str]:
-    """The one reviewed entry for one of this component's symbols, or why not.
+def resolve_symbol(symbol: str, taxa: list[tuple[int, str]]) -> tuple[dict | None, str]:
+    """The one reviewed entry for one symbol, or why there isn't one.
 
-    Symbols and taxa are tried in the order the record lists them, so the
-    curator's own ranking decides; a symbol that is ambiguous in one organism
-    does not disqualify the next.
+    Taxa are tried in the order the record lists them, so the curator's own
+    ranking decides; a symbol that is ambiguous in one organism does not
+    disqualify the next.
     """
     reasons = []
-    for symbol in component["gene_symbols"]:
-        for taxon_id, taxon_label in taxa:
-            hits = search_gene(symbol, taxon_id)
-            exact = [e for e in hits
-                     if any(n.lower() == symbol.lower() for n in gene_names(e))]
-            # Several reviewed entries for one symbol are usually the same protein in
-            # sub-strains of the named taxon (rodZ in E. coli K-12: MG1655, BW2952,
-            # DH10B). The entry sitting on the node the record actually names is the
-            # one to take -- that is the record's own choice of organism, not a guess
-            # between equals. Descendants are only ever a fallback.
-            at_node = [e for e in exact if (e.get("organism") or {}).get("taxonId") == taxon_id]
-            # at_node is a subset of exact, so narrowing to it can only ever remove
-            # candidates -- the "exactly one" test below still decides, and a symbol
-            # that is ambiguous at the named node stays ambiguous.
-            chosen = at_node or exact
-            if len(chosen) == 1:
-                return {"entry": chosen[0], "symbol": symbol, "taxon_label": taxon_label,
-                        "narrowed": len(exact) > 1}, "ok"
-            if len(exact) > 1:
-                reasons.append(f"{symbol}/{taxon_id}: {len(exact)} reviewed entries")
-            elif hits:
-                reasons.append(f"{symbol}/{taxon_id}: {len(hits)} hit(s), none an exact gene match")
+    for taxon_id, taxon_label in taxa:
+        hits = search_gene(symbol, taxon_id)
+        exact = [e for e in hits
+                 if any(n.lower() == symbol.lower() for n in gene_names(e))]
+        # Several reviewed entries for one symbol are usually the same protein in
+        # sub-strains of the named taxon (rodZ in E. coli K-12: MG1655, BW2952,
+        # DH10B). The entry sitting on the node the record actually names is the
+        # one to take -- that is the record's own choice of organism, not a guess
+        # between equals. at_node is a subset of exact, so narrowing to it can only
+        # remove candidates: the "exactly one" test below still decides, and a
+        # symbol that is ambiguous at the named node stays ambiguous.
+        at_node = [e for e in exact if (e.get("organism") or {}).get("taxonId") == taxon_id]
+        chosen = at_node or exact
+        if len(chosen) == 1:
+            return {"entry": chosen[0], "symbol": symbol, "taxon_label": taxon_label,
+                    "narrowed": len(exact) > 1}, "ok"
+        if len(exact) > 1:
+            reasons.append(f"{taxon_id}: {len(exact)} reviewed entries")
+        elif hits:
+            reasons.append(f"{taxon_id}: {len(hits)} hit(s), none an exact gene match")
     return None, "; ".join(reasons) if reasons else "no reviewed entry"
 
 
-def build_example(hit: dict, today: str, citations: dict[str, str]) -> dict:
+def resolve(component: dict, taxa: list[tuple[int, str]]) -> tuple[list[dict], str]:
+    """Every declared symbol that resolves, deduplicated by accession (#261).
+
+    A component labelled "MreC and MreD" is two proteins, and returning only the
+    first symbol's entry would present half of it as the whole. Deduplication is
+    by accession because a component often declares synonyms of one gene --
+    ``secY`` and ``prlA`` are the same entry, not two examples of it -- and
+    accessions already on the component count, so re-running fills the gaps a
+    curator or the SL route left rather than duplicating what is there.
+    """
+    seen = {(e.get("uniprot_id") or "").split(":")[-1]
+            for e in component.get("protein_examples") or []}
+    hits, reasons = [], []
+    for symbol in missing_symbols(component):
+        hit, why = resolve_symbol(symbol, taxa)
+        if hit is None:
+            reasons.append(f"{symbol}/{why}")
+            continue
+        acc = hit["entry"]["primaryAccession"]
+        if acc in seen:
+            continue
+        seen.add(acc)
+        hits.append(hit)
+    return hits, "; ".join(reasons) if reasons else "nothing left to resolve"
+
+
+def build_example(hit: dict, today: str, citations: dict[str, str]) -> dict | None:
+    """The example to write, or None when the entry cannot be taxon-paired (#263).
+
+    Every accession here is paired to the organism it was found in. An entry with
+    no organism taxon cannot be, so it is declined the way every other shortfall
+    in this adapter is -- reported, and the run carries on.
+    """
     entry = hit["entry"]
     acc = entry["primaryAccession"]
     organism = entry.get("organism") or {}
+    if not organism.get("taxonId"):
+        return None
     organism_name = organism.get("scientificName") or hit["taxon_label"]
     primary = (entry.get("genes") or [{}])[0].get("geneName", {}).get("value") or hit["symbol"]
     desc = entry.get("proteinDescription") or {}
@@ -220,28 +280,28 @@ def build_example(hit: dict, today: str, citations: dict[str, str]) -> dict:
     return {
         "uniprot_id": f"UniProtKB:{acc}", "protein_label": label, "gene_symbol": primary,
         "taxon_id": f"NCBITaxon:{organism.get('taxonId')}", "taxon_label": organism_name,
-        "entry_status": "REVIEWED", "retrieved_on": today, "role": role,
+        "entry_status": entry_status(entry), "retrieved_on": today, "role": role,
         "evidence": unique[:MAX_EVIDENCE],
     }
 
 
-def plan_record(doc: dict, today: str) -> list[tuple[str, str, dict | None]]:
+def plan_record(doc: dict, today: str) -> list[tuple[str, str, list[dict]]]:
     taxa = [(int(t["taxon_id"].split(":")[1]), t["taxon_label"])
             for t in doc.get("canonical_examples") or [] if t.get("taxon_id")]
-    rows: list[tuple[str, str, dict | None]] = []
     if not taxa:
-        return [(c["component_id"], "no canonical taxon on the record", None)
+        return [(c["component_id"], "no canonical taxon on the record", [])
                 for c in candidates(doc)]
-    hits = []
-    for component in candidates(doc):
-        hit, why = resolve(component, taxa)
-        hits.append((component, hit, why))
+    resolved = [(component, *resolve(component, taxa)) for component in candidates(doc)]
     citations = pubmed_citations(
-        [p for _, hit, _ in hits if hit
+        [p for _, hits, _ in resolved for hit in hits
          for _, pmids in localisations(hit["entry"]) for p in pmids[:MAX_EVIDENCE]])
-    for component, hit, why in hits:
-        example = build_example(hit, today, citations) if hit else None
-        rows.append((component["component_id"], why, example))
+    rows = []
+    for component, hits, why in resolved:
+        examples = [e for e in (build_example(h, today, citations) for h in hits) if e]
+        declined = len(hits) - len(examples)
+        if declined:
+            why = f"{why}; {declined} entry(s) with no organism taxon"
+        rows.append((component["component_id"], why, examples))
     return rows
 
 
@@ -274,23 +334,23 @@ def main() -> int:
             continue
         print(f"\n{path.relative_to(REPO_ROOT)}  ({doc['identifier']})")
         added = 0
-        for component_id, why, example in rows:
-            if example:
+        for component_id, why, examples in rows:
+            for example in examples:
                 print(f"  {component_id}\t{example['uniprot_id']}\t{example['taxon_label']}"
                       f"\t{len(example['evidence'])} evidence\t{example['protein_label']}")
-            else:
+            if not examples:
                 print(f"  {component_id}\t-\t{why}")
-            if example and args.apply:
+            if examples and args.apply:
                 component = next(c for c in doc["components"] if c["component_id"] == component_id)
-                component.setdefault("protein_examples", []).append(example)
-                added += 1
+                component.setdefault("protein_examples", []).extend(examples)
+                added += len(examples)
         if added:
             record_curation_event(
                 doc, curator="uniprot_genes", action="SEED_PROTEIN_EXAMPLES", llm_assisted=False,
-                changes=f"#183: added {added} protein example(s) by resolving the component's declared "
-                        f"gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon "
-                        f"this record names. Symbols resolving to more than one reviewed entry were "
-                        f"skipped rather than chosen between.",
+                changes=f"#183: added {added} protein example(s) by resolving each of the component's "
+                        f"declared gene symbols to the single reviewed UniProtKB entry for that symbol "
+                        f"in a taxon this record names, deduplicated by accession. Symbols resolving to "
+                        f"more than one reviewed entry were skipped rather than chosen between.",
             )
             _write(doc, path)
             print(f"  wrote {added} protein example(s)")

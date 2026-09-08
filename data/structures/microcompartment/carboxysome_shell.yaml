@@ -41,6 +41,13 @@ curation_history:
     gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
     this record names. Symbols resolving to more than one reviewed entry were skipped
     rather than chosen between.'
+- timestamp: '2026-09-08T06:47:30Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: carboxysome protein shell
   synonym_type: EXACT_SYNONYM
@@ -107,6 +114,29 @@ components:
         in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
         PLoS One. ECO:0000269 experimental evidence cited by UniProt for the ''Carboxysome''
         localisation of Q03511.'
+  - uniprot_id: UniProtKB:P45689
+    protein_label: Major carboxysome shell protein CsoS1A
+    gene_symbol: csoS1A
+    taxon_id: NCBITaxon:555778
+    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
+      104769 / NCIMB 8539 / c2)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene csoS1, which UniProt lists
+      under the primary name csoS1A, in Halothiobacillus neapolitanus (strain ATCC
+      23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2), a taxon this record names.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: PMID:18258595
+      notes: Dou Z et al. 2008, ‘CO2 fixation kinetics of Halothiobacillus neapolitanus
+        mutant carboxysomes lacking carbonic anhydrase suggest the shell acts as a
+        diffusional barrier for CO2.’, J Biol Chem. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Carboxysome' localisation of P45689.
+    - reference: PMID:7934888
+      notes: English RS et al. 1994, ‘Isolation and characterization of a carboxysome
+        shell gene from Thiobacillus neapolitanus.’, Mol Microbiol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Carboxysome' localisation of P45689.
 - component_id: bmc_t
   label: BMC-T shell pseudohexamers (CcmO, CcmP, CsoS1D)
   component_type: PROTEIN
@@ -159,6 +189,42 @@ components:
         and Structural Variability of Carboxysomes Dependent on the Environment’,
         Plant Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome'
         localisation of P46205.
+  - uniprot_id: UniProtKB:Q31QW7
+    protein_label: Carboxysome shell protein CcmP
+    gene_symbol: ccmP
+    taxon_id: NCBITaxon:1140
+    taxon_label: Synechococcus elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene ccmP in Synechococcus elongatus
+      (strain ATCC 33912 / PCC 7942 / FACHB-805), a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:23572529
+      notes: Cai F et al. 2013, ‘The structure of CcmP, a tandem bacterial microcompartment
+        domain protein from the β-carboxysome, forms a subcompartment within a microcompartment’,
+        J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome'
+        localisation of Q31QW7.
+  - uniprot_id: UniProtKB:D0KZ73
+    protein_label: Carboxysome shell protein CsoS1D
+    gene_symbol: csoS1D
+    taxon_id: NCBITaxon:555778
+    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
+      104769 / NCIMB 8539 / c2)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene csoS1D in Halothiobacillus
+      neapolitanus (strain ATCC 23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2),
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/D0KZ73
+      notes: UniProtKB reviewed (Swiss-Prot) entry D0KZ73, the single reviewed entry
+        for gene csoS1D in Halothiobacillus neapolitanus (strain ATCC 23641 / DSM
+        15147 / CIP 104769 / NCIMB 8539 / c2). Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: bmc_p
   label: BMC-P shell pentamers (CcmL / CsoS4)
   component_type: PROTEIN
@@ -205,6 +271,41 @@ components:
         and Structural Variability of Carboxysomes Dependent on the Environment’,
         Plant Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome'
         localisation of Q03512.
+  - uniprot_id: UniProtKB:O85043
+    protein_label: Carboxysome shell vertex protein CsoS4A
+    gene_symbol: csoS4A
+    taxon_id: NCBITaxon:555778
+    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
+      104769 / NCIMB 8539 / c2)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene csoS4A in Halothiobacillus
+      neapolitanus (strain ATCC 23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2),
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:19844578
+      notes: Cai F et al. 2009, ‘The pentameric vertex proteins are necessary for
+        the icosahedral carboxysome shell to function as a CO2 leakage barrier.’,
+        PLoS One. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome'
+        localisation of O85043.
+  - uniprot_id: UniProtKB:O85044
+    protein_label: Carboxysome shell vertex protein CsoS4B
+    gene_symbol: csoS4B
+    taxon_id: NCBITaxon:555778
+    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
+      104769 / NCIMB 8539 / c2)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene csoS4B in Halothiobacillus
+      neapolitanus (strain ATCC 23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2),
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:18292340
+      notes: Tanaka S et al. 2008, ‘Atomic-level models of the bacterial carboxysome
+        shell.’, Science. ECO:0000269 experimental evidence cited by UniProt for the
+        'Carboxysome' localisation of O85044.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

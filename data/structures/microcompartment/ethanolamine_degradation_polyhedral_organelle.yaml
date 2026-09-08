@@ -33,6 +33,13 @@ curation_history:
     gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
     this record names. Symbols resolving to more than one reviewed entry were skipped
     rather than chosen between.'
+- timestamp: '2026-09-08T06:47:35Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Eut metabolosome
   synonym_type: EXACT_SYNONYM
@@ -95,6 +102,54 @@ components:
         recombinant Eut nanocompartments.’, Appl Microbiol Biotechnol. ECO:0000269
         experimental evidence cited by UniProt for the 'Bacterial microcompartment'
         localisation of Q9ZFV7.
+  - uniprot_id: UniProtKB:P41791
+    protein_label: Bacterial microcompartment shell protein EutM
+    gene_symbol: eutM
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene eutM in Salmonella typhimurium
+      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:27063436
+      notes: Held M et al. 2016, ‘Engineering formation of multiple recombinant Eut
+        protein nanocompartments in E. coli.’, Sci Rep. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Bacterial microcompartment' localisation of P41791.
+  - uniprot_id: UniProtKB:P0A1C9
+    protein_label: Bacterial microcompartment shell protein EutL
+    gene_symbol: eutL
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene eutL in Salmonella typhimurium
+      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:27063436
+      notes: Held M et al. 2016, ‘Engineering formation of multiple recombinant Eut
+        protein nanocompartments in E. coli.’, Sci Rep. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Bacterial microcompartment' localisation of P0A1C9.
+  - uniprot_id: UniProtKB:Q9ZFU8
+    protein_label: Bacterial microcompartment shell protein EutK
+    gene_symbol: eutK
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene eutK in Salmonella typhimurium
+      (strain LT2 / SGSC1412 / ATCC 700720), a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:27063436
+      notes: Held M et al. 2016, ‘Engineering formation of multiple recombinant Eut
+        protein nanocompartments in E. coli.’, Sci Rep. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Bacterial microcompartment' localisation of Q9ZFU8.
 - component_id: eutn_vertex_shell_protein
   label: EutN BMC-P vertex shell protein
   component_type: PROTEIN

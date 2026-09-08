@@ -83,6 +83,48 @@ components:
       notes: Pla J et al. 1990, ‘The native form of FtsA, a septal protein of Escherichia
         coli, is located in the cytoplasmic membrane.’, J Bacteriol. ECO:0000269 experimental
         evidence cited by UniProt for the 'Cell inner membrane' localisation of P0ABH0.
+  - uniprot_id: UniProtKB:P77173
+    protein_label: Cell division protein ZipA
+    gene_symbol: zipA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene zipA in Escherichia coli (strain
+      K12), a taxon this record names; other reviewed entries for this symbol exist
+      on sub-strain nodes and this is the one at the taxon the record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell inner membrane' localisation of P77173.
+    - reference: PMID:9008158
+      notes: Hale CA et al. 1997, ‘Direct binding of FtsZ to ZipA, an essential component
+        of the septal ring structure that mediates cell division in E. coli.’, Cell.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane'
+        localisation of P77173.
+  - uniprot_id: UniProtKB:O31728
+    protein_label: Cell division protein SepF
+    gene_symbol: sepF
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis (strain 168)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene sepF in Bacillus subtilis (strain
+      168), a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16420366
+      notes: Hamoen LW et al. 2006, ‘SepF, a novel FtsZ-interacting protein required
+        for a late step in cell division.’, Mol Microbiol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm' localisation of O31728.
+    - reference: PMID:16796675
+      notes: Ishikawa S et al. 2006, ‘A new FtsZ-interacting protein, YlmF, complements
+        the activity of FtsA during progression of cell division in Bacillus subtilis.’,
+        Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of O31728.
 - component_id: septal_pg_synthase
   label: septal peptidoglycan synthase (FtsW-FtsI)
   component_type: PROTEIN_COMPLEX
@@ -311,6 +353,13 @@ curation_history:
     gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
     this record names. Symbols resolving to more than one reviewed entry were skipped
     rather than chosen between.'
+- timestamp: '2026-09-08T06:46:53Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 part_of:
 - GO:0032153
 discussions:

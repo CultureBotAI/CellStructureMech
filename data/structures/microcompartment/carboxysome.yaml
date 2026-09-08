@@ -95,6 +95,29 @@ components:
         and Structural Variability of Carboxysomes Dependent on the Environment’,
         Plant Cell. ECO:0000269 experimental evidence for the carboxysome localisation
         of Q31RK3, as cited by UniProt.
+  - uniprot_id: UniProtKB:P45689
+    protein_label: Major carboxysome shell protein CsoS1A
+    gene_symbol: csoS1A
+    taxon_id: NCBITaxon:555778
+    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
+      104769 / NCIMB 8539 / c2)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene csoS1, which UniProt lists
+      under the primary name csoS1A, in Halothiobacillus neapolitanus (strain ATCC
+      23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2), a taxon this record names.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: PMID:18258595
+      notes: Dou Z et al. 2008, ‘CO2 fixation kinetics of Halothiobacillus neapolitanus
+        mutant carboxysomes lacking carbonic anhydrase suggest the shell acts as a
+        diffusional barrier for CO2.’, J Biol Chem. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Carboxysome' localisation of P45689.
+    - reference: PMID:7934888
+      notes: English RS et al. 1994, ‘Isolation and characterization of a carboxysome
+        shell gene from Thiobacillus neapolitanus.’, Mol Microbiol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Carboxysome' localisation of P45689.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: IPR046380 exactly covers the reviewed CcmK examples, but alpha-carboxysome
     CsoS1 proteins lack it. Their only shared family, IPR050575, is the generic bacterial
@@ -205,6 +228,24 @@ components:
         and Structural Variability of Carboxysomes Dependent on the Environment’,
         Plant Cell. ECO:0000269 experimental evidence for the carboxysome localisation
         of Q03512, as cited by UniProt.
+  - uniprot_id: UniProtKB:O85043
+    protein_label: Carboxysome shell vertex protein CsoS4A
+    gene_symbol: csoS4A
+    taxon_id: NCBITaxon:555778
+    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
+      104769 / NCIMB 8539 / c2)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene csoS4A in Halothiobacillus
+      neapolitanus (strain ATCC 23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2),
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:19844578
+      notes: Cai F et al. 2009, ‘The pentameric vertex proteins are necessary for
+        the icosahedral carboxysome shell to function as a CO2 leakage barrier.’,
+        PLoS One. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome'
+        localisation of O85043.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: IPR046387 exactly covers CcmL, whereas CsoS4A and CsoS4B have the
     distinct IPR014076 and IPR014077 families. Their shared IPR004992 entry also includes
@@ -355,6 +396,34 @@ components:
       notes: Faulkner M et al. 2017, ‘Direct characterization of the native structure
         and mechanics of cyanobacterial carboxysomes’, Nanoscale. ECO:0000269 experimental
         evidence for the carboxysome localisation of Q03513, as cited by UniProt.
+  - uniprot_id: UniProtKB:O85041
+    protein_label: Carboxysome assembly protein CsoS2B
+    gene_symbol: csoS2
+    taxon_id: NCBITaxon:555778
+    taxon_label: Halothiobacillus neapolitanus (strain ATCC 23641 / DSM 15147 / CIP
+      104769 / NCIMB 8539 / c2)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene csoS2 in Halothiobacillus neapolitanus
+      (strain ATCC 23641 / DSM 15147 / CIP 104769 / NCIMB 8539 / c2), a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10525740
+      notes: Baker SH et al. 1999, ‘The correlation of the gene csoS2 of the carboxysome
+        operon with two polypeptides of the carboxysome in thiobacillus neapolitanus.’,
+        Arch Microbiol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Carboxysome' localisation of O85041.
+    - reference: PMID:18258595
+      notes: Dou Z et al. 2008, ‘CO2 fixation kinetics of Halothiobacillus neapolitanus
+        mutant carboxysomes lacking carbonic anhydrase suggest the shell acts as a
+        diffusional barrier for CO2.’, J Biol Chem. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Carboxysome' localisation of O85041.
+    - reference: PMID:25826651
+      notes: Cai F et al. 2015, ‘Advances in Understanding Carboxysome Assembly in
+        Prochlorococcus and Synechococcus Implicate CsoS2 as a Critical Component.’,
+        Life (Basel). ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome'
+        localisation of O85041.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The beta-carboxysome scaffold CcmM has IPR017156 and the alpha-carboxysome
     scaffold CsoS2 has IPR020990. They share no integrated InterPro family, so neither
@@ -824,6 +893,13 @@ curation_history:
   action: ENHANCE_CAUSAL_GRAPH
   changes: Added descriptions to the remaining carboxysome CO2-concentrating and assembly
     graph edges so every causal edge now states its mechanism.
+- timestamp: '2026-09-08T06:47:25Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 xrefs:
 - uniprot.location:SL-0034
 discussions:

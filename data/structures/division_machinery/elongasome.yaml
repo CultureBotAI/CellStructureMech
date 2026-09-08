@@ -124,6 +124,22 @@ components:
         coli form an essential membrane-bound complex.’, Mol Microbiol. ECO:0000269
         experimental evidence cited by UniProt for the 'Cell inner membrane' localisation
         of P16926.
+  - uniprot_id: UniProtKB:P0ABH4
+    protein_label: Rod shape-determining protein MreD
+    gene_symbol: mreD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene mreD in Escherichia coli (strain
+      K12), a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ABH4
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ABH4, the single reviewed entry
+        for gene mreD in Escherichia coli (strain K12). Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: rodz
   label: RodZ
   component_type: PROTEIN
@@ -253,6 +269,13 @@ curation_history:
     gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
     this record names. Symbols resolving to more than one reviewed entry were skipped
     rather than chosen between.'
+- timestamp: '2026-09-08T06:46:55Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped

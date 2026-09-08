@@ -25,6 +25,13 @@ curation_history:
     gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
     this record names. Symbols resolving to more than one reviewed entry were skipped
     rather than chosen between.'
+- timestamp: '2026-09-08T06:47:40Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: cellulosomal complex
   synonym_type: EXACT_SYNONYM
@@ -102,6 +109,24 @@ components:
     - reference: https://www.uniprot.org/uniprotkb/P0C2S2
       notes: UniProtKB reviewed (Swiss-Prot) entry P0C2S2, the single reviewed entry
         for gene celA in Acetivibrio thermocellus. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P0C2S5
+    protein_label: Cellulose 1,4-beta-cellobiosidase (reducing end) CelS
+    gene_symbol: celS
+    taxon_id: NCBITaxon:1515
+    taxon_label: Acetivibrio thermocellus
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene celS in Acetivibrio thermocellus,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0C2S5
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0C2S5, the single reviewed entry
+        for gene celS in Acetivibrio thermocellus. Establishes the accession and gene
         identity only; the component's membership in this structure rests on the record's
         own sources.
 - component_id: cell_surface_anchoring_scaffoldins

@@ -49,6 +49,62 @@ components:
         proteins that localize to cell poles in Escherichia coli.’, Mol Microbiol.
         ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane'
         localisation of P07017.
+  - uniprot_id: UniProtKB:P02942
+    protein_label: Methyl-accepting chemotaxis protein I
+    gene_symbol: tsr
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene tsr in Escherichia coli (strain
+      K12), a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, ‘Global topology analysis of the Escherichia coli
+        inner membrane proteome.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P02942.
+    - reference: PMID:22380631
+      notes: Li G et al. 2012, ‘Isolation and identification of new inner membrane-associated
+        proteins that localize to cell poles in Escherichia coli.’, Mol Microbiol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane'
+        localisation of P02942.
+  - uniprot_id: UniProtKB:P05704
+    protein_label: Methyl-accepting chemotaxis protein III
+    gene_symbol: trg
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene trg in Escherichia coli (strain
+      K12), a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, ‘Global topology analysis of the Escherichia coli
+        inner membrane proteome.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P05704.
+    - reference: PMID:22380631
+      notes: Li G et al. 2012, ‘Isolation and identification of new inner membrane-associated
+        proteins that localize to cell poles in Escherichia coli.’, Mol Microbiol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane'
+        localisation of P05704.
+  - uniprot_id: UniProtKB:P07018
+    protein_label: Methyl-accepting chemotaxis protein IV
+    gene_symbol: tap
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-07'
+    role: The single reviewed UniProtKB entry for gene tap in Escherichia coli (strain
+      K12), a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22380631
+      notes: Li G et al. 2012, ‘Isolation and identification of new inner membrane-associated
+        proteins that localize to cell poles in Escherichia coli.’, Mol Microbiol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane'
+        localisation of P07018.
 - component_id: chea
   label: histidine kinase CheA
   component_type: PROTEIN
@@ -200,6 +256,13 @@ curation_history:
     gene symbol to the single reviewed UniProtKB entry for that symbol in a taxon
     this record names. Symbols resolving to more than one reviewed entry were skipped
     rather than chosen between.'
+- timestamp: '2026-09-08T06:47:42Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 causal_graphs:
 - graph_id: chea_chew_hexagonal_array_assembly
   title: CheA and CheW network receptor trimers into a hexagonal array
