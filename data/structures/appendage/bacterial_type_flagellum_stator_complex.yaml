@@ -1,0 +1,262 @@
+identifier: GO:0120101
+label: bacterial-type flagellum stator complex
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An ion-driven membrane complex in the bacterial flagellar motor, typically
+  with five A subunits surrounding two B subunits, that transduces proton or sodium
+  flow into torque on the flagellar rotor and anchors to the cell wall through the
+  B subunits.
+definition_source: DOI:10.1016/j.cell.2020.08.016
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-08T03:14:48Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-08T03:15:43Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO stator-complex synonymy, bacterial-flagellar-motor parthood, A/B
+    stator-core composition, bacterial and archaeal taxonomic scope, Campylobacter
+    as a canonical example, ion-driven torque and peptidoglycan anchoring functions,
+    a 5:2 stator-core physical property, structural literature evidence, a Mot/Pom
+    stator mechanism graph, and boundary discussions excluding the older GO stoichiometry,
+    the rotor, FliL and lineage-specific stator scaffolds.
+  llm_assisted: true
+- timestamp: '2026-09-08T04:15:15Z'
+  curator: claude
+  action: TIGHTEN_BOUNDARIES
+  changes: Clarified that MotAB 5:2 stoichiometry is the directly solved structural
+    context; corrected the stator graph's A-subunit edge to avoid outer-membrane wording;
+    clarified that PomA/PomB are sodium-stator subunit variants, not stator-associated
+    scaffolds.
+  llm_assisted: true
+synonyms:
+- synonym_text: bacterial-type flagellum motor force generator complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0120101
+- synonym_text: bacterial-type flagellum torque generator complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0120101
+part_of:
+- GO:0120100
+components:
+- component_id: a_subunit
+  label: flagellar stator A subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: MotA and PomA form homologous A subunits in proton- and sodium-driven
+    bacterial flagellar stators; no exact integrated InterPro family covering the
+    full MotA/PomA class was identified during curation.
+  gene_symbols:
+  - motA
+  - pomA
+  stoichiometry: 5 A subunits per solved MotAB stator core
+  essentiality: ESSENTIAL
+  role: Builds the pentameric membrane ring that rotates around the anchored B-subunit
+    dimer and engages FliG in the C ring.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2020.08.016
+    notes: Santiveri et al. 2020 resolved MotA/MotB stator units as MotA5MotB2 assemblies.
+  - reference: DOI:10.1038/s41564-020-0788-8
+    notes: Deme et al. 2020 independently resolved pentameric MotA rings in bacterial
+      flagellar stator complexes.
+- component_id: b_subunit
+  label: flagellar stator B subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: MotB and PomB are the anchored B subunits of proton- and sodium-driven
+    bacterial flagellar stators; no exact integrated InterPro family covering the
+    full MotB/PomB class was identified during curation.
+  gene_symbols:
+  - motB
+  - pomB
+  stoichiometry: 2 B subunits per solved MotAB stator core
+  essentiality: ESSENTIAL
+  role: Forms the dimeric ion-pathway core and anchors the stator to peptidoglycan
+    through its periplasmic domain.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2020.08.016
+    notes: Santiveri et al. 2020 placed two B subunits at the center of the MotAB
+      stator unit.
+  - reference: DOI:10.1016/j.str.2018.02.016
+    notes: Kojima et al. 2018 showed that the periplasmic domain of the stator B subunit
+      controls peptidoglycan binding and ion influx.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: MotA/MotB- and PomA/PomB-family stator complexes occur in rotary bacterial
+    flagellar motors but are absent from bacteria without bacterial flagella.
+  reference: DOI:10.1038/nrmicro1887
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaeal archaella are type-IV-pilus-related appendages and do not use Mot/Pom
+    stator complexes for rotation.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:197
+  taxon_label: Campylobacter jejuni
+  note: Source genus and species for one of the high-resolution MotA5MotB2 stator
+    structures that revised the core stoichiometry.
+  reference: DOI:10.1016/j.cell.2020.08.016
+functions:
+- function_id: ion_driven_torque_generation
+  label: ion-driven torque generation
+  description: Proton or sodium transit through the stator drives rotation of the
+    A-subunit pentamer around the anchored B-subunit dimer, which applies torque to
+    the flagellar rotor.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2020.08.016
+    notes: Santiveri et al. 2020 combined MotAB structures, mutagenesis and functional
+      assays into a model for stator rotation and torque generation.
+  - reference: DOI:10.1038/s41564-020-0788-8
+    notes: Deme et al. 2020 modeled MotA5MotB2 as the ion-driven gear that drives
+      the FliG rotor ring.
+- function_id: dynamic_peptidoglycan_anchoring
+  label: dynamic peptidoglycan anchoring
+  description: The B-subunit periplasmic domain binds peptidoglycan after activation,
+    positioning stator units around the cytoplasmic rotor while allowing exchange
+    at the motor.
+  evidence:
+  - reference: DOI:10.1016/j.str.2018.02.016
+    notes: Kojima et al. 2018 linked B-subunit periplasmic-domain rearrangement to
+      peptidoglycan binding and stator activation.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '7'
+  context: 5 A subunits plus 2 B subunits per solved MotAB stator core
+  reference: DOI:10.1016/j.cell.2020.08.016
+evidence:
+- reference: DOI:10.1016/S0022-2836(03)00096-2
+  notes: Asai et al. 2003, Ion-coupling determinants of Na+-driven and H+-driven flagellar
+    motors.
+- reference: DOI:10.1016/j.str.2018.02.016
+  notes: Kojima et al. 2018, The helix rearrangement in the periplasmic domain of
+    the flagellar stator B subunit activates peptidoglycan binding and ion influx.
+- reference: DOI:10.7554/eLife.48979
+  notes: Chang et al. 2019, Structural insights into flagellar stator-rotor interactions.
+- reference: DOI:10.1016/j.cell.2020.08.016
+  notes: Santiveri et al. 2020, Structure and Function of Stator Units of the Bacterial
+    Flagellar Motor.
+- reference: DOI:10.1038/s41564-020-0788-8
+  notes: Deme et al. 2020, Structures of the stator complex that drives rotation of
+    the bacterial flagellum.
+causal_graphs:
+- graph_id: motab_stator_torque
+  title: Mot/Pom stators anchor ion-driven torque generation
+  description: A-subunit pentamers and B-subunit dimers form ion-driven stators. B
+    subunits anchor the complex to peptidoglycan, ion flow drives the A ring, and
+    the stator applies torque to the C ring.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: a_subunit
+    label: flagellar stator A subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: a_subunit
+  - node_id: b_subunit
+    label: flagellar stator B subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: b_subunit
+  - node_id: stator_complex
+    label: bacterial-type flagellum stator complex
+    node_type: STRUCTURE
+    grounding: GO:0120101
+  - node_id: peptidoglycan
+    label: peptidoglycan-based cell wall
+    node_type: STRUCTURE
+    grounding: GO:0009274
+  - node_id: ion_flux
+    label: proton or sodium flux
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: c_ring
+    label: C ring
+    node_type: STRUCTURE
+  edges:
+  - subject: a_subunit
+    predicate: forms pentameric ring in
+    object: stator_complex
+    description: Five A subunits form the outer ring of the MotAB stator core in the
+      cytoplasmic membrane.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2020.08.016
+      notes: Santiveri et al. 2020 resolved MotAB as an A5B2 assembly.
+  - subject: b_subunit
+    predicate: forms dimeric core in
+    object: stator_complex
+    description: Two B subunits form the anchored central dimer of the MotAB stator
+      core.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2020.08.016
+      notes: Santiveri et al. 2020 placed the B-subunit dimer inside the A-subunit
+        pentamer.
+  - subject: b_subunit
+    predicate: anchors to
+    object: peptidoglycan
+    description: The periplasmic B-subunit domain anchors activated stator units to
+      the peptidoglycan layer.
+    evidence:
+    - reference: DOI:10.1016/j.str.2018.02.016
+      notes: Kojima et al. 2018 modeled the B-subunit peptidoglycan-binding rearrangement
+        that activates the stator.
+  - subject: ion_flux
+    predicate: drives
+    object: stator_complex
+    description: Ion flow through the stator pore drives A-subunit rotation around
+      the B-subunit dimer.
+    evidence:
+    - reference: DOI:10.1038/s41564-020-0788-8
+      notes: Deme et al. 2020 modeled ion-driven rotation of the MotA pentamer around
+        MotB.
+  - subject: stator_complex
+    predicate: applies torque to
+    object: c_ring
+    description: The rotating A-subunit ring pushes against FliG in the C ring to
+      turn the flagellar rotor.
+    evidence:
+    - reference: DOI:10.1038/s41564-020-0788-8
+      notes: Deme et al. 2020 modeled the stator as a rotating MotA pentamer meshing
+        with FliG.
+    - reference: DOI:10.7554/eLife.48979
+      notes: Chang et al. 2019 imaged stator densities around bacterial flagellar
+        rotors in cells.
+discussions:
+- discussion_id: use_modern_5_to_2_stoichiometry
+  prompt: Should GO:0120101's historical A4B2 stator stoichiometry be copied into
+    this record?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - physical_properties
+  rationale: GO:0120101 is still the exact cellular-component identifier for the bacterial
+    flagellar stator complex, but its text was minted before high-resolution MotAB
+    structures revised the core from A4B2 to A5B2.
+  resolution_note: 'Declined: keep GO:0120101 as the exact identifier but source the
+    local stoichiometry to the 2020 cryo-EM structures.'
+  posed_by: claude
+  posed_date: '2026-09-08'
+  resolved_date: '2026-09-08'
+- discussion_id: exclude_rotor_ms_ring_fliL_and_scaffolds
+  prompt: Should the C ring, MS ring, FliL, MotX/MotY, or other stator-associated
+    scaffolds be curated as core stator components?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#a_subunit
+  - components#b_subunit
+  rationale: The mature GO:0120101 stator complex is scoped to the ion-conducting
+    A/B subunit core, including proton-driven MotA/MotB and sodium-driven PomA/PomB
+    variants. The MS ring and C ring are rotor-side structures that the stator acts
+    on, while FliL and lineage-specific MotX/MotY-family scaffolds decorate or recruit
+    stators outside the conserved A/B core.
+  resolution_note: 'Declined: keep only the A- and B-family stator subunits as constituents
+    and represent the rotor and accessory scaffolds outside this record''s component
+    list.'
+  posed_by: claude
+  posed_date: '2026-09-08'
+  resolved_date: '2026-09-08'

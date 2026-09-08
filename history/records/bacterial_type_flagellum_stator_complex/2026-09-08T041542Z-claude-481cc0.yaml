@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_stator_complex.yaml
+  slug: bacterial_type_flagellum_stator_complex
+session:
+  id: 2026-09-08T041542Z-claude-481cc0
+  timestamp: '2026-09-08T04:15:42Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - measurements
+  - causal_graphs
+  summary: Add bacterial flagellum stator complex record
+  details: Created a PROPOSED GO:0120101 bacterial flagellar stator-complex record with GO
+    synonymy and bacterial-flagellar-motor parthood, A/B stator-core constituents curated
+    at label level, bacterial and archaeal taxonomic scope, Campylobacter as a canonical example,
+    ion-driven torque and peptidoglycan-anchoring functions, a 5:2 MotAB physical property,
+    and a source-bounded graph for Mot/Pom stator torque generation based on Asai 2003, Kojima
+    2018, Chang 2019, Santiveri 2020 and Deme 2020.
