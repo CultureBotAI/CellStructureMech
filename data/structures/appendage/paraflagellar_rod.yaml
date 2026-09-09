@@ -31,13 +31,21 @@ curation_history:
     PFR2 component anchors so the discussion target resolves in the corpus integrity
     tests.
   llm_assisted: true
+- timestamp: '2026-09-09T19:22:40Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #291 by narrowing Euglenozoa scope to kinetoplastid PFRs supported
+    by Gadelha et al. 2005; resolved #292 by scoping the Trypanosoma brucei brucei
+    canonical example to the Alves et al. 2020 PFR-AF deletion study it cites; resolved
+    #293 by moving the paraxial rod synonym to Farina et al. 1986.'
+  llm_assisted: true
 synonyms:
 - synonym_text: PFR
   synonym_type: RELATED_SYNONYM
   source: GO:0097740
 - synonym_text: paraxial rod
   synonym_type: RELATED_SYNONYM
-  source: PMID:7961827
+  source: DOI:10.1111/j.1550-7408.1986.tb05661.x
 part_of:
 - GO:0097729
 components:
@@ -127,14 +135,14 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:33682
   taxon_label: Euglenozoa
   presence: VARIABLE
-  note: PFRs are characteristic of kinetoplastid and euglenid flagella, with lineage-specific
-    differences in size and visibility.
+  note: Within Euglenozoa, PFRs are prominent in kinetoplastid flagella, but they
+    can be greatly reduced and cryptic in some endosymbiont-bearing kinetoplastids.
   reference: DOI:10.1128/EC.4.3.516-525.2005
 canonical_examples:
 - taxon_id: NCBITaxon:5702
   taxon_label: Trypanosoma brucei brucei
-  note: Source organism for the classic PFRA/PFRB and PFRC/PFRD major-protein characterization
-    and for later PFR-AF1/PFR-AF2 assembly-factor genetics.
+  note: Trypanosome model in which deletion of cytoplasmic PFR-AF1 or PFR-AF2 showed
+    that both assembly factors are required for paraflagellar rod formation.
   reference: DOI:10.1242/jcs.242271
 - taxon_id: NCBITaxon:5665
   taxon_label: Leishmania mexicana
@@ -202,6 +210,9 @@ evidence:
 - reference: DOI:10.1242/jcs.242271
   notes: 'Alves et al. 2020, Control of assembly of extra-axonemal structures: the
     paraflagellar rod of trypanosomes, Journal of Cell Science.'
+- reference: DOI:10.1111/j.1550-7408.1986.tb05661.x
+  notes: Farina et al. 1986, Further studies on the organization of the paraxial rod
+    of trypanosomatids, Journal of Protozoology.
 causal_graphs:
 - graph_id: pfr1_pfr2_lattice_assembly
   title: PFR1 and PFR2 build the paraflagellar rod lattice
