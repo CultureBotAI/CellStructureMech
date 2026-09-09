@@ -23,6 +23,13 @@ curation_history:
     stoichiometry, a FlgKL junction graph, and a resolved boundary discussion excluding
     the FliD filament cap.
   llm_assisted: true
+- timestamp: '2026-09-09T02:39:56Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #285 by changing Bacteria from COMMON to VARIABLE; resolved #286
+    by grounding FlgL/HAP3 to InterPro:IPR013384; resolved #287 by narrowing the canonical
+    Salmonella example from strain LT2 to Salmonella enterica.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar hook-filament junction
   synonym_type: EXACT_SYNONYM
@@ -59,11 +66,6 @@ components:
   label: hook-associated protein FlgL/HAP3
   component_type: PROTEIN
   component_role: CONSTITUENT
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: FlgL is the HAP3 protein of the bacterial flagellar hook-filament
-    junction. No exact integrated family grounding was curated during record creation;
-    the component stays label-only rather than reusing broad flagellar axial-protein
-    signatures.
   gene_symbols:
   - flgL
   stoichiometry: 11 FlgL/HAP3 subunits per Salmonella junction
@@ -78,12 +80,14 @@ components:
     notes: Furukawa et al. 2002 detected direct interactions among monomeric FlgK,
       FlgL and flagellin, supporting the junction interface that couples the junction
       to the filament.
+  grounding: InterPro:IPR013384
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
-  presence: COMMON
-  note: FlgK/FlgL hook-filament junctions are widespread in completed bacterial-type
-    flagella but absent from bacteria that lack the rotary flagellar system.
+  presence: VARIABLE
+  note: FlgK/FlgL hook-filament junctions occur in bacteria that assemble complete
+    bacterial-type flagella and are absent from lineages that lack the rotary flagellar
+    system.
   reference: DOI:10.1038/nrmicro1887
 - taxon_id: NCBITaxon:2157
   taxon_label: Archaea
@@ -92,9 +96,9 @@ taxonomic_distribution:
     the FlgK/FlgL junction proteins of bacterial flagella.
   reference: DOI:10.3389/fmicb.2015.00023
 canonical_examples:
-- taxon_id: NCBITaxon:99287
-  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
-  note: Source strain for the native FlgK/FlgL hook-filament junction resolved with
+- taxon_id: NCBITaxon:28901
+  taxon_label: Salmonella enterica
+  note: Source species for the native FlgK/FlgL hook-filament junction resolved with
     its surrounding hook, filament and FliD cap.
   reference: DOI:10.1038/s41564-025-02037-0
 functions:

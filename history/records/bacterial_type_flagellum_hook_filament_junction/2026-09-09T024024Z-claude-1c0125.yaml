@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_hook_filament_junction.yaml
+  slug: bacterial_type_flagellum_hook_filament_junction
+session:
+  id: 2026-09-09T024024Z-claude-1c0125
+  timestamp: '2026-09-09T02:40:24Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/285
+  - https://github.com/CultureBotAI/CellStructureMech/issues/286
+  - https://github.com/CultureBotAI/CellStructureMech/issues/287
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/284
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - composition
+  - taxonomy
+  summary: Resolve hook-filament junction PR review
+  details: 'Addressed PR #284 adversarial review by changing the bacterial taxonomic scope
+    from COMMON to VARIABLE, grounding the FlgL/HAP3 constituent protein to the exact InterPro:IPR013384
+    family, and narrowing the DOI:10.1038/s41564-025-02037-0 canonical example from unsupported
+    Salmonella Typhimurium LT2 wording to Salmonella enterica.'
