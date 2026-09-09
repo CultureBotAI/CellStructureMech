@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_filament_cap.yaml
+  slug: bacterial_type_flagellum_filament_cap
+session:
+  id: 2026-09-09T025452Z-claude-edfc1c
+  timestamp: '2026-09-09T02:54:52Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add bacterial flagellar filament-cap record
+  details: Created a PROPOSED GO:0009421 bacterial-type flagellum filament cap record after
+    an ignored-and-hidden duplicate search found no existing dedicated FliD cap record. Curated
+    the cap as a FliD/HAP2 homo-oligomer at the distal tip of the bacterial flagellar filament,
+    linked it as part of the GO:0009420 filament, added bacterial and archaeal taxonomic scope,
+    curated Salmonella enterica and Campylobacter jejuni as canonical examples, added filament-capping
+    and cap-mediated flagellin-incorporation functions, recorded the native Salmonella pentameric
+    cap with an explicit oligomeric-state caveat, and added a FliD cap-filament assembly graph
+    with boundary discussions excluding flagellin and FlgK/FlgL.

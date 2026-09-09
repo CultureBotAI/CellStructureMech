@@ -35,6 +35,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-09-09T02:54:06Z'
+  curator: claude
+  action: ADD_SUBSTRUCTURE_LINK
+  changes: Added the GO:0009421 bacterial-type flagellum filament cap record to the
+    bacterial-type flagellum filament has_part list.
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar filament
   synonym_type: EXACT_SYNONYM
@@ -44,6 +50,8 @@ synonyms:
   source: GO:0009420
 part_of:
 - GO:0009288
+has_part:
+- GO:0009421
 components:
 - component_id: flagellin
   label: flagellin (FliC / FljB)
