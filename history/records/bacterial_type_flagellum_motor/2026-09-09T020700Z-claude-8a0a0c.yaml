@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_motor.yaml
+  slug: bacterial_type_flagellum_motor
+session:
+  id: 2026-09-09T020700Z-claude-8a0a0c
+  timestamp: '2026-09-09T02:07:00Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/281
+  - https://github.com/CultureBotAI/CellStructureMech/issues/282
+  - https://github.com/CultureBotAI/CellStructureMech/issues/283
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/280
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  - evidence
+  - canonical_examples
+  summary: Tighten bacterial motor review findings
+  details: 'Resolved #281 by promoting the Kawamoto et al. 2021 and Tan et al. 2021 architecture
+    papers to top-level evidence, resolved #282 by narrowing the Salmonella canonical-example
+    note to what the cited Thomas et al. 2006 rotor reconstruction directly supports, and
+    resolved #283 by adding bacterial flagellar motor and flagellar motor as literature-sourced
+    RELATED_SYNONYM aliases.'

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_motor.yaml
+  slug: bacterial_type_flagellum_motor
+session:
+  id: 2026-09-09T004158Z-claude-code-01d8a7
+  timestamp: '2026-09-09T00:41:58Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add bacterial-type flagellum motor record
+  details: Created a PROPOSED GO:0120100 bacterial-type flagellum motor record after an ignored-and-hidden
+    duplicate search found no existing dedicated motor record. Curated the motor as the MS/C-ring
+    rotor complex plus dynamic Mot/Pom-family stator complexes, linked it as part of the bacterial-type
+    flagellum basal body, added bacterial and archaeal taxonomic scope, curated Salmonella
+    as a canonical example, and added ion-driven torque, dynamic stator anchoring and CheY-P
+    switching functions with a rotor/stator causal graph. Resolved boundary discussions exclude
+    the rod, hook, filament, LP rings and export apparatus from the motor component list and
+    retain modern stator stoichiometry from 2020 MotAB structures rather than copying GO's
+    historical A4B2 stator wording.

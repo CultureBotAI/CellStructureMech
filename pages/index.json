@@ -117,6 +117,15 @@
   "definition": "The portion of the bacterial-type flagellum that connects the filament to the basal body."
  },
  {
+  "identifier": "GO:0120100",
+  "label": "bacterial-type flagellum motor",
+  "category": "APPENDAGE",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/appendage/bacterial_type_flagellum_motor.html",
+  "definition": "A bacterial flagellar basal-body motor composed of an MS-ring/C-ring rotor complex and one or more Mot/Pom-family stator complexes in the cytoplasmic membrane that convert ion flow into rotary torque and bias clockwise or counterclockwise output."
+ },
+ {
   "identifier": "GO:0120107",
   "label": "bacterial-type flagellum rotor complex",
   "category": "APPENDAGE",
