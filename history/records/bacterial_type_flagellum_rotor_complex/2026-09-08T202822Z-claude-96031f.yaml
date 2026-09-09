@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_rotor_complex.yaml
+  slug: bacterial_type_flagellum_rotor_complex
+session:
+  id: 2026-09-08T202822Z-claude-96031f
+  timestamp: '2026-09-08T20:28:22Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Fix bacterial rotor-complex discussion anchors
+  details: Reanchored the nonrotor basal-body boundary discussion from the broad components
+    section to concrete components#ms_ring and components#c_ring references so the rotor record
+    satisfies corpus discussion-anchor validation.

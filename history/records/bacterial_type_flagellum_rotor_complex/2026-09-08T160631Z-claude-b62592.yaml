@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_rotor_complex.yaml
+  slug: bacterial_type_flagellum_rotor_complex
+session:
+  id: 2026-09-08T160631Z-claude-b62592
+  timestamp: '2026-09-08T16:06:31Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add bacterial flagellar rotor-complex record
+  details: Created a PROPOSED GO:0120107 bacterial-type flagellum rotor-complex record with
+    bacterial-flagellar-motor parthood, MS-ring and C-ring parts, constituent MS-ring and
+    C-ring subcomplexes, bacterial and archaeal taxonomic scope, Salmonella as a canonical
+    example, rotor-assembly, torque-transmission and directional-switching functions, a mechanism
+    graph linking the MS ring, C ring, stator and rod, and a resolved boundary discussion
+    excluding nonrotor basal-body parts.

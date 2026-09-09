@@ -1,0 +1,274 @@
+identifier: GO:0120107
+label: bacterial-type flagellum rotor complex
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The bacterial flagellar basal-body rotor built from the membrane-anchored
+  FliF MS ring and the cytoplasmic FliG/FliM/FliN C ring, which together receive torque
+  from stator units, rotate the axial rod, and bias clockwise or counterclockwise
+  motor output.
+definition_source: DOI:10.1016/j.tim.2014.12.011
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-08T16:05:03Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-08T16:05:51Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO rotor-complex parthood and MS/C-ring parts; curated the MS ring
+    and C ring as constituent subcomplexes; added bacterial and archaeal taxonomic
+    scope, Salmonella as a canonical example, rotor assembly, torque-transmission
+    and directional-switching functions, a mechanism graph coupling the MS ring, C
+    ring, stator and rod, and a resolved boundary discussion excluding nonrotor basal-body
+    parts.
+  llm_assisted: true
+- timestamp: '2026-09-08T20:28:09Z'
+  curator: claude
+  action: FIX_DISCUSSION_ANCHOR
+  changes: Reanchored the nonrotor basal-body boundary discussion from the broad components
+    section to the concrete MS-ring and C-ring components so corpus discussion-anchor
+    validation resolves every target.
+  llm_assisted: true
+- timestamp: '2026-09-08T21:44:03Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #278 by removing whole-basal-body rotation wording from the MS-ring
+    component role, and resolved #279 by distinguishing the membrane export gate from
+    the broader ATPase-associated flagellar type III export apparatus in the rotor
+    boundary discussion.'
+  llm_assisted: true
+synonyms:
+- synonym_text: bacterial flagellar rotor
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/JB.00552-06
+- synonym_text: flagellar rotor
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/emboj.2011.188
+part_of:
+- GO:0120100
+has_part:
+- GO:0009431
+- GO:0009433
+components:
+- component_id: ms_ring
+  label: MS ring (FliF)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fliF
+  essentiality: ESSENTIAL
+  role: Membrane-embedded rotor ring that anchors the MS/C-ring rotor in the inner
+    membrane and positions the cytoplasmic C ring.
+  evidence:
+  - reference: DOI:10.1038/s41467-021-24507-9
+    notes: Kawamoto et al. 2021 resolved the native Salmonella FliF MS ring and measured
+      attached C-ring symmetry.
+- component_id: c_ring
+  label: C ring / switch complex (FliG, FliM, FliN)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fliG
+  - fliM
+  - fliN
+  essentiality: ESSENTIAL
+  role: Cytoplasmic rotor and switch ring that contacts stators through FliG and changes
+    motor direction in response to CheY-P.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.188
+    notes: Paul et al. 2011 mapped FliG, FliM and FliN in the Salmonella flagellar
+      rotor architecture.
+  - reference: DOI:10.1038/nature09300
+    notes: Lee et al. 2010 structurally connected the FliG/FliM/FliN torque ring to
+      rotational switching.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: MS-ring/C-ring rotor complexes occur in bacteria that encode bacterial-type
+    flagellar basal bodies and are absent from bacteria without the rotary flagellar
+    system.
+  reference: DOI:10.1038/nrmicro1887
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaeal archaella are type-IV-pilus-related rotary appendages and do not
+    contain the FliF/FliG/FliM/FliN rotor of bacterial flagella.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  note: Source organism for C-ring electron microscopy, native MS-ring cryo-EM, and
+    the FliG/FliM/FliN rotor-architecture model.
+  reference: DOI:10.1128/JB.00552-06
+functions:
+- function_id: ms_c_ring_rotor_assembly
+  label: MS-ring and C-ring rotor assembly
+  description: The C ring assembles on the cytoplasmic face of the FliF MS ring to
+    produce the basal-body rotor.
+  evidence:
+  - reference: DOI:10.1073/pnas.89.14.6304
+    notes: Francis et al. 1992 placed the FliG switch protein on the cytoplasmic face
+      of the flagellar M ring.
+  - reference: DOI:10.1038/s41467-021-24507-9
+    notes: Kawamoto et al. 2021 imaged the C ring attached to the native Salmonella
+      MS ring.
+- function_id: torque_reception_and_rod_rotation
+  label: torque reception and rod rotation
+  description: Stators apply torque to the C ring through FliG, and the MS-ring/rod
+    connection transmits rotor motion into the axial rod.
+  evidence:
+  - reference: DOI:10.1016/j.tim.2014.12.011
+    notes: Minamino and Imada 2015 review the MS ring and C ring as the rotor coupled
+      to stator torque.
+  - reference: DOI:10.1016/j.cell.2021.03.057
+    notes: Tan et al. 2021 resolved how the MS ring and proximal rod are coupled for
+      torque transmission.
+- function_id: directional_switching
+  label: directional switching
+  description: The C-ring switch complex biases the flagellar rotor between clockwise
+    and counterclockwise states in response to CheY-P.
+  evidence:
+  - reference: DOI:10.1038/nature09300
+    notes: Lee et al. 2010 connected FliG/FliM/FliN torque-ring architecture to rotational
+      switching.
+  - reference: DOI:10.1073/pnas.90.19.8787
+    notes: Welch et al. 1993 showed that CheY phosphorylation promotes switch-complex
+      binding through FliM.
+evidence:
+- reference: DOI:10.1073/pnas.89.14.6304
+  notes: Francis et al. 1992, Localization of the Salmonella typhimurium flagellar
+    switch protein FliG to the cytoplasmic M-ring face of the basal body, Proceedings
+    of the National Academy of Sciences.
+- reference: DOI:10.1128/JB.00552-06
+  notes: Thomas et al. 2006, The Three-Dimensional Structure of the Flagellar Rotor
+    from a Clockwise-Locked Mutant of Salmonella enterica Serovar Typhimurium, Journal
+    of Bacteriology.
+- reference: DOI:10.1038/nature09300
+  notes: Lee et al. 2010, Structure of the torque ring of the flagellar motor and
+    the molecular basis for rotational switching, Nature.
+- reference: DOI:10.1073/pnas.90.19.8787
+  notes: Welch et al. 1993, Phosphorylation-dependent binding of a signal molecule
+    to the flagellar switch of bacteria, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1038/emboj.2011.188
+  notes: Paul et al. 2011, Architecture of the flagellar rotor, The EMBO Journal.
+- reference: DOI:10.1016/j.tim.2014.12.011
+  notes: Minamino and Imada 2015, The bacterial flagellar motor and its structural
+    diversity, Trends in Microbiology.
+- reference: DOI:10.1016/j.cell.2021.03.057
+  notes: Tan et al. 2021, Structural basis of assembly and torque transmission of
+    the bacterial flagellar motor, Cell.
+- reference: DOI:10.1038/s41467-021-24507-9
+  notes: Kawamoto et al. 2021, Native flagellar MS ring is formed by 34 subunits with
+    23-fold and 11-fold subsymmetries, Nature Communications.
+causal_graphs:
+- graph_id: ms_c_ring_rotor_function
+  title: MS and C rings form the flagellar rotor
+  description: The C ring assembles on the MS ring, the C ring receives stator torque,
+    the MS ring transmits rotation into the rod, and C-ring switching sets clockwise
+    or counterclockwise output.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ms_ring
+    label: bacterial-type flagellum basal body, MS ring
+    node_type: STRUCTURE
+    component_ref: ms_ring
+    grounding: GO:0009431
+  - node_id: c_ring
+    label: bacterial-type flagellum basal body, C ring
+    node_type: STRUCTURE
+    component_ref: c_ring
+    grounding: GO:0009433
+  - node_id: rotor_complex
+    label: bacterial-type flagellum rotor complex
+    node_type: STRUCTURE
+    grounding: GO:0120107
+  - node_id: stator
+    label: bacterial-type flagellum stator complex
+    node_type: STRUCTURE
+    grounding: GO:0120101
+  - node_id: basal_body_rod
+    label: bacterial-type flagellum basal body, rod
+    node_type: STRUCTURE
+    grounding: GO:0030694
+  - node_id: directional_switching
+    label: flagellar motor switching
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: ms_ring
+    predicate: forms membrane-anchored ring in
+    object: rotor_complex
+    description: The FliF MS ring is the membrane-embedded ring of the bacterial flagellar
+      rotor.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24507-9
+      notes: Kawamoto et al. 2021 resolved the native Salmonella MS ring that anchors
+        the rotor around the export gate.
+  - subject: c_ring
+    predicate: forms cytoplasmic switch ring in
+    object: rotor_complex
+    description: The FliG/FliM/FliN C ring is the cytoplasmic switch ring of the bacterial
+      flagellar rotor.
+    evidence:
+    - reference: DOI:10.1038/emboj.2011.188
+      notes: Paul et al. 2011 mapped the FliG/FliM/FliN subunits in the Salmonella
+        rotor architecture.
+  - subject: ms_ring
+    predicate: templates
+    object: c_ring
+    description: The MS ring positions the attached C ring on the cytoplasmic side
+      of the basal body.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24507-9
+      notes: Kawamoto et al. 2021 measured native Salmonella C-ring symmetry relative
+        to the FliF MS ring.
+  - subject: stator
+    predicate: applies torque to
+    object: c_ring
+    description: Mot/Pom stator units push against FliG in the C ring to turn the
+      rotor.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2014.12.011
+      notes: Minamino and Imada 2015 review the C-ring FliG interface used for stator-rotor
+        torque coupling.
+  - subject: ms_ring
+    predicate: transmits rotation to
+    object: basal_body_rod
+    description: The MS ring couples to FliE and the proximal rod to transmit rotor
+      motion into the axial drive shaft.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2021.03.057
+      notes: Tan et al. 2021 resolved structural coupling between the MS ring, FliE
+        and the proximal rod.
+  - subject: c_ring
+    predicate: controls
+    object: directional_switching
+    description: Switch-complex conformational changes set clockwise or counterclockwise
+      flagellar motor bias.
+    evidence:
+    - reference: DOI:10.1038/nature09300
+      notes: Lee et al. 2010 connected C-ring architecture to the molecular basis
+        of rotational switching.
+discussions:
+- discussion_id: exclude_nonrotor_basal_body_parts
+  prompt: Should the stator units, export apparatus, or axial rod be curated as rotor-complex
+    components?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#ms_ring
+  - components#c_ring
+  - causal_graphs#ms_c_ring_rotor_function
+  rationale: GO:0120107 is scoped to the membrane-anchored ring and motor switch complex
+    that rotate as the basal-body rotor. Stator units apply torque to the rotor, the
+    rod receives rotation from it, the membrane export gate occupies the MS-ring center,
+    and the broader flagellar type III export apparatus associates with that gate,
+    but those neighboring structures are not part of the MS-ring/C-ring rotor complex.
+  resolution_note: 'Declined: model only the MS ring and C ring as rotor constituents,
+    and represent stator and rod interactions in functions or causal graphs.'
+  posed_by: claude
+  posed_date: '2026-09-08'
+  resolved_date: '2026-09-08'
