@@ -1,0 +1,282 @@
+identifier: GO:0120100
+label: bacterial-type flagellum motor
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A bacterial flagellar basal-body motor composed of an MS-ring/C-ring rotor
+  complex and one or more Mot/Pom-family stator complexes in the cytoplasmic membrane
+  that convert ion flow into rotary torque and bias clockwise or counterclockwise
+  output.
+definition_source: DOI:10.1016/j.tim.2014.12.011
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-09T00:39:20Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-09T00:40:01Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added basal-body parthood and rotor/stator parts; curated rotor and stator
+    constituent subcomplexes; added bacterial and archaeal taxonomic scope, Salmonella
+    as a canonical example, ion-driven torque, dynamic stator anchoring and CheY-P
+    switching functions, a rotor/stator motor causal graph, and resolved discussions
+    for stator stoichiometry and nonmotor flagellum parts.
+  llm_assisted: true
+has_part:
+- GO:0120107
+- GO:0120101
+part_of:
+- GO:0009425
+components:
+- component_id: rotor_complex
+  label: bacterial-type flagellum rotor complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fliF
+  - fliG
+  - fliM
+  - fliN
+  essentiality: ESSENTIAL
+  role: Rotating MS/C-ring assembly that receives stator torque and sets clockwise
+    or counterclockwise motor bias.
+  evidence:
+  - reference: DOI:10.1016/j.tim.2014.12.011
+    notes: Minamino and Imada 2015 review the MS ring and C ring as the rotor of the
+      bacterial flagellar motor.
+  - reference: DOI:10.1038/emboj.2011.188
+    notes: Paul et al. 2011 mapped the FliG/FliM/FliN C ring onto the Salmonella flagellar
+      rotor.
+- component_id: stator_complex
+  label: bacterial-type flagellum stator complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - motA
+  - motB
+  - pomA
+  - pomB
+  essentiality: ESSENTIAL
+  role: Membrane ion-channel unit that anchors to the cell wall and applies proton-
+    or sodium-driven torque to FliG in the rotor.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2020.08.016
+    notes: Santiveri et al. 2020 resolved MotAB stators as pentameric A-subunit rings
+      around B-subunit dimers.
+  - reference: DOI:10.1038/s41564-020-0788-8
+    notes: Deme et al. 2020 independently resolved bacterial flagellar stators and
+      modeled their engagement with FliG in the rotor.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Bacterial-type flagellum motors occur in bacteria with rotary bacterial flagella
+    and are absent from bacteria that lack the flagellar system.
+  reference: DOI:10.1038/nrmicro1887
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaeal archaella are type-IV-pilus-related rotary appendages and do not
+    contain FliF/FliG/FliM/FliN rotors or Mot/Pom stators.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  note: Classical model for flagellar motor genetics and source organism for C-ring,
+    MS-ring and rotor-architecture studies.
+  reference: DOI:10.1128/JB.00552-06
+functions:
+- function_id: ion_driven_rotary_torque
+  label: ion-driven rotary torque
+  description: Proton- or sodium-driven stator units apply torque to the C-ring face
+    of the rotor to spin the MS ring and axial rod.
+  evidence:
+  - reference: DOI:10.1016/j.tim.2014.12.011
+    notes: Minamino and Imada 2015 review the rotor-stator interface used for bacterial
+      flagellar torque.
+  - reference: DOI:10.1016/j.cell.2020.08.016
+    notes: Santiveri et al. 2020 modeled MotAB stator rotation as the force source
+      for flagellar torque generation.
+- function_id: dynamic_stator_anchoring
+  label: dynamic stator anchoring
+  description: Stator units dock around the rotor and anchor through their B-subunit
+    peptidoglycan-binding domains while dynamically exchanging at the motor.
+  evidence:
+  - reference: DOI:10.7554/eLife.48979
+    notes: Chang et al. 2019 imaged stator complexes around bacterial flagellar rotors
+      in cells.
+  - reference: DOI:10.1016/j.str.2018.02.016
+    notes: Kojima et al. 2018 linked B-subunit rearrangement to peptidoglycan binding
+      and stator activation.
+- function_id: chemotactic_directional_switching
+  label: chemotactic directional switching
+  description: Phosphorylated CheY binds FliM in the C-ring switch complex to shift
+    the motor between clockwise and counterclockwise rotational states.
+  evidence:
+  - reference: DOI:10.1073/pnas.90.19.8787
+    notes: Welch et al. 1993 directly demonstrated phosphorylation-dependent CheY
+      binding to FliM in the switch complex.
+  - reference: DOI:10.1038/nature09300
+    notes: Lee et al. 2010 connected the FliG/FliM/FliN torque ring to rotational
+      switching.
+evidence:
+- reference: DOI:10.1016/j.str.2018.02.016
+  notes: Kojima et al. 2018, The helix rearrangement in the periplasmic domain of
+    the flagellar stator B subunit activates peptidoglycan binding and ion influx,
+    Structure.
+- reference: DOI:10.7554/eLife.48979
+  notes: Chang et al. 2019, Structural insights into flagellar stator-rotor interactions,
+    eLife.
+- reference: DOI:10.1016/j.cell.2020.08.016
+  notes: Santiveri et al. 2020, Structure and Function of Stator Units of the Bacterial
+    Flagellar Motor, Cell.
+- reference: DOI:10.1038/s41564-020-0788-8
+  notes: Deme et al. 2020, Structures of the stator complex that drives rotation of
+    the bacterial flagellum, Nature Microbiology.
+- reference: DOI:10.1038/emboj.2011.188
+  notes: Paul et al. 2011, Architecture of the flagellar rotor, The EMBO Journal.
+- reference: DOI:10.1038/nature09300
+  notes: Lee et al. 2010, Structure of the torque ring of the flagellar motor and
+    the molecular basis for rotational switching, Nature.
+- reference: DOI:10.1073/pnas.90.19.8787
+  notes: Welch et al. 1993, Phosphorylation-dependent binding of a signal molecule
+    to the flagellar switch of bacteria, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1016/j.tim.2014.12.011
+  notes: Minamino and Imada 2015, The bacterial flagellar motor and its structural
+    diversity, Trends in Microbiology.
+causal_graphs:
+- graph_id: flagellar_motor_torque_and_switching
+  title: Stators drive the MS/C-ring rotor
+  description: Dynamic stators anchor around the MS/C-ring rotor, ion flow through
+    each stator applies torque to FliG in the C ring, the MS ring transmits rotation
+    to the rod, and CheY-P shifts C-ring switching state.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: rotor_complex
+    label: bacterial-type flagellum rotor complex
+    node_type: STRUCTURE
+    component_ref: rotor_complex
+    grounding: GO:0120107
+  - node_id: stator_complex
+    label: bacterial-type flagellum stator complex
+    node_type: STRUCTURE
+    component_ref: stator_complex
+    grounding: GO:0120101
+  - node_id: c_ring
+    label: bacterial-type flagellum basal body, C ring
+    node_type: STRUCTURE
+    grounding: GO:0009433
+  - node_id: ms_ring
+    label: bacterial-type flagellum basal body, MS ring
+    node_type: STRUCTURE
+    grounding: GO:0009431
+  - node_id: rod
+    label: bacterial-type flagellum basal body, rod
+    node_type: STRUCTURE
+    grounding: GO:0030694
+  - node_id: peptidoglycan
+    label: peptidoglycan-based cell wall
+    node_type: STRUCTURE
+    grounding: GO:0009274
+  - node_id: ion_flux
+    label: proton or sodium flux
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: chey_p
+    label: phosphorylated CheY
+    node_type: GENE_OR_PROTEIN
+  edges:
+  - subject: stator_complex
+    predicate: docks around
+    object: rotor_complex
+    description: Membrane stator units assemble dynamically around the flagellar rotor.
+    evidence:
+    - reference: DOI:10.7554/eLife.48979
+      notes: Chang et al. 2019 imaged stator complexes around bacterial flagellar
+        rotors in cells.
+  - subject: stator_complex
+    predicate: anchors to
+    object: peptidoglycan
+    description: The stator B-subunit dimer anchors active stator units to the peptidoglycan
+      layer.
+    evidence:
+    - reference: DOI:10.1016/j.str.2018.02.016
+      notes: Kojima et al. 2018 linked B-subunit peptidoglycan binding to stator activation.
+  - subject: ion_flux
+    predicate: drives
+    object: stator_complex
+    description: Ion flow drives rotation of the stator A-subunit ring around the
+      anchored B-subunit dimer.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2020.08.016
+      notes: Santiveri et al. 2020 modeled MotAB stator rotation as the ion-coupled
+        force source.
+  - subject: stator_complex
+    predicate: applies torque to
+    object: c_ring
+    description: Stator A subunits engage FliG in the C ring to turn the rotor.
+    evidence:
+    - reference: DOI:10.1038/s41564-020-0788-8
+      notes: Deme et al. 2020 modeled the stator as an ion-driven MotA pentamer meshing
+        with FliG.
+  - subject: c_ring
+    predicate: assembles with
+    object: ms_ring
+    description: The C ring attaches to the cytoplasmic face of the MS ring to form
+      the MS/C-ring rotor.
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24507-9
+      notes: Kawamoto et al. 2021 measured C-ring symmetry relative to the FliF MS
+        ring in native Salmonella basal bodies.
+  - subject: ms_ring
+    predicate: transmits rotation to
+    object: rod
+    description: The MS ring couples rotor motion through FliE to the proximal rod.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2021.03.057
+      notes: Tan et al. 2021 resolved the MS-ring, FliE and proximal-rod coupling
+        geometry.
+  - subject: chey_p
+    predicate: biases
+    object: c_ring
+    description: Phosphorylated CheY binds primarily to FliM to bias the C-ring switch
+      toward clockwise output.
+    evidence:
+    - reference: DOI:10.1073/pnas.90.19.8787
+      notes: Welch et al. 1993 showed phosphorylation-dependent CheY binding through
+        FliM in the bacterial switch complex.
+discussions:
+- discussion_id: modern_stator_stoichiometry
+  prompt: Should the GO definition's A4B2 stator stoichiometry be copied?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#stator_complex
+  rationale: GO:0120100 remains the exact cellular-component term for the bacterial
+    flagellar motor, but its 2017 definition predates the 2020 MotAB structures that
+    resolved the stator core as A5B2 rather than A4B2.
+  resolution_note: 'Declined: keep the exact GO identity term but leave the stale
+    A4B2 wording out of the local definition and source modern stator stoichiometry
+    to Santiveri et al. 2020 and Deme et al. 2020 through the dedicated stator-complex
+    record.'
+  posed_by: claude
+  posed_date: '2026-09-08'
+  resolved_date: '2026-09-08'
+- discussion_id: exclude_nonmotor_flagellum_parts
+  prompt: Should the rod, hook, filament, LP rings, or export apparatus be curated
+    as motor components?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#rotor_complex
+  - components#stator_complex
+  rationale: The bacterial flagellar motor is the membrane rotor plus stator torque
+    generator. The rod, hook and filament transmit or receive the motor output, the
+    LP rings act as envelope bushings, and the export apparatus secretes axial subunits,
+    but they are outside the rotor/stator motor boundary.
+  resolution_note: 'Declined: keep only the rotor and stator as motor constituents
+    and represent rod output in the mechanism graph.'
+  posed_by: claude
+  posed_date: '2026-09-08'
+  resolved_date: '2026-09-08'
