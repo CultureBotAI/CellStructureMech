@@ -23,6 +23,21 @@ curation_history:
     switching functions, a rotor/stator motor causal graph, and resolved discussions
     for stator stoichiometry and nonmotor flagellum parts.
   llm_assisted: true
+- timestamp: '2026-09-09T02:00:11Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #281 by promoting the Kawamoto 2021 and Tan 2021 architecture
+    papers to top-level evidence, resolved #282 by narrowing the Salmonella canonical-example
+    note to the cited rotor reconstruction, and resolved #283 by adding bacterial
+    flagellar motor literature synonyms.'
+  llm_assisted: true
+synonyms:
+- synonym_text: bacterial flagellar motor
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.tim.2014.12.011
+- synonym_text: flagellar motor
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/emboj.2011.188
 has_part:
 - GO:0120107
 - GO:0120101
@@ -83,8 +98,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:90371
   taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
-  note: Classical model for flagellar motor genetics and source organism for C-ring,
-    MS-ring and rotor-architecture studies.
+  note: Source organism for clockwise-locked C-ring electron microscopy and a FliG/FliM/FliN
+    rotor-architecture model.
   reference: DOI:10.1128/JB.00552-06
 functions:
 - function_id: ion_driven_rotary_torque
@@ -145,6 +160,12 @@ evidence:
 - reference: DOI:10.1016/j.tim.2014.12.011
   notes: Minamino and Imada 2015, The bacterial flagellar motor and its structural
     diversity, Trends in Microbiology.
+- reference: DOI:10.1038/s41467-021-24507-9
+  notes: Kawamoto et al. 2021, Native flagellar MS ring is formed by 34 subunits with
+    23-fold and 11-fold subsymmetries, Nature Communications.
+- reference: DOI:10.1016/j.cell.2021.03.057
+  notes: Tan et al. 2021, Structural basis of assembly and torque transmission of
+    the bacterial flagellar motor, Cell.
 causal_graphs:
 - graph_id: flagellar_motor_torque_and_switching
   title: Stators drive the MS/C-ring rotor
