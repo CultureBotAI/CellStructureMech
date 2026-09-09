@@ -1,0 +1,268 @@
+identifier: GO:0009421
+label: bacterial-type flagellum filament cap
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The proteinaceous structure at the distal tip of the bacterial-type flagellar
+  filament.
+definition_source: GO:0009421
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-09T02:53:25Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-09T02:54:05Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO filament-cap synonymy and bacterial-type flagellum filament parthood;
+    curated FliD/HAP2 as the constituent cap protein; added bacterial and archaeal
+    taxonomic scope, Salmonella and Campylobacter canonical examples, filament-capping
+    and flagellin-incorporation functions, a native Salmonella subunit count, a FliD
+    cap-filament assembly graph, and resolved boundary and oligomeric-state discussions.
+  llm_assisted: true
+- timestamp: '2026-09-09T02:54:31Z'
+  curator: claude
+  action: ADD_BOUNDING_EVIDENCE
+  changes: Added Postel et al. 2016 as bounding evidence for bacterial FliD oligomeric-state
+    diversity so the native Salmonella pentameric subunit count is explicitly species-scoped.
+  llm_assisted: true
+- timestamp: '2026-09-09T04:27:53Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #289 by attaching the FliD/HAP2 filament cap to the enclosing
+    GO:0009288 bacterial-type flagellum instead of the GO:0009420 flagellin filament.'
+  llm_assisted: true
+synonyms:
+- synonym_text: flagellar filament cap
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009421
+- synonym_text: flagellin-based flagellum filament cap
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009421
+- synonym_text: FliD/HAP2 filament cap
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1126/science.290.5499.2148
+part_of:
+- GO:0009288
+components:
+- component_id: flid_hap2
+  label: flagellar filament cap protein FliD/HAP2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR040026
+  gene_symbols:
+  - fliD
+  stoichiometry: 5 FliD/HAP2 subunits in the native Salmonella cap; oligomeric state
+    varies in isolated caps from some bacteria
+  essentiality: ESSENTIAL
+  role: Oligomerizes at the distal end of the bacterial flagellar filament to cap
+    the growing tip and promote flagellin incorporation.
+  evidence:
+  - reference: DOI:10.1126/science.290.5499.2148
+    notes: Yonekura et al. 2000 localized HAP2/FliD as the flagellar filament cap
+      that promotes flagellin self-assembly.
+  - reference: DOI:10.1038/s41564-025-02037-0
+    notes: Einenkel et al. 2025 resolved a pentameric FliD cap in the native Salmonella
+      extracellular flagellum.
+  - reference: DOI:10.7554/eLife.18857
+    notes: Postel et al. 2016 showed that FliD capping proteins from different bacteria
+      can adopt distinct oligomeric states, bounding the Salmonella pentameric stoichiometry.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: FliD/HAP2 filament caps occur in bacteria that assemble completed bacterial-type
+    flagellar filaments and are absent from lineages that lack the rotary flagellar
+    system.
+  reference: DOI:10.1128/JB.181.23.7149-7153.1999
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaeal archaella are type-IV-pilus-related appendages and do not use FliD/HAP2
+    caps to assemble bacterial-type flagellin filaments.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:28901
+  taxon_label: Salmonella enterica
+  note: Source species for native extracellular flagellum structures that resolved
+    the pentameric FliD cap at the filament tip.
+  reference: DOI:10.1038/s41564-025-02037-0
+- taxon_id: NCBITaxon:197
+  taxon_label: Campylobacter jejuni
+  note: Source species for a pre-filament hook-filament junction-cap complex used
+    to analyze FliD before flagellin incorporation.
+  reference: DOI:10.1038/s41564-025-02037-0
+functions:
+- function_id: filament_tip_capping
+  label: filament tip capping
+  description: FliD/HAP2 oligomers cap the distal end of the bacterial flagellar filament.
+  evidence:
+  - reference: DOI:10.1128/JB.181.23.7149-7153.1999
+    notes: Macnab 1999 reviews HAP2/FliD as the cap at the distal filament end.
+  - reference: DOI:10.1038/s41564-025-02037-0
+    notes: Einenkel et al. 2025 resolved FliD caps at native Salmonella filament tips.
+- function_id: flagellin_incorporation
+  label: cap-mediated flagellin incorporation
+  description: The cap presents a terminal-domain platform that guides exported flagellin
+    into the growing filament lattice.
+  evidence:
+  - reference: DOI:10.1126/science.290.5499.2148
+    notes: Yonekura et al. 2000 modeled the bacterial flagellar cap as a rotary promoter
+      of flagellin self-assembly.
+  - reference: DOI:10.1073/pnas.2534343100
+    notes: Maki-Yonekura et al. 2003 linked HAP2 domain movement to cap-filament complex
+      formation and growth.
+  - reference: DOI:10.1038/s41564-025-02037-0
+    notes: Einenkel et al. 2025 resolved filament-assembly intermediates and connected
+      FliD terminal-domain movement to flagellin incorporation.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '5'
+  context: FliD/HAP2 subunits in the native Salmonella filament cap
+  reference: DOI:10.1038/s41564-025-02037-0
+evidence:
+- reference: DOI:10.1128/JB.181.23.7149-7153.1999
+  notes: 'Macnab 1999, The bacterial flagellum: reversible rotary propellor and type
+    III export apparatus, Journal of Bacteriology.'
+- reference: DOI:10.1099/mic.0.25948-0
+  notes: Bardy, Ng and Jarrell 2003, Prokaryotic motility structures, Microbiology.
+- reference: DOI:10.1126/science.290.5499.2148
+  notes: Yonekura et al. 2000, The bacterial flagellar cap as the rotary promoter
+    of flagellin self-assembly, Science.
+- reference: DOI:10.1073/pnas.2534343100
+  notes: Maki-Yonekura, Yonekura and Namba 2003, Domain movements of HAP2 in the cap-filament
+    complex formation and growth process of the bacterial flagellum, Proceedings of
+    the National Academy of Sciences.
+- reference: DOI:10.1038/s41467-020-16981-4
+  notes: Al-Otaibi et al. 2020, The cryo-EM structure of the bacterial flagellum cap
+    complex suggests a molecular mechanism for filament elongation, Nature Communications.
+- reference: DOI:10.1038/s41564-025-02037-0
+  notes: Einenkel et al. 2025, The structure of the complete extracellular bacterial
+    flagellum reveals the mechanism of flagellin incorporation, Nature Microbiology.
+- reference: DOI:10.7554/eLife.18857
+  notes: Postel et al. 2016, Bacterial flagellar capping proteins adopt diverse oligomeric
+    states, eLife.
+causal_graphs:
+- graph_id: flid_cap_filament_elongation
+  title: FliD caps the filament tip and guides flagellin addition
+  description: FliD/HAP2 oligomerizes into a filament cap at the distal tip of the
+    flagellar filament. The cap sits on the hook-filament junction before filament
+    assembly and later moves at the filament end to guide exported flagellin subunits
+    into the elongating lattice.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: flid_hap2
+    label: flagellar filament cap protein FliD/HAP2
+    node_type: GENE_OR_PROTEIN
+    component_ref: flid_hap2
+    grounding: InterPro:IPR040026
+  - node_id: filament_cap
+    label: bacterial-type flagellum filament cap
+    node_type: STRUCTURE
+    grounding: GO:0009421
+  - node_id: hook_filament_junction
+    label: bacterial-type flagellum hook-filament junction
+    node_type: STRUCTURE
+    grounding: GO:0009422
+  - node_id: flagellin
+    label: flagellin
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR001492
+  - node_id: filament
+    label: bacterial-type flagellum filament
+    node_type: STRUCTURE
+    grounding: GO:0009420
+  - node_id: filament_elongation
+    label: bacterial-type flagellum filament elongation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: flid_hap2
+    predicate: oligomerizes into
+    object: filament_cap
+    description: FliD/HAP2 subunits oligomerize into the flagellar filament cap at
+      the distal tip.
+    evidence:
+    - reference: DOI:10.1006/jmbi.1996.0349
+      notes: Ikeda et al. 1996 showed that FliD can self-assemble into annular cap-like
+        structures.
+    - reference: DOI:10.1038/s41564-025-02037-0
+      notes: Einenkel et al. 2025 resolved native Salmonella FliD caps as pentamers.
+  - subject: filament_cap
+    predicate: assembles on
+    object: hook_filament_junction
+    description: The FliD cap is positioned on the hook-filament junction before filament
+      assembly.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02037-0
+      notes: Einenkel et al. 2025 resolved a Campylobacter cap atop the hook-filament
+        junction before flagellin assembly.
+  - subject: filament_cap
+    predicate: captures
+    object: flagellin
+    description: The cap creates a site that receives exported flagellin for incorporation
+      at the filament end.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02037-0
+      notes: Einenkel et al. 2025 trapped flagellin incorporation intermediates under
+        the FliD cap.
+  - subject: flagellin
+    predicate: incorporates below
+    object: filament_cap
+    description: Flagellin subunits insert beneath the distal cap as the filament
+      grows.
+    evidence:
+    - reference: DOI:10.1073/pnas.2534343100
+      notes: Maki-Yonekura et al. 2003 visualized cap-filament conformations during
+        flagellar growth.
+  - subject: filament_cap
+    predicate: promotes
+    object: filament_elongation
+    description: FliD terminal-domain movements at the cap guide successive flagellin
+      additions.
+    evidence:
+    - reference: DOI:10.1126/science.290.5499.2148
+      notes: Yonekura et al. 2000 modeled the cap as a rotary promoter of flagellin
+        assembly.
+    - reference: DOI:10.1038/s41564-025-02037-0
+      notes: Einenkel et al. 2025 connected FliD terminal-domain movement and cap
+        rotation with flagellin incorporation.
+  - subject: filament_elongation
+    predicate: extends
+    object: filament
+    description: Cap-mediated addition of exported flagellin elongates the bacterial
+      flagellar filament.
+    evidence:
+    - reference: DOI:10.1128/JB.181.23.7149-7153.1999
+      notes: Macnab 1999 reviews filament growth by exported flagellin beneath the
+        distal cap.
+discussions:
+- discussion_id: exclude_filament_and_junction
+  prompt: Should flagellin, FlgK, or FlgL be curated as filament-cap components?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#flid_hap2
+  rationale: GO:0009421 is scoped to the distal cap rather than the flagellin filament
+    or the FlgK/FlgL hook-filament junction below it. FliD is the cap constituent;
+    flagellin, FlgK and FlgL are neighboring axial proteins.
+  resolution_note: 'Declined: keep flagellin on the GO:0009420 filament record and
+    FlgK/FlgL on the GO:0009422 junction record.'
+  posed_by: claude
+  posed_date: '2026-09-09'
+  resolved_date: '2026-09-09'
+- discussion_id: oligomeric_state_scope
+  prompt: Should the FliD subunit count be curated as universally pentameric?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - physical_properties
+  rationale: The native Salmonella cap resolved by Einenkel et al. 2025 is pentameric,
+    but Postel et al. 2016 showed that purified bacterial FliD proteins can adopt
+    diverse oligomeric states.
+  resolution_note: 'Declined: store the count only with native Salmonella context
+    rather than as a species-independent cap count.'
+  posed_by: claude
+  posed_date: '2026-09-09'
+  resolved_date: '2026-09-09'

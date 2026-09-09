@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum.yaml
+  slug: bacterial_type_flagellum
+session:
+  id: 2026-09-09T042811Z-claude-e740a7
+  timestamp: '2026-09-09T04:28:11Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/289
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/288
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Link filament cap from the flagellum
+  details: 'Resolved #289 for PR #288 by adding GO:0009421 to the enclosing GO:0009288 bacterial-type
+    flagellum has_part list so the FliD/HAP2 filament cap is linked as a direct substructure
+    of the whole flagellum rather than as part of the GO:0009420 flagellin filament.'

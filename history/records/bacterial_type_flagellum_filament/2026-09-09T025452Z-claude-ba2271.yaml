@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_filament.yaml
+  slug: bacterial_type_flagellum_filament
+session:
+  id: 2026-09-09T025452Z-claude-ba2271
+  timestamp: '2026-09-09T02:54:52Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Link filament to bacterial flagellar cap
+  details: Added GO:0009421 to the GO:0009420 bacterial-type flagellum filament has_part list
+    so the newly curated FliD/HAP2 filament cap is represented as a named distal substructure
+    of the flagellin filament.

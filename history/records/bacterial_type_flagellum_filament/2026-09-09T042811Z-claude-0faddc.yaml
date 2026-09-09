@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_filament.yaml
+  slug: bacterial_type_flagellum_filament
+session:
+  id: 2026-09-09T042811Z-claude-0faddc
+  timestamp: '2026-09-09T04:28:11Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/289
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/288
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Remove filament cap from filament has_part
+  details: 'Resolved #289 for PR #288 by removing GO:0009421 from the GO:0009420 bacterial-type
+    flagellum filament has_part list and updating the exclude_hook_and_cap boundary discussion
+    so FliD remains outside the filament component boundary while the cap is modeled in its
+    own top-level flagellar substructure record.'

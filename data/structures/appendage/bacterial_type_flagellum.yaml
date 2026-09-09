@@ -15,6 +15,7 @@ structure_category: APPENDAGE
 structure_kind: APPENDAGE
 has_part:
 - GO:0009420
+- GO:0009421
 - GO:0009422
 - GO:0009424
 - GO:0009425
@@ -782,6 +783,13 @@ curation_history:
   action: ADD_SUBSTRUCTURE_LINK
   changes: Added the GO:0009422 bacterial-type flagellum hook-filament junction record
     to the top-level bacterial-type flagellum has_part list.
+  llm_assisted: true
+- timestamp: '2026-09-09T04:27:53Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #289 by adding GO:0009421 as a direct has_part of the enclosing
+    bacterial-type flagellum after moving the FliD/HAP2 cap out of the GO:0009420
+    filament boundary.'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0307
