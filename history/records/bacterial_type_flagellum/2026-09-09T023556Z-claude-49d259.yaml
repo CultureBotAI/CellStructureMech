@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum.yaml
+  slug: bacterial_type_flagellum
+session:
+  id: 2026-09-09T023556Z-claude-49d259
+  timestamp: '2026-09-09T02:35:56Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Link bacterial flagellum to hook-filament junction
+  details: Added GO:0009422 to the top-level GO:0009288 bacterial-type flagellum has_part
+    list so the newly curated hook-filament junction is represented as a named flagellar substructure
+    alongside the filament, hook and basal body.

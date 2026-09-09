@@ -15,6 +15,7 @@ structure_category: APPENDAGE
 structure_kind: APPENDAGE
 has_part:
 - GO:0009420
+- GO:0009422
 - GO:0009424
 - GO:0009425
 components:
@@ -776,5 +777,11 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-09-09T02:35:39Z'
+  curator: claude
+  action: ADD_SUBSTRUCTURE_LINK
+  changes: Added the GO:0009422 bacterial-type flagellum hook-filament junction record
+    to the top-level bacterial-type flagellum has_part list.
+  llm_assisted: true
 xrefs:
 - uniprot.location:SL-0307

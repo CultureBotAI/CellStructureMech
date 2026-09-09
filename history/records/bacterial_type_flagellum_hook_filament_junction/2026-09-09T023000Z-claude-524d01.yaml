@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_hook_filament_junction.yaml
+  slug: bacterial_type_flagellum_hook_filament_junction
+session:
+  id: 2026-09-09T023000Z-claude-524d01
+  timestamp: '2026-09-09T02:30:00Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add bacterial flagellar hook-filament junction record
+  details: Created a PROPOSED GO:0009422 bacterial-type flagellum hook-filament junction record
+    after an ignored-and-hidden duplicate search found no existing dedicated FlgK/FlgL junction
+    record. Curated the junction as an 11:11 FlgK/HAP1 and FlgL/HAP3 complex that connects
+    the bacterial flagellar hook to the filament, linked it as part of the bacterial-type
+    flagellum, added bacterial and archaeal taxonomic scope, curated Salmonella as a canonical
+    example, and added hook-filament coupling, mechanical-buffering and filament-initiation
+    functions with a junction mechanism graph. Resolved the FliD boundary by keeping the filament
+    cap as a distinct neighboring structure rather than a GO:0009422 constituent.
