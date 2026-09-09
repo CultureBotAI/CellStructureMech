@@ -31,6 +31,14 @@ curation_history:
     section to the concrete MS-ring and C-ring components so corpus discussion-anchor
     validation resolves every target.
   llm_assisted: true
+- timestamp: '2026-09-08T21:44:03Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #278 by removing whole-basal-body rotation wording from the MS-ring
+    component role, and resolved #279 by distinguishing the membrane export gate from
+    the broader ATPase-associated flagellar type III export apparatus in the rotor
+    boundary discussion.'
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial flagellar rotor
   synonym_type: RELATED_SYNONYM
@@ -51,8 +59,8 @@ components:
   gene_symbols:
   - fliF
   essentiality: ESSENTIAL
-  role: Membrane-embedded rotor ring that anchors the rotating basal body and positions
-    the cytoplasmic C ring.
+  role: Membrane-embedded rotor ring that anchors the MS/C-ring rotor in the inner
+    membrane and positions the cytoplasmic C ring.
   evidence:
   - reference: DOI:10.1038/s41467-021-24507-9
     notes: Kawamoto et al. 2021 resolved the native Salmonella FliF MS ring and measured
@@ -256,7 +264,8 @@ discussions:
   - causal_graphs#ms_c_ring_rotor_function
   rationale: GO:0120107 is scoped to the membrane-anchored ring and motor switch complex
     that rotate as the basal-body rotor. Stator units apply torque to the rotor, the
-    rod receives rotation from it, and the export apparatus occupies the MS-ring center,
+    rod receives rotation from it, the membrane export gate occupies the MS-ring center,
+    and the broader flagellar type III export apparatus associates with that gate,
     but those neighboring structures are not part of the MS-ring/C-ring rotor complex.
   resolution_note: 'Declined: model only the MS ring and C ring as rotor constituents,
     and represent stator and rod interactions in functions or causal graphs.'
