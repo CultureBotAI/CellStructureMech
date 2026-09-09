@@ -1,0 +1,270 @@
+identifier: GO:0009422
+label: bacterial-type flagellum hook-filament junction
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The FlgK/FlgL hook-associated protein junction at the distal end of the
+  bacterial-type flagellar hook that couples the flexible hook to the flagellin filament
+  and buffers mechanical stress while initiating filament assembly.
+definition_source: DOI:10.1038/s41564-025-02037-0
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-09T02:13:48Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-09T02:16:14Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO hook-filament junction synonymy and bacterial-flagellum parthood;
+    curated FlgK/HAP1 and FlgL/HAP3 as constituent junction proteins; added bacterial
+    and archaeal taxonomic scope, Salmonella LT2 as a canonical example, hook-filament
+    coupling, mechanical-buffering and filament-initiation functions, 11:11 FlgK/FlgL
+    stoichiometry, a FlgKL junction graph, and a resolved boundary discussion excluding
+    the FliD filament cap.
+  llm_assisted: true
+synonyms:
+- synonym_text: flagellar hook-filament junction
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009422
+- synonym_text: FlgK-FlgL hook-filament junction
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41564-025-02037-0
+part_of:
+- GO:0009288
+components:
+- component_id: flgk_hap1
+  label: hook-associated protein FlgK/HAP1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: FlgK is the HAP1 protein of the bacterial flagellar hook-filament
+    junction. No exact integrated family grounding was curated during record creation;
+    the component stays label-only rather than reusing broad flagellar axial-protein
+    signatures.
+  gene_symbols:
+  - flgK
+  stoichiometry: 11 FlgK/HAP1 subunits per Salmonella junction
+  essentiality: ESSENTIAL
+  role: Forms the proximal hook-filament junction layer that adjoins the distal FlgE
+    hook and contacts FlgL.
+  evidence:
+  - reference: DOI:10.1128/jb.169.3.1168-1173.1987
+    notes: Ikeda et al. 1987 localized HAP1 to the Salmonella hook-proximal side of
+      the hook-filament junction and estimated 11 HAP1 copies per flagellum.
+  - reference: DOI:10.1038/s41564-025-02037-0
+    notes: Einenkel et al. 2025 resolved FlgK in the native Salmonella hook-filament
+      junction.
+- component_id: flgl_hap3
+  label: hook-associated protein FlgL/HAP3
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: FlgL is the HAP3 protein of the bacterial flagellar hook-filament
+    junction. No exact integrated family grounding was curated during record creation;
+    the component stays label-only rather than reusing broad flagellar axial-protein
+    signatures.
+  gene_symbols:
+  - flgL
+  stoichiometry: 11 FlgL/HAP3 subunits per Salmonella junction
+  essentiality: ESSENTIAL
+  role: Forms the distal hook-filament junction layer that couples FlgK to the first
+    flagellin subunits of the filament.
+  evidence:
+  - reference: DOI:10.1128/jb.169.3.1168-1173.1987
+    notes: Ikeda et al. 1987 localized HAP3 to the Salmonella filament-proximal side
+      of the hook-filament junction and estimated 11 HAP3 copies per flagellum.
+  - reference: DOI:10.1016/S0022-2836(02)00139-0
+    notes: Furukawa et al. 2002 detected direct interactions among monomeric FlgK,
+      FlgL and flagellin, supporting the junction interface that couples the junction
+      to the filament.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: FlgK/FlgL hook-filament junctions are widespread in completed bacterial-type
+    flagella but absent from bacteria that lack the rotary flagellar system.
+  reference: DOI:10.1038/nrmicro1887
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: ABSENT
+  note: Archaeal archaella are type-IV-pilus-related appendages and do not contain
+    the FlgK/FlgL junction proteins of bacterial flagella.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:99287
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+  note: Source strain for the native FlgK/FlgL hook-filament junction resolved with
+    its surrounding hook, filament and FliD cap.
+  reference: DOI:10.1038/s41564-025-02037-0
+functions:
+- function_id: hook_filament_coupling
+  label: hook-filament coupling
+  description: FlgK and FlgL form a short junction between the flexible hook and the
+    rigid flagellin filament.
+  evidence:
+  - reference: DOI:10.1128/jb.162.1.183-189.1985
+    notes: Homma and Iino 1985 localized HAP1 and HAP3 between the hook and filament
+      in Salmonella.
+  - reference: DOI:10.1038/s41564-025-02037-0
+    notes: Einenkel et al. 2025 resolved the FlgK/FlgL junction connecting the native
+      Salmonella hook to the filament.
+- function_id: mechanical_stress_buffering
+  label: mechanical stress buffering
+  description: The FlgK/FlgL junction mechanically separates the curved hook from
+    the filament and limits stress transfer into the filament lattice.
+  evidence:
+  - reference: DOI:10.1038/s41564-025-02037-0
+    notes: Einenkel et al. 2025 structurally modeled the hook-filament junction as
+      a buffer that prevents hook-derived stress from propagating into the filament.
+- function_id: filament_assembly_initiation
+  label: filament assembly initiation
+  description: The junction provides the distal hook platform on which the FliD cap
+    assembles to initiate ordered flagellin incorporation into the growing filament.
+  evidence:
+  - reference: DOI:10.1038/s41564-025-02037-0
+    notes: Einenkel et al. 2025 resolved a Campylobacter hook-filament junction with
+      the FliD cap before filament assembly and native Salmonella cap-filament intermediates.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '22'
+  context: 11 FlgK/HAP1 plus 11 FlgL/HAP3 subunits in the Salmonella hook-filament
+    junction
+  reference: DOI:10.1038/s41564-025-02037-0
+evidence:
+- reference: DOI:10.1128/jb.162.1.183-189.1985
+  notes: Homma and Iino 1985, Locations of hook-associated proteins in flagellar structures
+    of Salmonella typhimurium, Journal of Bacteriology.
+- reference: DOI:10.1128/jb.169.3.1168-1173.1987
+  notes: Ikeda et al. 1987, Localization and stoichiometry of hook-associated proteins
+    within Salmonella typhimurium flagella, Journal of Bacteriology.
+- reference: DOI:10.1016/S0022-2836(02)00139-0
+  notes: Furukawa et al. 2002, Interactions between Bacterial Flagellar Axial Proteins
+    in Their Monomeric State in Solution, Journal of Molecular Biology.
+- reference: DOI:10.1146/annurev.micro.57.030502.090832
+  notes: Macnab 2003, How bacteria assemble flagella, Annual Review of Microbiology.
+- reference: DOI:10.1038/s41564-025-02037-0
+  notes: Einenkel et al. 2025, The structure of the complete extracellular bacterial
+    flagellum reveals the mechanism of flagellin incorporation, Nature Microbiology.
+causal_graphs:
+- graph_id: flgkl_hook_filament_junction
+  title: FlgK and FlgL connect the hook to the filament
+  description: FlgK assembles next to the hook and FlgL next to the filament to form
+    a two-layer hook-filament junction. The junction joins the flexible hook to the
+    rigid filament, supports FliD cap placement during filament initiation, and buffers
+    hook-derived mechanical stress.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: flgk_hap1
+    label: hook-associated protein FlgK/HAP1
+    node_type: GENE_OR_PROTEIN
+    component_ref: flgk_hap1
+  - node_id: flgl_hap3
+    label: hook-associated protein FlgL/HAP3
+    node_type: GENE_OR_PROTEIN
+    component_ref: flgl_hap3
+  - node_id: hook_filament_junction
+    label: bacterial-type flagellum hook-filament junction
+    node_type: STRUCTURE
+    grounding: GO:0009422
+  - node_id: hook
+    label: bacterial-type flagellum hook
+    node_type: STRUCTURE
+    grounding: GO:0009424
+  - node_id: filament
+    label: bacterial-type flagellum filament
+    node_type: STRUCTURE
+    grounding: GO:0009420
+  - node_id: filament_cap
+    label: bacterial-type flagellum filament cap
+    node_type: STRUCTURE
+    grounding: GO:0009421
+  - node_id: mechanical_stress
+    label: hook-derived mechanical stress
+    node_type: QUALITY
+  - node_id: flagellin
+    label: flagellin
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR001492
+  edges:
+  - subject: flgk_hap1
+    predicate: forms proximal layer of
+    object: hook_filament_junction
+    description: FlgK/HAP1 subunits form the hook-proximal layer of the junction.
+    evidence:
+    - reference: DOI:10.1128/jb.169.3.1168-1173.1987
+      notes: Ikeda et al. 1987 localized HAP1 between the hook and HAP3.
+  - subject: flgl_hap3
+    predicate: forms distal layer of
+    object: hook_filament_junction
+    description: FlgL/HAP3 subunits form the filament-proximal layer of the junction.
+    evidence:
+    - reference: DOI:10.1128/jb.169.3.1168-1173.1987
+      notes: Ikeda et al. 1987 localized HAP3 between HAP1 and the flagellin filament.
+  - subject: flgk_hap1
+    predicate: contacts
+    object: hook
+    description: The FlgK layer contacts the distal end of the FlgE hook.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02037-0
+      notes: Einenkel et al. 2025 resolved FlgK next to FlgE in the native Salmonella
+        junction.
+  - subject: flgk_hap1
+    predicate: contacts
+    object: flgl_hap3
+    description: FlgK and FlgL interact to build the paired junction at the hook-filament
+      boundary.
+    evidence:
+    - reference: DOI:10.1016/S0022-2836(02)00139-0
+      notes: Furukawa et al. 2002 detected FlgK binding to FlgL in solution.
+  - subject: flgl_hap3
+    predicate: contacts
+    object: filament
+    description: The FlgL layer contacts the first flagellin subunits of the filament.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02037-0
+      notes: Einenkel et al. 2025 resolved FlgL against FliC in the native Salmonella
+        junction.
+  - subject: filament_cap
+    predicate: assembles on
+    object: hook_filament_junction
+    description: The FliD cap sits above the junction during filament assembly.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02037-0
+      notes: Einenkel et al. 2025 resolved a Campylobacter cap atop the hook-filament
+        junction before filament assembly.
+  - subject: flagellin
+    predicate: polymerizes above
+    object: hook_filament_junction
+    description: Flagellin subunits incorporate above the hook-filament junction to
+      grow the filament.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02037-0
+      notes: Einenkel et al. 2025 resolved Salmonella flagellin incorporation intermediates
+        above the FlgK/FlgL junction.
+  - subject: hook_filament_junction
+    predicate: buffers
+    object: mechanical_stress
+    description: The assembled FlgK/FlgL junction limits stress propagation from the
+      hook into the filament lattice.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02037-0
+      notes: Einenkel et al. 2025 linked FlgK elasticity to mechanical buffering at
+        the hook-filament junction.
+discussions:
+- discussion_id: exclude_filament_cap
+  prompt: Should FliD be curated as a hook-filament junction component?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#flgk_hap1
+  - components#flgl_hap3
+  rationale: The mature GO:0009422 hook-filament junction is the FlgK/FlgL complex
+    that connects the hook and flagellin filament. FliD assembles on top of that junction
+    as the distinct GO:0009421 filament cap.
+  resolution_note: 'Declined: keep FliD out of the GO:0009422 component list and represent
+    cap placement only in the mechanism graph.'
+  posed_by: claude
+  posed_date: '2026-09-09'
+  resolved_date: '2026-09-09'
