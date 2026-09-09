@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/paraflagellar_rod.yaml
+  slug: paraflagellar_rod
+session:
+  id: 2026-09-09T191015Z-claude-code-f45c80
+  timestamp: '2026-09-09T19:10:15Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the paraflagellar rod record
+  details: Created GO:0097740 paraflagellar rod as an appendage record. Curated PFR1 and PFR2
+    as the major lattice components, added the GO 9+2 motile cilium parthood, bounded PFR-AF1/PFR-AF2
+    as cytoplasmic assembly factors rather than mature rod components, and cited primary/review
+    literature for major proteins, motility, assembly, comparative proteomics and taxonomic
+    scope.

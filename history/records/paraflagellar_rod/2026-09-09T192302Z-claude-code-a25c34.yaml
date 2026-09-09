@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/paraflagellar_rod.yaml
+  slug: paraflagellar_rod
+session:
+  id: 2026-09-09T192302Z-claude-code-a25c34
+  timestamp: '2026-09-09T19:23:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/291
+  - https://github.com/CultureBotAI/CellStructureMech/issues/292
+  - https://github.com/CultureBotAI/CellStructureMech/issues/293
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/290
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address paraflagellar rod review issues
+  details: 'Resolved PR #290 review issues #291, #292 and #293 by narrowing the Euglenozoa
+    scope note to Gadelha-supported kinetoplastid evidence, scoping the Trypanosoma canonical
+    example to the cited PFR-AF deletion study, and moving the paraxial rod synonym to a paraxial-rod
+    ultrastructure DOI.'

@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/paraflagellar_rod.yaml
+  slug: paraflagellar_rod
+session:
+  id: 2026-09-09T191737Z-claude-code-c4e148
+  timestamp: '2026-09-09T19:17:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fix the paraflagellar rod discussion anchor
+  details: Moved the open minor-component discussion from a whole-section components attachment
+    to explicit components#pfr1 and components#pfr2 anchors so every discussion attachment
+    resolves to a local component id.
