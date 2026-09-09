@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_filament_cap.yaml
+  slug: bacterial_type_flagellum_filament_cap
+session:
+  id: 2026-09-09T042811Z-claude-481520
+  timestamp: '2026-09-09T04:28:11Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/289
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/288
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Move filament cap under enclosing flagellum
+  details: 'Resolved #289 for PR #288 by changing the GO:0009421 bacterial-type flagellum
+    filament cap parthood from GO:0009420 to the enclosing GO:0009288 bacterial-type flagellum,
+    keeping the FliD/HAP2 cap distinct from the flagellin filament boundary.'

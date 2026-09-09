@@ -27,6 +27,12 @@ curation_history:
   changes: Added Postel et al. 2016 as bounding evidence for bacterial FliD oligomeric-state
     diversity so the native Salmonella pentameric subunit count is explicitly species-scoped.
   llm_assisted: true
+- timestamp: '2026-09-09T04:27:53Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #289 by attaching the FliD/HAP2 filament cap to the enclosing
+    GO:0009288 bacterial-type flagellum instead of the GO:0009420 flagellin filament.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar filament cap
   synonym_type: EXACT_SYNONYM
@@ -38,7 +44,7 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1126/science.290.5499.2148
 part_of:
-- GO:0009420
+- GO:0009288
 components:
 - component_id: flid_hap2
   label: flagellar filament cap protein FliD/HAP2
