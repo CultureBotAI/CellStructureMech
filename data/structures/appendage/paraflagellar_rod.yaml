@@ -1,0 +1,313 @@
+identifier: GO:0097740
+label: paraflagellar rod
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A large lattice-like axial structure found in some flagellated protists
+  which extends alongside the axoneme. Protein components of the paraflagellar rod
+  are likely implicated, among other, in adenine nucleotide signaling and metabolism,
+  and in calcium signaling.
+definition_source: GO:0097740
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-09T04:41:40Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-09T19:08:30Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO PFR synonymy and cilium parthood; curated PFR1 and PFR2 as major
+    lattice constituents with reviewed Trypanosoma brucei brucei UniProt examples;
+    added eukaryotic and euglenozoan taxonomic scope, trypanosome and Leishmania canonical
+    examples, assembly, motility and signaling functions, core literature evidence,
+    a PFR1/PFR2 assembly graph, and a boundary discussion for the larger minor-component
+    PFR proteome.
+  llm_assisted: true
+- timestamp: '2026-09-09T19:17:18Z'
+  curator: claude
+  action: ADDRESS_QC
+  changes: Attached the minor-component boundary discussion to the curated PFR1 and
+    PFR2 component anchors so the discussion target resolves in the corpus integrity
+    tests.
+  llm_assisted: true
+synonyms:
+- synonym_text: PFR
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097740
+- synonym_text: paraxial rod
+  synonym_type: RELATED_SYNONYM
+  source: PMID:7961827
+part_of:
+- GO:0097729
+components:
+- component_id: pfr1
+  label: 69 kDa paraflagellar rod protein PFR1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PFR1
+  - PFRA
+  - PFRB
+  essentiality: ESSENTIAL
+  role: A major coiled-coil lattice protein that co-assembles with PFR2 to build the
+    extra-axonemal paraflagellar rod.
+  evidence:
+  - reference: DOI:10.1083/jcb.109.4.1695
+    notes: Schlaeppi et al. 1989 identified the tandem PFRA/PFRB gene product as a
+      major helical protein of the Trypanosoma brucei paraflagellar rod.
+  - reference: DOI:10.1242/jcs.112.16.2753
+    notes: Maga et al. 1999 showed that Leishmania mexicana PFR1 is distributed through
+      the PFR and is required for native PFR formation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P22225
+    protein_label: 69 kDa paraflagellar rod protein
+    gene_symbol: PFRA
+    taxon_id: NCBITaxon:5702
+    taxon_label: Trypanosoma brucei brucei
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: Reviewed UniProtKB entry for the PFRA/PFRB-encoded 69 kDa PFR1 protein in
+      Trypanosoma brucei brucei. Identifier for the component's declared gene symbols;
+      PFR membership rests on the record's own sources.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22225
+      notes: UniProtKB reviewed Swiss-Prot entry P22225, PFR1_TRYBB, retrieved as
+        a T. brucei brucei 69 kDa paraflagellar rod protein carrying PFRA and PFRB
+        gene names.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro:IPR007824 / Pfam:PF05149 covers eukaryotic paraflagellar-rod
+    proteins including PFR1 and PFR2, so it is broader than the individual PFR1 paralogue
+    family. No exact source-neutral PFR1-only CURIE was curated.
+- component_id: pfr2
+  label: 73 kDa paraflagellar rod protein PFR2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PFR2
+  - PFRC
+  - PFRD
+  essentiality: ESSENTIAL
+  role: A second major PFR lattice protein that is distinct from PFR1 and required
+    for the complete paraflagellar rod.
+  evidence:
+  - reference: PMID:7961827
+    notes: Deflorin et al. 1994 separated the Trypanosoma brucei 73 kDa PFR-C/PFR-D
+      protein from the related 69 kDa PFR-A/PFR-B protein.
+  - reference: DOI:10.1242/jcs.112.16.2753
+    notes: Maga et al. 1999 found that Leishmania mexicana PFR2 is synthesized, transported
+      to the flagellum and required for full PFR assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q26789
+    protein_label: 73 kDa paraflagellar rod protein
+    gene_symbol: PFRC
+    taxon_id: NCBITaxon:5702
+    taxon_label: Trypanosoma brucei brucei
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: Reviewed UniProtKB entry for the PFRC/PFRD-encoded 73 kDa PFR2 protein in
+      Trypanosoma brucei brucei. Identifier for the component's declared gene symbols;
+      PFR membership rests on the record's own sources.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q26789
+      notes: UniProtKB reviewed Swiss-Prot entry Q26789, PFR2_TRYBB, retrieved as
+        a T. brucei brucei 73 kDa paraflagellar rod protein carrying PFRC and PFRD
+        gene names.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro:IPR007824 / Pfam:PF05149 covers the broader paraflagellar-rod
+    protein family rather than PFR2 alone; Q26789 also matches that same family. No
+    exact source-neutral PFR2-only CURIE was curated.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: The paraflagellar rod is restricted to a small set of flagellated protist
+    lineages rather than a conserved feature of eukaryotic cilia.
+  reference: PMID:7961827
+- taxon_id: NCBITaxon:33682
+  taxon_label: Euglenozoa
+  presence: VARIABLE
+  note: PFRs are characteristic of kinetoplastid and euglenid flagella, with lineage-specific
+    differences in size and visibility.
+  reference: DOI:10.1128/EC.4.3.516-525.2005
+canonical_examples:
+- taxon_id: NCBITaxon:5702
+  taxon_label: Trypanosoma brucei brucei
+  note: Source organism for the classic PFRA/PFRB and PFRC/PFRD major-protein characterization
+    and for later PFR-AF1/PFR-AF2 assembly-factor genetics.
+  reference: DOI:10.1242/jcs.242271
+- taxon_id: NCBITaxon:5665
+  taxon_label: Leishmania mexicana
+  note: Genetic model in which PFR1 and PFR2 knockouts established that both major
+    proteins are required for native PFR formation and flagellar motility.
+  reference: DOI:10.1242/jcs.112.16.2753
+functions:
+- function_id: flagellar_waveform_control
+  label: flagellar waveform control
+  description: The PFR provides an extra-axonemal scaffold needed for normal kinetoplastid
+    flagellar beating and cell motility.
+  evidence:
+  - reference: DOI:10.1038/35300
+    notes: Bastin et al. 1998 disrupted the PFR in T. brucei and linked PFR loss to
+      a trypanosome motility defect.
+  - reference: PMID:9497035
+    notes: Santrich et al. 1997 showed that a Leishmania mexicana PFR2 knockout lacks
+      most PFR structure and has altered flagellar beat waveform and forward swimming.
+- function_id: extra_axonemal_pfr_assembly
+  label: extra-axonemal PFR assembly
+  description: New PFR lattice proteins are delivered into the flagellum and incorporated
+    into the elongating paraflagellar rod, a process that requires cytoplasmic PFR
+    assembly factors.
+  evidence:
+  - reference: DOI:10.1128/MCB.19.12.8191
+    notes: Bastin et al. 1999 followed tagged PFRA during PFR growth and observed
+      a major distal addition site plus minor incorporation along the partially assembled
+      PFR.
+  - reference: DOI:10.1242/jcs.242271
+    notes: Alves et al. 2020 identified cytoplasmic PFR-AF1 and PFR-AF2 as factors
+      required for PFR formation.
+- function_id: flagellar_signaling_platform
+  label: flagellar signaling platform
+  description: The PFR-associated protein cohort includes calcium/calmodulin and adenine-nucleotide
+    signaling or metabolic proteins that can influence flagellar beating.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808859200
+    notes: Portman et al. 2009 used RNAi-mutant comparative proteomics to expand the
+      PFR cohort and infer calcium/calmodulin regulatory links among some components.
+  - reference: DOI:10.1016/j.ijpara.2009.10.005
+    notes: Portman and Gull 2010 review links between the PFR proteome, adenine-nucleotide
+      metabolism, calcium signaling and motility regulation.
+evidence:
+- reference: DOI:10.1083/jcb.109.4.1695
+  notes: Schlaeppi, Deflorin and Seebeck 1989, The major component of the paraflagellar
+    rod of Trypanosoma brucei is a helical protein that is encoded by two identical,
+    tandemly linked genes, Journal of Cell Biology.
+- reference: PMID:7961827
+  notes: Deflorin, Rudolf and Seebeck 1994, The major components of the paraflagellar
+    rod of Trypanosoma brucei are two similar, but distinct proteins which are encoded
+    by two different gene loci, Journal of Biological Chemistry.
+- reference: DOI:10.1242/jcs.112.16.2753
+  notes: Maga et al. 1999, Genetic dissection of the Leishmania paraflagellar rod,
+    a unique flagellar cytoskeleton structure, Journal of Cell Science.
+- reference: DOI:10.1128/MCB.19.12.8191
+  notes: 'Bastin et al. 1999, Flagellar morphogenesis: protein targeting and assembly
+    in the paraflagellar rod of trypanosomes, Molecular and Cellular Biology.'
+- reference: DOI:10.1074/jbc.M808859200
+  notes: Portman et al. 2009, Combining RNA interference mutants and comparative proteomics
+    to identify protein components and dependences in a eukaryotic flagellum, Journal
+    of Biological Chemistry.
+- reference: DOI:10.1016/j.ijpara.2009.10.005
+  notes: 'Portman and Gull 2010, The paraflagellar rod of kinetoplastid parasites:
+    from structure to components and function, International Journal for Parasitology.'
+- reference: DOI:10.1242/jcs.242271
+  notes: 'Alves et al. 2020, Control of assembly of extra-axonemal structures: the
+    paraflagellar rod of trypanosomes, Journal of Cell Science.'
+causal_graphs:
+- graph_id: pfr1_pfr2_lattice_assembly
+  title: PFR1 and PFR2 build the paraflagellar rod lattice
+  description: PFR1 and PFR2 are transported into the flagellum and co-assemble into
+    the extra-axonemal paraflagellar rod lattice. Cytoplasmic PFR-AF1 and PFR-AF2
+    act before flagellar entry and are needed to accumulate the major PFR proteins
+    and form the mature rod.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: pfr1
+    label: 69 kDa paraflagellar rod protein PFR1
+    node_type: GENE_OR_PROTEIN
+    component_ref: pfr1
+  - node_id: pfr2
+    label: 73 kDa paraflagellar rod protein PFR2
+    node_type: GENE_OR_PROTEIN
+    component_ref: pfr2
+  - node_id: paraflagellar_rod
+    label: paraflagellar rod
+    node_type: STRUCTURE
+    grounding: GO:0097740
+  - node_id: axoneme
+    label: axoneme
+    node_type: STRUCTURE
+    grounding: GO:0005930
+  - node_id: pfr_af1
+    label: PFR assembly factor 1
+    node_type: GENE_OR_PROTEIN
+  - node_id: pfr_af2
+    label: PFR assembly factor 2
+    node_type: GENE_OR_PROTEIN
+  edges:
+  - subject: pfr1
+    predicate: co-assembles into
+    object: paraflagellar_rod
+    description: PFR1 is transported into the flagellum and forms a major structural
+      constituent throughout the PFR.
+    evidence:
+    - reference: DOI:10.1128/MCB.19.12.8191
+      notes: Bastin et al. 1999 tracked tagged PFRA/PFR1 addition to new and old T.
+        brucei PFRs.
+  - subject: pfr2
+    predicate: co-assembles into
+    object: paraflagellar_rod
+    description: PFR2 partners with PFR1 in PFR filaments and is required to assemble
+      a native PFR.
+    evidence:
+    - reference: DOI:10.1242/jcs.112.16.2753
+      notes: Maga et al. 1999 showed that Leishmania PFR filaments contain PFR1 and
+        PFR2 and that PFR2 mutants fail to assemble a native PFR.
+  - subject: paraflagellar_rod
+    predicate: anchors to
+    object: axoneme
+    description: The PFR assembles next to the axoneme and is attached to it through
+      axoneme attachment fibers.
+    evidence:
+    - reference: DOI:10.1242/jcs.112.16.2753
+      notes: Maga et al. 1999 used Leishmania PFR mutants to show that fibers attaching
+        the PFR to the axoneme can assemble in the absence of the bulk PFR.
+  - subject: pfr_af1
+    predicate: promotes assembly of
+    object: paraflagellar_rod
+    description: Cytoplasmic PFR-AF1 is required for PFR formation and normal levels
+      of major PFR proteins.
+    evidence:
+    - reference: DOI:10.1242/jcs.242271
+      notes: Alves et al. 2020 found that deleting PFR-AF1 dramatically disrupts PFR
+        formation in T. brucei.
+  - subject: pfr_af2
+    predicate: promotes assembly of
+    object: paraflagellar_rod
+    description: Cytoplasmic PFR-AF2 is required for PFR formation and normal levels
+      of major PFR proteins.
+    evidence:
+    - reference: DOI:10.1242/jcs.242271
+      notes: Alves et al. 2020 found that deleting PFR-AF2 dramatically disrupts PFR
+        formation in T. brucei.
+discussions:
+- discussion_id: minor_component_boundary
+  prompt: Should all proteomic PFR candidates be curated as paraflagellar-rod components
+    now?
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pfr1
+  - components#pfr2
+  rationale: The PFR proteome contains many low-abundance or regulatory proteins in
+    addition to the two major lattice proteins; Portman et al. 2009 identified 20
+    novel PFR components by RNAi-ablation proteomics and epitope tagging. This first
+    GO:0097740 record therefore enumerates only PFR1/PFR2, while additional candidates
+    need family-by-family curation to avoid folding transient or nearby flagellar
+    proteins into the structural lattice boundary.
+  posed_by: claude
+  posed_date: '2026-09-09'
+- discussion_id: cytoplasmic_assembly_factors
+  prompt: Are PFR-AF1 and PFR-AF2 paraflagellar-rod components?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#pfr1_pfr2_lattice_assembly
+  rationale: PFR-AF1 and PFR-AF2 are cytoplasmic proteins required for PFR formation,
+    but the component boundary in docs/CURATION.md excludes factors that act on a
+    subunit before assembly and then depart.
+  resolution_note: Curated PFR-AF1 and PFR-AF2 as assembly graph nodes rather than
+    as components of the mature paraflagellar rod.
+  posed_by: claude
+  posed_date: '2026-09-09'
+  resolved_date: '2026-09-09'
