@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/exoneme.yaml
+  slug: exoneme
+session:
+  id: 2026-09-10T062328Z-claude-fe93cb
+  timestamp: '2026-09-10T06:23:28Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the exoneme record
+  details: Created GO:0044311 exoneme as a membrane-bounded organelle record. Added apical-complex
+    parthood, PfSUB1 and plasmepsin X protein components, rare eukaryotic and apicomplexan
+    taxonomic scope, Plasmodium falciparum as a canonical example, SUB1-discharge and erythrocyte-egress
+    functions, a PMX/PfSUB1 function graph, and primary/review evidence from Yeoh et al. 2007,
+    Blackman 2008, Withers-Martinez et al. 2014, and Nasamu et al. 2017.

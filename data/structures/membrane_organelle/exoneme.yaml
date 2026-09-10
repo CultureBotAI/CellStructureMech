@@ -1,0 +1,248 @@
+identifier: GO:0044311
+label: exoneme
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A dense granule-like organelle of the apical complex of merozoites, released
+  into the parasitophorous vacuole, mediating protease-dependent rupture and parasite
+  exit from the infected erythrocyte.
+definition_source: GO:0044311
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T06:21:28Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T06:23:06Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO apical-complex parthood, PfSUB1 and plasmepsin X components, rare
+    eukaryotic and apicomplexan taxonomic scope, Plasmodium falciparum as a canonical
+    example, SUB1 discharge and egress-protease-delivery functions, a PMX/SUB1 egress
+    graph, and an exoneme-protease grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-10T06:34:03Z'
+  curator: claude
+  action: TIGHTENED_PMX_SCOPE
+  changes: Renamed the plasmepsin X exoneme component and graph node to avoid overstating
+    direct maturase activity, and narrowed the PMX-to-SUB1 edge predicate to supported
+    final SUB1 maturation.
+  llm_assisted: true
+- timestamp: '2026-09-10T06:34:25Z'
+  curator: claude
+  action: FIXED_DISCUSSION_ANCHOR
+  changes: Updated the plasmepsin X grounding discussion anchor after the component
+    id was narrowed to plasmepsin_x_exoneme_protease.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+part_of:
+- GO:0020007
+components:
+- component_id: pfsub1_exoneme_protease
+  label: PfSUB1 exoneme protease
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SUB1 is curated as a Plasmodium exoneme cargo protease; no exact
+    source-neutral protein-family CURIE was resolved for this first exoneme record.
+  gene_symbols:
+  - sub1
+  role: Secretory subtilisin-like serine protease stored in exonemes and released
+    into the parasitophorous vacuole shortly before egress to process SERA and merozoite-surface
+    protein substrates.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2007.10.049
+    notes: Yeoh et al. 2007 identified PfSUB1 in dense granule-like exonemes and connected
+      its regulated release to SERA processing, egress, and merozoite invasion competence.
+  - reference: DOI:10.1111/j.1462-5822.2008.01176.x
+    notes: Blackman 2008 reviews PfSUB1 discharge from exonemes into the PV space
+      just before P. falciparum blood-stage egress.
+- component_id: plasmepsin_x_exoneme_protease
+  label: plasmepsin X exoneme protease
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PMX is curated as a Plasmodium exoneme-associated aspartic protease;
+    no exact source-neutral protein-family CURIE was resolved for this first exoneme
+    record.
+  gene_symbols:
+  - pmx
+  role: Exoneme-localized aspartic protease that supports the final maturation step
+    of the PfSUB1 egress protease.
+  evidence:
+  - reference: DOI:10.1126/science.aan1478
+    notes: Nasamu et al. 2017 localized Plasmepsin X to exonemes and linked PMX knockdown
+      to impaired SUB1 maturation and egress.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Exonemes are specialized malaria-parasite secretory organelles rather than
+    broadly conserved eukaryotic compartments.
+  reference: DOI:10.1111/j.1462-5822.2008.01176.x
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: RARE
+  note: SUB1-containing exonemes are established for Plasmodium falciparum blood-stage
+    merozoite egress; this first record does not assert the structure across all Apicomplexa.
+  reference: DOI:10.1016/j.cell.2007.10.049
+canonical_examples:
+- taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  note: Human malaria parasite in which PfSUB1 discharge from exonemes into the parasitophorous
+    vacuole was tied to SERA processing and erythrocyte egress.
+  reference: DOI:10.1016/j.cell.2007.10.049
+functions:
+- function_id: regulated_sub1_discharge
+  label: regulated PfSUB1 discharge
+  description: Exonemes release PfSUB1 into the parasitophorous vacuole shortly before
+    P. falciparum erythrocyte egress.
+  evidence:
+  - reference: DOI:10.1111/j.1462-5822.2008.01176.x
+    notes: Blackman 2008 reviews the regulated release of PfSUB1 from exonemes into
+      the PV space just before egress.
+  - reference: DOI:10.1038/ncomms4726
+    notes: Withers-Martinez et al. 2014 describe SUB1 discharge from exonemes into
+      the PV lumen minutes before egress.
+- function_id: erythrocyte_egress_protease_delivery
+  label: erythrocyte egress protease delivery
+  description: Exoneme discharge delivers mature PfSUB1 to process SERA and MSP substrates
+    that support rupture of the parasitophorous vacuole and erythrocyte membranes.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2007.10.049
+    notes: Yeoh et al. 2007 connected PfSUB1 exoneme discharge to SERA maturation,
+      host-cell egress, and the invasive capacity of released merozoites.
+  - reference: DOI:10.1126/science.aan1478
+    notes: Nasamu et al. 2017 placed PMX upstream of SUB1 maturation and SERA5/MSP1
+      processing in the P. falciparum egress cascade.
+evidence:
+- reference: DOI:10.1016/j.cell.2007.10.049
+  notes: Yeoh et al. 2007, Subcellular discharge of a serine protease mediates release
+    of invasive malaria parasites from host erythrocytes, Cell.
+- reference: DOI:10.1111/j.1462-5822.2008.01176.x
+  notes: 'Blackman 2008, Malarial proteases and host cell egress: an ''emerging''
+    cascade, Cellular Microbiology.'
+- reference: DOI:10.1038/ncomms4726
+  notes: Withers-Martinez et al. 2014, The malaria parasite egress protease SUB1 is
+    a calcium-dependent redox switch subtilisin, Nature Communications.
+- reference: DOI:10.1126/science.aan1478
+  notes: Nasamu et al. 2017, Plasmepsins IX and X are essential and druggable mediators
+    of malaria parasite egress and invasion, Science.
+causal_graphs:
+- graph_id: pmx_sub1_exoneme_egress
+  title: Plasmepsin X and PfSUB1 connect exonemes to erythrocyte egress
+  description: PMX localizes to exonemes and supports final maturation of PfSUB1;
+    exonemes discharge PfSUB1 into the PV, where the protease processes SERA/MSP substrates
+    required for P. falciparum egress and post-egress invasion.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: plasmepsin_x_exoneme_protease
+    label: plasmepsin X exoneme protease
+    node_type: GENE_OR_PROTEIN
+    component_ref: plasmepsin_x_exoneme_protease
+  - node_id: pfsub1_exoneme_protease
+    label: PfSUB1 exoneme protease
+    node_type: GENE_OR_PROTEIN
+    component_ref: pfsub1_exoneme_protease
+  - node_id: exoneme
+    label: exoneme
+    node_type: ORGANELLE
+    grounding: GO:0044311
+  - node_id: parasitophorous_vacuole
+    label: parasitophorous vacuole
+    node_type: STRUCTURE
+  - node_id: sera_msp_substrates
+    label: SERA and MSP substrates
+    node_type: GENE_OR_PROTEIN
+  - node_id: erythrocyte_egress
+    label: erythrocyte egress
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: merozoite_invasion_capacity
+    label: merozoite invasion capacity
+    node_type: CAPACITY
+  edges:
+  - subject: plasmepsin_x_exoneme_protease
+    predicate: localizes to
+    object: exoneme
+    description: PMX localizes to small ovoid exoneme secretory vesicles in segmented
+      P. falciparum schizonts.
+    evidence:
+    - reference: DOI:10.1126/science.aan1478
+      notes: Nasamu et al. 2017 localized PMX to exonemes by immuno-electron microscopy.
+  - subject: plasmepsin_x_exoneme_protease
+    predicate: supports maturation of
+    object: pfsub1_exoneme_protease
+    description: PMX supports the final processing step that converts semi-pro SUB1
+      to mature SUB1.
+    evidence:
+    - reference: DOI:10.1126/science.aan1478
+      notes: Nasamu et al. 2017 found that PMX knockdown blocked the second SUB1 maturation
+        step.
+  - subject: pfsub1_exoneme_protease
+    predicate: resides in
+    object: exoneme
+    description: PfSUB1 is stored in dense granule-like exonemes before egress.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2007.10.049
+      notes: Yeoh et al. 2007 identified PfSUB1 in previously unrecognized organelles
+        termed exonemes.
+  - subject: exoneme
+    predicate: discharges
+    object: pfsub1_exoneme_protease
+    description: Exonemes release soluble PfSUB1 into the PV shortly before erythrocyte
+      egress.
+    evidence:
+    - reference: DOI:10.1111/j.1462-5822.2008.01176.x
+      notes: Blackman 2008 reviews PfSUB1 release from exonemes into the PV space
+        just prior to egress.
+  - subject: pfsub1_exoneme_protease
+    predicate: is discharged into
+    object: parasitophorous_vacuole
+    description: On exoneme discharge, PfSUB1 enters the parasitophorous vacuole.
+    evidence:
+    - reference: DOI:10.1038/ncomms4726
+      notes: Withers-Martinez et al. 2014 describe SUB1 release into the PV lumen
+        minutes before egress.
+  - subject: pfsub1_exoneme_protease
+    predicate: processes
+    object: sera_msp_substrates
+    description: PV-released PfSUB1 proteolytically processes SERA and MSP substrates.
+    evidence:
+    - reference: DOI:10.1126/science.aan1478
+      notes: Nasamu et al. 2017 connected PMX-dependent SUB1 maturation to SERA5 and
+        MSP1 processing.
+  - subject: sera_msp_substrates
+    predicate: support
+    object: erythrocyte_egress
+    description: Processing of SERA and merozoite surface proteins is part of the
+      protease cascade used for merozoite egress from erythrocytes.
+    evidence:
+    - reference: DOI:10.1038/ncomms4726
+      notes: Withers-Martinez et al. 2014 review SUB1 cleavage of egress and invasion
+        substrates.
+  - subject: pfsub1_exoneme_protease
+    predicate: supports
+    object: merozoite_invasion_capacity
+    description: PfSUB1 activity contributes to the invasive capacity of merozoites
+      released after egress.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2007.10.049
+      notes: Yeoh et al. 2007 found that PfSUB1 blockade inhibited egress and ablated
+        the invasive capacity of released merozoites.
+discussions:
+- discussion_id: ground_exoneme_proteases
+  prompt: Resolve exact source-neutral groundings for Plasmodium SUB1 and plasmepsin
+    X exoneme protein families.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pfsub1_exoneme_protease
+  - components#plasmepsin_x_exoneme_protease
+  rationale: The first exoneme record keeps P. falciparum SUB1 and PMX label-only
+    because no exact cross-source family CURIE was curated for either exoneme protease.
+  posed_by: claude
+  posed_date: '2026-09-10'
