@@ -21,6 +21,13 @@ curation_history:
     functions, a nonmechanistic IMC scaffold graph, and a grounding TODO for exact
     IMC protein cohorts.
   llm_assisted: true
+- timestamp: '2026-09-10T12:42:24Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #365 review issues #366 and #367 by citing the apicomplexan
+    IMC review for Apicomplexa-wide taxonomic scope and by retyping the IMC shape-stability
+    graph node as a stable parasite-morphology state.'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 synonyms:
@@ -41,8 +48,8 @@ components:
     and form the membranous part of the apicomplexan pellicle.
   evidence:
   - reference: DOI:10.3389/fcimb.2020.611801
-    notes: Ferreira et al. 2021 review the IMC as a double membrane organelle beneath
-      the plasma membrane in Plasmodium and other apicomplexan parasites.
+    notes: Ferreira et al. 2021 review the Plasmodium IMC as a double membrane organelle
+      beneath the parasite plasma membrane.
   - reference: DOI:10.1242/jcs.099002
     notes: Dearnley et al. 2012 resolved flattened subpellicular membrane compartments
       beneath the Plasmodium falciparum gametocyte plasma membrane.
@@ -71,7 +78,7 @@ taxonomic_distribution:
   note: The inner membrane complex is a pellicle organelle of apicomplexan parasites,
     with stage-specific architecture in Plasmodium and lineage-specific functional
     differences.
-  reference: DOI:10.3389/fcimb.2020.611801
+  reference: DOI:10.2741/4157
 canonical_examples:
 - taxon_id: NCBITaxon:5833
   taxon_label: Plasmodium falciparum
@@ -111,6 +118,8 @@ evidence:
   notes: Ferreira et al. 2021, The Dynamic Roles of the Inner Membrane Complex in
     the Multiple Stages of the Malaria Parasite, Frontiers in Cellular and Infection
     Microbiology.
+- reference: DOI:10.2741/4157
+  notes: Kono et al. 2013, The apicomplexan inner membrane complex, Frontiers in Bioscience.
 - reference: DOI:10.1093/molbev/mss081
   notes: Kono et al. 2012, Evolution and architecture of the inner membrane complex
     in asexual and sexual stages of the malaria parasite, Molecular Biology and Evolution.
@@ -141,9 +150,9 @@ causal_graphs:
   - node_id: parasite_pellicle
     label: apicomplexan parasite pellicle
     node_type: STRUCTURE
-  - node_id: cell_shape_stability
-    label: cell shape stability
-    node_type: BIOLOGICAL_PROCESS
+  - node_id: stable_parasite_morphology
+    label: stable parasite morphology
+    node_type: STATE
   - node_id: glideosome
     label: actin-myosin glideosome
     node_type: GENE_OR_PROTEIN
@@ -178,9 +187,8 @@ causal_graphs:
         pellicle.
   - subject: inner_membrane_pellicle_complex
     predicate: supports
-    object: cell_shape_stability
-    description: The IMC supports parasite morphology and cell stability in Plasmodium
-      stages.
+    object: stable_parasite_morphology
+    description: The IMC supports stable parasite morphology in Plasmodium stages.
     evidence:
     - reference: DOI:10.3389/fcimb.2020.611801
       notes: Ferreira et al. 2021 review IMC roles in cell stability and shape.

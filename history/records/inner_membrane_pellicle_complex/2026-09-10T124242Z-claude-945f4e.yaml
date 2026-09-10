@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+  slug: inner_membrane_pellicle_complex
+session:
+  id: 2026-09-10T124242Z-claude-945f4e
+  timestamp: '2026-09-10T12:42:42Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/366
+  - https://github.com/CultureBotAI/CellStructureMech/issues/367
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/365
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed inner membrane complex PR review defects
+  details: 'Addressed PR #365 review issues #366 and #367 by citing the apicomplexan inner
+    membrane complex review for the Apicomplexa-wide taxonomic distribution row and by replacing
+    the graph''s cell-shape-stability biological-process node with a stable parasite-morphology
+    state.'
