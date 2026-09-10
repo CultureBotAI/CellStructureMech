@@ -19,6 +19,12 @@ curation_history:
     sp. PCC 6803 canonical example, a glycogen carbon and energy storage function,
     record-level evidence and a nonmechanistic glycogen storage graph.
   llm_assisted: true
+- timestamp: '2026-09-10T10:07:18Z'
+  curator: claude
+  action: EDITED_RECORD
+  changes: Changed the glycogen storage function from cyanobacterium-specific photosynthetically
+    fixed carbon wording to taxon-neutral glucose-derived carbon and energy wording.
+  llm_assisted: true
 components:
 - component_id: glycogen_core
   label: glycogen
@@ -48,8 +54,8 @@ canonical_examples:
 functions:
 - function_id: glycogen_carbon_energy_storage
   label: glycogen carbon and energy storage
-  description: Glycogen granules sequester photosynthetically fixed carbon as branched
-    glucose polymer that can be degraded when external nutrients limit growth.
+  description: Glycogen granules sequester glucose-derived carbon and energy as branched
+    glycogen polymer that can be degraded when external nutrients limit growth.
   evidence:
   - reference: DOI:10.3389/fmicb.2016.00966
     notes: Koch et al. 2016 review glycogen as a common microbial carbon polymer that

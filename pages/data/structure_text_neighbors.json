@@ -1100,7 +1100,7 @@
         {
           "identifier": "cellstructuremech:glycogen_granule",
           "label": "glycogen granule",
-          "cosine_similarity": 0.76814753
+          "cosine_similarity": 0.76237748
         },
         {
           "identifier": "GO:0070088",
@@ -1193,27 +1193,27 @@
         {
           "identifier": "cellstructuremech:cyanophycin_granule",
           "label": "cyanophycin granule",
-          "cosine_similarity": 0.76814753
+          "cosine_similarity": 0.76237748
         },
         {
           "identifier": "GO:0070088",
           "label": "polyhydroxyalkanoate granule",
-          "cosine_similarity": 0.74980395
+          "cosine_similarity": 0.75125275
         },
         {
           "identifier": "GO:0031411",
           "label": "gas vesicle",
-          "cosine_similarity": 0.6363793
-        },
-        {
-          "identifier": "cellstructuremech:sulfur_globule",
-          "label": "sulfur globule",
-          "cosine_similarity": 0.63517049
+          "cosine_similarity": 0.6383447
         },
         {
           "identifier": "GO:0033172",
           "label": "gas vesicle shell",
-          "cosine_similarity": 0.63275589
+          "cosine_similarity": 0.63621612
+        },
+        {
+          "identifier": "cellstructuremech:sulfur_globule",
+          "label": "sulfur globule",
+          "cosine_similarity": 0.63162449
         }
       ]
     },
@@ -1222,14 +1222,14 @@
       "label": "polyhydroxyalkanoate granule",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:glycogen_granule",
+          "label": "glycogen granule",
+          "cosine_similarity": 0.75125275
+        },
+        {
           "identifier": "cellstructuremech:cyanophycin_granule",
           "label": "cyanophycin granule",
           "cosine_similarity": 0.74995545
-        },
-        {
-          "identifier": "cellstructuremech:glycogen_granule",
-          "label": "glycogen granule",
-          "cosine_similarity": 0.74980395
         },
         {
           "identifier": "GO:0020026",
@@ -1255,7 +1255,7 @@
         {
           "identifier": "cellstructuremech:glycogen_granule",
           "label": "glycogen granule",
-          "cosine_similarity": 0.63517049
+          "cosine_similarity": 0.63162449
         },
         {
           "identifier": "GO:0031411",
