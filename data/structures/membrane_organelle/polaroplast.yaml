@@ -1,0 +1,184 @@
+identifier: GO:0160201
+label: polaroplast
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A membrane-bounded organelle found in a microsporidian spore that swells
+  with water and exerts pressure to rupture the polar cap and evert the polar tube.
+definition_source: GO:0160201
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T11:31:25Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T11:32:26Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added polaroplast membrane and lamellar/tubular subregion components, Microsporidia
+    and Nosema bombycis taxonomic scope, polar tube firing and sporoplasm membrane
+    functions, polaroplast evidence, a membrane-transport graph, and a protein/lipid
+    grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-10T11:42:51Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #356 review issues #357 and #358 by marking the aggregate
+    polaroplast membrane component as reviewed-label-only and softening the final
+    graph edge to a polaroplast-derived membrane contribution claim.'
+  llm_assisted: true
+components:
+- component_id: polaroplast_membranes
+  label: polaroplast membranes
+  component_type: LIPID
+  component_role: CONSTITUENT
+  role: Membrane sheets and tubules that form the polaroplast system in the anterior
+    region of microsporidian spores.
+  evidence:
+  - reference: DOI:10.1007/978-3-030-93306-7_8
+    notes: Han et al. 2022 reviewed the polaroplast as packed lamellar and tubular
+      membrane arrays associated with the microsporidian invasion apparatus.
+  - reference: DOI:10.1128/mbio.02749-23
+    notes: Lv et al. 2024 tracked Nosema bombycis polaroplast membranes during germination
+      and sporoplasm membrane formation.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The polaroplast membrane set is curated as a lineage-specific organelle
+    membrane system. No exact source-neutral lipid or protein-family grounding for
+    the aggregate membrane set was assigned in this pass.
+- component_id: anterior_lamellar_polaroplast
+  label: anterior lamellar polaroplast
+  component_type: LIPID
+  component_role: CONSTITUENT
+  role: Densely packed lamellar membranes in the anterior sector of the polaroplast.
+  evidence:
+  - reference: DOI:10.1007/978-3-030-93306-7_8
+    notes: Han et al. 2022 reviewed the lamellar polaroplast as a tightly packed anterior
+      membrane array in the spore.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No source-neutral ontology term specific to the lamellar polaroplast
+    subregion was curated in this pass.
+- component_id: posterior_tubular_polaroplast
+  label: posterior tubular polaroplast
+  component_type: LIPID
+  component_role: CONSTITUENT
+  role: More vesicular and tubular membranes in the posterior polaroplast sector,
+    adjacent to the polar filament straight region.
+  evidence:
+  - reference: DOI:10.1007/978-3-030-93306-7_8
+    notes: Han et al. 2022 reviewed flattened tubules and posterior polaroplast membranes
+      as part of the microsporidian spore invasion apparatus.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No source-neutral ontology term specific to the tubular polaroplast
+    subregion was curated in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:6029
+  taxon_label: Microsporidia
+  presence: COMMON
+  note: The polaroplast is a microsporidian spore organelle and is reviewed as part
+    of the conserved invasion apparatus.
+  reference: DOI:10.1007/978-3-030-93306-7_8
+canonical_examples:
+- taxon_id: NCBITaxon:27978
+  taxon_label: Nosema bombycis
+  note: Silkworm-infecting microsporidian in which polaroplast membranes were tracked
+    through the polar tube and into the nascent sporoplasm membrane.
+  reference: DOI:10.1128/mbio.02749-23
+functions:
+- function_id: polar_tube_firing_support
+  label: polar tube firing support
+  description: During microsporidian spore germination, the polaroplast expands and
+    participates in the membrane movements coupled to polar tube discharge.
+  evidence:
+  - reference: DOI:10.1007/978-3-030-93306-7_8
+    notes: Han et al. 2022 reviewed the polaroplast as an anterior membrane organelle
+      associated with polar tube discharge.
+  - reference: DOI:10.1186/s13071-023-05908-9
+    notes: Chen et al. 2023 reviewed the microsporidian polar tube invasion apparatus
+      and its relationship to other spore structures.
+- function_id: sporoplasm_membrane_formation
+  label: sporoplasm membrane formation
+  description: Polaroplast-derived membrane material travels through the fired polar
+    tube and contributes to the sporoplasm plasma membrane.
+  evidence:
+  - reference: DOI:10.1128/mbio.02749-23
+    notes: Lv et al. 2024 followed polaroplast membrane transport through the polar
+      tube and transformation into the sporoplasm membrane in Nosema bombycis.
+evidence:
+- reference: GO:0160201
+  notes: Gene Ontology cellular-component term for polaroplast.
+- reference: DOI:10.1007/978-3-030-93306-7_8
+  notes: Han, Takvorian and Weiss 2022, The Function and Structure of the Microsporidia
+    Polar Tube, Experientia Supplementum.
+- reference: DOI:10.1186/s13071-023-05908-9
+  notes: 'Chen et al. 2023, The microsporidian polar tube: origin, structure, composition,
+    function, and application, Parasites & Vectors.'
+- reference: DOI:10.1128/mbio.02749-23
+  notes: 'Lv et al. 2024, Microsporidia dressing up: the spore polaroplast transport
+    through the polar tube and transformation into the sporoplasm membrane, mBio.'
+causal_graphs:
+- graph_id: polaroplast_membrane_transport
+  title: Polaroplast-derived membranes contribute to the expelled sporoplasm
+  description: Packed polaroplast membranes are stored in the microsporidian spore
+    and, during germination, polaroplast-derived membranes travel through the everted
+    polar tube and are incorporated into the sporoplasm membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: polaroplast_membranes
+    label: polaroplast membranes
+    node_type: STRUCTURE
+    component_ref: polaroplast_membranes
+  - node_id: polaroplast
+    label: polaroplast
+    node_type: ORGANELLE
+    grounding: GO:0160201
+  - node_id: polar_tube
+    label: polar tube
+    node_type: STRUCTURE
+    grounding: GO:0044099
+  - node_id: sporoplasm_membrane
+    label: sporoplasm membrane
+    node_type: STRUCTURE
+  edges:
+  - subject: polaroplast_membranes
+    predicate: are packed in
+    object: polaroplast
+    description: The mature spore stores lamellar and tubular membranes in the polaroplast.
+    evidence:
+    - reference: DOI:10.1007/978-3-030-93306-7_8
+      notes: Han et al. 2022 reviewed the polaroplast membrane arrays found in dormant
+        microsporidian spores.
+  - subject: polaroplast_membranes
+    predicate: translocate through
+    object: polar_tube
+    description: During germination, polaroplast membranes move through the discharged
+      polar tube.
+    evidence:
+    - reference: DOI:10.1128/mbio.02749-23
+      notes: Lv et al. 2024 visualized polaroplast membrane transport through fired
+        Nosema bombycis polar tubes.
+  - subject: polaroplast_membranes
+    predicate: contribute to
+    object: sporoplasm_membrane
+    description: Membranes emerging from the polar tube are incorporated into the
+      plasma membrane surrounding the expelled sporoplasm.
+    evidence:
+    - reference: DOI:10.1128/mbio.02749-23
+      notes: Lv et al. 2024 linked transported polaroplast-derived membranes to formation
+        of the sporoplasm membrane.
+discussions:
+- discussion_id: ground_polaroplast_membrane_machinery
+  prompt: Resolve exact protein and lipid identities for the polaroplast membrane
+    transport machinery.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#polaroplast_membranes
+  rationale: The current record captures the membrane organelle and its transport
+    behavior, but does not assign exact groundings to lineage-specific transporters,
+    sporoplasm surface proteins or lipid species that may participate in polaroplast
+    remodeling.
+  evidence:
+  - reference: DOI:10.1128/mbio.02749-23
+  posed_by: claude
+  posed_date: '2026-09-10'
