@@ -34,6 +34,13 @@ curation_history:
   changes: Updated the plasmepsin X grounding discussion anchor after the component
     id was narrowed to plasmepsin_x_exoneme_protease.
   llm_assisted: true
+- timestamp: '2026-09-10T06:41:09Z'
+  curator: claude
+  action: NARROWED_TAXONOMIC_SCOPE
+  changes: Replaced Eukaryota and Apicomplexa distribution rows with a directly evidenced
+    Plasmodium falciparum row to avoid broader taxonomic claims than the exoneme sources
+    support.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -77,17 +84,12 @@ components:
     notes: Nasamu et al. 2017 localized Plasmepsin X to exonemes and linked PMX knockdown
       to impaired SUB1 maturation and egress.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:2759
-  taxon_label: Eukaryota
-  presence: RARE
-  note: Exonemes are specialized malaria-parasite secretory organelles rather than
-    broadly conserved eukaryotic compartments.
-  reference: DOI:10.1111/j.1462-5822.2008.01176.x
-- taxon_id: NCBITaxon:5794
-  taxon_label: Apicomplexa
-  presence: RARE
-  note: SUB1-containing exonemes are established for Plasmodium falciparum blood-stage
-    merozoite egress; this first record does not assert the structure across all Apicomplexa.
+- taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  presence: COMMON
+  note: Exonemes are directly evidenced in Plasmodium falciparum segmented schizonts
+    and blood-stage merozoites; no broader apicomplexan distribution is asserted in
+    this first record.
   reference: DOI:10.1016/j.cell.2007.10.049
 canonical_examples:
 - taxon_id: NCBITaxon:5833

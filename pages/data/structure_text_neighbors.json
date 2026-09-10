@@ -61,7 +61,7 @@
         {
           "identifier": "GO:0009428",
           "label": "bacterial-type flagellum basal body, distal rod, P ring",
-          "cosine_similarity": 0.72636459
+          "cosine_similarity": 0.72636458
         },
         {
           "identifier": "GO:0030257",
@@ -645,17 +645,17 @@
         {
           "identifier": "GO:0009428",
           "label": "bacterial-type flagellum basal body, distal rod, P ring",
-          "cosine_similarity": 0.75484995
+          "cosine_similarity": 0.75484994
         },
         {
           "identifier": "GO:0009426",
           "label": "bacterial-type flagellum basal body, distal rod",
-          "cosine_similarity": 0.74953035
+          "cosine_similarity": 0.74953034
         },
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.72691911
+          "cosine_similarity": 0.72691909
         }
       ]
     },
@@ -671,7 +671,7 @@
         {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.85168205
+          "cosine_similarity": 0.85168204
         },
         {
           "identifier": "GO:0009424",
@@ -686,7 +686,7 @@
         {
           "identifier": "GO:0009421",
           "label": "bacterial-type flagellum filament cap",
-          "cosine_similarity": 0.83117823
+          "cosine_similarity": 0.83117824
         }
       ]
     },
@@ -914,27 +914,27 @@
         {
           "identifier": "GO:0042651",
           "label": "thylakoid membrane",
-          "cosine_similarity": 0.7043707
+          "cosine_similarity": 0.70437069
         },
         {
           "identifier": "GO:0046858",
           "label": "chlorosome",
-          "cosine_similarity": 0.67619711
+          "cosine_similarity": 0.67619712
         },
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.66919793
+          "cosine_similarity": 0.66919795
         },
         {
           "identifier": "GO:0031470",
           "label": "carboxysome",
-          "cosine_similarity": 0.61795091
+          "cosine_similarity": 0.61795092
         },
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.6088374
+          "cosine_similarity": 0.60883741
         }
       ]
     },
@@ -950,7 +950,7 @@
         {
           "identifier": "GO:0120101",
           "label": "bacterial-type flagellum stator complex",
-          "cosine_similarity": 0.76480669
+          "cosine_similarity": 0.7648067
         },
         {
           "identifier": "GO:0120100",
@@ -1222,11 +1222,6 @@
       "label": "apicomplexan dense granule",
       "neighbors": [
         {
-          "identifier": "GO:0044311",
-          "label": "exoneme",
-          "cosine_similarity": 0.74554136
-        },
-        {
           "identifier": "GO:0020022",
           "label": "acidocalcisome",
           "cosine_similarity": 0.70984546
@@ -1235,6 +1230,11 @@
           "identifier": "GO:0020008",
           "label": "rhoptry",
           "cosine_similarity": 0.70970701
+        },
+        {
+          "identifier": "GO:0044311",
+          "label": "exoneme",
+          "cosine_similarity": 0.70845589
         },
         {
           "identifier": "GO:0009279",
@@ -1258,11 +1258,6 @@
           "cosine_similarity": 0.7175694
         },
         {
-          "identifier": "GO:0044311",
-          "label": "exoneme",
-          "cosine_similarity": 0.6964743
-        },
-        {
           "identifier": "GO:0020026",
           "label": "apicomplexan dense granule",
           "cosine_similarity": 0.69186123
@@ -1276,6 +1271,11 @@
           "identifier": "GO:0020008",
           "label": "rhoptry",
           "cosine_similarity": 0.67548338
+        },
+        {
+          "identifier": "GO:0032047",
+          "label": "mitosome",
+          "cosine_similarity": 0.65193547
         }
       ]
     },
@@ -1317,27 +1317,27 @@
         {
           "identifier": "GO:0020026",
           "label": "apicomplexan dense granule",
-          "cosine_similarity": 0.74554136
+          "cosine_similarity": 0.70845589
         },
         {
           "identifier": "GO:0020008",
           "label": "rhoptry",
-          "cosine_similarity": 0.73473419
+          "cosine_similarity": 0.7032963
         },
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.72307779
+          "cosine_similarity": 0.69755064
+        },
+        {
+          "identifier": "GO:0015627",
+          "label": "type II protein secretion system complex",
+          "cosine_similarity": 0.66690105
         },
         {
           "identifier": "GO:0020009",
           "label": "microneme",
-          "cosine_similarity": 0.70603681
-        },
-        {
-          "identifier": "GO:0032047",
-          "label": "mitosome",
-          "cosine_similarity": 0.69839832
+          "cosine_similarity": 0.66386468
         }
       ]
     },
@@ -1361,14 +1361,14 @@
           "cosine_similarity": 0.67043983
         },
         {
-          "identifier": "GO:0044311",
-          "label": "exoneme",
-          "cosine_similarity": 0.66616859
-        },
-        {
           "identifier": "GO:0032047",
           "label": "mitosome",
           "cosine_similarity": 0.65924286
+        },
+        {
+          "identifier": "GO:0015627",
+          "label": "type II protein secretion system complex",
+          "cosine_similarity": 0.64757032
         }
       ]
     },
@@ -1475,11 +1475,6 @@
           "cosine_similarity": 0.70650048
         },
         {
-          "identifier": "GO:0044311",
-          "label": "exoneme",
-          "cosine_similarity": 0.70603681
-        },
-        {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.69674866
@@ -1493,6 +1488,11 @@
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
           "cosine_similarity": 0.67242371
+        },
+        {
+          "identifier": "GO:0110143",
+          "label": "magnetosome",
+          "cosine_similarity": 0.67208879
         }
       ]
     },
@@ -1521,9 +1521,9 @@
           "cosine_similarity": 0.70650048
         },
         {
-          "identifier": "GO:0044311",
-          "label": "exoneme",
-          "cosine_similarity": 0.69839832
+          "identifier": "GO:0046858",
+          "label": "chlorosome",
+          "cosine_similarity": 0.69064444
         }
       ]
     },
@@ -1532,14 +1532,14 @@
       "label": "rhoptry",
       "neighbors": [
         {
-          "identifier": "GO:0044311",
-          "label": "exoneme",
-          "cosine_similarity": 0.73473419
-        },
-        {
           "identifier": "GO:0020026",
           "label": "apicomplexan dense granule",
           "cosine_similarity": 0.70970701
+        },
+        {
+          "identifier": "GO:0044311",
+          "label": "exoneme",
+          "cosine_similarity": 0.7032963
         },
         {
           "identifier": "GO:0030257",
@@ -1575,12 +1575,12 @@
         {
           "identifier": "GO:0030089",
           "label": "phycobilisome",
-          "cosine_similarity": 0.7043707
+          "cosine_similarity": 0.70437069
         },
         {
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.69191349
+          "cosine_similarity": 0.6919135
         },
         {
           "identifier": "GO:0042566",
@@ -1813,7 +1813,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.65302611
+          "cosine_similarity": 0.65302612
         },
         {
           "identifier": "GO:0031471",
@@ -1875,17 +1875,12 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.71078341
+          "cosine_similarity": 0.71078342
         },
         {
           "identifier": "GO:0005840",
           "label": "ribosome",
           "cosine_similarity": 0.69562868
-        },
-        {
-          "identifier": "GO:0044311",
-          "label": "exoneme",
-          "cosine_similarity": 0.68118423
         },
         {
           "identifier": "GO:0140737",
@@ -1896,6 +1891,11 @@
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
           "cosine_similarity": 0.66739453
+        },
+        {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.66616208
         }
       ]
     },
@@ -1906,7 +1906,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.7077036
+          "cosine_similarity": 0.70770361
         },
         {
           "identifier": "GO:0005839",
@@ -1937,7 +1937,7 @@
         {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.78281929
+          "cosine_similarity": 0.78281928
         },
         {
           "identifier": "GO:0033104",
@@ -1957,7 +1957,7 @@
         {
           "identifier": "GO:0015627",
           "label": "type II protein secretion system complex",
-          "cosine_similarity": 0.73891395
+          "cosine_similarity": 0.73891394
         }
       ]
     },
@@ -2050,7 +2050,7 @@
         {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
-          "cosine_similarity": 0.82481251
+          "cosine_similarity": 0.82481252
         }
       ]
     },
@@ -2081,7 +2081,7 @@
         {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
-          "cosine_similarity": 0.80307725
+          "cosine_similarity": 0.80307726
         }
       ]
     },
@@ -2128,7 +2128,7 @@
         {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.82481251
+          "cosine_similarity": 0.82481252
         },
         {
           "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
@@ -2138,7 +2138,7 @@
         {
           "identifier": "GO:0015627",
           "label": "type II protein secretion system complex",
-          "cosine_similarity": 0.80307725
+          "cosine_similarity": 0.80307726
         },
         {
           "identifier": "GO:0030257",
