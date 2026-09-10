@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/apical_complex.yaml
+  slug: apical_complex
+session:
+  id: 2026-09-10T125603Z-claude-937816
+  timestamp: '2026-09-10T12:56:03Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the apical complex record
+  details: Created data/structures/other/apical_complex.yaml for GO:0020007, including conoid,
+    polar-ring, rhoptry and microneme parts, broad cytoskeletal and secretory protein cohorts,
+    Apicomplexa and Toxoplasma gondii scope, host-cell invasion and ordered apical-organelle
+    secretion functions, a nonmechanistic apical-scaffold graph, and an open grounding TODO
+    for exact apical-complex protein cohorts.
