@@ -68,7 +68,7 @@ records, not records; phenotypes are TraitMech records. See
 | RIBONUCLEOPROTEIN | 1 | |  |  |
 | SPORE | 1 | |  |  |
 
-78 records are grounded in GO; 10 carry minted identifiers. 88 list components, 88 carry causal graphs (565 evidence-backed edges), 8 link to TraitMech traits, and 5 carry licensed, cited imaging evidence.
+78 records are grounded in GO; 10 carry minted identifiers. 88 list components, 88 carry causal graphs (564 evidence-backed edges), 8 link to TraitMech traits, and 5 carry licensed, cited imaging evidence.
 <!-- END GENERATED CORPUS STATS -->
 
 Run `just report` for the live report. Every current record is

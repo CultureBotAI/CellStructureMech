@@ -21,6 +21,13 @@ curation_history:
     example; invasion and apical-organelle-secretion functions; a nonmechanistic apical-complex
     invasion graph; and a grounding TODO for exact apical-complex protein cohorts.
   llm_assisted: true
+- timestamp: '2026-09-10T13:02:49Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #368 review issues #369 and #370 by narrowing the Toxoplasma
+    gondii canonical-example note to the Hu 2006 cytoskeletal evidence and removing
+    the unsupported apical-complex-to-secretion coordination graph edge.'
+  llm_assisted: true
 has_part:
 - GO:0020010
 - GO:0020031
@@ -73,9 +80,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:5811
   taxon_label: Toxoplasma gondii
-  note: Apicomplexan model in which the conoid/apical-complex cytoskeleton, sequential
-    organelle secretion, and apical polar ring architecture have been experimentally
-    studied.
+  note: Apicomplexan model in which the conoid/apical-complex cytoskeleton was partially
+    purified for proteomic analysis.
   reference: DOI:10.1371/journal.ppat.0020013
 functions:
 - function_id: host_cell_invasion
@@ -149,9 +155,6 @@ causal_graphs:
     label: apical complex
     node_type: STRUCTURE
     grounding: GO:0020007
-  - node_id: apical_organelle_secretion
-    label: apical organelle secretion
-    node_type: BIOLOGICAL_PROCESS
   - node_id: host_cell_invasion
     label: host-cell invasion
     node_type: BIOLOGICAL_PROCESS
@@ -192,15 +195,6 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro1800
       notes: Boothroyd and Dubremetz 2008 review Toxoplasma rhoptries as apical secretory
         organelles.
-  - subject: apical_complex
-    predicate: coordinates
-    object: apical_organelle_secretion
-    description: The apical complex physically groups secretory organelles whose ordered
-      release supports invasion.
-    evidence:
-    - reference: PMID:9208224
-      notes: Carruthers and Sibley 1997 observed ordered secretion by Toxoplasma micronemes,
-        rhoptries and dense granules.
   - subject: apical_complex
     predicate: supports
     object: host_cell_invasion
