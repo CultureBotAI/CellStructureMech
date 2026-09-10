@@ -33,6 +33,13 @@ curation_history:
   changes: 'Resolved #289 by attaching the FliD/HAP2 filament cap to the enclosing
     GO:0009288 bacterial-type flagellum instead of the GO:0009420 flagellin filament.'
   llm_assisted: true
+- timestamp: '2026-09-10T02:09:21Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: flagellar filament cap
   synonym_type: EXACT_SYNONYM
@@ -68,6 +75,24 @@ components:
   - reference: DOI:10.7554/eLife.18857
     notes: Postel et al. 2016 showed that FliD capping proteins from different bacteria
       can adopt distinct oligomeric states, bounding the Salmonella pentameric stoichiometry.
+  protein_examples:
+  - uniprot_id: UniProtKB:P16328
+    protein_label: Flagellar hook-associated protein 2
+    gene_symbol: fliD
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-09'
+    role: The single reviewed UniProtKB entry for gene fliD in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P16328
+      notes: UniProtKB reviewed (Swiss-Prot) entry P16328, the single reviewed entry
+        for gene fliD in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

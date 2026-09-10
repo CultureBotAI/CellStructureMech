@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: mapping
+  path: data/structures
+  slug: protein-example-accessions
+session:
+  id: 2026-09-10T022549Z-claude-00d1fa
+  timestamp: '2026-09-10T02:25:49Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: claude-opus-5
+    agent_tool: Claude Code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/298
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/297
+events:
+- type: REVIEW
+  outcome: changed
+  summary: 'Review round on PR #297: the gap report counted components, not symbols (#298,
+    #299, #300)'
+  details: 'Adversarial review of #297 found that the new --gaps report skipped any component
+    holding at least one accession, while the seeding pass it is meant to describe works per
+    gene symbol. A component named for ten csm genes carrying six accessions was reported
+    as done. Fixed by matching candidates(): a row per component but candidacy per symbol,
+    with the detail naming how many accessions the component already holds. Correcting that
+    raised the count from 41 to 57, of which 16 already hold at least one accession. A second
+    defect surfaced only after the first fix landed: symbols that are synonyms of an accession
+    the component already holds (secY/prlA, rodA/mrdB, pbp2/pbpA) were then reported as NO_REVIEWED_ENTRY,
+    inflating the count in the opposite direction, so the report now treats a symbol resolving
+    to a held accession as covered, exactly as resolve() deduplicates by accession. Also #299,
+    a category for entries found and then rejected by the exact-name recheck, which is a different
+    fact from finding nothing and points at a different remedy; and #300, --gaps and --apply
+    are now mutually exclusive rather than resolved by precedence. Four mutants of the corrected
+    report were checked and all die. Left filed: #301, that a UniProt ordered locus name is
+    not read as a gene name, so four components covered by one report as missing - fixing
+    it in the report alone would recreate the report/seeder divergence #298 was about, and
+    fixing it in both changes what the seeder matches on, which needs its own canary.'

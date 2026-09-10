@@ -342,3 +342,146 @@ def test_an_entry_with_no_organism_taxon_is_declined_not_written_as_none():
     e["organism"] = {"scientificName": "Somewhere"}
     hit = {"entry": e, "symbol": "g", "taxon_label": "Somewhere", "narrowed": False}
     assert G.build_example(hit, "2026-09-07", {}, {"83333": "Escherichia coli K-12"}) is None
+
+
+# ------------------------------------------------------------------- gaps
+#
+# What a seeding run leaves behind is four different questions, not one backlog.
+
+
+def _doc(components, taxa=(("NCBITaxon:562", "Escherichia coli"),)):
+    return {"canonical_examples": [{"taxon_id": t, "taxon_label": lb} for t, lb in taxa],
+            "components": list(components)}
+
+
+def test_a_component_with_no_gene_symbol_is_its_own_category():
+    """No adapter can close this one: there is nothing to resolve. Counting it
+    beside the ambiguous ones would suggest more querying might help."""
+    doc = _doc([{"component_id": "ssu", "component_type": "PROTEIN",
+                 "label": "small-subunit ribosomal proteins"}])
+    assert G.gap_report(doc) == [("ssu", G.NO_SYMBOL, "small-subunit ribosomal proteins")]
+
+
+def test_a_record_with_no_taxon_cannot_pair_anything(fake_search):
+    doc = _doc([{"component_id": "a", "component_type": "PROTEIN", "gene_symbols": ["x"]}], taxa=())
+    assert G.gap_report(doc) == [("a", G.NO_TAXON, "x")]
+
+
+def test_an_ambiguous_symbol_names_its_candidates(fake_search):
+    """The choice is a curator's, so the report has to say what the choice is
+    between -- a bare count sends them back to the API."""
+    fake_search[("tatA", 562)] = [entry(a, ["tatA"], t) for a, t in
+                                  [("P69428", 83333), ("P69429", 199310), ("P69430", 83334)]]
+    doc = _doc([{"component_id": "tata", "component_type": "PROTEIN", "gene_symbols": ["tatA"]}])
+    assert G.gap_report(doc) == [("tata", G.AMBIGUOUS, "tatA@562: P69428, P69429, P69430")]
+
+
+def test_candidates_are_listed_in_a_stable_order(fake_search):
+    """The report is read in a diff as often as on a terminal."""
+    fake_search[("tatA", 562)] = [entry(a, ["tatA"], 83333) for a in ("P69430", "P69428", "P69429")]
+    doc = _doc([{"component_id": "tata", "component_type": "PROTEIN", "gene_symbols": ["tatA"]}])
+    assert G.gap_report(doc)[0][2] == "tatA@562: P69428, P69429, P69430"
+
+
+def test_a_symbol_with_no_entry_anywhere_is_not_reported_as_ambiguous(fake_search):
+    doc = _doc([{"component_id": "b", "component_type": "PROTEIN", "gene_symbols": ["gvpA", "gvpC"]}])
+    assert G.gap_report(doc) == [("b", G.NO_ENTRY, "gvpA, gvpC")]
+
+
+def test_a_component_that_already_has_an_accession_is_not_a_gap(fake_search):
+    doc = _doc([{"component_id": "a", "component_type": "PROTEIN", "gene_symbols": ["x"],
+                 "protein_examples": [{"uniprot_id": "UniProtKB:P1", "gene_symbol": "x"}]}])
+    assert G.gap_report(doc) == []
+
+
+def test_only_protein_components_are_counted(fake_search):
+    """PROTEIN_COMPLEX components have no route here at all (#182); counting them
+    would inflate this backlog with a different issue's work."""
+    doc = _doc([{"component_id": "ring", "component_type": "PROTEIN_COMPLEX", "gene_symbols": ["x"]},
+                {"component_id": "lipid", "component_type": "LIPID"}])
+    assert G.gap_report(doc) == []
+
+
+def test_one_ambiguous_symbol_makes_the_component_ambiguous(fake_search):
+    """A component whose first symbol finds nothing and whose second is ambiguous
+    still has a choice available -- reporting NO_REVIEWED_ENTRY would hide it."""
+    fake_search[("rtxB", 562)] = []
+    fake_search[("hlyB", 562)] = [entry("P08716", ["hlyB"], 83333), entry("Q46717", ["hlyB"], 83334)]
+    doc = _doc([{"component_id": "abc", "component_type": "PROTEIN",
+                 "gene_symbols": ["rtxB", "hlyB"]}])
+    assert G.gap_report(doc) == [("abc", G.AMBIGUOUS, "hlyB@562: P08716, Q46717")]
+
+
+def test_every_category_has_a_stated_meaning():
+    """The report prints these; a category with no sentence is a category the
+    reader has to guess at."""
+    assert set(G.GAP_MEANING) == {G.NO_TAXON, G.NO_SYMBOL, G.AMBIGUOUS, G.NO_EXACT, G.NO_ENTRY}
+    assert all(v and not v.endswith(".") for v in G.GAP_MEANING.values())
+
+
+def test_a_partly_covered_component_is_still_reported(fake_search):
+    """A component named for ten csm genes holding six accessions is not done.
+    Reporting only components with zero accessions undercounts the work in the
+    one place whose job is to state it (#298)."""
+    doc = _doc([{"component_id": "csm", "component_type": "PROTEIN",
+                 "gene_symbols": ["csmB", "csmD"],
+                 "protein_examples": [{"uniprot_id": "UniProtKB:Q46383", "gene_symbol": "csmB"}]}])
+    assert G.gap_report(doc) == [("csm", G.NO_ENTRY, "[1 already] csmD")]
+
+
+def test_a_fully_covered_component_is_not_reported(fake_search):
+    doc = _doc([{"component_id": "a", "component_type": "PROTEIN", "gene_symbols": ["x"],
+                 "protein_examples": [{"uniprot_id": "UniProtKB:P1", "gene_symbol": "x"}]}])
+    assert G.gap_report(doc) == []
+
+
+def test_a_synonym_of_an_accession_already_held_is_covered_not_missing(fake_search):
+    """secY and prlA are one entry. resolve() drops the second by accession, so
+    counting prlA as missing would fill the report with the #266 artefact."""
+    both = [entry("P0AGA2", ["secY", "prlA"], 83333)]
+    fake_search[("prlA", 562)] = both
+    doc = _doc([{"component_id": "secy", "component_type": "PROTEIN",
+                 "gene_symbols": ["secY", "prlA"],
+                 "protein_examples": [{"uniprot_id": "UniProtKB:P0AGA2", "gene_symbol": "secY"}]}])
+    assert G.gap_report(doc) == []
+
+
+def test_a_symbol_seeding_would_have_taken_is_flagged_as_seedable(fake_search):
+    """Only reachable on a corpus --apply has not been run over; saying so beats
+    reporting it as an absence."""
+    fake_search[("mreB", 562)] = [entry("P0A9X4", ["mreB"], 83333)]
+    doc = _doc([{"component_id": "mreb", "component_type": "PROTEIN",
+                 "gene_symbols": ["mreB"],
+                 "protein_examples": [{"uniprot_id": "UniProtKB:P99999", "gene_symbol": "other"}]}])
+    assert G.gap_report(doc) == [("mreb", G.NO_ENTRY, "[1 already] mreB (seedable: P0A9X4)")]
+
+
+def test_entries_found_but_rejected_by_the_name_recheck_are_their_own_category(fake_search):
+    """Finding entries and rejecting them is a different fact from finding
+    nothing, and points at a different remedy -- the symbol may be one UniProt
+    spells another way (#299)."""
+    fake_search[("flgE", 562)] = [entry("P1", ["flgD"], 83333)]
+    doc = _doc([{"component_id": "hook", "component_type": "PROTEIN", "gene_symbols": ["flgE"]}])
+    assert G.gap_report(doc) == [("hook", G.NO_EXACT, "flgE@562: 1 hit(s)")]
+
+
+def test_ambiguity_outranks_an_inexact_hit(fake_search):
+    """A component with a real choice available should be reported as having one."""
+    fake_search[("a", 562)] = [entry("P1", ["other"], 83333)]
+    fake_search[("b", 562)] = [entry("P2", ["b"], 83333), entry("P3", ["b"], 83334)]
+    doc = _doc([{"component_id": "c", "component_type": "PROTEIN", "gene_symbols": ["a", "b"]}])
+    assert G.gap_report(doc) == [("c", G.AMBIGUOUS, "b@562: P2, P3")]
+
+
+def test_resolve_symbol_stops_at_the_first_taxon_that_answers(fake_search):
+    """per_taxon is a generator so the seeding pass does not pay for requests the
+    gap report needs and it does not."""
+    asked = []
+    original = G.search_gene
+    G.search_gene = lambda s, t: (asked.append((s, t)), original(s, t))[1]
+    try:
+        fake_search[("mreB", 83333)] = [entry("P0A9X4", ["mreB"], 83333)]
+        G.resolve_symbol("mreB", [(83333, "E. coli K-12"), (562, "E. coli")])
+    finally:
+        G.search_gene = original
+    assert asked == [("mreB", 83333)]
