@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/spindle_pole_body.yaml
+  slug: spindle_pole_body
+session:
+  id: 2026-09-10T142301Z-claude-code-5bbc3f
+  timestamp: '2026-09-10T14:23:01Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO-grounded spindle pole body structure record
+  details: Created data/structures/cytoskeleton/spindle_pole_body.yaml for GO:0005816 spindle
+    pole body, including the SPB exact synonym, reviewed-label-only SPB core-protein and gamma-tubulin-complex
+    components, Saccharomyces cerevisiae scope, microtubule-organization and bipolar-spindle-assembly
+    functions, record evidence, a nonmechanistic SPB-duplication graph, and an open subassembly-grounding
+    TODO.
