@@ -21,6 +21,13 @@ curation_history:
     Fe-S assembly and protein-import functions, a pyruvate-to-ATP/hydrogen graph,
     and grounding TODOs for import and energy components.
   llm_assisted: true
+- timestamp: '2026-09-10T03:33:25Z'
+  curator: claude
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #310 review issues #311, #312 and #313 by removing uncurated
+    component gene-symbol groups, retargeting the ISC graph edge to iron-sulfur cluster
+    assembly, and splitting ATP from molecular hydrogen in the causal graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -49,11 +56,6 @@ components:
   component_type: PROTEIN
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  gene_symbols:
-  - PFO
-  - HYD
-  - ASCT
-  - SCS
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The energy-metabolism component groups multiple unrelated Trichomonas
     hydrogenosomal enzyme families; no single exact family CURIE denotes the full
@@ -72,10 +74,6 @@ components:
   component_type: PROTEIN
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  gene_symbols:
-  - IscS
-  - IscU
-  - IscA
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The hydrogenosomal iron-sulfur cluster assembly module contains
     several ISC proteins; exact source-neutral family CURIEs for the grouped machinery
@@ -209,8 +207,14 @@ causal_graphs:
   - node_id: pyruvate
     label: pyruvate
     node_type: CHEMICAL
-  - node_id: atp_and_hydrogen
-    label: ATP and molecular hydrogen
+  - node_id: hydrogenosomal_fe_s_cluster_assembly
+    label: hydrogenosomal iron-sulfur cluster assembly
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+  - node_id: molecular_hydrogen
+    label: molecular hydrogen
     node_type: CHEMICAL
   edges:
   - subject: hydrogenosomal_membrane
@@ -238,10 +242,10 @@ causal_graphs:
     - reference: DOI:10.1016/j.ijpara.2011.10.001
       notes: Schneider et al. 2011 identified the Trichomonas hydrogenosome proteome.
   - subject: hydrogenosomal_fe_s_machinery
-    predicate: matures
-    object: pyruvate_metabolism_enzymes
-    description: The hydrogenosomal ISC pathway assembles iron-sulfur centers needed
-      by hydrogenosomal enzymes.
+    predicate: supports
+    object: hydrogenosomal_fe_s_cluster_assembly
+    description: The hydrogenosomal ISC pathway supports iron-sulfur center assembly
+      in Trichomonas vaginalis hydrogenosomes.
     evidence:
     - reference: DOI:10.1073/pnas.0401319101
       notes: Sutak et al. 2004 localized mitochondrial-type iron-sulfur assembly proteins
@@ -257,9 +261,18 @@ causal_graphs:
         and hydrogen production.
   - subject: pyruvate_metabolism_enzymes
     predicate: produce
-    object: atp_and_hydrogen
-    description: The hydrogenosomal pyruvate pathway produces ATP and molecular hydrogen
-      anaerobically.
+    object: atp
+    description: Hydrogenosomal pyruvate metabolism supports anaerobic ATP production
+      by substrate-level phosphorylation.
+    evidence:
+    - reference: DOI:10.1016/j.ijpara.2011.10.001
+      notes: Schneider et al. 2011 cataloged the Trichomonas hydrogenosomal energy
+        metabolism proteins.
+  - subject: pyruvate_metabolism_enzymes
+    predicate: produce
+    object: molecular_hydrogen
+    description: Hydrogenosomal hydrogenase activity releases molecular hydrogen under
+      anaerobic conditions.
     evidence:
     - reference: DOI:10.1016/j.ijpara.2011.10.001
       notes: Schneider et al. 2011 cataloged the Trichomonas hydrogenosomal energy
