@@ -1,0 +1,244 @@
+identifier: GO:0020010
+label: conoid
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A spiral cytoskeletal structure located at the apical end of the apical
+  complex in some apicomplexan parasites. Fibers form a left-handed spiral, and are
+  comprised of tubulin protofilaments organized in a ribbon-like structure that differs
+  from the conventional tubular structure characteristic of microtubules.
+definition_source: GO:0020010
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T05:32:48Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T05:34:23Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added cytoskeleton and apical-complex parthood, conoid tubulin fibers,
+    conserved conoid-complex proteins, MyoH motor machinery, rare eukaryotic and common
+    Apicomplexa taxonomic scope, Toxoplasma gondii as a canonical example, apical-scaffold
+    and entry/exit functions, a conoid tubulin/MyoH function graph, and a grounding
+    TODO for conoid protein cohorts.
+  llm_assisted: true
+- timestamp: '2026-09-10T05:42:50Z'
+  curator: claude
+  action: ADDRESS_QC
+  changes: Changed the MyoH associated-machinery component essentiality from ESSENTIAL
+    to UNKNOWN so it does not claim the motor is required to assemble the conoid;
+    the Graindorge et al. 2016 evidence is retained for MyoH-dependent host-cell entry
+    and exit.
+  llm_assisted: true
+part_of:
+- GO:0005856
+- GO:0020007
+components:
+- component_id: conoid_tubulin_fibers
+  label: conoid tubulin fibers
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Conoid fibers are tubulin-containing ribbon polymers built from
+    protofilaments; no exact source-neutral CURIE for this unusual apicomplexan tubulin
+    polymer was curated.
+  role: Tubulin-containing ribbon fibers that spiral to form the Toxoplasma conoid.
+  evidence:
+  - reference: DOI:10.1083/jcb.200112086
+    notes: Hu et al. 2002 identified Toxoplasma conoid fibers as an unusual tubulin
+      polymer.
+- component_id: conserved_conoid_complex_proteins
+  label: conserved conoid complex proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The conserved conoid proteome contains multiple unrelated proteins;
+    no exact CURIE for the whole conoid-complex protein cohort was curated.
+  role: Protein cohort detected in Toxoplasma conoid preparations and conserved across
+    apicomplexan lineages.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Hu et al. 2006 partially purified the Toxoplasma conoid/apical complex
+      and identified approximately 200 candidate cytoskeletal proteins.
+  - reference: DOI:10.1371/journal.pbio.3001081
+    notes: Koreny et al. 2021 molecularly characterized conserved conoid-complex proteins
+      across apicomplexans.
+- component_id: myoh_motor
+  label: conoid-associated MyoH motor
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  gene_symbols:
+  - MyoH
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: MyoH is a Toxoplasma conoid-associated myosin; no exact source-neutral
+    apicomplexan MyoH protein-family CURIE was curated.
+  role: A conoid-associated motor that is required for Toxoplasma entry into and exit
+    from host cells.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1005388
+    notes: Graindorge et al. 2016 localized MyoH at the conoid and showed that MyoH
+      is required for Toxoplasma entry and exit.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Conoids are apicomplexan cytoskeletal structures rather than conserved eukaryotic
+    cytoskeleton features.
+  reference: DOI:10.1371/journal.pbio.3001081
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: COMMON
+  note: Conoid-complex proteins are conserved across apicomplexans, including lineages
+    such as Plasmodium that lack a canonical protrusible conoid.
+  reference: DOI:10.1371/journal.pbio.3001081
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model in which conoid tubulin polymers, conoid/apical-complex
+    proteins, and MyoH-dependent entry and exit have been experimentally studied.
+  reference: DOI:10.1083/jcb.200112086
+functions:
+- function_id: conoid_apical_cytoskeletal_scaffold
+  label: apical cytoskeletal scaffolding
+  description: The conoid forms a spiral tubulin-based scaffold at the apex of the
+    apical complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.200112086
+    notes: Hu et al. 2002 resolved Toxoplasma conoid fibers as tubulin protofilament
+      ribbons organized into a spiral.
+- function_id: conoid_associated_host_cell_entry_exit
+  label: conoid-associated host cell entry and exit
+  description: The conoid-associated MyoH motor supports Toxoplasma gliding motility,
+    host-cell entry, and host-cell exit.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1005388
+    notes: Graindorge et al. 2016 found that MyoH is indispensable for Toxoplasma
+      entry and exit from host cells.
+evidence:
+- reference: DOI:10.1083/jcb.200112086
+  notes: Hu et al. 2002, A novel polymer of tubulin forms the conoid of Toxoplasma
+    gondii, Journal of Cell Biology.
+- reference: DOI:10.1371/journal.ppat.0020013
+  notes: Hu et al. 2006, Cytoskeletal Components of an Invasion Machine--the Apical
+    Complex of Toxoplasma gondii, PLOS Pathogens.
+- reference: DOI:10.1371/journal.pbio.3001081
+  notes: Koreny et al. 2021, Molecular characterization of the conoid complex in Toxoplasma
+    reveals its conservation in all apicomplexans, including Plasmodium species, PLOS
+    Biology.
+- reference: DOI:10.1371/journal.ppat.1005388
+  notes: Graindorge et al. 2016, The Conoid Associated Motor MyoH Is Indispensable
+    for Toxoplasma gondii Entry and Exit from Host Cells, PLOS Pathogens.
+causal_graphs:
+- graph_id: conoid_tubulin_myoH_host_cell_entry
+  title: Tubulin conoid fibers and MyoH support parasite entry and exit
+  description: Tubulin protofilament ribbons form the spiral conoid at the apical
+    complex, where conoid-complex proteins and the MyoH motor support Toxoplasma entry
+    into and exit from host cells.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: tubulin_protofilaments
+    label: tubulin protofilaments
+    node_type: GENE_OR_PROTEIN
+  - node_id: conoid_tubulin_fibers
+    label: conoid tubulin fibers
+    node_type: GENE_OR_PROTEIN
+    component_ref: conoid_tubulin_fibers
+  - node_id: conoid
+    label: conoid
+    node_type: STRUCTURE
+    grounding: GO:0020010
+  - node_id: apical_complex
+    label: apical complex
+    node_type: STRUCTURE
+    grounding: GO:0020007
+  - node_id: conserved_conoid_complex_proteins
+    label: conserved conoid complex proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: conserved_conoid_complex_proteins
+  - node_id: myoh_motor
+    label: conoid-associated MyoH motor
+    node_type: GENE_OR_PROTEIN
+    component_ref: myoh_motor
+  - node_id: host_cell_entry
+    label: host cell entry
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: host_cell_exit
+    label: host cell exit
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: conoid
+    predicate: is part of
+    object: apical_complex
+    description: The conoid is a cytoskeletal structure at the apical end of the apical
+      complex.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.0020013
+      notes: Hu et al. 2006 studied the Toxoplasma conoid as part of the apical complex.
+  - subject: tubulin_protofilaments
+    predicate: form
+    object: conoid_tubulin_fibers
+    description: Tubulin protofilaments assemble into ribbon-like conoid fibers.
+    evidence:
+    - reference: DOI:10.1083/jcb.200112086
+      notes: Hu et al. 2002 found tubulin protofilaments within Toxoplasma conoid
+        fibers.
+  - subject: conoid_tubulin_fibers
+    predicate: form
+    object: conoid
+    description: Conoid fibers form a left-handed spiral conoid at the parasite apex.
+    evidence:
+    - reference: DOI:10.1083/jcb.200112086
+      notes: Hu et al. 2002 resolved the conoid fibers as a spiral tubulin polymer.
+  - subject: conserved_conoid_complex_proteins
+    predicate: reside in
+    object: conoid
+    description: A conserved protein cohort is associated with the conoid complex.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3001081
+      notes: Koreny et al. 2021 molecularly characterized conserved conoid-complex
+        proteins.
+  - subject: myoh_motor
+    predicate: localizes to
+    object: conoid
+    description: MyoH is a motor associated with the conoid.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1005388
+      notes: Graindorge et al. 2016 localized MyoH to the conoid in Toxoplasma.
+  - subject: myoh_motor
+    predicate: supports
+    object: host_cell_entry
+    description: The conoid-associated MyoH motor supports parasite entry into host
+      cells.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1005388
+      notes: Graindorge et al. 2016 found that MyoH is indispensable for Toxoplasma
+        entry.
+  - subject: myoh_motor
+    predicate: supports
+    object: host_cell_exit
+    description: The conoid-associated MyoH motor supports parasite exit from host
+      cells.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1005388
+      notes: Graindorge et al. 2016 found that MyoH is indispensable for Toxoplasma
+        exit.
+discussions:
+- discussion_id: ground_conoid_protein_cohorts
+  prompt: Resolve exact source-neutral groundings for conoid tubulin fibers, conserved
+    conoid complex proteins, and MyoH.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#conoid_tubulin_fibers
+  - components#conserved_conoid_complex_proteins
+  - components#myoh_motor
+  rationale: The first conoid record keeps Toxoplasma-localized protein cohorts label-only
+    because no exact cross-source protein-family CURIE was curated for the unusual
+    conoid tubulin polymer, the conserved conoid proteome, or apicomplexan MyoH.
+  posed_by: claude
+  posed_date: '2026-09-10'

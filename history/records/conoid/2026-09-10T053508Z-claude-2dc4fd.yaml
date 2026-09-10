@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/conoid.yaml
+  slug: conoid
+session:
+  id: 2026-09-10T053508Z-claude-2dc4fd
+  timestamp: '2026-09-10T05:35:08Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the conoid record
+  details: Created GO:0020010 conoid as a cytoskeleton record. Added cytoskeleton and apical-complex
+    parthood, conoid tubulin fibers, conserved conoid-complex proteins, MyoH-associated machinery,
+    rare eukaryotic and common Apicomplexa taxonomic scope, Toxoplasma gondii as a canonical
+    example, apical-cytoskeletal-scaffold and host-cell entry and exit functions, and a tubulin/MyoH
+    function graph backed by Hu et al. 2002/2006, Koreny et al. 2021, and Graindorge et al.
+    2016 evidence.
