@@ -390,7 +390,7 @@ def test_a_symbol_with_no_entry_anywhere_is_not_reported_as_ambiguous(fake_searc
 
 def test_a_component_that_already_has_an_accession_is_not_a_gap(fake_search):
     doc = _doc([{"component_id": "a", "component_type": "PROTEIN", "gene_symbols": ["x"],
-                 "protein_examples": [{"uniprot_id": "UniProtKB:P1"}]}])
+                 "protein_examples": [{"uniprot_id": "UniProtKB:P1", "gene_symbol": "x"}]}])
     assert G.gap_report(doc) == []
 
 
@@ -415,8 +415,62 @@ def test_one_ambiguous_symbol_makes_the_component_ambiguous(fake_search):
 def test_every_category_has_a_stated_meaning():
     """The report prints these; a category with no sentence is a category the
     reader has to guess at."""
-    assert set(G.GAP_MEANING) == {G.NO_TAXON, G.NO_SYMBOL, G.AMBIGUOUS, G.NO_ENTRY}
+    assert set(G.GAP_MEANING) == {G.NO_TAXON, G.NO_SYMBOL, G.AMBIGUOUS, G.NO_EXACT, G.NO_ENTRY}
     assert all(v and not v.endswith(".") for v in G.GAP_MEANING.values())
+
+
+def test_a_partly_covered_component_is_still_reported(fake_search):
+    """A component named for ten csm genes holding six accessions is not done.
+    Reporting only components with zero accessions undercounts the work in the
+    one place whose job is to state it (#298)."""
+    doc = _doc([{"component_id": "csm", "component_type": "PROTEIN",
+                 "gene_symbols": ["csmB", "csmD"],
+                 "protein_examples": [{"uniprot_id": "UniProtKB:Q46383", "gene_symbol": "csmB"}]}])
+    assert G.gap_report(doc) == [("csm", G.NO_ENTRY, "[1 already] csmD")]
+
+
+def test_a_fully_covered_component_is_not_reported(fake_search):
+    doc = _doc([{"component_id": "a", "component_type": "PROTEIN", "gene_symbols": ["x"],
+                 "protein_examples": [{"uniprot_id": "UniProtKB:P1", "gene_symbol": "x"}]}])
+    assert G.gap_report(doc) == []
+
+
+def test_a_synonym_of_an_accession_already_held_is_covered_not_missing(fake_search):
+    """secY and prlA are one entry. resolve() drops the second by accession, so
+    counting prlA as missing would fill the report with the #266 artefact."""
+    both = [entry("P0AGA2", ["secY", "prlA"], 83333)]
+    fake_search[("prlA", 562)] = both
+    doc = _doc([{"component_id": "secy", "component_type": "PROTEIN",
+                 "gene_symbols": ["secY", "prlA"],
+                 "protein_examples": [{"uniprot_id": "UniProtKB:P0AGA2", "gene_symbol": "secY"}]}])
+    assert G.gap_report(doc) == []
+
+
+def test_a_symbol_seeding_would_have_taken_is_flagged_as_seedable(fake_search):
+    """Only reachable on a corpus --apply has not been run over; saying so beats
+    reporting it as an absence."""
+    fake_search[("mreB", 562)] = [entry("P0A9X4", ["mreB"], 83333)]
+    doc = _doc([{"component_id": "mreb", "component_type": "PROTEIN",
+                 "gene_symbols": ["mreB"],
+                 "protein_examples": [{"uniprot_id": "UniProtKB:P99999", "gene_symbol": "other"}]}])
+    assert G.gap_report(doc) == [("mreb", G.NO_ENTRY, "[1 already] mreB (seedable: P0A9X4)")]
+
+
+def test_entries_found_but_rejected_by_the_name_recheck_are_their_own_category(fake_search):
+    """Finding entries and rejecting them is a different fact from finding
+    nothing, and points at a different remedy -- the symbol may be one UniProt
+    spells another way (#299)."""
+    fake_search[("flgE", 562)] = [entry("P1", ["flgD"], 83333)]
+    doc = _doc([{"component_id": "hook", "component_type": "PROTEIN", "gene_symbols": ["flgE"]}])
+    assert G.gap_report(doc) == [("hook", G.NO_EXACT, "flgE@562: 1 hit(s)")]
+
+
+def test_ambiguity_outranks_an_inexact_hit(fake_search):
+    """A component with a real choice available should be reported as having one."""
+    fake_search[("a", 562)] = [entry("P1", ["other"], 83333)]
+    fake_search[("b", 562)] = [entry("P2", ["b"], 83333), entry("P3", ["b"], 83334)]
+    doc = _doc([{"component_id": "c", "component_type": "PROTEIN", "gene_symbols": ["a", "b"]}])
+    assert G.gap_report(doc) == [("c", G.AMBIGUOUS, "b@562: P2, P3")]
 
 
 def test_resolve_symbol_stops_at_the_first_taxon_that_answers(fake_search):

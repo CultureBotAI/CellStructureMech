@@ -269,19 +269,29 @@ def resolve(component: dict, taxa: list[tuple[int, str]]) -> tuple[list[dict], s
 NO_TAXON = "NO_CANONICAL_TAXON"
 NO_SYMBOL = "NO_GENE_SYMBOL"
 AMBIGUOUS = "AMBIGUOUS_SYMBOL"
+NO_EXACT = "NO_EXACT_GENE_MATCH"
 NO_ENTRY = "NO_REVIEWED_ENTRY"
 
 GAP_MEANING = {
     NO_TAXON: "the record names no taxon, so nothing can be taxon-paired",
     NO_SYMBOL: "the component declares no gene symbol to resolve",
     AMBIGUOUS: "the symbol resolves to several reviewed entries; a curator must choose",
+    NO_EXACT: "reviewed entries were found but none carries the symbol as a gene name",
     NO_ENTRY: "no reviewed entry for any declared symbol in any taxon the record names",
 }
 
 
 def gap_report(doc: dict) -> list[tuple[str, str, str]]:
-    """``(component_id, category, detail)`` for every PROTEIN component left without
-    an accession.
+    """``(component_id, category, detail)`` for every PROTEIN symbol still unresolved.
+
+    A row per **component**, but candidacy is per **symbol**, matching
+    ``candidates()``. A component holding one accession and four unrepresented
+    symbols is not done, and reporting only components with zero accessions
+    undercounts the work in the one place whose job is to state it (#298). The
+    detail says how many accessions such a component already has.
+
+    A symbol resolving to an accession the component already holds is covered,
+    not missing -- ``secY`` and ``prlA`` are one entry -- so it produces no row.
 
     Only the AMBIGUOUS rows are ones more querying could ever settle, and settling
     them means choosing between reviewed entries, which is a curation decision.
@@ -291,29 +301,62 @@ def gap_report(doc: dict) -> list[tuple[str, str, str]]:
             for t in doc.get("canonical_examples") or [] if t.get("taxon_id")]
     rows = []
     for component in doc.get("components") or []:
-        if component.get("component_type") != "PROTEIN" or component.get("protein_examples"):
+        if component.get("component_type") != "PROTEIN":
+            continue
+        held = len(component.get("protein_examples") or [])
+        symbols = missing_symbols(component)
+        if held and not symbols:
             continue
         cid = component["component_id"]
-        symbols = component.get("gene_symbols") or []
-        if not symbols:
-            rows.append((cid, NO_SYMBOL, component.get("label") or ""))
+        prefix = f"[{held} already] " if held else ""
+        if not component.get("gene_symbols"):
+            rows.append((cid, NO_SYMBOL, prefix + (component.get("label") or "")))
             continue
         if not taxa:
-            rows.append((cid, NO_TAXON, ", ".join(symbols)))
+            rows.append((cid, NO_TAXON, prefix + ", ".join(symbols)))
             continue
-        ambiguous = []
+        # A symbol that resolves to an accession the component already holds is
+        # covered, not missing: `secY` and `prlA` are one entry, and `resolve()`
+        # drops the second by accession. Counting those as NO_REVIEWED_ENTRY would
+        # inflate this report with the #266 synonym artefact.
+        seen = {(e.get("uniprot_id") or "").split(":")[-1]
+                for e in component.get("protein_examples") or []}
+        ambiguous, inexact, unresolved = [], [], []
         for symbol in symbols:
-            for taxon_id, _label, _hits, exact in per_taxon(symbol, taxa):
+            resolved = None
+            for taxon_id, _label, hits, exact in per_taxon(symbol, taxa):
+                if len(exact) == 1:
+                    resolved = exact[0]["primaryAccession"]
+                    break
                 if len(exact) > 1:
                     accs = ", ".join(sorted(e["primaryAccession"] for e in exact))
                     ambiguous.append(f"{symbol}@{taxon_id}: {accs}")
-        rows.append((cid, AMBIGUOUS, "; ".join(ambiguous)) if ambiguous
-                    else (cid, NO_ENTRY, ", ".join(symbols)))
+                elif hits:
+                    # Entries were found and then rejected by the exact-name
+                    # recheck. That is a different fact from finding nothing, and
+                    # it points at a different remedy -- the symbol may be one
+                    # UniProt spells another way (#299).
+                    inexact.append(f"{symbol}@{taxon_id}: {len(hits)} hit(s)")
+            if resolved is None:
+                unresolved.append(symbol)
+            elif resolved not in seen:
+                # Seeding would have taken this; only reachable on a corpus that
+                # has not had --apply run over it.
+                unresolved.append(f"{symbol} (seedable: {resolved})")
+        if not (ambiguous or inexact or unresolved):
+            continue
+        if ambiguous:
+            rows.append((cid, AMBIGUOUS, prefix + "; ".join(ambiguous)))
+        elif inexact:
+            rows.append((cid, NO_EXACT, prefix + "; ".join(inexact)))
+        else:
+            rows.append((cid, NO_ENTRY, prefix + ", ".join(unresolved)))
     return rows
 
 
 def cmd_gaps(records) -> int:
     counts: dict[str, int] = dict.fromkeys(GAP_MEANING, 0)
+    partial = 0
     for path, doc in records:
         rows = gap_report(doc)
         if not rows:
@@ -321,11 +364,13 @@ def cmd_gaps(records) -> int:
         print(f"\n{path.relative_to(REPO_ROOT)}  ({doc['identifier']})")
         for cid, category, detail in rows:
             counts[category] += 1
+            partial += detail.startswith("[")
             print(f"  {cid}\t{category}\t{detail}")
-    print("\nPROTEIN components still without an accession:")
+    print("\nPROTEIN components with an unresolved gene symbol:")
     for category, n in sorted(counts.items(), key=lambda kv: -kv[1]):
-        print(f"  {n:3}  {category:18} {GAP_MEANING[category]}")
-    print(f"  {sum(counts.values()):3}  total")
+        print(f"  {n:3}  {category:20} {GAP_MEANING[category]}")
+    total = sum(counts.values())
+    print(f"  {total:3}  total, of which {partial} already hold at least one accession")
     return 0
 
 
@@ -431,9 +476,12 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--record", help="One record; default is every record.")
-    parser.add_argument("--apply", action="store_true")
-    parser.add_argument("--gaps", action="store_true",
-                        help="Report what is left and why, instead of seeding. Read-only.")
+    # --gaps reads and --apply writes; asking for both is a contradiction to
+    # reject, not one to resolve by precedence (#300).
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--apply", action="store_true")
+    mode.add_argument("--gaps", action="store_true",
+                      help="Report what is left and why, instead of seeding. Read-only.")
     args = parser.parse_args()
 
     if args.record:
