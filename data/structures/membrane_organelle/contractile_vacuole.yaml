@@ -29,6 +29,13 @@ curation_history:
     graph node because that node denotes a transient filled state rather than an exact
     GO cellular-component class.
   llm_assisted: true
+- timestamp: '2026-09-10T08:19:54Z'
+  curator: claude
+  action: EDITED_RECORD
+  changes: Removed the contractile vacuolar membrane from molecular components because
+    GO:0031164 is already represented as a membrane substructure in has_part; retained
+    it as a grounded STRUCTURE node in the function graph.
+  llm_assisted: true
 synonyms:
 - synonym_text: CV
   synonym_type: EXACT_SYNONYM
@@ -43,21 +50,6 @@ has_part:
 xrefs:
 - uniprot.location:SL-0073
 components:
-- component_id: contractile_vacuolar_membrane
-  label: contractile vacuolar membrane
-  component_type: LIPID
-  component_role: CONSTITUENT
-  grounding: GO:0031164
-  essentiality: ESSENTIAL
-  role: Lipid bilayer that bounds the water-collecting vacuole and fuses with the
-    plasma-membrane pore during discharge.
-  evidence:
-  - reference: DOI:10.1016/S0074-7696(02)15015-7
-    notes: Allen and Naitoh 2002 review the contractile vacuole cycle, including filling,
-      rounding, pore opening and fluid discharge.
-  - reference: DOI:10.1016/j.ejop.2024.126078
-    notes: More et al. 2024 review contractile-vacuole membrane architecture and remodeling
-      across eukaryotic microbes.
 - component_id: v_type_atpase
   label: contractile vacuole V-ATPase
   component_type: PROTEIN_COMPLEX
@@ -167,7 +159,6 @@ causal_graphs:
     label: contractile vacuolar membrane
     node_type: STRUCTURE
     grounding: GO:0031164
-    component_ref: contractile_vacuolar_membrane
   - node_id: v_type_atpase
     label: contractile vacuole V-ATPase
     node_type: GENE_OR_PROTEIN
