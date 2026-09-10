@@ -24,6 +24,14 @@ curation_history:
     as a canonical example, Fe-S assembly and protein import functions, an ISC assembly
     graph, and grounding TODOs for mitosomal substructures and grouped protein machinery.
   llm_assisted: true
+- timestamp: '2026-09-10T03:52:33Z'
+  curator: claude
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #314 review issues #315, #316 and #317 by adding Giardia
+    duodenalis as a taxonomic distribution and canonical example, citing Dolezal et
+    al. 2005 on Giardia mitosomal protein import, and replacing the unused Entamoeba
+    sulfate-activation citation.'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -73,6 +81,9 @@ components:
   role: Machinery that imports nuclear-encoded mitosomal proteins into the reduced
     mitochondrion-related organelle.
   evidence:
+  - reference: DOI:10.1073/pnas.0500349102
+    notes: Dolezal et al. 2005 found that Giardia mitosomes and trichomonad hydrogenosomes
+      share a protein-targeting mode.
   - reference: DOI:10.1038/nature01945
     notes: Tovar et al. 2003 detected Giardia ISC proteins inside mitosomes, implying
       organelle import of nuclear-encoded machinery.
@@ -83,6 +94,12 @@ taxonomic_distribution:
   note: Mitosomes occur patchily in anaerobic or microaerophilic microbial eukaryotes
     that have reduced mitochondria.
   reference: DOI:10.1111/jeu.12922
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia duodenalis
+  presence: COMMON
+  note: Giardia mitosomes have been used to define Fe-S maturation and protein-targeting
+    functions in a reduced mitochondrion-related organelle.
+  reference: DOI:10.1038/nature01945
 - taxon_id: NCBITaxon:5759
   taxon_label: Entamoeba histolytica
   presence: COMMON
@@ -95,11 +112,11 @@ taxonomic_distribution:
     and functionally tested in Encephalitozoon.
   reference: DOI:10.1038/nature06606
 canonical_examples:
-- taxon_id: NCBITaxon:5759
-  taxon_label: Entamoeba histolytica
-  note: Amitochondrial parasite in which the mitosome was defined as a mitochondrion-related
-    organelle.
-  reference: DOI:10.1046/j.1365-2958.1999.01414.x
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia duodenalis
+  note: Diplomonad parasite whose mitosomes experimentally support the ISC-centered
+    function graph.
+  reference: DOI:10.1038/nature01945
 functions:
 - function_id: mitosomal_fe_s_cluster_assembly
   label: mitosomal iron-sulfur cluster assembly
@@ -117,6 +134,8 @@ functions:
   description: Nuclear-encoded proteins are imported into the mitosome, which lacks
     its own organellar genome.
   evidence:
+  - reference: DOI:10.1073/pnas.0500349102
+    notes: Dolezal et al. 2005 compared targeting signals in Giardia mitosomes.
   - reference: DOI:10.1038/nature01945
     notes: Tovar et al. 2003 localized nuclear-encoded ISC machinery to Giardia mitosomes.
 evidence:
@@ -132,9 +151,9 @@ evidence:
 - reference: DOI:10.1038/nature06606
   notes: Goldberg et al. 2008, Localization and functionality of microsporidian iron-sulphur
     cluster assembly proteins, Nature.
-- reference: DOI:10.1073/pnas.0907106106
-  notes: Mi-ichi et al. 2009, Mitosomes in Entamoeba histolytica contain a sulfate
-    activation pathway, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1073/pnas.0500349102
+  notes: Dolezal et al. 2005, Giardia mitosomes and trichomonad hydrogenosomes share
+    a common mode of protein targeting, Proceedings of the National Academy of Sciences.
 - reference: DOI:10.1111/jeu.12922
   notes: 'Tachezy 2022, Hydrogenosomes and mitosomes: Mitochondria of anaerobic eukaryotes,
     Journal of Eukaryotic Microbiology.'
@@ -181,8 +200,9 @@ causal_graphs:
     description: Mitosomal protein-import machinery loads nuclear-encoded ISC factors
       into the organelle.
     evidence:
-    - reference: DOI:10.1038/nature01945
-      notes: Tovar et al. 2003 localized Giardia ISC machinery to mitosomes.
+    - reference: DOI:10.1073/pnas.0500349102
+      notes: Dolezal et al. 2005 tested Giardia mitosomal protein targeting using
+        N-terminal targeting sequences.
   - subject: mitosomal_isc_machinery
     predicate: resides in
     object: mitosome
