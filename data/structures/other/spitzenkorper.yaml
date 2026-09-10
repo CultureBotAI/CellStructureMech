@@ -27,6 +27,19 @@ curation_history:
   changes: Typed the Spitzenkorper graph node as a STRUCTURE and removed an unused
     apical plasma membrane node from the first vesicle-supply graph.
   llm_assisted: true
+- timestamp: '2026-09-10T13:28:05Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #371 review issues #372 and #373 by removing the underspecified
+    exocyst tethering graph edge and narrowing the Neurospora crassa canonical example
+    to the Zheng 2020 scaffold modules.'
+  llm_assisted: true
+- timestamp: '2026-09-10T13:28:29Z'
+  curator: claude
+  action: TIGHTENED_GRAPH
+  changes: Updated the Spitzenkorper vesicle-supply graph description to match the
+    post-review graph after removing the exocyst edge.
+  llm_assisted: true
 synonyms:
 - synonym_text: Spitzenkörper
   synonym_type: EXACT_SYNONYM
@@ -103,8 +116,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:5141
   taxon_label: Neurospora crassa
-  note: Filamentous-fungal model in which distinct vesicle layers and protein-scaffold
-    modules of the Spitzenkorper have been experimentally dissected.
+  note: Filamentous-fungal model in which SPA-2/JNS-1 and LAH-2 scaffold modules of
+    the Spitzenkorper have been experimentally dissected.
   reference: DOI:10.1038/s41467-020-16712-9
 functions:
 - function_id: hyphal_tip_growth_organization
@@ -127,10 +140,6 @@ evidence:
 - reference: DOI:10.1111/j.1365-2958.2009.06917.x
   notes: Verdin et al. 2009, Functional stratification of the Spitzenkorper of Neurospora
     crassa, Molecular Microbiology.
-- reference: DOI:10.1091/mbc.e13-06-0299
-  notes: Riquelme et al. 2014, The Neurospora crassa exocyst complex tethers Spitzenkorper
-    vesicles to the apical plasma membrane during polarized growth, Molecular Biology
-    of the Cell.
 - reference: DOI:10.1128/MMBR.00068-17
   notes: Riquelme et al. 2018, Fungal Morphogenesis, from the Polarized Growth of
     Hyphae to Complex Reproduction and Infection Structures, Microbiology and Molecular
@@ -142,8 +151,7 @@ causal_graphs:
 - graph_id: spitzenkorper_vesicle_supply
   title: Spitzenkorper vesicles support hyphal tip growth
   description: Secretory vesicle layers and protein scaffolds localize to the Spitzenkorper,
-    where exocyst-dependent vesicle tethering helps connect the vesicle supply center
-    to polarized hyphal extension.
+    connecting the vesicle supply center to polarized fungal hyphal extension.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   nodes:
@@ -159,9 +167,6 @@ causal_graphs:
     label: spitzenkorper
     node_type: STRUCTURE
     grounding: GO:0031521
-  - node_id: exocyst_complex
-    label: exocyst complex
-    node_type: GENE_OR_PROTEIN
   - node_id: polarized_hyphal_growth
     label: polarized hyphal growth
     node_type: BIOLOGICAL_PROCESS
@@ -184,15 +189,6 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-020-16712-9
       notes: Zheng et al. 2020 identified interacting scaffold complexes that reside
         at the Neurospora Spitzenkorper.
-  - subject: exocyst_complex
-    predicate: tethers
-    object: spitzenkorper_secretory_vesicles
-    description: The exocyst tethers Spitzenkorper vesicles to the apical plasma membrane
-      during polarized growth.
-    evidence:
-    - reference: DOI:10.1091/mbc.e13-06-0299
-      notes: Riquelme et al. 2014 showed that the Neurospora exocyst tethers Spitzenkorper
-        vesicles to the apical plasma membrane.
   - subject: spitzenkorper
     predicate: supports
     object: polarized_hyphal_growth
