@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/polyhydroxyalkanoate_granule.yaml
+  slug: polyhydroxyalkanoate_granule
+session:
+  id: 2026-09-10T085156Z-claude-code-d2c53d
+  timestamp: '2026-09-10T08:51:56Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/338
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/337
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Re-source the PHA record PHB synonym
+  details: 'Addressed PR #337 review issue #338 by moving the narrower PHB granule related
+    synonym source from GO:0070088 to DOI:10.1128/JB.00779-12, a Cupriavidus necator H16 PHB-granule
+    primary study that directly uses PHB granule terminology.'

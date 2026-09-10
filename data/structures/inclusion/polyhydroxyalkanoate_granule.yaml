@@ -28,13 +28,19 @@ curation_history:
     section anchor to components#pha_polymer_core so the discussion target resolves
     to an existing local component anchor.
   llm_assisted: true
+- timestamp: '2026-09-10T08:51:42Z'
+  curator: claude
+  action: EDITED_RECORD
+  changes: Re-sourced the narrower PHB granule related synonym from GO:0070088 to
+    a Cupriavidus necator H16 PHB-granule primary paper.
+  llm_assisted: true
 synonyms:
 - synonym_text: PHA granule
   synonym_type: EXACT_SYNONYM
   source: GO:0070088
 - synonym_text: PHB granule
   synonym_type: RELATED_SYNONYM
-  source: GO:0070088
+  source: DOI:10.1128/JB.00779-12
 components:
 - component_id: pha_polymer_core
   label: polyhydroxyalkanoate polymer core
