@@ -1,0 +1,226 @@
+identifier: GO:0020007
+label: apical complex
+structure_category: OTHER
+structure_kind: OTHER
+definition: A group of cytoskeletal structures and associated membrane-bounded organelles
+  at the anterior end of apicomplexan parasites that supports host-cell attachment,
+  penetration, and parasite proliferation.
+definition_source: GO:0020007
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T12:52:03Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T12:52:35Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added conoid, polar ring, rhoptry and microneme parts; cytoskeletal and
+    secretory protein cohorts; Apicomplexa scope; Toxoplasma gondii as a canonical
+    example; invasion and apical-organelle-secretion functions; a nonmechanistic apical-complex
+    invasion graph; and a grounding TODO for exact apical-complex protein cohorts.
+  llm_assisted: true
+- timestamp: '2026-09-10T13:02:49Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #368 review issues #369 and #370 by narrowing the Toxoplasma
+    gondii canonical-example note to the Hu 2006 cytoskeletal evidence and removing
+    the unsupported apical-complex-to-secretion coordination graph edge.'
+  llm_assisted: true
+has_part:
+- GO:0020010
+- GO:0020031
+- GO:0020008
+- GO:0020009
+components:
+- component_id: apical_complex_cytoskeletal_proteins
+  label: apical-complex cytoskeletal proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The apical complex contains multiple unrelated conoid, polar-ring
+    and other cytoskeletal proteins; no exact source-neutral CURIE was curated for
+    the whole apical-cytoskeleton cohort.
+  role: Cytoskeletal proteins that build and position apical structures such as the
+    conoid and apical polar ring.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Hu et al. 2006 partially purified the Toxoplasma conoid/apical complex
+      and identified candidate cytoskeletal proteins.
+  - reference: DOI:10.1073/pnas.2416602121
+    notes: Ren et al. 2024 resolved protein layers of the Toxoplasma apical polar
+      ring within the apical complex.
+- component_id: apical_secretory_organelle_proteins
+  label: apical secretory-organelle proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Microneme and rhoptry cargo proteins span many unrelated families.
+    They are grouped here only as apical-complex secretory-organelle constituents.
+  role: Secretory proteins stored in micronemes and rhoptries before their ordered
+    discharge during host-cell invasion.
+  evidence:
+  - reference: PMID:9208224
+    notes: Carruthers and Sibley 1997 observed sequential microneme, rhoptry and dense-granule
+      secretion during Toxoplasma invasion.
+  - reference: DOI:10.1038/nrmicro1800
+    notes: Boothroyd and Dubremetz 2008 review Toxoplasma rhoptries and their apical
+      secretory roles during host-cell invasion.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: COMMON
+  note: The apical complex is the eponymous anterior cytoskeletal and secretory apparatus
+    of apicomplexan invasive stages, with lineage- and stage-specific variation in
+    individual substructures.
+  reference: DOI:10.1128/mmbr.00197-22
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model in which the conoid/apical-complex cytoskeleton was partially
+    purified for proteomic analysis.
+  reference: DOI:10.1371/journal.ppat.0020013
+functions:
+- function_id: host_cell_invasion
+  label: host-cell invasion
+  description: The apical complex positions cytoskeletal and secretory parts that
+    support attachment to and invasion of host cells by apicomplexan zoites.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Hu et al. 2006 studied the Toxoplasma apical complex as a cytoskeletal
+      invasion machine.
+  - reference: DOI:10.1128/mmbr.00197-22
+    notes: Waller and Carruthers 2024 review apical-complex and secretory-organelle
+      diversity in Myzozoa and Apicomplexa.
+- function_id: ordered_apical_organelle_secretion
+  label: ordered apical-organelle secretion
+  description: Micronemes and rhoptries at the apical complex discharge in an ordered
+    sequence during invasion, coordinating attachment, moving-junction formation and
+    vacuole establishment.
+  evidence:
+  - reference: PMID:9208224
+    notes: Carruthers and Sibley 1997 showed that Toxoplasma micronemes, rhoptries
+      and dense granules secrete sequentially during invasion.
+  - reference: DOI:10.1038/nrmicro1800
+    notes: Boothroyd and Dubremetz 2008 review rhoptry secretion after host-cell attachment
+      and at the start of invasion.
+evidence:
+- reference: DOI:10.1371/journal.ppat.0020013
+  notes: Hu et al. 2006, Cytoskeletal Components of an Invasion Machine--the Apical
+    Complex of Toxoplasma gondii, PLOS Pathogens.
+- reference: PMID:9208224
+  notes: Carruthers and Sibley 1997, Sequential protein secretion from three distinct
+    organelles of Toxoplasma gondii accompanies invasion of human fibroblasts, European
+    Journal of Cell Biology.
+- reference: DOI:10.1073/pnas.2416602121
+  notes: Ren et al. 2024, Architecture of the Toxoplasma gondii apical polar ring
+    and its role in gliding motility and invasion, Proceedings of the National Academy
+    of Sciences.
+- reference: DOI:10.1038/nrmicro1800
+  notes: 'Boothroyd and Dubremetz 2008, Kiss and spit: the dual roles of Toxoplasma
+    rhoptries, Nature Reviews Microbiology.'
+- reference: DOI:10.1128/mmbr.00197-22
+  notes: Waller and Carruthers 2024, Adaptations and metabolic evolution of myzozoan
+    protists across diverse lifestyles and environments, Microbiology and Molecular
+    Biology Reviews.
+causal_graphs:
+- graph_id: apical_scaffold_secretory_invasion
+  title: Apical cytoskeletal and secretory parts coordinate invasion
+  description: The apical complex groups cytoskeletal structures such as the conoid
+    and apical polar ring with apically positioned secretory organelles such as micronemes
+    and rhoptries to coordinate host-cell invasion.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: conoid
+    label: conoid
+    node_type: STRUCTURE
+    grounding: GO:0020010
+  - node_id: polar_ring_of_apical_complex
+    label: polar ring of apical complex
+    node_type: STRUCTURE
+    grounding: GO:0020031
+  - node_id: microneme
+    label: microneme
+    node_type: ORGANELLE
+    grounding: GO:0020009
+  - node_id: rhoptry
+    label: rhoptry
+    node_type: ORGANELLE
+    grounding: GO:0020008
+  - node_id: apical_complex
+    label: apical complex
+    node_type: STRUCTURE
+    grounding: GO:0020007
+  - node_id: host_cell_invasion
+    label: host-cell invasion
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: conoid
+    predicate: is part of
+    object: apical_complex
+    description: The conoid is a cytoskeletal substructure of the apical complex in
+      conoid-bearing apicomplexans.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.0020013
+      notes: Hu et al. 2006 partially purified the Toxoplasma conoid with the apical
+        complex.
+  - subject: polar_ring_of_apical_complex
+    predicate: is part of
+    object: apical_complex
+    description: The apical polar ring is a layered cytoskeletal substructure at the
+      apex of the Toxoplasma apical complex.
+    evidence:
+    - reference: DOI:10.1073/pnas.2416602121
+      notes: Ren et al. 2024 resolved the Toxoplasma apical polar ring at the apical
+        complex.
+  - subject: microneme
+    predicate: is part of
+    object: apical_complex
+    description: Micronemes are apical-complex secretory organelles that discharge
+      early during invasion.
+    evidence:
+    - reference: PMID:9208224
+      notes: Carruthers and Sibley 1997 followed microneme secretion during the first
+        phase of Toxoplasma invasion.
+  - subject: rhoptry
+    predicate: is part of
+    object: apical_complex
+    description: Rhoptries are club-shaped apical-complex secretory organelles with
+      neck ducts at the apical tip.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1800
+      notes: Boothroyd and Dubremetz 2008 review Toxoplasma rhoptries as apical secretory
+        organelles.
+  - subject: apical_complex
+    predicate: supports
+    object: host_cell_invasion
+    description: Cytoskeletal and secretory elements of the apical complex support
+      apicomplexan host-cell invasion.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.0020013
+      notes: Hu et al. 2006 characterized the Toxoplasma apical complex as an invasion
+        machine.
+    - reference: DOI:10.1128/mmbr.00197-22
+      notes: Waller and Carruthers 2024 review apical-complex functions across Myzozoa
+        and Apicomplexa.
+discussions:
+- discussion_id: ground_apical_complex_protein_cohorts
+  prompt: Resolve exact source-neutral groundings for apical-complex cytoskeletal
+    proteins and for the microneme/rhoptry secretory protein cohorts.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#apical_complex_cytoskeletal_proteins
+  - components#apical_secretory_organelle_proteins
+  rationale: The first apical-complex record links named substructures as parts and
+    groups unrelated molecular constituents into two reviewed-label-only cohorts rather
+    than guessing InterPro or Complex Portal CURIEs.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.0020013
+  - reference: PMID:9208224
+  posed_by: claude
+  posed_date: '2026-09-10'
