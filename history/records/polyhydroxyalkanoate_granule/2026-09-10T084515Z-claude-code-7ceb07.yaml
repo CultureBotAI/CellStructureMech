@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/polyhydroxyalkanoate_granule.yaml
+  slug: polyhydroxyalkanoate_granule
+session:
+  id: 2026-09-10T084515Z-claude-code-7ceb07
+  timestamp: '2026-09-10T08:45:15Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Fix the PHA phospholipid discussion anchor
+  details: Moved the exclude_phospholipid_monolayer discussion from a bare components section
+    anchor to components#pha_polymer_core after the discussion-anchor integrity test caught
+    that bare section names do not resolve as local anchors.
