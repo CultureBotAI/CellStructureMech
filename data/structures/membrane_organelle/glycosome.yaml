@@ -1,0 +1,219 @@
+identifier: GO:0020015
+label: glycosome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A membrane-bounded organelle found in organisms from the order Kinetoplastida
+  that houses the enzymes of glycolysis.
+definition_source: GO:0020015
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T02:57:37Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T02:58:13Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added glycosome membrane and lumen parthood, membrane, glycolytic enzyme
+    and peroxin import components, Kinetoplastea taxonomic scope, Trypanosoma brucei
+    as a canonical example, glycolytic compartmentation and protein import functions,
+    a PEX14 import/compartmentation graph, and a peroxin grounding discussion.
+  llm_assisted: true
+parent_structures:
+- GO:0005777
+has_part:
+- GO:0034468
+- GO:0046860
+components:
+- component_id: glycosome_membrane
+  label: glycosome membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0046860
+  essentiality: ESSENTIAL
+  role: Peroxisome-derived bounding membrane that encloses the glycosomal matrix.
+  evidence:
+  - reference: DOI:10.1016/0014-5793(77)80476-6
+    notes: Opperdoes and Borst 1977 localized Trypanosoma brucei glycolytic enzymes
+      to a microbody-like glycosome.
+  - reference: DOI:10.1016/j.bbamcr.2015.09.015
+    notes: Haanstra et al. 2016 review glycosomes as specialized peroxisomes of trypanosomatid
+      parasites.
+- component_id: glycolytic_enzymes
+  label: glycosomal glycolytic enzymes
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The glycosomal glycolysis component groups several unrelated enzyme
+    families by localization and pathway role; no single exact family CURIE denotes
+    this full enzyme set.
+  role: Matrix enzymes that compartmentalize the major glycolytic steps inside the
+    kinetoplastid glycosome.
+  evidence:
+  - reference: DOI:10.1016/0014-5793(77)80476-6
+    notes: Opperdoes and Borst 1977 localized nine glycolytic enzymes to the Trypanosoma
+      brucei glycosome.
+  - reference: DOI:10.1073/pnas.0806664105
+    notes: Haanstra et al. 2008 used PEX14-deficient trypanosomes to test the importance
+      of sequestering glycolytic enzymes in glycosomes.
+- component_id: peroxin_import_machinery
+  label: glycosomal peroxin import machinery
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - PEX5
+  - PEX7
+  - PEX14
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Glycosome biogenesis uses several peroxins with distinct families
+    and roles; no single exact CURIE was curated for the glycosomal import-machinery
+    set.
+  role: PTS receptors and membrane-docking factors that import nuclear-encoded matrix
+    proteins into the glycosome.
+  evidence:
+  - reference: DOI:10.1046/j.1432-1033.2003.03582.x
+    notes: Choe et al. 2003 characterized Trypanosoma brucei PEX14 and its interaction
+      with TbPEX5 during glycosomal matrix-protein import.
+  - reference: DOI:10.1016/j.bbamcr.2015.09.015
+    notes: Haanstra et al. 2016 review conserved peroxin machinery in trypanosomatid
+      glycosome biogenesis and maintenance.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5653
+  taxon_label: Kinetoplastea
+  presence: COMMON
+  note: Glycosomes are specialized peroxisomes of kinetoplastid protists, including
+    trypanosomatid parasites.
+  reference: DOI:10.1016/j.bbamcr.2015.09.015
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: Kinetoplastid parasite in which glycosome glycolytic enzymes, PEX14-mediated
+    protein import and the metabolic need for compartmentation have been experimentally
+    studied.
+  reference: DOI:10.1073/pnas.0806664105
+functions:
+- function_id: glycolytic_compartmentation
+  label: glycolytic enzyme compartmentalization
+  description: The glycosome sequesters glycolytic enzymes in a membrane-bounded matrix,
+    protecting trypanosomes from toxic accumulation of glycolytic intermediates.
+  evidence:
+  - reference: DOI:10.1073/pnas.0806664105
+    notes: Haanstra et al. 2008 showed that compartmentation of glycolysis prevents
+      toxic glucose-6-phosphate accumulation in Trypanosoma brucei.
+- function_id: glycosomal_matrix_protein_import
+  label: glycosomal matrix protein import
+  description: Glycosomal peroxins import nuclear-encoded PTS-containing matrix proteins
+    into the glycosome.
+  evidence:
+  - reference: DOI:10.1046/j.1432-1033.2003.03582.x
+    notes: Choe et al. 2003 showed that PEX14 participates in glycosomal matrix-protein
+      import in Trypanosoma brucei.
+evidence:
+- reference: DOI:10.1016/0014-5793(77)80476-6
+  notes: 'Opperdoes and Borst 1977, Localization of nine glycolytic enzymes in a microbody-like
+    organelle in Trypanosoma brucei: the glycosome, FEBS Letters.'
+- reference: DOI:10.1046/j.1432-1033.2003.03582.x
+  notes: Choe et al. 2003, Characterization of Trypanosoma brucei PEX14 and its role
+    in the import of glycosomal matrix proteins, European Journal of Biochemistry.
+- reference: DOI:10.1073/pnas.0806664105
+  notes: Haanstra et al. 2008, Compartmentation prevents a lethal turbo-explosion
+    of glycolysis in trypanosomes, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1016/j.bbamcr.2015.09.015
+  notes: Haanstra et al. 2016, Biogenesis, maintenance and dynamics of glycosomes
+    in trypanosomatid parasites, Biochimica et Biophysica Acta - Molecular Cell Research.
+- reference: DOI:10.1371/journal.pntd.0005333
+  notes: Bauer and Morris 2017, Glycosome biogenesis in trypanosomes and the de novo
+    dilemma, PLOS Neglected Tropical Diseases.
+causal_graphs:
+- graph_id: pex14_glycolytic_import_compartmentation
+  title: PEX import machinery loads glycolytic enzymes into the glycosome
+  description: Glycosomal peroxin import machinery docks PTS receptors at the glycosome
+    membrane and imports glycolytic enzymes into the matrix, where compartmentation
+    keeps glycolytic flux from triggering toxic metabolite accumulation.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: peroxin_import_machinery
+    label: glycosomal peroxin import machinery
+    node_type: GENE_OR_PROTEIN
+    component_ref: peroxin_import_machinery
+  - node_id: glycosome_membrane
+    label: glycosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0046860
+    component_ref: glycosome_membrane
+  - node_id: glycolytic_enzymes
+    label: glycosomal glycolytic enzymes
+    node_type: GENE_OR_PROTEIN
+    component_ref: glycolytic_enzymes
+  - node_id: glycosome_lumen
+    label: glycosome lumen
+    node_type: STRUCTURE
+    grounding: GO:0034468
+  - node_id: glycolytic_intermediates
+    label: glycolytic intermediates
+    node_type: CHEMICAL
+  - node_id: glycosome
+    label: glycosome
+    node_type: ORGANELLE
+    grounding: GO:0020015
+  edges:
+  - subject: glycosome_membrane
+    predicate: bounds
+    object: glycosome
+    description: The glycosome membrane encloses the organelle matrix.
+    evidence:
+    - reference: DOI:10.1016/j.bbamcr.2015.09.015
+      notes: Haanstra et al. 2016 review glycosomes as membrane-bounded specialized
+        peroxisomes.
+  - subject: peroxin_import_machinery
+    predicate: resides in
+    object: glycosome_membrane
+    description: The PEX14 docking protein is part of the glycosomal membrane import
+      apparatus.
+    evidence:
+    - reference: DOI:10.1046/j.1432-1033.2003.03582.x
+      notes: Choe et al. 2003 characterized T. brucei PEX14 and its interaction with
+        the PTS1 receptor PEX5.
+  - subject: peroxin_import_machinery
+    predicate: imports
+    object: glycolytic_enzymes
+    description: Glycosomal peroxins import PTS-bearing nuclear-encoded matrix proteins
+      into the glycosome.
+    evidence:
+    - reference: DOI:10.1046/j.1432-1033.2003.03582.x
+      notes: Choe et al. 2003 linked TbPEX14 to import of glycosomal matrix proteins.
+  - subject: glycolytic_enzymes
+    predicate: accumulate in
+    object: glycosome_lumen
+    description: Most glycolytic enzyme activity is localized in the glycosomal matrix
+      rather than the cytosol.
+    evidence:
+    - reference: DOI:10.1016/0014-5793(77)80476-6
+      notes: Opperdoes and Borst 1977 localized nine glycolytic enzymes to the T.
+        brucei glycosome.
+  - subject: glycosome_lumen
+    predicate: sequesters
+    object: glycolytic_intermediates
+    description: Compartmentation of glycosomal glycolytic enzymes limits toxic accumulation
+      of pathway intermediates.
+    evidence:
+    - reference: DOI:10.1073/pnas.0806664105
+      notes: Haanstra et al. 2008 found that PEX14-deficient trypanosomes accumulated
+        glucose-6-phosphate after glucose addition.
+discussions:
+- discussion_id: peroxin_import_grounding
+  prompt: Resolve exact source-neutral protein-family groundings for the glycosomal
+    PEX5, PEX7 and PEX14 import components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#peroxin_import_machinery
+  rationale: The first record groups the PTS receptors and membrane-docking machinery
+    required for glycosomal matrix-protein import. Exact family-level CURIEs for all
+    grouped kinetoplastid peroxins were not curated.
+  posed_by: claude
+  posed_date: '2026-09-10'
