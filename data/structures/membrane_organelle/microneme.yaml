@@ -32,6 +32,12 @@ curation_history:
   changes: Connected the MIC2-M2AP adhesive protein complex to the microneme lumen
     in the microneme exocytosis graph.
   llm_assisted: true
+- timestamp: '2026-09-10T05:04:01Z'
+  curator: claude
+  action: FIXED_EVIDENCE_SCOPE
+  changes: Narrowed the microneme secretion signal node to PKG-dependent signaling
+    and cited broad review evidence on the generic microneme-adhesin invasion edge.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -183,8 +189,8 @@ causal_graphs:
     label: MIC2-M2AP adhesive protein complex
     node_type: GENE_OR_PROTEIN
     component_ref: mic2_m2ap_complex
-  - node_id: calcium_pkg_signaling
-    label: calcium/PKG signaling
+  - node_id: pkg_dependent_signaling
+    label: PKG-dependent signaling
     node_type: BIOLOGICAL_PROCESS
   - node_id: microneme_exocytosis
     label: microneme exocytosis
@@ -224,7 +230,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/emboj/cdg217
       notes: Huynh et al. 2003 studied MIC2-M2AP as a microneme adhesive protein complex.
-  - subject: calcium_pkg_signaling
+  - subject: pkg_dependent_signaling
     predicate: triggers
     object: microneme_exocytosis
     description: PKG-dependent signaling stimulates microneme secretion in extracellular
@@ -256,9 +262,9 @@ causal_graphs:
     description: Secreted microneme adhesins support apicomplexan attachment and invasion
       of host cells.
     evidence:
-    - reference: DOI:10.1371/journal.ppat.0020084
-      notes: Huynh and Carruthers 2006 showed that Toxoplasma MIC2 is a major determinant
-        of invasion and virulence.
+    - reference: DOI:10.1007/978-0-387-78267-6_2
+      notes: Carruthers and Tomley 2008 review microneme adhesins as apicomplexan
+        proteins involved in motility and invasion.
 discussions:
 - discussion_id: ground_microneme_adhesin_cohorts
   prompt: Resolve exact source-neutral groundings for microneme adhesins and the MIC2-M2AP
