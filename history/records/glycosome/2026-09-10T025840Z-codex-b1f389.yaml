@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/glycosome.yaml
+  slug: glycosome
+session:
+  id: 2026-09-10T025840Z-codex-b1f389
+  timestamp: '2026-09-10T02:58:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the glycosome record
+  details: Created GO:0020015 glycosome as a membrane-bounded organelle record. Added GO glycosome
+    membrane and lumen parthood, glycosome membrane, glycosomal glycolytic enzymes and peroxin
+    import machinery as component groups, Kinetoplastea taxonomic scope, Trypanosoma brucei
+    as the canonical model, glycolytic compartmentation and glycosomal matrix import functions,
+    a PEX14 import and glycolysis-compartmentation graph, and primary/review literature for
+    glycosome discovery, protein import and metabolic compartmentation.
