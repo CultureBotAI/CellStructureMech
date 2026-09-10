@@ -20,6 +20,13 @@ curation_history:
     functions, polaroplast evidence, a membrane-transport graph, and a protein/lipid
     grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-10T11:42:51Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #356 review issues #357 and #358 by marking the aggregate
+    polaroplast membrane component as reviewed-label-only and softening the final
+    graph edge to a polaroplast-derived membrane contribution claim.'
+  llm_assisted: true
 components:
 - component_id: polaroplast_membranes
   label: polaroplast membranes
@@ -34,6 +41,10 @@ components:
   - reference: DOI:10.1128/mbio.02749-23
     notes: Lv et al. 2024 tracked Nosema bombycis polaroplast membranes during germination
       and sporoplasm membrane formation.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The polaroplast membrane set is curated as a lineage-specific organelle
+    membrane system. No exact source-neutral lipid or protein-family grounding for
+    the aggregate membrane set was assigned in this pass.
 - component_id: anterior_lamellar_polaroplast
   label: anterior lamellar polaroplast
   component_type: LIPID
@@ -86,8 +97,8 @@ functions:
       and its relationship to other spore structures.
 - function_id: sporoplasm_membrane_formation
   label: sporoplasm membrane formation
-  description: Polaroplast membrane material travels through the fired polar tube
-    and becomes part of the sporoplasm plasma membrane.
+  description: Polaroplast-derived membrane material travels through the fired polar
+    tube and contributes to the sporoplasm plasma membrane.
   evidence:
   - reference: DOI:10.1128/mbio.02749-23
     notes: Lv et al. 2024 followed polaroplast membrane transport through the polar
@@ -106,10 +117,10 @@ evidence:
     through the polar tube and transformation into the sporoplasm membrane, mBio.'
 causal_graphs:
 - graph_id: polaroplast_membrane_transport
-  title: Polaroplast membranes seed the expelled sporoplasm
+  title: Polaroplast-derived membranes contribute to the expelled sporoplasm
   description: Packed polaroplast membranes are stored in the microsporidian spore
-    and, during germination, travel through the everted polar tube to become part
-    of the sporoplasm membrane.
+    and, during germination, polaroplast-derived membranes travel through the everted
+    polar tube and are incorporated into the sporoplasm membrane.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   nodes:
@@ -147,14 +158,14 @@ causal_graphs:
       notes: Lv et al. 2024 visualized polaroplast membrane transport through fired
         Nosema bombycis polar tubes.
   - subject: polaroplast_membranes
-    predicate: become
+    predicate: contribute to
     object: sporoplasm_membrane
-    description: Membranes emerging from the polar tube transform into the plasma
-      membrane surrounding the expelled sporoplasm.
+    description: Membranes emerging from the polar tube are incorporated into the
+      plasma membrane surrounding the expelled sporoplasm.
     evidence:
     - reference: DOI:10.1128/mbio.02749-23
-      notes: Lv et al. 2024 linked the transported polaroplast to formation of the
-        sporoplasm membrane.
+      notes: Lv et al. 2024 linked transported polaroplast-derived membranes to formation
+        of the sporoplasm membrane.
 discussions:
 - discussion_id: ground_polaroplast_membrane_machinery
   prompt: Resolve exact protein and lipid identities for the polaroplast membrane
