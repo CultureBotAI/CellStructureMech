@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ciliary_pocket_collar.yaml
+  slug: ciliary_pocket_collar
+session:
+  id: 2026-09-10T014219Z-codex-e70e45
+  timestamp: '2026-09-10T01:42:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/295
+  - https://github.com/CultureBotAI/CellStructureMech/issues/296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Address ciliary pocket collar review issues
+  details: 'Resolved issue #295 by replacing the direct FPC4-to-microtubule-quartet binding
+    claim with the narrower Albisetti et al. result: FPC4 localizes to the FPC, hook complex
+    and possible proximal microtubule-quartet region while its N-terminal domain binds microtubules
+    in vitro. Resolved issue #296 by removing the Eukaryota rare-distribution row that was
+    backed only by GO term scope.'

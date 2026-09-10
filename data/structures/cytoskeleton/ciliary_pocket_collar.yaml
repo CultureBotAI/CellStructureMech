@@ -29,6 +29,13 @@ curation_history:
     polymerization edges so the graph no longer points a dimerization predicate directly
     at the final polymer node.
   llm_assisted: true
+- timestamp: '2026-09-10T01:42:07Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #295 by narrowing the FPC4 graph edge to microtubule binding
+    plus FPC/hook/proximal-MtQ localization; resolved #296 by removing the broad Eukaryota
+    taxonomic-distribution row that was backed only by GO term scope.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cilium pocket collar
   synonym_type: EXACT_SYNONYM
@@ -104,12 +111,6 @@ components:
     domain, not the complete BILBO2 family. No exact source-neutral BILBO2 whole-protein
     CURIE was curated.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:2759
-  taxon_label: Eukaryota
-  presence: RARE
-  note: GO scopes the ciliary pocket collar to only some unicellular flagellates rather
-    than to a general eukaryotic ciliary feature.
-  reference: GO:1990900
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei
   presence: COMMON
@@ -141,13 +142,14 @@ functions:
       FPC and FP structures in procyclic T. brucei and is lethal in procyclic and
       bloodstream forms.
 - function_id: pocket_hook_microtubule_coupling
-  label: pocket-hook-microtubule coupling
-  description: FPC4 connects BILBO1-containing collar material with the hook complex
-    and the microtubule quartet near the flagellar pocket.
+  label: pocket-hook microtubule association
+  description: FPC4 binds microtubules in vitro and localizes at the interface of
+    the FPC, hook complex and proximal microtubule quartet.
   evidence:
   - reference: DOI:10.1371/journal.ppat.1006710
-    notes: Albisetti et al. 2017 placed FPC4 at the FPC, hook complex and proximal
-      microtubule quartet and proposed a tripartite association among those structures.
+    notes: Albisetti et al. 2017 localized FPC4 to the FPC, hook complex and possible
+      proximal microtubule quartet and separately found that its N-terminal domain
+      binds microtubules.
 evidence:
 - reference: DOI:10.1371/journal.pbio.0060105
   notes: Bonhivers et al. 2008, Biogenesis of the trypanosome endo-exocytotic organelle
@@ -199,8 +201,8 @@ causal_graphs:
     label: BILBO2
     node_type: GENE_OR_PROTEIN
     component_ref: bilbo2
-  - node_id: microtubule_quartet
-    label: microtubule quartet
+  - node_id: microtubules
+    label: microtubules
     node_type: STRUCTURE
   - node_id: ciliary_pocket_collar
     label: ciliary pocket collar
@@ -247,13 +249,15 @@ causal_graphs:
         the interaction to the FPC4 C-terminal domain and BILBO1 N-terminal domain.
   - subject: fpc4
     predicate: binds
-    object: microtubule_quartet
-    description: The FPC4 N-terminal domain binds microtubules, placing FPC4 at the
-      FPC, hook complex and proximal microtubule quartet interface.
+    object: microtubules
+    description: The FPC4 N-terminal domain binds microtubules in vitro, while full-length
+      FPC4 localizes across the FPC, hook complex and proximal microtubule-quartet
+      region.
     evidence:
     - reference: DOI:10.1371/journal.ppat.1006710
-      notes: Albisetti et al. 2017 localized FPC4 to the FPC and hook complex and
-        found that its N-terminal domain binds microtubules.
+      notes: Albisetti et al. 2017 localized FPC4 to the FPC and hook complex, noted
+        possible proximal microtubule-quartet localization, and found that the FPC4
+        N-terminal domain binds microtubules.
   - subject: bilbo2
     predicate: binds
     object: fpc4
