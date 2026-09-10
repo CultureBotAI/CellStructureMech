@@ -38,6 +38,12 @@ curation_history:
   changes: Added a grounded rhoptry-lumen node and retargeted the rhoptry-bulb protein
     residence edge to the lumen instead of the whole rhoptry.
   llm_assisted: true
+- timestamp: '2026-09-10T04:46:19Z'
+  curator: claude
+  action: FIXED_CAUSAL_GRAPH
+  changes: Connected the grounded rhoptry-lumen node to the rhoptry in the rhoptry
+    discharge graph.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -202,6 +208,15 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro1800
       notes: Boothroyd and Dubremetz 2008 review Toxoplasma rhoptries as membrane-bounded
         secretory organelles.
+  - subject: rhoptry_lumen
+    predicate: is part of
+    object: rhoptry
+    description: The rhoptry lumen is the secretory volume enclosed by the rhoptry
+      membrane.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1800
+      notes: Boothroyd and Dubremetz 2008 review the rhoptry as a membrane-bounded
+        neck-and-bulb secretory organelle.
   - subject: rhoptry_neck
     predicate: is part of
     object: rhoptry
