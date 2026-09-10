@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/apicomplexan_dense_granule.yaml
+  slug: apicomplexan_dense_granule
+session:
+  id: 2026-09-10T051227Z-claude-75b825
+  timestamp: '2026-09-10T05:12:27Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the apicomplexan dense granule record
+  details: Created GO:0020026 apicomplexan dense granule as a membrane-bounded organelle record.
+    Added the GO dense-granule membrane part, dense-granule protein cargo and exported-effector
+    cohorts, rare eukaryotic and common Apicomplexa taxonomic scope, Toxoplasma gondii as
+    a canonical example, dense-granule secretion and PVM-modulation functions, a GRA17/GRA23
+    PVM permeability graph, and primary/review evidence for dense-granule secretion, GRA16
+    export, and GRA17/GRA23-mediated permeability.
