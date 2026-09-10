@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/polar_tube.yaml
+  slug: polar_tube
+session:
+  id: 2026-09-10T135032Z-claude-code-74cb59
+  timestamp: '2026-09-10T13:50:32Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/375
+  - https://github.com/CultureBotAI/CellStructureMech/issues/376
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/374
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed polar tube adversarial review
+  details: 'Addressed PR #374 review issues #375 and #376 by removing the source-local PT
+    synonym from data/structures/spore/polar_tube.yaml, adding the Nosema bombycis polar filament/tube
+    proteomics DOI, and retargeting the Nosema canonical example to that direct polar-tube
+    evidence.'
