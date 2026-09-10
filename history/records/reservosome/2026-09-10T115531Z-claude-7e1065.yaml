@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/reservosome.yaml
+  slug: reservosome
+session:
+  id: 2026-09-10T115531Z-claude-7e1065
+  timestamp: '2026-09-10T11:55:31Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the minted reservosome structure record
+  details: Created data/structures/membrane_organelle/reservosome.yaml for the Trypanosoma
+    cruzi reservosome, including reservosome membrane, endocytosed cargo and cruzipain components,
+    epimastigote-stage T. cruzi scope, endocytic storage and acidic proteolysis evidence,
+    a reservosome storage graph, and an open hydrolase/marker grounding TODO.
