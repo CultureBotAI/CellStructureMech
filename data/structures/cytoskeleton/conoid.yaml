@@ -31,6 +31,14 @@ curation_history:
     the Graindorge et al. 2016 evidence is retained for MyoH-dependent host-cell entry
     and exit.
   llm_assisted: true
+- timestamp: '2026-09-10T05:49:50Z'
+  curator: claude
+  action: FIXED_EVIDENCE_SCOPE
+  changes: Narrowed the Toxoplasma gondii canonical-example note to the Hu et al.
+    2002 conoid tubulin-polymer evidence so it no longer bundles Hu et al. 2006 apical-complex
+    proteomics or Graindorge et al. 2016 MyoH entry/exit evidence under one canonical-example
+    reference.
+  llm_assisted: true
 part_of:
 - GO:0005856
 - GO:0020007
@@ -98,8 +106,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:5811
   taxon_label: Toxoplasma gondii
-  note: Apicomplexan model in which conoid tubulin polymers, conoid/apical-complex
-    proteins, and MyoH-dependent entry and exit have been experimentally studied.
+  note: Apicomplexan model in which the unusual tubulin polymers of the conoid were
+    experimentally studied.
   reference: DOI:10.1083/jcb.200112086
 functions:
 - function_id: conoid_apical_cytoskeletal_scaffold
