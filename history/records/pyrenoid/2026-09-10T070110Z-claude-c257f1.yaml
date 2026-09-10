@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/pyrenoid.yaml
+  slug: pyrenoid
+session:
+  id: 2026-09-10T070110Z-claude-c257f1
+  timestamp: '2026-09-10T07:01:10Z'
+  actors:
+  - type: ai_agent
+    name: claude
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added GO-grounded pyrenoid record
+  details: Added a GO:1990732 pyrenoid CellStructureRecord grounded as a non-membrane-bounded
+    chloroplast organelle. Curated Rubisco and EPYC1 components, a Chlamydomonas-centered
+    EPYC1/Rubisco phase-separation mechanism, Eukaryota and Chlamydomonas taxonomic distribution,
+    a carbon-fixation function, pyrenoid literature evidence, and an EPYC1 grounding TODO.
