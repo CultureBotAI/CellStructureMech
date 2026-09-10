@@ -21,6 +21,14 @@ curation_history:
     Toxoplasma gondii as a canonical example, F-actin flux and motility/invasion functions,
     an APR2/F-actin function graph, and an APR protein grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-10T06:07:19Z'
+  curator: claude
+  action: FIXED_EVIDENCE_SCOPE
+  changes: Replaced GO-only taxonomic-distribution references with Koreny et al. 2021,
+    narrowed the Toxoplasma gondii canonical-example note to Ren et al. 2024 APR architecture
+    and APR2 perturbation evidence, and changed APR2 structural essentiality from
+    CONDITIONAL to UNKNOWN.
+  llm_assisted: true
 synonyms:
 - synonym_text: anterior polar ring of apical complex
   synonym_type: EXACT_SYNONYM
@@ -52,12 +60,12 @@ components:
   label: APR2 upper-layer protein
   component_type: PROTEIN
   component_role: CONSTITUENT
-  essentiality: CONDITIONAL
+  essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: APR2 is a Toxoplasma apical-polar-ring protein; no exact source-neutral
     protein-family CURIE was curated.
-  role: Upper-layer apical polar ring protein required for normal APR integrity, conoid
-    extrusion, motility, and invasion in Toxoplasma.
+  role: Upper-layer apical polar ring protein that supports normal APR integrity,
+    conoid extrusion, motility, and invasion in Toxoplasma.
   evidence:
   - reference: DOI:10.1073/pnas.2416602121
     notes: Ren et al. 2024 identified APR2 as a key structural component of the upper
@@ -81,19 +89,19 @@ taxonomic_distribution:
   presence: RARE
   note: Polar rings of the apical complex are apicomplexan cytoskeletal structures
     rather than broadly conserved eukaryotic structures.
-  reference: GO:0020031
+  reference: DOI:10.1371/journal.pbio.3001081
 - taxon_id: NCBITaxon:5794
   taxon_label: Apicomplexa
   presence: VARIABLE
   note: The anterior polar ring is formed during invasive apicomplexan life-cycle
     stages; the Toxoplasma tachyzoite APR is the canonical experimentally resolved
     example in this record.
-  reference: GO:0020031
+  reference: DOI:10.1371/journal.pbio.3001081
 canonical_examples:
 - taxon_id: NCBITaxon:5811
   taxon_label: Toxoplasma gondii
-  note: Apicomplexan model in which APR layers, APR2-to-APR7 localization, APR2-dependent
-    APR integrity, and RNG1 localization have been experimentally studied.
+  note: Apicomplexan model in which APR layers, APR2-to-APR7 localization, and APR2-dependent
+    APR integrity have been experimentally studied.
   reference: DOI:10.1073/pnas.2416602121
 functions:
 - function_id: apr_f_actin_flux_control
@@ -120,6 +128,10 @@ evidence:
   notes: Ren et al. 2024, Architecture of the Toxoplasma gondii apical polar ring
     and its role in gliding motility and invasion, Proceedings of the National Academy
     of Sciences.
+- reference: DOI:10.1371/journal.pbio.3001081
+  notes: Koreny et al. 2021, Molecular characterization of the conoid complex in Toxoplasma
+    reveals its conservation in all apicomplexans, including Plasmodium species, PLOS
+    Biology.
 causal_graphs:
 - graph_id: apr2_apr_f_actin_motility_invasion
   title: APR2 maintains the APR gate for F-actin flux, motility, and invasion
