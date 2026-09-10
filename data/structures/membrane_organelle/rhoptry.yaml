@@ -1,0 +1,266 @@
+identifier: GO:0020008
+label: rhoptry
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A large, club-shaped secretory organelle that forms part of the apical
+  complex of an apicomplexan parasite, and consists of a bulbous body and a narrow
+  electron-dense neck that extends through the conoid at the apical tip of the parasite.
+  The rhoptry necks serve as ducts through which the contents of the rhoptries are
+  secreted after attachment to the host has been completed and at the commencement
+  of invasion. Rhoptry proteins function in the biogenesis and host organellar association
+  of the parasitophorous vacuole.
+definition_source: GO:0020008
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T04:06:24Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T04:07:15Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added membrane and lumen parthood, membrane, RON and ROP components, rare
+    eukaryotic and common Apicomplexa taxonomic scope, Toxoplasma gondii as a canonical
+    example, host-invasion and parasitophorous-vacuole-modulation functions, a rhoptry
+    secretion graph, and a grounding TODO for RON and ROP cohorts.
+  llm_assisted: true
+- timestamp: '2026-09-10T04:07:43Z'
+  curator: claude
+  action: FIXED_EVIDENCE_SCOPE
+  changes: Removed an unused AP1 sorting paper from record-level evidence, retargeted
+    the bulb-protein graph edge to parasitophorous vacuole modulation, and cited the
+    rhoptry morphology review on structural edges instead of GO terms.
+  llm_assisted: true
+- timestamp: '2026-09-10T04:40:19Z'
+  curator: claude
+  action: FIXED_CAUSAL_GRAPH
+  changes: Added a grounded rhoptry-lumen node and retargeted the rhoptry-bulb protein
+    residence edge to the lumen instead of the whole rhoptry.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+part_of:
+- GO:0020007
+has_part:
+- GO:0033016
+- GO:0034591
+components:
+- component_id: rhoptry_membrane
+  label: rhoptry membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0033016
+  essentiality: ESSENTIAL
+  role: Lipid bilayer that bounds the rhoptry and encloses the secretory lumen.
+  evidence:
+  - reference: DOI:10.1038/nrmicro1800
+    notes: Boothroyd and Dubremetz 2008 review Toxoplasma rhoptries as club-shaped
+      secretory organelles with neck and bulb compartments.
+- component_id: rhoptry_neck_proteins
+  label: rhoptry neck proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The rhoptry-neck cohort contains several unrelated secreted RON
+    proteins; no exact source-neutral family CURIE for the whole neck-protein set
+    was curated.
+  role: Neck-localized rhoptry proteins secreted during host-cell invasion to form
+    the moving junction.
+  evidence:
+  - reference: DOI:10.1074/jbc.m504158200
+    notes: Bradley et al. 2005 identified multiple RON proteins in the Toxoplasma
+      gondii rhoptry proteome.
+  - reference: DOI:10.1371/journal.ppat.0010017
+    notes: Alexander et al. 2005 showed that rhoptry-neck protein RON4 relocates to
+      the moving junction during Toxoplasma invasion.
+- component_id: rhoptry_bulb_proteins
+  label: rhoptry bulb proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: ROP proteins are defined by rhoptry-bulb localization and include
+    many unrelated secreted effector families; no exact single source-neutral family
+    CURIE represents the group.
+  role: Bulb-localized rhoptry effectors that are secreted into the host cell and
+    parasitophorous vacuole interface.
+  evidence:
+  - reference: DOI:10.1074/jbc.m504158200
+    notes: Bradley et al. 2005 resolved the Toxoplasma rhoptry proteome and distinguished
+      ROP and RON cohorts.
+  - reference: DOI:10.1038/nrmicro1800
+    notes: Boothroyd and Dubremetz 2008 review secretion of rhoptry bulb proteins
+      during host invasion and parasitophorous vacuole establishment.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Rhoptries are specialized secretory organelles of apicomplexan microbial eukaryotes
+    rather than a conserved eukaryotic compartment.
+  reference: DOI:10.1038/nrmicro1800
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: COMMON
+  note: Apicomplexan parasites carry apical-complex secretory organelles including
+    rhoptries, although their number and morphology vary among lineages and life stages.
+  reference: DOI:10.1128/mmbr.00197-22
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model in which the rhoptry proteome and moving-junction deployment
+    of RON proteins have been experimentally studied.
+  reference: DOI:10.1074/jbc.m504158200
+functions:
+- function_id: rhoptry_mediated_host_cell_invasion
+  label: rhoptry-mediated host cell invasion
+  description: Rhoptry discharge contributes secreted proteins that help build the
+    moving junction and enable invasion of host cells.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.0010017
+    notes: Alexander et al. 2005 connected rhoptry-neck protein RON4 to the moving
+      junction during Toxoplasma host-cell invasion.
+  - reference: DOI:10.1371/journal.pbio.3002745
+    notes: Ben Chaabene et al. 2024 found that Toxoplasma Rhoptry Discharge Factor
+      3 is essential for invasion and rhoptry-associated vesicle biogenesis.
+- function_id: parasitophorous_vacuole_modulation
+  label: parasitophorous vacuole modulation
+  description: Rhoptry bulb proteins are injected during invasion and contribute to
+    formation or host-facing modification of the parasitophorous vacuole.
+  evidence:
+  - reference: DOI:10.1038/nrmicro1800
+    notes: Boothroyd and Dubremetz 2008 review the roles of Toxoplasma rhoptry effectors
+      in parasitophorous vacuole biogenesis and host-cell manipulation.
+evidence:
+- reference: DOI:10.1074/jbc.m504158200
+  notes: Bradley et al. 2005, Proteomic analysis of rhoptry organelles reveals many
+    novel constituents for host-parasite interactions in Toxoplasma gondii, Journal
+    of Biological Chemistry.
+- reference: DOI:10.1371/journal.ppat.0010017
+  notes: 'Alexander et al. 2005, Identification of the moving junction complex of
+    Toxoplasma gondii: a collaboration between distinct secretory organelles, PLOS
+    Pathogens.'
+- reference: DOI:10.1038/nrmicro1800
+  notes: 'Boothroyd and Dubremetz 2008, Kiss and spit: the dual roles of Toxoplasma
+    rhoptries, Nature Reviews Microbiology.'
+- reference: DOI:10.1371/journal.pbio.3002745
+  notes: Ben Chaabene et al. 2024, Toxoplasma gondii rhoptry discharge factor 3 is
+    essential for invasion and microtubule-associated vesicle biogenesis, PLOS Biology.
+- reference: DOI:10.1128/mmbr.00197-22
+  notes: Waller and Carruthers 2024, Adaptations and metabolic evolution of myzozoan
+    protists across diverse lifestyles and environments, Microbiology and Molecular
+    Biology Reviews.
+causal_graphs:
+- graph_id: rhoptry_discharge_host_invasion
+  title: Rhoptry neck and bulb proteins support host-cell invasion
+  description: The rhoptry membrane bounds a neck-and-bulb secretory organelle; neck
+    proteins are discharged to the moving junction, while bulb proteins contribute
+    to the nascent host-parasite vacuole.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: rhoptry_membrane
+    label: rhoptry membrane
+    node_type: STRUCTURE
+    grounding: GO:0033016
+    component_ref: rhoptry_membrane
+  - node_id: rhoptry_neck
+    label: rhoptry neck
+    node_type: STRUCTURE
+  - node_id: rhoptry_lumen
+    label: rhoptry lumen
+    node_type: STRUCTURE
+    grounding: GO:0034591
+  - node_id: rhoptry
+    label: rhoptry
+    node_type: ORGANELLE
+    grounding: GO:0020008
+  - node_id: rhoptry_neck_proteins
+    label: rhoptry neck proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: rhoptry_neck_proteins
+  - node_id: rhoptry_bulb_proteins
+    label: rhoptry bulb proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: rhoptry_bulb_proteins
+  - node_id: moving_junction
+    label: moving junction
+    node_type: STATE
+  - node_id: host_cell_invasion
+    label: host cell invasion
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: parasitophorous_vacuole_modulation
+    label: parasitophorous vacuole modulation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: rhoptry_membrane
+    predicate: bounds
+    object: rhoptry
+    description: The rhoptry membrane encloses the secretory organelle.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1800
+      notes: Boothroyd and Dubremetz 2008 review Toxoplasma rhoptries as membrane-bounded
+        secretory organelles.
+  - subject: rhoptry_neck
+    predicate: is part of
+    object: rhoptry
+    description: The rhoptry neck is the narrow apical domain of the club-shaped organelle.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1800
+      notes: Boothroyd and Dubremetz 2008 review rhoptry neck and bulb compartmentation.
+  - subject: rhoptry_neck_proteins
+    predicate: reside in
+    object: rhoptry_neck
+    description: RON proteins occupy the rhoptry-neck compartment.
+    evidence:
+    - reference: DOI:10.1074/jbc.m504158200
+      notes: Bradley et al. 2005 identified rhoptry neck proteins in purified Toxoplasma
+        rhoptries.
+  - subject: rhoptry_bulb_proteins
+    predicate: reside in
+    object: rhoptry_lumen
+    description: ROP proteins occupy the rhoptry bulb lumen before secretion.
+    evidence:
+    - reference: DOI:10.1074/jbc.m504158200
+      notes: Bradley et al. 2005 resolved ROP proteins as a major cohort of the rhoptry
+        proteome.
+  - subject: rhoptry_neck_proteins
+    predicate: assemble at
+    object: moving_junction
+    description: Secreted RON proteins contribute to the moving-junction interface
+      used during invasion.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.0010017
+      notes: Alexander et al. 2005 identified RON4 as a rhoptry-neck protein that
+        relocalizes to the moving junction.
+  - subject: moving_junction
+    predicate: supports
+    object: host_cell_invasion
+    description: The rhoptry-linked moving junction helps the parasite invade host
+      cells.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.0010017
+      notes: Alexander et al. 2005 studied the moving junction complex in invading
+        Toxoplasma tachyzoites.
+  - subject: rhoptry_bulb_proteins
+    predicate: support
+    object: parasitophorous_vacuole_modulation
+    description: Rhoptry-bulb effectors contribute to the vacuolar host-parasite interface.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1800
+      notes: Boothroyd and Dubremetz 2008 review roles of rhoptry bulb proteins during
+        vacuole formation and later host-cell modulation.
+discussions:
+- discussion_id: ground_rhoptry_secretory_proteins
+  prompt: Resolve exact source-neutral protein-family groundings for rhoptry neck
+    and bulb protein cohorts.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rhoptry_neck_proteins
+  - components#rhoptry_bulb_proteins
+  rationale: The first record groups RON and ROP proteins by rhoptry subcompartment
+    because the cohorts contain multiple unrelated secreted effector families.
+  posed_by: claude
+  posed_date: '2026-09-10'

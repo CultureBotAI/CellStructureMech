@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/rhoptry.yaml
+  slug: rhoptry
+session:
+  id: 2026-09-10T040829Z-claude-fb1620
+  timestamp: '2026-09-10T04:08:29Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the rhoptry record
+  details: Created GO:0020008 rhoptry as a membrane-bounded organelle record. Added apical-complex
+    parthood, rhoptry membrane/lumen parts, curated membrane plus RON and ROP component cohorts,
+    Apicomplexa taxonomic scope, Toxoplasma gondii as a canonical example, host-invasion and
+    parasitophorous-vacuole functions, a rhoptry secretion graph, and primary/review evidence
+    for the Toxoplasma rhoptry proteome, moving-junction deployment and rhoptry discharge.
