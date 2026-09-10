@@ -2,9 +2,7 @@ identifier: GO:0020020
 label: food vacuole
 structure_category: MEMBRANE_ORGANELLE
 structure_kind: MEMBRANE_BOUNDED_ORGANELLE
-definition: A parasite vacuole that digests host-cell cytoplasm; in Plasmodium blood
-  stages this acidic lysosome-like organelle degrades host hemoglobin and detoxifies
-  heme.
+definition: A vacuole within a parasite used for digestion of the host cell cytoplasm.
 definition_source: GO:0020020
 mapping_status: PROPOSED
 curation_history:
@@ -26,6 +24,13 @@ curation_history:
   action: REMOVE_UNVERIFIED_GROUNDING
   changes: Removed an unverified ChEBI grounding from the free heme graph node; exact
     ChEBI groundings require an authority lookup.
+  llm_assisted: true
+- timestamp: '2026-09-10T14:10:10Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #377 review issues #378 and #379 by narrowing the GO-sourced
+    definition to the GO-level food-vacuole claim and removing a Cowman-backed membrane-localization
+    statement from the Lamarque-backed Plasmodium falciparum canonical example.'
   llm_assisted: true
 synonyms:
 - synonym_text: digestive vacuole
@@ -59,8 +64,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:5833
   taxon_label: Plasmodium falciparum
-  note: Human malaria parasite whose food-vacuole fraction has been profiled by proteomics
-    and whose digestive-vacuole membrane has long been experimentally localized.
+  note: Human malaria parasite whose food-vacuole fraction was isolated and profiled
+    by proteomics.
   reference: DOI:10.1002/prca.200700112
 functions:
 - function_id: hemoglobin_catabolism

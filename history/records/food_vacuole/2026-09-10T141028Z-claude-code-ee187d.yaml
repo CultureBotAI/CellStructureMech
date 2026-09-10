@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/food_vacuole.yaml
+  slug: food_vacuole
+session:
+  id: 2026-09-10T141028Z-claude-code-ee187d
+  timestamp: '2026-09-10T14:10:28Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/378
+  - https://github.com/CultureBotAI/CellStructureMech/issues/379
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/377
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed food vacuole adversarial review
+  details: 'Addressed PR #377 review issues #378 and #379 by narrowing the GO-sourced definition
+    to the GO-level food-vacuole claim and narrowing the Plasmodium falciparum canonical example
+    to the Lamarque et al. 2008 food-vacuole proteomics evidence.'
