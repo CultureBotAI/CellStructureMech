@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/polar_tube.yaml
+  slug: polar_tube
+session:
+  id: 2026-09-10T134222Z-claude-code-acdf56
+  timestamp: '2026-09-10T13:42:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO-grounded polar tube structure record
+  details: Created data/structures/spore/polar_tube.yaml for GO:0044099 polar tube, including
+    a reviewed-label-only polar tube protein component, Microsporidia and Nosema bombycis
+    scope, host-cell invasion and sporoplasm-delivery functions, record evidence, a nonmechanistic
+    polar-filament eversion graph, and an open PTP grounding TODO.
