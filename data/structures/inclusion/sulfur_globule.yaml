@@ -27,12 +27,16 @@ curation_history:
   changes: Changed CHEBI:33403 component and graph node labels from elemental sulfur
     core to the ChEBI canonical label elemental sulfur.
   llm_assisted: true
+- timestamp: '2026-09-10T09:17:34Z'
+  curator: claude
+  action: EDITED_RECORD
+  changes: Removed GO:0016234 parentage because the GO inclusion body term denotes
+    aggregated proteins or other biopolymers, not elemental sulfur storage globules.
+  llm_assisted: true
 synonyms:
 - synonym_text: intracellular sulfur globule
   synonym_type: EXACT_SYNONYM
   source: DOI:10.1159/000351335
-parent_structures:
-- GO:0016234
 components:
 - component_id: elemental_sulfur_core
   label: elemental sulfur
