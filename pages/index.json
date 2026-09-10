@@ -342,6 +342,15 @@
   "definition": "A cytoplasmic prokaryotic inclusion body in which polyhydroxyalkanoate storage polymers condense with granule-associated proteins, including PHA synthases and phasins, to form hydrophobic carbon- and reducing-power storage granules."
  },
  {
+  "identifier": "cellstructuremech:sulfur_globule",
+  "label": "sulfur globule",
+  "category": "INCLUSION",
+  "kind": "INCLUSION_BODY",
+  "status": "PROPOSED",
+  "page": "structures/inclusion/sulfur_globule.html",
+  "definition": "A bacterial sulfur storage inclusion that accumulates elemental sulfur from reduced sulfur compounds and packages it with sulfur-globule envelope proteins for temporary storage and later oxidation."
+ },
+ {
   "identifier": "GO:0020022",
   "label": "acidocalcisome",
   "category": "MEMBRANE_ORGANELLE",

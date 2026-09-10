@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/sulfur_globule.yaml
+  slug: sulfur_globule
+session:
+  id: 2026-09-10T090839Z-claude-code-649a87
+  timestamp: '2026-09-10T09:08:39Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  summary: Align the sulfur globule ChEBI label
+  details: Changed the CHEBI:33403 component and causal-graph node display label from elemental
+    sulfur core to the ChEBI canonical elemental sulfur after the id-label gate caught the
+    mismatch.

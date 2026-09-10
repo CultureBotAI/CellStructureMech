@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sulfur globule · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>sulfur globule</h1>
+<p class="meta"><code>cellstructuremech:sulfur_globule</code> · INCLUSION · INCLUSION_BODY · <span class="status">PROPOSED</span></p>
+<p class="definition">A bacterial sulfur storage inclusion that accumulates elemental sulfur from reduced sulfur compounds and packages it with sulfur-globule envelope proteins for temporary storage and later oxidation. <small>[<a href="https://doi.org/10.1159/000351335"><code>DOI:10.1159/000351335</code></a>]</small></p>
+<p><strong>Synonyms:</strong> intracellular sulfur globule</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-elemental_sulfur_core"><td>elemental sulfur</td><td>SMALL_MOLECULE</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/CHEBI_33403"><code>CHEBI:33403</code></a></td><td></td><td></td><td>ESSENTIAL</td><td>Stored elemental sulfur that forms the globule core and is mobilized during subsequent sulfur oxidation.<ul class="evidence"><li><a href="https://doi.org/10.1159/000351335"><code>DOI:10.1159/000351335</code></a> <small>Maki 2013 reviews intracellular sulfur globules as elemental-sulfur storage inclusions in sulfur-oxidizing bacteria.</small></li></ul></td></tr>
+<tr id="components-sgpa_sgpb_envelope_proteins"><td>SgpA/SgpB sulfur globule envelope proteins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>sgpA, sgpB</td><td></td><td>CONDITIONAL</td><td>Hydrophobic envelope proteins that coat sulfur globules and are jointly required for normal globule formation.<ul class="evidence"><li><a href="https://doi.org/10.1007/s00203-004-0683-3"><code>DOI:10.1007/s00203-004-0683-3</code></a> <small>Prange et al. 2004 mutagenized Allochromatium vinosum sgpA, sgpB and sgpC and showed that SgpA/SgpB support normal sulfur-globule formation.</small></li><li><a href="https://doi.org/10.1159/000351335"><code>DOI:10.1159/000351335</code></a> <small>Maki 2013 reviews SgpA-family proteins as structural proteins associated with bacterial intracellular sulfur globules.</small></li></ul></td></tr>
+<tr id="components-sgpc_envelope_protein"><td>SgpC sulfur globule envelope protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>sgpC</td><td></td><td>CONDITIONAL</td><td>Small sulfur-globule envelope protein required for normal globule expansion in Allochromatium vinosum.<ul class="evidence"><li><a href="https://doi.org/10.1007/s00203-004-0683-3"><code>DOI:10.1007/s00203-004-0683-3</code></a> <small>Prange et al. 2004 found that sgpC disruption affected Allochromatium vinosum sulfur-globule expansion.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2"><code>NCBITaxon:2</code></a> Bacteria — <strong>VARIABLE</strong>: Intracellular sulfur globules occur in multiple sulfur-oxidizing bacterial groups but are absent from most bacteria. [<a href="https://doi.org/10.1159/000351335"><code>DOI:10.1159/000351335</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_572477"><code>NCBITaxon:572477</code></a> <em>Allochromatium vinosum DSM 180</em> — Purple sulfur bacterium used for SgpA, SgpB and SgpC sulfur globule protein mutagenesis. [<a href="https://doi.org/10.1007/s00203-004-0683-3"><code>DOI:10.1007/s00203-004-0683-3</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>temporary elemental sulfur storage</strong> — Sulfur globules sequester elemental sulfur formed during reduced sulfur oxidation and retain it as an intracellular reserve for later oxidation.<ul class="evidence"><li><a href="https://doi.org/10.1159/000351335"><code>DOI:10.1159/000351335</code></a> <small>Maki 2013 reviews intracellular sulfur globules as temporary sulfur reservoirs in sulfur-oxidizing bacteria.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-sgp_envelope_elemental_sulfur_storage">Sgp envelope proteins package stored sulfur <small>(ASSEMBLY)</small></h3>
+<p>Elemental sulfur accumulates as a globule core while SgpA, SgpB and SgpC envelope proteins support normal sulfur globule formation and expansion.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>SgpA/SgpB sulfur globule envelope proteins</td><td>form envelope around</td><td>elemental sulfur</td><td><ul class="evidence"><li><a href="https://doi.org/10.1007/s00203-004-0683-3"><code>DOI:10.1007/s00203-004-0683-3</code></a> <small>Prange et al. 2004 identified SgpA and SgpB as sulfur-globule proteins and assayed their roles by mutagenesis.</small></li></ul></td></tr>
+<tr><td>SgpC sulfur globule envelope protein</td><td>supports expansion of</td><td>sulfur globule</td><td><ul class="evidence"><li><a href="https://doi.org/10.1007/s00203-004-0683-3"><code>DOI:10.1007/s00203-004-0683-3</code></a> <small>Prange et al. 2004 linked sgpC to normal sulfur globule expansion in Allochromatium vinosum.</small></li></ul></td></tr>
+<tr><td>elemental sulfur</td><td>forms core of</td><td>sulfur globule</td><td><ul class="evidence"><li><a href="https://doi.org/10.1159/000351335"><code>DOI:10.1159/000351335</code></a> <small>Maki 2013 reviews bacterial intracellular sulfur globules as elemental-sulfur inclusions.</small></li></ul></td></tr>
+<tr><td>sulfur globule</td><td>stores</td><td>stored elemental sulfur</td><td><ul class="evidence"><li><a href="https://doi.org/10.1159/000351335"><code>DOI:10.1159/000351335</code></a> <small>Maki 2013 reviews the sulfur storage role of intracellular sulfur globules.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact family groundings for bacterial SgpA/SgpB/SgpC sulfur-globule envelope proteins. <small>Allochromatium vinosum Sgp proteins define the best-studied envelope, but sulfur globule envelopes vary across intracellular and extracellular sulfur-storing bacteria. A first record should not guess exact InterPro, Pfam or NCBIfam accessions without a focused homology pass.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1159/000351335"><code>DOI:10.1159/000351335</code></a> <small>Maki 2013, Bacterial intracellular sulfur globules: structure and function, Journal of Molecular Microbiology and Biotechnology.</small></li><li><a href="https://doi.org/10.1007/s00203-004-0683-3"><code>DOI:10.1007/s00203-004-0683-3</code></a> <small>Prange et al. 2004, Characterization of the sulfur globule proteins of Allochromatium vinosum and mutational analysis of the sulfur globule protein genes, Archives of Microbiology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-10T09:05:46Z</code> claude · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-10T09:06:15Z</code> claude · EXPANDED_RECORD — Added GO inclusion parentage, elemental sulfur and SgpA/SgpB/SgpC components, bacterial taxonomic scope, an Allochromatium vinosum canonical example, a temporary sulfur-storage function, record-level evidence, an Sgp envelope assembly graph and an envelope-protein grounding TODO.</li><li><code>2026-09-10T09:08:27Z</code> claude · EDITED_RECORD — Changed CHEBI:33403 component and graph node labels from elemental sulfur core to the ChEBI canonical label elemental sulfur.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/inclusion/sulfur_globule.yaml"><code>data/structures/inclusion/sulfur_globule.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,196 @@
+identifier: cellstructuremech:sulfur_globule
+label: sulfur globule
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: A bacterial sulfur storage inclusion that accumulates elemental sulfur
+  from reduced sulfur compounds and packages it with sulfur-globule envelope proteins
+  for temporary storage and later oxidation.
+definition_source: DOI:10.1159/000351335
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T09:05:46Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T09:06:15Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO inclusion parentage, elemental sulfur and SgpA/SgpB/SgpC components,
+    bacterial taxonomic scope, an Allochromatium vinosum canonical example, a temporary
+    sulfur-storage function, record-level evidence, an Sgp envelope assembly graph
+    and an envelope-protein grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-10T09:08:27Z'
+  curator: claude
+  action: EDITED_RECORD
+  changes: Changed CHEBI:33403 component and graph node labels from elemental sulfur
+    core to the ChEBI canonical label elemental sulfur.
+  llm_assisted: true
+synonyms:
+- synonym_text: intracellular sulfur globule
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1159/000351335
+parent_structures:
+- GO:0016234
+components:
+- component_id: elemental_sulfur_core
+  label: elemental sulfur
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  grounding: CHEBI:33403
+  essentiality: ESSENTIAL
+  role: Stored elemental sulfur that forms the globule core and is mobilized during
+    subsequent sulfur oxidation.
+  evidence:
+  - reference: DOI:10.1159/000351335
+    notes: Maki 2013 reviews intracellular sulfur globules as elemental-sulfur storage
+      inclusions in sulfur-oxidizing bacteria.
+- component_id: sgpa_sgpb_envelope_proteins
+  label: SgpA/SgpB sulfur globule envelope proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - sgpA
+  - sgpB
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SgpA and SgpB are treated as a sulfur-globule envelope protein
+    pair in Allochromatium vinosum; no exact source-neutral family CURIE was chosen
+    for these hydrophobic, partially redundant globule proteins.
+  role: Hydrophobic envelope proteins that coat sulfur globules and are jointly required
+    for normal globule formation.
+  evidence:
+  - reference: DOI:10.1007/s00203-004-0683-3
+    notes: Prange et al. 2004 mutagenized Allochromatium vinosum sgpA, sgpB and sgpC
+      and showed that SgpA/SgpB support normal sulfur-globule formation.
+  - reference: DOI:10.1159/000351335
+    notes: Maki 2013 reviews SgpA-family proteins as structural proteins associated
+      with bacterial intracellular sulfur globules.
+- component_id: sgpc_envelope_protein
+  label: SgpC sulfur globule envelope protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - sgpC
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SgpC is curated by its experimentally defined sulfur-globule envelope
+    role in Allochromatium vinosum; exact homologous families outside this model system
+    need additional review.
+  role: Small sulfur-globule envelope protein required for normal globule expansion
+    in Allochromatium vinosum.
+  evidence:
+  - reference: DOI:10.1007/s00203-004-0683-3
+    notes: Prange et al. 2004 found that sgpC disruption affected Allochromatium vinosum
+      sulfur-globule expansion.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Intracellular sulfur globules occur in multiple sulfur-oxidizing bacterial
+    groups but are absent from most bacteria.
+  reference: DOI:10.1159/000351335
+canonical_examples:
+- taxon_id: NCBITaxon:572477
+  taxon_label: Allochromatium vinosum DSM 180
+  note: Purple sulfur bacterium used for SgpA, SgpB and SgpC sulfur globule protein
+    mutagenesis.
+  reference: DOI:10.1007/s00203-004-0683-3
+functions:
+- function_id: temporary_sulfur_storage
+  label: temporary elemental sulfur storage
+  description: Sulfur globules sequester elemental sulfur formed during reduced sulfur
+    oxidation and retain it as an intracellular reserve for later oxidation.
+  evidence:
+  - reference: DOI:10.1159/000351335
+    notes: Maki 2013 reviews intracellular sulfur globules as temporary sulfur reservoirs
+      in sulfur-oxidizing bacteria.
+evidence:
+- reference: DOI:10.1159/000351335
+  notes: 'Maki 2013, Bacterial intracellular sulfur globules: structure and function,
+    Journal of Molecular Microbiology and Biotechnology.'
+- reference: DOI:10.1007/s00203-004-0683-3
+  notes: Prange et al. 2004, Characterization of the sulfur globule proteins of Allochromatium
+    vinosum and mutational analysis of the sulfur globule protein genes, Archives
+    of Microbiology.
+causal_graphs:
+- graph_id: sgp_envelope_elemental_sulfur_storage
+  title: Sgp envelope proteins package stored sulfur
+  description: Elemental sulfur accumulates as a globule core while SgpA, SgpB and
+    SgpC envelope proteins support normal sulfur globule formation and expansion.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph links the Sgp envelope proteins to globule formation without
+    asserting a complete sulfur deposition or oxidation mechanism.
+  nodes:
+  - node_id: elemental_sulfur_core
+    label: elemental sulfur
+    node_type: CHEMICAL
+    grounding: CHEBI:33403
+    component_ref: elemental_sulfur_core
+  - node_id: sgpa_sgpb
+    label: SgpA/SgpB sulfur globule envelope proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: sgpa_sgpb_envelope_proteins
+  - node_id: sgpc
+    label: SgpC sulfur globule envelope protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: sgpc_envelope_protein
+  - node_id: sulfur_globule
+    label: sulfur globule
+    node_type: ORGANELLE
+    grounding: cellstructuremech:sulfur_globule
+  - node_id: stored_elemental_sulfur
+    label: stored elemental sulfur
+    node_type: STATE
+  edges:
+  - subject: sgpa_sgpb
+    predicate: form envelope around
+    object: elemental_sulfur_core
+    description: SgpA and SgpB are hydrophobic envelope proteins associated with Allochromatium
+      sulfur globules.
+    evidence:
+    - reference: DOI:10.1007/s00203-004-0683-3
+      notes: Prange et al. 2004 identified SgpA and SgpB as sulfur-globule proteins
+        and assayed their roles by mutagenesis.
+  - subject: sgpc
+    predicate: supports expansion of
+    object: sulfur_globule
+    description: SgpC supports normal growth or expansion of the sulfur globule envelope.
+    evidence:
+    - reference: DOI:10.1007/s00203-004-0683-3
+      notes: Prange et al. 2004 linked sgpC to normal sulfur globule expansion in
+        Allochromatium vinosum.
+  - subject: elemental_sulfur_core
+    predicate: forms core of
+    object: sulfur_globule
+    description: Elemental sulfur is the stored chemical material inside the sulfur
+      globule.
+    evidence:
+    - reference: DOI:10.1159/000351335
+      notes: Maki 2013 reviews bacterial intracellular sulfur globules as elemental-sulfur
+        inclusions.
+  - subject: sulfur_globule
+    predicate: stores
+    object: stored_elemental_sulfur
+    description: The assembled globule retains elemental sulfur as a temporary intracellular
+      store.
+    evidence:
+    - reference: DOI:10.1159/000351335
+      notes: Maki 2013 reviews the sulfur storage role of intracellular sulfur globules.
+discussions:
+- discussion_id: ground_sulfur_globule_envelope_proteins
+  prompt: Resolve exact family groundings for bacterial SgpA/SgpB/SgpC sulfur-globule
+    envelope proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sgpa_sgpb_envelope_proteins
+  - components#sgpc_envelope_protein
+  rationale: Allochromatium vinosum Sgp proteins define the best-studied envelope,
+    but sulfur globule envelopes vary across intracellular and extracellular sulfur-storing
+    bacteria. A first record should not guess exact InterPro, Pfam or NCBIfam accessions
+    without a focused homology pass.
+  posed_by: claude
+  posed_date: '2026-09-10'

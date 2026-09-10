@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/sulfur_globule.yaml
+  slug: sulfur_globule
+session:
+  id: 2026-09-10T090640Z-claude-code-f690a5
+  timestamp: '2026-09-10T09:06:40Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the sulfur globule record
+  details: Added cellstructuremech:sulfur_globule as a PROPOSED inclusion-body record with
+    GO inclusion parentage, elemental sulfur and SgpA/SgpB/SgpC envelope components, bacterial
+    taxonomic scope, an Allochromatium vinosum DSM 180 canonical example, a temporary elemental
+    sulfur storage function, an Sgp envelope assembly graph, and an envelope-protein grounding
+    TODO backed by sulfur globule review and Allochromatium mutagenesis literature.
