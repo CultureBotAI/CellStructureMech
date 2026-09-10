@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/reservosome.yaml
+  slug: reservosome
+session:
+  id: 2026-09-10T120415Z-claude-619fd8
+  timestamp: '2026-09-10T12:04:15Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/360
+  - https://github.com/CultureBotAI/CellStructureMech/issues/361
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/359
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed reservosome PR review defects
+  details: 'Addressed PR #359 review issues #360 and #361 by adding GO:0043231 as the broader
+    parent for the minted reservosome record and by replacing the endocytic graph degraded-cargo
+    terminal state with an explicit reservosome cargo proteolysis biological-process node.'
