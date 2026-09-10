@@ -27,6 +27,12 @@ curation_history:
   changes: Removed basal-body-linked genome segregation from top-level functions and
     softened kDNA maxicircle/minicircle essentiality to UNKNOWN.
   llm_assisted: true
+- timestamp: '2026-09-10T07:59:48Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #334 by removing the arbitrary KAP1-KAP4 gene-symbol list from
+    the broad kinetoplast-associated proteins component.'
+  llm_assisted: true
 synonyms:
 - synonym_text: kinetoplast DNA network
   synonym_type: EXACT_SYNONYM
@@ -84,11 +90,6 @@ components:
   grounding_notes: Kinetoplast-associated proteins are curated here as the compacting
     KAP cohort bound to kDNA; they are several unrelated families, so one protein-family
     CURIE would be too broad.
-  gene_symbols:
-  - KAP1
-  - KAP2
-  - KAP3
-  - KAP4
   role: DNA-binding proteins associated with the kinetoplast network that contribute
     to kDNA condensation and organization.
   evidence:
