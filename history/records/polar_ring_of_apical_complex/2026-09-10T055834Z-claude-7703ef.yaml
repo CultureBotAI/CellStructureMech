@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/polar_ring_of_apical_complex.yaml
+  slug: polar_ring_of_apical_complex
+session:
+  id: 2026-09-10T055834Z-claude-7703ef
+  timestamp: '2026-09-10T05:58:34Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the polar ring of apical complex record
+  details: Created GO:0020031 polar ring of apical complex as a cytoskeleton record. Added
+    GO synonyms, apical-complex parthood, APR2-to-APR7, APR2, and RNG1 protein components,
+    rare eukaryotic and variable Apicomplexa taxonomic scope, Toxoplasma gondii as a canonical
+    example, F-actin flux and motility/invasion functions, and an APR2/F-actin function graph
+    backed by Tran et al. 2010 and Ren et al. 2024 evidence.
