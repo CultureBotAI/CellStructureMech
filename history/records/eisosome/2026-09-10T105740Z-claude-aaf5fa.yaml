@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/eisosome.yaml
+  slug: eisosome
+session:
+  id: 2026-09-10T105740Z-claude-aaf5fa
+  timestamp: '2026-09-10T10:57:40Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO-grounded eisosome structure record
+  details: Created data/structures/other/eisosome.yaml for GO:0032126 eisosome, including
+    GO substructure links, Pil1/Lsp1 and Sur7 constituents, Fungi and Saccharomyces cerevisiae
+    scope, literature evidence, a Pil1/Lsp1 MCC scaffold assembly graph, and an open Sur7-family
+    grounding TODO.

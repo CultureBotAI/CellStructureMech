@@ -1,0 +1,187 @@
+identifier: GO:0032126
+label: eisosome
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: A cell part that is composed of the eisosome membrane or MCC domain, a
+  furrow-like plasma membrane sub-domain and associated integral transmembrane proteins,
+  and the proteins (eisosome filaments) that form a scaffolding lattice on the cytoplasmic
+  face. Eisosomes broadly affect overall plasma membrane organization.
+definition_source: GO:0032126
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T10:54:49Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T10:56:47Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added eisosome filament and MCC has_part links, Pil1/Lsp1 and Sur7 constituents,
+    fungal taxonomic scope, a Saccharomyces cerevisiae canonical example, a plasma-membrane-domain
+    organization function, record-level literature evidence, an MCC scaffold assembly
+    graph and a grounding TODO for Sur7-family membrane proteins.
+  llm_assisted: true
+- timestamp: '2026-09-10T11:04:19Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #351 by removing GO-only whole-part terminal edges from the eisosome
+    assembly graph; resolved #352 by narrowing the Saccharomyces cerevisiae canonical
+    example to the discovery and Sur7-localization claims directly supported by Walther
+    et al. 2006.'
+  llm_assisted: true
+synonyms:
+- synonym_text: MCC/eisosome
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev-micro-091313-103507
+has_part:
+- GO:0036286
+- GO:0090512
+components:
+- component_id: pil1_lsp1_bar_core
+  label: Pil1/Lsp1 BAR-domain eisosome core
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR028245
+  gene_symbols:
+  - PIL1
+  - LSP1
+  role: Fungal BAR-domain proteins that form the cytoplasmic eisosome filament scaffold.
+  evidence:
+  - reference: DOI:10.1091/mbc.e10-12-1021
+    notes: Olivera-Couto et al. 2011 identified Pil1 and Lsp1 as the BAR-domain core
+      components of Saccharomyces cerevisiae eisosomes.
+  - reference: DOI:10.1083/jcb.201104040
+    notes: Karotki et al. 2011 reconstituted purified yeast Pil1 and Lsp1 into filaments
+      and membrane-associated scaffolds.
+- component_id: sur7_membrane_protein
+  label: Sur7 MCC integral membrane protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SUR7
+  role: An integral plasma-membrane protein that localizes to the membrane-compartment-of-Can1
+    domain within eisosomes.
+  evidence:
+  - reference: DOI:10.1038/nature04472
+    notes: Walther et al. 2006 identified the plasma-membrane protein Sur7 as an eisosome-localized
+      protein.
+  - reference: DOI:10.1146/annurev-micro-091313-103507
+    notes: Douglas and Konopka 2014 reviewed Sur7-family proteins as integral proteins
+      of fungal MCC/eisosome domains.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam or NCBIfam accession for
+    the Sur7-family eisosome membrane proteins was curated in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: VARIABLE
+  note: MCC/eisosome domains have been described across diverse fungi, but the structure
+    and component set vary by lineage.
+  reference: DOI:10.1146/annurev-micro-091313-103507
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which immobile plasma-membrane eisosomes were first
+    named and the plasma-membrane protein Sur7 was localized to those domains.
+  reference: DOI:10.1038/nature04472
+functions:
+- function_id: plasma_membrane_domain_organization
+  label: plasma-membrane domain organization
+  description: Eisosomes scaffold stable furrow-like MCC domains in the fungal plasma
+    membrane.
+  evidence:
+  - reference: DOI:10.1083/jcb.201104040
+    notes: Karotki et al. 2011 connected Pil1/Lsp1 filament assembly to a membrane
+      scaffold at eisosomes.
+  - reference: DOI:10.1146/annurev-micro-091313-103507
+    notes: Douglas and Konopka 2014 reviewed MCC/eisosomes as stable plasma-membrane
+      domains in fungi.
+evidence:
+- reference: GO:0032126
+  notes: Gene Ontology cellular-component term for eisosome.
+- reference: GO:0036286
+  notes: Gene Ontology cellular-component term for eisosome filament.
+- reference: GO:0090512
+  notes: Gene Ontology cellular-component term for eisosome membrane domain/MCC.
+- reference: DOI:10.1038/nature04472
+  notes: Walther et al. 2006, Eisosomes mark static sites of endocytosis, Nature.
+- reference: DOI:10.1091/mbc.e08-03-0313
+  notes: Moreira et al. 2009, Pil1 Controls Eisosome Biogenesis, Molecular Biology
+    of the Cell.
+- reference: DOI:10.1091/mbc.e10-12-1021
+  notes: Olivera-Couto et al. 2011, The eisosome core is composed of BAR domain proteins,
+    Molecular Biology of the Cell.
+- reference: DOI:10.1083/jcb.201104040
+  notes: Karotki et al. 2011, Eisosome proteins assemble into a membrane scaffold,
+    Journal of Cell Biology.
+- reference: DOI:10.1146/annurev-micro-091313-103507
+  notes: 'Douglas and Konopka 2014, Fungal membrane organization: the eisosome concept,
+    Annual Review of Microbiology.'
+causal_graphs:
+- graph_id: pil1_lsp1_eisosome_scaffold
+  title: Pil1/Lsp1 filaments scaffold MCC/eisosome furrows
+  description: Pil1/Lsp1 BAR-domain proteins assemble into eisosome filaments on the
+    cytoplasmic face of MCC membrane domains, producing a paired protein scaffold
+    and plasma-membrane furrow.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: pil1_lsp1_bar_core
+    label: Pil1/Lsp1 BAR-domain eisosome core
+    node_type: GENE_OR_PROTEIN
+    component_ref: pil1_lsp1_bar_core
+  - node_id: sur7_membrane_protein
+    label: Sur7 MCC integral membrane protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: sur7_membrane_protein
+  - node_id: eisosome_filament
+    label: eisosome filament
+    node_type: STRUCTURE
+    grounding: GO:0036286
+  - node_id: eisosome_membrane_domain
+    label: eisosome membrane domain/MCC
+    node_type: STRUCTURE
+    grounding: GO:0090512
+  edges:
+  - subject: pil1_lsp1_bar_core
+    predicate: assembles into
+    object: eisosome_filament
+    description: Pil1 and Lsp1 make up the BAR-domain core that forms eisosome filaments.
+    evidence:
+    - reference: DOI:10.1091/mbc.e10-12-1021
+      notes: Olivera-Couto et al. 2011 established Pil1 and Lsp1 as the BAR-domain
+        core components of Saccharomyces cerevisiae eisosomes.
+  - subject: pil1_lsp1_bar_core
+    predicate: scaffolds
+    object: eisosome_membrane_domain
+    description: Purified Pil1 and Lsp1 form filamentous scaffolds that associate
+      with membranes.
+    evidence:
+    - reference: DOI:10.1083/jcb.201104040
+      notes: Karotki et al. 2011 showed that purified Pil1 and Lsp1 assemble into
+        eisosome-like membrane scaffolds.
+  - subject: sur7_membrane_protein
+    predicate: localizes to
+    object: eisosome_membrane_domain
+    description: Sur7 marks the MCC membrane domain that is paired with eisosome filaments.
+    evidence:
+    - reference: DOI:10.1038/nature04472
+      notes: Walther et al. 2006 found that the plasma-membrane protein Sur7 localizes
+        to eisosomes.
+discussions:
+- discussion_id: ground_sur7_family
+  prompt: Resolve exact family groundings for Sur7 and other integral membrane proteins
+    of MCC/eisosome domains.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sur7_membrane_protein
+  rationale: This first record includes the experimentally established Sur7 MCC marker,
+    but no exact source-neutral family CURIE was curated for the Sur7-family membrane
+    proteins. Nce102 and additional MCC/eisosome residents should be added only after
+    their component boundaries and exact family groundings are resolved.
+  evidence:
+  - reference: DOI:10.1146/annurev-micro-091313-103507
+  posed_by: claude
+  posed_date: '2026-09-10'
