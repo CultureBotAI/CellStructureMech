@@ -1,0 +1,220 @@
+identifier: GO:0070258
+label: inner membrane pellicle complex
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: An apicomplexan double-membrane pellicle structure formed by flattened
+  vesicles beneath the plasma membrane.
+definition_source: GO:0070258
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T12:31:27Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T12:32:11Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added IMC synonymy, intracellular membrane-bounded-organelle parentage,
+    flattened alveolar membrane and alveolin-network components, Apicomplexa and Plasmodium
+    falciparum scope, pellicle-shape, daughter-cell scaffold and glideosome-anchoring
+    functions, a nonmechanistic IMC scaffold graph, and a grounding TODO for exact
+    IMC protein cohorts.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+synonyms:
+- synonym_text: inner membrane complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.3389/fcimb.2020.611801
+components:
+- component_id: flattened_imc_alveolar_membranes
+  label: flattened IMC alveolar membranes
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The flattened vesicles that make up the apicomplexan inner membrane
+    complex are the membranes of GO:0070258 itself; no narrower source-neutral lipid
+    or membrane CURIE was curated for this first record.
+  role: Flattened double-membrane cisternae that lie beneath the parasite plasma membrane
+    and form the membranous part of the apicomplexan pellicle.
+  evidence:
+  - reference: DOI:10.3389/fcimb.2020.611801
+    notes: Ferreira et al. 2021 review the IMC as a double membrane organelle beneath
+      the plasma membrane in Plasmodium and other apicomplexan parasites.
+  - reference: DOI:10.1242/jcs.099002
+    notes: Dearnley et al. 2012 resolved flattened subpellicular membrane compartments
+      beneath the Plasmodium falciparum gametocyte plasma membrane.
+- component_id: alveolin_subpellicular_network
+  label: alveolin subpellicular network
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Alveolins are an alveolate-specific, repeat-containing protein
+    family on the cytoplasmic face of the inner membrane complex, but no exact family
+    CURIE was curated for the first GO:0070258 record.
+  role: Peripheral membrane proteins that form a cytoskeletal network on the cytoplasmic
+    face of the IMC.
+  evidence:
+  - reference: DOI:10.3389/fcimb.2020.611801
+    notes: Ferreira et al. 2021 review alveolins as Alveolata-specific IMC proteins
+      that form a subpellicular network at the IMC cytoplasmic face.
+  - reference: DOI:10.1093/molbev/mss081
+    notes: Kono et al. 2012 analysed Plasmodium alveolin proteins in inner-membrane-complex
+      architecture across asexual and sexual malaria-parasite stages.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: COMMON
+  note: The inner membrane complex is a pellicle organelle of apicomplexan parasites,
+    with stage-specific architecture in Plasmodium and lineage-specific functional
+    differences.
+  reference: DOI:10.3389/fcimb.2020.611801
+canonical_examples:
+- taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  note: Human malaria parasite in which the IMC has been studied through asexual and
+    sexual stages, including gametocyte subpellicular-membrane assembly.
+  reference: DOI:10.1093/molbev/mss081
+functions:
+- function_id: pellicle_shape_support
+  label: pellicle shape support
+  description: The IMC and associated subpellicular proteins stabilize parasite morphology
+    as part of the apicomplexan pellicle.
+  evidence:
+  - reference: DOI:10.3389/fcimb.2020.611801
+    notes: Ferreira et al. 2021 review the Plasmodium IMC as a compartment that confers
+      cell stability and shape.
+- function_id: daughter_cell_scaffolding
+  label: daughter-cell scaffolding
+  description: The IMC provides a scaffold for apicomplexan daughter-cell formation
+    during parasite replication.
+  evidence:
+  - reference: DOI:10.1093/molbev/mss081
+    notes: Kono et al. 2012 followed IMC architecture during asexual and sexual Plasmodium
+      development.
+  - reference: DOI:10.3389/fcimb.2020.611801
+    notes: Ferreira et al. 2021 review the IMC as an important scaffold during daughter-cell
+      formation in Plasmodium spp.
+- function_id: glideosome_anchoring_for_motility
+  label: glideosome anchoring for motility
+  description: The apicomplexan IMC anchors gliding-motility machinery used for parasite
+    movement and host-cell invasion.
+  evidence:
+  - reference: DOI:10.3389/fcimb.2020.611801
+    notes: Ferreira et al. 2021 review the IMC as the anchor for the actin-myosin
+      glideosome that powers gliding motility and invasion.
+evidence:
+- reference: DOI:10.3389/fcimb.2020.611801
+  notes: Ferreira et al. 2021, The Dynamic Roles of the Inner Membrane Complex in
+    the Multiple Stages of the Malaria Parasite, Frontiers in Cellular and Infection
+    Microbiology.
+- reference: DOI:10.1093/molbev/mss081
+  notes: Kono et al. 2012, Evolution and architecture of the inner membrane complex
+    in asexual and sexual stages of the malaria parasite, Molecular Biology and Evolution.
+- reference: DOI:10.1242/jcs.099002
+  notes: Dearnley et al. 2012, Origin, composition, organization and function of the
+    inner membrane complex of Plasmodium falciparum gametocytes, Journal of Cell Science.
+causal_graphs:
+- graph_id: imc_pellicle_shape_scaffold
+  title: IMC membranes and alveolins scaffold the pellicle
+  description: Flattened IMC alveolar membranes and the alveolin subpellicular network
+    form a double-membrane organelle beneath the plasma membrane that supports parasite
+    shape and gliding-motility machinery.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: flattened_imc_alveolar_membranes
+    label: flattened IMC alveolar membranes
+    node_type: STRUCTURE
+    component_ref: flattened_imc_alveolar_membranes
+  - node_id: alveolin_subpellicular_network
+    label: alveolin subpellicular network
+    node_type: GENE_OR_PROTEIN
+    component_ref: alveolin_subpellicular_network
+  - node_id: inner_membrane_pellicle_complex
+    label: inner membrane pellicle complex
+    node_type: ORGANELLE
+    grounding: GO:0070258
+  - node_id: parasite_pellicle
+    label: apicomplexan parasite pellicle
+    node_type: STRUCTURE
+  - node_id: cell_shape_stability
+    label: cell shape stability
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: glideosome
+    label: actin-myosin glideosome
+    node_type: GENE_OR_PROTEIN
+  - node_id: host_cell_invasion
+    label: host-cell invasion
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: flattened_imc_alveolar_membranes
+    predicate: form
+    object: inner_membrane_pellicle_complex
+    description: Closely apposed flattened alveolar membranes form the double-membrane
+      core of the IMC.
+    evidence:
+    - reference: DOI:10.3389/fcimb.2020.611801
+      notes: Ferreira et al. 2021 review the Plasmodium IMC as a double membrane organelle.
+  - subject: alveolin_subpellicular_network
+    predicate: localizes to
+    object: inner_membrane_pellicle_complex
+    description: Alveolins form a peripheral protein network on the cytoplasmic face
+      of the IMC.
+    evidence:
+    - reference: DOI:10.3389/fcimb.2020.611801
+      notes: Ferreira et al. 2021 review alveolins as subpellicular IMC proteins.
+  - subject: inner_membrane_pellicle_complex
+    predicate: is part of
+    object: parasite_pellicle
+    description: The apicomplexan IMC sits beneath the plasma membrane as part of
+      the parasite pellicle.
+    evidence:
+    - reference: DOI:10.3389/fcimb.2020.611801
+      notes: Ferreira et al. 2021 review the relationship between the IMC and parasite
+        pellicle.
+  - subject: inner_membrane_pellicle_complex
+    predicate: supports
+    object: cell_shape_stability
+    description: The IMC supports parasite morphology and cell stability in Plasmodium
+      stages.
+    evidence:
+    - reference: DOI:10.3389/fcimb.2020.611801
+      notes: Ferreira et al. 2021 review IMC roles in cell stability and shape.
+  - subject: inner_membrane_pellicle_complex
+    predicate: anchors
+    object: glideosome
+    description: The IMC anchors the actin-myosin motor used for apicomplexan gliding
+      motility.
+    evidence:
+    - reference: DOI:10.3389/fcimb.2020.611801
+      notes: Ferreira et al. 2021 review glideosome anchoring at the IMC.
+  - subject: glideosome
+    predicate: supports
+    object: host_cell_invasion
+    description: The IMC-anchored glideosome powers motility used during host-cell
+      invasion.
+    evidence:
+    - reference: DOI:10.3389/fcimb.2020.611801
+      notes: Ferreira et al. 2021 review gliding motility and invasion roles for IMC-anchored
+        actin-myosin machinery.
+discussions:
+- discussion_id: ground_imc_protein_cohorts
+  prompt: Resolve exact source-neutral groundings for alveolins, GAPM proteins, inner-membrane-complex
+    subcompartment proteins, and glideosome-associated IMC membrane proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#alveolin_subpellicular_network
+  - causal_graphs#imc_pellicle_shape_scaffold
+  rationale: Plasmodium and Toxoplasma studies define many IMC proteins and several
+    subfamilies, but this first record uses only a broad alveolin protein cohort to
+    avoid overclaiming exact protein-family CURIEs.
+  evidence:
+  - reference: DOI:10.3389/fcimb.2020.611801
+  - reference: DOI:10.1093/molbev/mss081
+  posed_by: claude
+  posed_date: '2026-09-10'
