@@ -20,6 +20,13 @@ curation_history:
     as a canonical example, glycolytic compartmentation and protein import functions,
     a PEX14 import/compartmentation graph, and a peroxin grounding discussion.
   llm_assisted: true
+- timestamp: '2026-09-10T03:10:49Z'
+  curator: claude
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #306 review issues #307, #308 and #309 by softening glycosome
+    membrane origin wording, qualifying Kinetoplastea taxonomic scope, and modeling
+    glycolysis compartmentation as flux control instead of direct metabolite sequestration.'
+  llm_assisted: true
 parent_structures:
 - GO:0005777
 has_part:
@@ -32,7 +39,7 @@ components:
   component_role: CONSTITUENT
   grounding: GO:0046860
   essentiality: ESSENTIAL
-  role: Peroxisome-derived bounding membrane that encloses the glycosomal matrix.
+  role: Peroxisome-related bounding membrane that encloses the glycosomal matrix.
   evidence:
   - reference: DOI:10.1016/0014-5793(77)80476-6
     notes: Opperdoes and Borst 1977 localized Trypanosoma brucei glycolytic enzymes
@@ -84,8 +91,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:5653
   taxon_label: Kinetoplastea
   presence: COMMON
-  note: Glycosomes are specialized peroxisomes of kinetoplastid protists, including
-    trypanosomatid parasites.
+  note: Parent-level proxy for the GO Kinetoplastida order scope; glycosomes are specialized
+    peroxisomes of kinetoplastid protists, with biogenesis best reviewed in trypanosomatid
+    parasites.
   reference: DOI:10.1016/j.bbamcr.2015.09.015
 canonical_examples:
 - taxon_id: NCBITaxon:5691
@@ -153,9 +161,9 @@ causal_graphs:
     label: glycosome lumen
     node_type: STRUCTURE
     grounding: GO:0034468
-  - node_id: glycolytic_intermediates
-    label: glycolytic intermediates
-    node_type: CHEMICAL
+  - node_id: glycolytic_flux_control
+    label: controlled glycolytic flux
+    node_type: BIOLOGICAL_PROCESS
   - node_id: glycosome
     label: glycosome
     node_type: ORGANELLE
@@ -195,11 +203,12 @@ causal_graphs:
     - reference: DOI:10.1016/0014-5793(77)80476-6
       notes: Opperdoes and Borst 1977 localized nine glycolytic enzymes to the T.
         brucei glycosome.
-  - subject: glycosome_lumen
-    predicate: sequesters
-    object: glycolytic_intermediates
-    description: Compartmentation of glycosomal glycolytic enzymes limits toxic accumulation
-      of pathway intermediates.
+  - subject: glycolytic_enzymes
+    predicate: support
+    object: glycolytic_flux_control
+    description: Localization of glycolytic enzymes in the glycosome keeps glucose
+      catabolism controlled and prevents toxic glucose-6-phosphate accumulation after
+      glucose addition.
     evidence:
     - reference: DOI:10.1073/pnas.0806664105
       notes: Haanstra et al. 2008 found that PEX14-deficient trypanosomes accumulated

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/glycosome.yaml
+  slug: glycosome
+session:
+  id: 2026-09-10T031055Z-claude-code-d48940
+  timestamp: '2026-09-10T03:10:55Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/307
+  - https://github.com/CultureBotAI/CellStructureMech/issues/308
+  - https://github.com/CultureBotAI/CellStructureMech/issues/309
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/306
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - composition
+  - taxonomy
+  - causal_graphs
+  summary: Address glycosome PR review issues
+  details: 'Addressed PR #306 adversarial review by softening the glycosome membrane role
+    from peroxisome-derived to peroxisome-related, qualifying NCBITaxon:5653 as a parent proxy
+    for the GO Kinetoplastida scope, and remodeling the final glycosome graph edge around
+    glycolytic flux control instead of direct intermediate sequestration.'
