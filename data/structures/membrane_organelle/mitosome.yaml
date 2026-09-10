@@ -1,0 +1,216 @@
+identifier: GO:0032047
+label: mitosome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A double-membrane-bounded organelle that functions in iron-sulfur protein
+  maturation; evolutionarily derived from mitochondria. The mitosome has been detected
+  only in anaerobic or microaerophilic organisms that do not have mitochondria, such
+  as Entamoeba histolytica, Giardia intestinalis and several species of Microsporidia.
+  These organisms are not capable of gaining energy from oxidative phosphorylation,
+  which is normally performed by mitochondria.
+definition_source: GO:0032047
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T03:44:22Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T03:44:53Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added parentage, double-membrane envelope, ISC and import component groups,
+    rare eukaryotic, Entamoeba and Microsporidia taxonomic scope, Entamoeba histolytica
+    as a canonical example, Fe-S assembly and protein import functions, an ISC assembly
+    graph, and grounding TODOs for mitosomal substructures and grouped protein machinery.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+part_of:
+- GO:0005737
+components:
+- component_id: mitosomal_envelope
+  label: mitosomal double-membrane envelope
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO has an exact whole-mitosome term but no exact mitosomal envelope,
+    inner membrane, or outer membrane cellular-component terms in the current ontology.
+  role: Mitochondrion-derived double membrane that encloses the reduced mitosome matrix.
+  evidence:
+  - reference: DOI:10.1046/j.1365-2958.1999.01414.x
+    notes: Tovar et al. 1999 identified the Entamoeba histolytica mitosome as a mitochondrion-related
+      organelle.
+  - reference: DOI:10.1038/nature00949
+    notes: Williams et al. 2002 identified a mitochondrion remnant in the microsporidian
+      Trachipleistophora hominis.
+- component_id: mitosomal_isc_machinery
+  label: mitosomal iron-sulfur cluster assembly machinery
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The mitosomal ISC module groups multiple imported assembly factors;
+    exact source-neutral family CURIEs for the full module were not curated.
+  role: Mitochondrial-type factors that assemble iron-sulfur clusters in Giardia and
+    microsporidian mitosomes.
+  evidence:
+  - reference: DOI:10.1038/nature01945
+    notes: Tovar et al. 2003 showed that Giardia mitochondrial remnant organelles
+      function in iron-sulfur protein maturation.
+  - reference: DOI:10.1038/nature06606
+    notes: Goldberg et al. 2008 localized functional iron-sulfur cluster assembly
+      proteins to microsporidian mitosomes.
+- component_id: mitosomal_import_machinery
+  label: mitosomal protein-import machinery
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Mitosomal protein import is mitochondrion-related and divergent;
+    exact complex- or family-level groundings were deferred.
+  role: Machinery that imports nuclear-encoded mitosomal proteins into the reduced
+    mitochondrion-related organelle.
+  evidence:
+  - reference: DOI:10.1038/nature01945
+    notes: Tovar et al. 2003 detected Giardia ISC proteins inside mitosomes, implying
+      organelle import of nuclear-encoded machinery.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Mitosomes occur patchily in anaerobic or microaerophilic microbial eukaryotes
+    that have reduced mitochondria.
+  reference: DOI:10.1111/jeu.12922
+- taxon_id: NCBITaxon:5759
+  taxon_label: Entamoeba histolytica
+  presence: COMMON
+  note: The early mitosome record was defined from Entamoeba histolytica trophozoites.
+  reference: DOI:10.1046/j.1365-2958.1999.01414.x
+- taxon_id: NCBITaxon:6029
+  taxon_label: Microsporidia
+  presence: VARIABLE
+  note: Microsporidian mitochondrion remnants have been described in Trachipleistophora
+    and functionally tested in Encephalitozoon.
+  reference: DOI:10.1038/nature06606
+canonical_examples:
+- taxon_id: NCBITaxon:5759
+  taxon_label: Entamoeba histolytica
+  note: Amitochondrial parasite in which the mitosome was defined as a mitochondrion-related
+    organelle.
+  reference: DOI:10.1046/j.1365-2958.1999.01414.x
+functions:
+- function_id: mitosomal_fe_s_cluster_assembly
+  label: mitosomal iron-sulfur cluster assembly
+  description: Mitosomes retain imported mitochondrial-type ISC machinery that supports
+    iron-sulfur protein maturation.
+  evidence:
+  - reference: DOI:10.1038/nature01945
+    notes: Tovar et al. 2003 showed that Giardia mitosomes function in iron-sulfur
+      protein maturation.
+  - reference: DOI:10.1038/nature06606
+    notes: Goldberg et al. 2008 showed that microsporidian mitosomal ISC proteins
+      are functional.
+- function_id: mitosomal_protein_import
+  label: mitosomal protein import
+  description: Nuclear-encoded proteins are imported into the mitosome, which lacks
+    its own organellar genome.
+  evidence:
+  - reference: DOI:10.1038/nature01945
+    notes: Tovar et al. 2003 localized nuclear-encoded ISC machinery to Giardia mitosomes.
+evidence:
+- reference: DOI:10.1046/j.1365-2958.1999.01414.x
+  notes: Tovar et al. 1999, The mitosome, a novel organelle related to mitochondria
+    in the amitochondrial parasite Entamoeba histolytica, Molecular Microbiology.
+- reference: DOI:10.1038/nature01945
+  notes: Tovar et al. 2003, Mitochondrial remnant organelles of Giardia function in
+    iron-sulphur protein maturation, Nature.
+- reference: DOI:10.1038/nature00949
+  notes: Williams et al. 2002, A mitochondrial remnant in the microsporidian Trachipleistophora
+    hominis, Nature.
+- reference: DOI:10.1038/nature06606
+  notes: Goldberg et al. 2008, Localization and functionality of microsporidian iron-sulphur
+    cluster assembly proteins, Nature.
+- reference: DOI:10.1073/pnas.0907106106
+  notes: Mi-ichi et al. 2009, Mitosomes in Entamoeba histolytica contain a sulfate
+    activation pathway, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1111/jeu.12922
+  notes: 'Tachezy 2022, Hydrogenosomes and mitosomes: Mitochondria of anaerobic eukaryotes,
+    Journal of Eukaryotic Microbiology.'
+causal_graphs:
+- graph_id: mitosomal_isc_assembly
+  title: Mitosomal import supports iron-sulfur cluster assembly
+  description: A double mitosomal envelope encloses imported mitochondrial-type ISC
+    proteins that drive iron-sulfur cluster assembly in the reduced organelle.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: mitosomal_envelope
+    label: mitosomal double-membrane envelope
+    node_type: STRUCTURE
+    component_ref: mitosomal_envelope
+  - node_id: mitosome
+    label: mitosome
+    node_type: ORGANELLE
+    grounding: GO:0032047
+  - node_id: mitosomal_import_machinery
+    label: mitosomal protein-import machinery
+    node_type: GENE_OR_PROTEIN
+    component_ref: mitosomal_import_machinery
+  - node_id: mitosomal_isc_machinery
+    label: mitosomal iron-sulfur cluster assembly machinery
+    node_type: GENE_OR_PROTEIN
+    component_ref: mitosomal_isc_machinery
+  - node_id: iron_sulfur_cluster_assembly
+    label: iron-sulfur cluster assembly
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: mitosomal_envelope
+    predicate: bounds
+    object: mitosome
+    description: The mitosomal envelope encloses the reduced mitochondrion-related
+      organelle.
+    evidence:
+    - reference: DOI:10.1046/j.1365-2958.1999.01414.x
+      notes: Tovar et al. 1999 defined the Entamoeba mitosome as a mitochondrion-related
+        organelle.
+  - subject: mitosomal_import_machinery
+    predicate: imports
+    object: mitosomal_isc_machinery
+    description: Mitosomal protein-import machinery loads nuclear-encoded ISC factors
+      into the organelle.
+    evidence:
+    - reference: DOI:10.1038/nature01945
+      notes: Tovar et al. 2003 localized Giardia ISC machinery to mitosomes.
+  - subject: mitosomal_isc_machinery
+    predicate: resides in
+    object: mitosome
+    description: Mitochondrial-type ISC components accumulate in the mitosome.
+    evidence:
+    - reference: DOI:10.1038/nature06606
+      notes: Goldberg et al. 2008 localized functional ISC proteins to microsporidian
+        mitosomes.
+  - subject: mitosomal_isc_machinery
+    predicate: supports
+    object: iron_sulfur_cluster_assembly
+    description: The mitosomal ISC pathway supports iron-sulfur cluster assembly.
+    evidence:
+    - reference: DOI:10.1038/nature01945
+      notes: Tovar et al. 2003 showed that Giardia mitosomes function in iron-sulfur
+        protein maturation.
+discussions:
+- discussion_id: mitosomal_component_grounding
+  prompt: Resolve exact source-neutral groundings for mitosomal envelope substructures,
+    ISC factors and protein-import machinery.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mitosomal_envelope
+  - components#mitosomal_isc_machinery
+  - components#mitosomal_import_machinery
+  rationale: The first mitosome record uses reviewed label-only component groups because
+    GO lacks exact mitosome substructure terms and exact protein-family groundings
+    were not curated.
+  posed_by: claude
+  posed_date: '2026-09-10'

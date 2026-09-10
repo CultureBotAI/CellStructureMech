@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitosome.yaml
+  slug: mitosome
+session:
+  id: 2026-09-10T034503Z-codex-03f13e
+  timestamp: '2026-09-10T03:45:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the mitosome record
+  details: Created GO:0032047 mitosome as a membrane-bounded organelle record. Added parentage,
+    double-membrane envelope, iron-sulfur cluster assembly and protein-import machinery as
+    component groups, rare eukaryotic, Entamoeba histolytica and Microsporidia taxonomic scope,
+    Entamoeba histolytica as the canonical model, Fe-S assembly and protein-import functions,
+    a mitosomal ISC assembly graph, and primary/review literature for the Entamoeba mitosome,
+    Giardia Fe-S maturation, microsporidian mitosomes and Entamoeba sulfate activation.
