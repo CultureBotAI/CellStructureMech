@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/contractile_vacuole.yaml
+  slug: contractile_vacuole
+session:
+  id: 2026-09-10T082014Z-claude-code-5479f7
+  timestamp: '2026-09-10T08:20:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/336
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/335
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  summary: Remove membrane from contractile vacuole components
+  details: 'Addressed PR #335 review issue #336 by removing the GO:0031164 contractile vacuolar
+    membrane from molecular components and removing its stale causal-graph component_ref while
+    retaining GO:0031164 as a has_part substructure and as the grounded membrane node in the
+    function graph.'
