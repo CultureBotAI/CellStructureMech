@@ -16,9 +16,9 @@ curation_history:
   curator: claude
   action: EXPANDED_RECORD
   changes: Added GO non-membrane-bounded-organelle parentage and chloroplast parthood,
-    pyrenoid tubule substructure, Rubisco and EPYC1 components, Eukaryota and Chlamydomonas
-    taxonomic scope, carbon fixation and matrix-phase-separation functions, record-level
-    evidence, an EPYC1/Rubisco matrix assembly graph, and an EPYC1 grounding TODO.
+    Rubisco and EPYC1 components, Eukaryota and Chlamydomonas taxonomic scope, a carbon
+    fixation function, record-level evidence, an EPYC1/Rubisco matrix assembly graph,
+    and an EPYC1 grounding TODO.
   llm_assisted: true
 - timestamp: '2026-09-10T07:09:25Z'
   curator: claude
@@ -26,12 +26,17 @@ curation_history:
   changes: Aligned GO:0048492 Rubisco component and graph labels with the canonical
     GO label, and removed GO:1990732 from the narrower pyrenoid matrix graph node.
   llm_assisted: true
+- timestamp: '2026-09-10T07:25:56Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #331 by removing the overbroad GO:0160223 pyrenoid tubule has_part
+    assertion; resolved #332 by removing the assembly-stage Rubisco matrix phase-separation
+    item from top-level functions.'
+  llm_assisted: true
 parent_structures:
 - GO:0043232
 part_of:
 - GO:0009507
-has_part:
-- GO:0160223
 components:
 - component_id: rubisco_holoenzyme
   label: ribulose bisphosphate carboxylase complex
@@ -100,17 +105,6 @@ functions:
   - reference: DOI:10.1093/plcell/koad157
     notes: He, Crans, and Jonikas 2023 review the pyrenoid as the eukaryotic CO2-concentrating
       organelle.
-- function_id: rubisco_matrix_phase_separation
-  label: Rubisco matrix phase separation
-  description: The Chlamydomonas pyrenoid matrix forms by multivalent interactions
-    between EPYC1 and Rubisco holoenzymes.
-  evidence:
-  - reference: DOI:10.1073/pnas.1522866113
-    notes: Mackinder et al. 2016 established EPYC1 as a Rubisco-linking repeat protein
-      needed for normal pyrenoid formation.
-  - reference: DOI:10.1038/s41467-018-07624-w
-    notes: Wunder et al. 2018 reconstituted liquid droplet formation from Rubisco
-      and EPYC1.
 evidence:
 - reference: DOI:10.1016/j.cell.2017.08.008
   notes: Freeman Rosenzweig et al. 2017, The Eukaryotic CO2-Concentrating Organelle
