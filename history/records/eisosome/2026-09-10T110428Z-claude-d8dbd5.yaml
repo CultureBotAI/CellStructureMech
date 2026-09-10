@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/eisosome.yaml
+  slug: eisosome
+session:
+  id: 2026-09-10T110428Z-claude-d8dbd5
+  timestamp: '2026-09-10T11:04:28Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/351
+  - https://github.com/CultureBotAI/CellStructureMech/issues/352
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/350
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed eisosome PR review findings
+  details: 'Resolved PR #350 review issues #351 and #352 by removing GO-definition-only whole-part
+    edges from the eisosome assembly graph and narrowing the Saccharomyces cerevisiae canonical
+    example note to the discovery and Sur7-localization claims directly supported by Walther
+    et al. 2006.'

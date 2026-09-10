@@ -22,6 +22,14 @@ curation_history:
     organization function, record-level literature evidence, an MCC scaffold assembly
     graph and a grounding TODO for Sur7-family membrane proteins.
   llm_assisted: true
+- timestamp: '2026-09-10T11:04:19Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #351 by removing GO-only whole-part terminal edges from the eisosome
+    assembly graph; resolved #352 by narrowing the Saccharomyces cerevisiae canonical
+    example to the discovery and Sur7-localization claims directly supported by Walther
+    et al. 2006.'
+  llm_assisted: true
 synonyms:
 - synonym_text: MCC/eisosome
   synonym_type: RELATED_SYNONYM
@@ -74,8 +82,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model in which immobile plasma-membrane eisosomes and the Pil1/Lsp1/Sur7
-    core were first characterized.
+  note: Budding-yeast model in which immobile plasma-membrane eisosomes were first
+    named and the plasma-membrane protein Sur7 was localized to those domains.
   reference: DOI:10.1038/nature04472
 functions:
 - function_id: plasma_membrane_domain_organization
@@ -114,8 +122,8 @@ causal_graphs:
 - graph_id: pil1_lsp1_eisosome_scaffold
   title: Pil1/Lsp1 filaments scaffold MCC/eisosome furrows
   description: Pil1/Lsp1 BAR-domain proteins assemble into eisosome filaments on the
-    cytoplasmic face of MCC membrane domains, producing the paired filament and furrow
-    architecture of an eisosome.
+    cytoplasmic face of MCC membrane domains, producing a paired protein scaffold
+    and plasma-membrane furrow.
   graph_kind: ASSEMBLY
   scope_status: MECHANISTIC
   nodes:
@@ -135,10 +143,6 @@ causal_graphs:
     label: eisosome membrane domain/MCC
     node_type: STRUCTURE
     grounding: GO:0090512
-  - node_id: eisosome
-    label: eisosome
-    node_type: STRUCTURE
-    grounding: GO:0032126
   edges:
   - subject: pil1_lsp1_bar_core
     predicate: assembles into
@@ -165,24 +169,6 @@ causal_graphs:
     - reference: DOI:10.1038/nature04472
       notes: Walther et al. 2006 found that the plasma-membrane protein Sur7 localizes
         to eisosomes.
-  - subject: eisosome_filament
-    predicate: forms cytoplasmic scaffold of
-    object: eisosome
-    description: GO defines the eisosome filament as a cytoplasmic-face scaffold that
-      is part of the eisosome.
-    evidence:
-    - reference: GO:0032126
-      notes: GO:0032126 describes eisosome filaments as the proteins that form the
-        cytoplasmic scaffolding lattice of the eisosome.
-  - subject: eisosome_membrane_domain
-    predicate: forms membrane furrow of
-    object: eisosome
-    description: GO defines the MCC membrane domain as the furrow-like plasma-membrane
-      subdomain of the eisosome.
-    evidence:
-    - reference: GO:0032126
-      notes: GO:0032126 describes the eisosome membrane or MCC domain as the furrow-like
-        plasma-membrane subdomain of the eisosome.
 discussions:
 - discussion_id: ground_sur7_family
   prompt: Resolve exact family groundings for Sur7 and other integral membrane proteins
