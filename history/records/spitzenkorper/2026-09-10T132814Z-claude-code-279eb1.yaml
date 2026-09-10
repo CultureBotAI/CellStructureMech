@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/spitzenkorper.yaml
+  slug: spitzenkorper
+session:
+  id: 2026-09-10T132814Z-claude-code-279eb1
+  timestamp: '2026-09-10T13:28:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/372
+  - https://github.com/CultureBotAI/CellStructureMech/issues/373
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/371
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address spitzenkorper review issues
+  details: Narrowed the Neurospora crassa canonical-example note to the Zheng 2020 Spitzenkorper
+    scaffold-module evidence, and removed the underspecified exocyst tethering node and edge
+    from the first nonmechanistic vesicle-supply graph.

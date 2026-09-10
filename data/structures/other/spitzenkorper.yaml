@@ -1,0 +1,218 @@
+identifier: GO:0031521
+label: spitzenkorper
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: A structure within the hyphal tip of filamentous fungi that acts as an
+  organizing center for hyphal growth.
+definition_source: GO:0031521
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T13:18:11Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T13:19:19Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added Spitzenkorper synonymy, hyphal-tip parthood, secretory-vesicle, actin-filament
+    and scaffold components, variable fungal scope, a Neurospora crassa canonical
+    example, a hyphal tip-growth function, record-level literature evidence, a nonmechanistic
+    vesicle-supply graph and a grounding TODO for SPK-localized vesicle and scaffold
+    classes.
+  llm_assisted: true
+- timestamp: '2026-09-10T13:19:46Z'
+  curator: claude
+  action: TIGHTENED_GRAPH
+  changes: Typed the Spitzenkorper graph node as a STRUCTURE and removed an unused
+    apical plasma membrane node from the first vesicle-supply graph.
+  llm_assisted: true
+- timestamp: '2026-09-10T13:28:05Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #371 review issues #372 and #373 by removing the underspecified
+    exocyst tethering graph edge and narrowing the Neurospora crassa canonical example
+    to the Zheng 2020 scaffold modules.'
+  llm_assisted: true
+- timestamp: '2026-09-10T13:28:29Z'
+  curator: claude
+  action: TIGHTENED_GRAPH
+  changes: Updated the Spitzenkorper vesicle-supply graph description to match the
+    post-review graph after removing the exocyst edge.
+  llm_assisted: true
+synonyms:
+- synonym_text: Spitzenkörper
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.mib.2014.04.003
+- synonym_text: SPK
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41467-020-16712-9
+part_of:
+- GO:0001411
+components:
+- component_id: spitzenkorper_secretory_vesicles
+  label: Spitzenkorper secretory vesicles
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Secretory microvesicles and macrovesicles are grouped by their
+    Spitzenkorper-localized pool; no exact GO or protein-family CURIE was curated
+    for the two vesicle classes in this pass.
+  role: Post-Golgi secretory vesicles concentrated in distinct Spitzenkorper layers
+    before delivery to the apical plasma membrane.
+  evidence:
+  - reference: DOI:10.1111/j.1365-2958.2009.06917.x
+    notes: Verdin et al. 2009 localized Neurospora crassa microvesicle and macrovesicle
+      markers to distinct Spitzenkorper layers.
+  - reference: DOI:10.1038/s41467-020-16712-9
+    notes: Zheng et al. 2020 followed Neurospora post-Golgi microvesicle and macrovesicle
+      markers at the Spitzenkorper.
+- component_id: spitzenkorper_actin_filaments
+  label: Spitzenkorper actin filaments
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: F-actin is modeled as a Spitzenkorper-localized filament pool rather
+    than as a single actin protein family.
+  role: Actin filaments in the Spitzenkorper core that participate in polarized vesicle
+    organization at the hyphal apex.
+  evidence:
+  - reference: DOI:10.1016/j.mib.2014.04.003
+    notes: Riquelme and Sanchez-Leon 2014 reviewed the Spitzenkorper as a multicomponent
+      structure that includes cytoskeletal elements.
+  - reference: DOI:10.1038/s41467-020-16712-9
+    notes: Zheng et al. 2020 assayed Spitzenkorper F-actin and its scaffold-dependent
+      organization in Neurospora crassa.
+- component_id: spitzenkorper_scaffold_proteins
+  label: Spitzenkorper scaffold proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SPA-2
+  - JNS-1
+  - LAH-2
+  - SPZ-1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SPA-2/JNS-1 and LAH-2/SPZ-1 are Neurospora Spitzenkorper-localized
+    scaffold or adaptor proteins; no source-neutral accession for the whole scaffold
+    cohort was curated.
+  role: Protein scaffolds and adaptors that reside at the Spitzenkorper and recruit
+    polarity effectors in Neurospora crassa.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-16712-9
+    notes: Zheng et al. 2020 identified SPA-2/JNS-1 and LAH-2 scaffold modules transported
+      to the Spitzenkorper by MYO-5 via SPZ-1.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: VARIABLE
+  note: Recognizable Spitzenkorper occur in diverse hyphal fungi and organize tip
+    growth, but they are not asserted here to be universal across all fungal lineages
+    or growth states.
+  reference: DOI:10.1128/MMBR.00068-17
+canonical_examples:
+- taxon_id: NCBITaxon:5141
+  taxon_label: Neurospora crassa
+  note: Filamentous-fungal model in which SPA-2/JNS-1 and LAH-2 scaffold modules of
+    the Spitzenkorper have been experimentally dissected.
+  reference: DOI:10.1038/s41467-020-16712-9
+functions:
+- function_id: hyphal_tip_growth_organization
+  label: hyphal tip-growth organization
+  description: The Spitzenkorper acts as a vesicle supply center that organizes polarized
+    secretion for fungal hyphal extension.
+  evidence:
+  - reference: DOI:10.1016/j.mib.2014.04.003
+    notes: Riquelme and Sanchez-Leon 2014 reviewed the Spitzenkorper as a fungal hyphal
+      growth and morphogenesis organizer.
+  - reference: DOI:10.1128/MMBR.00068-17
+    notes: Riquelme et al. 2018 review polarized hyphal growth and Spitzenkorper-associated
+      vesicle traffic in fungal morphogenesis.
+evidence:
+- reference: GO:0031521
+  notes: Gene Ontology cellular-component term for spitzenkorper.
+- reference: DOI:10.1016/j.mib.2014.04.003
+  notes: 'Riquelme and Sanchez-Leon 2014, The Spitzenkorper: a choreographer of fungal
+    growth and morphogenesis, Current Opinion in Microbiology.'
+- reference: DOI:10.1111/j.1365-2958.2009.06917.x
+  notes: Verdin et al. 2009, Functional stratification of the Spitzenkorper of Neurospora
+    crassa, Molecular Microbiology.
+- reference: DOI:10.1128/MMBR.00068-17
+  notes: Riquelme et al. 2018, Fungal Morphogenesis, from the Polarized Growth of
+    Hyphae to Complex Reproduction and Infection Structures, Microbiology and Molecular
+    Biology Reviews.
+- reference: DOI:10.1038/s41467-020-16712-9
+  notes: Zheng et al. 2020, Spitzenkorper assembly mechanisms reveal conserved features
+    of fungal and metazoan polarity scaffolds, Nature Communications.
+causal_graphs:
+- graph_id: spitzenkorper_vesicle_supply
+  title: Spitzenkorper vesicles support hyphal tip growth
+  description: Secretory vesicle layers and protein scaffolds localize to the Spitzenkorper,
+    connecting the vesicle supply center to polarized fungal hyphal extension.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: spitzenkorper_secretory_vesicles
+    label: Spitzenkorper secretory vesicles
+    node_type: STRUCTURE
+    component_ref: spitzenkorper_secretory_vesicles
+  - node_id: spitzenkorper_scaffold_proteins
+    label: Spitzenkorper scaffold proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: spitzenkorper_scaffold_proteins
+  - node_id: spitzenkorper
+    label: spitzenkorper
+    node_type: STRUCTURE
+    grounding: GO:0031521
+  - node_id: polarized_hyphal_growth
+    label: polarized hyphal growth
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: spitzenkorper_secretory_vesicles
+    predicate: accumulates in
+    object: spitzenkorper
+    description: Microvesicle and macrovesicle markers form stratified pools at the
+      Neurospora Spitzenkorper.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2009.06917.x
+      notes: Verdin et al. 2009 showed functional stratification of Neurospora Spitzenkorper
+        vesicle populations.
+  - subject: spitzenkorper_scaffold_proteins
+    predicate: localizes to
+    object: spitzenkorper
+    description: SPA-2/JNS-1 and LAH-2 scaffold modules are transported to the Spitzenkorper
+      through a MYO-5 and SPZ-1-dependent pathway.
+    evidence:
+    - reference: DOI:10.1038/s41467-020-16712-9
+      notes: Zheng et al. 2020 identified interacting scaffold complexes that reside
+        at the Neurospora Spitzenkorper.
+  - subject: spitzenkorper
+    predicate: supports
+    object: polarized_hyphal_growth
+    description: The Spitzenkorper acts as a vesicle supply center for polarized growth
+      of filamentous fungal hyphae.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2014.04.003
+      notes: Riquelme and Sanchez-Leon 2014 reviewed Spitzenkorper organization of
+        hyphal growth and morphogenesis.
+discussions:
+- discussion_id: ground_spitzenkorper_vesicle_and_scaffold_classes
+  prompt: Resolve exact source-neutral groundings for Spitzenkorper microvesicles,
+    macrovesicles, actin filaments and SPA-2/JNS-1 or LAH-2 scaffold cohorts.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#spitzenkorper_secretory_vesicles
+  - components#spitzenkorper_actin_filaments
+  - components#spitzenkorper_scaffold_proteins
+  rationale: The first Spitzenkorper record groups localized vesicle pools and Neurospora
+    scaffold proteins by experimentally defined SPK residency rather than guessing
+    gene-family or vesicle-class CURIEs.
+  evidence:
+  - reference: DOI:10.1111/j.1365-2958.2009.06917.x
+  - reference: DOI:10.1038/s41467-020-16712-9
+  posed_by: claude
+  posed_date: '2026-09-10'
