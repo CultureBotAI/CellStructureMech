@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ciliary_pocket_collar.yaml
+  slug: ciliary_pocket_collar
+session:
+  id: 2026-09-09T193650Z-codex-2ade5b
+  timestamp: '2026-09-09T19:36:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the ciliary pocket collar record
+  details: Created GO:1990900 ciliary pocket collar as a cytoskeleton multi-protein-complex
+    record. Added GO ciliary-pocket parthood, BILBO1, FPC4 and BILBO2 as experimentally characterized
+    flagellar pocket collar constituents, Trypanosoma brucei as the canonical model, assembly
+    and coupling functions, a BILBO1/FPC4/BILBO2 assembly graph, and primary/review literature
+    for FPC biogenesis and BILBO-family protein interactions.
