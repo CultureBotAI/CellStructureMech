@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/nucleoid/kinetoplast.yaml
+  slug: kinetoplast
+session:
+  id: 2026-09-10T074125Z-claude-438bab
+  timestamp: '2026-09-10T07:41:25Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the kinetoplast record
+  details: Added GO:0020023 kinetoplast as a PROPOSED nucleoid-category structure with maxicircle,
+    minicircle and KAP components, Kinetoplastea taxonomic scope, a Trypanosoma brucei canonical
+    example, a mitochondrial genome organization function, a kDNA network assembly graph, and
+    a grounding TODO backed by kinetoplast primary and review literature.

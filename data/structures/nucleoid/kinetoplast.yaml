@@ -1,0 +1,234 @@
+identifier: GO:0020023
+label: kinetoplast
+structure_category: NUCLEOID
+structure_kind: SUBCELLULAR_REGION
+definition: A sub-structure within the large single mitochondrion of kinetoplastid
+  parasites and which is closely associated with the flagellar pocket and basal body
+  of the flagellum.
+definition_source: GO:0020023
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T07:39:48Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T07:40:38Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added kDNA maxicircle, kDNA minicircle and KAP components, Kinetoplastea
+    taxonomic scope, Trypanosoma brucei as a canonical example, mitochondrial genome
+    organization and basal-body-linked segregation functions, record-level evidence,
+    a kDNA network assembly graph, UniProt SL xref, and a component grounding discussion.
+  llm_assisted: true
+- timestamp: '2026-09-10T07:51:40Z'
+  curator: claude
+  action: REFINED_RECORD
+  changes: Removed basal-body-linked genome segregation from top-level functions and
+    softened kDNA maxicircle/minicircle essentiality to UNKNOWN.
+  llm_assisted: true
+synonyms:
+- synonym_text: kinetoplast DNA network
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/EC.1.4.495-502.2002
+- synonym_text: kDNA network
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/EC.1.4.495-502.2002
+part_of:
+- GO:0005739
+xrefs:
+- uniprot.location:SL-0150
+components:
+- component_id: kdna_minicircles
+  label: kinetoplast DNA minicircles
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Kinetoplast minicircles are mitochondrial circular DNA molecules
+    defined by their kinetoplastid genomic context and guide-RNA payload; no exact
+    SO or source-neutral DNA-class CURIE was curated for this first record.
+  role: Thousands of topologically interlocked circular DNAs whose guide RNAs encode
+    information needed to edit maxicircle transcripts.
+  evidence:
+  - reference: DOI:10.1128/EC.1.4.495-502.2002
+    notes: Lukes et al. 2002 review kDNA as a network of thousands of topologically
+      interlocked minicircles and a few dozen maxicircles.
+  - reference: DOI:10.1093/femsre/fuac047
+    notes: Amodeo et al. 2023 review Trypanosoma brucei kDNA minicircles as the abundant
+      circular DNAs of the kinetoplast network.
+- component_id: kdna_maxicircles
+  label: kinetoplast DNA maxicircles
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Kinetoplast maxicircles are the coding mitochondrial DNA circles
+    within the kDNA network; no exact SO or source-neutral DNA-class CURIE was curated
+    for this first record.
+  role: Dozens of larger circular DNAs in the kDNA network that encode mitochondrial
+    genes whose transcripts are decoded by guide RNAs.
+  evidence:
+  - reference: DOI:10.1128/EC.1.4.495-502.2002
+    notes: Lukes et al. 2002 review maxicircles as the coding mitochondrial DNA circles
+      interlocked with minicircles in the kinetoplast network.
+  - reference: DOI:10.1146/annurev-micro-092611-150057
+    notes: Jensen and Englund 2012 review kDNA maxicircles as the larger circular
+      DNAs present in low copy number in the kinetoplast.
+- component_id: kinetoplast_associated_proteins
+  label: kinetoplast-associated proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Kinetoplast-associated proteins are curated here as the compacting
+    KAP cohort bound to kDNA; they are several unrelated families, so one protein-family
+    CURIE would be too broad.
+  gene_symbols:
+  - KAP1
+  - KAP2
+  - KAP3
+  - KAP4
+  role: DNA-binding proteins associated with the kinetoplast network that contribute
+    to kDNA condensation and organization.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0187516
+    notes: de Souza et al. 2017 expanded the catalog of kinetoplast-associated proteins
+      and related KAP repertoires to diverse kDNA arrangements in trypanosomatids.
+  - reference: DOI:10.1093/femsre/fuac047
+    notes: Amodeo et al. 2023 review protein factors associated with kinetoplast DNA
+      organization and mitochondrial genome maintenance.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5653
+  taxon_label: Kinetoplastea
+  presence: COMMON
+  note: The kinetoplast is the mitochondrial DNA-containing structure that defines
+    kinetoplastids, although the size, shape, catenation and copy-number organization
+    of kDNA vary across the class.
+  reference: DOI:10.1128/EC.1.4.495-502.2002
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: Trypanosomatid model in which the disk-shaped kDNA network, duplication cycle
+    and basal-body-linked segregation have been studied by serial-section electron
+    microscopy.
+  reference: DOI:10.1128/MCB.01176-10
+functions:
+- function_id: mitochondrial_genome_organization
+  label: mitochondrial genome organization
+  description: The kinetoplast packages the trypanosomatid mitochondrial genome as
+    a condensed, topologically interlocked network of maxicircles and minicircles.
+  evidence:
+  - reference: DOI:10.1128/EC.1.4.495-502.2002
+    notes: Lukes et al. 2002 review the kinetoplast as an improbable network architecture
+      for the kinetoplastid mitochondrial genome.
+  - reference: DOI:10.1093/femsre/fuac047
+    notes: Amodeo et al. 2023 review mitochondrial genome maintenance with a focus
+      on Trypanosoma brucei kDNA.
+evidence:
+- reference: DOI:10.1128/EC.1.4.495-502.2002
+  notes: 'Lukes et al. 2002, Kinetoplast DNA Network: Evolution of an Improbable Structure,
+    Eukaryotic Cell.'
+- reference: DOI:10.1146/annurev.mi.49.100195.001001
+  notes: Shapiro and Englund 1995, The Structure and Replication of Kinetoplast DNA,
+    Annual Review of Microbiology.
+- reference: DOI:10.1146/annurev-micro-092611-150057
+  notes: 'Jensen and Englund 2012, Network News: The Replication of Kinetoplast DNA,
+    Annual Review of Microbiology.'
+- reference: DOI:10.1128/MCB.01176-10
+  notes: Gluenz et al. 2011, The Kinetoplast Duplication Cycle in Trypanosoma brucei
+    Is Orchestrated by Cytoskeleton-Mediated Cell Morphogenesis, Molecular and Cellular
+    Biology.
+- reference: DOI:10.1093/femsre/fuac047
+  notes: Amodeo et al. 2023, Mitochondrial genome maintenance - the kinetoplast story,
+    FEMS Microbiology Reviews.
+- reference: DOI:10.1371/journal.pone.0187516
+  notes: de Souza et al. 2017, Expanded repertoire of kinetoplast associated proteins
+    and unique mitochondrial DNA arrangement of symbiont-bearing trypanosomatids,
+    PLOS ONE.
+- reference: DOI:10.1091/mbc.E02-08-0525
+  notes: Ogbadoyi, Robinson and Gull 2003, A high-order trans-membrane structural
+    linkage is responsible for mitochondrial genome positioning and segregation by
+    flagellar basal bodies in trypanosomes, Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: kdna_network_kinetoplast_organization
+  title: Minicircles and maxicircles form the condensed kDNA network
+  description: Kinetoplast mitochondrial DNA is built from thousands of topologically
+    interlocked minicircles plus dozens of maxicircles. The catenated DNA network
+    and associated KAP proteins form a condensed disk-shaped kinetoplast inside the
+    single mitochondrion.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures network organization, not the enzymology of minicircle
+    or maxicircle replication.
+  nodes:
+  - node_id: kdna_minicircles
+    label: kinetoplast DNA minicircles
+    node_type: GENETIC_ELEMENT
+    component_ref: kdna_minicircles
+  - node_id: kdna_maxicircles
+    label: kinetoplast DNA maxicircles
+    node_type: GENETIC_ELEMENT
+    component_ref: kdna_maxicircles
+  - node_id: catenated_kdna_network
+    label: catenated kDNA network
+    node_type: GENETIC_ELEMENT
+  - node_id: kinetoplast_associated_proteins
+    label: kinetoplast-associated proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: kinetoplast_associated_proteins
+  - node_id: kinetoplast
+    label: kinetoplast
+    node_type: STRUCTURE
+    grounding: GO:0020023
+  edges:
+  - subject: kdna_minicircles
+    predicate: catenate into
+    object: catenated_kdna_network
+    description: Thousands of minicircles are topologically interlocked to form the
+      major repeated DNA species in the kDNA network.
+    evidence:
+    - reference: DOI:10.1128/EC.1.4.495-502.2002
+      notes: Lukes et al. 2002 review minicircle catenation in kinetoplast DNA networks.
+  - subject: kdna_maxicircles
+    predicate: catenate into
+    object: catenated_kdna_network
+    description: Dozens of maxicircles are interlocked with the minicircle network
+      to carry the coding portion of the mitochondrial genome.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-092611-150057
+      notes: Jensen and Englund 2012 review the network of catenated maxicircles and
+        minicircles in kDNA.
+  - subject: kinetoplast_associated_proteins
+    predicate: compact
+    object: catenated_kdna_network
+    description: KAP proteins bind the kinetoplast DNA network and contribute to its
+      condensed mitochondrial organization.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0187516
+      notes: de Souza et al. 2017 localized kinetoplast-associated proteins to kDNA
+        and expanded the known KAP repertoire.
+  - subject: catenated_kdna_network
+    predicate: condenses into
+    object: kinetoplast
+    description: The catenated mitochondrial DNA network forms the disk-shaped kinetoplast
+      in the matrix of the single kinetoplastid mitochondrion.
+    evidence:
+    - reference: DOI:10.1128/EC.1.4.495-502.2002
+      notes: Lukes et al. 2002 describe one kDNA network condensed into a disk-shaped
+        kinetoplast.
+discussions:
+- discussion_id: ground_kdna_and_kap_components
+  prompt: Resolve exact source-neutral groundings for kinetoplast maxicircles, minicircles
+    and KAP protein cohorts, if such terms exist.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#kdna_minicircles
+  - components#kdna_maxicircles
+  - components#kinetoplast_associated_proteins
+  rationale: The first kinetoplast record keeps kDNA circle classes and KAPs label-only
+    to avoid guessing Sequence Ontology or protein-family CURIEs for kinetoplastid-specific
+    grouped components.
+  posed_by: claude
+  posed_date: '2026-09-10'
