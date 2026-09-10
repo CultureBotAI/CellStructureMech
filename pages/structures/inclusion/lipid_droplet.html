@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lipid droplet · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>lipid droplet</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a> · INCLUSION · INCLUSION_BODY · <span class="status">PROPOSED</span></p>
+<p class="definition">An intracellular non-membrane-bounded organelle comprising a matrix of coalesced lipids surrounded by a phospholipid monolayer. May include associated proteins. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a>]</small></p>
+<p><strong>Synonyms:</strong> adiposome; lipid body; lipid particle</p><p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0034430"><code>GO:0034430</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-triglyceride_core"><td>triglyceride</td><td>SMALL_MOLECULE</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/CHEBI_17855"><code>CHEBI:17855</code></a></td><td></td><td></td><td>CONDITIONAL</td><td>Neutral storage-lipid class that accumulates in the hydrophobic droplet core.<ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/29397034"><code>PMID:29397034</code></a> <small>Graef 2018 reviews budding-yeast lipid droplets as organelles dynamically storing neutral triacylglycerols and steryl esters.</small></li><li><a href="https://doi.org/10.1016/j.bbalip.2011.07.015"><code>DOI:10.1016/j.bbalip.2011.07.015</code></a> <small>Grillitsch et al. 2011 analyzed the Saccharomyces cerevisiae lipid-droplet lipidome and proteome.</small></li></ul></td></tr>
+<tr id="components-sterol_ester_core"><td>sterol ester</td><td>SMALL_MOLECULE</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/CHEBI_35915"><code>CHEBI:35915</code></a></td><td></td><td></td><td>CONDITIONAL</td><td>Neutral storage-lipid class that accumulates with triglycerides in the hydrophobic droplet core.<ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/29397034"><code>PMID:29397034</code></a> <small>Graef 2018 reviews steryl esters together with triacylglycerols as the main stored neutral lipids of budding-yeast lipid droplets.</small></li><li><a href="https://doi.org/10.1016/j.bbalip.2011.07.015"><code>DOI:10.1016/j.bbalip.2011.07.015</code></a> <small>Grillitsch et al. 2011 measured steryl-esters and triacylglycerols in Saccharomyces cerevisiae lipid particles/droplets.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4751"><code>NCBITaxon:4751</code></a> Fungi — <strong>VARIABLE</strong>: Lipid droplets are characterized in budding yeast and in the filamentous fungus Aspergillus oryzae, but this first record does not assert ubiquity across all fungi. [<a href="https://doi.org/10.1111/mmi.15170"><code>DOI:10.1111/mmi.15170</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> <em>Saccharomyces cerevisiae</em> — Budding yeast species used to define lipid-droplet neutral-lipid storage and lipidome/proteome composition. [<a href="https://doi.org/10.1016/j.bbalip.2011.07.015"><code>DOI:10.1016/j.bbalip.2011.07.015</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>neutral lipid storage</strong> — Lipid droplets sequester hydrophobic triglycerides and sterol esters as neutral-lipid reserves that can be mobilized by lipases and hydrolases.<ul class="evidence"><li><a href="https://doi.org/10.1007/s00018-015-1903-5"><code>DOI:10.1007/s00018-015-1903-5</code></a> <small>Wang 2015 reviews lipid-droplet biogenesis, growth, inheritance, degradation and lipolytic mobilization in budding yeast.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/29397034"><code>PMID:29397034</code></a> <small>Graef 2018 reviews budding-yeast lipid droplets as dedicated stores of triacylglycerols and steryl esters.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-neutral_lipid_core_storage">Neutral lipids coalesce inside a monolayer droplet <small>(ASSEMBLY)</small></h3>
+<p>Triglycerides and sterol esters form the hydrophobic core of a lipid droplet, which is surrounded by a phospholipid monolayer and stores neutral lipids for later mobilization.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>triglyceride</td><td>forms core of</td><td>lipid droplet</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/29397034"><code>PMID:29397034</code></a> <small>Graef 2018 reviews triacylglycerols as a major neutral-lipid class dynamically stored in budding-yeast lipid droplets.</small></li></ul></td></tr>
+<tr><td>sterol ester</td><td>forms core of</td><td>lipid droplet</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/29397034"><code>PMID:29397034</code></a> <small>Graef 2018 reviews steryl esters as a major neutral-lipid class dynamically stored in budding-yeast lipid droplets.</small></li></ul></td></tr>
+<tr><td>monolayer-surrounded lipid storage body outer lipid monolayer</td><td>surrounds</td><td>lipid droplet</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a> <small>The GO lipid droplet definition describes a coalesced-lipid matrix surrounded by a phospholipid monolayer.</small></li></ul></td></tr>
+<tr><td>lipid droplet</td><td>stores</td><td>stored neutral lipids</td><td><ul class="evidence"><li><a href="https://doi.org/10.1007/s00018-015-1903-5"><code>DOI:10.1007/s00018-015-1903-5</code></a> <small>Wang 2015 reviews storage and mobilization of neutral lipids in budding-yeast lipid droplets.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a> <small>Gene Ontology cellular-component term for lipid droplet.</small></li><li><a href="https://doi.org/10.1007/s00018-015-1903-5"><code>DOI:10.1007/s00018-015-1903-5</code></a> <small>Wang 2015, Lipid droplet dynamics in budding yeast, Cellular and Molecular Life Sciences.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/29397034"><code>PMID:29397034</code></a> <small>Graef 2018, Lipid droplet-mediated lipid and protein homeostasis in budding yeast, FEBS Letters.</small></li><li><a href="https://doi.org/10.1016/j.bbalip.2011.07.015"><code>DOI:10.1016/j.bbalip.2011.07.015</code></a> <small>Grillitsch et al. 2011, Lipid particles/droplets of the yeast Saccharomyces cerevisiae revisited: lipidome meets proteome, Biochimica et Biophysica Acta.</small></li><li><a href="https://doi.org/10.1111/mmi.15170"><code>DOI:10.1111/mmi.15170</code></a> <small>Al Mamun, Reza, and Islam 2023, Identification of novel proteins regulating lipid droplet biogenesis in filamentous fungi, Molecular Microbiology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-10T10:20:26Z</code> claude · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-10T10:22:09Z</code> claude · EXPANDED_RECORD — Added GO exact synonyms and monolayer parthood, ChEBI-grounded triglyceride and sterol-ester core components, fungal taxonomic scope, a Saccharomyces cerevisiae S288C canonical example, neutral-lipid storage function, record-level evidence and a nonmechanistic neutral-lipid storage graph.</li><li><code>2026-09-10T10:31:24Z</code> claude · ADDRESS_REVIEW — Resolved #346 by correcting the Al Mamun lipid-droplet citation year and title; resolved #347 by changing the budding-yeast canonical example from strain-specific Saccharomyces cerevisiae S288C to species-level Saccharomyces cerevisiae.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/inclusion/lipid_droplet.yaml"><code>data/structures/inclusion/lipid_droplet.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
