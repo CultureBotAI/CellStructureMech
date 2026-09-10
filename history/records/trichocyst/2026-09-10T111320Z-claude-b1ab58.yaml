@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/trichocyst.yaml
+  slug: trichocyst
+session:
+  id: 2026-09-10T111320Z-claude-b1ab58
+  timestamp: '2026-09-10T11:13:20Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO-grounded trichocyst structure record
+  details: Created data/structures/membrane_organelle/trichocyst.yaml for GO:0055039 trichocyst,
+    including Paramecium trichocyst matrix proteins, Paramecium tetraurelia scope, trichocyst
+    discharge literature evidence, a matrix discharge graph, and an open trichocyst matrix/tip/membrane
+    grounding TODO.
