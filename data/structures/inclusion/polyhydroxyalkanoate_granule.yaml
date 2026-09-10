@@ -1,0 +1,235 @@
+identifier: GO:0070088
+label: polyhydroxyalkanoate granule
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: A cytoplasmic prokaryotic inclusion body in which polyhydroxyalkanoate
+  storage polymers condense with granule-associated proteins, including PHA synthases
+  and phasins, to form hydrophobic carbon- and reducing-power storage granules.
+definition_source: DOI:10.1128/JB.01723-08
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T08:36:23Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T08:37:20Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO PHA/PHB synonymy, PHA polymer core, PHA synthase and phasin components,
+    bacterial taxonomic scope, a Cupriavidus necator H16 canonical example, a carbon-storage
+    function, record-level evidence, an assembly graph, a phospholipid-monolayer boundary
+    decision and a grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-10T08:45:04Z'
+  curator: claude
+  action: EDITED_RECORD
+  changes: Moved the phospholipid-monolayer boundary discussion from a bare components
+    section anchor to components#pha_polymer_core so the discussion target resolves
+    to an existing local component anchor.
+  llm_assisted: true
+synonyms:
+- synonym_text: PHA granule
+  synonym_type: EXACT_SYNONYM
+  source: GO:0070088
+- synonym_text: PHB granule
+  synonym_type: RELATED_SYNONYM
+  source: GO:0070088
+components:
+- component_id: pha_polymer_core
+  label: polyhydroxyalkanoate polymer core
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: CHEBI:53388 is exact for poly(hydroxybutyrate), a common PHB core
+    polymer, but the GO:0070088 record covers PHA granules with multiple possible
+    hydroxyalkanoate polymer chemistries.
+  role: Hydrophobic polyester storage material that forms the granule core and stores
+    carbon plus reducing power.
+  evidence:
+  - reference: DOI:10.1128/JB.01723-08
+    notes: Jendrossek 2009 reviews PHA granules as intracellular inclusions whose
+      core consists of polyhydroxyalkanoate storage polyester.
+  - reference: DOI:10.1038/srep26612
+    notes: Bresan et al. 2016 analyzed isolated PHA granules and found PHA polymer
+      plus protein, with no detectable phospholipid monolayer.
+- component_id: pha_synthases
+  label: PHA synthases
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  gene_symbols:
+  - phaC
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PHA synthases are grouped by granule-associated polymerization
+    role here; exact family groundings differ between short-chain and medium-chain-length
+    PHA systems and were left for a dedicated family-level curation pass.
+  role: Granule-associated polymerase enzymes that synthesize PHA polyester and remain
+    attached to nascent granules.
+  evidence:
+  - reference: DOI:10.1128/JB.00779-12
+    notes: Pfeiffer and Jendrossek 2012 localized PHB synthase PhaC1 to nascent and
+      mature PHB granules in Cupriavidus necator H16.
+  - reference: DOI:10.1128/JB.01723-08
+    notes: Jendrossek 2009 summarizes PHA synthase as a core PHA granule-associated
+      protein.
+- component_id: phasins
+  label: phasins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Phasins are curated as a granule-surface protein class; no single
+    InterPro, Pfam, or NCBIfam accession was chosen as exact for the heterogeneous
+    phasins that decorate PHA granules across PHA-producing bacteria.
+  role: Amphipathic granule-surface proteins that bind the PHA core and influence
+    granule size, number and surface coverage.
+  evidence:
+  - reference: DOI:10.1128/AEM.01161-16
+    notes: Mezzina and Pettinari 2016 review phasins as the major PHA granule-associated
+      surface proteins.
+  - reference: DOI:10.1128/JB.00779-12
+    notes: Pfeiffer and Jendrossek 2012 localized multiple Cupriavidus necator H16
+      phasins to PHB granules.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: PHA granules occur in phylogenetically diverse bacteria that encode PHA synthesis
+    systems, but are absent from many other bacterial lineages.
+  reference: DOI:10.1128/JB.01723-08
+canonical_examples:
+- taxon_id: NCBITaxon:381666
+  taxon_label: Cupriavidus necator H16
+  note: PHB-accumulating model bacterium, historically Ralstonia eutropha H16, used
+    to localize PhaC, phasins and PhaM during PHB granule formation.
+  reference: DOI:10.1128/JB.00779-12
+functions:
+- function_id: carbon_reducing_power_storage
+  label: carbon and reducing-power storage
+  description: PHA granules store excess carbon and reducing equivalents as intracellular
+    polyester inclusions that can be mobilized when external nutrients become limiting.
+  evidence:
+  - reference: DOI:10.1128/JB.01723-08
+    notes: Jendrossek 2009 reviews bacterial PHA granules as carbon and energy storage
+      inclusions.
+  - reference: DOI:10.1128/AEM.01161-16
+    notes: Mezzina and Pettinari 2016 describe the role of PHA granules as intracellular
+      carbon and reducing-power stores.
+evidence:
+- reference: DOI:10.1128/JB.01723-08
+  notes: Jendrossek 2009, Polyhydroxyalkanoate granules are complex subcellular organelles
+    (carbonosomes), Journal of Bacteriology.
+- reference: DOI:10.1128/AEM.01161-16
+  notes: Mezzina and Pettinari 2016, Phasins, multifaceted polyhydroxyalkanoate granule-associated
+    proteins, Applied and Environmental Microbiology.
+- reference: DOI:10.1038/srep26612
+  notes: Bresan et al. 2016, Polyhydroxyalkanoate (PHA) granules have no phospholipids,
+    Scientific Reports.
+- reference: DOI:10.1128/JB.00779-12
+  notes: Pfeiffer and Jendrossek 2012, Localization of poly(3-hydroxybutyrate) granule-associated
+    proteins during PHB granule formation in Cupriavidus necator H16, Journal of Bacteriology.
+- reference: DOI:10.1186/1471-2180-12-262
+  notes: Wahl et al. 2012, PHB granules are attached to the nucleoid via PhaM in Ralstonia
+    eutropha, BMC Microbiology.
+causal_graphs:
+- graph_id: pha_synthesis_and_surface_coating
+  title: PHA synthases and phasins build protein-coated PHA stores
+  description: PHA synthases produce the hydrophobic polyester core of a PHA granule,
+    while phasins bind the granule surface and regulate surface coverage, granule
+    number and granule size.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures polymerization and surface coating steps without
+    choosing between micelle, budding or scaffold models for the first nucleation
+    event.
+  nodes:
+  - node_id: pha_synthases
+    label: PHA synthases
+    node_type: GENE_OR_PROTEIN
+    component_ref: pha_synthases
+  - node_id: pha_polymer_core
+    label: polyhydroxyalkanoate polymer core
+    node_type: CHEMICAL
+    component_ref: pha_polymer_core
+  - node_id: phasins
+    label: phasins
+    node_type: GENE_OR_PROTEIN
+    component_ref: phasins
+  - node_id: polyhydroxyalkanoate_granule
+    label: polyhydroxyalkanoate granule
+    node_type: ORGANELLE
+    grounding: GO:0070088
+  - node_id: carbon_store
+    label: stored carbon and reducing power
+    node_type: STATE
+  edges:
+  - subject: pha_synthases
+    predicate: polymerize
+    object: pha_polymer_core
+    description: PHA synthases extend hydroxyacyl-CoA substrates into granule PHA
+      polyester.
+    evidence:
+    - reference: DOI:10.1128/JB.01723-08
+      notes: Jendrossek 2009 summarizes PHA synthase-catalyzed PHA formation at granules.
+  - subject: pha_polymer_core
+    predicate: forms core of
+    object: polyhydroxyalkanoate_granule
+    description: The PHA polyester forms the hydrophobic storage core of the granule.
+    evidence:
+    - reference: DOI:10.1038/srep26612
+      notes: Bresan et al. 2016 measured PHA polymer as the dominant chemical fraction
+        of isolated PHA granules.
+  - subject: phasins
+    predicate: coat
+    object: polyhydroxyalkanoate_granule
+    description: Phasins bind to the PHA granule surface and are the major granule-associated
+      surface proteins.
+    evidence:
+    - reference: DOI:10.1128/AEM.01161-16
+      notes: Mezzina and Pettinari 2016 review phasin binding to the PHA granule surface.
+    - reference: DOI:10.1128/JB.00779-12
+      notes: Pfeiffer and Jendrossek 2012 localized multiple phasins to PHB granules
+        in Cupriavidus necator H16.
+  - subject: polyhydroxyalkanoate_granule
+    predicate: stores
+    object: carbon_store
+    description: The assembled granule holds carbon and reducing power in polyester
+      form for later mobilization.
+    evidence:
+    - reference: DOI:10.1128/JB.01723-08
+      notes: Jendrossek 2009 reviews PHA granules as bacterial storage inclusions.
+discussions:
+- discussion_id: exclude_phospholipid_monolayer
+  prompt: Should a phospholipid monolayer be curated as a PHA granule component?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#pha_polymer_core
+  rationale: GO:0070088 still mentions a phospholipid monolayer from the older structural
+    model, but Bresan et al. 2016 reported that purified PHA granules contain PHA
+    and protein and no detectable phospholipids, so the monolayer is deliberately
+    not curated as a component.
+  resolution_note: Leave phospholipids out of components and document the literature
+    conflict here.
+  evidence:
+  - reference: DOI:10.1038/srep26612
+  posed_by: claude
+  posed_date: '2026-09-10'
+  resolved_date: '2026-09-10'
+- discussion_id: ground_generic_pha_granule_components
+  prompt: Resolve exact broad groundings for PHA polymer cores, PHA synthases and
+    phasins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pha_polymer_core
+  - components#pha_synthases
+  - components#phasins
+  rationale: A curated ChEBI match was verified for poly(hydroxybutyrate), but the
+    GO:0070088 record is broader than PHB; likewise, PHA synthase and phasin families
+    are heterogeneous enough that exact family CURIEs need a separate InterPro/Pfam/NCBIfam
+    pass.
+  posed_by: claude
+  posed_date: '2026-09-10'

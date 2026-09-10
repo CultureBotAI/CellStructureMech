@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/polyhydroxyalkanoate_granule.yaml
+  slug: polyhydroxyalkanoate_granule
+session:
+  id: 2026-09-10T083743Z-claude-code-1423a9
+  timestamp: '2026-09-10T08:37:43Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the polyhydroxyalkanoate granule record
+  details: Added GO:0070088 polyhydroxyalkanoate granule as a PROPOSED inclusion-body record
+    with a PHA polymer core, PHA synthase and phasin components, bacterial taxonomic scope,
+    a Cupriavidus necator H16 canonical example, a carbon and reducing-power storage function,
+    a nonmechanistic PHA synthesis and surface-coating graph, a resolved phospholipid-monolayer
+    boundary decision, and a grounding TODO backed by PHA granule primary and review literature.
