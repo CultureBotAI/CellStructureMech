@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Woronin body · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>Woronin body</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0140266"><code>GO:0140266</code></a> · MEMBRANE_ORGANELLE · MEMBRANE_BOUNDED_ORGANELLE · <span class="status">PROPOSED</span></p>
+<p class="definition">A peroxisome-derived dense-core vesicle of filamentous fungi that seals septal pores upon hyphal wounding. <small>[<a href="http://purl.obolibrary.org/obo/GO_0140266"><code>GO:0140266</code></a>]</small></p>
+
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-woronin_body_membrane"><td>Woronin body membrane</td><td>LIPID</td><td>part of</td><td></td><td></td><td></td><td>ESSENTIAL</td><td>Single membrane that surrounds the dense Woronin body core and separates this peroxisome-derived vesicle from the cytosol.<ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200705049"><code>DOI:10.1083/jcb.200705049</code></a> <small>Liu et al. 2008 characterized Woronin bodies as peroxisome-derived membrane-bounded organelles.</small></li></ul></td></tr>
+<tr id="components-hex1_crystalline_core"><td>Hex1 crystalline core</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>hex-1, HEX1</td><td></td><td>ESSENTIAL</td><td>Major dense-core protein that self-assembles into a crystalline lattice required for normal Woronin body septal-pore plugging.<ul class="evidence"><li><a href="https://doi.org/10.1006/fgbi.2000.1230"><code>DOI:10.1006/fgbi.2000.1230</code></a> <small>Tenney et al. 2000 identified hex-1 as a filamentous-fungus gene encoding the major Woronin body protein.</small></li><li><a href="https://doi.org/10.1038/nsb910"><code>DOI:10.1038/nsb910</code></a> <small>Yuan et al. 2003 solved the Neurospora crassa HEX-1 crystal lattice and showed lattice assembly is required for Woronin body function.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_147538"><code>NCBITaxon:147538</code></a> Pezizomycotina — <strong>VARIABLE</strong>: Woronin bodies are specialized peroxisome-derived organelles of filamentous ascomycete fungi; this record does not assert presence across all Ascomycota. [<a href="https://doi.org/10.1083/jcb.200705049"><code>DOI:10.1083/jcb.200705049</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5141"><code>NCBITaxon:5141</code></a> <em>Neurospora crassa</em> — Filamentous ascomycete model in which hex-1 was tied to Woronin body formation and the HEX-1 lattice was structurally linked to septal-pore sealing. [<a href="https://doi.org/10.1038/nsb910"><code>DOI:10.1038/nsb910</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>septal pore sealing</strong> — Woronin bodies plug septal pores after hyphal damage, restricting cytoplasmic bleeding from neighboring filamentous-fungal compartments.<ul class="evidence"><li><a href="https://doi.org/10.1006/fgbi.2000.1230"><code>DOI:10.1006/fgbi.2000.1230</code></a> <small>Tenney et al. 2000 connected Neurospora crassa hex-1 to Woronin bodies and septal-pore plugging.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-hex1_core_septal_pore_plugging">Hex1 crystals build a membrane-bounded septal plug <small>(FUNCTION)</small></h3>
+<p>Hex1 assembles into the dense Woronin body core, the bounding membrane encloses that core, and the resulting organelle plugs septal pores after hyphal damage.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>Hex1 crystalline core</td><td>forms dense core of</td><td>Woronin body</td><td><ul class="evidence"><li><a href="https://doi.org/10.1006/fgbi.2000.1230"><code>DOI:10.1006/fgbi.2000.1230</code></a> <small>Tenney et al. 2000 identified Hex-1 as the major Woronin body protein in Neurospora.</small></li></ul></td></tr>
+<tr><td>Woronin body membrane</td><td>bounds</td><td>Woronin body</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200705049"><code>DOI:10.1083/jcb.200705049</code></a> <small>Liu et al. 2008 studied Woronin body biogenesis as formation of a peroxisome-derived organelle.</small></li></ul></td></tr>
+<tr><td>Woronin body</td><td>plugs</td><td>septal pore</td><td><ul class="evidence"><li><a href="https://doi.org/10.1006/fgbi.2000.1230"><code>DOI:10.1006/fgbi.2000.1230</code></a> <small>Tenney et al. 2000 showed that Woronin bodies function as septal-pore plugs.</small></li></ul></td></tr>
+<tr><td>septal pore</td><td>is sealed to create</td><td>sealed wounded hypha</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nsb910"><code>DOI:10.1038/nsb910</code></a> <small>Yuan et al. 2003 linked HEX-1 lattice assembly to efficient resealing of damaged Neurospora hyphae.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact family groundings for Woronin body Hex1, WSC, Leashin and Pex11 biogenesis or tethering factors. <small>This first record curates Hex1 as the experimentally defined dense-core protein. WSC, Leashin and Pex11 participate in Woronin body biogenesis and positioning, but exact source-neutral family groundings and component boundaries should be resolved before adding them as components or associated machinery.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140266"><code>GO:0140266</code></a> <small>Gene Ontology cellular-component term for Woronin body.</small></li><li><a href="https://doi.org/10.1006/fgbi.2000.1230"><code>DOI:10.1006/fgbi.2000.1230</code></a> <small>Tenney et al. 2000, hex-1, a gene unique to filamentous fungi, encodes the major protein of the Woronin body and functions as a plug for septal pores, Fungal Genetics and Biology.</small></li><li><a href="https://doi.org/10.1038/nsb910"><code>DOI:10.1038/nsb910</code></a> <small>Yuan et al. 2003, A HEX-1 crystal lattice required for Woronin body function in Neurospora crassa, Nature Structural Biology.</small></li><li><a href="https://doi.org/10.1083/jcb.200705049"><code>DOI:10.1083/jcb.200705049</code></a> <small>Liu et al. 2008, Making two organelles from one: Woronin body biogenesis by peroxisomal protein sorting, Journal of Cell Biology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-10T10:38:39Z</code> claude · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-10T10:39:12Z</code> claude · EXPANDED_RECORD — Added a bounding membrane and reviewed-label-only Hex1 crystalline core, Pezizomycotina taxonomic scope, a Neurospora crassa canonical example, a septal-pore sealing function, record-level evidence, a nonmechanistic pore-plugging graph and a grounding TODO for Woronin body biogenesis factors.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/woronin_body.yaml"><code>data/structures/membrane_organelle/woronin_body.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

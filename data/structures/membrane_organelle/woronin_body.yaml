@@ -1,0 +1,170 @@
+identifier: GO:0140266
+label: Woronin body
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A peroxisome-derived dense-core vesicle of filamentous fungi that seals
+  septal pores upon hyphal wounding.
+definition_source: GO:0140266
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T10:38:39Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T10:39:12Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added a bounding membrane and reviewed-label-only Hex1 crystalline core,
+    Pezizomycotina taxonomic scope, a Neurospora crassa canonical example, a septal-pore
+    sealing function, record-level evidence, a nonmechanistic pore-plugging graph
+    and a grounding TODO for Woronin body biogenesis factors.
+  llm_assisted: true
+components:
+- component_id: woronin_body_membrane
+  label: Woronin body membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Single membrane that surrounds the dense Woronin body core and separates this
+    peroxisome-derived vesicle from the cytosol.
+  evidence:
+  - reference: DOI:10.1083/jcb.200705049
+    notes: Liu et al. 2008 characterized Woronin bodies as peroxisome-derived membrane-bounded
+      organelles.
+- component_id: hex1_crystalline_core
+  label: Hex1 crystalline core
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hex-1
+  - HEX1
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Hex1/HEX-1 is curated by its experimentally defined Woronin-body
+    core role in filamentous fungi; no exact source-neutral InterPro, Pfam or NCBIfam
+    family CURIE was chosen for this first record.
+  role: Major dense-core protein that self-assembles into a crystalline lattice required
+    for normal Woronin body septal-pore plugging.
+  evidence:
+  - reference: DOI:10.1006/fgbi.2000.1230
+    notes: Tenney et al. 2000 identified hex-1 as a filamentous-fungus gene encoding
+      the major Woronin body protein.
+  - reference: DOI:10.1038/nsb910
+    notes: Yuan et al. 2003 solved the Neurospora crassa HEX-1 crystal lattice and
+      showed lattice assembly is required for Woronin body function.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:147538
+  taxon_label: Pezizomycotina
+  presence: VARIABLE
+  note: Woronin bodies are specialized peroxisome-derived organelles of filamentous
+    ascomycete fungi; this record does not assert presence across all Ascomycota.
+  reference: DOI:10.1083/jcb.200705049
+canonical_examples:
+- taxon_id: NCBITaxon:5141
+  taxon_label: Neurospora crassa
+  note: Filamentous ascomycete model in which hex-1 was tied to Woronin body formation
+    and the HEX-1 lattice was structurally linked to septal-pore sealing.
+  reference: DOI:10.1038/nsb910
+functions:
+- function_id: septal_pore_sealing
+  label: septal pore sealing
+  description: Woronin bodies plug septal pores after hyphal damage, restricting cytoplasmic
+    bleeding from neighboring filamentous-fungal compartments.
+  evidence:
+  - reference: DOI:10.1006/fgbi.2000.1230
+    notes: Tenney et al. 2000 connected Neurospora crassa hex-1 to Woronin bodies
+      and septal-pore plugging.
+evidence:
+- reference: GO:0140266
+  notes: Gene Ontology cellular-component term for Woronin body.
+- reference: DOI:10.1006/fgbi.2000.1230
+  notes: Tenney et al. 2000, hex-1, a gene unique to filamentous fungi, encodes the
+    major protein of the Woronin body and functions as a plug for septal pores, Fungal
+    Genetics and Biology.
+- reference: DOI:10.1038/nsb910
+  notes: Yuan et al. 2003, A HEX-1 crystal lattice required for Woronin body function
+    in Neurospora crassa, Nature Structural Biology.
+- reference: DOI:10.1083/jcb.200705049
+  notes: 'Liu et al. 2008, Making two organelles from one: Woronin body biogenesis
+    by peroxisomal protein sorting, Journal of Cell Biology.'
+causal_graphs:
+- graph_id: hex1_core_septal_pore_plugging
+  title: Hex1 crystals build a membrane-bounded septal plug
+  description: Hex1 assembles into the dense Woronin body core, the bounding membrane
+    encloses that core, and the resulting organelle plugs septal pores after hyphal
+    damage.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures core formation and pore plugging without asserting
+    the full WSC-, Leashin- or Pex11-dependent biogenesis and tethering pathway.
+  nodes:
+  - node_id: hex1_crystalline_core
+    label: Hex1 crystalline core
+    node_type: GENE_OR_PROTEIN
+    component_ref: hex1_crystalline_core
+  - node_id: woronin_body_membrane
+    label: Woronin body membrane
+    node_type: STRUCTURE
+    component_ref: woronin_body_membrane
+  - node_id: woronin_body
+    label: Woronin body
+    node_type: ORGANELLE
+    grounding: GO:0140266
+  - node_id: septal_pore
+    label: septal pore
+    node_type: STRUCTURE
+  - node_id: wounded_hypha_sealed
+    label: sealed wounded hypha
+    node_type: STATE
+  edges:
+  - subject: hex1_crystalline_core
+    predicate: forms dense core of
+    object: woronin_body
+    description: Hex1 is the major protein in the Woronin body dense core.
+    evidence:
+    - reference: DOI:10.1006/fgbi.2000.1230
+      notes: Tenney et al. 2000 identified Hex-1 as the major Woronin body protein
+        in Neurospora.
+  - subject: woronin_body_membrane
+    predicate: bounds
+    object: woronin_body
+    description: A membrane derived through peroxisomal sorting surrounds the Woronin
+      body dense core.
+    evidence:
+    - reference: DOI:10.1083/jcb.200705049
+      notes: Liu et al. 2008 studied Woronin body biogenesis as formation of a peroxisome-derived
+        organelle.
+  - subject: woronin_body
+    predicate: plugs
+    object: septal_pore
+    description: Woronin bodies move to and plug septal pores after hyphal wounding.
+    evidence:
+    - reference: DOI:10.1006/fgbi.2000.1230
+      notes: Tenney et al. 2000 showed that Woronin bodies function as septal-pore
+        plugs.
+  - subject: septal_pore
+    predicate: is sealed to create
+    object: wounded_hypha_sealed
+    description: Septal pore plugging limits cytoplasmic loss from damaged hyphal
+      compartments.
+    evidence:
+    - reference: DOI:10.1038/nsb910
+      notes: Yuan et al. 2003 linked HEX-1 lattice assembly to efficient resealing
+        of damaged Neurospora hyphae.
+discussions:
+- discussion_id: ground_woronin_body_biogenesis_factors
+  prompt: Resolve exact family groundings for Woronin body Hex1, WSC, Leashin and
+    Pex11 biogenesis or tethering factors.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#hex1_crystalline_core
+  rationale: This first record curates Hex1 as the experimentally defined dense-core
+    protein. WSC, Leashin and Pex11 participate in Woronin body biogenesis and positioning,
+    but exact source-neutral family groundings and component boundaries should be
+    resolved before adding them as components or associated machinery.
+  evidence:
+  - reference: DOI:10.1083/jcb.200705049
+  posed_by: claude
+  posed_date: '2026-09-10'
