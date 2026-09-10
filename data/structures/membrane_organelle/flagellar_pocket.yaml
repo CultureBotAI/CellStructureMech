@@ -1,0 +1,176 @@
+identifier: GO:0020016
+label: flagellar pocket
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: Invagination of the plasma membrane from which a flagellum protrudes.
+definition_source: GO:0020016
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T12:13:38Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T12:14:11Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added FP synonymy, ciliary pocket membrane and ciliary pocket collar components,
+    Trypanosoma brucei scope, endocytic and exocytic gateway functions, flagellar
+    pocket literature evidence, a nonmechanistic boundary/traffic graph, and a cytoskeletal-boundary
+    curation TODO.
+  llm_assisted: true
+- timestamp: '2026-09-10T12:20:26Z'
+  curator: claude
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #362 review issues #363 and #364 by removing the ambiguous
+    FP synonym and retargeting the ciliary pocket collar graph edge to the flagellar
+    pocket neck.'
+  llm_assisted: true
+components:
+- component_id: ciliary_pocket_membrane
+  label: ciliary pocket membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0020018
+  role: Specialized plasma-membrane domain lining the flagellar pocket invagination.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2221
+    notes: Field and Carrington 2009 reviewed the trypanosome flagellar pocket as
+      a plasma-membrane invagination with a distinct membrane domain.
+  - reference: DOI:10.1073/pnas.0909289106
+    notes: Gadelha et al. 2009 showed that T. brucei flagellar pocket membrane boundaries
+      are influenced by cytoskeletal features.
+- component_id: ciliary_pocket_collar
+  label: ciliary pocket collar
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:1990900
+  role: Cytoskeletal collar at the neck of the flagellar pocket where the flagellum
+    exits the cell body.
+  evidence:
+  - reference: DOI:10.1371/journal.pbio.0060105
+    notes: Bonhivers et al. 2008 showed that the BILBO1 collar is required for new
+      flagellar-pocket biogenesis in T. brucei.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  presence: COMMON
+  note: T. brucei cells have a single flagellar pocket that has been reconstructed
+    by electron tomography and used as a model for trypanosomatid endocytosis and
+    exocytosis.
+  reference: DOI:10.1242/jcs.045740
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: African trypanosome in which flagellar-pocket membrane domains, electron-tomographic
+    architecture and BILBO1-dependent biogenesis have been studied.
+  reference: DOI:10.1242/jcs.045740
+functions:
+- function_id: endo_exocytic_gateway
+  label: endocytic and exocytic gateway
+  description: The flagellar pocket concentrates endocytosis and exocytosis at the
+    site where the flagellum exits the trypanosome cell body.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2221
+    notes: Field and Carrington 2009 reviewed the trypanosome flagellar pocket as
+      the dominant site of endo- and exocytosis.
+  - reference: DOI:10.1016/j.pt.2020.11.005
+    notes: Halliday and Sunter 2021 review how the trypanosomatid flagellar pocket
+      couples pocket structure to trafficking functions.
+- function_id: flagellum_exit_site
+  label: flagellum exit-site organization
+  description: The pocket organizes the membrane invagination and neck through which
+    the eukaryotic flagellum emerges from the cell body.
+  evidence:
+  - reference: DOI:10.1242/jcs.045740
+    notes: Lacomble et al. 2009 reconstructed the T. brucei flagellar pocket and associated
+      cytoskeleton by electron microscope tomography.
+evidence:
+- reference: DOI:10.1038/nrmicro2221
+  notes: Field and Carrington 2009, The trypanosome flagellar pocket, Nature Reviews
+    Microbiology.
+- reference: DOI:10.1242/jcs.045740
+  notes: Lacomble et al. 2009, Three-dimensional cellular architecture of the flagellar
+    pocket and associated cytoskeleton in trypanosomes revealed by electron microscope
+    tomography, Journal of Cell Science.
+- reference: DOI:10.1073/pnas.0909289106
+  notes: Gadelha et al. 2009, Membrane domains and flagellar pocket boundaries are
+    influenced by the cytoskeleton in African trypanosomes, Proceedings of the National
+    Academy of Sciences.
+- reference: DOI:10.1016/j.pt.2020.11.005
+  notes: Halliday and Sunter 2021, Trypanosomatid Flagellar Pocket from Structure
+    to Function, Trends in Parasitology.
+- reference: DOI:10.1371/journal.pbio.0060105
+  notes: Bonhivers et al. 2008, Biogenesis of the trypanosome endo-exocytotic organelle
+    is cytoskeleton mediated, PLOS Biology.
+causal_graphs:
+- graph_id: pocket_boundary_and_traffic
+  title: Flagellar pocket boundaries organize surface traffic
+  description: The flagellar pocket membrane forms a specialized surface invagination
+    whose neck is marked by the ciliary pocket collar, concentrating endocytic and
+    exocytic traffic at the base of the flagellum.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: ciliary_pocket_membrane
+    label: ciliary pocket membrane
+    node_type: STRUCTURE
+    grounding: GO:0020018
+    component_ref: ciliary_pocket_membrane
+  - node_id: ciliary_pocket_collar
+    label: ciliary pocket collar
+    node_type: STRUCTURE
+    grounding: GO:1990900
+    component_ref: ciliary_pocket_collar
+  - node_id: flagellar_pocket
+    label: flagellar pocket
+    node_type: ORGANELLE
+    grounding: GO:0020016
+  - node_id: flagellar_pocket_neck
+    label: flagellar pocket neck
+    node_type: STRUCTURE
+  - node_id: endo_exocytic_traffic
+    label: endocytic and exocytic traffic
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: ciliary_pocket_membrane
+    predicate: bounds
+    object: flagellar_pocket
+    description: A specialized plasma-membrane domain lines the flagellar pocket invagination.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2221
+      notes: Field and Carrington 2009 reviewed the membrane organization of the trypanosome
+        flagellar pocket.
+  - subject: ciliary_pocket_collar
+    predicate: localizes to
+    object: flagellar_pocket_neck
+    description: The FPC sits at the neck of the flagellar pocket where the flagellum
+      emerges from the cell body.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.0060105
+      notes: Bonhivers et al. 2008 identified a BILBO1 cytoskeletal collar at the
+        flagellar pocket neck.
+  - subject: flagellar_pocket
+    predicate: supports
+    object: endo_exocytic_traffic
+    description: The flagellar pocket concentrates endocytic and exocytic traffic
+      in trypanosomatids.
+    evidence:
+    - reference: DOI:10.1016/j.pt.2020.11.005
+      notes: Halliday and Sunter 2021 review trypanosomatid flagellar pocket structure
+        and trafficking functions.
+discussions:
+- discussion_id: curate_flagellar_pocket_cytoskeletal_boundaries
+  prompt: Resolve the hook complex, microtubule quartet, flagellum attachment zone
+    filament and flagellar-pocket membrane proteins before expanding the flagellar-pocket
+    boundary graph.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Electron-tomographic and proteomic studies define several cytoskeletal
+    features around the pocket, but this first record curates only the membrane and
+    the already grounded ciliary pocket collar.
+  evidence:
+  - reference: DOI:10.1242/jcs.045740
+  - reference: DOI:10.1016/j.pt.2020.11.005
+  posed_by: claude
+  posed_date: '2026-09-10'

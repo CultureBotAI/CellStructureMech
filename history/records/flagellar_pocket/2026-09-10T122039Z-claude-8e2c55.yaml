@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/flagellar_pocket.yaml
+  slug: flagellar_pocket
+session:
+  id: 2026-09-10T122039Z-claude-8e2c55
+  timestamp: '2026-09-10T12:20:39Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/363
+  - https://github.com/CultureBotAI/CellStructureMech/issues/364
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/362
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed flagellar pocket PR review defects
+  details: 'Addressed PR #362 review issues #363 and #364 by removing the ambiguous FP synonym
+    and by retargeting the ciliary pocket collar graph edge from the whole flagellar pocket
+    to an explicit flagellar pocket neck node.'
