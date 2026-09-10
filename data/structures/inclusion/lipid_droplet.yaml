@@ -1,0 +1,174 @@
+identifier: GO:0005811
+label: lipid droplet
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: An intracellular non-membrane-bounded organelle comprising a matrix of
+  coalesced lipids surrounded by a phospholipid monolayer. May include associated
+  proteins.
+definition_source: GO:0005811
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T10:20:26Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T10:22:09Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO exact synonyms and monolayer parthood, ChEBI-grounded triglyceride
+    and sterol-ester core components, fungal taxonomic scope, a Saccharomyces cerevisiae
+    S288C canonical example, neutral-lipid storage function, record-level evidence
+    and a nonmechanistic neutral-lipid storage graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: adiposome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005811
+- synonym_text: lipid body
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005811
+- synonym_text: lipid particle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005811
+has_part:
+- GO:0034430
+components:
+- component_id: triglyceride_core
+  label: triglyceride
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  grounding: CHEBI:17855
+  essentiality: CONDITIONAL
+  role: Neutral storage-lipid class that accumulates in the hydrophobic droplet core.
+  evidence:
+  - reference: PMID:29397034
+    notes: Graef 2018 reviews budding-yeast lipid droplets as organelles dynamically
+      storing neutral triacylglycerols and steryl esters.
+  - reference: DOI:10.1016/j.bbalip.2011.07.015
+    notes: Grillitsch et al. 2011 analyzed the Saccharomyces cerevisiae lipid-droplet
+      lipidome and proteome.
+- component_id: sterol_ester_core
+  label: sterol ester
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  grounding: CHEBI:35915
+  essentiality: CONDITIONAL
+  role: Neutral storage-lipid class that accumulates with triglycerides in the hydrophobic
+    droplet core.
+  evidence:
+  - reference: PMID:29397034
+    notes: Graef 2018 reviews steryl esters together with triacylglycerols as the
+      main stored neutral lipids of budding-yeast lipid droplets.
+  - reference: DOI:10.1016/j.bbalip.2011.07.015
+    notes: Grillitsch et al. 2011 measured steryl-esters and triacylglycerols in Saccharomyces
+      cerevisiae lipid particles/droplets.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: VARIABLE
+  note: Lipid droplets are characterized in Saccharomyces cerevisiae and Aspergillus
+    oryzae, but this first record does not assert ubiquity across all fungi.
+  reference: DOI:10.1111/mmi.15170
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Reference budding-yeast strain used to define lipid-droplet neutral-lipid
+    storage and lipidome/proteome composition.
+  reference: DOI:10.1016/j.bbalip.2011.07.015
+functions:
+- function_id: neutral_lipid_storage
+  label: neutral lipid storage
+  description: Lipid droplets sequester hydrophobic triglycerides and sterol esters
+    as neutral-lipid reserves that can be mobilized by lipases and hydrolases.
+  evidence:
+  - reference: DOI:10.1007/s00018-015-1903-5
+    notes: Wang 2015 reviews lipid-droplet biogenesis, growth, inheritance, degradation
+      and lipolytic mobilization in budding yeast.
+  - reference: PMID:29397034
+    notes: Graef 2018 reviews budding-yeast lipid droplets as dedicated stores of
+      triacylglycerols and steryl esters.
+evidence:
+- reference: GO:0005811
+  notes: Gene Ontology cellular-component term for lipid droplet.
+- reference: DOI:10.1007/s00018-015-1903-5
+  notes: Wang 2015, Lipid droplet dynamics in budding yeast, Cellular and Molecular
+    Life Sciences.
+- reference: PMID:29397034
+  notes: Graef 2018, Lipid droplet-mediated lipid and protein homeostasis in budding
+    yeast, FEBS Letters.
+- reference: DOI:10.1016/j.bbalip.2011.07.015
+  notes: 'Grillitsch et al. 2011, Lipid particles/droplets of the yeast Saccharomyces
+    cerevisiae revisited: lipidome meets proteome, Biochimica et Biophysica Acta.'
+- reference: DOI:10.1111/mmi.15170
+  notes: Mamun et al. 2024 identified lipid droplet-associated proteins regulating
+    lipid-droplet biogenesis in Aspergillus oryzae.
+causal_graphs:
+- graph_id: neutral_lipid_core_storage
+  title: Neutral lipids coalesce inside a monolayer droplet
+  description: Triglycerides and sterol esters form the hydrophobic core of a lipid
+    droplet, which is surrounded by a phospholipid monolayer and stores neutral lipids
+    for later mobilization.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures neutral-lipid storage architecture without asserting
+    the ER budding, growth, inheritance or lipolysis machinery.
+  nodes:
+  - node_id: triglyceride_core
+    label: triglyceride
+    node_type: CHEMICAL
+    grounding: CHEBI:17855
+    component_ref: triglyceride_core
+  - node_id: sterol_ester_core
+    label: sterol ester
+    node_type: CHEMICAL
+    grounding: CHEBI:35915
+    component_ref: sterol_ester_core
+  - node_id: phospholipid_monolayer
+    label: monolayer-surrounded lipid storage body outer lipid monolayer
+    node_type: ORGANELLE
+    grounding: GO:0034430
+  - node_id: lipid_droplet
+    label: lipid droplet
+    node_type: ORGANELLE
+    grounding: GO:0005811
+  - node_id: neutral_lipid_store
+    label: stored neutral lipids
+    node_type: STATE
+  edges:
+  - subject: triglyceride_core
+    predicate: forms core of
+    object: lipid_droplet
+    description: Triglycerides are hydrophobic neutral lipids that coalesce in the
+      lipid-droplet core.
+    evidence:
+    - reference: PMID:29397034
+      notes: Graef 2018 reviews triacylglycerols as a major neutral-lipid class dynamically
+        stored in budding-yeast lipid droplets.
+  - subject: sterol_ester_core
+    predicate: forms core of
+    object: lipid_droplet
+    description: Sterol esters are hydrophobic neutral lipids stored with triglycerides
+      in the lipid-droplet core.
+    evidence:
+    - reference: PMID:29397034
+      notes: Graef 2018 reviews steryl esters as a major neutral-lipid class dynamically
+        stored in budding-yeast lipid droplets.
+  - subject: phospholipid_monolayer
+    predicate: surrounds
+    object: lipid_droplet
+    description: The lipid droplet is bounded by a phospholipid monolayer rather than
+      a bilayer membrane.
+    evidence:
+    - reference: GO:0005811
+      notes: The GO lipid droplet definition describes a coalesced-lipid matrix surrounded
+        by a phospholipid monolayer.
+  - subject: lipid_droplet
+    predicate: stores
+    object: neutral_lipid_store
+    description: The assembled droplet sequesters neutral lipids that can be mobilized
+      during lipid metabolism.
+    evidence:
+    - reference: DOI:10.1007/s00018-015-1903-5
+      notes: Wang 2015 reviews storage and mobilization of neutral lipids in budding-yeast
+        lipid droplets.
