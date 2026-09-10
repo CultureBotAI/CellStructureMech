@@ -731,11 +731,6 @@
           "cosine_similarity": 0.79816001
         },
         {
-          "identifier": "GO:0005816",
-          "label": "spindle pole body",
-          "cosine_similarity": 0.70080463
-        },
-        {
           "identifier": "GO:0009431",
           "label": "bacterial-type flagellum basal body, MS ring",
           "cosine_similarity": 0.69684093
@@ -744,6 +739,11 @@
           "identifier": "GO:0030694",
           "label": "bacterial-type flagellum basal body, rod",
           "cosine_similarity": 0.6936527
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.69298046
         },
         {
           "identifier": "GO:0009428",
@@ -774,7 +774,7 @@
         {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
-          "cosine_similarity": 0.6641041
+          "cosine_similarity": 0.66504567
         },
         {
           "identifier": "GO:0009295",
@@ -852,27 +852,27 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.71354462
+          "cosine_similarity": 0.70740813
         },
         {
           "identifier": "GO:1990900",
           "label": "ciliary pocket collar",
-          "cosine_similarity": 0.70080463
+          "cosine_similarity": 0.69298046
         },
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.68734366
-        },
-        {
-          "identifier": "GO:0005839",
-          "label": "proteasome core complex",
-          "cosine_similarity": 0.68625802
+          "cosine_similarity": 0.68258103
         },
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.6828669
+          "cosine_similarity": 0.68002478
+        },
+        {
+          "identifier": "GO:0005839",
+          "label": "proteasome core complex",
+          "cosine_similarity": 0.67426519
         }
       ]
     },
@@ -965,7 +965,7 @@
         {
           "identifier": "GO:0031470",
           "label": "carboxysome",
-          "cosine_similarity": 0.61795092
+          "cosine_similarity": 0.61795093
         }
       ]
     },
@@ -2226,7 +2226,7 @@
         {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
-          "cosine_similarity": 0.65175848
+          "cosine_similarity": 0.6454823
         },
         {
           "identifier": "GO:0020011",
@@ -2257,7 +2257,7 @@
         {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
-          "cosine_similarity": 0.6578641
+          "cosine_similarity": 0.65792698
         },
         {
           "identifier": "cellstructuremech:elongasome",
@@ -2307,11 +2307,6 @@
       "label": "cellulosome",
       "neighbors": [
         {
-          "identifier": "GO:0005816",
-          "label": "spindle pole body",
-          "cosine_similarity": 0.65356725
-        },
-        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.65302613
@@ -2320,6 +2315,11 @@
           "identifier": "GO:0031471",
           "label": "ethanolamine degradation polyhedral organelle",
           "cosine_similarity": 0.64672318
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.64652066
         },
         {
           "identifier": "GO:0020007",
@@ -2412,7 +2412,7 @@
         {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
-          "cosine_similarity": 0.68625802
+          "cosine_similarity": 0.67426519
         },
         {
           "identifier": "GO:0140737",
@@ -2479,7 +2479,7 @@
         {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
-          "cosine_similarity": 0.6139198
+          "cosine_similarity": 0.6078512
         },
         {
           "identifier": "GO:0032126",

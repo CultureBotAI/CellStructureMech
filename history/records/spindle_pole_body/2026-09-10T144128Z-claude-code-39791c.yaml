@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/spindle_pole_body.yaml
+  slug: spindle_pole_body
+session:
+  id: 2026-09-10T144128Z-claude-code-39791c
+  timestamp: '2026-09-10T14:41:28Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/381
+  - https://github.com/CultureBotAI/CellStructureMech/issues/382
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/380
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed spindle pole body adversarial review findings
+  details: 'Addressed PR #380 review findings by recasting the SPB core component as a reviewed-label-only
+    protein complex instead of a catch-all protein bucket, narrowing the causal graph to SPB
+    duplication, switching its graph kind to ASSEMBLY, and removing the downstream bipolar-spindle
+    node and edge from that graph.'

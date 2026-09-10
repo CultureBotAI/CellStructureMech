@@ -27,17 +27,24 @@ curation_history:
     their labels are local causal-graph roles rather than the canonical spindle pole
     body label.
   llm_assisted: true
+- timestamp: '2026-09-10T14:40:59Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #381 and #382 by remodeling the SPB core row as a reviewed-label-only
+    protein complex and narrowing the causal graph to an ASSEMBLY-scoped SPB duplication
+    graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: SPB
   synonym_type: EXACT_SYNONYM
   source: GO:0005816
 components:
-- component_id: spindle_pole_body_core_proteins
-  label: spindle pole body core proteins
-  component_type: PROTEIN
+- component_id: spindle_pole_body_core
+  label: spindle pole body core
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
-  role: Multilayered scaffold proteins that build the central yeast spindle pole body
-    core and organize cytoplasmic and nuclear microtubule nucleation sites.
+  role: Native multilayered scaffold subcomplex at the center of the budding-yeast
+    SPB that organizes cytoplasmic and nuclear microtubule nucleation sites.
   evidence:
   - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
     notes: Jaspersen and Winey 2004 reviewed the layered Saccharomyces cerevisiae
@@ -46,9 +53,9 @@ components:
     notes: Viswanath et al. 2017 determined an integrative molecular architecture
       for the budding-yeast SPB core.
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The SPB core is a native fungal assembly containing several unrelated
-    scaffold families; no single source-neutral family or complex identifier denotes
-    the aggregate.
+  grounding_notes: The SPB core is a native fungal scaffold subassembly containing
+    several unrelated protein families; no single source-neutral complex identifier
+    denotes the aggregate.
 - component_id: gamma_tubulin_complexes
   label: gamma-tubulin complexes
   component_type: PROTEIN_COMPLEX
@@ -102,12 +109,11 @@ evidence:
     body core determined by Bayesian integrative modeling, Molecular Biology of the
     Cell.
 causal_graphs:
-- graph_id: spb_duplication_to_spindle_assembly
-  title: SPB duplication creates two spindle organizers
-  description: A new SPB assembles next to the old SPB, matures as it is inserted
-    into the nuclear envelope, and the duplicated pair separates to organize a bipolar
-    spindle.
-  graph_kind: FUNCTION
+- graph_id: spb_duplication
+  title: SPB duplication assembles a new spindle pole body
+  description: A new SPB assembles next to the old SPB at the half-bridge during the
+    budding-yeast duplication pathway.
+  graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   nodes:
   - node_id: old_spb
@@ -116,9 +122,6 @@ causal_graphs:
   - node_id: new_spb
     label: new spindle pole body
     node_type: ORGANELLE
-  - node_id: bipolar_spindle
-    label: bipolar mitotic spindle
-    node_type: STRUCTURE
   edges:
   - subject: old_spb
     predicate: templates assembly of
@@ -129,15 +132,6 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
       notes: Jaspersen and Winey 2004 reviewed the half-bridge-associated pathway
         for SPB duplication.
-  - subject: new_spb
-    predicate: helps organize
-    object: bipolar_spindle
-    description: The duplicated SPB separates from the old SPB to provide the second
-      pole of the mitotic spindle.
-    evidence:
-    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
-      notes: Jaspersen and Winey 2004 reviewed SPB duplication and separation before
-        budding-yeast spindle assembly.
 discussions:
 - discussion_id: ground_spb_subassemblies
   prompt: Resolve exact groundings for SPB plaques, bridge substructures and gamma-tubulin
@@ -145,7 +139,7 @@ discussions:
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#spindle_pole_body_core_proteins
+  - components#spindle_pole_body_core
   - components#gamma_tubulin_complexes
   rationale: The first record captures SPB structure at component-class resolution.
     Follow-up curation should split the central, outer and inner plaque and half-bridge
