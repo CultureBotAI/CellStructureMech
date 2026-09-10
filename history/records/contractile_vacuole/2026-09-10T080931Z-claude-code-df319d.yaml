@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/contractile_vacuole.yaml
+  slug: contractile_vacuole
+session:
+  id: 2026-09-10T080931Z-claude-code-df319d
+  timestamp: '2026-09-10T08:09:31Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the contractile vacuole record
+  details: Added GO:0000331 contractile vacuole as a PROPOSED membrane-organelle record with
+    contractile vacuolar membrane, V-ATPase and aquaporin components, a Eukaryota RARE taxonomic
+    scope, Dictyostelium, Chlamydomonas and Trypanosoma canonical examples, an osmoregulatory
+    water-expulsion function, a nonmechanistic pump/channel-assisted filling graph, and a
+    grounding TODO backed by protozoan, amoebozoan, green-algal and kinetoplastid literature.

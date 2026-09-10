@@ -1,0 +1,254 @@
+identifier: GO:0000331
+label: contractile vacuole
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A specialized vacuole of eukaryotic cells, especially Protozoa, that fills
+  with water from the cytoplasm and then discharges this externally by the opening
+  of contractile vacuole pores. One of its functions is osmoregulatory.
+definition_source: GO:0000331
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T08:06:33Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T08:08:50Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO complex parthood, contractile vacuolar membrane, V-ATPase and
+    aquaporin components, eukaryotic taxonomic scope, Chlamydomonas, Dictyostelium
+    and Trypanosoma canonical examples, a water-expulsion function, record-level evidence,
+    a pump/channel-assisted filling graph, a UniProt SL xref and a channel-grounding
+    discussion.
+  llm_assisted: true
+- timestamp: '2026-09-10T08:12:02Z'
+  curator: claude
+  action: EDITED_RECORD
+  changes: Removed GO:0000331 grounding from the water-filled contractile vacuole
+    graph node because that node denotes a transient filled state rather than an exact
+    GO cellular-component class.
+  llm_assisted: true
+synonyms:
+- synonym_text: CV
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0073
+- synonym_text: central bladder
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000331
+part_of:
+- GO:0062159
+has_part:
+- GO:0031164
+xrefs:
+- uniprot.location:SL-0073
+components:
+- component_id: contractile_vacuolar_membrane
+  label: contractile vacuolar membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0031164
+  essentiality: ESSENTIAL
+  role: Lipid bilayer that bounds the water-collecting vacuole and fuses with the
+    plasma-membrane pore during discharge.
+  evidence:
+  - reference: DOI:10.1016/S0074-7696(02)15015-7
+    notes: Allen and Naitoh 2002 review the contractile vacuole cycle, including filling,
+      rounding, pore opening and fluid discharge.
+  - reference: DOI:10.1016/j.ejop.2024.126078
+    notes: More et al. 2024 review contractile-vacuole membrane architecture and remodeling
+      across eukaryotic microbes.
+- component_id: v_type_atpase
+  label: contractile vacuole V-ATPase
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Vacuolar H+-ATPases localize to contractile-vacuole membranes and
+    associated vesicles in several lineages, but this broad record does not curate
+    one exact lineage-neutral complex CURIE.
+  role: Proton-pumping membrane complex that helps generate ion gradients needed to
+    osmotically draw water into the contractile vacuole system.
+  evidence:
+  - reference: DOI:10.1242/jcs.115.14.2893
+    notes: Clarke et al. 2002 followed vacuolar H+-ATPase dynamics in the Dictyostelium
+      contractile-vacuole complex.
+  - reference: DOI:10.1042/BC20070091
+    notes: Nishihara et al. 2008 detected V-ATPase on vesicles around the Amoeba proteus
+      contractile vacuole.
+- component_id: contractile_vacuole_aquaporins
+  label: contractile vacuole aquaporins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Aquaporin channels associated with contractile vacuoles are curated
+    as a functional membrane-protein group; no exact lineage-neutral family grounding
+    was chosen for this first record.
+  role: Water channels on the contractile vacuole and associated vesicles that increase
+    membrane water permeability during filling.
+  evidence:
+  - reference: DOI:10.1042/BC20070091
+    notes: Nishihara et al. 2008 cloned an Amoeba proteus aquaporin and localized
+      it to the contractile vacuole membrane and perivacuolar vesicles.
+  - reference: DOI:10.1016/j.ejop.2024.126078
+    notes: More et al. 2024 review membrane channels and receptors implicated in contractile-vacuole
+      filling.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Contractile vacuoles occur patchily in unicellular eukaryotes, especially
+    freshwater and soil protists, rather than throughout Eukaryota.
+  reference: DOI:10.1016/j.ejop.2024.126078
+canonical_examples:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  note: Amoebozoan model in which vacuolar H+-ATPase dynamics have been followed in
+    the contractile-vacuole complex.
+  reference: DOI:10.1242/jcs.115.14.2893
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Freshwater alga used to show that contractile vacuole size and pulse frequency
+    respond to changing external osmolarity.
+  reference: DOI:10.1128/EC.00163-14
+- taxon_id: NCBITaxon:5693
+  taxon_label: Trypanosoma cruzi
+  note: Kinetoplastid parasite in which acidocalcisomes and the contractile-vacuole
+    complex have been linked to hyposmotic-stress responses.
+  reference: DOI:10.1074/jbc.M410372200
+functions:
+- function_id: water_expulsion_osmoregulation
+  label: osmoregulatory water expulsion
+  description: The contractile vacuole fills with excess cytosolic water and periodically
+    discharges that water outside the cell to maintain volume and osmotic balance.
+  evidence:
+  - reference: DOI:10.1016/S0074-7696(02)15015-7
+    notes: Allen and Naitoh 2002 review the contractile-vacuole cycle as the osmoregulatory
+      route for expelling cytosolic water.
+  - reference: DOI:10.1128/EC.00163-14
+    notes: Komsic-Buchmann et al. 2014 quantified changes in Chlamydomonas contractile-vacuole
+      pulse frequency and size under different osmotic conditions.
+evidence:
+- reference: DOI:10.1016/S0074-7696(02)15015-7
+  notes: Allen and Naitoh 2002, Osmoregulation and contractile vacuoles of protozoa,
+    International Review of Cytology.
+- reference: DOI:10.1242/jcs.115.14.2893
+  notes: Clarke et al. 2002, Dynamics of the vacuolar H+-ATPase in the contractile
+    vacuole complex and the endosomal pathway of Dictyostelium cells, Journal of Cell
+    Science.
+- reference: DOI:10.1042/BC20070091
+  notes: Nishihara et al. 2008, Presence of aquaporin and V-ATPase on the contractile
+    vacuole of Amoeba proteus, Biology of the Cell.
+- reference: DOI:10.1128/EC.00163-14
+  notes: Komsic-Buchmann, Wostehoff and Becker 2014, The contractile vacuole as a
+    key regulator of cellular water flow in Chlamydomonas reinhardtii, Eukaryotic
+    Cell.
+- reference: DOI:10.1074/jbc.M410372200
+  notes: Rohloff, Montalvetti and Docampo 2004, Acidocalcisomes and the contractile
+    vacuole complex are involved in osmoregulation in Trypanosoma cruzi, Journal of
+    Biological Chemistry.
+- reference: DOI:10.1016/j.ejop.2024.126078
+  notes: 'More et al. 2024, Contractile vacuoles: a rapidly expanding (and occasionally
+    diminishing?) understanding, European Journal of Protistology.'
+causal_graphs:
+- graph_id: proton_gradient_water_filling_and_discharge
+  title: Membrane pumps and water channels fill a contractile vacuole
+  description: Contractile-vacuole membrane proteins generate osmotic gradients and
+    water permeability that fill the vacuole. The filled vacuole then rounds and discharges
+    through a plasma-membrane pore.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph summarizes pump/channel-assisted filling and discharge; the
+    full force-generating mechanism for systole is still unresolved and is intentionally
+    not asserted.
+  nodes:
+  - node_id: contractile_vacuolar_membrane
+    label: contractile vacuolar membrane
+    node_type: STRUCTURE
+    grounding: GO:0031164
+    component_ref: contractile_vacuolar_membrane
+  - node_id: v_type_atpase
+    label: contractile vacuole V-ATPase
+    node_type: GENE_OR_PROTEIN
+    component_ref: v_type_atpase
+  - node_id: aquaporins
+    label: contractile vacuole aquaporins
+    node_type: GENE_OR_PROTEIN
+    component_ref: contractile_vacuole_aquaporins
+  - node_id: osmotic_gradient
+    label: osmotic gradient toward the vacuole lumen
+    node_type: STATE
+  - node_id: water_filled_contractile_vacuole
+    label: water-filled contractile vacuole
+    node_type: ORGANELLE
+  - node_id: external_discharge
+    label: external water discharge
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: contractile_vacuolar_membrane
+    predicate: bounds
+    object: water_filled_contractile_vacuole
+    description: The contractile vacuolar membrane encloses the central vacuole that
+      fills and empties during the cycle.
+    evidence:
+    - reference: GO:0031164
+      notes: GO:0031164 defines the contractile vacuolar membrane as the lipid bilayer
+        surrounding a contractile vacuole.
+  - subject: v_type_atpase
+    predicate: resides in
+    object: contractile_vacuolar_membrane
+    description: V-ATPase is present on contractile-vacuole-system membranes in amoebae.
+    evidence:
+    - reference: DOI:10.1242/jcs.115.14.2893
+      notes: Clarke et al. 2002 used GFP-tagged V-ATPase to track its dynamics in
+        the Dictyostelium contractile-vacuole complex.
+  - subject: v_type_atpase
+    predicate: generates
+    object: osmotic_gradient
+    description: Proton pumping by V-ATPase is proposed to help build ion gradients
+      that osmotically favor water entry.
+    evidence:
+    - reference: DOI:10.1042/BC20070091
+      notes: Nishihara et al. 2008 interpreted V-ATPase-positive vesicles around the
+        Amoeba contractile vacuole as participants in osmotic-gradient generation.
+  - subject: aquaporins
+    predicate: increase water permeability of
+    object: contractile_vacuolar_membrane
+    description: Aquaporins on the contractile vacuole and its associated vesicles
+      provide a water-channel route across the membrane.
+    evidence:
+    - reference: DOI:10.1042/BC20070091
+      notes: Nishihara et al. 2008 localized Amoeba ApAQP to the contractile vacuole
+        membrane and perivacuolar vesicles.
+  - subject: osmotic_gradient
+    predicate: fills
+    object: water_filled_contractile_vacuole
+    description: Osmotically driven water entry fills the central vacuole before discharge.
+    evidence:
+    - reference: DOI:10.1016/S0074-7696(02)15015-7
+      notes: Allen and Naitoh 2002 review fluid filling as a phase of the contractile-vacuole
+        cycle.
+  - subject: water_filled_contractile_vacuole
+    predicate: discharges
+    object: external_discharge
+    description: A filled contractile vacuole periodically expels water through a
+      pore to the exterior.
+    evidence:
+    - reference: DOI:10.1128/EC.00163-14
+      notes: Komsic-Buchmann et al. 2014 measured osmolarity-dependent pulse-frequency
+        and size changes during contractile-vacuole function in Chlamydomonas.
+discussions:
+- discussion_id: ground_contractile_vacuole_channels
+  prompt: Resolve exact source-neutral groundings for contractile-vacuole V-ATPase
+    complexes and aquaporin components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#v_type_atpase
+  - components#contractile_vacuole_aquaporins
+  rationale: V-ATPases and aquaporins are conserved protein families, but this first
+    contractile-vacuole record does not pick a broad family CURIE without checking
+    exact membership for the CV-localized subsets across Amoebozoa, algae and kinetoplastids.
+  posed_by: claude
+  posed_date: '2026-09-10'

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/contractile_vacuole.yaml
+  slug: contractile_vacuole
+session:
+  id: 2026-09-10T081212Z-claude-code-01a4f3
+  timestamp: '2026-09-10T08:12:12Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Fix contractile vacuole graph grounding
+  details: Removed GO:0000331 from the water-filled contractile vacuole node after the id-label
+    gate caught that the node denotes a transient filled state rather than the exact GO cellular-component
+    class named contractile vacuole.
