@@ -1,0 +1,152 @@
+identifier: GO:0005816
+label: spindle pole body
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The microtubule-organizing center in fungi, functionally homologous to
+  the animal centrosome.
+definition_source: GO:0005816
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T14:20:45Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T14:22:32Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added the SPB synonym, reviewed-label-only core and gamma-tubulin-complex
+    components, Saccharomyces cerevisiae scope, microtubule-organization and bipolar-spindle-assembly
+    functions, record evidence, a nonmechanistic SPB duplication graph, and a subassembly
+    grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-10T14:30:53Z'
+  curator: claude
+  action: FIX_ID_LABEL_FINDINGS
+  changes: Removed GO:0005816 graph-node groundings from old_spb and new_spb because
+    their labels are local causal-graph roles rather than the canonical spindle pole
+    body label.
+  llm_assisted: true
+- timestamp: '2026-09-10T14:40:59Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #381 and #382 by remodeling the SPB core row as a reviewed-label-only
+    protein complex and narrowing the causal graph to an ASSEMBLY-scoped SPB duplication
+    graph.'
+  llm_assisted: true
+synonyms:
+- synonym_text: SPB
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005816
+components:
+- component_id: spindle_pole_body_core
+  label: spindle pole body core
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  role: Native multilayered scaffold subcomplex at the center of the budding-yeast
+    SPB that organizes cytoplasmic and nuclear microtubule nucleation sites.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed the layered Saccharomyces cerevisiae
+      SPB and its core plaque components.
+  - reference: DOI:10.1091/mbc.E17-06-0397
+    notes: Viswanath et al. 2017 determined an integrative molecular architecture
+      for the budding-yeast SPB core.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The SPB core is a native fungal scaffold subassembly containing
+    several unrelated protein families; no single source-neutral complex identifier
+    denotes the aggregate.
+- component_id: gamma_tubulin_complexes
+  label: gamma-tubulin complexes
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  role: Microtubule-nucleating complexes associated with SPB inner and outer plaques.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed gamma-tubulin complex placement at budding-yeast
+      SPB plaques.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact fungal gamma-tubulin small-complex or plaque-bound gamma-tubulin
+    ring-complex identifier was assigned in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: The spindle pole body is directly evidenced in budding yeast; no broader fungal
+    distribution is asserted in this first record.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast reference system in which SPB structure, duplication and core
+    molecular architecture have been mapped.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+functions:
+- function_id: microtubule_organization
+  label: microtubule organization
+  description: The SPB nucleates and organizes nuclear and cytoplasmic microtubules
+    in budding yeast.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed the SPB as the budding-yeast microtubule
+      organizing center.
+- function_id: bipolar_spindle_assembly
+  label: bipolar spindle assembly
+  description: SPB duplication and separation generate the two organizing centers
+    that build a bipolar mitotic spindle.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed SPB duplication and mitotic-spindle assembly.
+evidence:
+- reference: GO:0005816
+  notes: Gene Ontology cellular-component term for spindle pole body, with SPB as
+    an exact synonym.
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
+- reference: DOI:10.1091/mbc.E17-06-0397
+  notes: Viswanath et al. 2017, The molecular architecture of the yeast spindle pole
+    body core determined by Bayesian integrative modeling, Molecular Biology of the
+    Cell.
+causal_graphs:
+- graph_id: spb_duplication
+  title: SPB duplication assembles a new spindle pole body
+  description: A new SPB assembles next to the old SPB at the half-bridge during the
+    budding-yeast duplication pathway.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: old_spb
+    label: old spindle pole body
+    node_type: ORGANELLE
+  - node_id: new_spb
+    label: new spindle pole body
+    node_type: ORGANELLE
+  edges:
+  - subject: old_spb
+    predicate: templates assembly of
+    object: new_spb
+    description: Budding-yeast SPB duplication begins at the half-bridge adjacent
+      to the existing SPB.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed the half-bridge-associated pathway
+        for SPB duplication.
+discussions:
+- discussion_id: ground_spb_subassemblies
+  prompt: Resolve exact groundings for SPB plaques, bridge substructures and gamma-tubulin
+    complexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#spindle_pole_body_core
+  - components#gamma_tubulin_complexes
+  rationale: The first record captures SPB structure at component-class resolution.
+    Follow-up curation should split the central, outer and inner plaque and half-bridge
+    subassemblies only where exact identifiers or reviewed label-only boundaries can
+    be justified from primary structural work.
+  evidence:
+  - reference: DOI:10.1091/mbc.E17-06-0397
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  posed_by: claude
+  posed_date: '2026-09-10'
