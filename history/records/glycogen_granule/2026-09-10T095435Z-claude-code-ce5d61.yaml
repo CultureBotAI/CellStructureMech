@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/glycogen_granule.yaml
+  slug: glycogen_granule
+session:
+  id: 2026-09-10T095435Z-claude-code-ce5d61
+  timestamp: '2026-09-10T09:54:35Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Add the glycogen granule record
+  details: Curated a minted microbial glycogen granule inclusion record with a ChEBI-grounded
+    glycogen core, bacterial variable taxonomic scope, Synechocystis sp. PCC 6803 as a canonical
+    example, a glycogen carbon and energy storage function, record-level evidence and a nonmechanistic
+    glycogen storage graph.
