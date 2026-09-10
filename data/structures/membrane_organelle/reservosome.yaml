@@ -28,6 +28,13 @@ curation_history:
     the reservosome hydrolase pool to degraded cargo rather than claiming an exact
     cruzipain-substrate relationship.
   llm_assisted: true
+- timestamp: '2026-09-10T12:03:55Z'
+  curator: claude
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #359 review issues #360 and #361 by adding GO:0043231 as
+    the reservosome''s broader parent and replacing the vague degraded-cargo terminal
+    state with an explicit cargo-proteolysis process.'
+  llm_assisted: true
 components:
 - component_id: reservosome_membrane
   label: reservosome membrane
@@ -123,10 +130,10 @@ evidence:
     Proteomics.
 causal_graphs:
 - graph_id: endocytic_storage_and_proteolysis
-  title: Reservosomes store and digest endocytic cargo
+  title: Reservosomes store cargo and support proteolysis
   description: Cargo entering through the cytostome-cytopharynx reaches the reservosome,
-    where an acidic cruzipain-containing lumen stores and degrades internalized proteins
-    and lipids.
+    where the acidic lumen stores internalized protein and lipid cargo and a hydrolase
+    pool that includes cruzipain supports proteolysis of internalized protein cargo.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   nodes:
@@ -145,9 +152,9 @@ causal_graphs:
     label: cruzipain
     node_type: GENE_OR_PROTEIN
     component_ref: cruzipain
-  - node_id: degraded_cargo
-    label: degraded cargo
-    node_type: STATE
+  - node_id: cargo_proteolysis
+    label: reservosome cargo proteolysis
+    node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: cytostome_cytopharynx
     predicate: delivers
@@ -179,9 +186,9 @@ causal_graphs:
         reservosomes.
   - subject: cruzipain
     predicate: supports
-    object: degraded_cargo
-    description: Reservosome hydrolases, including cruzipain, support proteolytic
-      degradation of internalized protein cargo in the acidic compartment.
+    object: cargo_proteolysis
+    description: Reservosome hydrolases, including cruzipain, support proteolysis
+      of internalized protein cargo in the acidic compartment.
     evidence:
     - reference: DOI:10.1590/S0074-02761999000700015
       notes: Soares 1999 connected cruzipain-containing acidic reservosomes to intracellular
@@ -201,3 +208,5 @@ discussions:
   - reference: DOI:10.1002/pmic.200800730
   posed_by: claude
   posed_date: '2026-09-10'
+parent_structures:
+- GO:0043231
