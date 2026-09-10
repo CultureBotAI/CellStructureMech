@@ -32,6 +32,13 @@ curation_history:
     C-ring node, and resolved #276 by adding Welch 1993 as direct CheY-P-to-FliM binding
     evidence.'
   llm_assisted: true
+- timestamp: '2026-09-10T02:09:48Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: flagellar basal body, C ring
   synonym_type: EXACT_SYNONYM
@@ -65,6 +72,24 @@ components:
   - reference: DOI:10.1016/j.tim.2014.12.011
     notes: Minamino and Imada 2015 review FliG as the C-ring protein that contacts
       the stator to couple ion-driven force to rotor rotation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A1J9
+    protein_label: Flagellar motor switch protein FliG
+    gene_symbol: fliG
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-09'
+    role: The single reviewed UniProtKB entry for gene fliG in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:1631122
+      notes: Francis NR et al. 1992, ‘Localization of the Salmonella typhimurium flagellar
+        switch protein FliG to the cytoplasmic M-ring face of the basal body.’, Proc
+        Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cell inner membrane' localisation of P0A1J9.
 - component_id: flim
   label: Flagellar motor switch protein FliM
   component_type: PROTEIN
@@ -82,6 +107,24 @@ components:
   - reference: DOI:10.1128/mBio.00079-19
     notes: Sakai et al. 2019 probed FliG-FliM rearrangements in the flagellar switch
       complex during rotational biasing.
+  protein_examples:
+  - uniprot_id: UniProtKB:P26418
+    protein_label: Flagellar motor switch protein FliM
+    gene_symbol: fliM
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-09'
+    role: The single reviewed UniProtKB entry for gene fliM in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P26418
+      notes: UniProtKB reviewed (Swiss-Prot) entry P26418, the single reviewed entry
+        for gene fliM in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 - component_id: flin
   label: Flagellar motor switch FliN
   component_type: PROTEIN
@@ -99,6 +142,24 @@ components:
   - reference: DOI:10.1038/nature09300
     notes: Lee et al. 2010 structurally connected FliN to the FliG/FliM/FliN torque
       ring.
+  protein_examples:
+  - uniprot_id: UniProtKB:P26419
+    protein_label: Flagellar motor switch protein FliN
+    gene_symbol: fliN
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-09'
+    role: The single reviewed UniProtKB entry for gene fliN in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P26419
+      notes: UniProtKB reviewed (Swiss-Prot) entry P26419, the single reviewed entry
+        for gene fliN in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

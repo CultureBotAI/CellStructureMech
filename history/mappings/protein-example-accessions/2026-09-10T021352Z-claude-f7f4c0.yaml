@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: mapping
+  path: data/structures
+  slug: protein-example-accessions
+session:
+  id: 2026-09-10T021352Z-claude-f7f4c0
+  timestamp: '2026-09-10T02:13:52Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: claude-opus-5
+    agent_tool: Claude Code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Seed the flagellar records main added, and report what #183''s tail actually consists
+    of'
+  details: 'Two parts. First, uniprot_genes.py was re-run over the corpus after six flagellar
+    records landed on main; it seeded 5 accessions on the C-ring (FliG, FliM, FliN), the filament
+    cap (FliD) and the hook-filament junction (FlgL), all reviewed Salmonella LT2 entries.
+    Second, a --gaps report was added because ''components without an accession'' had become
+    a single number hiding four different questions. Of the 41 that remain: 18 declare no
+    gene symbol at all, and most of those are sets rather than proteins (small-subunit ribosomal
+    proteins, nucleoid-associated proteins, acidocalcisome proton pumps), so no adapter can
+    ever close them; 14 have symbols with no reviewed entry in any taxon the record names;
+    9 are ambiguous, and those are the only ones more querying could settle. The ambiguous
+    nine share one cause, checked against NCBI: every one is on a record naming a species-rank
+    taxon (Escherichia coli 562, Salmonella enterica 28901) while UniProt''s reviewed entries
+    sit on strain nodes, so the exactly-one rule can never fire. Every taxon that did resolve
+    is strain-rank. The remedy is a curation decision per record -- name the strain the record''s
+    own evidence describes -- not more adapter logic, and the report now names the candidate
+    accessions so that choice can be made from the record. per_taxon was factored out of resolve_symbol
+    as a generator so the seeding pass still stops at the first taxon that answers while the
+    report walks them all. Five mutants of the report were checked and all die.'

@@ -52,6 +52,7 @@ CurationEvent. Licence: UniProtKB is CC BY 4.0.
     python scripts/uniprot_genes.py                       # dry run, whole corpus
     python scripts/uniprot_genes.py --record data/structures/cytoskeleton/mreb_filament.yaml
     python scripts/uniprot_genes.py --record ... --apply
+    python scripts/uniprot_genes.py --gaps                 # what is left, and why
 """
 
 from __future__ import annotations
@@ -189,6 +190,20 @@ def candidates(doc: dict) -> list[dict]:
             if c.get("component_type") == "PROTEIN" and missing_symbols(c)]
 
 
+def per_taxon(symbol: str, taxa: list[tuple[int, str]]):
+    """Yield ``(taxon_id, taxon_label, hits, exact)`` for one symbol, taxon by taxon.
+
+    A generator so ``resolve_symbol`` can stop at the first taxon that answers
+    while ``gap_report`` walks them all -- the two questions cost different
+    numbers of requests and neither should pay for the other.
+    """
+    for taxon_id, taxon_label in taxa:
+        hits = search_gene(symbol, taxon_id)
+        exact = [e for e in hits
+                 if any(n.lower() == symbol.lower() for n in gene_names(e))]
+        yield taxon_id, taxon_label, hits, exact
+
+
 def resolve_symbol(symbol: str, taxa: list[tuple[int, str]]) -> tuple[dict | None, str]:
     """The one reviewed entry for one symbol, or why there isn't one.
 
@@ -197,10 +212,7 @@ def resolve_symbol(symbol: str, taxa: list[tuple[int, str]]) -> tuple[dict | Non
     disqualify the next.
     """
     reasons = []
-    for taxon_id, taxon_label in taxa:
-        hits = search_gene(symbol, taxon_id)
-        exact = [e for e in hits
-                 if any(n.lower() == symbol.lower() for n in gene_names(e))]
+    for taxon_id, taxon_label, hits, exact in per_taxon(symbol, taxa):
         # Several reviewed entries for one symbol are usually the same protein in
         # sub-strains of the named taxon (rodZ in E. coli K-12: MG1655, BW2952,
         # DH10B). The entry sitting on the node the record actually names is the
@@ -244,6 +256,77 @@ def resolve(component: dict, taxa: list[tuple[int, str]]) -> tuple[list[dict], s
         seen.add(acc)
         hits.append(hit)
     return hits, "; ".join(reasons) if reasons else "nothing left to resolve"
+
+
+# ------------------------------------------------------------------- gaps
+#
+# What is left after a seeding run is not one backlog. #183's tail is four
+# different questions with four different answers, and reporting them as a
+# single count of "components without an accession" hides which of them an
+# adapter could ever close. These are the categories, in the order a curator
+# can act on them.
+
+NO_TAXON = "NO_CANONICAL_TAXON"
+NO_SYMBOL = "NO_GENE_SYMBOL"
+AMBIGUOUS = "AMBIGUOUS_SYMBOL"
+NO_ENTRY = "NO_REVIEWED_ENTRY"
+
+GAP_MEANING = {
+    NO_TAXON: "the record names no taxon, so nothing can be taxon-paired",
+    NO_SYMBOL: "the component declares no gene symbol to resolve",
+    AMBIGUOUS: "the symbol resolves to several reviewed entries; a curator must choose",
+    NO_ENTRY: "no reviewed entry for any declared symbol in any taxon the record names",
+}
+
+
+def gap_report(doc: dict) -> list[tuple[str, str, str]]:
+    """``(component_id, category, detail)`` for every PROTEIN component left without
+    an accession.
+
+    Only the AMBIGUOUS rows are ones more querying could ever settle, and settling
+    them means choosing between reviewed entries, which is a curation decision.
+    The detail names the candidates so that choice can be made from the record.
+    """
+    taxa = [(int(t["taxon_id"].split(":")[1]), t["taxon_label"])
+            for t in doc.get("canonical_examples") or [] if t.get("taxon_id")]
+    rows = []
+    for component in doc.get("components") or []:
+        if component.get("component_type") != "PROTEIN" or component.get("protein_examples"):
+            continue
+        cid = component["component_id"]
+        symbols = component.get("gene_symbols") or []
+        if not symbols:
+            rows.append((cid, NO_SYMBOL, component.get("label") or ""))
+            continue
+        if not taxa:
+            rows.append((cid, NO_TAXON, ", ".join(symbols)))
+            continue
+        ambiguous = []
+        for symbol in symbols:
+            for taxon_id, _label, _hits, exact in per_taxon(symbol, taxa):
+                if len(exact) > 1:
+                    accs = ", ".join(sorted(e["primaryAccession"] for e in exact))
+                    ambiguous.append(f"{symbol}@{taxon_id}: {accs}")
+        rows.append((cid, AMBIGUOUS, "; ".join(ambiguous)) if ambiguous
+                    else (cid, NO_ENTRY, ", ".join(symbols)))
+    return rows
+
+
+def cmd_gaps(records) -> int:
+    counts: dict[str, int] = dict.fromkeys(GAP_MEANING, 0)
+    for path, doc in records:
+        rows = gap_report(doc)
+        if not rows:
+            continue
+        print(f"\n{path.relative_to(REPO_ROOT)}  ({doc['identifier']})")
+        for cid, category, detail in rows:
+            counts[category] += 1
+            print(f"  {cid}\t{category}\t{detail}")
+    print("\nPROTEIN components still without an accession:")
+    for category, n in sorted(counts.items(), key=lambda kv: -kv[1]):
+        print(f"  {n:3}  {category:18} {GAP_MEANING[category]}")
+    print(f"  {sum(counts.values()):3}  total")
+    return 0
 
 
 def build_example(hit: dict, today: str, citations: dict[str, str],
@@ -349,6 +432,8 @@ def main() -> int:
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--record", help="One record; default is every record.")
     parser.add_argument("--apply", action="store_true")
+    parser.add_argument("--gaps", action="store_true",
+                        help="Report what is left and why, instead of seeding. Read-only.")
     args = parser.parse_args()
 
     if args.record:
@@ -356,6 +441,9 @@ def main() -> int:
         records = [(path, yaml.safe_load(path.read_text(encoding="utf-8")))]
     else:
         records = load_records()
+
+    if args.gaps:
+        return cmd_gaps(records)
 
     today = datetime.date.today().isoformat()
     total = 0
