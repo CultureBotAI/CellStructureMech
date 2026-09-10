@@ -19,10 +19,13 @@ curation_history:
     pocket literature evidence, a nonmechanistic boundary/traffic graph, and a cytoskeletal-boundary
     curation TODO.
   llm_assisted: true
-synonyms:
-- synonym_text: FP
-  synonym_type: RELATED_SYNONYM
-  source: DOI:10.1016/j.pt.2020.11.005
+- timestamp: '2026-09-10T12:20:26Z'
+  curator: claude
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #362 review issues #363 and #364 by removing the ambiguous
+    FP synonym and retargeting the ciliary pocket collar graph edge to the flagellar
+    pocket neck.'
+  llm_assisted: true
 components:
 - component_id: ciliary_pocket_membrane
   label: ciliary pocket membrane
@@ -104,8 +107,8 @@ causal_graphs:
 - graph_id: pocket_boundary_and_traffic
   title: Flagellar pocket boundaries organize surface traffic
   description: The flagellar pocket membrane forms a specialized surface invagination
-    whose neck is constricted by the ciliary pocket collar, concentrating endocytic
-    and exocytic traffic at the base of the flagellum.
+    whose neck is marked by the ciliary pocket collar, concentrating endocytic and
+    exocytic traffic at the base of the flagellum.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   nodes:
@@ -123,6 +126,9 @@ causal_graphs:
     label: flagellar pocket
     node_type: ORGANELLE
     grounding: GO:0020016
+  - node_id: flagellar_pocket_neck
+    label: flagellar pocket neck
+    node_type: STRUCTURE
   - node_id: endo_exocytic_traffic
     label: endocytic and exocytic traffic
     node_type: BIOLOGICAL_PROCESS
@@ -136,8 +142,8 @@ causal_graphs:
       notes: Field and Carrington 2009 reviewed the membrane organization of the trypanosome
         flagellar pocket.
   - subject: ciliary_pocket_collar
-    predicate: constricts
-    object: flagellar_pocket
+    predicate: localizes to
+    object: flagellar_pocket_neck
     description: The FPC sits at the neck of the flagellar pocket where the flagellum
       emerges from the cell body.
     evidence:
