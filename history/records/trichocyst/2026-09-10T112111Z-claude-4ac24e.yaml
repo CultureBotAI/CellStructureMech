@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/trichocyst.yaml
+  slug: trichocyst
+session:
+  id: 2026-09-10T112111Z-claude-4ac24e
+  timestamp: '2026-09-10T11:21:11Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/354
+  - https://github.com/CultureBotAI/CellStructureMech/issues/355
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/353
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed trichocyst PR review issues
+  details: 'Resolved PR #353 review issues #354 and #355 by adding extracellular-Ca2+-triggered
+    trichocyst matrix recrystallization to the discharge graph and removing the uncoupled
+    Pease 1947 record-level citation.'

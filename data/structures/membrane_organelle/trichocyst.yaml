@@ -1,0 +1,160 @@
+identifier: GO:0055039
+label: trichocyst
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A crystalline exocytotic organelle composed of small, acidic proteins
+  existing primarily as disulphide-linked dimers. The trichocyst releases long filamentous
+  proteins that capture predators in net-like structures to slow them down when the
+  cell is disturbed.
+definition_source: GO:0055039
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T11:12:03Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T11:12:57Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added Paramecium trichocyst matrix proteins as a reviewed-label-only constituent,
+    Paramecium tetraurelia taxonomic scope and canonical example, a stimulus-triggered
+    discharge function, record-level trichocyst evidence, a matrix discharge graph
+    and a grounding TODO for matrix, membrane and tip components.
+  llm_assisted: true
+- timestamp: '2026-09-10T11:20:58Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #353 review issues #354 and #355 by adding extracellular
+    Ca2+-triggered trichocyst matrix recrystallization to the discharge graph and
+    removing the uncoupled Pease 1947 record-level citation.'
+  llm_assisted: true
+components:
+- component_id: trichocyst_matrix_proteins
+  label: trichocyst matrix proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  role: Small acidic secretory proteins that coassemble into the crystalline matrix
+    of the Paramecium trichocyst body.
+  evidence:
+  - reference: DOI:10.1091/mbc.6.6.649
+    notes: Madeddu et al. 1995 cloned a Paramecium multigene family encoding polypeptides
+      of the crystalline trichocyst matrix.
+  - reference: DOI:10.1111/jeu.12332
+    notes: Plattner 2017 reviewed Paramecium trichocyst bodies as crystalline matrices
+      assembled from Trichocyst Matrix Proteins.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam or NCBIfam accession for
+    the Paramecium trichocyst matrix protein family was curated in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  presence: COMMON
+  note: Dense-core trichocysts and their crystalline matrix proteins have been characterized
+    in Paramecium tetraurelia.
+  reference: DOI:10.1091/mbc.6.6.649
+canonical_examples:
+- taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  note: Ciliate model in which a multigene family encoding the crystalline trichocyst
+    matrix proteins was identified.
+  reference: DOI:10.1091/mbc.6.6.649
+functions:
+- function_id: stimulus_triggered_filament_discharge
+  label: stimulus-triggered filament discharge
+  description: Trichocysts undergo regulated exocytosis, contact extracellular Ca2+,
+    and recrystallize a condensed matrix as an elongated extracellular filament.
+  evidence:
+  - reference: DOI:10.1111/jeu.12332
+    notes: Plattner 2017 reviewed Paramecium trichocysts as projectile-like secretory
+      organelles that discharge in a stimulus-triggered reaction.
+evidence:
+- reference: GO:0055039
+  notes: Gene Ontology cellular-component term for trichocyst.
+- reference: DOI:10.1091/mbc.6.6.649
+  notes: Madeddu et al. 1995, A large multigene family codes for the polypeptides
+    of the crystalline trichocyst matrix in Paramecium, Molecular Biology of the Cell.
+- reference: DOI:10.1111/jeu.12332
+  notes: Plattner 2017, Trichocysts-Paramecium's Projectile-like Secretory Organelles,
+    Journal of Eukaryotic Microbiology.
+causal_graphs:
+- graph_id: matrix_filament_discharge
+  title: Calcium-triggered matrix proteins discharge as a filament
+  description: Paramecium trichocyst matrix proteins coassemble into a crystalline
+    trichocyst matrix that is stored in the organelle. After stimulated exocytosis,
+    extracellular Ca2+ triggers matrix recrystallization and extension into the discharged
+    filament.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: trichocyst_matrix_proteins
+    label: trichocyst matrix proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: trichocyst_matrix_proteins
+  - node_id: crystalline_matrix
+    label: crystalline trichocyst matrix
+    node_type: STRUCTURE
+  - node_id: trichocyst
+    label: trichocyst
+    node_type: STRUCTURE
+    grounding: GO:0055039
+  - node_id: extended_filament
+    label: extended trichocyst filament
+    node_type: STRUCTURE
+  - node_id: extracellular_calcium
+    label: calcium(2+)
+    node_type: CHEMICAL
+    grounding: CHEBI:29108
+  edges:
+  - subject: trichocyst_matrix_proteins
+    predicate: coassemble into
+    object: crystalline_matrix
+    description: Trichocyst matrix proteins form the crystalline protein body stored
+      inside mature Paramecium trichocysts.
+    evidence:
+    - reference: DOI:10.1091/mbc.6.6.649
+      notes: Madeddu et al. 1995 identified the TMP multigene family encoding crystalline
+        trichocyst matrix polypeptides in Paramecium.
+  - subject: crystalline_matrix
+    predicate: is stored in
+    object: trichocyst
+    description: The condensed crystalline matrix is the secretory cargo packaged
+      by the trichocyst.
+    evidence:
+    - reference: DOI:10.1111/jeu.12332
+      notes: Plattner 2017 reviewed Paramecium trichocyst bodies as condensed crystalline
+        secretory matrices.
+  - subject: extracellular_calcium
+    predicate: triggers recrystallization of
+    object: crystalline_matrix
+    description: When stimulated exocytosis exposes the condensed trichocyst matrix
+      to extracellular Ca2+, the matrix explosively recrystallizes.
+    evidence:
+    - reference: DOI:10.1111/jeu.12332
+      notes: Plattner 2017 reviewed extracellular Ca2+-triggered matrix recrystallization
+        as the transition that powers Paramecium trichocyst projection.
+  - subject: crystalline_matrix
+    predicate: recrystallizes into
+    object: extended_filament
+    description: The Ca2+-triggered matrix transition converts the condensed trichocyst
+      body into an extended extracellular filament.
+    evidence:
+    - reference: DOI:10.1111/jeu.12332
+      notes: Plattner 2017 described the rapid extracellular-Ca2+-driven discharge
+        of condensed Paramecium trichocysts into extended projectile-like structures.
+discussions:
+- discussion_id: ground_trichocyst_matrix_family
+  prompt: Resolve exact family groundings and boundaries for trichocyst matrix, membrane
+    and tip components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#trichocyst_matrix_proteins
+  rationale: This first record includes the experimentally cloned crystalline matrix
+    protein family. Additional tip, sheath and membrane constituents should be added
+    only after exact family groundings and their relationship to the mature, discharge-competent
+    trichocyst are resolved.
+  evidence:
+  - reference: DOI:10.1111/jeu.12332
+  posed_by: claude
+  posed_date: '2026-09-10'
