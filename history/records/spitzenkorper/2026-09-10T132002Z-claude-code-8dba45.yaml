@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/spitzenkorper.yaml
+  slug: spitzenkorper
+session:
+  id: 2026-09-10T132002Z-claude-code-8dba45
+  timestamp: '2026-09-10T13:20:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the spitzenkorper record
+  details: Created GO:0031521 spitzenkorper as an OTHER subcellular-region record. Added hyphal-tip
+    parthood, Spitzenkörper and SPK synonymy, reviewed-label-only secretory-vesicle, actin-filament
+    and scaffold components, variable fungal scope, Neurospora crassa as a canonical example,
+    a hyphal tip-growth organization function, a nonmechanistic vesicle-supply graph, and
+    a grounding TODO for exact SPK-localized vesicle and scaffold classes.
