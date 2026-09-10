@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/cyanophycin_granule.yaml
+  slug: cyanophycin_granule
+session:
+  id: 2026-09-10T093106Z-claude-code-ee3e61
+  timestamp: '2026-09-10T09:31:06Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add the cyanophycin granule record
+  details: Curated a minted cyanophycin granule inclusion record with a ChEBI-grounded cyanophycin
+    polymer core, CphA granule-surface synthetase machinery, bacterial variable taxonomic
+    scope, Synechocystis sp. PCC 6803 as a canonical example, a fixed nitrogen and carbon
+    storage function, a nonmechanistic CphA polymerization graph and a CphA family-grounding
+    TODO.

@@ -1,0 +1,143 @@
+identifier: cellstructuremech:cyanophycin_granule
+label: cyanophycin granule
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: A bacterial storage inclusion in which insoluble cyanophycin polymer accumulates
+  as cytoplasmic granules that store fixed nitrogen and carbon for later mobilization.
+definition_source: DOI:10.5772/intechopen.77049
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T09:30:09Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T09:30:42Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added the ChEBI-grounded cyanophycin polymer core, CphA cyanophycin synthetase
+    granule-surface machinery, bacterial taxonomic scope, a Synechocystis sp. PCC
+    6803 canonical example, a fixed nitrogen and carbon storage function, record-level
+    evidence, a CphA assembly graph and a CphA grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-10T09:41:07Z'
+  curator: claude
+  action: EDITED_RECORD
+  changes: Removed CphA cyanophycin synthetase from components, retained it as assembly-graph
+    polymerization machinery without a component_ref, and retargeted the CphA grounding
+    TODO to the assembly graph.
+  llm_assisted: true
+components:
+- component_id: cyanophycin_polymer_core
+  label: cyanophycin polymer
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  grounding: CHEBI:65319
+  essentiality: ESSENTIAL
+  role: Insoluble poly(amide) storage material that forms the granule core and stores
+    fixed nitrogen plus carbon.
+  evidence:
+  - reference: DOI:10.5772/intechopen.77049
+    notes: Watzer and Forchhammer 2018 review cyanophycin as a nitrogen- and carbon-rich
+      reserve polymer that accumulates as intracellular granules.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Cyanophycin occurs in many cyanobacteria and in a smaller set of heterotrophic
+    bacteria, but is absent from most bacterial lineages.
+  reference: DOI:10.5772/intechopen.77049
+canonical_examples:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  note: Unicellular cyanobacterium used for CphA-GFP localization and cyanophycin
+    accumulation experiments.
+  reference: DOI:10.1128/AEM.01298-18
+functions:
+- function_id: fixed_nitrogen_carbon_storage
+  label: fixed nitrogen and carbon storage
+  description: Cyanophycin granules sequester nitrogen-rich cyanophycin polymer as
+    a storage reserve that can be mobilized when cells need nitrogen or carbon.
+  evidence:
+  - reference: DOI:10.5772/intechopen.77049
+    notes: Watzer and Forchhammer 2018 review cyanophycin as a nitrogen- and carbon-rich
+      reserve polymer in bacteria.
+  - reference: DOI:10.1128/AEM.01298-18
+    notes: Watzer et al. 2018 assayed Synechocystis cyanophycin accumulation and mobilization
+      during nitrogen supply shifts.
+evidence:
+- reference: DOI:10.5772/intechopen.77049
+  notes: 'Watzer and Forchhammer 2018, Cyanophycin: A Nitrogen-Rich Reserve Polymer,
+    in Cyanobacteria.'
+- reference: DOI:10.1128/AEM.01298-18
+  notes: Watzer et al. 2018, Cyanophycin Synthesis Optimizes Nitrogen Utilization
+    in the Unicellular Cyanobacterium Synechocystis sp. Strain PCC 6803, Applied and
+    Environmental Microbiology.
+causal_graphs:
+- graph_id: cpha_surface_polymerization_storage
+  title: CphA builds cyanophycin stores at the granule surface
+  description: Cyanophycin synthetase polymerizes cyanophycin and localizes to granule
+    surfaces while insoluble cyanophycin polymer accumulates as a nitrogen- and carbon-rich
+    storage granule.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures CphA surface localization and polymer accumulation
+    without asserting a complete nucleation or cyanophycin mobilization mechanism.
+  nodes:
+  - node_id: cyanophycin_synthetase
+    label: cyanophycin synthetase
+    node_type: GENE_OR_PROTEIN
+  - node_id: cyanophycin_polymer_core
+    label: cyanophycin polymer
+    node_type: CHEMICAL
+    grounding: CHEBI:65319
+    component_ref: cyanophycin_polymer_core
+  - node_id: cyanophycin_granule
+    label: cyanophycin granule
+    node_type: ORGANELLE
+    grounding: cellstructuremech:cyanophycin_granule
+  - node_id: fixed_nitrogen_carbon_store
+    label: stored fixed nitrogen and carbon
+    node_type: STATE
+  edges:
+  - subject: cyanophycin_synthetase
+    predicate: polymerizes
+    object: cyanophycin_polymer_core
+    description: CphA-family cyanophycin synthetases extend the cyanophycin polymer
+      and localize to cyanophycin granule surfaces during granule accumulation.
+    evidence:
+    - reference: DOI:10.1128/AEM.01298-18
+      notes: Watzer et al. 2018 used CphA-GFP to track CphA movement from cytoplasmic
+        foci to cyanophycin granule surfaces during synthesis.
+  - subject: cyanophycin_polymer_core
+    predicate: accumulates as
+    object: cyanophycin_granule
+    description: Insoluble cyanophycin polymer condenses into cytoplasmic storage
+      granules.
+    evidence:
+    - reference: DOI:10.5772/intechopen.77049
+      notes: Watzer and Forchhammer 2018 review cyanophycin as an intracellular granule-forming
+        bacterial storage polymer.
+  - subject: cyanophycin_granule
+    predicate: stores
+    object: fixed_nitrogen_carbon_store
+    description: The assembled granule retains fixed nitrogen and carbon in cyanophycin
+      for later mobilization.
+    evidence:
+    - reference: DOI:10.5772/intechopen.77049
+      notes: Watzer and Forchhammer 2018 review cyanophycin as a reserve polymer that
+        stores nitrogen and carbon.
+discussions:
+- discussion_id: ground_cyanophycin_synthetase
+  prompt: Resolve an exact family grounding for the CphA cyanophycin synthetase assembly-graph
+    node.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#cpha_surface_polymerization_storage
+  rationale: GO molecular-function terms cover cyanophycin synthetase activities,
+    but exact CphA-family InterPro, Pfam or NCBIfam groundings should be chosen by
+    a focused homology pass rather than guessed. CphA is tracked as cyanophycin-polymerization
+    machinery in the graph rather than as a granule component.
+  posed_by: claude
+  posed_date: '2026-09-10'
