@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/apicoplast.yaml
+  slug: apicoplast
+session:
+  id: 2026-09-10T024608Z-codex-880763
+  timestamp: '2026-09-10T02:46:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/303
+  - https://github.com/CultureBotAI/CellStructureMech/issues/304
+  - https://github.com/CultureBotAI/CellStructureMech/issues/305
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - composition
+  - canonical_examples
+  - causal_graphs
+  summary: Address apicoplast review issues
+  details: 'Resolved issue #303 by downgrading Tic20, SELMA/ERAD-derived import machinery
+    and nuclear-encoded metabolic enzymes to UNKNOWN essentiality because their cited roles
+    support import or metabolism rather than apicoplast formation. Resolved issue #304 by
+    changing the bipartite-leader apicoplast import graph from ASSEMBLY to FUNCTION. Resolved
+    issue #305 by narrowing the Toxoplasma gondii canonical-example note to the Tic20 import
+    result supported by its direct reference.'
