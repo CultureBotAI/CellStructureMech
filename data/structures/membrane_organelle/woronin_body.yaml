@@ -20,6 +20,13 @@ curation_history:
     sealing function, record-level evidence, a nonmechanistic pore-plugging graph
     and a grounding TODO for Woronin body biogenesis factors.
   llm_assisted: true
+- timestamp: '2026-09-10T10:46:42Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #349 by removing the terminal septal-pore-to-sealed-hypha state
+    edge and keeping the Woronin body graph focused on directly supported dense-core,
+    membrane-boundary and septal-pore plugging relations.'
+  llm_assisted: true
 components:
 - component_id: woronin_body_membrane
   label: Woronin body membrane
@@ -90,7 +97,7 @@ evidence:
     by peroxisomal protein sorting, Journal of Cell Biology.'
 causal_graphs:
 - graph_id: hex1_core_septal_pore_plugging
-  title: Hex1 crystals build a membrane-bounded septal plug
+  title: Hex1 crystals form a membrane-bounded septal plug
   description: Hex1 assembles into the dense Woronin body core, the bounding membrane
     encloses that core, and the resulting organelle plugs septal pores after hyphal
     damage.
@@ -114,9 +121,6 @@ causal_graphs:
   - node_id: septal_pore
     label: septal pore
     node_type: STRUCTURE
-  - node_id: wounded_hypha_sealed
-    label: sealed wounded hypha
-    node_type: STATE
   edges:
   - subject: hex1_crystalline_core
     predicate: forms dense core of
@@ -143,15 +147,6 @@ causal_graphs:
     - reference: DOI:10.1006/fgbi.2000.1230
       notes: Tenney et al. 2000 showed that Woronin bodies function as septal-pore
         plugs.
-  - subject: septal_pore
-    predicate: is sealed to create
-    object: wounded_hypha_sealed
-    description: Septal pore plugging limits cytoplasmic loss from damaged hyphal
-      compartments.
-    evidence:
-    - reference: DOI:10.1038/nsb910
-      notes: Yuan et al. 2003 linked HEX-1 lattice assembly to efficient resealing
-        of damaged Neurospora hyphae.
 discussions:
 - discussion_id: ground_woronin_body_biogenesis_factors
   prompt: Resolve exact family groundings for Woronin body Hex1, WSC, Leashin and
