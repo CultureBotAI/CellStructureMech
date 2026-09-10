@@ -1,0 +1,106 @@
+identifier: cellstructuremech:glycogen_granule
+label: glycogen granule
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: A microbial carbohydrate storage inclusion in which glycogen polymer accumulates
+  as cytoplasmic granules that store glucose-derived carbon and energy for later mobilization.
+definition_source: DOI:10.3389/fmicb.2016.00966
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T09:53:47Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T09:54:12Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added the ChEBI-grounded glycogen core, bacterial taxonomic scope, a Synechocystis
+    sp. PCC 6803 canonical example, a glycogen carbon and energy storage function,
+    record-level evidence and a nonmechanistic glycogen storage graph.
+  llm_assisted: true
+- timestamp: '2026-09-10T10:07:18Z'
+  curator: claude
+  action: EDITED_RECORD
+  changes: Changed the glycogen storage function from cyanobacterium-specific photosynthetically
+    fixed carbon wording to taxon-neutral glucose-derived carbon and energy wording.
+  llm_assisted: true
+components:
+- component_id: glycogen_core
+  label: glycogen
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  grounding: CHEBI:28087
+  essentiality: ESSENTIAL
+  role: Branched glucose storage polymer that condenses into the granule and supplies
+    carbon and energy during subsequent mobilization.
+  evidence:
+  - reference: DOI:10.3389/fmicb.2016.00966
+    notes: Koch et al. 2016 review cyanobacterial glycogen granules as carbohydrate
+      storage bodies formed during macronutrient starvation.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Glycogen storage granules occur in cyanobacteria and other glycogen-producing
+    bacteria but are absent from bacterial lineages that lack bacterial glycogen biosynthesis.
+  reference: DOI:10.3389/fmicb.2016.00966
+canonical_examples:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  note: Unicellular cyanobacterium used to analyze glycogen granule formation during
+    macronutrient starvation.
+  reference: DOI:10.3389/fmicb.2016.00966
+functions:
+- function_id: glycogen_carbon_energy_storage
+  label: glycogen carbon and energy storage
+  description: Glycogen granules sequester glucose-derived carbon and energy as branched
+    glycogen polymer that can be degraded when external nutrients limit growth.
+  evidence:
+  - reference: DOI:10.3389/fmicb.2016.00966
+    notes: Koch et al. 2016 review glycogen as a common microbial carbon polymer that
+      accumulates in Synechocystis during macronutrient starvation.
+evidence:
+- reference: DOI:10.3389/fmicb.2016.00966
+  notes: Koch et al. 2016, The Multiple Functions of Common Microbial Carbon Polymers,
+    Frontiers in Microbiology.
+causal_graphs:
+- graph_id: glycogen_polymer_storage_granule
+  title: Glycogen polymer forms carbon-storage granules
+  description: Branched glycogen polymer accumulates as cytoplasmic granules that
+    hold glucose-derived carbon and energy for later mobilization.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures glycogen polymer accumulation without asserting
+    the full GlgA/GlgB biosynthetic reaction sequence or granule nucleation mechanism.
+  nodes:
+  - node_id: glycogen_core
+    label: glycogen
+    node_type: CHEMICAL
+    grounding: CHEBI:28087
+    component_ref: glycogen_core
+  - node_id: glycogen_granule
+    label: glycogen granule
+    node_type: ORGANELLE
+    grounding: cellstructuremech:glycogen_granule
+  - node_id: carbon_energy_store
+    label: stored glucose-derived carbon and energy
+    node_type: STATE
+  edges:
+  - subject: glycogen_core
+    predicate: accumulates as
+    object: glycogen_granule
+    description: Intracellular glycogen polymer accumulates in cytoplasmic storage
+      granules.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2016.00966
+      notes: Koch et al. 2016 discuss glycogen granule formation in starved Synechocystis
+        cells.
+  - subject: glycogen_granule
+    predicate: stores
+    object: carbon_energy_store
+    description: The assembled granule stores glucose-derived carbon and energy as
+      glycogen polymer.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2016.00966
+      notes: Koch et al. 2016 review glycogen as a microbial carbon storage polymer.

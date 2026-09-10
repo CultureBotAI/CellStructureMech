@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/glycogen_granule.yaml
+  slug: glycogen_granule
+session:
+  id: 2026-09-10T100733Z-claude-code-25351a
+  timestamp: '2026-09-10T10:07:33Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/344
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/343
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - functions
+  - curation_history
+  summary: Make glycogen storage wording taxon-neutral
+  details: Addressed adversarial review by replacing cyanobacterium-specific photosynthetically
+    fixed carbon wording with taxon-neutral glucose-derived carbon and energy wording for
+    the glycogen storage function.
