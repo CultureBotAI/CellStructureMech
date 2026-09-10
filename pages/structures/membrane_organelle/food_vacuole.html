@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>food vacuole · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>food vacuole</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0020020"><code>GO:0020020</code></a> · MEMBRANE_ORGANELLE · MEMBRANE_BOUNDED_ORGANELLE · <span class="status">PROPOSED</span></p>
+<p class="definition">A parasite vacuole that digests host-cell cytoplasm; in Plasmodium blood stages this acidic lysosome-like organelle degrades host hemoglobin and detoxifies heme. <small>[<a href="http://purl.obolibrary.org/obo/GO_0020020"><code>GO:0020020</code></a>]</small></p>
+<p><strong>Synonyms:</strong> digestive vacuole</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-food_vacuole_membrane"><td>food vacuole membrane</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td></td><td>The acidic organelle-bounding membrane that separates the digestive lumen from the parasite cytosol and carries digestive-vacuole transporters.<ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.113.5.1033"><code>DOI:10.1083/jcb.113.5.1033</code></a> <small>Cowman et al. 1991 localized a Plasmodium falciparum P-glycoprotein homologue to the digestive vacuole.</small></li><li><a href="https://doi.org/10.3390/pathogens13030182"><code>DOI:10.3390/pathogens13030182</code></a> <small>Wiser 2024 reviewed the digestive vacuole as an acidic lysosome-like organelle of malaria parasites.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5833"><code>NCBITaxon:5833</code></a> Plasmodium falciparum — <strong>COMMON</strong>: The food vacuole is directly evidenced in Plasmodium falciparum blood-stage parasites; no broader Plasmodium or Apicomplexa scope is asserted in this first record. [<a href="https://doi.org/10.1002/prca.200700112"><code>DOI:10.1002/prca.200700112</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5833"><code>NCBITaxon:5833</code></a> <em>Plasmodium falciparum</em> — Human malaria parasite whose food-vacuole fraction has been profiled by proteomics and whose digestive-vacuole membrane has long been experimentally localized. [<a href="https://doi.org/10.1002/prca.200700112"><code>DOI:10.1002/prca.200700112</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>hemoglobin catabolism</strong> — The acidic food vacuole receives host hemoglobin and houses proteolytic digestion of that cargo during Plasmodium intraerythrocytic growth.<ul class="evidence"><li><a href="https://doi.org/10.3390/pathogens13030182"><code>DOI:10.3390/pathogens13030182</code></a> <small>Wiser 2024 reviewed the malaria digestive vacuole as the acidic lysosome-like site of host hemoglobin digestion.</small></li><li><a href="https://doi.org/10.1002/prca.200700112"><code>DOI:10.1002/prca.200700112</code></a> <small>Lamarque et al. 2008 isolated Plasmodium falciparum food vacuoles for proteomic analysis.</small></li></ul></li><li><strong>heme detoxification</strong> — Heme released by hemoglobin proteolysis is converted into hemozoin crystals inside the digestive vacuole.<ul class="evidence"><li><a href="https://doi.org/10.3390/pathogens13030182"><code>DOI:10.3390/pathogens13030182</code></a> <small>Wiser 2024 reviewed hemozoin formation as the food-vacuole route for detoxifying heme released from digested hemoglobin.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-hemoglobin_digestion_and_hemozoin_formation">Food vacuole digestion produces hemozoin <small>(FUNCTION)</small></h3>
+<p>Host hemoglobin is delivered to the Plasmodium food vacuole, proteolysis releases heme, and the vacuole converts free heme into crystalline hemozoin.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>food vacuole</td><td>digests</td><td>host hemoglobin</td><td><ul class="evidence"><li><a href="https://doi.org/10.3390/pathogens13030182"><code>DOI:10.3390/pathogens13030182</code></a> <small>Wiser 2024 reviewed host hemoglobin proteolysis in the malaria digestive vacuole.</small></li></ul></td></tr>
+<tr><td>host hemoglobin</td><td>releases</td><td>free heme</td><td><ul class="evidence"><li><a href="https://doi.org/10.3390/pathogens13030182"><code>DOI:10.3390/pathogens13030182</code></a> <small>Wiser 2024 reviewed heme release downstream of hemoglobin digestion.</small></li></ul></td></tr>
+<tr><td>free heme</td><td>crystallizes into</td><td>hemozoin</td><td><ul class="evidence"><li><a href="https://doi.org/10.3390/pathogens13030182"><code>DOI:10.3390/pathogens13030182</code></a> <small>Wiser 2024 reviewed hemozoin formation inside the digestive vacuole.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact component groundings for Plasmodium food vacuole proteases, proton pumps and solute transporters. <small>This first record models the digestive-vacuole membrane as an aggregate. Follow-up curation should split experimentally localized Plasmodium vacuolar hydrolases, PfCRT, Pgh1 and acidification machinery only where exact source-neutral families or species-specific UniProt examples can be verified.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0020020"><code>GO:0020020</code></a> <small>Gene Ontology cellular-component term for food vacuole, with digestive vacuole as an exact synonym.</small></li><li><a href="https://doi.org/10.1002/prca.200700112"><code>DOI:10.1002/prca.200700112</code></a> <small>Lamarque et al. 2008, Food vacuole proteome of the malarial parasite Plasmodium falciparum, Proteomics Clinical Applications.</small></li><li><a href="https://doi.org/10.3390/pathogens13030182"><code>DOI:10.3390/pathogens13030182</code></a> <small>Wiser 2024, The Digestive Vacuole of the Malaria Parasite: A Specialized Lysosome, Pathogens.</small></li><li><a href="https://doi.org/10.1083/jcb.113.5.1033"><code>DOI:10.1083/jcb.113.5.1033</code></a> <small>Cowman et al. 1991, A P-glycoprotein homologue of Plasmodium falciparum is localized on the digestive vacuole, Journal of Cell Biology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-10T14:02:08Z</code> claude · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-10T14:02:43Z</code> claude · EXPANDED_RECORD — Added the digestive vacuole synonym, a reviewed-label-only food vacuole membrane component, Plasmodium falciparum scope, hemoglobin catabolism and heme detoxification functions, record evidence, a nonmechanistic hemozoin-formation graph, and a vacuolar enzyme/transporter grounding TODO.</li><li><code>2026-09-10T14:03:02Z</code> claude · REMOVE_UNVERIFIED_GROUNDING — Removed an unverified ChEBI grounding from the free heme graph node; exact ChEBI groundings require an authority lookup.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/food_vacuole.yaml"><code>data/structures/membrane_organelle/food_vacuole.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
