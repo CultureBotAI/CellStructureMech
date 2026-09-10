@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+  slug: inner_membrane_pellicle_complex
+session:
+  id: 2026-09-10T123726Z-claude-820074
+  timestamp: '2026-09-10T12:37:26Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the inner membrane pellicle complex record
+  details: Created data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    for GO:0070258, including flattened IMC alveolar membranes, an alveolin subpellicular
+    protein network, Apicomplexa and Plasmodium falciparum scope, pellicle shape, daughter-cell
+    scaffold and glideosome-anchoring functions, a nonmechanistic IMC scaffold graph, and
+    an open IMC protein-cohort grounding TODO.
