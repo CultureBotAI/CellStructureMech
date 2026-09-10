@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/flagellar_pocket.yaml
+  slug: flagellar_pocket
+session:
+  id: 2026-09-10T121437Z-claude-1dd205
+  timestamp: '2026-09-10T12:14:37Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO-grounded flagellar pocket structure record
+  details: Created data/structures/membrane_organelle/flagellar_pocket.yaml for GO:0020016,
+    including ciliary pocket membrane and ciliary pocket collar components, Trypanosoma brucei
+    scope, endocytic and exocytic gateway functions, a flagellar pocket boundary and traffic
+    graph, and an open cytoskeletal-boundary grounding TODO.
