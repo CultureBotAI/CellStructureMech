@@ -1,0 +1,280 @@
+identifier: GO:0042566
+label: hydrogenosome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A spherical, membrane-bounded organelle found in some anaerobic protozoa,
+  which participates in ATP and molecular hydrogen formation.
+definition_source: GO:0042566
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T03:24:10Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T03:25:09Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added hydrogenosome membrane and lumen parthood, membrane, pyruvate-metabolism,
+    Fe-S assembly and protein-import components, rare eukaryotic and Trichomonas taxonomic
+    scope, Trichomonas vaginalis as a canonical example, ATP/hydrogen production,
+    Fe-S assembly and protein-import functions, a pyruvate-to-ATP/hydrogen graph,
+    and grounding TODOs for import and energy components.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+part_of:
+- GO:0005737
+has_part:
+- GO:0034492
+- GO:0046859
+components:
+- component_id: hydrogenosomal_membrane
+  label: hydrogenosomal membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0046859
+  essentiality: ESSENTIAL
+  role: Double bounding membrane that encloses the hydrogenosome matrix and separates
+    ATP- and hydrogen-producing enzymes from the cytosol.
+  evidence:
+  - reference: PMID:4750424
+    notes: Lindmark and Muller 1973 described a particulate hydrogen-producing organelle
+      in Tritrichomonas foetus.
+  - reference: DOI:10.1111/jeu.12922
+    notes: Tachezy 2022 reviews hydrogenosomes as mitochondrion-related organelles
+      of anaerobic eukaryotes.
+- component_id: pyruvate_metabolism_enzymes
+  label: hydrogenosomal pyruvate metabolism and hydrogen-production enzymes
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - PFO
+  - HYD
+  - ASCT
+  - SCS
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The energy-metabolism component groups multiple unrelated Trichomonas
+    hydrogenosomal enzyme families; no single exact family CURIE denotes the full
+    ATP- and hydrogen-producing enzyme set.
+  role: Matrix enzymes that convert pyruvate into acetate, ATP and molecular hydrogen
+    under anaerobic conditions.
+  evidence:
+  - reference: PMID:4750424
+    notes: Lindmark and Muller 1973 linked the organelle to hydrogen production in
+      trichomonads.
+  - reference: DOI:10.1016/j.ijpara.2011.10.001
+    notes: Schneider et al. 2011 identified hydrogenosomal proteins involved in pyruvate
+      metabolism, substrate-level phosphorylation and hydrogen production.
+- component_id: hydrogenosomal_fe_s_machinery
+  label: hydrogenosomal iron-sulfur cluster assembly machinery
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - IscS
+  - IscU
+  - IscA
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The hydrogenosomal iron-sulfur cluster assembly module contains
+    several ISC proteins; exact source-neutral family CURIEs for the grouped machinery
+    were not curated.
+  role: Mitochondrial-type ISC factors that assemble iron-sulfur centers in the hydrogenosome.
+  evidence:
+  - reference: DOI:10.1073/pnas.0401319101
+    notes: Sutak et al. 2004 localized mitochondrial-type iron-sulfur center assembly
+      to Trichomonas vaginalis hydrogenosomes.
+- component_id: hydrogenosomal_import_machinery
+  label: hydrogenosomal protein-import machinery
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Hydrogenosomal targeting and translocation machinery is mitochondrion-related
+    but divergent, so exact complex- or family-level groundings were deferred.
+  role: Mitochondrion-related machinery that recognizes N-terminal presequences and
+    imports nuclear-encoded proteins into the hydrogenosome.
+  evidence:
+  - reference: DOI:10.1073/pnas.0500349102
+    notes: Dolezal et al. 2005 found that Giardia mitosomes and trichomonad hydrogenosomes
+      share a protein targeting mode.
+  - reference: DOI:10.1073/pnas.93.18.9651
+    notes: Bui et al. 1996 found N-terminal processing of hydrogenosomal Hsp60, consistent
+      with import of nuclear-encoded matrix proteins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Hydrogenosomes occur patchily in anaerobic microbial eukaryotes and represent
+    independently modified mitochondria rather than a conserved eukaryotic state.
+  reference: DOI:10.1111/jeu.12922
+- taxon_id: NCBITaxon:5722
+  taxon_label: Trichomonas vaginalis
+  presence: COMMON
+  note: The parasite contains abundant hydrogenosomes that have been biochemically
+    and proteomically characterized.
+  reference: DOI:10.1016/j.ijpara.2011.10.001
+canonical_examples:
+- taxon_id: NCBITaxon:5722
+  taxon_label: Trichomonas vaginalis
+  note: Parabasalid parasite in which hydrogenosomal metabolism, iron-sulfur cluster
+    assembly, protein targeting and the organelle proteome have been experimentally
+    studied.
+  reference: DOI:10.1016/j.ijpara.2011.10.001
+functions:
+- function_id: anaerobic_atp_and_hydrogen_production
+  label: anaerobic ATP and molecular hydrogen production
+  description: Hydrogenosomal pyruvate metabolism supports anaerobic ATP production
+    by substrate-level phosphorylation while releasing molecular hydrogen.
+  evidence:
+  - reference: PMID:4750424
+    notes: Lindmark and Muller 1973 isolated the hydrogen-producing organelle that
+      gave hydrogenosomes their name.
+  - reference: DOI:10.1016/j.ijpara.2011.10.001
+    notes: Schneider et al. 2011 cataloged hydrogenosomal enzymes for pyruvate metabolism
+      and substrate-level phosphorylation.
+- function_id: hydrogenosomal_fe_s_cluster_assembly
+  label: hydrogenosomal iron-sulfur cluster assembly
+  description: Hydrogenosomes retain mitochondrial-type ISC machinery that assembles
+    iron-sulfur centers.
+  evidence:
+  - reference: DOI:10.1073/pnas.0401319101
+    notes: Sutak et al. 2004 showed that iron-sulfur center assembly occurs in Trichomonas
+      vaginalis hydrogenosomes.
+- function_id: hydrogenosomal_protein_import
+  label: hydrogenosomal matrix protein import
+  description: Nuclear-encoded hydrogenosomal matrix proteins are targeted to the
+    organelle through N-terminal presequences.
+  evidence:
+  - reference: DOI:10.1073/pnas.0500349102
+    notes: Dolezal et al. 2005 compared targeting signals in trichomonad hydrogenosomes
+      and Giardia mitosomes.
+evidence:
+- reference: PMID:4750424
+  notes: Lindmark and Muller 1973, Hydrogenosome, a cytoplasmic organelle of the anaerobic
+    flagellate Tritrichomonas foetus, and its role in pyruvate metabolism, Journal
+    of Biological Chemistry.
+- reference: DOI:10.1073/pnas.93.18.9651
+  notes: Bui et al. 1996, A common evolutionary origin for mitochondria and hydrogenosomes,
+    Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1073/pnas.0401319101
+  notes: Sutak et al. 2004, Mitochondrial-type assembly of iron-sulfur centers in
+    the hydrogenosomes of the amitochondriate eukaryote Trichomonas vaginalis, Proceedings
+    of the National Academy of Sciences.
+- reference: DOI:10.1073/pnas.0500349102
+  notes: Dolezal et al. 2005, Giardia mitosomes and trichomonad hydrogenosomes share
+    a common mode of protein targeting, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1016/j.ijpara.2011.10.001
+  notes: Schneider et al. 2011, The Trichomonas vaginalis hydrogenosome proteome is
+    highly reduced relative to mitochondria, yet complex compared with mitosomes,
+    International Journal for Parasitology.
+- reference: DOI:10.1111/jeu.12922
+  notes: 'Tachezy 2022, Hydrogenosomes and mitosomes: Mitochondria of anaerobic eukaryotes,
+    Journal of Eukaryotic Microbiology.'
+causal_graphs:
+- graph_id: hydrogenosomal_pyruvate_to_atp_and_hydrogen
+  title: Hydrogenosomal enzymes convert pyruvate into ATP and molecular hydrogen
+  description: Hydrogenosomal import and ISC assembly load the organelle matrix with
+    enzymes that oxidize pyruvate and support substrate-level phosphorylation with
+    proton reduction to molecular hydrogen.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: hydrogenosomal_membrane
+    label: hydrogenosomal membrane
+    node_type: STRUCTURE
+    grounding: GO:0046859
+    component_ref: hydrogenosomal_membrane
+  - node_id: hydrogenosome
+    label: hydrogenosome
+    node_type: ORGANELLE
+    grounding: GO:0042566
+  - node_id: hydrogenosome_lumen
+    label: hydrogenosome lumen
+    node_type: STRUCTURE
+    grounding: GO:0034492
+  - node_id: hydrogenosomal_import_machinery
+    label: hydrogenosomal protein-import machinery
+    node_type: GENE_OR_PROTEIN
+    component_ref: hydrogenosomal_import_machinery
+  - node_id: pyruvate_metabolism_enzymes
+    label: hydrogenosomal pyruvate metabolism and hydrogen-production enzymes
+    node_type: GENE_OR_PROTEIN
+    component_ref: pyruvate_metabolism_enzymes
+  - node_id: hydrogenosomal_fe_s_machinery
+    label: hydrogenosomal iron-sulfur cluster assembly machinery
+    node_type: GENE_OR_PROTEIN
+    component_ref: hydrogenosomal_fe_s_machinery
+  - node_id: pyruvate
+    label: pyruvate
+    node_type: CHEMICAL
+  - node_id: atp_and_hydrogen
+    label: ATP and molecular hydrogen
+    node_type: CHEMICAL
+  edges:
+  - subject: hydrogenosomal_membrane
+    predicate: bounds
+    object: hydrogenosome
+    description: The hydrogenosomal membrane encloses the organelle matrix.
+    evidence:
+    - reference: DOI:10.1111/jeu.12922
+      notes: Tachezy 2022 reviews hydrogenosomes as membrane-bounded mitochondrion-related
+        organelles.
+  - subject: hydrogenosomal_import_machinery
+    predicate: imports
+    object: pyruvate_metabolism_enzymes
+    description: Hydrogenosomal protein-targeting machinery imports nuclear-encoded
+      matrix proteins.
+    evidence:
+    - reference: DOI:10.1073/pnas.0500349102
+      notes: Dolezal et al. 2005 studied presequence targeting into trichomonad hydrogenosomes.
+  - subject: pyruvate_metabolism_enzymes
+    predicate: accumulate in
+    object: hydrogenosome_lumen
+    description: Pyruvate-metabolizing and hydrogen-producing enzymes localize to
+      the hydrogenosomal matrix.
+    evidence:
+    - reference: DOI:10.1016/j.ijpara.2011.10.001
+      notes: Schneider et al. 2011 identified the Trichomonas hydrogenosome proteome.
+  - subject: hydrogenosomal_fe_s_machinery
+    predicate: matures
+    object: pyruvate_metabolism_enzymes
+    description: The hydrogenosomal ISC pathway assembles iron-sulfur centers needed
+      by hydrogenosomal enzymes.
+    evidence:
+    - reference: DOI:10.1073/pnas.0401319101
+      notes: Sutak et al. 2004 localized mitochondrial-type iron-sulfur assembly proteins
+        to hydrogenosomes.
+  - subject: pyruvate_metabolism_enzymes
+    predicate: convert
+    object: pyruvate
+    description: Hydrogenosomal enzymes couple pyruvate metabolism to formation of
+      ATP and molecular hydrogen.
+    evidence:
+    - reference: PMID:4750424
+      notes: Lindmark and Muller 1973 linked the organelle to pyruvate metabolism
+        and hydrogen production.
+  - subject: pyruvate_metabolism_enzymes
+    predicate: produce
+    object: atp_and_hydrogen
+    description: The hydrogenosomal pyruvate pathway produces ATP and molecular hydrogen
+      anaerobically.
+    evidence:
+    - reference: DOI:10.1016/j.ijpara.2011.10.001
+      notes: Schneider et al. 2011 cataloged the Trichomonas hydrogenosomal energy
+        metabolism proteins.
+discussions:
+- discussion_id: hydrogenosomal_import_grounding
+  prompt: Resolve exact source-neutral groundings for hydrogenosomal protein-import
+    factors and energy-metabolism enzyme families.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#hydrogenosomal_import_machinery
+  - components#pyruvate_metabolism_enzymes
+  rationale: The first record groups divergent nuclear-encoded hydrogenosomal import
+    and energy proteins. Exact family-level CURIEs for every grouped factor were not
+    curated.
+  posed_by: claude
+  posed_date: '2026-09-10'
