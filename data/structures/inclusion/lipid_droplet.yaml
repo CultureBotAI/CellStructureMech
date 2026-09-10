@@ -21,6 +21,13 @@ curation_history:
     S288C canonical example, neutral-lipid storage function, record-level evidence
     and a nonmechanistic neutral-lipid storage graph.
   llm_assisted: true
+- timestamp: '2026-09-10T10:31:24Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #346 by correcting the Al Mamun lipid-droplet citation year and
+    title; resolved #347 by changing the budding-yeast canonical example from strain-specific
+    Saccharomyces cerevisiae S288C to species-level Saccharomyces cerevisiae.'
+  llm_assisted: true
 synonyms:
 - synonym_text: adiposome
   synonym_type: EXACT_SYNONYM
@@ -67,14 +74,15 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4751
   taxon_label: Fungi
   presence: VARIABLE
-  note: Lipid droplets are characterized in Saccharomyces cerevisiae and Aspergillus
-    oryzae, but this first record does not assert ubiquity across all fungi.
+  note: Lipid droplets are characterized in budding yeast and in the filamentous fungus
+    Aspergillus oryzae, but this first record does not assert ubiquity across all
+    fungi.
   reference: DOI:10.1111/mmi.15170
 canonical_examples:
-- taxon_id: NCBITaxon:559292
-  taxon_label: Saccharomyces cerevisiae S288C
-  note: Reference budding-yeast strain used to define lipid-droplet neutral-lipid
-    storage and lipidome/proteome composition.
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding yeast species used to define lipid-droplet neutral-lipid storage and
+    lipidome/proteome composition.
   reference: DOI:10.1016/j.bbalip.2011.07.015
 functions:
 - function_id: neutral_lipid_storage
@@ -101,8 +109,8 @@ evidence:
   notes: 'Grillitsch et al. 2011, Lipid particles/droplets of the yeast Saccharomyces
     cerevisiae revisited: lipidome meets proteome, Biochimica et Biophysica Acta.'
 - reference: DOI:10.1111/mmi.15170
-  notes: Mamun et al. 2024 identified lipid droplet-associated proteins regulating
-    lipid-droplet biogenesis in Aspergillus oryzae.
+  notes: Al Mamun, Reza, and Islam 2023, Identification of novel proteins regulating
+    lipid droplet biogenesis in filamentous fungi, Molecular Microbiology.
 causal_graphs:
 - graph_id: neutral_lipid_core_storage
   title: Neutral lipids coalesce inside a monolayer droplet
