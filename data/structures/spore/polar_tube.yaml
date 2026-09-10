@@ -28,13 +28,17 @@ curation_history:
     directly shows and shifted the sporoplasm-conduction graph edge from polaroplast-membrane
     evidence to cryo-ET cargo evidence.
   llm_assisted: true
+- timestamp: '2026-09-10T13:50:21Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #374 review issues #375 and #376 by removing the source-local
+    PT abbreviation and changing the Nosema bombycis canonical example to cite the
+    polar filament/tube proteomics paper directly.'
+  llm_assisted: true
 synonyms:
 - synonym_text: polar filament
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1186/s13071-023-05908-9
-- synonym_text: PT
-  synonym_type: RELATED_SYNONYM
-  source: DOI:10.1371/journal.pbio.3002533
 components:
 - component_id: polar_tube_proteins
   label: polar tube proteins
@@ -47,6 +51,9 @@ components:
   - reference: DOI:10.1016/j.ijpara.2005.04.003
     notes: Xu and Weiss 2005 reviewed PTP1, PTP2 and PTP3 as identified protein constituents
       of the microsporidian polar tube.
+  - reference: DOI:10.1016/j.jprot.2022.104617
+    notes: Lv et al. 2022 compared Nosema bombycis polar filaments and everted polar
+      tubes by proteomic profiling.
   - reference: DOI:10.1371/journal.pbio.3002533
     notes: Sharma et al. 2024 combined cryo-electron tomography with affinity purification
       and mass spectrometry of germinated microsporidian polar tubes.
@@ -64,9 +71,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:27978
   taxon_label: Nosema bombycis
-  note: Silkworm-infecting microsporidian in which polaroplast-derived membranes were
-    tracked through fired polar tubes during sporoplasm membrane formation.
-  reference: DOI:10.1128/mbio.02749-23
+  note: Silkworm-infecting microsporidian in which proteomic profiles of compact polar
+    filaments and everted polar tubes were compared.
+  reference: DOI:10.1016/j.jprot.2022.104617
 functions:
 - function_id: host_cell_invasion
   label: host cell invasion
@@ -99,6 +106,10 @@ evidence:
 - reference: DOI:10.1186/s13071-023-05908-9
   notes: 'Chen et al. 2023, The microsporidian polar tube: origin, structure, composition,
     function, and application, Parasites & Vectors.'
+- reference: DOI:10.1016/j.jprot.2022.104617
+  notes: Lv et al. 2022, Proteomic profile of polar filament and polar tube from fungal
+    pathogen microsporidium Nosema bombycis provides new insights into its unique
+    invasion organelle, Journal of Proteomics.
 - reference: DOI:10.1128/mbio.02749-23
   notes: 'Lv et al. 2024, Microsporidia dressing up: the spore polaroplast transport
     through the polar tube and transformation into the sporoplasm membrane, mBio.'
