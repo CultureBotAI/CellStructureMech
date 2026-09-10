@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/polaroplast.yaml
+  slug: polaroplast
+session:
+  id: 2026-09-10T113316Z-claude-c781d4
+  timestamp: '2026-09-10T11:33:16Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO-grounded polaroplast structure record
+  details: Created data/structures/membrane_organelle/polaroplast.yaml for GO:0160201 polaroplast,
+    including polaroplast membrane and lamellar/tubular subregion components, Microsporidia
+    and Nosema bombycis scope, polar tube firing and sporoplasm membrane evidence, a polaroplast
+    membrane transport graph, and an open protein/lipid grounding TODO.
