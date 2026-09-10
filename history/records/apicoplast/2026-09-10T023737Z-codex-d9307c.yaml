@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/apicoplast.yaml
+  slug: apicoplast
+session:
+  id: 2026-09-10T023737Z-codex-d9307c
+  timestamp: '2026-09-10T02:37:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - composition
+  - causal_graphs
+  summary: Align apicoplast membrane labels
+  details: Aligned the GO:0160211 component and causal-graph node labels with the GO canonical
+    label apicoplast membrane after id-label correspondence flagged the pluralized draft label.

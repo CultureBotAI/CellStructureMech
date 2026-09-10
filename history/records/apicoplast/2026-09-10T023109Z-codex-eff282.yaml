@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/apicoplast.yaml
+  slug: apicoplast
+session:
+  id: 2026-09-10T023109Z-codex-eff282
+  timestamp: '2026-09-10T02:31:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the apicoplast record
+  details: Created GO:0020011 apicoplast as a membrane-bounded organelle record. Added GO
+    apicoplast membrane parthood, apicoplast membranes plus Tic20 and SELMA/ERAD-derived import
+    machinery as constituent component groups, Apicomplexa taxonomic scope, Plasmodium falciparum
+    and Toxoplasma gondii canonical examples, protein-import and isoprenoid precursor biosynthesis
+    functions, a bipartite-leader import graph, and primary/review literature for IPP rescue,
+    four-membrane apicoplast architecture and apicoplast protein import.

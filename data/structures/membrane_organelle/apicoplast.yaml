@@ -1,0 +1,278 @@
+identifier: GO:0020011
+label: apicoplast
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: The plastid organelle found in apicomplexans.
+definition_source: GO:0020011
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T02:28:54Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T02:30:16Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO apicoplast membrane parthood, membrane and import components,
+    Apicomplexa taxonomic scope, Plasmodium and Toxoplasma canonical examples, protein-import
+    and IPP functions, a mechanistic import graph, and an import-component grounding
+    discussion.
+  llm_assisted: true
+- timestamp: '2026-09-10T02:30:47Z'
+  curator: claude
+  action: FIXED_DISCUSSION_ANCHORS
+  changes: Scoped the apicoplast import grounding discussion attachments to component
+    anchors and normalized the apicoplast membrane graph predicate.
+  llm_assisted: true
+- timestamp: '2026-09-10T02:37:24Z'
+  curator: claude
+  action: FIXED_GROUNDING_LABEL
+  changes: Aligned GO:0160211 apicoplast membrane labels with the GO canonical.
+  llm_assisted: true
+parent_structures:
+- GO:0009536
+has_part:
+- GO:0160211
+components:
+- component_id: apicoplast_membranes
+  label: apicoplast membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0160211
+  essentiality: ESSENTIAL
+  role: The multiple lipid bilayers that form the apicoplast envelope and separate
+    the plastid from the surrounding parasite cytoplasm.
+  evidence:
+  - reference: DOI:10.1186/1475-2875-12-25
+    notes: Lemgruber et al. 2013 used cryo-electron tomography to resolve four membranes
+      around the Plasmodium falciparum apicoplast.
+  - reference: DOI:10.1098/rstb.2009.0273
+    notes: Lim et al. 2010 review the four-membrane apicoplast envelope and protein
+      targeting across it.
+- component_id: tic20_inner_membrane_translocon
+  label: apicoplast Tic20 inner-membrane translocon
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Tic20 is curated as a protein-import component of the apicoplast
+    inner membrane. No exact reviewed family or Toxoplasma gondii Swiss-Prot accession
+    was resolved for the apicoplast Tic20 protein.
+  role: Innermost-membrane translocon required for import of nuclear-encoded proteins
+    into the apicoplast.
+  evidence:
+  - reference: DOI:10.1073/pnas.0803862105
+    notes: van Dooren et al. 2008 localized Toxoplasma gondii Tic20 to the apicoplast
+      and showed that TgTic20 disruption blocks apicoplast protein import.
+- component_id: selma_erad_import_machinery
+  label: apicoplast SELMA/ERAD-derived import machinery
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The second-outermost-membrane import system is defined by apicoplast
+    localization and function and includes unrelated ubiquitylation and ERAD-like
+    proteins; no single exact family CURIE was curated.
+  role: Protein-import machinery at the second outermost membrane that uses ubiquitin
+    and ERAD-like components to deliver nuclear-encoded cargo toward the apicoplast
+    stroma.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1003426
+    notes: Agrawal et al. 2013 identified an apicoplast-localized ubiquitylation system
+      required for import of nuclear-encoded plastid proteins.
+- component_id: nuclear_encoded_metabolic_enzymes
+  label: nuclear-encoded apicoplast metabolic enzymes
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This component groups several unrelated apicoplast-targeted enzyme
+    families from plastid metabolic pathways; a single exact protein-family grounding
+    would be too broad.
+  role: Imported enzymes that execute apicoplast pathways including MEP/DOXP isoprenoid
+    precursor biosynthesis, fatty-acid synthesis, heme metabolism, and iron-sulfur-cluster
+    synthesis.
+  evidence:
+  - reference: DOI:10.1098/rstb.2009.0273
+    notes: Lim et al. 2010 review imported nuclear-encoded apicoplast enzymes in fatty-acid,
+      heme, iron-sulfur and isoprenoid precursor pathways.
+  - reference: DOI:10.1146/annurev-micro-092412-155741
+    notes: van Dooren and Striepen 2013 review the apicoplast as a plastid carrying
+      multiple parasite metabolic pathways that depend on nuclear-encoded imported
+      proteins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: VARIABLE
+  note: The apicoplast is present in many apicomplexan parasites, including Plasmodium
+    and Toxoplasma, but has been lost in some lineages.
+  reference: DOI:10.1016/j.ijpara.2016.08.005
+canonical_examples:
+- taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  note: Human malaria parasite in which IPP rescue showed that apicoplast isoprenoid
+    precursor biosynthesis is essential in blood-stage growth.
+  reference: DOI:10.1371/journal.pbio.1001138
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model used to show that Tic20 and the apicoplast-localized ubiquitylation
+    system are required for protein import into the plastid.
+  reference: DOI:10.1073/pnas.0803862105
+functions:
+- function_id: nuclear_encoded_protein_import
+  label: nuclear-encoded protein import
+  description: Most apicoplast proteins are encoded in the nucleus and imported across
+    the surrounding membranes using bipartite targeting signals and membrane translocons.
+  evidence:
+  - reference: DOI:10.1073/pnas.95.21.12352
+    notes: Waller et al. 1998 demonstrated targeting of nuclear-encoded proteins to
+      the plastid in Toxoplasma gondii and Plasmodium falciparum.
+  - reference: DOI:10.1073/pnas.0803862105
+    notes: van Dooren et al. 2008 showed that Toxoplasma Tic20 is essential for apicoplast
+      protein import.
+- function_id: isoprenoid_precursor_biosynthesis
+  label: isoprenoid precursor biosynthesis
+  description: The Plasmodium falciparum apicoplast makes the isoprenoid precursor
+    IPP during blood-stage parasite growth.
+  evidence:
+  - reference: DOI:10.1371/journal.pbio.1001138
+    notes: Yeh and DeRisi 2011 showed that exogenous IPP rescues blood-stage P. falciparum
+      lacking apicoplast function.
+evidence:
+- reference: DOI:10.1073/pnas.95.21.12352
+  notes: Waller et al. 1998, Nuclear-encoded proteins target to the plastid in Toxoplasma
+    gondii and Plasmodium falciparum, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1098/rstb.2009.0273
+  notes: Lim et al. 2010, The evolution, metabolism and functions of the apicoplast,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1073/pnas.0803862105
+  notes: van Dooren et al. 2008, Toxoplasma gondii Tic20 is essential for apicoplast
+    protein import, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1371/journal.ppat.1003426
+  notes: Agrawal et al. 2013, An apicoplast localized ubiquitylation system is required
+    for the import of nuclear-encoded plastid proteins, PLOS Pathogens.
+- reference: DOI:10.1186/1475-2875-12-25
+  notes: Lemgruber et al. 2013, Cryo-electron tomography reveals four-membrane architecture
+    of the Plasmodium apicoplast, Malaria Journal.
+- reference: DOI:10.1146/annurev-micro-092412-155741
+  notes: van Dooren and Striepen 2013, The algal past and parasite present of the
+    apicoplast, Annual Review of Microbiology.
+- reference: DOI:10.1371/journal.pbio.1001138
+  notes: Yeh and DeRisi 2011, Chemical rescue of malaria parasites lacking an apicoplast
+    defines organelle function in blood-stage Plasmodium falciparum, PLOS Biology.
+- reference: DOI:10.1016/j.ijpara.2016.08.005
+  notes: 'McFadden and Yeh 2017, The apicoplast: now you see it, now you don''t, International
+    Journal for Parasitology.'
+causal_graphs:
+- graph_id: bipartite_leader_apicoplast_import
+  title: Bipartite leaders route nuclear-encoded cargo into the apicoplast
+  description: Nuclear-encoded apicoplast proteins carry a bipartite leader that directs
+    them into the secretory pathway and then through apicoplast membrane translocons,
+    including SELMA/ERAD-derived machinery and the Tic20 inner-membrane translocon.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: precursor_proteins
+    label: nuclear-encoded apicoplast precursor proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: nuclear_encoded_metabolic_enzymes
+  - node_id: bipartite_leader
+    label: bipartite apicoplast targeting leader
+    node_type: STATE
+  - node_id: endomembrane_pathway
+    label: endomembrane trafficking pathway
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: selma_import_system
+    label: SELMA/ERAD-derived import machinery
+    node_type: GENE_OR_PROTEIN
+    component_ref: selma_erad_import_machinery
+  - node_id: tic20_translocon
+    label: Tic20 inner-membrane translocon
+    node_type: GENE_OR_PROTEIN
+    component_ref: tic20_inner_membrane_translocon
+  - node_id: apicoplast_membranes
+    label: apicoplast membrane
+    node_type: STRUCTURE
+    grounding: GO:0160211
+    component_ref: apicoplast_membranes
+  - node_id: apicoplast
+    label: apicoplast
+    node_type: ORGANELLE
+    grounding: GO:0020011
+  edges:
+  - subject: precursor_proteins
+    predicate: carry
+    object: bipartite_leader
+    description: Nuclear-encoded apicoplast cargo proteins use N-terminal bipartite
+      leaders for apicoplast targeting.
+    evidence:
+    - reference: DOI:10.1073/pnas.95.21.12352
+      notes: Waller et al. 1998 used plastid-targeted nuclear-encoded proteins from
+        Toxoplasma and Plasmodium to demonstrate apicoplast targeting.
+  - subject: bipartite_leader
+    predicate: targets cargo to
+    object: endomembrane_pathway
+    description: The signal-peptide portion of the leader directs apicoplast precursor
+      proteins into the secretory system.
+    evidence:
+    - reference: DOI:10.1098/rstb.2009.0273
+      notes: Lim et al. 2010 review signal peptide and transit-peptide targeting requirements
+        for luminal apicoplast proteins.
+  - subject: selma_import_system
+    predicate: translocates
+    object: precursor_proteins
+    description: An apicoplast ubiquitylation and ERAD-like system contributes to
+      transfer of nuclear-encoded proteins through an outer apicoplast envelope membrane.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1003426
+      notes: Agrawal et al. 2013 found that disrupting the apicoplast-localized ubiquitylation
+        system blocked nuclear-encoded plastid protein import.
+  - subject: tic20_translocon
+    predicate: translocates
+    object: precursor_proteins
+    description: Tic20 acts at the innermost apicoplast membrane during protein import
+      into the plastid.
+    evidence:
+    - reference: DOI:10.1073/pnas.0803862105
+      notes: van Dooren et al. 2008 localized TgTic20 to the apicoplast and showed
+        that TgTic20 disruption blocks protein import.
+  - subject: selma_import_system
+    predicate: resides in
+    object: apicoplast_membranes
+    description: The SELMA/ERAD-like machinery is an apicoplast-envelope protein-import
+      system.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1003426
+      notes: Agrawal et al. 2013 characterized the import machinery as apicoplast
+        localized.
+  - subject: tic20_translocon
+    predicate: resides in
+    object: apicoplast_membranes
+    description: Tic20 is an apicoplast membrane component required for protein import.
+    evidence:
+    - reference: DOI:10.1073/pnas.0803862105
+      notes: van Dooren et al. 2008 assigned TgTic20 to the apicoplast innermost membrane
+        import step.
+  - subject: apicoplast_membranes
+    predicate: bounds
+    object: apicoplast
+    description: A four-membrane envelope surrounds the Plasmodium apicoplast.
+    evidence:
+    - reference: DOI:10.1186/1475-2875-12-25
+      notes: Lemgruber et al. 2013 visualized four apicoplast membranes by cryo-electron
+        tomography.
+discussions:
+- discussion_id: protein_import_grounding
+  prompt: Resolve exact source-neutral protein-family groundings for the Tic20 and
+    SELMA/ERAD-derived apicoplast import components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#tic20_inner_membrane_translocon
+  - components#selma_erad_import_machinery
+  rationale: The curated papers identify organism-specific apicoplast import proteins,
+    while exact source-neutral CURIEs for those apicoplast import component classes
+    were not resolved.
+  posed_by: claude
+  posed_date: '2026-09-10'
