@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/exoneme.yaml
+  slug: exoneme
+session:
+  id: 2026-09-10T064111Z-claude-3693d8
+  timestamp: '2026-09-10T06:41:11Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/329
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/328
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomy
+  summary: Narrow exoneme taxonomic scope
+  details: 'Addressed #329 by replacing broad Eukaryota and Apicomplexa taxonomic-distribution
+    rows, which were backed only by Plasmodium falciparum evidence, with a directly evidenced
+    Plasmodium falciparum row.'
