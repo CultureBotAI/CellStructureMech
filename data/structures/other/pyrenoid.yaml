@@ -1,0 +1,221 @@
+identifier: GO:1990732
+label: pyrenoid
+structure_category: OTHER
+structure_kind: OTHER
+definition: A non-membrane-bounded organelle found within the chloroplasts of algae
+  and hornworts; responsible for carbon dioxide fixation.
+definition_source: GO:1990732
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T06:59:09Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T07:00:26Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO non-membrane-bounded-organelle parentage and chloroplast parthood,
+    pyrenoid tubule substructure, Rubisco and EPYC1 components, Eukaryota and Chlamydomonas
+    taxonomic scope, carbon fixation and matrix-phase-separation functions, record-level
+    evidence, an EPYC1/Rubisco matrix assembly graph, and an EPYC1 grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-10T07:09:25Z'
+  curator: claude
+  action: FIXED_GROUNDING_LABELS
+  changes: Aligned GO:0048492 Rubisco component and graph labels with the canonical
+    GO label, and removed GO:1990732 from the narrower pyrenoid matrix graph node.
+  llm_assisted: true
+parent_structures:
+- GO:0043232
+part_of:
+- GO:0009507
+has_part:
+- GO:0160223
+components:
+- component_id: rubisco_holoenzyme
+  label: ribulose bisphosphate carboxylase complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0048492
+  essentiality: ESSENTIAL
+  role: Ribulose-1,5-bisphosphate carboxylase/oxygenase complexes densely concentrated
+    in the pyrenoid matrix to fix CO2.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2017.08.008
+    notes: Freeman Rosenzweig et al. 2017 characterized the Chlamydomonas reinhardtii
+      pyrenoid as a Rubisco-rich, non-membrane-bound, liquid-like organelle.
+  - reference: DOI:10.1073/pnas.1522866113
+    notes: Mackinder et al. 2016 showed that EPYC1 links Rubisco in the Chlamydomonas
+      pyrenoid matrix.
+- component_id: epyc1_rubisco_linker
+  label: EPYC1 Rubisco linker
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: EPYC1 is curated as the Chlamydomonas Rubisco-linking pyrenoid
+    matrix protein; no exact source-neutral family CURIE was resolved for this first
+    pyrenoid record.
+  gene_symbols:
+  - EPYC1
+  role: Intrinsically disordered Chlamydomonas matrix linker that multivalently binds
+    Rubisco holoenzymes and drives their phase separation into a pyrenoid-like condensate.
+  evidence:
+  - reference: DOI:10.1073/pnas.1522866113
+    notes: Mackinder et al. 2016 identified EPYC1 as a repeat protein that binds Rubisco
+      and links Rubisco complexes to form the pyrenoid.
+  - reference: DOI:10.1038/s41467-018-07624-w
+    notes: Wunder et al. 2018 showed that Chlamydomonas EPYC1 and Rubisco can phase-separate
+      into liquid droplets in vitro.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Pyrenoids are non-membrane-bound chloroplast organelles found across most
+    eukaryotic algae and in the hornwort land-plant lineage, not throughout Eukaryota.
+  reference: DOI:10.1093/plcell/koad157
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: The Chlamydomonas pyrenoid has a Rubisco/EPYC1 matrix and is a genetically
+    tractable model for the algal carbon-concentrating mechanism.
+  reference: DOI:10.1016/j.cell.2017.08.044
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green alga in which EPYC1 was tied to Rubisco matrix assembly, pyrenoid inheritance,
+    and liquid-like pyrenoid organization.
+  reference: DOI:10.1016/j.cell.2017.08.008
+functions:
+- function_id: carbon_dioxide_fixation
+  label: carbon fixation
+  grounding: GO:0015977
+  description: The pyrenoid concentrates Rubisco so CO2 can be fixed by the Calvin-Benson-Bassham
+    cycle in the chloroplast.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2017.08.008
+    notes: Freeman Rosenzweig et al. 2017 describe the pyrenoid as the algal CO2-fixing
+      organelle and tracked its Rubisco-rich matrix during cell division.
+  - reference: DOI:10.1093/plcell/koad157
+    notes: He, Crans, and Jonikas 2023 review the pyrenoid as the eukaryotic CO2-concentrating
+      organelle.
+- function_id: rubisco_matrix_phase_separation
+  label: Rubisco matrix phase separation
+  description: The Chlamydomonas pyrenoid matrix forms by multivalent interactions
+    between EPYC1 and Rubisco holoenzymes.
+  evidence:
+  - reference: DOI:10.1073/pnas.1522866113
+    notes: Mackinder et al. 2016 established EPYC1 as a Rubisco-linking repeat protein
+      needed for normal pyrenoid formation.
+  - reference: DOI:10.1038/s41467-018-07624-w
+    notes: Wunder et al. 2018 reconstituted liquid droplet formation from Rubisco
+      and EPYC1.
+evidence:
+- reference: DOI:10.1016/j.cell.2017.08.008
+  notes: Freeman Rosenzweig et al. 2017, The Eukaryotic CO2-Concentrating Organelle
+    Is Liquid-like and Exhibits Dynamic Reorganization, Cell.
+- reference: DOI:10.1073/pnas.1522866113
+  notes: Mackinder et al. 2016, A repeat protein links Rubisco to form the eukaryotic
+    carbon-concentrating organelle, PNAS.
+- reference: DOI:10.1038/s41467-018-07624-w
+  notes: Wunder et al. 2018, The phase separation underlying the pyrenoid-based microalgal
+    Rubisco supercharger, Nature Communications.
+- reference: DOI:10.1016/j.cell.2017.08.044
+  notes: Mackinder et al. 2017, A Spatial Interactome Reveals the Protein Organization
+    of the Algal CO2-Concentrating Mechanism, Cell.
+- reference: DOI:10.1093/plcell/koad157
+  notes: 'He, Crans, and Jonikas 2023, The pyrenoid: the eukaryotic CO2-concentrating
+    organelle, Plant Cell.'
+causal_graphs:
+- graph_id: epyc1_rubisco_pyrenoid_matrix_assembly
+  title: EPYC1 crosslinks Rubisco to assemble a pyrenoid matrix
+  description: In Chlamydomonas, the intrinsically disordered EPYC1 linker binds Rubisco
+    holoenzymes multivalently, forming a phase-separated matrix that concentrates
+    Rubisco inside the chloroplast pyrenoid.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: epyc1_rubisco_linker
+    label: EPYC1 Rubisco linker
+    node_type: GENE_OR_PROTEIN
+    component_ref: epyc1_rubisco_linker
+  - node_id: rubisco_holoenzyme
+    label: ribulose bisphosphate carboxylase complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0048492
+    component_ref: rubisco_holoenzyme
+  - node_id: multivalent_epyc1_rubisco_network
+    label: multivalent EPYC1-Rubisco network
+    node_type: STATE
+  - node_id: pyrenoid_matrix
+    label: pyrenoid matrix
+    node_type: ORGANELLE
+  - node_id: co2
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+  - node_id: carbon_fixation
+    label: carbon fixation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015977
+  edges:
+  - subject: epyc1_rubisco_linker
+    predicate: binds
+    object: rubisco_holoenzyme
+    description: EPYC1 repeats bind the Rubisco holoenzyme in the Chlamydomonas pyrenoid
+      matrix.
+    evidence:
+    - reference: DOI:10.1073/pnas.1522866113
+      notes: Mackinder et al. 2016 identified EPYC1 as a repeat protein that links
+        Rubisco.
+  - subject: epyc1_rubisco_linker
+    predicate: multivalently crosslinks
+    object: rubisco_holoenzyme
+    description: Multiple EPYC1 binding sites let EPYC1 crosslink Rubisco complexes
+      into a condensate.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-07624-w
+      notes: Wunder et al. 2018 showed that purified EPYC1 and Rubisco are sufficient
+        for liquid-droplet formation in vitro.
+  - subject: multivalent_epyc1_rubisco_network
+    predicate: phase-separates into
+    object: pyrenoid_matrix
+    description: The EPYC1-Rubisco interaction network forms the liquid-like Rubisco-rich
+      matrix of the pyrenoid.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2017.08.008
+      notes: Freeman Rosenzweig et al. 2017 measured liquid-like organization and
+        dynamic reorganization of the Chlamydomonas pyrenoid.
+    - reference: DOI:10.1038/s41467-018-07624-w
+      notes: Wunder et al. 2018 reconstituted the EPYC1/Rubisco phase separation mechanism.
+  - subject: pyrenoid_matrix
+    predicate: concentrates
+    object: rubisco_holoenzyme
+    description: The assembled pyrenoid matrix concentrates Rubisco inside the chloroplast.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2017.08.044
+      notes: Mackinder et al. 2017 spatially organized algal CO2-concentrating mechanism
+        proteins around the Rubisco pyrenoid matrix.
+  - subject: rubisco_holoenzyme
+    predicate: catalyses
+    object: carbon_fixation
+    predicate_id: RO:0002327
+    description: Matrix-localized Rubisco fixes CO2 into the Calvin-Benson-Bassham
+      cycle.
+    evidence:
+    - reference: DOI:10.1093/plcell/koad157
+      notes: He, Crans, and Jonikas 2023 review pyrenoid Rubisco concentration as
+        a core feature of the eukaryotic CO2-concentrating mechanism.
+discussions:
+- discussion_id: ground_epyc1_linker
+  prompt: Resolve an exact source-neutral grounding for the EPYC1 Rubisco-linker family
+    or for functionally equivalent pyrenoid Rubisco-linker proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#epyc1_rubisco_linker
+  rationale: This first pyrenoid record keeps EPYC1 label-only because EPYC1 is a
+    Chlamydomonas matrix linker and was not matched to a taxon-agnostic family CURIE.
+  posed_by: claude
+  posed_date: '2026-09-10'
