@@ -30,6 +30,14 @@ curation_history:
   action: FIXED_GROUNDING_LABEL
   changes: Aligned GO:0160211 apicoplast membrane labels with the GO canonical.
   llm_assisted: true
+- timestamp: '2026-09-10T02:45:54Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #303 by downgrading non-structural apicoplast protein groups
+    to unknown essentiality; resolved #304 by reclassifying the bipartite-leader import
+    graph as FUNCTION; resolved #305 by scoping the Toxoplasma gondii canonical-example
+    note to the Tic20 paper it cites.'
+  llm_assisted: true
 parent_structures:
 - GO:0009536
 has_part:
@@ -54,7 +62,7 @@ components:
   label: apicoplast Tic20 inner-membrane translocon
   component_type: PROTEIN
   component_role: CONSTITUENT
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: Tic20 is curated as a protein-import component of the apicoplast
     inner membrane. No exact reviewed family or Toxoplasma gondii Swiss-Prot accession
@@ -69,7 +77,7 @@ components:
   label: apicoplast SELMA/ERAD-derived import machinery
   component_type: PROTEIN
   component_role: CONSTITUENT
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The second-outermost-membrane import system is defined by apicoplast
     localization and function and includes unrelated ubiquitylation and ERAD-like
@@ -85,7 +93,7 @@ components:
   label: nuclear-encoded apicoplast metabolic enzymes
   component_type: PROTEIN
   component_role: CONSTITUENT
-  essentiality: CONDITIONAL
+  essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: This component groups several unrelated apicoplast-targeted enzyme
     families from plastid metabolic pathways; a single exact protein-family grounding
@@ -116,8 +124,8 @@ canonical_examples:
   reference: DOI:10.1371/journal.pbio.1001138
 - taxon_id: NCBITaxon:5811
   taxon_label: Toxoplasma gondii
-  note: Apicomplexan model used to show that Tic20 and the apicoplast-localized ubiquitylation
-    system are required for protein import into the plastid.
+  note: Apicomplexan model used to show that Tic20 is required for protein import
+    into the plastid.
   reference: DOI:10.1073/pnas.0803862105
 functions:
 - function_id: nuclear_encoded_protein_import
@@ -170,7 +178,7 @@ causal_graphs:
   description: Nuclear-encoded apicoplast proteins carry a bipartite leader that directs
     them into the secretory pathway and then through apicoplast membrane translocons,
     including SELMA/ERAD-derived machinery and the Tic20 inner-membrane translocon.
-  graph_kind: ASSEMBLY
+  graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
   - node_id: precursor_proteins
