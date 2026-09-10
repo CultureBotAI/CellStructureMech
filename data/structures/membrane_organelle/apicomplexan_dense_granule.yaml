@@ -27,6 +27,12 @@ curation_history:
   changes: Cited the Mercier et al. 2005 Apicomplexa dense-granule review on broad
     taxonomic distribution instead of relying on the GO identity alone.
   llm_assisted: true
+- timestamp: '2026-09-10T05:25:10Z'
+  curator: claude
+  action: FIXED_EVIDENCE_SCOPE
+  changes: Cited Masatani et al. 2013 on the GRA17/GRA23 component and PVM-localization
+    edge to support TgGRA23 localization directly.
+  llm_assisted: true
 parent_structures:
 - GO:0030141
 has_part:
@@ -80,6 +86,9 @@ components:
   - reference: DOI:10.1016/j.chom.2015.04.003
     notes: Gold et al. 2015 identified GRA17 and GRA23 as dense-granule proteins that
       mediate PVM permeability.
+  - reference: DOI:10.1016/j.parint.2013.04.003
+    notes: Masatani et al. 2013 identified TgGRA23 as a Toxoplasma dense-granule protein
+      associated with the PVM and intravacuolar network.
 - component_id: exported_dense_granule_effectors
   label: exported dense granule effectors
   component_type: PROTEIN
@@ -163,6 +172,10 @@ evidence:
   notes: Bougdour et al. 2013, Host Cell Subversion by Toxoplasma GRA16, an Exported
     Dense Granule Protein that Targets the Host Cell Nucleus and Alters Gene Expression,
     Cell Host & Microbe.
+- reference: DOI:10.1016/j.parint.2013.04.003
+  notes: Masatani et al. 2013, TgGRA23, a novel Toxoplasma gondii dense granule protein
+    associated with the parasitophorous vacuole membrane and intravacuolar network,
+    Parasitology International.
 causal_graphs:
 - graph_id: dense_granule_cargo_pvm_permeability
   title: Dense-granule GRA proteins remodel the parasitophorous vacuole
@@ -259,6 +272,9 @@ causal_graphs:
     - reference: DOI:10.1016/j.chom.2015.04.003
       notes: Gold et al. 2015 found that GRA17 localizes to the PVM and identified
         GRA23 as a related PVM permeability factor.
+    - reference: DOI:10.1016/j.parint.2013.04.003
+      notes: Masatani et al. 2013 identified TgGRA23 as a Toxoplasma dense-granule
+        protein associated with the PVM and intravacuolar network.
   - subject: gra17_gra23_permeability_factors
     predicate: mediate
     object: pvm_small_molecule_permeability
