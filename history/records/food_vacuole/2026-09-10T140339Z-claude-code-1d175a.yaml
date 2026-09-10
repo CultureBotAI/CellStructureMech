@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/food_vacuole.yaml
+  slug: food_vacuole
+session:
+  id: 2026-09-10T140339Z-claude-code-1d175a
+  timestamp: '2026-09-10T14:03:39Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO-grounded food vacuole structure record
+  details: Created data/structures/membrane_organelle/food_vacuole.yaml for GO:0020020 food
+    vacuole, including the digestive vacuole synonym, a reviewed-label-only food vacuole membrane
+    component, Plasmodium falciparum scope, hemoglobin catabolism and heme detoxification
+    functions, record evidence, a nonmechanistic hemozoin-formation graph, and an open vacuolar
+    enzyme/transporter grounding TODO.

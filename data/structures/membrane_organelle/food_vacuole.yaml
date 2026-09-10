@@ -1,0 +1,166 @@
+identifier: GO:0020020
+label: food vacuole
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A vacuole within a parasite used for digestion of the host cell cytoplasm.
+definition_source: GO:0020020
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T14:02:08Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T14:02:43Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added the digestive vacuole synonym, a reviewed-label-only food vacuole
+    membrane component, Plasmodium falciparum scope, hemoglobin catabolism and heme
+    detoxification functions, record evidence, a nonmechanistic hemozoin-formation
+    graph, and a vacuolar enzyme/transporter grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-10T14:03:02Z'
+  curator: claude
+  action: REMOVE_UNVERIFIED_GROUNDING
+  changes: Removed an unverified ChEBI grounding from the free heme graph node; exact
+    ChEBI groundings require an authority lookup.
+  llm_assisted: true
+- timestamp: '2026-09-10T14:10:10Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #377 review issues #378 and #379 by narrowing the GO-sourced
+    definition to the GO-level food-vacuole claim and removing a Cowman-backed membrane-localization
+    statement from the Lamarque-backed Plasmodium falciparum canonical example.'
+  llm_assisted: true
+synonyms:
+- synonym_text: digestive vacuole
+  synonym_type: EXACT_SYNONYM
+  source: GO:0020020
+components:
+- component_id: food_vacuole_membrane
+  label: food vacuole membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  role: The acidic organelle-bounding membrane that separates the digestive lumen
+    from the parasite cytosol and carries digestive-vacuole transporters.
+  evidence:
+  - reference: DOI:10.1083/jcb.113.5.1033
+    notes: Cowman et al. 1991 localized a Plasmodium falciparum P-glycoprotein homologue
+      to the digestive vacuole.
+  - reference: DOI:10.3390/pathogens13030182
+    notes: Wiser 2024 reviewed the digestive vacuole as an acidic lysosome-like organelle
+      of malaria parasites.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral lipid or membrane-protein-family identifier
+    was assigned for the aggregate food vacuole membrane in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  presence: COMMON
+  note: The food vacuole is directly evidenced in Plasmodium falciparum blood-stage
+    parasites; no broader Plasmodium or Apicomplexa scope is asserted in this first
+    record.
+  reference: DOI:10.1002/prca.200700112
+canonical_examples:
+- taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  note: Human malaria parasite whose food-vacuole fraction was isolated and profiled
+    by proteomics.
+  reference: DOI:10.1002/prca.200700112
+functions:
+- function_id: hemoglobin_catabolism
+  label: hemoglobin catabolism
+  description: The acidic food vacuole receives host hemoglobin and houses proteolytic
+    digestion of that cargo during Plasmodium intraerythrocytic growth.
+  evidence:
+  - reference: DOI:10.3390/pathogens13030182
+    notes: Wiser 2024 reviewed the malaria digestive vacuole as the acidic lysosome-like
+      site of host hemoglobin digestion.
+  - reference: DOI:10.1002/prca.200700112
+    notes: Lamarque et al. 2008 isolated Plasmodium falciparum food vacuoles for proteomic
+      analysis.
+- function_id: heme_detoxification
+  label: heme detoxification
+  description: Heme released by hemoglobin proteolysis is converted into hemozoin
+    crystals inside the digestive vacuole.
+  evidence:
+  - reference: DOI:10.3390/pathogens13030182
+    notes: Wiser 2024 reviewed hemozoin formation as the food-vacuole route for detoxifying
+      heme released from digested hemoglobin.
+evidence:
+- reference: GO:0020020
+  notes: Gene Ontology cellular-component term for food vacuole, with digestive vacuole
+    as an exact synonym.
+- reference: DOI:10.1002/prca.200700112
+  notes: Lamarque et al. 2008, Food vacuole proteome of the malarial parasite Plasmodium
+    falciparum, Proteomics Clinical Applications.
+- reference: DOI:10.3390/pathogens13030182
+  notes: 'Wiser 2024, The Digestive Vacuole of the Malaria Parasite: A Specialized
+    Lysosome, Pathogens.'
+- reference: DOI:10.1083/jcb.113.5.1033
+  notes: Cowman et al. 1991, A P-glycoprotein homologue of Plasmodium falciparum is
+    localized on the digestive vacuole, Journal of Cell Biology.
+causal_graphs:
+- graph_id: hemoglobin_digestion_and_hemozoin_formation
+  title: Food vacuole digestion produces hemozoin
+  description: Host hemoglobin is delivered to the Plasmodium food vacuole, proteolysis
+    releases heme, and the vacuole converts free heme into crystalline hemozoin.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: hemoglobin
+    label: host hemoglobin
+    node_type: CHEMICAL
+  - node_id: food_vacuole
+    label: food vacuole
+    node_type: ORGANELLE
+    grounding: GO:0020020
+  - node_id: free_heme
+    label: free heme
+    node_type: CHEMICAL
+  - node_id: hemozoin
+    label: hemozoin
+    node_type: CHEMICAL
+  edges:
+  - subject: food_vacuole
+    predicate: digests
+    object: hemoglobin
+    description: The acidic digestive vacuole is the Plasmodium blood stage compartment
+      where host hemoglobin is degraded.
+    evidence:
+    - reference: DOI:10.3390/pathogens13030182
+      notes: Wiser 2024 reviewed host hemoglobin proteolysis in the malaria digestive
+        vacuole.
+  - subject: hemoglobin
+    predicate: releases
+    object: free_heme
+    description: Proteolytic digestion of hemoglobin releases heme that would be toxic
+      if left soluble.
+    evidence:
+    - reference: DOI:10.3390/pathogens13030182
+      notes: Wiser 2024 reviewed heme release downstream of hemoglobin digestion.
+  - subject: free_heme
+    predicate: crystallizes into
+    object: hemozoin
+    description: The digestive vacuole detoxifies heme by packaging it into insoluble
+      hemozoin crystals.
+    evidence:
+    - reference: DOI:10.3390/pathogens13030182
+      notes: Wiser 2024 reviewed hemozoin formation inside the digestive vacuole.
+discussions:
+- discussion_id: ground_food_vacuole_enzymes_and_transporters
+  prompt: Resolve exact component groundings for Plasmodium food vacuole proteases,
+    proton pumps and solute transporters.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#food_vacuole_membrane
+  rationale: This first record models the digestive-vacuole membrane as an aggregate.
+    Follow-up curation should split experimentally localized Plasmodium vacuolar hydrolases,
+    PfCRT, Pgh1 and acidification machinery only where exact source-neutral families
+    or species-specific UniProt examples can be verified.
+  evidence:
+  - reference: DOI:10.1002/prca.200700112
+  - reference: DOI:10.3390/pathogens13030182
+  posed_by: claude
+  posed_date: '2026-09-10'
