@@ -1,0 +1,275 @@
+identifier: GO:0020009
+label: microneme
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A small, elongated secretory organelle that forms part of the apical complex,
+  located along the main axis of an apicomplexan parasite cell within the extreme
+  apical region and at the periphery under the inner membrane complex. Of the specialized
+  secretory compartments identified in apicomplexans, micronemes discharge their contents
+  first, during initial contact of the parasite's apical pole with the host cell surface.
+  Micronemal proteins function during parasite attachment and penetration into the
+  target cell.
+definition_source: GO:0020009
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T04:51:36Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T04:52:37Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added apical-complex parthood, microneme membrane/lumen parts, membrane,
+    adhesin and MIC2-M2AP component cohorts, rare eukaryotic and common Apicomplexa
+    taxonomic scope, Toxoplasma gondii as a canonical example, regulated-exocytosis
+    and host-invasion functions, a microneme exocytosis graph, and a grounding TODO
+    for microneme adhesin cohorts.
+  llm_assisted: true
+- timestamp: '2026-09-10T04:53:15Z'
+  curator: claude
+  action: FIXED_CAUSAL_GRAPH
+  changes: Connected the MIC2-M2AP adhesive protein complex to the microneme lumen
+    in the microneme exocytosis graph.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+part_of:
+- GO:0020007
+has_part:
+- GO:0033163
+- GO:0034494
+synonyms:
+- synonym_text: sarconeme
+  synonym_type: RELATED_SYNONYM
+  source: GO:0020009
+components:
+- component_id: microneme_membrane
+  label: microneme membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0033163
+  essentiality: ESSENTIAL
+  role: Lipid bilayer that bounds the microneme and encloses its secretory lumen.
+  evidence:
+  - reference: DOI:10.1111/cmi.13018
+    notes: Dubois and Soldati-Favre 2019 review Toxoplasma microneme biogenesis and
+      exocytosis.
+- component_id: microneme_adhesins
+  label: microneme adhesins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Microneme adhesins include multiple secreted MIC/TRAP-family and
+    complexed proteins; no exact source-neutral CURIE for the whole microneme-adhesin
+    cohort was curated.
+  role: Secreted adhesive proteins that are released from micronemes during host-cell
+    attachment and invasion.
+  evidence:
+  - reference: DOI:10.1007/978-0-387-78267-6_2
+    notes: Carruthers and Tomley 2008 review apicomplexan microneme proteins used
+      for motility and invasion.
+  - reference: PMID:9208224
+    notes: Carruthers and Sibley 1997 observed microneme secretion during Toxoplasma
+      invasion of fibroblasts.
+- component_id: mic2_m2ap_complex
+  label: MIC2-M2AP adhesive protein complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Toxoplasma MIC2-M2AP microneme adhesin complex is experimentally
+    resolved, but no cross-source complex identifier was curated for the first microneme
+    record.
+  role: Toxoplasma microneme adhesin complex required for efficient attachment and
+    rapid host-cell invasion.
+  evidence:
+  - reference: DOI:10.1093/emboj/cdg217
+    notes: Huynh et al. 2003 connected secretion of the MIC2-M2AP adhesive complex
+      to rapid host-cell invasion.
+  - reference: DOI:10.1371/journal.ppat.0020084
+    notes: Huynh and Carruthers 2006 established Toxoplasma MIC2 as a major determinant
+      of invasion and virulence.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Micronemes are apical-complex secretory organelles of apicomplexan microbial
+    eukaryotes.
+  reference: DOI:10.1007/978-0-387-78267-6_2
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: COMMON
+  note: Apicomplexans use micronemes as early-discharging apical secretory organelles
+    for attachment and invasion.
+  reference: DOI:10.1007/978-0-387-78267-6_2
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model in which sequential microneme secretion, the MIC2-M2AP
+    complex, and PKG-regulated exocytosis have been experimentally studied.
+  reference: PMID:9208224
+functions:
+- function_id: regulated_microneme_exocytosis
+  label: regulated microneme exocytosis
+  description: Micronemes discharge adhesins in a regulated secretion step that precedes
+    host-cell invasion.
+  evidence:
+  - reference: PMID:9208224
+    notes: Carruthers and Sibley 1997 showed microneme secretion occurs early during
+      Toxoplasma host-cell invasion.
+  - reference: DOI:10.1074/jbc.m115.700518
+    notes: Brown et al. 2016 connected serum albumin to PKG-dependent microneme secretion
+      in Toxoplasma gondii.
+- function_id: microneme_mediated_host_cell_invasion
+  label: microneme-mediated host cell invasion
+  description: Secreted microneme adhesins support parasite attachment, motility,
+    and invasion of host cells.
+  evidence:
+  - reference: DOI:10.1093/emboj/cdg217
+    notes: Huynh et al. 2003 showed that the MIC2-M2AP adhesive protein complex is
+      required for rapid host-cell invasion.
+  - reference: DOI:10.1371/journal.ppat.0020084
+    notes: Huynh and Carruthers 2006 showed that MIC2 contributes to Toxoplasma invasion
+      and virulence.
+evidence:
+- reference: PMID:9208224
+  notes: Carruthers and Sibley 1997, Sequential protein secretion from three distinct
+    organelles of Toxoplasma gondii accompanies invasion of human fibroblasts, European
+    Journal of Cell Biology.
+- reference: DOI:10.1007/978-0-387-78267-6_2
+  notes: Carruthers and Tomley 2008, Microneme proteins in apicomplexans, Subcellular
+    Biochemistry.
+- reference: DOI:10.1111/cmi.13018
+  notes: Dubois and Soldati-Favre 2019, Biogenesis and secretion of micronemes in
+    Toxoplasma gondii, Cellular Microbiology.
+- reference: DOI:10.1093/emboj/cdg217
+  notes: Huynh et al. 2003, Rapid invasion of host cells by Toxoplasma requires secretion
+    of the MIC2-M2AP adhesive protein complex, EMBO Journal.
+- reference: DOI:10.1371/journal.ppat.0020084
+  notes: Huynh and Carruthers 2006, Toxoplasma MIC2 is a major determinant of invasion
+    and virulence, PLOS Pathogens.
+- reference: DOI:10.1074/jbc.m115.700518
+  notes: Brown et al. 2016, Serum albumin stimulates protein kinase G-dependent microneme
+    secretion in Toxoplasma gondii, Journal of Biological Chemistry.
+causal_graphs:
+- graph_id: microneme_exocytosis_host_invasion
+  title: Regulated microneme exocytosis releases adhesins for invasion
+  description: A microneme membrane encloses the secretory lumen; signaling-triggered
+    exocytosis releases microneme adhesins, including the MIC2-M2AP complex, that
+    support host-cell attachment and invasion.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: microneme_membrane
+    label: microneme membrane
+    node_type: STRUCTURE
+    grounding: GO:0033163
+    component_ref: microneme_membrane
+  - node_id: microneme_lumen
+    label: microneme lumen
+    node_type: STRUCTURE
+    grounding: GO:0034494
+  - node_id: microneme
+    label: microneme
+    node_type: ORGANELLE
+    grounding: GO:0020009
+  - node_id: microneme_adhesins
+    label: microneme adhesins
+    node_type: GENE_OR_PROTEIN
+    component_ref: microneme_adhesins
+  - node_id: mic2_m2ap_complex
+    label: MIC2-M2AP adhesive protein complex
+    node_type: GENE_OR_PROTEIN
+    component_ref: mic2_m2ap_complex
+  - node_id: calcium_pkg_signaling
+    label: calcium/PKG signaling
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: microneme_exocytosis
+    label: microneme exocytosis
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: host_cell_invasion
+    label: host cell invasion
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: microneme_membrane
+    predicate: bounds
+    object: microneme
+    description: The microneme membrane encloses the microneme secretory organelle.
+    evidence:
+    - reference: DOI:10.1111/cmi.13018
+      notes: Dubois and Soldati-Favre 2019 review microneme biogenesis and secretory
+        organelle architecture.
+  - subject: microneme_lumen
+    predicate: is part of
+    object: microneme
+    description: The microneme lumen is the secretory volume enclosed by the microneme
+      membrane.
+    evidence:
+    - reference: DOI:10.1111/cmi.13018
+      notes: Dubois and Soldati-Favre 2019 review microneme biogenesis and exocytosis.
+  - subject: microneme_adhesins
+    predicate: reside in
+    object: microneme_lumen
+    description: Microneme adhesins are stored in the microneme before regulated discharge.
+    evidence:
+    - reference: DOI:10.1007/978-0-387-78267-6_2
+      notes: Carruthers and Tomley 2008 review apicomplexan microneme adhesins.
+  - subject: mic2_m2ap_complex
+    predicate: resides in
+    object: microneme_lumen
+    description: The MIC2-M2AP adhesive protein complex is stored in micronemes before
+      secretion.
+    evidence:
+    - reference: DOI:10.1093/emboj/cdg217
+      notes: Huynh et al. 2003 studied MIC2-M2AP as a microneme adhesive protein complex.
+  - subject: calcium_pkg_signaling
+    predicate: triggers
+    object: microneme_exocytosis
+    description: PKG-dependent signaling stimulates microneme secretion in extracellular
+      Toxoplasma parasites.
+    evidence:
+    - reference: DOI:10.1074/jbc.m115.700518
+      notes: Brown et al. 2016 found that serum albumin stimulates PKG-dependent microneme
+        secretion.
+  - subject: microneme_exocytosis
+    predicate: releases
+    object: microneme_adhesins
+    description: Microneme exocytosis releases adhesins during the early contact phase
+      of host-cell invasion.
+    evidence:
+    - reference: PMID:9208224
+      notes: Carruthers and Sibley 1997 showed microneme secretion accompanies the
+        first phase of Toxoplasma invasion.
+  - subject: mic2_m2ap_complex
+    predicate: mediates
+    object: host_cell_invasion
+    description: The MIC2-M2AP adhesive protein complex supports rapid host-cell invasion.
+    evidence:
+    - reference: DOI:10.1093/emboj/cdg217
+      notes: Huynh et al. 2003 showed that secretion of the MIC2-M2AP complex is required
+        for rapid host-cell invasion.
+  - subject: microneme_adhesins
+    predicate: support
+    object: host_cell_invasion
+    description: Secreted microneme adhesins support apicomplexan attachment and invasion
+      of host cells.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.0020084
+      notes: Huynh and Carruthers 2006 showed that Toxoplasma MIC2 is a major determinant
+        of invasion and virulence.
+discussions:
+- discussion_id: ground_microneme_adhesin_cohorts
+  prompt: Resolve exact source-neutral groundings for microneme adhesins and the MIC2-M2AP
+    adhesive protein complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#microneme_adhesins
+  - components#mic2_m2ap_complex
+  rationale: The first record uses microneme-localized adhesive protein cohorts because
+    the cited proteins span multiple unrelated adhesin families and no exact cross-source
+    complex CURIE was curated for MIC2-M2AP.
+  posed_by: claude
+  posed_date: '2026-09-10'

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/microneme.yaml
+  slug: microneme
+session:
+  id: 2026-09-10T045252Z-claude-fbbeab
+  timestamp: '2026-09-10T04:52:52Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add the microneme record
+  details: Created GO:0020009 microneme as a membrane-bounded organelle record. Added apical-complex
+    parthood, microneme membrane and lumen parts, curated membrane, adhesin and MIC2-M2AP
+    component cohorts, Apicomplexa taxonomic scope, Toxoplasma gondii as a canonical example,
+    regulated-exocytosis and host-invasion functions, a microneme exocytosis graph, and primary/review
+    evidence for microneme secretion, MIC2-M2AP invasion and PKG-dependent secretion.
