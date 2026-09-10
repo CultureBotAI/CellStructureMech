@@ -1,0 +1,289 @@
+identifier: GO:1990900
+label: ciliary pocket collar
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A constriction site at the junction of the plasma, flagellar and flagellar
+  pocket membranes where the flagellum emerges from the cell body. Observed in some
+  unicellular eukaryotic species such as Chlamydomonas, Giardia and Trypanosoma.
+definition_source: GO:1990900
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-09T19:34:41Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-09T19:35:57Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and ciliary-pocket parthood; curated BILBO1, FPC4 and
+    BILBO2 as flagellar pocket collar constituents; added eukaryotic and Trypanosoma
+    taxonomic scope, a T. brucei canonical example, FPC scaffold and biogenesis functions,
+    core literature evidence, a BILBO1/FPC4/BILBO2 assembly graph, and a grounding
+    discussion for the unresolved FPC protein families.
+  llm_assisted: true
+- timestamp: '2026-09-10T01:38:03Z'
+  curator: claude
+  action: ADDRESS_QC
+  changes: Split the BILBO1 assembly graph into BILBO1 dimerization and BILBO1-dimer
+    polymerization edges so the graph no longer points a dimerization predicate directly
+    at the final polymer node.
+  llm_assisted: true
+synonyms:
+- synonym_text: cilium pocket collar
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990900
+- synonym_text: flagellar pocket collar
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990900
+- synonym_text: flagellum pocket collar
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990900
+- synonym_text: FPC
+  synonym_type: RELATED_SYNONYM
+  source: GO:1990900
+part_of:
+- GO:0020016
+components:
+- component_id: bilbo1
+  label: BILBO1 flagellar pocket collar scaffold
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - BILBO1
+  essentiality: ESSENTIAL
+  role: A calcium-binding, polymer-forming scaffold protein that forms the first characterized
+    framework for the trypanosome FPC.
+  evidence:
+  - reference: DOI:10.1371/journal.pbio.0060105
+    notes: Bonhivers et al. 2008 identified BILBO1 as a Trypanosoma brucei flagellar
+      pocket cytoskeletal protein and showed that BILBO1 RNAi blocks new FPC and flagellar-pocket
+      biogenesis.
+  - reference: DOI:10.1371/journal.ppat.1004654
+    notes: Florimond et al. 2015 showed that the BILBO1 coiled-coil domain can target
+      BILBO1 to the FPC and is sufficient to drive BILBO1 polymer formation.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro:IPR040747 / Pfam:PF18281 covers the BILBO1 N-terminal
+    domain rather than a full-length BILBO1 protein family, and it also occurs in
+    BILBO2. No exact source-neutral BILBO1 whole-protein CURIE was curated.
+- component_id: fpc4
+  label: FPC4 microtubule-binding FPC protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - FPC4
+  role: A BILBO1-interacting protein that localizes to the FPC and hook complex and
+    links the collar to microtubule-associated cytoskeletal elements.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1006710
+    notes: Albisetti et al. 2017 identified FPC4 as a BILBO1 partner whose C-terminal
+      domain interacts with the BILBO1 N-terminal domain and whose N-terminal domain
+      binds microtubules.
+  - reference: DOI:10.1074/jbc.RA119.010768
+    notes: Vidilaseris et al. 2020 mapped the BILBO1 N-terminal-domain surface used
+      by the FPC4 BILBO1-binding domain.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam or NCBIfam accession for
+    the complete FPC4 protein family was curated.
+- component_id: bilbo2
+  label: BILBO2 flagellar pocket collar partner
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - BILBO2
+  - Tb927.6.3240
+  role: A second BILBO-family FPC component that partners with BILBO1 and FPC4 in
+    a tripartite FPC protein complex.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1009329
+    notes: Isch et al. 2021 characterized BILBO2/Tb927.6.3240 as a BILBO1 partner
+      and FPC component whose N-terminal domain also binds the FPC4 BILBO1-binding
+      domain.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro:IPR040747 / Pfam:PF18281 denotes the shared BILBO N-terminal
+    domain, not the complete BILBO2 family. No exact source-neutral BILBO2 whole-protein
+    CURIE was curated.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: GO scopes the ciliary pocket collar to only some unicellular flagellates rather
+    than to a general eukaryotic ciliary feature.
+  reference: GO:1990900
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  presence: COMMON
+  note: The BILBO1/FPC4/BILBO2 collar has been characterized at the flagellar pocket
+    neck in Trypanosoma brucei.
+  reference: DOI:10.3390/cells5010009
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: Trypanosome model in which BILBO1 RNAi established that FPC assembly is required
+    for flagellar-pocket biogenesis.
+  reference: DOI:10.1371/journal.pbio.0060105
+functions:
+- function_id: flagellar_pocket_neck_scaffold
+  label: flagellar pocket neck scaffolding
+  description: The FPC forms a cytoskeletal collar at the flagellar pocket neck where
+    the flagellum exits the cell body.
+  evidence:
+  - reference: DOI:10.3390/cells5010009
+    notes: Perdomo et al. 2016 reviewed the T. brucei FPC as an essential cytoskeletal
+      component at the neck of the flagellar pocket.
+- function_id: flagellar_pocket_biogenesis
+  label: flagellar pocket biogenesis
+  description: BILBO1-dependent FPC assembly supplies a cytoskeletal framework required
+    to build the trypanosome flagellar pocket.
+  evidence:
+  - reference: DOI:10.1371/journal.pbio.0060105
+    notes: Bonhivers et al. 2008 showed that BILBO1 RNAi prevents formation of new
+      FPC and FP structures in procyclic T. brucei and is lethal in procyclic and
+      bloodstream forms.
+- function_id: pocket_hook_microtubule_coupling
+  label: pocket-hook-microtubule coupling
+  description: FPC4 connects BILBO1-containing collar material with the hook complex
+    and the microtubule quartet near the flagellar pocket.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1006710
+    notes: Albisetti et al. 2017 placed FPC4 at the FPC, hook complex and proximal
+      microtubule quartet and proposed a tripartite association among those structures.
+evidence:
+- reference: DOI:10.1371/journal.pbio.0060105
+  notes: Bonhivers et al. 2008, Biogenesis of the trypanosome endo-exocytotic organelle
+    is cytoskeleton mediated, PLoS Biology.
+- reference: DOI:10.1371/journal.ppat.1004654
+  notes: Florimond et al. 2015, BILBO1 is a scaffold protein of the flagellar pocket
+    collar in the pathogen Trypanosoma brucei, PLOS Pathogens.
+- reference: DOI:10.3390/cells5010009
+  notes: Perdomo, Bonhivers and Robinson 2016, The Trypanosome Flagellar Pocket Collar
+    and Its Ring Forming Protein-TbBILBO1, Cells.
+- reference: DOI:10.1371/journal.ppat.1006710
+  notes: Albisetti et al. 2017, Interaction between the flagellar pocket collar and
+    the hook complex via a novel microtubule-binding protein in Trypanosoma brucei,
+    PLOS Pathogens.
+- reference: DOI:10.1371/journal.ppat.1009329
+  notes: Isch et al. 2021, Structural and functional studies of the first tripartite
+    protein complex at the Trypanosoma brucei flagellar pocket collar, PLOS Pathogens.
+- reference: DOI:10.1074/jbc.M114.554659
+  notes: Vidilaseris et al. 2014, Assembly mechanism of Trypanosoma brucei BILBO1,
+    a multidomain cytoskeletal protein, Journal of Biological Chemistry.
+- reference: DOI:10.1074/jbc.RA119.010768
+  notes: Vidilaseris et al. 2020, Crystal structure of the N-terminal domain of the
+    trypanosome flagellar protein BILBO1 reveals a ubiquitin fold with a long structured
+    loop for protein binding, Journal of Biological Chemistry.
+causal_graphs:
+- graph_id: bilbo1_fpc4_bilbo2_collar_assembly
+  title: BILBO1 polymers recruit partner proteins at the FPC
+  description: BILBO1 dimerizes and polymerizes into a scaffold at the flagellar pocket
+    collar. FPC4 binds the BILBO1 N-terminal domain and microtubules, while BILBO2
+    adds a second BILBO-family FPC component that shares the FPC4 binding interface.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: bilbo1
+    label: BILBO1
+    node_type: GENE_OR_PROTEIN
+    component_ref: bilbo1
+  - node_id: bilbo1_dimer
+    label: BILBO1 antiparallel dimer
+    node_type: STRUCTURE
+  - node_id: bilbo1_polymer
+    label: BILBO1 polymer
+    node_type: STRUCTURE
+  - node_id: fpc4
+    label: FPC4
+    node_type: GENE_OR_PROTEIN
+    component_ref: fpc4
+  - node_id: bilbo2
+    label: BILBO2
+    node_type: GENE_OR_PROTEIN
+    component_ref: bilbo2
+  - node_id: microtubule_quartet
+    label: microtubule quartet
+    node_type: STRUCTURE
+  - node_id: ciliary_pocket_collar
+    label: ciliary pocket collar
+    node_type: STRUCTURE
+    grounding: GO:1990900
+  - node_id: flagellar_pocket_biogenesis
+    label: flagellar pocket biogenesis
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: bilbo1
+    predicate: dimerizes into
+    object: bilbo1_dimer
+    description: The central BILBO1 coiled-coil domain forms an antiparallel dimer.
+    evidence:
+    - reference: DOI:10.1074/jbc.M114.554659
+      notes: Vidilaseris et al. 2014 dissected BILBO1 domains and linked the coiled
+        coil and leucine zipper to dimerization and filament formation.
+  - subject: bilbo1_dimer
+    predicate: polymerizes into
+    object: bilbo1_polymer
+    description: Adjacent BILBO1 leucine zippers mediate interdimer contacts that
+      assemble extended filaments.
+    evidence:
+    - reference: DOI:10.1074/jbc.M114.554659
+      notes: Vidilaseris et al. 2014 connected BILBO1 leucine-zipper interdimer interactions
+        with extended in-vitro filament assembly.
+  - subject: bilbo1_polymer
+    predicate: scaffolds
+    object: ciliary_pocket_collar
+    description: BILBO1 polymers form a molecular skeleton for the flagellar pocket
+      collar.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1004654
+      notes: Florimond et al. 2015 showed that BILBO1 has intrinsic polymer-forming
+        properties and that its coiled-coil domain targets BILBO1 to the FPC.
+  - subject: fpc4
+    predicate: binds
+    object: bilbo1
+    description: The FPC4 C-terminal BILBO1-binding domain binds the BILBO1 N-terminal
+      domain.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1006710
+      notes: Albisetti et al. 2017 identified FPC4 as a BILBO1 partner and mapped
+        the interaction to the FPC4 C-terminal domain and BILBO1 N-terminal domain.
+  - subject: fpc4
+    predicate: binds
+    object: microtubule_quartet
+    description: The FPC4 N-terminal domain binds microtubules, placing FPC4 at the
+      FPC, hook complex and proximal microtubule quartet interface.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1006710
+      notes: Albisetti et al. 2017 localized FPC4 to the FPC and hook complex and
+        found that its N-terminal domain binds microtubules.
+  - subject: bilbo2
+    predicate: binds
+    object: fpc4
+    description: BILBO2 shares an N-terminal fold with BILBO1 and uses that domain
+      to bind the FPC4 BILBO1-binding domain in the FPC complex.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1009329
+      notes: Isch et al. 2021 demonstrated BILBO1, BILBO2 and FPC4 interactions and
+        solved the BILBO2 NTD-FPC4 complex.
+  - subject: ciliary_pocket_collar
+    predicate: is required for
+    object: flagellar_pocket_biogenesis
+    description: Loss of the core FPC scaffold BILBO1 prevents assembly of new flagellar
+      pocket structures.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.0060105
+      notes: Bonhivers et al. 2008 showed that BILBO1 RNAi prevents new FPC and flagellar
+        pocket biogenesis in procyclic trypanosomes.
+discussions:
+- discussion_id: fpc_family_grounding
+  prompt: Can BILBO1, BILBO2 or FPC4 be grounded to exact whole-protein families?
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#bilbo1
+  - components#bilbo2
+  - components#fpc4
+  rationale: InterPro currently resolves only the BILBO N-terminal domain term InterPro:IPR040747
+    / Pfam:PF18281 from the BILBO-family search used for this record. The domain is
+    shared by BILBO1 and BILBO2 and should not be asserted as a whole-protein family
+    for either component; no exact FPC4 family accession was curated.
+  posed_by: claude
+  posed_date: '2026-09-09'

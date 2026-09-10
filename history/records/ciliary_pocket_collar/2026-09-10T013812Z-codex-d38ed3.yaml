@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ciliary_pocket_collar.yaml
+  slug: ciliary_pocket_collar
+session:
+  id: 2026-09-10T013812Z-codex-d38ed3
+  timestamp: '2026-09-10T01:38:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Clarify BILBO1 assembly graph
+  details: Split the new ciliary pocket collar BILBO1 mechanism so BILBO1 first dimerizes
+    into an antiparallel dimer and the dimer then polymerizes into the BILBO1 polymer scaffold.
+    This keeps the graph direction consistent with Vidilaseris et al. 2014 before the BILBO1
+    polymer is used as the FPC scaffold node.
