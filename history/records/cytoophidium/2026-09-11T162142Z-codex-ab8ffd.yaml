@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cytoophidium.yaml
+  slug: cytoophidium
+session:
+  id: 2026-09-11T162142Z-codex-ab8ffd
+  timestamp: '2026-09-11T16:21:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/516
+  - https://github.com/CultureBotAI/CellStructureMech/issues/517
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/515
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add cytoophidium structure record
+  details: Added a PROPOSED CellStructureRecord for the GO-grounded cytoophidium. The record
+    uses GO:0097268 after a hidden and ignored duplicate search found no existing cytoophidium,
+    CtpS, PMID:20639870, DOI:10.1038/ncb2087, UniProtKB:Q9A7K3, or UniProtKB:B8GW64 record.
+    It curates CTP synthase as a label-only constituent with reviewed Caulobacter CB15 and
+    NA1000 UniProt examples, records Caulobacter vibrioides NA1000 as the canonical example,
+    adds variable Bacteria, Archaea and Eukaryota distribution rows from Guo and Liu 2023,
+    models Caulobacter cell-curvature regulation through a nonmechanistic CtpS/crescentin
+    graph, and leaves exact CTPS-family grounding as an open TODO. PR review issues 516 and
+    517 broadened the distribution beyond Caulobacter and softened the broad CTP synthase
+    essentiality to UNKNOWN.
