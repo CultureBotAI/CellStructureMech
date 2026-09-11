@@ -1,0 +1,170 @@
+identifier: cellstructuremech:omce_cytochrome_nanowire
+label: OmcE cytochrome nanowire
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: An extracellular Geobacter sulfurreducens cytochrome nanowire assembled
+  from OmcE tetraheme c-type cytochrome subunits and resolved by cryo-EM as a helical
+  filament whose hemes pack within the filament core.
+definition_source: DOI:10.1038/s41564-022-01159-z
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T15:33:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T15:33:50Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added OmcE cytochrome nanowire synonymy, a label-only OmcE component with
+    a Geobacter sulfurreducens PCA UniProt example, Geobacter sulfurreducens PCA taxon
+    rows, cautious electron-transfer function evidence, a narrow OmcE function graph,
+    and a TODO for exact OmcE family grounding.
+  llm_assisted: true
+synonyms:
+- synonym_text: OmcE cytochrome filament
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41564-022-01159-z
+- synonym_text: OmcE nanowire
+  synonym_type: EXACT_SYNONYM
+  source: PDB:7TFS
+components:
+- component_id: omce_tetraheme_c_type_cytochrome
+  label: OmcE tetraheme c-type cytochrome
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - omcE
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: UniProtKB:Q74FJ0 identifies the Geobacter sulfurreducens PCA OmcE
+    protein, but its verified InterPro and Pfam mappings cover broad multiheme or
+    paired-CXXCH signatures rather than an exact source-neutral family for OmcE cytochrome
+    nanowire subunits.
+  role: Tetraheme c-type cytochrome subunit that polymerizes into the extracellular
+    OmcE nanowire and packs covalently bound hemes within the filament core.
+  evidence:
+  - reference: DOI:10.1038/s41564-022-01159-z
+    notes: Wang et al. 2022 solved the cryo-EM structure of an extracellular Geobacter
+      OmcE cytochrome filament and modeled OmcE tetraheme cytochrome subunits in the
+      helical assembly.
+  - reference: PDB:7TFS
+    notes: RCSB PDB entry 7TFS is the helical cryo-EM model of OmcE nanowires from
+      Geobacter sulfurreducens and aligns polymer entity 1 to UniProtKB:Q74FJ0.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q74FJ0
+    protein_label: Cytochrome c
+    gene_symbol: omcE
+    taxon_id: NCBITaxon:243231
+    taxon_label: Geobacter sulfurreducens PCA
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-09-11'
+    role: UniProtKB entry for the Geobacter sulfurreducens PCA omcE gene product that
+      aligns to the full polymer entity in the OmcE nanowire cryo-EM structure PDB:7TFS.
+    evidence:
+    - reference: PDB:7TFS
+      notes: RCSB reports a full-length SIFTS alignment from polymer entity 1 of PDB:7TFS
+        to UniProtKB:Q74FJ0.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:243231
+  taxon_label: Geobacter sulfurreducens PCA
+  presence: COMMON
+  note: RCSB reports the PDB:7TFS OmcE natural polymer entity as Geobacter sulfurreducens
+    strain ATCC 51573 / DSM 12127 / PCA, and the entity aligns to UniProtKB:Q74FJ0
+    from Geobacter sulfurreducens PCA.
+  reference: PDB:7TFS
+canonical_examples:
+- taxon_id: NCBITaxon:243231
+  taxon_label: Geobacter sulfurreducens PCA
+  note: Strain source associated with the OmcE helical cryo-EM model deposited as
+    PDB:7TFS.
+  reference: PDB:7TFS
+functions:
+- function_id: tetraheme_filament_electron_transfer
+  label: tetraheme filament electron transfer
+  description: OmcE subunits pack four covalently bound hemes per subunit within a
+    helical cytochrome filament, providing a candidate structural path for electron
+    transfer through the nanowire.
+  evidence:
+  - reference: DOI:10.1038/s41564-022-01159-z
+    notes: Wang et al. 2022 reported the tetraheme packing in the extracellular OmcE
+      cytochrome filament and interpreted the heme arrangement as the structural basis
+      for nanowire electron transfer.
+evidence:
+- reference: DOI:10.1038/s41564-022-01159-z
+  notes: Wang et al. 2022, Cryo-EM structure of an extracellular Geobacter OmcE cytochrome
+    filament reveals tetrahaem packing, Nature Microbiology.
+- reference: PDB:7TFS
+  notes: RCSB PDB entry 7TFS is a 4.3 A helical cryo-EM model of OmcE nanowires from
+    Geobacter sulfurreducens associated with EMDB map EMD-25879.
+causal_graphs:
+- graph_id: tetraheme_omce_nanowire_conduction
+  title: OmcE subunits pack hemes for nanowire conduction
+  description: OmcE tetraheme c-type cytochromes polymerize into a helical extracellular
+    filament whose packed hemes provide a candidate structural path for electron transfer.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: This graph is restricted to OmcE filament architecture and the proposed
+    tetraheme conduction path; it does not model OmcE export, localization on cells,
+    or the distinct OmcS and OmcZ cytochrome nanowire classes.
+  nodes:
+  - node_id: omce_tetraheme_c_type_cytochrome
+    label: OmcE tetraheme c-type cytochrome
+    node_type: GENE_OR_PROTEIN
+    component_ref: omce_tetraheme_c_type_cytochrome
+  - node_id: packed_tetraheme_core
+    label: packed tetraheme core
+    node_type: STATE
+  - node_id: omce_cytochrome_nanowire
+    label: OmcE cytochrome nanowire
+    node_type: STRUCTURE
+    grounding: cellstructuremech:omce_cytochrome_nanowire
+  - node_id: filament_electron_transfer
+    label: filament electron transfer
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: omce_tetraheme_c_type_cytochrome
+    predicate: polymerizes into
+    object: omce_cytochrome_nanowire
+    description: OmcE tetraheme cytochrome subunits assemble into the helical extracellular
+      cytochrome filament resolved by cryo-EM.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01159-z
+      notes: Wang et al. 2022 determined the cryo-EM structure of a Geobacter OmcE
+        cytochrome filament assembled from OmcE tetraheme cytochromes.
+  - subject: omce_tetraheme_c_type_cytochrome
+    predicate: packs
+    object: packed_tetraheme_core
+    description: The OmcE filament positions each subunit's tetraheme set within the
+      filament core.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01159-z
+      notes: Wang et al. 2022 resolved tetraheme packing in the OmcE cytochrome filament
+        by cryo-EM.
+  - subject: packed_tetraheme_core
+    predicate: supports
+    object: filament_electron_transfer
+    description: The packed OmcE heme arrangement provides a proposed electron-transfer
+      path through the extracellular cytochrome filament.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01159-z
+      notes: Wang et al. 2022 connected the OmcE cytochrome filament's tetraheme packing
+        with its role in electron transfer.
+discussions:
+- discussion_id: resolve_omce_family_grounding
+  prompt: Resolve exact source-neutral protein-family grounding for OmcE cytochrome
+    nanowire subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#omce_tetraheme_c_type_cytochrome
+  rationale: The first OmcE cytochrome nanowire record uses an unreviewed Geobacter
+    sulfurreducens PCA UniProtKB example but keeps the component itself label-only
+    because no exact InterPro, Pfam or NCBIfam family CURIE for the extracellular
+    OmcE filament subunit class was verified.
+  evidence:
+  - reference: DOI:10.1038/s41564-022-01159-z
+    notes: Wang et al. 2022 should guide future OmcE-family grounding and separation
+      from OmcS and OmcZ cytochrome nanowire subunit classes.
+  posed_by: codex
+  posed_date: '2026-09-11'
