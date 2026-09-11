@@ -1,0 +1,231 @@
+identifier: cellstructuremech:holdfast
+label: holdfast
+structure_category: OTHER
+structure_kind: OTHER
+definition: A polar extracellular adhesive matrix of Caulobacter vibrioides composed
+  of secreted holdfast polysaccharide that is anchored at the old cell pole or stalk
+  tip and enables irreversible surface attachment.
+definition_source: DOI:10.1128/JB.00112-19
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T02:23:07Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T02:23:49Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added holdfast synonymy, extracellular-matrix parentage, holdfast polysaccharide
+    and Hfa anchoring components, Caulobacter taxonomy, surface-adhesion and anchoring
+    functions, a synthesis-anchoring graph, literature evidence, and grounding/boundary
+    discussions.
+  llm_assisted: true
+- timestamp: '2026-09-11T02:29:31Z'
+  curator: codex
+  action: REFINED_CAUSAL_GRAPH
+  changes: Narrowed the c-di-GMP-regulated holdfast cohesion node to HfsK and pointed
+    the adhesion edge at abiotic surfaces instead of a derived surface-attached-cell
+    state.
+  llm_assisted: true
+- timestamp: '2026-09-11T02:33:35Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #392 issues #393 and #394 by removing the under-evidenced
+    Hfs synthesis/export edge and replacing the old-cell-pole state with an old-pole-or-stalk-tip
+    cellular-localization node.'
+  llm_assisted: true
+synonyms:
+- synonym_text: Caulobacter holdfast
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/JB.00112-19
+- synonym_text: holdfast adhesin
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mBio.00294-17
+parent_structures:
+- GO:0031012
+components:
+- component_id: holdfast_polysaccharide
+  label: holdfast polysaccharide
+  component_type: POLYSACCHARIDE
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Caulobacter holdfast polysaccharide has glucose, 3-O-methylglucose,
+    mannose, xylose and N-acetylglucosamine content, but no exact CHEBI or glycan
+    accession was curated for the complete polymer.
+  role: Forms the extracellular adhesive matrix that binds surfaces at the old cell
+    pole or stalk tip.
+  evidence:
+  - reference: DOI:10.1128/JB.00276-19
+    notes: Hershey et al. 2019 extracted C. crescentus holdfast material and surveyed
+      the carbohydrate composition of the holdfast polysaccharide.
+  - reference: DOI:10.1128/mBio.00294-17
+    notes: Sprecher et al. 2017 treated the Caulobacter holdfast as a localized polysaccharide
+      adhesin whose cohesive properties are developmentally regulated.
+- component_id: hfa_holdfast_anchor
+  label: HfaA-HfaB-HfaD holdfast anchor
+  component_type: PROTEIN_COMPLEX
+  component_role: ASSOCIATED_MACHINERY
+  gene_symbols:
+  - hfaA
+  - hfaB
+  - hfaD
+  essentiality: DISPENSABLE
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: HfaA, HfaB and HfaD form holdfast anchoring machinery in Caulobacter,
+    but no exact source-neutral complex CURIE was curated for this first record.
+  role: Anchors the secreted holdfast matrix at the old cell pole or stalk tip so
+    it remains attached to the cell surface.
+  evidence:
+  - reference: DOI:10.1128/JB.00112-19
+    notes: Sulkowski et al. 2019 analyze HfaA, HfaB and HfaD as proteins that anchor
+      Caulobacter holdfast at the old cell pole.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  presence: UNIVERSAL
+  note: The Caulobacter holdfast is a polar adhesin of the C. vibrioides developmental
+    cycle, with synthesis and surface adhesion regulated by cell cycle stage and environmental
+    cues.
+  reference: DOI:10.1128/mBio.00294-17
+canonical_examples:
+- taxon_id: NCBITaxon:565050
+  taxon_label: Caulobacter vibrioides NA1000
+  note: Caulobacter vibrioides NA1000 is a standard holdfast model used to dissect
+    holdfast anchoring, polysaccharide composition and c-di-GMP-dependent adhesiveness.
+  reference: DOI:10.1128/JB.00112-19
+functions:
+- function_id: surface_adhesion
+  label: irreversible surface adhesion
+  description: The holdfast glues the old pole or stalk tip to abiotic surfaces during
+    the Caulobacter surface-attachment program.
+  evidence:
+  - reference: DOI:10.1128/mBio.00294-17
+    notes: Sprecher et al. 2017 studied the cohesive properties that make the Caulobacter
+      holdfast an adhesive surface organelle.
+- function_id: old_pole_anchoring
+  label: polar holdfast anchoring
+  description: Hfa anchoring proteins retain the secreted holdfast matrix at the old
+    cell pole or stalk tip instead of allowing it to be released into the medium.
+  evidence:
+  - reference: DOI:10.1128/JB.00112-19
+    notes: Sulkowski et al. 2019 show that Hfa proteins form a multiprotein anchoring
+      complex for old-pole holdfast retention.
+evidence:
+- reference: DOI:10.1128/JB.00112-19
+  notes: Sulkowski NI et al. 2019, 'A Multiprotein Complex Anchors Adhesive Holdfast
+    at the Old Cell Pole of Caulobacter crescentus', Journal of Bacteriology.
+- reference: DOI:10.1128/JB.00276-19
+  notes: Hershey DM et al. 2019, 'Composition of the Holdfast Polysaccharide from
+    Caulobacter crescentus', Journal of Bacteriology.
+- reference: DOI:10.1128/mBio.00294-17
+  notes: Sprecher KS et al. 2017, 'Cohesive Properties of the Caulobacter crescentus
+    Holdfast Adhesin Are Regulated by a Novel c-di-GMP Effector Protein', mBio.
+causal_graphs:
+- graph_id: holdfast_synthesis_anchoring_adhesion
+  title: Holdfast polysaccharide is cohesion-tuned and anchored
+  description: HfsK responds to c-di-GMP to tune adhesive-matrix cohesion, and Hfa
+    proteins anchor the completed holdfast at the old pole or stalk tip so it can
+    glue the cell to abiotic surfaces.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: hfsk_c_di_gmp_effector
+    label: HfsK c-di-GMP effector
+    node_type: GENE_OR_PROTEIN
+  - node_id: holdfast_polysaccharide
+    label: holdfast polysaccharide
+    node_type: CHEMICAL
+    component_ref: holdfast_polysaccharide
+  - node_id: hfa_holdfast_anchor
+    label: HfaA-HfaB-HfaD holdfast anchor
+    node_type: GENE_OR_PROTEIN
+    component_ref: hfa_holdfast_anchor
+  - node_id: old_pole_or_stalk_tip
+    label: old pole or stalk tip
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: holdfast
+    label: holdfast
+    node_type: STRUCTURE
+    grounding: cellstructuremech:holdfast
+  - node_id: abiotic_surface
+    label: abiotic surface
+    node_type: ENVIRONMENTAL_FACTOR
+  edges:
+  - subject: hfsk_c_di_gmp_effector
+    predicate: tunes cohesion of
+    object: holdfast_polysaccharide
+    description: HfsK responds to c-di-GMP and tunes the cohesive properties of holdfast
+      material before or during surface attachment.
+    evidence:
+    - reference: DOI:10.1128/mBio.00294-17
+      notes: Sprecher et al. 2017 link a novel c-di-GMP effector to regulated Caulobacter
+        holdfast cohesion.
+  - subject: holdfast_polysaccharide
+    predicate: forms
+    object: holdfast
+    description: The extracellular holdfast adhesin is built from secreted holdfast
+      polysaccharide.
+    evidence:
+    - reference: DOI:10.1128/JB.00276-19
+      notes: Hershey et al. 2019 chemically analyze isolated holdfast polysaccharide.
+  - subject: hfa_holdfast_anchor
+    predicate: anchors
+    object: holdfast
+    description: HfaA, HfaB and HfaD keep the holdfast attached at the old pole or
+      stalk tip.
+    evidence:
+    - reference: DOI:10.1128/JB.00112-19
+      notes: Sulkowski et al. 2019 characterize a multiprotein Hfa complex required
+        for Caulobacter holdfast anchoring.
+  - subject: holdfast
+    predicate: localizes to
+    object: old_pole_or_stalk_tip
+    description: The anchored holdfast is retained at the old cell pole and, after
+      stalk formation, at the stalk tip.
+    evidence:
+    - reference: DOI:10.1128/JB.00112-19
+      notes: Sulkowski et al. 2019 focus on anchoring adhesive holdfast at the Caulobacter
+        old cell pole.
+  - subject: holdfast
+    predicate: adheres cell to
+    object: abiotic_surface
+    description: Cohesive holdfast material provides the polar glue that irreversibly
+      attaches Caulobacter cells to abiotic surfaces.
+    evidence:
+    - reference: DOI:10.1128/mBio.00294-17
+      notes: Sprecher et al. 2017 investigate the Caulobacter holdfast adhesin as
+        the developmentally regulated adhesive for surface attachment.
+discussions:
+- discussion_id: hfs_biosynthesis_boundary
+  prompt: Keep Hfs synthesis, export and HfsK cohesion proteins out of the component
+    table for this first holdfast record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#holdfast_synthesis_anchoring_adhesion
+  rationale: Hfs proteins synthesize, export or modify holdfast material before or
+    during assembly. The HfsK effector is represented as graph machinery, Hfs synthesis/export
+    factors are omitted until direct gene-level edges are curated, and the component
+    table contains the holdfast polysaccharide plus the Hfa machinery that anchors
+    the assembled adhesin.
+  evidence:
+  - reference: DOI:10.1128/JB.00276-19
+    notes: Hershey et al. 2019 distinguish holdfast polysaccharide composition from
+      genes required for its biosynthesis.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
+- discussion_id: resolve_holdfast_groundings
+  prompt: Resolve exact source-neutral groundings for holdfast polysaccharide and
+    the Hfa anchoring machinery.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#holdfast_polysaccharide
+  - components#hfa_holdfast_anchor
+  rationale: The record intentionally uses reviewed labels until a glycan accession
+    for the complete holdfast polysaccharide and a source-neutral Hfa anchoring-complex
+    identifier can be verified.
+  posed_by: codex
+  posed_date: '2026-09-11'

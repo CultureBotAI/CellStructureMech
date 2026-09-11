@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/holdfast.yaml
+  slug: holdfast
+session:
+  id: 2026-09-11T023347Z-codex-0c0d28
+  timestamp: '2026-09-11T02:33:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/393
+  - https://github.com/CultureBotAI/CellStructureMech/issues/394
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/392
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed holdfast adversarial review
+  details: 'Resolved PR #392 review issues by removing the Hfs synthesis/export graph edge
+    that was broader than its cited composition evidence and by replacing the old-cell-pole
+    state with an old-pole-or-stalk-tip cellular-localization node that matches the curated
+    holdfast definition.'
