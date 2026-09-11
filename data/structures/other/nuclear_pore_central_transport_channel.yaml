@@ -28,18 +28,27 @@ curation_history:
     to fungal inner-ring literature so the fungal scope is not supported only by a
     Saccharomyces map.
   llm_assisted: true
+- timestamp: '2026-09-11T08:27:50Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #441 and #442 by removing the unsupported CNT synonym and narrowing
+    central-channel component labels, graph nodes, and the grounding TODO to fungal
+    Nup57, Nup49, and Nsp1 source labels.'
+  llm_assisted: true
+- timestamp: '2026-09-11T08:28:05Z'
+  curator: codex
+  action: FIXED_DISCUSSION_ANCHORS
+  changes: Updated central-channel review TODO anchors after narrowing component ids.
+  llm_assisted: true
 synonyms:
 - synonym_text: central channel
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1534/genetics.111.127803
-- synonym_text: CNT
-  synonym_type: RELATED_SYNONYM
-  source: DOI:10.1038/s41422-022-00632-y
 part_of:
 - GO:0005643
 components:
-- component_id: nup57_nup54_family
-  label: Nup57/Nup54-family channel nucleoporin
+- component_id: nup57_family
+  label: Nup57-family channel nucleoporin
   component_type: PROTEIN
   component_role: CONSTITUENT
   essentiality: UNKNOWN
@@ -61,8 +70,8 @@ components:
   - reference: DOI:10.1126/science.aac9176
     notes: Stuwe et al. 2015 used fungal Nup57, Nup49, and Nsp1 proteins when determining
       inner-ring and channel-nucleoporin architecture.
-- component_id: nup49_nup58_family
-  label: Nup49/Nup58-family FG-channel nucleoporin
+- component_id: nup49_family
+  label: Nup49-family FG-channel nucleoporin
   component_type: PROTEIN
   component_role: CONSTITUENT
   essentiality: UNKNOWN
@@ -83,8 +92,8 @@ components:
   - reference: DOI:10.1126/science.aac9176
     notes: Stuwe et al. 2015 used fungal Nup57, Nup49, and Nsp1 proteins when determining
       inner-ring and channel-nucleoporin architecture.
-- component_id: nsp1_nup62_family
-  label: Nsp1/Nup62-family FG-channel nucleoporin
+- component_id: nsp1_family
+  label: Nsp1-family FG-channel nucleoporin
   component_type: PROTEIN
   component_role: CONSTITUENT
   essentiality: UNKNOWN
@@ -155,53 +164,53 @@ evidence:
 causal_graphs:
 - graph_id: central_channel_fg_nup_complex
   title: FG-channel Nups form the NPC transport path
-  description: Saccharomyces Nup57, Nup49, and Nsp1-family nucleoporins contribute
-    to a central-channel complex in the nuclear pore.
+  description: Saccharomyces Nup57, Nup49, and Nsp1 nucleoporins contribute to a central-channel
+    complex in the nuclear pore.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph records the Saccharomyces central-channel Nup57/Nup49/Nsp1
     cohort without asserting all FG-repeat Nups, copy numbers, or direct pairwise
     contacts.
   nodes:
-  - node_id: nup57_nup54_family
-    label: Nup57/Nup54-family channel nucleoporin
+  - node_id: nup57_family
+    label: Nup57-family channel nucleoporin
     node_type: GENE_OR_PROTEIN
-    component_ref: nup57_nup54_family
-  - node_id: nup49_nup58_family
-    label: Nup49/Nup58-family FG-channel nucleoporin
+    component_ref: nup57_family
+  - node_id: nup49_family
+    label: Nup49-family FG-channel nucleoporin
     node_type: GENE_OR_PROTEIN
-    component_ref: nup49_nup58_family
-  - node_id: nsp1_nup62_family
-    label: Nsp1/Nup62-family FG-channel nucleoporin
+    component_ref: nup49_family
+  - node_id: nsp1_family
+    label: Nsp1-family FG-channel nucleoporin
     node_type: GENE_OR_PROTEIN
-    component_ref: nsp1_nup62_family
+    component_ref: nsp1_family
   - node_id: nuclear_pore_central_transport_channel
     label: nuclear pore central transport channel
     node_type: STRUCTURE
     grounding: GO:0044613
   edges:
-  - subject: nup57_nup54_family
+  - subject: nup57_family
     predicate: contributes to
     object: nuclear_pore_central_transport_channel
-    description: Nup57/Nup54-family channel nucleoporin is represented in the central-channel
+    description: Nup57-family channel nucleoporin is represented in the central-channel
       complex of the Saccharomyces nuclear pore.
     evidence:
     - reference: DOI:10.1038/s41422-022-00632-y
       notes: Li et al. 2022 placed Nup57 in the Saccharomyces Nup57/Nup49/Nsp1 central-channel
         complex.
-  - subject: nup49_nup58_family
+  - subject: nup49_family
     predicate: contributes to
     object: nuclear_pore_central_transport_channel
-    description: Nup49/Nup58-family FG-channel nucleoporin is represented in the central-channel
+    description: Nup49-family FG-channel nucleoporin is represented in the central-channel
       complex of the Saccharomyces nuclear pore.
     evidence:
     - reference: DOI:10.1038/s41422-022-00632-y
       notes: Li et al. 2022 placed Nup49 in the Saccharomyces Nup57/Nup49/Nsp1 central-channel
         complex.
-  - subject: nsp1_nup62_family
+  - subject: nsp1_family
     predicate: contributes to
     object: nuclear_pore_central_transport_channel
-    description: Nsp1/Nup62-family FG-channel nucleoporin is represented in the central-channel
+    description: Nsp1-family FG-channel nucleoporin is represented in the central-channel
       complex of the Saccharomyces nuclear pore.
     evidence:
     - reference: DOI:10.1038/s41422-022-00632-y
@@ -209,17 +218,17 @@ causal_graphs:
         complex.
 discussions:
 - discussion_id: resolve_central_channel_nup_family_groundings
-  prompt: Resolve exact source-neutral family groundings for Nup57/Nup54, Nup49/Nup58,
-    and Nsp1/Nup62 central-channel nucleoporins.
+  prompt: Resolve exact source-neutral family groundings for Nup57, Nup49, and Nsp1
+    central-channel nucleoporins.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#nup57_nup54_family
-  - components#nup49_nup58_family
-  - components#nsp1_nup62_family
+  - components#nup57_family
+  - components#nup49_family
+  - components#nsp1_family
   rationale: The first central-channel record avoids guessing one exact InterPro,
-    Pfam, or NCBIfam accession for fungal and metazoan channel Nup classes whose orthology
-    and FG-repeat boundaries need a dedicated pass.
+    Pfam, or NCBIfam accession for fungal channel Nup classes whose orthology and
+    FG-repeat boundaries need a dedicated pass.
   evidence:
   - reference: DOI:10.1038/s41422-022-00632-y
     notes: Li et al. 2022 resolve the Saccharomyces Nup57, Nup49, and Nsp1 proteins
