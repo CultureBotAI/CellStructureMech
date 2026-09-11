@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_pore_outer_ring.yaml
+  slug: nuclear_pore_outer_ring
+session:
+  id: 2026-09-11T064254Z-claude-code-fd2d1f
+  timestamp: '2026-09-11T06:42:54Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - synonyms
+  - part_of
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added the nuclear pore outer ring structure record
+  details: Created a GO:0031080 nuclear pore outer ring record with Nup84, Nup107-160, and
+    Y-complex synonymy; nuclear-pore parthood; seven Saccharomyces Nup84/Y-complex component
+    classes; Eukaryota distribution; a Saccharomyces cerevisiae canonical example; a nuclear-pore
+    scaffold function; DOI and GO evidence; a nonmechanistic outer-ring assembly graph; and
+    a Y-complex grounding follow-up discussion.
