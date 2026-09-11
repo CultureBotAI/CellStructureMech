@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/parm_filament.yaml
+  slug: parm_filament
+session:
+  id: 2026-09-11T103356Z-claude-code-9f1225
+  timestamp: '2026-09-11T10:33:56Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - data
+  - curation
+  summary: Added ParM filament structure record
+  details: Created cellstructuremech:parm_filament with cytoskeleton parentage, R1 ParM synonymy
+    and component curation, plasmid-host bacterial scope, an Escherichia coli R1 plasmid example,
+    a plasmid-segregation function, ParMRC DOI evidence, a nonmechanistic ParM-to-R1 segregation
+    graph, and open/resolved discussions for ParM grounding and ParR/parC component boundaries.

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ParM filament · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>ParM filament</h1>
+<p class="meta"><code>cellstructuremech:parm_filament</code> · CYTOSKELETON · FILAMENT · <span class="status">PROPOSED</span></p>
+<p class="definition">A plasmid-encoded bacterial actin-like cytoskeletal filament assembled from ParM that elongates between ParR-parC plasmid-centromere complexes and drives active segregation of low-copy-number plasmids such as Escherichia coli R1. <small>[<a href="https://doi.org/10.1093/emboj/cdf320"><code>DOI:10.1093/emboj/cdf320</code></a>]</small></p>
+<p><strong>Synonyms:</strong> R1 ParM filament; bacterial actin-like ParM filament</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-parm"><td>ParM</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>parM</td><td></td><td>ESSENTIAL</td><td>Plasmid-encoded actin-like ATPase subunit that polymerizes into the dynamically unstable filaments of the ParMRC partition system.<ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/cdf320"><code>DOI:10.1093/emboj/cdf320</code></a> <small>Moller-Jensen et al. 2002 identified R1 plasmid ParM as the actin-like protein forming filaments for active plasmid segregation.</small></li><li><a href="https://doi.org/10.1126/science.1101313"><code>DOI:10.1126/science.1101313</code></a> <small>Garner et al. 2004 showed that purified ParM filaments undergo dynamic instability in vitro.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2"><code>NCBITaxon:2</code></a> Bacteria — <strong>VARIABLE</strong>: Actin-like ParM partition filaments are plasmid-encoded bacterial systems and are not asserted to be universal across Bacteria. [<a href="https://doi.org/10.1038/nrmicro2425"><code>DOI:10.1038/nrmicro2425</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code>NCBITaxon:562</code></a> <em>Escherichia coli</em> — Host species for the low-copy-number R1 plasmid whose ParMRC partition system defined ParM filament-driven plasmid segregation. [<a href="https://doi.org/10.1093/emboj/cdf320"><code>DOI:10.1093/emboj/cdf320</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>R1 plasmid segregation</strong> — ParM filaments elongate between ParR-parC complexes on paired R1 plasmids to move sister plasmids apart before host-cell division.<ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/cdf320"><code>DOI:10.1093/emboj/cdf320</code></a> <small>Moller-Jensen et al. 2002 connected ParM filament assembly to active segregation of the R1 plasmid.</small></li><li><a href="https://doi.org/10.1126/science.1229091"><code>DOI:10.1126/science.1229091</code></a> <small>Gayathri et al. 2012 reconstituted the antiparallel ParM filament spindle that drives plasmid segregation.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-parmrc_plasmid_segregation">ParM filaments separate R1 plasmids <small>(FUNCTION)</small></h3>
+<p>ParM polymerizes into an actin-like filament that is captured by ParR-parC complexes on R1 plasmids; stabilized filament elongation pushes paired plasmids apart.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>ParM</td><td>polymerizes into</td><td>ParM filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/cdf320"><code>DOI:10.1093/emboj/cdf320</code></a> <small>Moller-Jensen et al. 2002 observed R1 ParM filaments in bacterial cells.</small></li><li><a href="https://doi.org/10.1126/science.1101313"><code>DOI:10.1126/science.1101313</code></a> <small>Garner et al. 2004 followed purified ParM polymerization dynamics.</small></li></ul></td></tr>
+<tr><td>ParM filament</td><td>pushes apart</td><td>R1 plasmids</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.1229091"><code>DOI:10.1126/science.1229091</code></a> <small>Gayathri et al. 2012 reconstituted plasmid separation by antiparallel ParM filaments.</small></li></ul></td></tr>
+<tr><td>R1 plasmids</td><td>undergo</td><td>R1 plasmid segregation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/cdf320"><code>DOI:10.1093/emboj/cdf320</code></a> <small>Moller-Jensen et al. 2002 showed that ParM supports active R1 plasmid segregation.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral grounding for plasmid-encoded filament-forming ParM proteins. <small>This first record curates ParM from the R1 plasmid partition system without asserting that a broad actin-like ATPase family accession exactly denotes ParM filament-forming proteins.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): ParR and parC stabilize ParM filament ends but are outside the ParM filament constituent boundary. <small>ParR bound to the parC plasmid centromere captures and stabilizes ParM filament ends in the partition spindle, but ParR and parC are not subunits of the ParM polymer itself.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/cdf320"><code>DOI:10.1093/emboj/cdf320</code></a> <small>Moller-Jensen, Jensen, Lowe and Gerdes 2002, &#39;Prokaryotic DNA segregation by an actin-like filament&#39;, EMBO Journal.</small></li><li><a href="https://doi.org/10.1126/science.1101313"><code>DOI:10.1126/science.1101313</code></a> <small>Garner, Campbell and Mullins 2004, &#39;Dynamic instability in a DNA-segregating prokaryotic actin homolog&#39;, Science.</small></li><li><a href="https://doi.org/10.1126/science.1229091"><code>DOI:10.1126/science.1229091</code></a> <small>Gayathri, Fujii, Moller-Jensen, van den Ent, Namba and Lowe 2012, &#39;A bipolar spindle of antiparallel ParM filaments drives bacterial plasmid segregation&#39;, Science.</small></li><li><a href="https://doi.org/10.1038/nature14356"><code>DOI:10.1038/nature14356</code></a> <small>Bharat, Murshudov, Sachse and Lowe 2015, &#39;Structures of actin-like ParM filaments show architecture of plasmid-segregating spindles&#39;, Nature.</small></li><li><a href="https://doi.org/10.1038/nrmicro2425"><code>DOI:10.1038/nrmicro2425</code></a> <small>Salje, Gayathri and Lowe 2010, &#39;The ParMRC system: molecular mechanisms of plasmid segregation by actin-like filaments&#39;, Nature Reviews Microbiology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-11T10:32:38Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T10:33:30Z</code> codex · EXPANDED_RECORD — Added cytoskeleton parentage, ParM filament synonymy and component curation, plasmid-host bacterial scope, R1 plasmid segregation function, DOI evidence, a nonmechanistic ParM-to-R1 segregation graph, and ParM grounding and ParR/parC boundary discussions.</li><li><code>2026-09-11T10:40:25Z</code> codex · FIX_DISCUSSION_ANCHOR — Retargeted the ParR/parC component-boundary discussion from the whole components section to the concrete ParM component anchor.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/parm_filament.yaml"><code>data/structures/cytoskeleton/parm_filament.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

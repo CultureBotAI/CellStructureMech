@@ -315,6 +315,15 @@
   "definition": "The actin-like cytoskeletal filament of rod-shaped bacteria. MreB polymerises into short membrane-associated filaments that circle the cell at an angle to its long axis and move processively around it, carrying the elongasome — the peptidoglycan synthases that widen the sidewall — so that new wall material is inserted where the filaments travel. It is a homologue of eukaryotic actin by fold, not by sequence identity."
  },
  {
+  "identifier": "cellstructuremech:parm_filament",
+  "label": "ParM filament",
+  "category": "CYTOSKELETON",
+  "kind": "FILAMENT",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/parm_filament.html",
+  "definition": "A plasmid-encoded bacterial actin-like cytoskeletal filament assembled from ParM that elongates between ParR-parC plasmid-centromere complexes and drives active segregation of low-copy-number plasmids such as Escherichia coli R1."
+ },
+ {
   "identifier": "GO:0020031",
   "label": "polar ring of apical complex",
   "category": "CYTOSKELETON",
