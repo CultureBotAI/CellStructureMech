@@ -242,12 +242,12 @@
         {
           "identifier": "GO:0009431",
           "label": "bacterial-type flagellum basal body, MS ring",
-          "cosine_similarity": 0.89778303
+          "cosine_similarity": 0.89778302
         },
         {
           "identifier": "GO:0030694",
           "label": "bacterial-type flagellum basal body, rod",
-          "cosine_similarity": 0.88342779
+          "cosine_similarity": 0.88342778
         },
         {
           "identifier": "GO:0009425",
@@ -268,7 +268,7 @@
         {
           "identifier": "GO:0009428",
           "label": "bacterial-type flagellum basal body, distal rod, P ring",
-          "cosine_similarity": 0.89778303
+          "cosine_similarity": 0.89778302
         },
         {
           "identifier": "GO:0009425",
@@ -345,7 +345,7 @@
         {
           "identifier": "GO:0009428",
           "label": "bacterial-type flagellum basal body, distal rod, P ring",
-          "cosine_similarity": 0.88342779
+          "cosine_similarity": 0.88342778
         }
       ]
     },
@@ -883,12 +883,12 @@
         {
           "identifier": "GO:0005940",
           "label": "septin ring",
-          "cosine_similarity": 0.7558934
+          "cosine_similarity": 0.75589339
         },
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.74150719
+          "cosine_similarity": 0.74150718
         },
         {
           "identifier": "GO:0005930",
@@ -898,12 +898,12 @@
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.72119469
+          "cosine_similarity": 0.72119468
         },
         {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
-          "cosine_similarity": 0.69381802
+          "cosine_similarity": 0.69381801
         }
       ]
     },
@@ -965,7 +965,7 @@
         {
           "identifier": "cellstructuremech:tubz_filament",
           "label": "TubZ filament",
-          "cosine_similarity": 0.74443571
+          "cosine_similarity": 0.73825323
         }
       ]
     },
@@ -1056,9 +1056,9 @@
           "cosine_similarity": 0.75590133
         },
         {
-          "identifier": "cellstructuremech:tubz_filament",
-          "label": "TubZ filament",
-          "cosine_similarity": 0.71752351
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.71259095
         }
       ]
     },
@@ -1110,7 +1110,7 @@
         {
           "identifier": "cellstructuremech:tubz_filament",
           "label": "TubZ filament",
-          "cosine_similarity": 0.78602725
+          "cosine_similarity": 0.7805356
         },
         {
           "identifier": "GO:0009420",
@@ -1162,7 +1162,7 @@
         {
           "identifier": "GO:0005826",
           "label": "actomyosin contractile ring",
-          "cosine_similarity": 0.7558934
+          "cosine_similarity": 0.75589339
         },
         {
           "identifier": "GO:0009277",
@@ -1224,27 +1224,27 @@
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.78602725
+          "cosine_similarity": 0.7805356
         },
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.74965091
+          "cosine_similarity": 0.74182267
         },
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.74443571
+          "cosine_similarity": 0.73825323
         },
         {
           "identifier": "cellstructuremech:crescentin_filament",
           "label": "crescentin filament",
-          "cosine_similarity": 0.71752351
+          "cosine_similarity": 0.70749622
         },
         {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.68932853
+          "identifier": "GO:0009420",
+          "label": "bacterial-type flagellum filament",
+          "cosine_similarity": 0.68872272
         }
       ]
     },
@@ -2970,7 +2970,7 @@
         {
           "identifier": "GO:0044613",
           "label": "nuclear pore central transport channel",
-          "cosine_similarity": 0.85695178
+          "cosine_similarity": 0.85695179
         },
         {
           "identifier": "GO:0044615",
@@ -2991,7 +2991,7 @@
         {
           "identifier": "GO:0005643",
           "label": "nuclear pore",
-          "cosine_similarity": 0.85695178
+          "cosine_similarity": 0.85695179
         },
         {
           "identifier": "GO:0044612",
@@ -3006,12 +3006,12 @@
         {
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.7852813
+          "cosine_similarity": 0.78528131
         },
         {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.78210723
+          "cosine_similarity": 0.78210724
         }
       ]
     },

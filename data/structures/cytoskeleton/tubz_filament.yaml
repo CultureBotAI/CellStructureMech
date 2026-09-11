@@ -26,6 +26,13 @@ curation_history:
   changes: Removed the pBtoxis TubZ filament related synonym because it was a curator
     paraphrase rather than an attested alternate label.
   llm_assisted: true
+- timestamp: '2026-09-11T11:34:57Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issues #470 and #471 by naming pBtoxis tubC in the
+    TubR-tubC graph node and retargeting the adapter edge from TubZ monomers to TubZ
+    filaments.'
+  llm_assisted: true
 parent_structures:
 - GO:0005856
 components:
@@ -66,8 +73,8 @@ canonical_examples:
 functions:
 - function_id: pbtoxis_plasmid_partitioning
   label: pBtoxis plasmid partitioning
-  description: TubZ filaments interact with TubR-centromere complexes to support stable
-    partitioning of the Bacillus thuringiensis pBtoxis plasmid.
+  description: TubZ filaments interact with TubR-tubC partition complexes to support
+    pBtoxis DNA partitioning and stable plasmid inheritance in Bacillus thuringiensis.
   evidence:
   - reference: DOI:10.1101/gad.1546107
     notes: Larsen et al. 2007 connected TubZ treadmilling to stable inheritance of
@@ -93,13 +100,13 @@ evidence:
 causal_graphs:
 - graph_id: tubzrc_pbtoxis_partitioning
   title: TubZ filaments support pBtoxis plasmid partitioning
-  description: TubZ polymerizes into tubulin-like filaments and is recruited by TubR
-    bound to pBtoxis centromere DNA to support plasmid partitioning.
+  description: TubZ polymerizes into tubulin-like filaments and TubR bound to pBtoxis
+    tubC centromere DNA engages TubZ filaments to support plasmid partitioning.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records TubZ polymerization, TubR-centromere recruitment
-    and pBtoxis plasmid partitioning without asserting the full TubZRC transport geometry
-    or all type III partition-system variants.
+  scope_notes: The graph records TubZ polymerization, TubR-tubC engagement of TubZ
+    filaments and pBtoxis plasmid partitioning without asserting the full TubZRC transport
+    geometry or all type III partition-system variants.
   nodes:
   - node_id: tubz
     label: TubZ
@@ -109,8 +116,8 @@ causal_graphs:
     label: TubZ filament
     node_type: STRUCTURE
     grounding: cellstructuremech:tubz_filament
-  - node_id: tubr_centromere_complex
-    label: TubR-centromere complex
+  - node_id: tubr_tubc_complex
+    label: TubR-tubC complex
     node_type: STRUCTURE
   - node_id: pbtoxis_plasmid_partitioning
     label: pBtoxis plasmid partitioning
@@ -126,11 +133,11 @@ causal_graphs:
       notes: Larsen et al. 2007 characterized TubZ polymers from the pBtoxis plasmid.
     - reference: DOI:10.1073/pnas.1010176107
       notes: Aylett et al. 2010 solved the TubZ filament structure.
-  - subject: tubr_centromere_complex
-    predicate: recruits
-    object: tubz
-    description: TubR bound to centromere DNA recruits TubZ in the pBtoxis partition
-      system.
+  - subject: tubr_tubc_complex
+    predicate: engages
+    object: tubz_filament
+    description: TubR bound to pBtoxis tubC centromere DNA engages TubZ filaments
+      in the pBtoxis partition system.
     evidence:
     - reference: DOI:10.1073/pnas.1003817107
       notes: Ni et al. 2010 reported TubR DNA binding and recruitment of TubZ for
@@ -144,7 +151,8 @@ causal_graphs:
     - reference: DOI:10.1101/gad.1546107
       notes: Larsen et al. 2007 connected TubZ treadmilling to pBtoxis plasmid stability.
     - reference: DOI:10.1073/pnas.1210899109
-      notes: Aylett and Lowe 2012 analyzed the TubZRC centromeric partition complex.
+      notes: Aylett and Lowe 2012 analyzed the pBtoxis TubR-tubC centromeric partition
+        complex.
 discussions:
 - discussion_id: resolve_tubz_family_grounding
   prompt: Resolve exact source-neutral grounding for plasmid-encoded filament-forming
@@ -163,15 +171,15 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-11'
 - discussion_id: exclude_tubr_tubc_from_filament_components
-  prompt: TubR and centromere DNA are graph-scoped partition adapters rather than
-    TubZ filament constituents.
+  prompt: TubR and tubC centromere DNA are graph-scoped partition adapters rather
+    than TubZ filament constituents.
   kind: INTERPRETATION
   status: RESOLVED
   attaches_to:
   - causal_graphs#tubzrc_pbtoxis_partitioning
-  rationale: TubR bound to the pBtoxis centromere site recruits TubZ in the TubZRC
-    partition system, but this centromeric complex is cargo-coupling machinery rather
-    than a TubZ polymer subunit.
+  rationale: TubR bound to the pBtoxis tubC centromere site engages TubZ filaments
+    in the TubZRC partition system, but this centromeric complex is cargo-coupling
+    machinery rather than a TubZ polymer subunit.
   evidence:
   - reference: DOI:10.1073/pnas.1003817107
     notes: Ni et al. 2010 analyzed centromere DNA binding by TubR and recruitment
