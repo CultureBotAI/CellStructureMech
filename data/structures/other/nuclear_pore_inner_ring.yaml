@@ -3,7 +3,7 @@ label: nuclear pore inner ring
 structure_category: OTHER
 structure_kind: MULTIPROTEIN_COMPLEX
 definition: A ring-shaped eukaryotic nuclear pore subcomplex built from inner-ring
-  scaffold nucleoporins that line the central transport channel.
+  scaffold nucleoporins around the central transport channel.
 definition_source: GO:0044611
 mapping_status: PROPOSED
 curation_history:
@@ -19,6 +19,13 @@ curation_history:
     scaffold component classes, Eukaryota distribution, a Saccharomyces cerevisiae
     example, nuclear-pore scaffold function, DOI/GO evidence, an inner-ring assembly
     graph, and a Nup grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T07:17:39Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #434 and #435 by changing central-channel lining wording to around-channel
+    scaffold wording and adding an open TODO for deferred Nic96, Nup53/Nup59, and
+    CNT or FG-channel component-boundary curation.'
   llm_assisted: true
 synonyms:
 - synonym_text: inner ring complex
@@ -157,11 +164,12 @@ causal_graphs:
 - graph_id: inner_ring_scaffold_assembly
   title: Large scaffold Nups build the inner ring
   description: Large Saccharomyces scaffold nucleoporin families occupy the nuclear
-    pore inner ring that lines the central transport channel.
+    pore inner ring around the central transport channel.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records core Saccharomyces inner-ring component placement
-    without asserting copy numbers or every Nic96, Nup53, Nup59, and FG-channel contact.
+  scope_notes: The graph records core Saccharomyces inner-ring scaffold placement
+    without asserting copy numbers, linker/CNT component boundaries, or contacts to
+    Nic96, Nup53, Nup59, and FG-repeat channel nucleoporins.
   nodes:
   - node_id: nup192_nup205_family
     label: Nup192/Nup205-family nucleoporin
@@ -239,5 +247,24 @@ discussions:
   - reference: DOI:10.1146/annurev-biophys-052118-115308
     notes: Hampoelz et al. 2019 review lineage variation in the nucleoporins that
       assemble nuclear pore inner scaffolds.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: resolve_linker_cnt_component_boundary
+  prompt: Resolve whether linker nucleoporins and the central-channel nucleoporin
+    complex should be modeled as components of the nuclear pore inner ring or left
+    to neighboring NPC records.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#inner_ring_scaffold_assembly
+  rationale: The first inner-ring record intentionally models only the large Saccharomyces
+    scaffold Nups. Li et al. 2022 also place Nic96 and the Nup57/Nup49/Nsp1 central-channel
+    complex in the near-atomic inner-ring model, so those linker and FG Nups need
+    a separate boundary pass before they are added or explicitly assigned to adjacent
+    nuclear-pore records.
+  evidence:
+  - reference: DOI:10.1038/s41422-022-00632-y
+    notes: Li et al. 2022 modeled Nic96 and the Nup57/Nup49/Nsp1 central-channel complex
+      together with large scaffold Nups in the Saccharomyces inner ring.
   posed_by: codex
   posed_date: '2026-09-11'
