@@ -3,8 +3,9 @@ label: fungal-type cell wall
 structure_category: ENVELOPE
 structure_kind: ENVELOPE_LAYER
 definition: A rigid but dynamic carbohydrate- and glycoprotein-rich wall surrounding
-  the fungal plasma membrane, built primarily from cross-linked glucans, mannoproteins,
-  and chitin and kept distinct from fungal capsules outside the wall.
+  the fungal plasma membrane, built from a variable cross-linked matrix of glucans,
+  wall glycoproteins, and often chitin and kept distinct from fungal capsules outside
+  the wall.
 definition_source: GO:0009277
 mapping_status: PROPOSED
 curation_history:
@@ -21,13 +22,20 @@ curation_history:
     examples, wall-protection and surface-interaction functions, a cross-linked polysaccharide
     wall graph, DOI/GO evidence, and a resolved capsule-boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-11T05:12:45Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #415 issues #416 and #417 by downgrading beta-D-glucan essentiality,
+    softening broad fungal wall composition text, and citing the fungal cell wall
+    synonym from the fungal-wall literature instead of GO:0009277.'
+  llm_assisted: true
 synonyms:
 - synonym_text: chitin- and beta-glucan-containing cell wall
   synonym_type: NARROW_SYNONYM
   source: GO:0009277
 - synonym_text: fungal cell wall
   synonym_type: EXACT_SYNONYM
-  source: GO:0009277
+  source: DOI:10.1128/microbiolspec.FUNK-0035-2016
 parent_structures:
 - GO:0005618
 components:
@@ -35,9 +43,9 @@ components:
   label: beta-D-glucan
   component_type: POLYSACCHARIDE
   component_role: CONSTITUENT
-  essentiality: ESSENTIAL
+  essentiality: CONDITIONAL
   grounding: CHEBI:28793
-  role: Forms branched glucose polymers that make the major fibrillar scaffold of
+  role: Forms branched glucose polymers that provide a major fibrillar scaffold in
     many fungal walls.
   evidence:
   - reference: DOI:10.1128/microbiolspec.FUNK-0035-2016
@@ -118,15 +126,15 @@ evidence:
     in Genetics.
 causal_graphs:
 - graph_id: crosslinked_polysaccharide_wall_network
-  title: Glucans, chitin and mannoproteins form a cross-linked wall
-  description: Branched glucans form a covalently cross-linked wall network with chitin
-    and mannoproteins. This carbohydrate-rich matrix surrounds the plasma membrane
-    to maintain shape and provide a fungal cell surface.
+  title: Glucans, chitin and mannoproteins form a fungal wall matrix
+  description: In well-studied fungal walls, branched beta-glucans form a cross-linked
+    matrix with chitin and mannoproteins. This carbohydrate-rich matrix surrounds
+    the plasma membrane to maintain shape and provide a fungal cell surface.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures a high-level fungal wall architecture shared by
-    well-studied yeasts and filamentous fungi without selecting one species-specific
-    glucan, chitin, or mannoprotein assembly pathway.
+  scope_notes: The graph captures a high-level fungal wall architecture observed in
+    well-studied yeasts and filamentous fungi without asserting that every fungal
+    wall has the same beta-glucan, chitin, and mannoprotein composition.
   nodes:
   - node_id: beta_d_glucan
     label: beta-D-glucan
@@ -157,8 +165,8 @@ causal_graphs:
   - subject: beta_d_glucan
     predicate: cross-links with
     object: chitin
-    description: Glucans cross-link with chitin to build the load-bearing inner polysaccharide
-      network of the wall.
+    description: In many fungal walls, glucans cross-link with chitin to build the
+      load-bearing inner polysaccharide network.
     evidence:
     - reference: DOI:10.1128/microbiolspec.FUNK-0035-2016
       notes: Gow, Latge and Munro 2017 review glucan-chitin cross-linking in fungal
@@ -175,12 +183,15 @@ causal_graphs:
   - subject: beta_d_glucan
     predicate: forms scaffold of
     object: fungal_type_cell_wall
-    description: Beta-glucans provide much of the polysaccharide scaffold that defines
-      the fungal-type cell wall.
+    description: Beta-glucans provide much of the polysaccharide scaffold in well-studied
+      ascomycete and basidiomycete walls.
     evidence:
-    - reference: GO:0009277
-      notes: GO:0009277 defines the fungal-type wall as built from branched glucans
-        and other carbohydrates.
+    - reference: DOI:10.1128/microbiolspec.FUNK-0035-2016
+      notes: Gow, Latge and Munro 2017 review beta-glucans as major structural components
+        of many fungal walls.
+    - reference: DOI:10.1016/B978-0-12-407677-8.00002-6
+      notes: Free 2013 reviews beta-1,3-glucan and beta-1,6-glucan as core wall polymers
+        in Saccharomyces cerevisiae and other fungi.
   - subject: fungal_type_cell_wall
     predicate: surrounds
     object: plasma_membrane
