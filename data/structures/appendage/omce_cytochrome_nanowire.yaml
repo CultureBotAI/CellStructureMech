@@ -21,6 +21,13 @@ curation_history:
     rows, cautious electron-transfer function evidence, a narrow OmcE function graph,
     and a TODO for exact OmcE family grounding.
   llm_assisted: true
+- timestamp: '2026-09-11T15:40:37Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #510 by limiting OmcE PCA taxon notes to PDB:7TFS natural source
+    provenance, and resolved #511 by caveating compact OmcE electron-transfer labels
+    and graph terms.'
+  llm_assisted: true
 synonyms:
 - synonym_text: OmcE cytochrome filament
   synonym_type: EXACT_SYNONYM
@@ -69,19 +76,18 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:243231
   taxon_label: Geobacter sulfurreducens PCA
   presence: COMMON
-  note: RCSB reports the PDB:7TFS OmcE natural polymer entity as Geobacter sulfurreducens
-    strain ATCC 51573 / DSM 12127 / PCA, and the entity aligns to UniProtKB:Q74FJ0
-    from Geobacter sulfurreducens PCA.
+  note: RCSB reports Geobacter sulfurreducens strain ATCC 51573 / DSM 12127 / PCA
+    as the natural source for the PDB:7TFS OmcE polymer entity.
   reference: PDB:7TFS
 canonical_examples:
 - taxon_id: NCBITaxon:243231
   taxon_label: Geobacter sulfurreducens PCA
-  note: Strain source associated with the OmcE helical cryo-EM model deposited as
-    PDB:7TFS.
+  note: Strain reported by RCSB as the natural source for the OmcE helical cryo-EM
+    model deposited as PDB:7TFS.
   reference: PDB:7TFS
 functions:
-- function_id: tetraheme_filament_electron_transfer
-  label: tetraheme filament electron transfer
+- function_id: candidate_tetraheme_filament_electron_transfer
+  label: candidate tetraheme filament electron transfer
   description: OmcE subunits pack four covalently bound hemes per subunit within a
     helical cytochrome filament, providing a candidate structural path for electron
     transfer through the nanowire.
@@ -99,7 +105,7 @@ evidence:
     Geobacter sulfurreducens associated with EMDB map EMD-25879.
 causal_graphs:
 - graph_id: tetraheme_omce_nanowire_conduction
-  title: OmcE subunits pack hemes for nanowire conduction
+  title: OmcE heme packing suggests nanowire conduction
   description: OmcE tetraheme c-type cytochromes polymerize into a helical extracellular
     filament whose packed hemes provide a candidate structural path for electron transfer.
   graph_kind: FUNCTION
@@ -119,8 +125,8 @@ causal_graphs:
     label: OmcE cytochrome nanowire
     node_type: STRUCTURE
     grounding: cellstructuremech:omce_cytochrome_nanowire
-  - node_id: filament_electron_transfer
-    label: filament electron transfer
+  - node_id: candidate_filament_electron_transfer
+    label: candidate filament electron transfer
     node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: omce_tetraheme_c_type_cytochrome
@@ -142,8 +148,8 @@ causal_graphs:
       notes: Wang et al. 2022 resolved tetraheme packing in the OmcE cytochrome filament
         by cryo-EM.
   - subject: packed_tetraheme_core
-    predicate: supports
-    object: filament_electron_transfer
+    predicate: provides candidate path for
+    object: candidate_filament_electron_transfer
     description: The packed OmcE heme arrangement provides a proposed electron-transfer
       path through the extracellular cytochrome filament.
     evidence:
