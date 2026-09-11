@@ -34,8 +34,14 @@ curation_history:
   changes: 'Adjusted PopZ graph scope notes to match the PR #464 fix for review issue
     #467.'
   llm_assisted: true
+- timestamp: '2026-09-11T11:12:22Z'
+  curator: codex
+  action: FIX_OBSOLETE_PARENT
+  changes: 'Addressed PR #464 CI issue #468 by replacing obsolete parent GO:0044464
+    with live GO:0110165.'
+  llm_assisted: true
 parent_structures:
-- GO:0044464
+- GO:0110165
 synonyms:
 - synonym_text: Caulobacter PopZ polar subdomain
   synonym_type: RELATED_SYNONYM
