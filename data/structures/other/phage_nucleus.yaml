@@ -1,0 +1,183 @@
+identifier: cellstructuremech:phage_nucleus
+label: phage nucleus
+structure_category: OTHER
+structure_kind: PROTEIN_SHELLED_ORGANELLE
+definition: A jumbo-bacteriophage protein-shelled compartment that assembles in infected
+  bacterial cells, surrounds replicating phage DNA, and spatially separates phage
+  genome replication and transcription from bacterial translation.
+definition_source: DOI:10.1126/science.aal2130
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T12:24:09Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T12:25:01Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added non-membrane-bounded-organelle parentage, phage nucleus synonymy,
+    chimallin shell curation, 201phi2-1 scope, compartmentalization and antidefense
+    functions, DOI evidence, a nonmechanistic chimallin assembly graph, and chimallin
+    grounding and PhuZ boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0043232
+synonyms:
+- synonym_text: phage nuclear shell
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41586-022-05013-4
+- synonym_text: jumbo bacteriophage nuclear shell
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41586-022-05013-4
+- synonym_text: nucleus-like compartment
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1126/science.aal2130
+components:
+- component_id: chimallin
+  label: chimallin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - chmA
+  - gp105
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for chimallin major phage nuclear
+    shell proteins was verified in this pass.
+  role: Major phage nuclear shell protein that polymerizes into the proteinaceous
+    lattice surrounding replicating jumbo-phage DNA.
+  evidence:
+  - reference: DOI:10.1126/science.aal2130
+    notes: Chaikeeratisak et al. 2017 identified 201phi2-1 gp105 as an early, highly
+      expressed phage protein that forms the nucleus-like shell.
+  - reference: DOI:10.1038/s41586-022-05013-4
+    notes: Laughlin et al. 2022 named the major jumbo-bacteriophage nuclear shell
+      protein chimallin and analyzed its shell self-assembly.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:198110
+  taxon_label: Pseudomonas phage 201phi2-1
+  presence: COMMON
+  note: Pseudomonas phage 201phi2-1 forms a chimallin-lined phage nucleus during infection
+    of Pseudomonas chlororaphis.
+  reference: DOI:10.1126/science.aal2130
+canonical_examples:
+- taxon_id: NCBITaxon:198110
+  taxon_label: Pseudomonas phage 201phi2-1
+  note: Jumbo phage whose gp105 shell established the nucleus-like compartment in
+    infected Pseudomonas chlororaphis cells.
+  reference: DOI:10.1126/science.aal2130
+functions:
+- function_id: phage_genome_compartmentalization
+  label: phage genome compartmentalization
+  description: The phage nucleus shell encloses replicating phage DNA and separates
+    viral replication and transcription from ribosomal translation in the infected
+    bacterial cytoplasm.
+  evidence:
+  - reference: DOI:10.1126/science.aal2130
+    notes: Chaikeeratisak et al. 2017 found that gp105 shells surround phage DNA while
+      excluding ribosomes.
+  - reference: DOI:10.1016/j.celrep.2017.07.064
+    notes: Chaikeeratisak et al. 2017 showed that nucleus-like compartments and PhuZ
+      spindles are conserved among large Pseudomonas phages.
+- function_id: phage_dna_antidefense_shielding
+  label: phage DNA antidefense shielding
+  description: The chimallin shell blocks access of some bacterial DNA-targeting immune
+    machineries to the phage genome.
+  evidence:
+  - reference: DOI:10.1038/s41564-019-0612-5
+    notes: Malone et al. 2020 showed that a phage nucleus protects jumbo-phage DNA
+      from CRISPR-Cas DNA targeting while remaining vulnerable to type III RNA-targeting
+      immunity.
+  - reference: DOI:10.1038/s41586-022-05013-4
+    notes: Laughlin et al. 2022 linked chimallin shell architecture with selective
+      exchange across the jumbo-phage nuclear shell.
+evidence:
+- reference: DOI:10.1126/science.aal2130
+  notes: Chaikeeratisak et al. 2017, 'Assembly of a nucleus-like structure during
+    viral replication in bacteria', Science.
+- reference: DOI:10.1016/j.celrep.2017.07.064
+  notes: Chaikeeratisak et al. 2017, 'The Phage Nucleus and Tubulin Spindle Are Conserved
+    among Large Pseudomonas Phages', Cell Reports.
+- reference: DOI:10.1038/s41564-019-0612-5
+  notes: Malone et al. 2020, 'A jumbo phage that forms a nucleus-like structure evades
+    CRISPR-Cas DNA targeting but is vulnerable to type III RNA-based immunity', Nature
+    Microbiology.
+- reference: DOI:10.1038/s41586-022-05013-4
+  notes: Laughlin et al. 2022, 'Architecture and self-assembly of the jumbo bacteriophage
+    nuclear shell', Nature.
+causal_graphs:
+- graph_id: chimallin_shell_assembly
+  title: Chimallin shells enclose jumbo-phage DNA
+  description: Chimallin polymerizes into a phage nuclear shell that encloses replicating
+    phage DNA in a proteinaceous nucleus-like compartment.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records chimallin shell assembly around phage DNA without
+    modeling shell pores, PhuZ-dependent positioning, or the phage capsid trafficking
+    pathway.
+  nodes:
+  - node_id: chimallin
+    label: chimallin
+    node_type: GENE_OR_PROTEIN
+    component_ref: chimallin
+  - node_id: phage_nucleus
+    label: phage nucleus
+    node_type: STRUCTURE
+    grounding: cellstructuremech:phage_nucleus
+  - node_id: phage_genome
+    label: replicating phage DNA
+    node_type: GENETIC_ELEMENT
+  edges:
+  - subject: chimallin
+    predicate: self-assembles into
+    object: phage_nucleus
+    description: Chimallin forms the proteinaceous shell of the phage nucleus.
+    evidence:
+    - reference: DOI:10.1126/science.aal2130
+      notes: Chaikeeratisak et al. 2017 localized 201phi2-1 gp105 to the phage nucleus-like
+        shell.
+    - reference: DOI:10.1038/s41586-022-05013-4
+      notes: Laughlin et al. 2022 resolved chimallin shell architecture and self-assembly.
+  - subject: phage_nucleus
+    predicate: encloses
+    object: phage_genome
+    description: The proteinaceous phage nucleus shell surrounds replicating jumbo-phage
+      DNA.
+    evidence:
+    - reference: DOI:10.1126/science.aal2130
+      notes: Chaikeeratisak et al. 2017 observed the 201phi2-1 nucleus-like shell
+        surrounding phage DNA.
+discussions:
+- discussion_id: resolve_chimallin_family_grounding
+  prompt: Resolve exact source-neutral grounding for chimallin major phage nuclear
+    shell proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#chimallin
+  rationale: This first record leaves chimallin ungrounded rather than asserting that
+    a broad phage shell or HK97-like fold accession is equivalent to the jumbo-phage
+    nuclear shell family.
+  evidence:
+  - reference: DOI:10.1038/s41586-022-05013-4
+    notes: Laughlin et al. 2022 named chimallin as the major bacteriophage nuclear
+      shell protein.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: exclude_phuz_from_shell_components
+  prompt: PhuZ is not asserted as a phage nucleus shell constituent.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#chimallin
+  rationale: PhuZ forms a tubulin-like spindle that positions and rotates the phage
+    nucleus, but the first phage-nucleus record models the chimallin shell rather
+    than the separate spindle polymer.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.07.064
+    notes: Chaikeeratisak et al. 2017 modeled PhuZ as the phage tubulin spindle associated
+      with the phage nucleus in large Pseudomonas phages.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'

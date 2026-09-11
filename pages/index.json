@@ -936,6 +936,15 @@
   "definition": "A ring-shaped eukaryotic nuclear pore subcomplex built from outer-ring coat nucleoporins on the cytoplasmic and nucleoplasmic faces of the nuclear pore scaffold."
  },
  {
+  "identifier": "cellstructuremech:phage_nucleus",
+  "label": "phage nucleus",
+  "category": "OTHER",
+  "kind": "PROTEIN_SHELLED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/other/phage_nucleus.html",
+  "definition": "A jumbo-bacteriophage protein-shelled compartment that assembles in infected bacterial cells, surrounds replicating phage DNA, and spatially separates phage genome replication and transcription from bacterial translation."
+ },
+ {
   "identifier": "GO:0000133",
   "label": "polarisome",
   "category": "OTHER",
