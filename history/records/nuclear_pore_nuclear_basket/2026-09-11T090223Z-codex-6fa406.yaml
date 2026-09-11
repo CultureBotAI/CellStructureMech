@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_pore_nuclear_basket.yaml
+  slug: nuclear_pore_nuclear_basket
+session:
+  id: 2026-09-11T090223Z-codex-6fa406
+  timestamp: '2026-09-11T09:02:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/447
+  - https://github.com/CultureBotAI/CellStructureMech/issues/448
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/446
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed nuclear-basket PR review
+  details: 'Resolved PR #446 review issues #447 and #448 by broadening the nuclear-basket
+    function identifier and label to nucleoplasmic NPC organization, and by rewriting the
+    component-boundary TODO to distinguish structural basket-Nup candidates from recruited
+    export, SUMO-regulation, and chromatin factors.'

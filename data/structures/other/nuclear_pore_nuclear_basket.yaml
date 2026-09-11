@@ -1,0 +1,183 @@
+identifier: GO:0044615
+label: nuclear pore nuclear basket
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A filamentous, cage-like assembly on the nuclear face of the nuclear pore
+  complex.
+definition_source: GO:0044615
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T08:54:16Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T08:54:53Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nuclear-basket synonymy, nuclear-pore parthood, Mlp1 and Mlp2 yeast
+    basket-filament component classes, a Saccharomyces cerevisiae distribution row
+    and example, DOI/GO evidence, a conservative Mlp1/Mlp2 assembly graph, and a nuclear-basket
+    component-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T09:02:13Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #447 and #448 by broadening the basket function label to nucleoplasmic
+    NPC organization and splitting the boundary TODO into structural basket-Nup and
+    recruited-factor candidates.'
+  llm_assisted: true
+synonyms:
+- synonym_text: nuclear basket
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1242/jcs.264865
+part_of:
+- GO:0005643
+components:
+- component_id: mlp1_family
+  label: Mlp1-family nuclear-basket coiled-coil nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - MLP1
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This first nuclear-pore nuclear-basket record curates yeast Mlp1
+    and Mlp2 by source-level labels and leaves exact InterPro or Pfam groundings for
+    a later family-by-family pass.
+  role: Large coiled-coil basket-filament family represented in the Saccharomyces
+    cerevisiae nuclear pore basket.
+  evidence:
+  - reference: DOI:10.1091/mbc.E13-07-0412
+    notes: Niepel et al. 2013 identified Mlp1p as a necessary yeast nuclear-basket
+      component.
+  - reference: DOI:10.1242/jcs.264865
+    notes: Schmidt et al. 2026 refined a budding-yeast nuclear pore basket model containing
+      Mlp1 and Mlp2.
+- component_id: mlp2_family
+  label: Mlp2-family nuclear-basket coiled-coil nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - MLP2
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This first nuclear-pore nuclear-basket record curates yeast Mlp1
+    and Mlp2 by source-level labels and leaves exact InterPro or Pfam groundings for
+    a later family-by-family pass.
+  role: Large coiled-coil basket-filament family represented in the Saccharomyces
+    cerevisiae nuclear pore basket.
+  evidence:
+  - reference: DOI:10.1091/mbc.E13-07-0412
+    notes: Niepel et al. 2013 identified Mlp2p as a necessary yeast nuclear-basket
+      component.
+  - reference: DOI:10.1242/jcs.264865
+    notes: Schmidt et al. 2026 found that Mlp2 cooperates with Mlp1 to stabilize budding-yeast
+      basket architecture.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Mlp1 and Mlp2 basket filaments are directly characterized in budding yeast;
+    no broader fungal distribution is asserted in this first nuclear-basket record.
+  reference: DOI:10.1091/mbc.E13-07-0412
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Mlp1 and Mlp2 were mapped as core nuclear-basket
+    filament proteins.
+  reference: DOI:10.1242/jcs.264865
+functions:
+- function_id: nucleoplasmic_npc_organization_platform
+  label: nucleoplasmic NPC organization platform
+  description: Mlp1/Mlp2 nuclear-basket filaments organize a nucleoplasmic NPC platform
+    coupled to mRNA export, NPC positioning, chromatin organization, and nuclear-envelope
+    morphology.
+  evidence:
+  - reference: DOI:10.1091/mbc.E13-07-0412
+    notes: Niepel et al. 2013 connected Mlp1/Mlp2 basket filaments to mRNP docking,
+      NPC positioning, nuclear stability, and nuclear-envelope morphology.
+evidence:
+- reference: GO:0044615
+  notes: Gene Ontology cellular-component term for the nuclear pore nuclear basket.
+- reference: GO:0005643
+  notes: Gene Ontology cellular-component term for the nuclear pore.
+- reference: DOI:10.1242/jcs.264865
+  notes: Schmidt et al. 2026, 'Mlp1 and Mlp2 cooperate to build a stoichiometric nuclear
+    pore basket in budding yeast', Journal of Cell Science.
+- reference: DOI:10.1091/mbc.E13-07-0412
+  notes: Niepel et al. 2013, 'The nuclear basket proteins Mlp1p and Mlp2p are part
+    of a dynamic interactome including Esc1p and the proteasome', Molecular Biology
+    of the Cell.
+- reference: DOI:10.1038/s41556-024-01484-x
+  notes: Stankunas and Kohler 2024, 'Docking a flexible basket onto the core of the
+    nuclear pore complex', Nature Cell Biology.
+- reference: DOI:10.1016/j.devcel.2015.02.017
+  notes: Meszaros et al. 2015, 'Nuclear pore basket proteins are tethered to the nuclear
+    envelope and can regulate membrane curvature', Developmental Cell.
+causal_graphs:
+- graph_id: mlp_basket_filaments
+  title: Mlp1 and Mlp2 build nuclear-basket filaments
+  description: Saccharomyces Mlp1 and Mlp2 contribute the large coiled-coil filaments
+    of the nuclear pore basket.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records Mlp1/Mlp2 nuclear-basket membership without asserting
+    the Nup60/Pml39 anchoring mechanism, full stoichiometry, or mRNA-export accessory
+    machinery.
+  nodes:
+  - node_id: mlp1_family
+    label: Mlp1-family nuclear-basket coiled-coil nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: mlp1_family
+  - node_id: mlp2_family
+    label: Mlp2-family nuclear-basket coiled-coil nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: mlp2_family
+  - node_id: nuclear_pore_nuclear_basket
+    label: nuclear pore nuclear basket
+    node_type: STRUCTURE
+    grounding: GO:0044615
+  edges:
+  - subject: mlp1_family
+    predicate: contributes to
+    object: nuclear_pore_nuclear_basket
+    description: Mlp1-family coiled-coil nucleoporin is represented in Saccharomyces
+      nuclear-basket filaments.
+    evidence:
+    - reference: DOI:10.1091/mbc.E13-07-0412
+      notes: Niepel et al. 2013 identified yeast Mlp1p as a nuclear-basket component.
+  - subject: mlp2_family
+    predicate: contributes to
+    object: nuclear_pore_nuclear_basket
+    description: Mlp2-family coiled-coil nucleoporin is represented in Saccharomyces
+      nuclear-basket filaments.
+    evidence:
+    - reference: DOI:10.1091/mbc.E13-07-0412
+      notes: Niepel et al. 2013 identified yeast Mlp2p as a nuclear-basket component.
+discussions:
+- discussion_id: resolve_nuclear_basket_component_boundaries
+  prompt: Resolve which Nup60, Nup1, Nup2, and Pml39 basket Nups should be curated
+    as nuclear-basket constituents, and which TREX-2, Ulp1, mRNA-export, SUMO-regulation,
+    or chromatin factors should remain associated machinery.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mlp1_family
+  - components#mlp2_family
+  rationale: Recent yeast work places Nup60 and Pml39 in basket anchoring and stoichiometry,
+    and additional export or chromatin regulators can be recruited to the basket.
+    This first record models only the unambiguous coiled-coil Mlp1/Mlp2 basket filaments
+    until basket-Nup and recruited-factor boundaries are reviewed explicitly.
+  evidence:
+  - reference: DOI:10.1038/s41556-024-01484-x
+    notes: Stankunas and Kohler 2024 define Nup60 interactions that anchor flexible
+      yeast nuclear-basket proteins to the NPC.
+  - reference: DOI:10.1016/j.devcel.2015.02.017
+    notes: Meszaros et al. 2015 analyze how yeast nuclear-basket proteins are tethered
+      to the nuclear envelope.
+  - reference: DOI:10.1242/jcs.264865
+    notes: Schmidt et al. 2026 include Pml39 in a refined Mlp1/Mlp2 basket architecture
+      model.
+  posed_by: codex
+  posed_date: '2026-09-11'

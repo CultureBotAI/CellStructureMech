@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_pore_nuclear_basket.yaml
+  slug: nuclear_pore_nuclear_basket
+session:
+  id: 2026-09-11T085503Z-codex-b33164
+  timestamp: '2026-09-11T08:55:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added nuclear pore nuclear basket record
+  details: Created a GO:0044615 nuclear pore nuclear basket record with nuclear-basket synonymy,
+    nuclear-pore parthood, Mlp1 and Mlp2 yeast basket-filament component classes, Saccharomyces
+    cerevisiae taxonomic scope and canonical example, gene-expression platform function, DOI
+    and GO evidence, a conservative Mlp1/Mlp2 assembly graph, and a component-boundary TODO
+    for Nup60, Pml39, FG-Nups, TREX-2, Ulp1, and related machinery.
