@@ -21,6 +21,13 @@ curation_history:
     fusion functions, a nonmechanistic vacuole-delivery graph, and a grounding TODO
     for Atg autophagosome machinery.
   llm_assisted: true
+- timestamp: '2026-09-11T19:41:19Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed review issues #540 and #541 by connecting the autophagosome
+    membrane to the top-level graph organelle node and by recasting the macroautophagy
+    edge as a functional support edge.'
+  llm_assisted: true
 has_part:
 - GO:0000421
 - GO:0034423
@@ -147,14 +154,24 @@ causal_graphs:
     - reference: GO:0034423
       notes: GO:0034423 defines the autophagosome lumen as the volume enclosed within
         the autophagosome double-membrane.
+  - subject: autophagosome_membrane
+    predicate: is part of
+    object: autophagosome
+    description: The autophagosome membrane is the double lipid-bilayer boundary of
+      the autophagosome.
+    evidence:
+    - reference: GO:0000421
+      notes: GO:0000421 defines the autophagosome membrane as the lipid bilayer surrounding
+        an autophagosome.
   - subject: autophagosome
-    predicate: forms during
+    predicate: supports
     object: macroautophagy
-    description: Autophagosome formation is the vesicle-forming route through which
-      macroautophagy proceeds.
+    description: The autophagosome is the membrane-bounded carrier through which macroautophagy
+      sequesters cytoplasmic material for vacuolar degradation.
     evidence:
     - reference: GO:0016236
-      notes: GO:0016236 defines macroautophagy as proceeding via autophagosome formation.
+      notes: GO:0016236 defines macroautophagy as the autophagic process that proceeds
+        via autophagosome formation.
   - subject: autophagosome
     predicate: fuses with
     object: fungal_type_vacuole
