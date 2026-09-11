@@ -26,6 +26,14 @@ curation_history:
   changes: Replaced bare discussion section anchors with component and causal-graph
     anchors that resolve to local identifiers.
   llm_assisted: true
+- timestamp: '2026-09-11T06:04:40Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #424, #425, and #426 by narrowing the Saccharomyces example to
+    the Valtz-supported Spa2/Pea2 localization claim, rewriting the Bni1 and Bud6
+    graph edges as actin-assembly support edges, and removing unsupported Msb3/Msb4
+    claims from the Aip5/Myo2 boundary TODO.'
+  llm_assisted: true
 components:
 - component_id: spa2_pea2_scaffold
   label: Spa2/Pea2 polarisome scaffold
@@ -102,7 +110,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast model in which Pea2 and Spa2 localize to polarized-growth sites
-    and the GO definition names Bni1, Spa2, Pea2, and Bud6 as polarisome proteins.
+    during budding and mating.
   reference: DOI:10.1083/jcb.135.3.725
 - taxon_id: NCBITaxon:5141
   taxon_label: Neurospora crassa
@@ -155,9 +163,9 @@ evidence:
 causal_graphs:
 - graph_id: spa2_polarisome_actin_assembly
   title: Spa2-centered polarisomes concentrate actin assembly factors
-  description: In Saccharomyces cerevisiae, the Spa2/Pea2 scaffold, Bni1 formin, and
-    Bud6 actin nucleation-promoting factor localize to the polarisome; the polarisome
-    directs local actin-filament assembly at the cortex.
+  description: In Saccharomyces cerevisiae, the Spa2/Pea2 scaffold localizes to polarized-growth
+    sites, while Bni1 formin and Bud6 act in the Spa2-mediated module that drives
+    local actin-filament assembly.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: This graph summarizes budding-yeast polarisome organization without
@@ -194,19 +202,17 @@ causal_graphs:
       notes: Valtz and Herskowitz 1996 found Pea2 and Spa2 at sites of polarized growth
         and established their interdependent localization.
   - subject: bni1_formin
-    predicate: localizes to
-    object: polarisome
-    description: Bni1 is a formin effector of the Saccharomyces polarisome actin-assembly
-      module.
+    predicate: supports
+    object: actin_filament_assembly
+    description: Bni1 formin acts in the Spa2-mediated actin-polymerization module.
     evidence:
     - reference: DOI:10.1038/s41467-019-13125-1
-      notes: Xie et al. 2019 place Bni1 in the Spa2-mediated actin-polymerization
+      notes: Xie et al. 2019 modeled Bni1 in the Spa2-mediated actin-polymerization
         system.
   - subject: bud6_actin_nucleation_factor
-    predicate: localizes to
-    object: polarisome
-    description: Bud6/Aip3 is part of the Saccharomyces polarisome actin-assembly
-      module.
+    predicate: supports
+    object: actin_filament_assembly
+    description: Bud6 acts with Bni1 in the Spa2-mediated actin-polymerization module.
     evidence:
     - reference: DOI:10.1038/s41467-019-13125-1
       notes: Xie et al. 2019 studied Bud6 together with Bni1 around Spa2.
@@ -243,8 +249,8 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-11'
 - discussion_id: defer_aip5_msb_polarisome_boundaries
-  prompt: Curate Aip5, Msb3, Msb4, and Myo2 relationships after deciding which are
-    stable polarisome constituents versus associated assembly or transport machinery.
+  prompt: Curate Aip5 and Myo2 relationships after deciding which are stable polarisome
+    constituents versus associated actin-assembly or transport machinery.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
@@ -252,8 +258,8 @@ discussions:
   - components#bni1_formin
   - components#bud6_actin_nucleation_factor
   - causal_graphs#spa2_polarisome_actin_assembly
-  rationale: Aip5 and Msb3/4 contribute to Spa2-centered polarisome function, and
-    Myo2 focuses the complex, but the first record includes only the canonical Bni1/Spa2/Pea2/Bud6
+  rationale: Aip5 contributes to Spa2-centered actin polymerization, and Myo2 focuses
+    the complex, but the first record includes only the canonical Bni1/Spa2/Pea2/Bud6
     constituents from the GO definition.
   evidence:
   - reference: DOI:10.1038/s41467-019-13125-1
