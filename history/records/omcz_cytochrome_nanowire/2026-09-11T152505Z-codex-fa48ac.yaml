@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/omcz_cytochrome_nanowire.yaml
+  slug: omcz_cytochrome_nanowire
+session:
+  id: 2026-09-11T152505Z-codex-fa48ac
+  timestamp: '2026-09-11T15:25:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/507
+  - https://github.com/CultureBotAI/CellStructureMech/issues/508
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/506
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - distribution
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the OmcZ cytochrome nanowire record
+  details: Created a minted OmcZ cytochrome nanowire appendage record for Geobacter sulfurreducens
+    PCA, curated a reviewed-label-only OmcZ octaheme c-type cytochrome component with a PCA
+    UniProt example, exact PCA taxonomic scope, branched-heme electron-transfer function evidence,
+    a structural OmcZ conduction graph, and an OmcZ family-grounding TODO, then addressed
+    PR review by narrowing the taxon rows to PCA and caveating the proposed branched-heme
+    conduction path.

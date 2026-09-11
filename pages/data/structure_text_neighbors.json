@@ -697,7 +697,7 @@
         {
           "identifier": "cellstructuremech:omcz_cytochrome_nanowire",
           "label": "OmcZ cytochrome nanowire",
-          "cosine_similarity": 0.88927667
+          "cosine_similarity": 0.89133858
         },
         {
           "identifier": "GO:0033099",
@@ -728,27 +728,27 @@
         {
           "identifier": "cellstructuremech:omcs_cytochrome_nanowire",
           "label": "OmcS cytochrome nanowire",
-          "cosine_similarity": 0.88927667
+          "cosine_similarity": 0.89133858
         },
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.62823103
-        },
-        {
-          "identifier": "GO:0009424",
-          "label": "bacterial-type flagellum hook",
-          "cosine_similarity": 0.59705749
+          "cosine_similarity": 0.62410553
         },
         {
           "identifier": "GO:0098774",
           "label": "curli",
-          "cosine_similarity": 0.59509336
+          "cosine_similarity": 0.59884287
         },
         {
-          "identifier": "GO:0009422",
-          "label": "bacterial-type flagellum hook-filament junction",
-          "cosine_similarity": 0.56379857
+          "identifier": "GO:0009424",
+          "label": "bacterial-type flagellum hook",
+          "cosine_similarity": 0.58845451
+        },
+        {
+          "identifier": "cellstructuremech:tubz_filament",
+          "label": "TubZ filament",
+          "cosine_similarity": 0.56287129
         }
       ]
     },

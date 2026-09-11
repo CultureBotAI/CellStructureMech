@@ -21,6 +21,13 @@ curation_history:
     taxon rows, electron-transfer function evidence, a narrow OmcZ function graph,
     and a TODO for exact OmcZ family grounding.
   llm_assisted: true
+- timestamp: '2026-09-11T15:24:08Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #507 by narrowing OmcZ taxon rows to Geobacter sulfurreducens
+    PCA and adding PDB:7LQ5 exact-strain evidence, and resolved #508 by marking the
+    branched-heme conduction path as a candidate structural model.'
+  llm_assisted: true
 synonyms:
 - synonym_text: OmcZ nanowire
   synonym_type: EXACT_SYNONYM
@@ -50,6 +57,10 @@ components:
   - reference: PDB:8D9M
     notes: RCSB PDB entry 8D9M is the cryo-EM model of OmcZ nanowires from Geobacter
       sulfurreducens and aligns polymer entity 1 to UniProtKB:Q74BG5.
+  - reference: PDB:7LQ5
+    notes: RCSB PDB entry 7LQ5 is a 3.4 A cryo-EM model of a polymerized Geobacter
+      sulfurreducens PCA OmcZ fragment and aligns polymer entity 1 to UniProtKB:Q74BG5
+      residues 25-282.
   protein_examples:
   - uniprot_id: UniProtKB:Q74BG5
     protein_label: Cytochrome c
@@ -59,35 +70,38 @@ components:
     entry_status: UNREVIEWED
     retrieved_on: '2026-09-11'
     role: UniProtKB entry for the Geobacter sulfurreducens PCA omcZ gene product that
-      is linked to the OmcZ nanowire cryo-EM structure PDB:8D9M.
+      is linked to the OmcZ nanowire cryo-EM structures PDB:8D9M and PDB:7LQ5.
     evidence:
     - reference: PDB:8D9M
       notes: RCSB reports a full-length SIFTS alignment from polymer entity 1 of PDB:8D9M
         to UniProtKB:Q74BG5.
+    - reference: PDB:7LQ5
+      notes: RCSB reports a SIFTS alignment from polymer entity 1 of PDB:7LQ5 to UniProtKB:Q74BG5
+        residues 25-282 and records NCBITaxon:243231 as the natural-source taxonomy.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:35554
-  taxon_label: Geobacter sulfurreducens
+- taxon_id: NCBITaxon:243231
+  taxon_label: Geobacter sulfurreducens PCA
   presence: COMMON
-  note: Geobacter sulfurreducens strain ATCC 51573 / DSM 12127 / PCA was the natural
-    source material for the PDB:8D9M OmcZ polymer entity.
-  reference: PDB:8D9M
+  note: Geobacter sulfurreducens PCA was the natural source organism for the PDB:7LQ5
+    cryo-EM model of polymerized OmcZ.
+  reference: PDB:7LQ5
 canonical_examples:
-- taxon_id: NCBITaxon:35554
-  taxon_label: Geobacter sulfurreducens
-  note: Species source of the PCA-strain OmcZ filament structure solved by cryo-EM
-    and deposited as PDB:8D9M.
-  reference: PDB:8D9M
+- taxon_id: NCBITaxon:243231
+  taxon_label: Geobacter sulfurreducens PCA
+  note: Strain source of the polymerized OmcZ fragment structure solved by cryo-EM
+    and deposited as PDB:7LQ5.
+  reference: PDB:7LQ5
 functions:
 - function_id: branched_heme_long_range_electron_transfer
   label: branched-heme long-range electron transfer
   description: OmcZ subunits arrange covalently bound hemes in a branched network
-    with a surface-exposed heme site per subunit, providing a structural path for
-    long-range electron transfer in conductive OmcZ filaments.
+    with a surface-exposed heme site per subunit, providing a candidate structural
+    path for long-range electron transfer in conductive OmcZ filaments.
   evidence:
   - reference: DOI:10.7554/eLife.81551
     notes: Wang et al. 2022 contrasted OmcZ with linear OmcS and OmcE heme chains
-      and connected the OmcZ branched, surface-exposed heme arrangement with the filament's
-      high conductivity.
+      and proposed that the OmcZ branched, surface-exposed heme arrangement may explain
+      the filament's high conductivity.
 evidence:
 - reference: DOI:10.7554/eLife.81551
   notes: Wang, Chan, Suciu et al. 2022, Structure of Geobacter OmcZ filaments suggests
@@ -95,12 +109,18 @@ evidence:
 - reference: PDB:8D9M
   notes: RCSB PDB entry 8D9M is a 4.2 A helical cryo-EM model of Geobacter sulfurreducens
     OmcZ nanowires associated with EMDB map EMD-27266.
+- reference: DOI:10.1038/s41564-022-01315-5
+  notes: Gu, Guberman-Pfeffer, Srikanth et al. 2023, Structure of Geobacter cytochrome
+    OmcZ identifies mechanism of nanowire assembly and conductivity, Nature Microbiology.
+- reference: PDB:7LQ5
+  notes: RCSB PDB entry 7LQ5 is a 3.4 A cryo-EM model of polymerized OmcZ from Geobacter
+    sulfurreducens PCA associated with EMDB map EMD-23481.
 causal_graphs:
 - graph_id: branched_heme_omcz_nanowire_conduction
   title: OmcZ subunits branch hemes for nanowire conduction
   description: OmcZ octaheme c-type cytochromes polymerize into an extracellular filament
-    whose branched heme arrangement and surface-exposed heme site provide a structural
-    basis for conductive OmcZ nanowires.
+    whose branched heme arrangement and surface-exposed heme site provide a candidate
+    structural basis for conductive OmcZ nanowires.
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   scope_notes: This graph is restricted to OmcZ filament architecture and the proposed
@@ -160,8 +180,8 @@ causal_graphs:
       path through the conductive cytochrome filament.
     evidence:
     - reference: DOI:10.7554/eLife.81551
-      notes: Wang et al. 2022 connected the branched OmcZ heme architecture with long-range
-        electron transport by conductive cytochrome filaments.
+      notes: Wang et al. 2022 proposed that the branched OmcZ heme architecture could
+        account for highly conductive cytochrome filaments.
 discussions:
 - discussion_id: resolve_omcz_family_grounding
   prompt: Resolve exact source-neutral protein-family grounding for OmcZ cytochrome
