@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/btubab_bacterial_microtubule.yaml
+  slug: btubab_bacterial_microtubule
+session:
+  id: 2026-09-11T121341Z-codex-e06e07
+  timestamp: '2026-09-11T12:13:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/476
+  - https://github.com/CultureBotAI/CellStructureMech/issues/477
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/475
+events:
+- type: EDIT
+  outcome: changed
+  summary: Tighten BtubC scope in BtubAB bacterial microtubule
+  details: Addressed PR review issues by changing BtubC essentiality from DISPENSABLE to UNKNOWN,
+    removing the in vitro BtubC membrane-linking edge from the native assembly graph, and
+    adding resolved discussions for the BtubC essentiality and membrane-edge boundary decisions.

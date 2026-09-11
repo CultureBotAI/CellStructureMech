@@ -976,27 +976,27 @@
         {
           "identifier": "cellstructuremech:tubz_filament",
           "label": "TubZ filament",
-          "cosine_similarity": 0.78101374
+          "cosine_similarity": 0.77904975
         },
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.76999266
+          "cosine_similarity": 0.76688429
         },
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.73359991
-        },
-        {
-          "identifier": "GO:0005816",
-          "label": "spindle pole body",
-          "cosine_similarity": 0.69845157
+          "cosine_similarity": 0.73306108
         },
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.69541477
+          "cosine_similarity": 0.69497623
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.69338617
         }
       ]
     },
@@ -1284,14 +1284,14 @@
       "label": "TubZ filament",
       "neighbors": [
         {
-          "identifier": "cellstructuremech:btubab_bacterial_microtubule",
-          "label": "BtubAB bacterial microtubule",
-          "cosine_similarity": 0.78101374
-        },
-        {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
           "cosine_similarity": 0.7805356
+        },
+        {
+          "identifier": "cellstructuremech:btubab_bacterial_microtubule",
+          "label": "BtubAB bacterial microtubule",
+          "cosine_similarity": 0.77904975
         },
         {
           "identifier": "cellstructuremech:cetz_filament",

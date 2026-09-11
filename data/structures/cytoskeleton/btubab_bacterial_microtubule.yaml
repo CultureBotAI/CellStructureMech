@@ -21,6 +21,13 @@ curation_history:
     nonmechanistic BtubABC assembly graph, Btub family and BtubC grounding TODOs,
     and a BtubC boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-11T12:13:20Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issues #476 and #477 by changing BtubC essentiality
+    to UNKNOWN, removing the in vitro membrane-linking edge from the assembly graph,
+    and adding resolved boundary discussions.'
+  llm_assisted: true
 parent_structures:
 - GO:0005856
 synonyms:
@@ -81,12 +88,13 @@ components:
   component_role: ASSOCIATED_MACHINERY
   gene_symbols:
   - btubC
-  essentiality: DISPENSABLE
+  essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE for full-length BtubC or bacterial
     kinesin light chain proteins was verified in this pass.
-  role: Bacterial kinesin-light-chain-like protein that binds along BtubAB microtubules,
-    stabilizes them, and can link the Btub cytoskeleton to membranes.
+  role: Bacterial kinesin-light-chain-like protein that binds along BtubAB microtubules;
+    purified BtubABC and membrane-linking assays support polymer decoration and in
+    vitro membrane association.
   evidence:
   - reference: DOI:10.1073/pnas.1705062114
     notes: Deng et al. 2017 resolved BtubC decorating the exterior of purified BtubABC
@@ -126,12 +134,13 @@ causal_graphs:
 - graph_id: btubabc_microtubule_assembly
   title: BtubA/B subunits form a bacterial microtubule
   description: BtubA and BtubB co-assemble into tubulin-like microtubules, and BtubC
-    binds the BtubAB polymer exterior as stabilizing, membrane-linking machinery.
+    binds the BtubAB polymer exterior as stabilizing associated machinery.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records BtubA/B tube co-assembly and BtubC association without
-    asserting a complete Prosthecobacter assembly pathway, a BtubC requirement for
-    tube formation or a native physiological output for the Btub cytoskeleton.
+  scope_notes: The graph records BtubA/B tube co-assembly and BtubC polymer binding
+    without asserting a complete Prosthecobacter assembly pathway, a native BtubC
+    requirement for tube formation, an in vivo membrane-tethering edge or a physiological
+    output for the Btub cytoskeleton.
   nodes:
   - node_id: btuba
     label: BtubA
@@ -149,9 +158,6 @@ causal_graphs:
     label: BtubAB bacterial microtubule
     node_type: STRUCTURE
     grounding: cellstructuremech:btubab_bacterial_microtubule
-  - node_id: bacterial_membrane
-    label: bacterial membrane
-    node_type: STRUCTURE
   edges:
   - subject: btuba
     predicate: co-assembles into
@@ -184,14 +190,6 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1073/pnas.1705062114
       notes: Deng et al. 2017 resolved BtubC decorating purified BtubABC mini-microtubules.
-  - subject: btubc
-    predicate: links
-    object: bacterial_membrane
-    description: Bklc/BtubC can link Btub microtubules to bacterial membranes.
-    evidence:
-    - reference: DOI:10.1038/srep45668
-      notes: Akendengue et al. 2017 connected Bklc/BtubC with Btub cytoskeleton membrane
-        association.
 discussions:
 - discussion_id: resolve_btub_family_grounding
   prompt: Resolve exact source-neutral grounding for Prosthecobacter BtubA and BtubB
@@ -242,6 +240,46 @@ discussions:
   - reference: DOI:10.1038/srep45668
     notes: Akendengue et al. 2017 tested Bklc/BtubC as a BtubAB microtubule-associated
       and membrane-linking factor.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
+- discussion_id: keep_btubc_essentiality_unknown
+  prompt: BtubC essentiality is left unknown instead of dispensable for native Prosthecobacter
+    BtubAB microtubules.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#btubc
+  rationale: Purified BtubA/B can form tubes without BtubC, supporting BtubC as an
+    associated factor rather than an alternating tubulin constituent, but the first
+    record does not cite a native Prosthecobacter loss-of-BtubC assembly assay.
+  evidence:
+  - reference: DOI:10.1371/journal.pbio.1001213
+    notes: Pilhofer et al. 2011 reconstituted BtubA/B tubes with bacterial tubulin
+      subunits.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/476
+    notes: PR review flagged that in vitro BtubA/B assembly does not establish native
+      BtubC dispensability.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
+- discussion_id: exclude_btubc_membrane_edge_from_assembly_graph
+  prompt: BtubC in vitro membrane-linking activity is not modeled as a native bacterial-membrane
+    assembly edge.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#btubabc_microtubule_assembly
+  rationale: Bklc/BtubC links BtubAB filaments with membranes in vitro, but the assembly
+    graph only keeps directly structure-scoped BtubA/B polymerization and BtubC binding
+    to the BtubAB polymer.
+  evidence:
+  - reference: DOI:10.1038/srep45668
+    notes: Akendengue et al. 2017 characterized Bklc/BtubC as a Btub-associated and
+      membrane-linking factor.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/477
+    notes: PR review flagged that the graph should not turn the in vitro membrane-linking
+      assay into a native bacterial-membrane event.
   posed_by: codex
   posed_date: '2026-09-11'
   resolved_date: '2026-09-11'
