@@ -150,6 +150,11 @@ CellStructureMech/
 └── tests/
 ```
 
+## Contributing
+
+See the [native merge queue guide](docs/MERGE_QUEUE.md) for PR checks,
+queue validation, and recovery when a queued change fails.
+
 ## License
 
 CC0-1.0 for everything this project authored — records, schema, scripts,
