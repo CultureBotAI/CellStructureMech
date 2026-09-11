@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/eyespot_apparatus.yaml
+  slug: eyespot_apparatus
+session:
+  id: 2026-09-11T142854Z-codex-466a02
+  timestamp: '2026-09-11T14:28:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/497
+  - https://github.com/CultureBotAI/CellStructureMech/issues/498
+  - https://github.com/CultureBotAI/CellStructureMech/issues/499
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/496
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - distribution
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added the eyespot apparatus record
+  details: Created a GO-grounded eyespot apparatus record for Chlamydomonas reinhardtii, curated
+    reviewed-label-only carotenoid pigment and channelrhodopsin photoreceptor components,
+    species-level taxonomic scope, a directional-phototaxis function graph, and a component-boundary
+    grounding TODO, then addressed PR review by narrowing the carotenoid component boundary,
+    adding plural channelrhodopsin evidence, and keeping Ueki-backed text scoped to pigment-layer
+    shielding.

@@ -1,0 +1,193 @@
+identifier: GO:1990413
+label: eyespot apparatus
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: OTHER
+definition: A small pigmented organelle used in single-celled organisms to detect
+  light.
+definition_source: GO:1990413
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T14:23:03Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T14:23:45Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added eyespot synonyms, Chlamydomonas channelrhodopsin and carotenoid-granule
+    components, Chlamydomonas scope, a directional phototaxis function, DOI evidence,
+    a nonmechanistic pigment-shielding graph, and a component-boundary grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T14:28:40Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #497 by narrowing the pigment component to a small-molecule carotenoid
+    cohort, resolved #498 by adding plural channelrhodopsin evidence, and resolved
+    #499 by keeping Ueki-backed function text focused on carotenoid-layer shielding.'
+  llm_assisted: true
+synonyms:
+- synonym_text: eyespot
+  synonym_type: RELATED_SYNONYM
+  source: GO:1990413
+- synonym_text: stigma
+  synonym_type: RELATED_SYNONYM
+  source: GO:1990413
+components:
+- component_id: eyespot_carotenoid_pigments
+  label: eyespot carotenoid pigments
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Chlamydomonas eyespot pigment-granule layers are carotenoid-rich,
+    but this pass did not resolve the exact stored carotenoid species or a precise
+    CHEBI grounding for the eyespot pigment cohort.
+  role: Carotenoid pigments concentrated in reflective granule layers that shade eyespot
+    photoreceptors from light condensed through the cell body.
+  evidence:
+  - reference: DOI:10.1093/genetics/153.2.721
+    notes: Lamb et al. 1999 described reflective carotenoid pigment layers beneath
+      the Chlamydomonas plasma-membrane photoreceptor region.
+  - reference: DOI:10.1073/pnas.1525538113
+    notes: Ueki et al. 2016 tested how eyespot carotenoid layers shield Chlamydomonas
+      photoreceptors.
+- component_id: channelrhodopsin_photoreceptors
+  label: eyespot channelrhodopsin photoreceptors
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Channelrhodopsins are curated as a Chlamydomonas eyespot photoreceptor
+    cohort; this pass did not verify exact source-neutral family groundings or split
+    ChR1 and ChR2 into separate protein families.
+  role: Light-gated rhodopsin photoreceptors positioned at the eyespot to initiate
+    phototaxis signaling.
+  evidence:
+  - reference: DOI:10.1083/jcb.201009131
+    notes: Mittelmeier et al. 2011 followed Chlamydomonas ChR1 localization at the
+      eyespot photoreceptor patch.
+  - reference: DOI:10.1038/srep34646
+    notes: Awasthi et al. 2016 followed bacterial-type rhodopsin trafficking into
+      the Chlamydomonas eyespot and flagella.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: This green alga was the source for purified eyespot fractions used in proteomic
+    analysis of the eyespot apparatus.
+  reference: DOI:10.1105/tpc.106.041749
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model in which eyespot-assembly mutants defined loci required
+    for pigmented eyespot formation and placement.
+  reference: DOI:10.1093/genetics/153.2.721
+functions:
+- function_id: directional_phototaxis_light_detection
+  label: directional light detection for phototaxis
+  description: The eyespot apparatus uses carotenoid layers to shade photoreceptors
+    so a motile cell can infer the direction of incident light.
+  evidence:
+  - reference: DOI:10.1073/pnas.1525538113
+    notes: Ueki et al. 2016 showed that Chlamydomonas eyespot pigment layers determine
+      the phototactic sign by shielding photoreceptors from light condensed through
+      the cell body.
+evidence:
+- reference: GO:1990413
+  notes: Gene Ontology cellular-component term for eyespot apparatus.
+- reference: DOI:10.1093/genetics/153.2.721
+  notes: Lamb et al. 1999, Eyespot-Assembly Mutants in Chlamydomonas reinhardtii,
+    Genetics.
+- reference: DOI:10.1105/tpc.106.041749
+  notes: Schmidt et al. 2006, Proteomic Analysis of the Eyespot of Chlamydomonas reinhardtii
+    Provides Novel Insights into Its Components and Tactic Movements, The Plant Cell.
+- reference: DOI:10.1083/jcb.201009131
+  notes: Mittelmeier et al. 2011, Asymmetric properties of the Chlamydomonas reinhardtii
+    cytoskeleton direct rhodopsin photoreceptor localization, Journal of Cell Biology.
+- reference: DOI:10.1038/srep34646
+  notes: Awasthi et al. 2016, The trafficking of bacterial type rhodopsins into the
+    Chlamydomonas eyespot and flagella is IFT mediated, Scientific Reports.
+- reference: DOI:10.1073/pnas.1525538113
+  notes: Ueki et al. 2016, Eyespot-dependent determination of the phototactic sign
+    in Chlamydomonas reinhardtii, Proceedings of the National Academy of Sciences.
+causal_graphs:
+- graph_id: pigment_photoreceptor_directional_sensing
+  title: Carotenoid layers shade channelrhodopsins for directional phototaxis
+  description: The Chlamydomonas eyespot concentrates carotenoid pigments in reflective
+    granule layers with a localized channelrhodopsin photoreceptor patch so the cell
+    can sense the direction of incident light.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: eyespot_carotenoid_pigments
+    label: eyespot carotenoid pigments
+    node_type: CHEMICAL
+    component_ref: eyespot_carotenoid_pigments
+  - node_id: channelrhodopsin_photoreceptors
+    label: eyespot channelrhodopsin photoreceptors
+    node_type: GENE_OR_PROTEIN
+    component_ref: channelrhodopsin_photoreceptors
+  - node_id: eyespot_apparatus
+    label: eyespot apparatus
+    node_type: STRUCTURE
+    grounding: GO:1990413
+  - node_id: directional_light_detection
+    label: directional light detection
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: eyespot_carotenoid_pigments
+    predicate: concentrated in
+    object: eyespot_apparatus
+    description: Carotenoid pigments are concentrated in reflective granule layers
+      of the Chlamydomonas eyespot.
+    evidence:
+    - reference: DOI:10.1093/genetics/153.2.721
+      notes: Lamb et al. 1999 described the pigment layers of the Chlamydomonas eyespot.
+  - subject: channelrhodopsin_photoreceptors
+    predicate: localize to
+    object: eyespot_apparatus
+    description: Channelrhodopsin photoreceptors localize in the eyespot region adjacent
+      to cytoskeletal rootlet landmarks.
+    evidence:
+    - reference: DOI:10.1083/jcb.201009131
+      notes: Mittelmeier et al. 2011 tracked ChR1 photoreceptor localization in wild-type
+        and multieyed Chlamydomonas cells.
+  - subject: eyespot_carotenoid_pigments
+    predicate: shield
+    object: channelrhodopsin_photoreceptors
+    description: The eyespot pigment layers shade photoreceptors from light condensed
+      through the cell body.
+    evidence:
+    - reference: DOI:10.1073/pnas.1525538113
+      notes: Ueki et al. 2016 tested carotenoid-layer shielding during Chlamydomonas
+        phototaxis.
+  - subject: eyespot_apparatus
+    predicate: supports
+    object: directional_light_detection
+    description: Eyespot-dependent shielding supports detection of light direction
+      for phototaxis.
+    evidence:
+    - reference: DOI:10.1073/pnas.1525538113
+      notes: Ueki et al. 2016 linked eyespot shielding to correct phototactic sign
+        in Chlamydomonas reinhardtii.
+discussions:
+- discussion_id: resolve_eyespot_component_boundaries
+  prompt: Resolve exact source-neutral groundings and component boundaries for Chlamydomonas
+    channelrhodopsins, carotenoid pigment chemistry and additional eyespot-proteome
+    candidates.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#eyespot_carotenoid_pigments
+  - components#channelrhodopsin_photoreceptors
+  rationale: The first eyespot-apparatus pass records only two reviewed label-only
+    Chlamydomonas component cohorts. The purified eyespot proteome identified many
+    additional protein candidates, but their exact family groundings and mature-organelle
+    membership need curator review before expansion.
+  evidence:
+  - reference: DOI:10.1105/tpc.106.041749
+    notes: Schmidt et al. 2006 identified proteins from purified Chlamydomonas eyespot
+      fractions.
+  posed_by: codex
+  posed_date: '2026-09-11'
