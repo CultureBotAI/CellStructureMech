@@ -1,0 +1,204 @@
+identifier: cellstructuremech:archaeal_cannula
+label: archaeal cannula
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: An extracellular hollow tubular archaeal cell projection, characterized
+  in Pyrodictium species, that extends from the cell envelope as a proteinaceous filament
+  and forms networks between cells.
+definition_source: DOI:10.1016/S1047-8477(02)00581-6
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T14:41:04Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T14:41:51Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added archaeal cannula synonymy, GO cell-projection parentage, a label-only
+    CanA glycoprotein component, Pyrodictium abyssi scope and exemplar rows, cell-network
+    formation function, DOI evidence, a calcium-dependent CanA assembly graph, and
+    TODOs for CanA-family grounding and cannula network function.
+  llm_assisted: true
+synonyms:
+- synonym_text: cannulae
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/S1047-8477(02)00581-6
+parent_structures:
+- GO:0042995
+components:
+- component_id: cana_cannula_glycoprotein
+  label: CanA cannula glycoprotein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: CanA is a Pyrodictium abyssi cannula-forming glycoprotein, but
+    no exact source-neutral InterPro, Pfam or NCBIfam family grounding for the archaeal
+    cannula subunit class was verified in this pass.
+  role: Extracellular glycoprotein subunit that polymerizes into hollow archaeal cannula
+    fibers in a calcium-dependent, chaperone-free reaction.
+  evidence:
+  - reference: DOI:10.1038/s41467-025-64120-8
+    notes: Sleutel et al. 2025 used cryo-EM on ex vivo and in vitro Pyrodictium abyssi
+      CanA fibers to resolve calcium-coordinated, donor-strand-complemented cannula
+      polymerization.
+  - reference: DOI:10.1038/s41598-025-13242-6
+    notes: Munte et al. 2025 solved the CanA solution structure and characterized
+      divalent-ion-induced CanA polymerization.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:54256
+  taxon_label: Pyrodictium abyssi
+  presence: COMMON
+  note: Pyrodictium abyssi produces extracellular cannulae that were visualized in
+    ultrastructural studies and later used for CanA fiber structural analysis.
+  reference: DOI:10.1006/jsbi.1995.1032
+canonical_examples:
+- taxon_id: NCBITaxon:54256
+  taxon_label: Pyrodictium abyssi
+  note: Hyperthermophilic archaeon in which cannulae were characterized by thin-section
+    electron microscopy, cryo-electron tomography, and CanA structural reconstitution.
+  reference: DOI:10.1016/S1047-8477(02)00581-6
+functions:
+- function_id: extracellular_cell_network_formation
+  label: extracellular Pyrodictium cell-network formation
+  description: Cannulae extend from the Pyrodictium cell envelope and physically interconnect
+    cells in an extracellular network; the transported cargo or signaling role of
+    the network remains unresolved.
+  evidence:
+  - reference: DOI:10.1016/S1047-8477(02)00581-6
+    notes: Nickell et al. 2003 used cryo-electron tomography to show how Pyrodictium
+      cannulae contact the cell envelope and interconnect cells.
+  - reference: DOI:10.1006/jsbi.1995.1032
+    notes: Rieger et al. 1995 characterized the extracellular network of Pyrodictium
+      abyssi cannulae in ultrastructural sections.
+evidence:
+- reference: DOI:10.1006/jsbi.1995.1032
+  notes: Rieger et al. 1995, Ultrastructure of the hyperthermophilic archaeon Pyrodictium
+    abyssi, Journal of Structural Biology.
+- reference: DOI:10.1016/S1047-8477(02)00581-6
+  notes: Nickell et al. 2003, Pyrodictium cannulae enter the periplasmic space but
+    do not enter the cytoplasm, as revealed by cryo-electron tomography, Journal of
+    Structural Biology.
+- reference: DOI:10.1038/s41467-025-64120-8
+  notes: Sleutel et al. 2025, Donor strand complementation and calcium ion coordination
+    drive the chaperone-free polymerization of archaeal cannulae, Nature Communications.
+- reference: DOI:10.1038/s41598-025-13242-6
+  notes: Munte et al. 2025, Biophysical characterization and solution structure of
+    the cannulae-forming protein CanA from the hyperthermophilic archaeon Pyrodictium
+    abyssi, Scientific Reports.
+causal_graphs:
+- graph_id: calcium_dependent_cana_cannula_assembly
+  title: Calcium coordinates CanA into Pyrodictium cannula fibers
+  description: Pyrodictium CanA binds calcium ions and undergoes donor-strand complementation
+    to assemble hollow extracellular cannula fibers that extend from the cell envelope
+    and participate in a cell-surface network.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: This graph is restricted to the CanA polymerization mechanism resolved
+    by structural studies and does not model cell-level nucleation, CanB or CanC incorporation,
+    or the unknown biological cargo of the cannula network.
+  nodes:
+  - node_id: cana_cannula_glycoprotein
+    label: CanA cannula glycoprotein
+    node_type: GENE_OR_PROTEIN
+    component_ref: cana_cannula_glycoprotein
+  - node_id: calcium_ion
+    label: calcium ion
+    node_type: CHEMICAL
+  - node_id: hollow_cannula_fiber
+    label: hollow cannula fiber
+    node_type: STRUCTURE
+  - node_id: cell_envelope
+    label: Pyrodictium cell envelope
+    node_type: STRUCTURE
+  - node_id: archaeal_cannula
+    label: archaeal cannula
+    node_type: STRUCTURE
+    grounding: cellstructuremech:archaeal_cannula
+  - node_id: cell_cell_network
+    label: Pyrodictium cell-cell network
+    node_type: STRUCTURE
+  edges:
+  - subject: calcium_ion
+    predicate: coordinates polymerization of
+    object: cana_cannula_glycoprotein
+    description: Calcium ion coordination helps drive chaperone-free CanA polymerization
+      through donor-strand complementation.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-64120-8
+      notes: Sleutel et al. 2025 resolved calcium-bound CanA interfaces in self-assembled
+        archaeal cannulae.
+  - subject: cana_cannula_glycoprotein
+    predicate: polymerizes into
+    object: hollow_cannula_fiber
+    description: CanA subunits polymerize into the hollow fiber core of the extracellular
+      cannula.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-64120-8
+      notes: Sleutel et al. 2025 compared native and reassembled CanA cannula fibers
+        by cryo-EM.
+    - reference: DOI:10.1038/s41598-025-13242-6
+      notes: Munte et al. 2025 analyzed divalent-ion-induced CanA polymerization into
+        hollow-fiber networks.
+  - subject: hollow_cannula_fiber
+    predicate: forms
+    object: archaeal_cannula
+    description: The cannula is an extracellular hollow tube built from the archaeal
+      cannula fiber.
+    evidence:
+    - reference: DOI:10.1016/S1047-8477(02)00581-6
+      notes: Nickell et al. 2003 resolved hollow Pyrodictium cannulae by cryo-electron
+        tomography.
+  - subject: archaeal_cannula
+    predicate: enters
+    object: cell_envelope
+    description: Pyrodictium cannulae penetrate the archaeal envelope into the periplasmic
+      space but stop outside the cytoplasm.
+    evidence:
+    - reference: DOI:10.1016/S1047-8477(02)00581-6
+      notes: Nickell et al. 2003 found one cannula entering the periplasmic space
+        while a paired cannula contacted the cell surface.
+  - subject: archaeal_cannula
+    predicate: interconnects cells within
+    object: cell_cell_network
+    description: Cell-surface cannulae interconnect Pyrodictium cells within a dense
+      extracellular network.
+    evidence:
+    - reference: DOI:10.1006/jsbi.1995.1032
+      notes: Rieger et al. 1995 characterized the Pyrodictium abyssi cannula network
+        by ultrastructural electron microscopy.
+discussions:
+- discussion_id: resolve_cana_family_grounding
+  prompt: Resolve exact source-neutral protein-family groundings and component boundaries
+    for Pyrodictium cannula CanA, CanB and CanC glycoproteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cana_cannula_glycoprotein
+  rationale: The first archaeal cannula record keeps only CanA as a reviewed label-only
+    component because this pass did not verify an exact Pfam, InterPro or NCBIfam
+    family for CanA or resolve whether the homologous CanB and CanC glycoproteins
+    should be separate curated components.
+  evidence:
+  - reference: DOI:10.1038/s41598-025-13242-6
+    notes: Munte et al. 2025 reviewed CanA, CanB and CanC as homologous Pyrodictium
+      abyssi glycoproteins present in cannulae.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: resolve_cannula_network_function
+  prompt: Resolve the physiological cargo or signaling role of the Pyrodictium cannula
+    network.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - functions#extracellular_cell_network_formation
+  rationale: Electron microscopy supports cannula-mediated physical interconnection
+    of Pyrodictium cells, but the exchanged material, if any, remains unresolved.
+  evidence:
+  - reference: DOI:10.1016/S1047-8477(02)00581-6
+    notes: Nickell et al. 2003 showed that cannulae enter the periplasmic space rather
+      than the cytoplasm.
+  posed_by: codex
+  posed_date: '2026-09-11'
