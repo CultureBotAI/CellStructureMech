@@ -28,6 +28,13 @@ curation_history:
   changes: Changed the cell-wall core boundary discussion from a broad components
     anchor to explicit mycolic-acid and extractable-lipid component anchors.
   llm_assisted: true
+- timestamp: '2026-09-11T04:53:59Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #412 issues #413 and #414 by citing the Bacteria distribution
+    from the mycomembrane literature and replacing the M. tuberculosis canonical example
+    with a directly supported M. smegmatis example.'
+  llm_assisted: true
 synonyms:
 - synonym_text: MOM
   synonym_type: EXACT_SYNONYM
@@ -93,20 +100,20 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
   presence: VARIABLE
-  note: Mycolate outer membranes are restricted to mycolic-acid-producing bacterial
-    lineages rather than being shared by all bacteria.
-  reference: GO:0036407
+  note: Mycolate outer membranes occur in mycobacteria and related corynebacteria
+    rather than being shared by all bacteria.
+  reference: DOI:10.1016/j.tim.2009.12.005
 - taxon_id: NCBITaxon:1763
   taxon_label: Mycobacterium
   presence: COMMON
   note: Mycobacteria are the canonical organisms for the mycolic-acid-rich mycomembrane.
   reference: DOI:10.1016/j.tim.2009.12.005
 canonical_examples:
-- taxon_id: NCBITaxon:1773
-  taxon_label: Mycobacterium tuberculosis
-  note: Pathogenic mycobacterial model for the mycomembrane and its mycolic-acid-rich
-    permeability barrier.
-  reference: DOI:10.1073/pnas.0709530105
+- taxon_id: NCBITaxon:1772
+  taxon_label: Mycobacterium smegmatis
+  note: Fast-growing mycobacterial model used to dissect native mycomembrane composition
+    and mycolate-rich cell-envelope architecture.
+  reference: DOI:10.1038/s41598-017-12718-4
 - taxon_id: NCBITaxon:1718
   taxon_label: Corynebacterium glutamicum
   note: Corynebacterial model in which cryo-electron microscopy directly visualized
