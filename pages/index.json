@@ -342,6 +342,15 @@
   "definition": "A plasmid-encoded bacterial actin-like cytoskeletal filament assembled from ParM that is captured and stabilized by ParR-parC plasmid-centromere complexes to support active segregation of low-copy-number plasmids such as Escherichia coli R1."
  },
  {
+  "identifier": "cellstructuremech:phuz_spindle",
+  "label": "PhuZ spindle",
+  "category": "CYTOSKELETON",
+  "kind": "FILAMENT",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/phuz_spindle.html",
+  "definition": "A phage-encoded tubulin-like cytoskeletal spindle assembled from PhuZ polymers that positions the jumbo-phage nucleus in infected bacterial cells."
+ },
+ {
   "identifier": "GO:0020031",
   "label": "polar ring of apical complex",
   "category": "CYTOSKELETON",

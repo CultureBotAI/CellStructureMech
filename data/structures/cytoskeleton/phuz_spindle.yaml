@@ -1,0 +1,212 @@
+identifier: cellstructuremech:phuz_spindle
+label: PhuZ spindle
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A phage-encoded tubulin-like cytoskeletal spindle assembled from PhuZ
+  polymers that positions the jumbo-phage nucleus in infected bacterial cells.
+definition_source: DOI:10.1016/j.celrep.2017.07.064
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T12:41:40Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T12:42:35Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoskeleton parentage, PhuZ component curation, 201phi2-1 scope,
+    phage nucleus positioning and rotation functions, DOI evidence, a nonmechanistic
+    positioning graph, and PhuZ grounding and chimallin boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-11T12:50:19Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issues #481 and #482 by adding Goslar scope for the
+    PhuZ rotation function and broadening PhuZ component/grounding wording from strictly
+    nucleus-positioning to positioning-or-rotation cytoskeletal systems.'
+  llm_assisted: true
+parent_structures:
+- GO:0005856
+synonyms:
+- synonym_text: phage tubulin spindle
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.celrep.2017.07.064
+components:
+- component_id: phuz
+  label: PhuZ
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - phuZ
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for phage PhuZ tubulin proteins that
+    build nucleus-positioning or nucleus-rotating cytoskeletal systems was verified
+    in this pass.
+  role: Phage-encoded tubulin-like protein that polymerizes into dynamic filaments
+    of spindles or vortex arrays that position or rotate jumbo-phage nuclei in infected
+    bacterial cells.
+  evidence:
+  - reference: DOI:10.7554/eLife.03197
+    notes: Erb et al. 2014 characterized Pseudomonas phage 201phi2-1 PhuZ as a dynamically
+      unstable bacteriophage tubulin that forms filaments to position phage DNA during
+      infection.
+  - reference: DOI:10.1016/j.celrep.2017.07.064
+    notes: Chaikeeratisak et al. 2017 showed that dynamic PhuZ polymers form bipolar
+      spindles associated with nucleus-like compartments in large Pseudomonas phages.
+  - reference: DOI:10.1016/j.celrep.2022.111179
+    notes: Birkholz et al. 2022 showed that Goslar PhuZ filaments form a vortex-like
+      cytoskeleton that rotates the mature phage nucleus.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:198110
+  taxon_label: Pseudomonas phage 201phi2-1
+  presence: COMMON
+  note: Pseudomonas phage 201phi2-1 uses PhuZ polymers to center replicating phage
+    DNA during infection of Pseudomonas chlororaphis.
+  reference: DOI:10.7554/eLife.03197
+- taxon_id: NCBITaxon:2502409
+  taxon_label: Escherichia phage vB_EcoM_Goslar
+  presence: COMMON
+  note: Escherichia phage vB_EcoM_Goslar encodes PhuZ filaments that assemble into
+    a vortex-like cytoskeleton and rotate the phage nucleus during infection of Escherichia
+    coli.
+  reference: DOI:10.1016/j.celrep.2022.111179
+canonical_examples:
+- taxon_id: NCBITaxon:198110
+  taxon_label: Pseudomonas phage 201phi2-1
+  note: Jumbo phage whose dynamically unstable PhuZ filaments established the phage-encoded
+    tubulin spindle as a nucleus-positioning system.
+  reference: DOI:10.7554/eLife.03197
+- taxon_id: NCBITaxon:2502409
+  taxon_label: Escherichia phage vB_EcoM_Goslar
+  note: Jumbo Escherichia phage used to connect a vortex-like PhuZ cytoskeleton with
+    rotation of mature phage nuclei.
+  reference: DOI:10.1016/j.celrep.2022.111179
+functions:
+- function_id: phage_nucleus_positioning
+  label: phage nucleus positioning
+  description: The PhuZ spindle pushes nucleus-like jumbo-phage replication compartments
+    away from bacterial cell poles and toward midcell.
+  evidence:
+  - reference: DOI:10.7554/eLife.03197
+    notes: Erb et al. 2014 linked PhuZ dynamic instability to centering phage DNA
+      in Pseudomonas chlororaphis cells infected by 201phi2-1.
+  - reference: DOI:10.1016/j.celrep.2017.07.064
+    notes: Chaikeeratisak et al. 2017 connected dynamic PhuZ spindles with nucleus-like
+      compartment positioning in PhiKZ and PhiPA3 infections.
+- function_id: phage_nucleus_rotation
+  label: phage nucleus rotation
+  description: A vortex-like PhuZ cytoskeleton can rotate a mature phage nucleus during
+    jumbo-phage replication.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2022.111179
+    notes: Birkholz et al. 2022 showed that Goslar PhuZ filaments form a vortex-like
+      cytoskeleton that drives phage nucleus rotation during Escherichia coli infection.
+evidence:
+- reference: DOI:10.7554/eLife.03197
+  notes: Erb, Kraemer, Coker, Chaikeeratisak, Nonejuie, Agard and Pogliano 2014, 'A
+    bacteriophage tubulin harnesses dynamic instability to center DNA in infected
+    cells', eLife.
+- reference: DOI:10.1016/j.celrep.2017.07.064
+  notes: Chaikeeratisak et al. 2017, 'The Phage Nucleus and Tubulin Spindle Are Conserved
+    among Large Pseudomonas Phages', Cell Reports.
+- reference: DOI:10.1016/j.celrep.2022.111179
+  notes: Birkholz et al. 2022, 'A cytoskeletal vortex drives phage nucleus rotation
+    during jumbo phage replication in E. coli', Cell Reports.
+causal_graphs:
+- graph_id: phuz_spindle_positioning
+  title: PhuZ spindles position jumbo-phage nuclei
+  description: Phage-encoded PhuZ polymerizes into dynamic filaments of a bipolar
+    spindle that positions the jumbo-phage nucleus in infected bacterial cells.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records PhuZ polymerization into a spindle and phage nucleus
+    positioning without modeling filament nucleation at the bacterial pole, all nucleus-associated
+    factors, capsid trafficking, Goslar vortex-driven rotation or chimallin shell
+    assembly.
+  nodes:
+  - node_id: phuz
+    label: PhuZ
+    node_type: GENE_OR_PROTEIN
+    component_ref: phuz
+  - node_id: phuz_spindle
+    label: PhuZ spindle
+    node_type: STRUCTURE
+    grounding: cellstructuremech:phuz_spindle
+  - node_id: phage_nucleus
+    label: phage nucleus
+    node_type: STRUCTURE
+    grounding: cellstructuremech:phage_nucleus
+  - node_id: nucleus_positioning
+    label: phage nucleus positioning
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: phuz
+    predicate: polymerizes into
+    object: phuz_spindle
+    description: PhuZ subunits polymerize into dynamic phage tubulin filaments that
+      form the spindle.
+    evidence:
+    - reference: DOI:10.7554/eLife.03197
+      notes: Erb et al. 2014 characterized PhuZ dynamic polymerization during 201phi2-1
+        infection.
+    - reference: DOI:10.1016/j.celrep.2017.07.064
+      notes: Chaikeeratisak et al. 2017 observed PhuZ polymers forming bipolar spindle
+        structures in infected cells.
+  - subject: phuz_spindle
+    predicate: positions
+    object: phage_nucleus
+    description: The PhuZ spindle positions the nucleus-like phage replication compartment.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.07.064
+      notes: Chaikeeratisak et al. 2017 linked PhuZ spindles with positioning of phage
+        nucleus-like compartments in large Pseudomonas phages.
+  - subject: phuz_spindle
+    predicate: supports
+    object: nucleus_positioning
+    description: Dynamic PhuZ filaments support centering of phage genetic material
+      and nucleus-like compartments away from host cell poles.
+    evidence:
+    - reference: DOI:10.7554/eLife.03197
+      notes: Erb et al. 2014 connected PhuZ dynamic instability with centering of
+        phage DNA in infected cells.
+discussions:
+- discussion_id: resolve_phuz_family_grounding
+  prompt: Resolve exact source-neutral grounding for phage PhuZ tubulins that build
+    nucleus-associated cytoskeletal systems.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#phuz
+  rationale: This first record curates PhuZ proteins as phage-encoded tubulins that
+    form nucleus-positioning spindles or nucleus-rotating vortex arrays without asserting
+    that a broad FtsZ/tubulin-family domain or a virus-specific accession exactly
+    denotes the full functional PhuZ family.
+  evidence:
+  - reference: DOI:10.7554/eLife.03197
+    notes: Erb et al. 2014 characterized 201phi2-1 PhuZ as a filament-forming phage
+      tubulin.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: exclude_chimallin_from_phuz_spindle
+  prompt: Chimallin and the phage nucleus are graph-scoped cargo rather than PhuZ
+    spindle constituents.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#phuz
+  - causal_graphs#phuz_spindle_positioning
+  rationale: PhuZ forms the cytoskeletal spindle that positions the chimallin-lined
+    phage nucleus; chimallin builds the separate shell and is not asserted as a constituent
+    of the PhuZ polymer.
+  evidence:
+  - reference: DOI:10.1126/science.aal2130
+    notes: Chaikeeratisak et al. 2017 identified 201phi2-1 gp105 as the phage nucleus
+      shell protein.
+  - reference: DOI:10.1016/j.celrep.2017.07.064
+    notes: Chaikeeratisak et al. 2017 modeled the PhuZ spindle as a cytoskeletal system
+      that acts on phage nucleus-like compartments.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/phuz_spindle.yaml
+  slug: phuz_spindle
+session:
+  id: 2026-09-11T124312Z-codex-8c515a
+  timestamp: '2026-09-11T12:43:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add PhuZ spindle record
+  details: Added a proposed PhuZ spindle CellStructureRecord for phage-encoded tubulin cytoskeletal
+    spindles, including cytoskeleton parentage, a PhuZ constituent component, Pseudomonas
+    phage 201phi2-1 scope, phage nucleus positioning and rotation functions, DOI evidence,
+    a nonmechanistic PhuZ positioning graph, and grounding/boundary discussions that keep
+    chimallin and the phage nucleus outside the spindle component list.
