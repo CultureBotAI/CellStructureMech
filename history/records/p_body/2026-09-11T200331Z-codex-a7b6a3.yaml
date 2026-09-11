@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/p_body.yaml
+  slug: p_body
+session:
+  id: 2026-09-11T200331Z-codex-a7b6a3
+  timestamp: '2026-09-11T20:03:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/545
+  - https://github.com/CultureBotAI/CellStructureMech/issues/546
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/544
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the P-body record
+  details: Created GO:0000932 P-body as a PROPOSED ribonucleoprotein record with GO synonymy,
+    label-only mRNA cargo and yeast P-body protein cohorts, Eukaryota distribution, a Saccharomyces
+    cerevisiae example, mRNA-catabolic function, a P-body assembly graph, review fixes for
+    canonical-example evidence and graph component connectivity, and a component-grounding
+    TODO.

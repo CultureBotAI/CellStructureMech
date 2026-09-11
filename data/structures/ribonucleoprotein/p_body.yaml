@@ -1,0 +1,240 @@
+identifier: GO:0000932
+label: P-body
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: OTHER
+definition: A focus in the cytoplasm where mRNAs may become inactivated by decapping
+  or some other mechanism. Protein and RNA localized to these foci are involved in
+  mRNA degradation, nonsense-mediated mRNA decay (NMD), translational repression,
+  and RNA-mediated gene silencing.
+definition_source: GO:0000932
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T19:52:58Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T19:53:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO P-body synonymy, label-only mRNA cargo and yeast P-body protein
+    cohorts, Eukaryota distribution, a Saccharomyces example, mRNA catabolic function,
+    GO/DOI evidence, a yeast P-body assembly graph and a component-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T20:00:17Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #545 by narrowing the Saccharomyces example to the Sheth-and-Parker
+    localization claim; resolved #546 by connecting the mRNA-cargo and Edc3/Lsm4 graph
+    nodes directly to the P-body structure.'
+  llm_assisted: true
+synonyms:
+- synonym_text: P body
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000932
+- synonym_text: cytoplasmic mRNA processing body
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000932
+components:
+- component_id: nontranslating_mrna_cargo
+  label: nontranslating mRNA cargo
+  component_type: RNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Nontranslating mRNAs are modeled as the RNA cargo scaffolded into
+    yeast P-bodies; no exact Sequence Ontology or GO term for the P-body-localized,
+    translationally repressed mRNA pool was asserted.
+  role: Translationally repressed mRNAs concentrated in P-bodies and required for
+    visible P-body assembly.
+  evidence:
+  - reference: DOI:10.1261/rna.7258505
+    notes: Teixeira et al. 2005 reported that yeast processing bodies require RNA
+      for assembly and contain nontranslating mRNAs.
+  - reference: DOI:10.1126/science.1115791
+    notes: Brengues, Teixeira and Parker 2005 showed exchange of mRNAs between polysomes
+      and cytoplasmic processing bodies.
+- component_id: mrna_decay_protein_cohort
+  label: mRNA decapping and 5-to-3 decay protein cohort
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - DCP1
+  - DCP2
+  - DHH1
+  - XRN1
+  - PAT1
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first P-body record groups heterogeneous yeast decapping and
+    5-to-3 decay factors as P-body proteins; no exact source-neutral family or complex
+    CURIE covers this full cohort.
+  role: mRNA-decapping, decay and decapping-activation proteins concentrated in yeast
+    P-bodies.
+  evidence:
+  - reference: DOI:10.1126/science.1082320
+    notes: Sheth and Parker 2003 provided evidence that mRNA decapping and 5-to-3
+      decay occur in discrete cytoplasmic yeast foci called processing bodies.
+  - reference: DOI:10.1016/j.molcel.2007.02.011
+    notes: Parker and Sheth 2007 reviewed P-body proteins involved in mRNA translation
+      control and degradation.
+- component_id: edc3_lsm4_assembly_scaffolds
+  label: Edc3/Lsm4 P-body assembly scaffolds
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - EDC3
+  - LSM4
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Edc3 and the Q/N-rich C-terminal region of Lsm4 are represented
+    as Saccharomyces P-body assembly scaffolds; no exact source-neutral family term
+    was curated for this two-protein assembly cohort.
+  role: Redundant assembly-promoting proteins that drive formation of microscopically
+    visible Saccharomyces P-bodies under glucose deprivation.
+  evidence:
+  - reference: DOI:10.1083/jcb.200704147
+    notes: Decker, Teixeira and Parker 2007 showed that Edc3p and the Q/N-rich domain
+      of Lsm4p function in processing-body assembly in Saccharomyces cerevisiae.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: P-bodies are eukaryotic cytoplasmic mRNA-protein foci, but visible foci vary
+    with lineage, cell state and translational repression or mRNA-decay conditions.
+  reference: DOI:10.1016/j.molcel.2007.02.011
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which decapping and 5-to-3 mRNA decay were localized
+    to cytoplasmic processing bodies.
+  reference: DOI:10.1126/science.1082320
+functions:
+- function_id: mrna_catabolic_process
+  label: mRNA catabolic process
+  grounding: GO:0006402
+  description: P-bodies concentrate factors and nontranslating mRNAs involved in mRNA
+    decapping and decay.
+  evidence:
+  - reference: DOI:10.1126/science.1082320
+    notes: Sheth and Parker 2003 connected yeast processing bodies to cytoplasmic
+      mRNA decapping and 5-to-3 decay.
+  - reference: DOI:10.1016/j.molcel.2007.02.011
+    notes: Parker and Sheth 2007 reviewed how P-bodies participate in mRNA translation
+      control and degradation.
+evidence:
+- reference: GO:0000932
+  notes: Gene Ontology cellular-component term for P-body.
+- reference: GO:0033962
+  notes: Gene Ontology biological-process term for P-body assembly.
+- reference: GO:0006402
+  notes: Gene Ontology biological-process term for mRNA catabolic process.
+- reference: DOI:10.1126/science.1082320
+  notes: Sheth and Parker 2003, Decapping and decay of messenger RNA occur in cytoplasmic
+    processing bodies, Science.
+- reference: DOI:10.1261/rna.7258505
+  notes: Teixeira et al. 2005, Processing bodies require RNA for assembly and contain
+    nontranslating mRNAs, RNA.
+- reference: DOI:10.1126/science.1115791
+  notes: Brengues, Teixeira and Parker 2005, Movement of eukaryotic mRNAs between
+    polysomes and cytoplasmic processing bodies, Science.
+- reference: DOI:10.1083/jcb.200704147
+  notes: Decker, Teixeira and Parker 2007, Edc3p and a glutamine/asparagine-rich domain
+    of Lsm4p function in processing body assembly in Saccharomyces cerevisiae, Journal
+    of Cell Biology.
+- reference: DOI:10.1016/j.molcel.2007.02.011
+  notes: Parker and Sheth 2007, P bodies and the control of mRNA translation and degradation,
+    Molecular Cell.
+causal_graphs:
+- graph_id: yeast_p_body_assembly
+  title: Yeast mRNPs and Edc3/Lsm4 scaffolds assemble P-bodies
+  description: In Saccharomyces cerevisiae, nontranslating mRNPs enter cytoplasmic
+    P-bodies, while Edc3 and the Q/N-rich Lsm4 tail promote aggregation into microscopically
+    visible foci.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph summarizes yeast P-body assembly inputs without asserting
+    a complete condensate interaction network or stoichiometric composition.
+  nodes:
+  - node_id: nontranslating_mrna_cargo
+    label: nontranslating mRNA cargo
+    node_type: RNA
+    component_ref: nontranslating_mrna_cargo
+  - node_id: edc3_lsm4_assembly_scaffolds
+    label: Edc3/Lsm4 P-body assembly scaffolds
+    node_type: GENE_OR_PROTEIN
+    component_ref: edc3_lsm4_assembly_scaffolds
+  - node_id: p_body_assembly
+    label: P-body assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0033962
+  - node_id: p_body
+    label: P-body
+    node_type: STRUCTURE
+    grounding: GO:0000932
+  edges:
+  - subject: nontranslating_mrna_cargo
+    predicate: promotes
+    object: p_body_assembly
+    description: P-body assembly in yeast requires RNA cargo and is coupled to translationally
+      repressed mRNAs.
+    evidence:
+    - reference: DOI:10.1261/rna.7258505
+      notes: Teixeira et al. 2005 showed RNA dependence of yeast P-body assembly and
+        detected nontranslating mRNAs in P-bodies.
+    - reference: DOI:10.1126/science.1115791
+      notes: Brengues, Teixeira and Parker 2005 tracked movement of mRNAs between
+        polysomes and cytoplasmic processing bodies.
+  - subject: edc3_lsm4_assembly_scaffolds
+    predicate: promotes
+    object: p_body_assembly
+    description: Edc3 and the Q/N-rich C-terminal domain of Lsm4 act redundantly to
+      promote visible P-body assembly during glucose deprivation.
+    evidence:
+    - reference: DOI:10.1083/jcb.200704147
+      notes: Decker, Teixeira and Parker 2007 connected Edc3p and the Lsm4p Q/N-rich
+        domain to P-body assembly in S. cerevisiae.
+  - subject: nontranslating_mrna_cargo
+    predicate: is concentrated in
+    object: p_body
+    description: Nontranslating mRNAs are RNA constituents of cytoplasmic P-body foci.
+    evidence:
+    - reference: DOI:10.1261/rna.7258505
+      notes: Teixeira et al. 2005 reported that yeast processing bodies contain nontranslating
+        mRNAs.
+  - subject: edc3_lsm4_assembly_scaffolds
+    predicate: supports assembly of
+    object: p_body
+    description: Edc3 and the Q/N-rich C-terminal region of Lsm4 support Saccharomyces
+      P-body focus assembly.
+    evidence:
+    - reference: DOI:10.1083/jcb.200704147
+      notes: Decker, Teixeira and Parker 2007 tied Edc3p and the Lsm4p Q/N-rich domain
+        to formation of microscopically visible P-bodies.
+  - subject: p_body_assembly
+    predicate: produces
+    object: p_body
+    description: Protein-RNA assembly produces a cytoplasmic mRNA-processing focus.
+    evidence:
+    - reference: GO:0033962
+      notes: GO:0033962 defines P-body assembly as the aggregation, arrangement and
+        bonding of proteins and RNA molecules to form a cytoplasmic mRNA processing
+        body.
+discussions:
+- discussion_id: resolve_p_body_component_groundings
+  prompt: Resolve exact source-neutral groundings and boundaries for P-body RNA cargo,
+    decapping proteins, LSM1-7/Pat1, Edc3, Dhh1 and other yeast P-body components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#nontranslating_mrna_cargo
+  - components#mrna_decay_protein_cohort
+  - components#edc3_lsm4_assembly_scaffolds
+  rationale: This first record keeps the experimentally supported Saccharomyces P-body
+    proteins in broad, label-only cohorts. Splitting them into exact mRNA-decapping,
+    LSM1-7/Pat1 and helicase family components needs a separate InterPro, Pfam and
+    Complex Portal grounding pass.
+  evidence:
+  - reference: DOI:10.1016/j.molcel.2007.02.011
+  posed_by: codex
+  posed_date: '2026-09-11'
