@@ -21,6 +21,14 @@ curation_history:
     rows, surface-adhesion function evidence, DOI provenance, a nonmechanistic hami
     surface-attachment graph, and a protein-family grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T13:55:17Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #490 by removing biofilm context from the Moissl-backed taxonomic
+    note, resolved #491 by narrowing the canonical example to Moissl-backed EM and
+    cryo-ET characterization, and resolved #492 by changing the first graph edge from
+    an assembly claim to a constituent claim.'
+  llm_assisted: true
 synonyms:
 - synonym_text: hami
   synonym_type: EXACT_SYNONYM
@@ -58,14 +66,14 @@ taxonomic_distribution:
   taxon_label: Candidatus Altarchaeum hamiconexum
   presence: COMMON
   note: Hami were ultrastructurally characterized on cells of the uncultivated SM1/Altarchaeum
-    archaeon from cold sulphidic spring biofilms.
+    archaeon from cold sulphidic springs.
   reference: DOI:10.1111/j.1365-2958.2005.04294.x
 canonical_examples:
 - taxon_id: NCBITaxon:1803513
   taxon_label: Candidatus Altarchaeum hamiconexum
   note: Uncultivated archaeal species whose surface hami were described by electron
-    microscopy, cryo-electron tomography and biofilm ultrastructural analysis.
-  reference: DOI:10.3389/fmicb.2014.00397
+    microscopy and cryo-electron tomography.
+  reference: DOI:10.1111/j.1365-2958.2005.04294.x
 functions:
 - function_id: biotic_abiotic_surface_adhesion
   label: biotic and abiotic surface adhesion
@@ -92,9 +100,9 @@ evidence:
 causal_graphs:
 - graph_id: hamus_surface_attachment
   title: Proteinaceous hami present grappling hooks for surface adhesion
-  description: The 120 kDa hamus subunits make a helical filament with periodic prickles
-    and a terminal grappling hook. Hami project from the Candidatus Altarchaeum hamiconexum
-    cell surface and mediate adhesion to biotic and abiotic surfaces.
+  description: The hami of Candidatus Altarchaeum hamiconexum contain 120 kDa subunits
+    and present a helical filament with periodic prickles and a terminal grappling
+    hook from the cell surface to mediate adhesion to biotic and abiotic surfaces.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph records observed hamus ultrastructure and adhesion without
@@ -123,10 +131,10 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: hamus_120_kda_subunits
-    predicate: assemble into
+    predicate: are major constituents of
     object: helical_hamus_filament
-    description: The 120 kDa proteinaceous hamus subunits build the helical core of
-      the appendage.
+    description: The 120 kDa proteinaceous hamus subunits are major constituents of
+      the helical appendage.
     evidence:
     - reference: DOI:10.1111/j.1365-2958.2005.04294.x
       notes: Moissl et al. 2005 characterized the dominant 120 kDa hamus subunits
