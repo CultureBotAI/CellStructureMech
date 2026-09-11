@@ -22,6 +22,12 @@ curation_history:
     genome-compartmentalization and transport functions, a nonmechanistic envelope-and-pore
     graph, and a nuclear-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T17:43:08Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: Retyped the GO:0005643 nuclear-pore graph node as a structure and narrowed
+    budding-yeast taxon/example notes to the cited nucleus-vacuole-junction evidence.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 has_part:
@@ -49,14 +55,14 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Budding yeast has a membrane-bounded nucleus with a nuclear envelope that
-    can contact the vacuole at nucleus-vacuole junctions.
+  note: Budding-yeast nuclei can contact the vacuole at nucleus-vacuole junctions
+    formed by direct Vac8p-Nvj1p interaction.
   reference: DOI:10.1091/mbc.11.7.2445
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model for a closed nuclear envelope bearing nuclear pores and
-    forming nucleus-vacuole junctions.
+  note: Budding-yeast example in which the nucleus can form direct nucleus-vacuole
+    junctions with the vacuole.
   reference: DOI:10.1091/mbc.11.7.2445
 functions:
 - function_id: genome_compartmentalization
@@ -120,7 +126,7 @@ causal_graphs:
     grounding: GO:0031981
   - node_id: nuclear_pore
     label: nuclear pore
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0005643
     component_ref: nuclear_pore
   - node_id: nucleocytoplasmic_transport
