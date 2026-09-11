@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/chloroplast.yaml
+  slug: chloroplast
+session:
+  id: 2026-09-11T192623Z-codex-788ccc
+  timestamp: '2026-09-11T19:26:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/537
+  - https://github.com/CultureBotAI/CellStructureMech/issues/538
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/536
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Added evidence-backed chloroplast structure record
+  details: Added a GO:0009507 chloroplast record with GO-grounded plastid parentage, chloroplast
+    envelope, outer and inner membrane, stroma, thylakoid, thylakoid membrane, Toc complex,
+    and Tic complex entries; Chlamydomonas reinhardtii proteome and TOC-TIC import evidence;
+    photosynthesis and chloroplast-stroma import functions; a nonmechanistic envelope-and-import
+    graph; rendered pages; refreshed embedding artifacts; and review fixes that connected
+    the thylakoid-membrane component and narrowed the Chlamydomonas example evidence.
