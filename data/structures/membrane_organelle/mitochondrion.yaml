@@ -21,6 +21,18 @@ curation_history:
     matrix-import functions, a nonmechanistic envelope-and-import graph, and a respiratory/import
     subcomplex grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T18:02:02Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: Connected the top-level mitochondrion graph node to the mitochondrial envelope
+    and broadened the TOM graph edge to the general mitochondrial protein import pathway.
+  llm_assisted: true
+- timestamp: '2026-09-11T18:05:16Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: Kept the TOM graph process on adapter-backed GO:0030150 and clarified that
+    TOM provides the outer-membrane entry step for matrix import.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 has_part:
@@ -187,6 +199,15 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0030150
   edges:
+  - subject: mitochondrial_envelope
+    predicate: encloses
+    object: mitochondrion
+    description: The mitochondrial envelope encloses the mitochondrion and separates
+      its contents from the cell cytoplasm.
+    evidence:
+    - reference: GO:0005740
+      notes: GO:0005740 defines the mitochondrial envelope as the double lipid bilayer
+        enclosing the mitochondrion.
   - subject: mitochondrial_outer_membrane
     predicate: is part of
     object: mitochondrial_envelope
@@ -221,14 +242,14 @@ causal_graphs:
       notes: GO:0005742 defines TOM as a large complex of the mitochondrial outer
         membrane.
   - subject: tom_complex
-    predicate: initiates
+    predicate: provides entry for
     object: mitochondrial_matrix_protein_import
-    description: TOM forms the outer-membrane entry step for matrix preproteins before
-      TIM23-PAM-mediated import into the matrix.
+    description: TOM provides the outer-membrane entry step for matrix preproteins
+      before TIM23-PAM-mediated import into the matrix.
     evidence:
     - reference: DOI:10.1016/j.cell.2009.08.005
-      notes: Chacinska et al. 2009 review TOM/TIM23/PAM presequence import into the
-        mitochondrial matrix.
+      notes: Chacinska et al. 2009 review TOM entry and downstream TIM23-PAM presequence
+        import into the mitochondrial matrix.
 discussions:
 - discussion_id: ground_respiratory_and_import_subcomplexes
   prompt: Resolve exact source-neutral component boundaries and groundings for mitochondrial
