@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/popz_polar_microdomain.yaml
+  slug: popz_polar_microdomain
+session:
+  id: 2026-09-11T111234Z-claude-code-4c33fc
+  timestamp: '2026-09-11T11:12:34Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/468
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/464
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - data
+  - curation
+  summary: Replaced obsolete PopZ parent GO term
+  details: 'Addressed PR #464 identifier-liveness issue #468 by replacing obsolete GO:0044464
+    cell part parentage with live GO:0110165 cellular anatomical structure parentage and regenerating
+    derived artifacts.'

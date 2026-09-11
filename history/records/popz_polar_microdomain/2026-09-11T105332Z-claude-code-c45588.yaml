@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/popz_polar_microdomain.yaml
+  slug: popz_polar_microdomain
+session:
+  id: 2026-09-11T105332Z-claude-code-c45588
+  timestamp: '2026-09-11T10:53:32Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - data
+  - curation
+  summary: Added PopZ polar microdomain structure record
+  details: Created cellstructuremech:popz_polar_microdomain with cell-part parentage, PopZ
+    polar-subdomain synonymy and component curation, Caulobacter vibrioides scope, a Caulobacter
+    vibrioides NA1000 example, chromosomal-origin anchoring and pole-organization functions,
+    PopZ DOI evidence, a nonmechanistic PopZ polar-organization graph, and an open PopZ grounding
+    TODO.
