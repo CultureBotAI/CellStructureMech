@@ -27,6 +27,13 @@ curation_history:
   changes: Added a GO:0005773 vacuole graph node and targeted the fungal-type vacuole
     subtype edge to that node.
   llm_assisted: true
+- timestamp: '2026-09-11T17:24:49Z'
+  curator: codex
+  action: ADDRESSED_REVIEW_ISSUES
+  changes: 'Addressed review issues #527 and #528 by removing the vacuole membrane
+    from molecular components, adding a reviewed-label-only acid hydrolase component,
+    and linking the acid hydrolase graph node to that component.'
+  llm_assisted: true
 parent_structures:
 - GO:0005773
 has_part:
@@ -37,18 +44,24 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: GO:0000324
 components:
-- component_id: fungal_type_vacuole_membrane
-  label: fungal-type vacuole membrane
-  component_type: LIPID
+- component_id: acid_hydrolases
+  label: acid hydrolases
+  component_type: PROTEIN
   component_role: CONSTITUENT
-  grounding: GO:0000329
-  essentiality: ESSENTIAL
-  role: Lipid bilayer that bounds the fungal-type vacuole and separates the vacuolar
-    lumen from cytosol.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Fungal vacuolar acid hydrolases span multiple unrelated enzyme
+    families, so no single source-neutral family CURIE was asserted for the aggregate
+    lumenal hydrolase cohort.
+  essentiality: UNKNOWN
+  role: Soluble lumenal enzymes that degrade macromolecular cargo in the acidic fungal
+    vacuole.
   evidence:
-  - reference: GO:0000329
-    notes: GO:0000329 defines the fungal-type vacuole membrane as the vacuolar lipid
-      bilayer found in Saccharomyces cerevisiae.
+  - reference: GO:0000324
+    notes: GO:0000324 describes the fungal-type vacuole as an acidic compartment containing
+      an ensemble of acid hydrolases.
+  - reference: DOI:10.1016/j.bbamcr.2008.08.003
+    notes: Li and Kane 2009 review the yeast vacuole as a lysosome-like degradative
+      compartment.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -116,7 +129,6 @@ causal_graphs:
     label: fungal-type vacuole membrane
     node_type: STRUCTURE
     grounding: GO:0000329
-    component_ref: fungal_type_vacuole_membrane
   - node_id: fungal_type_vacuole_lumen
     label: fungal-type vacuole lumen
     node_type: CELLULAR_LOCALIZATION
@@ -127,6 +139,7 @@ causal_graphs:
   - node_id: acid_hydrolases
     label: acid hydrolases
     node_type: GENE_OR_PROTEIN
+    component_ref: acid_hydrolases
   - node_id: macromolecule_degradation
     label: macromolecule degradation
     node_type: BIOLOGICAL_PROCESS
@@ -180,6 +193,7 @@ discussions:
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
+  - components#acid_hydrolases
   - causal_graphs#yeast_fungal_vacuole_storage_and_degradation
   rationale: This first fungal-type vacuole record grounds the membrane and lumen,
     but avoids broad family identifiers for multi-family vacuolar transport and degradation

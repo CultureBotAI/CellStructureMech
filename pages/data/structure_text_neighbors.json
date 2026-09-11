@@ -335,7 +335,7 @@
         {
           "identifier": "GO:0009427",
           "label": "bacterial-type flagellum basal body, distal rod, L ring",
-          "cosine_similarity": 0.87309441
+          "cosine_similarity": 0.8730944
         },
         {
           "identifier": "GO:0009425",
@@ -1756,7 +1756,7 @@
         {
           "identifier": "GO:0000324",
           "label": "fungal-type vacuole",
-          "cosine_similarity": 0.73022321
+          "cosine_similarity": 0.73005753
         },
         {
           "identifier": "GO:0009276",
@@ -1976,11 +1976,6 @@
           "cosine_similarity": 0.71114088
         },
         {
-          "identifier": "GO:0000324",
-          "label": "fungal-type vacuole",
-          "cosine_similarity": 0.70467517
-        },
-        {
           "identifier": "GO:0000331",
           "label": "contractile vacuole",
           "cosine_similarity": 0.70223796
@@ -1989,6 +1984,11 @@
           "identifier": "GO:0020026",
           "label": "apicomplexan dense granule",
           "cosine_similarity": 0.69342474
+        },
+        {
+          "identifier": "GO:0000324",
+          "label": "fungal-type vacuole",
+          "cosine_similarity": 0.69315751
         }
       ]
     },
@@ -2079,9 +2079,9 @@
           "cosine_similarity": 0.60033456
         },
         {
-          "identifier": "GO:0000324",
-          "label": "fungal-type vacuole",
-          "cosine_similarity": 0.59983194
+          "identifier": "GO:0140266",
+          "label": "Woronin body",
+          "cosine_similarity": 0.59347173
         }
       ]
     },
@@ -2190,7 +2190,7 @@
         {
           "identifier": "GO:0000324",
           "label": "fungal-type vacuole",
-          "cosine_similarity": 0.72951197
+          "cosine_similarity": 0.72424635
         },
         {
           "identifier": "GO:0000331",
@@ -2250,11 +2250,6 @@
           "cosine_similarity": 0.76446253
         },
         {
-          "identifier": "GO:0000324",
-          "label": "fungal-type vacuole",
-          "cosine_similarity": 0.74057718
-        },
-        {
           "identifier": "GO:0070258",
           "label": "inner membrane pellicle complex",
           "cosine_similarity": 0.73992846
@@ -2268,6 +2263,11 @@
           "identifier": "GO:0005886",
           "label": "plasma membrane",
           "cosine_similarity": 0.7248215
+        },
+        {
+          "identifier": "GO:0000324",
+          "label": "fungal-type vacuole",
+          "cosine_similarity": 0.71872044
         }
       ]
     },
@@ -2340,7 +2340,7 @@
         {
           "identifier": "GO:0000324",
           "label": "fungal-type vacuole",
-          "cosine_similarity": 0.82045502
+          "cosine_similarity": 0.79661271
         },
         {
           "identifier": "GO:0020020",
@@ -2526,7 +2526,7 @@
         {
           "identifier": "GO:0000324",
           "label": "fungal-type vacuole",
-          "cosine_similarity": 0.80469862
+          "cosine_similarity": 0.79161017
         },
         {
           "identifier": "GO:0000331",
@@ -2557,27 +2557,27 @@
         {
           "identifier": "GO:0000331",
           "label": "contractile vacuole",
-          "cosine_similarity": 0.82045502
+          "cosine_similarity": 0.79661271
         },
         {
           "identifier": "GO:0020020",
           "label": "food vacuole",
-          "cosine_similarity": 0.80469862
-        },
-        {
-          "identifier": "GO:0020026",
-          "label": "apicomplexan dense granule",
-          "cosine_similarity": 0.74057718
-        },
-        {
-          "identifier": "GO:0005886",
-          "label": "plasma membrane",
-          "cosine_similarity": 0.74019947
+          "cosine_similarity": 0.79161017
         },
         {
           "identifier": "GO:0009277",
           "label": "fungal-type cell wall",
-          "cosine_similarity": 0.73022321
+          "cosine_similarity": 0.73005753
+        },
+        {
+          "identifier": "GO:0020022",
+          "label": "acidocalcisome",
+          "cosine_similarity": 0.72424635
+        },
+        {
+          "identifier": "GO:0020026",
+          "label": "apicomplexan dense granule",
+          "cosine_similarity": 0.71872044
         }
       ]
     },
@@ -2627,14 +2627,14 @@
           "cosine_similarity": 0.7203043
         },
         {
-          "identifier": "GO:0000324",
-          "label": "fungal-type vacuole",
-          "cosine_similarity": 0.70109609
-        },
-        {
           "identifier": "GO:0070258",
           "label": "inner membrane pellicle complex",
           "cosine_similarity": 0.69791866
+        },
+        {
+          "identifier": "GO:0000324",
+          "label": "fungal-type vacuole",
+          "cosine_similarity": 0.69788142
         },
         {
           "identifier": "GO:0015627",
@@ -2937,14 +2937,14 @@
           "cosine_similarity": 0.7029196
         },
         {
+          "identifier": "GO:0000324",
+          "label": "fungal-type vacuole",
+          "cosine_similarity": 0.68489508
+        },
+        {
           "identifier": "GO:0032047",
           "label": "mitosome",
           "cosine_similarity": 0.68218605
-        },
-        {
-          "identifier": "GO:0000324",
-          "label": "fungal-type vacuole",
-          "cosine_similarity": 0.68167287
         },
         {
           "identifier": "GO:0005794",
@@ -2978,9 +2978,9 @@
           "cosine_similarity": 0.70329628
         },
         {
-          "identifier": "GO:0000324",
-          "label": "fungal-type vacuole",
-          "cosine_similarity": 0.68742621
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.6862734
         }
       ]
     },
@@ -3872,14 +3872,14 @@
           "cosine_similarity": 0.62795544
         },
         {
-          "identifier": "GO:0000324",
-          "label": "fungal-type vacuole",
-          "cosine_similarity": 0.62277043
-        },
-        {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.61921575
+        },
+        {
+          "identifier": "GO:0043591",
+          "label": "endospore external encapsulating structure",
+          "cosine_similarity": 0.61412945
         }
       ]
     },
