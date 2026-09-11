@@ -20,6 +20,13 @@ curation_history:
     Caulobacter vibrioides scope, a cell-curvature function, DOI evidence, a nonmechanistic
     filament assembly and localization graph, and a crescentin grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T10:02:01Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issues #456 and #457 by narrowing the canonical example
+    to Caulobacter vibrioides NA1000 and correcting graph node types for the inner-curvature
+    localization cue and curved morphology.'
+  llm_assisted: true
 parent_structures:
 - GO:0005856
 synonyms:
@@ -57,10 +64,10 @@ taxonomic_distribution:
     now classified as Caulobacter vibrioides.
   reference: DOI:10.1016/S0092-8674(03)00935-8
 canonical_examples:
-- taxon_id: NCBITaxon:155892
-  taxon_label: Caulobacter vibrioides
-  note: Curved freshwater bacterium in which CreS loss produces straight rod-shaped
-    cells.
+- taxon_id: NCBITaxon:565050
+  taxon_label: Caulobacter vibrioides NA1000
+  note: Wild-type laboratory strain, also named CB15N in Ausmees et al. 2003, used
+    to define CreS-dependent curved morphology.
   reference: DOI:10.1016/S0092-8674(03)00935-8
 functions:
 - function_id: caulobacter_cell_curvature
@@ -105,10 +112,10 @@ causal_graphs:
     grounding: cellstructuremech:crescentin_filament
   - node_id: inner_cell_curvature
     label: Caulobacter inner cell curvature
-    node_type: STRUCTURE
+    node_type: CELLULAR_LOCALIZATION
   - node_id: curved_cell_shape
-    label: curved Caulobacter cell shape
-    node_type: BIOLOGICAL_PROCESS
+    label: curved Caulobacter morphology
+    node_type: QUALITY
   edges:
   - subject: crescentin_cres
     predicate: assembles into

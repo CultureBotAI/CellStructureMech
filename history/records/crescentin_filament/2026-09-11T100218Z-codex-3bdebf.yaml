@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/crescentin_filament.yaml
+  slug: crescentin_filament
+session:
+  id: 2026-09-11T100218Z-codex-3bdebf
+  timestamp: '2026-09-11T10:02:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/456
+  - https://github.com/CultureBotAI/CellStructureMech/issues/457
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/455
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - data
+  - curation
+  summary: Addressed crescentin filament PR review
+  details: 'Fixed review findings from issues #456 and #457 by narrowing the canonical example
+    to Caulobacter vibrioides NA1000 and correcting the crescentin graph node types for the
+    inner-curvature localization cue and curved morphology.'
