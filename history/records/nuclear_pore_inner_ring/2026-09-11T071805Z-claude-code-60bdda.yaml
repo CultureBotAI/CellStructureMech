@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_pore_inner_ring.yaml
+  slug: nuclear_pore_inner_ring
+session:
+  id: 2026-09-11T071805Z-claude-code-60bdda
+  timestamp: '2026-09-11T07:18:05Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/434
+  - https://github.com/CultureBotAI/CellStructureMech/issues/435
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/433
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed inner ring review findings
+  details: Addressed PR review issues 434 and 435 by replacing central-channel lining wording
+    with around-channel scaffold wording, tightening the nonmechanistic graph scope note,
+    and adding an open TODO for deferred Nic96, Nup53, Nup59, and central-channel component-boundary
+    curation.

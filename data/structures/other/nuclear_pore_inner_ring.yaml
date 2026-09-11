@@ -1,0 +1,270 @@
+identifier: GO:0044611
+label: nuclear pore inner ring
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A ring-shaped eukaryotic nuclear pore subcomplex built from inner-ring
+  scaffold nucleoporins around the central transport channel.
+definition_source: GO:0044611
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T07:03:10Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T07:04:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added inner-ring-complex synonymy, nuclear-pore parthood, four large Nup
+    scaffold component classes, Eukaryota distribution, a Saccharomyces cerevisiae
+    example, nuclear-pore scaffold function, DOI/GO evidence, an inner-ring assembly
+    graph, and a Nup grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T07:17:39Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #434 and #435 by changing central-channel lining wording to around-channel
+    scaffold wording and adding an open TODO for deferred Nic96, Nup53/Nup59, and
+    CNT or FG-channel component-boundary curation.'
+  llm_assisted: true
+synonyms:
+- synonym_text: inner ring complex
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1126/science.aac9176
+part_of:
+- GO:0005643
+components:
+- component_id: nup192_nup205_family
+  label: Nup192/Nup205-family nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP192
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first inner-ring record curates Saccharomyces inner-ring nucleoporins
+    by orthology-aware labels and leaves exact InterPro/Pfam groundings for a later
+    family-by-family pass.
+  role: Large scaffold nucleoporin family represented in the Saccharomyces cerevisiae
+    nuclear pore inner-ring scaffold.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2011.06.039
+    notes: Amlacher et al. 2011 used a thermophilic fungus to study conserved nucleoporins
+      and nuclear-pore assembly.
+  - reference: DOI:10.1038/s41422-022-00632-y
+    notes: Li et al. 2022 resolved Nup192, Nup188, Nup170, and Nup157 in the near-atomic
+      Saccharomyces inner ring.
+- component_id: nup188_family
+  label: Nup188-family nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP188
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first inner-ring record curates Saccharomyces inner-ring nucleoporins
+    by orthology-aware labels and leaves exact InterPro/Pfam groundings for a later
+    family-by-family pass.
+  role: Large scaffold nucleoporin family represented in the Saccharomyces cerevisiae
+    nuclear pore inner-ring scaffold.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2011.06.039
+    notes: Amlacher et al. 2011 used a thermophilic fungus to study conserved nucleoporins
+      and nuclear-pore assembly.
+  - reference: DOI:10.1038/s41422-022-00632-y
+    notes: Li et al. 2022 resolved Nup192, Nup188, Nup170, and Nup157 in the near-atomic
+      Saccharomyces inner ring.
+- component_id: nup170_nup155_family
+  label: Nup170/Nup155-family nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP170
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first inner-ring record curates Saccharomyces inner-ring nucleoporins
+    by orthology-aware labels and leaves exact InterPro/Pfam groundings for a later
+    family-by-family pass.
+  role: Large scaffold nucleoporin family represented in the Saccharomyces cerevisiae
+    nuclear pore inner-ring scaffold.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2011.06.039
+    notes: Amlacher et al. 2011 used a thermophilic fungus to study conserved nucleoporins
+      and nuclear-pore assembly.
+  - reference: DOI:10.1038/s41422-022-00632-y
+    notes: Li et al. 2022 resolved Nup192, Nup188, Nup170, and Nup157 in the near-atomic
+      Saccharomyces inner ring.
+- component_id: nup157_family
+  label: Nup157-family nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP157
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first inner-ring record curates Saccharomyces inner-ring nucleoporins
+    by orthology-aware labels and leaves exact InterPro/Pfam groundings for a later
+    family-by-family pass.
+  role: Large scaffold nucleoporin family represented in the Saccharomyces cerevisiae
+    nuclear pore inner-ring scaffold.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2011.06.039
+    notes: Amlacher et al. 2011 used a thermophilic fungus to study conserved nucleoporins
+      and nuclear-pore assembly.
+  - reference: DOI:10.1038/s41422-022-00632-y
+    notes: Li et al. 2022 resolved Nup192, Nup188, Nup170, and Nup157 in the near-atomic
+      Saccharomyces inner ring.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: Inner-ring scaffold nucleoporins are a conserved architectural layer of eukaryotic
+    nuclear pores, with fungal and metazoan pores using related but not identical
+    Nup paralog sets.
+  reference: DOI:10.1146/annurev-biophys-052118-115308
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which the near-atomic structure of the nuclear pore
+    inner ring was resolved.
+  reference: DOI:10.1038/s41422-022-00632-y
+functions:
+- function_id: nuclear_pore_inner_scaffold
+  label: nuclear-pore inner scaffold
+  description: The nuclear pore inner ring contributes the inner scaffold around the
+    central transport channel.
+  evidence:
+  - reference: DOI:10.1126/science.aac9176
+    notes: Stuwe et al. 2015 determined a fungal inner-ring architecture that placed
+      scaffold nucleoporins around the transport channel.
+  - reference: DOI:10.1016/j.cell.2021.12.015
+    notes: Akey et al. 2022 resolved how the inner-ring scaffold fits within the yeast
+      nuclear pore.
+evidence:
+- reference: GO:0044611
+  notes: Gene Ontology cellular-component term for the nuclear pore inner ring.
+- reference: GO:0005643
+  notes: Gene Ontology cellular-component term for the nuclear pore.
+- reference: DOI:10.1016/j.cell.2011.06.039
+  notes: Amlacher et al. 2011, 'Insight into Structure and Assembly of the Nuclear
+    Pore Complex by Utilizing the Genome of a Eukaryotic Thermophile', Cell.
+- reference: DOI:10.1126/science.aac9176
+  notes: Stuwe et al. 2015, 'Architecture of the fungal nuclear pore inner ring complex',
+    Science.
+- reference: DOI:10.1038/s41422-022-00632-y
+  notes: Li et al. 2022, 'Near-atomic structure of the inner ring of the Saccharomyces
+    cerevisiae nuclear pore complex', Cell Research.
+- reference: DOI:10.1016/j.cell.2021.12.015
+  notes: Akey et al. 2022, 'Comprehensive structure and functional adaptations of
+    the yeast nuclear pore complex', Cell.
+- reference: DOI:10.1146/annurev-biophys-052118-115308
+  notes: Hampoelz et al. 2019, 'Structure and Assembly of the Nuclear Pore Complex',
+    Annual Review of Biophysics.
+causal_graphs:
+- graph_id: inner_ring_scaffold_assembly
+  title: Large scaffold Nups build the inner ring
+  description: Large Saccharomyces scaffold nucleoporin families occupy the nuclear
+    pore inner ring around the central transport channel.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records core Saccharomyces inner-ring scaffold placement
+    without asserting copy numbers, linker/CNT component boundaries, or contacts to
+    Nic96, Nup53, Nup59, and FG-repeat channel nucleoporins.
+  nodes:
+  - node_id: nup192_nup205_family
+    label: Nup192/Nup205-family nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup192_nup205_family
+  - node_id: nup188_family
+    label: Nup188-family nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup188_family
+  - node_id: nup170_nup155_family
+    label: Nup170/Nup155-family nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup170_nup155_family
+  - node_id: nup157_family
+    label: Nup157-family nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup157_family
+  - node_id: nuclear_pore_inner_ring
+    label: nuclear pore inner ring
+    node_type: STRUCTURE
+    grounding: GO:0044611
+  edges:
+  - subject: nup192_nup205_family
+    predicate: contributes to
+    object: nuclear_pore_inner_ring
+    description: Nup192/Nup205-family nucleoporin is one of the large scaffold nucleoporin
+      families positioned in the Saccharomyces nuclear pore inner ring.
+    evidence:
+    - reference: DOI:10.1038/s41422-022-00632-y
+      notes: Li et al. 2022 produced a near-atomic model of the Saccharomyces nuclear
+        pore inner ring containing Nup192, Nup188, Nup170, and Nup157.
+  - subject: nup188_family
+    predicate: contributes to
+    object: nuclear_pore_inner_ring
+    description: Nup188-family nucleoporin is one of the large scaffold nucleoporin
+      families positioned in the Saccharomyces nuclear pore inner ring.
+    evidence:
+    - reference: DOI:10.1038/s41422-022-00632-y
+      notes: Li et al. 2022 produced a near-atomic model of the Saccharomyces nuclear
+        pore inner ring containing Nup192, Nup188, Nup170, and Nup157.
+  - subject: nup170_nup155_family
+    predicate: contributes to
+    object: nuclear_pore_inner_ring
+    description: Nup170/Nup155-family nucleoporin is one of the large scaffold nucleoporin
+      families positioned in the Saccharomyces nuclear pore inner ring.
+    evidence:
+    - reference: DOI:10.1038/s41422-022-00632-y
+      notes: Li et al. 2022 produced a near-atomic model of the Saccharomyces nuclear
+        pore inner ring containing Nup192, Nup188, Nup170, and Nup157.
+  - subject: nup157_family
+    predicate: contributes to
+    object: nuclear_pore_inner_ring
+    description: Nup157-family nucleoporin is one of the large scaffold nucleoporin
+      families positioned in the Saccharomyces nuclear pore inner ring.
+    evidence:
+    - reference: DOI:10.1038/s41422-022-00632-y
+      notes: Li et al. 2022 produced a near-atomic model of the Saccharomyces nuclear
+        pore inner ring containing Nup192, Nup188, Nup170, and Nup157.
+discussions:
+- discussion_id: resolve_inner_ring_family_groundings
+  prompt: Resolve exact source-neutral protein-family groundings for large inner-ring
+    nucleoporin classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#nup192_nup205_family
+  - components#nup188_family
+  - components#nup170_nup155_family
+  - components#nup157_family
+  rationale: The first inner-ring record leaves these Nup classes reviewed-label only
+    because inner-ring paralogs and ortholog names vary between budding yeast, other
+    fungi, and metazoans; exact InterPro, Pfam, or NCBIfam accessions should be resolved
+    family-by-family.
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-052118-115308
+    notes: Hampoelz et al. 2019 review lineage variation in the nucleoporins that
+      assemble nuclear pore inner scaffolds.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: resolve_linker_cnt_component_boundary
+  prompt: Resolve whether linker nucleoporins and the central-channel nucleoporin
+    complex should be modeled as components of the nuclear pore inner ring or left
+    to neighboring NPC records.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#inner_ring_scaffold_assembly
+  rationale: The first inner-ring record intentionally models only the large Saccharomyces
+    scaffold Nups. Li et al. 2022 also place Nic96 and the Nup57/Nup49/Nsp1 central-channel
+    complex in the near-atomic inner-ring model, so those linker and FG Nups need
+    a separate boundary pass before they are added or explicitly assigned to adjacent
+    nuclear-pore records.
+  evidence:
+  - reference: DOI:10.1038/s41422-022-00632-y
+    notes: Li et al. 2022 modeled Nic96 and the Nup57/Nup49/Nsp1 central-channel complex
+      together with large scaffold Nups in the Saccharomyces inner ring.
+  posed_by: codex
+  posed_date: '2026-09-11'
