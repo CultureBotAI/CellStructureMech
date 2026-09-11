@@ -1,0 +1,203 @@
+identifier: GO:0005940
+label: septin ring
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A tight ring-shaped septin-based cytoskeletal structure that forms at
+  the cell cortex in the division plane, including the bud-neck septin ring of budding
+  yeast and related fungal septin rings at septation sites.
+definition_source: GO:0005940
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T05:26:46Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T05:27:43Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added septin-cytoskeleton parentage, cell-cortex parthood, a septin protein
+    component, Fungi taxonomy, a Saccharomyces cerevisiae canonical example, a cytokinesis-site
+    scaffolding function, DOI/GO evidence, a septin oligomer-filament-ring assembly
+    graph, and septin-complex boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0032156
+part_of:
+- GO:0005938
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Fungal septin rings are assembled from multiple paralogous septin
+    GTPases whose orthology and paralog usage differ among yeasts and filamentous
+    fungi; no exact source-neutral protein-family CURIE was curated for the whole
+    constituent cohort.
+  role: GTP-binding filament-forming proteins that oligomerize, polymerize, and organize
+    into a cortical ring at fungal cytokinesis sites.
+  evidence:
+  - reference: DOI:10.3389/fcell.2016.00123
+    notes: Glomb and Gronemeyer 2016 review Saccharomyces cerevisiae Cdc3, Cdc10,
+      Cdc11, Cdc12, and Shs1 as mitotic septins that assemble at the bud neck.
+  - reference: DOI:10.1534/genetics.107.073007
+    notes: Iwase et al. 2007 studied Shs1/Sep7 with the Cdc3, Cdc10, Cdc11, and Cdc12
+      septins of the budding-yeast septin ring.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: COMMON
+  note: Fungal septins assemble into rings, collars, bands, and caps at division or
+    polarized-growth sites, with exact architectures varying between budding yeast
+    and filamentous fungi.
+  reference: DOI:10.1128/EC.4.9.1503-1512.2005
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Cdc3/Cdc10/Cdc11/Cdc12/Shs1 septins form a bud-neck
+    ring and hetero-octamers have been reconstituted.
+  reference: DOI:10.1534/genetics.107.073007
+functions:
+- function_id: cytokinesis_site_scaffold
+  label: cytokinesis-site scaffolding
+  description: The fungal septin ring marks the future division site and scaffolds
+    cytokinesis factors at the mother-bud neck or fungal septation site.
+  evidence:
+  - reference: DOI:10.3389/fcell.2016.00123
+    notes: Glomb and Gronemeyer 2016 review septin organization and cytokinesis functions
+      at the budding-yeast bud neck.
+  - reference: DOI:10.1128/EC.4.9.1503-1512.2005
+    notes: Douglas et al. 2005 review septin functions in yeast model systems and
+      pathogenic fungi.
+evidence:
+- reference: GO:0005940
+  notes: Gene Ontology cellular-component term for the septin ring.
+- reference: DOI:10.1534/genetics.107.073007
+  notes: Iwase et al. 2007, 'Shs1 Plays Separable Roles in Septin Organization and
+    Cytokinesis in Saccharomyces cerevisiae', Genetics.
+- reference: DOI:10.1073/pnas.0803330105
+  notes: 'Bertin et al. 2008, ''Saccharomyces cerevisiae septins: supramolecular organization
+    of heterooligomers and the mechanism of filament assembly'', Proceedings of the
+    National Academy of Sciences USA.'
+- reference: DOI:10.1016/j.devcel.2011.02.004
+  notes: McMurray et al. 2011, 'Septin Filament Formation Is Essential in Budding
+    Yeast', Developmental Cell.
+- reference: DOI:10.3389/fcell.2016.00123
+  notes: Glomb and Gronemeyer 2016, 'Septin Organization and Functions in Budding
+    Yeast', Frontiers in Cell and Developmental Biology.
+- reference: DOI:10.1128/EC.4.9.1503-1512.2005
+  notes: Douglas et al. 2005, 'Septin Function in Yeast Model Systems and Pathogenic
+    Fungi', Eukaryotic Cell.
+causal_graphs:
+- graph_id: septin_oligomer_filament_ring_assembly
+  title: Septin hetero-oligomers polymerize into a cortical ring
+  description: Fungal septin proteins assemble into hetero-oligomeric rods, the rods
+    polymerize into septin filaments, and septin filaments organize at the cell cortex
+    to form the septin ring.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the yeast septin hierarchy from paralogous septin
+    subunits to oligomers, filaments, and rings without asserting a single paralog
+    order for all fungal septin rings.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: septin_hetero_octamer
+    label: budding-yeast septin hetero-octamer
+    node_type: GENE_OR_PROTEIN
+  - node_id: septin_filaments
+    label: septin filaments
+    node_type: GENE_OR_PROTEIN
+  - node_id: cell_cortex
+    label: cell cortex
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005938
+  - node_id: septin_ring
+    label: septin ring
+    node_type: STRUCTURE
+    grounding: GO:0005940
+  - node_id: cytokinesis_site
+    label: cytokinesis site
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: septin_proteins
+    predicate: oligomerize into
+    object: septin_hetero_octamer
+    description: Budding-yeast septin subunits assemble into ordered hetero-octameric
+      rods.
+    evidence:
+    - reference: DOI:10.1073/pnas.0803330105
+      notes: Bertin et al. 2008 reconstituted Saccharomyces cerevisiae septin hetero-octamers
+        and studied their supramolecular assembly.
+  - subject: septin_hetero_octamer
+    predicate: polymerizes into
+    object: septin_filaments
+    description: Septin hetero-oligomeric rods associate end to end to form filaments.
+    evidence:
+    - reference: DOI:10.1073/pnas.0803330105
+      notes: Bertin et al. 2008 visualized purified budding-yeast septin hetero-octamers
+        polymerizing into filaments.
+    - reference: DOI:10.1016/j.devcel.2011.02.004
+      notes: McMurray et al. 2011 tested septin-filament formation in budding yeast.
+  - subject: septin_filaments
+    predicate: assemble at
+    object: cell_cortex
+    description: Septin filaments are organized at the cortex to form a ring at the
+      future division plane.
+    evidence:
+    - reference: GO:0005940
+      notes: GO:0005940 defines the septin ring as a ring-shaped structure at the
+        division plane.
+    - reference: DOI:10.3389/fcell.2016.00123
+      notes: Glomb and Gronemeyer 2016 review septin-ring organization at the budding-yeast
+        cortex.
+  - subject: septin_ring
+    predicate: marks
+    object: cytokinesis_site
+    description: The fungal septin ring marks the cortical site where cytokinesis
+      and septation occur.
+    evidence:
+    - reference: DOI:10.1128/EC.4.9.1503-1512.2005
+      notes: Douglas et al. 2005 review septin rings at yeast and fungal division
+        or septation sites.
+discussions:
+- discussion_id: septin_ring_not_septin_complex
+  prompt: Keep the septin ring distinct from the smaller septin hetero-oligomer complexes
+    that polymerize into filaments.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - components#septin_proteins
+  - causal_graphs#septin_oligomer_filament_ring_assembly
+  rationale: GO:0005940 denotes the higher-order cortical ring at the division plane.
+    GO:0031105 denotes oligomeric septin protein complexes, so the complex belongs
+    inside the assembly graph rather than as this record's identity.
+  evidence:
+  - reference: GO:0005940
+    notes: GO:0005940 is the cellular-component term for the septin ring.
+  - reference: GO:0031105
+    notes: GO:0031105 is the cellular-component term for septin complexes.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
+- discussion_id: resolve_fungal_septin_family_grounding
+  prompt: Resolve exact source-neutral family groundings for fungal septin proteins
+    if a family resource has a term matching the whole ring-forming cohort.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: The initial record leaves the septin-protein cohort reviewed-label only
+    to avoid collapsing all fungal septin paralogs onto one guessed InterPro, Pfam,
+    NCBIfam, or UniProtKB family accession.
+  evidence:
+  - reference: DOI:10.3389/fcell.2016.00123
+    notes: Glomb and Gronemeyer 2016 review multiple S. cerevisiae septin paralogs
+      that contribute to the mitotic septin ring.
+  posed_by: codex
+  posed_date: '2026-09-11'

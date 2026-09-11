@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_ring.yaml
+  slug: septin_ring
+session:
+  id: 2026-09-11T052845Z-claude-code-997e57
+  timestamp: '2026-09-11T05:28:45Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - parent_structures
+  - part_of
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added the septin ring structure record
+  details: Created a GO:0005940 septin ring record with septin-cytoskeleton parentage, cell-cortex
+    parthood, fungal taxonomic distribution, a Saccharomyces cerevisiae canonical example,
+    a septin-protein component, cytokinesis-site scaffolding function, a nonmechanistic oligomer-filament-ring
+    assembly graph, and boundary discussions grounded in GO and DOI evidence.
