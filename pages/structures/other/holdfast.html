@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>holdfast · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>holdfast</h1>
+<p class="meta"><code>cellstructuremech:holdfast</code> · OTHER · OTHER · <span class="status">PROPOSED</span></p>
+<p class="definition">A polar extracellular adhesive matrix of Caulobacter vibrioides composed of secreted holdfast polysaccharide that is anchored at the old cell pole or stalk tip and enables irreversible surface attachment. <small>[<a href="https://doi.org/10.1128/JB.00112-19"><code>DOI:10.1128/JB.00112-19</code></a>]</small></p>
+<p><strong>Synonyms:</strong> Caulobacter holdfast; holdfast adhesin</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-holdfast_polysaccharide"><td>holdfast polysaccharide</td><td>POLYSACCHARIDE</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td></td><td>Forms the extracellular adhesive matrix that binds surfaces at the old cell pole or stalk tip.<ul class="evidence"><li><a href="https://doi.org/10.1128/JB.00276-19"><code>DOI:10.1128/JB.00276-19</code></a> <small>Hershey et al. 2019 extracted C. crescentus holdfast material and surveyed the carbohydrate composition of the holdfast polysaccharide.</small></li><li><a href="https://doi.org/10.1128/mBio.00294-17"><code>DOI:10.1128/mBio.00294-17</code></a> <small>Sprecher et al. 2017 treated the Caulobacter holdfast as a localized polysaccharide adhesin whose cohesive properties are developmentally regulated.</small></li></ul></td></tr>
+<tr id="components-hfa_holdfast_anchor"><td>HfaA-HfaB-HfaD holdfast anchor</td><td>PROTEIN_COMPLEX</td><td><span class="machinery" title="Binds the assembled structure to position, partition or maintain it">acts on</span></td><td><em>REVIEWED_LABEL_ONLY</em></td><td>hfaA, hfaB, hfaD</td><td></td><td>DISPENSABLE</td><td>Anchors the secreted holdfast matrix at the old cell pole so it remains attached to the cell surface.<ul class="evidence"><li><a href="https://doi.org/10.1128/JB.00112-19"><code>DOI:10.1128/JB.00112-19</code></a> <small>Sulkowski et al. 2019 analyze HfaA, HfaB and HfaD as proteins that anchor Caulobacter holdfast at the old cell pole.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_155892"><code>NCBITaxon:155892</code></a> Caulobacter vibrioides — <strong>UNIVERSAL</strong>: The Caulobacter holdfast is a polar adhesin of the C. vibrioides developmental cycle, with synthesis and surface adhesion regulated by cell cycle stage and environmental cues. [<a href="https://doi.org/10.1128/mBio.00294-17"><code>DOI:10.1128/mBio.00294-17</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_565050"><code>NCBITaxon:565050</code></a> <em>Caulobacter vibrioides NA1000</em> — Caulobacter vibrioides NA1000 is a standard holdfast model used to dissect holdfast anchoring, polysaccharide composition and c-di-GMP-dependent adhesiveness. [<a href="https://doi.org/10.1128/JB.00112-19"><code>DOI:10.1128/JB.00112-19</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>irreversible surface adhesion</strong> — The holdfast glues the old pole or stalk tip to abiotic surfaces during the Caulobacter surface-attachment program.<ul class="evidence"><li><a href="https://doi.org/10.1128/mBio.00294-17"><code>DOI:10.1128/mBio.00294-17</code></a> <small>Sprecher et al. 2017 studied the cohesive properties that make the Caulobacter holdfast an adhesive surface organelle.</small></li></ul></li><li><strong>old-pole holdfast anchoring</strong> — Hfa anchoring proteins retain the secreted holdfast matrix at the old cell pole instead of allowing it to be released into the medium.<ul class="evidence"><li><a href="https://doi.org/10.1128/JB.00112-19"><code>DOI:10.1128/JB.00112-19</code></a> <small>Sulkowski et al. 2019 show that Hfa proteins form a multiprotein anchoring complex for old-pole holdfast retention.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-holdfast_synthesis_anchoring_adhesion">Holdfast polysaccharide is secreted, cohesion-tuned and anchored <small>(ASSEMBLY)</small></h3>
+<p>Hfs synthesis factors build and secrete holdfast polysaccharide, HfsK responds to c-di-GMP to tune adhesive-matrix cohesion, and Hfa proteins anchor the completed holdfast at the old pole so it can glue the cell to abiotic surfaces.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>Hfs holdfast synthesis-export machinery</td><td>builds and secretes</td><td>holdfast polysaccharide</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/JB.00276-19"><code>DOI:10.1128/JB.00276-19</code></a> <small>Hershey et al. 2019 characterize the carbohydrate composition of the secreted Caulobacter holdfast matrix.</small></li></ul></td></tr>
+<tr><td>HfsK c-di-GMP effector</td><td>tunes cohesion of</td><td>holdfast polysaccharide</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/mBio.00294-17"><code>DOI:10.1128/mBio.00294-17</code></a> <small>Sprecher et al. 2017 link a novel c-di-GMP effector to regulated Caulobacter holdfast cohesion.</small></li></ul></td></tr>
+<tr><td>holdfast polysaccharide</td><td>forms</td><td>holdfast</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/JB.00276-19"><code>DOI:10.1128/JB.00276-19</code></a> <small>Hershey et al. 2019 chemically analyze isolated holdfast polysaccharide.</small></li></ul></td></tr>
+<tr><td>HfaA-HfaB-HfaD holdfast anchor</td><td>anchors</td><td>holdfast</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/JB.00112-19"><code>DOI:10.1128/JB.00112-19</code></a> <small>Sulkowski et al. 2019 characterize a multiprotein Hfa complex required for Caulobacter holdfast anchoring.</small></li></ul></td></tr>
+<tr><td>holdfast</td><td>localizes to</td><td>old cell pole</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/JB.00112-19"><code>DOI:10.1128/JB.00112-19</code></a> <small>Sulkowski et al. 2019 focus on anchoring adhesive holdfast at the Caulobacter old cell pole.</small></li></ul></td></tr>
+<tr><td>holdfast</td><td>adheres cell to</td><td>abiotic surface</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/mBio.00294-17"><code>DOI:10.1128/mBio.00294-17</code></a> <small>Sprecher et al. 2017 investigate the Caulobacter holdfast adhesin as the developmentally regulated adhesive for surface attachment.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (RESOLVED): Keep Hfs synthesis, export and modification proteins out of the component table for this first holdfast record. <small>Hfs proteins synthesize, export or modify holdfast material before or during assembly. They are represented as assembly graph machinery, while the component table contains the holdfast polysaccharide and the Hfa machinery that anchors the assembled adhesin at the old cell pole.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for holdfast polysaccharide and the Hfa anchoring machinery. <small>The record intentionally uses reviewed labels until a glycan accession for the complete holdfast polysaccharide and a source-neutral Hfa anchoring-complex identifier can be verified.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1128/JB.00112-19"><code>DOI:10.1128/JB.00112-19</code></a> <small>Sulkowski NI et al. 2019, &#39;A Multiprotein Complex Anchors Adhesive Holdfast at the Old Cell Pole of Caulobacter crescentus&#39;, Journal of Bacteriology.</small></li><li><a href="https://doi.org/10.1128/JB.00276-19"><code>DOI:10.1128/JB.00276-19</code></a> <small>Hershey DM et al. 2019, &#39;Composition of the Holdfast Polysaccharide from Caulobacter crescentus&#39;, Journal of Bacteriology.</small></li><li><a href="https://doi.org/10.1128/mBio.00294-17"><code>DOI:10.1128/mBio.00294-17</code></a> <small>Sprecher KS et al. 2017, &#39;Cohesive Properties of the Caulobacter crescentus Holdfast Adhesin Are Regulated by a Novel c-di-GMP Effector Protein&#39;, mBio.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-11T02:23:07Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T02:23:49Z</code> codex · EXPANDED_RECORD — Added holdfast synonymy, extracellular-matrix parentage, holdfast polysaccharide and Hfa anchoring components, Caulobacter taxonomy, surface-adhesion and anchoring functions, a synthesis-anchoring graph, literature evidence, and grounding/boundary discussions.</li><li><code>2026-09-11T02:29:31Z</code> codex · REFINED_CAUSAL_GRAPH — Narrowed the c-di-GMP-regulated holdfast cohesion node to HfsK and pointed the adhesion edge at abiotic surfaces instead of a derived surface-attached-cell state.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/holdfast.yaml"><code>data/structures/other/holdfast.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

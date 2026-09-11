@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/holdfast.yaml
+  slug: holdfast
+session:
+  id: 2026-09-11T022359Z-codex-f9abeb
+  timestamp: '2026-09-11T02:23:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added Caulobacter holdfast cell-structure record
+  details: Created a new evidence-backed holdfast record minted under cellstructuremech:holdfast
+    because GO lacks an exact Caulobacter holdfast cellular-component term. The record captures
+    the holdfast polysaccharide, HfaA/HfaB/HfaD anchoring machinery, Caulobacter vibrioides
+    scope, surface adhesion, old-pole anchoring, DOI-backed evidence, and a synthesis-to-adhesion
+    causal graph. Complete glycan and anchoring-complex groundings remain reviewed-label-only
+    until exact source-neutral accessions can be verified.
