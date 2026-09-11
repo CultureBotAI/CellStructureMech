@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/phage_nucleus.yaml
+  slug: phage_nucleus
+session:
+  id: 2026-09-11T122523Z-codex-40a69f
+  timestamp: '2026-09-11T12:25:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add phage nucleus record
+  details: Added a proposed phage nucleus CellStructureRecord for chimallin-lined jumbo-bacteriophage
+    nuclear shells, including non-membrane-bounded-organelle parentage, related synonymy,
+    a chimallin constituent component, Pseudomonas phage 201phi2-1 scope, phage genome compartmentalization
+    and antidefense functions, DOI evidence, a bounded chimallin shell assembly graph, and
+    grounding/boundary discussions that leave the PhuZ spindle out of the shell component
+    list.

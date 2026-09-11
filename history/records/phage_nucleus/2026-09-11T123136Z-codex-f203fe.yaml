@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/phage_nucleus.yaml
+  slug: phage_nucleus
+session:
+  id: 2026-09-11T123136Z-codex-f203fe
+  timestamp: '2026-09-11T12:31:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/479
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/478
+events:
+- type: EDIT
+  outcome: changed
+  summary: Narrow phage nucleus chimallin grounding rationale
+  details: 'Addressed PR review issue #479 by removing unsupported HK97-like fold wording
+    from the chimallin grounding TODO and limiting the future grounding search rationale to
+    broad phage-shell, unverified chimallin-like, or virus-specific gp105 accessions.'
