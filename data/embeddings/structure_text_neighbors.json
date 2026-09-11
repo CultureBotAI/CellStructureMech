@@ -1041,14 +1041,14 @@
           "cosine_similarity": 0.72444486
         },
         {
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.71472085
+        },
+        {
           "identifier": "GO:0000133",
           "label": "polarisome",
           "cosine_similarity": 0.71279966
-        },
-        {
-          "identifier": "GO:0044615",
-          "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.70913431
         },
         {
           "identifier": "cellstructuremech:elongasome",
@@ -2789,7 +2789,7 @@
         {
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.8447031
+          "cosine_similarity": 0.85259368
         },
         {
           "identifier": "GO:0044614",
@@ -2818,14 +2818,14 @@
           "cosine_similarity": 0.81582701
         },
         {
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.78528129
+        },
+        {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
           "cosine_similarity": 0.78210723
-        },
-        {
-          "identifier": "GO:0044615",
-          "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.77890081
         }
       ]
     },
@@ -2836,7 +2836,7 @@
         {
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.84380288
+          "cosine_similarity": 0.855154
         },
         {
           "identifier": "GO:0044611",
@@ -2880,14 +2880,14 @@
           "cosine_similarity": 0.87672637
         },
         {
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.84659392
+        },
+        {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
           "cosine_similarity": 0.84256648
-        },
-        {
-          "identifier": "GO:0044615",
-          "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.83909042
         }
       ]
     },
@@ -2916,9 +2916,9 @@
           "cosine_similarity": 0.81993992
         },
         {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.79648719
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.80382582
         }
       ]
     },
@@ -2927,29 +2927,29 @@
       "label": "nuclear pore nuclear basket",
       "neighbors": [
         {
-          "identifier": "GO:0005643",
-          "label": "nuclear pore",
-          "cosine_similarity": 0.8447031
-        },
-        {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.84380288
+          "cosine_similarity": 0.855154
+        },
+        {
+          "identifier": "GO:0005643",
+          "label": "nuclear pore",
+          "cosine_similarity": 0.85259368
         },
         {
           "identifier": "GO:0044611",
           "label": "nuclear pore inner ring",
-          "cosine_similarity": 0.83909042
+          "cosine_similarity": 0.84659392
         },
         {
           "identifier": "GO:0044612",
           "label": "nuclear pore linkers",
-          "cosine_similarity": 0.79571986
+          "cosine_similarity": 0.80382582
         },
         {
           "identifier": "GO:0031080",
           "label": "nuclear pore outer ring",
-          "cosine_similarity": 0.78172245
+          "cosine_similarity": 0.79078506
         }
       ]
     },
@@ -2980,7 +2980,7 @@
         {
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.78172245
+          "cosine_similarity": 0.79078506
         }
       ]
     },
@@ -3040,9 +3040,9 @@
           "cosine_similarity": 0.67123578
         },
         {
-          "identifier": "GO:0045259",
-          "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.66739452
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.67004551
         }
       ]
     },
@@ -3063,7 +3063,7 @@
         {
           "identifier": "GO:0042651",
           "label": "thylakoid membrane",
-          "cosine_similarity": 0.64636404
+          "cosine_similarity": 0.64636405
         },
         {
           "identifier": "GO:0055040",

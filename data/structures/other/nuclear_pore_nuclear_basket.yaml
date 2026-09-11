@@ -20,6 +20,13 @@ curation_history:
     and example, DOI/GO evidence, a conservative Mlp1/Mlp2 assembly graph, and a nuclear-basket
     component-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T09:02:13Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #447 and #448 by broadening the basket function label to nucleoplasmic
+    NPC organization and splitting the boundary TODO into structural basket-Nup and
+    recruited-factor candidates.'
+  llm_assisted: true
 synonyms:
 - synonym_text: nuclear basket
   synonym_type: RELATED_SYNONYM
@@ -81,10 +88,11 @@ canonical_examples:
     filament proteins.
   reference: DOI:10.1242/jcs.264865
 functions:
-- function_id: nuclear_basket_gene_expression_platform
-  label: nuclear basket gene-expression platform
+- function_id: nucleoplasmic_npc_organization_platform
+  label: nucleoplasmic NPC organization platform
   description: Mlp1/Mlp2 nuclear-basket filaments organize a nucleoplasmic NPC platform
-    coupled to mRNA export, NPC positioning, and chromatin and nuclear-envelope organization.
+    coupled to mRNA export, NPC positioning, chromatin organization, and nuclear-envelope
+    morphology.
   evidence:
   - reference: DOI:10.1091/mbc.E13-07-0412
     notes: Niepel et al. 2013 connected Mlp1/Mlp2 basket filaments to mRNP docking,
@@ -149,18 +157,18 @@ causal_graphs:
       notes: Niepel et al. 2013 identified yeast Mlp2p as a nuclear-basket component.
 discussions:
 - discussion_id: resolve_nuclear_basket_component_boundaries
-  prompt: Resolve whether Nup60, Nup1, Nup2, Pml39, TREX-2, Ulp1, and related nucleoplasmic
-    mRNA-export or chromatin factors should be curated as nuclear-basket constituents
-    or associated machinery.
+  prompt: Resolve which Nup60, Nup1, Nup2, and Pml39 basket Nups should be curated
+    as nuclear-basket constituents, and which TREX-2, Ulp1, mRNA-export, SUMO-regulation,
+    or chromatin factors should remain associated machinery.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#mlp1_family
   - components#mlp2_family
   rationale: Recent yeast work places Nup60 and Pml39 in basket anchoring and stoichiometry,
-    but this first record models only the unambiguous coiled-coil Mlp1/Mlp2 basket
-    filaments until Nup60, Pml39, FG-Nup, and accessory-factor boundaries are reviewed
-    explicitly.
+    and additional export or chromatin regulators can be recruited to the basket.
+    This first record models only the unambiguous coiled-coil Mlp1/Mlp2 basket filaments
+    until basket-Nup and recruited-factor boundaries are reviewed explicitly.
   evidence:
   - reference: DOI:10.1038/s41556-024-01484-x
     notes: Stankunas and Kohler 2024 define Nup60 interactions that anchor flexible
