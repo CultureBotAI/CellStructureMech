@@ -20,6 +20,14 @@ curation_history:
     taxonomic scope, photosynthesis and stromal protein-import functions, a nonmechanistic
     envelope-and-import graph, and a TOC-TIC grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T19:21:29Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: Resolved review findings by connecting the chloroplast thylakoid membrane
+    component in the graph, narrowing the Chlamydomonas canonical-example note to
+    its direct proteome evidence, and removing an unused Sun et al. 2025 record-level
+    citation.
+  llm_assisted: true
 parent_structures:
 - GO:0009536
 has_part:
@@ -62,8 +70,8 @@ components:
   component_role: CONSTITUENT
   grounding: GO:0009535
   essentiality: UNKNOWN
-  role: Pigmented membrane of chloroplast thylakoids that houses the photosynthetic
-    electron-transport complexes.
+  role: Pigmented membrane that bounds chloroplast thylakoid cisternae in the chloroplast
+    stroma.
   evidence:
   - reference: GO:0009535
     notes: GO:0009535 defines the chloroplast thylakoid membrane as the pigmented
@@ -103,8 +111,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
-  note: Unicellular green-algal model used for chloroplast proteome, thylakoid-biogenesis,
-    and TOC-TIC envelope import studies.
+  note: Unicellular green-algal model used to compare the Chlamydomonas chloroplast
+    proteome and metabolic repertoire with plant chloroplasts.
   reference: DOI:10.1007/s00294-011-0339-1
 functions:
 - function_id: photosynthesis
@@ -167,9 +175,6 @@ evidence:
 - reference: DOI:10.1016/j.cell.2022.10.030
   notes: Jin et al. 2022, 'Structure of a TOC-TIC supercomplex spanning two chloroplast
     envelope membranes', Cell.
-- reference: DOI:10.1093/plphys/kiaf111
-  notes: Sun et al. 2025, 'Membranous translation platforms in the chloroplast of
-    Chlamydomonas reinhardtii', Plant Physiology.
 causal_graphs:
 - graph_id: chlamydomonas_chloroplast_envelope_and_import
   title: Chloroplast envelope and thylakoids organize import
@@ -208,6 +213,11 @@ causal_graphs:
     label: chloroplast thylakoid
     node_type: STRUCTURE
     grounding: GO:0009534
+  - node_id: chloroplast_thylakoid_membrane
+    label: chloroplast thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0009535
+    component_ref: chloroplast_thylakoid_membrane
   - node_id: toc_tic_supercomplex
     label: TOC-TIC import supercomplex
     node_type: GENE_OR_PROTEIN
@@ -260,6 +270,15 @@ causal_graphs:
     - reference: GO:0009507
       notes: GO:0009507 defines chloroplasts as chlorophyll-containing plastids with
         thylakoids embedded in a stroma.
+  - subject: chloroplast_thylakoid_membrane
+    predicate: bounds
+    object: chloroplast_thylakoid
+    description: The chloroplast thylakoid membrane bounds each chloroplast thylakoid
+      cisterna.
+    evidence:
+    - reference: GO:0009535
+      notes: GO:0009535 defines the chloroplast thylakoid membrane as the pigmented
+        membrane of a chloroplast thylakoid.
   - subject: toc_tic_supercomplex
     predicate: spans
     object: chloroplast_envelope
