@@ -24,6 +24,14 @@ curation_history:
   action: NORMALIZED_GRAPH
   changes: Changed the low-pH extension trigger node from CHEMICAL to ENVIRONMENTAL_FACTOR.
   llm_assisted: true
+- timestamp: '2026-09-11T13:33:10Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #486 by removing wild-type Azorhizobium from taxonomic scope,
+    resolved #487 by restricting pH-triggered extension evidence to direct acidification
+    data, and resolved #488 by adding Caedibacter taeniospiralis as a directly observed
+    natural producer.'
+  llm_assisted: true
 parent_structures:
 - GO:0016234
 synonyms:
@@ -51,18 +59,18 @@ components:
     notes: Heruth et al. 1994 genetically characterized R-body synthesis and assembly
       determinants in Caedibacter taeniospiralis strains 47 and 116.
   - reference: DOI:10.1128/mbio.00715-17
-    notes: Matsuoka et al. 2017 demonstrated Reb-dependent R-body production in Azorhizobium
-      caulinodans.
+    notes: Matsuoka et al. 2017 showed that deleting praR derepresses the Azorhizobium
+      caulinodans reb operon and permits R-body production.
   - reference: DOI:10.1038/s41467-021-24796-0
     notes: Wang et al. 2021 showed that Pseudomonas aeruginosa PA14 produces extendable
       Reb-based R-bodies.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:438753
-  taxon_label: Azorhizobium caulinodans ORS 571
+- taxon_id: NCBITaxon:28907
+  taxon_label: Caedibacter taeniospiralis
   presence: COMMON
-  note: Azorhizobium caulinodans ORS571 carries a regulated reb operon and produces
-    R-body inclusions under inducing conditions.
-  reference: DOI:10.1128/mbio.00715-17
+  note: Caedibacter taeniospiralis strains 47 and 116 carry plasmid-borne R-body systems
+    used to genetically characterize R-body synthesis and assembly.
+  reference: DOI:10.1128/jb.176.12.3559-3567.1994
 - taxon_id: NCBITaxon:208963
   taxon_label: Pseudomonas aeruginosa UCBPP-PA14
   presence: COMMON
@@ -70,11 +78,11 @@ taxonomic_distribution:
     R-bodies.
   reference: DOI:10.1038/s41467-021-24796-0
 canonical_examples:
-- taxon_id: NCBITaxon:438753
-  taxon_label: Azorhizobium caulinodans ORS 571
-  note: Legume microsymbiont used to connect chromosomal reb-operon regulation with
-    R-body production.
-  reference: DOI:10.1128/mbio.00715-17
+- taxon_id: NCBITaxon:28907
+  taxon_label: Caedibacter taeniospiralis
+  note: Classical Paramecium endosymbiont species whose strains 47 and 116 were used
+    to genetically characterize R-body synthesis and assembly determinants.
+  reference: DOI:10.1128/jb.176.12.3559-3567.1994
 - taxon_id: NCBITaxon:208963
   taxon_label: Pseudomonas aeruginosa UCBPP-PA14
   note: Opportunistic pathogen strain used to show that a native Pseudomonas Reb cassette
@@ -89,9 +97,6 @@ functions:
   - reference: DOI:10.1021/acssynbio.5b00237
     notes: Polka and Silver 2016 engineered and imaged type 51 R-bodies that extend
       from coiled ribbons into tubes after acidification.
-  - reference: DOI:10.1038/s41467-021-24796-0
-    notes: Wang et al. 2021 characterized pH-responsive extension of native Pseudomonas
-      PA14 R-bodies.
 evidence:
 - reference: DOI:10.1128/jb.176.12.3559-3567.1994
   notes: Heruth et al. 1994, 'Characterization of genetic determinants for R body
@@ -140,8 +145,8 @@ causal_graphs:
     description: R-body structural proteins assemble into coiled proteinaceous ribbons.
     evidence:
     - reference: DOI:10.1128/mbio.00715-17
-      notes: Matsuoka et al. 2017 expressed the Azorhizobium caulinodans reb operon
-        and observed R-body production.
+      notes: Matsuoka et al. 2017 linked derepression of the Azorhizobium caulinodans
+        reb operon to R-body production.
     - reference: DOI:10.1038/s41467-021-24796-0
       notes: Wang et al. 2021 connected the Pseudomonas PA14 R-body cassette with
         native R-body production.
@@ -153,9 +158,6 @@ causal_graphs:
     - reference: DOI:10.1021/acssynbio.5b00237
       notes: Polka and Silver 2016 engineered R-bodies whose extension pH could be
         tuned.
-    - reference: DOI:10.1038/s41467-021-24796-0
-      notes: Wang et al. 2021 characterized pH-sensitive extension of Pseudomonas
-        PA14 R-bodies.
   - subject: coiled_r_body
     predicate: extends into
     object: extended_r_body_tube
@@ -173,9 +175,9 @@ discussions:
   attaches_to:
   - components#reb_proteins
   rationale: The first R-body record keeps Reb proteins as a broad label-only cohort
-    because Reb loci vary among Caedibacter, Azorhizobium and Pseudomonas systems,
-    and this pass did not verify an exact protein-family CURIE for the structural
-    ribbon constituents.
+    because Reb loci vary among Caedibacter, derepressed Azorhizobium and Pseudomonas
+    PA14 systems, and this pass did not verify an exact protein-family CURIE for the
+    structural ribbon constituents.
   evidence:
   - reference: DOI:10.1534/g3.112.005231
     notes: Raymann et al. 2013 surveyed divergent Reb homologs in proteobacterial

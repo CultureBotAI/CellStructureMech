@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/r_body.yaml
+  slug: r_body
+session:
+  id: 2026-09-11T133322Z-codex-85c660
+  timestamp: '2026-09-11T13:33:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/486
+  - https://github.com/CultureBotAI/CellStructureMech/issues/487
+  - https://github.com/CultureBotAI/CellStructureMech/issues/488
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/485
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Resolved R-body PR review issues
+  details: 'Resolved #486 by removing Azorhizobium caulinodans ORS 571 from taxonomic_distribution
+    and keeping its derepressed praR-mutant evidence scoped to component assembly; resolved
+    #487 by restricting pH-triggered extension evidence to the direct type 51 acidification
+    paper; resolved #488 by adding Caedibacter taeniospiralis as the direct natural example.'
