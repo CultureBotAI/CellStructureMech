@@ -36,6 +36,19 @@ curation_history:
     row so taxonomic scope follows the direct structural evidence rather than the
     GO taxon restriction.
   llm_assisted: true
+- timestamp: '2026-09-11T13:12:44Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issue #484 by replacing the grounded ventral-disc
+    microtubule-array component with an ungrounded tubulin protein constituent and
+    moving the GO microtubule array into the causal graph as a STRUCTURE node.'
+  llm_assisted: true
+- timestamp: '2026-09-11T13:13:05Z'
+  curator: codex
+  action: NORMALIZED_YAML
+  changes: Expanded a repeated graph-edge evidence mapping into an independent YAML
+    mapping so the record does not emit anchors and aliases.
+  llm_assisted: true
 synonyms:
 - synonym_text: ventral adhesive disc
   synonym_type: EXACT_SYNONYM
@@ -54,14 +67,13 @@ has_part:
 - GO:0097592
 - GO:0097596
 components:
-- component_id: ventral_disc_microtubules
-  label: ventral disc microtubule array
+- component_id: ventral_disc_tubulins
+  label: ventral disc tubulins
   component_type: PROTEIN
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  grounding: GO:0097593
-  role: A spiral microtubule array that forms the scaffold for the Giardia ventral
-    disc.
+  role: Tubulin constituents that polymerize into the spiral microtubule array of
+    the Giardia ventral disc.
   evidence:
   - reference: GO:0097597
     notes: Gene Ontology models the ventral disc as a Giardia organelle characterized
@@ -69,6 +81,9 @@ components:
   - reference: DOI:10.1371/journal.pone.0043783
     notes: Schwartz et al. 2012 used electron tomography to resolve the Giardia ventral
       disc microtubule spiral and its associated microribbons and crossbridges.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for Giardia ventral-disc alpha- and
+    beta-tubulins was verified in this pass.
 - component_id: disc_associated_proteins
   label: ventral disc-associated proteins
   component_type: PROTEIN
@@ -148,10 +163,14 @@ causal_graphs:
     while leaving DAP-specific assembly, actin-associated regulation and disc contraction
     mechanisms unresolved.
   nodes:
-  - node_id: ventral_disc_microtubules
-    label: ventral disc microtubule array
+  - node_id: ventral_disc_tubulins
+    label: ventral disc tubulins
     node_type: GENE_OR_PROTEIN
-    component_ref: ventral_disc_microtubules
+    component_ref: ventral_disc_tubulins
+  - node_id: ventral_disc_microtubule_array
+    label: ventral disc microtubule array
+    node_type: STRUCTURE
+    grounding: GO:0097593
   - node_id: disc_associated_proteins
     label: ventral disc-associated proteins
     node_type: GENE_OR_PROTEIN
@@ -176,12 +195,24 @@ causal_graphs:
     label: trophozoite attachment
     node_type: BIOLOGICAL_PROCESS
   edges:
-  - subject: ventral_disc_microtubules
-    predicate: form scaffold of
-    object: ventral_disc
-    description: A spiral microtubule array forms the main cytoskeletal scaffold of
-      the ventral disc.
+  - subject: ventral_disc_tubulins
+    predicate: polymerize into
+    object: ventral_disc_microtubule_array
+    description: Tubulins polymerize into the spiral microtubule array of the Giardia
+      ventral disc.
     evidence:
+    - reference: DOI:10.1371/journal.pone.0043783
+      notes: Schwartz et al. 2012 resolved the Giardia ventral disc microtubule spiral
+        by electron tomography.
+  - subject: ventral_disc_microtubule_array
+    predicate: forms scaffold of
+    object: ventral_disc
+    description: The spiral microtubule array forms the main cytoskeletal scaffold
+      of the ventral disc.
+    evidence:
+    - reference: GO:0097593
+      notes: Gene Ontology models GO:0097593 as the ventral disc microtubule-array
+        substructure.
     - reference: DOI:10.1371/journal.pone.0043783
       notes: Schwartz et al. 2012 resolved the Giardia ventral disc microtubule spiral
         by electron tomography.
@@ -231,16 +262,18 @@ causal_graphs:
 discussions:
 - discussion_id: resolve_giardia_ventral_disc_protein_grounding
   prompt: Resolve exact source-neutral groundings and finer boundaries for Giardia
-    ventral-disc DAPs, giardins, microribbon proteins, crossbridge proteins and lateral-crest
-    proteins.
+    ventral-disc tubulins, DAPs, giardins, microribbon proteins, crossbridge proteins
+    and lateral-crest proteins.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
+  - components#ventral_disc_tubulins
   - components#disc_associated_proteins
-  rationale: The first ventral disc record curates a broad disc-associated protein
-    cohort because the literature defines many DAP and giardin constituents with distinct
-    substructure localizations, but this pass did not verify exact protein-family
-    CURIEs or stable complex boundaries for each substructure.
+  rationale: The first ventral disc record curates broad tubulin and disc-associated
+    protein cohorts because the literature defines alpha/beta-tubulin microtubules
+    and many DAP or giardin constituents with distinct substructure localizations,
+    but this pass did not verify exact protein-family CURIEs or stable complex boundaries
+    for each substructure.
   evidence:
   - reference: DOI:10.1371/journal.pntd.0001442
     notes: Hagen et al. 2011 localized multiple new proteins to the ventral disc and

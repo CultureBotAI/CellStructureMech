@@ -190,7 +190,7 @@
         {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
-          "cosine_similarity": 0.88309701
+          "cosine_similarity": 0.883097
         }
       ]
     },
@@ -221,7 +221,7 @@
         {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
-          "cosine_similarity": 0.87644538
+          "cosine_similarity": 0.87644537
         }
       ]
     },
@@ -252,7 +252,7 @@
         {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
-          "cosine_similarity": 0.86910962
+          "cosine_similarity": 0.86910961
         }
       ]
     },
@@ -361,7 +361,7 @@
         {
           "identifier": "GO:0009424",
           "label": "bacterial-type flagellum hook",
-          "cosine_similarity": 0.87146747
+          "cosine_similarity": 0.87146748
         },
         {
           "identifier": "GO:0009421",
@@ -402,7 +402,7 @@
         {
           "identifier": "GO:0009424",
           "label": "bacterial-type flagellum hook",
-          "cosine_similarity": 0.8408946
+          "cosine_similarity": 0.84089459
         },
         {
           "identifier": "GO:0009431",
@@ -418,7 +418,7 @@
         {
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
-          "cosine_similarity": 0.87146747
+          "cosine_similarity": 0.87146748
         },
         {
           "identifier": "GO:0009288",
@@ -433,7 +433,7 @@
         {
           "identifier": "GO:0009421",
           "label": "bacterial-type flagellum filament cap",
-          "cosine_similarity": 0.8408946
+          "cosine_similarity": 0.84089459
         },
         {
           "identifier": "GO:0009422",
@@ -733,7 +733,7 @@
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.7195642
+          "cosine_similarity": 0.71956419
         },
         {
           "identifier": "GO:0009276",
@@ -769,7 +769,7 @@
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.67685741
+          "cosine_similarity": 0.6768574
         },
         {
           "identifier": "GO:0009428",
@@ -924,7 +924,7 @@
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.7167023
+          "cosine_similarity": 0.71670229
         },
         {
           "identifier": "GO:0005816",
@@ -1089,7 +1089,7 @@
         {
           "identifier": "GO:0097597",
           "label": "ventral disc",
-          "cosine_similarity": 0.67097067
+          "cosine_similarity": 0.677296
         }
       ]
     },
@@ -1346,29 +1346,29 @@
       "label": "ventral disc",
       "neighbors": [
         {
-          "identifier": "GO:0020007",
-          "label": "apical complex",
-          "cosine_similarity": 0.6732924
-        },
-        {
           "identifier": "GO:0020010",
           "label": "conoid",
-          "cosine_similarity": 0.67097067
+          "cosine_similarity": 0.677296
+        },
+        {
+          "identifier": "GO:0020007",
+          "label": "apical complex",
+          "cosine_similarity": 0.67547224
         },
         {
           "identifier": "GO:0020031",
           "label": "polar ring of apical complex",
-          "cosine_similarity": 0.6430337
+          "cosine_similarity": 0.64420596
         },
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.62089951
+          "cosine_similarity": 0.62003514
         },
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.6091055
+          "cosine_similarity": 0.60991225
         }
       ]
     },
@@ -1415,7 +1415,7 @@
         {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
-          "cosine_similarity": 0.76834631
+          "cosine_similarity": 0.76834632
         },
         {
           "identifier": "GO:0009428",
@@ -1472,7 +1472,7 @@
         {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
-          "cosine_similarity": 0.76720678
+          "cosine_similarity": 0.76720679
         },
         {
           "identifier": "GO:0120101",
@@ -2531,7 +2531,7 @@
         {
           "identifier": "GO:0032047",
           "label": "mitosome",
-          "cosine_similarity": 0.68218604
+          "cosine_similarity": 0.68218605
         },
         {
           "identifier": "GO:0055039",
@@ -2541,7 +2541,7 @@
         {
           "identifier": "GO:0140266",
           "label": "Woronin body",
-          "cosine_similarity": 0.6690762
+          "cosine_similarity": 0.66907619
         },
         {
           "identifier": "GO:0110143",
@@ -3089,7 +3089,7 @@
         {
           "identifier": "GO:0044612",
           "label": "nuclear pore linkers",
-          "cosine_similarity": 0.86085702
+          "cosine_similarity": 0.86085703
         },
         {
           "identifier": "GO:0044613",
@@ -3166,7 +3166,7 @@
         {
           "identifier": "GO:0044612",
           "label": "nuclear pore linkers",
-          "cosine_similarity": 0.79648718
+          "cosine_similarity": 0.79648719
         }
       ]
     },
@@ -3213,7 +3213,7 @@
         {
           "identifier": "GO:0005643",
           "label": "nuclear pore",
-          "cosine_similarity": 0.86085702
+          "cosine_similarity": 0.86085703
         },
         {
           "identifier": "GO:0031080",
@@ -3228,7 +3228,7 @@
         {
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.80382582
+          "cosine_similarity": 0.80382583
         }
       ]
     },
@@ -3254,12 +3254,12 @@
         {
           "identifier": "GO:0044612",
           "label": "nuclear pore linkers",
-          "cosine_similarity": 0.80382582
+          "cosine_similarity": 0.80382583
         },
         {
           "identifier": "GO:0031080",
           "label": "nuclear pore outer ring",
-          "cosine_similarity": 0.79078506
+          "cosine_similarity": 0.79078507
         }
       ]
     },
@@ -3290,7 +3290,7 @@
         {
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.79078506
+          "cosine_similarity": 0.79078507
         }
       ]
     },
@@ -3518,12 +3518,12 @@
         {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.78281928
+          "cosine_similarity": 0.78281929
         },
         {
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
-          "cosine_similarity": 0.75271001
+          "cosine_similarity": 0.75271002
         },
         {
           "identifier": "GO:0043684",
@@ -3533,12 +3533,12 @@
         {
           "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
           "label": "type IX protein secretion system complex",
-          "cosine_similarity": 0.74461504
+          "cosine_similarity": 0.74461505
         },
         {
           "identifier": "GO:0015627",
           "label": "type II protein secretion system complex",
-          "cosine_similarity": 0.73891398
+          "cosine_similarity": 0.73891399
         }
       ]
     },

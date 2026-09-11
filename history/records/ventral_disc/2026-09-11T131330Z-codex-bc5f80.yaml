@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ventral_disc.yaml
+  slug: ventral_disc
+session:
+  id: 2026-09-11T131330Z-codex-bc5f80
+  timestamp: '2026-09-11T13:13:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/484
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/483
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fix ventral disc tubulin component boundary
+  details: 'Addressed PR review issue #484 by replacing the GO-grounded ventral disc microtubule
+    array component with an ungrounded molecular ventral-disc tubulin component, retaining
+    GO:0097593 as a has_part and STRUCTURE graph node, adding an array-to-disc graph edge,
+    and attaching the protein-grounding TODO to the tubulin component.'
