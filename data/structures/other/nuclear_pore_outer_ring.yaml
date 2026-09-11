@@ -21,6 +21,13 @@ curation_history:
     example, nuclear-pore scaffold function, DOI/GO evidence, an outer-ring assembly
     graph, and a Y-complex grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T06:51:25Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #431 and #432 by routing Nup84 component edges through an intermediate
+    Nup84/Y-complex spoke node before the outer ring and narrowing the Saccharomyces
+    cerevisiae example to the Lutzmann-supported reconstitution claim.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Nup84 complex
   synonym_type: RELATED_SYNONYM
@@ -186,7 +193,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast model in which the heptameric Nup84 outer-ring subcomplex was
-    reconstituted and structurally mapped.
+    reconstituted from seven nucleoporins.
   reference: DOI:10.1093/emboj/21.3.387
 functions:
 - function_id: nuclear_pore_scaffold_assembly
@@ -221,9 +228,9 @@ evidence:
     Annual Review of Biophysics.
 causal_graphs:
 - graph_id: nup84_complex_outer_ring_assembly
-  title: Nup84/Y-complex nucleoporins build the outer ring
-  description: Seven Saccharomyces coat-nucleoporin families assemble into the Nup84/Y
-    complex that contributes to the nuclear pore outer ring scaffold.
+  title: Nup84/Y-complex spokes build the outer ring
+  description: Seven Saccharomyces coat-nucleoporin families assemble into a Nup84/Y-complex
+    spoke, and spoke-like modules contribute to the nuclear pore outer-ring scaffold.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph records Nup84-complex membership without asserting copy number,
@@ -257,6 +264,9 @@ causal_graphs:
     label: Seh1-family nucleoporin
     node_type: GENE_OR_PROTEIN
     component_ref: seh1_family
+  - node_id: nup84_complex_spoke
+    label: Nup84/Y-complex spoke
+    node_type: STRUCTURE
   - node_id: nuclear_pore_outer_ring
     label: nuclear pore outer ring
     node_type: STRUCTURE
@@ -264,7 +274,7 @@ causal_graphs:
   edges:
   - subject: nup84_nup107_family
     predicate: assembles into
-    object: nuclear_pore_outer_ring
+    object: nup84_complex_spoke
     description: Nup84/Nup107-family nucleoporin is one of the seven coat-nucleoporin
       classes that assemble into the budding-yeast Nup84/Y complex.
     evidence:
@@ -273,7 +283,7 @@ causal_graphs:
         from seven nucleoporins.
   - subject: nup85_family
     predicate: assembles into
-    object: nuclear_pore_outer_ring
+    object: nup84_complex_spoke
     description: Nup85-family nucleoporin is one of the seven coat-nucleoporin classes
       that assemble into the budding-yeast Nup84/Y complex.
     evidence:
@@ -282,7 +292,7 @@ causal_graphs:
         from seven nucleoporins.
   - subject: nup120_nup160_family
     predicate: assembles into
-    object: nuclear_pore_outer_ring
+    object: nup84_complex_spoke
     description: Nup120/Nup160-family nucleoporin is one of the seven coat-nucleoporin
       classes that assemble into the budding-yeast Nup84/Y complex.
     evidence:
@@ -291,7 +301,7 @@ causal_graphs:
         from seven nucleoporins.
   - subject: nup133_family
     predicate: assembles into
-    object: nuclear_pore_outer_ring
+    object: nup84_complex_spoke
     description: Nup133-family nucleoporin is one of the seven coat-nucleoporin classes
       that assemble into the budding-yeast Nup84/Y complex.
     evidence:
@@ -300,7 +310,7 @@ causal_graphs:
         from seven nucleoporins.
   - subject: nup145c_nup96_family
     predicate: assembles into
-    object: nuclear_pore_outer_ring
+    object: nup84_complex_spoke
     description: Nup145C/Nup96-family nucleoporin is one of the seven coat-nucleoporin
       classes that assemble into the budding-yeast Nup84/Y complex.
     evidence:
@@ -309,7 +319,7 @@ causal_graphs:
         from seven nucleoporins.
   - subject: sec13_family
     predicate: assembles into
-    object: nuclear_pore_outer_ring
+    object: nup84_complex_spoke
     description: Sec13-family nucleoporin is one of the seven coat-nucleoporin classes
       that assemble into the budding-yeast Nup84/Y complex.
     evidence:
@@ -318,13 +328,25 @@ causal_graphs:
         from seven nucleoporins.
   - subject: seh1_family
     predicate: assembles into
-    object: nuclear_pore_outer_ring
+    object: nup84_complex_spoke
     description: Seh1-family nucleoporin is one of the seven coat-nucleoporin classes
       that assemble into the budding-yeast Nup84/Y complex.
     evidence:
     - reference: DOI:10.1093/emboj/21.3.387
       notes: Lutzmann et al. 2002 reconstituted a Y-shaped Saccharomyces Nup84 complex
         from seven nucleoporins.
+  - subject: nup84_complex_spoke
+    predicate: forms spoke of
+    object: nuclear_pore_outer_ring
+    description: Isolated Nup84/Y complexes correspond to spoke-like outer-ring coat
+      modules in the assembled NPC.
+    evidence:
+    - reference: GO:0031080
+      notes: GO:0031080 treats isolated Nup84 complexes as spokes of the nuclear pore
+        outer ring.
+    - reference: DOI:10.1073/pnas.0907453106
+      notes: Seo et al. 2009 used Nup120 structure to propose ring formation by the
+        Nup84 complex.
 discussions:
 - discussion_id: resolve_y_complex_family_groundings
   prompt: Resolve exact source-neutral protein-family groundings for Nup84/Y-complex
