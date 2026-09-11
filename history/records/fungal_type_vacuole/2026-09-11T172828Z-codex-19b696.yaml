@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/fungal_type_vacuole.yaml
+  slug: fungal_type_vacuole
+session:
+  id: 2026-09-11T172828Z-codex-19b696
+  timestamp: '2026-09-11T17:28:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/527
+  - https://github.com/CultureBotAI/CellStructureMech/issues/528
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/526
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added fungal-type vacuole structure record
+  details: Added the GO:0000324 fungal-type vacuole record with GO-backed fungal-type vacuole
+    membrane and lumen parts, Saccharomyces cerevisiae support from Li and Kane 2009, generated
+    embeddings and pages, and follow-up fixes from adversarial review.
