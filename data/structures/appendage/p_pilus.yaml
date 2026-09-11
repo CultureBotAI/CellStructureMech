@@ -3,9 +3,10 @@ label: P pilus
 structure_category: APPENDAGE
 structure_kind: APPENDAGE
 definition: A chaperone-usher adhesive pilus of uropathogenic Escherichia coli built
-  from a PapA helical rod and a PapG-PapF-PapE-PapK tip fibrillum. The P pilus is
-  assembled by the PapD chaperone and PapC usher and uses its distal PapG adhesin
-  to bind host glycolipid receptors.
+  from a PapA helical rod, a PapG-PapF-PapE tip fibrillum, a PapK adaptor that bridges
+  the fibrillum to the rod, and a basal PapH terminator. The PapD chaperone delivers
+  subunits to the PapC usher, which assembles the pilus, and the distal PapG adhesin
+  binds host glycolipid receptors.
 definition_source: DOI:10.1128/ecosalplus.ESP-0007-2017
 mapping_status: PROPOSED
 curation_history:
@@ -26,6 +27,13 @@ curation_history:
   action: REFINED_CAUSAL_GRAPH
   changes: Rephrased the PapE-to-PapK assembly edge as an adaptor connection rather
     than a polymerization edge into PapK.
+  llm_assisted: true
+- timestamp: '2026-09-11T02:15:57Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #388 issues #389 and #390 by keeping PapD in the chaperone-delivery
+    role, assigning pilus polymerization to PapC, and separating the PapG/PapF/PapE
+    tip fibrillum from the PapK tip-to-rod adaptor in definition and assembly prose.'
   llm_assisted: true
 synonyms:
 - synonym_text: pyelonephritis-associated pilus
@@ -150,9 +158,10 @@ canonical_examples:
 functions:
 - function_id: p_pilus_assembly
   label: P pilus assembly
-  description: The PapD chaperone and PapC usher polymerize PapG, PapF, PapE, PapK,
-    PapA, and PapH subunits in a defined order to build the tip fibrillum, helical
-    rod, and basal terminator of the P pilus.
+  description: PapD delivers folded PapG, PapF, PapE, PapK, PapA, and PapH subunits
+    to the PapC usher, which incorporates them in a defined order to build the tip
+    fibrillum, PapK tip-to-rod adaptor, helical rod, and basal terminator of the P
+    pilus.
   evidence:
   - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
     notes: Werneburg and Thanassi 2018 review P pilus assembly as an ordered PapD/PapC
@@ -186,11 +195,11 @@ evidence:
     Escherichia coli', EMBO Reports.
 causal_graphs:
 - graph_id: pap_chaperone_usher_tip_rod_assembly
-  title: PapD and PapC assemble the P pilus tip and rod
+  title: PapC assembles the PapD-delivered P pilus tip and rod
   description: PapD carries pilus subunits to the PapC usher. PapC initiates assembly
-    with the distal PapG adhesin, then incorporates PapF, PapE, and PapK to build
-    the tip fibrillum, PapA repeatedly to form the rod, and PapH to terminate and
-    anchor the completed appendage.
+    with the distal PapG adhesin, then incorporates PapF and PapE to build the tip
+    fibrillum, PapK to bridge the tip to the rod, PapA repeatedly to form the rod,
+    and PapH to terminate and anchor the completed appendage.
   graph_kind: ASSEMBLY
   scope_status: MECHANISTIC
   nodes:

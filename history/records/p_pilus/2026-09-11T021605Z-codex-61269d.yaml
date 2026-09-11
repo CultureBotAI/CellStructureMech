@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/p_pilus.yaml
+  slug: p_pilus
+session:
+  id: 2026-09-11T021605Z-codex-61269d
+  timestamp: '2026-09-11T02:16:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/389
+  - https://github.com/CultureBotAI/CellStructureMech/issues/390
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/388
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed P pilus adversarial review
+  details: 'Resolved PR #388 review issues by sharpening the P pilus definition and assembly
+    graph. PapK is now described as the adaptor that bridges the PapG/PapF/PapE tip fibrillum
+    to the PapA rod rather than as part of the repeated PapE fibrillum, and PapD is constrained
+    to chaperone/delivery language while PapC remains the usher assembly platform.'
