@@ -21,6 +21,13 @@ curation_history:
     constituent, Caulobacter taxonomy, extension-retraction and surface-colonization
     functions, a CpaF/PilA dynamics graph, DOI evidence, and grounding/boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-11T02:51:48Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #395 issues #396 and #397 by collapsing duplicate CpaF retraction
+    edges into one motor edge and typing the terminal surface-colonization outcome
+    as a biological process.'
+  llm_assisted: true
 synonyms:
 - synonym_text: tight-adherence pilus
   synonym_type: EXACT_SYNONYM
@@ -117,9 +124,9 @@ causal_graphs:
   - node_id: abiotic_surface
     label: abiotic surface
     node_type: ENVIRONMENTAL_FACTOR
-  - node_id: surface_probing
-    label: surface probing
-    node_type: STATE
+  - node_id: surface_colonization
+    label: surface colonization
+    node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: pila_major_pilin
     predicate: polymerizes into
@@ -132,11 +139,15 @@ causal_graphs:
   - subject: cpaf_motor
     predicate: extends and retracts
     object: tad_pilus
-    description: CpaF is the Tad pilus motor that supports pilus extension and retraction.
+    description: CpaF is the Tad pilus motor that supports bidirectional processing
+      of PilA subunits, enabling pilus extension and retraction.
     evidence:
     - reference: DOI:10.1038/s41467-024-50280-6
       notes: Hohl et al. 2024 structurally and biochemically analyze bidirectional
         pilus processing by CpaF.
+    - reference: DOI:10.1126/science.aan5706
+      notes: Ellison et al. 2017 show that Caulobacter Tad pili retract and that retraction
+        obstruction stimulates surface sensing.
   - subject: tad_pilus
     predicate: contacts
     object: abiotic_surface
@@ -146,20 +157,11 @@ causal_graphs:
     - reference: DOI:10.1128/mBio.01237-19
       notes: Sangermani et al. 2019 image Tad pilus extension toward the surface during
         Caulobacter colonization assays.
-  - subject: cpaf_motor
-    predicate: retracts
-    object: tad_pilus
-    description: Retraction of the surface-proximal pilus keeps the cell near the
-      substratum during surface exploration.
-    evidence:
-    - reference: DOI:10.1126/science.aan5706
-      notes: Ellison et al. 2017 show that Caulobacter Tad pili retract and that retraction
-        obstruction stimulates surface sensing.
   - subject: tad_pilus
     predicate: supports
-    object: surface_probing
+    object: surface_colonization
     description: Repeated Tad pilus extension and retraction near a surface contributes
-      to dynamic exploration and surface retention.
+      to dynamic exploration and surface colonization.
     evidence:
     - reference: DOI:10.1128/mBio.01237-19
       notes: Sangermani et al. 2019 describe Tad pili as dynamic structures that promote
