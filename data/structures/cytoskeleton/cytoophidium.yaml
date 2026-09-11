@@ -1,0 +1,218 @@
+identifier: GO:0097268
+label: cytoophidium
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A filamentous, membrane-less subcellular structure composed primarily
+  of polymerized metabolic enzymes, most notably cytidine triphosphate synthase (CTPS).
+  Cytoophidia are evolutionarily conserved structures found across archaea, bacteria,
+  and eukaryotes.
+definition_source: GO:0097268
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T16:08:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T16:09:28Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added supramolecular-fiber parentage, CtpS and CTPS synonymy, label-only
+    CTP synthase component curation, Caulobacter vibrioides scope, a cell-curvature
+    function, DOI evidence, a nonmechanistic CtpS-to-crescentin graph, and CTP synthase
+    grounding and crescentin boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0099512
+synonyms:
+- synonym_text: CtpS filament
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/ncb2087
+- synonym_text: CTPS cytoophidium
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1042/BST20221410
+components:
+- component_id: ctp_synthase
+  label: CTP synthase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - pyrG
+  - ctpS
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Reviewed Caulobacter UniProtKB entries and their InterPro/Pfam
+    mappings ground catalytic CTP synthase enzymes or generic domains, not the source-neutral
+    class of cytoophidium-forming CTPS proteins.
+  role: Filament-forming cytidine triphosphate synthase enzyme that polymerizes into
+    the CtpS cytoophidium.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9A7K3
+    protein_label: CTP synthase
+    gene_symbol: pyrG
+    taxon_id: NCBITaxon:190650
+    taxon_label: Caulobacter vibrioides CB15
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-11'
+    role: Reviewed Caulobacter CB15 CTP synthase encoded by pyrG/CC_1720, the CtpS
+      homolog identified as the inner-curvature filament constituent in the discovery
+      paper.
+    evidence:
+    - reference: DOI:10.1038/ncb2087
+      notes: Ingerson-Mahar et al. 2010 identified the Caulobacter CtpS homolog CC1720
+        as the protein whose fluorescent localization matched the electron-cryo-tomography
+        inner-curvature filaments.
+  - uniprot_id: UniProtKB:B8GW64
+    protein_label: CTP synthase
+    gene_symbol: pyrG
+    taxon_id: NCBITaxon:565050
+    taxon_label: Caulobacter vibrioides NA1000
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-11'
+    role: Reviewed CTP synthase entry for Caulobacter vibrioides NA1000/CB15N, the
+      strain background used for wild-type filament imaging.
+    evidence:
+    - reference: DOI:10.1038/ncb2087
+      notes: Ingerson-Mahar et al. 2010 imaged the Caulobacter CtpS-dependent inner-curvature
+        filament in CB15N cells, now classified as Caulobacter vibrioides NA1000.
+  evidence:
+  - reference: DOI:10.1038/ncb2087
+    notes: Ingerson-Mahar et al. 2010 showed that Caulobacter CtpS colocalizes with
+      inner-curvature filaments, that filament abundance responds to untagged CtpS
+      levels and to the CtpS inhibitor DON, and that Escherichia coli CtpS also forms
+      filaments in vivo and in vitro.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  presence: COMMON
+  note: CtpS filaments were directly characterized in Caulobacter crescentus, now
+    classified as Caulobacter vibrioides.
+  reference: DOI:10.1038/ncb2087
+canonical_examples:
+- taxon_id: NCBITaxon:565050
+  taxon_label: Caulobacter vibrioides NA1000
+  note: CB15N/NA1000 laboratory strain in which wild-type inner-curvature filaments
+    were imaged by electron cryo-tomography and connected to CtpS abundance.
+  reference: DOI:10.1038/ncb2087
+functions:
+- function_id: caulobacter_cell_curvature_regulation
+  label: Caulobacter cell-curvature regulation
+  description: Caulobacter CtpS filaments localize along the inner cell curvature
+    and regulate curved morphology independently of CtpS catalytic activity.
+  evidence:
+  - reference: DOI:10.1038/ncb2087
+    notes: Ingerson-Mahar et al. 2010 showed that CtpS filaments regulate Caulobacter
+      cell curvature through a functional interaction with crescentin, separately
+      from the enzyme's CTP biosynthetic activity.
+evidence:
+- reference: GO:0097268
+  notes: Gene Ontology defines cytoophidium as a filamentous membrane-less cellular
+    component composed primarily of polymerized metabolic enzymes including CTPS.
+- reference: DOI:10.1038/ncb2087
+  notes: Ingerson-Mahar, Briegel, Werner, Jensen and Gitai 2010, 'The metabolic enzyme
+    CTP synthase forms cytoskeletal filaments', Nature Cell Biology.
+- reference: DOI:10.1042/BST20221410
+  notes: Guo and Liu 2023 reviewed cytoophidia and CTPS-containing enzyme filaments
+    across domains of life.
+causal_graphs:
+- graph_id: ctps_cytoophidium_curves_caulobacter
+  title: CtpS cytoophidia regulate Caulobacter curvature
+  description: Caulobacter CtpS polymerizes into an inner-curvature filament that
+    functionally interacts with crescentin and supports curved cell morphology.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records CtpS filament formation, localization and morphogenic
+    interaction with crescentin without asserting the molecular contacts or the downstream
+    coupling to envelope growth.
+  nodes:
+  - node_id: ctp_synthase
+    label: CTP synthase
+    node_type: GENE_OR_PROTEIN
+    component_ref: ctp_synthase
+  - node_id: cytoophidium
+    label: cytoophidium
+    node_type: STRUCTURE
+    grounding: GO:0097268
+  - node_id: inner_cell_curvature
+    label: Caulobacter inner cell curvature
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: crescentin_filament
+    label: crescentin filament
+    node_type: STRUCTURE
+    grounding: cellstructuremech:crescentin_filament
+  - node_id: curved_cell_shape
+    label: curved Caulobacter morphology
+    node_type: QUALITY
+  edges:
+  - subject: ctp_synthase
+    predicate: polymerizes into
+    object: cytoophidium
+    description: CtpS self-associates and assembles into filamentous structures in
+      Caulobacter cells.
+    evidence:
+    - reference: DOI:10.1038/ncb2087
+      notes: Ingerson-Mahar et al. 2010 used fluorescence microscopy and electron
+        cryo-tomography to identify CtpS as the Caulobacter inner-curvature filament
+        protein.
+  - subject: cytoophidium
+    predicate: localizes to
+    object: inner_cell_curvature
+    description: The Caulobacter CtpS filament localizes dynamically along the inner
+      curvature during the cell cycle.
+    evidence:
+    - reference: DOI:10.1038/ncb2087
+      notes: Ingerson-Mahar et al. 2010 followed mCherry-CtpS structures that elongated
+        and moved to the inner cell curvature.
+  - subject: cytoophidium
+    predicate: functionally interacts with
+    object: crescentin_filament
+    description: Caulobacter CtpS filaments require crescentin for their morphogenic
+      effect on cell curvature.
+    evidence:
+    - reference: DOI:10.1038/ncb2087
+      notes: Ingerson-Mahar et al. 2010 connected the CtpS morphogenic role to a functional
+        interaction with crescentin.
+  - subject: cytoophidium
+    predicate: regulates
+    object: curved_cell_shape
+    description: CtpS filament function helps tune curved Caulobacter morphology independently
+      of CTP biosynthesis.
+    evidence:
+    - reference: DOI:10.1038/ncb2087
+      notes: Ingerson-Mahar et al. 2010 showed that Caulobacter CtpS overexpression
+        and depletion perturb cell curvature and that the morphogenic effect is separable
+        from catalytic activity.
+discussions:
+- discussion_id: resolve_ctps_family_grounding
+  prompt: Resolve exact source-neutral grounding for full-length cytoophidium-forming
+    CTP synthase proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ctp_synthase
+  rationale: This first cytoophidium record curates the experimentally studied Caulobacter
+    CtpS constituent without asserting that a catalytic CTPS domain, an ATP-grasp
+    fold term or a generic enzyme family accession exactly denotes the filament-forming
+    CTPS component class.
+  evidence:
+  - reference: DOI:10.1038/ncb2087
+    notes: Ingerson-Mahar et al. 2010 identified CtpS as the Caulobacter filament
+      protein and showed that the orthologous Escherichia coli enzyme forms filaments.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: exclude_crescentin_from_ctps_components
+  prompt: Crescentin is a functional interactor, not a curated cytoophidium constituent.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#ctp_synthase
+  rationale: The Caulobacter CtpS filament genetically and functionally interacts
+    with the crescentin filament to regulate cell shape, but the discovery paper identifies
+    CtpS as the protein constituent of the inner-curvature cytoophidium rather than
+    crescentin as a cytoophidium subunit.
+  evidence:
+  - reference: DOI:10.1038/ncb2087
+    notes: Ingerson-Mahar et al. 2010 treated CtpS filaments and crescentin filaments
+      as interacting cytoskeletal systems.
+  posed_by: codex
+  posed_date: '2026-09-11'
