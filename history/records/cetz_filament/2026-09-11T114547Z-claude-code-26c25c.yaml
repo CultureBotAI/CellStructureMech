@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cetz_filament.yaml
+  slug: cetz_filament
+session:
+  id: 2026-09-11T114547Z-claude-code-26c25c
+  timestamp: '2026-09-11T11:45:47Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - data
+  - curation
+  summary: Added CetZ filament structure record
+  details: Created cellstructuremech:cetz_filament with cytoskeleton parentage, archaeal CetZ
+    component curation, Archaea and Haloferax volcanii scope, Haloferax rod-cell-development
+    function, DOI evidence, a nonmechanistic CetZ-to-envelope graph, an open CetZ grounding
+    TODO, and a resolved FtsZ boundary discussion.

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CetZ filament · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>CetZ filament</h1>
+<p class="meta"><code>cellstructuremech:cetz_filament</code> · CYTOSKELETON · FILAMENT · <span class="status">PROPOSED</span></p>
+<p class="definition">An archaeal tubulin-like cytoskeletal filament assembled from CetZ proteins that forms dynamic envelope-associated structures and supports cell-shape remodeling such as rod development in Haloferax volcanii. <small>[<a href="https://doi.org/10.1038/nature13983"><code>DOI:10.1038/nature13983</code></a>]</small></p>
+
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-cetz_proteins"><td>CetZ proteins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>cetZ1, cetZ2</td><td></td><td>ESSENTIAL</td><td>Archaeal tubulin/FtsZ-superfamily GTPases that assemble into dynamic envelope-associated cytoskeletal filaments for cell-shape control.<ul class="evidence"><li><a href="https://doi.org/10.1038/nature13983"><code>DOI:10.1038/nature13983</code></a> <small>Duggin et al. 2015 showed that Haloferax volcanii CetZ1 forms dynamic cytoskeletal structures in vivo and that CetZ crystal structures adopt the FtsZ/tubulin superfamily fold.</small></li><li><a href="https://doi.org/10.3390/biom13010134"><code>DOI:10.3390/biom13010134</code></a> <small>Brown and Duggin 2023 reviewed the diversity and potential multifunctionality of archaeal CetZ tubulin-like cytoskeletal proteins.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2157"><code>NCBITaxon:2157</code></a> Archaea — <strong>VARIABLE</strong>: CetZ tubulin-like cytoskeletal proteins are archaeal FtsZ/tubulin-superfamily proteins and are not asserted to occur in every archaeal lineage. [<a href="https://doi.org/10.3390/biom13010134"><code>DOI:10.3390/biom13010134</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2246"><code>NCBITaxon:2246</code></a> Haloferax volcanii — <strong>COMMON</strong>: Haloferax volcanii is the model haloarchaeon in which CetZ1 dynamic filaments and CetZ-dependent rod-cell development were experimentally characterized. [<a href="https://doi.org/10.1038/nature13983"><code>DOI:10.1038/nature13983</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2246"><code>NCBITaxon:2246</code></a> <em>Haloferax volcanii</em> — Pleomorphic haloarchaeon used to connect CetZ1 dynamic cytoskeletal structures to envelope remodeling, rod-shape development and efficient swimming motility. [<a href="https://doi.org/10.1038/nature13983"><code>DOI:10.1038/nature13983</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>Haloferax rod cell development</strong> — CetZ1-containing filaments remodel the Haloferax volcanii cell envelope to promote the transition from irregular plate-shaped cells into motile rod-shaped cells.<ul class="evidence"><li><a href="https://doi.org/10.1038/nature13983"><code>DOI:10.1038/nature13983</code></a> <small>Duggin et al. 2015 showed that CetZ1 is required for rod-shaped cell development and efficient swimming motility in Haloferax volcanii.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-cetz1_rod_cell_development">CetZ filaments support Haloferax rod-cell development <small>(FUNCTION)</small></h3>
+<p>CetZ proteins polymerize into envelope-associated dynamic filaments that remodel the Haloferax volcanii envelope and promote rod-shape development.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>CetZ proteins</td><td>polymerize into</td><td>CetZ filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature13983"><code>DOI:10.1038/nature13983</code></a> <small>Duggin et al. 2015 resolved CetZ protofilament-like crystal packing and observed dynamic CetZ1-GFP filaments in Haloferax cells.</small></li></ul></td></tr>
+<tr><td>CetZ filament</td><td>associates with</td><td>archaeal cell envelope</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature13983"><code>DOI:10.1038/nature13983</code></a> <small>Duggin et al. 2015 localized CetZ1-GFP spots and short filaments at or near the cell envelope.</small></li></ul></td></tr>
+<tr><td>CetZ filament</td><td>supports</td><td>Haloferax rod cell development</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature13983"><code>DOI:10.1038/nature13983</code></a> <small>Duggin et al. 2015 connected CetZ1 structures with envelope remodeling and rod-cell development.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral grounding for archaeal filament-forming CetZ proteins. <small>This first record curates CetZ1/CetZ2-supported cell-shape cytoskeletal filaments without asserting that a broad FtsZ/tubulin domain or a Haloferax-specific accession exactly denotes archaeal CetZ filament-forming proteins.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): FtsZ division proteins are paralogous tubulin-family proteins rather than CetZ filament constituents. <small>CetZ proteins coexist with FtsZ in many archaea and the Haloferax FtsZ1 division ring is distinct from the dynamic CetZ1 structures that control rod development.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1038/nature13983"><code>DOI:10.1038/nature13983</code></a> <small>Duggin et al. 2015, &#39;CetZ tubulin-like proteins control archaeal cell shape&#39;, Nature.</small></li><li><a href="https://doi.org/10.3390/biom13010134"><code>DOI:10.3390/biom13010134</code></a> <small>Brown and Duggin 2023, &#39;Diversity and Potential Multifunctionality of Archaeal CetZ Tubulin-like Cytoskeletal Proteins&#39;, Biomolecules.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-11T11:45:00Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T11:45:33Z</code> codex · EXPANDED_RECORD — Added cytoskeleton parentage, CetZ component curation, archaeal and Haloferax volcanii scope, rod-cell-development function, DOI evidence, a nonmechanistic CetZ-to-envelope graph, and CetZ grounding and FtsZ boundary discussions.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/cetz_filament.yaml"><code>data/structures/cytoskeleton/cetz_filament.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
