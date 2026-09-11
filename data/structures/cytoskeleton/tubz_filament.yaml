@@ -1,0 +1,188 @@
+identifier: cellstructuremech:tubz_filament
+label: TubZ filament
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A plasmid-encoded bacterial tubulin-like cytoskeletal filament assembled
+  from TubZ GTPase subunits that supports pBtoxis plasmid partitioning in Bacillus
+  thuringiensis.
+definition_source: DOI:10.1101/gad.1546107
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T11:25:27Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T11:26:08Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoskeleton parentage, TubZ component curation, Bacillus thuringiensis
+    pBtoxis scope, pBtoxis partitioning function, DOI evidence, a nonmechanistic TubZRC
+    graph, and TubZ grounding and TubR/tubC boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-11T11:26:26Z'
+  curator: codex
+  action: NARROW_SYNONYMY
+  changes: Removed the pBtoxis TubZ filament related synonym because it was a curator
+    paraphrase rather than an attested alternate label.
+  llm_assisted: true
+- timestamp: '2026-09-11T11:34:57Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issues #470 and #471 by naming pBtoxis tubC in the
+    TubR-tubC graph node and retargeting the adapter edge from TubZ monomers to TubZ
+    filaments.'
+  llm_assisted: true
+parent_structures:
+- GO:0005856
+components:
+- component_id: tubz
+  label: TubZ
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - tubZ
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for plasmid-encoded filament-forming
+    TubZ GTPases was verified in this pass.
+  role: Plasmid-encoded tubulin/FtsZ-family GTPase that polymerizes into dynamic filaments
+    for pBtoxis plasmid partitioning.
+  evidence:
+  - reference: DOI:10.1101/gad.1546107
+    notes: Larsen et al. 2007 characterized Bacillus thuringiensis pBtoxis TubZ as
+      a prokaryotic tubulin-like protein that treadmills and is required for plasmid
+      stability.
+  - reference: DOI:10.1073/pnas.1010176107
+    notes: Aylett et al. 2010 determined the filament structure of the bacterial tubulin
+      homologue TubZ.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1428
+  taxon_label: Bacillus thuringiensis
+  presence: VARIABLE
+  note: The TubZ filament is a plasmid-encoded partition filament experimentally characterized
+    from the Bacillus thuringiensis virulence plasmid pBtoxis; it is not asserted
+    to occur in all Bacillus thuringiensis strains.
+  reference: DOI:10.1101/gad.1546107
+canonical_examples:
+- taxon_id: NCBITaxon:1428
+  taxon_label: Bacillus thuringiensis
+  note: Species hosting the pBtoxis virulence plasmid whose TubZ filaments defined
+    this type III plasmid-partition system.
+  reference: DOI:10.1101/gad.1546107
+functions:
+- function_id: pbtoxis_plasmid_partitioning
+  label: pBtoxis plasmid partitioning
+  description: TubZ filaments interact with TubR-tubC partition complexes to support
+    pBtoxis DNA partitioning and stable plasmid inheritance in Bacillus thuringiensis.
+  evidence:
+  - reference: DOI:10.1101/gad.1546107
+    notes: Larsen et al. 2007 connected TubZ treadmilling to stable inheritance of
+      the Bacillus thuringiensis pBtoxis plasmid.
+  - reference: DOI:10.1073/pnas.1003817107
+    notes: Ni et al. 2010 analyzed TubR DNA binding and TubZ recruitment in the pBtoxis
+      partition system.
+evidence:
+- reference: DOI:10.1101/gad.1546107
+  notes: Larsen, Cusumano, Fujioka, Lim-Fong, Patterson and Pogliano 2007, 'Treadmilling
+    of a prokaryotic tubulin-like protein, TubZ, required for plasmid stability in
+    Bacillus thuringiensis', Genes & Development.
+- reference: DOI:10.1073/pnas.1010176107
+  notes: Aylett, Wang, Michie, Amos and Lowe 2010, 'Filament structure of bacterial
+    tubulin homologue TubZ', PNAS.
+- reference: DOI:10.1073/pnas.1003817107
+  notes: Ni, Xu, Kumaraswami and Schumacher 2010, 'Plasmid protein TubR uses a distinct
+    mode of HTH-DNA binding and recruits the prokaryotic tubulin homolog TubZ to effect
+    DNA partition', PNAS.
+- reference: DOI:10.1073/pnas.1210899109
+  notes: Aylett and Lowe 2012, 'Superstructure of the centromeric complex of TubZRC
+    plasmid partitioning systems', PNAS.
+causal_graphs:
+- graph_id: tubzrc_pbtoxis_partitioning
+  title: TubZ filaments support pBtoxis plasmid partitioning
+  description: TubZ polymerizes into tubulin-like filaments and TubR bound to pBtoxis
+    tubC centromere DNA engages TubZ filaments to support plasmid partitioning.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records TubZ polymerization, TubR-tubC engagement of TubZ
+    filaments and pBtoxis plasmid partitioning without asserting the full TubZRC transport
+    geometry or all type III partition-system variants.
+  nodes:
+  - node_id: tubz
+    label: TubZ
+    node_type: GENE_OR_PROTEIN
+    component_ref: tubz
+  - node_id: tubz_filament
+    label: TubZ filament
+    node_type: STRUCTURE
+    grounding: cellstructuremech:tubz_filament
+  - node_id: tubr_tubc_complex
+    label: TubR-tubC complex
+    node_type: STRUCTURE
+  - node_id: pbtoxis_plasmid_partitioning
+    label: pBtoxis plasmid partitioning
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: tubz
+    predicate: polymerizes into
+    object: tubz_filament
+    description: TubZ subunits polymerize into bacterial tubulin-like cytoskeletal
+      filaments.
+    evidence:
+    - reference: DOI:10.1101/gad.1546107
+      notes: Larsen et al. 2007 characterized TubZ polymers from the pBtoxis plasmid.
+    - reference: DOI:10.1073/pnas.1010176107
+      notes: Aylett et al. 2010 solved the TubZ filament structure.
+  - subject: tubr_tubc_complex
+    predicate: engages
+    object: tubz_filament
+    description: TubR bound to pBtoxis tubC centromere DNA engages TubZ filaments
+      in the pBtoxis partition system.
+    evidence:
+    - reference: DOI:10.1073/pnas.1003817107
+      notes: Ni et al. 2010 reported TubR DNA binding and recruitment of TubZ for
+        DNA partition.
+  - subject: tubz_filament
+    predicate: supports
+    object: pbtoxis_plasmid_partitioning
+    description: TubZ filaments support stable partitioning of the Bacillus thuringiensis
+      pBtoxis plasmid.
+    evidence:
+    - reference: DOI:10.1101/gad.1546107
+      notes: Larsen et al. 2007 connected TubZ treadmilling to pBtoxis plasmid stability.
+    - reference: DOI:10.1073/pnas.1210899109
+      notes: Aylett and Lowe 2012 analyzed the pBtoxis TubR-tubC centromeric partition
+        complex.
+discussions:
+- discussion_id: resolve_tubz_family_grounding
+  prompt: Resolve exact source-neutral grounding for plasmid-encoded filament-forming
+    TubZ GTPases.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#tubz
+  rationale: This first record curates TubZ from the Bacillus thuringiensis pBtoxis
+    partition system without asserting that a broad tubulin/FtsZ GTPase domain accession
+    exactly denotes TubZ filament-forming proteins.
+  evidence:
+  - reference: DOI:10.1101/gad.1546107
+    notes: Larsen et al. 2007 characterized pBtoxis TubZ within the tubulin/FtsZ GTPase
+      superfamily.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: exclude_tubr_tubc_from_filament_components
+  prompt: TubR and tubC centromere DNA are graph-scoped partition adapters rather
+    than TubZ filament constituents.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#tubzrc_pbtoxis_partitioning
+  rationale: TubR bound to the pBtoxis tubC centromere site engages TubZ filaments
+    in the TubZRC partition system, but this centromeric complex is cargo-coupling
+    machinery rather than a TubZ polymer subunit.
+  evidence:
+  - reference: DOI:10.1073/pnas.1003817107
+    notes: Ni et al. 2010 analyzed centromere DNA binding by TubR and recruitment
+      of the TubZ partition filament.
+  posed_by: codex
+  posed_date: '2026-09-11'

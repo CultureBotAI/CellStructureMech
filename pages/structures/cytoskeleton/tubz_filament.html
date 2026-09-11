@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TubZ filament · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>TubZ filament</h1>
+<p class="meta"><code>cellstructuremech:tubz_filament</code> · CYTOSKELETON · FILAMENT · <span class="status">PROPOSED</span></p>
+<p class="definition">A plasmid-encoded bacterial tubulin-like cytoskeletal filament assembled from TubZ GTPase subunits that supports pBtoxis plasmid partitioning in Bacillus thuringiensis. <small>[<a href="https://doi.org/10.1101/gad.1546107"><code>DOI:10.1101/gad.1546107</code></a>]</small></p>
+
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-tubz"><td>TubZ</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>tubZ</td><td></td><td>ESSENTIAL</td><td>Plasmid-encoded tubulin/FtsZ-family GTPase that polymerizes into dynamic filaments for pBtoxis plasmid partitioning.<ul class="evidence"><li><a href="https://doi.org/10.1101/gad.1546107"><code>DOI:10.1101/gad.1546107</code></a> <small>Larsen et al. 2007 characterized Bacillus thuringiensis pBtoxis TubZ as a prokaryotic tubulin-like protein that treadmills and is required for plasmid stability.</small></li><li><a href="https://doi.org/10.1073/pnas.1010176107"><code>DOI:10.1073/pnas.1010176107</code></a> <small>Aylett et al. 2010 determined the filament structure of the bacterial tubulin homologue TubZ.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1428"><code>NCBITaxon:1428</code></a> Bacillus thuringiensis — <strong>VARIABLE</strong>: The TubZ filament is a plasmid-encoded partition filament experimentally characterized from the Bacillus thuringiensis virulence plasmid pBtoxis; it is not asserted to occur in all Bacillus thuringiensis strains. [<a href="https://doi.org/10.1101/gad.1546107"><code>DOI:10.1101/gad.1546107</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1428"><code>NCBITaxon:1428</code></a> <em>Bacillus thuringiensis</em> — Species hosting the pBtoxis virulence plasmid whose TubZ filaments defined this type III plasmid-partition system. [<a href="https://doi.org/10.1101/gad.1546107"><code>DOI:10.1101/gad.1546107</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>pBtoxis plasmid partitioning</strong> — TubZ filaments interact with TubR-tubC partition complexes to support pBtoxis DNA partitioning and stable plasmid inheritance in Bacillus thuringiensis.<ul class="evidence"><li><a href="https://doi.org/10.1101/gad.1546107"><code>DOI:10.1101/gad.1546107</code></a> <small>Larsen et al. 2007 connected TubZ treadmilling to stable inheritance of the Bacillus thuringiensis pBtoxis plasmid.</small></li><li><a href="https://doi.org/10.1073/pnas.1003817107"><code>DOI:10.1073/pnas.1003817107</code></a> <small>Ni et al. 2010 analyzed TubR DNA binding and TubZ recruitment in the pBtoxis partition system.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-tubzrc_pbtoxis_partitioning">TubZ filaments support pBtoxis plasmid partitioning <small>(FUNCTION)</small></h3>
+<p>TubZ polymerizes into tubulin-like filaments and TubR bound to pBtoxis tubC centromere DNA engages TubZ filaments to support plasmid partitioning.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>TubZ</td><td>polymerizes into</td><td>TubZ filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1101/gad.1546107"><code>DOI:10.1101/gad.1546107</code></a> <small>Larsen et al. 2007 characterized TubZ polymers from the pBtoxis plasmid.</small></li><li><a href="https://doi.org/10.1073/pnas.1010176107"><code>DOI:10.1073/pnas.1010176107</code></a> <small>Aylett et al. 2010 solved the TubZ filament structure.</small></li></ul></td></tr>
+<tr><td>TubR-tubC complex</td><td>engages</td><td>TubZ filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.1003817107"><code>DOI:10.1073/pnas.1003817107</code></a> <small>Ni et al. 2010 reported TubR DNA binding and recruitment of TubZ for DNA partition.</small></li></ul></td></tr>
+<tr><td>TubZ filament</td><td>supports</td><td>pBtoxis plasmid partitioning</td><td><ul class="evidence"><li><a href="https://doi.org/10.1101/gad.1546107"><code>DOI:10.1101/gad.1546107</code></a> <small>Larsen et al. 2007 connected TubZ treadmilling to pBtoxis plasmid stability.</small></li><li><a href="https://doi.org/10.1073/pnas.1210899109"><code>DOI:10.1073/pnas.1210899109</code></a> <small>Aylett and Lowe 2012 analyzed the pBtoxis TubR-tubC centromeric partition complex.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral grounding for plasmid-encoded filament-forming TubZ GTPases. <small>This first record curates TubZ from the Bacillus thuringiensis pBtoxis partition system without asserting that a broad tubulin/FtsZ GTPase domain accession exactly denotes TubZ filament-forming proteins.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): TubR and tubC centromere DNA are graph-scoped partition adapters rather than TubZ filament constituents. <small>TubR bound to the pBtoxis tubC centromere site engages TubZ filaments in the TubZRC partition system, but this centromeric complex is cargo-coupling machinery rather than a TubZ polymer subunit.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1101/gad.1546107"><code>DOI:10.1101/gad.1546107</code></a> <small>Larsen, Cusumano, Fujioka, Lim-Fong, Patterson and Pogliano 2007, &#39;Treadmilling of a prokaryotic tubulin-like protein, TubZ, required for plasmid stability in Bacillus thuringiensis&#39;, Genes &amp; Development.</small></li><li><a href="https://doi.org/10.1073/pnas.1010176107"><code>DOI:10.1073/pnas.1010176107</code></a> <small>Aylett, Wang, Michie, Amos and Lowe 2010, &#39;Filament structure of bacterial tubulin homologue TubZ&#39;, PNAS.</small></li><li><a href="https://doi.org/10.1073/pnas.1003817107"><code>DOI:10.1073/pnas.1003817107</code></a> <small>Ni, Xu, Kumaraswami and Schumacher 2010, &#39;Plasmid protein TubR uses a distinct mode of HTH-DNA binding and recruits the prokaryotic tubulin homolog TubZ to effect DNA partition&#39;, PNAS.</small></li><li><a href="https://doi.org/10.1073/pnas.1210899109"><code>DOI:10.1073/pnas.1210899109</code></a> <small>Aylett and Lowe 2012, &#39;Superstructure of the centromeric complex of TubZRC plasmid partitioning systems&#39;, PNAS.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-11T11:25:27Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T11:26:08Z</code> codex · EXPANDED_RECORD — Added cytoskeleton parentage, TubZ component curation, Bacillus thuringiensis pBtoxis scope, pBtoxis partitioning function, DOI evidence, a nonmechanistic TubZRC graph, and TubZ grounding and TubR/tubC boundary discussions.</li><li><code>2026-09-11T11:26:26Z</code> codex · NARROW_SYNONYMY — Removed the pBtoxis TubZ filament related synonym because it was a curator paraphrase rather than an attested alternate label.</li><li><code>2026-09-11T11:34:57Z</code> codex · REVIEW_FIX — Addressed PR review issues #470 and #471 by naming pBtoxis tubC in the TubR-tubC graph node and retargeting the adapter edge from TubZ monomers to TubZ filaments.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/tubz_filament.yaml"><code>data/structures/cytoskeleton/tubz_filament.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

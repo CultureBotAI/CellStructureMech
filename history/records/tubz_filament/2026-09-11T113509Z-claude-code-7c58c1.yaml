@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/tubz_filament.yaml
+  slug: tubz_filament
+session:
+  id: 2026-09-11T113509Z-claude-code-7c58c1
+  timestamp: '2026-09-11T11:35:09Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/470
+  - https://github.com/CultureBotAI/CellStructureMech/issues/471
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/469
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fixed TubZRC graph specificity after PR review
+  details: 'Addressed review issues #470 and #471 by naming the pBtoxis tubC centromere in
+    the TubR-tubC graph node, retargeting the adapter edge from the TubZ protein node to the
+    TubZ filament node, updating function and graph text, and keeping TubR and tubC scoped
+    to the graph instead of the TubZ filament component list.'

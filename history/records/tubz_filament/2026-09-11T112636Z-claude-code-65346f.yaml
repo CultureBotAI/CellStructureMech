@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/tubz_filament.yaml
+  slug: tubz_filament
+session:
+  id: 2026-09-11T112636Z-claude-code-65346f
+  timestamp: '2026-09-11T11:26:36Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - data
+  - curation
+  summary: Added TubZ filament structure record
+  details: Created cellstructuremech:tubz_filament with cytoskeleton parentage, TubZ component
+    curation, Bacillus thuringiensis pBtoxis scope, pBtoxis plasmid-partitioning function,
+    TubZRC DOI evidence, a nonmechanistic TubZRC graph, an open TubZ grounding TODO, and a
+    resolved TubR/tubC filament-boundary discussion.
