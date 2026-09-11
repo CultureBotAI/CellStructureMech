@@ -1,0 +1,168 @@
+identifier: GO:0005777
+label: peroxisome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A small organelle enclosed by a single membrane, and found in most eukaryotic
+  cells; it contains peroxidases and other enzymes involved in metabolic processes
+  including free radical detoxification, lipid catabolism and biosynthesis, and hydrogen
+  peroxide metabolism.
+definition_source: GO:0005777
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-10T14:53:33Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-10T14:55:51Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added peroxisomal membrane and matrix parts, Saccharomyces cerevisiae scope,
+    fatty-acid beta-oxidation and matrix-protein import functions, record evidence,
+    a matrix-import graph, and a peroxin/metabolic-enzyme grounding TODO.
+  llm_assisted: true
+has_part:
+- GO:0005778
+- GO:0005782
+components:
+- component_id: peroxisomal_membrane
+  label: peroxisomal membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0005778
+  essentiality: ESSENTIAL
+  role: Lipid bilayer that bounds the peroxisome and encloses its matrix.
+  evidence:
+  - reference: GO:0005778
+    notes: Gene Ontology cellular-component term for the lipid bilayer surrounding
+      a peroxisome.
+  - reference: DOI:10.1038/nrm3700
+    notes: Smith and Aitchison 2013 review peroxisomes as single-membrane organelles
+      with regulated membrane growth and division.
+- component_id: peroxisomal_matrix
+  label: peroxisomal matrix
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding: GO:0005782
+  essentiality: ESSENTIAL
+  role: Internal matrix volume that houses imported peroxisomal metabolic enzymes.
+  evidence:
+  - reference: GO:0005782
+    notes: Gene Ontology cellular-component term for the volume contained within the
+      peroxisomal membrane.
+  - reference: DOI:10.1093/femsyr/fow038
+    notes: Sibirny 2016 reviewed yeast peroxisomes and their matrix-localized oxidative
+      and biosynthetic metabolism.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Saccharomyces cerevisiae uses peroxisomes for inducible fatty-acid beta-oxidation
+    and has served as a model for peroxisome biogenesis.
+  reference: DOI:10.1093/femsyr/fow038
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model for peroxisomal matrix import, membrane biogenesis and
+    peroxisome inheritance.
+  reference: DOI:10.1016/j.bbamcr.2015.09.008
+functions:
+- function_id: fatty_acid_beta_oxidation
+  label: fatty acid beta-oxidation
+  description: Yeast peroxisomes compartmentalize fatty-acid beta-oxidation enzymes
+    inside the peroxisomal matrix.
+  evidence:
+  - reference: DOI:10.1093/femsyr/fow038
+    notes: Sibirny 2016 reviewed fatty-acid beta-oxidation as a major metabolic function
+      of yeast peroxisomes.
+- function_id: matrix_protein_import
+  label: peroxisomal matrix protein import
+  description: Peroxisomal import receptors and membrane docking machinery deliver
+    nuclear-encoded proteins into the peroxisomal matrix.
+  evidence:
+  - reference: DOI:10.1038/nrm3700
+    notes: Smith and Aitchison 2013 reviewed peroxisomal targeting and matrix-protein
+      import through the peroxisomal membrane.
+  - reference: DOI:10.1016/j.bbamcr.2015.09.008
+    notes: Yuan, Veenhuis and van der Klei 2016 reviewed yeast peroxisome birth and
+      protein import during organelle biogenesis.
+evidence:
+- reference: GO:0005777
+  notes: Gene Ontology cellular-component term for peroxisome.
+- reference: DOI:10.1038/nrm3700
+  notes: Smith and Aitchison 2013, Peroxisomes take shape, Nature Reviews Molecular
+    Cell Biology.
+- reference: DOI:10.1093/femsyr/fow038
+  notes: 'Sibirny 2016, Yeast peroxisomes: structure, functions and biotechnological
+    opportunities, FEMS Yeast Research.'
+- reference: DOI:10.1016/j.bbamcr.2015.09.008
+  notes: Yuan, Veenhuis and van der Klei 2016, The birth of yeast peroxisomes, Biochimica
+    et Biophysica Acta - Molecular Cell Research.
+causal_graphs:
+- graph_id: peroxisomal_matrix_import
+  title: Peroxisomal import builds the metabolic matrix
+  description: The peroxisomal membrane encloses a matrix, and peroxisomal targeting
+    pathways move folded metabolic enzymes across that membrane into the matrix.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: peroxisomal_membrane
+    label: peroxisomal membrane
+    node_type: STRUCTURE
+    grounding: GO:0005778
+    component_ref: peroxisomal_membrane
+  - node_id: peroxisomal_matrix
+    label: peroxisomal matrix
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005782
+    component_ref: peroxisomal_matrix
+  - node_id: pts_matrix_proteins
+    label: peroxisomal targeting signal-bearing matrix proteins
+    node_type: GENE_OR_PROTEIN
+  - node_id: fatty_acid_beta_oxidation
+    label: fatty acid beta-oxidation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: peroxisomal_membrane
+    predicate: bounds
+    object: peroxisomal_matrix
+    description: The single peroxisomal membrane encloses the peroxisomal matrix.
+    evidence:
+    - reference: GO:0005782
+      notes: GO defines the peroxisomal matrix as the volume contained within the
+        membranes of a peroxisome.
+  - subject: pts_matrix_proteins
+    predicate: are imported into
+    object: peroxisomal_matrix
+    description: Targeting-signal-bearing matrix proteins are imported through peroxisomal
+      membrane machinery into the matrix.
+    evidence:
+    - reference: DOI:10.1038/nrm3700
+      notes: Smith and Aitchison 2013 reviewed peroxisomal targeting signal pathways
+        for matrix-protein import.
+  - subject: peroxisomal_matrix
+    predicate: compartmentalizes
+    object: fatty_acid_beta_oxidation
+    description: In yeasts, matrix enzymes inside peroxisomes carry out fatty-acid
+      beta-oxidation.
+    evidence:
+    - reference: DOI:10.1093/femsyr/fow038
+      notes: Sibirny 2016 reviewed fatty-acid beta-oxidation as peroxisome-localized
+        metabolism in yeasts.
+discussions:
+- discussion_id: ground_peroxin_import_and_metabolic_enzymes
+  prompt: Resolve exact groundings for peroxisomal beta-oxidation enzymes and matrix-protein
+    import peroxins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#peroxisomal_matrix_import
+  rationale: This first record grounds the peroxisomal membrane and matrix but leaves
+    the PEX import machinery and fatty-acid beta-oxidation enzymes out of the component
+    table until exact source-neutral family or complex identifiers can be verified.
+  evidence:
+  - reference: DOI:10.1038/nrm3700
+  - reference: DOI:10.1093/femsyr/fow038
+  - reference: DOI:10.1016/j.bbamcr.2015.09.008
+  posed_by: claude
+  posed_date: '2026-09-10'

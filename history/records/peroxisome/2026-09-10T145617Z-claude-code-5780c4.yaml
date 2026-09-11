@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/peroxisome.yaml
+  slug: peroxisome
+session:
+  id: 2026-09-10T145617Z-claude-code-5780c4
+  timestamp: '2026-09-10T14:56:17Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO-grounded peroxisome structure record
+  details: Created data/structures/membrane_organelle/peroxisome.yaml for GO:0005777 peroxisome,
+    including GO-grounded peroxisomal membrane and matrix parts, Saccharomyces cerevisiae
+    scope, fatty-acid beta-oxidation and matrix-protein-import functions, record evidence,
+    a nonmechanistic matrix-import graph, and an open peroxin and metabolic-enzyme grounding
+    TODO.
