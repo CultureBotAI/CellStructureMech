@@ -1,0 +1,188 @@
+identifier: cellstructuremech:hamus
+label: hamus
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: An archaeal cell-surface appendage composed of proteinaceous helical filaments
+  with periodic prickles and a terminal grappling hook, used by Candidatus Altarchaeum
+  hamiconexum cells to attach to biotic and abiotic surfaces.
+definition_source: DOI:10.1111/j.1365-2958.2005.04294.x
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T13:44:40Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T13:45:26Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added hamus synonymy, cell-projection parentage, a label-only 120 kDa protein
+    subunit component, Candidatus Altarchaeum hamiconexum distribution and exemplar
+    rows, surface-adhesion function evidence, DOI provenance, a nonmechanistic hami
+    surface-attachment graph, and a protein-family grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: hami
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1111/j.1365-2958.2005.04294.x
+- synonym_text: altiarchaeal grappling hook
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3389/fmicb.2015.00543
+- synonym_text: nano-grappling hook
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1111/j.1365-2958.2005.04294.x
+parent_structures:
+- GO:0042995
+components:
+- component_id: hamus_120_kda_subunits
+  label: hamus 120 kDa subunits
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The hami of uncultivated Candidatus Altarchaeum hamiconexum are
+    proteinaceous and dominated by 120 kDa subunits, but this pass did not verify
+    an exact source-neutral family CURIE for those altiarchaeal hamus proteins.
+  role: Major proteinaceous constituents of the extracellular helical filament and
+    terminal hook.
+  evidence:
+  - reference: DOI:10.1111/j.1365-2958.2005.04294.x
+    notes: Moissl et al. 2005 biochemically and ultrastructurally characterized hami
+      as mostly 120 kDa proteinaceous subunits assembled into helical appendages with
+      grappling-hook termini.
+  - reference: DOI:10.3389/fmicb.2015.00543
+    notes: Perras et al. 2015 compared the grappling-hook hami of Candidatus Altarchaeum
+      hamiconexum with archaeal S-layer proteins in sequence and structure.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1803513
+  taxon_label: Candidatus Altarchaeum hamiconexum
+  presence: COMMON
+  note: Hami were ultrastructurally characterized on cells of the uncultivated SM1/Altarchaeum
+    archaeon from cold sulphidic spring biofilms.
+  reference: DOI:10.1111/j.1365-2958.2005.04294.x
+canonical_examples:
+- taxon_id: NCBITaxon:1803513
+  taxon_label: Candidatus Altarchaeum hamiconexum
+  note: Uncultivated archaeal species whose surface hami were described by electron
+    microscopy, cryo-electron tomography and biofilm ultrastructural analysis.
+  reference: DOI:10.3389/fmicb.2014.00397
+functions:
+- function_id: biotic_abiotic_surface_adhesion
+  label: biotic and abiotic surface adhesion
+  description: Hami project from the archaeal cell surface and mediate strong adhesion
+    to chemically distinct biotic and abiotic surfaces.
+  evidence:
+  - reference: DOI:10.1111/j.1365-2958.2005.04294.x
+    notes: Moissl et al. 2005 connected each cell's halo of hami with adhesion to
+      surfaces of different chemical composition.
+  - reference: DOI:10.3389/fmicb.2014.00397
+    notes: Perras et al. 2014 localized hami as major contact structures at the SM1/Altarchaeum
+      cell surface in biofilm ultrastructure.
+evidence:
+- reference: DOI:10.1111/j.1365-2958.2005.04294.x
+  notes: Moissl et al. 2005, The unique structure of archaeal hami, highly complex
+    cell appendages with nano-grappling hooks, Molecular Microbiology.
+- reference: DOI:10.3389/fmicb.2014.00397
+  notes: 'Perras et al. 2014, Grappling archaea: ultrastructural analyses of an uncultivated,
+    cold-loving archaeon, and its biofilm, Frontiers in Microbiology.'
+- reference: DOI:10.3389/fmicb.2015.00543
+  notes: Perras et al. 2015, S-layers at second glance? Altiarchaeal grappling hooks
+    (hami) resemble archaeal S-layer proteins in structure and sequence, Frontiers
+    in Microbiology.
+causal_graphs:
+- graph_id: hamus_surface_attachment
+  title: Proteinaceous hami present grappling hooks for surface adhesion
+  description: The 120 kDa hamus subunits make a helical filament with periodic prickles
+    and a terminal grappling hook. Hami project from the Candidatus Altarchaeum hamiconexum
+    cell surface and mediate adhesion to biotic and abiotic surfaces.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records observed hamus ultrastructure and adhesion without
+    modeling the unverified polymerization mechanism or the exact molecular interactions
+    at surface contact sites.
+  nodes:
+  - node_id: hamus_120_kda_subunits
+    label: hamus 120 kDa subunits
+    node_type: GENE_OR_PROTEIN
+    component_ref: hamus_120_kda_subunits
+  - node_id: helical_hamus_filament
+    label: helical hamus filament
+    node_type: STRUCTURE
+  - node_id: periodic_prickles
+    label: periodic hamus prickles
+    node_type: STRUCTURE
+  - node_id: terminal_grappling_hook
+    label: terminal grappling hook
+    node_type: STRUCTURE
+  - node_id: hamus
+    label: hamus
+    node_type: STRUCTURE
+    grounding: cellstructuremech:hamus
+  - node_id: surface_adhesion
+    label: biotic and abiotic surface adhesion
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: hamus_120_kda_subunits
+    predicate: assemble into
+    object: helical_hamus_filament
+    description: The 120 kDa proteinaceous hamus subunits build the helical core of
+      the appendage.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2005.04294.x
+      notes: Moissl et al. 2005 characterized the dominant 120 kDa hamus subunits
+        and the helical appendage ultrastructure.
+  - subject: helical_hamus_filament
+    predicate: bears
+    object: periodic_prickles
+    description: Hami have periodic prickles along their helical filament.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2005.04294.x
+      notes: Moissl et al. 2005 resolved periodic prickles along the helical hamus
+        structure.
+  - subject: helical_hamus_filament
+    predicate: terminates in
+    object: terminal_grappling_hook
+    description: The distal end of each hamus forms a tripartite barbed grappling
+      hook.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2005.04294.x
+      notes: Moissl et al. 2005 identified a tripartite barbed grappling hook at the
+        distal end of the hamus.
+  - subject: terminal_grappling_hook
+    predicate: is part of
+    object: hamus
+    description: The hook is the specialized distal substructure of the full hamus
+      appendage.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2005.04294.x
+      notes: Moissl et al. 2005 combined whole-hamus electron microscopy with cryo-ET
+        of the distal grappling-hook region.
+  - subject: hamus
+    predicate: mediates
+    object: surface_adhesion
+    description: Cell-surface hami support strong attachment to biotic and abiotic
+      surfaces in biofilms.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2005.04294.x
+      notes: Moissl et al. 2005 connected hami with strong cell adhesion to chemically
+        distinct surfaces.
+    - reference: DOI:10.3389/fmicb.2014.00397
+      notes: Perras et al. 2014 analyzed how hami occupy cell-surface contact sites
+        in archaeal biofilms.
+discussions:
+- discussion_id: resolve_hamus_subunit_grounding
+  prompt: Resolve exact source-neutral protein-family groundings and component boundaries
+    for Candidatus Altarchaeum hamiconexum hamus subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#hamus_120_kda_subunits
+  rationale: The first hamus record keeps the 120 kDa structural proteins as a label-only
+    cohort because this uncultivated archaeon's hami have not yet been mapped here
+    to an exact InterPro, Pfam or NCBIfam accession.
+  evidence:
+  - reference: DOI:10.3389/fmicb.2015.00543
+    notes: Perras et al. 2015 compared altiarchaeal hami with S-layer proteins and
+      should guide future source-neutral family grounding.
+  posed_by: codex
+  posed_date: '2026-09-11'
