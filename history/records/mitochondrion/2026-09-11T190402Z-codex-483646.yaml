@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrion.yaml
+  slug: mitochondrion
+session:
+  id: 2026-09-11T190402Z-codex-483646
+  timestamp: '2026-09-11T19:04:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/533
+  - https://github.com/CultureBotAI/CellStructureMech/issues/534
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/532
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Added evidence-backed mitochondrion structure record
+  details: Added a GO:0005739 mitochondrion record with GO-grounded mitochondrial envelope,
+    mitochondrial outer and inner membrane, mitochondrial matrix, and TOM complex components;
+    Saccharomyces cerevisiae proteome and protein-import evidence; oxidative-phosphorylation
+    and matrix-import functions; a nonmechanistic envelope-and-import graph; rendered pages;
+    refreshed embedding artifacts; and review fixes connecting the top-level graph node and
+    narrowing the TOM import edge.
