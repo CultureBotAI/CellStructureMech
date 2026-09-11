@@ -1,0 +1,215 @@
+identifier: GO:0005794
+label: Golgi apparatus
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A membrane-bound cytoplasmic organelle of the endomembrane system that
+  further processes the core oligosaccharides (e.g. N-glycans) added to proteins in
+  the endoplasmic reticulum and packages them into membrane-bound vesicles. The Golgi
+  apparatus operates at the intersection of the secretory, lysosomal, and endocytic
+  pathways.
+definition_source: GO:0005794
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T16:46:43Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T16:47:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Golgi parentage, endomembrane parthood, Golgi membrane parthood,
+    exact synonymy, reviewed-label-only Golgi enzyme and SNARE cohorts, Saccharomyces
+    scope, glycan-processing and cisternal-maturation functions, a nonmechanistic
+    cisternal maturation graph, and a machinery-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T16:51:50Z'
+  curator: codex
+  action: ADDRESSED_REVIEW_ISSUE
+  changes: 'Addressed review issue #522 by adding GO:0031985 Golgi cisterna as a curated
+    Golgi apparatus part and grounding the Golgi cisterna graph node.'
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+part_of:
+- GO:0012505
+has_part:
+- GO:0000139
+- GO:0031985
+synonyms:
+- synonym_text: Golgi complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005794
+components:
+- component_id: golgi_glycosylation_enzymes
+  label: Golgi glycosylation enzymes
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Golgi-resident glycosylation enzymes span multiple unrelated glycosyltransferase
+    families; no exact source-neutral CURIE was asserted for the aggregate enzyme
+    cohort.
+  essentiality: UNKNOWN
+  role: Resident enzymes that remodel glycan cargo as it passes through Golgi cisternae.
+  evidence:
+  - reference: DOI:10.1016/j.ceb.2014.04.010
+    notes: Papanikou and Glick 2014 review how Golgi cisternae maintain processing-enzyme
+      cohorts.
+- component_id: golgi_snare_trafficking_machinery
+  label: Golgi SNARE trafficking machinery
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SNARE domains and SNARE superfamilies are broader than the Golgi
+    trafficking machinery curated here, so no single InterPro or Pfam CURIE was used
+    for this cohort.
+  essentiality: UNKNOWN
+  role: Membrane-fusion machinery that helps organize vesicular traffic to and from
+    Golgi cisternae.
+  evidence:
+  - reference: DOI:10.1016/j.ceb.2014.04.010
+    notes: Papanikou and Glick 2014 review Golgi identity as depending on vesicle
+      capture and fusion machinery, including SNARE pairing.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Live-cell imaging in budding yeast directly resolved maturing Golgi cisternae.
+  reference: DOI:10.1038/nature04717
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding yeast model in which Golgi cisternal maturation was visualized with
+    fluorescent cisternal markers.
+  reference: DOI:10.1038/nature04737
+functions:
+- function_id: glycan_processing_and_secretory_sorting
+  label: glycan processing and secretory sorting
+  description: The Golgi apparatus processes glycoprotein oligosaccharides and sorts
+    membrane-bound cargo within the secretory, endocytic and lysosomal trafficking
+    network.
+  evidence:
+  - reference: GO:0005794
+    notes: GO:0005794 defines the Golgi apparatus as the endomembrane organelle that
+      processes ER-derived core oligosaccharides and packages cargo into membrane-bound
+      vesicles.
+  - reference: DOI:10.1016/j.ceb.2014.04.010
+    notes: Papanikou and Glick 2014 review Golgi compartment identities and resident
+      enzyme organization.
+- function_id: cisternal_maturation
+  label: cisternal maturation
+  description: In budding yeast, individual Golgi cisternae mature from early to late
+    cisternae while resident markers arrive and depart over time.
+  evidence:
+  - reference: DOI:10.1038/nature04717
+    notes: Losev et al. 2006 visualized Golgi maturation dynamics in living Saccharomyces
+      cerevisiae.
+  - reference: DOI:10.1038/nature04737
+    notes: Matsuura-Tokita et al. 2006 used live imaging to follow yeast Golgi cisternal
+      maturation.
+evidence:
+- reference: GO:0005794
+  notes: Gene Ontology cellular-component term for Golgi apparatus.
+- reference: DOI:10.1038/nature04717
+  notes: Losev et al. 2006, 'Golgi maturation visualized in living yeast', Nature.
+- reference: DOI:10.1038/nature04737
+  notes: Matsuura-Tokita et al. 2006, 'Live imaging of yeast Golgi cisternal maturation',
+    Nature.
+- reference: DOI:10.1016/j.ceb.2014.04.010
+  notes: Papanikou and Glick 2014, 'Golgi compartmentation and identity', Current
+    Opinion in Cell Biology.
+causal_graphs:
+- graph_id: yeast_golgi_cisternal_maturation
+  title: Yeast Golgi cisternae mature over time
+  description: Live imaging of Saccharomyces cerevisiae showed that Golgi cisternae
+    change resident marker composition as they mature from early to late compartments.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures marker exchange during cisternal maturation without
+    asserting the complete set of cisternal identity determinants or vesicle-tethering
+    proteins.
+  nodes:
+  - node_id: golgi_apparatus
+    label: Golgi apparatus
+    node_type: STRUCTURE
+    grounding: GO:0005794
+  - node_id: golgi_membrane
+    label: Golgi membrane
+    node_type: STRUCTURE
+    grounding: GO:0000139
+  - node_id: golgi_cisterna
+    label: Golgi cisterna
+    node_type: ORGANELLE
+    grounding: GO:0031985
+  - node_id: early_to_late_cisternal_maturation
+    label: early-to-late cisternal maturation
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: golgi_snare_trafficking_machinery
+    label: Golgi SNARE trafficking machinery
+    node_type: GENE_OR_PROTEIN
+    component_ref: golgi_snare_trafficking_machinery
+  - node_id: golgi_glycosylation_enzymes
+    label: Golgi glycosylation enzymes
+    node_type: GENE_OR_PROTEIN
+    component_ref: golgi_glycosylation_enzymes
+  edges:
+  - subject: golgi_membrane
+    predicate: bounds
+    object: golgi_cisterna
+    description: A Golgi cisterna is a Golgi compartment bounded by Golgi membrane.
+    evidence:
+    - reference: GO:0000139
+      notes: GO:0000139 defines the Golgi membrane as the lipid bilayer around Golgi
+        apparatus compartments.
+  - subject: golgi_cisterna
+    predicate: is part of
+    object: golgi_apparatus
+    description: Yeast Golgi apparatus cisternae are distinct compartments whose identities
+      mature over time.
+    evidence:
+    - reference: DOI:10.1038/nature04717
+      notes: Losev et al. 2006 tracked individual Golgi cisternae in living yeast.
+  - subject: golgi_snare_trafficking_machinery
+    predicate: supports
+    object: early_to_late_cisternal_maturation
+    description: Golgi identity and maturation depend on vesicle capture and fusion
+      machinery such as SNAREs.
+    evidence:
+    - reference: DOI:10.1016/j.ceb.2014.04.010
+      notes: Papanikou and Glick 2014 review SNARE cycling as part of the mechanism
+        that maintains Golgi compartment identity.
+  - subject: golgi_cisterna
+    predicate: undergoes
+    object: early_to_late_cisternal_maturation
+    description: In yeast, Golgi cisternae transition from early to late marker composition.
+    evidence:
+    - reference: DOI:10.1038/nature04737
+      notes: Matsuura-Tokita et al. 2006 visualized yeast Golgi cisternal maturation
+        in living cells.
+  - subject: golgi_glycosylation_enzymes
+    predicate: reside in
+    object: golgi_apparatus
+    description: Golgi processing enzymes are organized into distinct cisternal compartments.
+    evidence:
+    - reference: DOI:10.1016/j.ceb.2014.04.010
+      notes: Papanikou and Glick 2014 review the organization of Golgi resident enzymes
+        by compartment identity.
+discussions:
+- discussion_id: ground_golgi_resident_machinery
+  prompt: Resolve exact source-neutral family groundings for Golgi SNARE trafficking
+    proteins and resident glycosylation enzymes, or split the grouped cohorts where
+    exact family terms exist.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#golgi_glycosylation_enzymes
+  - components#golgi_snare_trafficking_machinery
+  rationale: This first Golgi apparatus record avoids broad SNARE or glycosyltransferase
+    domain groundings that would overclaim exact identity for Golgi-specific protein
+    cohorts.
+  evidence:
+  - reference: DOI:10.1016/j.ceb.2014.04.010
+    notes: Papanikou and Glick 2014 review Golgi resident enzyme and SNARE cycling
+      models.
+  posed_by: codex
+  posed_date: '2026-09-11'

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/golgi_apparatus.yaml
+  slug: golgi_apparatus
+session:
+  id: 2026-09-11T165503Z-codex-8822db
+  timestamp: '2026-09-11T16:55:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/522
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/521
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Golgi apparatus structure record
+  details: 'Added a GO:0005794 Golgi apparatus record covering intracellular-organelle parentage,
+    endomembrane-system parthood, GO-grounded Golgi membrane and Golgi cisterna parts, the
+    exact Golgi complex synonym, reviewed-label-only Golgi glycosylation enzyme and SNARE
+    trafficking cohorts, Saccharomyces cerevisiae taxonomic scope, glycan-processing and cisternal-maturation
+    functions, a nonmechanistic yeast Golgi cisternal-maturation graph, and a TODO for exact
+    resident-machinery family groundings. Addressed PR #521 review issue #522 by grounding
+    the Golgi cisterna graph node and top-level part to GO:0031985.'
