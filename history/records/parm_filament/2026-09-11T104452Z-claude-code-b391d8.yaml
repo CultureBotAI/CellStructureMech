@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/parm_filament.yaml
+  slug: parm_filament
+session:
+  id: 2026-09-11T104452Z-claude-code-b391d8
+  timestamp: '2026-09-11T10:44:52Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/462
+  - https://github.com/CultureBotAI/CellStructureMech/issues/463
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/461
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - data
+  - curation
+  summary: Tighten ParM filament review findings
+  details: 'Resolved issue #462 by retargeting the ParR/parC component-boundary discussion
+    from the ParM component to the ParMRC plasmid-segregation causal graph. Resolved issue
+    #463 by replacing the R1 plasmids undergo segregation edge with a graph-local ParR-parC
+    centromere-complex node and a ParM-filament support edge for R1 plasmid segregation.'
