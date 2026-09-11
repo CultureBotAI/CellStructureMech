@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/bactofilin_filament.yaml
+  slug: bactofilin_filament
+session:
+  id: 2026-09-11T102158Z-claude-code-cba182
+  timestamp: '2026-09-11T10:21:58Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/459
+  - https://github.com/CultureBotAI/CellStructureMech/issues/460
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/458
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - data
+  - curation
+  summary: Tighten bactofilin filament review findings
+  details: 'Resolved issue #459 by replacing the narrow BacA/BacB filament synonym with a
+    related Caulobacter BacA/BacB polar bactofilin scaffold synonym, avoiding an unsupported
+    equivalence between the Caulobacter sheet-like in vivo scaffold and a generic filament.
+    Resolved issue #460 by removing bacM from the component gene-symbol list so the first-pass
+    BacA/BacB-centered record no longer implies Myxococcus BacM is directly curated.'
