@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_ring.yaml
+  slug: septin_ring
+session:
+  id: 2026-09-11T053916Z-claude-code-ba52a9
+  timestamp: '2026-09-11T05:39:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/420
+  - https://github.com/CultureBotAI/CellStructureMech/issues/421
+  - https://github.com/CultureBotAI/CellStructureMech/issues/422
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/419
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - canonical_examples
+  - causal_graphs
+  - curation_history
+  summary: Addressed septin ring adversarial review issues
+  details: Resolved the PR review issues by narrowing the Saccharomyces cerevisiae canonical
+    example to an Iwase-supported bud-neck septin-ring claim, scoping the hetero-octamer assembly
+    graph to budding yeast, and typing the hetero-octamer and filament graph nodes as structures
+    rather than individual proteins.
