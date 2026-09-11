@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_pore.yaml
+  slug: nuclear_pore
+session:
+  id: 2026-09-11T062206Z-claude-code-2775b5
+  timestamp: '2026-09-11T06:22:06Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - synonyms
+  - part_of
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added the nuclear pore structure record
+  details: Created a GO:0005643 nuclear pore record with nuclear pore complex synonymy, nuclear-envelope
+    parthood, scaffold, FG-repeat, and membrane nucleoporin component classes, Eukaryota distribution,
+    a Saccharomyces cerevisiae canonical example, a nucleocytoplasmic transport function,
+    DOI and GO evidence, a nonmechanistic nucleoporin assembly and transport graph, and a
+    grounding follow-up discussion.
