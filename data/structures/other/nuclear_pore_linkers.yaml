@@ -21,6 +21,14 @@ curation_history:
     module-linking function, DOI/GO evidence, a conservative linker assembly graph,
     and a linker-Nup grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T07:40:58Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #437 and #438 by narrowing the fungal taxonomic row to sampled
+    ascomycete linker-Nup evidence, scoping Nup145N to the N-terminal linker cleavage
+    product, and adding a resolved boundary discussion that separates Nup145N from
+    outer-ring Nup145C.'
+  llm_assisted: true
 synonyms:
 - synonym_text: linker Nups
   synonym_type: RELATED_SYNONYM
@@ -77,11 +85,11 @@ components:
   gene_symbols:
   - NUP145
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: This first nuclear-pore-linker record curates conserved linker
-    nucleoporins by source-level labels and leaves exact InterPro or Pfam groundings
-    for a later family-by-family pass.
-  role: Linker nucleoporin family represented in fungal nuclear-pore subcomplexes
-    that connect scaffold rings with FG-channel and outer-ring modules.
+  grounding_notes: This first nuclear-pore-linker record curates the Nup145N linker
+    product, not the full Saccharomyces Nup145 precursor or the outer-ring Nup145C
+    product, and leaves an exact source-neutral family grounding for a later pass.
+  role: N-terminal Nup145/Nup98 cleavage-product family that acts as a linker nucleoporin
+    in fungal nuclear-pore subcomplexes.
   evidence:
   - reference: DOI:10.1038/nsmb.3084
     notes: Fischer et al. 2015 studied linker Nups that connect inner-ring, outer-ring,
@@ -90,11 +98,12 @@ components:
     notes: Petrovic et al. 2022 resolved a nuclear-pore linker-scaffold architecture
       at higher resolution.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:4751
-  taxon_label: Fungi
-  presence: COMMON
-  note: Fungal nuclear pores use linker nucleoporins such as Nic96, Nup53/Nup59, and
-    Nup145N to connect inner-ring, outer-ring, and FG-channel modules.
+- taxon_id: NCBITaxon:4890
+  taxon_label: Ascomycota
+  presence: VARIABLE
+  note: Linker-Nup interactions have been characterized in budding yeast and a thermophilic
+    ascomycete, establishing this module in sampled ascomycete nuclear pores without
+    proving uniform phylum-wide composition.
   reference: DOI:10.1038/nsmb.3084
 canonical_examples:
 - taxon_id: NCBITaxon:4932
@@ -204,3 +213,22 @@ discussions:
       NPC modules.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: nup145n_not_nup145c
+  prompt: Keep the Nup145N/Nup98 linker class distinct from the Nup145C/Nup96 outer-ring
+    product.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#nup145n_nup98_family
+  rationale: The Saccharomyces NUP145 gene encodes a precursor that produces both
+    Nup145N and Nup145C. This record models only the N-terminal linker Nup; the C-terminal
+    product belongs to the Nup84/Y-complex outer ring.
+  evidence:
+  - reference: DOI:10.1038/nsmb.3084
+    notes: Fischer et al. 2015 studied Nup145N as a linker Nup between NPC modules.
+  - reference: DOI:10.1093/emboj/21.3.387
+    notes: Lutzmann et al. 2002 reconstituted Nup145C with the Saccharomyces Nup84
+      outer-ring complex.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
