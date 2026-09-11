@@ -604,7 +604,7 @@
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.64585418
+          "cosine_similarity": 0.64666848
         },
         {
           "identifier": "GO:0044096",
@@ -686,7 +686,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.72691912
+          "cosine_similarity": 0.72691913
         }
       ]
     },
@@ -898,7 +898,7 @@
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.72263155
+          "cosine_similarity": 0.72119469
         },
         {
           "identifier": "GO:0005816",
@@ -960,7 +960,7 @@
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.76378693
+          "cosine_similarity": 0.76383502
         },
         {
           "identifier": "GO:0009421",
@@ -1043,7 +1043,7 @@
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.80819879
+          "cosine_similarity": 0.8106903
         },
         {
           "identifier": "cellstructuremech:mreb_filament",
@@ -1074,7 +1074,7 @@
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.83559797
+          "cosine_similarity": 0.8360974
         },
         {
           "identifier": "cellstructuremech:crescentin_filament",
@@ -1100,27 +1100,27 @@
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.83559797
+          "cosine_similarity": 0.8360974
         },
         {
           "identifier": "cellstructuremech:crescentin_filament",
           "label": "crescentin filament",
-          "cosine_similarity": 0.80819879
+          "cosine_similarity": 0.8106903
         },
         {
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
-          "cosine_similarity": 0.76908093
+          "cosine_similarity": 0.7670901
         },
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.76378693
+          "cosine_similarity": 0.76383502
         },
         {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.74326598
+          "cosine_similarity": 0.74389384
         }
       ]
     },
@@ -1175,14 +1175,14 @@
           "cosine_similarity": 0.68517453
         },
         {
-          "identifier": "cellstructuremech:parm_filament",
-          "label": "ParM filament",
-          "cosine_similarity": 0.68277576
-        },
-        {
           "identifier": "GO:0005930",
           "label": "axoneme",
           "cosine_similarity": 0.68047585
+        },
+        {
+          "identifier": "cellstructuremech:mreb_filament",
+          "label": "MreB filament",
+          "cosine_similarity": 0.67988166
         }
       ]
     },
@@ -1224,12 +1224,12 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.72624244
+          "cosine_similarity": 0.72624245
         },
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.72465214
+          "cosine_similarity": 0.72273138
         },
         {
           "identifier": "GO:0005930",
@@ -1260,7 +1260,7 @@
         {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
-          "cosine_similarity": 0.76834631
+          "cosine_similarity": 0.76834632
         },
         {
           "identifier": "GO:0009428",
@@ -1275,7 +1275,7 @@
         {
           "identifier": "GO:0120101",
           "label": "bacterial-type flagellum stator complex",
-          "cosine_similarity": 0.74757663
+          "cosine_similarity": 0.74757664
         }
       ]
     },
@@ -1296,7 +1296,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.66919796
+          "cosine_similarity": 0.66919797
         },
         {
           "identifier": "cellstructuremech:bactofilin_filament",
@@ -1384,7 +1384,7 @@
         {
           "identifier": "GO:0036407",
           "label": "mycolate outer membrane",
-          "cosine_similarity": 0.83152517
+          "cosine_similarity": 0.83152518
         },
         {
           "identifier": "GO:0009276",
@@ -1472,7 +1472,7 @@
         {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
-          "cosine_similarity": 0.83152517
+          "cosine_similarity": 0.83152518
         },
         {
           "identifier": "GO:0005886",
@@ -2763,7 +2763,7 @@
         {
           "identifier": "GO:0031080",
           "label": "nuclear pore outer ring",
-          "cosine_similarity": 0.66899866
+          "cosine_similarity": 0.66899865
         }
       ]
     },
@@ -2810,7 +2810,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.65302617
+          "cosine_similarity": 0.65302618
         },
         {
           "identifier": "GO:0031471",
@@ -2918,7 +2918,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.66678423
+          "cosine_similarity": 0.66678424
         }
       ]
     },
@@ -2965,7 +2965,7 @@
         {
           "identifier": "GO:0044612",
           "label": "nuclear pore linkers",
-          "cosine_similarity": 0.81993994
+          "cosine_similarity": 0.81993992
         },
         {
           "identifier": "GO:0044611",
@@ -2975,12 +2975,12 @@
         {
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.7852813
+          "cosine_similarity": 0.78528129
         },
         {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.78210724
+          "cosine_similarity": 0.78210723
         }
       ]
     },
@@ -3032,7 +3032,7 @@
         {
           "identifier": "GO:0044612",
           "label": "nuclear pore linkers",
-          "cosine_similarity": 0.87672636
+          "cosine_similarity": 0.87672637
         },
         {
           "identifier": "GO:0044615",
@@ -3053,7 +3053,7 @@
         {
           "identifier": "GO:0044611",
           "label": "nuclear pore inner ring",
-          "cosine_similarity": 0.87672636
+          "cosine_similarity": 0.87672637
         },
         {
           "identifier": "GO:0005643",
@@ -3063,12 +3063,12 @@
         {
           "identifier": "GO:0031080",
           "label": "nuclear pore outer ring",
-          "cosine_similarity": 0.82943626
+          "cosine_similarity": 0.82943627
         },
         {
           "identifier": "GO:0044613",
           "label": "nuclear pore central transport channel",
-          "cosine_similarity": 0.81993994
+          "cosine_similarity": 0.81993992
         },
         {
           "identifier": "GO:0044615",
@@ -3120,7 +3120,7 @@
         {
           "identifier": "GO:0044612",
           "label": "nuclear pore linkers",
-          "cosine_similarity": 0.82943626
+          "cosine_similarity": 0.82943627
         },
         {
           "identifier": "GO:0044614",
@@ -3177,7 +3177,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.71078342
+          "cosine_similarity": 0.71078343
         },
         {
           "identifier": "GO:0005840",
@@ -3621,7 +3621,7 @@
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.67357025
+          "cosine_similarity": 0.67261163
         },
         {
           "identifier": "cellstructuremech:mreb_filament",

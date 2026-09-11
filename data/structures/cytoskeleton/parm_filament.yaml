@@ -3,8 +3,9 @@ label: ParM filament
 structure_category: CYTOSKELETON
 structure_kind: FILAMENT
 definition: A plasmid-encoded bacterial actin-like cytoskeletal filament assembled
-  from ParM that elongates between ParR-parC plasmid-centromere complexes and drives
-  active segregation of low-copy-number plasmids such as Escherichia coli R1.
+  from ParM that is captured and stabilized by ParR-parC plasmid-centromere complexes
+  to support active segregation of low-copy-number plasmids such as Escherichia coli
+  R1.
 definition_source: DOI:10.1093/emboj/cdf320
 mapping_status: PROPOSED
 curation_history:
@@ -26,6 +27,14 @@ curation_history:
   action: FIX_DISCUSSION_ANCHOR
   changes: Retargeted the ParR/parC component-boundary discussion from the whole components
     section to the concrete ParM component anchor.
+  llm_assisted: true
+- timestamp: '2026-09-11T10:44:43Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issues #462 and #463 by adding a graph-local ParR-parC
+    centromere-complex node, remodeling the final graph edge as ParM-filament support
+    for R1 plasmid segregation, and retargeting the ParR/parC component-boundary discussion
+    to the causal graph.'
   llm_assisted: true
 parent_structures:
 - GO:0005856
@@ -72,8 +81,8 @@ canonical_examples:
 functions:
 - function_id: r1_plasmid_segregation
   label: R1 plasmid segregation
-  description: ParM filaments elongate between ParR-parC complexes on paired R1 plasmids
-    to move sister plasmids apart before host-cell division.
+  description: ParR-parC complexes on paired R1 plasmids capture ParM filaments, and
+    stabilized filament elongation moves sister plasmids apart before host-cell division.
   evidence:
   - reference: DOI:10.1093/emboj/cdf320
     notes: Moller-Jensen et al. 2002 connected ParM filament assembly to active segregation
@@ -101,14 +110,13 @@ evidence:
 causal_graphs:
 - graph_id: parmrc_plasmid_segregation
   title: ParM filaments separate R1 plasmids
-  description: ParM polymerizes into an actin-like filament that is captured by ParR-parC
-    complexes on R1 plasmids; stabilized filament elongation pushes paired plasmids
-    apart.
+  description: ParM polymerizes into actin-like filaments that are captured by ParR-parC
+    complexes on R1 plasmids; stabilized filament elongation supports plasmid segregation.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records the minimal ParM filament polymerization and plasmid-segregation
-    path without modeling ParR-parC nucleation, filament dynamic instability, or antiparallel
-    spindle geometry.
+  scope_notes: The graph records ParM filament polymerization, ParR-parC capture and
+    R1 plasmid segregation without modeling ParR-parC nucleation, filament dynamic
+    instability or antiparallel spindle geometry.
   nodes:
   - node_id: parm
     label: ParM
@@ -118,9 +126,9 @@ causal_graphs:
     label: ParM filament
     node_type: STRUCTURE
     grounding: cellstructuremech:parm_filament
-  - node_id: r1_plasmids
-    label: R1 plasmids
-    node_type: GENETIC_ELEMENT
+  - node_id: parr_parc_centromere_complex
+    label: ParR-parC plasmid-centromere complex
+    node_type: STRUCTURE
   - node_id: r1_plasmid_segregation
     label: R1 plasmid segregation
     node_type: BIOLOGICAL_PROCESS
@@ -135,23 +143,23 @@ causal_graphs:
     - reference: DOI:10.1126/science.1101313
       notes: Garner et al. 2004 followed purified ParM polymerization dynamics.
   - subject: parm_filament
-    predicate: pushes apart
-    object: r1_plasmids
-    description: ParR-parC-stabilized ParM filaments elongate between paired R1 plasmids
-      and move them apart.
+    predicate: is captured by
+    object: parr_parc_centromere_complex
+    description: ParR bound to parC on R1 plasmids captures and stabilizes elongating
+      ParM filament ends.
+    evidence:
+    - reference: DOI:10.1126/science.1229091
+      notes: Gayathri et al. 2012 reconstituted ParR/parC-dependent capture of ParM
+        filaments.
+  - subject: parm_filament
+    predicate: supports
+    object: r1_plasmid_segregation
+    description: ParR-parC-stabilized ParM filament elongation supports active R1
+      plasmid segregation.
     evidence:
     - reference: DOI:10.1126/science.1229091
       notes: Gayathri et al. 2012 reconstituted plasmid separation by antiparallel
         ParM filaments.
-  - subject: r1_plasmids
-    predicate: undergo
-    object: r1_plasmid_segregation
-    description: R1 plasmids carrying parC sites are segregated by the ParMRC actin-like
-      partition system.
-    evidence:
-    - reference: DOI:10.1093/emboj/cdf320
-      notes: Moller-Jensen et al. 2002 showed that ParM supports active R1 plasmid
-        segregation.
 discussions:
 - discussion_id: resolve_parm_family_grounding
   prompt: Resolve exact source-neutral grounding for plasmid-encoded filament-forming
@@ -170,15 +178,16 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-11'
 - discussion_id: exclude_parr_parc_from_filament_components
-  prompt: ParR and parC stabilize ParM filament ends but are outside the ParM filament
-    constituent boundary.
+  prompt: ParR and parC are graph-scoped capture machinery rather than ParM filament
+    constituents.
   kind: INTERPRETATION
   status: RESOLVED
   attaches_to:
-  - components#parm
+  - causal_graphs#parmrc_plasmid_segregation
   rationale: ParR bound to the parC plasmid centromere captures and stabilizes ParM
-    filament ends in the partition spindle, but ParR and parC are not subunits of
-    the ParM polymer itself.
+    filament ends in the partition spindle, so the graph keeps the ParR-parC complex
+    as capture machinery while the component list keeps only the ParM polymer subunit
+    as a constituent.
   evidence:
   - reference: DOI:10.1126/science.1229091
     notes: Gayathri et al. 2012 reconstituted segregation using ParM filaments attached
