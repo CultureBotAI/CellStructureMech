@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/p_pilus.yaml
+  slug: p_pilus
+session:
+  id: 2026-09-11T020526Z-codex-844e1e
+  timestamp: '2026-09-11T02:05:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added P pilus cell-structure record
+  details: Created a new evidence-backed P pilus record minted under cellstructuremech:p_pilus
+    because GO has only the broader pilus class for this structure. The record captures the
+    PapA rod, PapG/PapF/PapE/PapK tip fibrillum, PapH basal terminator, E. coli taxonomic
+    scope, PapD/PapC chaperone-usher assembly, and Gal-alpha(1-4)Gal-dependent adhesion with
+    DOI-backed evidence. Pap family component groundings remain reviewed-label-only until
+    exact source-neutral InterPro, Pfam, or NCBIfam accessions can be verified.

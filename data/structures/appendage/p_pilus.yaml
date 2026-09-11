@@ -1,0 +1,356 @@
+identifier: cellstructuremech:p_pilus
+label: P pilus
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: A chaperone-usher adhesive pilus of uropathogenic Escherichia coli built
+  from a PapA helical rod, a PapG-PapF-PapE tip fibrillum, a PapK adaptor that bridges
+  the fibrillum to the rod, and a basal PapH terminator. The PapD chaperone delivers
+  subunits to the PapC usher, which assembles the pilus, and the distal PapG adhesin
+  binds host glycolipid receptors.
+definition_source: DOI:10.1128/ecosalplus.ESP-0007-2017
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T02:04:09Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T02:05:11Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added P pilus synonymy, GO pilus parentage, PapA/PapG/PapF/PapE/PapK/PapH
+    constituents, E. coli taxonomy, assembly and adhesion functions, literature evidence,
+    a PapD/PapC assembly graph, and grounding/boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-11T02:11:53Z'
+  curator: codex
+  action: REFINED_CAUSAL_GRAPH
+  changes: Rephrased the PapE-to-PapK assembly edge as an adaptor connection rather
+    than a polymerization edge into PapK.
+  llm_assisted: true
+- timestamp: '2026-09-11T02:15:57Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #388 issues #389 and #390 by keeping PapD in the chaperone-delivery
+    role, assigning pilus polymerization to PapC, and separating the PapG/PapF/PapE
+    tip fibrillum from the PapK tip-to-rod adaptor in definition and assembly prose.'
+  llm_assisted: true
+synonyms:
+- synonym_text: pyelonephritis-associated pilus
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/ecosalplus.ESP-0007-2017
+- synonym_text: P fimbria
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/ecosalplus.ESP-0007-2017
+- synonym_text: Pap pilus
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/ecosalplus.ESP-0007-2017
+parent_structures:
+- GO:0009289
+components:
+- component_id: papa_major_rod_subunit
+  label: PapA major rod subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - papA
+  stoichiometry: hundreds to thousands of copies per P pilus rod
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PapA is the P pilus major rod subunit; no exact source-neutral
+    PapA family CURIE was curated for this first record.
+  role: Polymerizes into the right-handed helical rod that forms most of the extracellular
+    P pilus.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.0030073
+    notes: Verger et al. 2007 solved the crystal structure of the PapA rod subunit
+      and discuss PapA as the major subunit of the P pilus rod.
+  - reference: DOI:10.1016/j.cell.2015.11.049
+    notes: Hospenthal et al. 2016 used cryo-EM to resolve the P pilus rod as a helical
+      PapA assembly.
+- component_id: papg_tip_adhesin
+  label: PapG tip adhesin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - papG
+  stoichiometry: 1 distal adhesin per tip fibrillum
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PapG is the P pilus distal adhesin; no exact source-neutral PapG
+    family CURIE was curated for this first record.
+  role: Caps the distal end of the tip fibrillum and binds Gal-alpha(1-4)Gal glycolipid
+    receptors on host cells.
+  evidence:
+  - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+    notes: Werneburg and Thanassi 2018 review PapG as the P pilus adhesin that recognizes
+      globoseries glycolipid receptors.
+- component_id: papf_tip_adaptor
+  label: PapF tip adaptor subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - papF
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PapF is a P pilus minor tip subunit; no exact source-neutral PapF
+    family CURIE was curated for this first record.
+  role: Links the distal PapG adhesin to the PapE tip fibrillum.
+  evidence:
+  - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+    notes: Werneburg and Thanassi 2018 review ordered PapG, PapF, PapE, PapK, PapA,
+      and PapH incorporation by the P pilus chaperone-usher pathway.
+- component_id: pape_tip_fibrillum_subunit
+  label: PapE tip fibrillum subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - papE
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PapE is the P pilus tip-fibrillum subunit; no exact source-neutral
+    PapE family CURIE was curated for this first record.
+  role: Polymerizes into the short flexible fibrillum at the pilus tip.
+  evidence:
+  - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+    notes: Werneburg and Thanassi 2018 describe repeated PapE subunits between PapF
+      and PapK within the P pilus tip fibrillum.
+- component_id: papk_tip_adaptor
+  label: PapK tip adaptor subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - papK
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PapK is the P pilus minor subunit that couples the tip fibrillum
+    to the rod; no exact source-neutral PapK family CURIE was curated for this first
+    record.
+  role: Connects the PapE tip fibrillum to the PapA helical rod.
+  evidence:
+  - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+    notes: Werneburg and Thanassi 2018 place PapK between the PapE tip fibrillum and
+      the PapA rod in the P pilus assembly order.
+- component_id: paph_terminator
+  label: PapH terminator subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - papH
+  stoichiometry: 1 basal terminator per assembled rod
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PapH is the P pilus rod-terminating and anchoring subunit; no exact
+    source-neutral PapH family CURIE was curated for this first record.
+  role: Terminates PapA rod extension and anchors the completed pilus at the outer
+    membrane.
+  evidence:
+  - reference: DOI:10.1038/sj.embor.7400833
+    notes: Verger et al. 2006 analyzed PapH-dependent P pilus termination in uropathogenic
+      Escherichia coli.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: VARIABLE
+  note: P pili are chaperone-usher adhesive appendages encoded by pap operons in uropathogenic
+    Escherichia coli rather than universal E. coli structures.
+  reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Uropathogenic E. coli P pili are the experimental model for PapA rod biogenesis,
+    PapG tip-mediated adhesion, and PapH termination.
+  reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+functions:
+- function_id: p_pilus_assembly
+  label: P pilus assembly
+  description: PapD delivers folded PapG, PapF, PapE, PapK, PapA, and PapH subunits
+    to the PapC usher, which incorporates them in a defined order to build the tip
+    fibrillum, PapK tip-to-rod adaptor, helical rod, and basal terminator of the P
+    pilus.
+  evidence:
+  - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+    notes: Werneburg and Thanassi 2018 review P pilus assembly as an ordered PapD/PapC
+      chaperone-usher pathway.
+  - reference: DOI:10.1038/nrmicro.2017.40
+    notes: Hospenthal, Costa and Waksman 2017 review P pili within the broader chaperone-usher
+      pilus biogenesis pathway.
+- function_id: galabiose_dependent_adhesion
+  label: Gal-alpha(1-4)Gal-dependent adhesion
+  description: The distal PapG adhesin binds host globoseries glycolipids that present
+    a Gal-alpha(1-4)Gal receptor epitope.
+  evidence:
+  - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+    notes: Werneburg and Thanassi 2018 review PapG-mediated binding of P pili to globoseries
+      glycolipid receptors.
+evidence:
+- reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+  notes: Werneburg GT and Thanassi DG 2018, 'Pili Assembled by the Chaperone/Usher
+    Pathway in Escherichia coli and Salmonella', EcoSal Plus.
+- reference: DOI:10.1038/nrmicro.2017.40
+  notes: Hospenthal MK, Costa TRD and Waksman G 2017, 'A comprehensive guide to pilus
+    biogenesis in Gram-negative bacteria', Nature Reviews Microbiology.
+- reference: DOI:10.1016/j.cell.2015.11.049
+  notes: Hospenthal MK et al. 2016, 'Structure of a Chaperone-Usher Pilus Reveals
+    the Molecular Basis of Rod Uncoiling', Cell.
+- reference: DOI:10.1371/journal.ppat.0030073
+  notes: Verger D et al. 2007, 'Crystal Structure of the P Pilus Rod Subunit PapA',
+    PLOS Pathogens.
+- reference: DOI:10.1038/sj.embor.7400833
+  notes: Verger D et al. 2006, 'Molecular mechanism of P pilus termination in uropathogenic
+    Escherichia coli', EMBO Reports.
+causal_graphs:
+- graph_id: pap_chaperone_usher_tip_rod_assembly
+  title: PapC assembles the PapD-delivered P pilus tip and rod
+  description: PapD carries pilus subunits to the PapC usher. PapC initiates assembly
+    with the distal PapG adhesin, then incorporates PapF and PapE to build the tip
+    fibrillum, PapK to bridge the tip to the rod, PapA repeatedly to form the rod,
+    and PapH to terminate and anchor the completed appendage.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: papd_chaperone
+    label: PapD chaperone
+    node_type: GENE_OR_PROTEIN
+  - node_id: papc_usher
+    label: PapC usher
+    node_type: GENE_OR_PROTEIN
+  - node_id: papg_adhesin
+    label: PapG tip adhesin
+    node_type: GENE_OR_PROTEIN
+    component_ref: papg_tip_adhesin
+  - node_id: papf_tip_adaptor
+    label: PapF tip adaptor subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: papf_tip_adaptor
+  - node_id: pape_tip_fibrillum_subunit
+    label: PapE tip fibrillum subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: pape_tip_fibrillum_subunit
+  - node_id: papk_tip_adaptor
+    label: PapK tip adaptor subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: papk_tip_adaptor
+  - node_id: papa_major_rod_subunit
+    label: PapA major rod subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: papa_major_rod_subunit
+  - node_id: paph_terminator
+    label: PapH terminator subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: paph_terminator
+  - node_id: p_pilus
+    label: P pilus
+    node_type: STRUCTURE
+    grounding: cellstructuremech:p_pilus
+  - node_id: p_pilus_assembly
+    label: P pilus assembly
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: papd_chaperone
+    predicate: delivers to
+    object: papc_usher
+    description: PapD stabilizes folded P pilus subunits and delivers them to the
+      PapC outer-membrane usher.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+      notes: Werneburg and Thanassi 2018 review the PapD periplasmic chaperone and
+        PapC usher steps of P pilus biogenesis.
+  - subject: papc_usher
+    predicate: starts assembly with
+    object: papg_adhesin
+    description: The PapC usher starts P pilus biogenesis with the distal PapG adhesin.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+      notes: Werneburg and Thanassi 2018 describe ordered P pilus subunit incorporation
+        beginning with PapG.
+  - subject: papg_adhesin
+    predicate: connects to
+    object: papf_tip_adaptor
+    description: PapG caps the distal end of the P pilus and connects to PapF.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+      notes: Werneburg and Thanassi 2018 review PapF as the next incorporated subunit
+        after the PapG adhesin.
+  - subject: papf_tip_adaptor
+    predicate: connects to
+    object: pape_tip_fibrillum_subunit
+    description: PapF links the distal PapG adhesin to the PapE subunits of the tip
+      fibrillum.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+      notes: Werneburg and Thanassi 2018 place PapE after PapF in the P pilus assembly
+        order.
+  - subject: pape_tip_fibrillum_subunit
+    predicate: connects to
+    object: papk_tip_adaptor
+    description: PapE subunits form the tip fibrillum, and the proximal PapE subunit
+      connects to PapK before the PapA rod begins.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+      notes: Werneburg and Thanassi 2018 place PapK between the PapE tip fibrillum
+        and PapA rod subunits.
+  - subject: papk_tip_adaptor
+    predicate: connects to
+    object: papa_major_rod_subunit
+    description: PapK joins the PapE tip fibrillum to the first PapA rod subunits.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+      notes: Werneburg and Thanassi 2018 describe PapK as the adaptor incorporated
+        before the PapA rod.
+  - subject: papa_major_rod_subunit
+    predicate: polymerizes into
+    object: p_pilus
+    description: PapA is repeatedly incorporated to form the thick helical P pilus
+      rod.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2015.11.049
+      notes: Hospenthal et al. 2016 resolve the helical P pilus rod as an assembly
+        of PapA subunits.
+  - subject: paph_terminator
+    predicate: terminates
+    object: p_pilus
+    description: PapH terminates PapA addition and anchors the basal end of the completed
+      P pilus at the outer membrane.
+    evidence:
+    - reference: DOI:10.1038/sj.embor.7400833
+      notes: Verger et al. 2006 identify the mechanism by which PapH terminates P
+        pilus growth.
+  - subject: papc_usher
+    predicate: carries out
+    object: p_pilus_assembly
+    description: The outer-membrane PapC usher polymerizes and secretes P pilus subunits
+      through the envelope.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.40
+      notes: Hospenthal, Costa and Waksman 2017 review outer-membrane ushers as assembly
+        platforms for chaperone-usher pili.
+discussions:
+- discussion_id: papd_papc_boundary
+  prompt: Keep PapD and PapC out of the component table for this first P pilus record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#pap_chaperone_usher_tip_rod_assembly
+  rationale: PapD and PapC are required for ordered P pilus biogenesis and are therefore
+    shown in the assembly graph, but this record denotes the extracellular appendage
+    built from PapA, PapE, PapF, PapG, PapK, and PapH rather than the periplasmic
+    chaperone or outer-membrane usher that polymerizes and secretes those subunits.
+  evidence:
+  - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+    notes: Werneburg and Thanassi 2018 distinguish PapD and PapC assembly factors
+      from the assembled P pilus subunits.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
+- discussion_id: resolve_pap_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the PapA, PapG, PapF,
+    PapE, PapK, and PapH constituent subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#papa_major_rod_subunit
+  - components#papg_tip_adhesin
+  - components#papf_tip_adaptor
+  - components#pape_tip_fibrillum_subunit
+  - components#papk_tip_adaptor
+  - components#paph_terminator
+  rationale: The record intentionally uses reviewed labels for the E. coli P pilus
+    subunits until InterPro, Pfam, or NCBIfam accessions can be verified without overclaiming
+    a broader chaperone-usher domain as an exact subunit family.
+  posed_by: codex
+  posed_date: '2026-09-11'

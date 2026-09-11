@@ -180,6 +180,15 @@
   "definition": "Extracellular amyloid fibers assembled from CsgA by the Csg secretion and nucleation machinery that form a pilus subtype in enteric biofilm matrices."
  },
  {
+  "identifier": "cellstructuremech:p_pilus",
+  "label": "P pilus",
+  "category": "APPENDAGE",
+  "kind": "APPENDAGE",
+  "status": "PROPOSED",
+  "page": "structures/appendage/p_pilus.html",
+  "definition": "A chaperone-usher adhesive pilus of uropathogenic Escherichia coli built from a PapA helical rod, a PapG-PapF-PapE tip fibrillum, a PapK adaptor that bridges the fibrillum to the rod, and a basal PapH terminator. The PapD chaperone delivers subunits to the PapC usher, which assembles the pilus, and the distal PapG adhesin binds host glycolipid receptors."
+ },
+ {
   "identifier": "GO:0097740",
   "label": "paraflagellar rod",
   "category": "APPENDAGE",
