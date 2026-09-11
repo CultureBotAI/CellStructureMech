@@ -351,6 +351,15 @@
   "definition": "The microtubule-organizing center in fungi, functionally homologous to the animal centrosome."
  },
  {
+  "identifier": "cellstructuremech:tubz_filament",
+  "label": "TubZ filament",
+  "category": "CYTOSKELETON",
+  "kind": "FILAMENT",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/tubz_filament.html",
+  "definition": "A plasmid-encoded bacterial tubulin-like cytoskeletal filament assembled from TubZ GTPase subunits that supports pBtoxis plasmid partitioning in Bacillus thuringiensis."
+ },
+ {
   "identifier": "GO:1990586",
   "label": "divisome complex",
   "category": "DIVISION_MACHINERY",
