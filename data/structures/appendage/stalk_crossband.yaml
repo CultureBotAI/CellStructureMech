@@ -28,6 +28,13 @@ curation_history:
   changes: Narrowed the StpABCD row from a protein-complex component to a protein
     cohort so the component table does not duplicate the stalk crossband record itself.
   llm_assisted: true
+- timestamp: '2026-09-11T03:37:39Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #401 issues #402 and #403 by removing stalk-age marking from
+    functions and replacing the stalk-compartments state with a stalk-compartmentalization
+    biological-process graph node.'
+  llm_assisted: true
 synonyms:
 - synonym_text: stalk band
   synonym_type: EXACT_SYNONYM
@@ -86,14 +93,6 @@ functions:
   - reference: DOI:10.1016/j.cell.2012.10.046
     notes: Schlimpert et al. 2012 show that crossbands block diffusion across Caulobacter
       stalk compartments.
-- function_id: stalk_age_marking
-  label: stalk age marking
-  description: Sequential stalk bands provide visible markers of cell age in stalked
-    bacteria.
-  evidence:
-  - reference: DOI:10.1128/JB.178.13.3939-3948.1996
-    notes: Poindexter and Staley 1996 use Caulobacter and Asticcacaulis stalk bands
-      as indicators of stalk age.
 evidence:
 - reference: DOI:10.1016/j.cell.2012.10.046
   notes: Schlimpert S et al. 2012, 'General protein diffusion barriers create compartments
@@ -127,9 +126,9 @@ causal_graphs:
   - node_id: protein_diffusion
     label: protein diffusion
     node_type: BIOLOGICAL_PROCESS
-  - node_id: stalk_compartments
-    label: stalk compartments
-    node_type: STATE
+  - node_id: stalk_compartmentalization
+    label: stalk compartmentalization
+    node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: stp_abcd_crossband_proteins
     predicate: assemble into
@@ -159,10 +158,10 @@ causal_graphs:
       notes: Schlimpert et al. 2012 tested soluble and membrane-protein diffusion
         across crossbands.
   - subject: stalk_crossband
-    predicate: creates
-    object: stalk_compartments
-    description: Barrier activity partitions the stalk from the cell body and from
-      adjacent stalk segments.
+    predicate: supports
+    object: stalk_compartmentalization
+    description: Barrier activity compartmentalizes the stalk from the cell body and
+      from adjacent stalk segments.
     evidence:
     - reference: DOI:10.1016/j.cell.2012.10.046
       notes: Schlimpert et al. 2012 connect crossband diffusion barriers with bacterial
