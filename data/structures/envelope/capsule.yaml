@@ -21,6 +21,13 @@ curation_history:
     examples, anti-phagocytic and barrier functions, a capsular-polymer export graph,
     DOI/GO evidence, and component-boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-11T04:03:15Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #406 issues #407 and #408 by replacing the hydrated-barrier
+    function with a process-style capsule-mediated protection function and marking
+    the generic capsule export graph as nonmechanistic.'
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial capsule
   synonym_type: NARROW_SYNONYM
@@ -90,10 +97,10 @@ functions:
   - reference: DOI:10.1128/IAI.00881-09
     notes: Hyams et al. 2010 showed that the Streptococcus pneumoniae capsule reduces
       complement deposition and neutrophil phagocytosis.
-- function_id: hydrated_envelope_barrier
-  label: hydrated envelope barrier
-  description: A retained capsule creates a hydrated extracellular barrier that protects
-    the cell envelope from host and environmental stresses.
+- function_id: capsule_mediated_cell_protection
+  label: capsule-mediated cell protection
+  description: A retained capsule protects encapsulated cells by shielding the cell
+    envelope from host antimicrobial effectors and environmental stressors.
   evidence:
   - reference: DOI:10.1146/annurev.micro.50.1.285
     notes: Roberts 1996 reviews the protective and virulence roles of bacterial capsular
@@ -121,11 +128,11 @@ causal_graphs:
     that remain attached at the cell surface, producing an organized capsule rather
     than a diffuse released exopolysaccharide slime.
   graph_kind: ASSEMBLY
-  scope_status: MECHANISTIC
+  scope_status: NONMECHANISTIC
   nodes:
-  - node_id: capsule_biosynthesis_export_proteins
-    label: capsule biosynthesis and export proteins
-    node_type: GENE_OR_PROTEIN
+  - node_id: capsule_polymer_synthesis_and_export
+    label: capsule polymer synthesis and export
+    node_type: BIOLOGICAL_PROCESS
   - node_id: capsular_extracellular_polymer
     label: capsular extracellular polymer
     node_type: CHEMICAL
@@ -138,11 +145,11 @@ causal_graphs:
     node_type: STRUCTURE
     grounding: GO:0042603
   edges:
-  - subject: capsule_biosynthesis_export_proteins
-    predicate: polymerize and export
+  - subject: capsule_polymer_synthesis_and_export
+    predicate: produces
     object: capsular_extracellular_polymer
-    description: Dedicated capsule-biosynthesis loci make and export long-chain capsular
-      polymers across the cell envelope.
+    description: Dedicated capsule-biosynthesis systems synthesize and export long-chain
+      capsular polymers across the cell envelope.
     evidence:
     - reference: DOI:10.1146/annurev.biochem.75.103004.142545
       notes: Whitfield 2006 reviews the group 1, group 2 and group 4 E. coli capsule
@@ -168,6 +175,9 @@ causal_graphs:
     - reference: DOI:10.1128/CMR.00001-12
       notes: O'Meara and Alspaugh 2012 review the Cryptococcus capsule as an extracellular
         polysaccharide structure surrounding the cell wall.
+  scope_notes: The graph summarizes capsule-polymer synthesis, export, and retention
+    at the class level. Bacterial Wzy-dependent, ABC-transporter-dependent, and fungal
+    cryptococcal capsule assembly routes differ in their exact proteins.
 discussions:
 - discussion_id: capsular_polymer_type
   prompt: Model the capsule constituent as a broad extracellular polymer rather than

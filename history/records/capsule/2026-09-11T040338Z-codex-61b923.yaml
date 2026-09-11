@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/capsule.yaml
+  slug: capsule
+session:
+  id: 2026-09-11T040338Z-codex-61b923
+  timestamp: '2026-09-11T04:03:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/407
+  - https://github.com/CultureBotAI/CellStructureMech/issues/408
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/406
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - functions
+  - causal_graphs
+  summary: Addressed capsule adversarial review
+  details: Replaced the hydrated-barrier function with capsule-mediated cell protection and
+    downgraded the generic capsule export graph to a nonmechanistic class-level assembly abstraction
+    for PR 406 review issues.

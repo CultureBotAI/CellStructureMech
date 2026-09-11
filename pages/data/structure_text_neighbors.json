@@ -1162,27 +1162,27 @@
         {
           "identifier": "GO:0009276",
           "label": "Gram-negative-bacterium-type cell wall",
-          "cosine_similarity": 0.75938202
-        },
-        {
-          "identifier": "GO:0009279",
-          "label": "cell outer membrane",
-          "cosine_similarity": 0.73642208
+          "cosine_similarity": 0.74787562
         },
         {
           "identifier": "GO:0009274",
           "label": "peptidoglycan-based cell wall",
-          "cosine_similarity": 0.73600589
+          "cosine_similarity": 0.72436891
+        },
+        {
+          "identifier": "GO:0009279",
+          "label": "cell outer membrane",
+          "cosine_similarity": 0.71406679
         },
         {
           "identifier": "GO:0030115",
           "label": "S-layer",
-          "cosine_similarity": 0.72261137
+          "cosine_similarity": 0.71114889
         },
         {
           "identifier": "GO:0043591",
           "label": "endospore external encapsulating structure",
-          "cosine_similarity": 0.69955181
+          "cosine_similarity": 0.68358868
         }
       ]
     },
@@ -1201,11 +1201,6 @@
           "cosine_similarity": 0.73796681
         },
         {
-          "identifier": "GO:0042603",
-          "label": "capsule",
-          "cosine_similarity": 0.73642208
-        },
-        {
           "identifier": "GO:0009274",
           "label": "peptidoglycan-based cell wall",
           "cosine_similarity": 0.72760127
@@ -1214,6 +1209,11 @@
           "identifier": "GO:0070258",
           "label": "inner membrane pellicle complex",
           "cosine_similarity": 0.72731174
+        },
+        {
+          "identifier": "GO:0030115",
+          "label": "S-layer",
+          "cosine_similarity": 0.7190958
         }
       ]
     },
@@ -1239,7 +1239,7 @@
         {
           "identifier": "GO:0042603",
           "label": "capsule",
-          "cosine_similarity": 0.75938202
+          "cosine_similarity": 0.74787562
         },
         {
           "identifier": "cellstructuremech:prostheca",
@@ -1263,14 +1263,14 @@
           "cosine_similarity": 0.74233642
         },
         {
-          "identifier": "GO:0042603",
-          "label": "capsule",
-          "cosine_similarity": 0.73600589
-        },
-        {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
           "cosine_similarity": 0.72760127
+        },
+        {
+          "identifier": "GO:0042603",
+          "label": "capsule",
+          "cosine_similarity": 0.72436891
         },
         {
           "identifier": "GO:0070258",
@@ -1299,14 +1299,14 @@
           "cosine_similarity": 0.74233642
         },
         {
-          "identifier": "GO:0042603",
-          "label": "capsule",
-          "cosine_similarity": 0.72261137
-        },
-        {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
           "cosine_similarity": 0.7190958
+        },
+        {
+          "identifier": "GO:0042603",
+          "label": "capsule",
+          "cosine_similarity": 0.71114889
         }
       ]
     },
@@ -1327,7 +1327,7 @@
         {
           "identifier": "GO:0042603",
           "label": "capsule",
-          "cosine_similarity": 0.61115432
+          "cosine_similarity": 0.61206651
         },
         {
           "identifier": "cellstructuremech:prostheca",
@@ -1353,7 +1353,7 @@
         {
           "identifier": "GO:0020020",
           "label": "food vacuole",
-          "cosine_similarity": 0.71114088
+          "cosine_similarity": 0.71114087
         },
         {
           "identifier": "GO:0000331",
@@ -1459,9 +1459,9 @@
           "cosine_similarity": 0.59347173
         },
         {
-          "identifier": "GO:0042603",
-          "label": "capsule",
-          "cosine_similarity": 0.58521578
+          "identifier": "GO:0020026",
+          "label": "apicomplexan dense granule",
+          "cosine_similarity": 0.58439873
         }
       ]
     },
@@ -1689,7 +1689,7 @@
         {
           "identifier": "GO:0020020",
           "label": "food vacuole",
-          "cosine_similarity": 0.7668445
+          "cosine_similarity": 0.76684449
         },
         {
           "identifier": "GO:0020026",
@@ -1782,7 +1782,7 @@
         {
           "identifier": "GO:0000331",
           "label": "contractile vacuole",
-          "cosine_similarity": 0.7668445
+          "cosine_similarity": 0.76684449
         },
         {
           "identifier": "GO:0020026",
@@ -1797,7 +1797,7 @@
         {
           "identifier": "GO:0031411",
           "label": "gas vesicle",
-          "cosine_similarity": 0.71114088
+          "cosine_similarity": 0.71114087
         },
         {
           "identifier": "GO:0020008",
@@ -3066,14 +3066,14 @@
           "cosine_similarity": 0.70259724
         },
         {
-          "identifier": "GO:0042603",
-          "label": "capsule",
-          "cosine_similarity": 0.69955181
-        },
-        {
           "identifier": "GO:0033172",
           "label": "gas vesicle shell",
           "cosine_similarity": 0.69243656
+        },
+        {
+          "identifier": "GO:0042603",
+          "label": "capsule",
+          "cosine_similarity": 0.68358868
         }
       ]
     },
