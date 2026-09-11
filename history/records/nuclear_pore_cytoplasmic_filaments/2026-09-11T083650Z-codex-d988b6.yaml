@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_pore_cytoplasmic_filaments.yaml
+  slug: nuclear_pore_cytoplasmic_filaments
+session:
+  id: 2026-09-11T083650Z-codex-d988b6
+  timestamp: '2026-09-11T08:36:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added nuclear pore cytoplasmic filaments record
+  details: Created a GO:0044614 nuclear pore cytoplasmic filaments record with cytoplasmic-fiber
+    synonymy, nuclear-pore parthood, Nup82 and Nup159 cytoplasmic-filament component classes,
+    sampled Ascomycota taxonomic scope, a Saccharomyces cerevisiae canonical example, mRNA-export-platform
+    function, DOI and GO evidence, a conservative Nup82/Nup159 assembly graph, and a CFNC
+    component-boundary TODO.

@@ -1,0 +1,177 @@
+identifier: GO:0044614
+label: nuclear pore cytoplasmic filaments
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Filamentous extensions on the cytoplasmic face of the eukaryotic nuclear
+  pore complex.
+definition_source: GO:0044614
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T08:35:31Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T08:36:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic-fiber synonymy, nuclear-pore parthood, Nup82 and Nup159
+    cytoplasmic-filament component classes, Ascomycota taxonomic scope, a Saccharomyces
+    cerevisiae example, mRNA-export-platform function, DOI/GO evidence, a conservative
+    Nup82/Nup159 assembly graph, and a CFNC component-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T08:44:11Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #444 and #445 by replacing human Bley 2022 citations on yeast
+    Nup82/Nup159 claims with fungal Yoshida/Teimer/Aitchison support, narrowing the
+    distribution row to Saccharomyces cerevisiae, and revising the CFNC boundary TODO.'
+  llm_assisted: true
+synonyms:
+- synonym_text: cytoplasmic fibers of the NPC
+  synonym_type: RELATED_SYNONYM
+  source: GO:0044614
+part_of:
+- GO:0005643
+components:
+- component_id: nup82_family
+  label: Nup82-family cytoplasmic-filament nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP82
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This first nuclear-pore cytoplasmic-filaments record curates fungal
+    Nup82 and Nup159 by source-level labels and leaves exact InterPro or Pfam groundings
+    for a later family-by-family pass.
+  role: Cytoplasmic-face nucleoporin family represented in the Saccharomyces cerevisiae
+    Nup82/Nup159 cytoplasmic filament nucleoporin complex.
+  evidence:
+  - reference: DOI:10.1073/pnas.1112846108
+    notes: Yoshida et al. 2011 structurally analyzed yeast Nup82 in a Nup82/Nup159/Nsp1
+      nucleoporin heterotrimer on the cytoplasmic face of the NPC.
+  - reference: DOI:10.1038/s41467-017-01160-9
+    notes: Teimer et al. 2017 characterized a thermophilic-fungus Nup82 cytoplasmic-face
+      complex and its connection to the Y-complex.
+- component_id: nup159_family
+  label: Nup159-family cytoplasmic-filament nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP159
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This first nuclear-pore cytoplasmic-filaments record curates fungal
+    Nup82 and Nup159 by source-level labels and leaves exact InterPro or Pfam groundings
+    for a later family-by-family pass.
+  role: Cytoplasmic-face nucleoporin family represented in the Saccharomyces cerevisiae
+    Nup82/Nup159 cytoplasmic filament nucleoporin complex.
+  evidence:
+  - reference: DOI:10.1073/pnas.1112846108
+    notes: Yoshida et al. 2011 structurally analyzed yeast Nup159 in a Nup82/Nup159/Nsp1
+      nucleoporin heterotrimer on the cytoplasmic face of the NPC.
+  - reference: DOI:10.1038/s41467-017-01160-9
+    notes: Teimer et al. 2017 characterized a thermophilic-fungus Nup82 cytoplasmic-face
+      complex, including its Nup159 subunit.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Nup82, Nup159, and Nsp1 form a cytoplasmic-face nucleoporin heterotrimer in
+    budding yeast; no broader fungal distribution is asserted in this first cytoplasmic-filaments
+    record.
+  reference: DOI:10.1073/pnas.1112846108
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which the Nup82/Nup159/Nsp1 heterotrimer was structurally
+    analyzed on the cytoplasmic face of the nuclear pore.
+  reference: DOI:10.1073/pnas.1112846108
+functions:
+- function_id: cytoplasmic_mrna_export_platform
+  label: cytoplasmic mRNA export platform
+  description: The cytoplasmic-filament Nup82/Nup159 platform helps position mRNA-export
+    machinery on the cytoplasmic face of the nuclear pore.
+  evidence:
+  - reference: DOI:10.1534/genetics.111.127803
+    notes: Aitchison and Rout 2012 review the yeast Nup82 complex in mRNA export at
+      the cytoplasmic side of the NPC.
+evidence:
+- reference: GO:0044614
+  notes: Gene Ontology cellular-component term for nuclear pore cytoplasmic filaments.
+- reference: GO:0005643
+  notes: Gene Ontology cellular-component term for the nuclear pore.
+- reference: DOI:10.1073/pnas.1112846108
+  notes: Yoshida et al. 2011, 'Structural and functional analysis of an essential
+    nucleoporin heterotrimer on the cytoplasmic face of the nuclear pore complex',
+    Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1038/s41467-017-01160-9
+  notes: Teimer et al. 2017, 'A short linear motif in scaffold Nup145C connects Y-complex
+    with pre-assembled outer ring Nup82 complex', Nature Communications.
+- reference: DOI:10.1534/genetics.111.127803
+  notes: Aitchison and Rout 2012, 'The Yeast Nuclear Pore Complex and Transport Through
+    It', Genetics.
+causal_graphs:
+- graph_id: nup82_nup159_cytoplasmic_filament_complex
+  title: Nup82 and Nup159 build a cytoplasmic-face NPC module
+  description: Saccharomyces Nup82 and Nup159 contribute to a cytoplasmic filament
+    nucleoporin module on the cytoplasmic face of the nuclear pore.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the cytoplasmic-filament membership of Nup82 and
+    Nup159 without asserting the complete CFNC, anchoring sensors, Dbp5, Dyn2, or
+    mRNA-export accessory factors as record components.
+  nodes:
+  - node_id: nup82_family
+    label: Nup82-family cytoplasmic-filament nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup82_family
+  - node_id: nup159_family
+    label: Nup159-family cytoplasmic-filament nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup159_family
+  - node_id: nuclear_pore_cytoplasmic_filaments
+    label: nuclear pore cytoplasmic filaments
+    node_type: STRUCTURE
+    grounding: GO:0044614
+  edges:
+  - subject: nup82_family
+    predicate: contributes to
+    object: nuclear_pore_cytoplasmic_filaments
+    description: Nup82-family nucleoporin is represented in the Saccharomyces cytoplasmic
+      filament nucleoporin complex.
+    evidence:
+    - reference: DOI:10.1073/pnas.1112846108
+      notes: Yoshida et al. 2011 structurally analyzed the yeast Nup82/Nup159/Nsp1
+        heterotrimer on the cytoplasmic face of the NPC.
+  - subject: nup159_family
+    predicate: contributes to
+    object: nuclear_pore_cytoplasmic_filaments
+    description: Nup159-family nucleoporin is represented in the Saccharomyces cytoplasmic
+      filament nucleoporin complex.
+    evidence:
+    - reference: DOI:10.1073/pnas.1112846108
+      notes: Yoshida et al. 2011 structurally analyzed the yeast Nup82/Nup159/Nsp1
+        heterotrimer on the cytoplasmic face of the NPC.
+discussions:
+- discussion_id: resolve_cfnc_component_boundaries
+  prompt: Resolve whether Nsp1, Nup116-family linker Nups, Gle2, Nup42, Gle1, Dbp5,
+    Dyn2, and related cytoplasmic mRNA-export factors should be curated as cytoplasmic-filament
+    constituents or associated machinery.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#nup82_family
+  - components#nup159_family
+  rationale: Yoshida et al. 2011 structurally analyze the Nup82/Nup159/Nsp1 heterotrimer,
+    but this first record models only Nup82 and Nup159 until central-channel, linker-Nup,
+    and mRNA-export accessory boundaries are reviewed explicitly.
+  evidence:
+  - reference: DOI:10.1073/pnas.1112846108
+    notes: Yoshida et al. 2011 include Nsp1 in the yeast Nup82/Nup159/Nsp1 heterotrimer.
+  - reference: DOI:10.1534/genetics.111.127803
+    notes: Aitchison and Rout 2012 review additional cytoplasmic-face and mRNA-export
+      factors around the yeast Nup82 complex.
+  posed_by: codex
+  posed_date: '2026-09-11'
