@@ -1,0 +1,207 @@
+identifier: GO:0005776
+label: autophagosome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A double-membrane-bounded compartment that engulfs endogenous cellular
+  material as well as invading microorganisms to target them to the lytic vacuole/lysosome
+  for degradation as part of macroautophagy.
+definition_source: GO:0005776
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T19:34:09Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T19:35:27Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added autophagosome membrane and lumen parts, GO exact synonymy, a membrane
+    component, Saccharomyces cerevisiae scope, macroautophagy and autophagosome-vacuole
+    fusion functions, a nonmechanistic vacuole-delivery graph, and a grounding TODO
+    for Atg autophagosome machinery.
+  llm_assisted: true
+- timestamp: '2026-09-11T19:41:19Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed review issues #540 and #541 by connecting the autophagosome
+    membrane to the top-level graph organelle node and by recasting the macroautophagy
+    edge as a functional support edge.'
+  llm_assisted: true
+has_part:
+- GO:0000421
+- GO:0034423
+synonyms:
+- synonym_text: autophagic vacuole
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005776
+- synonym_text: initial autophagic vacuole
+  synonym_type: RELATED_SYNONYM
+  source: GO:0005776
+components:
+- component_id: autophagosome_membrane
+  label: autophagosome membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0000421
+  essentiality: ESSENTIAL
+  role: Double lipid-bilayer boundary that encloses the autophagosome lumen and separates
+    engulfed cytoplasmic cargo from the cytosol.
+  evidence:
+  - reference: GO:0000421
+    notes: GO:0000421 defines the autophagosome membrane as the lipid bilayer surrounding
+      an autophagosome.
+  - reference: DOI:10.1038/ncb1007-1102
+    notes: Xie and Klionsky 2007 review autophagosome biogenesis and the core membrane-expansion
+      machinery.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms autophagosomes during starvation-induced macroautophagy
+    and has been used to define core Atg machinery.
+  reference: DOI:10.1083/jcb.119.2.301
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Genetic and fluorescence-microscopy model for the pre-autophagosomal structure
+    and autophagosome formation.
+  reference: DOI:10.1093/emboj/20.21.5971
+functions:
+- function_id: macroautophagy
+  label: macroautophagy
+  description: Autophagosomes engulf cytoplasmic material in a double-membrane vesicle
+    and deliver that cargo to a lytic vacuole for degradation.
+  evidence:
+  - reference: GO:0016236
+    notes: GO:0016236 defines macroautophagy as the autophagic process that proceeds
+      via autophagosome formation.
+  - reference: DOI:10.1083/jcb.119.2.301
+    notes: Takeshige et al. 1992 demonstrated starvation-induced autophagy in Saccharomyces
+      cerevisiae.
+- function_id: autophagosome_vacuole_fusion
+  label: autophagosome-vacuole fusion
+  description: In yeast, completed autophagosomes fuse with the fungal-type vacuole
+    to release autophagic bodies into the degradative lumen.
+  evidence:
+  - reference: GO:0061909
+    notes: GO:0061909 defines autophagosome-lysosome fusion and describes yeast autophagosome
+      fusion with the vacuole.
+  - reference: DOI:10.1083/jcb.119.2.301
+    notes: Takeshige et al. 1992 used proteinase-deficient yeast mutants to accumulate
+      autophagic bodies in the vacuole.
+evidence:
+- reference: GO:0005776
+  notes: Gene Ontology cellular-component term for autophagosome.
+- reference: GO:0000421
+  notes: Gene Ontology cellular-component term for the autophagosome membrane.
+- reference: GO:0034423
+  notes: Gene Ontology cellular-component term for the autophagosome lumen.
+- reference: GO:0016236
+  notes: Gene Ontology biological-process term for macroautophagy.
+- reference: GO:0061909
+  notes: Gene Ontology biological-process term for autophagosome-lysosome fusion.
+- reference: DOI:10.1083/jcb.119.2.301
+  notes: Takeshige et al. 1992, Autophagy in yeast demonstrated with proteinase-deficient
+    mutants and conditions for its induction, Journal of Cell Biology.
+- reference: DOI:10.1093/emboj/20.21.5971
+  notes: Suzuki et al. 2001, The pre-autophagosomal structure organized by concerted
+    functions of APG genes is essential for autophagosome formation, The EMBO Journal.
+- reference: DOI:10.1038/35044114
+  notes: Ichimura et al. 2000, A ubiquitin-like system mediates protein lipidation,
+    Nature.
+- reference: DOI:10.1038/ncb1007-1102
+  notes: 'Xie and Klionsky 2007, Autophagosome formation: core machinery and adaptations,
+    Nature Cell Biology.'
+causal_graphs:
+- graph_id: yeast_autophagosome_vacuole_delivery
+  title: Yeast autophagosomes deliver cytosol to the vacuole
+  description: The autophagosome membrane encloses a lumen, the vesicle forms as part
+    of macroautophagy, and yeast autophagosomes fuse with the fungal-type vacuole
+    to deliver cargo for degradation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the organelle boundary and vacuole-delivery endpoint
+    without asserting the complete Atg initiation, elongation, closure or fusion machinery.
+  nodes:
+  - node_id: autophagosome_membrane
+    label: autophagosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0000421
+    component_ref: autophagosome_membrane
+  - node_id: autophagosome_lumen
+    label: autophagosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034423
+  - node_id: autophagosome
+    label: autophagosome
+    node_type: ORGANELLE
+    grounding: GO:0005776
+  - node_id: macroautophagy
+    label: macroautophagy
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0016236
+  - node_id: fungal_type_vacuole
+    label: fungal-type vacuole
+    node_type: ORGANELLE
+    grounding: GO:0000324
+  edges:
+  - subject: autophagosome_membrane
+    predicate: bounds
+    object: autophagosome_lumen
+    description: The autophagosome membrane encloses the autophagosome lumen.
+    evidence:
+    - reference: GO:0034423
+      notes: GO:0034423 defines the autophagosome lumen as the volume enclosed within
+        the autophagosome double-membrane.
+  - subject: autophagosome_membrane
+    predicate: is part of
+    object: autophagosome
+    description: The autophagosome membrane is the double lipid-bilayer boundary of
+      the autophagosome.
+    evidence:
+    - reference: GO:0000421
+      notes: GO:0000421 defines the autophagosome membrane as the lipid bilayer surrounding
+        an autophagosome.
+  - subject: autophagosome
+    predicate: supports
+    object: macroautophagy
+    description: The autophagosome is the membrane-bounded carrier through which macroautophagy
+      sequesters cytoplasmic material for vacuolar degradation.
+    evidence:
+    - reference: GO:0016236
+      notes: GO:0016236 defines macroautophagy as the autophagic process that proceeds
+        via autophagosome formation.
+  - subject: autophagosome
+    predicate: fuses with
+    object: fungal_type_vacuole
+    description: In budding yeast, autophagosomes fuse with the vacuole during macroautophagy.
+    evidence:
+    - reference: GO:0061909
+      notes: GO:0061909 covers yeast autophagosome fusion with the vacuole.
+    - reference: DOI:10.1083/jcb.119.2.301
+      notes: Takeshige et al. 1992 demonstrated delivery of autophagic bodies into
+        proteinase-deficient yeast vacuoles.
+discussions:
+- discussion_id: ground_atg_autophagosome_machinery
+  prompt: Resolve exact source-neutral identifiers for Atg8 lipidation, Atg12-Atg5-Atg16,
+    Atg9 trafficking and autophagosome-vacuole fusion machinery before adding those
+    proteins or complexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#yeast_autophagosome_vacuole_delivery
+  rationale: This first autophagosome record grounds the double membrane and lumen,
+    while leaving Atg protein cohorts out until exact family or complex identifiers
+    can be verified for the taxon-agnostic component table.
+  evidence:
+  - reference: DOI:10.1038/35044114
+    notes: Ichimura et al. 2000 identified the Atg8 phosphatidylethanolamine lipidation
+      system.
+  - reference: DOI:10.1093/emboj/20.21.5971
+    notes: Suzuki et al. 2001 connected the pre-autophagosomal structure to concerted
+      APG/Atg gene functions.
+  - reference: DOI:10.1038/ncb1007-1102
+    notes: Xie and Klionsky 2007 review Atg modules required for autophagosome formation.
+  posed_by: codex
+  posed_date: '2026-09-11'

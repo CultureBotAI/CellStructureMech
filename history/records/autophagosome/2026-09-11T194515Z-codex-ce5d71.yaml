@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/autophagosome.yaml
+  slug: autophagosome
+session:
+  id: 2026-09-11T194515Z-codex-ce5d71
+  timestamp: '2026-09-11T19:45:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/540
+  - https://github.com/CultureBotAI/CellStructureMech/issues/541
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/539
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Added evidence-backed autophagosome structure record
+  details: Added a GO:0005776 autophagosome record with GO-grounded autophagosome membrane
+    and lumen parts, autophagic-vacuole synonymy, Saccharomyces cerevisiae taxonomic scope,
+    macroautophagy and autophagosome-vacuole fusion functions, a nonmechanistic vacuole-delivery
+    graph, rendered pages, refreshed embedding artifacts, and review fixes that connected
+    the graph membrane node to the top-level autophagosome and recast the macroautophagy edge
+    as functional support.
