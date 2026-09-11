@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/archaeal_cannula.yaml
+  slug: archaeal_cannula
+session:
+  id: 2026-09-11T144736Z-codex-eb24d8
+  timestamp: '2026-09-11T14:47:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/501
+  - https://github.com/CultureBotAI/CellStructureMech/issues/502
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/500
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - distribution
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the archaeal cannula record
+  details: Created a minted archaeal cannula appendage record for Pyrodictium abyssi, curated
+    a reviewed-label-only CanA glycoprotein component, species-level taxonomic scope, an extracellular
+    cell-network function, a calcium-dependent CanA polymerization graph, and grounding/function
+    TODOs, then addressed PR review by scoping per-row taxon notes to direct citations and
+    making CanA the subject of the calcium-coordination graph edge.
