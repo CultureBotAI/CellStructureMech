@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nucleomorph.yaml
+  slug: nucleomorph
+session:
+  id: 2026-09-11T164119Z-codex-f8fb76
+  timestamp: '2026-09-11T16:41:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/519
+  - https://github.com/CultureBotAI/CellStructureMech/issues/520
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/518
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add nucleomorph structure record
+  details: 'Added a GO:0033009 nucleomorph record covering plastid parthood, residual endosymbiont
+    nucleus synonymy, reviewed-label-only nucleomorph chromosomes, Cryptophyceae and Chlorarachniophyceae
+    taxonomic distribution, Guillardia theta and Bigelowiella natans canonical examples, reduced-genome
+    and replication functions, a nonmechanistic nucleomorph-genome graph, and an explicit
+    TODO for exact chromosome, envelope, pore and division-machinery component grounding.
+    Addressed PR #518 review issues #519 and #520 by documenting the ungrounded chromosome
+    component as reviewed-label-only and broadening the TODO to cover that grounding gap.'

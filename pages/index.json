@@ -792,6 +792,15 @@
   "definition": "A double-membrane-bounded organelle that functions in iron-sulfur protein maturation; evolutionarily derived from mitochondria. The mitosome has been detected only in anaerobic or microaerophilic organisms that do not have mitochondria, such as Entamoeba histolytica, Giardia intestinalis and several species of Microsporidia. These organisms are not capable of gaining energy from oxidative phosphorylation, which is normally performed by mitochondria."
  },
  {
+  "identifier": "GO:0033009",
+  "label": "nucleomorph",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/nucleomorph.html",
+  "definition": "A small, vestigial nucleus found in some plastids that derive from a eukaryotic endosymbiont. Observed in chlorarachniophytes and cryptomonads, which acquired their plastids from a green and red alga respectively."
+ },
+ {
   "identifier": "GO:0005777",
   "label": "peroxisome",
   "category": "MEMBRANE_ORGANELLE",
