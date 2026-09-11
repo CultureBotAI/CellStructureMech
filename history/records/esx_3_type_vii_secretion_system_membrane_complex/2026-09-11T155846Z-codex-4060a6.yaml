@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/esx_3_type_vii_secretion_system_membrane_complex.yaml
+  slug: esx_3_type_vii_secretion_system_membrane_complex
+session:
+  id: 2026-09-11T155846Z-codex-4060a6
+  timestamp: '2026-09-11T15:58:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/513
+  - https://github.com/CultureBotAI/CellStructureMech/issues/514
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/512
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ESX-3 type VII secretion membrane complex
+  details: Added a PROPOSED CellStructureRecord for the Mycobacterium smegmatis ESX-3 type
+    VII secretion system membrane complex. The record mints cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex
+    after a hidden and ignored duplicate search found no existing ESX-3 record and GO had
+    no exact ESX-3 cellular-component term. It cites Famelis et al. 2019, Poweleit et al.
+    2019, PDB:6SGW, and EMDB:EMD-10186 for a dimeric EccB3/EccC3/EccD3/EccE3 membrane core,
+    leaves all four Ecc3 components label-only with an open TODO for exact ESX-3-specific
+    family groundings, restricts distribution and the canonical example to Mycolicibacterium
+    smegmatis MC2 155, and records the ESX-3 core-complex assembly as a mechanistic graph.
+    PR review issues 513 and 514 made EMDB:EMD-10186 first-class evidence and removed an ESX-3
+    pathway label that was broader than the membrane-complex record.
