@@ -886,14 +886,14 @@
           "cosine_similarity": 0.7558934
         },
         {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.74295112
-        },
-        {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.74150719
+        },
+        {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.73849199
         },
         {
           "identifier": "GO:0005816",
@@ -914,27 +914,27 @@
         {
           "identifier": "GO:0020010",
           "label": "conoid",
-          "cosine_similarity": 0.75339861
+          "cosine_similarity": 0.75006343
         },
         {
           "identifier": "GO:0005826",
           "label": "actomyosin contractile ring",
-          "cosine_similarity": 0.74295112
-        },
-        {
-          "identifier": "GO:1990586",
-          "label": "divisome complex",
-          "cosine_similarity": 0.70906551
+          "cosine_similarity": 0.73849199
         },
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.70595824
+          "cosine_similarity": 0.71670229
         },
         {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
-          "cosine_similarity": 0.70469589
+          "cosine_similarity": 0.71117828
+        },
+        {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.70885212
         }
       ]
     },
@@ -986,7 +986,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.75339861
+          "cosine_similarity": 0.75006343
         },
         {
           "identifier": "GO:0070258",
@@ -1077,6 +1077,11 @@
           "cosine_similarity": 0.71143266
         },
         {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.68047585
+        },
+        {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.67988165
@@ -1085,11 +1090,6 @@
           "identifier": "GO:1990586",
           "label": "divisome complex",
           "cosine_similarity": 0.67632631
-        },
-        {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.67594957
         }
       ]
     },
@@ -1113,14 +1113,14 @@
           "cosine_similarity": 0.71279967
         },
         {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.71117828
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.70740818
-        },
-        {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.70469589
         }
       ]
     },
@@ -1136,7 +1136,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.70906551
+          "cosine_similarity": 0.70885212
         },
         {
           "identifier": "GO:0009288",
@@ -2632,14 +2632,14 @@
           "cosine_similarity": 0.64548231
         },
         {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.64422763
+        },
+        {
           "identifier": "GO:0020011",
           "label": "apicoplast",
           "cosine_similarity": 0.63788786
-        },
-        {
-          "identifier": "GO:0032047",
-          "label": "mitosome",
-          "cosine_similarity": 0.63688466
         }
       ]
     },
@@ -3223,12 +3223,12 @@
         {
           "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
           "label": "type IX protein secretion system complex",
-          "cosine_similarity": 0.74461504
+          "cosine_similarity": 0.74461505
         },
         {
           "identifier": "GO:0015627",
           "label": "type II protein secretion system complex",
-          "cosine_similarity": 0.73891398
+          "cosine_similarity": 0.73891399
         }
       ]
     },

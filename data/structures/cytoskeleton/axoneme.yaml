@@ -2,8 +2,8 @@ identifier: GO:0005930
 label: axoneme
 structure_category: CYTOSKELETON
 structure_kind: FILAMENT
-definition: A microtubule-based bundle with associated motor and regulatory proteins
-  that forms the motile core of eukaryotic cilia and flagella.
+definition: A microtubule-based bundle with associated proteins that forms the core
+  of a eukaryotic cilium or flagellum.
 definition_source: GO:0005930
 mapping_status: PROPOSED
 curation_history:
@@ -18,6 +18,13 @@ curation_history:
   changes: Added Chlamydomonas axoneme substructures, species-level taxonomic scope,
     a motility function, GO and DOI evidence, a nonmechanistic axonemal motility graph,
     and a subcomplex-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T09:41:19Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #452 review issues #453 and #454 by broadening the GO:0005930
+    definition beyond motile 9+2 axonemes and narrowing motility function and graph
+    text to Chlamydomonas flagellar evidence.'
   llm_assisted: true
 components:
 - component_id: outer_doublet_microtubules
@@ -112,11 +119,11 @@ canonical_examples:
     for cryoelectron tomography.
   reference: DOI:10.1126/science.1128618
 functions:
-- function_id: ciliary_flagellar_beating
-  label: ciliary and flagellar beating
-  description: Outer-doublet microtubules, axonemal dyneins, radial spokes, central-pair
-    structures, and nexin links form a motile scaffold that bends eukaryotic cilia
-    and flagella.
+- function_id: chlamydomonas_flagellar_beating
+  label: Chlamydomonas flagellar beating
+  description: In the Chlamydomonas 9+2 flagellar axoneme, outer-doublet microtubules,
+    axonemal dyneins, radial spokes, central-pair structures, and nexin links form
+    a scaffold for flagellar bending.
   evidence:
   - reference: DOI:10.1126/science.1128618
     notes: Nicastro et al. 2006 modeled force generation by dynein within the 9+2
@@ -135,10 +142,10 @@ evidence:
     a major regulatory node in cilia and flagella', Journal of Cell Biology.
 causal_graphs:
 - graph_id: chlamydomonas_axonemal_motility
-  title: Dynein and regulatory complexes bend the axoneme
+  title: Dynein and regulatory complexes bend Chlamydomonas axonemes
   description: In Chlamydomonas, dynein arms connect outer doublet microtubules to
     generate sliding forces; radial spokes, central-pair structures, and nexin-dynein
-    regulatory links organize and coordinate the motile axoneme.
+    regulatory links organize and coordinate the 9+2 flagellar axoneme.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: This graph summarizes major structural couplings and leaves dynein
@@ -169,7 +176,7 @@ causal_graphs:
     node_type: STRUCTURE
     grounding: GO:0005930
   - node_id: flagellar_bending
-    label: flagellar bending
+    label: Chlamydomonas flagellar bending
     node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: outer_doublet_microtubules
@@ -210,8 +217,8 @@ causal_graphs:
   - subject: axonemal_dynein_arms
     predicate: drives
     object: flagellar_bending
-    description: Dynein force generation on the doublet microtubule scaffold drives
-      axonemal bending.
+    description: Dynein force generation on the Chlamydomonas doublet-microtubule
+      scaffold drives flagellar bending.
     evidence:
     - reference: DOI:10.1126/science.1128618
       notes: Nicastro et al. 2006 interpreted the cryo-ET arrangement of axonemal
