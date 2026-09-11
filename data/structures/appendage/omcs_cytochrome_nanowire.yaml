@@ -1,0 +1,183 @@
+identifier: cellstructuremech:omcs_cytochrome_nanowire
+label: OmcS cytochrome nanowire
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: An extracellular electrically conductive Geobacter sulfurreducens cell
+  projection assembled as a helical filament of OmcS six-heme c-type cytochrome monomers
+  whose stacked hemes provide a path for long-range electron transport.
+definition_source: DOI:10.1016/j.cell.2019.03.029
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T14:55:39Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T14:56:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added OmcS cytochrome nanowire synonymy, GO cell-projection parentage,
+    a label-only OmcS component with a Geobacter sulfurreducens PCA UniProt example,
+    species-level Geobacter sulfurreducens scope and exemplar rows, stacked-heme electron-transfer
+    function evidence, a narrow OmcS function graph, and a TODO for exact OmcS family
+    grounding.
+  llm_assisted: true
+synonyms:
+- synonym_text: OmcS nanowire
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.cell.2019.03.029
+- synonym_text: cytochrome-based bacterial nanowire
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s42003-019-0448-9
+parent_structures:
+- GO:0042995
+components:
+- component_id: omcs_six_heme_c_type_cytochrome
+  label: OmcS six-heme c-type cytochrome
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - omcS
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: UniProtKB:Q74A86 identifies the Geobacter sulfurreducens PCA OmcS
+    protein, but no exact source-neutral InterPro, Pfam or NCBIfam family grounding
+    was verified for extracellular OmcS cytochrome nanowire subunits in this pass.
+  role: Six-heme c-type cytochrome subunit that packs head-to-tail into the extracellular
+    conductive nanowire and aligns hemes along the filament axis.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2019.03.029
+    notes: Wang et al. 2019 solved the cryo-EM structure of Geobacter sulfurreducens
+      OmcS nanowires and modeled stacked OmcS monomers as the proteinaceous filament.
+  - reference: DOI:10.1038/s42003-019-0448-9
+    notes: Filman et al. 2019 independently resolved OmcS as head-to-tail stacked
+      monomers in an extracellular Geobacter sulfurreducens cytochrome filament.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q74A86
+    protein_label: C-type cytochrome OmcS
+    gene_symbol: omcS
+    taxon_id: NCBITaxon:243231
+    taxon_label: Geobacter sulfurreducens PCA
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-11'
+    role: Reviewed UniProtKB entry for the Geobacter sulfurreducens PCA OmcS protein
+      linked to the cryo-EM OmcS nanowire structures PDB:6EF8 and PDB:6NEF.
+    evidence:
+    - reference: PDB:6EF8
+      notes: RCSB PDB entry 6EF8 links its OmcS cryo-EM model to UniProtKB:Q74A86
+        and the Wang et al. 2019 Cell publication.
+    - reference: PDB:6NEF
+      notes: RCSB PDB entry 6NEF links its OmcS cryo-EM model to UniProtKB:Q74A86
+        and the Filman et al. 2019 Communications Biology publication.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:35554
+  taxon_label: Geobacter sulfurreducens
+  presence: COMMON
+  note: Extracellular conductive filaments from Geobacter sulfurreducens include OmcS
+    cytochrome nanowires that were resolved by cryo-EM.
+  reference: DOI:10.1016/j.cell.2019.03.029
+canonical_examples:
+- taxon_id: NCBITaxon:35554
+  taxon_label: Geobacter sulfurreducens
+  note: Species in which extracellular OmcS filaments were purified and solved as
+    helical, cytochrome-based nanowires.
+  reference: DOI:10.1038/s42003-019-0448-9
+functions:
+- function_id: stacked_heme_long_range_electron_transfer
+  label: stacked-heme long-range electron transfer
+  description: OmcS monomers align six covalently bound hemes per subunit into a continuous
+    chain along the filament axis, providing a redox path for long-range extracellular
+    electron transfer.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2019.03.029
+    notes: Wang et al. 2019 connected the OmcS filament's stacked heme arrangement
+      with micrometer-scale electron transport in purified nanowires.
+  - reference: DOI:10.1038/s42003-019-0448-9
+    notes: Filman et al. 2019 resolved a 3.4 A OmcS filament structure whose continuous
+      heme stack can support long-range electron transport.
+evidence:
+- reference: DOI:10.1016/j.cell.2019.03.029
+  notes: Wang, Gu, O'Brien et al. 2019, Structure of Microbial Nanowires Reveals Stacked
+    Hemes that Transport Electrons over Micrometers, Cell.
+- reference: DOI:10.1038/s42003-019-0448-9
+  notes: Filman, Marino, Ward et al. 2019, Cryo-EM reveals the structural basis of
+    long-range electron transport in a cytochrome-based bacterial nanowire, Communications
+    Biology.
+causal_graphs:
+- graph_id: stacked_heme_omcs_nanowire_conduction
+  title: OmcS monomers align hemes for nanowire conduction
+  description: OmcS six-heme c-type cytochrome monomers polymerize into a helical
+    extracellular filament in which a stacked heme chain runs along the nanowire axis
+    and provides a path for long-range electron transfer.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: This graph is restricted to OmcS filament architecture and the stacked-heme
+    conduction path; it does not model OmcS export, nanowire localization on cells,
+    or the distinct OmcE and OmcZ cytochrome nanowire classes.
+  nodes:
+  - node_id: omcs_six_heme_c_type_cytochrome
+    label: OmcS six-heme c-type cytochrome
+    node_type: GENE_OR_PROTEIN
+    component_ref: omcs_six_heme_c_type_cytochrome
+  - node_id: stacked_heme_chain
+    label: stacked heme chain
+    node_type: STATE
+  - node_id: omcs_cytochrome_nanowire
+    label: OmcS cytochrome nanowire
+    node_type: STRUCTURE
+    grounding: cellstructuremech:omcs_cytochrome_nanowire
+  - node_id: long_range_electron_transfer
+    label: long-range extracellular electron transfer
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: omcs_six_heme_c_type_cytochrome
+    predicate: polymerizes into
+    object: omcs_cytochrome_nanowire
+    description: OmcS monomers polymerize head-to-tail to build the helical extracellular
+      cytochrome nanowire.
+    evidence:
+    - reference: DOI:10.1038/s42003-019-0448-9
+      notes: Filman et al. 2019 reconstructed OmcS monomers stacked head-to-tail in
+        a helical bacterial nanowire.
+  - subject: omcs_six_heme_c_type_cytochrome
+    predicate: aligns
+    object: stacked_heme_chain
+    description: The OmcS fold positions six c-type hemes per subunit so that adjacent
+      monomers produce a continuous heme stack along the filament axis.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2019.03.029
+      notes: Wang et al. 2019 described the stacked heme arrangement in the OmcS filament
+        cryo-EM structure.
+    - reference: DOI:10.1038/s42003-019-0448-9
+      notes: Filman et al. 2019 resolved OmcS monomers around an unbranched heme chain
+        in the filament core.
+  - subject: stacked_heme_chain
+    predicate: supports
+    object: long_range_electron_transfer
+    description: The uninterrupted axial stack of hemes in the OmcS filament forms
+      a structural path for long-range electron transfer.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2019.03.029
+      notes: Wang et al. 2019 linked heme packing to electron transport over micrometer-length
+        OmcS nanowires.
+    - reference: DOI:10.1038/s42003-019-0448-9
+      notes: Filman et al. 2019 proposed the heme chain as the filament's long-range
+        electron transport path.
+discussions:
+- discussion_id: resolve_omcs_family_grounding
+  prompt: Resolve exact source-neutral protein-family grounding for OmcS cytochrome
+    nanowire subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#omcs_six_heme_c_type_cytochrome
+  rationale: The first OmcS cytochrome nanowire record uses a reviewed Geobacter sulfurreducens
+    PCA UniProtKB example but keeps the component itself label-only because no exact
+    InterPro, Pfam or NCBIfam family CURIE for the extracellular OmcS filament subunit
+    class was verified.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2019.03.029
+    notes: Wang et al. 2019 should guide future OmcS-family grounding and separation
+      from other cytochrome nanowire subunit classes.
+  posed_by: codex
+  posed_date: '2026-09-11'
