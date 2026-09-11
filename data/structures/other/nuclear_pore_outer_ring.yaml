@@ -1,0 +1,350 @@
+identifier: GO:0031080
+label: nuclear pore outer ring
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A ring-shaped eukaryotic nuclear pore subcomplex built from outer-ring
+  coat nucleoporins on the cytoplasmic and nucleoplasmic faces of the nuclear pore
+  scaffold.
+definition_source: GO:0031080
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T06:40:26Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T06:42:25Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Nup84/Nup107 and Nup107-160 synonymy, nuclear-pore parthood, seven
+    Nup84/Y-complex component classes, Eukaryota distribution, a Saccharomyces cerevisiae
+    example, nuclear-pore scaffold function, DOI/GO evidence, an outer-ring assembly
+    graph, and a Y-complex grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Nup84 complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:0031080
+- synonym_text: Nup107-160 complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:0031080
+- synonym_text: Y complex
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev-biophys-052118-115308
+part_of:
+- GO:0005643
+components:
+- component_id: nup84_nup107_family
+  label: Nup84/Nup107-family nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP84
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first outer-ring record curates Saccharomyces Nup84-complex
+    families by orthology-aware labels and leaves exact InterPro/Pfam groundings for
+    a later family-by-family pass.
+  role: Coat nucleoporin family represented in the Saccharomyces cerevisiae Nup84/Y-complex
+    outer-ring subcomplex.
+  evidence:
+  - reference: DOI:10.1093/emboj/21.3.387
+    notes: Lutzmann et al. 2002 reconstituted the Saccharomyces Nup84 complex from
+      Nup84, Nup85, Nup120, Nup133, Nup145C, Sec13, and Seh1.
+  - reference: DOI:10.1083/jcb.201109008
+    notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
+      module in the nuclear pore complex.
+- component_id: nup85_family
+  label: Nup85-family nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP85
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first outer-ring record curates Saccharomyces Nup84-complex
+    families by orthology-aware labels and leaves exact InterPro/Pfam groundings for
+    a later family-by-family pass.
+  role: Coat nucleoporin family represented in the Saccharomyces cerevisiae Nup84/Y-complex
+    outer-ring subcomplex.
+  evidence:
+  - reference: DOI:10.1093/emboj/21.3.387
+    notes: Lutzmann et al. 2002 reconstituted the Saccharomyces Nup84 complex from
+      Nup84, Nup85, Nup120, Nup133, Nup145C, Sec13, and Seh1.
+  - reference: DOI:10.1083/jcb.201109008
+    notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
+      module in the nuclear pore complex.
+- component_id: nup120_nup160_family
+  label: Nup120/Nup160-family nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP120
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first outer-ring record curates Saccharomyces Nup84-complex
+    families by orthology-aware labels and leaves exact InterPro/Pfam groundings for
+    a later family-by-family pass.
+  role: Coat nucleoporin family represented in the Saccharomyces cerevisiae Nup84/Y-complex
+    outer-ring subcomplex.
+  evidence:
+  - reference: DOI:10.1093/emboj/21.3.387
+    notes: Lutzmann et al. 2002 reconstituted the Saccharomyces Nup84 complex from
+      Nup84, Nup85, Nup120, Nup133, Nup145C, Sec13, and Seh1.
+  - reference: DOI:10.1083/jcb.201109008
+    notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
+      module in the nuclear pore complex.
+- component_id: nup133_family
+  label: Nup133-family nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP133
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first outer-ring record curates Saccharomyces Nup84-complex
+    families by orthology-aware labels and leaves exact InterPro/Pfam groundings for
+    a later family-by-family pass.
+  role: Coat nucleoporin family represented in the Saccharomyces cerevisiae Nup84/Y-complex
+    outer-ring subcomplex.
+  evidence:
+  - reference: DOI:10.1093/emboj/21.3.387
+    notes: Lutzmann et al. 2002 reconstituted the Saccharomyces Nup84 complex from
+      Nup84, Nup85, Nup120, Nup133, Nup145C, Sec13, and Seh1.
+  - reference: DOI:10.1083/jcb.201109008
+    notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
+      module in the nuclear pore complex.
+- component_id: nup145c_nup96_family
+  label: Nup145C/Nup96-family nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP145
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first outer-ring record curates Saccharomyces Nup84-complex
+    families by orthology-aware labels and leaves exact InterPro/Pfam groundings for
+    a later family-by-family pass.
+  role: Coat nucleoporin family represented in the Saccharomyces cerevisiae Nup84/Y-complex
+    outer-ring subcomplex.
+  evidence:
+  - reference: DOI:10.1093/emboj/21.3.387
+    notes: Lutzmann et al. 2002 reconstituted the Saccharomyces Nup84 complex from
+      Nup84, Nup85, Nup120, Nup133, Nup145C, Sec13, and Seh1.
+  - reference: DOI:10.1083/jcb.201109008
+    notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
+      module in the nuclear pore complex.
+- component_id: sec13_family
+  label: Sec13-family nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - SEC13
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first outer-ring record curates Saccharomyces Nup84-complex
+    families by orthology-aware labels and leaves exact InterPro/Pfam groundings for
+    a later family-by-family pass.
+  role: Coat nucleoporin family represented in the Saccharomyces cerevisiae Nup84/Y-complex
+    outer-ring subcomplex.
+  evidence:
+  - reference: DOI:10.1093/emboj/21.3.387
+    notes: Lutzmann et al. 2002 reconstituted the Saccharomyces Nup84 complex from
+      Nup84, Nup85, Nup120, Nup133, Nup145C, Sec13, and Seh1.
+  - reference: DOI:10.1083/jcb.201109008
+    notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
+      module in the nuclear pore complex.
+- component_id: seh1_family
+  label: Seh1-family nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - SEH1
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first outer-ring record curates Saccharomyces Nup84-complex
+    families by orthology-aware labels and leaves exact InterPro/Pfam groundings for
+    a later family-by-family pass.
+  role: Coat nucleoporin family represented in the Saccharomyces cerevisiae Nup84/Y-complex
+    outer-ring subcomplex.
+  evidence:
+  - reference: DOI:10.1093/emboj/21.3.387
+    notes: Lutzmann et al. 2002 reconstituted the Saccharomyces Nup84 complex from
+      Nup84, Nup85, Nup120, Nup133, Nup145C, Sec13, and Seh1.
+  - reference: DOI:10.1083/jcb.201109008
+    notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
+      module in the nuclear pore complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: Outer-ring Nup84/Nup107-160/Y-complex coat nucleoporins are broadly conserved
+    in eukaryotic nuclear pores, with lineage-specific differences in stoichiometry
+    and accessory nucleoporins.
+  reference: DOI:10.1146/annurev-biophys-052118-115308
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which the heptameric Nup84 outer-ring subcomplex was
+    reconstituted and structurally mapped.
+  reference: DOI:10.1093/emboj/21.3.387
+functions:
+- function_id: nuclear_pore_scaffold_assembly
+  label: nuclear-pore scaffold assembly
+  description: The nuclear pore outer ring contributes a coat-nucleoporin scaffold
+    to the assembled NPC.
+  evidence:
+  - reference: DOI:10.1073/pnas.0907453106
+    notes: Seo et al. 2009 studied Nup120 structure and proposed how the Nup84 complex
+      forms rings.
+  - reference: DOI:10.1016/j.cell.2021.12.015
+    notes: Akey et al. 2022 resolved the yeast nuclear pore outer-ring architecture.
+evidence:
+- reference: GO:0031080
+  notes: Gene Ontology cellular-component term for the nuclear pore outer ring.
+- reference: GO:0005643
+  notes: Gene Ontology cellular-component term for the nuclear pore.
+- reference: DOI:10.1093/emboj/21.3.387
+  notes: Lutzmann et al. 2002, 'Modular self-assembly of a Y-shaped multiprotein complex
+    from seven nucleoporins', EMBO Journal.
+- reference: DOI:10.1073/pnas.0907453106
+  notes: Seo et al. 2009, 'Structural and functional analysis of Nup120 suggests ring
+    formation of the Nup84 complex', Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1083/jcb.201109008
+  notes: Fernandez-Martinez et al. 2012, 'Structure-function mapping of a heptameric
+    module in the nuclear pore complex', Journal of Cell Biology.
+- reference: DOI:10.1016/j.cell.2021.12.015
+  notes: Akey et al. 2022, 'Comprehensive structure and functional adaptations of
+    the yeast nuclear pore complex', Cell.
+- reference: DOI:10.1146/annurev-biophys-052118-115308
+  notes: Hampoelz et al. 2019, 'Structure and Assembly of the Nuclear Pore Complex',
+    Annual Review of Biophysics.
+causal_graphs:
+- graph_id: nup84_complex_outer_ring_assembly
+  title: Nup84/Y-complex nucleoporins build the outer ring
+  description: Seven Saccharomyces coat-nucleoporin families assemble into the Nup84/Y
+    complex that contributes to the nuclear pore outer ring scaffold.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records Nup84-complex membership without asserting copy number,
+    ring stoichiometry, or a complete set of contacts among adjacent Y complexes.
+  nodes:
+  - node_id: nup84_nup107_family
+    label: Nup84/Nup107-family nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup84_nup107_family
+  - node_id: nup85_family
+    label: Nup85-family nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup85_family
+  - node_id: nup120_nup160_family
+    label: Nup120/Nup160-family nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup120_nup160_family
+  - node_id: nup133_family
+    label: Nup133-family nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup133_family
+  - node_id: nup145c_nup96_family
+    label: Nup145C/Nup96-family nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup145c_nup96_family
+  - node_id: sec13_family
+    label: Sec13-family nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec13_family
+  - node_id: seh1_family
+    label: Seh1-family nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: seh1_family
+  - node_id: nuclear_pore_outer_ring
+    label: nuclear pore outer ring
+    node_type: STRUCTURE
+    grounding: GO:0031080
+  edges:
+  - subject: nup84_nup107_family
+    predicate: assembles into
+    object: nuclear_pore_outer_ring
+    description: Nup84/Nup107-family nucleoporin is one of the seven coat-nucleoporin
+      classes that assemble into the budding-yeast Nup84/Y complex.
+    evidence:
+    - reference: DOI:10.1093/emboj/21.3.387
+      notes: Lutzmann et al. 2002 reconstituted a Y-shaped Saccharomyces Nup84 complex
+        from seven nucleoporins.
+  - subject: nup85_family
+    predicate: assembles into
+    object: nuclear_pore_outer_ring
+    description: Nup85-family nucleoporin is one of the seven coat-nucleoporin classes
+      that assemble into the budding-yeast Nup84/Y complex.
+    evidence:
+    - reference: DOI:10.1093/emboj/21.3.387
+      notes: Lutzmann et al. 2002 reconstituted a Y-shaped Saccharomyces Nup84 complex
+        from seven nucleoporins.
+  - subject: nup120_nup160_family
+    predicate: assembles into
+    object: nuclear_pore_outer_ring
+    description: Nup120/Nup160-family nucleoporin is one of the seven coat-nucleoporin
+      classes that assemble into the budding-yeast Nup84/Y complex.
+    evidence:
+    - reference: DOI:10.1093/emboj/21.3.387
+      notes: Lutzmann et al. 2002 reconstituted a Y-shaped Saccharomyces Nup84 complex
+        from seven nucleoporins.
+  - subject: nup133_family
+    predicate: assembles into
+    object: nuclear_pore_outer_ring
+    description: Nup133-family nucleoporin is one of the seven coat-nucleoporin classes
+      that assemble into the budding-yeast Nup84/Y complex.
+    evidence:
+    - reference: DOI:10.1093/emboj/21.3.387
+      notes: Lutzmann et al. 2002 reconstituted a Y-shaped Saccharomyces Nup84 complex
+        from seven nucleoporins.
+  - subject: nup145c_nup96_family
+    predicate: assembles into
+    object: nuclear_pore_outer_ring
+    description: Nup145C/Nup96-family nucleoporin is one of the seven coat-nucleoporin
+      classes that assemble into the budding-yeast Nup84/Y complex.
+    evidence:
+    - reference: DOI:10.1093/emboj/21.3.387
+      notes: Lutzmann et al. 2002 reconstituted a Y-shaped Saccharomyces Nup84 complex
+        from seven nucleoporins.
+  - subject: sec13_family
+    predicate: assembles into
+    object: nuclear_pore_outer_ring
+    description: Sec13-family nucleoporin is one of the seven coat-nucleoporin classes
+      that assemble into the budding-yeast Nup84/Y complex.
+    evidence:
+    - reference: DOI:10.1093/emboj/21.3.387
+      notes: Lutzmann et al. 2002 reconstituted a Y-shaped Saccharomyces Nup84 complex
+        from seven nucleoporins.
+  - subject: seh1_family
+    predicate: assembles into
+    object: nuclear_pore_outer_ring
+    description: Seh1-family nucleoporin is one of the seven coat-nucleoporin classes
+      that assemble into the budding-yeast Nup84/Y complex.
+    evidence:
+    - reference: DOI:10.1093/emboj/21.3.387
+      notes: Lutzmann et al. 2002 reconstituted a Y-shaped Saccharomyces Nup84 complex
+        from seven nucleoporins.
+discussions:
+- discussion_id: resolve_y_complex_family_groundings
+  prompt: Resolve exact source-neutral protein-family groundings for Nup84/Y-complex
+    outer-ring nucleoporin classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#nup84_nup107_family
+  - components#nup85_family
+  - components#nup120_nup160_family
+  - components#nup133_family
+  - components#nup145c_nup96_family
+  - components#sec13_family
+  - components#seh1_family
+  rationale: Nup84/Y-complex members have several paralog and ortholog names across
+    fungi and vertebrates; this first record avoids guessing one exact InterPro, Pfam,
+    NCBIfam, or UniProtKB accession for each source-neutral component class.
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-052118-115308
+    notes: Hampoelz et al. 2019 review alternative names and lineage variation in
+      outer-ring coat-nucleoporin complexes.
+  posed_by: codex
+  posed_date: '2026-09-11'
