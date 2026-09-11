@@ -22,6 +22,13 @@ curation_history:
     function, DOI evidence, a nonmechanistic CtpS-to-crescentin graph, and CTP synthase
     grounding and crescentin boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-11T16:16:14Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR #515 review issues #516 and #517 by adding variable Bacteria,
+    Archaea and Eukaryota cytoophidium distribution rows and narrowing broad CTP synthase
+    essentiality to UNKNOWN.'
+  llm_assisted: true
 parent_structures:
 - GO:0099512
 synonyms:
@@ -39,13 +46,13 @@ components:
   gene_symbols:
   - pyrG
   - ctpS
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: Reviewed Caulobacter UniProtKB entries and their InterPro/Pfam
     mappings ground catalytic CTP synthase enzymes or generic domains, not the source-neutral
     class of cytoophidium-forming CTPS proteins.
-  role: Filament-forming cytidine triphosphate synthase enzyme that polymerizes into
-    the CtpS cytoophidium.
+  role: Filament-forming cytidine triphosphate synthase enzyme that assembles into
+    CTPS cytoophidia in lineages where this constituent has been characterized.
   protein_examples:
   - uniprot_id: UniProtKB:Q9A7K3
     protein_label: CTP synthase
@@ -82,6 +89,26 @@ components:
       levels and to the CtpS inhibitor DON, and that Escherichia coli CtpS also forms
       filaments in vivo and in vitro.
 taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: CTPS cytoophidium occurrence is variable across Bacteria; Ingerson-Mahar et
+    al. 2010 directly demonstrated CtpS filaments in Caulobacter and Escherichia coli.
+  reference: DOI:10.1042/BST20221410
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: VARIABLE
+  note: Guo and Liu 2023 reviewed CTPS cytoophidia as structures found across all
+    three domains of life, including Archaea, without asserting universal archaeal
+    presence.
+  reference: DOI:10.1042/BST20221410
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: Guo and Liu 2023 reviewed CTPS cytoophidia as structures found across all
+    three domains of life; this row records eukaryotic occurrence without asserting
+    universal eukaryotic presence.
+  reference: DOI:10.1042/BST20221410
 - taxon_id: NCBITaxon:155892
   taxon_label: Caulobacter vibrioides
   presence: COMMON
