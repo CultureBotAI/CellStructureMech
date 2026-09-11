@@ -21,6 +21,13 @@ curation_history:
     evidence, a nonmechanistic node-condensation assembly graph, and a component-boundary
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T09:21:29Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #449 review issues #450 and #451 by adding constriction-specific
+    Wu et al. 2003 evidence and by converting fission-yeast gene symbols to PomBase-style
+    lowercase.'
+  llm_assisted: true
 synonyms:
 - synonym_text: contractile ring
   synonym_type: RELATED_SYNONYM
@@ -35,7 +42,7 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   gene_symbols:
-  - ACT1
+  - act1
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: This first fission-yeast actomyosin-ring record keeps broad actin,
     myosin-II, and formin labels until exact source-neutral family groundings are
@@ -54,7 +61,7 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   gene_symbols:
-  - MYO2
+  - myo2
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: This first fission-yeast actomyosin-ring record keeps broad actin,
     myosin-II, and formin labels until exact source-neutral family groundings are
@@ -73,7 +80,7 @@ components:
   component_role: ASSOCIATED_MACHINERY
   essentiality: UNKNOWN
   gene_symbols:
-  - CDC12
+  - cdc12
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: This first fission-yeast actomyosin-ring record keeps broad actin,
     myosin-II, and formin labels until exact source-neutral family groundings are
@@ -107,8 +114,11 @@ functions:
     constricts to help divide the fission-yeast cell during cytokinesis.
   evidence:
   - reference: DOI:10.1083/jcb.200602032
-    notes: Wu et al. 2006 measured assembly and constriction of the fission-yeast
-      contractile ring.
+    notes: Wu and Pollard 2006 modeled assembly of the fission-yeast contractile ring
+      from a broad band of nodes.
+  - reference: DOI:10.1016/S1534-5807(03)00324-1
+    notes: Wu et al. 2003 documented assembly and constriction of the fission-yeast
+      contractile ring during cytokinesis.
 evidence:
 - reference: GO:0005826
   notes: Gene Ontology cellular-component term for the actomyosin contractile ring.
@@ -118,6 +128,9 @@ evidence:
 - reference: DOI:10.1002/cm.21052
   notes: 'Lee, Coffman, and Wu 2012, ''Contractile-ring assembly in fission yeast
     cytokinesis: recent advances and new perspectives'', Cytoskeleton.'
+- reference: DOI:10.1016/S1534-5807(03)00324-1
+  notes: Wu et al. 2003, 'Spatial and temporal pathway for assembly and constriction
+    of the contractile ring in fission yeast cytokinesis', Developmental Cell.
 causal_graphs:
 - graph_id: fission_yeast_node_condensation
   title: Cdc12 nodes assemble actin and Myo2 into the contractile ring

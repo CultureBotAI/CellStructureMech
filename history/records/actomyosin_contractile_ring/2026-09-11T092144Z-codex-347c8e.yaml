@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/actomyosin_contractile_ring.yaml
+  slug: actomyosin_contractile_ring
+session:
+  id: 2026-09-11T092144Z-codex-347c8e
+  timestamp: '2026-09-11T09:21:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/450
+  - https://github.com/CultureBotAI/CellStructureMech/issues/451
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/449
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed actomyosin-ring PR review
+  details: 'Resolved PR #449 review issues #450 and #451 by adding Wu et al. 2003 as constriction-specific
+    actomyosin-ring evidence, narrowing the Wu and Pollard 2006 function note to assembly
+    from broad-band nodes, and converting fission-yeast gene symbols to PomBase-style lowercase.'
