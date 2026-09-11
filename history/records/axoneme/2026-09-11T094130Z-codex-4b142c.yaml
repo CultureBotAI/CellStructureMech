@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axoneme.yaml
+  slug: axoneme
+session:
+  id: 2026-09-11T094130Z-codex-4b142c
+  timestamp: '2026-09-11T09:41:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/453
+  - https://github.com/CultureBotAI/CellStructureMech/issues/454
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/452
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed axoneme PR review
+  details: 'Resolved PR #452 review issues #453 and #454 by broadening the GO:0005930 definition
+    beyond motile 9+2 axonemes and narrowing the motility function and graph text to Chlamydomonas
+    flagellar axonemes.'

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axoneme.yaml
+  slug: axoneme
+session:
+  id: 2026-09-11T093320Z-codex-8124bd
+  timestamp: '2026-09-11T09:33:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added axoneme record
+  details: Added a GO:0005930 axoneme record centered on Chlamydomonas reinhardtii evidence,
+    with outer-doublet, central-pair, dynein-arm, radial-spoke and nexin-dynein regulatory-complex
+    substructures; species-level taxonomic scope; a ciliary and flagellar beating function;
+    GO and DOI evidence; a nonmechanistic axonemal motility graph; and a TODO to resolve finer
+    axoneme subcomplex boundaries.
