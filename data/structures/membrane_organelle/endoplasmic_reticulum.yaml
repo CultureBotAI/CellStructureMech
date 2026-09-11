@@ -28,6 +28,13 @@ curation_history:
   action: CANONICALIZED_LABEL
   changes: Updated GO:0036503 references to the canonical 'ERAD pathway' label.
   llm_assisted: true
+- timestamp: '2026-09-11T17:11:35Z'
+  curator: codex
+  action: ADDRESSED_REVIEW_ISSUES
+  changes: 'Addressed review issues #524 and #525 by narrowing the Saccharomyces canonical
+    example to the Sec61 citation scope and changing the graph edge from a membrane-bounds-organelle
+    assertion to an ER-membrane-is-part-of-ER assertion.'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -78,8 +85,7 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model for endoplasmic-reticulum protein translocation, unfolded
-    protein response, and ER-associated degradation.
+  note: Budding-yeast model for Sec61-dependent endoplasmic-reticulum protein translocation.
   reference: DOI:10.1091/mbc.3.2.129
 functions:
 - function_id: protein_translocation_into_er
@@ -178,9 +184,10 @@ causal_graphs:
       notes: GO:0005788 defines the endoplasmic reticulum lumen as the volume enclosed
         by ER membranes.
   - subject: er_membrane
-    predicate: bounds
+    predicate: is part of
     object: endoplasmic_reticulum
-    description: The ER is an organelle composed of membrane tubules and cisternae.
+    description: The ER membrane is the unit-membrane network that forms ER tubules
+      and cisternae.
     evidence:
     - reference: GO:0005783
       notes: GO:0005783 defines the ER as an irregular network of unit membranes arranged
