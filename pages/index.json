@@ -531,6 +531,15 @@
   "definition": "A double-membrane-bounded organelle that functions in iron-sulfur protein maturation; evolutionarily derived from mitochondria. The mitosome has been detected only in anaerobic or microaerophilic organisms that do not have mitochondria, such as Entamoeba histolytica, Giardia intestinalis and several species of Microsporidia. These organisms are not capable of gaining energy from oxidative phosphorylation, which is normally performed by mitochondria."
  },
  {
+  "identifier": "GO:0005777",
+  "label": "peroxisome",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/peroxisome.html",
+  "definition": "A small organelle enclosed by a single membrane, and found in most eukaryotic cells; it contains peroxidases and other enzymes involved in metabolic processes including free radical detoxification, lipid catabolism and biosynthesis, and hydrogen peroxide metabolism."
+ },
+ {
   "identifier": "GO:0160201",
   "label": "polaroplast",
   "category": "MEMBRANE_ORGANELLE",
