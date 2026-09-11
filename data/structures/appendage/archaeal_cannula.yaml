@@ -21,6 +21,13 @@ curation_history:
     formation function, DOI evidence, a calcium-dependent CanA assembly graph, and
     TODOs for CanA-family grounding and cannula network function.
   llm_assisted: true
+- timestamp: '2026-09-11T14:46:58Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #501 by scoping the taxonomic and canonical-example notes to
+    their single direct citations, and resolved #502 by making CanA the subject of
+    the calcium-coordination assembly edge.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cannulae
   synonym_type: EXACT_SYNONYM
@@ -51,14 +58,14 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:54256
   taxon_label: Pyrodictium abyssi
   presence: COMMON
-  note: Pyrodictium abyssi produces extracellular cannulae that were visualized in
-    ultrastructural studies and later used for CanA fiber structural analysis.
+  note: Pyrodictium abyssi produces extracellular cannulae that were visualized as
+    a cell-associated tubular network in ultrastructural studies.
   reference: DOI:10.1006/jsbi.1995.1032
 canonical_examples:
 - taxon_id: NCBITaxon:54256
   taxon_label: Pyrodictium abyssi
-  note: Hyperthermophilic archaeon in which cannulae were characterized by thin-section
-    electron microscopy, cryo-electron tomography, and CanA structural reconstitution.
+  note: Hyperthermophilic archaeon in which cannulae were shown by cryo-electron tomography
+    to enter the periplasmic space without crossing into the cytoplasm.
   reference: DOI:10.1016/S1047-8477(02)00581-6
 functions:
 - function_id: extracellular_cell_network_formation
@@ -90,7 +97,7 @@ evidence:
     abyssi, Scientific Reports.
 causal_graphs:
 - graph_id: calcium_dependent_cana_cannula_assembly
-  title: Calcium coordinates CanA into Pyrodictium cannula fibers
+  title: CanA coordinates calcium during cannula-fiber assembly
   description: Pyrodictium CanA binds calcium ions and undergoes donor-strand complementation
     to assemble hollow extracellular cannula fibers that extend from the cell envelope
     and participate in a cell-surface network.
@@ -121,11 +128,11 @@ causal_graphs:
     label: Pyrodictium cell-cell network
     node_type: STRUCTURE
   edges:
-  - subject: calcium_ion
-    predicate: coordinates polymerization of
-    object: cana_cannula_glycoprotein
-    description: Calcium ion coordination helps drive chaperone-free CanA polymerization
-      through donor-strand complementation.
+  - subject: cana_cannula_glycoprotein
+    predicate: coordinates
+    object: calcium_ion
+    description: CanA calcium-binding interfaces coordinate calcium ions that support
+      chaperone-free polymerization through donor-strand complementation.
     evidence:
     - reference: DOI:10.1038/s41467-025-64120-8
       notes: Sleutel et al. 2025 resolved calcium-bound CanA interfaces in self-assembled
