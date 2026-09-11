@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ventral_disc.yaml
+  slug: ventral_disc
+session:
+  id: 2026-09-11T130228Z-codex-6d430a
+  timestamp: '2026-09-11T13:02:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added a Giardia ventral disc record
+  details: Created data/structures/cytoskeleton/ventral_disc.yaml for GO:0097597, including
+    exact GO synonyms, GO ventral-disc parts, tubulin-array and disc-associated-protein components,
+    Giardia taxonomic scope, a Giardia intestinalis canonical example, attachment and architecture
+    functions, DOI/GO evidence, a nonmechanistic ventral-disc architecture graph, and a CURATION_TODO
+    for finer DAP/giardin grounding.

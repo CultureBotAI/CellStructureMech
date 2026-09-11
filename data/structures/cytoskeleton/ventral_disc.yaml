@@ -1,0 +1,252 @@
+identifier: GO:0097597
+label: ventral disc
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: Specialized organelle found in Giardia species (trophozoite stage) and
+  characterized by a spiral array of microtubules and microtubule-associated structures
+  including dorsal microribbons and crossbridges. The edge of the ventral disc narrows
+  into a lateral crest. The ventral disk mediates mechanical attachment of the trophozoite
+  to the host's intestinal wall, and contains the contractile proteins actinin, alpha-actinin,
+  myosin, and tropomyosin working towards contraction of the disk involved in adherence.
+definition_source: GO:0097597
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T13:00:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T13:01:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO ventral-disc parts, exact synonyms, Giardia component curation,
+    taxonomic scope, attachment and architecture functions, DOI evidence, a nonmechanistic
+    ventral-disc architecture graph, and a DAP grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T13:02:05Z'
+  curator: codex
+  action: NORMALIZED_GO_LABELS
+  changes: Matched grounded ventral-disc substructure labels to the official GO labels
+    for GO:0097593, GO:0097594 and GO:0097595.
+  llm_assisted: true
+- timestamp: '2026-09-11T13:07:58Z'
+  curator: codex
+  action: NARROWED_TAXONOMIC_SCOPE
+  changes: Replaced the genus-level Giardia distribution row with a Giardia intestinalis
+    row so taxonomic scope follows the direct structural evidence rather than the
+    GO taxon restriction.
+  llm_assisted: true
+synonyms:
+- synonym_text: ventral adhesive disc
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097597
+- synonym_text: adhesive disc
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097597
+- synonym_text: ventral disk
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097597
+has_part:
+- GO:0097593
+- GO:0097594
+- GO:0097595
+- GO:0097591
+- GO:0097592
+- GO:0097596
+components:
+- component_id: ventral_disc_microtubules
+  label: ventral disc microtubule array
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding: GO:0097593
+  role: A spiral microtubule array that forms the scaffold for the Giardia ventral
+    disc.
+  evidence:
+  - reference: GO:0097597
+    notes: Gene Ontology models the ventral disc as a Giardia organelle characterized
+      by a spiral array of microtubules and microtubule-associated structures.
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Schwartz et al. 2012 used electron tomography to resolve the Giardia ventral
+      disc microtubule spiral and its associated microribbons and crossbridges.
+- component_id: disc_associated_proteins
+  label: ventral disc-associated proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Giardia ventral disc contains many DAP and giardin proteins
+    that occupy distinct substructures; no exact source-neutral CURIE for this mixed
+    constituent cohort was curated.
+  role: Protein cohort associated with ventral-disc substructures including dorsal
+    microribbons, crossbridges and the lateral crest.
+  evidence:
+  - reference: DOI:10.1371/journal.pntd.0001442
+    notes: Hagen et al. 2011 identified ventral-disc and lateral-crest proteins in
+      Giardia intestinalis.
+  - reference: DOI:10.1242/jcs.227355
+    notes: Nosala et al. 2020 identified additional Giardia disc-associated proteins
+      and linked DAP depletion with ventral-disc stability defects.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  presence: COMMON
+  note: Giardia intestinalis is the diplomonad species in which ventral-disc microtubule
+    architecture and disc-associated proteins were directly mapped.
+  reference: DOI:10.1371/journal.pone.0043783
+canonical_examples:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  note: Parasitic diplomonad model in which ventral-disc microtubule architecture
+    and disc-associated proteins were mapped by electron tomography and localization
+    screens.
+  reference: DOI:10.1371/journal.pone.0043783
+functions:
+- function_id: giardia_trophozoite_attachment
+  label: Giardia trophozoite attachment
+  description: The ventral disc is a microtubule-based organelle that supports Giardia
+    trophozoite attachment to host intestinal epithelium.
+  evidence:
+  - reference: DOI:10.1091/mbc.E23-12-0515
+    notes: Hagen et al. 2025 connected the domed architecture of the Giardia ventral
+      disc with trophozoite attachment.
+- function_id: ventral_disc_architecture_maintenance
+  label: ventral disc architecture maintenance
+  description: Microtubules and ventral disc-associated proteins build a stable spiral
+    organelle with dorsal microribbons, crossbridges and a lateral crest.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Schwartz et al. 2012 mapped microtubules, microribbons and crossbridges
+      in the Giardia ventral disc by electron tomography.
+  - reference: DOI:10.1242/jcs.227355
+    notes: Nosala et al. 2020 perturbed disc-associated proteins and detected changes
+      in ventral-disc stability.
+evidence:
+- reference: GO:0097597
+  notes: Gene Ontology cellular-component term for the Giardia ventral disc.
+- reference: DOI:10.1371/journal.pntd.0001442
+  notes: Hagen et al. 2011, 'Novel Structural Components of the Ventral Disc and Lateral
+    Crest in Giardia intestinalis', PLOS Neglected Tropical Diseases.
+- reference: DOI:10.1371/journal.pone.0043783
+  notes: Schwartz et al. 2012, 'A Detailed, Hierarchical Study of Giardia lamblia's
+    Ventral Disc Reveals Novel Microtubule-Associated Protein Complexes', PLOS ONE.
+- reference: DOI:10.1242/jcs.227355
+  notes: Nosala et al. 2020, 'Disc-associated proteins mediate the unusual hyperstability
+    of the ventral disc in Giardia lamblia', Journal of Cell Science.
+- reference: DOI:10.1091/mbc.E23-12-0515
+  notes: Hagen et al. 2025, 'Giardia's domed ventral disc architecture is essential
+    for attachment', Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: ventral_disc_architecture_attachment
+  title: Giardia ventral-disc architecture supports trophozoite attachment
+  description: The Giardia ventral disc is built on a spiral microtubule scaffold
+    with microribbons, crossbridges and a lateral crest; this domed cytoskeletal architecture
+    supports trophozoite attachment to host epithelium.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures major ventral-disc substructures and host attachment
+    while leaving DAP-specific assembly, actin-associated regulation and disc contraction
+    mechanisms unresolved.
+  nodes:
+  - node_id: ventral_disc_microtubules
+    label: ventral disc microtubule array
+    node_type: GENE_OR_PROTEIN
+    component_ref: ventral_disc_microtubules
+  - node_id: disc_associated_proteins
+    label: ventral disc-associated proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: disc_associated_proteins
+  - node_id: dorsal_microribbons
+    label: ventral disc dorsal microribbon
+    node_type: STRUCTURE
+    grounding: GO:0097594
+  - node_id: crossbridges
+    label: ventral disc crossbridge
+    node_type: STRUCTURE
+    grounding: GO:0097595
+  - node_id: lateral_crest
+    label: ventral disc lateral crest
+    node_type: STRUCTURE
+    grounding: GO:0097591
+  - node_id: ventral_disc
+    label: ventral disc
+    node_type: STRUCTURE
+    grounding: GO:0097597
+  - node_id: trophozoite_attachment
+    label: trophozoite attachment
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: ventral_disc_microtubules
+    predicate: form scaffold of
+    object: ventral_disc
+    description: A spiral microtubule array forms the main cytoskeletal scaffold of
+      the ventral disc.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0043783
+      notes: Schwartz et al. 2012 resolved the Giardia ventral disc microtubule spiral
+        by electron tomography.
+  - subject: disc_associated_proteins
+    predicate: localize to
+    object: ventral_disc
+    description: Disc-associated proteins occupy distinct ventral-disc substructures.
+    evidence:
+    - reference: DOI:10.1371/journal.pntd.0001442
+      notes: Hagen et al. 2011 localized candidate Giardia disc and lateral-crest
+        proteins.
+    - reference: DOI:10.1242/jcs.227355
+      notes: Nosala et al. 2020 localized additional disc-associated proteins to the
+        Giardia ventral disc.
+  - subject: dorsal_microribbons
+    predicate: are part of
+    object: ventral_disc
+    description: Dorsal microribbons are proteinaceous substructures of the Giardia
+      ventral disc.
+    evidence:
+    - reference: GO:0097594
+      notes: Gene Ontology models dorsal microribbons as ventral-disc parts.
+  - subject: crossbridges
+    predicate: connect
+    object: dorsal_microribbons
+    description: Crossbridges link neighboring dorsal microribbons in the ventral
+      disc.
+    evidence:
+    - reference: GO:0097595
+      notes: Gene Ontology defines ventral-disc crossbridges as links between adjacent
+        microribbons.
+  - subject: lateral_crest
+    predicate: surrounds
+    object: ventral_disc
+    description: The lateral crest forms the fibrillar edge of the ventral disc.
+    evidence:
+    - reference: GO:0097591
+      notes: Gene Ontology models the lateral crest as a fibrillar repetitive structure
+        that surrounds the ventral disc edge.
+  - subject: ventral_disc
+    predicate: supports
+    object: trophozoite_attachment
+    description: The domed ventral-disc organelle supports Giardia trophozoite attachment.
+    evidence:
+    - reference: DOI:10.1091/mbc.E23-12-0515
+      notes: Hagen et al. 2025 connected Giardia ventral-disc architecture with attachment.
+discussions:
+- discussion_id: resolve_giardia_ventral_disc_protein_grounding
+  prompt: Resolve exact source-neutral groundings and finer boundaries for Giardia
+    ventral-disc DAPs, giardins, microribbon proteins, crossbridge proteins and lateral-crest
+    proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#disc_associated_proteins
+  rationale: The first ventral disc record curates a broad disc-associated protein
+    cohort because the literature defines many DAP and giardin constituents with distinct
+    substructure localizations, but this pass did not verify exact protein-family
+    CURIEs or stable complex boundaries for each substructure.
+  evidence:
+  - reference: DOI:10.1371/journal.pntd.0001442
+    notes: Hagen et al. 2011 localized multiple new proteins to the ventral disc and
+      lateral crest.
+  - reference: DOI:10.1242/jcs.227355
+    notes: Nosala et al. 2020 identified and localized additional disc-associated
+      proteins.
+  posed_by: codex
+  posed_date: '2026-09-11'
