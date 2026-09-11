@@ -23,12 +23,19 @@ curation_history:
     scope, glycan-processing and cisternal-maturation functions, a nonmechanistic
     cisternal maturation graph, and a machinery-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T16:51:50Z'
+  curator: codex
+  action: ADDRESSED_REVIEW_ISSUE
+  changes: 'Addressed review issue #522 by adding GO:0031985 Golgi cisterna as a curated
+    Golgi apparatus part and grounding the Golgi cisterna graph node.'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
 - GO:0012505
 has_part:
 - GO:0000139
+- GO:0031985
 synonyms:
 - synonym_text: Golgi complex
   synonym_type: EXACT_SYNONYM
@@ -133,6 +140,7 @@ causal_graphs:
   - node_id: golgi_cisterna
     label: Golgi cisterna
     node_type: ORGANELLE
+    grounding: GO:0031985
   - node_id: early_to_late_cisternal_maturation
     label: early-to-late cisternal maturation
     node_type: BIOLOGICAL_PROCESS
