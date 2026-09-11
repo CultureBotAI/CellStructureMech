@@ -3,7 +3,7 @@ label: type I pilus
 structure_category: APPENDAGE
 structure_kind: APPENDAGE
 definition: A chaperone-usher bacterial pilus assembled from a helical FimA rod tipped
-  by the adaptor subunits FimF and FimG and the mannose-binding FimH adhesin. In Escherichia
+  by the adaptor subunits FimG and FimF and the mannose-binding FimH adhesin. In Escherichia
   coli, the type I pilus is polymerized through the outer-membrane FimD usher and
   terminated by a basal FimI subunit that anchors the completed rod to the assembly
   platform.
@@ -21,6 +21,14 @@ curation_history:
   changes: Added exact synonymy, GO pilus parentage, FimA/FimF/FimG/FimH/FimI constituents,
     E. coli taxonomy, GO:0140623 assembly and mannose-sensitive adhesion functions,
     literature evidence, a FimC/FimD assembly graph, and grounding/boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-11T01:53:52Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #385 issues #386 and #387 by splitting the grouped FimF/FimG
+    tip-adaptor component into ordered FimG and FimF constituents, updating the assembly
+    graph to preserve the FimH-FimG-FimF-FimA order, and attaching the family-grounding
+    TODO to every reviewed-label-only subunit.'
   llm_assisted: true
 synonyms:
 - synonym_text: type 1 pilus
@@ -54,24 +62,37 @@ components:
   - reference: DOI:10.1038/s41467-025-60325-z
     notes: Bachmann et al. 2025 structurally analyze the Escherichia coli type 1 pilus
       rod as a helical assembly of FimA.
-- component_id: fimf_fimg_tip_adaptors
-  label: FimF/FimG tip adaptor subunits
+- component_id: fimg_tip_adaptor
+  label: FimG tip adaptor subunit
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
-  - fimF
   - fimG
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: FimF and FimG are type I pilus minor subunits; no exact source-neutral
-    CURIE for the two-protein tip adaptor set was curated for this first record.
-  role: Connect the FimH adhesin to the FimA rod as the short flexible tip fibrillum.
+  grounding_notes: FimG is the type I pilus minor subunit proximal to FimH; no exact
+    source-neutral FimG family CURIE was curated for this first record.
+  role: Links the distal FimH adhesin to FimF in the short flexible tip fibrillum.
   evidence:
   - reference: DOI:10.1073/pnas.92.6.2081
     notes: Jones et al. 1995 isolated type 1 pilus tip fibrillae containing FimH and
       FimG.
   - reference: DOI:10.1038/s41467-025-60325-z
-    notes: Bachmann et al. 2025 describe the type 1 pilus flexible tip fibrillum as
-      FimH, FimG and FimF.
+    notes: Bachmann et al. 2025 place FimG between FimH and FimF in the type 1 pilus
+      flexible tip fibrillum.
+- component_id: fimf_tip_adaptor
+  label: FimF tip adaptor subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fimF
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: FimF is the type I pilus minor subunit proximal to the FimA rod;
+    no exact source-neutral FimF family CURIE was curated for this first record.
+  role: Joins the FimH/FimG tip to the helical FimA rod.
+  evidence:
+  - reference: DOI:10.1038/s41467-025-60325-z
+    notes: Bachmann et al. 2025 model FimF between FimG and the FimA rod in the assembled
+      type 1 pilus.
 - component_id: fimh_tip_adhesin
   label: FimH tip adhesin
   component_type: PROTEIN
@@ -160,9 +181,9 @@ causal_graphs:
 - graph_id: chaperone_usher_tip_rod_assembly
   title: FimC and FimD polymerize the type I pilus tip and rod
   description: FimC carries folded pilus subunits to the outer-membrane FimD usher.
-    FimD accepts the tip adhesin and adaptor subunits before adding FimA repeatedly
-    into the helical rod, then the FimI terminator caps the basal end and anchors
-    the rod at the usher.
+    FimD accepts the FimH adhesin, FimG adaptor, and FimF adaptor before adding FimA
+    repeatedly into the helical rod, then the FimI terminator caps the basal end and
+    anchors the rod at the usher.
   graph_kind: ASSEMBLY
   scope_status: MECHANISTIC
   nodes:
@@ -176,10 +197,14 @@ causal_graphs:
     label: FimH tip adhesin
     node_type: GENE_OR_PROTEIN
     component_ref: fimh_tip_adhesin
-  - node_id: fimf_fimg_tip_adaptors
-    label: FimF/FimG tip adaptor subunits
+  - node_id: fimg_tip_adaptor
+    label: FimG tip adaptor subunit
     node_type: GENE_OR_PROTEIN
-    component_ref: fimf_fimg_tip_adaptors
+    component_ref: fimg_tip_adaptor
+  - node_id: fimf_tip_adaptor
+    label: FimF tip adaptor subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: fimf_tip_adaptor
   - node_id: fima_major_pilin
     label: FimA major pilin
     node_type: GENE_OR_PROTEIN
@@ -216,14 +241,30 @@ causal_graphs:
       notes: Werneburg and Thanassi 2018 describe ordered chaperone-usher incorporation
         of the type 1 pilus tip subunits.
   - subject: fimh_adhesin
-    predicate: connects through
-    object: fimf_fimg_tip_adaptors
-    description: FimF and FimG form the intervening tip fibrillum between the distal
-      FimH adhesin and the FimA rod.
+    predicate: connects to
+    object: fimg_tip_adaptor
+    description: FimH sits at the distal tip and connects to the FimG adaptor.
     evidence:
     - reference: DOI:10.1038/s41467-025-60325-z
-      notes: Bachmann et al. 2025 structurally model the type 1 pilus tip fibrillum
-        from FimH, FimG and FimF.
+      notes: Bachmann et al. 2025 structurally model FimG immediately proximal to
+        FimH in the type 1 pilus tip.
+  - subject: fimg_tip_adaptor
+    predicate: connects to
+    object: fimf_tip_adaptor
+    description: FimG links the distal adhesin to FimF within the flexible tip fibrillum.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-60325-z
+      notes: Bachmann et al. 2025 place FimF proximal to FimG in the ordered FimH-FimG-FimF
+        tip fibrillum.
+  - subject: fimf_tip_adaptor
+    predicate: connects to
+    object: fima_major_pilin
+    description: FimF joins the flexible tip fibrillum to the first FimA subunits
+      of the rod.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-60325-z
+      notes: Bachmann et al. 2025 model FimF as the adaptor between FimG and the helical
+        FimA rod.
   - subject: fima_major_pilin
     predicate: polymerizes into
     object: type_i_pilus
@@ -270,12 +311,16 @@ discussions:
   posed_date: '2026-09-11'
   resolved_date: '2026-09-11'
 - discussion_id: resolve_type_i_family_groundings
-  prompt: Resolve exact source-neutral family groundings for the FimA, FimF, FimG,
+  prompt: Resolve exact source-neutral family groundings for the FimA, FimG, FimF,
     FimH and FimI constituent subunits.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#fima_major_pilin
+  - components#fimg_tip_adaptor
+  - components#fimf_tip_adaptor
+  - components#fimh_tip_adhesin
+  - components#fimi_terminator
   rationale: The record intentionally uses reviewed labels for the E. coli type I
     pilus subunits until InterPro, Pfam or NCBIfam accessions can be verified without
     overclaiming a broader chaperone-usher domain as an exact subunit family.

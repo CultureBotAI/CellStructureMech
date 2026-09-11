@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/type_i_pilus.yaml
+  slug: type_i_pilus
+session:
+  id: 2026-09-11T015420Z-codex-d9fc51
+  timestamp: '2026-09-11T01:54:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/386
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/385
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address type I pilus review findings
+  details: 'Resolved PR #385 review issues #386 and #387 by splitting the grouped FimF/FimG
+    tip-adaptor component into distinct ordered FimG and FimF constituents, replacing the
+    collapsed graph node with FimH-FimG-FimF-FimA assembly edges, and attaching the open exact-family-grounding
+    discussion to every reviewed-label-only Type I pilus subunit.'
