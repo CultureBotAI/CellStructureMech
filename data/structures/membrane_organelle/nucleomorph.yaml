@@ -1,0 +1,191 @@
+identifier: GO:0033009
+label: nucleomorph
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A small, vestigial nucleus found in some plastids that derive from a eukaryotic
+  endosymbiont. Observed in chlorarachniophytes and cryptomonads, which acquired their
+  plastids from a green and red alga respectively.
+definition_source: GO:0033009
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T16:27:16Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T16:28:12Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added intracellular-organelle parentage, plastid parthood, nucleomorph
+    synonymy and chromosome component curation, cryptophyte and chlorarachniophyte
+    scope, Guillardia and Bigelowiella examples, reduced-genome and replication functions,
+    a nonmechanistic nucleomorph-genome graph, and an envelope-component TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T16:31:08Z'
+  curator: codex
+  action: FIXED_ID_LABEL_MISMATCH
+  changes: Renamed the GO:0009536 graph node from secondary_plastid to plastid to
+    match the canonical GO label.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+part_of:
+- GO:0009536
+synonyms:
+- synonym_text: residual endosymbiont nucleus
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1186/1471-2164-15-374
+- synonym_text: remnant endosymbiont nucleus
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nature11681
+components:
+- component_id: nucleomorph_chromosomes
+  label: nucleomorph chromosomes
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Highly reduced linear chromosomes that carry the residual eukaryotic endosymbiont
+    nuclear genome inside the nucleomorph.
+  evidence:
+  - reference: DOI:10.1038/nature11681
+    notes: Curtis et al. 2012 compared cryptophyte and chlorarachniophyte algae whose
+      remnant endosymbiont nuclei retain small essential-gene residues.
+  - reference: DOI:10.1186/1471-2164-15-374
+    notes: Tanifuji et al. 2014 sequenced the three linear chromosomes of the Lotharella
+      oceanica nucleomorph genome.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3027
+  taxon_label: Cryptophyceae
+  presence: COMMON
+  note: Cryptophyte nucleomorphs are residual red-algal nuclei inside secondary plastids.
+  reference: DOI:10.1038/nature11681
+- taxon_id: NCBITaxon:29197
+  taxon_label: Chlorarachniophyceae
+  presence: COMMON
+  note: Chlorarachniophytes retain green-algal-derived nucleomorphs within their complex
+    plastids.
+  reference: DOI:10.1186/1471-2164-15-374
+canonical_examples:
+- taxon_id: NCBITaxon:55529
+  taxon_label: Guillardia theta
+  note: Cryptophyte model whose nucleomorph and chloroplast replication were followed
+    through the cell cycle.
+  reference: DOI:10.1038/s41598-017-02668-2
+- taxon_id: NCBITaxon:227086
+  taxon_label: Bigelowiella natans
+  note: Chlorarachniophyte model compared with Guillardia theta to explain why a small
+    residue of essential genes remains locked in each nucleomorph.
+  reference: DOI:10.1038/nature11681
+functions:
+- function_id: reduced_endosymbiont_genome_maintenance
+  label: reduced endosymbiont genome maintenance
+  description: The nucleomorph houses the compact remnant genome of an engulfed eukaryotic
+    algal endosymbiont inside a secondary plastid.
+  evidence:
+  - reference: DOI:10.1038/nature11681
+    notes: Curtis et al. 2012 found that the Guillardia theta and Bigelowiella natans
+      nucleomorphs retain small sets of essential genes.
+- function_id: nucleomorph_genome_replication
+  label: nucleomorph genome replication
+  description: The nucleomorph genome is replicated once per Guillardia theta cell
+    cycle in coordination with plastid replication.
+  evidence:
+  - reference: DOI:10.1038/s41598-017-02668-2
+    notes: Onuma et al. 2017 measured host nuclear and nucleomorph DNA synthesis timing
+      in the cryptophyte Guillardia theta.
+evidence:
+- reference: GO:0033009
+  notes: Gene Ontology cellular-component term for nucleomorph.
+- reference: DOI:10.1038/nature11681
+  notes: Curtis et al. 2012, 'Algal genomes reveal evolutionary mosaicism and the
+    fate of nucleomorphs', Nature.
+- reference: DOI:10.1038/s41598-017-02668-2
+  notes: Onuma, Mishra and Miyagishima 2017, 'Regulation of chloroplast and nucleomorph
+    replication by the cell cycle in the cryptophyte Guillardia theta', Scientific
+    Reports.
+- reference: DOI:10.1186/1471-2164-15-374
+  notes: Tanifuji et al. 2014, 'Nucleomorph and plastid genome sequences of the chlorarachniophyte
+    Lotharella oceanica', BMC Genomics.
+causal_graphs:
+- graph_id: nucleomorph_genome_retention
+  title: Nucleomorphs retain reduced endosymbiont chromosomes
+  description: Cryptophyte and chlorarachniophyte nucleomorphs house highly reduced
+    endosymbiont-derived chromosomes inside secondary plastids and replicate them
+    once during the host-cell cycle.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the retained genome and a cell-cycle-coupled replication
+    example without asserting the proteins that form the nucleomorph envelope or the
+    replication machinery.
+  nodes:
+  - node_id: nucleomorph_chromosomes
+    label: nucleomorph chromosomes
+    node_type: GENETIC_ELEMENT
+    component_ref: nucleomorph_chromosomes
+  - node_id: nucleomorph
+    label: nucleomorph
+    node_type: STRUCTURE
+    grounding: GO:0033009
+  - node_id: plastid
+    label: plastid
+    node_type: STRUCTURE
+    grounding: GO:0009536
+  - node_id: residual_essential_genes
+    label: residual essential endosymbiont genes
+    node_type: GENETIC_ELEMENT
+  - node_id: nucleomorph_dna_replication
+    label: nucleomorph DNA replication
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: nucleomorph_chromosomes
+    predicate: are housed in
+    object: nucleomorph
+    description: Reduced endosymbiont-derived chromosomes are retained in the nucleomorph.
+    evidence:
+    - reference: DOI:10.1186/1471-2164-15-374
+      notes: Tanifuji et al. 2014 resolved the Lotharella oceanica nucleomorph genome
+        as three linear chromosomes.
+  - subject: nucleomorph
+    predicate: is part of
+    object: plastid
+    description: The nucleomorph is a vestigial nucleus retained inside a plastid
+      derived from a eukaryotic endosymbiont.
+    evidence:
+    - reference: GO:0033009
+      notes: GO:0033009 defines nucleomorphs as vestigial nuclei found in plastids
+        derived from eukaryotic endosymbionts.
+  - subject: nucleomorph_chromosomes
+    predicate: encode
+    object: residual_essential_genes
+    description: A small residual set of essential genes remains encoded in each nucleomorph
+      genome.
+    evidence:
+    - reference: DOI:10.1038/nature11681
+      notes: Curtis et al. 2012 compared Guillardia theta and Bigelowiella natans
+        and argued that a residue of essential genes remains locked in the nucleomorph.
+  - subject: nucleomorph_chromosomes
+    predicate: replicate through
+    object: nucleomorph_dna_replication
+    description: The nucleomorph DNA is replicated once during the Guillardia theta
+      cell cycle.
+    evidence:
+    - reference: DOI:10.1038/s41598-017-02668-2
+      notes: Onuma et al. 2017 measured the timing of nucleomorph DNA synthesis during
+        the Guillardia theta cell cycle.
+discussions:
+- discussion_id: resolve_nucleomorph_envelope_components
+  prompt: Resolve exact source-neutral components for the nucleomorph envelope and
+    any conserved nucleomorph pore or division machinery.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#nucleomorph_chromosomes
+  rationale: This first nucleomorph record curates the directly sequenced residual
+    chromosomes and leaves lipid-envelope and protein-machinery composition unmodeled
+    until exact cross-lineage constituent classes are verified.
+  evidence:
+  - reference: DOI:10.1038/s41598-017-02668-2
+    notes: Onuma et al. 2017 connected host cell-cycle regulation to nucleomorph replication
+      and chloroplast division in Guillardia theta.
+  posed_by: codex
+  posed_date: '2026-09-11'
