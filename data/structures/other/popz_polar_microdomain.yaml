@@ -1,0 +1,183 @@
+identifier: cellstructuremech:popz_polar_microdomain
+label: PopZ polar microdomain
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: A proteinaceous bacterial polar microdomain formed by PopZ polymers at
+  Caulobacter cell poles that anchors the ParB-bound chromosomal origin and organizes
+  pole-specific regulatory proteins.
+definition_source: DOI:10.1016/j.cell.2008.07.015
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T10:52:35Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T10:53:11Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cell-part parentage, PopZ polar-subdomain synonymy and component
+    curation, Caulobacter vibrioides scope, chromosomal-origin anchoring and pole-organization
+    functions, DOI evidence, a nonmechanistic PopZ polar-organization graph, and a
+    PopZ grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0044464
+synonyms:
+- synonym_text: Caulobacter PopZ polar subdomain
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1111/j.1365-2958.2010.07088.x
+- synonym_text: PopZ polar organizing matrix
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1073/pnas.1602380113
+components:
+- component_id: popz
+  label: PopZ
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - popZ
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the Caulobacter PopZ polar organizing
+    protein was verified in this pass.
+  role: Self-associating polar organizer that polymerizes into the ribosome-excluding
+    microdomain matrix at Caulobacter cell poles.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2008.07.015
+    notes: Bowman et al. 2008 identified PopZ as a polymeric polar protein that anchors
+      the ParB-bound chromosomal origin complex.
+  - reference: DOI:10.1016/j.cell.2008.07.016
+    notes: Ebersbach et al. 2008 independently characterized PopZ as a self-associating
+      polar protein needed for polar organization in Caulobacter.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  presence: COMMON
+  note: The PopZ polar microdomain has been experimentally characterized in Caulobacter
+    crescentus, now classified as Caulobacter vibrioides.
+  reference: DOI:10.1016/j.cell.2008.07.015
+canonical_examples:
+- taxon_id: NCBITaxon:565050
+  taxon_label: Caulobacter vibrioides NA1000
+  note: Standard Caulobacter strain used to define PopZ-dependent polar microdomain
+    localization and chromosomal-origin anchoring.
+  reference: DOI:10.1111/j.1365-2958.2010.07088.x
+functions:
+- function_id: chromosomal_origin_anchoring
+  label: chromosomal-origin anchoring
+  description: The PopZ polar microdomain anchors the ParB-bound chromosomal origin
+    region at the Caulobacter cell pole.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2008.07.015
+    notes: Bowman et al. 2008 connected PopZ polymers to anchoring of the chromosomal
+      origin/ParB complex at a bacterial cell pole.
+- function_id: pole_regulatory_organization
+  label: pole-specific protein organization
+  description: The PopZ polar microdomain recruits multiple regulatory proteins to
+    coordinate sequential changes in Caulobacter pole composition.
+  evidence:
+  - reference: DOI:10.1111/j.1365-2958.2010.07088.x
+    notes: Bowman et al. 2010 showed that the PopZ polar subdomain organizes sequential
+      changes in pole composition and function.
+  - reference: DOI:10.1073/pnas.1602380113
+    notes: Holmes et al. 2016 identified PopZ as an intrinsically disordered hub for
+      organizing bacterial cell poles.
+evidence:
+- reference: DOI:10.1016/j.cell.2008.07.015
+  notes: Bowman, Comolli, Zhu, Eckart, Koenig et al. 2008, 'A Polymeric Protein Anchors
+    the Chromosomal Origin/ParB Complex at a Bacterial Cell Pole', Cell.
+- reference: DOI:10.1016/j.cell.2008.07.016
+  notes: Ebersbach, Briegel, Jensen and Jacobs-Wagner 2008, 'A Self-Associating Protein
+    Critical for Chromosome Attachment, Division, and Polar Organization in Caulobacter',
+    Cell.
+- reference: DOI:10.1111/j.1365-2958.2010.07088.x
+  notes: Bowman, Comolli, Gaietta, Fero et al. 2010, 'Caulobacter PopZ forms a polar
+    subdomain dictating sequential changes in pole composition and function', Molecular
+    Microbiology.
+- reference: DOI:10.1073/pnas.1602380113
+  notes: Holmes, Follett, Wang, Meadows, Varga and Bowman 2016, 'Caulobacter PopZ
+    forms an intrinsically disordered hub in organizing bacterial cell poles', PNAS.
+causal_graphs:
+- graph_id: popz_polar_microdomain_organization
+  title: PopZ polymers organize Caulobacter cell poles
+  description: PopZ self-associates into a polar microdomain that localizes at Caulobacter
+    cell poles and organizes chromosomal-origin anchoring and regulatory-protein recruitment.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records PopZ self-assembly and representative anchoring or
+    recruitment functions without asserting a complete inventory of all PopZ client
+    proteins or the physical basis of client binding.
+  nodes:
+  - node_id: popz
+    label: PopZ
+    node_type: GENE_OR_PROTEIN
+    component_ref: popz
+  - node_id: popz_polar_microdomain
+    label: PopZ polar microdomain
+    node_type: STRUCTURE
+    grounding: cellstructuremech:popz_polar_microdomain
+  - node_id: cell_pole
+    label: Caulobacter cell pole
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: parb_origin_complex
+    label: ParB-bound chromosomal origin complex
+    node_type: GENETIC_ELEMENT
+  - node_id: pole_regulatory_proteins
+    label: pole-specific regulatory proteins
+    node_type: GENE_OR_PROTEIN
+  edges:
+  - subject: popz
+    predicate: self-associates into
+    object: popz_polar_microdomain
+    description: PopZ self-associates into a polymeric polar microdomain in Caulobacter
+      cells.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2008.07.016
+      notes: Ebersbach et al. 2008 characterized PopZ as a self-associating polar
+        protein.
+    - reference: DOI:10.1073/pnas.1602380113
+      notes: Holmes et al. 2016 analyzed PopZ network formation at Caulobacter cell
+        poles.
+  - subject: popz_polar_microdomain
+    predicate: localizes to
+    object: cell_pole
+    description: The PopZ microdomain forms at Caulobacter cell poles.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2010.07088.x
+      notes: Bowman et al. 2010 described PopZ as a polar subdomain of Caulobacter.
+  - subject: popz_polar_microdomain
+    predicate: anchors
+    object: parb_origin_complex
+    description: The PopZ polar microdomain anchors the ParB-bound chromosomal origin
+      complex at a cell pole.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2008.07.015
+      notes: Bowman et al. 2008 linked PopZ polymers to polar anchoring of the chromosomal
+        origin/ParB complex.
+  - subject: popz_polar_microdomain
+    predicate: recruits
+    object: pole_regulatory_proteins
+    description: The PopZ polar microdomain recruits regulatory proteins to the Caulobacter
+      pole.
+    evidence:
+    - reference: DOI:10.1073/pnas.1602380113
+      notes: Holmes et al. 2016 identified PopZ as a hub that directly binds multiple
+        regulatory proteins.
+discussions:
+- discussion_id: resolve_popz_family_grounding
+  prompt: Resolve exact source-neutral grounding for full-length filament-forming
+    or matrix-forming PopZ proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#popz
+  rationale: This first record curates Caulobacter PopZ without asserting that a broad
+    low-complexity or coiled-coil domain accession exactly denotes the whole polar-microdomain
+    protein family.
+  evidence:
+  - reference: DOI:10.1073/pnas.1602380113
+    notes: Holmes et al. 2016 analyzed matrix assembly by intrinsically disordered
+      Caulobacter PopZ.
+  posed_by: codex
+  posed_date: '2026-09-11'
