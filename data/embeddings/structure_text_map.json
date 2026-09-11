@@ -10,8 +10,8 @@
     "method": "PCA of unit-normalized embeddings",
     "dimensions": 2,
     "explained_variance_ratio": [
-      0.13107012,
-      0.06297137
+      0.13001564,
+      0.06309458
     ],
     "note": "Coordinates are exploratory; distances in two dimensions are lossy."
   },
@@ -21,768 +21,776 @@
       "label": "archaeal-type flagellum",
       "category": "APPENDAGE",
       "page": "structures/appendage/archaeal_type_flagellum.html",
-      "x": 0.15524861,
-      "y": 0.07445679
+      "x": 0.15286412,
+      "y": 0.04830462
     },
     {
       "identifier": "GO:0033099",
       "label": "attachment organelle",
       "category": "APPENDAGE",
       "page": "structures/appendage/attachment_organelle.html",
-      "x": 0.00339389,
-      "y": -0.01160479
+      "x": 0.00567169,
+      "y": 0.03337881
     },
     {
       "identifier": "GO:0009288",
       "label": "bacterial-type flagellum",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum.html",
-      "x": 0.41953401,
-      "y": 0.0391836
+      "x": 0.41764149,
+      "y": 0.02862843
     },
     {
       "identifier": "GO:0009425",
       "label": "bacterial-type flagellum basal body",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_basal_body.html",
-      "x": 0.37631572,
-      "y": -0.05680833
+      "x": 0.36987901,
+      "y": -0.09931324
     },
     {
       "identifier": "GO:0009433",
       "label": "bacterial-type flagellum basal body, C ring",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_basal_body_c_ring.html",
-      "x": 0.47698196,
-      "y": -0.0759879
+      "x": 0.4696993,
+      "y": -0.13616769
     },
     {
       "identifier": "GO:0009426",
       "label": "bacterial-type flagellum basal body, distal rod",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_basal_body_distal_rod.html",
-      "x": 0.41967019,
-      "y": 0.01763539
+      "x": 0.41503427,
+      "y": -0.02342335
     },
     {
       "identifier": "GO:0009427",
       "label": "bacterial-type flagellum basal body, distal rod, L ring",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.html",
-      "x": 0.40761002,
-      "y": 0.0303184
+      "x": 0.40221938,
+      "y": -0.02641004
     },
     {
       "identifier": "GO:0009428",
       "label": "bacterial-type flagellum basal body, distal rod, P ring",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_p_ring.html",
-      "x": 0.40156895,
-      "y": 0.06718409
+      "x": 0.39816674,
+      "y": 0.02816998
     },
     {
       "identifier": "GO:0009431",
       "label": "bacterial-type flagellum basal body, MS ring",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_basal_body_ms_ring.html",
-      "x": 0.38962108,
-      "y": -0.02725102
+      "x": 0.38204241,
+      "y": -0.09809171
     },
     {
       "identifier": "GO:0009429",
       "label": "bacterial-type flagellum basal body, proximal rod",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_basal_body_proximal_rod.html",
-      "x": 0.4515483,
-      "y": -0.03269167
+      "x": 0.44641817,
+      "y": -0.07289855
     },
     {
       "identifier": "GO:0030694",
       "label": "bacterial-type flagellum basal body, rod",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_basal_body_rod.html",
-      "x": 0.43028616,
-      "y": -0.0179671
+      "x": 0.4245892,
+      "y": -0.06155423
     },
     {
       "identifier": "GO:0009420",
       "label": "bacterial-type flagellum filament",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_filament.html",
-      "x": 0.40417806,
-      "y": 0.11866707
+      "x": 0.40545179,
+      "y": 0.12149584
     },
     {
       "identifier": "GO:0009421",
       "label": "bacterial-type flagellum filament cap",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_filament_cap.html",
-      "x": 0.38469851,
-      "y": 0.04141621
+      "x": 0.3831828,
+      "y": 0.03047081
     },
     {
       "identifier": "GO:0009424",
       "label": "bacterial-type flagellum hook",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_hook.html",
-      "x": 0.40903256,
-      "y": 0.10103019
+      "x": 0.41012012,
+      "y": 0.11287733
     },
     {
       "identifier": "GO:0009422",
       "label": "bacterial-type flagellum hook-filament junction",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_hook_filament_junction.html",
-      "x": 0.34126379,
-      "y": -0.0266132
+      "x": 0.34125817,
+      "y": 0.00975986
     },
     {
       "identifier": "GO:0120100",
       "label": "bacterial-type flagellum motor",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_motor.html",
-      "x": 0.44946515,
-      "y": 0.01111159
+      "x": 0.44390437,
+      "y": -0.05239029
     },
     {
       "identifier": "GO:0120107",
       "label": "bacterial-type flagellum rotor complex",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_rotor_complex.html",
-      "x": 0.51318321,
-      "y": -0.01367698
+      "x": 0.50718381,
+      "y": -0.06990799
     },
     {
       "identifier": "GO:0120102",
       "label": "bacterial-type flagellum secretion apparatus",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_secretion_apparatus.html",
-      "x": 0.2672343,
-      "y": -0.10713705
+      "x": 0.25971348,
+      "y": -0.16842014
     },
     {
       "identifier": "GO:0120101",
       "label": "bacterial-type flagellum stator complex",
       "category": "APPENDAGE",
       "page": "structures/appendage/bacterial_type_flagellum_stator_complex.html",
-      "x": 0.33447697,
-      "y": -0.02477682
+      "x": 0.32847358,
+      "y": -0.0877672
     },
     {
       "identifier": "GO:0098774",
       "label": "curli",
       "category": "APPENDAGE",
       "page": "structures/appendage/curli.html",
-      "x": 0.06348511,
-      "y": 0.08291615
+      "x": 0.0708696,
+      "y": 0.15581478
     },
     {
       "identifier": "cellstructuremech:p_pilus",
       "label": "P pilus",
       "category": "APPENDAGE",
       "page": "structures/appendage/p_pilus.html",
-      "x": 0.12225496,
-      "y": 0.02955375
+      "x": 0.1322234,
+      "y": 0.14996644
     },
     {
       "identifier": "GO:0097740",
       "label": "paraflagellar rod",
       "category": "APPENDAGE",
       "page": "structures/appendage/paraflagellar_rod.html",
-      "x": 0.24152746,
-      "y": -0.02880663
+      "x": 0.24128685,
+      "y": -0.00265351
     },
     {
       "identifier": "GO:0055040",
       "label": "periplasmic flagellum",
       "category": "APPENDAGE",
       "page": "structures/appendage/periplasmic_flagellum.html",
-      "x": 0.34974838,
-      "y": 0.06239814
+      "x": 0.35118406,
+      "y": 0.06992628
+    },
+    {
+      "identifier": "cellstructuremech:tad_pilus",
+      "label": "Tad pilus",
+      "category": "APPENDAGE",
+      "page": "structures/appendage/tad_pilus.html",
+      "x": 0.18999841,
+      "y": 0.29038731
     },
     {
       "identifier": "GO:0140621",
       "label": "type I pilus",
       "category": "APPENDAGE",
       "page": "structures/appendage/type_i_pilus.html",
-      "x": 0.17747941,
-      "y": -0.02974902
+      "x": 0.18516934,
+      "y": 0.07271665
     },
     {
       "identifier": "GO:0044096",
       "label": "type IV pilus",
       "category": "APPENDAGE",
       "page": "structures/appendage/type_iv_pilus.html",
-      "x": 0.12329995,
-      "y": -0.00629335
+      "x": 0.13670968,
+      "y": 0.11866005
     },
     {
       "identifier": "GO:1990900",
       "label": "ciliary pocket collar",
       "category": "CYTOSKELETON",
       "page": "structures/cytoskeleton/ciliary_pocket_collar.html",
-      "x": 0.13015145,
-      "y": -0.18800979
+      "x": 0.12491258,
+      "y": -0.20824253
     },
     {
       "identifier": "GO:0020010",
       "label": "conoid",
       "category": "CYTOSKELETON",
       "page": "structures/cytoskeleton/conoid.html",
-      "x": 0.02165571,
-      "y": -0.24662723
+      "x": 0.01896059,
+      "y": -0.2072503
     },
     {
       "identifier": "cellstructuremech:mreb_filament",
       "label": "MreB filament",
       "category": "CYTOSKELETON",
       "page": "structures/cytoskeleton/mreb_filament.html",
-      "x": 0.12014768,
-      "y": 0.04523528
+      "x": 0.11947982,
+      "y": 0.05646715
     },
     {
       "identifier": "GO:0020031",
       "label": "polar ring of apical complex",
       "category": "CYTOSKELETON",
       "page": "structures/cytoskeleton/polar_ring_of_apical_complex.html",
-      "x": 0.06724426,
-      "y": -0.24407189
+      "x": 0.06813843,
+      "y": -0.16639982
     },
     {
       "identifier": "GO:0005816",
       "label": "spindle pole body",
       "category": "CYTOSKELETON",
       "page": "structures/cytoskeleton/spindle_pole_body.html",
-      "x": 0.01315485,
-      "y": -0.04033082
+      "x": 0.00944892,
+      "y": -0.03370555
     },
     {
       "identifier": "GO:1990586",
       "label": "divisome complex",
       "category": "DIVISION_MACHINERY",
       "page": "structures/division_machinery/divisome_complex.html",
-      "x": 0.03561821,
-      "y": -0.1313526
+      "x": 0.03226217,
+      "y": -0.12762579
     },
     {
       "identifier": "cellstructuremech:elongasome",
       "label": "elongasome",
       "category": "DIVISION_MACHINERY",
       "page": "structures/division_machinery/elongasome.html",
-      "x": 0.1233586,
-      "y": 0.04208742
+      "x": 0.12140944,
+      "y": 0.03753963
     },
     {
       "identifier": "GO:0030089",
       "label": "phycobilisome",
       "category": "ENERGY_COMPLEX",
       "page": "structures/energy_complex/phycobilisome.html",
-      "x": -0.04652955,
-      "y": 0.08716152
+      "x": -0.04263624,
+      "y": 0.13094515
     },
     {
       "identifier": "GO:0045259",
       "label": "proton-transporting ATP synthase complex",
       "category": "ENERGY_COMPLEX",
       "page": "structures/energy_complex/proton_transporting_atp_synthase_complex.html",
-      "x": 0.13158456,
-      "y": -0.1043784
+      "x": 0.12279126,
+      "y": -0.15220204
     },
     {
       "identifier": "GO:0009279",
       "label": "cell outer membrane",
       "category": "ENVELOPE",
       "page": "structures/envelope/cell_outer_membrane.html",
-      "x": -0.23856195,
-      "y": 0.00840412
+      "x": -0.24156718,
+      "y": -0.00924892
     },
     {
       "identifier": "GO:0009276",
       "label": "Gram-negative-bacterium-type cell wall",
       "category": "ENVELOPE",
       "page": "structures/envelope/gram_negative_bacterium_type_cell_wall.html",
-      "x": -0.1681951,
-      "y": 0.09641456
+      "x": -0.16750263,
+      "y": 0.10510555
     },
     {
       "identifier": "GO:0009274",
       "label": "peptidoglycan-based cell wall",
       "category": "ENVELOPE",
       "page": "structures/envelope/peptidoglycan_based_cell_wall.html",
-      "x": -0.14008308,
-      "y": 0.05051956
+      "x": -0.13812872,
+      "y": 0.0799306
     },
     {
       "identifier": "GO:0030115",
       "label": "S-layer",
       "category": "ENVELOPE",
       "page": "structures/envelope/s_layer.html",
-      "x": -0.08284942,
-      "y": 0.18801205
+      "x": -0.08479774,
+      "y": 0.17868049
     },
     {
       "identifier": "cellstructuremech:cyanophycin_granule",
       "label": "cyanophycin granule",
       "category": "INCLUSION",
       "page": "structures/inclusion/cyanophycin_granule.html",
-      "x": -0.01516031,
-      "y": 0.45536203
+      "x": -0.00978668,
+      "y": 0.46244455
     },
     {
       "identifier": "GO:0031411",
       "label": "gas vesicle",
       "category": "INCLUSION",
       "page": "structures/inclusion/gas_vesicle.html",
-      "x": -0.18985682,
-      "y": 0.30096717
+      "x": -0.19074652,
+      "y": 0.2569843
     },
     {
       "identifier": "GO:0033172",
       "label": "gas vesicle shell",
       "category": "INCLUSION",
       "page": "structures/inclusion/gas_vesicle_shell.html",
-      "x": -0.17532826,
-      "y": 0.2888035
+      "x": -0.17666414,
+      "y": 0.25319743
     },
     {
       "identifier": "cellstructuremech:glycogen_granule",
       "label": "glycogen granule",
       "category": "INCLUSION",
       "page": "structures/inclusion/glycogen_granule.html",
-      "x": -0.10054129,
-      "y": 0.56017925
+      "x": -0.09691376,
+      "y": 0.54030426
     },
     {
       "identifier": "GO:0005811",
       "label": "lipid droplet",
       "category": "INCLUSION",
       "page": "structures/inclusion/lipid_droplet.html",
-      "x": -0.30498063,
-      "y": 0.27028907
+      "x": -0.30447502,
+      "y": 0.2681567
     },
     {
       "identifier": "GO:0070088",
       "label": "polyhydroxyalkanoate granule",
       "category": "INCLUSION",
       "page": "structures/inclusion/polyhydroxyalkanoate_granule.html",
-      "x": -0.1391172,
-      "y": 0.46357588
+      "x": -0.1353275,
+      "y": 0.4667424
     },
     {
       "identifier": "cellstructuremech:sulfur_globule",
       "label": "sulfur globule",
       "category": "INCLUSION",
       "page": "structures/inclusion/sulfur_globule.html",
-      "x": -0.11393508,
-      "y": 0.3879729
+      "x": -0.1137672,
+      "y": 0.36734425
     },
     {
       "identifier": "GO:0020022",
       "label": "acidocalcisome",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/acidocalcisome.html",
-      "x": -0.27687673,
-      "y": 0.08904928
+      "x": -0.2775875,
+      "y": 0.07624513
     },
     {
       "identifier": "GO:0044222",
       "label": "anammoxosome",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/anammoxosome.html",
-      "x": -0.30117391,
-      "y": -0.04027009
+      "x": -0.30884833,
+      "y": -0.11861082
     },
     {
       "identifier": "GO:0020026",
       "label": "apicomplexan dense granule",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/apicomplexan_dense_granule.html",
-      "x": -0.35884962,
-      "y": 0.01354136
+      "x": -0.35988888,
+      "y": 0.02254887
     },
     {
       "identifier": "GO:0020011",
       "label": "apicoplast",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/apicoplast.html",
-      "x": -0.25790697,
-      "y": -0.12034102
+      "x": -0.25959045,
+      "y": -0.10644958
     },
     {
       "identifier": "GO:0046858",
       "label": "chlorosome",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/chlorosome.html",
-      "x": -0.11680675,
-      "y": -0.00764166
+      "x": -0.11935361,
+      "y": -0.03237374
     },
     {
       "identifier": "GO:0000331",
       "label": "contractile vacuole",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/contractile_vacuole.html",
-      "x": -0.29090838,
-      "y": -0.07692879
+      "x": -0.28864537,
+      "y": -0.03770632
     },
     {
       "identifier": "GO:0044311",
       "label": "exoneme",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/exoneme.html",
-      "x": -0.27983721,
-      "y": -0.10161575
+      "x": -0.28047331,
+      "y": -0.06380892
     },
     {
       "identifier": "GO:0020016",
       "label": "flagellar pocket",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/flagellar_pocket.html",
-      "x": 0.01586265,
-      "y": -0.18874989
+      "x": 0.01051974,
+      "y": -0.22040509
     },
     {
       "identifier": "GO:0020020",
       "label": "food vacuole",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/food_vacuole.html",
-      "x": -0.39995456,
-      "y": 0.02602379
+      "x": -0.39991393,
+      "y": 0.03134623
     },
     {
       "identifier": "GO:0020015",
       "label": "glycosome",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/glycosome.html",
-      "x": -0.37363364,
-      "y": -0.06114049
+      "x": -0.37867023,
+      "y": -0.08135751
     },
     {
       "identifier": "GO:0042566",
       "label": "hydrogenosome",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/hydrogenosome.html",
-      "x": -0.28196089,
-      "y": -0.04507545
+      "x": -0.29019058,
+      "y": -0.1222621
     },
     {
       "identifier": "GO:0070258",
       "label": "inner membrane pellicle complex",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/inner_membrane_pellicle_complex.html",
-      "x": -0.2107883,
-      "y": -0.24456094
+      "x": -0.2132835,
+      "y": -0.22881748
     },
     {
       "identifier": "GO:0110143",
       "label": "magnetosome",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/magnetosome.html",
-      "x": -0.12648679,
-      "y": -0.01603844
+      "x": -0.13365946,
+      "y": -0.07364646
     },
     {
       "identifier": "GO:0044227",
       "label": "methane-oxidizing organelle",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/methane_oxidizing_organelle.html",
-      "x": -0.23094474,
-      "y": 0.05901379
+      "x": -0.23758975,
+      "y": -0.0310472
     },
     {
       "identifier": "GO:0020009",
       "label": "microneme",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/microneme.html",
-      "x": -0.14569517,
-      "y": -0.20107437
+      "x": -0.1501511,
+      "y": -0.19928167
     },
     {
       "identifier": "GO:0032047",
       "label": "mitosome",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/mitosome.html",
-      "x": -0.19899922,
-      "y": -0.13197892
+      "x": -0.20476427,
+      "y": -0.17969928
     },
     {
       "identifier": "GO:0005777",
       "label": "peroxisome",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/peroxisome.html",
-      "x": -0.38629022,
-      "y": -0.06750994
+      "x": -0.39295126,
+      "y": -0.11187165
     },
     {
       "identifier": "GO:0160201",
       "label": "polaroplast",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/polaroplast.html",
-      "x": -0.15765881,
-      "y": -0.16288425
+      "x": -0.15467448,
+      "y": -0.09823487
     },
     {
       "identifier": "cellstructuremech:reservosome",
       "label": "reservosome",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/reservosome.html",
-      "x": -0.30186359,
-      "y": -0.08262707
+      "x": -0.30578671,
+      "y": -0.09657396
     },
     {
       "identifier": "GO:0020008",
       "label": "rhoptry",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/rhoptry.html",
-      "x": -0.20372209,
-      "y": -0.1766299
+      "x": -0.20431872,
+      "y": -0.13588184
     },
     {
       "identifier": "GO:0042651",
       "label": "thylakoid membrane",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/thylakoid_membrane.html",
-      "x": -0.19234044,
-      "y": -0.06992679
+      "x": -0.19355181,
+      "y": -0.06467384
     },
     {
       "identifier": "GO:0055039",
       "label": "trichocyst",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/trichocyst.html",
-      "x": -0.2116986,
-      "y": -0.14060679
+      "x": -0.21083043,
+      "y": -0.11240273
     },
     {
       "identifier": "GO:0140266",
       "label": "Woronin body",
       "category": "MEMBRANE_ORGANELLE",
       "page": "structures/membrane_organelle/woronin_body.html",
-      "x": -0.29751158,
-      "y": -0.08353219
+      "x": -0.30018954,
+      "y": -0.074981
     },
     {
       "identifier": "GO:0031469",
       "label": "bacterial microcompartment",
       "category": "MICROCOMPARTMENT",
       "page": "structures/microcompartment/bacterial_microcompartment.html",
-      "x": -0.12319119,
-      "y": 0.13272934
+      "x": -0.12936722,
+      "y": 0.07578039
     },
     {
       "identifier": "GO:0031470",
       "label": "carboxysome",
       "category": "MICROCOMPARTMENT",
       "page": "structures/microcompartment/carboxysome.html",
-      "x": -0.00776039,
-      "y": 0.24201858
+      "x": -0.00902998,
+      "y": 0.21936255
     },
     {
       "identifier": "cellstructuremech:carboxysome_shell",
       "label": "carboxysome shell",
       "category": "MICROCOMPARTMENT",
       "page": "structures/microcompartment/carboxysome_shell.html",
-      "x": -0.07352035,
-      "y": 0.16592319
+      "x": -0.07686577,
+      "y": 0.13756437
     },
     {
       "identifier": "GO:0140737",
       "label": "encapsulin nanocompartment",
       "category": "MICROCOMPARTMENT",
       "page": "structures/microcompartment/encapsulin_nanocompartment.html",
-      "x": -0.12278792,
-      "y": 0.14454601
+      "x": -0.12784964,
+      "y": 0.10135242
     },
     {
       "identifier": "GO:0031471",
       "label": "ethanolamine degradation polyhedral organelle",
       "category": "MICROCOMPARTMENT",
       "page": "structures/microcompartment/ethanolamine_degradation_polyhedral_organelle.html",
-      "x": -0.0908772,
-      "y": 0.11790373
+      "x": -0.0965624,
+      "y": 0.05874757
     },
     {
       "identifier": "GO:0031472",
       "label": "propanediol degradation polyhedral organelle",
       "category": "MICROCOMPARTMENT",
       "page": "structures/microcompartment/propanediol_degradation_polyhedral_organelle.html",
-      "x": -0.20380831,
-      "y": 0.17308487
+      "x": -0.2090009,
+      "y": 0.10845429
     },
     {
       "identifier": "GO:0020023",
       "label": "kinetoplast",
       "category": "NUCLEOID",
       "page": "structures/nucleoid/kinetoplast.html",
-      "x": -0.0154642,
-      "y": -0.05519919
+      "x": -0.01969373,
+      "y": -0.0688118
     },
     {
       "identifier": "GO:0009295",
       "label": "nucleoid",
       "category": "NUCLEOID",
       "page": "structures/nucleoid/nucleoid.html",
-      "x": 0.01454649,
-      "y": -0.00801402
+      "x": 0.00951817,
+      "y": -0.04179975
     },
     {
       "identifier": "GO:0020007",
       "label": "apical complex",
       "category": "OTHER",
       "page": "structures/other/apical_complex.html",
-      "x": -0.08573044,
-      "y": -0.26495506
+      "x": -0.08494339,
+      "y": -0.18626591
     },
     {
       "identifier": "GO:0043263",
       "label": "cellulosome",
       "category": "OTHER",
       "page": "structures/other/cellulosome.html",
-      "x": -0.06111642,
-      "y": 0.06039521
+      "x": -0.06114073,
+      "y": 0.07628383
     },
     {
       "identifier": "GO:0032126",
       "label": "eisosome",
       "category": "OTHER",
       "page": "structures/other/eisosome.html",
-      "x": -0.11257008,
-      "y": -0.04295227
+      "x": -0.11374631,
+      "y": -0.0036811
     },
     {
       "identifier": "cellstructuremech:holdfast",
       "label": "holdfast",
       "category": "OTHER",
       "page": "structures/other/holdfast.html",
-      "x": 0.08174994,
-      "y": 0.14675733
+      "x": 0.09099696,
+      "y": 0.22484805
     },
     {
       "identifier": "GO:0098561",
       "label": "methyl accepting chemotaxis protein complex",
       "category": "OTHER",
       "page": "structures/other/methyl_accepting_chemotaxis_protein_complex.html",
-      "x": -0.01489648,
-      "y": 0.07913566
+      "x": -0.01831071,
+      "y": 0.04452734
     },
     {
       "identifier": "GO:0005839",
       "label": "proteasome core complex",
       "category": "OTHER",
       "page": "structures/other/proteasome_core_complex.html",
-      "x": -0.01038561,
-      "y": -0.02045442
+      "x": -0.01537596,
+      "y": -0.02909849
     },
     {
       "identifier": "GO:1990732",
       "label": "pyrenoid",
       "category": "OTHER",
       "page": "structures/other/pyrenoid.html",
-      "x": 0.03354679,
-      "y": 0.12593123
+      "x": 0.03630281,
+      "y": 0.15266636
     },
     {
       "identifier": "GO:0031521",
       "label": "spitzenkorper",
       "category": "OTHER",
       "page": "structures/other/spitzenkorper.html",
-      "x": -0.09449038,
-      "y": 0.03667659
+      "x": -0.09504883,
+      "y": 0.0771398
     },
     {
       "identifier": "GO:0005840",
       "label": "ribosome",
       "category": "RIBONUCLEOPROTEIN",
       "page": "structures/ribonucleoprotein/ribosome.html",
-      "x": 0.05795778,
-      "y": 0.07640106
+      "x": 0.05211012,
+      "y": 0.02191238
     },
     {
       "identifier": "cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex",
       "label": "ESX-5 type VII secretion system membrane complex",
       "category": "SECRETION_SYSTEM",
       "page": "structures/secretion_system/esx_5_type_vii_secretion_system_membrane_complex.html",
-      "x": -0.12047774,
-      "y": -0.2359499
+      "x": -0.12722545,
+      "y": -0.24717148
     },
     {
       "identifier": "cellstructuremech:secyeg_translocon_complex",
       "label": "SecYEG translocon complex",
       "category": "SECRETION_SYSTEM",
       "page": "structures/secretion_system/secyeg_translocon_complex.html",
-      "x": -0.0110796,
-      "y": -0.18270971
+      "x": -0.01304156,
+      "y": -0.15227004
     },
     {
       "identifier": "GO:0033281",
       "label": "TAT protein transport complex",
       "category": "SECRETION_SYSTEM",
       "page": "structures/secretion_system/tat_protein_transport_complex.html",
-      "x": -0.05719984,
-      "y": -0.2719586
+      "x": -0.06401611,
+      "y": -0.2875283
     },
     {
       "identifier": "GO:0030256",
       "label": "type I protein secretion system complex",
       "category": "SECRETION_SYSTEM",
       "page": "structures/secretion_system/type_i_protein_secretion_system_complex.html",
-      "x": -0.07445077,
-      "y": -0.27559754
+      "x": -0.08117507,
+      "y": -0.27642677
     },
     {
       "identifier": "GO:0015627",
       "label": "type II protein secretion system complex",
       "category": "SECRETION_SYSTEM",
       "page": "structures/secretion_system/type_ii_protein_secretion_system_complex.html",
-      "x": -0.11408636,
-      "y": -0.23044562
+      "x": -0.1184279,
+      "y": -0.20784746
     },
     {
       "identifier": "GO:0030257",
       "label": "type III protein secretion system complex",
       "category": "SECRETION_SYSTEM",
       "page": "structures/secretion_system/type_iii_protein_secretion_system_complex.html",
-      "x": 0.01069422,
-      "y": -0.17271705
+      "x": 0.00620295,
+      "y": -0.14458895
     },
     {
       "identifier": "GO:0043684",
       "label": "type IV secretion system complex",
       "category": "SECRETION_SYSTEM",
       "page": "structures/secretion_system/type_iv_secretion_system_complex.html",
-      "x": -0.07711089,
-      "y": -0.19312309
+      "x": -0.08185968,
+      "y": -0.18729644
     },
     {
       "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
       "label": "type IX protein secretion system complex",
       "category": "SECRETION_SYSTEM",
       "page": "structures/secretion_system/type_ix_protein_secretion_system_complex.html",
-      "x": -0.03134623,
-      "y": -0.25640528
+      "x": -0.03744917,
+      "y": -0.25205094
     },
     {
       "identifier": "GO:0033104",
       "label": "type VI protein secretion system complex",
       "category": "SECRETION_SYSTEM",
       "page": "structures/secretion_system/type_vi_protein_secretion_system_complex.html",
-      "x": -0.05814623,
-      "y": -0.14106425
+      "x": -0.0613442,
+      "y": -0.11943845
     },
     {
       "identifier": "GO:0043591",
       "label": "endospore external encapsulating structure",
       "category": "SPORE",
       "page": "structures/spore/endospore_external_encapsulating_structure.html",
-      "x": -0.17015535,
-      "y": 0.17489604
+      "x": -0.17068913,
+      "y": 0.17793622
     },
     {
       "identifier": "GO:0044099",
       "label": "polar tube",
       "category": "SPORE",
       "page": "structures/spore/polar_tube.html",
-      "x": 0.07731898,
-      "y": -6.946e-05
+      "x": 0.08538119,
+      "y": 0.11691938
     }
   ]
 }

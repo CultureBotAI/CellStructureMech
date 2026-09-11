@@ -207,6 +207,15 @@
   "definition": "A bacterial-type flagellar appendage of spirochetes whose filaments reside in the periplasmic space between the cytoplasmic and outer membranes, attach near the cell poles, and rotate to deform the cell cylinder for motility."
  },
  {
+  "identifier": "cellstructuremech:tad_pilus",
+  "label": "Tad pilus",
+  "category": "APPENDAGE",
+  "kind": "APPENDAGE",
+  "status": "PROPOSED",
+  "page": "structures/appendage/tad_pilus.html",
+  "definition": "A tight-adherence subtype of type IV pilus that extends and retracts from a bacterial cell pole. In Caulobacter vibrioides, Tad pili are polar PilA filaments whose dynamic activity promotes surface sensing, surface colonization and holdfast-dependent permanent attachment."
+ },
+ {
   "identifier": "GO:0140621",
   "label": "type I pilus",
   "category": "APPENDAGE",

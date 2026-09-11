@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/tad_pilus.yaml
+  slug: tad_pilus
+session:
+  id: 2026-09-11T024246Z-codex-b2dd41
+  timestamp: '2026-09-11T02:42:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added Tad pilus cell-structure record
+  details: Created a new evidence-backed Tad pilus record minted under cellstructuremech:tad_pilus
+    because GO lacks an exact tight-adherence/Tad pilus cellular-component term. The record
+    captures the PilA major pilin constituent, type IV pilus parentage, Caulobacter vibrioides
+    scope, polar extension and retraction, surface colonization, CpaF motor function in the
+    mechanism graph, and DOI-backed evidence. PilA family grounding remains reviewed-label-only
+    until an exact source-neutral accession can be verified.
