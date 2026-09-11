@@ -28,6 +28,13 @@ curation_history:
     ESSENTIAL to UNKNOWN because the first-pass sources establish them as architectural
     constituents but do not directly support class-level pore-assembly requirements.
   llm_assisted: true
+- timestamp: '2026-09-11T06:30:26Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #428 and #429 by removing the disconnected nuclear envelope graph
+    node, removing the transport-process node and edge from the assembly graph, and
+    tightening the graph title and description.'
+  llm_assisted: true
 synonyms:
 - synonym_text: nuclear pore complex
   synonym_type: EXACT_SYNONYM
@@ -132,10 +139,10 @@ evidence:
     the yeast nuclear pore complex', Cell.
 causal_graphs:
 - graph_id: nucleoporin_scaffold_transport_channel
-  title: Nucleoporins build a gated nuclear-envelope channel
-  description: Membrane nucleoporins anchor the nuclear pore in the nuclear envelope,
-    scaffold nucleoporins build the pore architecture, and FG-repeat nucleoporins
-    line the central channel to support nucleocytoplasmic transport.
+  title: Nucleoporins build a nuclear-envelope pore
+  description: Membrane nucleoporins anchor the nuclear pore at the fused nuclear-envelope
+    membrane, scaffold nucleoporins build the pore architecture, and FG-repeat nucleoporins
+    line the central channel.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures core Saccharomyces NPC component classes without
@@ -153,17 +160,10 @@ causal_graphs:
     label: FG-repeat nucleoporins
     node_type: GENE_OR_PROTEIN
     component_ref: fg_repeat_nucleoporins
-  - node_id: nuclear_envelope
-    label: nuclear envelope
-    node_type: CELLULAR_LOCALIZATION
-    grounding: GO:0005635
   - node_id: nuclear_pore
     label: nuclear pore
     node_type: STRUCTURE
     grounding: GO:0005643
-  - node_id: nucleocytoplasmic_transport
-    label: nucleocytoplasmic transport
-    node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: membrane_nucleoporins
     predicate: anchor
@@ -192,15 +192,6 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1534/genetics.111.127803
       notes: Aitchison and Rout 2012 review FG nucleoporins in yeast NPC transport.
-  - subject: nuclear_pore
-    predicate: mediates
-    object: nucleocytoplasmic_transport
-    description: The assembled pore mediates gated transport between the yeast nucleus
-      and cytoplasm.
-    evidence:
-    - reference: DOI:10.1101/cshperspect.a000562
-      notes: Wente and Rout 2010 review the NPC as the bidirectional nucleocytoplasmic
-        transport machine.
 discussions:
 - discussion_id: resolve_nup_family_groundings
   prompt: Resolve exact source-neutral family groundings for scaffold, FG-repeat,
