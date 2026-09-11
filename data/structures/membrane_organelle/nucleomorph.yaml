@@ -27,6 +27,12 @@ curation_history:
   changes: Renamed the GO:0009536 graph node from secondary_plastid to plastid to
     match the canonical GO label.
   llm_assisted: true
+- timestamp: '2026-09-11T16:37:55Z'
+  curator: codex
+  action: ADDRESSED_REVIEW_ISSUES
+  changes: 'Addressed review issues #519 and #520 by marking nucleomorph chromosomes
+    reviewed-label-only and broadening the open TODO to cover exact chromosome grounding.'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -53,6 +59,10 @@ components:
   - reference: DOI:10.1186/1471-2164-15-374
     notes: Tanifuji et al. 2014 sequenced the three linear chromosomes of the Lotharella
       oceanica nucleomorph genome.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral SO or GO CURIE was verified for the eukaryotic
+    endosymbiont-derived chromosomes specifically retained in nucleomorphs; generic
+    chromosome terms are broader than this component.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3027
   taxon_label: Cryptophyceae
@@ -173,16 +183,17 @@ causal_graphs:
       notes: Onuma et al. 2017 measured the timing of nucleomorph DNA synthesis during
         the Guillardia theta cell cycle.
 discussions:
-- discussion_id: resolve_nucleomorph_envelope_components
-  prompt: Resolve exact source-neutral components for the nucleomorph envelope and
-    any conserved nucleomorph pore or division machinery.
+- discussion_id: resolve_nucleomorph_chromosome_and_envelope_components
+  prompt: Resolve exact source-neutral groundings for nucleomorph chromosomes, the
+    nucleomorph envelope, and any conserved nucleomorph pore or division machinery.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#nucleomorph_chromosomes
   rationale: This first nucleomorph record curates the directly sequenced residual
-    chromosomes and leaves lipid-envelope and protein-machinery composition unmodeled
-    until exact cross-lineage constituent classes are verified.
+    chromosomes as reviewed-label-only because generic chromosome terms are broader
+    than nucleomorph chromosomes, and leaves lipid-envelope and protein-machinery
+    composition unmodeled until exact cross-lineage constituent classes are verified.
   evidence:
   - reference: DOI:10.1038/s41598-017-02668-2
     notes: Onuma et al. 2017 connected host cell-cycle regulation to nucleomorph replication
