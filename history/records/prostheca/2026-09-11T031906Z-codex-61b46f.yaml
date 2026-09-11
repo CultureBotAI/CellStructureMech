@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/prostheca.yaml
+  slug: prostheca
+session:
+  id: 2026-09-11T031906Z-codex-61b46f
+  timestamp: '2026-09-11T03:19:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/399
+  - https://github.com/CultureBotAI/CellStructureMech/issues/400
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/398
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed prostheca adversarial review
+  details: 'Resolved PR #398 review issues by adding GO:0005886 to the prostheca has_part
+    list so the enumerated envelope parts match the inner-membrane, peptidoglycan and outer-membrane
+    definition, and by changing the nutrient edge from a dilute_nutrients chemical endpoint
+    to a nutrient-uptake biological-process endpoint.'

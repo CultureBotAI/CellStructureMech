@@ -28,6 +28,13 @@ curation_history:
   action: REFINED_CAUSAL_GRAPH
   changes: Removed an unused stalk_compartments node from the prostheca assembly graph.
   llm_assisted: true
+- timestamp: '2026-09-11T03:18:58Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #398 issues #399 and #400 by adding the plasma membrane to
+    the prostheca has_part list and replacing the dilute-nutrients chemical graph
+    endpoint with a nutrient-uptake biological process.'
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial stalk
   synonym_type: RELATED_SYNONYM
@@ -41,6 +48,7 @@ synonyms:
 parent_structures:
 - GO:0042995
 has_part:
+- GO:0005886
 - GO:0009274
 - GO:0009279
 components:
@@ -177,9 +185,9 @@ causal_graphs:
     label: prostheca
     node_type: STRUCTURE
     grounding: cellstructuremech:prostheca
-  - node_id: dilute_nutrients
-    label: dilute nutrients
-    node_type: CHEMICAL
+  - node_id: dilute_nutrient_scavenging
+    label: nutrient uptake from dilute media
+    node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: shpa_taca_phosphorelay
     predicate: controls biogenesis of
@@ -241,10 +249,10 @@ causal_graphs:
       notes: Schlimpert et al. 2012 identify protein diffusion barriers that create
         stalk compartments.
   - subject: prostheca
-    predicate: increases access to
-    object: dilute_nutrients
-    description: The envelope extension can increase the surface available for uptake
-      from dilute nutrient pools.
+    predicate: supports
+    object: dilute_nutrient_scavenging
+    description: The envelope extension can increase the cell surface available for
+      uptake from dilute nutrient pools.
     evidence:
     - reference: DOI:10.1073/pnas.0602047103
       notes: Wagner et al. 2006 test nutrient uptake by bacterial cell-envelope extensions.
