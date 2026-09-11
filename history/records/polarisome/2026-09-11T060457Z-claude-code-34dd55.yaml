@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/polarisome.yaml
+  slug: polarisome
+session:
+  id: 2026-09-11T060457Z-claude-code-34dd55
+  timestamp: '2026-09-11T06:04:57Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/424
+  - https://github.com/CultureBotAI/CellStructureMech/issues/425
+  - https://github.com/CultureBotAI/CellStructureMech/issues/426
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/423
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: Addressed polarisome adversarial review issues
+  details: Resolved the PR review issues by narrowing the Saccharomyces cerevisiae example
+    to Valtz-supported Spa2 and Pea2 localization, replacing unsupported Bni1 and Bud6 localization
+    edges with actin-assembly support edges, and removing unsupported Msb3 and Msb4 claims
+    from the deferred-boundary discussion.

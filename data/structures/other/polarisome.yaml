@@ -1,0 +1,270 @@
+identifier: GO:0000133
+label: polarisome
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A fungal cell-polarity protein complex that localizes to sites of polarized
+  growth and directs localized actin-filament assembly, including the Saccharomyces
+  Bni1/Spa2/Pea2/Bud6 polarisome.
+definition_source: GO:0000133
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T05:51:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T05:53:56Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Spa2/Pea2, Bni1, and Bud6 components, fungal distribution, Saccharomyces
+    and Neurospora canonical examples, polarized actin assembly function, GO/DOI evidence,
+    a nonmechanistic Spa2-centered assembly graph, and grounding/boundary TODOs.
+  llm_assisted: true
+- timestamp: '2026-09-11T05:59:24Z'
+  curator: codex
+  action: FIXED_ANCHORS
+  changes: Replaced bare discussion section anchors with component and causal-graph
+    anchors that resolve to local identifiers.
+  llm_assisted: true
+- timestamp: '2026-09-11T06:04:40Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #424, #425, and #426 by narrowing the Saccharomyces example to
+    the Valtz-supported Spa2/Pea2 localization claim, rewriting the Bni1 and Bud6
+    graph edges as actin-assembly support edges, and removing unsupported Msb3/Msb4
+    claims from the Aip5/Myo2 boundary TODO.'
+  llm_assisted: true
+components:
+- component_id: spa2_pea2_scaffold
+  label: Spa2/Pea2 polarisome scaffold
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - SPA2
+  - PEA2
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Spa2 and Pea2 homologs are used as fungal polarisome markers, but
+    no exact source-neutral family CURIE for the fungal Spa2/Pea2 scaffold cohort
+    was curated.
+  role: Core scaffold proteins that localize to polarized-growth sites and help organize
+    the Saccharomyces polarisome.
+  evidence:
+  - reference: DOI:10.1083/jcb.135.3.725
+    notes: Valtz and Herskowitz 1996 showed that Pea2 localizes to polarized-growth
+      sites in a pattern similar to Spa2 and that Pea2 and Spa2 depend on one another
+      for stable localization.
+  - reference: DOI:10.1083/jcb.202006193
+    notes: Dunkler et al. 2021 studied Spa2 and Pea2 as known polarisome proteins
+      recruited by type V myosin in budding yeast.
+- component_id: bni1_formin
+  label: Bni1 formin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - BNI1
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Saccharomyces Bni1 polarisome formin is not grounded to a broader
+    formin family here because formin paralog usage differs across fungi.
+  role: Formin effector that nucleates actin filament assembly from the budding-yeast
+    polarisome.
+  evidence:
+  - reference: GO:0000133
+    notes: GO:0000133 lists Bni1p among Saccharomyces polarisome proteins.
+  - reference: DOI:10.1128/MCB.18.7.4053
+    notes: Sheu et al. 1998 connected Spa2 with Bni1 and other yeast morphogenesis
+      proteins.
+  - reference: DOI:10.1038/s41467-019-13125-1
+    notes: Xie et al. 2019 modeled Aip5, Bni1, and Bud6 around Spa2-mediated actin
+      polymerization.
+- component_id: bud6_actin_nucleation_factor
+  label: Bud6 actin nucleation-promoting factor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - BUD6
+  - AIP3
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Bud6/Aip3 is curated as the Saccharomyces actin nucleation-promoting
+    constituent named in the GO definition; no exact fungal-wide family grounding
+    was assigned.
+  role: Actin nucleation-promoting factor associated with the Bni1-containing budding-yeast
+    polarisome.
+  evidence:
+  - reference: GO:0000133
+    notes: GO:0000133 lists Bud6p among Saccharomyces polarisome proteins.
+  - reference: DOI:10.1038/s41467-019-13125-1
+    notes: Xie et al. 2019 studied Bud6 with Bni1 in a Spa2-mediated actin-polymerization
+      system.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: VARIABLE
+  note: Polarisome proteins and tip-localized polarisome-like assemblies are characterized
+    in budding yeasts and filamentous fungi, but the exact component arrangement varies
+    with growth mode and lineage.
+  reference: DOI:10.1371/journal.pone.0030372
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Pea2 and Spa2 localize to polarized-growth sites
+    during budding and mating.
+  reference: DOI:10.1083/jcb.135.3.725
+- taxon_id: NCBITaxon:5141
+  taxon_label: Neurospora crassa
+  note: Filamentous fungal model in which SPA-2, BUD-6, and BNI-1 have distinct localizations
+    around the apical dome and Spitzenkorper during hyphal growth.
+  reference: DOI:10.1371/journal.pone.0030372
+functions:
+- function_id: polarized_actin_assembly
+  label: polarized actin assembly
+  description: The polarisome scaffolds actin-assembly factors at polarized-growth
+    sites to promote local actin filament polymerization.
+  evidence:
+  - reference: GO:0000133
+    notes: GO:0000133 defines the polarisome by its role in directing localized assembly
+      of actin filaments at polarization sites.
+  - reference: DOI:10.1038/s41467-019-13125-1
+    notes: Xie et al. 2019 dissected Spa2-mediated macromolecular condensation for
+      actin polymerization.
+evidence:
+- reference: GO:0000133
+  notes: Gene Ontology cellular-component term for polarisome.
+- reference: GO:0031560
+  notes: Gene Ontology cellular-component term for the cellular bud neck polarisome.
+- reference: GO:0031561
+  notes: Gene Ontology cellular-component term for the cellular bud tip polarisome.
+- reference: GO:0031562
+  notes: Gene Ontology cellular-component term for the hyphal tip polarisome.
+- reference: GO:0031563
+  notes: Gene Ontology cellular-component term for the mating projection tip polarisome.
+- reference: DOI:10.1083/jcb.135.3.725
+  notes: Valtz and Herskowitz 1996, 'Pea2 protein of yeast is localized to sites of
+    polarized growth and is required for efficient mating and bipolar budding', Journal
+    of Cell Biology.
+- reference: DOI:10.1128/MCB.18.7.4053
+  notes: Sheu et al. 1998, 'Spa2p interacts with cell polarity proteins and signaling
+    components involved in yeast cell morphogenesis', Molecular and Cellular Biology.
+- reference: DOI:10.1038/s41467-019-13125-1
+  notes: Xie et al. 2019, 'Polarisome scaffolder Spa2-mediated macromolecular condensation
+    of Aip5 for actin polymerization', Nature Communications.
+- reference: DOI:10.1083/jcb.202006193
+  notes: Dunkler et al. 2021, 'Type V myosin focuses the polarisome and shapes the
+    tip of yeast cells', Journal of Cell Biology.
+- reference: DOI:10.1128/EC.00036-06
+  notes: Virag and Harris 2006, 'Functional Characterization of Aspergillus nidulans
+    Homologues of Saccharomyces cerevisiae Spa2 and Bud6', Eukaryotic Cell.
+- reference: DOI:10.1371/journal.pone.0030372
+  notes: Lichius et al. 2012, 'Comparative Live-Cell Imaging Analyses of SPA-2, BUD-6
+    and BNI-1 in Neurospora crassa Reveal Novel Features of the Filamentous Fungal
+    Polarisome', PLoS ONE.
+causal_graphs:
+- graph_id: spa2_polarisome_actin_assembly
+  title: Spa2-centered polarisomes concentrate actin assembly factors
+  description: In Saccharomyces cerevisiae, the Spa2/Pea2 scaffold localizes to polarized-growth
+    sites, while Bni1 formin and Bud6 act in the Spa2-mediated module that drives
+    local actin-filament assembly.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph summarizes budding-yeast polarisome organization without
+    asserting a complete physical interaction map or a conserved filamentous-fungal
+    stoichiometry.
+  nodes:
+  - node_id: spa2_pea2_scaffold
+    label: Spa2/Pea2 polarisome scaffold
+    node_type: GENE_OR_PROTEIN
+    component_ref: spa2_pea2_scaffold
+  - node_id: bni1_formin
+    label: Bni1 formin
+    node_type: GENE_OR_PROTEIN
+    component_ref: bni1_formin
+  - node_id: bud6_actin_nucleation_factor
+    label: Bud6 actin nucleation-promoting factor
+    node_type: GENE_OR_PROTEIN
+    component_ref: bud6_actin_nucleation_factor
+  - node_id: polarisome
+    label: polarisome
+    node_type: STRUCTURE
+    grounding: GO:0000133
+  - node_id: actin_filament_assembly
+    label: actin filament assembly
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: spa2_pea2_scaffold
+    predicate: localizes to
+    object: polarisome
+    description: Pea2 and Spa2 localize interdependently to the budding-yeast polarisome
+      at polarized-growth sites.
+    evidence:
+    - reference: DOI:10.1083/jcb.135.3.725
+      notes: Valtz and Herskowitz 1996 found Pea2 and Spa2 at sites of polarized growth
+        and established their interdependent localization.
+  - subject: bni1_formin
+    predicate: supports
+    object: actin_filament_assembly
+    description: Bni1 formin acts in the Spa2-mediated actin-polymerization module.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-13125-1
+      notes: Xie et al. 2019 modeled Bni1 in the Spa2-mediated actin-polymerization
+        system.
+  - subject: bud6_actin_nucleation_factor
+    predicate: supports
+    object: actin_filament_assembly
+    description: Bud6 acts with Bni1 in the Spa2-mediated actin-polymerization module.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-13125-1
+      notes: Xie et al. 2019 studied Bud6 together with Bni1 around Spa2.
+  - subject: polarisome
+    predicate: directs
+    object: actin_filament_assembly
+    description: The polarisome directs localized assembly of actin filaments at budding-yeast
+      polarity sites.
+    evidence:
+    - reference: GO:0000133
+      notes: GO:0000133 defines the polarisome by its actin-filament assembly role.
+    - reference: DOI:10.1038/s41467-019-13125-1
+      notes: Xie et al. 2019 tested Spa2-mediated actin polymerization in the polarisome
+        module.
+discussions:
+- discussion_id: resolve_fungal_polarisome_family_groundings
+  prompt: Resolve exact source-neutral family groundings for fungal Spa2/Pea2, Bni1,
+    Bud6/Aip3, and additional polarisome-associated proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#spa2_pea2_scaffold
+  - components#bni1_formin
+  - components#bud6_actin_nucleation_factor
+  rationale: The initial record uses Saccharomyces names and filamentous-fungal homolog
+    studies to delimit the protein cohorts without guessing InterPro, Pfam, NCBIfam,
+    or UniProtKB family accessions.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0030372
+    notes: Lichius et al. 2012 compared SPA-2, BUD-6, and BNI-1 in Neurospora.
+  - reference: DOI:10.1128/EC.00036-06
+    notes: Virag and Harris 2006 characterized Aspergillus homologues of Saccharomyces
+      Spa2 and Bud6.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: defer_aip5_msb_polarisome_boundaries
+  prompt: Curate Aip5 and Myo2 relationships after deciding which are stable polarisome
+    constituents versus associated actin-assembly or transport machinery.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#spa2_pea2_scaffold
+  - components#bni1_formin
+  - components#bud6_actin_nucleation_factor
+  - causal_graphs#spa2_polarisome_actin_assembly
+  rationale: Aip5 contributes to Spa2-centered actin polymerization, and Myo2 focuses
+    the complex, but the first record includes only the canonical Bni1/Spa2/Pea2/Bud6
+    constituents from the GO definition.
+  evidence:
+  - reference: DOI:10.1038/s41467-019-13125-1
+    notes: Xie et al. 2019 studied Aip5 condensation around Spa2.
+  - reference: DOI:10.1083/jcb.202006193
+    notes: Dunkler et al. 2021 studied Myo2-dependent focusing of the polarisome.
+  posed_by: codex
+  posed_date: '2026-09-11'
