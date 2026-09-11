@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/fungal_type_cell_wall.yaml
+  slug: fungal_type_cell_wall
+session:
+  id: 2026-09-11T051304Z-codex-71fd09
+  timestamp: '2026-09-11T05:13:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/416
+  - https://github.com/CultureBotAI/CellStructureMech/issues/417
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/415
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - causal_graphs
+  summary: Address fungal-type cell wall adversarial review
+  details: Resolved PR 415 review issues by downgrading beta-D-glucan from essential to conditional
+    at broad fungal scope, softening the record definition and assembly graph so beta-glucan,
+    chitin, and mannoproteins are not asserted to have the same composition in every fungal
+    wall, and citing the fungal cell wall exact synonym from the Gow, Latge and Munro 2017
+    fungal-wall review instead of GO:0009277.
