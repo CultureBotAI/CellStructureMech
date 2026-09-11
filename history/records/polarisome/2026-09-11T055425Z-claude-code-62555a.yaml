@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/polarisome.yaml
+  slug: polarisome
+session:
+  id: 2026-09-11T055425Z-claude-code-62555a
+  timestamp: '2026-09-11T05:54:25Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added the polarisome structure record
+  details: Created a GO:0000133 polarisome record with Spa2/Pea2, Bni1, and Bud6 components;
+    fungal distribution; Saccharomyces cerevisiae and Neurospora crassa canonical examples;
+    a polarized actin assembly function; DOI and GO evidence; a Spa2-centered nonmechanistic
+    causal graph; and grounding and boundary follow-up discussions.
