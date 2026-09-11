@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/stalk_crossband.yaml
+  slug: stalk_crossband
+session:
+  id: 2026-09-11T033043Z-codex-c3a7c2
+  timestamp: '2026-09-11T03:30:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added Caulobacter stalk crossband record
+  details: Created an evidence-backed stalk crossband record minted under cellstructuremech:stalk_crossband
+    because GO lacks an exact stalk crossband cellular-component term. The record captures
+    StpA/StpB/StpC/StpD as the protein cohort building the Caulobacter crossband, links the
+    barrier as part of the prostheca, records crossband diffusion-barrier and stalk-age functions,
+    and adds Schlimpert 2012, Poindexter 1996 and Jones 1973 evidence.

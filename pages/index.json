@@ -216,6 +216,15 @@
   "definition": "A tubular projection of the bacterial cell envelope and cytoplasm that extends away from the main cell body in prosthecate bacteria. In stalked Caulobacter cells, the prostheca contains the inner membrane, peptidoglycan and outer membrane layers of the Gram-negative envelope and supports stalk-specific compartmentalization and nutrient uptake."
  },
  {
+  "identifier": "cellstructuremech:stalk_crossband",
+  "label": "stalk crossband",
+  "category": "APPENDAGE",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/appendage/stalk_crossband.html",
+  "definition": "A disk-like multiprotein diffusion barrier that spans the Caulobacter stalk cross-section. StpABCD-containing stalk crossbands partition the prostheca into compartments by limiting exchange of soluble and membrane proteins between the cell body and stalk segments."
+ },
+ {
   "identifier": "cellstructuremech:tad_pilus",
   "label": "Tad pilus",
   "category": "APPENDAGE",

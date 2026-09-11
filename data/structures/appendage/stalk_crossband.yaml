@@ -1,0 +1,200 @@
+identifier: cellstructuremech:stalk_crossband
+label: stalk crossband
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A disk-like multiprotein diffusion barrier that spans the Caulobacter
+  stalk cross-section. StpABCD-containing stalk crossbands partition the prostheca
+  into compartments by limiting exchange of soluble and membrane proteins between
+  the cell body and stalk segments.
+definition_source: DOI:10.1016/j.cell.2012.10.046
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T03:29:52Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T03:30:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added stalk-band synonymy, protein-complex parentage, prostheca parthood,
+    StpABCD constituent proteins, Caulobacter taxonomy, diffusion-barrier and stalk-age
+    functions, a StpABCD assembly graph, DOI/PMID evidence, and grounding/boundary
+    discussions.
+  llm_assisted: true
+- timestamp: '2026-09-11T03:30:33Z'
+  curator: codex
+  action: REFINED_COMPONENTS
+  changes: Narrowed the StpABCD row from a protein-complex component to a protein
+    cohort so the component table does not duplicate the stalk crossband record itself.
+  llm_assisted: true
+synonyms:
+- synonym_text: stalk band
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/JB.178.13.3939-3948.1996
+- synonym_text: Caulobacter crossband
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1016/j.cell.2012.10.046
+parent_structures:
+- GO:0032991
+part_of:
+- cellstructuremech:prostheca
+components:
+- component_id: stp_abcd_crossband_proteins
+  label: StpA/StpB/StpC/StpD crossband proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - stpA
+  - stpB
+  - stpC
+  - stpD
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: StpA, StpB, StpC and StpD are the Caulobacter proteins identified
+    in stalk crossbands; no exact source-neutral family CURIE was curated.
+  role: Assemble into the proteinaceous crossband that spans the stalk and forms a
+    diffusion barrier.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2012.10.046
+    notes: Schlimpert et al. 2012 identify StpA, StpB, StpC and StpD as proteins required
+      to form Caulobacter stalk crossbands.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Stalk crossbands have been described in stalks of Caulobacter and Asticcacaulis,
+    but are absent from most bacterial morphologies.
+  reference: DOI:10.1128/JB.178.13.3939-3948.1996
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  presence: UNIVERSAL
+  note: Crossbands form along the Caulobacter stalk as part of the stalked-cell program.
+  reference: DOI:10.1016/j.cell.2012.10.046
+canonical_examples:
+- taxon_id: NCBITaxon:565050
+  taxon_label: Caulobacter vibrioides NA1000
+  note: Model strain used to identify the proteinaceous StpABCD diffusion barriers
+    in the stalk.
+  reference: DOI:10.1016/j.cell.2012.10.046
+functions:
+- function_id: stalk_diffusion_barrier
+  label: stalk diffusion barrier
+  description: Crossbands restrict soluble and membrane-protein exchange between the
+    cell body and the prostheca, and between neighboring stalk compartments.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2012.10.046
+    notes: Schlimpert et al. 2012 show that crossbands block diffusion across Caulobacter
+      stalk compartments.
+- function_id: stalk_age_marking
+  label: stalk age marking
+  description: Sequential stalk bands provide visible markers of cell age in stalked
+    bacteria.
+  evidence:
+  - reference: DOI:10.1128/JB.178.13.3939-3948.1996
+    notes: Poindexter and Staley 1996 use Caulobacter and Asticcacaulis stalk bands
+      as indicators of stalk age.
+evidence:
+- reference: DOI:10.1016/j.cell.2012.10.046
+  notes: Schlimpert S et al. 2012, 'General protein diffusion barriers create compartments
+    within bacterial cells', Cell.
+- reference: DOI:10.1128/JB.178.13.3939-3948.1996
+  notes: Poindexter JS and Staley JT 1996, 'Caulobacter and Asticcacaulis stalk bands
+    as indicators of stalk age', Journal of Bacteriology.
+- reference: PMID:4126821
+  notes: Jones HC and Schmidt JM 1973, 'Ultrastructural study of crossbands occurring
+    in the stalks of Caulobacter crescentus', Journal of Bacteriology.
+causal_graphs:
+- graph_id: stp_crossband_stalk_barrier
+  title: StpABCD proteins assemble stalk-compartment diffusion barriers
+  description: StpA, StpB, StpC and StpD build crossbands that span the prostheca
+    and limit exchange of soluble and membrane proteins across stalk compartments.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: stp_abcd_crossband_proteins
+    label: StpA/StpB/StpC/StpD crossband proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: stp_abcd_crossband_proteins
+  - node_id: stalk_crossband
+    label: stalk crossband
+    node_type: STRUCTURE
+    grounding: cellstructuremech:stalk_crossband
+  - node_id: prostheca
+    label: prostheca
+    node_type: STRUCTURE
+    grounding: cellstructuremech:prostheca
+  - node_id: protein_diffusion
+    label: protein diffusion
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: stalk_compartments
+    label: stalk compartments
+    node_type: STATE
+  edges:
+  - subject: stp_abcd_crossband_proteins
+    predicate: assemble into
+    object: stalk_crossband
+    description: StpA, StpB, StpC and StpD form the proteinaceous crossband complex.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2012.10.046
+      notes: Schlimpert et al. 2012 show that at least four Stp proteins comprise
+        the crossband barrier.
+  - subject: stalk_crossband
+    predicate: spans
+    object: prostheca
+    description: The barrier structures extend across the Caulobacter stalk cross-section.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2012.10.046
+      notes: Schlimpert et al. 2012 describe crossbands as spanning the stalk.
+    - reference: PMID:4126821
+      notes: Jones and Schmidt 1973 imaged electron-dense crossbands in Caulobacter
+        stalks.
+  - subject: stalk_crossband
+    predicate: restricts
+    object: protein_diffusion
+    description: Stalk crossbands limit exchange of soluble periplasmic and membrane
+      proteins.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2012.10.046
+      notes: Schlimpert et al. 2012 tested soluble and membrane-protein diffusion
+        across crossbands.
+  - subject: stalk_crossband
+    predicate: creates
+    object: stalk_compartments
+    description: Barrier activity partitions the stalk from the cell body and from
+      adjacent stalk segments.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2012.10.046
+      notes: Schlimpert et al. 2012 connect crossband diffusion barriers with bacterial
+        stalk compartments.
+discussions:
+- discussion_id: stp_abcd_grounding
+  prompt: Resolve exact source-neutral groundings for the Caulobacter StpABCD crossband
+    complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#stp_abcd_crossband_proteins
+  rationale: The first record uses a reviewed label for the StpABCD cohort until an
+    exact protein-family or complex identifier is verified.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: separate_from_prostheca
+  prompt: Model the stalk crossband as a protein complex part of the prostheca, not
+    as a molecular constituent of the prostheca record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - part_of
+  - causal_graphs#stp_crossband_stalk_barrier
+  rationale: The prostheca record captures the whole envelope projection and its generic
+    wall and membrane materials. Crossbands are discrete proteinaceous barriers inside
+    that projection, so they receive a separate record with part_of pointing back
+    to the prostheca.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2012.10.046
+    notes: Schlimpert et al. 2012 define crossbands as discrete proteinaceous barriers
+      in the stalk.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
