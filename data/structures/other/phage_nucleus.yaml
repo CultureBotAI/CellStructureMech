@@ -21,6 +21,12 @@ curation_history:
     functions, DOI evidence, a nonmechanistic chimallin assembly graph, and chimallin
     grounding and PhuZ boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-11T12:31:24Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issue #479 by narrowing the chimallin grounding TODO
+    rationale so it no longer suggests an unsupported HK97-like fold equivalence.'
+  llm_assisted: true
 parent_structures:
 - GO:0043232
 synonyms:
@@ -157,8 +163,8 @@ discussions:
   attaches_to:
   - components#chimallin
   rationale: This first record leaves chimallin ungrounded rather than asserting that
-    a broad phage shell or HK97-like fold accession is equivalent to the jumbo-phage
-    nuclear shell family.
+    a broad phage-shell accession, an unverified chimallin-like cluster or a virus-specific
+    gp105 accession is equivalent to the jumbo-phage nuclear shell family.
   evidence:
   - reference: DOI:10.1038/s41586-022-05013-4
     notes: Laughlin et al. 2022 named chimallin as the major bacteriophage nuclear
