@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_pore_cytoplasmic_filaments.yaml
+  slug: nuclear_pore_cytoplasmic_filaments
+session:
+  id: 2026-09-11T084423Z-codex-bf2d7a
+  timestamp: '2026-09-11T08:44:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/444
+  - https://github.com/CultureBotAI/CellStructureMech/issues/445
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/443
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed cytoplasmic-filaments PR review
+  details: 'Resolved PR #443 review issues #444 and #445 by replacing human Bley 2022 citations
+    on yeast Nup82/Nup159 claims with Yoshida, Teimer, and Aitchison/Rout support; narrowing
+    the taxonomic distribution to Saccharomyces cerevisiae; and revising the CFNC boundary
+    TODO to avoid unsupported human/fungal component mixing.'

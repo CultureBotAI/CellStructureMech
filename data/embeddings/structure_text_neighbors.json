@@ -927,14 +927,14 @@
           "cosine_similarity": 0.71734875
         },
         {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.68338688
-        },
-        {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.66504571
+        },
+        {
+          "identifier": "GO:0009295",
+          "label": "nucleoid",
+          "cosine_similarity": 0.66136421
         }
       ]
     },
@@ -989,14 +989,14 @@
           "cosine_similarity": 0.72520211
         },
         {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.67239196
-        },
-        {
           "identifier": "GO:0005940",
           "label": "septin ring",
           "cosine_similarity": 0.66481088
+        },
+        {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.6630359
         }
       ]
     },
@@ -1036,6 +1036,11 @@
       "label": "spindle pole body",
       "neighbors": [
         {
+          "identifier": "GO:0044614",
+          "label": "nuclear pore cytoplasmic filaments",
+          "cosine_similarity": 0.72444486
+        },
+        {
           "identifier": "GO:0000133",
           "label": "polarisome",
           "cosine_similarity": 0.71279967
@@ -1044,11 +1049,6 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.70740818
-        },
-        {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.70623733
         },
         {
           "identifier": "GO:1990900",
@@ -1141,17 +1141,17 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.66919797
-        },
-        {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.62263704
+          "cosine_similarity": 0.66919798
         },
         {
           "identifier": "GO:1990732",
           "label": "pyrenoid",
-          "cosine_similarity": 0.62035478
+          "cosine_similarity": 0.62035479
+        },
+        {
+          "identifier": "GO:0031470",
+          "label": "carboxysome",
+          "cosine_similarity": 0.61795089
         }
       ]
     },
@@ -2591,11 +2591,6 @@
           "cosine_similarity": 0.69282166
         },
         {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.68188544
-        },
-        {
           "identifier": "GO:0005643",
           "label": "nuclear pore",
           "cosine_similarity": 0.68163681
@@ -2604,6 +2599,11 @@
           "identifier": "GO:0044611",
           "label": "nuclear pore inner ring",
           "cosine_similarity": 0.67974957
+        },
+        {
+          "identifier": "GO:0044614",
+          "label": "nuclear pore cytoplasmic filaments",
+          "cosine_similarity": 0.67786422
         },
         {
           "identifier": "GO:0031080",
@@ -2691,7 +2691,7 @@
         {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.66989445
+          "cosine_similarity": 0.67084413
         },
         {
           "identifier": "GO:0005940",
@@ -2789,7 +2789,7 @@
         {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.84307432
+          "cosine_similarity": 0.8344862
         },
         {
           "identifier": "GO:0031080",
@@ -2820,7 +2820,7 @@
         {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.78349023
+          "cosine_similarity": 0.78210723
         },
         {
           "identifier": "GO:0031080",
@@ -2834,29 +2834,29 @@
       "label": "nuclear pore cytoplasmic filaments",
       "neighbors": [
         {
-          "identifier": "GO:0005643",
-          "label": "nuclear pore",
-          "cosine_similarity": 0.84307432
-        },
-        {
           "identifier": "GO:0044611",
           "label": "nuclear pore inner ring",
-          "cosine_similarity": 0.83056964
+          "cosine_similarity": 0.84256648
         },
         {
-          "identifier": "GO:0044612",
-          "label": "nuclear pore linkers",
-          "cosine_similarity": 0.81342588
+          "identifier": "GO:0005643",
+          "label": "nuclear pore",
+          "cosine_similarity": 0.8344862
         },
         {
           "identifier": "GO:0031080",
           "label": "nuclear pore outer ring",
-          "cosine_similarity": 0.80501134
+          "cosine_similarity": 0.82112501
+        },
+        {
+          "identifier": "GO:0044612",
+          "label": "nuclear pore linkers",
+          "cosine_similarity": 0.79648718
         },
         {
           "identifier": "GO:0044613",
           "label": "nuclear pore central transport channel",
-          "cosine_similarity": 0.78349023
+          "cosine_similarity": 0.78210723
         }
       ]
     },
@@ -2882,7 +2882,7 @@
         {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.83056964
+          "cosine_similarity": 0.84256648
         },
         {
           "identifier": "GO:0044613",
@@ -2918,7 +2918,7 @@
         {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.81342588
+          "cosine_similarity": 0.79648718
         }
       ]
     },
@@ -2937,14 +2937,14 @@
           "cosine_similarity": 0.82943626
         },
         {
+          "identifier": "GO:0044614",
+          "label": "nuclear pore cytoplasmic filaments",
+          "cosine_similarity": 0.82112501
+        },
+        {
           "identifier": "GO:0005643",
           "label": "nuclear pore",
           "cosine_similarity": 0.81473543
-        },
-        {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.80501134
         },
         {
           "identifier": "GO:0044613",
@@ -3022,7 +3022,7 @@
         {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.67732696
+          "cosine_similarity": 0.66613124
         },
         {
           "identifier": "GO:0046858",
