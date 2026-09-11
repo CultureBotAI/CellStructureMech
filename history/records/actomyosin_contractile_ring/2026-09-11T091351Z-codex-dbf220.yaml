@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/actomyosin_contractile_ring.yaml
+  slug: actomyosin_contractile_ring
+session:
+  id: 2026-09-11T091351Z-codex-dbf220
+  timestamp: '2026-09-11T09:13:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added actomyosin contractile ring record
+  details: Created a GO:0005826 actomyosin contractile ring record with contractile-ring synonymy,
+    fission-yeast actin, Myo2, and Cdc12 component classes, Schizosaccharomyces pombe taxonomic
+    scope and canonical example, cytokinetic-constriction function, DOI and GO evidence, a
+    nonmechanistic Cdc12/actin/Myo2 assembly graph, and a component-boundary TODO for Rng2,
+    Cdc15, profilin, fimbrin, cofilin, and related cytokinesis factors.

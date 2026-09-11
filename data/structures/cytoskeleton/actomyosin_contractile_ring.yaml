@@ -1,0 +1,202 @@
+identifier: GO:0005826
+label: actomyosin contractile ring
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A cytokinetic cytoskeletal ring composed of actin filaments, myosin, and
+  accessory proteins that assembles beneath the plasma membrane and constricts during
+  cell division.
+definition_source: GO:0005826
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T09:12:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T09:13:40Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added contractile-ring synonymy, actin, Myo2, and Cdc12 component classes,
+    fission-yeast taxonomic scope, a cytokinetic-constriction function, DOI and GO
+    evidence, a nonmechanistic node-condensation assembly graph, and a component-boundary
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T09:21:29Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #449 review issues #450 and #451 by adding constriction-specific
+    Wu et al. 2003 evidence and by converting fission-yeast gene symbols to PomBase-style
+    lowercase.'
+  llm_assisted: true
+synonyms:
+- synonym_text: contractile ring
+  synonym_type: RELATED_SYNONYM
+  source: GO:0005826
+- synonym_text: cytokinetic actomyosin ring
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1002/cm.21052
+components:
+- component_id: actin_filaments
+  label: actin filaments
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - act1
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This first fission-yeast actomyosin-ring record keeps broad actin,
+    myosin-II, and formin labels until exact source-neutral family groundings are
+    reviewed.
+  role: Filamentous actin tracks that assemble into the cytokinetic contractile ring.
+  evidence:
+  - reference: DOI:10.1083/jcb.200602032
+    notes: Wu et al. 2006 followed actin accumulation as fission-yeast cytokinesis
+      nodes condensed into a contractile ring.
+  - reference: DOI:10.1002/cm.21052
+    notes: Lee et al. 2012 review actin filaments as a central structural element
+      of the fission-yeast contractile ring.
+- component_id: myosin_ii_myo2_family
+  label: Myo2-family myosin-II motor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - myo2
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This first fission-yeast actomyosin-ring record keeps broad actin,
+    myosin-II, and formin labels until exact source-neutral family groundings are
+    reviewed.
+  role: Myosin-II motor that contributes to contractile-ring force generation.
+  evidence:
+  - reference: DOI:10.1083/jcb.200602032
+    notes: Wu et al. 2006 tracked Myo2-positive nodes during fission-yeast contractile-ring
+      assembly.
+  - reference: DOI:10.1002/cm.21052
+    notes: Lee et al. 2012 review myosin II as a core fission-yeast contractile-ring
+      protein.
+- component_id: cdc12_formin_family
+  label: Cdc12-family cytokinetic formin
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: UNKNOWN
+  gene_symbols:
+  - cdc12
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This first fission-yeast actomyosin-ring record keeps broad actin,
+    myosin-II, and formin labels until exact source-neutral family groundings are
+    reviewed.
+  role: Cytokinesis-node formin that nucleates actin filaments during contractile-ring
+    assembly.
+  evidence:
+  - reference: DOI:10.1083/jcb.200602032
+    notes: Wu et al. 2006 modeled fission-yeast contractile-ring assembly from Cdc12-containing
+      cytokinesis nodes.
+  - reference: DOI:10.1002/cm.21052
+    notes: Lee et al. 2012 review Cdc12-mediated actin assembly in fission-yeast cytokinesis
+      nodes and rings.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: The actomyosin contractile ring is directly characterized in fission yeast;
+    no broader fungal distribution is asserted in this first record.
+  reference: DOI:10.1002/cm.21052
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Fission-yeast model in which cytokinetic nodes containing Myo2 and Cdc12 condense
+    with actin into a medial contractile ring.
+  reference: DOI:10.1083/jcb.200602032
+functions:
+- function_id: cytokinetic_actomyosin_constriction
+  label: cytokinetic actomyosin constriction
+  description: The actomyosin contractile ring assembles at the division plane and
+    constricts to help divide the fission-yeast cell during cytokinesis.
+  evidence:
+  - reference: DOI:10.1083/jcb.200602032
+    notes: Wu and Pollard 2006 modeled assembly of the fission-yeast contractile ring
+      from a broad band of nodes.
+  - reference: DOI:10.1016/S1534-5807(03)00324-1
+    notes: Wu et al. 2003 documented assembly and constriction of the fission-yeast
+      contractile ring during cytokinesis.
+evidence:
+- reference: GO:0005826
+  notes: Gene Ontology cellular-component term for the actomyosin contractile ring.
+- reference: DOI:10.1083/jcb.200602032
+  notes: Wu and Pollard 2006, 'Assembly of the cytokinetic contractile ring from a
+    broad band of nodes in fission yeast', Journal of Cell Biology.
+- reference: DOI:10.1002/cm.21052
+  notes: 'Lee, Coffman, and Wu 2012, ''Contractile-ring assembly in fission yeast
+    cytokinesis: recent advances and new perspectives'', Cytoskeleton.'
+- reference: DOI:10.1016/S1534-5807(03)00324-1
+  notes: Wu et al. 2003, 'Spatial and temporal pathway for assembly and constriction
+    of the contractile ring in fission yeast cytokinesis', Developmental Cell.
+causal_graphs:
+- graph_id: fission_yeast_node_condensation
+  title: Cdc12 nodes assemble actin and Myo2 into the contractile ring
+  description: Fission-yeast cytokinesis nodes carrying Myo2 and Cdc12 condense through
+    actin-dependent interactions to form the contractile ring.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records node-to-ring condensation without asserting all node
+    proteins, quantitative node counts, or constriction force-balance models.
+  nodes:
+  - node_id: cdc12_formin_family
+    label: Cdc12-family cytokinetic formin
+    node_type: GENE_OR_PROTEIN
+    component_ref: cdc12_formin_family
+  - node_id: actin_filaments
+    label: actin filaments
+    node_type: GENE_OR_PROTEIN
+    component_ref: actin_filaments
+  - node_id: myosin_ii_myo2_family
+    label: Myo2-family myosin-II motor
+    node_type: GENE_OR_PROTEIN
+    component_ref: myosin_ii_myo2_family
+  - node_id: actomyosin_contractile_ring
+    label: actomyosin contractile ring
+    node_type: STRUCTURE
+    grounding: GO:0005826
+  edges:
+  - subject: cdc12_formin_family
+    predicate: nucleates
+    object: actin_filaments
+    description: Cdc12-family formin nucleates actin filaments from cytokinesis nodes.
+    evidence:
+    - reference: DOI:10.1083/jcb.200602032
+      notes: Wu et al. 2006 modeled Cdc12 nodes as actin-nucleating precursors of
+        the ring.
+  - subject: actin_filaments
+    predicate: contributes to
+    object: actomyosin_contractile_ring
+    description: Actin filaments condense into the contractile ring.
+    evidence:
+    - reference: DOI:10.1083/jcb.200602032
+      notes: Wu et al. 2006 tracked actin during fission-yeast ring assembly.
+  - subject: myosin_ii_myo2_family
+    predicate: contributes to
+    object: actomyosin_contractile_ring
+    description: Myo2-family myosin II is carried in cytokinesis nodes and the ring.
+    evidence:
+    - reference: DOI:10.1083/jcb.200602032
+      notes: Wu et al. 2006 tracked Myo2-containing nodes during contractile-ring
+        formation.
+discussions:
+- discussion_id: resolve_fission_yeast_contractile_ring_boundaries
+  prompt: Resolve which Rng2, Cdc15, profilin, fimbrin, cofilin, and additional cytokinesis-node
+    or actin-remodeling factors should be curated as contractile-ring constituents
+    or associated assembly machinery.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#actin_filaments
+  - components#cdc12_formin_family
+  rationale: The fission-yeast contractile ring contains many node, nucleation, bundling,
+    and remodeling proteins. This first record models actin, myosin II, and the Cdc12
+    formin until additional component boundaries are reviewed explicitly.
+  evidence:
+  - reference: DOI:10.1002/cm.21052
+    notes: Lee et al. 2012 review fission-yeast cytokinesis-node and contractile-ring
+      assembly factors.
+  posed_by: codex
+  posed_date: '2026-09-11'
