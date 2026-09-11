@@ -28,6 +28,13 @@ curation_history:
     the adhesion edge at abiotic surfaces instead of a derived surface-attached-cell
     state.
   llm_assisted: true
+- timestamp: '2026-09-11T02:33:35Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #392 issues #393 and #394 by removing the under-evidenced
+    Hfs synthesis/export edge and replacing the old-cell-pole state with an old-pole-or-stalk-tip
+    cellular-localization node.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Caulobacter holdfast
   synonym_type: RELATED_SYNONYM
@@ -67,8 +74,8 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: HfaA, HfaB and HfaD form holdfast anchoring machinery in Caulobacter,
     but no exact source-neutral complex CURIE was curated for this first record.
-  role: Anchors the secreted holdfast matrix at the old cell pole so it remains attached
-    to the cell surface.
+  role: Anchors the secreted holdfast matrix at the old cell pole or stalk tip so
+    it remains attached to the cell surface.
   evidence:
   - reference: DOI:10.1128/JB.00112-19
     notes: Sulkowski et al. 2019 analyze HfaA, HfaB and HfaD as proteins that anchor
@@ -97,9 +104,9 @@ functions:
     notes: Sprecher et al. 2017 studied the cohesive properties that make the Caulobacter
       holdfast an adhesive surface organelle.
 - function_id: old_pole_anchoring
-  label: old-pole holdfast anchoring
+  label: polar holdfast anchoring
   description: Hfa anchoring proteins retain the secreted holdfast matrix at the old
-    cell pole instead of allowing it to be released into the medium.
+    cell pole or stalk tip instead of allowing it to be released into the medium.
   evidence:
   - reference: DOI:10.1128/JB.00112-19
     notes: Sulkowski et al. 2019 show that Hfa proteins form a multiprotein anchoring
@@ -116,16 +123,13 @@ evidence:
     Holdfast Adhesin Are Regulated by a Novel c-di-GMP Effector Protein', mBio.
 causal_graphs:
 - graph_id: holdfast_synthesis_anchoring_adhesion
-  title: Holdfast polysaccharide is secreted, cohesion-tuned and anchored
-  description: Hfs synthesis factors build and secrete holdfast polysaccharide, HfsK
-    responds to c-di-GMP to tune adhesive-matrix cohesion, and Hfa proteins anchor
-    the completed holdfast at the old pole so it can glue the cell to abiotic surfaces.
+  title: Holdfast polysaccharide is cohesion-tuned and anchored
+  description: HfsK responds to c-di-GMP to tune adhesive-matrix cohesion, and Hfa
+    proteins anchor the completed holdfast at the old pole or stalk tip so it can
+    glue the cell to abiotic surfaces.
   graph_kind: ASSEMBLY
   scope_status: MECHANISTIC
   nodes:
-  - node_id: hfs_synthesis_export
-    label: Hfs holdfast synthesis-export machinery
-    node_type: GENE_OR_PROTEIN
   - node_id: hfsk_c_di_gmp_effector
     label: HfsK c-di-GMP effector
     node_type: GENE_OR_PROTEIN
@@ -137,9 +141,9 @@ causal_graphs:
     label: HfaA-HfaB-HfaD holdfast anchor
     node_type: GENE_OR_PROTEIN
     component_ref: hfa_holdfast_anchor
-  - node_id: old_cell_pole
-    label: old cell pole
-    node_type: STATE
+  - node_id: old_pole_or_stalk_tip
+    label: old pole or stalk tip
+    node_type: CELLULAR_LOCALIZATION
   - node_id: holdfast
     label: holdfast
     node_type: STRUCTURE
@@ -148,15 +152,6 @@ causal_graphs:
     label: abiotic surface
     node_type: ENVIRONMENTAL_FACTOR
   edges:
-  - subject: hfs_synthesis_export
-    predicate: builds and secretes
-    object: holdfast_polysaccharide
-    description: Hfs biosynthetic and export factors synthesize the polysaccharide
-      matrix that becomes the extracellular holdfast.
-    evidence:
-    - reference: DOI:10.1128/JB.00276-19
-      notes: Hershey et al. 2019 characterize the carbohydrate composition of the
-        secreted Caulobacter holdfast matrix.
   - subject: hfsk_c_di_gmp_effector
     predicate: tunes cohesion of
     object: holdfast_polysaccharide
@@ -185,7 +180,7 @@ causal_graphs:
         for Caulobacter holdfast anchoring.
   - subject: holdfast
     predicate: localizes to
-    object: old_cell_pole
+    object: old_pole_or_stalk_tip
     description: The anchored holdfast is retained at the old cell pole and, after
       stalk formation, at the stalk tip.
     evidence:
@@ -203,16 +198,17 @@ causal_graphs:
         the developmentally regulated adhesive for surface attachment.
 discussions:
 - discussion_id: hfs_biosynthesis_boundary
-  prompt: Keep Hfs synthesis, export and modification proteins out of the component
+  prompt: Keep Hfs synthesis, export and HfsK cohesion proteins out of the component
     table for this first holdfast record.
   kind: CURATION_TODO
   status: RESOLVED
   attaches_to:
   - causal_graphs#holdfast_synthesis_anchoring_adhesion
   rationale: Hfs proteins synthesize, export or modify holdfast material before or
-    during assembly. They are represented as assembly graph machinery, while the component
-    table contains the holdfast polysaccharide and the Hfa machinery that anchors
-    the assembled adhesin at the old cell pole.
+    during assembly. The HfsK effector is represented as graph machinery, Hfs synthesis/export
+    factors are omitted until direct gene-level edges are curated, and the component
+    table contains the holdfast polysaccharide plus the Hfa machinery that anchors
+    the assembled adhesin.
   evidence:
   - reference: DOI:10.1128/JB.00276-19
     notes: Hershey et al. 2019 distinguish holdfast polysaccharide composition from
