@@ -1,0 +1,182 @@
+identifier: cellstructuremech:omcz_cytochrome_nanowire
+label: OmcZ cytochrome nanowire
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: An extracellular electrically conductive Geobacter sulfurreducens filament
+  assembled from the octaheme c-type cytochrome OmcZ; each subunit contributes a branched
+  heme arrangement with a surface-exposed heme site to the cytochrome polymer.
+definition_source: DOI:10.7554/eLife.81551
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T15:14:09Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T15:14:56Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added OmcZ cytochrome nanowire synonymy, a label-only OmcZ component with
+    a Geobacter sulfurreducens PCA UniProt example, Geobacter sulfurreducens source
+    taxon rows, electron-transfer function evidence, a narrow OmcZ function graph,
+    and a TODO for exact OmcZ family grounding.
+  llm_assisted: true
+synonyms:
+- synonym_text: OmcZ nanowire
+  synonym_type: EXACT_SYNONYM
+  source: PDB:8D9M
+- synonym_text: OmcZ filament
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.7554/eLife.81551
+components:
+- component_id: omcz_octaheme_c_type_cytochrome
+  label: OmcZ octaheme c-type cytochrome
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - omcZ
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: UniProtKB:Q74BG5 identifies the Geobacter sulfurreducens PCA OmcZ
+    protein, but its RCSB/UniProt InterPro and Pfam mappings cover broad multiheme
+    or IPT domains rather than an exact source-neutral family for OmcZ cytochrome
+    nanowire subunits.
+  role: Octaheme c-type cytochrome subunit that polymerizes into the extracellular
+    OmcZ filament and positions covalently bound hemes in a branched arrangement.
+  evidence:
+  - reference: DOI:10.7554/eLife.81551
+    notes: Wang et al. 2022 solved the Geobacter OmcZ filament by cryo-EM and modeled
+      the filament as a polymer of OmcZ octaheme cytochrome subunits.
+  - reference: PDB:8D9M
+    notes: RCSB PDB entry 8D9M is the cryo-EM model of OmcZ nanowires from Geobacter
+      sulfurreducens and aligns polymer entity 1 to UniProtKB:Q74BG5.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q74BG5
+    protein_label: Cytochrome c
+    gene_symbol: omcZ
+    taxon_id: NCBITaxon:243231
+    taxon_label: Geobacter sulfurreducens PCA
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-09-11'
+    role: UniProtKB entry for the Geobacter sulfurreducens PCA omcZ gene product that
+      is linked to the OmcZ nanowire cryo-EM structure PDB:8D9M.
+    evidence:
+    - reference: PDB:8D9M
+      notes: RCSB reports a full-length SIFTS alignment from polymer entity 1 of PDB:8D9M
+        to UniProtKB:Q74BG5.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:35554
+  taxon_label: Geobacter sulfurreducens
+  presence: COMMON
+  note: Geobacter sulfurreducens strain ATCC 51573 / DSM 12127 / PCA was the natural
+    source material for the PDB:8D9M OmcZ polymer entity.
+  reference: PDB:8D9M
+canonical_examples:
+- taxon_id: NCBITaxon:35554
+  taxon_label: Geobacter sulfurreducens
+  note: Species source of the PCA-strain OmcZ filament structure solved by cryo-EM
+    and deposited as PDB:8D9M.
+  reference: PDB:8D9M
+functions:
+- function_id: branched_heme_long_range_electron_transfer
+  label: branched-heme long-range electron transfer
+  description: OmcZ subunits arrange covalently bound hemes in a branched network
+    with a surface-exposed heme site per subunit, providing a structural path for
+    long-range electron transfer in conductive OmcZ filaments.
+  evidence:
+  - reference: DOI:10.7554/eLife.81551
+    notes: Wang et al. 2022 contrasted OmcZ with linear OmcS and OmcE heme chains
+      and connected the OmcZ branched, surface-exposed heme arrangement with the filament's
+      high conductivity.
+evidence:
+- reference: DOI:10.7554/eLife.81551
+  notes: Wang, Chan, Suciu et al. 2022, Structure of Geobacter OmcZ filaments suggests
+    extracellular cytochrome polymers evolved independently multiple times, eLife.
+- reference: PDB:8D9M
+  notes: RCSB PDB entry 8D9M is a 4.2 A helical cryo-EM model of Geobacter sulfurreducens
+    OmcZ nanowires associated with EMDB map EMD-27266.
+causal_graphs:
+- graph_id: branched_heme_omcz_nanowire_conduction
+  title: OmcZ subunits branch hemes for nanowire conduction
+  description: OmcZ octaheme c-type cytochromes polymerize into an extracellular filament
+    whose branched heme arrangement and surface-exposed heme site provide a structural
+    basis for conductive OmcZ nanowires.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: This graph is restricted to OmcZ filament architecture and the proposed
+    branched-heme conduction path; it does not model OmcZ proteolytic processing,
+    export, biofilm regulation, or the distinct OmcS and OmcE cytochrome nanowire
+    classes.
+  nodes:
+  - node_id: omcz_octaheme_c_type_cytochrome
+    label: OmcZ octaheme c-type cytochrome
+    node_type: GENE_OR_PROTEIN
+    component_ref: omcz_octaheme_c_type_cytochrome
+  - node_id: branched_heme_network
+    label: branched heme network
+    node_type: STATE
+  - node_id: surface_exposed_heme_site
+    label: surface-exposed heme site
+    node_type: STATE
+  - node_id: omcz_cytochrome_nanowire
+    label: OmcZ cytochrome nanowire
+    node_type: STRUCTURE
+    grounding: cellstructuremech:omcz_cytochrome_nanowire
+  - node_id: long_range_electron_transfer
+    label: long-range extracellular electron transfer
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: omcz_octaheme_c_type_cytochrome
+    predicate: polymerizes into
+    object: omcz_cytochrome_nanowire
+    description: OmcZ octaheme cytochrome subunits assemble into the extracellular
+      cytochrome filament resolved by cryo-EM.
+    evidence:
+    - reference: DOI:10.7554/eLife.81551
+      notes: Wang et al. 2022 determined a cryo-EM structure of Geobacter sulfurreducens
+        OmcZ filaments formed from the OmcZ octaheme cytochrome.
+  - subject: omcz_octaheme_c_type_cytochrome
+    predicate: arranges
+    object: branched_heme_network
+    description: The OmcZ filament positions covalently bound hemes in a branched
+      arrangement rather than the linear chains seen in OmcS and OmcE filaments.
+    evidence:
+    - reference: DOI:10.7554/eLife.81551
+      notes: Wang et al. 2022 reported that OmcZ heme packing and between-subunit
+        coordination differ from the linear OmcS and OmcE heme chains.
+  - subject: branched_heme_network
+    predicate: exposes
+    object: surface_exposed_heme_site
+    description: OmcZ's branched heme arrangement leaves one heme in every subunit
+      highly exposed at the filament surface.
+    evidence:
+    - reference: DOI:10.7554/eLife.81551
+      notes: Wang et al. 2022 proposed that the surface-exposed heme in each OmcZ
+        subunit may help explain conductive biofilm network formation.
+  - subject: branched_heme_network
+    predicate: supports
+    object: long_range_electron_transfer
+    description: The branched OmcZ heme arrangement provides a candidate electron-transfer
+      path through the conductive cytochrome filament.
+    evidence:
+    - reference: DOI:10.7554/eLife.81551
+      notes: Wang et al. 2022 connected the branched OmcZ heme architecture with long-range
+        electron transport by conductive cytochrome filaments.
+discussions:
+- discussion_id: resolve_omcz_family_grounding
+  prompt: Resolve exact source-neutral protein-family grounding for OmcZ cytochrome
+    nanowire subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#omcz_octaheme_c_type_cytochrome
+  rationale: The first OmcZ cytochrome nanowire record uses an unreviewed Geobacter
+    sulfurreducens PCA UniProtKB example but keeps the component itself label-only
+    because no exact InterPro, Pfam or NCBIfam family CURIE for the extracellular
+    OmcZ filament subunit class was verified.
+  evidence:
+  - reference: DOI:10.7554/eLife.81551
+    notes: Wang et al. 2022 should guide future OmcZ-family grounding and separation
+      from OmcS and OmcE cytochrome nanowire subunit classes.
+  posed_by: codex
+  posed_date: '2026-09-11'
