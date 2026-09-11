@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/peroxisome.yaml
+  slug: peroxisome
+session:
+  id: 2026-09-11T013422Z-claude-code-1c625e
+  timestamp: '2026-09-11T01:34:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/384
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/383
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed peroxisome matrix component review
+  details: 'Addressed PR #383 review issue #384 by keeping GO:0005782 as a peroxisome has_part
+    term while removing the peroxisomal matrix from the components table and dropping the
+    matrix graph node component_ref.'

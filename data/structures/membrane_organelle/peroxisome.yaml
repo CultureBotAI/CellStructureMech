@@ -21,6 +21,13 @@ curation_history:
     fatty-acid beta-oxidation and matrix-protein import functions, record evidence,
     a matrix-import graph, and a peroxin/metabolic-enzyme grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T01:33:42Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #384 by keeping GO:0005782 as a peroxisome part but removing
+    the peroxisomal matrix from components because it is a lumenal volume rather than
+    a molecular constituent.'
+  llm_assisted: true
 has_part:
 - GO:0005778
 - GO:0005782
@@ -39,20 +46,6 @@ components:
   - reference: DOI:10.1038/nrm3700
     notes: Smith and Aitchison 2013 review peroxisomes as single-membrane organelles
       with regulated membrane growth and division.
-- component_id: peroxisomal_matrix
-  label: peroxisomal matrix
-  component_type: OTHER
-  component_role: CONSTITUENT
-  grounding: GO:0005782
-  essentiality: ESSENTIAL
-  role: Internal matrix volume that houses imported peroxisomal metabolic enzymes.
-  evidence:
-  - reference: GO:0005782
-    notes: Gene Ontology cellular-component term for the volume contained within the
-      peroxisomal membrane.
-  - reference: DOI:10.1093/femsyr/fow038
-    notes: Sibirny 2016 reviewed yeast peroxisomes and their matrix-localized oxidative
-      and biosynthetic metabolism.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -115,7 +108,6 @@ causal_graphs:
     label: peroxisomal matrix
     node_type: CELLULAR_LOCALIZATION
     grounding: GO:0005782
-    component_ref: peroxisomal_matrix
   - node_id: pts_matrix_proteins
     label: peroxisomal targeting signal-bearing matrix proteins
     node_type: GENE_OR_PROTEIN
