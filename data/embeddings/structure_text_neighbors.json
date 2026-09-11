@@ -650,12 +650,12 @@
         {
           "identifier": "cellstructuremech:tad_pilus",
           "label": "Tad pilus",
-          "cosine_similarity": 0.70199157
+          "cosine_similarity": 0.70199156
         },
         {
           "identifier": "GO:0097740",
           "label": "paraflagellar rod",
-          "cosine_similarity": 0.68470604
+          "cosine_similarity": 0.68470603
         }
       ]
     },
@@ -731,6 +731,11 @@
           "cosine_similarity": 0.81140413
         },
         {
+          "identifier": "cellstructuremech:bactofilin_filament",
+          "label": "bactofilin filament",
+          "cosine_similarity": 0.71956419
+        },
+        {
           "identifier": "GO:0009276",
           "label": "Gram-negative-bacterium-type cell wall",
           "cosine_similarity": 0.7192161
@@ -739,11 +744,6 @@
           "identifier": "cellstructuremech:tad_pilus",
           "label": "Tad pilus",
           "cosine_similarity": 0.7180335
-        },
-        {
-          "identifier": "cellstructuremech:bactofilin_filament",
-          "label": "bactofilin filament",
-          "cosine_similarity": 0.70882979
         },
         {
           "identifier": "GO:0033099",
@@ -769,7 +769,7 @@
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.67097069
+          "cosine_similarity": 0.6768574
         },
         {
           "identifier": "GO:0009428",
@@ -805,7 +805,7 @@
         {
           "identifier": "cellstructuremech:p_pilus",
           "label": "P pilus",
-          "cosine_similarity": 0.70199157
+          "cosine_similarity": 0.70199156
         },
         {
           "identifier": "cellstructuremech:holdfast",
@@ -836,7 +836,7 @@
         {
           "identifier": "GO:0009422",
           "label": "bacterial-type flagellum hook-filament junction",
-          "cosine_similarity": 0.72858777
+          "cosine_similarity": 0.72858778
         },
         {
           "identifier": "GO:0009421",
@@ -945,27 +945,27 @@
         {
           "identifier": "cellstructuremech:crescentin_filament",
           "label": "crescentin filament",
-          "cosine_similarity": 0.8447333
+          "cosine_similarity": 0.83524265
         },
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.811593
+          "cosine_similarity": 0.79860145
         },
         {
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
-          "cosine_similarity": 0.79311645
-        },
-        {
-          "identifier": "GO:0009288",
-          "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.73161475
+          "cosine_similarity": 0.78689026
         },
         {
           "identifier": "GO:0009421",
           "label": "bacterial-type flagellum filament cap",
-          "cosine_similarity": 0.73053257
+          "cosine_similarity": 0.72376137
+        },
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.72361881
         }
       ]
     },
@@ -1038,7 +1038,7 @@
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.8447333
+          "cosine_similarity": 0.83524265
         },
         {
           "identifier": "cellstructuremech:mreb_filament",
@@ -1072,14 +1072,14 @@
           "cosine_similarity": 0.8502289
         },
         {
-          "identifier": "cellstructuremech:bactofilin_filament",
-          "label": "bactofilin filament",
-          "cosine_similarity": 0.811593
-        },
-        {
           "identifier": "cellstructuremech:crescentin_filament",
           "label": "crescentin filament",
           "cosine_similarity": 0.80379724
+        },
+        {
+          "identifier": "cellstructuremech:bactofilin_filament",
+          "label": "bactofilin filament",
+          "cosine_similarity": 0.79860145
         },
         {
           "identifier": "GO:0009288",
@@ -1270,7 +1270,7 @@
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.6217639
+          "cosine_similarity": 0.62357468
         },
         {
           "identifier": "GO:1990732",
@@ -3192,7 +3192,7 @@
         {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
-          "cosine_similarity": 0.6420073
+          "cosine_similarity": 0.64200731
         },
         {
           "identifier": "GO:0097740",
@@ -3337,7 +3337,7 @@
         {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
-          "cosine_similarity": 0.75191374
+          "cosine_similarity": 0.75191373
         },
         {
           "identifier": "GO:0015627",
@@ -3383,7 +3383,7 @@
         {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
-          "cosine_similarity": 0.82481253
+          "cosine_similarity": 0.82481252
         }
       ]
     },
@@ -3461,12 +3461,12 @@
         {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.82481253
+          "cosine_similarity": 0.82481252
         },
         {
           "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
           "label": "type IX protein secretion system complex",
-          "cosine_similarity": 0.81668044
+          "cosine_similarity": 0.81668043
         },
         {
           "identifier": "GO:0015627",
@@ -3497,7 +3497,7 @@
         {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
-          "cosine_similarity": 0.81668044
+          "cosine_similarity": 0.81668043
         },
         {
           "identifier": "GO:0033104",

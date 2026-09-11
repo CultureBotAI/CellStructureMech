@@ -21,14 +21,21 @@ curation_history:
     DOI evidence, a nonmechanistic BacA/BacB-to-PbpC graph, and a bactofilin grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T10:21:49Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issues #459 and #460 by softening the Caulobacter
+    BacA/BacB synonym from a narrow filament synonym to a related polar-scaffold synonym
+    and removing unsupported BacM gene-symbol scope.'
+  llm_assisted: true
 parent_structures:
 - GO:0005856
 synonyms:
 - synonym_text: bactofilin cytoskeleton
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1038/emboj.2009.358
-- synonym_text: BacA/BacB filament
-  synonym_type: NARROW_SYNONYM
+- synonym_text: Caulobacter BacA/BacB polar bactofilin scaffold
+  synonym_type: RELATED_SYNONYM
   source: DOI:10.1038/emboj.2009.358
 components:
 - component_id: bactofilin_proteins
@@ -38,7 +45,6 @@ components:
   gene_symbols:
   - bacA
   - bacB
-  - bacM
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE for full-length filament-forming
