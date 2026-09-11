@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>autophagosome · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>autophagosome</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005776"><code>GO:0005776</code></a> · MEMBRANE_ORGANELLE · MEMBRANE_BOUNDED_ORGANELLE · <span class="status">PROPOSED</span></p>
+<p class="definition">A double-membrane-bounded compartment that engulfs endogenous cellular material as well as invading microorganisms to target them to the lytic vacuole/lysosome for degradation as part of macroautophagy. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005776"><code>GO:0005776</code></a>]</small></p>
+<p><strong>Synonyms:</strong> autophagic vacuole; initial autophagic vacuole</p><p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0000421"><code>GO:0000421</code></a> <a href="http://purl.obolibrary.org/obo/GO_0034423"><code>GO:0034423</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-autophagosome_membrane"><td>autophagosome membrane</td><td>LIPID</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0000421"><code>GO:0000421</code></a></td><td></td><td></td><td>ESSENTIAL</td><td>Double lipid-bilayer boundary that encloses the autophagosome lumen and separates engulfed cytoplasmic cargo from the cytosol.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000421"><code>GO:0000421</code></a> <small>GO:0000421 defines the autophagosome membrane as the lipid bilayer surrounding an autophagosome.</small></li><li><a href="https://doi.org/10.1038/ncb1007-1102"><code>DOI:10.1038/ncb1007-1102</code></a> <small>Xie and Klionsky 2007 review autophagosome biogenesis and the core membrane-expansion machinery.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> Saccharomyces cerevisiae — <strong>COMMON</strong>: Budding yeast forms autophagosomes during starvation-induced macroautophagy and has been used to define core Atg machinery. [<a href="https://doi.org/10.1083/jcb.119.2.301"><code>DOI:10.1083/jcb.119.2.301</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> <em>Saccharomyces cerevisiae</em> — Genetic and fluorescence-microscopy model for the pre-autophagosomal structure and autophagosome formation. [<a href="https://doi.org/10.1093/emboj/20.21.5971"><code>DOI:10.1093/emboj/20.21.5971</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>macroautophagy</strong> — Autophagosomes engulf cytoplasmic material in a double-membrane vesicle and deliver that cargo to a lytic vacuole for degradation.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016236"><code>GO:0016236</code></a> <small>GO:0016236 defines macroautophagy as the autophagic process that proceeds via autophagosome formation.</small></li><li><a href="https://doi.org/10.1083/jcb.119.2.301"><code>DOI:10.1083/jcb.119.2.301</code></a> <small>Takeshige et al. 1992 demonstrated starvation-induced autophagy in Saccharomyces cerevisiae.</small></li></ul></li><li><strong>autophagosome-vacuole fusion</strong> — In yeast, completed autophagosomes fuse with the fungal-type vacuole to release autophagic bodies into the degradative lumen.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0061909"><code>GO:0061909</code></a> <small>GO:0061909 defines autophagosome-lysosome fusion and describes yeast autophagosome fusion with the vacuole.</small></li><li><a href="https://doi.org/10.1083/jcb.119.2.301"><code>DOI:10.1083/jcb.119.2.301</code></a> <small>Takeshige et al. 1992 used proteinase-deficient yeast mutants to accumulate autophagic bodies in the vacuole.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-yeast_autophagosome_vacuole_delivery">Yeast autophagosomes deliver cytosol to the vacuole <small>(FUNCTION)</small></h3>
+<p>The autophagosome membrane encloses a lumen, the vesicle forms as part of macroautophagy, and yeast autophagosomes fuse with the fungal-type vacuole to deliver cargo for degradation.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>autophagosome membrane</td><td>bounds</td><td>autophagosome lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0034423"><code>GO:0034423</code></a> <small>GO:0034423 defines the autophagosome lumen as the volume enclosed within the autophagosome double-membrane.</small></li></ul></td></tr>
+<tr><td>autophagosome</td><td>forms during</td><td>macroautophagy</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016236"><code>GO:0016236</code></a> <small>GO:0016236 defines macroautophagy as proceeding via autophagosome formation.</small></li></ul></td></tr>
+<tr><td>autophagosome</td><td>fuses with</td><td>fungal-type vacuole</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0061909"><code>GO:0061909</code></a> <small>GO:0061909 covers yeast autophagosome fusion with the vacuole.</small></li><li><a href="https://doi.org/10.1083/jcb.119.2.301"><code>DOI:10.1083/jcb.119.2.301</code></a> <small>Takeshige et al. 1992 demonstrated delivery of autophagic bodies into proteinase-deficient yeast vacuoles.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral identifiers for Atg8 lipidation, Atg12-Atg5-Atg16, Atg9 trafficking and autophagosome-vacuole fusion machinery before adding those proteins or complexes. <small>This first autophagosome record grounds the double membrane and lumen, while leaving Atg protein cohorts out until exact family or complex identifiers can be verified for the taxon-agnostic component table.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005776"><code>GO:0005776</code></a> <small>Gene Ontology cellular-component term for autophagosome.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0000421"><code>GO:0000421</code></a> <small>Gene Ontology cellular-component term for the autophagosome membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0034423"><code>GO:0034423</code></a> <small>Gene Ontology cellular-component term for the autophagosome lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0016236"><code>GO:0016236</code></a> <small>Gene Ontology biological-process term for macroautophagy.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0061909"><code>GO:0061909</code></a> <small>Gene Ontology biological-process term for autophagosome-lysosome fusion.</small></li><li><a href="https://doi.org/10.1083/jcb.119.2.301"><code>DOI:10.1083/jcb.119.2.301</code></a> <small>Takeshige et al. 1992, Autophagy in yeast demonstrated with proteinase-deficient mutants and conditions for its induction, Journal of Cell Biology.</small></li><li><a href="https://doi.org/10.1093/emboj/20.21.5971"><code>DOI:10.1093/emboj/20.21.5971</code></a> <small>Suzuki et al. 2001, The pre-autophagosomal structure organized by concerted functions of APG genes is essential for autophagosome formation, The EMBO Journal.</small></li><li><a href="https://doi.org/10.1038/35044114"><code>DOI:10.1038/35044114</code></a> <small>Ichimura et al. 2000, A ubiquitin-like system mediates protein lipidation, Nature.</small></li><li><a href="https://doi.org/10.1038/ncb1007-1102"><code>DOI:10.1038/ncb1007-1102</code></a> <small>Xie and Klionsky 2007, Autophagosome formation: core machinery and adaptations, Nature Cell Biology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-11T19:34:09Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T19:35:27Z</code> codex · EXPANDED_RECORD — Added autophagosome membrane and lumen parts, GO exact synonymy, a membrane component, Saccharomyces cerevisiae scope, macroautophagy and autophagosome-vacuole fusion functions, a nonmechanistic vacuole-delivery graph, and a grounding TODO for Atg autophagosome machinery.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/autophagosome.yaml"><code>data/structures/membrane_organelle/autophagosome.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
