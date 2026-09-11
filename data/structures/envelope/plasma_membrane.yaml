@@ -2,9 +2,9 @@ identifier: GO:0005886
 label: plasma membrane
 structure_category: ENVELOPE
 structure_kind: MEMBRANE
-definition: The phospholipid-bilayer membrane surrounding a cell that separates the
-  cytoplasm from the external environment and houses proteins for selective transport,
-  signaling, and envelope biogenesis.
+definition: The lipid membrane surrounding a cell that separates the cytoplasm from
+  the external environment and houses proteins for selective transport, signaling,
+  and envelope biogenesis.
 definition_source: GO:0005886
 mapping_status: PROPOSED
 curation_history:
@@ -27,6 +27,13 @@ curation_history:
   changes: Changed the GO:0055085 graph node label from selective transmembrane transport
     to the canonical GO label, transmembrane transport.
   llm_assisted: true
+- timestamp: '2026-09-11T04:28:40Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #409 issues #410 and #411 by replacing bilayer-only plasma
+    membrane wording with archaeal-compatible lipid-boundary wording and adding archaeal
+    and fungal support for taxon-spanning integral membrane protein claims.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cell membrane
   synonym_type: EXACT_SYNONYM
@@ -48,11 +55,11 @@ components:
   component_role: CONSTITUENT
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The plasma membrane is built from a bilayer-forming lipid mixture
-    whose exact chemistry differs among bacteria, archaea, and fungi; no single curated
-    lipid CURIE is equivalent to the structure-spanning class.
-  role: Self-assemble into the hydrophobic bilayer that encloses the cytoplasm and
-    sets the permeability boundary.
+  grounding_notes: The plasma membrane is built from a hydrophobic lipid phase whose
+    exact chemistry and topology differ among bacteria, archaea, and fungi; no single
+    curated lipid CURIE is equivalent to the structure-spanning class.
+  role: Self-assemble into the hydrophobic membrane boundary that encloses the cytoplasm
+    and sets the permeability boundary.
   evidence:
   - reference: DOI:10.1093/femsre/fuv008
     notes: Sohlenkamp and Geiger 2016 review the structural diversity and biosynthesis
@@ -68,12 +75,18 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: A plasma membrane carries many unrelated integral proteins; the
     constituent class is topological rather than a single homologous protein family.
-  role: Provide selective transport, energy transduction, secretion, and envelope-biogenesis
-    activities embedded in the lipid bilayer.
+  role: Provide selective transport, signaling, energy-transduction, secretion, and
+    envelope-biogenesis activities embedded in the plasma-membrane lipid phase.
   evidence:
   - reference: DOI:10.1101/cshperspect.a000414
     notes: Silhavy, Kahne and Walker 2010 describe the bacterial cytoplasmic membrane
       as the site of transporters and envelope assembly systems.
+  - reference: DOI:10.1038/nrmicro2576
+    notes: Albers and Meyer 2011 review archaeal cytoplasmic membranes as protein-bearing
+      envelope membranes built from archaeal ether lipids.
+  - reference: DOI:10.1146/annurev-micro-091313-103507
+    notes: Douglas and Konopka 2014 review fungal plasma-membrane domains that contain
+      transporters and integral membrane proteins.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -113,6 +126,12 @@ functions:
   - reference: DOI:10.1101/cshperspect.a000414
     notes: Silhavy, Kahne and Walker 2010 review transport across the bacterial inner
       membrane as a central envelope activity.
+  - reference: DOI:10.1038/nrmicro2576
+    notes: Albers and Meyer 2011 review the archaeal cell envelope as bounded by a
+      cytoplasmic membrane built from ether lipids.
+  - reference: DOI:10.1146/annurev-micro-091313-103507
+    notes: Douglas and Konopka 2014 review fungal plasma-membrane compartmentation
+      of transporters and other integral membrane proteins.
 - function_id: membrane_embedded_bioenergetics
   label: membrane-embedded bioenergetics
   description: In bacteria and archaea, respiratory and ATP-synthase complexes in
@@ -138,16 +157,16 @@ evidence:
   notes: 'Douglas LM and Konopka JB 2014, ''Fungal membrane organization: the eisosome
     concept'', Annual Review of Microbiology.'
 causal_graphs:
-- graph_id: lipid_bilayer_membrane_boundary
+- graph_id: lipid_membrane_boundary
   title: Membrane lipids and proteins form a selective cell boundary
-  description: Amphipathic lipids assemble into the plasma-membrane bilayer. Integral
-    membrane proteins embedded in that bilayer provide the selective transport and
-    energy-linked activities that make the boundary functional.
+  description: Amphipathic lipids assemble into a plasma-membrane permeability boundary.
+    Integral membrane proteins embedded in that boundary provide the selective transport
+    and energy-linked activities that make the membrane functional.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
-  scope_notes: This graph captures the class-level bilayer and integral protein organization
-    shared by microbial plasma membranes without choosing one bacterial, archaeal,
-    or fungal lipid biosynthesis pathway.
+  scope_notes: This graph captures the class-level lipid-boundary and integral-protein
+    organization shared by microbial plasma membranes without choosing a bacterial,
+    archaeal, or fungal lipid topology or biosynthesis pathway.
   nodes:
   - node_id: membrane_lipids
     label: plasma-membrane lipids
@@ -173,20 +192,23 @@ causal_graphs:
   - subject: membrane_lipids
     predicate: self-assemble into
     object: plasma_membrane
-    description: Amphipathic membrane lipids form the bilayer basis of the plasma
-      membrane.
+    description: Amphipathic membrane lipids form the hydrophobic lipid matrix of
+      the plasma membrane.
     evidence:
     - reference: GO:0005886
-      notes: The GO plasma membrane definition describes a phospholipid bilayer surrounding
-        the cell.
+      notes: GO:0005886 defines the plasma membrane as the membrane surrounding a
+        cell.
     - reference: DOI:10.1093/femsre/fuv008
       notes: Sohlenkamp and Geiger 2016 review the lipid classes that build bacterial
         membranes.
+    - reference: DOI:10.1038/nrmicro2576
+      notes: Albers and Meyer 2011 review archaeal cytoplasmic membranes built from
+        ether lipids.
   - subject: plasma_membrane
     predicate: encloses
     object: cytoplasm
-    description: The bilayer surrounds the cytoplasm and separates it from the external
-      environment.
+    description: The plasma membrane surrounds the cytoplasm and separates it from
+      the external environment.
     evidence:
     - reference: GO:0005886
       notes: GO:0005886 defines the plasma membrane as the membrane surrounding a
@@ -194,12 +216,18 @@ causal_graphs:
   - subject: integral_plasma_membrane_proteins
     predicate: embed in
     object: plasma_membrane
-    description: Integral proteins occupy the bilayer to create transport, secretion,
-      and bioenergetic complexes.
+    description: Integral proteins occupy the membrane to provide transport, signaling,
+      secretion, envelope-biogenesis, and bioenergetic activities.
     evidence:
     - reference: DOI:10.1101/cshperspect.a000414
       notes: Silhavy, Kahne and Walker 2010 review the bacterial cytoplasmic membrane
         as a protein-rich transport and biogenesis platform.
+    - reference: DOI:10.1038/nrmicro2576
+      notes: Albers and Meyer 2011 review protein complexes in the archaeal cytoplasmic
+        membrane and cell envelope.
+    - reference: DOI:10.1146/annurev-micro-091313-103507
+      notes: Douglas and Konopka 2014 review fungal plasma-membrane domains organized
+        around transporters and other integral membrane proteins.
   - subject: integral_plasma_membrane_proteins
     predicate: mediate
     object: selective_transport
@@ -209,6 +237,9 @@ causal_graphs:
     - reference: DOI:10.1101/cshperspect.a000414
       notes: Silhavy, Kahne and Walker 2010 place protein transport and envelope precursor
         movement across the bacterial cytoplasmic membrane.
+    - reference: DOI:10.1146/annurev-micro-091313-103507
+      notes: Douglas and Konopka 2014 review fungal plasma-membrane transporters as
+        residents of organized membrane compartments.
 discussions:
 - discussion_id: cytoplasmic_membrane_name
   prompt: Use the GO label plasma membrane while preserving cytoplasmic membrane as
@@ -227,6 +258,28 @@ discussions:
   - reference: DOI:10.1101/cshperspect.a000414
     notes: Silhavy, Kahne and Walker 2010 use cytoplasmic membrane and inner membrane
       terminology for the bacterial envelope membrane.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
+- discussion_id: archaeal_lipid_topology
+  prompt: Avoid bilayer-only wording for the taxon-spanning plasma membrane record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - definition
+  - components#membrane_lipids
+  - causal_graphs#lipid_membrane_boundary
+  rationale: Bacterial and fungal plasma membranes are bilayers built largely from
+    ester-linked lipids, whereas archaeal cytoplasmic membranes use ether lipids and
+    can be diether bilayers or tetraether monolayers. This broad record therefore
+    uses lipid-boundary wording and leaves exact lipid topology to lineage-specific
+    records.
+  evidence:
+  - reference: DOI:10.1093/femsre/fuv008
+    notes: Sohlenkamp and Geiger 2016 review bacterial membrane lipid diversity.
+  - reference: DOI:10.1038/nrmicro2576
+    notes: Albers and Meyer 2011 review archaeal ether-lipid cytoplasmic membranes
+      as cell-envelope constituents.
   posed_by: codex
   posed_date: '2026-09-11'
   resolved_date: '2026-09-11'

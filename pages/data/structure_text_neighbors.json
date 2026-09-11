@@ -746,9 +746,9 @@
           "cosine_similarity": 0.7042533
         },
         {
-          "identifier": "GO:0009274",
-          "label": "peptidoglycan-based cell wall",
-          "cosine_similarity": 0.69160028
+          "identifier": "GO:0005886",
+          "label": "plasma membrane",
+          "cosine_similarity": 0.69611087
         }
       ]
     },
@@ -1120,7 +1120,7 @@
         {
           "identifier": "GO:0031470",
           "label": "carboxysome",
-          "cosine_similarity": 0.61795088
+          "cosine_similarity": 0.61795089
         }
       ]
     },
@@ -1182,7 +1182,7 @@
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.69331649
+          "cosine_similarity": 0.70145497
         }
       ]
     },
@@ -1193,7 +1193,7 @@
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.88389741
+          "cosine_similarity": 0.88189756
         },
         {
           "identifier": "GO:0009276",
@@ -1244,7 +1244,7 @@
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.72637716
+          "cosine_similarity": 0.73220448
         }
       ]
     },
@@ -1286,27 +1286,27 @@
         {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
-          "cosine_similarity": 0.88389741
-        },
-        {
-          "identifier": "GO:0005777",
-          "label": "peroxisome",
-          "cosine_similarity": 0.75422697
+          "cosine_similarity": 0.88189756
         },
         {
           "identifier": "GO:0020022",
           "label": "acidocalcisome",
-          "cosine_similarity": 0.75234622
+          "cosine_similarity": 0.75036541
+        },
+        {
+          "identifier": "GO:0005777",
+          "label": "peroxisome",
+          "cosine_similarity": 0.74865197
         },
         {
           "identifier": "GO:0070258",
           "label": "inner membrane pellicle complex",
-          "cosine_similarity": 0.7482946
+          "cosine_similarity": 0.74311177
         },
         {
           "identifier": "GO:0044227",
           "label": "methane-oxidizing organelle",
-          "cosine_similarity": 0.74154614
+          "cosine_similarity": 0.73929917
         }
       ]
     },
@@ -1470,14 +1470,14 @@
       "label": "lipid droplet",
       "neighbors": [
         {
+          "identifier": "GO:0005886",
+          "label": "plasma membrane",
+          "cosine_similarity": 0.63579342
+        },
+        {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
           "cosine_similarity": 0.63272594
-        },
-        {
-          "identifier": "GO:0005886",
-          "label": "plasma membrane",
-          "cosine_similarity": 0.62805434
         },
         {
           "identifier": "GO:0005777",
@@ -1565,7 +1565,7 @@
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.75234622
+          "cosine_similarity": 0.75036541
         },
         {
           "identifier": "GO:0000331",
@@ -1642,7 +1642,7 @@
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.72239778
+          "cosine_similarity": 0.7248215
         },
         {
           "identifier": "GO:0140266",
@@ -1687,11 +1687,6 @@
       "label": "chlorosome",
       "neighbors": [
         {
-          "identifier": "GO:0005886",
-          "label": "plasma membrane",
-          "cosine_similarity": 0.71516957
-        },
-        {
           "identifier": "GO:0042651",
           "label": "thylakoid membrane",
           "cosine_similarity": 0.7129847
@@ -1700,6 +1695,11 @@
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
           "cosine_similarity": 0.71154219
+        },
+        {
+          "identifier": "GO:0005886",
+          "label": "plasma membrane",
+          "cosine_similarity": 0.70929715
         },
         {
           "identifier": "GO:0042566",
@@ -1728,6 +1728,11 @@
           "cosine_similarity": 0.73954813
         },
         {
+          "identifier": "GO:0005886",
+          "label": "plasma membrane",
+          "cosine_similarity": 0.72332864
+        },
+        {
           "identifier": "GO:0020022",
           "label": "acidocalcisome",
           "cosine_similarity": 0.72227137
@@ -1736,11 +1741,6 @@
           "identifier": "GO:0070258",
           "label": "inner membrane pellicle complex",
           "cosine_similarity": 0.71981432
-        },
-        {
-          "identifier": "GO:0005886",
-          "label": "plasma membrane",
-          "cosine_similarity": 0.719303
         }
       ]
     },
@@ -1909,14 +1909,14 @@
           "cosine_similarity": 0.79330165
         },
         {
-          "identifier": "GO:0005886",
-          "label": "plasma membrane",
-          "cosine_similarity": 0.7482946
-        },
-        {
           "identifier": "GO:0055039",
           "label": "trichocyst",
           "cosine_similarity": 0.74367555
+        },
+        {
+          "identifier": "GO:0005886",
+          "label": "plasma membrane",
+          "cosine_similarity": 0.74311177
         },
         {
           "identifier": "GO:0020026",
@@ -1973,7 +1973,7 @@
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.74154614
+          "cosine_similarity": 0.73929917
         },
         {
           "identifier": "GO:0042566",
@@ -2059,14 +2059,14 @@
       "label": "peroxisome",
       "neighbors": [
         {
-          "identifier": "GO:0005886",
-          "label": "plasma membrane",
-          "cosine_similarity": 0.75422697
-        },
-        {
           "identifier": "GO:0020015",
           "label": "glycosome",
           "cosine_similarity": 0.74996756
+        },
+        {
+          "identifier": "GO:0005886",
+          "label": "plasma membrane",
+          "cosine_similarity": 0.74865197
         },
         {
           "identifier": "GO:0042566",
@@ -2097,7 +2097,7 @@
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.70480224
+          "cosine_similarity": 0.70021878
         },
         {
           "identifier": "GO:0070258",
@@ -2188,14 +2188,14 @@
           "cosine_similarity": 0.71853329
         },
         {
-          "identifier": "GO:0005886",
-          "label": "plasma membrane",
-          "cosine_similarity": 0.71376502
-        },
-        {
           "identifier": "GO:0046858",
           "label": "chlorosome",
           "cosine_similarity": 0.7129847
+        },
+        {
+          "identifier": "GO:0005886",
+          "label": "plasma membrane",
+          "cosine_similarity": 0.70999311
         },
         {
           "identifier": "GO:0030089",
@@ -2257,7 +2257,7 @@
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.71778789
+          "cosine_similarity": 0.71883145
         },
         {
           "identifier": "GO:0020026",
@@ -2872,7 +2872,7 @@
         {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
-          "cosine_similarity": 0.75191374
+          "cosine_similarity": 0.75191373
         },
         {
           "identifier": "GO:0015627",
@@ -2949,7 +2949,7 @@
         {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
-          "cosine_similarity": 0.80307728
+          "cosine_similarity": 0.80307727
         }
       ]
     },
@@ -2980,7 +2980,7 @@
         {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
-          "cosine_similarity": 0.77147718
+          "cosine_similarity": 0.77147717
         }
       ]
     },
@@ -3006,12 +3006,12 @@
         {
           "identifier": "GO:0015627",
           "label": "type II protein secretion system complex",
-          "cosine_similarity": 0.80307728
+          "cosine_similarity": 0.80307727
         },
         {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.77147718
+          "cosine_similarity": 0.77147717
         }
       ]
     },
@@ -3097,14 +3097,14 @@
           "cosine_similarity": 0.70259725
         },
         {
-          "identifier": "GO:0005886",
-          "label": "plasma membrane",
-          "cosine_similarity": 0.70153384
-        },
-        {
           "identifier": "GO:0033172",
           "label": "gas vesicle shell",
           "cosine_similarity": 0.69243656
+        },
+        {
+          "identifier": "GO:0005886",
+          "label": "plasma membrane",
+          "cosine_similarity": 0.69007677
         }
       ]
     },
