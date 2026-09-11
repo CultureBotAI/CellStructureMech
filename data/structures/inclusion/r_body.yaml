@@ -1,0 +1,187 @@
+identifier: cellstructuremech:r_body
+label: R-body
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: A bacterial proteinaceous inclusion body assembled from Reb proteins that
+  forms a coiled ribbon and can extend into a hollow tube.
+definition_source: DOI:10.1021/acssynbio.5b00237
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T13:22:31Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T13:23:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added inclusion-body parentage, R-body synonyms, Reb protein component
+    curation, Azorhizobium and Pseudomonas scope, pH-triggered extension function,
+    DOI evidence, a nonmechanistic Reb extension graph, and a Reb grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T13:23:54Z'
+  curator: codex
+  action: NORMALIZED_GRAPH
+  changes: Changed the low-pH extension trigger node from CHEMICAL to ENVIRONMENTAL_FACTOR.
+  llm_assisted: true
+parent_structures:
+- GO:0016234
+synonyms:
+- synonym_text: R body
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1021/acssynbio.5b00237
+- synonym_text: refractile body
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/mbio.00715-17
+- synonym_text: R-body inclusion
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mbio.00715-17
+components:
+- component_id: reb_proteins
+  label: R-body Reb proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: R-body-producing loci encode divergent Reb proteins; no exact source-neutral
+    CURIE for the structural protein cohort was verified in this pass.
+  role: Protein constituents that assemble into coiled R-body ribbons.
+  evidence:
+  - reference: DOI:10.1128/jb.176.12.3559-3567.1994
+    notes: Heruth et al. 1994 genetically characterized R-body synthesis and assembly
+      determinants in Caedibacter taeniospiralis strains 47 and 116.
+  - reference: DOI:10.1128/mbio.00715-17
+    notes: Matsuoka et al. 2017 demonstrated Reb-dependent R-body production in Azorhizobium
+      caulinodans.
+  - reference: DOI:10.1038/s41467-021-24796-0
+    notes: Wang et al. 2021 showed that Pseudomonas aeruginosa PA14 produces extendable
+      Reb-based R-bodies.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:438753
+  taxon_label: Azorhizobium caulinodans ORS 571
+  presence: COMMON
+  note: Azorhizobium caulinodans ORS571 carries a regulated reb operon and produces
+    R-body inclusions under inducing conditions.
+  reference: DOI:10.1128/mbio.00715-17
+- taxon_id: NCBITaxon:208963
+  taxon_label: Pseudomonas aeruginosa UCBPP-PA14
+  presence: COMMON
+  note: Pseudomonas aeruginosa PA14 carries an R-body cassette that produces extendable
+    R-bodies.
+  reference: DOI:10.1038/s41467-021-24796-0
+canonical_examples:
+- taxon_id: NCBITaxon:438753
+  taxon_label: Azorhizobium caulinodans ORS 571
+  note: Legume microsymbiont used to connect chromosomal reb-operon regulation with
+    R-body production.
+  reference: DOI:10.1128/mbio.00715-17
+- taxon_id: NCBITaxon:208963
+  taxon_label: Pseudomonas aeruginosa UCBPP-PA14
+  note: Opportunistic pathogen strain used to show that a native Pseudomonas Reb cassette
+    produces extendable R-bodies.
+  reference: DOI:10.1038/s41467-021-24796-0
+functions:
+- function_id: ph_triggered_r_body_extension
+  label: pH-triggered R-body extension
+  description: Coiled R-body ribbons can rapidly extend into hollow tubes when acidification
+    triggers the conformational transition.
+  evidence:
+  - reference: DOI:10.1021/acssynbio.5b00237
+    notes: Polka and Silver 2016 engineered and imaged type 51 R-bodies that extend
+      from coiled ribbons into tubes after acidification.
+  - reference: DOI:10.1038/s41467-021-24796-0
+    notes: Wang et al. 2021 characterized pH-responsive extension of native Pseudomonas
+      PA14 R-bodies.
+evidence:
+- reference: DOI:10.1128/jb.176.12.3559-3567.1994
+  notes: Heruth et al. 1994, 'Characterization of genetic determinants for R body
+    synthesis and assembly in Caedibacter taeniospiralis 47 and 116', Journal of Bacteriology.
+- reference: DOI:10.1534/g3.112.005231
+  notes: Raymann et al. 2013, 'A Genomic Survey of Reb Homologs Suggests Widespread
+    Occurrence of R-Bodies in Proteobacteria', G3.
+- reference: DOI:10.1021/acssynbio.5b00237
+  notes: Polka and Silver 2016, 'A Tunable Protein Piston That Breaks Membranes to
+    Release Encapsulated Cargo', ACS Synthetic Biology.
+- reference: DOI:10.1128/mbio.00715-17
+  notes: Matsuoka et al. 2017, 'Stringent Expression Control of Pathogenic R-body
+    Production in Legume Symbiont Azorhizobium caulinodans', mBio.
+- reference: DOI:10.1038/s41467-021-24796-0
+  notes: Wang et al. 2021, 'Pseudomonas aeruginosa PA14 produces R-bodies, extendable
+    sheaths formed from polymorphic proteins', Nature Communications.
+causal_graphs:
+- graph_id: reb_r_body_extension
+  title: Reb proteins build extendable R-body ribbons
+  description: Reb proteins assemble into a coiled R-body ribbon; low pH triggers
+    extension of the coil into a hollow tube.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records Reb-dependent R-body assembly and pH-triggered extension
+    without modeling all assembly chaperones, regulators, toxins or host-cell targets.
+  nodes:
+  - node_id: reb_proteins
+    label: R-body Reb proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: reb_proteins
+  - node_id: coiled_r_body
+    label: coiled R-body
+    node_type: STRUCTURE
+    grounding: cellstructuremech:r_body
+  - node_id: acid_trigger
+    label: acidification trigger
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: extended_r_body_tube
+    label: extended R-body tube
+    node_type: STRUCTURE
+    grounding: cellstructuremech:r_body
+  edges:
+  - subject: reb_proteins
+    predicate: assemble into
+    object: coiled_r_body
+    description: R-body structural proteins assemble into coiled proteinaceous ribbons.
+    evidence:
+    - reference: DOI:10.1128/mbio.00715-17
+      notes: Matsuoka et al. 2017 expressed the Azorhizobium caulinodans reb operon
+        and observed R-body production.
+    - reference: DOI:10.1038/s41467-021-24796-0
+      notes: Wang et al. 2021 connected the Pseudomonas PA14 R-body cassette with
+        native R-body production.
+  - subject: acid_trigger
+    predicate: triggers extension of
+    object: coiled_r_body
+    description: Acidic pH triggers extension of the coiled R-body.
+    evidence:
+    - reference: DOI:10.1021/acssynbio.5b00237
+      notes: Polka and Silver 2016 engineered R-bodies whose extension pH could be
+        tuned.
+    - reference: DOI:10.1038/s41467-021-24796-0
+      notes: Wang et al. 2021 characterized pH-sensitive extension of Pseudomonas
+        PA14 R-bodies.
+  - subject: coiled_r_body
+    predicate: extends into
+    object: extended_r_body_tube
+    description: The R-body coil unrolls into an elongated hollow tube.
+    evidence:
+    - reference: DOI:10.1021/acssynbio.5b00237
+      notes: Polka and Silver 2016 imaged type 51 R-bodies extending from a coil into
+        a tube.
+discussions:
+- discussion_id: resolve_r_body_reb_grounding
+  prompt: Resolve exact source-neutral groundings and component boundaries for structural
+    and assembly-associated R-body Reb proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#reb_proteins
+  rationale: The first R-body record keeps Reb proteins as a broad label-only cohort
+    because Reb loci vary among Caedibacter, Azorhizobium and Pseudomonas systems,
+    and this pass did not verify an exact protein-family CURIE for the structural
+    ribbon constituents.
+  evidence:
+  - reference: DOI:10.1534/g3.112.005231
+    notes: Raymann et al. 2013 surveyed divergent Reb homologs in proteobacterial
+      genomes.
+  - reference: DOI:10.1038/s41467-021-24796-0
+    notes: Wang et al. 2021 compared polymorphic Reb proteins in the Pseudomonas PA14
+      R-body cassette.
+  posed_by: codex
+  posed_date: '2026-09-11'

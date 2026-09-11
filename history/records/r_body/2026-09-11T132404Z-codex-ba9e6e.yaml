@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/r_body.yaml
+  slug: r_body
+session:
+  id: 2026-09-11T132404Z-codex-ba9e6e
+  timestamp: '2026-09-11T13:24:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added an R-body record
+  details: Created data/structures/inclusion/r_body.yaml for the locally minted cellstructuremech:r_body
+    identifier, including GO:0016234 inclusion-body parentage, R-body synonyms, a label-only
+    Reb protein component, Azorhizobium caulinodans ORS 571 and Pseudomonas aeruginosa UCBPP-PA14
+    examples with native production evidence, pH-triggered extension function, DOI evidence,
+    a nonmechanistic Reb extension graph, and a CURATION_TODO for exact Reb family grounding.
