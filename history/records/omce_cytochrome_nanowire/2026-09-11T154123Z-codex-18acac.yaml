@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/omce_cytochrome_nanowire.yaml
+  slug: omce_cytochrome_nanowire
+session:
+  id: 2026-09-11T154123Z-codex-18acac
+  timestamp: '2026-09-11T15:41:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/510
+  - https://github.com/CultureBotAI/CellStructureMech/issues/511
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/509
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added an OmcE cytochrome nanowire record
+  details: Created data/structures/appendage/omce_cytochrome_nanowire.yaml as a proposed APPENDAGE
+    record for the extracellular OmcE cytochrome nanowire. The record mints cellstructuremech:omce_cytochrome_nanowire
+    after an ignored-file duplicate search found no existing OmcE record and GO did not provide
+    an exact cellular-component term. It cites Wang et al. 2022 and PDB:7TFS for the helical
+    OmcE filament, leaves the OmcE component label-only with an open TODO for exact source-neutral
+    family grounding, restricts taxon rows to Geobacter sulfurreducens PCA source evidence,
+    and records the heme-packing electron-transfer path as a candidate structural mechanism.
+    PR review issues 510 and 511 narrowed PDB-backed PCA provenance wording and caveated compact
+    OmcE conduction labels before merge.
