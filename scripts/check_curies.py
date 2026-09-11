@@ -33,6 +33,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import re
 import sys
 import time
@@ -52,6 +53,7 @@ CACHE_PATH = REPO_ROOT / "build" / "curie_cache.json"
 UA = {"User-Agent": "CellStructureMech/0.1 (mailto:noreply@anthropic.com; "
                     "https://github.com/CultureBotAI/CellStructureMech)"}
 CURIE = re.compile(r"^[A-Za-z][A-Za-z0-9._-]*:\S+$")
+HTTP_TIMEOUT_SECONDS = float(os.environ.get("CELLSTRUCTUREMECH_CURIE_TIMEOUT", "30"))
 
 # Prefixes we can resolve, and where. Anything else is SKIPPED with a reason.
 OLS_ONTOLOGY = {"GO": "go", "CHEBI": "chebi", "SO": "so", "RO": "ro", "BFO": "bfo",
@@ -68,8 +70,9 @@ NO_RESOLVER = {
 }
 
 
-def _get(url: str, timeout: float = 30.0) -> tuple[int, bytes]:
+def _get(url: str, timeout: float | None = None) -> tuple[int, bytes]:
     try:
+        timeout = HTTP_TIMEOUT_SECONDS if timeout is None else timeout
         with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r:
             return r.status, r.read()
     except urllib.error.HTTPError as e:
@@ -298,7 +301,7 @@ def resolve_obo_purl(curies: list[str]) -> dict[str, tuple[str, str]]:
         url = f"http://purl.obolibrary.org/obo/{prefix}_{local}"
         try:
             request = urllib.request.Request(url, headers=UA, method="HEAD")
-            with urllib.request.urlopen(request, timeout=30) as response:
+            with urllib.request.urlopen(request, timeout=HTTP_TIMEOUT_SECONDS) as response:
                 out[curie] = ("OK", response.geturl()[:90]) if response.status == 200 \
                     else ("UNREACHABLE", f"PURL returned {response.status}")
         except urllib.error.HTTPError as exc:
@@ -353,7 +356,8 @@ CONTROLS: dict[str, tuple[str, str]] = {
 DATACITE_CONTROL = "DOI:10.22002/D1.1355"
 
 
-SELF_TEST_RETRIES = 3
+SELF_TEST_HTTP_TIMEOUT_SECONDS = float(os.environ.get("CELLSTRUCTUREMECH_CURIE_SELF_TEST_TIMEOUT", "5"))
+SELF_TEST_RETRIES = int(os.environ.get("CELLSTRUCTUREMECH_CURIE_SELF_TEST_RETRIES", "1"))
 
 
 def _control_verdicts(resolver, good: str, bad: str) -> dict:
@@ -362,15 +366,22 @@ def _control_verdicts(resolver, good: str, bad: str) -> dict:
     An unreachable host is not an answer, and retrying is how a blip is told
     apart from an outage (#173).
     """
-    verdicts = {}
-    for attempt in range(SELF_TEST_RETRIES):
-        verdicts = resolver([good, bad])
-        states = {verdicts.get(good, ("MISSING",))[0], verdicts.get(bad, ("MISSING",))[0]}
-        if "UNREACHABLE" not in states:
-            return verdicts
-        if attempt < SELF_TEST_RETRIES - 1:
-            time.sleep(2.0 * (attempt + 1))
-    return verdicts
+    global HTTP_TIMEOUT_SECONDS
+
+    old_timeout = HTTP_TIMEOUT_SECONDS
+    HTTP_TIMEOUT_SECONDS = SELF_TEST_HTTP_TIMEOUT_SECONDS
+    try:
+        verdicts = {}
+        for attempt in range(SELF_TEST_RETRIES):
+            verdicts = resolver([good, bad])
+            states = {verdicts.get(good, ("MISSING",))[0], verdicts.get(bad, ("MISSING",))[0]}
+            if "UNREACHABLE" not in states:
+                return verdicts
+            if attempt < SELF_TEST_RETRIES - 1:
+                time.sleep(2.0 * (attempt + 1))
+        return verdicts
+    finally:
+        HTTP_TIMEOUT_SECONDS = old_timeout
 
 
 def self_test() -> tuple[list[str], list[str]]:

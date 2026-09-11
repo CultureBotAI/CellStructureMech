@@ -1,0 +1,234 @@
+identifier: GO:0044612
+label: nuclear pore linkers
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A eukaryotic nuclear pore substructure made of linker nucleoporins that
+  connect central transport-channel FG nucleoporins with core nuclear-pore scaffold
+  modules.
+definition_source: GO:0044612
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T07:30:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T07:32:10Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added linker-Nup synonymy, nuclear-pore parthood, three linker nucleoporin
+    component classes, fungal taxonomic scope, a Saccharomyces cerevisiae example,
+    module-linking function, DOI/GO evidence, a conservative linker assembly graph,
+    and a linker-Nup grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T07:40:58Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #437 and #438 by narrowing the fungal taxonomic row to sampled
+    ascomycete linker-Nup evidence, scoping Nup145N to the N-terminal linker cleavage
+    product, and adding a resolved boundary discussion that separates Nup145N from
+    outer-ring Nup145C.'
+  llm_assisted: true
+synonyms:
+- synonym_text: linker Nups
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nsmb.3084
+part_of:
+- GO:0005643
+components:
+- component_id: nic96_nup93_family
+  label: Nic96/Nup93-family linker nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NIC96
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This first nuclear-pore-linker record curates conserved linker
+    nucleoporins by source-level labels and leaves exact InterPro or Pfam groundings
+    for a later family-by-family pass.
+  role: Linker nucleoporin family represented in fungal nuclear-pore subcomplexes
+    that connect scaffold rings with FG-channel and outer-ring modules.
+  evidence:
+  - reference: DOI:10.1038/nsmb.3084
+    notes: Fischer et al. 2015 studied linker Nups that connect inner-ring, outer-ring,
+      and transport-channel NPC modules.
+  - reference: DOI:10.1126/science.abm9798
+    notes: Petrovic et al. 2022 resolved a nuclear-pore linker-scaffold architecture
+      at higher resolution.
+- component_id: nup53_nup59_family
+  label: Nup53/Nup59-family linker nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP53
+  - NUP59
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This first nuclear-pore-linker record curates conserved linker
+    nucleoporins by source-level labels and leaves exact InterPro or Pfam groundings
+    for a later family-by-family pass.
+  role: Linker nucleoporin family represented in fungal nuclear-pore subcomplexes
+    that connect scaffold rings with FG-channel and outer-ring modules.
+  evidence:
+  - reference: DOI:10.1038/nsmb.3084
+    notes: Fischer et al. 2015 studied linker Nups that connect inner-ring, outer-ring,
+      and transport-channel NPC modules.
+  - reference: DOI:10.1126/science.abm9798
+    notes: Petrovic et al. 2022 resolved a nuclear-pore linker-scaffold architecture
+      at higher resolution.
+- component_id: nup145n_nup98_family
+  label: Nup145N/Nup98-family linker nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP145
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This first nuclear-pore-linker record curates the Nup145N linker
+    product, not the full Saccharomyces Nup145 precursor or the outer-ring Nup145C
+    product, and leaves an exact source-neutral family grounding for a later pass.
+  role: N-terminal Nup145/Nup98 cleavage-product family that acts as a linker nucleoporin
+    in fungal nuclear-pore subcomplexes.
+  evidence:
+  - reference: DOI:10.1038/nsmb.3084
+    notes: Fischer et al. 2015 studied linker Nups that connect inner-ring, outer-ring,
+      and transport-channel NPC modules.
+  - reference: DOI:10.1126/science.abm9798
+    notes: Petrovic et al. 2022 resolved a nuclear-pore linker-scaffold architecture
+      at higher resolution.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4890
+  taxon_label: Ascomycota
+  presence: VARIABLE
+  note: Linker-Nup interactions have been characterized in budding yeast and a thermophilic
+    ascomycete, establishing this module in sampled ascomycete nuclear pores without
+    proving uniform phylum-wide composition.
+  reference: DOI:10.1038/nsmb.3084
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which linker densities were placed between inner-ring
+    and outer-ring scaffold modules in multiscale NPC structures.
+  reference: DOI:10.1016/j.molcel.2023.08.025
+functions:
+- function_id: nuclear_pore_module_linking
+  label: nuclear-pore module linking
+  description: Nuclear pore linkers bridge central FG-channel, inner-ring, and outer-ring
+    scaffold modules.
+  evidence:
+  - reference: DOI:10.1038/nsmb.3084
+    notes: Fischer et al. 2015 studied how linker Nups connect the inner ring with
+      the outer ring and transport channel.
+  - reference: DOI:10.1126/science.abm9798
+    notes: Petrovic et al. 2022 determined the architecture of the NPC linker scaffold.
+evidence:
+- reference: GO:0044612
+  notes: Gene Ontology cellular-component term for nuclear pore linkers.
+- reference: GO:0005643
+  notes: Gene Ontology cellular-component term for the nuclear pore.
+- reference: DOI:10.1016/j.cell.2011.06.039
+  notes: Amlacher et al. 2011, 'Insight into Structure and Assembly of the Nuclear
+    Pore Complex by Utilizing the Genome of a Eukaryotic Thermophile', Cell.
+- reference: DOI:10.1038/nsmb.3084
+  notes: Fischer et al. 2015, 'Linker Nups connect the nuclear pore complex inner
+    ring with the outer ring and transport channel', Nature Structural and Molecular
+    Biology.
+- reference: DOI:10.1126/science.abm9798
+  notes: Petrovic et al. 2022, 'Architecture of the linker-scaffold in the nuclear
+    pore', Science.
+- reference: DOI:10.1016/j.molcel.2023.08.025
+  notes: Akey et al. 2023, 'Implications of a multiscale structure of the yeast nuclear
+    pore complex', Molecular Cell.
+causal_graphs:
+- graph_id: linker_nup_module_scaffold
+  title: Linker Nups bridge NPC scaffold modules
+  description: Conserved linker nucleoporin families contribute to subcomplexes that
+    connect inner-ring, outer-ring, and central-channel modules of the nuclear pore.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records linker-Nup membership without asserting every pairwise
+    contact, paralog-specific fungal copy, or metazoan stoichiometry.
+  nodes:
+  - node_id: nic96_nup93_family
+    label: Nic96/Nup93-family linker nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nic96_nup93_family
+  - node_id: nup53_nup59_family
+    label: Nup53/Nup59-family linker nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup53_nup59_family
+  - node_id: nup145n_nup98_family
+    label: Nup145N/Nup98-family linker nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup145n_nup98_family
+  - node_id: nuclear_pore_linkers
+    label: nuclear pore linkers
+    node_type: STRUCTURE
+    grounding: GO:0044612
+  edges:
+  - subject: nic96_nup93_family
+    predicate: contributes to
+    object: nuclear_pore_linkers
+    description: Nic96/Nup93-family linker nucleoporin is represented in the linker-Nup
+      set that connects structural modules in the fungal nuclear pore.
+    evidence:
+    - reference: DOI:10.1038/nsmb.3084
+      notes: Fischer et al. 2015 mapped linker nucleoporins between the NPC inner
+        ring, outer ring, and transport channel.
+  - subject: nup53_nup59_family
+    predicate: contributes to
+    object: nuclear_pore_linkers
+    description: Nup53/Nup59-family linker nucleoporin is represented in the linker-Nup
+      set that connects structural modules in the fungal nuclear pore.
+    evidence:
+    - reference: DOI:10.1038/nsmb.3084
+      notes: Fischer et al. 2015 mapped linker nucleoporins between the NPC inner
+        ring, outer ring, and transport channel.
+  - subject: nup145n_nup98_family
+    predicate: contributes to
+    object: nuclear_pore_linkers
+    description: Nup145N/Nup98-family linker nucleoporin is represented in the linker-Nup
+      set that connects structural modules in the fungal nuclear pore.
+    evidence:
+    - reference: DOI:10.1038/nsmb.3084
+      notes: Fischer et al. 2015 mapped linker nucleoporins between the NPC inner
+        ring, outer ring, and transport channel.
+discussions:
+- discussion_id: resolve_linker_nup_family_groundings
+  prompt: Resolve exact source-neutral family groundings for Nic96/Nup93, Nup53/Nup59,
+    and Nup145N/Nup98 linker nucleoporins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#nic96_nup93_family
+  - components#nup53_nup59_family
+  - components#nup145n_nup98_family
+  rationale: This record deliberately avoids guessing one exact InterPro, Pfam, or
+    NCBIfam accession for linker classes whose names, paralog boundaries, and FG-repeat
+    regions differ between budding yeast, other fungi, and metazoans.
+  evidence:
+  - reference: DOI:10.1038/nsmb.3084
+    notes: Fischer et al. 2015 compare fungal linker Nups and their interactions across
+      NPC modules.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: nup145n_not_nup145c
+  prompt: Keep the Nup145N/Nup98 linker class distinct from the Nup145C/Nup96 outer-ring
+    product.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#nup145n_nup98_family
+  rationale: The Saccharomyces NUP145 gene encodes a precursor that produces both
+    Nup145N and Nup145C. This record models only the N-terminal linker Nup; the C-terminal
+    product belongs to the Nup84/Y-complex outer ring.
+  evidence:
+  - reference: DOI:10.1038/nsmb.3084
+    notes: Fischer et al. 2015 studied Nup145N as a linker Nup between NPC modules.
+  - reference: DOI:10.1093/emboj/21.3.387
+    notes: Lutzmann et al. 2002 reconstituted Nup145C with the Saccharomyces Nup84
+      outer-ring complex.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'

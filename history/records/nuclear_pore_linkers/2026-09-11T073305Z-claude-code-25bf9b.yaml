@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_pore_linkers.yaml
+  slug: nuclear_pore_linkers
+session:
+  id: 2026-09-11T073305Z-claude-code-25bf9b
+  timestamp: '2026-09-11T07:33:05Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added a nuclear pore linkers record
+  details: Created a GO:0044612 nuclear pore linkers record with nuclear-pore parthood, Nic96/Nup93,
+    Nup53/Nup59, and Nup145N/Nup98 component classes, fungal taxonomic scope, a Saccharomyces
+    cerevisiae canonical example, DOI-backed module-linking function and assembly evidence,
+    a conservative linker-Nup graph, and an open TODO for exact source-neutral linker family
+    groundings.

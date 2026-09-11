@@ -85,6 +85,51 @@ def test_a_doi_absent_from_both_registries_is_not_found(monkeypatch):
     assert cc.resolve_doi(["DOI:10.9999/x"])["DOI:10.9999/x"][0] == "NOT_FOUND"
 
 
+def test_get_uses_the_configured_default_timeout(monkeypatch):
+    captured = {}
+
+    class FakeResponse:
+        status = 200
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_):
+            return None
+
+        def read(self):
+            return b"{}"
+
+    def fake_urlopen(_request, timeout):
+        captured["timeout"] = timeout
+        return FakeResponse()
+
+    monkeypatch.setattr(cc, "HTTP_TIMEOUT_SECONDS", 5.0)
+    monkeypatch.setattr(cc.urllib.request, "urlopen", fake_urlopen)
+
+    assert cc._get("https://example.org") == (200, b"{}")
+    assert captured["timeout"] == 5.0
+
+
+def test_control_verdicts_use_the_short_self_test_timeout(monkeypatch):
+    seen = []
+
+    def resolver(ids):
+        seen.append(cc.HTTP_TIMEOUT_SECONDS)
+        good, bad = ids
+        return {good: ("OK", ""), bad: ("NOT_FOUND", "")}
+
+    monkeypatch.setattr(cc, "HTTP_TIMEOUT_SECONDS", 30.0)
+    monkeypatch.setattr(cc, "SELF_TEST_HTTP_TIMEOUT_SECONDS", 5.0)
+
+    assert cc._control_verdicts(resolver, "GO:1", "GO:2") == {
+        "GO:1": ("OK", ""),
+        "GO:2": ("NOT_FOUND", ""),
+    }
+    assert seen == [5.0]
+    assert cc.HTTP_TIMEOUT_SECONDS == 30.0
+
+
 def test_obo_purl_treats_404_as_absent(monkeypatch):
     """BFO relations are OLS *properties*, not terms, so the term index 404s for
     all of them and the PURL is the authority. RO is deliberately NOT routed

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_pore_linkers.yaml
+  slug: nuclear_pore_linkers
+session:
+  id: 2026-09-11T074126Z-claude-code-b2d5d4
+  timestamp: '2026-09-11T07:41:26Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/437
+  - https://github.com/CultureBotAI/CellStructureMech/issues/438
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/436
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed nuclear pore linkers review findings
+  details: Addressed PR review issues 437 and 438 by narrowing the taxonomic distribution
+    from a broad Fungi COMMON row to sampled Ascomycota VARIABLE evidence, scoping Nup145N
+    to the N-terminal linker cleavage product, and adding a resolved discussion that separates
+    Nup145N from the Nup145C outer-ring product.
