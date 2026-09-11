@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/plasma_membrane.yaml
+  slug: plasma_membrane
+session:
+  id: 2026-09-11T041814Z-codex-e55eae
+  timestamp: '2026-09-11T04:18:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added the GO plasma membrane record
+  details: Created an evidence-backed GO:0005886 plasma membrane record with membrane and
+    cell-periphery parentage, lipid and integral-protein constituents, bacterial, archaeal,
+    and fungal taxonomic scope, E. coli and S. cerevisiae examples, permeability and bioenergetic
+    functions, and a class-level lipid-bilayer assembly graph.
