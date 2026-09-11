@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_pore_inner_ring.yaml
+  slug: nuclear_pore_inner_ring
+session:
+  id: 2026-09-11T070450Z-claude-code-b9bb72
+  timestamp: '2026-09-11T07:04:50Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added a nuclear pore inner ring record
+  details: Created a GO:0044611 nuclear pore inner ring record with nuclear-pore parthood,
+    four large Saccharomyces scaffold nucleoporin classes, Eukaryota distribution, a Saccharomyces
+    cerevisiae canonical example, DOI-backed function and assembly evidence, a conservative
+    nonmechanistic inner-ring graph, and an open TODO for exact source-neutral Nup family
+    groundings.
