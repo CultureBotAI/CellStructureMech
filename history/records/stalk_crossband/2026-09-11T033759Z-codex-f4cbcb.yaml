@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/stalk_crossband.yaml
+  slug: stalk_crossband
+session:
+  id: 2026-09-11T033759Z-codex-f4cbcb
+  timestamp: '2026-09-11T03:37:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/402
+  - https://github.com/CultureBotAI/CellStructureMech/issues/403
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/401
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - functions
+  - causal_graphs
+  summary: Addressed stalk crossband adversarial review
+  details: Removed the curator-facing stalk age marking function and modeled the StpABCD graph
+    outcome as stalk compartmentalization so the causal graph ends in a biological process.
+    The Poindexter stalk band evidence remains on terminology rather than as a function.
