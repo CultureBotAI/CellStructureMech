@@ -1,0 +1,285 @@
+identifier: cellstructuremech:btubab_bacterial_microtubule
+label: BtubAB bacterial microtubule
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A bacterial cytoskeletal microtubule assembled from BtubA and BtubB tubulin
+  homologs that form tube-like filaments in Prosthecobacter cells and in purified
+  BtubA/B reactions.
+definition_source: DOI:10.1371/journal.pbio.1001213
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T12:03:51Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T12:04:54Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoskeleton parentage, bacterial microtubule synonymy, BtubA/B and
+    BtubC component curation, Prosthecobacter vanneervenii scope, DOI evidence, a
+    nonmechanistic BtubABC assembly graph, Btub family and BtubC grounding TODOs,
+    and a BtubC boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-09-11T12:13:20Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issues #476 and #477 by changing BtubC essentiality
+    to UNKNOWN, removing the in vitro membrane-linking edge from the assembly graph,
+    and adding resolved boundary discussions.'
+  llm_assisted: true
+parent_structures:
+- GO:0005856
+synonyms:
+- synonym_text: bacterial microtubule
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1371/journal.pbio.1001213
+- synonym_text: bMT
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1371/journal.pbio.1001213
+components:
+- component_id: btuba
+  label: BtubA
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - btubA
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for full-length bacterial tubulin
+    A proteins from BtubAB-forming Prosthecobacter lineages was verified in this pass.
+  role: Bacterial tubulin subunit that co-assembles with BtubB into the BtubAB microtubule
+    protofilaments.
+  evidence:
+  - reference: DOI:10.1073/pnas.012516899
+    notes: Jenkins et al. 2002 identified bacterial tubulin A among the tubulin-like
+      proteins encoded by Prosthecobacter.
+  - reference: DOI:10.1371/journal.pbio.1001213
+    notes: Pilhofer et al. 2011 imaged BtubA/B tubes in Prosthecobacter and in recombinant
+      or purified BtubA/B assembly reactions.
+  - reference: DOI:10.1073/pnas.1705062114
+    notes: Deng et al. 2017 resolved purified BtubABC mini-microtubules and modeled
+      BtubA as one alternating tubulin subunit in the polymer.
+- component_id: btubb
+  label: BtubB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - btubB
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for full-length bacterial tubulin
+    B proteins from BtubAB-forming Prosthecobacter lineages was verified in this pass.
+  role: Bacterial tubulin subunit that co-assembles with BtubA into the BtubAB microtubule
+    protofilaments.
+  evidence:
+  - reference: DOI:10.1073/pnas.012516899
+    notes: Jenkins et al. 2002 identified bacterial tubulin B among the tubulin-like
+      proteins encoded by Prosthecobacter.
+  - reference: DOI:10.1371/journal.pbio.1001213
+    notes: Pilhofer et al. 2011 localized BtubA and BtubB proteins to Prosthecobacter
+      tube-like structures and reconstituted BtubA/B tube assembly.
+  - reference: DOI:10.1073/pnas.1705062114
+    notes: Deng et al. 2017 resolved purified BtubABC mini-microtubules and modeled
+      BtubB as one alternating tubulin subunit in the polymer.
+- component_id: btubc
+  label: BtubC
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  gene_symbols:
+  - btubC
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for full-length BtubC or bacterial
+    kinesin light chain proteins was verified in this pass.
+  role: Bacterial kinesin-light-chain-like protein that binds along BtubAB microtubules;
+    purified BtubABC and membrane-linking assays support polymer decoration and in
+    vitro membrane association.
+  evidence:
+  - reference: DOI:10.1073/pnas.1705062114
+    notes: Deng et al. 2017 resolved BtubC decorating the exterior of purified BtubABC
+      mini-microtubules.
+  - reference: DOI:10.1038/srep45668
+    notes: Akendengue et al. 2017 reported that Bklc/BtubC co-localizes with the bacterial
+      tubulin cytoskeleton and links Btub filaments to membranes in vitro.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:48466
+  taxon_label: Prosthecobacter vanneervenii
+  presence: COMMON
+  note: Prosthecobacter vanneervenii was the native bacterium in which BtubA/B cytoplasmic
+    tubes were directly imaged by electron cryotomography.
+  reference: DOI:10.1371/journal.pbio.1001213
+canonical_examples:
+- taxon_id: NCBITaxon:48466
+  taxon_label: Prosthecobacter vanneervenii
+  note: Verrucomicrobiota species used for the in vivo cryotomograms that defined
+    BtubA/B bacterial microtubules as cytoplasmic five-protofilament tubes.
+  reference: DOI:10.1371/journal.pbio.1001213
+evidence:
+- reference: DOI:10.1073/pnas.012516899
+  notes: Jenkins, Samudrala, Anderson, Hedlund and Petroni 2002, 'Genes for the cytoskeletal
+    protein tubulin in the bacterial genus Prosthecobacter', PNAS.
+- reference: DOI:10.1371/journal.pbio.1001213
+  notes: 'Pilhofer, Ladinsky, McDowall, Petroni and Jensen 2011, ''Microtubules in
+    bacteria: Ancient tubulins build a five-protofilament homolog of the eukaryotic
+    cytoskeleton'', PLoS Biology.'
+- reference: DOI:10.1073/pnas.1705062114
+  notes: Deng, Fink, Bharat, He, Kureisaite-Ciziene and Lowe 2017, 'Four-stranded
+    mini microtubules formed by Prosthecobacter BtubAB show dynamic instability',
+    PNAS.
+- reference: DOI:10.1038/srep45668
+  notes: Akendengue et al. 2017, 'Bacterial Kinesin Light Chain (Bklc) Links the Btub
+    Cytoskeleton to Membranes', Scientific Reports.
+causal_graphs:
+- graph_id: btubabc_microtubule_assembly
+  title: BtubA/B subunits form a bacterial microtubule
+  description: BtubA and BtubB co-assemble into tubulin-like microtubules, and BtubC
+    binds the BtubAB polymer exterior as stabilizing associated machinery.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records BtubA/B tube co-assembly and BtubC polymer binding
+    without asserting a complete Prosthecobacter assembly pathway, a native BtubC
+    requirement for tube formation, an in vivo membrane-tethering edge or a physiological
+    output for the Btub cytoskeleton.
+  nodes:
+  - node_id: btuba
+    label: BtubA
+    node_type: GENE_OR_PROTEIN
+    component_ref: btuba
+  - node_id: btubb
+    label: BtubB
+    node_type: GENE_OR_PROTEIN
+    component_ref: btubb
+  - node_id: btubc
+    label: BtubC
+    node_type: GENE_OR_PROTEIN
+    component_ref: btubc
+  - node_id: btubab_bacterial_microtubule
+    label: BtubAB bacterial microtubule
+    node_type: STRUCTURE
+    grounding: cellstructuremech:btubab_bacterial_microtubule
+  edges:
+  - subject: btuba
+    predicate: co-assembles into
+    object: btubab_bacterial_microtubule
+    description: BtubA alternates with BtubB in protofilaments of the BtubAB bacterial
+      microtubule.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1001213
+      notes: Pilhofer et al. 2011 assigned BtubA/B proteins to tube-like structures
+        in Prosthecobacter and reconstituted bacterial microtubule-like tubes.
+    - reference: DOI:10.1073/pnas.1705062114
+      notes: Deng et al. 2017 resolved alternating BtubA and BtubB subunits in a purified
+        mini-microtubule.
+  - subject: btubb
+    predicate: co-assembles into
+    object: btubab_bacterial_microtubule
+    description: BtubB alternates with BtubA in protofilaments of the BtubAB bacterial
+      microtubule.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1001213
+      notes: Pilhofer et al. 2011 assigned BtubA/B proteins to tube-like structures
+        in Prosthecobacter and reconstituted bacterial microtubule-like tubes.
+    - reference: DOI:10.1073/pnas.1705062114
+      notes: Deng et al. 2017 resolved alternating BtubA and BtubB subunits in a purified
+        mini-microtubule.
+  - subject: btubc
+    predicate: binds
+    object: btubab_bacterial_microtubule
+    description: BtubC binds along the exterior of BtubAB mini-microtubules.
+    evidence:
+    - reference: DOI:10.1073/pnas.1705062114
+      notes: Deng et al. 2017 resolved BtubC decorating purified BtubABC mini-microtubules.
+discussions:
+- discussion_id: resolve_btub_family_grounding
+  prompt: Resolve exact source-neutral grounding for Prosthecobacter BtubA and BtubB
+    bacterial tubulins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#btuba
+  - components#btubb
+  rationale: This first record curates bacterial tubulins from BtubAB-forming Prosthecobacter
+    without asserting that a broad FtsZ/tubulin-family GTPase domain or eukaryotic
+    tubulin-family accession exactly denotes full-length BtubA/B microtubule subunits.
+  evidence:
+  - reference: DOI:10.1371/journal.pbio.1001213
+    notes: Pilhofer et al. 2011 placed BtubA and BtubB in the FtsZ/tubulin superfamily
+      while distinguishing them from FtsZ, FtsZ-like proteins and TubZ.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: resolve_btubc_family_grounding
+  prompt: Resolve exact source-neutral grounding for BtubC/Bklc proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#btubc
+  rationale: This first record curates BtubC as membrane-linking associated machinery
+    for BtubAB bacterial microtubules without asserting that a tetratricopeptide-repeat
+    or kinesin-light-chain-like domain accession exactly denotes this Prosthecobacter
+    protein class.
+  evidence:
+  - reference: DOI:10.1038/srep45668
+    notes: Akendengue et al. 2017 characterized Bklc/BtubC as a TPR-domain protein
+      associated with the Btub cytoskeleton.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: btubc_not_a_tubulin_subunit
+  prompt: BtubC is associated Btub cytoskeleton machinery rather than an alternating
+    bacterial tubulin subunit.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#btubc
+  rationale: BtubC decorates the outside of the BtubAB mini-microtubule and links
+    Btub cytoskeletal filaments to membranes; BtubA and BtubB are the tubulin homologs
+    that make the alternating protofilament polymer.
+  evidence:
+  - reference: DOI:10.1073/pnas.1705062114
+    notes: Deng et al. 2017 resolved BtubC binding along the outside of a BtubAB polymer.
+  - reference: DOI:10.1038/srep45668
+    notes: Akendengue et al. 2017 tested Bklc/BtubC as a BtubAB microtubule-associated
+      and membrane-linking factor.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
+- discussion_id: keep_btubc_essentiality_unknown
+  prompt: BtubC essentiality is left unknown instead of dispensable for native Prosthecobacter
+    BtubAB microtubules.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#btubc
+  rationale: Purified BtubA/B can form tubes without BtubC, supporting BtubC as an
+    associated factor rather than an alternating tubulin constituent, but the first
+    record does not cite a native Prosthecobacter loss-of-BtubC assembly assay.
+  evidence:
+  - reference: DOI:10.1371/journal.pbio.1001213
+    notes: Pilhofer et al. 2011 reconstituted BtubA/B tubes with bacterial tubulin
+      subunits.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/476
+    notes: PR review flagged that in vitro BtubA/B assembly does not establish native
+      BtubC dispensability.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
+- discussion_id: exclude_btubc_membrane_edge_from_assembly_graph
+  prompt: BtubC in vitro membrane-linking activity is not modeled as a native bacterial-membrane
+    assembly edge.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#btubabc_microtubule_assembly
+  rationale: Bklc/BtubC links BtubAB filaments with membranes in vitro, but the assembly
+    graph only keeps directly structure-scoped BtubA/B polymerization and BtubC binding
+    to the BtubAB polymer.
+  evidence:
+  - reference: DOI:10.1038/srep45668
+    notes: Akendengue et al. 2017 characterized Bklc/BtubC as a Btub-associated and
+      membrane-linking factor.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/477
+    notes: PR review flagged that the graph should not turn the in vitro membrane-linking
+      assay into a native bacterial-membrane event.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'

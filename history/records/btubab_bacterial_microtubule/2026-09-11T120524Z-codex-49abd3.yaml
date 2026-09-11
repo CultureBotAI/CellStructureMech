@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/btubab_bacterial_microtubule.yaml
+  slug: btubab_bacterial_microtubule
+session:
+  id: 2026-09-11T120524Z-codex-49abd3
+  timestamp: '2026-09-11T12:05:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add BtubAB bacterial microtubule record
+  details: Added a proposed BtubAB bacterial microtubule CellStructureRecord for Prosthecobacter
+    BtubA/B cytoskeletal tubes, including cytoskeleton parentage, synonymy, BtubA and BtubB
+    constituent proteins, BtubC associated machinery, direct Prosthecobacter vanneervenii
+    scope, DOI-backed literature evidence, a bounded assembly graph, and grounding/boundary
+    discussions. Left the native physiological function unmodeled because the curated sources
+    establish BtubAB assembly and membrane association but not a specific cellular output.
