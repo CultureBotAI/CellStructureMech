@@ -4,7 +4,7 @@ structure_category: OTHER
 structure_kind: SUBCELLULAR_REGION
 definition: A proteinaceous bacterial polar microdomain formed by PopZ polymers at
   Caulobacter cell poles that anchors the ParB-bound chromosomal origin and organizes
-  pole-specific regulatory proteins.
+  pole-specific client proteins.
 definition_source: DOI:10.1016/j.cell.2008.07.015
 mapping_status: PROPOSED
 curation_history:
@@ -21,15 +21,25 @@ curation_history:
     functions, DOI evidence, a nonmechanistic PopZ polar-organization graph, and a
     PopZ grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T11:02:59Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR #464 review issues #465, #466, and #467 by removing an unsupported
+    PopZ organizing-matrix synonym, narrowing PopZ essentiality to UNKNOWN, and tightening
+    the PopZ graph''s ParB-origin and client-protein boundary nodes.'
+  llm_assisted: true
+- timestamp: '2026-09-11T11:03:15Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Adjusted PopZ graph scope notes to match the PR #464 fix for review issue
+    #467.'
+  llm_assisted: true
 parent_structures:
 - GO:0044464
 synonyms:
 - synonym_text: Caulobacter PopZ polar subdomain
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1111/j.1365-2958.2010.07088.x
-- synonym_text: PopZ polar organizing matrix
-  synonym_type: RELATED_SYNONYM
-  source: DOI:10.1073/pnas.1602380113
 components:
 - component_id: popz
   label: PopZ
@@ -37,7 +47,7 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - popZ
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE for the Caulobacter PopZ polar organizing
     protein was verified in this pass.
@@ -73,9 +83,9 @@ functions:
     notes: Bowman et al. 2008 connected PopZ polymers to anchoring of the chromosomal
       origin/ParB complex at a bacterial cell pole.
 - function_id: pole_regulatory_organization
-  label: pole-specific protein organization
-  description: The PopZ polar microdomain recruits multiple regulatory proteins to
-    coordinate sequential changes in Caulobacter pole composition.
+  label: pole-specific client-protein organization
+  description: The PopZ polar microdomain serves as a hub for multiple client proteins
+    that contribute to sequential changes in Caulobacter pole composition.
   evidence:
   - reference: DOI:10.1111/j.1365-2958.2010.07088.x
     notes: Bowman et al. 2010 showed that the PopZ polar subdomain organizes sequential
@@ -102,12 +112,13 @@ causal_graphs:
 - graph_id: popz_polar_microdomain_organization
   title: PopZ polymers organize Caulobacter cell poles
   description: PopZ self-associates into a polar microdomain that localizes at Caulobacter
-    cell poles and organizes chromosomal-origin anchoring and regulatory-protein recruitment.
+    cell poles, anchors the ParB-bound origin region, and binds a representative regulatory
+    client.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records PopZ self-assembly and representative anchoring or
-    recruitment functions without asserting a complete inventory of all PopZ client
-    proteins or the physical basis of client binding.
+  scope_notes: The graph records PopZ self-assembly, representative anchoring, and
+    representative client binding without asserting a complete inventory of all PopZ
+    client proteins or the physical basis of client binding.
   nodes:
   - node_id: popz
     label: PopZ
@@ -121,10 +132,10 @@ causal_graphs:
     label: Caulobacter cell pole
     node_type: CELLULAR_LOCALIZATION
   - node_id: parb_origin_complex
-    label: ParB-bound chromosomal origin complex
-    node_type: GENETIC_ELEMENT
-  - node_id: pole_regulatory_proteins
-    label: pole-specific regulatory proteins
+    label: ParB-bound chromosomal origin anchoring complex
+    node_type: STRUCTURE
+  - node_id: cpdr
+    label: CpdR
     node_type: GENE_OR_PROTEIN
   edges:
   - subject: popz
@@ -150,24 +161,24 @@ causal_graphs:
     predicate: anchors
     object: parb_origin_complex
     description: The PopZ polar microdomain anchors the ParB-bound chromosomal origin
-      complex at a cell pole.
+      region at a cell pole.
     evidence:
     - reference: DOI:10.1016/j.cell.2008.07.015
       notes: Bowman et al. 2008 linked PopZ polymers to polar anchoring of the chromosomal
         origin/ParB complex.
-  - subject: popz_polar_microdomain
-    predicate: recruits
-    object: pole_regulatory_proteins
-    description: The PopZ polar microdomain recruits regulatory proteins to the Caulobacter
-      pole.
+  - subject: popz
+    predicate: directly binds
+    object: cpdr
+    description: PopZ directly binds the response regulator CpdR as one representative
+      regulatory client.
     evidence:
     - reference: DOI:10.1073/pnas.1602380113
-      notes: Holmes et al. 2016 identified PopZ as a hub that directly binds multiple
-        regulatory proteins.
+      notes: Holmes et al. 2016 identified direct binding between PopZ and multiple
+        client proteins, including CpdR.
 discussions:
 - discussion_id: resolve_popz_family_grounding
-  prompt: Resolve exact source-neutral grounding for full-length filament-forming
-    or matrix-forming PopZ proteins.
+  prompt: Resolve exact source-neutral grounding for full-length matrix-forming PopZ
+    proteins.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:

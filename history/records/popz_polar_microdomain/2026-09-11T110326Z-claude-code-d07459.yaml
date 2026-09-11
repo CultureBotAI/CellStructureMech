@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/popz_polar_microdomain.yaml
+  slug: popz_polar_microdomain
+session:
+  id: 2026-09-11T110326Z-claude-code-d07459
+  timestamp: '2026-09-11T11:03:26Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/465
+  - https://github.com/CultureBotAI/CellStructureMech/issues/466
+  - https://github.com/CultureBotAI/CellStructureMech/issues/467
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/464
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - data
+  - curation
+  summary: Addressed PopZ polar microdomain PR review findings
+  details: 'Addressed PR #464 review issues by removing the unsupported PopZ polar organizing
+    matrix synonym, narrowing PopZ essentiality from ESSENTIAL to UNKNOWN, typing the ParB-bound
+    origin target as a structure, and replacing the broad pole-specific regulatory-protein
+    recruitment edge with representative direct PopZ-CpdR client binding.'
