@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/mycolate_outer_membrane.yaml
+  slug: mycolate_outer_membrane
+session:
+  id: 2026-09-11T045411Z-codex-8d8885
+  timestamp: '2026-09-11T04:54:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/413
+  - https://github.com/CultureBotAI/CellStructureMech/issues/414
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/412
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - canonical_examples
+  summary: Address mycolate outer membrane review issues
+  details: Resolved PR 412 review issues by sourcing the Bacteria taxonomic-distribution row
+    from mycomembrane literature instead of GO alone and replacing the Mycobacterium tuberculosis
+    canonical example with a directly supported Mycobacterium smegmatis example.
