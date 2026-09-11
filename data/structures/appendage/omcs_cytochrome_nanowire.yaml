@@ -2,8 +2,8 @@ identifier: cellstructuremech:omcs_cytochrome_nanowire
 label: OmcS cytochrome nanowire
 structure_category: APPENDAGE
 structure_kind: APPENDAGE
-definition: An extracellular electrically conductive Geobacter sulfurreducens cell
-  projection assembled as a helical filament of OmcS six-heme c-type cytochrome monomers
+definition: An extracellular electrically conductive Geobacter sulfurreducens PCA
+  filament assembled as a helical array of OmcS six-heme c-type cytochrome monomers
   whose stacked hemes provide a path for long-range electron transport.
 definition_source: DOI:10.1016/j.cell.2019.03.029
 mapping_status: PROPOSED
@@ -22,6 +22,13 @@ curation_history:
     function evidence, a narrow OmcS function graph, and a TODO for exact OmcS family
     grounding.
   llm_assisted: true
+- timestamp: '2026-09-11T15:03:41Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #504 by narrowing OmcS taxon rows to Geobacter sulfurreducens
+    PCA, and resolved #505 by removing GO cell-projection parentage and cell-projection
+    wording from the definition.'
+  llm_assisted: true
 synonyms:
 - synonym_text: OmcS nanowire
   synonym_type: EXACT_SYNONYM
@@ -29,8 +36,6 @@ synonyms:
 - synonym_text: cytochrome-based bacterial nanowire
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1038/s42003-019-0448-9
-parent_structures:
-- GO:0042995
 components:
 - component_id: omcs_six_heme_c_type_cytochrome
   label: OmcS six-heme c-type cytochrome
@@ -70,24 +75,24 @@ components:
       notes: RCSB PDB entry 6NEF links its OmcS cryo-EM model to UniProtKB:Q74A86
         and the Filman et al. 2019 Communications Biology publication.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:35554
-  taxon_label: Geobacter sulfurreducens
+- taxon_id: NCBITaxon:243231
+  taxon_label: Geobacter sulfurreducens PCA
   presence: COMMON
-  note: Extracellular conductive filaments from Geobacter sulfurreducens include OmcS
-    cytochrome nanowires that were resolved by cryo-EM.
-  reference: DOI:10.1016/j.cell.2019.03.029
+  note: Geobacter sulfurreducens PCA is the source strain for the OmcS polymer entity
+    in the PDB:6EF8 cryo-EM model of OmcS nanowires.
+  reference: PDB:6EF8
 canonical_examples:
-- taxon_id: NCBITaxon:35554
-  taxon_label: Geobacter sulfurreducens
-  note: Species in which extracellular OmcS filaments were purified and solved as
-    helical, cytochrome-based nanowires.
-  reference: DOI:10.1038/s42003-019-0448-9
+- taxon_id: NCBITaxon:243231
+  taxon_label: Geobacter sulfurreducens PCA
+  note: Strain whose OmcS polymer entity was deposited in the PDB:6NEF cryo-EM model
+    of a helical, cytochrome-based nanowire.
+  reference: PDB:6NEF
 functions:
 - function_id: stacked_heme_long_range_electron_transfer
   label: stacked-heme long-range electron transfer
   description: OmcS monomers align six covalently bound hemes per subunit into a continuous
-    chain along the filament axis, providing a redox path for long-range extracellular
-    electron transfer.
+    chain along the filament axis, providing a redox path for long-range electron
+    transfer in purified nanowires.
   evidence:
   - reference: DOI:10.1016/j.cell.2019.03.029
     notes: Wang et al. 2019 connected the OmcS filament's stacked heme arrangement
