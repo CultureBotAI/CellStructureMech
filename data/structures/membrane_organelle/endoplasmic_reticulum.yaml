@@ -1,0 +1,238 @@
+identifier: GO:0005783
+label: endoplasmic reticulum
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: The irregular network of unit membranes, visible only by electron microscopy,
+  that occurs in the cytoplasm of many eukaryotic cells. The membranes form a complex
+  meshwork of tubular channels, which are often expanded into slitlike cavities called
+  cisternae. The ER takes two forms, rough (or granular), with ribosomes adhering
+  to the outer surface, and smooth (with no ribosomes attached).
+definition_source: GO:0005783
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T17:01:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T17:02:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ER parentage, endomembrane parthood, membrane, lumen, and Sec61 translocon
+    parts, exact ER synonymy, a grounded Sec61 component, Saccharomyces scope, protein-translocation
+    and UPR/ERAD functions, a nonmechanistic protein-biogenesis graph, and a quality-control
+    machinery grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T17:06:39Z'
+  curator: codex
+  action: CANONICALIZED_LABEL
+  changes: Updated GO:0036503 references to the canonical 'ERAD pathway' label.
+  llm_assisted: true
+- timestamp: '2026-09-11T17:11:35Z'
+  curator: codex
+  action: ADDRESSED_REVIEW_ISSUES
+  changes: 'Addressed review issues #524 and #525 by narrowing the Saccharomyces canonical
+    example to the Sec61 citation scope and changing the graph edge from a membrane-bounds-organelle
+    assertion to an ER-membrane-is-part-of-ER assertion.'
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+part_of:
+- GO:0012505
+has_part:
+- GO:0005789
+- GO:0005788
+- GO:0005784
+synonyms:
+- synonym_text: ER
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005783
+components:
+- component_id: er_membrane
+  label: endoplasmic reticulum membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0005789
+  essentiality: ESSENTIAL
+  role: Lipid bilayer that bounds the endoplasmic reticulum and separates its lumen
+    from cytosol.
+  evidence:
+  - reference: GO:0005789
+    notes: GO:0005789 defines the endoplasmic reticulum membrane as the lipid bilayer
+      surrounding the endoplasmic reticulum.
+- component_id: sec61_translocon_complex
+  label: Sec61 translocon complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005784
+  essentiality: UNKNOWN
+  role: Conserved ER membrane channel complex that mediates cotranslational and posttranslational
+    protein translocation.
+  evidence:
+  - reference: GO:0005784
+    notes: GO:0005784 defines the Sec61 translocon complex as a core heterotrimeric
+      ER translocon.
+  - reference: DOI:10.1091/mbc.3.2.129
+    notes: Stirling et al. 1992 isolated yeast sec61 mutants defective in integral
+      membrane protein insertion into the endoplasmic reticulum.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has an endoplasmic reticulum with Sec61-dependent protein translocation
+    and linked unfolded-protein-response and ERAD pathways.
+  reference: DOI:10.1016/s0092-8674(00)80835-1
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model for Sec61-dependent endoplasmic-reticulum protein translocation.
+  reference: DOI:10.1091/mbc.3.2.129
+functions:
+- function_id: protein_translocation_into_er
+  label: protein translocation into the endoplasmic reticulum
+  description: Sec61 translocon complexes in the ER membrane move nascent and posttranslational
+    substrate proteins across or into the ER membrane.
+  evidence:
+  - reference: GO:0005784
+    notes: GO:0005784 identifies the Sec61 translocon complex as functioning in cotranslational
+      and posttranslational translocation events.
+  - reference: DOI:10.1091/mbc.3.2.129
+    notes: Stirling et al. 1992 analyzed Saccharomyces cerevisiae sec61 mutants with
+      ER protein-insertion defects.
+- function_id: endoplasmic_reticulum_unfolded_protein_response
+  label: endoplasmic reticulum unfolded protein response
+  grounding: GO:0030968
+  description: The ER stress response coordinates ER-associated degradation with expression
+    of endoplasmic-reticulum resident factors.
+  evidence:
+  - reference: DOI:10.1016/s0092-8674(00)80835-1
+    notes: Travers et al. 2000 combined functional and genomic analyses to connect
+      the yeast unfolded protein response with ER-associated degradation.
+- function_id: erad_quality_control_pathway
+  label: ERAD pathway
+  grounding: GO:0036503
+  description: Misfolded or unassembled proteins are recognized in the ER and routed
+    to ER-associated degradation quality-control machinery.
+  evidence:
+  - reference: DOI:10.1016/s0092-8674(00)80835-1
+    notes: Travers et al. 2000 found that ER-associated degradation and the unfolded
+      protein response are functionally coordinated in yeast.
+evidence:
+- reference: GO:0005783
+  notes: Gene Ontology cellular-component term for the endoplasmic reticulum.
+- reference: GO:0005789
+  notes: Gene Ontology cellular-component term for the endoplasmic reticulum membrane.
+- reference: GO:0005788
+  notes: Gene Ontology cellular-component term for the endoplasmic reticulum lumen.
+- reference: DOI:10.1091/mbc.3.2.129
+  notes: Stirling et al. 1992, 'Protein translocation mutants defective in the insertion
+    of integral membrane proteins into the endoplasmic reticulum', Molecular Biology
+    of the Cell.
+- reference: DOI:10.1016/s0092-8674(00)80835-1
+  notes: Travers et al. 2000, 'Functional and genomic analyses reveal an essential
+    coordination between the unfolded protein response and ER-associated degradation',
+    Cell.
+causal_graphs:
+- graph_id: yeast_er_protein_biogenesis_quality_control
+  title: Yeast ER couples protein entry and quality control
+  description: In budding yeast, the ER membrane surrounds the ER lumen, embeds Sec61
+    protein-translocation machinery, and provides the compartment where protein biogenesis
+    is coupled to unfolded-protein-response and ERAD quality-control pathways.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph summarizes ER compartment boundaries, Sec61-mediated translocation,
+    and UPR/ERAD coupling without asserting the full set of luminal chaperones, ubiquitin
+    ligases, or retrotranslocation factors.
+  nodes:
+  - node_id: endoplasmic_reticulum
+    label: endoplasmic reticulum
+    node_type: STRUCTURE
+    grounding: GO:0005783
+  - node_id: er_membrane
+    label: endoplasmic reticulum membrane
+    node_type: STRUCTURE
+    grounding: GO:0005789
+    component_ref: er_membrane
+  - node_id: er_lumen
+    label: endoplasmic reticulum lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005788
+  - node_id: sec61_translocon_complex
+    label: Sec61 translocon complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0005784
+    component_ref: sec61_translocon_complex
+  - node_id: protein_translocation_into_er
+    label: protein translocation into the endoplasmic reticulum
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: endoplasmic_reticulum_unfolded_protein_response
+    label: endoplasmic reticulum unfolded protein response
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030968
+  - node_id: erad_quality_control_pathway
+    label: ERAD pathway
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0036503
+  edges:
+  - subject: er_membrane
+    predicate: bounds
+    object: er_lumen
+    description: The endoplasmic reticulum membrane encloses the endoplasmic reticulum
+      lumen.
+    evidence:
+    - reference: GO:0005788
+      notes: GO:0005788 defines the endoplasmic reticulum lumen as the volume enclosed
+        by ER membranes.
+  - subject: er_membrane
+    predicate: is part of
+    object: endoplasmic_reticulum
+    description: The ER membrane is the unit-membrane network that forms ER tubules
+      and cisternae.
+    evidence:
+    - reference: GO:0005783
+      notes: GO:0005783 defines the ER as an irregular network of unit membranes arranged
+        as tubular channels and cisternae.
+  - subject: sec61_translocon_complex
+    predicate: is embedded in
+    object: er_membrane
+    description: The Sec61 translocon complex is a protein-translocation complex of
+      the endoplasmic reticulum membrane.
+    evidence:
+    - reference: GO:0005784
+      notes: GO:0005784 identifies Sec61 as an ER translocon complex.
+  - subject: sec61_translocon_complex
+    predicate: supports
+    object: protein_translocation_into_er
+    description: Yeast Sec61 supports insertion or translocation of proteins across
+      the ER membrane.
+    evidence:
+    - reference: DOI:10.1091/mbc.3.2.129
+      notes: Stirling et al. 1992 characterized Saccharomyces cerevisiae sec61 alleles
+        defective in ER protein insertion.
+  - subject: endoplasmic_reticulum_unfolded_protein_response
+    predicate: coordinates with
+    object: erad_quality_control_pathway
+    description: The yeast unfolded protein response and ER-associated degradation
+      pathways are functionally coordinated.
+    evidence:
+    - reference: DOI:10.1016/s0092-8674(00)80835-1
+      notes: Travers et al. 2000 showed coordination between the yeast unfolded protein
+        response and ER-associated degradation.
+discussions:
+- discussion_id: ground_er_quality_control_components
+  prompt: Resolve exact source-neutral component groundings for yeast ER unfolded-protein-response
+    and ER-associated-degradation machinery, including luminal chaperone, retrotranslocation,
+    and ubiquitin-ligase cohorts.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#yeast_er_protein_biogenesis_quality_control
+  rationale: This first endoplasmic reticulum record grounds the Sec61 translocon
+    complex and ER membrane but does not overclaim exact identifiers for multi-family
+    UPR and ERAD machinery cohorts.
+  evidence:
+  - reference: DOI:10.1016/s0092-8674(00)80835-1
+    notes: Travers et al. 2000 linked the yeast UPR and ERAD programs and identifies
+      multiple induced targets that should be resolved individually.
+  posed_by: codex
+  posed_date: '2026-09-11'
