@@ -1,0 +1,274 @@
+identifier: GO:0036407
+label: mycolate outer membrane
+structure_category: ENVELOPE
+structure_kind: MEMBRANE
+definition: A mycolic-acid-rich cell outer membrane in mycobacteria and related Corynebacteriales,
+  containing a lipid bilayer and covalently linked long-chain mycolic acids attached
+  to peptidoglycan through an arabinogalactan network.
+definition_source: GO:0036407
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T04:39:44Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T04:41:56Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO-backed mycomembrane synonymy, cell outer membrane parentage, mycolic-acid,
+    extractable-lipid, and outer-membrane protein components, bacterial and mycobacterial
+    taxonomy, M. tuberculosis and C. glutamicum examples, permeability functions,
+    DOI/GO evidence, an anchored mycolate membrane graph, and a cell-wall core boundary
+    discussion.
+  llm_assisted: true
+- timestamp: '2026-09-11T04:49:06Z'
+  curator: codex
+  action: TIGHTENED_DISCUSSION_ANCHOR
+  changes: Changed the cell-wall core boundary discussion from a broad components
+    anchor to explicit mycolic-acid and extractable-lipid component anchors.
+  llm_assisted: true
+synonyms:
+- synonym_text: MOM
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036407
+- synonym_text: mycobacterial outer membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036407
+- synonym_text: mycomembrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036407
+parent_structures:
+- GO:0009279
+components:
+- component_id: mycolic_acid
+  label: mycolic acid
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding: CHEBI:25438
+  role: Forms the mycolate-rich hydrophobic membrane layer and creates the covalently
+    attached inner leaflet when esterified to arabinogalactan.
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2013.11.011
+    notes: Marrakchi, Lanéelle and Daffé 2014 review mycolic acids as major specific
+      lipid constituents of the mycobacterial cell envelope.
+  - reference: DOI:10.1016/j.tim.2009.12.005
+    notes: Niederweis et al. 2010 review the lipid architecture proposed for the mycobacterial
+      outer membrane.
+- component_id: extractable_mycomembrane_lipids
+  label: extractable mycomembrane lipids
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The extractable outer-leaflet material includes multiple glycolipid
+    and free-lipid families whose exact mixture varies among mycolate outer membranes;
+    no single CHEBI term denotes the whole membrane lipid pool.
+  role: Intercalate with covalently attached mycolates to fill the outer leaflet and
+    tune the hydrophobic surface of the mycomembrane.
+  evidence:
+  - reference: DOI:10.1016/j.tim.2009.12.005
+    notes: Niederweis et al. 2010 review free mycolates and extractable lipids as
+      outer-membrane constituents.
+  - reference: DOI:10.1038/s41598-017-12718-4
+    notes: Chiaradia et al. 2017 dissected the mycobacterial cell envelope and analyzed
+      native mycomembrane composition.
+- component_id: mycolate_outer_membrane_proteins
+  label: mycolate outer membrane proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Known mycomembrane proteins include unrelated porins and exported
+    outer-membrane proteins; the constituent set is a localization class, not a single
+    homologous protein family.
+  role: Provide proteinaceous routes for hydrophilic solute uptake and envelope transport
+    across the mycolate-rich permeability barrier.
+  evidence:
+  - reference: DOI:10.1016/j.tim.2009.12.005
+    notes: Niederweis et al. 2010 review mycobacterial outer-membrane proteins and
+      porin channels.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Mycolate outer membranes are restricted to mycolic-acid-producing bacterial
+    lineages rather than being shared by all bacteria.
+  reference: GO:0036407
+- taxon_id: NCBITaxon:1763
+  taxon_label: Mycobacterium
+  presence: COMMON
+  note: Mycobacteria are the canonical organisms for the mycolic-acid-rich mycomembrane.
+  reference: DOI:10.1016/j.tim.2009.12.005
+canonical_examples:
+- taxon_id: NCBITaxon:1773
+  taxon_label: Mycobacterium tuberculosis
+  note: Pathogenic mycobacterial model for the mycomembrane and its mycolic-acid-rich
+    permeability barrier.
+  reference: DOI:10.1073/pnas.0709530105
+- taxon_id: NCBITaxon:1718
+  taxon_label: Corynebacterium glutamicum
+  note: Corynebacterial model in which cryo-electron microscopy directly visualized
+    an outer membrane related to the mycobacterial mycomembrane.
+  reference: DOI:10.1128/JB.01919-07
+functions:
+- function_id: mycomembrane_permeability_barrier
+  label: mycomembrane permeability barrier
+  description: The mycolate-rich membrane creates a low-permeability hydrophobic barrier
+    at the outside of the envelope.
+  evidence:
+  - reference: DOI:10.1016/j.tim.2009.12.005
+    notes: Niederweis et al. 2010 review the mycobacterial outer membrane as a permeability
+      barrier.
+- function_id: porin_mediated_hydrophilic_uptake
+  label: porin-mediated hydrophilic uptake
+  description: Outer-membrane proteins form channels that let selected hydrophilic
+    solutes cross the otherwise lipid-rich mycolate outer membrane.
+  evidence:
+  - reference: DOI:10.1016/j.tim.2009.12.005
+    notes: Niederweis et al. 2010 review porins as uptake channels through mycobacterial
+      outer membranes.
+evidence:
+- reference: GO:0036407
+  notes: Gene Ontology cellular-component term for the mycolate outer membrane.
+- reference: DOI:10.1073/pnas.0709530105
+  notes: 'Hoffmann et al. 2008, Disclosure of the mycobacterial outer membrane: cryo-electron
+    tomography and vitreous sections reveal the lipid bilayer structure, Proceedings
+    of the National Academy of Sciences USA.'
+- reference: DOI:10.1128/JB.01919-07
+  notes: Zuber et al. 2008, Direct visualization of the outer membrane of mycobacteria
+    and corynebacteria in their native state, Journal of Bacteriology.
+- reference: DOI:10.1016/j.tim.2009.12.005
+  notes: 'Niederweis et al. 2010, Mycobacterial outer membranes: in search of proteins,
+    Trends in Microbiology.'
+- reference: DOI:10.1101/cshperspect.a021113
+  notes: 'Alderwick et al. 2015, The mycobacterial cell wall: peptidoglycan and arabinogalactan,
+    Cold Spring Harbor Perspectives in Medicine.'
+- reference: DOI:10.1016/j.chembiol.2013.11.011
+  notes: 'Marrakchi, Lanéelle and Daffé 2014, Mycolic acids: structures, biosynthesis,
+    and beyond, Chemistry and Biology.'
+causal_graphs:
+- graph_id: mycolyl_arabinogalactan_mycomembrane
+  title: Mycolates form a covalently anchored outer membrane
+  description: Long-chain mycolic acids are esterified to arabinogalactan, which links
+    the hydrophobic mycolate layer to peptidoglycan. Extractable lipids and outer-membrane
+    proteins pack into that mycolate-rich membrane to form a low-permeability envelope
+    boundary.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the class-level mycolate-arabinogalactan outer membrane
+    architecture without choosing a specific mycolic-acid biosynthesis or transport
+    pathway.
+  nodes:
+  - node_id: mycolic_acid
+    label: mycolic acid
+    node_type: CHEMICAL
+    component_ref: mycolic_acid
+    grounding: CHEBI:25438
+  - node_id: arabinogalactan
+    label: arabinogalactan
+    node_type: CHEMICAL
+    grounding: CHEBI:27569
+  - node_id: peptidoglycan_based_cell_wall
+    label: peptidoglycan-based cell wall
+    node_type: STRUCTURE
+    grounding: GO:0009274
+  - node_id: extractable_mycomembrane_lipids
+    label: extractable mycomembrane lipids
+    node_type: CHEMICAL
+    component_ref: extractable_mycomembrane_lipids
+  - node_id: mycolate_outer_membrane_proteins
+    label: mycolate outer membrane proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: mycolate_outer_membrane_proteins
+  - node_id: mycolate_outer_membrane
+    label: mycolate outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0036407
+  - node_id: permeability_barrier
+    label: mycomembrane permeability barrier
+    node_type: CAPACITY
+  edges:
+  - subject: mycolic_acid
+    predicate: esterifies to
+    object: arabinogalactan
+    description: Mycolic acids are esterified to the terminal arabinan portions of
+      cell-wall arabinogalactan.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a021113
+      notes: Alderwick and colleagues 2015 review the mycolyl-arabinogalactan linkage
+        in the mycobacterial cell wall.
+    - reference: DOI:10.1016/j.chembiol.2013.11.011
+      notes: Marrakchi, Lanéelle and Daffé 2014 review mycolic-acid transfer onto
+        arabinogalactan.
+  - subject: arabinogalactan
+    predicate: anchors to
+    object: peptidoglycan_based_cell_wall
+    description: Arabinogalactan covalently links the mycolate-rich membrane to peptidoglycan
+      in the cell-wall core.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a021113
+      notes: Alderwick and colleagues 2015 review how arabinogalactan bridges peptidoglycan
+        and mycolates.
+  - subject: mycolic_acid
+    predicate: forms hydrophobic layer of
+    object: mycolate_outer_membrane
+    description: Covalently attached mycolates provide the long-chain lipid matrix
+      of the mycolate outer membrane.
+    evidence:
+    - reference: GO:0036407
+      notes: GO:0036407 defines a mycolic-acid-rich cell outer membrane with long-chain
+        mycolic acids.
+    - reference: DOI:10.1073/pnas.0709530105
+      notes: Hoffmann et al. 2008 visualized a mycobacterial outer membrane by cryo-electron
+        tomography and vitreous sections.
+  - subject: extractable_mycomembrane_lipids
+    predicate: pack into
+    object: mycolate_outer_membrane
+    description: Free mycolates and other extractable lipids occupy the mycomembrane
+      outer leaflet.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2009.12.005
+      notes: Niederweis et al. 2010 review extractable lipids as mycomembrane constituents.
+  - subject: mycolate_outer_membrane_proteins
+    predicate: embed in
+    object: mycolate_outer_membrane
+    description: Outer-membrane proteins are embedded in the mycolate-rich membrane,
+      where porins create hydrophilic diffusion pathways.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2009.12.005
+      notes: Niederweis et al. 2010 review protein channels in the mycobacterial outer
+        membrane.
+  - subject: mycolate_outer_membrane
+    predicate: enables
+    object: permeability_barrier
+    description: The waxy mycolate outer membrane strongly restricts permeation across
+      the outside of the cell envelope.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2009.12.005
+      notes: Niederweis et al. 2010 review the mycobacterial outer membrane as the
+        major permeability barrier.
+discussions:
+- discussion_id: cell_wall_core_boundary
+  prompt: Keep the mycolate outer membrane separate from the whole mycolyl-arabinogalactan-peptidoglycan
+    cell-wall core.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#mycolic_acid
+  - components#extractable_mycomembrane_lipids
+  - causal_graphs#mycolyl_arabinogalactan_mycomembrane
+  rationale: GO:0036407 denotes the mycolate-rich outer membrane rather than the full
+    peptidoglycan-arabinogalactan-mycolate cell-wall skeleton. Arabinogalactan and
+    peptidoglycan are therefore graph nodes that explain covalent anchoring, not local
+    component entries for the outer membrane itself.
+  evidence:
+  - reference: GO:0036407
+    notes: GO scopes the record to the mycolate outer membrane.
+  - reference: DOI:10.1101/cshperspect.a021113
+    notes: Alderwick and colleagues 2015 review the larger mycolyl-arabinogalactan-peptidoglycan
+      cell-wall core.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'

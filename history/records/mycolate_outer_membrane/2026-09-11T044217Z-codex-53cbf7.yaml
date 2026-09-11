@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/mycolate_outer_membrane.yaml
+  slug: mycolate_outer_membrane
+session:
+  id: 2026-09-11T044217Z-codex-53cbf7
+  timestamp: '2026-09-11T04:42:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the mycolate outer membrane record
+  details: Created an evidence-backed GO:0036407 mycolate outer membrane record with GO synonymy,
+    cell outer membrane parentage, mycolic-acid, extractable-lipid, and outer-membrane protein
+    components, bacterial and mycobacterial taxonomic scope, Mycobacterium tuberculosis and
+    Corynebacterium glutamicum examples, permeability functions, and an assembly graph for
+    the covalently anchored mycolate-rich membrane.
