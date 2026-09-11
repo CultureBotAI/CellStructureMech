@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/capsule.yaml
+  slug: capsule
+session:
+  id: 2026-09-11T035341Z-codex-b94d57
+  timestamp: '2026-09-11T03:53:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added the GO capsule record
+  details: Created an evidence-backed GO:0042603 capsule record with glycocalyx parentage,
+    broad extracellular-polymer composition, bacterial and fungal taxonomic scope, canonical
+    E. coli, pneumococcal, and Cryptococcus examples, capsule shielding functions, and an
+    assembly graph for capsular-polymer export and surface retention.

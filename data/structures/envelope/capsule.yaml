@@ -1,0 +1,215 @@
+identifier: GO:0042603
+label: capsule
+structure_category: ENVELOPE
+structure_kind: ENVELOPE_LAYER
+definition: A highly organized glycocalyx layer attached outside the cell wall of
+  some bacteria and fungi, usually built from capsular polysaccharides and retained
+  on the cell surface rather than released as a loose extracellular polymer.
+definition_source: GO:0042603
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T03:51:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T03:53:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added capsule synonymy, glycocalyx parentage, a broad capsular extracellular-polymer
+    component, bacterial and fungal taxonomy, canonical bacterial and cryptococcal
+    examples, anti-phagocytic and barrier functions, a capsular-polymer export graph,
+    DOI/GO evidence, and component-boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-11T04:03:15Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #406 issues #407 and #408 by replacing the hydrated-barrier
+    function with a process-style capsule-mediated protection function and marking
+    the generic capsule export graph as nonmechanistic.'
+  llm_assisted: true
+synonyms:
+- synonym_text: bacterial capsule
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1146/annurev.micro.50.1.285
+- synonym_text: polysaccharide capsule
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1146/annurev.biochem.75.103004.142545
+- synonym_text: cryptococcal capsule
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1128/CMR.00001-12
+parent_structures:
+- GO:0030112
+components:
+- component_id: capsular_extracellular_polymer
+  label: capsular extracellular polymer
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No single reviewed CHEBI or sequence-family CURIE denotes the surface-retained
+    capsule material across bacterial capsular polysaccharides, Bacillus poly-D-glutamate,
+    and the Cryptococcus glucuronoxylomannan-rich fungal capsule.
+  role: Forms the hydrated extracellular matrix that remains associated with the cell
+    surface as an organized capsule.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.50.1.285
+    notes: Roberts 1996 reviews bacterial capsular polysaccharides as surface-associated
+      capsule materials.
+  - reference: DOI:10.1128/CMR.00001-12
+    notes: O'Meara and Alspaugh 2012 review the polysaccharide capsule surrounding
+      Cryptococcus neoformans cells.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Capsules occur in many Gram-negative and Gram-positive lineages but are serotype-
+    and strain-dependent rather than universal across bacteria.
+  reference: DOI:10.1146/annurev.micro.50.1.285
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: VARIABLE
+  note: The Cryptococcus neoformans polysaccharide capsule is a prominent fungal capsule
+    model; capsules are not a universal fungal cell-wall layer.
+  reference: DOI:10.1128/CMR.00001-12
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: E. coli K-antigen capsules are the classic Gram-negative model for ABC-transporter-dependent
+    capsule export.
+  reference: DOI:10.1146/annurev.biochem.75.103004.142545
+- taxon_id: NCBITaxon:1313
+  taxon_label: Streptococcus pneumoniae
+  note: Encapsulated pneumococcal strains are a primary model for capsule-mediated
+    complement evasion and anti-phagocytic activity.
+  reference: DOI:10.1128/IAI.00881-09
+- taxon_id: NCBITaxon:5207
+  taxon_label: Cryptococcus neoformans
+  note: The thick glucuronoxylomannan-rich capsule is the major surface virulence
+    structure of this fungal yeast.
+  reference: DOI:10.1128/CMR.00001-12
+functions:
+- function_id: anti_phagocytic_surface_shield
+  label: anti-phagocytic surface shielding
+  description: Capsules mask the cell surface from opsonization and reduce uptake
+    by professional phagocytes in encapsulated pathogens.
+  evidence:
+  - reference: DOI:10.1128/IAI.00881-09
+    notes: Hyams et al. 2010 showed that the Streptococcus pneumoniae capsule reduces
+      complement deposition and neutrophil phagocytosis.
+- function_id: capsule_mediated_cell_protection
+  label: capsule-mediated cell protection
+  description: A retained capsule protects encapsulated cells by shielding the cell
+    envelope from host antimicrobial effectors and environmental stressors.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.50.1.285
+    notes: Roberts 1996 reviews the protective and virulence roles of bacterial capsular
+      polysaccharides.
+  - reference: DOI:10.1128/CMR.00001-12
+    notes: O'Meara and Alspaugh 2012 review capsule-mediated shielding functions in
+      Cryptococcus neoformans.
+evidence:
+- reference: DOI:10.1146/annurev.micro.50.1.285
+  notes: Roberts IS 1996, 'The biochemistry and genetics of capsular polysaccharide
+    production in bacteria', Annual Review of Microbiology.
+- reference: DOI:10.1146/annurev.biochem.75.103004.142545
+  notes: Whitfield C 2006, 'Biosynthesis and assembly of capsular polysaccharides
+    in Escherichia coli', Annual Review of Biochemistry.
+- reference: DOI:10.1128/IAI.00881-09
+  notes: Hyams C et al. 2010, 'The Streptococcus pneumoniae capsule inhibits complement
+    activity and neutrophil phagocytosis by multiple mechanisms', Infection and Immunity.
+- reference: DOI:10.1128/CMR.00001-12
+  notes: 'O''Meara TR and Alspaugh JA 2012, ''The Cryptococcus neoformans capsule:
+    a sword and a shield'', Clinical Microbiology Reviews.'
+causal_graphs:
+- graph_id: capsule_polymer_export_and_retention
+  title: Capsular polymers are exported and retained as an organized surface layer
+  description: Capsule-biosynthesis proteins synthesize and export repeat-unit polymers
+    that remain attached at the cell surface, producing an organized capsule rather
+    than a diffuse released exopolysaccharide slime.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: capsule_polymer_synthesis_and_export
+    label: capsule polymer synthesis and export
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: capsular_extracellular_polymer
+    label: capsular extracellular polymer
+    node_type: CHEMICAL
+    component_ref: capsular_extracellular_polymer
+  - node_id: cell_surface
+    label: cell surface
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: capsule
+    label: capsule
+    node_type: STRUCTURE
+    grounding: GO:0042603
+  edges:
+  - subject: capsule_polymer_synthesis_and_export
+    predicate: produces
+    object: capsular_extracellular_polymer
+    description: Dedicated capsule-biosynthesis systems synthesize and export long-chain
+      capsular polymers across the cell envelope.
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.75.103004.142545
+      notes: Whitfield 2006 reviews the group 1, group 2 and group 4 E. coli capsule
+        assembly and export systems.
+  - subject: capsular_extracellular_polymer
+    predicate: is retained at
+    object: cell_surface
+    description: Capsular polymer is retained at the envelope surface instead of being
+      fully released into the surrounding medium.
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.75.103004.142545
+      notes: Whitfield 2006 describes E. coli capsule assembly pathways that retain
+        exported polysaccharide at the cell surface.
+  - subject: capsular_extracellular_polymer
+    predicate: assembles into
+    object: capsule
+    description: The exported extracellular polymer forms the organized capsule layer
+      around the cell.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.50.1.285
+      notes: Roberts 1996 reviews bacterial capsular polysaccharide production and
+        surface capsule formation.
+    - reference: DOI:10.1128/CMR.00001-12
+      notes: O'Meara and Alspaugh 2012 review the Cryptococcus capsule as an extracellular
+        polysaccharide structure surrounding the cell wall.
+  scope_notes: The graph summarizes capsule-polymer synthesis, export, and retention
+    at the class level. Bacterial Wzy-dependent, ABC-transporter-dependent, and fungal
+    cryptococcal capsule assembly routes differ in their exact proteins.
+discussions:
+- discussion_id: capsular_polymer_type
+  prompt: Model the capsule constituent as a broad extracellular polymer rather than
+    forcing every capsule into polysaccharide chemistry.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#capsular_extracellular_polymer
+  rationale: Most curated examples are polysaccharide-rich, but the GO capsule term
+    also covers chemically different organized capsules such as the Bacillus poly-D-glutamate
+    capsule. The schema lacks a peptide-polymer enum value, so this record uses OTHER
+    with reviewed-label grounding.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.50.1.285
+    notes: Roberts 1996 notes chemical diversity among bacterial capsule polymers.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
+- discussion_id: capsule_vs_slime_layer
+  prompt: Keep the capsule record restricted to organized, surface-retained capsules
+    rather than loose slime layers.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0042603 denotes the organized capsule subclass of glycocalyx. A diffuse
+    released exopolysaccharide slime layer would need a separate record if curated.
+  evidence:
+  - reference: GO:0042603
+    notes: The GO capsule definition distinguishes an organized, strongly cell-associated
+      structure.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
