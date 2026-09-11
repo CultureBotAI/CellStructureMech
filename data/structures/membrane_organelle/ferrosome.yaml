@@ -26,6 +26,13 @@ curation_history:
   changes: Changed the terminal ferrosome graph edge from a stores-process relationship
     to a supports-process relationship and clarified the definition wording.
   llm_assisted: true
+- timestamp: '2026-09-11T14:10:21Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #494 by narrowing the taxonomic note to Grant-backed Fez evidence
+    and resolved #495 by switching the canonical example to the Byrne-backed ultrastructure
+    finding.'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 components:
@@ -82,15 +89,15 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:573370
   taxon_label: Solidesulfovibrio magneticus RS-1
   presence: COMMON
-  note: The RS-1 strain forms Fez-dependent ferrosomes and was the source used to
-    identify membrane-bounded iron-phosphorus granules distinct from its magnetosomes.
+  note: The RS-1 strain was the model used for Fez proteomics and genetics that connected
+    the Fez cluster to ferrosome formation and iron-storage function.
   reference: DOI:10.1038/s41586-022-04741-x
 canonical_examples:
 - taxon_id: NCBITaxon:573370
   taxon_label: Solidesulfovibrio magneticus RS-1
-  note: Magnetotactic bacterial model in which iron-phosphorus granules were resolved
-    ultrastructurally and later tied to the Fez ferrosome-formation cluster.
-  reference: DOI:10.1038/s41586-022-04741-x
+  note: Magnetotactic bacterial strain in which membrane-surrounded iron-phosphorus
+    granules were distinguished ultrastructurally from bullet-shaped magnetosomes.
+  reference: DOI:10.1073/pnas.1001290107
 functions:
 - function_id: anaerobic_iron_storage
   label: anaerobic iron storage

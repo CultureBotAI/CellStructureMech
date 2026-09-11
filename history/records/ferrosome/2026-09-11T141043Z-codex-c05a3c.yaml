@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/ferrosome.yaml
+  slug: ferrosome
+session:
+  id: 2026-09-11T141043Z-codex-c05a3c
+  timestamp: '2026-09-11T14:10:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/494
+  - https://github.com/CultureBotAI/CellStructureMech/issues/495
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/493
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - distribution
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added the ferrosome bacterial iron-storage organelle record
+  details: Created a minted ferrosome record for Solidesulfovibrio magneticus RS-1, curated
+    label-only Fez protein, lipid-boundary, and iron-phosphorus-oxygen core components, species-level
+    taxonomic scope, an anaerobic iron-storage function graph, and grounding TODOs, then addressed
+    PR review by narrowing taxonomic and canonical exemplar notes to the evidence supported
+    by their individual Grant 2022 and Byrne 2010 citations.
