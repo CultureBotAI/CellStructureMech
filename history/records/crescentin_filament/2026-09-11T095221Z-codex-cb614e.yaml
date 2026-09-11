@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/crescentin_filament.yaml
+  slug: crescentin_filament
+session:
+  id: 2026-09-11T095221Z-codex-cb614e
+  timestamp: '2026-09-11T09:52:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - data
+  - curation
+  summary: Added crescentin filament structure record
+  details: Created cellstructuremech:crescentin_filament with Caulobacter vibrioides scope,
+    a CreS/crescentin component, DOI-backed evidence from Ausmees 2003, Charbon 2009, and
+    Liu 2024, a cell-curvature function, a nonmechanistic assembly/localization graph, and
+    an open TODO for exact crescentin family grounding.
