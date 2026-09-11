@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/bactofilin_filament.yaml
+  slug: bactofilin_filament
+session:
+  id: 2026-09-11T101347Z-codex-4f3727
+  timestamp: '2026-09-11T10:13:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - data
+  - curation
+  summary: Added bactofilin filament structure record
+  details: Created cellstructuremech:bactofilin_filament with bacterial and Caulobacter vibrioides
+    scope, BacA/BacB-centered DOI evidence from Kuhn 2010 plus structural evidence from Vasa
+    2015 and Deng 2019, a Caulobacter stalk-biogenesis function, a nonmechanistic BacA/BacB-to-PbpC
+    graph, and an open TODO for exact bactofilin family grounding.

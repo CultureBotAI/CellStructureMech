@@ -1,0 +1,173 @@
+identifier: cellstructuremech:bactofilin_filament
+label: bactofilin filament
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A bacterial cytoskeletal filament assembled from bactofilin proteins that
+  forms beta-helical scaffolds for species-specific cellular organization processes,
+  including polar stalk biogenesis in Caulobacter vibrioides.
+definition_source: DOI:10.1038/emboj.2009.358
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T10:12:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T10:13:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoskeleton parentage, bactofilin synonymy and component curation,
+    bacterial and Caulobacter vibrioides scope, a Caulobacter stalk-scaffold function,
+    DOI evidence, a nonmechanistic BacA/BacB-to-PbpC graph, and a bactofilin grounding
+    TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0005856
+synonyms:
+- synonym_text: bactofilin cytoskeleton
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/emboj.2009.358
+- synonym_text: BacA/BacB filament
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1038/emboj.2009.358
+components:
+- component_id: bactofilin_proteins
+  label: bactofilin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - bacA
+  - bacB
+  - bacM
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for full-length filament-forming
+    bactofilin proteins was verified in this pass.
+  role: Bacteria-specific beta-helical cytoskeletal proteins that self-assemble into
+    bactofilin filaments.
+  evidence:
+  - reference: DOI:10.1038/emboj.2009.358
+    notes: Kuhn et al. 2010 identified BacA and BacB as Caulobacter bactofilins that
+      assemble into a membrane-proximal polar cytoskeletal structure.
+  - reference: DOI:10.1038/s41564-019-0544-0
+    notes: Deng et al. 2019 structurally analyzed filaments assembled from bacterial
+      bactofilin proteins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Bactofilins are widespread bacterial cytoskeletal proteins, but the family
+    is not asserted to be universal across Bacteria.
+  reference: DOI:10.1038/emboj.2009.358
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  presence: COMMON
+  note: Caulobacter vibrioides BacA and BacB cooperate to form a polar bactofilin
+    structure that recruits the PbpC cell wall synthase.
+  reference: DOI:10.1038/emboj.2009.358
+canonical_examples:
+- taxon_id: NCBITaxon:565050
+  taxon_label: Caulobacter vibrioides NA1000
+  note: Model Caulobacter strain used to identify BacA/BacB bactofilin polymers and
+    PbpC recruitment to the stalked cell pole.
+  reference: DOI:10.1038/emboj.2009.358
+functions:
+- function_id: caulobacter_stalk_biogenesis_scaffold
+  label: Caulobacter stalk biogenesis scaffold
+  description: The BacA/BacB bactofilin structure in Caulobacter vibrioides recruits
+    the PbpC peptidoglycan synthase to the stalked pole for stalk biogenesis.
+  evidence:
+  - reference: DOI:10.1038/emboj.2009.358
+    notes: Kuhn et al. 2010 showed that Caulobacter BacA and BacB recruit PbpC to
+      the stalked pole and support stalk morphogenesis.
+evidence:
+- reference: DOI:10.1038/emboj.2009.358
+  notes: Kuhn, Briegel, Morschel, Kahnt, Leser et al. 2010, 'Bactofilins, a ubiquitous
+    class of cytoskeletal proteins mediating polar localization of a cell wall synthase
+    in Caulobacter crescentus', EMBO Journal.
+- reference: DOI:10.1073/pnas.1418450112
+  notes: Vasa et al. 2015, 'beta-Helical architecture of cytoskeletal bactofilin filaments
+    revealed by solid-state NMR', PNAS.
+- reference: DOI:10.1038/s41564-019-0544-0
+  notes: Deng et al. 2019, 'The structure of bactofilin filaments reveals their mode
+    of membrane binding and lack of polarity', Nature Microbiology.
+causal_graphs:
+- graph_id: caulobacter_bactofilins_recruit_pbpc
+  title: BacA/BacB bactofilins recruit PbpC to the Caulobacter stalked pole
+  description: Caulobacter BacA and BacB assemble into a polar bactofilin scaffold
+    that localizes the PbpC cell-wall synthase and supports stalk biogenesis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records BacA/BacB polymerization and PbpC recruitment in
+    Caulobacter without asserting how the bactofilin scaffold is itself positioned
+    at the pole.
+  nodes:
+  - node_id: bactofilin_proteins
+    label: BacA and BacB bactofilins
+    node_type: GENE_OR_PROTEIN
+    component_ref: bactofilin_proteins
+  - node_id: bactofilin_filament
+    label: bactofilin filament
+    node_type: STRUCTURE
+    grounding: cellstructuremech:bactofilin_filament
+  - node_id: stalked_pole
+    label: Caulobacter stalked pole
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: pbpc
+    label: PbpC
+    node_type: GENE_OR_PROTEIN
+  - node_id: stalk_biogenesis
+    label: Caulobacter stalk biogenesis
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: bactofilin_proteins
+    predicate: polymerize into
+    object: bactofilin_filament
+    description: BacA and BacB polymerize into a bactofilin cytoskeletal structure
+      in Caulobacter cells.
+    evidence:
+    - reference: DOI:10.1038/emboj.2009.358
+      notes: Kuhn et al. 2010 localized Caulobacter BacA and BacB to the same polar
+        cytoskeletal structure.
+  - subject: bactofilin_filament
+    predicate: localizes to
+    object: stalked_pole
+    description: The Caulobacter BacA/BacB structure is positioned at the stalked
+      pole.
+    evidence:
+    - reference: DOI:10.1038/emboj.2009.358
+      notes: Kuhn et al. 2010 observed a polar BacA/BacB structure near the stalked
+        pole.
+  - subject: bactofilin_filament
+    predicate: recruits
+    object: pbpc
+    description: The BacA/BacB bactofilin scaffold recruits the PbpC peptidoglycan
+      synthase.
+    evidence:
+    - reference: DOI:10.1038/emboj.2009.358
+      notes: Kuhn et al. 2010 showed that BacA/BacB are needed for PbpC polar localization.
+  - subject: pbpc
+    predicate: supports
+    object: stalk_biogenesis
+    description: Polar PbpC localization supports stalk peptidoglycan assembly and
+      normal stalk formation.
+    evidence:
+    - reference: DOI:10.1038/emboj.2009.358
+      notes: Kuhn et al. 2010 connected PbpC localization by bactofilins to Caulobacter
+        stalk morphogenesis.
+discussions:
+- discussion_id: resolve_bactofilin_family_grounding
+  prompt: Resolve exact source-neutral grounding for full-length filament-forming
+    bactofilin proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#bactofilin_proteins
+  rationale: This first record curates experimentally demonstrated bactofilin filament
+    formation without asserting that a single unverified domain or family accession
+    captures the full bactofilin constituent class.
+  evidence:
+  - reference: DOI:10.1038/s41564-019-0544-0
+    notes: Deng et al. 2019 structurally compared multiple bacterial bactofilin filaments.
+  posed_by: codex
+  posed_date: '2026-09-11'
