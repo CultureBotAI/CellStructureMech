@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_pore_central_transport_channel.yaml
+  slug: nuclear_pore_central_transport_channel
+session:
+  id: 2026-09-11T082818Z-codex-9047b0
+  timestamp: '2026-09-11T08:28:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/441
+  - https://github.com/CultureBotAI/CellStructureMech/issues/442
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/440
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed central channel review findings
+  details: Addressed PR review issues 441 and 442 by removing the unsupported CNT synonym,
+    narrowing central-channel component ids and labels to the fungal Nup57, Nup49, and Nsp1
+    source labels, and updating the grounding TODO anchors after the component-id changes.

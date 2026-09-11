@@ -1,0 +1,240 @@
+identifier: GO:0044613
+label: nuclear pore central transport channel
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A central eukaryotic nuclear pore substructure composed of FG-repeat channel
+  nucleoporins that forms the selective transport path for RNAs, proteins, and small
+  molecules.
+definition_source: GO:0044613
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T08:17:18Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T08:18:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added central-channel synonymy, nuclear-pore parthood, three Saccharomyces
+    central-channel nucleoporin component classes, Ascomycota taxonomic scope, a Saccharomyces
+    cerevisiae example, transport-channel function, DOI/GO evidence, a conservative
+    FG-channel assembly graph, and a channel-Nup grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T08:19:05Z'
+  curator: codex
+  action: TIGHTENED_SCOPE_EVIDENCE
+  changes: Attached the Ascomycota taxonomic row and central-channel component evidence
+    to fungal inner-ring literature so the fungal scope is not supported only by a
+    Saccharomyces map.
+  llm_assisted: true
+- timestamp: '2026-09-11T08:27:50Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #441 and #442 by removing the unsupported CNT synonym and narrowing
+    central-channel component labels, graph nodes, and the grounding TODO to fungal
+    Nup57, Nup49, and Nsp1 source labels.'
+  llm_assisted: true
+- timestamp: '2026-09-11T08:28:05Z'
+  curator: codex
+  action: FIXED_DISCUSSION_ANCHORS
+  changes: Updated central-channel review TODO anchors after narrowing component ids.
+  llm_assisted: true
+synonyms:
+- synonym_text: central channel
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1534/genetics.111.127803
+part_of:
+- GO:0005643
+components:
+- component_id: nup57_family
+  label: Nup57-family channel nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP57
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This first nuclear-pore central-channel record curates fungal Nup57,
+    Nup49, and Nsp1 channel nucleoporins by source-level orthology labels and leaves
+    exact InterPro or Pfam groundings for a later family-by-family pass.
+  role: Channel nucleoporin family represented in the Saccharomyces cerevisiae central
+    transport-channel Nup57/Nup49/Nsp1 complex.
+  evidence:
+  - reference: DOI:10.1038/s41422-022-00632-y
+    notes: Li et al. 2022 modeled the Nup57/Nup49/Nsp1 central-channel complex in
+      the Saccharomyces nuclear pore inner-ring map.
+  - reference: DOI:10.1016/j.cell.2021.12.015
+    notes: Akey et al. 2022 resolved the yeast nuclear pore architecture with central-channel
+      FG nucleoporins.
+  - reference: DOI:10.1126/science.aac9176
+    notes: Stuwe et al. 2015 used fungal Nup57, Nup49, and Nsp1 proteins when determining
+      inner-ring and channel-nucleoporin architecture.
+- component_id: nup49_family
+  label: Nup49-family FG-channel nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NUP49
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This first nuclear-pore central-channel record curates fungal Nup57,
+    Nup49, and Nsp1 channel nucleoporins by source-level orthology labels and leaves
+    exact InterPro or Pfam groundings for a later family-by-family pass.
+  role: FG-repeat nucleoporin family represented in the Saccharomyces cerevisiae central
+    transport-channel Nup57/Nup49/Nsp1 complex.
+  evidence:
+  - reference: DOI:10.1038/s41422-022-00632-y
+    notes: Li et al. 2022 modeled the Nup57/Nup49/Nsp1 central-channel complex in
+      the Saccharomyces nuclear pore inner-ring map.
+  - reference: DOI:10.1534/genetics.111.127803
+    notes: Aitchison and Rout 2012 review yeast central-channel FG-repeat nucleoporins.
+  - reference: DOI:10.1126/science.aac9176
+    notes: Stuwe et al. 2015 used fungal Nup57, Nup49, and Nsp1 proteins when determining
+      inner-ring and channel-nucleoporin architecture.
+- component_id: nsp1_family
+  label: Nsp1-family FG-channel nucleoporin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - NSP1
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This first nuclear-pore central-channel record curates fungal Nup57,
+    Nup49, and Nsp1 channel nucleoporins by source-level orthology labels and leaves
+    exact InterPro or Pfam groundings for a later family-by-family pass.
+  role: FG-repeat nucleoporin family represented in the Saccharomyces cerevisiae central
+    transport-channel Nup57/Nup49/Nsp1 complex.
+  evidence:
+  - reference: DOI:10.1038/s41422-022-00632-y
+    notes: Li et al. 2022 modeled the Nup57/Nup49/Nsp1 central-channel complex in
+      the Saccharomyces nuclear pore inner-ring map.
+  - reference: DOI:10.1534/genetics.111.127803
+    notes: Aitchison and Rout 2012 review yeast central-channel FG-repeat nucleoporins.
+  - reference: DOI:10.1126/science.aac9176
+    notes: Stuwe et al. 2015 used fungal Nup57, Nup49, and Nsp1 proteins when determining
+      inner-ring and channel-nucleoporin architecture.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4890
+  taxon_label: Ascomycota
+  presence: VARIABLE
+  note: Nup57/Nup49/Nsp1-family channel nucleoporins have been characterized in budding
+    yeast and a thermophilic ascomycete, establishing sampled fungal central-channel
+    complexes without proving uniform phylum-wide composition.
+  reference: DOI:10.1126/science.aac9176
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which the Nup57/Nup49/Nsp1 central-channel complex
+    was placed in a near-atomic nuclear pore structure.
+  reference: DOI:10.1038/s41422-022-00632-y
+functions:
+- function_id: selective_nucleocytoplasmic_transport_channel
+  label: selective nucleocytoplasmic transport channel
+  description: The nuclear pore central transport channel is the FG-repeat-rich path
+    through which nucleocytoplasmic cargoes cross the pore.
+  evidence:
+  - reference: GO:0044613
+    notes: GO:0044613 defines the central transport channel as the NPC substructure
+      through which RNAs, proteins, and small molecules pass.
+  - reference: DOI:10.1101/cshperspect.a000562
+    notes: Wente and Rout 2010 review FG-repeat nucleoporins as central NPC transport
+      factors.
+evidence:
+- reference: GO:0044613
+  notes: Gene Ontology cellular-component term for the nuclear pore central transport
+    channel.
+- reference: GO:0005643
+  notes: Gene Ontology cellular-component term for the nuclear pore.
+- reference: DOI:10.1534/genetics.111.127803
+  notes: Aitchison and Rout 2012, 'The Yeast Nuclear Pore Complex and Transport Through
+    It', Genetics.
+- reference: DOI:10.1101/cshperspect.a000562
+  notes: Wente and Rout 2010, 'The Nuclear Pore Complex and Nuclear Transport', Cold
+    Spring Harbor Perspectives in Biology.
+- reference: DOI:10.1126/science.aac9176
+  notes: Stuwe et al. 2015, 'Architecture of the fungal nuclear pore inner ring complex',
+    Science.
+- reference: DOI:10.1038/s41422-022-00632-y
+  notes: Li et al. 2022, 'Near-atomic structure of the inner ring of the Saccharomyces
+    cerevisiae nuclear pore complex', Cell Research.
+- reference: DOI:10.1016/j.cell.2021.12.015
+  notes: Akey et al. 2022, 'Comprehensive structure and functional adaptations of
+    the yeast nuclear pore complex', Cell.
+causal_graphs:
+- graph_id: central_channel_fg_nup_complex
+  title: FG-channel Nups form the NPC transport path
+  description: Saccharomyces Nup57, Nup49, and Nsp1 nucleoporins contribute to a central-channel
+    complex in the nuclear pore.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the Saccharomyces central-channel Nup57/Nup49/Nsp1
+    cohort without asserting all FG-repeat Nups, copy numbers, or direct pairwise
+    contacts.
+  nodes:
+  - node_id: nup57_family
+    label: Nup57-family channel nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup57_family
+  - node_id: nup49_family
+    label: Nup49-family FG-channel nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nup49_family
+  - node_id: nsp1_family
+    label: Nsp1-family FG-channel nucleoporin
+    node_type: GENE_OR_PROTEIN
+    component_ref: nsp1_family
+  - node_id: nuclear_pore_central_transport_channel
+    label: nuclear pore central transport channel
+    node_type: STRUCTURE
+    grounding: GO:0044613
+  edges:
+  - subject: nup57_family
+    predicate: contributes to
+    object: nuclear_pore_central_transport_channel
+    description: Nup57-family channel nucleoporin is represented in the central-channel
+      complex of the Saccharomyces nuclear pore.
+    evidence:
+    - reference: DOI:10.1038/s41422-022-00632-y
+      notes: Li et al. 2022 placed Nup57 in the Saccharomyces Nup57/Nup49/Nsp1 central-channel
+        complex.
+  - subject: nup49_family
+    predicate: contributes to
+    object: nuclear_pore_central_transport_channel
+    description: Nup49-family FG-channel nucleoporin is represented in the central-channel
+      complex of the Saccharomyces nuclear pore.
+    evidence:
+    - reference: DOI:10.1038/s41422-022-00632-y
+      notes: Li et al. 2022 placed Nup49 in the Saccharomyces Nup57/Nup49/Nsp1 central-channel
+        complex.
+  - subject: nsp1_family
+    predicate: contributes to
+    object: nuclear_pore_central_transport_channel
+    description: Nsp1-family FG-channel nucleoporin is represented in the central-channel
+      complex of the Saccharomyces nuclear pore.
+    evidence:
+    - reference: DOI:10.1038/s41422-022-00632-y
+      notes: Li et al. 2022 placed Nsp1 in the Saccharomyces Nup57/Nup49/Nsp1 central-channel
+        complex.
+discussions:
+- discussion_id: resolve_central_channel_nup_family_groundings
+  prompt: Resolve exact source-neutral family groundings for Nup57, Nup49, and Nsp1
+    central-channel nucleoporins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#nup57_family
+  - components#nup49_family
+  - components#nsp1_family
+  rationale: The first central-channel record avoids guessing one exact InterPro,
+    Pfam, or NCBIfam accession for fungal channel Nup classes whose orthology and
+    FG-repeat boundaries need a dedicated pass.
+  evidence:
+  - reference: DOI:10.1038/s41422-022-00632-y
+    notes: Li et al. 2022 resolve the Saccharomyces Nup57, Nup49, and Nsp1 proteins
+      in a central-channel NPC complex.
+  - reference: DOI:10.1126/science.aac9176
+    notes: Stuwe et al. 2015 describe fungal channel Nups with Nsp1, Nup49, and Nup57
+      architecture.
+  posed_by: codex
+  posed_date: '2026-09-11'

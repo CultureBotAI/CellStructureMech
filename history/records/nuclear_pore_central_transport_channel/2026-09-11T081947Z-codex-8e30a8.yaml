@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_pore_central_transport_channel.yaml
+  slug: nuclear_pore_central_transport_channel
+session:
+  id: 2026-09-11T081947Z-codex-8e30a8
+  timestamp: '2026-09-11T08:19:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added nuclear pore central transport channel record
+  details: Created a GO:0044613 nuclear pore central transport channel record with Nup57/Nup54,
+    Nup49/Nup58, and Nsp1/Nup62 reviewed-label component classes, nuclear-pore parthood, Ascomycota
+    taxonomic scope, a Saccharomyces cerevisiae canonical example, transport-channel function,
+    DOI and GO evidence, a conservative central-channel assembly graph, and a channel-Nup
+    grounding TODO.
