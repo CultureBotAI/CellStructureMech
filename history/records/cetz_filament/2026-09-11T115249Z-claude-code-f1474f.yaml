@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cetz_filament.yaml
+  slug: cetz_filament
+session:
+  id: 2026-09-11T115249Z-claude-code-f1474f
+  timestamp: '2026-09-11T11:52:49Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/473
+  - https://github.com/CultureBotAI/CellStructureMech/issues/474
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/472
+events:
+- type: EDIT
+  outcome: changed
+  summary: Tightened CetZ filament scope after PR review
+  details: 'Addressed review issues #473 and #474 by removing the broad Archaea taxonomic-distribution
+    row, narrowing the CetZ component and graph from CetZ1/CetZ2 proteins to CetZ1-like filament
+    constituents, and adding a resolved CetZ2 boundary discussion.'

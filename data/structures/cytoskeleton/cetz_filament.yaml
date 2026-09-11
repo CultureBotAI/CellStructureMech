@@ -1,0 +1,186 @@
+identifier: cellstructuremech:cetz_filament
+label: CetZ filament
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: An archaeal tubulin-like cytoskeletal filament assembled from CetZ proteins
+  that forms dynamic envelope-associated structures and supports cell-shape remodeling
+  such as rod development in Haloferax volcanii.
+definition_source: DOI:10.1038/nature13983
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T11:45:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T11:45:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoskeleton parentage, CetZ component curation, archaeal and Haloferax
+    volcanii scope, rod-cell-development function, DOI evidence, a nonmechanistic
+    CetZ-to-envelope graph, and CetZ grounding and FtsZ boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-11T11:52:35Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issues #473 and #474 by removing the broad Archaea
+    taxonomic row, narrowing the CetZ component and graph from CetZ1/CetZ2 proteins
+    to CetZ1-like proteins, and adding a resolved CetZ2 boundary discussion.'
+  llm_assisted: true
+parent_structures:
+- GO:0005856
+components:
+- component_id: cetz1_like_proteins
+  label: CetZ1-like proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - cetZ1
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for archaeal CetZ1-like filament-forming
+    proteins was verified in this pass.
+  role: Archaeal CetZ tubulin/FtsZ-superfamily GTPases, typified by Haloferax volcanii
+    CetZ1, that assemble into dynamic envelope-associated cytoskeletal filaments for
+    cell-shape control.
+  evidence:
+  - reference: DOI:10.1038/nature13983
+    notes: Duggin et al. 2015 showed that Haloferax volcanii CetZ1 forms dynamic cytoskeletal
+      structures in vivo and that CetZ crystal structures adopt the FtsZ/tubulin superfamily
+      fold.
+  - reference: DOI:10.3390/biom13010134
+    notes: Brown and Duggin 2023 reviewed the diversity and potential multifunctionality
+      of archaeal CetZ tubulin-like cytoskeletal proteins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2246
+  taxon_label: Haloferax volcanii
+  presence: COMMON
+  note: Haloferax volcanii is the model haloarchaeon in which CetZ1 dynamic filaments
+    and CetZ-dependent rod-cell development were experimentally characterized.
+  reference: DOI:10.1038/nature13983
+canonical_examples:
+- taxon_id: NCBITaxon:2246
+  taxon_label: Haloferax volcanii
+  note: Pleomorphic haloarchaeon used to connect CetZ1 dynamic cytoskeletal structures
+    to envelope remodeling, rod-shape development and efficient swimming motility.
+  reference: DOI:10.1038/nature13983
+functions:
+- function_id: haloferax_rod_cell_development
+  label: Haloferax rod cell development
+  description: CetZ1-containing filaments remodel the Haloferax volcanii cell envelope
+    to promote the transition from irregular plate-shaped cells into motile rod-shaped
+    cells.
+  evidence:
+  - reference: DOI:10.1038/nature13983
+    notes: Duggin et al. 2015 showed that CetZ1 is required for rod-shaped cell development
+      and efficient swimming motility in Haloferax volcanii.
+evidence:
+- reference: DOI:10.1038/nature13983
+  notes: Duggin et al. 2015, 'CetZ tubulin-like proteins control archaeal cell shape',
+    Nature.
+- reference: DOI:10.3390/biom13010134
+  notes: Brown and Duggin 2023, 'Diversity and Potential Multifunctionality of Archaeal
+    CetZ Tubulin-like Cytoskeletal Proteins', Biomolecules.
+causal_graphs:
+- graph_id: cetz1_rod_cell_development
+  title: CetZ filaments support Haloferax rod-cell development
+  description: CetZ1-like proteins polymerize into envelope-associated dynamic filaments
+    that remodel the Haloferax volcanii envelope and promote rod-shape development.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records CetZ polymerization, envelope association and rod-cell
+    development without asserting the full pathway that positions CetZ structures
+    or couples them to archaellum assembly and swimming.
+  nodes:
+  - node_id: cetz1_like_proteins
+    label: CetZ1-like proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: cetz1_like_proteins
+  - node_id: cetz_filament
+    label: CetZ filament
+    node_type: STRUCTURE
+    grounding: cellstructuremech:cetz_filament
+  - node_id: archaeal_cell_envelope
+    label: archaeal cell envelope
+    node_type: STRUCTURE
+  - node_id: rod_cell_development
+    label: Haloferax rod cell development
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: cetz1_like_proteins
+    predicate: polymerize into
+    object: cetz_filament
+    description: CetZ1-like proteins assemble into archaeal tubulin-like cytoskeletal
+      filaments.
+    evidence:
+    - reference: DOI:10.1038/nature13983
+      notes: Duggin et al. 2015 resolved CetZ protofilament-like crystal packing and
+        observed dynamic CetZ1-GFP filaments in Haloferax cells.
+  - subject: cetz_filament
+    predicate: associates with
+    object: archaeal_cell_envelope
+    description: CetZ1 filaments and patches localize at or near the Haloferax volcanii
+      envelope.
+    evidence:
+    - reference: DOI:10.1038/nature13983
+      notes: Duggin et al. 2015 localized CetZ1-GFP spots and short filaments at or
+        near the cell envelope.
+  - subject: cetz_filament
+    predicate: supports
+    object: rod_cell_development
+    description: CetZ1-containing dynamic structures support development of rod-shaped
+      Haloferax cells.
+    evidence:
+    - reference: DOI:10.1038/nature13983
+      notes: Duggin et al. 2015 connected CetZ1 structures with envelope remodeling
+        and rod-cell development.
+discussions:
+- discussion_id: resolve_cetz1_family_grounding
+  prompt: Resolve exact source-neutral grounding for archaeal filament-forming CetZ1-like
+    proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cetz1_like_proteins
+  rationale: This first record curates CetZ1-supported cell-shape cytoskeletal filaments
+    without asserting that a broad FtsZ/tubulin domain, a broad CetZ family accession
+    or a Haloferax-specific accession exactly denotes archaeal CetZ1-like filament-forming
+    proteins.
+  evidence:
+  - reference: DOI:10.3390/biom13010134
+    notes: Brown and Duggin 2023 reviewed CetZ proteins as an archaeal branch of tubulin-like
+      cytoskeletal proteins.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: exclude_ftsz_from_cetz_filament_components
+  prompt: FtsZ division proteins are paralogous tubulin-family proteins rather than
+    CetZ filament constituents.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#cetz1_like_proteins
+  rationale: CetZ proteins coexist with FtsZ in many archaea and the Haloferax FtsZ1
+    division ring is distinct from the dynamic CetZ1 structures that control rod development.
+  evidence:
+  - reference: DOI:10.1038/nature13983
+    notes: Duggin et al. 2015 contrasted H. volcanii FtsZ1-GFP division rings with
+      CetZ1-GFP envelope-associated structures.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: exclude_cetz2_from_cetz1_filament_components
+  prompt: CetZ2 is not asserted as a constituent of the CetZ1 rod-development filament.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#cetz1_like_proteins
+  rationale: This first CetZ record follows the experimentally localized CetZ1-GFP
+    dynamic structures that support Haloferax rod-cell development; it leaves CetZ2
+    out of the component list until its relationship to that filament has direct structure
+    evidence.
+  evidence:
+  - reference: DOI:10.3390/biom13010134
+    notes: Brown and Duggin 2023 reviewed CetZ proteins as a diversified archaeal
+      tubulin-like family rather than a single interchangeable filament constituent
+      class.
+  posed_by: codex
+  posed_date: '2026-09-11'
