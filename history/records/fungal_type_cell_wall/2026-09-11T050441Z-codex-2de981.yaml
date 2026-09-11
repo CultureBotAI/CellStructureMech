@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/fungal_type_cell_wall.yaml
+  slug: fungal_type_cell_wall
+session:
+  id: 2026-09-11T050441Z-codex-2de981
+  timestamp: '2026-09-11T05:04:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the fungal-type cell wall record
+  details: Created an evidence-backed GO:0009277 fungal-type cell wall record with GO synonymy,
+    cell-wall parentage, beta-D-glucan, chitin, and mannoprotein components, fungal taxonomic
+    scope, Saccharomyces cerevisiae and Cryptococcus neoformans examples, osmotic-protection
+    and surface-interaction functions, a nonmechanistic cross-linked polysaccharide-wall assembly
+    graph, and a resolved boundary discussion that keeps cryptococcal capsules outside the
+    wall.

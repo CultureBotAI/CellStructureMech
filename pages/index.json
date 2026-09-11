@@ -351,6 +351,15 @@
   "definition": "The outermost lipid bilayer of a diderm cell envelope. In canonical Gram-negative bacteria it is asymmetric, with phospholipid enriched in the inner leaflet and lipopolysaccharide enriched in the outer leaflet, and contains beta-barrel proteins that mediate transport and assembly."
  },
  {
+  "identifier": "GO:0009277",
+  "label": "fungal-type cell wall",
+  "category": "ENVELOPE",
+  "kind": "ENVELOPE_LAYER",
+  "status": "PROPOSED",
+  "page": "structures/envelope/fungal_type_cell_wall.html",
+  "definition": "A rigid but dynamic carbohydrate- and glycoprotein-rich wall surrounding the fungal plasma membrane, built primarily from cross-linked glucans, mannoproteins, and chitin and kept distinct from fungal capsules outside the wall."
+ },
+ {
   "identifier": "GO:0009276",
   "label": "Gram-negative-bacterium-type cell wall",
   "category": "ENVELOPE",
