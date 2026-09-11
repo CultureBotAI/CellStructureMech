@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tad pilus · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>Tad pilus</h1>
+<p class="meta"><code>cellstructuremech:tad_pilus</code> · APPENDAGE · APPENDAGE · <span class="status">PROPOSED</span></p>
+<p class="definition">A tight-adherence subtype of type IV pilus that extends and retracts from a bacterial cell pole. In Caulobacter vibrioides, Tad pili are polar PilA filaments whose dynamic activity promotes surface sensing, surface colonization and holdfast-dependent permanent attachment. <small>[<a href="https://doi.org/10.1128/mBio.01237-19"><code>DOI:10.1128/mBio.01237-19</code></a>]</small></p>
+<p><strong>Synonyms:</strong> tight-adherence pilus; type IVc pilus; Flp pilus</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-pila_major_pilin"><td>PilA major pilin</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>pilA</td><td></td><td></td><td>Polymerizes into the polar Tad pilus filament that extends and retracts during Caulobacter surface exploration.<ul class="evidence"><li><a href="https://doi.org/10.1128/mBio.01237-19"><code>DOI:10.1128/mBio.01237-19</code></a> <small>Sangermani et al. 2019 image dynamic Caulobacter Tad pili and identify PilA as the pilin building the polar filament.</small></li><li><a href="https://doi.org/10.1126/science.aan5706"><code>DOI:10.1126/science.aan5706</code></a> <small>Ellison et al. 2017 fluorescently labeled Caulobacter PilA to directly observe Tad pilus extension and retraction.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_155892"><code>NCBITaxon:155892</code></a> Caulobacter vibrioides — <strong>UNIVERSAL</strong>: Caulobacter vibrioides encodes polar Tad pili used by swarmer cells for dynamic surface colonization before holdfast-mediated permanent attachment. [<a href="https://doi.org/10.1128/mBio.01237-19"><code>DOI:10.1128/mBio.01237-19</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_565050"><code>NCBITaxon:565050</code></a> <em>Caulobacter vibrioides NA1000</em> — Caulobacter vibrioides NA1000 is the model strain in direct-imaging and optical-trapping studies of dynamic Tad pili. [<a href="https://doi.org/10.1128/mBio.01237-19"><code>DOI:10.1128/mBio.01237-19</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>Tad pilus extension and retraction</strong> — The CpaF motor extends and retracts polar PilA filaments so Caulobacter cells can repeatedly probe nearby surfaces.<ul class="evidence"><li><a href="https://doi.org/10.1126/science.aan5706"><code>DOI:10.1126/science.aan5706</code></a> <small>Ellison et al. 2017 directly observed extension and retraction of labeled Caulobacter Tad pili.</small></li><li><a href="https://doi.org/10.1038/s41467-024-50280-6"><code>DOI:10.1038/s41467-024-50280-6</code></a> <small>Hohl et al. 2024 show bidirectional processing by the Tad pilus CpaF motor.</small></li></ul></li><li><strong>surface colonization</strong> — Cycles of Tad pilus extension, surface contact and retraction help Caulobacter cells remain near a surface long enough to deposit a holdfast.<ul class="evidence"><li><a href="https://doi.org/10.1128/mBio.01237-19"><code>DOI:10.1128/mBio.01237-19</code></a> <small>Sangermani et al. 2019 propose that the flagellum and Tad pili cooperate to progressively drive Caulobacter surface colonization.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-cpaf_pila_tad_pilus_dynamics">CpaF extends and retracts PilA Tad pili <small>(FUNCTION)</small></h3>
+<p>PilA subunits polymerize into a polar Tad pilus filament, the CpaF motor drives filament extension and retraction, and retraction after surface contact keeps the cell near abiotic surfaces during early colonization.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>PilA major pilin</td><td>polymerizes into</td><td>Tad pilus</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/mBio.01237-19"><code>DOI:10.1128/mBio.01237-19</code></a> <small>Sangermani et al. 2019 track dynamic Caulobacter Tad pili built from PilA pilin.</small></li></ul></td></tr>
+<tr><td>CpaF Tad pilus motor</td><td>extends and retracts</td><td>Tad pilus</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-024-50280-6"><code>DOI:10.1038/s41467-024-50280-6</code></a> <small>Hohl et al. 2024 structurally and biochemically analyze bidirectional pilus processing by CpaF.</small></li><li><a href="https://doi.org/10.1126/science.aan5706"><code>DOI:10.1126/science.aan5706</code></a> <small>Ellison et al. 2017 show that Caulobacter Tad pili retract and that retraction obstruction stimulates surface sensing.</small></li></ul></td></tr>
+<tr><td>Tad pilus</td><td>contacts</td><td>abiotic surface</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/mBio.01237-19"><code>DOI:10.1128/mBio.01237-19</code></a> <small>Sangermani et al. 2019 image Tad pilus extension toward the surface during Caulobacter colonization assays.</small></li></ul></td></tr>
+<tr><td>Tad pilus</td><td>supports</td><td>surface colonization</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/mBio.01237-19"><code>DOI:10.1128/mBio.01237-19</code></a> <small>Sangermani et al. 2019 describe Tad pili as dynamic structures that promote surface colonization.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (RESOLVED): Keep CpaF and the rest of the Cpa assembly machinery out of the component table for this first Tad pilus record. <small>This record denotes the extracellular PilA filament rather than the complete Tad envelope machine. CpaF is therefore shown as the extension-retraction motor in the function graph, while exact structural boundaries for the rest of the Cpa machinery remain out of scope.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral family groundings for the PilA major pilin. <small>The record intentionally uses a reviewed label until an exact InterPro, Pfam or NCBIfam identifier for Caulobacter PilA-family Tad pilins can be verified.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1128/mBio.01237-19"><code>DOI:10.1128/mBio.01237-19</code></a> <small>Sangermani M et al. 2019, &#39;Tad Pili Play a Dynamic Role in Caulobacter crescentus Surface Colonization&#39;, mBio.</small></li><li><a href="https://doi.org/10.1126/science.aan5706"><code>DOI:10.1126/science.aan5706</code></a> <small>Ellison CK et al. 2017, &#39;Obstruction of pilus retraction stimulates bacterial surface sensing&#39;, Science.</small></li><li><a href="https://doi.org/10.1038/s41467-024-50280-6"><code>DOI:10.1038/s41467-024-50280-6</code></a> <small>Hohl M et al. 2024, &#39;Bidirectional pilus processing in the Tad pilus system motor CpaF&#39;, Nature Communications.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-11T02:41:52Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T02:42:31Z</code> codex · EXPANDED_RECORD — Added Tad/Flp synonymy, type IV pilus parentage, PilA as the major pilin constituent, Caulobacter taxonomy, extension-retraction and surface-colonization functions, a CpaF/PilA dynamics graph, DOI evidence, and grounding/boundary discussions.</li><li><code>2026-09-11T02:51:48Z</code> codex · ADDRESS_REVIEW — Resolved PR #395 issues #396 and #397 by collapsing duplicate CpaF retraction edges into one motor edge and typing the terminal surface-colonization outcome as a biological process.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/tad_pilus.yaml"><code>data/structures/appendage/tad_pilus.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

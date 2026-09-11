@@ -1,0 +1,196 @@
+identifier: cellstructuremech:tad_pilus
+label: Tad pilus
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: A tight-adherence subtype of type IV pilus that extends and retracts from
+  a bacterial cell pole. In Caulobacter vibrioides, Tad pili are polar PilA filaments
+  whose dynamic activity promotes surface sensing, surface colonization and holdfast-dependent
+  permanent attachment.
+definition_source: DOI:10.1128/mBio.01237-19
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T02:41:52Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T02:42:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Tad/Flp synonymy, type IV pilus parentage, PilA as the major pilin
+    constituent, Caulobacter taxonomy, extension-retraction and surface-colonization
+    functions, a CpaF/PilA dynamics graph, DOI evidence, and grounding/boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-11T02:51:48Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #395 issues #396 and #397 by collapsing duplicate CpaF retraction
+    edges into one motor edge and typing the terminal surface-colonization outcome
+    as a biological process.'
+  llm_assisted: true
+synonyms:
+- synonym_text: tight-adherence pilus
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/mBio.01237-19
+- synonym_text: type IVc pilus
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41467-024-50280-6
+- synonym_text: Flp pilus
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mBio.01237-19
+parent_structures:
+- GO:0044096
+components:
+- component_id: pila_major_pilin
+  label: PilA major pilin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - pilA
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PilA is the Caulobacter Tad pilus major pilin; no exact source-neutral
+    PilA family CURIE was curated for this first record.
+  role: Polymerizes into the polar Tad pilus filament that extends and retracts during
+    Caulobacter surface exploration.
+  evidence:
+  - reference: DOI:10.1128/mBio.01237-19
+    notes: Sangermani et al. 2019 image dynamic Caulobacter Tad pili and identify
+      PilA as the pilin building the polar filament.
+  - reference: DOI:10.1126/science.aan5706
+    notes: Ellison et al. 2017 fluorescently labeled Caulobacter PilA to directly
+      observe Tad pilus extension and retraction.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  presence: UNIVERSAL
+  note: Caulobacter vibrioides encodes polar Tad pili used by swarmer cells for dynamic
+    surface colonization before holdfast-mediated permanent attachment.
+  reference: DOI:10.1128/mBio.01237-19
+canonical_examples:
+- taxon_id: NCBITaxon:565050
+  taxon_label: Caulobacter vibrioides NA1000
+  note: Caulobacter vibrioides NA1000 is the model strain in direct-imaging and optical-trapping
+    studies of dynamic Tad pili.
+  reference: DOI:10.1128/mBio.01237-19
+functions:
+- function_id: tad_pilus_extension_retraction
+  label: Tad pilus extension and retraction
+  description: The CpaF motor extends and retracts polar PilA filaments so Caulobacter
+    cells can repeatedly probe nearby surfaces.
+  evidence:
+  - reference: DOI:10.1126/science.aan5706
+    notes: Ellison et al. 2017 directly observed extension and retraction of labeled
+      Caulobacter Tad pili.
+  - reference: DOI:10.1038/s41467-024-50280-6
+    notes: Hohl et al. 2024 show bidirectional processing by the Tad pilus CpaF motor.
+- function_id: surface_colonization
+  label: surface colonization
+  description: Cycles of Tad pilus extension, surface contact and retraction help
+    Caulobacter cells remain near a surface long enough to deposit a holdfast.
+  evidence:
+  - reference: DOI:10.1128/mBio.01237-19
+    notes: Sangermani et al. 2019 propose that the flagellum and Tad pili cooperate
+      to progressively drive Caulobacter surface colonization.
+evidence:
+- reference: DOI:10.1128/mBio.01237-19
+  notes: Sangermani M et al. 2019, 'Tad Pili Play a Dynamic Role in Caulobacter crescentus
+    Surface Colonization', mBio.
+- reference: DOI:10.1126/science.aan5706
+  notes: Ellison CK et al. 2017, 'Obstruction of pilus retraction stimulates bacterial
+    surface sensing', Science.
+- reference: DOI:10.1038/s41467-024-50280-6
+  notes: Hohl M et al. 2024, 'Bidirectional pilus processing in the Tad pilus system
+    motor CpaF', Nature Communications.
+causal_graphs:
+- graph_id: cpaf_pila_tad_pilus_dynamics
+  title: CpaF extends and retracts PilA Tad pili
+  description: PilA subunits polymerize into a polar Tad pilus filament, the CpaF
+    motor drives filament extension and retraction, and retraction after surface contact
+    keeps the cell near abiotic surfaces during early colonization.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: cpaf_motor
+    label: CpaF Tad pilus motor
+    node_type: GENE_OR_PROTEIN
+  - node_id: pila_major_pilin
+    label: PilA major pilin
+    node_type: GENE_OR_PROTEIN
+    component_ref: pila_major_pilin
+  - node_id: tad_pilus
+    label: Tad pilus
+    node_type: STRUCTURE
+    grounding: cellstructuremech:tad_pilus
+  - node_id: abiotic_surface
+    label: abiotic surface
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: surface_colonization
+    label: surface colonization
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: pila_major_pilin
+    predicate: polymerizes into
+    object: tad_pilus
+    description: PilA is assembled into the polar Tad pilus filament.
+    evidence:
+    - reference: DOI:10.1128/mBio.01237-19
+      notes: Sangermani et al. 2019 track dynamic Caulobacter Tad pili built from
+        PilA pilin.
+  - subject: cpaf_motor
+    predicate: extends and retracts
+    object: tad_pilus
+    description: CpaF is the Tad pilus motor that supports bidirectional processing
+      of PilA subunits, enabling pilus extension and retraction.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50280-6
+      notes: Hohl et al. 2024 structurally and biochemically analyze bidirectional
+        pilus processing by CpaF.
+    - reference: DOI:10.1126/science.aan5706
+      notes: Ellison et al. 2017 show that Caulobacter Tad pili retract and that retraction
+        obstruction stimulates surface sensing.
+  - subject: tad_pilus
+    predicate: contacts
+    object: abiotic_surface
+    description: Extension projects the Tad pilus away from the pole so its distal
+      end can encounter nearby surfaces.
+    evidence:
+    - reference: DOI:10.1128/mBio.01237-19
+      notes: Sangermani et al. 2019 image Tad pilus extension toward the surface during
+        Caulobacter colonization assays.
+  - subject: tad_pilus
+    predicate: supports
+    object: surface_colonization
+    description: Repeated Tad pilus extension and retraction near a surface contributes
+      to dynamic exploration and surface colonization.
+    evidence:
+    - reference: DOI:10.1128/mBio.01237-19
+      notes: Sangermani et al. 2019 describe Tad pili as dynamic structures that promote
+        surface colonization.
+discussions:
+- discussion_id: cpaf_cpa_boundary
+  prompt: Keep CpaF and the rest of the Cpa assembly machinery out of the component
+    table for this first Tad pilus record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#cpaf_pila_tad_pilus_dynamics
+  rationale: This record denotes the extracellular PilA filament rather than the complete
+    Tad envelope machine. CpaF is therefore shown as the extension-retraction motor
+    in the function graph, while exact structural boundaries for the rest of the Cpa
+    machinery remain out of scope.
+  evidence:
+  - reference: DOI:10.1038/s41467-024-50280-6
+    notes: Hohl et al. 2024 resolve CpaF as a motor acting in the Tad pilus system.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
+- discussion_id: resolve_tad_pilus_groundings
+  prompt: Resolve exact source-neutral family groundings for the PilA major pilin.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pila_major_pilin
+  rationale: The record intentionally uses a reviewed label until an exact InterPro,
+    Pfam or NCBIfam identifier for Caulobacter PilA-family Tad pilins can be verified.
+  posed_by: codex
+  posed_date: '2026-09-11'
