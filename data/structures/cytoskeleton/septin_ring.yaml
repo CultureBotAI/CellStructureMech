@@ -21,6 +21,13 @@ curation_history:
     scaffolding function, DOI/GO evidence, a septin oligomer-filament-ring assembly
     graph, and septin-complex boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-11T05:39:00Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #420, #421, and #422 by narrowing the canonical example to the
+    Iwase-supported bud-neck septin ring, scoping the hetero-octamer assembly graph
+    to budding yeast, and typing the hetero-octamer and filament graph nodes as structures.'
+  llm_assisted: true
 parent_structures:
 - GO:0032156
 part_of:
@@ -56,8 +63,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model in which Cdc3/Cdc10/Cdc11/Cdc12/Shs1 septins form a bud-neck
-    ring and hetero-octamers have been reconstituted.
+  note: Budding-yeast model in which Cdc3/Cdc10/Cdc11/Cdc12/Shs1 septins form a ring
+    at the mother-bud neck.
   reference: DOI:10.1534/genetics.107.073007
 functions:
 - function_id: cytokinesis_site_scaffold
@@ -92,15 +99,15 @@ evidence:
     Fungi', Eukaryotic Cell.
 causal_graphs:
 - graph_id: septin_oligomer_filament_ring_assembly
-  title: Septin hetero-oligomers polymerize into a cortical ring
-  description: Fungal septin proteins assemble into hetero-oligomeric rods, the rods
-    polymerize into septin filaments, and septin filaments organize at the cell cortex
-    to form the septin ring.
+  title: Budding-yeast septin hetero-octamers polymerize into a cortical ring
+  description: In Saccharomyces cerevisiae, septin proteins assemble into hetero-octameric
+    rods, the rods polymerize into septin filaments, and septin filaments organize
+    at the bud-neck cortex to form the septin ring.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures the yeast septin hierarchy from paralogous septin
-    subunits to oligomers, filaments, and rings without asserting a single paralog
-    order for all fungal septin rings.
+  scope_notes: The graph captures the Saccharomyces cerevisiae hierarchy from paralogous
+    septin subunits to hetero-octamers, filaments, and a bud-neck ring without asserting
+    a single paralog order or oligomer size for all fungal septin rings.
   nodes:
   - node_id: septin_proteins
     label: septin proteins
@@ -108,10 +115,10 @@ causal_graphs:
     component_ref: septin_proteins
   - node_id: septin_hetero_octamer
     label: budding-yeast septin hetero-octamer
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
   - node_id: septin_filaments
     label: septin filaments
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
   - node_id: cell_cortex
     label: cell cortex
     node_type: CELLULAR_LOCALIZATION
@@ -136,7 +143,8 @@ causal_graphs:
   - subject: septin_hetero_octamer
     predicate: polymerizes into
     object: septin_filaments
-    description: Septin hetero-oligomeric rods associate end to end to form filaments.
+    description: Budding-yeast septin hetero-octameric rods associate end to end to
+      form filaments.
     evidence:
     - reference: DOI:10.1073/pnas.0803330105
       notes: Bertin et al. 2008 visualized purified budding-yeast septin hetero-octamers
@@ -146,8 +154,8 @@ causal_graphs:
   - subject: septin_filaments
     predicate: assemble at
     object: cell_cortex
-    description: Septin filaments are organized at the cortex to form a ring at the
-      future division plane.
+    description: Budding-yeast septin filaments are organized at the bud-neck cortex
+      to form a ring at the future division plane.
     evidence:
     - reference: GO:0005940
       notes: GO:0005940 defines the septin ring as a ring-shaped structure at the
@@ -158,12 +166,11 @@ causal_graphs:
   - subject: septin_ring
     predicate: marks
     object: cytokinesis_site
-    description: The fungal septin ring marks the cortical site where cytokinesis
-      and septation occur.
+    description: The budding-yeast septin ring marks the mother-bud cytokinesis site.
     evidence:
-    - reference: DOI:10.1128/EC.4.9.1503-1512.2005
-      notes: Douglas et al. 2005 review septin rings at yeast and fungal division
-        or septation sites.
+    - reference: DOI:10.3389/fcell.2016.00123
+      notes: Glomb and Gronemeyer 2016 review septin-ring organization and cytokinesis
+        functions at the budding-yeast bud neck.
 discussions:
 - discussion_id: septin_ring_not_septin_complex
   prompt: Keep the septin ring distinct from the smaller septin hetero-oligomer complexes
