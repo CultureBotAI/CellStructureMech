@@ -21,6 +21,13 @@ curation_history:
     cohorts, Eukaryota distribution, a Saccharomyces example, mRNA catabolic function,
     GO/DOI evidence, a yeast P-body assembly graph and a component-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T20:00:17Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #545 by narrowing the Saccharomyces example to the Sheth-and-Parker
+    localization claim; resolved #546 by connecting the mRNA-cargo and Edc3/Lsm4 graph
+    nodes directly to the P-body structure.'
+  llm_assisted: true
 synonyms:
 - synonym_text: P body
   synonym_type: EXACT_SYNONYM
@@ -100,7 +107,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast model in which decapping and 5-to-3 mRNA decay were localized
-    to cytoplasmic processing bodies and RNA dependence of P-body assembly was established.
+    to cytoplasmic processing bodies.
   reference: DOI:10.1126/science.1082320
 functions:
 - function_id: mrna_catabolic_process
@@ -187,6 +194,23 @@ causal_graphs:
     - reference: DOI:10.1083/jcb.200704147
       notes: Decker, Teixeira and Parker 2007 connected Edc3p and the Lsm4p Q/N-rich
         domain to P-body assembly in S. cerevisiae.
+  - subject: nontranslating_mrna_cargo
+    predicate: is concentrated in
+    object: p_body
+    description: Nontranslating mRNAs are RNA constituents of cytoplasmic P-body foci.
+    evidence:
+    - reference: DOI:10.1261/rna.7258505
+      notes: Teixeira et al. 2005 reported that yeast processing bodies contain nontranslating
+        mRNAs.
+  - subject: edc3_lsm4_assembly_scaffolds
+    predicate: supports assembly of
+    object: p_body
+    description: Edc3 and the Q/N-rich C-terminal region of Lsm4 support Saccharomyces
+      P-body focus assembly.
+    evidence:
+    - reference: DOI:10.1083/jcb.200704147
+      notes: Decker, Teixeira and Parker 2007 tied Edc3p and the Lsm4p Q/N-rich domain
+        to formation of microscopically visible P-bodies.
   - subject: p_body_assembly
     predicate: produces
     object: p_body
