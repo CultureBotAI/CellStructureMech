@@ -1,0 +1,291 @@
+identifier: cellstructuremech:prostheca
+label: prostheca
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: A tubular projection of the bacterial cell envelope and cytoplasm that
+  extends away from the main cell body in prosthecate bacteria. In stalked Caulobacter
+  cells, the prostheca contains the inner membrane, peptidoglycan and outer membrane
+  layers of the Gram-negative envelope and supports stalk-specific compartmentalization
+  and nutrient uptake.
+definition_source: DOI:10.1073/pnas.0909119107
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T03:08:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T03:10:00Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added prostheca synonymy, cell-projection parentage, envelope substructures
+    and molecular constituents, Caulobacter and Bacteria taxonomy, nutrient-uptake
+    and compartmentalization functions, a Caulobacter stalk-biogenesis graph, DOI
+    evidence, and boundary/grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-11T03:10:21Z'
+  curator: codex
+  action: REFINED_CAUSAL_GRAPH
+  changes: Removed an unused stalk_compartments node from the prostheca assembly graph.
+  llm_assisted: true
+- timestamp: '2026-09-11T03:18:58Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #398 issues #399 and #400 by adding the plasma membrane to
+    the prostheca has_part list and replacing the dilute-nutrients chemical graph
+    endpoint with a nutrient-uptake biological process.'
+  llm_assisted: true
+synonyms:
+- synonym_text: bacterial stalk
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1371/journal.pone.0184063
+- synonym_text: Caulobacter stalk
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1073/pnas.0909119107
+- synonym_text: prosthecate cell extension
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1371/journal.pone.0184063
+parent_structures:
+- GO:0042995
+has_part:
+- GO:0005886
+- GO:0009274
+- GO:0009279
+components:
+- component_id: stalk_peptidoglycan
+  label: stalk peptidoglycan
+  component_type: PEPTIDOGLYCAN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The prostheca contains stalk-specific peptidoglycan, but no exact
+    source-neutral accession was curated for the Caulobacter stalk wall mesh.
+  role: Forms the rigid cell-wall layer that supports the narrow cylindrical extension
+    from the cell body.
+  evidence:
+  - reference: DOI:10.1371/journal.pgen.1007897
+    notes: Billini et al. 2019 dissect stalk-specific peptidoglycan formation by Caulobacter
+      stalk wall-synthesis machinery.
+  - reference: DOI:10.1111/mmi.12422
+    notes: Hughes et al. 2013 connect a penicillin-binding protein with synthesis
+      and protein localization in the Caulobacter stalk organelle.
+- component_id: stalk_envelope_lipids
+  label: stalk envelope membrane lipids
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Caulobacter prosthecae extend the inner and outer membranes, but
+    the first record does not assert a defined stalk-specific lipid species or exact
+    lipid mixture.
+  role: Build membrane bilayers that continue from the cell body envelope into the
+    prostheca.
+  evidence:
+  - reference: DOI:10.1073/pnas.0909119107
+    notes: Hughes et al. 2010 describe the Caulobacter stalk as a cylindrical extension
+      of all cell envelope layers.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Prosthecae are produced by a subset of bacteria with stalked or otherwise
+    prosthecate morphology and are absent from most bacterial lineages.
+  reference: DOI:10.1371/journal.pone.0184063
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  presence: UNIVERSAL
+  note: Caulobacter vibrioides swarmer cells differentiate into stalked cells that
+    elaborate a polar prostheca during the normal developmental cycle.
+  reference: DOI:10.1111/j.1365-2958.2005.04970.x
+canonical_examples:
+- taxon_id: NCBITaxon:565050
+  taxon_label: Caulobacter vibrioides NA1000
+  note: Model strain used to dissect cell-cycle-coupled stalk biogenesis, StpX stalk
+    localization and MreB-dependent stalk-specific peptidoglycan assembly.
+  reference: DOI:10.1073/pnas.0909119107
+functions:
+- function_id: stalk_envelope_extension
+  label: polar envelope extension
+  description: Cell-cycle-coupled stalk biogenesis extends the Caulobacter envelope
+    at the old pole after the swarmer-to-stalked transition.
+  evidence:
+  - reference: DOI:10.1111/j.1365-2958.2005.04970.x
+    notes: Biondi et al. 2006 identify a phosphorelay system that controls Caulobacter
+      stalk biogenesis during cell-cycle progression.
+- function_id: dilute_nutrient_scavenging
+  label: nutrient uptake from dilute media
+  description: The narrow envelope extension can increase the cell surface available
+    for nutrient uptake in dilute media.
+  evidence:
+  - reference: DOI:10.1073/pnas.0602047103
+    notes: Wagner et al. 2006 test a nutrient-uptake role for bacterial cell-envelope
+      extensions.
+  - reference: DOI:10.1046/j.1365-2958.2002.03071.x
+    notes: Ireland et al. 2002 find transport-related proteins in isolated Caulobacter
+      stalks.
+- function_id: stalk_compartmentalization
+  label: stalk compartmentalization
+  description: Protein diffusion barriers divide the Caulobacter stalk from the cell
+    body and separate stalk segments from each other.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2012.10.046
+    notes: Schlimpert et al. 2012 show that crossband diffusion barriers compartmentalize
+      the Caulobacter stalk.
+evidence:
+- reference: DOI:10.1073/pnas.0909119107
+  notes: Hughes HV et al. 2010, 'Protein localization and dynamics within a bacterial
+    organelle', Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1371/journal.pone.0184063
+  notes: Curtis PD 2017, 'Stalk formation of Brevundimonas and how it compares to
+    Caulobacter crescentus', PLOS ONE.
+- reference: DOI:10.1371/journal.pgen.1007897
+  notes: Billini M et al. 2019, 'A specialized MreB-dependent cell wall biosynthetic
+    complex mediates the formation of stalk-specific peptidoglycan in Caulobacter
+    crescentus', PLOS Genetics.
+- reference: DOI:10.1073/pnas.0602047103
+  notes: Wagner JK et al. 2006, 'A nutrient uptake role for bacterial cell envelope
+    extensions', Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1111/j.1365-2958.2005.04970.x
+  notes: Biondi EG et al. 2006, 'A phosphorelay system controls stalk biogenesis during
+    cell cycle progression in Caulobacter crescentus', Molecular Microbiology.
+- reference: DOI:10.1016/j.cell.2012.10.046
+  notes: Schlimpert S et al. 2012, 'General protein diffusion barriers create compartments
+    within bacterial cells', Cell.
+causal_graphs:
+- graph_id: caulobacter_stalk_wall_synthesis_extension
+  title: MreB-dependent wall synthesis extends the Caulobacter stalk
+  description: Cell-cycle regulators control Caulobacter stalk biogenesis, MreB-dependent
+    stalk-wall machinery builds stalk-specific peptidoglycan, and continued envelope
+    extension yields a polar prostheca whose StpX and crossband proteins help maintain
+    local stalk organization.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: shpa_taca_phosphorelay
+    label: ShpA-TacA stalk phosphorelay
+    node_type: GENE_OR_PROTEIN
+  - node_id: stalk_wall_synthesis_machinery
+    label: MreB-dependent stalk wall-synthesis machinery
+    node_type: GENE_OR_PROTEIN
+  - node_id: stalk_peptidoglycan
+    label: stalk peptidoglycan
+    node_type: CHEMICAL
+    component_ref: stalk_peptidoglycan
+  - node_id: stalk_envelope_lipids
+    label: stalk envelope membrane lipids
+    node_type: CHEMICAL
+    component_ref: stalk_envelope_lipids
+  - node_id: stpx
+    label: StpX stalk-localized membrane protein
+    node_type: GENE_OR_PROTEIN
+  - node_id: stp_crossbands
+    label: StpABCD stalk crossbands
+    node_type: GENE_OR_PROTEIN
+  - node_id: prostheca
+    label: prostheca
+    node_type: STRUCTURE
+    grounding: cellstructuremech:prostheca
+  - node_id: dilute_nutrient_scavenging
+    label: nutrient uptake from dilute media
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: shpa_taca_phosphorelay
+    predicate: controls biogenesis of
+    object: prostheca
+    description: The ShpA-dependent phosphorelay controls the Caulobacter stalk-biogenesis
+      program during cell-cycle progression.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2005.04970.x
+      notes: Biondi et al. 2006 connect the Caulobacter phosphorelay to stalk biogenesis.
+  - subject: stalk_wall_synthesis_machinery
+    predicate: synthesizes
+    object: stalk_peptidoglycan
+    description: MreB-dependent stalk wall-synthesis machinery produces the peptidoglycan
+      of the extending stalk.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1007897
+      notes: Billini et al. 2019 analyze MreB-dependent formation of Caulobacter stalk-specific
+        peptidoglycan.
+  - subject: stalk_peptidoglycan
+    predicate: supports
+    object: prostheca
+    description: Stalk peptidoglycan provides the load-bearing wall of the cylindrical
+      envelope projection.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0184063
+      notes: Curtis 2017 reviews the stalk as an unusual bacterial cell-wall extension.
+  - subject: stalk_envelope_lipids
+    predicate: extend into
+    object: prostheca
+    description: The inner and outer membranes of the Caulobacter envelope continue
+      from the cell body into the stalk.
+    evidence:
+    - reference: DOI:10.1073/pnas.0909119107
+      notes: Hughes et al. 2010 describe the stalk as an extension of all cell envelope
+        layers.
+  - subject: stpx
+    predicate: localizes to
+    object: prostheca
+    description: StpX is a stalk-enriched membrane protein with localization determinants
+      that govern entry into and retention within the Caulobacter stalk.
+    evidence:
+    - reference: DOI:10.1073/pnas.0909119107
+      notes: Hughes et al. 2010 identify StpX as a stalk-localized protein.
+  - subject: stpx
+    predicate: modulates elongation of
+    object: prostheca
+    description: StpX contributes to correct Caulobacter stalk elongation without
+      being curated as a cross-species prostheca constituent.
+    evidence:
+    - reference: DOI:10.1073/pnas.0909119107
+      notes: Hughes et al. 2010 connect StpX with modulation of stalk elongation.
+  - subject: stp_crossbands
+    predicate: compartmentalize
+    object: prostheca
+    description: StpABCD-containing crossbands create diffusion barriers along the
+      Caulobacter stalk.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2012.10.046
+      notes: Schlimpert et al. 2012 identify protein diffusion barriers that create
+        stalk compartments.
+  - subject: prostheca
+    predicate: supports
+    object: dilute_nutrient_scavenging
+    description: The envelope extension can increase the cell surface available for
+      uptake from dilute nutrient pools.
+    evidence:
+    - reference: DOI:10.1073/pnas.0602047103
+      notes: Wagner et al. 2006 test nutrient uptake by bacterial cell-envelope extensions.
+discussions:
+- discussion_id: stalk_machinery_boundary
+  prompt: Keep Caulobacter-specific StpX, crossband proteins and stalk wall-synthesis
+    proteins out of the prostheca component table.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#caulobacter_stalk_wall_synthesis_extension
+  rationale: This record denotes the envelope extension, whose cross-lineage constituents
+    are the wall and membrane materials, not every protein needed for Caulobacter
+    stalk elongation or compartmentalization. The first mechanism graph captures PbpC/MreB-dependent
+    stalk wall synthesis, StpX localization and StpABCD crossbands as Caulobacter
+    actors until exact component boundaries can be asserted.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0184063
+    notes: Curtis 2017 compares Caulobacter and Brevundimonas stalk formation and
+      highlights limited conservation for several Caulobacter stalk-associated proteins.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
+- discussion_id: resolve_stalk_envelope_groundings
+  prompt: Resolve exact source-neutral groundings for stalk-specific peptidoglycan
+    and stalk envelope lipids.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#stalk_peptidoglycan
+  - components#stalk_envelope_lipids
+  rationale: The prostheca is built by extension of chemically diverse envelope layers,
+    so the initial record uses reviewed labels instead of over-specific generic chemical
+    CURIEs.
+  posed_by: codex
+  posed_date: '2026-09-11'

@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/prostheca.yaml
+  slug: prostheca
+session:
+  id: 2026-09-11T031031Z-codex-486d6e
+  timestamp: '2026-09-11T03:10:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added Caulobacter prostheca cell-structure record
+  details: Created an evidence-backed prostheca record minted under cellstructuremech:prostheca
+    because GO lacks an exact prostheca cellular-component term. The record captures the bacterial
+    stalk as a cell-envelope projection with peptidoglycan and membrane-lipid constituents,
+    Caulobacter vibrioides scope, nutrient-uptake and stalk-compartmentalization functions,
+    a Caulobacter stalk wall-synthesis graph, DOI-backed evidence, and open grounding TODOs
+    for exact stalk-envelope constituents.
