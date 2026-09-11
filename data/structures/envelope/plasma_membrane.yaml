@@ -1,0 +1,232 @@
+identifier: GO:0005886
+label: plasma membrane
+structure_category: ENVELOPE
+structure_kind: MEMBRANE
+definition: The phospholipid-bilayer membrane surrounding a cell that separates the
+  cytoplasm from the external environment and houses proteins for selective transport,
+  signaling, and envelope biogenesis.
+definition_source: GO:0005886
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T04:16:55Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T04:17:37Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cell-membrane and cytoplasmic-membrane synonymy, membrane and cell-periphery
+    parentage, lipid and integral-protein components, bacterial, archaeal, and fungal
+    taxonomy, E. coli and S. cerevisiae examples, permeability and bioenergetic functions,
+    a lipid-bilayer assembly graph, DOI/GO evidence, and a terminology discussion.
+  llm_assisted: true
+- timestamp: '2026-09-11T04:18:01Z'
+  curator: codex
+  action: TIGHTENED_GROUNDING_LABEL
+  changes: Changed the GO:0055085 graph node label from selective transmembrane transport
+    to the canonical GO label, transmembrane transport.
+  llm_assisted: true
+synonyms:
+- synonym_text: cell membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005886
+- synonym_text: cytoplasmic membrane
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1101/cshperspect.a000414
+- synonym_text: bacterial inner membrane
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1101/cshperspect.a000414
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0071944
+components:
+- component_id: membrane_lipids
+  label: plasma-membrane lipids
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The plasma membrane is built from a bilayer-forming lipid mixture
+    whose exact chemistry differs among bacteria, archaea, and fungi; no single curated
+    lipid CURIE is equivalent to the structure-spanning class.
+  role: Self-assemble into the hydrophobic bilayer that encloses the cytoplasm and
+    sets the permeability boundary.
+  evidence:
+  - reference: DOI:10.1093/femsre/fuv008
+    notes: Sohlenkamp and Geiger 2016 review the structural diversity and biosynthesis
+      of bacterial membrane lipids.
+  - reference: DOI:10.1038/nrmicro2576
+    notes: Albers and Meyer 2011 review archaeal membrane lipids as core archaeal
+      envelope constituents.
+- component_id: integral_plasma_membrane_proteins
+  label: integral plasma membrane proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: A plasma membrane carries many unrelated integral proteins; the
+    constituent class is topological rather than a single homologous protein family.
+  role: Provide selective transport, energy transduction, secretion, and envelope-biogenesis
+    activities embedded in the lipid bilayer.
+  evidence:
+  - reference: DOI:10.1101/cshperspect.a000414
+    notes: Silhavy, Kahne and Walker 2010 describe the bacterial cytoplasmic membrane
+      as the site of transporters and envelope assembly systems.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: UNIVERSAL
+  note: Bacterial cells are bounded by a cytoplasmic membrane inside any wall, outer
+    membrane, capsule, or S-layer.
+  reference: DOI:10.1101/cshperspect.a000414
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: UNIVERSAL
+  note: Archaeal cells are bounded by a cytoplasmic membrane built from archaeal ether
+    lipids beneath any wall or S-layer.
+  reference: DOI:10.1038/nrmicro2576
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: UNIVERSAL
+  note: Fungal cells organize transporters, eisosome/MCC domains, and sterol-rich
+    microdomains in a plasma membrane beneath the wall.
+  reference: DOI:10.1146/annurev-micro-091313-103507
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Model Gram-negative bacterium for cytoplasmic-membrane transport, Sec insertion,
+    and inner-membrane envelope biogenesis.
+  reference: DOI:10.1101/cshperspect.a000414
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Model budding yeast for plasma-membrane microdomains and eisosome-associated
+    membrane organization.
+  reference: DOI:10.1146/annurev-micro-091313-103507
+functions:
+- function_id: selective_permeability_barrier
+  label: selective permeability barrier
+  description: The plasma membrane separates cytoplasm from the external milieu while
+    membrane proteins mediate controlled import, export, and ion movement.
+  evidence:
+  - reference: DOI:10.1101/cshperspect.a000414
+    notes: Silhavy, Kahne and Walker 2010 review transport across the bacterial inner
+      membrane as a central envelope activity.
+- function_id: membrane_embedded_bioenergetics
+  label: membrane-embedded bioenergetics
+  description: In bacteria and archaea, respiratory and ATP-synthase complexes in
+    the cytoplasmic membrane use ion gradients across the membrane for energy conservation.
+  evidence:
+  - reference: DOI:10.1101/cshperspect.a000414
+    notes: Silhavy, Kahne and Walker 2010 describe the bacterial cytoplasmic membrane
+      as the energized membrane that supports transport and envelope biogenesis.
+  - reference: DOI:10.1038/nrmicro2576
+    notes: Albers and Meyer 2011 review archaeal cytoplasmic membranes as energy-transducing
+      envelope membranes.
+evidence:
+- reference: DOI:10.1101/cshperspect.a000414
+  notes: Silhavy TJ, Kahne D and Walker S 2010, 'The bacterial cell envelope', Cold
+    Spring Harbor Perspectives in Biology.
+- reference: DOI:10.1093/femsre/fuv008
+  notes: 'Sohlenkamp C and Geiger O 2016, ''Bacterial membrane lipids: diversity in
+    structures and pathways'', FEMS Microbiology Reviews.'
+- reference: DOI:10.1038/nrmicro2576
+  notes: Albers SV and Meyer BH 2011, 'The archaeal cell envelope', Nature Reviews
+    Microbiology.
+- reference: DOI:10.1146/annurev-micro-091313-103507
+  notes: 'Douglas LM and Konopka JB 2014, ''Fungal membrane organization: the eisosome
+    concept'', Annual Review of Microbiology.'
+causal_graphs:
+- graph_id: lipid_bilayer_membrane_boundary
+  title: Membrane lipids and proteins form a selective cell boundary
+  description: Amphipathic lipids assemble into the plasma-membrane bilayer. Integral
+    membrane proteins embedded in that bilayer provide the selective transport and
+    energy-linked activities that make the boundary functional.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures the class-level bilayer and integral protein organization
+    shared by microbial plasma membranes without choosing one bacterial, archaeal,
+    or fungal lipid biosynthesis pathway.
+  nodes:
+  - node_id: membrane_lipids
+    label: plasma-membrane lipids
+    node_type: CHEMICAL
+    component_ref: membrane_lipids
+  - node_id: integral_plasma_membrane_proteins
+    label: integral plasma membrane proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: integral_plasma_membrane_proteins
+  - node_id: plasma_membrane
+    label: plasma membrane
+    node_type: STRUCTURE
+    grounding: GO:0005886
+  - node_id: cytoplasm
+    label: cytoplasm
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005737
+  - node_id: selective_transport
+    label: transmembrane transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0055085
+  edges:
+  - subject: membrane_lipids
+    predicate: self-assemble into
+    object: plasma_membrane
+    description: Amphipathic membrane lipids form the bilayer basis of the plasma
+      membrane.
+    evidence:
+    - reference: GO:0005886
+      notes: The GO plasma membrane definition describes a phospholipid bilayer surrounding
+        the cell.
+    - reference: DOI:10.1093/femsre/fuv008
+      notes: Sohlenkamp and Geiger 2016 review the lipid classes that build bacterial
+        membranes.
+  - subject: plasma_membrane
+    predicate: encloses
+    object: cytoplasm
+    description: The bilayer surrounds the cytoplasm and separates it from the external
+      environment.
+    evidence:
+    - reference: GO:0005886
+      notes: GO:0005886 defines the plasma membrane as the membrane surrounding a
+        cell.
+  - subject: integral_plasma_membrane_proteins
+    predicate: embed in
+    object: plasma_membrane
+    description: Integral proteins occupy the bilayer to create transport, secretion,
+      and bioenergetic complexes.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a000414
+      notes: Silhavy, Kahne and Walker 2010 review the bacterial cytoplasmic membrane
+        as a protein-rich transport and biogenesis platform.
+  - subject: integral_plasma_membrane_proteins
+    predicate: mediate
+    object: selective_transport
+    description: Transport proteins in the plasma membrane control movement of solutes
+      and ions across the permeability barrier.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a000414
+      notes: Silhavy, Kahne and Walker 2010 place protein transport and envelope precursor
+        movement across the bacterial cytoplasmic membrane.
+discussions:
+- discussion_id: cytoplasmic_membrane_name
+  prompt: Use the GO label plasma membrane while preserving cytoplasmic membrane as
+    the microbial envelope name.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - synonyms
+  rationale: GO:0005886 is the exact cellular-component term. Bacterial and archaeal
+    literature usually calls the same cell-bounding structure the cytoplasmic membrane
+    or, in Gram-negative bacteria, the inner membrane.
+  evidence:
+  - reference: GO:0005886
+    notes: GO names the exact cell-bounding membrane plasma membrane.
+  - reference: DOI:10.1101/cshperspect.a000414
+    notes: Silhavy, Kahne and Walker 2010 use cytoplasmic membrane and inner membrane
+      terminology for the bacterial envelope membrane.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
