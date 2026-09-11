@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nucleus · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>nucleus</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005634"><code>GO:0005634</code></a> · MEMBRANE_ORGANELLE · MEMBRANE_BOUNDED_ORGANELLE · <span class="status">PROPOSED</span></p>
+<p class="definition">A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell&#39;s chromosomes except the organellar chromosomes, and is the site of RNA synthesis and processing. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005634"><code>GO:0005634</code></a>]</small></p>
+<p><strong>Synonyms:</strong> cell nucleus</p><p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005635"><code>GO:0005635</code></a> <a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> <a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-nuclear_pore"><td>nuclear pore</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a></td><td></td><td></td><td>UNKNOWN</td><td>Membrane-embedded pore complex that spans the nuclear envelope and mediates exchange between nucleoplasm and cytoplasm.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a> <small>GO:0005643 defines the nuclear pore as a protein complex that provides a discrete opening in the nuclear envelope.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> Saccharomyces cerevisiae — <strong>COMMON</strong>: Budding yeast has a membrane-bounded nucleus with a nuclear envelope that can contact the vacuole at nucleus-vacuole junctions. [<a href="https://doi.org/10.1091/mbc.11.7.2445"><code>DOI:10.1091/mbc.11.7.2445</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> <em>Saccharomyces cerevisiae</em> — Budding-yeast model for a closed nuclear envelope bearing nuclear pores and forming nucleus-vacuole junctions. [<a href="https://doi.org/10.1091/mbc.11.7.2445"><code>DOI:10.1091/mbc.11.7.2445</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>genome compartmentalization</strong> — The nucleus encloses the nuclear lumen where nuclear chromosomes are housed and replicated.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005634"><code>GO:0005634</code></a> <small>GO:0005634 defines the nucleus as the membrane-bounded organelle in which chromosomes are housed and replicated.</small></li></ul></li><li><strong>nucleocytoplasmic transport</strong> <a href="http://purl.obolibrary.org/obo/GO_0006913"><code>GO:0006913</code></a> — Nuclear pores embedded in the envelope provide gated exchange between the nuclear lumen and cytoplasm.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a> <small>GO:0005643 defines nuclear pores as openings in the nuclear envelope.</small></li><li><a href="https://doi.org/10.1534/genetics.111.127803"><code>DOI:10.1534/genetics.111.127803</code></a> <small>Aitchison and Rout 2012 review budding-yeast NPC organization and transport.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-yeast_nucleus_envelope_and_pores">Nuclear envelope bounds a pore-gated lumen <small>(FUNCTION)</small></h3>
+<p>In budding yeast, the nuclear envelope surrounds the nuclear lumen and is perforated by nuclear pores that mediate nucleocytoplasmic exchange.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>nuclear envelope</td><td>bounds</td><td>nuclear lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> <small>GO:0031981 defines the nuclear lumen as the volume enclosed by the nuclear inner membrane.</small></li></ul></td></tr>
+<tr><td>nuclear envelope</td><td>encloses</td><td>nucleus</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005635"><code>GO:0005635</code></a> <small>GO:0005635 defines the nuclear envelope as the double lipid bilayer that encloses the nucleus.</small></li></ul></td></tr>
+<tr><td>nuclear pore</td><td>spans</td><td>nuclear envelope</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a> <small>GO:0005643 places nuclear pores at openings in the nuclear envelope where the inner and outer nuclear membranes are joined.</small></li></ul></td></tr>
+<tr><td>nuclear pore</td><td>mediates</td><td>nucleocytoplasmic transport</td><td><ul class="evidence"><li><a href="https://doi.org/10.1534/genetics.111.127803"><code>DOI:10.1534/genetics.111.127803</code></a> <small>Aitchison and Rout 2012 review transport through the budding-yeast nuclear pore complex.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral boundaries and groundings for chromatin, nucleolar RNP, and nuclear-envelope-associated protein cohorts in the nucleus. <small>This first nucleus record grounds the nuclear pore as an exact protein-complex component but avoids treating chromatin or nucleolar cohorts as a single exact protein, RNA, or DNA component.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005634"><code>GO:0005634</code></a> <small>Gene Ontology cellular-component term for nucleus.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005635"><code>GO:0005635</code></a> <small>Gene Ontology cellular-component term for nuclear envelope.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> <small>Gene Ontology cellular-component term for nuclear lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a> <small>Gene Ontology cellular-component term for nuclear pore.</small></li><li><a href="https://doi.org/10.1091/mbc.11.7.2445"><code>DOI:10.1091/mbc.11.7.2445</code></a> <small>Pan et al. 2000, &#39;Nucleus-vacuole junctions in Saccharomyces cerevisiae are formed through the direct interaction of Vac8p with Nvj1p&#39;, Molecular Biology of the Cell.</small></li><li><a href="https://doi.org/10.1080/21541248.2021.1993714"><code>DOI:10.1080/21541248.2021.1993714</code></a> <small>Luo et al. 2022, &#39;Unexplored Cdc42 functions at the budding yeast nucleus suggested by subcellular localization&#39;, Small GTPases.</small></li><li><a href="https://doi.org/10.1534/genetics.111.127803"><code>DOI:10.1534/genetics.111.127803</code></a> <small>Aitchison and Rout 2012, &#39;The Yeast Nuclear Pore Complex and Transport Through It&#39;, Genetics.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-11T17:34:12Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T17:35:06Z</code> codex · EXPANDED_RECORD — Added nucleus parentage, nuclear envelope, nuclear lumen, and nuclear pore parts, exact synonymy, a grounded nuclear pore component, Saccharomyces scope, genome-compartmentalization and transport functions, a nonmechanistic envelope-and-pore graph, and a nuclear-component grounding TODO.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/nucleus.yaml"><code>data/structures/membrane_organelle/nucleus.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

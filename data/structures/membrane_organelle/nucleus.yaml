@@ -1,0 +1,180 @@
+identifier: GO:0005634
+label: nucleus
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A membrane-bounded organelle of eukaryotic cells in which chromosomes
+  are housed and replicated. In most cells, the nucleus contains all of the cell's
+  chromosomes except the organellar chromosomes, and is the site of RNA synthesis
+  and processing.
+definition_source: GO:0005634
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T17:34:12Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T17:35:06Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nucleus parentage, nuclear envelope, nuclear lumen, and nuclear pore
+    parts, exact synonymy, a grounded nuclear pore component, Saccharomyces scope,
+    genome-compartmentalization and transport functions, a nonmechanistic envelope-and-pore
+    graph, and a nuclear-component grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+has_part:
+- GO:0005635
+- GO:0031981
+- GO:0005643
+synonyms:
+- synonym_text: cell nucleus
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005634
+components:
+- component_id: nuclear_pore
+  label: nuclear pore
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005643
+  essentiality: UNKNOWN
+  role: Membrane-embedded pore complex that spans the nuclear envelope and mediates
+    exchange between nucleoplasm and cytoplasm.
+  evidence:
+  - reference: GO:0005643
+    notes: GO:0005643 defines the nuclear pore as a protein complex that provides
+      a discrete opening in the nuclear envelope.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a membrane-bounded nucleus with a nuclear envelope that
+    can contact the vacuole at nucleus-vacuole junctions.
+  reference: DOI:10.1091/mbc.11.7.2445
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model for a closed nuclear envelope bearing nuclear pores and
+    forming nucleus-vacuole junctions.
+  reference: DOI:10.1091/mbc.11.7.2445
+functions:
+- function_id: genome_compartmentalization
+  label: genome compartmentalization
+  description: The nucleus encloses the nuclear lumen where nuclear chromosomes are
+    housed and replicated.
+  evidence:
+  - reference: GO:0005634
+    notes: GO:0005634 defines the nucleus as the membrane-bounded organelle in which
+      chromosomes are housed and replicated.
+- function_id: nucleocytoplasmic_transport
+  label: nucleocytoplasmic transport
+  grounding: GO:0006913
+  description: Nuclear pores embedded in the envelope provide gated exchange between
+    the nuclear lumen and cytoplasm.
+  evidence:
+  - reference: GO:0005643
+    notes: GO:0005643 defines nuclear pores as openings in the nuclear envelope.
+  - reference: DOI:10.1534/genetics.111.127803
+    notes: Aitchison and Rout 2012 review budding-yeast NPC organization and transport.
+evidence:
+- reference: GO:0005634
+  notes: Gene Ontology cellular-component term for nucleus.
+- reference: GO:0005635
+  notes: Gene Ontology cellular-component term for nuclear envelope.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for nuclear lumen.
+- reference: GO:0005643
+  notes: Gene Ontology cellular-component term for nuclear pore.
+- reference: DOI:10.1091/mbc.11.7.2445
+  notes: Pan et al. 2000, 'Nucleus-vacuole junctions in Saccharomyces cerevisiae are
+    formed through the direct interaction of Vac8p with Nvj1p', Molecular Biology
+    of the Cell.
+- reference: DOI:10.1080/21541248.2021.1993714
+  notes: Luo et al. 2022, 'Unexplored Cdc42 functions at the budding yeast nucleus
+    suggested by subcellular localization', Small GTPases.
+- reference: DOI:10.1534/genetics.111.127803
+  notes: Aitchison and Rout 2012, 'The Yeast Nuclear Pore Complex and Transport Through
+    It', Genetics.
+causal_graphs:
+- graph_id: yeast_nucleus_envelope_and_pores
+  title: Nuclear envelope bounds a pore-gated lumen
+  description: In budding yeast, the nuclear envelope surrounds the nuclear lumen
+    and is perforated by nuclear pores that mediate nucleocytoplasmic exchange.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures nuclear envelope, lumen, and pore relationships
+    without asserting the complete chromatin, nuclear-pore, or envelope protein repertoire.
+  nodes:
+  - node_id: nucleus
+    label: nucleus
+    node_type: STRUCTURE
+    grounding: GO:0005634
+  - node_id: nuclear_envelope
+    label: nuclear envelope
+    node_type: STRUCTURE
+    grounding: GO:0005635
+  - node_id: nuclear_lumen
+    label: nuclear lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031981
+  - node_id: nuclear_pore
+    label: nuclear pore
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0005643
+    component_ref: nuclear_pore
+  - node_id: nucleocytoplasmic_transport
+    label: nucleocytoplasmic transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006913
+  edges:
+  - subject: nuclear_envelope
+    predicate: bounds
+    object: nuclear_lumen
+    description: The nuclear envelope encloses the nuclear lumen.
+    evidence:
+    - reference: GO:0031981
+      notes: GO:0031981 defines the nuclear lumen as the volume enclosed by the nuclear
+        inner membrane.
+  - subject: nuclear_envelope
+    predicate: encloses
+    object: nucleus
+    description: The double lipid bilayer of the nuclear envelope encloses the nucleus.
+    evidence:
+    - reference: GO:0005635
+      notes: GO:0005635 defines the nuclear envelope as the double lipid bilayer that
+        encloses the nucleus.
+  - subject: nuclear_pore
+    predicate: spans
+    object: nuclear_envelope
+    description: Nuclear pores form discrete openings where the nuclear-envelope membranes
+      join.
+    evidence:
+    - reference: GO:0005643
+      notes: GO:0005643 places nuclear pores at openings in the nuclear envelope where
+        the inner and outer nuclear membranes are joined.
+  - subject: nuclear_pore
+    predicate: mediates
+    object: nucleocytoplasmic_transport
+    description: Nuclear pores mediate transport between the nucleus and cytoplasm.
+    evidence:
+    - reference: DOI:10.1534/genetics.111.127803
+      notes: Aitchison and Rout 2012 review transport through the budding-yeast nuclear
+        pore complex.
+discussions:
+- discussion_id: ground_nuclear_molecular_components
+  prompt: Resolve exact source-neutral boundaries and groundings for chromatin, nucleolar
+    RNP, and nuclear-envelope-associated protein cohorts in the nucleus.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#yeast_nucleus_envelope_and_pores
+  rationale: This first nucleus record grounds the nuclear pore as an exact protein-complex
+    component but avoids treating chromatin or nucleolar cohorts as a single exact
+    protein, RNA, or DNA component.
+  evidence:
+  - reference: GO:0005634
+    notes: GO:0005634 covers chromosomes housed in the nucleus and RNA synthesis and
+      processing in the nucleus.
+  posed_by: codex
+  posed_date: '2026-09-11'
