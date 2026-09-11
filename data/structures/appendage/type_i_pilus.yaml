@@ -1,0 +1,328 @@
+identifier: GO:0140621
+label: type I pilus
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: A chaperone-usher bacterial pilus assembled from a helical FimA rod tipped
+  by the adaptor subunits FimG and FimF and the mannose-binding FimH adhesin. In Escherichia
+  coli, the type I pilus is polymerized through the outer-membrane FimD usher and
+  terminated by a basal FimI subunit that anchors the completed rod to the assembly
+  platform.
+definition_source: GO:0140621
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T01:45:47Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T01:46:57Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added exact synonymy, GO pilus parentage, FimA/FimF/FimG/FimH/FimI constituents,
+    E. coli taxonomy, GO:0140623 assembly and mannose-sensitive adhesion functions,
+    literature evidence, a FimC/FimD assembly graph, and grounding/boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-11T01:53:52Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #385 issues #386 and #387 by splitting the grouped FimF/FimG
+    tip-adaptor component into ordered FimG and FimF constituents, updating the assembly
+    graph to preserve the FimH-FimG-FimF-FimA order, and attaching the family-grounding
+    TODO to every reviewed-label-only subunit.'
+  llm_assisted: true
+synonyms:
+- synonym_text: type 1 pilus
+  synonym_type: EXACT_SYNONYM
+  source: GO:0140621
+- synonym_text: type 1 fimbria
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/ecosalplus.ESP-0007-2017
+- synonym_text: mannose-sensitive pilus
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/ecosalplus.ESP-0007-2017
+parent_structures:
+- GO:0009289
+components:
+- component_id: fima_major_pilin
+  label: FimA major pilin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fimA
+  stoichiometry: up to 3000 copies per Escherichia coli type I pilus rod
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: FimA is the type I pilus rod subunit; no exact source-neutral FimA
+    family CURIE was curated for this first record.
+  role: Polymerizes into the right-handed helical rod that forms most of the extracellular
+    type I pilus.
+  evidence:
+  - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+    notes: Werneburg and Thanassi 2018 review FimA as the major type 1 pilus subunit
+      assembled by the chaperone-usher pathway.
+  - reference: DOI:10.1038/s41467-025-60325-z
+    notes: Bachmann et al. 2025 structurally analyze the Escherichia coli type 1 pilus
+      rod as a helical assembly of FimA.
+- component_id: fimg_tip_adaptor
+  label: FimG tip adaptor subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fimG
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: FimG is the type I pilus minor subunit proximal to FimH; no exact
+    source-neutral FimG family CURIE was curated for this first record.
+  role: Links the distal FimH adhesin to FimF in the short flexible tip fibrillum.
+  evidence:
+  - reference: DOI:10.1073/pnas.92.6.2081
+    notes: Jones et al. 1995 isolated type 1 pilus tip fibrillae containing FimH and
+      FimG.
+  - reference: DOI:10.1038/s41467-025-60325-z
+    notes: Bachmann et al. 2025 place FimG between FimH and FimF in the type 1 pilus
+      flexible tip fibrillum.
+- component_id: fimf_tip_adaptor
+  label: FimF tip adaptor subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fimF
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: FimF is the type I pilus minor subunit proximal to the FimA rod;
+    no exact source-neutral FimF family CURIE was curated for this first record.
+  role: Joins the FimH/FimG tip to the helical FimA rod.
+  evidence:
+  - reference: DOI:10.1038/s41467-025-60325-z
+    notes: Bachmann et al. 2025 model FimF between FimG and the FimA rod in the assembled
+      type 1 pilus.
+- component_id: fimh_tip_adhesin
+  label: FimH tip adhesin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fimH
+  stoichiometry: 1 distal adhesin per adhesive tip
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: FimH is the type I pilus distal adhesin; no exact source-neutral
+    FimH family CURIE was curated for this first record.
+  role: Caps the distal tip and binds mannose-containing receptors on host surfaces.
+  evidence:
+  - reference: DOI:10.1073/pnas.92.6.2081
+    notes: Jones et al. 1995 identified FimH in the type 1 pilus tip fibrillum and
+      localized the mannose-binding adhesin to that distal tip.
+  - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+    notes: Werneburg and Thanassi 2018 review FimH as the mannose-binding adhesin
+      of type 1 pili.
+- component_id: fimi_terminator
+  label: FimI terminator subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fimI
+  stoichiometry: 1 basal terminator per assembled rod
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: FimI is the type I pilus rod-terminating minor subunit; no exact
+    source-neutral FimI family CURIE was curated for this first record.
+  role: Terminates the FimA rod and anchors the assembled pilus to the FimD outer-membrane
+    assembly platform.
+  evidence:
+  - reference: DOI:10.1038/s41467-025-60325-z
+    notes: Bachmann et al. 2025 describe a single FimI subunit terminating the FimA
+      rod and anchoring it to FimD.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Type 1 pili are one chaperone-usher pilus subtype in Gram-negative bacteria,
+    characterized in Escherichia coli and Salmonella rather than universal across
+    bacteria.
+  reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: The Escherichia coli Fim system is the structural and biochemical model for
+    type I pilus rod and tip assembly.
+  reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+functions:
+- function_id: type_i_pilus_assembly
+  label: type I pilus assembly
+  grounding: GO:0140623
+  description: The FimC chaperone and FimD usher polymerize Fim subunits in a defined
+    order to build the tip fibrillum, helical rod, and basal terminator of the type
+    I pilus.
+  evidence:
+  - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+    notes: Werneburg and Thanassi 2018 review assembly of E. coli and Salmonella type
+      1 pili through the chaperone-usher pathway.
+- function_id: mannose_sensitive_adhesion
+  label: mannose-sensitive adhesion
+  description: A distal FimH adhesin at the tip of the pilus binds mannosylated host-surface
+    receptors.
+  evidence:
+  - reference: DOI:10.1073/pnas.92.6.2081
+    notes: Jones et al. 1995 mapped FimH to the type 1 pilus tip and separated the
+      mannose-binding adhesin from the FimA rod.
+  - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+    notes: Werneburg and Thanassi 2018 review mannose-sensitive FimH-mediated adhesion
+      by type 1 pili.
+evidence:
+- reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+  notes: Werneburg GT and Thanassi DG 2018, 'Pili Assembled by the Chaperone/Usher
+    Pathway in Escherichia coli and Salmonella', EcoSal Plus.
+- reference: DOI:10.1038/nrmicro.2017.40
+  notes: Hospenthal MK, Costa TRD and Waksman G 2017, 'A comprehensive guide to pilus
+    biogenesis in Gram-negative bacteria', Nature Reviews Microbiology.
+- reference: DOI:10.1038/s41467-025-60325-z
+  notes: Bachmann et al. 2025, 'Structures of the Escherichia coli type 1 pilus during
+    pilus rod assembly and after assembly termination', Nature Communications.
+- reference: DOI:10.1073/pnas.92.6.2081
+  notes: Jones et al. 1995, 'FimH adhesin of type 1 pili is assembled into a fibrillar
+    tip structure in the Enterobacteriaceae', Proceedings of the National Academy
+    of Sciences.
+causal_graphs:
+- graph_id: chaperone_usher_tip_rod_assembly
+  title: FimC and FimD polymerize the type I pilus tip and rod
+  description: FimC carries folded pilus subunits to the outer-membrane FimD usher.
+    FimD accepts the FimH adhesin, FimG adaptor, and FimF adaptor before adding FimA
+    repeatedly into the helical rod, then the FimI terminator caps the basal end and
+    anchors the rod at the usher.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: fimc_chaperone
+    label: FimC chaperone
+    node_type: GENE_OR_PROTEIN
+  - node_id: fimd_usher
+    label: FimD usher
+    node_type: GENE_OR_PROTEIN
+  - node_id: fimh_adhesin
+    label: FimH tip adhesin
+    node_type: GENE_OR_PROTEIN
+    component_ref: fimh_tip_adhesin
+  - node_id: fimg_tip_adaptor
+    label: FimG tip adaptor subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: fimg_tip_adaptor
+  - node_id: fimf_tip_adaptor
+    label: FimF tip adaptor subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: fimf_tip_adaptor
+  - node_id: fima_major_pilin
+    label: FimA major pilin
+    node_type: GENE_OR_PROTEIN
+    component_ref: fima_major_pilin
+  - node_id: fimi_terminator
+    label: FimI terminator subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: fimi_terminator
+  - node_id: type_i_pilus
+    label: type I pilus
+    node_type: STRUCTURE
+    grounding: GO:0140621
+  - node_id: type_i_pilus_assembly
+    label: type I pilus assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0140623
+  edges:
+  - subject: fimc_chaperone
+    predicate: delivers to
+    object: fimd_usher
+    description: FimC stabilizes folded type I pilus subunits and delivers them to
+      the FimD usher for polymerization.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+      notes: Werneburg and Thanassi 2018 review the FimC periplasmic chaperone and
+        FimD outer-membrane usher steps of type 1 pilus biogenesis.
+  - subject: fimd_usher
+    predicate: assembles tip from
+    object: fimh_adhesin
+    description: The usher starts type I pilus biogenesis with the distal FimH adhesin
+      and adaptor proteins that become the flexible tip fibrillum.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+      notes: Werneburg and Thanassi 2018 describe ordered chaperone-usher incorporation
+        of the type 1 pilus tip subunits.
+  - subject: fimh_adhesin
+    predicate: connects to
+    object: fimg_tip_adaptor
+    description: FimH sits at the distal tip and connects to the FimG adaptor.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-60325-z
+      notes: Bachmann et al. 2025 structurally model FimG immediately proximal to
+        FimH in the type 1 pilus tip.
+  - subject: fimg_tip_adaptor
+    predicate: connects to
+    object: fimf_tip_adaptor
+    description: FimG links the distal adhesin to FimF within the flexible tip fibrillum.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-60325-z
+      notes: Bachmann et al. 2025 place FimF proximal to FimG in the ordered FimH-FimG-FimF
+        tip fibrillum.
+  - subject: fimf_tip_adaptor
+    predicate: connects to
+    object: fima_major_pilin
+    description: FimF joins the flexible tip fibrillum to the first FimA subunits
+      of the rod.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-60325-z
+      notes: Bachmann et al. 2025 model FimF as the adaptor between FimG and the helical
+        FimA rod.
+  - subject: fima_major_pilin
+    predicate: polymerizes into
+    object: type_i_pilus
+    description: FimA is repeatedly added after the tip subunits to form the long
+      helical rod of the type I pilus.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-60325-z
+      notes: Bachmann et al. 2025 describe the rod as a helical FimA assembly.
+  - subject: fimi_terminator
+    predicate: terminates
+    object: type_i_pilus
+    description: FimI is incorporated at the basal end, where it terminates the rod
+      and anchors it to the FimD assembly platform.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-60325-z
+      notes: Bachmann et al. 2025 assign the basal rod-ending density to a single
+        FimI subunit bound to FimD.
+  - subject: fimd_usher
+    predicate: carries out
+    object: type_i_pilus_assembly
+    description: The outer-membrane usher is the assembly platform through which the
+      pilus is polymerized and secreted.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.40
+      notes: Hospenthal, Costa and Waksman 2017 review the outer-membrane usher as
+        the assembly platform for chaperone-usher pili.
+discussions:
+- discussion_id: fimc_fimd_boundary
+  prompt: Keep FimC and FimD out of the component table for this first type I pilus
+    record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#chaperone_usher_tip_rod_assembly
+  rationale: FimC and FimD are required for ordered pilus biogenesis and are therefore
+    shown in the assembly graph, but this record denotes the extracellular appendage
+    built from FimA, FimF, FimG, FimH and FimI rather than the periplasmic chaperone
+    or outer-membrane usher that polymerizes and secretes those subunits.
+  evidence:
+  - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+    notes: Werneburg and Thanassi 2018 distinguish the chaperone and usher assembly
+      factors from the assembled pilus subunits.
+  posed_by: codex
+  posed_date: '2026-09-11'
+  resolved_date: '2026-09-11'
+- discussion_id: resolve_type_i_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the FimA, FimG, FimF,
+    FimH and FimI constituent subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#fima_major_pilin
+  - components#fimg_tip_adaptor
+  - components#fimf_tip_adaptor
+  - components#fimh_tip_adhesin
+  - components#fimi_terminator
+  rationale: The record intentionally uses reviewed labels for the E. coli type I
+    pilus subunits until InterPro, Pfam or NCBIfam accessions can be verified without
+    overclaiming a broader chaperone-usher domain as an exact subunit family.
+  posed_by: codex
+  posed_date: '2026-09-11'

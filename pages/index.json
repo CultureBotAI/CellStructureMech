@@ -198,6 +198,15 @@
   "definition": "A bacterial-type flagellar appendage of spirochetes whose filaments reside in the periplasmic space between the cytoplasmic and outer membranes, attach near the cell poles, and rotate to deform the cell cylinder for motility."
  },
  {
+  "identifier": "GO:0140621",
+  "label": "type I pilus",
+  "category": "APPENDAGE",
+  "kind": "APPENDAGE",
+  "status": "PROPOSED",
+  "page": "structures/appendage/type_i_pilus.html",
+  "definition": "A chaperone-usher bacterial pilus assembled from a helical FimA rod tipped by the adaptor subunits FimG and FimF and the mannose-binding FimH adhesin. In Escherichia coli, the type I pilus is polymerized through the outer-membrane FimD usher and terminated by a basal FimI subunit that anchors the completed rod to the assembly platform."
+ },
+ {
   "identifier": "GO:0044096",
   "label": "type IV pilus",
   "category": "APPENDAGE",

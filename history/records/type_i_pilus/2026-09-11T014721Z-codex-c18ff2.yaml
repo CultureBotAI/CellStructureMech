@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/type_i_pilus.yaml
+  slug: type_i_pilus
+session:
+  id: 2026-09-11T014721Z-codex-c18ff2
+  timestamp: '2026-09-11T01:47:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add GO-grounded type I pilus record
+  details: Created GO:0140621 type I pilus as an appendage record with exact synonymy, GO
+    pilus parentage, FimA/FimF/FimG/FimH/FimI constituent components, Escherichia coli evidence,
+    type I pilus assembly and mannose-sensitive adhesion functions, a FimC/FimD chaperone-usher
+    assembly graph, and explicit discussions for the FimC/FimD boundary and unresolved exact
+    family groundings.
