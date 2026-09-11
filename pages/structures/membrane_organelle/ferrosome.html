@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ferrosome · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>ferrosome</h1>
+<p class="meta"><code>cellstructuremech:ferrosome</code> · MEMBRANE_ORGANELLE · MEMBRANE_BOUNDED_ORGANELLE · <span class="status">PROPOSED</span></p>
+<p class="definition">A bacterial lipid-bounded iron-storage organelle that contains iron-, phosphorus- and oxygen-rich material and forms through Fez protein-dependent machinery. <small>[<a href="https://doi.org/10.1038/s41586-022-04741-x"><code>DOI:10.1038/s41586-022-04741-x</code></a>]</small></p>
+
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-fez_proteins"><td>ferrosome-associated Fez proteins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>fezA, fezB, fezC</td><td></td><td>UNKNOWN</td><td>Ferrosome-associated proteins that drive lipid-bounded ferrosome formation.<ul class="evidence"><li><a href="https://doi.org/10.1038/s41586-022-04741-x"><code>DOI:10.1038/s41586-022-04741-x</code></a> <small>Grant et al. 2022 used proteomics and genetics to identify Fez proteins required for ferrosome formation in Solidesulfovibrio magneticus RS-1.</small></li></ul></td></tr>
+<tr id="components-ferrosome_membrane_lipids"><td>ferrosome membrane lipids</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Form the lipid boundary that separates the ferrosome from the cytoplasm.<ul class="evidence"><li><a href="https://doi.org/10.1038/s41586-022-04741-x"><code>DOI:10.1038/s41586-022-04741-x</code></a> <small>Grant et al. 2022 characterized ferrosomes as a distinct class of lipid-bounded iron-storage organelles.</small></li></ul></td></tr>
+<tr id="components-iron_phosphorus_oxygen_core"><td>ferrosome iron-phosphorus-oxygen core</td><td>SMALL_MOLECULE</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Electron-dense storage material enriched in iron, phosphorus and oxygen within the lipid-bounded ferrosome.<ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.1001290107"><code>DOI:10.1073/pnas.1001290107</code></a> <small>Byrne et al. 2010 observed membrane-surrounded amorphous iron-phosphorus granules in Desulfovibrio magneticus RS-1.</small></li><li><a href="https://doi.org/10.1038/s41586-022-04741-x"><code>DOI:10.1038/s41586-022-04741-x</code></a> <small>Grant et al. 2022 connected the D. magneticus ferrosome compartment with intracellular iron storage.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_573370"><code>NCBITaxon:573370</code></a> Solidesulfovibrio magneticus RS-1 — <strong>COMMON</strong>: The RS-1 strain was the model used for Fez proteomics and genetics that connected the Fez cluster to ferrosome formation and iron-storage function. [<a href="https://doi.org/10.1038/s41586-022-04741-x"><code>DOI:10.1038/s41586-022-04741-x</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_573370"><code>NCBITaxon:573370</code></a> <em>Solidesulfovibrio magneticus RS-1</em> — Magnetotactic bacterial strain in which membrane-surrounded iron-phosphorus granules were distinguished ultrastructurally from bullet-shaped magnetosomes. [<a href="https://doi.org/10.1073/pnas.1001290107"><code>DOI:10.1073/pnas.1001290107</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>anaerobic iron storage</strong> — Ferrosomes store intracellular iron for use during anaerobic metabolism.<ul class="evidence"><li><a href="https://doi.org/10.1038/s41586-022-04741-x"><code>DOI:10.1038/s41586-022-04741-x</code></a> <small>Grant et al. 2022 tested ferrosome formation and function as an iron-storage organelle during anaerobic growth.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-fez_dependent_iron_storage">Fez proteins form lipid-bounded ferrosomes for iron storage <small>(ASSEMBLY)</small></h3>
+<p>Fez proteins drive formation of lipid-bounded ferrosomes whose iron-, phosphorus- and oxygen-rich material stores iron during anaerobic metabolism.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>ferrosome-associated Fez proteins</td><td>drive formation of</td><td>ferrosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41586-022-04741-x"><code>DOI:10.1038/s41586-022-04741-x</code></a> <small>Grant et al. 2022 identified Fez proteins that drive ferrosome formation.</small></li></ul></td></tr>
+<tr><td>ferrosome membrane lipids</td><td>bound</td><td>ferrosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41586-022-04741-x"><code>DOI:10.1038/s41586-022-04741-x</code></a> <small>Grant et al. 2022 characterized ferrosomes as lipid-bounded organelles.</small></li></ul></td></tr>
+<tr><td>ferrosome iron-phosphorus-oxygen core</td><td>accumulates within</td><td>ferrosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.1001290107"><code>DOI:10.1073/pnas.1001290107</code></a> <small>Byrne et al. 2010 resolved membrane-surrounded iron-phosphorus granules in D. magneticus RS-1.</small></li></ul></td></tr>
+<tr><td>ferrosome</td><td>supports</td><td>anaerobic iron storage</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41586-022-04741-x"><code>DOI:10.1038/s41586-022-04741-x</code></a> <small>Grant et al. 2022 connected ferrosomes to iron storage during anaerobic metabolism.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings and component boundaries for Fez proteins in characterized ferrosome systems. <small>FezA, FezB and FezC are kept as one label-only cohort because the first ferrosome pass did not verify exact family accessions for all three proteins or decide whether Fez proteins should be split by family.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve the exact chemical composition and CHEBI grounding of the ferrosome iron-phosphorus-oxygen storage material. <small>Byrne et al. 2010 established membrane-surrounded amorphous granules enriched in iron and phosphorus, but the exact stored chemical species remains label-only here rather than mapped to an imprecise mineral or ion CURIE.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.1001290107"><code>DOI:10.1073/pnas.1001290107</code></a> <small>Byrne et al. 2010, Desulfovibrio magneticus RS-1 contains an iron- and phosphorus-rich organelle distinct from its bullet-shaped magnetosomes, Proceedings of the National Academy of Sciences.</small></li><li><a href="https://doi.org/10.1038/s41586-022-04741-x"><code>DOI:10.1038/s41586-022-04741-x</code></a> <small>Grant et al. 2022, Distinct gene clusters drive formation of ferrosome organelles in bacteria, Nature.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-11T14:03:57Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T14:04:31Z</code> codex · EXPANDED_RECORD — Added membrane-bounded-organelle parentage, Fez protein, lipid boundary and iron-rich core components, Solidesulfovibrio magneticus RS-1 taxonomic scope, iron-storage function, DOI evidence, a nonmechanistic Fez formation graph, and grounding TODOs for Fez proteins and core chemistry.</li><li><code>2026-09-11T14:05:08Z</code> codex · REFINED_GRAPH — Changed the terminal ferrosome graph edge from a stores-process relationship to a supports-process relationship and clarified the definition wording.</li><li><code>2026-09-11T14:10:21Z</code> codex · ADDRESS_REVIEW — Resolved #494 by narrowing the taxonomic note to Grant-backed Fez evidence and resolved #495 by switching the canonical example to the Byrne-backed ultrastructure finding.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/ferrosome.yaml"><code>data/structures/membrane_organelle/ferrosome.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

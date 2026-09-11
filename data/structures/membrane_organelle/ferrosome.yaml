@@ -1,0 +1,212 @@
+identifier: cellstructuremech:ferrosome
+label: ferrosome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A bacterial lipid-bounded iron-storage organelle that contains iron-,
+  phosphorus- and oxygen-rich material and forms through Fez protein-dependent machinery.
+definition_source: DOI:10.1038/s41586-022-04741-x
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T14:03:57Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T14:04:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added membrane-bounded-organelle parentage, Fez protein, lipid boundary
+    and iron-rich core components, Solidesulfovibrio magneticus RS-1 taxonomic scope,
+    iron-storage function, DOI evidence, a nonmechanistic Fez formation graph, and
+    grounding TODOs for Fez proteins and core chemistry.
+  llm_assisted: true
+- timestamp: '2026-09-11T14:05:08Z'
+  curator: codex
+  action: REFINED_GRAPH
+  changes: Changed the terminal ferrosome graph edge from a stores-process relationship
+    to a supports-process relationship and clarified the definition wording.
+  llm_assisted: true
+- timestamp: '2026-09-11T14:10:21Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #494 by narrowing the taxonomic note to Grant-backed Fez evidence
+    and resolved #495 by switching the canonical example to the Byrne-backed ultrastructure
+    finding.'
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+components:
+- component_id: fez_proteins
+  label: ferrosome-associated Fez proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fezA
+  - fezB
+  - fezC
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: FezA, FezB and FezC were curated as a ferrosome-associated protein
+    cohort, but this pass did not verify exact source-neutral family CURIEs for the
+    three unrelated Fez proteins or a complex CURIE for the cohort.
+  role: Ferrosome-associated proteins that drive lipid-bounded ferrosome formation.
+  evidence:
+  - reference: DOI:10.1038/s41586-022-04741-x
+    notes: Grant et al. 2022 used proteomics and genetics to identify Fez proteins
+      required for ferrosome formation in Solidesulfovibrio magneticus RS-1.
+- component_id: ferrosome_membrane_lipids
+  label: ferrosome membrane lipids
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Ferrosomes are lipid bounded, but no exact ferrosome-specific lipid
+    species or defined membrane mixture was curated.
+  role: Form the lipid boundary that separates the ferrosome from the cytoplasm.
+  evidence:
+  - reference: DOI:10.1038/s41586-022-04741-x
+    notes: Grant et al. 2022 characterized ferrosomes as a distinct class of lipid-bounded
+      iron-storage organelles.
+- component_id: iron_phosphorus_oxygen_core
+  label: ferrosome iron-phosphorus-oxygen core
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Desulfovibrio magneticus RS-1 ferrosome content is iron-, phosphorus-
+    and oxygen-rich, but its exact chemical species is not represented here by a verified
+    CHEBI CURIE.
+  role: Electron-dense storage material enriched in iron, phosphorus and oxygen within
+    the lipid-bounded ferrosome.
+  evidence:
+  - reference: DOI:10.1073/pnas.1001290107
+    notes: Byrne et al. 2010 observed membrane-surrounded amorphous iron-phosphorus
+      granules in Desulfovibrio magneticus RS-1.
+  - reference: DOI:10.1038/s41586-022-04741-x
+    notes: Grant et al. 2022 connected the D. magneticus ferrosome compartment with
+      intracellular iron storage.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:573370
+  taxon_label: Solidesulfovibrio magneticus RS-1
+  presence: COMMON
+  note: The RS-1 strain was the model used for Fez proteomics and genetics that connected
+    the Fez cluster to ferrosome formation and iron-storage function.
+  reference: DOI:10.1038/s41586-022-04741-x
+canonical_examples:
+- taxon_id: NCBITaxon:573370
+  taxon_label: Solidesulfovibrio magneticus RS-1
+  note: Magnetotactic bacterial strain in which membrane-surrounded iron-phosphorus
+    granules were distinguished ultrastructurally from bullet-shaped magnetosomes.
+  reference: DOI:10.1073/pnas.1001290107
+functions:
+- function_id: anaerobic_iron_storage
+  label: anaerobic iron storage
+  description: Ferrosomes store intracellular iron for use during anaerobic metabolism.
+  evidence:
+  - reference: DOI:10.1038/s41586-022-04741-x
+    notes: Grant et al. 2022 tested ferrosome formation and function as an iron-storage
+      organelle during anaerobic growth.
+evidence:
+- reference: DOI:10.1073/pnas.1001290107
+  notes: Byrne et al. 2010, Desulfovibrio magneticus RS-1 contains an iron- and phosphorus-rich
+    organelle distinct from its bullet-shaped magnetosomes, Proceedings of the National
+    Academy of Sciences.
+- reference: DOI:10.1038/s41586-022-04741-x
+  notes: Grant et al. 2022, Distinct gene clusters drive formation of ferrosome organelles
+    in bacteria, Nature.
+causal_graphs:
+- graph_id: fez_dependent_iron_storage
+  title: Fez proteins form lipid-bounded ferrosomes for iron storage
+  description: Fez proteins drive formation of lipid-bounded ferrosomes whose iron-,
+    phosphorus- and oxygen-rich material stores iron during anaerobic metabolism.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Fez-dependent formation and iron accumulation without
+    asserting the molecular mechanism of membrane biogenesis, iron transport or core
+    chemistry.
+  nodes:
+  - node_id: fez_proteins
+    label: ferrosome-associated Fez proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: fez_proteins
+  - node_id: ferrosome_membrane_lipids
+    label: ferrosome membrane lipids
+    node_type: CHEMICAL
+    component_ref: ferrosome_membrane_lipids
+  - node_id: iron_phosphorus_oxygen_core
+    label: ferrosome iron-phosphorus-oxygen core
+    node_type: CHEMICAL
+    component_ref: iron_phosphorus_oxygen_core
+  - node_id: ferrosome
+    label: ferrosome
+    node_type: STRUCTURE
+    grounding: cellstructuremech:ferrosome
+  - node_id: anaerobic_iron_storage
+    label: anaerobic iron storage
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: fez_proteins
+    predicate: drive formation of
+    object: ferrosome
+    description: Fez proteins are needed for formation of lipid-bounded ferrosomes.
+    evidence:
+    - reference: DOI:10.1038/s41586-022-04741-x
+      notes: Grant et al. 2022 identified Fez proteins that drive ferrosome formation.
+  - subject: ferrosome_membrane_lipids
+    predicate: bound
+    object: ferrosome
+    description: A lipid boundary encloses the ferrosome compartment.
+    evidence:
+    - reference: DOI:10.1038/s41586-022-04741-x
+      notes: Grant et al. 2022 characterized ferrosomes as lipid-bounded organelles.
+  - subject: iron_phosphorus_oxygen_core
+    predicate: accumulates within
+    object: ferrosome
+    description: Iron-, phosphorus- and oxygen-rich material accumulates inside the
+      membrane-bounded ferrosome.
+    evidence:
+    - reference: DOI:10.1073/pnas.1001290107
+      notes: Byrne et al. 2010 resolved membrane-surrounded iron-phosphorus granules
+        in D. magneticus RS-1.
+  - subject: ferrosome
+    predicate: supports
+    object: anaerobic_iron_storage
+    description: The assembled ferrosome compartment supports intracellular iron storage
+      during anaerobic metabolism.
+    evidence:
+    - reference: DOI:10.1038/s41586-022-04741-x
+      notes: Grant et al. 2022 connected ferrosomes to iron storage during anaerobic
+        metabolism.
+discussions:
+- discussion_id: resolve_ferrosome_fez_grounding
+  prompt: Resolve exact source-neutral groundings and component boundaries for Fez
+    proteins in characterized ferrosome systems.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#fez_proteins
+  rationale: FezA, FezB and FezC are kept as one label-only cohort because the first
+    ferrosome pass did not verify exact family accessions for all three proteins or
+    decide whether Fez proteins should be split by family.
+  evidence:
+  - reference: DOI:10.1038/s41586-022-04741-x
+    notes: Grant et al. 2022 identified Fez proteins that control formation of bacterial
+      ferrosomes.
+  posed_by: codex
+  posed_date: '2026-09-11'
+- discussion_id: resolve_ferrosome_core_chemistry
+  prompt: Resolve the exact chemical composition and CHEBI grounding of the ferrosome
+    iron-phosphorus-oxygen storage material.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#iron_phosphorus_oxygen_core
+  rationale: Byrne et al. 2010 established membrane-surrounded amorphous granules
+    enriched in iron and phosphorus, but the exact stored chemical species remains
+    label-only here rather than mapped to an imprecise mineral or ion CURIE.
+  evidence:
+  - reference: DOI:10.1073/pnas.1001290107
+    notes: Byrne et al. 2010 distinguished the amorphous iron-phosphorus ferrosome
+      material from crystalline magnetosomes in D. magneticus RS-1.
+  posed_by: codex
+  posed_date: '2026-09-11'

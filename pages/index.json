@@ -648,6 +648,15 @@
   "definition": "A dense granule-like organelle of the apical complex of merozoites, released into the parasitophorous vacuole, mediating protease-dependent rupture and parasite exit from the infected erythrocyte."
  },
  {
+  "identifier": "cellstructuremech:ferrosome",
+  "label": "ferrosome",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/ferrosome.html",
+  "definition": "A bacterial lipid-bounded iron-storage organelle that contains iron-, phosphorus- and oxygen-rich material and forms through Fez protein-dependent machinery."
+ },
+ {
   "identifier": "GO:0020016",
   "label": "flagellar pocket",
   "category": "MEMBRANE_ORGANELLE",
