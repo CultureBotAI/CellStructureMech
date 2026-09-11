@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/phuz_spindle.yaml
+  slug: phuz_spindle
+session:
+  id: 2026-09-11T125034Z-codex-0a6ca0
+  timestamp: '2026-09-11T12:50:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/481
+  - https://github.com/CultureBotAI/CellStructureMech/issues/482
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/480
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add Goslar scope to PhuZ spindle
+  details: 'Addressed PR review issues #481 and #482 by adding Escherichia phage vB_EcoM_Goslar
+    taxonomic and canonical-example scope for the Birkholz et al. PhuZ rotation evidence,
+    adding the Goslar paper to the PhuZ component evidence, and broadening component and grounding
+    TODO wording so the curated family covers nucleus-positioning spindles and nucleus-rotating
+    vortex arrays without modeling Goslar rotation in the positioning graph.'
