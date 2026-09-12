@@ -2358,9 +2358,9 @@
           "cosine_similarity": 0.63272594
         },
         {
-          "identifier": "GO:0005777",
-          "label": "peroxisome",
-          "cosine_similarity": 0.61777684
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.62157774
         }
       ]
     },
@@ -2539,14 +2539,14 @@
           "cosine_similarity": 0.77280172
         },
         {
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.76749703
+        },
+        {
           "identifier": "GO:0005740",
           "label": "mitochondrial envelope",
           "cosine_similarity": 0.75325955
-        },
-        {
-          "identifier": "GO:0042717",
-          "label": "plasma membrane-derived chromatophore membrane",
-          "cosine_similarity": 0.75154324
         }
       ]
     },
@@ -2906,6 +2906,11 @@
           "cosine_similarity": 0.77868087
         },
         {
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.76644554
+        },
+        {
           "identifier": "GO:0070116",
           "label": "organellar chromatophore thylakoid",
           "cosine_similarity": 0.76028075
@@ -2914,11 +2919,6 @@
           "identifier": "GO:0070111",
           "label": "organellar chromatophore",
           "cosine_similarity": 0.75841716
-        },
-        {
-          "identifier": "GO:0042651",
-          "label": "thylakoid membrane",
-          "cosine_similarity": 0.75288566
         }
       ]
     },
@@ -3009,9 +3009,9 @@
           "cosine_similarity": 0.73914882
         },
         {
-          "identifier": "GO:0005777",
-          "label": "peroxisome",
-          "cosine_similarity": 0.73405501
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.73809962
         }
       ]
     },
@@ -3345,14 +3345,14 @@
           "cosine_similarity": 0.76538274
         },
         {
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.76388684
+        },
+        {
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
           "cosine_similarity": 0.75369791
-        },
-        {
-          "identifier": "GO:0005740",
-          "label": "mitochondrial envelope",
-          "cosine_similarity": 0.74953505
         }
       ]
     },
@@ -3712,6 +3712,11 @@
           "cosine_similarity": 0.87297035
         },
         {
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.86180499
+        },
+        {
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
           "cosine_similarity": 0.81193361
@@ -3720,11 +3725,37 @@
           "identifier": "GO:0009507",
           "label": "chloroplast",
           "cosine_similarity": 0.79604344
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0070113",
+      "label": "organellar chromatophore inner membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0070114",
+          "label": "organellar chromatophore outer membrane",
+          "cosine_similarity": 0.97470754
         },
         {
-          "identifier": "GO:0046858",
-          "label": "chlorosome",
-          "cosine_similarity": 0.78059089
+          "identifier": "GO:0070111",
+          "label": "organellar chromatophore",
+          "cosine_similarity": 0.86180499
+        },
+        {
+          "identifier": "GO:0070116",
+          "label": "organellar chromatophore thylakoid",
+          "cosine_similarity": 0.82487103
+        },
+        {
+          "identifier": "GO:0009279",
+          "label": "cell outer membrane",
+          "cosine_similarity": 0.80406394
+        },
+        {
+          "identifier": "GO:0005886",
+          "label": "plasma membrane",
+          "cosine_similarity": 0.79849204
         }
       ]
     },
@@ -3732,6 +3763,11 @@
       "identifier": "GO:0070114",
       "label": "organellar chromatophore outer membrane",
       "neighbors": [
+        {
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.97470754
+        },
         {
           "identifier": "GO:0070111",
           "label": "organellar chromatophore",
@@ -3751,11 +3787,6 @@
           "identifier": "GO:0005886",
           "label": "plasma membrane",
           "cosine_similarity": 0.81709341
-        },
-        {
-          "identifier": "GO:0009941",
-          "label": "chloroplast envelope",
-          "cosine_similarity": 0.79542191
         }
       ]
     },
@@ -3774,6 +3805,11 @@
           "cosine_similarity": 0.83445465
         },
         {
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.82487103
+        },
+        {
           "identifier": "GO:0009507",
           "label": "chloroplast",
           "cosine_similarity": 0.82290716
@@ -3782,11 +3818,6 @@
           "identifier": "GO:0030075",
           "label": "bacterial thylakoid",
           "cosine_similarity": 0.7916428
-        },
-        {
-          "identifier": "GO:0042651",
-          "label": "thylakoid membrane",
-          "cosine_similarity": 0.77621177
         }
       ]
     },
@@ -3872,14 +3903,14 @@
           "cosine_similarity": 0.73720589
         },
         {
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.72472226
+        },
+        {
           "identifier": "GO:0005628",
           "label": "prospore membrane",
           "cosine_similarity": 0.72320553
-        },
-        {
-          "identifier": "GO:0070114",
-          "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.72000114
         }
       ]
     },
@@ -4027,14 +4058,14 @@
           "cosine_similarity": 0.72237796
         },
         {
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.71745554
+        },
+        {
           "identifier": "GO:0062160",
           "label": "spongiome",
           "cosine_similarity": 0.71542882
-        },
-        {
-          "identifier": "GO:0070114",
-          "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.7065563
         }
       ]
     },
@@ -4058,14 +4089,14 @@
           "cosine_similarity": 0.73367514
         },
         {
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.73254888
+        },
+        {
           "identifier": "GO:0070258",
           "label": "inner membrane pellicle complex",
           "cosine_similarity": 0.7325464
-        },
-        {
-          "identifier": "GO:0005777",
-          "label": "peroxisome",
-          "cosine_similarity": 0.73188175
         }
       ]
     },

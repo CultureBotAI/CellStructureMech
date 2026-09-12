@@ -1,0 +1,121 @@
+identifier: GO:0070113
+label: organellar chromatophore inner membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The inner, i.e. lumen-facing, of the two lipid bilayers surrounding an
+  organellar chromatophore.
+definition_source: GO:0070113
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T18:20:26Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T18:20:57Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO synonym, UniProt SL xref, plastid inner membrane and organellar
+    chromatophore membrane parentage, organellar chromatophore parthood, a reviewed-label-only
+    inner lipid bilayer component, Paulinella distribution, a nonmechanistic topology
+    graph, and a lipid-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Paulinella-type chromatophore inner membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0070113
+parent_structures:
+- GO:0009528
+- GO:0070112
+part_of:
+- GO:0070111
+xrefs:
+- uniprot.location:SL-0359
+components:
+- component_id: organellar_chromatophore_inner_lipid_bilayer
+  label: organellar chromatophore inner lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lumen-facing lipid bilayer that separates the organellar chromatophore stroma
+    from the intermembrane space.
+  evidence:
+  - reference: GO:0070113
+    notes: GO:0070113 defines the organellar chromatophore inner membrane as the lumen-facing
+      lipid bilayer surrounding an organellar chromatophore.
+  - reference: uniprot.location:SL-0359
+    notes: UniProt Subcellular Location SL-0359 maps directly to GO:0070113 and describes
+      the same inner membrane topology.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070113 and UniProt SL-0359 identify the whole organellar chromatophore
+    inner membrane, but no separate source-neutral CURIE was curated for the lipid
+    constituent of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:39716
+  taxon_label: Paulinella
+  presence: VARIABLE
+  note: UniProt SL-0359 constrains the organellar chromatophore inner membrane to
+    Paulinella species without asserting that every Paulinella species carries this
+    membrane.
+  reference: uniprot.location:SL-0359
+evidence:
+- reference: GO:0070113
+  notes: Gene Ontology cellular-component term for the organellar chromatophore inner
+    membrane.
+- reference: GO:0009528
+  notes: Gene Ontology cellular-component term for plastid inner membrane.
+- reference: GO:0070112
+  notes: Gene Ontology cellular-component term for organellar chromatophore membrane,
+    the broader chromatophore-membrane parent structure.
+- reference: GO:0070111
+  notes: Gene Ontology cellular-component term for the organellar chromatophore that
+    this inner membrane bounds.
+- reference: uniprot.location:SL-0359
+  notes: UniProt Subcellular Location entry SL-0359 maps to GO:0070113, places it
+    under plastid inner membrane and organellar chromatophore membrane, and describes
+    its Paulinella-specific taxonomic range.
+causal_graphs:
+- graph_id: organellar_chromatophore_inner_membrane_topology
+  title: Organellar chromatophore inner membrane topology
+  description: The organellar chromatophore inner membrane is the lumen-facing lipid
+    bilayer of the Paulinella organellar chromatophore envelope.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining envelope topology without asserting
+    membrane proteins, import machinery, or the full organellar chromatophore photosynthetic
+    apparatus.
+  nodes:
+  - node_id: organellar_chromatophore_inner_membrane
+    label: organellar chromatophore inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0070113
+  - node_id: organellar_chromatophore
+    label: organellar chromatophore
+    node_type: STRUCTURE
+    grounding: GO:0070111
+  edges:
+  - subject: organellar_chromatophore_inner_membrane
+    predicate: bounds
+    object: organellar_chromatophore
+    description: The inner membrane is the lumen-facing lipid bilayer of the organellar
+      chromatophore envelope.
+    evidence:
+    - reference: GO:0070113
+      notes: GO:0070113 defines this inner membrane by its lumen-facing position around
+        an organellar chromatophore.
+    - reference: uniprot.location:SL-0359
+      notes: UniProt SL-0359 describes the inner organellar chromatophore membrane
+        as separating the chromatophore stroma from the intermembrane space.
+discussions:
+- discussion_id: ground_chromatophore_inner_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    organellar chromatophore inner membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#organellar_chromatophore_inner_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0070113 and UniProt SL-0359, but
+    the lipid bilayer constituent is intentionally left as a reviewed-label-only component
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-12'
