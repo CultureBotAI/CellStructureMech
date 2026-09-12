@@ -20,6 +20,12 @@ curation_history:
     component, glaucophyte distribution, a light-reaction function, a nonmechanistic
     topology graph, and a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T22:48:35Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #716 by citing GO:0033114 and UniProt SL-0084 on the lipid-bilayer
+    component whose role states that it bounds the cyanelle thylakoid lumen.'
+  llm_assisted: true
 parent_structures:
 - GO:0042651
 - GO:0055035
@@ -41,6 +47,12 @@ components:
   - reference: uniprot.location:SL-0085
     notes: UniProt SL-0085 maps directly to GO:0033115 and describes the same cyanelle
       thylakoid lipid bilayer.
+  - reference: GO:0033114
+    notes: GO:0033114 defines the cyanelle thylakoid lumen as the compartment bounded
+      by thylakoid membranes.
+  - reference: uniprot.location:SL-0084
+    notes: UniProt SL-0084 describes the cyanelle thylakoid lumen as bounded by thylakoid
+      membranes.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: GO:0033115 and UniProt SL-0085 identify the whole cyanelle thylakoid
     membrane, but no separate source-neutral CURIE was curated for the lipid constituent
