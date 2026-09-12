@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/plastoglobule.yaml
+  slug: plastoglobule
+session:
+  id: 2026-09-12T130346Z-codex-7dd10f
+  timestamp: '2026-09-12T13:03:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/649
+  - https://github.com/CultureBotAI/CellStructureMech/issues/650
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/648
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added plastoglobule record
+  details: 'Created an evidence-backed GO:0010287 plastoglobule record with UniProt Subcellular
+    Location grounding, reviewed-label lipid core and monolayer components, Chlamydomonas
+    reinhardtii evidence, rendered pages, and review fixes for PR #648.'
