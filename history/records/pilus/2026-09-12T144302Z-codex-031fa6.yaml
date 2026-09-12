@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/pilus.yaml
+  slug: pilus
+session:
+  id: 2026-09-12T144302Z-codex-031fa6
+  timestamp: '2026-09-12T14:43:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/661
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/660
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add GO-grounded pilus appendage record
+  details: 'Added a GO:0009289 pilus parent record with exact GO synonymy, UniProt SL evidence,
+    a reviewed-label-only generic structural-subunit component, an Escherichia coli taxonomic
+    and canonical scope, a generic surface-interaction function, and a nonmechanistic function
+    graph. Adversarial review in #661 narrowed the taxonomic-distribution row from all Bacteria
+    to directly cited Escherichia coli scope before merge.'
