@@ -19,6 +19,12 @@ curation_history:
     component, glaucophyte distribution, a Cyanophora paradoxa canonical example,
     a nonmechanistic topology graph, and a lipid-bilayer grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T20:53:27Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Addressed #704 by adding GO:0036014 cyanelle intermembrane-space evidence
+    and a bounded intermembrane-space node to the outer-membrane topology graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0009527
 - GO:0033113
@@ -76,6 +82,8 @@ evidence:
   notes: Gene Ontology cellular-component term for the generic cyanelle membrane parent.
 - reference: GO:0033112
   notes: Gene Ontology cellular-component term for cyanelle envelope.
+- reference: GO:0036014
+  notes: Gene Ontology cellular-component term for the cyanelle intermembrane space.
 - reference: uniprot.location:SL-0482
   notes: UniProt Subcellular Location entry SL-0482 maps Cyanelle outer membrane to
     GO:0036013 and places it under cyanelle membrane and plastid outer membrane.
@@ -92,8 +100,8 @@ evidence:
 causal_graphs:
 - graph_id: cyanelle_outer_membrane_topology
   title: Cyanelle outer membrane topology
-  description: The cyanelle outer membrane is the cytoplasm-facing lipid bilayer of
-    the cyanelle envelope.
+  description: The cyanelle outer membrane is the cytoplasm-facing lipid bilayer that
+    also bounds the intermembrane space of the cyanelle envelope.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures the defining envelope topology without asserting
@@ -111,6 +119,10 @@ causal_graphs:
     label: cytoplasm
     node_type: CELLULAR_LOCALIZATION
     grounding: GO:0005737
+  - node_id: cyanelle_intermembrane_space
+    label: cyanelle intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0036014
   edges:
   - subject: cyanelle_outer_membrane
     predicate: is part of
@@ -135,6 +147,19 @@ causal_graphs:
         the envelope.
     - reference: uniprot.location:SL-0482
       notes: UniProt SL-0482 describes the cyanelle outer membrane as facing the cytoplasm.
+  - subject: cyanelle_outer_membrane
+    predicate: bounds
+    object: cyanelle_intermembrane_space
+    description: The cyanelle outer membrane forms the outer boundary of the intermembrane
+      space between the envelope lipid bilayers.
+    evidence:
+    - reference: GO:0036014
+      notes: GO:0036014 defines the cyanelle intermembrane space as the region between
+        the inner and outer lipid bilayers of the envelope.
+    - reference: DOI:10.1074/jbc.M116.746131
+      notes: Kojima et al. 2016 localized Cyanophora paradoxa outer-cyanelle-membrane
+        proteins outside the peptidoglycan layer, consistent with the peptidoglycan-bearing
+        intermembrane space inside the outer membrane.
 discussions:
 - discussion_id: ground_cyanelle_outer_lipid_bilayer
   prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
