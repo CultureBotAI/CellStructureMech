@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/chlorosome_envelope.yaml
+  slug: chlorosome_envelope
+session:
+  id: 2026-09-12T141426Z-codex-d2c684
+  timestamp: '2026-09-12T14:14:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/658
+  - https://github.com/CultureBotAI/CellStructureMech/issues/659
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/657
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added a GO-grounded chlorosome envelope record
+  details: Added GO:0033105 chlorosome envelope with exact GO and UniProt synonymy, chlorosome
+    parthood, reviewed-label glycolipid-monolayer and Csm-protein components, bacterial distribution,
+    Chlorobaculum and Chloroflexus examples, a light-harvesting topology graph, regenerated
+    embeddings and rendered pages, then addressed review issues on the graph process endpoint
+    and glycolipid-monolayer node type.
