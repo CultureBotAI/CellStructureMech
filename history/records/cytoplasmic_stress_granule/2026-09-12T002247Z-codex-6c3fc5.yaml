@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/cytoplasmic_stress_granule.yaml
+  slug: cytoplasmic_stress_granule
+session:
+  id: 2026-09-12T002247Z-codex-6c3fc5
+  timestamp: '2026-09-12T00:22:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/551
+  - https://github.com/CultureBotAI/CellStructureMech/issues/552
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/550
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the cytoplasmic stress granule structure record
+  details: Added an evidence-backed GO:0010494 cytoplasmic stress granule record with exact
+    GO synonymy, Saccharomyces cerevisiae distribution and canonical-example curation, reviewed
+    label-only mRNA, Pab1/Pub1/Pbp1, and eIF3/40S component cohorts, stress-associated mRNP-triage
+    function evidence, and a nonmechanistic yeast assembly graph. Addressed PR review by narrowing
+    the mRNA cargo evidence to glucose-deprivation mRNPs and renaming the Pab1/Pub1/Pbp1 cohort
+    as RNA-binding markers so Pab1 remains a marker while Pub1 and Pbp1 are the assembly inputs.
