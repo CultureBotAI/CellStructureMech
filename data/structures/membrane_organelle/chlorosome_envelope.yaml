@@ -28,6 +28,13 @@ curation_history:
     light-harvesting function while retaining GO:0015979 on the exactly labelled photosynthesis
     graph node.
   llm_assisted: true
+- timestamp: '2026-09-12T14:14:07Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #658 by narrowing the graph endpoint from broad photosynthesis
+    to ungrounded photosynthetic light harvesting; resolved #659 by typing the glycolipid
+    monolayer node as a STRUCTURE.'
+  llm_assisted: true
 synonyms:
 - synonym_text: chlorosome membrane
   synonym_type: EXACT_SYNONYM
@@ -146,8 +153,6 @@ evidence:
   notes: Gene Ontology cellular-component term for the chlorosome envelope.
 - reference: GO:0046858
   notes: Gene Ontology cellular-component term for the chlorosome.
-- reference: GO:0015979
-  notes: Gene Ontology biological-process term for photosynthesis.
 - reference: uniprot.location:SL-0060
   notes: UniProt Subcellular Location entry that maps chlorosome envelope to GO:0033105.
 - reference: PMID:14729689
@@ -184,7 +189,7 @@ causal_graphs:
     grounding: GO:0033105
   - node_id: glycolipid_monolayer
     label: chlorosome glycolipid monolayer
-    node_type: CHEMICAL
+    node_type: STRUCTURE
     component_ref: glycolipid_monolayer
   - node_id: csm_envelope_proteins
     label: accessory chlorosome envelope proteins
@@ -201,10 +206,9 @@ causal_graphs:
     label: chlorosome
     node_type: STRUCTURE
     grounding: GO:0046858
-  - node_id: photosynthesis
-    label: photosynthesis
+  - node_id: photosynthetic_light_harvesting
+    label: photosynthetic light harvesting
     node_type: BIOLOGICAL_PROCESS
-    grounding: GO:0015979
   edges:
   - subject: chlorosome_envelope
     predicate: is part of
@@ -252,9 +256,9 @@ causal_graphs:
         tepidum chlorosomes.
   - subject: chlorosome_envelope
     predicate: supports
-    object: photosynthesis
+    object: photosynthetic_light_harvesting
     description: The envelope and its CsmA baseplate organize the chlorosome light-harvesting
-      antenna used by green photosynthetic bacteria.
+      antenna of green photosynthetic bacteria.
     evidence:
     - reference: DOI:10.1007/s11120-013-9869-3
       notes: Orf and Blankenship 2013 review chlorosome antenna organization and energy
