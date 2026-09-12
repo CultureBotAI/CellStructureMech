@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pilus · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>pilus</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009289"><code>GO:0009289</code></a> · APPENDAGE · APPENDAGE · <span class="status">PROPOSED</span></p>
+<p class="definition">A proteinaceous hair-like appendage on the surface of bacteria ranging from 2-8 nm in diameter. <small>[<a href="http://purl.obolibrary.org/obo/GO_0009289"><code>GO:0009289</code></a>]</small></p>
+<p><strong>Synonyms:</strong> fimbria; fimbriae; fimbrium; pili</p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0113</code> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-pilus_structural_subunits"><td>pilus structural subunits</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Protein subunits that polymerize into a hair-like extracellular pilus fiber on the bacterial cell surface.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009289"><code>GO:0009289</code></a> <small>GO:0009289 defines a pilus as a proteinaceous hair-like appendage on the bacterial surface.</small></li><li><code>uniprot.location:SL-0113</code> <small>UniProt Subcellular Location entry SL-0113 maps Fimbrium to GO:0009289 and describes pili as non-flagellar polymeric filamentous appendages.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2"><code>NCBITaxon:2</code></a> Bacteria — <strong>VARIABLE</strong>: GO:0009289 defines the pilus as a bacterial surface appendage; the generic record covers bacterial pilus subclasses rather than a universal structure present in every bacterial cell. [<a href="http://purl.obolibrary.org/obo/GO_0009289"><code>GO:0009289</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code>NCBITaxon:562</code></a> <em>Escherichia coli</em> — Escherichia coli is a model for multiple chaperone-usher pilus subclasses, including type I pili and P pili. [<a href="https://doi.org/10.1038/nrmicro.2017.40"><code>DOI:10.1038/nrmicro.2017.40</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>bacterial surface interaction</strong> — Bacterial pili project from the cell surface and, depending on subtype, mediate adhesion, cell-cell interactions, biofilm formation, conjugation, DNA uptake or twitching motility.<ul class="evidence"><li><code>uniprot.location:SL-0113</code> <small>UniProt Subcellular Location entry SL-0113 summarizes adhesion, motility, cell-cell interaction, biofilm, conjugation and DNA uptake roles for bacterial pili.</small></li><li><a href="https://doi.org/10.1038/nrmicro.2017.40"><code>DOI:10.1038/nrmicro.2017.40</code></a> <small>Hospenthal, Costa and Waksman 2017 review the adhesive, motility and DNA-uptake roles of Gram-negative bacterial pili.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-generic_pilus_polymer_surface_interaction">Protein polymers build bacterial pili <small>(FUNCTION)</small></h3>
+<p>Nonhomologous pilus structural subunits polymerize into surface-exposed protein fibers that let bacterial cells interact with surfaces, host cells, neighboring cells or extracellular DNA.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>pilus structural subunits</td><td>polymerize into</td><td>pilus</td><td><ul class="evidence"><li><code>uniprot.location:SL-0113</code> <small>UniProt Subcellular Location entry SL-0113 describes the fimbrium/pilus class as polymeric filamentous appendages.</small></li></ul></td></tr>
+<tr><td>pilus</td><td>supports</td><td>bacterial surface interaction</td><td><ul class="evidence"><li><code>uniprot.location:SL-0113</code> <small>UniProt Subcellular Location entry SL-0113 describes adhesion, motility, cell-cell interaction, biofilm, conjugation and DNA uptake roles for pili.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral identifiers for structural pilus subunits that can be added to the generic pilus parent without conflating type-specific Fim, Pap, Pil and Csg fibers. <small>The pilus parent record captures the proteinaceous polymer shared by bacterial pilus subclasses, while exact subunit families differ among type I, P, type IV, curli and other children.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009289"><code>GO:0009289</code></a> <small>Gene Ontology cellular-component term for pilus.</small></li><li><code>uniprot.location:SL-0113</code> <small>UniProt Subcellular Location entry that maps Fimbrium to GO:0009289.</small></li><li><a href="https://doi.org/10.1038/nrmicro.2017.40"><code>DOI:10.1038/nrmicro.2017.40</code></a> <small>Hospenthal MK, Costa TRD and Waksman G 2017, &#39;A comprehensive guide to pilus biogenesis in Gram-negative bacteria&#39;, Nature Reviews Microbiology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-12T14:28:45Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-12T14:29:30Z</code> codex · EXPANDED_RECORD — Added GO synonymy, the UniProt Subcellular Location xref, a reviewed-label-only generic structural-subunit component, bacterial scope, an Escherichia coli canonical example, generic surface-interaction function, DOI/GO/UniProt evidence, a nonmechanistic pilus-polymer graph, and a boundary TODO for exact subtype-neutral subunit grounding.</li><li><code>2026-09-12T14:35:27Z</code> codex · TIGHTENED_EVIDENCE_SCOPE — Narrowed the Escherichia coli canonical-example note to type I and P pili so the claim is directly supported by Hospenthal, Costa and Waksman 2017.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/pilus.yaml"><code>data/structures/appendage/pilus.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+identifier: GO:0009289
+label: pilus
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: A proteinaceous hair-like appendage on the surface of bacteria ranging
+  from 2-8 nm in diameter.
+definition_source: GO:0009289
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T14:28:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T14:29:30Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, the UniProt Subcellular Location xref, a reviewed-label-only
+    generic structural-subunit component, bacterial scope, an Escherichia coli canonical
+    example, generic surface-interaction function, DOI/GO/UniProt evidence, a nonmechanistic
+    pilus-polymer graph, and a boundary TODO for exact subtype-neutral subunit grounding.
+  llm_assisted: true
+- timestamp: '2026-09-12T14:35:27Z'
+  curator: codex
+  action: TIGHTENED_EVIDENCE_SCOPE
+  changes: Narrowed the Escherichia coli canonical-example note to type I and P pili
+    so the claim is directly supported by Hospenthal, Costa and Waksman 2017.
+  llm_assisted: true
+synonyms:
+- synonym_text: fimbria
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009289
+- synonym_text: fimbriae
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009289
+- synonym_text: fimbrium
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009289
+- synonym_text: pili
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009289
+xrefs:
+- uniprot.location:SL-0113
+components:
+- component_id: pilus_structural_subunits
+  label: pilus structural subunits
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The generic pilus class spans nonhomologous type IV, chaperone-usher,
+    curli and other bacterial surface fibers; no single source-neutral protein-family
+    CURIE denotes every structural subunit that polymerizes into all pili.
+  role: Protein subunits that polymerize into a hair-like extracellular pilus fiber
+    on the bacterial cell surface.
+  evidence:
+  - reference: GO:0009289
+    notes: GO:0009289 defines a pilus as a proteinaceous hair-like appendage on the
+      bacterial surface.
+  - reference: uniprot.location:SL-0113
+    notes: UniProt Subcellular Location entry SL-0113 maps Fimbrium to GO:0009289
+      and describes pili as non-flagellar polymeric filamentous appendages.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: GO:0009289 defines the pilus as a bacterial surface appendage; the generic
+    record covers bacterial pilus subclasses rather than a universal structure present
+    in every bacterial cell.
+  reference: GO:0009289
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Escherichia coli is a model for multiple chaperone-usher pilus subclasses,
+    including type I pili and P pili.
+  reference: DOI:10.1038/nrmicro.2017.40
+functions:
+- function_id: surface_interaction
+  label: bacterial surface interaction
+  description: Bacterial pili project from the cell surface and, depending on subtype,
+    mediate adhesion, cell-cell interactions, biofilm formation, conjugation, DNA
+    uptake or twitching motility.
+  evidence:
+  - reference: uniprot.location:SL-0113
+    notes: UniProt Subcellular Location entry SL-0113 summarizes adhesion, motility,
+      cell-cell interaction, biofilm, conjugation and DNA uptake roles for bacterial
+      pili.
+  - reference: DOI:10.1038/nrmicro.2017.40
+    notes: Hospenthal, Costa and Waksman 2017 review the adhesive, motility and DNA-uptake
+      roles of Gram-negative bacterial pili.
+evidence:
+- reference: GO:0009289
+  notes: Gene Ontology cellular-component term for pilus.
+- reference: uniprot.location:SL-0113
+  notes: UniProt Subcellular Location entry that maps Fimbrium to GO:0009289.
+- reference: DOI:10.1038/nrmicro.2017.40
+  notes: Hospenthal MK, Costa TRD and Waksman G 2017, 'A comprehensive guide to pilus
+    biogenesis in Gram-negative bacteria', Nature Reviews Microbiology.
+causal_graphs:
+- graph_id: generic_pilus_polymer_surface_interaction
+  title: Protein polymers build bacterial pili
+  description: Nonhomologous pilus structural subunits polymerize into surface-exposed
+    protein fibers that let bacterial cells interact with surfaces, host cells, neighboring
+    cells or extracellular DNA.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The generic pilus term spans several unrelated assembly pathways; subtype-specific
+    assembly mechanisms belong on exact child records such as type I pilus, P pilus,
+    type IV pilus and curli.
+  nodes:
+  - node_id: pilus_structural_subunits
+    label: pilus structural subunits
+    node_type: GENE_OR_PROTEIN
+    component_ref: pilus_structural_subunits
+  - node_id: pilus
+    label: pilus
+    node_type: STRUCTURE
+    grounding: GO:0009289
+  - node_id: surface_interaction
+    label: bacterial surface interaction
+    node_type: CAPACITY
+  edges:
+  - subject: pilus_structural_subunits
+    predicate: polymerize into
+    object: pilus
+    description: Structural pilus proteins form hair-like polymeric appendages on
+      the bacterial cell surface.
+    evidence:
+    - reference: uniprot.location:SL-0113
+      notes: UniProt Subcellular Location entry SL-0113 describes the fimbrium/pilus
+        class as polymeric filamentous appendages.
+  - subject: pilus
+    predicate: supports
+    object: surface_interaction
+    description: Pili are bacterial surface appendages that can mediate adhesion,
+      motility, biofilm formation, conjugation or DNA uptake depending on subtype.
+    evidence:
+    - reference: uniprot.location:SL-0113
+      notes: UniProt Subcellular Location entry SL-0113 describes adhesion, motility,
+        cell-cell interaction, biofilm, conjugation and DNA uptake roles for pili.
+discussions:
+- discussion_id: ground_generic_pilus_subunits
+  prompt: Resolve exact source-neutral identifiers for structural pilus subunits that
+    can be added to the generic pilus parent without conflating type-specific Fim,
+    Pap, Pil and Csg fibers.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pilus_structural_subunits
+  rationale: The pilus parent record captures the proteinaceous polymer shared by
+    bacterial pilus subclasses, while exact subunit families differ among type I,
+    P, type IV, curli and other children.
+  evidence:
+  - reference: GO:0009289
+    notes: GO:0009289 denotes the proteinaceous bacterial pilus parent class.
+  - reference: DOI:10.1038/nrmicro.2017.40
+    notes: Hospenthal, Costa and Waksman 2017 review several distinct Gram-negative
+      pilus biogenesis systems.
+  posed_by: codex
+  posed_date: '2026-09-12'
