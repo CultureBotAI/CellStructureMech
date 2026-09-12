@@ -1,0 +1,295 @@
+identifier: GO:0030061
+label: mitochondrial crista
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: Any of the inward folds of the mitochondrial inner membrane. Their number,
+  extent, and shape differ in mitochondria from different tissues and organisms. They
+  appear to be devices for increasing the surface area of the mitochondrial inner
+  membrane, where the enzymes of electron transport and oxidative phosphorylation
+  are found. Their shape can vary with the respiratory state of the mitochondria.
+definition_source: GO:0030061
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T06:34:18Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T06:35:06Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added exact crista and crista-junction topology, MICOS and ATP synthase
+    components, Eukaryota and Saccharomyces scope, cristae formation and oxidative-phosphorylation
+    functions, GO/DOI evidence, a nonmechanistic yeast crista-architecture graph,
+    and a subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T06:47:49Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved PR #599 review issues #600 and #601 by classifying MICOS as associated
+    architecture machinery and adding a GO:0097002 inner boundary membrane node plus
+    crista-junction graph edge.'
+  llm_assisted: true
+synonyms:
+- synonym_text: mitochondrial cristae
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030061
+- synonym_text: cristae
+  synonym_type: BROAD_SYNONYM
+  source: GO:0030061
+part_of:
+- GO:0005743
+has_part:
+- GO:0044284
+components:
+- component_id: micos_complex
+  label: MICOS complex
+  component_type: PROTEIN_COMPLEX
+  component_role: ASSOCIATED_MACHINERY
+  grounding: GO:0061617
+  essentiality: UNKNOWN
+  role: Mitochondrial inner-membrane protein complex that maintains crista junctions,
+    inner-membrane architecture, and contact sites to the outer membrane.
+  evidence:
+  - reference: GO:0061617
+    notes: GO:0061617 defines the MICOS complex as a mitochondrial inner-membrane
+      complex involved in maintenance of crista junctions, inner membrane architecture,
+      and contact sites to the outer membrane.
+  - reference: DOI:10.7554/elife.07739
+    notes: Friedman et al. 2015 analyze two budding-yeast MICOS subcomplexes and their
+      roles in crista junction positioning, respiratory-complex distribution, and
+      inner-membrane architecture.
+- component_id: atp_synthase
+  label: proton-transporting ATP synthase complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0045259
+  essentiality: UNKNOWN
+  role: Resident oxidative-phosphorylation complex whose dimer rows shape highly curved
+    crista ridges.
+  evidence:
+  - reference: GO:0045259
+    notes: GO:0045259 defines proton-transporting ATP synthase complexes independently
+      of a specific mitochondrial, chloroplast, or bacterial membrane.
+  - reference: DOI:10.1073/pnas.1204593109
+    notes: Davies et al. 2012 used electron cryotomography of Saccharomyces cerevisiae
+      mitochondrial membranes to resolve ATP synthase dimers in rows along curved
+      crista ridges.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: Cristae occur in canonical mitochondria, while some anaerobic eukaryotic lineages
+    have reduced mitochondrion-related organelles with simplified or absent cristae.
+  reference: DOI:10.1038/nature12985
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria form cristae whose junction and ridge architecture
+    is organized by MICOS and ATP synthase dimer rows.
+  reference: DOI:10.7554/elife.07739
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference yeast for electron-tomographic and genetic studies connecting MICOS
+    and ATP synthase organization to mitochondrial crista morphology.
+  reference: DOI:10.1073/pnas.1204593109
+functions:
+- function_id: cristae_formation
+  label: cristae formation
+  grounding: GO:0042407
+  description: MICOS and ATP synthase organization help form and maintain the inward
+    crista folds of the mitochondrial inner membrane.
+  evidence:
+  - reference: GO:0042407
+    notes: GO:0042407 defines cristae formation as assembly of the inward folds of
+      the mitochondrial inner membrane.
+  - reference: DOI:10.7554/elife.07739
+    notes: Friedman et al. 2015 connect MICOS subcomplexes, respiratory complexes,
+      and cardiolipin to correctly shaped mitochondrial inner membrane in budding
+      yeast.
+- function_id: oxidative_phosphorylation
+  label: oxidative phosphorylation
+  grounding: GO:0006119
+  description: Cristae expand and shape the inner-membrane surface where respiratory-chain
+    and ATP synthase complexes support ATP synthesis.
+  evidence:
+  - reference: GO:0030061
+    notes: GO:0030061 describes cristae as inward folds of the mitochondrial inner
+      membrane where enzymes of electron transport and oxidative phosphorylation are
+      found.
+  - reference: DOI:10.1073/pnas.1204593109
+    notes: Davies et al. 2012 resolved ATP synthase dimers along yeast crista ridges
+      and linked dimer rows to crista membrane morphology.
+evidence:
+- reference: GO:0030061
+  notes: Gene Ontology cellular-component term for mitochondrial crista.
+- reference: GO:0005743
+  notes: Gene Ontology cellular-component term for mitochondrial inner membrane.
+- reference: GO:0044284
+  notes: Gene Ontology cellular-component term for mitochondrial crista junction.
+- reference: GO:0097002
+  notes: Gene Ontology cellular-component term for mitochondrial inner boundary membrane.
+- reference: GO:0061617
+  notes: Gene Ontology cellular-component term for the MICOS complex.
+- reference: GO:0045259
+  notes: Gene Ontology cellular-component term for the proton-transporting ATP synthase
+    complex.
+- reference: GO:0042407
+  notes: Gene Ontology biological-process term for cristae formation.
+- reference: GO:0006119
+  notes: Gene Ontology biological-process term for oxidative phosphorylation.
+- reference: DOI:10.7554/elife.07739
+  notes: Friedman et al. 2015, 'MICOS coordinates with respiratory complexes and lipids
+    to establish mitochondrial inner membrane architecture', eLife.
+- reference: DOI:10.1073/pnas.1204593109
+  notes: Davies et al. 2012, 'Structure of the yeast F1Fo-ATP synthase dimer and its
+    role in shaping the mitochondrial cristae', Proceedings of the National Academy
+    of Sciences.
+- reference: DOI:10.1093/emboj/21.3.221
+  notes: Paumard et al. 2002, 'The ATP synthase is involved in generating mitochondrial
+    cristae morphology', The EMBO Journal.
+- reference: DOI:10.1038/nature12985
+  notes: Friedman and Nunnari 2014, 'Mitochondrial form and function', Nature.
+causal_graphs:
+- graph_id: yeast_mitochondrial_crista_architecture
+  title: MICOS and ATP synthase organize yeast mitochondrial cristae
+  description: In budding yeast, MICOS localizes to crista junctions and ATP synthase
+    dimers align along curved crista ridges, linking inner-membrane topology to respiratory
+    organization.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures crista topology and two architectural complexes
+    without asserting a complete MICOS subunit mechanism, cardiolipin remodeling pathway,
+    or respiratory supercomplex assembly sequence.
+  nodes:
+  - node_id: mitochondrial_crista
+    label: mitochondrial crista
+    node_type: STRUCTURE
+    grounding: GO:0030061
+  - node_id: mitochondrial_inner_membrane
+    label: mitochondrial inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005743
+  - node_id: crista_junction
+    label: mitochondrial crista junction
+    node_type: STRUCTURE
+    grounding: GO:0044284
+  - node_id: mitochondrial_inner_boundary_membrane
+    label: mitochondrial inner boundary membrane
+    node_type: STRUCTURE
+    grounding: GO:0097002
+  - node_id: micos_complex
+    label: MICOS complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0061617
+    component_ref: micos_complex
+  - node_id: atp_synthase
+    label: proton-transporting ATP synthase complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0045259
+    component_ref: atp_synthase
+  - node_id: cristae_formation
+    label: cristae formation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042407
+  - node_id: oxidative_phosphorylation
+    label: oxidative phosphorylation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006119
+  edges:
+  - subject: mitochondrial_crista
+    predicate: is part of
+    object: mitochondrial_inner_membrane
+    description: A mitochondrial crista is an inward fold of the mitochondrial inner
+      membrane.
+    evidence:
+    - reference: GO:0030061
+      notes: GO:0030061 defines a mitochondrial crista as an inward fold of the mitochondrial
+        inner membrane.
+  - subject: crista_junction
+    predicate: connects
+    object: mitochondrial_crista
+    description: Crista junctions connect cristae to the inner boundary membrane.
+    evidence:
+    - reference: GO:0044284
+      notes: GO:0044284 defines the crista junction as the tubular connection between
+        a crista and the mitochondrial inner boundary membrane.
+  - subject: crista_junction
+    predicate: connects
+    object: mitochondrial_inner_boundary_membrane
+    description: Crista junctions connect cristae to the non-invaginated inner boundary
+      membrane.
+    evidence:
+    - reference: GO:0044284
+      notes: GO:0044284 defines the crista junction as the tubular connection between
+        a crista and the mitochondrial inner boundary membrane.
+    - reference: GO:0097002
+      notes: GO:0097002 defines the mitochondrial inner boundary membrane as the non-invaginated
+        portion of the mitochondrial inner membrane that lies parallel to the outer
+        membrane.
+  - subject: micos_complex
+    predicate: maintains
+    object: crista_junction
+    description: MICOS maintains crista junctions and mitochondrial inner-membrane
+      architecture.
+    evidence:
+    - reference: GO:0061617
+      notes: GO:0061617 defines MICOS by its role in maintaining crista junctions
+        and inner membrane architecture.
+    - reference: DOI:10.7554/elife.07739
+      notes: Friedman et al. 2015 analyze how Saccharomyces cerevisiae MICOS subcomplexes
+        localize to and regulate crista junctions.
+  - subject: atp_synthase
+    predicate: shapes
+    object: mitochondrial_crista
+    description: Rows of ATP synthase dimers shape highly curved crista ridges in
+      budding-yeast mitochondria.
+    evidence:
+    - reference: DOI:10.1073/pnas.1204593109
+      notes: Davies et al. 2012 resolved ATP synthase dimers in rows along yeast crista
+        ridges and linked those dimer rows to ridge curvature.
+    - reference: DOI:10.1093/emboj/21.3.221
+      notes: Paumard et al. 2002 connected yeast ATP synthase dimerization to mitochondrial
+        crista morphology.
+  - subject: mitochondrial_crista
+    predicate: supports
+    object: oxidative_phosphorylation
+    description: Cristae increase and shape the inner-membrane surface where oxidative-phosphorylation
+      enzymes reside.
+    evidence:
+    - reference: GO:0030061
+      notes: GO:0030061 notes that the enzymes of electron transport and oxidative
+        phosphorylation are found on cristae.
+  - subject: micos_complex
+    predicate: contributes to
+    object: cristae_formation
+    description: MICOS architecture contributes to formation and maintenance of normal
+      cristae.
+    evidence:
+    - reference: DOI:10.7554/elife.07739
+      notes: Friedman et al. 2015 connect MICOS, mitochondrial lipids, and respiratory
+        complexes to construction of a correctly shaped mitochondrial inner membrane.
+discussions:
+- discussion_id: resolve_crista_micos_subunits_and_lipids
+  prompt: Resolve exact source-neutral groundings for MICOS subunits, yeast ATP synthase
+    dimerization subunits, and cardiolipin before curating them as separate crista
+    components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#micos_complex
+  - components#atp_synthase
+  rationale: The first mitochondrial crista record grounds MICOS and ATP synthase
+    at source-neutral complex terms while avoiding guessed InterPro, UniProt, or ChEBI
+    CURIEs for subunits and lipids whose exact cross-species boundary needs separate
+    review.
+  evidence:
+  - reference: DOI:10.7554/elife.07739
+    notes: Friedman et al. 2015 separate MICOS into Mic27/Mic10/Mic12 and Mic60/Mic19
+      subcomplexes in budding yeast.
+  - reference: DOI:10.1073/pnas.1204593109
+    notes: Davies et al. 2012 analyze budding-yeast ATP synthase dimer rows but do
+      not define source-neutral family groundings for individual dimerization subunits.
+  posed_by: codex
+  posed_date: '2026-09-12'
