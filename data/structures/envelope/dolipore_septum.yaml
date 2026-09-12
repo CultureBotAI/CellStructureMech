@@ -21,6 +21,13 @@ curation_history:
     DOI/GO evidence, a nonmechanistic pore-gating graph, and a grounding TODO for
     septal pore cap proteins.
   llm_assisted: true
+- timestamp: '2026-09-12T04:54:06Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #583 review issues #584, #585 and #586 by changing the Agaricomycotina
+    distribution to VARIABLE, renaming the parenthesome component to paired septal
+    pore caps, and softening the pore-plugging graph edge to septal pore closure.'
+  llm_assisted: true
 synonyms:
 - synonym_text: dolipore-parenthesome septum
   synonym_type: EXACT_SYNONYM
@@ -48,18 +55,17 @@ components:
   - reference: DOI:10.1139/m78-129
     notes: Traquair and McKeen 1978 used transmission electron microscopy to describe
       the dolipore-parenthesome septum in Hirschioporus pargamenus hyphae.
-- component_id: septal_pore_cap
-  label: septal pore cap
+- component_id: septal_pore_caps
+  label: paired septal pore caps
   component_type: OTHER
   component_role: CONSTITUENT
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The parenthesome or septal pore cap is curated here as a named
-    dolipore-associated substructure; QuickGO has no exact parenthesome or septal-pore-cap
-    cellular-component term, and no single protein-family grounding spans the whole
-    cap.
+  grounding_notes: Parenthesomes or septal pore caps are curated here as paired dolipore-associated
+    substructures; QuickGO has no exact parenthesome or septal-pore-cap cellular-component
+    term, and no single protein-family grounding spans the whole cap.
   essentiality: UNKNOWN
-  role: Covers both cytoplasmic faces of the dolipore and participates in septal pore
-    plugging.
+  role: Paired parenthesomes cap the two cytoplasmic faces of the dolipore and participate
+    in septal pore closure.
   evidence:
   - reference: DOI:10.1128/EC.00125-08
     notes: Van Driel et al. 2008 localized the SPC18 glycoprotein to Rhizoctonia solani
@@ -70,9 +76,10 @@ components:
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5302
   taxon_label: Agaricomycotina
-  presence: COMMON
-  note: Dolipore septa with septal pore caps occur in many filamentous Agaricomycotina,
-    while pore-cap morphology varies among sampled lineages.
+  presence: VARIABLE
+  note: Dolipore septa with septal pore caps have been characterized in sampled filamentous
+    Agaricomycotina, while pore-cap morphology varies among lineages and this row
+    does not assert presence across the whole subphylum.
   reference: DOI:10.1016/j.mycres.2008.12.007
 canonical_examples:
 - taxon_id: NCBITaxon:5334
@@ -84,9 +91,9 @@ canonical_examples:
 functions:
 - function_id: septal_pore_gatekeeping
   label: septal pore gatekeeping
-  description: The dolipore septum and its septal pore caps regulate cytoplasmic continuity
-    between adjacent hyphal compartments by controlling whether the central septal
-    pore is open or plugged.
+  description: The dolipore septum and its paired septal pore caps regulate cytoplasmic
+    continuity between adjacent hyphal compartments by controlling whether the central
+    septal pore is open or closed.
   evidence:
   - reference: DOI:10.1128/EC.00125-08
     notes: Van Driel et al. 2008 found SPC18 in septal pore caps and pore plugs, supporting
@@ -113,10 +120,10 @@ evidence:
     commune, Environmental Microbiology.
 causal_graphs:
 - graph_id: dolipore_septum_pore_gating
-  title: Parenthesomes cover and help plug the dolipore
-  description: A barrel-shaped septal wall surrounds the central pore, septal pore
-    caps cover both cytoplasmic faces of that pore, and the caps participate in plugging
-    the pore to gate exchange between adjacent hyphal compartments.
+  title: Parenthesomes cover and gate the dolipore
+  description: A barrel-shaped septal wall surrounds the central pore, paired septal
+    pore caps cover the two cytoplasmic faces of that pore, and the caps participate
+    in closing the pore to gate exchange between adjacent hyphal compartments.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures the ultrastructural arrangement and pore-gating
@@ -130,10 +137,10 @@ causal_graphs:
   - node_id: central_septal_pore
     label: central septal pore
     node_type: STRUCTURE
-  - node_id: septal_pore_cap
-    label: septal pore cap
+  - node_id: septal_pore_caps
+    label: paired septal pore caps
     node_type: STRUCTURE
-    component_ref: septal_pore_cap
+    component_ref: septal_pore_caps
   - node_id: dolipore_septum
     label: dolipore septum
     node_type: STRUCTURE
@@ -148,11 +155,11 @@ causal_graphs:
     - reference: GO:0000937
       notes: GO:0000937 defines the dolipore septum by a central pore whose surrounding
         septum is swollen.
-  - subject: septal_pore_cap
+  - subject: septal_pore_caps
     predicate: covers
     object: central_septal_pore
-    description: Septal pore caps, or parenthesomes, sit on both sides of the dolipore
-      septum over the central pore.
+    description: Paired septal pore caps, or parenthesomes, sit on the two cytoplasmic
+      sides of the dolipore septum over the central pore.
     evidence:
     - reference: GO:0000937
       notes: GO:0000937 includes parenthesome-covered central pores in the dolipore
@@ -160,11 +167,11 @@ causal_graphs:
     - reference: DOI:10.1128/EC.00125-08
       notes: Van Driel et al. 2008 described septal pore caps as associated with dolipore
         septa in Agaricomycotina.
-  - subject: septal_pore_cap
-    predicate: plugs
+  - subject: septal_pore_caps
+    predicate: participates in closure of
     object: central_septal_pore
-    description: Septal pore caps participate in plugging the central pore of the
-      dolipore.
+    description: Septal pore caps organize or stabilize closure of the central pore
+      rather than being asserted as the entire occluding plug.
     evidence:
     - reference: DOI:10.1128/EC.00125-08
       notes: Van Driel et al. 2008 found SPC18 in both septal pore caps and pore plugs
@@ -179,7 +186,7 @@ discussions:
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#septal_pore_cap
+  - components#septal_pore_caps
   - causal_graphs#dolipore_septum_pore_gating
   rationale: SPC18 was identified in Rhizoctonia solani and Spc14/Spc33 were tested
     in Schizophyllum commune, but this pass did not identify an exact InterPro, Pfam
