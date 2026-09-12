@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cyanelle_inner_membrane.yaml
+  slug: cyanelle_inner_membrane
+session:
+  id: 2026-09-12T211324Z-codex-a011d9
+  timestamp: '2026-09-12T21:13:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/706
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/705
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add cyanelle inner membrane record
+  details: 'Added the GO:0036012 cyanelle inner membrane record with UniProt SL-0480 grounding,
+    then resolved PR #705 review issue #706 by narrowing the Cyanophora taxonomic note to
+    the envelope-membrane claim directly supported by the cited ultrastructural paper.'

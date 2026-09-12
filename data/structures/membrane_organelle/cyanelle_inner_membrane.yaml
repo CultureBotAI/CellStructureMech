@@ -20,6 +20,13 @@ curation_history:
     component, glaucophyte distribution, a Cyanophora paradoxa canonical example,
     a nonmechanistic topology graph, and a lipid-bilayer grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T21:13:07Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #706 by narrowing the Cyanophora paradoxa taxonomic note to the
+    inner/outer cyanelle envelope membranes directly supported by Giddings et al.
+    1983.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cyanelle inner envelope membrane
   synonym_type: EXACT_SYNONYM
@@ -60,8 +67,8 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:2762
   taxon_label: Cyanophora paradoxa
   presence: COMMON
-  note: Cyanophora paradoxa cyanelles have inner membranes that separate the cyanelle
-    stroma from the peptidoglycan-bearing intermembrane space.
+  note: Cyanophora paradoxa cyanelles have distinct inner and outer membranes in their
+    double cyanelle envelopes.
   reference: DOI:10.1104/pp.71.2.409
 canonical_examples:
 - taxon_id: NCBITaxon:2762
