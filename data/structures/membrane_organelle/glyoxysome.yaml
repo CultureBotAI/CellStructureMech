@@ -21,6 +21,13 @@ curation_history:
     crassa scope, a glyoxylate-cycle function, a nonmechanistic glyoxysome topology
     graph, and a matrix-enzyme boundary clarification.
   llm_assisted: true
+- timestamp: '2026-09-12T16:07:42Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #670 review issues #671 and #672 by removing the unused van
+    der Klei and Veenhuis review reference and normalizing the de Zoysa and Connerton
+    canonical-example reference to DOI:10.1007/BF00309930.'
+  llm_assisted: true
 parent_structures:
 - GO:0005777
 has_part:
@@ -55,7 +62,7 @@ canonical_examples:
   taxon_label: Neurospora crassa
   note: Filamentous-fungal model used to test glyoxysomal matrix-protein targeting
     under acetate-induced growth conditions.
-  reference: PMID:7874736
+  reference: DOI:10.1007/BF00309930
 functions:
 - function_id: glyoxylate_cycle
   label: glyoxylate cycle
@@ -87,9 +94,6 @@ evidence:
 - reference: DOI:10.1007/BF00309930
   notes: de Zoysa and Connerton 1994, The function and specificity of the C-terminal
     tripeptide glyoxysomal targeting signal in Neurospora crassa, Current Genetics.
-- reference: DOI:10.1016/j.bbamcr.2006.09.014
-  notes: van der Klei and Veenhuis 2006, Yeast and filamentous fungi as model organisms
-    in microbody research, Biochimica et Biophysica Acta - Molecular Cell Research.
 causal_graphs:
 - graph_id: glyoxysome_glyoxylate_cycle_compartment
   title: Glyoxysomes compartmentalize the glyoxylate cycle
