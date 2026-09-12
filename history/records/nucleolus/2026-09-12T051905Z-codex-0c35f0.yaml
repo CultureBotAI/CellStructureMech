@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nucleolus.yaml
+  slug: nucleolus
+session:
+  id: 2026-09-12T051905Z-codex-0c35f0
+  timestamp: '2026-09-12T05:19:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/588
+  - https://github.com/CultureBotAI/CellStructureMech/issues/589
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/587
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - evidence
+  summary: Added evidence-backed nucleolus record
+  details: Created a GO:0005730 nucleolus CellStructureMech record, curated exact GO-grounded
+    nucleolar chromatin, RNA polymerase I, small-subunit processome and box H/ACA snoRNP components,
+    added a Eukaryota distribution and Saccharomyces cerevisiae canonical example, modeled
+    conservative rDNA transcription and pre-rRNA processing functions, documented a preribosomal
+    component-boundary TODO, addressed PR review findings on the nucleolar-chromatin graph
+    node and RNA polymerase I edge wording, and regenerated rendered page and embedding artifacts.
