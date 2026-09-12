@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/copii_vesicle_coat.yaml
+  slug: copii_vesicle_coat
+session:
+  id: 2026-09-12T073211Z-codex-e8b387
+  timestamp: '2026-09-12T07:32:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/606
+  - https://github.com/CultureBotAI/CellStructureMech/issues/607
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/605
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the COPII vesicle coat record
+  details: 'Created data/structures/other/copii_vesicle_coat.yaml as the GO:0030127 COPII
+    vesicle coat record. The record adds vesicle-coat parentage, COPII-coated ER-to-Golgi
+    transport vesicle parthood, reviewed-label-only Sar1/Sec23-Sec24/Sec13-Sec31 components,
+    Saccharomyces cerevisiae scope, COPII-coated vesicle budding, and a nonmechanistic ER-membrane
+    assembly graph grounded in GO plus Barlowe et al. 1994, Matsuoka et al. 1998, and Zanetti
+    et al. 2013. PR review issues #606 and #607 narrowed an unsupported directional inner-to-outer
+    recruitment edge and added an explicit edge from the assembled coat to the ER membrane.
+    Validation covered single-record LinkML and strict checks, regenerated text embeddings,
+    rendered pages, README drift, full strict validation, snippet verification, trait-link
+    checking, CURIE liveness, id-label correspondence, and full run_qc.'
