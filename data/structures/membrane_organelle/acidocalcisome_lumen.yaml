@@ -19,6 +19,12 @@ curation_history:
     nonmechanistic lumen-topology graph, and a resolved interpretation that keeps
     matrix chemistry on the whole-organelle record.
   llm_assisted: true
+- timestamp: '2026-09-12T23:33:33Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #720 by citing GO:0020022 on the parthood edge that points to
+    the containing acidocalcisome.'
+  llm_assisted: true
 synonyms:
 - synonym_text: acidocalcisomal lumen
   synonym_type: EXACT_SYNONYM
@@ -110,6 +116,8 @@ causal_graphs:
     - reference: uniprot.location:SL-0316
       notes: UniProt SL-0316 places the lumen under the acidocalcisome subcellular
         location.
+    - reference: GO:0020022
+      notes: GO:0020022 identifies the containing acidocalcisome organelle.
   - subject: acidocalcisome_membrane
     predicate: bounds
     object: acidocalcisome_lumen
