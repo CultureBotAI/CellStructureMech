@@ -1,0 +1,163 @@
+identifier: GO:0033985
+label: acidocalcisome lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The acidocalcisome compartment bounded by the acidocalcisomal membrane.
+definition_source: GO:0033985
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T23:22:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T23:23:32Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL xref and synonym, organelle-lumen parentage, acidocalcisome
+    parthood, bacterial and eukaryotic distributions, an Agrobacterium example, a
+    nonmechanistic lumen-topology graph, and a resolved interpretation that keeps
+    matrix chemistry on the whole-organelle record.
+  llm_assisted: true
+- timestamp: '2026-09-12T23:33:33Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #720 by citing GO:0020022 on the parthood edge that points to
+    the containing acidocalcisome.'
+  llm_assisted: true
+synonyms:
+- synonym_text: acidocalcisomal lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0316
+parent_structures:
+- GO:0043233
+part_of:
+- GO:0020022
+xrefs:
+- uniprot.location:SL-0316
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Acidocalcisome-like compartments have been characterized in bacteria, but
+    they are not universal across bacteria.
+  reference: DOI:10.1038/nrmicro1097
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: Acidocalcisomes occur across diverse unicellular eukaryotes and metazoan cell
+    types, so the lumen is present in the subset of eukaryotic cells that carry this
+    organelle.
+  reference: DOI:10.1128/MMBR.00042-23
+canonical_examples:
+- taxon_id: NCBITaxon:358
+  taxon_label: Agrobacterium tumefaciens
+  note: Bacterial species whose membrane-bounded, calcium- and polyphosphate-rich
+    acidocalcisome-like volutin granules establish a lumenal storage compartment.
+  reference: DOI:10.1074/jbc.M304548200
+evidence:
+- reference: GO:0033985
+  notes: Gene Ontology cellular-component term for acidocalcisome lumen.
+- reference: GO:0043233
+  notes: Gene Ontology cellular-component term for organelle lumen, the broader organelle-enclosed
+    compartment parent.
+- reference: GO:0020022
+  notes: Gene Ontology cellular-component term for acidocalcisome.
+- reference: GO:0033102
+  notes: Gene Ontology cellular-component term for the acidocalcisome membrane that
+    bounds this lumen.
+- reference: uniprot.location:SL-0316
+  notes: UniProt Subcellular Location entry SL-0316 maps directly to GO:0033985, places
+    the acidocalcisome lumen under the acidocalcisome, and lists acidocalcisomal lumen
+    as an exact synonym.
+- reference: uniprot.location:SL-0003
+  notes: UniProt Subcellular Location entry SL-0003 maps the bounding acidocalcisome
+    membrane to GO:0033102.
+- reference: DOI:10.1038/nrmicro1097
+  notes: Docampo et al. 2005 review acidocalcisomes as acidic, polyphosphate- and
+    cation-rich organelles conserved across bacteria and eukaryotes.
+- reference: DOI:10.1074/jbc.M304548200
+  notes: Seufferheld et al. 2003 characterized membrane-bounded acidocalcisome-like
+    volutin granules in bacteria.
+- reference: DOI:10.1128/MMBR.00042-23
+  notes: Docampo and Huang 2024 review acidocalcisome cell biology, biochemistry,
+    and physiological roles.
+causal_graphs:
+- graph_id: acidocalcisome_lumen_topology
+  title: Acidocalcisome lumen topology
+  description: The acidocalcisome lumen is the internal compartment of the acidocalcisome
+    bounded by the acidocalcisome membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining organelle-lumen topology without duplicating
+    whole-organelle matrix chemistry or membrane-localized proton-pump and cation-transporter
+    mechanisms.
+  nodes:
+  - node_id: acidocalcisome_lumen
+    label: acidocalcisome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0033985
+  - node_id: acidocalcisome_membrane
+    label: acidocalcisome membrane
+    node_type: STRUCTURE
+    grounding: GO:0033102
+  - node_id: acidocalcisome
+    label: acidocalcisome
+    node_type: ORGANELLE
+    grounding: GO:0020022
+  edges:
+  - subject: acidocalcisome_lumen
+    predicate: is part of
+    object: acidocalcisome
+    description: The acidocalcisome lumen is the internal compartment inside an acidocalcisome.
+    evidence:
+    - reference: GO:0033985
+      notes: GO:0033985 is the acidocalcisome lumen cellular-component term.
+    - reference: uniprot.location:SL-0316
+      notes: UniProt SL-0316 places the lumen under the acidocalcisome subcellular
+        location.
+    - reference: GO:0020022
+      notes: GO:0020022 identifies the containing acidocalcisome organelle.
+  - subject: acidocalcisome_membrane
+    predicate: bounds
+    object: acidocalcisome_lumen
+    description: The acidocalcisome membrane is the lipid-bilayer boundary of the
+      acidocalcisome lumen.
+    evidence:
+    - reference: GO:0033985
+      notes: GO:0033985 defines the acidocalcisome lumen as the compartment bounded
+        by the acidocalcisomal membrane.
+    - reference: GO:0033102
+      notes: GO:0033102 defines the acidocalcisome membrane as the lipid bilayer surrounding
+        an acidocalcisome.
+    - reference: uniprot.location:SL-0316
+      notes: UniProt SL-0316 describes the acidocalcisome lumen as bounded by the
+        acidocalcisomal membrane.
+    - reference: uniprot.location:SL-0003
+      notes: UniProt SL-0003 maps the acidocalcisome membrane to GO:0033102.
+discussions:
+- discussion_id: matrix_contents_not_lumen_components
+  prompt: Keep acidocalcisome polyphosphate, bound cations, proton pumps, and cation
+    transporters on the whole-organelle or membrane records rather than duplicating
+    them as lumen components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#acidocalcisome_lumen_topology
+  rationale: GO:0033985 denotes the acidocalcisome compartment bounded by the acidocalcisomal
+    membrane; the existing acidocalcisome record models the organelle's polyphosphate
+    and cation matrix, and the acidocalcisome membrane record models its proton-pump
+    and cation-transporter proteins.
+  resolution_note: Curated the lumen boundary and parthood topology without asserting
+    separate source-neutral molecular components for the lumen itself.
+  evidence:
+  - reference: GO:0033985
+    notes: GO:0033985 defines the acidocalcisome lumen as the compartment bounded
+      by the acidocalcisomal membrane.
+  - reference: GO:0020022
+    notes: GO:0020022 identifies the containing acidocalcisome organelle.
+  - reference: GO:0033102
+    notes: GO:0033102 identifies the membrane that bounds the acidocalcisome.
+  posed_by: codex
+  posed_date: '2026-09-12'
