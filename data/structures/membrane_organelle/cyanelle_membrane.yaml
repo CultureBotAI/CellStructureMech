@@ -1,0 +1,198 @@
+identifier: GO:0033113
+label: cyanelle membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: Either of the lipid bilayers that surround a cyanelle and form the cyanelle
+  envelope.
+definition_source: GO:0033113
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T20:21:47Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T20:23:22Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added plastid-membrane parentage, cyanelle-envelope parthood, the UniProt
+    SL-0083 xref, a reviewed-label-only envelope lipid bilayer component, glaucophyte
+    distribution, a Cyanophora paradoxa canonical example, a nonmechanistic GO-scope
+    graph, and discussions for excluding the thylakoid membrane and grounding the
+    generic lipid bilayer component.
+  llm_assisted: true
+- timestamp: '2026-09-12T20:32:15Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #702 by demoting UniProt SL-0083 from an exact xref to broader
+    fallback evidence and caveating notes that mention its scope.'
+  llm_assisted: true
+parent_structures:
+- GO:0042170
+part_of:
+- GO:0033112
+components:
+- component_id: cyanelle_envelope_lipid_bilayer
+  label: cyanelle envelope lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Generic lipid-bilayer constituent of a cyanelle envelope membrane when the
+    exact inner or outer membrane identity is unspecified.
+  evidence:
+  - reference: GO:0033113
+    notes: GO:0033113 defines a cyanelle membrane as either lipid bilayer that forms
+      the cyanelle envelope.
+  - reference: uniprot.location:SL-0083
+    notes: UniProt SL-0083 provides the cyanelle membrane localization entry and notes
+      that it can be used when the exact cyanelle membrane assignment is unresolved.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0033113 identifies the generic cyanelle envelope membrane class,
+    while UniProt SL-0083 has a broader fallback annotation scope; no separate source-neutral
+    CURIE was curated for a cyanelle-envelope-specific lipid bilayer constituent.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:38254
+  taxon_label: Glaucocystophyceae
+  presence: COMMON
+  note: Glaucophytes carry cyanelles, also called muroplasts, whose envelopes are
+    bounded by cyanelle membranes.
+  reference: DOI:10.5586/asbp.2015.020
+- taxon_id: NCBITaxon:2762
+  taxon_label: Cyanophora paradoxa
+  presence: COMMON
+  note: Cyanophora paradoxa is a glaucophyte model whose cyanelles have inner and
+    outer envelope membranes.
+  reference: DOI:10.1104/pp.71.2.409
+canonical_examples:
+- taxon_id: NCBITaxon:2762
+  taxon_label: Cyanophora paradoxa
+  note: Model glaucophyte used for ultrastructural studies of cyanelle envelope and
+    thylakoid membranes.
+  reference: DOI:10.1104/pp.71.2.409
+evidence:
+- reference: GO:0033113
+  notes: Gene Ontology cellular-component term for the generic cyanelle membrane.
+- reference: GO:0042170
+  notes: Gene Ontology cellular-component term for plastid membrane.
+- reference: GO:0033112
+  notes: Gene Ontology cellular-component term for cyanelle envelope.
+- reference: GO:0036012
+  notes: Gene Ontology cellular-component child term for cyanelle inner membrane.
+- reference: GO:0036013
+  notes: Gene Ontology cellular-component child term for cyanelle outer membrane.
+- reference: GO:0033115
+  notes: Gene Ontology cellular-component term for the distinct cyanelle thylakoid
+    membrane.
+- reference: uniprot.location:SL-0083
+  notes: UniProt Subcellular Location entry SL-0083 maps to GO:0033113 but can also
+    be used when a cyanelle protein's exact outer, inner, or thylakoid membrane assignment
+    is unclear.
+- reference: DOI:10.1104/pp.71.2.409
+  notes: Giddings, Wasmann and Staehelin 1983, Structure of the Thylakoids and Envelope
+    Membranes of the Cyanelles of Cyanophora paradoxa, Plant Physiology.
+- reference: DOI:10.1128/jb.178.2.332-339.1996
+  notes: 'Pfanzagl et al. 1996, Primary structure of cyanelle peptidoglycan of Cyanophora
+    paradoxa: a prokaryotic cell wall as part of an organelle envelope, Journal of
+    Bacteriology.'
+- reference: DOI:10.5586/asbp.2015.020
+  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
+    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
+causal_graphs:
+- graph_id: cyanelle_membrane_scope
+  title: Cyanelle membrane scope
+  description: The generic cyanelle membrane class covers either cyanelle-envelope
+    lipid bilayer when the exact inner or outer membrane identity is unspecified.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GO localization scope without asserting which exact
+    envelope membrane a generic GO:0033113 annotation refers to; UniProt SL-0083 is
+    treated as broader fallback context.
+  nodes:
+  - node_id: cyanelle_membrane
+    label: cyanelle membrane
+    node_type: STRUCTURE
+    grounding: GO:0033113
+    component_ref: cyanelle_envelope_lipid_bilayer
+  - node_id: cyanelle_envelope
+    label: cyanelle envelope
+    node_type: STRUCTURE
+    grounding: GO:0033112
+  - node_id: cyanelle_inner_membrane
+    label: cyanelle inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0036012
+  - node_id: cyanelle_outer_membrane
+    label: cyanelle outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0036013
+  edges:
+  - subject: cyanelle_membrane
+    predicate: is part of
+    object: cyanelle_envelope
+    description: A GO:0033113 cyanelle membrane is one of the lipid bilayers that
+      form the cyanelle envelope.
+    evidence:
+    - reference: GO:0033113
+      notes: GO:0033113 defines the generic cyanelle membrane as either bilayer that
+        forms the cyanelle envelope.
+    - reference: GO:0033112
+      notes: GO:0033112 identifies the complete double lipid bilayer of the cyanelle
+        envelope.
+  - subject: cyanelle_inner_membrane
+    predicate: is a
+    object: cyanelle_membrane
+    description: The cyanelle inner membrane is a specific child class of the generic
+      cyanelle membrane.
+    evidence:
+    - reference: GO:0033113
+      notes: GO places GO:0036012 as an is_a child of the generic cyanelle membrane
+        term.
+  - subject: cyanelle_outer_membrane
+    predicate: is a
+    object: cyanelle_membrane
+    description: The cyanelle outer membrane is a specific child class of the generic
+      cyanelle membrane.
+    evidence:
+    - reference: GO:0033113
+      notes: GO places GO:0036013 as an is_a child of the generic cyanelle membrane
+        term.
+discussions:
+- discussion_id: exclude_thylakoid_membrane_from_generic_envelope_membrane
+  prompt: Exclude GO:0033115 cyanelle thylakoid membrane from the GO:0033113 cyanelle
+    membrane scope even though UniProt SL-0083 can be used as a fallback thylakoid
+    localization.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#cyanelle_membrane_scope
+  rationale: GO:0033113 is defined as either envelope lipid bilayer that surrounds
+    a cyanelle, whereas GO:0033115 identifies the separate internal thylakoid membrane.
+  resolution_note: Curated GO:0033113 as the generic parent of only the inner and
+    outer cyanelle envelope membranes and kept GO:0033115 as a distinct thylakoid-membrane
+    term.
+  evidence:
+  - reference: GO:0033113
+    notes: GO:0033113 defines the generic cyanelle membrane as either lipid bilayer
+      that forms the cyanelle envelope.
+  - reference: GO:0033115
+    notes: GO:0033115 defines the cyanelle thylakoid membrane as the lipid bilayer
+      of a cyanelle thylakoid, not as one of the envelope bilayers.
+  - reference: uniprot.location:SL-0083
+    notes: UniProt SL-0083 says the generic cyanelle membrane localization can also
+      be used when thylakoid placement is not resolved.
+  posed_by: codex
+  posed_date: '2026-09-12'
+- discussion_id: ground_cyanelle_envelope_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituent
+    of a cyanelle envelope membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cyanelle_envelope_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0033113, while UniProt SL-0083 is
+    broader fallback evidence; the lipid bilayer constituent is intentionally left
+    as a reviewed-label-only component until an exact source-neutral lipid or membrane-constituent
+    CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-12'

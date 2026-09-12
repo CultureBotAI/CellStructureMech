@@ -2901,6 +2901,11 @@
           "cosine_similarity": 0.94179162
         },
         {
+          "identifier": "GO:0033113",
+          "label": "cyanelle membrane",
+          "cosine_similarity": 0.93127052
+        },
+        {
           "identifier": "GO:0070118",
           "label": "organellar chromatophore thylakoid membrane",
           "cosine_similarity": 0.7939607
@@ -2914,11 +2919,6 @@
           "identifier": "GO:0009507",
           "label": "chloroplast",
           "cosine_similarity": 0.77868087
-        },
-        {
-          "identifier": "GO:0070113",
-          "label": "organellar chromatophore inner membrane",
-          "cosine_similarity": 0.76644554
         }
       ]
     },
@@ -2926,6 +2926,11 @@
       "identifier": "GO:0033112",
       "label": "cyanelle envelope",
       "neighbors": [
+        {
+          "identifier": "GO:0033113",
+          "label": "cyanelle membrane",
+          "cosine_similarity": 0.96213765
+        },
         {
           "identifier": "GO:0009842",
           "label": "cyanelle",
@@ -2945,11 +2950,37 @@
           "identifier": "GO:0070112",
           "label": "organellar chromatophore membrane",
           "cosine_similarity": 0.79874148
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0033113",
+      "label": "cyanelle membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0033112",
+          "label": "cyanelle envelope",
+          "cosine_similarity": 0.96213765
         },
         {
-          "identifier": "GO:0005886",
-          "label": "plasma membrane",
-          "cosine_similarity": 0.76167175
+          "identifier": "GO:0009842",
+          "label": "cyanelle",
+          "cosine_similarity": 0.93127052
+        },
+        {
+          "identifier": "GO:0070114",
+          "label": "organellar chromatophore outer membrane",
+          "cosine_similarity": 0.85149219
+        },
+        {
+          "identifier": "GO:0070112",
+          "label": "organellar chromatophore membrane",
+          "cosine_similarity": 0.84938289
+        },
+        {
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.84277483
         }
       ]
     },
@@ -4151,14 +4182,14 @@
           "cosine_similarity": 0.72179035
         },
         {
+          "identifier": "GO:0033113",
+          "label": "cyanelle membrane",
+          "cosine_similarity": 0.72028936
+        },
+        {
           "identifier": "GO:0055039",
           "label": "trichocyst",
           "cosine_similarity": 0.71542882
-        },
-        {
-          "identifier": "GO:0005628",
-          "label": "prospore membrane",
-          "cosine_similarity": 0.70482877
         }
       ]
     },
