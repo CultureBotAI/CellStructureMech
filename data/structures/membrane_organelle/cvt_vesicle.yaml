@@ -1,0 +1,220 @@
+identifier: GO:0033107
+label: Cvt vesicle
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A cytosolic vesicle that is enclosed by a double membrane and is implicated
+  in the cytoplasm to vacuole targeting pathway. These vesicles are found in the yeast
+  S. cerevisiae, and contain vacuolar hydrolases, aminopeptidase I (Ape1p) and alpha-mannosidase
+  (Ams1p).
+definition_source: GO:0033107
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T13:35:23Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T13:36:10Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added exact GO synonymy, cytoplasmic vesicle parentage, the Cvt vesicle
+    membrane part, a UniProt Subcellular Location xref, membrane and Cvt-complex components,
+    Saccharomyces cerevisiae scope, Cvt-pathway function, DOI/GO/UniProt evidence,
+    a nonmechanistic cargo-delivery graph, and an Atg-machinery grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T13:41:50Z'
+  curator: codex
+  action: FIXED_DISCUSSION_ANCHOR
+  changes: Retargeted the Atg-machinery discussion from the generic components section
+    to components#cvt_complex so the anchor resolves under the corpus discussion-anchor
+    invariant.
+  llm_assisted: true
+- timestamp: '2026-09-12T13:47:40Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #655 by making the cargo-enclosure edge point from the Cvt complex
+    to the whole vesicle and by describing GO:0033110 as one of two surrounding bilayers;
+    resolved #656 by detaching the Atg-machinery TODO from the Cvt complex cargo component.'
+  llm_assisted: true
+synonyms:
+- synonym_text: cytoplasm to vacuole targeting vesicle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0033107
+- synonym_text: cytoplasm-to-vacuole targeting vesicle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0033107
+parent_structures:
+- GO:0031410
+has_part:
+- GO:0033110
+xrefs:
+- uniprot.location:SL-0080
+components:
+- component_id: cvt_vesicle_membrane
+  label: Cvt vesicle membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0033110
+  essentiality: ESSENTIAL
+  role: One of the two lipid bilayers surrounding the Cvt vesicle before vesicle-vacuole
+    fusion.
+  evidence:
+  - reference: GO:0033110
+    notes: GO:0033110 defines the Cvt vesicle membrane as either lipid bilayer surrounding
+      a Cvt vesicle.
+  - reference: PMID:15004240
+    notes: Reggiori et al. 2004 describe Cvt vesicles as double-membrane cytosolic
+      carriers in budding yeast.
+- component_id: cvt_complex
+  label: Cvt complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0034270
+  essentiality: UNKNOWN
+  role: Selective vacuolar-hydrolase cargo complex that is sequestered into forming
+    Cvt vesicles for vacuolar delivery.
+  evidence:
+  - reference: GO:0034270
+    notes: GO:0034270 defines the budding-yeast Cvt complex as a protein complex of
+      preApe1p multimers involved in the Cvt pathway.
+  - reference: DOI:10.1074/jbc.M404399200
+    notes: Shintani and Klionsky 2004 analyzed Cvt complex cargo and its effect on
+      Cvt vesicle formation.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Cvt vesicles have been characterized in budding yeast as double-membrane transport
+    vesicles of the cytoplasm-to-vacuole targeting pathway.
+  reference: PMID:15138258
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Primary yeast model used to define the Cvt complex, Cvt vesicle formation,
+    and secretory-pathway contributions to vesicle assembly.
+  reference: PMID:15004240
+functions:
+- function_id: cytoplasm_to_vacuole_targeting
+  label: cytoplasm to vacuole targeting by the Cvt pathway
+  grounding: GO:0032258
+  description: Cvt vesicles selectively enclose vacuolar hydrolase cargo and deliver
+    it from the cytoplasm to the fungal vacuole.
+  evidence:
+  - reference: GO:0032258
+    notes: GO:0032258 defines Cvt-pathway delivery by Atg19-dependent formation of
+      a Cvt complex and membrane expansion around it.
+  - reference: DOI:10.1016/s1097-2765(01)00263-5
+    notes: Scott et al. 2001 identified Cvt19/Atg19 as the receptor that links precursor
+      aminopeptidase I cargo to the Cvt pathway.
+evidence:
+- reference: GO:0033107
+  notes: Gene Ontology cellular-component term for the Cvt vesicle.
+- reference: GO:0033110
+  notes: Gene Ontology cellular-component term for either bilayer of the Cvt vesicle
+    membrane.
+- reference: GO:0034270
+  notes: Gene Ontology cellular-component term for the Cvt complex.
+- reference: GO:0032258
+  notes: Gene Ontology biological-process term for cytoplasm to vacuole targeting
+    by the Cvt pathway.
+- reference: uniprot.location:SL-0080
+  notes: UniProt Subcellular Location entry that maps Cvt vesicle to GO:0033107.
+- reference: DOI:10.1074/jbc.M404399200
+  notes: Shintani and Klionsky 2004, Cargo proteins facilitate the formation of transport
+    vesicles in the cytoplasm to vacuole targeting pathway, Journal of Biological
+    Chemistry.
+- reference: DOI:10.1091/mbc.e03-07-0479
+  notes: Reggiori et al. 2004, Early stages of the secretory pathway, but not endosomes,
+    are required for Cvt vesicle and autophagosome assembly in Saccharomyces cerevisiae,
+    Molecular Biology of the Cell.
+- reference: DOI:10.1016/s1097-2765(01)00263-5
+  notes: Scott et al. 2001, Cvt19 is a receptor for the cytoplasm-to-vacuole targeting
+    pathway, Molecular Cell.
+causal_graphs:
+- graph_id: cvt_cargo_vacuole_delivery
+  title: Cvt vesicles deliver hydrolase cargo to the yeast vacuole
+  description: A double Cvt vesicle membrane encloses the Cvt complex, excluding bulk
+    cytoplasm, and the completed vesicle delivers the cargo to the fungal vacuole.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures cargo enclosure and the vacuolar delivery endpoint
+    without asserting the complete Atg receptor, scaffold and membrane-expansion machinery.
+  nodes:
+  - node_id: cvt_vesicle_membrane
+    label: Cvt vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0033110
+    component_ref: cvt_vesicle_membrane
+  - node_id: cvt_complex
+    label: Cvt complex
+    node_type: STRUCTURE
+    grounding: GO:0034270
+    component_ref: cvt_complex
+  - node_id: cvt_vesicle
+    label: Cvt vesicle
+    node_type: ORGANELLE
+    grounding: GO:0033107
+  - node_id: cvt_targeting
+    label: cytoplasm to vacuole targeting by the Cvt pathway
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0032258
+  - node_id: fungal_type_vacuole
+    label: fungal-type vacuole
+    node_type: ORGANELLE
+    grounding: GO:0000324
+  edges:
+  - subject: cvt_vesicle_membrane
+    predicate: is part of
+    object: cvt_vesicle
+    description: The Cvt vesicle membrane is one of the two lipid bilayers surrounding
+      a Cvt vesicle.
+    evidence:
+    - reference: GO:0033110
+      notes: GO:0033110 defines the Cvt vesicle membrane as either surrounding bilayer.
+  - subject: cvt_complex
+    predicate: is enclosed by
+    object: cvt_vesicle
+    description: The Cvt complex is sequestered inside the completed double-membrane
+      Cvt vesicle before vacuolar delivery.
+    evidence:
+    - reference: GO:0032258
+      notes: GO:0032258 defines the Cvt pathway as membrane expansion around the Cvt
+        complex.
+  - subject: cvt_vesicle
+    predicate: supports
+    object: cvt_targeting
+    description: Cvt vesicles are the cytosolic carriers that sequester and transport
+      Cvt cargo in the cytoplasm-to-vacuole targeting pathway.
+    evidence:
+    - reference: GO:0033107
+      notes: GO:0033107 defines Cvt vesicles by their implication in the Cvt pathway.
+  - subject: cvt_vesicle
+    predicate: delivers cargo to
+    object: fungal_type_vacuole
+    description: Completed Cvt vesicles ultimately deliver resident hydrolase cargo
+      to the yeast vacuole.
+    evidence:
+    - reference: PMID:15138258
+      notes: Shintani and Klionsky 2004 review Cvt cargo incorporation into forming
+        vesicles before vacuolar delivery.
+discussions:
+- discussion_id: ground_atg_cvt_vesicle_machinery
+  prompt: Resolve exact source-neutral identifiers for the Atg19 receptor, Atg11 scaffold,
+    Atg8-lipidation system and Atg9 membrane traffic before adding these assembly
+    factors as Cvt-vesicle-associated machinery.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#cvt_cargo_vacuole_delivery
+  rationale: This first Cvt vesicle record grounds the membrane and the sequestered
+    Cvt cargo complex exactly, while leaving Atg proteins that organize vesicle formation
+    out of the component table until exact family or complex identifiers can be verified.
+  evidence:
+  - reference: GO:0032258
+    notes: GO:0032258 identifies Atg19 and Atg11 as participants in moving the Cvt
+      complex to the pre-autophagosome before vesicle formation.
+  - reference: DOI:10.1016/s1097-2765(01)00263-5
+    notes: Scott et al. 2001 established the Cvt19/Atg19 receptor role in selective
+      cargo transport.
+  posed_by: codex
+  posed_date: '2026-09-12'
