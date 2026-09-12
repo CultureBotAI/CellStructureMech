@@ -1,0 +1,138 @@
+identifier: GO:0070116
+label: organellar chromatophore thylakoid
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A thylakoid located in an organellar chromatophore
+definition_source: GO:0070116
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T12:30:28Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T12:30:51Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added thylakoid parentage, organellar chromatophore parthood, thylakoid
+    lumen and membrane part terms, a GO-grounded thylakoid-membrane component, Paulinella
+    chromatophora distribution and example, a light-reaction function, a nonmechanistic
+    topology graph, and UniProt Subcellular Location evidence.
+  llm_assisted: true
+- timestamp: '2026-09-12T12:37:27Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #647 by citing the Paulinella chromatophora review DOI for the
+    species-level distribution row; resolved #646 by removing the whole-chromatophore
+    Singer et al. protein-import DOI from thylakoid record-level evidence.'
+  llm_assisted: true
+parent_structures:
+- GO:0009579
+part_of:
+- GO:0070111
+has_part:
+- GO:0070117
+- GO:0070118
+xrefs:
+- uniprot.location:SL-0354
+components:
+- component_id: organellar_chromatophore_thylakoid_membrane
+  label: organellar chromatophore thylakoid membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0070118
+  essentiality: UNKNOWN
+  role: Internal membrane of the Paulinella chromatophore thylakoid that houses the
+    complexes for the light reactions of photosynthesis.
+  evidence:
+  - reference: GO:0070118
+    notes: GO:0070118 defines the organellar chromatophore thylakoid membrane as the
+      internal membrane system carrying light-reaction complexes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:39717
+  taxon_label: Paulinella chromatophora
+  presence: COMMON
+  note: Paulinella chromatophora organellar chromatophores contain thylakoids used
+    for photosynthesis.
+  reference: DOI:10.5586/asbp.2014.049
+canonical_examples:
+- taxon_id: NCBITaxon:39717
+  taxon_label: Paulinella chromatophora
+  note: Model thecate amoeba for cyanobacterium-derived organellar chromatophores
+    with internal thylakoids.
+  reference: DOI:10.5586/asbp.2014.049
+functions:
+- function_id: light_reactions_of_photosynthesis
+  label: photosynthesis, light reaction
+  grounding: GO:0019684
+  description: The organellar chromatophore thylakoid is an internal membrane system
+    carrying complexes for the light reactions of photosynthesis.
+  evidence:
+  - reference: uniprot.location:SL-0354
+    notes: UniProt SL-0354 describes the organellar chromatophore thylakoid as carrying
+      the complexes for the light reactions of photosynthesis.
+evidence:
+- reference: GO:0070116
+  notes: Gene Ontology cellular-component term for organellar chromatophore thylakoid.
+- reference: GO:0009579
+  notes: Gene Ontology cellular-component term for thylakoid.
+- reference: GO:0070111
+  notes: Gene Ontology cellular-component term for the organellar chromatophore parent.
+- reference: GO:0070117
+  notes: Gene Ontology cellular-component term for organellar chromatophore thylakoid
+    lumen.
+- reference: GO:0070118
+  notes: Gene Ontology cellular-component term for organellar chromatophore thylakoid
+    membrane.
+- reference: uniprot.location:SL-0354
+  notes: UniProt Subcellular Location entry SL-0354 maps to GO:0070116 and describes
+    the organellar chromatophore thylakoid as internal photosynthetic membranes in
+    Paulinella species.
+- reference: DOI:10.5586/asbp.2014.049
+  notes: Nowack 2014 reviews the evolution of the photosynthetic Paulinella chromatophore.
+causal_graphs:
+- graph_id: paulinella_chromatophore_thylakoid_topology
+  title: Organellar chromatophore thylakoid topology
+  description: The Paulinella organellar chromatophore thylakoid contains a lumen
+    bounded by thylakoid membrane, and the membrane carries light-reaction photosynthetic
+    complexes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GO-grounded thylakoid topology and the light-reaction
+    site without asserting the complete photosystem or electron-transport composition.
+  nodes:
+  - node_id: organellar_chromatophore_thylakoid
+    label: organellar chromatophore thylakoid
+    node_type: STRUCTURE
+    grounding: GO:0070116
+  - node_id: organellar_chromatophore_thylakoid_membrane
+    label: organellar chromatophore thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0070118
+    component_ref: organellar_chromatophore_thylakoid_membrane
+  - node_id: organellar_chromatophore_thylakoid_lumen
+    label: organellar chromatophore thylakoid lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0070117
+  - node_id: photosynthesis_light_reaction
+    label: photosynthesis, light reaction
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0019684
+  edges:
+  - subject: organellar_chromatophore_thylakoid_membrane
+    predicate: bounds
+    object: organellar_chromatophore_thylakoid_lumen
+    description: The organellar chromatophore thylakoid lumen is bounded by the thylakoid
+      membrane.
+    evidence:
+    - reference: GO:0070117
+      notes: GO:0070117 defines the lumen as the compartment bounded by the thylakoid
+        membrane.
+  - subject: organellar_chromatophore_thylakoid_membrane
+    predicate: supports
+    object: photosynthesis_light_reaction
+    description: The thylakoid membrane carries photosynthetic light-reaction complexes.
+    evidence:
+    - reference: GO:0070118
+      notes: GO:0070118 defines the membrane as the internal system that houses light-reaction
+        complexes.
