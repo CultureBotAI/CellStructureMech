@@ -1,0 +1,218 @@
+identifier: GO:0061701
+label: bacterial outer membrane vesicle
+structure_category: OTHER
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A spherical, bilayered proteolipid vesicle released from gram-negative
+  bacterial outer membranes.
+definition_source: GO:0061701
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T13:14:20Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T13:16:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO extracellular-vesicle parentage, OMV synonymy, reviewed-label
+    proteolipid bilayer and lumen-cargo components, Gram-negative bacterial scope,
+    an Escherichia coli example, OMV export and delivery functions, a nonmechanistic
+    budding graph, and component-boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:1903561
+synonyms:
+- synonym_text: outer membrane vesicle
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/nrmicro3525
+- synonym_text: OMV
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/nrmicro3525
+components:
+- component_id: outer_membrane_vesicle_bilayer
+  label: outer membrane vesicle proteolipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The vesicle membrane is outer-membrane-derived and contains lipopolysaccharide,
+    phospholipids, and outer-membrane proteins; no exact source-neutral CURIE was
+    curated for the complete proteolipid OMV bilayer mixture.
+  role: Outer-membrane-derived bilayer that encloses periplasmic material in the released
+    vesicle.
+  evidence:
+  - reference: GO:0061701
+    notes: GO:0061701 defines the bacterial outer membrane vesicle as a bilayered
+      proteolipid vesicle released from Gram-negative bacterial outer membranes.
+  - reference: DOI:10.1038/nrmicro3525
+    notes: Schwechheimer and Kuehn 2015 review OMVs as outer membrane buds from Gram-negative
+      bacteria that carry outer-membrane and periplasmic material.
+- component_id: outer_membrane_vesicle_cargo
+  label: outer membrane vesicle lumen cargo
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: OMV lumen cargo is heterogeneous across species and conditions,
+    spanning soluble periplasmic proteins and other molecules, so no exact taxon-agnostic
+    protein, RNA, lipid, or polysaccharide CURIE denotes the full cargo set.
+  role: Variable lumen material packaged inside the OMV during budding and exported
+    from the producing cell.
+  evidence:
+  - reference: DOI:10.1002/pmic.200700196
+    notes: Lee et al. 2007 profiled native Escherichia coli outer membrane vesicles
+      and catalogued the proteins packaged in those vesicles.
+  - reference: DOI:10.1038/s41579-018-0112-2
+    notes: Toyofuku, Nomura and Eberl 2019 review bacterial membrane-vesicle types
+      and the distinct cargo sets associated with their origins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Outer membrane vesicles are a Gram-negative bacterial vesicle class; bacteria
+    with other envelope architectures release related but non-OMV membrane vesicles.
+  reference: DOI:10.1038/s41579-018-0112-2
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Gram-negative model in which native outer membrane vesicle proteomes and OMV-driven
+    host inflammatory responses have been experimentally characterized.
+  reference: DOI:10.1371/journal.pone.0011334
+functions:
+- function_id: outer_membrane_vesicle_export
+  label: outer membrane vesicle-mediated export
+  description: Outer membrane vesicles bud from the cell surface to export outer-membrane
+    and periplasmic molecules into the extracellular environment.
+  evidence:
+  - reference: DOI:10.1038/nrmicro3525
+    notes: Schwechheimer and Kuehn 2015 review outer membrane vesicle biogenesis and
+      functions in Gram-negative bacteria.
+- function_id: outer_membrane_vesicle_intercellular_delivery
+  label: outer membrane vesicle intercellular delivery
+  description: The vesicle carries bacterial envelope and lumen cargo to other cells,
+    supporting interactions with host cells and neighboring microbes.
+  evidence:
+  - reference: DOI:10.1038/s41579-018-0112-2
+    notes: Toyofuku, Nomura and Eberl 2019 review bacterial membrane vesicles as extracellular
+      carriers that move biomolecules among bacteria and to host cells.
+evidence:
+- reference: GO:0061701
+  notes: Gene Ontology cellular-component term for bacterial outer membrane vesicle.
+- reference: GO:1903561
+  notes: Gene Ontology cellular-component term for extracellular vesicle.
+- reference: GO:0009279
+  notes: Gene Ontology cellular-component term for the cell outer membrane.
+- reference: DOI:10.1038/nrmicro3525
+  notes: 'Schwechheimer and Kuehn 2015, Outer-membrane vesicles from Gram-negative
+    bacteria: biogenesis and functions, Nature Reviews Microbiology.'
+- reference: DOI:10.1038/s41579-018-0112-2
+  notes: Toyofuku, Nomura and Eberl 2019, Types and origins of bacterial membrane
+    vesicles, Nature Reviews Microbiology.
+- reference: DOI:10.1371/journal.pone.0011334
+  notes: Park et al. 2010, Outer Membrane Vesicles Derived from Escherichia coli Induce
+    Systemic Inflammatory Response Syndrome, PLOS ONE.
+- reference: DOI:10.1002/pmic.200700196
+  notes: Lee et al. 2007, Global proteomic profiling of native outer membrane vesicles
+    derived from Escherichia coli, Proteomics.
+causal_graphs:
+- graph_id: outer_membrane_vesicle_budding
+  title: Outer membrane blebs package periplasm into vesicles
+  description: A Gram-negative outer membrane bulges outward, enclosing periplasmic
+    material in an outer-membrane-derived bilayer that is released as a bacterial
+    outer membrane vesicle.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the OMV boundary and cargo packaging relationship
+    without asserting one complete scission mechanism for all Gram-negative bacteria.
+  nodes:
+  - node_id: cell_outer_membrane
+    label: cell outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009279
+  - node_id: omv_bilayer
+    label: outer membrane vesicle proteolipid bilayer
+    node_type: STRUCTURE
+    component_ref: outer_membrane_vesicle_bilayer
+  - node_id: omv_cargo
+    label: outer membrane vesicle lumen cargo
+    node_type: STATE
+    component_ref: outer_membrane_vesicle_cargo
+  - node_id: bacterial_outer_membrane_vesicle
+    label: bacterial outer membrane vesicle
+    node_type: ORGANELLE
+    grounding: GO:0061701
+  edges:
+  - subject: cell_outer_membrane
+    predicate: buds into
+    object: omv_bilayer
+    description: The OMV boundary is formed by outward budding of Gram-negative bacterial
+      outer membrane.
+    evidence:
+    - reference: GO:0061701
+      notes: GO:0061701 defines bacterial outer membrane vesicles as being released
+        from Gram-negative bacterial outer membranes.
+    - reference: DOI:10.1038/nrmicro3525
+      notes: Schwechheimer and Kuehn 2015 review OMV budding from the Gram-negative
+        outer membrane.
+  - subject: omv_bilayer
+    predicate: encloses
+    object: omv_cargo
+    description: The outer-membrane-derived bilayer encloses periplasmic and other
+      lumen cargo during vesicle formation.
+    evidence:
+    - reference: DOI:10.1002/pmic.200700196
+      notes: Lee et al. 2007 profiled the protein cargo of native Escherichia coli
+        OMVs.
+    - reference: DOI:10.1038/s41579-018-0112-2
+      notes: Toyofuku, Nomura and Eberl 2019 review how different bacterial vesicle
+        origins shape cargo packaging.
+  - subject: omv_bilayer
+    predicate: bounds
+    object: bacterial_outer_membrane_vesicle
+    description: The proteolipid bilayer is the bounding membrane of the released
+      bacterial outer membrane vesicle.
+    evidence:
+    - reference: GO:0061701
+      notes: GO:0061701 defines an OMV as a bilayered proteolipid vesicle.
+discussions:
+- discussion_id: resolve_omv_component_groundings
+  prompt: Resolve exact source-neutral identifiers for OMV lipid, outer-membrane protein
+    and lumen-cargo component classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#outer_membrane_vesicle_bilayer
+  - components#outer_membrane_vesicle_cargo
+  rationale: The first OMV record models the conserved vesicle boundary and cargo
+    concept but leaves the heterogeneous LPS, phospholipid, beta-barrel and soluble-cargo
+    sets ungrounded until exact component identifiers can be verified.
+  evidence:
+  - reference: DOI:10.1002/pmic.200700196
+    notes: Lee et al. 2007 showed that native E. coli OMVs contain a mixed protein
+      cargo.
+  - reference: DOI:10.1038/nrmicro3525
+    notes: Schwechheimer and Kuehn 2015 review the mixed outer-membrane and periplasmic
+      content of OMVs.
+  posed_by: codex
+  posed_date: '2026-09-12'
+- discussion_id: exclude_non_omv_membrane_vesicles
+  prompt: Gram-positive bacterial membrane vesicles and outer-inner membrane vesicles
+    are outside the exact GO:0061701 boundary.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  rationale: GO:0061701 denotes Gram-negative outer membrane vesicles. This record
+    therefore excludes broader bacterial extracellular vesicle classes that originate
+    from the cytoplasmic membrane or contain both outer and inner membrane.
+  evidence:
+  - reference: GO:0061701
+    notes: The GO:0061701 definition restricts the vesicle to release from Gram-negative
+      bacterial outer membranes.
+  - reference: DOI:10.1038/s41579-018-0112-2
+    notes: Toyofuku, Nomura and Eberl 2019 distinguish multiple bacterial membrane-vesicle
+      origins rather than treating every bacterial EV as an OMV.
+  posed_by: codex
+  posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'
