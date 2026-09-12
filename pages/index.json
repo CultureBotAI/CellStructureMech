@@ -630,6 +630,15 @@
   "definition": "A paracrystalline monomolecular array of one or more (glyco)protein species that self-assemble on the outermost surface of the cell envelope, with oblique, square or hexagonal lattice symmetry. S-layers are common in Archaea, where they are often the sole wall component, and widespread but patchily distributed in Bacteria."
  },
  {
+  "identifier": "GO:0030114",
+  "label": "slime layer",
+  "category": "ENVELOPE",
+  "kind": "ENVELOPE_LAYER",
+  "status": "PROPOSED",
+  "page": "structures/envelope/slime_layer.html",
+  "definition": "A slime layer is an easily removed, diffuse, unorganized layer of extracellular material that surrounds a cell. Specifically this consists mostly of exopolysaccharides, glycoproteins, and glycolipids."
+ },
+ {
   "identifier": "cellstructuremech:cyanophycin_granule",
   "label": "cyanophycin granule",
   "category": "INCLUSION",

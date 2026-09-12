@@ -1,0 +1,152 @@
+identifier: GO:0030114
+label: slime layer
+structure_category: ENVELOPE
+structure_kind: ENVELOPE_LAYER
+definition: A slime layer is an easily removed, diffuse, unorganized layer of extracellular
+  material that surrounds a cell. Specifically this consists mostly of exopolysaccharides,
+  glycoproteins, and glycolipids.
+definition_source: GO:0030114
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T16:38:17Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T16:38:46Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added glycocalyx parentage, the UniProt Subcellular Location xref, a reviewed-label-only
+    slime-layer extracellular-material component, a Pseudomonas aeruginosa canonical
+    example, record-level GO/UniProt/DOI evidence, a nonmechanistic diffuse-matrix
+    graph, and capsule-boundary plus matrix-grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-12T16:44:02Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #677 by adding GO:0042603 evidence to the capsule-boundary discussion;
+    resolved #678 by narrowing the matrix grounding note so GO- and UniProt-specific
+    composition claims are attributed separately.'
+  llm_assisted: true
+parent_structures:
+- GO:0030112
+xrefs:
+- uniprot.location:SL-0247
+components:
+- component_id: slime_layer_extracellular_material
+  label: slime-layer extracellular material
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO defines slime layers as mostly exopolysaccharide-, glycoprotein-
+    and glycolipid-containing extracellular material, UniProt describes bacterial
+    slime layers as usually polysaccharide-rich, and Pseudomonas aeruginosa slime
+    also included nucleic acid material and minor protein; no single CHEBI or sequence-family
+    CURIE denotes the complete source-neutral slime-layer matrix.
+  role: Forms the loose, diffuse extracellular glycocalyx matrix that surrounds the
+    cell surface.
+  evidence:
+  - reference: GO:0030114
+    notes: GO:0030114 defines a slime layer as diffuse extracellular material that
+      surrounds a cell and consists mostly of exopolysaccharides, glycoproteins and
+      glycolipids.
+  - reference: DOI:10.1042/bj1120521
+    notes: Brown, Foster and Clamp 1969 chemically characterized Pseudomonas aeruginosa
+      slime as predominantly polysaccharide with additional nucleic acid material
+      and minor protein.
+canonical_examples:
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  note: Classic biochemical example in which extracellular slime from multiple Pseudomonas
+    aeruginosa strains was chemically analyzed.
+  reference: DOI:10.1042/bj1120521
+evidence:
+- reference: GO:0030114
+  notes: Gene Ontology cellular-component term for slime layer.
+- reference: GO:0030112
+  notes: Gene Ontology cellular-component parent term for the carbohydrate-rich glycocalyx.
+- reference: uniprot.location:SL-0247
+  notes: UniProt Subcellular Location entry SL-0247 maps Slime layer to GO:0030114
+    and describes it as a more-diffuse glycocalyx than a capsule.
+- reference: DOI:10.1042/bj1120521
+  notes: Brown MRW, Foster JHS and Clamp JR 1969, 'Composition of Pseudomonas aeruginosa
+    slime', Biochemical Journal.
+causal_graphs:
+- graph_id: diffuse_glycocalyx_matrix
+  title: Extracellular material forms a loose glycocalyx
+  description: Mixed extracellular material accumulates as a diffuse, easily removed
+    slime layer rather than as a highly organized capsule.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the mature slime-layer matrix and its loose surface
+    association without asserting the species-specific biosynthesis or export systems
+    that generate the extracellular material.
+  nodes:
+  - node_id: slime_layer_extracellular_material
+    label: slime-layer extracellular material
+    node_type: CHEMICAL
+    component_ref: slime_layer_extracellular_material
+  - node_id: cell_surface
+    label: cell surface
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: slime_layer
+    label: slime layer
+    node_type: STRUCTURE
+    grounding: GO:0030114
+  edges:
+  - subject: slime_layer_extracellular_material
+    predicate: forms
+    object: slime_layer
+    description: The slime layer is built from mixed extracellular material that is
+      predominantly glycan-rich.
+    evidence:
+    - reference: GO:0030114
+      notes: GO:0030114 defines the slime layer by diffuse extracellular material.
+    - reference: DOI:10.1042/bj1120521
+      notes: Brown, Foster and Clamp 1969 found Pseudomonas aeruginosa slime to be
+        predominantly polysaccharide with nucleic acid material and minor protein.
+  - subject: slime_layer
+    predicate: surrounds
+    object: cell_surface
+    description: The slime layer surrounds the cell as a diffuse extracellular glycocalyx.
+    evidence:
+    - reference: GO:0030114
+      notes: GO:0030114 defines the slime layer as surrounding a cell.
+    - reference: uniprot.location:SL-0247
+      notes: UniProt Subcellular Location entry SL-0247 describes the slime layer
+        as extracellular material that surrounds the bacterial cell.
+discussions:
+- discussion_id: slime_layer_capsule_boundary
+  prompt: Keep diffuse slime layers separate from the organized capsule record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0030114 and UniProt SL-0247 denote a loose, diffuse glycocalyx that
+    is easily removed, whereas GO:0042603 denotes the organized capsule subclass of
+    glycocalyx; slime layer therefore belongs in a separate sibling record.
+  evidence:
+  - reference: GO:0030114
+    notes: GO:0030114 defines the slime layer as diffuse and unorganized.
+  - reference: uniprot.location:SL-0247
+    notes: UniProt SL-0247 distinguishes slime layers as more-diffuse glycocalyces
+      than capsules.
+  - reference: GO:0042603
+    notes: GO:0042603 defines capsule as a highly organized glycocalyx attached outside
+      the cell wall.
+  posed_by: codex
+  posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'
+- discussion_id: resolve_slime_layer_matrix_grounding
+  prompt: Resolve exact source-neutral groundings for slime-layer matrix material.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#slime_layer_extracellular_material
+  rationale: This first slime-layer record curates a broad extracellular matrix component
+    while leaving exact glycan, glycoprotein and glycolipid identifiers open for species-specific
+    follow-up.
+  posed_by: codex
+  posed_date: '2026-09-12'

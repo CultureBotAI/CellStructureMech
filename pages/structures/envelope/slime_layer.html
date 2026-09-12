@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>slime layer · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>slime layer</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0030114"><code>GO:0030114</code></a> · ENVELOPE · ENVELOPE_LAYER · <span class="status">PROPOSED</span></p>
+<p class="definition">A slime layer is an easily removed, diffuse, unorganized layer of extracellular material that surrounds a cell. Specifically this consists mostly of exopolysaccharides, glycoproteins, and glycolipids. <small>[<a href="http://purl.obolibrary.org/obo/GO_0030114"><code>GO:0030114</code></a>]</small></p>
+<p><strong>Xrefs:</strong> <code>uniprot.location:SL-0247</code> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-slime_layer_extracellular_material"><td>slime-layer extracellular material</td><td>OTHER</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Forms the loose, diffuse extracellular glycocalyx matrix that surrounds the cell surface.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030114"><code>GO:0030114</code></a> <small>GO:0030114 defines a slime layer as diffuse extracellular material that surrounds a cell and consists mostly of exopolysaccharides, glycoproteins and glycolipids.</small></li><li><a href="https://doi.org/10.1042/bj1120521"><code>DOI:10.1042/bj1120521</code></a> <small>Brown, Foster and Clamp 1969 chemically characterized Pseudomonas aeruginosa slime as predominantly polysaccharide with additional nucleic acid material and minor protein.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_287"><code>NCBITaxon:287</code></a> <em>Pseudomonas aeruginosa</em> — Classic biochemical example in which extracellular slime from multiple Pseudomonas aeruginosa strains was chemically analyzed. [<a href="https://doi.org/10.1042/bj1120521"><code>DOI:10.1042/bj1120521</code></a>]</li></ul>
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-diffuse_glycocalyx_matrix">Extracellular material forms a loose glycocalyx <small>(ASSEMBLY)</small></h3>
+<p>Mixed extracellular material accumulates as a diffuse, easily removed slime layer rather than as a highly organized capsule.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>slime-layer extracellular material</td><td>forms</td><td>slime layer</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030114"><code>GO:0030114</code></a> <small>GO:0030114 defines the slime layer by diffuse extracellular material.</small></li><li><a href="https://doi.org/10.1042/bj1120521"><code>DOI:10.1042/bj1120521</code></a> <small>Brown, Foster and Clamp 1969 found Pseudomonas aeruginosa slime to be predominantly polysaccharide with nucleic acid material and minor protein.</small></li></ul></td></tr>
+<tr><td>slime layer</td><td>surrounds</td><td>cell surface</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030114"><code>GO:0030114</code></a> <small>GO:0030114 defines the slime layer as surrounding a cell.</small></li><li><code>uniprot.location:SL-0247</code> <small>UniProt Subcellular Location entry SL-0247 describes the slime layer as extracellular material that surrounds the bacterial cell.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (RESOLVED): Keep diffuse slime layers separate from the organized capsule record. <small>GO:0030114 and UniProt SL-0247 denote a loose, diffuse glycocalyx that is easily removed, whereas GO:0042603 denotes the organized capsule subclass of glycocalyx; slime layer therefore belongs in a separate sibling record.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for slime-layer matrix material. <small>This first slime-layer record curates a broad extracellular matrix component while leaving exact glycan, glycoprotein and glycolipid identifiers open for species-specific follow-up.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030114"><code>GO:0030114</code></a> <small>Gene Ontology cellular-component term for slime layer.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030112"><code>GO:0030112</code></a> <small>Gene Ontology cellular-component parent term for the carbohydrate-rich glycocalyx.</small></li><li><code>uniprot.location:SL-0247</code> <small>UniProt Subcellular Location entry SL-0247 maps Slime layer to GO:0030114 and describes it as a more-diffuse glycocalyx than a capsule.</small></li><li><a href="https://doi.org/10.1042/bj1120521"><code>DOI:10.1042/bj1120521</code></a> <small>Brown MRW, Foster JHS and Clamp JR 1969, &#39;Composition of Pseudomonas aeruginosa slime&#39;, Biochemical Journal.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-12T16:38:17Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-12T16:38:46Z</code> codex · EXPANDED_RECORD — Added glycocalyx parentage, the UniProt Subcellular Location xref, a reviewed-label-only slime-layer extracellular-material component, a Pseudomonas aeruginosa canonical example, record-level GO/UniProt/DOI evidence, a nonmechanistic diffuse-matrix graph, and capsule-boundary plus matrix-grounding discussions.</li><li><code>2026-09-12T16:44:02Z</code> codex · ADDRESS_REVIEW — Resolved #677 by adding GO:0042603 evidence to the capsule-boundary discussion; resolved #678 by narrowing the matrix grounding note so GO- and UniProt-specific composition claims are attributed separately.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/envelope/slime_layer.yaml"><code>data/structures/envelope/slime_layer.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
