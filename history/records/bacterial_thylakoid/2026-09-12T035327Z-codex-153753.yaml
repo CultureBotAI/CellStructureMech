@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/bacterial_thylakoid.yaml
+  slug: bacterial_thylakoid
+session:
+  id: 2026-09-12T035327Z-codex-153753
+  timestamp: '2026-09-12T03:53:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/574
+  - https://github.com/CultureBotAI/CellStructureMech/issues/575
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/573
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-grounded bacterial thylakoid structure record
+  details: 'Added a GO:0030075 bacterial thylakoid MEMBRANE_ORGANELLE record scoped to the
+    whole plasma membrane-derived cyanobacterial thylakoid and its GO-grounded membrane, lumen,
+    photosystem I, and photosystem II parts. Curated membrane, PSI, PSII, cytochrome b6f,
+    and ATP synthase components; Cyanobacteriota distribution; a Synechocystis canonical example;
+    photosynthetic electron-transport and ATP-synthesis functions; a plastoquinone-aware topology
+    graph; and resolved boundary discussions separating the whole bacterial thylakoid from
+    the generic thylakoid membrane and avoiding an organelle structure_kind overclaim. Regenerated
+    embeddings and rendered pages, ran local strict validation and full QC, filed PR #573
+    review issues #574 and #575, and addressed them by adding the graph-only plastoquinone
+    carrier node and switching structure_kind to OTHER.'

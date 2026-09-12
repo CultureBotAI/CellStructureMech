@@ -1,0 +1,353 @@
+identifier: GO:0030075
+label: bacterial thylakoid
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: OTHER
+definition: A thylakoid that is derived from and attached to, but not necessarily
+  continuous with, the plasma membrane, and is not enclosed in a plastid. It bears
+  the photosynthetic pigments in photosynthetic cyanobacteria.
+definition_source: GO:0030075
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T03:41:04Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T03:42:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO synonym, bacterial thylakoid part terms, GO-grounded photosynthetic
+    membrane components, Cyanobacteriota distribution, a Synechocystis canonical example,
+    functions, literature evidence, a nonmechanistic topology graph, and a resolved
+    thylakoid-membrane boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-12T03:43:00Z'
+  curator: codex
+  action: NARROWED_EXAMPLE_EVIDENCE
+  changes: Narrowed the Synechocystis canonical-example note to the thylakoid biogenesis
+    claim directly supported by Huokko et al. 2021.
+  llm_assisted: true
+- timestamp: '2026-09-12T03:49:52Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved #574 by adding a plastoquinone graph node between PSII and cytochrome
+    b6f; resolved #575 by changing structure_kind to OTHER and documenting the non-organelle
+    thylakoid boundary.'
+  llm_assisted: true
+synonyms:
+- synonym_text: plasma membrane-derived thylakoid
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030075
+parent_structures:
+- GO:0009579
+has_part:
+- GO:0031676
+- GO:0031979
+- GO:0030094
+- GO:0030096
+components:
+- component_id: plasma_membrane_derived_thylakoid_membrane
+  label: plasma membrane-derived thylakoid membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0031676
+  essentiality: ESSENTIAL
+  role: Pigmented cyanobacterial thylakoid membrane derived from the plasma membrane
+    and embedded with the photosystems and other photosynthetic electron-transport
+    complexes.
+  evidence:
+  - reference: GO:0031676
+    notes: GO:0031676 defines the plasma membrane-derived thylakoid membrane as the
+      pigmented membrane of a bacterial thylakoid.
+  - reference: DOI:10.1016/j.molp.2017.09.019
+    notes: Casella et al. 2017 mapped photosystem I and photosystem II organization
+      within native Synechocystis thylakoid membranes.
+- component_id: plasma_membrane_derived_photosystem_ii
+  label: plasma membrane-derived thylakoid photosystem II
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0030096
+  essentiality: UNKNOWN
+  role: P680 reaction-center complex in the bacterial thylakoid that oxidizes water
+    and reduces plastoquinone during oxygenic photosynthesis.
+  evidence:
+  - reference: GO:0030096
+    notes: GO:0030096 defines the plasma membrane-derived thylakoid photosystem II
+      complex.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review PSII as a major cyanobacterial thylakoid
+      electron-transport complex.
+- component_id: cytochrome_b6f
+  label: cytochrome b6f complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0009512
+  essentiality: UNKNOWN
+  role: Thylakoid membrane complex that links plastoquinol oxidation to proton translocation
+    across the bacterial thylakoid membrane.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 place cytochrome b6f between PSII and PSI in
+      the thylakoid electron-transport chain.
+- component_id: plasma_membrane_derived_photosystem_i
+  label: plasma membrane-derived photosystem I
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0030094
+  essentiality: UNKNOWN
+  role: Light-dependent oxidoreductase in the bacterial thylakoid that receives electrons
+    downstream of cytochrome b6f and transfers them toward ferredoxin.
+  evidence:
+  - reference: GO:0030094
+    notes: GO:0030094 defines plasma membrane-derived photosystem I as a complex located
+      in the bacterial thylakoid.
+  - reference: DOI:10.1016/j.molp.2017.09.019
+    notes: Casella et al. 2017 mapped PSI distribution and mobility in native Synechocystis
+      thylakoid membranes.
+- component_id: atp_synthase
+  label: proton-transporting ATP synthase complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0045259
+  essentiality: UNKNOWN
+  role: Membrane enzyme that uses the trans-thylakoid proton motive force to synthesize
+    ATP on the cytoplasmic side of the bacterial thylakoid membrane.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 include ATP synthase among thylakoid complexes
+      that convert light energy into ATP and reducing power.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteriota
+  presence: COMMON
+  note: Bacterial thylakoids occur in most cyanobacteria, while Gloeobacter-like lineages
+    perform oxygenic photosynthesis at the plasma membrane and lack internal thylakoids.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+canonical_examples:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  note: Cyanobacterial model used to probe de novo thylakoid membrane biogenesis and
+    dynamics.
+  reference: DOI:10.1038/s41467-021-23680-1
+functions:
+- function_id: photosynthetic_electron_transport
+  label: photosynthetic electron transport chain
+  grounding: GO:0009767
+  description: Bacterial thylakoids organize PSII, cytochrome b6f and PSI so light-driven
+    electron transport can move electrons from water toward ferredoxin while contributing
+    to a trans-thylakoid proton gradient.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review thylakoid electron transport as the membrane
+      process that converts light into chemical energy.
+- function_id: photosynthetic_atp_synthesis
+  label: photosynthetic ATP synthesis
+  description: The plasma membrane-derived thylakoid membrane separates the bacterial
+    thylakoid lumen from the cytoplasm so proton accumulation can drive ATP synthase.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 describe proton motive force generation across
+      thylakoid membranes and ATP synthase use of that gradient.
+evidence:
+- reference: GO:0030075
+  notes: Gene Ontology cellular-component term for bacterial thylakoid.
+- reference: GO:0009579
+  notes: Gene Ontology cellular-component term for thylakoid.
+- reference: GO:0031676
+  notes: Gene Ontology cellular-component term for the plasma membrane-derived thylakoid
+    membrane.
+- reference: GO:0031979
+  notes: Gene Ontology cellular-component term for the plasma membrane-derived thylakoid
+    lumen.
+- reference: GO:0030094
+  notes: Gene Ontology cellular-component term for plasma membrane-derived photosystem
+    I.
+- reference: GO:0030096
+  notes: Gene Ontology cellular-component term for plasma membrane-derived thylakoid
+    photosystem II.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
+- reference: DOI:10.1016/j.molp.2017.09.019
+  notes: Casella et al. 2017, Dissecting the Native Architecture and Dynamics of Cyanobacterial
+    Photosynthetic Machinery, Molecular Plant.
+- reference: DOI:10.1038/s41467-021-23680-1
+  notes: Huokko et al. 2021, Probing the biogenesis pathway and dynamics of thylakoid
+    membranes, Nature Communications.
+causal_graphs:
+- graph_id: cyanobacterial_thylakoid_topology
+  title: Bacterial thylakoids localize photosynthetic complexes
+  description: The plasma membrane-derived thylakoid membrane bounds the cyanobacterial
+    thylakoid lumen and houses the photosynthetic complexes that build a proton motive
+    force for ATP synthesis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures bacterial thylakoid topology and major membrane-complex
+    residence; the detailed plastoquinone and soluble carrier chemistry is left to
+    the generic thylakoid membrane record.
+  nodes:
+  - node_id: bacterial_thylakoid
+    label: bacterial thylakoid
+    node_type: STRUCTURE
+    grounding: GO:0030075
+  - node_id: thylakoid_membrane
+    label: plasma membrane-derived thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0031676
+    component_ref: plasma_membrane_derived_thylakoid_membrane
+  - node_id: thylakoid_lumen
+    label: plasma membrane-derived thylakoid lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031979
+  - node_id: psii
+    label: plasma membrane-derived thylakoid photosystem II
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0030096
+    component_ref: plasma_membrane_derived_photosystem_ii
+  - node_id: plastoquinone_pool
+    label: plastoquinone pool
+    node_type: CHEMICAL
+    description: Mobile quinone carrier that accepts electrons from PSII and feeds
+      cytochrome b6f in the bacterial thylakoid membrane.
+  - node_id: cytb6f
+    label: cytochrome b6f complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0009512
+    component_ref: cytochrome_b6f
+  - node_id: psi
+    label: plasma membrane-derived photosystem I
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0030094
+    component_ref: plasma_membrane_derived_photosystem_i
+  - node_id: proton_gradient
+    label: trans-thylakoid proton motive force
+    node_type: STATE
+  - node_id: atp_synthase
+    label: proton-transporting ATP synthase complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0045259
+    component_ref: atp_synthase
+  - node_id: atp_synthesis
+    label: photosynthetic ATP synthesis
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: thylakoid_membrane
+    predicate: bounds
+    object: bacterial_thylakoid
+    description: The pigmented plasma membrane-derived thylakoid membrane bounds the
+      bacterial thylakoid compartment.
+    evidence:
+    - reference: GO:0031676
+      notes: GO:0031676 defines the membrane as part of a plasma membrane-derived
+        thylakoid.
+  - subject: thylakoid_membrane
+    predicate: encloses
+    object: thylakoid_lumen
+    description: The membrane surrounds the plasma membrane-derived thylakoid lumen.
+    evidence:
+    - reference: GO:0031979
+      notes: GO:0031979 defines the lumen as the volume enclosed by a plasma membrane-derived
+        thylakoid.
+  - subject: thylakoid_membrane
+    predicate: houses
+    object: psii
+    description: The bacterial thylakoid membrane contains PSII reaction centers used
+      for water oxidation and plastoquinone reduction.
+    evidence:
+    - reference: DOI:10.1016/j.molp.2017.09.019
+      notes: Casella et al. 2017 mapped PSII within native Synechocystis thylakoid
+        membranes.
+  - subject: thylakoid_membrane
+    predicate: houses
+    object: psi
+    description: The bacterial thylakoid membrane contains PSI complexes downstream
+      in linear electron transport.
+    evidence:
+    - reference: DOI:10.1016/j.molp.2017.09.019
+      notes: Casella et al. 2017 mapped PSI distribution and mobility in native Synechocystis
+        thylakoid membranes.
+  - subject: psii
+    predicate: reduces
+    object: plastoquinone_pool
+    description: Photosystem II reduces plastoquinone in the bacterial thylakoid membrane.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review PSII and plastoquinone as upstream thylakoid
+        electron carriers.
+  - subject: plastoquinone_pool
+    predicate: feeds electrons to
+    object: cytb6f
+    description: Reduced plastoquinone carries electrons through the bacterial thylakoid
+      membrane to cytochrome b6f.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 describe electron transfer from plastoquinone
+        to cytochrome b6f in the thylakoid chain.
+  - subject: cytb6f
+    predicate: contributes to
+    object: proton_gradient
+    description: Electron transport through cytochrome b6f contributes to the proton
+      motive force across the bacterial thylakoid membrane.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review generation of proton motive force by
+        thylakoid electron transport.
+  - subject: cytb6f
+    predicate: feeds electrons to
+    object: psi
+    description: Cytochrome b6f passes electrons to a downstream soluble carrier that
+      delivers them to photosystem I.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 place cytochrome b6f upstream of PSI in thylakoid
+        electron transport.
+  - subject: proton_gradient
+    predicate: powers
+    object: atp_synthase
+    description: ATP synthase uses the trans-thylakoid proton motive force generated
+      by electron transport.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 connect the thylakoid proton gradient to ATP
+        synthase activity.
+  - subject: atp_synthase
+    predicate: carries out
+    object: atp_synthesis
+    description: Thylakoid ATP synthase synthesizes ATP using the proton motive force
+      built across the bacterial thylakoid membrane.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 describe ATP synthase use of the thylakoid
+        proton gradient.
+discussions:
+- discussion_id: whole_thylakoid_not_thylakoid_membrane
+  prompt: Keep bacterial thylakoids separate from the generic thylakoid membrane record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0030075 denotes the whole plasma membrane-derived bacterial thylakoid,
+    with GO:0031676 and GO:0031979 as membrane and lumen parts. The existing GO:0042651
+    record denotes only the generic pigmented membrane of cyanobacterial and plastid
+    thylakoids.
+  resolution_note: Curated the bacterial thylakoid as a whole-compartment record and
+    left plastid and cross-domain membrane chemistry on chloroplast and thylakoid-membrane
+    records.
+  evidence:
+  - reference: GO:0030075
+    notes: GO:0030075 denotes the whole bacterial thylakoid.
+  - reference: GO:0042651
+    notes: GO:0042651 denotes the pigmented membrane of any thylakoid.
+- discussion_id: thylakoid_not_organelle_kind
+  prompt: Represent bacterial thylakoid as a membrane-bounded cellular structure without
+    calling it an organelle.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0009579 describes thylakoids as membranous cellular structures and
+    explicitly comments that they are not considered organelles. StructureKindEnum
+    does not currently include a non-organelle membrane-bounded-compartment value,
+    so OTHER is narrower than asserting MEMBRANE_BOUNDED_ORGANELLE.
+  resolution_note: Kept the filesystem category under MEMBRANE_ORGANELLE with other
+    lipid-bounded internal compartments, but set structure_kind to OTHER.
+  evidence:
+  - reference: GO:0009579
+    notes: GO:0009579 defines thylakoid and scopes thylakoids away from the organelle
+      class.
