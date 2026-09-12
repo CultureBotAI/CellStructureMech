@@ -20,6 +20,13 @@ curation_history:
     an Escherichia coli example, OMV export and delivery functions, a nonmechanistic
     budding graph, and component-boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-12T13:21:34Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed review issues #652 and #653 by typing OMV cargo as a STRUCTURE
+    component node and changing the bilayer-to-vesicle graph edge from bounds to is
+    part of.'
+  llm_assisted: true
 parent_structures:
 - GO:1903561
 synonyms:
@@ -136,7 +143,7 @@ causal_graphs:
     component_ref: outer_membrane_vesicle_bilayer
   - node_id: omv_cargo
     label: outer membrane vesicle lumen cargo
-    node_type: STATE
+    node_type: STRUCTURE
     component_ref: outer_membrane_vesicle_cargo
   - node_id: bacterial_outer_membrane_vesicle
     label: bacterial outer membrane vesicle
@@ -168,10 +175,10 @@ causal_graphs:
       notes: Toyofuku, Nomura and Eberl 2019 review how different bacterial vesicle
         origins shape cargo packaging.
   - subject: omv_bilayer
-    predicate: bounds
+    predicate: is part of
     object: bacterial_outer_membrane_vesicle
-    description: The proteolipid bilayer is the bounding membrane of the released
-      bacterial outer membrane vesicle.
+    description: The proteolipid bilayer is the bounding membrane component of the
+      released bacterial outer membrane vesicle.
     evidence:
     - reference: GO:0061701
       notes: GO:0061701 defines an OMV as a bilayered proteolipid vesicle.
