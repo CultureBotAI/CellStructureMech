@@ -21,6 +21,13 @@ curation_history:
     DOI/GO evidence, a nonmechanistic Sec4/Sec15/Sec3 targeting graph, a subunit-grounding
     TODO, and a resolved Sec4p boundary decision.
   llm_assisted: true
+- timestamp: '2026-09-12T01:19:56Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #561 review issues #562 and #563 by removing the unsupported
+    Eukaryota taxonomic-distribution row and adding a secretory-vesicle node to the
+    Sec4/Sec15 graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: exocyst complex
   synonym_type: EXACT_SYNONYM
@@ -177,14 +184,6 @@ components:
   evidence:
   - reference: DOI:10.1074/jbc.274.33.23558
     notes: Guo et al. 1999 identified Exo84p as an exocyst protein essential for secretion.
-taxonomic_distribution:
-- taxon_id: NCBITaxon:2759
-  taxon_label: Eukaryota
-  presence: VARIABLE
-  note: GO:0000145 describes at least eight exocyst components as conserved between
-    yeast and mammals; this row captures a eukaryotic complex without asserting universal
-    retention in every eukaryotic lineage.
-  reference: GO:0000145
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -226,10 +225,10 @@ evidence:
     Journal of Biological Chemistry.
 causal_graphs:
 - graph_id: sec4_exocyst_targeting
-  title: Sec4 and Sec15 link secretory vesicles to exocyst targeting
+  title: Sec4 and Sec15 link secretory vesicles to exocytic sites
   description: In budding yeast, Sec4p interacts with the exocyst component Sec15p
-    on secretory vesicles, while Sec3p marks polarized plasma-membrane sites used
-    by the exocyst for exocytosis.
+    on secretory vesicles, Sec3p marks polarized plasma-membrane sites, and the exocyst
+    targets vesicles to those sites.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures the Sec4p/Sec15p and Sec3p boundary relationships
@@ -253,6 +252,9 @@ causal_graphs:
   - node_id: exocytic_sites
     label: polarized exocytic sites
     node_type: CELLULAR_LOCALIZATION
+  - node_id: secretory_vesicles
+    label: secretory vesicles
+    node_type: STRUCTURE
   - node_id: exocytosis
     label: exocytosis
     node_type: BIOLOGICAL_PROCESS
@@ -288,10 +290,10 @@ causal_graphs:
       notes: Finger et al. 1998 characterized Sec3p as a spatial landmark for polarized
         secretion.
   - subject: exocyst
-    predicate: targets vesicles for
-    object: exocytosis
-    description: The exocyst targets secretory vesicles to plasma-membrane sites for
-      exocytosis.
+    predicate: targets
+    object: secretory_vesicles
+    description: The exocyst targets secretory vesicles to plasma-membrane sites used
+      for exocytosis.
     evidence:
     - reference: DOI:10.1093/emboj/18.4.1071
       notes: Guo et al. 1999 framed the exocyst as a Sec4p effector system for targeted
