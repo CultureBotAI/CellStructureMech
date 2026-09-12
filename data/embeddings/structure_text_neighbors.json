@@ -2296,9 +2296,9 @@
           "cosine_similarity": 0.7247556
         },
         {
-          "identifier": "GO:0043591",
-          "label": "endospore external encapsulating structure",
-          "cosine_similarity": 0.69243656
+          "identifier": "GO:0033110",
+          "label": "Cvt vesicle membrane",
+          "cosine_similarity": 0.69461937
         }
       ]
     },
@@ -2663,14 +2663,14 @@
           "cosine_similarity": 0.80535939
         },
         {
+          "identifier": "GO:0033110",
+          "label": "Cvt vesicle membrane",
+          "cosine_similarity": 0.77619475
+        },
+        {
           "identifier": "GO:0005783",
           "label": "endoplasmic reticulum",
           "cosine_similarity": 0.75646097
-        },
-        {
-          "identifier": "GO:0000407",
-          "label": "phagophore assembly site",
-          "cosine_similarity": 0.75054691
         }
       ]
     },
@@ -2849,14 +2849,14 @@
           "cosine_similarity": 0.79267246
         },
         {
+          "identifier": "GO:0033110",
+          "label": "Cvt vesicle membrane",
+          "cosine_similarity": 0.77124671
+        },
+        {
           "identifier": "GO:0020020",
           "label": "food vacuole",
           "cosine_similarity": 0.7668445
-        },
-        {
-          "identifier": "GO:0005776",
-          "label": "autophagosome",
-          "cosine_similarity": 0.74734761
         }
       ]
     },
@@ -2864,6 +2864,11 @@
       "identifier": "GO:0033107",
       "label": "Cvt vesicle",
       "neighbors": [
+        {
+          "identifier": "GO:0033110",
+          "label": "Cvt vesicle membrane",
+          "cosine_similarity": 0.9589556
+        },
         {
           "identifier": "GO:0000324",
           "label": "fungal-type vacuole",
@@ -2883,11 +2888,37 @@
           "identifier": "GO:0061701",
           "label": "bacterial outer membrane vesicle",
           "cosine_similarity": 0.79940091
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0033110",
+      "label": "Cvt vesicle membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0033107",
+          "label": "Cvt vesicle",
+          "cosine_similarity": 0.9589556
         },
         {
-          "identifier": "GO:0000331",
-          "label": "contractile vacuole",
-          "cosine_similarity": 0.79267246
+          "identifier": "GO:0061701",
+          "label": "bacterial outer membrane vesicle",
+          "cosine_similarity": 0.82531055
+        },
+        {
+          "identifier": "GO:0005768",
+          "label": "endosome",
+          "cosine_similarity": 0.79584784
+        },
+        {
+          "identifier": "GO:0005776",
+          "label": "autophagosome",
+          "cosine_similarity": 0.77619475
+        },
+        {
+          "identifier": "GO:0000324",
+          "label": "fungal-type vacuole",
+          "cosine_similarity": 0.77332795
         }
       ]
     },
@@ -3257,9 +3288,9 @@
           "cosine_similarity": 0.80819838
         },
         {
-          "identifier": "GO:0000324",
-          "label": "fungal-type vacuole",
-          "cosine_similarity": 0.78504973
+          "identifier": "GO:0033110",
+          "label": "Cvt vesicle membrane",
+          "cosine_similarity": 0.79584784
         }
       ]
     },
@@ -4895,14 +4926,14 @@
           "cosine_similarity": 0.82932389
         },
         {
+          "identifier": "GO:0033110",
+          "label": "Cvt vesicle membrane",
+          "cosine_similarity": 0.82531055
+        },
+        {
           "identifier": "GO:0005768",
           "label": "endosome",
           "cosine_similarity": 0.81178387
-        },
-        {
-          "identifier": "GO:0030288",
-          "label": "outer membrane-bounded periplasmic space",
-          "cosine_similarity": 0.81013257
         }
       ]
     },
@@ -4993,9 +5024,9 @@
           "cosine_similarity": 0.70642388
         },
         {
-          "identifier": "GO:0033107",
-          "label": "Cvt vesicle",
-          "cosine_similarity": 0.70202647
+          "identifier": "GO:0033110",
+          "label": "Cvt vesicle membrane",
+          "cosine_similarity": 0.70574344
         }
       ]
     },
@@ -6275,6 +6306,11 @@
       "label": "prospore membrane",
       "neighbors": [
         {
+          "identifier": "GO:0033110",
+          "label": "Cvt vesicle membrane",
+          "cosine_similarity": 0.75682917
+        },
+        {
           "identifier": "GO:0090642",
           "label": "microsporidian-type exospore",
           "cosine_similarity": 0.75384492
@@ -6293,11 +6329,6 @@
           "identifier": "GO:0061701",
           "label": "bacterial outer membrane vesicle",
           "cosine_similarity": 0.74886957
-        },
-        {
-          "identifier": "GO:0036013",
-          "label": "cyanelle outer membrane",
-          "cosine_similarity": 0.74143352
         }
       ]
     }

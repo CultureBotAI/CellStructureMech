@@ -1,0 +1,177 @@
+identifier: GO:0033110
+label: Cvt vesicle membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: Either lipid bilayer membrane surrounding a Cvt vesicle, a double membrane-layered
+  vesicle implicated in the cytoplasm to vacuole targeting pathway.
+definition_source: GO:0033110
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T22:59:24Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T23:00:08Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic vesicle membrane parentage, Cvt vesicle parthood, the
+    UniProt SL-0081 xref, a reviewed-label-only lipid-bilayer component, budding-yeast
+    distribution, a Cvt-pathway function, a nonmechanistic Cvt-delivery graph, and
+    a lipid-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0030659
+part_of:
+- GO:0033107
+xrefs:
+- uniprot.location:SL-0081
+components:
+- component_id: cvt_vesicle_lipid_bilayer
+  label: Cvt vesicle lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: One of the two lipid bilayers surrounding a Cvt vesicle before vesicle-vacuole
+    fusion.
+  evidence:
+  - reference: GO:0033110
+    notes: GO:0033110 defines the Cvt vesicle membrane as either lipid bilayer surrounding
+      a Cvt vesicle.
+  - reference: uniprot.location:SL-0081
+    notes: UniProt SL-0081 maps directly to GO:0033110 and describes the membrane
+      surrounding a double-membrane Cvt vesicle.
+  - reference: PMID:15004240
+    notes: Reggiori et al. 2004 describe Cvt vesicles as double-membrane cytosolic
+      carriers in budding yeast.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0033110 and UniProt SL-0081 identify either whole Cvt vesicle
+    membrane bilayer; no separate source-neutral CURIE was curated for the generic
+    lipid constituent of one such bilayer.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Double-membrane Cvt vesicles have been characterized in budding yeast during
+    cytoplasm-to-vacuole targeting.
+  reference: PMID:15004240
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Primary yeast model used to define double-membrane Cvt vesicle formation and
+    vacuolar delivery.
+  reference: PMID:15004240
+functions:
+- function_id: cytoplasm_to_vacuole_targeting
+  label: cytoplasm to vacuole targeting by the Cvt pathway
+  grounding: GO:0032258
+  description: The Cvt vesicle membrane surrounds the selective hydrolase cargo carrier
+    used for cytoplasm-to-vacuole targeting.
+  evidence:
+  - reference: GO:0032258
+    notes: GO:0032258 defines Cvt-pathway delivery by Atg19-dependent formation of
+      a Cvt complex and membrane expansion around it.
+  - reference: DOI:10.1074/jbc.M404399200
+    notes: Shintani and Klionsky 2004 analyzed Cvt cargo and its effect on Cvt vesicle
+      formation.
+evidence:
+- reference: GO:0033110
+  notes: Gene Ontology cellular-component term for either bilayer of the Cvt vesicle
+    membrane.
+- reference: GO:0030659
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle membrane.
+- reference: GO:0033107
+  notes: Gene Ontology cellular-component term for the Cvt vesicle that this membrane
+    surrounds.
+- reference: GO:0032258
+  notes: Gene Ontology biological-process term for cytoplasm to vacuole targeting
+    by the Cvt pathway.
+- reference: uniprot.location:SL-0081
+  notes: UniProt Subcellular Location entry SL-0081 maps directly to GO:0033110, places
+    it under Cvt vesicle, and describes the membrane surrounding a double-membrane
+    Cvt vesicle.
+- reference: DOI:10.1091/mbc.e03-07-0479
+  notes: Reggiori et al. 2004, Early stages of the secretory pathway, but not endosomes,
+    are required for Cvt vesicle and autophagosome assembly in Saccharomyces cerevisiae,
+    Molecular Biology of the Cell.
+- reference: DOI:10.1074/jbc.M404399200
+  notes: Shintani and Klionsky 2004, Cargo proteins facilitate the formation of transport
+    vesicles in the cytoplasm to vacuole targeting pathway, Journal of Biological
+    Chemistry.
+causal_graphs:
+- graph_id: cvt_membrane_vacuole_delivery
+  title: Cvt vesicle membranes surround the yeast Cvt cargo carrier
+  description: A pair of Cvt vesicle membranes forms the double-membrane carrier that
+    sequesters Cvt cargo before vacuolar delivery.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Cvt membrane parthood and the vacuolar delivery
+    endpoint without asserting the Atg machinery that expands the membrane.
+  nodes:
+  - node_id: cvt_vesicle_membrane
+    label: Cvt vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0033110
+  - node_id: cvt_vesicle
+    label: Cvt vesicle
+    node_type: ORGANELLE
+    grounding: GO:0033107
+  - node_id: cvt_complex
+    label: Cvt complex
+    node_type: STRUCTURE
+    grounding: GO:0034270
+  - node_id: cvt_targeting
+    label: cytoplasm to vacuole targeting by the Cvt pathway
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0032258
+  edges:
+  - subject: cvt_vesicle_membrane
+    predicate: is part of
+    object: cvt_vesicle
+    description: A Cvt vesicle membrane is either lipid bilayer surrounding the double-membrane
+      Cvt vesicle.
+    evidence:
+    - reference: GO:0033110
+      notes: GO:0033110 defines the Cvt vesicle membrane as either bilayer surrounding
+        the vesicle.
+    - reference: uniprot.location:SL-0081
+      notes: UniProt SL-0081 places the Cvt vesicle membrane under the Cvt vesicle.
+  - subject: cvt_complex
+    predicate: is enclosed by
+    object: cvt_vesicle
+    description: The completed Cvt vesicle sequesters the Cvt complex before vacuolar
+      delivery.
+    evidence:
+    - reference: GO:0032258
+      notes: GO:0032258 defines the Cvt pathway as membrane expansion around the Cvt
+        complex.
+  - subject: cvt_vesicle
+    predicate: supports
+    object: cvt_targeting
+    description: Cvt vesicles are cytosolic carriers that move Cvt cargo to the fungal
+      vacuole.
+    evidence:
+    - reference: GO:0033107
+      notes: GO:0033107 defines Cvt vesicles by their implication in the Cvt pathway.
+    - reference: DOI:10.1074/jbc.M404399200
+      notes: Shintani and Klionsky 2004 describe Cvt cargo incorporation into forming
+        vesicles.
+discussions:
+- discussion_id: ground_cvt_vesicle_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of either
+    Cvt vesicle membrane bilayer.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cvt_vesicle_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0033110 and UniProt SL-0081, but
+    no exact source-neutral CURIE was curated for the generic lipid constituent of
+    either surrounding Cvt vesicle bilayer.
+  evidence:
+  - reference: GO:0033110
+    notes: GO:0033110 identifies either lipid bilayer of the double Cvt vesicle membrane.
+  - reference: uniprot.location:SL-0081
+    notes: UniProt SL-0081 describes the Cvt vesicle membrane surrounding a double
+      membrane-layered Cvt vesicle.
+  posed_by: codex
+  posed_date: '2026-09-12'
