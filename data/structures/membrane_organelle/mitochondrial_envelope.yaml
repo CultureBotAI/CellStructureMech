@@ -1,0 +1,278 @@
+identifier: GO:0005740
+label: mitochondrial envelope
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The double lipid bilayer enclosing the mitochondrion and separating its
+  contents from the cell cytoplasm; includes the intermembrane space.
+definition_source: GO:0005740
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T05:48:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T05:49:15Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added organelle-envelope parentage, mitochondrion parthood, exact inner
+    and outer membrane, intermembrane-space, and TOM parts, Eukaryota and Saccharomyces
+    scope, import and oxidative-phosphorylation functions, DOI/GO evidence, a nonmechanistic
+    envelope import graph, and a subcomplex-boundary grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T05:56:30Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved PR #593 review issues #594 and #595 by downgrading unsupported
+    inner- and outer-membrane essentiality assertions to UNKNOWN and adding the mitochondrion
+    node plus GO:0005740 envelope topology edge to the graph.'
+  llm_assisted: true
+parent_structures:
+- GO:0031967
+part_of:
+- GO:0005739
+has_part:
+- GO:0005741
+- GO:0005743
+- GO:0005758
+- GO:0005742
+components:
+- component_id: mitochondrial_outer_membrane
+  label: mitochondrial outer membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0005741
+  essentiality: UNKNOWN
+  role: Cytoplasm-facing lipid bilayer of the mitochondrial envelope.
+  evidence:
+  - reference: GO:0005741
+    notes: GO:0005741 defines the mitochondrial outer membrane as the cytoplasm-facing
+      lipid bilayer of the mitochondrial envelope.
+- component_id: mitochondrial_inner_membrane
+  label: mitochondrial inner membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0005743
+  essentiality: UNKNOWN
+  role: Lumen-facing lipid bilayer of the envelope that folds into cristae.
+  evidence:
+  - reference: GO:0005743
+    notes: GO:0005743 defines the mitochondrial inner membrane as the folded lumen-facing
+      lipid bilayer of the mitochondrial envelope.
+- component_id: tom_complex
+  label: mitochondrial outer membrane translocase complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005742
+  essentiality: UNKNOWN
+  role: Outer-membrane translocase that mediates entry of nuclear-encoded mitochondrial
+    precursor proteins.
+  evidence:
+  - reference: GO:0005742
+    notes: GO:0005742 defines the TOM complex as a large mitochondrial outer membrane
+      complex that mediates transport of proteins into mitochondrial compartments.
+  - reference: DOI:10.1016/j.cell.2009.08.005
+    notes: Chacinska et al. 2009 review mitochondrial protein import through TOM and
+      downstream sorting machineries.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: Canonical mitochondrial envelopes occur with canonical mitochondria in eukaryotes,
+    while some anaerobic lineages carry reduced mitochondrion-related organelles instead.
+  reference: GO:0005739
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria include outer- and inner-membrane proteomes with
+    protein-import and oxidative-phosphorylation machinery.
+  reference: DOI:10.1073/pnas.2135385100
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast mitochondria were purified to inventory matrix, outer-membrane,
+    and inner-membrane mitochondrial proteins.
+  reference: DOI:10.1073/pnas.2135385100
+functions:
+- function_id: protein_import_into_mitochondrial_matrix
+  label: protein import into mitochondrial matrix
+  grounding: GO:0030150
+  description: The mitochondrial envelope routes cytosolic precursor proteins through
+    TOM and downstream inner-membrane machinery into the matrix.
+  evidence:
+  - reference: GO:0030150
+    notes: GO:0030150 defines matrix protein import as import from the cytosol via
+      TOM-TIM23-PAM.
+  - reference: DOI:10.1016/j.cell.2009.08.005
+    notes: Chacinska et al. 2009 review TOM entry and downstream TIM/PAM mitochondrial
+      protein-import pathways.
+- function_id: oxidative_phosphorylation
+  label: oxidative phosphorylation
+  grounding: GO:0006119
+  description: Inner-envelope respiratory-chain activity contributes to membrane-gradient
+    formation and ATP synthesis.
+  evidence:
+  - reference: GO:0006119
+    notes: GO:0006119 defines oxidative phosphorylation as ATP formation coupled to
+      respiratory-chain oxidation and membrane-gradient formation.
+  - reference: DOI:10.1073/pnas.2135385100
+    notes: Sickmann et al. 2003 recovered known oxidative phosphorylation machinery
+      from purified budding-yeast mitochondria.
+evidence:
+- reference: GO:0005740
+  notes: Gene Ontology cellular-component term for mitochondrial envelope.
+- reference: GO:0031967
+  notes: Gene Ontology cellular-component term for organelle envelope.
+- reference: GO:0005739
+  notes: Gene Ontology cellular-component term for mitochondrion.
+- reference: GO:0005741
+  notes: Gene Ontology cellular-component term for mitochondrial outer membrane.
+- reference: GO:0005743
+  notes: Gene Ontology cellular-component term for mitochondrial inner membrane.
+- reference: GO:0005758
+  notes: Gene Ontology cellular-component term for mitochondrial intermembrane space.
+- reference: GO:0005742
+  notes: Gene Ontology cellular-component term for the mitochondrial outer membrane
+    translocase complex.
+- reference: GO:0030150
+  notes: Gene Ontology biological-process term for protein import into the mitochondrial
+    matrix.
+- reference: GO:0006119
+  notes: Gene Ontology biological-process term for oxidative phosphorylation.
+- reference: DOI:10.1073/pnas.2135385100
+  notes: Sickmann et al. 2003, 'The proteome of Saccharomyces cerevisiae mitochondria',
+    Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1016/j.cell.2009.08.005
+  notes: 'Chacinska et al. 2009, ''Importing Mitochondrial Proteins: Machineries and
+    Mechanisms'', Cell.'
+causal_graphs:
+- graph_id: yeast_mitochondrial_envelope_import
+  title: Mitochondrial envelope routes matrix import
+  description: In budding yeast, the mitochondrial outer and inner membranes enclose
+    the intermembrane space, while TOM at the outer membrane initiates precursor import
+    into the matrix.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures envelope topology and TOM-dependent matrix import
+    without asserting the full respiratory chain, TIM/PAM translocases, or intermembrane-space
+    oxidoreductases.
+  nodes:
+  - node_id: mitochondrion
+    label: mitochondrion
+    node_type: STRUCTURE
+    grounding: GO:0005739
+  - node_id: mitochondrial_envelope
+    label: mitochondrial envelope
+    node_type: STRUCTURE
+    grounding: GO:0005740
+  - node_id: mitochondrial_outer_membrane
+    label: mitochondrial outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0005741
+    component_ref: mitochondrial_outer_membrane
+  - node_id: mitochondrial_inner_membrane
+    label: mitochondrial inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005743
+    component_ref: mitochondrial_inner_membrane
+  - node_id: mitochondrial_intermembrane_space
+    label: mitochondrial intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005758
+  - node_id: tom_complex
+    label: mitochondrial outer membrane translocase complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0005742
+    component_ref: tom_complex
+  - node_id: protein_import_into_mitochondrial_matrix
+    label: protein import into mitochondrial matrix
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030150
+  - node_id: oxidative_phosphorylation
+    label: oxidative phosphorylation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006119
+  edges:
+  - subject: mitochondrial_envelope
+    predicate: encloses
+    object: mitochondrion
+    description: The mitochondrial envelope encloses the mitochondrion and separates
+      its contents from the cell cytoplasm.
+    evidence:
+    - reference: GO:0005740
+      notes: GO:0005740 defines the mitochondrial envelope as the double lipid bilayer
+        enclosing the mitochondrion.
+  - subject: mitochondrial_outer_membrane
+    predicate: is part of
+    object: mitochondrial_envelope
+    description: The outer membrane is the cytoplasm-facing bilayer of the mitochondrial
+      envelope.
+    evidence:
+    - reference: GO:0005741
+      notes: GO:0005741 defines the mitochondrial outer membrane as part of the mitochondrial
+        envelope.
+  - subject: mitochondrial_inner_membrane
+    predicate: is part of
+    object: mitochondrial_envelope
+    description: The inner membrane is the folded lumen-facing bilayer of the mitochondrial
+      envelope.
+    evidence:
+    - reference: GO:0005743
+      notes: GO:0005743 defines the mitochondrial inner membrane as part of the mitochondrial
+        envelope.
+  - subject: mitochondrial_envelope
+    predicate: contains
+    object: mitochondrial_intermembrane_space
+    description: The envelope contains the region between the inner and outer mitochondrial
+      bilayers.
+    evidence:
+    - reference: GO:0005758
+      notes: GO:0005758 defines the intermembrane space as the region between the
+        inner and outer lipid bilayers of the mitochondrial envelope.
+  - subject: tom_complex
+    predicate: spans
+    object: mitochondrial_outer_membrane
+    description: The TOM complex is a large protein translocase of the mitochondrial
+      outer membrane.
+    evidence:
+    - reference: GO:0005742
+      notes: GO:0005742 places the TOM complex in the mitochondrial outer membrane.
+  - subject: tom_complex
+    predicate: provides entry for
+    object: protein_import_into_mitochondrial_matrix
+    description: TOM provides the outer-membrane entry step for TIM23-PAM matrix import.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2009.08.005
+      notes: Chacinska et al. 2009 review TOM entry and downstream TIM23-PAM presequence
+        import into the mitochondrial matrix.
+  - subject: mitochondrial_inner_membrane
+    predicate: supports
+    object: oxidative_phosphorylation
+    description: Budding-yeast oxidative-phosphorylation complexes reside at the mitochondrial
+      inner membrane.
+    evidence:
+    - reference: DOI:10.1073/pnas.2135385100
+      notes: Sickmann et al. 2003 recovered oxidative-phosphorylation complexes in
+        the purified budding-yeast mitochondrial proteome.
+discussions:
+- discussion_id: extend_envelope_import_and_respiration_subcomplexes
+  prompt: Resolve exact source-neutral records or component boundaries for TIM23,
+    TIM22, SAM, MIA, respiratory-chain, and ATP synthase subcomplexes of the mitochondrial
+    envelope.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#tom_complex
+  - causal_graphs#yeast_mitochondrial_envelope_import
+  rationale: This first mitochondrial envelope record grounds the inner and outer
+    membranes, the intermembrane space, and TOM exactly while avoiding broad, ungrounded
+    aggregate classes for every import and respiratory subcomplex embedded in the
+    envelope.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2009.08.005
+    notes: Chacinska et al. 2009 review TOM and downstream mitochondrial protein-sorting
+      machineries.
+  - reference: DOI:10.1073/pnas.2135385100
+    notes: Sickmann et al. 2003 inventory the budding-yeast mitochondrial proteome.
+  posed_by: codex
+  posed_date: '2026-09-12'
