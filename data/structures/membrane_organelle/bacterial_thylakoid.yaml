@@ -1,7 +1,7 @@
 identifier: GO:0030075
 label: bacterial thylakoid
 structure_category: MEMBRANE_ORGANELLE
-structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+structure_kind: OTHER
 definition: A thylakoid that is derived from and attached to, but not necessarily
   continuous with, the plasma membrane, and is not enclosed in a plastid. It bears
   the photosynthetic pigments in photosynthetic cyanobacteria.
@@ -26,6 +26,13 @@ curation_history:
   action: NARROWED_EXAMPLE_EVIDENCE
   changes: Narrowed the Synechocystis canonical-example note to the thylakoid biogenesis
     claim directly supported by Huokko et al. 2021.
+  llm_assisted: true
+- timestamp: '2026-09-12T03:49:52Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved #574 by adding a plastoquinone graph node between PSII and cytochrome
+    b6f; resolved #575 by changing structure_kind to OTHER and documenting the non-organelle
+    thylakoid boundary.'
   llm_assisted: true
 synonyms:
 - synonym_text: plasma membrane-derived thylakoid
@@ -197,6 +204,11 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     grounding: GO:0030096
     component_ref: plasma_membrane_derived_photosystem_ii
+  - node_id: plastoquinone_pool
+    label: plastoquinone pool
+    node_type: CHEMICAL
+    description: Mobile quinone carrier that accepts electrons from PSII and feeds
+      cytochrome b6f in the bacterial thylakoid membrane.
   - node_id: cytb6f
     label: cytochrome b6f complex
     node_type: GENE_OR_PROTEIN
@@ -255,14 +267,22 @@ causal_graphs:
       notes: Casella et al. 2017 mapped PSI distribution and mobility in native Synechocystis
         thylakoid membranes.
   - subject: psii
-    predicate: feeds electrons through
-    object: cytb6f
-    description: Photosystem II, intervening electron carriers and cytochrome b6f
-      form the upstream half of the cyanobacterial thylakoid electron-transport chain.
+    predicate: reduces
+    object: plastoquinone_pool
+    description: Photosystem II reduces plastoquinone in the bacterial thylakoid membrane.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-120823-022747
-      notes: Perez-Boerema et al. 2024 place cytochrome b6f between PSII and PSI in
-        thylakoid electron transport.
+      notes: Perez-Boerema et al. 2024 review PSII and plastoquinone as upstream thylakoid
+        electron carriers.
+  - subject: plastoquinone_pool
+    predicate: feeds electrons to
+    object: cytb6f
+    description: Reduced plastoquinone carries electrons through the bacterial thylakoid
+      membrane to cytochrome b6f.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 describe electron transfer from plastoquinone
+        to cytochrome b6f in the thylakoid chain.
   - subject: cytb6f
     predicate: contributes to
     object: proton_gradient
@@ -316,3 +336,18 @@ discussions:
     notes: GO:0030075 denotes the whole bacterial thylakoid.
   - reference: GO:0042651
     notes: GO:0042651 denotes the pigmented membrane of any thylakoid.
+- discussion_id: thylakoid_not_organelle_kind
+  prompt: Represent bacterial thylakoid as a membrane-bounded cellular structure without
+    calling it an organelle.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0009579 describes thylakoids as membranous cellular structures and
+    explicitly comments that they are not considered organelles. StructureKindEnum
+    does not currently include a non-organelle membrane-bounded-compartment value,
+    so OTHER is narrower than asserting MEMBRANE_BOUNDED_ORGANELLE.
+  resolution_note: Kept the filesystem category under MEMBRANE_ORGANELLE with other
+    lipid-bounded internal compartments, but set structure_kind to OTHER.
+  evidence:
+  - reference: GO:0009579
+    notes: GO:0009579 defines thylakoid and scopes thylakoids away from the organelle
+      class.
