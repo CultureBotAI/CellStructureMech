@@ -19,6 +19,12 @@ curation_history:
     resolved interpretation that stromal DNA, ribosomes, and temporary photosynthetic
     products are contents rather than stroma components.
   llm_assisted: true
+- timestamp: '2026-09-12T21:50:59Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #710 by citing GO:0034060 on the inner-membrane boundary edge
+    that points to the cyanelle stroma.'
+  llm_assisted: true
 parent_structures:
 - GO:0009532
 part_of:
@@ -121,6 +127,9 @@ causal_graphs:
     - reference: uniprot.location:SL-0480
       notes: UniProt SL-0480 describes the cyanelle inner membrane as separating the
         cyanelle stroma from the intermembrane space.
+    - reference: GO:0034060
+      notes: GO:0034060 defines the cyanelle stroma as the space enclosed by the double
+        membrane of a cyanelle.
 discussions:
 - discussion_id: stromal_contents_not_components
   prompt: Keep DNA, ribosomes, and temporary photosynthetic products out of the curated
