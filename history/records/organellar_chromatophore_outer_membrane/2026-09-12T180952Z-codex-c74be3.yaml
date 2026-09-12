@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/organellar_chromatophore_outer_membrane.yaml
+  slug: organellar_chromatophore_outer_membrane
+session:
+  id: 2026-09-12T180952Z-codex-c74be3
+  timestamp: '2026-09-12T18:09:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/686
+  - https://github.com/CultureBotAI/CellStructureMech/issues/687
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/685
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-grounded organellar chromatophore outer membrane record
+  details: 'Created GO:0070114 organellar chromatophore outer membrane with GO and UniProt
+    SL-0361 provenance, plastid and organellar chromatophore membrane parentage, organellar
+    chromatophore parthood, a reviewed-label-only lipid bilayer component, Paulinella taxonomic
+    scope, and a nonmechanistic topology graph. Review issues #686 and #687 removed the static
+    boundary pseudo-function and added GO:0070112 parentage.'

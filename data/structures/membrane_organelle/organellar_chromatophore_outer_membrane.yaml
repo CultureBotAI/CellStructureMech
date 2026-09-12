@@ -20,12 +20,20 @@ curation_history:
     Paulinella distribution, an outer envelope-boundary function, a nonmechanistic
     topology graph, and a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T18:03:53Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #686 by removing the static envelope-boundary pseudo-function;
+    resolved #687 by adding GO:0070112 organellar chromatophore membrane as a second
+    parent with record-level evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Paulinella-type chromatophore outer membrane
   synonym_type: EXACT_SYNONYM
   source: GO:0070114
 parent_structures:
 - GO:0009527
+- GO:0070112
 part_of:
 - GO:0070111
 xrefs:
@@ -57,18 +65,6 @@ taxonomic_distribution:
     Paulinella species without asserting that every Paulinella species carries this
     membrane.
   reference: uniprot.location:SL-0361
-functions:
-- function_id: outer_chromatophore_envelope_boundary
-  label: outer chromatophore envelope boundary
-  description: The organellar chromatophore outer membrane forms the host-cytoplasm-facing
-    lipid-bilayer boundary of the organellar chromatophore envelope.
-  evidence:
-  - reference: GO:0070114
-    notes: GO:0070114 defines the organellar chromatophore outer membrane as the cytoplasm-facing
-      lipid bilayer that surrounds an organellar chromatophore.
-  - reference: uniprot.location:SL-0361
-    notes: UniProt SL-0361 describes the outer membrane as the organellar chromatophore
-      membrane facing the cytoplasm.
 evidence:
 - reference: GO:0070114
   notes: Gene Ontology cellular-component term for the organellar chromatophore outer
@@ -76,6 +72,9 @@ evidence:
 - reference: GO:0009527
   notes: Gene Ontology cellular-component term for plastid outer membrane, the broader
     parent structure.
+- reference: GO:0070112
+  notes: Gene Ontology cellular-component term for organellar chromatophore membrane,
+    the broader chromatophore-membrane parent structure.
 - reference: GO:0070111
   notes: Gene Ontology cellular-component term for the organellar chromatophore that
     this outer membrane bounds.

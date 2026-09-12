@@ -1926,7 +1926,7 @@
         {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.82244374
+          "cosine_similarity": 0.81903361
         }
       ]
     },
@@ -2079,9 +2079,9 @@
           "cosine_similarity": 0.81013257
         },
         {
-          "identifier": "GO:0070114",
-          "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.78253379
+          "identifier": "GO:0097691",
+          "label": "bacterial extracellular vesicle",
+          "cosine_similarity": 0.77396392
         }
       ]
     },
@@ -2138,7 +2138,7 @@
         {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.81927727
+          "cosine_similarity": 0.81709341
         },
         {
           "identifier": "GO:0005740",
@@ -2758,7 +2758,7 @@
         {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.79716277
+          "cosine_similarity": 0.79542191
         },
         {
           "identifier": "GO:0046858",
@@ -2896,14 +2896,14 @@
       "label": "cyanelle",
       "neighbors": [
         {
+          "identifier": "GO:0070114",
+          "label": "organellar chromatophore outer membrane",
+          "cosine_similarity": 0.78822063
+        },
+        {
           "identifier": "GO:0009507",
           "label": "chloroplast",
           "cosine_similarity": 0.77868087
-        },
-        {
-          "identifier": "GO:0070114",
-          "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.77149522
         },
         {
           "identifier": "GO:0070116",
@@ -3342,7 +3342,7 @@
         {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.76035613
+          "cosine_similarity": 0.76538274
         },
         {
           "identifier": "GO:0009941",
@@ -3709,7 +3709,7 @@
         {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.87064185
+          "cosine_similarity": 0.87297035
         },
         {
           "identifier": "GO:0042717",
@@ -3735,27 +3735,27 @@
         {
           "identifier": "GO:0070111",
           "label": "organellar chromatophore",
-          "cosine_similarity": 0.87064185
+          "cosine_similarity": 0.87297035
         },
         {
           "identifier": "GO:0070116",
           "label": "organellar chromatophore thylakoid",
-          "cosine_similarity": 0.82570337
+          "cosine_similarity": 0.83445465
         },
         {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
-          "cosine_similarity": 0.82244374
+          "cosine_similarity": 0.81903361
         },
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.81927727
+          "cosine_similarity": 0.81709341
         },
         {
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
-          "cosine_similarity": 0.79716277
+          "cosine_similarity": 0.79542191
         }
       ]
     },
@@ -3771,7 +3771,7 @@
         {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.82570337
+          "cosine_similarity": 0.83445465
         },
         {
           "identifier": "GO:0009507",
@@ -3879,7 +3879,7 @@
         {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.70715328
+          "cosine_similarity": 0.72000114
         }
       ]
     },
@@ -4032,9 +4032,9 @@
           "cosine_similarity": 0.71542882
         },
         {
-          "identifier": "GO:0032047",
-          "label": "mitosome",
-          "cosine_similarity": 0.69955563
+          "identifier": "GO:0070114",
+          "label": "organellar chromatophore outer membrane",
+          "cosine_similarity": 0.7065563
         }
       ]
     },
@@ -4046,6 +4046,11 @@
           "identifier": "GO:0036000",
           "label": "mucocyst",
           "cosine_similarity": 0.74003615
+        },
+        {
+          "identifier": "GO:0070114",
+          "label": "organellar chromatophore outer membrane",
+          "cosine_similarity": 0.73620727
         },
         {
           "identifier": "GO:0033117",
@@ -4061,11 +4066,6 @@
           "identifier": "GO:0005777",
           "label": "peroxisome",
           "cosine_similarity": 0.73188175
-        },
-        {
-          "identifier": "GO:0005768",
-          "label": "endosome",
-          "cosine_similarity": 0.72954092
         }
       ]
     },
