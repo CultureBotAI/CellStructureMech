@@ -28,10 +28,16 @@ curation_history:
     chromatophore and added record-level GO evidence rows for the chromatophore intermembrane
     space and thylakoid lumen.
   llm_assisted: true
+- timestamp: '2026-09-12T12:16:51Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #643 by adding GO:0009536 plastid as record-level evidence for
+    the parent assertion; resolved #644 by removing the generic GO:0070112 organellar
+    chromatophore membrane localization term from has_part and record-level evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0009536
 has_part:
-- GO:0070112
 - GO:0070113
 - GO:0070114
 - GO:0070115
@@ -131,8 +137,8 @@ functions:
 evidence:
 - reference: GO:0070111
   notes: Gene Ontology cellular-component term for organellar chromatophore.
-- reference: GO:0070112
-  notes: Gene Ontology cellular-component term for organellar chromatophore membrane.
+- reference: GO:0009536
+  notes: Gene Ontology cellular-component term for plastid.
 - reference: GO:0070113
   notes: Gene Ontology cellular-component term for organellar chromatophore inner
     membrane.
