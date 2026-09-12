@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+  slug: vacuolar_proton_transporting_v_type_atpase_complex
+session:
+  id: 2026-09-12T071431Z-codex-8cd91a
+  timestamp: '2026-09-12T07:14:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/603
+  - https://github.com/CultureBotAI/CellStructureMech/issues/604
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/602
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the vacuolar proton-transporting V-type ATPase complex record
+  details: Added data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+    for GO:0016471 vacuolar proton-transporting V-type ATPase complex, including GO-grounded
+    V-type ATPase parentage, vacuolar membrane parthood, V0 and V1 subcomplex parts, exact
+    GO synonymy, Saccharomyces cerevisiae scope, vacuolar-acidification and rotary proton-pump
+    functions, DOI-backed yeast V-ATPase evidence, a nonmechanistic V1/V0 acidification graph,
+    generated pages, refreshed embeddings, and review fixes that connect V0/V1 sectors to
+    the intact complex and target lumen acidification to the whole complex.
