@@ -1,0 +1,216 @@
+identifier: GO:0030125
+label: clathrin vesicle coat
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A membrane vesicle coat whose core lattice is built from clathrin and
+  that coats clathrin-coated vesicles.
+definition_source: GO:0030125
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T08:01:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T08:01:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added vesicle-coat parentage, clathrin-coated vesicle parthood, reviewed-label-only
+    clathrin heavy- and light-chain components, Saccharomyces scope, clathrin-dependent
+    endocytosis, DOI/GO evidence, a nonmechanistic endocytic assembly graph, and a
+    triskelion/adaptor-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T08:08:00Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #612 review issues #613 and #614 by removing an unmodeled
+    Kukulski scission citation and narrowing the yeast assembly graph from the plasma
+    membrane to cortical endocytic sites.'
+  llm_assisted: true
+parent_structures:
+- GO:0030120
+part_of:
+- GO:0030136
+components:
+- component_id: clathrin_heavy_chain
+  label: clathrin heavy chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CHC1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from Saccharomyces cerevisiae CHC1 clathrin heavy chain
+    experiments; no exact source-neutral InterPro, Pfam, or NCBIfam identifier was
+    curated in this pass.
+  role: Core clathrin subunit in yeast clathrin vesicle coats and clathrin-dependent
+    endocytic sites.
+  evidence:
+  - reference: DOI:10.1083/jcb.106.5.1453
+    notes: Payne et al. 1988 analyzed Saccharomyces cerevisiae cells deficient in
+      clathrin heavy chain.
+  - reference: DOI:10.1016/j.devcel.2005.04.014
+    notes: Newpher et al. 2005 imaged clathrin dynamics and adaptor-dependent recruitment
+      to the yeast actin-based endocytic machinery.
+- component_id: clathrin_light_chain
+  label: clathrin light chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CLC1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from Saccharomyces cerevisiae CLC1 clathrin light chain
+    experiments; no exact source-neutral InterPro, Pfam, or NCBIfam identifier was
+    curated in this pass.
+  role: Clathrin light-chain subunit that supports yeast clathrin function and endocytic
+    vesicle formation.
+  evidence:
+  - reference: DOI:10.1074/jbc.271.51.33123
+    notes: Chu, Pishvaee and Payne 1996 showed that the clathrin light chain subunit
+      is required for clathrin function in Saccharomyces cerevisiae.
+  - reference: DOI:10.1016/j.devcel.2005.04.014
+    notes: Newpher et al. 2005 followed adaptor-dependent yeast clathrin recruitment
+      at endocytic sites.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has clathrin heavy and light chains that act at cortical clathrin-dependent
+    endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which fluorescently tagged clathrin and adaptor proteins
+    established the timing of clathrin recruitment to actin-based endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+functions:
+- function_id: clathrin_dependent_endocytosis
+  label: clathrin-dependent endocytosis
+  grounding: GO:0072583
+  description: The clathrin vesicle coat participates in clathrin-dependent endocytic
+    uptake by organizing coated endocytic vesicles.
+  evidence:
+  - reference: GO:0072583
+    notes: GO:0072583 denotes endocytosis through clathrin-coated pits and clathrin-coated
+      endocytic vesicles.
+  - reference: DOI:10.1016/j.cell.2005.09.024
+    notes: Kaksonen, Toret and Drubin 2005 analyzed the modular clathrin- and actin-mediated
+      endocytic machinery in yeast.
+evidence:
+- reference: GO:0030125
+  notes: Gene Ontology cellular-component term for the clathrin vesicle coat.
+- reference: GO:0030120
+  notes: Gene Ontology cellular-component parent for vesicle coats.
+- reference: GO:0030136
+  notes: Gene Ontology cellular-component term for clathrin-coated vesicles.
+- reference: GO:0072583
+  notes: Gene Ontology biological-process term for clathrin-dependent endocytosis.
+- reference: DOI:10.1083/jcb.106.5.1453
+  notes: Payne et al. 1988, Protein transport to the vacuole and receptor-mediated
+    endocytosis by clathrin heavy chain-deficient yeast, Journal of Cell Biology.
+- reference: DOI:10.1074/jbc.271.51.33123
+  notes: Chu, Pishvaee and Payne 1996, The Light Chain Subunit Is Required for Clathrin
+    Function in Saccharomyces cerevisiae, Journal of Biological Chemistry.
+- reference: DOI:10.1016/j.devcel.2005.04.014
+  notes: Newpher et al. 2005, In Vivo Dynamics of Clathrin and Its Adaptor-Dependent
+    Recruitment to the Actin-Based Endocytic Machinery in Yeast, Developmental Cell.
+- reference: DOI:10.1016/j.cell.2005.09.024
+  notes: Kaksonen, Toret and Drubin 2005, A Modular Design for the Clathrin- and Actin-Mediated
+    Endocytosis Machinery, Cell.
+causal_graphs:
+- graph_id: yeast_clathrin_endocytic_coat_assembly
+  title: Clathrin assembles at yeast endocytic sites
+  description: In Saccharomyces cerevisiae, clathrin heavy and light chains join early
+    cortical endocytic sites and form clathrin coats that participate in clathrin-dependent
+    endocytosis.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures clathrin heavy and light chains at the level supported
+    by this record without asserting a complete triskelion stoichiometry, a yeast
+    adaptor module, or the actin-driven scission mechanism.
+  nodes:
+  - node_id: cortical_endocytic_site
+    label: cortical endocytic site
+    node_type: STRUCTURE
+  - node_id: clathrin_heavy_chain
+    label: clathrin heavy chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: clathrin_heavy_chain
+  - node_id: clathrin_light_chain
+    label: clathrin light chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: clathrin_light_chain
+  - node_id: clathrin_vesicle_coat
+    label: clathrin vesicle coat
+    node_type: STRUCTURE
+    grounding: GO:0030125
+  - node_id: clathrin_coated_vesicle
+    label: clathrin-coated vesicle
+    node_type: STRUCTURE
+    grounding: GO:0030136
+  - node_id: clathrin_dependent_endocytosis
+    label: clathrin-dependent endocytosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0072583
+  edges:
+  - subject: clathrin_heavy_chain
+    predicate: is part of
+    object: clathrin_vesicle_coat
+    description: Clathrin heavy chain is represented as a core constituent of the
+      clathrin vesicle coat.
+    evidence:
+    - reference: DOI:10.1083/jcb.106.5.1453
+      notes: Payne et al. 1988 analyzed yeast clathrin heavy chain mutants.
+  - subject: clathrin_light_chain
+    predicate: is part of
+    object: clathrin_vesicle_coat
+    description: Clathrin light chain is represented as a yeast clathrin coat constituent.
+    evidence:
+    - reference: DOI:10.1074/jbc.271.51.33123
+      notes: Chu, Pishvaee and Payne 1996 established yeast clathrin light-chain function.
+  - subject: clathrin_vesicle_coat
+    predicate: assembles at
+    object: cortical_endocytic_site
+    description: Yeast clathrin assembles at cortical endocytic sites before later
+      actin-associated proteins arrive.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2005.04.014
+      notes: Newpher et al. 2005 measured the timing of clathrin recruitment to the
+        yeast actin-based endocytic machinery.
+  - subject: clathrin_vesicle_coat
+    predicate: is part of
+    object: clathrin_coated_vesicle
+    description: The clathrin vesicle coat is the coat on a clathrin-coated vesicle.
+    evidence:
+    - reference: GO:0030136
+      notes: GO:0030136 defines clathrin-coated vesicles by a coat formed of clathrin.
+  - subject: clathrin_vesicle_coat
+    predicate: participates in
+    object: clathrin_dependent_endocytosis
+    description: The clathrin coat participates in clathrin-dependent endocytic vesicle
+      formation.
+    evidence:
+    - reference: GO:0072583
+      notes: GO:0072583 describes endocytic uptake through clathrin-coated pits that
+        form clathrin-coated endocytic vesicles.
+    - reference: DOI:10.1016/j.cell.2005.09.024
+      notes: Kaksonen, Toret and Drubin 2005 analyzed the clathrin- and actin-mediated
+        yeast endocytic machinery.
+discussions:
+- discussion_id: resolve_clathrin_triskelion_and_adaptors
+  prompt: Resolve exact source-neutral groundings for clathrin heavy-chain and light-chain
+    families, the clathrin triskelion, and yeast adaptor modules.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#clathrin_heavy_chain
+  - components#clathrin_light_chain
+  rationale: This first clathrin vesicle coat record keeps core clathrin chains coarse
+    and omits AP/GGA or yeast endocytic adaptor components until exact family and
+    complex boundaries are reviewed.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2005.04.014
+  posed_by: codex
+  posed_date: '2026-09-12'

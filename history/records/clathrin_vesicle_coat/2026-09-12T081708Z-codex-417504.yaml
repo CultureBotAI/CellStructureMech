@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/clathrin_vesicle_coat.yaml
+  slug: clathrin_vesicle_coat
+session:
+  id: 2026-09-12T081708Z-codex-417504
+  timestamp: '2026-09-12T08:17:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/613
+  - https://github.com/CultureBotAI/CellStructureMech/issues/614
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/612
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the clathrin vesicle coat record
+  details: 'Created data/structures/other/clathrin_vesicle_coat.yaml as the GO:0030125 clathrin
+    vesicle coat record. The record adds vesicle-coat parentage, clathrin-coated vesicle parthood,
+    reviewed-label-only clathrin heavy- and light-chain components for Saccharomyces cerevisiae,
+    clathrin-dependent endocytosis grounded to GO:0072583, and a nonmechanistic cortical endocytic-site
+    assembly graph grounded in GO plus Payne et al. 1988, Chu et al. 1996, Newpher et al.
+    2005, and Kaksonen et al. 2005. PR review issues #613 and #614 removed an unmodeled Kukulski
+    scission citation and narrowed an overgrounded plasma-membrane assembly node to an ungrounded
+    cortical endocytic-site node. Validation covered single-record LinkML and strict checks,
+    regenerated text embeddings, rendered pages, README drift, full strict validation, snippet
+    verification, trait-link checking, CURIE liveness, id-label correspondence, and full run_qc.'
