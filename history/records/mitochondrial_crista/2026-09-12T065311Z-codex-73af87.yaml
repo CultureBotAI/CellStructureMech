@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_crista.yaml
+  slug: mitochondrial_crista
+session:
+  id: 2026-09-12T065311Z-codex-73af87
+  timestamp: '2026-09-12T06:53:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/600
+  - https://github.com/CultureBotAI/CellStructureMech/issues/601
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/599
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the mitochondrial crista record
+  details: Added data/structures/membrane_organelle/mitochondrial_crista.yaml for GO:0030061
+    mitochondrial crista, including mitochondrial-inner-membrane parthood, GO-grounded crista-junction,
+    MICOS, inner-boundary-membrane, and ATP synthase topology, Eukaryota and Saccharomyces
+    cerevisiae scope, cristae-formation and oxidative-phosphorylation functions, DOI-backed
+    MICOS and ATP synthase architecture evidence, a nonmechanistic yeast crista-architecture
+    graph, generated pages, refreshed embeddings, and review fixes for MICOS component role
+    plus the missing inner-boundary-membrane graph endpoint.
