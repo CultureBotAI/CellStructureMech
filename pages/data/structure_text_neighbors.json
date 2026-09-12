@@ -2725,14 +2725,14 @@
           "cosine_similarity": 0.8348129
         },
         {
+          "identifier": "GO:0033115",
+          "label": "cyanelle thylakoid membrane",
+          "cosine_similarity": 0.82344311
+        },
+        {
           "identifier": "GO:0070116",
           "label": "organellar chromatophore thylakoid",
           "cosine_similarity": 0.82290716
-        },
-        {
-          "identifier": "GO:0046858",
-          "label": "chlorosome",
-          "cosine_similarity": 0.79727984
         }
       ]
     },
@@ -2906,6 +2906,11 @@
           "cosine_similarity": 0.93401685
         },
         {
+          "identifier": "GO:0033115",
+          "label": "cyanelle thylakoid membrane",
+          "cosine_similarity": 0.93163759
+        },
+        {
           "identifier": "GO:0033113",
           "label": "cyanelle membrane",
           "cosine_similarity": 0.93127052
@@ -2914,11 +2919,6 @@
           "identifier": "GO:0036012",
           "label": "cyanelle inner membrane",
           "cosine_similarity": 0.92194196
-        },
-        {
-          "identifier": "GO:0009843",
-          "label": "cyanelle thylakoid",
-          "cosine_similarity": 0.91278034
         }
       ]
     },
@@ -3113,6 +3113,11 @@
       "label": "cyanelle thylakoid",
       "neighbors": [
         {
+          "identifier": "GO:0033115",
+          "label": "cyanelle thylakoid membrane",
+          "cosine_similarity": 0.94975949
+        },
+        {
           "identifier": "GO:0033114",
           "label": "cyanelle thylakoid lumen",
           "cosine_similarity": 0.92514601
@@ -3131,11 +3136,6 @@
           "identifier": "GO:0034060",
           "label": "cyanelle stroma",
           "cosine_similarity": 0.85298619
-        },
-        {
-          "identifier": "GO:0036013",
-          "label": "cyanelle outer membrane",
-          "cosine_similarity": 0.84561596
         }
       ]
     },
@@ -3154,6 +3154,11 @@
           "cosine_similarity": 0.92514601
         },
         {
+          "identifier": "GO:0033115",
+          "label": "cyanelle thylakoid membrane",
+          "cosine_similarity": 0.89664864
+        },
+        {
           "identifier": "GO:0036014",
           "label": "cyanelle intermembrane space",
           "cosine_similarity": 0.88238391
@@ -3162,11 +3167,37 @@
           "identifier": "GO:0009842",
           "label": "cyanelle",
           "cosine_similarity": 0.86651819
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0033115",
+      "label": "cyanelle thylakoid membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0009843",
+          "label": "cyanelle thylakoid",
+          "cosine_similarity": 0.94975949
         },
         {
-          "identifier": "GO:0070117",
-          "label": "organellar chromatophore thylakoid lumen",
-          "cosine_similarity": 0.86107212
+          "identifier": "GO:0009842",
+          "label": "cyanelle",
+          "cosine_similarity": 0.93163759
+        },
+        {
+          "identifier": "GO:0036013",
+          "label": "cyanelle outer membrane",
+          "cosine_similarity": 0.91713549
+        },
+        {
+          "identifier": "GO:0033113",
+          "label": "cyanelle membrane",
+          "cosine_similarity": 0.91401448
+        },
+        {
+          "identifier": "GO:0070118",
+          "label": "organellar chromatophore thylakoid membrane",
+          "cosine_similarity": 0.90309023
         }
       ]
     },
@@ -3299,6 +3330,11 @@
       "label": "eyespot apparatus",
       "neighbors": [
         {
+          "identifier": "GO:0033115",
+          "label": "cyanelle thylakoid membrane",
+          "cosine_similarity": 0.63639619
+        },
+        {
           "identifier": "GO:0046858",
           "label": "chlorosome",
           "cosine_similarity": 0.63026908
@@ -3317,11 +3353,6 @@
           "identifier": "GO:0030089",
           "label": "phycobilisome",
           "cosine_similarity": 0.61613372
-        },
-        {
-          "identifier": "GO:0009843",
-          "label": "cyanelle thylakoid",
-          "cosine_similarity": 0.61494606
         }
       ]
     },
@@ -4177,6 +4208,11 @@
           "cosine_similarity": 0.92028612
         },
         {
+          "identifier": "GO:0033115",
+          "label": "cyanelle thylakoid membrane",
+          "cosine_similarity": 0.90309023
+        },
+        {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
           "cosine_similarity": 0.89476421
@@ -4185,11 +4221,6 @@
           "identifier": "GO:0070113",
           "label": "organellar chromatophore inner membrane",
           "cosine_similarity": 0.89322179
-        },
-        {
-          "identifier": "GO:0070111",
-          "label": "organellar chromatophore",
-          "cosine_similarity": 0.89117739
         }
       ]
     },
@@ -4394,6 +4425,11 @@
           "cosine_similarity": 0.86968897
         },
         {
+          "identifier": "GO:0033115",
+          "label": "cyanelle thylakoid membrane",
+          "cosine_similarity": 0.81955448
+        },
+        {
           "identifier": "GO:0070118",
           "label": "organellar chromatophore thylakoid membrane",
           "cosine_similarity": 0.81265541
@@ -4402,11 +4438,6 @@
           "identifier": "GO:0009843",
           "label": "cyanelle thylakoid",
           "cosine_similarity": 0.79120079
-        },
-        {
-          "identifier": "GO:0070116",
-          "label": "organellar chromatophore thylakoid",
-          "cosine_similarity": 0.77621177
         }
       ]
     },
