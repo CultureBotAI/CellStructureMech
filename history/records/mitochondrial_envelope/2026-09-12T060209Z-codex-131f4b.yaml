@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_envelope.yaml
+  slug: mitochondrial_envelope
+session:
+  id: 2026-09-12T060209Z-codex-131f4b
+  timestamp: '2026-09-12T06:02:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/594
+  - https://github.com/CultureBotAI/CellStructureMech/issues/595
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/593
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the mitochondrial envelope record
+  details: Added data/structures/membrane_organelle/mitochondrial_envelope.yaml for GO:0005740
+    mitochondrial envelope, including organelle-envelope parentage, mitochondrion parthood,
+    GO-grounded inner membrane, outer membrane, intermembrane-space, and TOM parts, Eukaryota
+    and Saccharomyces cerevisiae scope, protein-import and oxidative-phosphorylation functions,
+    DOI-backed evidence, a nonmechanistic mitochondrial-envelope import graph, generated pages,
+    refreshed embeddings, and review fixes for unsupported membrane essentiality plus the
+    missing envelope-to-mitochondrion topology edge.
