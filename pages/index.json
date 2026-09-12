@@ -1035,6 +1035,15 @@
   "definition": "A cell part that is composed of the eisosome membrane or MCC domain, a furrow-like plasma membrane sub-domain and associated integral transmembrane proteins, and the proteins (eisosome filaments) that form a scaffolding lattice on the cytoplasmic face. Eisosomes broadly affect overall plasma membrane organization."
  },
  {
+  "identifier": "GO:0000145",
+  "label": "exocyst",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/exocyst.html",
+  "definition": "A vesicle tethering complex peripherally associated with the plasma membrane that determines where vesicles dock and fuse. At least eight complex components are conserved between yeast and mammals."
+ },
+ {
   "identifier": "cellstructuremech:holdfast",
   "label": "holdfast",
   "category": "OTHER",
