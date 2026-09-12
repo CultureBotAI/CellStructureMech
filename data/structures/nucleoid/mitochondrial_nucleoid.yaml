@@ -1,0 +1,181 @@
+identifier: GO:0042645
+label: mitochondrial nucleoid
+structure_category: NUCLEOID
+structure_kind: SUBCELLULAR_REGION
+definition: The region of a mitochondrion to which the DNA is confined.
+definition_source: GO:0042645
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T11:41:09Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T11:42:03Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nucleoid parentage, mitochondrial-matrix parthood, the UniProt SL-0269
+    synonym and xref, reviewed-label-only mitochondrial DNA and HMG-box protein components,
+    Saccharomyces cerevisiae scope, mitochondrial genome maintenance, a nonmechanistic
+    Abf2 packaging graph, and a component-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T11:44:50Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Removed obsolete GO:0000002 groundings from the mitochondrial genome maintenance
+    function and graph node after identifier-label validation flagged the term as
+    obsolete.
+  llm_assisted: true
+parent_structures:
+- GO:0009295
+part_of:
+- GO:0005759
+synonyms:
+- synonym_text: mitochromosome
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0269
+xrefs:
+- uniprot.location:SL-0269
+components:
+- component_id: mitochondrial_dna
+  label: mitochondrial DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Mitochondrial genome DNA packaged with DNA-binding proteins into nucleoprotein
+    foci inside the mitochondrial matrix.
+  evidence:
+  - reference: DOI:10.1242/jcs.028605
+    notes: Kucej et al. 2008 assayed Saccharomyces cerevisiae mitochondrial DNA organization
+      in nucleoids under different metabolic states.
+  - reference: DOI:10.1016/j.tcb.2007.08.007
+    notes: Kucej and Butow 2007 review mitochondrial nucleoids as nucleoprotein structures
+      that package and maintain mitochondrial DNA.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Mitochondrial DNA is an organellar genome molecule; no exact source-neutral
+    Sequence Ontology CURIE was curated for this DNA component.
+- component_id: mitochondrial_hmg_box_proteins
+  label: mitochondrial HMG-box DNA-binding proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: High-mobility-group DNA-binding proteins represented by Saccharomyces cerevisiae
+    Abf2 that bind and package mtDNA within mitochondrial nucleoids.
+  evidence:
+  - reference: DOI:10.1242/jcs.028605
+    notes: Kucej et al. 2008 used ChIP-on-chip to show that Saccharomyces cerevisiae
+      Abf2 binds most of the mitochondrial genome in vivo.
+  - reference: DOI:10.1534/genetics.108.095786
+    notes: Sia et al. 2009 studied loss of the abundant Saccharomyces cerevisiae mitochondrial
+      nucleoid-associated protein Abf2p.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Saccharomyces cerevisiae Abf2 directly supports this component
+    class, but no exact InterPro, Pfam, NCBIfam, or UniProt family CURIE was curated
+    for a source-neutral mitochondrial HMG-box nucleoid protein component.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Mitochondrial nucleoids and their Abf2-containing mtDNA packaging machinery
+    have been characterized in budding yeast.
+  reference: DOI:10.1242/jcs.028605
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which Abf2 binds and packages mtDNA in mitochondrial nucleoids
+    and nucleoid organization changes with metabolic state.
+  reference: DOI:10.1242/jcs.028605
+functions:
+- function_id: mitochondrial_genome_maintenance
+  label: mitochondrial genome maintenance
+  description: The mitochondrial nucleoid packages mitochondrial DNA into matrix-localized
+    nucleoprotein foci that support mtDNA organization and stability.
+  evidence:
+  - reference: DOI:10.1242/jcs.028605
+    notes: Kucej et al. 2008 connected Abf2-mediated mtDNA packaging and metabolic
+      remodeling with yeast mitochondrial nucleoid organization.
+  - reference: DOI:10.1534/genetics.108.095786
+    notes: Sia et al. 2009 showed that loss of yeast Abf2p destabilizes repetitive
+      mitochondrial DNA.
+evidence:
+- reference: GO:0042645
+  notes: Gene Ontology cellular-component term for mitochondrial nucleoid.
+- reference: uniprot.location:SL-0269
+  notes: UniProt subcellular-location entry for mitochondrion nucleoid maps to GO:0042645.
+- reference: DOI:10.1016/j.tcb.2007.08.007
+  notes: Kucej and Butow 2007, Evolutionary tinkering with mitochondrial nucleoids,
+    Trends in Cell Biology.
+- reference: DOI:10.1242/jcs.028605
+  notes: Kucej et al. 2008, Mitochondrial nucleoids undergo remodeling in response
+    to metabolic cues, Journal of Cell Science.
+- reference: DOI:10.1534/genetics.108.095786
+  notes: Sia et al. 2009, Loss of the Mitochondrial Nucleoid Protein, Abf2p, Destabilizes
+    Repetitive DNA in the Yeast Mitochondrial Genome, Genetics.
+causal_graphs:
+- graph_id: abf2_mitochondrial_nucleoid_packaging
+  title: Abf2 helps package yeast mtDNA into mitochondrial nucleoids
+  description: In Saccharomyces cerevisiae, the mitochondrial HMG-box protein Abf2
+    binds broadly across mtDNA and supports its packaging and stability in matrix-localized
+    mitochondrial nucleoids.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: mitochondrial_hmg_box_proteins
+    label: mitochondrial HMG-box DNA-binding proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: mitochondrial_hmg_box_proteins
+  - node_id: mitochondrial_dna
+    label: mitochondrial DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: mitochondrial_dna
+  - node_id: mitochondrial_nucleoid
+    label: mitochondrial nucleoid
+    node_type: STRUCTURE
+    grounding: GO:0042645
+  - node_id: mitochondrial_genome_maintenance
+    label: mitochondrial genome maintenance
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: mitochondrial_hmg_box_proteins
+    predicate: bind
+    object: mitochondrial_dna
+    description: Yeast Abf2 binds most of the mitochondrial genome in vivo.
+    evidence:
+    - reference: DOI:10.1242/jcs.028605
+      notes: Kucej et al. 2008 mapped Abf2 binding across Saccharomyces cerevisiae
+        mtDNA by in organello ChIP-on-chip.
+  - subject: mitochondrial_dna
+    predicate: packages into
+    object: mitochondrial_nucleoid
+    description: Mitochondrial DNA and nucleoid-associated proteins form matrix-localized
+      nucleoprotein foci.
+    evidence:
+    - reference: DOI:10.1016/j.tcb.2007.08.007
+      notes: Kucej and Butow 2007 review the architecture of protein-bound mitochondrial
+        nucleoids.
+  - subject: mitochondrial_hmg_box_proteins
+    predicate: supports
+    object: mitochondrial_genome_maintenance
+    description: Loss of yeast Abf2p destabilizes repetitive mtDNA, linking this nucleoid-associated
+      protein to mitochondrial genome stability.
+    evidence:
+    - reference: DOI:10.1534/genetics.108.095786
+      notes: Sia et al. 2009 measured increased mitochondrial frameshifts and direct-repeat
+        deletions after loss of Abf2p.
+discussions:
+- discussion_id: ground_mitochondrial_nucleoid_components
+  prompt: Resolve exact source-neutral groundings for mitochondrial DNA and mitochondrial
+    nucleoid-associated protein classes before adding additional mtDNA packaging factors.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mitochondrial_dna
+  - components#mitochondrial_hmg_box_proteins
+  rationale: This first mitochondrial nucleoid record keeps mtDNA and the Abf2-represented
+    HMG-box protein component reviewed-label-only to avoid guessing Sequence Ontology
+    or protein-family CURIEs.
+  evidence:
+  - reference: DOI:10.1242/jcs.028605
+  - reference: DOI:10.1534/genetics.108.095786
+  posed_by: codex
+  posed_date: '2026-09-12'
