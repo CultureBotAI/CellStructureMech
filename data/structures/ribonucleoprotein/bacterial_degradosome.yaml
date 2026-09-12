@@ -1,0 +1,263 @@
+identifier: GO:1990061
+label: bacterial degradosome
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The degradosome is a protein complex playing a key role in mRNA degradation
+  and RNA processing. It includes a RNA helicase, a 3'-5' phosphate-dependent PNPase
+  and a RNase E bound-enolase.
+definition_source: GO:1990061
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T00:48:27Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T00:49:18Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added RNA degradosome synonymy, label-only RNase E, PNPase, RhlB and enolase
+    constituents, Pseudomonadota distribution, an Escherichia coli canonical example,
+    an mRNA catabolic function, GO/DOI evidence, an RNase E-centered assembly graph
+    and a component-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T00:49:47Z'
+  curator: codex
+  action: TIGHTENED_SYNONYM
+  changes: Changed the unqualified RNA degradosome synonym from exact to related because
+    GO:1990061 denotes the bacterial degradosome specifically.
+  llm_assisted: true
+synonyms:
+- synonym_text: RNA degradosome
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev.micro.61.080706.093440
+- synonym_text: Escherichia coli RNA degradosome
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1146/annurev.micro.61.080706.093440
+components:
+- component_id: rnase_e_scaffold
+  label: RNase E scaffold endoribonuclease
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - rne
+  - ams
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: RNase E is the catalytic and scaffolding component of the Escherichia
+    coli RNA degradosome; no exact source-neutral InterPro or Pfam family for this
+    degradosome-specific RNase E role was curated.
+  role: Large endoribonuclease scaffold whose C-terminal half carries binding sites
+    for the other principal E. coli RNA degradosome components.
+  evidence:
+  - reference: DOI:10.1101/gad.12.17.2770
+    notes: Vanzo et al. 1998 mapped binding sites for RhlB, enolase and polynucleotide
+      phosphorylase to the carboxy-terminal half of E. coli RNase E.
+  - reference: DOI:10.1146/annurev.micro.61.080706.093440
+    notes: Carpousis 2007 reviewed RNase E as the multidomain scaffold of the E. coli
+      RNA degradosome.
+- component_id: polynucleotide_phosphorylase
+  label: polynucleotide phosphorylase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - pnp
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PNPase is included as the E. coli RNA degradosome 3-to-5 phosphate-dependent
+    exoribonuclease; no exact source-neutral family CURIE for the degradosome-bound
+    component was curated.
+  role: 3-to-5 phosphorolytic exoribonuclease that associates with RNase E in the
+    degradosome.
+  evidence:
+  - reference: DOI:10.1016/0092-8674(94)90363-8
+    notes: Carpousis et al. 1994 copurified E. coli RNase E with PNPase, providing
+      evidence for a specific association between the enzymes.
+  - reference: DOI:10.1101/gad.12.17.2770
+    notes: Vanzo et al. 1998 identified a PNPase interaction site in the RNase E scaffold
+      region.
+- component_id: rhlb_dead_box_helicase
+  label: RhlB DEAD-box RNA helicase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - rhlB
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: RhlB is modeled as the DEAD-box helicase of the E. coli RNA degradosome;
+    no exact source-neutral family CURIE for this degradosome constituent was curated.
+  role: DEAD-box RNA helicase recruited to the RNase E scaffold and coupled to degradosome-mediated
+    RNA decay.
+  evidence:
+  - reference: DOI:10.1038/381169a0
+    notes: Py et al. 1996 identified a DEAD-box RNA helicase in the E. coli RNA degradosome.
+  - reference: DOI:10.1101/gad.12.17.2770
+    notes: Vanzo et al. 1998 localized the RhlB binding site to the RNase E scaffold
+      region.
+- component_id: enolase_degradosome_component
+  label: enolase degradosome component
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - eno
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Enolase is included for its E. coli degradosome association; a
+    glycolytic-enzyme family term alone would be broader than the degradosome-bound
+    component role.
+  role: Glycolytic enzyme recruited as a principal E. coli RNA degradosome constituent.
+  evidence:
+  - reference: DOI:10.1101/gad.12.17.2770
+    notes: Vanzo et al. 1998 identified an enolase interaction site in the RNase E
+      scaffold region.
+  - reference: DOI:10.1016/j.jmb.2006.02.012
+    notes: Chandran and Luisi 2006 analyzed recognition of enolase in the E. coli
+      RNA degradosome.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1224
+  taxon_label: Pseudomonadota
+  presence: VARIABLE
+  note: RNase E-based degradosome-like complexes are described across Proteobacteria,
+    with composition varying among lineages.
+  reference: DOI:10.1146/annurev.micro.61.080706.093440
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Model bacterium in which the RNase E, PNPase, RhlB and enolase RNA degradosome
+    was discovered and mapped.
+  reference: DOI:10.1101/gad.12.17.2770
+functions:
+- function_id: mrna_catabolic_process
+  label: mRNA catabolic process
+  grounding: GO:0006402
+  description: The E. coli bacterial degradosome couples RNase E cleavage, PNPase
+    exoribonuclease activity and RhlB helicase activity in mRNA decay.
+  evidence:
+  - reference: GO:0006402
+    notes: GO:0006402 is the Gene Ontology biological-process term for mRNA catabolism.
+  - reference: DOI:10.1146/annurev.micro.61.080706.093440
+    notes: Carpousis 2007 reviewed the E. coli RNA degradosome as an mRNA-degrading
+      machine assembled on RNase E.
+evidence:
+- reference: GO:1990061
+  notes: Gene Ontology cellular-component term for the bacterial degradosome.
+- reference: GO:0006402
+  notes: Gene Ontology biological-process term for mRNA catabolic process.
+- reference: DOI:10.1016/0092-8674(94)90363-8
+  notes: 'Carpousis et al. 1994, Copurification of E. coli RNAase E and PNPase: Evidence
+    for a specific association between two enzymes important in RNA processing and
+    degradation, Cell.'
+- reference: DOI:10.1038/381169a0
+  notes: Py et al. 1996, A DEAD-box RNA helicase in the Escherichia coli RNA degradosome,
+    Nature.
+- reference: DOI:10.1101/gad.12.17.2770
+  notes: Vanzo et al. 1998, Ribonuclease E organizes the protein interactions in the
+    Escherichia coli RNA degradosome, Genes and Development.
+- reference: DOI:10.1016/j.jmb.2006.02.012
+  notes: Chandran and Luisi 2006, Recognition of Enolase in the Escherichia coli RNA
+    Degradosome, Journal of Molecular Biology.
+- reference: DOI:10.1146/annurev.micro.61.080706.093440
+  notes: 'Carpousis 2007, The RNA Degradosome of Escherichia coli: An mRNA-Degrading
+    Machine Assembled on RNase E, Annual Review of Microbiology.'
+causal_graphs:
+- graph_id: ecoli_rnase_e_degradosome_scaffold
+  title: RNase E scaffolds the E. coli RNA degradosome
+  description: In Escherichia coli, RNase E provides a scaffold that recruits PNPase,
+    the RhlB DEAD-box helicase and enolase into a degradosome machine for bacterial
+    mRNA decay.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the major E. coli degradosome components and RNase
+    E scaffolding role without asserting a complete stoichiometry, RNA-substrate path
+    or the alternative degradosome assemblies reported in other bacteria.
+  nodes:
+  - node_id: rnase_e_scaffold
+    label: RNase E scaffold endoribonuclease
+    node_type: GENE_OR_PROTEIN
+    component_ref: rnase_e_scaffold
+  - node_id: polynucleotide_phosphorylase
+    label: polynucleotide phosphorylase
+    node_type: GENE_OR_PROTEIN
+    component_ref: polynucleotide_phosphorylase
+  - node_id: rhlb_dead_box_helicase
+    label: RhlB DEAD-box RNA helicase
+    node_type: GENE_OR_PROTEIN
+    component_ref: rhlb_dead_box_helicase
+  - node_id: enolase_degradosome_component
+    label: enolase degradosome component
+    node_type: GENE_OR_PROTEIN
+    component_ref: enolase_degradosome_component
+  - node_id: bacterial_degradosome
+    label: bacterial degradosome
+    node_type: STRUCTURE
+    grounding: GO:1990061
+  - node_id: mrna_catabolic_process
+    label: mRNA catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006402
+  edges:
+  - subject: rnase_e_scaffold
+    predicate: recruits
+    object: polynucleotide_phosphorylase
+    description: The C-terminal scaffold region of E. coli RNase E contains a PNPase
+      binding site.
+    evidence:
+    - reference: DOI:10.1101/gad.12.17.2770
+      notes: Vanzo et al. 1998 identified the C-terminal half of RNase E as the region
+        carrying PNPase, RhlB and enolase binding sites.
+  - subject: rnase_e_scaffold
+    predicate: recruits
+    object: rhlb_dead_box_helicase
+    description: The RNase E scaffold region binds the RhlB DEAD-box RNA helicase.
+    evidence:
+    - reference: DOI:10.1038/381169a0
+      notes: Py et al. 1996 identified RhlB as a DEAD-box RNA helicase within the
+        E. coli RNA degradosome.
+    - reference: DOI:10.1101/gad.12.17.2770
+      notes: Vanzo et al. 1998 mapped the RhlB binding site to the RNase E scaffold.
+  - subject: rnase_e_scaffold
+    predicate: recruits
+    object: enolase_degradosome_component
+    description: The RNase E scaffold region binds enolase.
+    evidence:
+    - reference: DOI:10.1016/j.jmb.2006.02.012
+      notes: Chandran and Luisi 2006 analyzed recognition of enolase in the E. coli
+        RNA degradosome.
+    - reference: DOI:10.1101/gad.12.17.2770
+      notes: Vanzo et al. 1998 mapped the enolase binding site to the RNase E scaffold.
+  - subject: rnase_e_scaffold
+    predicate: scaffolds
+    object: bacterial_degradosome
+    description: RNase E organizes the principal protein interactions of the E. coli
+      bacterial degradosome.
+    evidence:
+    - reference: DOI:10.1101/gad.12.17.2770
+      notes: Vanzo et al. 1998 established RNase E as the interaction scaffold for
+        the E. coli RNA degradosome.
+  - subject: bacterial_degradosome
+    predicate: supports
+    object: mrna_catabolic_process
+    description: The E. coli RNase E-based degradosome acts as an mRNA-degrading machine.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093440
+      notes: Carpousis 2007 reviewed the E. coli RNA degradosome as an RNase E-assembled
+        complex involved in mRNA degradation.
+discussions:
+- discussion_id: resolve_bacterial_degradosome_component_groundings
+  prompt: Resolve exact source-neutral InterPro or Pfam groundings and component boundaries
+    for the E. coli RNase E, PNPase, RhlB and enolase degradosome components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rnase_e_scaffold
+  - components#polynucleotide_phosphorylase
+  - components#rhlb_dead_box_helicase
+  - components#enolase_degradosome_component
+  rationale: This first bacterial degradosome record models the four principal E.
+    coli components as reviewed, label-only constituents. Exact family accessions,
+    paralog boundaries and degradosome-like substitutions in other proteobacterial
+    lineages need a focused grounding pass.
+  evidence:
+  - reference: DOI:10.1146/annurev.micro.61.080706.093440
+  posed_by: codex
+  posed_date: '2026-09-11'
