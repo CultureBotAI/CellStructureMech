@@ -20,6 +20,13 @@ curation_history:
     core literature evidence, a nonmechanistic HLP organization graph, and a component-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T11:24:56Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #637 by removing the unqualified HLP gene symbol from the source-neutral
+    HU-like protein component, and resolved #638 by repointing the Karcher HLP perturbation
+    edge from the generic chloroplast nucleoid node to the HLP component.'
+  llm_assisted: true
 parent_structures:
 - GO:0042646
 part_of:
@@ -43,23 +50,22 @@ components:
   grounding_notes: Chloroplast DNA is an organellar genome molecule rather than a
     sequence-feature class with one exact source-neutral SO accession. No exact CURIE
     for the chloroplast genome DNA component was curated.
-- component_id: hlp_histone_like_protein
-  label: chloroplast HLP histone-like protein
+- component_id: chloroplast_nucleoid_hu_like_proteins
+  label: chloroplast nucleoid HU-like proteins
   component_type: PROTEIN
   component_role: CONSTITUENT
-  gene_symbols:
-  - HLP
   essentiality: UNKNOWN
-  role: A chloroplast-targeted HU-like DNA-binding protein that associates with Chlamydomonas
-    chloroplast nucleoids and supports their organization.
+  role: HU-like DNA-binding proteins, represented by Chlamydomonas HLP, that associate
+    with chloroplast nucleoids and support their organization.
   evidence:
   - reference: DOI:10.1093/mp/ssp083
     notes: Karcher et al. 2009 showed that the Chlamydomonas HLP protein targets to
       chloroplasts, associates with nucleoids, and is required for nucleoid organization
       and genome maintenance.
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact InterPro, Pfam, NCBIfam or UniProt family CURIE for chloroplast
-    HLP proteins was curated in this first record.
+  grounding_notes: Chlamydomonas HLP directly supports this HU-like nucleoid protein
+    component, but no exact InterPro, Pfam, NCBIfam, or UniProt family CURIE was curated
+    for a source-neutral component.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
@@ -97,15 +103,15 @@ evidence:
 causal_graphs:
 - graph_id: hlp_chloroplast_nucleoid_organization
   title: HLP helps organize Chlamydomonas chloroplast DNA nucleoids
-  description: Chlamydomonas HLP is a chloroplast-targeted HU-like protein that associates
-    with chloroplast nucleoids and supports cpDNA packaging and genome maintenance.
+  description: HU-like DNA-binding proteins represented by Chlamydomonas HLP associate
+    with chloroplast nucleoids and support cpDNA packaging and genome maintenance.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   nodes:
-  - node_id: hlp_histone_like_protein
-    label: chloroplast HLP histone-like protein
+  - node_id: chloroplast_nucleoid_hu_like_proteins
+    label: chloroplast nucleoid HU-like proteins
     node_type: GENE_OR_PROTEIN
-    component_ref: hlp_histone_like_protein
+    component_ref: chloroplast_nucleoid_hu_like_proteins
   - node_id: chloroplast_dna
     label: chloroplast DNA
     node_type: GENETIC_ELEMENT
@@ -118,7 +124,7 @@ causal_graphs:
     label: chloroplast genome organization
     node_type: BIOLOGICAL_PROCESS
   edges:
-  - subject: hlp_histone_like_protein
+  - subject: chloroplast_nucleoid_hu_like_proteins
     predicate: associates with
     object: chloroplast_nucleoid
     description: HLP targets to chloroplasts and associates with Chlamydomonas chloroplast
@@ -135,11 +141,12 @@ causal_graphs:
     - reference: DOI:10.1093/gbe/evv233
       notes: Kobayashi et al. 2015 describe chloroplast DNA compaction into nucleoprotein
         complexes called chloroplast nucleoids.
-  - subject: chloroplast_nucleoid
-    predicate: organizes
+  - subject: chloroplast_nucleoid_hu_like_proteins
+    predicate: supports
     object: chloroplast_genome_organization
-    description: The nucleoid packages the chloroplast genome in the stroma, and HLP
-      depletion disrupts nucleoid organization.
+    description: RNAi knockdown of Chlamydomonas HLP disrupts chloroplast nucleoid
+      organization and reduces chloroplast DNA, connecting this HU-like nucleoid protein
+      to chloroplast genome packaging and maintenance.
     evidence:
     - reference: DOI:10.1093/mp/ssp083
       notes: Karcher et al. 2009 connected RNAi knockdown of HLP with defective Chlamydomonas
@@ -152,10 +159,11 @@ discussions:
   status: OPEN
   attaches_to:
   - components#chloroplast_dna
-  - components#hlp_histone_like_protein
+  - components#chloroplast_nucleoid_hu_like_proteins
   rationale: The chloroplast nucleoid is a DNA-protein structure with multiple nucleoid-associated
-    proteins, but this first record only curates the directly supported Chlamydomonas
-    HLP component and avoids guessing Sequence Ontology or protein-family CURIEs.
+    proteins, but this first record only curates a reviewed-label-only HU-like component
+    represented by Chlamydomonas HLP and avoids guessing Sequence Ontology or protein-family
+    CURIEs.
   evidence:
   - reference: DOI:10.1093/mp/ssp083
   - reference: DOI:10.1093/gbe/evv233
