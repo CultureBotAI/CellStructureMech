@@ -549,6 +549,15 @@
   "definition": "A mycolic-acid-rich cell outer membrane in mycobacteria and related Corynebacteriales, containing a lipid bilayer and covalently linked long-chain mycolic acids attached to peptidoglycan through an arabinogalactan network."
  },
  {
+  "identifier": "GO:0030288",
+  "label": "outer membrane-bounded periplasmic space",
+  "category": "ENVELOPE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/envelope/outer_membrane_bounded_periplasmic_space.html",
+  "definition": "The region between the inner (cytoplasmic or plasma) membrane and outer membrane of organisms with two membranes such as Gram negative bacteria. These periplasmic spaces are relatively thick and contain a thin peptidoglycan layer (PGL), also referred to as a thin cell wall."
+ },
+ {
   "identifier": "GO:0009274",
   "label": "peptidoglycan-based cell wall",
   "category": "ENVELOPE",

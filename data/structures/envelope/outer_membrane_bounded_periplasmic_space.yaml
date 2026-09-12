@@ -1,0 +1,230 @@
+identifier: GO:0030288
+label: outer membrane-bounded periplasmic space
+structure_category: ENVELOPE
+structure_kind: SUBCELLULAR_REGION
+definition: The region between the inner (cytoplasmic or plasma) membrane and outer
+  membrane of organisms with two membranes such as Gram negative bacteria. These periplasmic
+  spaces are relatively thick and contain a thin peptidoglycan layer (PGL), also referred
+  to as a thin cell wall.
+definition_source: GO:0030288
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T04:02:43Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T04:03:27Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact synonyms, periplasmic-space parentage, the contained Gram-negative
+    cell-wall part, inner/peptidoglycan/outer envelope components, bacterial distribution,
+    an E. coli canonical example, diderm compartment and outer-membrane biogenesis
+    functions, literature evidence, a nonmechanistic Lpt topology graph, and a resolved
+    periplasm-versus-wall boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-09-12T04:11:50Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #576 review issues #577 and #578 by removing periplasm boundary
+    membranes from components and adding an LPS-to-outer-membrane topology edge.'
+  llm_assisted: true
+synonyms:
+- synonym_text: outer membrane bounded periplasmic space
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030288
+- synonym_text: outer membrane-enclosed periplasmic space
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030288
+parent_structures:
+- GO:0042597
+has_part:
+- GO:0009276
+components:
+- component_id: gram_negative_peptidoglycan
+  label: Gram-negative-bacterium-type cell wall
+  component_type: PEPTIDOGLYCAN
+  component_role: CONSTITUENT
+  grounding: GO:0009276
+  essentiality: UNKNOWN
+  role: Thin peptidoglycan sacculus that lies within the periplasm and is tethered
+    to the outer membrane by lipoprotein links in canonical Gram-negative envelopes.
+  evidence:
+  - reference: GO:0030288
+    notes: GO:0030288 notes that the outer membrane-bounded periplasmic space contains
+      a thin peptidoglycan layer.
+  - reference: DOI:10.1101/cshperspect.a000414
+    notes: Silhavy, Kahne and Walker 2010 describe the Gram-negative envelope as an
+      outer membrane surrounding a thin peptidoglycan wall in the periplasm.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: The outer membrane-bounded periplasm occurs in diderm bacteria; monoderm bacteria
+    lack an outer membrane and therefore lack this specific periplasmic space.
+  reference: DOI:10.1101/cshperspect.a000414
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Canonical Gram-negative model for the outer membrane-bounded periplasm and
+    for Lpt-dependent transport through the periplasm.
+  reference: DOI:10.1101/cshperspect.a000414
+functions:
+- function_id: diderm_envelope_compartmentalization
+  label: diderm envelope compartmentalization
+  description: The outer membrane-bounded periplasm separates the cytoplasmic and
+    outer membranes while housing the thin peptidoglycan layer.
+  evidence:
+  - reference: GO:0030288
+    notes: GO:0030288 defines the diderm periplasm by its position between the inner
+      and outer membranes.
+- function_id: outer_membrane_biogenesis
+  label: outer membrane biogenesis
+  description: Envelope assembly pathways use periplasm-spanning transport and periplasmic
+    intermediates to deliver lipopolysaccharide and proteins to the outer membrane.
+  evidence:
+  - reference: DOI:10.1101/cshperspect.a000414
+    notes: Silhavy, Kahne and Walker 2010 review Gram-negative outer-membrane biogenesis
+      as an envelope-spanning process.
+  - reference: DOI:10.1074/jbc.R117.802512
+    notes: Sperandeo, Martorana and Polissi 2017 review LPS transport from the inner
+      membrane across the periplasm to the outer membrane.
+evidence:
+- reference: GO:0030288
+  notes: Gene Ontology cellular-component term for the outer membrane-bounded periplasmic
+    space.
+- reference: GO:0042597
+  notes: Gene Ontology cellular-component term for periplasmic space.
+- reference: GO:0005886
+  notes: Gene Ontology cellular-component term for plasma membrane.
+- reference: GO:0009276
+  notes: Gene Ontology cellular-component term for the Gram-negative-bacterium-type
+    cell wall.
+- reference: GO:0009279
+  notes: Gene Ontology cellular-component term for cell outer membrane.
+- reference: DOI:10.1101/cshperspect.a000414
+  notes: Silhavy, Kahne and Walker 2010, The Bacterial Cell Envelope, Cold Spring
+    Harbor Perspectives in Biology.
+- reference: DOI:10.1074/jbc.R117.802512
+  notes: Sperandeo, Martorana and Polissi 2017, The lipopolysaccharide transport (Lpt)
+    machinery, Journal of Biological Chemistry.
+causal_graphs:
+- graph_id: diderm_periplasm_topology
+  title: Inner and outer membranes bound the Gram-negative periplasm
+  description: The plasma membrane and cell outer membrane delimit the diderm periplasmic
+    region, which contains the thin Gram-negative peptidoglycan wall and is crossed
+    by LPS transport machinery during outer-membrane assembly.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures envelope topology and LPS transit across the periplasm
+    without enumerating every soluble periplasmic chaperone or lipoprotein-trafficking
+    factor.
+  nodes:
+  - node_id: inner_membrane
+    label: plasma membrane
+    node_type: STRUCTURE
+    grounding: GO:0005886
+  - node_id: periplasm
+    label: outer membrane-bounded periplasmic space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0030288
+  - node_id: peptidoglycan
+    label: Gram-negative-bacterium-type cell wall
+    node_type: STRUCTURE
+    grounding: GO:0009276
+    component_ref: gram_negative_peptidoglycan
+  - node_id: outer_membrane
+    label: cell outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009279
+  - node_id: lps
+    label: lipopolysaccharide
+    node_type: CHEMICAL
+    grounding: CHEBI:16412
+  - node_id: lpt_machine
+    label: Lpt lipopolysaccharide transport machinery
+    node_type: GENE_OR_PROTEIN
+  edges:
+  - subject: inner_membrane
+    predicate: bounds the inner side of
+    object: periplasm
+    description: The cytoplasmic membrane defines the inner boundary of the outer
+      membrane-bounded periplasmic space.
+    evidence:
+    - reference: GO:0030288
+      notes: GO:0030288 defines this periplasmic space as the region between the inner
+        and outer membranes.
+  - subject: outer_membrane
+    predicate: bounds the outer side of
+    object: periplasm
+    description: The outer membrane defines the cell-surface side of the diderm periplasmic
+      region.
+    evidence:
+    - reference: GO:0030288
+      notes: GO:0030288 defines this periplasmic space as the region enclosed by the
+        inner and outer membranes.
+  - subject: peptidoglycan
+    predicate: resides in
+    object: periplasm
+    description: The relatively thin Gram-negative peptidoglycan layer is located
+      within the periplasm.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a000414
+      notes: Silhavy, Kahne and Walker 2010 describe the Gram-negative envelope as
+        a thin peptidoglycan wall surrounded by an outer membrane.
+  - subject: lpt_machine
+    predicate: moves across
+    object: periplasm
+    description: The Lpt transport machine ferries LPS from the inner membrane across
+      the periplasmic region to the outer membrane.
+    evidence:
+    - reference: DOI:10.1074/jbc.R117.802512
+      notes: Sperandeo, Martorana and Polissi 2017 review LPS transport across the
+        Gram-negative envelope and through the periplasm.
+  - subject: lpt_machine
+    predicate: delivers
+    object: lps
+    description: The Lpt machinery delivers LPS to the outer membrane after extracting
+      it from the inner membrane.
+    evidence:
+    - reference: DOI:10.1074/jbc.R117.802512
+      notes: Sperandeo, Martorana and Polissi 2017 review the Lpt pathway as the Gram-negative
+        LPS transport system.
+  - subject: lps
+    predicate: is inserted into
+    object: outer_membrane
+    description: After Lpt-mediated transport across the periplasm, LPS is inserted
+      into the cell outer membrane.
+    evidence:
+    - reference: DOI:10.1074/jbc.R117.802512
+      notes: Sperandeo, Martorana and Polissi 2017 review LPS delivery to the outer
+        membrane by the Lpt pathway.
+discussions:
+- discussion_id: periplasmic_space_not_cell_wall
+  prompt: Keep the outer membrane-bounded periplasmic space separate from the Gram-negative-bacterium-type
+    cell wall record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0030288 denotes the entire region between the inner and outer membranes,
+    whereas GO:0009276 denotes the thin peptidoglycan wall located inside that region.
+  resolution_note: Curated the periplasm as a SUBCELLULAR_REGION and included the
+    Gram-negative wall as a contained structural component rather than merging the
+    two records.
+  evidence:
+  - reference: GO:0030288
+    notes: GO:0030288 denotes the outer membrane-bounded periplasm.
+  - reference: GO:0009276
+    notes: GO:0009276 denotes the Gram-negative-bacterium-type cell wall.
+- discussion_id: boundary_membranes_are_not_components
+  prompt: Keep the inner and outer membranes as boundaries of the outer membrane-bounded
+    periplasmic space rather than as periplasm components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0030288 denotes the region between the inner and outer membranes,
+    so those membranes bound the region but are not contained by it.
+  resolution_note: Represented the plasma membrane and cell outer membrane as GO-grounded
+    topology graph nodes without component_ref values.
+  evidence:
+  - reference: GO:0030288
+    notes: GO:0030288 defines the outer membrane-bounded periplasmic space as the
+      region between inner and outer membranes.
