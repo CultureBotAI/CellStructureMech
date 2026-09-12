@@ -21,6 +21,12 @@ curation_history:
     a nonmechanistic envelope topology graph, and a peptidoglycan-layer grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T21:31:34Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #708 by adding UniProt SL-0480 record-level evidence and citing
+    it on the inner-membrane boundary edge in the intermembrane-space topology graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cyanelle envelope lumen
   synonym_type: EXACT_SYNONYM
@@ -84,6 +90,10 @@ evidence:
   notes: Gene Ontology cellular-component term for cyanelle envelope.
 - reference: GO:0036012
   notes: Gene Ontology cellular-component term for cyanelle inner membrane.
+- reference: uniprot.location:SL-0480
+  notes: UniProt Subcellular Location entry SL-0480 maps Cyanelle inner membrane to
+    GO:0036012 and describes it as the cyanelle membrane separating the cyanelle stroma
+    from the intermembrane space.
 - reference: GO:0036013
   notes: Gene Ontology cellular-component term for cyanelle outer membrane.
 - reference: uniprot.location:SL-0481
@@ -152,6 +162,9 @@ causal_graphs:
     - reference: GO:0036012
       notes: GO:0036012 defines the cyanelle inner membrane as the envelope bilayer
         that also faces the cyanelle stroma.
+    - reference: uniprot.location:SL-0480
+      notes: UniProt SL-0480 describes the cyanelle inner membrane as separating the
+        cyanelle stroma from the intermembrane space.
   - subject: cyanelle_peptidoglycan_layer
     predicate: resides in
     object: cyanelle_intermembrane_space
