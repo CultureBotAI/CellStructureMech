@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cyanelle_envelope.yaml
+  slug: cyanelle_envelope
+session:
+  id: 2026-09-12T201217Z-codex-e6a9ec
+  timestamp: '2026-09-12T20:12:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/700
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/699
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-grounded cyanelle envelope record
+  details: 'Created GO:0033112 cyanelle envelope with GO and UniProt SL-0479 provenance, plastid-envelope
+    parentage, exact inner and outer cyanelle membrane parts, the GO-defined intermembrane-space
+    part, a reviewed-label-only peptidoglycan layer, Glaucocystophyceae taxonomic scope, and
+    a nonmechanistic envelope topology graph. Review issue #700 added GO:0034060 cyanelle
+    stroma to the graph so the inner-membrane boundary has the same stroma-side topology as
+    the parent cyanelle record.'
