@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/microsporidian_type_endospore.yaml
+  slug: microsporidian_type_endospore
+session:
+  id: 2026-09-12T100517Z-claude-code-51df9f
+  timestamp: '2026-09-12T10:05:17Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/625
+  - https://github.com/CultureBotAI/CellStructureMech/issues/626
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/624
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the microsporidian-type endospore record
+  details: 'Created GO:0090641 microsporidian-type endospore as a microsporidian spore-wall
+    layer with GO spore-wall parthood, chitin and reviewed-label-only SWP25/EnP1/EnP2 components,
+    Nosema bombycis and Encephalitozoon cuniculi examples, a spore-wall protection function,
+    DOI/GO evidence, a nonmechanistic mature-layer graph, and review fixes for PR #624 issues
+    #625 and #626.'
