@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/bacterial_degradosome.yaml
+  slug: bacterial_degradosome
+session:
+  id: 2026-09-12T010245Z-codex-4e84e0
+  timestamp: '2026-09-12T01:02:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/558
+  - https://github.com/CultureBotAI/CellStructureMech/issues/559
+  - https://github.com/CultureBotAI/CellStructureMech/issues/560
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/557
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added bacterial degradosome structure record
+  details: 'Created GO:1990061 bacterial degradosome with label-only RNase E, PNPase, RhlB,
+    and enolase constituents, Pseudomonadota distribution, an Escherichia coli canonical example,
+    GO/DOI evidence, a nonmechanistic RNase E scaffold graph, and generated embedding/page
+    artifacts. Adversarial review filed #558, #559, and #560; follow-up curation removed an
+    unsupported ams alias and narrowed the canonical-example and mRNA-catabolism descriptions.'
