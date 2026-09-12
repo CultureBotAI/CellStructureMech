@@ -19,6 +19,13 @@ curation_history:
     taxonomic scope, lateral attachment and morphogenesis functions, a FAZ filament
     assembly graph, core literature evidence, and a TODO for nonfilament FAZ domains.
   llm_assisted: true
+- timestamp: '2026-09-12T02:10:02Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #565 by narrowing the T. brucei canonical example to the FAZ2
+    claims covered by Zhou et al. 2015; resolved #566 by changing the FAZ filament
+    component type from PROTEIN_COMPLEX to OTHER.'
+  llm_assisted: true
 synonyms:
 - synonym_text: FAZ
   synonym_type: RELATED_SYNONYM
@@ -26,7 +33,7 @@ synonyms:
 components:
 - component_id: faz_filament
   label: FAZ filament
-  component_type: PROTEIN_COMPLEX
+  component_type: OTHER
   component_role: CONSTITUENT
   role: Cytoskeletal filament-domain core of the trypanosome FAZ that runs along the
     attached flagellum and contains FAZ1, FAZ2, CC2D and additional FAZ proteins.
@@ -109,9 +116,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei
-  note: Trypanosome model in which FAZ1, FAZ2 and CC2D were localized to the FAZ filament
-    and depleted to test their roles in FAZ filament integrity, flagellum attachment
-    and cell morphology.
+  note: Trypanosome model in which a localization-based screen identified FAZ2 on
+    the FAZ filament, and FAZ2 knockdown connected a FAZ filament constituent to filament
+    maintenance and cytokinesis.
   reference: DOI:10.1242/jcs.168377
 functions:
 - function_id: lateral_flagellum_attachment
