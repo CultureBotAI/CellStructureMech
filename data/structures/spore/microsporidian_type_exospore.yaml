@@ -21,6 +21,13 @@ curation_history:
     a nonmechanistic exospore-layering graph, and exosporium-boundary and protein-grounding
     discussions.
   llm_assisted: true
+- timestamp: '2026-09-12T10:21:06Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #627 review issues #628 and #629 by narrowing the Nosema canonical
+    example to the SWP32 paper it cites and adding direct NbSWP16 evidence to the
+    exospore graph localization edge.'
+  llm_assisted: true
 part_of:
 - GO:0031160
 synonyms:
@@ -90,8 +97,7 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:27978
   taxon_label: Nosema bombycis
-  note: Silkworm-infecting microsporidian in which SWP32 and NbSWP16 were localized
-    to the exospore.
+  note: Silkworm-infecting microsporidian in which SWP32 was localized to the exospore.
   reference: DOI:10.1002/pmic.200700584
 - taxon_id: NCBITaxon:6035
   taxon_label: Encephalitozoon cuniculi
@@ -165,6 +171,8 @@ causal_graphs:
         the Encephalitozoon cuniculi outer spore wall.
     - reference: DOI:10.1002/pmic.200700584
       notes: Wu et al. 2008 localized SWP32 to the Nosema bombycis exospore.
+    - reference: DOI:10.1017/S0031182014001565
+      notes: Wang et al. 2015 localized NbSWP16 to Nosema bombycis exospore regions.
   - subject: microsporidian_type_exospore
     predicate: lies above
     object: microsporidian_type_endospore
