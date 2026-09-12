@@ -19,6 +19,13 @@ curation_history:
     sorting functions, GO/DOI evidence, a yeast ESCRT MVB sorting graph and an ESCRT
     machinery boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T00:37:55Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #554 by narrowing the Vps27 graph node, resolved #556 by retargeting
+    endosomal invagination to an intraluminal-vesicle node, and resolved #555 by keeping
+    transient ESCRT sorting machinery out of future endosome component wording.'
+  llm_assisted: true
 has_part:
 - GO:0010008
 - GO:0031904
@@ -121,8 +128,11 @@ causal_graphs:
     label: endosome lumen
     node_type: CELLULAR_LOCALIZATION
     grounding: GO:0031904
-  - node_id: vps27_hse1
-    label: Vps27/Hse1 endosomal cargo-recognition complex
+  - node_id: intraluminal_vesicle
+    label: multivesicular-body intraluminal vesicle
+    node_type: STRUCTURE
+  - node_id: vps27_endosomal_recruiter
+    label: Vps27 endosomal ESCRT-I recruiter
     node_type: GENE_OR_PROTEIN
   - node_id: escrt_i
     label: ESCRT I complex
@@ -152,7 +162,7 @@ causal_graphs:
     - reference: GO:0031904
       notes: GO:0031904 defines the endosome lumen as the volume enclosed by the membrane
         of an endosome.
-  - subject: vps27_hse1
+  - subject: vps27_endosomal_recruiter
     predicate: recruits
     object: escrt_i
     description: Vps27 binds ESCRT-I on endosomal membranes during yeast MVB sorting.
@@ -188,27 +198,36 @@ causal_graphs:
       notes: Babst et al. 2002 characterized yeast ESCRT-III as an endosome-associated
         hetero-oligomeric protein complex required for MVB sorting.
   - subject: endosome_membrane
-    predicate: invaginates into
-    object: multivesicular_body
-    description: In a multivesicular body, endosomal limiting-membrane regions invaginate
-      to form intraluminal vesicles.
+    predicate: forms
+    object: intraluminal_vesicle
+    description: In a multivesicular body, regions of the endosomal limiting membrane
+      invaginate and pinch into the lumen as intraluminal vesicles.
     evidence:
     - reference: GO:0005771
       notes: GO:0005771 defines multivesicular bodies as endosomes with internal vesicles
         formed by invagination of the limiting endosomal membrane.
+  - subject: intraluminal_vesicle
+    predicate: is contained in
+    object: multivesicular_body
+    description: Multivesicular bodies contain intraluminal vesicles generated from
+      the limiting endosomal membrane.
+    evidence:
+    - reference: GO:0005771
+      notes: GO:0005771 defines multivesicular bodies as endosomes with internal vesicles
+        formed by limiting-membrane invagination.
 discussions:
 - discussion_id: resolve_endosome_escrt_boundaries
-  prompt: Resolve exact source-neutral groundings and component boundaries for yeast
-    Vps27/Hse1, ESCRT-I, ESCRT-II, ESCRT-III, Doa4 and Vps4 before promoting MVB sorting
-    machinery from graph nodes into endosome components.
+  prompt: Resolve exact source-neutral groundings and separate record boundaries for
+    Vps27 cargo-recognition machinery, ESCRT-I, ESCRT-II, ESCRT-III, Doa4 and Vps4
+    before adding a more detailed MVB-sorting machinery model.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - causal_graphs#yeast_escrt_mvb_sorting
   rationale: This first endosome record grounds the membrane boundary and uses GO-grounded
-    ESCRT complexes as graph nodes, but leaves transient cargo-recognition, deubiquitination
-    and recycling machinery out of the component table until exact constituent boundaries
-    are reviewed.
+    ESCRT complexes as graph nodes, but keeps transient cargo-recognition, deubiquitination
+    and recycling machinery out of the endosome component table until exact complex
+    boundaries or dedicated subcomplex records are reviewed.
   evidence:
   - reference: DOI:10.1016/j.devcel.2011.05.015
   - reference: DOI:10.1083/jcb.200302136
