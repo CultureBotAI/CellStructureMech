@@ -20,6 +20,13 @@ curation_history:
     endocytosis, DOI/GO evidence, a nonmechanistic endocytic assembly graph, and a
     triskelion/adaptor-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T08:08:00Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #612 review issues #613 and #614 by removing an unmodeled
+    Kukulski scission citation and narrowing the yeast assembly graph from the plasma
+    membrane to cortical endocytic sites.'
+  llm_assisted: true
 parent_structures:
 - GO:0030120
 part_of:
@@ -112,9 +119,6 @@ evidence:
 - reference: DOI:10.1016/j.cell.2005.09.024
   notes: Kaksonen, Toret and Drubin 2005, A Modular Design for the Clathrin- and Actin-Mediated
     Endocytosis Machinery, Cell.
-- reference: DOI:10.7554/eLife.16036
-  notes: Kukulski et al. 2016, Clathrin modulates vesicle scission, but not invagination
-    shape, in yeast endocytosis, eLife.
 causal_graphs:
 - graph_id: yeast_clathrin_endocytic_coat_assembly
   title: Clathrin assembles at yeast endocytic sites
@@ -127,10 +131,9 @@ causal_graphs:
     by this record without asserting a complete triskelion stoichiometry, a yeast
     adaptor module, or the actin-driven scission mechanism.
   nodes:
-  - node_id: plasma_membrane
-    label: plasma membrane
+  - node_id: cortical_endocytic_site
+    label: cortical endocytic site
     node_type: STRUCTURE
-    grounding: GO:0005886
   - node_id: clathrin_heavy_chain
     label: clathrin heavy chain
     node_type: GENE_OR_PROTEIN
@@ -168,9 +171,9 @@ causal_graphs:
     - reference: DOI:10.1074/jbc.271.51.33123
       notes: Chu, Pishvaee and Payne 1996 established yeast clathrin light-chain function.
   - subject: clathrin_vesicle_coat
-    predicate: assembles on
-    object: plasma_membrane
-    description: Yeast clathrin localizes to cortical endocytic sites before later
+    predicate: assembles at
+    object: cortical_endocytic_site
+    description: Yeast clathrin assembles at cortical endocytic sites before later
       actin-associated proteins arrive.
     evidence:
     - reference: DOI:10.1016/j.devcel.2005.04.014
@@ -209,6 +212,5 @@ discussions:
     complex boundaries are reviewed.
   evidence:
   - reference: DOI:10.1016/j.devcel.2005.04.014
-  - reference: DOI:10.7554/eLife.16036
   posed_by: codex
   posed_date: '2026-09-12'
