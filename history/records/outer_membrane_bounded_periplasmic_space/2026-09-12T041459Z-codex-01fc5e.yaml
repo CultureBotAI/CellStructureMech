@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+  slug: outer_membrane_bounded_periplasmic_space
+session:
+  id: 2026-09-12T041459Z-codex-01fc5e
+  timestamp: '2026-09-12T04:14:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/577
+  - https://github.com/CultureBotAI/CellStructureMech/issues/578
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/576
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO-grounded outer membrane-bounded periplasmic space record
+  details: Added data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml for
+    GO:0030288 with exact GO synonyms, diderm envelope topology, the contained Gram-negative
+    peptidoglycan component, bacterial distribution, an E. coli canonical example, Lpt-supported
+    outer-membrane biogenesis evidence, generated pages, refreshed embeddings, and PR review
+    fixes for boundary membranes and LPS delivery.
