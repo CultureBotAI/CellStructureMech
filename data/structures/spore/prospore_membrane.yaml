@@ -29,6 +29,13 @@ curation_history:
     ascospore-type prospore to the haploid meiotic nucleus, which the membrane surrounds
     during ascospore assembly.
   llm_assisted: true
+- timestamp: '2026-09-12T09:30:17Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #621 review issues #622 and #623 by removing the self-assembly
+    GO:0032120 process from functions and softening the post-Golgi vesicle graph edge
+    from direct fusion to membrane supply.'
+  llm_assisted: true
 synonyms:
 - synonym_text: ascospore-type prospore membrane
   synonym_type: EXACT_SYNONYM
@@ -99,18 +106,6 @@ canonical_examples:
     and leading-edge coat proteins were tied to prospore membrane assembly.
   reference: DOI:10.1093/emboj/20.24.6946
 functions:
-- function_id: ascospore_type_prospore_membrane_formation
-  label: ascospore-type prospore membrane formation
-  grounding: GO:0032120
-  description: The prospore membrane initiates at the meiotic outer plaque, grows
-    around each haploid nucleus, and closes to form the nascent ascospore membrane.
-  evidence:
-  - reference: GO:0032120
-    notes: GO:0032120 defines this process as formation of a nascent membrane at the
-      meiotic outer plaque through growth and closure.
-  - reference: DOI:10.1093/emboj/19.14.3657
-    notes: Knop and Strasser 2000 connected yeast spindle pole body remodeling to
-      prospore membrane assembly.
 - function_id: ascospore_type_prospore_assembly
   label: ascospore-type prospore assembly
   grounding: GO:0031321
@@ -147,10 +142,10 @@ evidence:
     edge protein (LEP) coat assembly, The EMBO Journal.
 causal_graphs:
 - graph_id: secretory_vesicles_build_prospore_membrane
-  title: Secretory vesicles and the leading edge build the prospore membrane
-  description: During budding-yeast sporulation, post-Golgi secretory vesicles fuse
-    at meiotic outer plaques to generate prospore membranes, while leading-edge coat
-    proteins track the open rim of the growing membrane before closure.
+  title: Secretory traffic and the leading edge build the prospore membrane
+  description: During budding-yeast sporulation, post-Golgi secretory traffic supplies
+    membrane at meiotic outer plaques to generate prospore membranes, while leading-edge
+    coat proteins track the open rim of the growing membrane before closure.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph summarizes where the membrane initiates and where the leading-edge
@@ -180,14 +175,14 @@ causal_graphs:
     node_type: ORGANELLE
   edges:
   - subject: post_golgi_secretory_vesicles
-    predicate: fuse to form
+    predicate: supplies membrane for
     object: prospore_membrane
-    description: Sporulation-specific post-Golgi vesicle traffic fuses into the de
-      novo prospore membrane.
+    description: Sporulation-specific post-Golgi vesicle traffic supplies membrane
+      needed for de novo prospore membrane formation.
     evidence:
     - reference: DOI:10.1083/jcb.140.1.29
-      notes: Neiman 1998 showed that late secretory pathway components are required
-        for prospore membrane formation.
+      notes: Neiman 1998 found that late secretory SEC1, SEC4 and SEC8 function is
+        required for prospore membrane formation in Saccharomyces cerevisiae.
   - subject: meiotic_outer_plaque
     predicate: anchors initiation of
     object: prospore_membrane
