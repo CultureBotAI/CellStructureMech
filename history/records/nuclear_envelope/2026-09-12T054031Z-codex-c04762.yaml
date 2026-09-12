@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nuclear_envelope.yaml
+  slug: nuclear_envelope
+session:
+  id: 2026-09-12T054031Z-codex-c04762
+  timestamp: '2026-09-12T05:40:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/591
+  - https://github.com/CultureBotAI/CellStructureMech/issues/592
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/590
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the nuclear envelope record
+  details: Added data/structures/membrane_organelle/nuclear_envelope.yaml for GO:0005635 nuclear
+    envelope, including organelle-envelope parentage, nucleus parthood, GO-grounded inner
+    membrane, outer membrane, envelope lumen, and nuclear pore parts, Eukaryota and Saccharomyces
+    cerevisiae scope, DOI-backed nuclear-envelope evidence, a nonmechanistic pore-gated-envelope
+    graph, generated pages, refreshed embeddings, and review fixes for the GO:0005641 perinuclear
+    lumen and direct NPC transport evidence.
