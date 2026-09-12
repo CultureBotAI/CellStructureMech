@@ -2110,9 +2110,9 @@
           "cosine_similarity": 0.74098531
         },
         {
-          "identifier": "GO:0009279",
-          "label": "cell outer membrane",
-          "cosine_similarity": 0.72760127
+          "identifier": "GO:0036014",
+          "label": "cyanelle intermembrane space",
+          "cosine_similarity": 0.72841097
         }
       ]
     },
@@ -2916,9 +2916,9 @@
           "cosine_similarity": 0.92194196
         },
         {
-          "identifier": "GO:0070118",
-          "label": "organellar chromatophore thylakoid membrane",
-          "cosine_similarity": 0.7939607
+          "identifier": "GO:0036014",
+          "label": "cyanelle intermembrane space",
+          "cosine_similarity": 0.90019977
         }
       ]
     },
@@ -2947,9 +2947,9 @@
           "cosine_similarity": 0.94179162
         },
         {
-          "identifier": "GO:0070114",
-          "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.82921232
+          "identifier": "GO:0036014",
+          "label": "cyanelle intermembrane space",
+          "cosine_similarity": 0.9224881
         }
       ]
     },
@@ -2978,9 +2978,40 @@
           "cosine_similarity": 0.92194196
         },
         {
-          "identifier": "GO:0070113",
-          "label": "organellar chromatophore inner membrane",
-          "cosine_similarity": 0.87121372
+          "identifier": "GO:0036014",
+          "label": "cyanelle intermembrane space",
+          "cosine_similarity": 0.92084321
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0036014",
+      "label": "cyanelle intermembrane space",
+      "neighbors": [
+        {
+          "identifier": "GO:0036013",
+          "label": "cyanelle outer membrane",
+          "cosine_similarity": 0.92548708
+        },
+        {
+          "identifier": "GO:0033112",
+          "label": "cyanelle envelope",
+          "cosine_similarity": 0.9224881
+        },
+        {
+          "identifier": "GO:0036012",
+          "label": "cyanelle inner membrane",
+          "cosine_similarity": 0.92084321
+        },
+        {
+          "identifier": "GO:0033113",
+          "label": "cyanelle membrane",
+          "cosine_similarity": 0.9149377
+        },
+        {
+          "identifier": "GO:0009842",
+          "label": "cyanelle",
+          "cosine_similarity": 0.90019977
         }
       ]
     },
@@ -3009,9 +3040,9 @@
           "cosine_similarity": 0.93127052
         },
         {
-          "identifier": "GO:0070114",
-          "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.85149219
+          "identifier": "GO:0036014",
+          "label": "cyanelle intermembrane space",
+          "cosine_similarity": 0.9149377
         }
       ]
     },
@@ -3040,9 +3071,9 @@
           "cosine_similarity": 0.93401685
         },
         {
-          "identifier": "GO:0070114",
-          "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.88231253
+          "identifier": "GO:0036014",
+          "label": "cyanelle intermembrane space",
+          "cosine_similarity": 0.92548708
         }
       ]
     },
