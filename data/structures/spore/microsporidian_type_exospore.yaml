@@ -1,0 +1,222 @@
+identifier: GO:0090642
+label: microsporidian-type exospore
+structure_category: SPORE
+structure_kind: ENVELOPE_LAYER
+definition: The dense, protein-rich outermost layer of a microsporidian spore wall
+  that lies above the endospore.
+definition_source: GO:0090642
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T10:13:55Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T10:14:43Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added spore-wall parthood, an exospore synonym, a reviewed-label-only SWP1/SWP32/NbSWP16
+    protein component with reviewed UniProt examples, Microsporidia scope, Nosema
+    and Encephalitozoon examples, a spore-wall protection function, GO/DOI evidence,
+    a nonmechanistic exospore-layering graph, and exosporium-boundary and protein-grounding
+    discussions.
+  llm_assisted: true
+part_of:
+- GO:0031160
+synonyms:
+- synonym_text: glycoprotein-rich outer spore wall layer
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1002/pmic.200700584
+components:
+- component_id: exospore_spore_wall_proteins
+  label: microsporidian exospore spore wall proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SWP1
+  - SWP32
+  - NbSWP16
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SWP1, SWP32 and NbSWP16 are exospore-localized spore-wall proteins
+    from different microsporidian lineages; no exact source-neutral InterPro, Pfam
+    or NCBIfam term was curated for this aggregate exospore protein cohort.
+  role: Protein constituents localized to the dense outer exospore layer of mature
+    microsporidian spores.
+  evidence:
+  - reference: DOI:10.1128/IAI.68.4.2268-2275.2000
+    notes: Bohne et al. 2000 identified Encephalitozoon cuniculi SWP1 as a 51 kDa
+      outer spore-wall protein.
+  - reference: DOI:10.1002/pmic.200700584
+    notes: Wu et al. 2008 identified Nosema bombycis SWP32 and localized it to the
+      exospore by immunofluorescence and immunoelectron microscopy.
+  - reference: DOI:10.1017/S0031182014001565
+    notes: Wang et al. 2015 characterized Nosema bombycis NbSWP16 and localized it
+      to exospore regions.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9XZV1
+    protein_label: Spore wall protein 1
+    gene_symbol: SWP1
+    taxon_id: NCBITaxon:284813
+    taxon_label: Encephalitozoon cuniculi GB-M1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-12'
+    role: Reviewed UniProtKB entry for the Encephalitozoon cuniculi SWP1 outer spore-wall
+      protein.
+    evidence:
+    - reference: DOI:10.1128/IAI.68.4.2268-2275.2000
+      notes: Bohne et al. 2000 cloned SWP1 and used immunoelectron microscopy to assign
+        it to the outer spore wall.
+  - uniprot_id: UniProtKB:B3STN7
+    protein_label: Spore wall protein 30
+    gene_symbol: SWP32
+    taxon_id: NCBITaxon:578461
+    taxon_label: Nosema bombycis CQ1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-12'
+    role: Reviewed UniProtKB entry for the Nosema bombycis SWP32 exosporal spore-wall
+      protein.
+    evidence:
+    - reference: DOI:10.1002/pmic.200700584
+      notes: Wu et al. 2008 identified SWP32 by spore-wall proteomics and localized
+        the protein to the Nosema bombycis exospore.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:6029
+  taxon_label: Microsporidia
+  presence: COMMON
+  note: Microsporidian spores have a thick wall made of a glycoprotein-rich outer
+    exospore and a chitin-rich inner endospore; this scope is tied to the spore stage.
+  reference: DOI:10.1002/pmic.200700584
+canonical_examples:
+- taxon_id: NCBITaxon:27978
+  taxon_label: Nosema bombycis
+  note: Silkworm-infecting microsporidian in which SWP32 and NbSWP16 were localized
+    to the exospore.
+  reference: DOI:10.1002/pmic.200700584
+- taxon_id: NCBITaxon:6035
+  taxon_label: Encephalitozoon cuniculi
+  note: Human-pathogenic microsporidian model in which SWP1 was identified as an outer
+    spore-wall protein.
+  reference: DOI:10.1128/IAI.68.4.2268-2275.2000
+functions:
+- function_id: spore_wall_protection
+  label: spore wall protection
+  description: The exospore contributes to the thick wall that surrounds and protects
+    extracellular microsporidian spores during host-to-host transmission.
+  evidence:
+  - reference: DOI:10.1002/pmic.200700584
+    notes: Wu et al. 2008 describe microsporidian resistant spores as protected by
+      a thick wall made of a glycoprotein-rich exospore and a chitin-rich endospore.
+  - reference: DOI:10.1128/IAI.68.4.2268-2275.2000
+    notes: Bohne et al. 2000 describe the rigid spore wall as surrounding the Encephalitozoon
+      cuniculi spore and providing mechanical resistance.
+evidence:
+- reference: GO:0090642
+  notes: Gene Ontology cellular-component term for the microsporidian-type exospore.
+- reference: GO:0031160
+  notes: Gene Ontology cellular-component term for the spore wall that has microsporidian-type
+    exospore and endospore parts.
+- reference: DOI:10.1128/IAI.68.4.2268-2275.2000
+  notes: Bohne et al. 2000, Developmental expression of a tandemly repeated, glycine-
+    and serine-rich spore wall protein in the microsporidian pathogen Encephalitozoon
+    cuniculi, Infection and Immunity.
+- reference: DOI:10.1002/pmic.200700584
+  notes: Wu et al. 2008, Proteomic analysis of spore wall proteins and identification
+    of two spore wall proteins from Nosema bombycis (Microsporidia), Proteomics.
+- reference: DOI:10.1017/S0031182014001565
+  notes: Wang et al. 2015, Characterization of a novel spore wall protein NbSWP16
+    with proline-rich tandem repeats from Nosema bombycis (microsporidia), Parasitology.
+causal_graphs:
+- graph_id: microsporidian_exospore_layering
+  title: Selected proteins occupy the outer spore-wall layer
+  description: Microsporidian spores carry an outer exospore that lies above the chitin-rich
+    endospore. This graph links the layer to SWP1, SWP32 and NbSWP16 as experimentally
+    localized example proteins.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures mature-spore layer composition and localization
+    rather than the temporal mechanism that assembles the exospore during sporogony.
+  nodes:
+  - node_id: exospore_spore_wall_proteins
+    label: microsporidian exospore spore wall proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: exospore_spore_wall_proteins
+  - node_id: microsporidian_type_exospore
+    label: microsporidian-type exospore
+    node_type: STRUCTURE
+    grounding: GO:0090642
+  - node_id: microsporidian_type_endospore
+    label: microsporidian-type endospore
+    node_type: STRUCTURE
+    grounding: GO:0090641
+  - node_id: spore_wall
+    label: spore wall
+    node_type: STRUCTURE
+    grounding: GO:0031160
+  edges:
+  - subject: exospore_spore_wall_proteins
+    predicate: localize to
+    object: microsporidian_type_exospore
+    description: SWP1, SWP32 and NbSWP16 are represented as spore-wall proteins localized
+      to the microsporidian exospore.
+    evidence:
+    - reference: DOI:10.1128/IAI.68.4.2268-2275.2000
+      notes: Bohne et al. 2000 used immunoelectron microscopy to localize SWP1 to
+        the Encephalitozoon cuniculi outer spore wall.
+    - reference: DOI:10.1002/pmic.200700584
+      notes: Wu et al. 2008 localized SWP32 to the Nosema bombycis exospore.
+  - subject: microsporidian_type_exospore
+    predicate: lies above
+    object: microsporidian_type_endospore
+    description: The microsporidian exospore is the outer spore-wall layer above the
+      endospore.
+    evidence:
+    - reference: GO:0090642
+      notes: GO:0090642 defines the exospore as lying above the endospore.
+  - subject: microsporidian_type_exospore
+    predicate: is part of
+    object: spore_wall
+    description: The microsporidian exospore is the dense protein-rich outer layer
+      of the spore wall.
+    evidence:
+    - reference: GO:0090642
+      notes: GO:0090642 defines the exospore as an outermost layer of the microsporidian
+        spore wall.
+discussions:
+- discussion_id: microsporidian_exospore_vs_bacterial_exosporium
+  prompt: Keep the microsporidian-type exospore separate from the bacterial exosporium.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: GO:0090642 denotes the outer layer of a microsporidian spore wall, whereas
+    bacterial exosporia are optional outer layers of bacterial endospore coats that
+    occur in a different spore architecture.
+  evidence:
+  - reference: GO:0090642
+    notes: GO:0090642 explicitly scopes the exospore term to microsporidian spore
+      walls.
+  - reference: DOI:10.1038/nrmicro2921
+    notes: McKenney et al. 2012 describe bacterial exosporia as loose outermost layers
+      present in only some bacterial endospore species.
+  posed_by: codex
+  posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'
+- discussion_id: ground_exospore_spore_wall_proteins
+  prompt: Resolve exact family groundings for microsporidian exospore spore-wall proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#exospore_spore_wall_proteins
+  rationale: This record models SWP1, SWP32 and NbSWP16 as an aggregate exospore protein
+    cohort because known exospore-localized SWPs are lineage-specific and no exact
+    source-neutral family term was curated. A follow-up pass should split and ground
+    any exact InterPro, Pfam or NCBIfam families for individual SWP classes without
+    collapsing unrelated exospore proteins.
+  evidence:
+  - reference: DOI:10.1128/IAI.68.4.2268-2275.2000
+  - reference: DOI:10.1002/pmic.200700584
+  - reference: DOI:10.1017/S0031182014001565
+  posed_by: codex
+  posed_date: '2026-09-12'
