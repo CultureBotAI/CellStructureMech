@@ -26,6 +26,13 @@ curation_history:
     grouped proton pumps as unknown for acidocalcisome membrane assembly, and made
     the generic cation-transporter graph edge direction-neutral.
   llm_assisted: true
+- timestamp: '2026-09-12T17:31:01Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #683 by narrowing the lipid-bilayer component and marking it
+    reviewed-label-only; resolved #684 by retargeting the cation-exchange graph edge
+    to the acidocalcisome membrane.'
+  llm_assisted: true
 synonyms:
 - synonym_text: acidocalcisomal membrane
   synonym_type: EXACT_SYNONYM
@@ -43,7 +50,7 @@ components:
   component_role: CONSTITUENT
   essentiality: ESSENTIAL
   role: Bounding bilayer that separates the acidic, polyphosphate-rich acidocalcisome
-    lumen from the cytosol and carries ion pumps and transporters.
+    lumen from the cytosol.
   evidence:
   - reference: GO:0033102
     notes: GO:0033102 defines the acidocalcisome membrane as the lipid bilayer surrounding
@@ -51,6 +58,10 @@ components:
   - reference: uniprot.location:SL-0003
     notes: UniProt Subcellular Location SL-0003 maps directly to GO:0033102 and denotes
       the membrane of an acidocalcisome.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0033102 and UniProt SL-0003 identify the acidocalcisome membrane,
+    but no acidocalcisome-specific lipid or lipid-bilayer CURIE was curated for the
+    lipid constituent of that membrane.
 - component_id: proton_pumps
   label: acidocalcisome proton pumps
   component_type: PROTEIN
@@ -189,9 +200,9 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro1097
       notes: Docampo et al. 2005 review the proton pumps that acidify acidocalcisomes.
   - subject: cation_transporters
-    predicate: exchange across
-    object: acidocalcisome
-    description: Cation transporters in the membrane move ions across the acidocalcisome
+    predicate: exchange ions across
+    object: acidocalcisome_membrane
+    description: Cation transporters move ions across the acidocalcisome membrane
       boundary.
     evidence:
     - reference: DOI:10.1128/MMBR.00042-23
@@ -208,17 +219,17 @@ causal_graphs:
         properties.
 discussions:
 - discussion_id: ground_acidocalcisome_membrane_transporters
-  prompt: Resolve exact bacterial and eukaryotic acidocalcisome membrane proton-pump
-    and cation-transporter families instead of the grouped acidocalcisome pump and
-    transporter labels.
+  prompt: Resolve exact acidocalcisome membrane lipid, proton-pump and cation-transporter
+    groundings instead of the grouped reviewed-label-only components.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
+  - components#acidocalcisome_lipid_bilayer
   - components#proton_pumps
   - components#cation_transporters
   - causal_graphs#acidocalcisome_membrane_ion_transport
-  rationale: The membrane record captures acidification and cation-transport roles,
-    but the exact protein families can differ between bacterial and eukaryotic acidocalcisome
-    membranes.
+  rationale: The membrane record captures the lipid boundary plus acidification and
+    cation-transport roles, but the exact lipid and protein families can differ between
+    bacterial and eukaryotic acidocalcisome membranes.
   posed_by: codex
   posed_date: '2026-09-12'
