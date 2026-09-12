@@ -29,6 +29,13 @@ curation_history:
     distribution reference to GO:0005730, and relabeled the GO:0006360 function as
     transcription by RNA polymerase I.
   llm_assisted: true
+- timestamp: '2026-09-12T05:14:59Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #588 by retyping the nucleolar chromatin graph node as a STRUCTURE,
+    and resolved #589 by narrowing the RNA polymerase I graph edge to rDNA within
+    nucleolar chromatin.'
+  llm_assisted: true
 part_of:
 - GO:0031981
 components:
@@ -167,10 +174,10 @@ evidence:
     18S ribosomal RNA biogenesis', Nature.
 causal_graphs:
 - graph_id: yeast_nucleolar_ribosome_biogenesis
-  title: Nucleolar chromatin and RNPs build preribosomes
+  title: Nucleolar RNPs support ribosome biogenesis
   description: In the Saccharomyces cerevisiae nucleolus, RNA polymerase I transcribes
-    ribosomal chromatin while snoRNP-containing preribosomal complexes process pre-rRNA
-    during early ribosome biogenesis.
+    rDNA within nucleolar chromatin while snoRNP-containing preribosomal complexes
+    process pre-rRNA during early ribosome biogenesis.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph summarizes core nucleolar rDNA transcription and pre-rRNA
@@ -179,7 +186,7 @@ causal_graphs:
   nodes:
   - node_id: nucleolar_chromatin
     label: nucleolar chromatin
-    node_type: GENETIC_ELEMENT
+    node_type: STRUCTURE
     grounding: GO:0030874
     component_ref: nucleolar_chromatin
   - node_id: rna_polymerase_i_complex
@@ -210,10 +217,10 @@ causal_graphs:
     grounding: GO:0042254
   edges:
   - subject: rna_polymerase_i_complex
-    predicate: transcribes
+    predicate: transcribes rDNA within
     object: nucleolar_chromatin
-    description: RNA polymerase I transcribes nucleolar ribosomal DNA into a large
-      pre-rRNA precursor.
+    description: RNA polymerase I transcribes ribosomal DNA loci within nucleolar
+      chromatin into a large pre-rRNA precursor.
     evidence:
     - reference: GO:0006360
       notes: GO:0006360 covers RNA polymerase I transcription from DNA templates.
