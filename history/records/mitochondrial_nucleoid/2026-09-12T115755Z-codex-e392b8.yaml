@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/nucleoid/mitochondrial_nucleoid.yaml
+  slug: mitochondrial_nucleoid
+session:
+  id: 2026-09-12T115755Z-codex-e392b8
+  timestamp: '2026-09-12T11:57:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/640
+  - https://github.com/CultureBotAI/CellStructureMech/issues/641
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/639
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0042645 mitochondrial nucleoid
+  details: 'Added an evidence-backed GO:0042645 mitochondrial nucleoid record with Saccharomyces
+    cerevisiae Abf2 evidence, mitochondrial-matrix parthood, UniProt SL-0269 synonymy and
+    cross-reference, reviewed-label-only mitochondrial DNA and HMG-box protein components,
+    a nonmechanistic Abf2 packaging graph, generated embeddings and pages, and adversarial
+    review fixes for #640 and #641.'
