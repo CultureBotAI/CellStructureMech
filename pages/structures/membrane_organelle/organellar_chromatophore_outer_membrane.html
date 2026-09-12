@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>organellar chromatophore outer membrane · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>organellar chromatophore outer membrane</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0070114"><code>GO:0070114</code></a> · MEMBRANE_ORGANELLE · MEMBRANE · <span class="status">PROPOSED</span></p>
+<p class="definition">The outer, i.e. cytoplasm-facing, of the two lipid bilayers surrounding an organellar chromatophore. <small>[<a href="http://purl.obolibrary.org/obo/GO_0070114"><code>GO:0070114</code></a>]</small></p>
+<p><strong>Synonyms:</strong> Paulinella-type chromatophore outer membrane</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0070111"><code>GO:0070111</code></a> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0361</code> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-organellar_chromatophore_outer_lipid_bilayer"><td>organellar chromatophore outer lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Cytoplasm-facing lipid bilayer that forms the outer boundary of the organellar chromatophore envelope.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070114"><code>GO:0070114</code></a> <small>GO:0070114 defines the organellar chromatophore outer membrane as the cytoplasm-facing lipid bilayer surrounding the organellar chromatophore.</small></li><li><code>uniprot.location:SL-0361</code> <small>UniProt Subcellular Location SL-0361 maps directly to GO:0070114 and describes the same outer membrane topology.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_39716"><code>NCBITaxon:39716</code></a> Paulinella — <strong>VARIABLE</strong>: UniProt SL-0361 constrains the organellar chromatophore outer membrane to Paulinella species without asserting that every Paulinella species carries this membrane. [<code>uniprot.location:SL-0361</code>]</li></ul>
+
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-organellar_chromatophore_outer_membrane_topology">Organellar chromatophore outer membrane topology <small>(FUNCTION)</small></h3>
+<p>The organellar chromatophore outer membrane is the cytoplasm-facing lipid-bilayer boundary of the Paulinella organellar chromatophore envelope.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>organellar chromatophore outer membrane</td><td>bounds</td><td>organellar chromatophore</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070114"><code>GO:0070114</code></a> <small>GO:0070114 defines this outer membrane by its cytoplasm-facing position around an organellar chromatophore.</small></li><li><code>uniprot.location:SL-0361</code> <small>UniProt SL-0361 describes the same cytoplasm-facing organellar chromatophore membrane.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the lipid constituent of the organellar chromatophore outer membrane. <small>The record is exactly grounded to GO:0070114 and UniProt SL-0361, but the lipid bilayer constituent is intentionally left as a reviewed-label-only component until an exact source-neutral lipid or membrane-constituent CURIE is curated.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070114"><code>GO:0070114</code></a> <small>Gene Ontology cellular-component term for the organellar chromatophore outer membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0009527"><code>GO:0009527</code></a> <small>Gene Ontology cellular-component term for plastid outer membrane, the broader parent structure.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0070112"><code>GO:0070112</code></a> <small>Gene Ontology cellular-component term for organellar chromatophore membrane, the broader chromatophore-membrane parent structure.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0070111"><code>GO:0070111</code></a> <small>Gene Ontology cellular-component term for the organellar chromatophore that this outer membrane bounds.</small></li><li><code>uniprot.location:SL-0361</code> <small>UniProt Subcellular Location entry SL-0361 maps to GO:0070114, places it under plastid outer membrane and organellar chromatophore membrane, and describes its Paulinella-specific taxonomic range.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-12T17:43:58Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-12T17:45:26Z</code> codex · EXPANDED_RECORD — Added the GO synonym, UniProt SL xref, plastid outer membrane parentage, organellar chromatophore parthood, a reviewed-label-only outer lipid bilayer component, Paulinella distribution, an outer envelope-boundary function, a nonmechanistic topology graph, and a lipid-grounding TODO.</li><li><code>2026-09-12T18:03:53Z</code> codex · ADDRESS_REVIEW — Resolved #686 by removing the static envelope-boundary pseudo-function; resolved #687 by adding GO:0070112 organellar chromatophore membrane as a second parent with record-level evidence.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/organellar_chromatophore_outer_membrane.yaml"><code>data/structures/membrane_organelle/organellar_chromatophore_outer_membrane.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,129 @@
+identifier: GO:0070114
+label: organellar chromatophore outer membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The outer, i.e. cytoplasm-facing, of the two lipid bilayers surrounding
+  an organellar chromatophore.
+definition_source: GO:0070114
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T17:43:58Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T17:45:26Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO synonym, UniProt SL xref, plastid outer membrane parentage,
+    organellar chromatophore parthood, a reviewed-label-only outer lipid bilayer component,
+    Paulinella distribution, an outer envelope-boundary function, a nonmechanistic
+    topology graph, and a lipid-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T18:03:53Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #686 by removing the static envelope-boundary pseudo-function;
+    resolved #687 by adding GO:0070112 organellar chromatophore membrane as a second
+    parent with record-level evidence.'
+  llm_assisted: true
+synonyms:
+- synonym_text: Paulinella-type chromatophore outer membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0070114
+parent_structures:
+- GO:0009527
+- GO:0070112
+part_of:
+- GO:0070111
+xrefs:
+- uniprot.location:SL-0361
+components:
+- component_id: organellar_chromatophore_outer_lipid_bilayer
+  label: organellar chromatophore outer lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Cytoplasm-facing lipid bilayer that forms the outer boundary of the organellar
+    chromatophore envelope.
+  evidence:
+  - reference: GO:0070114
+    notes: GO:0070114 defines the organellar chromatophore outer membrane as the cytoplasm-facing
+      lipid bilayer surrounding the organellar chromatophore.
+  - reference: uniprot.location:SL-0361
+    notes: UniProt Subcellular Location SL-0361 maps directly to GO:0070114 and describes
+      the same outer membrane topology.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070114 and UniProt SL-0361 identify the whole organellar chromatophore
+    outer membrane, but no separate source-neutral CURIE was curated for the lipid
+    constituent of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:39716
+  taxon_label: Paulinella
+  presence: VARIABLE
+  note: UniProt SL-0361 constrains the organellar chromatophore outer membrane to
+    Paulinella species without asserting that every Paulinella species carries this
+    membrane.
+  reference: uniprot.location:SL-0361
+evidence:
+- reference: GO:0070114
+  notes: Gene Ontology cellular-component term for the organellar chromatophore outer
+    membrane.
+- reference: GO:0009527
+  notes: Gene Ontology cellular-component term for plastid outer membrane, the broader
+    parent structure.
+- reference: GO:0070112
+  notes: Gene Ontology cellular-component term for organellar chromatophore membrane,
+    the broader chromatophore-membrane parent structure.
+- reference: GO:0070111
+  notes: Gene Ontology cellular-component term for the organellar chromatophore that
+    this outer membrane bounds.
+- reference: uniprot.location:SL-0361
+  notes: UniProt Subcellular Location entry SL-0361 maps to GO:0070114, places it
+    under plastid outer membrane and organellar chromatophore membrane, and describes
+    its Paulinella-specific taxonomic range.
+causal_graphs:
+- graph_id: organellar_chromatophore_outer_membrane_topology
+  title: Organellar chromatophore outer membrane topology
+  description: The organellar chromatophore outer membrane is the cytoplasm-facing
+    lipid-bilayer boundary of the Paulinella organellar chromatophore envelope.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining envelope topology without asserting
+    membrane proteins, import machinery, or the full organellar chromatophore photosynthetic
+    apparatus.
+  nodes:
+  - node_id: organellar_chromatophore_outer_membrane
+    label: organellar chromatophore outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0070114
+  - node_id: organellar_chromatophore
+    label: organellar chromatophore
+    node_type: STRUCTURE
+    grounding: GO:0070111
+  edges:
+  - subject: organellar_chromatophore_outer_membrane
+    predicate: bounds
+    object: organellar_chromatophore
+    description: The outer membrane is the host-cytoplasm-facing lipid bilayer of
+      the organellar chromatophore envelope.
+    evidence:
+    - reference: GO:0070114
+      notes: GO:0070114 defines this outer membrane by its cytoplasm-facing position
+        around an organellar chromatophore.
+    - reference: uniprot.location:SL-0361
+      notes: UniProt SL-0361 describes the same cytoplasm-facing organellar chromatophore
+        membrane.
+discussions:
+- discussion_id: ground_chromatophore_outer_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    organellar chromatophore outer membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#organellar_chromatophore_outer_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0070114 and UniProt SL-0361, but
+    the lipid bilayer constituent is intentionally left as a reviewed-label-only component
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-12'
