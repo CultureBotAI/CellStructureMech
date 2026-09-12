@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/acidocalcisome_membrane.yaml
+  slug: acidocalcisome_membrane
+session:
+  id: 2026-09-12T173121Z-codex-80a97a
+  timestamp: '2026-09-12T17:31:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/683
+  - https://github.com/CultureBotAI/CellStructureMech/issues/684
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/682
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-grounded acidocalcisome membrane record
+  details: 'Created GO:0033102 acidocalcisome membrane with UniProt SL-0003 provenance, acidocalcisome
+    parthood, membrane lipid, pump, and transporter components, taxonomic scope, functions,
+    a cation transport graph, and reviewed-label-only TODO coverage for ungrounded component
+    groups. Review issues #683 and #684 narrowed the lipid bilayer component and retargeted
+    the cation-exchange edge to the membrane.'
