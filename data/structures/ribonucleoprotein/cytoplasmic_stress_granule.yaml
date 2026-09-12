@@ -1,0 +1,229 @@
+identifier: GO:0010494
+label: cytoplasmic stress granule
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: OTHER
+definition: A dense aggregation in the cytosol composed of proteins and RNAs that
+  appear when the cell is under stress.
+definition_source: GO:0010494
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T00:10:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T00:11:36Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added exact GO stress-granule synonymy, label-only yeast mRNA, Pab1/Pub1/Pbp1
+    and eIF3/40S component cohorts, Saccharomyces distribution and example curation,
+    mRNP-triage function evidence, GO/DOI evidence, a yeast stress-granule assembly
+    graph and a component-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T00:12:12Z'
+  curator: codex
+  action: TIGHTENED_EVIDENCE_SCOPE
+  changes: Narrowed the Saccharomyces taxonomic distribution and canonical example
+    notes to the Buchan 2008 glucose-deprivation evidence they cite, leaving robust
+    heat-shock claims attached to Grousl 2009 component and graph evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: cytoplasmic mRNP granule
+  synonym_type: EXACT_SYNONYM
+  source: GO:0010494
+- synonym_text: stress granule
+  synonym_type: EXACT_SYNONYM
+  source: GO:0010494
+components:
+- component_id: stalled_mrna_cargo
+  label: stalled stress-granule mRNA cargo
+  component_type: RNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Stress-granule mRNA cargo is the translationally stalled mRNA pool
+    captured in cytoplasmic stress granules; no exact Sequence Ontology or GO CURIE
+    for this stress-granule-localized mRNA state was curated in this first record.
+  role: Translationally stalled mRNAs that concentrate in cytoplasmic stress granules
+    under glucose deprivation or heat-shock stress.
+  evidence:
+  - reference: DOI:10.1083/jcb.200807043
+    notes: Buchan, Muhlrad and Parker 2008 analyzed yeast stress granules formed by
+      nontranslating mRNPs under glucose deprivation.
+  - reference: DOI:10.1242/jcs.045104
+    notes: Grousl et al. 2009 characterized budding-yeast heat-shock stress granules
+      containing translation-initiation components.
+- component_id: pab1_pub1_pbp1_rna_binding_scaffolds
+  label: Pab1/Pub1/Pbp1 stress-granule RNA-binding scaffolds
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PAB1
+  - PUB1
+  - PBP1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Pab1, Pub1 and Pbp1 are curated as yeast RNA-binding stress-granule
+    markers and assembly inputs; no exact source-neutral InterPro, Pfam or NCBIfam
+    accession covers the full cohort.
+  role: Yeast RNA-binding proteins that localize to glucose-deprivation stress granules
+    and help drive visible granule assembly.
+  evidence:
+  - reference: DOI:10.1083/jcb.200807043
+    notes: Buchan, Muhlrad and Parker 2008 used Pab1 and Pub1 as yeast stress-granule
+      markers and linked Pub1 and Pbp1 to stress-granule assembly.
+  - reference: DOI:10.1371/journal.pone.0010006
+    notes: Swisher and Parker 2010 assayed Pbp1, Pbp4, Lsm12, Dhh1 and Pab1 localization
+      and effects on Saccharomyces stress granules.
+- component_id: eif3_40s_translation_initiation_cohort
+  label: eIF3/40S translation-initiation cohort
+  component_type: OTHER
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TIF32
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Robust heat-shock stress granules contain eIF3 and 40S small ribosomal
+    subunit markers; this mixed protein/RNP cohort is not identical to the exact GO
+    eIF3 complex term or to the exact 40S ribosomal subunit.
+  role: Translation-initiation components, including eIF3a/Tif32 and 40S small ribosomal
+    subunits, that mark robust heat-shock stress granules in budding yeast.
+  evidence:
+  - reference: DOI:10.1242/jcs.045104
+    notes: Grousl et al. 2009 showed that robust heat-shock stress granules in Saccharomyces
+      contain eIF3 and small but not large ribosomal subunits.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: VARIABLE
+  note: Budding yeast forms cytoplasmic stress granules under glucose-deprivation
+    conditions.
+  reference: DOI:10.1083/jcb.200807043
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Pab1/Pub1-marked cytoplasmic stress granules
+    were connected to P-body-dependent glucose-deprivation assembly.
+  reference: DOI:10.1083/jcb.200807043
+functions:
+- function_id: mrnp_triage_during_stress
+  label: mRNP triage during stress
+  description: Cytoplasmic stress granules concentrate nontranslating mRNPs and translation-initiation
+    components when yeast cells encounter glucose deprivation or heat shock.
+  evidence:
+  - reference: DOI:10.1083/jcb.200807043
+    notes: Buchan, Muhlrad and Parker 2008 connected yeast stress granules to remodeling
+      of mRNPs that had accumulated in preexisting P-bodies.
+  - reference: DOI:10.1242/jcs.045104
+    notes: Grousl et al. 2009 found that robust heat shock induces Saccharomyces stress
+      granules with eIF3 and 40S ribosomal subunit markers.
+evidence:
+- reference: GO:0010494
+  notes: Gene Ontology cellular-component term for cytoplasmic stress granule.
+- reference: GO:0034063
+  notes: Gene Ontology biological-process term for cytoplasmic stress granule assembly.
+- reference: DOI:10.1083/jcb.200807043
+  notes: Buchan, Muhlrad and Parker 2008, P bodies promote stress granule assembly
+    in Saccharomyces cerevisiae, Journal of Cell Biology.
+- reference: DOI:10.1242/jcs.045104
+  notes: Grousl et al. 2009, Robust heat shock induces eIF2alpha-phosphorylation-independent
+    assembly of stress granules containing eIF3 and 40S ribosomal subunits in budding
+    yeast, Saccharomyces cerevisiae, Journal of Cell Science.
+- reference: DOI:10.1371/journal.pone.0010006
+  notes: Swisher and Parker 2010, Localization to, and effects of Pbp1, Pbp4, Lsm12,
+    Dhh1, and Pab1 on stress granules in Saccharomyces cerevisiae, PLOS ONE.
+causal_graphs:
+- graph_id: yeast_stress_granule_assembly
+  title: Yeast mRNPs and RNA-binding proteins assemble stress granules
+  description: In Saccharomyces cerevisiae, stalled mRNP cargo, Pab1/Pub1/Pbp1 RNA-binding
+    proteins, and heat-shock-localized eIF3/40S translation-initiation components
+    concentrate in cytoplasmic stress granules, while P-bodies promote stress-granule
+    assembly during glucose deprivation.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph summarizes yeast glucose-deprivation and robust heat-shock
+    stress-granule assembly inputs without asserting a complete condensate interaction
+    network or flattening the stress-specific composition into one universal component
+    set.
+  nodes:
+  - node_id: stalled_mrna_cargo
+    label: stalled stress-granule mRNA cargo
+    node_type: RNA
+    component_ref: stalled_mrna_cargo
+  - node_id: pab1_pub1_pbp1_rna_binding_scaffolds
+    label: Pab1/Pub1/Pbp1 stress-granule RNA-binding scaffolds
+    node_type: GENE_OR_PROTEIN
+    component_ref: pab1_pub1_pbp1_rna_binding_scaffolds
+  - node_id: eif3_40s_translation_initiation_cohort
+    label: eIF3/40S translation-initiation cohort
+    node_type: GENE_OR_PROTEIN
+    component_ref: eif3_40s_translation_initiation_cohort
+  - node_id: p_body
+    label: P-body
+    node_type: STRUCTURE
+    grounding: GO:0000932
+  - node_id: cytoplasmic_stress_granule
+    label: cytoplasmic stress granule
+    node_type: STRUCTURE
+    grounding: GO:0010494
+  edges:
+  - subject: stalled_mrna_cargo
+    predicate: accumulates in
+    object: cytoplasmic_stress_granule
+    description: Translationally stalled mRNPs concentrate in yeast cytoplasmic stress
+      granules.
+    evidence:
+    - reference: DOI:10.1083/jcb.200807043
+      notes: Buchan, Muhlrad and Parker 2008 characterized yeast stress granules formed
+        from nontranslating mRNPs.
+  - subject: pab1_pub1_pbp1_rna_binding_scaffolds
+    predicate: supports assembly of
+    object: cytoplasmic_stress_granule
+    description: Pab1, Pub1 and Pbp1 mark yeast stress granules, and Pub1 and Pbp1
+      are needed for efficient visible stress-granule assembly.
+    evidence:
+    - reference: DOI:10.1083/jcb.200807043
+      notes: Buchan, Muhlrad and Parker 2008 linked Pub1 and Pbp1 to yeast stress-granule
+        assembly.
+    - reference: DOI:10.1371/journal.pone.0010006
+      notes: Swisher and Parker 2010 tested localization and assembly effects of Pbp1-interacting
+        stress-granule proteins.
+  - subject: eif3_40s_translation_initiation_cohort
+    predicate: localizes to
+    object: cytoplasmic_stress_granule
+    description: Robust heat-shock stress granules recruit eIF3 and 40S small ribosomal
+      subunit markers in budding yeast.
+    evidence:
+    - reference: DOI:10.1242/jcs.045104
+      notes: Grousl et al. 2009 observed eIF3 and 40S ribosomal subunits in robust
+        heat-shock yeast stress granules.
+  - subject: p_body
+    predicate: promotes assembly of
+    object: cytoplasmic_stress_granule
+    description: P-bodies promote glucose-deprivation stress-granule assembly in Saccharomyces
+      cerevisiae.
+    evidence:
+    - reference: DOI:10.1083/jcb.200807043
+      notes: Buchan, Muhlrad and Parker 2008 found that P-body assembly was required
+        for efficient yeast stress-granule assembly during glucose deprivation.
+discussions:
+- discussion_id: resolve_stress_granule_component_boundaries
+  prompt: Resolve exact component groundings and stress-condition-specific boundaries
+    for yeast glucose-deprivation and robust-heat-shock stress granules.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#stalled_mrna_cargo
+  - components#pab1_pub1_pbp1_rna_binding_scaffolds
+  - components#eif3_40s_translation_initiation_cohort
+  - causal_graphs#yeast_stress_granule_assembly
+  rationale: This first record groups Saccharomyces stress-granule mRNAs, RNA-binding
+    proteins and translation-initiation markers by experimentally assayed stress-granule
+    residency rather than guessing exact family accessions or asserting that glucose
+    deprivation and heat-shock foci have identical composition.
+  evidence:
+  - reference: DOI:10.1083/jcb.200807043
+  - reference: DOI:10.1242/jcs.045104
+  - reference: DOI:10.1371/journal.pone.0010006
+  posed_by: codex
+  posed_date: '2026-09-12'
