@@ -20,6 +20,13 @@ curation_history:
     scope, import and oxidative-phosphorylation functions, DOI/GO evidence, a nonmechanistic
     envelope import graph, and a subcomplex-boundary grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T05:56:30Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved PR #593 review issues #594 and #595 by downgrading unsupported
+    inner- and outer-membrane essentiality assertions to UNKNOWN and adding the mitochondrion
+    node plus GO:0005740 envelope topology edge to the graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0031967
 part_of:
@@ -35,7 +42,7 @@ components:
   component_type: LIPID
   component_role: CONSTITUENT
   grounding: GO:0005741
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   role: Cytoplasm-facing lipid bilayer of the mitochondrial envelope.
   evidence:
   - reference: GO:0005741
@@ -46,7 +53,7 @@ components:
   component_type: LIPID
   component_role: CONSTITUENT
   grounding: GO:0005743
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   role: Lumen-facing lipid bilayer of the envelope that folds into cristae.
   evidence:
   - reference: GO:0005743
@@ -150,6 +157,10 @@ causal_graphs:
     without asserting the full respiratory chain, TIM/PAM translocases, or intermembrane-space
     oxidoreductases.
   nodes:
+  - node_id: mitochondrion
+    label: mitochondrion
+    node_type: STRUCTURE
+    grounding: GO:0005739
   - node_id: mitochondrial_envelope
     label: mitochondrial envelope
     node_type: STRUCTURE
@@ -182,6 +193,15 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0006119
   edges:
+  - subject: mitochondrial_envelope
+    predicate: encloses
+    object: mitochondrion
+    description: The mitochondrial envelope encloses the mitochondrion and separates
+      its contents from the cell cytoplasm.
+    evidence:
+    - reference: GO:0005740
+      notes: GO:0005740 defines the mitochondrial envelope as the double lipid bilayer
+        enclosing the mitochondrion.
   - subject: mitochondrial_outer_membrane
     predicate: is part of
     object: mitochondrial_envelope
