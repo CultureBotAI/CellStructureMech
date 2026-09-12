@@ -2694,14 +2694,14 @@
           "cosine_similarity": 0.7916428
         },
         {
+          "identifier": "GO:0009843",
+          "label": "cyanelle thylakoid",
+          "cosine_similarity": 0.78758427
+        },
+        {
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
           "cosine_similarity": 0.78346844
-        },
-        {
-          "identifier": "GO:0070111",
-          "label": "organellar chromatophore",
-          "cosine_similarity": 0.74241192
         }
       ]
     },
@@ -2916,9 +2916,9 @@
           "cosine_similarity": 0.92194196
         },
         {
-          "identifier": "GO:0036014",
-          "label": "cyanelle intermembrane space",
-          "cosine_similarity": 0.90019977
+          "identifier": "GO:0009843",
+          "label": "cyanelle thylakoid",
+          "cosine_similarity": 0.91008718
         }
       ]
     },
@@ -3109,6 +3109,37 @@
       ]
     },
     {
+      "identifier": "GO:0009843",
+      "label": "cyanelle thylakoid",
+      "neighbors": [
+        {
+          "identifier": "GO:0009842",
+          "label": "cyanelle",
+          "cosine_similarity": 0.91008718
+        },
+        {
+          "identifier": "GO:0033113",
+          "label": "cyanelle membrane",
+          "cosine_similarity": 0.85352048
+        },
+        {
+          "identifier": "GO:0036013",
+          "label": "cyanelle outer membrane",
+          "cosine_similarity": 0.8503906
+        },
+        {
+          "identifier": "GO:0070118",
+          "label": "organellar chromatophore thylakoid membrane",
+          "cosine_similarity": 0.84989621
+        },
+        {
+          "identifier": "GO:0070116",
+          "label": "organellar chromatophore thylakoid",
+          "cosine_similarity": 0.84746408
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005783",
       "label": "endoplasmic reticulum",
       "neighbors": [
@@ -3252,14 +3283,14 @@
           "cosine_similarity": 0.62309938
         },
         {
+          "identifier": "GO:0009843",
+          "label": "cyanelle thylakoid",
+          "cosine_similarity": 0.62153524
+        },
+        {
           "identifier": "GO:0030089",
           "label": "phycobilisome",
           "cosine_similarity": 0.61613372
-        },
-        {
-          "identifier": "GO:0031521",
-          "label": "spitzenkorper",
-          "cosine_similarity": 0.61076962
         }
       ]
     },
@@ -4063,9 +4094,9 @@
           "cosine_similarity": 0.85121202
         },
         {
-          "identifier": "GO:0070114",
-          "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.83445465
+          "identifier": "GO:0009843",
+          "label": "cyanelle thylakoid",
+          "cosine_similarity": 0.84746408
         }
       ]
     },
@@ -4337,14 +4368,14 @@
           "cosine_similarity": 0.81265541
         },
         {
+          "identifier": "GO:0009843",
+          "label": "cyanelle thylakoid",
+          "cosine_similarity": 0.80069811
+        },
+        {
           "identifier": "GO:0070116",
           "label": "organellar chromatophore thylakoid",
           "cosine_similarity": 0.77621177
-        },
-        {
-          "identifier": "GO:0009507",
-          "label": "chloroplast",
-          "cosine_similarity": 0.77431899
         }
       ]
     },
@@ -5572,6 +5603,11 @@
           "cosine_similarity": 0.67999054
         },
         {
+          "identifier": "GO:0009843",
+          "label": "cyanelle thylakoid",
+          "cosine_similarity": 0.67384053
+        },
+        {
           "identifier": "GO:0042644",
           "label": "chloroplast nucleoid",
           "cosine_similarity": 0.66647703
@@ -5580,11 +5616,6 @@
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
           "cosine_similarity": 0.66613122
-        },
-        {
-          "identifier": "GO:0033009",
-          "label": "nucleomorph",
-          "cosine_similarity": 0.66289071
         }
       ]
     },
