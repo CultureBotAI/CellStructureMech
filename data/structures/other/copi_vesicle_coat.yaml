@@ -26,6 +26,14 @@ curation_history:
   action: CURATED_PARENT_EVIDENCE
   changes: Added GO:0030120 record-level evidence for vesicle-coat parentage.
   llm_assisted: true
+- timestamp: '2026-09-12T07:48:20Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #608 review issues #609, #610, and #611 by grounding Golgi-to-ER
+    retrograde transport to GO:0006890, adding that process to the graph, descoping
+    the coatomer component label, and removing misplaced Sandmann cargo-motif evidence
+    from the Arf component.'
+  llm_assisted: true
 parent_structures:
 - GO:0030120
 part_of:
@@ -35,18 +43,18 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: GO:0030126
 components:
-- component_id: heptameric_coatomer_complex
-  label: heptameric coatomer complex
+- component_id: coatomer_complex
+  label: coatomer complex
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: GO:0030126 uses coatomer as an exact synonym for the whole COPI
-    vesicle coat, so it was not reused as a narrower subcomplex grounding. No exact
-    source-neutral Complex Portal, InterPro, or Pfam CURIE was curated for the seven-subunit
-    coatomer complex in this pass.
-  role: Core coatomer subcomplex that polymerizes with Arf on Golgi membranes to form
-    the COPI coat.
+    vesicle coat, so it was not reused as a narrower complex grounding. No exact source-neutral
+    Complex Portal, InterPro, or Pfam CURIE was curated for the coatomer complex or
+    its individual subunits in this pass.
+  role: Core coatomer complex that assembles with Arf on Golgi membranes to form the
+    COPI coat.
   evidence:
   - reference: DOI:10.1038/349248a0
     notes: Waters, Serafini and Rothman 1991 named coatomer as a cytosolic protein
@@ -70,9 +78,6 @@ components:
   - reference: DOI:10.1016/0092-8674(91)90176-y
     notes: Serafini et al. 1991 identified ADP-ribosylation factor as a subunit of
       Golgi-derived COP-coated vesicles.
-  - reference: DOI:10.1091/mbc.e02-11-0736
-    notes: Sandmann et al. 2003 studied Saccharomyces coatomer mutants and cargo proteins
-      carrying COPI-binding motifs.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -100,13 +105,17 @@ functions:
     notes: Serafini et al. 1991 analyzed coat subunits on Golgi-derived COP-coated
       vesicles.
 - function_id: golgi_to_er_retrieval
-  label: Golgi-to-ER retrieval of dilysine-tagged cargo
+  label: retrograde vesicle-mediated transport, Golgi to endoplasmic reticulum
   description: In budding yeast, coatomer-dependent COPI traffic returns dilysine-tagged
     cargo from the Golgi to the endoplasmic reticulum.
   evidence:
+  - reference: GO:0006890
+    notes: GO:0006890 denotes retrograde vesicle-mediated transport from the Golgi
+      apparatus to the endoplasmic reticulum.
   - reference: DOI:10.1016/0092-8674(94)90011-6
     notes: Letourneur et al. 1994 demonstrated that yeast coatomer mutants impair
       retrieval of dilysine-tagged proteins to the ER.
+  grounding: GO:0006890
 evidence:
 - reference: GO:0030126
   notes: Gene Ontology cellular-component term for the COPI vesicle coat.
@@ -116,6 +125,9 @@ evidence:
   notes: Gene Ontology cellular-component term for COPI-coated vesicles.
 - reference: GO:0035964
   notes: Gene Ontology biological-process term for COPI-coated vesicle budding.
+- reference: GO:0006890
+  notes: Gene Ontology biological-process term for retrograde vesicle-mediated transport
+    from the Golgi to the endoplasmic reticulum.
 - reference: DOI:10.1038/349248a0
   notes: 'Waters, Serafini and Rothman 1991, ''Coatomer'': a cytosolic protein complex
     containing subunits of non-clathrin-coated Golgi transport vesicles, Nature.'
@@ -132,14 +144,14 @@ evidence:
 causal_graphs:
 - graph_id: copi_coatomer_golgi_budding
   title: Arf and coatomer assemble COPI coats at Golgi membranes
-  description: Arf-family GTPases and the heptameric coatomer complex assemble on
-    Golgi membranes into the COPI vesicle coat that forms COPI-coated vesicles for
-    retrograde Golgi-to-ER traffic.
+  description: Arf-family GTPases and the coatomer complex assemble on Golgi membranes
+    into the COPI vesicle coat that forms COPI-coated vesicles for retrograde Golgi-to-ER
+    traffic.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures Arf and coatomer as core COPI coat constituents
-    without asserting the seven coatomer subunits, Arf nucleotide-cycle factors, or
-    cargo adaptors.
+    without asserting the individual coatomer subunits, Arf nucleotide-cycle factors,
+    or cargo adaptors.
   nodes:
   - node_id: golgi_membrane
     label: Golgi membrane
@@ -150,9 +162,9 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     component_ref: arf_gtpase
   - node_id: coatomer
-    label: heptameric coatomer complex
+    label: coatomer complex
     node_type: GENE_OR_PROTEIN
-    component_ref: heptameric_coatomer_complex
+    component_ref: coatomer_complex
   - node_id: copi_vesicle_coat
     label: COPI vesicle coat
     node_type: STRUCTURE
@@ -165,6 +177,10 @@ causal_graphs:
     label: COPI-coated vesicle budding
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0035964
+  - node_id: golgi_to_er_retrograde_transport
+    label: retrograde vesicle-mediated transport, Golgi to endoplasmic reticulum
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006890
   edges:
   - subject: arf_gtpase
     predicate: associates with
@@ -187,7 +203,7 @@ causal_graphs:
   - subject: coatomer
     predicate: is part of
     object: copi_vesicle_coat
-    description: The heptameric coatomer complex is part of the COPI vesicle coat.
+    description: The coatomer complex is part of the COPI vesicle coat.
     evidence:
     - reference: DOI:10.1038/349248a0
       notes: Waters, Serafini and Rothman 1991 defined coatomer as a non-clathrin
@@ -225,19 +241,30 @@ causal_graphs:
     - reference: GO:0035964
       notes: GO:0035964 defines COPI-coated vesicle budding as evagination of a Golgi
         membrane that yields a COPI-coated vesicle.
+  - subject: copi_vesicle_coat
+    predicate: participates in
+    object: golgi_to_er_retrograde_transport
+    description: COPI coat-dependent vesicle traffic retrieves dilysine-tagged cargo
+      from the Golgi to the endoplasmic reticulum in budding yeast.
+    evidence:
+    - reference: GO:0006890
+      notes: GO:0006890 covers retrograde vesicle-mediated transport from the Golgi
+        to the endoplasmic reticulum.
+    - reference: DOI:10.1016/0092-8674(94)90011-6
+      notes: Letourneur et al. 1994 demonstrated coatomer-dependent retrieval of dilysine-tagged
+        proteins to the ER.
 discussions:
 - discussion_id: resolve_coatomer_subunits_and_arf_paralogs
-  prompt: Resolve exact source-neutral groundings for the seven coatomer subunit families
-    and the Arf paralogues that join COPI coats.
+  prompt: Resolve exact source-neutral groundings for individual coatomer subunit
+    families and the Arf paralogues that join COPI coats.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#heptameric_coatomer_complex
+  - components#coatomer_complex
   - components#arf_gtpase
   rationale: This first COPI record models the coatomer and Arf layers at coarse granularity.
-    The alpha, beta, beta-prime, gamma, delta, epsilon, and zeta coatomer subunits
-    and the Saccharomyces Arf paralogues need exact family boundaries before adding
-    subunit-level components or protein examples.
+    Individual coatomer subunit families and the Saccharomyces Arf paralogues need
+    exact family boundaries before adding subunit-level components or protein examples.
   evidence:
   - reference: DOI:10.1016/0092-8674(94)90011-6
   - reference: DOI:10.1091/mbc.e02-11-0736
