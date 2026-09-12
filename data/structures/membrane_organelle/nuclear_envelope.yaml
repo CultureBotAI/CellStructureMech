@@ -23,6 +23,13 @@ curation_history:
     functions, DOI/GO evidence, a nonmechanistic pore-gated-envelope graph, and a
     nuclear-membrane protein grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T05:35:56Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved review issues #591 and #592 by adding the GO:0005641 nuclear
+    envelope lumen as a core part and adding direct Aitchison/Rout NPC evidence to
+    the nucleocytoplasmic transport function and graph edge.'
+  llm_assisted: true
 parent_structures:
 - GO:0031967
 part_of:
@@ -30,6 +37,7 @@ part_of:
 has_part:
 - GO:0005637
 - GO:0005640
+- GO:0005641
 - GO:0005643
 components:
 - component_id: nuclear_inner_membrane
@@ -98,6 +106,8 @@ functions:
   - reference: GO:0006913
     notes: GO:0006913 defines nucleocytoplasmic transport as directed movement between
       the nucleus and cytoplasm.
+  - reference: DOI:10.1534/genetics.111.127803
+    notes: Aitchison and Rout 2012 review budding-yeast NPC organization and transport.
 - function_id: nuclear_envelope_organization
   label: nuclear envelope organization
   grounding: GO:0006998
@@ -120,6 +130,8 @@ evidence:
   notes: Gene Ontology cellular-component term for nuclear inner membrane.
 - reference: GO:0005640
   notes: Gene Ontology cellular-component term for nuclear outer membrane.
+- reference: GO:0005641
+  notes: Gene Ontology cellular-component term for nuclear envelope lumen.
 - reference: GO:0005643
   notes: Gene Ontology cellular-component term for nuclear pore.
 - reference: GO:0006913
@@ -132,6 +144,9 @@ evidence:
   notes: Pan et al. 2000, 'Nucleus-Vacuole Junctions in Saccharomyces cerevisiae Are
     Formed Through the Direct Interaction of Vac8p with Nvj1p', Molecular Biology
     of the Cell.
+- reference: DOI:10.1534/genetics.111.127803
+  notes: Aitchison and Rout 2012, 'The Yeast Nuclear Pore Complex and Transport Through
+    It', Genetics.
 causal_graphs:
 - graph_id: yeast_nuclear_envelope_boundaries
   title: Nuclear envelope membranes gate the nucleus
@@ -157,6 +172,10 @@ causal_graphs:
     node_type: STRUCTURE
     grounding: GO:0005640
     component_ref: nuclear_outer_membrane
+  - node_id: nuclear_envelope_lumen
+    label: nuclear envelope lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005641
   - node_id: nuclear_pore
     label: nuclear pore
     node_type: STRUCTURE
@@ -185,6 +204,15 @@ causal_graphs:
     - reference: GO:0005640
       notes: GO:0005640 defines the nuclear outer membrane as part of the nuclear
         envelope.
+  - subject: nuclear_envelope
+    predicate: contains
+    object: nuclear_envelope_lumen
+    description: The nuclear envelope includes the perinuclear lumen between its inner
+      and outer membrane bilayers.
+    evidence:
+    - reference: GO:0005641
+      notes: GO:0005641 defines the nuclear envelope lumen as the region between the
+        two lipid bilayers of the nuclear envelope.
   - subject: nuclear_pore
     predicate: spans
     object: nuclear_envelope
@@ -203,6 +231,9 @@ causal_graphs:
     - reference: GO:0006913
       notes: GO:0006913 defines nucleocytoplasmic transport as directed movement between
         the nucleus and cytoplasm.
+    - reference: DOI:10.1534/genetics.111.127803
+      notes: Aitchison and Rout 2012 review transport through the budding-yeast nuclear
+        pore complex.
 discussions:
 - discussion_id: ground_inner_outer_nuclear_membrane_proteins
   prompt: Resolve exact source-neutral boundaries and groundings for inner- and outer-nuclear-membrane
