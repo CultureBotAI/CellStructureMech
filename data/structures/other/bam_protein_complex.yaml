@@ -25,6 +25,12 @@ curation_history:
   action: FIX_DISCUSSION_ANCHOR
   changes: Pointed the SurA boundary discussion at concrete BamA-E component anchors.
   llm_assisted: true
+- timestamp: '2026-09-12T02:50:10Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved review issues #568 and #569 by grounding BamA-E to exact InterPro
+    family terms and correcting BAM function graph edge directions.'
+  llm_assisted: true
 synonyms:
 - synonym_text: BAM complex
   synonym_type: EXACT_SYNONYM
@@ -44,10 +50,6 @@ components:
   label: BamA beta-barrel core
   component_type: PROTEIN
   component_role: CONSTITUENT
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact source-neutral family grounding was asserted for BamA;
-    Bam subunit InterPro, Pfam, and NCBIfam scope needs direct review before adding
-    a CURIE.
   gene_symbols:
   - bamA
   essentiality: UNKNOWN
@@ -60,14 +62,11 @@ components:
   - reference: DOI:10.1038/nature17199
     notes: Gu et al. 2016 solved E. coli BAM structures with BamA and four associated
       lipoproteins.
+  grounding: InterPro:IPR023707
 - component_id: bam_b
   label: BamB lipoprotein
   component_type: PROTEIN
   component_role: CONSTITUENT
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact source-neutral family grounding was asserted for BamB;
-    Bam subunit InterPro, Pfam, and NCBIfam scope needs direct review before adding
-    a CURIE.
   gene_symbols:
   - bamB
   essentiality: UNKNOWN
@@ -78,14 +77,11 @@ components:
       complex.
   - reference: DOI:10.1038/ncomms12865
     notes: Iadanza et al. 2016 resolved BamB in an intact BamABCDE cryo-EM structure.
+  grounding: InterPro:IPR017687
 - component_id: bam_c
   label: BamC lipoprotein
   component_type: PROTEIN
   component_role: CONSTITUENT
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact source-neutral family grounding was asserted for BamC;
-    Bam subunit InterPro, Pfam, and NCBIfam scope needs direct review before adding
-    a CURIE.
   gene_symbols:
   - bamC
   essentiality: UNKNOWN
@@ -96,14 +92,11 @@ components:
       complex.
   - reference: DOI:10.1038/nature17199
     notes: Gu et al. 2016 report BamC in E. coli five-subunit BAM crystal structures.
+  grounding: InterPro:IPR014524
 - component_id: bam_d
   label: BamD lipoprotein
   component_type: PROTEIN
   component_role: CONSTITUENT
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact source-neutral family grounding was asserted for BamD;
-    Bam subunit InterPro, Pfam, and NCBIfam scope needs direct review before adding
-    a CURIE.
   gene_symbols:
   - bamD
   essentiality: UNKNOWN
@@ -115,14 +108,11 @@ components:
   - reference: DOI:10.1126/science.aad3460
     notes: Bakelar, Buchanan and Noinaj 2016 solved a BamACDE structure containing
       BamD.
+  grounding: InterPro:IPR017689
 - component_id: bam_e
   label: BamE lipoprotein
   component_type: PROTEIN
   component_role: CONSTITUENT
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact source-neutral family grounding was asserted for BamE;
-    Bam subunit InterPro, Pfam, and NCBIfam scope needs direct review before adding
-    a CURIE.
   gene_symbols:
   - bamE
   essentiality: UNKNOWN
@@ -133,6 +123,7 @@ components:
       complex.
   - reference: DOI:10.1038/nature17199
     notes: Gu et al. 2016 report BamE in E. coli five-subunit BAM crystal structures.
+  grounding: InterPro:IPR026592
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -233,18 +224,19 @@ causal_graphs:
       notes: Gu et al. 2016 resolved the BamA barrel and POTRA domains within E. coli
         BAM structures.
   - subject: bam_b_to_e_lipoproteins
-    predicate: bind
-    object: bam_complex
-    description: BamB, BamC, BamD and BamE are periplasmic lipoprotein partners in
-      the E. coli BamABCDE complex.
+    predicate: assemble with
+    object: bam_a
+    description: BamB, BamC, BamD and BamE assemble with BamA as periplasmic lipoprotein
+      partners in the E. coli BamABCDE complex.
     evidence:
     - reference: DOI:10.1038/ncomms12865
       notes: Iadanza et al. 2016 captured the intact BamABCDE complex by cryo-EM.
-  - subject: unfolded_omp_substrate
-    predicate: is folded and inserted by
-    object: bam_complex
-    description: Purified E. coli BamABCDE catalyzes assembly of an outer-membrane
-      beta-barrel substrate after chaperone delivery in a proteoliposome system.
+  - subject: bam_complex
+    predicate: folds and inserts
+    object: unfolded_omp_substrate
+    description: Purified E. coli BamABCDE catalyzes folding and insertion of an unfolded
+      outer-membrane beta-barrel substrate after chaperone delivery in a proteoliposome
+      system.
     evidence:
     - reference: DOI:10.1126/science.1188919
       notes: Hagan, Kim and Kahne 2010 reconstituted OmpT folding and insertion with
@@ -280,23 +272,6 @@ causal_graphs:
       notes: Hagan, Kim and Kahne 2010 used proteoliposomes to reconstitute E. coli
         outer-membrane protein assembly.
 discussions:
-- discussion_id: bam_subunit_family_groundings
-  prompt: Review exact InterPro, Pfam, or NCBIfam groundings for the BamA-E component
-    families before adding component CURIEs.
-  kind: CURATION_TODO
-  status: OPEN
-  attaches_to:
-  - components#bam_a
-  - components#bam_b
-  - components#bam_c
-  - components#bam_d
-  - components#bam_e
-  rationale: The record should not over-scope paralog-specific or domain-specific
-    family accessions. The BAM structure is grounded to GO:1990063, while individual
-    subunit family groundings are left label-only until exact source-neutral terms
-    are reviewed.
-  posed_by: codex
-  posed_date: '2026-09-12'
 - discussion_id: sura_not_a_bam_component
   prompt: Keep SurA and other soluble periplasmic chaperones out of the Bam protein
     complex component list.
