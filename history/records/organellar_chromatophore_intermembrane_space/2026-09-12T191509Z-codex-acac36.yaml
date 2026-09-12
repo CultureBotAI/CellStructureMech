@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/organellar_chromatophore_intermembrane_space.yaml
+  slug: organellar_chromatophore_intermembrane_space
+session:
+  id: 2026-09-12T191509Z-codex-acac36
+  timestamp: '2026-09-12T19:15:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/694
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/693
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-grounded organellar chromatophore intermembrane space record
+  details: 'Created GO:0070115 organellar chromatophore intermembrane space with GO and UniProt
+    SL-0360 provenance, plastid intermembrane-space parentage, organellar chromatophore parthood,
+    a reviewed-label-only residual peptidoglycan-wall component, Paulinella taxonomic scope,
+    and a nonmechanistic envelope topology graph. Review issue #694 surfaced SL-0359 as record-level
+    evidence for the inner-membrane boundary citation used by the topology graph.'

@@ -1,0 +1,166 @@
+identifier: GO:0070115
+label: organellar chromatophore intermembrane space
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The region between the inner and outer lipid bilayers that surround an
+  organellar chromatophore.
+definition_source: GO:0070115
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T19:07:11Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T19:07:46Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO synonym, plastid intermembrane-space parentage, organellar
+    chromatophore parthood, UniProt SL xref, a reviewed-label-only residual peptidoglycan-wall
+    component, Paulinella distribution, a nonmechanistic envelope topology graph,
+    and a peptidoglycan-wall grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T19:14:40Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #694 by adding record-level UniProt SL-0359 evidence for the
+    inner-membrane boundary citation used in the topology graph.'
+  llm_assisted: true
+synonyms:
+- synonym_text: Paulinella-type chromatophore intermembrane space
+  synonym_type: EXACT_SYNONYM
+  source: GO:0070115
+parent_structures:
+- GO:0009529
+part_of:
+- GO:0070111
+xrefs:
+- uniprot.location:SL-0360
+components:
+- component_id: organellar_chromatophore_peptidoglycan_wall
+  label: organellar chromatophore peptidoglycan wall
+  component_type: PEPTIDOGLYCAN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: UniProt SL-0351 places a residual peptidoglycan wall between the
+    two organellar chromatophore membranes, but no exact standalone source-neutral
+    CURIE was curated for that wall.
+  essentiality: UNKNOWN
+  role: Residual bacterial cell-wall layer positioned in the organellar chromatophore
+    intermembrane space between the inner and outer envelope membranes.
+  evidence:
+  - reference: uniprot.location:SL-0351
+    notes: UniProt Subcellular Location SL-0351 describes the organellar chromatophore
+      as being surrounded by two membranes with a residual peptidoglycan wall between
+      them.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:39716
+  taxon_label: Paulinella
+  presence: VARIABLE
+  note: UniProt SL-0360 constrains organellar chromatophore intermembrane spaces to
+    Paulinella species without asserting that every Paulinella species carries an
+    organellar chromatophore.
+  reference: uniprot.location:SL-0360
+evidence:
+- reference: GO:0070115
+  notes: Gene Ontology cellular-component term for the organellar chromatophore intermembrane
+    space.
+- reference: GO:0009529
+  notes: Gene Ontology cellular-component term for plastid intermembrane space, the
+    broader plastid envelope region.
+- reference: GO:0070111
+  notes: Gene Ontology cellular-component term for the organellar chromatophore that
+    this space is part of.
+- reference: GO:0070113
+  notes: Gene Ontology cellular-component term for the organellar chromatophore inner
+    membrane that delimits this space.
+- reference: GO:0070114
+  notes: Gene Ontology cellular-component term for the organellar chromatophore outer
+    membrane that delimits this space.
+- reference: uniprot.location:SL-0359
+  notes: UniProt Subcellular Location entry SL-0359 maps directly to GO:0070113 and
+    describes the organellar chromatophore inner membrane as separating the chromatophore
+    stroma from the intermembrane space.
+- reference: uniprot.location:SL-0360
+  notes: UniProt Subcellular Location entry SL-0360 maps directly to GO:0070115, places
+    it under plastid intermembrane space, and describes its Paulinella-specific taxonomic
+    range.
+- reference: uniprot.location:SL-0351
+  notes: UniProt Subcellular Location entry SL-0351 describes the organellar chromatophore
+    as a Paulinella photosynthetic inclusion with two membranes and a residual peptidoglycan
+    wall between them.
+causal_graphs:
+- graph_id: organellar_chromatophore_intermembrane_space_topology
+  title: Organellar chromatophore intermembrane-space topology
+  description: The organellar chromatophore intermembrane space lies between the inner
+    and outer organellar chromatophore membranes and contains a residual peptidoglycan
+    wall.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures compartment topology without asserting the full
+    set of envelope proteins, import machinery, or peptidoglycan-remodeling factors.
+  nodes:
+  - node_id: organellar_chromatophore_intermembrane_space
+    label: organellar chromatophore intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0070115
+  - node_id: organellar_chromatophore_outer_membrane
+    label: organellar chromatophore outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0070114
+  - node_id: organellar_chromatophore_inner_membrane
+    label: organellar chromatophore inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0070113
+  - node_id: organellar_chromatophore_peptidoglycan_wall
+    label: organellar chromatophore peptidoglycan wall
+    node_type: STRUCTURE
+    component_ref: organellar_chromatophore_peptidoglycan_wall
+  edges:
+  - subject: organellar_chromatophore_outer_membrane
+    predicate: delimits
+    object: organellar_chromatophore_intermembrane_space
+    description: The outer membrane forms one envelope boundary of the organellar
+      chromatophore intermembrane space.
+    evidence:
+    - reference: GO:0070115
+      notes: GO:0070115 defines this space as the region between the inner and outer
+        lipid bilayers around an organellar chromatophore.
+    - reference: uniprot.location:SL-0360
+      notes: UniProt SL-0360 describes the space as the intermembrane space between
+        the inner and outer organellar chromatophore membranes.
+  - subject: organellar_chromatophore_inner_membrane
+    predicate: delimits
+    object: organellar_chromatophore_intermembrane_space
+    description: The inner membrane forms the second envelope boundary of the organellar
+      chromatophore intermembrane space.
+    evidence:
+    - reference: GO:0070115
+      notes: GO:0070115 defines this space as the region between the inner and outer
+        lipid bilayers around an organellar chromatophore.
+    - reference: uniprot.location:SL-0359
+      notes: UniProt SL-0359 defines the organellar chromatophore inner membrane as
+        separating the stroma from the intermembrane space.
+  - subject: organellar_chromatophore_peptidoglycan_wall
+    predicate: resides in
+    object: organellar_chromatophore_intermembrane_space
+    description: A residual peptidoglycan wall lies between the two organellar chromatophore
+      envelope membranes.
+    evidence:
+    - reference: uniprot.location:SL-0351
+      notes: UniProt SL-0351 states that a residual peptidoglycan wall is found between
+        the two organellar chromatophore membranes.
+discussions:
+- discussion_id: ground_chromatophore_peptidoglycan_wall
+  prompt: Resolve an exact source-neutral grounding for the residual peptidoglycan
+    wall in the organellar chromatophore intermembrane space.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#organellar_chromatophore_peptidoglycan_wall
+  rationale: UniProt SL-0351 supports the placement of residual peptidoglycan between
+    the two organellar chromatophore membranes, but the curated GO and UniProt authority
+    terms identify the whole intermembrane space rather than a standalone peptidoglycan
+    wall.
+  posed_by: codex
+  posed_date: '2026-09-12'
