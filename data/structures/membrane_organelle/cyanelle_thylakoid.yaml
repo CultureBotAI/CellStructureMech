@@ -1,7 +1,7 @@
 identifier: GO:0009843
 label: cyanelle thylakoid
 structure_category: MEMBRANE_ORGANELLE
-structure_kind: MEMBRANE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
 definition: A thylakoid found in a cyanelle, which is a type of plastid found in certain
   algae. The cyanelle contains a photosynthetic membrane resembling that of cyanobacteria.
 definition_source: GO:0009843
@@ -19,6 +19,13 @@ curation_history:
     lumen and membrane parts, the UniProt SL-0277 xref, a GO-grounded cyanelle thylakoid
     membrane component, glaucophyte distribution, a light-reaction function, and a
     nonmechanistic thylakoid topology graph.
+  llm_assisted: true
+- timestamp: '2026-09-12T22:08:32Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #712 by reclassifying the whole cyanelle thylakoid record as
+    MEMBRANE_BOUNDED_ORGANELLE while keeping GO:0033115 cyanelle thylakoid membrane
+    as the exact membrane component.'
   llm_assisted: true
 parent_structures:
 - GO:0009579
