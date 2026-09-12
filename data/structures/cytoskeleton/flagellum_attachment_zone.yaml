@@ -1,0 +1,268 @@
+identifier: GO:0120119
+label: flagellum attachment zone
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A network of cytoskeletal and membranous connections responsible for the
+  lateral attachment of the cilium to the cell body in some trypanosomatid species.
+definition_source: GO:0120119
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T02:02:35Z'
+  curator: claude
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T02:03:34Z'
+  curator: claude
+  action: EXPANDED_RECORD
+  changes: Added FAZ synonymy, FAZ filament-domain components, Trypanosoma brucei
+    taxonomic scope, lateral attachment and morphogenesis functions, a FAZ filament
+    assembly graph, core literature evidence, and a TODO for nonfilament FAZ domains.
+  llm_assisted: true
+- timestamp: '2026-09-12T02:10:02Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #565 by narrowing the T. brucei canonical example to the FAZ2
+    claims covered by Zhou et al. 2015; resolved #566 by changing the FAZ filament
+    component type from PROTEIN_COMPLEX to OTHER.'
+  llm_assisted: true
+synonyms:
+- synonym_text: FAZ
+  synonym_type: RELATED_SYNONYM
+  source: GO:0120119
+components:
+- component_id: faz_filament
+  label: FAZ filament
+  component_type: OTHER
+  component_role: CONSTITUENT
+  role: Cytoskeletal filament-domain core of the trypanosome FAZ that runs along the
+    attached flagellum and contains FAZ1, FAZ2, CC2D and additional FAZ proteins.
+  evidence:
+  - reference: DOI:10.1016/j.pt.2015.12.010
+    notes: Sunter and Gull 2016 reviewed the FAZ filament as one of the FAZ domains
+      and tabulated FAZ1, FAZ2 and CC2D as filament-domain proteins.
+  - reference: DOI:10.1242/jcs.168377
+    notes: Zhou et al. 2015 localized newly identified FAZ proteins to the FAZ filament
+      and assayed FAZ filament assembly and maintenance after RNAi.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0120119 denotes the entire flagellum attachment zone. No exact
+    source-neutral CURIE for the FAZ filament subdomain was curated.
+- component_id: faz1
+  label: FAZ1 repetitive filament protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - FAZ1
+  - Tb927.4.3740
+  essentiality: ESSENTIAL
+  role: Large repetitive protein that marks the FAZ filament and is required for normal
+    FAZ filament structure and function.
+  evidence:
+  - reference: DOI:10.1016/j.protis.2007.08.005
+    notes: Vaughan et al. 2008 identified FAZ1 as a repetitive T. brucei FAZ filament
+      protein and tested its requirement for FAZ filament structure and function.
+  - reference: DOI:10.1016/j.pt.2015.12.010
+    notes: Sunter and Gull 2016 list Tb927.4.3740/FAZ1 in the FAZ filament domain
+      in their FAZ protein summary.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam or NCBIfam accession for
+    the complete FAZ1 protein family was curated.
+- component_id: faz2
+  label: FAZ2 filament protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - FAZ2
+  - Tb927.1.4310
+  essentiality: UNKNOWN
+  role: FAZ filament protein needed to maintain the FAZ filament and the stability
+    of multiple FAZ filament components.
+  evidence:
+  - reference: DOI:10.1242/jcs.168377
+    notes: Zhou et al. 2015 identified FAZ2 by localization screening and found that
+      FAZ2 knockdown disrupted the FAZ filament and destabilized other FAZ filament
+      proteins.
+  - reference: DOI:10.1016/j.pt.2015.12.010
+    notes: Sunter and Gull 2016 list Tb927.1.4310/FAZ2 in the FAZ filament domain.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam or NCBIfam accession for
+    the complete FAZ2 protein family was curated.
+- component_id: cc2d
+  label: CC2D FAZ filament protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CC2D
+  - Tb927.4.2080
+  essentiality: UNKNOWN
+  role: Coiled-coil and C2-domain FAZ filament protein that contributes to FAZ assembly
+    and complexes with FAZ2.
+  evidence:
+  - reference: DOI:10.1242/jcs.087676
+    notes: Zhou et al. 2011 characterized a coiled-coil and C2-domain protein required
+      for FAZ assembly and T. brucei cell morphology.
+  - reference: DOI:10.1242/jcs.168377
+    notes: Zhou et al. 2015 identified CC2D as a FAZ2 partner through affinity purification.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The CC2D component is curated as a T. brucei FAZ protein by gene
+    name because no exact source-neutral complete-family CURIE was curated.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  presence: COMMON
+  note: The FAZ runs alongside the attached flagellum in procyclic and bloodstream
+    T. brucei forms and has been dissected by RNAi, tagging and microscopy.
+  reference: DOI:10.1016/j.pt.2015.12.010
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: Trypanosome model in which a localization-based screen identified FAZ2 on
+    the FAZ filament, and FAZ2 knockdown connected a FAZ filament constituent to filament
+    maintenance and cytokinesis.
+  reference: DOI:10.1242/jcs.168377
+functions:
+- function_id: lateral_flagellum_attachment
+  label: lateral flagellum-cell-body attachment
+  description: The FAZ links the motile cilium to the trypanosome cell body along
+    the lateral flagellum attachment path.
+  evidence:
+  - reference: DOI:10.1111/j.1550-7408.1999.tb04592.x
+    notes: Kohl et al. 1999 followed assembly of the flagellum attachment zone complex
+      during the T. brucei cell cycle.
+  - reference: DOI:10.1016/j.pt.2015.12.010
+    notes: Sunter and Gull 2016 reviewed the FAZ as the structure that mediates lateral
+      attachment of the T. brucei flagellum to the cell body.
+- function_id: trypanosome_cell_morphogenesis
+  label: trypanosome cell morphogenesis
+  description: FAZ assembly and length help regulate trypanosome cell shape, cell
+    length and positions of single-copy organelles.
+  evidence:
+  - reference: DOI:10.1016/j.pt.2015.12.010
+    notes: Sunter and Gull 2016 reviewed FAZ length and composition as regulators
+      of trypanosome morphology and organelle positioning.
+- function_id: flagellum_attachment_zone_organization
+  label: flagellum attachment zone organization
+  description: New FAZ proteins are incorporated near the proximal base of the FAZ
+    filament as the trypanosome builds a daughter FAZ.
+  evidence:
+  - reference: DOI:10.1242/jcs.168377
+    notes: Zhou et al. 2015 found proximal incorporation of FAZ filament proteins
+      during FAZ filament assembly.
+evidence:
+- reference: DOI:10.1111/j.1550-7408.1999.tb04592.x
+  notes: Kohl, Sherwin and Gull 1999, Assembly of the paraflagellar rod and the flagellum
+    attachment zone complex during the Trypanosoma brucei cell cycle, Journal of Eukaryotic
+    Microbiology.
+- reference: DOI:10.1016/j.protis.2007.08.005
+  notes: Vaughan et al. 2008, A Repetitive Protein Essential for the Flagellum Attachment
+    Zone Filament Structure and Function in Trypanosoma brucei, Protist.
+- reference: DOI:10.1242/jcs.087676
+  notes: Zhou et al. 2011, A coiled-coil- and C2-domain-containing protein is required
+    for FAZ assembly and cell morphology in Trypanosoma brucei, Journal of Cell Science.
+- reference: DOI:10.1242/jcs.168377
+  notes: Zhou et al. 2015, Assembly and maintenance of the flagellum attachment zone
+    filament in Trypanosoma brucei, Journal of Cell Science.
+- reference: DOI:10.1016/j.pt.2015.12.010
+  notes: 'Sunter and Gull 2016, The Flagellum Attachment Zone: The Cellular Ruler
+    of Trypanosome Morphology, Trends in Parasitology.'
+causal_graphs:
+- graph_id: faz_filament_assembly_and_attachment
+  title: FAZ filament proteins maintain lateral flagellum attachment
+  description: FAZ1, FAZ2 and CC2D are curated T. brucei FAZ filament constituents
+    that contribute to the FAZ cytoskeletal filament; the larger FAZ network mediates
+    lateral flagellum attachment and helps set trypanosome morphology.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: faz1
+    label: FAZ1
+    node_type: GENE_OR_PROTEIN
+    component_ref: faz1
+  - node_id: faz2
+    label: FAZ2
+    node_type: GENE_OR_PROTEIN
+    component_ref: faz2
+  - node_id: cc2d
+    label: CC2D
+    node_type: GENE_OR_PROTEIN
+    component_ref: cc2d
+  - node_id: faz_filament
+    label: FAZ filament
+    node_type: STRUCTURE
+    component_ref: faz_filament
+  - node_id: flagellum_attachment_zone
+    label: flagellum attachment zone
+    node_type: STRUCTURE
+    grounding: GO:0120119
+  - node_id: lateral_flagellum_attachment
+    label: lateral flagellum-cell-body attachment
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: cell_morphogenesis
+    label: trypanosome cell morphogenesis
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: faz1
+    predicate: contributes to
+    object: faz_filament
+    description: FAZ1 is a repetitive protein localized to the FAZ filament and required
+      for its normal structure.
+    evidence:
+    - reference: DOI:10.1016/j.protis.2007.08.005
+      notes: Vaughan et al. 2008 linked FAZ1 depletion to defects in FAZ filament
+        structure and function.
+  - subject: faz2
+    predicate: stabilizes
+    object: faz_filament
+    description: FAZ2 is needed to maintain the FAZ filament and the abundance of
+      multiple FAZ filament proteins.
+    evidence:
+    - reference: DOI:10.1242/jcs.168377
+      notes: Zhou et al. 2015 showed that FAZ2 knockdown disrupted the FAZ filament
+        and destabilized multiple FAZ filament proteins.
+  - subject: cc2d
+    predicate: interacts with
+    object: faz2
+    description: CC2D was recovered as a FAZ2 partner in the FAZ2 protein complex.
+    evidence:
+    - reference: DOI:10.1242/jcs.168377
+      notes: Zhou et al. 2015 identified CC2D as a FAZ2 partner by affinity purification.
+  - subject: faz_filament
+    predicate: forms domain of
+    object: flagellum_attachment_zone
+    description: The FAZ filament is a curated cytoskeletal domain within the larger
+      flagellum attachment zone.
+    evidence:
+    - reference: DOI:10.1016/j.pt.2015.12.010
+      notes: Sunter and Gull 2016 describe the FAZ filament domain in their FAZ structural
+        zone model.
+  - subject: flagellum_attachment_zone
+    predicate: mediates
+    object: lateral_flagellum_attachment
+    description: The assembled FAZ laterally links the motile flagellum to the T.
+      brucei cell body.
+    evidence:
+    - reference: DOI:10.1016/j.pt.2015.12.010
+      notes: Sunter and Gull 2016 review lateral flagellum attachment as the defining
+        FAZ role.
+  - subject: lateral_flagellum_attachment
+    predicate: supports
+    object: cell_morphogenesis
+    description: The FAZ attachment path helps determine trypanosome morphology and
+      cell length.
+    evidence:
+    - reference: DOI:10.1016/j.pt.2015.12.010
+      notes: Sunter and Gull 2016 review the FAZ as a regulator of trypanosome morphology.
+discussions:
+- discussion_id: resolve_nonfilament_faz_domains
+  prompt: Resolve membrane, flagellum-domain, microtubule-quartet and anterior-tip
+    FAZ proteins before expanding this record beyond the FAZ filament-domain proteins
+    curated here.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The FAZ spans multiple membranes and cytoskeletal domains. This first
+    record keeps the protein boundary to the FAZ filament-domain proteins FAZ1, FAZ2
+    and CC2D that were directly tied to filament assembly or integrity.
+  evidence:
+  - reference: DOI:10.1016/j.pt.2015.12.010
+  posed_by: claude
+  posed_date: '2026-09-12'

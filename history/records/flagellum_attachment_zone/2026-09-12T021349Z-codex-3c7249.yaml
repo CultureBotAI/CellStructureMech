@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+  slug: flagellum_attachment_zone
+session:
+  id: 2026-09-12T021349Z-codex-3c7249
+  timestamp: '2026-09-12T02:13:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/565
+  - https://github.com/CultureBotAI/CellStructureMech/issues/566
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/564
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added flagellum attachment zone structure record
+  details: 'Created GO:0120119 flagellum attachment zone with GO synonymy, label-only FAZ
+    filament, FAZ1, FAZ2, and CC2D components, Trypanosoma brucei taxonomic scope, lateral-attachment
+    and morphogenesis functions, a nonmechanistic FAZ-filament assembly graph, GO/DOI evidence,
+    a TODO for nonfilament FAZ domains, and generated embedding/page artifacts. Adversarial
+    review filed #565 and #566; follow-up curation narrowed the canonical T. brucei example
+    to FAZ2 claims covered by Zhou et al. 2015 and changed the FAZ filament subdomain from
+    PROTEIN_COMPLEX to OTHER.'
