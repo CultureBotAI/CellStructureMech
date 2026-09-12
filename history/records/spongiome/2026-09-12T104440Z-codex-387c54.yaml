@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/spongiome.yaml
+  slug: spongiome
+session:
+  id: 2026-09-12T104440Z-codex-387c54
+  timestamp: '2026-09-12T10:44:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/631
+  - https://github.com/CultureBotAI/CellStructureMech/issues/632
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/630
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-grounded spongiome record
+  details: Added data/structures/membrane_organelle/spongiome.yaml for GO:0062160 spongiome
+    as a contractile-vacuole-complex substructure, including a reviewed-label-only spongiome
+    V-ATPase constituent, Dictyostelium discoideum and Paramecium multimicronucleatum examples,
+    primary PubMed/DOI evidence, a nonmechanistic fluid-segregation graph, a grounding TODO,
+    regenerated pages and semantic-map artifacts, then addressed PR review issues by narrowing
+    taxonomic notes and adding the Docampo 2013 GO-definition review at record level.
