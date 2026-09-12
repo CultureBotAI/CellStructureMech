@@ -1,0 +1,260 @@
+identifier: GO:0005628
+label: prospore membrane
+structure_category: SPORE
+structure_kind: MEMBRANE
+definition: An ascospore-forming fungal double-membrane structure that grows from
+  meiotic outer plaques to encapsulate meiotic nuclei and provide the foundation for
+  spore-wall assembly.
+definition_source: GO:0005628
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T09:20:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T09:21:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added exact and related GO synonymy, membrane parentage, ascospore-type
+    prospore parthood, GO leading-edge and attachment-site parts, lipid bilayer and
+    leading-edge-coat components, Saccharomyces scope, GO-grounded functions, DOI/GO
+    evidence, a nonmechanistic assembly graph, a leading-edge-coat grounding TODO,
+    and an SPB boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-12T09:22:12Z'
+  curator: codex
+  action: TIGHTENED_MODELING
+  changes: Retargeted the prospore membrane encapsulation graph edge from the whole
+    ascospore-type prospore to the haploid meiotic nucleus, which the membrane surrounds
+    during ascospore assembly.
+  llm_assisted: true
+synonyms:
+- synonym_text: ascospore-type prospore membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005628
+- synonym_text: FSM
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005628
+- synonym_text: forespore membrane
+  synonym_type: RELATED_SYNONYM
+  source: GO:0005628
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0042764
+has_part:
+- GO:0070056
+- GO:0070057
+components:
+- component_id: prospore_membrane_lipid_bilayer
+  label: prospore membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Double membrane that expands from the meiotic spindle-pole body region and
+    surrounds haploid nuclei during ascospore formation.
+  evidence:
+  - reference: GO:0005628
+    notes: GO:0005628 defines the prospore membrane as a double-membraned structure
+      that extends from the cytoplasmic face of spindle pole bodies during meiosis.
+  - reference: DOI:10.1083/jcb.140.1.29
+    notes: Neiman 1998 analyzed prospore membrane formation in Saccharomyces cerevisiae
+      as a sporulation-specific branch of post-Golgi secretion.
+- component_id: leading_edge_protein_coat
+  label: prospore membrane leading edge protein coat
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SSP1
+  - ADY3
+  - DON1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The leading-edge protein coat is curated from yeast localization
+    and protein-identification studies; no exact source-neutral Complex Portal, GO,
+    InterPro, Pfam or NCBIfam term was chosen for the whole transient coat or for
+    its individual budding-yeast subunit families.
+  role: Protein coat at the lip of the growing prospore membrane that marks the leading
+    edge before membrane closure.
+  evidence:
+  - reference: GO:0070056
+    notes: GO:0070056 defines the prospore membrane leading edge as the protein-coated
+      region that extends to surround the spore nucleus.
+  - reference: DOI:10.1093/emboj/20.24.6946
+    notes: Moreno-Borchart et al. 2001 linked formation of the Saccharomyces prospore
+      membrane to leading-edge protein coat assembly.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast builds prospore membranes during the sporulation program; this
+    species-level scope avoids asserting conservation of the membrane or leading-edge
+    protein set across all ascospore-forming fungi.
+  reference: DOI:10.1083/jcb.140.1.29
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which secretory trafficking, meiotic outer plaques,
+    and leading-edge coat proteins were tied to prospore membrane assembly.
+  reference: DOI:10.1093/emboj/20.24.6946
+functions:
+- function_id: ascospore_type_prospore_membrane_formation
+  label: ascospore-type prospore membrane formation
+  grounding: GO:0032120
+  description: The prospore membrane initiates at the meiotic outer plaque, grows
+    around each haploid nucleus, and closes to form the nascent ascospore membrane.
+  evidence:
+  - reference: GO:0032120
+    notes: GO:0032120 defines this process as formation of a nascent membrane at the
+      meiotic outer plaque through growth and closure.
+  - reference: DOI:10.1093/emboj/19.14.3657
+    notes: Knop and Strasser 2000 connected yeast spindle pole body remodeling to
+      prospore membrane assembly.
+- function_id: ascospore_type_prospore_assembly
+  label: ascospore-type prospore assembly
+  grounding: GO:0031321
+  description: Expansion and closure of the prospore membrane encapsulate haploid
+    meiotic nuclei to create immature ascospores.
+  evidence:
+  - reference: GO:0031321
+    notes: GO:0031321 defines ascospore-type prospore assembly as the encapsulation
+      of each haploid nucleus by a double membrane.
+evidence:
+- reference: GO:0005628
+  notes: Gene Ontology cellular-component term for the prospore membrane.
+- reference: GO:0042764
+  notes: Gene Ontology cellular-component term for the ascospore-type prospore that
+    has the prospore membrane as a part.
+- reference: GO:0070056
+  notes: Gene Ontology cellular-component term for the prospore membrane leading edge.
+- reference: GO:0070057
+  notes: Gene Ontology cellular-component term for the prospore membrane spindle pole
+    body attachment site.
+- reference: GO:0032120
+  notes: Gene Ontology biological-process term for ascospore-type prospore membrane
+    formation.
+- reference: GO:0031321
+  notes: Gene Ontology biological-process term for ascospore-type prospore assembly.
+- reference: DOI:10.1083/jcb.140.1.29
+  notes: Neiman 1998, Prospore Membrane Formation Defines a Developmentally Regulated
+    Branch of the Secretory Pathway in Yeast, Journal of Cell Biology.
+- reference: DOI:10.1093/emboj/19.14.3657
+  notes: Knop and Strasser 2000, Role of the spindle pole body of yeast in mediating
+    assembly of the prospore membrane during meiosis, The EMBO Journal.
+- reference: DOI:10.1093/emboj/20.24.6946
+  notes: Moreno-Borchart et al. 2001, Prospore membrane formation linked to the leading
+    edge protein (LEP) coat assembly, The EMBO Journal.
+causal_graphs:
+- graph_id: secretory_vesicles_build_prospore_membrane
+  title: Secretory vesicles and the leading edge build the prospore membrane
+  description: During budding-yeast sporulation, post-Golgi secretory vesicles fuse
+    at meiotic outer plaques to generate prospore membranes, while leading-edge coat
+    proteins track the open rim of the growing membrane before closure.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph summarizes where the membrane initiates and where the leading-edge
+    coat localizes without asserting the full SNARE, phospholipase D, septin, or spindle-pole-body
+    remodeling pathway.
+  nodes:
+  - node_id: post_golgi_secretory_vesicles
+    label: post-Golgi secretory vesicles
+    node_type: STRUCTURE
+  - node_id: meiotic_outer_plaque
+    label: meiotic outer plaque
+    node_type: STRUCTURE
+  - node_id: prospore_membrane
+    label: prospore membrane
+    node_type: STRUCTURE
+    grounding: GO:0005628
+  - node_id: lep_coat
+    label: prospore membrane leading edge protein coat
+    node_type: GENE_OR_PROTEIN
+    component_ref: leading_edge_protein_coat
+  - node_id: prospore_membrane_leading_edge
+    label: prospore membrane leading edge
+    node_type: STRUCTURE
+    grounding: GO:0070056
+  - node_id: haploid_meiotic_nucleus
+    label: haploid meiotic nucleus
+    node_type: ORGANELLE
+  edges:
+  - subject: post_golgi_secretory_vesicles
+    predicate: fuse to form
+    object: prospore_membrane
+    description: Sporulation-specific post-Golgi vesicle traffic fuses into the de
+      novo prospore membrane.
+    evidence:
+    - reference: DOI:10.1083/jcb.140.1.29
+      notes: Neiman 1998 showed that late secretory pathway components are required
+        for prospore membrane formation.
+  - subject: meiotic_outer_plaque
+    predicate: anchors initiation of
+    object: prospore_membrane
+    description: The prospore membrane initiates from meiotic outer plaques on spindle
+      pole bodies.
+    evidence:
+    - reference: DOI:10.1093/emboj/19.14.3657
+      notes: Knop and Strasser 2000 studied the spindle-pole-body role in assembling
+        prospore membranes during meiosis.
+    - reference: GO:0032120
+      notes: GO:0032120 defines prospore membrane formation as nascent membrane growth
+        from the meiotic outer plaque.
+  - subject: lep_coat
+    predicate: localizes to
+    object: prospore_membrane_leading_edge
+    description: Leading-edge protein coat components mark the lip of the extending
+      prospore membrane.
+    evidence:
+    - reference: DOI:10.1093/emboj/20.24.6946
+      notes: Moreno-Borchart et al. 2001 tied LEP coat assembly to formation of the
+        growing prospore membrane.
+    - reference: GO:0070056
+      notes: GO:0070056 describes a protein-coated leading-edge region on the prospore
+        membrane.
+  - subject: prospore_membrane
+    predicate: encapsulates
+    object: haploid_meiotic_nucleus
+    description: Prospore membrane growth and closure encapsulate the haploid meiotic
+      nucleus during immature ascospore formation.
+    evidence:
+    - reference: GO:0005628
+      notes: GO:0005628 defines the prospore membrane as encompassing the nuclear
+        lobes formed during meiosis.
+    - reference: GO:0031321
+      notes: GO:0031321 defines ascospore-type prospore assembly as encapsulation
+        of each haploid nucleus by a double membrane.
+discussions:
+- discussion_id: ground_leading_edge_coat_subunits
+  prompt: Resolve exact source-neutral groundings and component boundaries for the
+    prospore membrane leading-edge coat subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#leading_edge_protein_coat
+  rationale: The initial record treats the leading-edge coat as one reviewed-label-only
+    constituent and records Saccharomyces SSP1, ADY3 and DON1 as gene-symbol metadata.
+    Exact family groundings for individual Ssp1, Ady3, Don1 and Irc10 components,
+    and the boundary between stable coat proteins and Spo20/Sso1 fusion machinery,
+    need a focused curation pass.
+  evidence:
+  - reference: DOI:10.1093/emboj/20.24.6946
+  posed_by: codex
+  posed_date: '2026-09-12'
+- discussion_id: exclude_spindle_pole_body_from_components
+  prompt: Should the meiotic spindle pole body or meiotic outer plaque be modeled
+    as a prospore membrane component?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#secretory_vesicles_build_prospore_membrane
+  rationale: The meiotic outer plaque nucleates and anchors prospore membrane formation,
+    but it is a specialization of the spindle pole body rather than a molecular constituent
+    of the membrane itself.
+  evidence:
+  - reference: DOI:10.1093/emboj/19.14.3657
+  posed_by: codex
+  posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'
+  resolution_note: Excluded from components and represented only as an assembly-site
+    node in the nonmechanistic graph.
