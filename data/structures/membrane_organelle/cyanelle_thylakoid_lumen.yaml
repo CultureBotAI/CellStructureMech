@@ -1,0 +1,149 @@
+identifier: GO:0033114
+label: cyanelle thylakoid lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The cyanelle compartment bounded by the thylakoid membranes.
+definition_source: GO:0033114
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T22:25:23Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T22:25:53Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added plastid thylakoid-lumen parentage, cyanelle thylakoid parthood, the
+    UniProt SL-0084 xref, glaucophyte distribution, a nonmechanistic lumen topology
+    graph, and a resolved interpretation that keeps the bounding thylakoid membrane
+    out of lumen components.
+  llm_assisted: true
+- timestamp: '2026-09-12T22:31:37Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #714 by citing GO:0009843 on the parthood edge that points from
+    the cyanelle thylakoid lumen to the cyanelle thylakoid.'
+  llm_assisted: true
+parent_structures:
+- GO:0031978
+part_of:
+- GO:0009843
+xrefs:
+- uniprot.location:SL-0084
+taxonomic_distribution:
+- taxon_id: NCBITaxon:38254
+  taxon_label: Glaucocystophyceae
+  presence: COMMON
+  note: Glaucophyte cyanelles contain internal thylakoids with lumens enclosed by
+    cyanelle thylakoid membranes.
+  reference: DOI:10.5586/asbp.2015.020
+- taxon_id: NCBITaxon:2762
+  taxon_label: Cyanophora paradoxa
+  presence: COMMON
+  note: Cyanophora paradoxa cyanelles contain thylakoid compartments bounded by internal
+    thylakoid membranes.
+  reference: DOI:10.1104/pp.71.2.409
+canonical_examples:
+- taxon_id: NCBITaxon:2762
+  taxon_label: Cyanophora paradoxa
+  note: Model glaucophyte used for ultrastructural studies of cyanelle thylakoid and
+    envelope membranes.
+  reference: DOI:10.1104/pp.71.2.409
+evidence:
+- reference: GO:0033114
+  notes: Gene Ontology cellular-component term for cyanelle thylakoid lumen.
+- reference: GO:0031978
+  notes: Gene Ontology cellular-component term for plastid thylakoid lumen, the broader
+    plastid-specific thylakoid lumen parent.
+- reference: GO:0009843
+  notes: Gene Ontology cellular-component term for the cyanelle thylakoid that contains
+    this lumen.
+- reference: GO:0033115
+  notes: Gene Ontology cellular-component term for the cyanelle thylakoid membrane
+    that bounds this lumen.
+- reference: uniprot.location:SL-0084
+  notes: UniProt Subcellular Location entry SL-0084 maps directly to GO:0033114, places
+    it under plastid thylakoid lumen and cyanelle thylakoid, and describes the compartment
+    as bounded by thylakoid membranes.
+- reference: uniprot.location:SL-0085
+  notes: UniProt Subcellular Location entry SL-0085 maps the bounding cyanelle thylakoid
+    membrane to GO:0033115.
+- reference: DOI:10.1104/pp.71.2.409
+  notes: Giddings, Wasmann and Staehelin 1983, Structure of the Thylakoids and Envelope
+    Membranes of the Cyanelles of Cyanophora paradoxa, Plant Physiology.
+- reference: DOI:10.5586/asbp.2015.020
+  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
+    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
+causal_graphs:
+- graph_id: cyanelle_thylakoid_lumen_topology
+  title: Cyanelle thylakoid lumen topology
+  description: The cyanelle thylakoid lumen is the internal cyanelle thylakoid compartment
+    enclosed by thylakoid membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining thylakoid-lumen boundary without asserting
+    lumenal proteins or photosynthetic proton transport mechanisms.
+  nodes:
+  - node_id: cyanelle_thylakoid_lumen
+    label: cyanelle thylakoid lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0033114
+  - node_id: cyanelle_thylakoid_membrane
+    label: cyanelle thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0033115
+  - node_id: cyanelle_thylakoid
+    label: cyanelle thylakoid
+    node_type: STRUCTURE
+    grounding: GO:0009843
+  edges:
+  - subject: cyanelle_thylakoid_lumen
+    predicate: is part of
+    object: cyanelle_thylakoid
+    description: The lumen is the internal compartment of the cyanelle thylakoid.
+    evidence:
+    - reference: GO:0033114
+      notes: GO:0033114 is the cyanelle thylakoid lumen cellular-component term.
+    - reference: GO:0009843
+      notes: GO:0009843 identifies the containing cyanelle thylakoid compartment.
+    - reference: uniprot.location:SL-0084
+      notes: UniProt SL-0084 places the lumen under the cyanelle thylakoid location
+        hierarchy.
+  - subject: cyanelle_thylakoid_membrane
+    predicate: encloses
+    object: cyanelle_thylakoid_lumen
+    description: The cyanelle thylakoid membrane encloses the thylakoid lumen.
+    evidence:
+    - reference: GO:0033114
+      notes: GO:0033114 defines the lumen as the cyanelle compartment bounded by thylakoid
+        membranes.
+    - reference: uniprot.location:SL-0084
+      notes: UniProt SL-0084 describes the lumen as the compartment bounded by the
+        thylakoid membranes.
+    - reference: GO:0033115
+      notes: GO:0033115 defines the cyanelle thylakoid membrane that bounds the lumen.
+    - reference: uniprot.location:SL-0085
+      notes: UniProt SL-0085 maps the bounding cyanelle thylakoid membrane to GO:0033115.
+discussions:
+- discussion_id: boundary_membrane_not_lumen_component
+  prompt: Keep the cyanelle thylakoid membrane as the boundary of the cyanelle thylakoid
+    lumen rather than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#cyanelle_thylakoid_lumen_topology
+  rationale: GO:0033114 denotes the lumenal compartment bounded by thylakoid membranes,
+    whereas GO:0033115 denotes the cyanelle thylakoid lipid bilayer membrane that
+    bounds that compartment.
+  resolution_note: Represented GO:0033115 as the boundary node in the topology graph
+    without a component_ref and left the lumen record without constituent components.
+  evidence:
+  - reference: GO:0033114
+    notes: GO:0033114 defines the cyanelle thylakoid lumen as the cyanelle compartment
+      bounded by thylakoid membranes.
+  - reference: GO:0033115
+    notes: GO:0033115 defines the cyanelle thylakoid membrane as the lipid bilayer
+      of a cyanelle thylakoid.
+  posed_by: codex
+  posed_date: '2026-09-12'
