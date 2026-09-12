@@ -1,0 +1,191 @@
+identifier: GO:0000937
+label: dolipore septum
+structure_category: ENVELOPE
+structure_kind: ENVELOPE_LAYER
+definition: A porous fungal cell septum in which the cross-wall swells around a central
+  pore and the pore is capped on both sides by septal pore caps called parenthesomes.
+definition_source: GO:0000937
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T04:46:52Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T04:47:25Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added dolipore septum synonymy, porous-cell-septum parentage, reviewed
+    label-only septal-wall and septal-pore-cap components, Agaricomycotina taxonomy,
+    a Schizophyllum commune canonical example, a septal pore gatekeeping function,
+    DOI/GO evidence, a nonmechanistic pore-gating graph, and a grounding TODO for
+    septal pore cap proteins.
+  llm_assisted: true
+synonyms:
+- synonym_text: dolipore-parenthesome septum
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1139/m78-129
+- synonym_text: septal pore complex
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.mycres.2008.12.007
+parent_structures:
+- GO:0000934
+components:
+- component_id: barrel_shaped_septal_swelling
+  label: barrel-shaped septal swelling
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The wall thickening around a dolipore is a morphologic subregion
+    of a fungal porous septum; no exact GO, CHEBI or polymer CURIE denotes it without
+    also asserting a broader wall chemistry.
+  essentiality: UNKNOWN
+  role: Forms the swollen cross-wall around the central septal pore.
+  evidence:
+  - reference: GO:0000937
+    notes: GO:0000937 defines the dolipore septum as a cross-wall swollen around a
+      central pore.
+  - reference: DOI:10.1139/m78-129
+    notes: Traquair and McKeen 1978 used transmission electron microscopy to describe
+      the dolipore-parenthesome septum in Hirschioporus pargamenus hyphae.
+- component_id: septal_pore_cap
+  label: septal pore cap
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The parenthesome or septal pore cap is curated here as a named
+    dolipore-associated substructure; QuickGO has no exact parenthesome or septal-pore-cap
+    cellular-component term, and no single protein-family grounding spans the whole
+    cap.
+  essentiality: UNKNOWN
+  role: Covers both cytoplasmic faces of the dolipore and participates in septal pore
+    plugging.
+  evidence:
+  - reference: DOI:10.1128/EC.00125-08
+    notes: Van Driel et al. 2008 localized the SPC18 glycoprotein to Rhizoctonia solani
+      septal pore caps and to pore plugs, supporting a cap role in dolipore plugging.
+  - reference: DOI:10.1111/j.1462-2920.2009.02122.x
+    notes: Van Peer et al. 2010 showed that Schizophyllum commune septal pore caps
+      are proteinaceous, membrane-covered structures whose loss impairs septal closure.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5302
+  taxon_label: Agaricomycotina
+  presence: COMMON
+  note: Dolipore septa with septal pore caps occur in many filamentous Agaricomycotina,
+    while pore-cap morphology varies among sampled lineages.
+  reference: DOI:10.1016/j.mycres.2008.12.007
+canonical_examples:
+- taxon_id: NCBITaxon:5334
+  taxon_label: Schizophyllum commune
+  note: Wood-rot agaricomycete model in which septal pore cap composition and its
+    requirement for normal septal closure, vegetative growth and mushroom formation
+    were genetically tested.
+  reference: DOI:10.1111/j.1462-2920.2009.02122.x
+functions:
+- function_id: septal_pore_gatekeeping
+  label: septal pore gatekeeping
+  description: The dolipore septum and its septal pore caps regulate cytoplasmic continuity
+    between adjacent hyphal compartments by controlling whether the central septal
+    pore is open or plugged.
+  evidence:
+  - reference: DOI:10.1128/EC.00125-08
+    notes: Van Driel et al. 2008 found SPC18 in septal pore caps and pore plugs, supporting
+      septal pore cap participation in dolipore plugging.
+  - reference: DOI:10.1111/j.1462-2920.2009.02122.x
+    notes: Van Peer et al. 2010 linked Schizophyllum commune septal pore cap loss
+      to an inability to close septa.
+evidence:
+- reference: GO:0000937
+  notes: Gene Ontology cellular-component term for the dolipore septum.
+- reference: DOI:10.1139/m78-129
+  notes: Traquair and McKeen 1978, Ultrastructure of the dolipore-parenthesome septum
+    in Hirschioporus pargamenus (Polyporaceae), Canadian Journal of Microbiology.
+- reference: DOI:10.1016/j.mycres.2008.12.007
+  notes: Van Driel et al. 2009, Septal pore complex morphology in the Agaricomycotina
+    (Basidiomycota) with emphasis on the Cantharellales and Hymenochaetales, Mycological
+    Research.
+- reference: DOI:10.1128/EC.00125-08
+  notes: Van Driel et al. 2008, Septal Pore Cap Protein SPC18, Isolated from the Basidiomycetous
+    Fungus Rhizoctonia solani, Also Resides in Pore Plugs, Eukaryotic Cell.
+- reference: DOI:10.1111/j.1462-2920.2009.02122.x
+  notes: Van Peer et al. 2010, The septal pore cap is an organelle that functions
+    in vegetative growth and mushroom formation of the wood-rot fungus Schizophyllum
+    commune, Environmental Microbiology.
+causal_graphs:
+- graph_id: dolipore_septum_pore_gating
+  title: Parenthesomes cover and help plug the dolipore
+  description: A barrel-shaped septal wall surrounds the central pore, septal pore
+    caps cover both cytoplasmic faces of that pore, and the caps participate in plugging
+    the pore to gate exchange between adjacent hyphal compartments.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the ultrastructural arrangement and pore-gating
+    role of the parenthesome without asserting a conserved molecular assembly pathway
+    for all Agaricomycotina septal pore caps.
+  nodes:
+  - node_id: barrel_shaped_septal_swelling
+    label: barrel-shaped septal swelling
+    node_type: STRUCTURE
+    component_ref: barrel_shaped_septal_swelling
+  - node_id: central_septal_pore
+    label: central septal pore
+    node_type: STRUCTURE
+  - node_id: septal_pore_cap
+    label: septal pore cap
+    node_type: STRUCTURE
+    component_ref: septal_pore_cap
+  - node_id: dolipore_septum
+    label: dolipore septum
+    node_type: STRUCTURE
+    grounding: GO:0000937
+  edges:
+  - subject: barrel_shaped_septal_swelling
+    predicate: surrounds
+    object: central_septal_pore
+    description: The cross-wall thickens into a barrel-shaped swelling around the
+      central pore.
+    evidence:
+    - reference: GO:0000937
+      notes: GO:0000937 defines the dolipore septum by a central pore whose surrounding
+        septum is swollen.
+  - subject: septal_pore_cap
+    predicate: covers
+    object: central_septal_pore
+    description: Septal pore caps, or parenthesomes, sit on both sides of the dolipore
+      septum over the central pore.
+    evidence:
+    - reference: GO:0000937
+      notes: GO:0000937 includes parenthesome-covered central pores in the dolipore
+        septum definition.
+    - reference: DOI:10.1128/EC.00125-08
+      notes: Van Driel et al. 2008 described septal pore caps as associated with dolipore
+        septa in Agaricomycotina.
+  - subject: septal_pore_cap
+    predicate: plugs
+    object: central_septal_pore
+    description: Septal pore caps participate in plugging the central pore of the
+      dolipore.
+    evidence:
+    - reference: DOI:10.1128/EC.00125-08
+      notes: Van Driel et al. 2008 found SPC18 in both septal pore caps and pore plugs
+        in Rhizoctonia solani.
+    - reference: DOI:10.1111/j.1462-2920.2009.02122.x
+      notes: Van Peer et al. 2010 showed that Schizophyllum commune septal pore cap
+        loss prevents septal closure.
+discussions:
+- discussion_id: ground_septal_pore_cap_proteins
+  prompt: Resolve source-neutral groundings for septal pore cap proteins before adding
+    SPC18, Spc14, Spc33 or homologous pore-plugging proteins as dolipore septum components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septal_pore_cap
+  - causal_graphs#dolipore_septum_pore_gating
+  rationale: SPC18 was identified in Rhizoctonia solani and Spc14/Spc33 were tested
+    in Schizophyllum commune, but this pass did not identify an exact InterPro, Pfam
+    or NCBIfam family that denotes a source-neutral septal pore cap component class.
+  evidence:
+  - reference: DOI:10.1128/EC.00125-08
+  - reference: DOI:10.1111/j.1462-2920.2009.02122.x
+  posed_by: codex
+  posed_date: '2026-09-12'
