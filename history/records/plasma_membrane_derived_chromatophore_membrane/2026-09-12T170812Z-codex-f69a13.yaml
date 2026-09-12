@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
+  slug: plasma_membrane_derived_chromatophore_membrane
+session:
+  id: 2026-09-12T170812Z-codex-f69a13
+  timestamp: '2026-09-12T17:08:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/680
+  - https://github.com/CultureBotAI/CellStructureMech/issues/681
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/679
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added plasma membrane-derived chromatophore membrane record
+  details: Created an evidence-backed GO:0042717 plasma membrane-derived chromatophore membrane
+    record for purple photosynthetic bacterial chromatophores, linked UniProt SL-0042, modeled
+    the membrane-localized RC-LH1-PufX, LH2, cytochrome bc1 and F0F1-ATP synthase complex
+    cohorts with reviewed-label-only grounding, added Cereibacter sphaeroides canonical evidence,
+    regenerated embeddings and rendered pages, then addressed review findings about the ambiguous
+    chromatophore membrane synonym and an under-supported proton-motive-force graph edge.
