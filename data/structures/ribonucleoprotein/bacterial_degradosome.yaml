@@ -27,6 +27,13 @@ curation_history:
   changes: Changed the unqualified RNA degradosome synonym from exact to related because
     GO:1990061 denotes the bacterial degradosome specifically.
   llm_assisted: true
+- timestamp: '2026-09-12T00:58:34Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #560 by removing the unsupported ams alias; resolved #558 by
+    narrowing the Escherichia coli canonical example to Vanzo-supported RNase E scaffold
+    mapping; resolved #559 by simplifying the mRNA catabolic process description.'
+  llm_assisted: true
 synonyms:
 - synonym_text: RNA degradosome
   synonym_type: RELATED_SYNONYM
@@ -41,7 +48,6 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - rne
-  - ams
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: RNase E is the catalytic and scaffolding component of the Escherichia
@@ -123,15 +129,15 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: Model bacterium in which the RNase E, PNPase, RhlB and enolase RNA degradosome
-    was discovered and mapped.
+  note: Model bacterium in which the RNase E scaffold interactions with PNPase, RhlB
+    and enolase were mapped.
   reference: DOI:10.1101/gad.12.17.2770
 functions:
 - function_id: mrna_catabolic_process
   label: mRNA catabolic process
   grounding: GO:0006402
-  description: The E. coli bacterial degradosome couples RNase E cleavage, PNPase
-    exoribonuclease activity and RhlB helicase activity in mRNA decay.
+  description: The E. coli RNase E-based degradosome participates in bacterial mRNA
+    degradation.
   evidence:
   - reference: GO:0006402
     notes: GO:0006402 is the Gene Ontology biological-process term for mRNA catabolism.
