@@ -21,6 +21,13 @@ curation_history:
     DOI/GO evidence, a nonmechanistic branched actin-patch assembly graph, and an
     accessory component-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T08:34:59Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #615 review issues #616 and #617 by removing the downstream
+    endocytic-internalization node from the assembly graph and moving Arp2/3-regulator
+    evidence off the Arp2/3 component.'
+  llm_assisted: true
 parent_structures:
 - GO:0015629
 part_of:
@@ -59,9 +66,6 @@ components:
   - reference: DOI:10.1083/jcb.200404159
     notes: Young, Cooper and Bridgman 2004 described yeast actin-patch branches characteristic
       of the Arp2/3 complex.
-  - reference: DOI:10.1371/journal.pbio.0060001
-    notes: Galletta, Chuang and Cooper 2008 used yeast cortical actin patches to analyze
-      Arp2/3-regulator roles during patch assembly and movement.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -117,8 +121,7 @@ causal_graphs:
 - graph_id: arp2_3_branched_actin_patch_assembly
   title: Arp2/3 nucleates a branched actin network in yeast cortical patches
   description: In Saccharomyces cerevisiae, Arp2/3 promotes formation of short branched
-    actin filaments at cortical endocytic sites, producing actin cortical patches
-    that move inward during endocytic internalization.
+    actin filaments at cortical endocytic sites, producing actin cortical patches.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures actin and Arp2/3 at the level of this first record
@@ -141,9 +144,6 @@ causal_graphs:
     label: actin cortical patch
     node_type: STRUCTURE
     grounding: GO:0030479
-  - node_id: endocytic_internalization
-    label: endocytic internalization
-    node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: arp2_3_complex
     predicate: nucleates branches in
@@ -172,15 +172,6 @@ causal_graphs:
     - reference: DOI:10.1016/S0092-8674(03)00883-3
       notes: Kaksonen, Sun and Drubin 2003 analyzed actin recruitment during yeast
         endocytic internalization.
-  - subject: actin_cortical_patch
-    predicate: moves during
-    object: endocytic_internalization
-    description: Cortical actin patches move inward from the cell cortex as yeast
-      endocytic internalization proceeds.
-    evidence:
-    - reference: DOI:10.1016/S0092-8674(03)00883-3
-      notes: Kaksonen, Sun and Drubin 2003 followed actin and endocytic proteins during
-        patch internalization.
 discussions:
 - discussion_id: resolve_actin_patch_accessory_components
   prompt: Resolve exact source-neutral groundings and record scope for cortical actin-patch
