@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/organellar_chromatophore_thylakoid.yaml
+  slug: organellar_chromatophore_thylakoid
+session:
+  id: 2026-09-12T124358Z-codex-f6969d
+  timestamp: '2026-09-12T12:43:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/646
+  - https://github.com/CultureBotAI/CellStructureMech/issues/647
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/645
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added organellar chromatophore thylakoid record
+  details: 'Created an evidence-backed GO:0070116 organellar chromatophore thylakoid record
+    with GO and UniProt thylakoid lumen and membrane evidence, Paulinella chromatophora distribution
+    and canonical-example evidence, rendered pages, and review fixes for PR #645.'
