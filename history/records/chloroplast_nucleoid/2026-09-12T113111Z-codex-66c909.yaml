@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/nucleoid/chloroplast_nucleoid.yaml
+  slug: chloroplast_nucleoid
+session:
+  id: 2026-09-12T113111Z-codex-66c909
+  timestamp: '2026-09-12T11:31:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/637
+  - https://github.com/CultureBotAI/CellStructureMech/issues/638
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/636
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0042644 chloroplast nucleoid
+  details: 'Added an evidence-backed GO:0042644 chloroplast nucleoid record with Chlamydomonas
+    HLP primary evidence, chloroplast-stroma parthood, plastid-nucleoid parentage, reviewed-label-only
+    chloroplast DNA and HU-like protein components, a nonmechanistic HLP organization graph,
+    regenerated embeddings and pages, and adversarial review fixes for #637 and #638.'
