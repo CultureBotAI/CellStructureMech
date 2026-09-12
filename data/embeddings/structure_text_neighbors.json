@@ -2498,6 +2498,11 @@
           "cosine_similarity": 0.91302203
         },
         {
+          "identifier": "GO:0033985",
+          "label": "acidocalcisome lumen",
+          "cosine_similarity": 0.79160837
+        },
+        {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
           "cosine_similarity": 0.7503654
@@ -2511,11 +2516,37 @@
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
           "cosine_similarity": 0.7279258
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0033985",
+      "label": "acidocalcisome lumen",
+      "neighbors": [
+        {
+          "identifier": "GO:0033102",
+          "label": "acidocalcisome membrane",
+          "cosine_similarity": 0.83234038
         },
         {
-          "identifier": "GO:0070118",
-          "label": "organellar chromatophore thylakoid membrane",
-          "cosine_similarity": 0.72673812
+          "identifier": "GO:0070117",
+          "label": "organellar chromatophore thylakoid lumen",
+          "cosine_similarity": 0.79533334
+        },
+        {
+          "identifier": "GO:0020022",
+          "label": "acidocalcisome",
+          "cosine_similarity": 0.79160837
+        },
+        {
+          "identifier": "GO:0033114",
+          "label": "cyanelle thylakoid lumen",
+          "cosine_similarity": 0.77664376
+        },
+        {
+          "identifier": "GO:0070115",
+          "label": "organellar chromatophore intermembrane space",
+          "cosine_similarity": 0.75942156
         }
       ]
     },
@@ -2527,6 +2558,11 @@
           "identifier": "GO:0020022",
           "label": "acidocalcisome",
           "cosine_similarity": 0.91302203
+        },
+        {
+          "identifier": "GO:0033985",
+          "label": "acidocalcisome lumen",
+          "cosine_similarity": 0.83234038
         },
         {
           "identifier": "GO:0005886",
@@ -2542,11 +2578,6 @@
           "identifier": "GO:0070112",
           "label": "organellar chromatophore membrane",
           "cosine_similarity": 0.77216369
-        },
-        {
-          "identifier": "GO:0070113",
-          "label": "organellar chromatophore inner membrane",
-          "cosine_similarity": 0.76749703
         }
       ]
     },
