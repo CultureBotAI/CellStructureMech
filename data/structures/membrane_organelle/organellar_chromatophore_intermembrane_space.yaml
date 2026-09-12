@@ -20,6 +20,12 @@ curation_history:
     component, Paulinella distribution, a nonmechanistic envelope topology graph,
     and a peptidoglycan-wall grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T19:14:40Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #694 by adding record-level UniProt SL-0359 evidence for the
+    inner-membrane boundary citation used in the topology graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Paulinella-type chromatophore intermembrane space
   synonym_type: EXACT_SYNONYM
@@ -71,6 +77,10 @@ evidence:
 - reference: GO:0070114
   notes: Gene Ontology cellular-component term for the organellar chromatophore outer
     membrane that delimits this space.
+- reference: uniprot.location:SL-0359
+  notes: UniProt Subcellular Location entry SL-0359 maps directly to GO:0070113 and
+    describes the organellar chromatophore inner membrane as separating the chromatophore
+    stroma from the intermembrane space.
 - reference: uniprot.location:SL-0360
   notes: UniProt Subcellular Location entry SL-0360 maps directly to GO:0070115, places
     it under plastid intermembrane space, and describes its Paulinella-specific taxonomic
