@@ -1,0 +1,219 @@
+identifier: GO:0033117
+label: esterosome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A vesicle filled with crystalline protein that shows sequence similarities
+  with various esterases.
+definition_source: GO:0033117
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T16:19:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T16:20:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO and UniProt Subcellular Location xrefs, esterosome membrane and
+    lumen parts, RER-like membrane and reviewed-label-only crystal protein components,
+    Dictyostelium scope and example curation, record-level DOI evidence, a nonmechanistic
+    protein-crystal enclosure graph, and a grounding TODO for exact esterosome crystal
+    protein families.
+  llm_assisted: true
+- timestamp: '2026-09-12T16:21:06Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Modeled the esterosome membrane graph edge as parthood rather than whole-organelle
+    enclosure and narrowed the SL-0108 evidence note to the direct UniProt location-to-GO
+    mapping.
+  llm_assisted: true
+parent_structures:
+- GO:0031410
+has_part:
+- GO:0034467
+- GO:0033118
+xrefs:
+- uniprot.location:SL-0109
+components:
+- component_id: esterosome_membrane
+  label: esterosome membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0033118
+  essentiality: ESSENTIAL
+  role: Rough-endoplasmic-reticulum-like lipid bilayer that encloses the esterosome
+    crystal-filled lumen.
+  evidence:
+  - reference: GO:0033118
+    notes: GO:0033118 defines the esterosome membrane as the lipid bilayer surrounding
+      an esterosome.
+  - reference: DOI:10.1083/jcb.110.3.669
+    notes: Bomblies et al. 1990 used electron microscopy to show that Dictyostelium
+      discoideum esterosome crystals are enclosed by a membrane with rough endoplasmic
+      reticulum characteristics.
+- component_id: esterosome_crystal_proteins
+  label: esterosome crystal proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - cryS
+  - D2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Dictyostelium crystal protein and cAMP-regulated D2 protein
+    are both type-B carboxylesterase/lipase-family members, but InterPro and Pfam
+    terms for these enzymes cover broad hydrolase families rather than the exact esterosome-localized
+    crystal-protein set.
+  role: Major esterase-like proteins that pack into the crystalline core of the Dictyostelium
+    esterosome.
+  evidence:
+  - reference: DOI:10.1083/jcb.110.3.669
+    notes: Bomblies et al. 1990 purified two major proteins from isolated Dictyostelium
+      crystal fractions and localized antibodies against the crystal protein and the
+      D2 protein to intracellular crystals.
+  - reference: uniprot.location:SL-0108
+    notes: UniProt Subcellular Location entry SL-0108 maps Esterosome membrane to
+      GO:0033118.
+  protein_examples:
+  - uniprot_id: UniProtKB:P21837
+    protein_label: Crystal protein
+    gene_symbol: cryS
+    taxon_id: NCBITaxon:44689
+    taxon_label: Dictyostelium discoideum
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-12'
+    role: Reviewed UniProtKB entry for the Dictyostelium crystal protein encoded by
+      cryS.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P21837
+      notes: UniProtKB reviewed entry P21837 establishes the crystal protein accession,
+        label and cryS gene identity.
+    - reference: DOI:10.1083/jcb.110.3.669
+      notes: Bomblies et al. 1990 sequenced the Dictyostelium crystal protein N-terminus
+        and localized the protein to esterosome crystals by immunoelectron microscopy.
+  - uniprot_id: UniProtKB:P18142
+    protein_label: cAMP-regulated D2 protein
+    gene_symbol: D2
+    taxon_id: NCBITaxon:44689
+    taxon_label: Dictyostelium discoideum
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-12'
+    role: Reviewed UniProtKB entry for the Dictyostelium cAMP-regulated D2 protein.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P18142
+      notes: UniProtKB reviewed entry P18142 establishes the cAMP-regulated D2 protein
+        accession, label and D2 gene identity.
+    - reference: DOI:10.1083/jcb.110.3.669
+      notes: Bomblies et al. 1990 identified the 56 kDa esterosome crystal-associated
+        protein as the D2-gene product.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  presence: COMMON
+  note: Developing Dictyostelium discoideum cells form membrane-enclosed esterosome
+    crystals during aggregation and retain them through later multicellular stages.
+  reference: DOI:10.1083/jcb.110.3.669
+canonical_examples:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  note: Social amoeba model in which esterosome crystals, their RER-like bounding
+    membrane, and their crystal and D2 protein constituents were characterized.
+  reference: DOI:10.1083/jcb.110.3.669
+evidence:
+- reference: GO:0033117
+  notes: Gene Ontology cellular-component term for esterosome.
+- reference: GO:0034467
+  notes: Gene Ontology cellular-component term for the esterosome lumen.
+- reference: GO:0033118
+  notes: Gene Ontology cellular-component term for the esterosome membrane.
+- reference: GO:0031410
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle; UniProt
+    also places the esterosome under its cytoplasmic vesicle location.
+- reference: uniprot.location:SL-0109
+  notes: UniProt Subcellular Location entry SL-0109 maps Esterosome to GO:0033117.
+- reference: uniprot.location:SL-0108
+  notes: UniProt Subcellular Location entry SL-0108 maps Esterosome membrane to GO:0033118
+    and names it part of the esterosome.
+- reference: uniprot.location:SL-0328
+  notes: UniProt Subcellular Location entry SL-0328 maps Esterosome lumen to GO:0034467
+    and names it part of the esterosome.
+- reference: DOI:10.1083/jcb.110.3.669
+  notes: Bomblies et al. 1990 described membrane-enclosed Dictyostelium discoideum
+    esterosome crystals and characterized the crystal protein plus D2 protein as major
+    crystal-associated constituents.
+causal_graphs:
+- graph_id: crystal_protein_enclosure
+  title: Esterase-like proteins pack into a membrane-bound crystal
+  description: In Dictyostelium discoideum, esterase-like crystal and D2 proteins
+    accumulate in crystalline inclusion bodies that are enclosed by an RER-like esterosome
+    membrane.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the mature crystalline cargo and bounding membrane
+    without asserting the ER-trafficking or nucleation steps that build an esterosome.
+  nodes:
+  - node_id: esterosome_crystal_proteins
+    label: esterosome crystal proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: esterosome_crystal_proteins
+  - node_id: esterosome_membrane
+    label: esterosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0033118
+    component_ref: esterosome_membrane
+  - node_id: esterosome_lumen
+    label: esterosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034467
+  - node_id: esterosome
+    label: esterosome
+    node_type: ORGANELLE
+    grounding: GO:0033117
+  edges:
+  - subject: esterosome_crystal_proteins
+    predicate: crystallize in
+    object: esterosome_lumen
+    description: The crystal protein and D2 protein cofractionate with and immunolabel
+      the crystalline contents of the esterosome.
+    evidence:
+    - reference: DOI:10.1083/jcb.110.3.669
+      notes: Bomblies et al. 1990 purified the crystal fraction and localized the
+        crystal protein and the D2 protein to the crystals.
+  - subject: esterosome_membrane
+    predicate: bounds
+    object: esterosome_lumen
+    description: The esterosome membrane encloses the lumen occupied by the crystalline
+      protein cargo.
+    evidence:
+    - reference: GO:0034467
+      notes: GO:0034467 defines the esterosome lumen as the volume enclosed by the
+        esterosome membrane.
+    - reference: DOI:10.1083/jcb.110.3.669
+      notes: Bomblies et al. 1990 showed that the crystals are membrane-enclosed.
+  - subject: esterosome_membrane
+    predicate: is part of
+    object: esterosome
+    description: The esterosome membrane is the lipid-bilayer boundary of the esterosome.
+    evidence:
+    - reference: GO:0033118
+      notes: GO:0033118 defines the esterosome membrane as the lipid bilayer surrounding
+        an esterosome.
+discussions:
+- discussion_id: ground_esterosome_crystal_protein_families
+  prompt: Resolve exact source-neutral family groundings for the Dictyostelium esterosome
+    crystal protein and cAMP-regulated D2 protein.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#esterosome_crystal_proteins
+  rationale: This first esterosome record curates the verified proteins as members
+    of the crystalline cargo while leaving exact family identifiers open. Both proteins
+    match type-B carboxylesterase/lipase signatures, but the verified InterPro and
+    Pfam accessions are broader than the esterosome-localized crystal proteins.
+  evidence:
+  - reference: DOI:10.1083/jcb.110.3.669
+    notes: Bomblies et al. 1990 reported esterase-family sequence similarity for the
+      crystal and D2 proteins.
+  posed_by: codex
+  posed_date: '2026-09-12'
