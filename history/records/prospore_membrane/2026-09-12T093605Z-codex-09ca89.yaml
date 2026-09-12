@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/prospore_membrane.yaml
+  slug: prospore_membrane
+session:
+  id: 2026-09-12T093605Z-codex-09ca89
+  timestamp: '2026-09-12T09:36:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/622
+  - https://github.com/CultureBotAI/CellStructureMech/issues/623
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/621
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the prospore membrane record
+  details: 'Created GO:0005628 prospore membrane as a spore-specific membrane record with
+    GO synonymy and ascospore-type prospore parthood, GO leading-edge and attachment-site
+    parts, lipid-bilayer and leading-edge-coat components, Saccharomyces cerevisiae scope,
+    a GO:0031321 ascospore assembly function, DOI/GO evidence, a nonmechanistic secretory-traffic
+    and leading-edge assembly graph, and review fixes for PR #621 issues #622 and #623.'
