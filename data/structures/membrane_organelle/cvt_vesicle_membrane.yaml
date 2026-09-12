@@ -20,6 +20,12 @@ curation_history:
     distribution, a Cvt-pathway function, a nonmechanistic Cvt-delivery graph, and
     a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T23:11:36Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #718 by adding GO:0034270 to the record-level evidence list for
+    the Cvt complex node used in the causal graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0030659
 part_of:
@@ -86,6 +92,9 @@ evidence:
 - reference: GO:0032258
   notes: Gene Ontology biological-process term for cytoplasm to vacuole targeting
     by the Cvt pathway.
+- reference: GO:0034270
+  notes: Gene Ontology cellular-component term for the Cvt complex cargo node sequestered
+    by completed Cvt vesicles.
 - reference: uniprot.location:SL-0081
   notes: UniProt Subcellular Location entry SL-0081 maps directly to GO:0033110, places
     it under Cvt vesicle, and describes the membrane surrounding a double-membrane
