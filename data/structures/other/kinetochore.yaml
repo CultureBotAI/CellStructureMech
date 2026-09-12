@@ -20,6 +20,13 @@ curation_history:
     and example, chromosome-segregation function, GO/DOI evidence, an inner-to-outer
     kinetochore graph and a subcomplex-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-11T23:59:18Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #548 and #549 by replacing the terminal chromosome-segregation
+    process edge with an Ndc80-to-kinetochore assembly edge and narrowing the Cse4,
+    MIS12/MIND and Ndc80 components from ESSENTIAL to UNKNOWN.'
+  llm_assisted: true
 synonyms:
 - synonym_text: condensed chromosome kinetochore
   synonym_type: EXACT_SYNONYM
@@ -36,7 +43,7 @@ components:
   label: centromeric Cse4/CENP-A nucleosome platform
   component_type: OTHER
   component_role: CONSTITUENT
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   gene_symbols:
   - CSE4
   grounding_status: REVIEWED_LABEL_ONLY
@@ -81,7 +88,7 @@ components:
   - DSN1
   - NSL1
   - NNF1
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   role: Kinetochore subcomplex that binds centromeric chromatin proximal modules and
     helps recruit outer microtubule-binding subunits.
   evidence:
@@ -101,7 +108,7 @@ components:
   - NUF2
   - SPC24
   - SPC25
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   role: Outer kinetochore complex that couples kinetochores to spindle microtubule
     plus ends.
   evidence:
@@ -160,9 +167,8 @@ causal_graphs:
 - graph_id: yeast_inner_outer_kinetochore_bridge
   title: Inner kinetochore complexes recruit the outer microtubule-binding module
   description: In the budding-yeast kinetochore, Cse4 centromeric chromatin anchors
-    inner kinetochore assemblies; COMA and MIND/Mtw1 complexes bridge to the outer
-    Ndc80 complex, which couples kinetochores to spindle microtubules for chromosome
-    segregation.
+    inner kinetochore assemblies, COMA links DNA-proximal and microtubule-bound subunits,
+    MIND/Mtw1 recruits Ndc80, and Ndc80 forms the outer module.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: This graph places core Saccharomyces kinetochore subcomplexes in an
@@ -192,10 +198,6 @@ causal_graphs:
     label: kinetochore
     node_type: STRUCTURE
     grounding: GO:0000776
-  - node_id: chromosome_segregation
-    label: chromosome segregation
-    node_type: BIOLOGICAL_PROCESS
-    grounding: GO:0007059
   edges:
   - subject: centromeric_cse4_nucleosome
     predicate: anchors assembly of
@@ -225,14 +227,13 @@ causal_graphs:
       notes: GO:0000444 defines the MIS12/MIND type complex as helping recruit outer
         microtubule-binding kinetochore subunits.
   - subject: ndc80_complex
-    predicate: couples kinetochore to microtubules during
-    object: chromosome_segregation
-    description: The Ndc80 complex is the conserved outer-kinetochore link between
-      kinetochores and spindle microtubules.
+    predicate: forms outer microtubule-binding module of
+    object: kinetochore
+    description: The Ndc80 complex forms a conserved outer-kinetochore module of the
+      budding-yeast kinetochore.
     evidence:
     - reference: GO:0031262
-      notes: GO:0031262 defines the Ndc80 complex as an essential outer kinetochore
-        complex involved in microtubule-end attachment during mitosis.
+      notes: GO:0031262 defines the Ndc80 complex as an outer kinetochore subcomplex.
     - reference: DOI:10.1083/jcb.200305100
       notes: Westermann et al. 2003 placed Ndc80 in the budding-yeast kinetochore
         molecular core.
