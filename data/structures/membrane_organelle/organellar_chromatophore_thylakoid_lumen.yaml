@@ -18,6 +18,12 @@ curation_history:
     thylakoid parthood, UniProt SL xref, Paulinella distribution, and a nonmechanistic
     thylakoid-lumen topology graph.
   llm_assisted: true
+- timestamp: '2026-09-12T19:32:42Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #696 by adding a resolved boundary interpretation that keeps
+    the thylakoid membrane as a lumen boundary rather than a lumen component.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Paulinella-type chromatophore thylakoid lumen
   synonym_type: EXACT_SYNONYM
@@ -84,3 +90,23 @@ causal_graphs:
     - reference: uniprot.location:SL-0355
       notes: UniProt SL-0355 describes the organellar chromatophore thylakoid lumen
         as the compartment bounded by the thylakoid membrane.
+discussions:
+- discussion_id: boundary_membrane_not_lumen_component
+  prompt: Keep the organellar chromatophore thylakoid membrane as the boundary of
+    the organellar chromatophore thylakoid lumen rather than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#organellar_chromatophore_thylakoid_lumen_topology
+  rationale: GO:0070117 denotes the volume enclosed by an organellar chromatophore
+    thylakoid membrane, whereas GO:0070118 denotes the lipid bilayer membrane that
+    encloses that volume.
+  resolution_note: Represented GO:0070118 as the boundary node in the topology graph
+    without a component_ref and left the lumen record without constituent components.
+  evidence:
+  - reference: GO:0070117
+    notes: GO:0070117 defines the organellar chromatophore thylakoid lumen as the
+      volume enclosed by an organellar chromatophore thylakoid membrane.
+  - reference: GO:0070118
+    notes: GO:0070118 defines the organellar chromatophore thylakoid membrane as the
+      lipid bilayer of an organellar chromatophore thylakoid.
