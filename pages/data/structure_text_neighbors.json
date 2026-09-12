@@ -20,7 +20,7 @@
         {
           "identifier": "GO:0009289",
           "label": "pilus",
-          "cosine_similarity": 0.65629472
+          "cosine_similarity": 0.65272608
         },
         {
           "identifier": "GO:0055040",
@@ -666,7 +666,7 @@
         {
           "identifier": "GO:0009289",
           "label": "pilus",
-          "cosine_similarity": 0.72449054
+          "cosine_similarity": 0.72769841
         },
         {
           "identifier": "cellstructuremech:parm_filament",
@@ -712,7 +712,7 @@
         {
           "identifier": "GO:0009289",
           "label": "pilus",
-          "cosine_similarity": 0.62269153
+          "cosine_similarity": 0.61323208
         },
         {
           "identifier": "cellstructuremech:archaeal_cannula",
@@ -836,7 +836,7 @@
         {
           "identifier": "GO:0009289",
           "label": "pilus",
-          "cosine_similarity": 0.70301331
+          "cosine_similarity": 0.71596829
         },
         {
           "identifier": "cellstructuremech:tad_pilus",
@@ -914,27 +914,27 @@
         {
           "identifier": "cellstructuremech:tad_pilus",
           "label": "Tad pilus",
-          "cosine_similarity": 0.8243257
+          "cosine_similarity": 0.82037847
         },
         {
           "identifier": "GO:0044096",
           "label": "type IV pilus",
-          "cosine_similarity": 0.80280315
+          "cosine_similarity": 0.80981143
         },
         {
           "identifier": "GO:0140621",
           "label": "type I pilus",
-          "cosine_similarity": 0.74639477
-        },
-        {
-          "identifier": "cellstructuremech:prostheca",
-          "label": "prostheca",
-          "cosine_similarity": 0.74371449
+          "cosine_similarity": 0.7518247
         },
         {
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
-          "cosine_similarity": 0.74120873
+          "cosine_similarity": 0.72941475
+        },
+        {
+          "identifier": "GO:0098774",
+          "label": "curli",
+          "cosine_similarity": 0.72769841
         }
       ]
     },
@@ -950,7 +950,7 @@
         {
           "identifier": "GO:0009289",
           "label": "pilus",
-          "cosine_similarity": 0.74371449
+          "cosine_similarity": 0.72628072
         },
         {
           "identifier": "cellstructuremech:bactofilin_filament",
@@ -1005,14 +1005,14 @@
       "label": "Tad pilus",
       "neighbors": [
         {
-          "identifier": "GO:0009289",
-          "label": "pilus",
-          "cosine_similarity": 0.8243257
-        },
-        {
           "identifier": "GO:0044096",
           "label": "type IV pilus",
           "cosine_similarity": 0.82228521
+        },
+        {
+          "identifier": "GO:0009289",
+          "label": "pilus",
+          "cosine_similarity": 0.82037847
         },
         {
           "identifier": "cellstructuremech:prostheca",
@@ -1046,14 +1046,14 @@
           "cosine_similarity": 0.8181851
         },
         {
+          "identifier": "GO:0009289",
+          "label": "pilus",
+          "cosine_similarity": 0.7518247
+        },
+        {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.75107912
-        },
-        {
-          "identifier": "GO:0009289",
-          "label": "pilus",
-          "cosine_similarity": 0.74639477
         },
         {
           "identifier": "GO:0009422",
@@ -1079,7 +1079,7 @@
         {
           "identifier": "GO:0009289",
           "label": "pilus",
-          "cosine_similarity": 0.80280315
+          "cosine_similarity": 0.80981143
         },
         {
           "identifier": "cellstructuremech:p_pilus",
@@ -2198,14 +2198,14 @@
           "cosine_similarity": 0.62735504
         },
         {
-          "identifier": "GO:0009289",
-          "label": "pilus",
-          "cosine_similarity": 0.61678924
-        },
-        {
           "identifier": "GO:0042603",
           "label": "capsule",
           "cosine_similarity": 0.6120665
+        },
+        {
+          "identifier": "cellstructuremech:prostheca",
+          "label": "prostheca",
+          "cosine_similarity": 0.61051281
         }
       ]
     },
@@ -2221,7 +2221,7 @@
         {
           "identifier": "GO:0061701",
           "label": "bacterial outer membrane vesicle",
-          "cosine_similarity": 0.73058703
+          "cosine_similarity": 0.73058704
         },
         {
           "identifier": "GO:0033107",

@@ -26,6 +26,12 @@ curation_history:
   changes: Narrowed the Escherichia coli canonical-example note to type I and P pili
     so the claim is directly supported by Hospenthal, Costa and Waksman 2017.
   llm_assisted: true
+- timestamp: '2026-09-12T14:42:16Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #661 by narrowing the pilus taxonomic-distribution row from all
+    Bacteria to the directly cited Escherichia coli chaperone-usher pilus model.'
+  llm_assisted: true
 synonyms:
 - synonym_text: fimbria
   synonym_type: EXACT_SYNONYM
@@ -61,13 +67,13 @@ components:
     notes: UniProt Subcellular Location entry SL-0113 maps Fimbrium to GO:0009289
       and describes pili as non-flagellar polymeric filamentous appendages.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:2
-  taxon_label: Bacteria
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
   presence: VARIABLE
-  note: GO:0009289 defines the pilus as a bacterial surface appendage; the generic
-    record covers bacterial pilus subclasses rather than a universal structure present
-    in every bacterial cell.
-  reference: GO:0009289
+  note: Escherichia coli is used here as a directly cited model for chaperone-usher
+    type I and P pili, without asserting that every E. coli strain carries every pilus
+    subclass.
+  reference: DOI:10.1038/nrmicro.2017.40
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
