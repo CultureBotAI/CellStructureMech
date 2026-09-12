@@ -1,0 +1,278 @@
+identifier: GO:0016471
+label: vacuolar proton-transporting V-type ATPase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A proton-transporting two-sector ATPase complex found in the vacuolar
+  membrane, where it acts as a proton pump to mediate acidification of the vacuolar
+  lumen.
+definition_source: GO:0016471
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T07:01:56Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T07:02:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added V-type ATPase parentage, vacuolar-membrane parthood, V0 and V1 subcomplex
+    parts and components, exact GO synonymy, Saccharomyces scope, acidification and
+    rotary-proton-pump functions, DOI-backed yeast V-ATPase evidence, a nonmechanistic
+    V1/V0 acidification graph, and a subunit-curation TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T07:03:31Z'
+  curator: codex
+  action: CURATED_GRAPH
+  changes: Retargeted vacuolar acidification graph edges so V0 acidifies the GO-grounded
+    vacuolar lumen and the V-ATPase complex participates in the acidification process.
+  llm_assisted: true
+- timestamp: '2026-09-12T07:11:13Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Addressed PR #602 review issues #603 and #604 by retargeting lumen acidification
+    to the intact V-ATPase and adding V0/V1 sector edges to the whole GO:0016471 complex.'
+  llm_assisted: true
+parent_structures:
+- GO:0033176
+part_of:
+- GO:0005774
+has_part:
+- GO:0000220
+- GO:0000221
+synonyms:
+- synonym_text: vacuolar hydrogen-translocating V-type ATPase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0016471
+components:
+- component_id: v0_domain
+  label: vacuolar proton-transporting V-type ATPase, V0 domain
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0000220
+  essentiality: ESSENTIAL
+  role: Membrane-integral proton-translocation sector of the vacuolar V-ATPase that
+    rotates a c-subunit ring in the vacuolar membrane.
+  evidence:
+  - reference: GO:0000220
+    notes: GO:0000220 defines the vacuolar V0 domain as a V-ATPase domain found in
+      the vacuolar membrane.
+  - reference: DOI:10.1038/nature14365
+    notes: Zhao, Benlekbir and Rubinstein 2015 resolved rotational states of a eukaryotic
+      yeast V-ATPase by cryo-electron microscopy.
+- component_id: v1_domain
+  label: vacuolar proton-transporting V-type ATPase, V1 domain
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0000221
+  essentiality: ESSENTIAL
+  role: Cytosolic catalytic sector of the vacuolar V-ATPase that hydrolyzes ATP and
+    couples catalysis to rotation of the membrane V0 sector.
+  evidence:
+  - reference: GO:0000221
+    notes: GO:0000221 defines the vacuolar V1 domain as a V-ATPase domain found in
+      the vacuolar membrane.
+  - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+    notes: Kane 2006 reviews organelle acidification by the yeast vacuolar H+-ATPase
+      and the soluble V1 sector.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast vacuoles are acidified by a membrane V-ATPase whose assembly,
+    regulation, and structure have been characterized genetically and structurally.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Fungal model for vacuolar V-ATPase assembly, reversible disassembly, and cryo-EM
+    structures of the intact complex.
+  reference: DOI:10.1038/nature14365
+functions:
+- function_id: vacuolar_lumen_acidification
+  label: vacuolar acidification
+  grounding: GO:0007035
+  description: The vacuolar V-ATPase pumps protons across the vacuolar membrane to
+    lower the pH of the vacuolar lumen.
+  evidence:
+  - reference: GO:0007035
+    notes: GO:0007035 denotes processes that lower vacuolar pH by raising the vacuolar
+      hydrogen-ion concentration.
+  - reference: DOI:10.1016/j.bbamcr.2008.08.003
+    notes: Li and Kane 2009 review the yeast lysosome-like vacuole and its V-ATPase-dependent
+      acidification.
+- function_id: rotary_proton_pumping
+  label: proton-transporting ATPase activity, rotational mechanism
+  grounding: GO:0046961
+  description: ATP hydrolysis in V1 is coupled through rotary catalysis to proton
+    translocation through V0.
+  evidence:
+  - reference: GO:0046961
+    notes: GO:0046961 denotes ATP-driven proton transport across a membrane by a rotational
+      mechanism.
+  - reference: DOI:10.1038/nrm2272
+    notes: Forgac 2007 reviews V-ATPases as rotary proton pumps that couple ATP hydrolysis
+      to proton transport.
+evidence:
+- reference: GO:0016471
+  notes: Gene Ontology cellular-component term for the vacuolar proton-transporting
+    V-type ATPase complex.
+- reference: GO:0033176
+  notes: Gene Ontology cellular-component parent for proton-transporting V-type ATPase
+    complexes.
+- reference: GO:0005774
+  notes: Gene Ontology cellular-component term for the vacuolar membrane that contains
+    the vacuolar V-ATPase.
+- reference: GO:0005775
+  notes: Gene Ontology cellular-component term for the vacuolar lumen.
+- reference: GO:0000220
+  notes: Gene Ontology cellular-component term for the vacuolar V0 domain.
+- reference: GO:0000221
+  notes: Gene Ontology cellular-component term for the vacuolar V1 domain.
+- reference: GO:0007035
+  notes: Gene Ontology biological-process term for vacuolar acidification.
+- reference: GO:0046961
+  notes: Gene Ontology molecular-function term for ATP-driven rotary proton transport.
+- reference: DOI:10.1128/MMBR.70.1.177-191.2006
+  notes: Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast
+    Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
+- reference: DOI:10.1038/nrm2272
+  notes: 'Forgac 2007, Vacuolar ATPases: rotary proton pumps in physiology and pathophysiology,
+    Nature Reviews Molecular Cell Biology.'
+- reference: DOI:10.1016/j.bbamcr.2008.08.003
+  notes: 'Li and Kane 2009, The yeast lysosome-like vacuole: Endpoint and crossroads,
+    Biochimica et Biophysica Acta.'
+- reference: DOI:10.1038/nature14365
+  notes: Zhao, Benlekbir and Rubinstein 2015, Electron cryomicroscopy observation
+    of rotational states in a eukaryotic V-ATPase, Nature.
+causal_graphs:
+- graph_id: yeast_v_atpase_rotary_acidification
+  title: Yeast V-ATPase couples ATP hydrolysis to vacuolar proton pumping
+  description: In Saccharomyces cerevisiae, the cytosolic V1 sector and membrane V0
+    sector assemble into a rotary ATPase that pumps protons into the vacuole and acidifies
+    the vacuolar lumen.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph distinguishes V1 catalysis from V0 proton transport but
+    does not assert a complete subunit-level rotary cycle.
+  nodes:
+  - node_id: vacuolar_v_atpase
+    label: vacuolar proton-transporting V-type ATPase complex
+    node_type: STRUCTURE
+    grounding: GO:0016471
+  - node_id: v1_domain
+    label: vacuolar proton-transporting V-type ATPase, V1 domain
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0000221
+    component_ref: v1_domain
+  - node_id: v0_domain
+    label: vacuolar proton-transporting V-type ATPase, V0 domain
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0000220
+    component_ref: v0_domain
+  - node_id: vacuolar_membrane
+    label: vacuolar membrane
+    node_type: STRUCTURE
+    grounding: GO:0005774
+  - node_id: vacuolar_lumen
+    label: vacuolar lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005775
+  - node_id: rotary_atpase_activity
+    label: proton-transporting ATPase activity, rotational mechanism
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0046961
+  - node_id: vacuolar_acidification
+    label: vacuolar acidification
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007035
+  edges:
+  - subject: vacuolar_v_atpase
+    predicate: is embedded in
+    object: vacuolar_membrane
+    description: The vacuolar V-ATPase is a two-sector complex located in the vacuolar
+      membrane.
+    evidence:
+    - reference: GO:0016471
+      notes: GO:0016471 defines the complex by its vacuolar-membrane location.
+  - subject: v0_domain
+    predicate: is part of
+    object: vacuolar_v_atpase
+    description: The vacuolar V0 membrane sector is part of the assembled vacuolar
+      proton-transporting V-type ATPase complex.
+    evidence:
+    - reference: GO:0000220
+      notes: GO places the vacuolar V0 domain in a part-of relation to GO:0016471.
+  - subject: v1_domain
+    predicate: is part of
+    object: vacuolar_v_atpase
+    description: The vacuolar V1 catalytic sector is part of the assembled vacuolar
+      proton-transporting V-type ATPase complex.
+    evidence:
+    - reference: GO:0000221
+      notes: GO places the vacuolar V1 domain in a part-of relation to GO:0016471.
+  - subject: v1_domain
+    predicate: catalyses
+    object: rotary_atpase_activity
+    predicate_id: RO:0002327
+    description: The V1 sector couples ATP hydrolysis to rotation of the V-ATPase
+      rotor.
+    evidence:
+    - reference: GO:0000221
+      notes: GO:0000221 identifies V1 as the catalytic vacuolar V-ATPase domain.
+    - reference: DOI:10.1038/nrm2272
+      notes: Forgac 2007 reviews ATP hydrolysis in V1 as the source of rotary proton-pump
+        activity.
+  - subject: v0_domain
+    predicate: transports protons across
+    object: vacuolar_membrane
+    description: The V0 sector mediates proton movement across the vacuolar membrane.
+    evidence:
+    - reference: GO:0000220
+      notes: GO:0000220 identifies V0 as the membrane domain of the vacuolar V-ATPase.
+    - reference: DOI:10.1038/nature14365
+      notes: Zhao, Benlekbir and Rubinstein 2015 resolved rotational states of the
+        intact yeast enzyme containing V0 and V1.
+  - subject: vacuolar_v_atpase
+    predicate: acidifies
+    object: vacuolar_lumen
+    description: The assembled V0/V1 complex pumps protons across the vacuolar membrane
+      to acidify the vacuolar lumen.
+    evidence:
+    - reference: GO:0016471
+      notes: GO:0016471 defines the whole complex as the vacuolar proton pump that
+        mediates vacuolar-lumen acidification.
+    - reference: GO:0007035
+      notes: GO:0007035 defines vacuolar acidification as increasing the vacuolar
+        hydrogen-ion concentration.
+    - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+      notes: Kane 2006 reviews vacuolar H+-ATPase-dependent organelle acidification
+        in yeast.
+  - subject: vacuolar_v_atpase
+    predicate: participates in
+    object: vacuolar_acidification
+    description: Vacuolar V-ATPase activity is the proton-pumping step that lowers
+      the yeast vacuolar pH.
+    evidence:
+    - reference: DOI:10.1016/j.bbamcr.2008.08.003
+      notes: Li and Kane 2009 review V-ATPase-dependent acidification of the yeast
+        lysosome-like vacuole.
+discussions:
+- discussion_id: resolve_vma_subunits_and_isoforms
+  prompt: Resolve exact source-neutral family groundings and Saccharomyces protein
+    examples for the V0 and V1 Vma subunits, including the V0 a-subunit isoforms that
+    distinguish vacuolar and Golgi/endosomal V-ATPases.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#v0_domain
+  - components#v1_domain
+  rationale: GO grounds the two major vacuolar V-ATPase sectors exactly. The individual
+    catalytic, stalk, stator, proteolipid-ring, and membrane a-subunit families need
+    narrower curation before assigning subunit copy numbers or isoform-specific protein
+    examples.
+  evidence:
+  - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+    notes: Kane 2006 reviews the yeast V-ATPase subunits and reversible V1/V0 disassembly.
+  posed_by: codex
+  posed_date: '2026-09-12'
