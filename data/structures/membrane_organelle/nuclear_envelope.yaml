@@ -1,0 +1,224 @@
+identifier: GO:0005635
+label: nuclear envelope
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The double lipid bilayer that encloses the nucleus, separating its contents
+  from the cytoplasm. It consists of an inner and outer nuclear membrane, with an
+  intermembrane space (20-40 nm wide, also called the perinuclear space) between them.
+  The envelope is supported by the nuclear lamina and contains nuclear pore complexes,
+  which regulate molecular transport.
+definition_source: GO:0005635
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T05:28:15Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T05:29:32Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added organelle-envelope parentage, nucleus parthood, exact inner and outer
+    nuclear membrane plus nuclear-pore parts, Eukaryota and Saccharomyces scope, nuclear-envelope
+    functions, DOI/GO evidence, a nonmechanistic pore-gated-envelope graph, and a
+    nuclear-membrane protein grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0031967
+part_of:
+- GO:0005634
+has_part:
+- GO:0005637
+- GO:0005640
+- GO:0005643
+components:
+- component_id: nuclear_inner_membrane
+  label: nuclear inner membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0005637
+  essentiality: ESSENTIAL
+  role: Lumen-facing lipid bilayer of the nuclear envelope.
+  evidence:
+  - reference: GO:0005637
+    notes: GO:0005637 defines the nuclear inner membrane as the lumen-facing lipid
+      bilayer of the nuclear envelope.
+- component_id: nuclear_outer_membrane
+  label: nuclear outer membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0005640
+  essentiality: ESSENTIAL
+  role: Cytoplasm-facing lipid bilayer of the nuclear envelope, continuous with the
+    endoplasmic reticulum.
+  evidence:
+  - reference: GO:0005640
+    notes: GO:0005640 defines the nuclear outer membrane as the cytoplasm-facing lipid
+      bilayer of the nuclear envelope.
+- component_id: nuclear_pore
+  label: nuclear pore
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005643
+  essentiality: UNKNOWN
+  role: Protein complex embedded in the nuclear envelope where the inner and outer
+    membranes join to gate exchange with the cytoplasm.
+  evidence:
+  - reference: GO:0005643
+    notes: GO:0005643 defines the nuclear pore as a protein complex that provides
+      a discrete opening where the inner and outer nuclear membranes join.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: Nuclear envelopes separate the nucleus from the cytoplasm in eukaryotic cells.
+  reference: DOI:10.1101/cshperspect.a000539
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast nuclear envelopes can form nucleus-vacuole junctions through
+    the outer nuclear membrane protein Nvj1p.
+  reference: DOI:10.1091/mbc.11.7.2445
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which outer-nuclear-membrane Nvj1p and vacuolar Vac8p
+    were shown to form nucleus-vacuole junctions.
+  reference: DOI:10.1091/mbc.11.7.2445
+functions:
+- function_id: nucleocytoplasmic_transport
+  label: nucleocytoplasmic transport
+  grounding: GO:0006913
+  description: Nuclear pores in the envelope gate directed molecular movement between
+    the nucleus and cytoplasm.
+  evidence:
+  - reference: GO:0005643
+    notes: GO:0005643 places nuclear pores at the joined inner and outer membranes
+      of the nuclear envelope.
+  - reference: GO:0006913
+    notes: GO:0006913 defines nucleocytoplasmic transport as directed movement between
+      the nucleus and cytoplasm.
+- function_id: nuclear_envelope_organization
+  label: nuclear envelope organization
+  grounding: GO:0006998
+  description: Cells assemble, arrange, remodel, and disassemble nuclear envelope
+    membranes and embedded pores during nuclear envelope organization.
+  evidence:
+  - reference: GO:0006998
+    notes: GO:0006998 defines nuclear envelope organization as assembly, arrangement,
+      or disassembly of the nuclear envelope.
+  - reference: DOI:10.1101/cshperspect.a000539
+    notes: Hetzer 2010 reviews nuclear envelope remodeling during the cell cycle.
+evidence:
+- reference: GO:0005635
+  notes: Gene Ontology cellular-component term for nuclear envelope.
+- reference: GO:0031967
+  notes: Gene Ontology cellular-component term for organelle envelope.
+- reference: GO:0005634
+  notes: Gene Ontology cellular-component term for nucleus.
+- reference: GO:0005637
+  notes: Gene Ontology cellular-component term for nuclear inner membrane.
+- reference: GO:0005640
+  notes: Gene Ontology cellular-component term for nuclear outer membrane.
+- reference: GO:0005643
+  notes: Gene Ontology cellular-component term for nuclear pore.
+- reference: GO:0006913
+  notes: Gene Ontology biological-process term for nucleocytoplasmic transport.
+- reference: GO:0006998
+  notes: Gene Ontology biological-process term for nuclear envelope organization.
+- reference: DOI:10.1101/cshperspect.a000539
+  notes: Hetzer 2010, 'The Nuclear Envelope', Cold Spring Harbor Perspectives in Biology.
+- reference: DOI:10.1091/mbc.11.7.2445
+  notes: Pan et al. 2000, 'Nucleus-Vacuole Junctions in Saccharomyces cerevisiae Are
+    Formed Through the Direct Interaction of Vac8p with Nvj1p', Molecular Biology
+    of the Cell.
+causal_graphs:
+- graph_id: yeast_nuclear_envelope_boundaries
+  title: Nuclear envelope membranes gate the nucleus
+  description: In budding yeast, inner and outer nuclear membranes form the nuclear
+    envelope, and nuclear pores cross the envelope to mediate exchange between the
+    nucleus and cytoplasm.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures envelope topology and pore-gated transport without
+    asserting the full set of inner- or outer-nuclear-membrane proteins.
+  nodes:
+  - node_id: nuclear_envelope
+    label: nuclear envelope
+    node_type: STRUCTURE
+    grounding: GO:0005635
+  - node_id: nuclear_inner_membrane
+    label: nuclear inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005637
+    component_ref: nuclear_inner_membrane
+  - node_id: nuclear_outer_membrane
+    label: nuclear outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0005640
+    component_ref: nuclear_outer_membrane
+  - node_id: nuclear_pore
+    label: nuclear pore
+    node_type: STRUCTURE
+    grounding: GO:0005643
+    component_ref: nuclear_pore
+  - node_id: nucleocytoplasmic_transport
+    label: nucleocytoplasmic transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006913
+  edges:
+  - subject: nuclear_inner_membrane
+    predicate: is part of
+    object: nuclear_envelope
+    description: The inner membrane is the lumen-facing lipid bilayer of the nuclear
+      envelope.
+    evidence:
+    - reference: GO:0005637
+      notes: GO:0005637 defines the nuclear inner membrane as part of the nuclear
+        envelope.
+  - subject: nuclear_outer_membrane
+    predicate: is part of
+    object: nuclear_envelope
+    description: The outer membrane is the cytoplasm-facing lipid bilayer of the nuclear
+      envelope.
+    evidence:
+    - reference: GO:0005640
+      notes: GO:0005640 defines the nuclear outer membrane as part of the nuclear
+        envelope.
+  - subject: nuclear_pore
+    predicate: spans
+    object: nuclear_envelope
+    description: Nuclear pores sit at openings where the inner and outer nuclear-envelope
+      membranes join.
+    evidence:
+    - reference: GO:0005643
+      notes: GO:0005643 places the nuclear pore at the junction between the inner
+        and outer nuclear membranes.
+  - subject: nuclear_pore
+    predicate: mediates
+    object: nucleocytoplasmic_transport
+    description: Nuclear pores mediate directed movement between the nucleus and the
+      cytoplasm.
+    evidence:
+    - reference: GO:0006913
+      notes: GO:0006913 defines nucleocytoplasmic transport as directed movement between
+        the nucleus and cytoplasm.
+discussions:
+- discussion_id: ground_inner_outer_nuclear_membrane_proteins
+  prompt: Resolve exact source-neutral boundaries and groundings for inner- and outer-nuclear-membrane
+    protein cohorts.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#nuclear_inner_membrane
+  - components#nuclear_outer_membrane
+  - causal_graphs#yeast_nuclear_envelope_boundaries
+  rationale: This first nuclear envelope record grounds the envelope membranes and
+    nuclear pore exactly, but avoids grouping diverse nuclear-envelope-resident proteins
+    into one ungrounded component class.
+  evidence:
+  - reference: DOI:10.1101/cshperspect.a000539
+    notes: Hetzer 2010 reviews nuclear envelope proteins involved in chromatin organization
+      and nuclear envelope remodeling.
+  posed_by: codex
+  posed_date: '2026-09-12'
