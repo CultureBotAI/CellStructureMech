@@ -1,0 +1,174 @@
+identifier: GO:0009514
+label: glyoxysome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A specialized form of peroxisome that contains the enzymes of the glyoxylate
+  pathway. The glyoxysome is found in some plant cells, notably the cells of germinating
+  seeds.
+definition_source: GO:0009514
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T16:00:37Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T16:02:10Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added peroxisome parentage, exact glyoxysomal membrane and lumen parts,
+    the UniProt Subcellular Location xref, a glyoxysomal membrane component, Neurospora
+    crassa scope, a glyoxylate-cycle function, a nonmechanistic glyoxysome topology
+    graph, and a matrix-enzyme boundary clarification.
+  llm_assisted: true
+parent_structures:
+- GO:0005777
+has_part:
+- GO:0046861
+- GO:0031908
+xrefs:
+- uniprot.location:SL-0131
+components:
+- component_id: glyoxysomal_membrane
+  label: glyoxysomal membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0046861
+  essentiality: ESSENTIAL
+  role: Lipid bilayer that surrounds the glyoxysome and bounds the glyoxysomal lumen.
+  evidence:
+  - reference: GO:0046861
+    notes: GO:0046861 defines the glyoxysomal membrane as the lipid bilayer surrounding
+      a glyoxysome.
+  - reference: uniprot.location:SL-0130
+    notes: UniProt Subcellular Location entry SL-0130 maps Glyoxysome membrane to
+      GO:0046861.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5141
+  taxon_label: Neurospora crassa
+  presence: COMMON
+  note: Neurospora crassa forms acetate-induced glyoxysomes that carry glyoxylate-cycle
+    enzymes and can be distinguished from catalase-containing microbodies.
+  reference: DOI:10.1007/BF00309930
+canonical_examples:
+- taxon_id: NCBITaxon:5141
+  taxon_label: Neurospora crassa
+  note: Filamentous-fungal model used to test glyoxysomal matrix-protein targeting
+    under acetate-induced growth conditions.
+  reference: PMID:7874736
+functions:
+- function_id: glyoxylate_cycle
+  label: glyoxylate cycle
+  grounding: GO:0006097
+  description: Glyoxysomes compartmentalize the glyoxylate cycle in their lumenal
+    matrix.
+  evidence:
+  - reference: GO:0009514
+    notes: GO:0009514 defines glyoxysomes as peroxisome specializations that contain
+      glyoxylate-pathway enzymes.
+  - reference: DOI:10.1007/BF00309930
+    notes: de Zoysa and Connerton 1994 observed acetate-induced Neurospora crassa
+      glyoxysomes carrying glyoxylate-cycle enzymes.
+evidence:
+- reference: GO:0009514
+  notes: Gene Ontology cellular-component term for glyoxysome.
+- reference: GO:0046861
+  notes: Gene Ontology cellular-component term for glyoxysomal membrane.
+- reference: GO:0031908
+  notes: Gene Ontology cellular-component term for glyoxysomal lumen.
+- reference: GO:0006097
+  notes: Gene Ontology biological-process term for the glyoxylate cycle.
+- reference: uniprot.location:SL-0131
+  notes: UniProt Subcellular Location entry SL-0131 maps Glyoxysome to GO:0009514.
+- reference: uniprot.location:SL-0130
+  notes: UniProt Subcellular Location entry SL-0130 maps Glyoxysome membrane to GO:0046861.
+- reference: uniprot.location:SL-0333
+  notes: UniProt Subcellular Location entry SL-0333 maps Glyoxysome matrix to GO:0031908.
+- reference: DOI:10.1007/BF00309930
+  notes: de Zoysa and Connerton 1994, The function and specificity of the C-terminal
+    tripeptide glyoxysomal targeting signal in Neurospora crassa, Current Genetics.
+- reference: DOI:10.1016/j.bbamcr.2006.09.014
+  notes: van der Klei and Veenhuis 2006, Yeast and filamentous fungi as model organisms
+    in microbody research, Biochimica et Biophysica Acta - Molecular Cell Research.
+causal_graphs:
+- graph_id: glyoxysome_glyoxylate_cycle_compartment
+  title: Glyoxysomes compartmentalize the glyoxylate cycle
+  description: The glyoxysomal membrane bounds a lumenal matrix that contains glyoxylate-cycle
+    enzymes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures organelle topology and pathway compartmentalization
+    without asserting individual glyoxylate-cycle enzyme families.
+  nodes:
+  - node_id: glyoxysome
+    label: glyoxysome
+    node_type: ORGANELLE
+    grounding: GO:0009514
+  - node_id: glyoxysomal_membrane
+    label: glyoxysomal membrane
+    node_type: STRUCTURE
+    grounding: GO:0046861
+    component_ref: glyoxysomal_membrane
+  - node_id: glyoxysomal_lumen
+    label: glyoxysomal lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031908
+  - node_id: glyoxylate_cycle
+    label: glyoxylate cycle
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006097
+  edges:
+  - subject: glyoxysomal_membrane
+    predicate: bounds
+    object: glyoxysome
+    description: The glyoxysomal membrane is the lipid bilayer that surrounds the
+      glyoxysome.
+    evidence:
+    - reference: GO:0046861
+      notes: GO:0046861 defines the glyoxysomal membrane as the surrounding glyoxysome
+        bilayer.
+  - subject: glyoxysomal_lumen
+    predicate: is part of
+    object: glyoxysome
+    description: The glyoxysomal lumen is the matrix volume inside the glyoxysomal
+      membrane.
+    evidence:
+    - reference: GO:0031908
+      notes: GO:0031908 defines the glyoxysomal lumen as the volume enclosed by glyoxysome
+        membranes.
+    - reference: uniprot.location:SL-0333
+      notes: UniProt maps the Glyoxysome matrix location to GO:0031908 and places
+        it under Glyoxysome.
+  - subject: glyoxysome
+    predicate: supports
+    object: glyoxylate_cycle
+    description: The glyoxysome provides a compartment for glyoxylate-cycle enzymes.
+    evidence:
+    - reference: GO:0009514
+      notes: GO:0009514 defines glyoxysomes by their glyoxylate-pathway enzyme content.
+    - reference: DOI:10.1007/BF00309930
+      notes: de Zoysa and Connerton 1994 treated the Neurospora crassa glyoxysome
+        as a specialized acetate-induced organelle carrying glyoxylate-cycle enzymes.
+discussions:
+- discussion_id: exclude_glyoxylate_cycle_matrix_enzymes
+  prompt: Decide whether individual glyoxylate-cycle enzymes belong in the glyoxysome
+    component table.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - functions#glyoxylate_cycle
+  - causal_graphs#glyoxysome_glyoxylate_cycle_compartment
+  rationale: Isocitrate lyase, malate synthase and related glyoxylate-cycle enzymes
+    are matrix cargo rather than structural constituents of the glyoxysome membrane-bounded
+    compartment.
+  evidence:
+  - reference: GO:0009514
+    notes: GO defines glyoxysomes by the presence of glyoxylate-pathway enzymes.
+  - reference: DOI:10.1007/BF00309930
+    notes: de Zoysa and Connerton 1994 studied matrix targeting of proteins into Neurospora
+      glyoxysomes.
+  posed_by: codex
+  posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'
+  resolution_note: Matrix metabolic enzymes were left out of components because they
+    are functional cargo, not the physical boundary of the organelle.

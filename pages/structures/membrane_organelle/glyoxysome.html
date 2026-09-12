@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glyoxysome · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>glyoxysome</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009514"><code>GO:0009514</code></a> · MEMBRANE_ORGANELLE · MEMBRANE_BOUNDED_ORGANELLE · <span class="status">PROPOSED</span></p>
+<p class="definition">A specialized form of peroxisome that contains the enzymes of the glyoxylate pathway. The glyoxysome is found in some plant cells, notably the cells of germinating seeds. <small>[<a href="http://purl.obolibrary.org/obo/GO_0009514"><code>GO:0009514</code></a>]</small></p>
+<p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0046861"><code>GO:0046861</code></a> <a href="http://purl.obolibrary.org/obo/GO_0031908"><code>GO:0031908</code></a> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0131</code> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-glyoxysomal_membrane"><td>glyoxysomal membrane</td><td>LIPID</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0046861"><code>GO:0046861</code></a></td><td></td><td></td><td>ESSENTIAL</td><td>Lipid bilayer that surrounds the glyoxysome and bounds the glyoxysomal lumen.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0046861"><code>GO:0046861</code></a> <small>GO:0046861 defines the glyoxysomal membrane as the lipid bilayer surrounding a glyoxysome.</small></li><li><code>uniprot.location:SL-0130</code> <small>UniProt Subcellular Location entry SL-0130 maps Glyoxysome membrane to GO:0046861.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5141"><code>NCBITaxon:5141</code></a> Neurospora crassa — <strong>COMMON</strong>: Neurospora crassa forms acetate-induced glyoxysomes that carry glyoxylate-cycle enzymes and can be distinguished from catalase-containing microbodies. [<a href="https://doi.org/10.1007/BF00309930"><code>DOI:10.1007/BF00309930</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5141"><code>NCBITaxon:5141</code></a> <em>Neurospora crassa</em> — Filamentous-fungal model used to test glyoxysomal matrix-protein targeting under acetate-induced growth conditions. [<a href="https://pubmed.ncbi.nlm.nih.gov/7874736"><code>PMID:7874736</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>glyoxylate cycle</strong> <a href="http://purl.obolibrary.org/obo/GO_0006097"><code>GO:0006097</code></a> — Glyoxysomes compartmentalize the glyoxylate cycle in their lumenal matrix.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009514"><code>GO:0009514</code></a> <small>GO:0009514 defines glyoxysomes as peroxisome specializations that contain glyoxylate-pathway enzymes.</small></li><li><a href="https://doi.org/10.1007/BF00309930"><code>DOI:10.1007/BF00309930</code></a> <small>de Zoysa and Connerton 1994 observed acetate-induced Neurospora crassa glyoxysomes carrying glyoxylate-cycle enzymes.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-glyoxysome_glyoxylate_cycle_compartment">Glyoxysomes compartmentalize the glyoxylate cycle <small>(FUNCTION)</small></h3>
+<p>The glyoxysomal membrane bounds a lumenal matrix that contains glyoxylate-cycle enzymes.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>glyoxysomal membrane</td><td>bounds</td><td>glyoxysome</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0046861"><code>GO:0046861</code></a> <small>GO:0046861 defines the glyoxysomal membrane as the surrounding glyoxysome bilayer.</small></li></ul></td></tr>
+<tr><td>glyoxysomal lumen</td><td>is part of</td><td>glyoxysome</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031908"><code>GO:0031908</code></a> <small>GO:0031908 defines the glyoxysomal lumen as the volume enclosed by glyoxysome membranes.</small></li><li><code>uniprot.location:SL-0333</code> <small>UniProt maps the Glyoxysome matrix location to GO:0031908 and places it under Glyoxysome.</small></li></ul></td></tr>
+<tr><td>glyoxysome</td><td>supports</td><td>glyoxylate cycle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009514"><code>GO:0009514</code></a> <small>GO:0009514 defines glyoxysomes by their glyoxylate-pathway enzyme content.</small></li><li><a href="https://doi.org/10.1007/BF00309930"><code>DOI:10.1007/BF00309930</code></a> <small>de Zoysa and Connerton 1994 treated the Neurospora crassa glyoxysome as a specialized acetate-induced organelle carrying glyoxylate-cycle enzymes.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (RESOLVED): Decide whether individual glyoxylate-cycle enzymes belong in the glyoxysome component table. <small>Isocitrate lyase, malate synthase and related glyoxylate-cycle enzymes are matrix cargo rather than structural constituents of the glyoxysome membrane-bounded compartment.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009514"><code>GO:0009514</code></a> <small>Gene Ontology cellular-component term for glyoxysome.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0046861"><code>GO:0046861</code></a> <small>Gene Ontology cellular-component term for glyoxysomal membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031908"><code>GO:0031908</code></a> <small>Gene Ontology cellular-component term for glyoxysomal lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006097"><code>GO:0006097</code></a> <small>Gene Ontology biological-process term for the glyoxylate cycle.</small></li><li><code>uniprot.location:SL-0131</code> <small>UniProt Subcellular Location entry SL-0131 maps Glyoxysome to GO:0009514.</small></li><li><code>uniprot.location:SL-0130</code> <small>UniProt Subcellular Location entry SL-0130 maps Glyoxysome membrane to GO:0046861.</small></li><li><code>uniprot.location:SL-0333</code> <small>UniProt Subcellular Location entry SL-0333 maps Glyoxysome matrix to GO:0031908.</small></li><li><a href="https://doi.org/10.1007/BF00309930"><code>DOI:10.1007/BF00309930</code></a> <small>de Zoysa and Connerton 1994, The function and specificity of the C-terminal tripeptide glyoxysomal targeting signal in Neurospora crassa, Current Genetics.</small></li><li><a href="https://doi.org/10.1016/j.bbamcr.2006.09.014"><code>DOI:10.1016/j.bbamcr.2006.09.014</code></a> <small>van der Klei and Veenhuis 2006, Yeast and filamentous fungi as model organisms in microbody research, Biochimica et Biophysica Acta - Molecular Cell Research.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-12T16:00:37Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-12T16:02:10Z</code> codex · EXPANDED_RECORD — Added peroxisome parentage, exact glyoxysomal membrane and lumen parts, the UniProt Subcellular Location xref, a glyoxysomal membrane component, Neurospora crassa scope, a glyoxylate-cycle function, a nonmechanistic glyoxysome topology graph, and a matrix-enzyme boundary clarification.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/glyoxysome.yaml"><code>data/structures/membrane_organelle/glyoxysome.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
