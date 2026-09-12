@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cyanelle membrane · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>cyanelle membrane</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0033113"><code>GO:0033113</code></a> · MEMBRANE_ORGANELLE · MEMBRANE · <span class="status">PROPOSED</span></p>
+<p class="definition">Either of the lipid bilayers that surround a cyanelle and form the cyanelle envelope. <small>[<a href="http://purl.obolibrary.org/obo/GO_0033113"><code>GO:0033113</code></a>]</small></p>
+<p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0033112"><code>GO:0033112</code></a> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0083</code> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-cyanelle_envelope_lipid_bilayer"><td>cyanelle envelope lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Generic lipid-bilayer constituent of a cyanelle envelope membrane when the exact inner or outer membrane identity is unspecified.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033113"><code>GO:0033113</code></a> <small>GO:0033113 defines a cyanelle membrane as either lipid bilayer that forms the cyanelle envelope.</small></li><li><code>uniprot.location:SL-0083</code> <small>UniProt SL-0083 maps directly to GO:0033113 and represents the generic cyanelle membrane localization.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_38254"><code>NCBITaxon:38254</code></a> Glaucocystophyceae — <strong>COMMON</strong>: Glaucophytes carry cyanelles, also called muroplasts, whose envelopes are bounded by cyanelle membranes. [<a href="https://doi.org/10.5586/asbp.2015.020"><code>DOI:10.5586/asbp.2015.020</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2762"><code>NCBITaxon:2762</code></a> Cyanophora paradoxa — <strong>COMMON</strong>: Cyanophora paradoxa is a glaucophyte model whose cyanelles have inner and outer envelope membranes. [<a href="https://doi.org/10.1104/pp.71.2.409"><code>DOI:10.1104/pp.71.2.409</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2762"><code>NCBITaxon:2762</code></a> <em>Cyanophora paradoxa</em> — Model glaucophyte used for ultrastructural studies of cyanelle envelope and thylakoid membranes. [<a href="https://doi.org/10.1104/pp.71.2.409"><code>DOI:10.1104/pp.71.2.409</code></a>]</li></ul>
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-cyanelle_membrane_scope">Cyanelle membrane scope <small>(FUNCTION)</small></h3>
+<p>The generic cyanelle membrane class covers either cyanelle-envelope lipid bilayer when the exact inner or outer membrane identity is unspecified.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>cyanelle membrane</td><td>is part of</td><td>cyanelle envelope</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033113"><code>GO:0033113</code></a> <small>GO:0033113 defines the generic cyanelle membrane as either bilayer that forms the cyanelle envelope.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0033112"><code>GO:0033112</code></a> <small>GO:0033112 identifies the complete double lipid bilayer of the cyanelle envelope.</small></li></ul></td></tr>
+<tr><td>cyanelle inner membrane</td><td>is a</td><td>cyanelle membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033113"><code>GO:0033113</code></a> <small>GO places GO:0036012 as an is_a child of the generic cyanelle membrane term.</small></li></ul></td></tr>
+<tr><td>cyanelle outer membrane</td><td>is a</td><td>cyanelle membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033113"><code>GO:0033113</code></a> <small>GO places GO:0036013 as an is_a child of the generic cyanelle membrane term.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Exclude GO:0033115 cyanelle thylakoid membrane from the GO:0033113 cyanelle membrane scope even though UniProt SL-0083 can be used as a fallback thylakoid localization. <small>GO:0033113 is defined as either envelope lipid bilayer that surrounds a cyanelle, whereas GO:0033115 identifies the separate internal thylakoid membrane.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the generic lipid constituent of a cyanelle envelope membrane. <small>The record is exactly grounded to GO:0033113 and UniProt SL-0083, but the lipid bilayer constituent is intentionally left as a reviewed-label-only component until an exact source-neutral lipid or membrane-constituent CURIE is curated.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033113"><code>GO:0033113</code></a> <small>Gene Ontology cellular-component term for the generic cyanelle membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0042170"><code>GO:0042170</code></a> <small>Gene Ontology cellular-component term for plastid membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0033112"><code>GO:0033112</code></a> <small>Gene Ontology cellular-component term for cyanelle envelope.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0036012"><code>GO:0036012</code></a> <small>Gene Ontology cellular-component child term for cyanelle inner membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0036013"><code>GO:0036013</code></a> <small>Gene Ontology cellular-component child term for cyanelle outer membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0033115"><code>GO:0033115</code></a> <small>Gene Ontology cellular-component term for the distinct cyanelle thylakoid membrane.</small></li><li><code>uniprot.location:SL-0083</code> <small>UniProt Subcellular Location entry SL-0083 maps Cyanelle membrane to GO:0033113 and places it under cyanelle and plastid membrane.</small></li><li><a href="https://doi.org/10.1104/pp.71.2.409"><code>DOI:10.1104/pp.71.2.409</code></a> <small>Giddings, Wasmann and Staehelin 1983, Structure of the Thylakoids and Envelope Membranes of the Cyanelles of Cyanophora paradoxa, Plant Physiology.</small></li><li><a href="https://doi.org/10.1128/jb.178.2.332-339.1996"><code>DOI:10.1128/jb.178.2.332-339.1996</code></a> <small>Pfanzagl et al. 1996, Primary structure of cyanelle peptidoglycan of Cyanophora paradoxa: a prokaryotic cell wall as part of an organelle envelope, Journal of Bacteriology.</small></li><li><a href="https://doi.org/10.5586/asbp.2015.020"><code>DOI:10.5586/asbp.2015.020</code></a> <small>Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green plants in a nutshell, Acta Societatis Botanicorum Poloniae.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-12T20:21:47Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-12T20:23:22Z</code> codex · EXPANDED_RECORD — Added plastid-membrane parentage, cyanelle-envelope parthood, the UniProt SL-0083 xref, a reviewed-label-only envelope lipid bilayer component, glaucophyte distribution, a Cyanophora paradoxa canonical example, a nonmechanistic GO-scope graph, and discussions for excluding the thylakoid membrane and grounding the generic lipid bilayer component.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/cyanelle_membrane.yaml"><code>data/structures/membrane_organelle/cyanelle_membrane.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
