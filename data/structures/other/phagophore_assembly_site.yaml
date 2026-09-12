@@ -32,6 +32,12 @@ curation_history:
   action: FIX_DISCUSSION_ANCHOR
   changes: Retargeted the PAS membrane interpretation to the record identifier.
   llm_assisted: true
+- timestamp: '2026-09-12T15:21:38Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #666 by typing the broad reviewed-label PAS Atg machinery graph
+    node as STRUCTURE instead of GENE_OR_PROTEIN.'
+  llm_assisted: true
 parent_structures:
 - GO:0110165
 part_of:
@@ -118,7 +124,7 @@ causal_graphs:
   nodes:
   - node_id: pas_atg_machinery
     label: phagophore assembly site Atg machinery
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: phagophore_assembly_site_atg_machinery
   - node_id: phagophore_assembly_site
     label: phagophore assembly site
