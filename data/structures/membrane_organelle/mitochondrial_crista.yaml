@@ -23,6 +23,13 @@ curation_history:
     functions, GO/DOI evidence, a nonmechanistic yeast crista-architecture graph,
     and a subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T06:47:49Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved PR #599 review issues #600 and #601 by classifying MICOS as associated
+    architecture machinery and adding a GO:0097002 inner boundary membrane node plus
+    crista-junction graph edge.'
+  llm_assisted: true
 synonyms:
 - synonym_text: mitochondrial cristae
   synonym_type: EXACT_SYNONYM
@@ -38,7 +45,7 @@ components:
 - component_id: micos_complex
   label: MICOS complex
   component_type: PROTEIN_COMPLEX
-  component_role: CONSTITUENT
+  component_role: ASSOCIATED_MACHINERY
   grounding: GO:0061617
   essentiality: UNKNOWN
   role: Mitochondrial inner-membrane protein complex that maintains crista junctions,
@@ -121,6 +128,8 @@ evidence:
   notes: Gene Ontology cellular-component term for mitochondrial inner membrane.
 - reference: GO:0044284
   notes: Gene Ontology cellular-component term for mitochondrial crista junction.
+- reference: GO:0097002
+  notes: Gene Ontology cellular-component term for mitochondrial inner boundary membrane.
 - reference: GO:0061617
   notes: Gene Ontology cellular-component term for the MICOS complex.
 - reference: GO:0045259
@@ -166,6 +175,10 @@ causal_graphs:
     label: mitochondrial crista junction
     node_type: STRUCTURE
     grounding: GO:0044284
+  - node_id: mitochondrial_inner_boundary_membrane
+    label: mitochondrial inner boundary membrane
+    node_type: STRUCTURE
+    grounding: GO:0097002
   - node_id: micos_complex
     label: MICOS complex
     node_type: GENE_OR_PROTEIN
@@ -202,6 +215,19 @@ causal_graphs:
     - reference: GO:0044284
       notes: GO:0044284 defines the crista junction as the tubular connection between
         a crista and the mitochondrial inner boundary membrane.
+  - subject: crista_junction
+    predicate: connects
+    object: mitochondrial_inner_boundary_membrane
+    description: Crista junctions connect cristae to the non-invaginated inner boundary
+      membrane.
+    evidence:
+    - reference: GO:0044284
+      notes: GO:0044284 defines the crista junction as the tubular connection between
+        a crista and the mitochondrial inner boundary membrane.
+    - reference: GO:0097002
+      notes: GO:0097002 defines the mitochondrial inner boundary membrane as the non-invaginated
+        portion of the mitochondrial inner membrane that lies parallel to the outer
+        membrane.
   - subject: micos_complex
     predicate: maintains
     object: crista_junction
