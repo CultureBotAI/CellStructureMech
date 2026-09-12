@@ -1,0 +1,297 @@
+identifier: GO:1990063
+label: Bam protein complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A bacterial outer-membrane beta-barrel protein assembly machine in which
+  the BamA beta-barrel core and associated outer-membrane lipoproteins fold and insert
+  beta-barrel proteins into the outer membrane.
+definition_source: DOI:10.1146/annurev-biochem-061408-144611
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T02:41:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T02:42:43Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added BAM synonyms, outer-membrane parentage, BamA-E components, bacterial
+    distribution, E. coli exemplar, beta-barrel assembly function, physical property,
+    nonmechanistic assembly/function graph, evidence, and component-boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-12T02:46:16Z'
+  curator: codex
+  action: FIX_DISCUSSION_ANCHOR
+  changes: Pointed the SurA boundary discussion at concrete BamA-E component anchors.
+  llm_assisted: true
+- timestamp: '2026-09-12T02:50:10Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved review issues #568 and #569 by grounding BamA-E to exact InterPro
+    family terms and correcting BAM function graph edge directions.'
+  llm_assisted: true
+synonyms:
+- synonym_text: BAM complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.1188919
+- synonym_text: beta-barrel assembly machinery complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.aad3460
+- synonym_text: OMP complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990063
+parent_structures:
+- GO:0106234
+part_of:
+- GO:0009279
+components:
+- component_id: bam_a
+  label: BamA beta-barrel core
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - bamA
+  essentiality: UNKNOWN
+  role: Integral outer-membrane beta-barrel core and POTRA-domain platform that binds
+    the lipoprotein partners and forms the gated membrane-embedded part of the machine.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-061408-144611
+    notes: Hagan, Silhavy and Kahne 2011 review BamA as the conserved outer-membrane
+      beta-barrel subunit of the bacterial Bam complex.
+  - reference: DOI:10.1038/nature17199
+    notes: Gu et al. 2016 solved E. coli BAM structures with BamA and four associated
+      lipoproteins.
+  grounding: InterPro:IPR023707
+- component_id: bam_b
+  label: BamB lipoprotein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - bamB
+  essentiality: UNKNOWN
+  role: Accessory outer-membrane lipoprotein in the periplasmic BamA-lipoprotein assembly.
+  evidence:
+  - reference: GO:1990063
+    notes: GO describes E. coli BamB as one of the four lipoproteins in the Bam protein
+      complex.
+  - reference: DOI:10.1038/ncomms12865
+    notes: Iadanza et al. 2016 resolved BamB in an intact BamABCDE cryo-EM structure.
+  grounding: InterPro:IPR017687
+- component_id: bam_c
+  label: BamC lipoprotein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - bamC
+  essentiality: UNKNOWN
+  role: Accessory outer-membrane lipoprotein associated with the BamCDE subcomplex.
+  evidence:
+  - reference: GO:1990063
+    notes: GO describes E. coli BamC as one of the four lipoproteins in the Bam protein
+      complex.
+  - reference: DOI:10.1038/nature17199
+    notes: Gu et al. 2016 report BamC in E. coli five-subunit BAM crystal structures.
+  grounding: InterPro:IPR014524
+- component_id: bam_d
+  label: BamD lipoprotein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - bamD
+  essentiality: UNKNOWN
+  role: Lipoprotein partner of BamA and the BamCDE subcomplex in the periplasmic ring.
+  evidence:
+  - reference: GO:1990063
+    notes: GO describes E. coli BamD as one of the four lipoproteins in the Bam protein
+      complex.
+  - reference: DOI:10.1126/science.aad3460
+    notes: Bakelar, Buchanan and Noinaj 2016 solved a BamACDE structure containing
+      BamD.
+  grounding: InterPro:IPR017689
+- component_id: bam_e
+  label: BamE lipoprotein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - bamE
+  essentiality: UNKNOWN
+  role: Accessory outer-membrane lipoprotein associated with BamC and BamD.
+  evidence:
+  - reference: GO:1990063
+    notes: GO describes E. coli BamE as one of the four lipoproteins in the Bam protein
+      complex.
+  - reference: DOI:10.1038/nature17199
+    notes: Gu et al. 2016 report BamE in E. coli five-subunit BAM crystal structures.
+  grounding: InterPro:IPR026592
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: The bacterial Bam complex acts in the outer membrane of Gram-negative bacteria;
+    monoderm lineages lack this outer-membrane machine.
+  reference: DOI:10.1146/annurev-biochem-061408-144611
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: The purified E. coli BamA-E complex was reconstituted in proteoliposomes and
+    shown to assemble the OmpT beta-barrel substrate.
+  reference: DOI:10.1126/science.1188919
+functions:
+- function_id: outer_membrane_beta_barrel_assembly
+  label: outer-membrane beta-barrel protein folding and insertion
+  description: Folds and inserts beta-barrel outer-membrane protein substrates into
+    the bacterial cell outer membrane.
+  evidence:
+  - reference: DOI:10.1126/science.1188919
+    notes: Hagan, Kim and Kahne 2010 reconstituted E. coli outer-membrane beta-barrel
+      protein assembly from purified BAM components.
+  - reference: DOI:10.1146/annurev-biochem-061408-144611
+    notes: Hagan, Silhavy and Kahne 2011 review beta-barrel membrane-protein assembly
+      by the Bam complex.
+physical_properties:
+- property: MOLECULAR_MASS
+  value: ~203
+  unit: UO:0000222
+  context: E. coli BamABCDE complex
+  reference: DOI:10.1038/ncomms12865
+evidence:
+- reference: DOI:10.1146/annurev-biochem-061408-144611
+  notes: Hagan CL, Silhavy TJ and Kahne D 2011, 'beta-Barrel Membrane Protein Assembly
+    by the Bam Complex', Annual Review of Biochemistry.
+- reference: DOI:10.1126/science.1188919
+  notes: Hagan CL, Kim S and Kahne D 2010, 'Reconstitution of Outer Membrane Protein
+    Assembly from Purified Components', Science.
+- reference: DOI:10.1038/nature17199
+  notes: Gu Y et al. 2016, 'Structural basis of outer membrane protein insertion by
+    the BAM complex', Nature.
+- reference: DOI:10.1038/ncomms12865
+  notes: Iadanza MG et al. 2016, 'Lateral opening in the intact beta-barrel assembly
+    machinery captured by cryo-EM', Nature Communications.
+causal_graphs:
+- graph_id: bam_omp_folding_and_insertion
+  title: BAM folds and inserts beta-barrel OMP substrates
+  description: The outer-membrane BamA beta barrel and associated BamB-E lipoproteins
+    form a machine that receives unfolded beta-barrel substrates and catalyzes their
+    folding and insertion into the outer membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph states the reconstituted substrate-to-outer-membrane handoff
+    and the observed lateral BamA opening without choosing among detailed catalytic
+    models for OMP insertion.
+  nodes:
+  - node_id: unfolded_omp_substrate
+    label: unfolded outer-membrane beta-barrel protein substrate
+    node_type: GENE_OR_PROTEIN
+  - node_id: bam_a
+    label: BamA beta-barrel core
+    node_type: GENE_OR_PROTEIN
+    component_ref: bam_a
+  - node_id: bam_b_to_e_lipoproteins
+    label: BamB-E lipoproteins
+    node_type: GENE_OR_PROTEIN
+  - node_id: bam_complex
+    label: Bam protein complex
+    node_type: STRUCTURE
+    grounding: GO:1990063
+  - node_id: laterally_open_bama
+    label: laterally open BamA barrel
+    node_type: STATE
+  - node_id: outer_membrane_beta_barrel
+    label: assembled outer-membrane beta-barrel protein
+    node_type: GENE_OR_PROTEIN
+  - node_id: cell_outer_membrane
+    label: cell outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009279
+  edges:
+  - subject: bam_a
+    predicate: organizes with
+    object: bam_b_to_e_lipoproteins
+    description: BamA directly binds BamB and the BamCDE subcomplex to form the bacterial
+      Bam protein complex.
+    evidence:
+    - reference: GO:1990063
+      notes: The GO Bam protein complex definition states that E. coli BamA interacts
+        directly with BamB and with the BamCDE subcomplex.
+  - subject: bam_a
+    predicate: forms core of
+    object: bam_complex
+    description: BamA contributes the membrane-embedded beta barrel and the periplasmic
+      POTRA domains at the center of the BAM machine.
+    evidence:
+    - reference: DOI:10.1038/nature17199
+      notes: Gu et al. 2016 resolved the BamA barrel and POTRA domains within E. coli
+        BAM structures.
+  - subject: bam_b_to_e_lipoproteins
+    predicate: assemble with
+    object: bam_a
+    description: BamB, BamC, BamD and BamE assemble with BamA as periplasmic lipoprotein
+      partners in the E. coli BamABCDE complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms12865
+      notes: Iadanza et al. 2016 captured the intact BamABCDE complex by cryo-EM.
+  - subject: bam_complex
+    predicate: folds and inserts
+    object: unfolded_omp_substrate
+    description: Purified E. coli BamABCDE catalyzes folding and insertion of an unfolded
+      outer-membrane beta-barrel substrate after chaperone delivery in a proteoliposome
+      system.
+    evidence:
+    - reference: DOI:10.1126/science.1188919
+      notes: Hagan, Kim and Kahne 2010 reconstituted OmpT folding and insertion with
+        purified E. coli BAM components.
+  - subject: bam_complex
+    predicate: samples
+    object: laterally_open_bama
+    description: Intact BAM can adopt a state in which the BamA barrel is laterally
+      open.
+    evidence:
+    - reference: DOI:10.1038/ncomms12865
+      notes: Iadanza et al. 2016 observed a laterally open BamA barrel in an intact
+        BamABCDE cryo-EM structure.
+    - reference: DOI:10.1038/nature17199
+      notes: Gu et al. 2016 reported E. coli BAM crystal structures in inward-open
+        and lateral-open states.
+  - subject: bam_complex
+    predicate: inserts
+    object: outer_membrane_beta_barrel
+    description: The functional output of the Bam complex is folded beta-barrel protein
+      inserted in the cell outer membrane.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-061408-144611
+      notes: Hagan, Silhavy and Kahne 2011 review Bam-mediated beta-barrel assembly
+        in the Gram-negative outer membrane.
+  - subject: outer_membrane_beta_barrel
+    predicate: embeds in
+    object: cell_outer_membrane
+    description: BAM substrates are beta-barrel proteins inserted into the bacterial
+      cell outer membrane.
+    evidence:
+    - reference: DOI:10.1126/science.1188919
+      notes: Hagan, Kim and Kahne 2010 used proteoliposomes to reconstitute E. coli
+        outer-membrane protein assembly.
+discussions:
+- discussion_id: sura_not_a_bam_component
+  prompt: Keep SurA and other soluble periplasmic chaperones out of the Bam protein
+    complex component list.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#bam_a
+  - components#bam_b
+  - components#bam_c
+  - components#bam_d
+  - components#bam_e
+  - causal_graphs#bam_omp_folding_and_insertion
+  rationale: Hagan, Kim and Kahne 2010 required a soluble chaperone in the reconstituted
+    OMP assembly assay, but that chaperone acts on the substrate before BAM-mediated
+    membrane insertion and is not a constituent of the BamABCDE complex.
+  evidence:
+  - reference: DOI:10.1126/science.1188919
+    supports: SUPPORT
+    notes: The purified reconstitution assay used a soluble chaperone in addition
+      to the purified E. coli Bam complex.
+  posed_by: codex
+  posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'

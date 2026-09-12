@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/bam_protein_complex.yaml
+  slug: bam_protein_complex
+session:
+  id: 2026-09-12T025332Z-codex-482eda
+  timestamp: '2026-09-12T02:53:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/568
+  - https://github.com/CultureBotAI/CellStructureMech/issues/569
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/567
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - physical_properties
+  - causal_graphs
+  - discussions
+  - derived_artifacts
+  summary: Added the Bam protein complex structure record
+  details: Curated GO:1990063 as a dedicated Bam protein complex record with BamA-E InterPro-grounded
+    components, outer-membrane parentage, bacterial distribution, an Escherichia coli exemplar,
+    beta-barrel OMP insertion function, a nonmechanistic function graph, rendered pages, refreshed
+    embeddings, adversarial review findings, and review-driven graph and grounding fixes.
