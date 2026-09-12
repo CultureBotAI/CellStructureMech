@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cvt_vesicle.yaml
+  slug: cvt_vesicle
+session:
+  id: 2026-09-12T134805Z-codex-75aba5
+  timestamp: '2026-09-12T13:48:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/655
+  - https://github.com/CultureBotAI/CellStructureMech/issues/656
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/654
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added a GO-grounded Cvt vesicle record
+  details: Added GO:0033107 Cvt vesicle with exact GO synonymy, a GO:0033110 membrane part,
+    GO:0034270 Cvt-complex cargo, Saccharomyces cerevisiae support, a Cvt-pathway function
+    graph, regenerated embeddings and rendered pages, then addressed review issues on the
+    cargo-enclosure edge and Atg-machinery TODO anchoring.

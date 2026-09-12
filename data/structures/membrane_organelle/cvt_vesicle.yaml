@@ -29,6 +29,13 @@ curation_history:
     to components#cvt_complex so the anchor resolves under the corpus discussion-anchor
     invariant.
   llm_assisted: true
+- timestamp: '2026-09-12T13:47:40Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #655 by making the cargo-enclosure edge point from the Cvt complex
+    to the whole vesicle and by describing GO:0033110 as one of two surrounding bilayers;
+    resolved #656 by detaching the Atg-machinery TODO from the Cvt complex cargo component.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cytoplasm to vacuole targeting vesicle
   synonym_type: EXACT_SYNONYM
@@ -49,7 +56,7 @@ components:
   component_role: CONSTITUENT
   grounding: GO:0033110
   essentiality: ESSENTIAL
-  role: The pair of lipid bilayers that enclose the Cvt cargo complex before vesicle-vacuole
+  role: One of the two lipid bilayers surrounding the Cvt vesicle before vesicle-vacuole
     fusion.
   evidence:
   - reference: GO:0033110
@@ -164,11 +171,11 @@ causal_graphs:
     evidence:
     - reference: GO:0033110
       notes: GO:0033110 defines the Cvt vesicle membrane as either surrounding bilayer.
-  - subject: cvt_vesicle_membrane
-    predicate: encloses
-    object: cvt_complex
-    description: The phagophore membrane expands around the Cvt complex to make the
-      completed Cvt vesicle.
+  - subject: cvt_complex
+    predicate: is enclosed by
+    object: cvt_vesicle
+    description: The Cvt complex is sequestered inside the completed double-membrane
+      Cvt vesicle before vacuolar delivery.
     evidence:
     - reference: GO:0032258
       notes: GO:0032258 defines the Cvt pathway as membrane expansion around the Cvt
@@ -198,7 +205,6 @@ discussions:
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#cvt_complex
   - causal_graphs#cvt_cargo_vacuole_delivery
   rationale: This first Cvt vesicle record grounds the membrane and the sequestered
     Cvt cargo complex exactly, while leaving Atg proteins that organize vesicle formation
