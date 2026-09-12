@@ -20,6 +20,13 @@ curation_history:
     scope and examples, a fluid-segregation function, primary evidence, a nonmechanistic
     function graph and a V-ATPase grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T10:41:01Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #630 review issues #631 and #632 by narrowing species-scope
+    notes to presence assertions and adding the Docampo 2013 GO-definition review
+    to record-level evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: decorated spongiome
   synonym_type: NARROW_SYNONYM
@@ -53,14 +60,14 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:44689
   taxon_label: Dictyostelium discoideum
   presence: COMMON
-  note: The spongiome is a separable V-H+-ATPase-rich membrane fraction of the Dictyostelium
-    discoideum contractile-vacuole complex.
+  note: Dictyostelium discoideum cells contain a bipartite contractile-vacuole complex
+    with spongiome membranes surrounding the bladder.
   reference: PMID:8294479
 - taxon_id: NCBITaxon:44030
   taxon_label: Paramecium multimicronucleatum
   presence: COMMON
-  note: Paramecium multimicronucleatum radial arms place electrogenic V-ATPase activity
-    in the decorated spongiome.
+  note: Paramecium multimicronucleatum cells have decorated spongiome regions in the
+    radial arms of the contractile-vacuole complex.
   reference: DOI:10.1242/jeb.205.20.3261
 canonical_examples:
 - taxon_id: NCBITaxon:44689
@@ -102,6 +109,9 @@ evidence:
   notes: Gronlien et al. 2002, Relationship between the membrane potential of the
     contractile vacuole complex and its osmoregulatory activity in Paramecium multimicronucleatum,
     Journal of Experimental Biology.
+- reference: DOI:10.1016/B978-0-12-407695-2.00002-0
+  notes: Docampo et al. 2013 review acidocalcisome and contractile-vacuole osmoregulation
+    in protists and are cited by GO:0062160 for the spongiome definition.
 causal_graphs:
 - graph_id: vatpase_supported_fluid_segregation
   title: Spongiome V-ATPase supports contractile-vacuole fluid segregation
