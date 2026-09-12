@@ -21,6 +21,13 @@ curation_history:
     example, record-level GO/UniProt/DOI evidence, a nonmechanistic diffuse-matrix
     graph, and capsule-boundary plus matrix-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-12T16:44:02Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #677 by adding GO:0042603 evidence to the capsule-boundary discussion;
+    resolved #678 by narrowing the matrix grounding note so GO- and UniProt-specific
+    composition claims are attributed separately.'
+  llm_assisted: true
 parent_structures:
 - GO:0030112
 xrefs:
@@ -32,11 +39,11 @@ components:
   component_role: CONSTITUENT
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO and UniProt define slime layers as mixed extracellular material
-    containing exopolysaccharides, glycoproteins and glycolipids; the Pseudomonas
-    aeruginosa slime composition also included nucleic acid material and minor protein,
-    so no single CHEBI or sequence-family CURIE denotes the complete source-neutral
-    slime-layer matrix.
+  grounding_notes: GO defines slime layers as mostly exopolysaccharide-, glycoprotein-
+    and glycolipid-containing extracellular material, UniProt describes bacterial
+    slime layers as usually polysaccharide-rich, and Pseudomonas aeruginosa slime
+    also included nucleic acid material and minor protein; no single CHEBI or sequence-family
+    CURIE denotes the complete source-neutral slime-layer matrix.
   role: Forms the loose, diffuse extracellular glycocalyx matrix that surrounds the
     cell surface.
   evidence:
@@ -126,6 +133,9 @@ discussions:
   - reference: uniprot.location:SL-0247
     notes: UniProt SL-0247 distinguishes slime layers as more-diffuse glycocalyces
       than capsules.
+  - reference: GO:0042603
+    notes: GO:0042603 defines capsule as a highly organized glycocalyx attached outside
+      the cell wall.
   posed_by: codex
   posed_date: '2026-09-12'
   resolved_date: '2026-09-12'
