@@ -28,6 +28,13 @@ curation_history:
     enclosure and narrowed the SL-0108 evidence note to the direct UniProt location-to-GO
     mapping.
   llm_assisted: true
+- timestamp: '2026-09-12T16:26:08Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #674 by removing membrane-location SL-0108 evidence from the
+    esterosome crystal-protein component; resolved #675 by narrowing the Dictyostelium
+    taxonomic-scope note to the directly characterized aggregation-stage crystals.'
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 has_part:
@@ -72,9 +79,6 @@ components:
     notes: Bomblies et al. 1990 purified two major proteins from isolated Dictyostelium
       crystal fractions and localized antibodies against the crystal protein and the
       D2 protein to intracellular crystals.
-  - reference: uniprot.location:SL-0108
-    notes: UniProt Subcellular Location entry SL-0108 maps Esterosome membrane to
-      GO:0033118.
   protein_examples:
   - uniprot_id: UniProtKB:P21837
     protein_label: Crystal protein
@@ -111,8 +115,8 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:44689
   taxon_label: Dictyostelium discoideum
   presence: COMMON
-  note: Developing Dictyostelium discoideum cells form membrane-enclosed esterosome
-    crystals during aggregation and retain them through later multicellular stages.
+  note: Esterosomes were characterized in Dictyostelium discoideum aggregating cells
+    as membrane-enclosed crystals with crystal and D2 protein cargo.
   reference: DOI:10.1083/jcb.110.3.669
 canonical_examples:
 - taxon_id: NCBITaxon:44689
