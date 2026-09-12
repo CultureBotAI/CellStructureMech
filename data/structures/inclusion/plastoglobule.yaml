@@ -19,8 +19,15 @@ curation_history:
     lipid-remodeling function, record-level evidence, and a nonmechanistic plastoglobule-thylakoid
     graph.
   llm_assisted: true
+- timestamp: '2026-09-12T12:59:59Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #649 by adding the GO exact synonyms PG and plastoglobuli; resolved
+    #650 by changing plastoglobule parthood to the immediate GO:0009570 chloroplast
+    stroma compartment and adding GO:0009570 evidence.'
+  llm_assisted: true
 part_of:
-- GO:0009507
+- GO:0009570
 xrefs:
 - uniprot.location:SL-0217
 components:
@@ -85,6 +92,9 @@ functions:
 evidence:
 - reference: GO:0010287
   notes: Gene Ontology cellular-component term for plastoglobule.
+- reference: GO:0009570
+  notes: Gene Ontology cellular-component term for chloroplast stroma, the immediate
+    GO compartment that contains the plastoglobule.
 - reference: GO:0009507
   notes: Gene Ontology cellular-component term for chloroplast.
 - reference: uniprot.location:SL-0217
@@ -157,3 +167,10 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2015.02.002
       notes: Rottet, Besagni and Kessler 2015 describe plastoglobules as participants
         in thylakoid lipid remodeling.
+synonyms:
+- synonym_text: PG
+  synonym_type: EXACT_SYNONYM
+  source: GO:0010287
+- synonym_text: plastoglobuli
+  synonym_type: EXACT_SYNONYM
+  source: GO:0010287
