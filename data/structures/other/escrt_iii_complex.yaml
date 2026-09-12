@@ -22,6 +22,13 @@ curation_history:
     functions, GO/DOI evidence, a nonmechanistic yeast endosomal remodeling graph,
     a subunit-grounding TODO, and a resolved Vps4 boundary decision.
   llm_assisted: true
+- timestamp: '2026-09-12T09:05:27Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #618 review issues #619 and #620 by dropping ungrounded family
+    wording from ESCRT-III subunit labels and adding Henne et al. 2011 evidence to
+    the endosomal membrane-remodeling graph edge.'
+  llm_assisted: true
 synonyms:
 - synonym_text: ESCRT-III complex
   synonym_type: EXACT_SYNONYM
@@ -31,7 +38,7 @@ synonyms:
   source: GO:0000815
 components:
 - component_id: vps20_escrt_iii_subunit
-  label: Vps20-family ESCRT-III subunit
+  label: Vps20 ESCRT-III subunit
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
@@ -41,8 +48,7 @@ components:
   grounding_notes: Curated from the named Saccharomyces cerevisiae Vps20 ESCRT-III
     subunit; no exact source-neutral InterPro or Pfam family identifier for this ESCRT-III
     subunit class was curated in this pass.
-  role: Core ESCRT-III constituent that participates in the yeast endosome-associated
-    hetero-oligomer.
+  role: Vps20 core constituent of the yeast endosome-associated ESCRT-III hetero-oligomer.
   evidence:
   - reference: DOI:10.1016/S1534-5807(02)00220-4
     notes: Babst et al. 2002 characterized Vps20p as one of the Saccharomyces cerevisiae
@@ -51,7 +57,7 @@ components:
     notes: Henne, Buchkovich and Emr 2011 reviewed Vps20 as a yeast ESCRT-III subunit
       in the endosomal ESCRT pathway.
 - component_id: snf7_vps32_escrt_iii_subunit
-  label: Snf7/Vps32-family ESCRT-III subunit
+  label: Snf7/Vps32 ESCRT-III subunit
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
@@ -61,8 +67,7 @@ components:
   grounding_notes: Curated from the named Saccharomyces cerevisiae Snf7, also called
     Vps32, ESCRT-III subunit; no exact source-neutral InterPro or Pfam family identifier
     for this ESCRT-III subunit class was curated in this pass.
-  role: Core ESCRT-III constituent that assembles into the yeast endosomal membrane-remodeling
-    complex.
+  role: Snf7/Vps32 core constituent of the yeast endosomal ESCRT-III complex.
   evidence:
   - reference: DOI:10.1016/S1534-5807(02)00220-4
     notes: Babst et al. 2002 characterized Snf7p/Vps32p as one of the Saccharomyces
@@ -71,7 +76,7 @@ components:
     notes: Henne, Buchkovich and Emr 2011 reviewed Snf7 as a central yeast ESCRT-III
       subunit.
 - component_id: vps24_escrt_iii_subunit
-  label: Vps24-family ESCRT-III subunit
+  label: Vps24 ESCRT-III subunit
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
@@ -81,7 +86,7 @@ components:
   grounding_notes: Curated from the named Saccharomyces cerevisiae Vps24 ESCRT-III
     subunit; no exact source-neutral InterPro or Pfam family identifier for this ESCRT-III
     subunit class was curated in this pass.
-  role: Core ESCRT-III constituent in the yeast endosome-associated hetero-oligomer.
+  role: Vps24 core constituent of the yeast endosome-associated ESCRT-III hetero-oligomer.
   evidence:
   - reference: DOI:10.1016/S1534-5807(02)00220-4
     notes: Babst et al. 2002 characterized Vps24p as one of the Saccharomyces cerevisiae
@@ -89,7 +94,7 @@ components:
   - reference: DOI:10.1016/j.devcel.2011.05.015
     notes: Henne, Buchkovich and Emr 2011 reviewed Vps24 as a yeast ESCRT-III subunit.
 - component_id: vps2_escrt_iii_subunit
-  label: Vps2-family ESCRT-III subunit
+  label: Vps2 ESCRT-III subunit
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
@@ -99,7 +104,7 @@ components:
   grounding_notes: Curated from the named Saccharomyces cerevisiae Vps2 ESCRT-III
     subunit; no exact source-neutral InterPro or Pfam family identifier for this ESCRT-III
     subunit class was curated in this pass.
-  role: Core ESCRT-III constituent in the yeast endosome-associated hetero-oligomer.
+  role: Vps2 core constituent of the yeast endosome-associated ESCRT-III hetero-oligomer.
   evidence:
   - reference: DOI:10.1016/S1534-5807(02)00220-4
     notes: Babst et al. 2002 characterized Vps2p as one of the Saccharomyces cerevisiae
@@ -173,19 +178,19 @@ causal_graphs:
     Doa4 deubiquitination or Bro1 regulation.
   nodes:
   - node_id: vps20_escrt_iii_subunit
-    label: Vps20-family ESCRT-III subunit
+    label: Vps20 ESCRT-III subunit
     node_type: GENE_OR_PROTEIN
     component_ref: vps20_escrt_iii_subunit
   - node_id: snf7_vps32_escrt_iii_subunit
-    label: Snf7/Vps32-family ESCRT-III subunit
+    label: Snf7/Vps32 ESCRT-III subunit
     node_type: GENE_OR_PROTEIN
     component_ref: snf7_vps32_escrt_iii_subunit
   - node_id: vps24_escrt_iii_subunit
-    label: Vps24-family ESCRT-III subunit
+    label: Vps24 ESCRT-III subunit
     node_type: GENE_OR_PROTEIN
     component_ref: vps24_escrt_iii_subunit
   - node_id: vps2_escrt_iii_subunit
-    label: Vps2-family ESCRT-III subunit
+    label: Vps2 ESCRT-III subunit
     node_type: GENE_OR_PROTEIN
     component_ref: vps2_escrt_iii_subunit
   - node_id: escrt_iii_complex
@@ -204,14 +209,15 @@ causal_graphs:
   - subject: vps20_escrt_iii_subunit
     predicate: is part of
     object: escrt_iii_complex
-    description: Vps20-family subunits are represented as yeast ESCRT-III constituents.
+    description: Vps20 is represented as a Saccharomyces cerevisiae ESCRT-III constituent.
     evidence:
     - reference: DOI:10.1016/S1534-5807(02)00220-4
       notes: Babst et al. 2002 characterized Vps20p as a core yeast ESCRT-III subunit.
   - subject: snf7_vps32_escrt_iii_subunit
     predicate: is part of
     object: escrt_iii_complex
-    description: Snf7/Vps32-family subunits are represented as yeast ESCRT-III constituents.
+    description: Snf7/Vps32 is represented as a Saccharomyces cerevisiae ESCRT-III
+      constituent.
     evidence:
     - reference: DOI:10.1016/S1534-5807(02)00220-4
       notes: Babst et al. 2002 characterized Snf7p/Vps32p as a core yeast ESCRT-III
@@ -219,14 +225,14 @@ causal_graphs:
   - subject: vps24_escrt_iii_subunit
     predicate: is part of
     object: escrt_iii_complex
-    description: Vps24-family subunits are represented as yeast ESCRT-III constituents.
+    description: Vps24 is represented as a Saccharomyces cerevisiae ESCRT-III constituent.
     evidence:
     - reference: DOI:10.1016/S1534-5807(02)00220-4
       notes: Babst et al. 2002 characterized Vps24p as a core yeast ESCRT-III subunit.
   - subject: vps2_escrt_iii_subunit
     predicate: is part of
     object: escrt_iii_complex
-    description: Vps2-family subunits are represented as yeast ESCRT-III constituents.
+    description: Vps2 is represented as a Saccharomyces cerevisiae ESCRT-III constituent.
     evidence:
     - reference: DOI:10.1016/S1534-5807(02)00220-4
       notes: Babst et al. 2002 characterized Vps2p as a core yeast ESCRT-III subunit.
@@ -239,6 +245,9 @@ causal_graphs:
     - reference: DOI:10.1016/S1534-5807(02)00220-4
       notes: Babst et al. 2002 identified yeast ESCRT-III as an endosome-associated
         hetero-oligomeric complex.
+    - reference: DOI:10.1016/j.devcel.2011.05.015
+      notes: Henne, Buchkovich and Emr 2011 reviewed ESCRT-III as the membrane-remodeling
+        complex in the endosomal ESCRT pathway.
   - subject: escrt_iii_complex
     predicate: participates in
     object: multivesicular_body_sorting_pathway
@@ -250,7 +259,7 @@ causal_graphs:
 discussions:
 - discussion_id: resolve_escrt_iii_family_groundings
   prompt: Resolve exact source-neutral InterPro or Pfam groundings for the Vps20,
-    Snf7/Vps32, Vps24 and Vps2 ESCRT-III subunit families.
+    Snf7/Vps32, Vps24 and Vps2 ESCRT-III subunit classes.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
