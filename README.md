@@ -68,7 +68,7 @@ records, not records; phenotypes are TraitMech records. See
 | NUCLEOID | 2 | |  |  |
 | SPORE | 2 | |  |  |
 
-129 records are grounded in GO; 32 carry minted identifiers. 161 list components, 161 carry causal graphs (902 evidence-backed edges), 8 link to TraitMech traits, and 5 carry licensed, cited imaging evidence.
+129 records are grounded in GO; 32 carry minted identifiers. 161 list components, 161 carry causal graphs (904 evidence-backed edges), 8 link to TraitMech traits, and 5 carry licensed, cited imaging evidence.
 <!-- END GENERATED CORPUS STATS -->
 
 Run `just report` for the live report. Every current record is

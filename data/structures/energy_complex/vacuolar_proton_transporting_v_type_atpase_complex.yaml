@@ -27,6 +27,12 @@ curation_history:
   changes: Retargeted vacuolar acidification graph edges so V0 acidifies the GO-grounded
     vacuolar lumen and the V-ATPase complex participates in the acidification process.
   llm_assisted: true
+- timestamp: '2026-09-12T07:11:13Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Addressed PR #602 review issues #603 and #604 by retargeting lumen acidification
+    to the intact V-ATPase and adding V0/V1 sector edges to the whole GO:0016471 complex.'
+  llm_assisted: true
 parent_structures:
 - GO:0033176
 part_of:
@@ -189,6 +195,22 @@ causal_graphs:
     evidence:
     - reference: GO:0016471
       notes: GO:0016471 defines the complex by its vacuolar-membrane location.
+  - subject: v0_domain
+    predicate: is part of
+    object: vacuolar_v_atpase
+    description: The vacuolar V0 membrane sector is part of the assembled vacuolar
+      proton-transporting V-type ATPase complex.
+    evidence:
+    - reference: GO:0000220
+      notes: GO places the vacuolar V0 domain in a part-of relation to GO:0016471.
+  - subject: v1_domain
+    predicate: is part of
+    object: vacuolar_v_atpase
+    description: The vacuolar V1 catalytic sector is part of the assembled vacuolar
+      proton-transporting V-type ATPase complex.
+    evidence:
+    - reference: GO:0000221
+      notes: GO places the vacuolar V1 domain in a part-of relation to GO:0016471.
   - subject: v1_domain
     predicate: catalyses
     object: rotary_atpase_activity
@@ -211,12 +233,15 @@ causal_graphs:
     - reference: DOI:10.1038/nature14365
       notes: Zhao, Benlekbir and Rubinstein 2015 resolved rotational states of the
         intact yeast enzyme containing V0 and V1.
-  - subject: v0_domain
+  - subject: vacuolar_v_atpase
     predicate: acidifies
     object: vacuolar_lumen
-    description: The V0 sector delivers protons across the membrane to acidify the
-      vacuolar lumen.
+    description: The assembled V0/V1 complex pumps protons across the vacuolar membrane
+      to acidify the vacuolar lumen.
     evidence:
+    - reference: GO:0016471
+      notes: GO:0016471 defines the whole complex as the vacuolar proton pump that
+        mediates vacuolar-lumen acidification.
     - reference: GO:0007035
       notes: GO:0007035 defines vacuolar acidification as increasing the vacuolar
         hydrogen-ion concentration.
