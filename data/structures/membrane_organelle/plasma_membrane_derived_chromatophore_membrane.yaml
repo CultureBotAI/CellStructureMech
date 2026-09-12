@@ -1,0 +1,315 @@
+identifier: GO:0042717
+label: plasma membrane-derived chromatophore membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer associated with a plasma membrane-derived chromatophore;
+  surrounds chromatophores that form complete vesicles.
+definition_source: GO:0042717
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T16:58:10Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T16:59:25Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL xref and synonyms, photosynthetic-membrane parentage,
+    purple-bacterial chromatophore complexes, Cereibacter/Rhodobacter evidence, photophosphorylation
+    functions, a nonmechanistic energy-transduction graph, and a TODO for exact complex
+    groundings.
+  llm_assisted: true
+synonyms:
+- synonym_text: cellular chromatophore membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0042
+- synonym_text: chromatophore membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0042
+parent_structures:
+- GO:0034357
+xrefs:
+- uniprot.location:SL-0042
+components:
+- component_id: chromatophore_lipid_bilayer
+  label: chromatophore lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Plasma-membrane-derived bilayer that forms an internal purple-bacterial photosynthetic
+    membrane and houses the pigment-protein and electron-transfer complexes used for
+    photophosphorylation.
+  evidence:
+  - reference: GO:0042717
+    notes: GO:0042717 defines the plasma membrane-derived chromatophore membrane as
+      the lipid bilayer associated with bacterial chromatophores.
+  - reference: uniprot.location:SL-0042
+    notes: UniProt Subcellular Location SL-0042 describes the cellular chromatophore
+      membrane as an internal, plasma-membrane-derived photosynthetic membrane in
+      purple photosynthetic bacteria.
+- component_id: rc_lh1_pufx_core_complex
+  label: RC-LH1-PufX core complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Rhodobacter RC-LH1-PufX core is an experimentally imaged purple-bacterial
+    chromatophore assembly, but no exact GO or Complex Portal term was curated for
+    this whole taxon-agnostic core complex.
+  role: Dimeric reaction-center and LH1 antenna hub that performs charge separation
+    and receives excitation energy from surrounding LH2 antennae.
+  evidence:
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 used atomic force microscopy to resolve linear arrays
+      of dimeric RC-LH1-PufX core complexes in native Rhodobacter sphaeroides photosynthetic
+      membranes.
+  - reference: DOI:10.1074/jbc.M412088200
+    notes: Comayras et al. 2005 connected the organization of Rhodobacter sphaeroides
+      reaction-center antenna complexes to quinone and excitation-transfer behavior
+      in chromatophores.
+- component_id: lh2_antenna_complexes
+  label: LH2 peripheral light-harvesting antenna complexes
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: LH2 denotes peripheral bacteriochlorophyll-containing antenna complexes
+    in purple bacterial chromatophore membranes; no exact source-neutral whole-complex
+    CURIE was curated.
+  role: Peripheral antenna complexes that extend the bacteriochlorophyll light-harvesting
+    network and feed excitation energy toward RC-LH1 cores.
+  evidence:
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 imaged LH2 antenna complexes interconnecting and
+      clustering around RC-LH1-PufX core arrays in native Rhodobacter sphaeroides
+      photosynthetic membranes.
+  - reference: uniprot.location:SL-0042
+    notes: UniProt SL-0042 lists antenna complexes among the contents of cellular
+      chromatophore membranes.
+- component_id: cytochrome_bc1_complex
+  label: cytochrome bc1 complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Purple bacterial chromatophore membranes carry cytochrome bc1,
+    but the first record did not curate an exact bacterial bc1 complex CURIE.
+  role: Membrane oxidoreductase that oxidizes quinol and returns electrons toward
+    the reaction center through cytochrome c2 during cyclic photosynthetic electron
+    transport.
+  evidence:
+  - reference: uniprot.location:SL-0042
+    notes: UniProt SL-0042 lists cytochrome bc1 among the complexes contained in cellular
+      chromatophore membranes.
+  - reference: DOI:10.1074/jbc.M412088200
+    notes: Comayras et al. 2005 modeled the functional consequences of photosynthetic-apparatus
+      organization in Rhodobacter sphaeroides chromatophores, including quinone traffic
+      between reaction centers and cytochrome bc1.
+- component_id: f0f1_atp_synthase
+  label: F0F1-ATP synthase
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The purple-bacterial chromatophore F0F1-ATP synthase is a bacterial
+    rotary ATP synthase; an exact chromatophore-localized complex CURIE was not curated.
+  role: Proton-driven rotary enzyme that uses the light-generated proton motive force
+    across chromatophore membranes to synthesize ATP.
+  evidence:
+  - reference: uniprot.location:SL-0042
+    notes: UniProt SL-0042 lists F0F1-ATPase among the complexes contained in cellular
+      chromatophore membranes.
+  - reference: DOI:10.1016/S0006-3495(02)75470-2
+    notes: Feniouk et al. 2002 quantified ATP synthase in Rhodobacter capsulatus chromatophore
+      vesicles and analyzed proton-driven ATP synthesis across those vesicles.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: RARE
+  note: Plasma membrane-derived chromatophore membranes occur in purple photosynthetic
+    bacteria rather than broadly across bacteria.
+  reference: uniprot.location:SL-0042
+canonical_examples:
+- taxon_id: NCBITaxon:1063
+  taxon_label: Cereibacter sphaeroides
+  note: Purple photosynthetic bacterium, still commonly cited under the synonym Rhodobacter
+    sphaeroides, whose native chromatophore membrane architecture was resolved by
+    atomic force microscopy.
+  reference: DOI:10.1038/nature02823
+functions:
+- function_id: photosynthetic_electron_transport
+  label: photosynthetic electron transport chain
+  grounding: GO:0009767
+  description: Chromatophore membranes organize reaction-center antenna cores, peripheral
+    antenna complexes and quinone-linked cytochrome bc1 so light absorption drives
+    cyclic electron transport and builds a proton motive force.
+  evidence:
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 directly imaged native chromatophore membranes and
+      resolved how LH2 complexes are arranged around RC-LH1-PufX core arrays.
+  - reference: DOI:10.1074/jbc.M412088200
+    notes: Comayras et al. 2005 studied excitation transfer and quinone domains in
+      Rhodobacter sphaeroides chromatophore membranes.
+- function_id: photophosphorylation
+  label: photosynthetic phosphorylation
+  description: The sealed chromatophore vesicle membrane can maintain a light-driven
+    electrochemical gradient that F0F1-ATP synthase uses to produce ATP.
+  evidence:
+  - reference: DOI:10.1016/S0006-3495(02)75470-2
+    notes: Feniouk et al. 2002 assayed ATP synthesis in Rhodobacter capsulatus chromatophore
+      vesicles driven by a transmembrane proton motive force.
+evidence:
+- reference: GO:0042717
+  notes: Gene Ontology cellular-component term for the plasma membrane-derived chromatophore
+    membrane.
+- reference: GO:0034357
+  notes: Gene Ontology cellular-component term for the broader photosynthetic membrane
+    class.
+- reference: GO:0009767
+  notes: Gene Ontology biological-process term for the photosynthetic electron transport
+    chain.
+- reference: uniprot.location:SL-0042
+  notes: UniProt Subcellular Location entry for the cellular chromatophore membrane;
+    maps to GO:0042717.
+- reference: DOI:10.1038/nature02823
+  notes: Bahatyrova et al. 2004, The native architecture of a photosynthetic membrane,
+    Nature.
+- reference: DOI:10.1074/jbc.M412088200
+  notes: Comayras, Jungas and Lavergne 2005, Functional Consequences of the Organization
+    of the Photosynthetic Apparatus in Rhodobacter sphaeroides, Journal of Biological
+    Chemistry.
+- reference: DOI:10.1016/S0006-3495(02)75470-2
+  notes: Feniouk et al. 2002, Chromatophore vesicles of Rhodobacter capsulatus contain
+    on average one F0F1-ATP synthase each, Biophysical Journal.
+causal_graphs:
+- graph_id: chromatophore_photophosphorylation
+  title: Purple-bacterial chromatophores couple light harvesting to ATP synthesis
+  description: LH2 antenna complexes and RC-LH1-PufX cores organize inside the plasma
+    membrane-derived chromatophore membrane. Cyclic electron transport through quinone
+    and cytochrome bc1 contributes to a proton motive force that drives F0F1-ATP synthase.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures membrane residence and the main energy-transduction
+    logic without asserting the complete Rhodobacter cyclic electron-transfer kinetics.
+  nodes:
+  - node_id: chromatophore_membrane
+    label: plasma membrane-derived chromatophore membrane
+    node_type: STRUCTURE
+    grounding: GO:0042717
+    component_ref: chromatophore_lipid_bilayer
+  - node_id: lh2
+    label: LH2 peripheral light-harvesting antenna complexes
+    node_type: GENE_OR_PROTEIN
+    component_ref: lh2_antenna_complexes
+  - node_id: rc_lh1_pufx
+    label: RC-LH1-PufX core complex
+    node_type: GENE_OR_PROTEIN
+    component_ref: rc_lh1_pufx_core_complex
+  - node_id: quinone_pool
+    label: quinone pool
+    node_type: CHEMICAL
+    description: Membrane-diffusing quinone/quinol carrier pool that links reaction
+      centers and cytochrome bc1 in purple-bacterial chromatophores.
+  - node_id: cytochrome_bc1
+    label: cytochrome bc1 complex
+    node_type: GENE_OR_PROTEIN
+    component_ref: cytochrome_bc1_complex
+  - node_id: proton_motive_force
+    label: chromatophore transmembrane proton motive force
+    node_type: STATE
+  - node_id: f0f1_atp_synthase
+    label: F0F1-ATP synthase
+    node_type: GENE_OR_PROTEIN
+    component_ref: f0f1_atp_synthase
+  - node_id: atp_synthesis
+    label: photosynthetic phosphorylation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: lh2
+    predicate: transfers excitation energy to
+    object: rc_lh1_pufx
+    description: LH2 antenna complexes form light-capture domains that feed excitation
+      energy toward RC-LH1-PufX reaction-center cores.
+    evidence:
+    - reference: DOI:10.1038/nature02823
+      notes: Bahatyrova et al. 2004 imaged LH2 complexes as interconnecting RC-LH1-PufX
+        arrays in the native Rhodobacter photosynthetic membrane.
+  - subject: rc_lh1_pufx
+    predicate: reduces
+    object: quinone_pool
+    description: Photoexcited RC-LH1-PufX cores reduce membrane quinone carriers inside
+      the chromatophore membrane.
+    evidence:
+    - reference: DOI:10.1074/jbc.M412088200
+      notes: Comayras et al. 2005 modeled quinone-domain behavior and excitation transfer
+        in Rhodobacter sphaeroides chromatophores and reaction-center antenna complexes.
+  - subject: cytochrome_bc1
+    predicate: oxidizes
+    object: quinone_pool
+    description: Cytochrome bc1 reoxidizes quinol in the chromatophore membrane as
+      part of the cyclic photosynthetic electron-transfer chain.
+    evidence:
+    - reference: DOI:10.1074/jbc.M412088200
+      notes: Comayras et al. 2005 studied chromatophore quinone traffic between reaction-center
+        antenna complexes and cytochrome bc1.
+  - subject: cytochrome_bc1
+    predicate: contributes to
+    object: proton_motive_force
+    description: The cyclic photosynthetic electron-transfer chain contributes to
+      a proton motive force across the chromatophore membrane.
+    evidence:
+    - reference: uniprot.location:SL-0042
+      notes: UniProt SL-0042 places reaction centers, antennae, cytochrome bc1 and
+        F0F1-ATPase in the photosynthetic cellular chromatophore membrane.
+  - subject: f0f1_atp_synthase
+    predicate: uses
+    object: proton_motive_force
+    description: F0F1-ATP synthase uses the chromatophore transmembrane proton motive
+      force to synthesize ATP.
+    evidence:
+    - reference: DOI:10.1016/S0006-3495(02)75470-2
+      notes: Feniouk et al. 2002 studied ATP synthesis in Rhodobacter capsulatus chromatophore
+        vesicles driven by a proton motive force.
+  - subject: proton_motive_force
+    predicate: drives
+    object: atp_synthesis
+    description: The proton motive force across sealed chromatophore vesicles drives
+      photosynthetic ATP formation.
+    evidence:
+    - reference: DOI:10.1016/S0006-3495(02)75470-2
+      notes: Feniouk et al. 2002 analyzed proton-driven ATP synthesis in bacterial
+        chromatophore vesicles.
+discussions:
+- discussion_id: chromatophore_organellar_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Should the bacterial chromatophore membrane be merged with the Paulinella
+    organellar chromatophore membrane terms?
+  attaches_to:
+  - xrefs
+  - parent_structures
+  resolution_note: No. GO and UniProt distinguish plasma membrane-derived chromatophore
+    membranes in purple photosynthetic bacteria from the organellar chromatophore
+    envelope membranes of Paulinella plastids, so this record uses GO:0042717 and
+    UniProt SL-0042 only.
+  evidence:
+  - reference: GO:0042717
+    notes: GO:0042717 denotes a bacterial plasma membrane-derived chromatophore membrane.
+  - reference: GO:0070112
+    notes: GO:0070112 separately denotes an organellar chromatophore membrane.
+- discussion_id: ground_chromatophore_complexes
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact GO, Complex Portal, InterPro, Pfam or NCBIfam groundings for
+    RC-LH1-PufX, LH2, cytochrome bc1 and F0F1-ATP synthase complexes in purple-bacterial
+    chromatophore membranes.
+  attaches_to:
+  - components#rc_lh1_pufx_core_complex
+  - components#lh2_antenna_complexes
+  - components#cytochrome_bc1_complex
+  - components#f0f1_atp_synthase
+  - causal_graphs#chromatophore_photophosphorylation
+  rationale: These cohorts are supported as chromatophore constituents, but the first
+    record intentionally left their component groundings blank rather than guessing
+    exact family or complex accessions.
