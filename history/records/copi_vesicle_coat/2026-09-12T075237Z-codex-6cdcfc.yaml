@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/copi_vesicle_coat.yaml
+  slug: copi_vesicle_coat
+session:
+  id: 2026-09-12T075237Z-codex-6cdcfc
+  timestamp: '2026-09-12T07:52:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/609
+  - https://github.com/CultureBotAI/CellStructureMech/issues/610
+  - https://github.com/CultureBotAI/CellStructureMech/issues/611
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/608
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the COPI vesicle coat record
+  details: 'Created data/structures/other/copi_vesicle_coat.yaml as the GO:0030126 COPI vesicle
+    coat record. The record adds vesicle-coat parentage, COPI-coated vesicle parthood, exact
+    coatomer synonymy, reviewed-label-only coatomer and Arf components, Saccharomyces cerevisiae
+    scope, COPI-coated vesicle budding, retrograde Golgi-to-ER transport grounded to GO:0006890,
+    and a nonmechanistic Golgi-membrane assembly graph grounded in GO plus Waters et al. 1991,
+    Serafini et al. 1991, Letourneur et al. 1994, and Sandmann et al. 2003. PR review issues
+    #609, #610, and #611 grounded the Golgi-to-ER process, descoped the unresolved coatomer
+    component label, and removed misplaced Sandmann cargo-motif evidence from the Arf component.
+    Validation covered single-record LinkML and strict checks, regenerated text embeddings,
+    rendered pages, README drift, full strict validation, snippet verification, trait-link
+    checking, CURIE liveness, id-label correspondence, and full run_qc.'
