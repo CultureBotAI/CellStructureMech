@@ -21,6 +21,13 @@ curation_history:
     function, DOI/GO evidence, a nonmechanistic coat-assembly graph, and a subcomplex-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T07:28:55Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #605 review issues #606 and #607 by weakening the Sec23/Sec24-to-Sec13/Sec31
+    edge from directional recruitment to linkage in the assembled coat and by adding
+    an edge from the complete COPII coat to the ER membrane.'
+  llm_assisted: true
 parent_structures:
 - GO:0030120
 part_of:
@@ -141,9 +148,9 @@ causal_graphs:
     that buds COPII-coated ER-to-Golgi transport vesicles.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures the order of the three core coat components at ER
-    membranes without asserting a complete GTP cycle, cargo-selection mechanism, or
-    outer-cage geometry.
+  scope_notes: The graph captures the three core coat components and their assembly
+    at ER membranes without asserting a complete GTP cycle, cargo-selection mechanism,
+    or outer-cage geometry.
   nodes:
   - node_id: er_membrane
     label: endoplasmic reticulum membrane
@@ -191,10 +198,10 @@ causal_graphs:
       notes: Matsuoka et al. 1998 reconstituted vesicle formation with purified COPII
         coat proteins.
   - subject: sec23_sec24_inner_coat
-    predicate: recruits
+    predicate: links to
     object: sec13_sec31_outer_coat
     description: The inner Sec23/Sec24 coat links cargo and membrane to outer Sec13/Sec31
-      cage components.
+      cage components in the assembled COPII coat.
     evidence:
     - reference: DOI:10.7554/elife.00951
       notes: Zanetti et al. 2013 distinguish inner COPII proteins from outer COPII
@@ -222,6 +229,18 @@ causal_graphs:
     - reference: GO:0030134
       notes: GO:0030134 describes the COPII coat complex as formed by Sec13p/Sec31p
         heterodimers.
+  - subject: copii_vesicle_coat
+    predicate: assembles on
+    object: er_membrane
+    description: Core COPII proteins assemble as a membrane-associated coat during
+      ER-derived vesicle budding.
+    evidence:
+    - reference: GO:0090114
+      notes: GO:0090114 defines COPII-coated vesicle budding as evagination of an
+        endoplasmic reticulum membrane to form a COPII-coated vesicle.
+    - reference: DOI:10.1016/S0092-8674(00)81577-9
+      notes: Matsuoka et al. 1998 reconstituted COPII-coated vesicle formation with
+        purified coat proteins and chemically defined liposomes.
   - subject: copii_vesicle_coat
     predicate: is part of
     object: copii_coated_vesicle
