@@ -1,0 +1,152 @@
+identifier: GO:0034060
+label: cyanelle stroma
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The space enclosed by the double membrane of a cyanelle.
+definition_source: GO:0034060
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T21:44:29Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T21:45:10Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added plastid-stroma parentage, cyanelle parthood, the UniProt SL-0350
+    xref, glaucophyte distribution, a nonmechanistic stroma topology graph, and a
+    resolved interpretation that stromal DNA, ribosomes, and temporary photosynthetic
+    products are contents rather than stroma components.
+  llm_assisted: true
+- timestamp: '2026-09-12T21:50:59Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #710 by citing GO:0034060 on the inner-membrane boundary edge
+    that points to the cyanelle stroma.'
+  llm_assisted: true
+parent_structures:
+- GO:0009532
+part_of:
+- GO:0009842
+xrefs:
+- uniprot.location:SL-0350
+taxonomic_distribution:
+- taxon_id: NCBITaxon:38254
+  taxon_label: Glaucocystophyceae
+  presence: COMMON
+  note: Glaucophyte cyanelles retain plastid stromal compartments enclosed by the
+    cyanelle envelope and distinct from the thylakoid lumen.
+  reference: DOI:10.5586/asbp.2015.020
+- taxon_id: NCBITaxon:2762
+  taxon_label: Cyanophora paradoxa
+  presence: COMMON
+  note: Cyanophora paradoxa cyanelles contain a stroma enclosed by the double envelope
+    and traversed by internal thylakoid membranes.
+  reference: DOI:10.1104/pp.71.2.409
+canonical_examples:
+- taxon_id: NCBITaxon:2762
+  taxon_label: Cyanophora paradoxa
+  note: Model glaucophyte used for ultrastructural studies of cyanelle envelope membranes,
+    stroma, and thylakoids.
+  reference: DOI:10.1104/pp.71.2.409
+evidence:
+- reference: GO:0034060
+  notes: Gene Ontology cellular-component term for cyanelle stroma.
+- reference: GO:0009532
+  notes: Gene Ontology cellular-component term for plastid stroma.
+- reference: GO:0009842
+  notes: Gene Ontology cellular-component term for cyanelle.
+- reference: GO:0036012
+  notes: Gene Ontology cellular-component term for the cyanelle inner membrane that
+    bounds the stroma.
+- reference: GO:0009843
+  notes: Gene Ontology cellular-component term for cyanelle thylakoid, the internal
+    membrane system that is separate from the stroma.
+- reference: GO:0033114
+  notes: Gene Ontology cellular-component term for cyanelle thylakoid lumen, the thylakoid-enclosed
+    compartment excluded from the stroma.
+- reference: GO:0033115
+  notes: Gene Ontology cellular-component term for cyanelle thylakoid membrane.
+- reference: uniprot.location:SL-0350
+  notes: UniProt Subcellular Location entry SL-0350 maps Cyanelle stroma to GO:0034060,
+    places it under plastid stroma and cyanelle, and describes it as the internal
+    matrix-filled cyanelle space excluding the thylakoid space.
+- reference: uniprot.location:SL-0480
+  notes: UniProt Subcellular Location entry SL-0480 describes the cyanelle inner membrane
+    as separating the cyanelle stroma from the intermembrane space.
+- reference: DOI:10.1104/pp.71.2.409
+  notes: Giddings, Wasmann and Staehelin 1983, Structure of the Thylakoids and Envelope
+    Membranes of the Cyanelles of Cyanophora paradoxa, Plant Physiology.
+- reference: DOI:10.5586/asbp.2015.020
+  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
+    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
+causal_graphs:
+- graph_id: cyanelle_stroma_topology
+  title: Cyanelle stroma topology
+  description: The cyanelle stroma is the matrix-filled internal space enclosed by
+    the cyanelle double envelope but excluding the thylakoid lumen.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the stromal compartment boundary without asserting
+    soluble enzyme, ribosome, DNA, or photosynthetic product composition.
+  nodes:
+  - node_id: cyanelle
+    label: cyanelle
+    node_type: ORGANELLE
+    grounding: GO:0009842
+  - node_id: cyanelle_stroma
+    label: cyanelle stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034060
+  - node_id: cyanelle_inner_membrane
+    label: cyanelle inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0036012
+  edges:
+  - subject: cyanelle_stroma
+    predicate: is part of
+    object: cyanelle
+    description: The stroma is the internal space enclosed inside the double membrane
+      of a cyanelle.
+    evidence:
+    - reference: GO:0034060
+      notes: GO:0034060 defines the cyanelle stroma as the space enclosed by the double
+        membrane of a cyanelle.
+    - reference: uniprot.location:SL-0350
+      notes: UniProt SL-0350 places the cyanelle stroma under the cyanelle subcellular
+        location.
+  - subject: cyanelle_inner_membrane
+    predicate: bounds
+    object: cyanelle_stroma
+    description: The cyanelle inner membrane is the envelope boundary facing the stroma.
+    evidence:
+    - reference: GO:0036012
+      notes: GO:0036012 defines the cyanelle inner membrane as the envelope bilayer
+        that also faces the cyanelle stroma.
+    - reference: uniprot.location:SL-0480
+      notes: UniProt SL-0480 describes the cyanelle inner membrane as separating the
+        cyanelle stroma from the intermembrane space.
+    - reference: GO:0034060
+      notes: GO:0034060 defines the cyanelle stroma as the space enclosed by the double
+        membrane of a cyanelle.
+discussions:
+- discussion_id: stromal_contents_not_components
+  prompt: Keep DNA, ribosomes, and temporary photosynthetic products out of the curated
+    cyanelle stroma component list.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  rationale: UniProt SL-0350 describes DNA, ribosomes, and temporary photosynthesis
+    products as contents of the matrix-filled stroma, not as generic source-neutral
+    constituents that define the stroma compartment itself.
+  resolution_note: Curated the stroma topology and left stromal contents for future
+    exact DNA, ribosome, or soluble-complex records.
+  evidence:
+  - reference: uniprot.location:SL-0350
+    notes: UniProt SL-0350 describes the cyanelle stroma as the matrix-filled internal
+      cyanelle space that contains DNA, ribosomes, and some temporary photosynthesis
+      products.
+  posed_by: codex
+  posed_date: '2026-09-12'
