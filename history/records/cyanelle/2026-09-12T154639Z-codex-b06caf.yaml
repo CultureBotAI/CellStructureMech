@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cyanelle.yaml
+  slug: cyanelle
+session:
+  id: 2026-09-12T154639Z-codex-b06caf
+  timestamp: '2026-09-12T15:46:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/668
+  - https://github.com/CultureBotAI/CellStructureMech/issues/669
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/667
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added cyanelle record
+  details: 'Added the GO:0009842 cyanelle record with UniProt SL-0082 cross-reference, cyanoplast
+    and muroplast synonymy, exact GO envelope, membrane, stroma, and thylakoid parts, reviewed-label
+    cyanelle peptidoglycan-layer curation, Glaucocystophyceae and Cyanophora paradoxa scope,
+    a photosynthesis function, a nonmechanistic cyanelle topology graph, generated embeddings/pages/docs,
+    and review fixes for issues #668 and #669.'

@@ -22,6 +22,13 @@ curation_history:
     components, Glaucocystophyceae and Cyanophora paradoxa scope, a photosynthesis
     function, a cyanelle topology graph, and a peptidoglycan-layer grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T15:45:14Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #668 by adding a cyanelle stroma node and retargeting the inner-membrane
+    boundary edge to the stroma. Resolved #669 by replacing ultrastructure-only photosynthesis
+    evidence with GO and Jackson et al. 2015 support.'
+  llm_assisted: true
 parent_structures:
 - GO:0009536
 has_part:
@@ -129,9 +136,9 @@ functions:
   - reference: GO:0009842
     notes: GO:0009842 defines the cyanelle as a plastid with phycobilisome-bearing
       thylakoid membranes.
-  - reference: DOI:10.1104/pp.71.2.409
-    notes: Giddings et al. 1983 analyzed thylakoid membranes in photosynthetically
-      active Cyanophora paradoxa cyanelles.
+  - reference: DOI:10.5586/asbp.2015.020
+    notes: Jackson et al. 2015 review glaucophyte plastids as cyanelles or muroplasts
+      that retain cyanobacterial phycobilisome antennae.
 evidence:
 - reference: GO:0009842
   notes: Gene Ontology cellular-component term for cyanelle.
@@ -198,6 +205,10 @@ causal_graphs:
     label: cyanelle intermembrane space
     node_type: CELLULAR_LOCALIZATION
     grounding: GO:0036014
+  - node_id: cyanelle_stroma
+    label: cyanelle stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034060
   - node_id: cyanelle_peptidoglycan_layer
     label: cyanelle peptidoglycan layer
     node_type: STRUCTURE
@@ -227,13 +238,13 @@ causal_graphs:
         envelope membrane.
   - subject: cyanelle_inner_membrane
     predicate: bounds
-    object: cyanelle
-    description: The inner membrane is the stroma-facing lipid bilayer of the cyanelle
-      envelope.
+    object: cyanelle_stroma
+    description: The inner membrane of the cyanelle envelope separates the cyanelle
+      stroma from the intermembrane space.
     evidence:
     - reference: GO:0036012
-      notes: GO:0036012 defines the cyanelle inner membrane as the lumen-facing envelope
-        membrane.
+      notes: GO:0036012 defines the cyanelle inner membrane as the envelope bilayer
+        that faces the cyanelle stroma.
   - subject: cyanelle_peptidoglycan_layer
     predicate: resides in
     object: cyanelle_intermembrane_space
@@ -258,12 +269,15 @@ causal_graphs:
   - subject: cyanelle_thylakoid_membrane
     predicate: supports
     object: photosynthesis
-    description: The cyanelle thylakoid membrane houses photosynthetic complexes for
-      light capture and electron transport.
+    description: The cyanelle thylakoid membrane carries phycobilisome-bearing photosynthetic
+      machinery.
     evidence:
-    - reference: DOI:10.1104/pp.71.2.409
-      notes: Giddings et al. 1983 characterized the thylakoids of photosynthetically
-        active Cyanophora paradoxa cyanelles.
+    - reference: GO:0009842
+      notes: GO:0009842 defines cyanelles as plastids with phycobilisome-bearing thylakoid
+        membranes.
+    - reference: DOI:10.5586/asbp.2015.020
+      notes: Jackson et al. 2015 review phycobilisome antennae as a retained cyanobacterial
+        feature of glaucophyte plastids.
 discussions:
 - discussion_id: resolve_cyanelle_peptidoglycan_layer
   prompt: Resolve an exact source-neutral grounding for the peptidoglycan layer in
