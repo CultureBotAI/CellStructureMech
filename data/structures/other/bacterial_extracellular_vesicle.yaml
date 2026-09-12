@@ -23,6 +23,19 @@ curation_history:
     evidence, a nonmechanistic vesicle-boundary graph, and boundary discussions for
     exact component groundings and generic UniProt synonyms.
   llm_assisted: true
+- timestamp: '2026-09-12T15:02:41Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #663 and #664 by retyping the BEV membrane as a mixed OTHER component
+    and changing the cargo graph so the vesicle carries cargo instead of asserting
+    that the membrane encloses all cargo.'
+  llm_assisted: true
+- timestamp: '2026-09-12T15:02:57Z'
+  curator: codex
+  action: TIGHTENED_REVIEW_FIX
+  changes: 'Tightened #663 and #664 follow-up wording to describe membrane-associated
+    cargo and the mixed vesicle membrane consistently.'
+  llm_assisted: true
 parent_structures:
 - GO:1903561
 synonyms:
@@ -34,16 +47,18 @@ xrefs:
 components:
 - component_id: bacterial_extracellular_vesicle_membrane
   label: bacterial extracellular vesicle membrane
-  component_type: LIPID
+  component_type: OTHER
   component_role: CONSTITUENT
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: Bacterial extracellular vesicle membranes are lipid bilayers with
-    composition and envelope origin that vary across Gram-negative outer membrane
-    vesicles, outer-inner membrane vesicles, and Gram-positive membrane vesicles;
-    no exact source-neutral CURIE was curated for the full BEV envelope class.
-  role: Lipid membrane that bounds the released bacterial extracellular vesicle and
-    encloses its packaged cargo.
+  grounding_notes: Bacterial extracellular vesicle membranes are mixed lipid, protein,
+    and cell-envelope-derived assemblies whose composition and origin vary across
+    Gram-negative outer membrane vesicles, outer-inner membrane vesicles, and Gram-positive
+    membrane vesicles. ComponentTypeEnum has no MEMBRANE value, so this broad composite
+    membrane is typed as OTHER until exact source-neutral membrane groundings can
+    be verified.
+  role: Composite membrane that bounds the released bacterial extracellular vesicle
+    and carries or encloses its packaged cargo.
   evidence:
   - reference: GO:0097691
     notes: GO:0097691 defines the bacterial extracellular vesicle as a small membrane
@@ -85,9 +100,9 @@ canonical_examples:
 functions:
 - function_id: bacterial_extracellular_cargo_delivery
   label: bacterial extracellular cargo delivery
-  description: Bacterial extracellular vesicles move membrane and luminal cargo from
-    producing bacteria into the extracellular milieu, where vesicle contents can affect
-    neighboring microbes or host cells.
+  description: Bacterial extracellular vesicles move membrane-associated and luminal
+    cargo from producing bacteria into the extracellular milieu, where vesicle contents
+    can affect neighboring microbes or host cells.
   evidence:
   - reference: DOI:10.1038/s41579-018-0112-2
     notes: Toyofuku, Nomura and Eberl 2019 review bacterial membrane vesicles as vehicles
@@ -111,9 +126,9 @@ evidence:
     characterization of Staphylococcus aureus-derived membrane vesicles, Proteomics.'
 causal_graphs:
 - graph_id: bacterial_extracellular_vesicle_cargo_export
-  title: Vesicle membranes enclose exported bacterial cargo
-  description: Bacterial extracellular vesicles contain a lipid membrane around heterogeneous
-    cargo that is released from the producing bacterium and can be delivered to neighboring
+  title: Bacterial extracellular vesicles carry exported cargo
+  description: Bacterial extracellular vesicles contain a mixed membrane and heterogeneous
+    cargo that are released from the producing bacterium and can be delivered to neighboring
     microbes or host cells.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
@@ -134,11 +149,11 @@ causal_graphs:
     node_type: ORGANELLE
     grounding: GO:0097691
   edges:
-  - subject: bev_membrane
-    predicate: encloses
+  - subject: bacterial_extracellular_vesicle
+    predicate: carries
     object: bev_cargo
-    description: The bacterial extracellular vesicle membrane packages heterogeneous
-      cargo within the released vesicle.
+    description: The released bacterial extracellular vesicle carries heterogeneous
+      lumenal and surface-associated cargo.
     evidence:
     - reference: GO:0097691
       notes: GO:0097691 defines the vesicle as a membrane vesicle able to carry multiple
@@ -149,8 +164,8 @@ causal_graphs:
   - subject: bev_membrane
     predicate: is part of
     object: bacterial_extracellular_vesicle
-    description: The lipid membrane is the bounding envelope of the released bacterial
-      extracellular vesicle.
+    description: The mixed vesicle membrane is the bounding envelope of the released
+      bacterial extracellular vesicle.
     evidence:
     - reference: GO:0097691
       notes: GO:0097691 identifies the structure as a small bacterial membrane vesicle.
