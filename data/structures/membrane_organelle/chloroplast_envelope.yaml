@@ -20,17 +20,12 @@ curation_history:
     scope, stromal protein-import function, DOI/GO evidence, a nonmechanistic envelope-import
     graph, and an import-complex boundary TODO.
   llm_assisted: true
-- timestamp: '2026-09-12T06:11:17Z'
+- timestamp: '2026-09-12T06:17:49Z'
   curator: codex
-  action: CURATION_METADATA_FIX
-  changes: Corrected the scaffolded CREATED_RECORD event to attribute the new GO:0009941
-    record to codex with llm_assisted provenance.
-  llm_assisted: true
-- timestamp: '2026-09-12T06:11:54Z'
-  curator: codex
-  action: CURATION_METADATA_FIX
-  changes: Relabelled the scaffold-provenance correction event so pre-PR metadata
-    cleanup is not misreported as an adversarial review fix.
+  action: REVIEW_FIXES
+  changes: 'Resolved PR #596 review issues #597 and #598 by compacting precommit curation-history
+    self-corrections and adding a GO:0009570 chloroplast stroma node plus envelope-boundary
+    graph edge.'
   llm_assisted: true
 parent_structures:
 - GO:0009526
@@ -141,6 +136,8 @@ evidence:
   notes: Gene Ontology cellular-component term for chloroplast inner membrane.
 - reference: GO:0031972
   notes: Gene Ontology cellular-component term for chloroplast intermembrane space.
+- reference: GO:0009570
+  notes: Gene Ontology cellular-component term for chloroplast stroma.
 - reference: GO:0010006
   notes: Gene Ontology cellular-component term for the Toc complex.
 - reference: GO:0031897
@@ -188,6 +185,10 @@ causal_graphs:
     label: chloroplast intermembrane space
     node_type: CELLULAR_LOCALIZATION
     grounding: GO:0031972
+  - node_id: chloroplast_stroma
+    label: chloroplast stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009570
   - node_id: toc_complex
     label: Toc complex
     node_type: GENE_OR_PROTEIN
@@ -237,6 +238,15 @@ causal_graphs:
     - reference: GO:0031972
       notes: GO:0031972 defines the chloroplast intermembrane space as the region
         between the inner and outer lipid bilayers of a chloroplast envelope.
+  - subject: chloroplast_envelope
+    predicate: bounds
+    object: chloroplast_stroma
+    description: The chloroplast envelope encloses the stromal space inside the chloroplast
+      while excluding the thylakoid space.
+    evidence:
+    - reference: GO:0009570
+      notes: GO:0009570 defines the chloroplast stroma as the space enclosed by the
+        double membrane of a chloroplast, excluding the thylakoid space.
   - subject: toc_complex
     predicate: is part of
     object: chloroplast_outer_membrane
