@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/phagophore_assembly_site.yaml
+  slug: phagophore_assembly_site
+session:
+  id: 2026-09-12T152223Z-claude-code-c62f10
+  timestamp: '2026-09-12T15:22:23Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/666
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/665
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added phagophore assembly site record
+  details: 'Added the GO:0000407 phagophore assembly site record with UniProt SL-0220 cross-reference,
+    PAS synonymy, a reviewed-label Atg machinery component, Saccharomyces cerevisiae scope,
+    an autophagosome-assembly function, a nonmechanistic PAS Atg-organization graph, generated
+    embeddings/pages/docs, and the review fix for issue #666.'

@@ -1,0 +1,190 @@
+identifier: GO:0000407
+label: phagophore assembly site
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: Punctate structures proximal to the endoplasmic reticulum which are the
+  sites where the Atg machinery assembles upon autophagy induction.
+definition_source: GO:0000407
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T15:13:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T15:14:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parentage and cytoplasm parthood, PAS synonymy, the UniProt Subcellular
+    Location xref, a reviewed-label Atg machinery component, Saccharomyces cerevisiae
+    scope, an autophagosome-assembly function, DOI/GO/UniProt evidence, a nonmechanistic
+    Atg-organization graph, and boundary discussions for exact Atg groundings and
+    the obsolete PAS membrane.
+  llm_assisted: true
+- timestamp: '2026-09-12T15:15:19Z'
+  curator: codex
+  action: TIGHTENED_DISCUSSION
+  changes: Tightened the PAS membrane interpretation to avoid depending on an obsolete
+    GO membrane term.
+  llm_assisted: true
+- timestamp: '2026-09-12T15:18:06Z'
+  curator: codex
+  action: FIX_DISCUSSION_ANCHOR
+  changes: Retargeted the PAS membrane interpretation to the record identifier.
+  llm_assisted: true
+- timestamp: '2026-09-12T15:21:38Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #666 by typing the broad reviewed-label PAS Atg machinery graph
+    node as STRUCTURE instead of GENE_OR_PROTEIN.'
+  llm_assisted: true
+parent_structures:
+- GO:0110165
+part_of:
+- GO:0005737
+synonyms:
+- synonym_text: PAS
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000407
+- synonym_text: pre-autophagosomal structure
+  synonym_type: NARROW_SYNONYM
+  source: GO:0000407
+xrefs:
+- uniprot.location:SL-0220
+components:
+- component_id: phagophore_assembly_site_atg_machinery
+  label: phagophore assembly site Atg machinery
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The phagophore assembly site is defined by assembled Atg autophagosome-formation
+    machinery, but the exact cohort varies by autophagy mode and organism. No single
+    source-neutral protein-family or protein-complex CURIE was curated for the full
+    PAS-associated Atg machinery.
+  role: Atg protein machinery that concentrates at the PAS and organizes phagophore
+    expansion during autophagosome formation.
+  evidence:
+  - reference: GO:0000407
+    notes: GO:0000407 defines the phagophore assembly site as a punctate site where
+      Atg machinery assembles upon autophagy induction.
+  - reference: DOI:10.1093/emboj/20.21.5971
+    notes: Suzuki et al. 2001 localized multiple Apg proteins to the yeast pre-autophagosomal
+      structure and showed APG gene function is required for its organization.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms a phagophore assembly site near the vacuole during autophagosome
+    biogenesis.
+  reference: DOI:10.1093/emboj/20.21.5971
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Saccharomyces cerevisiae is the genetic and fluorescence microscopy model
+    in which the PAS was defined as a punctate Apg/Atg organizing site for autophagosome
+    formation.
+  reference: DOI:10.1093/emboj/20.21.5971
+functions:
+- function_id: autophagosome_assembly_platform
+  label: autophagosome assembly platform
+  description: The phagophore assembly site concentrates Atg machinery at a punctate
+    cytoplasmic site to organize phagophore expansion and autophagosome formation.
+  evidence:
+  - reference: GO:0000045
+    notes: GO:0000045 defines autophagosome assembly as the formation of a double-membrane-bounded
+      autophagosome.
+  - reference: DOI:10.1093/emboj/20.21.5971
+    notes: Suzuki et al. 2001 showed that PAS organization by concerted APG gene functions
+      is essential for autophagosome formation in yeast.
+evidence:
+- reference: GO:0000407
+  notes: Gene Ontology cellular-component term for phagophore assembly site.
+- reference: GO:0110165
+  notes: Gene Ontology cellular-component term for cellular anatomical structure.
+- reference: GO:0005737
+  notes: Gene Ontology cellular-component term for cytoplasm.
+- reference: GO:0000045
+  notes: Gene Ontology biological-process term for autophagosome assembly.
+- reference: uniprot.location:SL-0220
+  notes: UniProt Subcellular Location entry that maps Preautophagosomal structure
+    to GO:0000407.
+- reference: DOI:10.1093/emboj/20.21.5971
+  notes: Suzuki et al. 2001, The pre-autophagosomal structure organized by concerted
+    functions of APG genes is essential for autophagosome formation, The EMBO Journal.
+causal_graphs:
+- graph_id: yeast_pas_atg_organization
+  title: Yeast PAS organizes Atg machinery
+  description: Atg machinery concentrates at the phagophore assembly site to organize
+    autophagosome assembly in budding yeast.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures PAS localization and autophagosome assembly support
+    without resolving each Atg complex, phagophore membrane source, or expansion step.
+  nodes:
+  - node_id: pas_atg_machinery
+    label: phagophore assembly site Atg machinery
+    node_type: STRUCTURE
+    component_ref: phagophore_assembly_site_atg_machinery
+  - node_id: phagophore_assembly_site
+    label: phagophore assembly site
+    node_type: STRUCTURE
+    grounding: GO:0000407
+  - node_id: autophagosome_assembly
+    label: autophagosome assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000045
+  edges:
+  - subject: pas_atg_machinery
+    predicate: localizes to
+    object: phagophore_assembly_site
+    description: Atg proteins concentrate at the yeast PAS when autophagosome formation
+      is induced.
+    evidence:
+    - reference: GO:0000407
+      notes: GO:0000407 defines the site by Atg machinery assembly during autophagy
+        induction.
+    - reference: DOI:10.1093/emboj/20.21.5971
+      notes: Suzuki et al. 2001 observed punctate pre-autophagosomal localization
+        of Apg proteins in Saccharomyces cerevisiae.
+  - subject: phagophore_assembly_site
+    predicate: organizes
+    object: autophagosome_assembly
+    description: The PAS is the organizing site for yeast autophagosome formation.
+    evidence:
+    - reference: DOI:10.1093/emboj/20.21.5971
+      notes: Suzuki et al. 2001 showed that the pre-autophagosomal structure is essential
+        for autophagosome formation.
+discussions:
+- discussion_id: resolve_pas_atg_machinery
+  prompt: Resolve exact source-neutral identifiers for the Atg machinery assembled
+    at the phagophore assembly site.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#phagophore_assembly_site_atg_machinery
+  - causal_graphs#yeast_pas_atg_organization
+  rationale: The first PAS record preserves the exact GO site boundary and leaves
+    individual Atg protein and complex identities out until family-level identifiers
+    can be verified.
+  evidence:
+  - reference: DOI:10.1093/emboj/20.21.5971
+    notes: Suzuki et al. 2001 linked PAS formation to multiple APG gene products.
+  posed_by: codex
+  posed_date: '2026-09-12'
+- discussion_id: exclude_pas_membrane
+  prompt: Do not model a phagophore assembly site membrane as an exact component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  rationale: GO:0000407 defines the current PAS class as a cytoplasmic Atg assembly
+    site rather than a membrane-bounded compartment. No current exact source-neutral
+    identifier was verified for a PAS membrane component.
+  evidence:
+  - reference: GO:0000407
+    notes: GO:0000407 defines the phagophore assembly site as a punctate Atg assembly
+      site.
+  posed_by: codex
+  posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'
