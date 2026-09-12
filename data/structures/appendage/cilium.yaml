@@ -33,6 +33,19 @@ curation_history:
   changes: Narrowed the Chlamydomonas canonical-example note to the purified-flagella
     proteomics claim supported by its single DOI reference.
   llm_assisted: true
+- timestamp: '2026-09-12T03:24:41Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #570 review issues #571 and #572 by adding GO:0030990 intraciliary
+    transport particle as cilium-associated machinery and retyping basal-body and
+    transition-zone substructures as OTHER.'
+  llm_assisted: true
+- timestamp: '2026-09-12T03:27:49Z'
+  curator: codex
+  action: ADDRESS_QC
+  changes: Changed the associated IFT particle machinery essentiality from ESSENTIAL
+    to UNKNOWN to match corpus component-role invariants.
+  llm_assisted: true
 synonyms:
 - synonym_text: eukaryotic flagellum
   synonym_type: EXACT_SYNONYM
@@ -79,7 +92,7 @@ components:
       including signal-transduction and membrane-associated candidates.
 - component_id: ciliary_basal_body
   label: ciliary basal body
-  component_type: PROTEIN_COMPLEX
+  component_type: OTHER
   component_role: CONSTITUENT
   grounding: GO:0036064
   essentiality: ESSENTIAL
@@ -94,7 +107,7 @@ components:
       of Chlamydomonas flagella.
 - component_id: ciliary_transition_zone
   label: ciliary transition zone
-  component_type: PROTEIN_COMPLEX
+  component_type: OTHER
   component_role: CONSTITUENT
   grounding: GO:0035869
   essentiality: UNKNOWN
@@ -108,6 +121,20 @@ components:
   - reference: GO:0097546
     notes: GO:0097546 places transition fibers and the transition zone at the ciliary
       base where proteins are sorted before cilium entry.
+- component_id: intraciliary_transport_particle
+  label: intraciliary transport particle
+  component_type: PROTEIN_COMPLEX
+  component_role: ASSOCIATED_MACHINERY
+  grounding: GO:0030990
+  essentiality: UNKNOWN
+  role: IFT protein-particle complex that moves ciliary cargo bidirectionally along
+    axonemal microtubules to assemble and maintain the cilium.
+  evidence:
+  - reference: GO:0030990
+    notes: GO:0030990 identifies the intraciliary transport particle protein complex.
+  - reference: DOI:10.1038/nrm952
+    notes: Rosenbaum and Witman 2002 review IFT particles as transport machinery for
+      cilium and flagellum assembly and maintenance.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
@@ -193,6 +220,7 @@ causal_graphs:
     label: intraciliary transport particle
     node_type: GENE_OR_PROTEIN
     grounding: GO:0030990
+    component_ref: intraciliary_transport_particle
   - node_id: cilium
     label: cilium
     node_type: ORGANELLE

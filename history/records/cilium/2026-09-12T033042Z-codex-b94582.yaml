@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/cilium.yaml
+  slug: cilium
+session:
+  id: 2026-09-12T033042Z-codex-b94582
+  timestamp: '2026-09-12T03:30:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/571
+  - https://github.com/CultureBotAI/CellStructureMech/issues/572
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/570
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-grounded cilium structure record
+  details: 'Added a GO:0005929 cilium APPENDAGE record scoped to Chlamydomonas reinhardtii
+    and GO-grounded substructures. Curated axoneme, ciliary membrane, ciliary basal body,
+    ciliary transition zone, and intraciliary transport particle components; assembly and
+    motility functions; an IFT assembly graph; and a resolved boundary discussion separating
+    eukaryotic cilia from bacterial-type and archaeal-type flagella. Regenerated embeddings
+    and rendered pages, ran local strict validation and full QC, filed PR #570 review issues
+    #571 and #572, and addressed them by wiring GO:0030990 IFT particles into the graph and
+    tuning ciliary substructure component types.'
