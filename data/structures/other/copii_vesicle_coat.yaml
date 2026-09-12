@@ -1,0 +1,261 @@
+identifier: GO:0030127
+label: COPII vesicle coat
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A COPII coat protein complex that assembles on endoplasmic-reticulum membranes
+  to bud COPII-coated ER-to-Golgi transport vesicles; in budding yeast it contains
+  Sar1p, Sec23p, Sec24p, Sec13p, and Sec31p.
+definition_source: GO:0030127
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T07:23:05Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T07:23:57Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added vesicle-coat parentage, COPII-coated vesicle parthood, reviewed-label-only
+    Sar1, Sec23/Sec24, and Sec13/Sec31 components, Saccharomyces scope, a COPII budding
+    function, DOI/GO evidence, a nonmechanistic coat-assembly graph, and a subcomplex-grounding
+    TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0030120
+part_of:
+- GO:0030134
+components:
+- component_id: sar1_gtpase
+  label: Sar1-family COPII GTPase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SAR1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Sar1p COPII subunit;
+    no exact source-neutral InterPro or Pfam family identifier was curated in this
+    pass.
+  role: Small GTPase COPII coat constituent that initiates inner-coat recruitment
+    to endoplasmic-reticulum membranes.
+  evidence:
+  - reference: GO:0030127
+    notes: GO:0030127 names Sar1p among the Saccharomyces cerevisiae COPII vesicle
+      coat subunits.
+  - reference: DOI:10.1016/0092-8674(94)90138-4
+    notes: Barlowe et al. 1994 identified Sar1p with Sec13p, Sec31p, Sec23p, and Sec24p
+      as Sec proteins that form the COPII coat driving ER vesicle budding.
+- component_id: sec23_sec24_inner_coat
+  label: Sec23/Sec24 inner COPII coat
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC23
+  - SEC24
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030134 defines the COPII coat as formed by Sec23p/Sec24p and
+    Sec13p/Sec31p heterodimers, but no exact GO, Complex Portal, InterPro, or Pfam
+    CURIE was curated for the source-neutral Sec23/Sec24 inner-coat heterodimer.
+  role: Inner COPII coat subcomplex that links cargo and the ER membrane to the outer
+    Sec13/Sec31 cage.
+  evidence:
+  - reference: GO:0030134
+    notes: GO:0030134 describes the COPII coat complex as formed by Sec23p/Sec24p
+      and Sec13p/Sec31p heterodimers.
+  - reference: DOI:10.7554/elife.00951
+    notes: Zanetti et al. 2013 resolved a membrane-assembled COPII coat and distinguish
+      inner coat proteins from outer COPII cage components.
+- component_id: sec13_sec31_outer_coat
+  label: Sec13/Sec31 outer COPII coat
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC13
+  - SEC31
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030134 defines the COPII coat as formed by Sec23p/Sec24p and
+    Sec13p/Sec31p heterodimers, but no exact GO, Complex Portal, InterPro, or Pfam
+    CURIE was curated for the source-neutral Sec13/Sec31 outer-coat complex.
+  role: Outer COPII coat subcomplex that polymerizes into a cage around the inner
+    coat on nascent ER-derived vesicles.
+  evidence:
+  - reference: GO:0030134
+    notes: GO:0030134 describes the COPII coat complex as formed by Sec23p/Sec24p
+      and Sec13p/Sec31p heterodimers.
+  - reference: DOI:10.7554/elife.00951
+    notes: Zanetti et al. 2013 used cryo-electron tomography to analyze the complete
+      membrane-assembled COPII coat and its outer-coat arrangement.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a COPII vesicle coat built from Sar1p, Sec23p, Sec24p, Sec13p,
+    and Sec31p that buds transport vesicles from the endoplasmic reticulum.
+  reference: DOI:10.1016/0092-8674(94)90138-4
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Sar1p, Sec13p, Sec31p, Sec23p, and Sec24p were
+    identified as the COPII coat driving ER transport-vesicle budding.
+  reference: DOI:10.1016/0092-8674(94)90138-4
+functions:
+- function_id: copii_coated_vesicle_budding
+  label: COPII-coated vesicle budding
+  grounding: GO:0090114
+  description: The COPII vesicle coat forms on ER membranes during evagination of
+    a COPII-coated vesicle.
+  evidence:
+  - reference: GO:0090114
+    notes: GO:0090114 denotes the COPII-coated vesicle budding process that evaginates
+      ER membrane into a COPII-coated vesicle.
+  - reference: DOI:10.1016/S0092-8674(00)81577-9
+    notes: Matsuoka et al. 1998 reconstituted COPII-coated vesicle formation with
+      purified coat proteins and chemically defined liposomes.
+evidence:
+- reference: GO:0030127
+  notes: Gene Ontology cellular-component term for the COPII vesicle coat.
+- reference: GO:0030120
+  notes: Gene Ontology cellular-component parent for vesicle coats.
+- reference: GO:0030134
+  notes: Gene Ontology cellular-component term for the COPII-coated ER to Golgi transport
+    vesicle that carries the COPII coat.
+- reference: GO:0090114
+  notes: Gene Ontology biological-process term for COPII-coated vesicle budding.
+- reference: DOI:10.1016/0092-8674(94)90138-4
+  notes: 'Barlowe et al. 1994, ''COPII: A membrane coat formed by Sec proteins that
+    drive vesicle budding from the endoplasmic reticulum'', Cell.'
+- reference: DOI:10.1016/S0092-8674(00)81577-9
+  notes: Matsuoka et al. 1998, 'COPII-Coated Vesicle Formation Reconstituted with
+    Purified Coat Proteins and Chemically Defined Liposomes', Cell.
+- reference: DOI:10.7554/elife.00951
+  notes: Zanetti et al. 2013, 'The structure of the COPII transport-vesicle coat assembled
+    on membranes', eLife.
+causal_graphs:
+- graph_id: yeast_copii_coat_assembly
+  title: COPII subcomplexes assemble a yeast ER vesicle coat
+  description: In Saccharomyces cerevisiae, Sar1p, the Sec23/Sec24 inner coat, and
+    the Sec13/Sec31 outer coat assemble at ER membranes into the COPII vesicle coat
+    that buds COPII-coated ER-to-Golgi transport vesicles.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the order of the three core coat components at ER
+    membranes without asserting a complete GTP cycle, cargo-selection mechanism, or
+    outer-cage geometry.
+  nodes:
+  - node_id: er_membrane
+    label: endoplasmic reticulum membrane
+    node_type: STRUCTURE
+    grounding: GO:0005789
+  - node_id: sar1_gtpase
+    label: Sar1-family COPII GTPase
+    node_type: GENE_OR_PROTEIN
+    component_ref: sar1_gtpase
+  - node_id: sec23_sec24_inner_coat
+    label: Sec23/Sec24 inner COPII coat
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec23_sec24_inner_coat
+  - node_id: sec13_sec31_outer_coat
+    label: Sec13/Sec31 outer COPII coat
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec13_sec31_outer_coat
+  - node_id: copii_vesicle_coat
+    label: COPII vesicle coat
+    node_type: STRUCTURE
+    grounding: GO:0030127
+  - node_id: copii_coated_vesicle
+    label: COPII-coated ER to Golgi transport vesicle
+    node_type: STRUCTURE
+    grounding: GO:0030134
+  - node_id: copii_coated_vesicle_budding
+    label: COPII-coated vesicle budding
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0090114
+  edges:
+  - subject: sar1_gtpase
+    predicate: is recruited to
+    object: er_membrane
+    description: Sar1 initiates COPII coat assembly at the ER membrane.
+    evidence:
+    - reference: DOI:10.1016/0092-8674(94)90138-4
+      notes: Barlowe et al. 1994 identified Sar1p as a COPII Sec protein that drives
+        vesicle budding from the ER.
+  - subject: sar1_gtpase
+    predicate: recruits
+    object: sec23_sec24_inner_coat
+    description: Sar1-dependent assembly recruits the Sec23/Sec24 inner coat.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(00)81577-9
+      notes: Matsuoka et al. 1998 reconstituted vesicle formation with purified COPII
+        coat proteins.
+  - subject: sec23_sec24_inner_coat
+    predicate: recruits
+    object: sec13_sec31_outer_coat
+    description: The inner Sec23/Sec24 coat links cargo and membrane to outer Sec13/Sec31
+      cage components.
+    evidence:
+    - reference: DOI:10.7554/elife.00951
+      notes: Zanetti et al. 2013 distinguish inner COPII proteins from outer COPII
+        components in the complete assembled coat.
+  - subject: sar1_gtpase
+    predicate: is part of
+    object: copii_vesicle_coat
+    description: Sar1 is represented as a COPII vesicle coat constituent.
+    evidence:
+    - reference: GO:0030127
+      notes: GO:0030127 includes Sar1p among the yeast COPII subunits.
+  - subject: sec23_sec24_inner_coat
+    predicate: is part of
+    object: copii_vesicle_coat
+    description: The Sec23/Sec24 inner-coat heterodimer is part of the COPII coat.
+    evidence:
+    - reference: GO:0030134
+      notes: GO:0030134 describes the COPII coat complex as formed by Sec23p/Sec24p
+        heterodimers.
+  - subject: sec13_sec31_outer_coat
+    predicate: is part of
+    object: copii_vesicle_coat
+    description: The Sec13/Sec31 outer-coat complex is part of the COPII coat.
+    evidence:
+    - reference: GO:0030134
+      notes: GO:0030134 describes the COPII coat complex as formed by Sec13p/Sec31p
+        heterodimers.
+  - subject: copii_vesicle_coat
+    predicate: is part of
+    object: copii_coated_vesicle
+    description: The COPII vesicle coat is the coat on a COPII-coated ER-to-Golgi
+      transport vesicle.
+    evidence:
+    - reference: GO:0030134
+      notes: GO:0030134 defines the COPII-coated ER to Golgi transport vesicle by
+        its COPII coat.
+  - subject: copii_vesicle_coat
+    predicate: participates in
+    object: copii_coated_vesicle_budding
+    description: The COPII coat forms during evagination of the ER membrane into a
+      COPII-coated vesicle.
+    evidence:
+    - reference: GO:0090114
+      notes: GO:0090114 defines COPII-coated vesicle budding as evagination of ER
+        membrane to form a COPII-coated vesicle.
+discussions:
+- discussion_id: resolve_copii_subcomplex_groundings
+  prompt: Resolve exact source-neutral family or complex groundings for Sar1 and the
+    Sec23/Sec24 and Sec13/Sec31 COPII coat subcomplexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sar1_gtpase
+  - components#sec23_sec24_inner_coat
+  - components#sec13_sec31_outer_coat
+  rationale: This first COPII record names the experimentally defined Saccharomyces
+    coat constituents, while leaving InterPro, Pfam, GO, or Complex Portal grounding
+    unset until exact source-neutral family and subcomplex boundaries are reviewed.
+  evidence:
+  - reference: DOI:10.1016/0092-8674(94)90138-4
+  - reference: DOI:10.1016/S0092-8674(00)81577-9
+  - reference: DOI:10.7554/elife.00951
+  posed_by: codex
+  posed_date: '2026-09-12'
