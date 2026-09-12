@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/dolipore_septum.yaml
+  slug: dolipore_septum
+session:
+  id: 2026-09-12T045724Z-codex-952aa1
+  timestamp: '2026-09-12T04:57:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/584
+  - https://github.com/CultureBotAI/CellStructureMech/issues/585
+  - https://github.com/CultureBotAI/CellStructureMech/issues/586
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/583
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - evidence
+  summary: Added evidence-backed dolipore septum record
+  details: Created a GO:0000937 dolipore septum CellStructureMech record for Agaricomycotina,
+    curated reviewed-label-only septal-wall and paired septal-pore-cap components, added a
+    Schizophyllum commune canonical example, modeled conservative septal pore gatekeeping,
+    documented a source-neutral cap-protein grounding TODO, addressed PR review findings on
+    Agaricomycotina scope, paired parenthesomes and pore-closure wording, and regenerated
+    rendered page and embedding artifacts.
