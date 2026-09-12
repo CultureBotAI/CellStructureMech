@@ -26,11 +26,21 @@ curation_history:
     function and graph node after identifier-label validation flagged the term as
     obsolete.
   llm_assisted: true
+- timestamp: '2026-09-12T11:51:54Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #640 by adding the UniProt SL-0269 preferred label as an exact
+    synonym, and resolved #641 by rewording the mtDNA-to-nucleoid packaging edge so
+    mitochondrial DNA is not modeled as the active packaging agent.'
+  llm_assisted: true
 parent_structures:
 - GO:0009295
 part_of:
 - GO:0005759
 synonyms:
+- synonym_text: mitochondrion nucleoid
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0269
 - synonym_text: mitochromosome
   synonym_type: EXACT_SYNONYM
   source: uniprot.location:SL-0269
@@ -145,10 +155,10 @@ causal_graphs:
       notes: Kucej et al. 2008 mapped Abf2 binding across Saccharomyces cerevisiae
         mtDNA by in organello ChIP-on-chip.
   - subject: mitochondrial_dna
-    predicate: packages into
+    predicate: is packaged in
     object: mitochondrial_nucleoid
-    description: Mitochondrial DNA and nucleoid-associated proteins form matrix-localized
-      nucleoprotein foci.
+    description: Mitochondrial DNA is packaged with nucleoid-associated proteins into
+      matrix-localized nucleoprotein foci.
     evidence:
     - reference: DOI:10.1016/j.tcb.2007.08.007
       notes: Kucej and Butow 2007 review the architecture of protein-bound mitochondrial
