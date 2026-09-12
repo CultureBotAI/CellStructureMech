@@ -1,0 +1,193 @@
+identifier: GO:0030479
+label: actin cortical patch
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: An endocytic patch formed from branched actin filaments just beneath the
+  plasma membrane that assembles, moves, and disassembles rapidly.
+definition_source: GO:0030479
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T08:27:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T08:27:53Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added actin-cytoskeleton parentage, cell-cortex parthood, an exact actin-patch
+    synonym, reviewed-label-only actin and GO-grounded Arp2/3 components, Saccharomyces
+    scope, actin cortical patch assembly and endocytic internalization functions,
+    DOI/GO evidence, a nonmechanistic branched actin-patch assembly graph, and an
+    accessory component-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T08:34:59Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #615 review issues #616 and #617 by removing the downstream
+    endocytic-internalization node from the assembly graph and moving Arp2/3-regulator
+    evidence off the Arp2/3 component.'
+  llm_assisted: true
+parent_structures:
+- GO:0015629
+part_of:
+- GO:0005938
+synonyms:
+- synonym_text: actin patch
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030479
+components:
+- component_id: actin
+  label: actin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ACT1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from Saccharomyces cerevisiae ACT1 cortical actin-patch
+    studies; no exact source-neutral InterPro, Pfam, or NCBIfam identifier was curated
+    for the whole actin protein family in this pass.
+  role: Polymerizes into the short, branched filaments that form the yeast actin cortical
+    patch network.
+  evidence:
+  - reference: DOI:10.1083/jcb.200404159
+    notes: Young, Cooper and Bridgman 2004 examined Saccharomyces cerevisiae actin
+      patches by correlative fluorescence and electron microscopy.
+- component_id: arp2_3_complex
+  label: Arp2/3 protein complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005885
+  essentiality: UNKNOWN
+  role: Branch-forming actin-nucleation complex that builds the dendritic actin filament
+    network in cortical patches.
+  evidence:
+  - reference: DOI:10.1083/jcb.200404159
+    notes: Young, Cooper and Bridgman 2004 described yeast actin-patch branches characteristic
+      of the Arp2/3 complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms dynamic actin cortical patches at the cell cortex during
+    endocytic internalization.
+  reference: DOI:10.1016/S0092-8674(03)00883-3
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which cortical actin patches were imaged as short,
+    branched Arp2/3-like actin-filament networks.
+  reference: DOI:10.1083/jcb.200404159
+functions:
+- function_id: actin_cortical_patch_assembly
+  label: actin cortical patch assembly
+  grounding: GO:0000147
+  description: The actin cortical patch is produced by assembly of a branched actin
+    network at cortical endocytic sites.
+  evidence:
+  - reference: GO:0000147
+    notes: GO:0000147 denotes assembly of an actin cortical patch.
+  - reference: DOI:10.1371/journal.pbio.0060001
+    notes: Galletta, Chuang and Cooper 2008 tracked actin patch assembly and movement
+      in Arp2/3-regulator mutants.
+- function_id: endocytic_internalization
+  label: endocytic internalization
+  description: Yeast actin cortical patches assemble at cortical endocytic sites and
+    move inward as internalization proceeds.
+  evidence:
+  - reference: DOI:10.1016/S0092-8674(03)00883-3
+    notes: Kaksonen, Sun and Drubin 2003 followed receptors, adaptors and actin during
+      yeast endocytic internalization.
+evidence:
+- reference: GO:0030479
+  notes: Gene Ontology cellular-component term for the actin cortical patch.
+- reference: GO:0015629
+  notes: Gene Ontology cellular-component parent for the actin cytoskeleton.
+- reference: GO:0005885
+  notes: Gene Ontology cellular-component term for the Arp2/3 protein complex.
+- reference: GO:0000147
+  notes: Gene Ontology biological-process term for actin cortical patch assembly.
+- reference: DOI:10.1016/S0092-8674(03)00883-3
+  notes: Kaksonen, Sun and Drubin 2003, A Pathway for Association of Receptors, Adaptors,
+    and Actin during Endocytic Internalization, Cell.
+- reference: DOI:10.1083/jcb.200404159
+  notes: Young, Cooper and Bridgman 2004, Yeast actin patches are networks of branched
+    actin filaments, Journal of Cell Biology.
+- reference: DOI:10.1371/journal.pbio.0060001
+  notes: Galletta, Chuang and Cooper 2008, Distinct Roles for Arp2/3 Regulators in
+    Actin Assembly and Endocytosis, PLoS Biology.
+causal_graphs:
+- graph_id: arp2_3_branched_actin_patch_assembly
+  title: Arp2/3 nucleates a branched actin network in yeast cortical patches
+  description: In Saccharomyces cerevisiae, Arp2/3 promotes formation of short branched
+    actin filaments at cortical endocytic sites, producing actin cortical patches.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures actin and Arp2/3 at the level of this first record
+    without modeling the full timed sequence of endocytic adaptors, nucleation-promoting
+    factors, capping proteins, and actin-filament disassembly factors.
+  nodes:
+  - node_id: actin
+    label: actin
+    node_type: GENE_OR_PROTEIN
+    component_ref: actin
+  - node_id: arp2_3_complex
+    label: Arp2/3 protein complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0005885
+    component_ref: arp2_3_complex
+  - node_id: cortical_endocytic_site
+    label: cortical endocytic site
+    node_type: STRUCTURE
+  - node_id: actin_cortical_patch
+    label: actin cortical patch
+    node_type: STRUCTURE
+    grounding: GO:0030479
+  edges:
+  - subject: arp2_3_complex
+    predicate: nucleates branches in
+    object: actin_cortical_patch
+    description: Arp2/3 promotes branched actin-filament network formation within
+      yeast actin cortical patches.
+    evidence:
+    - reference: DOI:10.1083/jcb.200404159
+      notes: Young, Cooper and Bridgman 2004 linked the patch branch pattern to Arp2/3-mediated
+        actin polymerization.
+  - subject: actin
+    predicate: polymerizes into
+    object: actin_cortical_patch
+    description: Actin polymerizes into the short branched filaments that make up
+      cortical patches.
+    evidence:
+    - reference: DOI:10.1083/jcb.200404159
+      notes: Young, Cooper and Bridgman 2004 found networks of branched actin filaments
+        in yeast actin patches.
+  - subject: actin_cortical_patch
+    predicate: assembles at
+    object: cortical_endocytic_site
+    description: Yeast cortical actin patches assemble at cortical sites during endocytic
+      internalization.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(03)00883-3
+      notes: Kaksonen, Sun and Drubin 2003 analyzed actin recruitment during yeast
+        endocytic internalization.
+discussions:
+- discussion_id: resolve_actin_patch_accessory_components
+  prompt: Resolve exact source-neutral groundings and record scope for cortical actin-patch
+    nucleation-promoting factors, capping proteins, fimbrin, cofilin, and adaptor-linked
+    patch proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#actin
+  - components#arp2_3_complex
+  - causal_graphs#arp2_3_branched_actin_patch_assembly
+  rationale: This first actin cortical patch record captures the branched actin network
+    and Arp2/3 branch nucleator but leaves the broader, timed endocytic actin module
+    to a later pass to avoid mixing transient assembly factors with stable patch constituents.
+  evidence:
+  - reference: DOI:10.1371/journal.pbio.0060001
+  - reference: DOI:10.1016/S0092-8674(03)00883-3
+  posed_by: codex
+  posed_date: '2026-09-12'
