@@ -19,6 +19,13 @@ curation_history:
     chromatophora distribution and example, a light-reaction function, a nonmechanistic
     topology graph, and UniProt Subcellular Location evidence.
   llm_assisted: true
+- timestamp: '2026-09-12T12:37:27Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #647 by citing the Paulinella chromatophora review DOI for the
+    species-level distribution row; resolved #646 by removing the whole-chromatophore
+    Singer et al. protein-import DOI from thylakoid record-level evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0009579
 part_of:
@@ -47,7 +54,7 @@ taxonomic_distribution:
   presence: COMMON
   note: Paulinella chromatophora organellar chromatophores contain thylakoids used
     for photosynthesis.
-  reference: uniprot.location:SL-0354
+  reference: DOI:10.5586/asbp.2014.049
 canonical_examples:
 - taxon_id: NCBITaxon:39717
   taxon_label: Paulinella chromatophora
@@ -83,8 +90,6 @@ evidence:
     Paulinella species.
 - reference: DOI:10.5586/asbp.2014.049
   notes: Nowack 2014 reviews the evolution of the photosynthetic Paulinella chromatophore.
-- reference: DOI:10.1016/j.cub.2017.08.010
-  notes: Singer et al. 2017 studied the early-stage Paulinella photosynthetic organelle.
 causal_graphs:
 - graph_id: paulinella_chromatophore_thylakoid_topology
   title: Organellar chromatophore thylakoid topology
