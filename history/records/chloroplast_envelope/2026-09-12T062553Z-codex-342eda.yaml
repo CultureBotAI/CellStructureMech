@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/chloroplast_envelope.yaml
+  slug: chloroplast_envelope
+session:
+  id: 2026-09-12T062553Z-codex-342eda
+  timestamp: '2026-09-12T06:25:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/597
+  - https://github.com/CultureBotAI/CellStructureMech/issues/598
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/596
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the chloroplast envelope record
+  details: Added data/structures/membrane_organelle/chloroplast_envelope.yaml for GO:0009941
+    chloroplast envelope, including plastid-envelope parentage, chloroplast parthood, GO-grounded
+    outer membrane, inner membrane, intermembrane-space, stroma, Toc, and Tic parts, Viridiplantae
+    and Chlamydomonas reinhardtii scope, stromal protein-import function, DOI-backed TOC-TIC
+    and plastid-origin evidence, a nonmechanistic chloroplast-envelope import graph, generated
+    pages, refreshed embeddings, and review fixes for precommit curation-history compaction
+    plus the missing stroma boundary edge.

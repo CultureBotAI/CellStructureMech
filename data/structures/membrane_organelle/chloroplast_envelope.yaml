@@ -1,0 +1,311 @@
+identifier: GO:0009941
+label: chloroplast envelope
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The double lipid bilayer enclosing the chloroplast and separating its
+  contents from the rest of the cytoplasm; includes the intermembrane space.
+definition_source: GO:0009941
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T06:09:52Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T06:10:51Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added plastid-envelope parentage, chloroplast parthood, exact outer and
+    inner membrane, intermembrane-space, Toc, and Tic parts, Viridiplantae and Chlamydomonas
+    scope, stromal protein-import function, DOI/GO evidence, a nonmechanistic envelope-import
+    graph, and an import-complex boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T06:17:49Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved PR #596 review issues #597 and #598 by compacting precommit curation-history
+    self-corrections and adding a GO:0009570 chloroplast stroma node plus envelope-boundary
+    graph edge.'
+  llm_assisted: true
+parent_structures:
+- GO:0009526
+part_of:
+- GO:0009507
+has_part:
+- GO:0009707
+- GO:0009706
+- GO:0031972
+- GO:0010006
+- GO:0031897
+components:
+- component_id: chloroplast_outer_membrane
+  label: chloroplast outer membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0009707
+  essentiality: UNKNOWN
+  role: Cytoplasm-facing lipid bilayer of the chloroplast envelope that carries the
+    Toc outer-membrane translocon.
+  evidence:
+  - reference: GO:0009707
+    notes: GO:0009707 defines the chloroplast outer membrane as the cytoplasm-facing
+      lipid bilayer of the chloroplast envelope.
+- component_id: chloroplast_inner_membrane
+  label: chloroplast inner membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0009706
+  essentiality: UNKNOWN
+  role: Stroma-facing lipid bilayer of the chloroplast envelope that carries the Tic
+    inner-envelope translocon.
+  evidence:
+  - reference: GO:0009706
+    notes: GO:0009706 defines the chloroplast inner membrane as the inner lipid bilayer
+      of the chloroplast envelope facing the stroma.
+- component_id: toc_complex
+  label: Toc complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0010006
+  essentiality: UNKNOWN
+  role: Outer-envelope protein translocon that contributes the first chloroplast-envelope
+    step for nuclear-encoded preprotein import.
+  evidence:
+  - reference: GO:0010006
+    notes: GO:0010006 defines the Toc complex as a protein translocon at the chloroplast
+      outer membrane.
+  - reference: DOI:10.1016/j.cell.2022.10.030
+    notes: Jin et al. 2022 resolved a Chlamydomonas TOC-TIC supercomplex that links
+      the outer and inner chloroplast envelope translocons.
+- component_id: tic_complex
+  label: Tic complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0031897
+  essentiality: UNKNOWN
+  role: Inner-envelope translocon that facilitates chloroplast preprotein import across
+    the inner envelope membrane.
+  evidence:
+  - reference: GO:0031897
+    notes: GO:0031897 defines the Tic complex as the translocon of the inner chloroplast
+      envelope.
+  - reference: DOI:10.1016/j.cell.2022.10.030
+    notes: Jin et al. 2022 resolved a Chlamydomonas TOC-TIC supercomplex that links
+      the outer and inner chloroplast envelope translocons.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Photosynthetic green algae and land plants carry chloroplasts with envelopes
+    inherited from primary plastids.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: The unicellular green alga Chlamydomonas reinhardtii has a chloroplast envelope
+    with TOC-TIC import machinery.
+  reference: DOI:10.1016/j.cell.2022.10.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model used for a resolved TOC-TIC supercomplex spanning two chloroplast
+    envelope membranes.
+  reference: DOI:10.1016/j.cell.2022.10.030
+functions:
+- function_id: protein_import_into_chloroplast_stroma
+  label: protein import into chloroplast stroma
+  grounding: GO:0045037
+  description: Toc and Tic translocases route nuclear-encoded preproteins across the
+    two chloroplast envelope membranes toward the stroma.
+  evidence:
+  - reference: GO:0045037
+    notes: GO:0045037 defines protein import into the chloroplast stroma.
+  - reference: DOI:10.1016/j.cell.2022.10.030
+    notes: Jin et al. 2022 resolved a Chlamydomonas TOC-TIC supercomplex spanning
+      both chloroplast envelope membranes.
+evidence:
+- reference: GO:0009941
+  notes: Gene Ontology cellular-component term for chloroplast envelope.
+- reference: GO:0009526
+  notes: Gene Ontology cellular-component term for plastid envelope.
+- reference: GO:0009507
+  notes: Gene Ontology cellular-component term for chloroplast.
+- reference: GO:0009707
+  notes: Gene Ontology cellular-component term for chloroplast outer membrane.
+- reference: GO:0009706
+  notes: Gene Ontology cellular-component term for chloroplast inner membrane.
+- reference: GO:0031972
+  notes: Gene Ontology cellular-component term for chloroplast intermembrane space.
+- reference: GO:0009570
+  notes: Gene Ontology cellular-component term for chloroplast stroma.
+- reference: GO:0010006
+  notes: Gene Ontology cellular-component term for the Toc complex.
+- reference: GO:0031897
+  notes: Gene Ontology cellular-component term for the Tic complex.
+- reference: GO:0045037
+  notes: Gene Ontology biological-process term for protein import into the chloroplast
+    stroma.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, 'The endosymbiotic origin, diversification and fate of plastids',
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1016/j.cell.2022.10.030
+  notes: Jin et al. 2022, 'Structure of a TOC-TIC supercomplex spanning two chloroplast
+    envelope membranes', Cell.
+causal_graphs:
+- graph_id: chlamydomonas_chloroplast_envelope_import
+  title: Chloroplast envelope routes stromal protein import
+  description: In Chlamydomonas, outer and inner chloroplast envelope membranes bound
+    the intermembrane space while Toc and Tic translocons route nuclear-encoded preproteins
+    toward the stroma.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures envelope topology and TOC/TIC-dependent stromal
+    import without asserting every subunit of the divergent Chlamydomonas TOC-TIC
+    supercomplex.
+  nodes:
+  - node_id: chloroplast
+    label: chloroplast
+    node_type: STRUCTURE
+    grounding: GO:0009507
+  - node_id: chloroplast_envelope
+    label: chloroplast envelope
+    node_type: STRUCTURE
+    grounding: GO:0009941
+  - node_id: chloroplast_outer_membrane
+    label: chloroplast outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009707
+    component_ref: chloroplast_outer_membrane
+  - node_id: chloroplast_inner_membrane
+    label: chloroplast inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0009706
+    component_ref: chloroplast_inner_membrane
+  - node_id: chloroplast_intermembrane_space
+    label: chloroplast intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031972
+  - node_id: chloroplast_stroma
+    label: chloroplast stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009570
+  - node_id: toc_complex
+    label: Toc complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0010006
+    component_ref: toc_complex
+  - node_id: tic_complex
+    label: Tic complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0031897
+    component_ref: tic_complex
+  - node_id: protein_import_into_chloroplast_stroma
+    label: protein import into chloroplast stroma
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0045037
+  edges:
+  - subject: chloroplast_envelope
+    predicate: encloses
+    object: chloroplast
+    description: The chloroplast envelope is the double lipid bilayer that encloses
+      the chloroplast.
+    evidence:
+    - reference: GO:0009941
+      notes: GO:0009941 defines the chloroplast envelope as the double lipid bilayer
+        enclosing the chloroplast.
+  - subject: chloroplast_outer_membrane
+    predicate: is part of
+    object: chloroplast_envelope
+    description: The chloroplast outer membrane is the cytoplasm-facing bilayer of
+      the chloroplast envelope.
+    evidence:
+    - reference: GO:0009707
+      notes: GO:0009707 places the chloroplast outer membrane in the chloroplast envelope.
+  - subject: chloroplast_inner_membrane
+    predicate: is part of
+    object: chloroplast_envelope
+    description: The chloroplast inner membrane is the stroma-facing bilayer of the
+      chloroplast envelope.
+    evidence:
+    - reference: GO:0009706
+      notes: GO:0009706 places the chloroplast inner membrane in the chloroplast envelope.
+  - subject: chloroplast_envelope
+    predicate: contains
+    object: chloroplast_intermembrane_space
+    description: The envelope contains the region between the outer and inner chloroplast
+      lipid bilayers.
+    evidence:
+    - reference: GO:0031972
+      notes: GO:0031972 defines the chloroplast intermembrane space as the region
+        between the inner and outer lipid bilayers of a chloroplast envelope.
+  - subject: chloroplast_envelope
+    predicate: bounds
+    object: chloroplast_stroma
+    description: The chloroplast envelope encloses the stromal space inside the chloroplast
+      while excluding the thylakoid space.
+    evidence:
+    - reference: GO:0009570
+      notes: GO:0009570 defines the chloroplast stroma as the space enclosed by the
+        double membrane of a chloroplast, excluding the thylakoid space.
+  - subject: toc_complex
+    predicate: is part of
+    object: chloroplast_outer_membrane
+    description: Toc is the protein translocon complex at the chloroplast outer membrane.
+    evidence:
+    - reference: GO:0010006
+      notes: GO:0010006 defines the Toc complex as a protein translocon at the chloroplast
+        outer membrane.
+  - subject: tic_complex
+    predicate: is part of
+    object: chloroplast_inner_membrane
+    description: Tic is the translocon of the inner chloroplast envelope.
+    evidence:
+    - reference: GO:0031897
+      notes: GO:0031897 defines the Tic complex as the translocon of the inner chloroplast
+        envelope.
+  - subject: toc_complex
+    predicate: couples with
+    object: tic_complex
+    description: Toc and Tic form an envelope-spanning TOC-TIC supercomplex in Chlamydomonas.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2022.10.030
+      notes: Jin et al. 2022 resolved a Chlamydomonas TOC-TIC supercomplex spanning
+        the two chloroplast envelope membranes.
+  - subject: toc_complex
+    predicate: routes precursors toward
+    object: protein_import_into_chloroplast_stroma
+    description: Toc contributes the outer-envelope step of stromal preprotein import
+      through the chloroplast envelope.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2022.10.030
+      notes: Jin et al. 2022 resolved an outer-envelope Toc portion in a chloroplast
+        protein-import supercomplex.
+  - subject: tic_complex
+    predicate: routes precursors toward
+    object: protein_import_into_chloroplast_stroma
+    description: Tic contributes the inner-envelope step of stromal preprotein import
+      through the chloroplast envelope.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2022.10.030
+      notes: Jin et al. 2022 resolved an inner-envelope Tic portion in a chloroplast
+        protein-import supercomplex.
+discussions:
+- discussion_id: resolve_chloroplast_envelope_import_subcomplexes
+  prompt: Resolve exact source-neutral records or component boundaries for envelope-spanning
+    TOC-TIC supercomplexes, the Chlamydomonas YlmG-containing import module, and plastid
+    protein-import ATPase subcomplexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#toc_complex
+  - components#tic_complex
+  - causal_graphs#chlamydomonas_chloroplast_envelope_import
+  rationale: This first chloroplast envelope record grounds the separate Toc and Tic
+    translocons exactly while avoiding a broader aggregate for every import factor
+    embedded in, spanning, or peripherally associated with the envelope.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2022.10.030
+    notes: Jin et al. 2022 resolved a multi-component Chlamydomonas TOC-TIC supercomplex
+      spanning two chloroplast envelope membranes.
+  posed_by: codex
+  posed_date: '2026-09-12'
