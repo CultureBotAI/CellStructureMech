@@ -21,12 +21,16 @@ curation_history:
     graph, and discussions for excluding the thylakoid membrane and grounding the
     generic lipid bilayer component.
   llm_assisted: true
+- timestamp: '2026-09-12T20:32:15Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #702 by demoting UniProt SL-0083 from an exact xref to broader
+    fallback evidence and caveating notes that mention its scope.'
+  llm_assisted: true
 parent_structures:
 - GO:0042170
 part_of:
 - GO:0033112
-xrefs:
-- uniprot.location:SL-0083
 components:
 - component_id: cyanelle_envelope_lipid_bilayer
   label: cyanelle envelope lipid bilayer
@@ -40,12 +44,12 @@ components:
     notes: GO:0033113 defines a cyanelle membrane as either lipid bilayer that forms
       the cyanelle envelope.
   - reference: uniprot.location:SL-0083
-    notes: UniProt SL-0083 maps directly to GO:0033113 and represents the generic
-      cyanelle membrane localization.
+    notes: UniProt SL-0083 provides the cyanelle membrane localization entry and notes
+      that it can be used when the exact cyanelle membrane assignment is unresolved.
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0033113 and UniProt SL-0083 identify the whole generic cyanelle
-    membrane class, but no separate source-neutral CURIE was curated for a cyanelle-envelope-specific
-    lipid bilayer constituent.
+  grounding_notes: GO:0033113 identifies the generic cyanelle envelope membrane class,
+    while UniProt SL-0083 has a broader fallback annotation scope; no separate source-neutral
+    CURIE was curated for a cyanelle-envelope-specific lipid bilayer constituent.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:38254
   taxon_label: Glaucocystophyceae
@@ -80,8 +84,9 @@ evidence:
   notes: Gene Ontology cellular-component term for the distinct cyanelle thylakoid
     membrane.
 - reference: uniprot.location:SL-0083
-  notes: UniProt Subcellular Location entry SL-0083 maps Cyanelle membrane to GO:0033113
-    and places it under cyanelle and plastid membrane.
+  notes: UniProt Subcellular Location entry SL-0083 maps to GO:0033113 but can also
+    be used when a cyanelle protein's exact outer, inner, or thylakoid membrane assignment
+    is unclear.
 - reference: DOI:10.1104/pp.71.2.409
   notes: Giddings, Wasmann and Staehelin 1983, Structure of the Thylakoids and Envelope
     Membranes of the Cyanelles of Cyanophora paradoxa, Plant Physiology.
@@ -99,9 +104,9 @@ causal_graphs:
     lipid bilayer when the exact inner or outer membrane identity is unspecified.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures GO and UniProt localization scope without asserting
-    which exact envelope membrane a generic GO:0033113 or SL-0083 annotation refers
-    to.
+  scope_notes: The graph captures GO localization scope without asserting which exact
+    envelope membrane a generic GO:0033113 annotation refers to; UniProt SL-0083 is
+    treated as broader fallback context.
   nodes:
   - node_id: cyanelle_membrane
     label: cyanelle membrane
@@ -185,8 +190,9 @@ discussions:
   status: OPEN
   attaches_to:
   - components#cyanelle_envelope_lipid_bilayer
-  rationale: The record is exactly grounded to GO:0033113 and UniProt SL-0083, but
-    the lipid bilayer constituent is intentionally left as a reviewed-label-only component
-    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  rationale: The record is exactly grounded to GO:0033113, while UniProt SL-0083 is
+    broader fallback evidence; the lipid bilayer constituent is intentionally left
+    as a reviewed-label-only component until an exact source-neutral lipid or membrane-constituent
+    CURIE is curated.
   posed_by: codex
   posed_date: '2026-09-12'

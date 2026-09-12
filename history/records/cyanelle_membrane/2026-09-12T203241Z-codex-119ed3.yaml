@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cyanelle_membrane.yaml
+  slug: cyanelle_membrane
+session:
+  id: 2026-09-12T203241Z-codex-119ed3
+  timestamp: '2026-09-12T20:32:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/702
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/701
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-grounded cyanelle membrane record
+  details: 'Created GO:0033113 cyanelle membrane with GO provenance, plastid-membrane parentage,
+    cyanelle-envelope parthood, broader UniProt SL-0083 fallback evidence, Glaucocystophyceae
+    taxonomic scope, and a nonmechanistic GO-scope graph. Review issue #702 demoted UniProt
+    SL-0083 from an exact xref to broader evidence because UniProt can also use the entry
+    when cyanelle thylakoid placement is unresolved.'
