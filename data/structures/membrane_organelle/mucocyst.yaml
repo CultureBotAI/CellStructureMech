@@ -26,6 +26,14 @@ curation_history:
   changes: Retargeted the mucocyst maturation-factor boundary discussion from a section-level
     components anchor to the MDD complex component.
   llm_assisted: true
+- timestamp: '2026-09-12T04:34:15Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #579 review issues #580, #581 and #582 by retargeting the
+    Grl coassembly edge to a crystalline-lattice node, removing the MDD abbreviation
+    from gene_symbols, and adding direct Kaur 2017 evidence for AP-3/endosomal syntaxin
+    boundary exclusions.'
+  llm_assisted: true
 parent_structures:
 - GO:0030141
 components:
@@ -91,7 +99,6 @@ components:
   essentiality: UNKNOWN
   gene_symbols:
   - MDL1
-  - MDD
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The Tetrahymena MDD complex was resolved as a mucocyst-associated
     membrane complex, but no exact Complex Portal or protein-family CURIE for the
@@ -141,6 +148,10 @@ evidence:
   notes: Kuppannan et al. 2022, A novel membrane complex is required for docking and
     regulated exocytosis of lysosome-related organelles in Tetrahymena thermophila,
     PLOS Genetics.
+- reference: DOI:10.1091/mbc.e17-01-0018
+  notes: Kaur et al. 2017, An endosomal syntaxin and the AP-3 complex are required
+    for formation and maturation of candidate lysosome-related secretory organelles
+    (mucocysts) in Tetrahymena thermophila, Molecular Biology of the Cell.
 causal_graphs:
 - graph_id: mucocyst_docking_and_exocytosis
   title: Mucocyst core proteins mature before docking and discharge
@@ -165,6 +176,9 @@ causal_graphs:
     label: granule lattice proteins
     node_type: GENE_OR_PROTEIN
     component_ref: granule_lattice_proteins
+  - node_id: mucocyst_crystalline_lattice
+    label: mucocyst crystalline lattice
+    node_type: STRUCTURE
   - node_id: granule_tip_proteins
     label: granule tip proteins
     node_type: GENE_OR_PROTEIN
@@ -196,13 +210,22 @@ causal_graphs:
         dense-core granules.
   - subject: granule_lattice_proteins
     predicate: coassemble into
-    object: mucocyst_lumen
-    description: Grl proteins coassemble as a crystalline lattice within the mucocyst
-      lumen.
+    object: mucocyst_crystalline_lattice
+    description: Grl proteins coassemble as the crystalline lattice stored in the
+      mucocyst lumen.
     evidence:
     - reference: DOI:10.1128/EC.00151-09
       notes: Rahaman et al. 2009 distinguish the Grl class as cargo that coassembles
         into a crystalline dense-core granule lattice.
+  - subject: mucocyst_crystalline_lattice
+    predicate: is stored in
+    object: mucocyst_lumen
+    description: The assembled Grl cargo lattice occupies the dense-core mucocyst
+      lumen before regulated discharge.
+    evidence:
+    - reference: DOI:10.1128/EC.00151-09
+      notes: Rahaman et al. 2009 describe Grl proteins as forming a crystalline lattice
+        within the Tetrahymena dense-core granule lumen.
   - subject: granule_tip_proteins
     predicate: sort independently to
     object: mucocyst
@@ -260,5 +283,6 @@ discussions:
     assembled organelle boundary.
   evidence:
   - reference: DOI:10.1534/g3.116.028878
+  - reference: DOI:10.1091/mbc.e17-01-0018
   posed_by: codex
   posed_date: '2026-09-12'
