@@ -846,6 +846,15 @@
   "definition": "A plastid that contains unstacked, phycobilisome-bearing thylakoid membranes and is surrounded by a double membrane with a peptidoglycan layer in the intermembrane space between the two envelope membranes. Cyanelles are characteristic of algae in the class Glaucophyta, and may represent an ancestral form of plastid."
  },
  {
+  "identifier": "GO:0033112",
+  "label": "cyanelle envelope",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/cyanelle_envelope.html",
+  "definition": "The double lipid bilayer enclosing the cyanelle and separating its contents from the rest of the cytoplasm; includes the intermembrane space."
+ },
+ {
   "identifier": "GO:0005783",
   "label": "endoplasmic reticulum",
   "category": "MEMBRANE_ORGANELLE",

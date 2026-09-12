@@ -2896,6 +2896,11 @@
       "label": "cyanelle",
       "neighbors": [
         {
+          "identifier": "GO:0033112",
+          "label": "cyanelle envelope",
+          "cosine_similarity": 0.94179162
+        },
+        {
           "identifier": "GO:0070118",
           "label": "organellar chromatophore thylakoid membrane",
           "cosine_similarity": 0.7939607
@@ -2914,11 +2919,37 @@
           "identifier": "GO:0070113",
           "label": "organellar chromatophore inner membrane",
           "cosine_similarity": 0.76644554
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0033112",
+      "label": "cyanelle envelope",
+      "neighbors": [
+        {
+          "identifier": "GO:0009842",
+          "label": "cyanelle",
+          "cosine_similarity": 0.94179162
+        },
+        {
+          "identifier": "GO:0070114",
+          "label": "organellar chromatophore outer membrane",
+          "cosine_similarity": 0.82921232
+        },
+        {
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.81439667
         },
         {
           "identifier": "GO:0070112",
           "label": "organellar chromatophore membrane",
-          "cosine_similarity": 0.76362838
+          "cosine_similarity": 0.79874148
+        },
+        {
+          "identifier": "GO:0005886",
+          "label": "plasma membrane",
+          "cosine_similarity": 0.76167175
         }
       ]
     },
