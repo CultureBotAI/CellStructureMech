@@ -1,0 +1,142 @@
+identifier: GO:0070118
+label: organellar chromatophore thylakoid membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer membrane of any thylakoid within an organellar chromatophore.
+definition_source: GO:0070118
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T18:49:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T18:50:12Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO synonym, UniProt SL xref, thylakoid membrane parentage, organellar
+    chromatophore thylakoid parthood, a reviewed-label-only thylakoid lipid bilayer
+    component, Paulinella distribution, a light-reaction function, a nonmechanistic
+    topology graph, and a lipid-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Paulinella-type chromatophore thylakoid membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0070118
+parent_structures:
+- GO:0042651
+part_of:
+- GO:0070116
+xrefs:
+- uniprot.location:SL-0356
+components:
+- component_id: organellar_chromatophore_thylakoid_lipid_bilayer
+  label: organellar chromatophore thylakoid lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Internal organellar chromatophore thylakoid lipid bilayer that bounds the
+    thylakoid lumen and houses light-reaction complexes.
+  evidence:
+  - reference: GO:0070118
+    notes: GO:0070118 defines the organellar chromatophore thylakoid membrane as the
+      lipid bilayer membrane of an organellar chromatophore thylakoid.
+  - reference: uniprot.location:SL-0356
+    notes: UniProt Subcellular Location SL-0356 maps directly to GO:0070118 and describes
+      the same internal photosynthetic membrane system.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070118 and UniProt SL-0356 identify the whole organellar chromatophore
+    thylakoid membrane, but no separate source-neutral CURIE was curated for the lipid
+    constituent of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:39716
+  taxon_label: Paulinella
+  presence: VARIABLE
+  note: UniProt SL-0356 constrains the organellar chromatophore thylakoid membrane
+    to Paulinella species without asserting that every Paulinella species carries
+    this membrane.
+  reference: uniprot.location:SL-0356
+functions:
+- function_id: light_reactions_of_photosynthesis
+  label: photosynthesis, light reaction
+  grounding: GO:0019684
+  description: The organellar chromatophore thylakoid membrane houses complexes that
+    carry out the light reactions of photosynthesis.
+  evidence:
+  - reference: uniprot.location:SL-0356
+    notes: UniProt SL-0356 describes the membrane as the internal system housing complexes
+      for the light reactions of photosynthesis.
+evidence:
+- reference: GO:0070118
+  notes: Gene Ontology cellular-component term for the organellar chromatophore thylakoid
+    membrane.
+- reference: GO:0042651
+  notes: Gene Ontology cellular-component term for thylakoid membrane, the broader
+    thylakoid-membrane parent structure.
+- reference: GO:0070116
+  notes: Gene Ontology cellular-component term for the organellar chromatophore thylakoid
+    that this membrane is part of.
+- reference: GO:0070117
+  notes: Gene Ontology cellular-component term for the lumen bounded by the organellar
+    chromatophore thylakoid membrane.
+- reference: uniprot.location:SL-0356
+  notes: UniProt Subcellular Location entry SL-0356 maps to GO:0070118, places it
+    under plastid thylakoid membrane and organellar chromatophore thylakoid, and describes
+    its Paulinella-specific taxonomic range.
+causal_graphs:
+- graph_id: organellar_chromatophore_thylakoid_membrane_topology
+  title: Organellar chromatophore thylakoid membrane topology
+  description: The organellar chromatophore thylakoid membrane bounds the thylakoid
+    lumen and supports photosynthetic light-reaction complexes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining thylakoid-membrane topology and light-reaction
+    site without asserting the complete photosystem or electron-transport composition.
+  nodes:
+  - node_id: organellar_chromatophore_thylakoid_membrane
+    label: organellar chromatophore thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0070118
+  - node_id: organellar_chromatophore_thylakoid_lumen
+    label: organellar chromatophore thylakoid lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0070117
+  - node_id: photosynthesis_light_reaction
+    label: photosynthesis, light reaction
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0019684
+  edges:
+  - subject: organellar_chromatophore_thylakoid_membrane
+    predicate: bounds
+    object: organellar_chromatophore_thylakoid_lumen
+    description: The organellar chromatophore thylakoid lumen is bounded by the thylakoid
+      membrane.
+    evidence:
+    - reference: GO:0070117
+      notes: GO:0070117 defines the lumen as the volume enclosed by an organellar
+        chromatophore thylakoid membrane.
+  - subject: organellar_chromatophore_thylakoid_membrane
+    predicate: supports
+    object: photosynthesis_light_reaction
+    description: The organellar chromatophore thylakoid membrane houses complexes
+      for the light reactions of photosynthesis.
+    evidence:
+    - reference: GO:0070118
+      notes: GO:0070118 defines the membrane as the lipid bilayer of an organellar
+        chromatophore thylakoid.
+    - reference: uniprot.location:SL-0356
+      notes: UniProt SL-0356 describes the membrane as housing the complexes that
+        carry out photosynthetic light reactions.
+discussions:
+- discussion_id: ground_chromatophore_thylakoid_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    organellar chromatophore thylakoid membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#organellar_chromatophore_thylakoid_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0070118 and UniProt SL-0356, but
+    the lipid bilayer constituent is intentionally left as a reviewed-label-only component
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-12'
