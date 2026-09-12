@@ -504,6 +504,15 @@
   "definition": "The rotary motor enzyme that makes ATP from ADP and phosphate using the ion motive force across the membrane. It has two coupled sectors: a membrane-embedded Fo, whose c-ring turns as protons cross it, and a soluble F1 (alpha3beta3gammadeltaepsilon), whose catalytic beta subunits are driven through their conformational cycle by the rotating gamma subunit."
  },
  {
+  "identifier": "GO:0016471",
+  "label": "vacuolar proton-transporting V-type ATPase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.html",
+  "definition": "A proton-transporting two-sector ATPase complex found in the vacuolar membrane, where it acts as a proton pump to mediate acidification of the vacuolar lumen."
+ },
+ {
   "identifier": "GO:0042603",
   "label": "capsule",
   "category": "ENVELOPE",
