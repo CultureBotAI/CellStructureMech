@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+  slug: actin_cortical_patch
+session:
+  id: 2026-09-12T084055Z-codex-b520e4
+  timestamp: '2026-09-12T08:40:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/616
+  - https://github.com/CultureBotAI/CellStructureMech/issues/617
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/615
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the actin cortical patch record
+  details: 'Created data/structures/cytoskeleton/actin_cortical_patch.yaml as the GO:0030479
+    actin cortical patch record. The record adds actin-cytoskeleton parentage, cell-cortex
+    parthood, exact actin patch synonymy, reviewed-label-only actin and GO:0005885 Arp2/3
+    protein complex components, Saccharomyces cerevisiae scope, actin cortical patch assembly,
+    endocytic internalization, and a nonmechanistic branched actin-patch assembly graph grounded
+    in GO plus Kaksonen et al. 2003, Young et al. 2004, and Galletta et al. 2008. PR review
+    issues #616 and #617 kept the graph scoped to assembly and moved Arp2/3-regulator evidence
+    off the Arp2/3 component. Validation covered single-record LinkML and strict checks, regenerated
+    text embeddings, rendered pages, README drift, full strict validation, snippet verification,
+    trait-link checking, CURIE liveness, id-label correspondence, and full run_qc.'
