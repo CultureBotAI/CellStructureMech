@@ -20,6 +20,26 @@ curation_history:
     inner lipid bilayer component, Paulinella distribution, a nonmechanistic topology
     graph, and a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-12T18:31:04Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #690 by retargeting the topology graph from a whole-chromatophore
+    bounds edge to a stroma/intermembrane-space separation edge with explicit compartment
+    nodes and evidence.'
+  llm_assisted: true
+- timestamp: '2026-09-12T18:31:33Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Refined the #690 topology fix by splitting the stroma/intermembrane-space
+    separation into explicit stroma-facing and intermembrane-space edges.'
+  llm_assisted: true
+- timestamp: '2026-09-12T18:32:48Z'
+  curator: codex
+  action: FIX_CURIE
+  changes: 'Removed the unresolved uniprot.location:SL-0353 grounding and evidence
+    introduced while addressing #690; kept the ungrounded stroma topology node and
+    GO:0070115 intermembrane-space grounding.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Paulinella-type chromatophore inner membrane
   synonym_type: EXACT_SYNONYM
@@ -69,16 +89,19 @@ evidence:
     the broader chromatophore-membrane parent structure.
 - reference: GO:0070111
   notes: Gene Ontology cellular-component term for the organellar chromatophore that
-    this inner membrane bounds.
+    this inner membrane is part of.
 - reference: uniprot.location:SL-0359
   notes: UniProt Subcellular Location entry SL-0359 maps to GO:0070113, places it
     under plastid inner membrane and organellar chromatophore membrane, and describes
     its Paulinella-specific taxonomic range.
+- reference: GO:0070115
+  notes: Gene Ontology cellular-component term for the intermembrane space that lies
+    between the inner and outer organellar chromatophore membranes.
 causal_graphs:
 - graph_id: organellar_chromatophore_inner_membrane_topology
   title: Organellar chromatophore inner membrane topology
-  description: The organellar chromatophore inner membrane is the lumen-facing lipid
-    bilayer of the Paulinella organellar chromatophore envelope.
+  description: The organellar chromatophore inner membrane separates the Paulinella
+    organellar chromatophore stroma from the intermembrane space.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures the defining envelope topology without asserting
@@ -89,23 +112,35 @@ causal_graphs:
     label: organellar chromatophore inner membrane
     node_type: STRUCTURE
     grounding: GO:0070113
-  - node_id: organellar_chromatophore
-    label: organellar chromatophore
+  - node_id: organellar_chromatophore_stroma
+    label: organellar chromatophore stroma
     node_type: STRUCTURE
-    grounding: GO:0070111
+  - node_id: organellar_chromatophore_intermembrane_space
+    label: organellar chromatophore intermembrane space
+    node_type: STRUCTURE
+    grounding: GO:0070115
   edges:
   - subject: organellar_chromatophore_inner_membrane
     predicate: bounds
-    object: organellar_chromatophore
-    description: The inner membrane is the lumen-facing lipid bilayer of the organellar
+    object: organellar_chromatophore_stroma
+    description: The inner membrane is the stroma-facing lipid bilayer of the organellar
       chromatophore envelope.
     evidence:
-    - reference: GO:0070113
-      notes: GO:0070113 defines this inner membrane by its lumen-facing position around
-        an organellar chromatophore.
     - reference: uniprot.location:SL-0359
-      notes: UniProt SL-0359 describes the inner organellar chromatophore membrane
-        as separating the chromatophore stroma from the intermembrane space.
+      notes: UniProt SL-0359 defines the organellar chromatophore inner membrane as
+        separating the stroma from the intermembrane space.
+  - subject: organellar_chromatophore_inner_membrane
+    predicate: delimits
+    object: organellar_chromatophore_intermembrane_space
+    description: The inner membrane forms one side of the organellar chromatophore
+      intermembrane space.
+    evidence:
+    - reference: uniprot.location:SL-0359
+      notes: UniProt SL-0359 defines the organellar chromatophore inner membrane as
+        separating the stroma from the intermembrane space.
+    - reference: GO:0070115
+      notes: GO:0070115 identifies the organellar chromatophore intermembrane space
+        as the compartment between the inner and outer organellar chromatophore membranes.
 discussions:
 - discussion_id: ground_chromatophore_inner_lipid_bilayer
   prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
