@@ -23,6 +23,12 @@ curation_history:
     functions, literature evidence, a nonmechanistic Lpt topology graph, and a resolved
     periplasm-versus-wall boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-12T04:11:50Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #576 review issues #577 and #578 by removing periplasm boundary
+    membranes from components and adding an LPS-to-outer-membrane topology edge.'
+  llm_assisted: true
 synonyms:
 - synonym_text: outer membrane bounded periplasmic space
   synonym_type: EXACT_SYNONYM
@@ -35,17 +41,6 @@ parent_structures:
 has_part:
 - GO:0009276
 components:
-- component_id: inner_membrane_boundary
-  label: plasma membrane
-  component_type: LIPID
-  component_role: CONSTITUENT
-  grounding: GO:0005886
-  essentiality: ESSENTIAL
-  role: Cytoplasmic-side membrane boundary of the Gram-negative periplasm.
-  evidence:
-  - reference: GO:0030288
-    notes: GO:0030288 defines the outer membrane-bounded periplasmic space as the
-      region between the inner and outer membranes.
 - component_id: gram_negative_peptidoglycan
   label: Gram-negative-bacterium-type cell wall
   component_type: PEPTIDOGLYCAN
@@ -61,21 +56,6 @@ components:
   - reference: DOI:10.1101/cshperspect.a000414
     notes: Silhavy, Kahne and Walker 2010 describe the Gram-negative envelope as an
       outer membrane surrounding a thin peptidoglycan wall in the periplasm.
-- component_id: outer_membrane_boundary
-  label: cell outer membrane
-  component_type: LIPID
-  component_role: CONSTITUENT
-  grounding: GO:0009279
-  essentiality: ESSENTIAL
-  role: Cell-surface membrane boundary that encloses the diderm periplasm away from
-    the cytoplasm.
-  evidence:
-  - reference: GO:0030288
-    notes: GO:0030288 scopes this periplasmic region to organisms with both an inner
-      membrane and an outer membrane.
-  - reference: DOI:10.1101/cshperspect.a000414
-    notes: Silhavy, Kahne and Walker 2010 review the outer membrane as the defining
-      surface membrane of the Gram-negative cell envelope.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -144,7 +124,6 @@ causal_graphs:
     label: plasma membrane
     node_type: STRUCTURE
     grounding: GO:0005886
-    component_ref: inner_membrane_boundary
   - node_id: periplasm
     label: outer membrane-bounded periplasmic space
     node_type: CELLULAR_LOCALIZATION
@@ -158,7 +137,6 @@ causal_graphs:
     label: cell outer membrane
     node_type: STRUCTURE
     grounding: GO:0009279
-    component_ref: outer_membrane_boundary
   - node_id: lps
     label: lipopolysaccharide
     node_type: CHEMICAL
@@ -212,6 +190,15 @@ causal_graphs:
     - reference: DOI:10.1074/jbc.R117.802512
       notes: Sperandeo, Martorana and Polissi 2017 review the Lpt pathway as the Gram-negative
         LPS transport system.
+  - subject: lps
+    predicate: is inserted into
+    object: outer_membrane
+    description: After Lpt-mediated transport across the periplasm, LPS is inserted
+      into the cell outer membrane.
+    evidence:
+    - reference: DOI:10.1074/jbc.R117.802512
+      notes: Sperandeo, Martorana and Polissi 2017 review LPS delivery to the outer
+        membrane by the Lpt pathway.
 discussions:
 - discussion_id: periplasmic_space_not_cell_wall
   prompt: Keep the outer membrane-bounded periplasmic space separate from the Gram-negative-bacterium-type
@@ -228,3 +215,16 @@ discussions:
     notes: GO:0030288 denotes the outer membrane-bounded periplasm.
   - reference: GO:0009276
     notes: GO:0009276 denotes the Gram-negative-bacterium-type cell wall.
+- discussion_id: boundary_membranes_are_not_components
+  prompt: Keep the inner and outer membranes as boundaries of the outer membrane-bounded
+    periplasmic space rather than as periplasm components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0030288 denotes the region between the inner and outer membranes,
+    so those membranes bound the region but are not contained by it.
+  resolution_note: Represented the plasma membrane and cell outer membrane as GO-grounded
+    topology graph nodes without component_ref values.
+  evidence:
+  - reference: GO:0030288
+    notes: GO:0030288 defines the outer membrane-bounded periplasmic space as the
+      region between inner and outer membranes.
