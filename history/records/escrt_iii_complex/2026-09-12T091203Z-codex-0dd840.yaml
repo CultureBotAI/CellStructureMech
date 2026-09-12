@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/escrt_iii_complex.yaml
+  slug: escrt_iii_complex
+session:
+  id: 2026-09-12T091203Z-codex-0dd840
+  timestamp: '2026-09-12T09:12:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/619
+  - https://github.com/CultureBotAI/CellStructureMech/issues/620
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/618
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added ESCRT III complex record
+  details: Created a GO:0000815 ESCRT III complex record for the budding-yeast Vps20/Snf7/Vps32/Vps24/Vps2
+    endosomal membrane-remodeling complex. The record uses reviewed-label-only core subunit
+    classes, Saccharomyces cerevisiae scope, multivesicular-body sorting and membrane-fission
+    functions, GO and DOI evidence, a nonmechanistic ESCRT-III MVB-sorting graph, and review
+    fixes that narrowed subunit labels while adding direct membrane-remodeling evidence to
+    the graph.
