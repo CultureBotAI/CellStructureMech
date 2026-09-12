@@ -20,6 +20,13 @@ curation_history:
     examples, spore-wall protection function, DOI/GO evidence, a nonmechanistic endospore-layering
     graph, and a resolved microsporidian-versus-bacterial endospore boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-12T10:00:27Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #624 review issues #625 and #626 by softening the chitin component
+    role from scaffold language to layer composition and narrowing the graph title/description
+    so SWP25, EnP1 and EnP2 are presented as localized example proteins.'
+  llm_assisted: true
 part_of:
 - GO:0031160
 synonyms:
@@ -33,7 +40,7 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding: CHEBI:17029
-  role: Forms the carbohydrate-rich scaffold of the inner microsporidian endospore
+  role: Chitin polymer present in the carbohydrate-rich inner microsporidian endospore
     layer.
   evidence:
   - reference: GO:0090641
@@ -153,10 +160,10 @@ evidence:
     and Immunity.
 causal_graphs:
 - graph_id: microsporidian_endospore_layering
-  title: Chitin and proteins form the inner spore-wall layer
+  title: Chitin and selected proteins occupy the inner spore-wall layer
   description: Microsporidian spores carry a chitin- and protein-containing endospore
-    between the outer exospore and the plasma membrane. SWP25, EnP1 and EnP2 are examples
-    of proteins assigned to that inner layer.
+    between the outer exospore and the plasma membrane. This graph links the layer
+    to chitin and to SWP25, EnP1 and EnP2 as experimentally localized example proteins.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures mature-spore layer composition and localization
