@@ -1,0 +1,189 @@
+identifier: GO:0062160
+label: spongiome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A network of tubules and vesicles that is part of a contractile vacuole
+  complex and participates in external water discharge during osmoregulation.
+definition_source: GO:0062160
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T10:35:12Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T10:36:04Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added contractile-vacuole-complex parthood, a decorated-spongiome synonym,
+    spongiome V-ATPase as a reviewed-label-only constituent, Dictyostelium and Paramecium
+    scope and examples, a fluid-segregation function, primary evidence, a nonmechanistic
+    function graph and a V-ATPase grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: decorated spongiome
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1242/jcs.108.10.3163
+part_of:
+- GO:0062159
+components:
+- component_id: v_type_atpase
+  label: spongiome V-ATPase
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: V-ATPase is a multisubunit proton pump present on spongiome membranes
+    in multiple contractile-vacuole systems, but no exact source-neutral CURIE for
+    the spongiome-localized complex was curated.
+  role: Proton-pumping complex on spongiome membranes that contributes to contractile-vacuole
+    fluid segregation.
+  evidence:
+  - reference: PMID:8294479
+    notes: Nolta and Steck 1994 purified the Dictyostelium contractile-vacuole complex
+      and distinguished V-H+-ATPase-rich spongiome membranes from the pump-poor bladder
+      fraction.
+  - reference: DOI:10.1242/jcs.108.10.3163
+    notes: Fok et al. 1995 localized V-ATPase antigenicity to the pegs on Paramecium
+      decorated spongiome tubules.
+  - reference: DOI:10.1242/jeb.205.20.3261
+    notes: Gronlien et al. 2002 linked V-ATPase on the Paramecium decorated spongiome
+      to electrogenic fluid segregation in the contractile-vacuole complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  presence: COMMON
+  note: The spongiome is a separable V-H+-ATPase-rich membrane fraction of the Dictyostelium
+    discoideum contractile-vacuole complex.
+  reference: PMID:8294479
+- taxon_id: NCBITaxon:44030
+  taxon_label: Paramecium multimicronucleatum
+  presence: COMMON
+  note: Paramecium multimicronucleatum radial arms place electrogenic V-ATPase activity
+    in the decorated spongiome.
+  reference: DOI:10.1242/jeb.205.20.3261
+canonical_examples:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  note: Amoebozoan model in which the contractile-vacuole complex was biochemically
+    resolved into bladder and spongiome membranes.
+  reference: PMID:8294479
+- taxon_id: NCBITaxon:44030
+  taxon_label: Paramecium multimicronucleatum
+  note: Ciliate model in which microelectrode measurements and V-ATPase labeling tied
+    decorated-spongiome radial arms to fluid segregation.
+  reference: DOI:10.1242/jeb.205.20.3261
+functions:
+- function_id: contractile_vacuole_fluid_segregation
+  label: contractile-vacuole fluid segregation
+  description: V-ATPase-bearing spongiome membranes participate in ion-driven water
+    handling by the contractile-vacuole complex.
+  evidence:
+  - reference: PMID:8294479
+    notes: Nolta and Steck 1994 interpreted the V-H+-ATPase-rich Dictyostelium spongiome
+      as a candidate primary energy transducer for pumping water out of the cytoplasm.
+  - reference: DOI:10.1242/jeb.205.20.3261
+    notes: Gronlien et al. 2002 measured contractile-vacuole membrane potential in
+      Paramecium and connected decorated-spongiome V-ATPase to fluid segregation.
+  - reference: DOI:10.1016/B978-0-12-407695-2.00002-0
+    notes: Docampo et al. 2013 review the contractile vacuole complex as an osmoregulatory
+      organelle in protists.
+evidence:
+- reference: GO:0062160
+  notes: Gene Ontology cellular-component term for spongiome.
+- reference: PMID:8294479
+  notes: Nolta and Steck 1994, Isolation and initial characterization of the bipartite
+    contractile vacuole complex from Dictyostelium discoideum, Journal of Biological
+    Chemistry.
+- reference: DOI:10.1242/jcs.108.10.3163
+  notes: Fok et al. 1995, The pegs on the decorated tubules of the contractile vacuole
+    complex of Paramecium are proton pumps, Journal of Cell Science.
+- reference: DOI:10.1242/jeb.205.20.3261
+  notes: Gronlien et al. 2002, Relationship between the membrane potential of the
+    contractile vacuole complex and its osmoregulatory activity in Paramecium multimicronucleatum,
+    Journal of Experimental Biology.
+causal_graphs:
+- graph_id: vatpase_supported_fluid_segregation
+  title: Spongiome V-ATPase supports contractile-vacuole fluid segregation
+  description: A V-ATPase-rich spongiome is the tubular or vesicular membrane subnetwork
+    of the contractile-vacuole complex; in Paramecium, decorated-spongiome V-ATPase
+    contributes to the electrogenic membrane potential needed for fluid segregation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph summarizes localization, inhibitor and electrophysiology
+    evidence. It does not assert a complete molecular route for water entry into the
+    contractile-vacuole complex.
+  nodes:
+  - node_id: spongiome
+    label: spongiome
+    node_type: ORGANELLE
+    grounding: GO:0062160
+  - node_id: v_type_atpase
+    label: spongiome V-ATPase
+    node_type: GENE_OR_PROTEIN
+    component_ref: v_type_atpase
+  - node_id: contractile_vacuole_complex
+    label: contractile vacuole complex
+    node_type: STRUCTURE
+    grounding: GO:0062159
+  - node_id: radial_arm_membrane_potential
+    label: radial-arm membrane potential
+    node_type: STATE
+  - node_id: fluid_segregation
+    label: contractile-vacuole fluid segregation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: spongiome
+    predicate: is part of
+    object: contractile_vacuole_complex
+    description: The spongiome is a tubular or vesicular substructure of the contractile
+      vacuole complex.
+    evidence:
+    - reference: GO:0062160
+      notes: GO:0062160 defines the spongiome as part of the contractile vacuole complex.
+    - reference: PMID:8294479
+      notes: Nolta and Steck 1994 purified a bipartite Dictyostelium contractile-vacuole
+        complex with separable bladder and spongiome membranes.
+  - subject: v_type_atpase
+    predicate: resides in
+    object: spongiome
+    description: V-ATPase occupies proton-pump-rich spongiome membranes.
+    evidence:
+    - reference: PMID:8294479
+      notes: Nolta and Steck 1994 found a high density of catalytically active V-H+-ATPase
+        projections on Dictyostelium spongiome membranes.
+    - reference: DOI:10.1242/jcs.108.10.3163
+      notes: Fok et al. 1995 localized V-ATPase markers to decorated tubules of the
+        Paramecium spongiome.
+  - subject: v_type_atpase
+    predicate: contributes to
+    object: radial_arm_membrane_potential
+    description: Decorated-spongiome V-ATPase is an electrogenic source of membrane
+      potential in Paramecium radial arms.
+    evidence:
+    - reference: DOI:10.1242/jeb.205.20.3261
+      notes: Gronlien et al. 2002 coupled V-ATPase labeling in radial arms to the
+        measured contractile-vacuole membrane potential.
+  - subject: radial_arm_membrane_potential
+    predicate: supports
+    object: fluid_segregation
+    description: The radial-arm electrogenic site is needed for fluid segregation
+      in the Paramecium contractile-vacuole complex.
+    evidence:
+    - reference: DOI:10.1242/jeb.205.20.3261
+      notes: Gronlien et al. 2002 reported that V-ATPase inhibition decreased both
+        contractile-vacuole membrane potential and fluid segregation.
+discussions:
+- discussion_id: ground_spongiome_v_atpase
+  prompt: Resolve exact source-neutral groundings for spongiome-localized V-ATPase
+    complexes or subunit families.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#v_type_atpase
+  rationale: The cited organelle studies establish V-ATPase localization or activity
+    at the spongiome, but this first record leaves the multisubunit complex ungrounded
+    rather than choosing an unverified Complex Portal, GO, Pfam or InterPro CURIE
+    for the exact spongiome-localized subset.
+  posed_by: codex
+  posed_date: '2026-09-12'
