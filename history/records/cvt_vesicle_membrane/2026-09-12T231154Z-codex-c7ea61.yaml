@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cvt_vesicle_membrane.yaml
+  slug: cvt_vesicle_membrane
+session:
+  id: 2026-09-12T231154Z-codex-c7ea61
+  timestamp: '2026-09-12T23:11:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/718
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/717
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Cvt vesicle membrane record
+  details: 'Added the GO:0033110 Cvt vesicle membrane record with UniProt SL-0081 grounding,
+    cytoplasmic vesicle membrane parentage, Cvt vesicle parthood, a reviewed-label-only lipid-bilayer
+    component, budding-yeast distribution, a Cvt-pathway function, and a nonmechanistic delivery
+    graph, then resolved PR #717 review issue #718 by citing GO:0034270 for the Cvt complex
+    node used in the graph.'

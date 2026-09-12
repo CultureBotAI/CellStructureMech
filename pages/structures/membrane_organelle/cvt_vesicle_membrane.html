@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cvt vesicle membrane · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>Cvt vesicle membrane</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0033110"><code>GO:0033110</code></a> · MEMBRANE_ORGANELLE · MEMBRANE · <span class="status">PROPOSED</span></p>
+<p class="definition">Either lipid bilayer membrane surrounding a Cvt vesicle, a double membrane-layered vesicle implicated in the cytoplasm to vacuole targeting pathway. <small>[<a href="http://purl.obolibrary.org/obo/GO_0033110"><code>GO:0033110</code></a>]</small></p>
+<p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0033107"><code>GO:0033107</code></a> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0081</code> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-cvt_vesicle_lipid_bilayer"><td>Cvt vesicle lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>One of the two lipid bilayers surrounding a Cvt vesicle before vesicle-vacuole fusion.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033110"><code>GO:0033110</code></a> <small>GO:0033110 defines the Cvt vesicle membrane as either lipid bilayer surrounding a Cvt vesicle.</small></li><li><code>uniprot.location:SL-0081</code> <small>UniProt SL-0081 maps directly to GO:0033110 and describes the membrane surrounding a double-membrane Cvt vesicle.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/15004240"><code>PMID:15004240</code></a> <small>Reggiori et al. 2004 describe Cvt vesicles as double-membrane cytosolic carriers in budding yeast.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> Saccharomyces cerevisiae — <strong>COMMON</strong>: Double-membrane Cvt vesicles have been characterized in budding yeast during cytoplasm-to-vacuole targeting. [<a href="https://pubmed.ncbi.nlm.nih.gov/15004240"><code>PMID:15004240</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> <em>Saccharomyces cerevisiae</em> — Primary yeast model used to define double-membrane Cvt vesicle formation and vacuolar delivery. [<a href="https://pubmed.ncbi.nlm.nih.gov/15004240"><code>PMID:15004240</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>cytoplasm to vacuole targeting by the Cvt pathway</strong> <a href="http://purl.obolibrary.org/obo/GO_0032258"><code>GO:0032258</code></a> — The Cvt vesicle membrane surrounds the selective hydrolase cargo carrier used for cytoplasm-to-vacuole targeting.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032258"><code>GO:0032258</code></a> <small>GO:0032258 defines Cvt-pathway delivery by Atg19-dependent formation of a Cvt complex and membrane expansion around it.</small></li><li><a href="https://doi.org/10.1074/jbc.M404399200"><code>DOI:10.1074/jbc.M404399200</code></a> <small>Shintani and Klionsky 2004 analyzed Cvt cargo and its effect on Cvt vesicle formation.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-cvt_membrane_vacuole_delivery">Cvt vesicle membranes surround the yeast Cvt cargo carrier <small>(FUNCTION)</small></h3>
+<p>A pair of Cvt vesicle membranes forms the double-membrane carrier that sequesters Cvt cargo before vacuolar delivery.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>Cvt vesicle membrane</td><td>is part of</td><td>Cvt vesicle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033110"><code>GO:0033110</code></a> <small>GO:0033110 defines the Cvt vesicle membrane as either bilayer surrounding the vesicle.</small></li><li><code>uniprot.location:SL-0081</code> <small>UniProt SL-0081 places the Cvt vesicle membrane under the Cvt vesicle.</small></li></ul></td></tr>
+<tr><td>Cvt complex</td><td>is enclosed by</td><td>Cvt vesicle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032258"><code>GO:0032258</code></a> <small>GO:0032258 defines the Cvt pathway as membrane expansion around the Cvt complex.</small></li></ul></td></tr>
+<tr><td>Cvt vesicle</td><td>supports</td><td>cytoplasm to vacuole targeting by the Cvt pathway</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033107"><code>GO:0033107</code></a> <small>GO:0033107 defines Cvt vesicles by their implication in the Cvt pathway.</small></li><li><a href="https://doi.org/10.1074/jbc.M404399200"><code>DOI:10.1074/jbc.M404399200</code></a> <small>Shintani and Klionsky 2004 describe Cvt cargo incorporation into forming vesicles.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the lipid constituent of either Cvt vesicle membrane bilayer. <small>The record is exactly grounded to GO:0033110 and UniProt SL-0081, but no exact source-neutral CURIE was curated for the generic lipid constituent of either surrounding Cvt vesicle bilayer.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033110"><code>GO:0033110</code></a> <small>Gene Ontology cellular-component term for either bilayer of the Cvt vesicle membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030659"><code>GO:0030659</code></a> <small>Gene Ontology cellular-component parent term for cytoplasmic vesicle membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0033107"><code>GO:0033107</code></a> <small>Gene Ontology cellular-component term for the Cvt vesicle that this membrane surrounds.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032258"><code>GO:0032258</code></a> <small>Gene Ontology biological-process term for cytoplasm to vacuole targeting by the Cvt pathway.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0034270"><code>GO:0034270</code></a> <small>Gene Ontology cellular-component term for the Cvt complex cargo node sequestered by completed Cvt vesicles.</small></li><li><code>uniprot.location:SL-0081</code> <small>UniProt Subcellular Location entry SL-0081 maps directly to GO:0033110, places it under Cvt vesicle, and describes the membrane surrounding a double-membrane Cvt vesicle.</small></li><li><a href="https://doi.org/10.1091/mbc.e03-07-0479"><code>DOI:10.1091/mbc.e03-07-0479</code></a> <small>Reggiori et al. 2004, Early stages of the secretory pathway, but not endosomes, are required for Cvt vesicle and autophagosome assembly in Saccharomyces cerevisiae, Molecular Biology of the Cell.</small></li><li><a href="https://doi.org/10.1074/jbc.M404399200"><code>DOI:10.1074/jbc.M404399200</code></a> <small>Shintani and Klionsky 2004, Cargo proteins facilitate the formation of transport vesicles in the cytoplasm to vacuole targeting pathway, Journal of Biological Chemistry.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-12T22:59:24Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-12T23:00:08Z</code> codex · EXPANDED_RECORD — Added cytoplasmic vesicle membrane parentage, Cvt vesicle parthood, the UniProt SL-0081 xref, a reviewed-label-only lipid-bilayer component, budding-yeast distribution, a Cvt-pathway function, a nonmechanistic Cvt-delivery graph, and a lipid-grounding TODO.</li><li><code>2026-09-12T23:11:36Z</code> codex · ADDRESS_REVIEW — Resolved #718 by adding GO:0034270 to the record-level evidence list for the Cvt complex node used in the causal graph.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/cvt_vesicle_membrane.yaml"><code>data/structures/membrane_organelle/cvt_vesicle_membrane.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
