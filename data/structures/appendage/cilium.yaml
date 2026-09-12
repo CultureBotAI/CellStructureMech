@@ -1,0 +1,279 @@
+identifier: GO:0005929
+label: cilium
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: A specialized eukaryotic organelle that consists of a filiform extrusion
+  of the cell surface and of some cytoplasmic parts; it is largely bounded by an extrusion
+  of the plasma membrane, contains a longitudinal microtubule array, and is anchored
+  to a basal body.
+definition_source: GO:0005929
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T03:11:20Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T03:12:13Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO cilium synonymy and substructure groundings, Chlamydomonas scope,
+    assembly and motility functions, cilium literature evidence, an IFT-based assembly
+    graph, and a resolved bacterial/archaeal flagellum boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-09-12T03:12:26Z'
+  curator: codex
+  action: FIX_COMPONENT_TYPE
+  changes: Changed the GO-grounded ciliary membrane domain component type from LIPID
+    to OTHER.
+  llm_assisted: true
+- timestamp: '2026-09-12T03:19:23Z'
+  curator: codex
+  action: SCOPE_CANONICAL_EXAMPLE
+  changes: Narrowed the Chlamydomonas canonical-example note to the purified-flagella
+    proteomics claim supported by its single DOI reference.
+  llm_assisted: true
+synonyms:
+- synonym_text: eukaryotic flagellum
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005929
+- synonym_text: microtubule-based flagellum
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005929
+has_part:
+- GO:0005930
+- GO:0060170
+- GO:0036064
+- GO:0035869
+components:
+- component_id: axoneme
+  label: axoneme
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005930
+  essentiality: ESSENTIAL
+  role: Microtubule-based core of the cilium; 9+2 axonemes in Chlamydomonas motile
+    cilia carry outer doublets, a central pair, dynein arms, radial spokes and regulatory
+    linkers.
+  evidence:
+  - reference: GO:0005930
+    notes: GO:0005930 identifies the axoneme as the microtubule and protein core of
+      eukaryotic cilia and flagella.
+  - reference: DOI:10.1126/science.1128618
+    notes: Nicastro et al. 2006 resolved the 9+2 Chlamydomonas axoneme architecture
+      by cryoelectron tomography.
+- component_id: ciliary_membrane
+  label: ciliary membrane
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding: GO:0060170
+  essentiality: ESSENTIAL
+  role: Specialized plasma-membrane extension that surrounds the axoneme and houses
+    ciliary membrane proteins.
+  evidence:
+  - reference: GO:0060170
+    notes: GO:0060170 defines the ciliary membrane as the portion of plasma membrane
+      surrounding a cilium.
+  - reference: DOI:10.1083/jcb.200504008
+    notes: Pazour et al. 2005 identified proteins in purified Chlamydomonas flagella,
+      including signal-transduction and membrane-associated candidates.
+- component_id: ciliary_basal_body
+  label: ciliary basal body
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0036064
+  essentiality: ESSENTIAL
+  role: Centriole-derived microtubule cylinder at the ciliary base that anchors the
+    organelle and nucleates axoneme growth.
+  evidence:
+  - reference: GO:0036064
+    notes: GO:0036064 defines the ciliary basal body as the membrane-tethered microtubule
+      array at the base of a eukaryotic cilium.
+  - reference: DOI:10.1104/pp.010807
+    notes: Silflow and Lefebvre 2001 reviewed basal bodies as the centriolar organizers
+      of Chlamydomonas flagella.
+- component_id: ciliary_transition_zone
+  label: ciliary transition zone
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0035869
+  essentiality: UNKNOWN
+  role: Gated region between the basal body and ciliary shaft that links axonemal
+    doublets to the ciliary membrane and helps separate ciliary contents from the
+    cytosol.
+  evidence:
+  - reference: GO:0035869
+    notes: GO:0035869 defines the ciliary transition zone by Y-shaped links between
+      axonemal microtubules and the ciliary membrane.
+  - reference: GO:0097546
+    notes: GO:0097546 places transition fibers and the transition zone at the ciliary
+      base where proteins are sorted before cilium entry.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas cells bear paired motile eukaryotic flagella that are used as
+    a reference system for ciliary assembly, motility and intraflagellar transport.
+  reference: DOI:10.1104/pp.010807
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose purified flagella were profiled by proteomics.
+  reference: DOI:10.1083/jcb.200504008
+functions:
+- function_id: cilium_assembly
+  label: cilium assembly
+  grounding: GO:0060271
+  description: The basal body, transition-zone gate and bidirectional intraflagellar
+    transport machinery assemble the membrane-sheathed axoneme.
+  evidence:
+  - reference: DOI:10.1038/nrm952
+    notes: Rosenbaum and Witman 2002 review intraflagellar transport as machinery
+      required to build and maintain eukaryotic cilia and flagella.
+- function_id: cilium_dependent_cell_motility
+  label: cilium-dependent cell motility
+  grounding: GO:0060285
+  description: Motile 9+2 cilia beat through axonemal dynein activity, bending the
+    ciliary shaft to move cells such as Chlamydomonas through liquid.
+  evidence:
+  - reference: DOI:10.1104/pp.010807
+    notes: Silflow and Lefebvre 2001 review Chlamydomonas flagella as motility organelles
+      built on a conserved eukaryotic ciliary axoneme.
+  - reference: DOI:10.1126/science.1128618
+    notes: Nicastro et al. 2006 used Chlamydomonas axonemes to model dynein-generated
+      microtubule sliding forces.
+evidence:
+- reference: GO:0005929
+  notes: Gene Ontology cellular-component term for the cilium.
+- reference: DOI:10.1104/pp.010807
+  notes: Silflow and Lefebvre 2001, 'Assembly and Motility of Eukaryotic Cilia and
+    Flagella. Lessons from Chlamydomonas reinhardtii', Plant Physiology.
+- reference: DOI:10.1038/nrm952
+  notes: Rosenbaum and Witman 2002, 'Intraflagellar transport', Nature Reviews Molecular
+    Cell Biology.
+- reference: DOI:10.1083/jcb.200504008
+  notes: Pazour, Agrin, Leszyk and Witman 2005, 'Proteomic analysis of a eukaryotic
+    cilium', Journal of Cell Biology.
+- reference: DOI:10.1126/science.1128618
+  notes: Nicastro et al. 2006, 'The Molecular Architecture of Axonemes Revealed by
+    Cryoelectron Tomography', Science.
+causal_graphs:
+- graph_id: ift_builds_membrane_sheathed_axoneme
+  title: Intraflagellar transport builds the ciliary axoneme
+  description: A basal body seeds axoneme extension, a transition-zone gate organizes
+    entry into the membrane-bounded ciliary compartment, and intraflagellar-transport
+    particles move cargo along axonemal microtubules for cilium assembly.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph keeps the conserved geometry of the ciliary base, membrane
+    and axoneme separate from the many lineage-specific IFT-A, IFT-B, kinesin-II and
+    dynein-2 subunits that require component-level curation.
+  nodes:
+  - node_id: ciliary_basal_body
+    label: ciliary basal body
+    node_type: STRUCTURE
+    grounding: GO:0036064
+    component_ref: ciliary_basal_body
+  - node_id: ciliary_transition_zone
+    label: ciliary transition zone
+    node_type: STRUCTURE
+    grounding: GO:0035869
+    component_ref: ciliary_transition_zone
+  - node_id: ciliary_membrane
+    label: ciliary membrane
+    node_type: STRUCTURE
+    grounding: GO:0060170
+    component_ref: ciliary_membrane
+  - node_id: axoneme
+    label: axoneme
+    node_type: STRUCTURE
+    grounding: GO:0005930
+    component_ref: axoneme
+  - node_id: ift_particle
+    label: intraciliary transport particle
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0030990
+  - node_id: cilium
+    label: cilium
+    node_type: ORGANELLE
+    grounding: GO:0005929
+  - node_id: cilium_assembly
+    label: cilium assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0060271
+  edges:
+  - subject: ciliary_basal_body
+    predicate: nucleates
+    object: axoneme
+    description: The basal body provides the microtubule template from which the ciliary
+      axoneme extends.
+    evidence:
+    - reference: GO:0036064
+      notes: GO:0036064 defines the ciliary basal body as the axoneme-growth nucleation
+        site.
+  - subject: axoneme
+    predicate: forms core of
+    object: cilium
+    description: The axoneme is the microtubule and associated-protein core of the
+      Chlamydomonas cilium.
+    evidence:
+    - reference: DOI:10.1126/science.1128618
+      notes: Nicastro et al. 2006 resolved the axonemal core from Chlamydomonas flagella.
+  - subject: ciliary_membrane
+    predicate: bounds
+    object: cilium
+    description: A specialized extension of the plasma membrane surrounds the ciliary
+      compartment.
+    evidence:
+    - reference: GO:0060170
+      notes: GO:0060170 defines the ciliary membrane as the plasma-membrane portion
+        around the cilium.
+  - subject: ciliary_transition_zone
+    predicate: gates entry into
+    object: cilium
+    description: The transition zone links the axoneme to the ciliary membrane and
+      helps gate material entering the cilium.
+    evidence:
+    - reference: GO:0035869
+      notes: GO:0035869 identifies the ciliary transition zone as a membrane-linked
+        ciliary gate.
+  - subject: ift_particle
+    predicate: transports cargo along
+    object: axoneme
+    description: IFT particles move cargo bidirectionally along axonemal microtubules
+      beneath the ciliary membrane.
+    evidence:
+    - reference: DOI:10.1038/nrm952
+      notes: Rosenbaum and Witman 2002 review bidirectional IFT-particle transport
+        along the Chlamydomonas axoneme.
+  - subject: ift_particle
+    predicate: supports
+    object: cilium_assembly
+    description: Intraflagellar-transport particles shuttle ciliary cargo required
+      for assembly and maintenance of the membrane-sheathed axoneme.
+    evidence:
+    - reference: DOI:10.1038/nrm952
+      notes: Rosenbaum and Witman 2002 review IFT as a requirement for cilium and
+        flagellum assembly and maintenance.
+discussions:
+- discussion_id: not_bacterial_flagellum_or_archaellum
+  prompt: Should bacterial-type flagella or archaeal-type flagella be merged under
+    the cilium record?
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0005929 explicitly scopes cilium to the membrane-sheathed, microtubule-based
+    eukaryotic organelle. Bacterial-type flagella and archaeal-type flagella are nonhomologous
+    prokaryotic appendages with separate GO identities and separate CellStructureMech
+    records.
+  resolution_note: Kept cilium scoped to eukaryotic flagella/cilia and did not xref
+    bacterial-type or archaeal-type flagellum records as synonyms or parts.
+  evidence:
+  - reference: GO:0005929
+    notes: GO:0005929 defines cilium as a eukaryotic organelle.
+  - reference: GO:0009288
+    notes: GO:0009288 separately denotes the bacterial-type flagellum.
+  - reference: GO:0097589
+    notes: GO:0097589 separately denotes the archaeal-type flagellum.
+  posed_by: codex
+  posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'
