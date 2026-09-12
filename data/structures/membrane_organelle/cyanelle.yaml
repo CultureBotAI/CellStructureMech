@@ -1,0 +1,298 @@
+identifier: GO:0009842
+label: cyanelle
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A plastid that contains unstacked, phycobilisome-bearing thylakoid membranes
+  and is surrounded by a double membrane with a peptidoglycan layer in the intermembrane
+  space between the two envelope membranes. Cyanelles are characteristic of algae
+  in the class Glaucophyta, and may represent an ancestral form of plastid.
+definition_source: GO:0009842
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T15:33:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T15:34:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added plastid parentage, exact cyanelle membrane, stroma and thylakoid
+    part terms, GO synonyms, the UniProt Subcellular Location xref, membrane and peptidoglycan
+    components, Glaucocystophyceae and Cyanophora paradoxa scope, a photosynthesis
+    function, a cyanelle topology graph, and a peptidoglycan-layer grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T15:45:14Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #668 by adding a cyanelle stroma node and retargeting the inner-membrane
+    boundary edge to the stroma. Resolved #669 by replacing ultrastructure-only photosynthesis
+    evidence with GO and Jackson et al. 2015 support.'
+  llm_assisted: true
+parent_structures:
+- GO:0009536
+has_part:
+- GO:0033112
+- GO:0036012
+- GO:0036013
+- GO:0036014
+- GO:0034060
+- GO:0009843
+- GO:0033114
+- GO:0033115
+synonyms:
+- synonym_text: cyanoplast
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009842
+- synonym_text: muroplast
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009842
+xrefs:
+- uniprot.location:SL-0082
+components:
+- component_id: cyanelle_outer_membrane
+  label: cyanelle outer membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0036013
+  essentiality: UNKNOWN
+  role: Cytoplasm-facing lipid bilayer of the double cyanelle envelope.
+  evidence:
+  - reference: GO:0036013
+    notes: GO:0036013 defines the cyanelle outer membrane as the cytoplasm-facing
+      lipid bilayer of the cyanelle envelope.
+  - reference: DOI:10.1074/jbc.M116.746131
+    notes: Kojima et al. 2016 studied Cyanophora paradoxa outer cyanelle membrane
+      proteins positioned outside the peptidoglycan layer.
+- component_id: cyanelle_inner_membrane
+  label: cyanelle inner membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0036012
+  essentiality: UNKNOWN
+  role: Stroma-facing lipid bilayer of the cyanelle envelope.
+  evidence:
+  - reference: GO:0036012
+    notes: GO:0036012 defines the cyanelle inner membrane as the lumen-facing cyanelle
+      envelope membrane.
+- component_id: cyanelle_thylakoid_membrane
+  label: cyanelle thylakoid membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0033115
+  essentiality: UNKNOWN
+  role: Internal photosynthetic membrane of the cyanelle thylakoid system.
+  evidence:
+  - reference: GO:0033115
+    notes: GO:0033115 defines the cyanelle thylakoid membrane as the lipid bilayer
+      of thylakoids inside a cyanelle.
+  - reference: DOI:10.1104/pp.71.2.409
+    notes: Giddings et al. 1983 characterized Cyanophora paradoxa cyanelle thylakoid
+      and envelope membrane ultrastructure.
+- component_id: cyanelle_peptidoglycan_layer
+  label: cyanelle peptidoglycan layer
+  component_type: PEPTIDOGLYCAN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO defines the cyanelle intermembrane space as including the peptidoglycan
+    layer, but no exact standalone source-neutral structure term was resolved for
+    that peptidoglycan sheet.
+  essentiality: UNKNOWN
+  role: Peptidoglycan wall-like layer retained between the inner and outer membranes
+    of the cyanelle envelope.
+  evidence:
+  - reference: GO:0036014
+    notes: GO:0036014 defines the cyanelle intermembrane space as including the peptidoglycan
+      layer.
+  - reference: DOI:10.1128/jb.178.2.332-339.1996
+    notes: Pfanzagl et al. 1996 characterized Cyanophora paradoxa cyanelle peptidoglycan
+      as a prokaryotic cell wall retained within an organelle envelope.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:38254
+  taxon_label: Glaucocystophyceae
+  presence: COMMON
+  note: Glaucophytes carry cyanelles, also called muroplasts, as photosynthetic plastids
+    with phycobilisomes and a vestigial peptidoglycan wall.
+  reference: DOI:10.5586/asbp.2015.020
+- taxon_id: NCBITaxon:2762
+  taxon_label: Cyanophora paradoxa
+  presence: COMMON
+  note: Cyanophora paradoxa is a glaucophyte model whose cyanelles have double envelopes,
+    thylakoids, and cyanelle peptidoglycan.
+  reference: DOI:10.1128/jb.178.2.332-339.1996
+canonical_examples:
+- taxon_id: NCBITaxon:2762
+  taxon_label: Cyanophora paradoxa
+  note: Model glaucophyte used for ultrastructural and biochemical studies of cyanelle
+    thylakoids, envelope membranes, and peptidoglycan.
+  reference: DOI:10.1104/pp.71.2.409
+functions:
+- function_id: photosynthesis
+  label: photosynthesis
+  grounding: GO:0015979
+  description: Cyanelle thylakoid membranes house photosynthetic machinery in the
+    glaucophyte plastid.
+  evidence:
+  - reference: GO:0009842
+    notes: GO:0009842 defines the cyanelle as a plastid with phycobilisome-bearing
+      thylakoid membranes.
+  - reference: DOI:10.5586/asbp.2015.020
+    notes: Jackson et al. 2015 review glaucophyte plastids as cyanelles or muroplasts
+      that retain cyanobacterial phycobilisome antennae.
+evidence:
+- reference: GO:0009842
+  notes: Gene Ontology cellular-component term for cyanelle.
+- reference: GO:0009536
+  notes: Gene Ontology cellular-component term for plastid.
+- reference: GO:0033112
+  notes: Gene Ontology cellular-component term for cyanelle envelope.
+- reference: GO:0036012
+  notes: Gene Ontology cellular-component term for cyanelle inner membrane.
+- reference: GO:0036013
+  notes: Gene Ontology cellular-component term for cyanelle outer membrane.
+- reference: GO:0036014
+  notes: Gene Ontology cellular-component term for cyanelle intermembrane space.
+- reference: GO:0034060
+  notes: Gene Ontology cellular-component term for cyanelle stroma.
+- reference: GO:0009843
+  notes: Gene Ontology cellular-component term for cyanelle thylakoid.
+- reference: GO:0033114
+  notes: Gene Ontology cellular-component term for cyanelle thylakoid lumen.
+- reference: GO:0033115
+  notes: Gene Ontology cellular-component term for cyanelle thylakoid membrane.
+- reference: uniprot.location:SL-0082
+  notes: UniProt Subcellular Location entry SL-0082 maps Cyanelle to GO:0009842.
+- reference: DOI:10.1104/pp.71.2.409
+  notes: Giddings, Wasmann and Staehelin 1983, Structure of the Thylakoids and Envelope
+    Membranes of the Cyanelles of Cyanophora paradoxa, Plant Physiology.
+- reference: DOI:10.1128/jb.178.2.332-339.1996
+  notes: 'Pfanzagl et al. 1996, Primary structure of cyanelle peptidoglycan of Cyanophora
+    paradoxa: a prokaryotic cell wall as part of an organelle envelope, Journal of
+    Bacteriology.'
+- reference: DOI:10.1074/jbc.M116.746131
+  notes: Kojima, Muramoto and Kusano 2016, Outer Membrane Proteins Derived from Non-cyanobacterial
+    Lineage Cover the Peptidoglycan of Cyanophora paradoxa Cyanelles and Serve as
+    a Cyanelle Diffusion Channel, Journal of Biological Chemistry.
+- reference: DOI:10.5586/asbp.2015.020
+  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
+    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
+causal_graphs:
+- graph_id: cyanelle_envelope_thylakoid_topology
+  title: Cyanelle envelope and thylakoid topology
+  description: The cyanelle is bounded by inner and outer envelope membranes with
+    peptidoglycan in the intermembrane space, and it carries internal thylakoid membranes
+    for photosynthesis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures compartment topology and the photosynthetic thylakoid
+    site without resolving full photosystem or envelope protein composition.
+  nodes:
+  - node_id: cyanelle
+    label: cyanelle
+    node_type: ORGANELLE
+    grounding: GO:0009842
+  - node_id: cyanelle_outer_membrane
+    label: cyanelle outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0036013
+    component_ref: cyanelle_outer_membrane
+  - node_id: cyanelle_inner_membrane
+    label: cyanelle inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0036012
+    component_ref: cyanelle_inner_membrane
+  - node_id: cyanelle_intermembrane_space
+    label: cyanelle intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0036014
+  - node_id: cyanelle_stroma
+    label: cyanelle stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034060
+  - node_id: cyanelle_peptidoglycan_layer
+    label: cyanelle peptidoglycan layer
+    node_type: STRUCTURE
+    component_ref: cyanelle_peptidoglycan_layer
+  - node_id: cyanelle_thylakoid
+    label: cyanelle thylakoid
+    node_type: STRUCTURE
+    grounding: GO:0009843
+  - node_id: cyanelle_thylakoid_membrane
+    label: cyanelle thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0033115
+    component_ref: cyanelle_thylakoid_membrane
+  - node_id: photosynthesis
+    label: photosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015979
+  edges:
+  - subject: cyanelle_outer_membrane
+    predicate: bounds
+    object: cyanelle
+    description: The outer membrane is the cytoplasm-facing lipid bilayer of the cyanelle
+      envelope.
+    evidence:
+    - reference: GO:0036013
+      notes: GO:0036013 defines the cyanelle outer membrane as the cytoplasm-facing
+        envelope membrane.
+  - subject: cyanelle_inner_membrane
+    predicate: bounds
+    object: cyanelle_stroma
+    description: The inner membrane of the cyanelle envelope separates the cyanelle
+      stroma from the intermembrane space.
+    evidence:
+    - reference: GO:0036012
+      notes: GO:0036012 defines the cyanelle inner membrane as the envelope bilayer
+        that faces the cyanelle stroma.
+  - subject: cyanelle_peptidoglycan_layer
+    predicate: resides in
+    object: cyanelle_intermembrane_space
+    description: A peptidoglycan layer sits in the intermembrane space between the
+      two cyanelle envelope membranes.
+    evidence:
+    - reference: GO:0036014
+      notes: GO:0036014 defines the cyanelle intermembrane space as including the
+        peptidoglycan layer.
+    - reference: DOI:10.1128/jb.178.2.332-339.1996
+      notes: Pfanzagl et al. 1996 biochemically characterized Cyanophora paradoxa
+        cyanelle peptidoglycan.
+  - subject: cyanelle_thylakoid_membrane
+    predicate: is part of
+    object: cyanelle_thylakoid
+    description: Cyanelle thylakoids are internal membrane systems whose lipid bilayer
+      encloses the thylakoid lumen.
+    evidence:
+    - reference: GO:0033115
+      notes: GO:0033115 defines the cyanelle thylakoid membrane as the bilayer of
+        cyanelle thylakoids.
+  - subject: cyanelle_thylakoid_membrane
+    predicate: supports
+    object: photosynthesis
+    description: The cyanelle thylakoid membrane carries phycobilisome-bearing photosynthetic
+      machinery.
+    evidence:
+    - reference: GO:0009842
+      notes: GO:0009842 defines cyanelles as plastids with phycobilisome-bearing thylakoid
+        membranes.
+    - reference: DOI:10.5586/asbp.2015.020
+      notes: Jackson et al. 2015 review phycobilisome antennae as a retained cyanobacterial
+        feature of glaucophyte plastids.
+discussions:
+- discussion_id: resolve_cyanelle_peptidoglycan_layer
+  prompt: Resolve an exact source-neutral grounding for the peptidoglycan layer in
+    the cyanelle intermembrane space.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cyanelle_peptidoglycan_layer
+  - causal_graphs#cyanelle_envelope_thylakoid_topology
+  rationale: GO provides exact terms for the cyanelle intermembrane space and the
+    envelope membranes, while the peptidoglycan layer itself is represented as a reviewed-label
+    component backed by biochemical evidence.
+  evidence:
+  - reference: DOI:10.1128/jb.178.2.332-339.1996
+    notes: Pfanzagl et al. 1996 established the primary structure of the Cyanophora
+      paradoxa cyanelle peptidoglycan.
+  posed_by: codex
+  posed_date: '2026-09-12'
