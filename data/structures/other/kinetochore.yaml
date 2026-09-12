@@ -1,0 +1,256 @@
+identifier: GO:0000776
+label: kinetochore
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A multisubunit complex that is located at the centromeric region of DNA
+  and provides an attachment point for the spindle microtubules.
+definition_source: GO:0000776
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-11T23:49:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-11T23:50:37Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO kinetochore synonymy, COMA/MIND/Ndc80 parthood and components,
+    a label-only Cse4 centromeric nucleosome component, Saccharomyces distribution
+    and example, chromosome-segregation function, GO/DOI evidence, an inner-to-outer
+    kinetochore graph and a subcomplex-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-11T23:59:18Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #548 and #549 by replacing the terminal chromosome-segregation
+    process edge with an Ndc80-to-kinetochore assembly edge and narrowing the Cse4,
+    MIS12/MIND and Ndc80 components from ESSENTIAL to UNKNOWN.'
+  llm_assisted: true
+synonyms:
+- synonym_text: condensed chromosome kinetochore
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000776
+- synonym_text: condensed nuclear chromosome kinetochore
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000776
+has_part:
+- GO:0000817
+- GO:0000444
+- GO:0031262
+components:
+- component_id: centromeric_cse4_nucleosome
+  label: centromeric Cse4/CENP-A nucleosome platform
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - CSE4
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast Cse4-containing centromeric nucleosome is modeled
+    as the inner DNA-proximal platform for kinetochore assembly; no exact source-neutral
+    CURIE for the Cse4 nucleosome state was curated in this first record.
+  role: Centromeric chromatin platform that specifies the site of budding-yeast kinetochore
+    assembly.
+  evidence:
+  - reference: DOI:10.1534/genetics.112.145276
+    notes: Biggins 2013 reviewed the Cse4-containing centromeric chromatin foundation
+      for the budding-yeast kinetochore.
+  - reference: DOI:10.1083/jcb.200305100
+    notes: Westermann et al. 2003 identified CENP-A/Cse4-linked inner kinetochore
+      proteins in the conserved budding-yeast molecular core.
+- component_id: coma_complex
+  label: COMA complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0000817
+  gene_symbols:
+  - CTF19
+  - OKP1
+  - MCM21
+  - AME1
+  essentiality: CONDITIONAL
+  role: Inner kinetochore protein complex that bridges centromeric DNA-proximal subunits
+    to microtubule-binding outer kinetochore modules during assembly.
+  evidence:
+  - reference: GO:0000817
+    notes: Gene Ontology cellular-component term for the COMA complex.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 analyzed hierarchical assembly of the
+      budding-yeast kinetochore from multiple subcomplexes, including COMA.
+- component_id: mis12_mind_type_complex
+  label: MIS12/MIND type complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0000444
+  gene_symbols:
+  - MTW1
+  - DSN1
+  - NSL1
+  - NNF1
+  essentiality: UNKNOWN
+  role: Kinetochore subcomplex that binds centromeric chromatin proximal modules and
+    helps recruit outer microtubule-binding subunits.
+  evidence:
+  - reference: GO:0000444
+    notes: Gene Ontology cellular-component term for the MIS12/MIND type kinetochore
+      subcomplex.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 placed the Mtw1/MIND complex within the
+      budding-yeast kinetochore hierarchy.
+- component_id: ndc80_complex
+  label: Ndc80 complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0031262
+  gene_symbols:
+  - NDC80
+  - NUF2
+  - SPC24
+  - SPC25
+  essentiality: UNKNOWN
+  role: Outer kinetochore complex that couples kinetochores to spindle microtubule
+    plus ends.
+  evidence:
+  - reference: GO:0031262
+    notes: Gene Ontology cellular-component term for the Ndc80 complex.
+  - reference: DOI:10.1083/jcb.200305100
+    notes: Westermann et al. 2003 identified Ndc80 among the budding-yeast kinetochore
+      proteins forming a conserved molecular core.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a point-centromere kinetochore built from multiple inner
+    and outer kinetochore protein complexes.
+  reference: DOI:10.1534/genetics.112.145276
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system in which kinetochore subcomplex composition
+    and assembly hierarchy were dissected genetically and biochemically.
+  reference: DOI:10.1101/gad.1144403
+functions:
+- function_id: chromosome_segregation
+  label: chromosome segregation
+  grounding: GO:0007059
+  description: Kinetochores connect centromeric chromatin to spindle microtubules
+    so duplicated chromosomes can segregate.
+  evidence:
+  - reference: GO:0000776
+    notes: GO:0000776 defines the kinetochore by its role as a centromeric complex
+      that provides a spindle-microtubule attachment point.
+  - reference: DOI:10.1534/genetics.112.145276
+    notes: Biggins 2013 reviewed budding-yeast kinetochore functions in chromosome
+      segregation.
+evidence:
+- reference: GO:0000776
+  notes: Gene Ontology cellular-component term for kinetochore.
+- reference: GO:0000817
+  notes: Gene Ontology cellular-component term for COMA complex.
+- reference: GO:0000444
+  notes: Gene Ontology cellular-component term for MIS12/MIND type complex.
+- reference: GO:0031262
+  notes: Gene Ontology cellular-component term for Ndc80 complex.
+- reference: GO:0007059
+  notes: Gene Ontology biological-process term for chromosome segregation.
+- reference: DOI:10.1534/genetics.112.145276
+  notes: Biggins 2013, The composition, functions, and regulation of the budding yeast
+    kinetochore, Genetics.
+- reference: DOI:10.1083/jcb.200305100
+  notes: Westermann et al. 2003, Architecture of the budding yeast kinetochore reveals
+    a conserved molecular core, Journal of Cell Biology.
+- reference: DOI:10.1101/gad.1144403
+  notes: De Wulf, McAinsh and Sorger 2003, Hierarchical assembly of the budding yeast
+    kinetochore from multiple subcomplexes, Genes & Development.
+causal_graphs:
+- graph_id: yeast_inner_outer_kinetochore_bridge
+  title: Inner kinetochore complexes recruit the outer microtubule-binding module
+  description: In the budding-yeast kinetochore, Cse4 centromeric chromatin anchors
+    inner kinetochore assemblies, COMA links DNA-proximal and microtubule-bound subunits,
+    MIND/Mtw1 recruits Ndc80, and Ndc80 forms the outer module.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph places core Saccharomyces kinetochore subcomplexes in an
+    inner-to-outer assembly hierarchy without enumerating every CBF3, Mif2, Ctf19,
+    Dam1/DASH or regulatory input.
+  nodes:
+  - node_id: centromeric_cse4_nucleosome
+    label: centromeric Cse4/CENP-A nucleosome platform
+    node_type: GENE_OR_PROTEIN
+    component_ref: centromeric_cse4_nucleosome
+  - node_id: coma_complex
+    label: COMA complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0000817
+    component_ref: coma_complex
+  - node_id: mis12_mind_type_complex
+    label: MIS12/MIND type complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0000444
+    component_ref: mis12_mind_type_complex
+  - node_id: ndc80_complex
+    label: Ndc80 complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0031262
+    component_ref: ndc80_complex
+  - node_id: kinetochore
+    label: kinetochore
+    node_type: STRUCTURE
+    grounding: GO:0000776
+  edges:
+  - subject: centromeric_cse4_nucleosome
+    predicate: anchors assembly of
+    object: kinetochore
+    description: Cse4-containing centromeric chromatin forms the inner platform on
+      which budding-yeast kinetochores assemble.
+    evidence:
+    - reference: DOI:10.1534/genetics.112.145276
+      notes: Biggins 2013 reviewed Cse4/CENP-A as the centromeric chromatin foundation
+        for budding-yeast kinetochore assembly.
+  - subject: coma_complex
+    predicate: bridges inner and outer modules of
+    object: kinetochore
+    description: The COMA complex bridges DNA-proximal kinetochore subunits and outer
+      microtubule-binding modules.
+    evidence:
+    - reference: GO:0000817
+      notes: GO:0000817 defines COMA as a kinetochore complex bridging centromeric-DNA-proximal
+        and microtubule-bound subunits.
+  - subject: mis12_mind_type_complex
+    predicate: recruits
+    object: ndc80_complex
+    description: MIS12/MIND-type complexes help recruit outer kinetochore subunits
+      that bind to microtubules.
+    evidence:
+    - reference: GO:0000444
+      notes: GO:0000444 defines the MIS12/MIND type complex as helping recruit outer
+        microtubule-binding kinetochore subunits.
+  - subject: ndc80_complex
+    predicate: forms outer microtubule-binding module of
+    object: kinetochore
+    description: The Ndc80 complex forms a conserved outer-kinetochore module of the
+      budding-yeast kinetochore.
+    evidence:
+    - reference: GO:0031262
+      notes: GO:0031262 defines the Ndc80 complex as an outer kinetochore subcomplex.
+    - reference: DOI:10.1083/jcb.200305100
+      notes: Westermann et al. 2003 placed Ndc80 in the budding-yeast kinetochore
+        molecular core.
+discussions:
+- discussion_id: resolve_kinetochore_subcomplex_boundaries
+  prompt: Resolve exact source-neutral groundings and component boundaries for Cse4/Mif2/CBF3,
+    the complete Ctf19/CCAN network, the Dam1/DASH complex and additional yeast outer
+    kinetochore factors.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#centromeric_cse4_nucleosome
+  - causal_graphs#yeast_inner_outer_kinetochore_bridge
+  rationale: This first record grounds GO-exact COMA, MIS12/MIND and Ndc80 subcomplexes,
+    but it intentionally leaves the centromeric Cse4 nucleosome label-only and does
+    not flatten the full yeast kinetochore into unsupported protein cohorts.
+  evidence:
+  - reference: DOI:10.1534/genetics.112.145276
+  posed_by: codex
+  posed_date: '2026-09-11'

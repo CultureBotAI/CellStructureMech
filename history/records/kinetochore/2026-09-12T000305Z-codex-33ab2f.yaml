@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/kinetochore.yaml
+  slug: kinetochore
+session:
+  id: 2026-09-12T000305Z-codex-33ab2f
+  timestamp: '2026-09-12T00:03:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/548
+  - https://github.com/CultureBotAI/CellStructureMech/issues/549
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/547
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the kinetochore structure record
+  details: Added an evidence-backed GO:0000776 kinetochore record with exact GO-grounded COMA,
+    MIS12/MIND, and Ndc80 subcomplexes, a reviewed label-only Cse4/CENP-A centromeric platform
+    component, Saccharomyces cerevisiae distribution and example curation, chromosome-segregation
+    function evidence, and an inner-to-outer budding-yeast assembly graph. Addressed PR review
+    by keeping the assembly graph scoped to kinetochore assembly and narrowing unsupported
+    first-pass essentiality calls to UNKNOWN.
