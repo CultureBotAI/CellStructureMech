@@ -1,0 +1,210 @@
+identifier: GO:0097691
+label: bacterial extracellular vesicle
+structure_category: OTHER
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: Small membrane vesicle (< 1 um) that buds off a prokaryotic cell plasma
+  membrane, able to carry proteins, phospholipids, lipopolysaccharides, nucleic acids,
+  viruses, and more. Important in intercellular communication and pathogenesis; can
+  exist within host cells.
+definition_source: GO:0097691
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T14:56:28Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T14:57:38Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added extracellular-vesicle parentage, the UniProt Subcellular Location
+    xref, BEV synonymy, reviewed-label membrane and cargo components, bacterial scope,
+    a Staphylococcus aureus canonical example, a cargo-delivery function, DOI/GO/UniProt
+    evidence, a nonmechanistic vesicle-boundary graph, and boundary discussions for
+    exact component groundings and generic UniProt synonyms.
+  llm_assisted: true
+- timestamp: '2026-09-12T15:02:41Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #663 and #664 by retyping the BEV membrane as a mixed OTHER component
+    and changing the cargo graph so the vesicle carries cargo instead of asserting
+    that the membrane encloses all cargo.'
+  llm_assisted: true
+- timestamp: '2026-09-12T15:02:57Z'
+  curator: codex
+  action: TIGHTENED_REVIEW_FIX
+  changes: 'Tightened #663 and #664 follow-up wording to describe membrane-associated
+    cargo and the mixed vesicle membrane consistently.'
+  llm_assisted: true
+parent_structures:
+- GO:1903561
+synonyms:
+- synonym_text: bacterial membrane vesicle
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0489
+xrefs:
+- uniprot.location:SL-0489
+components:
+- component_id: bacterial_extracellular_vesicle_membrane
+  label: bacterial extracellular vesicle membrane
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Bacterial extracellular vesicle membranes are mixed lipid, protein,
+    and cell-envelope-derived assemblies whose composition and origin vary across
+    Gram-negative outer membrane vesicles, outer-inner membrane vesicles, and Gram-positive
+    membrane vesicles. ComponentTypeEnum has no MEMBRANE value, so this broad composite
+    membrane is typed as OTHER until exact source-neutral membrane groundings can
+    be verified.
+  role: Composite membrane that bounds the released bacterial extracellular vesicle
+    and carries or encloses its packaged cargo.
+  evidence:
+  - reference: GO:0097691
+    notes: GO:0097691 defines the bacterial extracellular vesicle as a small membrane
+      vesicle that buds from a bacterial plasma membrane.
+  - reference: DOI:10.1038/s41579-018-0112-2
+    notes: Toyofuku, Nomura and Eberl 2019 review distinct bacterial membrane-vesicle
+      origins and compositions.
+- component_id: bacterial_extracellular_vesicle_cargo
+  label: bacterial extracellular vesicle cargo
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Bacterial extracellular vesicle cargo is heterogeneous across species,
+    envelope architectures, and release pathways; no single protein, nucleic-acid,
+    lipid, or polysaccharide CURIE denotes the variable packaged material.
+  role: Variable bacterial material packaged inside or associated with the extracellular
+    vesicle for export to neighboring microbes or host cells.
+  evidence:
+  - reference: GO:0097691
+    notes: GO:0097691 lists proteins, phospholipids, lipopolysaccharides, nucleic
+      acids and viruses among the cargos bacterial extracellular vesicles can carry.
+  - reference: DOI:10.1016/j.semcdb.2015.02.006
+    notes: Kim et al. 2015 review bacterial extracellular vesicles from Gram-negative
+      and Gram-positive bacteria as extracellular carriers of bioactive cargo.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Both Gram-negative and Gram-positive bacteria release extracellular membrane
+    vesicles, with occurrence and vesicle origin varying by species and growth condition.
+  reference: DOI:10.1016/j.semcdb.2015.02.006
+canonical_examples:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: Staphylococcus aureus is a Gram-positive model in which extracellular membrane
+    vesicle release and vesicle protein cargo were experimentally characterized.
+  reference: DOI:10.1002/pmic.200900338
+functions:
+- function_id: bacterial_extracellular_cargo_delivery
+  label: bacterial extracellular cargo delivery
+  description: Bacterial extracellular vesicles move membrane-associated and luminal
+    cargo from producing bacteria into the extracellular milieu, where vesicle contents
+    can affect neighboring microbes or host cells.
+  evidence:
+  - reference: DOI:10.1038/s41579-018-0112-2
+    notes: Toyofuku, Nomura and Eberl 2019 review bacterial membrane vesicles as vehicles
+      for molecular cargo in microbe-microbe and host-microbe interactions.
+evidence:
+- reference: GO:0097691
+  notes: Gene Ontology cellular-component term for bacterial extracellular vesicle.
+- reference: GO:1903561
+  notes: Gene Ontology cellular-component term for extracellular vesicle.
+- reference: uniprot.location:SL-0489
+  notes: UniProt Subcellular Location entry that maps Bacterial extracellular vesicle
+    to GO:0097691.
+- reference: DOI:10.1016/j.semcdb.2015.02.006
+  notes: Kim et al. 2015, Gram-negative and Gram-positive bacterial extracellular
+    vesicles, Seminars in Cell and Developmental Biology.
+- reference: DOI:10.1038/s41579-018-0112-2
+  notes: Toyofuku, Nomura and Eberl 2019, Types and origins of bacterial membrane
+    vesicles, Nature Reviews Microbiology.
+- reference: DOI:10.1002/pmic.200900338
+  notes: 'Lee et al. 2009, Gram-positive bacteria produce membrane vesicles: proteomics-based
+    characterization of Staphylococcus aureus-derived membrane vesicles, Proteomics.'
+causal_graphs:
+- graph_id: bacterial_extracellular_vesicle_cargo_export
+  title: Bacterial extracellular vesicles carry exported cargo
+  description: Bacterial extracellular vesicles contain a mixed membrane and heterogeneous
+    cargo that are released from the producing bacterium and can be delivered to neighboring
+    microbes or host cells.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: Bacterial extracellular vesicles arise by several Gram-negative and
+    Gram-positive pathways; the graph captures the shared vesicle boundary and cargo-export
+    relationship without asserting one biogenesis mechanism.
+  nodes:
+  - node_id: bev_membrane
+    label: bacterial extracellular vesicle membrane
+    node_type: STRUCTURE
+    component_ref: bacterial_extracellular_vesicle_membrane
+  - node_id: bev_cargo
+    label: bacterial extracellular vesicle cargo
+    node_type: STRUCTURE
+    component_ref: bacterial_extracellular_vesicle_cargo
+  - node_id: bacterial_extracellular_vesicle
+    label: bacterial extracellular vesicle
+    node_type: ORGANELLE
+    grounding: GO:0097691
+  edges:
+  - subject: bacterial_extracellular_vesicle
+    predicate: carries
+    object: bev_cargo
+    description: The released bacterial extracellular vesicle carries heterogeneous
+      lumenal and surface-associated cargo.
+    evidence:
+    - reference: GO:0097691
+      notes: GO:0097691 defines the vesicle as a membrane vesicle able to carry multiple
+        cargo classes.
+    - reference: DOI:10.1038/s41579-018-0112-2
+      notes: Toyofuku, Nomura and Eberl 2019 review cargo packaging across bacterial
+        membrane-vesicle types.
+  - subject: bev_membrane
+    predicate: is part of
+    object: bacterial_extracellular_vesicle
+    description: The mixed vesicle membrane is the bounding envelope of the released
+      bacterial extracellular vesicle.
+    evidence:
+    - reference: GO:0097691
+      notes: GO:0097691 identifies the structure as a small bacterial membrane vesicle.
+discussions:
+- discussion_id: resolve_bev_component_groundings
+  prompt: Resolve exact source-neutral groundings for the membrane and cargo classes
+    that span all bacterial extracellular vesicle origins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#bacterial_extracellular_vesicle_membrane
+  - components#bacterial_extracellular_vesicle_cargo
+  rationale: The first GO:0097691 record models the conserved vesicle membrane and
+    cargo relationship, but leaves the heterogeneous Gram-negative and Gram-positive
+    membrane sources and cargo sets ungrounded until exact component identifiers can
+    be verified.
+  evidence:
+  - reference: DOI:10.1038/s41579-018-0112-2
+    notes: Toyofuku, Nomura and Eberl 2019 distinguish multiple bacterial membrane-vesicle
+      origins and cargo sets.
+  posed_by: codex
+  posed_date: '2026-09-12'
+- discussion_id: exclude_generic_vesicle_synonyms
+  prompt: The generic labels membrane vesicle and microvesicle are not curated as
+    exact bacterial extracellular vesicle synonyms.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - synonyms
+  rationale: UniProt SL-0489 lists Bacterial membrane vesicle, Membrane vesicle and
+    Microvesicle as entry synonyms. Only bacterial membrane vesicle is exact enough
+    for GO:0097691; the generic labels also denote non-bacterial extracellular vesicles.
+  evidence:
+  - reference: uniprot.location:SL-0489
+    notes: UniProt Subcellular Location entry SL-0489 carries the bacterial membrane
+      vesicle, membrane vesicle and microvesicle synonyms.
+  - reference: GO:1903561
+    notes: GO:1903561 is a broader extracellular vesicle class that contains bacterial
+      and non-bacterial children.
+  posed_by: codex
+  posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'
