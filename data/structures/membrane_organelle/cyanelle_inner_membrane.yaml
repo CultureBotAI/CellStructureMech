@@ -1,0 +1,173 @@
+identifier: GO:0036012
+label: cyanelle inner membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The inner, i.e. lumen-facing, lipid bilayer of the cyanelle envelope;
+  also faces the cyanelle stroma.
+definition_source: GO:0036012
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T21:06:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T21:06:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO synonym, plastid-inner and cyanelle-membrane parentage, cyanelle-envelope
+    parthood, the UniProt SL-0480 xref, a reviewed-label-only inner lipid bilayer
+    component, glaucophyte distribution, a Cyanophora paradoxa canonical example,
+    a nonmechanistic topology graph, and a lipid-bilayer grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: cyanelle inner envelope membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036012
+parent_structures:
+- GO:0009528
+- GO:0033113
+part_of:
+- GO:0033112
+xrefs:
+- uniprot.location:SL-0480
+components:
+- component_id: cyanelle_inner_lipid_bilayer
+  label: cyanelle inner lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lumen-facing lipid bilayer that separates the cyanelle stroma from the intermembrane
+    space.
+  evidence:
+  - reference: GO:0036012
+    notes: GO:0036012 defines the cyanelle inner membrane as the lumen-facing lipid
+      bilayer of the cyanelle envelope that also faces the cyanelle stroma.
+  - reference: uniprot.location:SL-0480
+    notes: UniProt SL-0480 maps directly to GO:0036012 and describes the same stroma/intermembrane-space
+      boundary.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0036012 and UniProt SL-0480 identify the whole cyanelle inner
+    membrane, but no separate source-neutral CURIE was curated for the lipid constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:38254
+  taxon_label: Glaucocystophyceae
+  presence: COMMON
+  note: Glaucophytes carry cyanelles with double envelopes whose inner boundary is
+    a cyanelle inner membrane.
+  reference: DOI:10.5586/asbp.2015.020
+- taxon_id: NCBITaxon:2762
+  taxon_label: Cyanophora paradoxa
+  presence: COMMON
+  note: Cyanophora paradoxa cyanelles have inner membranes that separate the cyanelle
+    stroma from the peptidoglycan-bearing intermembrane space.
+  reference: DOI:10.1104/pp.71.2.409
+canonical_examples:
+- taxon_id: NCBITaxon:2762
+  taxon_label: Cyanophora paradoxa
+  note: Model glaucophyte used for ultrastructural studies of the inner and outer
+    cyanelle envelope membranes.
+  reference: DOI:10.1104/pp.71.2.409
+evidence:
+- reference: GO:0036012
+  notes: Gene Ontology cellular-component term for cyanelle inner membrane.
+- reference: GO:0009528
+  notes: Gene Ontology cellular-component term for plastid inner membrane.
+- reference: GO:0033113
+  notes: Gene Ontology cellular-component term for the generic cyanelle membrane parent.
+- reference: GO:0033112
+  notes: Gene Ontology cellular-component term for cyanelle envelope.
+- reference: GO:0036014
+  notes: Gene Ontology cellular-component term for the cyanelle intermembrane space.
+- reference: GO:0034060
+  notes: Gene Ontology cellular-component term for cyanelle stroma.
+- reference: uniprot.location:SL-0480
+  notes: UniProt Subcellular Location entry SL-0480 maps Cyanelle inner membrane to
+    GO:0036012 and places it under cyanelle membrane and plastid inner membrane.
+- reference: DOI:10.1104/pp.71.2.409
+  notes: Giddings, Wasmann and Staehelin 1983, Structure of the Thylakoids and Envelope
+    Membranes of the Cyanelles of Cyanophora paradoxa, Plant Physiology.
+- reference: DOI:10.1128/jb.178.2.332-339.1996
+  notes: 'Pfanzagl et al. 1996, Primary structure of cyanelle peptidoglycan of Cyanophora
+    paradoxa: a prokaryotic cell wall as part of an organelle envelope, Journal of
+    Bacteriology.'
+- reference: DOI:10.5586/asbp.2015.020
+  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
+    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
+causal_graphs:
+- graph_id: cyanelle_inner_membrane_topology
+  title: Cyanelle inner membrane topology
+  description: The cyanelle inner membrane is the lumen-facing lipid bilayer that
+    separates the cyanelle stroma from the intermembrane space.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining envelope topology without asserting
+    membrane proteins, import machinery, or the full cyanelle photosynthetic apparatus.
+  nodes:
+  - node_id: cyanelle_inner_membrane
+    label: cyanelle inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0036012
+  - node_id: cyanelle_envelope
+    label: cyanelle envelope
+    node_type: STRUCTURE
+    grounding: GO:0033112
+  - node_id: cyanelle_stroma
+    label: cyanelle stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034060
+  - node_id: cyanelle_intermembrane_space
+    label: cyanelle intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0036014
+  edges:
+  - subject: cyanelle_inner_membrane
+    predicate: is part of
+    object: cyanelle_envelope
+    description: The cyanelle inner membrane is the inner lipid bilayer of the cyanelle
+      envelope.
+    evidence:
+    - reference: GO:0036012
+      notes: GO:0036012 defines this inner membrane as a lipid bilayer of the cyanelle
+        envelope.
+    - reference: uniprot.location:SL-0480
+      notes: UniProt SL-0480 places the cyanelle inner membrane under the cyanelle
+        envelope.
+  - subject: cyanelle_inner_membrane
+    predicate: bounds
+    object: cyanelle_stroma
+    description: The cyanelle inner membrane is the envelope lipid bilayer that faces
+      the cyanelle stroma.
+    evidence:
+    - reference: GO:0036012
+      notes: GO:0036012 defines this membrane by its lumen-facing position and states
+        that it also faces the cyanelle stroma.
+    - reference: GO:0034060
+      notes: GO:0034060 identifies the cyanelle stroma as the space enclosed by the
+        double membrane of a cyanelle.
+  - subject: cyanelle_inner_membrane
+    predicate: delimits
+    object: cyanelle_intermembrane_space
+    description: The cyanelle inner membrane forms the inner boundary of the intermembrane
+      space between the envelope lipid bilayers.
+    evidence:
+    - reference: uniprot.location:SL-0480
+      notes: UniProt SL-0480 describes the cyanelle inner membrane as separating the
+        cyanelle stroma from the intermembrane space.
+    - reference: GO:0036014
+      notes: GO:0036014 defines the cyanelle intermembrane space as the region between
+        the inner and outer lipid bilayers of the envelope.
+discussions:
+- discussion_id: ground_cyanelle_inner_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    cyanelle inner membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cyanelle_inner_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0036012 and UniProt SL-0480, but
+    the lipid bilayer constituent is intentionally left as a reviewed-label-only component
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-12'
