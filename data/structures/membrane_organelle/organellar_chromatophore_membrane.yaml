@@ -1,0 +1,179 @@
+identifier: GO:0070112
+label: organellar chromatophore membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: Either of the lipid bilayers that surround an organellar chromatophore.
+definition_source: GO:0070112
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T19:43:02Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T19:43:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO synonym, cytoplasmic-vesicle-membrane parentage, organellar
+    chromatophore parthood, UniProt SL xref, a reviewed-label-only generic lipid-bilayer
+    component, Paulinella distribution, a nonmechanistic scope graph, and discussions
+    for generic membrane scope and lipid grounding.
+  llm_assisted: true
+synonyms:
+- synonym_text: Paulinella-type chromatophore membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0070112
+parent_structures:
+- GO:0030659
+part_of:
+- GO:0070111
+xrefs:
+- uniprot.location:SL-0352
+components:
+- component_id: organellar_chromatophore_lipid_bilayer
+  label: organellar chromatophore lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Generic lipid-bilayer constituent of an organellar chromatophore membrane
+    when the exact inner, outer, or thylakoid membrane identity is unspecified.
+  evidence:
+  - reference: GO:0070112
+    notes: GO:0070112 defines an organellar chromatophore membrane as a lipid bilayer
+      surrounding an organellar chromatophore.
+  - reference: uniprot.location:SL-0352
+    notes: UniProt SL-0352 represents one of the organellar chromatophore membranes
+      when the exact outer, inner, or thylakoid membrane assignment is unknown.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070112 and UniProt SL-0352 identify the whole generic organellar
+    chromatophore membrane class, but no separate source-neutral CURIE was curated
+    for its lipid constituent.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:39716
+  taxon_label: Paulinella
+  presence: VARIABLE
+  note: UniProt SL-0352 constrains organellar chromatophore membranes to Paulinella
+    species without asserting that every Paulinella species carries an organellar
+    chromatophore.
+  reference: uniprot.location:SL-0352
+evidence:
+- reference: GO:0070112
+  notes: Gene Ontology cellular-component term for the generic organellar chromatophore
+    membrane class.
+- reference: GO:0030659
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle membrane.
+- reference: GO:0070111
+  notes: Gene Ontology cellular-component term for the organellar chromatophore that
+    GO:0070112 membranes are part of.
+- reference: GO:0070113
+  notes: Gene Ontology cellular-component child term for the organellar chromatophore
+    inner membrane.
+- reference: GO:0070114
+  notes: Gene Ontology cellular-component child term for the organellar chromatophore
+    outer membrane.
+- reference: GO:0070118
+  notes: Gene Ontology cellular-component child term for the organellar chromatophore
+    thylakoid membrane.
+- reference: uniprot.location:SL-0352
+  notes: UniProt Subcellular Location entry SL-0352 maps directly to GO:0070112, places
+    it under organellar chromatophore, and uses the term when the exact outer, inner,
+    or thylakoid membrane assignment is unknown.
+causal_graphs:
+- graph_id: organellar_chromatophore_membrane_scope
+  title: Organellar chromatophore membrane scope
+  description: The generic organellar chromatophore membrane class covers inner, outer,
+    and thylakoid membranes of the Paulinella organellar chromatophore when the exact
+    membrane identity is unspecified.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GO and UniProt localization scope without asserting
+    which exact membrane a generic SL-0352 annotation refers to.
+  nodes:
+  - node_id: organellar_chromatophore_membrane
+    label: organellar chromatophore membrane
+    node_type: STRUCTURE
+    grounding: GO:0070112
+  - node_id: organellar_chromatophore
+    label: organellar chromatophore
+    node_type: STRUCTURE
+    grounding: GO:0070111
+  - node_id: organellar_chromatophore_inner_membrane
+    label: organellar chromatophore inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0070113
+  - node_id: organellar_chromatophore_outer_membrane
+    label: organellar chromatophore outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0070114
+  - node_id: organellar_chromatophore_thylakoid_membrane
+    label: organellar chromatophore thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0070118
+  edges:
+  - subject: organellar_chromatophore_membrane
+    predicate: part of
+    object: organellar_chromatophore
+    description: An organellar chromatophore membrane is a membrane within the organellar
+      chromatophore.
+    evidence:
+    - reference: GO:0070111
+      notes: GO places GO:0070112 as a part_of child of the organellar chromatophore
+        term.
+    - reference: uniprot.location:SL-0352
+      notes: UniProt SL-0352 places the generic organellar chromatophore membrane
+        under organellar chromatophore.
+  - subject: organellar_chromatophore_inner_membrane
+    predicate: is a
+    object: organellar_chromatophore_membrane
+    description: The organellar chromatophore inner membrane is a specific organellar
+      chromatophore membrane.
+    evidence:
+    - reference: GO:0070112
+      notes: GO:0070112 has GO:0070113 as a narrower is_a child term.
+  - subject: organellar_chromatophore_outer_membrane
+    predicate: is a
+    object: organellar_chromatophore_membrane
+    description: The organellar chromatophore outer membrane is a specific organellar
+      chromatophore membrane.
+    evidence:
+    - reference: GO:0070112
+      notes: GO:0070112 has GO:0070114 as a narrower is_a child term.
+  - subject: organellar_chromatophore_thylakoid_membrane
+    predicate: is a
+    object: organellar_chromatophore_membrane
+    description: The organellar chromatophore thylakoid membrane is a specific organellar
+      chromatophore membrane.
+    evidence:
+    - reference: GO:0070112
+      notes: GO:0070112 has GO:0070118 as a narrower is_a child term.
+discussions:
+- discussion_id: generic_membrane_scope
+  prompt: Keep the generic organellar chromatophore membrane record separate from
+    the exact inner, outer, and thylakoid membrane records.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: UniProt SL-0352 is used when the exact organellar chromatophore membrane
+    is unknown, whereas GO:0070113, GO:0070114, and GO:0070118 identify exact inner,
+    outer, and thylakoid membranes.
+  resolution_note: Curated GO:0070112 as a generic parent/fallback localization record
+    and kept membrane-specific topology and functions on the exact child records.
+  evidence:
+  - reference: uniprot.location:SL-0352
+    notes: UniProt SL-0352 states that the generic membrane term is used when the
+      exact outer, inner, or thylakoid membrane association is unknown.
+  - reference: GO:0070112
+    notes: GO:0070112 parents the exact inner, outer, and thylakoid organellar chromatophore
+      membrane terms.
+- discussion_id: ground_chromatophore_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituent
+    of an organellar chromatophore membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#organellar_chromatophore_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0070112 and UniProt SL-0352, but
+    the generic lipid bilayer constituent is intentionally left as a reviewed-label-only
+    component until an exact source-neutral lipid or membrane-constituent CURIE is
+    curated.
+  posed_by: codex
+  posed_date: '2026-09-12'
