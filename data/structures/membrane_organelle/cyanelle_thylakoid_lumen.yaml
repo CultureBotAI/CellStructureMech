@@ -19,6 +19,12 @@ curation_history:
     graph, and a resolved interpretation that keeps the bounding thylakoid membrane
     out of lumen components.
   llm_assisted: true
+- timestamp: '2026-09-12T22:31:37Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #714 by citing GO:0009843 on the parthood edge that points from
+    the cyanelle thylakoid lumen to the cyanelle thylakoid.'
+  llm_assisted: true
 parent_structures:
 - GO:0031978
 part_of:
@@ -99,6 +105,8 @@ causal_graphs:
     evidence:
     - reference: GO:0033114
       notes: GO:0033114 is the cyanelle thylakoid lumen cellular-component term.
+    - reference: GO:0009843
+      notes: GO:0009843 identifies the containing cyanelle thylakoid compartment.
     - reference: uniprot.location:SL-0084
       notes: UniProt SL-0084 places the lumen under the cyanelle thylakoid location
         hierarchy.
