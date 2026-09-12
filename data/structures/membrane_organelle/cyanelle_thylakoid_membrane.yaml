@@ -1,0 +1,171 @@
+identifier: GO:0033115
+label: cyanelle thylakoid membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer membrane of any thylakoid within a cyanelle, a photosynthetic
+  organelle of glaucocystophyte algae.
+definition_source: GO:0033115
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T22:42:13Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T22:42:43Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added thylakoid-membrane and plastid thylakoid-membrane parentage, cyanelle
+    thylakoid parthood, the UniProt SL-0085 xref, a reviewed-label-only lipid-bilayer
+    component, glaucophyte distribution, a light-reaction function, a nonmechanistic
+    topology graph, and a lipid-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0042651
+- GO:0055035
+part_of:
+- GO:0009843
+xrefs:
+- uniprot.location:SL-0085
+components:
+- component_id: cyanelle_thylakoid_lipid_bilayer
+  label: cyanelle thylakoid lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Internal cyanelle thylakoid lipid bilayer that bounds the thylakoid lumen.
+  evidence:
+  - reference: GO:0033115
+    notes: GO:0033115 defines the cyanelle thylakoid membrane as the lipid bilayer
+      membrane of any thylakoid within a cyanelle.
+  - reference: uniprot.location:SL-0085
+    notes: UniProt SL-0085 maps directly to GO:0033115 and describes the same cyanelle
+      thylakoid lipid bilayer.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0033115 and UniProt SL-0085 identify the whole cyanelle thylakoid
+    membrane, but no separate source-neutral CURIE was curated for the lipid constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:38254
+  taxon_label: Glaucocystophyceae
+  presence: COMMON
+  note: UniProt SL-0085 constrains cyanelle thylakoid membranes to glaucocystophyte
+    algae.
+  reference: uniprot.location:SL-0085
+- taxon_id: NCBITaxon:2762
+  taxon_label: Cyanophora paradoxa
+  presence: COMMON
+  note: Cyanophora paradoxa cyanelles contain internal thylakoid membranes characterized
+    by electron microscopy.
+  reference: DOI:10.1104/pp.71.2.409
+canonical_examples:
+- taxon_id: NCBITaxon:2762
+  taxon_label: Cyanophora paradoxa
+  note: Model glaucophyte used for ultrastructural studies of cyanelle thylakoid and
+    envelope membranes.
+  reference: DOI:10.1104/pp.71.2.409
+functions:
+- function_id: light_reactions_of_photosynthesis
+  label: photosynthesis, light reaction
+  grounding: GO:0019684
+  description: The cyanelle thylakoid membrane is the internal membrane surface of
+    the cyanelle thylakoid system that supports photosynthetic light reactions.
+  evidence:
+  - reference: GO:0009843
+    notes: GO:0009843 defines the cyanelle thylakoid as a photosynthetic membrane
+      system resembling that of cyanobacteria.
+  - reference: uniprot.location:SL-0277
+    notes: UniProt SL-0277 describes cyanelle thylakoids as internal interconnected
+      photosynthetic membranes.
+evidence:
+- reference: GO:0033115
+  notes: Gene Ontology cellular-component term for cyanelle thylakoid membrane.
+- reference: GO:0042651
+  notes: Gene Ontology cellular-component term for thylakoid membrane, the broader
+    thylakoid-membrane parent.
+- reference: GO:0055035
+  notes: Gene Ontology cellular-component term for plastid thylakoid membrane, the
+    plastid-specific thylakoid membrane parent.
+- reference: GO:0009843
+  notes: Gene Ontology cellular-component term for the cyanelle thylakoid that this
+    membrane is part of.
+- reference: GO:0033114
+  notes: Gene Ontology cellular-component term for the cyanelle thylakoid lumen bounded
+    by this membrane.
+- reference: uniprot.location:SL-0085
+  notes: UniProt Subcellular Location entry SL-0085 maps directly to GO:0033115, places
+    it under plastid thylakoid membrane and cyanelle thylakoid, and describes it as
+    the lipid bilayer membrane of thylakoids within glaucocystophyte cyanelles.
+- reference: uniprot.location:SL-0084
+  notes: UniProt Subcellular Location entry SL-0084 maps the bounded cyanelle thylakoid
+    lumen to GO:0033114.
+- reference: DOI:10.1104/pp.71.2.409
+  notes: Giddings, Wasmann and Staehelin 1983, Structure of the Thylakoids and Envelope
+    Membranes of the Cyanelles of Cyanophora paradoxa, Plant Physiology.
+- reference: DOI:10.5586/asbp.2015.020
+  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
+    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
+causal_graphs:
+- graph_id: cyanelle_thylakoid_membrane_topology
+  title: Cyanelle thylakoid membrane topology
+  description: The cyanelle thylakoid membrane bounds the thylakoid lumen and supports
+    photosynthetic light reactions.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining thylakoid-membrane topology and light-reaction
+    site without asserting the complete photosystem or electron-transport composition.
+  nodes:
+  - node_id: cyanelle_thylakoid_membrane
+    label: cyanelle thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0033115
+    component_ref: cyanelle_thylakoid_lipid_bilayer
+  - node_id: cyanelle_thylakoid_lumen
+    label: cyanelle thylakoid lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0033114
+  - node_id: photosynthesis_light_reaction
+    label: photosynthesis, light reaction
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0019684
+  edges:
+  - subject: cyanelle_thylakoid_membrane
+    predicate: bounds
+    object: cyanelle_thylakoid_lumen
+    description: The cyanelle thylakoid lumen is bounded by cyanelle thylakoid membranes.
+    evidence:
+    - reference: GO:0033114
+      notes: GO:0033114 defines the lumen as the cyanelle compartment bounded by thylakoid
+        membranes.
+    - reference: uniprot.location:SL-0084
+      notes: UniProt SL-0084 describes the lumen as the compartment bounded by the
+        thylakoid membranes.
+    - reference: GO:0033115
+      notes: GO:0033115 defines the bounding cyanelle thylakoid membrane.
+    - reference: uniprot.location:SL-0085
+      notes: UniProt SL-0085 maps directly to the bounding cyanelle thylakoid membrane.
+  - subject: cyanelle_thylakoid_membrane
+    predicate: supports
+    object: photosynthesis_light_reaction
+    description: The cyanelle thylakoid membrane is the photosynthetic membrane of
+      the cyanelle thylakoid system.
+    evidence:
+    - reference: GO:0009843
+      notes: GO:0009843 defines the cyanelle thylakoid as a photosynthetic membrane
+        resembling that of cyanobacteria.
+    - reference: uniprot.location:SL-0277
+      notes: UniProt SL-0277 describes the cyanelle thylakoid as an internal system
+        of interconnected photosynthetic membranes.
+discussions:
+- discussion_id: ground_cyanelle_thylakoid_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    cyanelle thylakoid membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cyanelle_thylakoid_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0033115 and UniProt SL-0085, but
+    the lipid bilayer constituent is intentionally left as a reviewed-label-only component
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-12'
