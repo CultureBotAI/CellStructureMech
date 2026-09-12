@@ -3009,9 +3009,9 @@
           "cosine_similarity": 0.9149377
         },
         {
-          "identifier": "GO:0009842",
-          "label": "cyanelle",
-          "cosine_similarity": 0.90019977
+          "identifier": "GO:0034060",
+          "label": "cyanelle stroma",
+          "cosine_similarity": 0.91293097
         }
       ]
     },
@@ -3074,6 +3074,37 @@
           "identifier": "GO:0036014",
           "label": "cyanelle intermembrane space",
           "cosine_similarity": 0.92548708
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0034060",
+      "label": "cyanelle stroma",
+      "neighbors": [
+        {
+          "identifier": "GO:0036014",
+          "label": "cyanelle intermembrane space",
+          "cosine_similarity": 0.91293097
+        },
+        {
+          "identifier": "GO:0036013",
+          "label": "cyanelle outer membrane",
+          "cosine_similarity": 0.88397088
+        },
+        {
+          "identifier": "GO:0009842",
+          "label": "cyanelle",
+          "cosine_similarity": 0.88163136
+        },
+        {
+          "identifier": "GO:0033113",
+          "label": "cyanelle membrane",
+          "cosine_similarity": 0.87899202
+        },
+        {
+          "identifier": "GO:0036012",
+          "label": "cyanelle inner membrane",
+          "cosine_similarity": 0.87876032
         }
       ]
     },
