@@ -1,0 +1,281 @@
+identifier: GO:0005730
+label: nucleolus
+structure_category: OTHER
+structure_kind: OTHER
+definition: A dense, non-membrane-bounded body in the eukaryotic nuclear lumen that
+  concentrates ribosomal DNA transcription, pre-rRNA processing, and early ribosomal
+  subunit assembly.
+definition_source: GO:0005730
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T05:06:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T05:07:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nucleolar nuclear-lumen parthood, exact GO-grounded nucleolar-chromatin,
+    RNA polymerase I, SSU processome, and box H/ACA snoRNP components, Eukaryota distribution,
+    a Saccharomyces cerevisiae example, rDNA-transcription, rRNA-processing, and ribosome-biogenesis
+    functions, DOI/GO evidence, a nonmechanistic ribosome-biogenesis graph, and a
+    TODO for remaining preribosomal component boundaries.
+  llm_assisted: true
+- timestamp: '2026-09-12T05:08:19Z'
+  curator: codex
+  action: TIGHTENED_MODELING
+  changes: Retyped nucleolar chromatin from bare DNA to OTHER, switched the Eukaryota
+    distribution reference to GO:0005730, and relabeled the GO:0006360 function as
+    transcription by RNA polymerase I.
+  llm_assisted: true
+part_of:
+- GO:0031981
+components:
+- component_id: nucleolar_chromatin
+  label: nucleolar chromatin
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding: GO:0030874
+  essentiality: UNKNOWN
+  role: Nucleolus-associated nuclear chromatin that includes the DNA encoding ribosomal
+    RNA.
+  evidence:
+  - reference: GO:0030874
+    notes: GO:0030874 defines nucleolar chromatin as nuclear chromatin associated
+      with the nucleolus, including DNA that encodes rRNA.
+- component_id: rna_polymerase_i_complex
+  label: RNA polymerase I complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005736
+  essentiality: UNKNOWN
+  role: Nucleolar polymerase complex that transcribes ribosomal DNA to produce the
+    large pre-rRNA precursor.
+  evidence:
+  - reference: GO:0005736
+    notes: GO:0005736 identifies RNA polymerase I as a eukaryotic nuclear complex
+      that typically produces rRNAs.
+  - reference: DOI:10.1146/annurev.genet.33.1.261
+    notes: Venema and Tollervey 1999 review RNA polymerase I transcription during
+      Saccharomyces cerevisiae ribosome synthesis.
+- component_id: small_subunit_processome
+  label: small-subunit processome
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding: GO:0032040
+  essentiality: UNKNOWN
+  role: Early preribosomal ribonucleoprotein complex that contains 35S pre-rRNA and
+    U3 snoRNA in budding yeast.
+  evidence:
+  - reference: GO:0032040
+    notes: GO:0032040 defines the small-subunit processome as a large early preribosomal
+      ribonucleoprotein complex.
+  - reference: DOI:10.1038/nature00769
+    notes: Dragon et al. 2002 characterized a large nucleolar U3 ribonucleoprotein
+      required for 18S rRNA biogenesis.
+- component_id: box_haca_snornp_complex
+  label: box H/ACA snoRNP complex
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding: GO:0031429
+  essentiality: UNKNOWN
+  role: Small nucleolar ribonucleoprotein complex that guides pseudouridylation of
+    rRNA during ribosome synthesis.
+  evidence:
+  - reference: GO:0031429
+    notes: GO:0031429 defines the box H/ACA snoRNP complex as a nucleolar complex
+      that catalyzes pseudouridylation of rRNA residues.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: Nucleoli are non-membrane-bounded bodies of eukaryotic nuclei that concentrate
+    ribosomal gene transcription and early ribosome biogenesis.
+  reference: GO:0005730
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which nucleolar ribosome synthesis includes 35S pre-rRNA
+    processing and U3-containing small-subunit processome assembly.
+  reference: DOI:10.1038/nature00769
+functions:
+- function_id: transcription_by_rna_polymerase_i
+  label: transcription by RNA polymerase I
+  grounding: GO:0006360
+  description: RNA polymerase I in the nucleolus transcribes ribosomal DNA to produce
+    the major pre-rRNA precursor.
+  evidence:
+  - reference: GO:0006360
+    notes: GO:0006360 denotes RNA synthesis from a DNA template by RNA polymerase
+      I.
+  - reference: DOI:10.1146/annurev.genet.33.1.261
+    notes: Venema and Tollervey 1999 review rDNA transcription as the first stage
+      of yeast ribosome synthesis.
+- function_id: rrna_processing
+  label: rRNA processing
+  grounding: GO:0006364
+  description: Nucleolar ribonucleoproteins process primary rRNA transcripts as part
+    of ribosome biogenesis.
+  evidence:
+  - reference: GO:0006364
+    notes: GO:0006364 denotes conversion of a primary rRNA transcript into mature
+      rRNA molecules.
+  - reference: DOI:10.1038/nature00769
+    notes: Dragon et al. 2002 identified the nucleolar U3 small-subunit processome
+      as required for 18S rRNA biogenesis.
+- function_id: ribosome_biogenesis
+  label: ribosome biogenesis
+  grounding: GO:0042254
+  description: The nucleolus organizes early transcription, rRNA processing, and preribosomal
+    assembly steps that contribute to production of cytoplasmic ribosomal subunits.
+  evidence:
+  - reference: GO:0042254
+    notes: GO:0042254 denotes the biosynthesis, assembly, and arrangement of ribosome-subunit
+      constituents.
+  - reference: DOI:10.1038/nrm2184
+    notes: Boisvert et al. 2007 review the nucleolus as a eukaryotic nuclear body
+      centered on ribosome biogenesis.
+evidence:
+- reference: GO:0005730
+  notes: Gene Ontology cellular-component term for nucleolus.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for nuclear lumen.
+- reference: GO:0030874
+  notes: Gene Ontology cellular-component term for nucleolar chromatin.
+- reference: GO:0005736
+  notes: Gene Ontology cellular-component term for RNA polymerase I complex.
+- reference: GO:0032040
+  notes: Gene Ontology cellular-component term for small-subunit processome.
+- reference: GO:0031429
+  notes: Gene Ontology cellular-component term for box H/ACA snoRNP complex.
+- reference: GO:0006360
+  notes: Gene Ontology biological-process term for transcription by RNA polymerase
+    I.
+- reference: GO:0006364
+  notes: Gene Ontology biological-process term for rRNA processing.
+- reference: GO:0042254
+  notes: Gene Ontology biological-process term for ribosome biogenesis.
+- reference: DOI:10.1038/nrm2184
+  notes: Boisvert et al. 2007, 'The multifunctional nucleolus', Nature Reviews Molecular
+    Cell Biology.
+- reference: DOI:10.1146/annurev.genet.33.1.261
+  notes: Venema and Tollervey 1999, 'Ribosome Synthesis in Saccharomyces cerevisiae',
+    Annual Review of Genetics.
+- reference: DOI:10.1038/nature00769
+  notes: Dragon et al. 2002, 'A large nucleolar U3 ribonucleoprotein required for
+    18S ribosomal RNA biogenesis', Nature.
+causal_graphs:
+- graph_id: yeast_nucleolar_ribosome_biogenesis
+  title: Nucleolar chromatin and RNPs build preribosomes
+  description: In the Saccharomyces cerevisiae nucleolus, RNA polymerase I transcribes
+    ribosomal chromatin while snoRNP-containing preribosomal complexes process pre-rRNA
+    during early ribosome biogenesis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph summarizes core nucleolar rDNA transcription and pre-rRNA
+    processing steps without asserting every yeast ribosome-assembly factor or all
+    pre-40S and pre-60S intermediates.
+  nodes:
+  - node_id: nucleolar_chromatin
+    label: nucleolar chromatin
+    node_type: GENETIC_ELEMENT
+    grounding: GO:0030874
+    component_ref: nucleolar_chromatin
+  - node_id: rna_polymerase_i_complex
+    label: RNA polymerase I complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0005736
+    component_ref: rna_polymerase_i_complex
+  - node_id: pre_rrna
+    label: pre-rRNA
+    node_type: RNA
+  - node_id: small_subunit_processome
+    label: small-subunit processome
+    node_type: STRUCTURE
+    grounding: GO:0032040
+    component_ref: small_subunit_processome
+  - node_id: box_haca_snornp_complex
+    label: box H/ACA snoRNP complex
+    node_type: STRUCTURE
+    grounding: GO:0031429
+    component_ref: box_haca_snornp_complex
+  - node_id: nucleolus
+    label: nucleolus
+    node_type: STRUCTURE
+    grounding: GO:0005730
+  - node_id: ribosome_biogenesis
+    label: ribosome biogenesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042254
+  edges:
+  - subject: rna_polymerase_i_complex
+    predicate: transcribes
+    object: nucleolar_chromatin
+    description: RNA polymerase I transcribes nucleolar ribosomal DNA into a large
+      pre-rRNA precursor.
+    evidence:
+    - reference: GO:0006360
+      notes: GO:0006360 covers RNA polymerase I transcription from DNA templates.
+    - reference: DOI:10.1146/annurev.genet.33.1.261
+      notes: Venema and Tollervey 1999 review RNA polymerase I transcription of ribosomal
+        DNA in Saccharomyces ribosome synthesis.
+  - subject: rna_polymerase_i_complex
+    predicate: produces
+    object: pre_rrna
+    description: RNA polymerase I transcription produces the primary pre-rRNA for
+      downstream nucleolar processing.
+    evidence:
+    - reference: DOI:10.1146/annurev.genet.33.1.261
+      notes: Venema and Tollervey 1999 review pre-rRNA production during budding-yeast
+        ribosome synthesis.
+  - subject: small_subunit_processome
+    predicate: processes
+    object: pre_rrna
+    description: The U3-containing small-subunit processome acts on pre-rRNA during
+      18S rRNA biogenesis.
+    evidence:
+    - reference: GO:0032040
+      notes: GO:0032040 defines the small-subunit processome as an early preribosomal
+        complex that includes the 35S pre-rRNA and U3 snoRNA in S. cerevisiae.
+    - reference: DOI:10.1038/nature00769
+      notes: Dragon et al. 2002 characterized the nucleolar U3 ribonucleoprotein required
+        for 18S rRNA biogenesis.
+  - subject: box_haca_snornp_complex
+    predicate: modifies
+    object: pre_rrna
+    description: Box H/ACA snoRNP complexes guide rRNA pseudouridylation during ribosome
+      synthesis.
+    evidence:
+    - reference: GO:0031429
+      notes: GO:0031429 defines a nucleolar H/ACA snoRNP complex that catalyzes rRNA
+        pseudouridylation.
+  - subject: nucleolus
+    predicate: organizes
+    object: ribosome_biogenesis
+    description: The nucleolus concentrates early rRNA transcription, processing,
+      and ribosome-assembly reactions.
+    evidence:
+    - reference: DOI:10.1038/nrm2184
+      notes: Boisvert et al. 2007 review the nucleolus as a major site of eukaryotic
+        ribosome biogenesis.
+discussions:
+- discussion_id: extend_preribosomal_component_boundaries
+  prompt: Resolve exact source-neutral nucleolar component boundaries for the remaining
+    pre-40S and pre-60S particles, box C/D snoRNPs, and trans-acting yeast ribosome-biogenesis
+    factors.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#small_subunit_processome
+  - causal_graphs#yeast_nucleolar_ribosome_biogenesis
+  rationale: This first nucleolus record grounds exact GO terms for RNA polymerase
+    I, nucleolar chromatin, the small-subunit processome, and the H/ACA snoRNP complex,
+    but it deliberately avoids broad label-only buckets for all nucleolar snoRNPs
+    or all preribosomal particles.
+  evidence:
+  - reference: DOI:10.1146/annurev.genet.33.1.261
+    notes: Venema and Tollervey 1999 review the many Saccharomyces factors and processing
+      intermediates involved in ribosome synthesis.
+  posed_by: codex
+  posed_date: '2026-09-12'
