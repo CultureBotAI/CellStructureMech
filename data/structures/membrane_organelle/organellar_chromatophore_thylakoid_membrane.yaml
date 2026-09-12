@@ -25,6 +25,12 @@ curation_history:
   changes: 'Resolved #692 by adding GO:0055035 plastid thylakoid membrane as a second
     parent structure with record-level evidence.'
   llm_assisted: true
+- timestamp: '2026-09-12T19:51:04Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #698 by adding GO:0070112 organellar chromatophore membrane as
+    a parent of the organellar chromatophore thylakoid membrane.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Paulinella-type chromatophore thylakoid membrane
   synonym_type: EXACT_SYNONYM
@@ -32,6 +38,7 @@ synonyms:
 parent_structures:
 - GO:0042651
 - GO:0055035
+- GO:0070112
 part_of:
 - GO:0070116
 xrefs:
@@ -83,6 +90,9 @@ evidence:
 - reference: GO:0055035
   notes: Gene Ontology cellular-component term for plastid thylakoid membrane, the
     plastid-specific thylakoid-membrane parent structure.
+- reference: GO:0070112
+  notes: Gene Ontology cellular-component term for organellar chromatophore membrane,
+    the broader Paulinella chromatophore-membrane parent structure.
 - reference: GO:0070116
   notes: Gene Ontology cellular-component term for the organellar chromatophore thylakoid
     that this membrane is part of.
