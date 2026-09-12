@@ -1,0 +1,339 @@
+identifier: GO:0000145
+label: exocyst
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A vesicle tethering complex peripherally associated with the plasma membrane
+  that determines where vesicles dock and fuse. At least eight complex components
+  are conserved between yeast and mammals.
+definition_source: GO:0000145
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T01:09:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T01:11:38Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, eight reviewed label-only yeast exocyst subunits, variable
+    eukaryotic scope, a Saccharomyces cerevisiae canonical example, exocytosis function,
+    DOI/GO evidence, a nonmechanistic Sec4/Sec15/Sec3 targeting graph, a subunit-grounding
+    TODO, and a resolved Sec4p boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-12T01:19:56Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #561 review issues #562 and #563 by removing the unsupported
+    Eukaryota taxonomic-distribution row and adding a secretory-vesicle node to the
+    Sec4/Sec15 graph.'
+  llm_assisted: true
+synonyms:
+- synonym_text: exocyst complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000145
+- synonym_text: Sec6/8 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000145
+components:
+- component_id: sec3_exocyst_subunit
+  label: Sec3 exocyst subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae exocyst subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this subunit was
+    curated in this pass.
+  role: Exocyst subunit that marks polarized exocytic sites at the yeast plasma membrane.
+  evidence:
+  - reference: DOI:10.1016/S0092-8674(00)80948-4
+    notes: Finger et al. 1998 characterized Sec3p as a spatial landmark for polarized
+      secretion in budding yeast.
+  - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+    notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
+      complex the exocyst and showed that it is required for exocytosis in Saccharomyces
+      cerevisiae.
+- component_id: sec5_exocyst_subunit
+  label: Sec5 exocyst subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae exocyst subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this subunit was
+    curated in this pass.
+  role: Constituent of the yeast exocyst identified when the Sec6/Sec8/Sec15 complex
+    was expanded.
+  evidence:
+  - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+    notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
+      complex the exocyst and showed that it is required for exocytosis in Saccharomyces
+      cerevisiae.
+- component_id: sec6_exocyst_subunit
+  label: Sec6 exocyst subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae exocyst subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this subunit was
+    curated in this pass.
+  role: Constituent of the yeast exocyst and of the original Sec6/Sec8/Sec15 complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.130.2.299
+    notes: TerBush and Novick 1995 identified Sec6p, Sec8p, and Sec15p in a multisubunit
+      complex at small bud tips.
+  - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+    notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
+      complex the exocyst and showed that it is required for exocytosis in Saccharomyces
+      cerevisiae.
+- component_id: sec8_exocyst_subunit
+  label: Sec8 exocyst subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC8
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae exocyst subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this subunit was
+    curated in this pass.
+  role: Constituent of the yeast exocyst and of the original Sec6/Sec8/Sec15 complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.130.2.299
+    notes: TerBush and Novick 1995 identified Sec6p, Sec8p, and Sec15p in a multisubunit
+      complex at small bud tips.
+  - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+    notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
+      complex the exocyst and showed that it is required for exocytosis in Saccharomyces
+      cerevisiae.
+- component_id: sec10_exocyst_subunit
+  label: Sec10 exocyst subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC10
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae exocyst subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this subunit was
+    curated in this pass.
+  role: Constituent of the yeast exocyst identified when the Sec6/Sec8/Sec15 complex
+    was expanded.
+  evidence:
+  - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+    notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
+      complex the exocyst and showed that it is required for exocytosis in Saccharomyces
+      cerevisiae.
+- component_id: sec15_exocyst_subunit
+  label: Sec15 exocyst subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC15
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae exocyst subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this subunit was
+    curated in this pass.
+  role: Exocyst subunit that connects the complex to Sec4p-positive secretory vesicles.
+  evidence:
+  - reference: DOI:10.1083/jcb.130.2.299
+    notes: TerBush and Novick 1995 identified Sec6p, Sec8p, and Sec15p in a multisubunit
+      complex at small bud tips.
+  - reference: DOI:10.1093/emboj/18.4.1071
+    notes: Guo et al. 1999 connected Sec15p with GTP-bound Sec4p during secretory-vesicle
+      targeting.
+- component_id: exo70_exocyst_subunit
+  label: Exo70 exocyst subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - EXO70
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae exocyst subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this subunit was
+    curated in this pass.
+  role: Constituent of the yeast exocyst identified when the Sec6/Sec8/Sec15 complex
+    was expanded.
+  evidence:
+  - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+    notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
+      complex the exocyst and showed that it is required for exocytosis in Saccharomyces
+      cerevisiae.
+- component_id: exo84_exocyst_subunit
+  label: Exo84 exocyst subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - EXO84
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae exocyst subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this subunit was
+    curated in this pass.
+  role: Exocyst protein required for secretion in Saccharomyces cerevisiae.
+  evidence:
+  - reference: DOI:10.1074/jbc.274.33.23558
+    notes: Guo et al. 1999 identified Exo84p as an exocyst protein essential for secretion.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which the Sec6/Sec8/Sec15 complex was expanded to the
+    named exocyst required for exocytosis.
+  reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+functions:
+- function_id: exocytosis
+  label: exocytosis
+  grounding: GO:0006887
+  description: The exocyst targets secretory vesicles to plasma-membrane exocytic
+    sites.
+  evidence:
+  - reference: GO:0006887
+    notes: Gene Ontology biological-process term for exocytosis.
+  - reference: DOI:10.1093/emboj/18.4.1071
+    notes: Guo et al. 1999 studied the exocyst as a Sec4p effector for secretory-vesicle
+      targeting.
+evidence:
+- reference: GO:0000145
+  notes: Gene Ontology cellular-component term for exocyst.
+- reference: GO:0006887
+  notes: Gene Ontology biological-process term for exocytosis.
+- reference: DOI:10.1083/jcb.130.2.299
+  notes: TerBush and Novick 1995, 'Sec6, Sec8, and Sec15 are components of a multisubunit
+    complex which localizes to small bud tips in Saccharomyces cerevisiae', Journal
+    of Cell Biology.
+- reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+  notes: TerBush et al. 1996, 'The Exocyst is a multiprotein complex required for
+    exocytosis in Saccharomyces cerevisiae', The EMBO Journal.
+- reference: DOI:10.1016/S0092-8674(00)80948-4
+  notes: Finger et al. 1998, 'Sec3p is a spatial landmark for polarized secretion
+    in budding yeast', Cell.
+- reference: DOI:10.1093/emboj/18.4.1071
+  notes: Guo et al. 1999, 'The exocyst is an effector for Sec4p, targeting secretory
+    vesicles to sites of exocytosis', The EMBO Journal.
+- reference: DOI:10.1074/jbc.274.33.23558
+  notes: Guo et al. 1999, 'Exo84p is an exocyst protein essential for secretion',
+    Journal of Biological Chemistry.
+causal_graphs:
+- graph_id: sec4_exocyst_targeting
+  title: Sec4 and Sec15 link secretory vesicles to exocytic sites
+  description: In budding yeast, Sec4p interacts with the exocyst component Sec15p
+    on secretory vesicles, Sec3p marks polarized plasma-membrane sites, and the exocyst
+    targets vesicles to those sites.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the Sec4p/Sec15p and Sec3p boundary relationships
+    without asserting a complete order of exocyst assembly or vesicle fusion.
+  nodes:
+  - node_id: sec4p
+    label: Sec4p
+    node_type: GENE_OR_PROTEIN
+  - node_id: sec15_exocyst_subunit
+    label: Sec15 exocyst subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec15_exocyst_subunit
+  - node_id: sec3_exocyst_subunit
+    label: Sec3 exocyst subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec3_exocyst_subunit
+  - node_id: exocyst
+    label: exocyst
+    node_type: STRUCTURE
+    grounding: GO:0000145
+  - node_id: exocytic_sites
+    label: polarized exocytic sites
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: secretory_vesicles
+    label: secretory vesicles
+    node_type: STRUCTURE
+  - node_id: exocytosis
+    label: exocytosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006887
+  edges:
+  - subject: sec4p
+    predicate: interacts with
+    object: sec15_exocyst_subunit
+    description: GTP-bound Sec4p interacts with the exocyst component Sec15p on secretory
+      vesicles.
+    evidence:
+    - reference: DOI:10.1093/emboj/18.4.1071
+      notes: Guo et al. 1999 tested GTP-bound Sec4p interaction with Sec15p during
+        vesicle targeting.
+  - subject: sec15_exocyst_subunit
+    predicate: is constituent of
+    object: exocyst
+    description: Sec15p is one of the Sec complex proteins in the yeast exocyst.
+    evidence:
+    - reference: DOI:10.1083/jcb.130.2.299
+      notes: TerBush and Novick 1995 identified Sec15p in the Sec6/Sec8/Sec15 complex.
+    - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+      notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
+        complex the exocyst and showed that it is required for exocytosis in Saccharomyces
+        cerevisiae.
+  - subject: sec3_exocyst_subunit
+    predicate: marks
+    object: exocytic_sites
+    description: Sec3p marks polarized plasma-membrane sites for secretion in budding
+      yeast.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(00)80948-4
+      notes: Finger et al. 1998 characterized Sec3p as a spatial landmark for polarized
+        secretion.
+  - subject: exocyst
+    predicate: targets
+    object: secretory_vesicles
+    description: The exocyst targets secretory vesicles to plasma-membrane sites used
+      for exocytosis.
+    evidence:
+    - reference: DOI:10.1093/emboj/18.4.1071
+      notes: Guo et al. 1999 framed the exocyst as a Sec4p effector system for targeted
+        secretion.
+discussions:
+- discussion_id: resolve_exocyst_subunit_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the eight S. cerevisiae
+    exocyst subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sec3_exocyst_subunit
+  - components#sec5_exocyst_subunit
+  - components#sec6_exocyst_subunit
+  - components#sec8_exocyst_subunit
+  - components#sec10_exocyst_subunit
+  - components#sec15_exocyst_subunit
+  - components#exo70_exocyst_subunit
+  - components#exo84_exocyst_subunit
+  rationale: This first exocyst record names experimentally defined Saccharomyces
+    subunits but leaves InterPro/Pfam grounding unset until exact orthology and paralogy
+    boundaries are reviewed per subunit.
+  evidence:
+  - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+  - reference: DOI:10.1074/jbc.274.33.23558
+  posed_by: codex
+  posed_date: '2026-09-12'
+- discussion_id: sec4p_is_effector_not_subunit
+  prompt: Should Sec4p be curated as an exocyst component?
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#sec4_exocyst_targeting
+  rationale: Sec4p acts through the exocyst component Sec15p during targeting of secretory
+    vesicles; it is not part of the stable exocyst complex defined by the Sec and
+    Exo subunits.
+  resolution_note: 'Declined: Sec4p is represented as a regulatory GTPase node in
+    the function graph rather than as a constituent exocyst subunit.'
+  evidence:
+  - reference: DOI:10.1093/emboj/18.4.1071
+  posed_by: codex
+  posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'

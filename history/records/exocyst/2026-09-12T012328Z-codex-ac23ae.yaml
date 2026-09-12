@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/exocyst.yaml
+  slug: exocyst
+session:
+  id: 2026-09-12T012328Z-codex-ac23ae
+  timestamp: '2026-09-12T01:23:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/562
+  - https://github.com/CultureBotAI/CellStructureMech/issues/563
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/561
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added exocyst structure record
+  details: 'Created GO:0000145 exocyst with exact GO synonyms, eight reviewed label-only Saccharomyces
+    cerevisiae constituent subunits, a Saccharomyces cerevisiae canonical example, GO/DOI
+    evidence, an exocytosis function, a nonmechanistic Sec4/Sec15/Sec3 targeting graph, a
+    subunit-grounding TODO, a resolved Sec4p boundary decision, and generated embedding/page
+    artifacts. Adversarial review filed #562 and #563; follow-up curation removed the unsupported
+    Eukaryota distribution row and rewired the Sec4 graph to target a secretory-vesicle node.'
