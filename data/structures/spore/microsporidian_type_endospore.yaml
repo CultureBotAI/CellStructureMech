@@ -1,0 +1,250 @@
+identifier: GO:0090641
+label: microsporidian-type endospore
+structure_category: SPORE
+structure_kind: ENVELOPE_LAYER
+definition: The middle layer in a microsporidian spore wall that lies under the exospore
+  and outside the plasma membrane, containing chitin and proteins.
+definition_source: GO:0090641
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T09:46:18Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T09:47:37Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added spore-wall parthood, endospore synonymy, chitin and reviewed-label-only
+    SWP25/EnP1/EnP2 protein components, Microsporidia scope, Nosema and Encephalitozoon
+    examples, spore-wall protection function, DOI/GO evidence, a nonmechanistic endospore-layering
+    graph, and a resolved microsporidian-versus-bacterial endospore boundary discussion.
+  llm_assisted: true
+part_of:
+- GO:0031160
+synonyms:
+- synonym_text: chitin-rich inner spore wall layer
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.ijpara.2005.10.005
+components:
+- component_id: chitin
+  label: chitin
+  component_type: POLYSACCHARIDE
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding: CHEBI:17029
+  role: Forms the carbohydrate-rich scaffold of the inner microsporidian endospore
+    layer.
+  evidence:
+  - reference: GO:0090641
+    notes: GO:0090641 defines the microsporidian-type endospore as a layer containing
+      chitin and proteins.
+  - reference: DOI:10.1016/j.ijpara.2005.10.005
+    notes: Peuvel-Fanget et al. 2006 describe the microsporidian endospore as the
+      chitin-rich inner layer of the spore wall.
+- component_id: endospore_spore_wall_proteins
+  label: microsporidian endospore spore wall proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SWP25
+  - EnP1
+  - EnP2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SWP25, EnP1 and EnP2 are microsporidian endospore-associated spore
+    wall proteins from different lineages; no exact source-neutral InterPro, Pfam
+    or NCBIfam term was curated for this aggregate protein cohort.
+  role: Protein constituents detected in the chitin-rich endospore layer of mature
+    microsporidian spores.
+  evidence:
+  - reference: DOI:10.1111/j.1550-7408.2008.00375.x
+    notes: Wu et al. 2009 identified Nosema bombycis SWP25 and localized it to the
+      endospore by immunoelectron microscopy.
+  - reference: DOI:10.1016/j.ijpara.2005.10.005
+    notes: Peuvel-Fanget et al. 2006 assigned the Encephalitozoon cuniculi EnP1 and
+      EnP2 proteins to the mature-spore endospore.
+  protein_examples:
+  - uniprot_id: UniProtKB:B3STN6
+    protein_label: Spore wall protein 25
+    gene_symbol: SWP25
+    taxon_id: NCBITaxon:578461
+    taxon_label: Nosema bombycis CQ1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-12'
+    role: Reviewed UniProtKB entry for the Nosema bombycis endospore-associated SWP25
+      protein.
+    evidence:
+    - reference: DOI:10.1111/j.1550-7408.2008.00375.x
+      notes: Wu et al. 2009 identified SWP25 as a Nosema bombycis spore wall protein
+        localized to the endospore.
+  - uniprot_id: UniProtKB:Q8SWL3
+    protein_label: Spore wall and anchoring disk complex protein EnP1
+    gene_symbol: EnP1
+    taxon_id: NCBITaxon:284813
+    taxon_label: Encephalitozoon cuniculi GB-M1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-12'
+    role: Reviewed UniProtKB entry for the Encephalitozoon cuniculi EnP1 protein assigned
+      to the endospore.
+    evidence:
+    - reference: DOI:10.1016/j.ijpara.2005.10.005
+      notes: Peuvel-Fanget et al. 2006 reported EnP1 as associated with the Encephalitozoon
+        cuniculi endospore.
+  - uniprot_id: UniProtKB:Q8SWI4
+    protein_label: Spore wall protein 3
+    gene_symbol: EnP2
+    taxon_id: NCBITaxon:284813
+    taxon_label: Encephalitozoon cuniculi GB-M1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-12'
+    role: Reviewed UniProtKB entry for the Encephalitozoon cuniculi EnP2/SWP3 protein
+      assigned to the endospore.
+    evidence:
+    - reference: DOI:10.1016/j.ijpara.2005.10.005
+      notes: Peuvel-Fanget et al. 2006 reported EnP2 as associated with the Encephalitozoon
+        cuniculi endospore.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:6029
+  taxon_label: Microsporidia
+  presence: COMMON
+  note: Microsporidian spores have a thick wall made of an outer exospore and a chitin-containing
+    inner endospore; this scope is tied to the spore stage.
+  reference: DOI:10.1016/j.ijpara.2005.10.005
+canonical_examples:
+- taxon_id: NCBITaxon:27978
+  taxon_label: Nosema bombycis
+  note: Silkworm-infecting microsporidian in which SWP25 was localized to the endospore.
+  reference: DOI:10.1111/j.1550-7408.2008.00375.x
+- taxon_id: NCBITaxon:6035
+  taxon_label: Encephalitozoon cuniculi
+  note: Human-pathogenic microsporidian model in which EnP1 and EnP2 were assigned
+    to the chitin-rich endospore.
+  reference: DOI:10.1016/j.ijpara.2005.10.005
+functions:
+- function_id: spore_wall_protection
+  label: spore wall protection
+  description: The endospore contributes to the thick wall that protects extracellular
+    microsporidian spores during transmission between host cells.
+  evidence:
+  - reference: DOI:10.1016/j.ijpara.2005.10.005
+    notes: Peuvel-Fanget et al. 2006 describe environmentally resistant microsporidian
+      spores with a rigid wall composed of an exospore and chitin-rich endospore.
+  - reference: DOI:10.1128/IAI.01225-09
+    notes: Polonais et al. 2010 describe the infective resistance stage as a microsporidian
+      spore protected by a thick wall whose inner layer is the chitin- and protein-containing
+      endospore.
+evidence:
+- reference: GO:0090641
+  notes: Gene Ontology cellular-component term for the microsporidian-type endospore.
+- reference: GO:0031160
+  notes: Gene Ontology cellular-component term for the spore wall that has microsporidian-type
+    endospore and exospore parts.
+- reference: DOI:10.1111/j.1550-7408.2008.00375.x
+  notes: Wu et al. 2009, SWP25, a novel protein associated with the Nosema bombycis
+    endospore, Journal of Eukaryotic Microbiology.
+- reference: DOI:10.1016/j.ijpara.2005.10.005
+  notes: Peuvel-Fanget et al. 2006, EnP1 and EnP2, two proteins associated with the
+    Encephalitozoon cuniculi endospore, the chitin-rich inner layer of the microsporidian
+    spore wall, International Journal for Parasitology.
+- reference: DOI:10.1128/IAI.01225-09
+  notes: Polonais et al. 2010, The human microsporidian Encephalitozoon hellem synthesizes
+    two spore wall polymorphic proteins useful for epidemiological studies, Infection
+    and Immunity.
+causal_graphs:
+- graph_id: microsporidian_endospore_layering
+  title: Chitin and proteins form the inner spore-wall layer
+  description: Microsporidian spores carry a chitin- and protein-containing endospore
+    between the outer exospore and the plasma membrane. SWP25, EnP1 and EnP2 are examples
+    of proteins assigned to that inner layer.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures mature-spore layer composition and localization
+    rather than the temporal mechanism that assembles the endospore during sporogony.
+  nodes:
+  - node_id: chitin
+    label: chitin
+    node_type: CHEMICAL
+    component_ref: chitin
+    grounding: CHEBI:17029
+  - node_id: endospore_spore_wall_proteins
+    label: microsporidian endospore spore wall proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: endospore_spore_wall_proteins
+  - node_id: microsporidian_type_endospore
+    label: microsporidian-type endospore
+    node_type: STRUCTURE
+    grounding: GO:0090641
+  - node_id: microsporidian_type_exospore
+    label: microsporidian-type exospore
+    node_type: STRUCTURE
+    grounding: GO:0090642
+  - node_id: plasma_membrane
+    label: plasma membrane
+    node_type: STRUCTURE
+    grounding: GO:0005886
+  - node_id: spore_wall
+    label: spore wall
+    node_type: STRUCTURE
+    grounding: GO:0031160
+  edges:
+  - subject: chitin
+    predicate: is part of
+    object: microsporidian_type_endospore
+    description: Chitin is represented as a carbohydrate constituent of the inner
+      endospore layer.
+    evidence:
+    - reference: GO:0090641
+      notes: GO:0090641 defines the endospore as containing chitin and proteins.
+  - subject: endospore_spore_wall_proteins
+    predicate: localize to
+    object: microsporidian_type_endospore
+    description: SWP25, EnP1 and EnP2 are represented as spore-wall proteins localized
+      or assigned to the microsporidian endospore.
+    evidence:
+    - reference: DOI:10.1111/j.1550-7408.2008.00375.x
+      notes: Wu et al. 2009 localized SWP25 to the Nosema bombycis endospore.
+    - reference: DOI:10.1016/j.ijpara.2005.10.005
+      notes: Peuvel-Fanget et al. 2006 assigned EnP1 and EnP2 to the Encephalitozoon
+        cuniculi endospore.
+  - subject: microsporidian_type_endospore
+    predicate: lies under
+    object: microsporidian_type_exospore
+    description: The microsporidian endospore is the middle spore-wall layer beneath
+      the outer exospore.
+    evidence:
+    - reference: GO:0090641
+      notes: GO:0090641 defines the endospore as lying under the exospore.
+  - subject: microsporidian_type_endospore
+    predicate: lies outside
+    object: plasma_membrane
+    description: The microsporidian endospore lies outside the spore plasma membrane.
+    evidence:
+    - reference: GO:0090641
+      notes: GO:0090641 defines the endospore as lying outside the plasma membrane.
+  - subject: microsporidian_type_endospore
+    predicate: is part of
+    object: spore_wall
+    description: The microsporidian endospore is a layer of the spore wall.
+    evidence:
+    - reference: GO:0031160
+      notes: GO:0031160 includes GO:0090641 as a spore-wall part.
+discussions:
+- discussion_id: microsporidian_vs_bacterial_endospore
+  prompt: Keep the microsporidian-type endospore separate from the bacterial endospore
+    external encapsulating structure.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: Microsporidian biology uses endospore for a chitin-rich inner spore-wall
+    layer, whereas GO:0043591 denotes a bacterial external encapsulating structure
+    containing cortex, coat and sometimes exosporium layers.
+  evidence:
+  - reference: GO:0090641
+    notes: The GO:0090641 term comment explicitly distinguishes the microsporidian
+      endospore from bacterial endospore structures.
+  posed_by: codex
+  posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'
