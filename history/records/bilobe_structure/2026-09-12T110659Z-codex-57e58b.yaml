@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/bilobe_structure.yaml
+  slug: bilobe_structure
+session:
+  id: 2026-09-12T110659Z-codex-57e58b
+  timestamp: '2026-09-12T11:06:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/634
+  - https://github.com/CultureBotAI/CellStructureMech/issues/635
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/633
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add bilobe structure record
+  details: Created an evidence-backed GO:0120120 bilobe structure record for the kinetoplastid
+    flagellar hook complex, with label-only MORN-repeat and centrin component cohorts, Trypanosoma
+    brucei taxonomic scope, a flagellar-pocket/FAZ linkage function, record-level literature
+    evidence, and a nonmechanistic graph. Adversarial review narrowed the FPC spatial edge
+    to the hooked TbMORN1-positive bilobe region and removed broad review evidence from the
+    centrin component claim.

@@ -1,0 +1,228 @@
+identifier: GO:0120120
+label: bilobe structure
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A cytoskeletal structure in some kinetoplastid species linking the structures
+  of the ciliary pocket collar and the flagellum attachment zone.
+definition_source: GO:0120120
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T10:53:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T10:54:53Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and cytoskeleton parentage; curated MORN-repeat and centrin
+    bilobe protein cohorts; added T. brucei taxonomic scope, a flagellar-pocket/FAZ
+    linkage function, core literature evidence, a nonmechanistic bilobe positioning
+    graph, and a TODO for exact bilobe protein-family groundings.
+  llm_assisted: true
+- timestamp: '2026-09-12T11:01:24Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #634 by narrowing the ciliary-pocket-collar graph edge to the
+    hooked TbMORN1-positive bilobe region; resolved #635 by removing broad Morriswood
+    2015 review support from the centrin component evidence.'
+  llm_assisted: true
+synonyms:
+- synonym_text: kinetoplastid flagellar hook complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0120120
+parent_structures:
+- GO:0005856
+components:
+- component_id: bilobe_morn_repeat_protein
+  label: bilobe MORN-repeat protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TbMORN1
+  essentiality: UNKNOWN
+  role: A MORN-repeat bilobe protein that marks the hooked flagellar-pocket collar
+    region and one arm of the bilobe hairpin.
+  evidence:
+  - reference: DOI:10.1016/j.molbiopara.2009.05.001
+    notes: Morriswood et al. 2009 identified TbMORN1 as a MORN-repeat protein present
+      at the Trypanosoma brucei bilobe.
+  - reference: DOI:10.1128/EC.05287-11
+    notes: Esson et al. 2012 localized TbMORN1 stably to the bilobe and resolved TbMORN1
+      along the hairpin arm nearest the microtubule quartet plus the hooked region
+      above the flagellar pocket collar.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: MORN-repeat accessions denote the repeat or broad MORN-repeat protein
+    families rather than a complete bilobe-localized TbMORN1-like family. No exact
+    source-neutral CURIE for the bilobe MORN-repeat protein was curated.
+- component_id: bilobe_centrin_proteins
+  label: bilobe centrin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TbCentrin2
+  - TbCentrin4
+  essentiality: UNKNOWN
+  role: Centrin-family proteins that mark the bilobe and help delineate the hairpin
+    arm nearest the flagellum attachment zone filament.
+  evidence:
+  - reference: DOI:10.1128/EC.05287-11
+    notes: Esson et al. 2012 localized TbCentrin2 and TbCentrin4 stably to the bilobe
+      and resolved TbCentrin4 along the bilobe hairpin arm nearest the FAZ filament.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: General centrin family terms are broader than the bilobe-localized
+    TbCentrin2/TbCentrin4 cohort. No exact source-neutral CURIE for the bilobe centrin
+    proteins was curated.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  presence: COMMON
+  note: The bilobe has been resolved cytologically in T. brucei as a hooked and hairpin-shaped
+    cytoskeletal structure near the flagellar pocket collar, microtubule quartet and
+    flagellum attachment zone filament.
+  reference: DOI:10.1128/EC.05287-11
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: Trypanosome model in which TbMORN1, TbCentrin2, TbCentrin4 and TbLRRP1 localized
+    to the bilobe, with TbMORN1 and TbCentrin4 delineating the hooked and hairpin
+    regions around the pocket-collar and FAZ-associated cytoskeleton.
+  reference: DOI:10.1128/EC.05287-11
+functions:
+- function_id: flagellar_pocket_faz_linkage
+  label: flagellar-pocket and FAZ cytoskeletal linkage
+  description: The bilobe is positioned between the flagellar pocket collar and the
+    flagellum attachment zone and is arranged around the microtubule quartet plus
+    FAZ filament.
+  evidence:
+  - reference: GO:0120120
+    notes: GO defines the bilobe as a cytoskeletal structure in some kinetoplastids
+      linking the ciliary pocket collar and flagellum attachment zone.
+  - reference: DOI:10.1128/EC.05287-11
+    notes: Esson et al. 2012 resolved the TbMORN1/TbCentrin4 bilobe hairpin around
+      the microtubule quartet and FAZ filament, and placed the hooked TbMORN1 arm
+      above the BILBO1-marked flagellar pocket collar.
+  - reference: DOI:10.3390/cells4040726
+    notes: Morriswood 2015 reviewed the bilobe as a flagellum-associated cytoskeletal
+      structure of kinetoplastids.
+evidence:
+- reference: DOI:10.1016/j.molbiopara.2009.05.001
+  notes: Morriswood et al. 2009, The bilobe structure of Trypanosoma brucei contains
+    a MORN-repeat protein, Molecular and Biochemical Parasitology.
+- reference: DOI:10.1128/EC.05287-11
+  notes: Esson et al. 2012, Morphology of the trypanosome bilobe, a novel cytoskeletal
+    structure, Eukaryotic Cell.
+- reference: DOI:10.3390/cells4040726
+  notes: Morriswood 2015, Form, Fabric, and Function of a Flagellum-Associated Cytoskeletal
+    Structure, Cells.
+causal_graphs:
+- graph_id: bilobe_pocket_faz_positioning
+  title: Bilobe protein cohorts flank pocket-associated cytoskeleton
+  description: TbMORN1 and bilobe centrins mark the hooked and hairpin regions of
+    the T. brucei bilobe, which sits between the flagellar pocket collar and the flagellum
+    attachment zone-associated microtubule quartet.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: bilobe_morn_repeat_protein
+    label: bilobe MORN-repeat protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: bilobe_morn_repeat_protein
+  - node_id: bilobe_centrin_proteins
+    label: bilobe centrin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: bilobe_centrin_proteins
+  - node_id: bilobe
+    label: bilobe structure
+    node_type: STRUCTURE
+    grounding: GO:0120120
+  - node_id: hooked_bilobe_region
+    label: hooked bilobe region
+    node_type: STRUCTURE
+  - node_id: ciliary_pocket_collar
+    label: ciliary pocket collar
+    node_type: STRUCTURE
+    grounding: GO:1990900
+  - node_id: microtubule_quartet
+    label: microtubule quartet
+    node_type: STRUCTURE
+  - node_id: faz_filament
+    label: FAZ filament
+    node_type: STRUCTURE
+  - node_id: flagellum_attachment_zone
+    label: flagellum attachment zone
+    node_type: STRUCTURE
+    grounding: GO:0120119
+  edges:
+  - subject: bilobe_morn_repeat_protein
+    predicate: localizes to
+    object: bilobe
+    description: TbMORN1 is present at the bilobe and marks the hooked collar region
+      plus the microtubule-quartet side of the hairpin.
+    evidence:
+    - reference: DOI:10.1016/j.molbiopara.2009.05.001
+      notes: Morriswood et al. 2009 identified TbMORN1 at the bilobe rather than the
+        basal bodies.
+    - reference: DOI:10.1128/EC.05287-11
+      notes: Esson et al. 2012 mapped TbMORN1 onto the hooked region and one arm of
+        the bilobe hairpin.
+  - subject: bilobe_centrin_proteins
+    predicate: localize to
+    object: bilobe
+    description: TbCentrin2 and TbCentrin4 are stable bilobe-localized proteins, with
+      TbCentrin4 marking the FAZ-filament side of the bilobe hairpin.
+    evidence:
+    - reference: DOI:10.1128/EC.05287-11
+      notes: Esson et al. 2012 localized TbCentrin2 and TbCentrin4 stably to the T.
+        brucei bilobe.
+  - subject: hooked_bilobe_region
+    predicate: sits above
+    object: ciliary_pocket_collar
+    description: The hooked TbMORN1-positive bilobe region is positioned above the
+      BILBO1-marked flagellar pocket collar.
+    evidence:
+    - reference: DOI:10.1128/EC.05287-11
+      notes: Esson et al. 2012 localized the hooked TbMORN1 region above the BILBO1-marked
+        FPC.
+  - subject: bilobe
+    predicate: flanks
+    object: microtubule_quartet
+    description: The two arms of the TbMORN1/TbCentrin4 bilobe hairpin flank the microtubule
+      quartet.
+    evidence:
+    - reference: DOI:10.1128/EC.05287-11
+      notes: Esson et al. 2012 placed the TbMORN1 and TbCentrin4 hairpin arms on either
+        side of the microtubule quartet.
+  - subject: bilobe
+    predicate: aligns with
+    object: faz_filament
+    description: One arm of the bilobe hairpin is adjacent to the FAZ filament at
+      the flagellum-attachment-zone side of the structure.
+    evidence:
+    - reference: DOI:10.1128/EC.05287-11
+      notes: Esson et al. 2012 resolved the TbCentrin4-positive hairpin arm alongside
+        the FAZ filament.
+  - subject: bilobe
+    predicate: links
+    object: flagellum_attachment_zone
+    description: GO classifies the bilobe as a kinetoplastid cytoskeletal structure
+      linking the ciliary pocket collar and flagellum attachment zone.
+    evidence:
+    - reference: GO:0120120
+      notes: The GO:0120120 definition states the collar-to-FAZ linkage role used
+        for this nonmechanistic edge.
+discussions:
+- discussion_id: ground_remaining_bilobe_components
+  prompt: Resolve exact source-neutral families for the bilobe-localized TbLRRP1 and
+    broader MORN-repeat/centrin protein cohorts before expanding this record to additional
+    hook-complex components.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: TbMORN1, TbLRRP1, TbCentrin2 and TbCentrin4 localize stably to the bilobe
+    in T. brucei, but this first record only curates the MORN-repeat and centrin cohorts
+    for which the verified evidence supports a morphological role.
+  evidence:
+  - reference: DOI:10.1128/EC.05287-11
+  - reference: DOI:10.3390/cells4040726
+  posed_by: codex
+  posed_date: '2026-09-12'
