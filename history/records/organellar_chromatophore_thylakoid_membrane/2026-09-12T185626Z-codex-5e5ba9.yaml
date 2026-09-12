@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/organellar_chromatophore_thylakoid_membrane.yaml
+  slug: organellar_chromatophore_thylakoid_membrane
+session:
+  id: 2026-09-12T185626Z-codex-5e5ba9
+  timestamp: '2026-09-12T18:56:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/692
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/691
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-grounded organellar chromatophore thylakoid membrane record
+  details: 'Created GO:0070118 organellar chromatophore thylakoid membrane with GO and UniProt
+    SL-0356 provenance, thylakoid membrane and plastid thylakoid membrane parentage, organellar
+    chromatophore thylakoid parthood, a reviewed-label-only lipid bilayer component, Paulinella
+    taxonomic scope, a light-reaction function, and a nonmechanistic lumen-boundary and photosynthesis
+    graph. Review issue #692 added GO:0055035 plastid thylakoid membrane parentage.'
