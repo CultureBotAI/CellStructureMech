@@ -1,0 +1,264 @@
+identifier: GO:0036000
+label: mucocyst
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A small subcellular vesicle, surrounded by a membrane, in the pellicle
+  of ciliate protozoans that discharges a mucus-like secretion.
+definition_source: GO:0036000
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T04:24:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T04:25:53Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added secretory-granule parentage, mucocyst membrane, Grl, Grt and MDD
+    components, Tetrahymena thermophila taxonomic scope and canonical example, regulated-exocytosis
+    function, a mucocyst docking/discharge graph, and reviewed-label-only component
+    grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-12T04:30:37Z'
+  curator: codex
+  action: FIXED_DISCUSSION_ANCHOR
+  changes: Retargeted the mucocyst maturation-factor boundary discussion from a section-level
+    components anchor to the MDD complex component.
+  llm_assisted: true
+parent_structures:
+- GO:0030141
+components:
+- component_id: mucocyst_membrane
+  label: mucocyst membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO has an exact mucocyst term and a broader secretory-granule membrane
+    term, but no exact mucocyst-membrane cellular-component term was available in
+    this curation pass.
+  role: Membrane that bounds the Tetrahymena mucocyst and encloses its regulated secretory
+    cargo.
+  evidence:
+  - reference: DOI:10.1534/g3.116.028878
+    notes: Kontur et al. 2016 describe Tetrahymena mucocysts as secretory granules
+      that undergo a maturation process.
+  - reference: DOI:10.1371/journal.pgen.1010194
+    notes: Kuppannan et al. 2022 analyze Tetrahymena mucocysts as lysosome-related
+      organelles that dock at the cell periphery and undergo regulated exocytosis.
+- component_id: granule_lattice_proteins
+  label: granule lattice proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - GRL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Tetrahymena Grl proteins are a mucocyst cargo family, but no exact
+    source-neutral InterPro, Pfam or NCBIfam accession for the whole granule-lattice
+    protein family was curated.
+  role: Major dense-core cargo proteins that coassemble into the crystalline lattice
+    of the mucocyst lumen.
+  evidence:
+  - reference: DOI:10.1128/EC.00151-09
+    notes: Rahaman et al. 2009 distinguish Grl proteins as Tetrahymena dense-core
+      granule proteins that coassemble into the lumenal crystalline lattice.
+  - reference: DOI:10.1534/g3.116.028878
+    notes: Kontur et al. 2016 connect mucocyst maturation defects to altered processing
+      of granule cargo proteins.
+- component_id: granule_tip_proteins
+  label: granule tip proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - GRT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Tetrahymena Grt proteins are mucocyst tip cargo proteins with a
+    beta/gamma-crystallin domain, but no exact source-neutral CURIE for this protein
+    cohort was curated.
+  role: Dense-core granule cargo proteins that occupy a mucocyst tip domain and are
+    transported independently from Grl lattice cargo.
+  evidence:
+  - reference: DOI:10.1128/EC.00151-09
+    notes: Rahaman et al. 2009 analyze Tetrahymena Grt1p and Grt2p as dense-core granule
+      proteins distinct from the Grl lattice-protein cargo class.
+- component_id: mucocyst_docking_discharge_complex
+  label: MDD mucocyst docking and discharge complex
+  component_type: PROTEIN_COMPLEX
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: UNKNOWN
+  gene_symbols:
+  - MDL1
+  - MDD
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Tetrahymena MDD complex was resolved as a mucocyst-associated
+    membrane complex, but no exact Complex Portal or protein-family CURIE for the
+    whole complex was curated.
+  role: Mucocyst-associated membrane complex that localizes to the organelle tip and
+    is required for efficient docking and regulated exocytosis.
+  evidence:
+  - reference: DOI:10.1371/journal.pgen.1010194
+    notes: Kuppannan et al. 2022 identify Mdl1p and associated MDD proteins as a Tetrahymena
+      mucocyst membrane complex needed for organelle docking and regulated exocytosis.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  presence: COMMON
+  note: Mucocysts are dense-core regulated secretory organelles characterized in Tetrahymena
+    thermophila.
+  reference: DOI:10.1534/g3.116.028878
+canonical_examples:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  note: Ciliate model in which mucocyst dense-core cargo sorting, maturation and docking
+    have been studied genetically and cell biologically.
+  reference: DOI:10.1534/g3.116.028878
+functions:
+- function_id: regulated_mucocyst_exocytosis
+  label: regulated mucocyst exocytosis
+  description: Docked mucocysts release dense-core cargo from the Tetrahymena cell
+    surface in response to extracellular stimulation.
+  evidence:
+  - reference: DOI:10.1371/journal.pgen.1010194
+    notes: Kuppannan et al. 2022 link the MDD complex to docking and regulated exocytosis
+      of Tetrahymena mucocysts.
+  - reference: DOI:10.1128/EC.00151-09
+    notes: Rahaman et al. 2009 describe Grl lattice expansion as a propulsive mechanism
+      during dense-core granule release.
+evidence:
+- reference: GO:0036000
+  notes: Gene Ontology cellular-component term for mucocyst.
+- reference: DOI:10.1534/g3.116.028878
+  notes: Kontur et al. 2016, Whole Genome Sequencing Identifies a Novel Factor Required
+    for Secretory Granule Maturation in Tetrahymena thermophila, G3 Genes|Genomes|Genetics.
+- reference: DOI:10.1128/EC.00151-09
+  notes: Rahaman et al. 2009, Independent Transport and Sorting of Functionally Distinct
+    Protein Families in Tetrahymena thermophila Dense Core Secretory Granules, Eukaryotic
+    Cell.
+- reference: DOI:10.1371/journal.pgen.1010194
+  notes: Kuppannan et al. 2022, A novel membrane complex is required for docking and
+    regulated exocytosis of lysosome-related organelles in Tetrahymena thermophila,
+    PLOS Genetics.
+causal_graphs:
+- graph_id: mucocyst_docking_and_exocytosis
+  title: Mucocyst core proteins mature before docking and discharge
+  description: A membrane-bounded Tetrahymena mucocyst stores Grl lattice and Grt
+    tip proteins as dense-core cargo; the MDD membrane complex localizes to the mucocyst
+    tip and supports docking and regulated exocytosis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: mucocyst_membrane
+    label: mucocyst membrane
+    node_type: STRUCTURE
+    component_ref: mucocyst_membrane
+  - node_id: mucocyst_lumen
+    label: mucocyst lumen
+    node_type: STRUCTURE
+  - node_id: mucocyst
+    label: mucocyst
+    node_type: ORGANELLE
+    grounding: GO:0036000
+  - node_id: granule_lattice_proteins
+    label: granule lattice proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: granule_lattice_proteins
+  - node_id: granule_tip_proteins
+    label: granule tip proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: granule_tip_proteins
+  - node_id: mucocyst_docking_discharge_complex
+    label: MDD mucocyst docking and discharge complex
+    node_type: GENE_OR_PROTEIN
+    component_ref: mucocyst_docking_discharge_complex
+  - node_id: regulated_exocytosis
+    label: regulated exocytosis
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: mucocyst_membrane
+    predicate: bounds
+    object: mucocyst
+    description: The mucocyst membrane encloses the secretory organelle.
+    evidence:
+    - reference: GO:0036000
+      notes: The GO mucocyst definition describes the structure as a membrane-surrounded
+        vesicle.
+  - subject: mucocyst_lumen
+    predicate: is part of
+    object: mucocyst
+    description: The mucocyst lumen contains dense-core cargo before stimulus-triggered
+      secretion.
+    evidence:
+    - reference: DOI:10.1128/EC.00151-09
+      notes: Rahaman et al. 2009 describe the crystalline Grl lattice inside Tetrahymena
+        dense-core granules.
+  - subject: granule_lattice_proteins
+    predicate: coassemble into
+    object: mucocyst_lumen
+    description: Grl proteins coassemble as a crystalline lattice within the mucocyst
+      lumen.
+    evidence:
+    - reference: DOI:10.1128/EC.00151-09
+      notes: Rahaman et al. 2009 distinguish the Grl class as cargo that coassembles
+        into a crystalline dense-core granule lattice.
+  - subject: granule_tip_proteins
+    predicate: sort independently to
+    object: mucocyst
+    description: Grt proteins are transported to dense-core granules independently
+      of the Grl lattice-protein cargo class.
+    evidence:
+    - reference: DOI:10.1128/EC.00151-09
+      notes: Rahaman et al. 2009 show that Grt and Grl proteins are likely to be independently
+        transported during Tetrahymena dense-core granule biosynthesis.
+  - subject: mucocyst_docking_discharge_complex
+    predicate: localizes to tip of
+    object: mucocyst
+    description: The MDD complex localizes to the tip of the mucocyst before docking
+      at the plasma membrane.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1010194
+      notes: Kuppannan et al. 2022 found that Mdl1p and other putative MDD complex
+        members localize to Tetrahymena mucocysts.
+  - subject: mucocyst_docking_discharge_complex
+    predicate: supports
+    object: regulated_exocytosis
+    description: The mucocyst-associated MDD complex is required for efficient docking
+      and regulated exocytosis.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1010194
+      notes: Kuppannan et al. 2022 connect Mdl1p and MDD complex members to mucocyst
+        docking and discharge.
+discussions:
+- discussion_id: ground_mucocyst_components
+  prompt: Resolve exact source-neutral family or complex groundings for the mucocyst
+    membrane, Grl proteins, Grt proteins and MDD complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mucocyst_membrane
+  - components#granule_lattice_proteins
+  - components#granule_tip_proteins
+  - components#mucocyst_docking_discharge_complex
+  rationale: The first mucocyst record curates the membrane, major dense-core cargo
+    cohorts and the docking/discharge complex from Tetrahymena studies, but exact
+    cross-taxon CURIEs for those local component classes were not curated.
+  posed_by: codex
+  posed_date: '2026-09-12'
+- discussion_id: maturation_factors_not_mature_mucocyst_components
+  prompt: Tetrahymena maturation factors such as Mma1p, AP-3 and endosomal syntaxin
+    were not modeled as mature mucocyst components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#mucocyst_docking_discharge_complex
+  rationale: Mma1p and membrane-trafficking factors can be required for mucocyst biogenesis,
+    but the first record only models cargo or machinery associated with mature docked
+    or discharge-competent mucocysts. Proteins that act upstream in sorting or maturation
+    should be added only if evidence places them in the mature organelle or at the
+    assembled organelle boundary.
+  evidence:
+  - reference: DOI:10.1534/g3.116.028878
+  posed_by: codex
+  posed_date: '2026-09-12'
