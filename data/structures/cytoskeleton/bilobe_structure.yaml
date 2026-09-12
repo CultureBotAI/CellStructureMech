@@ -20,6 +20,13 @@ curation_history:
     linkage function, core literature evidence, a nonmechanistic bilobe positioning
     graph, and a TODO for exact bilobe protein-family groundings.
   llm_assisted: true
+- timestamp: '2026-09-12T11:01:24Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #634 by narrowing the ciliary-pocket-collar graph edge to the
+    hooked TbMORN1-positive bilobe region; resolved #635 by removing broad Morriswood
+    2015 review support from the centrin component evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: kinetoplastid flagellar hook complex
   synonym_type: EXACT_SYNONYM
@@ -62,9 +69,6 @@ components:
   - reference: DOI:10.1128/EC.05287-11
     notes: Esson et al. 2012 localized TbCentrin2 and TbCentrin4 stably to the bilobe
       and resolved TbCentrin4 along the bilobe hairpin arm nearest the FAZ filament.
-  - reference: DOI:10.3390/cells4040726
-    notes: Morriswood 2015 reviewed the bilobe as a flagellum-associated cytoskeletal
-      structure marked by MORN1, centrin and other localized proteins.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: General centrin family terms are broader than the bilobe-localized
     TbCentrin2/TbCentrin4 cohort. No exact source-neutral CURIE for the bilobe centrin
@@ -132,6 +136,9 @@ causal_graphs:
     label: bilobe structure
     node_type: STRUCTURE
     grounding: GO:0120120
+  - node_id: hooked_bilobe_region
+    label: hooked bilobe region
+    node_type: STRUCTURE
   - node_id: ciliary_pocket_collar
     label: ciliary pocket collar
     node_type: STRUCTURE
@@ -168,11 +175,11 @@ causal_graphs:
     - reference: DOI:10.1128/EC.05287-11
       notes: Esson et al. 2012 localized TbCentrin2 and TbCentrin4 stably to the T.
         brucei bilobe.
-  - subject: bilobe
+  - subject: hooked_bilobe_region
     predicate: sits above
     object: ciliary_pocket_collar
-    description: The hooked TbMORN1-positive region of the bilobe is positioned above
-      the BILBO1-marked flagellar pocket collar.
+    description: The hooked TbMORN1-positive bilobe region is positioned above the
+      BILBO1-marked flagellar pocket collar.
     evidence:
     - reference: DOI:10.1128/EC.05287-11
       notes: Esson et al. 2012 localized the hooked TbMORN1 region above the BILBO1-marked
