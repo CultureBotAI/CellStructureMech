@@ -1,0 +1,236 @@
+identifier: GO:0005768
+label: endosome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A vacuole to which materials ingested by endocytosis are delivered.
+definition_source: GO:0005768
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T00:30:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T00:31:18Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added endosome membrane and lumen parthood, an endosome membrane component,
+    Saccharomyces distribution and example curation, endosomal transport and multivesicular-body
+    sorting functions, GO/DOI evidence, a yeast ESCRT MVB sorting graph and an ESCRT
+    machinery boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-12T00:37:55Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #554 by narrowing the Vps27 graph node, resolved #556 by retargeting
+    endosomal invagination to an intraluminal-vesicle node, and resolved #555 by keeping
+    transient ESCRT sorting machinery out of future endosome component wording.'
+  llm_assisted: true
+has_part:
+- GO:0010008
+- GO:0031904
+components:
+- component_id: endosome_membrane
+  label: endosome membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0010008
+  essentiality: ESSENTIAL
+  role: Lipid bilayer that encloses the endosome lumen and carries sorting machinery
+    and membrane cargo.
+  evidence:
+  - reference: GO:0010008
+    notes: GO:0010008 defines the endosome membrane as the lipid bilayer surrounding
+      an endosome.
+  - reference: DOI:10.1083/jcb.200302136
+    notes: Katzmann et al. 2003 localized yeast Vps27 and ESCRT-I recruitment to endosomal
+      membranes during MVB sorting.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses endosomes for endocytic and vacuolar protein sorting, including
+    ESCRT-dependent multivesicular-body traffic.
+  reference: DOI:10.1016/S0092-8674(01)00434-2
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Genetic model in which Vps27 and ESCRT-I, ESCRT-II and ESCRT-III were tied
+    to endosomal multivesicular-body cargo sorting.
+  reference: DOI:10.1083/jcb.200302136
+functions:
+- function_id: endosomal_transport
+  label: endosomal transport
+  description: Endosomes move internalized and biosynthetic membrane cargo through
+    the yeast endomembrane system toward the vacuole.
+  grounding: GO:0016197
+  evidence:
+  - reference: GO:0016197
+    notes: GO:0016197 defines endosomal transport as directed movement of lumenal
+      or membrane substances mediated by an endosome.
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: Henne, Buchkovich and Emr 2011 reviewed the ESCRT pathway as a conserved
+      route for endosomal cargo sorting.
+- function_id: multivesicular_body_sorting
+  label: multivesicular body sorting
+  description: Endosomal sorting machinery recognizes ubiquitinated membrane cargo
+    and packages it into intraluminal vesicles of multivesicular bodies.
+  evidence:
+  - reference: DOI:10.1016/S0092-8674(01)00434-2
+    notes: Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved endosomal
+      protein-sorting complex needed for yeast MVB sorting.
+  - reference: DOI:10.1016/S1534-5807(02)00219-8
+    notes: Babst et al. 2002 identified ESCRT-II as an endosome-associated complex
+      that recruits MVB protein-sorting machinery.
+evidence:
+- reference: GO:0005768
+  notes: Gene Ontology cellular-component term for endosome.
+- reference: GO:0010008
+  notes: Gene Ontology cellular-component term for the endosome membrane.
+- reference: GO:0031904
+  notes: Gene Ontology cellular-component term for the endosome lumen.
+- reference: GO:0005771
+  notes: Gene Ontology cellular-component term for the multivesicular body.
+- reference: GO:0016197
+  notes: Gene Ontology biological-process term for endosomal transport.
+- reference: DOI:10.1016/j.devcel.2011.05.015
+  notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+- reference: DOI:10.1016/S0092-8674(01)00434-2
+  notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
+    Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
+    ESCRT-I, Cell.
+- reference: DOI:10.1083/jcb.200302136
+  notes: Katzmann, Stefan, Babst and Emr 2003, Vps27 recruits ESCRT machinery to endosomes
+    during MVB sorting, Journal of Cell Biology.
+- reference: DOI:10.1016/S1534-5807(02)00219-8
+  notes: Babst, Katzmann, Snyder, Wendland and Emr 2002, Endosome-Associated Complex,
+    ESCRT-II, Recruits Transport Machinery for Protein Sorting at the Multivesicular
+    Body, Developmental Cell.
+- reference: DOI:10.1016/S1534-5807(02)00220-4
+  notes: Babst et al. 2002, ESCRT-III, Developmental Cell.
+causal_graphs:
+- graph_id: yeast_escrt_mvb_sorting
+  title: ESCRT machinery sorts endosomal cargo into multivesicular bodies
+  description: In Saccharomyces cerevisiae, Vps27 and ESCRT complexes are recruited
+    to endosomal membranes to sort ubiquitinated membrane cargo and package it into
+    multivesicular-body intraluminal vesicles.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph summarizes the ordered endosomal ESCRT sorting pathway without
+    asserting a complete cargo-recognition, deubiquitination, or Vps4 recycling mechanism.
+  nodes:
+  - node_id: endosome_membrane
+    label: endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0010008
+    component_ref: endosome_membrane
+  - node_id: endosome_lumen
+    label: endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031904
+  - node_id: intraluminal_vesicle
+    label: multivesicular-body intraluminal vesicle
+    node_type: STRUCTURE
+  - node_id: vps27_endosomal_recruiter
+    label: Vps27 endosomal ESCRT-I recruiter
+    node_type: GENE_OR_PROTEIN
+  - node_id: escrt_i
+    label: ESCRT I complex
+    node_type: STRUCTURE
+    grounding: GO:0000813
+  - node_id: escrt_ii
+    label: ESCRT II complex
+    node_type: STRUCTURE
+    grounding: GO:0000814
+  - node_id: escrt_iii
+    label: ESCRT III complex
+    node_type: STRUCTURE
+    grounding: GO:0000815
+  - node_id: ubiquitinated_membrane_cargo
+    label: ubiquitinated membrane cargo
+    node_type: STATE
+  - node_id: multivesicular_body
+    label: multivesicular body
+    node_type: ORGANELLE
+    grounding: GO:0005771
+  edges:
+  - subject: endosome_membrane
+    predicate: bounds
+    object: endosome_lumen
+    description: The endosome membrane encloses the endosome lumen.
+    evidence:
+    - reference: GO:0031904
+      notes: GO:0031904 defines the endosome lumen as the volume enclosed by the membrane
+        of an endosome.
+  - subject: vps27_endosomal_recruiter
+    predicate: recruits
+    object: escrt_i
+    description: Vps27 binds ESCRT-I on endosomal membranes during yeast MVB sorting.
+    evidence:
+    - reference: DOI:10.1083/jcb.200302136
+      notes: Katzmann et al. 2003 found that yeast Vps27 recruits ESCRT-I to endosomal
+        membranes.
+  - subject: escrt_i
+    predicate: sorts
+    object: ubiquitinated_membrane_cargo
+    description: ESCRT-I participates in sorting ubiquitinated membrane cargo into
+      the yeast MVB pathway.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(01)00434-2
+      notes: Katzmann, Babst and Emr 2001 showed ESCRT-I is needed for ubiquitin-dependent
+        MVB cargo sorting.
+  - subject: escrt_ii
+    predicate: recruits
+    object: escrt_iii
+    description: ESCRT-II recruits downstream ESCRT machinery needed for MVB cargo
+      sorting.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00219-8
+      notes: Babst et al. 2002 identified ESCRT-II as an endosome-associated complex
+        upstream of ESCRT-III.
+  - subject: escrt_iii
+    predicate: remodels
+    object: endosome_membrane
+    description: ESCRT-III acts on endosomal membranes during intraluminal vesicle
+      formation.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00220-4
+      notes: Babst et al. 2002 characterized yeast ESCRT-III as an endosome-associated
+        hetero-oligomeric protein complex required for MVB sorting.
+  - subject: endosome_membrane
+    predicate: forms
+    object: intraluminal_vesicle
+    description: In a multivesicular body, regions of the endosomal limiting membrane
+      invaginate and pinch into the lumen as intraluminal vesicles.
+    evidence:
+    - reference: GO:0005771
+      notes: GO:0005771 defines multivesicular bodies as endosomes with internal vesicles
+        formed by invagination of the limiting endosomal membrane.
+  - subject: intraluminal_vesicle
+    predicate: is contained in
+    object: multivesicular_body
+    description: Multivesicular bodies contain intraluminal vesicles generated from
+      the limiting endosomal membrane.
+    evidence:
+    - reference: GO:0005771
+      notes: GO:0005771 defines multivesicular bodies as endosomes with internal vesicles
+        formed by limiting-membrane invagination.
+discussions:
+- discussion_id: resolve_endosome_escrt_boundaries
+  prompt: Resolve exact source-neutral groundings and separate record boundaries for
+    Vps27 cargo-recognition machinery, ESCRT-I, ESCRT-II, ESCRT-III, Doa4 and Vps4
+    before adding a more detailed MVB-sorting machinery model.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#yeast_escrt_mvb_sorting
+  rationale: This first endosome record grounds the membrane boundary and uses GO-grounded
+    ESCRT complexes as graph nodes, but keeps transient cargo-recognition, deubiquitination
+    and recycling machinery out of the endosome component table until exact complex
+    boundaries or dedicated subcomplex records are reviewed.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+  - reference: DOI:10.1083/jcb.200302136
+  - reference: DOI:10.1016/S1534-5807(02)00219-8
+  posed_by: codex
+  posed_date: '2026-09-12'

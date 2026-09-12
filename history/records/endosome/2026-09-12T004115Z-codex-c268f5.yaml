@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endosome.yaml
+  slug: endosome
+session:
+  id: 2026-09-12T004115Z-codex-c268f5
+  timestamp: '2026-09-12T00:41:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/554
+  - https://github.com/CultureBotAI/CellStructureMech/issues/555
+  - https://github.com/CultureBotAI/CellStructureMech/issues/556
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/553
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the endosome structure record
+  details: Added an evidence-backed GO:0005768 endosome record with endosome membrane and
+    lumen parthood, a grounded endosome membrane component, Saccharomyces cerevisiae distribution
+    and canonical-example curation, endosomal transport and multivesicular-body sorting functions,
+    and a nonmechanistic yeast ESCRT MVB-sorting graph. Addressed PR review by narrowing the
+    Vps27 recruitment node, retargeting limiting-membrane invagination to intraluminal vesicles,
+    and keeping transient ESCRT sorting machinery out of future endosome-component wording.
