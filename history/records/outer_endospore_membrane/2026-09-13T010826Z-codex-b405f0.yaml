@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/outer_endospore_membrane.yaml
+  slug: outer_endospore_membrane
+session:
+  id: 2026-09-13T010826Z-codex-b405f0
+  timestamp: '2026-09-13T01:08:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/728
+  - https://github.com/CultureBotAI/CellStructureMech/issues/729
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/727
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add outer endospore membrane record
+  details: Added the GO:0043594 outer endospore membrane record with UniProt SL-0365 grounding,
+    exact spore outer membrane and cortex membrane synonyms, endospore external-structure
+    parthood, a reviewed mature-spore lipid-bilayer component, Bacillota distribution, a Bacillus
+    subtilis example, GO/UniProt/literature evidence, a nonmechanistic topology graph, and
+    review fixes for forespore-boundary evidence plus binary graph topology.
