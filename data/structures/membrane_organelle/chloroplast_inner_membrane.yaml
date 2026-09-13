@@ -20,6 +20,12 @@ curation_history:
     component, Viridiplantae and Chlamydomonas scope, a nonmechanistic topology graph,
     and a lipid-bilayer grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-13T03:22:19Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #744 by removing overbroad SL-0051 evidence from the chloroplast
+    envelope parthood edge.'
+  llm_assisted: true
 synonyms:
 - synonym_text: chloroplastic inner membrane
   synonym_type: EXACT_SYNONYM
@@ -131,9 +137,6 @@ causal_graphs:
     - reference: GO:0009706
       notes: GO:0009706 defines this inner membrane as a lipid bilayer of the chloroplast
         envelope.
-    - reference: uniprot.location:SL-0051
-      notes: UniProt SL-0051 places the chloroplast inner membrane under chloroplast
-        membrane.
   - subject: chloroplast_inner_membrane
     predicate: bounds
     object: chloroplast_stroma
