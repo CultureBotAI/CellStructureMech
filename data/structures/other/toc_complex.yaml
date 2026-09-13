@@ -1,0 +1,146 @@
+identifier: GO:0010006
+label: Toc complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A chloroplast outer-envelope protein translocon complex that forms the
+  outer-membrane step of nuclear-encoded preprotein import into the chloroplast.
+definition_source: GO:0010006
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T03:58:02Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T03:58:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added TOC synonymy, protein-complex parentage, chloroplast outer-membrane
+    parthood, Chlamydomonas scope, stromal protein-import function, GO and Jin 2022
+    evidence, a nonmechanistic Toc/Tic import graph, and a Toc-subunit boundary TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: TOC complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.cell.2022.10.030
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0009707
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas reinhardtii has a Toc complex in the chloroplast outer envelope
+    that couples with the inner envelope Tic complex in a resolved TOC-TIC import
+    supercomplex.
+  reference: DOI:10.1016/j.cell.2022.10.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model in which a chloroplast TOC-TIC supercomplex spanning both
+    envelope membranes was resolved structurally.
+  reference: DOI:10.1016/j.cell.2022.10.030
+functions:
+- function_id: protein_import_into_chloroplast_stroma
+  label: protein import into chloroplast stroma
+  grounding: GO:0045037
+  description: The Toc complex contributes the outer-envelope step of nuclear-encoded
+    preprotein import toward the chloroplast stroma.
+  evidence:
+  - reference: GO:0045037
+    notes: GO:0045037 defines protein import into the chloroplast stroma.
+  - reference: DOI:10.1016/j.cell.2022.10.030
+    notes: Jin et al. 2022 resolved the Toc portion of a Chlamydomonas TOC-TIC supercomplex
+      spanning the chloroplast envelope.
+evidence:
+- reference: GO:0010006
+  notes: Gene Ontology cellular-component term for the Toc complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component term for a protein-containing complex.
+- reference: GO:0009707
+  notes: Gene Ontology cellular-component term for the chloroplast outer membrane
+    that carries the Toc complex.
+- reference: GO:0009941
+  notes: Gene Ontology cellular-component term for the chloroplast envelope containing
+    the Toc-bearing outer membrane.
+- reference: GO:0031897
+  notes: Gene Ontology cellular-component term for the Tic complex, the inner-envelope
+    partner of Toc in stromal preprotein import.
+- reference: GO:0045037
+  notes: Gene Ontology biological-process term for protein import into the chloroplast
+    stroma.
+- reference: DOI:10.1016/j.cell.2022.10.030
+  notes: Jin et al. 2022, Structure of a TOC-TIC supercomplex spanning two chloroplast
+    envelope membranes, Cell.
+causal_graphs:
+- graph_id: chlamydomonas_toc_outer_import
+  title: Toc contributes the outer-envelope import step
+  description: In Chlamydomonas, the Toc complex resides in the chloroplast outer
+    membrane and couples with the inner-envelope Tic complex during stromal preprotein
+    import.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph states Toc topology and its observed coupling to Tic without
+    resolving the taxon-variable subunit composition of the chloroplast import apparatus.
+  nodes:
+  - node_id: toc_complex
+    label: Toc complex
+    node_type: STRUCTURE
+    grounding: GO:0010006
+  - node_id: chloroplast_outer_membrane
+    label: chloroplast outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009707
+  - node_id: tic_complex
+    label: Tic complex
+    node_type: STRUCTURE
+    grounding: GO:0031897
+  - node_id: protein_import_into_chloroplast_stroma
+    label: protein import into chloroplast stroma
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0045037
+  edges:
+  - subject: toc_complex
+    predicate: is part of
+    object: chloroplast_outer_membrane
+    description: Toc is the protein translocon complex of the chloroplast outer membrane.
+    evidence:
+    - reference: GO:0010006
+      notes: GO:0010006 defines the Toc complex as a protein translocon at the chloroplast
+        outer membrane.
+  - subject: toc_complex
+    predicate: couples with
+    object: tic_complex
+    description: Toc and Tic form the outer and inner envelope portions of a Chlamydomonas
+      TOC-TIC import supercomplex.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2022.10.030
+      notes: Jin et al. 2022 resolved a Chlamydomonas TOC-TIC supercomplex spanning
+        the two chloroplast envelope membranes.
+  - subject: toc_complex
+    predicate: routes precursors toward
+    object: protein_import_into_chloroplast_stroma
+    description: Toc contributes the outer-membrane step for chloroplast stromal preprotein
+      import.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2022.10.030
+      notes: Jin et al. 2022 resolved an outer-envelope Toc portion in a chloroplast
+        protein-import supercomplex.
+discussions:
+- discussion_id: toc_subunit_boundaries
+  prompt: Resolve exact source-neutral component groundings for Toc75-channel, Toc159/Toc120-receptor,
+    and Toc34-like receptor subfamilies without merging plant and green-algal import
+    assemblies whose subunit compositions differ.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#chlamydomonas_toc_outer_import
+  rationale: GO exactly grounds the Toc complex itself, but this record does not assert
+    component-family CURIEs for Toc subunits until their cross-taxon boundaries are
+    curated.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2022.10.030
+    notes: Jin et al. 2022 resolved a divergent Chlamydomonas TOC-TIC import supercomplex.
+  posed_by: codex
+  posed_date: '2026-09-13'
