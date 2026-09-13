@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitosome_envelope.yaml
+  slug: mitosome_envelope
+session:
+  id: 2026-09-13T195033Z-codex-b4d5be
+  timestamp: '2026-09-13T19:50:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/830
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/829
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - mereology
+  - components
+  - causal_graphs
+  - discussions
+  summary: Ground the mitosome envelope outer membrane child
+  details: 'Resolved review issue #830 from PR #829 by recording the mitosome_envelope update
+    that replaced the reviewed-label-only mitosome outer membrane component with cellstructuremech:mitosome_outer_membrane,
+    grounded the envelope topology node to that exact record, added the new child to has_part,
+    and narrowed the open child-record TODO to only the mitosome intermembrane space.'
