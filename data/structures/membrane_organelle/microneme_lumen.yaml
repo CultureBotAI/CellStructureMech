@@ -1,0 +1,135 @@
+identifier: GO:0034494
+label: microneme lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the microneme membrane.
+definition_source: GO:0034494
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T13:12:04Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T13:12:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added organelle-lumen parentage, microneme parthood, Apicomplexa and Toxoplasma
+    gondii scope, a cargo-storage function, GO/DOI/PMID evidence, a nonmechanistic
+    microneme-lumen topology graph, and a resolved boundary interpretation.
+  llm_assisted: true
+parent_structures:
+- GO:0043233
+part_of:
+- GO:0020009
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: COMMON
+  note: Microneme lumina are the internal secretory compartments of apicomplexan micronemes,
+    which store adhesins before regulated microneme discharge during motility and
+    invasion.
+  reference: DOI:10.1007/978-0-387-78267-6_2
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model whose microneme lumen stores adhesin cargo that is released
+    during regulated microneme exocytosis.
+  reference: PMID:9208224
+functions:
+- function_id: microneme_secretory_cargo_storage
+  label: microneme secretory cargo storage
+  description: The microneme lumen stores adhesin cargo before regulated microneme
+    exocytosis.
+  evidence:
+  - reference: DOI:10.1007/978-0-387-78267-6_2
+    notes: Carruthers and Tomley 2008 review apicomplexan microneme adhesins and their
+      roles in motility and invasion.
+  - reference: PMID:9208224
+    notes: Carruthers and Sibley 1997 showed that microneme secretion accompanies
+      the first phase of Toxoplasma host-cell invasion.
+evidence:
+- reference: GO:0034494
+  notes: Gene Ontology cellular-component term for the microneme lumen.
+- reference: GO:0043233
+  notes: Gene Ontology cellular-component term for organelle lumen, the broader class
+    of organelle-enclosed compartments.
+- reference: GO:0033163
+  notes: Gene Ontology cellular-component term for the microneme membrane that encloses
+    the microneme lumen.
+- reference: GO:0020009
+  notes: Gene Ontology cellular-component term for the microneme, the organelle that
+    contains this lumen.
+- reference: DOI:10.1111/cmi.13018
+  notes: Dubois and Soldati-Favre 2019, Biogenesis and secretion of micronemes in
+    Toxoplasma gondii, Cellular Microbiology.
+- reference: DOI:10.1007/978-0-387-78267-6_2
+  notes: Carruthers and Tomley 2008, Microneme proteins in apicomplexans, Subcellular
+    Biochemistry.
+- reference: PMID:9208224
+  notes: Carruthers and Sibley 1997, Sequential protein secretion from three distinct
+    organelles of Toxoplasma gondii accompanies invasion of human fibroblasts, European
+    Journal of Cell Biology.
+causal_graphs:
+- graph_id: microneme_lumen_topology
+  title: Microneme lumen topology
+  description: The microneme lumen is the internal microneme compartment enclosed
+    by the microneme membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining lumenal boundary without asserting
+    secreted adhesins as permanent lumen components.
+  nodes:
+  - node_id: microneme_lumen
+    label: microneme lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034494
+  - node_id: microneme_membrane
+    label: microneme membrane
+    node_type: STRUCTURE
+    grounding: GO:0033163
+  - node_id: microneme
+    label: microneme
+    node_type: ORGANELLE
+    grounding: GO:0020009
+  edges:
+  - subject: microneme_lumen
+    predicate: is part of
+    object: microneme
+    description: The microneme lumen is the secretory volume within a microneme.
+    evidence:
+    - reference: GO:0034494
+      notes: GO:0034494 identifies the microneme lumen cellular component.
+    - reference: GO:0020009
+      notes: GO:0020009 identifies the containing microneme organelle.
+    - reference: DOI:10.1111/cmi.13018
+      notes: Dubois and Soldati-Favre 2019 review microneme biogenesis and exocytosis.
+  - subject: microneme_membrane
+    predicate: encloses
+    object: microneme_lumen
+    description: The microneme membrane encloses the microneme lumen.
+    evidence:
+    - reference: GO:0034494
+      notes: GO:0034494 defines the microneme lumen as the volume enclosed by the
+        microneme membrane.
+    - reference: GO:0033163
+      notes: GO:0033163 identifies the lipid bilayer surrounding a microneme.
+discussions:
+- discussion_id: boundary_membrane_not_lumen_component
+  prompt: Keep the microneme membrane as the boundary of the microneme lumen rather
+    than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#microneme_lumen_topology
+  rationale: GO:0034494 denotes the volume enclosed by the microneme membrane, whereas
+    GO:0033163 denotes the lipid bilayer surrounding a microneme.
+  resolution_note: Represented GO:0033163 as the boundary node in the topology graph
+    and left the lumen record without constituent components.
+  evidence:
+  - reference: GO:0034494
+    notes: GO:0034494 identifies the microneme lumen.
+  - reference: GO:0033163
+    notes: GO:0033163 identifies the membrane that bounds the microneme lumen.
+  posed_by: codex
+  posed_date: '2026-09-13'

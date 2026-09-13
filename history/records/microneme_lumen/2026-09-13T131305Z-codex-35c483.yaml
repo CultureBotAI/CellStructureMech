@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/microneme_lumen.yaml
+  slug: microneme_lumen
+session:
+  id: 2026-09-13T131305Z-codex-35c483
+  timestamp: '2026-09-13T13:13:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/788
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/787
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - distribution
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added GO-grounded microneme lumen record
+  details: Added a GO:0034494 microneme lumen record as the organelle-lumen substructure of
+    the apicomplexan microneme. The record captures organelle-lumen parentage, microneme parthood,
+    Apicomplexa scope, Toxoplasma gondii as a canonical example, a secretory-cargo storage
+    function, a nonmechanistic microneme-lumen topology graph, GO/DOI/PMID evidence, and a
+    resolved interpretation that keeps the enclosing membrane as the lumen boundary rather
+    than a lumen component.
