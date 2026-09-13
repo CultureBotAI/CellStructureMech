@@ -1,0 +1,157 @@
+identifier: GO:0030094
+label: plasma membrane-derived photosystem I
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A photosystem I protein complex located in the plasma membrane-derived
+  bacterial thylakoid membrane.
+definition_source: GO:0030094
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T05:23:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T05:23:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added PSI synonymy, generic PSI parentage, bacterial thylakoid membrane
+    parthood, cyanobacterial scope, a Synechocystis example, photosynthetic electron-transport
+    function, GO and literature evidence, a nonmechanistic PSI electron-input graph,
+    and a PSI subunit-boundary TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: cyanobacterial PSI
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.molp.2017.09.019
+parent_structures:
+- GO:0009522
+part_of:
+- GO:0031676
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteriota
+  presence: COMMON
+  note: Cyanobacteria with internal thylakoids carry PSI complexes in plasma membrane-derived
+    thylakoid membranes as part of oxygenic photosynthetic electron transport.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+canonical_examples:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  note: Cyanobacterial model used to map photosystem I distribution and mobility in
+    native thylakoid membranes.
+  reference: DOI:10.1016/j.molp.2017.09.019
+functions:
+- function_id: photosynthetic_electron_transport
+  label: photosynthetic electron transport chain
+  grounding: GO:0009767
+  description: Plasma membrane-derived PSI receives electrons downstream of cytochrome
+    b6f in the bacterial thylakoid electron-transport chain.
+  evidence:
+  - reference: GO:0030094
+    notes: GO:0030094 defines plasma membrane-derived photosystem I as a photosystem
+      I complex in the bacterial thylakoid.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review PSI as the downstream cyanobacterial thylakoid
+      photosystem in linear electron transport.
+evidence:
+- reference: GO:0030094
+  notes: Gene Ontology cellular-component term for plasma membrane-derived photosystem
+    I.
+- reference: GO:0009522
+  notes: Gene Ontology cellular-component term for generic photosystem I.
+- reference: GO:0031676
+  notes: Gene Ontology cellular-component term for the plasma membrane-derived thylakoid
+    membrane that houses this cyanobacterial PSI complex.
+- reference: GO:0030075
+  notes: Gene Ontology cellular-component term for bacterial thylakoid.
+- reference: GO:0009767
+  notes: Gene Ontology biological-process term for the photosynthetic electron transport
+    chain.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
+- reference: DOI:10.1016/j.molp.2017.09.019
+  notes: Casella et al. 2017, Dissecting the Native Architecture and Dynamics of Cyanobacterial
+    Photosynthetic Machinery, Molecular Plant.
+causal_graphs:
+- graph_id: cyanobacterial_psi_electron_input
+  title: Cyanobacterial PSI receives downstream thylakoid electrons
+  description: In Synechocystis, plasma membrane-derived PSI complexes reside in the
+    thylakoid membrane and act downstream of cytochrome b6f in photosynthetic electron
+    transport.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph places bacterial PSI at the downstream thylakoid electron-transport
+    step without resolving PSI core subunits, soluble electron carriers or phycobilisome
+    antenna attachments.
+  nodes:
+  - node_id: thylakoid_membrane
+    label: plasma membrane-derived thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0031676
+  - node_id: cytb6f
+    label: cytochrome b6f complex
+    node_type: STRUCTURE
+    grounding: GO:0009512
+  - node_id: psi
+    label: plasma membrane-derived photosystem I
+    node_type: STRUCTURE
+    grounding: GO:0030094
+  - node_id: electron_transport
+    label: photosynthetic electron transport chain
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009767
+  edges:
+  - subject: psi
+    predicate: is part of
+    object: thylakoid_membrane
+    description: Plasma membrane-derived PSI resides in the bacterial thylakoid membrane.
+    evidence:
+    - reference: GO:0030094
+      notes: GO:0030094 defines the complex as located in the plasma membrane-derived
+        thylakoid.
+  - subject: thylakoid_membrane
+    predicate: houses
+    object: psi
+    description: Native Synechocystis thylakoid membranes contain and organize PSI
+      complexes.
+    evidence:
+    - reference: DOI:10.1016/j.molp.2017.09.019
+      notes: Casella et al. 2017 mapped PSI distribution and mobility in native Synechocystis
+        thylakoid membranes.
+  - subject: cytb6f
+    predicate: feeds electrons to
+    object: psi
+    description: Cytochrome b6f passes electrons to a downstream soluble carrier that
+      delivers them to PSI.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 place cytochrome b6f upstream of PSI in thylakoid
+        electron transport.
+  - subject: psi
+    predicate: contributes to
+    object: electron_transport
+    description: PSI is the downstream photosystem in oxygenic photosynthetic electron
+      transport.
+    evidence:
+    - reference: GO:0030094
+      notes: GO:0030094 places this bacterial photosystem I complex in the thylakoid
+        photosynthetic apparatus.
+discussions:
+- discussion_id: psi_subunit_boundaries
+  prompt: Resolve exact source-neutral component groundings for bona fide bacterial
+    PSI core and antenna subfamilies before adding subunit-level component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#cyanobacterial_psi_electron_input
+  rationale: GO exactly grounds the bacterial thylakoid PSI complex, but this record
+    does not yet distinguish conserved PSI constituents from soluble electron carriers
+    or phycobilisome attachment factors.
+  evidence:
+  - reference: DOI:10.1016/j.molp.2017.09.019
+    notes: Casella et al. 2017 mapped PSI organization and mobility in Synechocystis
+      thylakoid membranes.
+  posed_by: codex
+  posed_date: '2026-09-13'

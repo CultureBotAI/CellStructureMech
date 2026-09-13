@@ -1811,6 +1811,11 @@
       "label": "phycobilisome",
       "neighbors": [
         {
+          "identifier": "GO:0030094",
+          "label": "plasma membrane-derived photosystem I",
+          "cosine_similarity": 0.76272447
+        },
+        {
           "identifier": "GO:0030096",
           "label": "plasma membrane-derived thylakoid photosystem II",
           "cosine_similarity": 0.75271566
@@ -1829,11 +1834,37 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.66919797
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030094",
+      "label": "plasma membrane-derived photosystem I",
+      "neighbors": [
+        {
+          "identifier": "GO:0030096",
+          "label": "plasma membrane-derived thylakoid photosystem II",
+          "cosine_similarity": 0.9741463
         },
         {
-          "identifier": "GO:0042717",
-          "label": "plasma membrane-derived chromatophore membrane",
-          "cosine_similarity": 0.65890076
+          "identifier": "GO:0030075",
+          "label": "bacterial thylakoid",
+          "cosine_similarity": 0.82395967
+        },
+        {
+          "identifier": "GO:0042651",
+          "label": "thylakoid membrane",
+          "cosine_similarity": 0.82023119
+        },
+        {
+          "identifier": "GO:0031979",
+          "label": "plasma membrane-derived thylakoid lumen",
+          "cosine_similarity": 0.77396374
+        },
+        {
+          "identifier": "GO:0030089",
+          "label": "phycobilisome",
+          "cosine_similarity": 0.76272447
         }
       ]
     },
@@ -1841,6 +1872,11 @@
       "identifier": "GO:0030096",
       "label": "plasma membrane-derived thylakoid photosystem II",
       "neighbors": [
+        {
+          "identifier": "GO:0030094",
+          "label": "plasma membrane-derived photosystem I",
+          "cosine_similarity": 0.9741463
+        },
         {
           "identifier": "GO:0030075",
           "label": "bacterial thylakoid",
@@ -1860,11 +1896,6 @@
           "identifier": "GO:0030089",
           "label": "phycobilisome",
           "cosine_similarity": 0.75271566
-        },
-        {
-          "identifier": "GO:0009843",
-          "label": "cyanelle thylakoid",
-          "cosine_similarity": 0.72285351
         }
       ]
     },
@@ -2782,6 +2813,11 @@
           "cosine_similarity": 0.84464105
         },
         {
+          "identifier": "GO:0030094",
+          "label": "plasma membrane-derived photosystem I",
+          "cosine_similarity": 0.82395967
+        },
+        {
           "identifier": "GO:0009535",
           "label": "chloroplast thylakoid membrane",
           "cosine_similarity": 0.80342409
@@ -2790,11 +2826,6 @@
           "identifier": "GO:0009534",
           "label": "chloroplast thylakoid",
           "cosine_similarity": 0.80144267
-        },
-        {
-          "identifier": "GO:0070118",
-          "label": "organellar chromatophore thylakoid membrane",
-          "cosine_similarity": 0.80032052
         }
       ]
     },
@@ -4802,14 +4833,14 @@
           "cosine_similarity": 0.82987191
         },
         {
+          "identifier": "GO:0030094",
+          "label": "plasma membrane-derived photosystem I",
+          "cosine_similarity": 0.82023119
+        },
+        {
           "identifier": "GO:0033115",
           "label": "cyanelle thylakoid membrane",
           "cosine_similarity": 0.81955448
-        },
-        {
-          "identifier": "GO:0009535",
-          "label": "chloroplast thylakoid membrane",
-          "cosine_similarity": 0.8176644
         }
       ]
     },
@@ -6099,6 +6130,11 @@
           "cosine_similarity": 0.72761299
         },
         {
+          "identifier": "GO:0030094",
+          "label": "plasma membrane-derived photosystem I",
+          "cosine_similarity": 0.70103721
+        },
+        {
           "identifier": "GO:0005643",
           "label": "nuclear pore",
           "cosine_similarity": 0.6960509
@@ -6107,11 +6143,6 @@
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
           "cosine_similarity": 0.69217217
-        },
-        {
-          "identifier": "GO:0033281",
-          "label": "TAT protein transport complex",
-          "cosine_similarity": 0.6895283
         }
       ]
     },
