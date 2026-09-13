@@ -27,6 +27,13 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-09-13T07:47:31Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Grounded the chlorosome CsmA baseplate component to the newly minted chlorosome
+    baseplate antenna complex record and narrowed the component grounding TODO to
+    accessory Csm proteins.
+  llm_assisted: true
 parent_structures:
 - GO:0043232
 components:
@@ -46,14 +53,12 @@ components:
       and pigment analysis to show lamellar bacteriochlorophyll aggregates in Chloroflexus
       aurantiacus chlorosomes.
 - component_id: csma_baseplate
-  label: CsmA bacteriochlorophyll a baseplate
-  component_type: PROTEIN
+  label: chlorosome baseplate antenna complex
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
-  gene_symbols:
-  - csmA
   essentiality: ESSENTIAL
-  role: Forms the bacteriochlorophyll a-containing protein baseplate that couples
-    the pigment aggregate to downstream membrane reaction-center complexes.
+  role: Bacteriochlorophyll a-CsmA antenna array that couples the pigment aggregate
+    to downstream membrane reaction-center complexes.
   evidence:
   - reference: DOI:10.1038/ncomms12454
     notes: Nielsen et al. 2016 resolved the CsmA-containing baseplate antenna of Chlorobaculum
@@ -62,23 +67,7 @@ components:
     notes: Psencik et al. 2009 visualized the crystalline baseplate lattice on one
       face of Chloroflexus aurantiacus chlorosomes and linked its lattice dimensions
       to a CsmA dimer building block.
-  protein_examples:
-  - uniprot_id: UniProtKB:P0A314
-    protein_label: Bacteriochlorophyll c-binding protein
-    gene_symbol: csmA
-    taxon_id: NCBITaxon:194439
-    taxon_label: Chlorobaculum tepidum TLS
-    entry_status: REVIEWED
-    retrieved_on: '2026-09-08'
-    role: The single reviewed UniProtKB entry for gene csmA in Chlorobaculum tepidum
-      TLS, a taxon this record names. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
-    evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P0A314
-      notes: UniProtKB reviewed (Swiss-Prot) entry P0A314, the single reviewed entry
-        for gene csmA in Chlorobaculum tepidum TLS. Establishes the accession and
-        gene identity only; the component's membership in this structure rests on
-        the record's own sources.
+  grounding: cellstructuremech:chlorosome_baseplate_antenna_complex
 - component_id: lipid_monolayer
   label: chlorosome lipid monolayer
   component_type: LIPID
@@ -352,15 +341,14 @@ causal_graphs:
         of green bacteria as antennae feeding reaction centers.
 discussions:
 - discussion_id: ground_chlorosome_protein_families
-  prompt: Find exact InterPro or Pfam families for CsmA and for the accessory Csm
-    envelope proteins, or document why each remains reviewed-label-only.
+  prompt: Find exact InterPro or Pfam families for the accessory Csm envelope proteins,
+    or document why each remains reviewed-label-only.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#csma_baseplate
   - components#accessory_csm_proteins
-  rationale: The first chlorosome record intentionally avoids guessed protein-family
-    CURIEs; resolving exact family accessions would make these components machine-linkable
-    without changing the taxon-agnostic component boundary.
+  rationale: The chlorosome baseplate component is now grounded to an internal CellStructureMech
+    record that tracks exact CsmA-family grounding as its own boundary question; this
+    TODO remains for the accessory chlorosome-surface proteins.
   posed_by: claude
   posed_date: '2026-09-04'

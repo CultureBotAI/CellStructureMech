@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/chlorosome_baseplate_antenna_complex.yaml
+  slug: chlorosome_baseplate_antenna_complex
+session:
+  id: 2026-09-13T075637Z-claude-code-936cdc
+  timestamp: '2026-09-13T07:56:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added chlorosome baseplate antenna complex record
+  details: Created a minted chlorosome baseplate antenna complex record with chlorosome and
+    envelope parthood, CsmA and bacteriochlorophyll a components, green-bacterial scope, Chlorobaculum
+    and Chloroflexus examples, GO/ChEBI/DOI/PMID evidence, a nonmechanistic excitation-transfer
+    graph, and a CsmA-family grounding TODO; grounded the existing chlorosome and chlorosome-envelope
+    CsmA baseplate components to the new internal record and narrowed their broader component-grounding
+    TODOs.

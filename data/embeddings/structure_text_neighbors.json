@@ -1807,6 +1807,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
+      "label": "chlorosome baseplate antenna complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0046858",
+          "label": "chlorosome",
+          "cosine_similarity": 0.86841549
+        },
+        {
+          "identifier": "GO:0033105",
+          "label": "chlorosome envelope",
+          "cosine_similarity": 0.82282334
+        },
+        {
+          "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
+          "label": "LH2 peripheral light-harvesting antenna complex",
+          "cosine_similarity": 0.7710736
+        },
+        {
+          "identifier": "GO:0030094",
+          "label": "plasma membrane-derived photosystem I",
+          "cosine_similarity": 0.74441502
+        },
+        {
+          "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
+          "label": "chromatophore cytochrome bc1 complex",
+          "cosine_similarity": 0.73062746
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
       "label": "chromatophore cytochrome bc1 complex",
       "neighbors": [
@@ -1831,9 +1862,9 @@
           "cosine_similarity": 0.74942427
         },
         {
-          "identifier": "GO:0031897",
-          "label": "Tic complex",
-          "cosine_similarity": 0.71206963
+          "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
+          "label": "chlorosome baseplate antenna complex",
+          "cosine_similarity": 0.73062746
         }
       ]
     },
@@ -1878,6 +1909,11 @@
           "cosine_similarity": 0.77608578
         },
         {
+          "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
+          "label": "chlorosome baseplate antenna complex",
+          "cosine_similarity": 0.7710736
+        },
+        {
           "identifier": "GO:0030094",
           "label": "plasma membrane-derived photosystem I",
           "cosine_similarity": 0.7504044
@@ -1891,11 +1927,6 @@
           "identifier": "GO:0030096",
           "label": "plasma membrane-derived thylakoid photosystem II",
           "cosine_similarity": 0.73677052
-        },
-        {
-          "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
-          "label": "chromatophore cytochrome bc1 complex",
-          "cosine_similarity": 0.7098373
         }
       ]
     },
@@ -1919,14 +1950,14 @@
           "cosine_similarity": 0.73516045
         },
         {
+          "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
+          "label": "chlorosome baseplate antenna complex",
+          "cosine_similarity": 0.72989682
+        },
+        {
           "identifier": "GO:0042651",
           "label": "thylakoid membrane",
           "cosine_similarity": 0.70437067
-        },
-        {
-          "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
-          "label": "LH2 peripheral light-harvesting antenna complex",
-          "cosine_similarity": 0.69299877
         }
       ]
     },
@@ -3239,27 +3270,27 @@
         {
           "identifier": "GO:0033105",
           "label": "chlorosome envelope",
-          "cosine_similarity": 0.95975326
+          "cosine_similarity": 0.96015506
         },
         {
-          "identifier": "GO:0009507",
-          "label": "chloroplast",
-          "cosine_similarity": 0.79727984
-        },
-        {
-          "identifier": "GO:0009941",
-          "label": "chloroplast envelope",
-          "cosine_similarity": 0.79195536
+          "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
+          "label": "chlorosome baseplate antenna complex",
+          "cosine_similarity": 0.86841549
         },
         {
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
-          "cosine_similarity": 0.78720619
+          "cosine_similarity": 0.79015845
         },
         {
-          "identifier": "GO:0070111",
-          "label": "organellar chromatophore",
-          "cosine_similarity": 0.78059089
+          "identifier": "GO:0009507",
+          "label": "chloroplast",
+          "cosine_similarity": 0.78883845
+        },
+        {
+          "identifier": "GO:0009941",
+          "label": "chloroplast envelope",
+          "cosine_similarity": 0.78882171
         }
       ]
     },
@@ -3270,27 +3301,27 @@
         {
           "identifier": "GO:0046858",
           "label": "chlorosome",
-          "cosine_similarity": 0.95975326
+          "cosine_similarity": 0.96015506
+        },
+        {
+          "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
+          "label": "chlorosome baseplate antenna complex",
+          "cosine_similarity": 0.82282334
         },
         {
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
-          "cosine_similarity": 0.80086559
+          "cosine_similarity": 0.80101366
         },
         {
           "identifier": "GO:0009707",
           "label": "chloroplast outer membrane",
-          "cosine_similarity": 0.79175461
-        },
-        {
-          "identifier": "GO:0009507",
-          "label": "chloroplast",
-          "cosine_similarity": 0.77916991
+          "cosine_similarity": 0.79014805
         },
         {
           "identifier": "GO:0009706",
           "label": "chloroplast inner membrane",
-          "cosine_similarity": 0.77578513
+          "cosine_similarity": 0.77561043
         }
       ]
     },
@@ -3841,14 +3872,14 @@
           "cosine_similarity": 0.63639619
         },
         {
-          "identifier": "GO:0046858",
-          "label": "chlorosome",
-          "cosine_similarity": 0.63026908
-        },
-        {
           "identifier": "GO:0009706",
           "label": "chloroplast inner membrane",
           "cosine_similarity": 0.62695474
+        },
+        {
+          "identifier": "GO:0046858",
+          "label": "chlorosome",
+          "cosine_similarity": 0.6262144
         }
       ]
     },
@@ -4778,7 +4809,7 @@
         {
           "identifier": "GO:0046858",
           "label": "chlorosome",
-          "cosine_similarity": 0.78720619
+          "cosine_similarity": 0.79015845
         }
       ]
     },

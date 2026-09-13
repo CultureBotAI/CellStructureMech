@@ -1,0 +1,245 @@
+identifier: cellstructuremech:chlorosome_baseplate_antenna_complex
+label: chlorosome baseplate antenna complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A bacteriochlorophyll a-CsmA light-harvesting protein-pigment array on
+  one face of green bacterial chlorosomes that accepts excitation energy from chlorosome
+  bacteriochlorophyll aggregates and couples it toward membrane reaction-center complexes.
+definition_source: DOI:10.1038/ncomms12454
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T07:46:31Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T07:47:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added chlorosome and envelope parthood, CsmA and bacteriochlorophyll a
+    components, green-bacterial scope, Chlorobaculum and Chloroflexus examples, a
+    light-harvesting function, GO/ChEBI/DOI/PMID evidence, a nonmechanistic excitation-transfer
+    graph, and a CsmA-family grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: CsmA baseplate antenna
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/ncomms12454
+- synonym_text: CsmA bacteriochlorophyll a baseplate
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/ncomms12454
+- synonym_text: protein-pigment baseplate complex
+  synonym_type: EXACT_SYNONYM
+  source: PMID:20077007
+parent_structures:
+- GO:0030076
+part_of:
+- GO:0046858
+- GO:0033105
+components:
+- component_id: csma_apoprotein
+  label: CsmA baseplate apoprotein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - csmA
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, or NCBIfam CURIE for chlorosome
+    CsmA was verified; broad chlorosome-envelope or bacteriochlorophyll-binding signatures
+    were not asserted.
+  role: Small bacteriochlorophyll a-binding apoprotein that oligomerizes into the
+    two-dimensional paracrystalline baseplate lattice.
+  evidence:
+  - reference: DOI:10.1038/ncomms12454
+    notes: Nielsen et al. 2016 resolved CsmA as the protein building block of the
+      in situ baseplate antenna in Chlorobaculum tepidum chlorosomes.
+  - reference: PMID:20077007
+    notes: Pedersen et al. 2010 reviewed the CsmA protein-pigment model for the baseplate
+      complex of green-bacterial chlorosomes.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A314
+    protein_label: Bacteriochlorophyll c-binding protein
+    gene_symbol: csmA
+    taxon_id: NCBITaxon:194439
+    taxon_label: Chlorobaculum tepidum TLS
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene csmA in Chlorobaculum tepidum
+      TLS, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A314
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A314, the single reviewed entry
+        for gene csmA in Chlorobaculum tepidum TLS. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+- component_id: bacteriochlorophyll_a
+  label: bacteriochlorophyll a
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Baseplate pigment bound by CsmA subunits and tuned for excitation transfer
+    out of the chlorosome.
+  evidence:
+  - reference: DOI:10.1038/ncomms12454
+    notes: Nielsen et al. 2016 modeled bacteriochlorophyll a pigments inside the CsmA
+      baseplate antenna complex.
+  grounding: CHEBI:30033
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: CsmA chlorosome baseplates occur in the chlorosomes of particular anoxygenic
+    green-bacterial phototrophs rather than broadly across bacteria.
+  reference: DOI:10.1007/s11120-013-9869-3
+canonical_examples:
+- taxon_id: NCBITaxon:1097
+  taxon_label: Chlorobaculum tepidum
+  note: Green sulfur bacterium whose intact chlorosomes were used to resolve the CsmA
+    baseplate antenna structure in situ.
+  reference: DOI:10.1038/ncomms12454
+- taxon_id: NCBITaxon:1108
+  taxon_label: Chloroflexus aurantiacus
+  note: Green filamentous bacterium whose chlorosomes exposed a crystalline baseplate
+    lattice linked to the CsmA dimer building block.
+  reference: DOI:10.1128/JB.00690-09
+functions:
+- function_id: photosynthetic_light_harvesting
+  label: photosynthesis, light harvesting
+  grounding: GO:0009765
+  description: The chlorosome baseplate accepts excitation energy from self-assembled
+    chlorosome bacteriochlorophyll aggregates and passes it toward downstream membrane
+    reaction-center complexes.
+  evidence:
+  - reference: DOI:10.1038/ncomms12454
+    notes: Nielsen et al. 2016 resolved the CsmA baseplate antenna and modeled the
+      pigment arrangement that transfers excitation energy out of Chlorobaculum tepidum
+      chlorosomes.
+  - reference: DOI:10.1007/s11120-010-9533-0
+    notes: Oostergetel et al. 2010 review chlorosome-to-baseplate excitation transfer
+      as part of green-bacterial light harvesting.
+evidence:
+- reference: DOI:10.1038/ncomms12454
+  notes: Nielsen et al. 2016, In situ high-resolution structure of the baseplate antenna
+    complex in Chlorobaculum tepidum, Nature Communications.
+- reference: PMID:20077007
+  notes: Pedersen et al. 2010, A model of the protein-pigment baseplate complex in
+    chlorosomes of photosynthetic green bacteria, Photosynthesis Research.
+- reference: DOI:10.1128/JB.00690-09
+  notes: Psencik et al. 2009, Structure of chlorosomes from the green filamentous
+    bacterium Chloroflexus aurantiacus, Journal of Bacteriology.
+- reference: DOI:10.1007/s11120-013-9869-3
+  notes: Orf and Blankenship 2013, Chlorosome antenna complexes from green photosynthetic
+    bacteria, Photosynthesis Research.
+- reference: GO:0030076
+  notes: Gene Ontology cellular-component term for the broader light-harvesting complex
+    class.
+- reference: GO:0046858
+  notes: Gene Ontology cellular-component term for chlorosome; the definition states
+    that chlorosomes attach to the cytoplasmic membrane via a bacteriochlorophyll
+    a-containing protein baseplate.
+- reference: GO:0033105
+  notes: Gene Ontology cellular-component term for the chlorosome envelope.
+- reference: GO:0009765
+  notes: Gene Ontology biological-process term for photosynthesis, light harvesting.
+- reference: CHEBI:30033
+  notes: ChEBI term for bacteriochlorophyll a.
+causal_graphs:
+- graph_id: baseplate_excitation_transfer
+  title: The CsmA baseplate routes chlorosome excitation outward
+  description: CsmA apoproteins bind bacteriochlorophyll a to form the two-dimensional
+    chlorosome baseplate antenna. The baseplate accepts excitation from bacteriochlorophyll
+    aggregates and routes it toward membrane reaction-center complexes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the source, baseplate, and downstream direction
+    of excitation flow without modeling excitonic state transitions or lineages that
+    insert Fenna-Matthews-Olson or B808-866 antenna complexes between the chlorosome
+    and reaction center.
+  nodes:
+  - node_id: csma_apoprotein
+    label: CsmA baseplate apoprotein
+    node_type: GENE_OR_PROTEIN
+    component_ref: csma_apoprotein
+  - node_id: bacteriochlorophyll_a
+    label: bacteriochlorophyll a
+    node_type: CHEMICAL
+    grounding: CHEBI:30033
+    component_ref: bacteriochlorophyll_a
+  - node_id: chlorosome_baseplate
+    label: chlorosome baseplate antenna complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:chlorosome_baseplate_antenna_complex
+  - node_id: chlorosome_bchl_aggregate
+    label: chlorosome bacteriochlorophyll aggregate
+    node_type: CHEMICAL
+  - node_id: reaction_center_acceptor_chain
+    label: membrane reaction-center acceptor chain
+    node_type: GENE_OR_PROTEIN
+  - node_id: light_harvesting
+    label: photosynthesis, light harvesting
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009765
+  edges:
+  - subject: csma_apoprotein
+    predicate: oligomerizes into
+    object: chlorosome_baseplate
+    description: CsmA is the major protein building block of the chlorosome baseplate
+      lattice.
+    evidence:
+    - reference: DOI:10.1038/ncomms12454
+      notes: Nielsen et al. 2016 resolved an in situ baseplate structure built from
+        rows of CsmA subunits in Chlorobaculum tepidum chlorosomes.
+  - subject: bacteriochlorophyll_a
+    predicate: binds to
+    object: csma_apoprotein
+    description: Bacteriochlorophyll a is the baseplate pigment bound by CsmA apoproteins.
+    evidence:
+    - reference: DOI:10.1038/ncomms12454
+      notes: Nielsen et al. 2016 modeled the bacteriochlorophyll a-CsmA organization
+        of the baseplate antenna.
+  - subject: chlorosome_bchl_aggregate
+    predicate: transfers excitation to
+    object: chlorosome_baseplate
+    description: The chlorosome bacteriochlorophyll aggregate feeds excitation energy
+      into the baseplate antenna.
+    evidence:
+    - reference: DOI:10.1007/s11120-010-9533-0
+      notes: Oostergetel et al. 2010 review the chlorosome-to-baseplate excitation-transfer
+        step.
+  - subject: chlorosome_baseplate
+    predicate: couples to
+    object: reaction_center_acceptor_chain
+    description: The baseplate is the chlorosome antenna exit point toward membrane
+      reaction-center complexes.
+    evidence:
+    - reference: DOI:10.1038/ncomms12454
+      notes: Nielsen et al. 2016 describe the baseplate as the antenna between chlorosome
+        pigments and downstream reaction-center proteins.
+  - subject: chlorosome_baseplate
+    predicate: contributes to
+    object: light_harvesting
+    description: Excitation flow through the baseplate contributes to photosynthetic
+      light harvesting by the complete green-bacterial chlorosome antenna.
+    evidence:
+    - reference: DOI:10.1007/s11120-013-9869-3
+      notes: Orf and Blankenship 2013 review chlorosomes, including their CsmA baseplates,
+        as the light-harvesting antennae of green photosynthetic bacteria.
+discussions:
+- discussion_id: csma_family_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve an exact source-neutral InterPro, Pfam, or NCBIfam identifier for
+    chlorosome CsmA before grounding the CsmA apoprotein component.
+  attaches_to:
+  - components#csma_apoprotein
+  rationale: This record grounds the whole baseplate to CellStructureMech and the
+    pigment to ChEBI, but it does not guess whether available protein-family terms
+    exactly denote the green-bacterial CsmA baseplate apoprotein family.
+  evidence:
+  - reference: DOI:10.1038/ncomms12454
+    notes: Nielsen et al. 2016 resolve the CsmA baseplate architecture, but a separate
+      protein-family authority is needed for source-neutral CsmA grounding.
+  posed_by: codex
+  posed_date: '2026-09-13'
