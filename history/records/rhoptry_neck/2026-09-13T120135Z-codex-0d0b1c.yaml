@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/rhoptry_neck.yaml
+  slug: rhoptry_neck
+session:
+  id: 2026-09-13T120135Z-codex-0d0b1c
+  timestamp: '2026-09-13T12:01:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - composition
+  - distribution
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added GO-grounded rhoptry neck record
+  details: Added a GO:1990225 rhoptry neck record as a substructure of the apicomplexan rhoptry.
+    The record captures rhoptry-neck proteins as a reviewed-label-only RON cohort, Apicomplexa
+    scope, Toxoplasma gondii as a canonical example, rhoptry-neck secretion and moving-junction
+    functions, a nonmechanistic RON export graph, record-level GO/DOI evidence, and an open
+    TODO to ground the RON protein cohort exactly.
