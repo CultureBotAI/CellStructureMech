@@ -33,6 +33,24 @@ curation_history:
   changes: '#760: grounded the RC-LH1-PufX chromatophore component to cellstructuremech:rc_lh1_pufx_core_complex
     now that PR #759 mints the internal structure record.'
   llm_assisted: true
+- timestamp: '2026-09-13T07:28:09Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Grounded the cytochrome bc1 chromatophore component to cellstructuremech:chromatophore_cytochrome_bc1_complex
+    now that the internal structure record has been minted.
+  llm_assisted: true
+- timestamp: '2026-09-13T07:29:02Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Narrowed the chromatophore complex-grounding TODO after RC-LH1-PufX and
+    cytochrome bc1 gained internal CellStructureMech groundings.
+  llm_assisted: true
+- timestamp: '2026-09-13T07:35:09Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#762: changed the proactive chromatophore cytochrome bc1 link-back event
+    from ADDRESS_REVIEW to REFINED_RECORD.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cellular chromatophore membrane
   synonym_type: EXACT_SYNONYM
@@ -98,13 +116,10 @@ components:
     notes: UniProt SL-0042 lists antenna complexes among the contents of cellular
       chromatophore membranes.
 - component_id: cytochrome_bc1_complex
-  label: cytochrome bc1 complex
+  label: chromatophore cytochrome bc1 complex
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: Purple bacterial chromatophore membranes carry cytochrome bc1,
-    but the first record did not curate an exact bacterial bc1 complex CURIE.
   role: Membrane oxidoreductase that oxidizes quinol and returns electrons toward
     the reaction center through cytochrome c2 during cyclic photosynthetic electron
     transport.
@@ -116,6 +131,7 @@ components:
     notes: Comayras et al. 2005 modeled the functional consequences of photosynthetic-apparatus
       organization in Rhodobacter sphaeroides chromatophores, including quinone traffic
       between reaction centers and cytochrome bc1.
+  grounding: cellstructuremech:chromatophore_cytochrome_bc1_complex
 - component_id: f0f1_atp_synthase
   label: F0F1-ATP synthase
   component_type: PROTEIN_COMPLEX
@@ -312,15 +328,12 @@ discussions:
 - discussion_id: ground_chromatophore_complexes
   kind: CURATION_TODO
   status: OPEN
-  prompt: Resolve exact GO, Complex Portal, InterPro, Pfam or NCBIfam groundings for
-    RC-LH1-PufX, LH2, cytochrome bc1 and F0F1-ATP synthase complexes in purple-bacterial
-    chromatophore membranes.
+  prompt: Resolve exact source-neutral component groundings for LH2 and F0F1-ATP synthase
+    complexes in purple-bacterial chromatophore membranes.
   attaches_to:
-  - components#rc_lh1_pufx_core_complex
   - components#lh2_antenna_complexes
-  - components#cytochrome_bc1_complex
   - components#f0f1_atp_synthase
   - causal_graphs#chromatophore_photophosphorylation
-  rationale: These cohorts are supported as chromatophore constituents, but the first
-    record intentionally left their component groundings blank rather than guessing
-    exact family or complex accessions.
+  rationale: LH2 antennae and F0F1-ATP synthase are supported as chromatophore constituents,
+    but remain label-only components until exact source-neutral complex accessions
+    are curated or minted.
