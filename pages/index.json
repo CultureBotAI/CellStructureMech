@@ -522,6 +522,15 @@
   "definition": "The sidewall peptidoglycan-synthesis machine of rod-shaped bacteria, also called the Rod complex. A SEDS-family glycosyltransferase (RodA) works with a class B penicillin-binding protein (PBP2) to polymerise and crosslink new wall material into the cylinder, while MreC, MreD and RodZ couple the complex to MreB filaments, which distribute it around the circumference. It is the elongation counterpart of the divisome."
  },
  {
+  "identifier": "GO:0009512",
+  "label": "cytochrome b6f complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/cytochrome_b6f_complex.html",
+  "definition": "A thylakoid membrane protein complex that oxidizes plastoquinol, reduces a downstream soluble electron carrier for photosystem I, and contributes to proton translocation during oxygenic photosynthetic electron transport."
+ },
+ {
   "identifier": "GO:0030089",
   "label": "phycobilisome",
   "category": "ENERGY_COMPLEX",

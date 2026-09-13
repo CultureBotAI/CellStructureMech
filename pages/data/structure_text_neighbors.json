@@ -1807,6 +1807,37 @@
       ]
     },
     {
+      "identifier": "GO:0009512",
+      "label": "cytochrome b6f complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030094",
+          "label": "plasma membrane-derived photosystem I",
+          "cosine_similarity": 0.89482628
+        },
+        {
+          "identifier": "GO:0030096",
+          "label": "plasma membrane-derived thylakoid photosystem II",
+          "cosine_similarity": 0.89211225
+        },
+        {
+          "identifier": "GO:0042651",
+          "label": "thylakoid membrane",
+          "cosine_similarity": 0.8056485
+        },
+        {
+          "identifier": "GO:0030075",
+          "label": "bacterial thylakoid",
+          "cosine_similarity": 0.73855973
+        },
+        {
+          "identifier": "GO:0030089",
+          "label": "phycobilisome",
+          "cosine_similarity": 0.73516045
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030089",
       "label": "phycobilisome",
       "neighbors": [
@@ -1821,6 +1852,11 @@
           "cosine_similarity": 0.75271566
         },
         {
+          "identifier": "GO:0009512",
+          "label": "cytochrome b6f complex",
+          "cosine_similarity": 0.73516045
+        },
+        {
           "identifier": "GO:0042651",
           "label": "thylakoid membrane",
           "cosine_similarity": 0.70437067
@@ -1829,11 +1865,6 @@
           "identifier": "GO:0046858",
           "label": "chlorosome",
           "cosine_similarity": 0.67619713
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.66919797
         }
       ]
     },
@@ -1845,6 +1876,11 @@
           "identifier": "GO:0030096",
           "label": "plasma membrane-derived thylakoid photosystem II",
           "cosine_similarity": 0.9741463
+        },
+        {
+          "identifier": "GO:0009512",
+          "label": "cytochrome b6f complex",
+          "cosine_similarity": 0.89482628
         },
         {
           "identifier": "GO:0030075",
@@ -1860,11 +1896,6 @@
           "identifier": "GO:0031979",
           "label": "plasma membrane-derived thylakoid lumen",
           "cosine_similarity": 0.77396374
-        },
-        {
-          "identifier": "GO:0030089",
-          "label": "phycobilisome",
-          "cosine_similarity": 0.76272447
         }
       ]
     },
@@ -1876,6 +1907,11 @@
           "identifier": "GO:0030094",
           "label": "plasma membrane-derived photosystem I",
           "cosine_similarity": 0.9741463
+        },
+        {
+          "identifier": "GO:0009512",
+          "label": "cytochrome b6f complex",
+          "cosine_similarity": 0.89211225
         },
         {
           "identifier": "GO:0030075",
@@ -1891,11 +1927,6 @@
           "identifier": "GO:0031979",
           "label": "plasma membrane-derived thylakoid lumen",
           "cosine_similarity": 0.75801971
-        },
-        {
-          "identifier": "GO:0030089",
-          "label": "phycobilisome",
-          "cosine_similarity": 0.75271566
         }
       ]
     },
@@ -6125,6 +6156,11 @@
           "cosine_similarity": 0.90921988
         },
         {
+          "identifier": "GO:0009512",
+          "label": "cytochrome b6f complex",
+          "cosine_similarity": 0.72819175
+        },
+        {
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
           "cosine_similarity": 0.72761299
@@ -6138,11 +6174,6 @@
           "identifier": "GO:0005643",
           "label": "nuclear pore",
           "cosine_similarity": 0.6960509
-        },
-        {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.69217217
         }
       ]
     },
@@ -6166,14 +6197,14 @@
           "cosine_similarity": 0.71401762
         },
         {
+          "identifier": "GO:0009512",
+          "label": "cytochrome b6f complex",
+          "cosine_similarity": 0.71032637
+        },
+        {
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
           "cosine_similarity": 0.69910945
-        },
-        {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.69322967
         }
       ]
     },

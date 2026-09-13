@@ -1,0 +1,172 @@
+identifier: GO:0009512
+label: cytochrome b6f complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A thylakoid membrane protein complex that oxidizes plastoquinol, reduces
+  a downstream soluble electron carrier for photosystem I, and contributes to proton
+  translocation during oxygenic photosynthetic electron transport.
+definition_source: GO:0009512
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T05:42:11Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T05:42:57Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added thylakoid membrane parthood, cyanobacterial scope, a Nostoc canonical
+    example, photosynthetic electron-transport function, GO and literature evidence,
+    a nonmechanistic b6f electron/proton-coupling graph, and a b6f subunit-boundary
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-13T05:43:22Z'
+  curator: codex
+  action: REVISED_GRAPH_EVIDENCE
+  changes: Replaced GO-only evidence on the b6f electron-transport graph edge with
+    literature evidence for the process claim.
+  llm_assisted: true
+part_of:
+- GO:0042651
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteriota
+  presence: COMMON
+  note: Cyanobacteria with internal thylakoids use cytochrome b6f as a major thylakoid
+    electron-transport complex between plastoquinol and PSI.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+canonical_examples:
+- taxon_id: NCBITaxon:103690
+  taxon_label: Nostoc sp. PCC 7120 = FACHB-418
+  note: Cyanobacterial model used to purify and determine the crystal structure of
+    a stable dimeric cytochrome b6f complex.
+  reference: DOI:10.1074/jbc.M809196200
+functions:
+- function_id: photosynthetic_electron_transport
+  label: photosynthetic electron transport chain
+  grounding: GO:0009767
+  description: Cytochrome b6f oxidizes plastoquinol downstream of PSII, reduces a
+    soluble carrier for PSI, and couples that electron flow to thylakoid proton translocation.
+  evidence:
+  - reference: GO:0009512
+    notes: GO:0009512 defines the cytochrome b6f complex by electron transfer from
+      reduced plastoquinone to oxidized plastocyanin with coupled proton translocation.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 place cytochrome b6f between PSII and PSI in
+      the thylakoid electron-transport chain.
+evidence:
+- reference: GO:0009512
+  notes: Gene Ontology cellular-component term for the cytochrome b6f complex.
+- reference: GO:0042651
+  notes: Gene Ontology cellular-component term for the thylakoid membrane that houses
+    photosynthetic electron-transport complexes.
+- reference: GO:0009767
+  notes: Gene Ontology biological-process term for the photosynthetic electron transport
+    chain.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
+- reference: DOI:10.1074/jbc.M809196200
+  notes: Baniulis et al. 2009, Structure-Function, Stability, and Chemical Modification
+    of the Cyanobacterial Cytochrome b6f Complex from Nostoc sp. PCC 7120, Journal
+    of Biological Chemistry.
+causal_graphs:
+- graph_id: b6f_plastoquinol_electron_coupling
+  title: Cytochrome b6f couples thylakoid quinol oxidation to proton transfer
+  description: In oxygenic thylakoid electron transport, cytochrome b6f receives electrons
+    from the plastoquinone pool, passes them toward PSI through a soluble carrier,
+    and contributes to the proton motive force.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph places the b6f complex in the electron-transport chain without
+    resolving its quinol-oxidation site, Rieske/cytochrome f relay, low-potential
+    chain, or species-specific soluble carrier.
+  nodes:
+  - node_id: thylakoid_membrane
+    label: thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0042651
+  - node_id: plastoquinone_pool
+    label: plastoquinone pool
+    node_type: CHEMICAL
+    description: Mobile quinone carrier that diffuses within the thylakoid membrane
+      between PSII and cytochrome b6f.
+  - node_id: cytb6f
+    label: cytochrome b6f complex
+    node_type: STRUCTURE
+    grounding: GO:0009512
+  - node_id: psi
+    label: photosystem I
+    node_type: STRUCTURE
+    grounding: GO:0009522
+  - node_id: proton_gradient
+    label: trans-thylakoid proton motive force
+    node_type: STATE
+  - node_id: electron_transport
+    label: photosynthetic electron transport chain
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009767
+  edges:
+  - subject: cytb6f
+    predicate: is part of
+    object: thylakoid_membrane
+    description: Cytochrome b6f is a thylakoid membrane complex in oxygenic photosynthetic
+      electron transport.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review cytochrome b6f as a major thylakoid
+        membrane electron-transport complex.
+  - subject: plastoquinone_pool
+    predicate: feeds electrons to
+    object: cytb6f
+    description: Reduced plastoquinone carries electrons through the thylakoid lipid
+      matrix to cytochrome b6f.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 describe electron transfer from plastoquinone
+        to cytochrome b6f in the thylakoid chain.
+  - subject: cytb6f
+    predicate: reduces the downstream carrier for
+    object: psi
+    description: Cytochrome b6f passes electrons to a soluble carrier that delivers
+      them to photosystem I.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 place cytochrome b6f between PSII and PSI in
+        thylakoid electron transport.
+  - subject: cytb6f
+    predicate: contributes to
+    object: proton_gradient
+    description: Cytochrome b6f links plastoquinol oxidation to proton movement toward
+      the thylakoid lumen.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review generation of proton motive force by
+        thylakoid electron transport.
+  - subject: cytb6f
+    predicate: contributes to
+    object: electron_transport
+    description: Cytochrome b6f is the intermediate quinol-oxidizing complex in the
+      photosynthetic electron-transport chain.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review cytochrome b6f as an intermediate thylakoid
+        complex in photosynthetic electron transport.
+discussions:
+- discussion_id: b6f_subunit_boundaries
+  prompt: Resolve exact source-neutral component groundings for cytochrome b6f core,
+    Rieske, and small subunit families before adding subunit-level component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#b6f_plastoquinol_electron_coupling
+  rationale: GO exactly grounds the complete b6f complex, but this first record does
+    not yet distinguish conserved b6f constituents from bound cofactors, lipids, or
+    organism-specific soluble electron carriers.
+  evidence:
+  - reference: DOI:10.1074/jbc.M809196200
+    notes: Baniulis et al. 2009 purified and structurally characterized the cyanobacterial
+      cytochrome b6f complex from Nostoc sp. PCC 7120.
+  posed_by: codex
+  posed_date: '2026-09-13'
