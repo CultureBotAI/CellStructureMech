@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ciliary_basal_body.yaml
+  slug: ciliary_basal_body
+session:
+  id: 2026-09-13T091320Z-codex-fca9e4
+  timestamp: '2026-09-13T09:13:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/767
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/766
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added ciliary basal body record
+  details: Created a PROPOSED GO:0036064 ciliary basal body record with GO synonymy, cilium
+    parthood, label-only triplet-microtubule and cartwheel substructures, Chlamydomonas scope,
+    a cilium-assembly function, DOI and GO evidence, a triplet-count physical property, a
+    nonmechanistic cartwheel-to-triplet assembly graph, and a TODO for exact substructure
+    groundings.
