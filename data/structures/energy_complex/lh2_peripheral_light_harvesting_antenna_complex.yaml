@@ -1,0 +1,153 @@
+identifier: cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+label: LH2 peripheral light-harvesting antenna complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A peripheral bacteriochlorophyll-containing light-harvesting antenna protein
+  complex of purple bacterial chromatophore membranes that broadens the photosynthetic
+  absorption cross-section and transfers excitation energy toward RC-LH1 reaction-center
+  core complexes.
+definition_source: DOI:10.1038/nature02823
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T06:10:36Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T06:11:10Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added LH2 synonymy, light-harvesting-complex parentage, chromatophore parthood,
+    purple-bacterial scope, a Cereibacter example, photosynthetic light-harvesting
+    function, GO/UniProt/literature evidence, a nonmechanistic LH2 excitation-transfer
+    graph, and an LH2 subunit-boundary TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: LH2 antenna complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/nature02823
+- synonym_text: peripheral light-harvesting complex 2
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/nature02823
+parent_structures:
+- GO:0030076
+part_of:
+- GO:0042717
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: RARE
+  note: LH2 antenna complexes occur in the chromatophore photosynthetic membranes
+    of purple bacteria rather than broadly across bacteria.
+  reference: uniprot.location:SL-0042
+canonical_examples:
+- taxon_id: NCBITaxon:1063
+  taxon_label: Cereibacter sphaeroides
+  note: Purple photosynthetic bacterium, still commonly cited under the synonym Rhodobacter
+    sphaeroides, whose native chromatophore membranes were imaged with LH2 complexes
+    surrounding RC-LH1-PufX core arrays.
+  reference: DOI:10.1038/nature02823
+functions:
+- function_id: photosynthetic_light_harvesting
+  label: photosynthetic light harvesting
+  description: The peripheral LH2 antenna broadens bacteriochlorophyll light capture
+    and transfers excitation energy inward toward reaction-center LH1 core complexes.
+  evidence:
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 resolved LH2 antenna complexes around RC-LH1-PufX
+      core arrays in native Rhodobacter sphaeroides photosynthetic membranes.
+  - reference: uniprot.location:SL-0042
+    notes: UniProt SL-0042 lists antenna complexes among the contents of cellular
+      chromatophore membranes.
+evidence:
+- reference: GO:0030076
+  notes: Gene Ontology cellular-component term for the broader light-harvesting complex
+    class.
+- reference: GO:0042717
+  notes: Gene Ontology cellular-component term for the plasma membrane-derived chromatophore
+    membrane that houses purple bacterial LH2 antenna complexes.
+- reference: uniprot.location:SL-0042
+  notes: UniProt Subcellular Location entry for the cellular chromatophore membrane;
+    maps to GO:0042717 and lists antenna complexes among the membrane contents.
+- reference: DOI:10.1038/nature02823
+  notes: Bahatyrova et al. 2004, The native architecture of a photosynthetic membrane,
+    Nature.
+causal_graphs:
+- graph_id: lh2_excitation_transfer
+  title: LH2 antennae feed purple-bacterial reaction-center cores
+  description: LH2 antenna complexes reside in the plasma membrane-derived chromatophore
+    membrane and transfer captured excitation energy toward RC-LH1-PufX reaction-center
+    core complexes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records chromatophore residence and directional excitation
+    flow without resolving LH2 alpha/beta subunit stoichiometry, pigment cofactors
+    or the RC-LH1-PufX core composition.
+  nodes:
+  - node_id: chromatophore_membrane
+    label: plasma membrane-derived chromatophore membrane
+    node_type: STRUCTURE
+    grounding: GO:0042717
+  - node_id: lh2
+    label: LH2 peripheral light-harvesting antenna complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  - node_id: rc_lh1_pufx
+    label: RC-LH1-PufX core complex
+    node_type: GENE_OR_PROTEIN
+    description: Purple-bacterial reaction-center and LH1 antenna core that receives
+      excitation energy from surrounding LH2 complexes.
+  - node_id: light_harvesting
+    label: photosynthetic light harvesting
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: lh2
+    predicate: is part of
+    object: chromatophore_membrane
+    description: Peripheral LH2 antenna complexes are embedded in the purple-bacterial
+      cellular chromatophore membrane.
+    evidence:
+    - reference: uniprot.location:SL-0042
+      notes: UniProt SL-0042 lists antenna complexes among the contents of cellular
+        chromatophore membranes.
+    - reference: DOI:10.1038/nature02823
+      notes: Bahatyrova et al. 2004 imaged LH2 complexes in native Rhodobacter sphaeroides
+        photosynthetic membranes.
+  - subject: lh2
+    predicate: transfers excitation energy to
+    object: rc_lh1_pufx
+    description: LH2 antenna complexes form peripheral light-capture domains that
+      feed excitation energy inward to RC-LH1-PufX reaction-center cores.
+    evidence:
+    - reference: DOI:10.1038/nature02823
+      notes: Bahatyrova et al. 2004 resolved LH2 complexes interconnecting and clustering
+        around RC-LH1-PufX core arrays in native Rhodobacter sphaeroides photosynthetic
+        membranes.
+  - subject: lh2
+    predicate: contributes to
+    object: light_harvesting
+    description: LH2 extends the bacteriochlorophyll antenna network used for purple-bacterial
+      photosynthetic light capture.
+    evidence:
+    - reference: DOI:10.1038/nature02823
+      notes: Bahatyrova et al. 2004 describe LH2 as a peripheral antenna complex in
+        the native Rhodobacter photosynthetic membrane.
+discussions:
+- discussion_id: lh2_subunit_boundaries
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact source-neutral component groundings for LH2 alpha and beta
+    apoprotein families and bacteriochlorophyll cofactor boundaries before adding
+    component rows.
+  attaches_to:
+  - causal_graphs#lh2_excitation_transfer
+  rationale: The first LH2 record grounds the complex itself at a minted CellStructureMech
+    identifier under GO:0030076, but it does not guess whether available protein-family
+    terms exactly match the full purple-bacterial LH2 subunit families.
+  evidence:
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 resolve intact LH2 complexes in Rhodobacter sphaeroides
+      chromatophore membranes but do not provide a source-neutral CURIE for every
+      LH2 constituent.
+  posed_by: codex
+  posed_date: '2026-09-13'

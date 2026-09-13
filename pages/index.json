@@ -531,6 +531,15 @@
   "definition": "A thylakoid membrane protein complex that oxidizes plastoquinol, reduces a downstream soluble electron carrier for photosystem I, and contributes to proton translocation during oxygenic photosynthetic electron transport."
  },
  {
+  "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
+  "label": "LH2 peripheral light-harvesting antenna complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.html",
+  "definition": "A peripheral bacteriochlorophyll-containing light-harvesting antenna protein complex of purple bacterial chromatophore membranes that broadens the photosynthetic absorption cross-section and transfers excitation energy toward RC-LH1 reaction-center core complexes."
+ },
+ {
   "identifier": "GO:0030089",
   "label": "phycobilisome",
   "category": "ENERGY_COMPLEX",
