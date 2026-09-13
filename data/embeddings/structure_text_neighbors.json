@@ -25,7 +25,7 @@
         {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
-          "cosine_similarity": 0.61911943
+          "cosine_similarity": 0.61911942
         },
         {
           "identifier": "GO:0043591",
@@ -46,12 +46,12 @@
         {
           "identifier": "GO:0120101",
           "label": "bacterial-type flagellum stator complex",
-          "cosine_similarity": 0.77370866
+          "cosine_similarity": 0.77370865
         },
         {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.76555918
+          "cosine_similarity": 0.76555919
         },
         {
           "identifier": "GO:0009420",
@@ -66,7 +66,7 @@
         {
           "identifier": "GO:0009427",
           "label": "bacterial-type flagellum basal body, distal rod, L ring",
-          "cosine_similarity": 0.75305227
+          "cosine_similarity": 0.75305226
         }
       ]
     },
@@ -77,7 +77,7 @@
         {
           "identifier": "cellstructuremech:p_pilus",
           "label": "P pilus",
-          "cosine_similarity": 0.76673741
+          "cosine_similarity": 0.7667374
         },
         {
           "identifier": "GO:0140621",
@@ -87,12 +87,12 @@
         {
           "identifier": "GO:0033111",
           "label": "attachment organelle membrane",
-          "cosine_similarity": 0.73710757
+          "cosine_similarity": 0.73710758
         },
         {
           "identifier": "GO:0044096",
           "label": "type IV pilus",
-          "cosine_similarity": 0.73606457
+          "cosine_similarity": 0.73606456
         },
         {
           "identifier": "GO:0140737",
@@ -108,7 +108,7 @@
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.82437152
+          "cosine_similarity": 0.82437153
         },
         {
           "identifier": "GO:0160211",
@@ -118,17 +118,17 @@
         {
           "identifier": "GO:0009707",
           "label": "chloroplast outer membrane",
-          "cosine_similarity": 0.81349334
+          "cosine_similarity": 0.81349336
+        },
+        {
+          "identifier": "cellstructuremech:mitosome_outer_membrane",
+          "label": "mitosome outer membrane",
+          "cosine_similarity": 0.81301511
         },
         {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.80638629
-        },
-        {
-          "identifier": "GO:0009706",
-          "label": "chloroplast inner membrane",
-          "cosine_similarity": 0.80630161
+          "cosine_similarity": 0.8063863
         }
       ]
     },
@@ -154,7 +154,7 @@
         {
           "identifier": "GO:0009424",
           "label": "bacterial-type flagellum hook",
-          "cosine_similarity": 0.86372059
+          "cosine_similarity": 0.86372058
         },
         {
           "identifier": "GO:0009433",
@@ -268,7 +268,7 @@
         {
           "identifier": "GO:0009431",
           "label": "bacterial-type flagellum basal body, MS ring",
-          "cosine_similarity": 0.92849267
+          "cosine_similarity": 0.92849268
         },
         {
           "identifier": "GO:0009426",
@@ -283,7 +283,7 @@
         {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
-          "cosine_similarity": 0.87644536
+          "cosine_similarity": 0.87644535
         }
       ]
     },
@@ -325,7 +325,7 @@
         {
           "identifier": "GO:0009427",
           "label": "bacterial-type flagellum basal body, distal rod, L ring",
-          "cosine_similarity": 0.92849267
+          "cosine_similarity": 0.92849268
         },
         {
           "identifier": "GO:0009428",
@@ -376,7 +376,7 @@
         {
           "identifier": "GO:0009428",
           "label": "bacterial-type flagellum basal body, distal rod, P ring",
-          "cosine_similarity": 0.86337471
+          "cosine_similarity": 0.8633747
         }
       ]
     },
@@ -423,7 +423,7 @@
         {
           "identifier": "GO:0009424",
           "label": "bacterial-type flagellum hook",
-          "cosine_similarity": 0.8714675
+          "cosine_similarity": 0.87146749
         },
         {
           "identifier": "GO:0009421",
@@ -454,7 +454,7 @@
         {
           "identifier": "GO:0009427",
           "label": "bacterial-type flagellum basal body, distal rod, L ring",
-          "cosine_similarity": 0.84908458
+          "cosine_similarity": 0.84908457
         },
         {
           "identifier": "GO:0009428",
@@ -469,7 +469,7 @@
         {
           "identifier": "GO:0009431",
           "label": "bacterial-type flagellum basal body, MS ring",
-          "cosine_similarity": 0.83436755
+          "cosine_similarity": 0.83436754
         }
       ]
     },
@@ -480,17 +480,17 @@
         {
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
-          "cosine_similarity": 0.8714675
+          "cosine_similarity": 0.87146749
         },
         {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.86372059
+          "cosine_similarity": 0.86372058
         },
         {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
-          "cosine_similarity": 0.84723927
+          "cosine_similarity": 0.84723926
         },
         {
           "identifier": "GO:0009421",
@@ -516,12 +516,12 @@
         {
           "identifier": "GO:0009421",
           "label": "bacterial-type flagellum filament cap",
-          "cosine_similarity": 0.81631995
+          "cosine_similarity": 0.81631994
         },
         {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.78855992
+          "cosine_similarity": 0.78855991
         },
         {
           "identifier": "GO:0009425",
@@ -531,7 +531,7 @@
         {
           "identifier": "GO:0009433",
           "label": "bacterial-type flagellum basal body, C ring",
-          "cosine_similarity": 0.73377476
+          "cosine_similarity": 0.73377475
         }
       ]
     },
@@ -681,12 +681,12 @@
         {
           "identifier": "GO:0020010",
           "label": "conoid",
-          "cosine_similarity": 0.7002841
+          "cosine_similarity": 0.70028409
         },
         {
           "identifier": "GO:0020016",
           "label": "flagellar pocket",
-          "cosine_similarity": 0.7000228
+          "cosine_similarity": 0.70002279
         }
       ]
     },
@@ -697,7 +697,7 @@
         {
           "identifier": "GO:0009289",
           "label": "pilus",
-          "cosine_similarity": 0.72769839
+          "cosine_similarity": 0.72769838
         },
         {
           "identifier": "cellstructuremech:parm_filament",
@@ -707,17 +707,17 @@
         {
           "identifier": "GO:0044096",
           "label": "type IV pilus",
-          "cosine_similarity": 0.6379579
+          "cosine_similarity": 0.63795789
         },
         {
           "identifier": "cellstructuremech:tad_pilus",
           "label": "Tad pilus",
-          "cosine_similarity": 0.63494728
+          "cosine_similarity": 0.63494727
         },
         {
           "identifier": "GO:0140621",
           "label": "type I pilus",
-          "cosine_similarity": 0.63331013
+          "cosine_similarity": 0.63331012
         }
       ]
     },
@@ -733,7 +733,7 @@
         {
           "identifier": "GO:0097589",
           "label": "archaeal-type flagellum",
-          "cosine_similarity": 0.63749256
+          "cosine_similarity": 0.63749255
         },
         {
           "identifier": "GO:0033099",
@@ -743,7 +743,7 @@
         {
           "identifier": "GO:0009289",
           "label": "pilus",
-          "cosine_similarity": 0.61323208
+          "cosine_similarity": 0.61323207
         },
         {
           "identifier": "cellstructuremech:archaeal_cannula",
@@ -759,7 +759,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.57328772
+          "cosine_similarity": 0.57328771
         },
         {
           "identifier": "GO:0009289",
@@ -769,12 +769,12 @@
         {
           "identifier": "cellstructuremech:archaeal_cannula",
           "label": "archaeal cannula",
-          "cosine_similarity": 0.55634324
+          "cosine_similarity": 0.55634323
         },
         {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
-          "cosine_similarity": 0.55588216
+          "cosine_similarity": 0.55588214
         },
         {
           "identifier": "GO:0009424",
@@ -790,7 +790,7 @@
         {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
-          "cosine_similarity": 0.70396294
+          "cosine_similarity": 0.70396293
         },
         {
           "identifier": "GO:0009421",
@@ -831,7 +831,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.62772385
+          "cosine_similarity": 0.62772384
         },
         {
           "identifier": "GO:0009424",
@@ -862,7 +862,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.61212428
+          "cosine_similarity": 0.61212426
         },
         {
           "identifier": "GO:0009424",
@@ -893,12 +893,12 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.62410555
+          "cosine_similarity": 0.62410554
         },
         {
           "identifier": "GO:0098774",
           "label": "curli",
-          "cosine_similarity": 0.59884289
+          "cosine_similarity": 0.59884288
         },
         {
           "identifier": "GO:0009424",
@@ -924,17 +924,17 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.76673741
+          "cosine_similarity": 0.7667374
         },
         {
           "identifier": "GO:0009289",
           "label": "pilus",
-          "cosine_similarity": 0.71596828
+          "cosine_similarity": 0.71596829
         },
         {
           "identifier": "cellstructuremech:tad_pilus",
           "label": "Tad pilus",
-          "cosine_similarity": 0.70199159
+          "cosine_similarity": 0.70199158
         }
       ]
     },
@@ -955,7 +955,7 @@
         {
           "identifier": "GO:0009428",
           "label": "bacterial-type flagellum basal body, distal rod, P ring",
-          "cosine_similarity": 0.75484994
+          "cosine_similarity": 0.75484995
         },
         {
           "identifier": "GO:0009426",
@@ -965,7 +965,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.72691909
+          "cosine_similarity": 0.7269191
         }
       ]
     },
@@ -986,17 +986,17 @@
         {
           "identifier": "GO:0009424",
           "label": "bacterial-type flagellum hook",
-          "cosine_similarity": 0.84723927
+          "cosine_similarity": 0.84723926
         },
         {
           "identifier": "GO:0009427",
           "label": "bacterial-type flagellum basal body, distal rod, L ring",
-          "cosine_similarity": 0.83162467
+          "cosine_similarity": 0.83162468
         },
         {
           "identifier": "GO:0009421",
           "label": "bacterial-type flagellum filament cap",
-          "cosine_similarity": 0.83117824
+          "cosine_similarity": 0.83117823
         }
       ]
     },
@@ -1012,7 +1012,7 @@
         {
           "identifier": "GO:0044096",
           "label": "type IV pilus",
-          "cosine_similarity": 0.80981144
+          "cosine_similarity": 0.80981145
         },
         {
           "identifier": "GO:0140621",
@@ -1027,7 +1027,7 @@
         {
           "identifier": "GO:0098774",
           "label": "curli",
-          "cosine_similarity": 0.72769839
+          "cosine_similarity": 0.72769838
         }
       ]
     },
@@ -1074,7 +1074,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.68953295
+          "cosine_similarity": 0.68953296
         },
         {
           "identifier": "GO:0033111",
@@ -1115,12 +1115,12 @@
         {
           "identifier": "GO:0140621",
           "label": "type I pilus",
-          "cosine_similarity": 0.71221265
+          "cosine_similarity": 0.71221264
         },
         {
           "identifier": "cellstructuremech:p_pilus",
           "label": "P pilus",
-          "cosine_similarity": 0.70199159
+          "cosine_similarity": 0.70199158
         }
       ]
     },
@@ -1172,7 +1172,7 @@
         {
           "identifier": "GO:0009289",
           "label": "pilus",
-          "cosine_similarity": 0.80981144
+          "cosine_similarity": 0.80981145
         },
         {
           "identifier": "cellstructuremech:p_pilus",
@@ -1182,7 +1182,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.73606457
+          "cosine_similarity": 0.73606456
         }
       ]
     },
@@ -1275,7 +1275,7 @@
         {
           "identifier": "cellstructuremech:mamk_filament",
           "label": "MamK filament",
-          "cosine_similarity": 0.73054402
+          "cosine_similarity": 0.73054401
         }
       ]
     },
@@ -1291,7 +1291,7 @@
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.79860143
+          "cosine_similarity": 0.79860144
         },
         {
           "identifier": "GO:0097268",
@@ -1322,7 +1322,7 @@
         {
           "identifier": "GO:0120119",
           "label": "flagellum attachment zone",
-          "cosine_similarity": 0.75232435
+          "cosine_similarity": 0.75232434
         },
         {
           "identifier": "GO:0055040",
@@ -1337,7 +1337,7 @@
         {
           "identifier": "GO:0030694",
           "label": "bacterial-type flagellum basal body, rod",
-          "cosine_similarity": 0.72899263
+          "cosine_similarity": 0.72899262
         }
       ]
     },
@@ -1358,7 +1358,7 @@
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.73306108
+          "cosine_similarity": 0.73306109
         },
         {
           "identifier": "cellstructuremech:phuz_spindle",
@@ -1379,7 +1379,7 @@
         {
           "identifier": "cellstructuremech:crescentin_filament",
           "label": "crescentin filament",
-          "cosine_similarity": 0.75613569
+          "cosine_similarity": 0.7561357
         },
         {
           "identifier": "cellstructuremech:tubz_filament",
@@ -1389,12 +1389,12 @@
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.72104289
+          "cosine_similarity": 0.7210429
         },
         {
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
-          "cosine_similarity": 0.71838324
+          "cosine_similarity": 0.71838326
         },
         {
           "identifier": "cellstructuremech:parm_filament",
@@ -1430,7 +1430,7 @@
         {
           "identifier": "cellstructuremech:cetz_filament",
           "label": "CetZ filament",
-          "cosine_similarity": 0.71838324
+          "cosine_similarity": 0.71838326
         }
       ]
     },
@@ -1446,17 +1446,17 @@
         {
           "identifier": "GO:0020016",
           "label": "flagellar pocket",
-          "cosine_similarity": 0.79816
+          "cosine_similarity": 0.79816001
         },
         {
           "identifier": "GO:0120119",
           "label": "flagellum attachment zone",
-          "cosine_similarity": 0.7538014
+          "cosine_similarity": 0.75380139
         },
         {
           "identifier": "GO:0009431",
           "label": "bacterial-type flagellum basal body, MS ring",
-          "cosine_similarity": 0.69684094
+          "cosine_similarity": 0.69684093
         },
         {
           "identifier": "GO:0030694",
@@ -1472,7 +1472,7 @@
         {
           "identifier": "GO:0020031",
           "label": "polar ring of apical complex",
-          "cosine_similarity": 0.78421527
+          "cosine_similarity": 0.78421528
         },
         {
           "identifier": "GO:0020007",
@@ -1492,7 +1492,7 @@
         {
           "identifier": "GO:0070258",
           "label": "inner membrane pellicle complex",
-          "cosine_similarity": 0.71734873
+          "cosine_similarity": 0.71734874
         }
       ]
     },
@@ -1518,7 +1518,7 @@
         {
           "identifier": "cellstructuremech:cetz_filament",
           "label": "CetZ filament",
-          "cosine_similarity": 0.75613569
+          "cosine_similarity": 0.7561357
         },
         {
           "identifier": "GO:0009420",
@@ -1544,7 +1544,7 @@
         {
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
-          "cosine_similarity": 0.73801321
+          "cosine_similarity": 0.73801322
         },
         {
           "identifier": "GO:0009421",
@@ -1554,7 +1554,7 @@
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.7247002
+          "cosine_similarity": 0.72470019
         }
       ]
     },
@@ -1565,22 +1565,22 @@
         {
           "identifier": "GO:1990900",
           "label": "ciliary pocket collar",
-          "cosine_similarity": 0.7538014
+          "cosine_similarity": 0.75380139
         },
         {
           "identifier": "GO:0120120",
           "label": "bilobe structure",
-          "cosine_similarity": 0.75232435
+          "cosine_similarity": 0.75232434
         },
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.69710874
+          "cosine_similarity": 0.69710873
         },
         {
           "identifier": "cellstructuremech:mamk_filament",
           "label": "MamK filament",
-          "cosine_similarity": 0.6829247
+          "cosine_similarity": 0.68292469
         },
         {
           "identifier": "GO:1990586",
@@ -1627,7 +1627,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.85022891
+          "cosine_similarity": 0.8502289
         },
         {
           "identifier": "cellstructuremech:mamk_filament",
@@ -1647,7 +1647,7 @@
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.79860143
+          "cosine_similarity": 0.79860144
         }
       ]
     },
@@ -1678,7 +1678,7 @@
         {
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
-          "cosine_similarity": 0.7670901
+          "cosine_similarity": 0.76709011
         }
       ]
     },
@@ -1725,22 +1725,22 @@
         {
           "identifier": "GO:0020010",
           "label": "conoid",
-          "cosine_similarity": 0.78421527
+          "cosine_similarity": 0.78421528
         },
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.7252021
+          "cosine_similarity": 0.72520211
         },
         {
           "identifier": "GO:0005826",
           "label": "actomyosin contractile ring",
-          "cosine_similarity": 0.68521084
+          "cosine_similarity": 0.68521085
         },
         {
           "identifier": "GO:1990225",
           "label": "rhoptry neck",
-          "cosine_similarity": 0.67125492
+          "cosine_similarity": 0.67125494
         }
       ]
     },
@@ -1797,7 +1797,7 @@
         {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.72444485
+          "cosine_similarity": 0.72444484
         },
         {
           "identifier": "GO:0036064",
@@ -1813,7 +1813,7 @@
         {
           "identifier": "GO:0020023",
           "label": "kinetoplast",
-          "cosine_similarity": 0.74816412
+          "cosine_similarity": 0.74816411
         },
         {
           "identifier": "GO:0042645",
@@ -1823,17 +1823,17 @@
         {
           "identifier": "GO:0005739",
           "label": "mitochondrion",
-          "cosine_similarity": 0.73531073
+          "cosine_similarity": 0.73531072
         },
         {
           "identifier": "GO:0120120",
           "label": "bilobe structure",
-          "cosine_similarity": 0.71822126
+          "cosine_similarity": 0.71822125
         },
         {
           "identifier": "GO:0005740",
           "label": "mitochondrial envelope",
-          "cosine_similarity": 0.71203731
+          "cosine_similarity": 0.7120373
         }
       ]
     },
@@ -1885,7 +1885,7 @@
         {
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
-          "cosine_similarity": 0.65770914
+          "cosine_similarity": 0.65770915
         },
         {
           "identifier": "GO:0020031",
@@ -1911,7 +1911,7 @@
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.72273141
+          "cosine_similarity": 0.7227314
         },
         {
           "identifier": "GO:0005930",
@@ -1937,7 +1937,7 @@
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.85022891
+          "cosine_similarity": 0.8502289
         },
         {
           "identifier": "GO:0009425",
@@ -2102,7 +2102,7 @@
         {
           "identifier": "GO:0009512",
           "label": "cytochrome b6f complex",
-          "cosine_similarity": 0.73516046
+          "cosine_similarity": 0.73516045
         },
         {
           "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
@@ -2169,12 +2169,12 @@
         {
           "identifier": "GO:0042651",
           "label": "thylakoid membrane",
-          "cosine_similarity": 0.82987189
+          "cosine_similarity": 0.8298719
         },
         {
           "identifier": "GO:0031979",
           "label": "plasma membrane-derived thylakoid lumen",
-          "cosine_similarity": 0.75801971
+          "cosine_similarity": 0.7580197
         }
       ]
     },
@@ -2257,12 +2257,12 @@
         {
           "identifier": "GO:0000324",
           "label": "fungal-type vacuole",
-          "cosine_similarity": 0.67614597
+          "cosine_similarity": 0.67614598
         },
         {
           "identifier": "GO:0020022",
           "label": "acidocalcisome",
-          "cosine_similarity": 0.66884692
+          "cosine_similarity": 0.66884693
         },
         {
           "identifier": "GO:0015627",
@@ -2278,12 +2278,12 @@
         {
           "identifier": "GO:0009276",
           "label": "Gram-negative-bacterium-type cell wall",
-          "cosine_similarity": 0.74787559
+          "cosine_similarity": 0.74787558
         },
         {
           "identifier": "GO:0009274",
           "label": "peptidoglycan-based cell wall",
-          "cosine_similarity": 0.72436892
+          "cosine_similarity": 0.72436891
         },
         {
           "identifier": "GO:0009279",
@@ -2319,7 +2319,7 @@
         {
           "identifier": "GO:0061701",
           "label": "bacterial outer membrane vesicle",
-          "cosine_similarity": 0.8577497
+          "cosine_similarity": 0.85774971
         },
         {
           "identifier": "GO:0036407",
@@ -2422,7 +2422,7 @@
         {
           "identifier": "GO:0042603",
           "label": "capsule",
-          "cosine_similarity": 0.74787559
+          "cosine_similarity": 0.74787558
         }
       ]
     },
@@ -2438,7 +2438,7 @@
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.78751555
+          "cosine_similarity": 0.78751556
         },
         {
           "identifier": "GO:0033111",
@@ -2448,12 +2448,12 @@
         {
           "identifier": "GO:0061701",
           "label": "bacterial outer membrane vesicle",
-          "cosine_similarity": 0.73845086
+          "cosine_similarity": 0.73845087
         },
         {
           "identifier": "GO:0097691",
           "label": "bacterial extracellular vesicle",
-          "cosine_similarity": 0.73292739
+          "cosine_similarity": 0.7329274
         }
       ]
     },
@@ -2536,17 +2536,17 @@
         {
           "identifier": "GO:0061701",
           "label": "bacterial outer membrane vesicle",
-          "cosine_similarity": 0.82932389
+          "cosine_similarity": 0.8293239
         },
         {
           "identifier": "GO:0033111",
           "label": "attachment organelle membrane",
-          "cosine_similarity": 0.82437152
+          "cosine_similarity": 0.82437153
         },
         {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.81709341
+          "cosine_similarity": 0.8170934
         }
       ]
     },
@@ -2572,7 +2572,7 @@
         {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
-          "cosine_similarity": 0.71909581
+          "cosine_similarity": 0.71909582
         },
         {
           "identifier": "GO:0042603",
@@ -2634,7 +2634,7 @@
         {
           "identifier": "cellstructuremech:r_body",
           "label": "R-body",
-          "cosine_similarity": 0.62735504
+          "cosine_similarity": 0.62735503
         },
         {
           "identifier": "GO:0042603",
@@ -2691,7 +2691,7 @@
         {
           "identifier": "GO:0033107",
           "label": "Cvt vesicle",
-          "cosine_similarity": 0.72513456
+          "cosine_similarity": 0.72513455
         },
         {
           "identifier": "GO:0061701",
@@ -2717,12 +2717,12 @@
         {
           "identifier": "GO:0070088",
           "label": "polyhydroxyalkanoate granule",
-          "cosine_similarity": 0.75125276
+          "cosine_similarity": 0.75125275
         },
         {
           "identifier": "GO:0031411",
           "label": "gas vesicle",
-          "cosine_similarity": 0.63834471
+          "cosine_similarity": 0.6383447
         },
         {
           "identifier": "GO:0033172",
@@ -2753,17 +2753,17 @@
         {
           "identifier": "GO:0046859",
           "label": "hydrogenosomal membrane",
-          "cosine_similarity": 0.65016202
+          "cosine_similarity": 0.650162
         },
         {
           "identifier": "GO:0010287",
           "label": "plastoglobule",
-          "cosine_similarity": 0.64302113
+          "cosine_similarity": 0.64302114
         },
         {
           "identifier": "GO:0033016",
           "label": "rhoptry membrane",
-          "cosine_similarity": 0.63804917
+          "cosine_similarity": 0.63804916
         }
       ]
     },
@@ -2774,12 +2774,12 @@
         {
           "identifier": "GO:0009507",
           "label": "chloroplast",
-          "cosine_similarity": 0.74228956
+          "cosine_similarity": 0.74228955
         },
         {
           "identifier": "GO:0009707",
           "label": "chloroplast outer membrane",
-          "cosine_similarity": 0.73346262
+          "cosine_similarity": 0.73346263
         },
         {
           "identifier": "GO:0031972",
@@ -2789,7 +2789,7 @@
         {
           "identifier": "GO:0009534",
           "label": "chloroplast thylakoid",
-          "cosine_similarity": 0.72318495
+          "cosine_similarity": 0.72318493
         },
         {
           "identifier": "GO:0009570",
@@ -2805,7 +2805,7 @@
         {
           "identifier": "cellstructuremech:glycogen_granule",
           "label": "glycogen granule",
-          "cosine_similarity": 0.75125276
+          "cosine_similarity": 0.75125275
         },
         {
           "identifier": "cellstructuremech:cyanophycin_granule",
@@ -2820,7 +2820,7 @@
         {
           "identifier": "GO:0020022",
           "label": "acidocalcisome",
-          "cosine_similarity": 0.67467032
+          "cosine_similarity": 0.67467033
         },
         {
           "identifier": "GO:0033172",
@@ -2841,7 +2841,7 @@
         {
           "identifier": "cellstructuremech:cyanophycin_granule",
           "label": "cyanophycin granule",
-          "cosine_similarity": 0.62735504
+          "cosine_similarity": 0.62735503
         },
         {
           "identifier": "GO:0009428",
@@ -2877,12 +2877,12 @@
         {
           "identifier": "GO:0033172",
           "label": "gas vesicle shell",
-          "cosine_similarity": 0.60237018
+          "cosine_similarity": 0.60237017
         },
         {
           "identifier": "GO:0031469",
           "label": "bacterial microcompartment",
-          "cosine_similarity": 0.5981024
+          "cosine_similarity": 0.59810239
         },
         {
           "identifier": "GO:0140737",
@@ -2898,7 +2898,7 @@
         {
           "identifier": "GO:0033102",
           "label": "acidocalcisome membrane",
-          "cosine_similarity": 0.91302201
+          "cosine_similarity": 0.91302202
         },
         {
           "identifier": "GO:0033985",
@@ -2913,7 +2913,7 @@
         {
           "identifier": "GO:0070112",
           "label": "organellar chromatophore membrane",
-          "cosine_similarity": 0.73510313
+          "cosine_similarity": 0.73510312
         },
         {
           "identifier": "GO:0042717",
@@ -2944,7 +2944,7 @@
         {
           "identifier": "GO:0031979",
           "label": "plasma membrane-derived thylakoid lumen",
-          "cosine_similarity": 0.81233448
+          "cosine_similarity": 0.81233449
         },
         {
           "identifier": "GO:0034492",
@@ -2960,7 +2960,7 @@
         {
           "identifier": "GO:0020022",
           "label": "acidocalcisome",
-          "cosine_similarity": 0.91302201
+          "cosine_similarity": 0.91302202
         },
         {
           "identifier": "GO:0033985",
@@ -2970,12 +2970,12 @@
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.8046853
+          "cosine_similarity": 0.80468531
         },
         {
           "identifier": "GO:0033016",
           "label": "rhoptry membrane",
-          "cosine_similarity": 0.77947293
+          "cosine_similarity": 0.77947294
         },
         {
           "identifier": "GO:0033118",
@@ -2996,7 +2996,7 @@
         {
           "identifier": "GO:0042566",
           "label": "hydrogenosome",
-          "cosine_similarity": 0.77681642
+          "cosine_similarity": 0.77681643
         },
         {
           "identifier": "GO:0044227",
@@ -3032,17 +3032,17 @@
         {
           "identifier": "cellstructuremech:mitosome_inner_membrane",
           "label": "mitosome inner membrane",
-          "cosine_similarity": 0.86225623
+          "cosine_similarity": 0.86225622
+        },
+        {
+          "identifier": "cellstructuremech:mitosome_outer_membrane",
+          "label": "mitosome outer membrane",
+          "cosine_similarity": 0.86059914
         },
         {
           "identifier": "GO:0110146",
           "label": "magnetosome membrane",
-          "cosine_similarity": 0.83136436
-        },
-        {
-          "identifier": "cellstructuremech:mitosome_envelope",
-          "label": "mitosome envelope",
-          "cosine_similarity": 0.82117162
+          "cosine_similarity": 0.83136435
         }
       ]
     },
@@ -3053,7 +3053,7 @@
         {
           "identifier": "cellstructuremech:parasitophorous_vacuole",
           "label": "parasitophorous vacuole",
-          "cosine_similarity": 0.81201179
+          "cosine_similarity": 0.8120118
         },
         {
           "identifier": "cellstructuremech:parasitophorous_vacuole_membrane",
@@ -3063,7 +3063,7 @@
         {
           "identifier": "GO:0020020",
           "label": "food vacuole",
-          "cosine_similarity": 0.76446252
+          "cosine_similarity": 0.76446253
         },
         {
           "identifier": "GO:0036000",
@@ -3073,7 +3073,7 @@
         {
           "identifier": "cellstructuremech:parasitophorous_vacuole_lumen",
           "label": "parasitophorous vacuole lumen",
-          "cosine_similarity": 0.75423628
+          "cosine_similarity": 0.75423629
         }
       ]
     },
@@ -3094,7 +3094,7 @@
         {
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
-          "cosine_similarity": 0.73277355
+          "cosine_similarity": 0.73277354
         },
         {
           "identifier": "cellstructuremech:parasitophorous_vacuole",
@@ -3135,7 +3135,7 @@
         {
           "identifier": "GO:0046860",
           "label": "glycosome membrane",
-          "cosine_similarity": 0.7925759
+          "cosine_similarity": 0.79257589
         }
       ]
     },
@@ -3146,12 +3146,12 @@
         {
           "identifier": "GO:0000324",
           "label": "fungal-type vacuole",
-          "cosine_similarity": 0.82596311
+          "cosine_similarity": 0.82596312
         },
         {
           "identifier": "GO:0005768",
           "label": "endosome",
-          "cosine_similarity": 0.81014223
+          "cosine_similarity": 0.81014224
         },
         {
           "identifier": "GO:0033107",
@@ -3161,7 +3161,7 @@
         {
           "identifier": "GO:0033110",
           "label": "Cvt vesicle membrane",
-          "cosine_similarity": 0.77619475
+          "cosine_similarity": 0.77619476
         },
         {
           "identifier": "GO:0005783",
@@ -3223,7 +3223,7 @@
         {
           "identifier": "GO:0009707",
           "label": "chloroplast outer membrane",
-          "cosine_similarity": 0.90427718
+          "cosine_similarity": 0.90427719
         },
         {
           "identifier": "GO:0009706",
@@ -3244,17 +3244,17 @@
         {
           "identifier": "GO:0009707",
           "label": "chloroplast outer membrane",
-          "cosine_similarity": 0.91347582
+          "cosine_similarity": 0.91347583
         },
         {
           "identifier": "GO:0009706",
           "label": "chloroplast inner membrane",
-          "cosine_similarity": 0.89612749
+          "cosine_similarity": 0.8961275
         },
         {
           "identifier": "GO:0009570",
           "label": "chloroplast stroma",
-          "cosine_similarity": 0.86361632
+          "cosine_similarity": 0.86361633
         },
         {
           "identifier": "GO:0009535",
@@ -3306,7 +3306,7 @@
         {
           "identifier": "GO:0009707",
           "label": "chloroplast outer membrane",
-          "cosine_similarity": 0.92746725
+          "cosine_similarity": 0.92746726
         },
         {
           "identifier": "GO:0009706",
@@ -3321,7 +3321,7 @@
         {
           "identifier": "GO:0009507",
           "label": "chloroplast",
-          "cosine_similarity": 0.86207481
+          "cosine_similarity": 0.8620748
         }
       ]
     },
@@ -3337,12 +3337,12 @@
         {
           "identifier": "GO:0031972",
           "label": "chloroplast intermembrane space",
-          "cosine_similarity": 0.92746725
+          "cosine_similarity": 0.92746726
         },
         {
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
-          "cosine_similarity": 0.91347582
+          "cosine_similarity": 0.91347583
         },
         {
           "identifier": "GO:0009535",
@@ -3352,7 +3352,7 @@
         {
           "identifier": "GO:0009507",
           "label": "chloroplast",
-          "cosine_similarity": 0.90427718
+          "cosine_similarity": 0.90427719
         }
       ]
     },
@@ -3383,7 +3383,7 @@
         {
           "identifier": "GO:0009707",
           "label": "chloroplast outer membrane",
-          "cosine_similarity": 0.89092233
+          "cosine_similarity": 0.89092234
         }
       ]
     },
@@ -3404,7 +3404,7 @@
         {
           "identifier": "GO:0009543",
           "label": "chloroplast thylakoid lumen",
-          "cosine_similarity": 0.90059344
+          "cosine_similarity": 0.90059343
         },
         {
           "identifier": "GO:0009570",
@@ -3414,7 +3414,7 @@
         {
           "identifier": "GO:0009707",
           "label": "chloroplast outer membrane",
-          "cosine_similarity": 0.86913482
+          "cosine_similarity": 0.86913484
         }
       ]
     },
@@ -3435,7 +3435,7 @@
         {
           "identifier": "GO:0009534",
           "label": "chloroplast thylakoid",
-          "cosine_similarity": 0.90059344
+          "cosine_similarity": 0.90059343
         },
         {
           "identifier": "GO:0009535",
@@ -3476,7 +3476,7 @@
         {
           "identifier": "GO:0033115",
           "label": "cyanelle thylakoid membrane",
-          "cosine_similarity": 0.89930226
+          "cosine_similarity": 0.89930225
         }
       ]
     },
@@ -3497,7 +3497,7 @@
         {
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
-          "cosine_similarity": 0.79015844
+          "cosine_similarity": 0.79015845
         },
         {
           "identifier": "GO:0009507",
@@ -3533,12 +3533,12 @@
         {
           "identifier": "cellstructuremech:mitosome_envelope",
           "label": "mitosome envelope",
-          "cosine_similarity": 0.79323697
+          "cosine_similarity": 0.79290119
         },
         {
           "identifier": "GO:0009707",
           "label": "chloroplast outer membrane",
-          "cosine_similarity": 0.79014805
+          "cosine_similarity": 0.79014806
         }
       ]
     },
@@ -3564,12 +3564,12 @@
         {
           "identifier": "GO:0033110",
           "label": "Cvt vesicle membrane",
-          "cosine_similarity": 0.80249112
+          "cosine_similarity": 0.80249113
         },
         {
           "identifier": "GO:0033016",
           "label": "rhoptry membrane",
-          "cosine_similarity": 0.77425003
+          "cosine_similarity": 0.77425004
         }
       ]
     },
@@ -3590,7 +3590,7 @@
         {
           "identifier": "GO:0062160",
           "label": "spongiome",
-          "cosine_similarity": 0.81297773
+          "cosine_similarity": 0.81297774
         },
         {
           "identifier": "GO:0000324",
@@ -3600,7 +3600,7 @@
         {
           "identifier": "GO:0033107",
           "label": "Cvt vesicle",
-          "cosine_similarity": 0.79267247
+          "cosine_similarity": 0.79267248
         }
       ]
     },
@@ -3626,12 +3626,12 @@
         {
           "identifier": "GO:0033985",
           "label": "acidocalcisome lumen",
-          "cosine_similarity": 0.76823881
+          "cosine_similarity": 0.76823882
         },
         {
           "identifier": "GO:0034591",
           "label": "rhoptry lumen",
-          "cosine_similarity": 0.75942932
+          "cosine_similarity": 0.75942933
         }
       ]
     },
@@ -3647,7 +3647,7 @@
         {
           "identifier": "GO:0000324",
           "label": "fungal-type vacuole",
-          "cosine_similarity": 0.82641513
+          "cosine_similarity": 0.82641514
         },
         {
           "identifier": "GO:0005768",
@@ -3662,7 +3662,7 @@
         {
           "identifier": "GO:0061701",
           "label": "bacterial outer membrane vesicle",
-          "cosine_similarity": 0.79940088
+          "cosine_similarity": 0.79940087
         }
       ]
     },
@@ -3678,12 +3678,12 @@
         {
           "identifier": "GO:0061701",
           "label": "bacterial outer membrane vesicle",
-          "cosine_similarity": 0.82531055
+          "cosine_similarity": 0.82531054
         },
         {
           "identifier": "GO:0031164",
           "label": "contractile vacuolar membrane",
-          "cosine_similarity": 0.80249112
+          "cosine_similarity": 0.80249113
         },
         {
           "identifier": "GO:0005768",
@@ -3693,7 +3693,7 @@
         {
           "identifier": "GO:0046859",
           "label": "hydrogenosomal membrane",
-          "cosine_similarity": 0.7795342
+          "cosine_similarity": 0.77953419
         }
       ]
     },
@@ -3724,7 +3724,7 @@
         {
           "identifier": "GO:0036012",
           "label": "cyanelle inner membrane",
-          "cosine_similarity": 0.92194194
+          "cosine_similarity": 0.92194195
         }
       ]
     },
@@ -3781,7 +3781,7 @@
         {
           "identifier": "GO:0009842",
           "label": "cyanelle",
-          "cosine_similarity": 0.92194194
+          "cosine_similarity": 0.92194195
         },
         {
           "identifier": "GO:0036014",
@@ -3797,7 +3797,7 @@
         {
           "identifier": "GO:0036013",
           "label": "cyanelle outer membrane",
-          "cosine_similarity": 0.92548709
+          "cosine_similarity": 0.92548708
         },
         {
           "identifier": "GO:0033112",
@@ -3879,7 +3879,7 @@
         {
           "identifier": "GO:0036014",
           "label": "cyanelle intermembrane space",
-          "cosine_similarity": 0.92548709
+          "cosine_similarity": 0.92548708
         }
       ]
     },
@@ -3900,17 +3900,17 @@
         {
           "identifier": "GO:0036013",
           "label": "cyanelle outer membrane",
-          "cosine_similarity": 0.88397089
+          "cosine_similarity": 0.88397088
         },
         {
           "identifier": "GO:0009842",
           "label": "cyanelle",
-          "cosine_similarity": 0.88163137
+          "cosine_similarity": 0.88163136
         },
         {
           "identifier": "GO:0033113",
           "label": "cyanelle membrane",
-          "cosine_similarity": 0.87899203
+          "cosine_similarity": 0.87899202
         }
       ]
     },
@@ -3926,7 +3926,7 @@
         {
           "identifier": "GO:0033114",
           "label": "cyanelle thylakoid lumen",
-          "cosine_similarity": 0.92514602
+          "cosine_similarity": 0.92514601
         },
         {
           "identifier": "GO:0009842",
@@ -3957,12 +3957,12 @@
         {
           "identifier": "GO:0009843",
           "label": "cyanelle thylakoid",
-          "cosine_similarity": 0.92514602
+          "cosine_similarity": 0.92514601
         },
         {
           "identifier": "GO:0033115",
           "label": "cyanelle thylakoid membrane",
-          "cosine_similarity": 0.89664865
+          "cosine_similarity": 0.89664864
         },
         {
           "identifier": "GO:0036014",
@@ -3993,12 +3993,12 @@
         {
           "identifier": "GO:0036013",
           "label": "cyanelle outer membrane",
-          "cosine_similarity": 0.9171355
+          "cosine_similarity": 0.91713551
         },
         {
           "identifier": "GO:0033113",
           "label": "cyanelle membrane",
-          "cosine_similarity": 0.9140145
+          "cosine_similarity": 0.91401449
         },
         {
           "identifier": "GO:0070118",
@@ -4055,17 +4055,17 @@
         {
           "identifier": "GO:0005776",
           "label": "autophagosome",
-          "cosine_similarity": 0.81014223
+          "cosine_similarity": 0.81014224
+        },
+        {
+          "identifier": "cellstructuremech:mitosome_outer_membrane",
+          "label": "mitosome outer membrane",
+          "cosine_similarity": 0.80954571
         },
         {
           "identifier": "GO:0033107",
           "label": "Cvt vesicle",
           "cosine_similarity": 0.80819834
-        },
-        {
-          "identifier": "cellstructuremech:mitosome_envelope",
-          "label": "mitosome envelope",
-          "cosine_similarity": 0.80590704
         }
       ]
     },
@@ -4086,7 +4086,7 @@
         {
           "identifier": "GO:0005768",
           "label": "endosome",
-          "cosine_similarity": 0.75174503
+          "cosine_similarity": 0.75174504
         },
         {
           "identifier": "GO:0005783",
@@ -4169,7 +4169,7 @@
         {
           "identifier": "GO:0020020",
           "label": "food vacuole",
-          "cosine_similarity": 0.7316242
+          "cosine_similarity": 0.73162421
         },
         {
           "identifier": "cellstructuremech:parasitophorous_vacuole",
@@ -4200,7 +4200,7 @@
         {
           "identifier": "GO:0009534",
           "label": "chloroplast thylakoid",
-          "cosine_similarity": 0.65404888
+          "cosine_similarity": 0.65404889
         },
         {
           "identifier": "GO:0009535",
@@ -4210,17 +4210,17 @@
         {
           "identifier": "GO:0033115",
           "label": "cyanelle thylakoid membrane",
-          "cosine_similarity": 0.6363962
+          "cosine_similarity": 0.63639619
         },
         {
           "identifier": "GO:0033016",
           "label": "rhoptry membrane",
-          "cosine_similarity": 0.6301678
+          "cosine_similarity": 0.63016779
         },
         {
           "identifier": "GO:0009706",
           "label": "chloroplast inner membrane",
-          "cosine_similarity": 0.62695475
+          "cosine_similarity": 0.62695474
         }
       ]
     },
@@ -4231,27 +4231,27 @@
         {
           "identifier": "GO:0110146",
           "label": "magnetosome membrane",
-          "cosine_similarity": 0.75801225
+          "cosine_similarity": 0.75801224
         },
         {
           "identifier": "GO:0110143",
           "label": "magnetosome",
-          "cosine_similarity": 0.74440535
+          "cosine_similarity": 0.74440534
         },
         {
           "identifier": "GO:0110145",
           "label": "magnetosome lumen",
-          "cosine_similarity": 0.6883135
+          "cosine_similarity": 0.68831349
         },
         {
           "identifier": "GO:0032047",
           "label": "mitosome",
-          "cosine_similarity": 0.66407799
+          "cosine_similarity": 0.66407798
         },
         {
           "identifier": "GO:0005740",
           "label": "mitochondrial envelope",
-          "cosine_similarity": 0.66273085
+          "cosine_similarity": 0.66273084
         }
       ]
     },
@@ -4262,7 +4262,7 @@
         {
           "identifier": "GO:1990900",
           "label": "ciliary pocket collar",
-          "cosine_similarity": 0.79816
+          "cosine_similarity": 0.79816001
         },
         {
           "identifier": "GO:0120120",
@@ -4272,17 +4272,17 @@
         {
           "identifier": "GO:0005768",
           "label": "endosome",
-          "cosine_similarity": 0.73596847
+          "cosine_similarity": 0.73596846
         },
         {
           "identifier": "cellstructuremech:mitosome_inner_membrane",
           "label": "mitosome inner membrane",
-          "cosine_similarity": 0.73463806
+          "cosine_similarity": 0.73463805
         },
         {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
-          "cosine_similarity": 0.73147194
+          "cosine_similarity": 0.73147193
         }
       ]
     },
@@ -4303,7 +4303,7 @@
         {
           "identifier": "GO:0000324",
           "label": "fungal-type vacuole",
-          "cosine_similarity": 0.79161015
+          "cosine_similarity": 0.79161016
         },
         {
           "identifier": "cellstructuremech:parasitophorous_vacuole_lumen",
@@ -4313,7 +4313,7 @@
         {
           "identifier": "GO:0000331",
           "label": "contractile vacuole",
-          "cosine_similarity": 0.7668445
+          "cosine_similarity": 0.76684451
         }
       ]
     },
@@ -4324,12 +4324,12 @@
         {
           "identifier": "GO:0033107",
           "label": "Cvt vesicle",
-          "cosine_similarity": 0.82641513
+          "cosine_similarity": 0.82641514
         },
         {
           "identifier": "GO:0005776",
           "label": "autophagosome",
-          "cosine_similarity": 0.82596311
+          "cosine_similarity": 0.82596312
         },
         {
           "identifier": "GO:0000331",
@@ -4339,7 +4339,7 @@
         {
           "identifier": "GO:0020020",
           "label": "food vacuole",
-          "cosine_similarity": 0.79161015
+          "cosine_similarity": 0.79161016
         },
         {
           "identifier": "GO:0005768",
@@ -4417,7 +4417,7 @@
         {
           "identifier": "GO:0046861",
           "label": "glyoxysomal membrane",
-          "cosine_similarity": 0.91941449
+          "cosine_similarity": 0.9194145
         },
         {
           "identifier": "GO:0020015",
@@ -4468,7 +4468,7 @@
         {
           "identifier": "GO:0034591",
           "label": "rhoptry lumen",
-          "cosine_similarity": 0.7658899
+          "cosine_similarity": 0.76588989
         }
       ]
     },
@@ -4484,7 +4484,7 @@
         {
           "identifier": "GO:0046860",
           "label": "glycosome membrane",
-          "cosine_similarity": 0.91941449
+          "cosine_similarity": 0.9194145
         },
         {
           "identifier": "GO:0031908",
@@ -4499,7 +4499,7 @@
         {
           "identifier": "GO:0033118",
           "label": "esterosome membrane",
-          "cosine_similarity": 0.79461499
+          "cosine_similarity": 0.79461498
         }
       ]
     },
@@ -4546,7 +4546,7 @@
         {
           "identifier": "GO:0005768",
           "label": "endosome",
-          "cosine_similarity": 0.7644292
+          "cosine_similarity": 0.76442919
         },
         {
           "identifier": "GO:0030126",
@@ -4580,6 +4580,11 @@
           "cosine_similarity": 0.87339499
         },
         {
+          "identifier": "cellstructuremech:mitosome_outer_membrane",
+          "label": "mitosome outer membrane",
+          "cosine_similarity": 0.8708334
+        },
+        {
           "identifier": "cellstructuremech:anammoxosome_membrane",
           "label": "anammoxosome membrane",
           "cosine_similarity": 0.87049552
@@ -4588,11 +4593,6 @@
           "identifier": "cellstructuremech:mitosome_inner_membrane",
           "label": "mitosome inner membrane",
           "cosine_similarity": 0.86993289
-        },
-        {
-          "identifier": "cellstructuremech:mitosome_envelope",
-          "label": "mitosome envelope",
-          "cosine_similarity": 0.8512915
         }
       ]
     },
@@ -4623,7 +4623,7 @@
         {
           "identifier": "GO:0044222",
           "label": "anammoxosome",
-          "cosine_similarity": 0.77681642
+          "cosine_similarity": 0.77681643
         }
       ]
     },
@@ -4678,14 +4678,14 @@
           "cosine_similarity": 0.804005
         },
         {
+          "identifier": "cellstructuremech:mitosome_outer_membrane",
+          "label": "mitosome outer membrane",
+          "cosine_similarity": 0.80035082
+        },
+        {
           "identifier": "GO:0020011",
           "label": "apicoplast",
           "cosine_similarity": 0.79330162
-        },
-        {
-          "identifier": "GO:0036000",
-          "label": "mucocyst",
-          "cosine_similarity": 0.79325361
         }
       ]
     },
@@ -4711,12 +4711,12 @@
         {
           "identifier": "cellstructuremech:anammoxosome_membrane",
           "label": "anammoxosome membrane",
-          "cosine_similarity": 0.74919298
+          "cosine_similarity": 0.74919297
         },
         {
           "identifier": "cellstructuremech:ferrosome",
           "label": "ferrosome",
-          "cosine_similarity": 0.74440535
+          "cosine_similarity": 0.74440534
         }
       ]
     },
@@ -4727,7 +4727,7 @@
         {
           "identifier": "GO:0110146",
           "label": "magnetosome membrane",
-          "cosine_similarity": 0.89868411
+          "cosine_similarity": 0.8986841
         },
         {
           "identifier": "GO:0110143",
@@ -4763,22 +4763,22 @@
         {
           "identifier": "GO:0110145",
           "label": "magnetosome lumen",
-          "cosine_similarity": 0.89868411
+          "cosine_similarity": 0.8986841
         },
         {
           "identifier": "cellstructuremech:anammoxosome_membrane",
           "label": "anammoxosome membrane",
-          "cosine_similarity": 0.83136436
+          "cosine_similarity": 0.83136435
         },
         {
           "identifier": "GO:0046859",
           "label": "hydrogenosomal membrane",
-          "cosine_similarity": 0.82348249
+          "cosine_similarity": 0.82348248
         },
         {
-          "identifier": "cellstructuremech:mitosome_inner_membrane",
-          "label": "mitosome inner membrane",
-          "cosine_similarity": 0.81057185
+          "identifier": "cellstructuremech:mitosome_outer_membrane",
+          "label": "mitosome outer membrane",
+          "cosine_similarity": 0.81688757
         }
       ]
     },
@@ -4840,7 +4840,7 @@
         {
           "identifier": "GO:0020007",
           "label": "apical complex",
-          "cosine_similarity": 0.70683733
+          "cosine_similarity": 0.70683734
         }
       ]
     },
@@ -4861,7 +4861,7 @@
         {
           "identifier": "GO:0034591",
           "label": "rhoptry lumen",
-          "cosine_similarity": 0.84044482
+          "cosine_similarity": 0.84044481
         },
         {
           "identifier": "GO:0110145",
@@ -4887,7 +4887,7 @@
         {
           "identifier": "GO:0033016",
           "label": "rhoptry membrane",
-          "cosine_similarity": 0.84840688
+          "cosine_similarity": 0.84840687
         },
         {
           "identifier": "GO:0020009",
@@ -4918,12 +4918,12 @@
         {
           "identifier": "GO:0090642",
           "label": "microsporidian-type exospore",
-          "cosine_similarity": 0.79181
+          "cosine_similarity": 0.79180999
         },
         {
           "identifier": "GO:0005628",
           "label": "prospore membrane",
-          "cosine_similarity": 0.79003471
+          "cosine_similarity": 0.7900347
         },
         {
           "identifier": "GO:0062160",
@@ -4949,7 +4949,7 @@
         {
           "identifier": "GO:0005740",
           "label": "mitochondrial envelope",
-          "cosine_similarity": 0.88560944
+          "cosine_similarity": 0.88560943
         },
         {
           "identifier": "GO:0005777",
@@ -4959,7 +4959,7 @@
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.74158728
+          "cosine_similarity": 0.74158729
         },
         {
           "identifier": "GO:0042566",
@@ -4980,22 +4980,22 @@
         {
           "identifier": "GO:0030061",
           "label": "mitochondrial crista",
-          "cosine_similarity": 0.88560944
+          "cosine_similarity": 0.88560943
         },
         {
           "identifier": "cellstructuremech:mitosome_envelope",
           "label": "mitosome envelope",
-          "cosine_similarity": 0.84580466
+          "cosine_similarity": 0.84579522
         },
         {
           "identifier": "GO:0005635",
           "label": "nuclear envelope",
-          "cosine_similarity": 0.82818357
+          "cosine_similarity": 0.82818358
         },
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.81539264
+          "cosine_similarity": 0.81539265
         }
       ]
     },
@@ -5042,7 +5042,7 @@
         {
           "identifier": "cellstructuremech:mitosome_envelope",
           "label": "mitosome envelope",
-          "cosine_similarity": 0.83171144
+          "cosine_similarity": 0.83307022
         },
         {
           "identifier": "GO:0042566",
@@ -5050,14 +5050,14 @@
           "cosine_similarity": 0.82486082
         },
         {
+          "identifier": "cellstructuremech:mitosome_outer_membrane",
+          "label": "mitosome outer membrane",
+          "cosine_similarity": 0.81766865
+        },
+        {
           "identifier": "cellstructuremech:mitosome_inner_membrane",
           "label": "mitosome inner membrane",
           "cosine_similarity": 0.81549864
-        },
-        {
-          "identifier": "GO:0005740",
-          "label": "mitochondrial envelope",
-          "cosine_similarity": 0.78918909
         }
       ]
     },
@@ -5066,29 +5066,29 @@
       "label": "mitosome envelope",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:mitosome_outer_membrane",
+          "label": "mitosome outer membrane",
+          "cosine_similarity": 0.93574091
+        },
+        {
           "identifier": "cellstructuremech:mitosome_inner_membrane",
           "label": "mitosome inner membrane",
-          "cosine_similarity": 0.92736088
+          "cosine_similarity": 0.92735819
         },
         {
           "identifier": "GO:0046859",
           "label": "hydrogenosomal membrane",
-          "cosine_similarity": 0.8512915
+          "cosine_similarity": 0.85037157
         },
         {
           "identifier": "GO:0005740",
           "label": "mitochondrial envelope",
-          "cosine_similarity": 0.84580466
+          "cosine_similarity": 0.84579522
         },
         {
           "identifier": "GO:0032047",
           "label": "mitosome",
-          "cosine_similarity": 0.83171144
-        },
-        {
-          "identifier": "GO:0005635",
-          "label": "nuclear envelope",
-          "cosine_similarity": 0.82248228
+          "cosine_similarity": 0.83307022
         }
       ]
     },
@@ -5097,9 +5097,14 @@
       "label": "mitosome inner membrane",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:mitosome_outer_membrane",
+          "label": "mitosome outer membrane",
+          "cosine_similarity": 0.97462638
+        },
+        {
           "identifier": "cellstructuremech:mitosome_envelope",
           "label": "mitosome envelope",
-          "cosine_similarity": 0.92736088
+          "cosine_similarity": 0.92735819
         },
         {
           "identifier": "GO:0046859",
@@ -5109,17 +5114,43 @@
         {
           "identifier": "cellstructuremech:anammoxosome_membrane",
           "label": "anammoxosome membrane",
-          "cosine_similarity": 0.86225623
+          "cosine_similarity": 0.86225622
         },
         {
           "identifier": "GO:0070113",
           "label": "organellar chromatophore inner membrane",
           "cosine_similarity": 0.83912387
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:mitosome_outer_membrane",
+      "label": "mitosome outer membrane",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:mitosome_inner_membrane",
+          "label": "mitosome inner membrane",
+          "cosine_similarity": 0.97462638
+        },
+        {
+          "identifier": "cellstructuremech:mitosome_envelope",
+          "label": "mitosome envelope",
+          "cosine_similarity": 0.93574091
+        },
+        {
+          "identifier": "GO:0046859",
+          "label": "hydrogenosomal membrane",
+          "cosine_similarity": 0.8708334
+        },
+        {
+          "identifier": "cellstructuremech:anammoxosome_membrane",
+          "label": "anammoxosome membrane",
+          "cosine_similarity": 0.86059914
         },
         {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.83107815
+          "cosine_similarity": 0.84997715
         }
       ]
     },
@@ -5171,17 +5202,17 @@
         {
           "identifier": "GO:0005740",
           "label": "mitochondrial envelope",
-          "cosine_similarity": 0.82818357
+          "cosine_similarity": 0.82818358
         },
         {
           "identifier": "cellstructuremech:mitosome_envelope",
           "label": "mitosome envelope",
-          "cosine_similarity": 0.82248228
+          "cosine_similarity": 0.82386881
         },
         {
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
-          "cosine_similarity": 0.81043187
+          "cosine_similarity": 0.81043186
         }
       ]
     },
@@ -5212,7 +5243,7 @@
         {
           "identifier": "GO:0009507",
           "label": "chloroplast",
-          "cosine_similarity": 0.7463197
+          "cosine_similarity": 0.74631969
         }
       ]
     },
@@ -5238,7 +5269,7 @@
         {
           "identifier": "cellstructuremech:mitosome_envelope",
           "label": "mitosome envelope",
-          "cosine_similarity": 0.79065048
+          "cosine_similarity": 0.79317963
         },
         {
           "identifier": "GO:0033009",
@@ -5254,7 +5285,7 @@
         {
           "identifier": "GO:0070116",
           "label": "organellar chromatophore thylakoid",
-          "cosine_similarity": 0.92182547
+          "cosine_similarity": 0.92182546
         },
         {
           "identifier": "GO:0070118",
@@ -5264,17 +5295,17 @@
         {
           "identifier": "GO:0070115",
           "label": "organellar chromatophore intermembrane space",
-          "cosine_similarity": 0.8822632
+          "cosine_similarity": 0.88226319
         },
         {
           "identifier": "GO:0070112",
           "label": "organellar chromatophore membrane",
-          "cosine_similarity": 0.87306583
+          "cosine_similarity": 0.87306582
         },
         {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.87297035
+          "cosine_similarity": 0.87297034
         }
       ]
     },
@@ -5300,12 +5331,12 @@
         {
           "identifier": "GO:0070118",
           "label": "organellar chromatophore thylakoid membrane",
-          "cosine_similarity": 0.89322178
+          "cosine_similarity": 0.89322179
         },
         {
           "identifier": "GO:0036012",
           "label": "cyanelle inner membrane",
-          "cosine_similarity": 0.87121373
+          "cosine_similarity": 0.87121372
         }
       ]
     },
@@ -5331,7 +5362,7 @@
         {
           "identifier": "GO:0070111",
           "label": "organellar chromatophore",
-          "cosine_similarity": 0.8822632
+          "cosine_similarity": 0.88226319
         },
         {
           "identifier": "GO:0070117",
@@ -5367,7 +5398,7 @@
         {
           "identifier": "GO:0070111",
           "label": "organellar chromatophore",
-          "cosine_similarity": 0.87306583
+          "cosine_similarity": 0.87306582
         }
       ]
     },
@@ -5398,7 +5429,7 @@
         {
           "identifier": "GO:0036013",
           "label": "cyanelle outer membrane",
-          "cosine_similarity": 0.88231254
+          "cosine_similarity": 0.88231253
         }
       ]
     },
@@ -5414,12 +5445,12 @@
         {
           "identifier": "GO:0070111",
           "label": "organellar chromatophore",
-          "cosine_similarity": 0.92182547
+          "cosine_similarity": 0.92182546
         },
         {
           "identifier": "GO:0070117",
           "label": "organellar chromatophore thylakoid lumen",
-          "cosine_similarity": 0.9079453
+          "cosine_similarity": 0.90794529
         },
         {
           "identifier": "GO:0009843",
@@ -5440,12 +5471,12 @@
         {
           "identifier": "GO:0070116",
           "label": "organellar chromatophore thylakoid",
-          "cosine_similarity": 0.9079453
+          "cosine_similarity": 0.90794529
         },
         {
           "identifier": "GO:0070118",
           "label": "organellar chromatophore thylakoid membrane",
-          "cosine_similarity": 0.89030615
+          "cosine_similarity": 0.89030614
         },
         {
           "identifier": "GO:0070115",
@@ -5460,7 +5491,7 @@
         {
           "identifier": "GO:0009543",
           "label": "chloroplast thylakoid lumen",
-          "cosine_similarity": 0.86293009
+          "cosine_similarity": 0.8629301
         }
       ]
     },
@@ -5517,7 +5548,7 @@
         {
           "identifier": "GO:0020026",
           "label": "apicomplexan dense granule",
-          "cosine_similarity": 0.81201179
+          "cosine_similarity": 0.8120118
         },
         {
           "identifier": "GO:0070258",
@@ -5543,7 +5574,7 @@
         {
           "identifier": "GO:0034591",
           "label": "rhoptry lumen",
-          "cosine_similarity": 0.81983084
+          "cosine_similarity": 0.81983083
         },
         {
           "identifier": "cellstructuremech:contractile_vacuole_lumen",
@@ -5595,7 +5626,7 @@
         {
           "identifier": "GO:0005740",
           "label": "mitochondrial envelope",
-          "cosine_similarity": 0.81261417
+          "cosine_similarity": 0.81261416
         },
         {
           "identifier": "GO:0005739",
@@ -5631,7 +5662,7 @@
         {
           "identifier": "GO:0070111",
           "label": "organellar chromatophore",
-          "cosine_similarity": 0.8149946
+          "cosine_similarity": 0.81499459
         },
         {
           "identifier": "GO:0070118",
@@ -5646,7 +5677,7 @@
         {
           "identifier": "GO:0046858",
           "label": "chlorosome",
-          "cosine_similarity": 0.79015844
+          "cosine_similarity": 0.79015845
         }
       ]
     },
@@ -5662,7 +5693,7 @@
         {
           "identifier": "GO:0033114",
           "label": "cyanelle thylakoid lumen",
-          "cosine_similarity": 0.86299237
+          "cosine_similarity": 0.86299238
         },
         {
           "identifier": "GO:0009543",
@@ -5677,7 +5708,7 @@
         {
           "identifier": "GO:0033985",
           "label": "acidocalcisome lumen",
-          "cosine_similarity": 0.81233448
+          "cosine_similarity": 0.81233449
         }
       ]
     },
@@ -5703,7 +5734,7 @@
         {
           "identifier": "GO:0044099",
           "label": "polar tube",
-          "cosine_similarity": 0.74408299
+          "cosine_similarity": 0.74408298
         },
         {
           "identifier": "GO:0009507",
@@ -5719,7 +5750,7 @@
         {
           "identifier": "GO:0033115",
           "label": "cyanelle thylakoid membrane",
-          "cosine_similarity": 0.82321763
+          "cosine_similarity": 0.82321764
         },
         {
           "identifier": "GO:1990732",
@@ -5734,7 +5765,7 @@
         {
           "identifier": "GO:0009707",
           "label": "chloroplast outer membrane",
-          "cosine_similarity": 0.8001096
+          "cosine_similarity": 0.80010959
         },
         {
           "identifier": "GO:0009535",
@@ -5750,7 +5781,7 @@
         {
           "identifier": "GO:0005768",
           "label": "endosome",
-          "cosine_similarity": 0.78262474
+          "cosine_similarity": 0.78262475
         },
         {
           "identifier": "GO:0033117",
@@ -5770,7 +5801,7 @@
         {
           "identifier": "GO:0005739",
           "label": "mitochondrion",
-          "cosine_similarity": 0.71396612
+          "cosine_similarity": 0.71396611
         }
       ]
     },
@@ -5781,7 +5812,7 @@
         {
           "identifier": "GO:1990225",
           "label": "rhoptry neck",
-          "cosine_similarity": 0.8800553
+          "cosine_similarity": 0.88005531
         },
         {
           "identifier": "GO:0033016",
@@ -5791,7 +5822,7 @@
         {
           "identifier": "GO:0034591",
           "label": "rhoptry lumen",
-          "cosine_similarity": 0.79211409
+          "cosine_similarity": 0.79211408
         },
         {
           "identifier": "cellstructuremech:parasitophorous_vacuole",
@@ -5801,7 +5832,7 @@
         {
           "identifier": "GO:0020007",
           "label": "apical complex",
-          "cosine_similarity": 0.72937294
+          "cosine_similarity": 0.72937295
         }
       ]
     },
@@ -5817,7 +5848,7 @@
         {
           "identifier": "GO:0034494",
           "label": "microneme lumen",
-          "cosine_similarity": 0.84044482
+          "cosine_similarity": 0.84044481
         },
         {
           "identifier": "GO:0033985",
@@ -5827,12 +5858,12 @@
         {
           "identifier": "cellstructuremech:parasitophorous_vacuole_lumen",
           "label": "parasitophorous vacuole lumen",
-          "cosine_similarity": 0.81983084
+          "cosine_similarity": 0.81983083
         },
         {
           "identifier": "GO:0031979",
           "label": "plasma membrane-derived thylakoid lumen",
-          "cosine_similarity": 0.80661353
+          "cosine_similarity": 0.80661351
         }
       ]
     },
@@ -5843,7 +5874,7 @@
         {
           "identifier": "GO:0033163",
           "label": "microneme membrane",
-          "cosine_similarity": 0.84840688
+          "cosine_similarity": 0.84840687
         },
         {
           "identifier": "GO:0020008",
@@ -5874,27 +5905,27 @@
         {
           "identifier": "GO:0020008",
           "label": "rhoptry",
-          "cosine_similarity": 0.8800553
+          "cosine_similarity": 0.88005531
         },
         {
           "identifier": "GO:0033016",
           "label": "rhoptry membrane",
-          "cosine_similarity": 0.76615858
+          "cosine_similarity": 0.76615859
         },
         {
           "identifier": "GO:0020007",
           "label": "apical complex",
-          "cosine_similarity": 0.75539725
+          "cosine_similarity": 0.75539727
         },
         {
           "identifier": "GO:0034591",
           "label": "rhoptry lumen",
-          "cosine_similarity": 0.73038089
+          "cosine_similarity": 0.7303809
         },
         {
           "identifier": "GO:0020031",
           "label": "polar ring of apical complex",
-          "cosine_similarity": 0.67125492
+          "cosine_similarity": 0.67125494
         }
       ]
     },
@@ -5905,7 +5936,7 @@
         {
           "identifier": "GO:0000331",
           "label": "contractile vacuole",
-          "cosine_similarity": 0.81297773
+          "cosine_similarity": 0.81297774
         },
         {
           "identifier": "GO:0031164",
@@ -5920,7 +5951,7 @@
         {
           "identifier": "cellstructuremech:parasitophorous_vacuole_membrane",
           "label": "parasitophorous vacuole membrane",
-          "cosine_similarity": 0.75059724
+          "cosine_similarity": 0.75059723
         },
         {
           "identifier": "cellstructuremech:contractile_vacuole_lumen",
@@ -5946,7 +5977,7 @@
         {
           "identifier": "GO:0030096",
           "label": "plasma membrane-derived thylakoid photosystem II",
-          "cosine_similarity": 0.82987189
+          "cosine_similarity": 0.8298719
         },
         {
           "identifier": "GO:0030094",
@@ -5972,7 +6003,7 @@
         {
           "identifier": "GO:0046859",
           "label": "hydrogenosomal membrane",
-          "cosine_similarity": 0.75573376
+          "cosine_similarity": 0.75573375
         },
         {
           "identifier": "GO:0070258",
@@ -6003,7 +6034,7 @@
         {
           "identifier": "GO:0036013",
           "label": "cyanelle outer membrane",
-          "cosine_similarity": 0.74519935
+          "cosine_similarity": 0.74519934
         },
         {
           "identifier": "cellstructuremech:anammoxosome_membrane",
@@ -6029,7 +6060,7 @@
         {
           "identifier": "cellstructuremech:carboxysome_shell",
           "label": "carboxysome shell",
-          "cosine_similarity": 0.88183911
+          "cosine_similarity": 0.8818391
         },
         {
           "identifier": "GO:0140737",
@@ -6049,7 +6080,7 @@
         {
           "identifier": "GO:0031470",
           "label": "carboxysome",
-          "cosine_similarity": 0.74637963
+          "cosine_similarity": 0.74637962
         }
       ]
     },
@@ -6060,7 +6091,7 @@
         {
           "identifier": "cellstructuremech:carboxysome_shell",
           "label": "carboxysome shell",
-          "cosine_similarity": 0.87870194
+          "cosine_similarity": 0.87870195
         },
         {
           "identifier": "GO:0140737",
@@ -6070,7 +6101,7 @@
         {
           "identifier": "GO:0031469",
           "label": "bacterial microcompartment",
-          "cosine_similarity": 0.74637963
+          "cosine_similarity": 0.74637962
         },
         {
           "identifier": "GO:0031472",
@@ -6080,7 +6111,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.68712035
+          "cosine_similarity": 0.68712034
         }
       ]
     },
@@ -6091,12 +6122,12 @@
         {
           "identifier": "GO:0031469",
           "label": "bacterial microcompartment",
-          "cosine_similarity": 0.88183911
+          "cosine_similarity": 0.8818391
         },
         {
           "identifier": "GO:0031470",
           "label": "carboxysome",
-          "cosine_similarity": 0.87870194
+          "cosine_similarity": 0.87870195
         },
         {
           "identifier": "GO:0140737",
@@ -6111,7 +6142,7 @@
         {
           "identifier": "GO:0031471",
           "label": "ethanolamine degradation polyhedral organelle",
-          "cosine_similarity": 0.70207196
+          "cosine_similarity": 0.70207195
         }
       ]
     },
@@ -6168,12 +6199,12 @@
         {
           "identifier": "cellstructuremech:carboxysome_shell",
           "label": "carboxysome shell",
-          "cosine_similarity": 0.70207196
+          "cosine_similarity": 0.70207195
         },
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.67415614
+          "cosine_similarity": 0.67415615
         }
       ]
     },
@@ -6251,7 +6282,7 @@
         {
           "identifier": "GO:0120121",
           "label": "tripartite attachment complex",
-          "cosine_similarity": 0.74816412
+          "cosine_similarity": 0.74816411
         },
         {
           "identifier": "GO:0042645",
@@ -6328,7 +6359,7 @@
         {
           "identifier": "GO:0005730",
           "label": "nucleolus",
-          "cosine_similarity": 0.69722466
+          "cosine_similarity": 0.69722467
         }
       ]
     },
@@ -6349,12 +6380,12 @@
         {
           "identifier": "GO:1990225",
           "label": "rhoptry neck",
-          "cosine_similarity": 0.75539725
+          "cosine_similarity": 0.75539727
         },
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.73132527
+          "cosine_similarity": 0.73132528
         },
         {
           "identifier": "GO:0070258",
@@ -6385,7 +6416,7 @@
         {
           "identifier": "GO:0033111",
           "label": "attachment organelle membrane",
-          "cosine_similarity": 0.79133326
+          "cosine_similarity": 0.79133327
         },
         {
           "identifier": "GO:0030288",
@@ -6406,17 +6437,17 @@
         {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
-          "cosine_similarity": 0.8577497
+          "cosine_similarity": 0.85774971
         },
         {
           "identifier": "GO:0005886",
           "label": "plasma membrane",
-          "cosine_similarity": 0.82932389
+          "cosine_similarity": 0.8293239
         },
         {
           "identifier": "GO:0033110",
           "label": "Cvt vesicle membrane",
-          "cosine_similarity": 0.82531055
+          "cosine_similarity": 0.82531054
         },
         {
           "identifier": "GO:0005768",
@@ -6447,7 +6478,7 @@
         {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.64345711
+          "cosine_similarity": 0.6434571
         },
         {
           "identifier": "GO:0015627",
@@ -6463,17 +6494,17 @@
         {
           "identifier": "GO:0009277",
           "label": "fungal-type cell wall",
-          "cosine_similarity": 0.65666359
+          "cosine_similarity": 0.6566636
         },
         {
           "identifier": "GO:0005794",
           "label": "Golgi apparatus",
-          "cosine_similarity": 0.65316282
+          "cosine_similarity": 0.65316281
         },
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.65302612
+          "cosine_similarity": 0.65302613
         },
         {
           "identifier": "GO:0031471",
@@ -6483,7 +6514,7 @@
         {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
-          "cosine_similarity": 0.64652064
+          "cosine_similarity": 0.64652065
         }
       ]
     },
@@ -6499,7 +6530,7 @@
         {
           "identifier": "GO:0005768",
           "label": "endosome",
-          "cosine_similarity": 0.71568589
+          "cosine_similarity": 0.71568588
         },
         {
           "identifier": "GO:0030126",
@@ -6514,7 +6545,7 @@
         {
           "identifier": "GO:0033110",
           "label": "Cvt vesicle membrane",
-          "cosine_similarity": 0.70574348
+          "cosine_similarity": 0.70574347
         }
       ]
     },
@@ -6571,7 +6602,7 @@
         {
           "identifier": "GO:0033107",
           "label": "Cvt vesicle",
-          "cosine_similarity": 0.71068947
+          "cosine_similarity": 0.71068946
         },
         {
           "identifier": "GO:0000145",
@@ -6587,7 +6618,7 @@
         {
           "identifier": "GO:0020007",
           "label": "apical complex",
-          "cosine_similarity": 0.68069838
+          "cosine_similarity": 0.68069839
         },
         {
           "identifier": "GO:0120120",
@@ -6607,7 +6638,7 @@
         {
           "identifier": "GO:0000407",
           "label": "phagophore assembly site",
-          "cosine_similarity": 0.64291369
+          "cosine_similarity": 0.6429137
         }
       ]
     },
@@ -6654,7 +6685,7 @@
         {
           "identifier": "GO:0005768",
           "label": "endosome",
-          "cosine_similarity": 0.71925123
+          "cosine_similarity": 0.71925125
         },
         {
           "identifier": "GO:0030127",
@@ -6664,7 +6695,7 @@
         {
           "identifier": "GO:0005783",
           "label": "endoplasmic reticulum",
-          "cosine_similarity": 0.71656458
+          "cosine_similarity": 0.71656459
         },
         {
           "identifier": "GO:0000145",
@@ -6721,12 +6752,12 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.66115124
+          "cosine_similarity": 0.66115125
         },
         {
           "identifier": "cellstructuremech:stalk_crossband",
           "label": "stalk crossband",
-          "cosine_similarity": 0.65062495
+          "cosine_similarity": 0.65062496
         },
         {
           "identifier": "cellstructuremech:popz_polar_microdomain",
@@ -6762,7 +6793,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.67701795
+          "cosine_similarity": 0.67701794
         }
       ]
     },
@@ -6773,17 +6804,17 @@
         {
           "identifier": "GO:0097589",
           "label": "archaeal-type flagellum",
-          "cosine_similarity": 0.68543973
+          "cosine_similarity": 0.68543972
         },
         {
           "identifier": "GO:0120101",
           "label": "bacterial-type flagellum stator complex",
-          "cosine_similarity": 0.67775013
+          "cosine_similarity": 0.67775012
         },
         {
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.67199391
+          "cosine_similarity": 0.6719939
         },
         {
           "identifier": "GO:0033099",
@@ -6809,7 +6840,7 @@
         {
           "identifier": "GO:0044612",
           "label": "nuclear pore linkers",
-          "cosine_similarity": 0.86085703
+          "cosine_similarity": 0.86085702
         },
         {
           "identifier": "GO:0044613",
@@ -6840,7 +6871,7 @@
         {
           "identifier": "GO:0044612",
           "label": "nuclear pore linkers",
-          "cosine_similarity": 0.81993993
+          "cosine_similarity": 0.81993992
         },
         {
           "identifier": "GO:0044611",
@@ -6850,12 +6881,12 @@
         {
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.7852813
+          "cosine_similarity": 0.78528131
         },
         {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.78210722
+          "cosine_similarity": 0.78210724
         }
       ]
     },
@@ -6876,7 +6907,7 @@
         {
           "identifier": "GO:0005643",
           "label": "nuclear pore",
-          "cosine_similarity": 0.8344862
+          "cosine_similarity": 0.83448621
         },
         {
           "identifier": "GO:0031080",
@@ -6907,7 +6938,7 @@
         {
           "identifier": "GO:0044612",
           "label": "nuclear pore linkers",
-          "cosine_similarity": 0.87672637
+          "cosine_similarity": 0.87672636
         },
         {
           "identifier": "GO:0044615",
@@ -6928,12 +6959,12 @@
         {
           "identifier": "GO:0044611",
           "label": "nuclear pore inner ring",
-          "cosine_similarity": 0.87672637
+          "cosine_similarity": 0.87672636
         },
         {
           "identifier": "GO:0005643",
           "label": "nuclear pore",
-          "cosine_similarity": 0.86085703
+          "cosine_similarity": 0.86085702
         },
         {
           "identifier": "GO:0031080",
@@ -6943,7 +6974,7 @@
         {
           "identifier": "GO:0044613",
           "label": "nuclear pore central transport channel",
-          "cosine_similarity": 0.81993993
+          "cosine_similarity": 0.81993992
         },
         {
           "identifier": "GO:0044615",
@@ -7021,12 +7052,12 @@
         {
           "identifier": "GO:0005840",
           "label": "ribosome",
-          "cosine_similarity": 0.77848285
+          "cosine_similarity": 0.77848284
         },
         {
           "identifier": "GO:0009295",
           "label": "nucleoid",
-          "cosine_similarity": 0.69722466
+          "cosine_similarity": 0.69722467
         },
         {
           "identifier": "GO:0042645",
@@ -7036,12 +7067,12 @@
         {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.67151498
+          "cosine_similarity": 0.671515
         },
         {
           "identifier": "GO:0000932",
           "label": "P-body",
-          "cosine_similarity": 0.66746576
+          "cosine_similarity": 0.66746577
         }
       ]
     },
@@ -7062,7 +7093,7 @@
         {
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
-          "cosine_similarity": 0.66682134
+          "cosine_similarity": 0.66682135
         },
         {
           "identifier": "GO:0031469",
@@ -7093,12 +7124,12 @@
         {
           "identifier": "GO:0020007",
           "label": "apical complex",
-          "cosine_similarity": 0.66975095
+          "cosine_similarity": 0.66975096
         },
         {
           "identifier": "GO:0005783",
           "label": "endoplasmic reticulum",
-          "cosine_similarity": 0.66088926
+          "cosine_similarity": 0.66088925
         },
         {
           "identifier": "GO:0098561",
@@ -7165,7 +7196,7 @@
         {
           "identifier": "cellstructuremech:stalk_crossband",
           "label": "stalk crossband",
-          "cosine_similarity": 0.63608054
+          "cosine_similarity": 0.63608055
         }
       ]
     },
@@ -7196,7 +7227,7 @@
         {
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.67004549
+          "cosine_similarity": 0.6700455
         }
       ]
     },
@@ -7238,17 +7269,17 @@
         {
           "identifier": "GO:0005628",
           "label": "prospore membrane",
-          "cosine_similarity": 0.66644683
+          "cosine_similarity": 0.66644684
         },
         {
           "identifier": "GO:0000133",
           "label": "polarisome",
-          "cosine_similarity": 0.66425828
+          "cosine_similarity": 0.66425829
         },
         {
           "identifier": "GO:0000407",
           "label": "phagophore assembly site",
-          "cosine_similarity": 0.65726334
+          "cosine_similarity": 0.65726335
         },
         {
           "identifier": "GO:0020008",
@@ -7258,7 +7289,7 @@
         {
           "identifier": "GO:0005940",
           "label": "septin ring",
-          "cosine_similarity": 0.62795543
+          "cosine_similarity": 0.62795544
         }
       ]
     },
@@ -7279,7 +7310,7 @@
         {
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
-          "cosine_similarity": 0.72761297
+          "cosine_similarity": 0.72761296
         },
         {
           "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
@@ -7305,7 +7336,7 @@
         {
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
-          "cosine_similarity": 0.7392784
+          "cosine_similarity": 0.73927839
         },
         {
           "identifier": "GO:0005643",
@@ -7336,7 +7367,7 @@
         {
           "identifier": "GO:0000932",
           "label": "P-body",
-          "cosine_similarity": 0.71282165
+          "cosine_similarity": 0.71282164
         },
         {
           "identifier": "GO:0005730",
@@ -7362,7 +7393,7 @@
         {
           "identifier": "GO:0000932",
           "label": "P-body",
-          "cosine_similarity": 0.72205283
+          "cosine_similarity": 0.72205282
         },
         {
           "identifier": "GO:0044614",
@@ -7382,7 +7413,7 @@
         {
           "identifier": "GO:0020026",
           "label": "apicomplexan dense granule",
-          "cosine_similarity": 0.6501829
+          "cosine_similarity": 0.65018289
         }
       ]
     },
@@ -7393,12 +7424,12 @@
         {
           "identifier": "GO:0010494",
           "label": "cytoplasmic stress granule",
-          "cosine_similarity": 0.72205283
+          "cosine_similarity": 0.72205282
         },
         {
           "identifier": "GO:1990061",
           "label": "bacterial degradosome",
-          "cosine_similarity": 0.71282165
+          "cosine_similarity": 0.71282164
         },
         {
           "identifier": "GO:0005840",
@@ -7408,12 +7439,12 @@
         {
           "identifier": "GO:0005730",
           "label": "nucleolus",
-          "cosine_similarity": 0.66746576
+          "cosine_similarity": 0.66746577
         },
         {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.66437811
+          "cosine_similarity": 0.6643781
         }
       ]
     },
@@ -7424,7 +7455,7 @@
         {
           "identifier": "GO:0005730",
           "label": "nucleolus",
-          "cosine_similarity": 0.77848285
+          "cosine_similarity": 0.77848284
         },
         {
           "identifier": "GO:1990061",
@@ -7455,7 +7486,7 @@
         {
           "identifier": "cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex",
           "label": "ESX-5 type VII secretion system membrane complex",
-          "cosine_similarity": 0.90708542
+          "cosine_similarity": 0.90708543
         },
         {
           "identifier": "GO:0030256",
@@ -7486,7 +7517,7 @@
         {
           "identifier": "cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex",
           "label": "ESX-3 type VII secretion system membrane complex",
-          "cosine_similarity": 0.90708542
+          "cosine_similarity": 0.90708543
         },
         {
           "identifier": "GO:0030256",
@@ -7548,7 +7579,7 @@
         {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.79326402
+          "cosine_similarity": 0.79326401
         },
         {
           "identifier": "GO:0043684",
@@ -7584,7 +7615,7 @@
         {
           "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
           "label": "type IX protein secretion system complex",
-          "cosine_similarity": 0.88792615
+          "cosine_similarity": 0.88792616
         },
         {
           "identifier": "GO:0033104",
@@ -7703,7 +7734,7 @@
         {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.88792615
+          "cosine_similarity": 0.88792616
         },
         {
           "identifier": "GO:0015627",
@@ -7765,17 +7796,17 @@
         {
           "identifier": "GO:0043591",
           "label": "endospore external encapsulating structure",
-          "cosine_similarity": 0.94155747
+          "cosine_similarity": 0.94155746
         },
         {
           "identifier": "GO:0043594",
           "label": "outer endospore membrane",
-          "cosine_similarity": 0.85923206
+          "cosine_similarity": 0.85923207
         },
         {
           "identifier": "GO:0090642",
           "label": "microsporidian-type exospore",
-          "cosine_similarity": 0.82164715
+          "cosine_similarity": 0.82164714
         },
         {
           "identifier": "GO:0090641",
@@ -7796,7 +7827,7 @@
         {
           "identifier": "GO:0043595",
           "label": "endospore cortex",
-          "cosine_similarity": 0.94155747
+          "cosine_similarity": 0.94155746
         },
         {
           "identifier": "GO:0043594",
@@ -7811,12 +7842,12 @@
         {
           "identifier": "GO:0090641",
           "label": "microsporidian-type endospore",
-          "cosine_similarity": 0.8025757
+          "cosine_similarity": 0.80257569
         },
         {
           "identifier": "GO:0005628",
           "label": "prospore membrane",
-          "cosine_similarity": 0.75070965
+          "cosine_similarity": 0.75070964
         }
       ]
     },
@@ -7827,7 +7858,7 @@
         {
           "identifier": "GO:0090642",
           "label": "microsporidian-type exospore",
-          "cosine_similarity": 0.93376752
+          "cosine_similarity": 0.93376751
         },
         {
           "identifier": "GO:0043595",
@@ -7837,12 +7868,12 @@
         {
           "identifier": "GO:0043591",
           "label": "endospore external encapsulating structure",
-          "cosine_similarity": 0.8025757
+          "cosine_similarity": 0.80257569
         },
         {
           "identifier": "GO:0043594",
           "label": "outer endospore membrane",
-          "cosine_similarity": 0.77612129
+          "cosine_similarity": 0.7761213
         },
         {
           "identifier": "cellstructuremech:microsporidian_posterior_vacuole",
@@ -7858,7 +7889,7 @@
         {
           "identifier": "GO:0090641",
           "label": "microsporidian-type endospore",
-          "cosine_similarity": 0.93376752
+          "cosine_similarity": 0.93376751
         },
         {
           "identifier": "GO:0043591",
@@ -7868,12 +7899,12 @@
         {
           "identifier": "GO:0043595",
           "label": "endospore cortex",
-          "cosine_similarity": 0.82164715
+          "cosine_similarity": 0.82164714
         },
         {
           "identifier": "cellstructuremech:microsporidian_posterior_vacuole",
           "label": "microsporidian posterior vacuole",
-          "cosine_similarity": 0.79181
+          "cosine_similarity": 0.79180999
         },
         {
           "identifier": "GO:0043594",
@@ -7894,7 +7925,7 @@
         {
           "identifier": "GO:0043595",
           "label": "endospore cortex",
-          "cosine_similarity": 0.85923206
+          "cosine_similarity": 0.85923207
         },
         {
           "identifier": "GO:0043591",
@@ -7904,12 +7935,12 @@
         {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
-          "cosine_similarity": 0.80259365
+          "cosine_similarity": 0.80259364
         },
         {
-          "identifier": "GO:0090642",
-          "label": "microsporidian-type exospore",
-          "cosine_similarity": 0.79050164
+          "identifier": "cellstructuremech:mitosome_outer_membrane",
+          "label": "mitosome outer membrane",
+          "cosine_similarity": 0.79572159
         }
       ]
     },
@@ -7925,12 +7956,12 @@
         {
           "identifier": "cellstructuremech:microsporidian_posterior_vacuole",
           "label": "microsporidian posterior vacuole",
-          "cosine_similarity": 0.75732635
+          "cosine_similarity": 0.75732634
         },
         {
           "identifier": "GO:0160201",
           "label": "polaroplast",
-          "cosine_similarity": 0.74408299
+          "cosine_similarity": 0.74408298
         },
         {
           "identifier": "GO:0090642",
@@ -7956,7 +7987,7 @@
         {
           "identifier": "GO:0090642",
           "label": "microsporidian-type exospore",
-          "cosine_similarity": 0.69439848
+          "cosine_similarity": 0.69439849
         },
         {
           "identifier": "cellstructuremech:microsporidian_posterior_vacuole",
@@ -7987,7 +8018,7 @@
         {
           "identifier": "cellstructuremech:microsporidian_posterior_vacuole",
           "label": "microsporidian posterior vacuole",
-          "cosine_similarity": 0.79003471
+          "cosine_similarity": 0.7900347
         },
         {
           "identifier": "GO:0046859",

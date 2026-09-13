@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitosome_outer_membrane.yaml
+  slug: mitosome_outer_membrane
+session:
+  id: 2026-09-13T194420Z-codex-f9a679
+  timestamp: '2026-09-13T19:44:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Create the mitosome outer membrane record
+  details: Created cellstructuremech:mitosome_outer_membrane for UniProt SL-0443 because no
+    exact GO cellular component term was found. Added exact UniProt synonyms, GO:0031090 parentage,
+    parthood in cellstructuremech:mitosome_envelope, a reviewed-label-only lipid-bilayer component,
+    rare Eukaryota and Entamoeba scope, topology evidence from UniProt SL-0438, SL-0440, and
+    SL-0443 plus DOI evidence from Tovar 1999 and Tachezy 2022, and updated the existing mitosome_envelope
+    placeholder to point at the exact record. Regenerated embeddings, pages, and README and
+    ran closed-schema, strict, snippet, trait-link, render, docs, and embedding checks.

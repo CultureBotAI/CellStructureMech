@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mitosome outer membrane · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>mitosome outer membrane</h1>
+<p class="meta"><code>cellstructuremech:mitosome_outer_membrane</code> · MEMBRANE_ORGANELLE · MEMBRANE · <span class="status">PROPOSED</span></p>
+<p class="definition">The outer membrane of a mitosome is the mitosomal membrane facing the cytoplasm. <small>[<code>uniprot.location:SL-0443</code>]</small></p>
+<p><strong>Synonyms:</strong> mitosomal outer membrane; outer mitosomal membrane</p><p><strong>Part of:</strong> <code>cellstructuremech:mitosome_envelope</code> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0443</code> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-mitosome_outer_lipid_bilayer"><td>mitosome outer lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Cytoplasm-facing lipid bilayer that forms the outer boundary of the mitosome envelope.<ul class="evidence"><li><code>uniprot.location:SL-0443</code> <small>UniProt SL-0443 identifies the mitosome outer membrane as the mitosomal membrane facing the cytoplasm.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2759"><code>NCBITaxon:2759</code></a> Eukaryota — <strong>RARE</strong>: Mitosome outer membranes occur in the patchy anaerobic or microaerophilic microbial eukaryotes that retain double-membrane mitochondrion-related mitosomes. [<a href="https://doi.org/10.1111/jeu.12922"><code>DOI:10.1111/jeu.12922</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5759"><code>NCBITaxon:5759</code></a> Entamoeba histolytica — <strong>COMMON</strong>: The Entamoeba mitochondrion-related mitosome was identified as a double-membrane organelle. [<a href="https://doi.org/10.1046/j.1365-2958.1999.01414.x"><code>DOI:10.1046/j.1365-2958.1999.01414.x</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5759"><code>NCBITaxon:5759</code></a> <em>Entamoeba histolytica</em> — Amoebozoan parasite in which a double-membrane mitochondrion-related mitosome was initially described. [<a href="https://doi.org/10.1046/j.1365-2958.1999.01414.x"><code>DOI:10.1046/j.1365-2958.1999.01414.x</code></a>]</li></ul>
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-mitosome_outer_membrane_topology">Mitosome outer membrane topology <small>(FUNCTION)</small></h3>
+<p>The mitosome outer membrane is the cytoplasm-facing lipid bilayer of the mitosome envelope and bounds the intermembrane space.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>mitosome outer membrane</td><td>is part of</td><td>mitosome envelope</td><td><ul class="evidence"><li><code>uniprot.location:SL-0438</code> <small>UniProt SL-0438 defines the mitosome envelope as comprising the inner and outer mitosomal membranes plus the intermembrane space.</small></li></ul></td></tr>
+<tr><td>mitosome outer membrane</td><td>faces</td><td>cytoplasm</td><td><ul class="evidence"><li><code>uniprot.location:SL-0443</code> <small>UniProt SL-0443 defines the mitosome outer membrane by its orientation toward the cytoplasm.</small></li></ul></td></tr>
+<tr><td>mitosome outer membrane</td><td>bounds</td><td>mitosome intermembrane space</td><td><ul class="evidence"><li><code>uniprot.location:SL-0440</code> <small>UniProt SL-0440 defines the mitosome intermembrane space as the space between the inner and outer mitosomal membranes.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the lipid constituent of the mitosome outer membrane. <small>UniProt SL-0443 identifies the whole mitosome outer membrane, but the lipid bilayer constituent is intentionally left as a reviewed-label-only component until an exact source-neutral membrane-constituent CURIE is curated.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><code>uniprot.location:SL-0443</code> <small>UniProt Subcellular Location entry SL-0443 identifies the mitosome outer membrane, lists mitosomal outer membrane and outer mitosomal membrane as exact synonyms, and places it under the mitosome membrane location.</small></li><li><code>uniprot.location:SL-0438</code> <small>UniProt Subcellular Location entry SL-0438 identifies the mitosome envelope as including the outer mitosomal membrane.</small></li><li><code>uniprot.location:SL-0440</code> <small>UniProt Subcellular Location entry SL-0440 identifies the mitosome intermembrane space as the space between inner and outer mitosomal membranes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031090"><code>GO:0031090</code></a> <small>Gene Ontology cellular-component parent term for organelle membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005737"><code>GO:0005737</code></a> <small>Gene Ontology cellular-component term for the cytoplasm faced by the mitosome outer membrane.</small></li><li><a href="https://doi.org/10.1046/j.1365-2958.1999.01414.x"><code>DOI:10.1046/j.1365-2958.1999.01414.x</code></a> <small>Tovar et al. 1999, The mitosome, a novel organelle related to mitochondria in the amitochondrial parasite Entamoeba histolytica, Molecular Microbiology.</small></li><li><a href="https://doi.org/10.1111/jeu.12922"><code>DOI:10.1111/jeu.12922</code></a> <small>Tachezy 2022, Hydrogenosomes and mitosomes: Mitochondria of anaerobic eukaryotes, Journal of Eukaryotic Microbiology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-13T19:39:56Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-13T19:40:41Z</code> codex · EXPANDED_RECORD — Added UniProt SL mitosomal-outer-membrane synonyms and xref, organelle-membrane parentage, mitosome-envelope parthood, a reviewed-label-only lipid-bilayer component, rare anaerobic eukaryote and Entamoeba scope, UniProt/GO/DOI evidence, a nonmechanistic outer membrane topology graph, and a lipid-bilayer grounding TODO.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/mitosome_outer_membrane.yaml"><code>data/structures/membrane_organelle/mitosome_outer_membrane.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
