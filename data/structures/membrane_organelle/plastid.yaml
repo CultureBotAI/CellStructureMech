@@ -27,6 +27,12 @@ curation_history:
   changes: Aligned GO:0042170 component and graph-node labels to the canonical singular
     plastid membrane label.
   llm_assisted: true
+- timestamp: '2026-09-13T20:42:30Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #834 by narrowing GO:0042170 plastid membrane role and topology
+    wording to surrounding or envelope-bounding plastid membranes.'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -40,8 +46,7 @@ components:
   component_role: CONSTITUENT
   grounding: GO:0042170
   essentiality: UNKNOWN
-  role: Lipid bilayers that surround plastids or form specialized plastid envelope
-    and internal membrane subcompartments.
+  role: Lipid bilayers that surround plastids or form plastid envelope boundaries.
   evidence:
   - reference: GO:0042170
     notes: GO:0042170 defines plastid membrane as any lipid bilayer surrounding a
@@ -98,8 +103,8 @@ evidence:
 causal_graphs:
 - graph_id: plastid_topology
   title: Plastid membrane boundary and stroma
-  description: Plastids are cytoplasmic, membrane-bounded organelles whose internal
-    stromal compartment is enclosed by plastid membranes.
+  description: Plastids are cytoplasmic, membrane-bounded organelles delimited by
+    surrounding plastid membranes and containing a plastid stroma.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures the conserved generic organelle topology without
@@ -134,7 +139,8 @@ causal_graphs:
   - subject: plastid_membranes
     predicate: bounds
     object: plastid
-    description: Plastid membranes delimit the membrane-bounded plastid organelle.
+    description: Generic plastid membranes surround or belong to the envelope boundary
+      of a membrane-bounded plastid.
     evidence:
     - reference: GO:0042170
       notes: GO:0042170 identifies lipid bilayers that surround plastids or belong
