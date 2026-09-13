@@ -1,0 +1,118 @@
+identifier: GO:0009532
+label: plastid stroma
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The ground substance of a plastid.
+definition_source: GO:0009532
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T21:52:40Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T21:53:06Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL-0215 xref and exact synonym, plastid parthood, Eukaryota,
+    Viridiplantae, and Chlamydomonas scope, a nonmechanistic stroma topology graph,
+    and a resolved interpretation for generic stromal contents.
+  llm_assisted: true
+synonyms:
+- synonym_text: Plastidic stroma
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0215
+part_of:
+- GO:0009536
+xrefs:
+- uniprot.location:SL-0215
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Plastid stromal compartments occur in the scattered eukaryotic lineages that
+    carry primary, secondary, or reduced plastids.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Green algae and land plants carry primary plastids with internal stromal matrix
+    compartments.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: The Chlamydomonas reinhardtii chloroplast stroma contains metabolic and protein-biogenesis
+    proteins in a unicellular green-algal model.
+  reference: DOI:10.1007/s00294-011-0339-1
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Unicellular green-algal model whose chloroplast stroma has been profiled in
+    plastid proteome surveys.
+  reference: DOI:10.1007/s00294-011-0339-1
+evidence:
+- reference: GO:0009532
+  notes: Gene Ontology cellular-component term for plastid stroma.
+- reference: GO:0009536
+  notes: Gene Ontology cellular-component term for the containing plastid.
+- reference: uniprot.location:SL-0215
+  notes: UniProt Subcellular Location entry SL-0215 maps Plastid stroma to GO:0009532
+    and lists Plastid as its host parent.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1007/s00294-011-0339-1
+  notes: 'Terashima, Specht and Hippler 2011, The chloroplast proteome: a survey from
+    the Chlamydomonas reinhardtii perspective with a focus on distinctive features,
+    Current Genetics.'
+causal_graphs:
+- graph_id: plastid_stroma_topology
+  title: Plastid stroma topology
+  description: The plastid stroma is the matrix-filled internal space inside a plastid.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures generic stroma containment without asserting lineage-specific
+    nucleoids, plastoglobules, thylakoid lumens, ribosomes, soluble enzymes, or transient
+    metabolites.
+  nodes:
+  - node_id: plastid
+    label: plastid
+    node_type: ORGANELLE
+    grounding: GO:0009536
+  - node_id: plastid_stroma
+    label: plastid stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009532
+  edges:
+  - subject: plastid
+    predicate: contains
+    object: plastid_stroma
+    description: The plastid stroma is the internal matrix compartment inside a plastid.
+    evidence:
+    - reference: GO:0009532
+      notes: GO:0009532 identifies the plastid stroma as the ground substance of plastids.
+    - reference: uniprot.location:SL-0215
+      notes: UniProt SL-0215 places Plastid stroma under the Plastid location.
+discussions:
+- discussion_id: generic_stroma_contents
+  prompt: Keep soluble enzymes and lineage-specific stromal inclusions out of the
+    curated plastid stroma component list.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  rationale: GO:0009532 and UniProt SL-0215 identify the generic matrix space inside
+    plastids. Exact inclusions such as chloroplast nucleoids and plastoglobules, as
+    well as soluble stromal protein sets, belong on exact child records or future
+    component-specific records rather than defining the generic stroma.
+  resolution_note: Curated only plastid containment and left child-specific stroma
+    contents to chloroplast, cyanelle, and other exact plastid records.
+  evidence:
+  - reference: GO:0009532
+    notes: GO:0009532 identifies the generic plastid stroma but does not enumerate
+      lineage-specific inclusions.
+  - reference: uniprot.location:SL-0215
+    notes: UniProt SL-0215 identifies the whole plastid stroma.
+  posed_by: codex
+  posed_date: '2026-09-13'
