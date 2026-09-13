@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>microneme membrane · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>microneme membrane</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0033163"><code>GO:0033163</code></a> · MEMBRANE_ORGANELLE · MEMBRANE · <span class="status">PROPOSED</span></p>
+<p class="definition">The lipid bilayer surrounding a microneme. <small>[<a href="http://purl.obolibrary.org/obo/GO_0033163"><code>GO:0033163</code></a>]</small></p>
+<p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0020009"><code>GO:0020009</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-microneme_lipid_bilayer"><td>microneme lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Generic lipid-bilayer constituent that surrounds a microneme and separates its secretory lumen from the parasite cytosol.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033163"><code>GO:0033163</code></a> <small>GO:0033163 defines the microneme membrane as the lipid bilayer surrounding a microneme.</small></li><li><a href="https://doi.org/10.1111/cmi.13018"><code>DOI:10.1111/cmi.13018</code></a> <small>Dubois and Soldati-Favre 2019 review Toxoplasma microneme biogenesis and exocytosis.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5794"><code>NCBITaxon:5794</code></a> Apicomplexa — <strong>COMMON</strong>: Microneme membranes are the bounding lipid bilayers of apicomplexan micronemes, apical secretory organelles used for regulated secretion during attachment and invasion. [<a href="https://doi.org/10.1007/978-0-387-78267-6_2"><code>DOI:10.1007/978-0-387-78267-6_2</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5811"><code>NCBITaxon:5811</code></a> <em>Toxoplasma gondii</em> — Apicomplexan model used to study microneme biogenesis, protein sorting, and regulated microneme exocytosis. [<a href="https://doi.org/10.1111/cmi.13018"><code>DOI:10.1111/cmi.13018</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>microneme lumen boundary</strong> — The microneme membrane forms the lipid-bilayer boundary around the microneme secretory lumen.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033163"><code>GO:0033163</code></a> <small>GO:0033163 defines the microneme membrane as the lipid bilayer surrounding a microneme.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0034494"><code>GO:0034494</code></a> <small>GO:0034494 defines the microneme lumen as the volume enclosed by the microneme membrane.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-microneme_membrane_bounds_lumen">Microneme membrane encloses the secretory lumen <small>(FUNCTION)</small></h3>
+<p>The microneme membrane is the lipid bilayer that bounds the microneme and encloses the lumen that stores microneme adhesins before regulated exocytosis.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>microneme membrane</td><td>is part of</td><td>microneme</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033163"><code>GO:0033163</code></a> <small>GO:0033163 defines the microneme membrane as surrounding a microneme.</small></li><li><a href="https://doi.org/10.1111/cmi.13018"><code>DOI:10.1111/cmi.13018</code></a> <small>Dubois and Soldati-Favre 2019 review Toxoplasma microneme biogenesis and exocytosis.</small></li></ul></td></tr>
+<tr><td>microneme lumen</td><td>is enclosed by</td><td>microneme membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0034494"><code>GO:0034494</code></a> <small>GO:0034494 defines the microneme lumen as the volume enclosed by the microneme membrane.</small></li></ul></td></tr>
+<tr><td>microneme</td><td>supports</td><td>microneme exocytosis</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/9208224"><code>PMID:9208224</code></a> <small>Carruthers and Sibley 1997 showed microneme secretion accompanies the first phase of Toxoplasma invasion.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the generic lipid constituent of the microneme membrane. <small>The record is exactly grounded to GO:0033163, but no microneme-specific lipid or lipid-bilayer CURIE was curated for the membrane constituent.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033163"><code>GO:0033163</code></a> <small>Gene Ontology cellular-component term for the microneme membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031090"><code>GO:0031090</code></a> <small>Gene Ontology cellular-component parent term for organelle membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0020009"><code>GO:0020009</code></a> <small>Gene Ontology cellular-component term for the microneme.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0034494"><code>GO:0034494</code></a> <small>Gene Ontology cellular-component term for the microneme lumen.</small></li><li><a href="https://doi.org/10.1111/cmi.13018"><code>DOI:10.1111/cmi.13018</code></a> <small>Dubois and Soldati-Favre 2019, Biogenesis and secretion of micronemes in Toxoplasma gondii, Cellular Microbiology.</small></li><li><a href="https://doi.org/10.1007/978-0-387-78267-6_2"><code>DOI:10.1007/978-0-387-78267-6_2</code></a> <small>Carruthers and Tomley 2008, Microneme proteins in apicomplexans, Subcellular Biochemistry.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-13T12:54:28Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-13T12:54:59Z</code> codex · EXPANDED_RECORD — Added organelle-membrane parentage, microneme parthood, a label-only microneme lipid bilayer component, Apicomplexa and Toxoplasma gondii scope, a lumen-boundary function, GO/DOI evidence, a nonmechanistic microneme-membrane topology graph, and a lipid-grounding TODO.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/microneme_membrane.yaml"><code>data/structures/membrane_organelle/microneme_membrane.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

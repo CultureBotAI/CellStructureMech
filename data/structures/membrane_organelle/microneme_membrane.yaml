@@ -1,0 +1,153 @@
+identifier: GO:0033163
+label: microneme membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding a microneme.
+definition_source: GO:0033163
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T12:54:28Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T12:54:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added organelle-membrane parentage, microneme parthood, a label-only microneme
+    lipid bilayer component, Apicomplexa and Toxoplasma gondii scope, a lumen-boundary
+    function, GO/DOI evidence, a nonmechanistic microneme-membrane topology graph,
+    and a lipid-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0031090
+part_of:
+- GO:0020009
+components:
+- component_id: microneme_lipid_bilayer
+  label: microneme lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Generic lipid-bilayer constituent that surrounds a microneme and separates
+    its secretory lumen from the parasite cytosol.
+  evidence:
+  - reference: GO:0033163
+    notes: GO:0033163 defines the microneme membrane as the lipid bilayer surrounding
+      a microneme.
+  - reference: DOI:10.1111/cmi.13018
+    notes: Dubois and Soldati-Favre 2019 review Toxoplasma microneme biogenesis and
+      exocytosis.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0033163 identifies the whole microneme membrane, but no microneme-specific
+    source-neutral CURIE was curated for the generic lipid constituent of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: COMMON
+  note: Microneme membranes are the bounding lipid bilayers of apicomplexan micronemes,
+    apical secretory organelles used for regulated secretion during attachment and
+    invasion.
+  reference: DOI:10.1007/978-0-387-78267-6_2
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model used to study microneme biogenesis, protein sorting, and
+    regulated microneme exocytosis.
+  reference: DOI:10.1111/cmi.13018
+functions:
+- function_id: microneme_lumen_boundary
+  label: microneme lumen boundary
+  description: The microneme membrane forms the lipid-bilayer boundary around the
+    microneme secretory lumen.
+  evidence:
+  - reference: GO:0033163
+    notes: GO:0033163 defines the microneme membrane as the lipid bilayer surrounding
+      a microneme.
+  - reference: GO:0034494
+    notes: GO:0034494 defines the microneme lumen as the volume enclosed by the microneme
+      membrane.
+evidence:
+- reference: GO:0033163
+  notes: Gene Ontology cellular-component term for the microneme membrane.
+- reference: GO:0031090
+  notes: Gene Ontology cellular-component parent term for organelle membrane.
+- reference: GO:0020009
+  notes: Gene Ontology cellular-component term for the microneme.
+- reference: GO:0034494
+  notes: Gene Ontology cellular-component term for the microneme lumen.
+- reference: DOI:10.1111/cmi.13018
+  notes: Dubois and Soldati-Favre 2019, Biogenesis and secretion of micronemes in
+    Toxoplasma gondii, Cellular Microbiology.
+- reference: DOI:10.1007/978-0-387-78267-6_2
+  notes: Carruthers and Tomley 2008, Microneme proteins in apicomplexans, Subcellular
+    Biochemistry.
+causal_graphs:
+- graph_id: microneme_membrane_bounds_lumen
+  title: Microneme membrane encloses the secretory lumen
+  description: The microneme membrane is the lipid bilayer that bounds the microneme
+    and encloses the lumen that stores microneme adhesins before regulated exocytosis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures membrane and lumen topology without asserting proteins
+    that target or remodel the microneme membrane.
+  nodes:
+  - node_id: microneme_membrane
+    label: microneme membrane
+    node_type: STRUCTURE
+    grounding: GO:0033163
+    component_ref: microneme_lipid_bilayer
+  - node_id: microneme
+    label: microneme
+    node_type: ORGANELLE
+    grounding: GO:0020009
+  - node_id: microneme_lumen
+    label: microneme lumen
+    node_type: STRUCTURE
+    grounding: GO:0034494
+  - node_id: microneme_exocytosis
+    label: microneme exocytosis
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: microneme_membrane
+    predicate: is part of
+    object: microneme
+    description: The microneme membrane is the lipid-bilayer boundary of the microneme.
+    evidence:
+    - reference: GO:0033163
+      notes: GO:0033163 defines the microneme membrane as surrounding a microneme.
+    - reference: DOI:10.1111/cmi.13018
+      notes: Dubois and Soldati-Favre 2019 review Toxoplasma microneme biogenesis
+        and exocytosis.
+  - subject: microneme_lumen
+    predicate: is enclosed by
+    object: microneme_membrane
+    description: The microneme lumen is the volume enclosed by the microneme membrane.
+    evidence:
+    - reference: GO:0034494
+      notes: GO:0034494 defines the microneme lumen as the volume enclosed by the
+        microneme membrane.
+  - subject: microneme
+    predicate: supports
+    object: microneme_exocytosis
+    description: Membrane-bounded micronemes exocytose adhesins during the early attachment
+      phase of host-cell invasion.
+    evidence:
+    - reference: PMID:9208224
+      notes: Carruthers and Sibley 1997 showed microneme secretion accompanies the
+        first phase of Toxoplasma invasion.
+discussions:
+- discussion_id: ground_microneme_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituent
+    of the microneme membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#microneme_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0033163, but no microneme-specific
+    lipid or lipid-bilayer CURIE was curated for the membrane constituent.
+  evidence:
+  - reference: GO:0033163
+    notes: GO:0033163 identifies the complete microneme membrane.
+  posed_by: codex
+  posed_date: '2026-09-13'
