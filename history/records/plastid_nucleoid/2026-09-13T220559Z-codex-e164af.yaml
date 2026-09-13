@@ -9,6 +9,9 @@ session:
   actors:
   - type: ai_agent
     name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/842
 events:
 - type: CREATE
   outcome: changed
