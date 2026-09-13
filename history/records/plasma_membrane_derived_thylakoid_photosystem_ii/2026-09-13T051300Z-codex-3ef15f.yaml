@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml
+  slug: plasma_membrane_derived_thylakoid_photosystem_ii
+session:
+  id: 2026-09-13T051300Z-codex-3ef15f
+  timestamp: '2026-09-13T05:13:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/752
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/751
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added plasma membrane-derived thylakoid photosystem II
+  details: 'Added the GO:0030096 plasma membrane-derived thylakoid photosystem II energy-complex
+    record with Cyanobacteriota scope, a Nostoc canonical example, GO/literature evidence,
+    a nonmechanistic phycobilisome-to-PSII light-input graph, generated embeddings and rendered
+    pages. Adversarial review for PR #751 filed #752 and removed the overbroad bare PSII synonym
+    while keeping the scoped cyanobacterial PSII synonym.'

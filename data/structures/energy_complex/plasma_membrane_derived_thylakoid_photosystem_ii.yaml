@@ -21,11 +21,14 @@ curation_history:
     function, GO and literature evidence, a nonmechanistic PSII light-input graph,
     and a PSII subunit-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-13T05:10:06Z'
+  curator: codex
+  action: REVISED_RECORD
+  changes: '#752: removed the overbroad bare PSII synonym from the GO:0030096 record
+    while retaining the scoped cyanobacterial PSII synonym.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cyanobacterial PSII
-  synonym_type: RELATED_SYNONYM
-  source: DOI:10.1038/cr.2015.59
-- synonym_text: PSII
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1038/cr.2015.59
 parent_structures:
