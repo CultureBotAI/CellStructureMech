@@ -1,0 +1,164 @@
+identifier: GO:0009707
+label: chloroplast outer membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The cytoplasm-facing lipid bilayer of the chloroplast envelope.
+definition_source: GO:0009707
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T02:53:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T02:54:19Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL-0054 xref, plastid outer membrane parentage, chloroplast-envelope
+    parthood, a reviewed-label-only outer lipid bilayer component, Viridiplantae and
+    Chlamydomonas scope, a nonmechanistic boundary graph, and a lipid-bilayer grounding
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: chloroplastic outer membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0054
+parent_structures:
+- GO:0009527
+part_of:
+- GO:0009941
+xrefs:
+- uniprot.location:SL-0054
+components:
+- component_id: chloroplast_outer_lipid_bilayer
+  label: chloroplast outer lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Cytoplasm-facing lipid bilayer that forms the outer boundary of the chloroplast
+    envelope.
+  evidence:
+  - reference: GO:0009707
+    notes: GO:0009707 defines the chloroplast outer membrane as the cytoplasm-facing
+      lipid bilayer of the chloroplast envelope.
+  - reference: uniprot.location:SL-0054
+    notes: UniProt SL-0054 maps directly to GO:0009707 and describes the chloroplast
+      outer membrane as facing the cytoplasm.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0009707 and UniProt SL-0054 identify the whole chloroplast outer
+    membrane, but no separate source-neutral CURIE was curated for the lipid constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Photosynthetic green algae and land plants carry chloroplasts bounded by chloroplast
+    envelopes with outer membranes.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas reinhardtii has a chloroplast outer membrane carrying the Toc
+    side of the TOC-TIC import supercomplex.
+  reference: DOI:10.1016/j.cell.2022.10.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model used for structural analysis of a TOC-TIC supercomplex that
+    spans the chloroplast outer and inner envelope membranes.
+  reference: DOI:10.1016/j.cell.2022.10.030
+evidence:
+- reference: GO:0009707
+  notes: Gene Ontology cellular-component term for chloroplast outer membrane.
+- reference: GO:0009527
+  notes: Gene Ontology cellular-component term for plastid outer membrane.
+- reference: GO:0009941
+  notes: Gene Ontology cellular-component term for chloroplast envelope.
+- reference: GO:0031972
+  notes: Gene Ontology cellular-component term for the chloroplast intermembrane space
+    bounded by the outer membrane.
+- reference: GO:0005737
+  notes: Gene Ontology cellular-component term for the cytoplasm faced by the outer
+    chloroplast membrane.
+- reference: uniprot.location:SL-0054
+  notes: UniProt Subcellular Location entry SL-0054 maps Chloroplast outer membrane
+    to GO:0009707 and places it under plastid outer membrane.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1016/j.cell.2022.10.030
+  notes: Jin et al. 2022, Structure of a TOC-TIC supercomplex spanning two chloroplast
+    envelope membranes, Cell.
+causal_graphs:
+- graph_id: chloroplast_outer_membrane_topology
+  title: Chloroplast outer membrane topology
+  description: The chloroplast outer membrane is the cytoplasm-facing lipid bilayer
+    of the chloroplast envelope and bounds the intermembrane space.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining envelope topology without asserting
+    membrane proteins, import machinery, or the full chloroplast envelope protein-import
+    apparatus.
+  nodes:
+  - node_id: chloroplast_outer_membrane
+    label: chloroplast outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009707
+  - node_id: chloroplast_envelope
+    label: chloroplast envelope
+    node_type: STRUCTURE
+    grounding: GO:0009941
+  - node_id: cytoplasm
+    label: cytoplasm
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005737
+  - node_id: chloroplast_intermembrane_space
+    label: chloroplast intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031972
+  edges:
+  - subject: chloroplast_outer_membrane
+    predicate: is part of
+    object: chloroplast_envelope
+    description: The chloroplast outer membrane is the outer lipid bilayer of the
+      chloroplast envelope.
+    evidence:
+    - reference: GO:0009707
+      notes: GO:0009707 defines this outer membrane as a lipid bilayer of the chloroplast
+        envelope.
+    - reference: uniprot.location:SL-0054
+      notes: UniProt SL-0054 places the chloroplast outer membrane under plastid outer
+        membrane.
+  - subject: chloroplast_outer_membrane
+    predicate: faces
+    object: cytoplasm
+    description: The chloroplast outer membrane is the cytoplasm-facing membrane of
+      the chloroplast envelope.
+    evidence:
+    - reference: GO:0009707
+      notes: GO:0009707 identifies this chloroplast envelope bilayer by its cytoplasm-facing
+        orientation.
+    - reference: uniprot.location:SL-0054
+      notes: UniProt SL-0054 describes the same cytoplasm-facing chloroplast membrane.
+  - subject: chloroplast_outer_membrane
+    predicate: bounds
+    object: chloroplast_intermembrane_space
+    description: The chloroplast outer membrane forms the outer boundary of the space
+      between the envelope lipid bilayers.
+    evidence:
+    - reference: GO:0031972
+      notes: GO:0031972 identifies the chloroplast intermembrane space as the region
+        between the inner and outer chloroplast membranes.
+discussions:
+- discussion_id: ground_chloroplast_outer_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    chloroplast outer membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#chloroplast_outer_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0009707 and UniProt SL-0054, but
+    the lipid bilayer constituent is intentionally left as a reviewed-label-only component
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-13'

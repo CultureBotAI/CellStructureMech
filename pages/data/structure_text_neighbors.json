@@ -111,6 +111,11 @@
           "cosine_similarity": 0.82437153
         },
         {
+          "identifier": "GO:0009707",
+          "label": "chloroplast outer membrane",
+          "cosine_similarity": 0.81349336
+        },
+        {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
           "cosine_similarity": 0.8063863
@@ -124,11 +129,6 @@
           "identifier": "GO:0070113",
           "label": "organellar chromatophore inner membrane",
           "cosine_similarity": 0.80189909
-        },
-        {
-          "identifier": "GO:0070112",
-          "label": "organellar chromatophore membrane",
-          "cosine_similarity": 0.80135922
         }
       ]
     },
@@ -2405,6 +2405,11 @@
           "cosine_similarity": 0.7422896
         },
         {
+          "identifier": "GO:0009707",
+          "label": "chloroplast outer membrane",
+          "cosine_similarity": 0.73346262
+        },
+        {
           "identifier": "GO:0009534",
           "label": "chloroplast thylakoid",
           "cosine_similarity": 0.72318495
@@ -2418,11 +2423,6 @@
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
           "cosine_similarity": 0.70513717
-        },
-        {
-          "identifier": "GO:0009543",
-          "label": "chloroplast thylakoid lumen",
-          "cosine_similarity": 0.6993439
         }
       ]
     },
@@ -2787,14 +2787,14 @@
           "cosine_similarity": 0.91738644
         },
         {
+          "identifier": "GO:0009707",
+          "label": "chloroplast outer membrane",
+          "cosine_similarity": 0.90427719
+        },
+        {
           "identifier": "GO:0009534",
           "label": "chloroplast thylakoid",
           "cosine_similarity": 0.90179981
-        },
-        {
-          "identifier": "GO:0009543",
-          "label": "chloroplast thylakoid lumen",
-          "cosine_similarity": 0.86009372
         }
       ]
     },
@@ -2806,6 +2806,11 @@
           "identifier": "GO:0009507",
           "label": "chloroplast",
           "cosine_similarity": 0.94721455
+        },
+        {
+          "identifier": "GO:0009707",
+          "label": "chloroplast outer membrane",
+          "cosine_similarity": 0.91347582
         },
         {
           "identifier": "GO:0009570",
@@ -2821,11 +2826,37 @@
           "identifier": "GO:0009534",
           "label": "chloroplast thylakoid",
           "cosine_similarity": 0.83575444
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009707",
+      "label": "chloroplast outer membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0009941",
+          "label": "chloroplast envelope",
+          "cosine_similarity": 0.91347582
         },
         {
-          "identifier": "GO:0009543",
-          "label": "chloroplast thylakoid lumen",
-          "cosine_similarity": 0.81134012
+          "identifier": "GO:0009535",
+          "label": "chloroplast thylakoid membrane",
+          "cosine_similarity": 0.91280274
+        },
+        {
+          "identifier": "GO:0009507",
+          "label": "chloroplast",
+          "cosine_similarity": 0.90427719
+        },
+        {
+          "identifier": "GO:0009570",
+          "label": "chloroplast stroma",
+          "cosine_similarity": 0.89092234
+        },
+        {
+          "identifier": "GO:0036013",
+          "label": "cyanelle outer membrane",
+          "cosine_similarity": 0.87276085
         }
       ]
     },
@@ -2844,6 +2875,11 @@
           "cosine_similarity": 0.92215285
         },
         {
+          "identifier": "GO:0009707",
+          "label": "chloroplast outer membrane",
+          "cosine_similarity": 0.89092234
+        },
+        {
           "identifier": "GO:0009534",
           "label": "chloroplast thylakoid",
           "cosine_similarity": 0.88671092
@@ -2852,11 +2888,6 @@
           "identifier": "GO:0009535",
           "label": "chloroplast thylakoid membrane",
           "cosine_similarity": 0.8731831
-        },
-        {
-          "identifier": "GO:0009941",
-          "label": "chloroplast envelope",
-          "cosine_similarity": 0.86361633
         }
       ]
     },
@@ -2885,9 +2916,9 @@
           "cosine_similarity": 0.88671092
         },
         {
-          "identifier": "GO:0070118",
-          "label": "organellar chromatophore thylakoid membrane",
-          "cosine_similarity": 0.84931652
+          "identifier": "GO:0009707",
+          "label": "chloroplast outer membrane",
+          "cosine_similarity": 0.86913483
         }
       ]
     },
@@ -2911,14 +2942,14 @@
           "cosine_similarity": 0.89913097
         },
         {
+          "identifier": "GO:0009707",
+          "label": "chloroplast outer membrane",
+          "cosine_similarity": 0.87153069
+        },
+        {
           "identifier": "GO:0033114",
           "label": "cyanelle thylakoid lumen",
           "cosine_similarity": 0.86915089
-        },
-        {
-          "identifier": "GO:0070117",
-          "label": "organellar chromatophore thylakoid lumen",
-          "cosine_similarity": 0.8629301
         }
       ]
     },
@@ -2937,6 +2968,11 @@
           "cosine_similarity": 0.91738644
         },
         {
+          "identifier": "GO:0009707",
+          "label": "chloroplast outer membrane",
+          "cosine_similarity": 0.91280274
+        },
+        {
           "identifier": "GO:0033115",
           "label": "cyanelle thylakoid membrane",
           "cosine_similarity": 0.89930226
@@ -2945,11 +2981,6 @@
           "identifier": "GO:0009543",
           "label": "chloroplast thylakoid lumen",
           "cosine_similarity": 0.89913097
-        },
-        {
-          "identifier": "GO:0070118",
-          "label": "organellar chromatophore thylakoid membrane",
-          "cosine_similarity": 0.89655801
         }
       ]
     },
@@ -2999,6 +3030,11 @@
           "cosine_similarity": 0.80086559
         },
         {
+          "identifier": "GO:0009707",
+          "label": "chloroplast outer membrane",
+          "cosine_similarity": 0.79175461
+        },
+        {
           "identifier": "GO:0009507",
           "label": "chloroplast",
           "cosine_similarity": 0.77916991
@@ -3007,11 +3043,6 @@
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
           "cosine_similarity": 0.77146847
-        },
-        {
-          "identifier": "GO:0042717",
-          "label": "plasma membrane-derived chromatophore membrane",
-          "cosine_similarity": 0.76995683
         }
       ]
     },
@@ -4539,6 +4570,11 @@
       "label": "polaroplast",
       "neighbors": [
         {
+          "identifier": "GO:0009707",
+          "label": "chloroplast outer membrane",
+          "cosine_similarity": 0.75398358
+        },
+        {
           "identifier": "GO:0044099",
           "label": "polar tube",
           "cosine_similarity": 0.744083
@@ -4557,11 +4593,6 @@
           "identifier": "GO:0070113",
           "label": "organellar chromatophore inner membrane",
           "cosine_similarity": 0.72472226
-        },
-        {
-          "identifier": "GO:0005628",
-          "label": "prospore membrane",
-          "cosine_similarity": 0.72320553
         }
       ]
     },
