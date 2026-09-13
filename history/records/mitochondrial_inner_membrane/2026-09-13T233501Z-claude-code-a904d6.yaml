@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_inner_membrane.yaml
+  slug: mitochondrial_inner_membrane
+session:
+  id: 2026-09-13T233501Z-claude-code-a904d6
+  timestamp: '2026-09-13T23:35:01Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add mitochondrial inner membrane record
+  details: Added the GO:0005743 mitochondrial inner membrane record with organelle-inner-membrane
+    and mitochondrial-membrane parentage, mitochondrial-envelope parthood, mitochondrial-crista
+    containment, a reviewed-label-only inner lipid-bilayer component, Eukaryota and Saccharomyces
+    cerevisiae scope, oxidative-phosphorylation function evidence, a nonmechanistic topology
+    graph, and a lipid-bilayer grounding TODO.

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_inner_membrane.yaml
+  slug: mitochondrial_inner_membrane
+session:
+  id: 2026-09-13T234414Z-claude-code-697203
+  timestamp: '2026-09-13T23:44:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/851
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/850
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Link mitochondrial inner membrane PR review
+  details: 'Resolved PR #850 review issue #851 by adding append-only repository history that
+    links the mitochondrial inner membrane curation to its pull request and review issue.'
