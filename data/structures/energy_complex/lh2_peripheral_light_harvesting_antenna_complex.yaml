@@ -22,6 +22,12 @@ curation_history:
     function, GO/UniProt/literature evidence, a nonmechanistic LH2 excitation-transfer
     graph, and an LH2 subunit-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-13T06:22:20Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#758: grounded the LH2 light-harvesting function and graph endpoint to
+    GO:0009765.'
+  llm_assisted: true
 synonyms:
 - synonym_text: LH2 antenna complex
   synonym_type: EXACT_SYNONYM
@@ -49,7 +55,7 @@ canonical_examples:
   reference: DOI:10.1038/nature02823
 functions:
 - function_id: photosynthetic_light_harvesting
-  label: photosynthetic light harvesting
+  label: photosynthesis, light harvesting
   description: The peripheral LH2 antenna broadens bacteriochlorophyll light capture
     and transfers excitation energy inward toward reaction-center LH1 core complexes.
   evidence:
@@ -59,6 +65,7 @@ functions:
   - reference: uniprot.location:SL-0042
     notes: UniProt SL-0042 lists antenna complexes among the contents of cellular
       chromatophore membranes.
+  grounding: GO:0009765
 evidence:
 - reference: GO:0030076
   notes: Gene Ontology cellular-component term for the broader light-harvesting complex
@@ -66,6 +73,8 @@ evidence:
 - reference: GO:0042717
   notes: Gene Ontology cellular-component term for the plasma membrane-derived chromatophore
     membrane that houses purple bacterial LH2 antenna complexes.
+- reference: GO:0009765
+  notes: Gene Ontology biological-process term for photosynthesis, light harvesting.
 - reference: uniprot.location:SL-0042
   notes: UniProt Subcellular Location entry for the cellular chromatophore membrane;
     maps to GO:0042717 and lists antenna complexes among the membrane contents.
@@ -98,8 +107,9 @@ causal_graphs:
     description: Purple-bacterial reaction-center and LH1 antenna core that receives
       excitation energy from surrounding LH2 complexes.
   - node_id: light_harvesting
-    label: photosynthetic light harvesting
+    label: photosynthesis, light harvesting
     node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009765
   edges:
   - subject: lh2
     predicate: is part of
