@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/pyrenoid_tubule.yaml
+  slug: pyrenoid_tubule
+session:
+  id: 2026-09-13T134619Z-codex-297024
+  timestamp: '2026-09-13T13:46:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/792
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/791
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - composition
+  - distribution
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added GO-grounded pyrenoid tubule record
+  details: Added a GO:0160223 pyrenoid tubule record as a membrane substructure of pyrenoids.
+    The record captures membrane parentage, pyrenoid parthood, a reviewed-label-only pyrenoid
+    tubule lipid-bilayer component, Eukaryota and Chlamydomonas reinhardtii scope, a Chlamydomonas
+    canonical example, an inorganic-carbon-delivery function, a nonmechanistic pyrenoid-tubule
+    topology graph, GO/DOI evidence, an open TODO to ground the lipid constituent exactly,
+    and a resolved interpretation keeping the whole pyrenoid record free of a universal pyrenoid-tubule
+    has_part assertion.
