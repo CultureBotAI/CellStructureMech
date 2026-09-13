@@ -10,6 +10,11 @@ session:
   - type: ai_agent
     name: codex
     agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/779
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/780
 events:
 - type: CREATE
   outcome: changed
