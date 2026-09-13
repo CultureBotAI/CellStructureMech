@@ -1,0 +1,179 @@
+identifier: GO:0055035
+label: plastid thylakoid membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer membrane of any thylakoid within a plastid.
+definition_source: GO:0055035
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T23:13:29Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T23:14:00Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added thylakoid-membrane parentage, plastid thylakoid parthood, a reviewed-label-only
+    lipid-bilayer component, Viridiplantae and Glaucocystophyceae scope, a Chlamydomonas
+    example, a photosynthesis light-reaction function, a nonmechanistic topology graph,
+    a lipid-grounding TODO, and a resolved generic-versus-child interpretation.
+  llm_assisted: true
+parent_structures:
+- GO:0042651
+part_of:
+- GO:0031976
+components:
+- component_id: plastid_thylakoid_lipid_bilayer
+  label: plastid thylakoid lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Pigmented plastid thylakoid lipid bilayer that bounds the lumen and houses
+    photosynthetic light-reaction complexes.
+  evidence:
+  - reference: GO:0055035
+    notes: GO:0055035 defines the plastid thylakoid membrane as the lipid bilayer
+      membrane of any thylakoid within a plastid.
+  - reference: GO:0031978
+    notes: GO:0031978 defines the plastid thylakoid lumen as the volume enclosed by
+      a plastid thylakoid membrane.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review plastid thylakoid structural diversity
+      and light-reaction membranes.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0055035 identifies the whole plastid thylakoid membrane, but
+    no separate source-neutral CURIE was curated for the lipid constituent of that
+    membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Photosynthetic green algae and land plants have plastid thylakoid membranes
+    that bound lumenal compartments and support light reactions.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+- taxon_id: NCBITaxon:38254
+  taxon_label: Glaucocystophyceae
+  presence: COMMON
+  note: Glaucophyte cyanelles are plastids with internal thylakoid membranes.
+  reference: DOI:10.5586/asbp.2015.020
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Unicellular green alga whose native chloroplast thylakoid membranes were resolved
+    by in situ cryo-electron tomography.
+  reference: DOI:10.7554/eLife.04889
+functions:
+- function_id: photosynthesis_light_reaction
+  label: photosynthesis, light reaction
+  grounding: GO:0019684
+  description: The plastid thylakoid membrane is the internal plastid membrane surface
+    where photosynthetic light-reaction complexes convert light energy into electron
+    transport and a trans-thylakoid proton gradient.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review plastid thylakoid membranes as conserved
+      sites of photosynthetic light reactions.
+evidence:
+- reference: GO:0055035
+  notes: Gene Ontology cellular-component term for plastid thylakoid membrane.
+- reference: GO:0042651
+  notes: Gene Ontology cellular-component term for thylakoid membrane, the broader
+    plastid-independent parent.
+- reference: GO:0031976
+  notes: Gene Ontology cellular-component term for the plastid thylakoid that this
+    membrane is part of.
+- reference: GO:0031978
+  notes: Gene Ontology cellular-component term for the plastid thylakoid lumen bounded
+    by this membrane.
+- reference: GO:0019684
+  notes: Gene Ontology biological-process term for photosynthesis, light reaction.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
+- reference: DOI:10.7554/eLife.04889
+  notes: Engel et al. 2015, Native architecture of the Chlamydomonas chloroplast revealed
+    by in situ cryo-electron tomography, eLife.
+- reference: DOI:10.5586/asbp.2015.020
+  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
+    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
+causal_graphs:
+- graph_id: plastid_thylakoid_membrane_topology
+  title: Plastid thylakoid membrane topology
+  description: The plastid thylakoid membrane bounds the thylakoid lumen and supports
+    photosynthetic light reactions.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining plastid thylakoid membrane topology
+    and light-reaction site without asserting the complete photosystem or electron-transport
+    composition.
+  nodes:
+  - node_id: plastid_thylakoid_membrane
+    label: plastid thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0055035
+    component_ref: plastid_thylakoid_lipid_bilayer
+  - node_id: plastid_thylakoid_lumen
+    label: plastid thylakoid lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031978
+  - node_id: photosynthesis_light_reaction
+    label: photosynthesis, light reaction
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0019684
+  edges:
+  - subject: plastid_thylakoid_membrane
+    predicate: bounds
+    object: plastid_thylakoid_lumen
+    description: The plastid thylakoid membrane bounds the lumenal compartment of
+      a plastid thylakoid.
+    evidence:
+    - reference: GO:0055035
+      notes: GO:0055035 defines the plastid thylakoid membrane as a thylakoid lipid
+        bilayer.
+    - reference: GO:0031978
+      notes: GO:0031978 defines the plastid thylakoid lumen as the volume enclosed
+        by that membrane.
+  - subject: plastid_thylakoid_membrane
+    predicate: supports
+    object: photosynthesis_light_reaction
+    description: The plastid thylakoid membrane houses light-reaction complexes for
+      photosynthesis.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review plastid thylakoid membranes as light-reaction
+        membrane systems.
+discussions:
+- discussion_id: ground_plastid_thylakoid_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    plastid thylakoid membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#plastid_thylakoid_lipid_bilayer
+  rationale: GO:0055035 identifies the whole plastid thylakoid membrane, but the lipid
+    bilayer constituent is intentionally left as a reviewed-label-only component until
+    an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-13'
+- discussion_id: generic_plastid_not_child_membrane
+  prompt: Keep the plastid thylakoid membrane distinct from chloroplast, cyanelle,
+    and organellar chromatophore thylakoid membrane children.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0055035 denotes the generic lipid bilayer membrane of any thylakoid
+    within a plastid, while GO:0009535, GO:0033115, and GO:0070118 denote lineage-specific
+    child membranes.
+  resolution_note: Curated GO:0055035 as the plastid-specific parent of the chloroplast,
+    cyanelle, and organellar chromatophore thylakoid membrane records.
+  evidence:
+  - reference: GO:0055035
+    notes: GO:0055035 identifies the plastid thylakoid membrane parent.
+  - reference: GO:0009535
+    notes: GO:0009535 identifies the chloroplast-specific child.
+  - reference: GO:0033115
+    notes: GO:0033115 identifies the cyanelle-specific child.
+  - reference: GO:0070118
+    notes: GO:0070118 identifies the organellar chromatophore-specific child.
+  posed_by: codex
+  posed_date: '2026-09-13'

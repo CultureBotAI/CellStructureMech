@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/plastid_thylakoid_membrane.yaml
+  slug: plastid_thylakoid_membrane
+session:
+  id: 2026-09-13T231416Z-codex-f20d96
+  timestamp: '2026-09-13T23:14:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - record
+  - evidence
+  - components
+  - causal_graphs
+  summary: Add plastid thylakoid membrane record
+  details: Added the GO:0055035 plastid thylakoid membrane record with GO:0042651 thylakoid-membrane
+    parentage, GO:0031976 plastid thylakoid parthood, a reviewed-label-only plastid thylakoid
+    lipid-bilayer component, Viridiplantae and Glaucocystophyceae scope, a Chlamydomonas example,
+    a photosynthesis light-reaction function, literature and GO evidence, and a nonmechanistic
+    topology graph.
