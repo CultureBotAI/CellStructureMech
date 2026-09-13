@@ -1,0 +1,191 @@
+identifier: GO:0097741
+label: mastigoneme
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: A hair-like structure covering the flagella found in some algae (heterokonts
+  and cryptophytes). It is approximately 15 nm in diameter, and usually consist of
+  a tubular shaft that itself terminates in smaller hairs. It is composed of glycoproteins
+  and, likely, carbohydrates. Mastigonemes may assist in locomotion by increasing
+  the surface area of a flagellum.
+definition_source: GO:0097741
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T10:19:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T10:19:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cilium parthood, MST1, MST3 and PKD2 components, Chlamydomonas reinhardtii
+    scope, a Chlamydomonas canonical example, a ciliary-surface motility function,
+    mastigoneme literature evidence, an MST1/MST3/PKD2 assembly graph, and curation
+    TODOs for protein grounding and broader taxonomic scope.
+  llm_assisted: true
+part_of:
+- GO:0005929
+components:
+- component_id: mst1_hrgp
+  label: MST1 hydroxyproline-rich mastigoneme glycoprotein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MST1
+  role: Major extracellular glycoprotein forming the Chlamydomonas mastigoneme filament.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2024.03.005
+    notes: Dai et al. 2024 resolved the Chlamydomonas mastigoneme structure as an
+      MST1 hydroxyproline-rich glycoprotein filament wrapped around MST3.
+  - reference: DOI:10.1083/jcb.202001122
+    notes: Liu et al. 2020 studied mastigonemes as hair-like glycoprotein polymers
+      on Chlamydomonas cilia.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam or NCBIfam accession was
+    curated for the complete MST1 mastigoneme glycoprotein family.
+- component_id: mst3_hrgp
+  label: MST3 hydroxyproline-rich mastigoneme glycoprotein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MST3
+  role: Hydroxyproline-rich glycoprotein that co-assembles with MST1 in the Chlamydomonas
+    mastigoneme.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2024.03.005
+    notes: Dai et al. 2024 resolved mastigonemes as MST1 filaments wrapped around
+      a single copy of MST3.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam or NCBIfam accession was
+    curated for the complete MST3 mastigoneme glycoprotein family.
+- component_id: pkd2_anchor
+  label: PKD2 mastigoneme organizer
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  gene_symbols:
+  - PKD2
+  role: Ciliary membrane protein that organizes Chlamydomonas mastigonemes on the
+    ciliary surface.
+  evidence:
+  - reference: DOI:10.1083/jcb.202001122
+    notes: Liu et al. 2020 showed that Chlamydomonas PKD2 organizes mastigonemes on
+      cilia.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PKD2 is a TRP-channel protein family, but this pass did not curate
+    an exact accession for the Chlamydomonas ciliary mastigoneme-organizing paralogue.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: The green alga Chlamydomonas reinhardtii carries mastigonemes on its cilia
+    that are built from MST1 and MST3 glycoproteins.
+  reference: DOI:10.1016/j.cell.2024.03.005
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Model alga in which PKD2-dependent mastigoneme organization and MST1/MST3
+    mastigoneme structure have been characterized.
+  reference: DOI:10.1083/jcb.202001122
+functions:
+- function_id: ciliary_surface_motility_modulation
+  label: ciliary surface motility modulation
+  description: Chlamydomonas mastigoneme glycoprotein polymers are organized on the
+    ciliary surface by PKD2 and contribute to ciliary motility.
+  evidence:
+  - reference: DOI:10.1083/jcb.202001122
+    notes: Liu et al. 2020 connected PKD2-dependent mastigoneme organization to Chlamydomonas
+      ciliary motility.
+evidence:
+- reference: GO:0097741
+  notes: Gene Ontology cellular-component term for mastigoneme.
+- reference: PMID:943397
+  notes: Chen and Haines 1976, The flagellar membrane of Ochromonas danica. Isolation
+    and electrophoretic analysis of the flagellar membrane, axonemes, and mastigonemes,
+    Journal of Biological Chemistry.
+- reference: DOI:10.1083/jcb.202001122
+  notes: Liu et al. 2020, Chlamydomonas PKD2 organizes mastigonemes, hair-like glycoprotein
+    polymers on cilia, Journal of Cell Biology.
+- reference: DOI:10.1016/j.cell.2024.03.005
+  notes: Dai et al. 2024, Mastigoneme structure reveals insights into the O-linked
+    glycosylation code of native hydroxyproline-rich helices, Cell.
+causal_graphs:
+- graph_id: mst1_mst3_pkd2_mastigoneme_assembly
+  title: MST1/MST3 glycoproteins assemble into ciliary mastigonemes
+  description: In Chlamydomonas, MST1 and MST3 glycoproteins make up the mastigoneme
+    filament, and PKD2 organizes the extracellular mastigoneme polymers on cilia.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: mst1_hrgp
+    label: MST1 hydroxyproline-rich glycoprotein
+    node_type: GENE_OR_PROTEIN
+    component_ref: mst1_hrgp
+  - node_id: mst3_hrgp
+    label: MST3 hydroxyproline-rich glycoprotein
+    node_type: GENE_OR_PROTEIN
+    component_ref: mst3_hrgp
+  - node_id: pkd2_anchor
+    label: PKD2 mastigoneme organizer
+    node_type: GENE_OR_PROTEIN
+    component_ref: pkd2_anchor
+  - node_id: mastigoneme
+    label: mastigoneme
+    node_type: STRUCTURE
+    grounding: GO:0097741
+  edges:
+  - subject: mst1_hrgp
+    predicate: polymerizes into
+    object: mastigoneme
+    description: MST1 forms the main filament of the Chlamydomonas mastigoneme.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2024.03.005
+      notes: Dai et al. 2024 resolved the MST1 hydroxyproline-rich glycoprotein filament
+        in the Chlamydomonas mastigoneme.
+  - subject: mst3_hrgp
+    predicate: co-assembles into
+    object: mastigoneme
+    description: MST3 is incorporated with MST1 into the Chlamydomonas mastigoneme.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2024.03.005
+      notes: Dai et al. 2024 found a single copy of MST3 within the MST1 mastigoneme
+        filament.
+  - subject: pkd2_anchor
+    predicate: organizes
+    object: mastigoneme
+    description: PKD2 organizes mastigoneme glycoprotein polymers on the Chlamydomonas
+      ciliary surface.
+    evidence:
+    - reference: DOI:10.1083/jcb.202001122
+      notes: Liu et al. 2020 identified a PKD2-dependent organization role for Chlamydomonas
+        mastigonemes.
+discussions:
+- discussion_id: ground_mastigoneme_protein_families
+  prompt: Resolve exact MST1, MST3 and PKD2 family groundings before adding protein
+    examples or broader mastigoneme homolog sets.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mst1_hrgp
+  - components#mst3_hrgp
+  - components#pkd2_anchor
+  rationale: This first record curates the Chlamydomonas mastigoneme components by
+    experimentally used symbols but does not assert InterPro, Pfam, NCBIfam or UniProt
+    accessions for their full source-neutral families.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2024.03.005
+  - reference: DOI:10.1083/jcb.202001122
+  posed_by: codex
+  posed_date: '2026-09-13'
+- discussion_id: curate_stramenopile_and_cryptophyte_scope
+  prompt: Add clade-level heterokont, cryptophyte or stramenopile taxonomic rows only
+    after resolving current NCBI taxonomy IDs and direct review evidence for that
+    breadth.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO's textual definition mentions heterokonts and cryptophytes, but this
+    pass adds only a Chlamydomonas species row backed by component-level primary papers
+    and avoids guessing broad NCBITaxon CURIEs.
+  evidence:
+  - reference: GO:0097741
+  posed_by: codex
+  posed_date: '2026-09-13'

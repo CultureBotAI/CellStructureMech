@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/mastigoneme.yaml
+  slug: mastigoneme
+session:
+  id: 2026-09-13T102018Z-codex-be2059
+  timestamp: '2026-09-13T10:20:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added mastigoneme record
+  details: Curated a new GO:0097741 mastigoneme record with cilium parthood, Chlamydomonas
+    MST1, MST3 and PKD2 component assertions, Chlamydomonas reinhardtii scope, a ciliary-surface
+    motility function, an MST1/MST3/PKD2 assembly graph, and curation TODOs for exact protein-family
+    grounding and broader heterokont or cryptophyte taxonomic scope.
