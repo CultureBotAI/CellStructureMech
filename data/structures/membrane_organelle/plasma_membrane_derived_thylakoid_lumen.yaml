@@ -1,0 +1,138 @@
+identifier: GO:0031979
+label: plasma membrane-derived thylakoid lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The internal lumen enclosed by a plasma membrane-derived bacterial thylakoid.
+definition_source: GO:0031979
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T00:10:17Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T00:11:00Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL xref and synonym, bacterial thylakoid parthood, Cyanobacteriota
+    distribution, a Synechocystis example, literature and GO evidence, a nonmechanistic
+    lumen-topology graph, and a resolved non-organelle parentage interpretation.
+  llm_assisted: true
+- timestamp: '2026-09-13T00:20:18Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #724 by adding GO:0030075 evidence to the resolved non-organelle
+    parentage discussion.'
+  llm_assisted: true
+synonyms:
+- synonym_text: cellular thylakoid lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0044
+part_of:
+- GO:0030075
+xrefs:
+- uniprot.location:SL-0044
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteriota
+  presence: COMMON
+  note: The plasma membrane-derived thylakoid lumen occurs in the cyanobacteria that
+    build internal thylakoids, but is absent from Gloeobacter-like lineages that photosynthesize
+    only at the plasma membrane.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+canonical_examples:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  note: Cyanobacterial model used to probe de novo internal thylakoid formation and
+    the lumenal space that those membranes enclose.
+  reference: DOI:10.1038/s41467-021-23680-1
+evidence:
+- reference: GO:0031979
+  notes: Gene Ontology cellular-component term for the plasma membrane-derived thylakoid
+    lumen.
+- reference: GO:0030075
+  notes: Gene Ontology cellular-component term for the containing bacterial thylakoid.
+- reference: GO:0031676
+  notes: Gene Ontology cellular-component term for the bacterial thylakoid membrane
+    that bounds this lumen.
+- reference: GO:0009579
+  notes: Gene Ontology cellular-component term for thylakoid, used to scope thylakoids
+    as non-organelle membranous structures.
+- reference: uniprot.location:SL-0044
+  notes: UniProt Subcellular Location SL-0044 maps Cellular thylakoid lumen to GO:0031979
+    and places it under the Cellular thylakoid location.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024 review cyanobacterial thylakoid diversity, internal
+    thylakoid absence from Gloeobacter-like lineages, and trans-thylakoid proton-gradient
+    generation.
+- reference: DOI:10.1038/s41467-021-23680-1
+  notes: Huokko et al. 2021 probed de novo thylakoid membrane biogenesis and dynamics
+    in Synechocystis sp. PCC 6803.
+causal_graphs:
+- graph_id: plasma_membrane_derived_thylakoid_lumen_topology
+  title: Bacterial thylakoid lumen topology
+  description: The plasma membrane-derived thylakoid lumen is the internal compartment
+    of a cyanobacterial thylakoid bounded by the plasma membrane-derived thylakoid
+    membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the lumenal topology without duplicating photosynthetic
+    electron-transport complexes that belong on the bacterial thylakoid or thylakoid
+    membrane records.
+  nodes:
+  - node_id: thylakoid_lumen
+    label: plasma membrane-derived thylakoid lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031979
+  - node_id: thylakoid_membrane
+    label: plasma membrane-derived thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0031676
+  - node_id: bacterial_thylakoid
+    label: bacterial thylakoid
+    node_type: STRUCTURE
+    grounding: GO:0030075
+  edges:
+  - subject: thylakoid_lumen
+    predicate: is part of
+    object: bacterial_thylakoid
+    description: The plasma membrane-derived thylakoid lumen is the internal space
+      of a bacterial thylakoid.
+    evidence:
+    - reference: GO:0031979
+      notes: GO:0031979 identifies the plasma membrane-derived thylakoid lumen.
+    - reference: GO:0030075
+      notes: GO:0030075 identifies the containing bacterial thylakoid.
+    - reference: uniprot.location:SL-0044
+      notes: UniProt SL-0044 places Cellular thylakoid lumen under Cellular thylakoid.
+  - subject: thylakoid_membrane
+    predicate: surrounds
+    object: thylakoid_lumen
+    description: The bacterial thylakoid membrane encloses the lumenal compartment.
+    evidence:
+    - reference: GO:0031676
+      notes: GO:0031676 identifies the bounding plasma membrane-derived thylakoid
+        membrane.
+    - reference: GO:0031979
+      notes: GO:0031979 identifies the lumen enclosed by a plasma membrane-derived
+        thylakoid.
+discussions:
+- discussion_id: non_organelle_lumen_parentage
+  prompt: Avoid organelle-lumen parentage for the plasma membrane-derived thylakoid
+    lumen.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0031979 denotes the internal compartment of a plasma membrane-derived
+    bacterial thylakoid, while GO:0009579 explicitly scopes thylakoids as membranous
+    structures that are not considered organelles.
+  resolution_note: Linked the lumen directly to GO:0030075 with part_of rather than
+    asserting a GO:0043233 organelle-lumen parent.
+  evidence:
+  - reference: GO:0031979
+    notes: GO:0031979 is the plasma membrane-derived thylakoid lumen term.
+  - reference: GO:0009579
+    notes: GO:0009579 defines thylakoids as membranous structures and states that
+      they are not considered organelles.
+  - reference: GO:0030075
+    notes: GO:0030075 identifies the plasma membrane-derived bacterial thylakoid that
+      contains this lumen.
