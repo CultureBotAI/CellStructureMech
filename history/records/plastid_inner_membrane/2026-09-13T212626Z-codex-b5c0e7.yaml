@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/plastid_inner_membrane.yaml
+  slug: plastid_inner_membrane
+session:
+  id: 2026-09-13T212626Z-codex-b5c0e7
+  timestamp: '2026-09-13T21:26:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add plastid inner membrane
+  details: Created the GO:0009528 plastid inner membrane record with plastid-membrane parentage,
+    plastid-envelope parthood, UniProt SL-0211 exact synonyms and xref, a reviewed-label-only
+    inner lipid bilayer component, Viridiplantae and Chlamydomonas taxonomic scope, a Chlamydomonas
+    canonical example, GO/UniProt/DOI evidence, a nonmechanistic plastid inner-membrane topology
+    graph, and an open discussion for exact lipid-bilayer grounding.

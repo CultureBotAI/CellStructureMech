@@ -1,0 +1,172 @@
+identifier: GO:0009528
+label: plastid inner membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The inner, i.e. lumen-facing, lipid bilayer of the plastid envelope; also
+  faces the plastid stroma.
+definition_source: GO:0009528
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T21:25:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T21:26:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added plastid-membrane parentage, plastid-envelope parthood, the UniProt
+    SL-0211 xref and exact synonyms, a reviewed-label-only inner lipid bilayer component,
+    Viridiplantae/Chlamydomonas scope, GO/UniProt/DOI evidence, a nonmechanistic topology
+    graph, and a lipid-bilayer grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Inner plastidic membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0211
+- synonym_text: Inner plastid membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0211
+- synonym_text: Plastidic inner membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0211
+parent_structures:
+- GO:0042170
+part_of:
+- GO:0009526
+xrefs:
+- uniprot.location:SL-0211
+components:
+- component_id: plastid_inner_lipid_bilayer
+  label: plastid inner lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Stroma-facing lipid bilayer that separates the plastid stroma from the intermembrane
+    space.
+  evidence:
+  - reference: GO:0009528
+    notes: GO:0009528 defines plastid inner membrane as the inner lipid bilayer of
+      the plastid envelope that also faces the plastid stroma.
+  - reference: uniprot.location:SL-0211
+    notes: UniProt SL-0211 identifies plastid inner membrane as separating the plastid
+      stroma from the intermembrane space.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0009528 and UniProt SL-0211 identify the whole plastid inner
+    membrane, but no separate source-neutral CURIE was curated for the lipid constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Green algae and land plants carry primary plastids bounded by double envelopes
+    with stroma-facing inner plastid membranes.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: The Chlamydomonas reinhardtii chloroplast inner membrane forms the stroma-facing
+    side of the chloroplast envelope and carries the Tic side of the TOC-TIC protein-import
+    supercomplex.
+  reference: DOI:10.1016/j.cell.2022.10.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model used for structural analysis of a TOC-TIC supercomplex spanning
+    the chloroplast outer and inner envelope membranes.
+  reference: DOI:10.1016/j.cell.2022.10.030
+evidence:
+- reference: GO:0009528
+  notes: Gene Ontology cellular-component term for plastid inner membrane.
+- reference: GO:0042170
+  notes: Gene Ontology cellular-component term for generic plastid membranes.
+- reference: GO:0009526
+  notes: Gene Ontology cellular-component term for plastid envelope.
+- reference: GO:0009529
+  notes: Gene Ontology cellular-component term for plastid intermembrane space.
+- reference: GO:0009532
+  notes: Gene Ontology cellular-component term for plastid stroma.
+- reference: uniprot.location:SL-0211
+  notes: UniProt Subcellular Location entry SL-0211 maps Plastid inner membrane to
+    GO:0009528.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1016/j.cell.2022.10.030
+  notes: Jin et al. 2022, Structure of a TOC-TIC supercomplex spanning two chloroplast
+    envelope membranes, Cell.
+causal_graphs:
+- graph_id: plastid_inner_membrane_topology
+  title: Plastid inner membrane topology
+  description: The plastid inner membrane is the stroma-facing lipid bilayer of the
+    plastid envelope and delimits the plastid intermembrane space.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures generic plastid inner-membrane topology without
+    asserting lineage-specific protein translocons, cyanelle peptidoglycan, or extra
+    membranes from complex plastids.
+  nodes:
+  - node_id: plastid_inner_membrane
+    label: plastid inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0009528
+  - node_id: plastid_envelope
+    label: plastid envelope
+    node_type: STRUCTURE
+    grounding: GO:0009526
+  - node_id: plastid_stroma
+    label: plastid stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009532
+  - node_id: plastid_intermembrane_space
+    label: plastid intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009529
+  edges:
+  - subject: plastid_inner_membrane
+    predicate: is part of
+    object: plastid_envelope
+    description: The plastid inner membrane is the inner lipid bilayer of the plastid
+      envelope.
+    evidence:
+    - reference: GO:0009528
+      notes: GO:0009528 defines this inner membrane as a lipid bilayer of the plastid
+        envelope.
+  - subject: plastid_inner_membrane
+    predicate: bounds
+    object: plastid_stroma
+    description: The plastid inner membrane faces and bounds the plastid stroma.
+    evidence:
+    - reference: GO:0009528
+      notes: GO:0009528 identifies the inner plastid membrane as the bilayer that
+        also faces the plastid stroma.
+    - reference: GO:0009532
+      notes: GO:0009532 identifies the plastid stroma as the ground substance of plastids.
+    - reference: uniprot.location:SL-0211
+      notes: UniProt SL-0211 describes the plastid inner membrane as separating the
+        plastid stroma from the intermembrane space.
+  - subject: plastid_inner_membrane
+    predicate: delimits
+    object: plastid_intermembrane_space
+    description: The plastid inner membrane forms the stroma-facing side of the plastid
+      intermembrane space.
+    evidence:
+    - reference: GO:0009529
+      notes: GO:0009529 defines the plastid intermembrane space as the region between
+        the inner and outer plastid envelope lipid bilayers.
+    - reference: uniprot.location:SL-0211
+      notes: UniProt SL-0211 describes the plastid inner membrane as separating the
+        plastid stroma from the intermembrane space.
+discussions:
+- discussion_id: ground_plastid_inner_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    plastid inner membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#plastid_inner_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0009528 and UniProt SL-0211, but
+    the lipid bilayer constituent is intentionally left as a reviewed-label-only component
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-13'
