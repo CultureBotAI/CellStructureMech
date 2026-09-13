@@ -75,7 +75,7 @@ def load_subcell(refresh: bool = False) -> dict[str, dict]:
     for line in CACHE.read_text(encoding="utf-8").splitlines():
         code, _, rest = line.partition("   ")
         rest = rest.strip()
-        if code == "ID":
+        if code in {"ID", "IO", "IT"}:
             cur = {"name": rest.rstrip(".")}
         elif code == "AC":
             cur["sl"] = rest
@@ -87,6 +87,29 @@ def load_subcell(refresh: bool = False) -> dict[str, dict]:
         elif code == "//":
             cur = {}
     return go_to_sl
+
+
+def load_subcell_locations(refresh: bool = False) -> dict[str, dict]:
+    """UniProt SL id -> {sl, name, definition} for every subcell.txt entry."""
+    if refresh or not CACHE.exists():
+        CACHE.parent.mkdir(parents=True, exist_ok=True)
+        CACHE.write_bytes(_get(SUBCELL_URL))
+    locations: dict[str, dict] = {}
+    cur: dict = {}
+    for line in CACHE.read_text(encoding="utf-8").splitlines():
+        code, _, rest = line.partition("   ")
+        rest = rest.strip()
+        if code in {"ID", "IO", "IT"}:
+            cur = {"name": rest.rstrip(".")}
+        elif code == "AC":
+            cur["sl"] = rest
+        elif code == "DE":
+            cur["definition"] = (cur.get("definition", "") + " " + rest).strip()
+        elif code == "//":
+            if cur.get("sl"):
+                locations[cur["sl"]] = dict(cur)
+            cur = {}
+    return locations
 
 
 # ---------------------------------------------------------------- xrefs
