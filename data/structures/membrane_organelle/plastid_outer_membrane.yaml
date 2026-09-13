@@ -1,0 +1,169 @@
+identifier: GO:0009527
+label: plastid outer membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The outer, i.e. cytoplasm-facing, lipid bilayer of the plastid envelope.
+definition_source: GO:0009527
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T21:13:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T21:13:54Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added plastid-membrane parentage, plastid-envelope parthood, the UniProt
+    SL-0214 xref and exact synonyms, a reviewed-label-only outer lipid bilayer component,
+    Viridiplantae/Chlamydomonas scope, GO/UniProt/DOI evidence, a nonmechanistic topology
+    graph, and a lipid-bilayer grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Outer plastidic membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0214
+- synonym_text: Outer plastid membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0214
+- synonym_text: Plastidic outer membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0214
+parent_structures:
+- GO:0042170
+part_of:
+- GO:0009526
+xrefs:
+- uniprot.location:SL-0214
+components:
+- component_id: plastid_outer_lipid_bilayer
+  label: plastid outer lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Cytoplasm-facing lipid bilayer that forms the outer boundary of the plastid
+    envelope.
+  evidence:
+  - reference: GO:0009527
+    notes: GO:0009527 defines plastid outer membrane as the cytoplasm-facing lipid
+      bilayer of the plastid envelope.
+  - reference: uniprot.location:SL-0214
+    notes: UniProt SL-0214 identifies plastid outer membrane as the membrane facing
+      the cytoplasm.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0009527 and UniProt SL-0214 identify the whole plastid outer
+    membrane, but no separate source-neutral CURIE was curated for the lipid constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Green algae and land plants carry primary plastids bounded by double envelopes
+    with cytoplasm-facing outer plastid membranes.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: The Chlamydomonas reinhardtii chloroplast outer membrane forms the cytosolic
+    side of the chloroplast envelope and carries the Toc side of the TOC-TIC protein-import
+    supercomplex.
+  reference: DOI:10.1016/j.cell.2022.10.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model used for structural analysis of a TOC-TIC supercomplex spanning
+    the chloroplast outer and inner envelope membranes.
+  reference: DOI:10.1016/j.cell.2022.10.030
+evidence:
+- reference: GO:0009527
+  notes: Gene Ontology cellular-component term for plastid outer membrane.
+- reference: GO:0042170
+  notes: Gene Ontology cellular-component term for generic plastid membranes.
+- reference: GO:0009526
+  notes: Gene Ontology cellular-component term for plastid envelope.
+- reference: GO:0009529
+  notes: Gene Ontology cellular-component term for plastid intermembrane space.
+- reference: GO:0005737
+  notes: Gene Ontology cellular-component term for cytoplasm.
+- reference: uniprot.location:SL-0214
+  notes: UniProt Subcellular Location entry SL-0214 maps Plastid outer membrane to
+    GO:0009527.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1016/j.cell.2022.10.030
+  notes: Jin et al. 2022, Structure of a TOC-TIC supercomplex spanning two chloroplast
+    envelope membranes, Cell.
+causal_graphs:
+- graph_id: plastid_outer_membrane_topology
+  title: Plastid outer membrane topology
+  description: The plastid outer membrane is the cytoplasm-facing lipid bilayer of
+    the plastid envelope and bounds the plastid intermembrane space.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures generic plastid outer-membrane topology without
+    asserting lineage-specific protein translocons, cyanelle peptidoglycan, or extra
+    membranes from complex plastids.
+  nodes:
+  - node_id: plastid_outer_membrane
+    label: plastid outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009527
+  - node_id: plastid_envelope
+    label: plastid envelope
+    node_type: STRUCTURE
+    grounding: GO:0009526
+  - node_id: cytoplasm
+    label: cytoplasm
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005737
+  - node_id: plastid_intermembrane_space
+    label: plastid intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009529
+  edges:
+  - subject: plastid_outer_membrane
+    predicate: is part of
+    object: plastid_envelope
+    description: The plastid outer membrane is the outer lipid bilayer of the plastid
+      envelope.
+    evidence:
+    - reference: GO:0009527
+      notes: GO:0009527 defines this outer membrane as a lipid bilayer of the plastid
+        envelope.
+    - reference: uniprot.location:SL-0214
+      notes: UniProt SL-0214 identifies this structure as the outer membrane of a
+        plastid.
+  - subject: plastid_outer_membrane
+    predicate: faces
+    object: cytoplasm
+    description: The plastid outer membrane is the cytoplasm-facing membrane of the
+      plastid envelope.
+    evidence:
+    - reference: GO:0009527
+      notes: GO:0009527 identifies this plastid-envelope bilayer by its cytoplasm-facing
+        orientation.
+    - reference: uniprot.location:SL-0214
+      notes: UniProt SL-0214 describes the plastid outer membrane as facing the cytoplasm.
+  - subject: plastid_outer_membrane
+    predicate: bounds
+    object: plastid_intermembrane_space
+    description: The plastid outer membrane forms the outer boundary of the space
+      between the plastid envelope lipid bilayers.
+    evidence:
+    - reference: GO:0009529
+      notes: GO:0009529 defines the plastid intermembrane space as the region between
+        the inner and outer plastid envelope lipid bilayers.
+discussions:
+- discussion_id: ground_plastid_outer_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    plastid outer membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#plastid_outer_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0009527 and UniProt SL-0214, but
+    the lipid bilayer constituent is intentionally left as a reviewed-label-only component
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-13'
