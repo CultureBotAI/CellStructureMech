@@ -19,6 +19,12 @@ curation_history:
     GO evidence, a nonmechanistic lumen-boundary topology graph, and a resolved boundary
     interpretation.
   llm_assisted: true
+- timestamp: '2026-09-13T02:37:27Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #740 by adding direct GO:0009535 and SL-0058 membrane evidence
+    to the lumen-boundary topology edge and the boundary interpretation.'
+  llm_assisted: true
 parent_structures:
 - GO:0031978
 part_of:
@@ -98,6 +104,12 @@ causal_graphs:
     - reference: uniprot.location:SL-0057
       notes: UniProt SL-0057 describes the chloroplast thylakoid lumen as a chloroplast
         thylakoid child compartment.
+    - reference: GO:0009535
+      notes: GO:0009535 identifies the chloroplast thylakoid membrane enclosing the
+        lumen.
+    - reference: uniprot.location:SL-0058
+      notes: UniProt SL-0058 maps the chloroplast thylakoid membrane to GO:0009535
+        and places it under chloroplast thylakoid.
 discussions:
 - discussion_id: boundary_membrane_not_lumen_component
   prompt: Keep the chloroplast thylakoid membrane as the boundary of the chloroplast
@@ -115,3 +127,6 @@ discussions:
     notes: GO:0009543 identifies the chloroplast thylakoid lumen.
   - reference: GO:0009535
     notes: GO:0009535 identifies the chloroplast thylakoid membrane.
+  - reference: uniprot.location:SL-0058
+    notes: UniProt SL-0058 directly identifies the chloroplast thylakoid membrane
+      as the boundary term paired with SL-0057.
