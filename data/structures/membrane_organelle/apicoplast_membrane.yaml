@@ -1,0 +1,176 @@
+identifier: GO:0160211
+label: apicoplast membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: Any of the lipid bilayers that surround an apicoplast and form the apicoplast
+  envelope.
+definition_source: GO:0160211
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T13:27:47Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T13:28:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added membrane parentage, apicoplast parthood, a label-only apicoplast
+    lipid-bilayer component, Apicomplexa/Plasmodium/Toxoplasma scope, a protein-import
+    boundary function, GO/DOI evidence, a nonmechanistic apicoplast-membrane topology
+    graph, and a lipid-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0020011
+components:
+- component_id: apicoplast_lipid_bilayers
+  label: apicoplast lipid bilayers
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Generic lipid bilayers that form the multi-membrane apicoplast envelope and
+    separate the plastid from the surrounding parasite cytoplasm.
+  evidence:
+  - reference: GO:0160211
+    notes: GO:0160211 defines the apicoplast membrane as any of the lipid bilayers
+      that surround an apicoplast and form the apicoplast envelope.
+  - reference: DOI:10.1186/1475-2875-12-25
+    notes: Lemgruber et al. 2013 used cryo-electron tomography to resolve four membranes
+      around the Plasmodium falciparum apicoplast.
+  - reference: DOI:10.1098/rstb.2009.0273
+    notes: Lim et al. 2010 review the four-membrane apicoplast envelope and protein
+      targeting across it.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0160211 identifies the whole apicoplast membrane set, but no
+    exact source-neutral CURIE was curated for the generic lipid matrix of those bilayers.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: VARIABLE
+  note: Apicoplast membranes form the multi-bilayer envelope of apicoplasts, which
+    are present in many apicomplexan parasites and absent from some lineages.
+  reference: DOI:10.1016/j.ijpara.2016.08.005
+canonical_examples:
+- taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  note: Human malaria parasite in which cryo-electron tomography resolved the apicoplast
+    as an organelle bounded by four membranes.
+  reference: DOI:10.1186/1475-2875-12-25
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model used to show that Tic20 acts at the apicoplast inner membrane
+    and is required for protein import into the plastid.
+  reference: DOI:10.1073/pnas.0803862105
+functions:
+- function_id: apicoplast_protein_import_boundary
+  label: apicoplast protein import boundary
+  description: Apicoplast membranes host translocons that support import of nuclear-encoded
+    proteins across the surrounding envelope.
+  evidence:
+  - reference: DOI:10.1098/rstb.2009.0273
+    notes: Lim et al. 2010 review bipartite targeting signals and import across the
+      four apicoplast membranes.
+  - reference: DOI:10.1371/journal.ppat.1003426
+    notes: Agrawal et al. 2013 identified an apicoplast-localized ubiquitylation system
+      required for import of nuclear-encoded plastid proteins.
+  - reference: DOI:10.1073/pnas.0803862105
+    notes: van Dooren et al. 2008 localized TgTic20 to the apicoplast and showed that
+      TgTic20 disruption blocks apicoplast protein import.
+evidence:
+- reference: GO:0160211
+  notes: Gene Ontology cellular-component term for the apicoplast membrane.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component parent term for membrane.
+- reference: GO:0020011
+  notes: Gene Ontology cellular-component term for the apicoplast.
+- reference: DOI:10.1186/1475-2875-12-25
+  notes: Lemgruber et al. 2013, Cryo-electron tomography reveals four-membrane architecture
+    of the Plasmodium apicoplast, Malaria Journal.
+- reference: DOI:10.1098/rstb.2009.0273
+  notes: Lim et al. 2010, The evolution, metabolism and functions of the apicoplast,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1073/pnas.0803862105
+  notes: van Dooren et al. 2008, Toxoplasma gondii Tic20 is essential for apicoplast
+    protein import, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1371/journal.ppat.1003426
+  notes: Agrawal et al. 2013, An apicoplast localized ubiquitylation system is required
+    for the import of nuclear-encoded plastid proteins, PLOS Pathogens.
+- reference: DOI:10.1016/j.ijpara.2016.08.005
+  notes: 'McFadden and Yeh 2017, The apicoplast: now you see it, now you don''t, International
+    Journal for Parasitology.'
+causal_graphs:
+- graph_id: apicoplast_membrane_envelope
+  title: Apicoplast membranes bound the plastid
+  description: The apicoplast membrane term covers the multiple lipid bilayers that
+    form the apicoplast envelope and host protein-import translocons.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures envelope topology and placement of import translocons
+    without modeling the full import reaction.
+  nodes:
+  - node_id: apicoplast_membrane
+    label: apicoplast membrane
+    node_type: STRUCTURE
+    grounding: GO:0160211
+    component_ref: apicoplast_lipid_bilayers
+  - node_id: apicoplast
+    label: apicoplast
+    node_type: ORGANELLE
+    grounding: GO:0020011
+  - node_id: selma_import_system
+    label: SELMA/ERAD-derived import machinery
+    node_type: GENE_OR_PROTEIN
+  - node_id: tic20_translocon
+    label: Tic20 inner-membrane translocon
+    node_type: GENE_OR_PROTEIN
+  edges:
+  - subject: apicoplast_membrane
+    predicate: bounds
+    object: apicoplast
+    description: Multiple lipid bilayers form the envelope surrounding the apicoplast.
+    evidence:
+    - reference: GO:0160211
+      notes: GO:0160211 defines the apicoplast membrane as any lipid bilayer that
+        surrounds an apicoplast.
+    - reference: DOI:10.1186/1475-2875-12-25
+      notes: Lemgruber et al. 2013 visualized four apicoplast membranes by cryo-electron
+        tomography.
+    - reference: DOI:10.1098/rstb.2009.0273
+      notes: Lim et al. 2010 review the apicoplast as a plastid surrounded by four
+        membranes.
+  - subject: selma_import_system
+    predicate: resides in
+    object: apicoplast_membrane
+    description: SELMA/ERAD-derived machinery acts at an outer apicoplast membrane
+      during protein import.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1003426
+      notes: Agrawal et al. 2013 characterized an apicoplast-localized ubiquitylation
+        system required for nuclear-encoded protein import.
+  - subject: tic20_translocon
+    predicate: resides in
+    object: apicoplast_membrane
+    description: Tic20 acts at the apicoplast innermost membrane during protein import
+      into the plastid.
+    evidence:
+    - reference: DOI:10.1073/pnas.0803862105
+      notes: van Dooren et al. 2008 assigned TgTic20 to the apicoplast innermost membrane
+        import step.
+discussions:
+- discussion_id: ground_apicoplast_lipid_bilayers
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituents
+    of the apicoplast membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#apicoplast_lipid_bilayers
+  rationale: The record is exactly grounded to GO:0160211, but no exact source-neutral
+    lipid or lipid-bilayer CURIE was curated for the generic constituents of the surrounding
+    apicoplast bilayers.
+  evidence:
+  - reference: GO:0160211
+    notes: GO:0160211 identifies the complete apicoplast membrane.
+  posed_by: codex
+  posed_date: '2026-09-13'

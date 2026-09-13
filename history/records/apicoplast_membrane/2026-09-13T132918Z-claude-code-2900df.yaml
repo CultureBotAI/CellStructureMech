@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/apicoplast_membrane.yaml
+  slug: apicoplast_membrane
+session:
+  id: 2026-09-13T132918Z-claude-code-2900df
+  timestamp: '2026-09-13T13:29:18Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/790
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/789
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - composition
+  - distribution
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added GO-grounded apicoplast membrane record
+  details: Added a GO:0160211 apicoplast membrane record as the multi-bilayer envelope substructure
+    of the apicomplexan apicoplast. The record captures membrane parentage, apicoplast parthood,
+    a reviewed-label-only apicoplast lipid-bilayer component, Apicomplexa scope, Plasmodium
+    falciparum and Toxoplasma gondii as canonical examples, a protein-import boundary function,
+    a nonmechanistic apicoplast-membrane topology graph, GO/DOI evidence, and an open TODO
+    to ground the lipid constituent exactly.
