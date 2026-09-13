@@ -38,6 +38,7 @@ def payload(accession: str, entries: list[tuple[str, str, str]], *, reviewed=Tru
         ("Q03512", "IPR046387", "Carboxysome shell vertex protein CcmL"),
         ("P27134", "IPR045066", "Beta carbonic anhydrases, cladeB"),
         ("Q03513", "IPR017156", "Carboxysome assembly protein CcmM"),
+        ("V6F519", "IPR060787", "Magnetosome protein MamJ"),
     ],
 )
 def test_positive_canaries_are_exact_integrated_families(accession, entry, label):
@@ -124,6 +125,17 @@ def test_exact_flagellin_consensus_is_planned_as_a_grounding():
     assert plan[0][-1] == "ground"
 
 
+def test_exact_mamj_consensus_is_planned_as_a_grounding():
+    review = next(item for item in ip.REVIEWS if item.component_id == "mamj_connector")
+    plan = ip.plan_reviews(
+        [(Path("magnetosome.yaml"), record_for(review))],
+        reviews=(review,),
+        fetch=fetch_for(review),
+    )
+    assert plan[0][3].grounding == "InterPro:IPR060787"
+    assert plan[0][-1] == "ground"
+
+
 def test_an_additional_common_family_is_ambiguous_and_refused():
     review = ip.REVIEWS[0]
     with pytest.raises(ValueError, match="consensus changed"):
@@ -161,14 +173,14 @@ def test_bare_uniprot_accession_is_refused_before_network():
 
 
 def test_label_only_review_never_removes_an_existing_grounding():
-    review = next(item for item in ip.REVIEWS if item.component_id == "mamk_filament")
+    review = next(item for item in ip.REVIEWS if item.component_id == "mamk_actin_homolog")
     record = record_for(review)
-    record["components"][0]["grounding"] = "InterPro:IPR060787"
+    record["components"][0]["grounding"] = "InterPro:IPR056546"
     with pytest.raises(ValueError, match="refusing to remove"):
         ip.validate_review(record, review, fetch=fetch_for(review))
 
 
-@pytest.mark.parametrize("component_id", ["assembly_adaptor", "positioning", "mamk_filament"])
+@pytest.mark.parametrize("component_id", ["assembly_adaptor", "positioning", "mamk_actin_homolog"])
 def test_negative_controls_produce_label_only_decisions(component_id):
     review = next(item for item in ip.REVIEWS if item.component_id == component_id)
     plan = ip.plan_reviews(

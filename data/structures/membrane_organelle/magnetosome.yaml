@@ -182,24 +182,38 @@ components:
     notes: Uebe & Schüler 2016 describe magnetite (and greigite) biomineralisation
       inside the magnetosome vesicle.
 - component_id: mamk_filament
-  label: MamK actin-like filament
+  label: MamK filament
+  component_type: PROTEIN_COMPLEX
+  component_role: ASSOCIATED_MACHINERY
+  grounding: cellstructuremech:mamk_filament
+  gene_symbols:
+  - mamK
+  essentiality: DISPENSABLE
+  role: 'Cytoskeletal filament that aligns assembled magnetosomes into a chain. Machinery
+    acting on the assembled organelle rather than a constituent of it: vesicles still
+    form and mineralise without the filament, but they scatter.'
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2016.99
+    notes: Uebe and Schuler 2016 describe MamK filaments arranging magnetosomes in
+      a chain.
+  - reference: DOI:10.1002/pro.2827
+    notes: Barber-Zucker and Zarivach 2015 describe MamK as the actin-like filament
+      associated with magnetosome chains.
+- component_id: mamj_connector
+  label: MamJ connector
   component_type: PROTEIN
   component_role: ASSOCIATED_MACHINERY
   gene_symbols:
-  - mamK
   - mamJ
   essentiality: DISPENSABLE
-  role: 'Cytoskeletal filament that aligns assembled magnetosomes into a chain, with
-    MamJ connecting the vesicles to it. Machinery acting on the assembled organelle
-    rather than a constituent of it: vesicles still form and mineralise without it,
-    but they scatter (docs/CURATION.md, component boundary).'
+  role: Acidic connector that links magnetosome vesicles to MamK filaments.
   evidence:
   - reference: DOI:10.1038/nrmicro.2016.99
-    notes: Uebe & Schüler 2016 describe MamK filaments and the MamJ connector arranging
-      magnetosomes in a chain.
+    notes: Uebe and Schuler 2016 review MamJ as a connector between magnetosome vesicles
+      and MamK filaments.
   - reference: DOI:10.1002/pro.2827
-    notes: Barber-Zucker & Zarivach 2015 describe MamK as the actin-like filament
-      and MamJ as its connector to the vesicles.
+    notes: Barber-Zucker and Zarivach 2015 describe MamJ connecting magnetosome membranes
+      to the MamK filament.
   protein_examples:
   - uniprot_id: UniProtKB:V6F519
     protein_label: Magnetosome-associated protein MamJ
@@ -208,9 +222,8 @@ components:
     taxon_label: Magnetospirillum gryphiswaldense MSR-1
     entry_status: REVIEWED
     retrieved_on: '2026-08-30'
-    role: 'UniProt annotates this protein to SL-0510 (magnetosome); component role:
-      Cytoskeletal filament that aligns magnetosomes into a chain; without it the
-      vesicles form but scatter.'
+    role: Reviewed MSR-1 MamJ accession for the acidic connector that links magnetosome
+      vesicles to MamK filaments.
     evidence:
     - reference: PMID:14766587
       notes: Grünberg K et al. 2004, ‘Biochemical and proteomic analysis of the magnetosome
@@ -224,11 +237,8 @@ components:
     taxon_label: Paramagnetospirillum magneticum AMB-1
     entry_status: REVIEWED
     retrieved_on: '2026-09-08'
-    role: 'UniProt annotates this protein to SL-0510 (magnetosome); component role:
-      Cytoskeletal filament that aligns assembled magnetosomes into a chain, with
-      MamJ connecting the vesicles to it. Machinery acting on the assembled organelle
-      rather than a constituent of it: vesicles still form and mineralise without
-      it, but they scatter (docs/CURATION.md, component boundary).'
+    role: Reviewed AMB-1 MamJ accession for the acidic connector that links magnetosome
+      vesicles to MamK filaments.
     evidence:
     - reference: PMID:20212111
       notes: Murat D et al. 2010, ‘Comprehensive genetic dissection of the magnetosome
@@ -240,31 +250,7 @@ components:
         of Magnetosome Proteins Reveals a Unique Localization Behavior of Mms6 Protein
         onto Magnetite Crystals.’, J Bacteriol. ECO:0000269 experimental evidence
         for the magnetosome localisation of Q2W8Q7, as cited by UniProt.
-  - uniprot_id: UniProtKB:Q6NE59
-    protein_label: Actin-like protein MamK
-    gene_symbol: mamK
-    taxon_id: NCBITaxon:431944
-    taxon_label: Magnetospirillum gryphiswaldense MSR-1
-    entry_status: REVIEWED
-    retrieved_on: '2026-09-08'
-    role: The single reviewed UniProtKB entry for gene mamK in Magnetospirillum gryphiswaldense
-      MSR-1, a taxon this record names. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
-    evidence:
-    - reference: PMID:17601786
-      notes: Scheffel A et al. 2007, ‘The acidic repetitive domain of the Magnetospirillum
-        gryphiswaldense MamJ protein displays hypervariability but is not required
-        for magnetosome chain assembly.’, J Bacteriol. ECO:0000269 experimental evidence
-        cited by UniProt for the 'Cytoplasm, cytoskeleton' localisation of Q6NE59.
-    - reference: PMID:20487281
-      notes: Katzmann E et al. 2010, ‘Loss of the actin-like protein MamK has pleiotropic
-        effects on magnetosome formation and chain assembly in Magnetospirillum gryphiswaldense.’,
-        Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt for the
-        'Cytoplasm, cytoskeleton' localisation of Q6NE59.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The component combines MamK and its MamJ connector. The stored
-    MamJ example has IPR060787, whereas reviewed MamK Q6NE59 has IPR056546; they share
-    no integrated InterPro family, so a single grounding would conflate distinct roles.
+  grounding: InterPro:IPR060787
 taxonomic_distribution:
 - taxon_id: NCBITaxon:28211
   taxon_label: Alphaproteobacteria
@@ -346,8 +332,9 @@ causal_graphs:
     component_ref: magnetite
   - node_id: mamk
     label: MamK filament
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: mamk_filament
+    grounding: cellstructuremech:mamk_filament
   - node_id: chain
     label: magnetosome chain
     node_type: STRUCTURE
@@ -518,6 +505,19 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-09-13T08:10:42Z'
+  curator: codex
+  action: GROUND_MAMK_FILAMENT
+  changes: Split the combined MamK/MamJ associated-machinery component so the MamK
+    filament now grounds to cellstructuremech:mamk_filament while MamJ remains a reviewed
+    label-only connector component.
+  llm_assisted: true
+- timestamp: '2026-09-13T08:12:26Z'
+  curator: codex
+  action: GROUND_MAMJ_CONNECTOR
+  changes: Grounded the split MamJ connector component to the exact InterPro MamJ
+    family and narrowed its protein-example roles to the connector component.
+  llm_assisted: true
 xrefs:
 - uniprot.location:SL-0510
 - MICRO:0000216
