@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/plastid_thylakoid_lumen.yaml
+  slug: plastid_thylakoid_lumen
+session:
+  id: 2026-09-13T225431Z-codex-463f69
+  timestamp: '2026-09-13T22:54:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - record
+  - evidence
+  - causal_graphs
+  summary: Add plastid thylakoid lumen record
+  details: Added the GO:0031978 plastid thylakoid lumen record with GO:0031977 thylakoid-lumen
+    parentage, GO:0031976 plastid thylakoid parthood, Viridiplantae and Glaucocystophyceae
+    scope, a Chlamydomonas example, literature and GO evidence, and a nonmechanistic topology
+    graph that keeps GO:0055035 plastid thylakoid membrane as a boundary rather than a lumen
+    component.
