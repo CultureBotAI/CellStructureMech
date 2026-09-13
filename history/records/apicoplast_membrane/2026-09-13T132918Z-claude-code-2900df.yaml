@@ -9,6 +9,11 @@ session:
   actors:
   - type: ai_agent
     name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/790
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/789
 events:
 - type: CREATE
   outcome: changed
