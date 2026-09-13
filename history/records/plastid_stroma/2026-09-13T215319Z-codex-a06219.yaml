@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/plastid_stroma.yaml
+  slug: plastid_stroma
+session:
+  id: 2026-09-13T215319Z-codex-a06219
+  timestamp: '2026-09-13T21:53:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/841
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add plastid stroma structure record
+  details: Created GO:0009532 plastid stroma with the UniProt SL-0215 synonym and xref, plastid
+    parthood, Eukaryota, Viridiplantae, and Chlamydomonas distribution evidence, a canonical
+    Chlamydomonas example, a nonmechanistic topology graph, and a resolved interpretation
+    that leaves child-specific stromal inclusions on exact child records.
