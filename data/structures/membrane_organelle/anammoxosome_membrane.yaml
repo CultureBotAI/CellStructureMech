@@ -1,0 +1,172 @@
+identifier: cellstructuremech:anammoxosome_membrane
+label: anammoxosome membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The single ladderane-lipid-containing bilayer membrane that surrounds
+  the anammoxosome.
+definition_source: DOI:10.1111/1574-6976.12014
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T15:43:16Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T15:43:54Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added SL-0492 xref, membrane parentage, anammoxosome parthood, a label-only
+    ladderane-lipid-bilayer component, Planctomycetota/Bacteria scope, a Kuenenia
+    example, a permeability-barrier function, UniProt/GO/DOI/PMID evidence, a nonmechanistic
+    anammoxosome-membrane topology graph, and a ladderane-lipid-bilayer grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-13T15:47:48Z'
+  curator: codex
+  action: EDITED_RECORD
+  changes: Removed stale UniProt SL-0492 xref and evidence after live identifier validation
+    reported the accession as unresolved; retargeted definition, component, graph-edge,
+    and TODO evidence to DOI/PMID literature.
+  llm_assisted: true
+- timestamp: '2026-09-13T15:48:15Z'
+  curator: codex
+  action: EDITED_RECORD
+  changes: Deduplicated replacement Kartal et al. 2013 evidence on the ladderane-lipid-bilayer
+    component and anammoxosome parthood edge.
+  llm_assisted: true
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0044222
+components:
+- component_id: ladderane_lipid_bilayer
+  label: ladderane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Dense ladderane-rich lipid bilayer that bounds the anammoxosome and separates
+    its hydrazine-producing matrix from the cytoplasm.
+  evidence:
+  - reference: DOI:10.1111/1574-6976.12014
+    notes: Kartal et al. 2013 review the anammoxosome as an intracytoplasmic organelle
+      bounded by ladderane lipids.
+  - reference: PMID:15098544
+    notes: Sinninghe Damste et al. 2002 identified ladderane lipids as membrane lipids
+      specific to anammox bacteria.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The anammoxosome record identifies the complete organelle, and
+    the source literature identifies ladderane lipids as signature constituents, but
+    no exact source-neutral CURIE was curated for the generic ladderane-lipid bilayer
+    constituent.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:203682
+  taxon_label: Planctomycetota
+  presence: RARE
+  note: Anammoxosome membranes are restricted to anaerobic ammonium-oxidizing members
+    of the Brocadiales rather than all Planctomycetota.
+  reference: DOI:10.1111/1574-6976.12014
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: RARE
+  note: The membrane is known from anammox bacteria that build ladderane-bounded anammoxosomes.
+  reference: DOI:10.1111/1574-6976.12014
+canonical_examples:
+- taxon_id: NCBITaxon:174633
+  taxon_label: Candidatus Kuenenia stuttgartiensis
+  note: Model anammox bacterium used for immunogold localization of anammoxosome enzymes
+    and for proteomic analyses of the anammoxosome compartment.
+  reference: DOI:10.1128/JB.00186-15
+functions:
+- function_id: anammoxosome_permeability_barrier
+  label: anammoxosome permeability barrier
+  description: The anammoxosome membrane forms a ladderane-rich boundary around an
+    organelle that confines hydrazine metabolism and supports energy conservation
+    across the membrane.
+  evidence:
+  - reference: DOI:10.1111/1574-6976.12014
+    notes: Kartal et al. 2013 review the anammoxosome membrane as the ladderane-rich
+      boundary for the anammox energy-conserving compartment.
+  - reference: PMID:15098544
+    notes: Sinninghe Damste et al. 2002 identified ladderane lipids as unusually dense
+      membrane lipids of anammox bacteria.
+evidence:
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component parent term for membrane.
+- reference: GO:0044222
+  notes: Gene Ontology cellular-component term for the containing anammoxosome.
+- reference: DOI:10.1111/1574-6976.12014
+  notes: Kartal B, de Almeida NM, Maalcke WJ, Op den Camp HJM, Jetten MSM and Keltjens
+    JT 2013, How to make a living from anaerobic ammonium oxidation, FEMS Microbiology
+    Reviews.
+- reference: DOI:10.1128/JB.00186-15
+  notes: Kartal et al. 2015, Immunogold localization of key metabolic enzymes in the
+    anammoxosome and on the tubule-like structures of Kuenenia stuttgartiensis, Journal
+    of Bacteriology.
+- reference: PMID:15098544
+  notes: Sinninghe Damste et al. 2002 identified ladderane lipid membrane components
+    in anammox bacteria.
+causal_graphs:
+- graph_id: anammoxosome_membrane_bounds_organelle
+  title: Anammoxosome membrane encloses a ladderane-bounded compartment
+  description: The anammoxosome membrane is a ladderane-lipid-containing bilayer that
+    surrounds the anammoxosome compartment used for hydrazine metabolism and energy
+    conservation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures membrane topology and permeability barrier function
+    without duplicating the whole anammoxosome hydrazine-metabolism graph.
+  nodes:
+  - node_id: anammoxosome_membrane
+    label: anammoxosome membrane
+    node_type: STRUCTURE
+    grounding: cellstructuremech:anammoxosome_membrane
+    component_ref: ladderane_lipid_bilayer
+  - node_id: anammoxosome
+    label: anammoxosome
+    node_type: ORGANELLE
+    grounding: GO:0044222
+  - node_id: hydrazine_metabolism
+    label: anammoxosome hydrazine metabolism
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: anammoxosome_membrane
+    predicate: is part of
+    object: anammoxosome
+    description: The anammoxosome membrane is the single ladderane-containing bilayer
+      boundary of the anammoxosome.
+    evidence:
+    - reference: DOI:10.1111/1574-6976.12014
+      notes: Kartal et al. 2013 review ladderane lipids as the signature anammoxosome
+        membrane lipids.
+  - subject: anammoxosome_membrane
+    predicate: compartmentalizes
+    object: hydrazine_metabolism
+    description: The anammoxosome membrane separates the hydrazine-producing catabolic
+      compartment from the surrounding bacterial cytoplasm.
+    evidence:
+    - reference: DOI:10.1111/1574-6976.12014
+      notes: Kartal et al. 2013 review the anammoxosome as the organelle that compartmentalizes
+        anaerobic ammonium oxidation.
+    - reference: DOI:10.1128/JB.00186-15
+      notes: Kartal et al. 2015 localized key hydrazine-pathway enzymes in the anammoxosome
+        of Candidatus Kuenenia stuttgartiensis.
+discussions:
+- discussion_id: ground_ladderane_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic ladderane-lipid
+    bilayer constituent of the anammoxosome membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ladderane_lipid_bilayer
+  rationale: The source literature identifies ladderane lipids as signature anammoxosome-membrane
+    constituents, but no exact CURIE was curated for the complete ladderane-lipid
+    bilayer.
+  evidence:
+  - reference: PMID:15098544
+    notes: Sinninghe Damste et al. 2002 identified ladderane lipids as unusual anammox-bacterial
+      membrane lipids.
+  - reference: DOI:10.1111/1574-6976.12014
+    notes: Kartal et al. 2013 review ladderane lipids as the distinctive membrane
+      lipids of the anammoxosome.
+  posed_by: codex
+  posed_date: '2026-09-13'
