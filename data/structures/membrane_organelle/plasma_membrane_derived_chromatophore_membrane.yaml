@@ -35,7 +35,7 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-09-13T07:28:09Z'
   curator: codex
-  action: ADDRESS_REVIEW
+  action: REFINED_RECORD
   changes: Grounded the cytochrome bc1 chromatophore component to cellstructuremech:chromatophore_cytochrome_bc1_complex
     now that the internal structure record has been minted.
   llm_assisted: true
@@ -44,6 +44,12 @@ curation_history:
   action: REFINED_RECORD
   changes: Narrowed the chromatophore complex-grounding TODO after RC-LH1-PufX and
     cytochrome bc1 gained internal CellStructureMech groundings.
+  llm_assisted: true
+- timestamp: '2026-09-13T07:35:09Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#762: changed the proactive chromatophore cytochrome bc1 link-back event
+    from ADDRESS_REVIEW to REFINED_RECORD.'
   llm_assisted: true
 synonyms:
 - synonym_text: cellular chromatophore membrane

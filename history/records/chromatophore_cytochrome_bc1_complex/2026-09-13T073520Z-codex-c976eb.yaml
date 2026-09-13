@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/chromatophore_cytochrome_bc1_complex.yaml
+  slug: chromatophore_cytochrome_bc1_complex
+session:
+  id: 2026-09-13T073520Z-codex-c976eb
+  timestamp: '2026-09-13T07:35:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/762
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/761
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the chromatophore cytochrome bc1 complex record
+  details: 'Added a minted ENERGY_COMPLEX record for the purple-bacterial chromatophore cytochrome
+    bc1 complex, with GO:0042717 chromatophore-membrane parthood, rare purple-bacterial scope,
+    a Cereibacter sphaeroides canonical example, GO/UniProt/literature evidence, a nonmechanistic
+    quinol-oxidation graph, and an open subunit-grounding TODO. The existing chromatophore
+    membrane cytochrome bc1 component was grounded to the new internal record. Adversarial
+    review found that the proactive chromatophore link-back was mislabeled ADDRESS_REVIEW;
+    #762 was resolved by changing that event to REFINED_RECORD.'
