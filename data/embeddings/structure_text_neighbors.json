@@ -1807,6 +1807,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
+      "label": "chromatophore cytochrome bc1 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009512",
+          "label": "cytochrome b6f complex",
+          "cosine_similarity": 0.87016639
+        },
+        {
+          "identifier": "GO:0030094",
+          "label": "plasma membrane-derived photosystem I",
+          "cosine_similarity": 0.78840372
+        },
+        {
+          "identifier": "cellstructuremech:rc_lh1_pufx_core_complex",
+          "label": "RC-LH1-PufX core complex",
+          "cosine_similarity": 0.75536219
+        },
+        {
+          "identifier": "GO:0030096",
+          "label": "plasma membrane-derived thylakoid photosystem II",
+          "cosine_similarity": 0.74942427
+        },
+        {
+          "identifier": "GO:0031897",
+          "label": "Tic complex",
+          "cosine_similarity": 0.71206963
+        }
+      ]
+    },
+    {
       "identifier": "GO:0009512",
       "label": "cytochrome b6f complex",
       "neighbors": [
@@ -1821,6 +1852,11 @@
           "cosine_similarity": 0.89211225
         },
         {
+          "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
+          "label": "chromatophore cytochrome bc1 complex",
+          "cosine_similarity": 0.87016639
+        },
+        {
           "identifier": "GO:0042651",
           "label": "thylakoid membrane",
           "cosine_similarity": 0.8056485
@@ -1829,11 +1865,6 @@
           "identifier": "cellstructuremech:rc_lh1_pufx_core_complex",
           "label": "RC-LH1-PufX core complex",
           "cosine_similarity": 0.78331046
-        },
-        {
-          "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
-          "label": "LH2 peripheral light-harvesting antenna complex",
-          "cosine_similarity": 0.74712631
         }
       ]
     },
@@ -1862,9 +1893,9 @@
           "cosine_similarity": 0.73677052
         },
         {
-          "identifier": "GO:0030089",
-          "label": "phycobilisome",
-          "cosine_similarity": 0.69299877
+          "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
+          "label": "chromatophore cytochrome bc1 complex",
+          "cosine_similarity": 0.7098373
         }
       ]
     },
@@ -1924,9 +1955,9 @@
           "cosine_similarity": 0.82023119
         },
         {
-          "identifier": "GO:0031979",
-          "label": "plasma membrane-derived thylakoid lumen",
-          "cosine_similarity": 0.77396374
+          "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
+          "label": "chromatophore cytochrome bc1 complex",
+          "cosine_similarity": 0.78840372
         }
       ]
     },
@@ -2007,6 +2038,11 @@
           "cosine_similarity": 0.77608578
         },
         {
+          "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
+          "label": "chromatophore cytochrome bc1 complex",
+          "cosine_similarity": 0.75536219
+        },
+        {
           "identifier": "GO:0030094",
           "label": "plasma membrane-derived photosystem I",
           "cosine_similarity": 0.7403325
@@ -2015,11 +2051,6 @@
           "identifier": "GO:0030096",
           "label": "plasma membrane-derived thylakoid photosystem II",
           "cosine_similarity": 0.70815236
-        },
-        {
-          "identifier": "GO:0042717",
-          "label": "plasma membrane-derived chromatophore membrane",
-          "cosine_similarity": 0.70122556
         }
       ]
     },
@@ -2701,7 +2732,7 @@
         {
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
-          "cosine_similarity": 0.7279258
+          "cosine_similarity": 0.72733257
         }
       ]
     },
@@ -3223,7 +3254,7 @@
         {
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
-          "cosine_similarity": 0.78752843
+          "cosine_similarity": 0.78720619
         },
         {
           "identifier": "GO:0070111",
@@ -4727,27 +4758,27 @@
         {
           "identifier": "GO:0042651",
           "label": "thylakoid membrane",
-          "cosine_similarity": 0.86968897
-        },
-        {
-          "identifier": "GO:0070118",
-          "label": "organellar chromatophore thylakoid membrane",
-          "cosine_similarity": 0.813511
+          "cosine_similarity": 0.86654547
         },
         {
           "identifier": "GO:0070111",
           "label": "organellar chromatophore",
-          "cosine_similarity": 0.81193361
+          "cosine_similarity": 0.81499459
+        },
+        {
+          "identifier": "GO:0070118",
+          "label": "organellar chromatophore thylakoid membrane",
+          "cosine_similarity": 0.81396004
         },
         {
           "identifier": "GO:0070112",
           "label": "organellar chromatophore membrane",
-          "cosine_similarity": 0.79299214
+          "cosine_similarity": 0.79539999
         },
         {
           "identifier": "GO:0046858",
           "label": "chlorosome",
-          "cosine_similarity": 0.78752843
+          "cosine_similarity": 0.78720619
         }
       ]
     },
@@ -4918,7 +4949,7 @@
         {
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
-          "cosine_similarity": 0.86968897
+          "cosine_similarity": 0.86654547
         },
         {
           "identifier": "GO:0030096",
@@ -6228,14 +6259,14 @@
           "cosine_similarity": 0.72761299
         },
         {
+          "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
+          "label": "chromatophore cytochrome bc1 complex",
+          "cosine_similarity": 0.71206963
+        },
+        {
           "identifier": "GO:0030094",
           "label": "plasma membrane-derived photosystem I",
           "cosine_similarity": 0.70103721
-        },
-        {
-          "identifier": "GO:0005643",
-          "label": "nuclear pore",
-          "cosine_similarity": 0.6960509
         }
       ]
     },

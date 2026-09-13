@@ -1,0 +1,170 @@
+identifier: cellstructuremech:chromatophore_cytochrome_bc1_complex
+label: chromatophore cytochrome bc1 complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A purple-bacterial chromatophore membrane cytochrome bc1 protein complex
+  that oxidizes quinol from the chromatophore quinone pool and returns electrons toward
+  reaction-center antenna cores through soluble cytochrome c2 during cyclic photosynthetic
+  electron transport.
+definition_source: DOI:10.1074/jbc.M412088200
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T07:27:38Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T07:28:09Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytochrome bc1 synonymy, chromatophore parthood, purple-bacterial
+    scope, a Cereibacter example, photosynthetic electron-transport function, GO/UniProt/literature
+    evidence, a nonmechanistic quinol-oxidation graph, and a cytochrome bc1 subunit-boundary
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: cytochrome bc1 complex
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1074/jbc.M412088200
+part_of:
+- GO:0042717
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: RARE
+  note: Chromatophore cytochrome bc1 complexes occur in purple-bacterial photosynthetic
+    membranes rather than broadly across bacteria.
+  reference: uniprot.location:SL-0042
+canonical_examples:
+- taxon_id: NCBITaxon:1063
+  taxon_label: Cereibacter sphaeroides
+  note: Purple photosynthetic bacterium, still commonly cited under the synonym Rhodobacter
+    sphaeroides, whose chromatophore quinone traffic between reaction-center antenna
+    cores and cytochrome bc1 has been modeled.
+  reference: DOI:10.1074/jbc.M412088200
+functions:
+- function_id: photosynthetic_electron_transport
+  label: photosynthetic electron transport chain
+  grounding: GO:0009767
+  description: The chromatophore cytochrome bc1 complex reoxidizes quinol carriers
+    from reaction-center cores and returns electrons toward the reaction center through
+    cytochrome c2.
+  evidence:
+  - reference: DOI:10.1074/jbc.M412088200
+    notes: Comayras et al. 2005 modeled chromatophore quinone-domain behavior around
+      cytochrome bc1 and reaction-center antenna complexes.
+evidence:
+- reference: GO:0042717
+  notes: Gene Ontology cellular-component term for the plasma membrane-derived chromatophore
+    membrane that houses purple-bacterial cytochrome bc1.
+- reference: GO:0009767
+  notes: Gene Ontology biological-process term for the photosynthetic electron transport
+    chain.
+- reference: uniprot.location:SL-0042
+  notes: UniProt Subcellular Location entry for the cellular chromatophore membrane;
+    lists cytochrome bc1 among the complexes contained in purple-bacterial chromatophore
+    membranes.
+- reference: DOI:10.1074/jbc.M412088200
+  notes: Comayras, Jungas and Lavergne 2005, Functional Consequences of the Organization
+    of the Photosynthetic Apparatus in Rhodobacter sphaeroides, Journal of Biological
+    Chemistry.
+causal_graphs:
+- graph_id: chromatophore_bc1_quinol_oxidation
+  title: Chromatophore cytochrome bc1 turns over the quinone pool
+  description: In purple-bacterial chromatophore membranes, the cytochrome bc1 complex
+    oxidizes quinol produced by reaction-center antenna cores and passes electrons
+    toward cytochrome c2 during cyclic photosynthetic electron transport.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph places chromatophore cytochrome bc1 in the cyclic electron-transport
+    loop without resolving the Rieske iron-sulfur protein, cytochrome b, cytochrome
+    c1, or Q-cycle proton-coupling chemistry.
+  nodes:
+  - node_id: chromatophore_membrane
+    label: plasma membrane-derived chromatophore membrane
+    node_type: STRUCTURE
+    grounding: GO:0042717
+  - node_id: rc_lh1_pufx
+    label: RC-LH1-PufX core complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:rc_lh1_pufx_core_complex
+  - node_id: quinone_pool
+    label: quinone pool
+    node_type: CHEMICAL
+    description: Membrane-diffusing quinone and quinol carriers that link reaction-center
+      cores to cytochrome bc1 in purple-bacterial chromatophores.
+  - node_id: cytochrome_bc1
+    label: chromatophore cytochrome bc1 complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:chromatophore_cytochrome_bc1_complex
+  - node_id: cytochrome_c2
+    label: cytochrome c2
+    node_type: GENE_OR_PROTEIN
+  - node_id: electron_transport
+    label: photosynthetic electron transport chain
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009767
+  edges:
+  - subject: cytochrome_bc1
+    predicate: is part of
+    object: chromatophore_membrane
+    description: Cytochrome bc1 is a constituent oxidoreductase complex of the purple-bacterial
+      chromatophore membrane.
+    evidence:
+    - reference: uniprot.location:SL-0042
+      notes: UniProt SL-0042 lists cytochrome bc1 among the complexes contained in
+        cellular chromatophore membranes.
+  - subject: rc_lh1_pufx
+    predicate: reduces
+    object: quinone_pool
+    description: Photoexcited reaction-center antenna cores feed reduced quinol carriers
+      into the chromatophore membrane pool.
+    evidence:
+    - reference: DOI:10.1074/jbc.M412088200
+      notes: Comayras et al. 2005 model quinone traffic between Rhodobacter reaction-center
+        antenna complexes and cytochrome bc1 in chromatophores.
+  - subject: cytochrome_bc1
+    predicate: oxidizes
+    object: quinone_pool
+    description: Cytochrome bc1 reoxidizes quinol carriers inside the chromatophore
+      photosynthetic membrane.
+    evidence:
+    - reference: DOI:10.1074/jbc.M412088200
+      notes: Comayras et al. 2005 modeled quinone-domain behavior around cytochrome
+        bc1 in Rhodobacter sphaeroides chromatophores.
+  - subject: cytochrome_bc1
+    predicate: reduces
+    object: cytochrome_c2
+    description: Chromatophore cytochrome bc1 returns electrons toward the reaction
+      center through cytochrome c2.
+    evidence:
+    - reference: DOI:10.1074/jbc.M412088200
+      notes: Comayras et al. 2005 connect cytochrome bc1 to the Rhodobacter photosynthetic
+        electron-transfer loop.
+  - subject: cytochrome_bc1
+    predicate: contributes to
+    object: electron_transport
+    description: The chromatophore cytochrome bc1 complex is a quinone-linked oxidoreductase
+      in cyclic photosynthetic electron transport.
+    evidence:
+    - reference: DOI:10.1074/jbc.M412088200
+      notes: Comayras et al. 2005 studied cytochrome bc1 placement within the organized
+        Rhodobacter photosynthetic apparatus.
+discussions:
+- discussion_id: chromatophore_bc1_subunit_boundaries
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact source-neutral component groundings for the purple-bacterial
+    cytochrome b, cytochrome c1 and Rieske iron-sulfur subunits before adding subunit-level
+    component rows.
+  attaches_to:
+  - causal_graphs#chromatophore_bc1_quinol_oxidation
+  rationale: The chromatophore cytochrome bc1 complex is modeled as a record-level
+    energy complex, but this first record does not guess exact InterPro, Pfam or NCBIfam
+    terms for its taxon-agnostic subunits.
+  evidence:
+  - reference: DOI:10.1074/jbc.M412088200
+    notes: Comayras et al. 2005 support cytochrome bc1 as a functional chromatophore
+      complex without assigning source-neutral CURIEs for every component family.
+  posed_by: codex
+  posed_date: '2026-09-13'
