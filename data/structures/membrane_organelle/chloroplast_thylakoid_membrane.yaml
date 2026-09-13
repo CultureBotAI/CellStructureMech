@@ -1,0 +1,209 @@
+identifier: GO:0009535
+label: chloroplast thylakoid membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The pigmented membrane of a chloroplast thylakoid.
+definition_source: GO:0009535
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T02:09:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T02:10:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added thylakoid-membrane and plastid thylakoid-membrane parentage, chloroplast
+    thylakoid parthood, the UniProt SL-0058 xref, a reviewed-label-only lipid-bilayer
+    component, Viridiplantae and Chlamydomonas scope, a light-reaction function, a
+    nonmechanistic topology graph, and resolved exact-child and lipid-grounding interpretations.
+  llm_assisted: true
+- timestamp: '2026-09-13T02:16:30Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #738 by replacing the Viridiplantae row''s broad plastid-origin
+    support with Perez-Boerema et al. 2024 thylakoid structural-diversity evidence
+    and by adding that DOI to record-level and light-reaction function evidence.'
+  llm_assisted: true
+parent_structures:
+- GO:0042651
+- GO:0055035
+part_of:
+- GO:0009534
+xrefs:
+- uniprot.location:SL-0058
+components:
+- component_id: chloroplast_thylakoid_lipid_bilayer
+  label: chloroplast thylakoid lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Pigmented chloroplast thylakoid lipid bilayer that bounds the thylakoid lumen
+    and houses photosynthetic light-reaction complexes.
+  evidence:
+  - reference: GO:0009535
+    notes: GO:0009535 defines the chloroplast thylakoid membrane as the pigmented
+      membrane of a chloroplast thylakoid.
+  - reference: uniprot.location:SL-0058
+    notes: UniProt SL-0058 maps directly to GO:0009535 and describes the membrane
+      as an internal system carrying photosynthetic light reactions.
+  - reference: GO:0009543
+    notes: GO:0009543 defines the chloroplast thylakoid lumen as the volume enclosed
+      by the chloroplast thylakoid membrane.
+  - reference: uniprot.location:SL-0057
+    notes: UniProt SL-0057 maps the chloroplast thylakoid lumen to the child compartment
+      bounded by chloroplast thylakoid membranes.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0009535 and UniProt SL-0058 identify the whole chloroplast thylakoid
+    membrane, but no separate source-neutral CURIE was curated for the lipid constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Green algae and land plants with chloroplasts contain chloroplast thylakoid
+    membranes that support oxygenic photosynthetic light reactions.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas reinhardtii has stacked and unstacked native chloroplast thylakoid
+    membrane regions.
+  reference: DOI:10.7554/eLife.04889
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Unicellular green alga whose chloroplast thylakoid membrane architecture was
+    resolved by cryo-focused ion beam milling and in situ cryo-electron tomography.
+  reference: DOI:10.7554/eLife.04889
+functions:
+- function_id: light_reactions_of_photosynthesis
+  label: photosynthesis, light reaction
+  grounding: GO:0019684
+  description: The chloroplast thylakoid membrane is the membrane surface where photosynthetic
+    light-reaction complexes convert light energy into electron transport and a trans-thylakoid
+    proton gradient.
+  evidence:
+  - reference: uniprot.location:SL-0058
+    notes: UniProt SL-0058 describes chloroplast thylakoid membranes as carrying out
+      the light reactions of photosynthesis.
+  - reference: DOI:10.1007/s00294-011-0339-1
+    notes: Terashima, Specht and Hippler 2011 review Chlamydomonas chloroplast thylakoid
+      photosynthetic complexes.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review thylakoid light reactions and electron
+      transport as processes organized by thylakoid membranes.
+evidence:
+- reference: GO:0009535
+  notes: Gene Ontology cellular-component term for chloroplast thylakoid membrane.
+- reference: GO:0042651
+  notes: Gene Ontology cellular-component term for thylakoid membrane, the broader
+    thylakoid-membrane parent.
+- reference: GO:0055035
+  notes: Gene Ontology cellular-component term for plastid thylakoid membrane, the
+    plastid-specific thylakoid-membrane parent.
+- reference: GO:0009534
+  notes: Gene Ontology cellular-component term for the chloroplast thylakoid that
+    this membrane is part of.
+- reference: GO:0009543
+  notes: Gene Ontology cellular-component term for the lumen bounded by chloroplast
+    thylakoid membranes.
+- reference: GO:0019684
+  notes: Gene Ontology biological-process term for photosynthesis, light reaction.
+- reference: uniprot.location:SL-0058
+  notes: UniProt Subcellular Location SL-0058 maps Chloroplast thylakoid membrane
+    to GO:0009535, places it under plastid thylakoid membrane and chloroplast thylakoid,
+    and describes it as the light-reaction membrane system in chloroplasts.
+- reference: uniprot.location:SL-0057
+  notes: UniProt Subcellular Location SL-0057 maps Chloroplast thylakoid lumen to
+    GO:0009543 and places it under chloroplast thylakoid.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1007/s00294-011-0339-1
+  notes: 'Terashima, Specht and Hippler 2011, The chloroplast proteome: a survey from
+    the Chlamydomonas reinhardtii perspective with a focus on distinctive features,
+    Current Genetics.'
+- reference: DOI:10.7554/eLife.04889
+  notes: Engel et al. 2015, Native architecture of the Chlamydomonas chloroplast revealed
+    by in situ cryo-electron tomography, eLife.
+causal_graphs:
+- graph_id: chloroplast_thylakoid_membrane_topology
+  title: Chloroplast thylakoid membrane topology
+  description: The chloroplast thylakoid membrane encloses the thylakoid lumen and
+    supports photosynthetic light reactions.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining chloroplast thylakoid membrane boundary
+    and light-reaction site without asserting complete photosystem stoichiometry or
+    carrier chemistry.
+  nodes:
+  - node_id: chloroplast_thylakoid_membrane
+    label: chloroplast thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0009535
+    component_ref: chloroplast_thylakoid_lipid_bilayer
+  - node_id: chloroplast_thylakoid_lumen
+    label: chloroplast thylakoid lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009543
+  - node_id: photosynthesis_light_reaction
+    label: photosynthesis, light reaction
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0019684
+  edges:
+  - subject: chloroplast_thylakoid_membrane
+    predicate: encloses
+    object: chloroplast_thylakoid_lumen
+    description: The chloroplast thylakoid lumen is enclosed by the chloroplast thylakoid
+      membrane.
+    evidence:
+    - reference: GO:0009543
+      notes: GO:0009543 defines the lumen as the volume enclosed by a chloroplast
+        thylakoid membrane.
+    - reference: uniprot.location:SL-0057
+      notes: UniProt SL-0057 identifies the chloroplast thylakoid lumen as a child
+        compartment of the chloroplast thylakoid.
+  - subject: chloroplast_thylakoid_membrane
+    predicate: supports
+    object: photosynthesis_light_reaction
+    description: The chloroplast thylakoid membrane carries the light-reaction machinery
+      of green algae and plants.
+    evidence:
+    - reference: uniprot.location:SL-0058
+      notes: UniProt SL-0058 describes chloroplast thylakoid membranes as carrying
+        out the light reactions of photosynthesis.
+discussions:
+- discussion_id: ground_chloroplast_thylakoid_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    chloroplast thylakoid membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#chloroplast_thylakoid_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0009535 and UniProt SL-0058, but
+    the lipid bilayer constituent is intentionally left as a reviewed-label-only component
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-13'
+- discussion_id: chloroplast_specific_not_generic_thylakoid_membrane
+  prompt: Keep the chloroplast thylakoid membrane distinct from the generic thylakoid
+    membrane.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0009535 denotes the chloroplast-specific child membrane, while GO:0042651
+    denotes the broader thylakoid membrane class covering chloroplast, cyanelle, chromatophore
+    and bacterial thylakoids.
+  resolution_note: Curated GO:0009535 as the chloroplast-specific record with GO:0042651
+    and GO:0055035 parentage.
+  evidence:
+  - reference: GO:0009535
+    notes: GO:0009535 identifies the chloroplast thylakoid membrane.
+  - reference: GO:0042651
+    notes: GO:0042651 identifies the broader thylakoid membrane class.
+  - reference: GO:0055035
+    notes: GO:0055035 identifies the broader plastid thylakoid membrane class.
