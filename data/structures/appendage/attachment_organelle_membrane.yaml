@@ -20,6 +20,12 @@ curation_history:
     and a resolved interpretation that keeps surface and core proteins on the whole
     attachment organelle.
   llm_assisted: true
+- timestamp: '2026-09-12T23:55:25Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #722 by adding GO:0005886 evidence to the lipid-bilayer component
+    and GO:0033111 evidence to the plasma-membrane parthood edge.'
+  llm_assisted: true
 parent_structures:
 - GO:0016020
 part_of:
@@ -42,6 +48,9 @@ components:
   - reference: uniprot.location:SL-0021
     notes: UniProt Subcellular Location SL-0021 maps directly to GO:0033111 and places
       it under both attachment organelle and cell membrane.
+  - reference: GO:0005886
+    notes: GO:0005886 identifies the plasma membrane that includes this specialized
+      attachment-organelle membrane patch.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: GO:0033111 and UniProt SL-0021 identify the attachment organelle
     membrane, but no lipid CURIE specific to this Mycoplasma polar membrane patch
@@ -130,6 +139,9 @@ causal_graphs:
     description: The attachment organelle membrane is a specialized cell-membrane
       region at the Mycoplasma pole.
     evidence:
+    - reference: GO:0033111
+      notes: GO:0033111 identifies the attachment organelle membrane that forms this
+        specialized cell-membrane region.
     - reference: uniprot.location:SL-0021
       notes: UniProt SL-0021 places the attachment organelle membrane under the cell
         membrane subcellular location.
