@@ -11,6 +11,11 @@ session:
     name: claude-code
     model: gpt-5
     agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/808
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/807
 events:
 - type: CREATE
   outcome: changed
