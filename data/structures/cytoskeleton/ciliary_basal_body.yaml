@@ -1,0 +1,208 @@
+identifier: GO:0036064
+label: ciliary basal body
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A membrane-tethered, short cylindrical array of microtubules and associated
+  proteins found at the base of a eukaryotic cilium or flagellum that derives from
+  a centriole, anchors the cilium and nucleates axonemal microtubule growth.
+definition_source: GO:0036064
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T09:11:04Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T09:12:50Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, cilium parthood, label-only triplet-microtubule and
+    cartwheel components, Chlamydomonas scope, cilium-assembly function, a triplet-count
+    property, DOI evidence, a nonmechanistic basal-body assembly graph, and a substructure-grounding
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: cilial basal body
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036064
+- synonym_text: cilium basal body
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036064
+- synonym_text: kinetosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036064
+- synonym_text: microtubule basal body
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036064
+- synonym_text: basal body
+  synonym_type: BROAD_SYNONYM
+  source: GO:0036064
+parent_structures:
+- GO:0005856
+part_of:
+- GO:0005929
+components:
+- component_id: microtubule_triplets
+  label: basal-body triplet microtubules
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005874 denotes generic microtubules rather than the A-, B-
+    and C-tubule triplet blades of the ciliary basal-body cylinder. No exact source-neutral
+    CURIE for basal-body triplet microtubules was curated.
+  role: Nine triplet microtubule blades build the cylindrical basal-body wall in Chlamydomonas.
+  evidence:
+  - reference: DOI:10.1186/s13630-016-0039-z
+    notes: Dutcher and O'Toole 2016 review the Chlamydomonas basal body as a cylinder
+      made from nine triplet microtubules.
+  - reference: DOI:10.3390/cells7070079
+    notes: Wingfield and Lechtreck 2018 describe wild-type Chlamydomonas basal bodies
+      as nine triplet microtubules around a central cartwheel.
+- component_id: cartwheel
+  label: basal-body cartwheel
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The basal-body cartwheel is a conserved ninefold-symmetric substructure,
+    but this first record did not resolve exact source-neutral terms for its SAS-6
+    hub, Bld10/CEP135 spoke-tip or associated cartwheel proteins.
+  role: Proximal ninefold-symmetric scaffold that organizes basal-body assembly and
+    helps template the arrangement of triplet microtubules.
+  evidence:
+  - reference: DOI:10.1083/jcb.200402022
+    notes: Matsuura et al. 2004 localized Chlamydomonas Bld10p to the cartwheel and
+      connected the cartwheel to the first ninefold-symmetric stage of basal-body
+      assembly.
+  - reference: DOI:10.1186/s13630-016-0039-z
+    notes: Dutcher and O'Toole 2016 review the cartwheel among the conserved Chlamydomonas
+      basal-body substructures.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: Ciliary basal bodies occur in eukaryotes that assemble cilia or microtubule-based
+    flagella, but they are absent from lineages or life-cycle stages lacking these
+    organelles.
+  reference: GO:0036064
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Vegetative Chlamydomonas cells have two ciliary basal bodies that nucleate
+    the paired motile flagella.
+  reference: DOI:10.3390/cells7070079
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal reference organism whose basal bodies have been used to study
+    triplet-microtubule architecture, cartwheel assembly and flagellar nucleation.
+  reference: DOI:10.1186/s13630-016-0039-z
+functions:
+- function_id: cilium_assembly
+  label: cilium assembly
+  grounding: GO:0060271
+  description: The basal body anchors the cilium and acts as the base from which axonemal
+    microtubules are assembled.
+  evidence:
+  - reference: GO:0036064
+    notes: GO defines the ciliary basal body as the ciliary assembly and remodeling
+      site that nucleates axoneme growth.
+  - reference: DOI:10.1104/pp.010807
+    notes: Silflow and Lefebvre 2001 review basal bodies as centriolar organizers
+      of Chlamydomonas flagella.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '9'
+  context: triplet microtubule blades per Chlamydomonas basal body
+  reference: DOI:10.1186/s13630-016-0039-z
+evidence:
+- reference: GO:0036064
+  notes: Gene Ontology cellular-component term for the ciliary basal body.
+- reference: GO:0005929
+  notes: Gene Ontology cellular-component term for the cilium; the term places GO:0036064
+    as part of the cilium.
+- reference: DOI:10.1186/s13630-016-0039-z
+  notes: Dutcher and O'Toole 2016, The basal bodies of Chlamydomonas reinhardtii,
+    Cilia.
+- reference: DOI:10.3390/cells7070079
+  notes: Wingfield and Lechtreck 2018, Chlamydomonas Basal Bodies as Flagella Organizing
+    Centers, Cells.
+- reference: DOI:10.1083/jcb.200402022
+  notes: 'Matsuura et al. 2004, Bld10p, a novel protein essential for basal body assembly
+    in Chlamydomonas: localization to the cartwheel, the first ninefold symmetrical
+    structure appearing during assembly, Journal of Cell Biology.'
+- reference: DOI:10.1104/pp.010807
+  notes: Silflow and Lefebvre 2001, Assembly and motility of eukaryotic cilia and
+    flagella. Lessons from Chlamydomonas reinhardtii, Plant Physiology.
+causal_graphs:
+- graph_id: cartwheel_templates_triplet_cylinder
+  title: The cartwheel organizes the triplet microtubule cylinder
+  description: A proximal cartwheel organizes ninefold basal-body symmetry, nine triplet
+    microtubule blades form the basal-body cylinder, and the assembled basal body
+    anchors the cilium and nucleates axonemal microtubules.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph summarizes major Chlamydomonas basal-body substructures
+    and leaves cartwheel protein stoichiometry, centriole maturation, transition fibers
+    and rootlet attachments for later component-level curation.
+  nodes:
+  - node_id: cartwheel
+    label: basal-body cartwheel
+    node_type: STRUCTURE
+    component_ref: cartwheel
+  - node_id: microtubule_triplets
+    label: basal-body triplet microtubules
+    node_type: STRUCTURE
+    component_ref: microtubule_triplets
+  - node_id: ciliary_basal_body
+    label: ciliary basal body
+    node_type: STRUCTURE
+    grounding: GO:0036064
+  - node_id: axoneme
+    label: axoneme
+    node_type: STRUCTURE
+    grounding: GO:0005930
+  edges:
+  - subject: cartwheel
+    predicate: organizes
+    object: microtubule_triplets
+    description: The Chlamydomonas cartwheel is the first ninefold symmetrical basal-body
+      structure and sits where triplet microtubules elongate.
+    evidence:
+    - reference: DOI:10.1083/jcb.200402022
+      notes: Matsuura et al. 2004 localized Bld10p to the cartwheel and proposed that
+        it acts early in Chlamydomonas basal-body assembly.
+  - subject: microtubule_triplets
+    predicate: form wall of
+    object: ciliary_basal_body
+    description: Nine triplet microtubule blades form the wall of the Chlamydomonas
+      basal-body cylinder.
+    evidence:
+    - reference: DOI:10.1186/s13630-016-0039-z
+      notes: Dutcher and O'Toole 2016 review the nine triplet microtubules of Chlamydomonas
+        basal bodies.
+  - subject: ciliary_basal_body
+    predicate: nucleates
+    object: axoneme
+    description: The basal body provides the ciliary base from which axonemal microtubules
+      extend.
+    evidence:
+    - reference: GO:0036064
+      notes: GO defines the ciliary basal body as a ciliary base structure that nucleates
+        axoneme growth.
+discussions:
+- discussion_id: ground_cartwheel_and_triplet_substructures
+  prompt: Resolve exact source-neutral identifiers for the ciliary basal-body cartwheel
+    and triplet-microtubule substructures before expanding them to individual SAS-6,
+    Bld10/CEP135, tubulin and delta/epsilon-tubulin protein-family components.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The structural cartwheel and triplet-microtubule components are conserved
+    basal-body parts, but a first record should not guess generic InterPro, Pfam or
+    GO terms for substructures that need exact family and boundary review.
+  evidence:
+  - reference: DOI:10.1083/jcb.200402022
+  - reference: DOI:10.1186/s13630-016-0039-z
+  posed_by: codex
+  posed_date: '2026-09-13'
