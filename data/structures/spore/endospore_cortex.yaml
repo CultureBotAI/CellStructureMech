@@ -20,6 +20,12 @@ curation_history:
     GO and literature evidence, a nonmechanistic dehydration graph, and cortex boundary
     discussions.
   llm_assisted: true
+- timestamp: '2026-09-13T00:47:24Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #726 by removing the component_ref from the whole endospore cortex
+    graph node.'
+  llm_assisted: true
 synonyms:
 - synonym_text: spore cortex
   synonym_type: EXACT_SYNONYM
@@ -95,7 +101,6 @@ causal_graphs:
     label: endospore cortex
     node_type: STRUCTURE
     grounding: GO:0043595
-    component_ref: endospore_cortex_peptidoglycan
   - node_id: spore_core
     label: dehydrated spore core
     node_type: STATE
