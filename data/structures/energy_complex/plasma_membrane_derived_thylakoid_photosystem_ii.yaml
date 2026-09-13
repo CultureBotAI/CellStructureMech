@@ -1,0 +1,168 @@
+identifier: GO:0030096
+label: plasma membrane-derived thylakoid photosystem II
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A photosystem II protein complex located in the plasma membrane-derived
+  bacterial thylakoid that contains a P680 reaction center and catalyzes the water-oxidizing,
+  plastoquinone-reducing step of oxygenic photosynthesis.
+definition_source: GO:0030096
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T05:02:43Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T05:03:13Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added PSII synonymy, generic PSII parentage, bacterial thylakoid membrane
+    parthood, cyanobacterial scope, a Nostoc example, photosynthetic electron-transport
+    function, GO and literature evidence, a nonmechanistic PSII light-input graph,
+    and a PSII subunit-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-13T05:10:06Z'
+  curator: codex
+  action: REVISED_RECORD
+  changes: '#752: removed the overbroad bare PSII synonym from the GO:0030096 record
+    while retaining the scoped cyanobacterial PSII synonym.'
+  llm_assisted: true
+synonyms:
+- synonym_text: cyanobacterial PSII
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/cr.2015.59
+parent_structures:
+- GO:0009523
+part_of:
+- GO:0031676
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteriota
+  presence: COMMON
+  note: Cyanobacteria with internal thylakoids carry PSII complexes in plasma membrane-derived
+    thylakoid membranes as part of oxygenic photosynthetic electron transport.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+canonical_examples:
+- taxon_id: NCBITaxon:103690
+  taxon_label: Nostoc sp. PCC 7120 = FACHB-418
+  note: Cyanobacterial model used for single-particle EM of intact phycobilisomes
+    associated with photosystem II assemblies.
+  reference: DOI:10.1038/cr.2015.59
+functions:
+- function_id: photosynthetic_electron_transport
+  label: photosynthetic electron transport chain
+  grounding: GO:0009767
+  description: Plasma membrane-derived thylakoid PSII begins cyanobacterial linear
+    electron transport by oxidizing water and reducing plastoquinone.
+  evidence:
+  - reference: GO:0030096
+    notes: GO:0030096 defines plasma membrane-derived thylakoid photosystem II as
+      a P680 reaction center complex in the bacterial thylakoid.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review PSII as an upstream cyanobacterial thylakoid
+      electron-transport complex.
+evidence:
+- reference: GO:0030096
+  notes: Gene Ontology cellular-component term for plasma membrane-derived thylakoid
+    photosystem II.
+- reference: GO:0009523
+  notes: Gene Ontology cellular-component term for generic photosystem II.
+- reference: GO:0031676
+  notes: Gene Ontology cellular-component term for the plasma membrane-derived thylakoid
+    membrane that houses this cyanobacterial PSII complex.
+- reference: GO:0030075
+  notes: Gene Ontology cellular-component term for bacterial thylakoid.
+- reference: GO:0009767
+  notes: Gene Ontology biological-process term for the photosynthetic electron transport
+    chain.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
+- reference: DOI:10.1038/cr.2015.59
+  notes: Chang et al. 2015, Structural organization of an intact phycobilisome and
+    its association with photosystem II, Cell Research.
+causal_graphs:
+- graph_id: cyanobacterial_psii_light_input
+  title: Phycobilisomes feed excitation into cyanobacterial PSII
+  description: In Nostoc, phycobilisomes associate with thylakoid photosystem II assemblies
+    that initiate electron flow toward plastoquinone in the bacterial thylakoid membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph places bacterial PSII at the thylakoid light-input step without
+    resolving PSII core subunits, oxygen-evolving subunits, phycobilisome antenna
+    interfaces, or PSII assembly and repair factors.
+  nodes:
+  - node_id: phycobilisome
+    label: phycobilisome
+    node_type: STRUCTURE
+    grounding: GO:0030089
+  - node_id: psii
+    label: plasma membrane-derived thylakoid photosystem II
+    node_type: STRUCTURE
+    grounding: GO:0030096
+  - node_id: thylakoid_membrane
+    label: plasma membrane-derived thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0031676
+  - node_id: plastoquinone_pool
+    label: plastoquinone pool
+    node_type: CHEMICAL
+    description: Mobile quinone carrier that receives electrons from PSII in the bacterial
+      thylakoid membrane.
+  - node_id: electron_transport
+    label: photosynthetic electron transport chain
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009767
+  edges:
+  - subject: psii
+    predicate: is part of
+    object: thylakoid_membrane
+    description: Plasma membrane-derived thylakoid PSII resides in the bacterial thylakoid
+      membrane.
+    evidence:
+    - reference: GO:0030096
+      notes: GO:0030096 defines the complex as located in the plasma membrane-derived
+        thylakoid.
+  - subject: phycobilisome
+    predicate: associates with
+    object: psii
+    description: Some Nostoc phycobilisomes physically associate with PSII assemblies.
+    evidence:
+    - reference: DOI:10.1038/cr.2015.59
+      notes: Chang et al. 2015 visualized Nostoc phycobilisomes associated with photosystem
+        II.
+  - subject: psii
+    predicate: reduces
+    object: plastoquinone_pool
+    description: PSII starts linear electron transport by reducing plastoquinone in
+      the bacterial thylakoid membrane.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review PSII and plastoquinone as upstream thylakoid
+        electron carriers.
+  - subject: psii
+    predicate: initiates
+    object: electron_transport
+    description: The PSII water-oxidation reaction supplies electrons for oxygenic
+      photosynthetic electron transport.
+    evidence:
+    - reference: GO:0030096
+      notes: GO:0030096 defines the complex as containing P680, whose excitation begins
+        the photosystem II electron-transfer chain.
+discussions:
+- discussion_id: psii_subunit_boundaries
+  prompt: Resolve exact source-neutral component groundings for bona fide bacterial
+    PSII core, antenna, and oxygen-evolving subfamilies before adding subunit-level
+    component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#cyanobacterial_psii_light_input
+  rationale: GO exactly grounds the bacterial thylakoid PSII complex, but this record
+    does not yet distinguish conserved PSII constituents from phycobilisome antenna
+    proteins or PSII assembly and repair factors.
+  evidence:
+  - reference: DOI:10.1038/cr.2015.59
+    notes: Chang et al. 2015 resolved phycobilisome-PSII assemblies in Nostoc.
+  posed_by: codex
+  posed_date: '2026-09-13'
