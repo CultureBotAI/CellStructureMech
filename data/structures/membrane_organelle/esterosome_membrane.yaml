@@ -1,0 +1,159 @@
+identifier: GO:0033118
+label: esterosome membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding an esterosome.
+definition_source: GO:0033118
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T15:11:09Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T15:11:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL esterosomal-membrane synonym and xref, cytoplasmic-vesicle-membrane
+    parentage, esterosome parthood, a label-only lipid-bilayer component, Dictyostelium
+    scope, a lumen-boundary function, GO/UniProt/DOI evidence, a nonmechanistic esterosome-membrane
+    topology graph, and a lipid-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: esterosomal membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0108
+parent_structures:
+- GO:0030659
+part_of:
+- GO:0033117
+xrefs:
+- uniprot.location:SL-0108
+components:
+- component_id: esterosome_lipid_bilayer
+  label: esterosome lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Rough-endoplasmic-reticulum-like lipid bilayer that surrounds the esterosome
+    and encloses the crystal-filled lumen.
+  evidence:
+  - reference: GO:0033118
+    notes: GO:0033118 defines the esterosome membrane as the lipid bilayer surrounding
+      an esterosome.
+  - reference: DOI:10.1083/jcb.110.3.669
+    notes: Bomblies et al. 1990 used electron microscopy to show that Dictyostelium
+      discoideum esterosome crystals are enclosed by a membrane with rough endoplasmic
+      reticulum characteristics.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0033118 identifies the whole esterosome membrane, but no exact
+    source-neutral CURIE was curated for the generic lipid constituent of that Dictyostelium
+    boundary membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  presence: COMMON
+  note: Dictyostelium discoideum aggregation-stage cells form esterosome crystals
+    enclosed by an RER-characteristic membrane.
+  reference: DOI:10.1083/jcb.110.3.669
+canonical_examples:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  note: Social amoeba model in which esterosome crystals and their rough-ER-like bounding
+    membrane were characterized by electron microscopy.
+  reference: DOI:10.1083/jcb.110.3.669
+functions:
+- function_id: esterosome_lumen_boundary
+  label: esterosome lumen boundary
+  description: The esterosome membrane forms the lipid-bilayer boundary around the
+    crystalline protein-filled esterosome lumen.
+  evidence:
+  - reference: GO:0033118
+    notes: GO:0033118 defines the esterosome membrane as the lipid bilayer surrounding
+      an esterosome.
+  - reference: GO:0034467
+    notes: GO:0034467 defines the esterosome lumen as the volume enclosed by the esterosome
+      membrane.
+  - reference: DOI:10.1083/jcb.110.3.669
+    notes: Bomblies et al. 1990 showed that Dictyostelium esterosome crystals are
+      membrane-enclosed.
+evidence:
+- reference: GO:0033118
+  notes: Gene Ontology cellular-component term for the esterosome membrane.
+- reference: GO:0030659
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle membrane.
+- reference: GO:0033117
+  notes: Gene Ontology cellular-component term for the containing esterosome.
+- reference: GO:0034467
+  notes: Gene Ontology cellular-component term for the esterosome lumen bounded by
+    the esterosome membrane.
+- reference: uniprot.location:SL-0108
+  notes: UniProt Subcellular Location entry SL-0108 maps directly to GO:0033118, places
+    the esterosome membrane under the esterosome subcellular location, and lists esterosomal
+    membrane as an exact synonym.
+- reference: DOI:10.1083/jcb.110.3.669
+  notes: Bomblies et al. 1990, Membrane-enclosed crystals in Dictyostelium discoideum
+    cells, consisting of developmentally regulated proteins with sequence similarities
+    to known esterases, Journal of Cell Biology.
+causal_graphs:
+- graph_id: esterosome_membrane_bounds_lumen
+  title: Esterosome membrane encloses the crystal lumen
+  description: The esterosome membrane is the lipid bilayer that bounds the esterosome
+    and encloses its crystalline lumen.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures membrane and lumen topology without asserting the
+    ER-trafficking or nucleation steps that build an esterosome.
+  nodes:
+  - node_id: esterosome_membrane
+    label: esterosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0033118
+    component_ref: esterosome_lipid_bilayer
+  - node_id: esterosome
+    label: esterosome
+    node_type: ORGANELLE
+    grounding: GO:0033117
+  - node_id: esterosome_lumen
+    label: esterosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034467
+  edges:
+  - subject: esterosome_membrane
+    predicate: is part of
+    object: esterosome
+    description: The esterosome membrane is the lipid-bilayer boundary of the esterosome.
+    evidence:
+    - reference: GO:0033118
+      notes: GO:0033118 defines the esterosome membrane as the lipid bilayer surrounding
+        an esterosome.
+    - reference: uniprot.location:SL-0108
+      notes: UniProt SL-0108 places the esterosome membrane under the esterosome subcellular
+        location.
+  - subject: esterosome_lumen
+    predicate: is enclosed by
+    object: esterosome_membrane
+    description: The esterosome lumen is the crystal-filled compartment enclosed by
+      the esterosome membrane.
+    evidence:
+    - reference: GO:0034467
+      notes: GO:0034467 defines the esterosome lumen as the volume enclosed by the
+        esterosome membrane.
+    - reference: DOI:10.1083/jcb.110.3.669
+      notes: Bomblies et al. 1990 showed that Dictyostelium esterosome crystals are
+        membrane-enclosed.
+discussions:
+- discussion_id: ground_esterosome_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituent
+    of the esterosome membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#esterosome_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0033118, but no esterosome-specific
+    lipid or lipid-bilayer CURIE was curated for the membrane constituent.
+  evidence:
+  - reference: GO:0033118
+    notes: GO:0033118 identifies the complete esterosome membrane.
+  posed_by: codex
+  posed_date: '2026-09-13'
