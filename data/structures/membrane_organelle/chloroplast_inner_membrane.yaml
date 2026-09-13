@@ -1,0 +1,173 @@
+identifier: GO:0009706
+label: chloroplast inner membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The inner, i.e. lumen-facing, lipid bilayer of the chloroplast envelope;
+  also faces the chloroplast stroma.
+definition_source: GO:0009706
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T03:15:20Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T03:15:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL-0051 xref, plastid-inner and chloroplast-membrane
+    parentage, chloroplast-envelope parthood, a reviewed-label-only inner lipid bilayer
+    component, Viridiplantae and Chlamydomonas scope, a nonmechanistic topology graph,
+    and a lipid-bilayer grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: chloroplastic inner membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0051
+parent_structures:
+- GO:0009528
+- GO:0031969
+part_of:
+- GO:0009941
+xrefs:
+- uniprot.location:SL-0051
+components:
+- component_id: chloroplast_inner_lipid_bilayer
+  label: chloroplast inner lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Stroma-facing lipid bilayer that separates the chloroplast stroma from the
+    intermembrane space.
+  evidence:
+  - reference: GO:0009706
+    notes: GO:0009706 defines the chloroplast inner membrane as the inner lipid bilayer
+      of the chloroplast envelope that also faces the chloroplast stroma.
+  - reference: uniprot.location:SL-0051
+    notes: UniProt SL-0051 maps directly to GO:0009706 and describes the chloroplast
+      inner membrane as the boundary between the chloroplast stroma and intermembrane
+      space.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0009706 and UniProt SL-0051 identify the whole chloroplast inner
+    membrane, but no separate source-neutral CURIE was curated for the lipid constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Photosynthetic green algae and land plants carry chloroplasts bounded by chloroplast
+    envelopes with inner membranes.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas reinhardtii has a chloroplast inner membrane carrying the Tic
+    side of the TOC-TIC import supercomplex.
+  reference: DOI:10.1016/j.cell.2022.10.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model used for structural analysis of a TOC-TIC supercomplex that
+    spans the chloroplast outer and inner envelope membranes.
+  reference: DOI:10.1016/j.cell.2022.10.030
+evidence:
+- reference: GO:0009706
+  notes: Gene Ontology cellular-component term for chloroplast inner membrane.
+- reference: GO:0009528
+  notes: Gene Ontology cellular-component term for plastid inner membrane.
+- reference: GO:0031969
+  notes: Gene Ontology cellular-component term for chloroplast membrane.
+- reference: GO:0009941
+  notes: Gene Ontology cellular-component term for chloroplast envelope.
+- reference: GO:0031972
+  notes: Gene Ontology cellular-component term for the chloroplast intermembrane space
+    delimited by the inner membrane.
+- reference: GO:0009570
+  notes: Gene Ontology cellular-component term for the chloroplast stroma.
+- reference: uniprot.location:SL-0051
+  notes: UniProt Subcellular Location entry SL-0051 maps Chloroplast inner membrane
+    to GO:0009706 and places it under both chloroplast membrane and plastid inner
+    membrane.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1016/j.cell.2022.10.030
+  notes: Jin et al. 2022, Structure of a TOC-TIC supercomplex spanning two chloroplast
+    envelope membranes, Cell.
+causal_graphs:
+- graph_id: chloroplast_inner_membrane_topology
+  title: Chloroplast inner membrane topology
+  description: The chloroplast inner membrane is the stroma-facing lipid bilayer of
+    the chloroplast envelope and delimits the intermembrane space.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining envelope topology without asserting
+    membrane proteins, import machinery, or the full chloroplast envelope protein-import
+    apparatus.
+  nodes:
+  - node_id: chloroplast_inner_membrane
+    label: chloroplast inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0009706
+  - node_id: chloroplast_envelope
+    label: chloroplast envelope
+    node_type: STRUCTURE
+    grounding: GO:0009941
+  - node_id: chloroplast_stroma
+    label: chloroplast stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009570
+  - node_id: chloroplast_intermembrane_space
+    label: chloroplast intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031972
+  edges:
+  - subject: chloroplast_inner_membrane
+    predicate: is part of
+    object: chloroplast_envelope
+    description: The chloroplast inner membrane is the inner lipid bilayer of the
+      chloroplast envelope.
+    evidence:
+    - reference: GO:0009706
+      notes: GO:0009706 defines this inner membrane as a lipid bilayer of the chloroplast
+        envelope.
+    - reference: uniprot.location:SL-0051
+      notes: UniProt SL-0051 places the chloroplast inner membrane under chloroplast
+        membrane.
+  - subject: chloroplast_inner_membrane
+    predicate: bounds
+    object: chloroplast_stroma
+    description: The chloroplast inner membrane is the envelope lipid bilayer that
+      faces the chloroplast stroma.
+    evidence:
+    - reference: GO:0009706
+      notes: GO:0009706 defines this membrane by its inner chloroplast-envelope position
+        and states that it also faces the chloroplast stroma.
+    - reference: GO:0009570
+      notes: GO:0009570 identifies the chloroplast stroma as the space enclosed by
+        the double membrane of a chloroplast.
+  - subject: chloroplast_inner_membrane
+    predicate: delimits
+    object: chloroplast_intermembrane_space
+    description: The chloroplast inner membrane forms the inner boundary of the intermembrane
+      space between the envelope lipid bilayers.
+    evidence:
+    - reference: uniprot.location:SL-0051
+      notes: UniProt SL-0051 describes the chloroplast inner membrane as separating
+        the chloroplast stroma from the intermembrane space.
+    - reference: GO:0031972
+      notes: GO:0031972 defines the chloroplast intermembrane space as the region
+        between the inner and outer lipid bilayers of a chloroplast envelope.
+discussions:
+- discussion_id: ground_chloroplast_inner_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    chloroplast inner membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#chloroplast_inner_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0009706 and UniProt SL-0051, but
+    the lipid bilayer constituent is intentionally left as a reviewed-label-only component
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-13'
