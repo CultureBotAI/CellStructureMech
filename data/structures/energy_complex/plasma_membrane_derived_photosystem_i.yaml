@@ -20,6 +20,12 @@ curation_history:
     function, GO and literature evidence, a nonmechanistic PSI electron-input graph,
     and a PSI subunit-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-13T05:29:46Z'
+  curator: codex
+  action: REVISED_RECORD
+  changes: '#754: replaced GO-only evidence on the PSI electron-transport graph edge
+    with literature evidence for the process claim.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cyanobacterial PSI
   synonym_type: RELATED_SYNONYM
@@ -135,9 +141,9 @@ causal_graphs:
     description: PSI is the downstream photosystem in oxygenic photosynthetic electron
       transport.
     evidence:
-    - reference: GO:0030094
-      notes: GO:0030094 places this bacterial photosystem I complex in the thylakoid
-        photosynthetic apparatus.
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review PSI as part of the downstream thylakoid
+        electron-transport chain.
 discussions:
 - discussion_id: psi_subunit_boundaries
   prompt: Resolve exact source-neutral component groundings for bona fide bacterial
