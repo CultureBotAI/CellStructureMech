@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/plastid_intermembrane_space.yaml
+  slug: plastid_intermembrane_space
+session:
+  id: 2026-09-13T213918Z-codex-682712
+  timestamp: '2026-09-13T21:39:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add plastid intermembrane space structure record
+  details: Created GO:0009529 plastid intermembrane space with the UniProt SL-0212 synonym
+    and xref, GO-grounded plastid-envelope parthood, Viridiplantae and Chlamydomonas distribution
+    evidence, a canonical Chlamydomonas example, and a nonmechanistic topology graph for the
+    envelope membranes that delimit the space.
