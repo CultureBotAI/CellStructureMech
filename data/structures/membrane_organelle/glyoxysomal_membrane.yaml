@@ -1,0 +1,159 @@
+identifier: GO:0046861
+label: glyoxysomal membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The membrane surrounding the glyoxysome.
+definition_source: GO:0046861
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T17:01:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T17:01:46Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL glyoxysome-membrane synonym and xref, peroxisomal-membrane
+    parentage, glyoxysome parthood, a label-only lipid-bilayer component, Neurospora
+    scope, a matrix-boundary function, GO/UniProt/DOI evidence, a nonmechanistic glyoxysomal-membrane
+    topology graph, and a lipid-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: glyoxysome membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0130
+parent_structures:
+- GO:0005778
+part_of:
+- GO:0009514
+xrefs:
+- uniprot.location:SL-0130
+components:
+- component_id: glyoxysomal_lipid_bilayer
+  label: glyoxysomal lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Peroxisome-related lipid bilayer that surrounds the glyoxysome and separates
+    the glyoxysomal matrix from the cytosol.
+  evidence:
+  - reference: GO:0046861
+    notes: GO:0046861 identifies the glyoxysomal membrane as the membrane surrounding
+      a glyoxysome.
+  - reference: DOI:10.1007/BF00309930
+    notes: de Zoysa and Connerton 1994 studied matrix-protein targeting into Neurospora
+      crassa glyoxysomes.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0046861 identifies the whole glyoxysomal membrane, but no exact
+    source-neutral CURIE was curated for the generic lipid constituent of that peroxisome-related
+    membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5141
+  taxon_label: Neurospora crassa
+  presence: COMMON
+  note: Neurospora crassa forms acetate-induced glyoxysomes whose membranes bound
+    glyoxylate-cycle matrix compartments.
+  reference: DOI:10.1007/BF00309930
+canonical_examples:
+- taxon_id: NCBITaxon:5141
+  taxon_label: Neurospora crassa
+  note: Filamentous-fungal model used to test import of matrix proteins across the
+    glyoxysomal membrane under acetate-induced growth conditions.
+  reference: DOI:10.1007/BF00309930
+functions:
+- function_id: glyoxysomal_matrix_boundary
+  label: glyoxysomal matrix boundary
+  description: The glyoxysomal membrane forms the boundary around the glyoxysomal
+    matrix compartment that contains glyoxylate-cycle enzymes.
+  evidence:
+  - reference: GO:0046861
+    notes: GO:0046861 identifies the glyoxysomal membrane as the membrane surrounding
+      a glyoxysome.
+  - reference: GO:0031908
+    notes: GO:0031908 defines the glyoxysomal lumen as the matrix volume enclosed
+      by the glyoxysome membrane.
+  - reference: GO:0009514
+    notes: GO:0009514 defines glyoxysomes as peroxisome specializations that contain
+      glyoxylate-pathway enzymes.
+evidence:
+- reference: GO:0046861
+  notes: Gene Ontology cellular-component term for glyoxysomal membrane.
+- reference: GO:0005778
+  notes: Gene Ontology cellular-component parent term for peroxisomal membrane.
+- reference: GO:0009514
+  notes: Gene Ontology cellular-component term for the containing glyoxysome.
+- reference: GO:0031908
+  notes: Gene Ontology cellular-component term for the glyoxysomal lumen bounded by
+    the glyoxysomal membrane.
+- reference: uniprot.location:SL-0130
+  notes: UniProt Subcellular Location entry SL-0130 maps Glyoxysome membrane to GO:0046861
+    and lists glyoxysomal membrane as an exact synonym.
+- reference: uniprot.location:SL-0333
+  notes: UniProt Subcellular Location entry SL-0333 maps Glyoxysome matrix to GO:0031908
+    under the containing glyoxysome.
+- reference: DOI:10.1007/BF00309930
+  notes: de Zoysa and Connerton 1994, The function and specificity of the C-terminal
+    tripeptide glyoxysomal targeting signal in Neurospora crassa, Current Genetics.
+causal_graphs:
+- graph_id: glyoxysomal_membrane_bounds_lumen
+  title: Glyoxysomal membrane encloses the matrix lumen
+  description: The glyoxysomal membrane surrounds the organelle and encloses the glyoxylate-cycle
+    matrix compartment.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures membrane and lumen topology without asserting individual
+    glyoxylate-cycle enzymes or membrane import factors.
+  nodes:
+  - node_id: glyoxysomal_membrane
+    label: glyoxysomal membrane
+    node_type: STRUCTURE
+    grounding: GO:0046861
+    component_ref: glyoxysomal_lipid_bilayer
+  - node_id: glyoxysome
+    label: glyoxysome
+    node_type: ORGANELLE
+    grounding: GO:0009514
+  - node_id: glyoxysomal_lumen
+    label: glyoxysomal lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031908
+  edges:
+  - subject: glyoxysomal_membrane
+    predicate: is part of
+    object: glyoxysome
+    description: The glyoxysomal membrane is the boundary membrane of a glyoxysome.
+    evidence:
+    - reference: GO:0046861
+      notes: GO:0046861 identifies the glyoxysomal membrane as surrounding a glyoxysome.
+    - reference: uniprot.location:SL-0130
+      notes: UniProt SL-0130 places the glyoxysome membrane under the glyoxysome subcellular
+        location.
+  - subject: glyoxysomal_lumen
+    predicate: is enclosed by
+    object: glyoxysomal_membrane
+    description: The glyoxysomal lumen is the matrix compartment enclosed by the glyoxysomal
+      membrane.
+    evidence:
+    - reference: GO:0031908
+      notes: GO:0031908 defines the glyoxysomal lumen as the volume enclosed by the
+        glyoxysome membrane.
+    - reference: GO:0046861
+      notes: GO:0046861 identifies the membrane surrounding a glyoxysome.
+    - reference: uniprot.location:SL-0333
+      notes: UniProt SL-0333 maps the glyoxysome matrix to the glyoxysomal lumen.
+discussions:
+- discussion_id: ground_glyoxysomal_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituent
+    of the glyoxysomal membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#glyoxysomal_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0046861, but no glyoxysome-specific
+    lipid or lipid-bilayer CURIE was curated for the membrane constituent.
+  evidence:
+  - reference: GO:0046861
+    notes: GO:0046861 identifies the complete glyoxysomal membrane.
+  posed_by: codex
+  posed_date: '2026-09-13'
