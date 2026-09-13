@@ -1,0 +1,174 @@
+identifier: GO:0033111
+label: attachment organelle membrane
+structure_category: APPENDAGE
+structure_kind: MEMBRANE
+definition: The membrane surrounding the attachment organelle.
+definition_source: GO:0033111
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-12T23:45:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-12T23:46:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL xref, membrane parentage, attachment organelle and
+    plasma membrane parthood, a reviewed-label-only lipid-bilayer component, Mycoplasma
+    lineage distribution, a Mycoplasmoides example, a nonmechanistic topology graph,
+    and a resolved interpretation that keeps surface and core proteins on the whole
+    attachment organelle.
+  llm_assisted: true
+- timestamp: '2026-09-12T23:55:25Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #722 by adding GO:0005886 evidence to the lipid-bilayer component
+    and GO:0033111 evidence to the plasma-membrane parthood edge.'
+  llm_assisted: true
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0033099
+- GO:0005886
+xrefs:
+- uniprot.location:SL-0021
+components:
+- component_id: attachment_organelle_lipid_bilayer
+  label: attachment organelle lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Specialized plasma-membrane region that surrounds the Mycoplasma attachment
+    organelle.
+  evidence:
+  - reference: GO:0033111
+    notes: GO:0033111 defines the attachment organelle membrane as the membrane surrounding
+      the attachment organelle.
+  - reference: uniprot.location:SL-0021
+    notes: UniProt Subcellular Location SL-0021 maps directly to GO:0033111 and places
+      it under both attachment organelle and cell membrane.
+  - reference: GO:0005886
+    notes: GO:0005886 identifies the plasma membrane that includes this specialized
+      attachment-organelle membrane patch.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0033111 and UniProt SL-0021 identify the attachment organelle
+    membrane, but no lipid CURIE specific to this Mycoplasma polar membrane patch
+    was curated.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:31969
+  taxon_label: Mollicutes
+  presence: VARIABLE
+  note: Attachment organelles and their surrounding membrane patches are polar structures
+    of the Mycoplasma pneumoniae cluster rather than a universal feature of wall-less
+    mollicutes.
+  reference: DOI:10.1186/s12866-025-04320-w
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: RARE
+  note: The characterized attachment organelle membrane is restricted to the small
+    bacterial lineage that carries attachment organelles.
+  reference: DOI:10.1186/s12866-025-04320-w
+canonical_examples:
+- taxon_id: NCBITaxon:272634
+  taxon_label: Mycoplasmoides pneumoniae M129
+  note: Type strain used by the Nakane et al. structural analysis of the attachment
+    organelle surface and internal core.
+  reference: DOI:10.1371/journal.ppat.1005299
+evidence:
+- reference: GO:0033111
+  notes: Gene Ontology cellular-component term for the attachment organelle membrane.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component term for membrane.
+- reference: GO:0033099
+  notes: Gene Ontology cellular-component term for the attachment organelle that this
+    membrane surrounds.
+- reference: GO:0005886
+  notes: Gene Ontology cellular-component term for the plasma membrane that includes
+    this specialized membrane patch.
+- reference: uniprot.location:SL-0021
+  notes: UniProt Subcellular Location entry SL-0021 maps directly to GO:0033111 and
+    places the attachment organelle membrane under the attachment organelle and cell
+    membrane locations.
+- reference: DOI:10.1371/journal.ppat.1005299
+  notes: Nakane et al. 2015 structurally mapped the Mycoplasma pneumoniae attachment
+    organelle surface and internal core.
+- reference: DOI:10.1186/s12866-025-04320-w
+  notes: Chen et al. 2025 review distinct cytoskeletal motility structures among Mycoplasma
+    pneumoniae relatives.
+causal_graphs:
+- graph_id: attachment_organelle_membrane_topology
+  title: Attachment organelle membrane topology
+  description: The attachment organelle membrane is the specialized plasma membrane
+    patch that surrounds the polar Mycoplasma attachment organelle.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the membrane patch boundary and parthood without
+    asserting the full surface-adhesin or internal-core mechanism of the attachment
+    organelle.
+  nodes:
+  - node_id: attachment_organelle_membrane
+    label: attachment organelle membrane
+    node_type: STRUCTURE
+    grounding: GO:0033111
+  - node_id: attachment_organelle
+    label: attachment organelle
+    node_type: STRUCTURE
+    grounding: GO:0033099
+  - node_id: plasma_membrane
+    label: plasma membrane
+    node_type: STRUCTURE
+    grounding: GO:0005886
+  edges:
+  - subject: attachment_organelle_membrane
+    predicate: surrounds
+    object: attachment_organelle
+    description: The membrane forms the boundary surrounding the attachment organelle.
+    evidence:
+    - reference: GO:0033111
+      notes: GO:0033111 defines the attachment organelle membrane as the membrane
+        surrounding the attachment organelle.
+    - reference: GO:0033099
+      notes: GO:0033099 identifies the containing attachment organelle structure.
+    - reference: uniprot.location:SL-0021
+      notes: UniProt SL-0021 places the membrane under the attachment organelle subcellular
+        location.
+  - subject: attachment_organelle_membrane
+    predicate: is part of
+    object: plasma_membrane
+    description: The attachment organelle membrane is a specialized cell-membrane
+      region at the Mycoplasma pole.
+    evidence:
+    - reference: GO:0033111
+      notes: GO:0033111 identifies the attachment organelle membrane that forms this
+        specialized cell-membrane region.
+    - reference: uniprot.location:SL-0021
+      notes: UniProt SL-0021 places the attachment organelle membrane under the cell
+        membrane subcellular location.
+    - reference: GO:0005886
+      notes: GO:0005886 is the plasma membrane term corresponding to the UniProt Cell
+        membrane location.
+discussions:
+- discussion_id: surface_adhesins_on_whole_organelle
+  prompt: Keep P1/P40/P90, P30, and internal-core proteins on the whole attachment
+    organelle record rather than duplicating them as attachment organelle membrane
+    components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#attachment_organelle_membrane_topology
+  rationale: GO:0033111 and SL-0021 denote the membrane around the organelle. Nakane
+    et al. map P1/P40/P90 and P30 to the broader organelle surface and map HMW2, P65,
+    and HMW3 to the electron-dense internal core, so those proteins remain components
+    of the whole attachment organelle record.
+  resolution_note: Curated only the lipid-boundary component and the attachment organelle/plasma-membrane
+    topology for the membrane record.
+  evidence:
+  - reference: GO:0033111
+    notes: GO:0033111 identifies the membrane boundary around the attachment organelle.
+  - reference: DOI:10.1371/journal.ppat.1005299
+    notes: Nakane et al. 2015 mapped known surface and internal core proteins across
+      the attachment organelle.
+  posed_by: codex
+  posed_date: '2026-09-12'
