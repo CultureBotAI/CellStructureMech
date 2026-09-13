@@ -576,6 +576,15 @@
   "definition": "The rotary motor enzyme that makes ATP from ADP and phosphate using the ion motive force across the membrane. It has two coupled sectors: a membrane-embedded Fo, whose c-ring turns as protons cross it, and a soluble F1 (alpha3beta3gammadeltaepsilon), whose catalytic beta subunits are driven through their conformational cycle by the rotating gamma subunit."
  },
  {
+  "identifier": "cellstructuremech:rc_lh1_pufx_core_complex",
+  "label": "RC-LH1-PufX core complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/rc_lh1_pufx_core_complex.html",
+  "definition": "A purple-bacterial chromatophore membrane protein complex that contains a photochemical reaction center, LH1 antenna proteins and PufX, receives excitation from surrounding LH2 antennae, and reduces quinone during cyclic photosynthetic electron transport."
+ },
+ {
   "identifier": "GO:0016471",
   "label": "vacuolar proton-transporting V-type ATPase complex",
   "category": "ENERGY_COMPLEX",
