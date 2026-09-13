@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitosome_matrix.yaml
+  slug: mitosome_matrix
+session:
+  id: 2026-09-13T201638Z-codex-45d2d2
+  timestamp: '2026-09-13T20:16:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/832
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add mitosome matrix record
+  details: Created cellstructuremech:mitosome_matrix from UniProt Subcellular Location SL-0441,
+    with the mitosomal matrix exact synonym, organelle-lumen parentage, mitosome parthood,
+    rare anaerobic eukaryote and Entamoeba scope, Entamoeba as a canonical example, UniProt/GO/DOI
+    evidence, and a nonmechanistic matrix-topology graph.

@@ -1,0 +1,111 @@
+identifier: cellstructuremech:mitosome_matrix
+label: mitosome matrix
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The matrix of a mitosome is the mitosomal internal spaces enclosed by
+  the inner membrane.
+definition_source: uniprot.location:SL-0441
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T20:15:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T20:16:06Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL mitosomal-matrix synonym and xref, organelle-lumen
+    parentage, mitosome parthood, rare anaerobic eukaryote and Entamoeba scope, UniProt/GO/DOI
+    evidence, and a nonmechanistic matrix-topology graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: mitosomal matrix
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0441
+parent_structures:
+- GO:0043233
+part_of:
+- GO:0032047
+xrefs:
+- uniprot.location:SL-0441
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Mitosome matrices occur in the patchy anaerobic or microaerophilic microbial
+    eukaryotes that retain double-membrane mitochondrion-related mitosomes.
+  reference: DOI:10.1111/jeu.12922
+- taxon_id: NCBITaxon:5759
+  taxon_label: Entamoeba histolytica
+  presence: COMMON
+  note: The Entamoeba mitochondrion-related mitosome was identified as a double-membrane
+    organelle whose internal matrix is enclosed by the inner mitosomal membrane.
+  reference: DOI:10.1046/j.1365-2958.1999.01414.x
+canonical_examples:
+- taxon_id: NCBITaxon:5759
+  taxon_label: Entamoeba histolytica
+  note: Amoebozoan parasite in which mitosomes were initially described as double-membrane
+    mitochondrion-related organelles.
+  reference: DOI:10.1046/j.1365-2958.1999.01414.x
+evidence:
+- reference: uniprot.location:SL-0441
+  notes: UniProt Subcellular Location entry SL-0441 identifies the mitosome matrix,
+    lists mitosomal matrix as an exact synonym, and places it under the mitosome location.
+- reference: uniprot.location:SL-0439
+  notes: UniProt Subcellular Location entry SL-0439 identifies the inner mitosomal
+    membrane as separating the matrix from the intermembrane space.
+- reference: GO:0043233
+  notes: Gene Ontology cellular-component parent term for organelle lumen.
+- reference: GO:0032047
+  notes: Gene Ontology cellular-component term for the containing mitosome.
+- reference: DOI:10.1046/j.1365-2958.1999.01414.x
+  notes: Tovar et al. 1999, The mitosome, a novel organelle related to mitochondria
+    in the amitochondrial parasite Entamoeba histolytica, Molecular Microbiology.
+- reference: DOI:10.1111/jeu.12922
+  notes: 'Tachezy 2022, Hydrogenosomes and mitosomes: Mitochondria of anaerobic eukaryotes,
+    Journal of Eukaryotic Microbiology.'
+causal_graphs:
+- graph_id: mitosome_matrix_topology
+  title: Mitosome matrix topology
+  description: The mitosome matrix is the internal mitosome compartment enclosed by
+    the mitosome inner membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining matrix boundary without asserting specific
+    mitosomal matrix proteins or protein-import machinery.
+  nodes:
+  - node_id: mitosome_matrix
+    label: mitosome matrix
+    node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:mitosome_matrix
+  - node_id: mitosome_inner_membrane
+    label: mitosome inner membrane
+    node_type: STRUCTURE
+    grounding: cellstructuremech:mitosome_inner_membrane
+  - node_id: mitosome
+    label: mitosome
+    node_type: ORGANELLE
+    grounding: GO:0032047
+  edges:
+  - subject: mitosome_matrix
+    predicate: is part of
+    object: mitosome
+    description: The mitosome matrix is the internal volume of a mitosome.
+    evidence:
+    - reference: uniprot.location:SL-0441
+      notes: UniProt SL-0441 places the mitosome matrix under the mitosome subcellular
+        location.
+    - reference: GO:0032047
+      notes: GO:0032047 identifies the containing mitosome.
+  - subject: mitosome_inner_membrane
+    predicate: encloses
+    object: mitosome_matrix
+    description: The mitosome inner membrane encloses the mitosome matrix.
+    evidence:
+    - reference: uniprot.location:SL-0441
+      notes: UniProt SL-0441 defines the mitosome matrix as the internal spaces enclosed
+        by the inner membrane.
+    - reference: uniprot.location:SL-0439
+      notes: UniProt SL-0439 defines the mitosome inner membrane by its position between
+        the matrix and the intermembrane space.

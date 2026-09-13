@@ -26,6 +26,12 @@ curation_history:
   changes: Grounded the mitosome intermembrane space topology node to cellstructuremech:mitosome_intermembrane_space
     after the exact record was curated from UniProt SL-0440.
   llm_assisted: true
+- timestamp: '2026-09-13T20:16:06Z'
+  curator: codex
+  action: GROUNDED_TOPOLOGY_NODE
+  changes: Grounded the mitosome matrix topology node to cellstructuremech:mitosome_matrix
+    after curating the exact UniProt SL-0441-backed record.
+  llm_assisted: true
 synonyms:
 - synonym_text: inner mitosomal membrane
   synonym_type: EXACT_SYNONYM
@@ -117,6 +123,7 @@ causal_graphs:
   - node_id: mitosome_matrix
     label: mitosome matrix
     node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:mitosome_matrix
   - node_id: mitosome_intermembrane_space
     label: mitosome intermembrane space
     node_type: CELLULAR_LOCALIZATION
