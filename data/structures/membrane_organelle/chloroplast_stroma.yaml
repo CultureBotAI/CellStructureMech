@@ -1,0 +1,199 @@
+identifier: GO:0009570
+label: chloroplast stroma
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The internal space enclosed by the chloroplast double membrane but excluding
+  the thylakoid space.
+definition_source: GO:0009570
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T01:20:34Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T01:22:26Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL xref and exact synonym, plastid-stroma parentage,
+    chloroplast parthood, chloroplast nucleoid and plastoglobule parts, Chlamydomonas
+    and Viridiplantae scope, stromal protein-import evidence, a nonmechanistic topology/import
+    graph, and a thylakoid-lumen boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-09-13T01:29:18Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #731 by retargeting the import graph edge to the GO:0045037 process
+    endpoint, and resolved #732 by replacing circular plastoglobule parthood support
+    with direct UniProt SL-0217 evidence.'
+  llm_assisted: true
+synonyms:
+- synonym_text: chloroplastic stroma
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0055
+parent_structures:
+- GO:0009532
+part_of:
+- GO:0009507
+has_part:
+- GO:0042644
+- GO:0010287
+xrefs:
+- uniprot.location:SL-0055
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Chloroplast stroma occurs in chloroplast-bearing green algae and land plants
+    as the internal matrix compartment inside the chloroplast envelope.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: The Chlamydomonas chloroplast proteome includes stromal metabolic and protein-biogenesis
+    pathways in a unicellular green-algal model.
+  reference: DOI:10.1007/s00294-011-0339-1
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Unicellular green alga whose chloroplast stroma contains nucleoids and metabolic
+    enzymes characterized in chloroplast proteome surveys.
+  reference: DOI:10.1007/s00294-011-0339-1
+functions:
+- function_id: protein_import_into_chloroplast_stroma
+  label: protein import into chloroplast stroma
+  grounding: GO:0045037
+  description: Imported nucleus-encoded chloroplast precursor proteins cross the outer
+    and inner envelope membranes to enter the chloroplast stroma.
+  evidence:
+  - reference: GO:0045037
+    notes: GO:0045037 defines protein import into the chloroplast stroma as transport
+      from the cytosol into the stroma.
+  - reference: DOI:10.1016/j.cell.2022.10.030
+    notes: Jin et al. 2022 resolved a Chlamydomonas TOC-TIC supercomplex spanning
+      the chloroplast envelope.
+evidence:
+- reference: GO:0009570
+  notes: Gene Ontology cellular-component term for the chloroplast stroma.
+- reference: GO:0009532
+  notes: Gene Ontology cellular-component term for plastid stroma.
+- reference: GO:0009507
+  notes: Gene Ontology cellular-component term for the containing chloroplast.
+- reference: GO:0009941
+  notes: Gene Ontology cellular-component term for the chloroplast envelope that encloses
+    the stroma.
+- reference: GO:0042644
+  notes: Gene Ontology cellular-component term for chloroplast nucleoid.
+- reference: GO:0010287
+  notes: Gene Ontology cellular-component term for plastoglobule.
+- reference: GO:0009543
+  notes: Gene Ontology cellular-component term for chloroplast thylakoid lumen, which
+    is separate from the stroma.
+- reference: GO:0045037
+  notes: Gene Ontology biological-process term for protein import into the chloroplast
+    stroma.
+- reference: uniprot.location:SL-0055
+  notes: UniProt Subcellular Location SL-0055 maps Chloroplast stroma to GO:0009570
+    and places it under the Chloroplast location.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1007/s00294-011-0339-1
+  notes: 'Terashima, Specht and Hippler 2011, The chloroplast proteome: a survey from
+    the Chlamydomonas reinhardtii perspective with a focus on distinctive features,
+    Current Genetics.'
+- reference: uniprot.location:SL-0217
+  notes: UniProt Subcellular Location entry SL-0217 describes the plastoglobule as
+    a lipid-containing structure in the chloroplast stroma.
+- reference: DOI:10.1093/mp/ssp083
+  notes: Karcher et al. 2009, The Chlamydomonas Chloroplast HLP Protein Is Required
+    for Nucleoid Organization and Genome Maintenance, Molecular Plant.
+- reference: DOI:10.1016/j.cell.2022.10.030
+  notes: Jin et al. 2022, Structure of a TOC-TIC supercomplex spanning two chloroplast
+    envelope membranes, Cell.
+causal_graphs:
+- graph_id: chloroplast_stroma_topology_and_import
+  title: Chloroplast stroma topology and import
+  description: The chloroplast envelope encloses the stroma, stromal protein import
+    terminates in the stroma after precursor transit across the envelope, and chloroplast
+    nucleoids and plastoglobules occupy the stromal compartment.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the stromal topology and the stromal endpoint of
+    protein import without duplicating thylakoid biogenesis, carbon fixation, plastoglobule
+    lipid remodeling, or nucleoid maintenance.
+  nodes:
+  - node_id: chloroplast_stroma
+    label: chloroplast stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009570
+  - node_id: chloroplast_envelope
+    label: chloroplast envelope
+    node_type: STRUCTURE
+    grounding: GO:0009941
+  - node_id: chloroplast_nucleoid
+    label: chloroplast nucleoid
+    node_type: STRUCTURE
+    grounding: GO:0042644
+  - node_id: plastoglobule
+    label: plastoglobule
+    node_type: STRUCTURE
+    grounding: GO:0010287
+  - node_id: protein_import
+    label: protein import into chloroplast stroma
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0045037
+  edges:
+  - subject: chloroplast_envelope
+    predicate: encloses
+    object: chloroplast_stroma
+    description: The chloroplast double membrane encloses the stroma and separates
+      it from the cytosol.
+    evidence:
+    - reference: GO:0009570
+      notes: GO:0009570 defines the stroma as the chloroplast internal space enclosed
+        by the double membrane.
+  - subject: chloroplast_nucleoid
+    predicate: is part of
+    object: chloroplast_stroma
+    description: Chloroplast nucleoids are DNA-containing regions inside the stroma.
+    evidence:
+    - reference: DOI:10.1093/mp/ssp083
+      notes: Karcher et al. 2009 assayed Chlamydomonas chloroplast DNA organization
+        as HLP-containing nucleoids.
+  - subject: plastoglobule
+    predicate: is part of
+    object: chloroplast_stroma
+    description: Plastoglobules are chloroplast stromal lipoprotein subcompartments
+      coupled to thylakoids.
+    evidence:
+    - reference: uniprot.location:SL-0217
+      notes: UniProt SL-0217 describes plastoglobules as lipid-containing structures
+        in the chloroplast stroma.
+  - subject: protein_import
+    predicate: terminates in
+    object: chloroplast_stroma
+    description: Protein import into the chloroplast stroma moves nuclear-encoded
+      precursors from the cytosol across the envelope to the stromal destination.
+    evidence:
+    - reference: GO:0045037
+      notes: GO:0045037 defines protein import into the chloroplast stroma as transport
+        from the cytosol into the stroma.
+    - reference: DOI:10.1016/j.cell.2022.10.030
+      notes: Jin et al. 2022 resolved a Chlamydomonas TOC-TIC supercomplex spanning
+        both chloroplast envelope membranes.
+discussions:
+- discussion_id: stroma_thylakoid_boundary
+  prompt: Keep the chloroplast stroma separate from thylakoid lumen compartments.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0009570 denotes the hydrophilic internal matrix enclosed by the chloroplast
+    envelope, explicitly excluding the thylakoid space that has dedicated chloroplast
+    and plastid lumen terms.
+  resolution_note: Curated only the chloroplast matrix compartment and did not merge
+    thylakoid lumens or membranes into this stroma record.
+  evidence:
+  - reference: GO:0009570
+    notes: GO:0009570 defines chloroplast stroma as excluding the thylakoid space.
+  - reference: GO:0009543
+    notes: GO:0009543 separately identifies the chloroplast thylakoid lumen.

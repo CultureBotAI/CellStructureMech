@@ -2405,6 +2405,11 @@
           "cosine_similarity": 0.7422896
         },
         {
+          "identifier": "GO:0009570",
+          "label": "chloroplast stroma",
+          "cosine_similarity": 0.7230038
+        },
+        {
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
           "cosine_similarity": 0.70513717
@@ -2418,11 +2423,6 @@
           "identifier": "GO:0020011",
           "label": "apicoplast",
           "cosine_similarity": 0.64958065
-        },
-        {
-          "identifier": "GO:0033111",
-          "label": "attachment organelle membrane",
-          "cosine_similarity": 0.64322543
         }
       ]
     },
@@ -2777,6 +2777,11 @@
           "cosine_similarity": 0.94721455
         },
         {
+          "identifier": "GO:0009570",
+          "label": "chloroplast stroma",
+          "cosine_similarity": 0.92419556
+        },
+        {
           "identifier": "GO:0070118",
           "label": "organellar chromatophore thylakoid membrane",
           "cosine_similarity": 0.83629436
@@ -2790,11 +2795,6 @@
           "identifier": "GO:0033115",
           "label": "cyanelle thylakoid membrane",
           "cosine_similarity": 0.82344311
-        },
-        {
-          "identifier": "GO:0070116",
-          "label": "organellar chromatophore thylakoid",
-          "cosine_similarity": 0.82290716
         }
       ]
     },
@@ -2806,6 +2806,11 @@
           "identifier": "GO:0009507",
           "label": "chloroplast",
           "cosine_similarity": 0.94721455
+        },
+        {
+          "identifier": "GO:0009570",
+          "label": "chloroplast stroma",
+          "cosine_similarity": 0.86361633
         },
         {
           "identifier": "GO:0005635",
@@ -2821,11 +2826,37 @@
           "identifier": "GO:0033105",
           "label": "chlorosome envelope",
           "cosine_similarity": 0.80086559
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009570",
+      "label": "chloroplast stroma",
+      "neighbors": [
+        {
+          "identifier": "GO:0009507",
+          "label": "chloroplast",
+          "cosine_similarity": 0.92419556
         },
         {
-          "identifier": "GO:0070114",
-          "label": "organellar chromatophore outer membrane",
-          "cosine_similarity": 0.79542191
+          "identifier": "GO:0009941",
+          "label": "chloroplast envelope",
+          "cosine_similarity": 0.86361633
+        },
+        {
+          "identifier": "GO:0042644",
+          "label": "chloroplast nucleoid",
+          "cosine_similarity": 0.84641578
+        },
+        {
+          "identifier": "GO:0070117",
+          "label": "organellar chromatophore thylakoid lumen",
+          "cosine_similarity": 0.80669603
+        },
+        {
+          "identifier": "GO:0034060",
+          "label": "cyanelle stroma",
+          "cosine_similarity": 0.80166411
         }
       ]
     },
@@ -4027,14 +4058,14 @@
           "cosine_similarity": 0.77385116
         },
         {
+          "identifier": "GO:0009570",
+          "label": "chloroplast stroma",
+          "cosine_similarity": 0.74652045
+        },
+        {
           "identifier": "GO:0009507",
           "label": "chloroplast",
           "cosine_similarity": 0.74631968
-        },
-        {
-          "identifier": "GO:0070116",
-          "label": "organellar chromatophore thylakoid",
-          "cosine_similarity": 0.73983042
         }
       ]
     },
@@ -4818,6 +4849,11 @@
       "label": "chloroplast nucleoid",
       "neighbors": [
         {
+          "identifier": "GO:0009570",
+          "label": "chloroplast stroma",
+          "cosine_similarity": 0.84641578
+        },
+        {
           "identifier": "GO:0009295",
           "label": "nucleoid",
           "cosine_similarity": 0.83918875
@@ -4836,11 +4872,6 @@
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
           "cosine_similarity": 0.76415078
-        },
-        {
-          "identifier": "GO:0005634",
-          "label": "nucleus",
-          "cosine_similarity": 0.75648506
         }
       ]
     },
@@ -5779,6 +5810,11 @@
       "label": "pyrenoid",
       "neighbors": [
         {
+          "identifier": "GO:0009570",
+          "label": "chloroplast stroma",
+          "cosine_similarity": 0.70949863
+        },
+        {
           "identifier": "GO:0097268",
           "label": "cytoophidium",
           "cosine_similarity": 0.68696738
@@ -5797,11 +5833,6 @@
           "identifier": "GO:0042644",
           "label": "chloroplast nucleoid",
           "cosine_similarity": 0.66647703
-        },
-        {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.66613122
         }
       ]
     },
