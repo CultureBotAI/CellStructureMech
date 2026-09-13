@@ -1,0 +1,230 @@
+identifier: GO:0031164
+label: contractile vacuolar membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding the contractile vacuole.
+definition_source: GO:0031164
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T17:21:37Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T17:22:46Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL contractile-vacuole membrane synonym and xref, vacuolar-membrane
+    parentage, contractile-vacuole parthood, lipid bilayer, V-ATPase and aquaporin
+    components, eukaryotic scope with amoebozoan examples, a membrane-permeation function,
+    GO/UniProt/DOI evidence, a nonmechanistic filling graph, and a component-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-13T17:27:36Z'
+  curator: codex
+  action: REFINED_GRAPH
+  changes: Retargeted the final water-permeability graph edge to a contractile-vacuole
+    filling process node so the state supports the process rather than the organelle
+    itself.
+  llm_assisted: true
+- timestamp: '2026-09-13T17:33:26Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed #817 by removing V-ATPase as a direct membrane component, retargeting
+    the V-ATPase graph edge to perivacuolar vesicles, narrowing the canonical example
+    to Amoeba proteus, and updating the component grounding TODO.'
+  llm_assisted: true
+synonyms:
+- synonym_text: contractile vacuole membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0074
+parent_structures:
+- GO:0005774
+part_of:
+- GO:0000331
+xrefs:
+- uniprot.location:SL-0074
+components:
+- component_id: contractile_vacuole_lipid_bilayer
+  label: contractile-vacuole lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Bounding bilayer that separates the contractile-vacuole lumen from the cytosol
+    and carries water channels involved in vacuole filling.
+  evidence:
+  - reference: GO:0031164
+    notes: GO:0031164 identifies the contractile vacuolar membrane as the lipid bilayer
+      surrounding the contractile vacuole.
+  - reference: uniprot.location:SL-0074
+    notes: UniProt Subcellular Location SL-0074 maps Contractile vacuole membrane
+      to GO:0031164.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0031164 and UniProt SL-0074 identify the whole contractile vacuolar
+    membrane, but no exact contractile-vacuole-specific lipid or lipid-bilayer CURIE
+    was curated for the generic membrane constituent.
+- component_id: aquaporins
+  label: contractile-vacuole membrane aquaporins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Aquaporins associated with contractile-vacuole membranes are curated
+    as a membrane-channel group; no exact lineage-neutral family grounding was chosen
+    for the CV-localized subset.
+  role: Water channels that increase contractile-vacuole-system membrane permeability
+    during water filling.
+  evidence:
+  - reference: DOI:10.1042/BC20070091
+    notes: Nishihara et al. 2008 cloned an Amoeba proteus aquaporin and localized
+      it to the contractile vacuole membrane and perivacuolar vesicles.
+  - reference: DOI:10.1016/j.ejop.2024.126078
+    notes: More et al. 2024 review channels implicated in contractile-vacuole filling.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Contractile vacuoles and their surrounding membranes occur patchily in unicellular
+    freshwater and soil eukaryotes rather than across all eukaryotes.
+  reference: DOI:10.1016/j.ejop.2024.126078
+canonical_examples:
+- taxon_id: NCBITaxon:5775
+  taxon_label: Amoeba proteus
+  note: Amoeba model in which aquaporin and V-ATPase were localized to the contractile-vacuole
+    membrane and associated vesicles.
+  reference: DOI:10.1042/BC20070091
+functions:
+- function_id: contractile_vacuole_membrane_permeation
+  label: contractile-vacuole membrane permeation
+  description: The contractile vacuolar membrane carries aquaporin water channels
+    that increase membrane water permeability during contractile-vacuole filling.
+  evidence:
+  - reference: DOI:10.1042/BC20070091
+    notes: Nishihara et al. 2008 localized aquaporin and V-ATPase to Amoeba contractile-vacuole-system
+      membranes.
+evidence:
+- reference: GO:0031164
+  notes: Gene Ontology cellular-component term for the contractile vacuolar membrane.
+- reference: GO:0005774
+  notes: Gene Ontology cellular-component parent term for the vacuolar membrane.
+- reference: GO:0000331
+  notes: Gene Ontology cellular-component term for the containing contractile vacuole.
+- reference: uniprot.location:SL-0074
+  notes: UniProt Subcellular Location entry SL-0074 maps to GO:0031164 and lists contractile
+    vacuolar membrane as an exact synonym.
+- reference: DOI:10.1242/jcs.115.14.2893
+  notes: Clarke et al. 2002, Dynamics of the vacuolar H+-ATPase in the contractile
+    vacuole complex and the endosomal pathway of Dictyostelium cells, Journal of Cell
+    Science.
+- reference: DOI:10.1042/BC20070091
+  notes: Nishihara et al. 2008, Presence of aquaporin and V-ATPase on the contractile
+    vacuole of Amoeba proteus, Biology of the Cell.
+- reference: DOI:10.1016/j.ejop.2024.126078
+  notes: 'More et al. 2024, Contractile vacuoles: a rapidly expanding and occasionally
+    diminishing understanding, European Journal of Protistology.'
+causal_graphs:
+- graph_id: pump_channel_supported_vacuole_filling
+  title: Contractile-vacuole aquaporins and perivacuolar V-ATPase support filling
+  description: The contractile vacuolar membrane bounds the vacuole and carries aquaporins
+    that support water permeability, while neighboring V-ATPase-positive vesicles
+    support ion-gradient steps in vacuole filling.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures membrane aquaporin localization and perivacuolar
+    V-ATPase-positive vesicles without asserting V-ATPase as a constituent of the
+    single lipid bilayer surrounding the contractile vacuole.
+  nodes:
+  - node_id: contractile_vacuolar_membrane
+    label: contractile vacuolar membrane
+    node_type: STRUCTURE
+    grounding: GO:0031164
+  - node_id: contractile_vacuole
+    label: contractile vacuole
+    node_type: ORGANELLE
+    grounding: GO:0000331
+  - node_id: v_type_atpase
+    label: perivacuolar V-ATPase
+    node_type: GENE_OR_PROTEIN
+  - node_id: aquaporins
+    label: contractile-vacuole membrane aquaporins
+    node_type: GENE_OR_PROTEIN
+    component_ref: aquaporins
+  - node_id: perivacuolar_vesicles
+    label: perivacuolar V-ATPase-positive vesicles
+    node_type: STRUCTURE
+  - node_id: osmotic_gradient
+    label: osmotic gradient toward the vacuole
+    node_type: STATE
+  - node_id: membrane_water_permeability
+    label: contractile-vacuole membrane water permeability
+    node_type: STATE
+  - node_id: vacuole_filling
+    label: contractile-vacuole filling
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: contractile_vacuolar_membrane
+    predicate: bounds
+    object: contractile_vacuole
+    description: The contractile vacuolar membrane is the lipid bilayer that surrounds
+      the contractile vacuole.
+    evidence:
+    - reference: GO:0031164
+      notes: GO:0031164 defines the membrane as the lipid bilayer surrounding the
+        contractile vacuole.
+  - subject: v_type_atpase
+    predicate: resides in
+    object: perivacuolar_vesicles
+    description: V-ATPase localizes to vesicles surrounding the Amoeba contractile
+      vacuole.
+    evidence:
+    - reference: DOI:10.1042/BC20070091
+      notes: Nishihara et al. 2008 detected V-ATPase-positive vesicles around the
+        Amoeba contractile vacuole.
+  - subject: v_type_atpase
+    predicate: contributes to
+    object: osmotic_gradient
+    description: Proton pumping by perivacuolar V-ATPase can help generate ion gradients
+      that favor water entry into the contractile-vacuole system.
+    evidence:
+    - reference: DOI:10.1042/BC20070091
+      notes: Nishihara et al. 2008 interpreted V-ATPase-positive vesicles around the
+        Amoeba contractile vacuole as participants in osmotic-gradient generation.
+  - subject: aquaporins
+    predicate: increase
+    object: membrane_water_permeability
+    description: Aquaporins on the contractile vacuole and associated vesicles increase
+      water permeability across those membranes.
+    evidence:
+    - reference: DOI:10.1042/BC20070091
+      notes: Nishihara et al. 2008 localized Amoeba ApAQP to the contractile vacuole
+        membrane and perivacuolar vesicles.
+  - subject: membrane_water_permeability
+    predicate: supports
+    object: vacuole_filling
+    description: High water permeability at contractile-vacuole-system membranes supports
+      contractile-vacuole filling.
+    evidence:
+    - reference: DOI:10.1042/BC20070091
+      notes: Nishihara et al. 2008 proposed that Amoeba ApAQP helps explain high CV
+        membrane water permeability.
+discussions:
+- discussion_id: ground_contractile_vacuole_membrane_components
+  prompt: Resolve exact contractile-vacuolar membrane lipid and aquaporin groundings,
+    and determine whether perivacuolar V-ATPase-positive vesicles warrant a separate
+    record.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#contractile_vacuole_lipid_bilayer
+  - components#aquaporins
+  - causal_graphs#pump_channel_supported_vacuole_filling
+  rationale: The membrane record captures the lipid boundary and aquaporin-mediated
+    water permeability at the exact CV membrane. V-ATPase-positive perivacuolar vesicles
+    are represented only as graph context because the cited Amoeba localization does
+    not make them constituents of GO:0031164.
+  evidence:
+  - reference: DOI:10.1016/j.ejop.2024.126078
+    notes: More et al. 2024 review multiple channels and receptors implicated in contractile-vacuole
+      filling.
+  posed_by: codex
+  posed_date: '2026-09-13'

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/contractile_vacuolar_membrane.yaml
+  slug: contractile_vacuolar_membrane
+session:
+  id: 2026-09-13T172319Z-codex-431bee
+  timestamp: '2026-09-13T17:23:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/816
+  - https://github.com/CultureBotAI/CellStructureMech/issues/817
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/815
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add contractile vacuolar membrane
+  details: Created a GO:0031164 contractile vacuolar membrane record with UniProt SL-0074
+    cross-reference, vacuolar-membrane parentage, contractile-vacuole parthood, lipid bilayer,
+    an aquaporin component, protist scope, DOI-backed evidence, a nonmechanistic
+    membrane-filling graph with perivacuolar V-ATPase context and a component-grounding
+    follow-up discussion.

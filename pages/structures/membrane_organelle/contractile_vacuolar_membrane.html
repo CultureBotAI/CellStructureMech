@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>contractile vacuolar membrane · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>contractile vacuolar membrane</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031164"><code>GO:0031164</code></a> · MEMBRANE_ORGANELLE · MEMBRANE · <span class="status">PROPOSED</span></p>
+<p class="definition">The lipid bilayer surrounding the contractile vacuole. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031164"><code>GO:0031164</code></a>]</small></p>
+<p><strong>Synonyms:</strong> contractile vacuole membrane</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0000331"><code>GO:0000331</code></a> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0074</code> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-contractile_vacuole_lipid_bilayer"><td>contractile-vacuole lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Bounding bilayer that separates the contractile-vacuole lumen from the cytosol and carries water channels involved in vacuole filling.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031164"><code>GO:0031164</code></a> <small>GO:0031164 identifies the contractile vacuolar membrane as the lipid bilayer surrounding the contractile vacuole.</small></li><li><code>uniprot.location:SL-0074</code> <small>UniProt Subcellular Location SL-0074 maps Contractile vacuole membrane to GO:0031164.</small></li></ul></td></tr>
+<tr id="components-aquaporins"><td>contractile-vacuole membrane aquaporins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Water channels that increase contractile-vacuole-system membrane permeability during water filling.<ul class="evidence"><li><a href="https://doi.org/10.1042/BC20070091"><code>DOI:10.1042/BC20070091</code></a> <small>Nishihara et al. 2008 cloned an Amoeba proteus aquaporin and localized it to the contractile vacuole membrane and perivacuolar vesicles.</small></li><li><a href="https://doi.org/10.1016/j.ejop.2024.126078"><code>DOI:10.1016/j.ejop.2024.126078</code></a> <small>More et al. 2024 review channels implicated in contractile-vacuole filling.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2759"><code>NCBITaxon:2759</code></a> Eukaryota — <strong>RARE</strong>: Contractile vacuoles and their surrounding membranes occur patchily in unicellular freshwater and soil eukaryotes rather than across all eukaryotes. [<a href="https://doi.org/10.1016/j.ejop.2024.126078"><code>DOI:10.1016/j.ejop.2024.126078</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5775"><code>NCBITaxon:5775</code></a> <em>Amoeba proteus</em> — Amoeba model in which aquaporin and V-ATPase were localized to the contractile-vacuole membrane and associated vesicles. [<a href="https://doi.org/10.1042/BC20070091"><code>DOI:10.1042/BC20070091</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>contractile-vacuole membrane permeation</strong> — The contractile vacuolar membrane carries aquaporin water channels that increase membrane water permeability during contractile-vacuole filling.<ul class="evidence"><li><a href="https://doi.org/10.1042/BC20070091"><code>DOI:10.1042/BC20070091</code></a> <small>Nishihara et al. 2008 localized aquaporin and V-ATPase to Amoeba contractile-vacuole-system membranes.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-pump_channel_supported_vacuole_filling">Contractile-vacuole aquaporins and perivacuolar V-ATPase support filling <small>(FUNCTION)</small></h3>
+<p>The contractile vacuolar membrane bounds the vacuole and carries aquaporins that support water permeability, while neighboring V-ATPase-positive vesicles support ion-gradient steps in vacuole filling.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>contractile vacuolar membrane</td><td>bounds</td><td>contractile vacuole</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031164"><code>GO:0031164</code></a> <small>GO:0031164 defines the membrane as the lipid bilayer surrounding the contractile vacuole.</small></li></ul></td></tr>
+<tr><td>perivacuolar V-ATPase</td><td>resides in</td><td>perivacuolar V-ATPase-positive vesicles</td><td><ul class="evidence"><li><a href="https://doi.org/10.1042/BC20070091"><code>DOI:10.1042/BC20070091</code></a> <small>Nishihara et al. 2008 detected V-ATPase-positive vesicles around the Amoeba contractile vacuole.</small></li></ul></td></tr>
+<tr><td>perivacuolar V-ATPase</td><td>contributes to</td><td>osmotic gradient toward the vacuole</td><td><ul class="evidence"><li><a href="https://doi.org/10.1042/BC20070091"><code>DOI:10.1042/BC20070091</code></a> <small>Nishihara et al. 2008 interpreted V-ATPase-positive vesicles around the Amoeba contractile vacuole as participants in osmotic-gradient generation.</small></li></ul></td></tr>
+<tr><td>contractile-vacuole membrane aquaporins</td><td>increase</td><td>contractile-vacuole membrane water permeability</td><td><ul class="evidence"><li><a href="https://doi.org/10.1042/BC20070091"><code>DOI:10.1042/BC20070091</code></a> <small>Nishihara et al. 2008 localized Amoeba ApAQP to the contractile vacuole membrane and perivacuolar vesicles.</small></li></ul></td></tr>
+<tr><td>contractile-vacuole membrane water permeability</td><td>supports</td><td>contractile-vacuole filling</td><td><ul class="evidence"><li><a href="https://doi.org/10.1042/BC20070091"><code>DOI:10.1042/BC20070091</code></a> <small>Nishihara et al. 2008 proposed that Amoeba ApAQP helps explain high CV membrane water permeability.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact contractile-vacuolar membrane lipid and aquaporin groundings, and determine whether perivacuolar V-ATPase-positive vesicles warrant a separate record. <small>The membrane record captures the lipid boundary and aquaporin-mediated water permeability at the exact CV membrane. V-ATPase-positive perivacuolar vesicles are represented only as graph context because the cited Amoeba localization does not make them constituents of GO:0031164.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031164"><code>GO:0031164</code></a> <small>Gene Ontology cellular-component term for the contractile vacuolar membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005774"><code>GO:0005774</code></a> <small>Gene Ontology cellular-component parent term for the vacuolar membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0000331"><code>GO:0000331</code></a> <small>Gene Ontology cellular-component term for the containing contractile vacuole.</small></li><li><code>uniprot.location:SL-0074</code> <small>UniProt Subcellular Location entry SL-0074 maps to GO:0031164 and lists contractile vacuolar membrane as an exact synonym.</small></li><li><a href="https://doi.org/10.1242/jcs.115.14.2893"><code>DOI:10.1242/jcs.115.14.2893</code></a> <small>Clarke et al. 2002, Dynamics of the vacuolar H+-ATPase in the contractile vacuole complex and the endosomal pathway of Dictyostelium cells, Journal of Cell Science.</small></li><li><a href="https://doi.org/10.1042/BC20070091"><code>DOI:10.1042/BC20070091</code></a> <small>Nishihara et al. 2008, Presence of aquaporin and V-ATPase on the contractile vacuole of Amoeba proteus, Biology of the Cell.</small></li><li><a href="https://doi.org/10.1016/j.ejop.2024.126078"><code>DOI:10.1016/j.ejop.2024.126078</code></a> <small>More et al. 2024, Contractile vacuoles: a rapidly expanding and occasionally diminishing understanding, European Journal of Protistology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-13T17:21:37Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-13T17:22:46Z</code> codex · EXPANDED_RECORD — Added the UniProt SL contractile-vacuole membrane synonym and xref, vacuolar-membrane parentage, contractile-vacuole parthood, lipid bilayer, V-ATPase and aquaporin components, eukaryotic scope with amoebozoan examples, a membrane-permeation function, GO/UniProt/DOI evidence, a nonmechanistic filling graph, and a component-grounding TODO.</li><li><code>2026-09-13T17:27:36Z</code> codex · REFINED_GRAPH — Retargeted the final water-permeability graph edge to a contractile-vacuole filling process node so the state supports the process rather than the organelle itself.</li><li><code>2026-09-13T17:33:26Z</code> codex · ADDRESSED_PR_REVIEW — Addressed #817 by removing V-ATPase as a direct membrane component, retargeting the V-ATPase graph edge to perivacuolar vesicles, narrowing the canonical example to Amoeba proteus, and updating the component grounding TODO.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/contractile_vacuolar_membrane.yaml"><code>data/structures/membrane_organelle/contractile_vacuolar_membrane.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
