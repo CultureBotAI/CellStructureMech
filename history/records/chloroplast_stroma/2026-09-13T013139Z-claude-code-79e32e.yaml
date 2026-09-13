@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/chloroplast_stroma.yaml
+  slug: chloroplast_stroma
+session:
+  id: 2026-09-13T013139Z-claude-code-79e32e
+  timestamp: '2026-09-13T01:31:39Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/731
+  - https://github.com/CultureBotAI/CellStructureMech/issues/732
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/730
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added chloroplast stroma record
+  details: 'Created an evidence-backed GO:0009570 chloroplast stroma record with UniProt SL-0055
+    and SL-0217 provenance, plastid-stroma parentage, chloroplast parthood, chloroplast nucleoid
+    and plastoglobule relationships, Viridiplantae and Chlamydomonas taxonomic scope, stromal
+    protein-import evidence, a nonmechanistic topology/import graph, a thylakoid-lumen boundary
+    interpretation, rendered pages, and text-map artifacts. Adversarial review on PR #730
+    filed #731 and #732; both were resolved by retargeting the import graph edge to the GO:0045037
+    endpoint and by replacing circular plastoglobule edge support with direct SL-0217 evidence.'

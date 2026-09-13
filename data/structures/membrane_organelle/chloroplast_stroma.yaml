@@ -20,6 +20,13 @@ curation_history:
     and Viridiplantae scope, stromal protein-import evidence, a nonmechanistic topology/import
     graph, and a thylakoid-lumen boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-13T01:29:18Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #731 by retargeting the import graph edge to the GO:0045037 process
+    endpoint, and resolved #732 by replacing circular plastoglobule parthood support
+    with direct UniProt SL-0217 evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: chloroplastic stroma
   synonym_type: EXACT_SYNONYM
@@ -95,6 +102,9 @@ evidence:
   notes: 'Terashima, Specht and Hippler 2011, The chloroplast proteome: a survey from
     the Chlamydomonas reinhardtii perspective with a focus on distinctive features,
     Current Genetics.'
+- reference: uniprot.location:SL-0217
+  notes: UniProt Subcellular Location entry SL-0217 describes the plastoglobule as
+    a lipid-containing structure in the chloroplast stroma.
 - reference: DOI:10.1093/mp/ssp083
   notes: Karcher et al. 2009, The Chlamydomonas Chloroplast HLP Protein Is Required
     for Nucleoid Organization and Genome Maintenance, Molecular Plant.
@@ -105,12 +115,12 @@ causal_graphs:
 - graph_id: chloroplast_stroma_topology_and_import
   title: Chloroplast stroma topology and import
   description: The chloroplast envelope encloses the stroma, stromal protein import
-    routes precursors across the envelope, and chloroplast nucleoids and plastoglobules
-    occupy the stromal compartment.
+    terminates in the stroma after precursor transit across the envelope, and chloroplast
+    nucleoids and plastoglobules occupy the stromal compartment.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures the stromal topology and the endpoint of TOC-TIC
-    import without duplicating thylakoid biogenesis, carbon fixation, plastoglobule
+  scope_notes: The graph captures the stromal topology and the stromal endpoint of
+    protein import without duplicating thylakoid biogenesis, carbon fixation, plastoglobule
     lipid remodeling, or nucleoid maintenance.
   nodes:
   - node_id: chloroplast_stroma
@@ -157,15 +167,18 @@ causal_graphs:
     description: Plastoglobules are chloroplast stromal lipoprotein subcompartments
       coupled to thylakoids.
     evidence:
-    - reference: GO:0010287
-      notes: GO:0010287 identifies plastoglobules, which are curated as chloroplast-stroma
-        parts in this corpus.
-  - subject: chloroplast_envelope
-    predicate: routes precursors toward
-    object: protein_import
-    description: TOC-TIC import machinery in the envelope moves nuclear-encoded precursors
-      toward the chloroplast stroma.
+    - reference: uniprot.location:SL-0217
+      notes: UniProt SL-0217 describes plastoglobules as lipid-containing structures
+        in the chloroplast stroma.
+  - subject: protein_import
+    predicate: terminates in
+    object: chloroplast_stroma
+    description: Protein import into the chloroplast stroma moves nuclear-encoded
+      precursors from the cytosol across the envelope to the stromal destination.
     evidence:
+    - reference: GO:0045037
+      notes: GO:0045037 defines protein import into the chloroplast stroma as transport
+        from the cytosol into the stroma.
     - reference: DOI:10.1016/j.cell.2022.10.030
       notes: Jin et al. 2022 resolved a Chlamydomonas TOC-TIC supercomplex spanning
         both chloroplast envelope membranes.
