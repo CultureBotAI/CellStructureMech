@@ -1,0 +1,283 @@
+identifier: GO:0120121
+label: tripartite attachment complex
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A three-part cytoskeletal structure in kinetoplastid species linking mitochondrial
+  DNA organised in a kinetoplast through the mitochondrial membranes to the basal
+  body.
+definition_source: GO:0120121
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T09:41:13Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T09:41:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added TAC synonymy, cytoskeleton parentage, structural TAC-domain and TAC-protein
+    components, Trypanosoma brucei scope, a kinetoplast-segregation function, core
+    literature evidence, a nonmechanistic basal-body-to-kDNA bridge graph, and a grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-13T09:48:42Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#769: removed the unverified p166 gene_symbols value and narrowed the
+    Trypanosoma brucei canonical example to the directly cited TAC102 study.'
+  llm_assisted: true
+synonyms:
+- synonym_text: TAC
+  synonym_type: RELATED_SYNONYM
+  source: GO:0120121
+parent_structures:
+- GO:0005856
+components:
+- component_id: unilateral_filaments
+  label: unilateral filaments
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Basal-body-proximal filaments that form the cytoplasmic side of the TAC and
+    extend toward the mitochondrial outer membrane.
+  evidence:
+  - reference: DOI:10.1091/mbc.E02-08-0525
+    notes: Ogbadoyi, Robinson and Gull 2003 resolved unilateral filaments as the cytoplasmic
+      arm of the structural link between flagellar basal bodies and the kDNA disk.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral ontology term for the unilateral filament
+    domain of the kinetoplastid TAC was curated.
+- component_id: differentiated_mitochondrial_membrane_regions
+  label: differentiated mitochondrial TAC membrane regions
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Specialized mitochondrial outer- and inner-membrane regions crossed by the
+    TAC as it links cytoplasmic unilateral filaments to the matrix-facing exclusion-zone
+    filaments.
+  evidence:
+  - reference: DOI:10.1091/mbc.E02-08-0525
+    notes: Ogbadoyi, Robinson and Gull 2003 included differentiated mitochondrial
+      membranes in the tripartite ultrastructure that spans the organellar envelope.
+  - reference: DOI:10.1073/pnas.1404854111
+    notes: Schnarwiler et al. 2014 localized TAC40 to the outer mitochondrial membrane
+      part of the TAC.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The TAC-specific differentiated membrane zones are curated as structural
+    domains because no exact cellular-component CURIE was curated for either membrane
+    specialization.
+- component_id: exclusion_zone_filaments
+  label: exclusion-zone filaments
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Mitochondrial-matrix-side filaments that occupy the exclusion zone between
+    the differentiated inner membrane and the kDNA disk.
+  evidence:
+  - reference: DOI:10.1091/mbc.E02-08-0525
+    notes: Ogbadoyi, Robinson and Gull 2003 resolved exclusion-zone filaments as the
+      kDNA-proximal arm of the TAC.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the TAC exclusion-zone filaments
+    was curated.
+- component_id: p166
+  label: p166 TAC protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: T. brucei TAC protein that localizes between mitochondrial DNA and the flagellum
+    and contributes to kDNA segregation.
+  evidence:
+  - reference: DOI:10.1038/sj.emboj.7601956
+    notes: Zhao et al. 2008 identified p166 as a link between the trypanosome mitochondrial
+      DNA network and flagellum.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    accession for kinetoplastid p166 was curated.
+- component_id: tac40
+  label: TAC40 mitochondrial outer-membrane beta-barrel protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TAC40
+  essentiality: UNKNOWN
+  role: Mitochondrial outer-membrane beta-barrel protein positioned in the TAC membrane
+    domain and required for mitochondrial genome inheritance in T. brucei.
+  evidence:
+  - reference: DOI:10.1073/pnas.1404854111
+    notes: Schnarwiler et al. 2014 characterized TAC40 as a TAC outer-mitochondrial-membrane
+      beta-barrel protein.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    accession for kinetoplastid TAC40 was curated.
+- component_id: tac102
+  label: TAC102 mitochondrial genome segregation protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TAC102
+  essentiality: UNKNOWN
+  role: TAC-localized protein in the mitochondrial matrix that is needed for normal
+    TAC biogenesis and kDNA segregation.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1005586
+    notes: Trikin et al. 2016 identified TAC102 as a TAC component of the T. brucei
+      mitochondrial genome segregation machinery.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    accession for kinetoplastid TAC102 was curated.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  presence: COMMON
+  note: The TAC has been imaged between the basal bodies and the kinetoplast in the
+    single mitochondrion of T. brucei.
+  reference: DOI:10.1091/mbc.E02-08-0525
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: Kinetoplastid model in which TAC102 was localized to the TAC and connected
+    to normal TAC biogenesis and kDNA segregation by depletion experiments.
+  reference: DOI:10.1371/journal.ppat.1005586
+functions:
+- function_id: kinetoplast_segregation
+  label: basal-body-linked kinetoplast segregation
+  description: The TAC physically links the kinetoplast DNA disk to the flagellar
+    basal bodies so that basal-body segregation helps position duplicated mitochondrial
+    genomes.
+  evidence:
+  - reference: DOI:10.1091/mbc.E02-08-0525
+    notes: Ogbadoyi, Robinson and Gull 2003 described a trans-membrane structural
+      linkage responsible for mitochondrial genome positioning and segregation by
+      flagellar basal bodies.
+  - reference: DOI:10.1038/sj.emboj.7601956
+    notes: Zhao et al. 2008 linked p166 depletion to kinetoplast missegregation.
+evidence:
+- reference: GO:0120121
+  notes: Gene Ontology cellular-component term for the tripartite attachment complex.
+- reference: DOI:10.1091/mbc.E02-08-0525
+  notes: Ogbadoyi, Robinson and Gull 2003, A high-order trans-membrane structural
+    linkage is responsible for mitochondrial genome positioning and segregation by
+    flagellar basal bodies in trypanosomes, Molecular Biology of the Cell.
+- reference: DOI:10.1038/sj.emboj.7601956
+  notes: Zhao et al. 2008, p166, a link between the trypanosome mitochondrial DNA
+    and flagellum, mediates genome segregation, EMBO Journal.
+- reference: DOI:10.1073/pnas.1404854111
+  notes: Schnarwiler et al. 2014, Trypanosomal TAC40 constitutes a novel subclass
+    of mitochondrial beta-barrel proteins specialized in mitochondrial genome inheritance,
+    PNAS.
+- reference: DOI:10.1371/journal.ppat.1005586
+  notes: Trikin et al. 2016, TAC102 Is a Novel Component of the Mitochondrial Genome
+    Segregation Machinery in Trypanosomes, PLOS Pathogens.
+causal_graphs:
+- graph_id: tac_links_basal_body_to_kdna
+  title: TAC domains bridge basal bodies to the kDNA disk
+  description: The tripartite attachment complex is organized as unilateral filaments,
+    specialized mitochondrial membranes and exclusion-zone filaments that span from
+    the flagellar basal body side of the cell to the kinetoplast DNA disk.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: ciliary_basal_body
+    label: ciliary basal body
+    node_type: STRUCTURE
+    grounding: GO:0036064
+  - node_id: unilateral_filaments
+    label: unilateral filaments
+    node_type: STRUCTURE
+    component_ref: unilateral_filaments
+  - node_id: mitochondrial_tac_membranes
+    label: differentiated mitochondrial TAC membrane regions
+    node_type: STRUCTURE
+    component_ref: differentiated_mitochondrial_membrane_regions
+  - node_id: exclusion_zone_filaments
+    label: exclusion-zone filaments
+    node_type: STRUCTURE
+    component_ref: exclusion_zone_filaments
+  - node_id: kdna_disk
+    label: kinetoplast DNA disk
+    node_type: GENETIC_ELEMENT
+  - node_id: tripartite_attachment_complex
+    label: tripartite attachment complex
+    node_type: STRUCTURE
+    grounding: GO:0120121
+  - node_id: kinetoplast_segregation
+    label: basal-body-linked kinetoplast segregation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: ciliary_basal_body
+    predicate: aligns with
+    object: unilateral_filaments
+    description: The cytoplasmic side of the TAC lies adjacent to the mature basal
+      body and pro-basal body region.
+    evidence:
+    - reference: DOI:10.1091/mbc.E02-08-0525
+      notes: Ogbadoyi, Robinson and Gull 2003 placed unilateral filaments on the basal-body-facing
+        side of the TAC.
+  - subject: unilateral_filaments
+    predicate: connect through
+    object: mitochondrial_tac_membranes
+    description: Unilateral filaments connect to the mitochondrial membrane-spanning
+      region of the TAC.
+    evidence:
+    - reference: DOI:10.1091/mbc.E02-08-0525
+      notes: Ogbadoyi, Robinson and Gull 2003 resolved a tripartite linkage with cytoplasmic
+        filaments, differentiated mitochondrial membranes and matrix-side filaments.
+  - subject: mitochondrial_tac_membranes
+    predicate: connect to
+    object: exclusion_zone_filaments
+    description: The differentiated membrane domain links the cytoplasmic and matrix-facing
+      filament systems of the TAC.
+    evidence:
+    - reference: DOI:10.1091/mbc.E02-08-0525
+      notes: Ogbadoyi, Robinson and Gull 2003 resolved exclusion-zone filaments on
+        the kinetoplast side of the differentiated membrane domain.
+  - subject: exclusion_zone_filaments
+    predicate: link to
+    object: kdna_disk
+    description: Exclusion-zone filaments are positioned between the inner mitochondrial
+      membrane and the kinetoplast DNA disk.
+    evidence:
+    - reference: DOI:10.1091/mbc.E02-08-0525
+      notes: Ogbadoyi, Robinson and Gull 2003 described the exclusion-zone filaments
+        as the TAC region near the kDNA disk.
+  - subject: unilateral_filaments
+    predicate: form
+    object: tripartite_attachment_complex
+    description: The unilateral filaments are one of the three structural domains
+      of the TAC.
+    evidence:
+    - reference: DOI:10.1091/mbc.E02-08-0525
+      notes: Ogbadoyi, Robinson and Gull 2003 defined the tripartite architecture
+        of the basal-body-to-kDNA linkage.
+  - subject: tripartite_attachment_complex
+    predicate: mediates
+    object: kinetoplast_segregation
+    description: The complete TAC couples basal-body movements to positioning and
+      inheritance of the kinetoplast DNA.
+    evidence:
+    - reference: DOI:10.1091/mbc.E02-08-0525
+      notes: Ogbadoyi, Robinson and Gull 2003 connected the trans-membrane linkage
+        to basal-body-driven mitochondrial genome segregation.
+    - reference: DOI:10.1371/journal.ppat.1005586
+      notes: Trikin et al. 2016 characterized TAC102 as a TAC component in the mitochondrial
+        genome segregation machinery.
+discussions:
+- discussion_id: ground_tac_substructures_and_proteins
+  prompt: Resolve exact source-neutral groundings for TAC structural domains and protein
+    families.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#unilateral_filaments
+  - components#differentiated_mitochondrial_membrane_regions
+  - components#exclusion_zone_filaments
+  - components#p166
+  - components#tac40
+  - components#tac102
+  rationale: The first TAC record keeps the ultrastructural TAC domains and T. brucei
+    TAC proteins label-only to avoid assigning broad or partial protein-family accessions
+    as exact groundings.
+  posed_by: codex
+  posed_date: '2026-09-13'

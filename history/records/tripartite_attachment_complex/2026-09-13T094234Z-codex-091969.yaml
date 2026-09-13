@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+  slug: tripartite_attachment_complex
+session:
+  id: 2026-09-13T094234Z-codex-091969
+  timestamp: '2026-09-13T09:42:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/769
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/768
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added tripartite attachment complex record
+  details: Curated a new GO:0120121 tripartite attachment complex record with structural TAC-domain
+    and TAC-protein components, Trypanosoma brucei scope, a basal-body-linked kinetoplast
+    segregation function, a nonmechanistic TAC bridge graph, and a grounding TODO for TAC
+    substructures and protein families.
