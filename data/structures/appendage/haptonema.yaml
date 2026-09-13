@@ -21,6 +21,13 @@ curation_history:
     functions, haptonema DOI and PMID evidence, a nonmechanistic haptonemal microtubule
     function graph, and a microtubule-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-13T10:48:57Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #774 review issue #775 by changing the Haptophyta taxonomic-distribution
+    row from COMMON to VARIABLE and citing Andersen 2004 for haptophyte lineages with
+    secondary haptonema loss.'
+  llm_assisted: true
 components:
 - component_id: haptonemal_singlet_microtubules
   label: haptonemal singlet microtubules
@@ -39,10 +46,11 @@ components:
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2830
   taxon_label: Haptophyta
-  presence: COMMON
-  note: The haptonema is a microtubule-based motile organelle described as unique
-    to haptophyte algae.
-  reference: DOI:10.1242/bio.036590
+  presence: VARIABLE
+  note: The haptonema is haptophyte-specific, but haptophyte algae include lineages
+    that have secondarily lost the haptonema; this row therefore records patchy presence
+    within the clade.
+  reference: DOI:10.3732/ajb.91.10.1508
 canonical_examples:
 - taxon_id: NCBITaxon:35142
   taxon_label: Haptolina hirta
@@ -82,6 +90,9 @@ evidence:
 - reference: DOI:10.2216/i0031-8884-34-3-193.1
   notes: Kawachi and Inouye 1995, Functional roles of the haptonema and the spine
     scales in the feeding process of Chrysochromulina spinifera, Phycologia.
+- reference: DOI:10.3732/ajb.91.10.1508
+  notes: Andersen 2004, Biology and systematics of heterokont and haptophyte algae,
+    American Journal of Botany.
 causal_graphs:
 - graph_id: haptonemal_microtubules_drive_coiling_and_capture
   title: Haptonemal microtubules support coiling and particle capture
