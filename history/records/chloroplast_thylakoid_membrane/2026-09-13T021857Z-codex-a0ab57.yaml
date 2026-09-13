@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml
+  slug: chloroplast_thylakoid_membrane
+session:
+  id: 2026-09-13T021857Z-codex-a0ab57
+  timestamp: '2026-09-13T02:18:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/738
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/737
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add chloroplast thylakoid membrane record
+  details: 'Added the GO:0009535 chloroplast thylakoid membrane record with GO:0042651 and
+    GO:0055035 parentage, chloroplast thylakoid parthood, UniProt SL-0058 provenance, a reviewed-label-only
+    chloroplast thylakoid lipid bilayer component, Viridiplantae and Chlamydomonas taxonomic
+    scope, a photosynthetic light-reaction function, and a nonmechanistic lumen-boundary topology
+    graph, then resolved PR #737 review issue #738 by replacing broad plastid-origin evidence
+    with Perez-Boerema et al. 2024 thylakoid structural-diversity evidence on the Viridiplantae
+    row and function.'

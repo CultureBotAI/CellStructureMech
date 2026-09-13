@@ -19,6 +19,13 @@ curation_history:
     component, Viridiplantae and Chlamydomonas scope, a light-reaction function, a
     nonmechanistic topology graph, and resolved exact-child and lipid-grounding interpretations.
   llm_assisted: true
+- timestamp: '2026-09-13T02:16:30Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #738 by replacing the Viridiplantae row''s broad plastid-origin
+    support with Perez-Boerema et al. 2024 thylakoid structural-diversity evidence
+    and by adding that DOI to record-level and light-reaction function evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0042651
 - GO:0055035
@@ -57,7 +64,7 @@ taxonomic_distribution:
   presence: COMMON
   note: Green algae and land plants with chloroplasts contain chloroplast thylakoid
     membranes that support oxygenic photosynthetic light reactions.
-  reference: DOI:10.1098/rstb.2009.0103
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
   presence: COMMON
@@ -84,6 +91,9 @@ functions:
   - reference: DOI:10.1007/s00294-011-0339-1
     notes: Terashima, Specht and Hippler 2011 review Chlamydomonas chloroplast thylakoid
       photosynthetic complexes.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review thylakoid light reactions and electron
+      transport as processes organized by thylakoid membranes.
 evidence:
 - reference: GO:0009535
   notes: Gene Ontology cellular-component term for chloroplast thylakoid membrane.
@@ -108,6 +118,9 @@ evidence:
 - reference: uniprot.location:SL-0057
   notes: UniProt Subcellular Location SL-0057 maps Chloroplast thylakoid lumen to
     GO:0009543 and places it under chloroplast thylakoid.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
 - reference: DOI:10.1098/rstb.2009.0103
   notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
     Philosophical Transactions of the Royal Society B.
