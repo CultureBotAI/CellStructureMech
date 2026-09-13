@@ -21,6 +21,12 @@ curation_history:
     light-harvesting function, GO/ChEBI/DOI/PMID evidence, a nonmechanistic excitation-transfer
     graph, and a CsmA-family grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-13T07:58:10Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#764: corrected the Pedersen et al. 2010 evidence note so it describes
+    the baseplate model paper rather than calling it a review.'
+  llm_assisted: true
 synonyms:
 - synonym_text: CsmA baseplate antenna
   synonym_type: EXACT_SYNONYM
@@ -55,8 +61,8 @@ components:
     notes: Nielsen et al. 2016 resolved CsmA as the protein building block of the
       in situ baseplate antenna in Chlorobaculum tepidum chlorosomes.
   - reference: PMID:20077007
-    notes: Pedersen et al. 2010 reviewed the CsmA protein-pigment model for the baseplate
-      complex of green-bacterial chlorosomes.
+    notes: Pedersen et al. 2010 modeled the protein-pigment baseplate complex of green-bacterial
+      chlorosomes.
   protein_examples:
   - uniprot_id: UniProtKB:P0A314
     protein_label: Bacteriochlorophyll c-binding protein
