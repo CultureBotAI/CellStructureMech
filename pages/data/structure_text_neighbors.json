@@ -1826,14 +1826,45 @@
           "cosine_similarity": 0.8056485
         },
         {
+          "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
+          "label": "LH2 peripheral light-harvesting antenna complex",
+          "cosine_similarity": 0.74712631
+        },
+        {
           "identifier": "GO:0030075",
           "label": "bacterial thylakoid",
           "cosine_similarity": 0.73855973
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
+      "label": "LH2 peripheral light-harvesting antenna complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030094",
+          "label": "plasma membrane-derived photosystem I",
+          "cosine_similarity": 0.7504044
+        },
+        {
+          "identifier": "GO:0009512",
+          "label": "cytochrome b6f complex",
+          "cosine_similarity": 0.74712631
+        },
+        {
+          "identifier": "GO:0030096",
+          "label": "plasma membrane-derived thylakoid photosystem II",
+          "cosine_similarity": 0.73677052
         },
         {
           "identifier": "GO:0030089",
           "label": "phycobilisome",
-          "cosine_similarity": 0.73516045
+          "cosine_similarity": 0.69299877
+        },
+        {
+          "identifier": "GO:0042717",
+          "label": "plasma membrane-derived chromatophore membrane",
+          "cosine_similarity": 0.67466519
         }
       ]
     },
@@ -1862,9 +1893,9 @@
           "cosine_similarity": 0.70437067
         },
         {
-          "identifier": "GO:0046858",
-          "label": "chlorosome",
-          "cosine_similarity": 0.67619713
+          "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
+          "label": "LH2 peripheral light-harvesting antenna complex",
+          "cosine_similarity": 0.69299877
         }
       ]
     },

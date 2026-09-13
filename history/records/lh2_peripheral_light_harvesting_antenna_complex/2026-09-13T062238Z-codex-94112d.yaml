@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+  slug: lh2_peripheral_light_harvesting_antenna_complex
+session:
+  id: 2026-09-13T062238Z-codex-94112d
+  timestamp: '2026-09-13T06:22:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/758
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/757
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the LH2 peripheral light-harvesting antenna complex record
+  details: 'Added a minted ENERGY_COMPLEX record for the LH2 peripheral light-harvesting antenna
+    complex, with GO:0030076 parentage, GO:0042717 chromatophore-membrane parthood, purple-bacterial
+    distribution, a Cereibacter sphaeroides canonical example, DOI/GO/UniProt evidence, a
+    nonmechanistic LH2 excitation-transfer graph, and an open subunit-grounding TODO. Adversarial
+    review found the light-harvesting function was left ungrounded; #758 was resolved by grounding
+    the function and graph endpoint to GO:0009765.'
