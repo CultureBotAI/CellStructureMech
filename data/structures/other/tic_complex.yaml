@@ -1,0 +1,154 @@
+identifier: GO:0031897
+label: Tic complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A chloroplast inner-envelope protein translocon complex that forms the
+  inner-membrane step of nuclear-encoded preprotein import into the chloroplast.
+definition_source: GO:0031897
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T04:27:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T04:28:29Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added TIC synonymy, protein-complex parentage, chloroplast inner-membrane
+    parthood, Chlamydomonas scope, stromal protein-import function, GO and Jin 2022
+    evidence, a nonmechanistic Tic/Toc import graph, and a Tic-subunit boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-13T04:36:29Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #750 by narrowing the Tic subunit-boundary TODO to bona fide
+    inner-envelope Tic constituents and excluding broader associated chloroplast import
+    factors from automatic Tic component rows.'
+  llm_assisted: true
+synonyms:
+- synonym_text: TIC complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.cell.2022.10.030
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0009706
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas reinhardtii has a Tic complex in the chloroplast inner envelope
+    that couples with the outer envelope Toc complex in a resolved TOC-TIC import
+    supercomplex.
+  reference: DOI:10.1016/j.cell.2022.10.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model in which a chloroplast TOC-TIC supercomplex spanning both
+    envelope membranes was resolved structurally.
+  reference: DOI:10.1016/j.cell.2022.10.030
+functions:
+- function_id: protein_import_into_chloroplast_stroma
+  label: protein import into chloroplast stroma
+  grounding: GO:0045037
+  description: The Tic complex contributes the inner-envelope step of nuclear-encoded
+    preprotein import toward the chloroplast stroma.
+  evidence:
+  - reference: GO:0045037
+    notes: GO:0045037 defines protein import into the chloroplast stroma.
+  - reference: DOI:10.1016/j.cell.2022.10.030
+    notes: Jin et al. 2022 resolved the Tic portion of a Chlamydomonas TOC-TIC supercomplex
+      spanning the chloroplast envelope.
+evidence:
+- reference: GO:0031897
+  notes: Gene Ontology cellular-component term for the Tic complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component term for a protein-containing complex.
+- reference: GO:0009706
+  notes: Gene Ontology cellular-component term for the chloroplast inner membrane
+    that carries the Tic complex.
+- reference: GO:0009941
+  notes: Gene Ontology cellular-component term for the chloroplast envelope containing
+    the Tic-bearing inner membrane.
+- reference: GO:0010006
+  notes: Gene Ontology cellular-component term for the Toc complex, the outer-envelope
+    partner of Tic in stromal preprotein import.
+- reference: GO:0045037
+  notes: Gene Ontology biological-process term for protein import into the chloroplast
+    stroma.
+- reference: DOI:10.1016/j.cell.2022.10.030
+  notes: Jin et al. 2022, Structure of a TOC-TIC supercomplex spanning two chloroplast
+    envelope membranes, Cell.
+causal_graphs:
+- graph_id: chlamydomonas_tic_inner_import
+  title: Tic contributes the inner-envelope import step
+  description: In Chlamydomonas, the Tic complex resides in the chloroplast inner
+    membrane and couples with the outer-envelope Toc complex during stromal preprotein
+    import.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph states Tic topology and its observed coupling to Toc without
+    resolving individual Tic subunits of the chloroplast import apparatus.
+  nodes:
+  - node_id: tic_complex
+    label: Tic complex
+    node_type: STRUCTURE
+    grounding: GO:0031897
+  - node_id: chloroplast_inner_membrane
+    label: chloroplast inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0009706
+  - node_id: toc_complex
+    label: Toc complex
+    node_type: STRUCTURE
+    grounding: GO:0010006
+  - node_id: protein_import_into_chloroplast_stroma
+    label: protein import into chloroplast stroma
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0045037
+  edges:
+  - subject: tic_complex
+    predicate: is part of
+    object: chloroplast_inner_membrane
+    description: Tic is the translocon of the inner chloroplast envelope.
+    evidence:
+    - reference: GO:0031897
+      notes: GO:0031897 defines the Tic complex as the translocon of the inner chloroplast
+        envelope.
+  - subject: tic_complex
+    predicate: couples with
+    object: toc_complex
+    description: Tic and Toc form the inner and outer envelope portions of a Chlamydomonas
+      TOC-TIC import supercomplex.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2022.10.030
+      notes: Jin et al. 2022 resolved a Chlamydomonas TOC-TIC supercomplex spanning
+        the two chloroplast envelope membranes.
+  - subject: tic_complex
+    predicate: routes precursors toward
+    object: protein_import_into_chloroplast_stroma
+    description: Tic contributes the inner-membrane step for chloroplast stromal preprotein
+      import.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2022.10.030
+      notes: Jin et al. 2022 resolved an inner-envelope Tic portion in a chloroplast
+        protein-import supercomplex.
+discussions:
+- discussion_id: tic_subunit_boundaries
+  prompt: Resolve exact source-neutral component groundings for bona fide constituent
+    subfamilies of the inner-envelope Tic translocon before adding subunit-level component
+    rows to this source-neutral Tic record.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#chlamydomonas_tic_inner_import
+  rationale: GO exactly grounds the Tic complex itself, but this record does not assert
+    component-family CURIEs for individual inner-envelope Tic constituents until those
+    families have been curated separately from Toc, Ycf2/FtsHi ATPase, stromal import
+    motors, and other associated chloroplast import factors.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2022.10.030
+    notes: Jin et al. 2022 resolved a Chlamydomonas TOC-TIC import supercomplex.
+  posed_by: codex
+  posed_date: '2026-09-13'

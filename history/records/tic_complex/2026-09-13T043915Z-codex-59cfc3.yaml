@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/tic_complex.yaml
+  slug: tic_complex
+session:
+  id: 2026-09-13T043915Z-codex-59cfc3
+  timestamp: '2026-09-13T04:39:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/750
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/749
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the Tic complex record
+  details: Added an evidence-backed GO:0031897 Tic complex CellStructureRecord with TIC synonymy,
+    protein-complex parentage, chloroplast inner-membrane parthood, Chlamydomonas scope, stromal
+    protein-import function, a nonmechanistic Tic/Toc import graph, and a Tic-subunit boundary
+    TODO. Addressed adversarial review by narrowing the subunit-boundary TODO to bona fide
+    inner-envelope Tic constituents and excluding broader associated chloroplast import factors
+    from automatic Tic component rows, then regenerated embeddings, pages, and README statistics.
