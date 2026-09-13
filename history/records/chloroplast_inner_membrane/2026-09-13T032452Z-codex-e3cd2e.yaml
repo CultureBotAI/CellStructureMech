@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/chloroplast_inner_membrane.yaml
+  slug: chloroplast_inner_membrane
+session:
+  id: 2026-09-13T032452Z-codex-e3cd2e
+  timestamp: '2026-09-13T03:24:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/744
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/743
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the chloroplast inner membrane record
+  details: Added an evidence-backed GO:0009706 chloroplast inner membrane CellStructureRecord
+    with the UniProt SL-0051 xref, plastid-inner and chloroplast-membrane parentage, chloroplast-envelope
+    parthood, Viridiplantae and Chlamydomonas scope, a reviewed-label-only lipid-bilayer component,
+    a boundary topology graph, and an explicit curation TODO for the lipid constituent grounding.
+    Addressed adversarial review by removing overbroad SL-0051 evidence from the chloroplast-envelope
+    parthood edge, then regenerated embeddings, pages, and README statistics.
