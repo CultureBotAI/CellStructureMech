@@ -1,0 +1,216 @@
+identifier: GO:0009534
+label: chloroplast thylakoid
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: OTHER
+definition: Sac-like membranous structures in a chloroplast combined into stacks,
+  or grana, and present singly in the stroma as stroma thylakoids or frets that interconnect
+  grana.
+definition_source: GO:0009534
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T01:44:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T01:45:30Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added plastid-thylakoid parentage, chloroplast parthood, chloroplast thylakoid
+    membrane and lumen parts, the UniProt SL-0056 xref, Chlamydomonas and Viridiplantae
+    scope, photosynthesis evidence, a nonmechanistic thylakoid-topology graph, and
+    resolved membrane/lumen and non-organelle boundary interpretations.
+  llm_assisted: true
+- timestamp: '2026-09-13T01:46:03Z'
+  curator: codex
+  action: NARROWED_FUNCTION
+  changes: Narrowed the thylakoid function and topology node from broad photosynthesis
+    to photosynthetic electron transport chain.
+  llm_assisted: true
+parent_structures:
+- GO:0009579
+part_of:
+- GO:0009507
+has_part:
+- GO:0009535
+- GO:0009543
+xrefs:
+- uniprot.location:SL-0056
+components:
+- component_id: chloroplast_thylakoid_membrane
+  label: chloroplast thylakoid membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0009535
+  essentiality: ESSENTIAL
+  role: Pigmented lipid bilayer that bounds the chloroplast thylakoid lumen and houses
+    the light-reaction machinery.
+  evidence:
+  - reference: GO:0009535
+    notes: GO:0009535 defines the chloroplast thylakoid membrane as the pigmented
+      membrane of a chloroplast thylakoid.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Photosynthetic green algae and land plants contain chloroplasts with internal
+    thylakoids that support oxygenic photosynthesis.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: The Chlamydomonas chloroplast contains a native thylakoid network with stacked
+    and unstacked membrane regions.
+  reference: DOI:10.7554/eLife.04889
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Unicellular green alga whose native chloroplast thylakoids were resolved by
+    cryo-focused ion beam milling and in situ cryo-electron tomography.
+  reference: DOI:10.7554/eLife.04889
+functions:
+- function_id: photosynthetic_electron_transport
+  label: photosynthetic electron transport chain
+  grounding: GO:0009767
+  description: Chloroplast thylakoid membranes house the light-reaction complexes
+    that drive electron transport and build a trans-thylakoid proton gradient.
+  evidence:
+  - reference: GO:0009767
+    notes: GO:0009767 defines the photosynthetic electron transport chain.
+  - reference: DOI:10.1007/s00294-011-0339-1
+    notes: Terashima, Specht and Hippler 2011 review Chlamydomonas chloroplast thylakoid
+      photosynthetic complexes.
+evidence:
+- reference: GO:0009534
+  notes: Gene Ontology cellular-component term for chloroplast thylakoid.
+- reference: GO:0009579
+  notes: Gene Ontology cellular-component term for the broader thylakoid class.
+- reference: GO:0009507
+  notes: Gene Ontology cellular-component term for chloroplast.
+- reference: GO:0009570
+  notes: Gene Ontology cellular-component term for chloroplast stroma, the matrix
+    compartment surrounding chloroplast thylakoids.
+- reference: GO:0009535
+  notes: Gene Ontology cellular-component term for the chloroplast thylakoid membrane.
+- reference: GO:0009543
+  notes: Gene Ontology cellular-component term for the chloroplast thylakoid lumen.
+- reference: GO:0009767
+  notes: Gene Ontology biological-process term for photosynthetic electron transport
+    chain.
+- reference: uniprot.location:SL-0056
+  notes: UniProt Subcellular Location SL-0056 maps Chloroplast thylakoid to GO:0009534
+    and places it under the chloroplast location.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1007/s00294-011-0339-1
+  notes: 'Terashima, Specht and Hippler 2011, The chloroplast proteome: a survey from
+    the Chlamydomonas reinhardtii perspective with a focus on distinctive features,
+    Current Genetics.'
+- reference: DOI:10.7554/eLife.04889
+  notes: Engel et al. 2015, Native architecture of the Chlamydomonas chloroplast revealed
+    by in situ cryo-electron tomography, eLife.
+causal_graphs:
+- graph_id: chloroplast_thylakoid_topology
+  title: Chloroplast thylakoid topology
+  description: The chloroplast thylakoid is an internal chloroplast compartment embedded
+    in the stroma and bounded by a pigmented membrane that encloses the thylakoid
+    lumen.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures whole-thylakoid topology without asserting every
+    granal subregion, photosystem, soluble carrier, or lumenal photosynthetic proton-transport
+    step.
+  nodes:
+  - node_id: chloroplast_thylakoid
+    label: chloroplast thylakoid
+    node_type: STRUCTURE
+    grounding: GO:0009534
+  - node_id: chloroplast_thylakoid_membrane
+    label: chloroplast thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0009535
+    component_ref: chloroplast_thylakoid_membrane
+  - node_id: chloroplast_thylakoid_lumen
+    label: chloroplast thylakoid lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009543
+  - node_id: chloroplast_stroma
+    label: chloroplast stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009570
+  - node_id: photosynthetic_electron_transport
+    label: photosynthetic electron transport chain
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009767
+  edges:
+  - subject: chloroplast_thylakoid
+    predicate: is embedded in
+    object: chloroplast_stroma
+    description: Chloroplast thylakoid cisternae are embedded in the chloroplast stroma.
+    evidence:
+    - reference: GO:0009507
+      notes: GO:0009507 defines chloroplasts as chlorophyll-containing plastids with
+        thylakoids embedded in a stroma.
+  - subject: chloroplast_thylakoid_membrane
+    predicate: bounds
+    object: chloroplast_thylakoid
+    description: The chloroplast thylakoid membrane bounds each chloroplast thylakoid
+      cisterna.
+    evidence:
+    - reference: GO:0009535
+      notes: GO:0009535 defines the chloroplast thylakoid membrane as the pigmented
+        membrane of a chloroplast thylakoid.
+  - subject: chloroplast_thylakoid_membrane
+    predicate: encloses
+    object: chloroplast_thylakoid_lumen
+    description: The chloroplast thylakoid membrane encloses the lumenal compartment
+      of the thylakoid.
+    evidence:
+    - reference: GO:0009543
+      notes: GO:0009543 identifies the chloroplast thylakoid lumen enclosed by thylakoid
+        membranes.
+    - reference: uniprot.location:SL-0056
+      notes: UniProt SL-0056 describes chloroplast thylakoids as an internal interconnected
+        membrane system with a lumenal compartment.
+  - subject: chloroplast_thylakoid
+    predicate: supports
+    object: photosynthetic_electron_transport
+    description: Chloroplast thylakoids carry the membrane light-reaction machinery
+      of green algae and plants.
+    evidence:
+    - reference: uniprot.location:SL-0056
+      notes: UniProt SL-0056 describes chloroplast thylakoids as carrying out the
+        light reactions of photosynthesis.
+discussions:
+- discussion_id: whole_thylakoid_not_membrane_or_lumen
+  prompt: Keep the chloroplast thylakoid distinct from its bounding membrane and its
+    lumen.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0009534 denotes the whole chloroplast thylakoid, while GO:0009535
+    denotes the pigmented bounding membrane and GO:0009543 denotes the chloroplast
+    thylakoid lumen.
+  resolution_note: Curated the whole thylakoid as the structure record and represented
+    the membrane and lumen as parts in topology.
+  evidence:
+  - reference: GO:0009534
+    notes: GO:0009534 identifies the whole chloroplast thylakoid.
+  - reference: GO:0009535
+    notes: GO:0009535 separately identifies the chloroplast thylakoid membrane.
+  - reference: GO:0009543
+    notes: GO:0009543 separately identifies the chloroplast thylakoid lumen.
+- discussion_id: thylakoid_not_organelle_kind
+  prompt: Represent chloroplast thylakoid as a membranous chloroplast substructure
+    without asserting that it is an organelle.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0009579 describes thylakoids as membranous cellular structures and
+    explicitly comments that they are not considered organelles; StructureKindEnum
+    has no non-organelle membrane-bounded-compartment value.
+  resolution_note: Kept the filesystem category under MEMBRANE_ORGANELLE with other
+    lipid-bounded internal compartments, but set structure_kind to OTHER.
+  evidence:
+  - reference: GO:0009579
+    notes: GO:0009579 defines thylakoid and scopes thylakoids away from the organelle
+      class.
