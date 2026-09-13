@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/esterosome_lumen.yaml
+  slug: esterosome_lumen
+session:
+  id: 2026-09-13T142415Z-codex-8fe3f8
+  timestamp: '2026-09-13T14:24:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - distribution
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added GO-grounded esterosome lumen record
+  details: Added a GO:0034467 esterosome lumen record for the internal esterosome compartment
+    enclosed by the esterosome membrane. The record captures a UniProt SL exact synonym and
+    xref, organelle-lumen parentage, esterosome parthood, Dictyostelium discoideum scope and
+    canonical example curation, an esterosome-crystal-storage function, GO/UniProt/DOI evidence,
+    a nonmechanistic lumen-topology graph, and a resolved interpretation keeping the esterosome
+    membrane as the bounding structure rather than a lumen component.
