@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_outer_membrane.yaml
+  slug: mitochondrial_outer_membrane
+session:
+  id: 2026-09-13T235222Z-claude-code-aee340
+  timestamp: '2026-09-13T23:52:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add a mitochondrial outer membrane record
+  details: Created data/structures/membrane_organelle/mitochondrial_outer_membrane.yaml for
+    GO:0005741. The record uses GO exact synonyms, is-a links to organelle outer membrane
+    and mitochondrial membrane, parthood within the mitochondrial envelope, TOM complex containment,
+    a reviewed-label-only mitochondrial outer lipid bilayer component with an open grounding
+    TODO, Eukaryota and Saccharomyces cerevisiae scope, a Saccharomyces canonical example,
+    protein-import function evidence, GO and DOI record evidence, and a nonmechanistic topology
+    graph for outer-envelope orientation, intermembrane-space boundary, TOM localization,
+    and protein-import entry.
