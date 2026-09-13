@@ -1,0 +1,159 @@
+identifier: GO:0042646
+label: plastid nucleoid
+structure_category: NUCLEOID
+structure_kind: SUBCELLULAR_REGION
+definition: A region of a plastid to which the DNA is confined.
+definition_source: GO:0042646
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T22:04:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T22:05:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nucleoid parentage, plastid-stroma parthood, the UniProt SL-0140
+    exact synonym and xref, a reviewed-label-only plastid DNA component, Viridiplantae
+    and Chlamydomonas scope, plastid genome organization, a nonmechanistic DNA-packaging
+    topology graph, and a component-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0009295
+part_of:
+- GO:0009532
+synonyms:
+- synonym_text: Plastidic nucleoid
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0140
+xrefs:
+- uniprot.location:SL-0140
+components:
+- component_id: plastid_dna
+  label: plastid DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Plastid genome DNA compacted with nucleoid-associated proteins into a non-membrane-bounded
+    plastid-stromal nucleoid.
+  evidence:
+  - reference: GO:0042646
+    notes: GO:0042646 identifies the plastid nucleoid as the plastid region to which
+      DNA is confined.
+  - reference: uniprot.location:SL-0140
+    notes: UniProt SL-0140 defines the plastid nucleoid as a chromatin-dense, non-membrane-bounded
+      plastidic pseudocompartment.
+  - reference: DOI:10.1093/gbe/evv233
+    notes: Kobayashi et al. 2015 review chloroplast nucleoids as DNA-protein complexes
+      that package plastid DNA in green plant plastids.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Plastid DNA is an organellar genome molecule rather than a source-neutral
+    sequence-feature class with one exact SO accession.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Green algae and land plants carry plastid genomes packaged into stromal nucleoids
+    in their plastids.
+  reference: DOI:10.1093/gbe/evv233
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: The Chlamydomonas reinhardtii chloroplast has HLP-containing nucleoids that
+    package and organize its chloroplast DNA.
+  reference: DOI:10.1093/mp/ssp083
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model in which HLP knockdown connected a chloroplast-targeted
+    HU-like protein to plastid DNA nucleoid organization and genome maintenance.
+  reference: DOI:10.1093/mp/ssp083
+functions:
+- function_id: plastid_genome_organization
+  label: plastid genome organization
+  description: The plastid nucleoid confines, compacts and organizes plastid genome
+    DNA within the plastid stroma.
+  evidence:
+  - reference: GO:0042646
+    notes: GO defines the plastid nucleoid as the plastid region to which DNA is confined.
+  - reference: DOI:10.1093/gbe/evv233
+    notes: Kobayashi et al. 2015 review plastid DNA packaging in chloroplast nucleoids
+      and the evolution of nucleoid organization in green plants.
+evidence:
+- reference: GO:0042646
+  notes: Gene Ontology cellular-component term for plastid nucleoid.
+- reference: GO:0009295
+  notes: Gene Ontology cellular-component term for nucleoid.
+- reference: GO:0009532
+  notes: Gene Ontology cellular-component term for plastid stroma, the matrix space
+    that contains plastid nucleoids.
+- reference: uniprot.location:SL-0140
+  notes: UniProt Subcellular Location entry SL-0140 maps Plastid nucleoid to GO:0042646
+    and places it under Plastid stroma.
+- reference: DOI:10.1093/gbe/evv233
+  notes: Kobayashi et al. 2015, Eukaryotic Components Remodeled Chloroplast Nucleoid
+    Organization during the Green Plant Evolution, Genome Biology and Evolution.
+- reference: DOI:10.1093/mp/ssp083
+  notes: Karcher et al. 2009, The Chlamydomonas Chloroplast HLP Protein Is Required
+    for Nucleoid Organization and Genome Maintenance, Molecular Plant.
+causal_graphs:
+- graph_id: plastid_nucleoid_topology
+  title: Plastid nucleoids package plastid DNA in the stroma
+  description: Plastid genome DNA is packaged into non-membrane-bounded nucleoids
+    in the plastid stroma.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures generic plastid DNA containment without asserting
+    chloroplast-specific nucleoid-associated proteins or lineage-specific plastid-genome
+    organization factors.
+  nodes:
+  - node_id: plastid_stroma
+    label: plastid stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009532
+  - node_id: plastid_dna
+    label: plastid DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: plastid_dna
+  - node_id: plastid_nucleoid
+    label: plastid nucleoid
+    node_type: STRUCTURE
+    grounding: GO:0042646
+  edges:
+  - subject: plastid_stroma
+    predicate: contains
+    object: plastid_nucleoid
+    description: The plastid nucleoid is a non-membrane-bounded pseudocompartment
+      within the plastid stroma.
+    evidence:
+    - reference: uniprot.location:SL-0140
+      notes: UniProt SL-0140 places Plastid nucleoid under the Plastid stroma subcellular
+        location.
+  - subject: plastid_dna
+    predicate: is packaged in
+    object: plastid_nucleoid
+    description: Plastid genome DNA is confined within plastid nucleoids.
+    evidence:
+    - reference: GO:0042646
+      notes: GO:0042646 defines the plastid nucleoid as the plastid region to which
+        DNA is confined.
+discussions:
+- discussion_id: generic_plastid_nucleoid_proteins
+  prompt: Keep plastid nucleoid-associated proteins out of the generic record until
+    an exact, source-neutral component family is curated.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#plastid_dna
+  rationale: Plastid nucleoids are DNA-protein structures, but specific nucleoid-associated
+    protein complements vary across plastid lineages and the Chlamydomonas HLP example
+    already belongs on the exact chloroplast nucleoid child record. This generic plastid
+    nucleoid record therefore curates plastid DNA and records the protein boundary
+    as follow-up rather than guessing a broad InterPro, Pfam, or NCBIfam accession.
+  evidence:
+  - reference: GO:0042646
+  - reference: DOI:10.1093/gbe/evv233
+  - reference: DOI:10.1093/mp/ssp083
+  posed_by: codex
+  posed_date: '2026-09-13'

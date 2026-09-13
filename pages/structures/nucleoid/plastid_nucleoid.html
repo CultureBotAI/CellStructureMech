@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>plastid nucleoid · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>plastid nucleoid</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0042646"><code>GO:0042646</code></a> · NUCLEOID · SUBCELLULAR_REGION · <span class="status">PROPOSED</span></p>
+<p class="definition">A region of a plastid to which the DNA is confined. <small>[<a href="http://purl.obolibrary.org/obo/GO_0042646"><code>GO:0042646</code></a>]</small></p>
+<p><strong>Synonyms:</strong> Plastidic nucleoid</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0009532"><code>GO:0009532</code></a> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0140</code> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-plastid_dna"><td>plastid DNA</td><td>DNA</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Plastid genome DNA compacted with nucleoid-associated proteins into a non-membrane-bounded plastid-stromal nucleoid.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042646"><code>GO:0042646</code></a> <small>GO:0042646 identifies the plastid nucleoid as the plastid region to which DNA is confined.</small></li><li><code>uniprot.location:SL-0140</code> <small>UniProt SL-0140 defines the plastid nucleoid as a chromatin-dense, non-membrane-bounded plastidic pseudocompartment.</small></li><li><a href="https://doi.org/10.1093/gbe/evv233"><code>DOI:10.1093/gbe/evv233</code></a> <small>Kobayashi et al. 2015 review chloroplast nucleoids as DNA-protein complexes that package plastid DNA in green plant plastids.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_33090"><code>NCBITaxon:33090</code></a> Viridiplantae — <strong>COMMON</strong>: Green algae and land plants carry plastid genomes packaged into stromal nucleoids in their plastids. [<a href="https://doi.org/10.1093/gbe/evv233"><code>DOI:10.1093/gbe/evv233</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_3055"><code>NCBITaxon:3055</code></a> Chlamydomonas reinhardtii — <strong>COMMON</strong>: The Chlamydomonas reinhardtii chloroplast has HLP-containing nucleoids that package and organize its chloroplast DNA. [<a href="https://doi.org/10.1093/mp/ssp083"><code>DOI:10.1093/mp/ssp083</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_3055"><code>NCBITaxon:3055</code></a> <em>Chlamydomonas reinhardtii</em> — Green-algal model in which HLP knockdown connected a chloroplast-targeted HU-like protein to plastid DNA nucleoid organization and genome maintenance. [<a href="https://doi.org/10.1093/mp/ssp083"><code>DOI:10.1093/mp/ssp083</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>plastid genome organization</strong> — The plastid nucleoid confines, compacts and organizes plastid genome DNA within the plastid stroma.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042646"><code>GO:0042646</code></a> <small>GO defines the plastid nucleoid as the plastid region to which DNA is confined.</small></li><li><a href="https://doi.org/10.1093/gbe/evv233"><code>DOI:10.1093/gbe/evv233</code></a> <small>Kobayashi et al. 2015 review plastid DNA packaging in chloroplast nucleoids and the evolution of nucleoid organization in green plants.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-plastid_nucleoid_topology">Plastid nucleoids package plastid DNA in the stroma <small>(FUNCTION)</small></h3>
+<p>Plastid genome DNA is packaged into non-membrane-bounded nucleoids in the plastid stroma.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>plastid stroma</td><td>contains</td><td>plastid nucleoid</td><td><ul class="evidence"><li><code>uniprot.location:SL-0140</code> <small>UniProt SL-0140 places Plastid nucleoid under the Plastid stroma subcellular location.</small></li></ul></td></tr>
+<tr><td>plastid DNA</td><td>is packaged in</td><td>plastid nucleoid</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042646"><code>GO:0042646</code></a> <small>GO:0042646 defines the plastid nucleoid as the plastid region to which DNA is confined.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Keep plastid nucleoid-associated proteins out of the generic record until an exact, source-neutral component family is curated. <small>Plastid nucleoids are DNA-protein structures, but specific nucleoid-associated protein complements vary across plastid lineages and the Chlamydomonas HLP example already belongs on the exact chloroplast nucleoid child record. This generic plastid nucleoid record therefore curates plastid DNA and records the protein boundary as follow-up rather than guessing a broad InterPro, Pfam, or NCBIfam accession.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042646"><code>GO:0042646</code></a> <small>Gene Ontology cellular-component term for plastid nucleoid.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0009295"><code>GO:0009295</code></a> <small>Gene Ontology cellular-component term for nucleoid.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0009532"><code>GO:0009532</code></a> <small>Gene Ontology cellular-component term for plastid stroma, the matrix space that contains plastid nucleoids.</small></li><li><code>uniprot.location:SL-0140</code> <small>UniProt Subcellular Location entry SL-0140 maps Plastid nucleoid to GO:0042646 and places it under Plastid stroma.</small></li><li><a href="https://doi.org/10.1093/gbe/evv233"><code>DOI:10.1093/gbe/evv233</code></a> <small>Kobayashi et al. 2015, Eukaryotic Components Remodeled Chloroplast Nucleoid Organization during the Green Plant Evolution, Genome Biology and Evolution.</small></li><li><a href="https://doi.org/10.1093/mp/ssp083"><code>DOI:10.1093/mp/ssp083</code></a> <small>Karcher et al. 2009, The Chlamydomonas Chloroplast HLP Protein Is Required for Nucleoid Organization and Genome Maintenance, Molecular Plant.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-13T22:04:45Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-13T22:05:33Z</code> codex · EXPANDED_RECORD — Added nucleoid parentage, plastid-stroma parthood, the UniProt SL-0140 exact synonym and xref, a reviewed-label-only plastid DNA component, Viridiplantae and Chlamydomonas scope, plastid genome organization, a nonmechanistic DNA-packaging topology graph, and a component-grounding TODO.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/nucleoid/plastid_nucleoid.yaml"><code>data/structures/nucleoid/plastid_nucleoid.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/nucleoid/plastid_nucleoid.yaml
+  slug: plastid_nucleoid
+session:
+  id: 2026-09-13T220559Z-codex-e164af
+  timestamp: '2026-09-13T22:05:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/842
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added plastid nucleoid record
+  details: Created an evidence-backed GO:0042646 plastid nucleoid record with UniProt SL-0140
+    provenance, GO:0009295 nucleoid parentage, GO:0009532 plastid-stroma parthood, a reviewed-label-only
+    plastid DNA component, Viridiplantae and Chlamydomonas scope, a nonmechanistic plastid-DNA
+    packaging topology graph, and a follow-up TODO for exact generic plastid nucleoid-associated
+    proteins.
