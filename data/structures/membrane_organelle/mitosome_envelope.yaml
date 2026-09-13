@@ -21,6 +21,14 @@ curation_history:
     and protein-import-boundary functions, GO/UniProt/DOI evidence, a nonmechanistic
     envelope topology graph, and a child-record grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-13T19:24:51Z'
+  curator: codex
+  action: ADDRESSED_CURATION_TODO
+  changes: Replaced the reviewed-label-only mitosome inner membrane component with
+    a has_part link to cellstructuremech:mitosome_inner_membrane, grounded the topology
+    graph inner-membrane node to the new exact record, and narrowed the child-record
+    grounding TODO to the outer membrane and intermembrane space.
+  llm_assisted: true
 synonyms:
 - synonym_text: mitosomal envelope
   synonym_type: EXACT_SYNONYM
@@ -49,10 +57,11 @@ components:
   grounding_notes: UniProt SL-0443 identifies the mitosome outer membrane, but no
     exact GO or CellStructureMech record CURIE for the child membrane was curated
     in this envelope record.
-- component_id: mitosome_inner_membrane_lipid_bilayer
-  label: mitosome inner membrane lipid bilayer
+- component_id: mitosome_inner_membrane
+  label: mitosome inner membrane
   component_type: LIPID
   component_role: CONSTITUENT
+  grounding: cellstructuremech:mitosome_inner_membrane
   essentiality: UNKNOWN
   role: Matrix-facing lipid bilayer that separates the mitosomal matrix from the intermembrane
     space.
@@ -60,13 +69,6 @@ components:
   - reference: uniprot.location:SL-0439
     notes: UniProt Subcellular Location SL-0439 identifies the mitosome inner membrane
       as separating the mitosomal matrix from the intermembrane space.
-  - reference: DOI:10.1111/jeu.12922
-    notes: Tachezy 2022 reviews mitosomes as double-membrane mitochondrion-related
-      organelles.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: UniProt SL-0439 identifies the mitosome inner membrane, but no
-    exact GO or CellStructureMech record CURIE for the child membrane was curated
-    in this envelope record.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota
@@ -163,7 +165,8 @@ causal_graphs:
   - node_id: mitosome_inner_membrane
     label: mitosome inner membrane
     node_type: STRUCTURE
-    component_ref: mitosome_inner_membrane_lipid_bilayer
+    grounding: cellstructuremech:mitosome_inner_membrane
+    component_ref: mitosome_inner_membrane
   - node_id: mitosome_intermembrane_space
     label: mitosome intermembrane space
     node_type: CELLULAR_LOCALIZATION
@@ -205,23 +208,22 @@ causal_graphs:
         between the inner and outer mitosomal membranes.
 discussions:
 - discussion_id: ground_mitosome_envelope_child_records
-  prompt: Resolve exact source-neutral records for the mitosome inner membrane, outer
-    membrane, and intermembrane space.
+  prompt: Resolve exact source-neutral records for the mitosome outer membrane and
+    intermembrane space.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#mitosome_outer_membrane_lipid_bilayer
-  - components#mitosome_inner_membrane_lipid_bilayer
   - causal_graphs#mitosome_envelope_topology
-  rationale: UniProt provides exact SL identifiers for the child compartments, but
-    no exact GO or CellStructureMech records were curated here for those inner-membrane,
-    outer-membrane, and intermembrane-space locations.
+  rationale: UniProt provides exact SL identifiers for the remaining child compartments,
+    but no exact GO or CellStructureMech records were curated here for the outer-membrane
+    or intermembrane-space locations.
   evidence:
-  - reference: uniprot.location:SL-0439
-    notes: SL-0439 identifies the mitosome inner membrane.
   - reference: uniprot.location:SL-0440
     notes: SL-0440 identifies the mitosome intermembrane space.
   - reference: uniprot.location:SL-0443
     notes: SL-0443 identifies the mitosome outer membrane.
   posed_by: codex
   posed_date: '2026-09-13'
+has_part:
+- cellstructuremech:mitosome_inner_membrane

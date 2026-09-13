@@ -1,0 +1,162 @@
+identifier: cellstructuremech:mitosome_inner_membrane
+label: mitosome inner membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The inner membrane of a mitosome is the membrane which separates the mitosomal
+  matrix from the intermembrane space.
+definition_source: uniprot.location:SL-0439
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T19:23:51Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T19:24:51Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL mitosomal-inner-membrane synonyms and xref, organelle-membrane
+    parentage, mitosome-envelope parthood, a reviewed-label-only lipid-bilayer component,
+    rare anaerobic eukaryote and Entamoeba scope, UniProt/GO/DOI evidence, a nonmechanistic
+    inner membrane topology graph, and a lipid-bilayer grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: inner mitosomal membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0439
+- synonym_text: mitosomal inner membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0439
+parent_structures:
+- GO:0031090
+part_of:
+- cellstructuremech:mitosome_envelope
+xrefs:
+- uniprot.location:SL-0439
+components:
+- component_id: mitosome_inner_lipid_bilayer
+  label: mitosome inner lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Matrix-facing lipid bilayer that separates the mitosomal matrix from the intermembrane
+    space.
+  evidence:
+  - reference: uniprot.location:SL-0439
+    notes: UniProt SL-0439 identifies the mitosome inner membrane as separating the
+      mitosomal matrix from the intermembrane space.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: UniProt SL-0439 identifies the whole mitosome inner membrane, but
+    no separate source-neutral CURIE was curated for the lipid constituent of that
+    membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Mitosome inner membranes occur in the patchy anaerobic or microaerophilic
+    microbial eukaryotes that retain double-membrane mitochondrion-related mitosomes.
+  reference: DOI:10.1111/jeu.12922
+- taxon_id: NCBITaxon:5759
+  taxon_label: Entamoeba histolytica
+  presence: COMMON
+  note: The Entamoeba mitochondrion-related mitosome was identified as a double-membrane
+    organelle.
+  reference: DOI:10.1046/j.1365-2958.1999.01414.x
+canonical_examples:
+- taxon_id: NCBITaxon:5759
+  taxon_label: Entamoeba histolytica
+  note: Amoebozoan parasite in which a double-membrane mitochondrion-related mitosome
+    was initially described.
+  reference: DOI:10.1046/j.1365-2958.1999.01414.x
+evidence:
+- reference: uniprot.location:SL-0439
+  notes: UniProt Subcellular Location entry SL-0439 identifies the mitosome inner
+    membrane, lists inner mitosomal membrane and mitosomal inner membrane as exact
+    synonyms, and places it under the mitosome membrane location.
+- reference: uniprot.location:SL-0438
+  notes: UniProt Subcellular Location entry SL-0438 identifies the mitosome envelope
+    as including the inner mitosomal membrane.
+- reference: uniprot.location:SL-0440
+  notes: UniProt Subcellular Location entry SL-0440 identifies the mitosome intermembrane
+    space as the space between inner and outer mitosomal membranes.
+- reference: uniprot.location:SL-0441
+  notes: UniProt Subcellular Location entry SL-0441 identifies the mitosome matrix
+    as the internal spaces enclosed by the mitosome inner membrane.
+- reference: GO:0031090
+  notes: Gene Ontology cellular-component parent term for organelle membrane.
+- reference: DOI:10.1046/j.1365-2958.1999.01414.x
+  notes: Tovar et al. 1999, The mitosome, a novel organelle related to mitochondria
+    in the amitochondrial parasite Entamoeba histolytica, Molecular Microbiology.
+- reference: DOI:10.1111/jeu.12922
+  notes: 'Tachezy 2022, Hydrogenosomes and mitosomes: Mitochondria of anaerobic eukaryotes,
+    Journal of Eukaryotic Microbiology.'
+causal_graphs:
+- graph_id: mitosome_inner_membrane_topology
+  title: Mitosome inner membrane topology
+  description: The mitosome inner membrane is the matrix-facing lipid bilayer that
+    separates the mitosome matrix from the intermembrane space.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining inner-envelope topology without asserting
+    mitosomal inner-membrane protein transporters.
+  nodes:
+  - node_id: mitosome_inner_membrane
+    label: mitosome inner membrane
+    node_type: STRUCTURE
+    grounding: cellstructuremech:mitosome_inner_membrane
+  - node_id: mitosome_envelope
+    label: mitosome envelope
+    node_type: STRUCTURE
+    grounding: cellstructuremech:mitosome_envelope
+  - node_id: mitosome_matrix
+    label: mitosome matrix
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: mitosome_intermembrane_space
+    label: mitosome intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: mitosome_inner_membrane
+    predicate: is part of
+    object: mitosome_envelope
+    description: The mitosome inner membrane is one of the two membranes of the mitosome
+      envelope.
+    evidence:
+    - reference: uniprot.location:SL-0438
+      notes: UniProt SL-0438 defines the mitosome envelope as comprising the inner
+        and outer mitosomal membranes plus the intermembrane space.
+  - subject: mitosome_inner_membrane
+    predicate: bounds
+    object: mitosome_matrix
+    description: The mitosome inner membrane encloses the mitosome matrix.
+    evidence:
+    - reference: uniprot.location:SL-0441
+      notes: UniProt SL-0441 defines the mitosome matrix as the internal spaces enclosed
+        by the inner membrane.
+  - subject: mitosome_inner_membrane
+    predicate: delimits
+    object: mitosome_intermembrane_space
+    description: The mitosome inner membrane forms the matrix-facing boundary of the
+      intermembrane space.
+    evidence:
+    - reference: uniprot.location:SL-0439
+      notes: UniProt SL-0439 defines the mitosome inner membrane by its position between
+        the matrix and the intermembrane space.
+    - reference: uniprot.location:SL-0440
+      notes: UniProt SL-0440 defines the mitosome intermembrane space as the space
+        between the inner and outer mitosomal membranes.
+discussions:
+- discussion_id: ground_mitosome_inner_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    mitosome inner membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mitosome_inner_lipid_bilayer
+  rationale: UniProt SL-0439 identifies the whole mitosome inner membrane, but the
+    lipid bilayer constituent is intentionally left as a reviewed-label-only component
+    until an exact source-neutral membrane-constituent CURIE is curated.
+  evidence:
+  - reference: uniprot.location:SL-0439
+    notes: SL-0439 identifies the mitosome inner membrane.
+  posed_by: codex
+  posed_date: '2026-09-13'

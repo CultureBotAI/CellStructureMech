@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitosome_envelope.yaml
+  slug: mitosome_envelope
+session:
+  id: 2026-09-13T192530Z-codex-e6109d
+  timestamp: '2026-09-13T19:25:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground mitosome inner membrane topology
+  details: Updated the existing mitosome envelope record to replace its reviewed-label-only
+    inner-membrane component with an exact has_part link, ground the topology graph inner-membrane
+    node to cellstructuremech:mitosome_inner_membrane, and narrow the remaining child-record
+    grounding TODO to the mitosome outer membrane and intermembrane space.
