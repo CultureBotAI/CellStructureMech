@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/magnetosome_lumen.yaml
+  slug: magnetosome_lumen
+session:
+  id: 2026-09-13T162342Z-claude-code-756fa0
+  timestamp: '2026-09-13T16:23:42Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/810
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/809
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - distribution
+  - exemplars
+  - function
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Create a GO-grounded magnetosome lumen record
+  details: Created GO:0110145 magnetosome lumen from the GO cellular-component term, the UniProt
+    SL-0511 mapping in subcell.txt, and curated magnetosome-vesicle literature. Added GO:0043233
+    organelle-lumen parentage, GO:0110143 magnetosome parthood, Bacteria and Alphaproteobacteria
+    distribution rows, a Magnetospirillum gryphiswaldense MSR-1 canonical example, a biomineralization
+    function, a nonmechanistic lumen-topology graph, and a resolved interpretation that keeps
+    the magnetosome membrane as the enclosing boundary rather than a lumen component.
