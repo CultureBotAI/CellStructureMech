@@ -1,0 +1,170 @@
+identifier: GO:1990225
+label: rhoptry neck
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: OTHER
+definition: Narrow, electron-dense part of the rhoptry that extends through the conoid
+  at the apical tip of an apicomplexan parasite.
+definition_source: GO:1990225
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T12:00:13Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T12:01:09Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added rhoptry parthood, a label-only rhoptry neck protein component, Apicomplexa
+    and Toxoplasma gondii scope, secretion and moving-junction functions, GO/DOI evidence,
+    a nonmechanistic RON export graph, and a RON grounding TODO.
+  llm_assisted: true
+part_of:
+- GO:0020008
+components:
+- component_id: rhoptry_neck_proteins
+  label: rhoptry neck proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Rhoptry neck-localized secretory proteins that are released during host-cell
+    invasion and contribute to the moving-junction interface.
+  evidence:
+  - reference: DOI:10.1074/jbc.m504158200
+    notes: Bradley et al. 2005 identified multiple RON proteins in the Toxoplasma
+      gondii rhoptry proteome.
+  - reference: DOI:10.1371/journal.ppat.0010017
+    notes: Alexander et al. 2005 showed that RON4 is a Toxoplasma rhoptry-neck protein
+      that relocates to the moving junction during invasion.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: RON proteins share rhoptry-neck localization but include several
+    unrelated secreted effector families; no exact source-neutral family term was
+    curated for the whole rhoptry-neck protein cohort.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: COMMON
+  note: Rhoptry necks are the narrow apical regions of apicomplexan rhoptries; their
+    number and morphology vary among lineages and invasive life-cycle stages.
+  reference: DOI:10.1128/mmbr.00197-22
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model in which RON proteins were identified in the rhoptry proteome
+    and shown to relocate toward the moving junction during invasion.
+  reference: DOI:10.1074/jbc.m504158200
+functions:
+- function_id: rhoptry_neck_secretion
+  label: rhoptry neck secretion
+  description: The rhoptry neck forms the narrow electron-dense apical domain used
+    as rhoptry contents are secreted during host-cell invasion.
+  evidence:
+  - reference: GO:1990225
+    notes: GO:1990225 defines the rhoptry neck as the narrow part of the rhoptry that
+      extends through the apical conoid.
+  - reference: DOI:10.1038/nrmicro1800
+    notes: Boothroyd and Dubremetz 2008 review neck and bulb compartmentation of Toxoplasma
+      rhoptries during invasion.
+- function_id: moving_junction_assembly
+  label: moving junction assembly
+  description: Rhoptry neck proteins are secreted from the rhoptry neck and help form
+    the moving junction that coordinates apicomplexan host-cell invasion.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.0010017
+    notes: Alexander et al. 2005 showed that RON4 leaves the rhoptry neck and contributes
+      to the moving-junction complex in Toxoplasma tachyzoites.
+evidence:
+- reference: GO:1990225
+  notes: Gene Ontology cellular-component term for the rhoptry neck.
+- reference: DOI:10.1074/jbc.m504158200
+  notes: Bradley et al. 2005, Proteomic analysis of rhoptry organelles reveals many
+    novel constituents for host-parasite interactions in Toxoplasma gondii, Journal
+    of Biological Chemistry.
+- reference: DOI:10.1371/journal.ppat.0010017
+  notes: 'Alexander et al. 2005, Identification of the moving junction complex of
+    Toxoplasma gondii: a collaboration between distinct secretory organelles, PLOS
+    Pathogens.'
+- reference: DOI:10.1038/nrmicro1800
+  notes: 'Boothroyd and Dubremetz 2008, Kiss and spit: the dual roles of Toxoplasma
+    rhoptries, Nature Reviews Microbiology.'
+- reference: DOI:10.1128/mmbr.00197-22
+  notes: Waller and Carruthers 2024, Adaptations and metabolic evolution of myzozoan
+    protists across diverse lifestyles and environments, Microbiology and Molecular
+    Biology Reviews.
+causal_graphs:
+- graph_id: rhoptry_neck_exports_rons
+  title: Rhoptry neck dispatches RON proteins for invasion
+  description: The rhoptry neck is the narrow apical rhoptry domain through which
+    rhoptry-neck proteins are secreted. In Toxoplasma, secreted RON proteins relocalize
+    to the moving junction used for host-cell invasion.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: rhoptry_neck
+    label: rhoptry neck
+    node_type: STRUCTURE
+    grounding: GO:1990225
+  - node_id: rhoptry
+    label: rhoptry
+    node_type: ORGANELLE
+    grounding: GO:0020008
+  - node_id: rhoptry_neck_proteins
+    label: rhoptry neck proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: rhoptry_neck_proteins
+  - node_id: moving_junction
+    label: moving junction
+    node_type: STATE
+  - node_id: host_cell_invasion
+    label: host cell invasion
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: rhoptry_neck
+    predicate: is part of
+    object: rhoptry
+    description: The rhoptry neck is the narrow apical domain of the club-shaped rhoptry.
+    evidence:
+    - reference: GO:1990225
+      notes: GO:1990225 defines the rhoptry neck as the narrow electron-dense part
+        of the rhoptry.
+    - reference: DOI:10.1038/nrmicro1800
+      notes: Boothroyd and Dubremetz 2008 review rhoptry neck and bulb compartmentation.
+  - subject: rhoptry_neck_proteins
+    predicate: reside in
+    object: rhoptry_neck
+    description: RON proteins are a rhoptry-neck-localized secretory protein cohort.
+    evidence:
+    - reference: DOI:10.1074/jbc.m504158200
+      notes: Bradley et al. 2005 identified rhoptry neck proteins in purified Toxoplasma
+        rhoptries.
+  - subject: rhoptry_neck_proteins
+    predicate: assemble at
+    object: moving_junction
+    description: Secreted RON proteins contribute to the moving-junction interface
+      used during invasion.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.0010017
+      notes: Alexander et al. 2005 identified RON4 as a rhoptry-neck protein that
+        relocalizes to the moving junction.
+  - subject: moving_junction
+    predicate: supports
+    object: host_cell_invasion
+    description: The moving junction helps the apicomplexan parasite invade host cells.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.0010017
+      notes: Alexander et al. 2005 studied the moving junction complex in invading
+        Toxoplasma tachyzoites.
+discussions:
+- discussion_id: ground_rhoptry_neck_proteins
+  prompt: Resolve exact source-neutral groundings for rhoptry neck protein cohorts.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rhoptry_neck_proteins
+  rationale: RON proteins are grouped by rhoptry-neck localization in this first substructure
+    record, but the cohort contains multiple unrelated effector families.
+  evidence:
+  - reference: DOI:10.1074/jbc.m504158200
+  - reference: DOI:10.1371/journal.ppat.0010017
+  posed_by: codex
+  posed_date: '2026-09-13'
