@@ -21,6 +21,13 @@ curation_history:
     property, DOI evidence, a nonmechanistic basal-body assembly graph, and a substructure-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-13T09:24:44Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#767: removed the GO-only Eukaryota VARIABLE distribution row because
+    it was a clade-level assertion that needs direct literature support; kept the
+    directly supported Chlamydomonas reinhardtii row.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cilial basal body
   synonym_type: EXACT_SYNONYM
@@ -79,13 +86,6 @@ components:
     notes: Dutcher and O'Toole 2016 review the cartwheel among the conserved Chlamydomonas
       basal-body substructures.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:2759
-  taxon_label: Eukaryota
-  presence: VARIABLE
-  note: Ciliary basal bodies occur in eukaryotes that assemble cilia or microtubule-based
-    flagella, but they are absent from lineages or life-cycle stages lacking these
-    organelles.
-  reference: GO:0036064
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
   presence: COMMON
