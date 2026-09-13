@@ -20,6 +20,12 @@ curation_history:
     scope, compartmentalization function, GO/UniProt/DOI evidence, a nonmechanistic
     envelope topology graph, and a resolved generic-scope interpretation.
   llm_assisted: true
+- timestamp: '2026-09-13T21:01:20Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #836 by adding the UniProt SL-0210 exact synonym; resolved #837
+    by removing the unused cytoplasm node from the plastid envelope topology graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0031967
 part_of:
@@ -160,10 +166,6 @@ causal_graphs:
     label: plastid stroma
     node_type: CELLULAR_LOCALIZATION
     grounding: GO:0009532
-  - node_id: cytoplasm
-    label: cytoplasm
-    node_type: CELLULAR_LOCALIZATION
-    grounding: GO:0005737
   edges:
   - subject: plastid_envelope
     predicate: encloses
@@ -235,3 +237,7 @@ discussions:
       membrane plus the intermembrane space.
   posed_by: codex
   posed_date: '2026-09-13'
+synonyms:
+- synonym_text: Plastidic envelope
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0210
