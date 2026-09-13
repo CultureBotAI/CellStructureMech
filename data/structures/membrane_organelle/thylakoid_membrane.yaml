@@ -37,6 +37,12 @@ curation_history:
   changes: Retargeted the ATP synthase edge to photosynthetic ATP synthesis instead
     of the upstream electron-transport process.
   llm_assisted: true
+- timestamp: '2026-09-13T05:53:30Z'
+  curator: codex
+  action: RESOLVED_DISCUSSION
+  changes: '#756: marked the split_photosystem_records discussion resolved after the
+    standalone PSI, PSII, and cytochrome b6f records were added.'
+  llm_assisted: true
 synonyms:
 - synonym_text: TM
   synonym_type: RELATED_SYNONYM
@@ -273,7 +279,7 @@ discussions:
     internal mechanisms of oxygen evolution, ferredoxin reduction or plastoquinol
     oxidation.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - components#photosystem_ii
   - components#photosystem_i
@@ -282,3 +288,6 @@ discussions:
     but the first thylakoid membrane record only needs them as grounded membrane components.
   posed_by: claude
   posed_date: '2026-09-04'
+  resolution_note: Separate GO:0030096, GO:0030094 and GO:0009512 records now cover
+    bacterial thylakoid PSII, bacterial thylakoid PSI and cytochrome b6f respectively;
+    detailed subunit-boundary work remains open on those complex-specific records.
