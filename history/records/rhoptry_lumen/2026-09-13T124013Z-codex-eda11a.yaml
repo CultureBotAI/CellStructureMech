@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/rhoptry_lumen.yaml
+  slug: rhoptry_lumen
+session:
+  id: 2026-09-13T124013Z-codex-eda11a
+  timestamp: '2026-09-13T12:40:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/783
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/784
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - distribution
+  - causal_graphs
+  - discussions
+  summary: Added GO-grounded rhoptry lumen record
+  details: Added a GO:0034591 rhoptry lumen record as a subcellular-region part of the apicomplexan rhoptry.
+    The record captures organelle-lumen parentage, rhoptry parthood, Apicomplexa scope, Toxoplasma gondii
+    as a canonical example, a nonmechanistic rhoptry-lumen topology graph, GO/DOI evidence, and a resolved
+    interpretation that keeps the rhoptry membrane as a lumen boundary rather than as a lumen component.
