@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/parasitophorous_vacuole.yaml
+  slug: parasitophorous_vacuole
+session:
+  id: 2026-09-13T180852Z-codex-08f12e
+  timestamp: '2026-09-13T18:08:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added parasitophorous vacuole
+  details: Curated a new parasitophorous vacuole record from UniProt Subcellular Location
+    SL-0194 with GO:0020003 parentage, a reviewed-label-only parasitophorous vacuolar membrane
+    component, Apicomplexa/Toxoplasma/Plasmodium scope, PV niche evidence, and a nonmechanistic
+    topology graph. Left the PVM exact-grounding question open for a future dedicated PVM
+    record.
