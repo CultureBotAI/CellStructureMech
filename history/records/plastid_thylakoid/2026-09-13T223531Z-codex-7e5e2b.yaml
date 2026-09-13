@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/plastid_thylakoid.yaml
+  slug: plastid_thylakoid
+session:
+  id: 2026-09-13T223531Z-codex-7e5e2b
+  timestamp: '2026-09-13T22:35:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added plastid thylakoid record
+  details: Created an evidence-backed GO:0031976 plastid thylakoid record with GO:0009579
+    thylakoid parentage, GO:0009536 plastid parthood, GO:0055035 membrane and GO:0031978 lumen
+    parts, UniProt SL-0278 provenance, Viridiplantae and Glaucocystophyceae scope, a Chlamydomonas
+    example, a photosynthesis light-reaction function, a nonmechanistic plastid-thylakoid
+    topology graph, and resolved boundary decisions for whole plastid thylakoids versus their
+    membrane and lumen children and non-organelle structure_kind.

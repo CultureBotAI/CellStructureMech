@@ -1,0 +1,188 @@
+identifier: GO:0031976
+label: plastid thylakoid
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: OTHER
+definition: Any thylakoid within a plastid.
+definition_source: GO:0031976
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T22:34:13Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T22:35:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added thylakoid parentage, plastid parthood, plastid thylakoid membrane
+    and lumen parts, the UniProt SL-0278 xref, a GO-grounded thylakoid membrane component,
+    Viridiplantae and Glaucocystophyceae scope, a Chlamydomonas example, a photosynthesis
+    light-reaction function, and a nonmechanistic topology graph.
+  llm_assisted: true
+parent_structures:
+- GO:0009579
+part_of:
+- GO:0009536
+has_part:
+- GO:0055035
+- GO:0031978
+xrefs:
+- uniprot.location:SL-0278
+components:
+- component_id: plastid_thylakoid_membrane
+  label: plastid thylakoid membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0055035
+  essentiality: ESSENTIAL
+  role: Pigmented lipid bilayer of plastid thylakoids that bounds the lumen and carries
+    photosynthetic light-reaction complexes.
+  evidence:
+  - reference: GO:0055035
+    notes: GO:0055035 defines the plastid thylakoid membrane as the lipid bilayer
+      membrane of any thylakoid within a plastid.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review plastid thylakoid structural diversity
+      among algae and plants.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Photosynthetic green algae and land plants have chloroplast thylakoids inside
+    plastids.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+- taxon_id: NCBITaxon:38254
+  taxon_label: Glaucocystophyceae
+  presence: COMMON
+  note: Glaucophyte cyanelles are plastids with internal thylakoids.
+  reference: DOI:10.5586/asbp.2015.020
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Unicellular green alga whose chloroplast plastid thylakoids were resolved
+    by in situ cryo-electron tomography.
+  reference: DOI:10.7554/eLife.04889
+functions:
+- function_id: photosynthesis_light_reaction
+  label: photosynthesis, light reaction
+  grounding: GO:0019684
+  description: Plastid thylakoids provide an internal membrane system for the light
+    reactions of photosynthesis.
+  evidence:
+  - reference: uniprot.location:SL-0278
+    notes: UniProt SL-0278 describes plastid thylakoids as interconnected internal
+      membranes that carry out photosynthetic light reactions.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review thylakoid architecture as the conserved
+      site of photosynthetic light reactions in plastids.
+evidence:
+- reference: GO:0031976
+  notes: Gene Ontology cellular-component term for plastid thylakoid.
+- reference: GO:0009579
+  notes: Gene Ontology cellular-component term for the broader thylakoid class.
+- reference: GO:0009536
+  notes: Gene Ontology cellular-component term for plastid.
+- reference: GO:0055035
+  notes: Gene Ontology cellular-component term for plastid thylakoid membrane.
+- reference: GO:0031978
+  notes: Gene Ontology cellular-component term for plastid thylakoid lumen.
+- reference: GO:0019684
+  notes: Gene Ontology biological-process term for photosynthesis, light reaction.
+- reference: uniprot.location:SL-0278
+  notes: UniProt Subcellular Location SL-0278 maps Plastid thylakoid to GO:0031976
+    and distinguishes this plastid-specific thylakoid location from chloroplast and
+    cyanelle children.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
+- reference: DOI:10.7554/eLife.04889
+  notes: Engel et al. 2015, Native architecture of the Chlamydomonas chloroplast revealed
+    by in situ cryo-electron tomography, eLife.
+- reference: DOI:10.5586/asbp.2015.020
+  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
+    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
+causal_graphs:
+- graph_id: plastid_thylakoid_topology
+  title: Plastid thylakoid topology
+  description: Plastid thylakoids contain an internal lumen bounded by a photosynthetic
+    thylakoid membrane that supports light reactions.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures plastid thylakoid topology without asserting chloroplast-specific
+    grana, cyanelle-specific phycobilisomes, or the complete photosynthetic electron-transport
+    chain.
+  nodes:
+  - node_id: plastid_thylakoid
+    label: plastid thylakoid
+    node_type: STRUCTURE
+    grounding: GO:0031976
+  - node_id: plastid_thylakoid_membrane
+    label: plastid thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0055035
+    component_ref: plastid_thylakoid_membrane
+  - node_id: plastid_thylakoid_lumen
+    label: plastid thylakoid lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031978
+  - node_id: photosynthesis_light_reaction
+    label: photosynthesis, light reaction
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0019684
+  edges:
+  - subject: plastid_thylakoid_membrane
+    predicate: bounds
+    object: plastid_thylakoid_lumen
+    description: The plastid thylakoid membrane bounds the lumenal compartment of
+      a plastid thylakoid.
+    evidence:
+    - reference: GO:0031978
+      notes: GO:0031978 identifies the plastid thylakoid lumen.
+    - reference: GO:0055035
+      notes: GO:0055035 identifies the lipid bilayer membrane of a plastid thylakoid.
+  - subject: plastid_thylakoid_membrane
+    predicate: supports
+    object: photosynthesis_light_reaction
+    description: The plastid thylakoid membrane houses photosynthetic pigments and
+      reaction-center complexes for light reactions.
+    evidence:
+    - reference: uniprot.location:SL-0278
+      notes: UniProt SL-0278 describes plastid thylakoids as interconnected membranes
+        that carry out the light reactions of photosynthesis.
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review the plastid thylakoid membrane as the
+        site of oxygenic photosynthesis.
+discussions:
+- discussion_id: whole_plastid_thylakoid_not_membrane_or_lumen
+  prompt: Keep the whole plastid thylakoid distinct from its membrane and lumen children.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0031976 denotes any whole thylakoid within a plastid, while GO:0055035
+    denotes its lipid bilayer membrane and GO:0031978 denotes the plastid thylakoid
+    lumen.
+  resolution_note: Curated GO:0031976 as the record identity, with GO:0055035 and
+    GO:0031978 represented as child parts rather than as synonyms.
+  evidence:
+  - reference: GO:0031976
+    notes: GO:0031976 identifies the whole plastid thylakoid.
+  - reference: GO:0055035
+    notes: GO:0055035 separately identifies the membrane part.
+  - reference: GO:0031978
+    notes: GO:0031978 separately identifies the lumen part.
+  posed_by: codex
+  posed_date: '2026-09-13'
+- discussion_id: generic_plastid_thylakoid_kind
+  prompt: Represent plastid thylakoid as a membranous plastid structure without asserting
+    a lineage-specific organelle class.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: The broader GO:0009579 thylakoid class is intentionally separated from
+    organelles, and its exact plastid child still groups whole-thylakoid compartments
+    that are modelled with different structure_kind values in narrower records.
+  resolution_note: Kept the record in the MEMBRANE_ORGANELLE filesystem category but
+    used structure_kind OTHER.
+  evidence:
+  - reference: GO:0031976
+  - reference: GO:0009579
+  posed_by: codex
+  posed_date: '2026-09-13'
