@@ -1,0 +1,214 @@
+identifier: GO:0005743
+label: mitochondrial inner membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The inner, i.e. lumen-facing, lipid bilayer of the mitochondrial envelope.
+  It is highly folded to form cristae.
+definition_source: GO:0005743
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T23:33:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T23:34:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parentage, mitochondrial-envelope parthood, crista containment,
+    a reviewed-label-only lipid-bilayer component, Eukaryota and Saccharomyces scope,
+    oxidative-phosphorylation function evidence, a nonmechanistic inner-membrane topology
+    graph, and a lipid-bilayer grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: inner mitochondrial membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005743
+- synonym_text: inner mitochondrion membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005743
+- synonym_text: mitochondrion inner membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005743
+parent_structures:
+- GO:0019866
+- GO:0031966
+part_of:
+- GO:0005740
+has_part:
+- GO:0030061
+components:
+- component_id: mitochondrial_inner_lipid_bilayer
+  label: mitochondrial inner lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lumen-facing lipid bilayer that forms crista folds and separates the mitochondrial
+    matrix from the intermembrane space.
+  evidence:
+  - reference: GO:0005743
+    notes: GO:0005743 defines the mitochondrial inner membrane as the lumen-facing
+      lipid bilayer of the mitochondrial envelope.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005743 identifies the whole mitochondrial inner membrane, but
+    no separate source-neutral CURIE was curated for the lipid constituent of that
+    membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: Canonical mitochondrial inner membranes occur with canonical mitochondria
+    across eukaryotes, while some anaerobic lineages carry reduced mitochondrion-related
+    organelles instead.
+  reference: GO:0005743
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria have an inner-membrane proteome enriched for oxidative-phosphorylation
+    machinery.
+  reference: DOI:10.1073/pnas.2135385100
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model used for purified mitochondrial proteomics and for genetic
+    and electron-tomographic studies of mitochondrial inner-membrane architecture.
+  reference: DOI:10.7554/elife.07739
+functions:
+- function_id: oxidative_phosphorylation
+  label: oxidative phosphorylation
+  grounding: GO:0006119
+  description: Inner-membrane respiratory-chain activity contributes to ATP synthesis
+    by coupling metabolite oxidation to a proton gradient across the mitochondrial
+    inner membrane.
+  evidence:
+  - reference: GO:0006119
+    notes: GO:0006119 defines oxidative phosphorylation as ATP formation coupled to
+      respiratory-chain oxidation and proton-gradient formation.
+  - reference: DOI:10.1073/pnas.2135385100
+    notes: Sickmann et al. 2003 recovered oxidative-phosphorylation complexes in the
+      purified budding-yeast mitochondrial proteome.
+evidence:
+- reference: GO:0005743
+  notes: Gene Ontology cellular-component term for mitochondrial inner membrane.
+- reference: GO:0019866
+  notes: Gene Ontology cellular-component parent term for organelle inner membrane.
+- reference: GO:0031966
+  notes: Gene Ontology cellular-component parent term for mitochondrial membrane.
+- reference: GO:0005740
+  notes: Gene Ontology cellular-component term for the mitochondrial envelope.
+- reference: GO:0030061
+  notes: Gene Ontology cellular-component term for mitochondrial crista.
+- reference: GO:0005758
+  notes: Gene Ontology cellular-component term for mitochondrial intermembrane space.
+- reference: GO:0005759
+  notes: Gene Ontology cellular-component term for mitochondrial matrix.
+- reference: GO:0006119
+  notes: Gene Ontology biological-process term for oxidative phosphorylation.
+- reference: DOI:10.1073/pnas.2135385100
+  notes: Sickmann et al. 2003, 'The proteome of Saccharomyces cerevisiae mitochondria',
+    Proceedings of the National Academy of Sciences.
+- reference: DOI:10.7554/elife.07739
+  notes: Friedman et al. 2015, 'MICOS coordinates with respiratory complexes and lipids
+    to establish mitochondrial inner membrane architecture', eLife.
+- reference: DOI:10.1038/nature12985
+  notes: Friedman and Nunnari 2014, 'Mitochondrial form and function', Nature.
+causal_graphs:
+- graph_id: mitochondrial_inner_membrane_topology
+  title: Mitochondrial inner membrane topology
+  description: The mitochondrial inner membrane is the lumen-facing mitochondrial
+    envelope bilayer that folds into cristae, bounds the matrix, and delimits the
+    intermembrane space.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures inner-envelope topology and links the membrane to
+    oxidative phosphorylation without asserting individual respiratory complexes,
+    crista-junction assembly, or TIM/PAM protein-import steps.
+  nodes:
+  - node_id: mitochondrial_inner_membrane
+    label: mitochondrial inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005743
+  - node_id: mitochondrial_envelope
+    label: mitochondrial envelope
+    node_type: STRUCTURE
+    grounding: GO:0005740
+  - node_id: mitochondrial_crista
+    label: mitochondrial crista
+    node_type: STRUCTURE
+    grounding: GO:0030061
+  - node_id: mitochondrial_matrix
+    label: mitochondrial matrix
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005759
+  - node_id: mitochondrial_intermembrane_space
+    label: mitochondrial intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005758
+  - node_id: oxidative_phosphorylation
+    label: oxidative phosphorylation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006119
+  edges:
+  - subject: mitochondrial_inner_membrane
+    predicate: is part of
+    object: mitochondrial_envelope
+    description: The mitochondrial inner membrane is the lumen-facing lipid bilayer
+      of the mitochondrial envelope.
+    evidence:
+    - reference: GO:0005743
+      notes: GO:0005743 defines the inner membrane as the inner lipid bilayer of the
+        mitochondrial envelope.
+  - subject: mitochondrial_crista
+    predicate: is part of
+    object: mitochondrial_inner_membrane
+    description: Mitochondrial cristae are inward folds of the mitochondrial inner
+      membrane.
+    evidence:
+    - reference: GO:0030061
+      notes: GO:0030061 defines a crista as an inward fold of the mitochondrial inner
+        membrane.
+  - subject: mitochondrial_inner_membrane
+    predicate: bounds
+    object: mitochondrial_matrix
+    description: The mitochondrial inner membrane faces the lumenal matrix side of
+      the mitochondrion.
+    evidence:
+    - reference: GO:0005743
+      notes: GO:0005743 defines the inner membrane as lumen-facing.
+    - reference: GO:0005759
+      notes: GO:0005759 identifies the mitochondrial matrix as the mitochondrial matrix
+        space or lumen.
+  - subject: mitochondrial_inner_membrane
+    predicate: delimits
+    object: mitochondrial_intermembrane_space
+    description: The mitochondrial inner membrane forms one side of the intermembrane
+      space within the mitochondrial envelope.
+    evidence:
+    - reference: GO:0005758
+      notes: GO:0005758 defines the intermembrane space as the region between the
+        inner and outer lipid bilayers of the mitochondrial envelope.
+  - subject: mitochondrial_inner_membrane
+    predicate: supports
+    object: oxidative_phosphorylation
+    description: Budding-yeast oxidative-phosphorylation complexes reside at the mitochondrial
+      inner membrane.
+    evidence:
+    - reference: DOI:10.1073/pnas.2135385100
+      notes: Sickmann et al. 2003 recovered oxidative-phosphorylation complexes in
+        the purified budding-yeast mitochondrial proteome.
+discussions:
+- discussion_id: ground_mitochondrial_inner_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    mitochondrial inner membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mitochondrial_inner_lipid_bilayer
+  rationale: GO:0005743 identifies the whole mitochondrial inner membrane, but the
+    lipid-bilayer constituent is intentionally left as reviewed-label-only until an
+    exact source-neutral lipid or membrane-constituent CURIE is curated.
+  evidence:
+  - reference: GO:0005743
+    notes: GO:0005743 identifies the whole mitochondrial inner membrane.
+  posed_by: codex
+  posed_date: '2026-09-13'
