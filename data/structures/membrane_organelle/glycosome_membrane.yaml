@@ -1,0 +1,179 @@
+identifier: GO:0046860
+label: glycosome membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The membrane surrounding the glycosome.
+definition_source: GO:0046860
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T14:56:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T14:56:56Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL glycosomal-membrane synonym and xref, peroxisomal-membrane
+    parentage, glycosome parthood, a label-only lipid-bilayer component, Kinetoplastea/Trypanosoma
+    scope, a matrix-import boundary function, GO/UniProt/DOI evidence, a nonmechanistic
+    glycosome-membrane topology graph, and a lipid-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: glycosomal membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0128
+parent_structures:
+- GO:0005778
+part_of:
+- GO:0020015
+xrefs:
+- uniprot.location:SL-0128
+components:
+- component_id: glycosome_lipid_bilayer
+  label: glycosome lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Peroxisome-related lipid bilayer that surrounds the glycosome and separates
+    the glycosomal matrix from the kinetoplastid cytosol.
+  evidence:
+  - reference: GO:0046860
+    notes: GO:0046860 identifies the glycosome membrane as the membrane surrounding
+      a glycosome.
+  - reference: DOI:10.1016/j.bbamcr.2015.09.015
+    notes: Haanstra et al. 2016 review glycosomes as membrane-bounded specialized
+      peroxisomes of trypanosomatid parasites.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0046860 identifies the whole glycosome membrane, but no exact
+    source-neutral CURIE was curated for the generic lipid constituent of that kinetoplastid
+    membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5653
+  taxon_label: Kinetoplastea
+  presence: COMMON
+  note: Glycosome membranes bound the specialized peroxisomes of kinetoplastid protists,
+    with biogenesis and membrane import best reviewed in trypanosomatids.
+  reference: DOI:10.1016/j.bbamcr.2015.09.015
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: Kinetoplastid parasite in which PEX14-mediated glycosomal membrane import
+    has been characterized.
+  reference: DOI:10.1046/j.1432-1033.2003.03582.x
+functions:
+- function_id: glycosomal_matrix_import_boundary
+  label: glycosomal matrix import boundary
+  description: The glycosome membrane separates the matrix from the cytosol and hosts
+    peroxin machinery that imports nuclear-encoded PTS-containing matrix proteins.
+  evidence:
+  - reference: DOI:10.1046/j.1432-1033.2003.03582.x
+    notes: Choe et al. 2003 characterized Trypanosoma brucei PEX14 as a glycosomal
+      membrane protein that interacts with TbPEX5 during matrix-protein import.
+  - reference: DOI:10.1016/j.bbamcr.2015.09.015
+    notes: Haanstra et al. 2016 review conserved peroxin machinery in trypanosomatid
+      glycosome biogenesis and maintenance.
+evidence:
+- reference: GO:0046860
+  notes: Gene Ontology cellular-component term for the glycosome membrane.
+- reference: GO:0005778
+  notes: Gene Ontology cellular-component parent term for peroxisomal membrane.
+- reference: GO:0020015
+  notes: Gene Ontology cellular-component term for the containing glycosome.
+- reference: GO:0034468
+  notes: Gene Ontology cellular-component term for the glycosome lumen bounded by
+    the glycosome membrane.
+- reference: uniprot.location:SL-0128
+  notes: UniProt Subcellular Location entry SL-0128 maps directly to GO:0046860 and
+    lists glycosomal membrane as an exact synonym.
+- reference: DOI:10.1046/j.1432-1033.2003.03582.x
+  notes: Choe et al. 2003, Characterization of Trypanosoma brucei PEX14 and its role
+    in the import of glycosomal matrix proteins, European Journal of Biochemistry.
+- reference: DOI:10.1016/j.bbamcr.2015.09.015
+  notes: Haanstra et al. 2016, Biogenesis, maintenance and dynamics of glycosomes
+    in trypanosomatid parasites, Biochimica et Biophysica Acta - Molecular Cell Research.
+causal_graphs:
+- graph_id: glycosome_membrane_import_boundary
+  title: Glycosome membrane bounds the matrix import compartment
+  description: The glycosome membrane surrounds the glycosome, encloses the matrix,
+    and hosts peroxin machinery that imports PTS-containing enzymes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures membrane topology and placement of peroxin import
+    machinery without modeling the full matrix-protein import cycle.
+  nodes:
+  - node_id: glycosome_membrane
+    label: glycosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0046860
+    component_ref: glycosome_lipid_bilayer
+  - node_id: glycosome
+    label: glycosome
+    node_type: ORGANELLE
+    grounding: GO:0020015
+  - node_id: glycosome_lumen
+    label: glycosome lumen
+    node_type: STRUCTURE
+    grounding: GO:0034468
+  - node_id: pex14_import_docking
+    label: PEX14 import docking machinery
+    node_type: GENE_OR_PROTEIN
+  - node_id: matrix_protein_import
+    label: glycosomal matrix protein import
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: glycosome_membrane
+    predicate: is part of
+    object: glycosome
+    description: The glycosome membrane is the boundary membrane of the glycosome.
+    evidence:
+    - reference: GO:0046860
+      notes: GO:0046860 defines the glycosome membrane by its surrounding relation
+        to the glycosome.
+    - reference: DOI:10.1016/j.bbamcr.2015.09.015
+      notes: Haanstra et al. 2016 review glycosomes as membrane-bounded specialized
+        peroxisomes.
+  - subject: glycosome_lumen
+    predicate: is enclosed by
+    object: glycosome_membrane
+    description: The glycosome lumen is the matrix compartment enclosed by the glycosome
+      membrane.
+    evidence:
+    - reference: GO:0034468
+      notes: GO:0034468 defines the glycosome lumen as the volume enclosed by the
+        glycosome membrane.
+  - subject: pex14_import_docking
+    predicate: resides in
+    object: glycosome_membrane
+    description: PEX14 acts at the glycosome membrane docking step for matrix-protein
+      import.
+    evidence:
+    - reference: DOI:10.1046/j.1432-1033.2003.03582.x
+      notes: Choe et al. 2003 characterized Trypanosoma brucei PEX14 and its interaction
+        with TbPEX5.
+  - subject: pex14_import_docking
+    predicate: supports
+    object: matrix_protein_import
+    description: Glycosomal PEX14 supports import of PTS-containing nuclear-encoded
+      proteins into the glycosome matrix.
+    evidence:
+    - reference: DOI:10.1046/j.1432-1033.2003.03582.x
+      notes: Choe et al. 2003 linked TbPEX14 to glycosomal matrix-protein import.
+    - reference: DOI:10.1016/j.bbamcr.2015.09.015
+      notes: Haanstra et al. 2016 review PEX import machinery as part of trypanosomatid
+        glycosome biogenesis.
+discussions:
+- discussion_id: ground_glycosome_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituent
+    of the glycosome membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#glycosome_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0046860, but no glycosome-specific
+    lipid or lipid-bilayer CURIE was curated for the membrane constituent.
+  evidence:
+  - reference: GO:0046860
+    notes: GO:0046860 identifies the complete glycosome membrane.
+  posed_by: codex
+  posed_date: '2026-09-13'

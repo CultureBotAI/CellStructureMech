@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glycosome membrane · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>glycosome membrane</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0046860"><code>GO:0046860</code></a> · MEMBRANE_ORGANELLE · MEMBRANE · <span class="status">PROPOSED</span></p>
+<p class="definition">The membrane surrounding the glycosome. <small>[<a href="http://purl.obolibrary.org/obo/GO_0046860"><code>GO:0046860</code></a>]</small></p>
+<p><strong>Synonyms:</strong> glycosomal membrane</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0020015"><code>GO:0020015</code></a> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0128</code> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-glycosome_lipid_bilayer"><td>glycosome lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Peroxisome-related lipid bilayer that surrounds the glycosome and separates the glycosomal matrix from the kinetoplastid cytosol.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0046860"><code>GO:0046860</code></a> <small>GO:0046860 identifies the glycosome membrane as the membrane surrounding a glycosome.</small></li><li><a href="https://doi.org/10.1016/j.bbamcr.2015.09.015"><code>DOI:10.1016/j.bbamcr.2015.09.015</code></a> <small>Haanstra et al. 2016 review glycosomes as membrane-bounded specialized peroxisomes of trypanosomatid parasites.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5653"><code>NCBITaxon:5653</code></a> Kinetoplastea — <strong>COMMON</strong>: Glycosome membranes bound the specialized peroxisomes of kinetoplastid protists, with biogenesis and membrane import best reviewed in trypanosomatids. [<a href="https://doi.org/10.1016/j.bbamcr.2015.09.015"><code>DOI:10.1016/j.bbamcr.2015.09.015</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5691"><code>NCBITaxon:5691</code></a> <em>Trypanosoma brucei</em> — Kinetoplastid parasite in which PEX14-mediated glycosomal membrane import has been characterized. [<a href="https://doi.org/10.1046/j.1432-1033.2003.03582.x"><code>DOI:10.1046/j.1432-1033.2003.03582.x</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>glycosomal matrix import boundary</strong> — The glycosome membrane separates the matrix from the cytosol and hosts peroxin machinery that imports nuclear-encoded PTS-containing matrix proteins.<ul class="evidence"><li><a href="https://doi.org/10.1046/j.1432-1033.2003.03582.x"><code>DOI:10.1046/j.1432-1033.2003.03582.x</code></a> <small>Choe et al. 2003 characterized Trypanosoma brucei PEX14 as a glycosomal membrane protein that interacts with TbPEX5 during matrix-protein import.</small></li><li><a href="https://doi.org/10.1016/j.bbamcr.2015.09.015"><code>DOI:10.1016/j.bbamcr.2015.09.015</code></a> <small>Haanstra et al. 2016 review conserved peroxin machinery in trypanosomatid glycosome biogenesis and maintenance.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-glycosome_membrane_import_boundary">Glycosome membrane bounds the matrix import compartment <small>(FUNCTION)</small></h3>
+<p>The glycosome membrane surrounds the glycosome, encloses the matrix, and hosts peroxin machinery that imports PTS-containing enzymes.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>glycosome membrane</td><td>is part of</td><td>glycosome</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0046860"><code>GO:0046860</code></a> <small>GO:0046860 defines the glycosome membrane by its surrounding relation to the glycosome.</small></li><li><a href="https://doi.org/10.1016/j.bbamcr.2015.09.015"><code>DOI:10.1016/j.bbamcr.2015.09.015</code></a> <small>Haanstra et al. 2016 review glycosomes as membrane-bounded specialized peroxisomes.</small></li></ul></td></tr>
+<tr><td>glycosome lumen</td><td>is enclosed by</td><td>glycosome membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0034468"><code>GO:0034468</code></a> <small>GO:0034468 defines the glycosome lumen as the volume enclosed by the glycosome membrane.</small></li></ul></td></tr>
+<tr><td>PEX14 import docking machinery</td><td>resides in</td><td>glycosome membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1046/j.1432-1033.2003.03582.x"><code>DOI:10.1046/j.1432-1033.2003.03582.x</code></a> <small>Choe et al. 2003 characterized Trypanosoma brucei PEX14 and its interaction with TbPEX5.</small></li></ul></td></tr>
+<tr><td>PEX14 import docking machinery</td><td>supports</td><td>glycosomal matrix protein import</td><td><ul class="evidence"><li><a href="https://doi.org/10.1046/j.1432-1033.2003.03582.x"><code>DOI:10.1046/j.1432-1033.2003.03582.x</code></a> <small>Choe et al. 2003 linked TbPEX14 to glycosomal matrix-protein import.</small></li><li><a href="https://doi.org/10.1016/j.bbamcr.2015.09.015"><code>DOI:10.1016/j.bbamcr.2015.09.015</code></a> <small>Haanstra et al. 2016 review PEX import machinery as part of trypanosomatid glycosome biogenesis.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the generic lipid constituent of the glycosome membrane. <small>The record is exactly grounded to GO:0046860, but no glycosome-specific lipid or lipid-bilayer CURIE was curated for the membrane constituent.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0046860"><code>GO:0046860</code></a> <small>Gene Ontology cellular-component term for the glycosome membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005778"><code>GO:0005778</code></a> <small>Gene Ontology cellular-component parent term for peroxisomal membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0020015"><code>GO:0020015</code></a> <small>Gene Ontology cellular-component term for the containing glycosome.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0034468"><code>GO:0034468</code></a> <small>Gene Ontology cellular-component term for the glycosome lumen bounded by the glycosome membrane.</small></li><li><code>uniprot.location:SL-0128</code> <small>UniProt Subcellular Location entry SL-0128 maps directly to GO:0046860 and lists glycosomal membrane as an exact synonym.</small></li><li><a href="https://doi.org/10.1046/j.1432-1033.2003.03582.x"><code>DOI:10.1046/j.1432-1033.2003.03582.x</code></a> <small>Choe et al. 2003, Characterization of Trypanosoma brucei PEX14 and its role in the import of glycosomal matrix proteins, European Journal of Biochemistry.</small></li><li><a href="https://doi.org/10.1016/j.bbamcr.2015.09.015"><code>DOI:10.1016/j.bbamcr.2015.09.015</code></a> <small>Haanstra et al. 2016, Biogenesis, maintenance and dynamics of glycosomes in trypanosomatid parasites, Biochimica et Biophysica Acta - Molecular Cell Research.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-13T14:56:06Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-13T14:56:56Z</code> codex · EXPANDED_RECORD — Added the UniProt SL glycosomal-membrane synonym and xref, peroxisomal-membrane parentage, glycosome parthood, a label-only lipid-bilayer component, Kinetoplastea/Trypanosoma scope, a matrix-import boundary function, GO/UniProt/DOI evidence, a nonmechanistic glycosome-membrane topology graph, and a lipid-grounding TODO.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/glycosome_membrane.yaml"><code>data/structures/membrane_organelle/glycosome_membrane.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
