@@ -1,0 +1,237 @@
+identifier: GO:0009526
+label: plastid envelope
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The double lipid bilayer enclosing a plastid and separating its contents
+  from the rest of the cytoplasm; includes the intermembrane space.
+definition_source: GO:0009526
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T20:52:57Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T20:54:00Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added organelle-envelope parentage, plastid parthood, inner/outer membrane
+    and intermembrane-space parts, the UniProt SL-0210 xref, Viridiplantae/Chlamydomonas
+    scope, compartmentalization function, GO/UniProt/DOI evidence, a nonmechanistic
+    envelope topology graph, and a resolved generic-scope interpretation.
+  llm_assisted: true
+parent_structures:
+- GO:0031967
+part_of:
+- GO:0009536
+has_part:
+- GO:0009527
+- GO:0009528
+- GO:0009529
+xrefs:
+- uniprot.location:SL-0210
+components:
+- component_id: plastid_outer_membrane
+  label: plastid outer membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0009527
+  essentiality: UNKNOWN
+  role: Cytoplasm-facing lipid bilayer of the double plastid envelope.
+  evidence:
+  - reference: GO:0009527
+    notes: GO:0009527 defines plastid outer membrane as the cytoplasm-facing lipid
+      bilayer of the plastid envelope.
+  - reference: uniprot.location:SL-0214
+    notes: UniProt SL-0214 identifies plastid outer membrane as the plastid membrane
+      facing the cytoplasm.
+- component_id: plastid_inner_membrane
+  label: plastid inner membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0009528
+  essentiality: UNKNOWN
+  role: Stroma-facing lipid bilayer that separates the plastid stroma from the plastid
+    intermembrane space.
+  evidence:
+  - reference: GO:0009528
+    notes: GO:0009528 defines plastid inner membrane as the lumen-facing plastid-envelope
+      bilayer that also faces the plastid stroma.
+  - reference: uniprot.location:SL-0211
+    notes: UniProt SL-0211 identifies plastid inner membrane as separating the plastid
+      stroma from the intermembrane space.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Green algae and land plants carry primary plastids with a double plastid envelope
+    derived from cyanobacterial primary endosymbiosis.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: The Chlamydomonas reinhardtii chloroplast has a double plastid envelope crossed
+    by TOC-TIC protein-import machinery.
+  reference: DOI:10.1016/j.cell.2022.10.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model used to resolve a TOC-TIC supercomplex spanning the two
+    chloroplast envelope membranes.
+  reference: DOI:10.1016/j.cell.2022.10.030
+functions:
+- function_id: plastid_compartmentalization
+  label: plastid compartmentalization
+  description: The double plastid envelope separates plastid contents from the surrounding
+    cytoplasm.
+  evidence:
+  - reference: GO:0009526
+    notes: GO:0009526 defines the plastid envelope as the double lipid bilayer enclosing
+      a plastid and separating it from the cytoplasm.
+  - reference: uniprot.location:SL-0210
+    notes: UniProt SL-0210 describes the plastid envelope as comprising the inner
+      and outer plastid membranes plus the intermembrane space.
+evidence:
+- reference: GO:0009526
+  notes: Gene Ontology cellular-component term for plastid envelope.
+- reference: GO:0031967
+  notes: Gene Ontology cellular-component term for organelle envelope.
+- reference: GO:0009536
+  notes: Gene Ontology cellular-component term for plastid.
+- reference: GO:0009527
+  notes: Gene Ontology cellular-component term for plastid outer membrane.
+- reference: GO:0009528
+  notes: Gene Ontology cellular-component term for plastid inner membrane.
+- reference: GO:0009529
+  notes: Gene Ontology cellular-component term for plastid intermembrane space.
+- reference: GO:0009532
+  notes: Gene Ontology cellular-component term for plastid stroma.
+- reference: uniprot.location:SL-0210
+  notes: UniProt Subcellular Location entry SL-0210 maps Plastid envelope to GO:0009526.
+- reference: uniprot.location:SL-0211
+  notes: UniProt Subcellular Location entry SL-0211 maps Plastid inner membrane to
+    GO:0009528.
+- reference: uniprot.location:SL-0212
+  notes: UniProt Subcellular Location entry SL-0212 maps Plastid intermembrane space
+    to GO:0009529.
+- reference: uniprot.location:SL-0214
+  notes: UniProt Subcellular Location entry SL-0214 maps Plastid outer membrane to
+    GO:0009527.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1016/j.cell.2022.10.030
+  notes: Jin et al. 2022, Structure of a TOC-TIC supercomplex spanning two chloroplast
+    envelope membranes, Cell.
+causal_graphs:
+- graph_id: plastid_envelope_topology
+  title: Plastid envelope delimits the stroma
+  description: The plastid envelope comprises cytoplasm-facing outer and stroma-facing
+    inner membranes separated by the intermembrane space.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures generic double-envelope topology without asserting
+    plastid-specific protein translocons, cyanelle peptidoglycan, or extra membranes
+    from complex plastids.
+  nodes:
+  - node_id: plastid_envelope
+    label: plastid envelope
+    node_type: STRUCTURE
+    grounding: GO:0009526
+  - node_id: plastid
+    label: plastid
+    node_type: ORGANELLE
+    grounding: GO:0009536
+  - node_id: plastid_outer_membrane
+    label: plastid outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009527
+    component_ref: plastid_outer_membrane
+  - node_id: plastid_inner_membrane
+    label: plastid inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0009528
+    component_ref: plastid_inner_membrane
+  - node_id: plastid_intermembrane_space
+    label: plastid intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009529
+  - node_id: plastid_stroma
+    label: plastid stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009532
+  - node_id: cytoplasm
+    label: cytoplasm
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005737
+  edges:
+  - subject: plastid_envelope
+    predicate: encloses
+    object: plastid
+    description: The double plastid envelope encloses the plastid and separates its
+      contents from the cytoplasm.
+    evidence:
+    - reference: GO:0009526
+      notes: GO:0009526 defines the plastid envelope as enclosing a plastid and separating
+        its contents from the rest of the cytoplasm.
+  - subject: plastid_outer_membrane
+    predicate: is part of
+    object: plastid_envelope
+    description: The plastid outer membrane is the cytoplasm-facing lipid bilayer
+      of the plastid envelope.
+    evidence:
+    - reference: GO:0009527
+      notes: GO:0009527 defines the outer membrane by its cytoplasm-facing position
+        in the plastid envelope.
+  - subject: plastid_inner_membrane
+    predicate: is part of
+    object: plastid_envelope
+    description: The plastid inner membrane is the stroma-facing lipid bilayer of
+      the plastid envelope.
+    evidence:
+    - reference: GO:0009528
+      notes: GO:0009528 defines the inner membrane as the plastid-envelope bilayer
+        that faces the plastid stroma.
+  - subject: plastid_envelope
+    predicate: contains
+    object: plastid_intermembrane_space
+    description: The plastid intermembrane space lies between the inner and outer
+      lipid bilayers of the envelope.
+    evidence:
+    - reference: GO:0009529
+      notes: GO:0009529 defines the plastid intermembrane space as the region between
+        the two lipid bilayers of the plastid envelope.
+  - subject: plastid_inner_membrane
+    predicate: bounds
+    object: plastid_stroma
+    description: The inner plastid membrane faces the stroma enclosed by the plastid
+      double membrane.
+    evidence:
+    - reference: GO:0009528
+      notes: GO:0009528 defines plastid inner membrane as the bilayer that also faces
+        the plastid stroma.
+    - reference: GO:0009532
+      notes: GO:0009532 identifies the plastid stroma as the ground substance of plastids.
+discussions:
+- discussion_id: generic_plastid_envelope_scope
+  prompt: Keep lineage-specific protein translocases, peptidoglycan, and extra complex-plastid
+    membranes on exact child records.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#plastid_envelope_topology
+  rationale: GO:0009526 and UniProt SL-0210 model the primary double plastid envelope
+    as inner membrane, intermembrane space, and outer membrane. Chloroplast, cyanelle,
+    chromatophore, and complex plastid lineages can add specific translocases, peptidoglycan
+    layers, retained outer membranes, or additional host-derived membranes in exact
+    child records.
+  resolution_note: Curated only generic GO inner-membrane, outer-membrane, and intermembrane-space
+    topology in this record.
+  evidence:
+  - reference: GO:0009526
+    notes: GO:0009526 defines the generic plastid envelope as a double lipid bilayer.
+  - reference: uniprot.location:SL-0210
+    notes: UniProt SL-0210 defines the plastid envelope as the inner and outer plastid
+      membrane plus the intermembrane space.
+  posed_by: codex
+  posed_date: '2026-09-13'
