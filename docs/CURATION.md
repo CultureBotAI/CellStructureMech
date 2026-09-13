@@ -268,8 +268,10 @@ Source-specific commands (all dry-run unless `--apply` is present):
   `family`, and requires every protein response to be reviewed. Its fixed
   curator-reviewed allow-list must have an unchanged family consensus across
   all component scope examples. Domains and homologous superfamilies are never
-  promoted to family groundings; combined alpha/beta-carboxysome components and
-  MamK/MamJ are recorded as `REVIEWED_LABEL_ONLY` when their families differ.
+  promoted to family groundings; combined alpha/beta-carboxysome components are
+  recorded as `REVIEWED_LABEL_ONLY` when their families differ, and MamK remains
+  label-only because the shared Actin and MreB/MamK-like families are broader
+  than magnetosome MamK proteins.
 - `scripts/cryoet_data_portal.py` resolves fixed, curator-reviewed dataset,
   run and annotation identifiers through the official GraphQL endpoint. It
   requires an exact NCBI taxon already asserted by the target record and either

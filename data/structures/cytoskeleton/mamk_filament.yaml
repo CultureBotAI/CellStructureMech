@@ -1,0 +1,199 @@
+identifier: cellstructuremech:mamk_filament
+label: MamK filament
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: An actin-like bacterial cytoskeletal filament assembled from MamK proteins
+  that runs alongside magnetosomes in magnetotactic bacteria and helps organize the
+  organelles into chains.
+definition_source: DOI:10.1126/science.1123231
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T08:09:18Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T08:10:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoskeleton parentage, MamK filament synonymy, a label-only MamK
+    component with AMB-1 and MSR-1 UniProt examples, magnetotactic-bacterium scope,
+    DOI/PDB/EMDB evidence, a nonmechanistic magnetosome-chain graph, and a MamK-family
+    grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-13T08:15:28Z'
+  curator: codex
+  action: REVIEW_MAMK_INTERPRO_SCOPE
+  changes: Narrowed the MamK grounding note to the exact InterPro families reviewed
+    for the AMB-1 and MSR-1 MamK examples.
+  llm_assisted: true
+parent_structures:
+- GO:0005856
+synonyms:
+- synonym_text: MamK actin-like filament
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1002/pro.2979
+- synonym_text: magnetosome-associated MamK filament
+  synonym_type: EXACT_SYNONYM
+  source: PDB:5JYG
+components:
+- component_id: mamk_actin_homolog
+  label: MamK actin homolog
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - mamK
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: IPR004000 is the generic actin family and IPR056546 covers MreB/MamK-like
+    proteins, so no exact family denotes filament-forming magnetosome MamK proteins.
+  role: Bacterial actin homolog that polymerizes into the cytoskeletal filament associated
+    with magnetosome chains.
+  evidence:
+  - reference: DOI:10.1126/science.1123231
+    notes: Komeili et al. 2006 identified MamK as the actin-like protein organizing
+      magnetosomes in Paramagnetospirillum magneticum AMB-1.
+  - reference: DOI:10.1002/pro.2979
+    notes: Bergeron et al. 2017 reported a cryo-EM structure of a polymerized MamK
+      filament.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q2W8Q6
+    protein_label: Actin-like protein MamK
+    gene_symbol: mamK
+    taxon_id: NCBITaxon:342108
+    taxon_label: Paramagnetospirillum magneticum AMB-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-13'
+    role: Reviewed AMB-1 MamK accession aligned by RCSB to the polymer entity in the
+      PDB:5JYG MamK filament cryo-EM model.
+    evidence:
+    - reference: PDB:5JYG
+      notes: RCSB PDB entry 5JYG is a 6.5 A cryo-EM structure of the Paramagnetospirillum
+        magneticum AMB-1 MamK filament associated with EMDB map EMD-8180.
+  - uniprot_id: UniProtKB:Q6NE59
+    protein_label: Actin-like protein MamK
+    gene_symbol: mamK
+    taxon_id: NCBITaxon:431944
+    taxon_label: Magnetospirillum gryphiswaldense MSR-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: The single reviewed UniProtKB entry for gene mamK in Magnetospirillum gryphiswaldense
+      MSR-1.
+    evidence:
+    - reference: PMID:20487281
+      notes: Katzmann et al. 2010 studied the effect of mamK loss on magnetosome formation
+        and chain assembly in Magnetospirillum gryphiswaldense.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: RARE
+  note: MamK filaments are restricted to magnetotactic bacterial lineages; the directly
+    studied strains are magnetospirilla.
+  reference: DOI:10.1038/nrmicro.2016.99
+canonical_examples:
+- taxon_id: NCBITaxon:342108
+  taxon_label: Paramagnetospirillum magneticum AMB-1
+  note: Model strain in which MamK was tied to magnetosome-chain organization and
+    source of the MamK cryo-EM filament model PDB:5JYG.
+  reference: DOI:10.1126/science.1123231
+- taxon_id: NCBITaxon:431944
+  taxon_label: Magnetospirillum gryphiswaldense MSR-1
+  note: Model strain used to test MamK function in magnetosome chain assembly.
+  reference: PMID:20487281
+functions:
+- function_id: magnetosome_chain_organization
+  label: magnetosome chain organization
+  description: Organizes magnetosome organelles into an intracellular chain aligned
+    with the cell axis.
+  evidence:
+  - reference: DOI:10.1126/science.1123231
+    notes: Komeili et al. 2006 showed that MamK is required for proper subcellular
+      organization of magnetosome chains in AMB-1.
+  - reference: PMID:20487281
+    notes: Katzmann et al. 2010 connected loss of MamK with magnetosome formation
+      and chain-assembly defects in MSR-1.
+evidence:
+- reference: DOI:10.1126/science.1123231
+  notes: Komeili, Li, Newman and Jensen 2006, Magnetosomes Are Cell Membrane Invaginations
+    Organized by the Actin-Like Protein MamK, Science.
+- reference: DOI:10.1002/pro.2979
+  notes: Bergeron, Hutto, Ozyamak et al. 2017, Structure of the magnetosome-associated
+    actin-like MamK filament at subnanometer resolution, Protein Science.
+- reference: PDB:5JYG
+  notes: RCSB PDB entry 5JYG is the atomic model for the 6.5 A MamK filament cryo-EM
+    reconstruction from Paramagnetospirillum magneticum AMB-1.
+- reference: EMDB:EMD-8180
+  notes: EMDB entry EMD-8180 is the helical-reconstruction map paired with PDB:5JYG
+    for the MamK filament.
+- reference: DOI:10.1038/nrmicro.2016.99
+  notes: Uebe and Schuler 2016 reviewed MamK/MamJ-dependent magnetosome chain organization
+    in magnetotactic bacteria.
+causal_graphs:
+- graph_id: mamk_filament_aligns_magnetosomes
+  title: MamK filaments organize magnetosome chains
+  description: MamK proteins polymerize into cytoskeletal filaments that run along
+    magnetosome chains and help maintain the organelles in a linear arrangement.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records MamK polymerization and magnetosome-chain organization
+    without modeling filament turnover, MamJ/LimJ exchange, or segregation of chains
+    into daughter cells.
+  nodes:
+  - node_id: mamk
+    label: MamK actin homolog
+    node_type: GENE_OR_PROTEIN
+    component_ref: mamk_actin_homolog
+  - node_id: mamk_filament
+    label: MamK filament
+    node_type: STRUCTURE
+    grounding: cellstructuremech:mamk_filament
+  - node_id: magnetosome
+    label: magnetosome
+    node_type: STRUCTURE
+    grounding: GO:0110143
+  - node_id: magnetosome_chain
+    label: magnetosome chain
+    node_type: STRUCTURE
+  edges:
+  - subject: mamk
+    predicate: polymerizes into
+    object: mamk_filament
+    description: MamK monomers polymerize into an actin-like cytoskeletal filament.
+    evidence:
+    - reference: DOI:10.1002/pro.2979
+      notes: Bergeron et al. 2017 solved the polymerized MamK filament by cryo-EM.
+  - subject: mamk_filament
+    predicate: organizes
+    object: magnetosome
+    description: MamK filaments run alongside magnetosome organelles and help position
+      them inside the cell.
+    evidence:
+    - reference: DOI:10.1126/science.1123231
+      notes: Komeili et al. 2006 used electron cryotomography to connect cytoskeletal
+        filaments and MamK with magnetosome organization in AMB-1 cells.
+  - subject: mamk_filament
+    predicate: aligns
+    object: magnetosome_chain
+    description: MamK/MamJ-dependent filament organization keeps magnetosomes in a
+      linear chain.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.99
+      notes: Uebe and Schuler 2016 describe MamK/MamJ-dependent magnetosome chain
+        organization.
+discussions:
+- discussion_id: resolve_mamk_family_grounding
+  prompt: Resolve an exact source-neutral InterPro, Pfam, or NCBIfam identifier for
+    filament-forming magnetosome MamK proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mamk_actin_homolog
+  rationale: This record represents the magnetosome-associated MamK filament without
+    asserting that a broader bacterial actin, MreB/MamK-like, or domain-level accession
+    exactly denotes MamK filament subunits.
+  evidence:
+  - reference: PDB:5JYG
+    notes: RCSB links the experimentally solved MamK filament polymer entity to UniProtKB:Q2W8Q6
+      but not to a source-neutral exact MamK-family accession.
+  posed_by: codex
+  posed_date: '2026-09-13'

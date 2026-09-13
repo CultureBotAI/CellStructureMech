@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mamk_filament.yaml
+  slug: mamk_filament
+session:
+  id: 2026-09-13T081610Z-codex-9427ac
+  timestamp: '2026-09-13T08:16:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - records
+  - evidence
+  - components
+  - mappings
+  summary: Added the MamK filament record
+  details: Added an evidence-backed MamK filament CellStructureRecord with GO cytoskeleton
+    parentage, exact MamK filament synonymy, reviewed AMB-1 and MSR-1 MamK protein examples,
+    PDB:5JYG and EMDB:EMD-8180 cryo-EM evidence, a nonmechanistic magnetosome-chain organization
+    graph, an InterPro-reviewed MamK label-only decision, and a curation TODO for resolving
+    an exact MamK-family grounding. Split the existing magnetosome associated-machinery component
+    so MamK now grounds to the new filament record and MamJ is separately grounded to InterPro:IPR060787,
+    then refreshed the InterPro fixed review allow-list for the current reviewed protein examples.

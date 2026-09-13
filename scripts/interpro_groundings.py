@@ -7,10 +7,10 @@ exactly ``family`` and verifies that every source protein is a reviewed
 UniProtKB entry.  It never searches labels or chooses the first result.
 
 Mappings are an allow-list reviewed against component scope on 2026-09-01.
-For combined components, additional alpha/beta-carboxysome or MamK/MamJ scope
-examples are checked even when they are not stored as record examples.  A
-family is written only when the exact family consensus is unambiguous across
-that scope.  Otherwise the adapter records ``REVIEWED_LABEL_ONLY`` and why.
+For combined components, additional alpha/beta-carboxysome scope examples are
+checked even when they are not stored as record examples.  A family is written
+only when the exact family consensus is unambiguous across that scope.
+Otherwise the adapter records ``REVIEWED_LABEL_ONLY`` and why.
 Dry-run is the default; pass ``--apply`` to write validated records.
 """
 
@@ -64,9 +64,13 @@ REVIEWS = (
         "bacterial-type flagellum",
         "flagellin",
         "flagellin (FliC)",
-        ("P02968",),
-        ("P02968",),
-        (ExpectedFamily("P02968", "IPR001492", "Flagellin"),),
+        ("P02968", "P06179", "P52616"),
+        ("P02968", "P06179", "P52616"),
+        (
+            ExpectedFamily("P02968", "IPR001492", "Flagellin"),
+            ExpectedFamily("P06179", "IPR001492", "Flagellin"),
+            ExpectedFamily("P52616", "IPR001492", "Flagellin"),
+        ),
         ("IPR001492",),
         grounding="InterPro:IPR001492",
     ),
@@ -75,9 +79,12 @@ REVIEWS = (
         "bacterial-type flagellum",
         "hook",
         "hook protein (FlgE)",
-        (),
-        ("P75937",),
-        (ExpectedFamily("P75937", "IPR020013", "Flagellar hook-basal body protein, FlgE/F/G"),),
+        ("P0A1J1",),
+        ("P75937", "P0A1J1"),
+        (
+            ExpectedFamily("P75937", "IPR020013", "Flagellar hook-basal body protein, FlgE/F/G"),
+            ExpectedFamily("P0A1J1", "IPR020013", "Flagellar hook-basal body protein, FlgE/F/G"),
+        ),
         ("IPR020013",),
         grounding_notes=(
             "IPR012835 'Flagellar hook FlgE' denotes this component exactly, but InterPro does "
@@ -94,7 +101,7 @@ REVIEWS = (
         "carboxysome",
         "bmc_h",
         "BMC-H shell hexamers (CcmK / CsoS1)",
-        ("Q03511", "Q31RK2", "Q31RK3"),
+        ("Q03511", "Q31RK2", "Q31RK3", "P45689"),
         ("Q03511", "Q31RK2", "Q31RK3", "P45689", "P45688", "P45690"),
         (
             ExpectedFamily("Q03511", "IPR046380", "Carboxysome shell protein CcmK"),
@@ -117,7 +124,7 @@ REVIEWS = (
         "carboxysome",
         "bmc_p",
         "BMC-P shell pentamers (CcmL / CsoS4)",
-        ("Q03512",),
+        ("Q03512", "O85043"),
         ("Q03512", "O85043", "O85044"),
         (
             ExpectedFamily("Q03512", "IPR046387", "Carboxysome shell vertex protein CcmL"),
@@ -160,7 +167,7 @@ REVIEWS = (
         "carboxysome",
         "scaffold",
         "cargo scaffold (CcmM / CsoS2)",
-        ("Q03513",),
+        ("Q03513", "O85041"),
         ("Q03513", "O85041"),
         (
             ExpectedFamily("Q03513", "IPR017156", "Carboxysome assembly protein CcmM"),
@@ -204,19 +211,34 @@ REVIEWS = (
     Review(
         "GO:0110143",
         "magnetosome",
-        "mamk_filament",
-        "MamK actin-like filament",
-        ("V6F519",),
-        ("V6F519", "Q6NE59"),
+        "mamj_connector",
+        "MamJ connector",
+        ("V6F519", "Q2W8Q7"),
+        ("V6F519", "Q2W8Q7"),
         (
             ExpectedFamily("V6F519", "IPR060787", "Magnetosome protein MamJ"),
+            ExpectedFamily("Q2W8Q7", "IPR060787", "Magnetosome protein MamJ"),
+        ),
+        ("IPR060787",),
+        grounding="InterPro:IPR060787",
+    ),
+    Review(
+        "cellstructuremech:mamk_filament",
+        "MamK filament",
+        "mamk_actin_homolog",
+        "MamK actin homolog",
+        ("Q2W8Q6", "Q6NE59"),
+        ("Q2W8Q6", "Q6NE59"),
+        (
+            ExpectedFamily("Q2W8Q6", "IPR004000", "Actin family"),
+            ExpectedFamily("Q2W8Q6", "IPR056546", "MreB/MamK-like"),
+            ExpectedFamily("Q6NE59", "IPR004000", "Actin family"),
             ExpectedFamily("Q6NE59", "IPR056546", "MreB/MamK-like"),
         ),
-        (),
+        ("IPR004000", "IPR056546"),
         grounding_notes=(
-            "The component combines MamK and its MamJ connector. The stored MamJ example "
-            "has IPR060787, whereas reviewed MamK Q6NE59 has IPR056546; they share no "
-            "integrated InterPro family, so a single grounding would conflate distinct roles."
+            "IPR004000 is the generic actin family and IPR056546 covers MreB/MamK-like "
+            "proteins, so no exact family denotes filament-forming magnetosome MamK proteins."
         ),
     ),
 )
