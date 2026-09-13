@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>thylakoid · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>thylakoid</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009579"><code>GO:0009579</code></a> · MEMBRANE_ORGANELLE · OTHER · <span class="status">PROPOSED</span></p>
+<p class="definition">A membranous cellular structure that bears the photosynthetic pigments in photosynthetic bacteria and within chloroplasts. <small>[<a href="http://purl.obolibrary.org/obo/GO_0009579"><code>GO:0009579</code></a>]</small></p>
+<p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0042651"><code>GO:0042651</code></a> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0450</code> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-thylakoid_membrane"><td>thylakoid membrane</td><td>LIPID</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0042651"><code>GO:0042651</code></a></td><td></td><td></td><td>ESSENTIAL</td><td>Pigmented photosynthetic membrane that forms the thylakoid surface and houses photosynthetic electron-transport complexes.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042651"><code>GO:0042651</code></a> <small>GO:0042651 defines the thylakoid membrane as the pigmented membrane of cyanobacterial and plastid thylakoids.</small></li><li><a href="https://doi.org/10.1146/annurev-cellbio-120823-022747"><code>DOI:10.1146/annurev-cellbio-120823-022747</code></a> <small>Perez-Boerema et al. 2024 review thylakoids as specialized photosynthetic membrane systems across cyanobacteria, algae, and plants.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1117"><code>NCBITaxon:1117</code></a> Cyanobacteriota — <strong>COMMON</strong>: Most cyanobacteria have internal thylakoid membranes, while Gloeobacter-like lineages carry out oxygenic photosynthesis at the plasma membrane and lack thylakoids. [<a href="https://doi.org/10.1146/annurev-cellbio-120823-022747"><code>DOI:10.1146/annurev-cellbio-120823-022747</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_33090"><code>NCBITaxon:33090</code></a> Viridiplantae — <strong>COMMON</strong>: Photosynthetic green algae and land plants have plastid thylakoids inside chloroplasts. [<a href="https://doi.org/10.1146/annurev-cellbio-120823-022747"><code>DOI:10.1146/annurev-cellbio-120823-022747</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1148"><code>NCBITaxon:1148</code></a> <em>Synechocystis sp. PCC 6803</em> — Cyanobacterial model whose native thylakoid membrane network has been imaged to map photosynthetic-complex organization. [<a href="https://doi.org/10.1016/j.molp.2017.09.019"><code>DOI:10.1016/j.molp.2017.09.019</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>photosynthesis, light reaction</strong> <a href="http://purl.obolibrary.org/obo/GO_0019684"><code>GO:0019684</code></a> — Thylakoids provide the photosynthetic membrane system for light reactions in cyanobacteria, chloroplasts, cyanelles, and photosynthetic chromatophores.<ul class="evidence"><li><code>uniprot.location:SL-0450</code> <small>UniProt SL-0450 describes thylakoids as membranous structures containing photosynthetic pigments, reaction centers, and the electron-transport chain.</small></li><li><a href="https://doi.org/10.1146/annurev-cellbio-120823-022747"><code>DOI:10.1146/annurev-cellbio-120823-022747</code></a> <small>Perez-Boerema et al. 2024 review thylakoid membrane architecture as the conserved site of oxygenic photosynthetic light reactions.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-thylakoid_topology">Thylakoid membrane topology <small>(FUNCTION)</small></h3>
+<p>Thylakoids are photosynthetic membrane structures whose pigmented thylakoid membrane surface houses light-reaction electron-transport complexes.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>thylakoid</td><td>has part</td><td>thylakoid membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009579"><code>GO:0009579</code></a> <small>GO:0009579 identifies a thylakoid as a membranous photosynthetic structure.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0042651"><code>GO:0042651</code></a> <small>GO:0042651 identifies the membrane part of thylakoids.</small></li></ul></td></tr>
+<tr><td>thylakoid membrane</td><td>supports</td><td>photosynthesis, light reaction</td><td><ul class="evidence"><li><code>uniprot.location:SL-0450</code> <small>UniProt SL-0450 describes thylakoids as containing photosynthetic pigments, reaction centers, and the electron-transport chain.</small></li><li><a href="https://doi.org/10.1146/annurev-cellbio-120823-022747"><code>DOI:10.1146/annurev-cellbio-120823-022747</code></a> <small>Perez-Boerema et al. 2024 review thylakoid membranes as light-reaction membranes.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the whole thylakoid parent distinct from the generic thylakoid membrane. <small>GO:0009579 denotes the whole membranous thylakoid structure across photosynthetic bacteria and plastids, whereas GO:0042651 denotes the pigmented membrane constituent. The whole generic thylakoid also has multiple exact child lumen classes instead of one exact generic lumen term.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Represent thylakoid as a membranous cellular structure without asserting that it is an organelle. <small>GO:0009579 describes thylakoids as membranous cellular structures and scopes thylakoids away from the organelle class.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009579"><code>GO:0009579</code></a> <small>Gene Ontology cellular-component term for thylakoid.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0042651"><code>GO:0042651</code></a> <small>Gene Ontology cellular-component term for the thylakoid membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0019684"><code>GO:0019684</code></a> <small>Gene Ontology biological-process term for photosynthesis, light reaction.</small></li><li><code>uniprot.location:SL-0450</code> <small>UniProt Subcellular Location entry SL-0450 maps Thylakoid to GO:0009579.</small></li><li><a href="https://doi.org/10.1146/annurev-cellbio-120823-022747"><code>DOI:10.1146/annurev-cellbio-120823-022747</code></a> <small>Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual Review of Cell and Developmental Biology.</small></li><li><a href="https://doi.org/10.1016/j.molp.2017.09.019"><code>DOI:10.1016/j.molp.2017.09.019</code></a> <small>Casella et al. 2017, Dissecting the Native Architecture and Dynamics of Cyanobacterial Photosynthetic Machinery, Molecular Plant.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-13T22:19:25Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-13T22:20:00Z</code> codex · EXPANDED_RECORD — Added the UniProt SL-0450 xref, the GO:0042651 thylakoid membrane part and component, Cyanobacteriota and Viridiplantae scope, a photosynthesis light-reaction function, a nonmechanistic thylakoid-membrane topology graph, and resolved whole-thylakoid boundary decisions.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/thylakoid.yaml"><code>data/structures/membrane_organelle/thylakoid.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

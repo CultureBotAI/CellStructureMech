@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/thylakoid.yaml
+  slug: thylakoid
+session:
+  id: 2026-09-13T222027Z-codex-26fd1f
+  timestamp: '2026-09-13T22:20:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added thylakoid record
+  details: Created an evidence-backed GO:0009579 thylakoid record with UniProt SL-0450 provenance,
+    a GO:0042651 thylakoid membrane component, Cyanobacteriota and Viridiplantae scope, a
+    photosynthesis light-reaction function, a nonmechanistic thylakoid topology graph, and
+    resolved boundary decisions for whole thylakoids versus thylakoid membranes and non-organelle
+    structure_kind.

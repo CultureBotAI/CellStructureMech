@@ -1,0 +1,167 @@
+identifier: GO:0009579
+label: thylakoid
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: OTHER
+definition: A membranous cellular structure that bears the photosynthetic pigments
+  in photosynthetic bacteria and within chloroplasts.
+definition_source: GO:0009579
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T22:19:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T22:20:00Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL-0450 xref, the GO:0042651 thylakoid membrane part
+    and component, Cyanobacteriota and Viridiplantae scope, a photosynthesis light-reaction
+    function, a nonmechanistic thylakoid-membrane topology graph, and resolved whole-thylakoid
+    boundary decisions.
+  llm_assisted: true
+has_part:
+- GO:0042651
+xrefs:
+- uniprot.location:SL-0450
+components:
+- component_id: thylakoid_membrane
+  label: thylakoid membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0042651
+  essentiality: ESSENTIAL
+  role: Pigmented photosynthetic membrane that forms the thylakoid surface and houses
+    photosynthetic electron-transport complexes.
+  evidence:
+  - reference: GO:0042651
+    notes: GO:0042651 defines the thylakoid membrane as the pigmented membrane of
+      cyanobacterial and plastid thylakoids.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review thylakoids as specialized photosynthetic
+      membrane systems across cyanobacteria, algae, and plants.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteriota
+  presence: COMMON
+  note: Most cyanobacteria have internal thylakoid membranes, while Gloeobacter-like
+    lineages carry out oxygenic photosynthesis at the plasma membrane and lack thylakoids.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Photosynthetic green algae and land plants have plastid thylakoids inside
+    chloroplasts.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+canonical_examples:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  note: Cyanobacterial model whose native thylakoid membrane network has been imaged
+    to map photosynthetic-complex organization.
+  reference: DOI:10.1016/j.molp.2017.09.019
+functions:
+- function_id: photosynthesis_light_reaction
+  label: photosynthesis, light reaction
+  grounding: GO:0019684
+  description: Thylakoids provide the photosynthetic membrane system for light reactions
+    in cyanobacteria, chloroplasts, cyanelles, and photosynthetic chromatophores.
+  evidence:
+  - reference: uniprot.location:SL-0450
+    notes: UniProt SL-0450 describes thylakoids as membranous structures containing
+      photosynthetic pigments, reaction centers, and the electron-transport chain.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review thylakoid membrane architecture as the
+      conserved site of oxygenic photosynthetic light reactions.
+evidence:
+- reference: GO:0009579
+  notes: Gene Ontology cellular-component term for thylakoid.
+- reference: GO:0042651
+  notes: Gene Ontology cellular-component term for the thylakoid membrane.
+- reference: GO:0019684
+  notes: Gene Ontology biological-process term for photosynthesis, light reaction.
+- reference: uniprot.location:SL-0450
+  notes: UniProt Subcellular Location entry SL-0450 maps Thylakoid to GO:0009579.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
+- reference: DOI:10.1016/j.molp.2017.09.019
+  notes: Casella et al. 2017, Dissecting the Native Architecture and Dynamics of Cyanobacterial
+    Photosynthetic Machinery, Molecular Plant.
+causal_graphs:
+- graph_id: thylakoid_topology
+  title: Thylakoid membrane topology
+  description: Thylakoids are photosynthetic membrane structures whose pigmented thylakoid
+    membrane surface houses light-reaction electron-transport complexes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures whole-thylakoid topology shared by bacterial and
+    plastid thylakoids without asserting lineage-specific lumen identities, stacked
+    grana architecture, or complete photosystem composition.
+  nodes:
+  - node_id: thylakoid
+    label: thylakoid
+    node_type: STRUCTURE
+    grounding: GO:0009579
+  - node_id: thylakoid_membrane
+    label: thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0042651
+    component_ref: thylakoid_membrane
+  - node_id: photosynthesis_light_reaction
+    label: photosynthesis, light reaction
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0019684
+  edges:
+  - subject: thylakoid
+    predicate: has part
+    object: thylakoid_membrane
+    description: The thylakoid membrane is the pigmented membrane constituent of thylakoids.
+    evidence:
+    - reference: GO:0009579
+      notes: GO:0009579 identifies a thylakoid as a membranous photosynthetic structure.
+    - reference: GO:0042651
+      notes: GO:0042651 identifies the membrane part of thylakoids.
+  - subject: thylakoid_membrane
+    predicate: supports
+    object: photosynthesis_light_reaction
+    description: Pigmented thylakoid membranes host the reaction centers and electron-transport
+      chain that perform the light reactions of photosynthesis.
+    evidence:
+    - reference: uniprot.location:SL-0450
+      notes: UniProt SL-0450 describes thylakoids as containing photosynthetic pigments,
+        reaction centers, and the electron-transport chain.
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review thylakoid membranes as light-reaction
+        membranes.
+discussions:
+- discussion_id: whole_thylakoid_not_membrane
+  prompt: Keep the whole thylakoid parent distinct from the generic thylakoid membrane.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0009579 denotes the whole membranous thylakoid structure across photosynthetic
+    bacteria and plastids, whereas GO:0042651 denotes the pigmented membrane constituent.
+    The whole generic thylakoid also has multiple exact child lumen classes instead
+    of one exact generic lumen term.
+  resolution_note: Curated the whole thylakoid as the record identity and represented
+    GO:0042651 as an essential membrane component.
+  evidence:
+  - reference: GO:0009579
+    notes: GO:0009579 identifies the whole thylakoid.
+  - reference: GO:0042651
+    notes: GO:0042651 separately identifies the thylakoid membrane.
+  posed_by: codex
+  posed_date: '2026-09-13'
+- discussion_id: generic_thylakoid_kind
+  prompt: Represent thylakoid as a membranous cellular structure without asserting
+    that it is an organelle.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0009579 describes thylakoids as membranous cellular structures and
+    scopes thylakoids away from the organelle class.
+  resolution_note: Kept the filesystem category under MEMBRANE_ORGANELLE with other
+    lipid-bounded internal compartments, but set structure_kind to OTHER.
+  evidence:
+  - reference: GO:0009579
+  - reference: uniprot.location:SL-0450
+  posed_by: codex
+  posed_date: '2026-09-13'
