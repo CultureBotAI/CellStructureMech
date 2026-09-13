@@ -6054,6 +6054,37 @@
       ]
     },
     {
+      "identifier": "GO:0010006",
+      "label": "Toc complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009941",
+          "label": "chloroplast envelope",
+          "cosine_similarity": 0.73927843
+        },
+        {
+          "identifier": "GO:0005643",
+          "label": "nuclear pore",
+          "cosine_similarity": 0.71401762
+        },
+        {
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.69910945
+        },
+        {
+          "identifier": "GO:0044614",
+          "label": "nuclear pore cytoplasmic filaments",
+          "cosine_similarity": 0.69322967
+        },
+        {
+          "identifier": "GO:0009507",
+          "label": "chloroplast",
+          "cosine_similarity": 0.68931515
+        }
+      ]
+    },
+    {
       "identifier": "GO:1990061",
       "label": "bacterial degradosome",
       "neighbors": [
