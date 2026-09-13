@@ -10,6 +10,11 @@ session:
   - type: ai_agent
     name: codex
     agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/781
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/782
 events:
 - type: CREATE
   outcome: changed
@@ -22,8 +27,8 @@ events:
   - causal_graphs
   - discussions
   summary: Added GO-grounded rhoptry membrane record
-  details: Added a GO:0033016 rhoptry membrane record as a lipid-bilayer substructure of the
-    apicomplexan rhoptry. The record captures organelle-membrane parentage, a reviewed-label-only
-    rhoptry lipid bilayer component, Apicomplexa scope, Toxoplasma gondii as a canonical example,
-    a lumen-boundary function, a nonmechanistic rhoptry-membrane topology graph, GO/DOI evidence,
-    and an open TODO to ground the lipid constituent exactly.
+  details: Added a GO:0033016 rhoptry membrane record as a lipid-bilayer substructure of the apicomplexan
+    rhoptry. The record captures organelle-membrane parentage, a reviewed-label-only rhoptry lipid bilayer
+    component, Apicomplexa scope, Toxoplasma gondii as a canonical example, a lumen-boundary function,
+    a nonmechanistic rhoptry-membrane topology graph, GO/DOI evidence, and an open TODO to ground the
+    lipid constituent exactly.
