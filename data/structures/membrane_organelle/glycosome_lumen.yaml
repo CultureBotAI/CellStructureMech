@@ -1,0 +1,156 @@
+identifier: GO:0034468
+label: glycosome lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the glycosome membrane.
+definition_source: GO:0034468
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T14:40:17Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T14:40:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added glycosome matrix synonyms and the UniProt SL xref, organelle-lumen
+    parentage, glycosome parthood, Kinetoplastea and Trypanosoma scope, a glycolytic-compartmentation
+    function, GO/UniProt/DOI evidence, a nonmechanistic lumen-topology graph, and
+    a resolved boundary interpretation.
+  llm_assisted: true
+synonyms:
+- synonym_text: glycosomal lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0332
+- synonym_text: glycosomal matrix
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0332
+- synonym_text: glycosome matrix
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0332
+parent_structures:
+- GO:0043233
+part_of:
+- GO:0020015
+xrefs:
+- uniprot.location:SL-0332
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5653
+  taxon_label: Kinetoplastea
+  presence: COMMON
+  note: Glycosome lumina are the matrix compartments of specialized peroxisomes in
+    kinetoplastid protists.
+  reference: DOI:10.1016/j.bbamcr.2015.09.015
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: Kinetoplastid parasite whose glycosome lumen houses glycolytic enzymes required
+    to maintain controlled glucose catabolism.
+  reference: DOI:10.1073/pnas.0806664105
+functions:
+- function_id: glycosome_lumen_glycolysis
+  label: glycosome lumen glycolysis
+  description: The glycosome lumen is the matrix compartment that contains major glycolytic
+    enzymes and thereby compartmentalizes glycolytic flux in kinetoplastids.
+  evidence:
+  - reference: DOI:10.1016/0014-5793(77)80476-6
+    notes: Opperdoes and Borst 1977 localized nine glycolytic enzymes to Trypanosoma
+      brucei glycosomes.
+  - reference: DOI:10.1073/pnas.0806664105
+    notes: Haanstra et al. 2008 showed that mislocalizing glycosomal enzymes disrupts
+      glycolytic control in Trypanosoma brucei.
+evidence:
+- reference: GO:0034468
+  notes: Gene Ontology cellular-component term for glycosome lumen.
+- reference: GO:0043233
+  notes: Gene Ontology cellular-component term for organelle lumen, the broader organelle-enclosed
+    compartment parent.
+- reference: GO:0020015
+  notes: Gene Ontology cellular-component term for the containing glycosome.
+- reference: GO:0046860
+  notes: Gene Ontology cellular-component term for the glycosome membrane that encloses
+    the lumen.
+- reference: uniprot.location:SL-0332
+  notes: UniProt Subcellular Location entry SL-0332 maps directly to GO:0034468, places
+    the glycosome matrix under the glycosome subcellular location, and lists glycosomal
+    lumen, glycosomal matrix and glycosome lumen as exact synonyms.
+- reference: uniprot.location:SL-0128
+  notes: UniProt Subcellular Location entry SL-0128 maps the glycosome membrane to
+    GO:0046860.
+- reference: DOI:10.1016/0014-5793(77)80476-6
+  notes: 'Opperdoes and Borst 1977, Localization of nine glycolytic enzymes in a microbody-like
+    organelle in Trypanosoma brucei: the glycosome, FEBS Letters.'
+- reference: DOI:10.1073/pnas.0806664105
+  notes: Haanstra et al. 2008, Compartmentation prevents a lethal turbo-explosion
+    of glycolysis in trypanosomes, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1016/j.bbamcr.2015.09.015
+  notes: Haanstra et al. 2016, Biogenesis, maintenance and dynamics of glycosomes
+    in trypanosomatid parasites, Biochimica et Biophysica Acta - Molecular Cell Research.
+causal_graphs:
+- graph_id: glycosome_lumen_topology
+  title: Glycosome lumen topology
+  description: The glycosome lumen is the internal glycosome compartment enclosed
+    by the glycosome membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining lumenal boundary without duplicating
+    the whole-glycosome enzyme import or flux-control model.
+  nodes:
+  - node_id: glycosome_lumen
+    label: glycosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034468
+  - node_id: glycosome_membrane
+    label: glycosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0046860
+  - node_id: glycosome
+    label: glycosome
+    node_type: ORGANELLE
+    grounding: GO:0020015
+  edges:
+  - subject: glycosome_lumen
+    predicate: is part of
+    object: glycosome
+    description: The glycosome lumen is the internal matrix volume of a glycosome.
+    evidence:
+    - reference: GO:0034468
+      notes: GO:0034468 identifies the glycosome lumen cellular component.
+    - reference: uniprot.location:SL-0332
+      notes: UniProt SL-0332 places the glycosome matrix under the glycosome subcellular
+        location.
+    - reference: GO:0020015
+      notes: GO:0020015 identifies the containing glycosome.
+  - subject: glycosome_membrane
+    predicate: encloses
+    object: glycosome_lumen
+    description: The glycosome membrane encloses the glycosome lumen.
+    evidence:
+    - reference: GO:0034468
+      notes: GO:0034468 defines the glycosome lumen as the volume enclosed by the
+        glycosome membrane.
+    - reference: GO:0046860
+      notes: GO:0046860 identifies the membrane surrounding a glycosome.
+    - reference: DOI:10.1016/j.bbamcr.2015.09.015
+      notes: Haanstra et al. 2016 review glycosomes as membrane-bounded specialized
+        peroxisomes.
+discussions:
+- discussion_id: boundary_membrane_not_lumen_component
+  prompt: Keep the glycosome membrane as the boundary of the glycosome lumen rather
+    than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#glycosome_lumen_topology
+  rationale: GO:0034468 denotes the volume enclosed by the glycosome membrane, whereas
+    GO:0046860 denotes the membrane surrounding a glycosome.
+  resolution_note: Represented GO:0046860 as the boundary node in the topology graph
+    and left the lumen record without constituent components.
+  evidence:
+  - reference: GO:0034468
+    notes: GO:0034468 identifies the glycosome lumen.
+  - reference: GO:0046860
+    notes: GO:0046860 identifies the membrane that bounds the glycosome lumen.
+  posed_by: codex
+  posed_date: '2026-09-13'
