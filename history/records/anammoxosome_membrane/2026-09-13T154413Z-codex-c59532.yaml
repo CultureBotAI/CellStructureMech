@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/anammoxosome_membrane.yaml
+  slug: anammoxosome_membrane
+session:
+  id: 2026-09-13T154413Z-codex-c59532
+  timestamp: '2026-09-13T15:44:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added anammoxosome membrane structure
+  details: Created cellstructuremech:anammoxosome_membrane as a standalone membrane-organelle
+    record grounded in anammoxosome-membrane literature. The record captures membrane
+    parentage, anammoxosome parthood, a label-only ladderane-lipid-bilayer component,
+    anammox-bacterial taxonomic scope, a Candidatus Kuenenia stuttgartiensis example,
+    a permeability-barrier function, a nonmechanistic membrane topology graph, and
+    a curation TODO for exact ladderane-lipid-bilayer grounding.
