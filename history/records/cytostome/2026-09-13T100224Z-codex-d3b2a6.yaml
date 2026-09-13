@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cytostome.yaml
+  slug: cytostome
+session:
+  id: 2026-09-13T100224Z-codex-d3b2a6
+  timestamp: '2026-09-13T10:02:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added cytostome record
+  details: Curated a new GO:0031910 cytostome record with plasma-membrane parentage, Trypanosoma
+    cruzi scope, a T. cruzi cytostome-cytopharynx canonical example, an endocytic cargo uptake
+    function, a nonmechanistic cytostome-to-reservosome graph, and grounding TODOs for cytostome-cytopharynx
+    proteins and cytopharynx boundaries.

@@ -1,0 +1,139 @@
+identifier: GO:0031910
+label: cytostome
+structure_category: OTHER
+structure_kind: OTHER
+definition: Stable, specialized structure for the ingestion of food by the cell into
+  phagosomes.
+definition_source: GO:0031910
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T10:00:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T10:01:45Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added plasma-membrane parentage, Trypanosoma cruzi taxonomic scope, a T.
+    cruzi cytostome-cytopharynx canonical example, endocytic cargo uptake evidence,
+    a nonmechanistic cytostome-to-reservosome graph, and curation TODOs for cytostome
+    protein grounding and cytopharynx boundaries.
+  llm_assisted: true
+parent_structures:
+- GO:0005886
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5693
+  taxon_label: Trypanosoma cruzi
+  presence: VARIABLE
+  note: The cytostome-cytopharynx complex is a developmentally regulated endocytic
+    structure characterized in T. cruzi epimastigotes.
+  reference: DOI:10.1242/jcs.135491
+canonical_examples:
+- taxon_id: NCBITaxon:5693
+  taxon_label: Trypanosoma cruzi
+  note: Kinetoplastid parasite whose epimastigote cytostome-cytopharynx complex has
+    been reconstructed in three dimensions.
+  reference: DOI:10.1242/jcs.135491
+functions:
+- function_id: endocytic_cargo_uptake
+  label: endocytic cargo uptake
+  description: The T. cruzi epimastigote cytostome admits extracellular macromolecular
+    cargo into the endocytic route that passes through an early endosomal network
+    before reservosome storage.
+  evidence:
+  - reference: DOI:10.1078/0171-9335-00112
+    notes: Porto-Carreiro et al. 2000 traced endocytic cargo entering through the
+      cytostome and later reaching reservosomes in T. cruzi epimastigotes.
+evidence:
+- reference: GO:0031910
+  notes: Gene Ontology cellular-component term for cytostome.
+- reference: DOI:10.1006/expr.1999.4419
+  notes: Okuda et al. 1999, The cytostome of Trypanosoma cruzi epimastigotes is associated
+    with the flagellar complex, Experimental Parasitology.
+- reference: DOI:10.1078/0171-9335-00112
+  notes: 'Porto-Carreiro et al. 2000, Trypanosoma cruzi epimastigote endocytic pathway:
+    cargo enters the cytostome and passes through an early endosomal network before
+    storage in reservosomes, European Journal of Cell Biology.'
+- reference: DOI:10.1242/jcs.135491
+  notes: Alcantara et al. 2014, The three-dimensional structure of the cytostome-cytopharynx
+    complex of Trypanosoma cruzi epimastigotes, Journal of Cell Science.
+- reference: DOI:10.3389/fcimb.2019.00445
+  notes: Chasen et al. 2020, Identification and Localization of the First Known Proteins
+    of the Trypanosoma cruzi Cytostome Cytopharynx Endocytic Complex, Frontiers in
+    Cellular and Infection Microbiology.
+causal_graphs:
+- graph_id: cytostome_endocytic_entry
+  title: Cytostome entry feeds the reservosome endocytic route
+  description: In T. cruzi epimastigotes, extracellular cargo enters through the cytostome
+    before moving through the endocytic pathway toward posterior reservosomes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: cytostome
+    label: cytostome
+    node_type: STRUCTURE
+    grounding: GO:0031910
+  - node_id: endocytic_cargo
+    label: endocytic cargo
+    node_type: CHEMICAL
+  - node_id: early_endosomal_network
+    label: early endosomal network
+    node_type: ORGANELLE
+  - node_id: reservosome
+    label: reservosome
+    node_type: ORGANELLE
+    grounding: cellstructuremech:reservosome
+  edges:
+  - subject: cytostome
+    predicate: admits
+    object: endocytic_cargo
+    description: Macromolecular cargo enters the T. cruzi epimastigote endocytic pathway
+      through the cytostome.
+    evidence:
+    - reference: DOI:10.1078/0171-9335-00112
+      notes: Porto-Carreiro et al. 2000 traced cargo entry through the cytostome in
+        the epimastigote endocytic pathway.
+  - subject: endocytic_cargo
+    predicate: passes through
+    object: early_endosomal_network
+    description: Cargo internalized from the cytostome passes through an early endosomal
+      network.
+    evidence:
+    - reference: DOI:10.1078/0171-9335-00112
+      notes: Porto-Carreiro et al. 2000 placed an early endosomal network between
+        cytostome entry and reservosome storage.
+  - subject: endocytic_cargo
+    predicate: accumulates in
+    object: reservosome
+    description: Internalized protein and lipid cargo is delivered onward to reservosomes.
+    evidence:
+    - reference: DOI:10.1078/0171-9335-00112
+      notes: Porto-Carreiro et al. 2000 followed cargo from the cytostome route into
+        posterior reservosomes.
+discussions:
+- discussion_id: ground_cytostome_cytopharynx_protein_components
+  prompt: Resolve exact source-neutral family groundings for cytostome-cytopharynx
+    localized proteins before adding molecular components.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The first known T. cruzi cytostome-cytopharynx proteins were identified
+    by localization rather than by a curated exact InterPro, Pfam, NCBIfam or UniProt
+    family boundary in this pass.
+  evidence:
+  - reference: DOI:10.3389/fcimb.2019.00445
+  posed_by: codex
+  posed_date: '2026-09-13'
+- discussion_id: decide_cytopharynx_record_boundary
+  prompt: Decide whether the cytopharynx or the full cytostome-cytopharynx complex
+    needs a separate record after curating component-level evidence.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0031910 exactly denotes the cytostome opening, while the T. cruzi
+    literature usually characterizes the larger cytostome-cytopharynx complex; a future
+    boundary review should split a named cytopharynx record only if it can carry its
+    own identifier, composition and mechanism.
+  evidence:
+  - reference: DOI:10.1242/jcs.135491
+  posed_by: codex
+  posed_date: '2026-09-13'
