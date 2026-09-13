@@ -19,6 +19,12 @@ curation_history:
     chloroplast-envelope parthood, Viridiplantae and Chlamydomonas scope, and a nonmechanistic
     envelope topology graph.
   llm_assisted: true
+- timestamp: '2026-09-13T03:42:57Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #746 by clarifying the SL-0052 evidence note to separate plastid
+    intermembrane-space hierarchy from the chloroplast envelope host parent.'
+  llm_assisted: true
 synonyms:
 - synonym_text: chloroplastic intermembrane space
   synonym_type: EXACT_SYNONYM
@@ -64,8 +70,8 @@ evidence:
     that delimits this space.
 - reference: uniprot.location:SL-0052
   notes: UniProt Subcellular Location entry SL-0052 maps Chloroplast intermembrane
-    space to GO:0031972 and places it under both plastid intermembrane space and chloroplast
-    envelope.
+    space to GO:0031972, lists it in the Plastid, chloroplast intermembrane space
+    hierarchy, and names Chloroplast envelope as the host parent.
 - reference: uniprot.location:SL-0051
   notes: UniProt Subcellular Location entry SL-0051 maps Chloroplast inner membrane
     to GO:0009706 and describes it as separating the chloroplast stroma from the intermembrane
