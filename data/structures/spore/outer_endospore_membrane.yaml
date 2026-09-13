@@ -20,6 +20,18 @@ curation_history:
     distribution, a Bacillus subtilis example, GO and literature evidence, a nonmechanistic
     topology graph, and boundary/grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-13T01:07:55Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #729 by changing the cortex topology edge predicate from separates
+    to lies outside.'
+  llm_assisted: true
+- timestamp: '2026-09-13T01:10:05Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #728 by narrowing the outer endospore membrane boundary discussion
+    to the mature-spore scope supported by GO:0043594 and UniProt SL-0365.'
+  llm_assisted: true
 synonyms:
 - synonym_text: spore outer membrane
   synonym_type: EXACT_SYNONYM
@@ -122,7 +134,7 @@ causal_graphs:
     - reference: GO:0043591
       notes: GO:0043591 identifies the containing external encapsulating structure.
   - subject: outer_endospore_membrane
-    predicate: separates
+    predicate: lies outside
     object: endospore_cortex
     description: The outer endospore membrane lies outside the endospore cortex in
       the mature spore envelope.
@@ -144,21 +156,20 @@ causal_graphs:
         and coat.
 discussions:
 - discussion_id: mature_spore_outer_membrane_boundary
-  prompt: Keep the mature outer endospore membrane separate from developmental forespore
-    membrane annotations.
+  prompt: Keep the outer endospore membrane at mature-spore scope.
   kind: INTERPRETATION
   status: RESOLVED
-  rationale: GO:0043594 and UniProt SL-0365 denote the mature bacterial spore outer
-    membrane, whereas forespore inner and outer membranes are developmental localizations
-    in the smaller compartment of a sporulating cell.
-  resolution_note: Curated only the mature outer endospore membrane and used the UniProt
+  rationale: GO:0043594 denotes the outer membrane around a bacterial endospore, and
+    UniProt SL-0365 scopes the equivalent Spore outer membrane to the cortex membrane
+    of bacterial mature spores between the cortex and inner coat.
+  resolution_note: Curated the mature-spore GO:0043594 structure and used the UniProt
     SL-0365 Spore outer membrane xref.
   evidence:
   - reference: GO:0043594
     notes: GO:0043594 denotes the outer membrane around a bacterial endospore.
   - reference: uniprot.location:SL-0365
-    notes: UniProt SL-0365 is scoped to mature bacterial spores rather than forespores
-      during sporulation.
+    notes: UniProt SL-0365 maps Spore outer membrane to GO:0043594 and scopes the
+      location to bacterial mature spores.
 - discussion_id: outer_endospore_membrane_lipid_grounding
   prompt: Find an exact source-neutral grounding for outer endospore membrane lipids.
   kind: CURATION_TODO
