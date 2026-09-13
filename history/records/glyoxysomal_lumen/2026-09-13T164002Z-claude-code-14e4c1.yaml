@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/glyoxysomal_lumen.yaml
+  slug: glyoxysomal_lumen
+session:
+  id: 2026-09-13T164002Z-claude-code-14e4c1
+  timestamp: '2026-09-13T16:40:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - distribution
+  - exemplars
+  - function
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Create a GO-grounded glyoxysomal lumen record
+  details: Created GO:0031908 glyoxysomal lumen from the GO cellular-component term, the UniProt
+    SL-0333 mapping in subcell.txt, and the existing Neurospora crassa glyoxysome evidence.
+    Added GO:0043233 organelle-lumen parentage, GO:0009514 glyoxysome parthood, a Neurospora
+    distribution row and canonical example, a glyoxylate-cycle function, a nonmechanistic
+    lumen-topology graph, and a resolved interpretation that keeps the glyoxysomal membrane
+    as the enclosing boundary rather than a lumen component.

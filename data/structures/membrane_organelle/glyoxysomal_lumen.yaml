@@ -1,0 +1,171 @@
+identifier: GO:0031908
+label: glyoxysomal lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the glyoxysome membrane.
+definition_source: GO:0031908
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T16:38:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T16:39:26Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added glyoxysome matrix synonyms and the UniProt SL xref, organelle-lumen
+    parentage, glyoxysome parthood, Neurospora scope, a glyoxylate-cycle function,
+    GO/UniProt/DOI evidence, a nonmechanistic lumen-topology graph, and a resolved
+    boundary interpretation.
+  llm_assisted: true
+- timestamp: '2026-09-13T16:43:21Z'
+  curator: codex
+  action: ADDRESS_VALIDATION
+  changes: Normalized the GO:0006097 glyoxylate-cycle function label to the authority
+    label required by id-label correspondence validation.
+  llm_assisted: true
+synonyms:
+- synonym_text: glyoxysomal matrix
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0333
+- synonym_text: glyoxysome lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0333
+- synonym_text: glyoxysome matrix
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0333
+parent_structures:
+- GO:0043233
+part_of:
+- GO:0009514
+xrefs:
+- uniprot.location:SL-0333
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5141
+  taxon_label: Neurospora crassa
+  presence: COMMON
+  note: Neurospora crassa forms acetate-induced glyoxysomes with luminal matrix enzymes
+    targeted through C-terminal glyoxysomal targeting signals.
+  reference: DOI:10.1007/BF00309930
+canonical_examples:
+- taxon_id: NCBITaxon:5141
+  taxon_label: Neurospora crassa
+  note: Filamentous-fungal model used to test import of matrix proteins into the glyoxysomal
+    lumen under acetate-induced growth conditions.
+  reference: DOI:10.1007/BF00309930
+functions:
+- function_id: glyoxysome_lumen_glyoxylate_cycle
+  label: glyoxylate cycle
+  grounding: GO:0006097
+  description: The glyoxysomal lumen is the matrix compartment that contains glyoxylate-cycle
+    enzymes.
+  evidence:
+  - reference: GO:0009514
+    notes: GO:0009514 defines glyoxysomes as peroxisome specializations that contain
+      glyoxylate-pathway enzymes.
+  - reference: DOI:10.1007/BF00309930
+    notes: de Zoysa and Connerton 1994 studied targeting of matrix enzymes into Neurospora
+      crassa glyoxysomes.
+evidence:
+- reference: GO:0031908
+  notes: Gene Ontology cellular-component term for glyoxysomal lumen.
+- reference: GO:0043233
+  notes: Gene Ontology cellular-component term for organelle lumen, the broader organelle-enclosed
+    compartment parent.
+- reference: GO:0009514
+  notes: Gene Ontology cellular-component term for the containing glyoxysome.
+- reference: GO:0046861
+  notes: Gene Ontology cellular-component term for the glyoxysomal membrane that encloses
+    the lumen.
+- reference: GO:0006097
+  notes: Gene Ontology biological-process term for the glyoxylate cycle.
+- reference: uniprot.location:SL-0333
+  notes: UniProt Subcellular Location entry SL-0333 maps Glyoxysome matrix to GO:0031908,
+    places it under Glyoxysome, and lists glyoxysomal lumen, glyoxysomal matrix, and
+    glyoxysome lumen as exact synonyms.
+- reference: uniprot.location:SL-0130
+  notes: UniProt Subcellular Location entry SL-0130 maps Glyoxysome membrane to GO:0046861.
+- reference: DOI:10.1007/BF00309930
+  notes: de Zoysa and Connerton 1994, The function and specificity of the C-terminal
+    tripeptide glyoxysomal targeting signal in Neurospora crassa, Current Genetics.
+causal_graphs:
+- graph_id: glyoxysome_lumen_topology
+  title: Glyoxysomal lumen topology
+  description: The glyoxysomal lumen is the internal glyoxysome compartment enclosed
+    by the glyoxysomal membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining lumenal boundary without duplicating
+    the whole-glyoxysome enzyme-import or glyoxylate-cycle model.
+  nodes:
+  - node_id: glyoxysomal_lumen
+    label: glyoxysomal lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031908
+  - node_id: glyoxysomal_membrane
+    label: glyoxysomal membrane
+    node_type: STRUCTURE
+    grounding: GO:0046861
+  - node_id: glyoxysome
+    label: glyoxysome
+    node_type: ORGANELLE
+    grounding: GO:0009514
+  - node_id: glyoxylate_cycle
+    label: glyoxylate cycle
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006097
+  edges:
+  - subject: glyoxysomal_lumen
+    predicate: is part of
+    object: glyoxysome
+    description: The glyoxysomal lumen is the matrix volume inside a glyoxysome.
+    evidence:
+    - reference: GO:0031908
+      notes: GO:0031908 identifies the glyoxysomal lumen cellular component.
+    - reference: uniprot.location:SL-0333
+      notes: UniProt SL-0333 places the glyoxysome matrix under the glyoxysome subcellular
+        location.
+    - reference: GO:0009514
+      notes: GO:0009514 identifies the containing glyoxysome.
+  - subject: glyoxysomal_membrane
+    predicate: encloses
+    object: glyoxysomal_lumen
+    description: The glyoxysomal membrane encloses the glyoxysomal lumen.
+    evidence:
+    - reference: GO:0031908
+      notes: GO:0031908 defines the glyoxysomal lumen as the volume enclosed by the
+        glyoxysome membrane.
+    - reference: GO:0046861
+      notes: GO:0046861 identifies the membrane surrounding a glyoxysome.
+    - reference: uniprot.location:SL-0130
+      notes: UniProt SL-0130 maps the glyoxysome membrane to GO:0046861.
+  - subject: glyoxylate_cycle
+    predicate: occurs in
+    object: glyoxysomal_lumen
+    description: Glyoxylate-cycle enzymes localize to the glyoxysomal matrix.
+    evidence:
+    - reference: GO:0009514
+      notes: GO:0009514 defines glyoxysomes by their glyoxylate-pathway enzyme content.
+    - reference: DOI:10.1007/BF00309930
+      notes: de Zoysa and Connerton 1994 studied targeting of glyoxylate-cycle enzymes
+        into the Neurospora crassa glyoxysomal matrix.
+discussions:
+- discussion_id: boundary_membrane_not_lumen_component
+  prompt: Keep the glyoxysomal membrane as the boundary of the glyoxysomal lumen rather
+    than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#glyoxysome_lumen_topology
+  rationale: GO:0031908 denotes the volume enclosed by the glyoxysome membrane, whereas
+    GO:0046861 denotes the membrane surrounding a glyoxysome.
+  resolution_note: Represented GO:0046861 as the boundary node in the topology graph
+    and left the lumen record without constituent components.
+  evidence:
+  - reference: GO:0031908
+    notes: GO:0031908 identifies the glyoxysomal lumen.
+  - reference: GO:0046861
+    notes: GO:0046861 identifies the membrane that bounds the glyoxysomal lumen.
+  posed_by: codex
+  posed_date: '2026-09-13'
