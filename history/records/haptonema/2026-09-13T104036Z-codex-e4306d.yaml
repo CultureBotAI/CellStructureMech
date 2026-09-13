@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/haptonema.yaml
+  slug: haptonema
+session:
+  id: 2026-09-13T104036Z-codex-e4306d
+  timestamp: '2026-09-13T10:40:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/774
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added haptonema record
+  details: Curated a new cellstructuremech:haptonema record for the haptophyte haptonema
+    with a label-only haptonemal singlet-microtubule component, Haptophyta scope,
+    Haptolina hirta canonical feeding evidence, rapid-coiling and food-particle capture
+    functions, DOI and PMID evidence, a nonmechanistic haptonemal microtubule function
+    graph, and a curation TODO for exact haptonemal microtubule groundings.
