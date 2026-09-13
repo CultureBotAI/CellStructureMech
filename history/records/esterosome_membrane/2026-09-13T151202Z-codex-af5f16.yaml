@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/esterosome_membrane.yaml
+  slug: esterosome_membrane
+session:
+  id: 2026-09-13T151202Z-codex-af5f16
+  timestamp: '2026-09-13T15:12:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/802
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/801
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added esterosome membrane structure
+  details: Created GO:0033118 esterosome membrane as a standalone membrane-organelle record.
+    The record captures the UniProt SL-0108 esterosomal membrane synonym/xref, cytoplasmic-vesicle-membrane
+    parentage, esterosome parthood, Dictyostelium discoideum evidence, a lumen-boundary function,
+    a nonmechanistic esterosome membrane topology graph, and a curation TODO for exact lipid-bilayer
+    grounding.
