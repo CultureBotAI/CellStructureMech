@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>parasitophorous vacuole membrane · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>parasitophorous vacuole membrane</h1>
+<p class="meta"><code>cellstructuremech:parasitophorous_vacuole_membrane</code> · MEMBRANE_ORGANELLE · MEMBRANE · <span class="status">PROPOSED</span></p>
+<p class="definition">The membrane surrounding the parasitophorous vacuole. <small>[<code>uniprot.location:SL-0193</code>]</small></p>
+<p><strong>Synonyms:</strong> parasitophorous vacuolar membrane</p><p><strong>Part of:</strong> <code>cellstructuremech:parasitophorous_vacuole</code> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0193</code> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-parasitophorous_vacuole_membrane_lipid_bilayer"><td>parasitophorous vacuole membrane lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Generic lipid-bilayer constituent that surrounds the parasitophorous vacuole and separates it from the host cytosol.<ul class="evidence"><li><code>uniprot.location:SL-0193</code> <small>UniProt Subcellular Location SL-0193 identifies the parasitophorous vacuole membrane as the membrane surrounding the parasitophorous vacuole.</small></li><li><a href="https://doi.org/10.1242/jcs.111.11.1467"><code>DOI:10.1242/jcs.111.11.1467</code></a> <small>Lingelbach and Joiner 1998 review the parasitophorous vacuolar membrane surrounding intracellular Plasmodium and Toxoplasma parasites.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5794"><code>NCBITaxon:5794</code></a> Apicomplexa — <strong>COMMON</strong>: UniProt places the parasitophorous vacuole membrane under the parasitophorous vacuole location, whose definition scopes the vacuole to host-cell compartments formed by most apicomplexan parasites. [<code>uniprot.location:SL-0194</code>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5811"><code>NCBITaxon:5811</code></a> <em>Toxoplasma gondii</em> — Apicomplexan model whose parasitophorous vacuole membrane is reviewed as a parasite-remodeled host-parasite interface. [<a href="https://doi.org/10.1016/j.pt.2017.02.007"><code>DOI:10.1016/j.pt.2017.02.007</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5833"><code>NCBITaxon:5833</code></a> <em>Plasmodium falciparum</em> — Human malaria parasite whose intraerythrocytic PVM was surveyed by proximity labeling to identify PVM-associated proteins. [<a href="https://doi.org/10.1128/mSphere.00522-17"><code>DOI:10.1128/mSphere.00522-17</code></a>]</li></ul>
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-parasitophorous_vacuole_membrane_topology">Parasitophorous vacuole membrane topology <small>(FUNCTION)</small></h3>
+<p>The parasitophorous vacuole membrane surrounds the parasitophorous vacuole.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>parasitophorous vacuole membrane</td><td>bounds</td><td>parasitophorous vacuole</td><td><ul class="evidence"><li><code>uniprot.location:SL-0193</code> <small>UniProt SL-0193 identifies the PVM as the membrane surrounding the parasitophorous vacuole.</small></li><li><code>uniprot.location:SL-0194</code> <small>UniProt SL-0194 defines the PV as a host-cell vacuole enclosed by the PVM.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Model GO:0020005 as a broad parent rather than as the exact Apicomplexa-scoped parasitophorous vacuole membrane identity. <small>GO:0020005 names the broad symbiont-containing vacuole membrane class, whereas UniProt SL-0193 names the narrower membrane surrounding an Apicomplexa-scoped parasitophorous vacuole.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the generic lipid constituent of the PVM. <small>UniProt SL-0193 identifies the whole PVM, but no exact Apicomplexa-scoped lipid or lipid-bilayer CURIE was curated for the generic bilayer constituent.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><code>uniprot.location:SL-0193</code> <small>UniProt Subcellular Location entry SL-0193 identifies the parasitophorous vacuole membrane, lists parasitophorous vacuolar membrane as an exact synonym, and maps the term to the broader GO:0020005 symbiont-containing vacuole membrane class.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0020005"><code>GO:0020005</code></a> <small>Gene Ontology cellular-component term for the broader symbiont-containing vacuole membrane class.</small></li><li><code>uniprot.location:SL-0194</code> <small>UniProt Subcellular Location entry SL-0194 identifies the containing parasitophorous vacuole.</small></li><li><a href="https://doi.org/10.1242/jcs.111.11.1467"><code>DOI:10.1242/jcs.111.11.1467</code></a> <small>Lingelbach and Joiner 1998, The parasitophorous vacuole membrane surrounding Plasmodium and Toxoplasma: an unusual compartment in infected cells, Journal of Cell Science.</small></li><li><a href="https://doi.org/10.1016/j.pt.2017.02.007"><code>DOI:10.1016/j.pt.2017.02.007</code></a> <small>Clough and Frickel 2017, The Toxoplasma Parasitophorous Vacuole: An Evolving Host-Parasite Frontier, Trends in Parasitology.</small></li><li><a href="https://doi.org/10.1128/mSphere.00522-17"><code>DOI:10.1128/mSphere.00522-17</code></a> <small>Schnider et al. 2018, BioID Reveals Novel Proteins of the Plasmodium Parasitophorous Vacuole Membrane, mSphere.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-13T18:53:10Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-13T18:53:40Z</code> codex · EXPANDED_RECORD — Added the UniProt SL synonym and xref, symbiont-containing-vacuole-membrane parentage, parasitophorous-vacuole parthood, a label-only PVM lipid-bilayer component, Apicomplexa distribution, Toxoplasma and Plasmodium examples, GO/UniProt/DOI evidence, a nonmechanistic topology graph, and GO and lipid-bilayer grounding discussions.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml"><code>data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
