@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/hydrogenosomal_membrane.yaml
+  slug: hydrogenosomal_membrane
+session:
+  id: 2026-09-13T152613Z-codex-4ce5d4
+  timestamp: '2026-09-13T15:26:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/804
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/803
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added hydrogenosomal membrane structure
+  details: Created GO:0046859 hydrogenosomal membrane as a standalone membrane-organelle record.
+    The record captures the UniProt SL-0144 hydrogenosome membrane synonym/xref, membrane
+    parentage, hydrogenosome parthood, hydrogenosome-bearing eukaryote evidence, a lumen-boundary
+    function, a nonmechanistic hydrogenosomal membrane topology graph, and a curation TODO
+    for exact lipid-bilayer grounding.
