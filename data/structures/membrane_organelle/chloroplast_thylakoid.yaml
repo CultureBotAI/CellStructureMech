@@ -27,8 +27,16 @@ curation_history:
   changes: Narrowed the thylakoid function and topology node from broad photosynthesis
     to photosynthetic electron transport chain.
   llm_assisted: true
+- timestamp: '2026-09-13T01:53:57Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #734 by adding GO:0031976 plastid thylakoid parentage; resolved
+    #735 by adding direct SL-0057/SL-0058 evidence for the lumen and membrane; resolved
+    #736 by removing the imprecise membrane-bounds-whole-thylakoid topology edge.'
+  llm_assisted: true
 parent_structures:
 - GO:0009579
+- GO:0031976
 part_of:
 - GO:0009507
 has_part:
@@ -49,6 +57,9 @@ components:
   - reference: GO:0009535
     notes: GO:0009535 defines the chloroplast thylakoid membrane as the pigmented
       membrane of a chloroplast thylakoid.
+  - reference: uniprot.location:SL-0058
+    notes: UniProt SL-0058 describes the chloroplast thylakoid membrane as a thylakoid
+      child compartment.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:33090
   taxon_label: Viridiplantae
@@ -85,6 +96,9 @@ evidence:
   notes: Gene Ontology cellular-component term for chloroplast thylakoid.
 - reference: GO:0009579
   notes: Gene Ontology cellular-component term for the broader thylakoid class.
+- reference: GO:0031976
+  notes: Gene Ontology cellular-component term for plastid thylakoid, the plastid-specific
+    thylakoid parent.
 - reference: GO:0009507
   notes: Gene Ontology cellular-component term for chloroplast.
 - reference: GO:0009570
@@ -100,6 +114,12 @@ evidence:
 - reference: uniprot.location:SL-0056
   notes: UniProt Subcellular Location SL-0056 maps Chloroplast thylakoid to GO:0009534
     and places it under the chloroplast location.
+- reference: uniprot.location:SL-0057
+  notes: UniProt Subcellular Location SL-0057 maps Chloroplast thylakoid lumen to
+    GO:0009543 and places it under chloroplast thylakoid.
+- reference: uniprot.location:SL-0058
+  notes: UniProt Subcellular Location SL-0058 maps Chloroplast thylakoid membrane
+    to GO:0009535 and places it under chloroplast thylakoid.
 - reference: DOI:10.1098/rstb.2009.0103
   notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
     Philosophical Transactions of the Royal Society B.
@@ -153,15 +173,6 @@ causal_graphs:
       notes: GO:0009507 defines chloroplasts as chlorophyll-containing plastids with
         thylakoids embedded in a stroma.
   - subject: chloroplast_thylakoid_membrane
-    predicate: bounds
-    object: chloroplast_thylakoid
-    description: The chloroplast thylakoid membrane bounds each chloroplast thylakoid
-      cisterna.
-    evidence:
-    - reference: GO:0009535
-      notes: GO:0009535 defines the chloroplast thylakoid membrane as the pigmented
-        membrane of a chloroplast thylakoid.
-  - subject: chloroplast_thylakoid_membrane
     predicate: encloses
     object: chloroplast_thylakoid_lumen
     description: The chloroplast thylakoid membrane encloses the lumenal compartment
@@ -170,9 +181,9 @@ causal_graphs:
     - reference: GO:0009543
       notes: GO:0009543 identifies the chloroplast thylakoid lumen enclosed by thylakoid
         membranes.
-    - reference: uniprot.location:SL-0056
-      notes: UniProt SL-0056 describes chloroplast thylakoids as an internal interconnected
-        membrane system with a lumenal compartment.
+    - reference: uniprot.location:SL-0057
+      notes: UniProt SL-0057 identifies the chloroplast thylakoid lumen as a child
+        compartment of the chloroplast thylakoid.
   - subject: chloroplast_thylakoid
     predicate: supports
     object: photosynthetic_electron_transport
