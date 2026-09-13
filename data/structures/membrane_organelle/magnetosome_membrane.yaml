@@ -1,0 +1,168 @@
+identifier: GO:0110146
+label: magnetosome membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer membrane surrounding a magnetosome.
+definition_source: GO:0110146
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T16:05:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T16:06:15Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added SL-0512 xref, membrane parentage, magnetosome parthood, a label-only
+    lipid-bilayer component, bacterial/Alphaproteobacteria scope, an MSR-1 example,
+    a biomineralization-boundary function, GO/UniProt/DOI/PMID evidence, a nonmechanistic
+    magnetosome-membrane topology graph, and a lipid-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0110143
+xrefs:
+- uniprot.location:SL-0512
+components:
+- component_id: magnetosome_lipid_bilayer
+  label: magnetosome lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid bilayer that surrounds each magnetosome mineralization vesicle and carries
+    magnetosome-associated membrane proteins.
+  evidence:
+  - reference: GO:0110146
+    notes: GO:0110146 identifies the magnetosome membrane as the lipid bilayer surrounding
+      a magnetosome.
+  - reference: DOI:10.1038/nrmicro.2016.99
+    notes: Uebe and Schuler 2016 review the magnetosome membrane as a lipid vesicle
+      boundary derived from the cytoplasmic membrane during magnetosome biogenesis.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0110146 identifies the whole magnetosome membrane, but no exact
+    source-neutral CURIE was curated for the generic magnetosome lipid-bilayer constituent.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: RARE
+  note: Magnetosome membranes occur in magnetotactic bacterial lineages rather than
+    broadly across Bacteria.
+  reference: DOI:10.1038/nrmicro.2016.99
+- taxon_id: NCBITaxon:28211
+  taxon_label: Alphaproteobacteria
+  presence: VARIABLE
+  note: The magnetotactic model strains used for membrane biochemistry and genetics
+    are Alphaproteobacteria, but magnetotaxis is confined to particular lineages.
+  reference: DOI:10.1038/nrmicro.2016.99
+canonical_examples:
+- taxon_id: NCBITaxon:431944
+  taxon_label: Magnetospirillum gryphiswaldense MSR-1
+  note: Alphaproteobacterial model used for biochemical and proteomic analysis of
+    isolated magnetosome membranes.
+  reference: PMID:14766587
+functions:
+- function_id: magnetosome_biomineralization_boundary
+  label: magnetosome biomineralization boundary
+  description: The magnetosome membrane encloses the iron-mineral biomineralization
+    vesicle and hosts Mam/Mms proteins that support controlled magnetite crystal formation.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2016.99
+    notes: Uebe and Schuler 2016 review Mam/Mms proteins at the magnetosome membrane
+      and their roles in magnetosome biogenesis.
+  - reference: PMID:14766587
+    notes: Grunberg et al. 2004 biochemically and proteomically analyzed the magnetosome
+      membrane in Magnetospirillum gryphiswaldense.
+evidence:
+- reference: GO:0110146
+  notes: Gene Ontology cellular-component term for the magnetosome membrane.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component parent term for membrane.
+- reference: GO:0110143
+  notes: Gene Ontology cellular-component term for the containing magnetosome.
+- reference: uniprot.location:SL-0512
+  notes: UniProt Subcellular Location entry SL-0512 maps to GO:0110146 and lists Magnetosome
+    membrane as the entry name.
+- reference: DOI:10.1038/nrmicro.2016.99
+  notes: Uebe R and Schuler D 2016, Magnetosome biogenesis in magnetotactic bacteria,
+    Nature Reviews Microbiology.
+- reference: DOI:10.1002/pro.2827
+  notes: 'Barber-Zucker and Zarivach 2015, From invagination to navigation: the story
+    of magnetosome-associated proteins, Protein Science.'
+- reference: PMID:14766587
+  notes: Grunberg et al. 2004, Biochemical and proteomic analysis of the magnetosome
+    membrane in Magnetospirillum gryphiswaldense, Applied and Environmental Microbiology.
+causal_graphs:
+- graph_id: magnetosome_membrane_biomineralization_boundary
+  title: Magnetosome membrane bounds the biomineralizing vesicle
+  description: The magnetosome membrane surrounds the mineralizing magnetosome vesicle
+    and hosts Mam/Mms membrane proteins that support controlled iron biomineralization.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures membrane topology and protein residence without
+    duplicating the whole magnetosome invagination, iron-transport, or chain-assembly
+    mechanism.
+  nodes:
+  - node_id: magnetosome_membrane
+    label: magnetosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0110146
+    component_ref: magnetosome_lipid_bilayer
+  - node_id: magnetosome
+    label: magnetosome
+    node_type: ORGANELLE
+    grounding: GO:0110143
+  - node_id: mam_mms_proteins
+    label: Mam/Mms magnetosome membrane proteins
+    node_type: GENE_OR_PROTEIN
+  - node_id: magnetosome_biomineralization
+    label: magnetosome biomineralization
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: magnetosome_membrane
+    predicate: is part of
+    object: magnetosome
+    description: The magnetosome membrane is the lipid-bilayer boundary of the magnetosome.
+    evidence:
+    - reference: GO:0110146
+      notes: GO:0110146 defines the membrane by its surrounding relation to the magnetosome.
+    - reference: uniprot.location:SL-0512
+      notes: UniProt SL-0512 maps the Magnetosome membrane subcellular-location entry
+        to GO:0110146.
+  - subject: mam_mms_proteins
+    predicate: reside in
+    object: magnetosome_membrane
+    description: Magnetosome-associated Mam/Mms proteins reside at the magnetosome
+      membrane.
+    evidence:
+    - reference: PMID:14766587
+      notes: Grunberg et al. 2004 performed biochemical and proteomic analysis of
+        the magnetosome membrane in Magnetospirillum gryphiswaldense.
+    - reference: DOI:10.1002/pro.2827
+      notes: Barber-Zucker and Zarivach 2015 review magnetosome-associated proteins
+        and their functions at magnetosome membranes.
+  - subject: magnetosome_membrane
+    predicate: supports
+    object: magnetosome_biomineralization
+    description: The magnetosome membrane defines the vesicle boundary where controlled
+      magnetite biomineralization occurs.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.99
+      notes: Uebe and Schuler 2016 review magnetosome membrane invagination, membrane
+        proteins, iron accumulation, and magnetite biomineralization.
+discussions:
+- discussion_id: ground_magnetosome_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituent
+    of the magnetosome membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#magnetosome_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0110146, but no magnetosome-specific
+    lipid or lipid-bilayer CURIE was curated for the membrane constituent.
+  evidence:
+  - reference: GO:0110146
+    notes: GO:0110146 identifies the complete magnetosome membrane.
+  posed_by: codex
+  posed_date: '2026-09-13'
