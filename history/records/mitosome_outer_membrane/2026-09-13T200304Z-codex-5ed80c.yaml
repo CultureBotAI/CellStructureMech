@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitosome_outer_membrane.yaml
+  slug: mitosome_outer_membrane
+session:
+  id: 2026-09-13T200304Z-codex-5ed80c
+  timestamp: '2026-09-13T20:03:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/831
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Ground the mitosome outer membrane intermembrane-space node
+  details: Grounded the mitosome intermembrane space node in mitosome_outer_membrane_topology
+    to cellstructuremech:mitosome_intermembrane_space after curating the exact UniProt SL-0440-backed
+    child record.

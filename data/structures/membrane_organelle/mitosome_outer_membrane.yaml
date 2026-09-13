@@ -20,6 +20,12 @@ curation_history:
     rare anaerobic eukaryote and Entamoeba scope, UniProt/GO/DOI evidence, a nonmechanistic
     outer membrane topology graph, and a lipid-bilayer grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-13T19:59:51Z'
+  curator: codex
+  action: GROUNDED_TOPOLOGY_NODE
+  changes: Grounded the mitosome intermembrane space topology node to cellstructuremech:mitosome_intermembrane_space
+    after the exact record was curated from UniProt SL-0440.
+  llm_assisted: true
 synonyms:
 - synonym_text: mitosomal outer membrane
   synonym_type: EXACT_SYNONYM
@@ -115,6 +121,7 @@ causal_graphs:
   - node_id: mitosome_intermembrane_space
     label: mitosome intermembrane space
     node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:mitosome_intermembrane_space
   edges:
   - subject: mitosome_outer_membrane
     predicate: is part of
