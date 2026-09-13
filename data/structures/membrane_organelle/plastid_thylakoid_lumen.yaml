@@ -1,0 +1,127 @@
+identifier: GO:0031978
+label: plastid thylakoid lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by a plastid thylakoid membrane.
+definition_source: GO:0031978
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T22:52:56Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T22:53:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added thylakoid-lumen parentage, plastid thylakoid parthood, Viridiplantae
+    and Glaucocystophyceae scope, a Chlamydomonas example, GO and literature evidence,
+    a nonmechanistic lumen-boundary topology graph, and a resolved boundary interpretation.
+  llm_assisted: true
+parent_structures:
+- GO:0031977
+part_of:
+- GO:0031976
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Photosynthetic green algae and land plants have chloroplast thylakoids whose
+    membranes enclose a lumenal compartment.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+- taxon_id: NCBITaxon:38254
+  taxon_label: Glaucocystophyceae
+  presence: COMMON
+  note: Glaucophyte cyanelles are plastids with internal thylakoid membranes that
+    enclose thylakoid lumens.
+  reference: DOI:10.5586/asbp.2015.020
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Unicellular green alga whose native chloroplast thylakoid lumen and membrane
+    architecture were resolved by in situ cryo-electron tomography.
+  reference: DOI:10.7554/eLife.04889
+evidence:
+- reference: GO:0031978
+  notes: Gene Ontology cellular-component term for plastid thylakoid lumen.
+- reference: GO:0031977
+  notes: Gene Ontology cellular-component term for thylakoid lumen, the broader plastid-independent
+    thylakoid-lumen parent.
+- reference: GO:0031976
+  notes: Gene Ontology cellular-component term for the plastid thylakoid that contains
+    this lumen.
+- reference: GO:0055035
+  notes: Gene Ontology cellular-component term for the plastid thylakoid membrane
+    that encloses this lumen.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
+- reference: DOI:10.7554/eLife.04889
+  notes: Engel et al. 2015, Native architecture of the Chlamydomonas chloroplast revealed
+    by in situ cryo-electron tomography, eLife.
+- reference: DOI:10.5586/asbp.2015.020
+  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
+    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
+causal_graphs:
+- graph_id: plastid_thylakoid_lumen_topology
+  title: Plastid thylakoid lumen topology
+  description: The plastid thylakoid lumen is the internal plastid thylakoid compartment
+    enclosed by the thylakoid membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining thylakoid-lumen boundary without asserting
+    lumenal proteins or photosynthetic proton transport mechanisms.
+  nodes:
+  - node_id: plastid_thylakoid_lumen
+    label: plastid thylakoid lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031978
+  - node_id: plastid_thylakoid_membrane
+    label: plastid thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0055035
+  - node_id: plastid_thylakoid
+    label: plastid thylakoid
+    node_type: STRUCTURE
+    grounding: GO:0031976
+  edges:
+  - subject: plastid_thylakoid_lumen
+    predicate: is part of
+    object: plastid_thylakoid
+    description: The lumen is the internal compartment of the plastid thylakoid.
+    evidence:
+    - reference: GO:0031978
+      notes: GO:0031978 identifies the plastid thylakoid lumen.
+    - reference: GO:0031976
+      notes: GO:0031976 identifies the containing plastid thylakoid.
+  - subject: plastid_thylakoid_membrane
+    predicate: encloses
+    object: plastid_thylakoid_lumen
+    description: The plastid thylakoid membrane encloses the thylakoid lumen.
+    evidence:
+    - reference: GO:0031978
+      notes: GO:0031978 defines the plastid thylakoid lumen as the volume enclosed
+        by a plastid thylakoid membrane.
+    - reference: GO:0055035
+      notes: GO:0055035 identifies the enclosing plastid thylakoid lipid bilayer.
+discussions:
+- discussion_id: boundary_membrane_not_lumen_component
+  prompt: Keep the plastid thylakoid membrane as the boundary of the plastid thylakoid
+    lumen rather than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#plastid_thylakoid_lumen_topology
+  rationale: GO:0031978 denotes the volume enclosed by a plastid thylakoid membrane,
+    whereas GO:0055035 denotes the lipid bilayer membrane that encloses that volume.
+  resolution_note: Represented GO:0055035 as the boundary node in the topology graph
+    and left the lumen record without constituent components.
+  evidence:
+  - reference: GO:0031978
+    notes: GO:0031978 defines the plastid thylakoid lumen as the volume enclosed by
+      a plastid thylakoid membrane.
+  - reference: GO:0055035
+    notes: GO:0055035 defines the plastid thylakoid membrane as the lipid bilayer
+      of a plastid thylakoid.
+  posed_by: codex
+  posed_date: '2026-09-13'
