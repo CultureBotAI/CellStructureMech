@@ -6271,9 +6271,45 @@
       ]
     },
     {
+      "identifier": "GO:0043595",
+      "label": "endospore cortex",
+      "neighbors": [
+        {
+          "identifier": "GO:0043591",
+          "label": "endospore external encapsulating structure",
+          "cosine_similarity": 0.94155746
+        },
+        {
+          "identifier": "GO:0090642",
+          "label": "microsporidian-type exospore",
+          "cosine_similarity": 0.82164714
+        },
+        {
+          "identifier": "GO:0090641",
+          "label": "microsporidian-type endospore",
+          "cosine_similarity": 0.81350336
+        },
+        {
+          "identifier": "GO:0005628",
+          "label": "prospore membrane",
+          "cosine_similarity": 0.7570132
+        },
+        {
+          "identifier": "GO:0009274",
+          "label": "peptidoglycan-based cell wall",
+          "cosine_similarity": 0.66835708
+        }
+      ]
+    },
+    {
       "identifier": "GO:0043591",
       "label": "endospore external encapsulating structure",
       "neighbors": [
+        {
+          "identifier": "GO:0043595",
+          "label": "endospore cortex",
+          "cosine_similarity": 0.94155746
+        },
         {
           "identifier": "GO:0090642",
           "label": "microsporidian-type exospore",
@@ -6293,11 +6329,6 @@
           "identifier": "GO:0030115",
           "label": "S-layer",
           "cosine_similarity": 0.74491561
-        },
-        {
-          "identifier": "GO:0033111",
-          "label": "attachment organelle membrane",
-          "cosine_similarity": 0.70388687
         }
       ]
     },
@@ -6309,6 +6340,11 @@
           "identifier": "GO:0090642",
           "label": "microsporidian-type exospore",
           "cosine_similarity": 0.93376751
+        },
+        {
+          "identifier": "GO:0043595",
+          "label": "endospore cortex",
+          "cosine_similarity": 0.81350336
         },
         {
           "identifier": "GO:0043591",
@@ -6324,11 +6360,6 @@
           "identifier": "GO:0044099",
           "label": "polar tube",
           "cosine_similarity": 0.68263175
-        },
-        {
-          "identifier": "GO:0009277",
-          "label": "fungal-type cell wall",
-          "cosine_similarity": 0.66177299
         }
       ]
     },
@@ -6347,6 +6378,11 @@
           "cosine_similarity": 0.82876073
         },
         {
+          "identifier": "GO:0043595",
+          "label": "endospore cortex",
+          "cosine_similarity": 0.82164714
+        },
+        {
           "identifier": "GO:0005628",
           "label": "prospore membrane",
           "cosine_similarity": 0.75384492
@@ -6355,11 +6391,6 @@
           "identifier": "GO:0044099",
           "label": "polar tube",
           "cosine_similarity": 0.71579864
-        },
-        {
-          "identifier": "GO:0033111",
-          "label": "attachment organelle membrane",
-          "cosine_similarity": 0.62611977
         }
       ]
     },
@@ -6404,6 +6435,11 @@
           "cosine_similarity": 0.76285116
         },
         {
+          "identifier": "GO:0043595",
+          "label": "endospore cortex",
+          "cosine_similarity": 0.7570132
+        },
+        {
           "identifier": "GO:0033110",
           "label": "Cvt vesicle membrane",
           "cosine_similarity": 0.75682917
@@ -6417,11 +6453,6 @@
           "identifier": "GO:0005886",
           "label": "plasma membrane",
           "cosine_similarity": 0.75209979
-        },
-        {
-          "identifier": "GO:0043591",
-          "label": "endospore external encapsulating structure",
-          "cosine_similarity": 0.75070967
         }
       ]
     }
