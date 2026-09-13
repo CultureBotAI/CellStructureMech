@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/glycosome_membrane.yaml
+  slug: glycosome_membrane
+session:
+  id: 2026-09-13T145722Z-codex-df5a43
+  timestamp: '2026-09-13T14:57:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/800
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/799
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added glycosome membrane structure
+  details: Created GO:0046860 glycosome membrane as a standalone membrane-organelle record.
+    The record captures the UniProt SL-0128 glycosomal membrane synonym/xref, peroxisomal-membrane
+    parentage, glycosome parthood, Kinetoplastea and Trypanosoma brucei evidence, a matrix-import
+    boundary function, a glycosome membrane topology graph, and a curation TODO for exact
+    lipid-bilayer grounding.
