@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+  slug: hydrogenosome_lumen
+session:
+  id: 2026-09-13T140631Z-codex-382d25
+  timestamp: '2026-09-13T14:06:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - distribution
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added GO-grounded hydrogenosome lumen record
+  details: Added a GO:0034492 hydrogenosome lumen record for the matrix compartment enclosed
+    by the hydrogenosomal membrane. The record captures a UniProt SL exact synonym and xref,
+    organelle-lumen parentage, hydrogenosome parthood, rare Eukaryota and Trichomonas vaginalis
+    scope, a Trichomonas canonical example, a matrix-metabolism function, GO/UniProt/PMID/DOI
+    evidence, a nonmechanistic lumen-topology graph, and a resolved interpretation keeping
+    the hydrogenosomal membrane as the bounding structure rather than a lumen component.
