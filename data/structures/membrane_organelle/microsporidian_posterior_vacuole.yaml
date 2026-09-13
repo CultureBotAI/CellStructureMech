@@ -1,0 +1,180 @@
+identifier: cellstructuremech:microsporidian_posterior_vacuole
+label: microsporidian posterior vacuole
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A membrane-bounded posterior vesicle in a microsporidian spore that expands
+  during germination and is implicated in polar-tube extrusion and sporoplasm expulsion.
+definition_source: DOI:10.14411/fp.2005.014
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T11:42:29Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T11:43:08Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the label-only posterior vacuole membrane component, Microsporidia
+    and Vairimorpha necatrix scope, a polar-tube firing support function, posterior-vacuole
+    DOI evidence, a nonmechanistic expansion graph, and a composition-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-13T11:49:31Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #777 review issue #778 by adding a posterior-vacuole membrane
+    node, moving component_ref off the organelle node, adding a polar-tube-firing
+    process node, and retargeting the expansion edge to that process.'
+  llm_assisted: true
+components:
+- component_id: posterior_vacuole_membrane
+  label: posterior vacuole membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Membrane boundary that encloses the posterior vacuole in mature microsporidian
+    spores.
+  evidence:
+  - reference: DOI:10.14411/fp.2005.014
+    notes: Findley et al. 2005 directly studied the Spraguea lophii posterior vacuole
+      during spore hatching.
+  - reference: DOI:10.1371/journal.ppat.1008738
+    notes: Jaroenlak et al. 2020 visualized the Anncaliia algerae posterior vacuole
+      by serial block-face scanning electron microscopy and electron tomography.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The posterior vacuole is a microsporidian spore vesicle, but no
+    exact source-neutral term for its membrane, lipids or resident proteins was curated
+    in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:6029
+  taxon_label: Microsporidia
+  presence: COMMON
+  note: The posterior vacuole is modeled as a microsporidian infectious-spore organelle,
+    not as a structure present in every intracellular vegetative stage.
+  reference: DOI:10.1007/978-3-030-93306-7_9
+canonical_examples:
+- taxon_id: NCBITaxon:6039
+  taxon_label: Vairimorpha necatrix
+  note: Moth-infecting microsporidian whose germinating spores were imaged by cryo-electron
+    tomography during polar-tube extension and sporoplasm expulsion.
+  reference: DOI:10.1371/journal.pbio.3002533
+functions:
+- function_id: polar_tube_firing_support
+  label: polar tube firing support
+  description: During spore germination, posterior vacuole expansion is coupled to
+    pressure changes and movement of spore contents toward the everting polar tube.
+  evidence:
+  - reference: DOI:10.14411/fp.2005.014
+    notes: Findley et al. 2005 tested the posterior vacuole's role in Spraguea lophii
+      spore hatching.
+  - reference: DOI:10.1016/j.fgb.2015.08.007
+    notes: Troemel and Becnel 2015 observed posterior vacuole expansion late in Edhazardia
+      aedis polar-tube firing.
+evidence:
+- reference: DOI:10.14411/fp.2005.014
+  notes: Findley et al. 2005, Role of the posterior vacuole in Spraguea lophii (Microsporidia)
+    spore hatching, Folia Parasitologica.
+- reference: DOI:10.1016/j.fgb.2015.08.007
+  notes: Troemel and Becnel 2015, Genome analysis and polar tube firing dynamics of
+    mosquito-infecting microsporidia, Fungal Genetics and Biology.
+- reference: DOI:10.1371/journal.ppat.1008738
+  notes: Jaroenlak et al. 2020, 3-Dimensional organization and dynamics of the microsporidian
+    polar tube invasion machinery, PLOS Pathogens.
+- reference: DOI:10.1007/978-3-030-93306-7_9
+  notes: Jaroenlak, Usmani, Ekiert and Bhabha 2022, Mechanics of Microsporidian Polar
+    Tube Firing, Experientia Supplementum.
+- reference: DOI:10.1371/journal.pbio.3002533
+  notes: Sharma et al. 2024, Ultrastructural insights into the microsporidian infection
+    apparatus reveal the kinetics and morphological transitions of polar tube and
+    cargo during host cell invasion, PLOS Biology.
+causal_graphs:
+- graph_id: posterior_vacuole_expansion_supports_firing
+  title: Posterior vacuole expansion accompanies polar-tube firing
+  description: The posterior vacuole sits behind the sporoplasm in mature microsporidian
+    spores. During germination it expands as the polar tube fires, a nonmechanistic
+    relationship consistent with a role in moving spore contents into the everting
+    polar tube.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: posterior_vacuole_membrane
+    label: posterior vacuole membrane
+    node_type: STRUCTURE
+    component_ref: posterior_vacuole_membrane
+  - node_id: posterior_vacuole
+    label: microsporidian posterior vacuole
+    node_type: ORGANELLE
+  - node_id: posterior_spore_pole
+    label: posterior spore pole
+    node_type: STRUCTURE
+  - node_id: polar_tube_firing
+    label: polar tube firing
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: polar_tube
+    label: polar tube
+    node_type: STRUCTURE
+    grounding: GO:0044099
+  - node_id: sporoplasm
+    label: sporoplasm
+    node_type: STRUCTURE
+  edges:
+  - subject: posterior_vacuole_membrane
+    predicate: encloses
+    object: posterior_vacuole
+    description: The membrane component bounds the posterior vacuole as a distinct
+      vesicle in the mature microsporidian spore.
+    evidence:
+    - reference: DOI:10.14411/fp.2005.014
+      notes: Findley et al. 2005 studied the membrane-bounded posterior vacuole of
+        Spraguea lophii spores.
+    - reference: DOI:10.1371/journal.ppat.1008738
+      notes: Jaroenlak et al. 2020 resolved the posterior vacuole as a distinct organelle
+        in three-dimensional reconstructions.
+  - subject: posterior_vacuole
+    predicate: resides at
+    object: posterior_spore_pole
+    description: The posterior vacuole lies at the back end of the mature microsporidian
+      spore.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1008738
+      notes: Jaroenlak et al. 2020 reconstructed the posterior vacuole in Anncaliia
+        algerae spores.
+  - subject: posterior_vacuole
+    predicate: expands during
+    object: polar_tube_firing
+    description: Posterior vacuole expansion occurs during polar-tube firing and germination.
+    evidence:
+    - reference: DOI:10.1016/j.fgb.2015.08.007
+      notes: Troemel and Becnel 2015 observed an expanding posterior vacuole in the
+        final frames of Edhazardia aedis polar-tube firing.
+    - reference: DOI:10.14411/fp.2005.014
+      notes: Findley et al. 2005 connected the Spraguea lophii posterior vacuole to
+        spore hatching.
+  - subject: posterior_vacuole
+    predicate: pushes
+    object: sporoplasm
+    description: Expansion of the posterior vacuole is implicated in moving the sporoplasm
+      and other spore contents toward the everted polar tube.
+    evidence:
+    - reference: DOI:10.1016/j.fgb.2015.08.007
+      notes: Troemel and Becnel 2015 interpreted late posterior-vacuole expansion
+        as pushing spore contents into the everted polar tube.
+    - reference: DOI:10.1371/journal.pbio.3002533
+      notes: Sharma et al. 2024 imaged the sequence of microsporidian polar-tube firing
+        and sporoplasm expulsion in Vairimorpha necatrix.
+discussions:
+- discussion_id: ground_posterior_vacuole_composition
+  prompt: Resolve exact posterior vacuole membrane and lumenal composition.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#posterior_vacuole_membrane
+  - causal_graphs#posterior_vacuole_expansion_supports_firing
+  rationale: The current record captures the membrane-bounded organelle and its expansion
+    phenotype, but it does not identify exact lipid species, lumenal osmolytes, or
+    proteins that drive posterior vacuole swelling.
+  evidence:
+  - reference: DOI:10.14411/fp.2005.014
+  - reference: DOI:10.1007/978-3-030-93306-7_9
+  posed_by: codex
+  posed_date: '2026-09-13'

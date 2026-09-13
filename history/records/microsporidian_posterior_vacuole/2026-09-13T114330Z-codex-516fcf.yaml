@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/microsporidian_posterior_vacuole.yaml
+  slug: microsporidian_posterior_vacuole
+session:
+  id: 2026-09-13T114330Z-codex-516fcf
+  timestamp: '2026-09-13T11:43:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/777
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/778
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add microsporidian posterior vacuole record
+  details: Created cellstructuremech:microsporidian_posterior_vacuole as a PROPOSED
+    membrane-bounded microsporidian spore organelle with a label-only posterior-vacuole
+    membrane component, Microsporidia and Vairimorpha necatrix scope, polar-tube firing
+    support function, DOI evidence, a nonmechanistic posterior-vacuole expansion graph,
+    and a composition-grounding TODO.
