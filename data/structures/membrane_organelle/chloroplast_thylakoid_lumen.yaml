@@ -1,0 +1,117 @@
+identifier: GO:0009543
+label: chloroplast thylakoid lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the membrane of a chloroplast thylakoid.
+definition_source: GO:0009543
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T02:31:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T02:31:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added plastid thylakoid-lumen parentage, chloroplast thylakoid parthood,
+    the UniProt SL-0057 xref, Viridiplantae and Chlamydomonas scope, literature and
+    GO evidence, a nonmechanistic lumen-boundary topology graph, and a resolved boundary
+    interpretation.
+  llm_assisted: true
+parent_structures:
+- GO:0031978
+part_of:
+- GO:0009534
+xrefs:
+- uniprot.location:SL-0057
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Green algae and land plants with internal chloroplast thylakoid membranes
+    have a lumenal compartment inside those membranes.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Native Chlamydomonas chloroplast thylakoids include a lumenal compartment
+    inside stacked and unstacked thylakoid membrane regions.
+  reference: DOI:10.7554/eLife.04889
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Unicellular green alga used for in situ cryo-electron tomography of native
+    chloroplast thylakoid lumen and membrane architecture.
+  reference: DOI:10.7554/eLife.04889
+evidence:
+- reference: GO:0009543
+  notes: Gene Ontology cellular-component term for chloroplast thylakoid lumen.
+- reference: GO:0031978
+  notes: Gene Ontology cellular-component term for plastid thylakoid lumen, the broader
+    plastid thylakoid-lumen parent.
+- reference: GO:0009534
+  notes: Gene Ontology cellular-component term for the chloroplast thylakoid that
+    this lumen is part of.
+- reference: GO:0009535
+  notes: Gene Ontology cellular-component term for the chloroplast thylakoid membrane
+    that encloses this lumen.
+- reference: uniprot.location:SL-0057
+  notes: UniProt Subcellular Location SL-0057 maps Chloroplast thylakoid lumen to
+    GO:0009543 and places it under chloroplast thylakoid.
+- reference: uniprot.location:SL-0058
+  notes: UniProt Subcellular Location SL-0058 maps the bounding chloroplast thylakoid
+    membrane to GO:0009535.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
+- reference: DOI:10.7554/eLife.04889
+  notes: Engel et al. 2015, Native architecture of the Chlamydomonas chloroplast revealed
+    by in situ cryo-electron tomography, eLife.
+causal_graphs:
+- graph_id: chloroplast_thylakoid_lumen_topology
+  title: Chloroplast thylakoid lumen topology
+  description: The chloroplast thylakoid lumen is the internal chloroplast thylakoid
+    compartment enclosed by the thylakoid membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining lumenal boundary without asserting
+    lumenal proteins or photosynthetic proton-transport mechanisms.
+  nodes:
+  - node_id: chloroplast_thylakoid_lumen
+    label: chloroplast thylakoid lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009543
+  - node_id: chloroplast_thylakoid_membrane
+    label: chloroplast thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0009535
+  edges:
+  - subject: chloroplast_thylakoid_membrane
+    predicate: encloses
+    object: chloroplast_thylakoid_lumen
+    description: The chloroplast thylakoid membrane encloses the thylakoid lumen.
+    evidence:
+    - reference: GO:0009543
+      notes: GO:0009543 defines the chloroplast thylakoid lumen as the volume enclosed
+        by a chloroplast thylakoid membrane.
+    - reference: uniprot.location:SL-0057
+      notes: UniProt SL-0057 describes the chloroplast thylakoid lumen as a chloroplast
+        thylakoid child compartment.
+discussions:
+- discussion_id: boundary_membrane_not_lumen_component
+  prompt: Keep the chloroplast thylakoid membrane as the boundary of the chloroplast
+    thylakoid lumen rather than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#chloroplast_thylakoid_lumen_topology
+  rationale: GO:0009543 denotes the volume enclosed by a chloroplast thylakoid membrane,
+    whereas GO:0009535 denotes the pigmented membrane that encloses that volume.
+  resolution_note: Represented GO:0009535 as the boundary node in the topology graph
+    and left the lumen record without constituent components.
+  evidence:
+  - reference: GO:0009543
+    notes: GO:0009543 identifies the chloroplast thylakoid lumen.
+  - reference: GO:0009535
+    notes: GO:0009535 identifies the chloroplast thylakoid membrane.
