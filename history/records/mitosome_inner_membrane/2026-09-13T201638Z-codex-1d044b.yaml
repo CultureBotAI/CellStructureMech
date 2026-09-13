@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitosome_inner_membrane.yaml
+  slug: mitosome_inner_membrane
+session:
+  id: 2026-09-13T201638Z-codex-1d044b
+  timestamp: '2026-09-13T20:16:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground mitosome matrix topology node
+  details: Grounded the pre-existing mitosome_matrix node in the mitosome inner membrane topology
+    graph to cellstructuremech:mitosome_matrix after curating the exact UniProt SL-0441-backed
+    matrix record.

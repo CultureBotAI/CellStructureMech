@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mitosome matrix · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>mitosome matrix</h1>
+<p class="meta"><code>cellstructuremech:mitosome_matrix</code> · MEMBRANE_ORGANELLE · SUBCELLULAR_REGION · <span class="status">PROPOSED</span></p>
+<p class="definition">The matrix of a mitosome is the mitosomal internal spaces enclosed by the inner membrane. <small>[<code>uniprot.location:SL-0441</code>]</small></p>
+<p><strong>Synonyms:</strong> mitosomal matrix</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0032047"><code>GO:0032047</code></a> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0441</code> </p>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2759"><code>NCBITaxon:2759</code></a> Eukaryota — <strong>RARE</strong>: Mitosome matrices occur in the patchy anaerobic or microaerophilic microbial eukaryotes that retain double-membrane mitochondrion-related mitosomes. [<a href="https://doi.org/10.1111/jeu.12922"><code>DOI:10.1111/jeu.12922</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5759"><code>NCBITaxon:5759</code></a> Entamoeba histolytica — <strong>COMMON</strong>: The Entamoeba mitochondrion-related mitosome was identified as a double-membrane organelle whose internal matrix is enclosed by the inner mitosomal membrane. [<a href="https://doi.org/10.1046/j.1365-2958.1999.01414.x"><code>DOI:10.1046/j.1365-2958.1999.01414.x</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5759"><code>NCBITaxon:5759</code></a> <em>Entamoeba histolytica</em> — Amoebozoan parasite in which mitosomes were initially described as double-membrane mitochondrion-related organelles. [<a href="https://doi.org/10.1046/j.1365-2958.1999.01414.x"><code>DOI:10.1046/j.1365-2958.1999.01414.x</code></a>]</li></ul>
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-mitosome_matrix_topology">Mitosome matrix topology <small>(FUNCTION)</small></h3>
+<p>The mitosome matrix is the internal mitosome compartment enclosed by the mitosome inner membrane.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>mitosome matrix</td><td>is part of</td><td>mitosome</td><td><ul class="evidence"><li><code>uniprot.location:SL-0441</code> <small>UniProt SL-0441 places the mitosome matrix under the mitosome subcellular location.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032047"><code>GO:0032047</code></a> <small>GO:0032047 identifies the containing mitosome.</small></li></ul></td></tr>
+<tr><td>mitosome inner membrane</td><td>encloses</td><td>mitosome matrix</td><td><ul class="evidence"><li><code>uniprot.location:SL-0441</code> <small>UniProt SL-0441 defines the mitosome matrix as the internal spaces enclosed by the inner membrane.</small></li><li><code>uniprot.location:SL-0439</code> <small>UniProt SL-0439 defines the mitosome inner membrane by its position between the matrix and the intermembrane space.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><code>uniprot.location:SL-0441</code> <small>UniProt Subcellular Location entry SL-0441 identifies the mitosome matrix, lists mitosomal matrix as an exact synonym, and places it under the mitosome location.</small></li><li><code>uniprot.location:SL-0439</code> <small>UniProt Subcellular Location entry SL-0439 identifies the inner mitosomal membrane as separating the matrix from the intermembrane space.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0043233"><code>GO:0043233</code></a> <small>Gene Ontology cellular-component parent term for organelle lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032047"><code>GO:0032047</code></a> <small>Gene Ontology cellular-component term for the containing mitosome.</small></li><li><a href="https://doi.org/10.1046/j.1365-2958.1999.01414.x"><code>DOI:10.1046/j.1365-2958.1999.01414.x</code></a> <small>Tovar et al. 1999, The mitosome, a novel organelle related to mitochondria in the amitochondrial parasite Entamoeba histolytica, Molecular Microbiology.</small></li><li><a href="https://doi.org/10.1111/jeu.12922"><code>DOI:10.1111/jeu.12922</code></a> <small>Tachezy 2022, Hydrogenosomes and mitosomes: Mitochondria of anaerobic eukaryotes, Journal of Eukaryotic Microbiology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-13T20:15:32Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-13T20:16:06Z</code> codex · EXPANDED_RECORD — Added the UniProt SL mitosomal-matrix synonym and xref, organelle-lumen parentage, mitosome parthood, rare anaerobic eukaryote and Entamoeba scope, UniProt/GO/DOI evidence, and a nonmechanistic matrix-topology graph.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/mitosome_matrix.yaml"><code>data/structures/membrane_organelle/mitosome_matrix.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

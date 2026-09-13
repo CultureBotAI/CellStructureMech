@@ -40,12 +40,19 @@ curation_history:
     to the new exact record, and narrowed the remaining component-grounding TODO to
     mitosomal protein groups.
   llm_assisted: true
+- timestamp: '2026-09-13T20:16:06Z'
+  curator: codex
+  action: ADD_CHILD_RECORD
+  changes: Added cellstructuremech:mitosome_matrix as a mitosome has_part child based
+    on the exact UniProt SL-0441 mitosome matrix record.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
 - GO:0005737
 has_part:
 - cellstructuremech:mitosome_envelope
+- cellstructuremech:mitosome_matrix
 components:
 - component_id: mitosomal_isc_machinery
   label: mitosomal iron-sulfur cluster assembly machinery
@@ -151,6 +158,9 @@ evidence:
 - reference: DOI:10.1111/jeu.12922
   notes: 'Tachezy 2022, Hydrogenosomes and mitosomes: Mitochondria of anaerobic eukaryotes,
     Journal of Eukaryotic Microbiology.'
+- reference: uniprot.location:SL-0441
+  notes: UniProt Subcellular Location entry SL-0441 identifies the mitosome matrix
+    and places it under the mitosome location.
 causal_graphs:
 - graph_id: mitosomal_isc_assembly
   title: Mitosomal import supports iron-sulfur cluster assembly

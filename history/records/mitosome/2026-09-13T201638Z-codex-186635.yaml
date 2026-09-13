@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitosome.yaml
+  slug: mitosome
+session:
+  id: 2026-09-13T201638Z-codex-186635
+  timestamp: '2026-09-13T20:16:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: EDIT
+  outcome: changed
+  summary: Link mitosome matrix child record
+  details: Added cellstructuremech:mitosome_matrix as a has_part child of GO:0032047 mitosome
+    and cited UniProt SL-0441 as evidence that the matrix is placed under the mitosome location.
