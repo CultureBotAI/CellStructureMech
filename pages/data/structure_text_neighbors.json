@@ -1811,6 +1811,11 @@
       "label": "phycobilisome",
       "neighbors": [
         {
+          "identifier": "GO:0030096",
+          "label": "plasma membrane-derived thylakoid photosystem II",
+          "cosine_similarity": 0.74984113
+        },
+        {
           "identifier": "GO:0042651",
           "label": "thylakoid membrane",
           "cosine_similarity": 0.70437067
@@ -1829,11 +1834,37 @@
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
           "cosine_similarity": 0.65890076
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030096",
+      "label": "plasma membrane-derived thylakoid photosystem II",
+      "neighbors": [
+        {
+          "identifier": "GO:0030075",
+          "label": "bacterial thylakoid",
+          "cosine_similarity": 0.84358011
         },
         {
-          "identifier": "GO:0070111",
-          "label": "organellar chromatophore",
-          "cosine_similarity": 0.63474574
+          "identifier": "GO:0042651",
+          "label": "thylakoid membrane",
+          "cosine_similarity": 0.8294209
+        },
+        {
+          "identifier": "GO:0031979",
+          "label": "plasma membrane-derived thylakoid lumen",
+          "cosine_similarity": 0.75639557
+        },
+        {
+          "identifier": "GO:0030089",
+          "label": "phycobilisome",
+          "cosine_similarity": 0.74984113
+        },
+        {
+          "identifier": "GO:0009534",
+          "label": "chloroplast thylakoid",
+          "cosine_similarity": 0.72048111
         }
       ]
     },
@@ -2746,6 +2777,11 @@
           "cosine_similarity": 0.91662957
         },
         {
+          "identifier": "GO:0030096",
+          "label": "plasma membrane-derived thylakoid photosystem II",
+          "cosine_similarity": 0.84358011
+        },
+        {
           "identifier": "GO:0009535",
           "label": "chloroplast thylakoid membrane",
           "cosine_similarity": 0.80342409
@@ -2759,11 +2795,6 @@
           "identifier": "GO:0070118",
           "label": "organellar chromatophore thylakoid membrane",
           "cosine_similarity": 0.80032052
-        },
-        {
-          "identifier": "GO:0031979",
-          "label": "plasma membrane-derived thylakoid lumen",
-          "cosine_similarity": 0.79212537
         }
       ]
     },
@@ -4766,6 +4797,11 @@
           "cosine_similarity": 0.86968897
         },
         {
+          "identifier": "GO:0030096",
+          "label": "plasma membrane-derived thylakoid photosystem II",
+          "cosine_similarity": 0.8294209
+        },
+        {
           "identifier": "GO:0033115",
           "label": "cyanelle thylakoid membrane",
           "cosine_similarity": 0.81955448
@@ -4774,11 +4810,6 @@
           "identifier": "GO:0009535",
           "label": "chloroplast thylakoid membrane",
           "cosine_similarity": 0.8176644
-        },
-        {
-          "identifier": "GO:0070118",
-          "label": "organellar chromatophore thylakoid membrane",
-          "cosine_similarity": 0.81265541
         }
       ]
     },
