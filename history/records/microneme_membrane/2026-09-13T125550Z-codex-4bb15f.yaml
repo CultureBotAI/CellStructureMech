@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/microneme_membrane.yaml
+  slug: microneme_membrane
+session:
+  id: 2026-09-13T125550Z-codex-4bb15f
+  timestamp: '2026-09-13T12:55:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - composition
+  - distribution
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added GO-grounded microneme membrane record
+  details: Added a GO:0033163 microneme membrane record as a lipid-bilayer substructure of
+    the apicomplexan microneme. The record captures organelle-membrane parentage, a reviewed-label-only
+    microneme lipid bilayer component, Apicomplexa scope, Toxoplasma gondii as a canonical
+    example, a lumen-boundary function, a nonmechanistic microneme-membrane topology graph,
+    GO/DOI/PMID evidence, and an open TODO to ground the lipid constituent exactly.
