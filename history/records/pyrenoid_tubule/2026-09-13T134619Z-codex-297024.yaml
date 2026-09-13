@@ -4,11 +4,16 @@ target:
   path: data/structures/membrane_organelle/pyrenoid_tubule.yaml
   slug: pyrenoid_tubule
 session:
-  id: 2026-09-13T134619Z-claude-code-297024
+  id: 2026-09-13T134619Z-codex-297024
   timestamp: '2026-09-13T13:46:19Z'
   actors:
   - type: ai_agent
-    name: claude-code
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/792
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/791
 events:
 - type: CREATE
   outcome: changed
