@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitosome_envelope.yaml
+  slug: mitosome_envelope
+session:
+  id: 2026-09-13T190944Z-codex-3b6ff5
+  timestamp: '2026-09-13T19:09:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add mitosome envelope record
+  details: Created a minted mitosome envelope record from UniProt Subcellular Location SL-0438,
+    retained GO:0031967 as organelle-envelope parentage, linked the envelope to the GO mitosome
+    record, and captured inner and outer mitosomal membrane lipid bilayers, rare anaerobic
+    eukaryote and Entamoeba scope, a nonmechanistic envelope topology graph, and an explicit
+    child-record grounding TODO.

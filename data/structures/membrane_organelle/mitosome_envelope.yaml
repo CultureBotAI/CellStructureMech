@@ -1,0 +1,227 @@
+identifier: cellstructuremech:mitosome_envelope
+label: mitosome envelope
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The mitosomal envelope comprises the inner and outer mitosomal membrane
+  including the intermembrane space.
+definition_source: uniprot.location:SL-0438
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T19:08:21Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T19:09:20Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL mitosomal-envelope synonym and xref, organelle-envelope
+    parentage, mitosome parthood, reviewed-label-only inner and outer membrane lipid-bilayer
+    components, rare anaerobic eukaryote and Entamoeba scope, compartmentalization
+    and protein-import-boundary functions, GO/UniProt/DOI evidence, a nonmechanistic
+    envelope topology graph, and a child-record grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: mitosomal envelope
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0438
+parent_structures:
+- GO:0031967
+part_of:
+- GO:0032047
+xrefs:
+- uniprot.location:SL-0438
+components:
+- component_id: mitosome_outer_membrane_lipid_bilayer
+  label: mitosome outer membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Cytoplasm-facing lipid bilayer of the mitosome envelope.
+  evidence:
+  - reference: uniprot.location:SL-0443
+    notes: UniProt Subcellular Location SL-0443 identifies the mitosome outer membrane
+      as the mitosomal membrane facing the cytoplasm.
+  - reference: DOI:10.1111/jeu.12922
+    notes: Tachezy 2022 reviews mitosomes as double-membrane mitochondrion-related
+      organelles of anaerobic eukaryotes.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: UniProt SL-0443 identifies the mitosome outer membrane, but no
+    exact GO or CellStructureMech record CURIE for the child membrane was curated
+    in this envelope record.
+- component_id: mitosome_inner_membrane_lipid_bilayer
+  label: mitosome inner membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Matrix-facing lipid bilayer that separates the mitosomal matrix from the intermembrane
+    space.
+  evidence:
+  - reference: uniprot.location:SL-0439
+    notes: UniProt Subcellular Location SL-0439 identifies the mitosome inner membrane
+      as separating the mitosomal matrix from the intermembrane space.
+  - reference: DOI:10.1111/jeu.12922
+    notes: Tachezy 2022 reviews mitosomes as double-membrane mitochondrion-related
+      organelles.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: UniProt SL-0439 identifies the mitosome inner membrane, but no
+    exact GO or CellStructureMech record CURIE for the child membrane was curated
+    in this envelope record.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Mitosome envelopes occur patchily in anaerobic or microaerophilic microbial
+    eukaryotes that retain highly reduced double-membrane mitochondrion-related organelles.
+  reference: DOI:10.1111/jeu.12922
+- taxon_id: NCBITaxon:5759
+  taxon_label: Entamoeba histolytica
+  presence: COMMON
+  note: The Entamoeba mitochondrion-related mitosome was identified as a double-membrane
+    organelle.
+  reference: DOI:10.1046/j.1365-2958.1999.01414.x
+canonical_examples:
+- taxon_id: NCBITaxon:5759
+  taxon_label: Entamoeba histolytica
+  note: Amoebozoan parasite in which mitosomes were initially described as mitochondrion-related
+    double-membrane organelles.
+  reference: DOI:10.1046/j.1365-2958.1999.01414.x
+functions:
+- function_id: mitosome_compartmentalization
+  label: mitosome compartmentalization
+  description: The mitosome envelope surrounds the reduced organelle and separates
+    the matrix from the cytosol.
+  evidence:
+  - reference: uniprot.location:SL-0438
+    notes: UniProt SL-0438 defines the mitosome envelope as the inner and outer mitosomal
+      membranes plus intermembrane space.
+  - reference: DOI:10.1046/j.1365-2958.1999.01414.x
+    notes: Tovar et al. 1999 identified a double-membrane mitochondrion-related mitosome
+      in Entamoeba histolytica.
+- function_id: mitosomal_protein_import_boundary
+  label: mitosomal protein import boundary
+  description: The mitosome envelope is the double-membrane boundary crossed by nuclear-encoded,
+    N-terminally targeted mitosomal proteins.
+  evidence:
+  - reference: DOI:10.1073/pnas.0500349102
+    notes: Dolezal et al. 2005 tested Giardia mitosomal protein targeting and compared
+      the import mode with hydrogenosomes.
+  - reference: DOI:10.1038/nature01945
+    notes: Tovar et al. 2003 localized nuclear-encoded ISC proteins to Giardia mitosomes.
+evidence:
+- reference: uniprot.location:SL-0438
+  notes: UniProt Subcellular Location entry SL-0438 identifies the mitosome envelope,
+    lists mitosomal envelope as an exact synonym, and places the envelope under the
+    mitosome location.
+- reference: uniprot.location:SL-0439
+  notes: UniProt Subcellular Location entry SL-0439 identifies the mitosome inner
+    membrane as a child of the mitosome membrane.
+- reference: uniprot.location:SL-0440
+  notes: UniProt Subcellular Location entry SL-0440 identifies the mitosome intermembrane
+    space as the space between inner and outer mitosomal membranes.
+- reference: uniprot.location:SL-0443
+  notes: UniProt Subcellular Location entry SL-0443 identifies the mitosome outer
+    membrane as a child of the mitosome membrane.
+- reference: GO:0031967
+  notes: Gene Ontology cellular-component parent term for organelle envelope.
+- reference: GO:0032047
+  notes: Gene Ontology cellular-component term for the containing mitosome.
+- reference: DOI:10.1046/j.1365-2958.1999.01414.x
+  notes: Tovar et al. 1999, The mitosome, a novel organelle related to mitochondria
+    in the amitochondrial parasite Entamoeba histolytica, Molecular Microbiology.
+- reference: DOI:10.1038/nature01945
+  notes: Tovar et al. 2003, Mitochondrial remnant organelles of Giardia function in
+    iron-sulphur protein maturation, Nature.
+- reference: DOI:10.1073/pnas.0500349102
+  notes: Dolezal et al. 2005, Giardia mitosomes and trichomonad hydrogenosomes share
+    a common mode of protein targeting, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1111/jeu.12922
+  notes: 'Tachezy 2022, Hydrogenosomes and mitosomes: Mitochondria of anaerobic eukaryotes,
+    Journal of Eukaryotic Microbiology.'
+causal_graphs:
+- graph_id: mitosome_envelope_topology
+  title: Mitosome envelope encloses the reduced organelle
+  description: The mitosome envelope contains inner and outer membranes plus the intermembrane
+    space and surrounds the mitosome.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures mitosome envelope topology without modeling specific
+    inner- or outer-membrane protein translocases.
+  nodes:
+  - node_id: mitosome_envelope
+    label: mitosome envelope
+    node_type: STRUCTURE
+    grounding: cellstructuremech:mitosome_envelope
+  - node_id: mitosome
+    label: mitosome
+    node_type: ORGANELLE
+    grounding: GO:0032047
+  - node_id: mitosome_outer_membrane
+    label: mitosome outer membrane
+    node_type: STRUCTURE
+    component_ref: mitosome_outer_membrane_lipid_bilayer
+  - node_id: mitosome_inner_membrane
+    label: mitosome inner membrane
+    node_type: STRUCTURE
+    component_ref: mitosome_inner_membrane_lipid_bilayer
+  - node_id: mitosome_intermembrane_space
+    label: mitosome intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: mitosome_envelope
+    predicate: encloses
+    object: mitosome
+    description: The mitosomal envelope bounds the reduced mitochondrion-related organelle.
+    evidence:
+    - reference: uniprot.location:SL-0438
+      notes: UniProt SL-0438 identifies the inner and outer mitosomal membranes and
+        intermembrane space as the mitosome envelope.
+  - subject: mitosome_outer_membrane
+    predicate: is part of
+    object: mitosome_envelope
+    description: The outer mitosomal membrane is the cytoplasm-facing bilayer of the
+      mitosome envelope.
+    evidence:
+    - reference: uniprot.location:SL-0443
+      notes: UniProt SL-0443 defines the mitosome outer membrane as the membrane facing
+        the cytoplasm.
+  - subject: mitosome_inner_membrane
+    predicate: is part of
+    object: mitosome_envelope
+    description: The inner mitosomal membrane separates the mitosome matrix from the
+      intermembrane space.
+    evidence:
+    - reference: uniprot.location:SL-0439
+      notes: UniProt SL-0439 defines the mitosome inner membrane by its position between
+        the matrix and intermembrane space.
+  - subject: mitosome_envelope
+    predicate: contains
+    object: mitosome_intermembrane_space
+    description: The mitosome intermembrane space lies between the inner and outer
+      membranes of the mitosome envelope.
+    evidence:
+    - reference: uniprot.location:SL-0440
+      notes: UniProt SL-0440 defines the mitosome intermembrane space as the space
+        between the inner and outer mitosomal membranes.
+discussions:
+- discussion_id: ground_mitosome_envelope_child_records
+  prompt: Resolve exact source-neutral records for the mitosome inner membrane, outer
+    membrane, and intermembrane space.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mitosome_outer_membrane_lipid_bilayer
+  - components#mitosome_inner_membrane_lipid_bilayer
+  - causal_graphs#mitosome_envelope_topology
+  rationale: UniProt provides exact SL identifiers for the child compartments, but
+    no exact GO or CellStructureMech records were curated here for those inner-membrane,
+    outer-membrane, and intermembrane-space locations.
+  evidence:
+  - reference: uniprot.location:SL-0439
+    notes: SL-0439 identifies the mitosome inner membrane.
+  - reference: uniprot.location:SL-0440
+    notes: SL-0440 identifies the mitosome intermembrane space.
+  - reference: uniprot.location:SL-0443
+    notes: SL-0443 identifies the mitosome outer membrane.
+  posed_by: codex
+  posed_date: '2026-09-13'

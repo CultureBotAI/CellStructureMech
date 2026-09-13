@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitosome.yaml
+  slug: mitosome
+session:
+  id: 2026-09-13T190945Z-codex-616d11
+  timestamp: '2026-09-13T19:09:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground mitosome envelope topology
+  details: Updated the existing mitosome record to replace its reviewed-label-only mitosomal
+    envelope component with an exact has_part link, grounded the mitosomal ISC graph envelope
+    node to cellstructuremech:mitosome_envelope, and narrowed the remaining component-grounding
+    TODO to mitosomal protein machinery.
