@@ -1,0 +1,166 @@
+identifier: GO:0110145
+label: magnetosome lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the magnetosome membrane.
+definition_source: GO:0110145
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T16:22:48Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T16:23:16Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL xref, organelle-lumen parentage, magnetosome parthood,
+    bacterial/Alphaproteobacteria scope, an MSR-1 example, a biomineralization function,
+    GO/UniProt/DOI/PMID evidence, a nonmechanistic lumen-topology graph, and a resolved
+    boundary interpretation.
+  llm_assisted: true
+parent_structures:
+- GO:0043233
+part_of:
+- GO:0110143
+xrefs:
+- uniprot.location:SL-0511
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: RARE
+  note: Magnetosome lumina occur inside magnetosome vesicles in magnetotactic bacterial
+    lineages rather than broadly across Bacteria.
+  reference: DOI:10.1038/nrmicro.2016.99
+- taxon_id: NCBITaxon:28211
+  taxon_label: Alphaproteobacteria
+  presence: VARIABLE
+  note: Alphaproteobacterial magnetotactic model strains build magnetosome vesicles
+    with membrane-enclosed mineralization lumina, but magnetotaxis is confined to
+    particular lineages.
+  reference: DOI:10.1038/nrmicro.2016.99
+canonical_examples:
+- taxon_id: NCBITaxon:431944
+  taxon_label: Magnetospirillum gryphiswaldense MSR-1
+  note: Alphaproteobacterial model used for biochemical and proteomic analysis of
+    isolated magnetosome membranes and for genetic analysis of magnetosome vesicle
+    assembly.
+  reference: PMID:14766587
+functions:
+- function_id: magnetosome_lumen_biomineralization
+  label: magnetosome lumen biomineralization
+  description: The magnetosome lumen is the membrane-enclosed compartment in which
+    imported iron is mineralized into a magnetic iron-mineral crystal.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2016.99
+    notes: Uebe and Schuler 2016 review magnetosome vesicles as the compartments in
+      which iron is accumulated and biomineralized as magnetite or greigite.
+  - reference: PMID:22007638
+    notes: Uebe et al. 2011 linked MamB and MamM to magnetite biomineralization and
+      magnetosome membrane assembly in Magnetospirillum gryphiswaldense.
+evidence:
+- reference: GO:0110145
+  notes: Gene Ontology cellular-component term for the magnetosome lumen.
+- reference: GO:0043233
+  notes: Gene Ontology cellular-component term for organelle lumen, the broader organelle-enclosed
+    compartment parent.
+- reference: GO:0110143
+  notes: Gene Ontology cellular-component term for the containing magnetosome.
+- reference: GO:0110146
+  notes: Gene Ontology cellular-component term for the magnetosome membrane that encloses
+    the lumen.
+- reference: uniprot.location:SL-0511
+  notes: UniProt Subcellular Location entry SL-0511 maps directly to GO:0110145 and
+    places the magnetosome lumen under the magnetosome subcellular location.
+- reference: uniprot.location:SL-0512
+  notes: UniProt Subcellular Location entry SL-0512 maps the magnetosome membrane
+    to GO:0110146.
+- reference: DOI:10.1038/nrmicro.2016.99
+  notes: Uebe R and Schuler D 2016, Magnetosome biogenesis in magnetotactic bacteria,
+    Nature Reviews Microbiology.
+- reference: PMID:14766587
+  notes: Grunberg et al. 2004, Biochemical and proteomic analysis of the magnetosome
+    membrane in Magnetospirillum gryphiswaldense, Applied and Environmental Microbiology.
+- reference: PMID:22007638
+  notes: Uebe et al. 2011, The cation diffusion facilitator proteins MamB and MamM
+    of Magnetospirillum gryphiswaldense have distinct and complex functions, and are
+    involved in magnetite biomineralization and magnetosome membrane assembly, Molecular
+    Microbiology.
+causal_graphs:
+- graph_id: magnetosome_lumen_topology
+  title: Magnetosome lumen topology
+  description: The magnetosome lumen is the internal magnetosome compartment enclosed
+    by the magnetosome membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining lumenal boundary without duplicating
+    the whole-magnetosome membrane invagination, iron-transport, biomineralization,
+    or chain-assembly mechanisms.
+  nodes:
+  - node_id: magnetosome_lumen
+    label: magnetosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0110145
+  - node_id: magnetosome_membrane
+    label: magnetosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0110146
+  - node_id: magnetosome
+    label: magnetosome
+    node_type: ORGANELLE
+    grounding: GO:0110143
+  - node_id: magnetosome_biomineralization
+    label: magnetosome biomineralization
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: magnetosome_lumen
+    predicate: is part of
+    object: magnetosome
+    description: The magnetosome lumen is the internal compartment of a magnetosome.
+    evidence:
+    - reference: GO:0110145
+      notes: GO:0110145 identifies the magnetosome lumen cellular component.
+    - reference: uniprot.location:SL-0511
+      notes: UniProt SL-0511 places the magnetosome lumen under the magnetosome subcellular
+        location.
+    - reference: GO:0110143
+      notes: GO:0110143 identifies the containing magnetosome.
+  - subject: magnetosome_membrane
+    predicate: encloses
+    object: magnetosome_lumen
+    description: The magnetosome membrane encloses the magnetosome lumen.
+    evidence:
+    - reference: GO:0110145
+      notes: GO:0110145 identifies the lumen under the magnetosome subcellular location.
+    - reference: GO:0110146
+      notes: GO:0110146 identifies the magnetosome membrane that surrounds the organelle.
+    - reference: uniprot.location:SL-0512
+      notes: UniProt SL-0512 maps the magnetosome membrane to GO:0110146.
+  - subject: magnetosome_biomineralization
+    predicate: occurs in
+    object: magnetosome_lumen
+    description: Iron imported into the magnetosome vesicle is biomineralized in the
+      lumenal volume.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.99
+      notes: Uebe and Schuler 2016 review magnetosome vesicles as the site of magnetite
+        or greigite biomineralization.
+discussions:
+- discussion_id: boundary_membrane_not_lumen_component
+  prompt: Keep the magnetosome membrane as the boundary of the magnetosome lumen rather
+    than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#magnetosome_lumen_topology
+  rationale: GO:0110145 denotes the magnetosome lumen, whereas GO:0110146 denotes
+    the lipid bilayer surrounding a magnetosome.
+  resolution_note: Represented GO:0110146 as the boundary node in the topology graph
+    and left the lumen record without constituent components.
+  evidence:
+  - reference: GO:0110145
+    notes: GO:0110145 identifies the magnetosome lumen.
+  - reference: GO:0110146
+    notes: GO:0110146 identifies the membrane that bounds the magnetosome lumen.
+  posed_by: codex
+  posed_date: '2026-09-13'
