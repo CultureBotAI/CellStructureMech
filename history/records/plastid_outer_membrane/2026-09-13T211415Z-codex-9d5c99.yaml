@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/plastid_outer_membrane.yaml
+  slug: plastid_outer_membrane
+session:
+  id: 2026-09-13T211415Z-codex-9d5c99
+  timestamp: '2026-09-13T21:14:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/838
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add plastid outer membrane
+  details: Created the GO:0009527 plastid outer membrane record with plastid-membrane parentage,
+    plastid-envelope parthood, UniProt SL-0214 exact synonyms and xref, a reviewed-label-only
+    outer lipid bilayer component, Viridiplantae and Chlamydomonas taxonomic scope, a Chlamydomonas
+    canonical example, GO/UniProt/DOI evidence, a nonmechanistic plastid outer-membrane topology
+    graph, and an open discussion for exact lipid-bilayer grounding.
