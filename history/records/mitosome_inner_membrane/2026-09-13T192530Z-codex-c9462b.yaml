@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitosome_inner_membrane.yaml
+  slug: mitosome_inner_membrane
+session:
+  id: 2026-09-13T192530Z-codex-c9462b
+  timestamp: '2026-09-13T19:25:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/828
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add mitosome inner membrane record
+  details: Created a minted mitosome inner membrane record from UniProt Subcellular Location
+    SL-0439, linked it to GO:0031090 organelle membrane parentage and the mitosome envelope
+    record, captured the matrix-facing lipid-bilayer topology of the inner mitosomal membrane,
+    and retained an explicit lipid-bilayer grounding TODO.
