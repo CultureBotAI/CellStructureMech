@@ -19,6 +19,12 @@ curation_history:
     parthood, Chlamydomonas scope, stromal protein-import function, GO and Jin 2022
     evidence, a nonmechanistic Toc/Tic import graph, and a Toc-subunit boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-13T04:08:58Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #748 by narrowing the Toc subunit-boundary TODO and graph scope
+    note to avoid an uncited plant-versus-green-alga composition claim.'
+  llm_assisted: true
 synonyms:
 - synonym_text: TOC complex
   synonym_type: EXACT_SYNONYM
@@ -82,7 +88,7 @@ causal_graphs:
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph states Toc topology and its observed coupling to Tic without
-    resolving the taxon-variable subunit composition of the chloroplast import apparatus.
+    resolving individual Toc subunits of the chloroplast import apparatus.
   nodes:
   - node_id: toc_complex
     label: Toc complex
@@ -129,18 +135,18 @@ causal_graphs:
         protein-import supercomplex.
 discussions:
 - discussion_id: toc_subunit_boundaries
-  prompt: Resolve exact source-neutral component groundings for Toc75-channel, Toc159/Toc120-receptor,
-    and Toc34-like receptor subfamilies without merging plant and green-algal import
-    assemblies whose subunit compositions differ.
+  prompt: Resolve exact source-neutral component groundings for Toc75-channel and
+    Toc-receptor subfamilies before adding subunit-level component rows to this source-neutral
+    Toc record.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - causal_graphs#chlamydomonas_toc_outer_import
   rationale: GO exactly grounds the Toc complex itself, but this record does not assert
-    component-family CURIEs for Toc subunits until their cross-taxon boundaries are
-    curated.
+    component-family CURIEs for individual Toc subunits until those families have
+    been curated.
   evidence:
   - reference: DOI:10.1016/j.cell.2022.10.030
-    notes: Jin et al. 2022 resolved a divergent Chlamydomonas TOC-TIC import supercomplex.
+    notes: Jin et al. 2022 resolved a Chlamydomonas TOC-TIC import supercomplex.
   posed_by: codex
   posed_date: '2026-09-13'
