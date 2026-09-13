@@ -11,6 +11,8 @@ session:
     name: codex
     model: GPT-5
 links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/771
   prs:
   - https://github.com/CultureBotAI/CellStructureMech/pull/770
 events:

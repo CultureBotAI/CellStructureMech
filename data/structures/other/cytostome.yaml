@@ -20,14 +20,21 @@ curation_history:
     a nonmechanistic cytostome-to-reservosome graph, and curation TODOs for cytostome
     protein grounding and cytopharynx boundaries.
   llm_assisted: true
+- timestamp: '2026-09-13T10:08:18Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #770 review issue #771 by narrowing the Trypanosoma cruzi
+    distribution note to structural characterization in epimastigotes and removing
+    unsupported developmental-regulation wording.'
+  llm_assisted: true
 parent_structures:
 - GO:0005886
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5693
   taxon_label: Trypanosoma cruzi
   presence: VARIABLE
-  note: The cytostome-cytopharynx complex is a developmentally regulated endocytic
-    structure characterized in T. cruzi epimastigotes.
+  note: The cytostome-cytopharynx complex has been structurally characterized in T.
+    cruzi epimastigotes.
   reference: DOI:10.1242/jcs.135491
 canonical_examples:
 - taxon_id: NCBITaxon:5693
