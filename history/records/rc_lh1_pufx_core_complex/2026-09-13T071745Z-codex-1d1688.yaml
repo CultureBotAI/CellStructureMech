@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml
+  slug: rc_lh1_pufx_core_complex
+session:
+  id: 2026-09-13T071745Z-codex-1d1688
+  timestamp: '2026-09-13T07:17:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/760
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/759
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the RC-LH1-PufX core complex record
+  details: 'Added a minted ENERGY_COMPLEX record for the purple-bacterial RC-LH1-PufX core
+    complex, with GO:0042717 chromatophore-membrane parthood, a Cereibacter sphaeroides canonical
+    example, DOI and GO evidence, a nonmechanistic graph connecting LH2 excitation transfer
+    to quinone reduction, and an open subunit-boundary TODO. Adversarial review found that
+    the existing chromatophore membrane component stayed label-only after the new internal
+    identifier was minted; #760 was resolved by grounding that component to cellstructuremech:rc_lh1_pufx_core_complex.'

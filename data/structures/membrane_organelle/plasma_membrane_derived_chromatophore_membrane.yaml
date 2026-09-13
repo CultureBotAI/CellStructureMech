@@ -27,6 +27,12 @@ curation_history:
     to RELATED_SYNONYM; resolved #681 by replacing a UniProt-localization-backed proton-motive-force
     edge with a Feniouk-backed chromatophore-vesicle membrane edge.'
   llm_assisted: true
+- timestamp: '2026-09-13T07:17:11Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#760: grounded the RC-LH1-PufX chromatophore component to cellstructuremech:rc_lh1_pufx_core_complex
+    now that PR #759 mints the internal structure record.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cellular chromatophore membrane
   synonym_type: EXACT_SYNONYM
@@ -60,10 +66,6 @@ components:
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The Rhodobacter RC-LH1-PufX core is an experimentally imaged purple-bacterial
-    chromatophore assembly, but no exact GO or Complex Portal term was curated for
-    this whole taxon-agnostic core complex.
   role: Dimeric reaction-center and LH1 antenna hub that performs charge separation
     and receives excitation energy from surrounding LH2 antennae.
   evidence:
@@ -75,6 +77,7 @@ components:
     notes: Comayras et al. 2005 connected the organization of Rhodobacter sphaeroides
       reaction-center antenna complexes to quinone and excitation-transfer behavior
       in chromatophores.
+  grounding: cellstructuremech:rc_lh1_pufx_core_complex
 - component_id: lh2_antenna_complexes
   label: LH2 peripheral light-harvesting antenna complexes
   component_type: PROTEIN_COMPLEX
