@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/plastid.yaml
+  slug: plastid
+session:
+  id: 2026-09-13T203326Z-codex-693351
+  timestamp: '2026-09-13T20:33:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add plastid
+  details: Created the GO:0009536 plastid record with the UniProt SL-0209 cross-reference,
+    GO parentage and cytoplasm parthood, a GO-grounded generic plastid-membrane component,
+    Eukaryota/Viridiplantae/Chlamydomonas taxonomic scope, Chlamydomonas canonical example,
+    GO/UniProt/DOI evidence, a nonmechanistic plastid topology graph, and a resolved discussion
+    that keeps lineage-specific envelopes, thylakoids, and nucleomorphs on exact child records.

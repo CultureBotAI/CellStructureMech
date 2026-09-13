@@ -1,0 +1,171 @@
+identifier: GO:0009536
+label: plastid
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: Any member of a family of organelles found in the cytoplasm of plants
+  and some protists, which are membrane-bounded and contain DNA. Plant plastids develop
+  from a common type, the proplastid.
+definition_source: GO:0009536
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T20:30:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T20:32:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added UniProt SL-0209 xref, intracellular membrane-bounded organelle parentage,
+    cytoplasm parthood, a GO-grounded plastid-membrane component, Eukaryota/Viridiplantae/Chlamydomonas
+    scope, GO/UniProt/DOI evidence, a nonmechanistic plastid topology graph, and a
+    resolved generic-boundary interpretation.
+  llm_assisted: true
+- timestamp: '2026-09-13T20:36:26Z'
+  curator: codex
+  action: FIXED_GO_LABEL
+  changes: Aligned GO:0042170 component and graph-node labels to the canonical singular
+    plastid membrane label.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+part_of:
+- GO:0005737
+xrefs:
+- uniprot.location:SL-0209
+components:
+- component_id: plastid_membranes
+  label: plastid membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0042170
+  essentiality: UNKNOWN
+  role: Lipid bilayers that surround plastids or form specialized plastid envelope
+    and internal membrane subcompartments.
+  evidence:
+  - reference: GO:0042170
+    notes: GO:0042170 defines plastid membrane as any lipid bilayer surrounding a
+      plastid or belonging to the plastid envelope.
+  - reference: uniprot.location:SL-0209
+    notes: UniProt SL-0209 describes plastids as membrane-bounded organelles.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Plastids occur in plants and scattered protist lineages as primary, secondary,
+    or otherwise reduced photosynthetic and non-photosynthetic organelles.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Green algae and land plants contain primary plastids derived from a cyanobacterial
+    endosymbiont.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: The unicellular green alga Chlamydomonas reinhardtii has a chloroplast, a
+    photosynthetic primary plastid.
+  reference: DOI:10.1007/s00294-011-0339-1
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Unicellular green-algal model whose chloroplast is a primary plastid used
+    for plastid proteome and protein-biogenesis studies.
+  reference: DOI:10.1007/s00294-011-0339-1
+evidence:
+- reference: GO:0009536
+  notes: Gene Ontology cellular-component term for plastid.
+- reference: GO:0043231
+  notes: Gene Ontology cellular-component parent term for intracellular membrane-bounded
+    organelles.
+- reference: GO:0005737
+  notes: Gene Ontology cellular-component term for cytoplasm.
+- reference: GO:0042170
+  notes: Gene Ontology cellular-component term for generic plastid membranes.
+- reference: GO:0009532
+  notes: Gene Ontology cellular-component term for plastid stroma.
+- reference: uniprot.location:SL-0209
+  notes: UniProt Subcellular Location entry SL-0209 maps the Plastid subcellular location
+    to GO:0009536.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1007/s00294-011-0339-1
+  notes: 'Terashima, Specht and Hippler 2011, The chloroplast proteome: a survey from
+    the Chlamydomonas reinhardtii perspective with a focus on distinctive features,
+    Current Genetics.'
+causal_graphs:
+- graph_id: plastid_topology
+  title: Plastid membrane boundary and stroma
+  description: Plastids are cytoplasmic, membrane-bounded organelles whose internal
+    stromal compartment is enclosed by plastid membranes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the conserved generic organelle topology without
+    asserting lineage-specific thylakoids, nucleomorphs, or extra membranes of complex
+    plastids.
+  nodes:
+  - node_id: plastid
+    label: plastid
+    node_type: ORGANELLE
+    grounding: GO:0009536
+  - node_id: plastid_membranes
+    label: plastid membrane
+    node_type: STRUCTURE
+    component_ref: plastid_membranes
+    grounding: GO:0042170
+  - node_id: plastid_stroma
+    label: plastid stroma
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009532
+  - node_id: cytoplasm
+    label: cytoplasm
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005737
+  edges:
+  - subject: plastid
+    predicate: resides in
+    object: cytoplasm
+    description: Plastids are organelles found in the host cytoplasm.
+    evidence:
+    - reference: GO:0009536
+      notes: GO:0009536 defines plastids as a family of organelles found in the cytoplasm.
+  - subject: plastid_membranes
+    predicate: bounds
+    object: plastid
+    description: Plastid membranes delimit the membrane-bounded plastid organelle.
+    evidence:
+    - reference: GO:0042170
+      notes: GO:0042170 identifies lipid bilayers that surround plastids or belong
+        to plastid envelopes.
+    - reference: uniprot.location:SL-0209
+      notes: UniProt SL-0209 describes plastids as membrane-bounded organelles.
+  - subject: plastid
+    predicate: contains
+    object: plastid_stroma
+    description: The plastid stroma is the matrix compartment inside a plastid.
+    evidence:
+    - reference: GO:0009532
+      notes: GO:0009532 identifies the plastid stroma as the ground substance of plastids.
+discussions:
+- discussion_id: generic_plastid_boundary
+  prompt: Keep lineage-specific thylakoid, envelope, membrane-count, and nucleomorph
+    assertions on exact plastid child records.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#plastid_topology
+  rationale: GO:0009536 spans primary plastids, secondary plastids, and non-photosynthetic
+    plastids. The generic record therefore models the common membrane-bounded plastid/stroma
+    topology and leaves specialized thylakoids, double envelopes, and retained nucleomorphs
+    to exact child records.
+  resolution_note: Curated only the generic GO:0042170 membrane boundary and GO:0009532
+    stroma in this plastid record.
+  evidence:
+  - reference: GO:0009536
+    notes: GO:0009536 denotes the broad plastid organelle family.
+  - reference: uniprot.location:SL-0209
+    notes: UniProt SL-0209 includes photosynthetic and non-photosynthetic plastids.
+  posed_by: codex
+  posed_date: '2026-09-13'
