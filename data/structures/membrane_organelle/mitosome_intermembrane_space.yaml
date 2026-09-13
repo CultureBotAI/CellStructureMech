@@ -1,0 +1,138 @@
+identifier: cellstructuremech:mitosome_intermembrane_space
+label: mitosome intermembrane space
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The mitosomal intermembrane space is the space between inner and outer
+  mitosomal membranes.
+definition_source: uniprot.location:SL-0440
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T19:58:57Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T19:59:51Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added UniProt SL mitosomal-intermembrane-space synonyms and xref, mitosome-envelope
+    parthood, rare anaerobic eukaryote and Entamoeba scope, UniProt/DOI evidence,
+    and a nonmechanistic intermembrane-space topology graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: mitosomal intermembrane space
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0440
+- synonym_text: mitosomal periplasm
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0440
+- synonym_text: mitosomal periplasmic space
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0440
+part_of:
+- cellstructuremech:mitosome_envelope
+xrefs:
+- uniprot.location:SL-0440
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Mitosome intermembrane spaces occur in the patchy anaerobic or microaerophilic
+    microbial eukaryotes that retain double-membrane mitochondrion-related mitosomes.
+  reference: DOI:10.1111/jeu.12922
+- taxon_id: NCBITaxon:5759
+  taxon_label: Entamoeba histolytica
+  presence: COMMON
+  note: The Entamoeba mitochondrion-related mitosome was identified as a double-membrane
+    organelle.
+  reference: DOI:10.1046/j.1365-2958.1999.01414.x
+canonical_examples:
+- taxon_id: NCBITaxon:5759
+  taxon_label: Entamoeba histolytica
+  note: Amoebozoan parasite in which a double-membrane mitochondrion-related mitosome
+    was initially described.
+  reference: DOI:10.1046/j.1365-2958.1999.01414.x
+evidence:
+- reference: uniprot.location:SL-0440
+  notes: UniProt Subcellular Location entry SL-0440 identifies the mitosome intermembrane
+    space, lists mitosomal intermembrane space, mitosomal periplasm, and mitosomal
+    periplasmic space as exact synonyms, and places it under the mitosome envelope
+    location.
+- reference: uniprot.location:SL-0438
+  notes: UniProt Subcellular Location entry SL-0438 identifies the mitosome envelope
+    as including the intermembrane space.
+- reference: uniprot.location:SL-0439
+  notes: UniProt Subcellular Location entry SL-0439 identifies the mitosome inner
+    membrane as separating the mitosome matrix from the intermembrane space.
+- reference: uniprot.location:SL-0443
+  notes: UniProt Subcellular Location entry SL-0443 identifies the outer boundary
+    of the mitosome envelope.
+- reference: DOI:10.1046/j.1365-2958.1999.01414.x
+  notes: Tovar et al. 1999, The mitosome, a novel organelle related to mitochondria
+    in the amitochondrial parasite Entamoeba histolytica, Molecular Microbiology.
+- reference: DOI:10.1111/jeu.12922
+  notes: 'Tachezy 2022, Hydrogenosomes and mitosomes: Mitochondria of anaerobic eukaryotes,
+    Journal of Eukaryotic Microbiology.'
+causal_graphs:
+- graph_id: mitosome_intermembrane_space_topology
+  title: Mitosome intermembrane-space topology
+  description: The mitosome intermembrane space lies between the inner and outer mitosomal
+    membranes of the mitosome envelope.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures compartment topology without asserting the full
+    set of mitosome envelope proteins or import machinery.
+  nodes:
+  - node_id: mitosome_intermembrane_space
+    label: mitosome intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:mitosome_intermembrane_space
+  - node_id: mitosome_envelope
+    label: mitosome envelope
+    node_type: STRUCTURE
+    grounding: cellstructuremech:mitosome_envelope
+  - node_id: mitosome_outer_membrane
+    label: mitosome outer membrane
+    node_type: STRUCTURE
+    grounding: cellstructuremech:mitosome_outer_membrane
+  - node_id: mitosome_inner_membrane
+    label: mitosome inner membrane
+    node_type: STRUCTURE
+    grounding: cellstructuremech:mitosome_inner_membrane
+  edges:
+  - subject: mitosome_intermembrane_space
+    predicate: is part of
+    object: mitosome_envelope
+    description: The mitosome intermembrane space is one of the three child compartments
+      of the mitosome envelope.
+    evidence:
+    - reference: uniprot.location:SL-0438
+      notes: UniProt SL-0438 defines the mitosome envelope as comprising the inner
+        and outer mitosomal membranes plus the intermembrane space.
+    - reference: uniprot.location:SL-0440
+      notes: UniProt SL-0440 places the mitosome intermembrane space under the mitosome
+        envelope location.
+  - subject: mitosome_outer_membrane
+    predicate: delimits
+    object: mitosome_intermembrane_space
+    description: The mitosome outer membrane forms the cytoplasm-facing boundary of
+      the intermembrane space.
+    evidence:
+    - reference: uniprot.location:SL-0440
+      notes: UniProt SL-0440 defines the mitosome intermembrane space as the space
+        between the inner and outer mitosomal membranes.
+    - reference: uniprot.location:SL-0443
+      notes: UniProt SL-0443 defines the mitosome outer membrane by its orientation
+        toward the cytoplasm.
+  - subject: mitosome_inner_membrane
+    predicate: delimits
+    object: mitosome_intermembrane_space
+    description: The mitosome inner membrane forms the matrix-facing boundary of the
+      intermembrane space.
+    evidence:
+    - reference: uniprot.location:SL-0440
+      notes: UniProt SL-0440 defines the mitosome intermembrane space as the space
+        between the inner and outer mitosomal membranes.
+    - reference: uniprot.location:SL-0439
+      notes: UniProt SL-0439 defines the mitosome inner membrane by its position between
+        the matrix and the intermembrane space.

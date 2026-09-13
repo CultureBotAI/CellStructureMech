@@ -37,6 +37,13 @@ curation_history:
     graph outer-membrane node to the new exact record, and narrowed the child-record
     grounding TODO to the intermembrane space.
   llm_assisted: true
+- timestamp: '2026-09-13T19:59:51Z'
+  curator: codex
+  action: ADDRESSED_CURATION_TODO
+  changes: Added cellstructuremech:mitosome_intermembrane_space as the remaining mitosome
+    envelope has_part child, grounded the topology graph intermembrane-space node
+    to the new exact record, and resolved the child-record grounding TODO.
+  llm_assisted: true
 synonyms:
 - synonym_text: mitosomal envelope
   synonym_type: EXACT_SYNONYM
@@ -173,6 +180,7 @@ causal_graphs:
   - node_id: mitosome_intermembrane_space
     label: mitosome intermembrane space
     node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:mitosome_intermembrane_space
   edges:
   - subject: mitosome_envelope
     predicate: encloses
@@ -213,7 +221,7 @@ discussions:
 - discussion_id: ground_mitosome_envelope_child_records
   prompt: Resolve an exact source-neutral record for the mitosome intermembrane space.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#mitosome_envelope_topology
   rationale: UniProt provides an exact SL identifier for the remaining intermembrane-space
@@ -224,6 +232,10 @@ discussions:
     notes: SL-0440 identifies the mitosome intermembrane space.
   posed_by: codex
   posed_date: '2026-09-13'
+  resolution_note: Curated cellstructuremech:mitosome_intermembrane_space from UniProt
+    SL-0440, added it as a mitosome envelope child, and grounded the envelope topology
+    node to the exact record.
 has_part:
 - cellstructuremech:mitosome_inner_membrane
 - cellstructuremech:mitosome_outer_membrane
+- cellstructuremech:mitosome_intermembrane_space

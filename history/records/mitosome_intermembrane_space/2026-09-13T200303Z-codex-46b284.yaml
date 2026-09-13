@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitosome_intermembrane_space.yaml
+  slug: mitosome_intermembrane_space
+session:
+  id: 2026-09-13T200303Z-codex-46b284
+  timestamp: '2026-09-13T20:03:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  summary: Create the mitosome intermembrane space record
+  details: Created cellstructuremech:mitosome_intermembrane_space for UniProt SL-0440 because
+    no exact GO cellular component term was found. Added exact UniProt synonyms, mitosome-envelope
+    parthood, rare Eukaryota and Entamoeba scope, topology evidence from UniProt SL-0438,
+    SL-0439, SL-0440, and SL-0443 plus DOI evidence from Tovar 1999 and Tachezy 2022, and
+    regenerated embeddings, pages, and README.

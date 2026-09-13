@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitosome_envelope.yaml
+  slug: mitosome_envelope
+session:
+  id: 2026-09-13T200304Z-codex-4d9056
+  timestamp: '2026-09-13T20:03:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - mereology
+  - causal_graphs
+  - discussions
+  summary: Ground the mitosome envelope intermembrane-space child
+  details: Resolved the open mitosome_envelope child-record TODO by adding cellstructuremech:mitosome_intermembrane_space
+    as the remaining mitosome envelope has_part child, grounding the intermembrane-space topology
+    node to the new exact SL-0440-backed record, and marking the TODO as resolved.
