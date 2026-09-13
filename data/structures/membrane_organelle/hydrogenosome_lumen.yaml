@@ -1,0 +1,163 @@
+identifier: GO:0034492
+label: hydrogenosome lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the hydrogenosome membrane.
+definition_source: GO:0034492
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T14:05:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T14:06:08Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the hydrogenosomal lumen synonym and UniProt SL xref, organelle-lumen
+    parentage, hydrogenosome parthood, Eukaryota and Trichomonas scope, Trichomonas
+    as a canonical example, a matrix-metabolism function, GO/UniProt/PMID/DOI evidence,
+    a nonmechanistic lumen-topology graph, and a resolved boundary interpretation.
+  llm_assisted: true
+synonyms:
+- synonym_text: hydrogenosomal lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0335
+parent_structures:
+- GO:0043233
+part_of:
+- GO:0042566
+xrefs:
+- uniprot.location:SL-0335
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Hydrogenosome lumina occur in the hydrogenosome-bearing subset of anaerobic
+    microbial eukaryotes.
+  reference: DOI:10.1111/jeu.12922
+- taxon_id: NCBITaxon:5722
+  taxon_label: Trichomonas vaginalis
+  presence: COMMON
+  note: Trichomonas vaginalis has hydrogenosome matrix compartments whose imported
+    enzymes support pyruvate metabolism, hydrogen production, and iron-sulfur cluster
+    assembly.
+  reference: DOI:10.1016/j.ijpara.2011.10.001
+canonical_examples:
+- taxon_id: NCBITaxon:5722
+  taxon_label: Trichomonas vaginalis
+  note: Parabasalid parasite whose hydrogenosome lumen contains experimentally characterized
+    energy-metabolism and ISC-assembly proteins.
+  reference: DOI:10.1073/pnas.0401319101
+functions:
+- function_id: hydrogenosome_lumen_metabolism
+  label: hydrogenosome lumen metabolism
+  description: The hydrogenosome lumen is the matrix compartment that contains enzymes
+    for anaerobic ATP and molecular hydrogen production and mitochondrial-type iron-sulfur
+    cluster assembly.
+  evidence:
+  - reference: DOI:10.1016/j.ijpara.2011.10.001
+    notes: Schneider et al. 2011 identified the Trichomonas hydrogenosome proteome,
+      including energy-metabolism proteins.
+  - reference: DOI:10.1073/pnas.0401319101
+    notes: Sutak et al. 2004 localized mitochondrial-type iron-sulfur center assembly
+      to Trichomonas vaginalis hydrogenosomes.
+evidence:
+- reference: GO:0034492
+  notes: Gene Ontology cellular-component term for hydrogenosome lumen.
+- reference: GO:0043233
+  notes: Gene Ontology cellular-component term for organelle lumen, the broader organelle-enclosed
+    compartment parent.
+- reference: GO:0042566
+  notes: Gene Ontology cellular-component term for hydrogenosome, the containing organelle.
+- reference: GO:0046859
+  notes: Gene Ontology cellular-component term for the hydrogenosomal membrane that
+    encloses the lumen.
+- reference: uniprot.location:SL-0335
+  notes: UniProt Subcellular Location entry SL-0335 maps directly to GO:0034492, places
+    the hydrogenosome lumen under the hydrogenosome, and lists hydrogenosomal lumen
+    as an exact synonym.
+- reference: uniprot.location:SL-0144
+  notes: UniProt Subcellular Location entry SL-0144 maps the hydrogenosome membrane
+    to GO:0046859.
+- reference: PMID:4750424
+  notes: Lindmark and Muller 1973 isolated the hydrogen-producing organelle of Tritrichomonas
+    foetus and linked it to pyruvate metabolism.
+- reference: DOI:10.1016/j.ijpara.2011.10.001
+  notes: Schneider et al. 2011, The Trichomonas vaginalis hydrogenosome proteome is
+    highly reduced relative to mitochondria, yet complex compared with mitosomes,
+    International Journal for Parasitology.
+- reference: DOI:10.1073/pnas.0401319101
+  notes: Sutak et al. 2004, Mitochondrial-type assembly of iron-sulfur centers in
+    the hydrogenosomes of the amitochondriate eukaryote Trichomonas vaginalis, Proceedings
+    of the National Academy of Sciences.
+- reference: DOI:10.1111/jeu.12922
+  notes: 'Tachezy 2022, Hydrogenosomes and mitosomes: Mitochondria of anaerobic eukaryotes,
+    Journal of Eukaryotic Microbiology.'
+causal_graphs:
+- graph_id: hydrogenosome_lumen_topology
+  title: Hydrogenosome lumen topology
+  description: The hydrogenosome lumen is the internal hydrogenosome compartment enclosed
+    by the hydrogenosomal membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining lumenal boundary without duplicating
+    whole-hydrogenosome enzyme, protein-import, or iron-sulfur cluster assembly mechanisms.
+  nodes:
+  - node_id: hydrogenosome_lumen
+    label: hydrogenosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034492
+  - node_id: hydrogenosomal_membrane
+    label: hydrogenosomal membrane
+    node_type: STRUCTURE
+    grounding: GO:0046859
+  - node_id: hydrogenosome
+    label: hydrogenosome
+    node_type: ORGANELLE
+    grounding: GO:0042566
+  edges:
+  - subject: hydrogenosome_lumen
+    predicate: is part of
+    object: hydrogenosome
+    description: The hydrogenosome lumen is the internal matrix volume of a hydrogenosome.
+    evidence:
+    - reference: GO:0034492
+      notes: GO:0034492 identifies the hydrogenosome lumen cellular component.
+    - reference: uniprot.location:SL-0335
+      notes: UniProt SL-0335 places the hydrogenosome lumen under the hydrogenosome
+        subcellular location.
+    - reference: GO:0042566
+      notes: GO:0042566 identifies the containing hydrogenosome organelle.
+  - subject: hydrogenosomal_membrane
+    predicate: encloses
+    object: hydrogenosome_lumen
+    description: The hydrogenosomal membrane encloses the hydrogenosome lumen.
+    evidence:
+    - reference: GO:0034492
+      notes: GO:0034492 defines the hydrogenosome lumen as the volume enclosed by
+        the hydrogenosome membrane.
+    - reference: GO:0046859
+      notes: GO:0046859 identifies the hydrogenosomal membrane as the lipid bilayer
+        surrounding a hydrogenosome.
+    - reference: uniprot.location:SL-0144
+      notes: UniProt SL-0144 maps the hydrogenosome membrane to GO:0046859.
+discussions:
+- discussion_id: boundary_membrane_not_lumen_component
+  prompt: Keep the hydrogenosomal membrane as the boundary of the hydrogenosome lumen
+    rather than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#hydrogenosome_lumen_topology
+  rationale: GO:0034492 denotes the volume enclosed by the hydrogenosome membrane,
+    whereas GO:0046859 denotes the lipid bilayer surrounding a hydrogenosome.
+  resolution_note: Represented GO:0046859 as the boundary node in the topology graph
+    and left the lumen record without constituent components.
+  evidence:
+  - reference: GO:0034492
+    notes: GO:0034492 identifies the hydrogenosome lumen.
+  - reference: GO:0046859
+    notes: GO:0046859 identifies the membrane that bounds the hydrogenosome lumen.
+  posed_by: codex
+  posed_date: '2026-09-13'
