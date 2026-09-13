@@ -522,6 +522,15 @@
   "definition": "The sidewall peptidoglycan-synthesis machine of rod-shaped bacteria, also called the Rod complex. A SEDS-family glycosyltransferase (RodA) works with a class B penicillin-binding protein (PBP2) to polymerise and crosslink new wall material into the cylinder, while MreC, MreD and RodZ couple the complex to MreB filaments, which distribute it around the circumference. It is the elongation counterpart of the divisome."
  },
  {
+  "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
+  "label": "chlorosome baseplate antenna complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/chlorosome_baseplate_antenna_complex.html",
+  "definition": "A bacteriochlorophyll a-CsmA light-harvesting protein-pigment array on one face of green bacterial chlorosomes that accepts excitation energy from chlorosome bacteriochlorophyll aggregates and couples it toward membrane reaction-center complexes."
+ },
+ {
   "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
   "label": "chromatophore cytochrome bc1 complex",
   "category": "ENERGY_COMPLEX",
