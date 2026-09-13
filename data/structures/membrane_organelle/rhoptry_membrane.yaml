@@ -1,0 +1,154 @@
+identifier: GO:0033016
+label: rhoptry membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding a rhoptry.
+definition_source: GO:0033016
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T12:23:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T12:24:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added organelle-membrane parentage, rhoptry parthood, a label-only rhoptry
+    lipid bilayer component, Apicomplexa and Toxoplasma gondii scope, a lumen-boundary
+    function, GO/DOI evidence, a nonmechanistic rhoptry-membrane topology graph, and
+    a lipid-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0031090
+part_of:
+- GO:0020008
+components:
+- component_id: rhoptry_lipid_bilayer
+  label: rhoptry lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Generic lipid-bilayer constituent that surrounds a rhoptry and separates its
+    secretory lumen from the parasite cytosol.
+  evidence:
+  - reference: GO:0033016
+    notes: GO:0033016 defines the rhoptry membrane as the lipid bilayer surrounding
+      a rhoptry.
+  - reference: DOI:10.1038/nrmicro1800
+    notes: Boothroyd and Dubremetz 2008 review Toxoplasma rhoptries as membrane-bounded
+      secretory organelles with neck and bulb compartments.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0033016 identifies the whole rhoptry membrane, but no rhoptry-specific
+    source-neutral CURIE was curated for the generic lipid constituent of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: COMMON
+  note: Rhoptry membranes are the bounding lipid bilayers of apicomplexan rhoptries,
+    secretory organelles whose number and morphology vary among lineages and invasive
+    stages.
+  reference: DOI:10.1128/mmbr.00197-22
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model whose membrane-bounded rhoptries are organized into neck
+    and bulb compartments during host-cell invasion.
+  reference: DOI:10.1038/nrmicro1800
+functions:
+- function_id: rhoptry_lumen_boundary
+  label: rhoptry lumen boundary
+  description: The rhoptry membrane forms the lipid-bilayer boundary around the neck-and-bulb
+    secretory lumen of the rhoptry.
+  evidence:
+  - reference: GO:0033016
+    notes: GO:0033016 defines the rhoptry membrane as the lipid bilayer surrounding
+      a rhoptry.
+  - reference: GO:0034591
+    notes: GO:0034591 defines the rhoptry lumen as the volume enclosed by the rhoptry
+      membrane.
+evidence:
+- reference: GO:0033016
+  notes: Gene Ontology cellular-component term for the rhoptry membrane.
+- reference: GO:0031090
+  notes: Gene Ontology cellular-component parent term for organelle membrane.
+- reference: GO:0020008
+  notes: Gene Ontology cellular-component term for the rhoptry.
+- reference: GO:0034591
+  notes: Gene Ontology cellular-component term for the rhoptry lumen.
+- reference: DOI:10.1038/nrmicro1800
+  notes: 'Boothroyd and Dubremetz 2008, Kiss and spit: the dual roles of Toxoplasma
+    rhoptries, Nature Reviews Microbiology.'
+- reference: DOI:10.1128/mmbr.00197-22
+  notes: Waller and Carruthers 2024, Adaptations and metabolic evolution of myzozoan
+    protists across diverse lifestyles and environments, Microbiology and Molecular
+    Biology Reviews.
+causal_graphs:
+- graph_id: rhoptry_membrane_bounds_lumen
+  title: Rhoptry membrane encloses the secretory lumen
+  description: The rhoptry membrane is the lipid bilayer that bounds the rhoptry and
+    encloses the lumen that stores rhoptry contents before secretion.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures membrane and lumen topology without asserting specific
+    proteins that target or remodel the rhoptry membrane.
+  nodes:
+  - node_id: rhoptry_membrane
+    label: rhoptry membrane
+    node_type: STRUCTURE
+    grounding: GO:0033016
+    component_ref: rhoptry_lipid_bilayer
+  - node_id: rhoptry
+    label: rhoptry
+    node_type: ORGANELLE
+    grounding: GO:0020008
+  - node_id: rhoptry_lumen
+    label: rhoptry lumen
+    node_type: STRUCTURE
+    grounding: GO:0034591
+  - node_id: rhoptry_secretion
+    label: rhoptry secretion
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: rhoptry_membrane
+    predicate: is part of
+    object: rhoptry
+    description: The rhoptry membrane is the lipid-bilayer boundary of the rhoptry.
+    evidence:
+    - reference: GO:0033016
+      notes: GO:0033016 defines the rhoptry membrane as surrounding a rhoptry.
+    - reference: DOI:10.1038/nrmicro1800
+      notes: Boothroyd and Dubremetz 2008 review Toxoplasma rhoptries as membrane-bounded
+        secretory organelles.
+  - subject: rhoptry_lumen
+    predicate: is enclosed by
+    object: rhoptry_membrane
+    description: The rhoptry lumen is the volume enclosed by the rhoptry membrane.
+    evidence:
+    - reference: GO:0034591
+      notes: GO:0034591 defines the rhoptry lumen as the volume enclosed by the rhoptry
+        membrane.
+  - subject: rhoptry
+    predicate: supports
+    object: rhoptry_secretion
+    description: The membrane-bounded rhoptry secretes its contents during host-cell
+      invasion.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1800
+      notes: Boothroyd and Dubremetz 2008 review rhoptry discharge during Toxoplasma
+        host-cell invasion.
+discussions:
+- discussion_id: ground_rhoptry_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituent
+    of the rhoptry membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rhoptry_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0033016, but no rhoptry-specific
+    lipid or lipid-bilayer CURIE was curated for the membrane constituent.
+  evidence:
+  - reference: GO:0033016
+    notes: GO:0033016 identifies the complete rhoptry membrane.
+  posed_by: codex
+  posed_date: '2026-09-13'

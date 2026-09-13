@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/rhoptry_membrane.yaml
+  slug: rhoptry_membrane
+session:
+  id: 2026-09-13T122440Z-codex-571c87
+  timestamp: '2026-09-13T12:24:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - composition
+  - distribution
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added GO-grounded rhoptry membrane record
+  details: Added a GO:0033016 rhoptry membrane record as a lipid-bilayer substructure of the
+    apicomplexan rhoptry. The record captures organelle-membrane parentage, a reviewed-label-only
+    rhoptry lipid bilayer component, Apicomplexa scope, Toxoplasma gondii as a canonical example,
+    a lumen-boundary function, a nonmechanistic rhoptry-membrane topology graph, GO/DOI evidence,
+    and an open TODO to ground the lipid constituent exactly.
