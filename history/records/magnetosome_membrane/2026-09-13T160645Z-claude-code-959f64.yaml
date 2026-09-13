@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/magnetosome_membrane.yaml
+  slug: magnetosome_membrane
+session:
+  id: 2026-09-13T160645Z-claude-code-959f64
+  timestamp: '2026-09-13T16:06:45Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/808
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/807
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - composition
+  - distribution
+  - exemplars
+  - function
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Create a GO-grounded magnetosome membrane record
+  details: Created GO:0110146 magnetosome membrane from the GO cellular-component term, the
+    UniProt SL-0512 mapping in subcell.txt, and curated magnetosome-membrane literature. Added
+    GO:0016020 membrane parentage, GO:0110143 magnetosome parthood, a label-only lipid-bilayer
+    constituent, Bacteria and Alphaproteobacteria distribution rows, a Magnetospirillum gryphiswaldense
+    MSR-1 canonical example, a biomineralization-boundary function, a nonmechanistic topology
+    graph, and a TODO to ground the generic magnetosome lipid bilayer.
