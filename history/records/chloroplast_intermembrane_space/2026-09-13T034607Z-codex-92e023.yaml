@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/chloroplast_intermembrane_space.yaml
+  slug: chloroplast_intermembrane_space
+session:
+  id: 2026-09-13T034607Z-codex-92e023
+  timestamp: '2026-09-13T03:46:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/746
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/745
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the chloroplast intermembrane space record
+  details: Added an evidence-backed GO:0031972 chloroplast intermembrane space CellStructureRecord
+    with the UniProt SL-0052 xref, plastid intermembrane-space parentage, chloroplast-envelope
+    parthood, Viridiplantae and Chlamydomonas scope, and a boundary topology graph. Addressed
+    adversarial review by clarifying the SL-0052 evidence note so plastid intermembrane-space
+    hierarchy and the Chloroplast envelope host parent are not conflated, then regenerated
+    embeddings, pages, and README statistics.

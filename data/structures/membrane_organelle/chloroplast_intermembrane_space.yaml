@@ -1,0 +1,131 @@
+identifier: GO:0031972
+label: chloroplast intermembrane space
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The region between the inner and outer lipid bilayers of a chloroplast
+  envelope.
+definition_source: GO:0031972
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T03:34:37Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T03:35:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL-0052 xref, plastid intermembrane-space parentage,
+    chloroplast-envelope parthood, Viridiplantae and Chlamydomonas scope, and a nonmechanistic
+    envelope topology graph.
+  llm_assisted: true
+- timestamp: '2026-09-13T03:42:57Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #746 by clarifying the SL-0052 evidence note to separate plastid
+    intermembrane-space hierarchy from the chloroplast envelope host parent.'
+  llm_assisted: true
+synonyms:
+- synonym_text: chloroplastic intermembrane space
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0052
+parent_structures:
+- GO:0009529
+part_of:
+- GO:0009941
+xrefs:
+- uniprot.location:SL-0052
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Photosynthetic green algae and land plants carry chloroplast envelopes whose
+    inner and outer membranes delimit an intermembrane space.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas reinhardtii has a chloroplast envelope whose TOC-TIC import
+    supercomplex spans the outer and inner membranes across the intermembrane space.
+  reference: DOI:10.1016/j.cell.2022.10.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model used for structural analysis of a TOC-TIC supercomplex that
+    spans the chloroplast outer and inner envelope membranes.
+  reference: DOI:10.1016/j.cell.2022.10.030
+evidence:
+- reference: GO:0031972
+  notes: Gene Ontology cellular-component term for chloroplast intermembrane space.
+- reference: GO:0009529
+  notes: Gene Ontology cellular-component term for plastid intermembrane space.
+- reference: GO:0009941
+  notes: Gene Ontology cellular-component term for the chloroplast envelope that contains
+    this intermembrane space.
+- reference: GO:0009707
+  notes: Gene Ontology cellular-component term for the outer chloroplast membrane
+    that delimits this space.
+- reference: GO:0009706
+  notes: Gene Ontology cellular-component term for the inner chloroplast membrane
+    that delimits this space.
+- reference: uniprot.location:SL-0052
+  notes: UniProt Subcellular Location entry SL-0052 maps Chloroplast intermembrane
+    space to GO:0031972, lists it in the Plastid, chloroplast intermembrane space
+    hierarchy, and names Chloroplast envelope as the host parent.
+- reference: uniprot.location:SL-0051
+  notes: UniProt Subcellular Location entry SL-0051 maps Chloroplast inner membrane
+    to GO:0009706 and describes it as separating the chloroplast stroma from the intermembrane
+    space.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1016/j.cell.2022.10.030
+  notes: Jin et al. 2022, Structure of a TOC-TIC supercomplex spanning two chloroplast
+    envelope membranes, Cell.
+causal_graphs:
+- graph_id: chloroplast_intermembrane_space_topology
+  title: Chloroplast intermembrane-space topology
+  description: The chloroplast intermembrane space lies between the inner and outer
+    chloroplast envelope membranes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures compartment topology without asserting the full
+    set of envelope proteins or chloroplast import machinery.
+  nodes:
+  - node_id: chloroplast_intermembrane_space
+    label: chloroplast intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031972
+  - node_id: chloroplast_outer_membrane
+    label: chloroplast outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009707
+  - node_id: chloroplast_inner_membrane
+    label: chloroplast inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0009706
+  edges:
+  - subject: chloroplast_outer_membrane
+    predicate: delimits
+    object: chloroplast_intermembrane_space
+    description: The outer membrane forms one boundary of the chloroplast intermembrane
+      space.
+    evidence:
+    - reference: GO:0031972
+      notes: GO:0031972 defines this space as the region between the inner and outer
+        lipid bilayers of a chloroplast envelope.
+    - reference: GO:0009707
+      notes: GO:0009707 defines the chloroplast outer membrane as the outer envelope
+        bilayer.
+  - subject: chloroplast_inner_membrane
+    predicate: delimits
+    object: chloroplast_intermembrane_space
+    description: The inner membrane forms the second boundary of the chloroplast intermembrane
+      space.
+    evidence:
+    - reference: GO:0031972
+      notes: GO:0031972 defines this space as the region between the inner and outer
+        lipid bilayers of a chloroplast envelope.
+    - reference: uniprot.location:SL-0051
+      notes: UniProt SL-0051 describes the chloroplast inner membrane as separating
+        the chloroplast stroma from the intermembrane space.
