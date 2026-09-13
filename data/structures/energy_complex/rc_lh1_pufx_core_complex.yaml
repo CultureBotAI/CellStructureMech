@@ -1,0 +1,149 @@
+identifier: cellstructuremech:rc_lh1_pufx_core_complex
+label: RC-LH1-PufX core complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A purple-bacterial chromatophore membrane protein complex that contains
+  a photochemical reaction center, LH1 antenna proteins and PufX, receives excitation
+  from surrounding LH2 antennae, and reduces quinone during cyclic photosynthetic
+  electron transport.
+definition_source: DOI:10.1038/nature02823
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T06:38:01Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T06:38:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added RC-LH1-PufX synonymy, chromatophore parthood, a Cereibacter example,
+    photosynthetic electron-transport function, GO and literature evidence, a nonmechanistic
+    quinone-reduction graph, and an RC-LH1-PufX subunit-boundary TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: reaction center-LH1-PufX core complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/nature02823
+part_of:
+- GO:0042717
+canonical_examples:
+- taxon_id: NCBITaxon:1063
+  taxon_label: Cereibacter sphaeroides
+  note: Purple photosynthetic bacterium, still commonly cited under the synonym Rhodobacter
+    sphaeroides, whose chromatophore membranes contain native RC-LH1-PufX core-complex
+    arrays.
+  reference: DOI:10.1038/nature02823
+functions:
+- function_id: photosynthetic_electron_transport
+  label: photosynthetic electron transport chain
+  grounding: GO:0009767
+  description: The RC-LH1-PufX core receives excitation energy from LH2 antennae,
+    performs photochemical charge separation, and reduces quinone in the purple-bacterial
+    chromatophore membrane.
+  evidence:
+  - reference: DOI:10.1074/jbc.M412088200
+    notes: Comayras et al. 2005 modeled excitation transfer and quinone-domain behavior
+      in Rhodobacter sphaeroides reaction-center antenna complexes.
+evidence:
+- reference: GO:0042717
+  notes: Gene Ontology cellular-component term for the plasma membrane-derived chromatophore
+    membrane that houses purple-bacterial RC-LH1-PufX core complexes.
+- reference: GO:0009767
+  notes: Gene Ontology biological-process term for the photosynthetic electron transport
+    chain.
+- reference: DOI:10.1038/nature02823
+  notes: Bahatyrova et al. 2004, The native architecture of a photosynthetic membrane,
+    Nature.
+- reference: DOI:10.1074/jbc.M412088200
+  notes: Comayras, Jungas and Lavergne 2005, Functional Consequences of the Organization
+    of the Photosynthetic Apparatus in Rhodobacter sphaeroides, Journal of Biological
+    Chemistry.
+causal_graphs:
+- graph_id: rc_lh1_pufx_quinone_reduction
+  title: RC-LH1-PufX cores couple LH2 excitation to quinone reduction
+  description: In purple-bacterial chromatophore membranes, RC-LH1-PufX core complexes
+    receive excitation from LH2 antennae and reduce quinone carriers during cyclic
+    photosynthetic electron transport.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph places RC-LH1-PufX in chromatophore electron flow without
+    resolving the reaction-center cofactors, the LH1 antenna ring, PufX-dependent
+    dimerization, or quinone exchange kinetics.
+  nodes:
+  - node_id: chromatophore_membrane
+    label: plasma membrane-derived chromatophore membrane
+    node_type: STRUCTURE
+    grounding: GO:0042717
+  - node_id: lh2
+    label: LH2 peripheral light-harvesting antenna complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  - node_id: rc_lh1_pufx
+    label: RC-LH1-PufX core complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:rc_lh1_pufx_core_complex
+  - node_id: quinone_pool
+    label: quinone pool
+    node_type: CHEMICAL
+    description: Membrane-diffusing quinone and quinol carriers that link reaction-center
+      cores to cytochrome bc1 in purple-bacterial chromatophores.
+  - node_id: electron_transport
+    label: photosynthetic electron transport chain
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009767
+  edges:
+  - subject: rc_lh1_pufx
+    predicate: is part of
+    object: chromatophore_membrane
+    description: RC-LH1-PufX core complexes reside in native Rhodobacter sphaeroides
+      chromatophore photosynthetic membranes.
+    evidence:
+    - reference: DOI:10.1038/nature02823
+      notes: Bahatyrova et al. 2004 resolved arrays of RC-LH1-PufX core complexes
+        in native Rhodobacter sphaeroides photosynthetic membranes.
+  - subject: lh2
+    predicate: transfers excitation energy to
+    object: rc_lh1_pufx
+    description: Peripheral LH2 antenna complexes feed excitation energy inward toward
+      RC-LH1-PufX cores.
+    evidence:
+    - reference: DOI:10.1038/nature02823
+      notes: Bahatyrova et al. 2004 imaged LH2 complexes as interconnecting RC-LH1-PufX
+        core arrays in native Rhodobacter membranes.
+  - subject: rc_lh1_pufx
+    predicate: reduces
+    object: quinone_pool
+    description: Photoexcited RC-LH1-PufX reaction centers reduce quinone carriers
+      in the chromatophore membrane.
+    evidence:
+    - reference: DOI:10.1074/jbc.M412088200
+      notes: Comayras et al. 2005 modeled quinone-domain behavior around Rhodobacter
+        reaction-center antenna complexes.
+  - subject: rc_lh1_pufx
+    predicate: contributes to
+    object: electron_transport
+    description: RC-LH1-PufX cores are the photoexcited reaction-center antenna complexes
+      in the cyclic chromatophore electron transport chain.
+    evidence:
+    - reference: DOI:10.1074/jbc.M412088200
+      notes: Comayras et al. 2005 connected Rhodobacter reaction-center antenna organization
+        to chromatophore electron-transfer behavior.
+discussions:
+- discussion_id: rc_lh1_pufx_subunit_boundaries
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact source-neutral component groundings for reaction-center L/M/H,
+    LH1 alpha/beta, and PufX families before adding subunit-level component rows.
+  attaches_to:
+  - causal_graphs#rc_lh1_pufx_quinone_reduction
+  rationale: The complete RC-LH1-PufX core is a record-level chromatophore complex
+    here, but its first record does not guess which InterPro, Pfam or NCBIfam terms
+    exactly cover the purple-bacterial reaction-center, LH1, and PufX constituents.
+  evidence:
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 resolved native RC-LH1-PufX core complexes in the
+      Rhodobacter photosynthetic membrane without assigning source-neutral CURIEs
+      for all subunit families.
+  posed_by: codex
+  posed_date: '2026-09-13'
