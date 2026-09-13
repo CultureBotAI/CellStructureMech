@@ -2420,9 +2420,9 @@
           "cosine_similarity": 0.70513717
         },
         {
-          "identifier": "GO:0042644",
-          "label": "chloroplast nucleoid",
-          "cosine_similarity": 0.67326593
+          "identifier": "GO:0009535",
+          "label": "chloroplast thylakoid membrane",
+          "cosine_similarity": 0.69195018
         }
       ]
     },
@@ -2746,6 +2746,11 @@
           "cosine_similarity": 0.91662957
         },
         {
+          "identifier": "GO:0009535",
+          "label": "chloroplast thylakoid membrane",
+          "cosine_similarity": 0.80342409
+        },
+        {
           "identifier": "GO:0009534",
           "label": "chloroplast thylakoid",
           "cosine_similarity": 0.80144267
@@ -2759,11 +2764,6 @@
           "identifier": "GO:0031979",
           "label": "plasma membrane-derived thylakoid lumen",
           "cosine_similarity": 0.79212537
-        },
-        {
-          "identifier": "GO:0070116",
-          "label": "organellar chromatophore thylakoid",
-          "cosine_similarity": 0.7916428
         }
       ]
     },
@@ -2782,6 +2782,11 @@
           "cosine_similarity": 0.92419556
         },
         {
+          "identifier": "GO:0009535",
+          "label": "chloroplast thylakoid membrane",
+          "cosine_similarity": 0.91738644
+        },
+        {
           "identifier": "GO:0009534",
           "label": "chloroplast thylakoid",
           "cosine_similarity": 0.90179981
@@ -2790,11 +2795,6 @@
           "identifier": "GO:0070118",
           "label": "organellar chromatophore thylakoid membrane",
           "cosine_similarity": 0.83629436
-        },
-        {
-          "identifier": "GO:0042644",
-          "label": "chloroplast nucleoid",
-          "cosine_similarity": 0.8348129
         }
       ]
     },
@@ -2813,6 +2813,11 @@
           "cosine_similarity": 0.86361633
         },
         {
+          "identifier": "GO:0009535",
+          "label": "chloroplast thylakoid membrane",
+          "cosine_similarity": 0.8622332
+        },
+        {
           "identifier": "GO:0009534",
           "label": "chloroplast thylakoid",
           "cosine_similarity": 0.83575444
@@ -2821,11 +2826,6 @@
           "identifier": "GO:0005635",
           "label": "nuclear envelope",
           "cosine_similarity": 0.81043188
-        },
-        {
-          "identifier": "GO:0070118",
-          "label": "organellar chromatophore thylakoid membrane",
-          "cosine_similarity": 0.80971867
         }
       ]
     },
@@ -2844,6 +2844,11 @@
           "cosine_similarity": 0.88671092
         },
         {
+          "identifier": "GO:0009535",
+          "label": "chloroplast thylakoid membrane",
+          "cosine_similarity": 0.8731831
+        },
+        {
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
           "cosine_similarity": 0.86361633
@@ -2852,11 +2857,6 @@
           "identifier": "GO:0042644",
           "label": "chloroplast nucleoid",
           "cosine_similarity": 0.84641578
-        },
-        {
-          "identifier": "GO:0070117",
-          "label": "organellar chromatophore thylakoid lumen",
-          "cosine_similarity": 0.80669603
         }
       ]
     },
@@ -2864,6 +2864,11 @@
       "identifier": "GO:0009534",
       "label": "chloroplast thylakoid",
       "neighbors": [
+        {
+          "identifier": "GO:0009535",
+          "label": "chloroplast thylakoid membrane",
+          "cosine_similarity": 0.95025899
+        },
         {
           "identifier": "GO:0009507",
           "label": "chloroplast",
@@ -2883,11 +2888,37 @@
           "identifier": "GO:0033115",
           "label": "cyanelle thylakoid membrane",
           "cosine_similarity": 0.84265058
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009535",
+      "label": "chloroplast thylakoid membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0009534",
+          "label": "chloroplast thylakoid",
+          "cosine_similarity": 0.95025899
         },
         {
-          "identifier": "GO:0009843",
-          "label": "cyanelle thylakoid",
-          "cosine_similarity": 0.84055145
+          "identifier": "GO:0009507",
+          "label": "chloroplast",
+          "cosine_similarity": 0.91738644
+        },
+        {
+          "identifier": "GO:0033115",
+          "label": "cyanelle thylakoid membrane",
+          "cosine_similarity": 0.89930226
+        },
+        {
+          "identifier": "GO:0070118",
+          "label": "organellar chromatophore thylakoid membrane",
+          "cosine_similarity": 0.89655801
+        },
+        {
+          "identifier": "GO:0009570",
+          "label": "chloroplast stroma",
+          "cosine_similarity": 0.8731831
         }
       ]
     },
@@ -3288,9 +3319,9 @@
           "cosine_similarity": 0.86410481
         },
         {
-          "identifier": "GO:0034060",
-          "label": "cyanelle stroma",
-          "cosine_similarity": 0.85298619
+          "identifier": "GO:0009535",
+          "label": "chloroplast thylakoid membrane",
+          "cosine_similarity": 0.85357257
         }
       ]
     },
@@ -3490,6 +3521,11 @@
           "cosine_similarity": 0.65404892
         },
         {
+          "identifier": "GO:0009535",
+          "label": "chloroplast thylakoid membrane",
+          "cosine_similarity": 0.64480723
+        },
+        {
           "identifier": "GO:0033115",
           "label": "cyanelle thylakoid membrane",
           "cosine_similarity": 0.63639619
@@ -3503,11 +3539,6 @@
           "identifier": "GO:0031979",
           "label": "plasma membrane-derived thylakoid lumen",
           "cosine_similarity": 0.62536376
-        },
-        {
-          "identifier": "GO:0020008",
-          "label": "rhoptry",
-          "cosine_similarity": 0.62365603
         }
       ]
     },
@@ -4368,14 +4399,14 @@
           "cosine_similarity": 0.90309023
         },
         {
+          "identifier": "GO:0009535",
+          "label": "chloroplast thylakoid membrane",
+          "cosine_similarity": 0.89655801
+        },
+        {
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
           "cosine_similarity": 0.89476421
-        },
-        {
-          "identifier": "GO:0070113",
-          "label": "organellar chromatophore inner membrane",
-          "cosine_similarity": 0.89322179
         }
       ]
     },
@@ -4616,14 +4647,14 @@
           "cosine_similarity": 0.81955448
         },
         {
+          "identifier": "GO:0009535",
+          "label": "chloroplast thylakoid membrane",
+          "cosine_similarity": 0.8176644
+        },
+        {
           "identifier": "GO:0070118",
           "label": "organellar chromatophore thylakoid membrane",
           "cosine_similarity": 0.81265541
-        },
-        {
-          "identifier": "GO:0009534",
-          "label": "chloroplast thylakoid",
-          "cosine_similarity": 0.79442819
         }
       ]
     },
@@ -5851,6 +5882,11 @@
           "cosine_similarity": 0.70949863
         },
         {
+          "identifier": "GO:0009535",
+          "label": "chloroplast thylakoid membrane",
+          "cosine_similarity": 0.69317345
+        },
+        {
           "identifier": "GO:0097268",
           "label": "cytoophidium",
           "cosine_similarity": 0.68696738
@@ -5859,11 +5895,6 @@
           "identifier": "GO:0009507",
           "label": "chloroplast",
           "cosine_similarity": 0.67999054
-        },
-        {
-          "identifier": "GO:0009843",
-          "label": "cyanelle thylakoid",
-          "cosine_similarity": 0.66916244
         }
       ]
     },
