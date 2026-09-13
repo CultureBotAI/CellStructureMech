@@ -28,29 +28,16 @@ curation_history:
     row, deleting the ambiguous PV exact synonym, and dropping the organism-as-state
     node from the topology graph.'
   llm_assisted: true
+- timestamp: '2026-09-13T18:53:40Z'
+  curator: codex
+  action: ADDRESSED_CURATION_TODO
+  changes: Resolved the PVM exact-grounding TODO by replacing the label-only PVM component
+    with an exact has_part link and by grounding the PV topology node to cellstructuremech:parasitophorous_vacuole_membrane.
+  llm_assisted: true
 parent_structures:
 - GO:0020003
 xrefs:
 - uniprot.location:SL-0194
-components:
-- component_id: parasitophorous_vacuolar_membrane
-  label: parasitophorous vacuolar membrane
-  component_type: LIPID
-  component_role: CONSTITUENT
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: UniProt SL-0193 and GO:0020005 identify the broader symbiont-containing
-    vacuole membrane class; no exact Apicomplexa-scoped CURIE for the parasitophorous
-    vacuolar membrane was asserted as a component grounding.
-  essentiality: ESSENTIAL
-  role: Lipid bilayer boundary that surrounds the intracellular parasite and separates
-    the parasitophorous vacuole from the host cytosol.
-  evidence:
-  - reference: uniprot.location:SL-0193
-    notes: UniProt Subcellular Location SL-0193 identifies the parasitophorous vacuolar
-      membrane as the membrane surrounding the parasitophorous vacuole.
-  - reference: DOI:10.1242/jcs.111.11.1467
-    notes: Lingelbach and Joiner 1998 review the parasitophorous vacuolar membrane
-      surrounding intracellular Plasmodium and Toxoplasma parasites.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5794
   taxon_label: Apicomplexa
@@ -115,16 +102,16 @@ causal_graphs:
   scope_notes: The graph captures the defining PV/PVM boundary without modeling the
     parasite secretory mechanisms that build and remodel the PVM.
   nodes:
-  - node_id: parasitophorous_vacuolar_membrane
-    label: parasitophorous vacuolar membrane
+  - node_id: parasitophorous_vacuole_membrane
+    label: parasitophorous vacuole membrane
     node_type: STRUCTURE
-    component_ref: parasitophorous_vacuolar_membrane
+    grounding: cellstructuremech:parasitophorous_vacuole_membrane
   - node_id: parasitophorous_vacuole
     label: parasitophorous vacuole
     node_type: ORGANELLE
     grounding: cellstructuremech:parasitophorous_vacuole
   edges:
-  - subject: parasitophorous_vacuolar_membrane
+  - subject: parasitophorous_vacuole_membrane
     predicate: bounds
     object: parasitophorous_vacuole
     description: The parasitophorous vacuolar membrane is the lipid-bilayer boundary
@@ -159,13 +146,12 @@ discussions:
   prompt: Decide whether the parasitophorous vacuolar membrane needs its own exact
     record or exact source-neutral component grounding.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
-  - components#parasitophorous_vacuolar_membrane
+  - has_part
   - causal_graphs#parasitophorous_vacuole_topology
-  rationale: The PVM is a named boundary of the PV, but this record only asserts a
-    reviewed label because UniProt SL-0193 maps to the broader GO:0020005 symbiont-containing
-    vacuole membrane term.
+  rationale: UniProt SL-0193 names the PVM exactly even though its mapped GO term,
+    GO:0020005, names the broader symbiont-containing vacuole membrane class.
   evidence:
   - reference: uniprot.location:SL-0193
     notes: UniProt SL-0193 identifies the parasitophorous vacuolar membrane as the
@@ -174,3 +160,9 @@ discussions:
     notes: GO:0020005 is labeled symbiont-containing vacuole membrane.
   posed_by: codex
   posed_date: '2026-09-13'
+  resolution_note: Minted cellstructuremech:parasitophorous_vacuole_membrane as the
+    exact Apicomplexa-scoped PVM record and moved the PV topology node from a label-only
+    component to the new structure record.
+has_part:
+- cellstructuremech:parasitophorous_vacuole_membrane
+- cellstructuremech:parasitophorous_vacuole_lumen

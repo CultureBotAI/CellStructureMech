@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/parasitophorous_vacuole.yaml
+  slug: parasitophorous_vacuole
+session:
+  id: 2026-09-13T185410Z-codex-f247d7
+  timestamp: '2026-09-13T18:54:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground parasitophorous vacuole PVM topology
+  details: Updated the existing parasitophorous vacuole record to replace its reviewed-label-only
+    parasitophorous vacuolar membrane component with has_part links to the exact PVM and lumen
+    records, grounded the PVM topology node to the new CellStructureMech PVM record, and resolved
+    the open PVM exact-grounding discussion.

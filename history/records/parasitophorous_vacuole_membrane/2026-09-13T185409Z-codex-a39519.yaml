@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+  slug: parasitophorous_vacuole_membrane
+session:
+  id: 2026-09-13T185409Z-codex-a39519
+  timestamp: '2026-09-13T18:54:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add parasitophorous vacuole membrane record
+  details: Created a minted parasitophorous vacuole membrane record from UniProt Subcellular
+    Location SL-0193, retained GO:0020005 as broader symbiont-containing-vacuole-membrane
+    parentage, linked the PVM to the CellStructureMech parasitophorous vacuole record, and
+    captured Apicomplexa scope, Toxoplasma and Plasmodium examples, a reviewed-label-only
+    PVM lipid bilayer, and nonmechanistic PVM topology.
