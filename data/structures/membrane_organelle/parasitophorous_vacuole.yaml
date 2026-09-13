@@ -21,10 +21,13 @@ curation_history:
     examples, PV niche function, DOI/GO/UniProt evidence, a nonmechanistic topology
     graph, and scope discussions for GO:0020003 and GO:0020005.
   llm_assisted: true
-synonyms:
-- synonym_text: PV
-  synonym_type: EXACT_SYNONYM
-  source: DOI:10.1016/j.pt.2017.02.007
+- timestamp: '2026-09-13T18:19:06Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #820, #821, and #822 by removing the inferred Eukaryota distribution
+    row, deleting the ambiguous PV exact synonym, and dropping the organism-as-state
+    node from the topology graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0020003
 xrefs:
@@ -49,13 +52,6 @@ components:
     notes: Lingelbach and Joiner 1998 review the parasitophorous vacuolar membrane
       surrounding intracellular Plasmodium and Toxoplasma parasites.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:2759
-  taxon_label: Eukaryota
-  presence: RARE
-  note: Parasitophorous vacuoles are specialized host-cell compartments formed by
-    a minority of intracellular microbial eukaryotes rather than conserved eukaryotic
-    organelles.
-  reference: uniprot.location:SL-0194
 - taxon_id: NCBITaxon:5794
   taxon_label: Apicomplexa
   presence: COMMON
@@ -112,12 +108,12 @@ evidence:
 causal_graphs:
 - graph_id: parasitophorous_vacuole_topology
   title: Parasitophorous vacuole topology
-  description: The parasitophorous vacuolar membrane bounds the PV and surrounds the
-    intracellular apicomplexan parasite inside the host cell.
+  description: The parasitophorous vacuolar membrane is the lipid-bilayer boundary
+    of the PV.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures defining host-vacuole topology without modeling
-    the parasite secretory mechanisms that build and remodel the PVM.
+  scope_notes: The graph captures the defining PV/PVM boundary without modeling the
+    parasite secretory mechanisms that build and remodel the PVM.
   nodes:
   - node_id: parasitophorous_vacuolar_membrane
     label: parasitophorous vacuolar membrane
@@ -127,9 +123,6 @@ causal_graphs:
     label: parasitophorous vacuole
     node_type: ORGANELLE
     grounding: cellstructuremech:parasitophorous_vacuole
-  - node_id: intracellular_apicomplexan_parasite
-    label: intracellular apicomplexan parasite
-    node_type: STATE
   edges:
   - subject: parasitophorous_vacuolar_membrane
     predicate: bounds
@@ -143,18 +136,6 @@ causal_graphs:
     - reference: uniprot.location:SL-0194
       notes: UniProt SL-0194 defines the PV as a host-cell vacuole enclosed by the
         PVM.
-  - subject: parasitophorous_vacuolar_membrane
-    predicate: surrounds
-    object: intracellular_apicomplexan_parasite
-    description: During apicomplexan host-cell invasion, the nascent PVM is formed
-      around the intracellular parasite.
-    evidence:
-    - reference: uniprot.location:SL-0194
-      notes: UniProt SL-0194 describes initiation of the PVM around the intracellular
-        parasite during host-cell invasion.
-    - reference: DOI:10.1242/jcs.111.11.1467
-      notes: Lingelbach and Joiner 1998 review PVM formation during Plasmodium and
-        Toxoplasma host-cell invasion.
 discussions:
 - discussion_id: go_symbiont_vacuole_scope
   prompt: Model GO:0020003 as a broad parent rather than as the identity of the Apicomplexa-scoped
