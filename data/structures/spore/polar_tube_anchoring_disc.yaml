@@ -1,0 +1,170 @@
+identifier: GO:0160202
+label: polar tube anchoring disc
+structure_category: SPORE
+structure_kind: OTHER
+definition: A structural component of the microsporidian spore's invasion apparatus
+  that is located at the anterior end of the spore and serves to attach the polar
+  tube to the inside of the spore wall.
+definition_source: GO:0160202
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T11:28:55Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T11:29:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added polar-tube anchoring-disk synonymy, a conservative EnP1 component
+    with a reviewed UniProtKB example, Microsporidia and Encephalitozoon scope, polar-tube
+    attachment function, DOI/GO evidence, a nonmechanistic anchoring graph, and a
+    component grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: polar tube anchoring disk
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/EC.00113-07
+components:
+- component_id: enp1
+  label: EnP1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - EnP1
+  essentiality: UNKNOWN
+  role: Spore wall protein that is abundant in the polar sac/anchoring disk region
+    of Encephalitozoon spores and supports host-cell adherence.
+  evidence:
+  - reference: DOI:10.1128/EC.00113-07
+    notes: Southern et al. 2007 localized EnP1 in Encephalitozoon spores to the endospore,
+      exospore, and polar sac/anchoring disk region by transmission immunoelectron
+      microscopy and tested EnP1-dependent host-cell adherence in vitro.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q8SWL3
+    protein_label: Spore wall and anchoring disk complex protein EnP1
+    gene_symbol: EnP1
+    taxon_id: NCBITaxon:284813
+    taxon_label: Encephalitozoon cuniculi GB-M1
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-13'
+    role: Reviewed UniProtKB entry for Encephalitozoon cuniculi EnP1, whose experimental
+      localization evidence includes the anchoring disk complex.
+    evidence:
+    - reference: DOI:10.1128/EC.00113-07
+      notes: Southern et al. 2007 experimentally localized EnP1 in the Encephalitozoon
+        spore wall and polar sac/anchoring disk region.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: EnP1 is experimentally localized to the anchoring disk complex
+    in Encephalitozoon, but the exact source-neutral protein-family grounding for
+    the full anchoring-disc constituent is not curated here. InterPro/Pfam entries
+    on UniProtKB:Q8SWL3 cover EnP1 N- and C-terminal regions rather than the whole
+    anchoring-disc component.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:6029
+  taxon_label: Microsporidia
+  presence: COMMON
+  note: The anchoring disc is modeled as part of the microsporidian spore-stage polar-tube
+    invasion apparatus; this row is scoped to the infectious spore stage rather than
+    every vegetative cell.
+  reference: DOI:10.1016/j.ijpara.2005.04.003
+canonical_examples:
+- taxon_id: NCBITaxon:6035
+  taxon_label: Encephalitozoon cuniculi
+  note: Mammal-infecting microsporidian in which the EnP1 spore wall protein was localized
+    to the polar sac/anchoring disk region of the spore.
+  reference: DOI:10.1128/EC.00113-07
+functions:
+- function_id: polar_tube_attachment
+  label: polar tube attachment
+  description: The anchoring disc attaches the intracellular polar tube to the inside
+    of the anterior spore wall, positioning the tube for apical release during germination.
+  evidence:
+  - reference: GO:0160202
+    notes: GO:0160202 defines the polar tube anchoring disc as the anterior invasion-apparatus
+      component that attaches the polar tube to the inside of the spore wall.
+  - reference: DOI:10.1016/j.ijpara.2005.04.003
+    notes: Xu and Weiss 2005 reviewed polar-tube attachment and discharge as part
+      of microsporidian spore invasion.
+evidence:
+- reference: GO:0160202
+  notes: Gene Ontology cellular-component term for the polar tube anchoring disc.
+- reference: DOI:10.1016/j.ijpara.2005.04.003
+  notes: 'Xu and Weiss 2005, The microsporidian polar tube: a highly specialised invasion
+    organelle, International Journal for Parasitology.'
+- reference: DOI:10.1111/j.1462-5822.2009.01362.x
+  notes: Williams 2009, Unique physiology of host-parasite interactions in microsporidia
+    infections, Cellular Microbiology.
+- reference: DOI:10.1128/EC.00113-07
+  notes: Southern et al. 2007, EnP1, a Microsporidian Spore Wall Protein That Enables
+    Spores To Adhere to and Infect Host Cells In Vitro, Eukaryotic Cell.
+causal_graphs:
+- graph_id: anchoring_disc_positions_polar_tube
+  title: Anchoring disc tethers the polar tube at the spore apex
+  description: The anchoring disc sits at the anterior spore end, holds the polar
+    tube against the inside of the spore wall, and marks the region from which the
+    everting polar tube exits during germination.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: anchoring_disc
+    label: polar tube anchoring disc
+    node_type: STRUCTURE
+    grounding: GO:0160202
+  - node_id: polar_tube
+    label: polar tube
+    node_type: STRUCTURE
+    grounding: GO:0044099
+  - node_id: spore_wall
+    label: spore wall
+    node_type: STRUCTURE
+    grounding: GO:0031160
+  - node_id: anterior_spore_end
+    label: anterior spore end
+    node_type: STRUCTURE
+  edges:
+  - subject: anchoring_disc
+    predicate: resides at
+    object: anterior_spore_end
+    description: The polar tube anchoring disc is located at the anterior end of the
+      microsporidian spore.
+    evidence:
+    - reference: GO:0160202
+      notes: GO:0160202 defines the structure by its anterior spore location.
+  - subject: anchoring_disc
+    predicate: attaches
+    object: polar_tube
+    description: The anchoring disc attaches the stored polar tube to the inner face
+      of the microsporidian spore wall.
+    evidence:
+    - reference: GO:0160202
+      notes: GO:0160202 defines the anchoring disc by its role in attaching the polar
+        tube to the inside of the spore wall.
+    - reference: DOI:10.1016/j.ijpara.2005.04.003
+      notes: Xu and Weiss 2005 reviewed the anchoring structure as part of the microsporidian
+        polar-tube invasion apparatus.
+  - subject: polar_tube
+    predicate: exits from
+    object: anterior_spore_end
+    description: When the spore fires, the polar tube everts from the anterior region
+      containing the polar sac and anchoring disc.
+    evidence:
+    - reference: DOI:10.1128/EC.00113-07
+      notes: Southern et al. 2007 described the polar sac/anchoring disk region as
+        the area from which the everting polar tube is released.
+discussions:
+- discussion_id: ground_anchoring_disc_components
+  prompt: Resolve exact source-neutral component groundings for the polar tube anchoring
+    disc.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#enp1
+  rationale: EnP1 is experimentally localized to the polar sac/anchoring disk region,
+    but the full molecular composition of the anchoring disc and polar sac remains
+    incompletely resolved in this record.
+  evidence:
+  - reference: DOI:10.1128/EC.00113-07
+  - reference: DOI:10.1016/j.ijpara.2005.04.003
+  posed_by: codex
+  posed_date: '2026-09-13'
