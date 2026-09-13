@@ -1,0 +1,148 @@
+identifier: GO:0043595
+label: endospore cortex
+structure_category: SPORE
+structure_kind: ENVELOPE_LAYER
+definition: The thick, loosely cross-linked peptidoglycan layer between the spore
+  core and the coat of a mature bacterial endospore.
+definition_source: GO:0043595
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T00:33:44Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T00:34:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL xref and synonym, endospore external structure parthood,
+    cortex peptidoglycan component, Bacillota distribution, a Bacillus subtilis example,
+    GO and literature evidence, a nonmechanistic dehydration graph, and cortex boundary
+    discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: spore cortex
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0364
+part_of:
+- GO:0043591
+xrefs:
+- uniprot.location:SL-0364
+components:
+- component_id: endospore_cortex_peptidoglycan
+  label: endospore cortex peptidoglycan
+  component_type: PEPTIDOGLYCAN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Peptidoglycan is groundable broadly, but the chemically modified,
+    loosely cross-linked muramic-delta-lactam cortex peptidoglycan layer does not
+    have an exact source-neutral CHEBI or GO component term.
+  role: Thick, modified peptidoglycan layer that holds the mature endospore core in
+    a dehydrated, heat-resistant state and is cleaved during germination.
+  evidence:
+  - reference: DOI:10.1128/9781555819323.ch10
+    notes: Setlow 2016 reviews modified cortex peptidoglycan as a determinant of core
+      dehydration and wet-heat resistance.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1239
+  taxon_label: Bacillota
+  presence: COMMON
+  note: Endospore cortex is produced by endospore-forming Bacillota lineages and is
+    lost from many non-sporulating members of the phylum.
+  reference: DOI:10.1038/nrmicro2921
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: Classical model for endospore differentiation and the cortex layer that surrounds
+    the dormant spore core.
+  reference: DOI:10.1038/nrmicro2921
+functions:
+- function_id: spore_core_dehydration
+  label: spore core dehydration
+  description: The endospore cortex helps maintain low water content in the spore
+    core, a major physical basis for wet-heat resistance.
+  evidence:
+  - reference: DOI:10.1128/9781555819323.ch10
+    notes: Setlow 2016 reviews the cortex contribution to low core water content and
+      endospore wet-heat resistance.
+evidence:
+- reference: GO:0043595
+  notes: Gene Ontology cellular-component term for the endospore cortex.
+- reference: GO:0043591
+  notes: Gene Ontology cellular-component term for the endospore external encapsulating
+    structure that contains the cortex.
+- reference: uniprot.location:SL-0364
+  notes: UniProt Subcellular Location SL-0364 maps Spore cortex to GO:0043595 and
+    places it under the Spore location.
+- reference: DOI:10.1128/9781555819323.ch10
+  notes: Setlow 2016, Spore Resistance Properties, in The Bacterial Spore.
+- reference: DOI:10.1038/nrmicro2921
+  notes: 'McKenney, Driks and Eichenberger 2012, The Bacillus subtilis endospore:
+    assembly and functions of the multilayered coat, Nature Reviews Microbiology.'
+causal_graphs:
+- graph_id: endospore_cortex_core_dehydration
+  title: Endospore cortex maintains a dehydrated spore core
+  description: Modified cortex peptidoglycan surrounds the endospore core and contributes
+    to the low core water content that makes dormant spores wet-heat resistant.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the established cortex-to-core-dehydration relationship
+    and leaves cortex synthesis, germination-specific lysis and coat assembly to dedicated
+    assembly records.
+  nodes:
+  - node_id: endospore_cortex
+    label: endospore cortex
+    node_type: STRUCTURE
+    grounding: GO:0043595
+    component_ref: endospore_cortex_peptidoglycan
+  - node_id: spore_core
+    label: dehydrated spore core
+    node_type: STATE
+  - node_id: wet_heat_resistance
+    label: wet-heat resistance
+    node_type: CAPACITY
+  edges:
+  - subject: endospore_cortex
+    predicate: maintains
+    object: spore_core
+    description: Endospore cortex peptidoglycan maintains the low water content of
+      the dormant spore core.
+    evidence:
+    - reference: DOI:10.1128/9781555819323.ch10
+      notes: Setlow 2016 reviews the cortex contribution to spore core dehydration.
+  - subject: spore_core
+    predicate: enables
+    object: wet_heat_resistance
+    description: Low core water content is a major determinant of mature endospore
+      wet-heat resistance.
+    evidence:
+    - reference: DOI:10.1128/9781555819323.ch10
+      notes: Setlow 2016 reviews low core water content as a determinant of spore
+        wet-heat resistance.
+discussions:
+- discussion_id: cortex_external_structure_boundary
+  prompt: Keep the endospore cortex separate from the broader endospore external encapsulating
+    structure.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0043595 denotes only the thick cortex layer, while GO:0043591 denotes
+    the multilayered external structure containing the cortex, coat and outer membrane.
+  resolution_note: Curated the cortex as an ENVELOPE_LAYER and linked it to GO:0043591
+    with part_of.
+  evidence:
+  - reference: GO:0043595
+    notes: GO:0043595 is the endospore cortex part term.
+  - reference: GO:0043591
+    notes: GO:0043591 identifies the containing endospore external encapsulating structure.
+- discussion_id: cortex_peptidoglycan_grounding
+  prompt: Find an exact source-neutral grounding for endospore cortex peptidoglycan.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The cortex is a peptidoglycan layer with characteristic chemical modifications,
+    but its peptidoglycan constituent has no exact CHEBI, GO or other source-neutral
+    family term in the curated identifier set.
+  evidence:
+  - reference: DOI:10.1128/9781555819323.ch10
+    notes: Setlow 2016 reviews the modified peptidoglycan chemistry of the endospore
+      cortex.
