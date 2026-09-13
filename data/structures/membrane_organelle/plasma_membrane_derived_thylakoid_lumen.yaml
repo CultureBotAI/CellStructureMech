@@ -18,6 +18,12 @@ curation_history:
     distribution, a Synechocystis example, literature and GO evidence, a nonmechanistic
     lumen-topology graph, and a resolved non-organelle parentage interpretation.
   llm_assisted: true
+- timestamp: '2026-09-13T00:20:18Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #724 by adding GO:0030075 evidence to the resolved non-organelle
+    parentage discussion.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cellular thylakoid lumen
   synonym_type: EXACT_SYNONYM
@@ -127,3 +133,6 @@ discussions:
   - reference: GO:0009579
     notes: GO:0009579 defines thylakoids as membranous structures and states that
       they are not considered organelles.
+  - reference: GO:0030075
+    notes: GO:0030075 identifies the plasma membrane-derived bacterial thylakoid that
+      contains this lumen.
