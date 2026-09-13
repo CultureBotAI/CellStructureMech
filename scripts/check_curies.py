@@ -273,11 +273,11 @@ def resolve_complexportal(curies: list[str]) -> dict[str, tuple[str, str]]:
 def resolve_uniprot_location(curies: list[str]) -> dict[str, tuple[str, str]]:
     """SL ids come from the vendored subcell.txt, so this needs no network."""
     try:
-        from uniprot_sl import load_subcell
+        from uniprot_sl import load_subcell_locations
     except ImportError:
-        from scripts.uniprot_sl import load_subcell
+        from scripts.uniprot_sl import load_subcell_locations
     try:
-        known = {hit["sl"]: hit["name"] for hit in load_subcell().values()}
+        known = {sl: hit["name"] for sl, hit in load_subcell_locations().items()}
     except Exception as exc:  # noqa: BLE001
         return {c: ("UNREACHABLE", f"subcell.txt unavailable: {exc}") for c in curies}
     return {c: (("OK", known[c.split(':', 1)[1]]) if c.split(":", 1)[1] in known

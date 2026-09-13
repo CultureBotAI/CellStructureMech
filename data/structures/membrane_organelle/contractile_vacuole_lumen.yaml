@@ -1,0 +1,156 @@
+identifier: cellstructuremech:contractile_vacuole_lumen
+label: contractile vacuole lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The contractile vacuole compartment bounded by the contractile vacuole
+  membrane.
+definition_source: uniprot.location:SL-0320
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T17:47:03Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T17:47:56Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL synonym and xref, vacuolar-lumen parentage, contractile-vacuole
+    parthood, eukaryotic distribution with Paramecium and Chlamydomonas examples,
+    a water-accumulation function, GO/UniProt/DOI evidence, a nonmechanistic lumen-topology
+    graph, and a resolved boundary interpretation.
+  llm_assisted: true
+synonyms:
+- synonym_text: contractile vacuolar lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0320
+parent_structures:
+- GO:0005775
+part_of:
+- GO:0000331
+xrefs:
+- uniprot.location:SL-0320
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Contractile-vacuole lumens occur in the patchy subset of unicellular freshwater
+    and soil eukaryotes that build contractile vacuoles.
+  reference: DOI:10.1016/j.ejop.2024.126078
+canonical_examples:
+- taxon_id: NCBITaxon:44030
+  taxon_label: Paramecium multimicronucleatum
+  note: Ciliate model in which microelectrodes placed in the contractile vacuole measured
+    lumen-side membrane potential during the filling phase.
+  reference: DOI:10.1242/jeb.205.20.3261
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Freshwater alga used to quantify contractile-vacuole volume changes and osmolarity-responsive
+    filling and discharge cycles.
+  reference: DOI:10.1128/EC.00163-14
+functions:
+- function_id: contractile_vacuole_lumen_water_accumulation
+  label: contractile-vacuole water accumulation
+  description: The contractile vacuole lumen expands as excess water enters the vacuole
+    before periodic systolic discharge.
+  evidence:
+  - reference: DOI:10.1016/S0074-7696(02)15015-7
+    notes: Allen and Naitoh 2002 review fluid filling and discharge as phases of the
+      contractile-vacuole cycle.
+  - reference: DOI:10.1128/EC.00163-14
+    notes: Komsic-Buchmann et al. 2014 measured contractile vacuole volume and contraction
+      interval changes in Chlamydomonas under altered osmolarity.
+evidence:
+- reference: uniprot.location:SL-0320
+  notes: UniProt Subcellular Location entry SL-0320 identifies the contractile vacuole
+    lumen, lists contractile vacuolar lumen as an exact synonym, and places the lumen
+    under the contractile vacuole.
+- reference: GO:0005775
+  notes: Gene Ontology cellular-component term for the broader vacuolar lumen class.
+- reference: GO:0000331
+  notes: Gene Ontology cellular-component term for the containing contractile vacuole.
+- reference: GO:0031164
+  notes: Gene Ontology cellular-component term for the contractile vacuolar membrane
+    that bounds this lumen.
+- reference: DOI:10.1016/S0074-7696(02)15015-7
+  notes: Allen and Naitoh 2002, Osmoregulation and contractile vacuoles of protozoa,
+    International Review of Cytology.
+- reference: DOI:10.1128/EC.00163-14
+  notes: Komsic-Buchmann, Wostehoff and Becker 2014, The contractile vacuole as a
+    key regulator of cellular water flow in Chlamydomonas reinhardtii, Eukaryotic
+    Cell.
+- reference: DOI:10.1242/jeb.205.20.3261
+  notes: Gronlien et al. 2002, Relationship between the membrane potential of the
+    contractile vacuole complex and its osmoregulatory activity in Paramecium multimicronucleatum,
+    Journal of Experimental Biology.
+- reference: DOI:10.1016/j.ejop.2024.126078
+  notes: 'More et al. 2024, Contractile vacuoles: a rapidly expanding and occasionally
+    diminishing understanding, European Journal of Protistology.'
+causal_graphs:
+- graph_id: contractile_vacuole_lumen_topology
+  title: Contractile vacuole lumen topology
+  description: The contractile vacuole lumen is the water-filled compartment inside
+    a contractile vacuole and bounded by the contractile vacuolar membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures defining lumen topology without duplicating whole-organelle
+    osmoregulation or membrane-channel mechanisms curated on the containing vacuole
+    and its bounding membrane.
+  nodes:
+  - node_id: contractile_vacuole_lumen
+    label: contractile vacuole lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:contractile_vacuole_lumen
+  - node_id: contractile_vacuolar_membrane
+    label: contractile vacuolar membrane
+    node_type: STRUCTURE
+    grounding: GO:0031164
+  - node_id: contractile_vacuole
+    label: contractile vacuole
+    node_type: ORGANELLE
+    grounding: GO:0000331
+  edges:
+  - subject: contractile_vacuole_lumen
+    predicate: is part of
+    object: contractile_vacuole
+    description: The contractile vacuole lumen is the internal compartment inside
+      a contractile vacuole.
+    evidence:
+    - reference: uniprot.location:SL-0320
+      notes: UniProt SL-0320 places the contractile vacuole lumen under the contractile
+        vacuole subcellular location.
+    - reference: GO:0000331
+      notes: GO:0000331 identifies the containing contractile vacuole.
+  - subject: contractile_vacuolar_membrane
+    predicate: bounds
+    object: contractile_vacuole_lumen
+    description: The contractile vacuolar membrane is the lipid bilayer boundary of
+      the contractile vacuole lumen.
+    evidence:
+    - reference: uniprot.location:SL-0320
+      notes: UniProt SL-0320 defines the contractile vacuole lumen as bounded by the
+        contractile vacuole membrane.
+    - reference: GO:0031164
+      notes: GO:0031164 identifies the membrane surrounding the contractile vacuole.
+discussions:
+- discussion_id: lumen_boundary_not_membrane_component
+  prompt: Represent the contractile vacuolar membrane as the boundary of the lumen
+    rather than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#contractile_vacuole_lumen_topology
+  rationale: UniProt SL-0320 denotes the contractile vacuole compartment bounded by
+    the contractile vacuole membrane, whereas GO:0031164 denotes the surrounding lipid
+    bilayer.
+  resolution_note: Curated the membrane as a boundary node and left the lumen record
+    without constituent molecular components.
+  evidence:
+  - reference: uniprot.location:SL-0320
+    notes: SL-0320 identifies the internal contractile vacuole lumen.
+  - reference: GO:0031164
+    notes: GO:0031164 identifies the contractile vacuolar membrane rather than the
+      lumen it encloses.
+  posed_by: codex
+  posed_date: '2026-09-13'

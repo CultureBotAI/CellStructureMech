@@ -15,6 +15,20 @@ GO   GO:0031470; carboxysome
 ID   Nowhere.
 AC   SL-9999
 //
+ID   Contractile vacuole lumen.
+AC   SL-0320
+DE   The contractile vacuole compartment bounded by the contractile vacuole
+DE   membrane.
+HP   Contractile vacuole.
+//
+IO   Cytoplasmic side.
+AC   SL-9910
+DE   Protein found mostly on the cytoplasmic side of the membrane.
+//
+IT   GPI-anchor.
+AC   SL-9902
+DE   Protein bound to the lipid bilayer through a GPI-anchor.
+//
 """
 
 
@@ -27,6 +41,22 @@ def test_subcell_parser_maps_go_to_sl(tmp_path, monkeypatch):
     assert m["GO:0031470"]["name"] == "Carboxysome"
     assert m["GO:0031470"]["definition"] == "A bacterial microcompartment that encapsulates RuBisCO."
     assert "SL-9999" not in {v["sl"] for v in m.values()}
+
+
+def test_subcell_locations_parser_keeps_entries_without_go_mapping(tmp_path, monkeypatch):
+    cache = tmp_path / "subcell.txt"
+    cache.write_text(SUBCELL)
+    monkeypatch.setattr(uniprot_sl, "CACHE", cache)
+
+    locations = uniprot_sl.load_subcell_locations()
+
+    assert locations["SL-0034"]["name"] == "Carboxysome"
+    assert locations["SL-0320"]["name"] == "Contractile vacuole lumen"
+    assert locations["SL-9910"]["name"] == "Cytoplasmic side"
+    assert locations["SL-9902"]["name"] == "GPI-anchor"
+    assert locations["SL-0320"]["definition"] == (
+        "The contractile vacuole compartment bounded by the contractile vacuole membrane."
+    )
 
 
 DOC = {
