@@ -1,0 +1,171 @@
+identifier: GO:0043594
+label: outer endospore membrane
+structure_category: SPORE
+structure_kind: MEMBRANE
+definition: The outer membrane around a bacterial endospore, located between the endospore
+  cortex and the endospore coat.
+definition_source: GO:0043594
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T00:59:15Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T01:00:13Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL xref and exact synonyms, membrane parentage, endospore
+    external-structure parthood, a mature-spore lipid-bilayer component, Bacillota
+    distribution, a Bacillus subtilis example, GO and literature evidence, a nonmechanistic
+    topology graph, and boundary/grounding discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: spore outer membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0365
+- synonym_text: cortex membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0365
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0043591
+xrefs:
+- uniprot.location:SL-0365
+components:
+- component_id: outer_endospore_membrane_lipid_bilayer
+  label: outer endospore membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO grounds the outer endospore membrane as a cellular-component
+    structure, but no exact source-neutral CHEBI, GO or lipid-class term was curated
+    for the membrane's mature-spore bilayer itself.
+  role: Mature-spore membrane layer positioned outside the endospore cortex and inside
+    the inner spore coat.
+  evidence:
+  - reference: GO:0043594
+    notes: GO:0043594 defines the outer endospore membrane as the membrane around
+      a bacterial endospore between cortex and coat.
+  - reference: uniprot.location:SL-0365
+    notes: UniProt SL-0365 describes the spore outer membrane, or cortex membrane,
+      as a mature-spore membrane between the cortex and the inner layer of the coat.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1239
+  taxon_label: Bacillota
+  presence: COMMON
+  note: Outer endospore membranes occur in endospore-forming Bacillota lineages as
+    part of the mature spore envelope, but are absent from non-sporulating members
+    of the phylum.
+  reference: DOI:10.1038/nrmicro2921
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: Classical bacterial endospore model with cortex and coat layers that flank
+    the mature outer endospore membrane.
+  reference: DOI:10.1038/nrmicro2921
+evidence:
+- reference: GO:0043594
+  notes: Gene Ontology cellular-component term for the outer endospore membrane.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component term for membrane parentage.
+- reference: GO:0043591
+  notes: Gene Ontology cellular-component term for the containing endospore external
+    encapsulating structure.
+- reference: GO:0043593
+  notes: Gene Ontology cellular-component term for the adjacent endospore coat.
+- reference: GO:0043595
+  notes: Gene Ontology cellular-component term for the adjacent endospore cortex.
+- reference: uniprot.location:SL-0365
+  notes: UniProt Subcellular Location SL-0365 maps Spore outer membrane to GO:0043594
+    and lists cortex membrane as an exact name.
+- reference: DOI:10.1038/nrmicro2921
+  notes: 'McKenney, Driks and Eichenberger 2012, The Bacillus subtilis endospore:
+    assembly and functions of the multilayered coat, Nature Reviews Microbiology.'
+causal_graphs:
+- graph_id: outer_endospore_membrane_topology
+  title: Outer endospore membrane topology
+  description: The outer endospore membrane is a mature-spore membrane layer positioned
+    between the endospore cortex and the inner layer of the endospore coat.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records mature-spore layer topology rather than the developmental
+    membrane remodeling that produces the final outer endospore membrane.
+  nodes:
+  - node_id: outer_endospore_membrane
+    label: outer endospore membrane
+    node_type: STRUCTURE
+    grounding: GO:0043594
+  - node_id: endospore_cortex
+    label: endospore cortex
+    node_type: STRUCTURE
+    grounding: GO:0043595
+  - node_id: endospore_coat
+    label: endospore coat
+    node_type: STRUCTURE
+    grounding: GO:0043593
+  - node_id: external_encapsulating_structure
+    label: endospore external encapsulating structure
+    node_type: STRUCTURE
+    grounding: GO:0043591
+  edges:
+  - subject: outer_endospore_membrane
+    predicate: is part of
+    object: external_encapsulating_structure
+    description: The outer endospore membrane is a constituent layer of the endospore
+      external encapsulating structure.
+    evidence:
+    - reference: GO:0043594
+      notes: GO:0043594 places the membrane around a bacterial endospore.
+    - reference: GO:0043591
+      notes: GO:0043591 identifies the containing external encapsulating structure.
+  - subject: outer_endospore_membrane
+    predicate: separates
+    object: endospore_cortex
+    description: The outer endospore membrane lies outside the endospore cortex in
+      the mature spore envelope.
+    evidence:
+    - reference: GO:0043594
+      notes: GO:0043594 defines the outer endospore membrane by its position between
+        cortex and coat.
+    - reference: uniprot.location:SL-0365
+      notes: UniProt SL-0365 calls the same location the spore outer membrane or cortex
+        membrane.
+  - subject: endospore_coat
+    predicate: surrounds
+    object: outer_endospore_membrane
+    description: The endospore coat lies outside the outer endospore membrane in the
+      mature spore envelope.
+    evidence:
+    - reference: GO:0043594
+      notes: GO:0043594 positions the outer endospore membrane between the cortex
+        and coat.
+discussions:
+- discussion_id: mature_spore_outer_membrane_boundary
+  prompt: Keep the mature outer endospore membrane separate from developmental forespore
+    membrane annotations.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0043594 and UniProt SL-0365 denote the mature bacterial spore outer
+    membrane, whereas forespore inner and outer membranes are developmental localizations
+    in the smaller compartment of a sporulating cell.
+  resolution_note: Curated only the mature outer endospore membrane and used the UniProt
+    SL-0365 Spore outer membrane xref.
+  evidence:
+  - reference: GO:0043594
+    notes: GO:0043594 denotes the outer membrane around a bacterial endospore.
+  - reference: uniprot.location:SL-0365
+    notes: UniProt SL-0365 is scoped to mature bacterial spores rather than forespores
+      during sporulation.
+- discussion_id: outer_endospore_membrane_lipid_grounding
+  prompt: Find an exact source-neutral grounding for outer endospore membrane lipids.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The membrane is groundable as a GO cellular component, but no exact generic
+    lipid, CHEBI, GO, or membrane-composition term for its mature-spore bilayer was
+    curated.
+  evidence:
+  - reference: GO:0043594
+    notes: GO:0043594 identifies the membrane structure, not a specific lipid composition.
