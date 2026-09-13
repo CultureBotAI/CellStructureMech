@@ -19,6 +19,13 @@ curation_history:
     Viridiplantae and Glaucocystophyceae scope, a Chlamydomonas example, a photosynthesis
     light-reaction function, and a nonmechanistic topology graph.
   llm_assisted: true
+- timestamp: '2026-09-13T22:42:44Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #845 by keeping UniProt SL-0278 as an xref and record-level GO:0031976
+    mapping source while removing it from the photosynthesis light-reaction function
+    and topology-edge evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0009579
 part_of:
@@ -69,9 +76,6 @@ functions:
   description: Plastid thylakoids provide an internal membrane system for the light
     reactions of photosynthesis.
   evidence:
-  - reference: uniprot.location:SL-0278
-    notes: UniProt SL-0278 describes plastid thylakoids as interconnected internal
-      membranes that carry out photosynthetic light reactions.
   - reference: DOI:10.1146/annurev-cellbio-120823-022747
     notes: Perez-Boerema et al. 2024 review thylakoid architecture as the conserved
       site of photosynthetic light reactions in plastids.
@@ -89,9 +93,7 @@ evidence:
 - reference: GO:0019684
   notes: Gene Ontology biological-process term for photosynthesis, light reaction.
 - reference: uniprot.location:SL-0278
-  notes: UniProt Subcellular Location SL-0278 maps Plastid thylakoid to GO:0031976
-    and distinguishes this plastid-specific thylakoid location from chloroplast and
-    cyanelle children.
+  notes: UniProt Subcellular Location SL-0278 maps Plastid thylakoid to GO:0031976.
 - reference: DOI:10.1146/annurev-cellbio-120823-022747
   notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
     Review of Cell and Developmental Biology.
@@ -146,9 +148,6 @@ causal_graphs:
     description: The plastid thylakoid membrane houses photosynthetic pigments and
       reaction-center complexes for light reactions.
     evidence:
-    - reference: uniprot.location:SL-0278
-      notes: UniProt SL-0278 describes plastid thylakoids as interconnected membranes
-        that carry out the light reactions of photosynthesis.
     - reference: DOI:10.1146/annurev-cellbio-120823-022747
       notes: Perez-Boerema et al. 2024 review the plastid thylakoid membrane as the
         site of oxygenic photosynthesis.
