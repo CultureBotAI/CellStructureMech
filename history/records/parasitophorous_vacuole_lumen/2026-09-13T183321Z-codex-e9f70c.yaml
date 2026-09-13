@@ -18,7 +18,12 @@ events:
   details: Created a minted parasitophorous vacuole lumen record from UniProt Subcellular
     Location SL-0341, retained GO:0020004 as broader symbiont-containing-vacuolar-space parentage,
     linked the lumen to the CellStructureMech parasitophorous vacuole record, and captured
-    the UniProt-backed Apicomplexa distribution plus nonmechanistic lumen topology.
+    the UniProt-backed Apicomplexa distribution plus nonmechanistic lumen topology;
+    review follow-up removed a topological restatement from functions and narrowed
+    the topology graph scope note.
 links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/824
+  - https://github.com/CultureBotAI/CellStructureMech/issues/825
   prs:
   - https://github.com/CultureBotAI/CellStructureMech/pull/823

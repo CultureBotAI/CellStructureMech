@@ -20,6 +20,13 @@ curation_history:
     function, GO/UniProt evidence, a nonmechanistic topology graph, and a resolved
     GO scope discussion.
   llm_assisted: true
+- timestamp: '2026-09-13T18:41:39Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #824 and #825 by removing the topological restatement from functions
+    and narrowing the topology graph scope note so it no longer implies PVM-remodeling
+    mechanisms are curated on the containing vacuole.'
+  llm_assisted: true
 synonyms:
 - synonym_text: parasitophorous vacuolar lumen
   synonym_type: EXACT_SYNONYM
@@ -38,19 +45,6 @@ taxonomic_distribution:
     vacuole location, whose definition scopes the vacuole to the host-cell compartment
     in which most apicomplexan parasites reside and develop.
   reference: uniprot.location:SL-0194
-functions:
-- function_id: apicomplexan_intracellular_residence_compartment
-  label: apicomplexan intracellular residence compartment
-  description: The parasitophorous vacuole lumen is the internal compartment of the
-    parasitophorous vacuole that is bounded by the vacuolar membrane surrounding the
-    intracellular apicomplexan parasite.
-  evidence:
-  - reference: uniprot.location:SL-0341
-    notes: UniProt SL-0341 defines the parasitophorous vacuole lumen as the compartment
-      bounded by the membrane of the parasitophorous vacuole.
-  - reference: uniprot.location:SL-0194
-    notes: UniProt SL-0194 defines the containing parasitophorous vacuole as the host-cell
-      vacuole where most apicomplexan parasites reside and develop.
 evidence:
 - reference: uniprot.location:SL-0341
   notes: UniProt Subcellular Location entry SL-0341 identifies the parasitophorous
@@ -69,9 +63,9 @@ causal_graphs:
     parasitophorous vacuole.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures defining lumen topology without modeling parasite
-    residence, host nutrient access, or PVM-remodeling mechanisms curated on the containing
-    vacuole.
+  scope_notes: The graph captures only the defining lumen topology and intentionally
+    leaves parasite residence, host nutrient access, and PVM-remodeling mechanisms
+    out of scope.
   nodes:
   - node_id: parasitophorous_vacuole_lumen
     label: parasitophorous vacuole lumen
