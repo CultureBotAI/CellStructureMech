@@ -19,12 +19,19 @@ curation_history:
     Chlamydomonas scope, a nonmechanistic boundary graph, and a lipid-bilayer grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-13T03:00:48Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #742 by adding the missing GO:0031969 chloroplast membrane parent
+    and evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: chloroplastic outer membrane
   synonym_type: EXACT_SYNONYM
   source: uniprot.location:SL-0054
 parent_structures:
 - GO:0009527
+- GO:0031969
 part_of:
 - GO:0009941
 xrefs:
@@ -72,6 +79,8 @@ evidence:
   notes: Gene Ontology cellular-component term for chloroplast outer membrane.
 - reference: GO:0009527
   notes: Gene Ontology cellular-component term for plastid outer membrane.
+- reference: GO:0031969
+  notes: Gene Ontology cellular-component term for chloroplast membrane.
 - reference: GO:0009941
   notes: Gene Ontology cellular-component term for chloroplast envelope.
 - reference: GO:0031972
@@ -82,7 +91,8 @@ evidence:
     chloroplast membrane.
 - reference: uniprot.location:SL-0054
   notes: UniProt Subcellular Location entry SL-0054 maps Chloroplast outer membrane
-    to GO:0009707 and places it under plastid outer membrane.
+    to GO:0009707 and places it under both chloroplast membrane and plastid outer
+    membrane.
 - reference: DOI:10.1098/rstb.2009.0103
   notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
     Philosophical Transactions of the Royal Society B.
