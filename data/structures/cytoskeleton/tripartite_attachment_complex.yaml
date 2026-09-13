@@ -21,6 +21,12 @@ curation_history:
     literature evidence, a nonmechanistic basal-body-to-kDNA bridge graph, and a grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-13T09:48:42Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#769: removed the unverified p166 gene_symbols value and narrowed the
+    Trypanosoma brucei canonical example to the directly cited TAC102 study.'
+  llm_assisted: true
 synonyms:
 - synonym_text: TAC
   synonym_type: RELATED_SYNONYM
@@ -79,8 +85,6 @@ components:
   label: p166 TAC protein
   component_type: PROTEIN
   component_role: CONSTITUENT
-  gene_symbols:
-  - p166
   essentiality: UNKNOWN
   role: T. brucei TAC protein that localizes between mitochondrial DNA and the flagellum
     and contributes to kDNA segregation.
@@ -133,8 +137,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei
-  note: Kinetoplastid model in which the TAC was defined ultrastructurally and later
-    dissected by p166, TAC40 and TAC102 localization and knockdown studies.
+  note: Kinetoplastid model in which TAC102 was localized to the TAC and connected
+    to normal TAC biogenesis and kDNA segregation by depletion experiments.
   reference: DOI:10.1371/journal.ppat.1005586
 functions:
 - function_id: kinetoplast_segregation
