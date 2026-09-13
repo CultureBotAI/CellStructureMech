@@ -1,0 +1,171 @@
+identifier: GO:0046859
+label: hydrogenosomal membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding a hydrogenosome.
+definition_source: GO:0046859
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T15:25:24Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T15:25:51Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL hydrogenosome-membrane synonym and xref, membrane
+    parentage, hydrogenosome parthood, a label-only lipid-bilayer component, Eukaryota/Trichomonas
+    scope, a lumen-boundary function, GO/UniProt/DOI evidence, a nonmechanistic hydrogenosomal-membrane
+    topology graph, and a lipid-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: hydrogenosome membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0144
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0042566
+xrefs:
+- uniprot.location:SL-0144
+components:
+- component_id: hydrogenosomal_lipid_bilayer
+  label: hydrogenosomal lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Mitochondrion-related lipid boundary that surrounds the hydrogenosome and
+    separates its metabolic matrix from the cytosol.
+  evidence:
+  - reference: GO:0046859
+    notes: GO:0046859 identifies the hydrogenosomal membrane as the lipid bilayer
+      surrounding a hydrogenosome.
+  - reference: DOI:10.1111/jeu.12922
+    notes: Tachezy 2022 reviews hydrogenosomes as membrane-bounded mitochondrion-related
+      organelles of anaerobic eukaryotes.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0046859 identifies the whole hydrogenosomal membrane, but no
+    exact source-neutral CURIE was curated for the generic lipid constituent of that
+    mitochondrion-related membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Hydrogenosomal membranes occur patchily in anaerobic microbial eukaryotes
+    that carry hydrogenosomes as modified mitochondria.
+  reference: DOI:10.1111/jeu.12922
+- taxon_id: NCBITaxon:5722
+  taxon_label: Trichomonas vaginalis
+  presence: COMMON
+  note: The parasite contains abundant hydrogenosomes whose membrane-bounded proteome
+    and metabolism have been experimentally characterized.
+  reference: DOI:10.1016/j.ijpara.2011.10.001
+canonical_examples:
+- taxon_id: NCBITaxon:5722
+  taxon_label: Trichomonas vaginalis
+  note: Parabasalid parasite in which hydrogenosomal metabolism, protein targeting,
+    and the organelle proteome have been experimentally studied.
+  reference: DOI:10.1016/j.ijpara.2011.10.001
+functions:
+- function_id: hydrogenosome_lumen_boundary
+  label: hydrogenosome lumen boundary
+  description: The hydrogenosomal membrane forms the lipid boundary around the internal
+    matrix compartment that contains anaerobic energy-metabolism enzymes.
+  evidence:
+  - reference: GO:0034492
+    notes: GO:0034492 defines the hydrogenosome lumen as the volume enclosed by the
+      hydrogenosome membrane.
+  - reference: GO:0046859
+    notes: GO:0046859 identifies the hydrogenosomal membrane as the lipid bilayer
+      surrounding a hydrogenosome.
+  - reference: DOI:10.1111/jeu.12922
+    notes: Tachezy 2022 reviews hydrogenosomes as membrane-bounded mitochondrion-related
+      organelles.
+evidence:
+- reference: GO:0046859
+  notes: Gene Ontology cellular-component term for the hydrogenosomal membrane.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component parent term for membrane.
+- reference: GO:0042566
+  notes: Gene Ontology cellular-component term for the containing hydrogenosome.
+- reference: GO:0034492
+  notes: Gene Ontology cellular-component term for the hydrogenosome lumen bounded
+    by the hydrogenosomal membrane.
+- reference: uniprot.location:SL-0144
+  notes: UniProt Subcellular Location entry SL-0144 maps to GO:0046859, places the
+    membrane under the hydrogenosome subcellular location, and lists hydrogenosome
+    membrane as the entry name.
+- reference: DOI:10.1016/j.ijpara.2011.10.001
+  notes: Schneider et al. 2011, The Trichomonas vaginalis hydrogenosome proteome is
+    highly reduced relative to mitochondria, yet complex compared with mitosomes,
+    International Journal for Parasitology.
+- reference: DOI:10.1111/jeu.12922
+  notes: 'Tachezy 2022, Hydrogenosomes and mitosomes: Mitochondria of anaerobic eukaryotes,
+    Journal of Eukaryotic Microbiology.'
+causal_graphs:
+- graph_id: hydrogenosomal_membrane_bounds_lumen
+  title: Hydrogenosomal membrane encloses the matrix lumen
+  description: The hydrogenosomal membrane surrounds the organelle and encloses the
+    matrix compartment used for anaerobic ATP and molecular-hydrogen production.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures membrane and lumen topology without duplicating
+    the whole-hydrogenosome enzyme, protein-import, or iron-sulfur cluster assembly
+    mechanisms.
+  nodes:
+  - node_id: hydrogenosomal_membrane
+    label: hydrogenosomal membrane
+    node_type: STRUCTURE
+    grounding: GO:0046859
+    component_ref: hydrogenosomal_lipid_bilayer
+  - node_id: hydrogenosome
+    label: hydrogenosome
+    node_type: ORGANELLE
+    grounding: GO:0042566
+  - node_id: hydrogenosome_lumen
+    label: hydrogenosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034492
+  edges:
+  - subject: hydrogenosomal_membrane
+    predicate: is part of
+    object: hydrogenosome
+    description: The hydrogenosomal membrane is the lipid-bilayer boundary of the
+      hydrogenosome.
+    evidence:
+    - reference: GO:0046859
+      notes: GO:0046859 identifies the hydrogenosomal membrane as surrounding a hydrogenosome.
+    - reference: uniprot.location:SL-0144
+      notes: UniProt SL-0144 places the hydrogenosome membrane under the hydrogenosome
+        subcellular location.
+  - subject: hydrogenosome_lumen
+    predicate: is enclosed by
+    object: hydrogenosomal_membrane
+    description: The hydrogenosome lumen is the metabolic matrix volume enclosed by
+      the hydrogenosomal membrane.
+    evidence:
+    - reference: GO:0034492
+      notes: GO:0034492 defines the hydrogenosome lumen as the volume enclosed by
+        the hydrogenosome membrane.
+    - reference: GO:0046859
+      notes: GO:0046859 identifies the hydrogenosomal membrane as the lipid bilayer
+        surrounding a hydrogenosome.
+    - reference: DOI:10.1111/jeu.12922
+      notes: Tachezy 2022 reviews hydrogenosomes as membrane-bounded mitochondrion-related
+        organelles.
+discussions:
+- discussion_id: ground_hydrogenosomal_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituent
+    of the hydrogenosomal membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#hydrogenosomal_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0046859, but no hydrogenosome-specific
+    lipid or lipid-bilayer CURIE was curated for the membrane constituent.
+  evidence:
+  - reference: GO:0046859
+    notes: GO:0046859 identifies the complete hydrogenosomal membrane.
+  posed_by: codex
+  posed_date: '2026-09-13'
