@@ -14,6 +14,8 @@ session:
 links:
   prs:
   - https://github.com/CultureBotAI/CellStructureMech/pull/777
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/778
 events:
 - type: CREATE
   outcome: changed

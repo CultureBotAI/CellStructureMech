@@ -19,6 +19,13 @@ curation_history:
     and Vairimorpha necatrix scope, a polar-tube firing support function, posterior-vacuole
     DOI evidence, a nonmechanistic expansion graph, and a composition-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-13T11:49:31Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #777 review issue #778 by adding a posterior-vacuole membrane
+    node, moving component_ref off the organelle node, adding a polar-tube-firing
+    process node, and retargeting the expansion edge to that process.'
+  llm_assisted: true
 components:
 - component_id: posterior_vacuole_membrane
   label: posterior vacuole membrane
@@ -90,13 +97,19 @@ causal_graphs:
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   nodes:
+  - node_id: posterior_vacuole_membrane
+    label: posterior vacuole membrane
+    node_type: STRUCTURE
+    component_ref: posterior_vacuole_membrane
   - node_id: posterior_vacuole
     label: microsporidian posterior vacuole
     node_type: ORGANELLE
-    component_ref: posterior_vacuole_membrane
   - node_id: posterior_spore_pole
     label: posterior spore pole
     node_type: STRUCTURE
+  - node_id: polar_tube_firing
+    label: polar tube firing
+    node_type: BIOLOGICAL_PROCESS
   - node_id: polar_tube
     label: polar tube
     node_type: STRUCTURE
@@ -105,6 +118,18 @@ causal_graphs:
     label: sporoplasm
     node_type: STRUCTURE
   edges:
+  - subject: posterior_vacuole_membrane
+    predicate: encloses
+    object: posterior_vacuole
+    description: The membrane component bounds the posterior vacuole as a distinct
+      vesicle in the mature microsporidian spore.
+    evidence:
+    - reference: DOI:10.14411/fp.2005.014
+      notes: Findley et al. 2005 studied the membrane-bounded posterior vacuole of
+        Spraguea lophii spores.
+    - reference: DOI:10.1371/journal.ppat.1008738
+      notes: Jaroenlak et al. 2020 resolved the posterior vacuole as a distinct organelle
+        in three-dimensional reconstructions.
   - subject: posterior_vacuole
     predicate: resides at
     object: posterior_spore_pole
@@ -116,7 +141,7 @@ causal_graphs:
         algerae spores.
   - subject: posterior_vacuole
     predicate: expands during
-    object: polar_tube
+    object: polar_tube_firing
     description: Posterior vacuole expansion occurs during polar-tube firing and germination.
     evidence:
     - reference: DOI:10.1016/j.fgb.2015.08.007
