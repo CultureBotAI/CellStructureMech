@@ -1,0 +1,164 @@
+identifier: cellstructuremech:haptonema
+label: haptonema
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: An elongated, plasma-membrane-bounded, microtubule-supported appendage
+  of haptophyte algae that emerges from the flagellar pole and can coil rapidly during
+  haptonemal motility or participate in particle capture.
+definition_source: DOI:10.1242/bio.036590
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T10:39:17Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T10:40:05Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added a label-only haptonemal singlet-microtubule component, Haptophyta
+    scope, a Haptolina hirta canonical example, rapid-coiling and food-particle capture
+    functions, haptonema DOI and PMID evidence, a nonmechanistic haptonemal microtubule
+    function graph, and a microtubule-grounding TODO.
+  llm_assisted: true
+components:
+- component_id: haptonemal_singlet_microtubules
+  label: haptonemal singlet microtubules
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  role: A parallel bundle of singlet microtubules that runs through the haptonema
+    and supports rapid coiling.
+  evidence:
+  - reference: DOI:10.1242/bio.036590
+    notes: Nomura et al. 2019 reviewed ultrastructural observations in which six to
+      seven singlet microtubules pass in parallel through a haptonema.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, NCBIfam or GO accession
+    was curated for haptophyte haptonemal singlet microtubules; broad tubulin and
+    microtubule terms do not encode the haptonemal context.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2830
+  taxon_label: Haptophyta
+  presence: COMMON
+  note: The haptonema is a microtubule-based motile organelle described as unique
+    to haptophyte algae.
+  reference: DOI:10.1242/bio.036590
+canonical_examples:
+- taxon_id: NCBITaxon:35142
+  taxon_label: Haptolina hirta
+  note: Marine haptophyte, previously Chrysochromulina hirta, in which the haptonema
+    was observed attaching to food particles during phagotrophic feeding.
+  reference: DOI:10.2216/i0031-8884-30-6-563.1
+functions:
+- function_id: rapid_haptonemal_coiling
+  label: rapid haptonemal coiling
+  description: The haptonemal microtubule bundle can undergo rapid calcium-dependent
+    conformational changes that coil the appendage in haptophyte cells.
+  evidence:
+  - reference: DOI:10.1242/bio.036590
+    notes: Nomura et al. 2019 used microtubule stabilization to show that Ca2+-dependent
+      microtubule conformational changes are required for rapid haptonemal coiling.
+- function_id: haptonemal_particle_capture
+  label: haptonemal particle capture
+  description: The haptonema can attach to food particles and bring them toward the
+    haptophyte cell surface during feeding.
+  evidence:
+  - reference: DOI:10.2216/i0031-8884-30-6-563.1
+    notes: Kawachi et al. 1991 observed haptonema-mediated food-particle capture in
+      Haptolina hirta.
+  - reference: DOI:10.2216/i0031-8884-34-3-193.1
+    notes: Kawachi and Inouye 1995 characterized functional roles of the haptonema
+      during feeding by Chrysochromulina spinifera.
+evidence:
+- reference: DOI:10.1242/bio.036590
+  notes: Nomura et al. 2019, Microtubule stabilizer reveals requirement of Ca(2+)-dependent
+    conformational changes of microtubules for rapid coiling of haptonema in haptophyte
+    algae, Biology Open.
+- reference: PMID:30700402
+  notes: PubMed record for the 2019 Biology Open haptonema coiling study.
+- reference: DOI:10.2216/i0031-8884-30-6-563.1
+  notes: 'Kawachi, Inouye, Maeda and Chihara 1991, The haptonema as a food-capturing
+    device: observations on Chrysochromulina hirta (Prymnesiophyceae), Phycologia.'
+- reference: DOI:10.2216/i0031-8884-34-3-193.1
+  notes: Kawachi and Inouye 1995, Functional roles of the haptonema and the spine
+    scales in the feeding process of Chrysochromulina spinifera, Phycologia.
+causal_graphs:
+- graph_id: haptonemal_microtubules_drive_coiling_and_capture
+  title: Haptonemal microtubules support coiling and particle capture
+  description: Singlet microtubules form the haptonemal core. Calcium-dependent microtubule
+    conformational changes enable rapid coiling, and the protruding haptonema can
+    attach to food particles during haptophyte feeding.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph connects the microtubule scaffold to two observed haptonema
+    behaviors but does not resolve the molecular motors or ion channels that control
+    coiling.
+  nodes:
+  - node_id: haptonemal_singlet_microtubules
+    label: haptonemal singlet microtubules
+    node_type: GENE_OR_PROTEIN
+    component_ref: haptonemal_singlet_microtubules
+  - node_id: calcium_signal
+    label: calcium-dependent conformational state
+    node_type: STATE
+  - node_id: haptonema
+    label: haptonema
+    node_type: STRUCTURE
+    grounding: cellstructuremech:haptonema
+  - node_id: rapid_coiling
+    label: rapid haptonemal coiling
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: food_particles
+    label: food particles
+    node_type: ENVIRONMENTAL_FACTOR
+  edges:
+  - subject: haptonemal_singlet_microtubules
+    predicate: form core of
+    object: haptonema
+    description: The haptophyte haptonema contains a bundle of parallel singlet microtubules.
+    evidence:
+    - reference: DOI:10.1242/bio.036590
+      notes: Nomura et al. 2019 describe prior ultrastructural observations of six
+        to seven microtubules within the haptonema.
+  - subject: calcium_signal
+    predicate: modulates
+    object: haptonemal_singlet_microtubules
+    description: Ca2+-dependent conformational changes in the haptonemal microtubules
+      are required for rapid coiling.
+    evidence:
+    - reference: DOI:10.1242/bio.036590
+      notes: Nomura et al. 2019 found that a microtubule stabilizer blocked rapid
+        haptonemal coiling without preventing Ca2+ influx.
+  - subject: haptonemal_singlet_microtubules
+    predicate: drive
+    object: rapid_coiling
+    description: The haptonemal microtubule scaffold changes conformation during rapid
+      coiling.
+    evidence:
+    - reference: DOI:10.1242/bio.036590
+      notes: Nomura et al. 2019 linked rapid coiling to Ca2+-dependent conformational
+        changes of haptonemal microtubules.
+  - subject: haptonema
+    predicate: attaches to
+    object: food_particles
+    description: The haptonema can attach to food particles and participate in delivering
+      them toward the cell for ingestion.
+    evidence:
+    - reference: DOI:10.2216/i0031-8884-30-6-563.1
+      notes: Kawachi et al. 1991 described the haptonema as a food-capturing device
+        in Chrysochromulina hirta.
+discussions:
+- discussion_id: ground_haptonemal_microtubules
+  prompt: Resolve exact source-neutral groundings for haptonemal tubulins or associated
+    microtubule-linker proteins before adding gene-level components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#haptonemal_singlet_microtubules
+  rationale: The first haptonema record curates a morphological microtubule-bundle
+    constituent and avoids guessing whether broad tubulin or ciliary microtubule terms
+    exactly denote haptophyte haptonemal singlets.
+  evidence:
+  - reference: DOI:10.1242/bio.036590
+  posed_by: codex
+  posed_date: '2026-09-13'
