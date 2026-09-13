@@ -32,27 +32,21 @@ curation_history:
     al. 2005 on Giardia mitosomal protein import, and replacing the unused Entamoeba
     sulfate-activation citation.'
   llm_assisted: true
+- timestamp: '2026-09-13T19:09:20Z'
+  curator: codex
+  action: ADDRESSED_CURATION_TODO
+  changes: Replaced the reviewed-label-only mitosomal envelope component with a has_part
+    link to cellstructuremech:mitosome_envelope, grounded the ISC graph envelope node
+    to the new exact record, and narrowed the remaining component-grounding TODO to
+    mitosomal protein groups.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
 - GO:0005737
+has_part:
+- cellstructuremech:mitosome_envelope
 components:
-- component_id: mitosomal_envelope
-  label: mitosomal double-membrane envelope
-  component_type: LIPID
-  component_role: CONSTITUENT
-  essentiality: ESSENTIAL
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO has an exact whole-mitosome term but no exact mitosomal envelope,
-    inner membrane, or outer membrane cellular-component terms in the current ontology.
-  role: Mitochondrion-derived double membrane that encloses the reduced mitosome matrix.
-  evidence:
-  - reference: DOI:10.1046/j.1365-2958.1999.01414.x
-    notes: Tovar et al. 1999 identified the Entamoeba histolytica mitosome as a mitochondrion-related
-      organelle.
-  - reference: DOI:10.1038/nature00949
-    notes: Williams et al. 2002 identified a mitochondrion remnant in the microsporidian
-      Trachipleistophora hominis.
 - component_id: mitosomal_isc_machinery
   label: mitosomal iron-sulfur cluster assembly machinery
   component_type: PROTEIN
@@ -168,7 +162,7 @@ causal_graphs:
   - node_id: mitosomal_envelope
     label: mitosomal double-membrane envelope
     node_type: STRUCTURE
-    component_ref: mitosomal_envelope
+    grounding: cellstructuremech:mitosome_envelope
   - node_id: mitosome
     label: mitosome
     node_type: ORGANELLE
@@ -194,6 +188,9 @@ causal_graphs:
     - reference: DOI:10.1046/j.1365-2958.1999.01414.x
       notes: Tovar et al. 1999 defined the Entamoeba mitosome as a mitochondrion-related
         organelle.
+    - reference: uniprot.location:SL-0438
+      notes: UniProt SL-0438 identifies the mitosome envelope as the inner and outer
+        mitosomal membranes plus intermembrane space.
   - subject: mitosomal_import_machinery
     predicate: imports
     object: mitosomal_isc_machinery
@@ -221,16 +218,15 @@ causal_graphs:
         protein maturation.
 discussions:
 - discussion_id: mitosomal_component_grounding
-  prompt: Resolve exact source-neutral groundings for mitosomal envelope substructures,
-    ISC factors and protein-import machinery.
+  prompt: Resolve exact source-neutral groundings for mitosomal ISC factors and protein-import
+    machinery.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#mitosomal_envelope
   - components#mitosomal_isc_machinery
   - components#mitosomal_import_machinery
-  rationale: The first mitosome record uses reviewed label-only component groups because
-    GO lacks exact mitosome substructure terms and exact protein-family groundings
-    were not curated.
+  rationale: The mitosome record still uses reviewed-label-only component groups for
+    ISC factors and protein-import machinery because exact protein-family or complex-level
+    groundings were not curated.
   posed_by: claude
   posed_date: '2026-09-10'
