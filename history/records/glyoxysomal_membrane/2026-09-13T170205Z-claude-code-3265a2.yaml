@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/glyoxysomal_membrane.yaml
+  slug: glyoxysomal_membrane
+session:
+  id: 2026-09-13T170205Z-claude-code-3265a2
+  timestamp: '2026-09-13T17:02:05Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/814
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/813
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - composition
+  - distribution
+  - exemplars
+  - function
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Create a GO-grounded glyoxysomal membrane record
+  details: Created GO:0046861 glyoxysomal membrane from the GO cellular-component term, the
+    UniProt SL-0130 mapping in subcell.txt, and the existing Neurospora crassa glyoxysome
+    evidence. Added GO:0005778 peroxisomal-membrane parentage, GO:0009514 glyoxysome parthood,
+    a label-only lipid-bilayer component, a Neurospora distribution row and canonical example,
+    a glyoxysomal matrix-boundary function, a nonmechanistic topology graph, and an open lipid-grounding
+    TODO.

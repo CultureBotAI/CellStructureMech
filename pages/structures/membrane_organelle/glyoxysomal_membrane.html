@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glyoxysomal membrane · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>glyoxysomal membrane</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0046861"><code>GO:0046861</code></a> · MEMBRANE_ORGANELLE · MEMBRANE · <span class="status">PROPOSED</span></p>
+<p class="definition">The membrane surrounding the glyoxysome. <small>[<a href="http://purl.obolibrary.org/obo/GO_0046861"><code>GO:0046861</code></a>]</small></p>
+<p><strong>Synonyms:</strong> glyoxysome membrane</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0009514"><code>GO:0009514</code></a> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0130</code> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-glyoxysomal_lipid_bilayer"><td>glyoxysomal lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Peroxisome-related lipid bilayer that surrounds the glyoxysome and separates the glyoxysomal matrix from the cytosol.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0046861"><code>GO:0046861</code></a> <small>GO:0046861 identifies the glyoxysomal membrane as the membrane surrounding a glyoxysome.</small></li><li><a href="https://doi.org/10.1007/BF00309930"><code>DOI:10.1007/BF00309930</code></a> <small>de Zoysa and Connerton 1994 studied matrix-protein targeting into Neurospora crassa glyoxysomes.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5141"><code>NCBITaxon:5141</code></a> Neurospora crassa — <strong>COMMON</strong>: Neurospora crassa forms acetate-induced glyoxysomes whose membranes bound glyoxylate-cycle matrix compartments. [<a href="https://doi.org/10.1007/BF00309930"><code>DOI:10.1007/BF00309930</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5141"><code>NCBITaxon:5141</code></a> <em>Neurospora crassa</em> — Filamentous-fungal model used to test import of matrix proteins across the glyoxysomal membrane under acetate-induced growth conditions. [<a href="https://doi.org/10.1007/BF00309930"><code>DOI:10.1007/BF00309930</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>glyoxysomal matrix boundary</strong> — The glyoxysomal membrane forms the boundary around the glyoxysomal matrix compartment that contains glyoxylate-cycle enzymes.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0046861"><code>GO:0046861</code></a> <small>GO:0046861 identifies the glyoxysomal membrane as the membrane surrounding a glyoxysome.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031908"><code>GO:0031908</code></a> <small>GO:0031908 defines the glyoxysomal lumen as the matrix volume enclosed by the glyoxysome membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0009514"><code>GO:0009514</code></a> <small>GO:0009514 defines glyoxysomes as peroxisome specializations that contain glyoxylate-pathway enzymes.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-glyoxysomal_membrane_bounds_lumen">Glyoxysomal membrane encloses the matrix lumen <small>(FUNCTION)</small></h3>
+<p>The glyoxysomal membrane surrounds the organelle and encloses the glyoxylate-cycle matrix compartment.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>glyoxysomal membrane</td><td>is part of</td><td>glyoxysome</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0046861"><code>GO:0046861</code></a> <small>GO:0046861 identifies the glyoxysomal membrane as surrounding a glyoxysome.</small></li><li><code>uniprot.location:SL-0130</code> <small>UniProt SL-0130 places the glyoxysome membrane under the glyoxysome subcellular location.</small></li></ul></td></tr>
+<tr><td>glyoxysomal lumen</td><td>is enclosed by</td><td>glyoxysomal membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031908"><code>GO:0031908</code></a> <small>GO:0031908 defines the glyoxysomal lumen as the volume enclosed by the glyoxysome membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0046861"><code>GO:0046861</code></a> <small>GO:0046861 identifies the membrane surrounding a glyoxysome.</small></li><li><code>uniprot.location:SL-0333</code> <small>UniProt SL-0333 maps the glyoxysome matrix to the glyoxysomal lumen.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the generic lipid constituent of the glyoxysomal membrane. <small>The record is exactly grounded to GO:0046861, but no glyoxysome-specific lipid or lipid-bilayer CURIE was curated for the membrane constituent.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0046861"><code>GO:0046861</code></a> <small>Gene Ontology cellular-component term for glyoxysomal membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005778"><code>GO:0005778</code></a> <small>Gene Ontology cellular-component parent term for peroxisomal membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0009514"><code>GO:0009514</code></a> <small>Gene Ontology cellular-component term for the containing glyoxysome.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031908"><code>GO:0031908</code></a> <small>Gene Ontology cellular-component term for the glyoxysomal lumen bounded by the glyoxysomal membrane.</small></li><li><code>uniprot.location:SL-0130</code> <small>UniProt Subcellular Location entry SL-0130 maps Glyoxysome membrane to GO:0046861 and lists glyoxysomal membrane as an exact synonym.</small></li><li><code>uniprot.location:SL-0333</code> <small>UniProt Subcellular Location entry SL-0333 maps Glyoxysome matrix to GO:0031908 under the containing glyoxysome.</small></li><li><a href="https://doi.org/10.1007/BF00309930"><code>DOI:10.1007/BF00309930</code></a> <small>de Zoysa and Connerton 1994, The function and specificity of the C-terminal tripeptide glyoxysomal targeting signal in Neurospora crassa, Current Genetics.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-13T17:01:22Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-13T17:01:46Z</code> codex · EXPANDED_RECORD — Added the UniProt SL glyoxysome-membrane synonym and xref, peroxisomal-membrane parentage, glyoxysome parthood, a label-only lipid-bilayer component, Neurospora scope, a matrix-boundary function, GO/UniProt/DOI evidence, a nonmechanistic glyoxysomal-membrane topology graph, and a lipid-grounding TODO.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/glyoxysomal_membrane.yaml"><code>data/structures/membrane_organelle/glyoxysomal_membrane.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
