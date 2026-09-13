@@ -1,0 +1,110 @@
+identifier: cellstructuremech:parasitophorous_vacuole_lumen
+label: parasitophorous vacuole lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The parasitophorous vacuole compartment bounded by the membrane of the
+  parasitophorous vacuole.
+definition_source: uniprot.location:SL-0341
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T18:32:24Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T18:33:04Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt SL synonym and xref, symbiont-containing-vacuolar-space
+    parentage, parasitophorous-vacuole parthood, Apicomplexa distribution, lumen-residence
+    function, GO/UniProt evidence, a nonmechanistic topology graph, and a resolved
+    GO scope discussion.
+  llm_assisted: true
+- timestamp: '2026-09-13T18:41:39Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #824 and #825 by removing the topological restatement from functions
+    and narrowing the topology graph scope note so it no longer implies PVM-remodeling
+    mechanisms are curated on the containing vacuole.'
+  llm_assisted: true
+synonyms:
+- synonym_text: parasitophorous vacuolar lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0341
+parent_structures:
+- GO:0020004
+part_of:
+- cellstructuremech:parasitophorous_vacuole
+xrefs:
+- uniprot.location:SL-0341
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: COMMON
+  note: UniProt places the parasitophorous vacuole lumen under the parasitophorous
+    vacuole location, whose definition scopes the vacuole to the host-cell compartment
+    in which most apicomplexan parasites reside and develop.
+  reference: uniprot.location:SL-0194
+evidence:
+- reference: uniprot.location:SL-0341
+  notes: UniProt Subcellular Location entry SL-0341 identifies the parasitophorous
+    vacuole lumen, lists parasitophorous vacuolar lumen as an exact synonym, and places
+    the lumen under the parasitophorous vacuole location.
+- reference: GO:0020004
+  notes: Gene Ontology cellular-component term for the broader symbiont-containing
+    vacuolar space class.
+- reference: uniprot.location:SL-0194
+  notes: UniProt Subcellular Location entry SL-0194 identifies the Apicomplexa-scoped
+    parasitophorous vacuole containing the parasitophorous vacuole lumen.
+causal_graphs:
+- graph_id: parasitophorous_vacuole_lumen_topology
+  title: Parasitophorous vacuole lumen topology
+  description: The parasitophorous vacuole lumen is the internal compartment of the
+    parasitophorous vacuole.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures only the defining lumen topology and intentionally
+    leaves parasite residence, host nutrient access, and PVM-remodeling mechanisms
+    out of scope.
+  nodes:
+  - node_id: parasitophorous_vacuole_lumen
+    label: parasitophorous vacuole lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:parasitophorous_vacuole_lumen
+  - node_id: parasitophorous_vacuole
+    label: parasitophorous vacuole
+    node_type: ORGANELLE
+    grounding: cellstructuremech:parasitophorous_vacuole
+  edges:
+  - subject: parasitophorous_vacuole_lumen
+    predicate: is part of
+    object: parasitophorous_vacuole
+    description: The parasitophorous vacuole lumen is the internal compartment of
+      the parasitophorous vacuole.
+    evidence:
+    - reference: uniprot.location:SL-0341
+      notes: UniProt SL-0341 places the parasitophorous vacuole lumen under the parasitophorous
+        vacuole.
+    - reference: uniprot.location:SL-0194
+      notes: UniProt SL-0194 identifies the parasitophorous vacuole containing the
+        lumen.
+discussions:
+- discussion_id: go_symbiont_vacuolar_space_scope
+  prompt: Model GO:0020004 as a broad parent rather than as the exact parasitophorous
+    vacuole lumen identity.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  rationale: GO:0020004 names the symbiont-containing vacuolar space class, whereas
+    UniProt SL-0341 names the narrower lumen of the Apicomplexa-scoped parasitophorous
+    vacuole.
+  resolution_note: Minted an exact CellStructureMech identifier for the parasitophorous
+    vacuole lumen and retained GO:0020004 as is-a parentage.
+  evidence:
+  - reference: uniprot.location:SL-0341
+    notes: SL-0341 identifies the parasitophorous vacuole lumen.
+  - reference: GO:0020004
+    notes: GO:0020004 is labeled symbiont-containing vacuolar space.
+  posed_by: codex
+  posed_date: '2026-09-13'
