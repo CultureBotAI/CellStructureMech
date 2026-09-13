@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/plastid_envelope.yaml
+  slug: plastid_envelope
+session:
+  id: 2026-09-13T205422Z-codex-708b27
+  timestamp: '2026-09-13T20:54:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/835
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/836
+  - https://github.com/CultureBotAI/CellStructureMech/issues/837
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add plastid envelope
+  details: Created the GO:0009526 plastid envelope record with organelle-envelope parentage,
+    plastid parthood, exact GO inner-membrane, outer-membrane, and intermembrane-space parts,
+    UniProt SL-0210 evidence, Viridiplantae and Chlamydomonas taxonomic scope, a Chlamydomonas
+    canonical example, compartmentalization function, GO/UniProt/DOI evidence, a nonmechanistic
+    plastid-envelope topology graph, and a resolved discussion that keeps lineage-specific
+    translocases, peptidoglycan, and extra complex-plastid membranes on exact child records.
