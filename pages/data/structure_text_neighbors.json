@@ -2560,6 +2560,11 @@
           "cosine_similarity": 0.83234038
         },
         {
+          "identifier": "GO:0031979",
+          "label": "plasma membrane-derived thylakoid lumen",
+          "cosine_similarity": 0.81233448
+        },
+        {
           "identifier": "GO:0070117",
           "label": "organellar chromatophore thylakoid lumen",
           "cosine_similarity": 0.79533334
@@ -2573,11 +2578,6 @@
           "identifier": "GO:0033114",
           "label": "cyanelle thylakoid lumen",
           "cosine_similarity": 0.77664376
-        },
-        {
-          "identifier": "GO:0033111",
-          "label": "attachment organelle membrane",
-          "cosine_similarity": 0.75958052
         }
       ]
     },
@@ -2751,6 +2751,11 @@
           "cosine_similarity": 0.80032052
         },
         {
+          "identifier": "GO:0031979",
+          "label": "plasma membrane-derived thylakoid lumen",
+          "cosine_similarity": 0.79212537
+        },
+        {
           "identifier": "GO:0070116",
           "label": "organellar chromatophore thylakoid",
           "cosine_similarity": 0.7916428
@@ -2759,11 +2764,6 @@
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
           "cosine_similarity": 0.78346844
-        },
-        {
-          "identifier": "GO:0009843",
-          "label": "cyanelle thylakoid",
-          "cosine_similarity": 0.77709225
         }
       ]
     },
@@ -3433,6 +3433,11 @@
           "cosine_similarity": 0.63026908
         },
         {
+          "identifier": "GO:0031979",
+          "label": "plasma membrane-derived thylakoid lumen",
+          "cosine_similarity": 0.62536376
+        },
+        {
           "identifier": "GO:0020008",
           "label": "rhoptry",
           "cosine_similarity": 0.62365603
@@ -3441,11 +3446,6 @@
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
           "cosine_similarity": 0.62309938
-        },
-        {
-          "identifier": "GO:0030089",
-          "label": "phycobilisome",
-          "cosine_similarity": 0.61613372
         }
       ]
     },
@@ -4275,14 +4275,14 @@
           "cosine_similarity": 0.87641858
         },
         {
+          "identifier": "GO:0031979",
+          "label": "plasma membrane-derived thylakoid lumen",
+          "cosine_similarity": 0.86765504
+        },
+        {
           "identifier": "GO:0033114",
           "label": "cyanelle thylakoid lumen",
           "cosine_similarity": 0.86107212
-        },
-        {
-          "identifier": "GO:0070112",
-          "label": "organellar chromatophore membrane",
-          "cosine_similarity": 0.85336389
         }
       ]
     },
@@ -4376,6 +4376,37 @@
           "identifier": "GO:0046858",
           "label": "chlorosome",
           "cosine_similarity": 0.78752843
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031979",
+      "label": "plasma membrane-derived thylakoid lumen",
+      "neighbors": [
+        {
+          "identifier": "GO:0070117",
+          "label": "organellar chromatophore thylakoid lumen",
+          "cosine_similarity": 0.86765504
+        },
+        {
+          "identifier": "GO:0033114",
+          "label": "cyanelle thylakoid lumen",
+          "cosine_similarity": 0.86299237
+        },
+        {
+          "identifier": "GO:0033115",
+          "label": "cyanelle thylakoid membrane",
+          "cosine_similarity": 0.82477858
+        },
+        {
+          "identifier": "GO:0033985",
+          "label": "acidocalcisome lumen",
+          "cosine_similarity": 0.81233448
+        },
+        {
+          "identifier": "GO:0070118",
+          "label": "organellar chromatophore thylakoid membrane",
+          "cosine_similarity": 0.81134074
         }
       ]
     },
