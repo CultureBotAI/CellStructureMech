@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/polar_tube_anchoring_disc.yaml
+  slug: polar_tube_anchoring_disc
+session:
+  id: 2026-09-13T112957Z-codex-c6caa9
+  timestamp: '2026-09-13T11:29:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/776
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the polar tube anchoring disc record
+  details: Created GO:0160202 polar tube anchoring disc as a PROPOSED microsporidian
+    spore substructure with an EnP1 component and reviewed UniProtKB example, Microsporidia
+    and Encephalitozoon scope, polar-tube attachment function, GO/DOI evidence, a
+    nonmechanistic anchoring graph, and an open TODO for source-neutral anchoring-disc
+    component groundings.
