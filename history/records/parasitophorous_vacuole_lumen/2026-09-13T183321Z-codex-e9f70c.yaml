@@ -19,3 +19,6 @@ events:
     Location SL-0341, retained GO:0020004 as broader symbiont-containing-vacuolar-space parentage,
     linked the lumen to the CellStructureMech parasitophorous vacuole record, and captured
     the UniProt-backed Apicomplexa distribution plus nonmechanistic lumen topology.
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/823
