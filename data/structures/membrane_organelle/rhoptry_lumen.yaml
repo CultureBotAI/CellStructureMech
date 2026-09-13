@@ -1,0 +1,121 @@
+identifier: GO:0034591
+label: rhoptry lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the rhoptry membrane.
+definition_source: GO:0034591
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T12:39:19Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T12:39:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added organelle-lumen parentage, rhoptry parthood, Apicomplexa and Toxoplasma
+    gondii scope, GO/DOI evidence, a nonmechanistic rhoptry-lumen topology graph,
+    and a resolved boundary interpretation.
+  llm_assisted: true
+parent_structures:
+- GO:0043233
+part_of:
+- GO:0020008
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: COMMON
+  note: Rhoptry lumina are the internal secretory compartments of apicomplexan rhoptries,
+    whose number and morphology vary among lineages and invasive stages.
+  reference: DOI:10.1128/mmbr.00197-22
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model whose rhoptry lumen stores neck and bulb secretory cargo
+    before rhoptry discharge during host-cell invasion.
+  reference: DOI:10.1038/nrmicro1800
+evidence:
+- reference: GO:0034591
+  notes: Gene Ontology cellular-component term for the rhoptry lumen.
+- reference: GO:0043233
+  notes: Gene Ontology cellular-component term for organelle lumen, the broader class
+    of organelle-enclosed compartments.
+- reference: GO:0033016
+  notes: Gene Ontology cellular-component term for the rhoptry membrane that encloses
+    the rhoptry lumen.
+- reference: GO:0020008
+  notes: Gene Ontology cellular-component term for the rhoptry, the organelle that
+    contains this lumen.
+- reference: DOI:10.1038/nrmicro1800
+  notes: 'Boothroyd and Dubremetz 2008, Kiss and spit: the dual roles of Toxoplasma
+    rhoptries, Nature Reviews Microbiology.'
+- reference: DOI:10.1128/mmbr.00197-22
+  notes: Waller and Carruthers 2024, Adaptations and metabolic evolution of myzozoan
+    protists across diverse lifestyles and environments, Microbiology and Molecular
+    Biology Reviews.
+causal_graphs:
+- graph_id: rhoptry_lumen_topology
+  title: Rhoptry lumen topology
+  description: The rhoptry lumen is the internal rhoptry compartment enclosed by the
+    rhoptry membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining lumenal boundary without asserting
+    lumenal cargo proteins as permanent structural components.
+  nodes:
+  - node_id: rhoptry_lumen
+    label: rhoptry lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034591
+  - node_id: rhoptry_membrane
+    label: rhoptry membrane
+    node_type: STRUCTURE
+    grounding: GO:0033016
+  - node_id: rhoptry
+    label: rhoptry
+    node_type: ORGANELLE
+    grounding: GO:0020008
+  edges:
+  - subject: rhoptry_lumen
+    predicate: is part of
+    object: rhoptry
+    description: The rhoptry lumen is the secretory volume within a rhoptry.
+    evidence:
+    - reference: GO:0034591
+      notes: GO:0034591 identifies the rhoptry lumen cellular component.
+    - reference: GO:0020008
+      notes: GO:0020008 identifies the containing rhoptry organelle.
+    - reference: DOI:10.1038/nrmicro1800
+      notes: Boothroyd and Dubremetz 2008 review the rhoptry as a membrane-bounded
+        neck-and-bulb secretory organelle.
+  - subject: rhoptry_membrane
+    predicate: encloses
+    object: rhoptry_lumen
+    description: The rhoptry membrane encloses the rhoptry lumen.
+    evidence:
+    - reference: GO:0034591
+      notes: GO:0034591 defines the rhoptry lumen as the volume enclosed by the rhoptry
+        membrane.
+    - reference: GO:0033016
+      notes: GO:0033016 identifies the rhoptry membrane as the lipid bilayer surrounding
+        a rhoptry.
+discussions:
+- discussion_id: boundary_membrane_not_lumen_component
+  prompt: Keep the rhoptry membrane as the boundary of the rhoptry lumen rather than
+    as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#rhoptry_lumen_topology
+  rationale: GO:0034591 denotes the volume enclosed by the rhoptry membrane, whereas
+    GO:0033016 denotes the lipid bilayer surrounding a rhoptry.
+  resolution_note: Represented GO:0033016 as the boundary node in the topology graph
+    and left the lumen record without constituent components.
+  evidence:
+  - reference: GO:0034591
+    notes: GO:0034591 identifies the rhoptry lumen.
+  - reference: GO:0033016
+    notes: GO:0033016 identifies the membrane that bounds the rhoptry lumen.
+  posed_by: codex
+  posed_date: '2026-09-13'
