@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cytoplasmic_vesicle_lumen.yaml
+  slug: cytoplasmic_vesicle_lumen
+session:
+  id: 2026-09-14T212319Z-codex-8228e8
+  timestamp: '2026-09-14T21:23:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/897
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - ontology_mapping
+  - evidence
+  summary: Use vesicle lumen as cytoplasmic vesicle lumen parent
+  details: Resolved issue 897 by replacing the broader GO:0070013 intracellular organelle
+    lumen parent with GO:0031983 vesicle lumen and updating record-level evidence to document
+    the nearer GO parent.
