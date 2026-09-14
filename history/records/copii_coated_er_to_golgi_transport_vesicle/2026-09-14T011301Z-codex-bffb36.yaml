@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/copii_coated_er_to_golgi_transport_vesicle.yaml
+  slug: copii_coated_er_to_golgi_transport_vesicle
+session:
+  id: 2026-09-14T011301Z-codex-bffb36
+  timestamp: '2026-09-14T01:13:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomy
+  - functions
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: Add COPII-coated ER to Golgi transport vesicle record
+  details: Created GO:0030134 COPII-coated ER to Golgi transport vesicle with GO-backed coated-vesicle
+    parentage, COPII vesicle coat parthood, GO synonyms, Saccharomyces cerevisiae scope, COPII-coated
+    vesicle budding evidence, and a nonmechanistic topology graph linking ER membrane evagination
+    to the coated vesicle and Golgi-directed transport.
