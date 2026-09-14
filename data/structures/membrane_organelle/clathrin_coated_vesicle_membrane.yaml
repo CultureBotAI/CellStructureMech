@@ -2,7 +2,7 @@ identifier: GO:0030665
 label: clathrin-coated vesicle membrane
 structure_category: MEMBRANE_ORGANELLE
 structure_kind: MEMBRANE
-definition: The membrane surrounding a clathrin-coated vesicle.
+definition: The lipid bilayer surrounding a clathrin-coated vesicle.
 definition_source: GO:0030665
 mapping_status: PROPOSED
 curation_history:
@@ -18,6 +18,12 @@ curation_history:
     parthood, the UniProt SL xref and synonym, a reviewed-label-only lipid-bilayer
     component, Saccharomyces scope, GO/DOI evidence, a nonmechanistic vesicle-membrane
     topology graph, and lipid-grounding plus clathrin-coat boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-14T19:57:45Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed issue #892 by tightening the GO:0030665 definition to state
+    that the clathrin-coated vesicle membrane is a lipid bilayer.'
   llm_assisted: true
 parent_structures:
 - GO:0030659

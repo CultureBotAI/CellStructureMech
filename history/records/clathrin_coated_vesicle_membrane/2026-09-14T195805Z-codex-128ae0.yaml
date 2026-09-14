@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/clathrin_coated_vesicle_membrane.yaml
+  slug: clathrin_coated_vesicle_membrane
+session:
+  id: 2026-09-14T195805Z-codex-128ae0
+  timestamp: '2026-09-14T19:58:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/892
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/891
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - identity
+  - curation_history
+  summary: Tightened clathrin-coated vesicle membrane definition
+  details: Addressed issue 892 from pull request 891 by changing the GO:0030665 clathrin-coated
+    vesicle membrane definition from generic membrane wording to lipid-bilayer wording and
+    recording the review fix in curation_history.
