@@ -1,0 +1,111 @@
+identifier: GO:0034423
+label: autophagosome lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed within the autophagosome double-membrane.
+definition_source: GO:0034423
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T22:54:05Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T22:54:32Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added UniProt synonyms, cytoplasmic-vesicle-lumen parentage, autophagosome
+    parthood, the UniProt SL-0318 xref, Saccharomyces scope, GO/UniProt/DOI evidence,
+    and a nonmechanistic autophagosome-lumen topology graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: Autophagic vacuolar lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0318
+- synonym_text: Autophagic vacuole lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0318
+- synonym_text: Autophagosomal lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0318
+parent_structures:
+- GO:0060205
+part_of:
+- GO:0005776
+xrefs:
+- uniprot.location:SL-0318
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms double-membrane autophagosomes during starvation-induced
+    macroautophagy.
+  reference: DOI:10.1083/jcb.119.2.301
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Genetic and fluorescence-microscopy model for the pre-autophagosomal structure
+    and autophagosome formation.
+  reference: DOI:10.1093/emboj/20.21.5971
+evidence:
+- reference: GO:0034423
+  notes: Gene Ontology cellular-component term for the autophagosome lumen.
+- reference: GO:0060205
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle lumen.
+- reference: GO:0005776
+  notes: Gene Ontology cellular-component term for the enclosing autophagosome.
+- reference: GO:0000421
+  notes: Gene Ontology cellular-component term for the autophagosome membrane bounding
+    the lumen.
+- reference: uniprot.location:SL-0318
+  notes: UniProt Subcellular Location entry SL-0318 maps to GO:0034423, places autophagosome
+    lumen under cytoplasmic vesicle lumen, and names it part of autophagosome.
+- reference: DOI:10.1083/jcb.119.2.301
+  notes: Takeshige et al. 1992, Autophagy in yeast demonstrated with proteinase-deficient
+    mutants and conditions for its induction, Journal of Cell Biology.
+- reference: DOI:10.1093/emboj/20.21.5971
+  notes: Suzuki et al. 2001, The pre-autophagosomal structure organized by concerted
+    functions of APG genes is essential for autophagosome formation, The EMBO Journal.
+causal_graphs:
+- graph_id: autophagosome_lumen_topology
+  title: Autophagosome lumen topology
+  description: The autophagosome membrane bounds the autophagosome lumen inside the
+    double-membrane autophagosome.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the mature autophagosome lumen boundary without
+    asserting Atg-mediated initiation, membrane expansion, closure, or vacuole-fusion
+    mechanisms.
+  nodes:
+  - node_id: autophagosome_lumen
+    label: autophagosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034423
+  - node_id: autophagosome_membrane
+    label: autophagosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0000421
+  - node_id: autophagosome
+    label: autophagosome
+    node_type: ORGANELLE
+    grounding: GO:0005776
+  edges:
+  - subject: autophagosome_lumen
+    predicate: is part of
+    object: autophagosome
+    description: The autophagosome lumen is the bounded compartment inside an autophagosome.
+    evidence:
+    - reference: GO:0034423
+      notes: GO:0034423 identifies the autophagosome lumen.
+    - reference: GO:0005776
+      notes: GO:0005776 identifies the enclosing autophagosome.
+  - subject: autophagosome_membrane
+    predicate: bounds
+    object: autophagosome_lumen
+    description: The autophagosome membrane bounds the autophagosome lumen.
+    evidence:
+    - reference: GO:0034423
+      notes: GO:0034423 defines the autophagosome lumen as the volume enclosed within
+        the autophagosome double-membrane.
+    - reference: GO:0000421
+      notes: GO:0000421 identifies the surrounding autophagosome membrane.
