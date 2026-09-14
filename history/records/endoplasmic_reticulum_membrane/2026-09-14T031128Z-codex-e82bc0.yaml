@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endoplasmic_reticulum_membrane.yaml
+  slug: endoplasmic_reticulum_membrane
+session:
+  id: 2026-09-14T031128Z-codex-e82bc0
+  timestamp: '2026-09-14T03:11:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/872
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/871
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Narrowed endoplasmic reticulum membrane yeast scope
+  details: 'Resolved review issue #872 by narrowing the Saccharomyces cerevisiae taxonomic-scope
+    note on GO:0005789 endoplasmic reticulum membrane to the COPII-budding-from-ER-membranes
+    claim directly supported by Barlowe et al. 1994.'

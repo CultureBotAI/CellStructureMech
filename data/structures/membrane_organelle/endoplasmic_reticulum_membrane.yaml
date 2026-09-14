@@ -19,6 +19,12 @@ curation_history:
     GO/DOI evidence, a nonmechanistic ER membrane topology graph, and a lipid-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-14T03:11:09Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #872 by narrowing the Saccharomyces taxonomic-scope note to the
+    COPII budding claim directly supported by the Barlowe et al. 1994 reference.'
+  llm_assisted: true
 synonyms:
 - synonym_text: ER membrane
   synonym_type: EXACT_SYNONYM
@@ -46,8 +52,8 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Budding yeast has an ER membrane that embeds Sec61 protein-translocation channels
-    and serves as the donor membrane for COPII vesicle budding.
+  note: Budding yeast forms COPII-coated vesicles from endoplasmic-reticulum membranes
+    using the Sar1 and Sec23/Sec24-Sec13/Sec31 COPII coat machinery.
   reference: DOI:10.1016/0092-8674(94)90138-4
 canonical_examples:
 - taxon_id: NCBITaxon:4932
