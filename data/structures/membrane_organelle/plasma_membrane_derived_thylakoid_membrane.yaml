@@ -21,6 +21,12 @@ curation_history:
     a nonmechanistic topology graph, a lipid-grounding TODO, and a resolved generic-versus-bacterial
     interpretation.
   llm_assisted: true
+- timestamp: '2026-09-14T01:48:37Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: 'Resolved #864 by reciting the Synechocystis canonical example to the Huokko
+    et al. 2021 de novo thylakoid membrane formation claim.'
+  llm_assisted: true
 synonyms:
 - synonym_text: plasma membrane thylakoid membrane
   synonym_type: EXACT_SYNONYM
@@ -122,9 +128,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:1148
   taxon_label: Synechocystis sp. PCC 6803
-  note: Cyanobacterial model used to probe native thylakoid membrane architecture,
-    photosystem mobility, and de novo thylakoid membrane formation.
-  reference: DOI:10.1016/j.molp.2017.09.019
+  note: Cyanobacterial model used to probe de novo internal thylakoid membrane formation
+    and thylakoid membrane dynamics.
+  reference: DOI:10.1038/s41467-021-23680-1
 functions:
 - function_id: photosynthetic_electron_transport
   label: photosynthetic electron transport chain
