@@ -1,0 +1,130 @@
+identifier: GO:0005758
+label: mitochondrial intermembrane space
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The region between the inner and outer lipid bilayers of the mitochondrial
+  envelope.
+definition_source: GO:0005758
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T00:29:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T00:30:40Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parentage, mitochondrial-envelope parthood, GO synonyms, Eukaryota
+    and Saccharomyces scope, DOI/GO evidence, and a nonmechanistic intermembrane-space
+    topology graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: mitochondrial envelope lumen
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005758
+- synonym_text: mitochondrial membrane lumen
+  synonym_type: RELATED_SYNONYM
+  source: GO:0005758
+parent_structures:
+- GO:0031970
+part_of:
+- GO:0005740
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: Canonical mitochondrial intermembrane spaces occur with canonical mitochondria
+    in eukaryotes, while some anaerobic lineages carry reduced mitochondrion-related
+    organelles instead.
+  reference: GO:0005758
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria contain an intermembrane space traversed by precursor
+    proteins after outer-membrane TOM entry and before downstream inner-membrane sorting.
+  reference: DOI:10.1016/j.cell.2009.08.005
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model for mitochondrial protein-import studies across the outer
+    membrane, intermembrane space, and inner membrane.
+  reference: DOI:10.1016/j.cell.2009.08.005
+evidence:
+- reference: GO:0005758
+  notes: Gene Ontology cellular-component term for mitochondrial intermembrane space.
+- reference: GO:0031970
+  notes: Gene Ontology cellular-component parent term for organelle envelope lumen.
+- reference: GO:0005740
+  notes: Gene Ontology cellular-component term for the mitochondrial envelope that
+    contains the intermembrane space.
+- reference: GO:0005741
+  notes: Gene Ontology cellular-component term for the outer mitochondrial bilayer
+    that delimits this space.
+- reference: GO:0005743
+  notes: Gene Ontology cellular-component term for the inner mitochondrial bilayer
+    that delimits this space.
+- reference: DOI:10.1016/j.cell.2009.08.005
+  notes: 'Chacinska et al. 2009, ''Importing mitochondrial proteins: machineries and
+    mechanisms'', Cell.'
+causal_graphs:
+- graph_id: mitochondrial_intermembrane_space_topology
+  title: Mitochondrial intermembrane-space topology
+  description: The mitochondrial intermembrane space is the envelope lumen between
+    the inner and outer mitochondrial membranes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures compartment topology without asserting the full
+    set of intermembrane-space import, oxidoreductase, or respiratory-chain machineries.
+  nodes:
+  - node_id: mitochondrial_intermembrane_space
+    label: mitochondrial intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005758
+  - node_id: mitochondrial_envelope
+    label: mitochondrial envelope
+    node_type: STRUCTURE
+    grounding: GO:0005740
+  - node_id: mitochondrial_outer_membrane
+    label: mitochondrial outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0005741
+  - node_id: mitochondrial_inner_membrane
+    label: mitochondrial inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005743
+  edges:
+  - subject: mitochondrial_intermembrane_space
+    predicate: is part of
+    object: mitochondrial_envelope
+    description: The mitochondrial intermembrane space is the region between the envelope's
+      inner and outer lipid bilayers.
+    evidence:
+    - reference: GO:0005758
+      notes: GO:0005758 defines the intermembrane space as the region between the
+        inner and outer lipid bilayers of the mitochondrial envelope.
+    - reference: GO:0005740
+      notes: GO:0005740 defines the mitochondrial envelope as the double lipid bilayer
+        enclosing the mitochondrion and including the intermembrane space.
+  - subject: mitochondrial_outer_membrane
+    predicate: delimits
+    object: mitochondrial_intermembrane_space
+    description: The mitochondrial outer membrane forms the cytoplasm-facing boundary
+      of the intermembrane space.
+    evidence:
+    - reference: GO:0005758
+      notes: GO:0005758 defines this space by its position between the two mitochondrial-envelope
+        bilayers.
+    - reference: GO:0005741
+      notes: GO:0005741 identifies the outer lipid bilayer of the mitochondrial envelope.
+  - subject: mitochondrial_inner_membrane
+    predicate: delimits
+    object: mitochondrial_intermembrane_space
+    description: The mitochondrial inner membrane forms the matrix-facing boundary
+      of the intermembrane space.
+    evidence:
+    - reference: GO:0005758
+      notes: GO:0005758 defines this space by its position between the two mitochondrial-envelope
+        bilayers.
+    - reference: GO:0005743
+      notes: GO:0005743 identifies the inner lipid bilayer of the mitochondrial envelope.

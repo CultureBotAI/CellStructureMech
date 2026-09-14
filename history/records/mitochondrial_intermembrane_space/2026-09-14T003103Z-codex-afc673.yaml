@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_intermembrane_space.yaml
+  slug: mitochondrial_intermembrane_space
+session:
+  id: 2026-09-14T003103Z-codex-afc673
+  timestamp: '2026-09-14T00:31:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomy
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: Add mitochondrial intermembrane space structure record
+  details: Created GO:0005758 mitochondrial intermembrane space with GO-backed envelope-lumen
+    parentage, mitochondrial-envelope parthood, GO synonyms, Eukaryota and Saccharomyces cerevisiae
+    scope, Chacinska et al. mitochondrial-import literature evidence, and a nonmechanistic
+    topology graph linking the intermembrane space to the inner and outer mitochondrial membranes
+    that delimit it.

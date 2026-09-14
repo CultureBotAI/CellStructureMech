@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_intermembrane_space.yaml
+  slug: mitochondrial_intermembrane_space
+session:
+  id: 2026-09-14T003815Z-codex-fe4e5a
+  timestamp: '2026-09-14T00:38:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/857
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/856
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - provenance
+  - review
+  summary: Link mitochondrial intermembrane space PR review
+  details: 'Adversarial review of PR #856 found that the initial append-only creation history
+    predated the pull request and therefore could not link back to the PR. Added this follow-up
+    history entry linking PR #856 and issue #857 while preserving the creation entry unchanged.'
