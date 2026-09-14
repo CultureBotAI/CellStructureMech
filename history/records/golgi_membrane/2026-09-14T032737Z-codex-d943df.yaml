@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/golgi_membrane.yaml
+  slug: golgi_membrane
+session:
+  id: 2026-09-14T032737Z-codex-d943df
+  timestamp: '2026-09-14T03:27:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0000139 Golgi membrane
+  details: Created an evidence-backed GO:0000139 Golgi membrane record covering the generic
+    Golgi lipid bilayer, parented it to membrane and Golgi-apparatus parthood, added the GO
+    exact Golgi apparatus membrane synonym, a reviewed-label-only Golgi lipid bilayer component,
+    Saccharomyces distribution, GO and DOI evidence, a nonmechanistic Golgi membrane topology
+    graph, and a lipid-grounding follow-up.
