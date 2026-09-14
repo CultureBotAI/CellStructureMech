@@ -1,0 +1,155 @@
+identifier: GO:0031410
+label: cytoplasmic vesicle
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A vesicle found in the cytoplasm of a cell.
+definition_source: GO:0031410
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T20:43:14Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T20:44:12Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added vesicle parentage, cytoplasmic vesicle membrane and lumen parts,
+    the UniProt SL xref, a GO-grounded membrane component, Saccharomyces scope, vesicular-transport
+    function, GO/UniProt/DOI evidence, a nonmechanistic transport-scope graph, and
+    a resolved generic-component boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-09-14T20:52:14Z'
+  curator: codex
+  action: FIXED_DISCUSSION_ANCHOR
+  changes: Retargeted the subtype coat and cargo boundary discussion away from the
+    generic components section so every discussion anchor resolves.
+  llm_assisted: true
+parent_structures:
+- GO:0031982
+has_part:
+- GO:0030659
+- GO:0060205
+xrefs:
+- uniprot.location:SL-0088
+components:
+- component_id: cytoplasmic_vesicle_membrane
+  label: cytoplasmic vesicle membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0030659
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer membrane bounding the cytoplasmic vesicle.
+  evidence:
+  - reference: GO:0030659
+    notes: GO:0030659 identifies the membrane surrounding a cytoplasmic vesicle.
+  - reference: GO:0031410
+    notes: GO:0031410 identifies the whole cytoplasmic vesicle containing that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms cytosolic Cvt vesicles in the cytoplasm-to-vacuole targeting
+    pathway.
+  reference: DOI:10.1091/mbc.e03-07-0479
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model used to characterize early-secretory-pathway requirements
+    for Cvt vesicle and autophagosome assembly.
+  reference: DOI:10.1091/mbc.e03-07-0479
+functions:
+- function_id: vesicular_transport
+  label: vesicular transport among endomembrane organelles
+  description: Cytoplasmic vesicles include coated and secretory/endocytic vesicles
+    that mediate transport among organelles of secretory and endocytic systems.
+  evidence:
+  - reference: uniprot.location:SL-0088
+    notes: UniProt SL-0088 describes cytoplasmic vesicles as mediating vesicular transport
+      among secretory and endocytic organelles.
+evidence:
+- reference: GO:0031410
+  notes: Gene Ontology cellular-component term for cytoplasmic vesicles.
+- reference: GO:0031982
+  notes: Gene Ontology cellular-component parent term for vesicles.
+- reference: GO:0030659
+  notes: Gene Ontology cellular-component term for the cytoplasmic vesicle membrane.
+- reference: GO:0060205
+  notes: Gene Ontology cellular-component term for the cytoplasmic vesicle lumen.
+- reference: uniprot.location:SL-0088
+  notes: UniProt Subcellular Location entry SL-0088 maps directly to GO:0031410 and
+    places cytoplasmic vesicles under its broader vesicle location.
+- reference: uniprot.location:SL-0089
+  notes: UniProt Subcellular Location entry SL-0089 maps cytoplasmic vesicle membrane
+    to GO:0030659 and names it part of cytoplasmic vesicle.
+- reference: uniprot.location:SL-0325
+  notes: UniProt Subcellular Location entry SL-0325 maps cytoplasmic vesicle lumen
+    to GO:0060205 and names it part of cytoplasmic vesicle.
+- reference: DOI:10.1091/mbc.e03-07-0479
+  notes: Reggiori et al. 2004, Early stages of the secretory pathway, but not endosomes,
+    are required for Cvt vesicle and autophagosome assembly in Saccharomyces cerevisiae,
+    Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: cytoplasmic_vesicle_membrane_transport_scope
+  title: Cytoplasmic vesicle membrane-bounded transport scope
+  description: A cytoplasmic vesicle is bounded by a cytoplasmic vesicle membrane
+    and represents a carrier class for secretory/endocytic transport.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the generic membrane-bounded vesicle scope without
+    asserting a coat type, cargo class, or specific donor and target organelle pair.
+  nodes:
+  - node_id: cytoplasmic_vesicle
+    label: cytoplasmic vesicle
+    node_type: ORGANELLE
+    grounding: GO:0031410
+  - node_id: cytoplasmic_vesicle_membrane
+    label: cytoplasmic vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030659
+    component_ref: cytoplasmic_vesicle_membrane
+  - node_id: vesicular_transport
+    label: vesicular transport among endomembrane organelles
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: cytoplasmic_vesicle_membrane
+    predicate: is part of
+    object: cytoplasmic_vesicle
+    description: The cytoplasmic vesicle membrane is the lipid-bilayer boundary of
+      a cytoplasmic vesicle.
+    evidence:
+    - reference: GO:0030659
+      notes: GO:0030659 identifies the cytoplasmic vesicle membrane.
+    - reference: GO:0031410
+      notes: GO:0031410 identifies the containing cytoplasmic vesicle.
+  - subject: cytoplasmic_vesicle
+    predicate: supports
+    object: vesicular_transport
+    description: Cytoplasmic vesicles mediate vesicular transport among organelles
+      of secretory and endocytic systems.
+    evidence:
+    - reference: uniprot.location:SL-0088
+      notes: UniProt SL-0088 describes cytoplasmic vesicles as mediating this transport
+        class.
+discussions:
+- discussion_id: exclude_subtype_coats_and_cargo_from_generic_vesicle
+  prompt: Keep subtype-specific coat complexes and cargo out of the generic cytoplasmic
+    vesicle components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#cytoplasmic_vesicle_membrane_transport_scope
+  rationale: UniProt SL-0088 describes coated, synaptic, secretory, and phagosome
+    examples of the cytoplasmic vesicle class, so individual coats and cargoes identify
+    specific subclasses rather than constituents of every cytoplasmic vesicle.
+  resolution_note: Modeled only the bounding cytoplasmic vesicle membrane as a direct
+    component here and left coat complexes plus cargoes on narrower vesicle records.
+  evidence:
+  - reference: uniprot.location:SL-0088
+    notes: UniProt SL-0088 lists clathrin-, COPI-, and COPII-coated vesicles, synaptic
+      vesicles, secretory vesicles, and phagosomes as examples within the cytoplasmic
+      vesicle class.
+  posed_by: codex
+  posed_date: '2026-09-14'
+  resolved_date: '2026-09-14'

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cytoplasmic_vesicle.yaml
+  slug: cytoplasmic_vesicle
+session:
+  id: 2026-09-14T210151Z-codex-90a189
+  timestamp: '2026-09-14T21:01:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/895
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - history
+  summary: Linked cytoplasmic vesicle curation to PR 895
+  details: Linked the GO:0031410 cytoplasmic vesicle curation session to pull request 895
+    after opening the evidence-backed record for adversarial review.
