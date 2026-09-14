@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/golgi_cisterna.yaml
+  slug: golgi_cisterna
+session:
+  id: 2026-09-14T034529Z-codex-037f10
+  timestamp: '2026-09-14T03:45:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/874
+events:
+- type: EDIT
+  outcome: changed
+  summary: Linked Golgi cisterna PR history
+  details: 'Linked the GO:0031985 Golgi cisterna curation to PR #874 after opening the pull
+    request for branch codex/add-golgi-cisterna.'
