@@ -20,6 +20,12 @@ curation_history:
     scope, cisternal-maturation function, GO/DOI evidence, a nonmechanistic cisternal
     maturation graph, and a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-14T03:46:08Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #875 by grounding the Golgi cisterna boundary graph node to GO:0032580
+    Golgi cisterna membrane instead of the generic GO:0000139 Golgi membrane.'
+  llm_assisted: true
 parent_structures:
 - GO:0098791
 part_of:
@@ -98,10 +104,10 @@ causal_graphs:
     node_type: STRUCTURE
     grounding: GO:0031985
     component_ref: golgi_cisternal_lipid_bilayer
-  - node_id: golgi_membrane
-    label: Golgi membrane
+  - node_id: golgi_cisterna_membrane
+    label: Golgi cisterna membrane
     node_type: STRUCTURE
-    grounding: GO:0000139
+    grounding: GO:0032580
   - node_id: golgi_apparatus
     label: Golgi apparatus
     node_type: STRUCTURE
@@ -110,7 +116,7 @@ causal_graphs:
     label: early-to-late cisternal maturation
     node_type: BIOLOGICAL_PROCESS
   edges:
-  - subject: golgi_membrane
+  - subject: golgi_cisterna_membrane
     predicate: bounds
     object: golgi_cisterna
     description: Golgi cisternae are membrane-bounded compartments.

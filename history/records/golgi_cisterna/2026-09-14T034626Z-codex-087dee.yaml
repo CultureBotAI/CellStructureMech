@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/golgi_cisterna.yaml
+  slug: golgi_cisterna
+session:
+  id: 2026-09-14T034626Z-codex-087dee
+  timestamp: '2026-09-14T03:46:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/875
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/874
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Grounded Golgi cisterna boundary node
+  details: 'Resolved review issue #875 by grounding the Golgi cisterna boundary graph node
+    to GO:0032580 Golgi cisterna membrane instead of the generic GO:0000139 Golgi membrane.'
