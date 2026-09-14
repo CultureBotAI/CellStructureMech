@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/autophagosome_lumen.yaml
+  slug: autophagosome_lumen
+session:
+  id: 2026-09-14T230147Z-codex-eb0e00
+  timestamp: '2026-09-14T23:01:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/903
+events:
+- type: EDIT
+  outcome: changed
+  summary: Link PR for autophagosome lumen
+  details: 'Linked the autophagosome lumen curation record to pull request #903 after opening
+    the PR for review.'
