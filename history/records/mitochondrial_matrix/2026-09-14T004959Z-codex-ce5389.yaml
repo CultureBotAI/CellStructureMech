@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_matrix.yaml
+  slug: mitochondrial_matrix
+session:
+  id: 2026-09-14T004959Z-codex-ce5389
+  timestamp: '2026-09-14T00:49:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomy
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: Add mitochondrial matrix structure record
+  details: Created GO:0005759 mitochondrial matrix with GO-backed intracellular-organelle-lumen
+    parentage, mitochondrion parthood, GO synonyms, Eukaryota and Saccharomyces cerevisiae
+    scope, Sickmann et al. proteomics evidence, and a nonmechanistic topology graph linking
+    the matrix to the mitochondrion and the inner membrane that encloses it.
