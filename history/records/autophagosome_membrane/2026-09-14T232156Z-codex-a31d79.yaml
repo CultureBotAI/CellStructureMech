@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/autophagosome_membrane.yaml
+  slug: autophagosome_membrane
+session:
+  id: 2026-09-14T232156Z-codex-a31d79
+  timestamp: '2026-09-14T23:21:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/904
+events:
+- type: EDIT
+  outcome: changed
+  summary: Link PR for autophagosome membrane
+  details: 'Linked the autophagosome membrane curation record to pull request #904 after opening
+    the PR for review.'
