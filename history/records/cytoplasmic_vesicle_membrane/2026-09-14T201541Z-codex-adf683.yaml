@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cytoplasmic_vesicle_membrane.yaml
+  slug: cytoplasmic_vesicle_membrane
+session:
+  id: 2026-09-14T201541Z-codex-adf683
+  timestamp: '2026-09-14T20:15:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add cytoplasmic vesicle membrane record
+  details: Created the GO:0030659 cytoplasmic vesicle membrane record with UniProt SL-0089
+    cross-referencing, cytoplasmic-vesicle parthood, a reviewed-label-only lipid-bilayer component,
+    conservative Saccharomyces cerevisiae evidence, and a nonmechanistic topology graph; regenerated
+    embeddings, pages, and documentation will be committed with the source record.
