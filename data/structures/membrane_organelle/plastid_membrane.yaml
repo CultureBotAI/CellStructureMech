@@ -1,0 +1,185 @@
+identifier: GO:0042170
+label: plastid membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: Any lipid bilayer that surrounds a plastid or is part of the plastid envelope.
+  Primary plastids (in plants, green algae, red algae, and glaucophytes) are surrounded
+  by two membranes; complex plastids derived from secondary endosymbiosis are surrounded
+  by three or four membranes.
+definition_source: GO:0042170
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T02:04:05Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T02:04:38Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added generic membrane parentage, plastid parthood, a reviewed-label-only
+    plastid lipid bilayer component, Eukaryota and Viridiplantae scope, a Chlamydomonas
+    example, GO/DOI evidence, a nonmechanistic child-scope graph, a generic-scope
+    interpretation, and a lipid-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0009536
+components:
+- component_id: plastid_lipid_bilayer
+  label: plastid lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Generic lipid bilayer constituent of a plastid membrane, covering plastid
+    envelope membranes and internal plastid thylakoid membranes when the exact child
+    membrane is not specified.
+  evidence:
+  - reference: GO:0042170
+    notes: GO:0042170 defines plastid membrane as any lipid bilayer that surrounds
+      a plastid or is part of the plastid envelope.
+  - reference: GO:0009536
+    notes: GO:0009536 defines plastids as membrane-bounded cytoplasmic organelles.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0042170 identifies the whole generic plastid membrane, but no
+    separate source-neutral CURIE was curated for the generic lipid constituent of
+    plastid membranes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Plastid membranes occur in the scattered eukaryotic lineages that retain primary,
+    secondary, or otherwise reduced plastids.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Green algae and land plants contain primary plastids delimited by envelope
+    plastid membranes, with photosynthetic lineages also carrying plastid thylakoid
+    membranes.
+  reference: DOI:10.1098/rstb.2009.0103
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Unicellular green-algal model whose chloroplast is a primary plastid used
+    for plastid proteome and protein-biogenesis studies.
+  reference: DOI:10.1007/s00294-011-0339-1
+evidence:
+- reference: GO:0042170
+  notes: Gene Ontology cellular-component term for plastid membrane.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component parent term for membrane.
+- reference: GO:0009536
+  notes: Gene Ontology cellular-component term for plastid.
+- reference: GO:0009526
+  notes: Gene Ontology cellular-component term for the double plastid envelope whose
+    inner and outer bilayers are plastid membranes.
+- reference: GO:0009527
+  notes: Gene Ontology cellular-component child term for plastid outer membrane.
+- reference: GO:0009528
+  notes: Gene Ontology cellular-component child term for plastid inner membrane.
+- reference: GO:0055035
+  notes: Gene Ontology cellular-component child term for plastid thylakoid membrane.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1007/s00294-011-0339-1
+  notes: 'Terashima, Specht and Hippler 2011, The chloroplast proteome: a survey from
+    the Chlamydomonas reinhardtii perspective with a focus on distinctive features,
+    Current Genetics.'
+causal_graphs:
+- graph_id: plastid_membrane_scope
+  title: Plastid membrane scope
+  description: The generic plastid membrane class covers envelope bilayers and internal
+    plastid thylakoid membranes without choosing a lineage-specific child membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GO class scope without asserting a universal plastid
+    membrane count, protein-import system, photosystem composition, or complex-plastid
+    topology.
+  nodes:
+  - node_id: plastid_membrane
+    label: plastid membrane
+    node_type: STRUCTURE
+    grounding: GO:0042170
+    component_ref: plastid_lipid_bilayer
+  - node_id: plastid_outer_membrane
+    label: plastid outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009527
+  - node_id: plastid_inner_membrane
+    label: plastid inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0009528
+  - node_id: plastid_thylakoid_membrane
+    label: plastid thylakoid membrane
+    node_type: STRUCTURE
+    grounding: GO:0055035
+  edges:
+  - subject: plastid_outer_membrane
+    predicate: is a
+    object: plastid_membrane
+    description: The cytoplasm-facing outer plastid envelope bilayer is a specific
+      plastid membrane.
+    evidence:
+    - reference: GO:0009527
+      notes: GO:0009527 defines plastid outer membrane as an envelope lipid bilayer
+        and places it under GO:0042170.
+  - subject: plastid_inner_membrane
+    predicate: is a
+    object: plastid_membrane
+    description: The stroma-facing inner plastid envelope bilayer is a specific plastid
+      membrane.
+    evidence:
+    - reference: GO:0009528
+      notes: GO:0009528 defines plastid inner membrane as an envelope lipid bilayer
+        and places it under GO:0042170.
+  - subject: plastid_thylakoid_membrane
+    predicate: is a
+    object: plastid_membrane
+    description: The lipid bilayer of a plastid thylakoid is a specific internal plastid
+      membrane.
+    evidence:
+    - reference: GO:0055035
+      notes: GO:0055035 identifies the plastid thylakoid membrane as the lipid bilayer
+        of any thylakoid within a plastid.
+discussions:
+- discussion_id: generic_plastid_membrane_scope
+  prompt: Keep the GO:0042170 generic membrane parent distinct from exact plastid
+    envelope, thylakoid, apicoplast, and cyanelle child membrane records.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#plastid_membrane_scope
+  rationale: GO:0042170 denotes a broad plastid membrane class whose children include
+    envelope bilayers and plastid thylakoid membranes. Exact topology, membrane count,
+    retained peptidoglycan, and protein-import machinery belong on the child records
+    for plastid envelope, apicoplast membrane, cyanelle membrane, and plastid thylakoid
+    membrane.
+  resolution_note: Curated only generic plastid-membrane class scope and kept lineage-specific
+    child-membrane composition out of this record.
+  evidence:
+  - reference: GO:0042170
+    notes: GO:0042170 identifies the broad plastid membrane cellular-component term.
+  - reference: GO:0009527
+    notes: GO:0009527 identifies the plastid outer membrane child.
+  - reference: GO:0009528
+    notes: GO:0009528 identifies the plastid inner membrane child.
+  - reference: GO:0055035
+    notes: GO:0055035 identifies the plastid thylakoid membrane child.
+  posed_by: codex
+  posed_date: '2026-09-14'
+- discussion_id: ground_plastid_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituent
+    of a plastid membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#plastid_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0042170, but the generic lipid bilayer
+    constituent is intentionally left as a reviewed-label-only component until an
+    exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-14'
