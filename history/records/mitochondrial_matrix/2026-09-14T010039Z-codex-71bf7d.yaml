@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_matrix.yaml
+  slug: mitochondrial_matrix
+session:
+  id: 2026-09-14T010039Z-codex-71bf7d
+  timestamp: '2026-09-14T01:00:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/859
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/858
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - provenance
+  - review
+  summary: Link mitochondrial matrix PR review
+  details: 'Adversarial review of PR #858 found that the initial append-only creation history
+    predated the pull request and therefore could not link back to the PR. Added this follow-up
+    history entry linking PR #858 and issue #859 while preserving the creation entry unchanged.'
