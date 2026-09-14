@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/chloroplast_membrane.yaml
+  slug: chloroplast_membrane
+session:
+  id: 2026-09-14T022814Z-codex-57f8bd
+  timestamp: '2026-09-14T02:28:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0031969 chloroplast membrane
+  details: Created an evidence-backed GO:0031969 chloroplast membrane record covering the
+    generic envelope-bilayer class, parented it to plastid membrane and chloroplast envelope
+    parthood, added a reviewed-label-only chloroplast envelope lipid bilayer component, Viridiplantae
+    and Chlamydomonas distribution, GO and DOI evidence, a nonmechanistic inner-outer membrane
+    scope graph, and discussions documenting thylakoid exclusion and lipid-grounding follow-up.
