@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cytoplasmic_vesicle_lumen.yaml
+  slug: cytoplasmic_vesicle_lumen
+session:
+  id: 2026-09-14T212123Z-codex-e73fd1
+  timestamp: '2026-09-14T21:21:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/896
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - history
+  summary: Linked cytoplasmic vesicle lumen curation to PR 896
+  details: Linked the GO:0060205 cytoplasmic vesicle lumen curation session to pull request
+    896 after opening the evidence-backed record for adversarial review.
