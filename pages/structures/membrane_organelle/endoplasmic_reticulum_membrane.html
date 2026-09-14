@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>endoplasmic reticulum membrane · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>endoplasmic reticulum membrane</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005789"><code>GO:0005789</code></a> · MEMBRANE_ORGANELLE · MEMBRANE · <span class="status">PROPOSED</span></p>
+<p class="definition">The lipid bilayer surrounding the endoplasmic reticulum. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005789"><code>GO:0005789</code></a>]</small></p>
+<p><strong>Synonyms:</strong> ER membrane</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005783"><code>GO:0005783</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-er_lipid_bilayer"><td>endoplasmic reticulum lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Lipid-bilayer constituent of the endoplasmic reticulum membrane that surrounds the ER lumen.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005789"><code>GO:0005789</code></a> <small>GO:0005789 defines the endoplasmic reticulum membrane as the lipid bilayer surrounding the endoplasmic reticulum.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> Saccharomyces cerevisiae — <strong>COMMON</strong>: Budding yeast forms COPII-coated vesicles from endoplasmic-reticulum membranes using the Sar1 and Sec23/Sec24-Sec13/Sec31 COPII coat machinery. [<a href="https://doi.org/10.1016/0092-8674(94)90138-4"><code>DOI:10.1016/0092-8674(94)90138-4</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> <em>Saccharomyces cerevisiae</em> — Budding-yeast model used to characterize Sec61-dependent protein insertion into the endoplasmic reticulum membrane. [<a href="https://doi.org/10.1091/mbc.3.2.129"><code>DOI:10.1091/mbc.3.2.129</code></a>]</li></ul>
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-er_membrane_topology">ER membrane topology and budding <small>(FUNCTION)</small></h3>
+<p>The endoplasmic reticulum membrane bounds the ER lumen, embeds Sec61 translocons, and donates membrane for COPII-coated vesicle budding.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>endoplasmic reticulum membrane</td><td>is part of</td><td>endoplasmic reticulum</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005789"><code>GO:0005789</code></a> <small>GO:0005789 defines the ER membrane as the lipid bilayer surrounding the ER.</small></li></ul></td></tr>
+<tr><td>endoplasmic reticulum membrane</td><td>bounds</td><td>endoplasmic reticulum lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005788"><code>GO:0005788</code></a> <small>GO:0005788 defines the ER lumen as the volume enclosed by ER membranes.</small></li></ul></td></tr>
+<tr><td>Sec61 translocon complex</td><td>is embedded in</td><td>endoplasmic reticulum membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a> <small>GO:0005784 identifies Sec61 as an endoplasmic reticulum translocon complex.</small></li><li><a href="https://doi.org/10.1091/mbc.3.2.129"><code>DOI:10.1091/mbc.3.2.129</code></a> <small>Stirling et al. 1992 characterized sec61 mutants defective in integral membrane protein insertion into the ER.</small></li></ul></td></tr>
+<tr><td>COPII vesicle coat</td><td>assembles on</td><td>endoplasmic reticulum membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0090114"><code>GO:0090114</code></a> <small>GO:0090114 defines COPII-coated vesicle budding as evagination of ER membrane to form a COPII-coated vesicle.</small></li><li><a href="https://doi.org/10.1016/S0092-8674(00)81577-9"><code>DOI:10.1016/S0092-8674(00)81577-9</code></a> <small>Matsuoka et al. 1998 reconstituted COPII-coated vesicle formation on chemically defined liposomes.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the lipid constituent of the endoplasmic reticulum membrane. <small>The record is exactly grounded to GO:0005789, but the ER lipid bilayer constituent is intentionally left as reviewed-label-only until an exact source-neutral lipid or membrane-constituent CURIE is curated.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005789"><code>GO:0005789</code></a> <small>Gene Ontology cellular-component term for endoplasmic reticulum membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0016020"><code>GO:0016020</code></a> <small>Gene Ontology cellular-component parent term for membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005783"><code>GO:0005783</code></a> <small>Gene Ontology cellular-component term for endoplasmic reticulum.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005788"><code>GO:0005788</code></a> <small>Gene Ontology cellular-component term for endoplasmic reticulum lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a> <small>Gene Ontology cellular-component term for the Sec61 translocon complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0090114"><code>GO:0090114</code></a> <small>Gene Ontology biological-process term for COPII-coated vesicle budding.</small></li><li><a href="https://doi.org/10.1091/mbc.3.2.129"><code>DOI:10.1091/mbc.3.2.129</code></a> <small>Stirling et al. 1992, &#39;Protein translocation mutants defective in the insertion of integral membrane proteins into the endoplasmic reticulum&#39;, Molecular Biology of the Cell.</small></li><li><a href="https://doi.org/10.1016/0092-8674(94)90138-4"><code>DOI:10.1016/0092-8674(94)90138-4</code></a> <small>Barlowe et al. 1994, &#39;COPII: A membrane coat formed by Sec proteins that drive vesicle budding from the endoplasmic reticulum&#39;, Cell.</small></li><li><a href="https://doi.org/10.1016/S0092-8674(00)81577-9"><code>DOI:10.1016/S0092-8674(00)81577-9</code></a> <small>Matsuoka et al. 1998, &#39;COPII-Coated Vesicle Formation Reconstituted with Purified Coat Proteins and Chemically Defined Liposomes&#39;, Cell.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-14T03:04:35Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-14T03:05:07Z</code> codex · EXPANDED_RECORD — Added the GO exact ER membrane synonym, generic membrane parentage, endoplasmic-reticulum parthood, a reviewed-label-only ER lipid bilayer component, Saccharomyces scope, GO/DOI evidence, a nonmechanistic ER membrane topology graph, and a lipid-grounding TODO.</li><li><code>2026-09-14T03:11:09Z</code> codex · ADDRESS_REVIEW — Resolved #872 by narrowing the Saccharomyces taxonomic-scope note to the COPII budding claim directly supported by the Barlowe et al. 1994 reference.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/endoplasmic_reticulum_membrane.yaml"><code>data/structures/membrane_organelle/endoplasmic_reticulum_membrane.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,174 @@
+identifier: GO:0005789
+label: endoplasmic reticulum membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding the endoplasmic reticulum.
+definition_source: GO:0005789
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T03:04:35Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T03:05:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact ER membrane synonym, generic membrane parentage, endoplasmic-reticulum
+    parthood, a reviewed-label-only ER lipid bilayer component, Saccharomyces scope,
+    GO/DOI evidence, a nonmechanistic ER membrane topology graph, and a lipid-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-14T03:11:09Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #872 by narrowing the Saccharomyces taxonomic-scope note to the
+    COPII budding claim directly supported by the Barlowe et al. 1994 reference.'
+  llm_assisted: true
+synonyms:
+- synonym_text: ER membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005789
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0005783
+components:
+- component_id: er_lipid_bilayer
+  label: endoplasmic reticulum lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent of the endoplasmic reticulum membrane that surrounds
+    the ER lumen.
+  evidence:
+  - reference: GO:0005789
+    notes: GO:0005789 defines the endoplasmic reticulum membrane as the lipid bilayer
+      surrounding the endoplasmic reticulum.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005789 identifies the whole ER membrane, but no separate source-neutral
+    CURIE was curated for the generic lipid constituent of the ER membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms COPII-coated vesicles from endoplasmic-reticulum membranes
+    using the Sar1 and Sec23/Sec24-Sec13/Sec31 COPII coat machinery.
+  reference: DOI:10.1016/0092-8674(94)90138-4
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model used to characterize Sec61-dependent protein insertion
+    into the endoplasmic reticulum membrane.
+  reference: DOI:10.1091/mbc.3.2.129
+evidence:
+- reference: GO:0005789
+  notes: Gene Ontology cellular-component term for endoplasmic reticulum membrane.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component parent term for membrane.
+- reference: GO:0005783
+  notes: Gene Ontology cellular-component term for endoplasmic reticulum.
+- reference: GO:0005788
+  notes: Gene Ontology cellular-component term for endoplasmic reticulum lumen.
+- reference: GO:0005784
+  notes: Gene Ontology cellular-component term for the Sec61 translocon complex.
+- reference: GO:0090114
+  notes: Gene Ontology biological-process term for COPII-coated vesicle budding.
+- reference: DOI:10.1091/mbc.3.2.129
+  notes: Stirling et al. 1992, 'Protein translocation mutants defective in the insertion
+    of integral membrane proteins into the endoplasmic reticulum', Molecular Biology
+    of the Cell.
+- reference: DOI:10.1016/0092-8674(94)90138-4
+  notes: 'Barlowe et al. 1994, ''COPII: A membrane coat formed by Sec proteins that
+    drive vesicle budding from the endoplasmic reticulum'', Cell.'
+- reference: DOI:10.1016/S0092-8674(00)81577-9
+  notes: Matsuoka et al. 1998, 'COPII-Coated Vesicle Formation Reconstituted with
+    Purified Coat Proteins and Chemically Defined Liposomes', Cell.
+causal_graphs:
+- graph_id: er_membrane_topology
+  title: ER membrane topology and budding
+  description: The endoplasmic reticulum membrane bounds the ER lumen, embeds Sec61
+    translocons, and donates membrane for COPII-coated vesicle budding.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures ER membrane topology plus Sec61 and COPII localization
+    without asserting rough-ER or smooth-ER child membranes, the full translocation
+    cycle, or individual coat subunit recruitment steps.
+  nodes:
+  - node_id: er_membrane
+    label: endoplasmic reticulum membrane
+    node_type: STRUCTURE
+    grounding: GO:0005789
+    component_ref: er_lipid_bilayer
+  - node_id: endoplasmic_reticulum
+    label: endoplasmic reticulum
+    node_type: STRUCTURE
+    grounding: GO:0005783
+  - node_id: er_lumen
+    label: endoplasmic reticulum lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005788
+  - node_id: sec61_translocon_complex
+    label: Sec61 translocon complex
+    node_type: STRUCTURE
+    grounding: GO:0005784
+  - node_id: copii_vesicle_coat
+    label: COPII vesicle coat
+    node_type: STRUCTURE
+    grounding: GO:0030127
+  - node_id: copii_coated_vesicle_budding
+    label: COPII-coated vesicle budding
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0090114
+  edges:
+  - subject: er_membrane
+    predicate: is part of
+    object: endoplasmic_reticulum
+    description: The ER membrane is the lipid bilayer that surrounds the endoplasmic
+      reticulum.
+    evidence:
+    - reference: GO:0005789
+      notes: GO:0005789 defines the ER membrane as the lipid bilayer surrounding the
+        ER.
+  - subject: er_membrane
+    predicate: bounds
+    object: er_lumen
+    description: The endoplasmic reticulum membrane encloses the ER lumen.
+    evidence:
+    - reference: GO:0005788
+      notes: GO:0005788 defines the ER lumen as the volume enclosed by ER membranes.
+  - subject: sec61_translocon_complex
+    predicate: is embedded in
+    object: er_membrane
+    description: The Sec61 translocon complex is an ER membrane protein channel.
+    evidence:
+    - reference: GO:0005784
+      notes: GO:0005784 identifies Sec61 as an endoplasmic reticulum translocon complex.
+    - reference: DOI:10.1091/mbc.3.2.129
+      notes: Stirling et al. 1992 characterized sec61 mutants defective in integral
+        membrane protein insertion into the ER.
+  - subject: copii_vesicle_coat
+    predicate: assembles on
+    object: er_membrane
+    description: COPII coat proteins assemble on ER membrane during COPII-coated vesicle
+      budding.
+    evidence:
+    - reference: GO:0090114
+      notes: GO:0090114 defines COPII-coated vesicle budding as evagination of ER
+        membrane to form a COPII-coated vesicle.
+    - reference: DOI:10.1016/S0092-8674(00)81577-9
+      notes: Matsuoka et al. 1998 reconstituted COPII-coated vesicle formation on
+        chemically defined liposomes.
+discussions:
+- discussion_id: ground_er_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    endoplasmic reticulum membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#er_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0005789, but the ER lipid bilayer
+    constituent is intentionally left as reviewed-label-only until an exact source-neutral
+    lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-14'
