@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/copi_coated_vesicle_lumen.yaml
+  slug: copi_coated_vesicle_lumen
+session:
+  id: 2026-09-14T221011Z-codex-7b752a
+  timestamp: '2026-09-14T22:10:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/900
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - history
+  summary: Linked COPI-coated vesicle lumen curation to PR 900
+  details: Linked the cellstructuremech:copi_coated_vesicle_lumen COPI-coated vesicle lumen
+    curation session to pull request 900 after opening the evidence-backed record for adversarial
+    review.
