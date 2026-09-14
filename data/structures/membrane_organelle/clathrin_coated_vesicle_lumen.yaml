@@ -1,0 +1,105 @@
+identifier: cellstructuremech:clathrin_coated_vesicle_lumen
+label: clathrin-coated vesicle lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The clathrin-coated vesicle compartment bounded by the clathrin-coated
+  vesicle membrane.
+definition_source: uniprot.location:SL-0319
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T22:36:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T22:38:29Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the UniProt synonym, cytoplasmic-vesicle-lumen parentage, clathrin-coated-vesicle
+    parthood, the UniProt SL-0319 xref, Saccharomyces scope, GO/UniProt/DOI evidence,
+    and a nonmechanistic clathrin-coated-vesicle lumen topology graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: Clathrin-coated vesicular lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0319
+parent_structures:
+- GO:0060205
+part_of:
+- GO:0030136
+xrefs:
+- uniprot.location:SL-0319
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has clathrin heavy and light chains that assemble at cortical
+    clathrin-dependent endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which clathrin and adaptor protein dynamics defined
+    the timing of coat assembly at actin-based endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+evidence:
+- reference: uniprot.location:SL-0319
+  notes: UniProt Subcellular Location entry SL-0319 identifies the clathrin-coated
+    vesicle lumen, places it under cytoplasmic vesicle lumen, and names it part of
+    clathrin-coated vesicle.
+- reference: GO:0060205
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle lumen.
+- reference: GO:0030136
+  notes: Gene Ontology cellular-component term for the enclosing clathrin-coated vesicle.
+- reference: GO:0030665
+  notes: Gene Ontology cellular-component term for the clathrin-coated vesicle membrane
+    bounding the lumen.
+- reference: DOI:10.1016/j.devcel.2005.04.014
+  notes: Newpher et al. 2005, In Vivo Dynamics of Clathrin and Its Adaptor-Dependent
+    Recruitment to the Actin-Based Endocytic Machinery in Yeast, Developmental Cell.
+causal_graphs:
+- graph_id: clathrin_coated_vesicle_lumen_topology
+  title: Clathrin-coated vesicle lumen topology
+  description: The clathrin-coated vesicle membrane bounds the clathrin-coated vesicle
+    lumen inside the coated vesicle.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the mature clathrin-coated vesicle lumen boundary
+    without asserting clathrin coat assembly, cargo sorting, or actin-driven scission
+    steps.
+  nodes:
+  - node_id: clathrin_coated_vesicle_lumen
+    label: clathrin-coated vesicle lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:clathrin_coated_vesicle_lumen
+  - node_id: clathrin_coated_vesicle_membrane
+    label: clathrin-coated vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030665
+  - node_id: clathrin_coated_vesicle
+    label: clathrin-coated vesicle
+    node_type: ORGANELLE
+    grounding: GO:0030136
+  edges:
+  - subject: clathrin_coated_vesicle_lumen
+    predicate: is part of
+    object: clathrin_coated_vesicle
+    description: The clathrin-coated vesicle lumen is the bounded compartment inside
+      a clathrin-coated vesicle.
+    evidence:
+    - reference: uniprot.location:SL-0319
+      notes: UniProt SL-0319 places the clathrin-coated vesicle lumen under the clathrin-coated
+        vesicle.
+    - reference: GO:0030136
+      notes: GO:0030136 identifies the enclosing clathrin-coated vesicle.
+  - subject: clathrin_coated_vesicle_membrane
+    predicate: bounds
+    object: clathrin_coated_vesicle_lumen
+    description: The clathrin-coated vesicle membrane bounds the clathrin-coated vesicle
+      lumen.
+    evidence:
+    - reference: uniprot.location:SL-0319
+      notes: UniProt SL-0319 describes the lumen as bounded by the clathrin-coated
+        vesicle membrane.
+    - reference: GO:0030665
+      notes: GO:0030665 identifies the surrounding clathrin-coated vesicle membrane.

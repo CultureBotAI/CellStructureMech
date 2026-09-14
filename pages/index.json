@@ -1062,6 +1062,15 @@
   "definition": "A vesicle with a coat formed of clathrin connected to the membrane via one of the clathrin adaptor complexes."
  },
  {
+  "identifier": "cellstructuremech:clathrin_coated_vesicle_lumen",
+  "label": "clathrin-coated vesicle lumen",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/clathrin_coated_vesicle_lumen.html",
+  "definition": "The clathrin-coated vesicle compartment bounded by the clathrin-coated vesicle membrane."
+ },
+ {
   "identifier": "GO:0030665",
   "label": "clathrin-coated vesicle membrane",
   "category": "MEMBRANE_ORGANELLE",
