@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/plasma_membrane_derived_thylakoid_membrane.yaml
+  slug: plasma_membrane_derived_thylakoid_membrane
+session:
+  id: 2026-09-14T014506Z-codex-33b4ac
+  timestamp: '2026-09-14T01:45:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/863
+events:
+- type: EDIT
+  outcome: changed
+  summary: Linked plasma membrane-derived thylakoid membrane PR provenance
+  details: 'Appended a follow-up history record linking PR #863 for the GO:0031676 plasma
+    membrane-derived thylakoid membrane addition while preserving the original CREATE history
+    record.'

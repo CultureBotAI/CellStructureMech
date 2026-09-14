@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/plasma_membrane_derived_thylakoid_membrane.yaml
+  slug: plasma_membrane_derived_thylakoid_membrane
+session:
+  id: 2026-09-14T013732Z-codex-172859
+  timestamp: '2026-09-14T01:37:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added plasma membrane-derived thylakoid membrane record
+  details: Created data/structures/membrane_organelle/plasma_membrane_derived_thylakoid_membrane.yaml
+    for GO:0031676 with GO-derived identity, exact GO and UniProt synonymy, parentage to GO:0042651,
+    parthood in GO:0030075, exact PSI and PSII has_part links, a reviewed-label-only lipid-matrix
+    component, cyanobacterial photosystem/cytochrome b6f/ATP synthase components, Cyanobacteriota
+    scope, a Synechocystis canonical example, photosynthetic electron-transport function,
+    GO and DOI evidence, a nonmechanistic topology graph, and discussions for lipid grounding
+    and generic membrane boundaries.
