@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cis_golgi_network_membrane.yaml
+  slug: cis_golgi_network_membrane
+session:
+  id: 2026-09-14T064258Z-codex-cea9b3
+  timestamp: '2026-09-14T06:42:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/884
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - history
+  summary: Link cis-Golgi network membrane PR
+  details: 'Linked the initial cis-Golgi network membrane curation session to PR #884 so the
+    append-only repository history records the review and merge context for the new GO:0033106
+    record.'
