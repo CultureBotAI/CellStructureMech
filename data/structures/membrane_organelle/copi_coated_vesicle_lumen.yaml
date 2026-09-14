@@ -1,0 +1,99 @@
+identifier: cellstructuremech:copi_coated_vesicle_lumen
+label: COPI-coated vesicle lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The COPI-coated vesicle compartment bounded by the COPI-coated vesicle
+  membrane.
+definition_source: uniprot.location:SL-0321
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T22:00:01Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T22:00:49Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic-vesicle-lumen parentage, COPI-coated-vesicle parthood,
+    the UniProt SL-0321 xref, Saccharomyces scope, GO/UniProt/DOI evidence, and a
+    nonmechanistic COPI-coated-vesicle lumen topology graph.
+  llm_assisted: true
+parent_structures:
+- GO:0060205
+part_of:
+- GO:0030137
+xrefs:
+- uniprot.location:SL-0321
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has coatomer-dependent COPI-coated vesicles that carry early
+    secretory cargo for retrograde retrieval.
+  reference: DOI:10.1016/0092-8674(94)90011-6
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which coatomer mutants established COPI roles in Golgi-to-ER
+    retrieval and early secretory trafficking.
+  reference: DOI:10.1016/0092-8674(94)90011-6
+evidence:
+- reference: uniprot.location:SL-0321
+  notes: UniProt Subcellular Location entry SL-0321 identifies the COPI-coated vesicle
+    lumen, places it under cytoplasmic vesicle lumen, and names it part of COPI-coated
+    vesicle.
+- reference: GO:0060205
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle lumen.
+- reference: GO:0030137
+  notes: Gene Ontology cellular-component term for the enclosing COPI-coated vesicle.
+- reference: GO:0030663
+  notes: Gene Ontology cellular-component term for the COPI-coated vesicle membrane
+    bounding the lumen.
+- reference: DOI:10.1016/0092-8674(94)90011-6
+  notes: Letourneur et al. 1994, Coatomer is essential for retrieval of dilysine-tagged
+    proteins to the endoplasmic reticulum, Cell.
+causal_graphs:
+- graph_id: copi_coated_vesicle_lumen_topology
+  title: COPI-coated vesicle lumen topology
+  description: The COPI-coated vesicle membrane bounds the COPI-coated vesicle lumen
+    inside the coated vesicle.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the mature COPI-coated vesicle lumen boundary without
+    asserting coatomer assembly, cargo sorting, or fusion steps.
+  nodes:
+  - node_id: copi_coated_vesicle_lumen
+    label: COPI-coated vesicle lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:copi_coated_vesicle_lumen
+  - node_id: copi_coated_vesicle_membrane
+    label: COPI-coated vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030663
+  - node_id: copi_coated_vesicle
+    label: COPI-coated vesicle
+    node_type: ORGANELLE
+    grounding: GO:0030137
+  edges:
+  - subject: copi_coated_vesicle_lumen
+    predicate: is part of
+    object: copi_coated_vesicle
+    description: The COPI-coated vesicle lumen is the bounded compartment inside a
+      COPI-coated vesicle.
+    evidence:
+    - reference: uniprot.location:SL-0321
+      notes: UniProt SL-0321 places the COPI-coated vesicle lumen under the COPI-coated
+        vesicle.
+    - reference: GO:0030137
+      notes: GO:0030137 identifies the enclosing COPI-coated vesicle.
+  - subject: copi_coated_vesicle_membrane
+    predicate: bounds
+    object: copi_coated_vesicle_lumen
+    description: The COPI-coated vesicle membrane bounds the COPI-coated vesicle lumen.
+    evidence:
+    - reference: uniprot.location:SL-0321
+      notes: UniProt SL-0321 describes the lumen as bounded by the COPI-coated vesicle
+        membrane.
+    - reference: GO:0030663
+      notes: GO:0030663 identifies the surrounding COPI-coated vesicle membrane.
