@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cellular_bud.yaml
+  slug: cellular_bud
+session:
+  id: 2026-09-14T233238Z-codex-d2f0e7
+  timestamp: '2026-09-14T23:32:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the cellular bud record
+  details: Added GO:0005933 as a cellular bud structure record with UniProt SL-0027 synonymy
+    and xref, GO-backed bud membrane, neck, and tip parts, budding-yeast distribution and
+    example evidence, GO/UniProt/DOI evidence, a budding-growth function, and a nonmechanistic
+    cellular-bud topology graph.
