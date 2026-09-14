@@ -19,6 +19,13 @@ curation_history:
     scope, GO/DOI evidence, a nonmechanistic vesicle-membrane topology graph, and
     lipid-grounding plus COPI-coat boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-14T18:37:24Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed issue #887 by removing the unused COPI-coated vesicle budding
+    node from the topology graph while retaining GO:0035964 as edge evidence for Golgi
+    membrane donation.'
+  llm_assisted: true
 parent_structures:
 - GO:0030660
 - GO:0030662
@@ -104,10 +111,6 @@ causal_graphs:
     label: COPI-coated vesicle
     node_type: ORGANELLE
     grounding: GO:0030137
-  - node_id: copi_coated_vesicle_budding
-    label: COPI-coated vesicle budding
-    node_type: BIOLOGICAL_PROCESS
-    grounding: GO:0035964
   edges:
   - subject: copi_coated_vesicle_membrane
     predicate: is part of

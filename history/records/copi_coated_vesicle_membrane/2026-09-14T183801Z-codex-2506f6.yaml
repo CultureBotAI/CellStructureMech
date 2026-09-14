@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/copi_coated_vesicle_membrane.yaml
+  slug: copi_coated_vesicle_membrane
+session:
+  id: 2026-09-14T183801Z-codex-2506f6
+  timestamp: '2026-09-14T18:38:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/887
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/886
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Removed dangling COPI-coated vesicle budding node
+  details: Addressed review issue 887 for pull request 886 by removing the unused copi_coated_vesicle_budding
+    node from the COPI-coated vesicle membrane topology graph while retaining GO:0035964 as
+    evidence for Golgi membrane donation.
