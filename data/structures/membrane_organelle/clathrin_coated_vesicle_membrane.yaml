@@ -1,0 +1,160 @@
+identifier: GO:0030665
+label: clathrin-coated vesicle membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The membrane surrounding a clathrin-coated vesicle.
+definition_source: GO:0030665
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T19:47:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T19:48:23Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO vesicle-membrane and coated-vesicle membrane parentage, clathrin-coated-vesicle
+    parthood, the UniProt SL xref and synonym, a reviewed-label-only lipid-bilayer
+    component, Saccharomyces scope, GO/DOI evidence, a nonmechanistic vesicle-membrane
+    topology graph, and lipid-grounding plus clathrin-coat boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0030659
+- GO:0030662
+part_of:
+- GO:0030136
+synonyms:
+- synonym_text: Clathrin-coated vesicular membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0071
+xrefs:
+- uniprot.location:SL-0071
+components:
+- component_id: clathrin_coated_vesicle_membrane_lipid_bilayer
+  label: clathrin-coated vesicle membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent of the clathrin-coated vesicle membrane that surrounds
+    a clathrin-coated vesicle.
+  evidence:
+  - reference: GO:0030665
+    notes: GO:0030665 identifies the membrane surrounding a clathrin-coated vesicle.
+  - reference: uniprot.location:SL-0071
+    notes: UniProt Subcellular Location SL-0071 maps to GO:0030665 and denotes the
+      clathrin-coated vesicle membrane.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030665 and UniProt SL-0071 identify the whole clathrin-coated
+    vesicle membrane, but no separate source-neutral CURIE was curated for the generic
+    lipid constituent of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has clathrin heavy and light chains that assemble at cortical
+    clathrin-dependent endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which clathrin and adaptor protein dynamics defined
+    the timing of coat assembly at actin-based endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+evidence:
+- reference: GO:0030665
+  notes: Gene Ontology cellular-component term for the clathrin-coated vesicle membrane.
+- reference: GO:0030659
+  notes: Gene Ontology cellular-component term for cytoplasmic vesicle membranes.
+- reference: GO:0030662
+  notes: Gene Ontology cellular-component parent term for coated vesicle membranes.
+- reference: GO:0030136
+  notes: Gene Ontology cellular-component term for the containing clathrin-coated
+    vesicle.
+- reference: GO:0030125
+  notes: Gene Ontology cellular-component term for the clathrin vesicle coat.
+- reference: uniprot.location:SL-0071
+  notes: UniProt Subcellular Location entry SL-0071 maps to GO:0030665 and lists Clathrin-coated
+    vesicular membrane as a synonym.
+- reference: DOI:10.1016/j.devcel.2005.04.014
+  notes: Newpher et al. 2005, In Vivo Dynamics of Clathrin and Its Adaptor-Dependent
+    Recruitment to the Actin-Based Endocytic Machinery in Yeast, Developmental Cell.
+causal_graphs:
+- graph_id: clathrin_coated_vesicle_membrane_topology
+  title: Clathrin-coated vesicle membrane topology
+  description: The clathrin-coated vesicle membrane is the lipid-bilayer boundary
+    of a clathrin-coated vesicle.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the vesicle-membrane boundary without asserting
+    a budding source, an actin-driven scission mechanism, or individual coat/adaptor
+    dependencies.
+  nodes:
+  - node_id: clathrin_coated_vesicle_membrane
+    label: clathrin-coated vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030665
+    component_ref: clathrin_coated_vesicle_membrane_lipid_bilayer
+  - node_id: clathrin_coated_vesicle
+    label: clathrin-coated vesicle
+    node_type: ORGANELLE
+    grounding: GO:0030136
+  edges:
+  - subject: clathrin_coated_vesicle_membrane
+    predicate: is part of
+    object: clathrin_coated_vesicle
+    description: The clathrin-coated vesicle membrane is the lipid-bilayer part of
+      a clathrin-coated vesicle.
+    evidence:
+    - reference: GO:0030665
+      notes: GO:0030665 identifies the clathrin-coated vesicle membrane.
+    - reference: GO:0030136
+      notes: GO:0030136 identifies the containing clathrin-coated vesicle.
+  - subject: clathrin_coated_vesicle_membrane
+    predicate: bounds
+    object: clathrin_coated_vesicle
+    description: The clathrin-coated vesicle membrane surrounds a clathrin-coated
+      vesicle.
+    evidence:
+    - reference: GO:0030665
+      notes: GO:0030665 identifies the membrane surrounding a clathrin-coated vesicle.
+    - reference: uniprot.location:SL-0071
+      notes: UniProt SL-0071 denotes the clathrin-coated vesicle membrane.
+discussions:
+- discussion_id: ground_clathrin_coated_vesicle_membrane_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    clathrin-coated vesicle membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#clathrin_coated_vesicle_membrane_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0030665, but the clathrin-coated
+    vesicle membrane lipid-bilayer constituent is intentionally left as reviewed-label-only
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-14'
+- discussion_id: exclude_clathrin_coat_from_membrane_components
+  prompt: Keep the clathrin vesicle coat as a whole-vesicle part rather than as a
+    lipid-bilayer membrane component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#clathrin_coated_vesicle_membrane_topology
+  rationale: GO:0030125 denotes the clathrin protein coat on the whole coated vesicle,
+    whereas GO:0030665 denotes the membrane surrounding that vesicle.
+  resolution_note: Represented only a reviewed-label-only lipid bilayer as a direct
+    membrane component and left clathrin heavy chain, clathrin light chain, adaptor
+    complexes, and the clathrin vesicle coat on the clathrin coat and whole clathrin-coated
+    vesicle records.
+  evidence:
+  - reference: GO:0030665
+    notes: GO:0030665 identifies the clathrin-coated vesicle membrane rather than
+      the protein coat.
+  - reference: GO:0030125
+    notes: GO:0030125 identifies the clathrin vesicle coat.
+  - reference: GO:0030136
+    notes: GO:0030136 identifies the whole clathrin-coated vesicle.
+  posed_by: codex
+  posed_date: '2026-09-14'
+  resolved_date: '2026-09-14'

@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/clathrin_coated_vesicle_membrane.yaml
+  slug: clathrin_coated_vesicle_membrane
+session:
+  id: 2026-09-14T194846Z-codex-4f347a
+  timestamp: '2026-09-14T19:48:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - part_of
+  - synonyms
+  - xrefs
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added clathrin-coated vesicle membrane record
+  details: Created the GO:0030665 clathrin-coated vesicle membrane record with GO vesicle-membrane
+    and coated-vesicle membrane parentage, clathrin-coated-vesicle parthood, the UniProt SL-0071
+    synonym and xref, a reviewed-label-only lipid-bilayer component, Saccharomyces cerevisiae
+    scope, GO and DOI evidence, a nonmechanistic clathrin-coated vesicle membrane topology
+    graph, and lipid-grounding plus clathrin-coat boundary discussions.
