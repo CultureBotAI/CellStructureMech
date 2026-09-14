@@ -1,0 +1,208 @@
+identifier: GO:0005741
+label: mitochondrial outer membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The outer, i.e. cytoplasm-facing, lipid bilayer of the mitochondrial envelope.
+definition_source: GO:0005741
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-13T23:50:44Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-13T23:51:54Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parentage, mitochondrial-envelope parthood, TOM containment, a
+    reviewed-label-only lipid-bilayer component, Eukaryota and Saccharomyces scope,
+    protein-import function evidence, a nonmechanistic outer-membrane topology graph,
+    and a lipid-bilayer grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: mitochondrion outer membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005741
+- synonym_text: outer mitochondrial membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005741
+- synonym_text: outer mitochondrion membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005741
+parent_structures:
+- GO:0031968
+- GO:0031966
+part_of:
+- GO:0005740
+has_part:
+- GO:0005742
+components:
+- component_id: mitochondrial_outer_lipid_bilayer
+  label: mitochondrial outer lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Cytoplasm-facing lipid bilayer that forms the outer boundary of the mitochondrial
+    envelope.
+  evidence:
+  - reference: GO:0005741
+    notes: GO:0005741 defines the mitochondrial outer membrane as the cytoplasm-facing
+      lipid bilayer of the mitochondrial envelope.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005741 identifies the whole mitochondrial outer membrane, but
+    no separate source-neutral CURIE was curated for the lipid constituent of that
+    membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: Canonical mitochondrial outer membranes occur with canonical mitochondria
+    across eukaryotes, while some anaerobic lineages carry reduced mitochondrion-related
+    organelles instead.
+  reference: GO:0005741
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria include outer-membrane proteins and outer-membrane
+    import machinery.
+  reference: DOI:10.1073/pnas.2135385100
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model used for purified mitochondrial proteomics and for analysis
+    of mitochondrial protein-import machinery.
+  reference: DOI:10.1073/pnas.2135385100
+functions:
+- function_id: protein_import_into_mitochondrial_matrix
+  label: protein import into mitochondrial matrix
+  grounding: GO:0030150
+  description: Outer-membrane TOM translocases provide the entry step for cytosolic
+    precursor proteins that continue into the mitochondrial matrix.
+  evidence:
+  - reference: GO:0005742
+    notes: GO:0005742 defines the TOM complex as a mitochondrial outer membrane complex
+      that mediates protein transport into mitochondrial compartments.
+  - reference: DOI:10.1016/j.cell.2009.08.005
+    notes: Chacinska et al. 2009 review TOM as the outer-membrane entry gate for mitochondrial
+      precursor proteins.
+evidence:
+- reference: GO:0005741
+  notes: Gene Ontology cellular-component term for mitochondrial outer membrane.
+- reference: GO:0031968
+  notes: Gene Ontology cellular-component parent term for organelle outer membrane.
+- reference: GO:0031966
+  notes: Gene Ontology cellular-component parent term for mitochondrial membrane.
+- reference: GO:0005740
+  notes: Gene Ontology cellular-component term for the mitochondrial envelope.
+- reference: GO:0005742
+  notes: Gene Ontology cellular-component term for the mitochondrial outer membrane
+    translocase complex.
+- reference: GO:0005737
+  notes: Gene Ontology cellular-component term for cytoplasm.
+- reference: GO:0005758
+  notes: Gene Ontology cellular-component term for mitochondrial intermembrane space.
+- reference: GO:0030150
+  notes: Gene Ontology biological-process term for protein import into the mitochondrial
+    matrix.
+- reference: DOI:10.1016/j.cell.2009.08.005
+  notes: 'Chacinska et al. 2009, ''Importing mitochondrial proteins: machineries and
+    mechanisms'', Cell.'
+- reference: DOI:10.1073/pnas.2135385100
+  notes: Sickmann et al. 2003, 'The proteome of Saccharomyces cerevisiae mitochondria',
+    Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1038/nature12985
+  notes: Friedman and Nunnari 2014, 'Mitochondrial form and function', Nature.
+causal_graphs:
+- graph_id: mitochondrial_outer_membrane_topology
+  title: Mitochondrial outer membrane topology
+  description: The mitochondrial outer membrane is the cytoplasm-facing mitochondrial
+    envelope bilayer and hosts the TOM complex that gates protein import.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures outer-envelope topology and TOM localization without
+    asserting individual TOM subunits, beta-barrel assembly, or downstream TIM/PAM
+    protein-import steps.
+  nodes:
+  - node_id: mitochondrial_outer_membrane
+    label: mitochondrial outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0005741
+  - node_id: mitochondrial_envelope
+    label: mitochondrial envelope
+    node_type: STRUCTURE
+    grounding: GO:0005740
+  - node_id: cytoplasm
+    label: cytoplasm
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005737
+  - node_id: mitochondrial_intermembrane_space
+    label: mitochondrial intermembrane space
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005758
+  - node_id: tom_complex
+    label: mitochondrial outer membrane translocase complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0005742
+  - node_id: protein_import_into_mitochondrial_matrix
+    label: protein import into mitochondrial matrix
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030150
+  edges:
+  - subject: mitochondrial_outer_membrane
+    predicate: is part of
+    object: mitochondrial_envelope
+    description: The mitochondrial outer membrane is the cytoplasm-facing lipid bilayer
+      of the mitochondrial envelope.
+    evidence:
+    - reference: GO:0005741
+      notes: GO:0005741 defines the outer membrane as the outer lipid bilayer of the
+        mitochondrial envelope.
+  - subject: mitochondrial_outer_membrane
+    predicate: faces
+    object: cytoplasm
+    description: The mitochondrial outer membrane is the cytoplasm-facing membrane
+      of the mitochondrial envelope.
+    evidence:
+    - reference: GO:0005741
+      notes: GO:0005741 identifies this envelope bilayer by its cytoplasm-facing orientation.
+  - subject: mitochondrial_outer_membrane
+    predicate: bounds
+    object: mitochondrial_intermembrane_space
+    description: The mitochondrial outer membrane forms the cytoplasm-facing boundary
+      of the intermembrane space.
+    evidence:
+    - reference: GO:0005758
+      notes: GO:0005758 defines the intermembrane space as the region between the
+        inner and outer lipid bilayers of the mitochondrial envelope.
+  - subject: tom_complex
+    predicate: spans
+    object: mitochondrial_outer_membrane
+    description: The TOM complex is a large protein translocase of the mitochondrial
+      outer membrane.
+    evidence:
+    - reference: GO:0005742
+      notes: GO:0005742 places the TOM complex in the mitochondrial outer membrane.
+  - subject: tom_complex
+    predicate: provides entry for
+    object: protein_import_into_mitochondrial_matrix
+    description: TOM provides the outer-membrane entry step for TIM23-PAM matrix import.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2009.08.005
+      notes: Chacinska et al. 2009 review TOM entry and downstream TIM23-PAM presequence
+        import into the mitochondrial matrix.
+discussions:
+- discussion_id: ground_mitochondrial_outer_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    mitochondrial outer membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mitochondrial_outer_lipid_bilayer
+  rationale: GO:0005741 identifies the whole mitochondrial outer membrane, but the
+    lipid-bilayer constituent is intentionally left as reviewed-label-only until an
+    exact source-neutral lipid or membrane-constituent CURIE is curated.
+  evidence:
+  - reference: GO:0005741
+    notes: GO:0005741 identifies the whole mitochondrial outer membrane.
+  posed_by: codex
+  posed_date: '2026-09-13'
