@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cytoplasmic_vesicle.yaml
+  slug: cytoplasmic_vesicle
+session:
+  id: 2026-09-14T204449Z-codex-e4b3ce
+  timestamp: '2026-09-14T20:44:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add cytoplasmic vesicle record
+  details: Created the GO:0031410 cytoplasmic vesicle record with vesicle parentage, cytoplasmic
+    vesicle membrane and lumen parts, the UniProt SL-0088 cross-reference, a GO-grounded membrane
+    component, Saccharomyces cerevisiae evidence, a vesicular-transport function, and a resolved
+    generic coat and cargo boundary discussion; regenerated embeddings, pages, and documentation
+    will be committed with the source record.
