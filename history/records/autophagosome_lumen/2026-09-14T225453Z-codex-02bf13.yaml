@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/autophagosome_lumen.yaml
+  slug: autophagosome_lumen
+session:
+  id: 2026-09-14T225453Z-codex-02bf13
+  timestamp: '2026-09-14T22:54:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add autophagosome lumen record
+  details: Created the GO:0034423 autophagosome lumen record with UniProt SL-0318 synonyms,
+    cytoplasmic-vesicle-lumen parentage, autophagosome parthood, the UniProt cross-reference,
+    Saccharomyces cerevisiae evidence, and a nonmechanistic autophagosome-lumen topology graph;
+    regenerated embeddings, pages, and documentation will be committed with the source record.
