@@ -1,0 +1,132 @@
+identifier: GO:0032580
+label: Golgi cisterna membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding any of the thin, flattened compartments
+  that form the central portion of the Golgi complex.
+definition_source: GO:0032580
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T03:56:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T03:57:06Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Golgi-membrane parentage, Golgi-cisterna parthood, a reviewed-label-only
+    cisternal lipid bilayer component, Saccharomyces scope, GO/DOI evidence, a nonmechanistic
+    cisternal membrane topology graph, and a lipid-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0000139
+part_of:
+- GO:0031985
+components:
+- component_id: golgi_cisterna_membrane_lipid_bilayer
+  label: Golgi cisterna membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent of the Golgi cisterna membrane.
+  evidence:
+  - reference: GO:0032580
+    notes: GO:0032580 defines the Golgi cisterna membrane as the lipid bilayer around
+      any Golgi cisterna.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0032580 identifies the whole Golgi cisterna membrane, but no
+    separate source-neutral CURIE was curated for the generic lipid constituent of
+    that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Live-cell imaging in budding yeast directly resolved maturing Golgi cisternae.
+  reference: DOI:10.1038/nature04717
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Golgi cisternal maturation was visualized with
+    fluorescent cisternal markers.
+  reference: DOI:10.1038/nature04737
+evidence:
+- reference: GO:0032580
+  notes: Gene Ontology cellular-component term for Golgi cisterna membrane.
+- reference: GO:0000139
+  notes: Gene Ontology cellular-component parent term for Golgi membrane.
+- reference: GO:0031985
+  notes: Gene Ontology cellular-component term for Golgi cisterna.
+- reference: GO:0005794
+  notes: Gene Ontology cellular-component term for Golgi apparatus.
+- reference: DOI:10.1038/nature04717
+  notes: Losev et al. 2006, 'Golgi maturation visualized in living yeast', Nature.
+- reference: DOI:10.1038/nature04737
+  notes: Matsuura-Tokita et al. 2006, 'Live imaging of yeast Golgi cisternal maturation',
+    Nature.
+causal_graphs:
+- graph_id: golgi_cisterna_membrane_topology
+  title: Golgi cisterna membranes bound maturing cisternae
+  description: The Golgi cisterna membrane bounds Golgi cisternae that mature from
+    early to late compartments in budding yeast.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the cisternal membrane boundary and cisternal maturation
+    without asserting the complete set of cisternal identity determinants, vesicle-tethering
+    proteins, or glycosylation enzymes.
+  nodes:
+  - node_id: golgi_cisterna_membrane
+    label: Golgi cisterna membrane
+    node_type: STRUCTURE
+    grounding: GO:0032580
+    component_ref: golgi_cisterna_membrane_lipid_bilayer
+  - node_id: golgi_cisterna
+    label: Golgi cisterna
+    node_type: STRUCTURE
+    grounding: GO:0031985
+  - node_id: golgi_apparatus
+    label: Golgi apparatus
+    node_type: STRUCTURE
+    grounding: GO:0005794
+  - node_id: early_to_late_cisternal_maturation
+    label: early-to-late cisternal maturation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: golgi_cisterna_membrane
+    predicate: bounds
+    object: golgi_cisterna
+    description: The Golgi cisterna membrane is the lipid-bilayer boundary around
+      the Golgi cisternal compartment.
+    evidence:
+    - reference: GO:0032580
+      notes: GO:0032580 defines the Golgi cisterna membrane as the lipid bilayer around
+        a Golgi cisterna.
+  - subject: golgi_cisterna
+    predicate: is part of
+    object: golgi_apparatus
+    description: Golgi cisternae are Golgi apparatus compartments whose identities
+      mature over time.
+    evidence:
+    - reference: DOI:10.1038/nature04717
+      notes: Losev et al. 2006 tracked individual Golgi cisternae in living yeast.
+  - subject: golgi_cisterna
+    predicate: undergoes
+    object: early_to_late_cisternal_maturation
+    description: In yeast, Golgi cisternae transition from early to late marker composition.
+    evidence:
+    - reference: DOI:10.1038/nature04737
+      notes: Matsuura-Tokita et al. 2006 visualized yeast Golgi cisternal maturation
+        in living cells.
+discussions:
+- discussion_id: ground_golgi_cisterna_membrane_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    Golgi cisterna membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#golgi_cisterna_membrane_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0032580, but the cisternal membrane
+    lipid bilayer constituent is intentionally left as reviewed-label-only until an
+    exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-14'
