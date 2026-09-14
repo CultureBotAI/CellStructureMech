@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endoplasmic_reticulum_membrane.yaml
+  slug: endoplasmic_reticulum_membrane
+session:
+  id: 2026-09-14T030525Z-codex-e0ea01
+  timestamp: '2026-09-14T03:05:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0005789 endoplasmic reticulum membrane
+  details: Created an evidence-backed GO:0005789 endoplasmic reticulum membrane record covering
+    the generic ER lipid bilayer, parented it to membrane and endoplasmic-reticulum parthood,
+    added the GO exact ER membrane synonym, a reviewed-label-only ER lipid bilayer component,
+    Saccharomyces distribution, GO and DOI evidence, a nonmechanistic membrane topology graph,
+    and a lipid-grounding follow-up.
