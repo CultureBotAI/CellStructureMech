@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/copi_coated_vesicle_membrane.yaml
+  slug: copi_coated_vesicle_membrane
+session:
+  id: 2026-09-14T182140Z-codex-f438f5
+  timestamp: '2026-09-14T18:21:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - part_of
+  - synonyms
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added COPI-coated vesicle membrane record
+  details: Created the GO:0030663 COPI-coated vesicle membrane record with GO vesicle-membrane
+    parentage, COPI-coated-vesicle parthood, the exact GO synonym, a reviewed-label-only lipid-bilayer
+    component, Saccharomyces cerevisiae scope, GO and DOI evidence, a nonmechanistic vesicle-membrane
+    topology graph, and resolved COPI-coat boundary interpretation.
