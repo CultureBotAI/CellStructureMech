@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/trans_golgi_network.yaml
+  slug: trans_golgi_network
+session:
+  id: 2026-09-14T041204Z-codex-823e0d
+  timestamp: '2026-09-14T04:12:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add trans-Golgi network record
+  details: Created the GO:0005802 trans-Golgi network record with Golgi-apparatus parthood,
+    a GO:0032588 membrane part, a reviewed-label-only lipid-bilayer component, Saccharomyces
+    cerevisiae TGN/endosomal evidence, a nonmechanistic TGN-endosome causal graph, and explicit
+    discussions for lipid grounding and trafficking-factor component boundaries.

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/trans_golgi_network.yaml
+  slug: trans_golgi_network
+session:
+  id: 2026-09-14T042609Z-codex-1f342a
+  timestamp: '2026-09-14T04:26:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: Fix trans-Golgi network discussion anchor
+  details: Retargeted the resolved TGN trafficking-factor boundary discussion from a bare
+    components section pointer to causal_graphs#yeast_tgn_endosomal_traffic so discussion
+    anchors resolve under the corpus integrity contract.
