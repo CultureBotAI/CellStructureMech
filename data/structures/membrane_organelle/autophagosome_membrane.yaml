@@ -1,0 +1,183 @@
+identifier: GO:0000421
+label: autophagosome membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The membrane surrounding the autophagosome.
+definition_source: GO:0000421
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T23:11:20Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T23:12:02Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added UniProt synonyms, cytoplasmic-vesicle membrane parentage, autophagosome
+    parthood, the UniProt SL-0022 xref, a reviewed-label-only lipid-bilayer component,
+    budding-yeast scope, GO/UniProt/DOI evidence, a macroautophagy function, and a
+    nonmechanistic autophagosome-membrane topology graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: Autophagic vacuolar membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0022
+- synonym_text: Autophagic vacuole membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0022
+- synonym_text: Autophagosomal membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0022
+parent_structures:
+- GO:0030659
+part_of:
+- GO:0005776
+xrefs:
+- uniprot.location:SL-0022
+components:
+- component_id: autophagosome_lipid_bilayer
+  label: autophagosome lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer material that forms the autophagosome membrane boundary enclosing
+    cytoplasmic cargo during macroautophagy.
+  evidence:
+  - reference: GO:0000421
+    notes: GO:0000421 identifies the autophagosome membrane surrounding an autophagosome.
+  - reference: uniprot.location:SL-0022
+    notes: UniProt SL-0022 maps directly to GO:0000421 and describes the membrane
+      surrounding an autophagosome.
+  - reference: DOI:10.1038/ncb1007-1102
+    notes: Xie and Klionsky 2007 review autophagosome biogenesis and the membrane-expansion
+      machinery that forms the compartment.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000421 and UniProt SL-0022 identify the whole autophagosome
+    membrane; no separate source-neutral CURIE was curated for the generic lipid constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms autophagosomes during starvation-induced macroautophagy.
+  reference: DOI:10.1083/jcb.119.2.301
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Genetic and fluorescence-microscopy model for the pre-autophagosomal structure
+    and autophagosome formation.
+  reference: DOI:10.1093/emboj/20.21.5971
+functions:
+- function_id: macroautophagy
+  label: macroautophagy
+  grounding: GO:0016236
+  description: The autophagosome membrane expands and closes around cytoplasmic cargo
+    to produce the double-membrane carrier used in macroautophagy.
+  evidence:
+  - reference: GO:0016236
+    notes: GO:0016236 defines macroautophagy as the autophagic process that proceeds
+      via autophagosome formation.
+  - reference: DOI:10.1038/ncb1007-1102
+    notes: Xie and Klionsky 2007 review the core autophagosome membrane-formation
+      machinery.
+evidence:
+- reference: GO:0000421
+  notes: Gene Ontology cellular-component term for the autophagosome membrane.
+- reference: GO:0030659
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle membrane.
+- reference: GO:0005776
+  notes: Gene Ontology cellular-component term for the enclosing autophagosome.
+- reference: GO:0034423
+  notes: Gene Ontology cellular-component term for the lumen bounded by the autophagosome
+    membrane.
+- reference: GO:0016236
+  notes: Gene Ontology biological-process term for macroautophagy.
+- reference: uniprot.location:SL-0022
+  notes: UniProt Subcellular Location entry SL-0022 maps to GO:0000421, places autophagosome
+    membrane under cytoplasmic vesicle membrane, and names autophagosome as the parent
+    compartment.
+- reference: DOI:10.1083/jcb.119.2.301
+  notes: Takeshige et al. 1992, Autophagy in yeast demonstrated with proteinase-deficient
+    mutants and conditions for its induction, Journal of Cell Biology.
+- reference: DOI:10.1093/emboj/20.21.5971
+  notes: Suzuki et al. 2001, The pre-autophagosomal structure organized by concerted
+    functions of APG genes is essential for autophagosome formation, The EMBO Journal.
+- reference: DOI:10.1038/ncb1007-1102
+  notes: 'Xie and Klionsky 2007, Autophagosome formation: core machinery and adaptations,
+    Nature Cell Biology.'
+causal_graphs:
+- graph_id: autophagosome_membrane_topology
+  title: Autophagosome membrane topology
+  description: The autophagosome membrane is part of the autophagosome and bounds
+    the autophagosome lumen during macroautophagy.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the mature autophagosome membrane boundary without
+    asserting Atg-mediated initiation, membrane expansion, closure, or vacuole-fusion
+    mechanisms.
+  nodes:
+  - node_id: autophagosome_membrane
+    label: autophagosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0000421
+  - node_id: autophagosome_lumen
+    label: autophagosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034423
+  - node_id: autophagosome
+    label: autophagosome
+    node_type: ORGANELLE
+    grounding: GO:0005776
+  - node_id: macroautophagy
+    label: macroautophagy
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0016236
+  edges:
+  - subject: autophagosome_membrane
+    predicate: bounds
+    object: autophagosome_lumen
+    description: The autophagosome membrane bounds the lumen of the autophagosome.
+    evidence:
+    - reference: GO:0000421
+      notes: GO:0000421 identifies the autophagosome membrane.
+    - reference: GO:0034423
+      notes: GO:0034423 defines the autophagosome lumen as the volume enclosed within
+        the autophagosome double-membrane.
+  - subject: autophagosome_membrane
+    predicate: is part of
+    object: autophagosome
+    description: The autophagosome membrane is part of the double-membrane autophagosome.
+    evidence:
+    - reference: GO:0000421
+      notes: GO:0000421 identifies the autophagosome membrane.
+    - reference: uniprot.location:SL-0022
+      notes: UniProt SL-0022 names autophagosome as the parent compartment.
+  - subject: autophagosome_membrane
+    predicate: supports
+    object: macroautophagy
+    description: The autophagosome membrane provides the boundary that sequesters
+      cytoplasmic cargo for macroautophagy.
+    evidence:
+    - reference: GO:0016236
+      notes: GO:0016236 defines macroautophagy as proceeding via autophagosome formation.
+    - reference: DOI:10.1038/ncb1007-1102
+      notes: Xie and Klionsky 2007 review autophagosome membrane formation.
+discussions:
+- discussion_id: ground_autophagosome_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    autophagosome membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#autophagosome_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0000421 and UniProt SL-0022, but
+    no exact source-neutral CURIE was curated for the generic lipid constituent of
+    the autophagosome membrane.
+  evidence:
+  - reference: GO:0000421
+    notes: GO:0000421 identifies the autophagosome membrane.
+  - reference: uniprot.location:SL-0022
+    notes: UniProt SL-0022 describes the membrane surrounding an autophagosome.
+  posed_by: codex
+  posed_date: '2026-09-14'

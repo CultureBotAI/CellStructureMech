@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/autophagosome_membrane.yaml
+  slug: autophagosome_membrane
+session:
+  id: 2026-09-14T231222Z-claude-code-ac06e5
+  timestamp: '2026-09-14T23:12:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the autophagosome membrane record
+  details: Added GO:0000421 as an autophagosome membrane structure record with cytoplasmic-vesicle
+    membrane parentage, autophagosome parthood, UniProt SL-0022 synonyms and xref, a reviewed-label-only
+    lipid-bilayer component, budding-yeast scope, GO/UniProt/DOI evidence, a macroautophagy
+    function, and a nonmechanistic topology graph.
