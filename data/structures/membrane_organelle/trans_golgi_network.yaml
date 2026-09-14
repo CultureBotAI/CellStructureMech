@@ -1,0 +1,217 @@
+identifier: GO:0005802
+label: trans-Golgi network
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: The network of interconnected tubular and cisternal structures located
+  within the Golgi apparatus on the side distal to the endoplasmic reticulum, from
+  which secretory vesicles emerge. The trans-Golgi network is important in the later
+  stages of protein secretion where it is thought to play a key role in the sorting
+  and targeting of secreted proteins to the correct destination.
+definition_source: GO:0005802
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T04:10:40Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T04:11:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Golgi-subcompartment parentage, Golgi-apparatus parthood, the trans-Golgi
+    network membrane as a part, a reviewed-label-only lipid bilayer component, Saccharomyces
+    scope, TGN/endosomal protein-sorting function, GO/DOI evidence, a nonmechanistic
+    TGN-endosome graph, and lipid-grounding plus trafficking-factor boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-14T04:25:51Z'
+  curator: codex
+  action: FIX_DISCUSSION_ANCHOR
+  changes: Retargeted the TGN trafficking-factor boundary discussion from a bare components
+    section anchor to the yeast_tgn_endosomal_traffic graph anchor required by corpus
+    integrity checks.
+  llm_assisted: true
+- timestamp: '2026-09-14T04:32:56Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #878 by narrowing the Saccharomyces taxonomic-scope and canonical-example
+    notes so each stays within the single Holthuis or Copic reference attached to
+    the row.'
+  llm_assisted: true
+parent_structures:
+- GO:0098791
+part_of:
+- GO:0005794
+has_part:
+- GO:0032588
+synonyms:
+- synonym_text: TGN
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005802
+- synonym_text: trans Golgi network
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005802
+components:
+- component_id: trans_golgi_network_lipid_bilayer
+  label: trans-Golgi network lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent of the trans-Golgi network membrane.
+  evidence:
+  - reference: GO:0032588
+    notes: GO:0032588 defines the trans-Golgi network membrane as the lipid bilayer
+      around compartments that make up the trans-Golgi network.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0032588 identifies the whole trans-Golgi network membrane, but
+    no separate source-neutral CURIE was curated for the generic lipid constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Holthuis et al. characterized Tlg1p and Tlg2p as Saccharomyces syntaxins in
+    the TGN/endosomal system.
+  reference: DOI:10.1093/emboj/17.1.113
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Ent3p and Ent5p adaptor functions in protein
+    trafficking between the trans-Golgi network and endosomes were dissected.
+  reference: DOI:10.1091/MBC.E06-11-1000
+functions:
+- function_id: tgn_endosomal_protein_sorting
+  label: trans-Golgi network/endosome protein sorting
+  description: The yeast trans-Golgi network sorts cargo between late Golgi and endosomal
+    compartments on routes toward the vacuole.
+  evidence:
+  - reference: GO:0005802
+    notes: GO:0005802 defines the trans-Golgi network as the late-Golgi sorting and
+      targeting compartment for secreted proteins.
+  - reference: DOI:10.1091/MBC.E06-11-1000
+    notes: Copic et al. 2007 studied cargo-specific protein trafficking between the
+      trans-Golgi network and endosomes in Saccharomyces cerevisiae.
+evidence:
+- reference: GO:0005802
+  notes: Gene Ontology cellular-component term for trans-Golgi network.
+- reference: GO:0098791
+  notes: Gene Ontology cellular-component parent term for Golgi apparatus subcompartment.
+- reference: GO:0005794
+  notes: Gene Ontology cellular-component term for Golgi apparatus.
+- reference: GO:0032588
+  notes: Gene Ontology cellular-component term for trans-Golgi network membrane.
+- reference: GO:0005768
+  notes: Gene Ontology cellular-component term for endosome.
+- reference: DOI:10.1093/emboj/17.1.113
+  notes: Holthuis et al. 1998, 'Two syntaxin homologues in the TGN/endosomal system
+    of yeast', EMBO Journal.
+- reference: DOI:10.1091/MBC.E06-11-1000
+  notes: Copic et al. 2007, 'Ent3p and Ent5p exhibit cargo-specific functions in trafficking
+    proteins between the trans-Golgi network and the endosomes in yeast', Molecular
+    Biology of the Cell.
+causal_graphs:
+- graph_id: yeast_tgn_endosomal_traffic
+  title: Yeast trans-Golgi network exchanges cargo with endosomes
+  description: In Saccharomyces cerevisiae, the trans-Golgi network/endosomal system
+    supports cargo transport between late Golgi and endosomal compartments.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures trans-Golgi network topology and TGN-endosomal traffic
+    without asserting the full SNARE, adaptor-protein, or cargo cohort as structural
+    components.
+  nodes:
+  - node_id: trans_golgi_network
+    label: trans-Golgi network
+    node_type: STRUCTURE
+    grounding: GO:0005802
+    component_ref: trans_golgi_network_lipid_bilayer
+  - node_id: trans_golgi_network_membrane
+    label: trans-Golgi network membrane
+    node_type: STRUCTURE
+    grounding: GO:0032588
+  - node_id: golgi_apparatus
+    label: Golgi apparatus
+    node_type: STRUCTURE
+    grounding: GO:0005794
+  - node_id: endosome
+    label: endosome
+    node_type: STRUCTURE
+    grounding: GO:0005768
+  - node_id: tgn_endosomal_protein_sorting
+    label: TGN/endosomal protein sorting
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: trans_golgi_network_membrane
+    predicate: bounds
+    object: trans_golgi_network
+    description: The trans-Golgi network membrane is the lipid-bilayer boundary around
+      compartments that make up the trans-Golgi network.
+    evidence:
+    - reference: GO:0032588
+      notes: GO:0032588 defines the membrane surrounding trans-Golgi network compartments.
+  - subject: trans_golgi_network
+    predicate: is part of
+    object: golgi_apparatus
+    description: The trans-Golgi network is a distal Golgi apparatus subcompartment.
+    evidence:
+    - reference: GO:0005802
+      notes: GO:0005802 defines the trans-Golgi network as a distal Golgi sorting
+        compartment.
+    - reference: GO:0098791
+      notes: GO:0098791 defines a Golgi apparatus subcompartment as a membrane-bounded
+        compartment that is part of the Golgi apparatus.
+  - subject: trans_golgi_network
+    predicate: supports
+    object: tgn_endosomal_protein_sorting
+    description: In yeast, the TGN/endosomal system moves cargo between late Golgi
+      and endosomal compartments.
+    evidence:
+    - reference: DOI:10.1093/emboj/17.1.113
+      notes: Holthuis et al. 1998 characterized the yeast TGN/endosomal system through
+        the syntaxins Tlg1p and Tlg2p.
+    - reference: DOI:10.1091/MBC.E06-11-1000
+      notes: Copic et al. 2007 studied Ent3p/Ent5p roles in trafficking proteins between
+        the yeast TGN and endosomes.
+  - subject: tgn_endosomal_protein_sorting
+    predicate: connects
+    object: endosome
+    description: TGN/endosomal protein sorting links the trans-Golgi network to endosomal
+      compartments.
+    evidence:
+    - reference: DOI:10.1091/MBC.E06-11-1000
+      notes: Copic et al. 2007 framed Ent3p/Ent5p-dependent cargo sorting as protein
+        trafficking between the trans-Golgi network and endosomes in yeast.
+discussions:
+- discussion_id: ground_trans_golgi_network_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    trans-Golgi network membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#trans_golgi_network_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0005802 and GO:0032588 identifies
+    the surrounding trans-Golgi network membrane, but the membrane lipid-bilayer constituent
+    is intentionally left as reviewed-label-only until an exact source-neutral lipid
+    or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-14'
+- discussion_id: exclude_tgn_trafficking_factors_as_components
+  prompt: Keep Tlg SNAREs and Ent adaptor proteins out of the trans-Golgi network
+    structural-component list until exact source-neutral families are curated and
+    a constituent-versus-trafficking-machinery boundary is reviewed.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#yeast_tgn_endosomal_traffic
+  rationale: Holthuis et al. 1998 and Copic et al. 2007 support TGN/endosomal traffic
+    through Tlg1p, Tlg2p, Ent3p and Ent5p, but this initial whole-compartment record
+    does not treat those trafficking factors as lipid-bilayer constituents of the
+    TGN itself.
+  evidence:
+  - reference: DOI:10.1093/emboj/17.1.113
+    notes: Holthuis et al. 1998 characterized yeast TGN/endosomal syntaxins.
+  - reference: DOI:10.1091/MBC.E06-11-1000
+    notes: Copic et al. 2007 characterized Ent3p/Ent5p functions in yeast TGN-endosome
+      trafficking.
+  posed_by: codex
+  posed_date: '2026-09-14'
+  resolved_date: '2026-09-14'
