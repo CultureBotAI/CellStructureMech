@@ -22,6 +22,13 @@ curation_history:
     example, GO/DOI evidence, a nonmechanistic child-scope graph, a generic-scope
     interpretation, and a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-14T02:14:18Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #866 by adding cyanelle and apicoplast GO child-term evidence
+    to the plastid-membrane scope discussion; resolved #867 by making the plastid
+    thylakoid edge evidence cite the GO:0042170 child placement.'
+  llm_assisted: true
 parent_structures:
 - GO:0016020
 part_of:
@@ -81,6 +88,10 @@ evidence:
   notes: Gene Ontology cellular-component child term for plastid inner membrane.
 - reference: GO:0055035
   notes: Gene Ontology cellular-component child term for plastid thylakoid membrane.
+- reference: GO:0033113
+  notes: Gene Ontology cellular-component child term for cyanelle membrane.
+- reference: GO:0160211
+  notes: Gene Ontology cellular-component child term for apicoplast membrane.
 - reference: DOI:10.1098/rstb.2009.0103
   notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
     Philosophical Transactions of the Royal Society B.
@@ -143,7 +154,7 @@ causal_graphs:
     evidence:
     - reference: GO:0055035
       notes: GO:0055035 identifies the plastid thylakoid membrane as the lipid bilayer
-        of any thylakoid within a plastid.
+        of any thylakoid within a plastid and places it under GO:0042170.
 discussions:
 - discussion_id: generic_plastid_membrane_scope
   prompt: Keep the GO:0042170 generic membrane parent distinct from exact plastid
@@ -169,6 +180,10 @@ discussions:
     notes: GO:0009528 identifies the plastid inner membrane child.
   - reference: GO:0055035
     notes: GO:0055035 identifies the plastid thylakoid membrane child.
+  - reference: GO:0033113
+    notes: GO:0033113 identifies cyanelle membrane as a GO:0042170 child.
+  - reference: GO:0160211
+    notes: GO:0160211 identifies apicoplast membrane as a GO:0042170 child.
   posed_by: codex
   posed_date: '2026-09-14'
 - discussion_id: ground_plastid_lipid_bilayer
