@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/clathrin_coated_vesicle.yaml
+  slug: clathrin_coated_vesicle
+session:
+  id: 2026-09-14T192849Z-codex-bdd4df
+  timestamp: '2026-09-14T19:28:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/889
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - history
+  summary: Linked clathrin-coated vesicle curation to PR 889
+  details: Linked the GO:0030136 clathrin-coated vesicle curation session to pull request
+    889 after opening the evidence-backed record for adversarial review.

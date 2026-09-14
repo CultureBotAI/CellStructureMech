@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/clathrin_coated_vesicle.yaml
+  slug: clathrin_coated_vesicle
+session:
+  id: 2026-09-14T191828Z-codex-22c7df
+  timestamp: '2026-09-14T19:18:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - has_part
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added clathrin-coated vesicle record
+  details: Created the GO:0030136 clathrin-coated vesicle record with GO coated-vesicle parentage,
+    clathrin coat and clathrin-coated vesicle membrane parts, Saccharomyces cerevisiae scope,
+    clathrin-dependent endocytosis, GO and DOI evidence, a nonmechanistic clathrin-coated
+    vesicle topology graph, and resolved clathrin coat-component boundary interpretation.

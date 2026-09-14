@@ -1,0 +1,169 @@
+identifier: GO:0030136
+label: clathrin-coated vesicle
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A vesicle with a coat formed of clathrin connected to the membrane via
+  one of the clathrin adaptor complexes.
+definition_source: GO:0030136
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T19:17:21Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T19:18:02Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added coated-vesicle parentage, clathrin coat and clathrin-coated vesicle
+    membrane parts, Saccharomyces scope, a clathrin-dependent endocytosis function,
+    GO/DOI evidence, a nonmechanistic clathrin-coated vesicle topology graph, and
+    a resolved coat-component boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-09-14T19:30:49Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed issue #890 by adding the UniProt SL-0070 xref, the CCV exact
+    synonym, and supporting UniProt Subcellular Location evidence.'
+  llm_assisted: true
+parent_structures:
+- GO:0030135
+has_part:
+- GO:0030125
+- GO:0030665
+synonyms:
+- synonym_text: CCV
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0070
+xrefs:
+- uniprot.location:SL-0070
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has clathrin heavy and light chains that assemble at cortical
+    clathrin-dependent endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which clathrin and adaptor protein dynamics defined
+    the timing of coat assembly at actin-based endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+functions:
+- function_id: clathrin_dependent_endocytosis
+  label: clathrin-dependent endocytosis
+  grounding: GO:0072583
+  description: Clathrin-coated vesicles are coated carriers formed during clathrin-dependent
+    endocytic uptake.
+  evidence:
+  - reference: GO:0072583
+    notes: GO:0072583 denotes endocytosis through clathrin-coated pits and clathrin-coated
+      endocytic vesicles.
+  - reference: DOI:10.1016/j.cell.2005.09.024
+    notes: Kaksonen, Toret and Drubin 2005 analyzed the modular clathrin- and actin-mediated
+      endocytic machinery in yeast.
+evidence:
+- reference: GO:0030136
+  notes: Gene Ontology cellular-component term for clathrin-coated vesicles.
+- reference: GO:0030135
+  notes: Gene Ontology cellular-component parent term for coated vesicles.
+- reference: GO:0030125
+  notes: Gene Ontology cellular-component term for the clathrin vesicle coat that
+    is part of clathrin-coated vesicles.
+- reference: GO:0030665
+  notes: Gene Ontology cellular-component term for the clathrin-coated vesicle membrane.
+- reference: uniprot.location:SL-0070
+  notes: UniProt Subcellular Location entry SL-0070 maps to GO:0030136 and lists CCV
+    as a synonym of clathrin-coated vesicle.
+- reference: GO:0072583
+  notes: Gene Ontology biological-process term for clathrin-dependent endocytosis.
+- reference: DOI:10.1016/j.devcel.2005.04.014
+  notes: Newpher et al. 2005, In Vivo Dynamics of Clathrin and Its Adaptor-Dependent
+    Recruitment to the Actin-Based Endocytic Machinery in Yeast, Developmental Cell.
+- reference: DOI:10.1016/j.cell.2005.09.024
+  notes: Kaksonen, Toret and Drubin 2005, A Modular Design for the Clathrin- and Actin-Mediated
+    Endocytosis Machinery, Cell.
+causal_graphs:
+- graph_id: clathrin_coated_vesicle_topology
+  title: Clathrin-coated vesicle topology
+  description: The clathrin vesicle coat and clathrin-coated vesicle membrane are
+    parts of clathrin-coated vesicles formed during clathrin-dependent endocytosis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the whole vesicle, its clathrin coat and membrane,
+    and clathrin-dependent endocytic uptake without asserting an actin-driven scission
+    mechanism or individual adaptor-module dependencies.
+  nodes:
+  - node_id: clathrin_vesicle_coat
+    label: clathrin vesicle coat
+    node_type: STRUCTURE
+    grounding: GO:0030125
+  - node_id: clathrin_coated_vesicle_membrane
+    label: clathrin-coated vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030665
+  - node_id: clathrin_coated_vesicle
+    label: clathrin-coated vesicle
+    node_type: ORGANELLE
+    grounding: GO:0030136
+  - node_id: clathrin_dependent_endocytosis
+    label: clathrin-dependent endocytosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0072583
+  edges:
+  - subject: clathrin_vesicle_coat
+    predicate: is part of
+    object: clathrin_coated_vesicle
+    description: The clathrin vesicle coat is the clathrin-based protein coat on a
+      clathrin-coated vesicle.
+    evidence:
+    - reference: GO:0030136
+      notes: GO:0030136 defines clathrin-coated vesicles by a coat formed of clathrin.
+  - subject: clathrin_coated_vesicle_membrane
+    predicate: is part of
+    object: clathrin_coated_vesicle
+    description: The clathrin-coated vesicle membrane surrounds a clathrin-coated
+      vesicle.
+    evidence:
+    - reference: GO:0030665
+      notes: GO:0030665 identifies the clathrin-coated vesicle membrane.
+  - subject: clathrin_coated_vesicle
+    predicate: participates in
+    object: clathrin_dependent_endocytosis
+    description: Clathrin-coated vesicles form during clathrin-dependent endocytic
+      uptake.
+    evidence:
+    - reference: GO:0072583
+      notes: GO:0072583 describes clathrin-dependent endocytosis as a form of endocytic
+        uptake through clathrin-coated pits and vesicles.
+    - reference: DOI:10.1016/j.cell.2005.09.024
+      notes: Kaksonen, Toret and Drubin 2005 analyzed the modular yeast clathrin-
+        and actin-mediated endocytic machinery.
+discussions:
+- discussion_id: keep_clathrin_subunits_on_clathrin_coat
+  prompt: Keep clathrin heavy and light chains and clathrin adaptors on the clathrin
+    vesicle coat record rather than duplicating them as direct clathrin-coated vesicle
+    components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#clathrin_coated_vesicle_topology
+  rationale: The whole-vesicle record uses GO:0030125 for its clathrin coat part,
+    and the coat record already models clathrin heavy and light chains as clathrin
+    coat constituents while leaving adaptor-module boundaries open.
+  resolution_note: Added the clathrin coat and clathrin-coated vesicle membrane as
+    vesicle parts and left lower-level clathrin chains plus adaptor complexes to the
+    GO:0030125 clathrin vesicle coat record.
+  evidence:
+  - reference: GO:0030136
+    notes: GO:0030136 defines the whole coated vesicle in terms of a clathrin coat.
+  - reference: GO:0030125
+    notes: GO:0030125 identifies the clathrin vesicle coat.
+  - reference: DOI:10.1016/j.devcel.2005.04.014
+    notes: Newpher et al. 2005 tracked clathrin and adaptor recruitment at yeast endocytic
+      sites.
+  posed_by: codex
+  posed_date: '2026-09-14'
+  resolved_date: '2026-09-14'

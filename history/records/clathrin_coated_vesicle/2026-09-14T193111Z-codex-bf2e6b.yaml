@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/clathrin_coated_vesicle.yaml
+  slug: clathrin_coated_vesicle
+session:
+  id: 2026-09-14T193111Z-codex-bf2e6b
+  timestamp: '2026-09-14T19:31:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/890
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/889
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - synonyms
+  - xrefs
+  - evidence
+  - curation_history
+  summary: Added CCV synonym after PR review
+  details: Addressed issue 890 from pull request 889 by adding the UniProt SL-0070 xref, the
+    CCV exact synonym, supporting UniProt Subcellular Location evidence, and a review-fix
+    curation event to the GO:0030136 clathrin-coated vesicle record.
