@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endoplasmic_reticulum_membrane.yaml
+  slug: endoplasmic_reticulum_membrane
+session:
+  id: 2026-09-14T031019Z-codex-650df7
+  timestamp: '2026-09-14T03:10:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/871
+events:
+- type: EDIT
+  outcome: changed
+  summary: Linked endoplasmic reticulum membrane PR history
+  details: 'Linked the GO:0005789 endoplasmic reticulum membrane curation to PR #871 after
+    opening the pull request for branch codex/add-endoplasmic-reticulum-membrane.'
