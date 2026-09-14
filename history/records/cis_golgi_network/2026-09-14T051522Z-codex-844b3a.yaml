@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cis_golgi_network.yaml
+  slug: cis_golgi_network
+session:
+  id: 2026-09-14T051522Z-codex-844b3a
+  timestamp: '2026-09-14T05:15:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add cis-Golgi network record
+  details: Created the GO:0005801 cis-Golgi network record with Golgi-subcompartment parentage,
+    Golgi-apparatus parthood, a GO:0033106 membrane part, a reviewed-label-only lipid-bilayer
+    component, Komagataella pastoris Golgi-stack evidence, a nonmechanistic ER-adjacent entry
+    graph, and explicit discussions for lipid grounding and early-Golgi traffic-factor component
+    boundaries.
