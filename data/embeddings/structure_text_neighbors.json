@@ -3640,29 +3640,29 @@
       "label": "COPII-coated ER to Golgi transport vesicle",
       "neighbors": [
         {
-          "identifier": "GO:0030126",
-          "label": "COPI vesicle coat",
-          "cosine_similarity": 0.85765565
-        },
-        {
           "identifier": "GO:0005794",
           "label": "Golgi apparatus",
-          "cosine_similarity": 0.8490988
+          "cosine_similarity": 0.85557931
+        },
+        {
+          "identifier": "GO:0030126",
+          "label": "COPI vesicle coat",
+          "cosine_similarity": 0.85443704
         },
         {
           "identifier": "GO:0030127",
           "label": "COPII vesicle coat",
-          "cosine_similarity": 0.84704402
+          "cosine_similarity": 0.83695517
         },
         {
           "identifier": "GO:0005768",
           "label": "endosome",
-          "cosine_similarity": 0.83395475
+          "cosine_similarity": 0.83360701
         },
         {
           "identifier": "GO:0005783",
           "label": "endoplasmic reticulum",
-          "cosine_similarity": 0.81597766
+          "cosine_similarity": 0.81838808
         }
       ]
     },
@@ -3691,9 +3691,9 @@
           "cosine_similarity": 0.80535939
         },
         {
-          "identifier": "GO:0030134",
-          "label": "COPII-coated ER to Golgi transport vesicle",
-          "cosine_similarity": 0.80305412
+          "identifier": "GO:0061701",
+          "label": "bacterial outer membrane vesicle",
+          "cosine_similarity": 0.79940087
         }
       ]
     },
@@ -3722,9 +3722,9 @@
           "cosine_similarity": 0.79584783
         },
         {
-          "identifier": "GO:0030134",
-          "label": "COPII-coated ER to Golgi transport vesicle",
-          "cosine_similarity": 0.78938934
+          "identifier": "GO:0046859",
+          "label": "hydrogenosomal membrane",
+          "cosine_similarity": 0.77953419
         }
       ]
     },
@@ -4045,7 +4045,7 @@
         {
           "identifier": "GO:0030134",
           "label": "COPII-coated ER to Golgi transport vesicle",
-          "cosine_similarity": 0.81597766
+          "cosine_similarity": 0.81838808
         },
         {
           "identifier": "GO:0005768",
@@ -4076,7 +4076,7 @@
         {
           "identifier": "GO:0030134",
           "label": "COPII-coated ER to Golgi transport vesicle",
-          "cosine_similarity": 0.83395475
+          "cosine_similarity": 0.83360701
         },
         {
           "identifier": "GO:0005783",
@@ -4572,7 +4572,7 @@
         {
           "identifier": "GO:0030134",
           "label": "COPII-coated ER to Golgi transport vesicle",
-          "cosine_similarity": 0.8490988
+          "cosine_similarity": 0.85557931
         },
         {
           "identifier": "GO:0005783",
@@ -6618,7 +6618,7 @@
         {
           "identifier": "cellstructuremech:carboxysome_shell",
           "label": "carboxysome shell",
-          "cosine_similarity": 0.87870194
+          "cosine_similarity": 0.87870195
         },
         {
           "identifier": "GO:0140737",
@@ -6654,7 +6654,7 @@
         {
           "identifier": "GO:0031470",
           "label": "carboxysome",
-          "cosine_similarity": 0.87870194
+          "cosine_similarity": 0.87870195
         },
         {
           "identifier": "GO:0140737",
@@ -7088,7 +7088,7 @@
         {
           "identifier": "GO:0030134",
           "label": "COPII-coated ER to Golgi transport vesicle",
-          "cosine_similarity": 0.72181741
+          "cosine_similarity": 0.71712195
         },
         {
           "identifier": "GO:0005768",
@@ -7119,7 +7119,7 @@
         {
           "identifier": "GO:0030134",
           "label": "COPII-coated ER to Golgi transport vesicle",
-          "cosine_similarity": 0.85765565
+          "cosine_similarity": 0.85443704
         },
         {
           "identifier": "GO:0005794",
@@ -7150,7 +7150,7 @@
         {
           "identifier": "GO:0030134",
           "label": "COPII-coated ER to Golgi transport vesicle",
-          "cosine_similarity": 0.84704402
+          "cosine_similarity": 0.83695517
         },
         {
           "identifier": "GO:0030125",
@@ -7832,7 +7832,7 @@
         {
           "identifier": "GO:0009534",
           "label": "chloroplast thylakoid",
-          "cosine_similarity": 0.77324828
+          "cosine_similarity": 0.77324827
         },
         {
           "identifier": "GO:0009536",
@@ -7847,7 +7847,7 @@
         {
           "identifier": "GO:0009579",
           "label": "thylakoid",
-          "cosine_similarity": 0.7338334
+          "cosine_similarity": 0.73383339
         }
       ]
     },
@@ -8095,7 +8095,7 @@
         {
           "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
           "label": "type IX protein secretion system complex",
-          "cosine_similarity": 0.72858996
+          "cosine_similarity": 0.72858995
         }
       ]
     },

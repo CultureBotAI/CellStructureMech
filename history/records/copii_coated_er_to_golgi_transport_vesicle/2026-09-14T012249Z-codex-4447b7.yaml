@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/copii_coated_er_to_golgi_transport_vesicle.yaml
+  slug: copii_coated_er_to_golgi_transport_vesicle
+session:
+  id: 2026-09-14T012249Z-codex-4447b7
+  timestamp: '2026-09-14T01:22:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/861
+  - https://github.com/CultureBotAI/CellStructureMech/issues/862
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/860
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - functions
+  - evidence
+  - causal_graphs
+  - provenance
+  - review
+  - curation_history
+  summary: Address COPII-coated vesicle PR review
+  details: 'Adversarial review of PR #860 found that the first creation history could not
+    link back to the pull request and that GO:0090114 COPII-coated vesicle budding described
+    vesicle creation rather than the vesicle-level transport function. Added GO:0006888 endoplasmic
+    reticulum to Golgi vesicle-mediated transport as the function, kept GO:0090114 as topology
+    evidence, and added this follow-up history entry linking PR #860 and review issues #861
+    and #862 while preserving the creation entry unchanged.'
