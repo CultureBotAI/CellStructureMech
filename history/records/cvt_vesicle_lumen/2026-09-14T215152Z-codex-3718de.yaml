@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cvt_vesicle_lumen.yaml
+  slug: cvt_vesicle_lumen
+session:
+  id: 2026-09-14T215152Z-codex-3718de
+  timestamp: '2026-09-14T21:51:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/899
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - history
+  summary: Linked Cvt vesicle lumen curation to PR 899
+  details: Linked the cellstructuremech:cvt_vesicle_lumen Cvt vesicle lumen curation session
+    to pull request 899 after opening the evidence-backed record for adversarial review.
