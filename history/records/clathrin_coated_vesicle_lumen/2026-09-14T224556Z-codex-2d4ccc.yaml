@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+  slug: clathrin_coated_vesicle_lumen
+session:
+  id: 2026-09-14T224556Z-codex-2d4ccc
+  timestamp: '2026-09-14T22:45:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/902
+events:
+- type: EDIT
+  outcome: changed
+  summary: Link PR for clathrin-coated vesicle lumen
+  details: 'Linked the clathrin-coated vesicle lumen curation record to pull request #902
+    after opening the PR for review.'
