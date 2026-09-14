@@ -1,0 +1,180 @@
+identifier: GO:0031969
+label: chloroplast membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: Either of the lipid bilayers that surround a chloroplast and form the
+  chloroplast envelope.
+definition_source: GO:0031969
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T02:27:10Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T02:27:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added plastid-membrane parentage, chloroplast-envelope parthood, a reviewed-label-only
+    envelope lipid bilayer component, Viridiplantae/Chlamydomonas scope, GO/DOI evidence,
+    a nonmechanistic inner-outer membrane scope graph, a thylakoid-exclusion discussion,
+    and a lipid-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0042170
+part_of:
+- GO:0009941
+components:
+- component_id: chloroplast_envelope_lipid_bilayer
+  label: chloroplast envelope lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Generic lipid-bilayer constituent of a chloroplast envelope membrane when
+    the exact inner or outer membrane is unspecified.
+  evidence:
+  - reference: GO:0031969
+    notes: GO:0031969 defines chloroplast membrane as either lipid bilayer that surrounds
+      a chloroplast and forms the chloroplast envelope.
+  - reference: GO:0009941
+    notes: GO:0009941 defines the chloroplast envelope as the double lipid bilayer
+      that encloses the chloroplast.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0031969 identifies the whole generic chloroplast membrane, but
+    no separate source-neutral CURIE was curated for the generic lipid constituent
+    of a chloroplast envelope membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:33090
+  taxon_label: Viridiplantae
+  presence: COMMON
+  note: Photosynthetic green algae and land plants carry chloroplasts bounded by chloroplast
+    envelopes with inner and outer chloroplast membranes.
+  reference: DOI:10.1098/rstb.2009.0103
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas reinhardtii has a chloroplast envelope whose outer and inner
+    membranes are spanned by TOC-TIC protein import machinery.
+  reference: DOI:10.1016/j.cell.2022.10.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model used for structural analysis of a TOC-TIC supercomplex spanning
+    the chloroplast outer and inner envelope membranes.
+  reference: DOI:10.1016/j.cell.2022.10.030
+evidence:
+- reference: GO:0031969
+  notes: Gene Ontology cellular-component term for chloroplast membrane.
+- reference: GO:0042170
+  notes: Gene Ontology cellular-component parent term for plastid membrane.
+- reference: GO:0009941
+  notes: Gene Ontology cellular-component term for chloroplast envelope.
+- reference: GO:0009707
+  notes: Gene Ontology cellular-component child term for chloroplast outer membrane.
+- reference: GO:0009706
+  notes: Gene Ontology cellular-component child term for chloroplast inner membrane.
+- reference: GO:0009535
+  notes: Gene Ontology cellular-component term for the distinct chloroplast thylakoid
+    membrane.
+- reference: DOI:10.1098/rstb.2009.0103
+  notes: Keeling 2010, The endosymbiotic origin, diversification and fate of plastids,
+    Philosophical Transactions of the Royal Society B.
+- reference: DOI:10.1016/j.cell.2022.10.030
+  notes: Jin et al. 2022, Structure of a TOC-TIC supercomplex spanning two chloroplast
+    envelope membranes, Cell.
+causal_graphs:
+- graph_id: chloroplast_membrane_scope
+  title: Chloroplast membrane scope
+  description: The generic chloroplast membrane class covers either lipid bilayer
+    of the chloroplast envelope when the exact inner or outer membrane is unspecified.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GO localization scope without asserting inner-envelope
+    or outer-envelope protein translocons and without including the distinct internal
+    thylakoid membrane.
+  nodes:
+  - node_id: chloroplast_membrane
+    label: chloroplast membrane
+    node_type: STRUCTURE
+    grounding: GO:0031969
+    component_ref: chloroplast_envelope_lipid_bilayer
+  - node_id: chloroplast_envelope
+    label: chloroplast envelope
+    node_type: STRUCTURE
+    grounding: GO:0009941
+  - node_id: chloroplast_inner_membrane
+    label: chloroplast inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0009706
+  - node_id: chloroplast_outer_membrane
+    label: chloroplast outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0009707
+  edges:
+  - subject: chloroplast_membrane
+    predicate: is part of
+    object: chloroplast_envelope
+    description: A GO:0031969 chloroplast membrane is one of the lipid bilayers that
+      form the chloroplast envelope.
+    evidence:
+    - reference: GO:0031969
+      notes: GO:0031969 defines the generic chloroplast membrane as either bilayer
+        that forms the chloroplast envelope.
+    - reference: GO:0009941
+      notes: GO:0009941 identifies the complete double lipid bilayer of the chloroplast
+        envelope.
+  - subject: chloroplast_inner_membrane
+    predicate: is a
+    object: chloroplast_membrane
+    description: The chloroplast inner membrane is a specific child class of the generic
+      chloroplast membrane.
+    evidence:
+    - reference: GO:0009706
+      notes: GO places GO:0009706 as an is_a child of the generic chloroplast membrane
+        term.
+  - subject: chloroplast_outer_membrane
+    predicate: is a
+    object: chloroplast_membrane
+    description: The chloroplast outer membrane is a specific child class of the generic
+      chloroplast membrane.
+    evidence:
+    - reference: GO:0009707
+      notes: GO places GO:0009707 as an is_a child of the generic chloroplast membrane
+        term.
+discussions:
+- discussion_id: exclude_chloroplast_thylakoid_membrane
+  prompt: Exclude GO:0009535 chloroplast thylakoid membrane from the GO:0031969 chloroplast
+    membrane envelope-bilayer scope.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#chloroplast_membrane_scope
+  rationale: GO:0031969 is defined as either lipid bilayer that surrounds a chloroplast
+    and forms the chloroplast envelope, whereas GO:0009535 identifies the separate
+    internal membrane of a chloroplast thylakoid.
+  resolution_note: Curated GO:0031969 as the generic parent of only the inner and
+    outer chloroplast envelope membranes and kept GO:0009535 as a distinct thylakoid-membrane
+    term.
+  evidence:
+  - reference: GO:0031969
+    notes: GO:0031969 defines the generic chloroplast membrane as either lipid bilayer
+      that forms the chloroplast envelope.
+  - reference: GO:0009535
+    notes: GO:0009535 defines the chloroplast thylakoid membrane as the pigmented
+      membrane of a chloroplast thylakoid, not as one of the chloroplast envelope
+      bilayers.
+  posed_by: codex
+  posed_date: '2026-09-14'
+- discussion_id: ground_chloroplast_envelope_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituent
+    of a chloroplast envelope membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#chloroplast_envelope_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0031969, but the lipid bilayer constituent
+    is intentionally left as a reviewed-label-only component until an exact source-neutral
+    lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-14'
