@@ -1,0 +1,153 @@
+identifier: GO:0031985
+label: Golgi cisterna
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: Any of the thin, flattened membrane-bounded compartments that form the
+  central portion of the Golgi complex.
+definition_source: GO:0031985
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T03:39:37Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T03:40:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Golgi-subcompartment parentage, Golgi-apparatus parthood, Golgi cisterna
+    membrane as a part, a reviewed-label-only cisternal lipid bilayer component, Saccharomyces
+    scope, cisternal-maturation function, GO/DOI evidence, a nonmechanistic cisternal
+    maturation graph, and a lipid-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0098791
+part_of:
+- GO:0005794
+has_part:
+- GO:0032580
+components:
+- component_id: golgi_cisternal_lipid_bilayer
+  label: Golgi cisternal lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer boundary that encloses the Golgi cisternal compartment.
+  evidence:
+  - reference: GO:0031985
+    notes: GO:0031985 defines a Golgi cisterna as a membrane-bounded compartment in
+      the central portion of the Golgi complex.
+  - reference: GO:0032580
+    notes: GO:0032580 defines the Golgi cisterna membrane as the lipid bilayer around
+      a Golgi cisterna.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0032580 identifies the surrounding Golgi cisterna membrane,
+    but no separate source-neutral CURIE was curated for the generic lipid constituent
+    of that cisternal membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Live-cell imaging in budding yeast directly resolved maturing Golgi cisternae.
+  reference: DOI:10.1038/nature04717
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Golgi cisternal maturation was visualized with
+    fluorescent cisternal markers.
+  reference: DOI:10.1038/nature04737
+functions:
+- function_id: cisternal_maturation
+  label: cisternal maturation
+  description: Golgi cisternae transition from early to late resident-marker identities
+    during budding-yeast cisternal maturation.
+  evidence:
+  - reference: DOI:10.1038/nature04717
+    notes: Losev et al. 2006 visualized Golgi maturation dynamics in living Saccharomyces
+      cerevisiae.
+  - reference: DOI:10.1038/nature04737
+    notes: Matsuura-Tokita et al. 2006 used live imaging to follow yeast Golgi cisternal
+      maturation.
+evidence:
+- reference: GO:0031985
+  notes: Gene Ontology cellular-component term for Golgi cisterna.
+- reference: GO:0098791
+  notes: Gene Ontology cellular-component parent term for Golgi apparatus subcompartment.
+- reference: GO:0005794
+  notes: Gene Ontology cellular-component term for Golgi apparatus.
+- reference: GO:0032580
+  notes: Gene Ontology cellular-component term for Golgi cisterna membrane.
+- reference: DOI:10.1038/nature04717
+  notes: Losev et al. 2006, 'Golgi maturation visualized in living yeast', Nature.
+- reference: DOI:10.1038/nature04737
+  notes: Matsuura-Tokita et al. 2006, 'Live imaging of yeast Golgi cisternal maturation',
+    Nature.
+causal_graphs:
+- graph_id: golgi_cisterna_maturation
+  title: Yeast Golgi cisternae mature over time
+  description: Live imaging of Saccharomyces cerevisiae showed that Golgi cisternae
+    change resident marker composition as they mature from early to late compartments.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Golgi cisternal boundaries and marker maturation
+    without asserting the complete set of cisternal identity determinants, vesicle-tethering
+    proteins, or glycosylation enzymes.
+  nodes:
+  - node_id: golgi_cisterna
+    label: Golgi cisterna
+    node_type: STRUCTURE
+    grounding: GO:0031985
+    component_ref: golgi_cisternal_lipid_bilayer
+  - node_id: golgi_membrane
+    label: Golgi membrane
+    node_type: STRUCTURE
+    grounding: GO:0000139
+  - node_id: golgi_apparatus
+    label: Golgi apparatus
+    node_type: STRUCTURE
+    grounding: GO:0005794
+  - node_id: early_to_late_cisternal_maturation
+    label: early-to-late cisternal maturation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: golgi_membrane
+    predicate: bounds
+    object: golgi_cisterna
+    description: Golgi cisternae are membrane-bounded compartments.
+    evidence:
+    - reference: GO:0031985
+      notes: GO:0031985 defines Golgi cisternae as thin, flattened membrane-bounded
+        compartments.
+    - reference: GO:0032580
+      notes: GO:0032580 identifies the Golgi cisterna membrane as the bilayer around
+        Golgi cisternae.
+  - subject: golgi_cisterna
+    predicate: is part of
+    object: golgi_apparatus
+    description: Golgi cisternae are Golgi apparatus compartments whose identities
+      mature over time.
+    evidence:
+    - reference: DOI:10.1038/nature04717
+      notes: Losev et al. 2006 tracked individual Golgi cisternae in living yeast.
+  - subject: golgi_cisterna
+    predicate: undergoes
+    object: early_to_late_cisternal_maturation
+    description: In yeast, Golgi cisternae transition from early to late marker composition.
+    evidence:
+    - reference: DOI:10.1038/nature04737
+      notes: Matsuura-Tokita et al. 2006 visualized yeast Golgi cisternal maturation
+        in living cells.
+discussions:
+- discussion_id: ground_golgi_cisternal_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    Golgi cisterna membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#golgi_cisternal_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0031985, and GO:0032580 identifies
+    the surrounding Golgi cisterna membrane, but the cisternal lipid bilayer constituent
+    is intentionally left as reviewed-label-only until an exact source-neutral lipid
+    or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-14'

@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/golgi_cisterna.yaml
+  slug: golgi_cisterna
+session:
+  id: 2026-09-14T034020Z-codex-898688
+  timestamp: '2026-09-14T03:40:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0031985 Golgi cisterna
+  details: Created an evidence-backed GO:0031985 Golgi cisterna record covering Golgi-subcompartment
+    parentage, Golgi-apparatus parthood, Golgi cisterna membrane as a part, a reviewed-label-only
+    cisternal lipid bilayer component, Saccharomyces distribution, cisternal-maturation function,
+    GO and DOI evidence, a nonmechanistic maturation graph, and a lipid-grounding follow-up.
