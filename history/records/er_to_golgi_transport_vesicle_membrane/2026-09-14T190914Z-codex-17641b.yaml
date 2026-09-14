@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/er_to_golgi_transport_vesicle_membrane.yaml
+  slug: er_to_golgi_transport_vesicle_membrane
+session:
+  id: 2026-09-14T190914Z-codex-17641b
+  timestamp: '2026-09-14T19:09:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/888
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - history
+  summary: Linked ER to Golgi transport vesicle membrane curation to PR 888
+  details: Linked the GO:0012507 ER to Golgi transport vesicle membrane curation session to
+    pull request 888 after opening the evidence-backed record for adversarial review.
