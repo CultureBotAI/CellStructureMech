@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+  slug: clathrin_coated_vesicle_lumen
+session:
+  id: 2026-09-14T223853Z-codex-578368
+  timestamp: '2026-09-14T22:38:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add clathrin-coated vesicle lumen record
+  details: Created the cellstructuremech:clathrin_coated_vesicle_lumen clathrin-coated vesicle
+    lumen record with the UniProt SL-0319 synonym, cytoplasmic-vesicle-lumen parentage, clathrin-coated-vesicle
+    parthood, the UniProt cross-reference, Saccharomyces cerevisiae evidence, and a nonmechanistic
+    clathrin-coated-vesicle lumen topology graph; regenerated embeddings, pages, and documentation
+    will be committed with the source record.
