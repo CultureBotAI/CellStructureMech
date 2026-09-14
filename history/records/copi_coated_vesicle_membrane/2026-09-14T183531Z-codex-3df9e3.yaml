@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/copi_coated_vesicle_membrane.yaml
+  slug: copi_coated_vesicle_membrane
+session:
+  id: 2026-09-14T183531Z-codex-3df9e3
+  timestamp: '2026-09-14T18:35:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/886
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - history
+  summary: Linked COPI-coated vesicle membrane curation to PR 886
+  details: Linked the GO:0030663 COPI-coated vesicle membrane curation session to pull request
+    886 after opening the evidence-backed record for adversarial review.
