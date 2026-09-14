@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mitochondrial_outer_membrane_translocase_complex.yaml
+  slug: mitochondrial_outer_membrane_translocase_complex
+session:
+  id: 2026-09-14T001119Z-claude-code-79b813
+  timestamp: '2026-09-14T00:11:19Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add a mitochondrial outer membrane translocase complex record
+  details: Created data/structures/other/mitochondrial_outer_membrane_translocase_complex.yaml
+    for GO:0005742. The record uses GO exact synonyms, outer mitochondrial membrane protein
+    complex parentage, mitochondrial outer membrane parthood, Eukaryota and Saccharomyces
+    cerevisiae scope, a Saccharomyces canonical example, protein import into mitochondrial
+    matrix function evidence, GO and DOI record evidence, a nonmechanistic TOM import graph,
+    and an open Tom subunit-boundary TODO.

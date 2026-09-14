@@ -1,0 +1,139 @@
+identifier: GO:0005742
+label: mitochondrial outer membrane translocase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A large complex of the mitochondrial outer membrane that mediates transport
+  of proteins into all mitochondrial compartments.
+definition_source: GO:0005742
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T00:10:28Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T00:10:56Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, outer-mitochondrial-membrane-protein-complex parentage,
+    mitochondrial-outer-membrane parthood, Eukaryota and Saccharomyces scope, matrix-import
+    function evidence, a nonmechanistic TOM import graph, and a Tom-subunit boundary
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: GIP complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005742
+- synonym_text: mitochondrion outer membrane translocase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005742
+parent_structures:
+- GO:0098799
+part_of:
+- GO:0005741
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: TOM complexes occur in canonical mitochondria of eukaryotes that retain the
+    canonical mitochondrial outer membrane.
+  reference: GO:0005742
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria contain TOM import machinery in the outer mitochondrial
+    membrane.
+  reference: DOI:10.1016/j.cell.2009.08.005
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model used to dissect TOM-dependent mitochondrial preprotein
+    import pathways.
+  reference: DOI:10.1016/j.cell.2009.08.005
+functions:
+- function_id: protein_import_into_mitochondrial_matrix
+  label: protein import into mitochondrial matrix
+  grounding: GO:0030150
+  description: The TOM complex provides the mitochondrial outer-membrane entry step
+    for precursor proteins that continue into the matrix.
+  evidence:
+  - reference: GO:0005742
+    notes: GO:0005742 defines the TOM complex as a mitochondrial outer-membrane complex
+      that transports proteins into mitochondrial compartments.
+  - reference: DOI:10.1016/j.cell.2009.08.005
+    notes: Chacinska et al. 2009 review TOM as the outer-membrane entry gate for mitochondrial
+      preproteins, including precursors that continue through TIM23-PAM into the matrix.
+evidence:
+- reference: GO:0005742
+  notes: Gene Ontology cellular-component term for the mitochondrial outer membrane
+    translocase complex.
+- reference: GO:0098799
+  notes: Gene Ontology cellular-component parent term for outer mitochondrial membrane
+    protein complexes.
+- reference: GO:0005741
+  notes: Gene Ontology cellular-component term for the mitochondrial outer membrane
+    that contains the TOM complex.
+- reference: GO:0030150
+  notes: Gene Ontology biological-process term for protein import into the mitochondrial
+    matrix.
+- reference: DOI:10.1016/j.cell.2009.08.005
+  notes: 'Chacinska et al. 2009, ''Importing mitochondrial proteins: machineries and
+    mechanisms'', Cell.'
+causal_graphs:
+- graph_id: tom_outer_membrane_import
+  title: TOM provides the mitochondrial outer-membrane import step
+  description: The TOM complex resides in the mitochondrial outer membrane and provides
+    the entry gate for imported preproteins.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures TOM topology and its compartment-level import role
+    without asserting individual Tom subunit family boundaries or downstream TIM23-PAM
+    import-motor composition.
+  nodes:
+  - node_id: tom_complex
+    label: mitochondrial outer membrane translocase complex
+    node_type: STRUCTURE
+    grounding: GO:0005742
+  - node_id: mitochondrial_outer_membrane
+    label: mitochondrial outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0005741
+  - node_id: protein_import_into_mitochondrial_matrix
+    label: protein import into mitochondrial matrix
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030150
+  edges:
+  - subject: tom_complex
+    predicate: is part of
+    object: mitochondrial_outer_membrane
+    description: The TOM complex is a large protein translocase of the mitochondrial
+      outer membrane.
+    evidence:
+    - reference: GO:0005742
+      notes: GO:0005742 places the TOM complex in the mitochondrial outer membrane.
+  - subject: tom_complex
+    predicate: provides entry for
+    object: protein_import_into_mitochondrial_matrix
+    description: TOM provides the outer-membrane entry step for TIM23-PAM matrix import.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2009.08.005
+      notes: Chacinska et al. 2009 review TOM entry and downstream TIM23-PAM presequence
+        import into the mitochondrial matrix.
+discussions:
+- discussion_id: tom_subunit_boundaries
+  prompt: Resolve exact source-neutral component groundings for bona fide Tom constituent
+    subfamilies before adding subunit-level rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#tom_outer_membrane_import
+  rationale: GO exactly grounds the TOM complex itself, but this record does not assert
+    InterPro, Pfam, NCBIfam, or UniProt family CURIEs for individual Tom subunits
+    until those families are curated exactly and separated from downstream TIM/PAM
+    protein-import machinery.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2009.08.005
+    notes: Chacinska et al. 2009 review TOM and downstream mitochondrial protein-import
+      machineries.
+  posed_by: codex
+  posed_date: '2026-09-14'
