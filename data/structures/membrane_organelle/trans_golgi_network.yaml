@@ -30,6 +30,13 @@ curation_history:
     section anchor to the yeast_tgn_endosomal_traffic graph anchor required by corpus
     integrity checks.
   llm_assisted: true
+- timestamp: '2026-09-14T04:32:56Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #878 by narrowing the Saccharomyces taxonomic-scope and canonical-example
+    notes so each stays within the single Holthuis or Copic reference attached to
+    the row.'
+  llm_assisted: true
 parent_structures:
 - GO:0098791
 part_of:
@@ -62,14 +69,14 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Yeast TGN/endosomal syntaxins and adaptor proteins support traffic between
-    trans-Golgi and endosomal compartments.
+  note: Holthuis et al. characterized Tlg1p and Tlg2p as Saccharomyces syntaxins in
+    the TGN/endosomal system.
   reference: DOI:10.1093/emboj/17.1.113
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding yeast model in which trans-Golgi network and endosomal protein traffic
-    was dissected using Tlg SNAREs and Ent3/Ent5 adaptor proteins.
+  note: Budding-yeast model in which Ent3p and Ent5p adaptor functions in protein
+    trafficking between the trans-Golgi network and endosomes were dissected.
   reference: DOI:10.1091/MBC.E06-11-1000
 functions:
 - function_id: tgn_endosomal_protein_sorting
