@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/golgi_membrane.yaml
+  slug: golgi_membrane
+session:
+  id: 2026-09-14T033244Z-codex-2f1f37
+  timestamp: '2026-09-14T03:32:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/873
+events:
+- type: EDIT
+  outcome: changed
+  summary: Linked Golgi membrane PR history
+  details: 'Linked the GO:0000139 Golgi membrane curation to PR #873 after opening the pull
+    request for branch codex/add-golgi-membrane.'

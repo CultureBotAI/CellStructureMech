@@ -1,0 +1,157 @@
+identifier: GO:0000139
+label: Golgi membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding any of the compartments of the Golgi apparatus.
+definition_source: GO:0000139
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T03:26:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T03:27:18Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact Golgi apparatus membrane synonym, generic membrane parentage,
+    Golgi-apparatus parthood, a reviewed-label-only Golgi lipid bilayer component,
+    Saccharomyces scope, GO/DOI evidence, a nonmechanistic Golgi membrane topology
+    graph, and a lipid-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Golgi apparatus membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000139
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0005794
+components:
+- component_id: golgi_lipid_bilayer
+  label: Golgi lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent of Golgi membranes that surround Golgi apparatus
+    compartments.
+  evidence:
+  - reference: GO:0000139
+    notes: GO:0000139 defines the Golgi membrane as the lipid bilayer surrounding
+      Golgi apparatus compartments.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000139 identifies the whole Golgi membrane, but no separate
+    source-neutral CURIE was curated for the generic lipid constituent of the Golgi
+    membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Live-cell imaging in budding yeast resolved Golgi cisternae as they mature
+    from early to late compartments.
+  reference: DOI:10.1038/nature04717
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Golgi cisternal maturation was visualized with
+    fluorescent cisternal markers.
+  reference: DOI:10.1038/nature04737
+evidence:
+- reference: GO:0000139
+  notes: Gene Ontology cellular-component term for Golgi membrane.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component parent term for membrane.
+- reference: GO:0005794
+  notes: Gene Ontology cellular-component term for Golgi apparatus.
+- reference: GO:0031985
+  notes: Gene Ontology cellular-component term for Golgi cisterna.
+- reference: GO:0030126
+  notes: Gene Ontology cellular-component term for the COPI vesicle coat.
+- reference: GO:0035964
+  notes: Gene Ontology biological-process term for COPI-coated vesicle budding.
+- reference: DOI:10.1016/0092-8674(91)90176-y
+  notes: Serafini et al. 1991, 'ADP-Ribosylation factor is a subunit of the coat of
+    Golgi-derived COP-coated vesicles', Cell.
+- reference: DOI:10.1038/nature04717
+  notes: Losev et al. 2006, 'Golgi maturation visualized in living yeast', Nature.
+- reference: DOI:10.1038/nature04737
+  notes: Matsuura-Tokita et al. 2006, 'Live imaging of yeast Golgi cisternal maturation',
+    Nature.
+causal_graphs:
+- graph_id: golgi_membrane_topology
+  title: Golgi membranes bound cisternae and bud COPI vesicles
+  description: The Golgi membrane bounds Golgi cisternae and donates membrane for
+    COPI-coated vesicle budding.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Golgi membrane topology plus COPI budding from Golgi
+    membranes without asserting the full cisternal-maturation cycle, COPI cargo selection,
+    or individual coat-recruitment steps.
+  nodes:
+  - node_id: golgi_membrane
+    label: Golgi membrane
+    node_type: STRUCTURE
+    grounding: GO:0000139
+    component_ref: golgi_lipid_bilayer
+  - node_id: golgi_apparatus
+    label: Golgi apparatus
+    node_type: STRUCTURE
+    grounding: GO:0005794
+  - node_id: golgi_cisterna
+    label: Golgi cisterna
+    node_type: ORGANELLE
+    grounding: GO:0031985
+  - node_id: copi_vesicle_coat
+    label: COPI vesicle coat
+    node_type: STRUCTURE
+    grounding: GO:0030126
+  - node_id: copi_coated_vesicle_budding
+    label: COPI-coated vesicle budding
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0035964
+  edges:
+  - subject: golgi_membrane
+    predicate: is part of
+    object: golgi_apparatus
+    description: Golgi membranes are the lipid bilayers surrounding compartments of
+      the Golgi apparatus.
+    evidence:
+    - reference: GO:0000139
+      notes: GO:0000139 defines the Golgi membrane as the lipid bilayer surrounding
+        Golgi apparatus compartments.
+  - subject: golgi_membrane
+    predicate: bounds
+    object: golgi_cisterna
+    description: Golgi cisternae are bounded by Golgi membranes.
+    evidence:
+    - reference: GO:0000139
+      notes: GO:0000139 identifies the Golgi membrane as the bilayer around Golgi
+        apparatus compartments.
+    - reference: GO:0031985
+      notes: GO:0031985 identifies the Golgi cisterna as a cellular component of the
+        Golgi apparatus.
+  - subject: copi_vesicle_coat
+    predicate: assembles on
+    object: golgi_membrane
+    description: The COPI vesicle coat assembles on Golgi membranes during COPI-coated
+      vesicle budding.
+    evidence:
+    - reference: GO:0035964
+      notes: GO:0035964 defines COPI-coated vesicle budding as evagination of a Golgi
+        membrane.
+    - reference: DOI:10.1016/0092-8674(91)90176-y
+      notes: Serafini et al. 1991 studied coat subunits on Golgi-derived COP-coated
+        vesicles.
+discussions:
+- discussion_id: ground_golgi_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    Golgi membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#golgi_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0000139, but the Golgi lipid bilayer
+    constituent is intentionally left as reviewed-label-only until an exact source-neutral
+    lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-14'
