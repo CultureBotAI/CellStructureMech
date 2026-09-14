@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mitochondrial_outer_membrane_translocase_complex.yaml
+  slug: mitochondrial_outer_membrane_translocase_complex
+session:
+  id: 2026-09-14T001846Z-claude-code-c8bc34
+  timestamp: '2026-09-14T00:18:46Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/855
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/854
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - history
+  summary: Link TOM complex PR review provenance
+  details: 'Adversarial review of PR #854 found that the initial mitochondrial_outer_membrane_translocase_complex
+    creation history was written before the PR URL existed, leaving that append-only record
+    without PR provenance. Added this follow-up history record to link PR #854 and review
+    issue #855 without rewriting the creation record.'
