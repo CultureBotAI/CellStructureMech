@@ -1134,6 +1134,15 @@
   "definition": "A vesicle with a coat formed of the COPII coat complex proteins. The COPII coat complex is formed by the Sec23p/Sec24p and the Sec13p/Sec31p heterodimers. COPII-associated vesicles transport proteins from the rough endoplasmic reticulum to the Golgi apparatus (anterograde transport)."
  },
  {
+  "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
+  "label": "COPII-coated vesicle lumen",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/copii_coated_vesicle_lumen.html",
+  "definition": "The COPII-coated vesicle compartment bounded by the COPII-coated vesicle membrane."
+ },
+ {
   "identifier": "GO:0033107",
   "label": "Cvt vesicle",
   "category": "MEMBRANE_ORGANELLE",
