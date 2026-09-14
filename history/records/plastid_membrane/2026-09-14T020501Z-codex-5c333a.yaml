@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/plastid_membrane.yaml
+  slug: plastid_membrane
+session:
+  id: 2026-09-14T020501Z-codex-5c333a
+  timestamp: '2026-09-14T02:05:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0042170 plastid membrane
+  details: Created an evidence-backed GO:0042170 plastid membrane record covering the generic
+    plastid membrane class, parented it to GO membrane and plastid parthood, added a reviewed-label-only
+    plastid lipid bilayer component, Eukaryota and Viridiplantae distribution, a Chlamydomonas
+    canonical example, GO and DOI evidence, a nonmechanistic child-scope graph, and discussions
+    documenting generic scope and lipid-grounding follow-up.
