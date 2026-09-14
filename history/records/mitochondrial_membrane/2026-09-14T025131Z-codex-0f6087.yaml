@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_membrane.yaml
+  slug: mitochondrial_membrane
+session:
+  id: 2026-09-14T025131Z-codex-0f6087
+  timestamp: '2026-09-14T02:51:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/869
+events:
+- type: EDIT
+  outcome: changed
+  summary: Linked mitochondrial membrane PR history
+  details: 'Linked the GO:0031966 mitochondrial membrane curation to PR #869 after opening
+    the pull request for branch codex/add-mitochondrial-membrane.'

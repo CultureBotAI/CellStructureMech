@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_membrane.yaml
+  slug: mitochondrial_membrane
+session:
+  id: 2026-09-14T025310Z-codex-4ceadc
+  timestamp: '2026-09-14T02:53:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/870
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/869
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Grounded mitochondrial membrane Eukaryota scope
+  details: 'Resolved review issue #870 by replacing the GO-only Eukaryota taxonomic-scope
+    reference on GO:0031966 mitochondrial membrane with Roger, Munoz-Gomez and Kamikawa 2017
+    mitochondrial-diversification literature and adding DOI:10.1016/j.cub.2017.09.015 to record
+    evidence.'
