@@ -1107,6 +1107,15 @@
   "definition": "A vesicle with a coat formed of the COPI coat complex proteins. COPI-coated vesicles are found associated with Golgi membranes at steady state, are involved in Golgi to endoplasmic reticulum (retrograde) vesicle transport, and possibly also in intra-Golgi transport."
  },
  {
+  "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
+  "label": "COPI-coated vesicle lumen",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/copi_coated_vesicle_lumen.html",
+  "definition": "The COPI-coated vesicle compartment bounded by the COPI-coated vesicle membrane."
+ },
+ {
   "identifier": "GO:0030663",
   "label": "COPI-coated vesicle membrane",
   "category": "MEMBRANE_ORGANELLE",
