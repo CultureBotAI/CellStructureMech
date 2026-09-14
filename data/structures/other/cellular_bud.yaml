@@ -1,0 +1,145 @@
+identifier: GO:0005933
+label: cellular bud
+structure_category: OTHER
+structure_kind: OTHER
+definition: A cellular outgrowth formed during budding reproduction that remains connected
+  to a mother cell while it grows into a new individual.
+definition_source: GO:0005933
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T23:30:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T23:31:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added UniProt growing-bud synonymy, bud membrane/neck/tip parts, the UniProt
+    SL-0027 xref, budding-yeast distribution and example evidence, a budding-growth
+    function, GO/UniProt/DOI evidence, and a nonmechanistic cellular-bud topology
+    graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: bud
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0027
+- synonym_text: growing bud
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0027
+has_part:
+- GO:0033101
+- GO:0005935
+- GO:0005934
+xrefs:
+- uniprot.location:SL-0027
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms mother-attached cellular buds during mitotic polarized
+    growth before cytokinesis separates mother and daughter.
+  reference: DOI:10.3389/fcell.2016.00123
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which polarity proteins and septins organize at the
+    bud tip and mother-bud neck.
+  reference: DOI:10.1083/jcb.135.3.725
+functions:
+- function_id: budding_growth
+  label: budding growth
+  description: The cellular bud is the daughter-cell outgrowth that expands by polarized
+    growth before cytokinesis separates it from the mother yeast cell.
+  evidence:
+  - reference: DOI:10.1083/jcb.135.3.725
+    notes: Valtz and Herskowitz 1996 studied bipolar and mating-projection growth
+      through Saccharomyces polarity proteins that localize to budding sites.
+  - reference: DOI:10.3389/fcell.2016.00123
+    notes: Glomb and Gronemeyer 2016 review the mother-bud neck as the cortical cytokinesis
+      site organized during budding-yeast growth.
+evidence:
+- reference: GO:0005933
+  notes: Gene Ontology cellular-component term for the cellular bud.
+- reference: GO:0033101
+  notes: Gene Ontology cellular-component term for the cellular bud membrane.
+- reference: GO:0005935
+  notes: Gene Ontology cellular-component term for the cellular bud neck.
+- reference: GO:0005934
+  notes: Gene Ontology cellular-component term for the cellular bud tip.
+- reference: uniprot.location:SL-0027
+  notes: UniProt Subcellular Location entry SL-0027 maps Bud to GO:0005933 and lists
+    Growing bud as a synonym.
+- reference: uniprot.location:SL-0028
+  notes: UniProt Subcellular Location entry SL-0028 maps Bud membrane to GO:0033101
+    and places the bud membrane under Bud.
+- reference: uniprot.location:SL-0029
+  notes: UniProt Subcellular Location entry SL-0029 maps Bud neck to GO:0005935 and
+    places the bud neck under Bud.
+- reference: uniprot.location:SL-0030
+  notes: UniProt Subcellular Location entry SL-0030 maps Bud tip to GO:0005934 and
+    places the bud tip under Bud.
+- reference: DOI:10.1083/jcb.135.3.725
+  notes: Valtz and Herskowitz 1996, Pea2 protein of yeast is localized to sites of
+    polarized growth and is required for efficient mating and bipolar budding, Journal
+    of Cell Biology.
+- reference: DOI:10.3389/fcell.2016.00123
+  notes: Glomb and Gronemeyer 2016, Septin Organization and Functions in Budding Yeast,
+    Frontiers in Cell and Developmental Biology.
+causal_graphs:
+- graph_id: cellular_bud_topology
+  title: Cellular bud topology
+  description: The yeast cellular bud has a surrounding bud membrane, a distal bud
+    tip, and a bud neck that constricts the connection between the mother and daughter
+    cell.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GO- and UniProt-backed bud regions without asserting
+    a complete polarity, septin, or cytokinesis mechanism.
+  nodes:
+  - node_id: cellular_bud
+    label: cellular bud
+    node_type: STRUCTURE
+    grounding: GO:0005933
+  - node_id: bud_membrane
+    label: cellular bud membrane
+    node_type: STRUCTURE
+    grounding: GO:0033101
+  - node_id: bud_neck
+    label: cellular bud neck
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005935
+  - node_id: bud_tip
+    label: cellular bud tip
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005934
+  edges:
+  - subject: bud_membrane
+    predicate: surrounds
+    object: cellular_bud
+    description: The bud membrane surrounds the cellular bud.
+    evidence:
+    - reference: GO:0033101
+      notes: GO:0033101 identifies the membrane of the cellular bud.
+    - reference: uniprot.location:SL-0028
+      notes: UniProt SL-0028 places the bud membrane under the Bud location.
+  - subject: bud_neck
+    predicate: is part of
+    object: cellular_bud
+    description: The bud neck is the constriction between the mother cell and the
+      cellular bud.
+    evidence:
+    - reference: GO:0005935
+      notes: GO:0005935 identifies the cellular bud neck.
+    - reference: uniprot.location:SL-0029
+      notes: UniProt SL-0029 places the bud neck under the Bud location.
+  - subject: bud_tip
+    predicate: is part of
+    object: cellular_bud
+    description: The bud tip is the distal tip of the cellular bud, opposite the mother-cell
+      attachment site.
+    evidence:
+    - reference: GO:0005934
+      notes: GO:0005934 identifies the cellular bud tip.
+    - reference: uniprot.location:SL-0030
+      notes: UniProt SL-0030 places the bud tip under the Bud location.
