@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cytoplasmic_vesicle_lumen.yaml
+  slug: cytoplasmic_vesicle_lumen
+session:
+  id: 2026-09-14T211101Z-codex-f40e95
+  timestamp: '2026-09-14T21:11:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add cytoplasmic vesicle lumen record
+  details: Created the GO:0060205 cytoplasmic vesicle lumen record with intracellular-organelle-lumen
+    parentage, cytoplasmic-vesicle parthood, the UniProt SL-0325 cross-reference, Saccharomyces
+    cerevisiae evidence, a vesicle-lumen function, and a nonmechanistic lumen-topology graph;
+    regenerated embeddings, pages, and documentation will be committed with the source record.
