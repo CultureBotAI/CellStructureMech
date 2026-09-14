@@ -20,6 +20,13 @@ curation_history:
     a nonmechanistic inner-outer membrane scope graph, a generic-scope interpretation,
     and a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-14T02:52:43Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #870 by replacing the GO-only Eukaryota taxonomic-scope reference
+    with mitochondrial-diversification literature and adding the Roger et al. 2017
+    DOI to record evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0016020
 part_of:
@@ -50,7 +57,7 @@ taxonomic_distribution:
   note: Canonical mitochondrial membranes occur with canonical mitochondria across
     eukaryotes, while some anaerobic lineages carry reduced mitochondrion-related
     organelles instead.
-  reference: GO:0005739
+  reference: DOI:10.1016/j.cub.2017.09.015
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
@@ -84,6 +91,9 @@ evidence:
     Proceedings of the National Academy of Sciences.
 - reference: DOI:10.1038/nature12985
   notes: Friedman and Nunnari 2014, 'Mitochondrial form and function', Nature.
+- reference: DOI:10.1016/j.cub.2017.09.015
+  notes: Roger, Munoz-Gomez and Kamikawa 2017, 'The Origin and Diversification of
+    Mitochondria', Current Biology.
 causal_graphs:
 - graph_id: mitochondrial_membrane_scope
   title: Mitochondrial membrane scope
