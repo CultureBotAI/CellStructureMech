@@ -20,11 +20,23 @@ curation_history:
     GO/DOI evidence, a nonmechanistic clathrin-coated vesicle topology graph, and
     a resolved coat-component boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-14T19:30:49Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed issue #890 by adding the UniProt SL-0070 xref, the CCV exact
+    synonym, and supporting UniProt Subcellular Location evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0030135
 has_part:
 - GO:0030125
 - GO:0030665
+synonyms:
+- synonym_text: CCV
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0070
+xrefs:
+- uniprot.location:SL-0070
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -61,6 +73,9 @@ evidence:
     is part of clathrin-coated vesicles.
 - reference: GO:0030665
   notes: Gene Ontology cellular-component term for the clathrin-coated vesicle membrane.
+- reference: uniprot.location:SL-0070
+  notes: UniProt Subcellular Location entry SL-0070 maps to GO:0030136 and lists CCV
+    as a synonym of clathrin-coated vesicle.
 - reference: GO:0072583
   notes: Gene Ontology biological-process term for clathrin-dependent endocytosis.
 - reference: DOI:10.1016/j.devcel.2005.04.014
