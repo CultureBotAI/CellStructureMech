@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/trans_golgi_network_membrane.yaml
+  slug: trans_golgi_network_membrane
+session:
+  id: 2026-09-14T050524Z-codex-26c4e6
+  timestamp: '2026-09-14T05:05:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/881
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - history
+  summary: Link trans-Golgi network membrane PR
+  details: 'Linked the initial trans-Golgi network membrane curation session to PR #881 so
+    the append-only repository history records the review and merge context for the new GO:0032588
+    record.'
