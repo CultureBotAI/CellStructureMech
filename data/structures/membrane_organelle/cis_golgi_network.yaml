@@ -20,6 +20,13 @@ curation_history:
     scope, GO/DOI evidence, a nonmechanistic ER-adjacent entry graph, and lipid-grounding
     plus early-Golgi trafficking-factor boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-14T05:25:27Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #883 by removing the ad hoc ER-adjacent Golgi entry function
+    and support edge so the causal graph only makes GO-backed cis-Golgi topology,
+    membrane-boundary, and ER-adjacency claims.'
+  llm_assisted: true
 parent_structures:
 - GO:0098791
 part_of:
@@ -58,18 +65,6 @@ canonical_examples:
   note: Budding-yeast model, originally studied as Pichia pastoris, with ordered Golgi
     stacks associated with transitional ER organization.
   reference: DOI:10.1083/jcb.145.1.69
-functions:
-- function_id: er_adjacent_golgi_entry
-  label: ER-adjacent Golgi entry
-  description: The cis-Golgi network is the entry-side Golgi subcompartment that faces
-    the endoplasmic reticulum.
-  evidence:
-  - reference: GO:0005801
-    notes: GO:0005801 defines the cis-Golgi network as the convex-side Golgi network
-      that abuts the endoplasmic reticulum.
-  - reference: DOI:10.1083/jcb.145.1.69
-    notes: Rossanese et al. 1999 resolved coherent Pichia pastoris Golgi stacks near
-      discrete transitional ER sites.
 evidence:
 - reference: GO:0005801
   notes: Gene Ontology cellular-component term for cis-Golgi network.
@@ -90,9 +85,9 @@ evidence:
     cerevisiae immunoisolated by Sed5p', FEBS Letters.
 causal_graphs:
 - graph_id: cis_golgi_network_entry_topology
-  title: Cis-Golgi networks occupy the Golgi entry side
-  description: The cis-Golgi network is the membrane-bounded Golgi entry-side network
-    associated with ER-proximal Golgi organization.
+  title: Cis-Golgi networks occupy the ER-facing Golgi side
+  description: The cis-Golgi network is the membrane-bounded Golgi subcompartment
+    on the Golgi side that abuts the endoplasmic reticulum.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures cis-Golgi network topology without asserting a full
@@ -115,9 +110,6 @@ causal_graphs:
     label: endoplasmic reticulum
     node_type: STRUCTURE
     grounding: GO:0005783
-  - node_id: er_adjacent_golgi_entry
-    label: ER-adjacent Golgi entry
-    node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: cis_golgi_network_membrane
     predicate: bounds
@@ -148,15 +140,6 @@ causal_graphs:
     - reference: DOI:10.1083/jcb.145.1.69
       notes: Rossanese et al. 1999 compared transitional-ER organization with Pichia
         and Saccharomyces Golgi organization.
-  - subject: cis_golgi_network
-    predicate: supports
-    object: er_adjacent_golgi_entry
-    description: The cis-Golgi network is the Golgi entry side for cargo arriving
-      from the endoplasmic reticulum.
-    evidence:
-    - reference: GO:0005801
-      notes: GO:0005801 locates the cis-Golgi network at the endoplasmic-reticulum-facing
-        side of the Golgi apparatus.
 discussions:
 - discussion_id: ground_cis_golgi_network_lipid_bilayer
   prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
