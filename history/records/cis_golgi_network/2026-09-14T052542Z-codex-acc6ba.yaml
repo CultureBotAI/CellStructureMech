@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cis_golgi_network.yaml
+  slug: cis_golgi_network
+session:
+  id: 2026-09-14T052542Z-codex-acc6ba
+  timestamp: '2026-09-14T05:25:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/883
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/882
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - functions
+  - curation_history
+  summary: Narrow cis-Golgi network entry claim
+  details: 'Resolved review issue #883 by removing the ad hoc ER-adjacent Golgi entry function,
+    deleting the derived biological-process node and support edge, and keeping the cis-Golgi
+    network graph scoped to GO-backed topology and ER adjacency.'
