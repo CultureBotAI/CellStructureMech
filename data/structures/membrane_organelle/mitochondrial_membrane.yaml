@@ -1,0 +1,182 @@
+identifier: GO:0031966
+label: mitochondrial membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: Either of the lipid bilayers that surround the mitochondrion and form
+  the mitochondrial envelope.
+definition_source: GO:0031966
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T02:42:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T02:43:11Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added generic membrane parentage, mitochondrial-envelope parthood, a reviewed-label-only
+    envelope lipid bilayer component, Eukaryota and Saccharomyces scope, GO/DOI evidence,
+    a nonmechanistic inner-outer membrane scope graph, a generic-scope interpretation,
+    and a lipid-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0005740
+components:
+- component_id: mitochondrial_lipid_bilayer
+  label: mitochondrial lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Generic lipid-bilayer constituent of a mitochondrial envelope membrane when
+    the exact inner or outer membrane is unspecified.
+  evidence:
+  - reference: GO:0031966
+    notes: GO:0031966 defines mitochondrial membrane as either lipid bilayer that
+      surrounds a mitochondrion and forms the mitochondrial envelope.
+  - reference: GO:0005740
+    notes: GO:0005740 defines the mitochondrial envelope as the double lipid bilayer
+      enclosing the mitochondrion.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0031966 identifies the whole generic mitochondrial membrane,
+    but no separate source-neutral CURIE was curated for the generic lipid constituent
+    of a mitochondrial envelope membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: Canonical mitochondrial membranes occur with canonical mitochondria across
+    eukaryotes, while some anaerobic lineages carry reduced mitochondrion-related
+    organelles instead.
+  reference: GO:0005739
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria include both mitochondrial outer-membrane and inner-membrane
+    proteomes.
+  reference: DOI:10.1073/pnas.2135385100
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model used for purified mitochondrial proteomics that recovered
+    outer- and inner-membrane mitochondrial proteins.
+  reference: DOI:10.1073/pnas.2135385100
+evidence:
+- reference: GO:0031966
+  notes: Gene Ontology cellular-component term for mitochondrial membrane.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component parent term for membrane.
+- reference: GO:0005740
+  notes: Gene Ontology cellular-component term for mitochondrial envelope.
+- reference: GO:0005739
+  notes: Gene Ontology cellular-component term for mitochondrion.
+- reference: GO:0005741
+  notes: Gene Ontology cellular-component child term for mitochondrial outer membrane.
+- reference: GO:0005743
+  notes: Gene Ontology cellular-component child term for mitochondrial inner membrane.
+- reference: GO:0005758
+  notes: Gene Ontology cellular-component term for the mitochondrial intermembrane
+    space between the two mitochondrial envelope membranes.
+- reference: DOI:10.1073/pnas.2135385100
+  notes: Sickmann et al. 2003, 'The proteome of Saccharomyces cerevisiae mitochondria',
+    Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1038/nature12985
+  notes: Friedman and Nunnari 2014, 'Mitochondrial form and function', Nature.
+causal_graphs:
+- graph_id: mitochondrial_membrane_scope
+  title: Mitochondrial membrane scope
+  description: The generic mitochondrial membrane class covers either lipid bilayer
+    of the mitochondrial envelope when the exact inner or outer membrane is unspecified.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GO localization scope without asserting outer-membrane
+    TOM import, inner-membrane oxidative phosphorylation, MICOS assembly, or crista
+    morphology.
+  nodes:
+  - node_id: mitochondrial_membrane
+    label: mitochondrial membrane
+    node_type: STRUCTURE
+    grounding: GO:0031966
+    component_ref: mitochondrial_lipid_bilayer
+  - node_id: mitochondrial_envelope
+    label: mitochondrial envelope
+    node_type: STRUCTURE
+    grounding: GO:0005740
+  - node_id: mitochondrial_outer_membrane
+    label: mitochondrial outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0005741
+  - node_id: mitochondrial_inner_membrane
+    label: mitochondrial inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005743
+  edges:
+  - subject: mitochondrial_membrane
+    predicate: is part of
+    object: mitochondrial_envelope
+    description: A GO:0031966 mitochondrial membrane is one of the lipid bilayers
+      that form the mitochondrial envelope.
+    evidence:
+    - reference: GO:0031966
+      notes: GO:0031966 defines the generic mitochondrial membrane as either bilayer
+        that forms the mitochondrial envelope.
+    - reference: GO:0005740
+      notes: GO:0005740 identifies the complete double lipid bilayer of the mitochondrial
+        envelope.
+  - subject: mitochondrial_outer_membrane
+    predicate: is a
+    object: mitochondrial_membrane
+    description: The mitochondrial outer membrane is a specific child class of the
+      generic mitochondrial membrane.
+    evidence:
+    - reference: GO:0005741
+      notes: GO places GO:0005741 as an is_a child of the generic mitochondrial membrane
+        term.
+  - subject: mitochondrial_inner_membrane
+    predicate: is a
+    object: mitochondrial_membrane
+    description: The mitochondrial inner membrane is a specific child class of the
+      generic mitochondrial membrane.
+    evidence:
+    - reference: GO:0005743
+      notes: GO places GO:0005743 as an is_a child of the generic mitochondrial membrane
+        term.
+discussions:
+- discussion_id: generic_mitochondrial_membrane_scope
+  prompt: Keep the GO:0031966 generic mitochondrial membrane parent distinct from
+    exact mitochondrial envelope, outer membrane, inner membrane, and crista records.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#mitochondrial_membrane_scope
+  rationale: GO:0031966 denotes the generic mitochondrial membrane class whose is_a
+    children include the outer and inner mitochondrial envelope bilayers. TOM import,
+    matrix-facing respiratory chain localization, and crista architecture belong on
+    the exact mitochondrial child membranes and substructures.
+  resolution_note: Curated only generic mitochondrial-membrane class scope and kept
+    child-membrane composition out of this record.
+  evidence:
+  - reference: GO:0031966
+    notes: GO:0031966 identifies the generic mitochondrial membrane cellular-component
+      term.
+  - reference: GO:0005741
+    notes: GO:0005741 identifies the mitochondrial outer membrane is_a child.
+  - reference: GO:0005743
+    notes: GO:0005743 identifies the mitochondrial inner membrane is_a child.
+  posed_by: codex
+  posed_date: '2026-09-14'
+- discussion_id: ground_mitochondrial_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituent
+    of a mitochondrial membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mitochondrial_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0031966, but the generic lipid bilayer
+    constituent is intentionally left as a reviewed-label-only component until an
+    exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-14'

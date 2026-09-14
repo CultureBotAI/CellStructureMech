@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_membrane.yaml
+  slug: mitochondrial_membrane
+session:
+  id: 2026-09-14T024331Z-codex-342dae
+  timestamp: '2026-09-14T02:43:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0031966 mitochondrial membrane
+  details: Created an evidence-backed GO:0031966 mitochondrial membrane record covering the
+    generic envelope-bilayer class, parented it to membrane and mitochondrial envelope parthood,
+    added a reviewed-label-only mitochondrial lipid bilayer component, Eukaryota and Saccharomyces
+    distribution, GO and DOI evidence, a nonmechanistic inner-outer membrane scope graph,
+    and discussions documenting generic parent scope and lipid-grounding follow-up.
