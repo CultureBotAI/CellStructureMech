@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/copi_coated_vesicle.yaml
+  slug: copi_coated_vesicle
+session:
+  id: 2026-09-14T181130Z-codex-eae4dd
+  timestamp: '2026-09-14T18:11:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/885
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - history
+  summary: Linked COPI-coated vesicle PR
+  details: 'Recorded PR #885 for the GO:0030137 COPI-coated vesicle curation so the append-only
+    target history points at the pull request that introduced the new record, generated embeddings,
+    rendered page, and README/site refreshes.'

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/copi_coated_vesicle.yaml
+  slug: copi_coated_vesicle
+session:
+  id: 2026-09-14T154721Z-codex-c19e74
+  timestamp: '2026-09-14T15:47:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - has_part
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added COPI-coated vesicle record
+  details: Created the GO:0030137 COPI-coated vesicle record with Golgi-associated/coated-vesicle
+    parentage, COPI coat and COPI-coated vesicle membrane parts, Saccharomyces cerevisiae
+    scope, Golgi-to-ER retrograde-transport function evidence, a nonmechanistic vesicle-topology
+    graph, and resolved boundary discussions that leave coatomer and Arf on the existing COPI
+    vesicle coat record.
