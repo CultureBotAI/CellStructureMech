@@ -1,0 +1,110 @@
+identifier: GO:0005759
+label: mitochondrial matrix
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The gel-like material, with considerable fine structure, that lies in
+  the matrix space, or lumen, of a mitochondrion. It contains the enzymes of the tricarboxylic
+  acid cycle and, in some organisms, the enzymes concerned with fatty acid oxidation.
+definition_source: GO:0005759
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T00:48:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T00:49:32Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parentage, mitochondrion parthood, GO synonyms, Eukaryota and
+    Saccharomyces scope, GO/DOI evidence, and a nonmechanistic matrix-topology graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: mitochondrial lumen
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005759
+- synonym_text: mitochondrial stroma
+  synonym_type: NARROW_SYNONYM
+  source: GO:0005759
+parent_structures:
+- GO:0070013
+part_of:
+- GO:0005739
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: Canonical mitochondrial matrices occur with canonical mitochondria in eukaryotes,
+    while some anaerobic lineages carry reduced mitochondrion-related organelles instead.
+  reference: GO:0005759
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria contain matrix and membrane-associated mitochondrial
+    proteins in purified mitochondrial proteomes.
+  reference: DOI:10.1073/pnas.2135385100
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model whose purified mitochondrial proteome includes matrix
+    and membrane-associated mitochondrial machinery.
+  reference: DOI:10.1073/pnas.2135385100
+evidence:
+- reference: GO:0005759
+  notes: Gene Ontology cellular-component term for mitochondrial matrix.
+- reference: GO:0070013
+  notes: Gene Ontology cellular-component parent term for intracellular organelle
+    lumen.
+- reference: GO:0005739
+  notes: Gene Ontology cellular-component term for the mitochondrion that contains
+    the matrix.
+- reference: GO:0005743
+  notes: Gene Ontology cellular-component term for the inner mitochondrial membrane
+    that encloses the matrix.
+- reference: DOI:10.1073/pnas.2135385100
+  notes: Sickmann et al. 2003, 'The proteome of Saccharomyces cerevisiae mitochondria',
+    Proceedings of the National Academy of Sciences.
+causal_graphs:
+- graph_id: mitochondrial_matrix_topology
+  title: Mitochondrial matrix topology
+  description: The mitochondrial matrix is the mitochondrial lumen enclosed by the
+    mitochondrial inner membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining matrix boundary without asserting individual
+    matrix enzymes, mitochondrial nucleoids, or TIM/PAM protein-import machinery.
+  nodes:
+  - node_id: mitochondrial_matrix
+    label: mitochondrial matrix
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005759
+  - node_id: mitochondrion
+    label: mitochondrion
+    node_type: ORGANELLE
+    grounding: GO:0005739
+  - node_id: mitochondrial_inner_membrane
+    label: mitochondrial inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005743
+  edges:
+  - subject: mitochondrial_matrix
+    predicate: is part of
+    object: mitochondrion
+    description: The mitochondrial matrix is the matrix space, or lumen, of a mitochondrion.
+    evidence:
+    - reference: GO:0005759
+      notes: GO:0005759 defines the matrix by its location in the matrix space, or
+        lumen, of a mitochondrion.
+    - reference: GO:0005739
+      notes: GO:0005739 identifies the containing mitochondrion.
+  - subject: mitochondrial_inner_membrane
+    predicate: encloses
+    object: mitochondrial_matrix
+    description: The mitochondrial inner membrane encloses the mitochondrial matrix.
+    evidence:
+    - reference: GO:0005759
+      notes: GO:0005759 identifies the matrix as the mitochondrial matrix space or
+        lumen.
+    - reference: GO:0005743
+      notes: GO:0005743 defines the inner membrane as the lumen-facing mitochondrial-envelope
+        bilayer.
