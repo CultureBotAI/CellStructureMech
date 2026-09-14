@@ -19,6 +19,12 @@ curation_history:
     evidence, a nonmechanistic vesicle-membrane topology graph, and a lipid-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-14T20:25:19Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed issue #894 by removing an unsupported electron-microscopy method
+    claim from the Saccharomyces cerevisiae canonical example.'
+  llm_assisted: true
 parent_structures:
 - GO:0016020
 part_of:
@@ -53,8 +59,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model in which double-membrane Cvt vesicle assembly and vacuolar
-    delivery were characterized by electron microscopy.
+  note: Budding-yeast model used to characterize early-secretory-pathway requirements
+    for Cvt vesicle and autophagosome assembly.
   reference: DOI:10.1091/mbc.e03-07-0479
 evidence:
 - reference: GO:0030659

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cytoplasmic_vesicle_membrane.yaml
+  slug: cytoplasmic_vesicle_membrane
+session:
+  id: 2026-09-14T202533Z-codex-d781a6
+  timestamp: '2026-09-14T20:25:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/894
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/893
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - canonical_examples
+  - curation_history
+  summary: Tightened cytoplasmic vesicle membrane canonical example
+  details: Addressed issue 894 from pull request 893 by removing an unsupported electron-microscopy
+    method claim from the Saccharomyces cerevisiae canonical example and recording the review
+    fix in curation_history.
