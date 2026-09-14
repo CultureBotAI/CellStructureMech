@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/copii_coated_vesicle_lumen.yaml
+  slug: copii_coated_vesicle_lumen
+session:
+  id: 2026-09-14T222901Z-codex-d0d574
+  timestamp: '2026-09-14T22:29:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/901
+events:
+- type: EDIT
+  outcome: changed
+  summary: Link PR for COPII-coated vesicle lumen
+  details: 'Linked the COPII-coated vesicle lumen curation record to pull request #901 after
+    opening the PR for review.'

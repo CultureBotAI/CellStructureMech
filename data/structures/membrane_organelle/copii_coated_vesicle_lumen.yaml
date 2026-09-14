@@ -1,0 +1,109 @@
+identifier: cellstructuremech:copii_coated_vesicle_lumen
+label: COPII-coated vesicle lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The COPII-coated vesicle compartment bounded by the COPII-coated vesicle
+  membrane.
+definition_source: uniprot.location:SL-0322
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T22:18:12Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T22:18:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added UniProt synonyms, cytoplasmic-vesicle-lumen parentage, COPII-coated-vesicle
+    parthood, the UniProt SL-0322 xref, Saccharomyces scope, GO/UniProt/DOI evidence,
+    and a nonmechanistic COPII-coated-vesicle lumen topology graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: Coat protein complexes II lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0322
+- synonym_text: ER to Golgi transport vesicle lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0322
+parent_structures:
+- GO:0060205
+part_of:
+- GO:0030134
+xrefs:
+- uniprot.location:SL-0322
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms COPII-coated ER-to-Golgi transport vesicles from endoplasmic-reticulum
+    membranes.
+  reference: DOI:10.1016/0092-8674(94)90138-4
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Sec proteins were identified as COPII coat machinery
+    that drives ER-derived vesicle budding.
+  reference: DOI:10.1016/0092-8674(94)90138-4
+evidence:
+- reference: uniprot.location:SL-0322
+  notes: UniProt Subcellular Location entry SL-0322 identifies the COPII-coated vesicle
+    lumen, places it under cytoplasmic vesicle lumen, and names it part of COPII-coated
+    vesicle.
+- reference: GO:0060205
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle lumen.
+- reference: GO:0030134
+  notes: Gene Ontology cellular-component term for the enclosing COPII-coated ER-to-Golgi
+    transport vesicle.
+- reference: GO:0012507
+  notes: Gene Ontology cellular-component term for the ER to Golgi transport vesicle
+    membrane bounding the lumen.
+- reference: DOI:10.1016/0092-8674(94)90138-4
+  notes: 'Barlowe et al. 1994, COPII: A membrane coat formed by Sec proteins that
+    drive vesicle budding from the endoplasmic reticulum, Cell.'
+causal_graphs:
+- graph_id: copii_coated_vesicle_lumen_topology
+  title: COPII-coated vesicle lumen topology
+  description: The ER to Golgi transport vesicle membrane bounds the COPII-coated
+    vesicle lumen inside the coated carrier.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the mature COPII-coated vesicle lumen boundary without
+    asserting Sec coat assembly, cargo sorting, or fusion steps.
+  nodes:
+  - node_id: copii_coated_vesicle_lumen
+    label: COPII-coated vesicle lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:copii_coated_vesicle_lumen
+  - node_id: er_to_golgi_transport_vesicle_membrane
+    label: ER to Golgi transport vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0012507
+  - node_id: copii_coated_vesicle
+    label: COPII-coated ER to Golgi transport vesicle
+    node_type: ORGANELLE
+    grounding: GO:0030134
+  edges:
+  - subject: copii_coated_vesicle_lumen
+    predicate: is part of
+    object: copii_coated_vesicle
+    description: The COPII-coated vesicle lumen is the bounded compartment inside
+      a COPII-coated ER-to-Golgi transport vesicle.
+    evidence:
+    - reference: uniprot.location:SL-0322
+      notes: UniProt SL-0322 places the COPII-coated vesicle lumen under the COPII-coated
+        vesicle.
+    - reference: GO:0030134
+      notes: GO:0030134 identifies the enclosing COPII-coated ER-to-Golgi transport
+        vesicle.
+  - subject: er_to_golgi_transport_vesicle_membrane
+    predicate: bounds
+    object: copii_coated_vesicle_lumen
+    description: The ER to Golgi transport vesicle membrane bounds the COPII-coated
+      vesicle lumen.
+    evidence:
+    - reference: uniprot.location:SL-0322
+      notes: UniProt SL-0322 describes the lumen as bounded by the COPII-coated vesicle
+        membrane.
+    - reference: GO:0012507
+      notes: GO:0012507 identifies the surrounding ER to Golgi transport vesicle membrane.

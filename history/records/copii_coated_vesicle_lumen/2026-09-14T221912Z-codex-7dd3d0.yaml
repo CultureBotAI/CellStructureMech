@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/copii_coated_vesicle_lumen.yaml
+  slug: copii_coated_vesicle_lumen
+session:
+  id: 2026-09-14T221912Z-codex-7dd3d0
+  timestamp: '2026-09-14T22:19:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add COPII-coated vesicle lumen record
+  details: Created the cellstructuremech:copii_coated_vesicle_lumen COPII-coated vesicle lumen
+    record with UniProt SL-0322 synonyms, cytoplasmic-vesicle-lumen parentage, COPII-coated-vesicle
+    parthood, the UniProt cross-reference, Saccharomyces cerevisiae evidence, and a nonmechanistic
+    COPII-coated-vesicle lumen topology graph; regenerated embeddings, pages, and documentation
+    will be committed with the source record.
