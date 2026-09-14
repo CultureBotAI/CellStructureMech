@@ -20,6 +20,12 @@ curation_history:
     function, GO/UniProt/DOI evidence, and a nonmechanistic cellular-bud topology
     graph.
   llm_assisted: true
+- timestamp: '2026-09-14T23:45:45Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #906 by narrowing the Saccharomyces cerevisiae canonical example
+    to the Pea2/Spa2 budding-site localization claim supported by DOI:10.1083/jcb.135.3.725.'
+  llm_assisted: true
 synonyms:
 - synonym_text: bud
   synonym_type: EXACT_SYNONYM
@@ -43,8 +49,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model in which polarity proteins and septins organize at the
-    bud tip and mother-bud neck.
+  note: Budding-yeast model in which Pea2 and Spa2 polarity proteins localize to polarized-growth
+    sites during budding.
   reference: DOI:10.1083/jcb.135.3.725
 functions:
 - function_id: budding_growth

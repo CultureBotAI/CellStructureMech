@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cellular_bud.yaml
+  slug: cellular_bud
+session:
+  id: 2026-09-14T234607Z-codex-05f44e
+  timestamp: '2026-09-14T23:46:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/906
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/905
+events:
+- type: EDIT
+  outcome: changed
+  summary: Narrow cellular bud canonical example
+  details: 'Resolved review issue #906 by narrowing the Saccharomyces cerevisiae canonical
+    example to the DOI:10.1083/jcb.135.3.725-supported Pea2/Spa2 budding-site localization
+    claim.'
