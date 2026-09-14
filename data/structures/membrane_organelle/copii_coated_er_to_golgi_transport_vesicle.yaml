@@ -1,0 +1,188 @@
+identifier: GO:0030134
+label: COPII-coated ER to Golgi transport vesicle
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A vesicle with a coat formed of the COPII coat complex proteins. The COPII
+  coat complex is formed by the Sec23p/Sec24p and the Sec13p/Sec31p heterodimers.
+  COPII-associated vesicles transport proteins from the rough endoplasmic reticulum
+  to the Golgi apparatus (anterograde transport).
+definition_source: GO:0030134
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T01:11:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T01:12:38Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO coated-vesicle parentage, COPII coat parthood, GO synonyms, Saccharomyces
+    scope, COPII budding function, GO/DOI evidence, and a nonmechanistic ER-to-Golgi
+    vesicle topology graph.
+  llm_assisted: true
+- timestamp: '2026-09-14T01:22:34Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: 'Addressed issue #861 by replacing the vesicle-creation function with GO:0006888
+    ER-to-Golgi vesicle-mediated transport while retaining COPII budding as topology
+    evidence.'
+  llm_assisted: true
+synonyms:
+- synonym_text: COPII-associated ER to Golgi transport vesicle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030134
+- synonym_text: COPII-associated vesicle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030134
+- synonym_text: COPII-coated vesicle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030134
+- synonym_text: COPII vesicle
+  synonym_type: RELATED_SYNONYM
+  source: GO:0030134
+- synonym_text: ER to Golgi transport vesicle
+  synonym_type: RELATED_SYNONYM
+  source: GO:0030134
+- synonym_text: ER-Golgi transport vesicle
+  synonym_type: RELATED_SYNONYM
+  source: GO:0030134
+- synonym_text: endoplasmic reticulum to Golgi transport vesicle
+  synonym_type: RELATED_SYNONYM
+  source: GO:0030134
+parent_structures:
+- GO:0030135
+has_part:
+- GO:0030127
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms COPII-coated ER-to-Golgi transport vesicles from endoplasmic-reticulum
+    membranes using the Sec23/Sec24, Sec13/Sec31, and Sar1 COPII coat machinery.
+  reference: DOI:10.1016/0092-8674(94)90138-4
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Sec proteins were identified as COPII coat machinery
+    that drives ER-derived vesicle budding.
+  reference: DOI:10.1016/0092-8674(94)90138-4
+functions:
+- function_id: er_to_golgi_vesicle_mediated_transport
+  label: endoplasmic reticulum to Golgi vesicle-mediated transport
+  grounding: GO:0006888
+  description: COPII-coated ER-to-Golgi transport vesicles act as anterograde carriers
+    that move cargo from the endoplasmic reticulum to the Golgi apparatus.
+  evidence:
+  - reference: GO:0006888
+    notes: GO:0006888 defines ER-to-Golgi vesicle-mediated transport as movement from
+      the ER to the Golgi mediated by COPII vesicles.
+  - reference: GO:0030134
+    notes: GO:0030134 defines COPII-coated ER-to-Golgi transport vesicles as anterograde
+      protein carriers from rough ER to Golgi apparatus.
+evidence:
+- reference: GO:0030134
+  notes: Gene Ontology cellular-component term for COPII-coated ER-to-Golgi transport
+    vesicles.
+- reference: GO:0030135
+  notes: Gene Ontology cellular-component parent term for coated vesicles.
+- reference: GO:0030127
+  notes: Gene Ontology cellular-component term for the COPII vesicle coat carried
+    by the vesicle.
+- reference: GO:0090114
+  notes: Gene Ontology biological-process term for COPII-coated vesicle budding.
+- reference: GO:0006888
+  notes: Gene Ontology biological-process term for ER-to-Golgi vesicle-mediated transport
+    by COPII vesicles.
+- reference: DOI:10.1016/0092-8674(94)90138-4
+  notes: 'Barlowe et al. 1994, ''COPII: A membrane coat formed by Sec proteins that
+    drive vesicle budding from the endoplasmic reticulum'', Cell.'
+- reference: DOI:10.1016/S0092-8674(00)81577-9
+  notes: Matsuoka et al. 1998, 'COPII-Coated Vesicle Formation Reconstituted with
+    Purified Coat Proteins and Chemically Defined Liposomes', Cell.
+causal_graphs:
+- graph_id: copii_er_to_golgi_vesicle_topology
+  title: COPII-coated vesicle topology
+  description: The COPII vesicle coat assembles on endoplasmic-reticulum membrane
+    to produce coated vesicles that mediate ER-to-Golgi transport.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the whole vesicle, its COPII coat, and its ER-to-Golgi
+    route without re-modeling individual Sec coat subunits.
+  nodes:
+  - node_id: er_membrane
+    label: endoplasmic reticulum membrane
+    node_type: STRUCTURE
+    grounding: GO:0005789
+  - node_id: copii_vesicle_coat
+    label: COPII vesicle coat
+    node_type: STRUCTURE
+    grounding: GO:0030127
+  - node_id: copii_coated_vesicle
+    label: COPII-coated ER to Golgi transport vesicle
+    node_type: ORGANELLE
+    grounding: GO:0030134
+  - node_id: golgi_apparatus
+    label: Golgi apparatus
+    node_type: ORGANELLE
+    grounding: GO:0005794
+  - node_id: copii_coated_vesicle_budding
+    label: COPII-coated vesicle budding
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0090114
+  - node_id: er_to_golgi_transport
+    label: endoplasmic reticulum to Golgi vesicle-mediated transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006888
+  edges:
+  - subject: copii_vesicle_coat
+    predicate: is part of
+    object: copii_coated_vesicle
+    description: The COPII coat is the protein coat carried by COPII-coated ER-to-Golgi
+      transport vesicles.
+    evidence:
+    - reference: GO:0030134
+      notes: GO:0030134 defines this vesicle by its COPII coat complex.
+  - subject: er_membrane
+    predicate: evaginates into
+    object: copii_coated_vesicle
+    description: COPII-coated ER-to-Golgi transport vesicles bud by evagination of
+      endoplasmic-reticulum membrane.
+    evidence:
+    - reference: GO:0090114
+      notes: GO:0090114 defines COPII-coated vesicle budding as evagination of ER
+        membrane to form a COPII-coated vesicle.
+    - reference: DOI:10.1016/S0092-8674(00)81577-9
+      notes: Matsuoka et al. 1998 reconstituted COPII-coated vesicle formation on
+        defined liposomes.
+  - subject: copii_coated_vesicle
+    predicate: transports cargo to
+    object: golgi_apparatus
+    description: COPII-associated vesicles carry proteins from the rough endoplasmic
+      reticulum to the Golgi apparatus.
+    evidence:
+    - reference: GO:0030134
+      notes: GO:0030134 describes COPII-associated vesicles as ER-to-Golgi anterograde
+        transport carriers.
+  - subject: copii_vesicle_coat
+    predicate: participates in
+    object: copii_coated_vesicle_budding
+    description: COPII coat proteins drive COPII-coated vesicle formation.
+    evidence:
+    - reference: DOI:10.1016/0092-8674(94)90138-4
+      notes: Barlowe et al. 1994 identified Sec proteins as a COPII membrane coat
+        that drives ER vesicle budding.
+    - reference: GO:0090114
+      notes: GO:0090114 denotes the budding process that forms COPII-coated vesicles.
+  - subject: copii_coated_vesicle
+    predicate: participates in
+    object: er_to_golgi_transport
+    description: COPII-coated vesicles mediate anterograde transport from the ER to
+      the Golgi apparatus.
+    evidence:
+    - reference: GO:0006888
+      notes: GO:0006888 defines ER-to-Golgi vesicle-mediated transport as movement
+        from the ER to the Golgi mediated by COPII vesicles.
+    - reference: GO:0030134
+      notes: GO:0030134 identifies COPII-coated ER-to-Golgi transport vesicles as
+        the anterograde carriers.
