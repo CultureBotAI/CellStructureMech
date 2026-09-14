@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cytoplasmic_vesicle_lumen.yaml
+  slug: cytoplasmic_vesicle_lumen
+session:
+  id: 2026-09-14T212320Z-codex-4e2a0f
+  timestamp: '2026-09-14T21:23:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/898
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - functions
+  - evidence
+  summary: Remove overbroad cytoplasmic vesicle lumen function
+  details: Resolved issue 898 by removing the generic vesicle_lumen_cargo_enclosure function
+    and the now-unused UniProt SL-0088 evidence so the record only asserts lumen topology
+    directly supported by GO:0060205 and SL-0325.
