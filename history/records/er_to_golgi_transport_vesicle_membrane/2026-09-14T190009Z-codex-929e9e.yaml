@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/er_to_golgi_transport_vesicle_membrane.yaml
+  slug: er_to_golgi_transport_vesicle_membrane
+session:
+  id: 2026-09-14T190009Z-codex-929e9e
+  timestamp: '2026-09-14T19:00:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - part_of
+  - synonyms
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added ER to Golgi transport vesicle membrane record
+  details: Created the GO:0012507 ER to Golgi transport vesicle membrane record with GO transport/coated-vesicle
+    membrane parentage, COPII-coated ER-to-Golgi transport vesicle parthood, the COPII-coated-vesicle
+    membrane synonym, a reviewed-label-only lipid-bilayer component, Saccharomyces cerevisiae
+    scope, GO and DOI evidence, a nonmechanistic ER-to-Golgi vesicle-membrane topology graph,
+    and resolved COPII-coat boundary interpretation.
