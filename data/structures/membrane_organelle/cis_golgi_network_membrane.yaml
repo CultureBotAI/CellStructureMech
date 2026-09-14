@@ -1,0 +1,168 @@
+identifier: GO:0033106
+label: cis-Golgi network membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding any of the compartments that make up the
+  cis-Golgi network.
+definition_source: GO:0033106
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T06:27:38Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T06:28:22Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Golgi-membrane parentage, cis-Golgi-network parthood, a reviewed-label-only
+    cis-Golgi network membrane lipid-bilayer component, Komagataella scope, GO/DOI
+    evidence, a nonmechanistic topology graph, and lipid-grounding plus early-Golgi
+    trafficking-factor boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0000139
+part_of:
+- GO:0005801
+synonyms:
+- synonym_text: cis Golgi network membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0033106
+components:
+- component_id: cis_golgi_network_membrane_lipid_bilayer
+  label: cis-Golgi network membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent of the cis-Golgi network membrane.
+  evidence:
+  - reference: GO:0033106
+    notes: GO:0033106 defines the cis-Golgi network membrane as the lipid bilayer
+      around compartments that make up the cis-Golgi network.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0033106 identifies the whole cis-Golgi network membrane, but
+    no separate source-neutral CURIE was curated for the generic lipid constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4922
+  taxon_label: Komagataella pastoris
+  presence: COMMON
+  note: Rossanese et al. resolved ordered Pichia pastoris Golgi stacks positioned
+    near discrete transitional ER sites.
+  reference: DOI:10.1083/jcb.145.1.69
+canonical_examples:
+- taxon_id: NCBITaxon:4922
+  taxon_label: Komagataella pastoris
+  note: Budding-yeast model, originally studied as Pichia pastoris, with ordered Golgi
+    stacks associated with transitional ER organization.
+  reference: DOI:10.1083/jcb.145.1.69
+evidence:
+- reference: GO:0033106
+  notes: Gene Ontology cellular-component term for cis-Golgi network membrane.
+- reference: GO:0000139
+  notes: Gene Ontology cellular-component parent term for Golgi membrane.
+- reference: GO:0005801
+  notes: Gene Ontology cellular-component term for cis-Golgi network.
+- reference: GO:0005794
+  notes: Gene Ontology cellular-component term for Golgi apparatus.
+- reference: GO:0005783
+  notes: Gene Ontology cellular-component term for endoplasmic reticulum.
+- reference: DOI:10.1083/jcb.145.1.69
+  notes: Rossanese et al. 1999, 'Golgi Structure Correlates with Transitional Endoplasmic
+    Reticulum Organization in Pichia pastoris and Saccharomyces cerevisiae', Journal
+    of Cell Biology.
+- reference: DOI:10.1016/S0014-5793(00)01268-0
+  notes: Cho, Noda and Yoda 2000, 'Proteins in the early golgi compartment of Saccharomyces
+    cerevisiae immunoisolated by Sed5p', FEBS Letters.
+causal_graphs:
+- graph_id: cis_golgi_network_membrane_topology
+  title: Cis-Golgi network membranes bound the ER-facing Golgi side
+  description: The cis-Golgi network membrane bounds cis-Golgi network compartments
+    on the Golgi side that abuts the endoplasmic reticulum.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the cis-Golgi network membrane boundary without
+    asserting a full COPII, tethering, or early-Golgi SNARE mechanism.
+  nodes:
+  - node_id: cis_golgi_network_membrane
+    label: cis-Golgi network membrane
+    node_type: STRUCTURE
+    grounding: GO:0033106
+    component_ref: cis_golgi_network_membrane_lipid_bilayer
+  - node_id: cis_golgi_network
+    label: cis-Golgi network
+    node_type: STRUCTURE
+    grounding: GO:0005801
+  - node_id: golgi_apparatus
+    label: Golgi apparatus
+    node_type: STRUCTURE
+    grounding: GO:0005794
+  - node_id: endoplasmic_reticulum
+    label: endoplasmic reticulum
+    node_type: STRUCTURE
+    grounding: GO:0005783
+  edges:
+  - subject: cis_golgi_network_membrane
+    predicate: bounds
+    object: cis_golgi_network
+    description: The cis-Golgi network membrane is the lipid-bilayer boundary around
+      compartments that make up the cis-Golgi network.
+    evidence:
+    - reference: GO:0033106
+      notes: GO:0033106 defines the membrane surrounding cis-Golgi network compartments.
+  - subject: cis_golgi_network
+    predicate: is part of
+    object: golgi_apparatus
+    description: The cis-Golgi network is the convex ER-facing network of the Golgi
+      apparatus.
+    evidence:
+    - reference: GO:0005801
+      notes: GO:0005801 defines the cis-Golgi network as a network of tubular and
+        cisternal structures on the convex side of the Golgi apparatus.
+  - subject: cis_golgi_network
+    predicate: abuts
+    object: endoplasmic_reticulum
+    description: The cis-Golgi network occupies the Golgi side that abuts endoplasmic-reticulum
+      export sites.
+    evidence:
+    - reference: GO:0005801
+      notes: GO:0005801 places the cis-Golgi network on the Golgi side that abuts
+        the endoplasmic reticulum.
+    - reference: DOI:10.1083/jcb.145.1.69
+      notes: Rossanese et al. 1999 compared transitional-ER organization with Pichia
+        and Saccharomyces Golgi organization.
+discussions:
+- discussion_id: ground_cis_golgi_network_membrane_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    cis-Golgi network membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cis_golgi_network_membrane_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0033106, but the cis-Golgi network
+    membrane lipid-bilayer constituent is intentionally left as reviewed-label-only
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-14'
+- discussion_id: exclude_early_golgi_traffic_factors_as_components
+  prompt: Keep Sed5p and transitional-ER/COPII traffic factors out of the cis-Golgi
+    network membrane structural-component list until exact source-neutral families
+    are curated and a constituent-versus-trafficking boundary is reviewed.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#cis_golgi_network_membrane_topology
+  rationale: Rossanese et al. 1999 and Cho et al. 2000 support ER-proximal and Sed5p-positive
+    early Golgi organization, but this initial membrane record does not treat those
+    trafficking factors as lipid-bilayer constituents of the cis-Golgi network membrane
+    itself.
+  evidence:
+  - reference: DOI:10.1083/jcb.145.1.69
+    notes: Rossanese et al. 1999 compared Golgi organization with transitional ER
+      organization in yeasts.
+  - reference: DOI:10.1016/S0014-5793(00)01268-0
+    notes: Cho et al. 2000 immunoisolated a Sed5p-positive early Golgi fraction from
+      Saccharomyces cerevisiae.
+  posed_by: codex
+  posed_date: '2026-09-14'
+  resolved_date: '2026-09-14'
