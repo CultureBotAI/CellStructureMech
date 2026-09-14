@@ -1134,6 +1134,15 @@
   "definition": "A cytosolic vesicle that is enclosed by a double membrane and is implicated in the cytoplasm to vacuole targeting pathway. These vesicles are found in the yeast S. cerevisiae, and contain vacuolar hydrolases, aminopeptidase I (Ape1p) and alpha-mannosidase (Ams1p)."
  },
  {
+  "identifier": "cellstructuremech:cvt_vesicle_lumen",
+  "label": "Cvt vesicle lumen",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/cvt_vesicle_lumen.html",
+  "definition": "The Cvt vesicle compartment bounded by the Cvt vesicle membrane."
+ },
+ {
   "identifier": "GO:0033110",
   "label": "Cvt vesicle membrane",
   "category": "MEMBRANE_ORGANELLE",

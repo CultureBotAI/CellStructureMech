@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cvt_vesicle_lumen.yaml
+  slug: cvt_vesicle_lumen
+session:
+  id: 2026-09-14T214102Z-codex-e71007
+  timestamp: '2026-09-14T21:41:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Cvt vesicle lumen record
+  details: Created the cellstructuremech:cvt_vesicle_lumen Cvt vesicle lumen record with cytoplasmic-vesicle-lumen
+    parentage, Cvt-vesicle parthood, the UniProt SL-0323 cross-reference, Saccharomyces cerevisiae
+    evidence, and a nonmechanistic Cvt-vesicle-lumen topology graph; regenerated embeddings,
+    pages, and documentation will be committed with the source record.

@@ -1,0 +1,95 @@
+identifier: cellstructuremech:cvt_vesicle_lumen
+label: Cvt vesicle lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The Cvt vesicle compartment bounded by the Cvt vesicle membrane.
+definition_source: uniprot.location:SL-0323
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-14T21:40:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-14T21:40:35Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic-vesicle-lumen parentage, Cvt-vesicle parthood, the UniProt
+    SL-0323 xref, Saccharomyces scope, GO/UniProt/DOI evidence, and a nonmechanistic
+    Cvt-vesicle-lumen topology graph.
+  llm_assisted: true
+parent_structures:
+- GO:0060205
+part_of:
+- GO:0033107
+xrefs:
+- uniprot.location:SL-0323
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast Cvt vesicles are double-membrane carriers whose bounded lumen
+    encloses cytoplasm-to-vacuole targeting cargo before vacuolar delivery.
+  reference: DOI:10.1091/mbc.e03-07-0479
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model used to characterize Cvt vesicle assembly and its early-secretory-pathway
+    requirements.
+  reference: DOI:10.1091/mbc.e03-07-0479
+evidence:
+- reference: uniprot.location:SL-0323
+  notes: UniProt Subcellular Location entry SL-0323 identifies the Cvt vesicle lumen,
+    places it under cytoplasmic vesicle lumen, and names it part of Cvt vesicle.
+- reference: GO:0060205
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle lumen.
+- reference: GO:0033107
+  notes: Gene Ontology cellular-component term for the enclosing Cvt vesicle.
+- reference: GO:0033110
+  notes: Gene Ontology cellular-component term for either Cvt vesicle membrane bilayer
+    bounding the lumen.
+- reference: DOI:10.1091/mbc.e03-07-0479
+  notes: Reggiori et al. 2004, Early stages of the secretory pathway, but not endosomes,
+    are required for Cvt vesicle and autophagosome assembly in Saccharomyces cerevisiae,
+    Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: cvt_vesicle_lumen_topology
+  title: Cvt vesicle lumen topology
+  description: A Cvt vesicle membrane bounds the Cvt vesicle lumen inside the completed
+    double-membrane Cvt vesicle.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the mature Cvt vesicle lumen boundary without asserting
+    the Atg receptor, scaffold, or membrane-expansion steps that assemble the vesicle.
+  nodes:
+  - node_id: cvt_vesicle_lumen
+    label: Cvt vesicle lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:cvt_vesicle_lumen
+  - node_id: cvt_vesicle_membrane
+    label: Cvt vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0033110
+  - node_id: cvt_vesicle
+    label: Cvt vesicle
+    node_type: ORGANELLE
+    grounding: GO:0033107
+  edges:
+  - subject: cvt_vesicle_lumen
+    predicate: is part of
+    object: cvt_vesicle
+    description: The Cvt vesicle lumen is the bounded compartment inside a Cvt vesicle.
+    evidence:
+    - reference: uniprot.location:SL-0323
+      notes: UniProt SL-0323 places the Cvt vesicle lumen under the Cvt vesicle.
+    - reference: GO:0033107
+      notes: GO:0033107 identifies the enclosing Cvt vesicle.
+  - subject: cvt_vesicle_membrane
+    predicate: bounds
+    object: cvt_vesicle_lumen
+    description: The Cvt vesicle membrane bounds the Cvt vesicle lumen.
+    evidence:
+    - reference: uniprot.location:SL-0323
+      notes: UniProt SL-0323 describes the lumen as bounded by the Cvt vesicle membrane.
+    - reference: GO:0033110
+      notes: GO:0033110 identifies either bilayer surrounding a Cvt vesicle.
