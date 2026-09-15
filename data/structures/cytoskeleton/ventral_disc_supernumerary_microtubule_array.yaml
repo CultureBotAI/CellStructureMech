@@ -19,6 +19,13 @@ curation_history:
     scope, DOI evidence, a nonmechanistic supernumerary-array topology graph, and
     a supernumerary microtubule component-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-15T16:41:15Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR #999 review issue #1001 by removing the structural topology
+    function and generic tubulin assembly edge, then retargeting the graph to the
+    GO-backed supernumerary-array topology relation.'
+  llm_assisted: true
 part_of:
 - GO:0097597
 has_part:
@@ -57,19 +64,6 @@ canonical_examples:
   note: Parasitic diplomonad model used for electron-tomographic mapping of ventral-disc
     supernumerary microtubules.
   reference: DOI:10.1371/journal.pone.0043783
-functions:
-- function_id: ventral_disc_accessory_microtubule_scaffold
-  label: ventral disc accessory microtubule scaffold
-  description: The supernumerary microtubule array forms a partial, dorsal, left-handed
-    microtubule spiral associated with the Giardia ventral disc.
-  evidence:
-  - reference: GO:0097596
-    notes: Gene Ontology defines the ventral disc supernumerary microtubule array
-      as a partial left-handed microtubule spiral dorsal to the main ventral-disc
-      microtubule array.
-  - reference: DOI:10.1371/journal.pone.0043783
-    notes: Schwartz et al. 2012 resolved Giardia ventral-disc microtubules by electron
-      tomography.
 evidence:
 - reference: GO:0097596
   notes: Gene Ontology cellular-component term for the Giardia ventral-disc supernumerary
@@ -80,20 +74,15 @@ evidence:
     Complexes', PLOS ONE.
 causal_graphs:
 - graph_id: giardia_supernumerary_microtubule_array_topology
-  title: Tubulin microtubules form the Giardia ventral-disc supernumerary array
-  description: In Giardia, alpha- and beta-tubulins polymerize into supernumerary
-    microtubules that form a partial left-handed spiral dorsal to the main ventral-disc
-    microtubule array.
-  graph_kind: ASSEMBLY
+  title: Giardia supernumerary microtubules lie dorsal to the main ventral-disc array
+  description: In Giardia, the supernumerary microtubule array is a partial left-handed
+    spiral that lies generally dorsal to the main ventral-disc microtubule array.
+  graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records the supernumerary microtubule array as a named dorsal
-    ventral-disc substructure while leaving its exact accessory microtubule-associated
-    proteins and assembly order unresolved.
+  scope_notes: The graph records GO-backed topology for the named supernumerary microtubule
+    array while leaving its exact accessory microtubule-associated proteins and assembly
+    order unresolved.
   nodes:
-  - node_id: alpha_beta_tubulins
-    label: alpha- and beta-tubulins
-    node_type: GENE_OR_PROTEIN
-    component_ref: alpha_beta_tubulins
   - node_id: supernumerary_microtubule_array
     label: ventral disc supernumerary microtubule array
     node_type: STRUCTURE
@@ -107,17 +96,6 @@ causal_graphs:
     node_type: STRUCTURE
     grounding: GO:0097597
   edges:
-  - subject: alpha_beta_tubulins
-    predicate: polymerize into
-    object: supernumerary_microtubule_array
-    description: Alpha- and beta-tubulin subunits polymerize into the microtubules
-      that make up the Giardia ventral-disc supernumerary array.
-    evidence:
-    - reference: GO:0005874
-      notes: Gene Ontology defines microtubules as polymeric tubulin tubes.
-    - reference: GO:0097596
-      notes: Gene Ontology defines the supernumerary microtubule array as an array
-        of microtubules.
   - subject: supernumerary_microtubule_array
     predicate: lies dorsal to
     object: ventral_disc_microtubule_array

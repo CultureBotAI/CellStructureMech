@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ventral_disc_supernumerary_microtubule_array.yaml
+  slug: ventral_disc_supernumerary_microtubule_array
+session:
+  id: 2026-09-15T164147Z-codex-0ba9bd
+  timestamp: '2026-09-15T16:41:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1000
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1001
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/999
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - functions
+  - causal_graphs
+  - curation_history
+  - history
+  summary: Resolve ventral disc supernumerary microtubule array PR review issues
+  details: 'Resolved PR #999 review issues #1000 and #1001 by removing the structural topology
+    function and generic tubulin assembly edge, retargeting the graph to the GO-backed supernumerary-array
+    topology relation, and adding this append-only history entry with links to the pull request
+    and review issues.'
