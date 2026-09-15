@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/proteasome_accessory_complex.yaml
+  slug: proteasome_accessory_complex
+session:
+  id: 2026-09-15T220729Z-codex-d99b8b
+  timestamp: '2026-09-15T22:07:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1031
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1032
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1030
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  summary: Address proteasome accessory complex review
+  details: 'Resolved PR #1030 review issues #1031 and #1032 by changing the proteasome accessory
+    graph predicates to the same cap and regulate substrate access to strings used by the
+    whole-proteasome graph, and by rewording the accessory-family boundary discussion so it
+    no longer claims the related 19S, PA28, and PAN GO terms are descendants or future child
+    records of GO:0022624.'

@@ -20,6 +20,13 @@ curation_history:
     a nonmechanistic accessory-capped-core graph, and a resolved boundary interpretation
     for family-specific accessory subunits.
   llm_assisted: true
+- timestamp: '2026-09-15T22:06:46Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Addressed PR #1030 review issues #1031 and #1032 by aligning graph predicate
+    strings with the whole-proteasome graph and removing descendant/child wording
+    from the accessory-family boundary discussion.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -97,7 +104,7 @@ causal_graphs:
     grounding: GO:0005839
   edges:
   - subject: proteasome_accessory_complex
-    predicate: caps
+    predicate: cap
     object: proteasome_core_complex
     description: Proteasome accessory complexes cap one or both ends of the proteasome
       core.
@@ -106,7 +113,7 @@ causal_graphs:
       notes: GO:0022624 defines the proteasome accessory complex as a protein complex
         that caps one or both ends of the proteasome core complex.
   - subject: proteasome_accessory_complex
-    predicate: regulates substrate access to
+    predicate: regulate substrate access to
     object: proteasome_core_complex
     description: Accessory complexes control substrate access to the internal proteolytic
       sites of the 20S core.
@@ -120,24 +127,25 @@ causal_graphs:
         substrates into the 20S core.
 discussions:
 - discussion_id: accessory_complex_family_boundary
-  prompt: Should 19S, PAN, PA28, Mpa, Bpa, or Cpa subunits be listed as components
+  prompt: Should 19S, PAN, PA28, Mpa, Bpa, or Cpa families be listed as components
     of the generic proteasome accessory complex?
   kind: INTERPRETATION
   status: RESOLVED
   attaches_to:
   - causal_graphs#accessory_complex_caps_20s_core
-  rationale: GO:0022624 groups alternative proteasome caps and regulators. Those specific
-    eukaryotic, archaeal, and actinobacterial complexes do not share one curated source-neutral
+  rationale: GO:0022624 groups alternative proteasome caps and regulators. Those eukaryotic,
+    archaeal, and actinobacterial accessory families do not share one curated source-neutral
     component set.
   evidence:
   - reference: GO:0022624
-    notes: GO descendants of GO:0022624 include specific regulatory particle, activator-complex,
-      and proteasome-activating nucleotidase classes.
+    notes: GO term metadata distinguishes specific regulatory-particle, activator-complex,
+      and proteasome-activating nucleotidase classes from the generic GO:0022624 cap
+      term.
   - reference: DOI:10.3389/fmolb.2019.00023
     notes: Muller and Weber-Ban 2019 review multiple bacterial regulator families
       that can route proteins into actinobacterial 20S proteasomes.
   resolution_note: Left molecular components unset on this generic cap record and
-    reserved family-specific subunits for future records about exact child accessory
+    reserved family-specific subunits for future records about exact accessory-family
     complexes.
   posed_by: codex
   posed_date: '2026-09-15'
