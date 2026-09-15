@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nuclear_inner_membrane.yaml
+  slug: nuclear_inner_membrane
+session:
+  id: 2026-09-15T063222Z-codex-0b690d
+  timestamp: '2026-09-15T06:32:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/941
+  - https://github.com/CultureBotAI/CellStructureMech/issues/942
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/940
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fix nuclear inner membrane review findings
+  details: 'Addressed review issues #941 and #942 by narrowing the custom process to integral
+    inner nuclear membrane protein targeting, adding an explicit targeting edge to the nuclear
+    inner membrane, and modelling Heh1p and Heh2p as cargo of that process.'
