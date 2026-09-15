@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/prospore_membrane_leading_edge.yaml
+  slug: prospore_membrane_leading_edge
+session:
+  id: 2026-09-15T083247Z-claude-code-44b945
+  timestamp: '2026-09-15T08:32:47Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/951
+events:
+- type: REVIEW
+  outcome: changed
+  summary: 'Open PR #951 for prospore membrane leading edge'
+  details: 'Opened PR #951 to review the GO:0070056 prospore membrane leading edge record,
+    generated embedding indexes, and rendered pages.'

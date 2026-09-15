@@ -8372,9 +8372,9 @@
           "cosine_similarity": 0.68723348
         },
         {
-          "identifier": "cellstructuremech:cvt_vesicle_lumen",
-          "label": "Cvt vesicle lumen",
-          "cosine_similarity": 0.67192991
+          "identifier": "GO:0070056",
+          "label": "prospore membrane leading edge",
+          "cosine_similarity": 0.67973828
         }
       ]
     },
@@ -9049,14 +9049,14 @@
           "cosine_similarity": 0.71433607
         },
         {
+          "identifier": "GO:0070056",
+          "label": "prospore membrane leading edge",
+          "cosine_similarity": 0.70257629
+        },
+        {
           "identifier": "GO:0060205",
           "label": "cytoplasmic vesicle lumen",
           "cosine_similarity": 0.70102582
-        },
-        {
-          "identifier": "GO:0033099",
-          "label": "attachment organelle",
-          "cosine_similarity": 0.69250762
         }
       ]
     },
@@ -9189,6 +9189,11 @@
       "label": "spitzenkorper",
       "neighbors": [
         {
+          "identifier": "GO:0070056",
+          "label": "prospore membrane leading edge",
+          "cosine_similarity": 0.68360406
+        },
+        {
           "identifier": "GO:0005628",
           "label": "prospore membrane",
           "cosine_similarity": 0.66644681
@@ -9207,11 +9212,6 @@
           "identifier": "GO:0005934",
           "label": "cellular bud tip",
           "cosine_similarity": 0.64656455
-        },
-        {
-          "identifier": "GO:0000328",
-          "label": "fungal-type vacuole lumen",
-          "cosine_similarity": 0.64476839
         }
       ]
     },
@@ -9736,9 +9736,9 @@
           "cosine_similarity": 0.8135034
         },
         {
-          "identifier": "GO:0005628",
-          "label": "prospore membrane",
-          "cosine_similarity": 0.75701316
+          "identifier": "GO:0070056",
+          "label": "prospore membrane leading edge",
+          "cosine_similarity": 0.75941057
         }
       ]
     },
@@ -9767,9 +9767,9 @@
           "cosine_similarity": 0.8025757
         },
         {
-          "identifier": "GO:0005628",
-          "label": "prospore membrane",
-          "cosine_similarity": 0.75070964
+          "identifier": "GO:0070056",
+          "label": "prospore membrane leading edge",
+          "cosine_similarity": 0.76234927
         }
       ]
     },
@@ -9855,14 +9855,14 @@
           "cosine_similarity": 0.84506726
         },
         {
+          "identifier": "GO:0070056",
+          "label": "prospore membrane leading edge",
+          "cosine_similarity": 0.82508939
+        },
+        {
           "identifier": "GO:0042170",
           "label": "plastid membrane",
           "cosine_similarity": 0.8130264
-        },
-        {
-          "identifier": "GO:0009527",
-          "label": "plastid outer membrane",
-          "cosine_similarity": 0.80538613
         }
       ]
     },
@@ -9933,6 +9933,11 @@
       "label": "prospore membrane",
       "neighbors": [
         {
+          "identifier": "GO:0070056",
+          "label": "prospore membrane leading edge",
+          "cosine_similarity": 0.91317327
+        },
+        {
           "identifier": "GO:0043594",
           "label": "outer endospore membrane",
           "cosine_similarity": 0.87075835
@@ -9951,11 +9956,37 @@
           "identifier": "GO:0005637",
           "label": "nuclear inner membrane",
           "cosine_similarity": 0.7959142
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0070056",
+      "label": "prospore membrane leading edge",
+      "neighbors": [
+        {
+          "identifier": "GO:0005628",
+          "label": "prospore membrane",
+          "cosine_similarity": 0.91317327
         },
         {
-          "identifier": "GO:0005640",
-          "label": "nuclear outer membrane",
-          "cosine_similarity": 0.79560552
+          "identifier": "GO:0043594",
+          "label": "outer endospore membrane",
+          "cosine_similarity": 0.82508939
+        },
+        {
+          "identifier": "GO:0005789",
+          "label": "endoplasmic reticulum membrane",
+          "cosine_similarity": 0.78918749
+        },
+        {
+          "identifier": "cellstructuremech:cvt_vesicle_lumen",
+          "label": "Cvt vesicle lumen",
+          "cosine_similarity": 0.77472062
+        },
+        {
+          "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
+          "label": "COPI-coated vesicle lumen",
+          "cosine_similarity": 0.77352309
         }
       ]
     }
