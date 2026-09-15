@@ -26,6 +26,13 @@ curation_history:
     pathway label instead of using the narrower ungrounded intraluminal vesicle formation
     wording.
   llm_assisted: true
+- timestamp: '2026-09-15T19:52:57Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1019 by adding ESCRT-III membrane remodeling to the MVB sorting
+    graph and resolved #1020 by narrowing the yeast canonical example to the Vps27/ESCRT-I
+    recruitment claim directly supported by Katzmann et al. 2003.'
+  llm_assisted: true
 parent_structures:
 - GO:0016020
 part_of:
@@ -59,8 +66,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Genetic model in which Vps27 and ESCRT complexes act at endosomal membranes
-    during MVB cargo sorting.
+  note: Genetic model in which Vps27 recruits ESCRT-I to endosomal membranes during
+    MVB cargo sorting.
   reference: DOI:10.1083/jcb.200302136
 functions:
 - function_id: endosomal_membrane_cargo_sorting
@@ -110,6 +117,8 @@ evidence:
     during MVB sorting, Journal of Cell Biology.
 - reference: DOI:10.1016/j.devcel.2011.05.015
   notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+- reference: DOI:10.1016/S1534-5807(02)00220-4
+  notes: Babst et al. 2002, ESCRT-III, Developmental Cell.
 causal_graphs:
 - graph_id: endosome_membrane_mvb_sorting
   title: Endosome membrane MVB sorting
@@ -117,9 +126,10 @@ causal_graphs:
     that encloses endosome lumen and generates multivesicular-body intraluminal vesicles.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures endosome membrane topology and ESCRT recruitment
-    without making transient ESCRT complexes constituent parts of the membrane or
-    enumerating the full cargo-recognition, deubiquitination, or Vps4 recycling cycle.
+  scope_notes: The graph captures endosome membrane topology, Vps27/ESCRT-I recruitment,
+    and ESCRT-III membrane remodeling without making transient ESCRT complexes constituent
+    parts of the membrane or enumerating the full cargo-recognition, deubiquitination,
+    or Vps4 recycling cycle.
   nodes:
   - node_id: endosome_membrane
     label: endosome membrane
@@ -141,6 +151,10 @@ causal_graphs:
     label: ESCRT I complex
     node_type: STRUCTURE
     grounding: GO:0000813
+  - node_id: escrt_iii
+    label: ESCRT III complex
+    node_type: STRUCTURE
+    grounding: GO:0000815
   - node_id: ubiquitinated_membrane_cargo
     label: ubiquitinated membrane cargo
     node_type: STATE
@@ -185,6 +199,18 @@ causal_graphs:
     - reference: DOI:10.1016/S0092-8674(01)00434-2
       notes: Katzmann, Babst and Emr 2001 showed ESCRT-I is needed for ubiquitin-dependent
         MVB cargo sorting.
+  - subject: escrt_iii
+    predicate: remodels
+    object: endosome_membrane
+    description: ESCRT-III acts on endosomal membranes during intraluminal-vesicle
+      formation.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00220-4
+      notes: Babst et al. 2002 characterized yeast ESCRT-III as an endosome-associated
+        complex required for MVB sorting.
+    - reference: DOI:10.1016/j.devcel.2011.05.015
+      notes: Henne, Buchkovich and Emr 2011 reviewed ESCRT-III as the membrane-remodeling
+        complex in the endosomal ESCRT pathway.
   - subject: endosome_membrane
     predicate: forms
     object: intraluminal_vesicle

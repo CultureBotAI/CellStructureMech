@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endosome_membrane.yaml
+  slug: endosome_membrane
+session:
+  id: 2026-09-15T195327Z-codex-967ad1
+  timestamp: '2026-09-15T19:53:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1019
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1020
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1018
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed endosome membrane adversarial review findings
+  details: 'Resolved PR #1018 review issues #1019 and #1020 by adding ESCRT-III membrane remodeling
+    to the MVB sorting graph and narrowing the Saccharomyces cerevisiae canonical example
+    to the Vps27/ESCRT-I recruitment claim directly supported by Katzmann et al. 2003.'
