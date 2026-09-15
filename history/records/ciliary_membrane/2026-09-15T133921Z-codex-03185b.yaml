@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/ciliary_membrane.yaml
+  slug: ciliary_membrane
+session:
+  id: 2026-09-15T133921Z-codex-03185b
+  timestamp: '2026-09-15T13:39:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added ciliary membrane
+  details: Curated a new GO:0060170 ciliary membrane structure record with GO parentage and
+    cilium parthood, GO synonymy, reviewed label-only ciliary lipid and protein components,
+    Chlamydomonas example evidence, cilium-assembly function evidence, a nonmechanistic membrane-boundary
+    graph, and an open molecular-inventory TODO.

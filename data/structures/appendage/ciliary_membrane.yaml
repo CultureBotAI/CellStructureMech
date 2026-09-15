@@ -1,0 +1,215 @@
+identifier: GO:0060170
+label: ciliary membrane
+structure_category: APPENDAGE
+structure_kind: MEMBRANE
+definition: The portion of the plasma membrane surrounding a cilium.
+definition_source: GO:0060170
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T13:36:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T13:37:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parentage, cilium parthood, GO synonymy, reviewed label-only lipid
+    and protein components, Chlamydomonas scope, cilium-assembly function, DOI evidence,
+    a nonmechanistic membrane-boundary graph, and a molecular-inventory TODO.
+  llm_assisted: true
+- timestamp: '2026-09-15T13:37:43Z'
+  curator: codex
+  action: REFINED_EVIDENCE_SCOPE
+  changes: Tightened Chlamydomonas example notes to avoid implying that Pazour et
+    al. purified isolated ciliary membranes rather than whole flagella.
+  llm_assisted: true
+- timestamp: '2026-09-15T13:38:43Z'
+  curator: codex
+  action: FIX_CITATION_AUTHOR
+  changes: Corrected notes for DOI:10.1016/j.cub.2018.03.010 from Garcia-Gonzalo et
+    al. to Garcia et al. after Crossref DOI metadata verification.
+  llm_assisted: true
+synonyms:
+- synonym_text: cilial membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0060170
+- synonym_text: cilium membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0060170
+- synonym_text: flagellar membrane
+  synonym_type: NARROW_SYNONYM
+  source: GO:0060170
+- synonym_text: flagellum membrane
+  synonym_type: NARROW_SYNONYM
+  source: GO:0060170
+parent_structures:
+- GO:0031253
+- GO:0098588
+part_of:
+- GO:0005929
+components:
+- component_id: ciliary_membrane_lipid_bilayer
+  label: ciliary membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0060170 identifies the complete ciliary membrane domain, but
+    no exact lipid CURIE was curated for the lipids of this specialized plasma-membrane
+    extension.
+  role: Lipid-bilayer constituent of the plasma-membrane extension that surrounds
+    the cilium.
+  evidence:
+  - reference: GO:0060170
+    notes: GO:0060170 defines the ciliary membrane as the plasma-membrane portion
+      surrounding a cilium.
+  - reference: DOI:10.1016/j.cub.2018.03.010
+    notes: Garcia et al. 2018 reviewed the ciliary membrane as a specialized membrane
+      domain that contains selected lipids and proteins.
+- component_id: ciliary_membrane_proteins
+  label: ciliary membrane proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The ciliary membrane carries a sorted and organism-specific protein
+    repertoire, so this aggregate is left label-only until exact conserved families
+    are curated.
+  role: Membrane proteins that localize to the ciliary membrane for signaling, trafficking,
+    and cilium function.
+  evidence:
+  - reference: DOI:10.1083/jcb.200504008
+    notes: Pazour et al. 2005 identified predicted membrane proteins in purified Chlamydomonas
+      flagella.
+  - reference: DOI:10.1016/j.cub.2018.03.010
+    notes: Garcia et al. 2018 reviewed ciliary membrane proteins and lipids as sorted
+      constituents of the ciliary signaling surface.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas cells bear paired membrane-bounded eukaryotic flagella whose
+    purified proteome includes predicted membrane proteins.
+  reference: DOI:10.1083/jcb.200504008
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model used to study ciliary membrane proteins and membrane growth
+    during flagellar regeneration.
+  reference: DOI:10.1371/journal.pone.0053366
+functions:
+- function_id: cilium_assembly
+  label: cilium assembly
+  grounding: GO:0060271
+  description: The ciliary membrane expands with the Chlamydomonas axoneme and membrane
+    supply helps constrain flagellar growth and length.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0053366
+    notes: Dentler 2013 analyzed the role of membrane availability in regulating Chlamydomonas
+      flagellar length.
+evidence:
+- reference: GO:0060170
+  notes: Gene Ontology cellular-component term for the ciliary membrane.
+- reference: GO:0031253
+  notes: Gene Ontology cellular-component parent term for cell projection membrane.
+- reference: GO:0098588
+  notes: Gene Ontology cellular-component parent term for bounding membrane of organelle.
+- reference: GO:0005929
+  notes: Gene Ontology cellular-component term for the cilium.
+- reference: GO:0060271
+  notes: Gene Ontology biological-process term for cilium assembly.
+- reference: DOI:10.1083/jcb.200504008
+  notes: Pazour et al. 2005, Proteomic analysis of a eukaryotic cilium, Journal of
+    Cell Biology.
+- reference: DOI:10.1371/journal.pone.0053366
+  notes: Dentler 2013, A Role for the Membrane in Regulating Chlamydomonas Flagellar
+    Length, PLOS ONE.
+- reference: DOI:10.1016/j.cub.2018.03.010
+  notes: Garcia et al. 2018, How the Ciliary Membrane Is Organized Inside-Out to Communicate
+    Outside-In, Current Biology.
+causal_graphs:
+- graph_id: ciliary_membrane_bounds_ciliary_compartment
+  title: Ciliary membrane bounds the ciliary compartment
+  description: The ciliary membrane is a specialized plasma-membrane domain that surrounds
+    the cilium and carries sorted ciliary membrane proteins.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures membrane topology and ciliary membrane protein
+    localization without enumerating the lineage-specific channels, receptors, transporters,
+    or lipid species enriched in particular cilia.
+  nodes:
+  - node_id: ciliary_membrane_lipid_bilayer
+    label: ciliary membrane lipid bilayer
+    node_type: STRUCTURE
+    component_ref: ciliary_membrane_lipid_bilayer
+  - node_id: ciliary_membrane_proteins
+    label: ciliary membrane proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: ciliary_membrane_proteins
+  - node_id: ciliary_membrane
+    label: ciliary membrane
+    node_type: STRUCTURE
+    grounding: GO:0060170
+  - node_id: cilium
+    label: cilium
+    node_type: ORGANELLE
+    grounding: GO:0005929
+  - node_id: cilium_assembly
+    label: cilium assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0060271
+  edges:
+  - subject: ciliary_membrane_lipid_bilayer
+    predicate: forms membrane domain
+    object: ciliary_membrane
+    description: Specialized ciliary lipids form the bilayer domain of the ciliary
+      membrane.
+    evidence:
+    - reference: GO:0060170
+      notes: GO:0060170 identifies the ciliary membrane as a plasma-membrane portion.
+    - reference: DOI:10.1016/j.cub.2018.03.010
+      notes: Garcia et al. 2018 reviewed organization of ciliary membrane lipids and
+        proteins.
+  - subject: ciliary_membrane
+    predicate: bounds
+    object: cilium
+    description: The ciliary membrane surrounds and bounds the ciliary compartment.
+    evidence:
+    - reference: GO:0060170
+      notes: GO:0060170 defines this membrane as the plasma-membrane portion surrounding
+        a cilium and relates it as bounding layer of the cilium.
+  - subject: ciliary_membrane_proteins
+    predicate: localize to
+    object: ciliary_membrane
+    description: A sorted set of membrane proteins localizes to the Chlamydomonas
+      ciliary membrane.
+    evidence:
+    - reference: DOI:10.1083/jcb.200504008
+      notes: Pazour et al. 2005 found predicted membrane proteins in purified Chlamydomonas
+        flagella.
+  - subject: ciliary_membrane
+    predicate: expands during
+    object: cilium_assembly
+    description: The ciliary membrane grows as flagella assemble and elongate.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0053366
+      notes: Dentler 2013 analyzed membrane growth during Chlamydomonas flagellar
+        assembly and length regulation.
+discussions:
+- discussion_id: resolve_ciliary_membrane_molecular_inventory
+  prompt: Resolve exact conserved lipid classes and protein families that should replace
+    the label-only ciliary membrane lipid and protein aggregates.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ciliary_membrane_lipid_bilayer
+  - components#ciliary_membrane_proteins
+  rationale: The membrane record needs cilium-specific lipid and protein curation
+    across taxa; this first pass keeps those sets aggregate to avoid overclaiming
+    exact conserved constituents.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2018.03.010
+    notes: Garcia et al. 2018 review both ciliary lipid composition and protein targeting.
+  posed_by: codex
+  posed_date: '2026-09-15'
