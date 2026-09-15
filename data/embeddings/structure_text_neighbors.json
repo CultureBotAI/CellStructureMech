@@ -8791,6 +8791,11 @@
           "cosine_similarity": 0.84987153
         },
         {
+          "identifier": "GO:0031262",
+          "label": "Ndc80 complex",
+          "cosine_similarity": 0.80239659
+        },
+        {
           "identifier": "GO:0000444",
           "label": "MIS12/MIND type complex",
           "cosine_similarity": 0.78215719
@@ -8804,11 +8809,6 @@
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
           "cosine_similarity": 0.70728645
-        },
-        {
-          "identifier": "GO:0000815",
-          "label": "ESCRT III complex",
-          "cosine_similarity": 0.69487656
         }
       ]
     },
@@ -9044,6 +9044,11 @@
           "cosine_similarity": 0.84987153
         },
         {
+          "identifier": "GO:0031262",
+          "label": "Ndc80 complex",
+          "cosine_similarity": 0.83206377
+        },
+        {
           "identifier": "GO:0020023",
           "label": "kinetoplast",
           "cosine_similarity": 0.79700617
@@ -9052,11 +9057,6 @@
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.78914107
-        },
-        {
-          "identifier": "GO:0120120",
-          "label": "bilobe structure",
-          "cosine_similarity": 0.72277738
         }
       ]
     },
@@ -9101,6 +9101,11 @@
           "cosine_similarity": 0.85967839
         },
         {
+          "identifier": "GO:0031262",
+          "label": "Ndc80 complex",
+          "cosine_similarity": 0.80526193
+        },
+        {
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.78215719
@@ -9114,11 +9119,6 @@
           "identifier": "GO:0120120",
           "label": "bilobe structure",
           "cosine_similarity": 0.66214279
-        },
-        {
-          "identifier": "GO:0005816",
-          "label": "spindle pole body",
-          "cosine_similarity": 0.66202195
         }
       ]
     },
@@ -9150,6 +9150,37 @@
           "identifier": "GO:0031966",
           "label": "mitochondrial membrane",
           "cosine_similarity": 0.82299873
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031262",
+      "label": "Ndc80 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000776",
+          "label": "kinetochore",
+          "cosine_similarity": 0.83206377
+        },
+        {
+          "identifier": "GO:0000444",
+          "label": "MIS12/MIND type complex",
+          "cosine_similarity": 0.80526193
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.80239659
+        },
+        {
+          "identifier": "GO:0000502",
+          "label": "proteasome complex",
+          "cosine_similarity": 0.69830997
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.69386117
         }
       ]
     },
@@ -9581,9 +9612,9 @@
           "cosine_similarity": 0.70930877
         },
         {
-          "identifier": "GO:0044615",
-          "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.6861092
+          "identifier": "GO:0031262",
+          "label": "Ndc80 complex",
+          "cosine_similarity": 0.69830997
         }
       ]
     },
@@ -9607,14 +9638,14 @@
           "cosine_similarity": 0.69562868
         },
         {
+          "identifier": "GO:0031262",
+          "label": "Ndc80 complex",
+          "cosine_similarity": 0.67998848
+        },
+        {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.67426517
-        },
-        {
-          "identifier": "GO:0140737",
-          "label": "encapsulin nanocompartment",
-          "cosine_similarity": 0.67123575
         }
       ]
     },

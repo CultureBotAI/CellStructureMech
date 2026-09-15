@@ -1,0 +1,244 @@
+identifier: GO:0031262
+label: Ndc80 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex conserved among eukaryotes that forms part of the kinetochore
+  and plays an essential role in forming stable kinetochore-microtubule attachments.
+  The complex contains proteins known in several species, including budding and fission
+  yeasts, as Ndc80p, Nuf2p, Spc24p, and Spc25p. In vertebrates it is part of the outer
+  plate of the kinetochore.
+definition_source: GO:0031262
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T18:53:43Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T18:54:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO hierarchy and parthood, four reviewed label-only Ndc80 subunit
+    families, a Saccharomyces cerevisiae example, kinetochore-microtubule attachment
+    function, DOI/GO evidence, a nonmechanistic outer-kinetochore attachment graph,
+    and boundary TODOs.
+  llm_assisted: true
+- timestamp: '2026-09-15T19:04:34Z'
+  curator: codex
+  action: REFINED_DEFINITION
+  changes: Replaced the initial Ndc80 definition paraphrase with the fuller GO:0031262
+    wording that names conserved Ndc80p, Nuf2p, Spc24p and Spc25p composition.
+  llm_assisted: true
+synonyms:
+- synonym_text: Nuf2-Ndc80 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031262
+parent_structures:
+- GO:0000940
+part_of:
+- GO:0000776
+components:
+- component_id: ndc80_subunit
+  label: Ndc80 subunit family
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NDC80
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Ndc80 proteins are modeled as a conserved Ndc80-complex subunit
+    family; no exact source-neutral protein-family CURIE was curated for this first
+    complex record.
+  role: Named Ndc80-complex constituent positioned at the microtubule-binding end
+    of the outer-kinetochore complex.
+  evidence:
+  - reference: GO:0031262
+    notes: GO:0031262 names Ndc80 proteins as constituents of the conserved Ndc80
+      complex.
+  - reference: DOI:10.1093/emboj/20.4.777
+    notes: Janke et al. 2001 analyzed budding-yeast Ndc80p within a complex that also
+      contains Nuf2p, Spc24p and Spc25p.
+- component_id: nuf2_subunit
+  label: Nuf2 subunit family
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NUF2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Nuf2 proteins are modeled as a conserved Ndc80-complex subunit
+    family; no exact source-neutral protein-family CURIE was curated for this first
+    complex record.
+  role: Named Ndc80-complex constituent that pairs with Ndc80-family subunits in the
+    outer-kinetochore complex.
+  evidence:
+  - reference: GO:0031262
+    notes: GO:0031262 names Nuf2 proteins as constituents of the conserved Ndc80 complex.
+  - reference: DOI:10.1093/emboj/20.4.777
+    notes: Janke et al. 2001 identified budding-yeast Nuf2p with Ndc80p, Spc24p and
+      Spc25p at the kinetochore.
+- component_id: spc24_subunit
+  label: Spc24 subunit family
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SPC24
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Spc24 proteins are modeled as a conserved Ndc80-complex subunit
+    family; no exact source-neutral protein-family CURIE was curated for this first
+    complex record.
+  role: Named Spc24-family constituent of the conserved Ndc80-complex tail.
+  evidence:
+  - reference: GO:0031262
+    notes: GO:0031262 names Spc24 proteins as constituents of the conserved Ndc80
+      complex.
+  - reference: DOI:10.1093/emboj/20.4.777
+    notes: Janke et al. 2001 identified budding-yeast Spc24p as an Ndc80-complex member.
+- component_id: spc25_subunit
+  label: Spc25 subunit family
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SPC25
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Spc25 proteins are modeled as a conserved Ndc80-complex subunit
+    family; no exact source-neutral protein-family CURIE was curated for this first
+    complex record.
+  role: Named Spc25-family constituent of the conserved Ndc80-complex tail.
+  evidence:
+  - reference: GO:0031262
+    notes: GO:0031262 names Spc25 proteins as constituents of the conserved Ndc80
+      complex.
+  - reference: DOI:10.1093/emboj/20.4.777
+    notes: Janke et al. 2001 identified budding-yeast Spc25p as an Ndc80-complex member.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a four-subunit Ndc80 complex containing Ndc80p, Nuf2p, Spc24p
+    and Spc25p at the kinetochore.
+  reference: DOI:10.1093/emboj/20.4.777
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference yeast system in which the Ndc80-Nuf2-Spc24-Spc25 outer-kinetochore
+    complex was genetically and cytologically characterized.
+  reference: DOI:10.1093/emboj/20.4.777
+functions:
+- function_id: kinetochore_microtubule_attachment
+  label: kinetochore-microtubule attachment
+  description: The Ndc80 complex forms an outer-kinetochore interface needed to generate
+    stable attachments between kinetochores and spindle microtubules.
+  evidence:
+  - reference: GO:0031262
+    notes: GO:0031262 defines the Ndc80 complex by its role in stable kinetochore-microtubule
+      attachments.
+  - reference: DOI:10.1534/genetics.112.145276
+    notes: Biggins 2013 reviewed Ndc80 as a core outer kinetochore microtubule-coupling
+      complex.
+evidence:
+- reference: GO:0031262
+  notes: Gene Ontology cellular-component term for the Ndc80 complex.
+- reference: GO:0000940
+  notes: Gene Ontology cellular-component parent term for outer kinetochore.
+- reference: GO:0000776
+  notes: Gene Ontology cellular-component term for kinetochore.
+- reference: DOI:10.1093/emboj/20.4.777
+  notes: Janke et al. 2001, The budding yeast proteins Spc24p and Spc25p interact
+    with Ndc80p and Nuf2p at the kinetochore and are important for kinetochore clustering
+    and checkpoint control, The EMBO Journal.
+- reference: DOI:10.1534/genetics.112.145276
+  notes: Biggins 2013, The composition, functions, and regulation of the budding yeast
+    kinetochore, Genetics.
+causal_graphs:
+- graph_id: ndc80_outer_kinetochore_attachment
+  title: Ndc80 forms the outer-kinetochore microtubule-coupling complex
+  description: The conserved Ndc80 complex is an outer-kinetochore subcomplex whose
+    four protein subunits assemble into a module required for stable kinetochore-microtubule
+    attachment.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph places the Ndc80 complex in the outer kinetochore and records
+    its attachment role without flattening the broader KMN network or yeast Dam1/DASH
+    contacts into Ndc80 composition.
+  nodes:
+  - node_id: ndc80_complex
+    label: Ndc80 complex
+    node_type: STRUCTURE
+    grounding: GO:0031262
+  - node_id: outer_kinetochore
+    label: outer kinetochore
+    node_type: STRUCTURE
+    grounding: GO:0000940
+  - node_id: kinetochore
+    label: kinetochore
+    node_type: STRUCTURE
+    grounding: GO:0000776
+  - node_id: kinetochore_microtubule_attachment
+    label: kinetochore-microtubule attachment
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: ndc80_complex
+    predicate: is a
+    object: outer_kinetochore
+    description: GO places the Ndc80 complex under the outer kinetochore cellular
+      component.
+    evidence:
+    - reference: GO:0031262
+      notes: GO:0031262 is an outer-kinetochore complex term.
+  - subject: outer_kinetochore
+    predicate: is part of
+    object: kinetochore
+    description: The outer kinetochore is the centromere-distal region of the kinetochore.
+    evidence:
+    - reference: GO:0000940
+      notes: GO:0000940 defines the outer kinetochore as the region of a kinetochore
+        most external to centromeric DNA.
+  - subject: ndc80_complex
+    predicate: stabilizes
+    object: kinetochore_microtubule_attachment
+    description: Ndc80-family complexes form a kinetochore module that is required
+      for stable attachment of spindle microtubules to kinetochores.
+    evidence:
+    - reference: GO:0031262
+      notes: GO:0031262 defines the Ndc80 complex by its role in stable kinetochore-microtubule
+        attachments.
+    - reference: DOI:10.1534/genetics.112.145276
+      notes: Biggins 2013 reviewed Ndc80 complex function at the kinetochore-microtubule
+        interface.
+discussions:
+- discussion_id: ndc80_subunit_groundings_todo
+  prompt: Resolve exact source-neutral family groundings for the Ndc80, Nuf2, Spc24
+    and Spc25 subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ndc80_subunit
+  - components#nuf2_subunit
+  - components#spc24_subunit
+  - components#spc25_subunit
+  rationale: The GO complex term spans orthologous Ndc80-family complexes across eukaryotes,
+    and no exact InterPro, Pfam, NCBIfam or UniProtKB family CURIE was verified for
+    these subunit families in this pass.
+  evidence:
+  - reference: GO:0031262
+  - reference: DOI:10.1093/emboj/20.4.777
+  posed_by: codex
+  posed_date: '2026-09-15'
+- discussion_id: kmn_and_dam1_outside_ndc80
+  prompt: Keep the broader KMN network and the yeast Dam1/DASH complex outside the
+    Ndc80-complex component list.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#ndc80_outer_kinetochore_attachment
+  rationale: GO:0031262 defines Ndc80 as the Ndc80-Nuf2-Spc24-Spc25 complex itself;
+    other outer-kinetochore microtubule-binding or bridge complexes belong as neighbors,
+    not as Ndc80 constituents.
+  evidence:
+  - reference: GO:0031262
+  - reference: DOI:10.1534/genetics.112.145276
+  posed_by: codex
+  posed_date: '2026-09-15'
