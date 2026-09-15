@@ -146,6 +146,17 @@
 <div class="wrap">
 
   <div class="cards">
+    {% if text_map_enabled %}
+    <div class="card">
+      <div class="actions">
+        <a class="btn" href="text-map/">Semantic text map</a>
+        <a class="btn" href="embedding-map.html">MiniLM / PCA map</a>
+      </div>
+      <h2>Explore structure similarities</h2>
+      <p>The common BGE / PaCMAP map compares biological descriptions.
+         The existing MiniLM / PCA view remains available for comparison.</p>
+    </div>
+    {% endif %}
     <div class="card">
       <div class="actions"><a class="btn" href="browse.html">Browse records</a></div>
       <h2>Record browser</h2>
