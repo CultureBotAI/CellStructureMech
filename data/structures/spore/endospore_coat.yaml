@@ -21,6 +21,13 @@ curation_history:
     literature evidence, a nonmechanistic coat-barrier topology graph, and boundary/grounding
     discussions.
   llm_assisted: true
+- timestamp: '2026-09-15T17:43:03Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Resolved PR #1005 review issues #1006 and #1007 by narrowing the barrier
+    function label to the endospore coat and adding the GO:0043591 external-structure
+    node and parthood edge to the topology graph.'
+  llm_assisted: true
 part_of:
 - GO:0043591
 components:
@@ -65,7 +72,7 @@ canonical_examples:
   reference: DOI:10.1038/nrmicro2921
 functions:
 - function_id: coat_permeability_barrier
-  label: endospore permeability barrier
+  label: endospore coat permeability barrier
   description: The multilayered endospore coat restricts lytic enzymes and large toxic
     molecules from accessing the dormant spore interior.
   evidence:
@@ -90,8 +97,8 @@ causal_graphs:
 - graph_id: endospore_coat_barrier_topology
   title: Endospore coat surrounds the cortex as a permeability barrier
   description: Coat proteins assemble into a multilayered shell outside the endospore
-    cortex, making a mature-spore surface barrier that restricts lytic enzymes and
-    many toxic molecules.
+    cortex within the external encapsulating structure, making a mature-spore surface
+    barrier that restricts lytic enzymes and many toxic molecules.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph records mature coat topology and high-level barrier function
@@ -112,6 +119,10 @@ causal_graphs:
   - node_id: barrier_capacity
     label: enzyme and toxin barrier
     node_type: CAPACITY
+  - node_id: external_encapsulating_structure
+    label: endospore external encapsulating structure
+    node_type: STRUCTURE
+    grounding: GO:0043591
   edges:
   - subject: coat_proteins
     predicate: assemble into
@@ -142,6 +153,16 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2921
       notes: McKenney, Driks and Eichenberger 2012 describe the coat as a barrier
         against lytic enzymes and large toxic molecules.
+  - subject: endospore_coat
+    predicate: is part of
+    object: external_encapsulating_structure
+    description: The endospore coat is a layer of the broader external encapsulating
+      structure that surrounds a mature bacterial endospore.
+    evidence:
+    - reference: GO:0043593
+      notes: GO:0043593 defines the endospore coat as a bacterial endospore layer.
+    - reference: GO:0043591
+      notes: GO:0043591 identifies the broader endospore external encapsulating structure.
 discussions:
 - discussion_id: coat_layer_boundary
   prompt: Keep the endospore coat separate from the broader endospore external encapsulating
