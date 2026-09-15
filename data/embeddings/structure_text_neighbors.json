@@ -1263,6 +1263,11 @@
           "cosine_similarity": 0.74816698
         },
         {
+          "identifier": "GO:0036286",
+          "label": "eisosome filament",
+          "cosine_similarity": 0.73789756
+        },
+        {
           "identifier": "GO:0000133",
           "label": "polarisome",
           "cosine_similarity": 0.73511693
@@ -1271,11 +1276,6 @@
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.72485066
-        },
-        {
-          "identifier": "GO:0005940",
-          "label": "septin ring",
-          "cosine_similarity": 0.71678235
         }
       ]
     },
@@ -1439,6 +1439,11 @@
       "label": "CetZ filament",
       "neighbors": [
         {
+          "identifier": "GO:0036286",
+          "label": "eisosome filament",
+          "cosine_similarity": 0.79110118
+        },
+        {
           "identifier": "cellstructuremech:crescentin_filament",
           "label": "crescentin filament",
           "cosine_similarity": 0.75613565
@@ -1457,11 +1462,6 @@
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.72104289
-        },
-        {
-          "identifier": "GO:0036064",
-          "label": "ciliary basal body",
-          "cosine_similarity": 0.71838327
         }
       ]
     },
@@ -1621,6 +1621,37 @@
       ]
     },
     {
+      "identifier": "GO:0036286",
+      "label": "eisosome filament",
+      "neighbors": [
+        {
+          "identifier": "GO:0032126",
+          "label": "eisosome",
+          "cosine_similarity": 0.84376989
+        },
+        {
+          "identifier": "cellstructuremech:cetz_filament",
+          "label": "CetZ filament",
+          "cosine_similarity": 0.79110118
+        },
+        {
+          "identifier": "cellstructuremech:mreb_filament",
+          "label": "MreB filament",
+          "cosine_similarity": 0.78791311
+        },
+        {
+          "identifier": "GO:0044614",
+          "label": "nuclear pore cytoplasmic filaments",
+          "cosine_similarity": 0.76902246
+        },
+        {
+          "identifier": "cellstructuremech:mamk_filament",
+          "label": "MamK filament",
+          "cosine_similarity": 0.76828963
+        }
+      ]
+    },
+    {
       "identifier": "GO:0120119",
       "label": "flagellum attachment zone",
       "neighbors": [
@@ -1640,14 +1671,14 @@
           "cosine_similarity": 0.69710871
         },
         {
+          "identifier": "GO:0036286",
+          "label": "eisosome filament",
+          "cosine_similarity": 0.68751293
+        },
+        {
           "identifier": "cellstructuremech:mamk_filament",
           "label": "MamK filament",
           "cosine_similarity": 0.68292467
-        },
-        {
-          "identifier": "GO:1990586",
-          "label": "divisome complex",
-          "cosine_similarity": 0.68227801
         }
       ]
     },
@@ -1676,9 +1707,9 @@
           "cosine_similarity": 0.78370474
         },
         {
-          "identifier": "cellstructuremech:crescentin_filament",
-          "label": "crescentin filament",
-          "cosine_similarity": 0.75264693
+          "identifier": "GO:0036286",
+          "label": "eisosome filament",
+          "cosine_similarity": 0.76828963
         }
       ]
     },
@@ -1811,6 +1842,11 @@
       "label": "septin ring",
       "neighbors": [
         {
+          "identifier": "GO:0036286",
+          "label": "eisosome filament",
+          "cosine_similarity": 0.75741052
+        },
+        {
           "identifier": "GO:0005826",
           "label": "actomyosin contractile ring",
           "cosine_similarity": 0.75589331
@@ -1829,11 +1865,6 @@
           "identifier": "cellstructuremech:crescentin_filament",
           "label": "crescentin filament",
           "cosine_similarity": 0.68517445
-        },
-        {
-          "identifier": "GO:0005935",
-          "label": "cellular bud neck",
-          "cosine_similarity": 0.68297278
         }
       ]
     },
@@ -9034,6 +9065,11 @@
       "label": "eisosome",
       "neighbors": [
         {
+          "identifier": "GO:0036286",
+          "label": "eisosome filament",
+          "cosine_similarity": 0.84376989
+        },
+        {
           "identifier": "GO:0005758",
           "label": "mitochondrial intermembrane space",
           "cosine_similarity": 0.71244196
@@ -9052,11 +9088,6 @@
           "identifier": "GO:0005788",
           "label": "endoplasmic reticulum lumen",
           "cosine_similarity": 0.70091115
-        },
-        {
-          "identifier": "GO:0009529",
-          "label": "plastid intermembrane space",
-          "cosine_similarity": 0.68965637
         }
       ]
     },
@@ -9664,6 +9695,11 @@
           "cosine_similarity": 0.71279966
         },
         {
+          "identifier": "GO:0036286",
+          "label": "eisosome filament",
+          "cosine_similarity": 0.71007657
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.70657748
@@ -9672,11 +9708,6 @@
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.69111065
-        },
-        {
-          "identifier": "GO:0032126",
-          "label": "eisosome",
-          "cosine_similarity": 0.68725869
         }
       ]
     },
