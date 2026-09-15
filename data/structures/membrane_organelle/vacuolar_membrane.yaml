@@ -1,0 +1,240 @@
+identifier: GO:0005774
+label: vacuolar membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding the vacuole and separating its contents
+  from the cytoplasm of the cell.
+definition_source: GO:0005774
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T07:28:12Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T07:29:04Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added organelle-membrane parentage, vacuole parthood, a reviewed-label-only
+    lipid-bilayer component, Saccharomyces scope, acidification and nucleus-vacuole-junction
+    functions, GO/DOI evidence, a nonmechanistic membrane function graph, and a lipid/protein
+    grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-15T07:29:38Z'
+  curator: codex
+  action: TIGHTENED_EVIDENCE
+  changes: Corrected the vacuolar-acidification directionality and narrowed the Saccharomyces
+    distribution note to claims supported by Li and Kane 2009.
+  llm_assisted: true
+parent_structures:
+- GO:0031090
+part_of:
+- GO:0005773
+components:
+- component_id: vacuolar_lipid_bilayer
+  label: vacuolar membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Bounding lipid bilayer that separates the vacuolar lumen from the cytosol.
+  evidence:
+  - reference: GO:0005774
+    notes: GO:0005774 identifies the vacuolar membrane as the lipid bilayer surrounding
+      a vacuole.
+  - reference: GO:0005775
+    notes: GO:0005775 identifies the vacuolar lumen enclosed by the vacuolar membrane.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005774 identifies the complete vacuolar membrane, but no exact
+    source-neutral CURIE was curated for the generic lipid-bilayer constituent of
+    that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast vacuoles are bounded by vacuolar membranes that carry V-ATPase
+    acidification machinery.
+  reference: DOI:10.1016/j.bbamcr.2008.08.003
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model whose vacuolar membrane contains the Vac8p partner for
+    Nvj1p-mediated nucleus-vacuole junctions.
+  reference: DOI:10.1091/mbc.11.7.2445
+functions:
+- function_id: vacuolar_membrane_acidification
+  label: vacuolar acidification
+  grounding: GO:0007035
+  description: Vacuolar membranes host proton-pumping V-ATPase complexes that raise
+    the hydrogen-ion concentration in the vacuolar lumen.
+  evidence:
+  - reference: GO:0007035
+    notes: GO:0007035 denotes processes that lower vacuolar pH by raising the vacuolar
+      hydrogen-ion concentration.
+  - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+    notes: Kane 2006 reviews yeast V-ATPase proton pumping at organelle membranes.
+- function_id: nucleus_vacuole_junction_formation
+  label: nucleus-vacuole junction formation
+  description: Yeast vacuolar membranes supply Vac8p for direct binding to Nvj1p on
+    the nuclear outer membrane.
+  evidence:
+  - reference: DOI:10.1091/mbc.11.7.2445
+    notes: Pan et al. 2000 showed that Saccharomyces cerevisiae Nvj1p and Vac8p directly
+      interact to form nucleus-vacuole junctions.
+evidence:
+- reference: GO:0005774
+  notes: Gene Ontology cellular-component term for vacuolar membrane.
+- reference: GO:0031090
+  notes: Gene Ontology cellular-component parent term for organelle membrane.
+- reference: GO:0005773
+  notes: Gene Ontology cellular-component term for the containing vacuole.
+- reference: GO:0005775
+  notes: Gene Ontology cellular-component term for the vacuolar lumen.
+- reference: GO:0016471
+  notes: Gene Ontology cellular-component term for the vacuolar proton-transporting
+    V-type ATPase complex.
+- reference: GO:0007035
+  notes: Gene Ontology biological-process term for vacuolar acidification.
+- reference: GO:0005640
+  notes: Gene Ontology cellular-component term for the nuclear outer membrane contacted
+    by the vacuole at yeast nucleus-vacuole junctions.
+- reference: DOI:10.1016/j.bbamcr.2008.08.003
+  notes: 'Li and Kane 2009, The yeast lysosome-like vacuole: Endpoint and crossroads,
+    Biochimica et Biophysica Acta.'
+- reference: DOI:10.1128/MMBR.70.1.177-191.2006
+  notes: Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast
+    Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
+- reference: DOI:10.1091/mbc.11.7.2445
+  notes: Pan et al. 2000, Nucleus-Vacuole Junctions in Saccharomyces cerevisiae Are
+    Formed Through the Direct Interaction of Vac8p with Nvj1p, Molecular Biology of
+    the Cell.
+causal_graphs:
+- graph_id: yeast_vacuolar_membrane_functions
+  title: Yeast vacuolar membranes acidify and contact the nucleus
+  description: In budding yeast, the vacuolar membrane encloses the vacuole, hosts
+    V-ATPase acidification machinery, and carries Vac8p for Nvj1p-mediated contact
+    with the nuclear outer membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures vacuolar-membrane topology, V-ATPase acidification,
+    and Nvj1p/Vac8p contact-site formation without asserting a full vacuolar transporter
+    or contact-site protein repertoire.
+  nodes:
+  - node_id: vacuolar_membrane
+    label: vacuolar membrane
+    node_type: STRUCTURE
+    grounding: GO:0005774
+    component_ref: vacuolar_lipid_bilayer
+  - node_id: vacuole
+    label: vacuole
+    node_type: ORGANELLE
+    grounding: GO:0005773
+  - node_id: vacuolar_lumen
+    label: vacuolar lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005775
+  - node_id: vacuolar_v_atpase
+    label: vacuolar proton-transporting V-type ATPase complex
+    node_type: STRUCTURE
+    grounding: GO:0016471
+  - node_id: vacuolar_acidification
+    label: vacuolar acidification
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007035
+  - node_id: nuclear_outer_membrane
+    label: nuclear outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0005640
+  - node_id: vac8p
+    label: Vac8p
+    node_type: GENE_OR_PROTEIN
+  - node_id: nvj1p
+    label: Nvj1p
+    node_type: GENE_OR_PROTEIN
+  edges:
+  - subject: vacuolar_membrane
+    predicate: is part of
+    object: vacuole
+    description: The vacuolar membrane is the lipid bilayer surrounding the vacuole.
+    evidence:
+    - reference: GO:0005774
+      notes: GO:0005774 identifies the vacuolar membrane.
+    - reference: GO:0005773
+      notes: GO:0005773 identifies the containing vacuole.
+  - subject: vacuolar_membrane
+    predicate: bounds
+    object: vacuolar_lumen
+    description: The vacuolar membrane separates the vacuolar lumen from the cytosol.
+    evidence:
+    - reference: GO:0005774
+      notes: GO:0005774 defines the surrounding vacuolar membrane.
+    - reference: GO:0005775
+      notes: GO:0005775 identifies the vacuolar lumen.
+  - subject: vacuolar_v_atpase
+    predicate: resides in
+    object: vacuolar_membrane
+    description: Vacuolar V-ATPase complexes localize to the vacuolar membrane.
+    evidence:
+    - reference: GO:0016471
+      notes: GO:0016471 defines the V-type ATPase complex by its vacuolar-membrane
+        location.
+    - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+      notes: Kane 2006 reviews vacuolar H+-ATPase-dependent organelle acidification
+        in yeast.
+  - subject: vacuolar_v_atpase
+    predicate: participates in
+    object: vacuolar_acidification
+    description: The membrane V-ATPase pumps protons into the vacuole to acidify the
+      lumen.
+    evidence:
+    - reference: GO:0007035
+      notes: GO:0007035 denotes processes that acidify the vacuole.
+    - reference: DOI:10.1016/j.bbamcr.2008.08.003
+      notes: Li and Kane 2009 review V-ATPase-dependent acidification of the yeast
+        lysosome-like vacuole.
+  - subject: vac8p
+    predicate: localizes to
+    object: vacuolar_membrane
+    description: Vac8p supplies the vacuolar-membrane partner for the Nvj1p-mediated
+      nucleus-vacuole junction.
+    evidence:
+    - reference: DOI:10.1091/mbc.11.7.2445
+      notes: Pan et al. 2000 identified Vac8p as the vacuolar Nvj1p partner that forms
+        nucleus-vacuole junctions.
+  - subject: nvj1p
+    predicate: localizes to
+    object: nuclear_outer_membrane
+    description: Nvj1p localizes to the nuclear outer membrane side of the nucleus-vacuole
+      junction.
+    evidence:
+    - reference: DOI:10.1091/mbc.11.7.2445
+      notes: Pan et al. 2000 identified Nvj1p as an outer nuclear membrane protein
+        at nucleus-vacuole junctions.
+  - subject: nvj1p
+    predicate: interacts with
+    object: vac8p
+    description: Direct Nvj1p/Vac8p interaction links the vacuolar membrane to the
+      nuclear outer membrane.
+    evidence:
+    - reference: DOI:10.1091/mbc.11.7.2445
+      notes: Pan et al. 2000 found that Nvj1p directly interacts with Vac8p to form
+        nucleus-vacuole junctions.
+discussions:
+- discussion_id: ground_vacuolar_lipid_and_contact_proteins
+  prompt: Resolve exact source-neutral groundings for the generic vacuolar lipid bilayer
+    and for yeast Vac8p and Nvj1p.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vacuolar_lipid_bilayer
+  - causal_graphs#yeast_vacuolar_membrane_functions
+  rationale: GO:0005774 identifies the complete vacuolar membrane and the yeast contact-site
+    literature identifies Vac8p and Nvj1p by protein name, but this pass did not verify
+    exact CHEBI, UniProtKB, or family-level identifiers for those entities.
+  evidence:
+  - reference: GO:0005774
+    notes: GO:0005774 identifies the complete vacuolar membrane.
+  - reference: DOI:10.1091/mbc.11.7.2445
+    notes: Pan et al. 2000 identified Vac8p and Nvj1p as the binding partners that
+      form yeast nucleus-vacuole junctions.
+  posed_by: codex
+  posed_date: '2026-09-15'

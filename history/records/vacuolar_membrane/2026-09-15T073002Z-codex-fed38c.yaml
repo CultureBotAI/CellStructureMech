@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/vacuolar_membrane.yaml
+  slug: vacuolar_membrane
+session:
+  id: 2026-09-15T073002Z-codex-fed38c
+  timestamp: '2026-09-15T07:30:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add vacuolar membrane record
+  details: Created a GO:0005774 vacuolar membrane record with organelle-membrane parentage,
+    vacuole parthood, a reviewed-label-only lipid-bilayer component, Saccharomyces V-ATPase
+    and Nvj1p/Vac8p evidence, a nonmechanistic vacuolar-membrane function graph, and an open
+    grounding TODO for the generic lipid bilayer and yeast contact-site proteins.
