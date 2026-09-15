@@ -4973,6 +4973,11 @@
       "label": "endosome",
       "neighbors": [
         {
+          "identifier": "GO:0010008",
+          "label": "endosome membrane",
+          "cosine_similarity": 0.95098495
+        },
+        {
           "identifier": "GO:0005771",
           "label": "multivesicular body",
           "cosine_similarity": 0.9214195
@@ -4991,11 +4996,37 @@
           "identifier": "GO:0005773",
           "label": "vacuole",
           "cosine_similarity": 0.84625581
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0010008",
+      "label": "endosome membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0005768",
+          "label": "endosome",
+          "cosine_similarity": 0.95098495
         },
         {
-          "identifier": "GO:0030137",
-          "label": "COPI-coated vesicle",
-          "cosine_similarity": 0.84134631
+          "identifier": "GO:0032585",
+          "label": "multivesicular body membrane",
+          "cosine_similarity": 0.89413021
+        },
+        {
+          "identifier": "GO:0005771",
+          "label": "multivesicular body",
+          "cosine_similarity": 0.89386184
+        },
+        {
+          "identifier": "GO:0005789",
+          "label": "endoplasmic reticulum membrane",
+          "cosine_similarity": 0.87343921
+        },
+        {
+          "identifier": "GO:0012507",
+          "label": "ER to Golgi transport vesicle membrane",
+          "cosine_similarity": 0.87094791
         }
       ]
     },
@@ -6538,14 +6569,14 @@
           "cosine_similarity": 0.90263609
         },
         {
+          "identifier": "GO:0010008",
+          "label": "endosome membrane",
+          "cosine_similarity": 0.89386184
+        },
+        {
           "identifier": "GO:0031410",
           "label": "cytoplasmic vesicle",
           "cosine_similarity": 0.84487734
-        },
-        {
-          "identifier": "cellstructuremech:cvt_vesicle_lumen",
-          "label": "Cvt vesicle lumen",
-          "cosine_similarity": 0.83169852
         }
       ]
     },
@@ -6590,6 +6621,11 @@
           "cosine_similarity": 0.90653413
         },
         {
+          "identifier": "GO:0010008",
+          "label": "endosome membrane",
+          "cosine_similarity": 0.89413021
+        },
+        {
           "identifier": "GO:0030659",
           "label": "cytoplasmic vesicle membrane",
           "cosine_similarity": 0.88563222
@@ -6603,11 +6639,6 @@
           "identifier": "GO:0005789",
           "label": "endoplasmic reticulum membrane",
           "cosine_similarity": 0.87049056
-        },
-        {
-          "identifier": "cellstructuremech:multivesicular_body_lumen",
-          "label": "multivesicular body lumen",
-          "cosine_similarity": 0.8672435
         }
       ]
     },
@@ -7711,6 +7742,11 @@
           "cosine_similarity": 0.75770352
         },
         {
+          "identifier": "GO:0010008",
+          "label": "endosome membrane",
+          "cosine_similarity": 0.7493813
+        },
+        {
           "identifier": "GO:0005788",
           "label": "endoplasmic reticulum lumen",
           "cosine_similarity": 0.74181976
@@ -7719,11 +7755,6 @@
           "identifier": "GO:0031410",
           "label": "cytoplasmic vesicle",
           "cosine_similarity": 0.73473994
-        },
-        {
-          "identifier": "GO:0033117",
-          "label": "esterosome",
-          "cosine_similarity": 0.73335848
         }
       ]
     },
@@ -8589,9 +8620,9 @@
           "cosine_similarity": 0.85436817
         },
         {
-          "identifier": "GO:0030663",
-          "label": "COPI-coated vesicle membrane",
-          "cosine_similarity": 0.84183769
+          "identifier": "GO:0010008",
+          "label": "endosome membrane",
+          "cosine_similarity": 0.84626219
         }
       ]
     },
@@ -8946,6 +8977,11 @@
           "cosine_similarity": 0.73268973
         },
         {
+          "identifier": "GO:0010008",
+          "label": "endosome membrane",
+          "cosine_similarity": 0.73049953
+        },
+        {
           "identifier": "GO:0005771",
           "label": "multivesicular body",
           "cosine_similarity": 0.72013908
@@ -8959,11 +8995,6 @@
           "identifier": "GO:0030127",
           "label": "COPII vesicle coat",
           "cosine_similarity": 0.71814411
-        },
-        {
-          "identifier": "GO:0005783",
-          "label": "endoplasmic reticulum",
-          "cosine_similarity": 0.71656454
         }
       ]
     },
