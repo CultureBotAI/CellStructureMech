@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_crista_junction.yaml
+  slug: mitochondrial_crista_junction
+session:
+  id: 2026-09-15T222624Z-codex-aff6df
+  timestamp: '2026-09-15T22:26:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add mitochondrial crista junction record
+  details: Created a GO:0044284 mitochondrial crista junction CellStructureMech record with
+    organelle membrane contact site parentage, mitochondrial inner membrane parthood, Eukaryota
+    and Saccharomyces cerevisiae scope, cristae formation evidence, a nonmechanistic crista
+    junction topology graph, and a resolved MICOS boundary discussion.
