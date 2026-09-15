@@ -20,6 +20,12 @@ curation_history:
     a lipid constituent, Saccharomyces scope, an SPB-attachment function, GO/DOI evidence,
     a nonmechanistic topology graph, and a meiotic-outer-plaque boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-15T09:11:17Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved review issues #955 and #956 by adding the spore nucleus to the
+    graph and flipping the SPB anchoring edge to the attachment site.'
+  llm_assisted: true
 synonyms:
 - synonym_text: forespore membrane SPB attachment site
   synonym_type: EXACT_SYNONYM
@@ -106,6 +112,9 @@ causal_graphs:
     label: spindle pole body
     node_type: STRUCTURE
     grounding: GO:0005816
+  - node_id: haploid_meiotic_nucleus
+    label: haploid meiotic nucleus
+    node_type: ORGANELLE
   edges:
   - subject: prospore_membrane_spb_attachment_site
     predicate: is part of
@@ -115,15 +124,15 @@ causal_graphs:
     - reference: GO:0070057
       notes: GO:0070057 defines the spindle-pole-body attachment site as a prospore
         membrane region.
-  - subject: spindle_pole_body
-    predicate: anchors to
-    object: prospore_membrane_spb_attachment_site
-    description: The spindle pole body anchors at this specialized prospore membrane
-      region.
+  - subject: prospore_membrane_spb_attachment_site
+    predicate: anchors
+    object: spindle_pole_body
+    description: This specialized prospore membrane region anchors the spindle pole
+      body.
     evidence:
     - reference: GO:0070057
-      notes: GO:0070057 defines the attachment site by anchoring of the spindle pole
-        body.
+      notes: GO:0070057 defines a prospore membrane region to which the spindle pole
+        body is anchored.
     - reference: DOI:10.1093/emboj/19.14.3657
       notes: Knop and Strasser 2000 analyzed spindle-pole-body control of prospore
         membrane assembly.
@@ -132,6 +141,15 @@ causal_graphs:
     object: prospore_membrane_spb_attachment_site
     description: The prospore membrane extends from the spindle-pole-body attachment
       site as it grows around the spore nucleus.
+    evidence:
+    - reference: GO:0070057
+      notes: GO:0070057 states that the prospore membrane extends from the SPB attachment
+        site to surround the spore nucleus.
+  - subject: prospore_membrane
+    predicate: extends around
+    object: haploid_meiotic_nucleus
+    description: The prospore membrane grows away from the attachment site and extends
+      around the haploid spore nucleus.
     evidence:
     - reference: GO:0070057
       notes: GO:0070057 states that the prospore membrane extends from the SPB attachment
