@@ -6306,6 +6306,11 @@
       "label": "nuclear envelope",
       "neighbors": [
         {
+          "identifier": "GO:0005640",
+          "label": "nuclear outer membrane",
+          "cosine_similarity": 0.93254466
+        },
+        {
           "identifier": "GO:0005634",
           "label": "nucleus",
           "cosine_similarity": 0.90519417
@@ -6324,11 +6329,37 @@
           "identifier": "cellstructuremech:mitosome_envelope",
           "label": "mitosome envelope",
           "cosine_similarity": 0.82386881
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005640",
+      "label": "nuclear outer membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0005635",
+          "label": "nuclear envelope",
+          "cosine_similarity": 0.93254466
         },
         {
           "identifier": "GO:0030659",
           "label": "cytoplasmic vesicle membrane",
-          "cosine_similarity": 0.81674397
+          "cosine_similarity": 0.88928848
+        },
+        {
+          "identifier": "GO:0005789",
+          "label": "endoplasmic reticulum membrane",
+          "cosine_similarity": 0.86849645
+        },
+        {
+          "identifier": "GO:0005634",
+          "label": "nucleus",
+          "cosine_similarity": 0.85932832
+        },
+        {
+          "identifier": "GO:0005741",
+          "label": "mitochondrial outer membrane",
+          "cosine_similarity": 0.85808908
         }
       ]
     },
@@ -6373,6 +6404,11 @@
           "cosine_similarity": 0.90519417
         },
         {
+          "identifier": "GO:0005640",
+          "label": "nuclear outer membrane",
+          "cosine_similarity": 0.85932832
+        },
+        {
           "identifier": "GO:0005739",
           "label": "mitochondrion",
           "cosine_similarity": 0.81359921
@@ -6386,11 +6422,6 @@
           "identifier": "GO:0031410",
           "label": "cytoplasmic vesicle",
           "cosine_similarity": 0.8074291
-        },
-        {
-          "identifier": "cellstructuremech:mitosome_envelope",
-          "label": "mitosome envelope",
-          "cosine_similarity": 0.79317962
         }
       ]
     },
@@ -9793,14 +9824,14 @@
           "cosine_similarity": 0.80482872
         },
         {
+          "identifier": "GO:0005640",
+          "label": "nuclear outer membrane",
+          "cosine_similarity": 0.79560552
+        },
+        {
           "identifier": "GO:0000329",
           "label": "fungal-type vacuole membrane",
           "cosine_similarity": 0.79426084
-        },
-        {
-          "identifier": "GO:0012507",
-          "label": "ER to Golgi transport vesicle membrane",
-          "cosine_similarity": 0.79362088
         }
       ]
     }

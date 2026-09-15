@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nuclear_outer_membrane.yaml
+  slug: nuclear_outer_membrane
+session:
+  id: 2026-09-15T060027Z-claude-code-b130b9
+  timestamp: '2026-09-15T06:00:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/937
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Link nuclear outer membrane PR
+  details: 'Linked the nuclear outer membrane curation to PR #937 so the append-only record
+    history captures the review artifact for the GO:0005640 addition.'
