@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/fungal_type_vacuole_membrane.yaml
+  slug: fungal_type_vacuole_membrane
+session:
+  id: 2026-09-15T034118Z-codex-e5d9bb
+  timestamp: '2026-09-15T03:41:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add fungal-type vacuole membrane
+  details: Created a GO:0000329 fungal-type vacuole membrane record with vacuolar-membrane
+    parentage, fungal-type-vacuole parthood, a reviewed-label-only lipid-bilayer component,
+    Saccharomyces cerevisiae scope, GO/DOI evidence, a V-ATPase acidification function, and
+    a nonmechanistic membrane topology graph.
