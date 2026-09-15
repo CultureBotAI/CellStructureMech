@@ -2968,6 +2968,11 @@
           "cosine_similarity": 0.83234038
         },
         {
+          "identifier": "GO:0005641",
+          "label": "nuclear envelope lumen",
+          "cosine_similarity": 0.82875499
+        },
+        {
           "identifier": "GO:0005759",
           "label": "mitochondrial matrix",
           "cosine_similarity": 0.82614983
@@ -2976,11 +2981,6 @@
           "identifier": "GO:0034591",
           "label": "rhoptry lumen",
           "cosine_similarity": 0.82049501
-        },
-        {
-          "identifier": "GO:0110145",
-          "label": "magnetosome lumen",
-          "cosine_similarity": 0.81527766
         }
       ]
     },
@@ -6321,14 +6321,45 @@
           "cosine_similarity": 0.90519417
         },
         {
+          "identifier": "GO:0005641",
+          "label": "nuclear envelope lumen",
+          "cosine_similarity": 0.8764457
+        },
+        {
           "identifier": "GO:0005643",
           "label": "nuclear pore",
           "cosine_similarity": 0.8506334
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005641",
+      "label": "nuclear envelope lumen",
+      "neighbors": [
+        {
+          "identifier": "GO:0005758",
+          "label": "mitochondrial intermembrane space",
+          "cosine_similarity": 0.88315915
         },
         {
-          "identifier": "GO:0005740",
-          "label": "mitochondrial envelope",
-          "cosine_similarity": 0.82818357
+          "identifier": "GO:0005635",
+          "label": "nuclear envelope",
+          "cosine_similarity": 0.8764457
+        },
+        {
+          "identifier": "GO:0060205",
+          "label": "cytoplasmic vesicle lumen",
+          "cosine_similarity": 0.84279093
+        },
+        {
+          "identifier": "GO:0005640",
+          "label": "nuclear outer membrane",
+          "cosine_similarity": 0.83672551
+        },
+        {
+          "identifier": "GO:0005634",
+          "label": "nucleus",
+          "cosine_similarity": 0.83222958
         }
       ]
     },
@@ -6440,6 +6471,11 @@
           "cosine_similarity": 0.85932832
         },
         {
+          "identifier": "GO:0005641",
+          "label": "nuclear envelope lumen",
+          "cosine_similarity": 0.83222958
+        },
+        {
           "identifier": "GO:0005637",
           "label": "nuclear inner membrane",
           "cosine_similarity": 0.8278625
@@ -6448,11 +6484,6 @@
           "identifier": "GO:0005739",
           "label": "mitochondrion",
           "cosine_similarity": 0.81359921
-        },
-        {
-          "identifier": "GO:0005643",
-          "label": "nuclear pore",
-          "cosine_similarity": 0.80860577
         }
       ]
     },
@@ -8455,6 +8486,11 @@
           "cosine_similarity": 0.70091115
         },
         {
+          "identifier": "GO:0005641",
+          "label": "nuclear envelope lumen",
+          "cosine_similarity": 0.69486984
+        },
+        {
           "identifier": "GO:0009529",
           "label": "plastid intermembrane space",
           "cosine_similarity": 0.68965637
@@ -8463,11 +8499,6 @@
           "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
           "label": "COPII-coated vesicle lumen",
           "cosine_similarity": 0.68842296
-        },
-        {
-          "identifier": "GO:0000133",
-          "label": "polarisome",
-          "cosine_similarity": 0.68725869
         }
       ]
     },
