@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endoplasmic_reticulum_lumen.yaml
+  slug: endoplasmic_reticulum_lumen
+session:
+  id: 2026-09-15T053547Z-codex-6fecf8
+  timestamp: '2026-09-15T05:35:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/935
+  - https://github.com/CultureBotAI/CellStructureMech/issues/936
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/934
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fix endoplasmic reticulum lumen review findings
+  details: 'Addressed review issues #935 and #936 by narrowing the Saccharomyces cerevisiae
+    note to the Travers-supported UPR/ERAD quality-control claim and rewording the Sec61 function
+    and graph around protein translocation at the ER-lumen boundary.'
