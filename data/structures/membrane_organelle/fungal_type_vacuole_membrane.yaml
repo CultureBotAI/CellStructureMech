@@ -18,6 +18,12 @@ curation_history:
     lipid-bilayer component, Saccharomyces scope, GO/DOI evidence, a V-ATPase acidification
     function, a nonmechanistic membrane topology graph, and a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-15T03:49:25Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed issue #925 by retitling the fungal-type vacuole membrane graph
+    so it names the V-ATPase-supported acidification role directly.'
+  llm_assisted: true
 parent_structures:
 - GO:0005774
 part_of:
@@ -89,7 +95,7 @@ evidence:
     Biochimica et Biophysica Acta.'
 causal_graphs:
 - graph_id: yeast_fungal_vacuole_membrane_topology
-  title: Yeast fungal-type vacuole membranes bound acidic vacuoles
+  title: Yeast fungal-type vacuole membranes support acidification
   description: The fungal-type vacuole membrane is a vacuolar membrane substructure
     that encloses the fungal-type vacuole lumen and carries proton-pumping V-ATPase
     complexes in budding yeast.
