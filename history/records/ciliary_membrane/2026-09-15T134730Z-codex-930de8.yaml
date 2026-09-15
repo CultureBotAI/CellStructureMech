@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/ciliary_membrane.yaml
+  slug: ciliary_membrane
+session:
+  id: 2026-09-15T134730Z-codex-930de8
+  timestamp: '2026-09-15T13:47:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/981
+  - https://github.com/CultureBotAI/CellStructureMech/issues/982
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/980
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Resolved ciliary membrane PR review issues
+  details: 'Reviewed PR #980 adversarially, filed issues #981 and #982, narrowed the Dentler-backed
+    Chlamydomonas canonical example, and retuned the lipid-bilayer graph edge to match the
+    reviewed-label-only lipid aggregate scope.'
