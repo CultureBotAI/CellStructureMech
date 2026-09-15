@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ndc80_complex.yaml
+  slug: ndc80_complex
+session:
+  id: 2026-09-15T185539Z-codex-4b8816
+  timestamp: '2026-09-15T18:55:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO Ndc80 complex record
+  details: Created data/structures/other/ndc80_complex.yaml for GO:0031262, linking it to
+    the outer kinetochore and kinetochore, modeling the Ndc80, Nuf2, Spc24 and Spc25 subunits
+    conservatively as REVIEWED_LABEL_ONLY, and adding a Saccharomyces cerevisiae exemplar,
+    GO and literature evidence, a kinetochore-microtubule attachment graph, and component/scope
+    discussions.
