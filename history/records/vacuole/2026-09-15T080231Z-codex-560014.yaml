@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/vacuole.yaml
+  slug: vacuole
+session:
+  id: 2026-09-15T080231Z-codex-560014
+  timestamp: '2026-09-15T08:02:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/949
+events:
+- type: EDIT
+  outcome: changed
+  summary: Link vacuole PR history
+  details: 'Linked the GO:0005773 vacuole curation session to PR #949 after opening the pull
+    request for branch add-vacuole.'

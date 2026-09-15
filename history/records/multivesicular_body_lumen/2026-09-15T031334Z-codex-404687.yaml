@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/multivesicular_body_lumen.yaml
+  slug: multivesicular_body_lumen
+session:
+  id: 2026-09-15T031334Z-codex-404687
+  timestamp: '2026-09-15T03:13:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added multivesicular body lumen record
+  details: Created a minted multivesicular body lumen record from UniProt Subcellular Location
+    SL-0340 with MVB lumen synonyms, endosome-lumen parentage, multivesicular-body parthood,
+    budding-yeast MVB sorting evidence, and a nonmechanistic lumen topology graph.

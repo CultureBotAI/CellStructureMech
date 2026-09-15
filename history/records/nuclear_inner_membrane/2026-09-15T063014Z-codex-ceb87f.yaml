@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nuclear_inner_membrane.yaml
+  slug: nuclear_inner_membrane
+session:
+  id: 2026-09-15T063014Z-codex-ceb87f
+  timestamp: '2026-09-15T06:30:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/940
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Link nuclear inner membrane PR
+  details: 'Linked the nuclear inner membrane curation to PR #940 so the append-only record
+    history captures the review artifact for the GO:0005637 addition.'

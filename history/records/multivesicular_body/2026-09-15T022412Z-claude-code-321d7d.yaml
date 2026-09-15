@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/multivesicular_body.yaml
+  slug: multivesicular_body
+session:
+  id: 2026-09-15T022412Z-claude-code-321d7d
+  timestamp: '2026-09-15T02:24:12Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/918
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - history
+  summary: Linked multivesicular body curation to PR 918
+  details: Linked the GO:0005771 multivesicular body curation session to pull request 918
+    after opening the evidence-backed record for adversarial review.

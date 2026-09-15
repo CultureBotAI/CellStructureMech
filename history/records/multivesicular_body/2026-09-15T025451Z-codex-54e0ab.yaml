@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/multivesicular_body.yaml
+  slug: multivesicular_body
+session:
+  id: 2026-09-15T025451Z-codex-54e0ab
+  timestamp: '2026-09-15T02:54:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/921
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/920
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  summary: Removed duplicate MVB membrane component
+  details: Addressed PR review issue 921 by removing the GO:0032585 multivesicular body membrane
+    from the parent GO:0005771 record's components list and dropping the stale MVB causal-graph
+    component_ref now that GO:0032585 is represented as a standalone has_part structure.

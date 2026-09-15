@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/prospore_membrane_spindle_pole_body_attachment_site.yaml
+  slug: prospore_membrane_spindle_pole_body_attachment_site
+session:
+  id: 2026-09-15T090029Z-claude-code-25d3e6
+  timestamp: '2026-09-15T09:00:29Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add prospore membrane spindle pole body attachment site
+  details: Created data/structures/spore/prospore_membrane_spindle_pole_body_attachment_site.yaml
+    for GO:0070057 with GO exact synonyms, prospore-membrane parthood, a lipid constituent,
+    Saccharomyces cerevisiae scope, an SPB-attachment function, GO and Knop and Strasser 2000
+    evidence, a nonmechanistic topology graph, and a TODO for the meiotic outer-plaque boundary.

@@ -1,0 +1,202 @@
+identifier: GO:0005773
+label: vacuole
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A closed structure, found only in eukaryotic cells, that is completely
+  surrounded by unit membrane and contains liquid material.
+definition_source: GO:0005773
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T07:52:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T07:53:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added intracellular-membrane-bounded-organelle parentage, vacuolar membrane
+    and lumen parts, Saccharomyces scope, yeast storage and degradation function,
+    GO/DOI evidence, a nonmechanistic topology graph, and a resolved membrane/lumen
+    boundary interpretation.
+  llm_assisted: true
+- timestamp: '2026-09-15T08:04:43Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed review issue #950 by connecting the fungal-type vacuole membrane
+    and lumen directly to the fungal-type vacuole in the topology graph.'
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+has_part:
+- GO:0005774
+- GO:0005775
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a lysosome-like vacuole with a bounding vacuolar membrane
+    and acidic lumen.
+  reference: DOI:10.1016/j.bbamcr.2008.08.003
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model for a vacuole specialized for lysosome-like degradation,
+    storage, and homeostasis.
+  reference: DOI:10.1016/j.bbamcr.2008.08.003
+functions:
+- function_id: vacuolar_storage_and_degradation
+  label: vacuolar storage and degradation
+  description: In budding yeast, the vacuole uses an acidic lumen and vacuolar membrane
+    to combine small-molecule storage with macromolecule degradation.
+  evidence:
+  - reference: GO:0000324
+    notes: GO:0000324 defines the fungal-type vacuole as a vacuole with lytic and
+      storage functions.
+  - reference: DOI:10.1016/j.bbamcr.2008.08.003
+    notes: Li and Kane 2009 review the yeast vacuole as a lysosome-like organelle
+      at the intersection of storage, degradation, and homeostasis.
+evidence:
+- reference: GO:0005773
+  notes: Gene Ontology cellular-component term for vacuole.
+- reference: GO:0043231
+  notes: Gene Ontology cellular-component parent term for intracellular membrane-bounded
+    organelle.
+- reference: GO:0005774
+  notes: Gene Ontology cellular-component term for the vacuolar membrane.
+- reference: GO:0005775
+  notes: Gene Ontology cellular-component term for the vacuolar lumen.
+- reference: GO:0000324
+  notes: Gene Ontology cellular-component term for the fungal-type vacuole subtype.
+- reference: GO:0000329
+  notes: Gene Ontology cellular-component term for the fungal-type vacuole membrane
+    subtype.
+- reference: GO:0000328
+  notes: Gene Ontology cellular-component term for the fungal-type vacuole lumen subtype.
+- reference: DOI:10.1016/j.bbamcr.2008.08.003
+  notes: 'Li and Kane 2009, The yeast lysosome-like vacuole: Endpoint and crossroads,
+    Biochimica et Biophysica Acta.'
+causal_graphs:
+- graph_id: vacuole_membrane_lumen_topology
+  title: Vacuoles pair a membrane with a lumen
+  description: The vacuole is a membrane-bounded organelle whose broad topology consists
+    of a vacuolar membrane surrounding a vacuolar lumen; the fungal-type vacuole specializes
+    that same membrane/lumen organization in yeast.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures vacuole membrane/lumen topology and fungal subtype
+    placement without asserting a complete set of vacuolar pumps, transporters, hydrolases,
+    or trafficking machinery.
+  nodes:
+  - node_id: vacuole
+    label: vacuole
+    node_type: ORGANELLE
+    grounding: GO:0005773
+  - node_id: vacuolar_membrane
+    label: vacuolar membrane
+    node_type: STRUCTURE
+    grounding: GO:0005774
+  - node_id: vacuolar_lumen
+    label: vacuolar lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005775
+  - node_id: fungal_type_vacuole
+    label: fungal-type vacuole
+    node_type: ORGANELLE
+    grounding: GO:0000324
+  - node_id: fungal_type_vacuole_membrane
+    label: fungal-type vacuole membrane
+    node_type: STRUCTURE
+    grounding: GO:0000329
+  - node_id: fungal_type_vacuole_lumen
+    label: fungal-type vacuole lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0000328
+  edges:
+  - subject: vacuolar_membrane
+    predicate: is part of
+    object: vacuole
+    description: The vacuolar membrane is the lipid bilayer that surrounds a vacuole.
+    evidence:
+    - reference: GO:0005774
+      notes: GO:0005774 identifies the vacuolar membrane.
+    - reference: GO:0005773
+      notes: GO:0005773 identifies the containing vacuole.
+  - subject: vacuolar_lumen
+    predicate: is part of
+    object: vacuole
+    description: The vacuolar lumen is the liquid compartment inside a vacuole.
+    evidence:
+    - reference: GO:0005775
+      notes: GO:0005775 identifies the vacuolar lumen.
+    - reference: GO:0005773
+      notes: GO:0005773 identifies the containing vacuole.
+  - subject: fungal_type_vacuole
+    predicate: is a
+    object: vacuole
+    description: The fungal-type vacuole is a lytic and storage subtype of vacuole.
+    evidence:
+    - reference: GO:0000324
+      notes: GO:0000324 defines fungal-type vacuole as a vacuole with lytic and storage
+        functions.
+    - reference: GO:0005773
+      notes: GO:0005773 identifies the broader vacuole.
+  - subject: fungal_type_vacuole_membrane
+    predicate: is part of
+    object: fungal_type_vacuole
+    description: The fungal-type vacuole membrane surrounds the fungal-type vacuole.
+    evidence:
+    - reference: GO:0000329
+      notes: GO:0000329 identifies the fungal-type vacuole membrane.
+    - reference: GO:0000324
+      notes: GO:0000324 identifies the containing fungal-type vacuole.
+  - subject: fungal_type_vacuole_lumen
+    predicate: is part of
+    object: fungal_type_vacuole
+    description: The fungal-type vacuole lumen is contained within the fungal-type
+      vacuole.
+    evidence:
+    - reference: GO:0000328
+      notes: GO:0000328 identifies the fungal-type vacuole lumen.
+    - reference: GO:0000324
+      notes: GO:0000324 identifies the containing fungal-type vacuole.
+  - subject: fungal_type_vacuole_membrane
+    predicate: is a
+    object: vacuolar_membrane
+    description: The fungal-type vacuole membrane is a specialized vacuolar membrane.
+    evidence:
+    - reference: GO:0000329
+      notes: GO:0000329 identifies the fungal-type vacuole membrane.
+    - reference: GO:0005774
+      notes: GO:0005774 identifies the broader vacuolar membrane class.
+  - subject: fungal_type_vacuole_lumen
+    predicate: is a
+    object: vacuolar_lumen
+    description: The fungal-type vacuole lumen is a specialized vacuolar lumen.
+    evidence:
+    - reference: GO:0000328
+      notes: GO:0000328 identifies the fungal-type vacuole lumen.
+    - reference: GO:0005775
+      notes: GO:0005775 identifies the broader vacuolar lumen class.
+discussions:
+- discussion_id: vacuolar_membrane_and_lumen_are_substructures
+  prompt: Keep the vacuolar membrane and vacuolar lumen as substructures rather than
+    as molecular components of the vacuole.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - has_part
+  - causal_graphs#vacuole_membrane_lumen_topology
+  rationale: GO:0005774 denotes the bounding membrane of the vacuole and GO:0005775
+    denotes its internal lumen; neither term is a molecular constituent such as a
+    protein, lipid, or polysaccharide family.
+  resolution_note: Represented the membrane and lumen in has_part and as topology
+    graph nodes, leaving this broad vacuole record without molecular components.
+  evidence:
+  - reference: GO:0005774
+    notes: GO:0005774 identifies the vacuolar membrane.
+  - reference: GO:0005775
+    notes: GO:0005775 identifies the vacuolar lumen.
+  posed_by: codex
+  posed_date: '2026-09-15'
+  resolved_date: '2026-09-15'

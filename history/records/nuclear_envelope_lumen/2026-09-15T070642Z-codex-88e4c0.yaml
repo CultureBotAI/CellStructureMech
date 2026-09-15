@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nuclear_envelope_lumen.yaml
+  slug: nuclear_envelope_lumen
+session:
+  id: 2026-09-15T070642Z-codex-88e4c0
+  timestamp: '2026-09-15T07:06:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/943
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Linked nuclear envelope lumen PR
+  details: 'Linked the nuclear envelope lumen curation history to PR #943 for the add-nuclear-envelope-lumen
+    branch.'

@@ -1,0 +1,183 @@
+identifier: cellstructuremech:multivesicular_body_lumen
+label: multivesicular body lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The multivesicular body compartment bounded by the multivesicular body
+  membrane.
+definition_source: uniprot.location:SL-0340
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T03:12:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T03:13:01Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added UniProt SL-0340 synonymy, endosome-lumen parentage, multivesicular-body
+    parthood, budding-yeast scope, GO/UniProt/DOI evidence, an MVB sorting function,
+    a nonmechanistic MVB lumen topology graph, and a resolved lumen-boundary interpretation.
+  llm_assisted: true
+synonyms:
+- synonym_text: Corpuscula multivesicularis lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0340
+- synonym_text: ECV lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0340
+- synonym_text: Endosomal carrier vesicle lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0340
+- synonym_text: Multivesicular bodies lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0340
+- synonym_text: MVB lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0340
+parent_structures:
+- GO:0031904
+part_of:
+- GO:0005771
+xrefs:
+- uniprot.location:SL-0340
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms multivesicular bodies with lumens that receive intraluminal
+    vesicles during ESCRT-dependent cargo sorting.
+  reference: DOI:10.1016/S0092-8674(01)00434-2
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Genetic model for ESCRT-dependent formation of intraluminal vesicles inside
+    multivesicular bodies.
+  reference: DOI:10.1016/S1534-5807(02)00220-4
+functions:
+- function_id: multivesicular_body_sorting_pathway
+  label: multivesicular body sorting pathway
+  grounding: GO:0071985
+  description: The multivesicular body lumen receives intraluminal vesicles and their
+    endosomal membrane cargo during ESCRT-dependent multivesicular body sorting.
+  evidence:
+  - reference: GO:0071985
+    notes: GO:0071985 denotes the multivesicular body sorting pathway that targets
+      ubiquitylated transmembrane proteins into luminal vesicles.
+  - reference: DOI:10.1016/S0092-8674(01)00434-2
+    notes: Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved yeast endosomal
+      protein-sorting complex needed for MVB cargo sorting.
+evidence:
+- reference: uniprot.location:SL-0340
+  notes: UniProt Subcellular Location entry SL-0340 identifies the multivesicular
+    body lumen, lists MVB lumen synonyms, and places the lumen under endosome lumen
+    and multivesicular body.
+- reference: GO:0031904
+  notes: Gene Ontology cellular-component term for the broader endosome lumen class.
+- reference: GO:0005771
+  notes: Gene Ontology cellular-component term for the containing multivesicular body.
+- reference: GO:0032585
+  notes: Gene Ontology cellular-component term for the multivesicular body membrane
+    that bounds this lumen.
+- reference: GO:0071985
+  notes: Gene Ontology biological-process term for the multivesicular body sorting
+    pathway.
+- reference: DOI:10.1016/S0092-8674(01)00434-2
+  notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
+    Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
+    ESCRT-I, Cell.
+- reference: DOI:10.1016/S1534-5807(02)00220-4
+  notes: Babst, Katzmann, Estepa-Sabal, Meerloo and Emr 2002, Escrt-III, Developmental
+    Cell.
+- reference: DOI:10.1016/j.devcel.2011.05.015
+  notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+causal_graphs:
+- graph_id: multivesicular_body_lumen_topology
+  title: Multivesicular body lumen topology
+  description: The multivesicular body membrane bounds the lumen that contains intraluminal
+    vesicles inside a multivesicular body.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures defining lumen topology without asserting a full
+    sequence of ESCRT cargo recognition, vesicle budding, scission, or vacuolar fusion.
+  nodes:
+  - node_id: multivesicular_body_lumen
+    label: multivesicular body lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:multivesicular_body_lumen
+  - node_id: endosome_lumen
+    label: endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031904
+  - node_id: multivesicular_body_membrane
+    label: multivesicular body membrane
+    node_type: STRUCTURE
+    grounding: GO:0032585
+  - node_id: intraluminal_vesicle
+    label: intraluminal vesicle
+    node_type: STRUCTURE
+  - node_id: multivesicular_body
+    label: multivesicular body
+    node_type: ORGANELLE
+    grounding: GO:0005771
+  edges:
+  - subject: multivesicular_body_lumen
+    predicate: is a
+    object: endosome_lumen
+    description: The multivesicular body lumen is a specialized endosome lumen.
+    evidence:
+    - reference: uniprot.location:SL-0340
+      notes: UniProt SL-0340 places the multivesicular body lumen under endosome lumen.
+    - reference: GO:0031904
+      notes: GO:0031904 identifies the endosome lumen class.
+  - subject: multivesicular_body_lumen
+    predicate: is part of
+    object: multivesicular_body
+    description: The multivesicular body lumen is the internal compartment of a multivesicular
+      body.
+    evidence:
+    - reference: uniprot.location:SL-0340
+      notes: UniProt SL-0340 names the multivesicular body as the parent compartment
+        of this lumen.
+  - subject: multivesicular_body_membrane
+    predicate: bounds
+    object: multivesicular_body_lumen
+    description: The multivesicular body membrane bounds the multivesicular body lumen.
+    evidence:
+    - reference: uniprot.location:SL-0340
+      notes: UniProt SL-0340 defines the lumen as the compartment bounded by the multivesicular
+        body membrane.
+    - reference: GO:0032585
+      notes: GO:0032585 identifies the multivesicular body membrane.
+  - subject: intraluminal_vesicle
+    predicate: is contained in
+    object: multivesicular_body_lumen
+    description: Multivesicular bodies contain intraluminal vesicles in the lumenal
+      compartment.
+    evidence:
+    - reference: GO:0005771
+      notes: GO:0005771 defines the multivesicular body by internal vesicles formed
+        from invagination of the limiting endosomal membrane.
+    - reference: uniprot.location:SL-0340
+      notes: UniProt SL-0340 identifies the multivesicular body lumen.
+discussions:
+- discussion_id: lumen_boundary_not_membrane_component
+  prompt: Represent the multivesicular body membrane as the boundary of the lumen
+    rather than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#multivesicular_body_lumen_topology
+  rationale: UniProt SL-0340 denotes the MVB compartment bounded by the multivesicular
+    body membrane, whereas GO:0032585 denotes the surrounding lipid bilayer.
+  resolution_note: Curated the membrane as a boundary node and left the lumen record
+    without constituent molecular components.
+  evidence:
+  - reference: uniprot.location:SL-0340
+    notes: SL-0340 identifies the internal multivesicular body lumen.
+  - reference: GO:0032585
+    notes: GO:0032585 identifies the multivesicular body membrane rather than the
+      lumen it encloses.
+  posed_by: codex
+  posed_date: '2026-09-15'

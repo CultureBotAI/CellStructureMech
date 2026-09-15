@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/peroxisomal_matrix.yaml
+  slug: peroxisomal_matrix
+session:
+  id: 2026-09-15T051302Z-codex-f28cb9
+  timestamp: '2026-09-15T05:13:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/932
+  - https://github.com/CultureBotAI/CellStructureMech/issues/933
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/931
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fix peroxisomal matrix review findings
+  details: 'Addressed review issues #932 and #933 by removing import-only DOI evidence from
+    the beta-oxidation function and grounding the fatty acid beta-oxidation function and graph
+    node to GO:0006635.'

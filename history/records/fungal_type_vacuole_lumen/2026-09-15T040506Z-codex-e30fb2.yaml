@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/fungal_type_vacuole_lumen.yaml
+  slug: fungal_type_vacuole_lumen
+session:
+  id: 2026-09-15T040506Z-codex-e30fb2
+  timestamp: '2026-09-15T04:05:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add fungal-type vacuole lumen
+  details: Created a GO:0000328 fungal-type vacuole lumen record with vacuolar-lumen parentage,
+    fungal-type-vacuole parthood, Saccharomyces cerevisiae scope, GO/DOI evidence, storage
+    and degradation functions, a nonmechanistic lumen topology graph, and a resolved boundary
+    interpretation.

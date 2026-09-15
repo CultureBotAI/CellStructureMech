@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/prospore_membrane_spindle_pole_body_attachment_site.yaml
+  slug: prospore_membrane_spindle_pole_body_attachment_site
+session:
+  id: 2026-09-15T091141Z-claude-code-9522dd
+  timestamp: '2026-09-15T09:11:41Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/956
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/954
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Flip SPB anchoring edge for review
+  details: 'Resolved issue #956 by making the prospore membrane attachment-site region the
+    graph subject that anchors the spindle pole body.'

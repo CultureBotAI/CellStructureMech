@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/fungal_type_vacuole_membrane.yaml
+  slug: fungal_type_vacuole_membrane
+session:
+  id: 2026-09-15T034756Z-codex-933e86
+  timestamp: '2026-09-15T03:47:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/924
+events:
+- type: EDIT
+  outcome: changed
+  summary: Link fungal-type vacuole membrane PR history
+  details: 'Linked the fungal-type vacuole membrane curation session to PR #924 after opening
+    the review branch.'

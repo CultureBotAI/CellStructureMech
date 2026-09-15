@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/multivesicular_body_membrane.yaml
+  slug: multivesicular_body_membrane
+session:
+  id: 2026-09-15T024205Z-codex-5d9fdb
+  timestamp: '2026-09-15T02:42:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added multivesicular body membrane record
+  details: Created an evidence-backed GO:0032585 record for the multivesicular body membrane
+    with UniProt SL-0175 synonyms, endosome-membrane parentage, multivesicular-body parthood,
+    a reviewed-label-only lipid-bilayer component, budding-yeast MVB sorting evidence, and
+    a nonmechanistic topology graph.

@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nuclear_envelope_lumen.yaml
+  slug: nuclear_envelope_lumen
+session:
+  id: 2026-09-15T065702Z-codex-fc83a0
+  timestamp: '2026-09-15T06:57:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added evidence-backed nuclear envelope lumen record
+  details: Created a GO:0005641 nuclear envelope lumen CellStructureMech record, curated GO-backed
+    organelle-envelope-lumen parentage, nuclear-envelope parthood, Eukaryota scope, record-level
+    DOI/GO evidence, a nonmechanistic topology graph that relates the lumen to the inner and
+    outer nuclear membranes, and a resolved boundary interpretation that keeps those membranes
+    out of lumen components.

@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nuclear_inner_membrane.yaml
+  slug: nuclear_inner_membrane
+session:
+  id: 2026-09-15T062140Z-codex-5803df
+  timestamp: '2026-09-15T06:21:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add nuclear inner membrane
+  details: Created GO-grounded nuclear inner membrane with exact inner-nuclear-membrane synonymy,
+    organelle-membrane parentage, nuclear-envelope parthood, a reviewed-label-only lipid-bilayer
+    component, Saccharomyces cerevisiae Heh1p/Heh2p karyopherin-import evidence, a nonmechanistic
+    inner-membrane import graph, and boundary and protein-grounding discussions.

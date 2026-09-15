@@ -1332,6 +1332,15 @@
   "definition": "The irregular network of unit membranes, visible only by electron microscopy, that occurs in the cytoplasm of many eukaryotic cells. The membranes form a complex meshwork of tubular channels, which are often expanded into slitlike cavities called cisternae. The ER takes two forms, rough (or granular), with ribosomes adhering to the outer surface, and smooth (with no ribosomes attached)."
  },
  {
+  "identifier": "GO:0005788",
+  "label": "endoplasmic reticulum lumen",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/endoplasmic_reticulum_lumen.html",
+  "definition": "The volume enclosed by the membranes of the endoplasmic reticulum."
+ },
+ {
   "identifier": "GO:0005789",
   "label": "endoplasmic reticulum membrane",
   "category": "MEMBRANE_ORGANELLE",
@@ -1438,6 +1447,24 @@
   "status": "PROPOSED",
   "page": "structures/membrane_organelle/fungal_type_vacuole.html",
   "definition": "A vacuole that has both lytic and storage functions. The fungal vacuole is a large, membrane-bounded organelle that functions as a reservoir for small molecules and as the primary compartment for degradation."
+ },
+ {
+  "identifier": "GO:0000328",
+  "label": "fungal-type vacuole lumen",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/fungal_type_vacuole_lumen.html",
+  "definition": "The volume enclosed within the vacuolar membrane of the fungal-type vacuole."
+ },
+ {
+  "identifier": "GO:0000329",
+  "label": "fungal-type vacuole membrane",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/fungal_type_vacuole_membrane.html",
+  "definition": "The lipid bilayer surrounding the fungal-type vacuole."
  },
  {
   "identifier": "GO:0020015",
@@ -1773,6 +1800,33 @@
   "definition": "A small subcellular vesicle, surrounded by a membrane, in the pellicle of ciliate protozoans that discharges a mucus-like secretion."
  },
  {
+  "identifier": "GO:0005771",
+  "label": "multivesicular body",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/multivesicular_body.html",
+  "definition": "A type of endosome in which regions of the limiting endosomal membrane invaginate to form internal vesicles; membrane proteins that enter the internal vesicles are sequestered from the cytoplasm."
+ },
+ {
+  "identifier": "cellstructuremech:multivesicular_body_lumen",
+  "label": "multivesicular body lumen",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/multivesicular_body_lumen.html",
+  "definition": "The multivesicular body compartment bounded by the multivesicular body membrane."
+ },
+ {
+  "identifier": "GO:0032585",
+  "label": "multivesicular body membrane",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/multivesicular_body_membrane.html",
+  "definition": "The lipid bilayer surrounding a multivesicular body."
+ },
+ {
   "identifier": "GO:0005635",
   "label": "nuclear envelope",
   "category": "MEMBRANE_ORGANELLE",
@@ -1780,6 +1834,33 @@
   "status": "PROPOSED",
   "page": "structures/membrane_organelle/nuclear_envelope.html",
   "definition": "The double lipid bilayer that encloses the nucleus, separating its contents from the cytoplasm. It consists of an inner and outer nuclear membrane, with an intermembrane space (20-40 nm wide, also called the perinuclear space) between them. The envelope is supported by the nuclear lamina and contains nuclear pore complexes, which regulate molecular transport."
+ },
+ {
+  "identifier": "GO:0005641",
+  "label": "nuclear envelope lumen",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/nuclear_envelope_lumen.html",
+  "definition": "The region between the two lipid bilayers of the nuclear envelope."
+ },
+ {
+  "identifier": "GO:0005637",
+  "label": "nuclear inner membrane",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/nuclear_inner_membrane.html",
+  "definition": "The inner, i.e. lumen-facing, lipid bilayer of the nuclear envelope."
+ },
+ {
+  "identifier": "GO:0005640",
+  "label": "nuclear outer membrane",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/nuclear_outer_membrane.html",
+  "definition": "The outer, i.e. cytoplasm-facing, lipid bilayer of the nuclear envelope."
  },
  {
   "identifier": "GO:0033009",
@@ -1897,6 +1978,24 @@
   "status": "PROPOSED",
   "page": "structures/membrane_organelle/parasitophorous_vacuole_membrane.html",
   "definition": "The membrane surrounding the parasitophorous vacuole."
+ },
+ {
+  "identifier": "GO:0005782",
+  "label": "peroxisomal matrix",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/peroxisomal_matrix.html",
+  "definition": "The volume contained within the membranes of a peroxisome; in many cells the matrix contains a crystalloid core largely composed of urate oxidase."
+ },
+ {
+  "identifier": "GO:0005778",
+  "label": "peroxisomal membrane",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/peroxisomal_membrane.html",
+  "definition": "The lipid bilayer surrounding a peroxisome."
  },
  {
   "identifier": "GO:0005777",
@@ -2140,6 +2239,24 @@
   "status": "PROPOSED",
   "page": "structures/membrane_organelle/trichocyst.html",
   "definition": "A crystalline exocytotic organelle composed of small, acidic proteins existing primarily as disulphide-linked dimers. The trichocyst releases long filamentous proteins that capture predators in net-like structures to slow them down when the cell is disturbed."
+ },
+ {
+  "identifier": "GO:0005774",
+  "label": "vacuolar membrane",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/vacuolar_membrane.html",
+  "definition": "The lipid bilayer surrounding the vacuole and separating its contents from the cytoplasm of the cell."
+ },
+ {
+  "identifier": "GO:0005773",
+  "label": "vacuole",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/vacuole.html",
+  "definition": "A closed structure, found only in eukaryotic cells, that is completely surrounded by unit membrane and contains liquid material."
  },
  {
   "identifier": "GO:0140266",
@@ -2770,5 +2887,23 @@
   "status": "PROPOSED",
   "page": "structures/spore/prospore_membrane.html",
   "definition": "An ascospore-forming fungal double-membrane structure that grows from meiotic outer plaques to encapsulate meiotic nuclei and provide the foundation for spore-wall assembly."
+ },
+ {
+  "identifier": "GO:0070056",
+  "label": "prospore membrane leading edge",
+  "category": "SPORE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/spore/prospore_membrane_leading_edge.html",
+  "definition": "The region of the prospore membrane that extends to surround the spore nucleus; coated with specific proteins that are thought to play a role in prospore membrane organization."
+ },
+ {
+  "identifier": "GO:0070057",
+  "label": "prospore membrane spindle pole body attachment site",
+  "category": "SPORE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/spore/prospore_membrane_spindle_pole_body_attachment_site.html",
+  "definition": "The region of the prospore membrane to which the spindle pole body (SPB) is anchored; the prospore membrane extends from the SPB attachment site to surround the spore nucleus."
  }
 ]

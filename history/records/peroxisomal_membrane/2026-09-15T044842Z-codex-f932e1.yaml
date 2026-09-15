@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/peroxisomal_membrane.yaml
+  slug: peroxisomal_membrane
+session:
+  id: 2026-09-15T044842Z-codex-f932e1
+  timestamp: '2026-09-15T04:48:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/929
+  - https://github.com/CultureBotAI/CellStructureMech/issues/930
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/928
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fix peroxisomal membrane review wording
+  details: 'Addressed review issues #929 and #930 by replacing lumenal wording with matrix-specific
+    wording and narrowing the membrane-localized peroxin graph node to membrane-associated
+    docking and translocation factors.'

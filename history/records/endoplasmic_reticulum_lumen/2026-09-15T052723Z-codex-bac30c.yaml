@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endoplasmic_reticulum_lumen.yaml
+  slug: endoplasmic_reticulum_lumen
+session:
+  id: 2026-09-15T052723Z-codex-bac30c
+  timestamp: '2026-09-15T05:27:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add endoplasmic reticulum lumen
+  details: Created GO-grounded endoplasmic reticulum lumen with exact ER-lumen synonymy, organelle-lumen
+    parentage, endoplasmic-reticulum parthood, Saccharomyces cerevisiae evidence, Sec61 and
+    ER quality-control functions, a nonmechanistic topology graph, and a resolved boundary
+    interpretation that keeps the ER membrane and Sec61 translocon out of lumen components.
