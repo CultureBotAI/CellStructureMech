@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/multivesicular_body.yaml
+  slug: multivesicular_body
+session:
+  id: 2026-09-15T021314Z-claude-code-6821e8
+  timestamp: '2026-09-15T02:13:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added multivesicular body record
+  details: Created data/structures/membrane_organelle/multivesicular_body.yaml as the GO:0005771
+    multivesicular body record. The record adds late-endosome parentage, UniProt SL-0174 synonymy,
+    a GO-grounded multivesicular body membrane component, Saccharomyces cerevisiae scope,
+    multivesicular-body sorting and vacuolar cargo-delivery functions, DOI/GO/UniProt evidence,
+    an ESCRT intraluminal-vesicle formation graph, and explicit curation discussions for intraluminal-vesicle
+    grounding and the ESCRT machinery boundary.
