@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: data/embeddings/structure_text_embeddings.json
+  slug: cellular_bud_membrane_embedding_review
+session:
+  id: 2026-09-15T003340Z-codex-f009ed
+  timestamp: '2026-09-15T00:33:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/909
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/907
+events:
+- type: EDIT
+  outcome: changed
+  summary: Preserve existing embedding vectors in cellular bud membrane addition
+  details: Adversarial review verified GO and UniProt identity and parthood plus the Finger
+    1998 and Valtz 1996 abstracts. Found 202 rewritten vectors among 305 unchanged input records,
+    with maximum coordinate drift 4.262088228179639e-08. Restored all 305 base entries after
+    asserting identical model metadata, source paths, and text hashes; retained the new vector
+    and regenerated derived maps and pages. The scientific record remains unchanged and PROPOSED.
