@@ -1940,6 +1940,11 @@
           "cosine_similarity": 0.89715978
         },
         {
+          "identifier": "GO:0097591",
+          "label": "ventral disc lateral crest",
+          "cosine_similarity": 0.89585027
+        },
+        {
           "identifier": "GO:0097593",
           "label": "ventral disc microtubule array",
           "cosine_similarity": 0.8878318
@@ -1953,11 +1958,6 @@
           "identifier": "GO:0020010",
           "label": "conoid",
           "cosine_similarity": 0.67729599
-        },
-        {
-          "identifier": "GO:0020007",
-          "label": "apical complex",
-          "cosine_similarity": 0.67547222
         }
       ]
     },
@@ -1969,6 +1969,11 @@
           "identifier": "GO:0097597",
           "label": "ventral disc",
           "cosine_similarity": 0.89715978
+        },
+        {
+          "identifier": "GO:0097591",
+          "label": "ventral disc lateral crest",
+          "cosine_similarity": 0.89145665
         },
         {
           "identifier": "GO:0097594",
@@ -1984,11 +1989,6 @@
           "identifier": "GO:0020007",
           "label": "apical complex",
           "cosine_similarity": 0.6666991
-        },
-        {
-          "identifier": "GO:0020010",
-          "label": "conoid",
-          "cosine_similarity": 0.66546592
         }
       ]
     },
@@ -2012,14 +2012,45 @@
           "cosine_similarity": 0.83295116
         },
         {
+          "identifier": "GO:0097591",
+          "label": "ventral disc lateral crest",
+          "cosine_similarity": 0.7688551
+        },
+        {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.66087476
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097591",
+      "label": "ventral disc lateral crest",
+      "neighbors": [
+        {
+          "identifier": "GO:0097597",
+          "label": "ventral disc",
+          "cosine_similarity": 0.89585027
         },
         {
-          "identifier": "GO:0036064",
-          "label": "ciliary basal body",
-          "cosine_similarity": 0.64688494
+          "identifier": "GO:0097595",
+          "label": "ventral disc crossbridge",
+          "cosine_similarity": 0.89145665
+        },
+        {
+          "identifier": "GO:0097593",
+          "label": "ventral disc microtubule array",
+          "cosine_similarity": 0.79563482
+        },
+        {
+          "identifier": "GO:0097594",
+          "label": "ventral disc dorsal microribbon",
+          "cosine_similarity": 0.7688551
+        },
+        {
+          "identifier": "GO:0020007",
+          "label": "apical complex",
+          "cosine_similarity": 0.64652648
         }
       ]
     },
@@ -2043,14 +2074,14 @@
           "cosine_similarity": 0.84486767
         },
         {
+          "identifier": "GO:0097591",
+          "label": "ventral disc lateral crest",
+          "cosine_similarity": 0.79563482
+        },
+        {
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
           "cosine_similarity": 0.72315969
-        },
-        {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.70186934
         }
       ]
     },

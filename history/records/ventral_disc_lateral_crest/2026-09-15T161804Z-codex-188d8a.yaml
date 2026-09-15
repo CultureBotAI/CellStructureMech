@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ventral_disc_lateral_crest.yaml
+  slug: ventral_disc_lateral_crest
+session:
+  id: 2026-09-15T161804Z-codex-188d8a
+  timestamp: '2026-09-15T16:18:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/997
+  - https://github.com/CultureBotAI/CellStructureMech/issues/998
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/996
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  - history
+  summary: Resolve ventral disc lateral crest PR review issues
+  details: 'Resolved PR #996 review issues #997 and #998 by removing the lateral-crest protein
+    localization observation from the graph, retargeting the graph to the GO-backed lateral-crest
+    edge relation, and adding this append-only history entry with links to the pull request
+    and review issues.'
