@@ -8207,6 +8207,11 @@
           "cosine_similarity": 0.83918871
         },
         {
+          "identifier": "GO:0000228",
+          "label": "nuclear chromosome",
+          "cosine_similarity": 0.81081039
+        },
+        {
           "identifier": "GO:0042645",
           "label": "mitochondrial nucleoid",
           "cosine_similarity": 0.80256079
@@ -8215,11 +8220,6 @@
           "identifier": "GO:0033009",
           "label": "nucleomorph",
           "cosine_similarity": 0.77385118
-        },
-        {
-          "identifier": "GO:0005634",
-          "label": "nucleus",
-          "cosine_similarity": 0.76533173
         }
       ]
     },
@@ -8906,6 +8906,37 @@
       ]
     },
     {
+      "identifier": "GO:0000228",
+      "label": "nuclear chromosome",
+      "neighbors": [
+        {
+          "identifier": "GO:0009295",
+          "label": "nucleoid",
+          "cosine_similarity": 0.81081039
+        },
+        {
+          "identifier": "GO:0042645",
+          "label": "mitochondrial nucleoid",
+          "cosine_similarity": 0.76276191
+        },
+        {
+          "identifier": "GO:0005634",
+          "label": "nucleus",
+          "cosine_similarity": 0.75336336
+        },
+        {
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.74097936
+        },
+        {
+          "identifier": "GO:0000776",
+          "label": "kinetochore",
+          "cosine_similarity": 0.71445257
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005643",
       "label": "nuclear pore",
       "neighbors": [
@@ -9132,6 +9163,11 @@
           "cosine_similarity": 0.77848284
         },
         {
+          "identifier": "GO:0000228",
+          "label": "nuclear chromosome",
+          "cosine_similarity": 0.7134921
+        },
+        {
           "identifier": "GO:0009295",
           "label": "nucleoid",
           "cosine_similarity": 0.69722463
@@ -9145,11 +9181,6 @@
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
           "cosine_similarity": 0.67151498
-        },
-        {
-          "identifier": "GO:0000932",
-          "label": "P-body",
-          "cosine_similarity": 0.66746577
         }
       ]
     },

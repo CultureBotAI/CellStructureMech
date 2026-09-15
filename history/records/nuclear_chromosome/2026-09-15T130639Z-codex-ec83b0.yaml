@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_chromosome.yaml
+  slug: nuclear_chromosome
+session:
+  id: 2026-09-15T130639Z-codex-ec83b0
+  timestamp: '2026-09-15T13:06:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add nuclear chromosome record
+  details: Added a GO-grounded nuclear chromosome record with chromosome parentage, nuclear-lumen
+    parthood, narrow GO synonymy, reviewed label-only nuclear chromosomal DNA and chromatin-protein
+    components, eukaryotic and Saccharomyces scope, chromosome-organization function, GO/DOI
+    evidence, refreshed text embeddings, and a nonmechanistic chromatinization graph.
