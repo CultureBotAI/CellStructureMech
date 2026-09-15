@@ -25,6 +25,12 @@ curation_history:
   action: FIXED_CURATION_METADATA
   changes: Marked the scaffold curation event as LLM-assisted.
   llm_assisted: true
+- timestamp: '2026-09-15T08:35:43Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved review issues #952 and #953 by adding the GO exact synonym and
+    representing the spore-nucleus spatial relation in the graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0016020
 part_of:
@@ -111,6 +117,9 @@ causal_graphs:
     label: prospore membrane
     node_type: STRUCTURE
     grounding: GO:0005628
+  - node_id: haploid_meiotic_nucleus
+    label: haploid meiotic nucleus
+    node_type: ORGANELLE
   edges:
   - subject: leading_edge_protein_coat
     predicate: localizes to
@@ -133,6 +142,15 @@ causal_graphs:
       notes: GO:0070056 identifies the prospore membrane leading edge.
     - reference: GO:0005628
       notes: GO:0005628 identifies the parent prospore membrane.
+  - subject: prospore_membrane_leading_edge
+    predicate: extends around
+    object: haploid_meiotic_nucleus
+    description: The protein-coated leading edge is the region of the growing prospore
+      membrane that advances around the haploid spore nucleus.
+    evidence:
+    - reference: GO:0070056
+      notes: GO:0070056 defines the leading edge as the region of the prospore membrane
+        that extends to surround the spore nucleus.
 discussions:
 - discussion_id: ground_leading_edge_coat_subunits
   prompt: Resolve exact source-neutral groundings and component boundaries for the
@@ -150,3 +168,7 @@ discussions:
   - reference: DOI:10.1093/emboj/20.24.6946
   posed_by: codex
   posed_date: '2026-09-15'
+synonyms:
+- synonym_text: forespore membrane leading edge
+  synonym_type: EXACT_SYNONYM
+  source: GO:0070056

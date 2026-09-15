@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/prospore_membrane_leading_edge.yaml
+  slug: prospore_membrane_leading_edge
+session:
+  id: 2026-09-15T083603Z-claude-code-4316e5
+  timestamp: '2026-09-15T08:36:03Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/952
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/951
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Add forespore synonym for review
+  details: 'Resolved issue #952 by adding the GO:0070056 exact synonym forespore membrane
+    leading edge to the prospore membrane leading edge record.'

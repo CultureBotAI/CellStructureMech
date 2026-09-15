@@ -8374,7 +8374,7 @@
         {
           "identifier": "GO:0070056",
           "label": "prospore membrane leading edge",
-          "cosine_similarity": 0.68138835
+          "cosine_similarity": 0.67973828
         }
       ]
     },
@@ -9051,7 +9051,7 @@
         {
           "identifier": "GO:0070056",
           "label": "prospore membrane leading edge",
-          "cosine_similarity": 0.71300999
+          "cosine_similarity": 0.70257629
         },
         {
           "identifier": "GO:0060205",
@@ -9191,7 +9191,7 @@
         {
           "identifier": "GO:0070056",
           "label": "prospore membrane leading edge",
-          "cosine_similarity": 0.68857258
+          "cosine_similarity": 0.68360406
         },
         {
           "identifier": "GO:0005628",
@@ -9736,9 +9736,9 @@
           "cosine_similarity": 0.8135034
         },
         {
-          "identifier": "GO:0005628",
-          "label": "prospore membrane",
-          "cosine_similarity": 0.75701316
+          "identifier": "GO:0070056",
+          "label": "prospore membrane leading edge",
+          "cosine_similarity": 0.75941057
         }
       ]
     },
@@ -9769,7 +9769,7 @@
         {
           "identifier": "GO:0070056",
           "label": "prospore membrane leading edge",
-          "cosine_similarity": 0.76452347
+          "cosine_similarity": 0.76234927
         }
       ]
     },
@@ -9855,14 +9855,14 @@
           "cosine_similarity": 0.84506726
         },
         {
+          "identifier": "GO:0070056",
+          "label": "prospore membrane leading edge",
+          "cosine_similarity": 0.82508939
+        },
+        {
           "identifier": "GO:0042170",
           "label": "plastid membrane",
           "cosine_similarity": 0.8130264
-        },
-        {
-          "identifier": "GO:0070056",
-          "label": "prospore membrane leading edge",
-          "cosine_similarity": 0.81126348
         }
       ]
     },
@@ -9935,7 +9935,7 @@
         {
           "identifier": "GO:0070056",
           "label": "prospore membrane leading edge",
-          "cosine_similarity": 0.90876906
+          "cosine_similarity": 0.91317327
         },
         {
           "identifier": "GO:0043594",
@@ -9966,27 +9966,27 @@
         {
           "identifier": "GO:0005628",
           "label": "prospore membrane",
-          "cosine_similarity": 0.90876906
+          "cosine_similarity": 0.91317327
         },
         {
           "identifier": "GO:0043594",
           "label": "outer endospore membrane",
-          "cosine_similarity": 0.81126348
-        },
-        {
-          "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
-          "label": "COPI-coated vesicle lumen",
-          "cosine_similarity": 0.78116078
-        },
-        {
-          "identifier": "cellstructuremech:cvt_vesicle_lumen",
-          "label": "Cvt vesicle lumen",
-          "cosine_similarity": 0.78115582
+          "cosine_similarity": 0.82508939
         },
         {
           "identifier": "GO:0005789",
           "label": "endoplasmic reticulum membrane",
-          "cosine_similarity": 0.78017979
+          "cosine_similarity": 0.78918749
+        },
+        {
+          "identifier": "cellstructuremech:cvt_vesicle_lumen",
+          "label": "Cvt vesicle lumen",
+          "cosine_similarity": 0.77472062
+        },
+        {
+          "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
+          "label": "COPI-coated vesicle lumen",
+          "cosine_similarity": 0.77352309
         }
       ]
     }

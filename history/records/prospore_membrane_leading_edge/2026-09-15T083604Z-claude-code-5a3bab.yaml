@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/prospore_membrane_leading_edge.yaml
+  slug: prospore_membrane_leading_edge
+session:
+  id: 2026-09-15T083604Z-claude-code-5a3bab
+  timestamp: '2026-09-15T08:36:04Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/953
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/951
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Add spore-nucleus graph relation for review
+  details: 'Resolved issue #953 by adding a haploid meiotic nucleus node and a reviewed leading-edge
+    extends-around edge backed by GO:0070056.'
