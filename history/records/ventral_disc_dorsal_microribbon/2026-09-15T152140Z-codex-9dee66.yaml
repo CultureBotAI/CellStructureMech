@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml
+  slug: ventral_disc_dorsal_microribbon
+session:
+  id: 2026-09-15T152140Z-codex-9dee66
+  timestamp: '2026-09-15T15:21:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/991
+  - https://github.com/CultureBotAI/CellStructureMech/issues/992
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/990
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  - history
+  summary: Resolve dorsal microribbon PR review issues
+  details: 'Resolved PR #990 review issues #991 and #992 by reclassifying the dorsal microribbon
+    constituent-and-partonomy graph as ASSEMBLY and adding this append-only history entry
+    with links to the pull request and review issues.'

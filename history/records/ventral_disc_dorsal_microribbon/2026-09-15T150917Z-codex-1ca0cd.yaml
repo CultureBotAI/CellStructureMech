@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml
+  slug: ventral_disc_dorsal_microribbon
+session:
+  id: 2026-09-15T150917Z-codex-1ca0cd
+  timestamp: '2026-09-15T15:09:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ventral disc dorsal microribbon
+  details: Added GO:0097594 as a standalone ventral disc dorsal microribbon record with GO
+    synonymy and ventral-disc partonomy, a label-only microribbon striated-fiber-assemblin
+    component, Giardia intestinalis scope and example rows, primary Schwartz et al. DOI evidence,
+    a nonmechanistic microribbon architecture graph, and an open TODO for exact microribbon
+    protein grounding.
