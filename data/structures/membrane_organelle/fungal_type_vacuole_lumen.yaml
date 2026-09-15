@@ -18,6 +18,13 @@ curation_history:
     scope, GO/DOI evidence, storage and degradation functions, a nonmechanistic lumen
     topology graph, and a resolved lumen-boundary interpretation.
   llm_assisted: true
+- timestamp: '2026-09-15T04:15:37Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed issue #927 by retitling the fungal-type vacuole lumen graph
+    so it keeps the singular lumen identity and names the compartmentalized storage
+    and degradation roles.'
+  llm_assisted: true
 parent_structures:
 - GO:0005775
 part_of:
@@ -73,7 +80,7 @@ evidence:
     Biochimica et Biophysica Acta.'
 causal_graphs:
 - graph_id: yeast_fungal_vacuole_lumen_storage_and_degradation
-  title: Yeast fungal-type vacuole lumens store and degrade cargo
+  title: Yeast fungal-type vacuole lumen compartmentalizes storage and degradation
   description: The fungal-type vacuole lumen is the membrane-enclosed acidic compartment
     that stores small molecules and houses degradative hydrolases in budding yeast.
   graph_kind: FUNCTION

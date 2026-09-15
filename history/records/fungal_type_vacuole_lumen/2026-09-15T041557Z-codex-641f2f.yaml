@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/fungal_type_vacuole_lumen.yaml
+  slug: fungal_type_vacuole_lumen
+session:
+  id: 2026-09-15T041557Z-codex-641f2f
+  timestamp: '2026-09-15T04:15:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/927
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/926
+events:
+- type: EDIT
+  outcome: changed
+  summary: Clarify fungal-type vacuole lumen graph title
+  details: 'Addressed review issue #927 by retitling the fungal-type vacuole lumen graph so
+    it keeps the singular lumen identity and names the compartmentalized storage and degradation
+    roles directly.'
