@@ -715,9 +715,9 @@
           "cosine_similarity": 0.68582993
         },
         {
-          "identifier": "GO:0020016",
-          "label": "flagellar pocket",
-          "cosine_similarity": 0.6790494
+          "identifier": "GO:0044284",
+          "label": "mitochondrial crista junction",
+          "cosine_similarity": 0.68086479
         }
       ]
     },
@@ -6156,6 +6156,11 @@
           "cosine_similarity": 0.9167065
         },
         {
+          "identifier": "GO:0044284",
+          "label": "mitochondrial crista junction",
+          "cosine_similarity": 0.90629438
+        },
+        {
           "identifier": "GO:0005739",
           "label": "mitochondrion",
           "cosine_similarity": 0.88739761
@@ -6169,11 +6174,37 @@
           "identifier": "GO:0005741",
           "label": "mitochondrial outer membrane",
           "cosine_similarity": 0.85820024
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0044284",
+      "label": "mitochondrial crista junction",
+      "neighbors": [
+        {
+          "identifier": "GO:0005758",
+          "label": "mitochondrial intermembrane space",
+          "cosine_similarity": 0.91542765
+        },
+        {
+          "identifier": "GO:0030061",
+          "label": "mitochondrial crista",
+          "cosine_similarity": 0.90629438
+        },
+        {
+          "identifier": "GO:0005743",
+          "label": "mitochondrial inner membrane",
+          "cosine_similarity": 0.87867412
+        },
+        {
+          "identifier": "GO:0005759",
+          "label": "mitochondrial matrix",
+          "cosine_similarity": 0.86910911
         },
         {
           "identifier": "GO:0031966",
           "label": "mitochondrial membrane",
-          "cosine_similarity": 0.85517339
+          "cosine_similarity": 0.86344376
         }
       ]
     },
@@ -6264,9 +6295,9 @@
           "cosine_similarity": 0.9238084
         },
         {
-          "identifier": "GO:0005739",
-          "label": "mitochondrion",
-          "cosine_similarity": 0.90782607
+          "identifier": "GO:0044284",
+          "label": "mitochondrial crista junction",
+          "cosine_similarity": 0.91542765
         }
       ]
     },
@@ -6295,9 +6326,9 @@
           "cosine_similarity": 0.86916712
         },
         {
-          "identifier": "cellstructuremech:mitosome_matrix",
-          "label": "mitosome matrix",
-          "cosine_similarity": 0.86832698
+          "identifier": "GO:0044284",
+          "label": "mitochondrial crista junction",
+          "cosine_similarity": 0.86910911
         }
       ]
     },
@@ -8775,9 +8806,9 @@
           "cosine_similarity": 0.69680657
         },
         {
-          "identifier": "GO:0005940",
-          "label": "septin ring",
-          "cosine_similarity": 0.68297278
+          "identifier": "GO:0044284",
+          "label": "mitochondrial crista junction",
+          "cosine_similarity": 0.68480606
         }
       ]
     },
@@ -9008,6 +9039,11 @@
           "cosine_similarity": 0.71244196
         },
         {
+          "identifier": "GO:0044284",
+          "label": "mitochondrial crista junction",
+          "cosine_similarity": 0.70644384
+        },
+        {
           "identifier": "GO:0005641",
           "label": "nuclear envelope lumen",
           "cosine_similarity": 0.70364413
@@ -9021,11 +9057,6 @@
           "identifier": "GO:0009529",
           "label": "plastid intermembrane space",
           "cosine_similarity": 0.68965637
-        },
-        {
-          "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
-          "label": "COPII-coated vesicle lumen",
-          "cosine_similarity": 0.68842296
         }
       ]
     },
@@ -9612,9 +9643,9 @@
           "cosine_similarity": 0.70257629
         },
         {
-          "identifier": "GO:0060205",
-          "label": "cytoplasmic vesicle lumen",
-          "cosine_similarity": 0.70102582
+          "identifier": "GO:0044284",
+          "label": "mitochondrial crista junction",
+          "cosine_similarity": 0.70241079
         }
       ]
     },
