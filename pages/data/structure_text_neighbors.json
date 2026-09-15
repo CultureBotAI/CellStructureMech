@@ -3392,6 +3392,11 @@
       "label": "apicomplexan dense granule",
       "neighbors": [
         {
+          "identifier": "GO:0030668",
+          "label": "apicomplexan dense granule membrane",
+          "cosine_similarity": 0.86537848
+        },
+        {
           "identifier": "cellstructuremech:parasitophorous_vacuole",
           "label": "parasitophorous vacuole",
           "cosine_similarity": 0.81201178
@@ -3410,11 +3415,37 @@
           "identifier": "GO:0036000",
           "label": "mucocyst",
           "cosine_similarity": 0.75926628
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030668",
+      "label": "apicomplexan dense granule membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0160211",
+          "label": "apicoplast membrane",
+          "cosine_similarity": 0.86622927
         },
         {
-          "identifier": "cellstructuremech:parasitophorous_vacuole_lumen",
-          "label": "parasitophorous vacuole lumen",
-          "cosine_similarity": 0.75423632
+          "identifier": "GO:0020026",
+          "label": "apicomplexan dense granule",
+          "cosine_similarity": 0.86537848
+        },
+        {
+          "identifier": "GO:0033016",
+          "label": "rhoptry membrane",
+          "cosine_similarity": 0.84921954
+        },
+        {
+          "identifier": "GO:0033163",
+          "label": "microneme membrane",
+          "cosine_similarity": 0.83575351
+        },
+        {
+          "identifier": "GO:0070258",
+          "label": "inner membrane pellicle complex",
+          "cosine_similarity": 0.83013199
         }
       ]
     },
@@ -3433,6 +3464,11 @@
           "cosine_similarity": 0.79330164
         },
         {
+          "identifier": "GO:0030668",
+          "label": "apicomplexan dense granule membrane",
+          "cosine_similarity": 0.74072897
+        },
+        {
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
           "cosine_similarity": 0.73277353
@@ -3441,11 +3477,6 @@
           "identifier": "GO:0009526",
           "label": "plastid envelope",
           "cosine_similarity": 0.72998427
-        },
-        {
-          "identifier": "GO:0009536",
-          "label": "plastid",
-          "cosine_similarity": 0.72083359
         }
       ]
     },
@@ -3457,6 +3488,11 @@
           "identifier": "GO:0020011",
           "label": "apicoplast",
           "cosine_similarity": 0.91287958
+        },
+        {
+          "identifier": "GO:0030668",
+          "label": "apicomplexan dense granule membrane",
+          "cosine_similarity": 0.86622927
         },
         {
           "identifier": "GO:0070258",
@@ -3472,11 +3508,6 @@
           "identifier": "GO:0033016",
           "label": "rhoptry membrane",
           "cosine_similarity": 0.82784601
-        },
-        {
-          "identifier": "GO:0009527",
-          "label": "plastid outer membrane",
-          "cosine_similarity": 0.81681162
         }
       ]
     },
@@ -5846,6 +5877,11 @@
           "cosine_similarity": 0.83891507
         },
         {
+          "identifier": "GO:0030668",
+          "label": "apicomplexan dense granule membrane",
+          "cosine_similarity": 0.83013199
+        },
+        {
           "identifier": "cellstructuremech:parasitophorous_vacuole",
           "label": "parasitophorous vacuole",
           "cosine_similarity": 0.80922083
@@ -5859,11 +5895,6 @@
           "identifier": "cellstructuremech:mitosome_outer_membrane",
           "label": "mitosome outer membrane",
           "cosine_similarity": 0.80035085
-        },
-        {
-          "identifier": "cellstructuremech:mitosome_intermembrane_space",
-          "label": "mitosome intermembrane space",
-          "cosine_similarity": 0.79754462
         }
       ]
     },
@@ -6073,14 +6104,14 @@
           "cosine_similarity": 0.8475623
         },
         {
+          "identifier": "GO:0030668",
+          "label": "apicomplexan dense granule membrane",
+          "cosine_similarity": 0.83575351
+        },
+        {
           "identifier": "GO:0070113",
           "label": "organellar chromatophore inner membrane",
           "cosine_similarity": 0.82151953
-        },
-        {
-          "identifier": "GO:0030659",
-          "label": "cytoplasmic vesicle membrane",
-          "cosine_similarity": 0.81651363
         }
       ]
     },
@@ -6559,6 +6590,11 @@
           "cosine_similarity": 0.7932536
         },
         {
+          "identifier": "GO:0030668",
+          "label": "apicomplexan dense granule membrane",
+          "cosine_similarity": 0.75943729
+        },
+        {
           "identifier": "GO:0055039",
           "label": "trichocyst",
           "cosine_similarity": 0.75934397
@@ -6572,11 +6608,6 @@
           "identifier": "GO:0031410",
           "label": "cytoplasmic vesicle",
           "cosine_similarity": 0.75718933
-        },
-        {
-          "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
-          "label": "COPII-coated vesicle lumen",
-          "cosine_similarity": 0.75701698
         }
       ]
     },
@@ -7856,6 +7887,11 @@
       "label": "rhoptry membrane",
       "neighbors": [
         {
+          "identifier": "GO:0030668",
+          "label": "apicomplexan dense granule membrane",
+          "cosine_similarity": 0.84921954
+        },
+        {
           "identifier": "GO:0033163",
           "label": "microneme membrane",
           "cosine_similarity": 0.84840682
@@ -7874,11 +7910,6 @@
           "identifier": "GO:0030659",
           "label": "cytoplasmic vesicle membrane",
           "cosine_similarity": 0.82944916
-        },
-        {
-          "identifier": "GO:0005789",
-          "label": "endoplasmic reticulum membrane",
-          "cosine_similarity": 0.82890679
         }
       ]
     },
