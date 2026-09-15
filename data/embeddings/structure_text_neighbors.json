@@ -2245,6 +2245,11 @@
       "label": "vacuolar proton-transporting V-type ATPase complex",
       "neighbors": [
         {
+          "identifier": "GO:0000221",
+          "label": "vacuolar proton-transporting V-type ATPase, V1 domain",
+          "cosine_similarity": 0.95051084
+        },
+        {
           "identifier": "GO:0000220",
           "label": "vacuolar proton-transporting V-type ATPase, V0 domain",
           "cosine_similarity": 0.95011351
@@ -2263,11 +2268,6 @@
           "identifier": "GO:0030061",
           "label": "mitochondrial crista",
           "cosine_similarity": 0.70337651
-        },
-        {
-          "identifier": "GO:0000329",
-          "label": "fungal-type vacuole membrane",
-          "cosine_similarity": 0.68094821
         }
       ]
     },
@@ -2275,6 +2275,11 @@
       "identifier": "GO:0000220",
       "label": "vacuolar proton-transporting V-type ATPase, V0 domain",
       "neighbors": [
+        {
+          "identifier": "GO:0000221",
+          "label": "vacuolar proton-transporting V-type ATPase, V1 domain",
+          "cosine_similarity": 0.97588713
+        },
         {
           "identifier": "GO:0016471",
           "label": "vacuolar proton-transporting V-type ATPase complex",
@@ -2294,11 +2299,37 @@
           "identifier": "GO:0000329",
           "label": "fungal-type vacuole membrane",
           "cosine_similarity": 0.71164914
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000221",
+      "label": "vacuolar proton-transporting V-type ATPase, V1 domain",
+      "neighbors": [
+        {
+          "identifier": "GO:0000220",
+          "label": "vacuolar proton-transporting V-type ATPase, V0 domain",
+          "cosine_similarity": 0.97588713
         },
         {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.71061626
+          "identifier": "GO:0016471",
+          "label": "vacuolar proton-transporting V-type ATPase complex",
+          "cosine_similarity": 0.95051084
+        },
+        {
+          "identifier": "GO:0005774",
+          "label": "vacuolar membrane",
+          "cosine_similarity": 0.72411219
+        },
+        {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.71656157
+        },
+        {
+          "identifier": "GO:0030061",
+          "label": "mitochondrial crista",
+          "cosine_similarity": 0.69942629
         }
       ]
     },
