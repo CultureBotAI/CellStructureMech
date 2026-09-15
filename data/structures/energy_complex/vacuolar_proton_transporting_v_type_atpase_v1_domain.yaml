@@ -26,6 +26,13 @@ curation_history:
     V1 ATP hydrolysis ungrounded instead of overextending the whole rotary proton-pump
     molecular-function term to the isolated V1 sector.
   llm_assisted: true
+- timestamp: '2026-09-15T10:47:33Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Addressed PR #963 review issues #964 and #965 by replacing the GO:0046961
+    rotary proton-pump graph node with ungrounded V1-sector ATP hydrolysis evidence
+    and adding V0 part-of context to the V1/V0 coupling graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0033180
 part_of:
@@ -54,9 +61,8 @@ functions:
     catalytic sector that hydrolyzes ATP and drives rotation coupled to V0 proton
     translocation.
   evidence:
-  - reference: GO:0000221
-    notes: GO:0000221 identifies V1 as the vacuolar V-ATPase domain that catalyzes
-      ATP hydrolysis.
+  - reference: GO:0033180
+    notes: GO:0033180 identifies V1 domains as ATP-hydrolyzing V-ATPase sectors.
   - reference: DOI:10.1038/nrm2272
     notes: Forgac 2007 reviews ATP hydrolysis in V1 as the source of rotary V-ATPase
       proton-pump activity.
@@ -70,8 +76,6 @@ evidence:
     V-type ATPase complex.
 - reference: GO:0000220
   notes: Gene Ontology cellular-component term for the complementary vacuolar V0 domain.
-- reference: GO:0046961
-  notes: Gene Ontology molecular-function term for ATP-driven rotary proton transport.
 - reference: DOI:10.1128/MMBR.70.1.177-191.2006
   notes: Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast
     Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
@@ -105,10 +109,9 @@ causal_graphs:
     label: vacuolar proton-transporting V-type ATPase, V0 domain
     node_type: STRUCTURE
     grounding: GO:0000220
-  - node_id: rotary_atpase_activity
-    label: proton-transporting ATPase activity, rotational mechanism
+  - node_id: v1_atp_hydrolysis
+    label: V1-sector ATP hydrolysis
     node_type: BIOLOGICAL_PROCESS
-    grounding: GO:0046961
   edges:
   - subject: v1_domain
     predicate: is part of
@@ -123,15 +126,27 @@ causal_graphs:
   - subject: v1_domain
     predicate: catalyses
     predicate_id: RO:0002327
-    object: rotary_atpase_activity
-    description: The V1 sector couples ATP hydrolysis to rotary activity of the intact
+    object: v1_atp_hydrolysis
+    description: The V1 sector hydrolyzes ATP to power rotary activity of the intact
       V-ATPase.
     evidence:
-    - reference: GO:0000221
-      notes: GO:0000221 identifies V1 as the catalytic vacuolar V-ATPase domain.
+    - reference: GO:0033180
+      notes: GO:0033180 identifies V1 domains as V-ATPase sectors that catalyze ATP
+        hydrolysis.
     - reference: DOI:10.1038/nrm2272
       notes: Forgac 2007 reviews ATP hydrolysis in V1 as the source of rotary proton-pump
         activity.
+  - subject: v0_domain
+    predicate: is part of
+    object: vacuolar_v_atpase
+    description: The V0 domain is the membrane proton-translocation sector of the
+      assembled vacuolar V-ATPase.
+    evidence:
+    - reference: GO:0000220
+      notes: GO places the vacuolar V0 domain in a part-of relation to the vacuolar
+        V-ATPase complex.
+    - reference: GO:0016471
+      notes: GO:0016471 identifies the containing V-ATPase complex.
   - subject: v1_domain
     predicate: couples to
     object: v0_domain
