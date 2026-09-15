@@ -8755,6 +8755,11 @@
       "label": "kinetochore",
       "neighbors": [
         {
+          "identifier": "GO:0000444",
+          "label": "MIS12/MIND type complex",
+          "cosine_similarity": 0.85967839
+        },
+        {
           "identifier": "GO:0020023",
           "label": "kinetoplast",
           "cosine_similarity": 0.79700617
@@ -8773,11 +8778,6 @@
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
           "cosine_similarity": 0.69438028
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.67701782
         }
       ]
     },
@@ -8809,6 +8809,37 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.66678425
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000444",
+      "label": "MIS12/MIND type complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000776",
+          "label": "kinetochore",
+          "cosine_similarity": 0.85967839
+        },
+        {
+          "identifier": "GO:0020023",
+          "label": "kinetoplast",
+          "cosine_similarity": 0.67069412
+        },
+        {
+          "identifier": "GO:0120120",
+          "label": "bilobe structure",
+          "cosine_similarity": 0.66214279
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.66202195
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.64774955
         }
       ]
     },

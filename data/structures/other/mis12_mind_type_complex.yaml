@@ -1,0 +1,257 @@
+identifier: GO:0000444
+label: MIS12/MIND type complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multiprotein kinetochore subcomplex that binds to centromeric chromatin
+  and forms part of the outer kinetochore. It helps to recruit outer kinetochore subunits
+  that will bind to microtubules. In humans, it consists of MIS12, DSN1, NSL1 and
+  PMF1.
+definition_source: GO:0000444
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T11:08:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T11:09:38Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, outer-kinetochore subclassing and kinetochore parthood,
+    four reviewed label-only MIS12/MIND subunits, a Saccharomyces cerevisiae taxonomic
+    example, outer-subunit recruitment function, DOI/GO evidence, a nonmechanistic
+    MIS12/MIND-to-Ndc80 assembly graph, a subunit-grounding TODO, and an Ndc80 boundary
+    decision.
+  llm_assisted: true
+synonyms:
+- synonym_text: MIND complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000444
+- synonym_text: Mis12 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000444
+- synonym_text: Mtw1p Including Nnf1p-Nsl1p-Dsn1p complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000444
+- synonym_text: nuclear MIS12/MIND complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000444
+parent_structures:
+- GO:0000940
+part_of:
+- GO:0000776
+components:
+- component_id: mis12_mtw1_subunit
+  label: MIS12/Mtw1 subunit family
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MIS12
+  - MTW1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO complex term spans budding-yeast Mtw1p and vertebrate MIS12
+    complexes; no exact source-neutral protein-family CURIE was curated for this subunit
+    family.
+  role: Named MIS12/Mtw1-family constituent of the MIS12/MIND type kinetochore subcomplex.
+  evidence:
+  - reference: GO:0000444
+    notes: GO:0000444 names MIS12 and the budding-yeast Mtw1p complex as part of the
+      same kinetochore subcomplex.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 named Mtw1p as the M subunit of the budding-yeast
+      MIND complex.
+  - reference: DOI:10.1083/jcb.200509158
+    notes: Kline et al. 2006 reconstituted the human Mis12 complex with hMis12 as
+      one of four stable complex members.
+- component_id: dsn1_subunit
+  label: Dsn1 subunit family
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DSN1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Dsn1 is named in both yeast MIND and vertebrate Mis12 complexes;
+    no exact source-neutral protein-family CURIE was curated for this subunit family.
+  role: Conserved Dsn1-family constituent of the MIS12/MIND type kinetochore subcomplex.
+  evidence:
+  - reference: GO:0000444
+    notes: GO:0000444 names Dsn1/DSN1 as part of MIS12/MIND type complexes.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 included Dsn1p in the budding-yeast Mtw1/MIND
+      complex.
+  - reference: DOI:10.1083/jcb.200509158
+    notes: Kline et al. 2006 found hDsn1 in a stable four-subunit human Mis12 complex.
+- component_id: nsl1_subunit
+  label: Nsl1 subunit family
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NSL1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Nsl1 is named in both yeast MIND and vertebrate Mis12 complexes;
+    no exact source-neutral protein-family CURIE was curated for this subunit family.
+  role: Conserved Nsl1-family constituent of the MIS12/MIND type kinetochore subcomplex.
+  evidence:
+  - reference: GO:0000444
+    notes: GO:0000444 names Nsl1/NSL1 as part of MIS12/MIND type complexes.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 included Nsl1p in the budding-yeast Mtw1/MIND
+      complex.
+  - reference: DOI:10.1083/jcb.200509158
+    notes: Kline et al. 2006 found hNsl1 in a stable four-subunit human Mis12 complex.
+- component_id: nnf1_pmf1_subunit
+  label: Nnf1/PMF1 subunit family
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NNF1
+  - PMF1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The fourth subunit is represented by budding-yeast Nnf1p and human
+    PMF1; no exact source-neutral protein-family CURIE was curated for this subunit
+    family.
+  role: Nnf1/PMF1-family constituent of the MIS12/MIND type kinetochore subcomplex.
+  evidence:
+  - reference: GO:0000444
+    notes: GO:0000444 names budding-yeast Nnf1p and human PMF1 within MIS12/MIND type
+      complexes.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 included Nnf1p in the budding-yeast Mtw1/MIND
+      complex.
+  - reference: DOI:10.1083/jcb.200509158
+    notes: Kline et al. 2006 found hNnf1/PMF1 in a stable four-subunit human Mis12
+      complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses a Mtw1p-Nnf1p-Nsl1p-Dsn1p MIND complex as a bridge within
+    its multi-subcomplex kinetochore.
+  reference: DOI:10.1101/gad.1144403
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference yeast system in which MIND was named as a four-protein kinetochore
+    bridge complex.
+  reference: DOI:10.1101/gad.1144403
+functions:
+- function_id: outer_kinetochore_subunit_recruitment
+  label: outer kinetochore subunit recruitment
+  description: MIS12/MIND type complexes bridge centromeric chromatin-proximal kinetochore
+    material to outer microtubule-binding assemblies.
+  evidence:
+  - reference: GO:0000444
+    notes: GO:0000444 defines the MIS12/MIND type complex by binding centromeric chromatin
+      and helping recruit microtubule-binding outer kinetochore subunits.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 classified yeast MIND as a bridge between
+      DNA-proximal and microtubule-bound kinetochore subunits.
+evidence:
+- reference: GO:0000444
+  notes: Gene Ontology cellular-component term for the MIS12/MIND type complex.
+- reference: GO:0000940
+  notes: Gene Ontology cellular-component parent term for outer kinetochore.
+- reference: GO:0000776
+  notes: Gene Ontology cellular-component term for kinetochore.
+- reference: GO:0031262
+  notes: Gene Ontology cellular-component term for the Ndc80 complex.
+- reference: DOI:10.1101/gad.1144403
+  notes: De Wulf, McAinsh and Sorger 2003, Hierarchical assembly of the budding yeast
+    kinetochore from multiple subcomplexes, Genes & Development.
+- reference: DOI:10.1083/jcb.200509158
+  notes: Kline et al. 2006, The human Mis12 complex is required for kinetochore assembly
+    and proper chromosome segregation, Journal of Cell Biology.
+causal_graphs:
+- graph_id: mis12_mind_outer_kinetochore_bridge
+  title: MIS12/MIND bridges centromeric and outer kinetochore modules
+  description: MIS12/MIND is an outer-kinetochore subcomplex that binds centromeric
+    chromatin-proximal assemblies and helps recruit the microtubule-binding Ndc80
+    complex.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph places only the MIS12/MIND complex in the kinetochore hierarchy;
+    it does not enumerate CBF3, COMA, KMN, Dam1/DASH or regulatory spindle-checkpoint
+    inputs.
+  nodes:
+  - node_id: mis12_mind_type_complex
+    label: MIS12/MIND type complex
+    node_type: STRUCTURE
+    grounding: GO:0000444
+  - node_id: outer_kinetochore
+    label: outer kinetochore
+    node_type: STRUCTURE
+    grounding: GO:0000940
+  - node_id: kinetochore
+    label: kinetochore
+    node_type: STRUCTURE
+    grounding: GO:0000776
+  - node_id: ndc80_complex
+    label: Ndc80 complex
+    node_type: STRUCTURE
+    grounding: GO:0031262
+  edges:
+  - subject: mis12_mind_type_complex
+    predicate: is a
+    object: outer_kinetochore
+    description: GO places the MIS12/MIND type complex under the outer kinetochore
+      cellular component.
+    evidence:
+    - reference: GO:0000444
+      notes: GO:0000444 is a child of GO:0000940 outer kinetochore.
+  - subject: mis12_mind_type_complex
+    predicate: is part of
+    object: kinetochore
+    description: The MIS12/MIND type complex is a constituent subcomplex of kinetochores.
+    evidence:
+    - reference: GO:0000444
+      notes: GO:0000444 defines MIS12/MIND as a kinetochore subcomplex.
+  - subject: mis12_mind_type_complex
+    predicate: helps recruit
+    object: ndc80_complex
+    description: MIS12/MIND supports recruitment of outer microtubule-binding kinetochore
+      subunits, including Ndc80/HEC1 in vertebrate cells.
+    evidence:
+    - reference: GO:0000444
+      notes: GO:0000444 describes MIS12/MIND as helping recruit outer microtubule-binding
+        subunits.
+    - reference: DOI:10.1083/jcb.200509158
+      notes: Kline et al. 2006 reported that depleting Mis12 complex subunits strongly
+        reduced kinetochore Ndc80/HEC1 accumulation.
+discussions:
+- discussion_id: mis12_mind_subunit_groundings_todo
+  prompt: Resolve exact source-neutral family groundings for the MIS12/Mtw1, Dsn1,
+    Nsl1 and Nnf1/PMF1 subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mis12_mtw1_subunit
+  - components#dsn1_subunit
+  - components#nsl1_subunit
+  - components#nnf1_pmf1_subunit
+  rationale: The conserved complex is represented by different yeast and vertebrate
+    symbols, and no exact InterPro, Pfam, NCBIfam or UniProtKB family CURIE was verified
+    for these cross-taxon subunit families in this pass.
+  evidence:
+  - reference: GO:0000444
+  - reference: DOI:10.1101/gad.1144403
+  - reference: DOI:10.1083/jcb.200509158
+  posed_by: codex
+  posed_date: '2026-09-15'
+- discussion_id: ndc80_recruitment_not_mis12_mind_composition
+  prompt: Do not model the Ndc80 complex as a MIS12/MIND constituent when curating
+    the GO:0000444 record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#mis12_mind_outer_kinetochore_bridge
+  rationale: GO:0000444 frames MIS12/MIND as a complex that helps recruit outer microtubule-binding
+    subunits; Ndc80 therefore belongs as a downstream recruited complex in the graph,
+    not as a constituent component.
+  evidence:
+  - reference: GO:0000444
+  posed_by: codex
+  posed_date: '2026-09-15'
