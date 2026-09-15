@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/peroxisomal_membrane.yaml
+  slug: peroxisomal_membrane
+session:
+  id: 2026-09-15T043703Z-codex-c2feb4
+  timestamp: '2026-09-15T04:37:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add peroxisomal membrane
+  details: Created GO-grounded peroxisomal membrane with exact peroxisome-membrane synonymy,
+    microbody-membrane parentage, peroxisome parthood, Saccharomyces cerevisiae evidence,
+    peroxisomal boundary and matrix-import functions, a nonmechanistic import graph, and a
+    TODO for lipid and PEX complex grounding.

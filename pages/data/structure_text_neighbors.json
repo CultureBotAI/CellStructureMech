@@ -5117,9 +5117,9 @@
           "cosine_similarity": 0.82482878
         },
         {
-          "identifier": "GO:0000139",
-          "label": "Golgi membrane",
-          "cosine_similarity": 0.80579371
+          "identifier": "GO:0005778",
+          "label": "peroxisomal membrane",
+          "cosine_similarity": 0.80767022
         }
       ]
     },
@@ -5179,9 +5179,9 @@
           "cosine_similarity": 0.82692001
         },
         {
-          "identifier": "GO:0000139",
-          "label": "Golgi membrane",
-          "cosine_similarity": 0.8052505
+          "identifier": "GO:0005778",
+          "label": "peroxisomal membrane",
+          "cosine_similarity": 0.82069603
         }
       ]
     },
@@ -6705,9 +6705,45 @@
       ]
     },
     {
+      "identifier": "GO:0005778",
+      "label": "peroxisomal membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0005777",
+          "label": "peroxisome",
+          "cosine_similarity": 0.93128288
+        },
+        {
+          "identifier": "GO:0046861",
+          "label": "glyoxysomal membrane",
+          "cosine_similarity": 0.82069603
+        },
+        {
+          "identifier": "GO:0030659",
+          "label": "cytoplasmic vesicle membrane",
+          "cosine_similarity": 0.81055358
+        },
+        {
+          "identifier": "GO:0046860",
+          "label": "glycosome membrane",
+          "cosine_similarity": 0.80767022
+        },
+        {
+          "identifier": "GO:0005789",
+          "label": "endoplasmic reticulum membrane",
+          "cosine_similarity": 0.80354402
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005777",
       "label": "peroxisome",
       "neighbors": [
+        {
+          "identifier": "GO:0005778",
+          "label": "peroxisomal membrane",
+          "cosine_similarity": 0.93128288
+        },
         {
           "identifier": "GO:0031966",
           "label": "mitochondrial membrane",
@@ -6727,11 +6763,6 @@
           "identifier": "GO:0005743",
           "label": "mitochondrial inner membrane",
           "cosine_similarity": 0.80035768
-        },
-        {
-          "identifier": "GO:0005739",
-          "label": "mitochondrion",
-          "cosine_similarity": 0.79832644
         }
       ]
     },
