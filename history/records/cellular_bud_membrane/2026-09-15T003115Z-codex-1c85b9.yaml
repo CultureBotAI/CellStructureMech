@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/cellular_bud_membrane.yaml
+  slug: cellular_bud_membrane
+session:
+  id: 2026-09-15T003115Z-codex-1c85b9
+  timestamp: '2026-09-15T00:31:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/908
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/911
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed cellular bud membrane review
+  details: 'Resolved #908 by adding GO:0016020 record-level evidence for the generic membrane
+    parent declared by parent_structures.'

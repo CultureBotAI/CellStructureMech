@@ -26,6 +26,12 @@ curation_history:
   changes: Replaced the bare components discussion anchor with components#cellular_bud_lipid_bilayer
     so the boundary decision resolves to the local lipid-boundary component.
   llm_assisted: true
+- timestamp: '2026-09-15T00:30:36Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #908 by adding GO:0016020 evidence for the generic membrane parent
+    declared on the cellular bud membrane record.'
+  llm_assisted: true
 synonyms:
 - synonym_text: bud membrane
   synonym_type: EXACT_SYNONYM
@@ -84,6 +90,8 @@ functions:
 evidence:
 - reference: GO:0033101
   notes: Gene Ontology cellular-component term for the cellular bud membrane.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component term for membrane.
 - reference: GO:0005933
   notes: Gene Ontology cellular-component term for the cellular bud.
 - reference: GO:0005886
