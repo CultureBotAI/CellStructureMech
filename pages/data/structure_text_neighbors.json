@@ -6311,6 +6311,11 @@
           "cosine_similarity": 0.93254466
         },
         {
+          "identifier": "GO:0005637",
+          "label": "nuclear inner membrane",
+          "cosine_similarity": 0.91596459
+        },
+        {
           "identifier": "GO:0005634",
           "label": "nucleus",
           "cosine_similarity": 0.90519417
@@ -6324,11 +6329,37 @@
           "identifier": "GO:0005740",
           "label": "mitochondrial envelope",
           "cosine_similarity": 0.82818357
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005637",
+      "label": "nuclear inner membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0005640",
+          "label": "nuclear outer membrane",
+          "cosine_similarity": 0.96967415
         },
         {
-          "identifier": "cellstructuremech:mitosome_envelope",
-          "label": "mitosome envelope",
-          "cosine_similarity": 0.82386881
+          "identifier": "GO:0005635",
+          "label": "nuclear envelope",
+          "cosine_similarity": 0.91596459
+        },
+        {
+          "identifier": "GO:0005789",
+          "label": "endoplasmic reticulum membrane",
+          "cosine_similarity": 0.86929923
+        },
+        {
+          "identifier": "GO:0030659",
+          "label": "cytoplasmic vesicle membrane",
+          "cosine_similarity": 0.86315327
+        },
+        {
+          "identifier": "GO:0032585",
+          "label": "multivesicular body membrane",
+          "cosine_similarity": 0.84137545
         }
       ]
     },
@@ -6336,6 +6367,11 @@
       "identifier": "GO:0005640",
       "label": "nuclear outer membrane",
       "neighbors": [
+        {
+          "identifier": "GO:0005637",
+          "label": "nuclear inner membrane",
+          "cosine_similarity": 0.96967415
+        },
         {
           "identifier": "GO:0005635",
           "label": "nuclear envelope",
@@ -6355,11 +6391,6 @@
           "identifier": "GO:0005634",
           "label": "nucleus",
           "cosine_similarity": 0.85932832
-        },
-        {
-          "identifier": "GO:0005741",
-          "label": "mitochondrial outer membrane",
-          "cosine_similarity": 0.85808908
         }
       ]
     },
@@ -6409,6 +6440,11 @@
           "cosine_similarity": 0.85932832
         },
         {
+          "identifier": "GO:0005637",
+          "label": "nuclear inner membrane",
+          "cosine_similarity": 0.82912604
+        },
+        {
           "identifier": "GO:0005739",
           "label": "mitochondrion",
           "cosine_similarity": 0.81359921
@@ -6417,11 +6453,6 @@
           "identifier": "GO:0005643",
           "label": "nuclear pore",
           "cosine_similarity": 0.80860577
-        },
-        {
-          "identifier": "GO:0031410",
-          "label": "cytoplasmic vesicle",
-          "cosine_similarity": 0.8074291
         }
       ]
     },
@@ -9829,9 +9860,9 @@
           "cosine_similarity": 0.79560552
         },
         {
-          "identifier": "GO:0000329",
-          "label": "fungal-type vacuole membrane",
-          "cosine_similarity": 0.79426084
+          "identifier": "GO:0005637",
+          "label": "nuclear inner membrane",
+          "cosine_similarity": 0.79509112
         }
       ]
     }
