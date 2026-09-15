@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/sec61_translocon_complex.yaml
+  slug: sec61_translocon_complex
+session:
+  id: 2026-09-15T204529Z-codex-d6b7cd
+  timestamp: '2026-09-15T20:45:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO Sec61 translocon complex record
+  details: Created data/structures/other/sec61_translocon_complex.yaml for GO:0005784, linking
+    it to the endoplasmic reticulum membrane, modeling Sec61p/Sbh1p/Sss1p as the curated heterotrimeric
+    core, and adding Saccharomyces cerevisiae scope, GO and DOI evidence, a Sec61 protein-channel
+    graph, and resolved Sec61-core boundary interpretations.

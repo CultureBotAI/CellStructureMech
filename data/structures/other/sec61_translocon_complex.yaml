@@ -1,0 +1,284 @@
+identifier: GO:0005784
+label: Sec61 translocon complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterotrimeric endoplasmic-reticulum membrane translocon that forms
+  a protein-conducting channel for co- and post-translational substrate movement across
+  or into the ER membrane.
+definition_source: GO:0005784
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T20:43:17Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T20:44:32Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ER-membrane parthood, protein-complex parentage, exact Sec61 synonymy,
+    Sec61p/Sbh1p/Sss1p components, Saccharomyces scope, GO/DOI evidence, a Sec61 protein-channel
+    graph, and resolved core boundary interpretations.
+  llm_assisted: true
+- timestamp: '2026-09-15T20:53:48Z'
+  curator: codex
+  action: FIX_VALIDATION
+  changes: Retargeted the Sec61 core-boundary discussion from the bare components
+    section to concrete Sec61p, Sbh1p, and Sss1p component anchors.
+  llm_assisted: true
+- timestamp: '2026-09-15T21:06:29Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1025 by narrowing the Saccharomyces canonical example to the
+    Hartmann et al. component-conservation evidence and resolved #1026 by changing
+    Sec61 beta/gamma labels and notes from yeast gene-product wording to source-neutral
+    component classes.'
+  llm_assisted: true
+synonyms:
+- synonym_text: Sec61 complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1074/jbc.M701840200
+- synonym_text: ER Sec61 translocon
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1091/mbc.3.2.129
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0005789
+components:
+- component_id: sec61_alpha_channel_subunit
+  label: Sec61 alpha protein-conducting channel subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC61
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Sec61/SecY alpha-channel homologs are conserved across eukaryotic,
+    bacterial, and archaeal protein-conducting channels; no exact source-neutral family
+    CURIE was curated.
+  role: Multi-pass ER membrane subunit that forms the protein-conducting pore and
+    lateral gate of the Sec61 translocon.
+  evidence:
+  - reference: GO:0005784
+    notes: GO:0005784 defines the Sec61 translocon as a heterotrimer whose alpha subunit
+      forms the core protein-conducting channel.
+  - reference: DOI:10.1091/mbc.3.2.129
+    notes: Stirling et al. 1992 cloned Saccharomyces SEC61 and found that Sec61p is
+      an integral ER membrane protein required for secretory and membrane-polypeptide
+      insertion.
+- component_id: sbh1_beta_subunit
+  label: Sec61 beta subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SBH1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Sec61 beta is the small eukaryotic Sec61 partner subunit; no exact
+    source-neutral family CURIE was curated for this subunit class.
+  role: Small tail-anchored beta subunit, represented in Saccharomyces by Sbh1p, that
+    associates with the Sec61 alpha and gamma subunits.
+  evidence:
+  - reference: DOI:10.1038/367654a0
+    notes: Hartmann et al. 1994 identified yeast Sbh1p as a conserved component of
+      the eukaryotic protein-translocation complex.
+  - reference: DOI:10.1074/jbc.M701840200
+    notes: Feng et al. 2007 showed that the Sbh1p transmembrane domain is sufficient
+      for coimmunoprecipitation with Sec61p and Sss1p.
+- component_id: sss1_gamma_subunit
+  label: Sec61 gamma subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SSS1
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Sec61 gamma is the small conserved eukaryotic Sec61 core subunit;
+    no exact source-neutral family CURIE was curated for this subunit class.
+  role: Small conserved gamma subunit, represented in Saccharomyces by Sss1p, that
+    forms part of the heterotrimeric Sec61 core.
+  evidence:
+  - reference: DOI:10.1002/j.1460-2075.1993.tb06092.x
+    notes: Esnault et al. 1993 showed that SSS1 is essential for yeast secretory-protein
+      translocation and encodes a conserved ER membrane protein.
+  - reference: DOI:10.1074/jbc.M701840200
+    notes: Feng et al. 2007 assayed Sss1p coimmunoprecipitation with Sbh1p and Sec61p
+      in Saccharomyces cells.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast carries a Sec61 translocon in the endoplasmic-reticulum membrane
+    for co- and post-translational protein translocation.
+  reference: DOI:10.1091/mbc.3.2.129
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Sbh1p and Sss1p were identified as conserved
+    eukaryotic protein-translocation-complex components.
+  reference: DOI:10.1038/367654a0
+functions:
+- function_id: sec61_dependent_er_protein_translocation
+  label: Sec61-dependent ER protein translocation
+  description: The Sec61 translocon forms the ER membrane channel that moves substrate
+    polypeptides across the membrane into the ER lumen or laterally into the ER membrane.
+  evidence:
+  - reference: GO:0005784
+    notes: GO:0005784 identifies the Sec61 translocon complex as mediating cotranslational
+      and posttranslational protein translocation events.
+  - reference: DOI:10.1016/0092-8674(95)90077-2
+    notes: Panzner et al. 1995 reconstituted yeast posttranslational protein transport
+      with purified Sec proteins and Kar2p.
+evidence:
+- reference: GO:0005784
+  notes: Gene Ontology cellular-component term for the Sec61 translocon complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complex.
+- reference: GO:0005789
+  notes: Gene Ontology cellular-component term for the endoplasmic reticulum membrane.
+- reference: DOI:10.1091/mbc.3.2.129
+  notes: Stirling et al. 1992, Protein translocation mutants defective in the insertion
+    of integral membrane proteins into the endoplasmic reticulum, Molecular Biology
+    of the Cell.
+- reference: DOI:10.1038/367654a0
+  notes: Hartmann et al. 1994, Evolutionary conservation of components of the protein
+    translocation complex, Nature.
+- reference: DOI:10.1002/j.1460-2075.1993.tb06092.x
+  notes: Esnault et al. 1993, The yeast SSS1 gene is essential for secretory protein
+    translocation, and encodes a highly conserved protein of the endoplasmic reticulum,
+    The EMBO Journal.
+- reference: DOI:10.1016/0092-8674(95)90077-2
+  notes: Panzner et al. 1995, Posttranslational protein transport in yeast reconstituted
+    with a purified complex of Sec proteins and Kar2p, Cell.
+- reference: DOI:10.1074/jbc.M701840200
+  notes: Feng et al. 2007, The Transmembrane Domain Is Sufficient for Sbh1p Function,
+    Its Association with the Sec61 Complex, and Interaction with Rtn1p, Journal of
+    Biological Chemistry.
+causal_graphs:
+- graph_id: sec61_er_translocation
+  title: Sec61 forms the ER protein channel
+  description: The Sec61 alpha subunit forms the ER protein-conducting channel, the
+    Sec61 beta and gamma subunits associate with that channel in the Sec61 heterotrimer,
+    and the complex resides in the ER membrane during substrate translocation.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: The graph captures the Sec61 core and ER-membrane translocation activity
+    without asserting the full Sec62/Sec63/Kar2 posttranslational machinery or ribosome
+    engagement.
+  nodes:
+  - node_id: sec61_alpha_channel_subunit
+    label: Sec61 alpha protein-conducting channel subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec61_alpha_channel_subunit
+  - node_id: sbh1_beta_subunit
+    label: Sec61 beta subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sbh1_beta_subunit
+  - node_id: sss1_gamma_subunit
+    label: Sec61 gamma subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sss1_gamma_subunit
+  - node_id: sec61_translocon_complex
+    label: Sec61 translocon complex
+    node_type: STRUCTURE
+    grounding: GO:0005784
+  - node_id: er_membrane
+    label: endoplasmic reticulum membrane
+    node_type: STRUCTURE
+    grounding: GO:0005789
+  - node_id: er_protein_translocation
+    label: Sec61-dependent ER protein translocation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: sec61_alpha_channel_subunit
+    predicate: forms pore of
+    object: sec61_translocon_complex
+    description: Sec61p is the multi-pass alpha subunit that provides the protein-conducting
+      pore of the eukaryotic Sec61 translocon.
+    evidence:
+    - reference: GO:0005784
+      notes: GO:0005784 identifies the Sec61 alpha subunit as the protein-conducting
+        channel core.
+    - reference: DOI:10.1091/mbc.3.2.129
+      notes: Stirling et al. 1992 localized Saccharomyces Sec61p as an integral ER
+        membrane protein.
+  - subject: sbh1_beta_subunit
+    predicate: associates with
+    object: sec61_alpha_channel_subunit
+    description: Sbh1p associates with Sec61p and Sss1p through its transmembrane
+      segment in the Sec61 core.
+    evidence:
+    - reference: DOI:10.1074/jbc.M701840200
+      notes: Feng et al. 2007 showed that the Sbh1p transmembrane domain coimmunoprecipitates
+        with Sec61p and Sss1p.
+  - subject: sss1_gamma_subunit
+    predicate: associates with
+    object: sec61_alpha_channel_subunit
+    description: Sss1p is the conserved yeast gamma subunit associated with Sec61p
+      in the heterotrimeric translocon.
+    evidence:
+    - reference: DOI:10.1002/j.1460-2075.1993.tb06092.x
+      notes: Esnault et al. 1993 identified Sss1p as a conserved ER membrane protein
+        required for secretory-protein translocation.
+  - subject: sec61_translocon_complex
+    predicate: is embedded in
+    object: er_membrane
+    description: The Sec61 translocon is a protein-conducting channel in the endoplasmic-reticulum
+      membrane.
+    evidence:
+    - reference: GO:0005784
+      notes: GO:0005784 defines Sec61 as an endoplasmic-reticulum membrane translocon
+        complex.
+  - subject: sec61_translocon_complex
+    predicate: supports
+    object: er_protein_translocation
+    description: The Sec61 complex forms the membrane channel used for movement of
+      substrates across or into the ER membrane.
+    evidence:
+    - reference: DOI:10.1016/0092-8674(95)90077-2
+      notes: Panzner et al. 1995 reconstituted yeast posttranslational protein transport
+        with purified Sec proteins and Kar2p.
+discussions:
+- discussion_id: sec61_core_boundary
+  prompt: Should Sec62, Sec63, Kar2, or ribosomes be included as Sec61 translocon
+    complex components?
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#sec61_alpha_channel_subunit
+  - components#sbh1_beta_subunit
+  - components#sss1_gamma_subunit
+  - causal_graphs#sec61_er_translocation
+  rationale: GO:0005784 exactly denotes the heterotrimeric Sec61 channel. Sec62, Sec63,
+    and Kar2 participate in posttranslational transport with Sec61, and ribosomes
+    engage Sec61 during cotranslational transport, but those factors are associated
+    machinery rather than constituents of the Sec61 core.
+  evidence:
+  - reference: GO:0005784
+    notes: GO:0005784 defines the Sec61 translocon as a core heterotrimeric ER membrane
+      complex.
+  - reference: DOI:10.1016/0092-8674(95)90077-2
+    notes: Panzner et al. 1995 used additional purified Sec factors and Kar2p for
+      posttranslational reconstitution beyond the Sec61 channel itself.
+  resolution_note: Modeled only Sec61p, Sbh1p, and Sss1p as constituents and left
+    Sec62/Sec63/Kar2 and ribosomes outside this core-complex record.
+  posed_by: codex
+  posed_date: '2026-09-15'
+- discussion_id: sbh1_rtn1_boundary
+  prompt: Should the Sec61 beta subunit's Rtn1p-containing pool make Rtn1p a Sec61
+    translocon component?
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#sbh1_beta_subunit
+  rationale: Sbh1p can interact with Rtn1p in complexes that do not contain Sec61p
+    or Sss1p, so that ER-shaping pool is outside the Sec61 translocon boundary.
+  evidence:
+  - reference: DOI:10.1074/jbc.M701840200
+    notes: Feng et al. 2007 found Sbh1p-Rtn1p complexes without detectable Sec61p
+      and Sss1p.
+  resolution_note: Included Sbh1p as a Sec61 beta subunit but excluded Rtn1p from
+    the Sec61 translocon complex component list.
+  posed_by: codex
+  posed_date: '2026-09-15'

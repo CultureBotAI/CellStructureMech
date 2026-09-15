@@ -9034,6 +9034,11 @@
       "label": "exocyst",
       "neighbors": [
         {
+          "identifier": "GO:0005784",
+          "label": "Sec61 translocon complex",
+          "cosine_similarity": 0.82566426
+        },
+        {
           "identifier": "cellstructuremech:secyeg_translocon_complex",
           "label": "SecYEG translocon complex",
           "cosine_similarity": 0.72024481
@@ -9052,11 +9057,6 @@
           "identifier": "GO:0005783",
           "label": "endoplasmic reticulum",
           "cosine_similarity": 0.68444756
-        },
-        {
-          "identifier": "GO:0032126",
-          "label": "eisosome",
-          "cosine_similarity": 0.68073092
         }
       ]
     },
@@ -9743,6 +9743,37 @@
       ]
     },
     {
+      "identifier": "GO:0005784",
+      "label": "Sec61 translocon complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:secyeg_translocon_complex",
+          "label": "SecYEG translocon complex",
+          "cosine_similarity": 0.83747343
+        },
+        {
+          "identifier": "GO:0000145",
+          "label": "exocyst",
+          "cosine_similarity": 0.82566426
+        },
+        {
+          "identifier": "GO:0005783",
+          "label": "endoplasmic reticulum",
+          "cosine_similarity": 0.77380055
+        },
+        {
+          "identifier": "GO:0030127",
+          "label": "COPII vesicle coat",
+          "cosine_similarity": 0.73096229
+        },
+        {
+          "identifier": "GO:0005788",
+          "label": "endoplasmic reticulum lumen",
+          "cosine_similarity": 0.70014854
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031521",
       "label": "spitzenkorper",
       "neighbors": [
@@ -10088,6 +10119,11 @@
       "label": "SecYEG translocon complex",
       "neighbors": [
         {
+          "identifier": "GO:0005784",
+          "label": "Sec61 translocon complex",
+          "cosine_similarity": 0.83747343
+        },
+        {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.77951765
@@ -10106,11 +10142,6 @@
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
           "cosine_similarity": 0.72768818
-        },
-        {
-          "identifier": "GO:0000145",
-          "label": "exocyst",
-          "cosine_similarity": 0.72024481
         }
       ]
     },
