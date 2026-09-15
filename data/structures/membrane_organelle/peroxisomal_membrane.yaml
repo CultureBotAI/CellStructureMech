@@ -19,6 +19,13 @@ curation_history:
     functions, GO/DOI evidence, a nonmechanistic peroxisomal-membrane import graph,
     and a lipid/PEX grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-15T04:48:06Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed review issues #929 and #930 by replacing lumenal wording with
+    peroxisomal matrix wording and narrowing the membrane-localized peroxin graph
+    node to membrane-associated docking and translocation factors.'
+  llm_assisted: true
 synonyms:
 - synonym_text: peroxisome membrane
   synonym_type: EXACT_SYNONYM
@@ -63,7 +70,7 @@ functions:
 - function_id: peroxisomal_matrix_boundary
   label: peroxisomal matrix boundary
   description: The peroxisomal membrane encloses the peroxisomal matrix and separates
-    lumenal metabolism from the cytosol.
+    matrix-localized metabolism from the cytosol.
   evidence:
   - reference: GO:0005778
     notes: GO:0005778 identifies the lipid bilayer surrounding a peroxisome.
@@ -72,8 +79,9 @@ functions:
       peroxisome membranes.
 - function_id: peroxisomal_matrix_import_platform
   label: peroxisomal matrix protein import platform
-  description: The peroxisomal membrane hosts peroxin docking and translocation machinery
-    that imports nuclear-encoded matrix proteins into the organelle.
+  description: The peroxisomal membrane hosts membrane-associated peroxin docking
+    and translocation factors that help import nuclear-encoded matrix proteins into
+    the organelle.
   evidence:
   - reference: DOI:10.1038/nrm3700
     notes: Smith and Aitchison 2013 review peroxisomal targeting and matrix-protein
@@ -101,11 +109,12 @@ causal_graphs:
 - graph_id: peroxisomal_membrane_matrix_import
   title: Peroxisomal membrane bounds the matrix import compartment
   description: The peroxisomal membrane surrounds the organelle, encloses the matrix,
-    and hosts peroxin machinery that imports PTS-containing matrix proteins.
+    and hosts membrane-associated peroxin docking factors that help import PTS-containing
+    matrix proteins.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures membrane topology and placement of peroxin import
-    machinery without modeling the full matrix-protein import cycle.
+  scope_notes: The graph captures membrane topology and placement of membrane-associated
+    peroxin docking machinery without modeling the full matrix-protein import cycle.
   nodes:
   - node_id: peroxisomal_membrane
     label: peroxisomal membrane
@@ -121,7 +130,7 @@ causal_graphs:
     node_type: CELLULAR_LOCALIZATION
     grounding: GO:0005782
   - node_id: pex_import_machinery
-    label: peroxin import machinery
+    label: membrane-associated peroxin docking machinery
     node_type: GENE_OR_PROTEIN
   - node_id: matrix_protein_import
     label: peroxisomal matrix protein import
@@ -149,20 +158,20 @@ causal_graphs:
   - subject: pex_import_machinery
     predicate: resides in
     object: peroxisomal_membrane
-    description: Peroxin docking and translocation machinery acts at the peroxisomal
-      membrane.
+    description: Membrane-associated peroxin docking and translocation factors act
+      at the peroxisomal membrane.
     evidence:
     - reference: DOI:10.1038/nrm3700
-      notes: Smith and Aitchison 2013 review peroxisomal matrix-protein import through
-        docking and membrane translocation steps.
+      notes: Smith and Aitchison 2013 review peroxisomal matrix-protein import at
+        membrane docking and translocation steps.
     - reference: DOI:10.1016/j.bbamcr.2015.09.008
       notes: Yuan, Veenhuis and van der Klei 2016 review yeast peroxisome membrane
         biogenesis and protein import.
   - subject: pex_import_machinery
     predicate: supports
     object: matrix_protein_import
-    description: Peroxin machinery at the peroxisomal membrane supports import of
-      PTS-containing proteins into the matrix.
+    description: Peroxisomal membrane docking factors support import of PTS-containing
+      proteins into the matrix.
     evidence:
     - reference: DOI:10.1038/nrm3700
       notes: Smith and Aitchison 2013 review the peroxisomal targeting signal pathways
@@ -170,15 +179,15 @@ causal_graphs:
 discussions:
 - discussion_id: ground_peroxisomal_lipid_bilayer_and_import_peroxins
   prompt: Resolve exact source-neutral identifiers for the generic peroxisomal membrane
-    lipid constituent and for peroxisomal import peroxin complexes.
+    lipid constituent and for membrane-associated peroxisomal import complexes.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#peroxisomal_lipid_bilayer
   - causal_graphs#peroxisomal_membrane_matrix_import
-  rationale: The record is exactly grounded to GO:0005778, but no exact lipid or PEX
-    docking/translocation complex CURIE was curated for the membrane constituent or
-    the import-machinery cohort.
+  rationale: The record is exactly grounded to GO:0005778, but no exact lipid or membrane-associated
+    PEX docking/translocation complex CURIE was curated for the membrane constituent
+    or the import-machinery cohort.
   evidence:
   - reference: GO:0005778
     notes: GO:0005778 identifies the complete peroxisomal membrane.
