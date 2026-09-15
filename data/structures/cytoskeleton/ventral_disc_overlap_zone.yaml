@@ -20,6 +20,13 @@ curation_history:
     component, Giardia intestinalis scope, DOI evidence, a nonmechanistic overlap-zone
     topology graph, and an overlap-zone component-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-15T17:09:42Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR #1002 review issue #1003 by removing duplicate generic microtubule
+    and tubulin composition from the spatial overlap-zone record, then retargeting
+    the TODO to overlap-zone boundary curation.'
+  llm_assisted: true
 synonyms:
 - synonym_text: overlap zone
   synonym_type: BROAD_SYNONYM
@@ -29,28 +36,6 @@ synonyms:
   source: GO:0097592
 part_of:
 - GO:0097597
-has_part:
-- GO:0005874
-components:
-- component_id: alpha_beta_tubulins
-  label: alpha- and beta-tubulins
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  essentiality: UNKNOWN
-  role: Tubulin constituents of the ventral-disc microtubules that pass through the
-    Giardia overlap zone.
-  evidence:
-  - reference: GO:0097592
-    notes: Gene Ontology defines the ventral disc overlap zone as the region where
-      two portions of the same microtubule array overlap.
-  - reference: GO:0005874
-    notes: Gene Ontology defines microtubules as tubes of polymeric tubulin.
-  - reference: DOI:10.1371/journal.pone.0043783
-    notes: Schwartz et al. 2012 used electron tomography to map the Giardia ventral-disc
-      microtubule architecture.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact source-neutral CURIE for the alpha- and beta-tubulins
-    that traverse the Giardia ventral-disc overlap zone was verified in this pass.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5741
   taxon_label: Giardia intestinalis
@@ -113,16 +98,16 @@ causal_graphs:
       notes: Gene Ontology defines the overlap zone as a region of the ventral disc.
 discussions:
 - discussion_id: resolve_overlap_zone_component_boundaries
-  prompt: Resolve exact protein-family groundings and substructure boundaries for
-    the Giardia ventral-disc overlap zone.
+  prompt: Resolve exact microtubule-segment boundaries and any accessory structures
+    specific to the Giardia ventral-disc overlap zone.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#alpha_beta_tubulins
-  rationale: This first overlap-zone record keeps only a broad alpha- and beta-tubulin
-    component because the overlap zone is defined by two portions of the same microtubule
-    array crossing a spatial region; exact zone-specific accessory proteins or stable
-    substructure boundaries were not verified in this pass.
+  - causal_graphs#giardia_overlap_zone_topology
+  rationale: This first overlap-zone record keeps the GO:0097592 entity at the topology
+    layer because the zone is the region where two portions of the same ventral-disc
+    microtubule array overlap; exact segment boundaries and any local accessory densities
+    were not verified in this pass.
   evidence:
   - reference: DOI:10.1371/journal.pone.0043783
     notes: Schwartz et al. 2012 structurally mapped the Giardia ventral-disc microtubule
