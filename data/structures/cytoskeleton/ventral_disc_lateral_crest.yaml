@@ -1,0 +1,137 @@
+identifier: GO:0097591
+label: ventral disc lateral crest
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A fibrillar repetitive structure that surrounds the edge of the ventral
+  disc in Giardia species trophozoites.
+definition_source: GO:0097591
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T16:07:03Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T16:07:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ventral-disc partonomy, a label-only lateral-crest structural protein
+    component, Giardia intestinalis scope, DOI evidence, a nonmechanistic lateral-crest
+    edge graph, and a lateral-crest protein grounding TODO.
+  llm_assisted: true
+part_of:
+- GO:0097597
+components:
+- component_id: lateral_crest_structural_proteins
+  label: ventral disc lateral-crest structural proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Giardia cytoskeletal proteins that localize to the lateral crest and contribute
+    to the fibrillar repetitive edge of the ventral disc.
+  evidence:
+  - reference: DOI:10.1371/journal.pntd.0001442
+    notes: Hagen et al. 2011 identified novel Giardia proteins that localize to the
+      ventral-disc lateral crest.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the Giardia lateral-crest protein
+    cohort or its individual constituents was verified in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  presence: COMMON
+  note: Giardia intestinalis is the diplomonad species in which lateral crest proteins
+    were localized at the ventral-disc edge.
+  reference: DOI:10.1371/journal.pntd.0001442
+canonical_examples:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  note: Parasitic diplomonad model used for fluorescence localization of lateral-crest
+    proteins around the ventral-disc edge.
+  reference: DOI:10.1371/journal.pntd.0001442
+functions:
+- function_id: ventral_disc_edge_scaffold
+  label: ventral disc edge scaffold
+  description: The lateral crest forms the fibrillar repetitive edge that surrounds
+    the Giardia ventral disc.
+  evidence:
+  - reference: GO:0097591
+    notes: Gene Ontology models the lateral crest as a fibrillar repetitive structure
+      surrounding the ventral-disc edge.
+  - reference: DOI:10.1371/journal.pntd.0001442
+    notes: Hagen et al. 2011 localized lateral-crest proteins at the Giardia ventral-disc
+      margin.
+evidence:
+- reference: GO:0097591
+  notes: Gene Ontology cellular-component term for the Giardia ventral-disc lateral
+    crest.
+- reference: DOI:10.1371/journal.pntd.0001442
+  notes: Hagen, Schwartz, Carlton and Dawson 2011, 'Novel Structural Components of
+    the Ventral Disc and Lateral Crest in Giardia intestinalis', PLOS Neglected Tropical
+    Diseases.
+causal_graphs:
+- graph_id: giardia_lateral_crest_edge_scaffold
+  title: Lateral-crest proteins mark the Giardia ventral-disc edge
+  description: In Giardia, lateral-crest structural proteins localize to the fibrillar
+    crest that surrounds the ventral-disc edge.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the lateral crest as a named ventral-disc edge structure
+    with localized protein constituents while leaving the exact lateral-crest protein
+    families and assembly order unresolved.
+  nodes:
+  - node_id: lateral_crest_structural_proteins
+    label: ventral disc lateral-crest structural proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: lateral_crest_structural_proteins
+  - node_id: lateral_crest
+    label: ventral disc lateral crest
+    node_type: STRUCTURE
+    grounding: GO:0097591
+  - node_id: ventral_disc
+    label: ventral disc
+    node_type: STRUCTURE
+    grounding: GO:0097597
+  edges:
+  - subject: lateral_crest_structural_proteins
+    predicate: localize to
+    object: lateral_crest
+    description: Lateral-crest structural proteins localize to the fibrillar edge
+      of the Giardia ventral disc.
+    evidence:
+    - reference: DOI:10.1371/journal.pntd.0001442
+      notes: Hagen et al. 2011 localized novel Giardia structural proteins to the
+        lateral crest.
+  - subject: lateral_crest
+    predicate: surrounds
+    object: ventral_disc
+    description: The lateral crest surrounds the edge of the Giardia ventral disc.
+    evidence:
+    - reference: GO:0097591
+      notes: Gene Ontology defines the lateral crest as surrounding the ventral-disc
+        edge.
+  - subject: lateral_crest
+    predicate: is part of
+    object: ventral_disc
+    description: The lateral crest is a named part of the Giardia ventral disc.
+    evidence:
+    - reference: GO:0097591
+      notes: Gene Ontology models GO:0097591 as part of GO:0097597, the ventral disc.
+discussions:
+- discussion_id: resolve_lateral_crest_protein_grounding
+  prompt: Resolve exact source-neutral groundings and finer component boundaries for
+    Giardia ventral-disc lateral-crest proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#lateral_crest_structural_proteins
+  rationale: This first ventral-disc lateral-crest record keeps a broad reviewed label-only
+    lateral-crest protein cohort because Hagen et al. localized proteins to the lateral
+    crest, but this pass did not verify exact source-neutral protein-family CURIEs
+    or stable subcomplex boundaries.
+  evidence:
+  - reference: DOI:10.1371/journal.pntd.0001442
+    notes: Hagen et al. 2011 identified Giardia proteins at the ventral-disc lateral
+      crest without source-neutral family groundings for this curation pass.
+  posed_by: codex
+  posed_date: '2026-09-15'

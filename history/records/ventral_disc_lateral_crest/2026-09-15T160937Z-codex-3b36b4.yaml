@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ventral_disc_lateral_crest.yaml
+  slug: ventral_disc_lateral_crest
+session:
+  id: 2026-09-15T160937Z-codex-3b36b4
+  timestamp: '2026-09-15T16:09:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ventral disc lateral crest
+  details: Added GO:0097591 as a standalone ventral disc lateral crest record with ventral-disc
+    partonomy, a label-only lateral-crest structural-protein component, Giardia intestinalis
+    scope and example rows, primary Hagen et al. DOI evidence, a nonmechanistic lateral-crest
+    edge graph, and an open TODO for exact lateral-crest protein grounding.
