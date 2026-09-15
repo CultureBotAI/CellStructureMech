@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/endospore_coat.yaml
+  slug: endospore_coat
+session:
+  id: 2026-09-15T174345Z-codex-b95e98
+  timestamp: '2026-09-15T17:43:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1006
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1007
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1005
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed endospore coat PR review issues
+  details: 'Resolved PR #1005 review issues #1006 and #1007 by narrowing the barrier function
+    label to the endospore coat and adding a GO:0043591 endospore external encapsulating structure
+    node plus an evidence-backed coat parthood edge to the topology graph.'

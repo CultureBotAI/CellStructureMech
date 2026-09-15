@@ -10177,6 +10177,37 @@
       ]
     },
     {
+      "identifier": "GO:0043593",
+      "label": "endospore coat",
+      "neighbors": [
+        {
+          "identifier": "GO:0043591",
+          "label": "endospore external encapsulating structure",
+          "cosine_similarity": 0.91650811
+        },
+        {
+          "identifier": "GO:0043595",
+          "label": "endospore cortex",
+          "cosine_similarity": 0.87224278
+        },
+        {
+          "identifier": "GO:0043594",
+          "label": "outer endospore membrane",
+          "cosine_similarity": 0.82543767
+        },
+        {
+          "identifier": "GO:0090642",
+          "label": "microsporidian-type exospore",
+          "cosine_similarity": 0.79903307
+        },
+        {
+          "identifier": "GO:0090641",
+          "label": "microsporidian-type endospore",
+          "cosine_similarity": 0.78265909
+        }
+      ]
+    },
+    {
       "identifier": "GO:0043595",
       "label": "endospore cortex",
       "neighbors": [
@@ -10184,6 +10215,11 @@
           "identifier": "GO:0043591",
           "label": "endospore external encapsulating structure",
           "cosine_similarity": 0.94155747
+        },
+        {
+          "identifier": "GO:0043593",
+          "label": "endospore coat",
+          "cosine_similarity": 0.87224278
         },
         {
           "identifier": "GO:0043594",
@@ -10199,11 +10235,6 @@
           "identifier": "GO:0090641",
           "label": "microsporidian-type endospore",
           "cosine_similarity": 0.8135034
-        },
-        {
-          "identifier": "GO:0070056",
-          "label": "prospore membrane leading edge",
-          "cosine_similarity": 0.75941057
         }
       ]
     },
@@ -10215,6 +10246,11 @@
           "identifier": "GO:0043595",
           "label": "endospore cortex",
           "cosine_similarity": 0.94155747
+        },
+        {
+          "identifier": "GO:0043593",
+          "label": "endospore coat",
+          "cosine_similarity": 0.91650811
         },
         {
           "identifier": "GO:0043594",
@@ -10230,11 +10266,6 @@
           "identifier": "GO:0090641",
           "label": "microsporidian-type endospore",
           "cosine_similarity": 0.8025757
-        },
-        {
-          "identifier": "GO:0070056",
-          "label": "prospore membrane leading edge",
-          "cosine_similarity": 0.76234927
         }
       ]
     },
@@ -10258,14 +10289,14 @@
           "cosine_similarity": 0.8025757
         },
         {
+          "identifier": "GO:0043593",
+          "label": "endospore coat",
+          "cosine_similarity": 0.78265909
+        },
+        {
           "identifier": "GO:0043594",
           "label": "outer endospore membrane",
           "cosine_similarity": 0.77612124
-        },
-        {
-          "identifier": "cellstructuremech:microsporidian_posterior_vacuole",
-          "label": "microsporidian posterior vacuole",
-          "cosine_similarity": 0.75165472
         }
       ]
     },
@@ -10289,14 +10320,14 @@
           "cosine_similarity": 0.82164714
         },
         {
+          "identifier": "GO:0043593",
+          "label": "endospore coat",
+          "cosine_similarity": 0.79903307
+        },
+        {
           "identifier": "cellstructuremech:microsporidian_posterior_vacuole",
           "label": "microsporidian posterior vacuole",
           "cosine_similarity": 0.79180996
-        },
-        {
-          "identifier": "GO:0043594",
-          "label": "outer endospore membrane",
-          "cosine_similarity": 0.79050156
         }
       ]
     },
@@ -10320,14 +10351,14 @@
           "cosine_similarity": 0.84506726
         },
         {
+          "identifier": "GO:0043593",
+          "label": "endospore coat",
+          "cosine_similarity": 0.82543767
+        },
+        {
           "identifier": "GO:0070056",
           "label": "prospore membrane leading edge",
           "cosine_similarity": 0.82508939
-        },
-        {
-          "identifier": "GO:0042170",
-          "label": "plastid membrane",
-          "cosine_similarity": 0.8130264
         }
       ]
     },
