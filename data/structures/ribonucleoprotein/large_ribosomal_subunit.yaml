@@ -21,6 +21,13 @@ curation_history:
     GO/literature evidence, a 50S peptidyl transferase graph, and component-grounding
     and CPX-3807 scope discussions.
   llm_assisted: true
+- timestamp: '2026-09-15T18:36:34Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Resolved PR #1012 review issues #1013 and #1014 by adding a grounded 5S
+    rRNA constituent, attaching the component-splitting TODO to it, and removing the
+    redundant peptidyltransferase activity graph node and large-subunit activity edge.'
+  llm_assisted: true
 synonyms:
 - synonym_text: ribosomal large subunit
   synonym_type: EXACT_SYNONYM
@@ -48,6 +55,18 @@ components:
   - reference: DOI:10.1126/science.289.5481.905
     notes: Ban et al. 2000 resolved the Haloarcula marismortui 50S large subunit with
       23S and 5S rRNAs in the RNA core.
+- component_id: rrna_5s
+  label: 5S rRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000652
+  stoichiometry: 1 in archaeal and bacterial 50S subunits
+  essentiality: CONDITIONAL
+  role: Small structural RNA of the large-subunit central protuberance.
+  evidence:
+  - reference: DOI:10.1126/science.289.5481.905
+    notes: Ban et al. 2000 resolved 5S rRNA within the Haloarcula marismortui 50S
+      large-subunit central protuberance.
 - component_id: lsu_protein_cohort
   label: large-subunit ribosomal proteins
   component_type: PROTEIN
@@ -118,10 +137,6 @@ causal_graphs:
     label: major large-subunit rRNA
     node_type: RNA
     component_ref: major_lsu_rrna
-  - node_id: peptidyl_transferase_activity
-    label: peptidyltransferase activity
-    node_type: MOLECULAR_FUNCTION
-    grounding: GO:0000048
   edges:
   - subject: major_lsu_rrna
     predicate: forms peptidyl transferase center of
@@ -131,15 +146,6 @@ causal_graphs:
     - reference: DOI:10.1126/science.289.5481.920
       notes: Nissen et al. 2000 localized all 50S peptidyl-transferase-center contacts
         to 23S rRNA.
-  - subject: large_ribosomal_subunit
-    predicate: provides
-    object: peptidyl_transferase_activity
-    description: The 50S peptidyl transferase center provides peptidyltransferase
-      activity.
-    evidence:
-    - reference: DOI:10.1126/science.289.5481.920
-      notes: Nissen et al. 2000 provide the 50S large-subunit structural basis for
-        peptide bond synthesis.
 discussions:
 - discussion_id: split_large_subunit_components
   prompt: Split exact large-subunit rRNA and protein families across bacterial, archaeal,
@@ -148,6 +154,7 @@ discussions:
   status: OPEN
   attaches_to:
   - components#major_lsu_rrna
+  - components#rrna_5s
   - components#lsu_protein_cohort
   rationale: The cross-lineage GO:0015934 term covers homologous large ribosomal subunits
     with different catalytic rRNAs, 5S or 5.8S-family RNAs, and many distinct ribosomal
