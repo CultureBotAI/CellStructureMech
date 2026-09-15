@@ -20,6 +20,12 @@ curation_history:
     GO/DOI evidence, a nonmechanistic membrane-sector graph, and V0 boundary/subunit
     curation discussions.
   llm_assisted: true
+- timestamp: '2026-09-15T10:16:09Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR #961 review issue #962 by adding Kane 2006 as direct V0 proton-translocation
+    evidence on the membrane-transport graph edge.'
+  llm_assisted: true
 parent_structures:
 - GO:0033179
 part_of:
@@ -121,6 +127,9 @@ causal_graphs:
     - reference: DOI:10.1038/nature14365
       notes: Zhao, Benlekbir and Rubinstein 2015 resolved the intact yeast enzyme
         containing V0 and V1 rotational states.
+    - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+      notes: Kane 2006 reviews V0 as the membrane-integral sector that translocates
+        protons across organelle membranes in the intact yeast V-ATPase.
 discussions:
 - discussion_id: v0_sector_not_standalone_pump
   prompt: Represent the V0 domain as the membrane sector of the intact vacuolar V-ATPase
