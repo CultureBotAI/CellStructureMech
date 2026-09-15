@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/small_ribosomal_subunit.yaml
+  slug: small_ribosomal_subunit
+session:
+  id: 2026-09-15T181204Z-codex-235590
+  timestamp: '2026-09-15T18:12:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1009
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1010
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1011
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1008
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Fix small ribosomal subunit review findings
+  details: 'Resolved PR #1008 review issues #1009, #1010, and #1011 by removing the unsupported
+    Bacteria UNIVERSAL taxonomic-distribution row, pruning the redundant aminoacyl-tRNA decoding
+    graph node and edge, and keeping ComplexPortal:CPX-3802 scoped to the Escherichia coli
+    K-12 canonical example and CPX-3802 discussion instead of top-level record evidence.'

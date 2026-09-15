@@ -19,6 +19,14 @@ curation_history:
     GO/literature/Complex Portal evidence, a 30S decoding graph, and component-grounding
     and CPX-3802 scope discussions.
   llm_assisted: true
+- timestamp: '2026-09-15T18:11:34Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Resolved PR #1008 review issues #1009, #1010, and #1011 by removing the
+    unsupported Bacteria UNIVERSAL distribution row, pruning the redundant aminoacyl-tRNA
+    decoding graph node and edge, and keeping ComplexPortal:CPX-3802 scoped to the
+    E. coli canonical example and CPX-3802 discussion rather than record-level evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: ribosomal small subunit
   synonym_type: EXACT_SYNONYM
@@ -65,12 +73,6 @@ components:
   - reference: DOI:10.1128/MMBR.00013-07
     notes: Kaczanowska and Ryden-Aulin 2007 report 21 protein constituents for the
       Escherichia coli 30S subunit.
-taxonomic_distribution:
-- taxon_id: NCBITaxon:2
-  taxon_label: Bacteria
-  presence: UNIVERSAL
-  note: Bacterial 70S ribosomes carry a 30S small subunit assembled around 16S rRNA.
-  reference: DOI:10.1038/nature08403
 canonical_examples:
 - taxon_id: NCBITaxon:274
   taxon_label: Thermus thermophilus
@@ -101,15 +103,11 @@ evidence:
 - reference: DOI:10.1126/science.1060612
   notes: Ogle et al. 2001, Recognition of cognate transfer RNA by the 30S ribosomal
     subunit, Science.
-- reference: ComplexPortal:CPX-3802
-  notes: Complex Portal E. coli K-12 30S small ribosomal subunit composition imported
-    into the parent ribosome record as a taxon-specific source assertion.
 causal_graphs:
 - graph_id: ssu_decoding_center
   title: 30S decoding center reads mRNA codons
   description: In the bacterial 30S subunit, the small-subunit rRNA scaffold positions
-    a decoding center that inspects codon-anticodon geometry while selecting cognate
-    aminoacyl-tRNA.
+    a decoding center that inspects codon-anticodon geometry.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: This graph captures the structurally resolved bacterial 30S decoding
@@ -127,9 +125,6 @@ causal_graphs:
   - node_id: mrna_codon
     label: mRNA codon
     node_type: RNA
-  - node_id: aminoacyl_trna
-    label: aminoacyl-tRNA
-    node_type: RNA
   edges:
   - subject: ssu_rrna
     predicate: forms decoding center of
@@ -143,21 +138,11 @@ causal_graphs:
   - subject: small_ribosomal_subunit
     predicate: decodes
     object: mrna_codon
-    description: The 30S subunit reads mRNA codons and selects cognate aminoacyl-tRNAs
-      at its decoding center.
+    description: The 30S subunit reads mRNA codons at its decoding center.
     evidence:
     - reference: DOI:10.1126/science.1060612
       notes: Ogle et al. 2001 structurally analyzed how the 30S subunit recognizes
         a cognate tRNA anticodon paired with mRNA.
-  - subject: aminoacyl_trna
-    predicate: selected by
-    object: small_ribosomal_subunit
-    description: The 30S decoding center selects aminoacyl-tRNA with a cognate anticodon
-      stem-loop.
-    evidence:
-    - reference: DOI:10.1126/science.1060612
-      notes: Ogle et al. 2001 compare 30S complexes with cognate and near-cognate
-        tRNA anticodon stem-loops in the decoding site.
 discussions:
 - discussion_id: split_small_subunit_components
   prompt: Split exact small-subunit rRNA and protein families across bacterial, archaeal,

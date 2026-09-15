@@ -9408,7 +9408,7 @@
         {
           "identifier": "GO:0015935",
           "label": "small ribosomal subunit",
-          "cosine_similarity": 0.80807006
+          "cosine_similarity": 0.802551
         },
         {
           "identifier": "GO:0005840",
@@ -9752,14 +9752,14 @@
           "cosine_similarity": 0.73396783
         },
         {
-          "identifier": "GO:0015935",
-          "label": "small ribosomal subunit",
-          "cosine_similarity": 0.7163916
-        },
-        {
           "identifier": "GO:0000932",
           "label": "P-body",
           "cosine_similarity": 0.71282165
+        },
+        {
+          "identifier": "GO:0015935",
+          "label": "small ribosomal subunit",
+          "cosine_similarity": 0.70589016
         },
         {
           "identifier": "GO:0005730",
@@ -9798,9 +9798,9 @@
           "cosine_similarity": 0.66576102
         },
         {
-          "identifier": "GO:0015935",
-          "label": "small ribosomal subunit",
-          "cosine_similarity": 0.65874314
+          "identifier": "GO:0060205",
+          "label": "cytoplasmic vesicle lumen",
+          "cosine_similarity": 0.6566609
         }
       ]
     },
@@ -9821,7 +9821,7 @@
         {
           "identifier": "GO:0015935",
           "label": "small ribosomal subunit",
-          "cosine_similarity": 0.70139891
+          "cosine_similarity": 0.70016492
         },
         {
           "identifier": "GO:0005840",
@@ -9842,7 +9842,7 @@
         {
           "identifier": "GO:0015935",
           "label": "small ribosomal subunit",
-          "cosine_similarity": 0.90966606
+          "cosine_similarity": 0.87848448
         },
         {
           "identifier": "GO:0005730",
@@ -9873,27 +9873,27 @@
         {
           "identifier": "GO:0005840",
           "label": "ribosome",
-          "cosine_similarity": 0.90966606
+          "cosine_similarity": 0.87848448
         },
         {
           "identifier": "GO:0005730",
           "label": "nucleolus",
-          "cosine_similarity": 0.80807006
+          "cosine_similarity": 0.802551
         },
         {
           "identifier": "GO:1990061",
           "label": "bacterial degradosome",
-          "cosine_similarity": 0.7163916
+          "cosine_similarity": 0.70589016
         },
         {
           "identifier": "GO:0000932",
           "label": "P-body",
-          "cosine_similarity": 0.70139891
+          "cosine_similarity": 0.70016492
         },
         {
-          "identifier": "GO:0005839",
-          "label": "proteasome core complex",
-          "cosine_similarity": 0.66426599
+          "identifier": "GO:0010494",
+          "label": "cytoplasmic stress granule",
+          "cosine_similarity": 0.65625992
         }
       ]
     },

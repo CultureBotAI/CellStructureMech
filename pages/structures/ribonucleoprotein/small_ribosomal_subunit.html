@@ -28,8 +28,6 @@
 </tbody></table>
 
 
-<h2>Taxonomic distribution</h2>
-<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2"><code>NCBITaxon:2</code></a> Bacteria — <strong>UNIVERSAL</strong>: Bacterial 70S ribosomes carry a 30S small subunit assembled around 16S rRNA. [<a href="https://doi.org/10.1038/nature08403"><code>DOI:10.1038/nature08403</code></a>]</li></ul>
 
 <h2>Canonical examples</h2>
 <ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_274"><code>NCBITaxon:274</code></a> <em>Thermus thermophilus</em> — Bacterial source of the 3.05 A 30S small-subunit crystal structure used to resolve 16S rRNA and 30S protein placement. [<a href="https://doi.org/10.1038/35030006"><code>DOI:10.1038/35030006</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code>NCBITaxon:83333</code></a> <em>Escherichia coli K-12</em> — Reference bacterial strain for the curated Complex Portal 30S small ribosomal subunit composition, CPX-3802. [<a href="https://www.ebi.ac.uk/complexportal/complex/CPX-3802"><code>ComplexPortal:CPX-3802</code></a>]</li></ul>
@@ -41,10 +39,9 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-ssu_decoding_center">30S decoding center reads mRNA codons <small>(FUNCTION)</small></h3>
-<p>In the bacterial 30S subunit, the small-subunit rRNA scaffold positions a decoding center that inspects codon-anticodon geometry while selecting cognate aminoacyl-tRNA.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>In the bacterial 30S subunit, the small-subunit rRNA scaffold positions a decoding center that inspects codon-anticodon geometry.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>small-subunit rRNA</td><td>forms decoding center of</td><td>small ribosomal subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.1060612"><code>DOI:10.1126/science.1060612</code></a> <small>Ogle et al. 2001 show the 30S decoding-center bases A1492, A1493, and G530 interacting with the minor groove of the codon-anticodon helix.</small></li></ul></td></tr>
 <tr><td>small ribosomal subunit</td><td>decodes</td><td>mRNA codon</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.1060612"><code>DOI:10.1126/science.1060612</code></a> <small>Ogle et al. 2001 structurally analyzed how the 30S subunit recognizes a cognate tRNA anticodon paired with mRNA.</small></li></ul></td></tr>
-<tr><td>aminoacyl-tRNA</td><td>selected by</td><td>small ribosomal subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.1060612"><code>DOI:10.1126/science.1060612</code></a> <small>Ogle et al. 2001 compare 30S complexes with cognate and near-cognate tRNA anticodon stem-loops in the decoding site.</small></li></ul></td></tr>
 </tbody></table>
 
 <h2>Discussions</h2>
@@ -52,10 +49,10 @@
 
 
 <h2>Evidence</h2>
-<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0015935"><code>GO:0015935</code></a> <small>Gene Ontology cellular-component term for the small ribosomal subunit.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005840"><code>GO:0005840</code></a> <small>Gene Ontology cellular-component term for the containing ribosome.</small></li><li><a href="https://doi.org/10.1038/35030006"><code>DOI:10.1038/35030006</code></a> <small>Wimberly et al. 2000, Structure of the 30S ribosomal subunit, Nature.</small></li><li><a href="https://doi.org/10.1126/science.1060612"><code>DOI:10.1126/science.1060612</code></a> <small>Ogle et al. 2001, Recognition of cognate transfer RNA by the 30S ribosomal subunit, Science.</small></li><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-3802"><code>ComplexPortal:CPX-3802</code></a> <small>Complex Portal E. coli K-12 30S small ribosomal subunit composition imported into the parent ribosome record as a taxon-specific source assertion.</small></li></ul>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0015935"><code>GO:0015935</code></a> <small>Gene Ontology cellular-component term for the small ribosomal subunit.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005840"><code>GO:0005840</code></a> <small>Gene Ontology cellular-component term for the containing ribosome.</small></li><li><a href="https://doi.org/10.1038/35030006"><code>DOI:10.1038/35030006</code></a> <small>Wimberly et al. 2000, Structure of the 30S ribosomal subunit, Nature.</small></li><li><a href="https://doi.org/10.1126/science.1060612"><code>DOI:10.1126/science.1060612</code></a> <small>Ogle et al. 2001, Recognition of cognate transfer RNA by the 30S ribosomal subunit, Science.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-15T18:00:29Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-15T18:01:31Z</code> codex · EXPANDED_RECORD — Added GO synonymy, ribosome parthood, broad rRNA and protein-cohort components, bacterial distribution, Thermus and E. coli exemplars, mRNA-decoding function, GO/literature/Complex Portal evidence, a 30S decoding graph, and component-grounding and CPX-3802 scope discussions.</li></ul>
+<ul class="history"><li><code>2026-09-15T18:00:29Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-15T18:01:31Z</code> codex · EXPANDED_RECORD — Added GO synonymy, ribosome parthood, broad rRNA and protein-cohort components, bacterial distribution, Thermus and E. coli exemplars, mRNA-decoding function, GO/literature/Complex Portal evidence, a 30S decoding graph, and component-grounding and CPX-3802 scope discussions.</li><li><code>2026-09-15T18:11:34Z</code> codex · REVIEW_FIX — Resolved PR #1008 review issues #1009, #1010, and #1011 by removing the unsupported Bacteria UNIVERSAL distribution row, pruning the redundant aminoacyl-tRNA decoding graph node and edge, and keeping ComplexPortal:CPX-3802 scoped to the E. coli canonical example and CPX-3802 discussion rather than record-level evidence.</li></ul>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/small_ribosomal_subunit.yaml"><code>data/structures/ribonucleoprotein/small_ribosomal_subunit.yaml</code></a></p>
 </main>
 <footer>
