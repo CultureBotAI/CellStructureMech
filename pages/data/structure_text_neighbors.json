@@ -2968,14 +2968,14 @@
           "cosine_similarity": 0.83234038
         },
         {
-          "identifier": "GO:0005641",
-          "label": "nuclear envelope lumen",
-          "cosine_similarity": 0.82875499
-        },
-        {
           "identifier": "GO:0005759",
           "label": "mitochondrial matrix",
           "cosine_similarity": 0.82614983
+        },
+        {
+          "identifier": "GO:0005641",
+          "label": "nuclear envelope lumen",
+          "cosine_similarity": 0.82271558
         },
         {
           "identifier": "GO:0034591",
@@ -6323,7 +6323,7 @@
         {
           "identifier": "GO:0005641",
           "label": "nuclear envelope lumen",
-          "cosine_similarity": 0.8764457
+          "cosine_similarity": 0.85306001
         },
         {
           "identifier": "GO:0005643",
@@ -6339,27 +6339,27 @@
         {
           "identifier": "GO:0005758",
           "label": "mitochondrial intermembrane space",
-          "cosine_similarity": 0.88315915
+          "cosine_similarity": 0.87590257
         },
         {
           "identifier": "GO:0005635",
           "label": "nuclear envelope",
-          "cosine_similarity": 0.8764457
+          "cosine_similarity": 0.85306001
         },
         {
-          "identifier": "GO:0060205",
-          "label": "cytoplasmic vesicle lumen",
-          "cosine_similarity": 0.84279093
+          "identifier": "GO:0031972",
+          "label": "chloroplast intermembrane space",
+          "cosine_similarity": 0.83894389
         },
         {
-          "identifier": "GO:0005640",
-          "label": "nuclear outer membrane",
-          "cosine_similarity": 0.83672551
+          "identifier": "cellstructuremech:mitosome_intermembrane_space",
+          "label": "mitosome intermembrane space",
+          "cosine_similarity": 0.83803931
         },
         {
-          "identifier": "GO:0005634",
-          "label": "nucleus",
-          "cosine_similarity": 0.83222958
+          "identifier": "GO:0009529",
+          "label": "plastid intermembrane space",
+          "cosine_similarity": 0.83107923
         }
       ]
     },
@@ -6471,14 +6471,14 @@
           "cosine_similarity": 0.85932832
         },
         {
-          "identifier": "GO:0005641",
-          "label": "nuclear envelope lumen",
-          "cosine_similarity": 0.83222958
-        },
-        {
           "identifier": "GO:0005637",
           "label": "nuclear inner membrane",
           "cosine_similarity": 0.8278625
+        },
+        {
+          "identifier": "GO:0005641",
+          "label": "nuclear envelope lumen",
+          "cosine_similarity": 0.82428938
         },
         {
           "identifier": "GO:0005739",
@@ -8481,14 +8481,14 @@
           "cosine_similarity": 0.71244196
         },
         {
+          "identifier": "GO:0005641",
+          "label": "nuclear envelope lumen",
+          "cosine_similarity": 0.70364413
+        },
+        {
           "identifier": "GO:0005788",
           "label": "endoplasmic reticulum lumen",
           "cosine_similarity": 0.70091115
-        },
-        {
-          "identifier": "GO:0005641",
-          "label": "nuclear envelope lumen",
-          "cosine_similarity": 0.69486984
         },
         {
           "identifier": "GO:0009529",

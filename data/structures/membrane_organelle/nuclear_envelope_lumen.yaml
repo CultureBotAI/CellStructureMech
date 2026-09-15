@@ -24,6 +24,17 @@ curation_history:
     the first lumen record focused on directly GO-backed topology and a broad nuclear-envelope
     review.
   llm_assisted: true
+- timestamp: '2026-09-15T07:09:32Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed review issues #944 and #945 by adding exact perinuclear-space
+    synonymy and connecting the nuclear envelope lumen topology graph to the endoplasmic
+    reticulum lumen.'
+  llm_assisted: true
+synonyms:
+- synonym_text: perinuclear space
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1101/cshperspect.a000539
 parent_structures:
 - GO:0031970
 part_of:
@@ -48,6 +59,9 @@ evidence:
   notes: Gene Ontology cellular-component term for the bordering nuclear outer membrane.
 - reference: DOI:10.1101/cshperspect.a000539
   notes: Hetzer 2010, 'The Nuclear Envelope', Cold Spring Harbor Perspectives in Biology.
+- reference: GO:0005788
+  notes: Gene Ontology cellular-component term for the endoplasmic reticulum lumen
+    continuous with the nuclear envelope lumen.
 causal_graphs:
 - graph_id: nuclear_envelope_lumen_topology
   title: Nuclear envelope lumen topology
@@ -74,6 +88,10 @@ causal_graphs:
     label: nuclear outer membrane
     node_type: STRUCTURE
     grounding: GO:0005640
+  - node_id: endoplasmic_reticulum_lumen
+    label: endoplasmic reticulum lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005788
   edges:
   - subject: nuclear_envelope_lumen
     predicate: is part of
@@ -110,6 +128,17 @@ causal_graphs:
     - reference: GO:0005640
       notes: GO:0005640 defines the outer nuclear membrane as the cytoplasm-facing
         nuclear-envelope bilayer.
+  - subject: nuclear_envelope_lumen
+    predicate: is continuous with
+    object: endoplasmic_reticulum_lumen
+    description: The nuclear envelope lumen and ER lumen are contiguous through the
+      ER/outer-nuclear-membrane system.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a000539
+      notes: Hetzer 2010 reviews the nuclear envelope as an ER-continuous double membrane
+        with an enclosed perinuclear space.
+    - reference: GO:0005788
+      notes: GO:0005788 identifies the endoplasmic reticulum lumen.
 discussions:
 - discussion_id: boundary_membranes_not_lumen_components
   prompt: Keep the nuclear inner and outer membranes as lumen boundaries rather than
