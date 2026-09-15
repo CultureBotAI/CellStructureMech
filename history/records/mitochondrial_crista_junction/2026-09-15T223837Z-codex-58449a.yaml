@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_crista_junction.yaml
+  slug: mitochondrial_crista_junction
+session:
+  id: 2026-09-15T223837Z-codex-58449a
+  timestamp: '2026-09-15T22:38:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1034
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1035
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1033
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address mitochondrial crista junction review
+  details: 'Addressed PR #1033 adversarial review issues #1034 and #1035 by narrowing the
+    function to GO:0007007 inner mitochondrial membrane organization, removing the weak cristae-formation
+    graph edge, and grounding the Eukaryota scope row to GO:0044284.'
