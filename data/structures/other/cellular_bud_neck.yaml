@@ -1,0 +1,152 @@
+identifier: GO:0005935
+label: cellular bud neck
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: The constricted cellular region between a mother cell and its daughter
+  bud in budding organisms.
+definition_source: GO:0005935
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T01:03:12Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T01:03:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added UniProt bud-neck synonymy and xref, cellular-bud parthood, septin-ring
+    substructure, budding-yeast distribution and example evidence, a bud-neck cytokinesis
+    scaffold function, GO/UniProt/DOI evidence, a nonmechanistic bud-neck septin topology
+    graph, and a septin/polarity-factor component-boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-15T01:23:12Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #913 and #914 by adding the boundary-discussion resolved_date,
+    retitling the bud-neck function as a cytokinesis-site assertion, and removing
+    the over-broad cytokinesis marker edge from the topology graph.'
+  llm_assisted: true
+synonyms:
+- synonym_text: bud neck
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0029
+part_of:
+- GO:0005933
+has_part:
+- GO:0005940
+xrefs:
+- uniprot.location:SL-0029
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast organizes a mother-bud neck where septins assemble during polarized
+    bud growth and cytokinesis.
+  reference: DOI:10.3389/fcell.2016.00123
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Cdc3, Cdc10, Cdc11, Cdc12, and Shs1 septins organize
+    at the mother-bud neck.
+  reference: DOI:10.1534/genetics.107.073007
+functions:
+- function_id: bud_neck_cytokinesis_site
+  label: bud-neck cytokinesis site
+  description: The bud neck is the mother-bud cortical region where the septin ring
+    assembles to organize budding-yeast cytokinesis.
+  evidence:
+  - reference: GO:0005935
+    notes: GO:0005935 identifies the cellular bud neck.
+  - reference: DOI:10.3389/fcell.2016.00123
+    notes: Glomb and Gronemeyer 2016 review septin organization and cytokinesis functions
+      at the budding-yeast bud neck.
+evidence:
+- reference: GO:0005935
+  notes: Gene Ontology cellular-component term for the cellular bud neck.
+- reference: GO:0005933
+  notes: Gene Ontology cellular-component term for the cellular bud.
+- reference: GO:0005940
+  notes: Gene Ontology cellular-component term for the septin ring.
+- reference: uniprot.location:SL-0029
+  notes: UniProt Subcellular Location entry SL-0029 maps Bud neck to GO:0005935 and
+    places the bud neck under Bud.
+- reference: uniprot.location:SL-0027
+  notes: UniProt Subcellular Location entry SL-0027 maps the parent Bud location to
+    GO:0005933.
+- reference: DOI:10.1534/genetics.107.073007
+  notes: Iwase et al. 2007 studied Shs1/Sep7 with the Cdc3, Cdc10, Cdc11, and Cdc12
+    septins of the budding-yeast septin ring.
+- reference: DOI:10.3389/fcell.2016.00123
+  notes: Glomb and Gronemeyer 2016, 'Septin Organization and Functions in Budding
+    Yeast', Frontiers in Cell and Developmental Biology.
+causal_graphs:
+- graph_id: bud_neck_septin_topology
+  title: Bud-neck septin topology
+  description: The cellular bud neck is the mother-daughter constriction where the
+    budding-yeast septin ring assembles.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records bud-neck parthood and septin-ring localization without
+    asserting the complete order of bud-site selection, septin collar splitting, actomyosin-ring
+    recruitment, or cytokinesis.
+  nodes:
+  - node_id: cellular_bud_neck
+    label: cellular bud neck
+    node_type: STRUCTURE
+    grounding: GO:0005935
+  - node_id: cellular_bud
+    label: cellular bud
+    node_type: STRUCTURE
+    grounding: GO:0005933
+  - node_id: septin_ring
+    label: septin ring
+    node_type: STRUCTURE
+    grounding: GO:0005940
+  edges:
+  - subject: cellular_bud_neck
+    predicate: is part of
+    object: cellular_bud
+    description: The bud neck is the constriction between the mother cell and the
+      cellular bud.
+    evidence:
+    - reference: GO:0005935
+      notes: GO:0005935 identifies the cellular bud neck.
+    - reference: uniprot.location:SL-0029
+      notes: UniProt SL-0029 places the bud neck under the Bud location.
+  - subject: septin_ring
+    predicate: assembles at
+    object: cellular_bud_neck
+    description: Budding-yeast septins assemble into a ring at the mother-bud neck.
+    evidence:
+    - reference: DOI:10.1534/genetics.107.073007
+      notes: Iwase et al. 2007 studied the budding-yeast septin ring formed by Cdc3/Cdc10/Cdc11/Cdc12/Shs1.
+    - reference: DOI:10.3389/fcell.2016.00123
+      notes: Glomb and Gronemeyer 2016 review septin organization at the budding-yeast
+        bud neck.
+discussions:
+- discussion_id: septin_and_polarity_machinery_on_substructures
+  prompt: Keep septin and polarisome proteins on their own structure records rather
+    than duplicating them as cellular bud neck components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#bud_neck_septin_topology
+  rationale: GO:0005935 and UniProt SL-0029 identify the mother-daughter neck region.
+    The septin ring and bud-neck polarisome are localized substructures, so this regional
+    record links the septin ring by has_part and leaves septin or polarisome protein
+    constituents on their own records.
+  resolution_note: Curated region-level bud-neck topology and did not duplicate septin
+    or polarisome proteins as direct molecular components.
+  evidence:
+  - reference: GO:0005935
+    notes: GO:0005935 identifies the cellular bud neck region.
+  - reference: GO:0005940
+    notes: GO:0005940 identifies the septin ring substructure.
+  - reference: DOI:10.3389/fcell.2016.00123
+    notes: Glomb and Gronemeyer 2016 review septin-ring organization at the budding-yeast
+      bud neck.
+  posed_by: codex
+  posed_date: '2026-09-15'
+  resolved_date: '2026-09-15'
