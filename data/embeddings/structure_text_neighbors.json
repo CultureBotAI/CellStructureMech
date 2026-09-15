@@ -1769,9 +1769,9 @@
           "cosine_similarity": 0.68517445
         },
         {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.68047584
+          "identifier": "GO:0005935",
+          "label": "cellular bud neck",
+          "cosine_similarity": 0.68297278
         }
       ]
     },
@@ -7889,7 +7889,7 @@
         {
           "identifier": "GO:0005935",
           "label": "cellular bud neck",
-          "cosine_similarity": 0.81584072
+          "cosine_similarity": 0.81415827
         },
         {
           "identifier": "GO:0033101",
@@ -7920,27 +7920,27 @@
         {
           "identifier": "GO:0005933",
           "label": "cellular bud",
-          "cosine_similarity": 0.81584072
+          "cosine_similarity": 0.81415827
         },
         {
           "identifier": "GO:0033101",
           "label": "cellular bud membrane",
-          "cosine_similarity": 0.76943199
+          "cosine_similarity": 0.76778659
         },
         {
           "identifier": "GO:0060205",
           "label": "cytoplasmic vesicle lumen",
-          "cosine_similarity": 0.69129038
+          "cosine_similarity": 0.69680657
+        },
+        {
+          "identifier": "GO:0005940",
+          "label": "septin ring",
+          "cosine_similarity": 0.68297278
         },
         {
           "identifier": "GO:0020007",
           "label": "apical complex",
-          "cosine_similarity": 0.67756489
-        },
-        {
-          "identifier": "GO:0034423",
-          "label": "autophagosome lumen",
-          "cosine_similarity": 0.67267327
+          "cosine_similarity": 0.67870006
         }
       ]
     },

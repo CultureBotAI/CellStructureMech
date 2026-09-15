@@ -20,6 +20,13 @@ curation_history:
     scaffold function, GO/UniProt/DOI evidence, a nonmechanistic bud-neck septin topology
     graph, and a septin/polarity-factor component-boundary decision.
   llm_assisted: true
+- timestamp: '2026-09-15T01:23:12Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #913 and #914 by adding the boundary-discussion resolved_date,
+    retitling the bud-neck function as a cytokinesis-site assertion, and removing
+    the over-broad cytokinesis marker edge from the topology graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: bud neck
   synonym_type: EXACT_SYNONYM
@@ -44,10 +51,10 @@ canonical_examples:
     at the mother-bud neck.
   reference: DOI:10.1534/genetics.107.073007
 functions:
-- function_id: bud_neck_cytokinesis_scaffold
-  label: bud-neck cytokinesis scaffold
-  description: The bud neck is the cortical constriction where septins form a scaffold
-    that marks the mother-bud cytokinesis site.
+- function_id: bud_neck_cytokinesis_site
+  label: bud-neck cytokinesis site
+  description: The bud neck is the mother-bud cortical region where the septin ring
+    assembles to organize budding-yeast cytokinesis.
   evidence:
   - reference: GO:0005935
     notes: GO:0005935 identifies the cellular bud neck.
@@ -76,8 +83,8 @@ evidence:
 causal_graphs:
 - graph_id: bud_neck_septin_topology
   title: Bud-neck septin topology
-  description: The cellular bud neck is the mother-daughter constriction that contains
-    a septin ring at the budding-yeast cytokinesis site.
+  description: The cellular bud neck is the mother-daughter constriction where the
+    budding-yeast septin ring assembles.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph records bud-neck parthood and septin-ring localization without
@@ -96,9 +103,6 @@ causal_graphs:
     label: septin ring
     node_type: STRUCTURE
     grounding: GO:0005940
-  - node_id: cytokinesis_site
-    label: cytokinesis site
-    node_type: CELLULAR_LOCALIZATION
   edges:
   - subject: cellular_bud_neck
     predicate: is part of
@@ -120,15 +124,6 @@ causal_graphs:
     - reference: DOI:10.3389/fcell.2016.00123
       notes: Glomb and Gronemeyer 2016 review septin organization at the budding-yeast
         bud neck.
-  - subject: cellular_bud_neck
-    predicate: marks
-    object: cytokinesis_site
-    description: The mother-bud neck is the cortical site organized for budding-yeast
-      cytokinesis.
-    evidence:
-    - reference: DOI:10.3389/fcell.2016.00123
-      notes: Glomb and Gronemeyer 2016 review the bud neck as the septin-organized
-        site for budding-yeast cytokinesis.
 discussions:
 - discussion_id: septin_and_polarity_machinery_on_substructures
   prompt: Keep septin and polarisome proteins on their own structure records rather
@@ -154,3 +149,4 @@ discussions:
       bud neck.
   posed_by: codex
   posed_date: '2026-09-15'
+  resolved_date: '2026-09-15'
