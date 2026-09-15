@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ndc80_complex.yaml
+  slug: ndc80_complex
+session:
+  id: 2026-09-15T191532Z-codex-9eae21
+  timestamp: '2026-09-15T19:15:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1016
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1017
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1015
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed Ndc80 adversarial review findings
+  details: 'Resolved PR #1015 review issues #1016 and #1017 by representing the Ndc80 complex
+    as part_of the outer kinetochore instead of an is-a child, changing the matching graph
+    edge to parthood, and narrowing the Ndc80, Spc24 and Spc25 component roles to direct subunit-membership
+    claims.'

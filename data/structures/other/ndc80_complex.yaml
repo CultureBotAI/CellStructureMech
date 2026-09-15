@@ -29,13 +29,20 @@ curation_history:
   changes: Replaced the initial Ndc80 definition paraphrase with the fuller GO:0031262
     wording that names conserved Ndc80p, Nuf2p, Spc24p and Spc25p composition.
   llm_assisted: true
+- timestamp: '2026-09-15T19:15:02Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved #1016 and #1017 by moving outer kinetochore from parent_structures
+    to part_of, changing the outer-kinetochore graph edge to parthood, and narrowing
+    unsupported subunit orientation phrasing in the Ndc80, Spc24 and Spc25 component
+    roles.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Nuf2-Ndc80 complex
   synonym_type: EXACT_SYNONYM
   source: GO:0031262
-parent_structures:
-- GO:0000940
 part_of:
+- GO:0000940
 - GO:0000776
 components:
 - component_id: ndc80_subunit
@@ -49,8 +56,7 @@ components:
   grounding_notes: Ndc80 proteins are modeled as a conserved Ndc80-complex subunit
     family; no exact source-neutral protein-family CURIE was curated for this first
     complex record.
-  role: Named Ndc80-complex constituent positioned at the microtubule-binding end
-    of the outer-kinetochore complex.
+  role: Named Ndc80-family constituent of the conserved Ndc80 complex.
   evidence:
   - reference: GO:0031262
     notes: GO:0031262 names Ndc80 proteins as constituents of the conserved Ndc80
@@ -88,7 +94,7 @@ components:
   grounding_notes: Spc24 proteins are modeled as a conserved Ndc80-complex subunit
     family; no exact source-neutral protein-family CURIE was curated for this first
     complex record.
-  role: Named Spc24-family constituent of the conserved Ndc80-complex tail.
+  role: Named Spc24-family constituent of the conserved Ndc80 complex.
   evidence:
   - reference: GO:0031262
     notes: GO:0031262 names Spc24 proteins as constituents of the conserved Ndc80
@@ -106,7 +112,7 @@ components:
   grounding_notes: Spc25 proteins are modeled as a conserved Ndc80-complex subunit
     family; no exact source-neutral protein-family CURIE was curated for this first
     complex record.
-  role: Named Spc25-family constituent of the conserved Ndc80-complex tail.
+  role: Named Spc25-family constituent of the conserved Ndc80 complex.
   evidence:
   - reference: GO:0031262
     notes: GO:0031262 names Spc25 proteins as constituents of the conserved Ndc80
@@ -142,7 +148,8 @@ evidence:
 - reference: GO:0031262
   notes: Gene Ontology cellular-component term for the Ndc80 complex.
 - reference: GO:0000940
-  notes: Gene Ontology cellular-component parent term for outer kinetochore.
+  notes: Gene Ontology cellular-component term for the outer kinetochore, the region
+    that contains the Ndc80 complex.
 - reference: GO:0000776
   notes: Gene Ontology cellular-component term for kinetochore.
 - reference: DOI:10.1093/emboj/20.4.777
@@ -181,13 +188,16 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: ndc80_complex
-    predicate: is a
+    predicate: is part of
     object: outer_kinetochore
-    description: GO places the Ndc80 complex under the outer kinetochore cellular
-      component.
+    description: The Ndc80 complex is a constituent module in the kinetochore's outer
+      microtubule-coupling layer.
     evidence:
     - reference: GO:0031262
-      notes: GO:0031262 is an outer-kinetochore complex term.
+      notes: GO:0031262 defines the Ndc80 complex as a kinetochore complex with an
+        outer-plate localization in vertebrates.
+    - reference: DOI:10.1534/genetics.112.145276
+      notes: Biggins 2013 reviewed Ndc80 as an outer kinetochore complex.
   - subject: outer_kinetochore
     predicate: is part of
     object: kinetochore
