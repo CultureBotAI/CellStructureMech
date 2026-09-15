@@ -1945,6 +1945,11 @@
           "cosine_similarity": 0.89585027
         },
         {
+          "identifier": "GO:0097592",
+          "label": "ventral disc overlap zone",
+          "cosine_similarity": 0.88838607
+        },
+        {
           "identifier": "GO:0097593",
           "label": "ventral disc microtubule array",
           "cosine_similarity": 0.8878318
@@ -1953,11 +1958,6 @@
           "identifier": "GO:0097596",
           "label": "ventral disc supernumerary microtubule array",
           "cosine_similarity": 0.83821666
-        },
-        {
-          "identifier": "GO:0097594",
-          "label": "ventral disc dorsal microribbon",
-          "cosine_similarity": 0.83295116
         }
       ]
     },
@@ -1976,6 +1976,11 @@
           "cosine_similarity": 0.89145665
         },
         {
+          "identifier": "GO:0097592",
+          "label": "ventral disc overlap zone",
+          "cosine_similarity": 0.88493505
+        },
+        {
           "identifier": "GO:0097594",
           "label": "ventral disc dorsal microribbon",
           "cosine_similarity": 0.85491832
@@ -1984,11 +1989,6 @@
           "identifier": "GO:0097593",
           "label": "ventral disc microtubule array",
           "cosine_similarity": 0.84486767
-        },
-        {
-          "identifier": "GO:0097596",
-          "label": "ventral disc supernumerary microtubule array",
-          "cosine_similarity": 0.83542449
         }
       ]
     },
@@ -2038,6 +2038,11 @@
           "cosine_similarity": 0.89145665
         },
         {
+          "identifier": "GO:0097592",
+          "label": "ventral disc overlap zone",
+          "cosine_similarity": 0.85527501
+        },
+        {
           "identifier": "GO:0097593",
           "label": "ventral disc microtubule array",
           "cosine_similarity": 0.79563482
@@ -2046,11 +2051,6 @@
           "identifier": "GO:0097596",
           "label": "ventral disc supernumerary microtubule array",
           "cosine_similarity": 0.78363108
-        },
-        {
-          "identifier": "GO:0097594",
-          "label": "ventral disc dorsal microribbon",
-          "cosine_similarity": 0.7688551
         }
       ]
     },
@@ -2069,6 +2069,11 @@
           "cosine_similarity": 0.8878318
         },
         {
+          "identifier": "GO:0097592",
+          "label": "ventral disc overlap zone",
+          "cosine_similarity": 0.8561081
+        },
+        {
           "identifier": "GO:0097594",
           "label": "ventral disc dorsal microribbon",
           "cosine_similarity": 0.8544865
@@ -2077,11 +2082,37 @@
           "identifier": "GO:0097595",
           "label": "ventral disc crossbridge",
           "cosine_similarity": 0.84486767
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097592",
+      "label": "ventral disc overlap zone",
+      "neighbors": [
+        {
+          "identifier": "GO:0097597",
+          "label": "ventral disc",
+          "cosine_similarity": 0.88838607
+        },
+        {
+          "identifier": "GO:0097595",
+          "label": "ventral disc crossbridge",
+          "cosine_similarity": 0.88493505
+        },
+        {
+          "identifier": "GO:0097593",
+          "label": "ventral disc microtubule array",
+          "cosine_similarity": 0.8561081
         },
         {
           "identifier": "GO:0097591",
           "label": "ventral disc lateral crest",
-          "cosine_similarity": 0.79563482
+          "cosine_similarity": 0.85527501
+        },
+        {
+          "identifier": "GO:0097596",
+          "label": "ventral disc supernumerary microtubule array",
+          "cosine_similarity": 0.84156849
         }
       ]
     },
@@ -2093,6 +2124,11 @@
           "identifier": "GO:0097593",
           "label": "ventral disc microtubule array",
           "cosine_similarity": 0.96589434
+        },
+        {
+          "identifier": "GO:0097592",
+          "label": "ventral disc overlap zone",
+          "cosine_similarity": 0.84156849
         },
         {
           "identifier": "GO:0097597",
@@ -2108,11 +2144,6 @@
           "identifier": "GO:0097594",
           "label": "ventral disc dorsal microribbon",
           "cosine_similarity": 0.81710958
-        },
-        {
-          "identifier": "GO:0097591",
-          "label": "ventral disc lateral crest",
-          "cosine_similarity": 0.78363108
         }
       ]
     },

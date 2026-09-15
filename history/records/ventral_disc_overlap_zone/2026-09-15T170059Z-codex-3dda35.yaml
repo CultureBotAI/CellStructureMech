@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml
+  slug: ventral_disc_overlap_zone
+session:
+  id: 2026-09-15T170059Z-codex-3dda35
+  timestamp: '2026-09-15T17:00:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ventral disc overlap zone
+  details: Added GO:0097592 as a standalone ventral disc overlap zone record with GO synonyms,
+    ventral-disc parthood, a label-only alpha/beta tubulin component, Giardia intestinalis
+    scope, Schwartz et al. 2012 DOI evidence, a nonmechanistic overlap-zone topology graph,
+    rendered pages, README statistics, and refreshed embedding artifacts.
