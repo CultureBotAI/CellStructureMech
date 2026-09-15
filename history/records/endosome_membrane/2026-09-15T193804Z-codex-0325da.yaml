@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endosome_membrane.yaml
+  slug: endosome_membrane
+session:
+  id: 2026-09-15T193804Z-codex-0325da
+  timestamp: '2026-09-15T19:38:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO endosome membrane record
+  details: Created data/structures/membrane_organelle/endosome_membrane.yaml for GO:0010008,
+    linking it to the endosome, modeling the lipid bilayer conservatively as REVIEWED_LABEL_ONLY,
+    and adding Saccharomyces cerevisiae scope, GO and literature evidence, endosomal cargo-sorting
+    functions, a nonmechanistic MVB sorting graph, and a lipid-grounding discussion.

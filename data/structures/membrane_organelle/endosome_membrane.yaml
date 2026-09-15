@@ -1,0 +1,247 @@
+identifier: GO:0010008
+label: endosome membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding an endosome.
+definition_source: GO:0010008
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T19:34:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T19:35:23Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added generic membrane parentage, endosome parthood, a reviewed-label-only
+    lipid-bilayer component, budding-yeast scope, GO/DOI evidence, endosomal cargo-sorting
+    functions, a nonmechanistic endosome membrane topology graph, and a lipid-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-15T19:41:07Z'
+  curator: codex
+  action: FIXED_FUNCTION_GROUNDING
+  changes: Aligned the GO:0071985-grounded function with its multivesicular body sorting
+    pathway label instead of using the narrower ungrounded intraluminal vesicle formation
+    wording.
+  llm_assisted: true
+- timestamp: '2026-09-15T19:52:57Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1019 by adding ESCRT-III membrane remodeling to the MVB sorting
+    graph and resolved #1020 by narrowing the yeast canonical example to the Vps27/ESCRT-I
+    recruitment claim directly supported by Katzmann et al. 2003.'
+  llm_assisted: true
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0005768
+components:
+- component_id: endosome_membrane_lipid_bilayer
+  label: endosome membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent that forms the endosomal boundary for cargo sorting
+    and multivesicular-body intraluminal-vesicle formation.
+  evidence:
+  - reference: GO:0010008
+    notes: GO:0010008 defines the endosome membrane as the lipid bilayer surrounding
+      an endosome.
+  - reference: DOI:10.1083/jcb.200302136
+    notes: Katzmann et al. 2003 localized yeast Vps27 and ESCRT-I recruitment to endosomal
+      membranes during multivesicular-body cargo sorting.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0010008 identifies the complete endosome membrane, but no separate
+    source-neutral CURIE was curated for the generic lipid constituent of the endosome
+    membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses endosomal membranes as ESCRT recruitment sites for multivesicular-body
+    sorting of ubiquitinated membrane cargo.
+  reference: DOI:10.1083/jcb.200302136
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Genetic model in which Vps27 recruits ESCRT-I to endosomal membranes during
+    MVB cargo sorting.
+  reference: DOI:10.1083/jcb.200302136
+functions:
+- function_id: endosomal_membrane_cargo_sorting
+  label: endosomal membrane cargo sorting
+  description: The endosome membrane provides the sorting surface where ubiquitinated
+    transmembrane cargo and ESCRT machinery are brought together for delivery into
+    intraluminal vesicles.
+  evidence:
+  - reference: DOI:10.1016/S0092-8674(01)00434-2
+    notes: Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved yeast endosomal
+      protein-sorting complex needed for ubiquitin-dependent MVB cargo sorting.
+  - reference: DOI:10.1083/jcb.200302136
+    notes: Katzmann et al. 2003 found that Vps27 recruits ESCRT-I to endosomal membranes
+      during MVB sorting.
+- function_id: multivesicular_body_sorting_pathway
+  label: multivesicular body sorting pathway
+  grounding: GO:0071985
+  description: The endosome membrane buds inward during ESCRT-dependent sorting to
+    package endosomal membrane cargo into intraluminal vesicles.
+  evidence:
+  - reference: GO:0005771
+    notes: GO:0005771 defines multivesicular bodies as endosomes containing internal
+      vesicles formed by invagination of the limiting endosomal membrane.
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: Henne, Buchkovich and Emr 2011 reviewed ESCRT-driven intraluminal vesicle
+      formation at endosomes.
+evidence:
+- reference: GO:0010008
+  notes: Gene Ontology cellular-component term for the endosome membrane.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component parent term for membrane.
+- reference: GO:0005768
+  notes: Gene Ontology cellular-component term for endosome.
+- reference: GO:0031904
+  notes: Gene Ontology cellular-component term for the endosome lumen.
+- reference: GO:0005771
+  notes: Gene Ontology cellular-component term for the multivesicular body.
+- reference: GO:0071985
+  notes: Gene Ontology biological-process term for the multivesicular body sorting
+    pathway.
+- reference: DOI:10.1016/S0092-8674(01)00434-2
+  notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
+    Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
+    ESCRT-I, Cell.
+- reference: DOI:10.1083/jcb.200302136
+  notes: Katzmann, Stefan, Babst and Emr 2003, Vps27 recruits ESCRT machinery to endosomes
+    during MVB sorting, Journal of Cell Biology.
+- reference: DOI:10.1016/j.devcel.2011.05.015
+  notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+- reference: DOI:10.1016/S1534-5807(02)00220-4
+  notes: Babst et al. 2002, ESCRT-III, Developmental Cell.
+causal_graphs:
+- graph_id: endosome_membrane_mvb_sorting
+  title: Endosome membrane MVB sorting
+  description: The endosome membrane is the lipid boundary and ESCRT-sorting surface
+    that encloses endosome lumen and generates multivesicular-body intraluminal vesicles.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures endosome membrane topology, Vps27/ESCRT-I recruitment,
+    and ESCRT-III membrane remodeling without making transient ESCRT complexes constituent
+    parts of the membrane or enumerating the full cargo-recognition, deubiquitination,
+    or Vps4 recycling cycle.
+  nodes:
+  - node_id: endosome_membrane
+    label: endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0010008
+    component_ref: endosome_membrane_lipid_bilayer
+  - node_id: endosome
+    label: endosome
+    node_type: STRUCTURE
+    grounding: GO:0005768
+  - node_id: endosome_lumen
+    label: endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031904
+  - node_id: vps27_endosomal_recruiter
+    label: Vps27 endosomal ESCRT-I recruiter
+    node_type: GENE_OR_PROTEIN
+  - node_id: escrt_i
+    label: ESCRT I complex
+    node_type: STRUCTURE
+    grounding: GO:0000813
+  - node_id: escrt_iii
+    label: ESCRT III complex
+    node_type: STRUCTURE
+    grounding: GO:0000815
+  - node_id: ubiquitinated_membrane_cargo
+    label: ubiquitinated membrane cargo
+    node_type: STATE
+  - node_id: intraluminal_vesicle
+    label: multivesicular-body intraluminal vesicle
+    node_type: STRUCTURE
+  - node_id: multivesicular_body
+    label: multivesicular body
+    node_type: ORGANELLE
+    grounding: GO:0005771
+  edges:
+  - subject: endosome_membrane
+    predicate: is part of
+    object: endosome
+    description: The endosome membrane is the lipid bilayer surrounding the endosome.
+    evidence:
+    - reference: GO:0010008
+      notes: GO:0010008 defines the endosome membrane as the lipid bilayer surrounding
+        an endosome.
+  - subject: endosome_membrane
+    predicate: bounds
+    object: endosome_lumen
+    description: The endosome membrane encloses the endosome lumen.
+    evidence:
+    - reference: GO:0031904
+      notes: GO:0031904 defines the endosome lumen as the volume enclosed by the membrane
+        of an endosome.
+  - subject: vps27_endosomal_recruiter
+    predicate: recruits
+    object: escrt_i
+    description: Vps27 binds ESCRT-I on endosomal membranes during yeast MVB sorting.
+    evidence:
+    - reference: DOI:10.1083/jcb.200302136
+      notes: Katzmann et al. 2003 found that yeast Vps27 recruits ESCRT-I to endosomal
+        membranes.
+  - subject: escrt_i
+    predicate: sorts
+    object: ubiquitinated_membrane_cargo
+    description: ESCRT-I participates in sorting ubiquitinated membrane cargo into
+      the yeast MVB pathway.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(01)00434-2
+      notes: Katzmann, Babst and Emr 2001 showed ESCRT-I is needed for ubiquitin-dependent
+        MVB cargo sorting.
+  - subject: escrt_iii
+    predicate: remodels
+    object: endosome_membrane
+    description: ESCRT-III acts on endosomal membranes during intraluminal-vesicle
+      formation.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00220-4
+      notes: Babst et al. 2002 characterized yeast ESCRT-III as an endosome-associated
+        complex required for MVB sorting.
+    - reference: DOI:10.1016/j.devcel.2011.05.015
+      notes: Henne, Buchkovich and Emr 2011 reviewed ESCRT-III as the membrane-remodeling
+        complex in the endosomal ESCRT pathway.
+  - subject: endosome_membrane
+    predicate: forms
+    object: intraluminal_vesicle
+    description: Regions of the endosomal limiting membrane invaginate and pinch into
+      the lumen as intraluminal vesicles.
+    evidence:
+    - reference: GO:0005771
+      notes: GO:0005771 defines multivesicular bodies as endosomes with internal vesicles
+        formed by invagination of the limiting endosomal membrane.
+  - subject: intraluminal_vesicle
+    predicate: is contained in
+    object: multivesicular_body
+    description: Multivesicular bodies contain intraluminal vesicles generated from
+      the limiting endosomal membrane.
+    evidence:
+    - reference: GO:0005771
+      notes: GO:0005771 defines multivesicular bodies by internal vesicles produced
+        from the limiting endosomal membrane.
+discussions:
+- discussion_id: ground_endosome_membrane_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    endosome membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#endosome_membrane_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0010008, but the endosome membrane
+    lipid-bilayer constituent is intentionally left as reviewed-label-only until an
+    exact source-neutral lipid or membrane-constituent CURIE is curated.
+  evidence:
+  - reference: GO:0010008
+    notes: GO:0010008 identifies the complete endosome membrane.
+  posed_by: codex
+  posed_date: '2026-09-15'
