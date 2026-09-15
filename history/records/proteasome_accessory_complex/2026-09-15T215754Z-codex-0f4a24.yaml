@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/proteasome_accessory_complex.yaml
+  slug: proteasome_accessory_complex
+session:
+  id: 2026-09-15T215754Z-codex-0f4a24
+  timestamp: '2026-09-15T21:57:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add proteasome accessory complex record
+  details: Created GO:0022624 proteasome accessory complex as a protein-containing complex
+    part_of the whole proteasome, with archaeal, actinobacterial, and eukaryotic taxonomic
+    scope; GO and literature evidence from GO:0022624 plus Maupin-Furlow 2018, Muller and
+    Weber-Ban 2019, and Tomko and Hochstrasser 2013; a Mycobacterium tuberculosis H37Rv example;
+    a nonmechanistic 20S-core capping graph; and a resolved boundary note leaving family-specific
+    PAN, 19S, PA28, Mpa, Bpa, and Cpa subunits to child records. The record passed target
+    LinkML validation and strict validation, embeddings were refreshed with only GO:0022624
+    newly encoded, and generated pages and README statistics were refreshed.
