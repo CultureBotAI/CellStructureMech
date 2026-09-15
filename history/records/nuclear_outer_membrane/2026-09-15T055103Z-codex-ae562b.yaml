@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nuclear_outer_membrane.yaml
+  slug: nuclear_outer_membrane
+session:
+  id: 2026-09-15T055103Z-codex-ae562b
+  timestamp: '2026-09-15T05:51:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add nuclear outer membrane
+  details: Created GO-grounded nuclear outer membrane with exact outer-nuclear-membrane synonymy,
+    organelle-membrane parentage, nuclear-envelope parthood, a reviewed-label-only lipid-bilayer
+    component, Saccharomyces cerevisiae Nvj1p/Vac8p evidence, a nonmechanistic outer-membrane
+    contact graph, and boundary and protein-grounding discussions.
