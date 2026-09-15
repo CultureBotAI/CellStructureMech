@@ -8476,6 +8476,11 @@
       "label": "cellulosome",
       "neighbors": [
         {
+          "identifier": "GO:0000502",
+          "label": "proteasome complex",
+          "cosine_similarity": 0.67712533
+        },
+        {
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.66517752
@@ -8494,11 +8499,6 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.65302607
-        },
-        {
-          "identifier": "GO:0031471",
-          "label": "ethanolamine degradation polyhedral organelle",
-          "cosine_similarity": 0.6467232
         }
       ]
     },
@@ -9247,9 +9247,45 @@
       ]
     },
     {
+      "identifier": "GO:0000502",
+      "label": "proteasome complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005839",
+          "label": "proteasome core complex",
+          "cosine_similarity": 0.95322465
+        },
+        {
+          "identifier": "cellstructuremech:elongasome",
+          "label": "elongasome",
+          "cosine_similarity": 0.73819977
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.73590218
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.70930877
+        },
+        {
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.6861092
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005839",
       "label": "proteasome core complex",
       "neighbors": [
+        {
+          "identifier": "GO:0000502",
+          "label": "proteasome complex",
+          "cosine_similarity": 0.95322465
+        },
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
@@ -9269,11 +9305,6 @@
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
           "cosine_similarity": 0.67123575
-        },
-        {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.67038786
         }
       ]
     },

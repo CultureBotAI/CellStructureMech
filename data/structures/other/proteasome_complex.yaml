@@ -1,0 +1,230 @@
+identifier: GO:0000502
+label: proteasome complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A large multisubunit complex which catalyzes protein degradation, found
+  in eukaryotes, archaea and some bacteria. In eukaryotes, this complex consists of
+  the barrel shaped proteasome core complex and one or two associated proteins or
+  complexes that act in regulating entry into or exit from the core.
+definition_source: GO:0000502
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T11:48:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T11:51:00Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parentage, 20S core and accessory-complex parts and components,
+    GO synonyms, archaeal/actinobacterial/eukaryotic scope, an M. tuberculosis example,
+    proteasomal catabolism function, record evidence, and an accessory-capped core
+    proteolysis graph.
+  llm_assisted: true
+- timestamp: '2026-09-15T11:51:40Z'
+  curator: codex
+  action: NORMALIZED_GO_LABEL
+  changes: Renamed the GO:0022624 accessory-complex component and graph node to the
+    exact GO label.
+  llm_assisted: true
+- timestamp: '2026-09-15T12:10:17Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Addressed PR #971 review issues #972 and #973 by narrowing the GO:0010498
+    evidence notes to the proteasomal-protein-catabolism has-participant edge and
+    retargeting accessory-complex substrate access to the proteasome core.'
+  llm_assisted: true
+parent_structures:
+- GO:0140535
+- GO:1905369
+has_part:
+- GO:0005839
+- GO:0022624
+synonyms:
+- synonym_text: proteasome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000502
+- synonym_text: 26S proteasome
+  synonym_type: RELATED_SYNONYM
+  source: GO:0000502
+components:
+- component_id: core_complex
+  label: proteasome core complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005839
+  essentiality: ESSENTIAL
+  role: Barrel-shaped 20S proteolytic core that sequesters active sites in an internal
+    chamber.
+  evidence:
+  - reference: GO:0005839
+    notes: GO:0005839 identifies the proteasome core complex as the barrel-shaped
+      proteolytic core.
+  - reference: DOI:10.1146/annurev-biochem-060410-150257
+    notes: Tomko and Hochstrasser 2013 review the eukaryotic 26S proteasome as a 20S
+      core particle capped by a 19S regulatory particle.
+- component_id: accessory_complexes
+  label: proteasome accessory complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0022624
+  essentiality: UNKNOWN
+  role: Caps or regulators that bind the 20S core and control protein entry into,
+    or exit from, the proteolytic core complex.
+  evidence:
+  - reference: GO:0022624
+    notes: GO:0022624 defines proteasome accessory complexes as caps on one or both
+      ends of the core that regulate entry or exit.
+  - reference: DOI:10.3389/fmolb.2019.00023
+    notes: Muller and Weber-Ban 2019 review bacterial regulator complexes that associate
+      with the 20S core particle to recruit and internalize substrates.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: COMMON
+  note: Archaeal proteasome systems combine 20S cores with proteasome-associated ATPases
+    such as PAN.
+  reference: DOI:10.1042/ETLS20180025
+- taxon_id: NCBITaxon:201174
+  taxon_label: Actinomycetota
+  presence: VARIABLE
+  note: Bacterial proteasomes occur in mycobacteria and other actinobacteria, where
+    20S cores pair with regulators such as Mpa, Bpa, or Cpa.
+  reference: DOI:10.3389/fmolb.2019.00023
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: Eukaryotic ubiquitin-proteasome degradation is carried out by 26S proteasomes
+    built from 20S core particles and 19S regulatory particles.
+  reference: DOI:10.1146/annurev-biochem-060410-150257
+canonical_examples:
+- taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis H37Rv
+  note: Actinobacterial model whose 20S proteasome core and Mpa/Bpa regulator routes
+    anchor bacterial proteasome-complex studies.
+  reference: DOI:10.3389/fmolb.2019.00023
+functions:
+- function_id: proteasomal_protein_catabolism
+  label: proteasomal protein catabolic process
+  grounding: GO:0010498
+  description: Proteasome complexes couple regulated substrate access through accessory
+    complexes to proteolysis in the 20S core.
+  evidence:
+  - reference: GO:0000502
+    notes: The GO graph asserts GO:0010498 has_participant GO:0000502, connecting
+      the proteasome complex to proteasomal protein catabolism.
+  - reference: DOI:10.1042/ETLS20180025
+    notes: Maupin-Furlow 2018 reviews archaeal targeted proteolysis by proteasomes
+      associated with AAA-ATPase networks.
+  - reference: DOI:10.3389/fmolb.2019.00023
+    notes: Muller and Weber-Ban 2019 review bacterial proteasomal degradation routes
+      that combine the 20S core with alternative regulator complexes.
+evidence:
+- reference: GO:0000502
+  notes: Gene Ontology cellular-component term for the proteasome complex.
+- reference: GO:0140535
+  notes: Gene Ontology cellular-component parent for intracellular protein-containing
+    complexes.
+- reference: GO:1905369
+  notes: Gene Ontology cellular-component parent for endopeptidase complexes.
+- reference: GO:0005839
+  notes: Gene Ontology cellular-component term for the proteasome core complex.
+- reference: GO:0022624
+  notes: Gene Ontology cellular-component term for the proteasome accessory complex.
+- reference: DOI:10.1042/ETLS20180025
+  notes: 'Maupin-Furlow 2018, Proteolytic systems of archaea: slicing, dicing, and
+    mincing in the extreme, Emerging Topics in Life Sciences.'
+- reference: DOI:10.3389/fmolb.2019.00023
+  notes: Muller and Weber-Ban 2019, The bacterial proteasome at the core of diverse
+    degradation pathways, Frontiers in Molecular Biosciences.
+- reference: DOI:10.1146/annurev-biochem-060410-150257
+  notes: Tomko and Hochstrasser 2013, Molecular Architecture and Assembly of the Eukaryotic
+    Proteasome, Annual Review of Biochemistry.
+causal_graphs:
+- graph_id: accessory_capped_core_proteolysis
+  title: Accessory complexes regulate access to the proteasome core
+  description: The proteasome core and accessory complexes form a modular proteasome;
+    accessory complexes regulate substrate access to the core, whose internal active
+    sites degrade protein substrates to peptides.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: proteasome_complex
+    label: proteasome complex
+    node_type: STRUCTURE
+    grounding: GO:0000502
+  - node_id: core_complex
+    label: proteasome core complex
+    node_type: STRUCTURE
+    component_ref: core_complex
+    grounding: GO:0005839
+  - node_id: accessory_complexes
+    label: proteasome accessory complex
+    node_type: STRUCTURE
+    component_ref: accessory_complexes
+    grounding: GO:0022624
+  - node_id: substrate_protein
+    label: substrate protein
+    node_type: GENE_OR_PROTEIN
+  - node_id: peptides
+    label: peptide products
+    node_type: CHEMICAL
+  - node_id: proteasomal_catabolism
+    label: proteasomal protein catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0010498
+  edges:
+  - subject: core_complex
+    predicate: is part of
+    object: proteasome_complex
+    description: The 20S proteasome core is an immediate subcomplex of proteasome
+      complexes.
+    evidence:
+    - reference: GO:0005839
+      notes: The GO graph asserts that GO:0005839 part_of GO:0000502.
+  - subject: accessory_complexes
+    predicate: cap
+    object: core_complex
+    description: Proteasome accessory complexes bind one or both ends of the 20S core.
+    evidence:
+    - reference: GO:0022624
+      notes: GO:0022624 defines proteasome accessory complexes as complexes that cap
+        one or both ends of the core.
+  - subject: accessory_complexes
+    predicate: regulate substrate access to
+    object: core_complex
+    description: Accessory complexes control substrate entry into the internal chamber
+      of the 20S core.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2019.00023
+      notes: Muller and Weber-Ban 2019 review bacterial 20S cores that associate with
+        regulator complexes to recruit and internalize substrates.
+    - reference: DOI:10.1146/annurev-biochem-060410-150257
+      notes: Tomko and Hochstrasser 2013 review the 19S regulatory particle as the
+        eukaryotic cap that recognizes, deubiquitylates, unfolds, and translocates
+        substrates into the 20S core.
+  - subject: core_complex
+    predicate: degrades
+    object: substrate_protein
+    description: The gated 20S core degrades internalized protein substrates.
+    evidence:
+    - reference: DOI:10.1042/ETLS20180025
+      notes: Maupin-Furlow 2018 reviews archaeal 20S proteasomes as intracellular
+        self-compartmentalized proteases.
+  - subject: substrate_protein
+    predicate: is converted to
+    object: peptides
+    description: Proteasomal proteolysis converts protein substrates into peptide
+      products.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2019.00023
+      notes: Muller and Weber-Ban 2019 review bacterial proteasomal degradation of
+        proteins by regulator-bound 20S core particles.
+  - subject: proteasome_complex
+    predicate: carries out
+    object: proteasomal_catabolism
+    description: Whole proteasome complexes carry out proteasomal protein degradation.
+    evidence:
+    - reference: GO:0000502
+      notes: The GO graph asserts GO:0010498 has_participant GO:0000502.

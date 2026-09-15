@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/proteasome_complex.yaml
+  slug: proteasome_complex
+session:
+  id: 2026-09-15T115650Z-codex-b7b2d5
+  timestamp: '2026-09-15T11:56:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add proteasome complex record
+  details: Added a GO-grounded proteasome complex record with GO parentage, 20S core and accessory-complex
+    parts and components, GO synonyms, archaeal, actinobacterial, and eukaryotic scope, a
+    Mycobacterium tuberculosis H37Rv example, proteasomal protein catabolism function, record
+    evidence, refreshed text embeddings, and a nonmechanistic accessory-capped core proteolysis
+    graph.
