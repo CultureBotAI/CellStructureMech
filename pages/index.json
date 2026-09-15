@@ -1782,6 +1782,15 @@
   "definition": "A type of endosome in which regions of the limiting endosomal membrane invaginate to form internal vesicles; membrane proteins that enter the internal vesicles are sequestered from the cytoplasm."
  },
  {
+  "identifier": "cellstructuremech:multivesicular_body_lumen",
+  "label": "multivesicular body lumen",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/multivesicular_body_lumen.html",
+  "definition": "The multivesicular body compartment bounded by the multivesicular body membrane."
+ },
+ {
   "identifier": "GO:0032585",
   "label": "multivesicular body membrane",
   "category": "MEMBRANE_ORGANELLE",
