@@ -24,6 +24,12 @@ curation_history:
     a nonmechanistic microribbon architecture graph, and a microribbon-protein grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-15T15:21:27Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR #990 review issue #991 by reclassifying the dorsal microribbon
+    constituent-and-partonomy graph as ASSEMBLY.'
+  llm_assisted: true
 synonyms:
 - synonym_text: dorsal microribbon
   synonym_type: BROAD_SYNONYM
@@ -99,7 +105,7 @@ causal_graphs:
   description: In Giardia, striated-fiber-assemblin homologs constitute ventral-disc
     dorsal microribbons that extend from the microtubule spiral and are laterally
     linked by crossbridges.
-  graph_kind: FUNCTION
+  graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph records major architectural relationships among microribbon
     proteins, the dorsal microribbon, ventral-disc microtubules, crossbridges and
