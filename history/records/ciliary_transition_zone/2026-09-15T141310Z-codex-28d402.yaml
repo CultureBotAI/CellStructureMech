@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/ciliary_transition_zone.yaml
+  slug: ciliary_transition_zone
+session:
+  id: 2026-09-15T141310Z-codex-28d402
+  timestamp: '2026-09-15T14:13:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/984
+  - https://github.com/CultureBotAI/CellStructureMech/issues/985
+  - https://github.com/CultureBotAI/CellStructureMech/issues/986
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/983
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Resolved ciliary transition zone PR review issues
+  details: 'Reviewed PR #983 adversarially, filed issues #984, #985 and #986, narrowed Wang-backed
+    Y-link architecture wording to TCTN1, downgraded transition-zone axonemal microtubule
+    essentiality to UNKNOWN, and removed the overbroad GO:0060271 cilium-assembly function.'
