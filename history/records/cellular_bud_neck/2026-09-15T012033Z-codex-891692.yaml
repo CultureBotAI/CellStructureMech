@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cellular_bud_neck.yaml
+  slug: cellular_bud_neck
+session:
+  id: 2026-09-15T012033Z-codex-891692
+  timestamp: '2026-09-15T01:20:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/912
+events:
+- type: EDIT
+  outcome: changed
+  summary: Link PR for cellular bud neck
+  details: 'Linked the cellular bud neck curation record to pull request #912 after opening
+    the PR for review.'
