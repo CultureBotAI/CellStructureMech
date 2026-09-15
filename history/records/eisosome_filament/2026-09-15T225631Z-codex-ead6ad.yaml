@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/eisosome_filament.yaml
+  slug: eisosome_filament
+session:
+  id: 2026-09-15T225631Z-codex-ead6ad
+  timestamp: '2026-09-15T22:56:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add eisosome filament record
+  details: Created a GO:0036286 eisosome filament CellStructureMech record with protein-complex
+    parentage, eisosome and cortical-cytoskeleton parthood, an InterPro-grounded Pil1/Lsp1
+    BAR-domain component, fungal and Saccharomyces cerevisiae scope, MCC scaffold assembly
+    evidence, and a Pil1/Lsp1 filament assembly graph.

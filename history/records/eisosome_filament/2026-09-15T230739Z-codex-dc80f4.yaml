@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/eisosome_filament.yaml
+  slug: eisosome_filament
+session:
+  id: 2026-09-15T230739Z-codex-dc80f4
+  timestamp: '2026-09-15T23:07:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1037
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1036
+events:
+- type: EDIT
+  outcome: changed
+  summary: Resolve eisosome filament PR review
+  details: 'Resolved PR #1036 review issue #1037 by removing the unsupported ESSENTIAL value
+    from the aggregate Pil1/Lsp1 BAR-domain component while preserving its InterPro grounding
+    and constituent evidence.'
