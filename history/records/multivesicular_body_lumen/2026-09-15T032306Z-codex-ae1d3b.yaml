@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/multivesicular_body_lumen.yaml
+  slug: multivesicular_body_lumen
+session:
+  id: 2026-09-15T032306Z-codex-ae1d3b
+  timestamp: '2026-09-15T03:23:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/922
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - history
+  summary: Linked multivesicular body lumen curation to PR 922
+  details: Linked the cellstructuremech:multivesicular_body_lumen curation session to pull
+    request 922 after opening the evidence-backed record for adversarial review.
