@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/endospore_coat.yaml
+  slug: endospore_coat
+session:
+  id: 2026-09-15T173505Z-codex-6d060f
+  timestamp: '2026-09-15T17:35:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO endospore coat record
+  details: Created data/structures/spore/endospore_coat.yaml for GO:0043593, linking the coat
+    to the endospore external encapsulating structure, modeling the coat protein cohort conservatively
+    as REVIEWED_LABEL_ONLY, and adding Bacillota distribution, a Bacillus subtilis exemplar,
+    GO and literature evidence, a barrier-function graph, and boundary/grounding discussions.

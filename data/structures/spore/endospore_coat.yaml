@@ -1,0 +1,177 @@
+identifier: GO:0043593
+label: endospore coat
+structure_category: SPORE
+structure_kind: ENVELOPE_LAYER
+definition: The layer in a bacterial endospore that lies under the exosporium, and
+  is impermeable to many toxic molecules. The coat may also contain enzymes that are
+  involved in endospore germination.
+definition_source: GO:0043593
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T17:32:20Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T17:33:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added external-structure parthood, a reviewed-label-only coat-protein component,
+    Bacillota distribution, a Bacillus subtilis example, barrier function, GO and
+    literature evidence, a nonmechanistic coat-barrier topology graph, and boundary/grounding
+    discussions.
+  llm_assisted: true
+part_of:
+- GO:0043591
+components:
+- component_id: coat_protein_cohort
+  label: endospore coat proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - spoIVA
+  - safA
+  - cotE
+  stoichiometry: dozens of proteins in Bacillus subtilis
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The bacterial endospore coat is assembled from many unrelated protein
+    families in basement, inner-coat, outer-coat, and crust layers; no single InterPro,
+    Pfam, NCBIfam, GO, or Complex Portal term was curated that denotes the whole source-neutral
+    coat protein cohort.
+  role: Morphogenetic and structural proteins that assemble into the multilayered
+    coat shell outside the cortex, including the SpoIVA basement layer and SafA/CotE-organized
+    inner and outer layers.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2921
+    notes: McKenney, Driks and Eichenberger 2012 review the Bacillus subtilis coat's
+      basement, inner, outer, and crust layers and the SpoIVA, SafA, and CotE morphogenetic
+      proteins that organize coat assembly.
+  - reference: PMID:3139490
+    notes: Zheng et al. identified CotE as a morphogenetic protein needed to assemble
+      the outer Bacillus subtilis spore coat.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1239
+  taxon_label: Bacillota
+  presence: COMMON
+  note: Endospore coats occur in endospore-forming Bacillota lineages as a mature-spore
+    surface layer, with many non-sporulating Bacillota lacking the structure.
+  reference: DOI:10.1038/nrmicro2921
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: Classical model for the proteinaceous endospore coat layers organized by SpoIVA,
+    SafA, CotE, and other coat morphogenetic proteins.
+  reference: DOI:10.1038/nrmicro2921
+functions:
+- function_id: coat_permeability_barrier
+  label: endospore permeability barrier
+  description: The multilayered endospore coat restricts lytic enzymes and large toxic
+    molecules from accessing the dormant spore interior.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2921
+    notes: McKenney, Driks and Eichenberger 2012 review the bacterial endospore coat
+      as a protective barrier outside the cortex.
+  - reference: GO:0043593
+    notes: GO:0043593 defines the endospore coat as impermeable to many toxic molecules.
+evidence:
+- reference: GO:0043593
+  notes: Gene Ontology cellular-component term for the endospore coat.
+- reference: GO:0043591
+  notes: Gene Ontology cellular-component term for the endospore external encapsulating
+    structure that contains the coat.
+- reference: DOI:10.1038/nrmicro2921
+  notes: 'McKenney, Driks and Eichenberger 2012, The Bacillus subtilis endospore:
+    assembly and functions of the multilayered coat, Nature Reviews Microbiology.'
+- reference: PMID:3139490
+  notes: Zheng et al. 1988 identified CotE as a morphogenetic protein needed for Bacillus
+    subtilis outer spore-coat assembly.
+causal_graphs:
+- graph_id: endospore_coat_barrier_topology
+  title: Endospore coat surrounds the cortex as a permeability barrier
+  description: Coat proteins assemble into a multilayered shell outside the endospore
+    cortex, making a mature-spore surface barrier that restricts lytic enzymes and
+    many toxic molecules.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records mature coat topology and high-level barrier function
+    rather than the full SpoIVA/SafA/CotE assembly hierarchy.
+  nodes:
+  - node_id: endospore_coat
+    label: endospore coat
+    node_type: STRUCTURE
+    grounding: GO:0043593
+  - node_id: coat_proteins
+    label: endospore coat proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: coat_protein_cohort
+  - node_id: endospore_cortex
+    label: endospore cortex
+    node_type: STRUCTURE
+    grounding: GO:0043595
+  - node_id: barrier_capacity
+    label: enzyme and toxin barrier
+    node_type: CAPACITY
+  edges:
+  - subject: coat_proteins
+    predicate: assemble into
+    object: endospore_coat
+    description: SpoIVA, SafA, CotE, and other coat proteins organize the basement,
+      inner, outer, and crust layers of the Bacillus subtilis endospore coat.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      notes: McKenney, Driks and Eichenberger 2012 review the morphogenetic hierarchy
+        that builds the Bacillus subtilis spore coat layers.
+  - subject: endospore_coat
+    predicate: surrounds
+    object: endospore_cortex
+    description: The mature endospore coat is the proteinaceous layer outside the
+      endospore cortex.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      notes: McKenney, Driks and Eichenberger 2012 review the bacterial spore coat
+        as a multilayered shell outside the cortex.
+    - reference: GO:0043593
+      notes: GO:0043593 defines the endospore coat as a layer of the bacterial endospore.
+  - subject: endospore_coat
+    predicate: excludes
+    object: barrier_capacity
+    description: The coat restricts access of lytic enzymes and large toxic molecules
+      to the spore interior.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      notes: McKenney, Driks and Eichenberger 2012 describe the coat as a barrier
+        against lytic enzymes and large toxic molecules.
+discussions:
+- discussion_id: coat_layer_boundary
+  prompt: Keep the endospore coat separate from the broader endospore external encapsulating
+    structure.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0043593 denotes the proteinaceous endospore coat layer, whereas GO:0043591
+    denotes the broader external encapsulating structure that also includes the cortex
+    and outer endospore membrane.
+  resolution_note: Curated GO:0043593 as the coat layer and linked it to GO:0043591
+    with part_of.
+  evidence:
+  - reference: GO:0043593
+    notes: GO:0043593 is the endospore coat part term.
+  - reference: GO:0043591
+    notes: GO:0043591 identifies the larger endospore external encapsulating structure.
+- discussion_id: coat_protein_family_grounding
+  prompt: Resolve exact source-neutral family groundings for individual endospore
+    coat layers or protein cohorts.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#coat_protein_cohort
+  rationale: This pass models the endospore coat proteins as one reviewed aggregate
+    because the mature bacterial coat is assembled from many unrelated proteins across
+    multiple layers. A follow-up can split exact basement, inner-coat, outer-coat,
+    or crust families where source-neutral family identifiers exist.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2921
+    notes: McKenney, Driks and Eichenberger 2012 review Bacillus subtilis coat proteins
+      and morphogenetic layer assembly.
+  posed_by: codex
+  posed_date: '2026-09-15'
