@@ -1,0 +1,186 @@
+identifier: GO:0097594
+label: ventral disc dorsal microribbon
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: Trilaminar structure extending perpendicularly into the cytoplasm along
+  the length of ventral disc microtubules in Giardia species (trophozoite stage).
+  Constituents of dorsal microribbons (also called dorsal ribbons or microribbons)
+  include alpha-coiled-helix proteins approximately 29 to 38 kDa in size. These proteins
+  line the edges of the microribbons but are not found in microtubules. Tubulins are
+  not found in microribbons.
+definition_source: GO:0097594
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T15:05:56Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T15:06:43Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO dorsal-microribbon synonyms, ventral-disc partonomy, a label-only
+    striated-fiber-assemblin component, Giardia intestinalis scope, DOI evidence,
+    a nonmechanistic microribbon architecture graph, and a microribbon-protein grounding
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: dorsal microribbon
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097594
+- synonym_text: dorsal ribbon
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097594
+- synonym_text: microribbon
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097594
+- synonym_text: ventral disk dorsal microribbon
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097594
+part_of:
+- GO:0097597
+components:
+- component_id: microribbon_sf_assemblin_homologs
+  label: microribbon striated-fiber-assemblin homologs
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Alpha-helical microribbon proteins, including beta-giardin, delta-giardin
+    and SALP-1-like constituents, that build the proteinaceous Giardia ventral-disc
+    dorsal microribbon.
+  evidence:
+  - reference: GO:0097594
+    notes: Gene Ontology describes dorsal microribbons as trilaminar structures containing
+      alpha-coiled-helix proteins of approximately 29 to 38 kDa.
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Schwartz et al. 2012 describe microribbons as ventral-disc structures containing
+      striated fiber-assemblin homologs such as beta-giardin, delta-giardin and SALP-1.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for Giardia microribbon striated-fiber-assemblin
+    homologs, beta-giardins, delta-giardins or SALP proteins was verified in this
+    pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  presence: COMMON
+  note: Giardia intestinalis is the diplomonad species in which ventral-disc dorsal
+    microribbons were mapped alongside ventral-disc microtubules and crossbridges.
+  reference: DOI:10.1371/journal.pone.0043783
+canonical_examples:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  note: Parasitic diplomonad model used for electron-tomographic mapping of the ventral-disc
+    microtubule and dorsal microribbon scaffold.
+  reference: DOI:10.1371/journal.pone.0043783
+functions:
+- function_id: ventral_disc_microribbon_scaffold
+  label: ventral disc microribbon scaffold
+  description: The dorsal microribbons extend from Giardia ventral-disc microtubules
+    into the cytoplasm and are connected by crossbridges, contributing a proteinaceous
+    scaffold to the ventral disc.
+  evidence:
+  - reference: GO:0097594
+    notes: Gene Ontology defines the dorsal microribbon as a trilaminar structure
+      that extends from ventral-disc microtubules into the cytoplasm.
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Schwartz et al. 2012 mapped the trilaminar microribbon and its crossbridges
+      by cryo-electron tomography and sub-tomogram averaging.
+evidence:
+- reference: GO:0097594
+  notes: Gene Ontology cellular-component term for the Giardia ventral-disc dorsal
+    microribbon.
+- reference: DOI:10.1371/journal.pone.0043783
+  notes: Schwartz, Heumann, Dawson and Hoenger 2012, 'A Detailed, Hierarchical Study
+    of Giardia lamblia's Ventral Disc Reveals Novel Microtubule-Associated Protein
+    Complexes', PLOS ONE.
+causal_graphs:
+- graph_id: giardia_dorsal_microribbon_architecture
+  title: Striated-fiber-assemblin homologs build Giardia dorsal microribbons
+  description: In Giardia, striated-fiber-assemblin homologs constitute ventral-disc
+    dorsal microribbons that extend from the microtubule spiral and are laterally
+    linked by crossbridges.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records major architectural relationships among microribbon
+    proteins, the dorsal microribbon, ventral-disc microtubules, crossbridges and
+    the ventral disc while leaving exact giardin/SALP family boundaries and crossbridge
+    composition unresolved.
+  nodes:
+  - node_id: microribbon_sf_assemblin_homologs
+    label: microribbon striated-fiber-assemblin homologs
+    node_type: GENE_OR_PROTEIN
+    component_ref: microribbon_sf_assemblin_homologs
+  - node_id: dorsal_microribbon
+    label: ventral disc dorsal microribbon
+    node_type: STRUCTURE
+    grounding: GO:0097594
+  - node_id: ventral_disc_microtubule_array
+    label: ventral disc microtubule array
+    node_type: STRUCTURE
+    grounding: GO:0097593
+  - node_id: crossbridge
+    label: ventral disc crossbridge
+    node_type: STRUCTURE
+    grounding: GO:0097595
+  - node_id: ventral_disc
+    label: ventral disc
+    node_type: STRUCTURE
+    grounding: GO:0097597
+  edges:
+  - subject: microribbon_sf_assemblin_homologs
+    predicate: constitute
+    object: dorsal_microribbon
+    description: Striated-fiber-assemblin homologs are protein constituents of the
+      ventral-disc dorsal microribbon.
+    evidence:
+    - reference: GO:0097594
+      notes: Gene Ontology lists alpha-coiled-helix proteins as constituents of dorsal
+        microribbons.
+    - reference: DOI:10.1371/journal.pone.0043783
+      notes: Schwartz et al. 2012 discuss beta-giardin, delta-giardin and SALP-1 striated-fiber-assemblin
+        homologs in dorsal microribbons.
+  - subject: dorsal_microribbon
+    predicate: extends from
+    object: ventral_disc_microtubule_array
+    description: Dorsal microribbons extend from the ventral-disc microtubules into
+      the cytoplasm.
+    evidence:
+    - reference: GO:0097594
+      notes: Gene Ontology defines dorsal microribbons as extending along ventral-disc
+        microtubules.
+  - subject: crossbridge
+    predicate: links
+    object: dorsal_microribbon
+    description: Crossbridges link neighboring dorsal microribbons in the ventral
+      disc.
+    evidence:
+    - reference: GO:0097595
+      notes: Gene Ontology defines ventral-disc crossbridges as links between adjacent
+        microribbons.
+  - subject: dorsal_microribbon
+    predicate: is part of
+    object: ventral_disc
+    description: Dorsal microribbons are named substructures of the Giardia ventral
+      disc.
+    evidence:
+    - reference: GO:0097594
+      notes: Gene Ontology models GO:0097594 as part of GO:0097597, the ventral disc.
+discussions:
+- discussion_id: resolve_dorsal_microribbon_protein_grounding
+  prompt: Resolve exact source-neutral groundings and finer subcomponent boundaries
+    for Giardia dorsal-microribbon beta-giardin, delta-giardin, SALP-1 and related
+    alpha-coiled-helix proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#microribbon_sf_assemblin_homologs
+  rationale: This first dorsal-microribbon record curates a broad striated-fiber-assemblin
+    homolog cohort because GO and Schwartz et al. define the microribbon as a proteinaceous
+    trilaminar structure, but this pass did not verify exact protein-family CURIEs
+    or stable boundaries for the individual giardin and SALP constituents.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Schwartz et al. 2012 describe dorsal microribbon-associated striated-fiber-assemblin
+      homologs while leaving exact microribbon component organization unresolved.
+  posed_by: codex
+  posed_date: '2026-09-15'
