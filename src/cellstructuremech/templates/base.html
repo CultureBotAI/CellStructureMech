@@ -11,6 +11,9 @@
 <header>
   <a class="brand" href="{{ root }}index.html">CellStructureMech</a>
   <nav>
+    {% if text_map_enabled %}
+    <a href="{{ root }}text-map/">Semantic text map</a>
+    {% endif %}
     <a href="{{ root }}browse.html">Browse</a>
     <a href="{{ root }}embedding-map.html">Text map</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
