@@ -1935,6 +1935,11 @@
       "label": "ventral disc",
       "neighbors": [
         {
+          "identifier": "GO:0097593",
+          "label": "ventral disc microtubule array",
+          "cosine_similarity": 0.89752726
+        },
+        {
           "identifier": "GO:0020010",
           "label": "conoid",
           "cosine_similarity": 0.67729599
@@ -1953,11 +1958,37 @@
           "identifier": "GO:0020031",
           "label": "polar ring of apical complex",
           "cosine_similarity": 0.64420598
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097593",
+      "label": "ventral disc microtubule array",
+      "neighbors": [
+        {
+          "identifier": "GO:0097597",
+          "label": "ventral disc",
+          "cosine_similarity": 0.89752726
         },
         {
-          "identifier": "GO:0033099",
-          "label": "attachment organelle",
-          "cosine_similarity": 0.62003512
+          "identifier": "GO:0036064",
+          "label": "ciliary basal body",
+          "cosine_similarity": 0.7180492
+        },
+        {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.6953883
+        },
+        {
+          "identifier": "cellstructuremech:cetz_filament",
+          "label": "CetZ filament",
+          "cosine_similarity": 0.68336973
+        },
+        {
+          "identifier": "GO:0020010",
+          "label": "conoid",
+          "cosine_similarity": 0.67620104
         }
       ]
     },

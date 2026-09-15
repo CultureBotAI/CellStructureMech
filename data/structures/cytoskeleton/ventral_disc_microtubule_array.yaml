@@ -1,0 +1,167 @@
+identifier: GO:0097593
+label: ventral disc microtubule array
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A part of the ventral disc of Giardia species (trophozoite stage) consisting
+  of a spiral array of microtubules linked to the ventral membrane. These microtubules
+  form the base of the ventral disc dorsal microribbons that extend nearly perpendicular
+  from the membrane.
+definition_source: GO:0097593
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T14:30:27Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T14:31:37Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO ventral-disc microtubule-array synonyms, ventral-disc partonomy,
+    a label-only tubulin component, Giardia intestinalis scope, a scaffold function,
+    DOI evidence, a nonmechanistic scaffold graph, and a tubulin-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-15T14:36:42Z'
+  curator: codex
+  action: NORMALIZED_GO_LABELS
+  changes: Collapsed the GO:0005874 graph node into a direct tubulin-to-array edge
+    so graph node labels no longer pluralize the canonical GO microtubule label.
+  llm_assisted: true
+synonyms:
+- synonym_text: ventral disc spiral microtubule array
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097593
+- synonym_text: spiral microtubule array
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097593
+- synonym_text: ventral disk microtubule array
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097593
+part_of:
+- GO:0097597
+has_part:
+- GO:0005874
+components:
+- component_id: ventral_disc_tubulins
+  label: ventral disc tubulins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Alpha- and beta-tubulin constituents that polymerize into the Giardia ventral-disc
+    microtubules.
+  evidence:
+  - reference: GO:0005874
+    notes: Gene Ontology defines microtubules as tubes of polymeric tubulin.
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Schwartz et al. 2012 used electron tomography to resolve the Giardia ventral-disc
+      microtubule spiral.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the Giardia ventral-disc alpha-
+    and beta-tubulins was verified in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  presence: COMMON
+  note: Giardia intestinalis is the diplomonad species in which the ventral-disc microtubule
+    spiral was mapped by electron tomography.
+  reference: DOI:10.1371/journal.pone.0043783
+canonical_examples:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  note: Parasitic diplomonad model used for electron-tomographic mapping of the ventral-disc
+    microtubule spiral.
+  reference: DOI:10.1371/journal.pone.0043783
+functions:
+- function_id: ventral_disc_microtubule_scaffold
+  label: ventral disc microtubule scaffold
+  description: The spiral microtubule array forms the Giardia ventral-disc scaffold
+    and the base of dorsal microribbons.
+  evidence:
+  - reference: GO:0097593
+    notes: Gene Ontology defines the ventral disc microtubule array as a spiral microtubule
+      array whose microtubules form the base of the dorsal microribbons.
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Schwartz et al. 2012 resolved the Giardia ventral-disc microtubule spiral
+      and its associated microribbons by electron tomography.
+evidence:
+- reference: GO:0097593
+  notes: Gene Ontology cellular-component term for the Giardia ventral-disc microtubule
+    array.
+- reference: DOI:10.1371/journal.pone.0043783
+  notes: Schwartz, Heumann, Dawson and Hoenger 2012, 'A Detailed, Hierarchical Study
+    of Giardia lamblia's Ventral Disc Reveals Novel Microtubule-Associated Protein
+    Complexes', PLOS ONE.
+causal_graphs:
+- graph_id: giardia_ventral_disc_microtubule_scaffold
+  title: Tubulin microtubules form the Giardia ventral-disc spiral scaffold
+  description: In Giardia, alpha- and beta-tubulins polymerize into microtubules that
+    form a left-handed spiral array within the ventral disc and serve as the base
+    of dorsal microribbons.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records major structural relationships among tubulins, the
+    microtubule spiral, dorsal microribbons and the ventral disc while leaving the
+    identities and assembly order of disc-associated proteins unresolved.
+  nodes:
+  - node_id: ventral_disc_tubulins
+    label: ventral disc tubulins
+    node_type: GENE_OR_PROTEIN
+    component_ref: ventral_disc_tubulins
+  - node_id: ventral_disc_microtubule_array
+    label: ventral disc microtubule array
+    node_type: STRUCTURE
+    grounding: GO:0097593
+  - node_id: dorsal_microribbon
+    label: ventral disc dorsal microribbon
+    node_type: STRUCTURE
+    grounding: GO:0097594
+  - node_id: ventral_disc
+    label: ventral disc
+    node_type: STRUCTURE
+    grounding: GO:0097597
+  edges:
+  - subject: ventral_disc_tubulins
+    predicate: polymerize into
+    object: ventral_disc_microtubule_array
+    description: Alpha- and beta-tubulin subunits polymerize into the microtubules
+      that make up the Giardia ventral-disc spiral array.
+    evidence:
+    - reference: GO:0005874
+      notes: Gene Ontology defines microtubules as polymeric tubulin tubes.
+    - reference: DOI:10.1371/journal.pone.0043783
+      notes: Schwartz et al. 2012 mapped the spiral organization of Giardia ventral-disc
+        microtubules by electron tomography.
+  - subject: ventral_disc_microtubule_array
+    predicate: forms base of
+    object: dorsal_microribbon
+    description: The ventral-disc microtubules form the base of the dorsal microribbons.
+    evidence:
+    - reference: GO:0097593
+      notes: Gene Ontology states that ventral-disc microtubules form the base of
+        dorsal microribbons.
+  - subject: ventral_disc_microtubule_array
+    predicate: is part of
+    object: ventral_disc
+    description: The spiral microtubule array is a named part of the Giardia ventral
+      disc.
+    evidence:
+    - reference: GO:0097593
+      notes: Gene Ontology models GO:0097593 as part of GO:0097597, the ventral disc.
+discussions:
+- discussion_id: resolve_ventral_disc_tubulin_grounding
+  prompt: Resolve exact source-neutral grounding for Giardia ventral-disc alpha- and
+    beta-tubulins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ventral_disc_tubulins
+  rationale: This first ventral disc microtubule-array record keeps its tubulin component
+    label-only because a broad tubulin domain or family accession may not exactly
+    denote the alpha- and beta-tubulins that polymerize into Giardia ventral-disc
+    microtubules.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Schwartz et al. 2012 mapped the ventral-disc microtubule array structurally
+      but did not provide a source-neutral protein-family CURIE.
+  posed_by: codex
+  posed_date: '2026-09-15'

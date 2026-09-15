@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ventral_disc_microtubule_array.yaml
+  slug: ventral_disc_microtubule_array
+session:
+  id: 2026-09-15T143411Z-codex-f843de
+  timestamp: '2026-09-15T14:34:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ventral disc microtubule array
+  details: Added GO:0097593 as a standalone ventral disc microtubule array record with GO
+    synonymy and partonomy, a label-only ventral-disc tubulin component, Giardia intestinalis
+    scope and example rows, primary Schwartz et al. DOI evidence, a nonmechanistic scaffold
+    graph, an id-label-normalized direct tubulin-to-array graph edge, and an open TODO
+    for exact tubulin-family grounding.
