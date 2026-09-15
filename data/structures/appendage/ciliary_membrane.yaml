@@ -30,6 +30,13 @@ curation_history:
   changes: Corrected notes for DOI:10.1016/j.cub.2018.03.010 from Garcia-Gonzalo et
     al. to Garcia et al. after Crossref DOI metadata verification.
   llm_assisted: true
+- timestamp: '2026-09-15T13:46:56Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved PR #980 review issues #981 and #982 by narrowing the Dentler-backed
+    Chlamydomonas canonical example and retuning the lipid-bilayer graph edge to reviewed-label-only
+    scope.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cilial membrane
   synonym_type: EXACT_SYNONYM
@@ -95,8 +102,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
-  note: Green-algal model used to study ciliary membrane proteins and membrane growth
-    during flagellar regeneration.
+  note: Green-algal model used by Dentler 2013 to study ciliary membrane growth during
+    flagellar regeneration.
   reference: DOI:10.1371/journal.pone.0053366
 functions:
 - function_id: cilium_assembly
@@ -161,10 +168,10 @@ causal_graphs:
     grounding: GO:0060271
   edges:
   - subject: ciliary_membrane_lipid_bilayer
-    predicate: forms membrane domain
+    predicate: is lipid phase of
     object: ciliary_membrane
-    description: Specialized ciliary lipids form the bilayer domain of the ciliary
-      membrane.
+    description: The reviewed label-only lipid bilayer aggregate represents the lipid
+      phase of the ciliary membrane.
     evidence:
     - reference: GO:0060170
       notes: GO:0060170 identifies the ciliary membrane as a plasma-membrane portion.
