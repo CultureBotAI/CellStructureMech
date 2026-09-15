@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+  slug: eisosome_membrane_domain_mcc
+session:
+  id: 2026-09-15T232258Z-codex-d6582c
+  timestamp: '2026-09-15T23:22:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add eisosome membrane domain/MCC record
+  details: Created a GO:0090512 eisosome membrane domain/MCC CellStructureMech record with
+    plasma-membrane-raft parentage, eisosome parthood, reviewed-label-only Sur7-family MCC
+    integral membrane proteins, fungal and Saccharomyces cerevisiae scope, MCC compartmentation
+    evidence, an eisosome-filament scaffolding graph, and a membrane-protein grounding TODO.

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+  slug: eisosome_membrane_domain_mcc
+session:
+  id: 2026-09-15T233610Z-codex-66a7f2
+  timestamp: '2026-09-15T23:36:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1039
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1038
+events:
+- type: EDIT
+  outcome: changed
+  summary: Narrow GO:0090512 Sur7 component boundary
+  details: 'Resolved PR #1038 issue #1039 by narrowing the unresolved Sur7-family component
+    to a Sur7 MCC integral membrane protein marker while leaving broader MCC/eisosome integral
+    membrane-protein family resolution in the open curation discussion.'

@@ -1630,6 +1630,11 @@
           "cosine_similarity": 0.84376989
         },
         {
+          "identifier": "GO:0090512",
+          "label": "eisosome membrane domain/MCC",
+          "cosine_similarity": 0.79494266
+        },
+        {
           "identifier": "cellstructuremech:cetz_filament",
           "label": "CetZ filament",
           "cosine_similarity": 0.79110118
@@ -1643,11 +1648,6 @@
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
           "cosine_similarity": 0.76902246
-        },
-        {
-          "identifier": "cellstructuremech:mamk_filament",
-          "label": "MamK filament",
-          "cosine_similarity": 0.76828963
         }
       ]
     },
@@ -1862,9 +1862,9 @@
           "cosine_similarity": 0.71143262
         },
         {
-          "identifier": "cellstructuremech:crescentin_filament",
-          "label": "crescentin filament",
-          "cosine_similarity": 0.68517445
+          "identifier": "GO:0090512",
+          "label": "eisosome membrane domain/MCC",
+          "cosine_similarity": 0.70063016
         }
       ]
     },
@@ -2627,6 +2627,11 @@
           "cosine_similarity": 0.72436887
         },
         {
+          "identifier": "GO:0090512",
+          "label": "eisosome membrane domain/MCC",
+          "cosine_similarity": 0.71855584
+        },
+        {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
           "cosine_similarity": 0.71406682
@@ -2635,11 +2640,6 @@
           "identifier": "GO:0030115",
           "label": "S-layer",
           "cosine_similarity": 0.71114886
-        },
-        {
-          "identifier": "GO:0005886",
-          "label": "plasma membrane",
-          "cosine_similarity": 0.70145499
         }
       ]
     },
@@ -2733,6 +2733,37 @@
           "identifier": "GO:0005940",
           "label": "septin ring",
           "cosine_similarity": 0.66590715
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0090512",
+      "label": "eisosome membrane domain/MCC",
+      "neighbors": [
+        {
+          "identifier": "GO:0032126",
+          "label": "eisosome",
+          "cosine_similarity": 0.87931691
+        },
+        {
+          "identifier": "GO:0005758",
+          "label": "mitochondrial intermembrane space",
+          "cosine_similarity": 0.85545205
+        },
+        {
+          "identifier": "GO:0044284",
+          "label": "mitochondrial crista junction",
+          "cosine_similarity": 0.82356775
+        },
+        {
+          "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
+          "label": "COPI-coated vesicle lumen",
+          "cosine_similarity": 0.82264996
+        },
+        {
+          "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
+          "label": "COPII-coated vesicle lumen",
+          "cosine_similarity": 0.82076117
         }
       ]
     },
@@ -8868,9 +8899,9 @@
           "cosine_similarity": 0.68723348
         },
         {
-          "identifier": "GO:0070056",
-          "label": "prospore membrane leading edge",
-          "cosine_similarity": 0.67973828
+          "identifier": "GO:0090512",
+          "label": "eisosome membrane domain/MCC",
+          "cosine_similarity": 0.68025297
         }
       ]
     },
@@ -9065,6 +9096,11 @@
       "label": "eisosome",
       "neighbors": [
         {
+          "identifier": "GO:0090512",
+          "label": "eisosome membrane domain/MCC",
+          "cosine_similarity": 0.87931691
+        },
+        {
           "identifier": "GO:0036286",
           "label": "eisosome filament",
           "cosine_similarity": 0.84376989
@@ -9083,11 +9119,6 @@
           "identifier": "GO:0005641",
           "label": "nuclear envelope lumen",
           "cosine_similarity": 0.70364413
-        },
-        {
-          "identifier": "GO:0005788",
-          "label": "endoplasmic reticulum lumen",
-          "cosine_similarity": 0.70091115
         }
       ]
     },
@@ -9907,6 +9938,11 @@
           "cosine_similarity": 0.68360406
         },
         {
+          "identifier": "GO:0090512",
+          "label": "eisosome membrane domain/MCC",
+          "cosine_similarity": 0.66863848
+        },
+        {
           "identifier": "GO:0005628",
           "label": "prospore membrane",
           "cosine_similarity": 0.66644681
@@ -9920,11 +9956,6 @@
           "identifier": "GO:0000407",
           "label": "phagophore assembly site",
           "cosine_similarity": 0.65726324
-        },
-        {
-          "identifier": "GO:0005934",
-          "label": "cellular bud tip",
-          "cosine_similarity": 0.64656455
         }
       ]
     },

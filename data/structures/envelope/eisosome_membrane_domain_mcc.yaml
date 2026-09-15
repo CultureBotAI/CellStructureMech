@@ -1,0 +1,160 @@
+identifier: GO:0090512
+label: eisosome membrane domain/MCC
+structure_category: ENVELOPE
+structure_kind: SUBCELLULAR_REGION
+definition: A plasma membrane part that is composed of a furrow-like plasma membrane
+  domain and associated integral transmembrane proteins.
+definition_source: GO:0090512
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T23:21:43Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T23:22:19Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added plasma-membrane-raft parentage, eisosome parthood, Sur7-family MCC
+    integral membrane proteins with reviewed label-only grounding, fungal and Saccharomyces
+    cerevisiae scope, MCC compartmentation evidence, an eisosome-filament scaffolding
+    graph, and a membrane-protein grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-15T23:35:47Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1039 by narrowing the unresolved Sur7-family MCC membrane component
+    to the demonstrated Sur7 marker.'
+  llm_assisted: true
+synonyms:
+- synonym_text: membrane compartment of Can1
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1146/annurev-micro-091313-103507
+- synonym_text: MCC
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1146/annurev-micro-091313-103507
+parent_structures:
+- GO:0044853
+part_of:
+- GO:0032126
+components:
+- component_id: sur7_membrane_protein
+  label: Sur7 MCC integral membrane protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SUR7
+  role: Integral plasma-membrane protein that marks the MCC membrane domain paired
+    with the eisosome filament.
+  evidence:
+  - reference: DOI:10.1038/nature04472
+    notes: Walther et al. 2006 identified Saccharomyces cerevisiae Sur7 as a plasma-membrane
+      protein localized to eisosomes.
+  - reference: DOI:10.1146/annurev-micro-091313-103507
+    notes: Douglas and Konopka 2014 reviewed Sur7 as an integral protein of fungal
+      MCC/eisosome domains.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family CURIE for Sur7-containing MCC/eisosome
+    membrane proteins was curated in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: VARIABLE
+  note: MCC/eisosome membrane domains have been described in fungi, but the component
+    set and domain architecture vary by lineage.
+  reference: DOI:10.1146/annurev-micro-091313-103507
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast carries Sur7-marked furrow-like MCC plasma-membrane domains
+    paired with eisosome filaments.
+  reference: DOI:10.1038/nature04472
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which the plasma-membrane protein Sur7 was localized
+    to eisosome-associated membrane domains.
+  reference: DOI:10.1038/nature04472
+functions:
+- function_id: stable_plasma_membrane_compartmentation
+  label: stable plasma-membrane compartmentation
+  description: The MCC membrane domain forms a stable furrow-like plasma-membrane
+    compartment that organizes integral membrane proteins in fungal eisosomes.
+  evidence:
+  - reference: DOI:10.1146/annurev-micro-091313-103507
+    notes: Douglas and Konopka 2014 reviewed MCC/eisosomes as stable fungal plasma-membrane
+      domains.
+  - reference: DOI:10.1083/jcb.201104040
+    notes: Karotki et al. 2011 connected Pil1/Lsp1 filament assembly to MCC/eisosome
+      membrane scaffolding.
+evidence:
+- reference: GO:0090512
+  notes: Gene Ontology cellular-component term for eisosome membrane domain/MCC.
+- reference: GO:0044853
+  notes: Gene Ontology cellular-component parent term for plasma membrane raft.
+- reference: GO:0032126
+  notes: Gene Ontology cellular-component term for eisosome.
+- reference: GO:0036286
+  notes: Gene Ontology cellular-component term for the paired eisosome filament.
+- reference: DOI:10.1038/nature04472
+  notes: Walther et al. 2006, Eisosomes mark static sites of endocytosis, Nature.
+- reference: DOI:10.1083/jcb.201104040
+  notes: Karotki et al. 2011, Eisosome proteins assemble into a membrane scaffold,
+    Journal of Cell Biology.
+- reference: DOI:10.1146/annurev-micro-091313-103507
+  notes: 'Douglas and Konopka 2014, Fungal membrane organization: the eisosome concept,
+    Annual Review of Microbiology.'
+causal_graphs:
+- graph_id: eisosome_filament_scaffolds_mcc
+  title: Eisosome filaments scaffold the MCC domain
+  description: Sur7 localizes in the MCC membrane domain, while adjacent Pil1/Lsp1
+    eisosome filaments scaffold that furrow-like plasma-membrane domain.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: sur7_membrane_protein
+    label: Sur7 MCC integral membrane protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: sur7_membrane_protein
+  - node_id: eisosome_membrane_domain_mcc
+    label: eisosome membrane domain/MCC
+    node_type: STRUCTURE
+    grounding: GO:0090512
+  - node_id: eisosome_filament
+    label: eisosome filament
+    node_type: STRUCTURE
+    grounding: GO:0036286
+  edges:
+  - subject: sur7_membrane_protein
+    predicate: localizes to
+    object: eisosome_membrane_domain_mcc
+    description: Sur7 marks the MCC membrane domain paired with the eisosome filament.
+    evidence:
+    - reference: DOI:10.1038/nature04472
+      notes: Walther et al. 2006 found that Sur7 localizes to immobile plasma-membrane
+        eisosome domains.
+  - subject: eisosome_filament
+    predicate: scaffolds
+    object: eisosome_membrane_domain_mcc
+    description: Pil1/Lsp1 eisosome filaments form a scaffold along the MCC membrane
+      domain.
+    evidence:
+    - reference: DOI:10.1083/jcb.201104040
+      notes: Karotki et al. 2011 showed that purified Pil1 and Lsp1 assemble into
+        eisosome-like membrane scaffolds.
+discussions:
+- discussion_id: ground_mcc_integral_membrane_proteins
+  prompt: Resolve exact family groundings for Sur7, Nce102, and other integral membrane
+    proteins of MCC/eisosome domains.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sur7_membrane_protein
+  rationale: Sur7 is an experimentally established marker of the MCC membrane domain,
+    but no exact source-neutral family CURIE for Sur7-family membrane proteins was
+    curated in this pass. Additional MCC/eisosome residents should be added only after
+    their component boundaries and exact family groundings are resolved.
+  evidence:
+  - reference: DOI:10.1146/annurev-micro-091313-103507
+  posed_by: codex
+  posed_date: '2026-09-15'
