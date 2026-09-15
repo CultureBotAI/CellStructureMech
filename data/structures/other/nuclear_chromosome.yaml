@@ -1,0 +1,192 @@
+identifier: GO:0000228
+label: nuclear chromosome
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A chromosome that encodes the nuclear genome and is found in the nucleus
+  of a eukaryotic cell during the cell cycle phases when the nucleus is intact.
+definition_source: GO:0000228
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T13:02:15Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T13:03:25Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parentage, nuclear-lumen parthood and narrow synonymy, reviewed
+    label-only DNA and chromatin-protein components, eukaryotic and Saccharomyces
+    taxonomic scope, chromosome-organization function, GO/DOI evidence, a nonmechanistic
+    chromatinization graph, and a chromatin-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-15T13:04:10Z'
+  curator: codex
+  action: REFINED_GRAPH
+  changes: Connected the chromosome-organization process node and neutralized the
+    broad Eukaryota taxon note.
+  llm_assisted: true
+parent_structures:
+- GO:0005694
+part_of:
+- GO:0031981
+synonyms:
+- synonym_text: nuclear interphase chromosome
+  synonym_type: NARROW_SYNONYM
+  source: GO:0000228
+components:
+- component_id: chromosomal_dna
+  label: nuclear chromosomal DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This component marks the DNA polymer of a eukaryotic nuclear chromosome
+    without claiming a source-neutral CURIE for the full set of yeast chromosomes.
+  role: Linear nuclear DNA molecules that carry the eukaryotic nuclear genome.
+  evidence:
+  - reference: GO:0000228
+    notes: GO:0000228 defines a nuclear chromosome as encoding the nuclear genome.
+  - reference: DOI:10.1038/nature08973
+    notes: Duan et al. 2010 modeled the Saccharomyces cerevisiae nuclear genome in
+      three dimensions.
+- component_id: chromatin_proteins
+  label: chromatin-associated proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Eukaryotic nuclear chromosomes are chromatinized DNA, but the histone
+    and non-histone chromatin protein repertoire is intentionally not flattened into
+    exact family CURIEs here.
+  role: Histone and non-histone proteins that package and organize nuclear chromosomal
+    DNA.
+  evidence:
+  - reference: DOI:10.1146/annurev-genet-120116-023438
+    notes: Noma 2017 reviewed mechanisms that organize the three-dimensional budding-yeast
+      genome.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: GO constrains nuclear chromosomes to eukaryotes, where they encode the nuclear
+    genome inside an intact nucleus.
+  reference: GO:0000228
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast carries its nuclear genome on chromosomes that are folded into
+    a constrained three-dimensional nuclear arrangement.
+  reference: DOI:10.1038/nature08973
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference yeast system used to model nuclear chromosome folding and spatial
+    genome organization.
+  reference: DOI:10.1038/nature08973
+functions:
+- function_id: chromosome_organization
+  label: chromosome organization
+  grounding: GO:0051276
+  description: Nuclear chromosomes package chromosomal DNA with chromatin proteins
+    and fold the nuclear genome within the nucleus.
+  evidence:
+  - reference: DOI:10.1146/annurev-genet-120116-023438
+    notes: Noma 2017 reviewed yeast genome folding and three-dimensional chromosome
+      organization.
+evidence:
+- reference: GO:0000228
+  notes: Gene Ontology cellular-component term for nuclear chromosome.
+- reference: GO:0005694
+  notes: Gene Ontology cellular-component parent term for chromosome.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for nuclear lumen.
+- reference: GO:0051276
+  notes: Gene Ontology biological-process term for chromosome organization.
+- reference: DOI:10.1038/nature08973
+  notes: Duan et al. 2010, A three-dimensional model of the yeast genome, Nature.
+- reference: DOI:10.1146/annurev-genet-120116-023438
+  notes: 'Noma 2017, The Yeast Genomes in Three Dimensions: Mechanisms and Functions,
+    Annual Review of Genetics.'
+causal_graphs:
+- graph_id: chromatinized_dna_forms_nuclear_chromosome
+  title: Chromatinized DNA folds into a nuclear chromosome
+  description: In budding yeast, nuclear chromosomal DNA is packaged by chromatin
+    proteins and folded inside the nuclear lumen as part of the three-dimensional
+    genome.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph separates DNA and chromatin proteins from the assembled
+    nuclear chromosome but does not enumerate histone variants, condensin/cohesin,
+    centromeres or telomere-specific complexes.
+  nodes:
+  - node_id: chromosomal_dna
+    label: nuclear chromosomal DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: chromosomal_dna
+  - node_id: chromatin_proteins
+    label: chromatin-associated proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: chromatin_proteins
+  - node_id: nuclear_chromosome
+    label: nuclear chromosome
+    node_type: STRUCTURE
+    grounding: GO:0000228
+  - node_id: nuclear_lumen
+    label: nuclear lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031981
+  - node_id: chromosome_organization
+    label: chromosome organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051276
+  edges:
+  - subject: chromosomal_dna
+    predicate: is packaged into
+    object: nuclear_chromosome
+    description: The linear DNA molecules of the nuclear genome are constituents of
+      nuclear chromosomes.
+    evidence:
+    - reference: GO:0000228
+      notes: GO:0000228 defines a nuclear chromosome as encoding the nuclear genome.
+  - subject: chromatin_proteins
+    predicate: organize
+    object: chromosomal_dna
+    description: Chromatin-associated proteins package and fold budding-yeast nuclear
+      chromosomal DNA.
+    evidence:
+    - reference: DOI:10.1146/annurev-genet-120116-023438
+      notes: Noma 2017 reviewed yeast factors that shape three-dimensional genome
+        organization.
+  - subject: nuclear_chromosome
+    predicate: is located in
+    object: nuclear_lumen
+    description: Nuclear chromosomes reside in the nuclear lumen when the eukaryotic
+      nucleus is intact.
+    evidence:
+    - reference: GO:0000228
+      notes: GO asserts GO:0000228 nuclear chromosome part_of GO:0031981 nuclear lumen.
+  - subject: nuclear_chromosome
+    predicate: undergoes
+    object: chromosome_organization
+    description: Nuclear chromosomes are folded and spatially organized as part of
+      three-dimensional genome organization.
+    evidence:
+    - reference: DOI:10.1146/annurev-genet-120116-023438
+      notes: Noma 2017 reviewed three-dimensional organization of yeast nuclear chromosomes.
+discussions:
+- discussion_id: resolve_chromatin_boundary
+  prompt: Resolve which histone, condensin, cohesin, centromere and telomere protein
+    cohorts should be modeled as components of the nuclear chromosome rather than
+    process machinery.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#chromatin_proteins
+  - causal_graphs#chromatinized_dna_forms_nuclear_chromosome
+  rationale: This first nuclear-chromosome record keeps chromatin proteins as a reviewed
+    label-only aggregate to avoid overclaiming a source-neutral exact component list.
+  evidence:
+  - reference: DOI:10.1146/annurev-genet-120116-023438
+  posed_by: codex
+  posed_date: '2026-09-15'
