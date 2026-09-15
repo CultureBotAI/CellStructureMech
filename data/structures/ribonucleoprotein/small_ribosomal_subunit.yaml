@@ -1,0 +1,183 @@
+identifier: GO:0015935
+label: small ribosomal subunit
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: The smaller of the two subunits of a ribosome.
+definition_source: GO:0015935
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T18:00:29Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T18:01:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, ribosome parthood, broad rRNA and protein-cohort components,
+    bacterial distribution, Thermus and E. coli exemplars, mRNA-decoding function,
+    GO/literature/Complex Portal evidence, a 30S decoding graph, and component-grounding
+    and CPX-3802 scope discussions.
+  llm_assisted: true
+- timestamp: '2026-09-15T18:11:34Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Resolved PR #1008 review issues #1009, #1010, and #1011 by removing the
+    unsupported Bacteria UNIVERSAL distribution row, pruning the redundant aminoacyl-tRNA
+    decoding graph node and edge, and keeping ComplexPortal:CPX-3802 scoped to the
+    E. coli canonical example and CPX-3802 discussion rather than record-level evidence.'
+  llm_assisted: true
+synonyms:
+- synonym_text: ribosomal small subunit
+  synonym_type: EXACT_SYNONYM
+  source: GO:0015935
+part_of:
+- GO:0005840
+components:
+- component_id: ssu_rrna
+  label: small-subunit rRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Bacterial and archaeal small subunits are built on 16S rRNA, whereas
+    eukaryotic cytosolic small subunits use 18S rRNA; no single SO term was curated
+    that exactly denotes the cross-lineage small-subunit rRNA class.
+  role: Structural RNA core of the small ribosomal subunit that forms the bacterial
+    30S body, platform, and head and carries the decoding center.
+  evidence:
+  - reference: DOI:10.1038/35030006
+    notes: Wimberly et al. 2000 resolved the Thermus thermophilus 30S structure with
+      16S rRNA forming the body, platform, and head.
+  - reference: DOI:10.1126/science.1060612
+    notes: Ogle et al. 2001 structurally analyzed 16S rRNA bases in the 30S decoding
+      center during cognate tRNA recognition.
+- component_id: ssu_protein_cohort
+  label: small-subunit ribosomal proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  stoichiometry: 21 proteins in Escherichia coli
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The small-subunit protein set contains many unrelated protein families
+    and varies across bacterial, archaeal, eukaryotic, and organellar small ribosomal
+    subunits; no single InterPro, Pfam, NCBIfam, GO, or Complex Portal term was curated
+    that denotes the entire source-neutral cohort.
+  role: Proteins that bind and stabilize the folded small-subunit rRNA scaffold to
+    form a functional decoding subunit.
+  evidence:
+  - reference: DOI:10.1038/35030006
+    notes: Wimberly et al. 2000 placed 20 proteins in the Thermus thermophilus 30S
+      structure, mainly on the solvent-exposed surface.
+  - reference: DOI:10.1128/MMBR.00013-07
+    notes: Kaczanowska and Ryden-Aulin 2007 report 21 protein constituents for the
+      Escherichia coli 30S subunit.
+canonical_examples:
+- taxon_id: NCBITaxon:274
+  taxon_label: Thermus thermophilus
+  note: Bacterial source of the 3.05 A 30S small-subunit crystal structure used to
+    resolve 16S rRNA and 30S protein placement.
+  reference: DOI:10.1038/35030006
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference bacterial strain for the curated Complex Portal 30S small ribosomal
+    subunit composition, CPX-3802.
+  reference: ComplexPortal:CPX-3802
+functions:
+- function_id: mrna_decoding
+  label: mRNA decoding
+  description: The bacterial 30S subunit monitors codon-anticodon geometry and selects
+    cognate aminoacyl-tRNAs during translation.
+  evidence:
+  - reference: DOI:10.1126/science.1060612
+    notes: Ogle et al. 2001 show 16S rRNA A1492, A1493, and G530 rearrangements around
+      the codon-anticodon helix in the 30S decoding site.
+evidence:
+- reference: GO:0015935
+  notes: Gene Ontology cellular-component term for the small ribosomal subunit.
+- reference: GO:0005840
+  notes: Gene Ontology cellular-component term for the containing ribosome.
+- reference: DOI:10.1038/35030006
+  notes: Wimberly et al. 2000, Structure of the 30S ribosomal subunit, Nature.
+- reference: DOI:10.1126/science.1060612
+  notes: Ogle et al. 2001, Recognition of cognate transfer RNA by the 30S ribosomal
+    subunit, Science.
+causal_graphs:
+- graph_id: ssu_decoding_center
+  title: 30S decoding center reads mRNA codons
+  description: In the bacterial 30S subunit, the small-subunit rRNA scaffold positions
+    a decoding center that inspects codon-anticodon geometry.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures the structurally resolved bacterial 30S decoding
+    role of the small subunit, not the full elongation cycle handled by the parent
+    ribosome record.
+  nodes:
+  - node_id: small_ribosomal_subunit
+    label: small ribosomal subunit
+    node_type: STRUCTURE
+    grounding: GO:0015935
+  - node_id: ssu_rrna
+    label: small-subunit rRNA
+    node_type: RNA
+    component_ref: ssu_rrna
+  - node_id: mrna_codon
+    label: mRNA codon
+    node_type: RNA
+  edges:
+  - subject: ssu_rrna
+    predicate: forms decoding center of
+    object: small_ribosomal_subunit
+    description: 16S rRNA nucleotides in the bacterial 30S subunit form a decoding
+      center that monitors codon-anticodon geometry.
+    evidence:
+    - reference: DOI:10.1126/science.1060612
+      notes: Ogle et al. 2001 show the 30S decoding-center bases A1492, A1493, and
+        G530 interacting with the minor groove of the codon-anticodon helix.
+  - subject: small_ribosomal_subunit
+    predicate: decodes
+    object: mrna_codon
+    description: The 30S subunit reads mRNA codons at its decoding center.
+    evidence:
+    - reference: DOI:10.1126/science.1060612
+      notes: Ogle et al. 2001 structurally analyzed how the 30S subunit recognizes
+        a cognate tRNA anticodon paired with mRNA.
+discussions:
+- discussion_id: split_small_subunit_components
+  prompt: Split exact small-subunit rRNA and protein families across bacterial, archaeal,
+    eukaryotic, and organellar ribosomes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ssu_rrna
+  - components#ssu_protein_cohort
+  rationale: The cross-lineage GO:0015935 term covers homologous small ribosomal subunits
+    with different rRNAs and many distinct ribosomal protein families. This first
+    standalone record keeps the composition at coarse reviewed-label-only granularity
+    until each exact source-neutral family is split and grounded.
+  evidence:
+  - reference: DOI:10.1038/35030006
+    notes: Wimberly et al. 2000 resolve the bacterial 30S subunit with 16S rRNA and
+      small-subunit proteins.
+  - reference: DOI:10.1038/nature08403
+    notes: Schmeing and Ramakrishnan 2009 review conserved and divergent structural
+      features of translation.
+  posed_by: codex
+  posed_date: '2026-09-15'
+- discussion_id: complex_portal_cpx_3802_scope
+  prompt: Keep ComplexPortal:CPX-3802 scoped to the E. coli 30S source composition
+    instead of making it an equivalent xref.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: ComplexPortal:CPX-3802 is the Escherichia coli K-12 30S small ribosomal
+    subunit composition, whereas GO:0015935 denotes small ribosomal subunits across
+    bacteria, archaea, eukaryotes, and organelles.
+  resolution_note: Cited CPX-3802 as the E. coli K-12 exemplar source and did not
+    add it to xrefs.
+  evidence:
+  - reference: ComplexPortal:CPX-3802
+    notes: ComplexPortal:CPX-3802 is scoped to the E. coli K-12 30S small ribosomal
+      subunit.
+  - reference: GO:0015935
+    notes: GO:0015935 is a cross-taxon small ribosomal subunit term.

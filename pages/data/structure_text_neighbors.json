@@ -9406,6 +9406,11 @@
       "label": "nucleolus",
       "neighbors": [
         {
+          "identifier": "GO:0015935",
+          "label": "small ribosomal subunit",
+          "cosine_similarity": 0.802551
+        },
+        {
           "identifier": "GO:0005840",
           "label": "ribosome",
           "cosine_similarity": 0.77848284
@@ -9424,11 +9429,6 @@
           "identifier": "GO:0042645",
           "label": "mitochondrial nucleoid",
           "cosine_similarity": 0.67152511
-        },
-        {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.67151498
         }
       ]
     },
@@ -9757,6 +9757,11 @@
           "cosine_similarity": 0.71282165
         },
         {
+          "identifier": "GO:0015935",
+          "label": "small ribosomal subunit",
+          "cosine_similarity": 0.70589016
+        },
+        {
           "identifier": "GO:0005730",
           "label": "nucleolus",
           "cosine_similarity": 0.63712189
@@ -9765,11 +9770,6 @@
           "identifier": "GO:0005783",
           "label": "endoplasmic reticulum",
           "cosine_similarity": 0.63228167
-        },
-        {
-          "identifier": "GO:0031471",
-          "label": "ethanolamine degradation polyhedral organelle",
-          "cosine_similarity": 0.61849026
         }
       ]
     },
@@ -9819,6 +9819,11 @@
           "cosine_similarity": 0.71282165
         },
         {
+          "identifier": "GO:0015935",
+          "label": "small ribosomal subunit",
+          "cosine_similarity": 0.70016492
+        },
+        {
           "identifier": "GO:0005840",
           "label": "ribosome",
           "cosine_similarity": 0.68445683
@@ -9827,11 +9832,6 @@
           "identifier": "GO:0005730",
           "label": "nucleolus",
           "cosine_similarity": 0.66746577
-        },
-        {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.66437808
         }
       ]
     },
@@ -9839,6 +9839,11 @@
       "identifier": "GO:0005840",
       "label": "ribosome",
       "neighbors": [
+        {
+          "identifier": "GO:0015935",
+          "label": "small ribosomal subunit",
+          "cosine_similarity": 0.87848448
+        },
         {
           "identifier": "GO:0005730",
           "label": "nucleolus",
@@ -9858,11 +9863,37 @@
           "identifier": "GO:0005839",
           "label": "proteasome core complex",
           "cosine_similarity": 0.69562868
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0015935",
+      "label": "small ribosomal subunit",
+      "neighbors": [
+        {
+          "identifier": "GO:0005840",
+          "label": "ribosome",
+          "cosine_similarity": 0.87848448
+        },
+        {
+          "identifier": "GO:0005730",
+          "label": "nucleolus",
+          "cosine_similarity": 0.802551
+        },
+        {
+          "identifier": "GO:1990061",
+          "label": "bacterial degradosome",
+          "cosine_similarity": 0.70589016
         },
         {
           "identifier": "GO:0000932",
           "label": "P-body",
-          "cosine_similarity": 0.68445683
+          "cosine_similarity": 0.70016492
+        },
+        {
+          "identifier": "GO:0010494",
+          "label": "cytoplasmic stress granule",
+          "cosine_similarity": 0.65625992
         }
       ]
     },
