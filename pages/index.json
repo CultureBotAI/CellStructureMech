@@ -189,6 +189,24 @@
   "definition": "An ion-driven membrane complex in the bacterial flagellar motor, typically with five A subunits surrounding two B subunits, that transduces proton or sodium flow into torque on the flagellar rotor and anchors to the cell wall through the B subunits."
  },
  {
+  "identifier": "GO:0060170",
+  "label": "ciliary membrane",
+  "category": "APPENDAGE",
+  "kind": "MEMBRANE",
+  "status": "PROPOSED",
+  "page": "structures/appendage/ciliary_membrane.html",
+  "definition": "The portion of the plasma membrane surrounding a cilium."
+ },
+ {
+  "identifier": "GO:0035869",
+  "label": "ciliary transition zone",
+  "category": "APPENDAGE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/appendage/ciliary_transition_zone.html",
+  "definition": "A region of the cilium between the basal body and proximal segment that is characterized by Y-shaped assemblages that connect axonemal microtubules to the ciliary membrane. The ciliary transition zone appears to function as a gate that controls ciliary membrane composition and separates the cytosol from the ciliary plasm."
+ },
+ {
   "identifier": "GO:0005929",
   "label": "cilium",
   "category": "APPENDAGE",

@@ -660,9 +660,81 @@
       ]
     },
     {
+      "identifier": "GO:0060170",
+      "label": "ciliary membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0005929",
+          "label": "cilium",
+          "cosine_similarity": 0.85281584
+        },
+        {
+          "identifier": "GO:0009528",
+          "label": "plastid inner membrane",
+          "cosine_similarity": 0.78291417
+        },
+        {
+          "identifier": "GO:0009706",
+          "label": "chloroplast inner membrane",
+          "cosine_similarity": 0.78191904
+        },
+        {
+          "identifier": "GO:0009707",
+          "label": "chloroplast outer membrane",
+          "cosine_similarity": 0.77892937
+        },
+        {
+          "identifier": "GO:0009527",
+          "label": "plastid outer membrane",
+          "cosine_similarity": 0.77740625
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0035869",
+      "label": "ciliary transition zone",
+      "neighbors": [
+        {
+          "identifier": "GO:0005929",
+          "label": "cilium",
+          "cosine_similarity": 0.85278197
+        },
+        {
+          "identifier": "GO:0060170",
+          "label": "ciliary membrane",
+          "cosine_similarity": 0.76245847
+        },
+        {
+          "identifier": "GO:0036064",
+          "label": "ciliary basal body",
+          "cosine_similarity": 0.73918829
+        },
+        {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.68582993
+        },
+        {
+          "identifier": "GO:0020016",
+          "label": "flagellar pocket",
+          "cosine_similarity": 0.6790494
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005929",
       "label": "cilium",
       "neighbors": [
+        {
+          "identifier": "GO:0060170",
+          "label": "ciliary membrane",
+          "cosine_similarity": 0.85281584
+        },
+        {
+          "identifier": "GO:0035869",
+          "label": "ciliary transition zone",
+          "cosine_similarity": 0.85278197
+        },
         {
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
@@ -677,16 +749,6 @@
           "identifier": "GO:0070258",
           "label": "inner membrane pellicle complex",
           "cosine_similarity": 0.72604412
-        },
-        {
-          "identifier": "GO:0020010",
-          "label": "conoid",
-          "cosine_similarity": 0.70028408
-        },
-        {
-          "identifier": "GO:0020016",
-          "label": "flagellar pocket",
-          "cosine_similarity": 0.7000228
         }
       ]
     },
@@ -1418,6 +1480,11 @@
           "cosine_similarity": 0.83458703
         },
         {
+          "identifier": "GO:0035869",
+          "label": "ciliary transition zone",
+          "cosine_similarity": 0.73918829
+        },
+        {
           "identifier": "GO:0020010",
           "label": "conoid",
           "cosine_similarity": 0.72823331
@@ -1426,11 +1493,6 @@
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.72123174
-        },
-        {
-          "identifier": "cellstructuremech:cetz_filament",
-          "label": "CetZ filament",
-          "cosine_similarity": 0.71838327
         }
       ]
     },
@@ -4983,6 +5045,11 @@
           "cosine_similarity": 0.75387503
         },
         {
+          "identifier": "GO:0060170",
+          "label": "ciliary membrane",
+          "cosine_similarity": 0.7529543
+        },
+        {
           "identifier": "GO:0120120",
           "label": "bilobe structure",
           "cosine_similarity": 0.74463014
@@ -4991,11 +5058,6 @@
           "identifier": "GO:0005768",
           "label": "endosome",
           "cosine_similarity": 0.73596845
-        },
-        {
-          "identifier": "cellstructuremech:mitosome_inner_membrane",
-          "label": "mitosome inner membrane",
-          "cosine_similarity": 0.73463809
         }
       ]
     },

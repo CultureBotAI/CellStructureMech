@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/ciliary_transition_zone.yaml
+  slug: ciliary_transition_zone
+session:
+  id: 2026-09-15T140438Z-codex-d1abb5
+  timestamp: '2026-09-15T14:04:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added ciliary transition zone
+  details: Curated a new GO:0035869 ciliary transition zone structure record with GO synonymy
+    and cilium parthood, reviewed label-only transition-zone Y-linker, axonemal-microtubule
+    and protein-network components, Chlamydomonas transition-zone evidence, ciliary-gating
+    and cilium-assembly function evidence, a nonmechanistic compartment-gating graph, and
+    an open molecular-inventory TODO.

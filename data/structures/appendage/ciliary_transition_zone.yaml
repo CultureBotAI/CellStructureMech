@@ -1,0 +1,241 @@
+identifier: GO:0035869
+label: ciliary transition zone
+structure_category: APPENDAGE
+structure_kind: SUBCELLULAR_REGION
+definition: A region of the cilium between the basal body and proximal segment that
+  is characterized by Y-shaped assemblages that connect axonemal microtubules to the
+  ciliary membrane. The ciliary transition zone appears to function as a gate that
+  controls ciliary membrane composition and separates the cytosol from the ciliary
+  plasm.
+definition_source: GO:0035869
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T14:02:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T14:03:28Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and cilium parthood, label-only Y-linker and protein-network
+    components, Chlamydomonas transition-zone scope, gating and cilium-assembly functions,
+    DOI evidence, a nonmechanistic compartment-gating graph, and a molecular-inventory
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-15T14:03:55Z'
+  curator: codex
+  action: REFINED_EVIDENCE_SCOPE
+  changes: Narrowed the Chlamydomonas transition-zone note to distinguish the TCTN1
+    Y-link architecture result from the broader CEP290 and NPHP4 ciliary-composition
+    phenotypes.
+  llm_assisted: true
+- timestamp: '2026-09-15T14:12:44Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #983 review issues #984, #985 and #986 by narrowing Wang-backed
+    Y-link architecture wording to TCTN1, downgrading transition-zone axonemal microtubule
+    essentiality to UNKNOWN, and removing the overbroad GO:0060271 cilium-assembly
+    function.'
+  llm_assisted: true
+synonyms:
+- synonym_text: cilial transition zone
+  synonym_type: EXACT_SYNONYM
+  source: GO:0035869
+- synonym_text: cilium transition zone
+  synonym_type: EXACT_SYNONYM
+  source: GO:0035869
+- synonym_text: connecting cilium
+  synonym_type: RELATED_SYNONYM
+  source: GO:0035869
+part_of:
+- GO:0005929
+components:
+- component_id: transition_zone_y_linkers
+  label: transition-zone Y-linkers
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0035869 defines Y-shaped linkers at this ciliary region, but
+    no exact source-neutral CURIE for the assembled linker material was curated.
+  role: Y-shaped connections spanning from proximal axonemal microtubules to the adjacent
+    ciliary membrane.
+  evidence:
+  - reference: GO:0035869
+    notes: GO:0035869 defines the ciliary transition zone by Y-shaped assemblages
+      that connect axonemal microtubules to the ciliary membrane.
+  - reference: DOI:10.1083/jcb.201006105
+    notes: Craige et al. 2010 showed that Chlamydomonas CEP290 localizes to the flagellar
+      transition zone and is needed for normal microtubule-membrane tethering there.
+- component_id: transition_zone_axonemal_microtubules
+  label: transition-zone axonemal microtubules
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO definition identifies axonemal microtubules contacted by
+    the transition-zone Y-linkers, but this record is scoped to the transition-zone
+    segment rather than the complete axoneme.
+  role: Proximal axonemal microtubule segment contacted by transition-zone Y-linkers
+    near the ciliary base.
+  evidence:
+  - reference: GO:0035869
+    notes: GO:0035869 places axonemal microtubules in the definition of the ciliary
+      transition zone.
+- component_id: transition_zone_protein_network
+  label: transition-zone protein network
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The ciliary transition zone contains several taxon- and module-specific
+    protein families, so this aggregate is left label-only until exact conserved families
+    are curated.
+  role: Protein constituents that localize to the transition zone to organize the
+    microtubule-membrane gate and tune ciliary protein composition.
+  evidence:
+  - reference: DOI:10.1038/s41467-022-31751-0
+    notes: Wang et al. 2022 found that Chlamydomonas TCTN1 loss disrupts transition-zone
+      wedge-shaped structures and compared how TCTN1, CEP290 and NPHP4 mutants alter
+      ciliary composition and ectosome shedding.
+  - reference: DOI:10.1101/cshperspect.a028134
+    notes: Garcia-Gonzalo and Reiter 2017 reviewed the transition zone as a protein-rich
+      gate that controls ciliary composition.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas motile cilia contain a proximal transition zone; TCTN1 loss
+    disrupts its wedge-shaped structures, and TCTN1, CEP290 and NPHP4 each influence
+    ciliary protein composition.
+  reference: DOI:10.1038/s41467-022-31751-0
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model in which isolated ciliary transition zones were analyzed
+    by proteomics.
+  reference: DOI:10.1016/j.cub.2014.11.066
+functions:
+- function_id: ciliary_compartment_gating
+  label: ciliary compartment gating
+  description: The transition zone forms a proximal ciliary gate that separates the
+    ciliary compartment from the cytosol and helps control ciliary protein composition.
+  evidence:
+  - reference: GO:0035869
+    notes: GO:0035869 defines the ciliary transition zone as a gate controlling ciliary
+      membrane composition and separating ciliary plasm from cytosol.
+  - reference: DOI:10.1101/cshperspect.a028134
+    notes: Garcia-Gonzalo and Reiter 2017 reviewed transition fibers and the transition
+      zone as ciliary composition gatekeepers.
+evidence:
+- reference: GO:0035869
+  notes: Gene Ontology cellular-component term for the ciliary transition zone.
+- reference: GO:0005929
+  notes: Gene Ontology cellular-component term for the cilium.
+- reference: DOI:10.1083/jcb.201006105
+  notes: Craige et al. 2010, CEP290 tethers flagellar transition zone microtubules
+    to the membrane and regulates flagellar protein content, Journal of Cell Biology.
+- reference: DOI:10.1016/j.cub.2014.11.066
+  notes: Diener et al. 2015, Proteomic analysis of isolated ciliary transition zones
+    reveals the presence of ESCRT proteins, Current Biology.
+- reference: DOI:10.1101/cshperspect.a028134
+  notes: 'Garcia-Gonzalo and Reiter 2017, Open Sesame: How Transition Fibers and the
+    Transition Zone Control Ciliary Composition, Cold Spring Harbor Perspectives in
+    Biology.'
+- reference: DOI:10.1038/s41467-022-31751-0
+  notes: Wang et al. 2022, Ciliary transition zone proteins coordinate ciliary protein
+    composition and ectosome shedding, Nature Communications.
+causal_graphs:
+- graph_id: ciliary_transition_zone_gates_ciliary_compartment
+  title: Ciliary transition zone gates the ciliary compartment
+  description: Transition-zone Y-linkers and proteins organize a gate between axonemal
+    microtubules and the ciliary membrane at the proximal cilium.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures the transition-zone boundary and gating role without
+    enumerating the lineage-specific CEP290, MKS, NPHP or TCTN module families.
+  nodes:
+  - node_id: ciliary_transition_zone
+    label: ciliary transition zone
+    node_type: STRUCTURE
+    grounding: GO:0035869
+  - node_id: transition_zone_y_linkers
+    label: transition-zone Y-linkers
+    node_type: STRUCTURE
+    component_ref: transition_zone_y_linkers
+  - node_id: transition_zone_axonemal_microtubules
+    label: transition-zone axonemal microtubules
+    node_type: STRUCTURE
+    component_ref: transition_zone_axonemal_microtubules
+  - node_id: transition_zone_protein_network
+    label: transition-zone protein network
+    node_type: GENE_OR_PROTEIN
+    component_ref: transition_zone_protein_network
+  - node_id: ciliary_membrane
+    label: ciliary membrane
+    node_type: STRUCTURE
+    grounding: GO:0060170
+  - node_id: ciliary_protein_pool
+    label: ciliary protein pool
+    node_type: GENE_OR_PROTEIN
+  - node_id: cilium
+    label: cilium
+    node_type: ORGANELLE
+    grounding: GO:0005929
+  edges:
+  - subject: transition_zone_y_linkers
+    predicate: connect
+    object: transition_zone_axonemal_microtubules
+    description: Y-shaped transition-zone linkers attach to proximal axonemal microtubules.
+    evidence:
+    - reference: GO:0035869
+      notes: GO:0035869 defines Y-shaped assemblages that connect axonemal microtubules
+        to the ciliary membrane.
+  - subject: transition_zone_y_linkers
+    predicate: tether to
+    object: ciliary_membrane
+    description: Transition-zone Y-linkers bridge the axonemal core to the adjacent
+      ciliary membrane.
+    evidence:
+    - reference: DOI:10.1083/jcb.201006105
+      notes: Craige et al. 2010 used Chlamydomonas cep290 mutants to link a transition-zone
+        protein to normal microtubule-membrane connections.
+  - subject: ciliary_transition_zone
+    predicate: is part of
+    object: cilium
+    description: The transition zone lies within the cilium near the basal body.
+    evidence:
+    - reference: GO:0035869
+      notes: GO relates the ciliary transition zone as part of the cilium.
+  - subject: transition_zone_protein_network
+    predicate: gates
+    object: ciliary_protein_pool
+    description: Transition-zone proteins regulate which proteins are retained in
+      Chlamydomonas cilia.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-31751-0
+      notes: Wang et al. 2022 compared ciliary composition after disrupting Chlamydomonas
+        TCTN1, CEP290 and NPHP4 transition-zone proteins.
+discussions:
+- discussion_id: resolve_transition_zone_molecular_inventory
+  prompt: Resolve exact conserved ciliary transition-zone proteins and Y-linker families
+    that should replace the label-only aggregates.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#transition_zone_y_linkers
+  - components#transition_zone_axonemal_microtubules
+  - components#transition_zone_protein_network
+  rationale: CEP290, MKS, NPHP and TCTN proteins make up a taxon-specific transition-zone
+    inventory; this first pass records the conserved architectural parts without asserting
+    exact source-neutral component CURIEs.
+  evidence:
+  - reference: DOI:10.1101/cshperspect.a028134
+    notes: Garcia-Gonzalo and Reiter 2017 review multiple transition-zone protein
+      modules.
+  - reference: DOI:10.1038/s41467-022-31751-0
+    notes: Wang et al. 2022 assayed Chlamydomonas CEP290, NPHP4 and TCTN1 transition-zone
+      proteins.
+  posed_by: codex
+  posed_date: '2026-09-15'
