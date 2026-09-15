@@ -4652,9 +4652,9 @@
           "cosine_similarity": 0.84134631
         },
         {
-          "identifier": "GO:0012507",
-          "label": "ER to Golgi transport vesicle membrane",
-          "cosine_similarity": 0.83966099
+          "identifier": "GO:0032585",
+          "label": "multivesicular body membrane",
+          "cosine_similarity": 0.84057703
         }
       ]
     },
@@ -4776,9 +4776,9 @@
           "cosine_similarity": 0.82517647
         },
         {
-          "identifier": "GO:0070113",
-          "label": "organellar chromatophore inner membrane",
-          "cosine_similarity": 0.81898669
+          "identifier": "GO:0032585",
+          "label": "multivesicular body membrane",
+          "cosine_similarity": 0.82242388
         }
       ]
     },
@@ -6125,6 +6125,11 @@
           "cosine_similarity": 0.91763213
         },
         {
+          "identifier": "GO:0032585",
+          "label": "multivesicular body membrane",
+          "cosine_similarity": 0.91604802
+        },
+        {
           "identifier": "GO:0031410",
           "label": "cytoplasmic vesicle",
           "cosine_similarity": 0.84261111
@@ -6138,11 +6143,37 @@
           "identifier": "GO:0033107",
           "label": "Cvt vesicle",
           "cosine_similarity": 0.81577648
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0032585",
+      "label": "multivesicular body membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0005771",
+          "label": "multivesicular body",
+          "cosine_similarity": 0.91604802
         },
         {
-          "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
-          "label": "COPII-coated vesicle lumen",
-          "cosine_similarity": 0.81548627
+          "identifier": "GO:0030659",
+          "label": "cytoplasmic vesicle membrane",
+          "cosine_similarity": 0.88563222
+        },
+        {
+          "identifier": "GO:0012507",
+          "label": "ER to Golgi transport vesicle membrane",
+          "cosine_similarity": 0.87474741
+        },
+        {
+          "identifier": "GO:0005789",
+          "label": "endoplasmic reticulum membrane",
+          "cosine_similarity": 0.87049056
+        },
+        {
+          "identifier": "GO:0030663",
+          "label": "COPI-coated vesicle membrane",
+          "cosine_similarity": 0.85785549
         }
       ]
     },
