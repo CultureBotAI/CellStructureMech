@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cellular_bud_tip.yaml
+  slug: cellular_bud_tip
+session:
+  id: 2026-09-15T015357Z-codex-069e5e
+  timestamp: '2026-09-15T01:53:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/917
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/916
+events:
+- type: EDIT
+  outcome: changed
+  summary: Narrow cellular bud tip distribution note
+  details: 'Resolved #917 by narrowing the Saccharomyces cerevisiae taxonomic-distribution
+    note to the small-bud-tip exocyst observation directly supported by DOI:10.1083/jcb.130.2.299.'

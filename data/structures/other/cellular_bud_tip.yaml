@@ -20,6 +20,12 @@ curation_history:
     function, GO/UniProt/DOI evidence, a nonmechanistic bud-tip exocyst topology graph,
     and an exocyst/polarisome component-boundary decision.
   llm_assisted: true
+- timestamp: '2026-09-15T01:52:54Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #917 by narrowing the Saccharomyces cerevisiae taxonomic-distribution
+    note to the small-bud-tip exocyst observation directly supported by DOI:10.1083/jcb.130.2.299.'
+  llm_assisted: true
 synonyms:
 - synonym_text: bud tip
   synonym_type: EXACT_SYNONYM
@@ -32,7 +38,7 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Budding yeast polarizes secretory and polarity machinery to the distal tip
+  note: Budding yeast localizes Sec6/Sec8/Sec15 exocyst material to the distal tip
     of small buds during bud growth.
   reference: DOI:10.1083/jcb.130.2.299
 canonical_examples:
