@@ -19,6 +19,12 @@ curation_history:
     the InterPro-grounded Pil1/Lsp1 BAR-domain component, fungal and Saccharomyces
     scope, MCC scaffold assembly evidence, and a Pil1/Lsp1 filament assembly graph.
   llm_assisted: true
+- timestamp: '2026-09-15T23:06:38Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1037 by removing unsupported ESSENTIAL from the aggregate Pil1/Lsp1
+    BAR-domain component.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -33,7 +39,6 @@ components:
   gene_symbols:
   - PIL1
   - LSP1
-  essentiality: ESSENTIAL
   role: Fungal BAR-domain proteins that assemble into the cytoplasmic filament core
     of the eisosome.
   evidence:
