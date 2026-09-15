@@ -1,0 +1,197 @@
+identifier: GO:0000329
+label: fungal-type vacuole membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding the fungal-type vacuole.
+definition_source: GO:0000329
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T03:39:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T03:40:49Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added vacuolar-membrane parentage, fungal-type-vacuole parthood, a reviewed-label-only
+    lipid-bilayer component, Saccharomyces scope, GO/DOI evidence, a V-ATPase acidification
+    function, a nonmechanistic membrane topology graph, and a lipid-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-15T03:49:25Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed issue #925 by retitling the fungal-type vacuole membrane graph
+    so it names the V-ATPase-supported acidification role directly.'
+  llm_assisted: true
+parent_structures:
+- GO:0005774
+part_of:
+- GO:0000324
+components:
+- component_id: fungal_vacuole_membrane_lipid_bilayer
+  label: fungal-type vacuole membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Bounding bilayer that separates the acidic fungal-type vacuole lumen from
+    the cytosol.
+  evidence:
+  - reference: GO:0000329
+    notes: GO:0000329 identifies the fungal-type vacuole membrane.
+  - reference: GO:0000328
+    notes: GO:0000328 defines the fungal-type vacuole lumen as the volume enclosed
+      within the vacuolar membrane.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000329 identifies the whole fungal-type vacuole membrane, but
+    no exact source-neutral CURIE was curated for the generic lipid-bilayer constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast vacuoles are bounded by fungal-type vacuole membranes that carry
+    V-ATPase-driven acidification machinery.
+  reference: DOI:10.1016/j.bbamcr.2008.08.003
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model for fungal vacuolar membranes and V-ATPase-dependent vacuolar
+    acidification.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
+functions:
+- function_id: vacuolar_membrane_acidification
+  label: vacuolar acidification
+  grounding: GO:0007035
+  description: The fungal-type vacuole membrane houses vacuolar V-ATPase complexes
+    that pump protons into the lumen to acidify the vacuole.
+  evidence:
+  - reference: GO:0007035
+    notes: GO:0007035 denotes processes that lower vacuolar pH by raising the vacuolar
+      hydrogen-ion concentration.
+  - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+    notes: Kane 2006 reviews vacuolar H+-ATPase-dependent organelle acidification
+      in yeast.
+evidence:
+- reference: GO:0000329
+  notes: Gene Ontology cellular-component term for fungal-type vacuole membrane.
+- reference: GO:0005774
+  notes: Gene Ontology cellular-component parent term for vacuolar membrane.
+- reference: GO:0000324
+  notes: Gene Ontology cellular-component term for the containing fungal-type vacuole.
+- reference: GO:0000328
+  notes: Gene Ontology cellular-component term for the fungal-type vacuole lumen bounded
+    by this membrane.
+- reference: GO:0007035
+  notes: Gene Ontology biological-process term for vacuolar acidification.
+- reference: GO:0016471
+  notes: Gene Ontology cellular-component term for the vacuolar proton-transporting
+    V-type ATPase complex.
+- reference: DOI:10.1128/MMBR.70.1.177-191.2006
+  notes: Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast
+    Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
+- reference: DOI:10.1016/j.bbamcr.2008.08.003
+  notes: 'Li and Kane 2009, The yeast lysosome-like vacuole: Endpoint and crossroads,
+    Biochimica et Biophysica Acta.'
+causal_graphs:
+- graph_id: yeast_fungal_vacuole_membrane_topology
+  title: Yeast fungal-type vacuole membranes support acidification
+  description: The fungal-type vacuole membrane is a vacuolar membrane substructure
+    that encloses the fungal-type vacuole lumen and carries proton-pumping V-ATPase
+    complexes in budding yeast.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures membrane topology and V-ATPase acidification without
+    asserting a complete set of vacuolar transporters, channels, fusion proteins,
+    or acid hydrolases.
+  nodes:
+  - node_id: fungal_type_vacuole_membrane
+    label: fungal-type vacuole membrane
+    node_type: STRUCTURE
+    grounding: GO:0000329
+    component_ref: fungal_vacuole_membrane_lipid_bilayer
+  - node_id: vacuolar_membrane
+    label: vacuolar membrane
+    node_type: STRUCTURE
+    grounding: GO:0005774
+  - node_id: fungal_type_vacuole
+    label: fungal-type vacuole
+    node_type: ORGANELLE
+    grounding: GO:0000324
+  - node_id: fungal_type_vacuole_lumen
+    label: fungal-type vacuole lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0000328
+  - node_id: vacuolar_v_atpase
+    label: vacuolar proton-transporting V-type ATPase complex
+    node_type: STRUCTURE
+    grounding: GO:0016471
+  - node_id: vacuolar_acidification
+    label: vacuolar acidification
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007035
+  edges:
+  - subject: fungal_type_vacuole_membrane
+    predicate: is a
+    object: vacuolar_membrane
+    description: The fungal-type vacuole membrane is a specialized vacuolar membrane.
+    evidence:
+    - reference: GO:0000329
+      notes: GO:0000329 identifies the fungal-type vacuole membrane.
+    - reference: GO:0005774
+      notes: GO:0005774 identifies the broader vacuolar membrane class.
+  - subject: fungal_type_vacuole_membrane
+    predicate: is part of
+    object: fungal_type_vacuole
+    description: The fungal-type vacuole membrane is part of the fungal-type vacuole.
+    evidence:
+    - reference: GO:0000329
+      notes: GO:0000329 denotes the fungal-type vacuole membrane.
+    - reference: GO:0000324
+      notes: GO:0000324 denotes the containing fungal-type vacuole.
+  - subject: fungal_type_vacuole_membrane
+    predicate: bounds
+    object: fungal_type_vacuole_lumen
+    description: The fungal-type vacuole membrane encloses the vacuolar lumen.
+    evidence:
+    - reference: GO:0000328
+      notes: GO:0000328 defines the fungal-type vacuole lumen as the volume enclosed
+        within the vacuolar membrane.
+  - subject: vacuolar_v_atpase
+    predicate: resides in
+    object: fungal_type_vacuole_membrane
+    description: Yeast vacuolar V-ATPase complexes localize to the fungal-type vacuole
+      membrane.
+    evidence:
+    - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+      notes: Kane 2006 reviews organelle acidification by the yeast vacuolar H+-ATPase.
+    - reference: GO:0016471
+      notes: GO:0016471 identifies a V-type ATPase complex found in the vacuolar membrane.
+  - subject: vacuolar_v_atpase
+    predicate: participates in
+    object: vacuolar_acidification
+    description: The membrane V-ATPase pumps protons into the vacuole to acidify the
+      lumen.
+    evidence:
+    - reference: GO:0007035
+      notes: GO:0007035 denotes processes that lower vacuolar pH by raising the vacuolar
+        hydrogen-ion concentration.
+    - reference: DOI:10.1016/j.bbamcr.2008.08.003
+      notes: Li and Kane 2009 review V-ATPase-dependent acidification of the yeast
+        lysosome-like vacuole.
+discussions:
+- discussion_id: ground_fungal_type_vacuole_membrane_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    fungal-type vacuole membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#fungal_vacuole_membrane_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0000329, but the fungal-type vacuole
+    membrane lipid-bilayer constituent is intentionally left as reviewed-label-only
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  evidence:
+  - reference: GO:0000329
+    notes: GO:0000329 identifies the complete fungal-type vacuole membrane.
+  posed_by: codex
+  posed_date: '2026-09-15'

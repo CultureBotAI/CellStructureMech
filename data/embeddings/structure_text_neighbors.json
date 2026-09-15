@@ -2255,6 +2255,11 @@
           "cosine_similarity": 0.70337651
         },
         {
+          "identifier": "GO:0000329",
+          "label": "fungal-type vacuole membrane",
+          "cosine_similarity": 0.68094821
+        },
+        {
           "identifier": "GO:0000324",
           "label": "fungal-type vacuole",
           "cosine_similarity": 0.67614595
@@ -2263,11 +2268,6 @@
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.66934974
-        },
-        {
-          "identifier": "GO:0020022",
-          "label": "acidocalcisome",
-          "cosine_similarity": 0.66884687
         }
       ]
     },
@@ -2415,14 +2415,14 @@
           "cosine_similarity": 0.72350188
         },
         {
+          "identifier": "GO:0000329",
+          "label": "fungal-type vacuole membrane",
+          "cosine_similarity": 0.71287024
+        },
+        {
           "identifier": "GO:0005940",
           "label": "septin ring",
           "cosine_similarity": 0.71143262
-        },
-        {
-          "identifier": "GO:0042603",
-          "label": "capsule",
-          "cosine_similarity": 0.69578501
         }
       ]
     },
@@ -3831,6 +3831,11 @@
           "cosine_similarity": 0.91815105
         },
         {
+          "identifier": "GO:0000329",
+          "label": "fungal-type vacuole membrane",
+          "cosine_similarity": 0.8292771
+        },
+        {
           "identifier": "cellstructuremech:contractile_vacuole_lumen",
           "label": "contractile vacuole lumen",
           "cosine_similarity": 0.82721587
@@ -3844,11 +3849,6 @@
           "identifier": "GO:0033110",
           "label": "Cvt vesicle membrane",
           "cosine_similarity": 0.80249118
-        },
-        {
-          "identifier": "GO:0030659",
-          "label": "cytoplasmic vesicle membrane",
-          "cosine_similarity": 0.78985357
         }
       ]
     },
@@ -4156,9 +4156,9 @@
           "cosine_similarity": 0.86407828
         },
         {
-          "identifier": "GO:0012507",
-          "label": "ER to Golgi transport vesicle membrane",
-          "cosine_similarity": 0.85239731
+          "identifier": "GO:0000329",
+          "label": "fungal-type vacuole membrane",
+          "cosine_similarity": 0.85957033
         }
       ]
     },
@@ -4942,6 +4942,11 @@
       "label": "fungal-type vacuole",
       "neighbors": [
         {
+          "identifier": "GO:0000329",
+          "label": "fungal-type vacuole membrane",
+          "cosine_similarity": 0.89312303
+        },
+        {
           "identifier": "GO:0033107",
           "label": "Cvt vesicle",
           "cosine_similarity": 0.82641509
@@ -4960,11 +4965,37 @@
           "identifier": "GO:0020020",
           "label": "food vacuole",
           "cosine_similarity": 0.79161018
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000329",
+      "label": "fungal-type vacuole membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0000324",
+          "label": "fungal-type vacuole",
+          "cosine_similarity": 0.89312303
         },
         {
-          "identifier": "GO:0005768",
-          "label": "endosome",
-          "cosine_similarity": 0.78504973
+          "identifier": "GO:0033110",
+          "label": "Cvt vesicle membrane",
+          "cosine_similarity": 0.85957033
+        },
+        {
+          "identifier": "GO:0030659",
+          "label": "cytoplasmic vesicle membrane",
+          "cosine_similarity": 0.85274747
+        },
+        {
+          "identifier": "GO:0005789",
+          "label": "endoplasmic reticulum membrane",
+          "cosine_similarity": 0.83263502
+        },
+        {
+          "identifier": "cellstructuremech:parasitophorous_vacuole_membrane",
+          "label": "parasitophorous vacuole membrane",
+          "cosine_similarity": 0.83089031
         }
       ]
     },
@@ -6626,6 +6657,11 @@
           "cosine_similarity": 0.88643641
         },
         {
+          "identifier": "GO:0000329",
+          "label": "fungal-type vacuole membrane",
+          "cosine_similarity": 0.83089031
+        },
+        {
           "identifier": "GO:0031164",
           "label": "contractile vacuolar membrane",
           "cosine_similarity": 0.82475623
@@ -6634,11 +6670,6 @@
           "identifier": "GO:0042170",
           "label": "plastid membrane",
           "cosine_similarity": 0.82323084
-        },
-        {
-          "identifier": "GO:0020020",
-          "label": "food vacuole",
-          "cosine_similarity": 0.8009929
         }
       ]
     },
@@ -9638,14 +9669,14 @@
           "cosine_similarity": 0.80482872
         },
         {
+          "identifier": "GO:0000329",
+          "label": "fungal-type vacuole membrane",
+          "cosine_similarity": 0.79426084
+        },
+        {
           "identifier": "GO:0012507",
           "label": "ER to Golgi transport vesicle membrane",
           "cosine_similarity": 0.79362088
-        },
-        {
-          "identifier": "GO:0042170",
-          "label": "plastid membrane",
-          "cosine_similarity": 0.791353
         }
       ]
     }
