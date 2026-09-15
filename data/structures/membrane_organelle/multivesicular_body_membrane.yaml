@@ -1,0 +1,212 @@
+identifier: GO:0032585
+label: multivesicular body membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding a multivesicular body.
+definition_source: GO:0032585
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T02:40:15Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T02:41:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added endosome-membrane parentage, multivesicular-body parthood, UniProt
+    SL-0175 synonymy, a reviewed-label-only lipid-bilayer component, budding-yeast
+    scope, GO/UniProt/DOI evidence, an MVB sorting function, a nonmechanistic MVB
+    membrane topology graph, and a lipid-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0010008
+part_of:
+- GO:0005771
+synonyms:
+- synonym_text: Corpuscula multivesicularis membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0175
+- synonym_text: ECV membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0175
+- synonym_text: Endosomal carrier vesicle membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0175
+- synonym_text: Multivesicular bodies membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0175
+- synonym_text: MVB membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0175
+xrefs:
+- uniprot.location:SL-0175
+components:
+- component_id: multivesicular_body_membrane_lipid_bilayer
+  label: multivesicular body membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent that forms the multivesicular-body limiting membrane
+    remodeled into intraluminal vesicles.
+  evidence:
+  - reference: GO:0032585
+    notes: GO:0032585 identifies the membrane surrounding a multivesicular body.
+  - reference: uniprot.location:SL-0175
+    notes: UniProt Subcellular Location SL-0175 maps to GO:0032585 and denotes the
+      multivesicular body membrane.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0032585 and UniProt SL-0175 identify the complete multivesicular
+    body membrane, but no separate source-neutral CURIE was curated for the generic
+    lipid constituent of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms multivesicular-body membranes that invaginate during ESCRT-dependent
+    sorting of ubiquitinated membrane cargo into intraluminal vesicles.
+  reference: DOI:10.1016/S0092-8674(01)00434-2
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Genetic model for ESCRT-dependent sorting of ubiquitinated cargo at endosomal
+    membranes into the MVB pathway.
+  reference: DOI:10.1016/S0092-8674(01)00434-2
+functions:
+- function_id: multivesicular_body_sorting_pathway
+  label: multivesicular body sorting pathway
+  grounding: GO:0071985
+  description: The multivesicular body membrane buds inward during ESCRT-dependent
+    sorting to package endosomal membrane cargo into intraluminal vesicles.
+  evidence:
+  - reference: GO:0071985
+    notes: GO:0071985 denotes the multivesicular body sorting pathway that targets
+      ubiquitylated transmembrane proteins into luminal vesicles.
+  - reference: DOI:10.1016/S0092-8674(01)00434-2
+    notes: Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved yeast endosomal
+      protein-sorting complex needed for MVB cargo sorting.
+evidence:
+- reference: GO:0032585
+  notes: Gene Ontology cellular-component term for the multivesicular body membrane.
+- reference: GO:0010008
+  notes: Gene Ontology cellular-component term for the broader endosome membrane class.
+- reference: GO:0005771
+  notes: Gene Ontology cellular-component term for the multivesicular body.
+- reference: GO:0071985
+  notes: Gene Ontology biological-process term for the multivesicular body sorting
+    pathway.
+- reference: uniprot.location:SL-0175
+  notes: UniProt Subcellular Location entry SL-0175 maps to GO:0032585, places the
+    membrane under the endosome membrane, and names multivesicular body as the parent
+    compartment.
+- reference: DOI:10.1016/S0092-8674(01)00434-2
+  notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
+    Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
+    ESCRT-I, Cell.
+- reference: DOI:10.1016/S1534-5807(02)00220-4
+  notes: Babst, Katzmann, Estepa-Sabal, Meerloo and Emr 2002, Escrt-III, Developmental
+    Cell.
+- reference: DOI:10.1016/j.devcel.2011.05.015
+  notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+causal_graphs:
+- graph_id: multivesicular_body_membrane_topology
+  title: Multivesicular body membrane topology
+  description: The multivesicular body membrane is the endosome-derived lipid boundary
+    that invaginates to form intraluminal vesicles during ESCRT-dependent MVB sorting.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures membrane topology and ESCRT-III membrane remodeling
+    without asserting a full sequence of cargo recognition, ESCRT recruitment, deubiquitination,
+    Vps4 recycling, or vacuolar fusion.
+  nodes:
+  - node_id: multivesicular_body_membrane
+    label: multivesicular body membrane
+    node_type: STRUCTURE
+    grounding: GO:0032585
+    component_ref: multivesicular_body_membrane_lipid_bilayer
+  - node_id: endosome_membrane
+    label: endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0010008
+  - node_id: escrt_iii
+    label: ESCRT III complex
+    node_type: STRUCTURE
+    grounding: GO:0000815
+  - node_id: intraluminal_vesicle
+    label: intraluminal vesicle
+    node_type: STRUCTURE
+  - node_id: multivesicular_body
+    label: multivesicular body
+    node_type: ORGANELLE
+    grounding: GO:0005771
+  edges:
+  - subject: multivesicular_body_membrane
+    predicate: is a
+    object: endosome_membrane
+    description: The multivesicular body membrane is a specialized endosome membrane.
+    evidence:
+    - reference: GO:0032585
+      notes: GO:0032585 identifies the multivesicular body membrane.
+    - reference: uniprot.location:SL-0175
+      notes: UniProt SL-0175 places the multivesicular body membrane under endosome
+        membrane.
+  - subject: multivesicular_body_membrane
+    predicate: is part of
+    object: multivesicular_body
+    description: The multivesicular body membrane is the membrane boundary of the
+      multivesicular body.
+    evidence:
+    - reference: GO:0032585
+      notes: GO:0032585 denotes the membrane surrounding a multivesicular body.
+    - reference: uniprot.location:SL-0175
+      notes: UniProt SL-0175 names the multivesicular body as the parent compartment
+        of this membrane.
+  - subject: escrt_iii
+    predicate: remodels
+    object: multivesicular_body_membrane
+    description: ESCRT-III acts on endosomal membranes during MVB intraluminal-vesicle
+      formation.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00220-4
+      notes: Babst et al. 2002 characterized yeast ESCRT-III as an endosome-associated
+        complex required for MVB sorting.
+    - reference: DOI:10.1016/j.devcel.2011.05.015
+      notes: Henne, Buchkovich and Emr 2011 reviewed ESCRT-III as the membrane-remodeling
+        complex in the endosomal ESCRT pathway.
+  - subject: multivesicular_body_membrane
+    predicate: buds inward to form
+    object: intraluminal_vesicle
+    description: Regions of the multivesicular-body limiting membrane invaginate and
+      pinch into the lumen as intraluminal vesicles.
+    evidence:
+    - reference: GO:0005771
+      notes: GO:0005771 defines multivesicular bodies as endosomes with internal vesicles
+        formed by invagination of the limiting endosomal membrane.
+  - subject: intraluminal_vesicle
+    predicate: is contained in
+    object: multivesicular_body
+    description: A multivesicular body contains intraluminal vesicles formed from
+      its limiting endosomal membrane.
+    evidence:
+    - reference: GO:0005771
+      notes: GO:0005771 defines the multivesicular body by the presence of internal
+        vesicles.
+discussions:
+- discussion_id: ground_multivesicular_body_membrane_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    multivesicular body membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#multivesicular_body_membrane_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0032585 and UniProt SL-0175, but
+    the multivesicular body membrane lipid-bilayer constituent is intentionally left
+    as reviewed-label-only until an exact source-neutral lipid or membrane-constituent
+    CURIE is curated.
+  evidence:
+  - reference: GO:0032585
+    notes: GO:0032585 identifies the complete multivesicular body membrane.
+  - reference: uniprot.location:SL-0175
+    notes: UniProt SL-0175 maps directly to GO:0032585.
+  posed_by: codex
+  posed_date: '2026-09-15'
