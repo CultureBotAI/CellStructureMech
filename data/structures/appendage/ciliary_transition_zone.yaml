@@ -30,6 +30,14 @@ curation_history:
     Y-link architecture result from the broader CEP290 and NPHP4 ciliary-composition
     phenotypes.
   llm_assisted: true
+- timestamp: '2026-09-15T14:12:44Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #983 review issues #984, #985 and #986 by narrowing Wang-backed
+    Y-link architecture wording to TCTN1, downgrading transition-zone axonemal microtubule
+    essentiality to UNKNOWN, and removing the overbroad GO:0060271 cilium-assembly
+    function.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cilial transition zone
   synonym_type: EXACT_SYNONYM
@@ -64,7 +72,7 @@ components:
   label: transition-zone axonemal microtubules
   component_type: OTHER
   component_role: CONSTITUENT
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The GO definition identifies axonemal microtubules contacted by
     the transition-zone Y-linkers, but this record is scoped to the transition-zone
@@ -88,9 +96,9 @@ components:
     microtubule-membrane gate and tune ciliary protein composition.
   evidence:
   - reference: DOI:10.1038/s41467-022-31751-0
-    notes: Wang et al. 2022 perturbed Chlamydomonas TCTN1, CEP290 and NPHP4 to show
-      that transition-zone proteins affect Y-link assembly, ciliary composition and
-      ectosome shedding.
+    notes: Wang et al. 2022 found that Chlamydomonas TCTN1 loss disrupts transition-zone
+      wedge-shaped structures and compared how TCTN1, CEP290 and NPHP4 mutants alter
+      ciliary composition and ectosome shedding.
   - reference: DOI:10.1101/cshperspect.a028134
     notes: Garcia-Gonzalo and Reiter 2017 reviewed the transition zone as a protein-rich
       gate that controls ciliary composition.
@@ -120,22 +128,11 @@ functions:
   - reference: DOI:10.1101/cshperspect.a028134
     notes: Garcia-Gonzalo and Reiter 2017 reviewed transition fibers and the transition
       zone as ciliary composition gatekeepers.
-- function_id: cilium_assembly
-  label: cilium assembly
-  grounding: GO:0060271
-  description: Transition-zone proteins help assemble and maintain the microtubule-membrane
-    gate at the base of Chlamydomonas cilia.
-  evidence:
-  - reference: DOI:10.1038/s41467-022-31751-0
-    notes: Wang et al. 2022 linked Chlamydomonas transition-zone protein mutants to
-      altered ciliary transition-zone architecture and ciliary content.
 evidence:
 - reference: GO:0035869
   notes: Gene Ontology cellular-component term for the ciliary transition zone.
 - reference: GO:0005929
   notes: Gene Ontology cellular-component term for the cilium.
-- reference: GO:0060271
-  notes: Gene Ontology biological-process term for cilium assembly.
 - reference: DOI:10.1083/jcb.201006105
   notes: Craige et al. 2010, CEP290 tethers flagellar transition zone microtubules
     to the membrane and regulates flagellar protein content, Journal of Cell Biology.

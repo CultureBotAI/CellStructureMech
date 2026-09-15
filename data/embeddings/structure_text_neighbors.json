@@ -697,27 +697,27 @@
         {
           "identifier": "GO:0005929",
           "label": "cilium",
-          "cosine_similarity": 0.86114187
+          "cosine_similarity": 0.85278197
         },
         {
           "identifier": "GO:0060170",
           "label": "ciliary membrane",
-          "cosine_similarity": 0.77334056
+          "cosine_similarity": 0.76245847
         },
         {
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
-          "cosine_similarity": 0.75218105
+          "cosine_similarity": 0.73918829
         },
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.69671323
+          "cosine_similarity": 0.68582993
         },
         {
           "identifier": "GO:0020016",
           "label": "flagellar pocket",
-          "cosine_similarity": 0.67621363
+          "cosine_similarity": 0.6790494
         }
       ]
     },
@@ -726,14 +726,14 @@
       "label": "cilium",
       "neighbors": [
         {
-          "identifier": "GO:0035869",
-          "label": "ciliary transition zone",
-          "cosine_similarity": 0.86114187
-        },
-        {
           "identifier": "GO:0060170",
           "label": "ciliary membrane",
           "cosine_similarity": 0.85281584
+        },
+        {
+          "identifier": "GO:0035869",
+          "label": "ciliary transition zone",
+          "cosine_similarity": 0.85278197
         },
         {
           "identifier": "GO:0036064",
@@ -1482,7 +1482,7 @@
         {
           "identifier": "GO:0035869",
           "label": "ciliary transition zone",
-          "cosine_similarity": 0.75218105
+          "cosine_similarity": 0.73918829
         },
         {
           "identifier": "GO:0020010",
