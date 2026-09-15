@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cellular_bud_tip.yaml
+  slug: cellular_bud_tip
+session:
+  id: 2026-09-15T014330Z-codex-d1d9c5
+  timestamp: '2026-09-15T01:43:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the cellular bud tip record
+  details: Added GO:0005934 as a cellular bud tip structure record with UniProt SL-0030 synonymy
+    and xref, cellular-bud parthood, Saccharomyces cerevisiae distribution and example evidence,
+    a polarized bud-tip growth-site function, GO/UniProt/DOI evidence, a nonmechanistic bud-tip
+    exocyst topology graph, and an exocyst/polarisome component-boundary decision.
