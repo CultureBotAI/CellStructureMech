@@ -1,0 +1,143 @@
+identifier: GO:0022624
+label: proteasome accessory complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex, that caps one or both ends of the proteasome core complex
+  and regulates entry into, or exit from, the proteasome core complex.
+definition_source: GO:0022624
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T21:54:43Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T21:55:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parentage and proteasome parthood, archaeal, actinobacterial,
+    and eukaryotic scope, an M. tuberculosis example, core-access regulation evidence,
+    a nonmechanistic accessory-capped-core graph, and a resolved boundary interpretation
+    for family-specific accessory subunits.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0000502
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: COMMON
+  note: Archaeal 20S proteasome cores associate with proteasome-associated nucleotidases
+    such as PAN to unfold and translocate substrates.
+  reference: DOI:10.1042/ETLS20180025
+- taxon_id: NCBITaxon:201174
+  taxon_label: Actinomycetota
+  presence: VARIABLE
+  note: Actinobacterial proteasome systems include 20S cores with alternative regulators
+    such as Mpa, Bpa, or Cpa.
+  reference: DOI:10.3389/fmolb.2019.00023
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: Eukaryotic 26S proteasomes are built from 20S core particles capped by 19S
+    regulatory particles.
+  reference: DOI:10.1146/annurev-biochem-060410-150257
+canonical_examples:
+- taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis H37Rv
+  note: Actinobacterial model in which Mpa and Bpa regulator routes connect substrate
+    recruitment to the 20S proteasome core.
+  reference: DOI:10.3389/fmolb.2019.00023
+functions:
+- function_id: proteasome_core_access_regulation
+  label: proteasome core access regulation
+  description: Proteasome accessory complexes cap 20S core particles and regulate
+    substrate entry into, or product exit from, the proteolytic chamber.
+  evidence:
+  - reference: GO:0022624
+    notes: GO:0022624 defines proteasome accessory complexes as caps that regulate
+      entry into, or exit from, the proteasome core complex.
+  - reference: DOI:10.3389/fmolb.2019.00023
+    notes: Muller and Weber-Ban 2019 review bacterial regulator complexes that associate
+      with the 20S core to recruit and internalize substrates.
+evidence:
+- reference: GO:0022624
+  notes: Gene Ontology cellular-component term for the proteasome accessory complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complex.
+- reference: GO:0000502
+  notes: Gene Ontology cellular-component term for the containing proteasome complex.
+- reference: GO:0005839
+  notes: Gene Ontology cellular-component term for the capped proteasome core complex.
+- reference: DOI:10.1042/ETLS20180025
+  notes: 'Maupin-Furlow 2018, Proteolytic systems of archaea: slicing, dicing, and
+    mincing in the extreme, Emerging Topics in Life Sciences.'
+- reference: DOI:10.3389/fmolb.2019.00023
+  notes: Muller and Weber-Ban 2019, The bacterial proteasome at the core of diverse
+    degradation pathways, Frontiers in Molecular Biosciences.
+- reference: DOI:10.1146/annurev-biochem-060410-150257
+  notes: Tomko and Hochstrasser 2013, Molecular Architecture and Assembly of the Eukaryotic
+    Proteasome, Annual Review of Biochemistry.
+causal_graphs:
+- graph_id: accessory_complex_caps_20s_core
+  title: Accessory complexes cap the 20S proteasome core
+  description: Proteasome accessory complexes bind the ends of the 20S proteolytic
+    core and control access to the gated proteolytic chamber.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  nodes:
+  - node_id: proteasome_accessory_complex
+    label: proteasome accessory complex
+    node_type: STRUCTURE
+    grounding: GO:0022624
+  - node_id: proteasome_core_complex
+    label: proteasome core complex
+    node_type: STRUCTURE
+    grounding: GO:0005839
+  edges:
+  - subject: proteasome_accessory_complex
+    predicate: caps
+    object: proteasome_core_complex
+    description: Proteasome accessory complexes cap one or both ends of the proteasome
+      core.
+    evidence:
+    - reference: GO:0022624
+      notes: GO:0022624 defines the proteasome accessory complex as a protein complex
+        that caps one or both ends of the proteasome core complex.
+  - subject: proteasome_accessory_complex
+    predicate: regulates substrate access to
+    object: proteasome_core_complex
+    description: Accessory complexes control substrate access to the internal proteolytic
+      sites of the 20S core.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2019.00023
+      notes: Muller and Weber-Ban 2019 review bacterial 20S cores that associate with
+        regulator complexes to recruit and internalize substrates.
+    - reference: DOI:10.1146/annurev-biochem-060410-150257
+      notes: Tomko and Hochstrasser 2013 review the 19S regulatory particle as the
+        eukaryotic cap that recognizes, deubiquitylates, unfolds, and translocates
+        substrates into the 20S core.
+discussions:
+- discussion_id: accessory_complex_family_boundary
+  prompt: Should 19S, PAN, PA28, Mpa, Bpa, or Cpa subunits be listed as components
+    of the generic proteasome accessory complex?
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#accessory_complex_caps_20s_core
+  rationale: GO:0022624 groups alternative proteasome caps and regulators. Those specific
+    eukaryotic, archaeal, and actinobacterial complexes do not share one curated source-neutral
+    component set.
+  evidence:
+  - reference: GO:0022624
+    notes: GO descendants of GO:0022624 include specific regulatory particle, activator-complex,
+      and proteasome-activating nucleotidase classes.
+  - reference: DOI:10.3389/fmolb.2019.00023
+    notes: Muller and Weber-Ban 2019 review multiple bacterial regulator families
+      that can route proteins into actinobacterial 20S proteasomes.
+  resolution_note: Left molecular components unset on this generic cap record and
+    reserved family-specific subunits for future records about exact child accessory
+    complexes.
+  posed_by: codex
+  posed_date: '2026-09-15'

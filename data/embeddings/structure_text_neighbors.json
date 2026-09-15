@@ -8817,6 +8817,11 @@
       "label": "cellulosome",
       "neighbors": [
         {
+          "identifier": "GO:0022624",
+          "label": "proteasome accessory complex",
+          "cosine_similarity": 0.68146083
+        },
+        {
           "identifier": "GO:0000502",
           "label": "proteasome complex",
           "cosine_similarity": 0.67712533
@@ -8835,11 +8840,6 @@
           "identifier": "GO:0005794",
           "label": "Golgi apparatus",
           "cosine_similarity": 0.65316281
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.65302607
         }
       ]
     },
@@ -9271,9 +9271,9 @@
           "cosine_similarity": 0.6852607
         },
         {
-          "identifier": "GO:0005839",
-          "label": "proteasome core complex",
-          "cosine_similarity": 0.66457806
+          "identifier": "GO:0022624",
+          "label": "proteasome accessory complex",
+          "cosine_similarity": 0.68306505
         }
       ]
     },
@@ -9681,9 +9681,45 @@
       ]
     },
     {
+      "identifier": "GO:0022624",
+      "label": "proteasome accessory complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000502",
+          "label": "proteasome complex",
+          "cosine_similarity": 0.95895634
+        },
+        {
+          "identifier": "GO:0005839",
+          "label": "proteasome core complex",
+          "cosine_similarity": 0.89614018
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.79396049
+        },
+        {
+          "identifier": "cellstructuremech:elongasome",
+          "label": "elongasome",
+          "cosine_similarity": 0.74081512
+        },
+        {
+          "identifier": "GO:0010006",
+          "label": "Toc complex",
+          "cosine_similarity": 0.73865753
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000502",
       "label": "proteasome complex",
       "neighbors": [
+        {
+          "identifier": "GO:0022624",
+          "label": "proteasome accessory complex",
+          "cosine_similarity": 0.95895634
+        },
         {
           "identifier": "GO:0005839",
           "label": "proteasome core complex",
@@ -9703,11 +9739,6 @@
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.70930877
-        },
-        {
-          "identifier": "GO:0044615",
-          "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.6861092
         }
       ]
     },
@@ -9719,6 +9750,11 @@
           "identifier": "GO:0000502",
           "label": "proteasome complex",
           "cosine_similarity": 0.95322465
+        },
+        {
+          "identifier": "GO:0022624",
+          "label": "proteasome accessory complex",
+          "cosine_similarity": 0.89614018
         },
         {
           "identifier": "cellstructuremech:elongasome",
@@ -9734,11 +9770,6 @@
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.67426517
-        },
-        {
-          "identifier": "GO:0140737",
-          "label": "encapsulin nanocompartment",
-          "cosine_similarity": 0.67123575
         }
       ]
     },
@@ -9850,6 +9881,11 @@
           "cosine_similarity": 0.7671792
         },
         {
+          "identifier": "GO:0022624",
+          "label": "proteasome accessory complex",
+          "cosine_similarity": 0.72980628
+        },
+        {
           "identifier": "GO:0009512",
           "label": "cytochrome b6f complex",
           "cosine_similarity": 0.72819173
@@ -9858,11 +9894,6 @@
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
           "cosine_similarity": 0.7276129
-        },
-        {
-          "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
-          "label": "chromatophore cytochrome bc1 complex",
-          "cosine_similarity": 0.71206962
         }
       ]
     },
@@ -9886,14 +9917,14 @@
           "cosine_similarity": 0.73927839
         },
         {
+          "identifier": "GO:0022624",
+          "label": "proteasome accessory complex",
+          "cosine_similarity": 0.73865753
+        },
+        {
           "identifier": "GO:0005643",
           "label": "nuclear pore",
           "cosine_similarity": 0.71401761
-        },
-        {
-          "identifier": "GO:0009512",
-          "label": "cytochrome b6f complex",
-          "cosine_similarity": 0.71032633
         }
       ]
     },
