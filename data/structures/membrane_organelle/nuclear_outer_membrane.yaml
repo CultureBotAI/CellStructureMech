@@ -19,6 +19,13 @@ curation_history:
     Nvj1p/Vac8p evidence, a nonmechanistic outer-membrane contact graph, and boundary
     and protein-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-15T06:02:32Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed review issues #938 and #939 by connecting the nuclear envelope
+    lumen to the nuclear inner membrane and Vac8p to the vacuolar membrane in the
+    contact graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: outer nuclear membrane
   synonym_type: EXACT_SYNONYM
@@ -143,6 +150,17 @@ causal_graphs:
       notes: GO:0005637 identifies the inner nuclear envelope bilayer.
     - reference: GO:0005640
       notes: GO:0005640 identifies the outer nuclear envelope bilayer.
+  - subject: nuclear_envelope_lumen
+    predicate: lies between
+    object: nuclear_inner_membrane
+    description: The nuclear envelope lumen also borders the paired inner nuclear
+      membrane.
+    evidence:
+    - reference: GO:0005641
+      notes: GO:0005641 defines the nuclear envelope lumen as the region between the
+        two nuclear envelope bilayers.
+    - reference: GO:0005637
+      notes: GO:0005637 identifies the inner nuclear envelope bilayer.
   - subject: nvj1p
     predicate: localizes to
     object: nuclear_outer_membrane
@@ -151,6 +169,15 @@ causal_graphs:
     - reference: DOI:10.1091/mbc.11.7.2445
       notes: Pan et al. 2000 identified Nvj1p as an outer nuclear membrane protein
         at nucleus-vacuole junctions.
+  - subject: vac8p
+    predicate: localizes to
+    object: vacuolar_membrane
+    description: Vac8p supplies the vacuolar-membrane partner for the Nvj1p-mediated
+      nucleus-vacuole junction.
+    evidence:
+    - reference: DOI:10.1091/mbc.11.7.2445
+      notes: Pan et al. 2000 identified Vac8p as the vacuolar Nvj1p partner that forms
+        nucleus-vacuole junctions.
   - subject: nvj1p
     predicate: interacts with
     object: vac8p
