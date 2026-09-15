@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mis12_mind_type_complex.yaml
+  slug: mis12_mind_type_complex
+session:
+  id: 2026-09-15T111023Z-codex-6740a9
+  timestamp: '2026-09-15T11:10:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the MIS12/MIND type complex record
+  details: Created a GO:0000444 MIS12/MIND type complex record with GO synonymy, outer-kinetochore
+    subclassing, kinetochore parthood, four reviewed label-only subunits, Saccharomyces cerevisiae
+    evidence from De Wulf, McAinsh and Sorger 2003, a constrained assembly graph, and curation
+    discussions for subunit grounding and the Ndc80 recruitment boundary.

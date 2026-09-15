@@ -2556,6 +2556,15 @@
   "definition": "The chemoreceptor array: a hexagonal lattice of trimers-of-dimers of methyl-accepting chemotaxis proteins, held at the membrane by the CheA kinase and the CheW coupling protein. The array is the cell's sensory organ, and its geometry — a 12 nm hexagonal spacing conserved across bacteria and archaea — is what gives chemotaxis its cooperativity and gain."
  },
  {
+  "identifier": "GO:0000444",
+  "label": "MIS12/MIND type complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/mis12_mind_type_complex.html",
+  "definition": "A multiprotein kinetochore subcomplex that binds to centromeric chromatin and forms part of the outer kinetochore. It helps to recruit outer kinetochore subunits that will bind to microtubules. In humans, it consists of MIS12, DSN1, NSL1 and PMF1."
+ },
+ {
   "identifier": "GO:0005742",
   "label": "mitochondrial outer membrane translocase complex",
   "category": "OTHER",
