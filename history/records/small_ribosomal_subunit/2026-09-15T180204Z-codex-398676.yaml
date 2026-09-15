@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/small_ribosomal_subunit.yaml
+  slug: small_ribosomal_subunit
+session:
+  id: 2026-09-15T180204Z-codex-398676
+  timestamp: '2026-09-15T18:02:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO small ribosomal subunit record
+  details: Created data/structures/ribonucleoprotein/small_ribosomal_subunit.yaml for GO:0015935,
+    linking it to the parent ribosome, modeling broad small-subunit rRNA and ribosomal protein
+    components conservatively as REVIEWED_LABEL_ONLY, and adding bacterial 30S distribution,
+    Thermus and E. coli exemplars, GO, literature, and Complex Portal evidence, a decoding
+    graph, and component/scope discussions.
