@@ -1,0 +1,122 @@
+identifier: GO:0097595
+label: ventral disc crossbridge
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A fibrous structure that horizontally links adjacent dorsal microribbons
+  in the ventral disc of Giardia species trophozoites.
+definition_source: GO:0097595
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T15:38:44Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T15:39:20Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ventral-disc partonomy, label-only crossbridge structural proteins,
+    Giardia intestinalis scope, DOI evidence, a nonmechanistic crossbridge assembly
+    graph, and a crossbridge-protein grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-15T15:49:51Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR #993 review issue #995 by removing the unsupported label-only
+    crossbridge structural-protein component and retargeting the exact-composition
+    TODO to the crossbridge graph.'
+  llm_assisted: true
+part_of:
+- GO:0097597
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  presence: COMMON
+  note: Giardia intestinalis is the diplomonad species in which ventral-disc crossbridges
+    were mapped between adjacent dorsal microribbons.
+  reference: DOI:10.1371/journal.pone.0043783
+canonical_examples:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  note: Parasitic diplomonad model used for electron-tomographic mapping of crossbridges
+    in the ventral-disc microribbon lattice.
+  reference: DOI:10.1371/journal.pone.0043783
+functions:
+- function_id: ventral_disc_microribbon_lattice_linkage
+  label: ventral disc microribbon lattice linkage
+  description: Crossbridges link neighboring Giardia ventral-disc dorsal microribbons
+    into the lateral microribbon lattice above the microtubule spiral.
+  evidence:
+  - reference: GO:0097595
+    notes: Gene Ontology defines ventral-disc crossbridges as horizontal links between
+      adjacent microribbons.
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Schwartz et al. 2012 describe the crossbridges linking neighboring dorsal
+      microribbons in the Giardia ventral disc.
+evidence:
+- reference: GO:0097595
+  notes: Gene Ontology cellular-component term for the Giardia ventral-disc crossbridge.
+- reference: DOI:10.1371/journal.pone.0043783
+  notes: Schwartz, Heumann, Dawson and Hoenger 2012, 'A Detailed, Hierarchical Study
+    of Giardia lamblia's Ventral Disc Reveals Novel Microtubule-Associated Protein
+    Complexes', PLOS ONE.
+causal_graphs:
+- graph_id: giardia_crossbridge_microribbon_lattice
+  title: Ventral-disc crossbridges link neighboring Giardia dorsal microribbons
+  description: In Giardia, ventral-disc crossbridges link adjacent dorsal microribbons
+    within the ventral disc.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the crossbridge as a fibrous link between adjacent
+    dorsal microribbons and a named part of the ventral disc while leaving exact crossbridge
+    composition unresolved.
+  nodes:
+  - node_id: crossbridge
+    label: ventral disc crossbridge
+    node_type: STRUCTURE
+    grounding: GO:0097595
+  - node_id: dorsal_microribbon
+    label: ventral disc dorsal microribbon
+    node_type: STRUCTURE
+    grounding: GO:0097594
+  - node_id: ventral_disc
+    label: ventral disc
+    node_type: STRUCTURE
+    grounding: GO:0097597
+  edges:
+  - subject: crossbridge
+    predicate: links
+    object: dorsal_microribbon
+    description: Ventral-disc crossbridges link adjacent dorsal microribbons.
+    evidence:
+    - reference: GO:0097595
+      notes: Gene Ontology defines ventral-disc crossbridges as horizontal links between
+        adjacent microribbons.
+    - reference: DOI:10.1371/journal.pone.0043783
+      notes: Schwartz et al. 2012 mapped crossbridges between neighboring microribbons
+        by cryo-electron tomography.
+  - subject: crossbridge
+    predicate: is part of
+    object: ventral_disc
+    description: Crossbridges are named parts of the Giardia ventral disc.
+    evidence:
+    - reference: GO:0097595
+      notes: Gene Ontology models GO:0097595 as part of GO:0097597, the ventral disc.
+discussions:
+- discussion_id: resolve_crossbridge_protein_grounding
+  prompt: Resolve exact source-neutral groundings and finer component boundaries for
+    Giardia ventral-disc crossbridge proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#giardia_crossbridge_microribbon_lattice
+  rationale: This first ventral-disc crossbridge record keeps exact crossbridge composition
+    unresolved because GO and Schwartz et al. establish the crossbridge as a fibrous
+    ventral-disc structure, but this pass did not verify its protein constituents,
+    stable component boundaries or source-neutral family CURIEs.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Schwartz et al. 2012 resolved crossbridge density between dorsal microribbons
+      without assigning exact source-neutral protein-family groundings.
+  posed_by: codex
+  posed_date: '2026-09-15'
