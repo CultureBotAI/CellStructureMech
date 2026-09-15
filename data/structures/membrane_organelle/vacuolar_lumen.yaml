@@ -18,17 +18,23 @@ curation_history:
     example, lumen compartmentalization, GO/DOI evidence, a nonmechanistic membrane/lumen
     topology graph, and a resolved lumen-boundary interpretation.
   llm_assisted: true
+- timestamp: '2026-09-15T09:42:48Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR #957 review issues #958, #959, and #960 by narrowing distribution
+    to Saccharomyces evidence, retyping the lumen and vacuole graph nodes, and marking
+    the topology graph as FUNCTION.'
+  llm_assisted: true
 parent_structures:
 - GO:0070013
 part_of:
 - GO:0005773
 taxonomic_distribution:
-- taxon_id: NCBITaxon:2759
-  taxon_label: Eukaryota
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Vacuolar lumens occur inside membrane-bounded vacuoles across eukaryotic vacuole
-    lineages.
-  reference: GO:0005775
+  note: Budding yeast has an acidic lumen inside its lysosome-like vacuole.
+  reference: DOI:10.1016/j.bbamcr.2008.08.003
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -67,18 +73,18 @@ causal_graphs:
   title: The vacuolar membrane encloses the vacuolar lumen
   description: The vacuolar lumen is the internal vacuolar compartment bounded by
     the vacuolar membrane.
-  graph_kind: ASSEMBLY
+  graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures only the defining vacuole membrane/lumen topology
     without treating soluble lumenal contents as structural constituents.
   nodes:
   - node_id: vacuolar_lumen
     label: vacuolar lumen
-    node_type: STRUCTURE
+    node_type: CELLULAR_LOCALIZATION
     grounding: GO:0005775
   - node_id: vacuole
     label: vacuole
-    node_type: STRUCTURE
+    node_type: ORGANELLE
     grounding: GO:0005773
   - node_id: vacuolar_membrane
     label: vacuolar membrane
