@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/vacuolar_lumen.yaml
+  slug: vacuolar_lumen
+session:
+  id: 2026-09-15T094300Z-codex-4279d6
+  timestamp: '2026-09-15T09:43:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/958
+  - https://github.com/CultureBotAI/CellStructureMech/issues/959
+  - https://github.com/CultureBotAI/CellStructureMech/issues/960
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/957
+events:
+- type: REVIEW
+  outcome: changed
+  summary: 'Resolve PR #957 review issues'
+  details: 'Resolved PR #957 review issues #958, #959, and #960 by narrowing vacuolar lumen
+    taxonomic scope to the Saccharomyces cerevisiae evidence, retyping the lumen and vacuole
+    graph nodes, and changing the nonmechanistic topology graph to FUNCTION.'
