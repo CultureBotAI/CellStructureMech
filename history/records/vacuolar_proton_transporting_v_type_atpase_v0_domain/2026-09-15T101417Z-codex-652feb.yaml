@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_v0_domain.yaml
+  slug: vacuolar_proton_transporting_v_type_atpase_v0_domain
+session:
+  id: 2026-09-15T101417Z-codex-652feb
+  timestamp: '2026-09-15T10:14:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/961
+events:
+- type: REVIEW
+  outcome: changed
+  summary: 'Open PR #961 for vacuolar V-ATPase V0 domain'
+  details: 'Opened PR #961 to review the GO:0000220 vacuolar proton-transporting V-type ATPase
+    V0 domain record, generated embedding indexes, and rendered pages.'
