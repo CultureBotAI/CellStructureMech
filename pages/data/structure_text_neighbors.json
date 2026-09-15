@@ -1935,6 +1935,11 @@
       "label": "ventral disc",
       "neighbors": [
         {
+          "identifier": "GO:0097595",
+          "label": "ventral disc crossbridge",
+          "cosine_similarity": 0.90989491
+        },
+        {
           "identifier": "GO:0097593",
           "label": "ventral disc microtubule array",
           "cosine_similarity": 0.8878318
@@ -1953,11 +1958,37 @@
           "identifier": "GO:0020007",
           "label": "apical complex",
           "cosine_similarity": 0.67547222
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097595",
+      "label": "ventral disc crossbridge",
+      "neighbors": [
+        {
+          "identifier": "GO:0097597",
+          "label": "ventral disc",
+          "cosine_similarity": 0.90989491
         },
         {
-          "identifier": "GO:0036064",
-          "label": "ciliary basal body",
-          "cosine_similarity": 0.65770913
+          "identifier": "GO:0097594",
+          "label": "ventral disc dorsal microribbon",
+          "cosine_similarity": 0.8773628
+        },
+        {
+          "identifier": "GO:0097593",
+          "label": "ventral disc microtubule array",
+          "cosine_similarity": 0.84555019
+        },
+        {
+          "identifier": "GO:0020007",
+          "label": "apical complex",
+          "cosine_similarity": 0.65069355
+        },
+        {
+          "identifier": "GO:0020010",
+          "label": "conoid",
+          "cosine_similarity": 0.64180173
         }
       ]
     },
@@ -1965,6 +1996,11 @@
       "identifier": "GO:0097594",
       "label": "ventral disc dorsal microribbon",
       "neighbors": [
+        {
+          "identifier": "GO:0097595",
+          "label": "ventral disc crossbridge",
+          "cosine_similarity": 0.8773628
+        },
         {
           "identifier": "GO:0097593",
           "label": "ventral disc microtubule array",
@@ -1984,11 +2020,6 @@
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
           "cosine_similarity": 0.64688494
-        },
-        {
-          "identifier": "cellstructuremech:crescentin_filament",
-          "label": "crescentin filament",
-          "cosine_similarity": 0.63779419
         }
       ]
     },
@@ -2007,6 +2038,11 @@
           "cosine_similarity": 0.8544865
         },
         {
+          "identifier": "GO:0097595",
+          "label": "ventral disc crossbridge",
+          "cosine_similarity": 0.84555019
+        },
+        {
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
           "cosine_similarity": 0.72315969
@@ -2015,11 +2051,6 @@
           "identifier": "GO:0005930",
           "label": "axoneme",
           "cosine_similarity": 0.70186934
-        },
-        {
-          "identifier": "cellstructuremech:cetz_filament",
-          "label": "CetZ filament",
-          "cosine_similarity": 0.68963921
         }
       ]
     },

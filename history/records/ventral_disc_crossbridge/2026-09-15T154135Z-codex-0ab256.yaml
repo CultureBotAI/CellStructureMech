@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ventral_disc_crossbridge.yaml
+  slug: ventral_disc_crossbridge
+session:
+  id: 2026-09-15T154135Z-codex-0ab256
+  timestamp: '2026-09-15T15:41:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ventral disc crossbridge
+  details: Added GO:0097595 as a standalone ventral disc crossbridge record with ventral-disc
+    partonomy, a label-only crossbridge structural-protein component, Giardia intestinalis
+    scope and example rows, primary Schwartz et al. DOI evidence, a nonmechanistic crossbridge
+    assembly graph, and an open TODO for exact crossbridge protein grounding.
