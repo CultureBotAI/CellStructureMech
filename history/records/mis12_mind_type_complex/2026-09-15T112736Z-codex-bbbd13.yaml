@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mis12_mind_type_complex.yaml
+  slug: mis12_mind_type_complex
+session:
+  id: 2026-09-15T112736Z-codex-bbbd13
+  timestamp: '2026-09-15T11:27:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/968
+events:
+- type: EDIT
+  outcome: changed
+  summary: Linked the MIS12/MIND PR history
+  details: 'Linked the new GO:0000444 MIS12/MIND type complex curation to PR #968 after opening
+    the pull request for review.'

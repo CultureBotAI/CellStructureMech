@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nuclear chromosome · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../text-map/">Semantic text map</a>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>nuclear chromosome</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0000228"><code>GO:0000228</code></a> · OTHER · NUCLEOPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A chromosome that encodes the nuclear genome and is found in the nucleus of a eukaryotic cell during the cell cycle phases when the nucleus is intact. <small>[<a href="http://purl.obolibrary.org/obo/GO_0000228"><code>GO:0000228</code></a>]</small></p>
+<p><strong>Synonyms:</strong> nuclear interphase chromosome</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-chromosomal_dna"><td>nuclear chromosomal DNA</td><td>DNA</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Linear nuclear DNA molecules that carry the eukaryotic nuclear genome.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000228"><code>GO:0000228</code></a> <small>GO:0000228 defines a nuclear chromosome as encoding the nuclear genome.</small></li><li><a href="https://doi.org/10.1038/nature08973"><code>DOI:10.1038/nature08973</code></a> <small>Duan et al. 2010 modeled the Saccharomyces cerevisiae nuclear genome in three dimensions.</small></li></ul></td></tr>
+<tr id="components-chromatin_proteins"><td>chromatin-associated proteins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Histone and non-histone proteins that package and organize nuclear chromosomal DNA.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-genet-120116-023438"><code>DOI:10.1146/annurev-genet-120116-023438</code></a> <small>Noma 2017 reviewed mechanisms that organize the three-dimensional budding-yeast genome.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> Saccharomyces cerevisiae — <strong>COMMON</strong>: Budding yeast carries its nuclear genome on chromosomes that are folded into a constrained three-dimensional nuclear arrangement. [<a href="https://doi.org/10.1038/nature08973"><code>DOI:10.1038/nature08973</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> <em>Saccharomyces cerevisiae</em> — Reference yeast system used to model nuclear chromosome folding and spatial genome organization. [<a href="https://doi.org/10.1038/nature08973"><code>DOI:10.1038/nature08973</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>chromosome organization</strong> <a href="http://purl.obolibrary.org/obo/GO_0051276"><code>GO:0051276</code></a> — Nuclear chromosomes package chromosomal DNA with chromatin proteins and fold the nuclear genome within the nucleus.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-genet-120116-023438"><code>DOI:10.1146/annurev-genet-120116-023438</code></a> <small>Noma 2017 reviewed yeast genome folding and three-dimensional chromosome organization.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-chromatinized_dna_forms_nuclear_chromosome">Chromatinized DNA folds into a nuclear chromosome <small>(ASSEMBLY)</small></h3>
+<p>In budding yeast, nuclear chromosomal DNA is packaged by chromatin proteins and folded inside the nuclear lumen as part of the three-dimensional genome.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>nuclear chromosomal DNA</td><td>is a DNA constituent of</td><td>nuclear chromosome</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000228"><code>GO:0000228</code></a> <small>GO:0000228 defines a nuclear chromosome as encoding the nuclear genome.</small></li><li><a href="https://doi.org/10.1038/nature08973"><code>DOI:10.1038/nature08973</code></a> <small>Duan et al. 2010 modeled Saccharomyces cerevisiae nuclear chromosomes as folded genomic DNA molecules.</small></li></ul></td></tr>
+<tr><td>chromatin-associated proteins</td><td>organize</td><td>nuclear chromosomal DNA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-genet-120116-023438"><code>DOI:10.1146/annurev-genet-120116-023438</code></a> <small>Noma 2017 reviewed yeast factors that shape three-dimensional genome organization.</small></li></ul></td></tr>
+<tr><td>nuclear chromosome</td><td>is located in</td><td>nuclear lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000228"><code>GO:0000228</code></a> <small>GO asserts GO:0000228 nuclear chromosome part_of GO:0031981 nuclear lumen.</small></li></ul></td></tr>
+<tr><td>nuclear chromosome</td><td>undergoes</td><td>chromosome organization</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-genet-120116-023438"><code>DOI:10.1146/annurev-genet-120116-023438</code></a> <small>Noma 2017 reviewed three-dimensional organization of yeast nuclear chromosomes.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve which histone, condensin, cohesin, centromere and telomere protein cohorts should be modeled as components of the nuclear chromosome rather than process machinery. <small>This first nuclear-chromosome record keeps chromatin proteins as a reviewed label-only aggregate to avoid overclaiming a source-neutral exact component list.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000228"><code>GO:0000228</code></a> <small>Gene Ontology cellular-component term for nuclear chromosome.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005694"><code>GO:0005694</code></a> <small>Gene Ontology cellular-component parent term for chromosome.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> <small>Gene Ontology cellular-component term for nuclear lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0051276"><code>GO:0051276</code></a> <small>Gene Ontology biological-process term for chromosome organization.</small></li><li><a href="https://doi.org/10.1038/nature08973"><code>DOI:10.1038/nature08973</code></a> <small>Duan et al. 2010, A three-dimensional model of the yeast genome, Nature.</small></li><li><a href="https://doi.org/10.1146/annurev-genet-120116-023438"><code>DOI:10.1146/annurev-genet-120116-023438</code></a> <small>Noma 2017, The Yeast Genomes in Three Dimensions: Mechanisms and Functions, Annual Review of Genetics.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-15T13:02:15Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-15T13:03:25Z</code> codex · EXPANDED_RECORD — Added GO parentage, nuclear-lumen parthood and narrow synonymy, reviewed label-only DNA and chromatin-protein components, eukaryotic and Saccharomyces taxonomic scope, chromosome-organization function, GO/DOI evidence, a nonmechanistic chromatinization graph, and a chromatin-boundary TODO.</li><li><code>2026-09-15T13:04:10Z</code> codex · REFINED_GRAPH — Connected the chromosome-organization process node and neutralized the broad Eukaryota taxon note.</li><li><code>2026-09-15T13:16:10Z</code> codex · REVIEW_FIXES — Resolved PR #977 review issues #978 and #979 by removing a GO-taxonomy-only broad Eukaryota distribution assertion and retuning the chromosomal-DNA graph edge to a composition predicate.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/nuclear_chromosome.yaml"><code>data/structures/other/nuclear_chromosome.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

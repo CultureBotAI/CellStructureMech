@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/coma_complex.yaml
+  slug: coma_complex
+session:
+  id: 2026-09-15T123204Z-codex-1aa9ea
+  timestamp: '2026-09-15T12:32:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add COMA complex record
+  details: Added a GO-grounded COMA complex record with nuclear protein-containing-complex
+    parentage, kinetochore and nuclear-chromosome parthood, four reviewed label-only Saccharomyces
+    cerevisiae COMA subunits, a budding-yeast taxonomic example, inner-to-outer kinetochore
+    bridging function, GO/DOI evidence, refreshed text embeddings, and a nonmechanistic COMA
+    bridge graph.

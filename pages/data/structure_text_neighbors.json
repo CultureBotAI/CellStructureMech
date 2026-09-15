@@ -1790,6 +1790,11 @@
           "cosine_similarity": 0.74113953
         },
         {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.72645975
+        },
+        {
           "identifier": "GO:0120120",
           "label": "bilobe structure",
           "cosine_similarity": 0.72502947
@@ -1798,11 +1803,6 @@
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
           "cosine_similarity": 0.72444479
-        },
-        {
-          "identifier": "GO:0036064",
-          "label": "ciliary basal body",
-          "cosine_similarity": 0.72123174
         }
       ]
     },
@@ -8207,6 +8207,11 @@
           "cosine_similarity": 0.83918871
         },
         {
+          "identifier": "GO:0000228",
+          "label": "nuclear chromosome",
+          "cosine_similarity": 0.81081039
+        },
+        {
           "identifier": "GO:0042645",
           "label": "mitochondrial nucleoid",
           "cosine_similarity": 0.80256079
@@ -8215,11 +8220,6 @@
           "identifier": "GO:0033009",
           "label": "nucleomorph",
           "cosine_similarity": 0.77385118
-        },
-        {
-          "identifier": "GO:0005634",
-          "label": "nucleus",
-          "cosine_similarity": 0.76533173
         }
       ]
     },
@@ -8476,6 +8476,11 @@
       "label": "cellulosome",
       "neighbors": [
         {
+          "identifier": "GO:0000502",
+          "label": "proteasome complex",
+          "cosine_similarity": 0.67712533
+        },
+        {
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.66517752
@@ -8494,11 +8499,6 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.65302607
-        },
-        {
-          "identifier": "GO:0031471",
-          "label": "ethanolamine degradation polyhedral organelle",
-          "cosine_similarity": 0.6467232
         }
       ]
     },
@@ -8530,6 +8530,37 @@
           "identifier": "GO:0030659",
           "label": "cytoplasmic vesicle membrane",
           "cosine_similarity": 0.74741037
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000817",
+      "label": "COMA complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000776",
+          "label": "kinetochore",
+          "cosine_similarity": 0.84987153
+        },
+        {
+          "identifier": "GO:0000444",
+          "label": "MIS12/MIND type complex",
+          "cosine_similarity": 0.78215719
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.72645975
+        },
+        {
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.70728645
+        },
+        {
+          "identifier": "GO:0000815",
+          "label": "ESCRT III complex",
+          "cosine_similarity": 0.69487656
         }
       ]
     },
@@ -8755,6 +8786,16 @@
       "label": "kinetochore",
       "neighbors": [
         {
+          "identifier": "GO:0000444",
+          "label": "MIS12/MIND type complex",
+          "cosine_similarity": 0.85967839
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.84987153
+        },
+        {
           "identifier": "GO:0020023",
           "label": "kinetoplast",
           "cosine_similarity": 0.79700617
@@ -8768,16 +8809,6 @@
           "identifier": "GO:0120120",
           "label": "bilobe structure",
           "cosine_similarity": 0.72277738
-        },
-        {
-          "identifier": "GO:0044615",
-          "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.69438028
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.67701782
         }
       ]
     },
@@ -8813,6 +8844,37 @@
       ]
     },
     {
+      "identifier": "GO:0000444",
+      "label": "MIS12/MIND type complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000776",
+          "label": "kinetochore",
+          "cosine_similarity": 0.85967839
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.78215719
+        },
+        {
+          "identifier": "GO:0020023",
+          "label": "kinetoplast",
+          "cosine_similarity": 0.67069412
+        },
+        {
+          "identifier": "GO:0120120",
+          "label": "bilobe structure",
+          "cosine_similarity": 0.66214279
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.66202195
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005742",
       "label": "mitochondrial outer membrane translocase complex",
       "neighbors": [
@@ -8840,6 +8902,37 @@
           "identifier": "GO:0031966",
           "label": "mitochondrial membrane",
           "cosine_similarity": 0.82299873
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000228",
+      "label": "nuclear chromosome",
+      "neighbors": [
+        {
+          "identifier": "GO:0009295",
+          "label": "nucleoid",
+          "cosine_similarity": 0.81081039
+        },
+        {
+          "identifier": "GO:0042645",
+          "label": "mitochondrial nucleoid",
+          "cosine_similarity": 0.76276191
+        },
+        {
+          "identifier": "GO:0005634",
+          "label": "nucleus",
+          "cosine_similarity": 0.75336336
+        },
+        {
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.74097936
+        },
+        {
+          "identifier": "GO:0000776",
+          "label": "kinetochore",
+          "cosine_similarity": 0.71445257
         }
       ]
     },
@@ -9070,6 +9163,11 @@
           "cosine_similarity": 0.77848284
         },
         {
+          "identifier": "GO:0000228",
+          "label": "nuclear chromosome",
+          "cosine_similarity": 0.7134921
+        },
+        {
           "identifier": "GO:0009295",
           "label": "nucleoid",
           "cosine_similarity": 0.69722463
@@ -9083,11 +9181,6 @@
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
           "cosine_similarity": 0.67151498
-        },
-        {
-          "identifier": "GO:0000932",
-          "label": "P-body",
-          "cosine_similarity": 0.66746577
         }
       ]
     },
@@ -9216,9 +9309,45 @@
       ]
     },
     {
+      "identifier": "GO:0000502",
+      "label": "proteasome complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005839",
+          "label": "proteasome core complex",
+          "cosine_similarity": 0.95322465
+        },
+        {
+          "identifier": "cellstructuremech:elongasome",
+          "label": "elongasome",
+          "cosine_similarity": 0.73819977
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.73590218
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.70930877
+        },
+        {
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.6861092
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005839",
       "label": "proteasome core complex",
       "neighbors": [
+        {
+          "identifier": "GO:0000502",
+          "label": "proteasome complex",
+          "cosine_similarity": 0.95322465
+        },
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
@@ -9238,11 +9367,6 @@
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
           "cosine_similarity": 0.67123575
-        },
-        {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.67038786
         }
       ]
     },

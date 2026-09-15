@@ -1,0 +1,254 @@
+identifier: GO:0000817
+label: COMA complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A kinetochore multiprotein complex that bridges the subunits that are
+  in contact with centromeric DNA and the subunits bound to microtubules during kinetochore
+  assembly. In yeast, consists of Ctf19p, Okp1p, Mcm21p, and Ame1p.
+definition_source: GO:0000817
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T12:27:34Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T12:28:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO hierarchy and parthood, four reviewed label-only COMA subunits,
+    a Saccharomyces cerevisiae taxonomic example, inner-to-outer kinetochore bridging
+    function, DOI/GO evidence, a nonmechanistic COMA bridge graph, and a Ctf19/CCAN
+    boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-15T12:29:21Z'
+  curator: codex
+  action: REFINED_GRAPH
+  changes: Connected COMA to the centromeric DNA-proximal side of the inner-to-outer
+    kinetochore bridge graph.
+  llm_assisted: true
+- timestamp: '2026-09-15T12:39:25Z'
+  curator: codex
+  action: FIX_DISCUSSION_ANCHORS
+  changes: Attached the Ctf19/CCAN boundary TODO to concrete COMA component IDs.
+  llm_assisted: true
+- timestamp: '2026-09-15T12:46:39Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved #975 and #976 by giving the two COMA bridge edges side-specific
+    predicates and adding a TODO for the GO exact-synonym Mcm1p/Mcm21p spelling mismatch.'
+  llm_assisted: true
+parent_structures:
+- GO:0140513
+part_of:
+- GO:0000776
+- GO:0000228
+components:
+- component_id: ctf19_subunit
+  label: Ctf19 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CTF19
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Ctf19p is modeled as a Saccharomyces COMA subunit; no source-neutral
+    Ctf19 protein-family CURIE was curated for this first complex record.
+  role: Named COMA constituent in the budding-yeast Ctf19p-Okp1p-Mcm21p-Ame1p kinetochore
+    complex.
+  evidence:
+  - reference: GO:0000817
+    notes: GO:0000817 defines the yeast COMA complex as consisting of Ctf19p, Okp1p,
+      Mcm21p and Ame1p.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 placed Ctf19p in the budding-yeast COMA
+      kinetochore subcomplex.
+- component_id: okp1_subunit
+  label: Okp1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - OKP1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Okp1p is modeled as a Saccharomyces COMA subunit; no source-neutral
+    Okp1 protein-family CURIE was curated for this first complex record.
+  role: Named COMA constituent in the budding-yeast Ctf19p-Okp1p-Mcm21p-Ame1p kinetochore
+    complex.
+  evidence:
+  - reference: GO:0000817
+    notes: GO:0000817 defines the yeast COMA complex as consisting of Ctf19p, Okp1p,
+      Mcm21p and Ame1p.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 placed Okp1p in the budding-yeast COMA
+      kinetochore subcomplex.
+- component_id: mcm21_subunit
+  label: Mcm21 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MCM21
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Mcm21p is modeled as a Saccharomyces COMA subunit; no source-neutral
+    Mcm21 protein-family CURIE was curated for this first complex record.
+  role: Named COMA constituent in the budding-yeast Ctf19p-Okp1p-Mcm21p-Ame1p kinetochore
+    complex.
+  evidence:
+  - reference: GO:0000817
+    notes: GO:0000817 defines the yeast COMA complex as consisting of Ctf19p, Okp1p,
+      Mcm21p and Ame1p.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 placed Mcm21p in the budding-yeast COMA
+      kinetochore subcomplex.
+- component_id: ame1_subunit
+  label: Ame1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - AME1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Ame1p is modeled as a Saccharomyces COMA subunit; no source-neutral
+    Ame1 protein-family CURIE was curated for this first complex record.
+  role: Named COMA constituent in the budding-yeast Ctf19p-Okp1p-Mcm21p-Ame1p kinetochore
+    complex.
+  evidence:
+  - reference: GO:0000817
+    notes: GO:0000817 defines the yeast COMA complex as consisting of Ctf19p, Okp1p,
+      Mcm21p and Ame1p.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 placed Ame1p in the budding-yeast COMA
+      kinetochore subcomplex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses the four-protein Ctf19p-Okp1p-Mcm21p-Ame1p COMA complex
+    as an inner kinetochore bridge.
+  reference: DOI:10.1101/gad.1144403
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference yeast system in which COMA was placed between centromeric DNA-proximal
+    and microtubule-bound kinetochore subcomplexes.
+  reference: DOI:10.1101/gad.1144403
+functions:
+- function_id: inner_outer_kinetochore_bridging
+  label: inner-to-outer kinetochore bridging
+  description: COMA links centromeric DNA-proximal kinetochore subunits to microtubule-bound
+    modules during kinetochore assembly.
+  evidence:
+  - reference: GO:0000817
+    notes: GO:0000817 defines COMA by the bridge it forms between centromeric-DNA-proximal
+      and microtubule-bound kinetochore subunits.
+  - reference: DOI:10.1101/gad.1144403
+    notes: De Wulf, McAinsh and Sorger 2003 analyzed COMA within a hierarchical budding-yeast
+      kinetochore assembly pathway.
+evidence:
+- reference: GO:0000817
+  notes: Gene Ontology cellular-component term for the COMA complex.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0000776
+  notes: Gene Ontology cellular-component term for kinetochore.
+- reference: GO:0000228
+  notes: Gene Ontology cellular-component term for nuclear chromosome.
+- reference: DOI:10.1101/gad.1144403
+  notes: De Wulf, McAinsh and Sorger 2003, Hierarchical assembly of the budding yeast
+    kinetochore from multiple subcomplexes, Genes & Development.
+- reference: DOI:10.1534/genetics.112.145276
+  notes: Biggins 2013, The composition, functions, and regulation of the budding yeast
+    kinetochore, Genetics.
+causal_graphs:
+- graph_id: coma_inner_outer_kinetochore_bridge
+  title: COMA bridges centromere-proximal and microtubule-bound kinetochore layers
+  description: In budding yeast, the Ctf19p-Okp1p-Mcm21p-Ame1p COMA complex links
+    centromeric DNA-proximal kinetochore subunits to microtubule-bound modules during
+    kinetochore assembly.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records COMA's inner-to-outer bridging role without enumerating
+    the full Ctf19/CCAN network or separating direct from indirect outer-kinetochore
+    contacts.
+  nodes:
+  - node_id: coma_complex
+    label: COMA complex
+    node_type: STRUCTURE
+    grounding: GO:0000817
+  - node_id: kinetochore
+    label: kinetochore
+    node_type: STRUCTURE
+    grounding: GO:0000776
+  - node_id: centromeric_dna_proximal_subunits
+    label: centromeric DNA-proximal kinetochore subunits
+    node_type: GENE_OR_PROTEIN
+  - node_id: microtubule_bound_subunits
+    label: microtubule-bound kinetochore subunits
+    node_type: GENE_OR_PROTEIN
+  edges:
+  - subject: coma_complex
+    predicate: is part of
+    object: kinetochore
+    description: The COMA complex is a constituent kinetochore multiprotein complex.
+    evidence:
+    - reference: GO:0000817
+      notes: GO asserts GO:0000817 COMA complex part_of GO:0000776 kinetochore.
+  - subject: coma_complex
+    predicate: bridges to DNA-proximal side
+    object: centromeric_dna_proximal_subunits
+    description: COMA bridges to the DNA-proximal kinetochore subunits that contact
+      centromeric chromatin.
+    evidence:
+    - reference: GO:0000817
+      notes: GO:0000817 defines COMA by its bridge from centromeric DNA-proximal to
+        microtubule-bound kinetochore subunits.
+    - reference: DOI:10.1101/gad.1144403
+      notes: De Wulf, McAinsh and Sorger 2003 placed COMA between DNA-proximal and
+        microtubule-bound budding-yeast kinetochore subcomplexes.
+  - subject: coma_complex
+    predicate: bridges to microtubule-bound side
+    object: microtubule_bound_subunits
+    description: COMA bridges centromeric DNA-proximal subunits to kinetochore subunits
+      bound to microtubules.
+    evidence:
+    - reference: GO:0000817
+      notes: GO:0000817 defines COMA by its bridge from centromeric DNA-proximal to
+        microtubule-bound kinetochore subunits.
+    - reference: DOI:10.1101/gad.1144403
+      notes: De Wulf, McAinsh and Sorger 2003 placed COMA between DNA-proximal and
+        microtubule-bound budding-yeast kinetochore subcomplexes.
+discussions:
+- discussion_id: resolve_ctf19_ccan_boundaries
+  prompt: Resolve the boundary between the yeast four-subunit COMA complex and the
+    broader eukaryotic Ctf19/CCAN inner kinetochore network.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ctf19_subunit
+  - components#okp1_subunit
+  - components#mcm21_subunit
+  - components#ame1_subunit
+  - causal_graphs#coma_inner_outer_kinetochore_bridge
+  rationale: This first COMA record stays at the four subunits named in GO:0000817
+    and avoids flattening additional Ctf19/CCAN factors into a single universally
+    present component list.
+  evidence:
+  - reference: DOI:10.1534/genetics.112.145276
+  posed_by: codex
+  posed_date: '2026-09-15'
+- discussion_id: resolve_go_coma_synonym_spelling
+  prompt: Verify whether the GO:0000817 exact synonym Ctf19p-Okp1p-Mcm1p-Ame1p complex
+    should be corrected to Mcm21p or curated as a historical spelling.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mcm21_subunit
+  rationale: The local GO metadata lists Ctf19p-Okp1p-Mcm1p-Ame1p complex as an exact
+    synonym, while the GO definition and yeast subunit model name Mcm21p. This record
+    omits that synonym until the spelling mismatch can be reviewed.
+  evidence:
+  - reference: GO:0000817
+  posed_by: codex
+  posed_date: '2026-09-15'

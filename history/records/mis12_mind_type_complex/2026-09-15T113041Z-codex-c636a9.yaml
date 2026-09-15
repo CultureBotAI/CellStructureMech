@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mis12_mind_type_complex.yaml
+  slug: mis12_mind_type_complex
+session:
+  id: 2026-09-15T113041Z-codex-c636a9
+  timestamp: '2026-09-15T11:30:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/969
+  - https://github.com/CultureBotAI/CellStructureMech/issues/970
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/968
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Resolved MIS12/MIND graph review issues
+  details: 'Resolved PR #968 review issues #969 and #970 by replacing the Ndc80-specific graph
+    target with a generic outer microtubule-binding subunit class, adding an explicit outer-kinetochore-to-kinetochore
+    parthood edge, and recording the boundary decision for recruited outer subunits.'
