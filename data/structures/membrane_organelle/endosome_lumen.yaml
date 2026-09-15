@@ -18,6 +18,13 @@ curation_history:
     scope, GO/DOI evidence, a nonmechanistic endosome lumen topology graph, and a
     resolved lumen-boundary interpretation.
   llm_assisted: true
+- timestamp: '2026-09-15T20:24:39Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1022 by routing intraluminal vesicle containment through the
+    multivesicular body lumen specialization and resolved #1023 by removing the unused
+    ESCRT-III DOI from record-level evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0070013
 part_of:
@@ -61,6 +68,9 @@ evidence:
     the lumen.
 - reference: GO:0005771
   notes: Gene Ontology cellular-component term for the multivesicular body.
+- reference: uniprot.location:SL-0340
+  notes: UniProt Subcellular Location entry SL-0340 identifies the multivesicular
+    body lumen as an endosome-lumen specialization.
 - reference: GO:0071985
   notes: Gene Ontology biological-process term for the multivesicular body sorting
     pathway.
@@ -68,25 +78,28 @@ evidence:
   notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
     Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
     ESCRT-I, Cell.
-- reference: DOI:10.1016/S1534-5807(02)00220-4
-  notes: Babst et al. 2002, ESCRT-III, Developmental Cell.
 - reference: DOI:10.1016/j.devcel.2011.05.015
   notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
 causal_graphs:
 - graph_id: endosome_lumen_topology
   title: Endosome lumen topology
-  description: The endosome membrane bounds the endosome lumen that receives intraluminal
-    vesicles during multivesicular-body sorting.
+  description: The endosome membrane bounds the endosome lumen whose multivesicular-body
+    lumen specialization receives intraluminal vesicles during MVB sorting.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures defining endosome lumen topology and the multivesicular-body
-    lumenal vesicle destination without asserting a full sequence of ESCRT cargo recognition,
+    lumenal vesicle destination without making intraluminal vesicles a generic feature
+    of all endosome lumens or asserting a full sequence of ESCRT cargo recognition,
     membrane budding, scission, or vacuolar fusion.
   nodes:
   - node_id: endosome_lumen
     label: endosome lumen
     node_type: CELLULAR_LOCALIZATION
     grounding: GO:0031904
+  - node_id: multivesicular_body_lumen
+    label: multivesicular body lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:multivesicular_body_lumen
   - node_id: endosome_membrane
     label: endosome membrane
     node_type: STRUCTURE
@@ -111,6 +124,13 @@ causal_graphs:
     - reference: GO:0031904
       notes: GO:0031904 defines the endosome lumen as the volume enclosed by the membrane
         of an endosome.
+  - subject: multivesicular_body_lumen
+    predicate: is a
+    object: endosome_lumen
+    description: The multivesicular body lumen is a specialized endosome lumen.
+    evidence:
+    - reference: uniprot.location:SL-0340
+      notes: UniProt SL-0340 places the multivesicular body lumen under endosome lumen.
   - subject: endosome_membrane
     predicate: bounds
     object: endosome_lumen
@@ -131,16 +151,15 @@ causal_graphs:
         vesicles formed from the limiting endosomal membrane.
   - subject: intraluminal_vesicle
     predicate: is contained in
-    object: endosome_lumen
-    description: In multivesicular bodies, the endosome lumen contains intraluminal
-      vesicles generated from the limiting endosomal membrane.
+    object: multivesicular_body_lumen
+    description: In multivesicular bodies, the multivesicular body lumen contains
+      intraluminal vesicles generated from the limiting endosomal membrane.
     evidence:
     - reference: GO:0005771
       notes: GO:0005771 defines multivesicular bodies by internal vesicles formed
         from invagination of the limiting endosomal membrane.
-    - reference: DOI:10.1016/j.devcel.2011.05.015
-      notes: Henne, Buchkovich and Emr 2011 reviewed the ESCRT pathway as the route
-        that forms intraluminal vesicles at endosomes.
+    - reference: uniprot.location:SL-0340
+      notes: UniProt SL-0340 identifies the internal multivesicular body lumen.
 discussions:
 - discussion_id: endosome_lumen_boundary_not_membrane
   prompt: Represent the endosome membrane as the boundary of the endosome lumen rather

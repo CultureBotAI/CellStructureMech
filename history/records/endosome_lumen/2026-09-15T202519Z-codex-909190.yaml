@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endosome_lumen.yaml
+  slug: endosome_lumen
+session:
+  id: 2026-09-15T202519Z-codex-909190
+  timestamp: '2026-09-15T20:25:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1022
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1023
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1021
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed endosome lumen adversarial review findings
+  details: 'Resolved PR #1021 review issues #1022 and #1023 by routing intraluminal-vesicle
+    containment through the multivesicular body lumen specialization and removing the unused
+    ESCRT-III DOI from endosome lumen record-level evidence.'
