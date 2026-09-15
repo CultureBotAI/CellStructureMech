@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/vacuole.yaml
+  slug: vacuole
+session:
+  id: 2026-09-15T075416Z-codex-1ce68f
+  timestamp: '2026-09-15T07:54:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add vacuole record
+  details: Created a GO:0005773 vacuole record with intracellular-membrane-bounded-organelle
+    parentage, vacuolar membrane and lumen parts, Saccharomyces storage and degradation evidence,
+    a nonmechanistic membrane/lumen topology graph, and a resolved interpretation that keeps
+    vacuolar substructures out of molecular components.

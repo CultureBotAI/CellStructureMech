@@ -3190,14 +3190,14 @@
           "cosine_similarity": 0.8259631
         },
         {
+          "identifier": "GO:0005773",
+          "label": "vacuole",
+          "cosine_similarity": 0.82224811
+        },
+        {
           "identifier": "GO:0005768",
           "label": "endosome",
           "cosine_similarity": 0.81014219
-        },
-        {
-          "identifier": "GO:0031410",
-          "label": "cytoplasmic vesicle",
-          "cosine_similarity": 0.80999888
         }
       ]
     },
@@ -3867,6 +3867,11 @@
           "cosine_similarity": 0.86332507
         },
         {
+          "identifier": "GO:0005773",
+          "label": "vacuole",
+          "cosine_similarity": 0.81757702
+        },
+        {
           "identifier": "GO:0005774",
           "label": "vacuolar membrane",
           "cosine_similarity": 0.81327252
@@ -3875,11 +3880,6 @@
           "identifier": "GO:0062160",
           "label": "spongiome",
           "cosine_similarity": 0.81297775
-        },
-        {
-          "identifier": "GO:0000324",
-          "label": "fungal-type vacuole",
-          "cosine_similarity": 0.79661273
         }
       ]
     },
@@ -4678,14 +4678,14 @@
           "cosine_similarity": 0.85248584
         },
         {
+          "identifier": "GO:0005773",
+          "label": "vacuole",
+          "cosine_similarity": 0.84625581
+        },
+        {
           "identifier": "GO:0030137",
           "label": "COPI-coated vesicle",
           "cosine_similarity": 0.84134631
-        },
-        {
-          "identifier": "GO:0032585",
-          "label": "multivesicular body membrane",
-          "cosine_similarity": 0.84057703
         }
       ]
     },
@@ -4957,14 +4957,14 @@
           "cosine_similarity": 0.79161018
         },
         {
+          "identifier": "GO:0005773",
+          "label": "vacuole",
+          "cosine_similarity": 0.77190074
+        },
+        {
           "identifier": "cellstructuremech:parasitophorous_vacuole_lumen",
           "label": "parasitophorous vacuole lumen",
           "cosine_similarity": 0.76966008
-        },
-        {
-          "identifier": "GO:0000331",
-          "label": "contractile vacuole",
-          "cosine_similarity": 0.76684454
         }
       ]
     },
@@ -4983,6 +4983,11 @@
           "cosine_similarity": 0.89312303
         },
         {
+          "identifier": "GO:0005773",
+          "label": "vacuole",
+          "cosine_similarity": 0.89299587
+        },
+        {
           "identifier": "GO:0005774",
           "label": "vacuolar membrane",
           "cosine_similarity": 0.83453956
@@ -4991,11 +4996,6 @@
           "identifier": "GO:0033107",
           "label": "Cvt vesicle",
           "cosine_similarity": 0.82641509
-        },
-        {
-          "identifier": "GO:0005776",
-          "label": "autophagosome",
-          "cosine_similarity": 0.8259631
         }
       ]
     },
@@ -5014,6 +5014,11 @@
           "cosine_similarity": 0.898407
         },
         {
+          "identifier": "GO:0005773",
+          "label": "vacuole",
+          "cosine_similarity": 0.86910992
+        },
+        {
           "identifier": "GO:0005774",
           "label": "vacuolar membrane",
           "cosine_similarity": 0.83823945
@@ -5022,11 +5027,6 @@
           "identifier": "cellstructuremech:cvt_vesicle_lumen",
           "label": "Cvt vesicle lumen",
           "cosine_similarity": 0.83483256
-        },
-        {
-          "identifier": "GO:0060205",
-          "label": "cytoplasmic vesicle lumen",
-          "cosine_similarity": 0.82255839
         }
       ]
     },
@@ -5050,14 +5050,14 @@
           "cosine_similarity": 0.89312303
         },
         {
+          "identifier": "GO:0005773",
+          "label": "vacuole",
+          "cosine_similarity": 0.87877124
+        },
+        {
           "identifier": "GO:0033110",
           "label": "Cvt vesicle membrane",
           "cosine_similarity": 0.85957033
-        },
-        {
-          "identifier": "GO:0030659",
-          "label": "cytoplasmic vesicle membrane",
-          "cosine_similarity": 0.85274747
         }
       ]
     },
@@ -7561,14 +7561,14 @@
           "cosine_similarity": 0.76920505
         },
         {
+          "identifier": "GO:0005773",
+          "label": "vacuole",
+          "cosine_similarity": 0.76786623
+        },
+        {
           "identifier": "cellstructuremech:parasitophorous_vacuole_membrane",
           "label": "parasitophorous vacuole membrane",
           "cosine_similarity": 0.75059729
-        },
-        {
-          "identifier": "cellstructuremech:contractile_vacuole_lumen",
-          "label": "contractile vacuole lumen",
-          "cosine_similarity": 0.74903569
         }
       ]
     },
@@ -7742,6 +7742,11 @@
           "cosine_similarity": 0.89025602
         },
         {
+          "identifier": "GO:0005773",
+          "label": "vacuole",
+          "cosine_similarity": 0.88090563
+        },
+        {
           "identifier": "GO:0030659",
           "label": "cytoplasmic vesicle membrane",
           "cosine_similarity": 0.88045249
@@ -7750,11 +7755,37 @@
           "identifier": "GO:0005640",
           "label": "nuclear outer membrane",
           "cosine_similarity": 0.86626191
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005773",
+      "label": "vacuole",
+      "neighbors": [
+        {
+          "identifier": "GO:0000324",
+          "label": "fungal-type vacuole",
+          "cosine_similarity": 0.89299587
         },
         {
-          "identifier": "GO:0031164",
-          "label": "contractile vacuolar membrane",
-          "cosine_similarity": 0.86535141
+          "identifier": "GO:0005774",
+          "label": "vacuolar membrane",
+          "cosine_similarity": 0.88090563
+        },
+        {
+          "identifier": "GO:0000329",
+          "label": "fungal-type vacuole membrane",
+          "cosine_similarity": 0.87877124
+        },
+        {
+          "identifier": "GO:0000328",
+          "label": "fungal-type vacuole lumen",
+          "cosine_similarity": 0.86910992
+        },
+        {
+          "identifier": "cellstructuremech:cvt_vesicle_lumen",
+          "label": "Cvt vesicle lumen",
+          "cosine_similarity": 0.8507413
         }
       ]
     },

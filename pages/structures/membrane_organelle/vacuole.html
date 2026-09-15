@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vacuole · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>vacuole</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005773"><code>GO:0005773</code></a> · MEMBRANE_ORGANELLE · MEMBRANE_BOUNDED_ORGANELLE · <span class="status">PROPOSED</span></p>
+<p class="definition">A closed structure, found only in eukaryotic cells, that is completely surrounded by unit membrane and contains liquid material. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005773"><code>GO:0005773</code></a>]</small></p>
+<p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005774"><code>GO:0005774</code></a> <a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a> </p>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> Saccharomyces cerevisiae — <strong>COMMON</strong>: Budding yeast has a lysosome-like vacuole with a bounding vacuolar membrane and acidic lumen. [<a href="https://doi.org/10.1016/j.bbamcr.2008.08.003"><code>DOI:10.1016/j.bbamcr.2008.08.003</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> <em>Saccharomyces cerevisiae</em> — Budding-yeast model for a vacuole specialized for lysosome-like degradation, storage, and homeostasis. [<a href="https://doi.org/10.1016/j.bbamcr.2008.08.003"><code>DOI:10.1016/j.bbamcr.2008.08.003</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>vacuolar storage and degradation</strong> — In budding yeast, the vacuole uses an acidic lumen and vacuolar membrane to combine small-molecule storage with macromolecule degradation.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000324"><code>GO:0000324</code></a> <small>GO:0000324 defines the fungal-type vacuole as a vacuole with lytic and storage functions.</small></li><li><a href="https://doi.org/10.1016/j.bbamcr.2008.08.003"><code>DOI:10.1016/j.bbamcr.2008.08.003</code></a> <small>Li and Kane 2009 review the yeast vacuole as a lysosome-like organelle at the intersection of storage, degradation, and homeostasis.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-vacuole_membrane_lumen_topology">Vacuoles pair a membrane with a lumen <small>(FUNCTION)</small></h3>
+<p>The vacuole is a membrane-bounded organelle whose broad topology consists of a vacuolar membrane surrounding a vacuolar lumen; the fungal-type vacuole specializes that same membrane/lumen organization in yeast.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>vacuolar membrane</td><td>is part of</td><td>vacuole</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005774"><code>GO:0005774</code></a> <small>GO:0005774 identifies the vacuolar membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005773"><code>GO:0005773</code></a> <small>GO:0005773 identifies the containing vacuole.</small></li></ul></td></tr>
+<tr><td>vacuolar lumen</td><td>is part of</td><td>vacuole</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a> <small>GO:0005775 identifies the vacuolar lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005773"><code>GO:0005773</code></a> <small>GO:0005773 identifies the containing vacuole.</small></li></ul></td></tr>
+<tr><td>fungal-type vacuole</td><td>is a</td><td>vacuole</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000324"><code>GO:0000324</code></a> <small>GO:0000324 defines fungal-type vacuole as a vacuole with lytic and storage functions.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005773"><code>GO:0005773</code></a> <small>GO:0005773 identifies the broader vacuole.</small></li></ul></td></tr>
+<tr><td>fungal-type vacuole membrane</td><td>is a</td><td>vacuolar membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000329"><code>GO:0000329</code></a> <small>GO:0000329 identifies the fungal-type vacuole membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005774"><code>GO:0005774</code></a> <small>GO:0005774 identifies the broader vacuolar membrane class.</small></li></ul></td></tr>
+<tr><td>fungal-type vacuole lumen</td><td>is a</td><td>vacuolar lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000328"><code>GO:0000328</code></a> <small>GO:0000328 identifies the fungal-type vacuole lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a> <small>GO:0005775 identifies the broader vacuolar lumen class.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the vacuolar membrane and vacuolar lumen as substructures rather than as molecular components of the vacuole. <small>GO:0005774 denotes the bounding membrane of the vacuole and GO:0005775 denotes its internal lumen; neither term is a molecular constituent such as a protein, lipid, or polysaccharide family.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005773"><code>GO:0005773</code></a> <small>Gene Ontology cellular-component term for vacuole.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0043231"><code>GO:0043231</code></a> <small>Gene Ontology cellular-component parent term for intracellular membrane-bounded organelle.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005774"><code>GO:0005774</code></a> <small>Gene Ontology cellular-component term for the vacuolar membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a> <small>Gene Ontology cellular-component term for the vacuolar lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0000324"><code>GO:0000324</code></a> <small>Gene Ontology cellular-component term for the fungal-type vacuole subtype.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0000329"><code>GO:0000329</code></a> <small>Gene Ontology cellular-component term for the fungal-type vacuole membrane subtype.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0000328"><code>GO:0000328</code></a> <small>Gene Ontology cellular-component term for the fungal-type vacuole lumen subtype.</small></li><li><a href="https://doi.org/10.1016/j.bbamcr.2008.08.003"><code>DOI:10.1016/j.bbamcr.2008.08.003</code></a> <small>Li and Kane 2009, The yeast lysosome-like vacuole: Endpoint and crossroads, Biochimica et Biophysica Acta.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-15T07:52:32Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-15T07:53:42Z</code> codex · EXPANDED_RECORD — Added intracellular-membrane-bounded-organelle parentage, vacuolar membrane and lumen parts, Saccharomyces scope, yeast storage and degradation function, GO/DOI evidence, a nonmechanistic topology graph, and a resolved membrane/lumen boundary interpretation.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/vacuole.yaml"><code>data/structures/membrane_organelle/vacuole.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
