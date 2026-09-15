@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/vacuolar_membrane.yaml
+  slug: vacuolar_membrane
+session:
+  id: 2026-09-15T073954Z-codex-0dabb0
+  timestamp: '2026-09-15T07:39:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/947
+  - https://github.com/CultureBotAI/CellStructureMech/issues/948
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/946
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Fix vacuolar membrane review findings
+  details: 'Addressed review issues #947 and #948 by adding a vacuolar-membrane to nuclear-outer-membrane
+    contact edge to the yeast function graph and recording a resolved component-boundary interpretation
+    for V-ATPase and Vac8p.'
