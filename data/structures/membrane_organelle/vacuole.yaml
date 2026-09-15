@@ -20,6 +20,12 @@ curation_history:
     GO/DOI evidence, a nonmechanistic topology graph, and a resolved membrane/lumen
     boundary interpretation.
   llm_assisted: true
+- timestamp: '2026-09-15T08:04:43Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed review issue #950 by connecting the fungal-type vacuole membrane
+    and lumen directly to the fungal-type vacuole in the topology graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 has_part:
@@ -135,6 +141,25 @@ causal_graphs:
         functions.
     - reference: GO:0005773
       notes: GO:0005773 identifies the broader vacuole.
+  - subject: fungal_type_vacuole_membrane
+    predicate: is part of
+    object: fungal_type_vacuole
+    description: The fungal-type vacuole membrane surrounds the fungal-type vacuole.
+    evidence:
+    - reference: GO:0000329
+      notes: GO:0000329 identifies the fungal-type vacuole membrane.
+    - reference: GO:0000324
+      notes: GO:0000324 identifies the containing fungal-type vacuole.
+  - subject: fungal_type_vacuole_lumen
+    predicate: is part of
+    object: fungal_type_vacuole
+    description: The fungal-type vacuole lumen is contained within the fungal-type
+      vacuole.
+    evidence:
+    - reference: GO:0000328
+      notes: GO:0000328 identifies the fungal-type vacuole lumen.
+    - reference: GO:0000324
+      notes: GO:0000324 identifies the containing fungal-type vacuole.
   - subject: fungal_type_vacuole_membrane
     predicate: is a
     object: vacuolar_membrane

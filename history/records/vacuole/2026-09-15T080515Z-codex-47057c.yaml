@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/vacuole.yaml
+  slug: vacuole
+session:
+  id: 2026-09-15T080515Z-codex-47057c
+  timestamp: '2026-09-15T08:05:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/950
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/949
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Fix vacuole review finding
+  details: 'Resolved PR #949 review issue #950 by adding part-of edges from the fungal-type
+    vacuole membrane and fungal-type vacuole lumen to the fungal-type vacuole in data/structures/membrane_organelle/vacuole.yaml.
+    The change keeps the broad subtype assertions and also makes the fungal membrane and lumen
+    topology explicit.'
