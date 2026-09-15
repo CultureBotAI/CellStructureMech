@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cellular_bud_tip.yaml
+  slug: cellular_bud_tip
+session:
+  id: 2026-09-15T015119Z-codex-6b695e
+  timestamp: '2026-09-15T01:51:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/916
+events:
+- type: EDIT
+  outcome: changed
+  summary: Link PR for cellular bud tip
+  details: 'Linked the cellular bud tip curation record to pull request #916 after opening
+    the PR for review.'

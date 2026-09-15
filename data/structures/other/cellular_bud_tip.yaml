@@ -1,0 +1,157 @@
+identifier: GO:0005934
+label: cellular bud tip
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: The distal region of a cellular bud opposite the mother-cell attachment
+  site.
+definition_source: GO:0005934
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T01:42:11Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T01:42:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added UniProt bud-tip synonymy and xref, cellular-bud parthood, Saccharomyces
+    cerevisiae distribution and example evidence, a polarized bud-tip growth-site
+    function, GO/UniProt/DOI evidence, a nonmechanistic bud-tip exocyst topology graph,
+    and an exocyst/polarisome component-boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-15T01:52:54Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #917 by narrowing the Saccharomyces cerevisiae taxonomic-distribution
+    note to the small-bud-tip exocyst observation directly supported by DOI:10.1083/jcb.130.2.299.'
+  llm_assisted: true
+synonyms:
+- synonym_text: bud tip
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0030
+part_of:
+- GO:0005933
+xrefs:
+- uniprot.location:SL-0030
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast localizes Sec6/Sec8/Sec15 exocyst material to the distal tip
+    of small buds during bud growth.
+  reference: DOI:10.1083/jcb.130.2.299
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Sec6, Sec8, and Sec15 exocyst subunits localize
+    to small bud tips.
+  reference: DOI:10.1083/jcb.130.2.299
+functions:
+- function_id: polarized_bud_tip_growth_site
+  label: polarized bud-tip growth site
+  description: The cellular bud tip is the distal bud region where polarized exocytic
+    and polarity machinery localizes during budding-yeast growth.
+  evidence:
+  - reference: GO:0005934
+    notes: GO:0005934 identifies the cellular bud tip.
+  - reference: DOI:10.1083/jcb.130.2.299
+    notes: TerBush and Novick 1995 localized the Sec6/Sec8/Sec15 complex to small
+      bud tips in Saccharomyces cerevisiae.
+  - reference: DOI:10.1083/jcb.135.3.725
+    notes: Valtz and Herskowitz 1996 showed Pea2 and Spa2 polarity-protein localization
+      at budding growth sites.
+evidence:
+- reference: GO:0005934
+  notes: Gene Ontology cellular-component term for the cellular bud tip.
+- reference: GO:0005933
+  notes: Gene Ontology cellular-component term for the cellular bud.
+- reference: GO:0000145
+  notes: Gene Ontology cellular-component term for the exocyst.
+- reference: GO:0031561
+  notes: Gene Ontology cellular-component term for the cellular bud tip polarisome.
+- reference: uniprot.location:SL-0030
+  notes: UniProt Subcellular Location entry SL-0030 maps Bud tip to GO:0005934 and
+    places the bud tip under Bud.
+- reference: uniprot.location:SL-0027
+  notes: UniProt Subcellular Location entry SL-0027 maps the parent Bud location to
+    GO:0005933.
+- reference: DOI:10.1083/jcb.130.2.299
+  notes: TerBush and Novick 1995, 'Sec6, Sec8, and Sec15 are components of a multisubunit
+    complex which localizes to small bud tips in Saccharomyces cerevisiae', Journal
+    of Cell Biology.
+- reference: DOI:10.1083/jcb.135.3.725
+  notes: Valtz and Herskowitz 1996, 'Pea2 protein of yeast is localized to sites of
+    polarized growth and is required for efficient mating and bipolar budding', Journal
+    of Cell Biology.
+causal_graphs:
+- graph_id: bud_tip_polarized_growth_topology
+  title: Bud-tip polarized-growth topology
+  description: The cellular bud tip is the distal bud region where the budding-yeast
+    exocyst localizes during polarized growth.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records bud-tip parthood and exocyst localization without
+    asserting a complete bud-polarity pathway, exocyst assembly order, or vesicle-fusion
+    mechanism.
+  nodes:
+  - node_id: cellular_bud_tip
+    label: cellular bud tip
+    node_type: STRUCTURE
+    grounding: GO:0005934
+  - node_id: cellular_bud
+    label: cellular bud
+    node_type: STRUCTURE
+    grounding: GO:0005933
+  - node_id: exocyst
+    label: exocyst
+    node_type: STRUCTURE
+    grounding: GO:0000145
+  edges:
+  - subject: cellular_bud_tip
+    predicate: is part of
+    object: cellular_bud
+    description: The bud tip is the distal region of the cellular bud opposite the
+      mother-cell attachment site.
+    evidence:
+    - reference: GO:0005934
+      notes: GO:0005934 identifies the cellular bud tip.
+    - reference: uniprot.location:SL-0030
+      notes: UniProt SL-0030 places the bud tip under the Bud location.
+  - subject: exocyst
+    predicate: localizes to
+    object: cellular_bud_tip
+    description: The budding-yeast Sec6/Sec8/Sec15 complex localizes to small bud
+      tips.
+    evidence:
+    - reference: DOI:10.1083/jcb.130.2.299
+      notes: TerBush and Novick 1995 identified Sec6p, Sec8p, and Sec15p at small
+        bud tips.
+discussions:
+- discussion_id: bud_tip_localized_complex_boundaries
+  prompt: Keep polarisome and exocyst proteins on their own structure records rather
+    than duplicating them as cellular bud tip components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#bud_tip_polarized_growth_topology
+  rationale: GO:0005934 and UniProt SL-0030 identify the distal bud-tip region. The
+    cellular bud tip polarisome and the exocyst are localized complexes, so this regional
+    record cites them as localized machinery without duplicating their protein subunits.
+  resolution_note: Curated region-level bud-tip topology and left exocyst or polarisome
+    subunits on their own complex records.
+  evidence:
+  - reference: GO:0005934
+    notes: GO:0005934 identifies the cellular bud tip region.
+  - reference: GO:0031561
+    notes: GO:0031561 identifies the cellular bud tip polarisome as a bud-tip-localized
+      complex.
+  - reference: GO:0000145
+    notes: GO:0000145 identifies the exocyst complex.
+  - reference: DOI:10.1083/jcb.130.2.299
+    notes: TerBush and Novick 1995 localized Sec6p/Sec8p/Sec15p exocyst material to
+      small bud tips.
+  posed_by: codex
+  posed_date: '2026-09-15'
+  resolved_date: '2026-09-15'
