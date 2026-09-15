@@ -68,7 +68,7 @@ records, not records; phenotypes are TraitMech records. See
 | RIBONUCLEOPROTEIN | 4 | |  |  |
 | DIVISION_MACHINERY | 2 | |  |  |
 
-257 records are grounded in GO; 53 carry minted identifiers. 263 list components, 310 carry causal graphs (1367 evidence-backed edges), 8 link to TraitMech traits, and 5 carry licensed, cited imaging evidence.
+257 records are grounded in GO; 53 carry minted identifiers. 262 list components, 310 carry causal graphs (1367 evidence-backed edges), 8 link to TraitMech traits, and 5 carry licensed, cited imaging evidence.
 <!-- END GENERATED CORPUS STATS -->
 
 Run `just report` for the live report. Every current record is

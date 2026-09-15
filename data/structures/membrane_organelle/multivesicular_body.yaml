@@ -21,6 +21,20 @@ curation_history:
     cargo-delivery functions, a nonmechanistic ESCRT intraluminal-vesicle formation
     graph, and MVB substructure and ESCRT component-boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-15T02:54:23Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed issue #921 by removing the duplicate GO:0032585 multivesicular
+    body membrane component from the parent GO:0005771 record and dropping the stale
+    MVB graph component_ref now that GO:0032585 has a standalone record.'
+  llm_assisted: true
+- timestamp: '2026-09-15T03:00:31Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Completed issue #921 by removing the stale components#multivesicular_body_membrane
+    discussion anchor after removing the duplicate GO:0032585 component from the parent
+    multivesicular body record.'
+  llm_assisted: true
 parent_structures:
 - GO:0005770
 has_part:
@@ -43,21 +57,6 @@ synonyms:
   source: uniprot.location:SL-0174
 xrefs:
 - uniprot.location:SL-0174
-components:
-- component_id: multivesicular_body_membrane
-  label: multivesicular body membrane
-  component_type: LIPID
-  component_role: CONSTITUENT
-  grounding: GO:0032585
-  essentiality: ESSENTIAL
-  role: Endosomal limiting membrane that invaginates to generate the internal vesicles
-    characteristic of multivesicular bodies.
-  evidence:
-  - reference: GO:0032585
-    notes: Gene Ontology cellular-component term for the multivesicular body membrane.
-  - reference: uniprot.location:SL-0175
-    notes: UniProt Subcellular Location entry SL-0175 maps to GO:0032585 and places
-      the membrane under the multivesicular body.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -137,7 +136,6 @@ causal_graphs:
     label: multivesicular body membrane
     node_type: STRUCTURE
     grounding: GO:0032585
-    component_ref: multivesicular_body_membrane
   - node_id: ubiquitinated_membrane_cargo
     label: ubiquitinated membrane cargo
     node_type: STATE
@@ -229,7 +227,6 @@ discussions:
   kind: CURATION_TODO
   status: RESOLVED
   attaches_to:
-  - components#multivesicular_body_membrane
   - causal_graphs#yeast_escrt_mvb_vesicle_formation
   rationale: The ESCRT machinery sorts cargo and remodels endosomal membrane during
     MVB formation, so these complexes are modeled as assembly graph actors rather
