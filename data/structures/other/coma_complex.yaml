@@ -32,6 +32,12 @@ curation_history:
   action: FIX_DISCUSSION_ANCHORS
   changes: Attached the Ctf19/CCAN boundary TODO to concrete COMA component IDs.
   llm_assisted: true
+- timestamp: '2026-09-15T12:46:39Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved #975 and #976 by giving the two COMA bridge edges side-specific
+    predicates and adding a TODO for the GO exact-synonym Mcm1p/Mcm21p spelling mismatch.'
+  llm_assisted: true
 parent_structures:
 - GO:0140513
 part_of:
@@ -190,7 +196,7 @@ causal_graphs:
     - reference: GO:0000817
       notes: GO asserts GO:0000817 COMA complex part_of GO:0000776 kinetochore.
   - subject: coma_complex
-    predicate: bridges
+    predicate: bridges to DNA-proximal side
     object: centromeric_dna_proximal_subunits
     description: COMA bridges to the DNA-proximal kinetochore subunits that contact
       centromeric chromatin.
@@ -202,7 +208,7 @@ causal_graphs:
       notes: De Wulf, McAinsh and Sorger 2003 placed COMA between DNA-proximal and
         microtubule-bound budding-yeast kinetochore subcomplexes.
   - subject: coma_complex
-    predicate: bridges
+    predicate: bridges to microtubule-bound side
     object: microtubule_bound_subunits
     description: COMA bridges centromeric DNA-proximal subunits to kinetochore subunits
       bound to microtubules.
@@ -211,8 +217,8 @@ causal_graphs:
       notes: GO:0000817 defines COMA by its bridge from centromeric DNA-proximal to
         microtubule-bound kinetochore subunits.
     - reference: DOI:10.1101/gad.1144403
-      notes: De Wulf, McAinsh and Sorger 2003 placed COMA within the budding-yeast
-        kinetochore assembly hierarchy.
+      notes: De Wulf, McAinsh and Sorger 2003 placed COMA between DNA-proximal and
+        microtubule-bound budding-yeast kinetochore subcomplexes.
 discussions:
 - discussion_id: resolve_ctf19_ccan_boundaries
   prompt: Resolve the boundary between the yeast four-subunit COMA complex and the
@@ -230,5 +236,19 @@ discussions:
     present component list.
   evidence:
   - reference: DOI:10.1534/genetics.112.145276
+  posed_by: codex
+  posed_date: '2026-09-15'
+- discussion_id: resolve_go_coma_synonym_spelling
+  prompt: Verify whether the GO:0000817 exact synonym Ctf19p-Okp1p-Mcm1p-Ame1p complex
+    should be corrected to Mcm21p or curated as a historical spelling.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mcm21_subunit
+  rationale: The local GO metadata lists Ctf19p-Okp1p-Mcm1p-Ame1p complex as an exact
+    synonym, while the GO definition and yeast subunit model name Mcm21p. This record
+    omits that synonym until the spelling mismatch can be reviewed.
+  evidence:
+  - reference: GO:0000817
   posed_by: codex
   posed_date: '2026-09-15'

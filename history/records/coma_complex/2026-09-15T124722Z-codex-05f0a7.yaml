@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/coma_complex.yaml
+  slug: coma_complex
+session:
+  id: 2026-09-15T124722Z-codex-05f0a7
+  timestamp: '2026-09-15T12:47:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/975
+  - https://github.com/CultureBotAI/CellStructureMech/issues/976
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/974
+events:
+- type: EDIT
+  outcome: changed
+  summary: Resolve COMA PR review issues
+  details: 'Resolved PR #974 review issues #975 and #976 by giving the two COMA bridge edges
+    side-specific predicates, adding a curation TODO for the GO:0000817 Mcm1p/Mcm21p exact-synonym
+    spelling mismatch, and rerendering the COMA page.'
