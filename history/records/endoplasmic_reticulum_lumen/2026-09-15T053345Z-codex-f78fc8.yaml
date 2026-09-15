@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endoplasmic_reticulum_lumen.yaml
+  slug: endoplasmic_reticulum_lumen
+session:
+  id: 2026-09-15T053345Z-codex-f78fc8
+  timestamp: '2026-09-15T05:33:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/934
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Link endoplasmic reticulum lumen PR
+  details: 'Linked the endoplasmic reticulum lumen curation to PR #934 so the append-only
+    record history captures the review artifact for the GO:0005788 addition.'
