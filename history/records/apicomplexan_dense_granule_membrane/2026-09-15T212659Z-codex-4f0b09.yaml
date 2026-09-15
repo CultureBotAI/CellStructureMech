@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/apicomplexan_dense_granule_membrane.yaml
+  slug: apicomplexan_dense_granule_membrane
+session:
+  id: 2026-09-15T212659Z-codex-4f0b09
+  timestamp: '2026-09-15T21:26:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parentage
+  - composition
+  - taxonomy
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add apicomplexan dense granule membrane record
+  details: Added GO:0030668 as a standalone apicomplexan dense granule membrane record with
+    organelle-membrane parentage, dense-granule parthood, a label-only lipid-bilayer component,
+    Apicomplexa and Toxoplasma gondii scope, a boundary function, GO and dense-granule literature
+    evidence, a nonmechanistic membrane topology graph, and a lipid-grounding curation TODO.

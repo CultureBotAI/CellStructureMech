@@ -1,0 +1,156 @@
+identifier: GO:0030668
+label: apicomplexan dense granule membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding a dense granule of the type found in apicomplexan
+  parasites.
+definition_source: GO:0030668
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T21:25:35Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T21:26:16Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added organelle-membrane parentage, dense-granule parthood, a label-only
+    dense-granule lipid bilayer component, Apicomplexa and Toxoplasma gondii scope,
+    a boundary function, GO/DOI evidence, a nonmechanistic dense-granule-membrane
+    topology graph, and a lipid-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0031090
+part_of:
+- GO:0020026
+components:
+- component_id: dense_granule_lipid_bilayer
+  label: dense granule lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Generic lipid-bilayer constituent that surrounds an apicomplexan dense granule
+    and separates its secretory lumen from the parasite cytosol.
+  evidence:
+  - reference: GO:0030668
+    notes: GO:0030668 defines the apicomplexan dense granule membrane as the lipid
+      bilayer surrounding an apicomplexan dense granule.
+  - reference: DOI:10.1111/jeu.12904
+    notes: Griffith et al. 2022 review Toxoplasma dense-granule biogenesis, secretion,
+      and membrane-bounded organelle function.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030668 identifies the complete apicomplexan dense granule membrane,
+    but no source-neutral CURIE was curated for the generic lipid-bilayer constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: COMMON
+  note: Dense granule membranes bound the dense granules used by apicomplexan parasites
+    to store and secrete GRA cargo proteins.
+  reference: DOI:10.1016/j.ijpara.2005.03.011
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model in which dense-granule biogenesis, secretion, and post-Golgi
+    trafficking to a membrane-bounded dense granule have been reviewed.
+  reference: DOI:10.1111/jeu.12904
+functions:
+- function_id: dense_granule_boundary
+  label: dense granule boundary
+  description: The dense granule membrane forms the lipid-bilayer boundary around
+    an apicomplexan dense granule.
+  evidence:
+  - reference: GO:0030668
+    notes: GO:0030668 defines the apicomplexan dense granule membrane as the lipid
+      bilayer surrounding a dense granule of this type.
+  - reference: GO:0020026
+    notes: GO:0020026 defines the apicomplexan dense granule as a secretory organelle
+      with a granular internal matrix.
+evidence:
+- reference: GO:0030668
+  notes: Gene Ontology cellular-component term for the apicomplexan dense granule
+    membrane.
+- reference: GO:0031090
+  notes: Gene Ontology cellular-component parent term for organelle membrane.
+- reference: GO:0020026
+  notes: Gene Ontology cellular-component term for the apicomplexan dense granule.
+- reference: DOI:10.1111/jeu.12904
+  notes: Griffith et al. 2022, Dense granule biogenesis, secretion, and function in
+    Toxoplasma gondii, Journal of Eukaryotic Microbiology.
+- reference: DOI:10.1016/j.ijpara.2005.03.011
+  notes: 'Mercier et al. 2005, Dense granules: are they key organelles to help understand
+    the parasitophorous vacuole of all apicomplexa parasites?, International Journal
+    for Parasitology.'
+causal_graphs:
+- graph_id: dense_granule_membrane_bounds_organelle
+  title: Dense granule membrane bounds the secretory granule
+  description: The apicomplexan dense granule membrane is the lipid bilayer that bounds
+    the dense granule and encloses dense-granule cargo before secretion.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures membrane and cargo topology without asserting specific
+    proteins that target or remodel the dense granule membrane.
+  nodes:
+  - node_id: dense_granule_membrane
+    label: apicomplexan dense granule membrane
+    node_type: STRUCTURE
+    grounding: GO:0030668
+    component_ref: dense_granule_lipid_bilayer
+  - node_id: apicomplexan_dense_granule
+    label: apicomplexan dense granule
+    node_type: ORGANELLE
+    grounding: GO:0020026
+  - node_id: dense_granule_proteins
+    label: dense granule proteins
+    node_type: GENE_OR_PROTEIN
+  - node_id: dense_granule_secretion
+    label: dense granule secretion
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: dense_granule_membrane
+    predicate: is part of
+    object: apicomplexan_dense_granule
+    description: The apicomplexan dense granule membrane is the lipid-bilayer boundary
+      of the dense granule.
+    evidence:
+    - reference: GO:0030668
+      notes: GO:0030668 defines the apicomplexan dense granule membrane as surrounding
+        an apicomplexan dense granule.
+    - reference: DOI:10.1111/jeu.12904
+      notes: Griffith et al. 2022 review dense granules as membrane-bounded organelles
+        in Toxoplasma.
+  - subject: dense_granule_proteins
+    predicate: reside in
+    object: apicomplexan_dense_granule
+    description: Dense-granule proteins are stored in the membrane-bounded dense granule
+      before secretion.
+    evidence:
+    - reference: DOI:10.1016/j.ijpara.2005.03.011
+      notes: Mercier et al. 2005 review dense granules as apicomplexan organelles
+        carrying dense granule protein cargo.
+  - subject: apicomplexan_dense_granule
+    predicate: supports
+    object: dense_granule_secretion
+    description: The membrane-bounded dense granule stores GRA cargo proteins before
+      dense-granule secretion.
+    evidence:
+    - reference: DOI:10.1111/jeu.12904
+      notes: Griffith et al. 2022 review dense-granule biogenesis, cargo storage,
+        and secretion in Toxoplasma.
+discussions:
+- discussion_id: ground_dense_granule_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the generic lipid constituent
+    of the apicomplexan dense granule membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dense_granule_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0030668, but no dense-granule-specific
+    lipid or lipid-bilayer CURIE was curated for the membrane constituent.
+  evidence:
+  - reference: GO:0030668
+    notes: GO:0030668 identifies the complete dense granule membrane.
+  posed_by: codex
+  posed_date: '2026-09-15'
