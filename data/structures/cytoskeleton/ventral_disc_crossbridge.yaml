@@ -19,26 +19,15 @@ curation_history:
     Giardia intestinalis scope, DOI evidence, a nonmechanistic crossbridge assembly
     graph, and a crossbridge-protein grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-15T15:49:51Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR #993 review issue #995 by removing the unsupported label-only
+    crossbridge structural-protein component and retargeting the exact-composition
+    TODO to the crossbridge graph.'
+  llm_assisted: true
 part_of:
 - GO:0097597
-components:
-- component_id: crossbridge_structural_proteins
-  label: ventral disc crossbridge structural proteins
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  essentiality: UNKNOWN
-  role: Unresolved proteinaceous constituents that form the fibrous crossbridges linking
-    adjacent Giardia ventral-disc dorsal microribbons.
-  evidence:
-  - reference: GO:0097595
-    notes: Gene Ontology defines the ventral-disc crossbridge as a fibrous structure
-      that horizontally links adjacent microribbons in the Giardia ventral disc.
-  - reference: DOI:10.1371/journal.pone.0043783
-    notes: Schwartz et al. 2012 mapped crossbridges between dorsal microribbons by
-      cryo-electron tomography and sub-tomogram averaging.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact source-neutral CURIE for the Giardia ventral-disc crossbridge
-    proteins was verified in this pass.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5741
   taxon_label: Giardia intestinalis
@@ -74,18 +63,14 @@ evidence:
 causal_graphs:
 - graph_id: giardia_crossbridge_microribbon_lattice
   title: Ventral-disc crossbridges link neighboring Giardia dorsal microribbons
-  description: In Giardia, unresolved protein constituents form crossbridges that
-    link adjacent dorsal microribbons within the ventral disc.
+  description: In Giardia, ventral-disc crossbridges link adjacent dorsal microribbons
+    within the ventral disc.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph records the crossbridge as a fibrous link between adjacent
-    dorsal microribbons and a named part of the ventral disc while leaving its exact
-    protein composition unresolved.
+    dorsal microribbons and a named part of the ventral disc while leaving exact crossbridge
+    composition unresolved.
   nodes:
-  - node_id: crossbridge_structural_proteins
-    label: ventral disc crossbridge structural proteins
-    node_type: GENE_OR_PROTEIN
-    component_ref: crossbridge_structural_proteins
   - node_id: crossbridge
     label: ventral disc crossbridge
     node_type: STRUCTURE
@@ -99,15 +84,6 @@ causal_graphs:
     node_type: STRUCTURE
     grounding: GO:0097597
   edges:
-  - subject: crossbridge_structural_proteins
-    predicate: constitute
-    object: crossbridge
-    description: Unresolved crossbridge structural proteins constitute the ventral-disc
-      crossbridge.
-    evidence:
-    - reference: GO:0097595
-      notes: Gene Ontology defines the ventral-disc crossbridge as a fibrous Giardia
-        ventral-disc structure.
   - subject: crossbridge
     predicate: links
     object: dorsal_microribbon
@@ -133,11 +109,11 @@ discussions:
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#crossbridge_structural_proteins
-  rationale: This first ventral-disc crossbridge record curates a broad label-only
-    structural-protein cohort because GO and Schwartz et al. establish the crossbridge
-    as a fibrous ventral-disc structure, but this pass did not verify its exact protein
-    composition or a source-neutral family CURIE.
+  - causal_graphs#giardia_crossbridge_microribbon_lattice
+  rationale: This first ventral-disc crossbridge record keeps exact crossbridge composition
+    unresolved because GO and Schwartz et al. establish the crossbridge as a fibrous
+    ventral-disc structure, but this pass did not verify its protein constituents,
+    stable component boundaries or source-neutral family CURIEs.
   evidence:
   - reference: DOI:10.1371/journal.pone.0043783
     notes: Schwartz et al. 2012 resolved crossbridge density between dorsal microribbons

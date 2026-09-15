@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ventral_disc_crossbridge.yaml
+  slug: ventral_disc_crossbridge
+session:
+  id: 2026-09-15T155012Z-codex-814b8a
+  timestamp: '2026-09-15T15:50:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/994
+  - https://github.com/CultureBotAI/CellStructureMech/issues/995
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/993
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  - curation_history
+  - history
+  summary: Resolve ventral disc crossbridge PR review issues
+  details: 'Resolved PR #993 review issues #994 and #995 by removing the unsupported reviewed-label-only
+    crossbridge structural-protein component, keeping exact crossbridge composition unresolved
+    as a graph-attached TODO, and adding this append-only history entry with links to the
+    pull request and review issues.'
