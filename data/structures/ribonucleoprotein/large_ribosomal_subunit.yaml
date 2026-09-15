@@ -1,0 +1,188 @@
+identifier: GO:0015934
+label: large ribosomal subunit
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: The larger of the two subunits of a ribosome. Two sites on the ribosomal
+  large subunit are involved in translation, namely the aminoacyl site (A site) and
+  peptidyl site (P site).
+definition_source: GO:0015934
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T18:27:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T18:28:40Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, ribosome parthood, broad catalytic rRNA and protein-cohort
+    components, Haloarcula and E. coli exemplars, peptide bond formation function,
+    GO/literature evidence, a 50S peptidyl transferase graph, and component-grounding
+    and CPX-3807 scope discussions.
+  llm_assisted: true
+- timestamp: '2026-09-15T18:36:34Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Resolved PR #1012 review issues #1013 and #1014 by adding a grounded 5S
+    rRNA constituent, attaching the component-splitting TODO to it, and removing the
+    redundant peptidyltransferase activity graph node and large-subunit activity edge.'
+  llm_assisted: true
+synonyms:
+- synonym_text: ribosomal large subunit
+  synonym_type: EXACT_SYNONYM
+  source: GO:0015934
+part_of:
+- GO:0005840
+components:
+- component_id: major_lsu_rrna
+  label: major large-subunit rRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Bacterial and archaeal 50S large subunits use 23S rRNA, whereas
+    eukaryotic cytosolic 60S large subunits use 25S or 28S-family rRNAs; no single
+    SO term was curated that exactly denotes the cross-lineage catalytic large-subunit
+    rRNA class.
+  role: Catalytic rRNA scaffold of the large ribosomal subunit that forms the peptidyl
+    transferase center.
+  evidence:
+  - reference: DOI:10.1126/science.289.5481.920
+    notes: Nissen et al. 2000 located the Haloarcula marismortui 50S peptidyl transferase
+      center in 23S rRNA.
+  - reference: DOI:10.1126/science.289.5481.905
+    notes: Ban et al. 2000 resolved the Haloarcula marismortui 50S large subunit with
+      23S and 5S rRNAs in the RNA core.
+- component_id: rrna_5s
+  label: 5S rRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000652
+  stoichiometry: 1 in archaeal and bacterial 50S subunits
+  essentiality: CONDITIONAL
+  role: Small structural RNA of the large-subunit central protuberance.
+  evidence:
+  - reference: DOI:10.1126/science.289.5481.905
+    notes: Ban et al. 2000 resolved 5S rRNA within the Haloarcula marismortui 50S
+      large-subunit central protuberance.
+- component_id: lsu_protein_cohort
+  label: large-subunit ribosomal proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  stoichiometry: 33 proteins in Escherichia coli
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The large-subunit protein set contains many unrelated protein families
+    and varies across bacterial, archaeal, eukaryotic, and organellar large ribosomal
+    subunits; no single InterPro, Pfam, NCBIfam, GO, or Complex Portal term was curated
+    that denotes the entire source-neutral cohort.
+  role: Proteins that bind and stabilize the folded large-subunit rRNA scaffold to
+    form a functional peptidyl-transferase subunit.
+  evidence:
+  - reference: DOI:10.1126/science.289.5481.905
+    notes: Ban et al. 2000 describe proteins decorating the Haloarcula marismortui
+      50S rRNA surface.
+  - reference: DOI:10.1128/MMBR.00013-07
+    notes: Kaczanowska and Ryden-Aulin 2007 report 33 protein constituents for the
+      Escherichia coli 50S subunit.
+canonical_examples:
+- taxon_id: NCBITaxon:2238
+  taxon_label: Haloarcula marismortui
+  note: Archaeal source of the 2.4 A 50S large-subunit crystal structure that resolved
+    the 23S/5S rRNA core and its ribosomal proteins.
+  reference: DOI:10.1126/science.289.5481.905
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference bacterial strain for the curated Complex Portal 50S large ribosomal
+    subunit composition, CPX-3807.
+  reference: ComplexPortal:CPX-3807
+functions:
+- function_id: peptidyl_transferase
+  label: peptidyltransferase activity
+  grounding: GO:0000048
+  description: The 50S peptidyl transferase center forms peptide bonds on the large-subunit
+    rRNA scaffold during translation.
+  evidence:
+  - reference: DOI:10.1126/science.289.5481.920
+    notes: Nissen et al. 2000 showed that the peptidyl transferase center of the 50S
+      subunit is made entirely of RNA.
+evidence:
+- reference: GO:0015934
+  notes: Gene Ontology cellular-component term for the large ribosomal subunit.
+- reference: GO:0005840
+  notes: Gene Ontology cellular-component term for the containing ribosome.
+- reference: DOI:10.1126/science.289.5481.905
+  notes: Ban et al. 2000, The complete atomic structure of the large ribosomal subunit
+    at 2.4 A resolution, Science.
+- reference: DOI:10.1126/science.289.5481.920
+  notes: Nissen et al. 2000, The structural basis of ribosome activity in peptide
+    bond synthesis, Science.
+causal_graphs:
+- graph_id: lsu_peptidyl_transferase_center
+  title: 50S peptidyl transferase center forms peptide bonds
+  description: In the archaeal 50S subunit, large-subunit rRNA forms a peptidyl transferase
+    center where peptide bonds are made.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures the structurally resolved 50S RNA basis of peptidyl
+    transfer, not the full elongation cycle handled by the parent ribosome record.
+  nodes:
+  - node_id: large_ribosomal_subunit
+    label: large ribosomal subunit
+    node_type: STRUCTURE
+    grounding: GO:0015934
+  - node_id: major_lsu_rrna
+    label: major large-subunit rRNA
+    node_type: RNA
+    component_ref: major_lsu_rrna
+  edges:
+  - subject: major_lsu_rrna
+    predicate: forms peptidyl transferase center of
+    object: large_ribosomal_subunit
+    description: 23S rRNA forms the peptidyl transferase center of the 50S large subunit.
+    evidence:
+    - reference: DOI:10.1126/science.289.5481.920
+      notes: Nissen et al. 2000 localized all 50S peptidyl-transferase-center contacts
+        to 23S rRNA.
+discussions:
+- discussion_id: split_large_subunit_components
+  prompt: Split exact large-subunit rRNA and protein families across bacterial, archaeal,
+    eukaryotic, and organellar ribosomes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#major_lsu_rrna
+  - components#rrna_5s
+  - components#lsu_protein_cohort
+  rationale: The cross-lineage GO:0015934 term covers homologous large ribosomal subunits
+    with different catalytic rRNAs, 5S or 5.8S-family RNAs, and many distinct ribosomal
+    protein families. This first standalone record keeps the composition at coarse
+    reviewed-label-only granularity until each exact source-neutral family is split
+    and grounded.
+  evidence:
+  - reference: DOI:10.1126/science.289.5481.905
+    notes: Ban et al. 2000 resolve an archaeal 50S subunit with 23S and 5S rRNAs plus
+      large-subunit proteins.
+  - reference: DOI:10.1038/nature08403
+    notes: Schmeing and Ramakrishnan 2009 review conserved and divergent structural
+      features of translation.
+  posed_by: codex
+  posed_date: '2026-09-15'
+- discussion_id: complex_portal_cpx_3807_scope
+  prompt: Keep ComplexPortal:CPX-3807 scoped to the E. coli 50S source composition
+    instead of making it an equivalent xref.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: ComplexPortal:CPX-3807 is the Escherichia coli K-12 50S large ribosomal
+    subunit composition, whereas GO:0015934 denotes large ribosomal subunits across
+    bacteria, archaea, eukaryotes, and organelles.
+  resolution_note: Cited CPX-3807 as the E. coli K-12 exemplar source and did not
+    add it to xrefs.
+  evidence:
+  - reference: ComplexPortal:CPX-3807
+    notes: ComplexPortal:CPX-3807 is scoped to the E. coli K-12 50S large ribosomal
+      subunit.
+  - reference: GO:0015934
+    notes: GO:0015934 is a cross-taxon large ribosomal subunit term.

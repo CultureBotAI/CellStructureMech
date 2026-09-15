@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/large_ribosomal_subunit.yaml
+  slug: large_ribosomal_subunit
+session:
+  id: 2026-09-15T182902Z-codex-73a58b
+  timestamp: '2026-09-15T18:29:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO large ribosomal subunit record
+  details: Created data/structures/ribonucleoprotein/large_ribosomal_subunit.yaml for GO:0015934,
+    linking it to the parent ribosome, modeling broad major large-subunit rRNA and ribosomal
+    protein components conservatively as REVIEWED_LABEL_ONLY, and adding Haloarcula and E.
+    coli exemplars, GO and literature evidence, a peptidyl-transferase graph, and component/scope
+    discussions.

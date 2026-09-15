@@ -9411,6 +9411,11 @@
           "cosine_similarity": 0.802551
         },
         {
+          "identifier": "GO:0015934",
+          "label": "large ribosomal subunit",
+          "cosine_similarity": 0.78832841
+        },
+        {
           "identifier": "GO:0005840",
           "label": "ribosome",
           "cosine_similarity": 0.77848284
@@ -9424,11 +9429,6 @@
           "identifier": "GO:0009295",
           "label": "nucleoid",
           "cosine_similarity": 0.69722463
-        },
-        {
-          "identifier": "GO:0042645",
-          "label": "mitochondrial nucleoid",
-          "cosine_similarity": 0.67152511
         }
       ]
     },
@@ -9762,14 +9762,14 @@
           "cosine_similarity": 0.70589016
         },
         {
+          "identifier": "GO:0015934",
+          "label": "large ribosomal subunit",
+          "cosine_similarity": 0.67484211
+        },
+        {
           "identifier": "GO:0005730",
           "label": "nucleolus",
           "cosine_similarity": 0.63712189
-        },
-        {
-          "identifier": "GO:0005783",
-          "label": "endoplasmic reticulum",
-          "cosine_similarity": 0.63228167
         }
       ]
     },
@@ -9805,6 +9805,37 @@
       ]
     },
     {
+      "identifier": "GO:0015934",
+      "label": "large ribosomal subunit",
+      "neighbors": [
+        {
+          "identifier": "GO:0015935",
+          "label": "small ribosomal subunit",
+          "cosine_similarity": 0.92741172
+        },
+        {
+          "identifier": "GO:0005840",
+          "label": "ribosome",
+          "cosine_similarity": 0.86941694
+        },
+        {
+          "identifier": "GO:0005730",
+          "label": "nucleolus",
+          "cosine_similarity": 0.78832841
+        },
+        {
+          "identifier": "GO:1990061",
+          "label": "bacterial degradosome",
+          "cosine_similarity": 0.67484211
+        },
+        {
+          "identifier": "GO:0000932",
+          "label": "P-body",
+          "cosine_similarity": 0.67066369
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000932",
       "label": "P-body",
       "neighbors": [
@@ -9829,9 +9860,9 @@
           "cosine_similarity": 0.68445683
         },
         {
-          "identifier": "GO:0005730",
-          "label": "nucleolus",
-          "cosine_similarity": 0.66746577
+          "identifier": "GO:0015934",
+          "label": "large ribosomal subunit",
+          "cosine_similarity": 0.67066369
         }
       ]
     },
@@ -9843,6 +9874,11 @@
           "identifier": "GO:0015935",
           "label": "small ribosomal subunit",
           "cosine_similarity": 0.87848448
+        },
+        {
+          "identifier": "GO:0015934",
+          "label": "large ribosomal subunit",
+          "cosine_similarity": 0.86941694
         },
         {
           "identifier": "GO:0005730",
@@ -9858,11 +9894,6 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.7077036
-        },
-        {
-          "identifier": "GO:0005839",
-          "label": "proteasome core complex",
-          "cosine_similarity": 0.69562868
         }
       ]
     },
@@ -9870,6 +9901,11 @@
       "identifier": "GO:0015935",
       "label": "small ribosomal subunit",
       "neighbors": [
+        {
+          "identifier": "GO:0015934",
+          "label": "large ribosomal subunit",
+          "cosine_similarity": 0.92741172
+        },
         {
           "identifier": "GO:0005840",
           "label": "ribosome",
@@ -9889,11 +9925,6 @@
           "identifier": "GO:0000932",
           "label": "P-body",
           "cosine_similarity": 0.70016492
-        },
-        {
-          "identifier": "GO:0010494",
-          "label": "cytoplasmic stress granule",
-          "cosine_similarity": 0.65625992
         }
       ]
     },
