@@ -4575,6 +4575,11 @@
           "cosine_similarity": 0.90555035
         },
         {
+          "identifier": "GO:0005788",
+          "label": "endoplasmic reticulum lumen",
+          "cosine_similarity": 0.87899175
+        },
+        {
           "identifier": "GO:0012507",
           "label": "ER to Golgi transport vesicle membrane",
           "cosine_similarity": 0.81854325
@@ -4588,11 +4593,37 @@
           "identifier": "GO:0005768",
           "label": "endosome",
           "cosine_similarity": 0.81244318
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005788",
+      "label": "endoplasmic reticulum lumen",
+      "neighbors": [
+        {
+          "identifier": "GO:0005783",
+          "label": "endoplasmic reticulum",
+          "cosine_similarity": 0.87899175
         },
         {
-          "identifier": "GO:0031410",
-          "label": "cytoplasmic vesicle",
-          "cosine_similarity": 0.80082918
+          "identifier": "GO:0060205",
+          "label": "cytoplasmic vesicle lumen",
+          "cosine_similarity": 0.86354703
+        },
+        {
+          "identifier": "GO:0005789",
+          "label": "endoplasmic reticulum membrane",
+          "cosine_similarity": 0.86222991
+        },
+        {
+          "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
+          "label": "COPII-coated vesicle lumen",
+          "cosine_similarity": 0.83765384
+        },
+        {
+          "identifier": "cellstructuremech:cvt_vesicle_lumen",
+          "label": "Cvt vesicle lumen",
+          "cosine_similarity": 0.83320371
         }
       ]
     },
@@ -4735,6 +4766,11 @@
           "cosine_similarity": 0.86346747
         },
         {
+          "identifier": "GO:0005788",
+          "label": "endoplasmic reticulum lumen",
+          "cosine_similarity": 0.82539413
+        },
+        {
           "identifier": "GO:0034468",
           "label": "glycosome lumen",
           "cosine_similarity": 0.79074391
@@ -4743,11 +4779,6 @@
           "identifier": "GO:0031908",
           "label": "glyoxysomal lumen",
           "cosine_similarity": 0.78530672
-        },
-        {
-          "identifier": "GO:0034492",
-          "label": "hydrogenosome lumen",
-          "cosine_similarity": 0.77995672
         }
       ]
     },
@@ -7277,6 +7308,11 @@
           "cosine_similarity": 0.75770352
         },
         {
+          "identifier": "GO:0005788",
+          "label": "endoplasmic reticulum lumen",
+          "cosine_similarity": 0.73791704
+        },
+        {
           "identifier": "GO:0031410",
           "label": "cytoplasmic vesicle",
           "cosine_similarity": 0.73473994
@@ -7285,11 +7321,6 @@
           "identifier": "GO:0033117",
           "label": "esterosome",
           "cosine_similarity": 0.73335848
-        },
-        {
-          "identifier": "GO:0005783",
-          "label": "endoplasmic reticulum",
-          "cosine_similarity": 0.73201728
         }
       ]
     },
@@ -8362,6 +8393,11 @@
           "cosine_similarity": 0.68965637
         },
         {
+          "identifier": "GO:0005788",
+          "label": "endoplasmic reticulum lumen",
+          "cosine_similarity": 0.68892228
+        },
+        {
           "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
           "label": "COPII-coated vesicle lumen",
           "cosine_similarity": 0.68842296
@@ -8370,11 +8406,6 @@
           "identifier": "GO:0000133",
           "label": "polarisome",
           "cosine_similarity": 0.68725869
-        },
-        {
-          "identifier": "GO:0000145",
-          "label": "exocyst",
-          "cosine_similarity": 0.68073092
         }
       ]
     },

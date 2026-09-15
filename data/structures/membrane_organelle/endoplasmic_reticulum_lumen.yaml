@@ -1,0 +1,170 @@
+identifier: GO:0005788
+label: endoplasmic reticulum lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the membranes of the endoplasmic reticulum.
+definition_source: GO:0005788
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T05:26:20Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T05:27:03Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added exact ER lumen synonymy, organelle-lumen parentage, endoplasmic-reticulum
+    parthood, Saccharomyces scope, Sec61 and ER quality-control functions, GO/DOI
+    evidence, a nonmechanistic ER-lumen topology graph, and a resolved boundary interpretation.
+  llm_assisted: true
+synonyms:
+- synonym_text: ER lumen
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005788
+parent_structures:
+- GO:0043233
+part_of:
+- GO:0005783
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has an endoplasmic reticulum lumen reached by Sec61-dependent
+    protein translocation and monitored by unfolded-protein-response and ERAD quality-control
+    pathways.
+  reference: DOI:10.1016/s0092-8674(00)80835-1
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model for Sec61-dependent protein movement across the endoplasmic
+    reticulum membrane into or through the ER lumen.
+  reference: DOI:10.1091/mbc.3.2.129
+functions:
+- function_id: er_lumen_secretory_protein_entry
+  label: secretory protein entry into the ER
+  description: The endoplasmic reticulum lumen is the membrane-enclosed compartment
+    into which Sec61 translocons move secretory and membrane-protein substrates.
+  evidence:
+  - reference: GO:0005784
+    notes: GO:0005784 identifies the Sec61 translocon complex as the heterotrimeric
+      ER membrane channel that mediates cotranslational and posttranslational protein
+      translocation.
+  - reference: DOI:10.1091/mbc.3.2.129
+    notes: Stirling et al. 1992 analyzed Saccharomyces cerevisiae sec61 mutants with
+      endoplasmic-reticulum protein-insertion defects.
+- function_id: er_lumen_quality_control
+  label: ER lumen protein quality control
+  description: The ER lumen is the enclosed compartment whose protein-folding state
+    is monitored by the unfolded-protein-response and ER-associated-degradation pathways.
+  evidence:
+  - reference: DOI:10.1016/s0092-8674(00)80835-1
+    notes: Travers et al. 2000 linked yeast unfolded-protein response signaling with
+      ER-associated degradation.
+evidence:
+- reference: GO:0005788
+  notes: Gene Ontology cellular-component term for endoplasmic reticulum lumen.
+- reference: GO:0043233
+  notes: Gene Ontology cellular-component parent term for organelle lumen.
+- reference: GO:0005783
+  notes: Gene Ontology cellular-component term for the containing endoplasmic reticulum.
+- reference: GO:0005789
+  notes: Gene Ontology cellular-component term for the bounding endoplasmic reticulum
+    membrane.
+- reference: GO:0005784
+  notes: Gene Ontology cellular-component term for the Sec61 translocon complex.
+- reference: DOI:10.1091/mbc.3.2.129
+  notes: Stirling et al. 1992, 'Protein translocation mutants defective in the insertion
+    of integral membrane proteins into the endoplasmic reticulum', Molecular Biology
+    of the Cell.
+- reference: DOI:10.1016/s0092-8674(00)80835-1
+  notes: Travers et al. 2000, 'Functional and genomic analyses reveal an essential
+    coordination between the unfolded protein response and ER-associated degradation',
+    Cell.
+causal_graphs:
+- graph_id: er_lumen_topology
+  title: ER lumen topology and protein entry
+  description: The endoplasmic reticulum lumen is the ER-internal volume enclosed
+    by the ER membrane and reached by Sec61-dependent protein translocation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures ER lumen topology plus Sec61-dependent entry without
+    asserting the full translocation cycle or luminal chaperone and ERAD repertoires.
+  nodes:
+  - node_id: er_lumen
+    label: endoplasmic reticulum lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005788
+  - node_id: er_membrane
+    label: endoplasmic reticulum membrane
+    node_type: STRUCTURE
+    grounding: GO:0005789
+  - node_id: endoplasmic_reticulum
+    label: endoplasmic reticulum
+    node_type: STRUCTURE
+    grounding: GO:0005783
+  - node_id: sec61_translocon_complex
+    label: Sec61 translocon complex
+    node_type: STRUCTURE
+    grounding: GO:0005784
+  - node_id: secretory_protein_entry
+    label: secretory protein entry into the ER
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: er_lumen
+    predicate: is part of
+    object: endoplasmic_reticulum
+    description: The ER lumen is the volume inside the endoplasmic reticulum.
+    evidence:
+    - reference: GO:0005788
+      notes: GO:0005788 identifies the endoplasmic reticulum lumen cellular component.
+    - reference: GO:0005783
+      notes: GO:0005783 identifies the containing endoplasmic reticulum.
+  - subject: er_membrane
+    predicate: bounds
+    object: er_lumen
+    description: The ER membrane encloses the endoplasmic reticulum lumen.
+    evidence:
+    - reference: GO:0005788
+      notes: GO:0005788 defines the ER lumen as the volume enclosed by ER membranes.
+    - reference: GO:0005789
+      notes: GO:0005789 identifies the ER-bounding lipid bilayer.
+  - subject: sec61_translocon_complex
+    predicate: is embedded in
+    object: er_membrane
+    description: The Sec61 translocon complex is an ER membrane protein-conducting
+      channel.
+    evidence:
+    - reference: GO:0005784
+      notes: GO:0005784 identifies Sec61 as an endoplasmic reticulum translocon complex.
+  - subject: sec61_translocon_complex
+    predicate: supports
+    object: secretory_protein_entry
+    description: Yeast Sec61 supports insertion or translocation of proteins into
+      the endoplasmic reticulum.
+    evidence:
+    - reference: DOI:10.1091/mbc.3.2.129
+      notes: Stirling et al. 1992 characterized yeast sec61 alleles defective in ER
+        protein insertion.
+discussions:
+- discussion_id: er_membrane_not_lumen_component
+  prompt: Keep the ER membrane and Sec61 translocon as bounding or membrane-embedded
+    structures rather than as ER lumen components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#er_lumen_topology
+  rationale: GO:0005788 denotes the volume enclosed by ER membranes, whereas GO:0005789
+    denotes the ER-bounding lipid bilayer and GO:0005784 denotes a membrane-embedded
+    translocon.
+  resolution_note: Represented the ER membrane and Sec61 translocon as topology graph
+    nodes and left the ER lumen record without constituent components.
+  evidence:
+  - reference: GO:0005788
+    notes: GO:0005788 identifies the endoplasmic reticulum lumen.
+  - reference: GO:0005789
+    notes: GO:0005789 identifies the membrane that bounds the ER lumen.
+  - reference: GO:0005784
+    notes: GO:0005784 identifies the Sec61 translocon complex.
+  posed_by: codex
+  posed_date: '2026-09-15'
