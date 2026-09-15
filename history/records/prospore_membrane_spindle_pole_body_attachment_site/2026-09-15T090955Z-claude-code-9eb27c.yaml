@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/prospore_membrane_spindle_pole_body_attachment_site.yaml
+  slug: prospore_membrane_spindle_pole_body_attachment_site
+session:
+  id: 2026-09-15T090955Z-claude-code-9eb27c
+  timestamp: '2026-09-15T09:09:55Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/954
+events:
+- type: REVIEW
+  outcome: changed
+  summary: 'Open PR #954 for prospore membrane spindle pole body attachment site'
+  details: 'Opened PR #954 to review the GO:0070057 prospore membrane spindle pole body attachment
+    site record, generated embedding indexes, and rendered pages.'

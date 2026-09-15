@@ -1,0 +1,172 @@
+identifier: GO:0070057
+label: prospore membrane spindle pole body attachment site
+structure_category: SPORE
+structure_kind: SUBCELLULAR_REGION
+definition: The region of the prospore membrane to which the spindle pole body (SPB)
+  is anchored; the prospore membrane extends from the SPB attachment site to surround
+  the spore nucleus.
+definition_source: GO:0070057
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T08:59:11Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T09:00:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact synonyms, membrane parentage, prospore-membrane parthood,
+    a lipid constituent, Saccharomyces scope, an SPB-attachment function, GO/DOI evidence,
+    a nonmechanistic topology graph, and a meiotic-outer-plaque boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-15T09:11:17Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved review issues #955 and #956 by adding the spore nucleus to the
+    graph and flipping the SPB anchoring edge to the attachment site.'
+  llm_assisted: true
+synonyms:
+- synonym_text: forespore membrane SPB attachment site
+  synonym_type: EXACT_SYNONYM
+  source: GO:0070057
+- synonym_text: forespore membrane spindle pole body attachment site
+  synonym_type: EXACT_SYNONYM
+  source: GO:0070057
+- synonym_text: prospore membrane SPB attachment site
+  synonym_type: EXACT_SYNONYM
+  source: GO:0070057
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0005628
+components:
+- component_id: attachment_site_lipid_bilayer
+  label: prospore membrane attachment-site lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Local prospore-membrane bilayer region that forms the patch where the spindle
+    pole body is anchored.
+  evidence:
+  - reference: GO:0070057
+    notes: GO:0070057 defines the attachment site as a region of the prospore membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast prospore membranes extend from spindle-pole-body attachment
+    sites during meiotic spore formation.
+  reference: DOI:10.1093/emboj/19.14.3657
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which spindle pole bodies organize meiotic outer plaques
+    that mediate prospore membrane assembly.
+  reference: DOI:10.1093/emboj/19.14.3657
+functions:
+- function_id: spindle_pole_body_membrane_attachment
+  label: spindle pole body-prospore membrane attachment
+  description: Marks the region of the prospore membrane that remains anchored to
+    a spindle pole body while the membrane extends around the spore nucleus.
+  evidence:
+  - reference: GO:0070057
+    notes: GO:0070057 defines the membrane region to which the spindle pole body is
+      anchored.
+  - reference: DOI:10.1093/emboj/19.14.3657
+    notes: Knop and Strasser 2000 studied the spindle-pole-body role in mediating
+      Saccharomyces prospore membrane assembly.
+evidence:
+- reference: GO:0070057
+  notes: Gene Ontology cellular-component term for the prospore membrane spindle pole
+    body attachment site.
+- reference: GO:0005628
+  notes: Gene Ontology cellular-component term for the prospore membrane that contains
+    the attachment site.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component parent term for membrane.
+- reference: GO:0005816
+  notes: Gene Ontology cellular-component term for the spindle pole body.
+- reference: DOI:10.1093/emboj/19.14.3657
+  notes: Knop and Strasser 2000, Role of the spindle pole body of yeast in mediating
+    assembly of the prospore membrane during meiosis, The EMBO Journal.
+causal_graphs:
+- graph_id: spb_attachment_site_positions_prospore_membrane
+  title: The spindle-pole-body attachment site positions prospore outgrowth
+  description: The attachment site is the prospore membrane region to which the spindle
+    pole body is anchored as the membrane extends during budding-yeast sporulation.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the topology of the membrane attachment site without
+    asserting the complete meiotic outer-plaque remodeling pathway.
+  nodes:
+  - node_id: prospore_membrane_spb_attachment_site
+    label: prospore membrane spindle pole body attachment site
+    node_type: STRUCTURE
+    grounding: GO:0070057
+  - node_id: prospore_membrane
+    label: prospore membrane
+    node_type: STRUCTURE
+    grounding: GO:0005628
+  - node_id: spindle_pole_body
+    label: spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005816
+  - node_id: haploid_meiotic_nucleus
+    label: haploid meiotic nucleus
+    node_type: ORGANELLE
+  edges:
+  - subject: prospore_membrane_spb_attachment_site
+    predicate: is part of
+    object: prospore_membrane
+    description: The attachment site is a region of the prospore membrane.
+    evidence:
+    - reference: GO:0070057
+      notes: GO:0070057 defines the spindle-pole-body attachment site as a prospore
+        membrane region.
+  - subject: prospore_membrane_spb_attachment_site
+    predicate: anchors
+    object: spindle_pole_body
+    description: This specialized prospore membrane region anchors the spindle pole
+      body.
+    evidence:
+    - reference: GO:0070057
+      notes: GO:0070057 defines a prospore membrane region to which the spindle pole
+        body is anchored.
+    - reference: DOI:10.1093/emboj/19.14.3657
+      notes: Knop and Strasser 2000 analyzed spindle-pole-body control of prospore
+        membrane assembly.
+  - subject: prospore_membrane
+    predicate: extends from
+    object: prospore_membrane_spb_attachment_site
+    description: The prospore membrane extends from the spindle-pole-body attachment
+      site as it grows around the spore nucleus.
+    evidence:
+    - reference: GO:0070057
+      notes: GO:0070057 states that the prospore membrane extends from the SPB attachment
+        site to surround the spore nucleus.
+  - subject: prospore_membrane
+    predicate: extends around
+    object: haploid_meiotic_nucleus
+    description: The prospore membrane grows away from the attachment site and extends
+      around the haploid spore nucleus.
+    evidence:
+    - reference: GO:0070057
+      notes: GO:0070057 states that the prospore membrane extends from the SPB attachment
+        site to surround the spore nucleus.
+discussions:
+- discussion_id: resolve_outer_plaque_boundary
+  prompt: Resolve the molecular and spatial boundary between the membrane attachment
+    site and the meiotic outer plaque.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#spb_attachment_site_positions_prospore_membrane
+  rationale: This first attachment-site record keeps the meiotic outer plaque and
+    spindle pole body out of components, mirroring the parent prospore membrane curation.
+    The exact Saccharomyces proteins at the membrane-facing attachment site need a
+    focused curation pass.
+  evidence:
+  - reference: DOI:10.1093/emboj/19.14.3657
+  posed_by: codex
+  posed_date: '2026-09-15'

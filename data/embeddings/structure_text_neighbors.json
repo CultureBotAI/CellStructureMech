@@ -9953,9 +9953,9 @@
           "cosine_similarity": 0.80482872
         },
         {
-          "identifier": "GO:0005637",
-          "label": "nuclear inner membrane",
-          "cosine_similarity": 0.7959142
+          "identifier": "GO:0070057",
+          "label": "prospore membrane spindle pole body attachment site",
+          "cosine_similarity": 0.80443798
         }
       ]
     },
@@ -9967,6 +9967,11 @@
           "identifier": "GO:0005628",
           "label": "prospore membrane",
           "cosine_similarity": 0.91317327
+        },
+        {
+          "identifier": "GO:0070057",
+          "label": "prospore membrane spindle pole body attachment site",
+          "cosine_similarity": 0.85047492
         },
         {
           "identifier": "GO:0043594",
@@ -9982,11 +9987,37 @@
           "identifier": "cellstructuremech:cvt_vesicle_lumen",
           "label": "Cvt vesicle lumen",
           "cosine_similarity": 0.77472062
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0070057",
+      "label": "prospore membrane spindle pole body attachment site",
+      "neighbors": [
+        {
+          "identifier": "GO:0070056",
+          "label": "prospore membrane leading edge",
+          "cosine_similarity": 0.85047492
+        },
+        {
+          "identifier": "GO:0005628",
+          "label": "prospore membrane",
+          "cosine_similarity": 0.80443798
+        },
+        {
+          "identifier": "GO:0043594",
+          "label": "outer endospore membrane",
+          "cosine_similarity": 0.73770446
         },
         {
           "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
           "label": "COPI-coated vesicle lumen",
-          "cosine_similarity": 0.77352309
+          "cosine_similarity": 0.7296739
+        },
+        {
+          "identifier": "GO:0030659",
+          "label": "cytoplasmic vesicle membrane",
+          "cosine_similarity": 0.72427787
         }
       ]
     }
