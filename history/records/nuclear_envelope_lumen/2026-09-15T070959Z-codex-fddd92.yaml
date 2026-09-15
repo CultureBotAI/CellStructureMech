@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nuclear_envelope_lumen.yaml
+  slug: nuclear_envelope_lumen
+session:
+  id: 2026-09-15T070959Z-codex-fddd92
+  timestamp: '2026-09-15T07:09:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/944
+  - https://github.com/CultureBotAI/CellStructureMech/issues/945
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/943
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Fixed nuclear envelope lumen review findings
+  details: 'Addressed review issues #944 and #945 by adding exact perinuclear-space synonymy
+    to the GO:0005641 record, adding GO:0005788 ER-lumen evidence, and extending the topology
+    graph with an edge that connects the nuclear envelope lumen to the endoplasmic reticulum
+    lumen.'
