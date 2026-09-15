@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/sec61_translocon_complex.yaml
+  slug: sec61_translocon_complex
+session:
+  id: 2026-09-15T210653Z-codex-f60665
+  timestamp: '2026-09-15T21:06:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1025
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1026
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1024
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed Sec61 translocon review findings
+  details: 'Resolved PR #1024 review issues #1025 and #1026 by narrowing the Saccharomyces
+    canonical example to Hartmann et al. component-conservation evidence and changing Sec61
+    beta/gamma labels and notes from yeast-specific Sbh1p/Sss1p wording to source-neutral
+    component classes.'

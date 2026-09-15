@@ -26,6 +26,14 @@ curation_history:
   changes: Retargeted the Sec61 core-boundary discussion from the bare components
     section to concrete Sec61p, Sbh1p, and Sss1p component anchors.
   llm_assisted: true
+- timestamp: '2026-09-15T21:06:29Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1025 by narrowing the Saccharomyces canonical example to the
+    Hartmann et al. component-conservation evidence and resolved #1026 by changing
+    Sec61 beta/gamma labels and notes from yeast gene-product wording to source-neutral
+    component classes.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Sec61 complex
   synonym_type: EXACT_SYNONYM
@@ -60,17 +68,17 @@ components:
       an integral ER membrane protein required for secretory and membrane-polypeptide
       insertion.
 - component_id: sbh1_beta_subunit
-  label: Sbh1 Sec61 beta subunit
+  label: Sec61 beta subunit
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
   - SBH1
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: Sbh1 is the Saccharomyces beta subunit of the Sec61 complex; no
-    exact source-neutral family CURIE was curated for the eukaryotic Sec61 beta subunit.
-  role: Small tail-anchored beta subunit that associates with Sec61p and Sss1p in
-    the yeast Sec61 translocon.
+  grounding_notes: Sec61 beta is the small eukaryotic Sec61 partner subunit; no exact
+    source-neutral family CURIE was curated for this subunit class.
+  role: Small tail-anchored beta subunit, represented in Saccharomyces by Sbh1p, that
+    associates with the Sec61 alpha and gamma subunits.
   evidence:
   - reference: DOI:10.1038/367654a0
     notes: Hartmann et al. 1994 identified yeast Sbh1p as a conserved component of
@@ -79,17 +87,17 @@ components:
     notes: Feng et al. 2007 showed that the Sbh1p transmembrane domain is sufficient
       for coimmunoprecipitation with Sec61p and Sss1p.
 - component_id: sss1_gamma_subunit
-  label: Sss1 Sec61 gamma subunit
+  label: Sec61 gamma subunit
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
   - SSS1
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: Sss1 is the Saccharomyces gamma subunit of the Sec61 complex; no
-    exact source-neutral family CURIE was curated for the eukaryotic Sec61 gamma subunit.
-  role: Small conserved gamma subunit that forms part of the heterotrimeric Sec61
-    core and supports secretory-protein translocation.
+  grounding_notes: Sec61 gamma is the small conserved eukaryotic Sec61 core subunit;
+    no exact source-neutral family CURIE was curated for this subunit class.
+  role: Small conserved gamma subunit, represented in Saccharomyces by Sss1p, that
+    forms part of the heterotrimeric Sec61 core.
   evidence:
   - reference: DOI:10.1002/j.1460-2075.1993.tb06092.x
     notes: Esnault et al. 1993 showed that SSS1 is essential for yeast secretory-protein
@@ -107,10 +115,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Genetic and biochemical model for the ER Sec61 complex, its Sec61p, Sbh1p,
-    and Sss1p subunits, and Sec61-dependent substrate movement into the endoplasmic
-    reticulum.
-  reference: DOI:10.1074/jbc.M701840200
+  note: Budding-yeast model in which Sbh1p and Sss1p were identified as conserved
+    eukaryotic protein-translocation-complex components.
+  reference: DOI:10.1038/367654a0
 functions:
 - function_id: sec61_dependent_er_protein_translocation
   label: Sec61-dependent ER protein translocation
@@ -151,9 +158,9 @@ evidence:
 causal_graphs:
 - graph_id: sec61_er_translocation
   title: Sec61 forms the ER protein channel
-  description: Sec61p forms the ER protein-conducting channel, Sbh1p and Sss1p associate
-    with that channel in the Sec61 heterotrimer, and the complex resides in the ER
-    membrane during substrate translocation.
+  description: The Sec61 alpha subunit forms the ER protein-conducting channel, the
+    Sec61 beta and gamma subunits associate with that channel in the Sec61 heterotrimer,
+    and the complex resides in the ER membrane during substrate translocation.
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   scope_notes: The graph captures the Sec61 core and ER-membrane translocation activity
@@ -165,11 +172,11 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     component_ref: sec61_alpha_channel_subunit
   - node_id: sbh1_beta_subunit
-    label: Sbh1 Sec61 beta subunit
+    label: Sec61 beta subunit
     node_type: GENE_OR_PROTEIN
     component_ref: sbh1_beta_subunit
   - node_id: sss1_gamma_subunit
-    label: Sss1 Sec61 gamma subunit
+    label: Sec61 gamma subunit
     node_type: GENE_OR_PROTEIN
     component_ref: sss1_gamma_subunit
   - node_id: sec61_translocon_complex
