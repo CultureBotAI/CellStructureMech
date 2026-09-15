@@ -6313,7 +6313,7 @@
         {
           "identifier": "GO:0005637",
           "label": "nuclear inner membrane",
-          "cosine_similarity": 0.91596459
+          "cosine_similarity": 0.912772
         },
         {
           "identifier": "GO:0005634",
@@ -6339,27 +6339,27 @@
         {
           "identifier": "GO:0005640",
           "label": "nuclear outer membrane",
-          "cosine_similarity": 0.96967415
+          "cosine_similarity": 0.96821282
         },
         {
           "identifier": "GO:0005635",
           "label": "nuclear envelope",
-          "cosine_similarity": 0.91596459
+          "cosine_similarity": 0.912772
         },
         {
           "identifier": "GO:0005789",
           "label": "endoplasmic reticulum membrane",
-          "cosine_similarity": 0.86929923
+          "cosine_similarity": 0.86976955
         },
         {
           "identifier": "GO:0030659",
           "label": "cytoplasmic vesicle membrane",
-          "cosine_similarity": 0.86315327
+          "cosine_similarity": 0.86491544
         },
         {
           "identifier": "GO:0032585",
           "label": "multivesicular body membrane",
-          "cosine_similarity": 0.84137545
+          "cosine_similarity": 0.8439566
         }
       ]
     },
@@ -6370,7 +6370,7 @@
         {
           "identifier": "GO:0005637",
           "label": "nuclear inner membrane",
-          "cosine_similarity": 0.96967415
+          "cosine_similarity": 0.96821282
         },
         {
           "identifier": "GO:0005635",
@@ -6442,7 +6442,7 @@
         {
           "identifier": "GO:0005637",
           "label": "nuclear inner membrane",
-          "cosine_similarity": 0.82912604
+          "cosine_similarity": 0.8278625
         },
         {
           "identifier": "GO:0005739",
@@ -9855,14 +9855,14 @@
           "cosine_similarity": 0.80482872
         },
         {
+          "identifier": "GO:0005637",
+          "label": "nuclear inner membrane",
+          "cosine_similarity": 0.7959142
+        },
+        {
           "identifier": "GO:0005640",
           "label": "nuclear outer membrane",
           "cosine_similarity": 0.79560552
-        },
-        {
-          "identifier": "GO:0005637",
-          "label": "nuclear inner membrane",
-          "cosine_similarity": 0.79509112
         }
       ]
     }
