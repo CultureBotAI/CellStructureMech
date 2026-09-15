@@ -1,0 +1,131 @@
+identifier: GO:0005775
+label: vacuolar lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed within the vacuolar membrane.
+definition_source: GO:0005775
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T09:30:21Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T09:31:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added organelle-lumen parentage, vacuole parthood, Eukaryota scope, a Saccharomyces
+    example, lumen compartmentalization, GO/DOI evidence, a nonmechanistic membrane/lumen
+    topology graph, and a resolved lumen-boundary interpretation.
+  llm_assisted: true
+- timestamp: '2026-09-15T09:42:48Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR #957 review issues #958, #959, and #960 by narrowing distribution
+    to Saccharomyces evidence, retyping the lumen and vacuole graph nodes, and marking
+    the topology graph as FUNCTION.'
+  llm_assisted: true
+parent_structures:
+- GO:0070013
+part_of:
+- GO:0005773
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has an acidic lumen inside its lysosome-like vacuole.
+  reference: DOI:10.1016/j.bbamcr.2008.08.003
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding yeast has an acidic fungal-type vacuole lumen inside its lysosome-like
+    vacuole.
+  reference: DOI:10.1016/j.bbamcr.2008.08.003
+functions:
+- function_id: vacuolar_lumen_compartmentalization
+  label: vacuolar lumen compartmentalization
+  description: The vacuolar lumen is the membrane-enclosed compartment in which vacuolar
+    contents and soluble activities are isolated from the cytosol.
+  evidence:
+  - reference: GO:0005775
+    notes: GO:0005775 defines the vacuolar lumen as the volume enclosed by the vacuolar
+      membrane.
+  - reference: DOI:10.1016/j.bbamcr.2008.08.003
+    notes: Li and Kane 2009 review the membrane-enclosed yeast vacuole lumen as the
+      site of lysosome-like storage and degradation.
+evidence:
+- reference: GO:0005775
+  notes: Gene Ontology cellular-component term for the vacuolar lumen.
+- reference: GO:0070013
+  notes: Gene Ontology cellular-component parent term for intracellular organelle
+    lumen.
+- reference: GO:0005773
+  notes: Gene Ontology cellular-component term for the vacuole that contains the vacuolar
+    lumen.
+- reference: GO:0005774
+  notes: Gene Ontology cellular-component term for the vacuolar membrane that bounds
+    the lumen.
+- reference: DOI:10.1016/j.bbamcr.2008.08.003
+  notes: 'Li and Kane 2009, The yeast lysosome-like vacuole: Endpoint and crossroads,
+    Biochimica et Biophysica Acta.'
+causal_graphs:
+- graph_id: vacuolar_lumen_topology
+  title: The vacuolar membrane encloses the vacuolar lumen
+  description: The vacuolar lumen is the internal vacuolar compartment bounded by
+    the vacuolar membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures only the defining vacuole membrane/lumen topology
+    without treating soluble lumenal contents as structural constituents.
+  nodes:
+  - node_id: vacuolar_lumen
+    label: vacuolar lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005775
+  - node_id: vacuole
+    label: vacuole
+    node_type: ORGANELLE
+    grounding: GO:0005773
+  - node_id: vacuolar_membrane
+    label: vacuolar membrane
+    node_type: STRUCTURE
+    grounding: GO:0005774
+  edges:
+  - subject: vacuolar_lumen
+    predicate: is part of
+    object: vacuole
+    description: The vacuolar lumen is the internal compartment inside a vacuole.
+    evidence:
+    - reference: GO:0005775
+      notes: GO:0005775 identifies the vacuolar lumen and places it inside the vacuole.
+    - reference: GO:0005773
+      notes: GO:0005773 identifies the containing vacuole.
+  - subject: vacuolar_membrane
+    predicate: bounds
+    object: vacuolar_lumen
+    description: The vacuolar membrane encloses the vacuolar lumen.
+    evidence:
+    - reference: GO:0005775
+      notes: GO:0005775 defines the lumen as the volume enclosed within the vacuolar
+        membrane.
+    - reference: GO:0005774
+      notes: GO:0005774 identifies the bounding vacuolar membrane.
+discussions:
+- discussion_id: vacuolar_lumen_boundary_not_membrane
+  prompt: Keep the vacuolar membrane as the boundary of the vacuolar lumen rather
+    than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#vacuolar_lumen_topology
+  rationale: GO:0005775 defines the vacuolar lumen by the surrounding vacuolar membrane,
+    so the membrane is represented as a boundary node and not as a molecular component
+    of the lumen.
+  resolution_note: Curated the membrane as a boundary node and left the generic lumen
+    without asserted soluble constituent components.
+  evidence:
+  - reference: GO:0005775
+  - reference: GO:0005774
+  posed_by: codex
+  posed_date: '2026-09-15'
+  resolved_date: '2026-09-15'

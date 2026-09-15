@@ -1,0 +1,167 @@
+identifier: GO:0000220
+label: vacuolar proton-transporting V-type ATPase, V0 domain
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The V0 domain of a proton-transporting V-type ATPase found in the vacuolar
+  membrane.
+definition_source: GO:0000220
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T09:59:56Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T10:00:40Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added V-type ATPase V0-domain parentage, part-of placement under the vacuolar
+    V-ATPase, GO synonymy, Saccharomyces scope, V0 proton-translocation function,
+    GO/DOI evidence, a nonmechanistic membrane-sector graph, and V0 boundary/subunit
+    curation discussions.
+  llm_assisted: true
+- timestamp: '2026-09-15T10:16:09Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR #961 review issue #962 by adding Kane 2006 as direct V0 proton-translocation
+    evidence on the membrane-transport graph edge.'
+  llm_assisted: true
+parent_structures:
+- GO:0033179
+part_of:
+- GO:0016471
+synonyms:
+- synonym_text: vacuolar hydrogen ion-transporting ATPase V0 domain
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000220
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast vacuoles contain a membrane-integral V0 sector that couples
+    to the cytosolic V1 sector in the vacuolar V-ATPase.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which cryo-EM resolved the intact V-ATPase with rotational
+    states of its membrane V0 sector.
+  reference: DOI:10.1038/nature14365
+functions:
+- function_id: v0_membrane_proton_translocation_sector
+  label: V0-sector membrane proton translocation
+  description: Within the intact vacuolar V-ATPase, the V0 domain forms the membrane
+    sector that translocates protons across the vacuolar membrane during rotary catalysis.
+  evidence:
+  - reference: GO:0000220
+    notes: GO:0000220 identifies V0 as the vacuolar-membrane domain of the vacuolar
+      proton-transporting V-type ATPase.
+  - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+    notes: Kane 2006 reviews the membrane V0 sector of the yeast V-ATPase as the proton-translocation
+      sector.
+evidence:
+- reference: GO:0000220
+  notes: Gene Ontology cellular-component term for the vacuolar V0 domain.
+- reference: GO:0033179
+  notes: Gene Ontology cellular-component parent for V-type ATPase V0 domains.
+- reference: GO:0016471
+  notes: Gene Ontology cellular-component term for the containing vacuolar proton-transporting
+    V-type ATPase complex.
+- reference: GO:0005774
+  notes: Gene Ontology cellular-component term for the vacuolar membrane.
+- reference: DOI:10.1128/MMBR.70.1.177-191.2006
+  notes: Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast
+    Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
+- reference: DOI:10.1038/nature14365
+  notes: Zhao, Benlekbir and Rubinstein 2015, Electron cryomicroscopy observation
+    of rotational states in a eukaryotic V-ATPase, Nature.
+causal_graphs:
+- graph_id: yeast_v0_domain_membrane_sector
+  title: The V0 sector anchors proton transport in the vacuolar membrane
+  description: In yeast, the vacuolar V0 domain is the membrane-integral sector of
+    the intact V-ATPase that conducts proton translocation across the vacuolar membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures V0 as the membrane proton-translocation sector of
+    the intact V-ATPase without asserting its individual proteolipid ring, stalk,
+    or a-subunit composition.
+  nodes:
+  - node_id: v0_domain
+    label: vacuolar proton-transporting V-type ATPase, V0 domain
+    node_type: STRUCTURE
+    grounding: GO:0000220
+  - node_id: vacuolar_v_atpase
+    label: vacuolar proton-transporting V-type ATPase complex
+    node_type: STRUCTURE
+    grounding: GO:0016471
+  - node_id: vacuolar_membrane
+    label: vacuolar membrane
+    node_type: STRUCTURE
+    grounding: GO:0005774
+  edges:
+  - subject: v0_domain
+    predicate: is part of
+    object: vacuolar_v_atpase
+    description: The V0 domain is the membrane sector of the assembled vacuolar V-ATPase.
+    evidence:
+    - reference: GO:0000220
+      notes: GO places the vacuolar V0 domain in a part-of relation to the vacuolar
+        V-ATPase complex.
+    - reference: GO:0016471
+      notes: GO:0016471 identifies the containing V-ATPase complex.
+  - subject: v0_domain
+    predicate: is embedded in
+    object: vacuolar_membrane
+    description: The V0 sector is the membrane-integral sector of the vacuolar V-ATPase.
+    evidence:
+    - reference: GO:0000220
+      notes: GO:0000220 defines the vacuolar V0 domain by its vacuolar-membrane location.
+    - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+      notes: Kane 2006 reviews V0 as the membrane sector of the yeast V-ATPase.
+  - subject: v0_domain
+    predicate: transports protons across
+    object: vacuolar_membrane
+    description: In the intact V-ATPase, V0 forms the membrane path for rotary proton
+      transport across the vacuolar membrane.
+    evidence:
+    - reference: DOI:10.1038/nature14365
+      notes: Zhao, Benlekbir and Rubinstein 2015 resolved the intact yeast enzyme
+        containing V0 and V1 rotational states.
+    - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+      notes: Kane 2006 reviews V0 as the membrane-integral sector that translocates
+        protons across organelle membranes in the intact yeast V-ATPase.
+discussions:
+- discussion_id: v0_sector_not_standalone_pump
+  prompt: Represent the V0 domain as the membrane sector of the intact vacuolar V-ATPase
+    rather than as a standalone ATP-dependent pump.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#yeast_v0_domain_membrane_sector
+  rationale: GO:0000220 denotes the V0 domain, which GO places part-of the whole vacuolar
+    V-ATPase complex; the ATP-hydrolyzing V1 sector couples to V0 in the intact rotary
+    enzyme.
+  resolution_note: Curated V0 as an embedded membrane sector and limited the graph
+    to sector topology and proton translocation inside the intact V-ATPase.
+  evidence:
+  - reference: GO:0000220
+  - reference: GO:0016471
+  - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+  posed_by: codex
+  posed_date: '2026-09-15'
+  resolved_date: '2026-09-15'
+- discussion_id: v0_subunit_grounding_todo
+  prompt: Resolve exact source-neutral family groundings for yeast V0 proteolipid-ring,
+    stalk, and a-subunit families.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: GO grounds the whole V0 sector exactly, but the individual yeast V0 subunits
+    need narrower family curation before asserting subunit-level components or copy
+    numbers.
+  evidence:
+  - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+    notes: Kane 2006 reviews the yeast V0 membrane-sector subunits.
+  posed_by: codex
+  posed_date: '2026-09-15'

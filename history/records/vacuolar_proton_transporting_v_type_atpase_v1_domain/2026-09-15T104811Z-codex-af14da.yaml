@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_v1_domain.yaml
+  slug: vacuolar_proton_transporting_v_type_atpase_v1_domain
+session:
+  id: 2026-09-15T104811Z-codex-af14da
+  timestamp: '2026-09-15T10:48:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/964
+  - https://github.com/CultureBotAI/CellStructureMech/issues/965
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/963
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Resolve V1 domain graph review issues
+  details: 'Resolved PR #963 issues #964 and #965 by replacing the GO:0046961 rotary proton-pump
+    node with ungrounded V1-sector ATP hydrolysis, moving direct V1 ATP-hydrolysis evidence
+    to GO:0033180, removing GO:0046961 from top-level evidence, and adding a GO-backed V0-domain
+    part-of edge to the V1/V0 coupling graph.'

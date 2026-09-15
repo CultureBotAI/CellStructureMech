@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_v0_domain.yaml
+  slug: vacuolar_proton_transporting_v_type_atpase_v0_domain
+session:
+  id: 2026-09-15T100105Z-codex-cf0084
+  timestamp: '2026-09-15T10:01:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Create vacuolar V-ATPase V0 domain record
+  details: Created the GO:0000220 vacuolar proton-transporting V-type ATPase V0 domain record
+    with V0-domain parentage, part-of placement under the vacuolar V-ATPase, GO synonymy,
+    Saccharomyces cerevisiae scope, GO and DOI evidence, a nonmechanistic membrane-sector
+    graph, and V0 boundary and subunit-curation discussions.

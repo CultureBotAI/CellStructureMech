@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_v0_domain.yaml
+  slug: vacuolar_proton_transporting_v_type_atpase_v0_domain
+session:
+  id: 2026-09-15T101650Z-codex-2317a0
+  timestamp: '2026-09-15T10:16:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/962
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/961
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Resolve V0 domain graph evidence review
+  details: 'Resolved PR #961 issue #962 by adding Kane 2006 as direct V0-sector proton-translocation
+    evidence on the GO:0000220 graph edge from the V0 domain to the vacuolar membrane.'

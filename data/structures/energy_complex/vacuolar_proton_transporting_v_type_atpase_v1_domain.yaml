@@ -1,0 +1,199 @@
+identifier: GO:0000221
+label: vacuolar proton-transporting V-type ATPase, V1 domain
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The V1 domain of a proton-transporting V-type ATPase found in the vacuolar
+  membrane.
+definition_source: GO:0000221
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T10:34:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T10:35:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added V-type ATPase V1-domain parentage, part-of placement under the vacuolar
+    V-ATPase, GO synonymy, Saccharomyces scope, V1 ATP-hydrolysis function, GO/DOI
+    evidence, a nonmechanistic catalytic-sector graph, and a V1 subunit curation discussion.
+  llm_assisted: true
+- timestamp: '2026-09-15T10:36:02Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Tightened the V1 graph so the V1 sector couples to the V0 sector and left
+    V1 ATP hydrolysis ungrounded instead of overextending the whole rotary proton-pump
+    molecular-function term to the isolated V1 sector.
+  llm_assisted: true
+- timestamp: '2026-09-15T10:47:33Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Addressed PR #963 review issues #964 and #965 by replacing the GO:0046961
+    rotary proton-pump graph node with ungrounded V1-sector ATP hydrolysis evidence
+    and adding V0 part-of context to the V1/V0 coupling graph.'
+  llm_assisted: true
+parent_structures:
+- GO:0033180
+part_of:
+- GO:0016471
+synonyms:
+- synonym_text: vacuolar hydrogen ion-transporting ATPase V1 domain
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000221
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast vacuoles use a cytosolic V1 sector that hydrolyzes ATP and couples
+    to the membrane V0 sector in the vacuolar V-ATPase.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which cryo-EM resolved the intact V-ATPase with rotational
+    states of its cytosolic V1 sector.
+  reference: DOI:10.1038/nature14365
+functions:
+- function_id: v1_atp_hydrolysis_sector
+  label: V1-sector ATP hydrolysis
+  description: Within the intact vacuolar V-ATPase, the V1 domain forms the cytosolic
+    catalytic sector that hydrolyzes ATP and drives rotation coupled to V0 proton
+    translocation.
+  evidence:
+  - reference: GO:0033180
+    notes: GO:0033180 identifies V1 domains as ATP-hydrolyzing V-ATPase sectors.
+  - reference: DOI:10.1038/nrm2272
+    notes: Forgac 2007 reviews ATP hydrolysis in V1 as the source of rotary V-ATPase
+      proton-pump activity.
+evidence:
+- reference: GO:0000221
+  notes: Gene Ontology cellular-component term for the vacuolar V1 domain.
+- reference: GO:0033180
+  notes: Gene Ontology cellular-component parent for V-type ATPase V1 domains.
+- reference: GO:0016471
+  notes: Gene Ontology cellular-component term for the containing vacuolar proton-transporting
+    V-type ATPase complex.
+- reference: GO:0000220
+  notes: Gene Ontology cellular-component term for the complementary vacuolar V0 domain.
+- reference: DOI:10.1128/MMBR.70.1.177-191.2006
+  notes: Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast
+    Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
+- reference: DOI:10.1038/nrm2272
+  notes: 'Forgac 2007, Vacuolar ATPases: rotary proton pumps in physiology and pathophysiology,
+    Nature Reviews Molecular Cell Biology.'
+- reference: DOI:10.1038/nature14365
+  notes: Zhao, Benlekbir and Rubinstein 2015, Electron cryomicroscopy observation
+    of rotational states in a eukaryotic V-ATPase, Nature.
+causal_graphs:
+- graph_id: yeast_v1_domain_catalytic_sector
+  title: The V1 sector hydrolyzes ATP in the vacuolar V-ATPase
+  description: In yeast, the vacuolar V1 domain is the cytosolic catalytic sector
+    of the intact V-ATPase that hydrolyzes ATP to drive rotary proton pumping through
+    V0.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures V1 as the ATP-hydrolyzing catalytic sector of the
+    intact V-ATPase without asserting its individual catalytic-head, central-stalk,
+    or peripheral-stalk subunit composition.
+  nodes:
+  - node_id: v1_domain
+    label: vacuolar proton-transporting V-type ATPase, V1 domain
+    node_type: STRUCTURE
+    grounding: GO:0000221
+  - node_id: vacuolar_v_atpase
+    label: vacuolar proton-transporting V-type ATPase complex
+    node_type: STRUCTURE
+    grounding: GO:0016471
+  - node_id: v0_domain
+    label: vacuolar proton-transporting V-type ATPase, V0 domain
+    node_type: STRUCTURE
+    grounding: GO:0000220
+  - node_id: v1_atp_hydrolysis
+    label: V1-sector ATP hydrolysis
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: v1_domain
+    predicate: is part of
+    object: vacuolar_v_atpase
+    description: The V1 domain is the catalytic sector of the assembled vacuolar V-ATPase.
+    evidence:
+    - reference: GO:0000221
+      notes: GO places the vacuolar V1 domain in a part-of relation to the vacuolar
+        V-ATPase complex.
+    - reference: GO:0016471
+      notes: GO:0016471 identifies the containing V-ATPase complex.
+  - subject: v1_domain
+    predicate: catalyses
+    predicate_id: RO:0002327
+    object: v1_atp_hydrolysis
+    description: The V1 sector hydrolyzes ATP to power rotary activity of the intact
+      V-ATPase.
+    evidence:
+    - reference: GO:0033180
+      notes: GO:0033180 identifies V1 domains as V-ATPase sectors that catalyze ATP
+        hydrolysis.
+    - reference: DOI:10.1038/nrm2272
+      notes: Forgac 2007 reviews ATP hydrolysis in V1 as the source of rotary proton-pump
+        activity.
+  - subject: v0_domain
+    predicate: is part of
+    object: vacuolar_v_atpase
+    description: The V0 domain is the membrane proton-translocation sector of the
+      assembled vacuolar V-ATPase.
+    evidence:
+    - reference: GO:0000220
+      notes: GO places the vacuolar V0 domain in a part-of relation to the vacuolar
+        V-ATPase complex.
+    - reference: GO:0016471
+      notes: GO:0016471 identifies the containing V-ATPase complex.
+  - subject: v1_domain
+    predicate: couples to
+    object: v0_domain
+    description: In the intact V-ATPase, ATP hydrolysis in V1 is coupled to rotary
+      proton translocation through V0.
+    evidence:
+    - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+      notes: Kane 2006 reviews coupling of the ATP-hydrolyzing V1 sector to the membrane
+        V0 proton-translocation sector.
+    - reference: DOI:10.1038/nature14365
+      notes: Zhao, Benlekbir and Rubinstein 2015 resolved the intact yeast enzyme
+        containing V0 and V1 rotational states.
+discussions:
+- discussion_id: v1_sector_not_standalone_pump
+  prompt: Represent the V1 domain as the ATP-hydrolyzing sector of the intact vacuolar
+    V-ATPase rather than as a standalone membrane proton pump.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#yeast_v1_domain_catalytic_sector
+  rationale: GO:0000221 denotes the V1 domain, which GO places part-of the whole vacuolar
+    V-ATPase complex; the V1 sector couples ATP hydrolysis to the V0 proton-translocation
+    sector in the intact rotary enzyme.
+  resolution_note: Curated V1 as a cytosolic catalytic sector and limited the graph
+    to V1 ATP hydrolysis and V0 coupling inside the intact V-ATPase.
+  evidence:
+  - reference: GO:0000221
+  - reference: GO:0016471
+  - reference: DOI:10.1038/nrm2272
+  posed_by: codex
+  posed_date: '2026-09-15'
+  resolved_date: '2026-09-15'
+- discussion_id: v1_subunit_grounding_todo
+  prompt: Resolve exact source-neutral family groundings for yeast V1 catalytic-head,
+    central-stalk, and peripheral-stalk subunit families.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: GO grounds the whole V1 sector exactly, but the individual yeast V1 subunits
+    need narrower family curation before asserting subunit-level components or copy
+    numbers.
+  evidence:
+  - reference: GO:0033180
+    notes: GO:0033180 defines the generic V1 domain by its catalytic headpiece, central
+      rotational stalk, and peripheral stalk subunits.
+  - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+    notes: Kane 2006 reviews the yeast V1 ATP-hydrolysis-sector subunits.
+  posed_by: codex
+  posed_date: '2026-09-15'

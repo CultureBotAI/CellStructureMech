@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/vacuolar_lumen.yaml
+  slug: vacuolar_lumen
+session:
+  id: 2026-09-15T093202Z-codex-9e3e09
+  timestamp: '2026-09-15T09:32:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Create vacuolar lumen record
+  details: Created the GO:0005775 vacuolar lumen record with organelle-lumen parentage, vacuole
+    parthood, Eukaryota scope, a Saccharomyces cerevisiae example, GO and DOI evidence, and
+    a nonmechanistic topology graph that represents the vacuolar membrane as the boundary
+    of the lumen.
