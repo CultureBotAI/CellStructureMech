@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endosome_lumen.yaml
+  slug: endosome_lumen
+session:
+  id: 2026-09-15T201230Z-codex-8f1637
+  timestamp: '2026-09-15T20:12:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO endosome lumen record
+  details: Created data/structures/membrane_organelle/endosome_lumen.yaml for GO:0031904,
+    linking it to the endosome, modeling the bounding membrane conservatively as a topology
+    node instead of a lumen component, and adding Saccharomyces cerevisiae MVB sorting scope,
+    GO and literature evidence, a nonmechanistic endosome lumen topology graph, and a resolved
+    lumen-boundary interpretation.

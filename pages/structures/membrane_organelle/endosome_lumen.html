@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>endosome lumen · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>endosome lumen</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031904"><code>GO:0031904</code></a> · MEMBRANE_ORGANELLE · SUBCELLULAR_REGION · <span class="status">PROPOSED</span></p>
+<p class="definition">The volume enclosed by the membrane of an endosome. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031904"><code>GO:0031904</code></a>]</small></p>
+<p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005768"><code>GO:0005768</code></a> </p>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> Saccharomyces cerevisiae — <strong>COMMON</strong>: Budding yeast endosomal multivesicular bodies form lumenal intraluminal vesicles during ESCRT-dependent cargo sorting. [<a href="https://doi.org/10.1016/S0092-8674(01)00434-2"><code>DOI:10.1016/S0092-8674(01)00434-2</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> <em>Saccharomyces cerevisiae</em> — Genetic model for ESCRT-dependent delivery of ubiquitinated endosomal membrane cargo into the multivesicular-body lumen. [<a href="https://doi.org/10.1016/S0092-8674(01)00434-2"><code>DOI:10.1016/S0092-8674(01)00434-2</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>multivesicular body sorting pathway</strong> <a href="http://purl.obolibrary.org/obo/GO_0071985"><code>GO:0071985</code></a> — The endosome lumen receives intraluminal vesicles and their membrane cargo during ESCRT-dependent multivesicular-body sorting.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005771"><code>GO:0005771</code></a> <small>GO:0005771 defines multivesicular bodies as endosomes with internal vesicles formed by invagination of the limiting endosomal membrane.</small></li><li><a href="https://doi.org/10.1016/S0092-8674(01)00434-2"><code>DOI:10.1016/S0092-8674(01)00434-2</code></a> <small>Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved yeast endosomal protein-sorting complex needed for ubiquitin-dependent MVB cargo sorting.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-endosome_lumen_topology">Endosome lumen topology <small>(FUNCTION)</small></h3>
+<p>The endosome membrane bounds the endosome lumen whose multivesicular-body lumen specialization receives intraluminal vesicles during MVB sorting.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>endosome lumen</td><td>is part of</td><td>endosome</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031904"><code>GO:0031904</code></a> <small>GO:0031904 defines the endosome lumen as the volume enclosed by the membrane of an endosome.</small></li></ul></td></tr>
+<tr><td>multivesicular body lumen</td><td>is a</td><td>endosome lumen</td><td><ul class="evidence"><li><code>uniprot.location:SL-0340</code> <small>UniProt SL-0340 places the multivesicular body lumen under endosome lumen.</small></li></ul></td></tr>
+<tr><td>endosome membrane</td><td>bounds</td><td>endosome lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031904"><code>GO:0031904</code></a> <small>GO:0031904 defines the endosome lumen by the surrounding endosome membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0010008"><code>GO:0010008</code></a> <small>GO:0010008 identifies the endosome-bounding lipid bilayer.</small></li></ul></td></tr>
+<tr><td>multivesicular body</td><td>is a</td><td>endosome</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005771"><code>GO:0005771</code></a> <small>GO:0005771 defines multivesicular bodies as endosomes that contain internal vesicles formed from the limiting endosomal membrane.</small></li></ul></td></tr>
+<tr><td>intraluminal vesicle</td><td>is contained in</td><td>multivesicular body lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005771"><code>GO:0005771</code></a> <small>GO:0005771 defines multivesicular bodies by internal vesicles formed from invagination of the limiting endosomal membrane.</small></li><li><code>uniprot.location:SL-0340</code> <small>UniProt SL-0340 identifies the internal multivesicular body lumen.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Represent the endosome membrane as the boundary of the endosome lumen rather than as a lumen component. <small>GO:0031904 denotes the volume enclosed by the endosome membrane, whereas GO:0010008 denotes the surrounding lipid bilayer.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031904"><code>GO:0031904</code></a> <small>Gene Ontology cellular-component term for the endosome lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0070013"><code>GO:0070013</code></a> <small>Gene Ontology cellular-component parent term for intracellular organelle lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005768"><code>GO:0005768</code></a> <small>Gene Ontology cellular-component term for endosome.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0010008"><code>GO:0010008</code></a> <small>Gene Ontology cellular-component term for the endosome membrane that bounds the lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005771"><code>GO:0005771</code></a> <small>Gene Ontology cellular-component term for the multivesicular body.</small></li><li><code>uniprot.location:SL-0340</code> <small>UniProt Subcellular Location entry SL-0340 identifies the multivesicular body lumen as an endosome-lumen specialization.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0071985"><code>GO:0071985</code></a> <small>Gene Ontology biological-process term for the multivesicular body sorting pathway.</small></li><li><a href="https://doi.org/10.1016/S0092-8674(01)00434-2"><code>DOI:10.1016/S0092-8674(01)00434-2</code></a> <small>Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex, ESCRT-I, Cell.</small></li><li><a href="https://doi.org/10.1016/j.devcel.2011.05.015"><code>DOI:10.1016/j.devcel.2011.05.015</code></a> <small>Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-15T20:10:50Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-15T20:11:48Z</code> codex · EXPANDED_RECORD — Added organelle-lumen parentage, endosome parthood, budding-yeast MVB sorting scope, GO/DOI evidence, a nonmechanistic endosome lumen topology graph, and a resolved lumen-boundary interpretation.</li><li><code>2026-09-15T20:24:39Z</code> codex · ADDRESS_REVIEW — Resolved #1022 by routing intraluminal vesicle containment through the multivesicular body lumen specialization and resolved #1023 by removing the unused ESCRT-III DOI from record-level evidence.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/endosome_lumen.yaml"><code>data/structures/membrane_organelle/endosome_lumen.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

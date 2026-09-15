@@ -1,0 +1,183 @@
+identifier: GO:0031904
+label: endosome lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the membrane of an endosome.
+definition_source: GO:0031904
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T20:10:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T20:11:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added organelle-lumen parentage, endosome parthood, budding-yeast MVB sorting
+    scope, GO/DOI evidence, a nonmechanistic endosome lumen topology graph, and a
+    resolved lumen-boundary interpretation.
+  llm_assisted: true
+- timestamp: '2026-09-15T20:24:39Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1022 by routing intraluminal vesicle containment through the
+    multivesicular body lumen specialization and resolved #1023 by removing the unused
+    ESCRT-III DOI from record-level evidence.'
+  llm_assisted: true
+parent_structures:
+- GO:0070013
+part_of:
+- GO:0005768
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast endosomal multivesicular bodies form lumenal intraluminal vesicles
+    during ESCRT-dependent cargo sorting.
+  reference: DOI:10.1016/S0092-8674(01)00434-2
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Genetic model for ESCRT-dependent delivery of ubiquitinated endosomal membrane
+    cargo into the multivesicular-body lumen.
+  reference: DOI:10.1016/S0092-8674(01)00434-2
+functions:
+- function_id: multivesicular_body_sorting_pathway
+  label: multivesicular body sorting pathway
+  grounding: GO:0071985
+  description: The endosome lumen receives intraluminal vesicles and their membrane
+    cargo during ESCRT-dependent multivesicular-body sorting.
+  evidence:
+  - reference: GO:0005771
+    notes: GO:0005771 defines multivesicular bodies as endosomes with internal vesicles
+      formed by invagination of the limiting endosomal membrane.
+  - reference: DOI:10.1016/S0092-8674(01)00434-2
+    notes: Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved yeast endosomal
+      protein-sorting complex needed for ubiquitin-dependent MVB cargo sorting.
+evidence:
+- reference: GO:0031904
+  notes: Gene Ontology cellular-component term for the endosome lumen.
+- reference: GO:0070013
+  notes: Gene Ontology cellular-component parent term for intracellular organelle
+    lumen.
+- reference: GO:0005768
+  notes: Gene Ontology cellular-component term for endosome.
+- reference: GO:0010008
+  notes: Gene Ontology cellular-component term for the endosome membrane that bounds
+    the lumen.
+- reference: GO:0005771
+  notes: Gene Ontology cellular-component term for the multivesicular body.
+- reference: uniprot.location:SL-0340
+  notes: UniProt Subcellular Location entry SL-0340 identifies the multivesicular
+    body lumen as an endosome-lumen specialization.
+- reference: GO:0071985
+  notes: Gene Ontology biological-process term for the multivesicular body sorting
+    pathway.
+- reference: DOI:10.1016/S0092-8674(01)00434-2
+  notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
+    Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
+    ESCRT-I, Cell.
+- reference: DOI:10.1016/j.devcel.2011.05.015
+  notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+causal_graphs:
+- graph_id: endosome_lumen_topology
+  title: Endosome lumen topology
+  description: The endosome membrane bounds the endosome lumen whose multivesicular-body
+    lumen specialization receives intraluminal vesicles during MVB sorting.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures defining endosome lumen topology and the multivesicular-body
+    lumenal vesicle destination without making intraluminal vesicles a generic feature
+    of all endosome lumens or asserting a full sequence of ESCRT cargo recognition,
+    membrane budding, scission, or vacuolar fusion.
+  nodes:
+  - node_id: endosome_lumen
+    label: endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031904
+  - node_id: multivesicular_body_lumen
+    label: multivesicular body lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: cellstructuremech:multivesicular_body_lumen
+  - node_id: endosome_membrane
+    label: endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0010008
+  - node_id: endosome
+    label: endosome
+    node_type: ORGANELLE
+    grounding: GO:0005768
+  - node_id: intraluminal_vesicle
+    label: intraluminal vesicle
+    node_type: STRUCTURE
+  - node_id: multivesicular_body
+    label: multivesicular body
+    node_type: ORGANELLE
+    grounding: GO:0005771
+  edges:
+  - subject: endosome_lumen
+    predicate: is part of
+    object: endosome
+    description: The endosome lumen is the volume enclosed inside an endosome.
+    evidence:
+    - reference: GO:0031904
+      notes: GO:0031904 defines the endosome lumen as the volume enclosed by the membrane
+        of an endosome.
+  - subject: multivesicular_body_lumen
+    predicate: is a
+    object: endosome_lumen
+    description: The multivesicular body lumen is a specialized endosome lumen.
+    evidence:
+    - reference: uniprot.location:SL-0340
+      notes: UniProt SL-0340 places the multivesicular body lumen under endosome lumen.
+  - subject: endosome_membrane
+    predicate: bounds
+    object: endosome_lumen
+    description: The endosome membrane encloses the endosome lumen.
+    evidence:
+    - reference: GO:0031904
+      notes: GO:0031904 defines the endosome lumen by the surrounding endosome membrane.
+    - reference: GO:0010008
+      notes: GO:0010008 identifies the endosome-bounding lipid bilayer.
+  - subject: multivesicular_body
+    predicate: is a
+    object: endosome
+    description: Multivesicular bodies are endosomes with internal vesicles in the
+      endosome lumen.
+    evidence:
+    - reference: GO:0005771
+      notes: GO:0005771 defines multivesicular bodies as endosomes that contain internal
+        vesicles formed from the limiting endosomal membrane.
+  - subject: intraluminal_vesicle
+    predicate: is contained in
+    object: multivesicular_body_lumen
+    description: In multivesicular bodies, the multivesicular body lumen contains
+      intraluminal vesicles generated from the limiting endosomal membrane.
+    evidence:
+    - reference: GO:0005771
+      notes: GO:0005771 defines multivesicular bodies by internal vesicles formed
+        from invagination of the limiting endosomal membrane.
+    - reference: uniprot.location:SL-0340
+      notes: UniProt SL-0340 identifies the internal multivesicular body lumen.
+discussions:
+- discussion_id: endosome_lumen_boundary_not_membrane
+  prompt: Represent the endosome membrane as the boundary of the endosome lumen rather
+    than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#endosome_lumen_topology
+  rationale: GO:0031904 denotes the volume enclosed by the endosome membrane, whereas
+    GO:0010008 denotes the surrounding lipid bilayer.
+  resolution_note: Curated the endosome membrane as a boundary node and left the generic
+    lumen without asserted constituent molecular components.
+  evidence:
+  - reference: GO:0031904
+    notes: GO:0031904 identifies the endosome lumen.
+  - reference: GO:0010008
+    notes: GO:0010008 identifies the membrane that bounds the lumen.
+  posed_by: codex
+  posed_date: '2026-09-15'
+  resolved_date: '2026-09-15'
