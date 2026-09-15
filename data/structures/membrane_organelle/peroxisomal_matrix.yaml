@@ -1,0 +1,143 @@
+identifier: GO:0005782
+label: peroxisomal matrix
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume contained within the membranes of a peroxisome; in many cells
+  the matrix contains a crystalloid core largely composed of urate oxidase.
+definition_source: GO:0005782
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T05:01:39Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T05:02:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added exact GO synonymy, microbody-lumen parentage, peroxisome parthood,
+    Saccharomyces scope, a matrix beta-oxidation function, GO/DOI evidence, a nonmechanistic
+    matrix-topology graph, and a resolved boundary interpretation.
+  llm_assisted: true
+synonyms:
+- synonym_text: peroxisomal lumen
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005782
+parent_structures:
+- GO:0031907
+part_of:
+- GO:0005777
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Saccharomyces cerevisiae peroxisomes contain a matrix compartment that houses
+    fatty-acid beta-oxidation enzymes.
+  reference: DOI:10.1093/femsyr/fow038
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model for import of nuclear-encoded, targeting-signal-bearing
+    metabolic enzymes into the peroxisomal matrix.
+  reference: DOI:10.1016/j.bbamcr.2015.09.008
+functions:
+- function_id: peroxisomal_matrix_beta_oxidation
+  label: fatty acid beta-oxidation
+  description: The peroxisomal matrix compartmentalizes enzymes for fatty-acid beta-oxidation
+    in yeasts.
+  evidence:
+  - reference: DOI:10.1093/femsyr/fow038
+    notes: Sibirny 2016 reviewed fatty-acid beta-oxidation as a major metabolic function
+      of yeast peroxisomes.
+  - reference: DOI:10.1016/j.bbamcr.2015.09.008
+    notes: Yuan, Veenhuis and van der Klei 2016 review yeast peroxisomal protein import
+      into the metabolic matrix.
+evidence:
+- reference: GO:0005782
+  notes: Gene Ontology cellular-component term for peroxisomal matrix.
+- reference: GO:0031907
+  notes: Gene Ontology cellular-component parent term for microbody lumen.
+- reference: GO:0005777
+  notes: Gene Ontology cellular-component term for the containing peroxisome.
+- reference: GO:0005778
+  notes: Gene Ontology cellular-component term for the peroxisomal membrane that encloses
+    the matrix.
+- reference: DOI:10.1093/femsyr/fow038
+  notes: 'Sibirny 2016, Yeast peroxisomes: structure, functions and biotechnological
+    opportunities, FEMS Yeast Research.'
+- reference: DOI:10.1016/j.bbamcr.2015.09.008
+  notes: Yuan, Veenhuis and van der Klei 2016, The birth of yeast peroxisomes, Biochimica
+    et Biophysica Acta - Molecular Cell Research.
+causal_graphs:
+- graph_id: peroxisomal_matrix_topology
+  title: Peroxisomal matrix topology
+  description: The peroxisomal matrix is the internal peroxisome compartment enclosed
+    by the peroxisomal membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining matrix boundary and a matrix-localized
+    metabolic function without duplicating the full peroxisomal import cycle.
+  nodes:
+  - node_id: peroxisomal_matrix
+    label: peroxisomal matrix
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005782
+  - node_id: peroxisomal_membrane
+    label: peroxisomal membrane
+    node_type: STRUCTURE
+    grounding: GO:0005778
+  - node_id: peroxisome
+    label: peroxisome
+    node_type: ORGANELLE
+    grounding: GO:0005777
+  - node_id: fatty_acid_beta_oxidation
+    label: fatty acid beta-oxidation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: peroxisomal_matrix
+    predicate: is part of
+    object: peroxisome
+    description: The peroxisomal matrix is the internal volume inside a peroxisome.
+    evidence:
+    - reference: GO:0005782
+      notes: GO:0005782 identifies the peroxisomal matrix cellular component.
+    - reference: GO:0005777
+      notes: GO:0005777 identifies the containing peroxisome.
+  - subject: peroxisomal_membrane
+    predicate: encloses
+    object: peroxisomal_matrix
+    description: The peroxisomal membrane encloses the peroxisomal matrix.
+    evidence:
+    - reference: GO:0005782
+      notes: GO:0005782 defines the peroxisomal matrix as the volume contained within
+        peroxisome membranes.
+    - reference: GO:0005778
+      notes: GO:0005778 identifies the lipid bilayer surrounding a peroxisome.
+  - subject: fatty_acid_beta_oxidation
+    predicate: occurs in
+    object: peroxisomal_matrix
+    description: Fatty-acid beta-oxidation enzymes act inside the yeast peroxisomal
+      matrix.
+    evidence:
+    - reference: DOI:10.1093/femsyr/fow038
+      notes: Sibirny 2016 reviewed fatty-acid beta-oxidation as peroxisome-localized
+        metabolism in yeasts.
+discussions:
+- discussion_id: boundary_membrane_not_matrix_component
+  prompt: Keep the peroxisomal membrane as the boundary of the peroxisomal matrix
+    rather than as a matrix component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#peroxisomal_matrix_topology
+  rationale: GO:0005782 denotes the volume contained within peroxisome membranes,
+    whereas GO:0005778 denotes the lipid bilayer surrounding a peroxisome.
+  resolution_note: Represented GO:0005778 as the boundary node in the topology graph
+    and left the matrix record without constituent components.
+  evidence:
+  - reference: GO:0005782
+    notes: GO:0005782 identifies the peroxisomal matrix.
+  - reference: GO:0005778
+    notes: GO:0005778 identifies the membrane that bounds the peroxisomal matrix.
+  posed_by: codex
+  posed_date: '2026-09-15'

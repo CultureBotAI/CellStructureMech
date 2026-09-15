@@ -6705,6 +6705,37 @@
       ]
     },
     {
+      "identifier": "GO:0005782",
+      "label": "peroxisomal matrix",
+      "neighbors": [
+        {
+          "identifier": "GO:0005777",
+          "label": "peroxisome",
+          "cosine_similarity": 0.88638467
+        },
+        {
+          "identifier": "GO:0005778",
+          "label": "peroxisomal membrane",
+          "cosine_similarity": 0.85940287
+        },
+        {
+          "identifier": "GO:0005759",
+          "label": "mitochondrial matrix",
+          "cosine_similarity": 0.8116599
+        },
+        {
+          "identifier": "GO:0005758",
+          "label": "mitochondrial intermembrane space",
+          "cosine_similarity": 0.80049227
+        },
+        {
+          "identifier": "GO:0060205",
+          "label": "cytoplasmic vesicle lumen",
+          "cosine_similarity": 0.78676647
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005778",
       "label": "peroxisomal membrane",
       "neighbors": [
@@ -6712,6 +6743,11 @@
           "identifier": "GO:0005777",
           "label": "peroxisome",
           "cosine_similarity": 0.93128288
+        },
+        {
+          "identifier": "GO:0005782",
+          "label": "peroxisomal matrix",
+          "cosine_similarity": 0.85940287
         },
         {
           "identifier": "GO:0046861",
@@ -6727,11 +6763,6 @@
           "identifier": "GO:0046860",
           "label": "glycosome membrane",
           "cosine_similarity": 0.80767022
-        },
-        {
-          "identifier": "GO:0005789",
-          "label": "endoplasmic reticulum membrane",
-          "cosine_similarity": 0.80354402
         }
       ]
     },
@@ -6743,6 +6774,11 @@
           "identifier": "GO:0005778",
           "label": "peroxisomal membrane",
           "cosine_similarity": 0.93128288
+        },
+        {
+          "identifier": "GO:0005782",
+          "label": "peroxisomal matrix",
+          "cosine_similarity": 0.88638467
         },
         {
           "identifier": "GO:0031966",
@@ -6758,11 +6794,6 @@
           "identifier": "GO:0005741",
           "label": "mitochondrial outer membrane",
           "cosine_similarity": 0.80787214
-        },
-        {
-          "identifier": "GO:0005743",
-          "label": "mitochondrial inner membrane",
-          "cosine_similarity": 0.80035768
         }
       ]
     },
