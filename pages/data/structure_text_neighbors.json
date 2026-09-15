@@ -2968,6 +2968,11 @@
           "cosine_similarity": 0.83234038
         },
         {
+          "identifier": "GO:0005775",
+          "label": "vacuolar lumen",
+          "cosine_similarity": 0.83168608
+        },
+        {
           "identifier": "GO:0005759",
           "label": "mitochondrial matrix",
           "cosine_similarity": 0.82614983
@@ -2976,11 +2981,6 @@
           "identifier": "GO:0005641",
           "label": "nuclear envelope lumen",
           "cosine_similarity": 0.82271558
-        },
-        {
-          "identifier": "GO:0034591",
-          "label": "rhoptry lumen",
-          "cosine_similarity": 0.82049501
         }
       ]
     },
@@ -3888,6 +3888,11 @@
       "label": "contractile vacuole lumen",
       "neighbors": [
         {
+          "identifier": "GO:0005775",
+          "label": "vacuolar lumen",
+          "cosine_similarity": 0.86772863
+        },
+        {
           "identifier": "GO:0000331",
           "label": "contractile vacuole",
           "cosine_similarity": 0.86332507
@@ -3906,11 +3911,6 @@
           "identifier": "cellstructuremech:cvt_vesicle_lumen",
           "label": "Cvt vesicle lumen",
           "cosine_similarity": 0.77637282
-        },
-        {
-          "identifier": "GO:0033985",
-          "label": "acidocalcisome lumen",
-          "cosine_similarity": 0.76823875
         }
       ]
     },
@@ -5019,14 +5019,14 @@
           "cosine_similarity": 0.86910992
         },
         {
+          "identifier": "GO:0005775",
+          "label": "vacuolar lumen",
+          "cosine_similarity": 0.86014043
+        },
+        {
           "identifier": "GO:0005774",
           "label": "vacuolar membrane",
           "cosine_similarity": 0.83823945
-        },
-        {
-          "identifier": "cellstructuremech:cvt_vesicle_lumen",
-          "label": "Cvt vesicle lumen",
-          "cosine_similarity": 0.83483256
         }
       ]
     },
@@ -5675,9 +5675,9 @@
           "cosine_similarity": 0.8059757
         },
         {
-          "identifier": "GO:0060205",
-          "label": "cytoplasmic vesicle lumen",
-          "cosine_similarity": 0.79752168
+          "identifier": "GO:0005775",
+          "label": "vacuolar lumen",
+          "cosine_similarity": 0.80568073
         }
       ]
     },
@@ -6781,6 +6781,11 @@
           "cosine_similarity": 0.88643641
         },
         {
+          "identifier": "GO:0005775",
+          "label": "vacuolar lumen",
+          "cosine_similarity": 0.83702538
+        },
+        {
           "identifier": "GO:0034591",
           "label": "rhoptry lumen",
           "cosine_similarity": 0.81983069
@@ -6789,11 +6794,6 @@
           "identifier": "cellstructuremech:contractile_vacuole_lumen",
           "label": "contractile vacuole lumen",
           "cosine_similarity": 0.81449844
-        },
-        {
-          "identifier": "GO:0000328",
-          "label": "fungal-type vacuole lumen",
-          "cosine_similarity": 0.78131567
         }
       ]
     },
@@ -7463,6 +7463,11 @@
           "cosine_similarity": 0.84044478
         },
         {
+          "identifier": "GO:0005775",
+          "label": "vacuolar lumen",
+          "cosine_similarity": 0.83547914
+        },
+        {
           "identifier": "GO:0060205",
           "label": "cytoplasmic vesicle lumen",
           "cosine_similarity": 0.83485306
@@ -7471,11 +7476,6 @@
           "identifier": "GO:0033985",
           "label": "acidocalcisome lumen",
           "cosine_similarity": 0.82049501
-        },
-        {
-          "identifier": "cellstructuremech:parasitophorous_vacuole_lumen",
-          "label": "parasitophorous vacuole lumen",
-          "cosine_similarity": 0.81983069
         }
       ]
     },
@@ -7724,6 +7724,37 @@
           "identifier": "GO:0034492",
           "label": "hydrogenosome lumen",
           "cosine_similarity": 0.72980101
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005775",
+      "label": "vacuolar lumen",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:contractile_vacuole_lumen",
+          "label": "contractile vacuole lumen",
+          "cosine_similarity": 0.86772863
+        },
+        {
+          "identifier": "GO:0000328",
+          "label": "fungal-type vacuole lumen",
+          "cosine_similarity": 0.86014043
+        },
+        {
+          "identifier": "GO:0060205",
+          "label": "cytoplasmic vesicle lumen",
+          "cosine_similarity": 0.85512058
+        },
+        {
+          "identifier": "cellstructuremech:cvt_vesicle_lumen",
+          "label": "Cvt vesicle lumen",
+          "cosine_similarity": 0.84395823
+        },
+        {
+          "identifier": "cellstructuremech:parasitophorous_vacuole_lumen",
+          "label": "parasitophorous vacuole lumen",
+          "cosine_similarity": 0.83702538
         }
       ]
     },
