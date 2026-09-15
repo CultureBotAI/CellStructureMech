@@ -19,6 +19,13 @@ curation_history:
     Saccharomyces scope, a matrix beta-oxidation function, GO/DOI evidence, a nonmechanistic
     matrix-topology graph, and a resolved boundary interpretation.
   llm_assisted: true
+- timestamp: '2026-09-15T05:12:40Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed issues #932 and #933 by removing import-only evidence from the
+    beta-oxidation function and grounding the fatty acid beta-oxidation function and
+    graph node to GO:0006635.'
+  llm_assisted: true
 synonyms:
 - synonym_text: peroxisomal lumen
   synonym_type: EXACT_SYNONYM
@@ -49,9 +56,7 @@ functions:
   - reference: DOI:10.1093/femsyr/fow038
     notes: Sibirny 2016 reviewed fatty-acid beta-oxidation as a major metabolic function
       of yeast peroxisomes.
-  - reference: DOI:10.1016/j.bbamcr.2015.09.008
-    notes: Yuan, Veenhuis and van der Klei 2016 review yeast peroxisomal protein import
-      into the metabolic matrix.
+  grounding: GO:0006635
 evidence:
 - reference: GO:0005782
   notes: Gene Ontology cellular-component term for peroxisomal matrix.
@@ -62,6 +67,8 @@ evidence:
 - reference: GO:0005778
   notes: Gene Ontology cellular-component term for the peroxisomal membrane that encloses
     the matrix.
+- reference: GO:0006635
+  notes: Gene Ontology biological-process term for fatty acid beta-oxidation.
 - reference: DOI:10.1093/femsyr/fow038
   notes: 'Sibirny 2016, Yeast peroxisomes: structure, functions and biotechnological
     opportunities, FEMS Yeast Research.'
@@ -93,6 +100,7 @@ causal_graphs:
   - node_id: fatty_acid_beta_oxidation
     label: fatty acid beta-oxidation
     node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006635
   edges:
   - subject: peroxisomal_matrix
     predicate: is part of
