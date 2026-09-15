@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ventral_disc_supernumerary_microtubule_array.yaml
+  slug: ventral_disc_supernumerary_microtubule_array
+session:
+  id: 2026-09-15T163453Z-codex-6d6057
+  timestamp: '2026-09-15T16:34:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ventral disc supernumerary microtubule array
+  details: Added GO:0097596 as a standalone ventral disc supernumerary microtubule array record
+    with ventral-disc partonomy, a label-only alpha/beta tubulin component, Giardia intestinalis
+    scope and example rows, Schwartz et al. DOI evidence, a nonmechanistic supernumerary-array
+    topology graph, an open TODO for exact component grounding, regenerated text embeddings,
+    and rendered structure pages.
