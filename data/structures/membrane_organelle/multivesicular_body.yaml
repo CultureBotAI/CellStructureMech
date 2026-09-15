@@ -1,0 +1,242 @@
+identifier: GO:0005771
+label: multivesicular body
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A type of endosome in which regions of the limiting endosomal membrane
+  invaginate to form internal vesicles; membrane proteins that enter the internal
+  vesicles are sequestered from the cytoplasm.
+definition_source: GO:0005771
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T02:11:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T02:12:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added late-endosome parentage, UniProt SL-0174 synonymy, an MVB membrane
+    component, GO/UniProt/DOI evidence, Saccharomyces scope, MVB sorting and vacuolar
+    cargo-delivery functions, a nonmechanistic ESCRT intraluminal-vesicle formation
+    graph, and MVB substructure and ESCRT component-boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0005770
+has_part:
+- GO:0032585
+synonyms:
+- synonym_text: MVB
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0174
+- synonym_text: endosomal carrier vesicle
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0174
+- synonym_text: ECV
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0174
+- synonym_text: corpuscula multivesicularis
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0174
+- synonym_text: multivesicular bodies
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0174
+xrefs:
+- uniprot.location:SL-0174
+components:
+- component_id: multivesicular_body_membrane
+  label: multivesicular body membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0032585
+  essentiality: ESSENTIAL
+  role: Endosomal limiting membrane that invaginates to generate the internal vesicles
+    characteristic of multivesicular bodies.
+  evidence:
+  - reference: GO:0032585
+    notes: Gene Ontology cellular-component term for the multivesicular body membrane.
+  - reference: uniprot.location:SL-0175
+    notes: UniProt Subcellular Location entry SL-0175 maps to GO:0032585 and places
+      the membrane under the multivesicular body.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms multivesicular bodies when ESCRT machinery sorts ubiquitinated
+    endosomal membrane cargo into intraluminal vesicles destined for vacuolar delivery.
+  reference: DOI:10.1016/S0092-8674(01)00434-2
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Genetic and cell-biological model for ESCRT-dependent sorting of ubiquitinated
+    membrane proteins into yeast multivesicular bodies.
+  reference: DOI:10.1016/S0092-8674(01)00434-2
+functions:
+- function_id: multivesicular_body_sorting_pathway
+  label: multivesicular body sorting pathway
+  grounding: GO:0071985
+  description: Multivesicular bodies receive ubiquitinated transmembrane cargo into
+    luminal vesicles through ESCRT-dependent endosomal sorting.
+  evidence:
+  - reference: GO:0071985
+    notes: GO:0071985 denotes the multivesicular body sorting pathway that targets
+      ubiquitylated transmembrane proteins into luminal vesicles.
+  - reference: DOI:10.1016/S0092-8674(01)00434-2
+    notes: Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved yeast endosomal
+      protein-sorting complex needed for MVB cargo sorting.
+- function_id: vacuolar_cargo_delivery
+  label: vacuolar cargo delivery
+  description: Yeast multivesicular bodies deliver endosomal membrane cargo into the
+    vacuole lumen for degradation.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: Henne, Buchkovich and Emr 2011 reviewed MVB formation as the ESCRT-dependent
+      route that packages endosomal cargo for lysosomal or vacuolar degradation.
+evidence:
+- reference: GO:0005771
+  notes: Gene Ontology cellular-component term for the multivesicular body.
+- reference: GO:0005770
+  notes: Gene Ontology cellular-component term for the broader late endosome class.
+- reference: GO:0032585
+  notes: Gene Ontology cellular-component term for the multivesicular body membrane.
+- reference: GO:0071985
+  notes: Gene Ontology biological-process term for the multivesicular body sorting
+    pathway.
+- reference: uniprot.location:SL-0174
+  notes: UniProt Subcellular Location entry SL-0174 maps to GO:0005771 and lists multivesicular
+    body under endosome.
+- reference: uniprot.location:SL-0175
+  notes: UniProt Subcellular Location entry SL-0175 maps the multivesicular body membrane
+    to GO:0032585.
+- reference: DOI:10.1016/S0092-8674(01)00434-2
+  notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
+    Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
+    ESCRT-I, Cell.
+- reference: DOI:10.1016/S1534-5807(02)00219-8
+  notes: Babst, Katzmann, Snyder, Wendland and Emr 2002, Endosome-Associated Complex,
+    ESCRT-II, Recruits Transport Machinery for Protein Sorting at the Multivesicular
+    Body, Developmental Cell.
+- reference: DOI:10.1016/S1534-5807(02)00220-4
+  notes: Babst, Katzmann, Estepa-Sabal, Meerloo and Emr 2002, Escrt-III, Developmental
+    Cell.
+- reference: DOI:10.1016/j.devcel.2011.05.015
+  notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+causal_graphs:
+- graph_id: yeast_escrt_mvb_vesicle_formation
+  title: ESCRT machinery forms intraluminal vesicles in yeast MVBs
+  description: In Saccharomyces cerevisiae, ESCRT complexes sort ubiquitinated endosomal
+    membrane cargo and remodel the multivesicular-body membrane to generate intraluminal
+    vesicles.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures ESCRT-dependent intraluminal vesicle formation
+    without asserting a full model of Vps27/Hse1 cargo recognition, deubiquitination,
+    Vps4 recycling or vacuolar fusion.
+  nodes:
+  - node_id: multivesicular_body_membrane
+    label: multivesicular body membrane
+    node_type: STRUCTURE
+    grounding: GO:0032585
+    component_ref: multivesicular_body_membrane
+  - node_id: ubiquitinated_membrane_cargo
+    label: ubiquitinated membrane cargo
+    node_type: STATE
+  - node_id: escrt_i
+    label: ESCRT I complex
+    node_type: STRUCTURE
+    grounding: GO:0000813
+  - node_id: escrt_ii
+    label: ESCRT II complex
+    node_type: STRUCTURE
+    grounding: GO:0000814
+  - node_id: escrt_iii
+    label: ESCRT III complex
+    node_type: STRUCTURE
+    grounding: GO:0000815
+  - node_id: intraluminal_vesicle
+    label: intraluminal vesicle
+    node_type: STRUCTURE
+  - node_id: multivesicular_body
+    label: multivesicular body
+    node_type: ORGANELLE
+    grounding: GO:0005771
+  edges:
+  - subject: escrt_i
+    predicate: sorts
+    object: ubiquitinated_membrane_cargo
+    description: ESCRT-I participates in sorting ubiquitinated membrane cargo into
+      the yeast MVB pathway.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(01)00434-2
+      notes: Katzmann, Babst and Emr 2001 showed ESCRT-I is needed for ubiquitin-dependent
+        MVB cargo sorting.
+  - subject: escrt_ii
+    predicate: recruits
+    object: escrt_iii
+    description: ESCRT-II recruits downstream ESCRT machinery needed for MVB cargo
+      sorting.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00219-8
+      notes: Babst et al. 2002 identified ESCRT-II as an endosome-associated complex
+        upstream of ESCRT-III.
+  - subject: escrt_iii
+    predicate: remodels
+    object: multivesicular_body_membrane
+    description: ESCRT-III acts on endosomal membranes during MVB intraluminal-vesicle
+      formation.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00220-4
+      notes: Babst et al. 2002 characterized yeast ESCRT-III as an endosome-associated
+        complex required for MVB sorting.
+    - reference: DOI:10.1016/j.devcel.2011.05.015
+      notes: Henne, Buchkovich and Emr 2011 reviewed ESCRT-III as the membrane-remodeling
+        complex in the endosomal ESCRT pathway.
+  - subject: multivesicular_body_membrane
+    predicate: buds inward to form
+    object: intraluminal_vesicle
+    description: Regions of the multivesicular-body limiting membrane invaginate and
+      pinch into the lumen as intraluminal vesicles.
+    evidence:
+    - reference: GO:0005771
+      notes: GO:0005771 defines multivesicular bodies as endosomes with internal vesicles
+        formed by invagination of the limiting endosomal membrane.
+  - subject: intraluminal_vesicle
+    predicate: is contained in
+    object: multivesicular_body
+    description: A multivesicular body contains intraluminal vesicles formed from
+      its limiting endosomal membrane.
+    evidence:
+    - reference: GO:0005771
+      notes: GO:0005771 defines the multivesicular body by the presence of internal
+        vesicles.
+discussions:
+- discussion_id: resolve_intraluminal_vesicle_grounding
+  prompt: Resolve an exact source-neutral grounding or dedicated record boundary for
+    multivesicular-body intraluminal vesicles.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#yeast_escrt_mvb_vesicle_formation
+  rationale: GO:0005771 defines the whole multivesicular body by internal vesicles,
+    but this pass did not curate an exact CURIE for the intraluminal vesicle substructure.
+  evidence:
+  - reference: GO:0005771
+  posed_by: codex
+  posed_date: '2026-09-15'
+- discussion_id: escrt_machinery_not_mvb_components
+  prompt: Keep ESCRT-I, ESCRT-II, ESCRT-III, Vps4 and cargo-recognition machinery
+    out of the multivesicular body component list.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#multivesicular_body_membrane
+  - causal_graphs#yeast_escrt_mvb_vesicle_formation
+  rationale: The ESCRT machinery sorts cargo and remodels endosomal membrane during
+    MVB formation, so these complexes are modeled as assembly graph actors rather
+    than stable constituents of the assembled multivesicular body.
+  evidence:
+  - reference: DOI:10.1016/S0092-8674(01)00434-2
+  - reference: DOI:10.1016/S1534-5807(02)00220-4
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+  posed_by: codex
+  posed_date: '2026-09-15'
