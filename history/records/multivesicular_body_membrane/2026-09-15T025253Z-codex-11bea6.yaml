@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/multivesicular_body_membrane.yaml
+  slug: multivesicular_body_membrane
+session:
+  id: 2026-09-15T025253Z-codex-11bea6
+  timestamp: '2026-09-15T02:52:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/920
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - history
+  summary: Linked multivesicular body membrane curation to PR 920
+  details: Linked the GO:0032585 multivesicular body membrane curation session to pull request
+    920 after opening the evidence-backed record for adversarial review.
