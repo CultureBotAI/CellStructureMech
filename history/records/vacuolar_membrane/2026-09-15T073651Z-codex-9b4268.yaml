@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/vacuolar_membrane.yaml
+  slug: vacuolar_membrane
+session:
+  id: 2026-09-15T073651Z-codex-9b4268
+  timestamp: '2026-09-15T07:36:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/946
+events:
+- type: EDIT
+  outcome: changed
+  summary: Link vacuolar membrane PR history
+  details: 'Linked the GO:0005774 vacuolar membrane curation session to PR #946 after opening
+    the pull request for branch add-vacuolar-membrane.'
