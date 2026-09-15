@@ -1,0 +1,197 @@
+identifier: GO:0000328
+label: fungal-type vacuole lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed within the vacuolar membrane of the fungal-type vacuole.
+definition_source: GO:0000328
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T04:03:21Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T04:04:16Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added vacuolar-lumen parentage, fungal-type-vacuole parthood, Saccharomyces
+    scope, GO/DOI evidence, storage and degradation functions, a nonmechanistic lumen
+    topology graph, and a resolved lumen-boundary interpretation.
+  llm_assisted: true
+- timestamp: '2026-09-15T04:15:37Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed issue #927 by retitling the fungal-type vacuole lumen graph
+    so it keeps the singular lumen identity and names the compartmentalized storage
+    and degradation roles.'
+  llm_assisted: true
+parent_structures:
+- GO:0005775
+part_of:
+- GO:0000324
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast vacuoles have a fungal-type vacuole lumen that stores small
+    molecules and houses acid hydrolases for degradation.
+  reference: DOI:10.1016/j.bbamcr.2008.08.003
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model for storage and degradative functions of the lysosome-like
+    fungal vacuole lumen.
+  reference: DOI:10.1016/j.bbamcr.2008.08.003
+functions:
+- function_id: vacuolar_lumen_storage
+  label: vacuolar small-molecule storage
+  description: The fungal-type vacuole lumen is the membrane-enclosed space where
+    the vacuole stores amino acids, ions, polyphosphate, and other small molecules.
+  evidence:
+  - reference: GO:0000324
+    notes: GO:0000324 defines the fungal-type vacuole as a reservoir for amino acids,
+      divalent cations, ions, polyphosphate, and other small molecules.
+  - reference: DOI:10.1016/j.bbamcr.2008.08.003
+    notes: Li and Kane 2009 review the yeast vacuole as a lysosome-like organelle
+      at the intersection of storage and homeostasis.
+- function_id: vacuolar_lumen_macromolecule_degradation
+  label: vacuolar macromolecule degradation
+  description: The fungal-type vacuole lumen compartmentalizes acid hydrolases that
+    degrade macromolecular cargo delivered to the vacuole.
+  evidence:
+  - reference: GO:0000324
+    notes: GO:0000324 describes the fungal-type vacuole as an acidic compartment containing
+      acid hydrolases and serving as the primary degradation compartment.
+  - reference: DOI:10.1016/j.bbamcr.2008.08.003
+    notes: Li and Kane 2009 review yeast vacuole functions at the endpoint of degradative
+      membrane-trafficking routes.
+evidence:
+- reference: GO:0000328
+  notes: Gene Ontology cellular-component term for fungal-type vacuole lumen.
+- reference: GO:0005775
+  notes: Gene Ontology cellular-component parent term for vacuolar lumen.
+- reference: GO:0000324
+  notes: Gene Ontology cellular-component term for the containing fungal-type vacuole.
+- reference: GO:0000329
+  notes: Gene Ontology cellular-component term for the bounding fungal-type vacuole
+    membrane.
+- reference: DOI:10.1016/j.bbamcr.2008.08.003
+  notes: 'Li and Kane 2009, The yeast lysosome-like vacuole: Endpoint and crossroads,
+    Biochimica et Biophysica Acta.'
+causal_graphs:
+- graph_id: yeast_fungal_vacuole_lumen_storage_and_degradation
+  title: Yeast fungal-type vacuole lumen compartmentalizes storage and degradation
+  description: The fungal-type vacuole lumen is the membrane-enclosed acidic compartment
+    that stores small molecules and houses degradative hydrolases in budding yeast.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures defining lumen topology and lumenal storage and
+    degradation roles without asserting the complete hydrolase, transporter, or V-ATPase
+    repertoires.
+  nodes:
+  - node_id: fungal_type_vacuole_lumen
+    label: fungal-type vacuole lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0000328
+  - node_id: vacuolar_lumen
+    label: vacuolar lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005775
+  - node_id: fungal_type_vacuole
+    label: fungal-type vacuole
+    node_type: ORGANELLE
+    grounding: GO:0000324
+  - node_id: fungal_type_vacuole_membrane
+    label: fungal-type vacuole membrane
+    node_type: STRUCTURE
+    grounding: GO:0000329
+  - node_id: stored_small_molecules
+    label: stored small molecules
+    node_type: CHEMICAL
+  - node_id: acid_hydrolases
+    label: acid hydrolases
+    node_type: GENE_OR_PROTEIN
+  - node_id: macromolecule_degradation
+    label: macromolecule degradation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: fungal_type_vacuole_lumen
+    predicate: is a
+    object: vacuolar_lumen
+    description: The fungal-type vacuole lumen is a fungal subtype of the vacuolar
+      lumen.
+    evidence:
+    - reference: GO:0000328
+      notes: GO:0000328 identifies the fungal-type vacuole lumen.
+    - reference: GO:0005775
+      notes: GO:0005775 identifies the broader vacuolar lumen class.
+  - subject: fungal_type_vacuole_lumen
+    predicate: is part of
+    object: fungal_type_vacuole
+    description: The fungal-type vacuole lumen is part of the fungal-type vacuole.
+    evidence:
+    - reference: GO:0000328
+      notes: GO:0000328 denotes a lumen within the fungal-type vacuole.
+    - reference: GO:0000324
+      notes: GO:0000324 denotes the containing fungal-type vacuole.
+  - subject: fungal_type_vacuole_membrane
+    predicate: bounds
+    object: fungal_type_vacuole_lumen
+    description: The fungal-type vacuole membrane encloses the vacuolar lumen.
+    evidence:
+    - reference: GO:0000328
+      notes: GO:0000328 defines the fungal-type vacuole lumen as the volume enclosed
+        within the vacuolar membrane.
+    - reference: GO:0000329
+      notes: GO:0000329 identifies the enclosing membrane.
+  - subject: fungal_type_vacuole_lumen
+    predicate: stores
+    object: stored_small_molecules
+    description: Fungal vacuoles store amino acids, ions, polyphosphate, and other
+      small molecules in the lumenal compartment.
+    evidence:
+    - reference: GO:0000324
+      notes: GO:0000324 defines the fungal vacuole as a reservoir for amino acids,
+        ions, polyphosphate, and other small molecules.
+  - subject: acid_hydrolases
+    predicate: act in
+    object: fungal_type_vacuole_lumen
+    description: Acid hydrolases act in the acidic vacuolar lumen.
+    evidence:
+    - reference: GO:0000324
+      notes: GO:0000324 describes the fungal-type vacuole as an acidic compartment
+        containing acid hydrolases.
+    - reference: DOI:10.1016/j.bbamcr.2008.08.003
+      notes: Li and Kane 2009 review the yeast vacuole as the lysosome-like degradative
+        compartment.
+  - subject: fungal_type_vacuole_lumen
+    predicate: compartmentalizes
+    object: macromolecule_degradation
+    description: The fungal vacuole lumen is the primary fungal compartment for degradation.
+    evidence:
+    - reference: GO:0000324
+      notes: GO:0000324 describes the fungal vacuole as the primary compartment for
+        degradation.
+discussions:
+- discussion_id: fungal_vacuole_lumen_boundary_not_membrane
+  prompt: Represent the fungal-type vacuole membrane as the boundary of the fungal-type
+    vacuole lumen rather than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#yeast_fungal_vacuole_lumen_storage_and_degradation
+  rationale: GO:0000328 denotes the volume enclosed by the fungal-type vacuole membrane,
+    whereas GO:0000329 denotes that surrounding lipid bilayer.
+  resolution_note: Curated the membrane as a boundary node and left the lumen without
+    constituent molecular components; soluble lumenal enzymes are represented as graph
+    participants for degradation.
+  evidence:
+  - reference: GO:0000328
+    notes: GO:0000328 identifies the internal fungal-type vacuole lumen.
+  - reference: GO:0000329
+    notes: GO:0000329 identifies the fungal-type vacuole membrane rather than the
+      lumen.
+  posed_by: codex
+  posed_date: '2026-09-15'
+  resolved_date: '2026-09-15'

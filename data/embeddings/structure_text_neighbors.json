@@ -2410,6 +2410,11 @@
           "cosine_similarity": 0.73005752
         },
         {
+          "identifier": "GO:0000328",
+          "label": "fungal-type vacuole lumen",
+          "cosine_similarity": 0.73005347
+        },
+        {
           "identifier": "GO:0009276",
           "label": "Gram-negative-bacterium-type cell wall",
           "cosine_similarity": 0.72350188
@@ -2418,11 +2423,6 @@
           "identifier": "GO:0000329",
           "label": "fungal-type vacuole membrane",
           "cosine_similarity": 0.71287024
-        },
-        {
-          "identifier": "GO:0005940",
-          "label": "septin ring",
-          "cosine_similarity": 0.71143262
         }
       ]
     },
@@ -4942,6 +4942,11 @@
       "label": "fungal-type vacuole",
       "neighbors": [
         {
+          "identifier": "GO:0000328",
+          "label": "fungal-type vacuole lumen",
+          "cosine_similarity": 0.93646059
+        },
+        {
           "identifier": "GO:0000329",
           "label": "fungal-type vacuole membrane",
           "cosine_similarity": 0.89312303
@@ -4960,11 +4965,37 @@
           "identifier": "GO:0000331",
           "label": "contractile vacuole",
           "cosine_similarity": 0.79661273
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000328",
+      "label": "fungal-type vacuole lumen",
+      "neighbors": [
+        {
+          "identifier": "GO:0000324",
+          "label": "fungal-type vacuole",
+          "cosine_similarity": 0.93646059
         },
         {
-          "identifier": "GO:0020020",
-          "label": "food vacuole",
-          "cosine_similarity": 0.79161018
+          "identifier": "GO:0000329",
+          "label": "fungal-type vacuole membrane",
+          "cosine_similarity": 0.898407
+        },
+        {
+          "identifier": "cellstructuremech:cvt_vesicle_lumen",
+          "label": "Cvt vesicle lumen",
+          "cosine_similarity": 0.83483256
+        },
+        {
+          "identifier": "GO:0060205",
+          "label": "cytoplasmic vesicle lumen",
+          "cosine_similarity": 0.82255839
+        },
+        {
+          "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
+          "label": "COPI-coated vesicle lumen",
+          "cosine_similarity": 0.80861491
         }
       ]
     },
@@ -4972,6 +5003,11 @@
       "identifier": "GO:0000329",
       "label": "fungal-type vacuole membrane",
       "neighbors": [
+        {
+          "identifier": "GO:0000328",
+          "label": "fungal-type vacuole lumen",
+          "cosine_similarity": 0.898407
+        },
         {
           "identifier": "GO:0000324",
           "label": "fungal-type vacuole",
@@ -4991,11 +5027,6 @@
           "identifier": "GO:0005789",
           "label": "endoplasmic reticulum membrane",
           "cosine_similarity": 0.83263502
-        },
-        {
-          "identifier": "cellstructuremech:parasitophorous_vacuole_membrane",
-          "label": "parasitophorous vacuole membrane",
-          "cosine_similarity": 0.83089031
         }
       ]
     },
@@ -6636,9 +6667,9 @@
           "cosine_similarity": 0.81449844
         },
         {
-          "identifier": "GO:0033985",
-          "label": "acidocalcisome lumen",
-          "cosine_similarity": 0.77715879
+          "identifier": "GO:0000328",
+          "label": "fungal-type vacuole lumen",
+          "cosine_similarity": 0.78131567
         }
       ]
     },
@@ -8930,9 +8961,9 @@
           "cosine_similarity": 0.64656455
         },
         {
-          "identifier": "GO:0020008",
-          "label": "rhoptry",
-          "cosine_similarity": 0.64037587
+          "identifier": "GO:0000328",
+          "label": "fungal-type vacuole lumen",
+          "cosine_similarity": 0.64476839
         }
       ]
     },
