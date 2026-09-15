@@ -35,10 +35,17 @@ curation_history:
     discussion anchor after removing the duplicate GO:0032585 component from the parent
     multivesicular body record.'
   llm_assisted: true
+- timestamp: '2026-09-15T03:25:07Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed issue #923 by adding the standalone cellstructuremech:multivesicular_body_lumen
+    record to the parent GO:0005771 has_part list and adding UniProt SL-0340 evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0005770
 has_part:
 - GO:0032585
+- cellstructuremech:multivesicular_body_lumen
 synonyms:
 - synonym_text: MVB
   synonym_type: EXACT_SYNONYM
@@ -107,6 +114,9 @@ evidence:
 - reference: uniprot.location:SL-0175
   notes: UniProt Subcellular Location entry SL-0175 maps the multivesicular body membrane
     to GO:0032585.
+- reference: uniprot.location:SL-0340
+  notes: UniProt Subcellular Location entry SL-0340 identifies the multivesicular
+    body lumen and places it under multivesicular body.
 - reference: DOI:10.1016/S0092-8674(01)00434-2
   notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
     Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,

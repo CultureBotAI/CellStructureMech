@@ -6130,6 +6130,11 @@
           "cosine_similarity": 0.90653413
         },
         {
+          "identifier": "cellstructuremech:multivesicular_body_lumen",
+          "label": "multivesicular body lumen",
+          "cosine_similarity": 0.90263609
+        },
+        {
           "identifier": "GO:0031410",
           "label": "cytoplasmic vesicle",
           "cosine_similarity": 0.84487734
@@ -6138,11 +6143,37 @@
           "identifier": "cellstructuremech:cvt_vesicle_lumen",
           "label": "Cvt vesicle lumen",
           "cosine_similarity": 0.83169852
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:multivesicular_body_lumen",
+      "label": "multivesicular body lumen",
+      "neighbors": [
+        {
+          "identifier": "GO:0005771",
+          "label": "multivesicular body",
+          "cosine_similarity": 0.90263609
         },
         {
-          "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
-          "label": "COPII-coated vesicle lumen",
-          "cosine_similarity": 0.82545615
+          "identifier": "GO:0032585",
+          "label": "multivesicular body membrane",
+          "cosine_similarity": 0.8672435
+        },
+        {
+          "identifier": "cellstructuremech:cvt_vesicle_lumen",
+          "label": "Cvt vesicle lumen",
+          "cosine_similarity": 0.83489609
+        },
+        {
+          "identifier": "GO:0005758",
+          "label": "mitochondrial intermembrane space",
+          "cosine_similarity": 0.83442268
+        },
+        {
+          "identifier": "GO:0060205",
+          "label": "cytoplasmic vesicle lumen",
+          "cosine_similarity": 0.83357132
         }
       ]
     },
@@ -6171,9 +6202,9 @@
           "cosine_similarity": 0.87049056
         },
         {
-          "identifier": "GO:0030663",
-          "label": "COPI-coated vesicle membrane",
-          "cosine_similarity": 0.85785549
+          "identifier": "cellstructuremech:multivesicular_body_lumen",
+          "label": "multivesicular body lumen",
+          "cosine_similarity": 0.8672435
         }
       ]
     },
