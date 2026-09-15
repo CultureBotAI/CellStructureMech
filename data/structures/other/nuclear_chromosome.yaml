@@ -26,6 +26,13 @@ curation_history:
   changes: Connected the chromosome-organization process node and neutralized the
     broad Eukaryota taxon note.
   llm_assisted: true
+- timestamp: '2026-09-15T13:16:10Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved PR #977 review issues #978 and #979 by removing a GO-taxonomy-only
+    broad Eukaryota distribution assertion and retuning the chromosomal-DNA graph
+    edge to a composition predicate.'
+  llm_assisted: true
 parent_structures:
 - GO:0005694
 part_of:
@@ -66,12 +73,6 @@ components:
     notes: Noma 2017 reviewed mechanisms that organize the three-dimensional budding-yeast
       genome.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:2759
-  taxon_label: Eukaryota
-  presence: COMMON
-  note: GO constrains nuclear chromosomes to eukaryotes, where they encode the nuclear
-    genome inside an intact nucleus.
-  reference: GO:0000228
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
@@ -142,13 +143,16 @@ causal_graphs:
     grounding: GO:0051276
   edges:
   - subject: chromosomal_dna
-    predicate: is packaged into
+    predicate: is a DNA constituent of
     object: nuclear_chromosome
-    description: The linear DNA molecules of the nuclear genome are constituents of
-      nuclear chromosomes.
+    description: Nuclear chromosomal DNA is the genome-encoding DNA constituent of
+      the nuclear chromosome.
     evidence:
     - reference: GO:0000228
       notes: GO:0000228 defines a nuclear chromosome as encoding the nuclear genome.
+    - reference: DOI:10.1038/nature08973
+      notes: Duan et al. 2010 modeled Saccharomyces cerevisiae nuclear chromosomes
+        as folded genomic DNA molecules.
   - subject: chromatin_proteins
     predicate: organize
     object: chromosomal_dna

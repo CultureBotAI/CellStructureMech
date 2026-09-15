@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_chromosome.yaml
+  slug: nuclear_chromosome
+session:
+  id: 2026-09-15T131643Z-codex-170696
+  timestamp: '2026-09-15T13:16:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/978
+  - https://github.com/CultureBotAI/CellStructureMech/issues/979
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/977
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Resolved nuclear chromosome PR review issues
+  details: 'Reviewed PR #977 adversarially, filed issues #978 and #979, removed the unsupported
+    GO-only Eukaryota distribution assertion, and retuned the chromosomal-DNA graph edge from
+    a packaging predicate to a composition predicate with direct yeast genome-folding evidence.'
