@@ -28,6 +28,13 @@ curation_history:
   changes: Renamed the GO:0022624 accessory-complex component and graph node to the
     exact GO label.
   llm_assisted: true
+- timestamp: '2026-09-15T12:10:17Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Addressed PR #971 review issues #972 and #973 by narrowing the GO:0010498
+    evidence notes to the proteasomal-protein-catabolism has-participant edge and
+    retargeting accessory-complex substrate access to the proteasome core.'
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 - GO:1905369
@@ -105,8 +112,8 @@ functions:
     complexes to proteolysis in the 20S core.
   evidence:
   - reference: GO:0000502
-    notes: GO:0000502 is asserted as capable of part of protein catabolic process
-      and participates in proteasomal protein catabolism in the GO graph.
+    notes: The GO graph asserts GO:0010498 has_participant GO:0000502, connecting
+      the proteasome complex to proteasomal protein catabolism.
   - reference: DOI:10.1042/ETLS20180025
     notes: Maupin-Furlow 2018 reviews archaeal targeted proteolysis by proteasomes
       associated with AAA-ATPase networks.
@@ -185,9 +192,9 @@ causal_graphs:
       notes: GO:0022624 defines proteasome accessory complexes as complexes that cap
         one or both ends of the core.
   - subject: accessory_complexes
-    predicate: regulate access of
-    object: substrate_protein
-    description: Accessory complexes control substrate access to the internal chamber
+    predicate: regulate substrate access to
+    object: core_complex
+    description: Accessory complexes control substrate entry into the internal chamber
       of the 20S core.
     evidence:
     - reference: DOI:10.3389/fmolb.2019.00023
@@ -220,4 +227,4 @@ causal_graphs:
     description: Whole proteasome complexes carry out proteasomal protein degradation.
     evidence:
     - reference: GO:0000502
-      notes: The GO graph connects the proteasome complex to protein catabolism.
+      notes: The GO graph asserts GO:0010498 has_participant GO:0000502.
