@@ -20,6 +20,13 @@ curation_history:
     a boundary function, GO/DOI evidence, a nonmechanistic dense-granule-membrane
     topology graph, and a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-15T21:39:07Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #1027 review issues #1028 and #1029 by narrowing the dense-granule
+    membrane graph to boundary topology and replacing Toxoplasma-style GRA wording
+    in the Apicomplexa distribution row with source-neutral dense-granule cargo language.'
+  llm_assisted: true
 parent_structures:
 - GO:0031090
 part_of:
@@ -48,7 +55,7 @@ taxonomic_distribution:
   taxon_label: Apicomplexa
   presence: COMMON
   note: Dense granule membranes bound the dense granules used by apicomplexan parasites
-    to store and secrete GRA cargo proteins.
+    to store and secrete dense-granule cargo proteins.
   reference: DOI:10.1016/j.ijpara.2005.03.011
 canonical_examples:
 - taxon_id: NCBITaxon:5811
@@ -87,11 +94,12 @@ causal_graphs:
 - graph_id: dense_granule_membrane_bounds_organelle
   title: Dense granule membrane bounds the secretory granule
   description: The apicomplexan dense granule membrane is the lipid bilayer that bounds
-    the dense granule and encloses dense-granule cargo before secretion.
+    the dense granule.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures membrane and cargo topology without asserting specific
-    proteins that target or remodel the dense granule membrane.
+  scope_notes: The graph captures membrane-to-organelle topology without asserting
+    dense-granule cargo storage, secretion, or specific proteins that target or remodel
+    the dense granule membrane.
   nodes:
   - node_id: dense_granule_membrane
     label: apicomplexan dense granule membrane
@@ -102,12 +110,6 @@ causal_graphs:
     label: apicomplexan dense granule
     node_type: ORGANELLE
     grounding: GO:0020026
-  - node_id: dense_granule_proteins
-    label: dense granule proteins
-    node_type: GENE_OR_PROTEIN
-  - node_id: dense_granule_secretion
-    label: dense granule secretion
-    node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: dense_granule_membrane
     predicate: is part of
@@ -121,24 +123,6 @@ causal_graphs:
     - reference: DOI:10.1111/jeu.12904
       notes: Griffith et al. 2022 review dense granules as membrane-bounded organelles
         in Toxoplasma.
-  - subject: dense_granule_proteins
-    predicate: reside in
-    object: apicomplexan_dense_granule
-    description: Dense-granule proteins are stored in the membrane-bounded dense granule
-      before secretion.
-    evidence:
-    - reference: DOI:10.1016/j.ijpara.2005.03.011
-      notes: Mercier et al. 2005 review dense granules as apicomplexan organelles
-        carrying dense granule protein cargo.
-  - subject: apicomplexan_dense_granule
-    predicate: supports
-    object: dense_granule_secretion
-    description: The membrane-bounded dense granule stores GRA cargo proteins before
-      dense-granule secretion.
-    evidence:
-    - reference: DOI:10.1111/jeu.12904
-      notes: Griffith et al. 2022 review dense-granule biogenesis, cargo storage,
-        and secretion in Toxoplasma.
 discussions:
 - discussion_id: ground_dense_granule_lipid_bilayer
   prompt: Resolve an exact source-neutral grounding for the generic lipid constituent

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/apicomplexan_dense_granule_membrane.yaml
+  slug: apicomplexan_dense_granule_membrane
+session:
+  id: 2026-09-15T213930Z-codex-98a2dc
+  timestamp: '2026-09-15T21:39:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1028
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1029
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1027
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - taxonomy
+  - causal_graphs
+  - curation_history
+  summary: Resolve dense-granule membrane review issues
+  details: 'Addressed PR #1027 review feedback by narrowing the dense-granule membrane causal
+    graph to membrane-to-organelle boundary topology and by replacing Toxoplasma-specific
+    GRA cargo wording in the broad Apicomplexa taxonomic distribution row with source-neutral
+    dense-granule cargo language.'

@@ -28,7 +28,7 @@
 
 
 <h2>Taxonomic distribution</h2>
-<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5794"><code>NCBITaxon:5794</code></a> Apicomplexa — <strong>COMMON</strong>: Dense granule membranes bound the dense granules used by apicomplexan parasites to store and secrete GRA cargo proteins. [<a href="https://doi.org/10.1016/j.ijpara.2005.03.011"><code>DOI:10.1016/j.ijpara.2005.03.011</code></a>]</li></ul>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5794"><code>NCBITaxon:5794</code></a> Apicomplexa — <strong>COMMON</strong>: Dense granule membranes bound the dense granules used by apicomplexan parasites to store and secrete dense-granule cargo proteins. [<a href="https://doi.org/10.1016/j.ijpara.2005.03.011"><code>DOI:10.1016/j.ijpara.2005.03.011</code></a>]</li></ul>
 
 <h2>Canonical examples</h2>
 <ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5811"><code>NCBITaxon:5811</code></a> <em>Toxoplasma gondii</em> — Apicomplexan model in which dense-granule biogenesis, secretion, and post-Golgi trafficking to a membrane-bounded dense granule have been reviewed. [<a href="https://doi.org/10.1111/jeu.12904"><code>DOI:10.1111/jeu.12904</code></a>]</li></ul>
@@ -40,10 +40,8 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-dense_granule_membrane_bounds_organelle">Dense granule membrane bounds the secretory granule <small>(FUNCTION)</small></h3>
-<p>The apicomplexan dense granule membrane is the lipid bilayer that bounds the dense granule and encloses dense-granule cargo before secretion.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The apicomplexan dense granule membrane is the lipid bilayer that bounds the dense granule.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>apicomplexan dense granule membrane</td><td>is part of</td><td>apicomplexan dense granule</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030668"><code>GO:0030668</code></a> <small>GO:0030668 defines the apicomplexan dense granule membrane as surrounding an apicomplexan dense granule.</small></li><li><a href="https://doi.org/10.1111/jeu.12904"><code>DOI:10.1111/jeu.12904</code></a> <small>Griffith et al. 2022 review dense granules as membrane-bounded organelles in Toxoplasma.</small></li></ul></td></tr>
-<tr><td>dense granule proteins</td><td>reside in</td><td>apicomplexan dense granule</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.ijpara.2005.03.011"><code>DOI:10.1016/j.ijpara.2005.03.011</code></a> <small>Mercier et al. 2005 review dense granules as apicomplexan organelles carrying dense granule protein cargo.</small></li></ul></td></tr>
-<tr><td>apicomplexan dense granule</td><td>supports</td><td>dense granule secretion</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/jeu.12904"><code>DOI:10.1111/jeu.12904</code></a> <small>Griffith et al. 2022 review dense-granule biogenesis, cargo storage, and secretion in Toxoplasma.</small></li></ul></td></tr>
 </tbody></table>
 
 <h2>Discussions</h2>
@@ -54,7 +52,7 @@
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030668"><code>GO:0030668</code></a> <small>Gene Ontology cellular-component term for the apicomplexan dense granule membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031090"><code>GO:0031090</code></a> <small>Gene Ontology cellular-component parent term for organelle membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0020026"><code>GO:0020026</code></a> <small>Gene Ontology cellular-component term for the apicomplexan dense granule.</small></li><li><a href="https://doi.org/10.1111/jeu.12904"><code>DOI:10.1111/jeu.12904</code></a> <small>Griffith et al. 2022, Dense granule biogenesis, secretion, and function in Toxoplasma gondii, Journal of Eukaryotic Microbiology.</small></li><li><a href="https://doi.org/10.1016/j.ijpara.2005.03.011"><code>DOI:10.1016/j.ijpara.2005.03.011</code></a> <small>Mercier et al. 2005, Dense granules: are they key organelles to help understand the parasitophorous vacuole of all apicomplexa parasites?, International Journal for Parasitology.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-15T21:25:35Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-15T21:26:16Z</code> codex · EXPANDED_RECORD — Added organelle-membrane parentage, dense-granule parthood, a label-only dense-granule lipid bilayer component, Apicomplexa and Toxoplasma gondii scope, a boundary function, GO/DOI evidence, a nonmechanistic dense-granule-membrane topology graph, and a lipid-grounding TODO.</li></ul>
+<ul class="history"><li><code>2026-09-15T21:25:35Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-15T21:26:16Z</code> codex · EXPANDED_RECORD — Added organelle-membrane parentage, dense-granule parthood, a label-only dense-granule lipid bilayer component, Apicomplexa and Toxoplasma gondii scope, a boundary function, GO/DOI evidence, a nonmechanistic dense-granule-membrane topology graph, and a lipid-grounding TODO.</li><li><code>2026-09-15T21:39:07Z</code> codex · ADDRESS_REVIEW — Addressed PR #1027 review issues #1028 and #1029 by narrowing the dense-granule membrane graph to boundary topology and replacing Toxoplasma-style GRA wording in the Apicomplexa distribution row with source-neutral dense-granule cargo language.</li></ul>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/apicomplexan_dense_granule_membrane.yaml"><code>data/structures/membrane_organelle/apicomplexan_dense_granule_membrane.yaml</code></a></p>
 </main>
 <footer>
