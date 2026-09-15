@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/multivesicular_body.yaml
+  slug: multivesicular_body
+session:
+  id: 2026-09-15T022651Z-claude-code-a08ba7
+  timestamp: '2026-09-15T02:26:51Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/919
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/918
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - generated
+  summary: Preserved unchanged multivesicular body embeddings
+  details: Addressed PR review issue 919 by restoring byte-identical cached embedding vectors
+    for unchanged pre-existing records, keeping only the new GO:0005771 vector from the refresh,
+    and rebuilding the derived PCA and nearest-neighbor artifacts from the focused embedding
+    cache.
