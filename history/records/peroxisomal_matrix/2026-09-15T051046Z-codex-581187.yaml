@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/peroxisomal_matrix.yaml
+  slug: peroxisomal_matrix
+session:
+  id: 2026-09-15T051046Z-codex-581187
+  timestamp: '2026-09-15T05:10:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/931
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Link peroxisomal matrix PR
+  details: 'Linked the peroxisomal matrix curation to PR #931 so the append-only record history
+    captures the review artifact for the GO:0005782 addition.'

@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/peroxisomal_matrix.yaml
+  slug: peroxisomal_matrix
+session:
+  id: 2026-09-15T050317Z-codex-3166c2
+  timestamp: '2026-09-15T05:03:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add peroxisomal matrix
+  details: Created GO-grounded peroxisomal matrix with exact peroxisomal-lumen synonymy, microbody-lumen
+    parentage, peroxisome parthood, Saccharomyces cerevisiae evidence, a fatty-acid beta-oxidation
+    function, a nonmechanistic topology graph, and a resolved boundary interpretation that
+    keeps the peroxisomal membrane out of matrix components.
