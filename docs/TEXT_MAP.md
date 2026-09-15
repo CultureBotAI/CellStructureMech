@@ -18,45 +18,33 @@ taxonomic scope and physical-property context, excluding citations, provenance,
 images and imported protein examples. The adapter has its own
 `cellstructuremech-semantic-v1` version, and links follow the source YAML path.
 
-The shared `scripts/embedding_pipeline.py` will be installed from CLAW governance;
-it is not copied from another Mech. Once installed, the planned commands are:
-
-```bash
-just text-map-inputs --output build/text-map/inputs.jsonl
-uv run python scripts/embedding_pipeline.py inspect --input build/text-map/inputs.jsonl
-uv run --extra embeddings python scripts/embedding_pipeline.py embed --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite --profile-output build/text-map/profile.json
-uv run --extra embeddings python scripts/embedding_pipeline.py project --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite --profile build/text-map/profile.json --output data/text_map --title "Cell structure semantic text map"
-uv run python scripts/embedding_pipeline.py check --output data/text_map --input build/text-map/inputs.jsonl
-```
-
-The common dependency extra must first be synchronized with the shared runtime;
-the current legacy embeddings extra alone does not provide PaCMAP. No map is
-claimed ready until the bundle is generated, validated against fresh full
-inputs and enabled for publication. The renderer will stage its validated
-current bundle at `pages/text-map/` and link it as a distinct semantic map,
-while preserving the existing MiniLM view.
-
+The installed CLAW runtime is `scripts/embedding_pipeline.py`; its separate
+locked environment and exact build commands are in the [maintained runtime guide](../conf/embedding-runtime/README.md).
+Normal rendering and verification do not install that model environment or run
+inference. When record membership or selected semantic fields change, export
+fresh full inputs, reuse the existing profile-bound vector cache to encode only
+new or changed text, regenerate PaCMAP, and validate the complete bundle before
+rendering. A stale bundle must be refreshed before publishing curated changes.
 
 ## Validated site publication
 
-`conf/text_map.yaml` explicitly starts with `enabled: false`; no common map or
-navigation link is claimed ready yet. After generating and reviewing the full
-input-bound bundle under `data/text_map/`, set `enabled: true` and run `just render`.
-The shared CLAW runtime must first be installed at `scripts/embedding_pipeline.py`.
+`conf/text_map.yaml` is enabled. The selected common bundle is recorded by
+`data/text_map/current.json`; its `manifest.json` reports the input identity and
+coverage counts. Rendering verifies freshness against the current corpus and
+refuses a stale bundle until the cache-backed refresh is complete. The existing
+MiniLM/PCA view remains distinct.
 
-When enabled, rendering exports fresh **full-corpus** JSONL and validates the
-current pointer, artifact checksums, input coverage and pinned common BGE profile.
-The runtime atomically stages the current bundle's `index.html`, `points.json`
-and `manifest.json` at `pages/text-map/`. Only successful staging enables the
-navigation link. Missing runtime/current pointer, stale inputs or invalid
-checksums fail the build; they never silently hide an enabled map. The existing
-published pages are retained if this preflight fails.
+Rendering exports fresh **full-corpus** JSONL and validates the current pointer,
+artifact checksums, complete input identity and pinned common BGE profile. The
+runtime stages the selected `index.html`, `points.json` and `manifest.json` at
+`pages/text-map/`; the site links to that view after successful staging. Missing
+runtime or current pointer, stale inputs and invalid checksums fail an enabled
+build. A failed preflight preserves the existing published pages.
 
-`just render --check` uses the same validation and staging inside its temporary
-site. Ordinary checks do not download weights, encode text or fit PaCMAP.
-The initial disabled setting is temporary rollout state, not a resolution of
-the missing-map issue. Canaries must not be enabled as full-corpus publication.
+`just render-check` uses the same validation and staging inside a temporary site.
+These checks do not download weights, encode text or fit PaCMAP. A canary cannot
+satisfy the full-corpus publication check.
 
-Site staging binds the exact immutable bundle approved during preflight. If the
-current pointer changes before staging, rendering fails instead of publishing a
-different generation under the earlier encoder-policy approval (CLAW #429).
+Staging binds the exact immutable generation approved during preflight. A changed
+current pointer or substituted generation fails validation before publication
+(CLAW #429).
