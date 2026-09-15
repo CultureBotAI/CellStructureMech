@@ -1,0 +1,152 @@
+identifier: GO:0070056
+label: prospore membrane leading edge
+structure_category: SPORE
+structure_kind: SUBCELLULAR_REGION
+definition: The region of the prospore membrane that extends to surround the spore
+  nucleus; coated with specific proteins that are thought to play a role in prospore
+  membrane organization.
+definition_source: GO:0070056
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T08:20:56Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T08:21:35Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added membrane parentage, prospore-membrane parthood, a reviewed-label-only
+    leading-edge-coat component, Saccharomyces scope, rim-organization function, GO/DOI
+    evidence, a nonmechanistic topology graph, and a leading-edge-coat grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-15T08:22:08Z'
+  curator: codex
+  action: FIXED_CURATION_METADATA
+  changes: Marked the scaffold curation event as LLM-assisted.
+  llm_assisted: true
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0005628
+components:
+- component_id: leading_edge_protein_coat
+  label: prospore membrane leading edge protein coat
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SSP1
+  - ADY3
+  - DON1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The leading-edge protein coat is curated from yeast localization
+    and protein-identification studies; no exact source-neutral Complex Portal, GO,
+    InterPro, Pfam or NCBIfam term was chosen for the whole transient coat or for
+    its individual budding-yeast subunit families.
+  role: Protein coat at the lip of the growing prospore membrane that marks the leading
+    edge before membrane closure.
+  evidence:
+  - reference: GO:0070056
+    notes: GO:0070056 defines the prospore membrane leading edge as a protein-coated
+      region of the prospore membrane.
+  - reference: DOI:10.1093/emboj/20.24.6946
+    notes: Moreno-Borchart et al. 2001 linked formation of the Saccharomyces prospore
+      membrane to leading-edge protein coat assembly.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast builds a prospore membrane leading edge at the protein-coated
+    rim of each extending prospore membrane during sporulation.
+  reference: DOI:10.1093/emboj/20.24.6946
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Ssp1, Ady3 and Don1 were used to define the leading-edge
+    protein coat on growing prospore membranes.
+  reference: DOI:10.1093/emboj/20.24.6946
+functions:
+- function_id: prospore_membrane_rim_organization
+  label: prospore membrane rim organization
+  description: In budding yeast, leading-edge proteins assemble at the open lip of
+    the growing prospore membrane and mark the membrane rim before closure.
+  evidence:
+  - reference: GO:0070056
+    notes: GO:0070056 identifies the protein-coated leading edge region of the extending
+      prospore membrane.
+  - reference: DOI:10.1093/emboj/20.24.6946
+    notes: Moreno-Borchart et al. 2001 connected leading-edge protein coat assembly
+      to Saccharomyces prospore membrane formation.
+evidence:
+- reference: GO:0070056
+  notes: Gene Ontology cellular-component term for the prospore membrane leading edge.
+- reference: GO:0005628
+  notes: Gene Ontology cellular-component term for the prospore membrane that contains
+    the leading edge.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component parent term for membrane.
+- reference: DOI:10.1093/emboj/20.24.6946
+  notes: Moreno-Borchart et al. 2001, Prospore membrane formation linked to the leading
+    edge protein (LEP) coat assembly, The EMBO Journal.
+causal_graphs:
+- graph_id: leading_edge_coat_marks_prospore_membrane_rim
+  title: Leading-edge coat proteins mark the open prospore membrane rim
+  description: The leading-edge protein coat localizes to the protein-coated region
+    at the open lip of the extending prospore membrane in budding yeast.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures where the leading-edge coat sits in the prospore
+    membrane without asserting every coat subunit or the complete closure mechanism.
+  nodes:
+  - node_id: leading_edge_protein_coat
+    label: prospore membrane leading edge protein coat
+    node_type: GENE_OR_PROTEIN
+    component_ref: leading_edge_protein_coat
+  - node_id: prospore_membrane_leading_edge
+    label: prospore membrane leading edge
+    node_type: STRUCTURE
+    grounding: GO:0070056
+  - node_id: prospore_membrane
+    label: prospore membrane
+    node_type: STRUCTURE
+    grounding: GO:0005628
+  edges:
+  - subject: leading_edge_protein_coat
+    predicate: localizes to
+    object: prospore_membrane_leading_edge
+    description: Leading-edge protein coat components mark the lip of the extending
+      prospore membrane.
+    evidence:
+    - reference: DOI:10.1093/emboj/20.24.6946
+      notes: Moreno-Borchart et al. 2001 tied LEP coat assembly to formation of the
+        growing prospore membrane.
+    - reference: GO:0070056
+      notes: GO:0070056 describes a protein-coated leading-edge region on the prospore
+        membrane.
+  - subject: prospore_membrane_leading_edge
+    predicate: is part of
+    object: prospore_membrane
+    description: The leading edge is a protein-coated region of the prospore membrane.
+    evidence:
+    - reference: GO:0070056
+      notes: GO:0070056 identifies the prospore membrane leading edge.
+    - reference: GO:0005628
+      notes: GO:0005628 identifies the parent prospore membrane.
+discussions:
+- discussion_id: ground_leading_edge_coat_subunits
+  prompt: Resolve exact source-neutral groundings and component boundaries for the
+    prospore membrane leading-edge coat subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#leading_edge_protein_coat
+  rationale: This first leading-edge record treats the coat as one reviewed-label-only
+    constituent and records Saccharomyces SSP1, ADY3 and DON1 as gene-symbol metadata.
+    Exact family groundings for individual Ssp1, Ady3, Don1 and Irc10 components,
+    and the boundary between stable coat proteins and Spo20/Sso1 fusion machinery,
+    need a focused curation pass.
+  evidence:
+  - reference: DOI:10.1093/emboj/20.24.6946
+  posed_by: codex
+  posed_date: '2026-09-15'

@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/prospore_membrane_leading_edge.yaml
+  slug: prospore_membrane_leading_edge
+session:
+  id: 2026-09-15T082232Z-codex-1b7d11
+  timestamp: '2026-09-15T08:22:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add prospore membrane leading edge
+  details: Created data/structures/spore/prospore_membrane_leading_edge.yaml for GO:0070056
+    with prospore-membrane parthood, a reviewed-label-only leading-edge coat component, Saccharomyces
+    cerevisiae scope, a rim-organization function, GO and Moreno-Borchart et al. 2001 evidence,
+    a nonmechanistic topology graph, and a TODO for exact LEP subunit grounding.
