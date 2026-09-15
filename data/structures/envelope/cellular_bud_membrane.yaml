@@ -1,0 +1,167 @@
+identifier: GO:0033101
+label: cellular bud membrane
+structure_category: ENVELOPE
+structure_kind: MEMBRANE
+definition: The specialized plasma-membrane region that surrounds a cellular bud.
+definition_source: GO:0033101
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T00:03:40Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T00:04:18Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added UniProt bud-membrane synonymy and xref, membrane parentage, cellular-bud
+    and plasma-membrane parthood, a reviewed-label-only lipid component, budding-yeast
+    distribution and example evidence, a polarized bud-membrane growth function, GO/UniProt/DOI
+    evidence, a nonmechanistic topology graph, and an exocyst/polarity-factor boundary
+    decision.
+  llm_assisted: true
+- timestamp: '2026-09-15T00:13:27Z'
+  curator: codex
+  action: FIXED_DISCUSSION_ANCHOR
+  changes: Replaced the bare components discussion anchor with components#cellular_bud_lipid_bilayer
+    so the boundary decision resolves to the local lipid-boundary component.
+  llm_assisted: true
+synonyms:
+- synonym_text: bud membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0028
+parent_structures:
+- GO:0016020
+part_of:
+- GO:0005933
+- GO:0005886
+xrefs:
+- uniprot.location:SL-0028
+components:
+- component_id: cellular_bud_lipid_bilayer
+  label: cellular bud lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Specialized plasma-membrane lipid boundary surrounding the daughter bud.
+  evidence:
+  - reference: GO:0033101
+    notes: GO:0033101 identifies the cellular bud membrane as the membrane surrounding
+      the bud.
+  - reference: uniprot.location:SL-0028
+    notes: UniProt SL-0028 maps Bud membrane to GO:0033101 and places it under both
+      Bud and Cell membrane.
+  - reference: GO:0005886
+    notes: GO:0005886 is the plasma membrane term corresponding to the UniProt Cell
+      membrane parent location.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0033101 and UniProt SL-0028 identify the bud membrane, but no
+    lipid CURIE specific to this budding-yeast plasma-membrane patch was curated.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms a membrane-bounded daughter bud during polarized mitotic
+    growth.
+  reference: DOI:10.1083/jcb.135.3.725
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which polarized exocytic sites form on small bud membranes
+    during bud growth.
+  reference: DOI:10.1016/S0092-8674(00)80948-4
+functions:
+- function_id: polarized_bud_membrane_growth
+  label: polarized bud membrane growth
+  description: The bud membrane is the plasma-membrane domain around the daughter
+    bud that expands as polarized secretion delivers membrane to bud growth sites.
+  evidence:
+  - reference: GO:0033101
+    notes: GO:0033101 identifies the membrane surrounding a cellular bud.
+  - reference: DOI:10.1016/S0092-8674(00)80948-4
+    notes: Finger et al. 1998 characterized Sec3p as a spatial landmark for polarized
+      secretion in budding yeast.
+evidence:
+- reference: GO:0033101
+  notes: Gene Ontology cellular-component term for the cellular bud membrane.
+- reference: GO:0005933
+  notes: Gene Ontology cellular-component term for the cellular bud.
+- reference: GO:0005886
+  notes: Gene Ontology cellular-component term for the plasma membrane.
+- reference: uniprot.location:SL-0028
+  notes: UniProt Subcellular Location entry SL-0028 maps Bud membrane to GO:0033101
+    and places it under Bud and Cell membrane.
+- reference: uniprot.location:SL-0027
+  notes: UniProt Subcellular Location entry SL-0027 maps the parent Bud location to
+    GO:0005933.
+- reference: DOI:10.1083/jcb.135.3.725
+  notes: Valtz and Herskowitz 1996 studied Saccharomyces Pea2/Spa2 polarity proteins
+    during budding and mating.
+- reference: DOI:10.1016/S0092-8674(00)80948-4
+  notes: Finger et al. 1998, 'Sec3p is a spatial landmark for polarized secretion
+    in budding yeast', Cell.
+causal_graphs:
+- graph_id: cellular_bud_membrane_topology
+  title: Cellular bud membrane topology
+  description: The cellular bud membrane is the specialized plasma-membrane patch
+    that surrounds the daughter bud.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures bud-membrane parthood without asserting the full
+    exocyst, polarity, or septin mechanism that patterns the bud surface.
+  nodes:
+  - node_id: cellular_bud_membrane
+    label: cellular bud membrane
+    node_type: STRUCTURE
+    grounding: GO:0033101
+  - node_id: cellular_bud
+    label: cellular bud
+    node_type: STRUCTURE
+    grounding: GO:0005933
+  - node_id: plasma_membrane
+    label: plasma membrane
+    node_type: STRUCTURE
+    grounding: GO:0005886
+  edges:
+  - subject: cellular_bud_membrane
+    predicate: surrounds
+    object: cellular_bud
+    description: The bud membrane surrounds the cellular bud.
+    evidence:
+    - reference: GO:0033101
+      notes: GO:0033101 identifies the membrane surrounding the cellular bud.
+    - reference: uniprot.location:SL-0028
+      notes: UniProt SL-0028 places the bud membrane under the Bud subcellular location.
+  - subject: cellular_bud_membrane
+    predicate: is part of
+    object: plasma_membrane
+    description: The cellular bud membrane is a specialized part of the cell membrane.
+    evidence:
+    - reference: uniprot.location:SL-0028
+      notes: UniProt SL-0028 places the bud membrane under the Cell membrane location.
+    - reference: GO:0005886
+      notes: GO:0005886 is the plasma membrane term corresponding to the UniProt Cell
+        membrane location.
+discussions:
+- discussion_id: exocyst_and_polarity_factors_outside_membrane_boundary
+  prompt: Keep exocyst and polarity proteins off the cellular bud membrane component
+    list.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#cellular_bud_lipid_bilayer
+  - causal_graphs#cellular_bud_membrane_topology
+  rationale: Sec3p and the Pea2/Spa2 polarity module localize to budding sites, but
+    they are curated as exocyst or polarisome constituents rather than as structural
+    constituents of the bud membrane lipid boundary.
+  resolution_note: Curated only the lipid-boundary component and the cellular bud/plasma
+    membrane topology for the bud membrane record.
+  evidence:
+  - reference: DOI:10.1016/S0092-8674(00)80948-4
+    notes: Finger et al. 1998 used Sec3p localization to define polarized secretion
+      sites in budding yeast.
+  - reference: DOI:10.1083/jcb.135.3.725
+    notes: Valtz and Herskowitz 1996 characterized Pea2/Spa2 localization to polarized-growth
+      sites in budding yeast.
+  posed_by: codex
+  posed_date: '2026-09-14'

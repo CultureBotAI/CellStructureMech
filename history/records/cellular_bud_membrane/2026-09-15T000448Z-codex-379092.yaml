@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/cellular_bud_membrane.yaml
+  slug: cellular_bud_membrane
+session:
+  id: 2026-09-15T000448Z-codex-379092
+  timestamp: '2026-09-15T00:04:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the cellular bud membrane record
+  details: Added GO:0033101 as a cellular bud membrane structure record with UniProt SL-0028
+    synonymy and xref, membrane parentage, cellular-bud and plasma-membrane parthood, a reviewed-label-only
+    lipid component, budding-yeast distribution and example evidence, a polarized bud-membrane
+    growth function, GO/UniProt/DOI evidence, a nonmechanistic topology graph, and an exocyst/polarity-factor
+    boundary decision.
