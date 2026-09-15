@@ -23,6 +23,13 @@ curation_history:
     MIS12/MIND-to-Ndc80 assembly graph, a subunit-grounding TODO, and an Ndc80 boundary
     decision.
   llm_assisted: true
+- timestamp: '2026-09-15T11:30:11Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved #969 and #970 by replacing the Ndc80-specific graph target with
+    a generic outer microtubule-binding subunit class and adding the outer-kinetochore-to-kinetochore
+    parthood edge.'
+  llm_assisted: true
 synonyms:
 - synonym_text: MIND complex
   synonym_type: EXACT_SYNONYM
@@ -157,8 +164,6 @@ evidence:
   notes: Gene Ontology cellular-component parent term for outer kinetochore.
 - reference: GO:0000776
   notes: Gene Ontology cellular-component term for kinetochore.
-- reference: GO:0031262
-  notes: Gene Ontology cellular-component term for the Ndc80 complex.
 - reference: DOI:10.1101/gad.1144403
   notes: De Wulf, McAinsh and Sorger 2003, Hierarchical assembly of the budding yeast
     kinetochore from multiple subcomplexes, Genes & Development.
@@ -169,8 +174,8 @@ causal_graphs:
 - graph_id: mis12_mind_outer_kinetochore_bridge
   title: MIS12/MIND bridges centromeric and outer kinetochore modules
   description: MIS12/MIND is an outer-kinetochore subcomplex that binds centromeric
-    chromatin-proximal assemblies and helps recruit the microtubule-binding Ndc80
-    complex.
+    chromatin-proximal assemblies and helps recruit microtubule-binding outer kinetochore
+    subunits.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: This graph places only the MIS12/MIND complex in the kinetochore hierarchy;
@@ -189,10 +194,9 @@ causal_graphs:
     label: kinetochore
     node_type: STRUCTURE
     grounding: GO:0000776
-  - node_id: ndc80_complex
-    label: Ndc80 complex
-    node_type: STRUCTURE
-    grounding: GO:0031262
+  - node_id: outer_microtubule_binding_subunits
+    label: outer microtubule-binding kinetochore subunits
+    node_type: GENE_OR_PROTEIN
   edges:
   - subject: mis12_mind_type_complex
     predicate: is a
@@ -202,6 +206,14 @@ causal_graphs:
     evidence:
     - reference: GO:0000444
       notes: GO:0000444 is a child of GO:0000940 outer kinetochore.
+  - subject: outer_kinetochore
+    predicate: is part of
+    object: kinetochore
+    description: The outer kinetochore is the centromere-distal region of the kinetochore.
+    evidence:
+    - reference: GO:0000940
+      notes: GO:0000940 defines the outer kinetochore as the region of a kinetochore
+        most external to centromeric DNA.
   - subject: mis12_mind_type_complex
     predicate: is part of
     object: kinetochore
@@ -211,16 +223,16 @@ causal_graphs:
       notes: GO:0000444 defines MIS12/MIND as a kinetochore subcomplex.
   - subject: mis12_mind_type_complex
     predicate: helps recruit
-    object: ndc80_complex
-    description: MIS12/MIND supports recruitment of outer microtubule-binding kinetochore
-      subunits, including Ndc80/HEC1 in vertebrate cells.
+    object: outer_microtubule_binding_subunits
+    description: MIS12/MIND supports recruitment of outer kinetochore subunits that
+      will bind to microtubules.
     evidence:
     - reference: GO:0000444
       notes: GO:0000444 describes MIS12/MIND as helping recruit outer microtubule-binding
         subunits.
-    - reference: DOI:10.1083/jcb.200509158
-      notes: Kline et al. 2006 reported that depleting Mis12 complex subunits strongly
-        reduced kinetochore Ndc80/HEC1 accumulation.
+    - reference: DOI:10.1101/gad.1144403
+      notes: De Wulf, McAinsh and Sorger 2003 classified yeast MIND as a bridge between
+        DNA-proximal and microtubule-bound kinetochore subunits.
 discussions:
 - discussion_id: mis12_mind_subunit_groundings_todo
   prompt: Resolve exact source-neutral family groundings for the MIS12/Mtw1, Dsn1,
@@ -241,16 +253,16 @@ discussions:
   - reference: DOI:10.1083/jcb.200509158
   posed_by: codex
   posed_date: '2026-09-15'
-- discussion_id: ndc80_recruitment_not_mis12_mind_composition
-  prompt: Do not model the Ndc80 complex as a MIS12/MIND constituent when curating
-    the GO:0000444 record.
+- discussion_id: recruited_outer_subunits_not_mis12_mind_composition
+  prompt: Keep recruited outer microtubule-binding subunits outside the MIS12/MIND
+    component list.
   kind: INTERPRETATION
   status: RESOLVED
   attaches_to:
   - causal_graphs#mis12_mind_outer_kinetochore_bridge
   rationale: GO:0000444 frames MIS12/MIND as a complex that helps recruit outer microtubule-binding
-    subunits; Ndc80 therefore belongs as a downstream recruited complex in the graph,
-    not as a constituent component.
+    subunits; those downstream outer subunits belong as a recruited class in the graph,
+    not as constituent components.
   evidence:
   - reference: GO:0000444
   posed_by: codex
