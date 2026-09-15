@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cellular_bud_neck.yaml
+  slug: cellular_bud_neck
+session:
+  id: 2026-09-15T010417Z-codex-0ff4ae
+  timestamp: '2026-09-15T01:04:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the cellular bud neck record
+  details: Added GO:0005935 as a cellular bud neck structure record with UniProt SL-0029 synonymy
+    and xref, cellular-bud parthood, a septin-ring substructure, budding-yeast distribution
+    and example evidence, a bud-neck cytokinesis scaffold function, GO/UniProt/DOI evidence,
+    a nonmechanistic bud-neck septin topology graph, and a septin/polarity-factor component-boundary
+    decision.
