@@ -18,6 +18,13 @@ curation_history:
     Saccharomyces endocytic-site scope, GO/DOI evidence, a nonmechanistic lumen topology
     graph, and a resolved cargo-boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-16T11:10:29Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved issue #1089 by documenting why GO:0060205 is the curated cytoplasmic-vesicle-lumen
+    parent and by adding GO:0031410 support for the endocytic-vesicle to cytoplasmic-vesicle
+    inference.'
+  llm_assisted: true
 parent_structures:
 - GO:0060205
 part_of:
@@ -42,6 +49,9 @@ evidence:
   notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle lumens.
 - reference: GO:0030139
   notes: Gene Ontology cellular-component term for the enclosing endocytic vesicle.
+- reference: GO:0031410
+  notes: Gene Ontology cellular-component term for the broader cytoplasmic vesicle
+    class that includes endocytic vesicles.
 - reference: GO:0030666
   notes: Gene Ontology cellular-component term for the membrane that bounds an endocytic
     vesicle lumen.
@@ -98,6 +108,34 @@ causal_graphs:
       notes: GO:0071682 defines the lumen by enclosure within the endocytic vesicle
         membrane.
 discussions:
+- discussion_id: use_cytoplasmic_vesicle_lumen_parent
+  prompt: Use the cytoplasmic vesicle lumen rather than the generic intracellular
+    organelle lumen as the curated parent.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - parent_structures
+  rationale: GO asserts GO:0071682 as part of an endocytic vesicle and directly under
+    the broad intracellular organelle lumen. Because GO:0030139 endocytic vesicle
+    is a cytoplasmic vesicle, GO:0060205 is the narrower inferred lumen parent that
+    keeps endocytic vesicle lumen with the other cytoplasmic vesicle lumen subtypes
+    in this corpus.
+  resolution_note: Kept GO:0060205 as the curated is-a parent and documented the GO:0030139
+    to GO:0031410 inference supporting that choice.
+  evidence:
+  - reference: GO:0071682
+    notes: GO:0071682 identifies the lumen as the volume enclosed by an endocytic
+      vesicle membrane.
+  - reference: GO:0030139
+    notes: GO:0030139 identifies the enclosing endocytic vesicle.
+  - reference: GO:0031410
+    notes: GO places endocytic vesicle under cytoplasmic vesicle.
+  - reference: GO:0060205
+    notes: GO:0060205 identifies the broader cytoplasmic vesicle lumen.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
 - discussion_id: keep_internalized_cargo_out_of_lumen_record
   prompt: Keep variable internalized cargo out of the endocytic vesicle lumen record.
   kind: INTERPRETATION

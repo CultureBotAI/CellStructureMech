@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endocytic_vesicle_lumen.yaml
+  slug: endocytic_vesicle_lumen
+session:
+  id: 2026-09-16T111101Z-codex-b956b6
+  timestamp: '2026-09-16T11:11:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1089
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1088
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Documented GO:0060205 parent inference
+  details: 'Resolved issue #1089 by adding GO:0031410 evidence and a resolved discussion explaining
+    why GO:0060205 cytoplasmic vesicle lumen is the curated parent for GO:0071682 through
+    the GO:0030139 endocytic-vesicle to GO:0031410 cytoplasmic-vesicle inference.'
