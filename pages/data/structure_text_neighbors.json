@@ -3216,6 +3216,11 @@
           "cosine_similarity": 0.70922175
         },
         {
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.6820948
+        },
+        {
           "identifier": "GO:0033117",
           "label": "esterosome",
           "cosine_similarity": 0.67122546
@@ -3224,11 +3229,6 @@
           "identifier": "GO:0030663",
           "label": "COPI-coated vesicle membrane",
           "cosine_similarity": 0.66493216
-        },
-        {
-          "identifier": "GO:0005789",
-          "label": "endoplasmic reticulum membrane",
-          "cosine_similarity": 0.66413574
         }
       ]
     },
@@ -3240,6 +3240,11 @@
           "identifier": "GO:0005811",
           "label": "lipid droplet",
           "cosine_similarity": 0.84444995
+        },
+        {
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.8192607
         },
         {
           "identifier": "GO:0030663",
@@ -3255,11 +3260,6 @@
           "identifier": "GO:0033118",
           "label": "esterosome membrane",
           "cosine_similarity": 0.78693776
-        },
-        {
-          "identifier": "GO:0032585",
-          "label": "multivesicular body membrane",
-          "cosine_similarity": 0.78211296
         }
       ]
     },
@@ -4249,9 +4249,9 @@
           "cosine_similarity": 0.89260276
         },
         {
-          "identifier": "GO:0030659",
-          "label": "cytoplasmic vesicle membrane",
-          "cosine_similarity": 0.86637772
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.87943735
         }
       ]
     },
@@ -4291,6 +4291,11 @@
       "label": "clathrin-coated vesicle membrane",
       "neighbors": [
         {
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.953195
+        },
+        {
           "identifier": "GO:0030136",
           "label": "clathrin-coated vesicle",
           "cosine_similarity": 0.94109914
@@ -4309,11 +4314,6 @@
           "identifier": "GO:0030663",
           "label": "COPI-coated vesicle membrane",
           "cosine_similarity": 0.92242901
-        },
-        {
-          "identifier": "GO:0030659",
-          "label": "cytoplasmic vesicle membrane",
-          "cosine_similarity": 0.91084619
         }
       ]
     },
@@ -4321,6 +4321,11 @@
       "identifier": "GO:0030135",
       "label": "coated vesicle",
       "neighbors": [
+        {
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.95578843
+        },
         {
           "identifier": "GO:0030665",
           "label": "clathrin-coated vesicle membrane",
@@ -4340,11 +4345,37 @@
           "identifier": "GO:0030136",
           "label": "clathrin-coated vesicle",
           "cosine_similarity": 0.90941684
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030662",
+      "label": "coated vesicle membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0030663",
+          "label": "COPI-coated vesicle membrane",
+          "cosine_similarity": 0.95765561
+        },
+        {
+          "identifier": "GO:0030135",
+          "label": "coated vesicle",
+          "cosine_similarity": 0.95578843
+        },
+        {
+          "identifier": "GO:0030665",
+          "label": "clathrin-coated vesicle membrane",
+          "cosine_similarity": 0.953195
+        },
+        {
+          "identifier": "GO:0030659",
+          "label": "cytoplasmic vesicle membrane",
+          "cosine_similarity": 0.95056297
         },
         {
           "identifier": "GO:0012507",
           "label": "ER to Golgi transport vesicle membrane",
-          "cosine_similarity": 0.90608495
+          "cosine_similarity": 0.9325394
         }
       ]
     },
@@ -4508,6 +4539,11 @@
       "label": "COPI-coated vesicle membrane",
       "neighbors": [
         {
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.95765561
+        },
+        {
           "identifier": "GO:0030135",
           "label": "coated vesicle",
           "cosine_similarity": 0.93390891
@@ -4526,11 +4562,6 @@
           "identifier": "GO:0030665",
           "label": "clathrin-coated vesicle membrane",
           "cosine_similarity": 0.92242901
-        },
-        {
-          "identifier": "GO:0030659",
-          "label": "cytoplasmic vesicle membrane",
-          "cosine_similarity": 0.91036786
         }
       ]
     },
@@ -4683,9 +4714,9 @@
           "cosine_similarity": 0.88173654
         },
         {
-          "identifier": "GO:0031410",
-          "label": "cytoplasmic vesicle",
-          "cosine_similarity": 0.86407828
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.87276282
         }
       ]
     },
@@ -5071,6 +5102,11 @@
           "cosine_similarity": 0.95251268
         },
         {
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.95056297
+        },
+        {
           "identifier": "GO:0005789",
           "label": "endoplasmic reticulum membrane",
           "cosine_similarity": 0.9229685
@@ -5084,11 +5120,6 @@
           "identifier": "GO:0030665",
           "label": "clathrin-coated vesicle membrane",
           "cosine_similarity": 0.91084619
-        },
-        {
-          "identifier": "GO:0030663",
-          "label": "COPI-coated vesicle membrane",
-          "cosine_similarity": 0.91036786
         }
       ]
     },
@@ -5174,14 +5205,14 @@
           "cosine_similarity": 0.90555035
         },
         {
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.89702486
+        },
+        {
           "identifier": "GO:0032580",
           "label": "Golgi cisterna membrane",
           "cosine_similarity": 0.89379771
-        },
-        {
-          "identifier": "GO:0000139",
-          "label": "Golgi membrane",
-          "cosine_similarity": 0.89139178
         }
       ]
     },
@@ -5303,9 +5334,9 @@
           "cosine_similarity": 0.93438418
         },
         {
-          "identifier": "GO:0005789",
-          "label": "endoplasmic reticulum membrane",
-          "cosine_similarity": 0.92999814
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.9325394
         }
       ]
     },
@@ -5396,9 +5427,9 @@
           "cosine_similarity": 0.82517647
         },
         {
-          "identifier": "GO:0032585",
-          "label": "multivesicular body membrane",
-          "cosine_similarity": 0.82242388
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.82321091
         }
       ]
     },
@@ -6171,9 +6202,9 @@
           "cosine_similarity": 0.82348255
         },
         {
-          "identifier": "cellstructuremech:mitosome_outer_membrane",
-          "label": "mitosome outer membrane",
-          "cosine_similarity": 0.81688766
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.8173371
         }
       ]
     },
@@ -6910,14 +6941,14 @@
           "cosine_similarity": 0.88563222
         },
         {
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.88007019
+        },
+        {
           "identifier": "GO:0012507",
           "label": "ER to Golgi transport vesicle membrane",
           "cosine_similarity": 0.87474741
-        },
-        {
-          "identifier": "GO:0005789",
-          "label": "endoplasmic reticulum membrane",
-          "cosine_similarity": 0.87049056
         }
       ]
     },
@@ -8951,6 +8982,11 @@
           "cosine_similarity": 0.86134983
         },
         {
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.8594133
+        },
+        {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
           "cosine_similarity": 0.85774969
@@ -8959,11 +8995,6 @@
           "identifier": "GO:0030659",
           "label": "cytoplasmic vesicle membrane",
           "cosine_similarity": 0.85436817
-        },
-        {
-          "identifier": "GO:0030135",
-          "label": "coated vesicle",
-          "cosine_similarity": 0.84652383
         }
       ]
     },
@@ -10222,6 +10253,11 @@
           "cosine_similarity": 0.84231894
         },
         {
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.84099873
+        },
+        {
           "identifier": "GO:0030127",
           "label": "COPII vesicle coat",
           "cosine_similarity": 0.83269089
@@ -10230,11 +10266,6 @@
           "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
           "label": "COPII-coated vesicle lumen",
           "cosine_similarity": 0.82865915
-        },
-        {
-          "identifier": "GO:0030137",
-          "label": "COPI-coated vesicle",
-          "cosine_similarity": 0.81967943
         }
       ]
     },
@@ -10997,6 +11028,11 @@
           "cosine_similarity": 0.87075835
         },
         {
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.80973186
+        },
+        {
           "identifier": "GO:0030659",
           "label": "cytoplasmic vesicle membrane",
           "cosine_similarity": 0.80597599
@@ -11005,11 +11041,6 @@
           "identifier": "GO:0005789",
           "label": "endoplasmic reticulum membrane",
           "cosine_similarity": 0.80482872
-        },
-        {
-          "identifier": "GO:0070057",
-          "label": "prospore membrane spindle pole body attachment site",
-          "cosine_similarity": 0.80443798
         }
       ]
     },
