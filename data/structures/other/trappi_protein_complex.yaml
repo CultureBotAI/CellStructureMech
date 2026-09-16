@@ -35,6 +35,12 @@ curation_history:
   changes: Replaced the broad components discussion anchor with explicit TRAPPI component
     anchors so corpus-integrity checks can resolve every attaches_to target.
   llm_assisted: true
+- timestamp: '2026-09-16T20:18:21Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1124 issue #1125 by adding Sacher et al. 2000 primary subunit-identification
+    evidence to the six TRAPPI component rows and their yeast graph parthood edges.'
+  llm_assisted: true
 parent_structures:
 - GO:0030008
 synonyms:
@@ -64,6 +70,9 @@ components:
   evidence:
   - reference: GO:1990070
     notes: GO:1990070 names Bet3 as a homodimeric yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Bet3 had been described previously as a TRAPP
+      subunit.
   - reference: DOI:10.1016/j.cell.2006.09.029
     notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
       I vesicle-tethering factor.
@@ -82,6 +91,9 @@ components:
   evidence:
   - reference: GO:1990070
     notes: GO:1990070 names Bet5 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Bet5 had been described previously as a TRAPP
+      subunit.
   - reference: DOI:10.1016/j.cell.2006.09.029
     notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
       I vesicle-tethering factor.
@@ -100,6 +112,9 @@ components:
   evidence:
   - reference: GO:1990070
     notes: GO:1990070 names Trs20 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Trs20 had been described previously as a
+      TRAPP subunit.
   - reference: DOI:10.1016/j.cell.2006.09.029
     notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
       I vesicle-tethering factor.
@@ -118,6 +133,9 @@ components:
   evidence:
   - reference: GO:1990070
     notes: GO:1990070 names Trs23 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Trs23 had been described previously as a
+      TRAPP subunit.
   - reference: DOI:10.1016/j.cell.2006.09.029
     notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
       I vesicle-tethering factor.
@@ -156,6 +174,9 @@ components:
   evidence:
   - reference: GO:1990070
     notes: GO:1990070 names Trs33 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Trs33 had been described previously as a
+      TRAPP subunit.
   - reference: DOI:10.1016/j.cell.2006.09.029
     notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
       I vesicle-tethering factor.
@@ -258,6 +279,9 @@ causal_graphs:
     evidence:
     - reference: GO:1990070
       notes: GO:1990070 names Bet3 as a yeast TRAPPI core subunit.
+    - reference: DOI:10.1078/S0171-9335(04)70009-6
+      notes: Sacher et al. 2000 placed Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
+        yeast TRAPP subunits.
     - reference: DOI:10.1016/j.cell.2006.09.029
       notes: Kim et al. 2006 resolved the architecture of the yeast TRAPP I complex.
   - subject: bet5_trappi_subunit
@@ -268,6 +292,9 @@ causal_graphs:
     evidence:
     - reference: GO:1990070
       notes: GO:1990070 names Bet5 as a yeast TRAPPI core subunit.
+    - reference: DOI:10.1078/S0171-9335(04)70009-6
+      notes: Sacher et al. 2000 placed Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
+        yeast TRAPP subunits.
     - reference: DOI:10.1016/j.cell.2006.09.029
       notes: Kim et al. 2006 resolved the architecture of the yeast TRAPP I complex.
   - subject: trs20_trappi_subunit
@@ -278,6 +305,9 @@ causal_graphs:
     evidence:
     - reference: GO:1990070
       notes: GO:1990070 names Trs20 as a yeast TRAPPI core subunit.
+    - reference: DOI:10.1078/S0171-9335(04)70009-6
+      notes: Sacher et al. 2000 placed Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
+        yeast TRAPP subunits.
     - reference: DOI:10.1016/j.cell.2006.09.029
       notes: Kim et al. 2006 resolved the architecture of the yeast TRAPP I complex.
   - subject: trs23_trappi_subunit
@@ -288,6 +318,9 @@ causal_graphs:
     evidence:
     - reference: GO:1990070
       notes: GO:1990070 names Trs23 as a yeast TRAPPI core subunit.
+    - reference: DOI:10.1078/S0171-9335(04)70009-6
+      notes: Sacher et al. 2000 placed Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
+        yeast TRAPP subunits.
     - reference: DOI:10.1016/j.cell.2006.09.029
       notes: Kim et al. 2006 resolved the architecture of the yeast TRAPP I complex.
   - subject: trs31_trappi_subunit
@@ -298,6 +331,9 @@ causal_graphs:
     evidence:
     - reference: GO:1990070
       notes: GO:1990070 names Trs31 as a yeast TRAPPI core subunit.
+    - reference: DOI:10.1078/S0171-9335(04)70009-6
+      notes: Sacher et al. 2000 placed Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
+        yeast TRAPP subunits.
     - reference: DOI:10.1016/j.cell.2006.09.029
       notes: Kim et al. 2006 resolved the architecture of the yeast TRAPP I complex.
   - subject: trs33_trappi_subunit
@@ -308,6 +344,9 @@ causal_graphs:
     evidence:
     - reference: GO:1990070
       notes: GO:1990070 names Trs33 as a yeast TRAPPI core subunit.
+    - reference: DOI:10.1078/S0171-9335(04)70009-6
+      notes: Sacher et al. 2000 placed Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
+        yeast TRAPP subunits.
     - reference: DOI:10.1016/j.cell.2006.09.029
       notes: Kim et al. 2006 resolved the architecture of the yeast TRAPP I complex.
   - subject: trappi_protein_complex
