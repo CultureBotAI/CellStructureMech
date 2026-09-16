@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/membrane_coat.yaml
+  slug: membrane_coat
+session:
+  id: 2026-09-16T043809Z-codex-699d92
+  timestamp: '2026-09-16T04:38:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Added the GO membrane coat record
+  details: Created an evidence-backed GO:0030117 membrane-coat record with membrane-protein-complex
+    parentage, broad reviewed-label-only scaffold and recruitment components, a Saccharomyces
+    canonical example, GO and DOI evidence, a nonmechanistic membrane-coat assembly graph,
+    and discussions for the vesicle-coat boundary and exact component grounding.

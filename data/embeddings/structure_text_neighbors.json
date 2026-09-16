@@ -9173,14 +9173,14 @@
           "cosine_similarity": 0.66517752
         },
         {
+          "identifier": "GO:0030117",
+          "label": "membrane coat",
+          "cosine_similarity": 0.658359
+        },
+        {
           "identifier": "GO:0009277",
           "label": "fungal-type cell wall",
           "cosine_similarity": 0.65666356
-        },
-        {
-          "identifier": "GO:0005794",
-          "label": "Golgi apparatus",
-          "cosine_similarity": 0.65316281
         }
       ]
     },
@@ -9271,9 +9271,9 @@
           "cosine_similarity": 0.84231894
         },
         {
-          "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
-          "label": "COPII-coated vesicle lumen",
-          "cosine_similarity": 0.79954103
+          "identifier": "GO:0030117",
+          "label": "membrane coat",
+          "cosine_similarity": 0.83443097
         }
       ]
     },
@@ -9285,6 +9285,11 @@
           "identifier": "GO:0030126",
           "label": "COPI vesicle coat",
           "cosine_similarity": 0.89843586
+        },
+        {
+          "identifier": "GO:0030117",
+          "label": "membrane coat",
+          "cosine_similarity": 0.85618136
         },
         {
           "identifier": "GO:0030134",
@@ -9300,11 +9305,6 @@
           "identifier": "GO:0030137",
           "label": "COPI-coated vesicle",
           "cosine_similarity": 0.8250586
-        },
-        {
-          "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
-          "label": "COPII-coated vesicle lumen",
-          "cosine_similarity": 0.82166651
         }
       ]
     },
@@ -9491,6 +9491,37 @@
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.78914107
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030117",
+      "label": "membrane coat",
+      "neighbors": [
+        {
+          "identifier": "GO:0030120",
+          "label": "vesicle coat",
+          "cosine_similarity": 0.91887318
+        },
+        {
+          "identifier": "GO:0030127",
+          "label": "COPII vesicle coat",
+          "cosine_similarity": 0.85618136
+        },
+        {
+          "identifier": "GO:0030135",
+          "label": "coated vesicle",
+          "cosine_similarity": 0.83649214
+        },
+        {
+          "identifier": "GO:0030126",
+          "label": "COPI vesicle coat",
+          "cosine_similarity": 0.83443097
+        },
+        {
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.82308751
         }
       ]
     },
@@ -10274,6 +10305,11 @@
       "label": "vesicle coat",
       "neighbors": [
         {
+          "identifier": "GO:0030117",
+          "label": "membrane coat",
+          "cosine_similarity": 0.91887318
+        },
+        {
           "identifier": "GO:0030135",
           "label": "coated vesicle",
           "cosine_similarity": 0.87527211
@@ -10292,11 +10328,6 @@
           "identifier": "GO:0030127",
           "label": "COPII vesicle coat",
           "cosine_similarity": 0.83269089
-        },
-        {
-          "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
-          "label": "COPII-coated vesicle lumen",
-          "cosine_similarity": 0.82865915
         }
       ]
     },
