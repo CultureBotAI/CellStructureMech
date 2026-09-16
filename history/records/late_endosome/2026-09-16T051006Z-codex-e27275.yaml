@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/late_endosome.yaml
+  slug: late_endosome
+session:
+  id: 2026-09-16T051006Z-codex-e27275
+  timestamp: '2026-09-16T05:10:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - functions
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Added the GO late endosome record
+  details: Created an evidence-backed GO:0005770 late endosome membrane-organelle record with
+    endosome parentage, a reviewed-label-only limiting-membrane component, Saccharomyces scope
+    and canonical example, multivesicular-body sorting and vacuolar-delivery functions, GO
+    and DOI evidence, a nonmechanistic ESCRT MVB sorting graph, and discussions for the late-endosome/MVB
+    boundary and exact membrane/lumen grounding.

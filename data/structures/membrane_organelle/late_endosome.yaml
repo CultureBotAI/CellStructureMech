@@ -1,0 +1,255 @@
+identifier: GO:0005770
+label: late endosome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A prelysosomal endocytic organelle differentiated from early endosomes
+  by lower lumenal pH and different protein composition. Late endosomes are more spherical
+  than early endosomes and are mostly juxtanuclear, being concentrated near the microtubule
+  organizing center.
+definition_source: GO:0005770
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T05:07:58Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T05:09:13Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added endosome parentage, a broad reviewed-label-only late-endosome limiting-membrane
+    component, Saccharomyces scope and canonical example, MVB-sorting and vacuolar-delivery
+    functions, GO and DOI evidence, a nonmechanistic ESCRT MVB sorting graph, and
+    late-endosome/MVB boundary plus exact-grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-16T05:09:44Z'
+  curator: codex
+  action: REFINED_INITIAL_CURATION
+  changes: Aligned the expanded-record curation-history summary with the final single-component
+    late-endosome record shape.
+  llm_assisted: true
+parent_structures:
+- GO:0005768
+components:
+- component_id: late_endosome_limiting_membrane
+  label: late endosome limiting membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005770 identifies the whole late endosome and GO:0010008 identifies
+    the generic endosome membrane. No exact source-neutral GO or lipid-ontology CURIE
+    was curated for a late-endosome-specific limiting membrane in this pass.
+  role: Lipid boundary of the late endosome on which ESCRT machinery sorts membrane
+    cargo and generates multivesicular-body intraluminal vesicles.
+  evidence:
+  - reference: GO:0005770
+    notes: GO defines the late endosome as an endocytic organelle with a protein composition
+      distinct from early endosomes.
+  - reference: GO:0010008
+    notes: GO defines the endosome membrane as the lipid bilayer surrounding an endosome.
+  - reference: DOI:10.1083/jcb.200302136
+    notes: Katzmann et al. 2003 localized Vps27 and ESCRT-I to yeast endosomal membranes
+      during MVB sorting.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses late endosome/multivesicular-body compartments for ESCRT-dependent
+    sorting of ubiquitinated membrane cargo into intraluminal vesicles before vacuolar
+    delivery.
+  reference: DOI:10.1016/S0092-8674(01)00434-2
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast endosomal model in which ESCRT complexes sort membrane cargo into multivesicular
+    bodies, a late-endosome child class.
+  reference: DOI:10.1016/S0092-8674(01)00434-2
+functions:
+- function_id: late_endosome_mvb_sorting
+  label: multivesicular body sorting pathway
+  grounding: GO:0071985
+  description: Late endosomes can receive ubiquitinated transmembrane cargo into luminal
+    vesicles through the ESCRT-dependent MVB sorting pathway.
+  evidence:
+  - reference: GO:0071985
+    notes: GO denotes the pathway that targets ubiquitylated transmembrane proteins
+      into multivesicular-body luminal vesicles.
+  - reference: DOI:10.1016/S0092-8674(01)00434-2
+    notes: Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved yeast endosomal
+      protein-sorting complex required for MVB cargo sorting.
+- function_id: late_endosome_vacuolar_delivery
+  label: late endosome vacuolar cargo delivery
+  description: Late endosomal multivesicular bodies deliver endosomal membrane cargo
+    toward vacuolar degradation.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: Henne, Buchkovich and Emr 2011 reviewed MVB formation as the ESCRT-dependent
+      route that packages endosomal cargo for lysosomal or vacuolar degradation.
+evidence:
+- reference: GO:0005770
+  notes: Gene Ontology cellular-component term for late endosome.
+- reference: GO:0005768
+  notes: Gene Ontology cellular-component parent term for endosome.
+- reference: GO:0005771
+  notes: Gene Ontology cellular-component term for the multivesicular body child class.
+- reference: GO:0010008
+  notes: Gene Ontology cellular-component term for endosome membrane.
+- reference: GO:0031904
+  notes: Gene Ontology cellular-component term for endosome lumen.
+- reference: GO:0071985
+  notes: Gene Ontology biological-process term for the multivesicular body sorting
+    pathway.
+- reference: DOI:10.1016/S0092-8674(01)00434-2
+  notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
+    Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
+    ESCRT-I, Cell.
+- reference: DOI:10.1083/jcb.200302136
+  notes: Katzmann, Stefan, Babst and Emr 2003, Vps27 recruits ESCRT machinery to endosomes
+    during MVB sorting, Journal of Cell Biology.
+- reference: DOI:10.1016/S1534-5807(02)00219-8
+  notes: Babst, Katzmann, Snyder, Wendland and Emr 2002, ESCRT-II, Developmental Cell.
+- reference: DOI:10.1016/S1534-5807(02)00220-4
+  notes: Babst et al. 2002, ESCRT-III, Developmental Cell.
+- reference: DOI:10.1016/j.devcel.2011.05.015
+  notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+causal_graphs:
+- graph_id: yeast_late_endosome_mvb_sorting
+  title: Late endosomal ESCRT sorting forms intraluminal vesicles
+  description: Yeast ESCRT machinery acts at a late endosomal limiting membrane to
+    sort ubiquitinated membrane cargo into intraluminal vesicles of multivesicular
+    bodies.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the late-endosome parent boundary using the ESCRT-dependent
+    MVB sorting pathway without asserting that every late endosome is already a multivesicular
+    body, without treating transient ESCRT complexes as stable late-endosome components,
+    and without enumerating the full cargo-recognition, deubiquitination, or Vps4
+    recycling cycle.
+  nodes:
+  - node_id: late_endosome_limiting_membrane
+    label: late endosome limiting membrane
+    node_type: STRUCTURE
+    component_ref: late_endosome_limiting_membrane
+  - node_id: late_endosome_lumen
+    label: late endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: ubiquitinated_membrane_cargo
+    label: ubiquitinated membrane cargo
+    node_type: STATE
+  - node_id: escrt_i
+    label: ESCRT I complex
+    node_type: STRUCTURE
+    grounding: GO:0000813
+  - node_id: escrt_ii
+    label: ESCRT II complex
+    node_type: STRUCTURE
+    grounding: GO:0000814
+  - node_id: escrt_iii
+    label: ESCRT III complex
+    node_type: STRUCTURE
+    grounding: GO:0000815
+  - node_id: intraluminal_vesicle
+    label: intraluminal vesicle
+    node_type: STRUCTURE
+  - node_id: multivesicular_body
+    label: multivesicular body
+    node_type: ORGANELLE
+    grounding: GO:0005771
+  edges:
+  - subject: late_endosome_limiting_membrane
+    predicate: bounds
+    object: late_endosome_lumen
+    description: The late endosome limiting membrane encloses the late endosome lumen.
+    evidence:
+    - reference: GO:0031904
+      notes: GO defines the endosome lumen as the volume enclosed by an endosome membrane.
+  - subject: escrt_i
+    predicate: sorts
+    object: ubiquitinated_membrane_cargo
+    description: ESCRT-I participates in sorting ubiquitinated membrane cargo into
+      the yeast MVB pathway.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(01)00434-2
+      notes: Katzmann, Babst and Emr 2001 showed ESCRT-I is needed for ubiquitin-dependent
+        MVB cargo sorting.
+  - subject: escrt_ii
+    predicate: recruits
+    object: escrt_iii
+    description: ESCRT-II recruits downstream ESCRT machinery needed for MVB cargo
+      sorting.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00219-8
+      notes: Babst et al. 2002 identified ESCRT-II as an endosome-associated complex
+        upstream of ESCRT-III.
+  - subject: escrt_iii
+    predicate: remodels
+    object: late_endosome_limiting_membrane
+    description: ESCRT-III acts on late endosomal membranes during intraluminal-vesicle
+      formation.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00220-4
+      notes: Babst et al. 2002 characterized yeast ESCRT-III as an endosome-associated
+        complex required for MVB sorting.
+    - reference: DOI:10.1016/j.devcel.2011.05.015
+      notes: Henne, Buchkovich and Emr 2011 reviewed ESCRT-III as the membrane-remodeling
+        complex in the endosomal ESCRT pathway.
+  - subject: late_endosome_limiting_membrane
+    predicate: buds inward to form
+    object: intraluminal_vesicle
+    description: During multivesicular-body formation, regions of the late endosomal
+      limiting membrane invaginate and pinch into the lumen as intraluminal vesicles.
+    evidence:
+    - reference: GO:0005771
+      notes: GO defines multivesicular bodies as late-endosome specializations with
+        internal vesicles formed from the limiting endosomal membrane.
+  - subject: intraluminal_vesicle
+    predicate: is contained in
+    object: multivesicular_body
+    description: A multivesicular body contains intraluminal vesicles formed from
+      its limiting membrane.
+    evidence:
+    - reference: GO:0005771
+      notes: GO defines the multivesicular body by the presence of internal vesicles.
+discussions:
+- discussion_id: late_endosome_mvb_boundary
+  prompt: Keep the late-endosome record broader than the multivesicular body.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - causal_graphs#yeast_late_endosome_mvb_sorting
+  rationale: GO:0005770 captures the broader late endosome class and GO:0005771 is
+    the multivesicular-body child that specifically contains intraluminal vesicles.
+    This parent record therefore uses MVB sorting as a supported late-endosome example
+    without asserting that intraluminal vesicles define every late endosome.
+  evidence:
+  - reference: GO:0005770
+    notes: GO term for the late-endosome parent class.
+  - reference: GO:0005771
+    notes: GO term for the multivesicular-body child class.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: resolve_late_endosome_specific_boundaries
+  prompt: Resolve exact source-neutral groundings for late endosome membrane and lumen
+    specializations.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#late_endosome_limiting_membrane
+  - causal_graphs#yeast_late_endosome_mvb_sorting
+  rationale: The first late-endosome record keeps the limiting membrane as a reviewed
+    label and the lumen as an ungrounded graph localization because the curated exact
+    GO terms cover generic endosome membrane and lumen boundaries, while the existing
+    MVB membrane and lumen terms are children of the late-endosome record's multivesicular-body
+    specialization.
+  evidence:
+  - reference: GO:0010008
+    notes: GO term for the generic endosome membrane.
+  - reference: GO:0031904
+    notes: GO term for the generic endosome lumen.
+  - reference: GO:0005771
+    notes: GO term for the multivesicular-body child class.
+  posed_by: codex
+  posed_date: '2026-09-16'
