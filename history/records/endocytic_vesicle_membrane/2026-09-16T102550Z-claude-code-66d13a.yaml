@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endocytic_vesicle_membrane.yaml
+  slug: endocytic_vesicle_membrane
+session:
+  id: 2026-09-16T102550Z-claude-code-66d13a
+  timestamp: '2026-09-16T10:25:50Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0030666 endocytic vesicle membrane record
+  details: >
+    Created an evidence-backed GO:0030666 endocytic vesicle membrane record with
+    GO:0030659 and GO:0098588 parentage, parthood in GO:0030139, a
+    reviewed-label-only lipid-bilayer component, Saccharomyces cerevisiae
+    endocytic-site evidence from Newpher et al. 2005 and Kaksonen et al. 2005, a
+    nonmechanistic membrane topology graph, and boundary discussions that leave
+    the generic lipid constituent ungrounded and keep clathrin coats on
+    clathrin-coated endocytic-vesicle membrane child records.
