@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/clathrin_coat_of_trans_golgi_network_vesicle.yaml
+  slug: clathrin_coat_of_trans_golgi_network_vesicle
+session:
+  id: 2026-09-16T072923Z-codex-a5afec
+  timestamp: '2026-09-16T07:29:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1075
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1074
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address clathrin coat of trans-Golgi network vesicle PR review
+  details: 'Resolved PR #1074 review issue #1075 by adding an evidence-backed topology edge
+    from TGN clathrin adaptor and cargo-selection factors to the clathrin coat of trans-Golgi
+    network vesicle, making the adaptor component membership explicit in the graph.'
