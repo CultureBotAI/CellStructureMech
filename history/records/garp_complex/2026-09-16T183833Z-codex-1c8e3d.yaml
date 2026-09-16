@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/garp_complex.yaml
+  slug: garp_complex
+session:
+  id: 2026-09-16T183833Z-codex-1c8e3d
+  timestamp: '2026-09-16T18:38:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the GARP complex record
+  details: Created a GO:0000938 GARP complex record with exact GO synonymy, vesicle-tethering
+    parentage, reviewed-label-only Vps51/Vps52/Vps53/Vps54 Saccharomyces cerevisiae subunits,
+    a retrograde endosome-to-Golgi transport function, GO/DOI evidence, a nonmechanistic TGN
+    tethering graph, and explicit component-grounding plus Tlg1/Ypt6 interactor-boundary curation
+    discussions.

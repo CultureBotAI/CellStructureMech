@@ -9948,14 +9948,14 @@
           "cosine_similarity": 0.73659425
         },
         {
+          "identifier": "GO:0000938",
+          "label": "GARP complex",
+          "cosine_similarity": 0.73615843
+        },
+        {
           "identifier": "GO:0000813",
           "label": "ESCRT I complex",
           "cosine_similarity": 0.73139023
-        },
-        {
-          "identifier": "GO:0000815",
-          "label": "ESCRT III complex",
-          "cosine_similarity": 0.7264477
         }
       ]
     },
@@ -10046,9 +10046,9 @@
           "cosine_similarity": 0.77438259
         },
         {
-          "identifier": "GO:0033263",
-          "label": "CORVET complex",
-          "cosine_similarity": 0.76123904
+          "identifier": "GO:0000938",
+          "label": "GARP complex",
+          "cosine_similarity": 0.76159216
         }
       ]
     },
@@ -10177,6 +10177,37 @@
       ]
     },
     {
+      "identifier": "GO:0000938",
+      "label": "GARP complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005794",
+          "label": "Golgi apparatus",
+          "cosine_similarity": 0.77007817
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.76159216
+        },
+        {
+          "identifier": "GO:0005802",
+          "label": "trans-Golgi network",
+          "cosine_similarity": 0.73799305
+        },
+        {
+          "identifier": "GO:0030904",
+          "label": "retromer complex",
+          "cosine_similarity": 0.73663795
+        },
+        {
+          "identifier": "GO:0033263",
+          "label": "CORVET complex",
+          "cosine_similarity": 0.73615843
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:holdfast",
       "label": "holdfast",
       "neighbors": [
@@ -10232,9 +10263,9 @@
           "cosine_similarity": 0.74561153
         },
         {
-          "identifier": "GO:0000814",
-          "label": "ESCRT II complex",
-          "cosine_similarity": 0.72237651
+          "identifier": "GO:0000938",
+          "label": "GARP complex",
+          "cosine_similarity": 0.72860141
         }
       ]
     },
@@ -10356,9 +10387,9 @@
           "cosine_similarity": 0.67069412
         },
         {
-          "identifier": "GO:0120120",
-          "label": "bilobe structure",
-          "cosine_similarity": 0.66214279
+          "identifier": "GO:0000938",
+          "label": "GARP complex",
+          "cosine_similarity": 0.66351958
         }
       ]
     },
@@ -10976,9 +11007,9 @@
           "cosine_similarity": 0.73949898
         },
         {
-          "identifier": "GO:0033263",
-          "label": "CORVET complex",
-          "cosine_similarity": 0.73659425
+          "identifier": "GO:0000938",
+          "label": "GARP complex",
+          "cosine_similarity": 0.73663795
         }
       ]
     },
