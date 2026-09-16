@@ -19,6 +19,12 @@ curation_history:
     endocytic-site scope, GO/DOI evidence, a nonmechanistic endocytic-vesicle membrane
     topology graph, and lipid-grounding plus clathrin-coat boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-16T10:37:30Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved issue #1087 by narrowing the Saccharomyces cerevisiae taxonomic-distribution
+    note to adaptor and clathrin recruitment at cortical endocytic sites.'
+  llm_assisted: true
 parent_structures:
 - GO:0030659
 - GO:0098588
@@ -43,8 +49,8 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Budding yeast has clathrin and adaptor proteins that are recruited to cortical
-    actin-based endocytic sites on endocytic vesicle membranes.
+  note: Budding yeast recruits clathrin and adaptor proteins to cortical actin-based
+    endocytic sites.
   reference: DOI:10.1016/j.devcel.2005.04.014
 canonical_examples:
 - taxon_id: NCBITaxon:4932

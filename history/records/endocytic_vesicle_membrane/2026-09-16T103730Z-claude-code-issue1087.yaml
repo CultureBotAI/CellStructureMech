@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endocytic_vesicle_membrane.yaml
+  slug: endocytic_vesicle_membrane
+session:
+  id: 2026-09-16T103730Z-claude-code-issue1087
+  timestamp: '2026-09-16T10:37:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: Narrowed the Saccharomyces endocytic-site note for issue 1087
+  details: >
+    Resolved issue #1087 by removing an over-specific "on endocytic vesicle
+    membranes" clause from the Saccharomyces cerevisiae taxonomic-distribution
+    note and keeping the DOI:10.1016/j.devcel.2005.04.014 evidence scoped to
+    adaptor and clathrin recruitment at cortical actin-based endocytic sites.
