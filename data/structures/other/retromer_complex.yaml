@@ -23,6 +23,12 @@ curation_history:
     yeast components, Saccharomyces scope, endosome-to-Golgi retrieval function, GO/DOI
     evidence, a nonmechanistic yeast retrieval graph, and a component-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-16T17:21:00Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Added Seaman 1998 evidence to the retromer subcomplex-to-parent graph
+    edges for PR #1112 / issue #1113.'
+  llm_assisted: true
 parent_structures:
 - GO:0098796
 has_part:
@@ -267,6 +273,9 @@ causal_graphs:
     evidence:
     - reference: GO:0030906
       notes: GO:0030906 denotes the cargo-selective retromer subcomplex.
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 described yeast retromer as assembling
+        from Vps35p/Vps29p/Vps26p and Vps5p/Vps17p subcomplexes.
   - subject: tubulation_retromer
     predicate: is part of
     object: retromer_complex
@@ -274,6 +283,9 @@ causal_graphs:
     evidence:
     - reference: GO:0030905
       notes: GO:0030905 denotes the tubulation retromer subcomplex.
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 described yeast retromer as assembling
+        from Vps35p/Vps29p/Vps26p and Vps5p/Vps17p subcomplexes.
   - subject: retromer_complex
     predicate: participates in
     object: endosome_to_golgi_retrograde_transport
