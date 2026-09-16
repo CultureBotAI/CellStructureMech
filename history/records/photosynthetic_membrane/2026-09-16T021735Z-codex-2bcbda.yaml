@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/photosynthetic_membrane.yaml
+  slug: photosynthetic_membrane
+session:
+  id: 2026-09-16T021735Z-codex-2bcbda
+  timestamp: '2026-09-16T02:17:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1051
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1052
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1050
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fixed photosynthetic membrane PR review issues
+  details: 'Addressed PR #1050 review issues #1051 and #1052 by adding a GO:0030076 light-harvesting
+    complex component, adding a broad photosynthetic quinol:cytochrome complex component,
+    updating electron-carrier scope, routing the membrane energy-conversion graph through
+    the antenna and cytochrome complex layers, and documenting subtype boundaries for membrane-associated
+    antenna systems.'

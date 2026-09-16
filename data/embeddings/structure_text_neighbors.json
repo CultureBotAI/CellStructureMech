@@ -2410,6 +2410,11 @@
           "cosine_similarity": 0.81084843
         },
         {
+          "identifier": "GO:0034357",
+          "label": "photosynthetic membrane",
+          "cosine_similarity": 0.80511987
+        },
+        {
           "identifier": "GO:0030094",
           "label": "plasma membrane-derived photosystem I",
           "cosine_similarity": 0.78863071
@@ -2418,11 +2423,6 @@
           "identifier": "GO:0009512",
           "label": "cytochrome b6f complex",
           "cosine_similarity": 0.77461309
-        },
-        {
-          "identifier": "GO:0034357",
-          "label": "photosynthetic membrane",
-          "cosine_similarity": 0.77438944
         }
       ]
     },
@@ -4115,14 +4115,14 @@
           "cosine_similarity": 0.86841547
         },
         {
-          "identifier": "GO:0034357",
-          "label": "photosynthetic membrane",
-          "cosine_similarity": 0.79846832
-        },
-        {
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
           "cosine_similarity": 0.79015844
+        },
+        {
+          "identifier": "GO:0034357",
+          "label": "photosynthetic membrane",
+          "cosine_similarity": 0.78987221
         },
         {
           "identifier": "GO:0009507",
@@ -5412,11 +5412,6 @@
           "cosine_similarity": 0.65404889
         },
         {
-          "identifier": "GO:0034357",
-          "label": "photosynthetic membrane",
-          "cosine_similarity": 0.65079546
-        },
-        {
           "identifier": "GO:0009579",
           "label": "thylakoid",
           "cosine_similarity": 0.64748687
@@ -5430,6 +5425,11 @@
           "identifier": "GO:0055035",
           "label": "plastid thylakoid membrane",
           "cosine_similarity": 0.64331731
+        },
+        {
+          "identifier": "GO:0034357",
+          "label": "photosynthetic membrane",
+          "cosine_similarity": 0.6396715
         }
       ]
     },
@@ -7548,27 +7548,27 @@
         {
           "identifier": "GO:0042651",
           "label": "thylakoid membrane",
-          "cosine_similarity": 0.88739402
+          "cosine_similarity": 0.88592878
         },
         {
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
-          "cosine_similarity": 0.86565589
+          "cosine_similarity": 0.86229508
         },
         {
           "identifier": "GO:0031676",
           "label": "plasma membrane-derived thylakoid membrane",
-          "cosine_similarity": 0.8428207
+          "cosine_similarity": 0.82086845
         },
         {
-          "identifier": "GO:0009535",
-          "label": "chloroplast thylakoid membrane",
-          "cosine_similarity": 0.81356855
+          "identifier": "GO:0030076",
+          "label": "light-harvesting complex",
+          "cosine_similarity": 0.80511987
         },
         {
-          "identifier": "GO:0055035",
-          "label": "plastid thylakoid membrane",
-          "cosine_similarity": 0.80231025
+          "identifier": "GO:0046858",
+          "label": "chlorosome",
+          "cosine_similarity": 0.78987221
         }
       ]
     },
@@ -7584,7 +7584,7 @@
         {
           "identifier": "GO:0034357",
           "label": "photosynthetic membrane",
-          "cosine_similarity": 0.86565589
+          "cosine_similarity": 0.86229508
         },
         {
           "identifier": "GO:0031676",
@@ -8271,7 +8271,7 @@
         {
           "identifier": "GO:0034357",
           "label": "photosynthetic membrane",
-          "cosine_similarity": 0.88739402
+          "cosine_similarity": 0.88592878
         },
         {
           "identifier": "GO:0042717",
