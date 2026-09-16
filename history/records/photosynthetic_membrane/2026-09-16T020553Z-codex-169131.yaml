@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/photosynthetic_membrane.yaml
+  slug: photosynthetic_membrane
+session:
+  id: 2026-09-16T020553Z-codex-169131
+  timestamp: '2026-09-16T02:05:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0034357 photosynthetic membrane record
+  details: Created the GO:0034357 photosynthetic membrane record from a clean main branch.
+    The record captures GO-backed membrane parentage, broad reaction-center, antenna-pigment,
+    electron-carrier and lipid components, cyanobacterial thylakoid and purple-bacterial chromatophore
+    examples, photosynthetic light-reaction functions, a nonmechanistic membrane energy-conversion
+    graph, and curation TODOs for reaction-center subclassing and ATP synthase boundaries.

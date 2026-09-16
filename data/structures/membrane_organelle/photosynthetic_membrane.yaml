@@ -1,0 +1,437 @@
+identifier: GO:0034357
+label: photosynthetic membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: A membrane enriched in complexes formed of reaction centers, accessory
+  pigments and electron carriers, in which photosynthetic reactions take place.
+definition_source: GO:0034357
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T02:03:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T02:05:03Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added membrane parentage, broad reaction-center, antenna-pigment, electron-carrier
+    and lipid components, cyanobacterial and purple-bacterial scope, photosynthetic
+    light-reaction functions and evidence, a nonmechanistic membrane energy-conversion
+    graph, and component-boundary TODOs.
+  llm_assisted: true
+- timestamp: '2026-09-16T02:17:12Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Addressed PR #1050 review issues #1051 and #1052 by adding light-harvesting
+    protein-pigment complexes, adding quinol-oxidizing cytochrome complexes, and routing
+    the broad energy-conversion graph through those missing antenna and electron-transfer
+    layers.'
+  llm_assisted: true
+parent_structures:
+- GO:0016020
+components:
+- component_id: photosynthetic_lipid_bilayer
+  label: photosynthetic lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the lipid matrix shared by cyanobacterial
+    thylakoids and purple-bacterial chromatophores was verified in this pass.
+  role: Membrane lipid matrix that embeds photosynthetic pigment-protein complexes
+    and separates aqueous phases so light-driven electron flow can build an electrochemical
+    proton gradient.
+  evidence:
+  - reference: GO:0034357
+    notes: GO defines photosynthetic membranes as membranes in which photosynthetic
+      reactions take place.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review the lipid-containing thylakoid membranes
+      of cyanobacteria, algae and plants.
+  - reference: DOI:10.1016/S0006-3495(02)75470-2
+    notes: Feniouk et al. 2002 assayed light-driven ATP synthesis across sealed Rhodobacter
+      capsulatus chromatophore vesicle membranes.
+- component_id: photosynthetic_reaction_center_complexes
+  label: photosynthetic reaction center complexes
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Reaction-center complexes span oxygenic photosystem I/II and anoxygenic
+    bacterial reaction-center antenna cores; no single exact GO cellular-component
+    term was curated for the whole set.
+  role: Pigment-protein complexes that carry the primary photochemistry of photosynthesis
+    by converting excitation energy into charge separation within the membrane.
+  evidence:
+  - reference: GO:0034357
+    notes: GO includes reaction centers in the definition of a photosynthetic membrane.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review photosystem I and photosystem II reaction
+      centers as major thylakoid membrane complexes.
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 imaged dimeric reaction-center LH1-PufX core complexes
+      in native purple-bacterial photosynthetic membranes.
+- component_id: accessory_antenna_pigments
+  label: accessory antenna pigments
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No single ChEBI term exactly covers the chlorophyll, bacteriochlorophyll,
+    carotenoid and biliprotein-bound chromophores that act as accessory pigments across
+    photosynthetic membranes.
+  role: Light-absorbing cofactors that broaden spectral capture and route excitation
+    energy toward reaction-center complexes.
+  evidence:
+  - reference: GO:0034357
+    notes: GO includes accessory pigments in the definition of a photosynthetic membrane.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review pigment-bearing photosystems and antennae
+      in thylakoid membranes.
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 resolved bacteriochlorophyll-rich LH2 antenna complexes
+      interconnecting purple-bacterial reaction-center arrays.
+  - reference: DOI:10.1146/annurev-biophys-062920-063657
+    notes: Sui 2021 reviewed phycobilin chromophores carried by cyanobacterial phycobilisome
+      light-harvesting complexes.
+- component_id: photosynthetic_light_harvesting_complexes
+  label: light-harvesting complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0030076
+  essentiality: UNKNOWN
+  role: Protein-pigment antenna complexes that bind accessory pigments and deliver
+    excitation energy to photosynthetic reaction centers.
+  evidence:
+  - reference: GO:0030076
+    notes: GO defines light-harvesting complexes as protein-pigment complexes that
+      harvest radiant energy and transfer it to reaction centers.
+  - reference: DOI:10.1146/annurev-biophys-062920-063657
+    notes: Sui 2021 reviewed membrane-associated cyanobacterial phycobilisome antennae.
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 imaged LH2 light-harvesting complexes around reaction-center
+      LH1-PufX cores in native purple-bacterial photosynthetic membranes.
+- component_id: photosynthetic_electron_carriers
+  label: photosynthetic membrane electron carriers
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This broad component covers lineage-specific quinone pools and
+    carrier cofactors that move electrons within photosynthetic membranes; the cytochrome
+    b6f/bc1 protein complexes they feed are modeled separately.
+  role: Membrane-associated quinone pools and carrier cofactors that shuttle redox
+    equivalents between photosynthetic reaction centers and quinol-oxidizing cytochrome
+    complexes.
+  evidence:
+  - reference: GO:0034357
+    notes: GO includes electron carriers in the definition of a photosynthetic membrane.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review plastoquinone-mediated electron transfer
+      between PSII and cytochrome b6f in thylakoid membranes.
+  - reference: DOI:10.1074/jbc.M412088200
+    notes: Comayras et al. 2005 modeled quinone traffic between reaction centers and
+      cytochrome bc1 in Rhodobacter sphaeroides chromatophore membranes.
+- component_id: photosynthetic_cytochrome_complexes
+  label: photosynthetic quinol:cytochrome complexes
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Cytochrome b6f and cytochrome bc1 are homologous quinol:cytochrome
+    oxidoreductases in different photosynthetic membranes, but no exact source-neutral
+    CURIE for their broad functional class was curated in this pass.
+  role: Quinol-oxidizing membrane protein complexes that couple photosynthetic electron
+    flow through quinone carriers to proton translocation and downstream carrier reduction.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 place cytochrome b6f between PSII, plastoquinone
+      and PSI in the thylakoid electron-transport chain.
+  - reference: DOI:10.1074/jbc.M412088200
+    notes: Comayras et al. 2005 analyzed quinone traffic between reaction centers
+      and cytochrome bc1 in Rhodobacter sphaeroides chromatophore membranes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteriota
+  presence: COMMON
+  note: Most cyanobacteria use thylakoid photosynthetic membranes for oxygenic light
+    reactions; Gloeobacter-like lineages are the major exception because they photosynthesize
+    at the plasma membrane.
+  reference: DOI:10.1146/annurev-cellbio-120823-022747
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: Photosynthetic membranes occur in phototrophic bacterial clades, including
+    cyanobacterial thylakoids and the chromatophore membranes of purple photosynthetic
+    bacteria.
+  reference: DOI:10.1038/nature02823
+canonical_examples:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  note: Cyanobacterial model whose thylakoid photosynthetic membranes have been used
+    to map native photosystem organization.
+  reference: DOI:10.1016/j.molp.2017.09.019
+- taxon_id: NCBITaxon:1063
+  taxon_label: Cereibacter sphaeroides
+  note: Purple photosynthetic bacterium whose native chromatophore photosynthetic
+    membrane architecture was resolved by atomic force microscopy.
+  reference: DOI:10.1038/nature02823
+functions:
+- function_id: photosynthetic_electron_transport
+  label: photosynthetic electron transport chain
+  grounding: GO:0009767
+  description: Photosynthetic membranes organize light-harvesting antennae, reaction-center
+    complexes, quinone carriers and quinol-oxidizing cytochrome complexes so illumination
+    drives membrane electron transport and proton-motive-force generation.
+  evidence:
+  - reference: GO:0034357
+    notes: GO defines photosynthetic membranes as the membrane site where photosynthetic
+      reactions take place.
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review the thylakoid membrane electron-transport
+      chain.
+  - reference: DOI:10.1074/jbc.M412088200
+    notes: Comayras et al. 2005 analyzed quinone-linked cyclic electron transport
+      in Rhodobacter chromatophore membranes.
+- function_id: photosynthesis_light_reaction
+  label: photosynthesis, light reaction
+  grounding: GO:0019684
+  description: The membrane-localized pigment and carrier network supports light capture,
+    charge separation and energy conversion during the light reactions of photosynthesis.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 review thylakoid membranes as the site of oxygenic
+      photosynthetic light reactions.
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 resolved the purple-bacterial chromatophore membrane
+      that contains reaction-center and light-harvesting complexes.
+evidence:
+- reference: GO:0034357
+  notes: Gene Ontology cellular-component term for a photosynthetic membrane.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component term for the broader membrane class.
+- reference: GO:0042651
+  notes: Gene Ontology cellular-component term for the thylakoid membrane child class.
+- reference: GO:0042717
+  notes: Gene Ontology cellular-component term for the plasma membrane-derived chromatophore
+    membrane child class.
+- reference: GO:0030076
+  notes: Gene Ontology cellular-component term for the light-harvesting protein-pigment
+    complexes associated with photosynthetic membranes.
+- reference: GO:0009767
+  notes: Gene Ontology biological-process term for the photosynthetic electron transport
+    chain.
+- reference: GO:0019684
+  notes: Gene Ontology biological-process term for photosynthesis, light reaction.
+- reference: DOI:10.1146/annurev-cellbio-120823-022747
+  notes: Perez-Boerema et al. 2024, Evolution of Thylakoid Structural Diversity, Annual
+    Review of Cell and Developmental Biology.
+- reference: DOI:10.1016/j.molp.2017.09.019
+  notes: Casella et al. 2017, Dissecting the Native Architecture and Dynamics of Cyanobacterial
+    Photosynthetic Machinery, Molecular Plant.
+- reference: DOI:10.1038/nature02823
+  notes: Bahatyrova et al. 2004, The native architecture of a photosynthetic membrane,
+    Nature.
+- reference: DOI:10.1146/annurev-biophys-062920-063657
+  notes: Sui 2021, Structure of Phycobilisomes, Annual Review of Biophysics.
+- reference: DOI:10.1074/jbc.M412088200
+  notes: Comayras, Jungas and Lavergne 2005, Functional Consequences of the Organization
+    of the Photosynthetic Apparatus in Rhodobacter sphaeroides, Journal of Biological
+    Chemistry.
+- reference: DOI:10.1016/S0006-3495(02)75470-2
+  notes: Feniouk et al. 2002, Chromatophore vesicles of Rhodobacter capsulatus contain
+    on average one F0F1-ATP synthase each, Biophysical Journal.
+causal_graphs:
+- graph_id: membrane_light_reaction_energy_conversion
+  title: Photosynthetic membranes couple light absorption to membrane electron flow
+  description: Light-harvesting complexes, reaction-center complexes, quinone carriers
+    and quinol-oxidizing cytochrome complexes are embedded in or associated with a
+    photosynthetic lipid bilayer, enabling light reactions that drive photosynthetic
+    electron transport and proton-gradient formation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the shared membrane-level light-reaction architecture
+    without modeling oxygenic PSII-to-PSI linear transport, purple-bacterial cyclic
+    RC-LH1/bc1 transport, phycobilisome rod and core organization, chlorosome baseplates,
+    soluble carriers or ATP synthase coupling in detail.
+  nodes:
+  - node_id: photosynthetic_membrane
+    label: photosynthetic membrane
+    node_type: STRUCTURE
+    grounding: GO:0034357
+  - node_id: light_harvesting_complexes
+    label: light-harvesting complex
+    node_type: STRUCTURE
+    component_ref: photosynthetic_light_harvesting_complexes
+    grounding: GO:0030076
+  - node_id: reaction_centers
+    label: photosynthetic reaction center complexes
+    node_type: GENE_OR_PROTEIN
+    component_ref: photosynthetic_reaction_center_complexes
+  - node_id: antenna_pigments
+    label: accessory antenna pigments
+    node_type: CHEMICAL
+    component_ref: accessory_antenna_pigments
+  - node_id: electron_carriers
+    label: photosynthetic membrane electron carriers
+    node_type: CHEMICAL
+    component_ref: photosynthetic_electron_carriers
+  - node_id: cytochrome_complexes
+    label: photosynthetic quinol:cytochrome complexes
+    node_type: GENE_OR_PROTEIN
+    component_ref: photosynthetic_cytochrome_complexes
+  - node_id: proton_gradient
+    label: transmembrane proton motive force
+    node_type: STATE
+  - node_id: electron_transport
+    label: photosynthetic electron transport chain
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009767
+  edges:
+  - subject: antenna_pigments
+    predicate: are bound by
+    object: light_harvesting_complexes
+    description: Accessory pigments are held in protein-pigment antenna complexes
+      that tune absorption and excitation transfer.
+    evidence:
+    - reference: GO:0030076
+      notes: GO defines light-harvesting complexes as protein-pigment complexes.
+    - reference: DOI:10.1146/annurev-biophys-062920-063657
+      notes: Sui 2021 reviewed phycobilin chromophores attached to phycobiliproteins
+        in phycobilisome antennae.
+  - subject: light_harvesting_complexes
+    predicate: capture excitation for
+    object: reaction_centers
+    description: Light-harvesting complexes broaden spectral capture and route excitation
+      energy toward reaction-center photochemistry.
+    evidence:
+    - reference: GO:0030076
+      notes: GO defines light-harvesting complexes by radiant-energy harvest and transfer
+        to reaction centers.
+    - reference: DOI:10.1038/nature02823
+      notes: Bahatyrova et al. 2004 imaged LH2 antennae around purple-bacterial RC-LH1-PufX
+        cores.
+  - subject: reaction_centers
+    predicate: reside in
+    object: photosynthetic_membrane
+    description: Reaction-center complexes are integral membrane constituents of photosynthetic
+      membranes.
+    evidence:
+    - reference: GO:0034357
+      notes: GO defines photosynthetic membranes by their enrichment in reaction centers.
+    - reference: DOI:10.1016/j.molp.2017.09.019
+      notes: Casella et al. 2017 mapped photosystems in native Synechocystis thylakoid
+        membranes.
+  - subject: reaction_centers
+    predicate: feed electrons to
+    object: electron_carriers
+    description: Light-excited reaction centers reduce membrane-associated quinone
+      or electron carriers that relay redox equivalents through the photosynthetic
+      chain.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review plastoquinone reduction by thylakoid
+        PSII.
+    - reference: DOI:10.1074/jbc.M412088200
+      notes: Comayras et al. 2005 analyzed quinone exchange between RC-LH1-PufX cores
+        and cytochrome bc1.
+  - subject: electron_carriers
+    predicate: feed electrons to
+    object: cytochrome_complexes
+    description: Reduced quinones diffuse within photosynthetic membranes to quinol-oxidizing
+      cytochrome complexes.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 place cytochrome b6f downstream of plastoquinol
+        in the thylakoid chain.
+    - reference: DOI:10.1074/jbc.M412088200
+      notes: Comayras et al. 2005 modeled quinone traffic to cytochrome bc1 in Rhodobacter
+        chromatophores.
+  - subject: cytochrome_complexes
+    predicate: contribute to
+    object: proton_gradient
+    description: Cytochrome complexes connect quinol oxidation to proton translocation
+      across the photosynthetic membrane.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 describe cytochrome b6f as a proton-gradient-generating
+        thylakoid complex.
+    - reference: DOI:10.1016/S0006-3495(02)75470-2
+      notes: Feniouk et al. 2002 measured proton-motive-force driven ATP synthesis
+        across chromatophore membranes.
+  - subject: photosynthetic_membrane
+    predicate: supports
+    object: electron_transport
+    description: The photosynthetic membrane organizes reaction centers, quinone carriers
+      and cytochrome complexes for membrane-localized photosynthetic electron transport.
+    evidence:
+    - reference: GO:0034357
+      notes: GO defines photosynthetic membranes as the membrane site of photosynthetic
+        reactions.
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 review thylakoid electron transport.
+discussions:
+- discussion_id: defer_reaction_center_subclasses
+  prompt: Resolve exact source-neutral CURIEs for oxygenic PSI/PSII and anoxygenic
+    reaction-center subclasses before splitting the broad reaction-center component.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#photosynthetic_reaction_center_complexes
+  rationale: GO:0034357 spans multiple membrane systems whose photochemical cores
+    are not all instances of the same lower-level complex term.
+  evidence:
+  - reference: DOI:10.1146/annurev-cellbio-120823-022747
+    notes: Perez-Boerema et al. 2024 cover oxygenic thylakoid PSI and PSII reaction
+      centers.
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 resolve purple-bacterial RC-LH1-PufX cores rather
+      than oxygenic photosystems.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: defer_antenna_subtype_boundaries
+  prompt: Resolve how far to project membrane parthood for LH2 rings, phycobilisomes
+    and chlorosome baseplates before adding lineage-specific antenna rows under photosynthetic
+    membranes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#photosynthetic_light_harvesting_complexes
+  rationale: Purple-bacterial LH2 complexes are integral chromatophore membrane complexes,
+    whereas cyanobacterial phycobilisomes and green-bacterial chlorosome antennae
+    can be peripherally attached to a photosynthetic membrane or baseplate rather
+    than embedded in the bilayer itself.
+  evidence:
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 imaged integral LH2 complexes in purple-bacterial
+      chromatophore membranes.
+  - reference: DOI:10.1146/annurev-biophys-062920-063657
+    notes: Sui 2021 reviewed phycobilisomes as large antennae associated with cyanobacterial
+      thylakoid membranes.
+  - reference: DOI:10.1038/ncomms12454
+    notes: Nielsen et al. 2016 resolved the CsmA chlorosome baseplate that couples
+      chlorosomes to membrane reaction centers.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: exclude_downstream_atp_synthases
+  prompt: Keep ATP synthases out of this broad photosynthetic-membrane definition
+    unless a child membrane record explicitly includes them as part of the same curated
+    membrane system.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#membrane_light_reaction_energy_conversion
+  rationale: Thylakoid and chromatophore membranes both maintain proton motive force
+    for ATP synthesis, but GO:0034357 is defined by reaction centers, accessory pigments
+    and electron carriers rather than by the downstream ATP synthase.
+  evidence:
+  - reference: GO:0034357
+    notes: GO defines a photosynthetic membrane without naming ATP synthase as a defining
+      component.
+  - reference: DOI:10.1016/S0006-3495(02)75470-2
+    notes: Feniouk et al. 2002 show that chromatophore vesicle membranes can drive
+      ATP synthase without establishing ATP synthase as part of the GO:0034357 parent
+      class.
+  posed_by: codex
+  posed_date: '2026-09-16'

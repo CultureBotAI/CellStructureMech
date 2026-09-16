@@ -2410,6 +2410,11 @@
           "cosine_similarity": 0.81084843
         },
         {
+          "identifier": "GO:0034357",
+          "label": "photosynthetic membrane",
+          "cosine_similarity": 0.80511987
+        },
+        {
           "identifier": "GO:0030094",
           "label": "plasma membrane-derived photosystem I",
           "cosine_similarity": 0.78863071
@@ -2418,11 +2423,6 @@
           "identifier": "GO:0009512",
           "label": "cytochrome b6f complex",
           "cosine_similarity": 0.77461309
-        },
-        {
-          "identifier": "GO:0030089",
-          "label": "phycobilisome",
-          "cosine_similarity": 0.77339867
         }
       ]
     },
@@ -4120,14 +4120,14 @@
           "cosine_similarity": 0.79015844
         },
         {
+          "identifier": "GO:0034357",
+          "label": "photosynthetic membrane",
+          "cosine_similarity": 0.78987221
+        },
+        {
           "identifier": "GO:0009507",
           "label": "chloroplast",
           "cosine_similarity": 0.78883846
-        },
-        {
-          "identifier": "GO:0009941",
-          "label": "chloroplast envelope",
-          "cosine_similarity": 0.7888217
         }
       ]
     },
@@ -5427,9 +5427,9 @@
           "cosine_similarity": 0.64331731
         },
         {
-          "identifier": "GO:0033115",
-          "label": "cyanelle thylakoid membrane",
-          "cosine_similarity": 0.6363962
+          "identifier": "GO:0034357",
+          "label": "photosynthetic membrane",
+          "cosine_similarity": 0.6396715
         }
       ]
     },
@@ -7542,6 +7542,37 @@
       ]
     },
     {
+      "identifier": "GO:0034357",
+      "label": "photosynthetic membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0042651",
+          "label": "thylakoid membrane",
+          "cosine_similarity": 0.88592878
+        },
+        {
+          "identifier": "GO:0042717",
+          "label": "plasma membrane-derived chromatophore membrane",
+          "cosine_similarity": 0.86229508
+        },
+        {
+          "identifier": "GO:0031676",
+          "label": "plasma membrane-derived thylakoid membrane",
+          "cosine_similarity": 0.82086845
+        },
+        {
+          "identifier": "GO:0030076",
+          "label": "light-harvesting complex",
+          "cosine_similarity": 0.80511987
+        },
+        {
+          "identifier": "GO:0046858",
+          "label": "chlorosome",
+          "cosine_similarity": 0.78987221
+        }
+      ]
+    },
+    {
       "identifier": "GO:0042717",
       "label": "plasma membrane-derived chromatophore membrane",
       "neighbors": [
@@ -7549,6 +7580,11 @@
           "identifier": "GO:0042651",
           "label": "thylakoid membrane",
           "cosine_similarity": 0.86654548
+        },
+        {
+          "identifier": "GO:0034357",
+          "label": "photosynthetic membrane",
+          "cosine_similarity": 0.86229508
         },
         {
           "identifier": "GO:0031676",
@@ -7564,11 +7600,6 @@
           "identifier": "GO:0070118",
           "label": "organellar chromatophore thylakoid membrane",
           "cosine_similarity": 0.81396005
-        },
-        {
-          "identifier": "GO:0070112",
-          "label": "organellar chromatophore membrane",
-          "cosine_similarity": 0.79540006
         }
       ]
     },
@@ -8238,6 +8269,11 @@
           "cosine_similarity": 0.91662952
         },
         {
+          "identifier": "GO:0034357",
+          "label": "photosynthetic membrane",
+          "cosine_similarity": 0.88592878
+        },
+        {
           "identifier": "GO:0042717",
           "label": "plasma membrane-derived chromatophore membrane",
           "cosine_similarity": 0.86654548
@@ -8246,11 +8282,6 @@
           "identifier": "GO:0055035",
           "label": "plastid thylakoid membrane",
           "cosine_similarity": 0.8346651
-        },
-        {
-          "identifier": "GO:0030096",
-          "label": "plasma membrane-derived thylakoid photosystem II",
-          "cosine_similarity": 0.82987189
         }
       ]
     },
