@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/escrt_ii_complex.yaml
+  slug: escrt_ii_complex
+session:
+  id: 2026-09-16T160822Z-codex-7ed5a6
+  timestamp: '2026-09-16T16:08:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ESCRT II complex structure record
+  details: Created a GO:0000814 ESCRT II complex structure record with ESCRT synonymy, GO
+    parentage, endosome membrane parthood, reviewed-label-only Vps22, Vps25 and Vps36 yeast
+    core subunits, Saccharomyces cerevisiae distribution and canonical evidence, multivesicular
+    body sorting pathway function, Babst 2002 and Henne 2011 evidence, a nonmechanistic ESCRT-III
+    recruitment graph, and discussions documenting unresolved subunit-family grounding plus
+    the Vps4 component-boundary decision.

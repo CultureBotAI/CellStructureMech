@@ -1,0 +1,296 @@
+identifier: GO:0000814
+label: ESCRT II complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An endosomal sorting complex required for transport and functions downstream
+  of ESCRT I complex. It consists of the class E vacuolar protein sorting (Vps) proteins
+  and is required for the membrane recruitment of ESCRT III complex and binds to ubiquitinated
+  cargoes.
+definition_source: GO:0000814
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T16:05:38Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T16:06:20Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ESCRT-II synonymy, GO parentage and endosome membrane parthood, reviewed-label-only
+    Vps22, Vps25 and Vps36 core subunits, Saccharomyces scope, an MVB sorting function,
+    GO/DOI evidence, a nonmechanistic yeast ESCRT-III recruitment graph, a subunit-grounding
+    TODO, and a resolved Vps4 boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-16T16:06:51Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Shortened ESCRT-II component role text to avoid repeating each subunit's
+    full label inside its role.
+  llm_assisted: true
+- timestamp: '2026-09-16T16:20:19Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1108 review issue #1109 by tracking the Hierro et al. 2004
+    ESCRT-II heterotetramer architecture as an open stoichiometry curation TODO with
+    structural evidence.'
+  llm_assisted: true
+parent_structures:
+- GO:0036452
+part_of:
+- GO:0010008
+synonyms:
+- synonym_text: ESCRT-II complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/S1534-5807(02)00219-8
+- synonym_text: endosomal sorting complex required for transport
+  synonym_type: BROAD_SYNONYM
+  source: GO:0000814
+components:
+- component_id: vps22_escrt_ii_subunit
+  label: Vps22 ESCRT-II subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS22
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps22 ESCRT-II
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this ESCRT-II
+    subunit class was curated in this pass.
+  role: Vps22 core constituent of the yeast ESCRT-II sorting complex.
+  evidence:
+  - reference: DOI:10.1016/S1534-5807(02)00219-8
+    notes: Babst, Katzmann, Snyder, Wendland and Emr 2002 characterized Vps22 as one
+      of three Saccharomyces cerevisiae ESCRT-II subunits in an approximately 155
+      kDa complex needed for MVB sorting.
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: Henne, Buchkovich and Emr 2011 reviewed Vps22, Vps25 and Vps36 as the budding-yeast
+      ESCRT-II subunits in the endosomal ESCRT pathway.
+- component_id: vps25_escrt_ii_subunit
+  label: Vps25 ESCRT-II subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS25
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps25 ESCRT-II
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this ESCRT-II
+    subunit class was curated in this pass.
+  role: Vps25 core constituent of the yeast ESCRT-II sorting complex.
+  evidence:
+  - reference: DOI:10.1016/S1534-5807(02)00219-8
+    notes: Babst, Katzmann, Snyder, Wendland and Emr 2002 characterized Vps25 as one
+      of three Saccharomyces cerevisiae ESCRT-II subunits in an approximately 155
+      kDa complex needed for MVB sorting.
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: Henne, Buchkovich and Emr 2011 reviewed Vps22, Vps25 and Vps36 as the budding-yeast
+      ESCRT-II subunits in the endosomal ESCRT pathway.
+- component_id: vps36_escrt_ii_subunit
+  label: Vps36 ESCRT-II subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS36
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps36 ESCRT-II
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this ESCRT-II
+    subunit class was curated in this pass.
+  role: Vps36 core constituent of the yeast ESCRT-II sorting complex.
+  evidence:
+  - reference: DOI:10.1016/S1534-5807(02)00219-8
+    notes: Babst, Katzmann, Snyder, Wendland and Emr 2002 characterized Vps36 as one
+      of three Saccharomyces cerevisiae ESCRT-II subunits in an approximately 155
+      kDa complex needed for MVB sorting.
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: Henne, Buchkovich and Emr 2011 reviewed Vps22, Vps25 and Vps36 as the budding-yeast
+      ESCRT-II subunits in the endosomal ESCRT pathway.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses Vps22, Vps25 and Vps36 as the ESCRT-II complex during endosomal
+    multivesicular-body sorting.
+  reference: DOI:10.1016/S1534-5807(02)00219-8
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Model in which Babst, Katzmann, Snyder, Wendland and Emr identified Vps22,
+    Vps25 and Vps36 as an endosome-associated ESCRT-II complex that functions upstream
+    of ESCRT-III in MVB sorting.
+  reference: DOI:10.1016/S1534-5807(02)00219-8
+functions:
+- function_id: multivesicular_body_sorting_pathway
+  label: multivesicular body sorting pathway
+  grounding: GO:0071985
+  description: ESCRT-II acts after ESCRT-I in the endosomal MVB pathway and promotes
+    downstream ESCRT-III recruitment during cargo sorting.
+  evidence:
+  - reference: GO:0071985
+    notes: GO:0071985 denotes the vesicle-mediated transport pathway that moves ubiquitylated
+      transmembrane proteins into multivesicular-body luminal vesicles.
+  - reference: DOI:10.1016/S1534-5807(02)00219-8
+    notes: Babst, Katzmann, Snyder, Wendland and Emr 2002 identified ESCRT-II as a
+      yeast endosome-associated complex downstream of ESCRT-I and upstream of ESCRT-III.
+evidence:
+- reference: GO:0000814
+  notes: Gene Ontology cellular-component term for ESCRT II complex.
+- reference: GO:0036452
+  notes: Gene Ontology cellular-component parent term for the ESCRT complex class.
+- reference: GO:0010008
+  notes: Gene Ontology cellular-component term for the endosome membrane.
+- reference: GO:0000815
+  notes: Gene Ontology cellular-component term for the downstream ESCRT III complex.
+- reference: GO:0071985
+  notes: Gene Ontology biological-process term for the multivesicular body sorting
+    pathway.
+- reference: DOI:10.1016/S1534-5807(02)00219-8
+  notes: Babst, Katzmann, Snyder, Wendland and Emr 2002, Endosome-Associated Complex,
+    ESCRT-II, Recruits Transport Machinery for Protein Sorting at the Multivesicular
+    Body, Developmental Cell.
+- reference: DOI:10.1016/j.devcel.2011.05.015
+  notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+- reference: DOI:10.1038/nature02914
+  notes: Hierro, Sun, Rusnak, Kim, Prag, Emr and Hurley 2004, Structure of the ESCRT-II
+    endosomal trafficking complex, Nature.
+causal_graphs:
+- graph_id: yeast_escrt_ii_mvb_escrt_iii_recruitment
+  title: ESCRT-II recruits ESCRT-III during yeast MVB sorting
+  description: In Saccharomyces cerevisiae, Vps22, Vps25 and Vps36 form ESCRT-II,
+    which transiently associates with endosomal membranes and initiates ESCRT-III
+    formation during MVB sorting.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents the Vps22/Vps25/Vps36 yeast ESCRT-II core and
+    its downstream ESCRT-III recruitment role without modeling ESCRT-I cargo handoff,
+    Vps4 recycling, or ESCRT-III polymerization.
+  nodes:
+  - node_id: vps22_escrt_ii_subunit
+    label: Vps22 ESCRT-II subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps22_escrt_ii_subunit
+  - node_id: vps25_escrt_ii_subunit
+    label: Vps25 ESCRT-II subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps25_escrt_ii_subunit
+  - node_id: vps36_escrt_ii_subunit
+    label: Vps36 ESCRT-II subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps36_escrt_ii_subunit
+  - node_id: escrt_ii_complex
+    label: ESCRT II complex
+    node_type: STRUCTURE
+    grounding: GO:0000814
+  - node_id: endosome_membrane
+    label: endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0010008
+  - node_id: escrt_iii_complex
+    label: ESCRT III complex
+    node_type: STRUCTURE
+    grounding: GO:0000815
+  - node_id: multivesicular_body_sorting_pathway
+    label: multivesicular body sorting pathway
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071985
+  edges:
+  - subject: vps22_escrt_ii_subunit
+    predicate: is part of
+    object: escrt_ii_complex
+    description: Vps22 is represented as a Saccharomyces cerevisiae ESCRT-II constituent.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00219-8
+      notes: Babst et al. 2002 characterized Vps22 as a yeast ESCRT-II subunit.
+  - subject: vps25_escrt_ii_subunit
+    predicate: is part of
+    object: escrt_ii_complex
+    description: Vps25 is represented as a Saccharomyces cerevisiae ESCRT-II constituent.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00219-8
+      notes: Babst et al. 2002 characterized Vps25 as a yeast ESCRT-II subunit.
+  - subject: vps36_escrt_ii_subunit
+    predicate: is part of
+    object: escrt_ii_complex
+    description: Vps36 is represented as a Saccharomyces cerevisiae ESCRT-II constituent.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00219-8
+      notes: Babst et al. 2002 characterized Vps36 as a yeast ESCRT-II subunit.
+  - subject: escrt_ii_complex
+    predicate: transiently associates with
+    object: endosome_membrane
+    description: Yeast ESCRT-II transiently associates with endosomal membranes during
+      MVB sorting.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00219-8
+      notes: Babst et al. 2002 characterized ESCRT-II as transiently associated with
+        endosomal membranes.
+  - subject: escrt_ii_complex
+    predicate: recruits
+    object: escrt_iii_complex
+    description: ESCRT-II initiates formation of downstream ESCRT-III on endosomal
+      membranes.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00219-8
+      notes: Babst et al. 2002 placed yeast ESCRT-II upstream of ESCRT-III formation
+        in the MVB pathway.
+  - subject: escrt_ii_complex
+    predicate: participates in
+    object: multivesicular_body_sorting_pathway
+    description: ESCRT-II functions between ESCRT-I and ESCRT-III during yeast MVB
+      sorting.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00219-8
+      notes: Babst et al. 2002 identified ESCRT-II as part of the ordered yeast ESCRT
+        cascade for MVB cargo sorting.
+discussions:
+- discussion_id: resolve_escrt_ii_family_groundings
+  prompt: Resolve exact source-neutral InterPro or Pfam groundings for the Vps22,
+    Vps25 and Vps36 ESCRT-II subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vps22_escrt_ii_subunit
+  - components#vps25_escrt_ii_subunit
+  - components#vps36_escrt_ii_subunit
+  rationale: This first ESCRT-II record records the named Saccharomyces cerevisiae
+    Vps22, Vps25 and Vps36 subunits without asserting paralogy boundaries or source-neutral
+    InterPro/Pfam families unless those identifiers are reviewed exactly.
+  evidence:
+  - reference: DOI:10.1016/S1534-5807(02)00219-8
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: vps4_not_escrt_ii_component
+  prompt: Do not model Vps4 as a constituent component of ESCRT-II.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#yeast_escrt_ii_mvb_escrt_iii_recruitment
+  rationale: Vps4 is the AAA ATPase that acts after ESCRT-III assembly, so it is out
+    of scope for the constituent ESCRT-II component list in this first record.
+  evidence:
+  - reference: DOI:10.1016/S1534-5807(02)00219-8
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: review_escrt_ii_heterotetramer_stoichiometry
+  prompt: Review and curate the one Vps22, two Vps25 and one Vps36 heterotetrameric
+    ESCRT-II stoichiometry.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vps22_escrt_ii_subunit
+  - components#vps25_escrt_ii_subunit
+  - components#vps36_escrt_ii_subunit
+  rationale: Hierro et al. 2004 resolved the yeast ESCRT-II structural architecture
+    as a Y-shaped heterotetramer. This first ESCRT-II record leaves per-component
+    stoichiometry blank until the exact copy numbers and family-level component boundaries
+    are reviewed together.
+  evidence:
+  - reference: DOI:10.1038/nature02914
+  - reference: DOI:10.1016/S1534-5807(02)00219-8
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+  posed_by: codex
+  posed_date: '2026-09-16'

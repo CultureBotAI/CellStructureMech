@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/escrt_ii_complex.yaml
+  slug: escrt_ii_complex
+session:
+  id: 2026-09-16T162055Z-codex-529c02
+  timestamp: '2026-09-16T16:20:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1109
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1108
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Track ESCRT-II heterotetramer stoichiometry review
+  details: 'Addressed adversarial review issue #1109 from PR #1108 by adding Hierro et al.
+    2004 structural evidence and an open discussion to review the one Vps22, two Vps25 and
+    one Vps36 ESCRT-II heterotetramer before asserting exact component stoichiometry.'
