@@ -9495,6 +9495,37 @@
       ]
     },
     {
+      "identifier": "GO:0030118",
+      "label": "clathrin coat",
+      "neighbors": [
+        {
+          "identifier": "GO:0030128",
+          "label": "clathrin coat of endocytic vesicle",
+          "cosine_similarity": 0.90855924
+        },
+        {
+          "identifier": "GO:0030125",
+          "label": "clathrin vesicle coat",
+          "cosine_similarity": 0.90471044
+        },
+        {
+          "identifier": "GO:0030130",
+          "label": "clathrin coat of trans-Golgi network vesicle",
+          "cosine_similarity": 0.90439726
+        },
+        {
+          "identifier": "GO:0030136",
+          "label": "clathrin-coated vesicle",
+          "cosine_similarity": 0.8238434
+        },
+        {
+          "identifier": "GO:0030665",
+          "label": "clathrin-coated vesicle membrane",
+          "cosine_similarity": 0.80994401
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030128",
       "label": "clathrin coat of endocytic vesicle",
       "neighbors": [
@@ -9509,6 +9540,11 @@
           "cosine_similarity": 0.92344619
         },
         {
+          "identifier": "GO:0030118",
+          "label": "clathrin coat",
+          "cosine_similarity": 0.90855924
+        },
+        {
           "identifier": "GO:0045334",
           "label": "clathrin-coated endocytic vesicle",
           "cosine_similarity": 0.88688646
@@ -9517,11 +9553,6 @@
           "identifier": "GO:0030136",
           "label": "clathrin-coated vesicle",
           "cosine_similarity": 0.87723536
-        },
-        {
-          "identifier": "GO:0030669",
-          "label": "clathrin-coated endocytic vesicle membrane",
-          "cosine_similarity": 0.87420943
         }
       ]
     },
@@ -9540,6 +9571,11 @@
           "cosine_similarity": 0.92344619
         },
         {
+          "identifier": "GO:0030118",
+          "label": "clathrin coat",
+          "cosine_similarity": 0.90439726
+        },
+        {
           "identifier": "GO:0030136",
           "label": "clathrin-coated vesicle",
           "cosine_similarity": 0.86686826
@@ -9548,11 +9584,6 @@
           "identifier": "GO:0030665",
           "label": "clathrin-coated vesicle membrane",
           "cosine_similarity": 0.84840714
-        },
-        {
-          "identifier": "GO:0030120",
-          "label": "vesicle coat",
-          "cosine_similarity": 0.84243607
         }
       ]
     },
@@ -9571,6 +9602,11 @@
           "cosine_similarity": 0.92571737
         },
         {
+          "identifier": "GO:0030118",
+          "label": "clathrin coat",
+          "cosine_similarity": 0.90471044
+        },
+        {
           "identifier": "GO:0045334",
           "label": "clathrin-coated endocytic vesicle",
           "cosine_similarity": 0.89626362
@@ -9579,11 +9615,6 @@
           "identifier": "GO:0030136",
           "label": "clathrin-coated vesicle",
           "cosine_similarity": 0.89260276
-        },
-        {
-          "identifier": "GO:0030669",
-          "label": "clathrin-coated endocytic vesicle membrane",
-          "cosine_similarity": 0.88311273
         }
       ]
     },

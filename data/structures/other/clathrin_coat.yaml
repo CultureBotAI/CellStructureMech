@@ -1,0 +1,234 @@
+identifier: GO:0030118
+label: clathrin coat
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A membrane coat found on coated pits and some coated vesicles; consists
+  of polymerized clathrin triskelions, each comprising three clathrin heavy chains
+  and three clathrin light chains, linked to the membrane via one of the AP adaptor
+  complexes.
+definition_source: GO:0030118
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T11:26:40Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T11:27:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added membrane-coat parentage, the GO exact synonym, reviewed-label-only
+    triskelion and AP-type adaptor components, Saccharomyces endocytic-site scope,
+    clathrin-dependent endocytosis, GO/DOI evidence, a nonmechanistic clathrin-coat
+    topology graph, and boundary plus grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0030117
+synonyms:
+- synonym_text: clathrin cage
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030118
+components:
+- component_id: clathrin_triskelion_scaffold
+  label: clathrin triskelion scaffold
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Polymerized three-legged clathrin heavy-chain and light-chain complexes that
+    build the clathrin coat lattice.
+  evidence:
+  - reference: GO:0030118
+    notes: GO:0030118 defines clathrin coats as membrane coats made from polymerized
+      clathrin triskelions.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The triskelion is represented at the source-neutral protein-complex
+    level; no exact Complex Portal, GO, InterPro, Pfam, or NCBIfam CURIE was curated
+    in this pass.
+- component_id: ap_type_clathrin_adaptors
+  label: AP-type clathrin adaptor complexes
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Adaptor complexes that connect polymerized clathrin to membrane surfaces and
+    cargo during clathrin-coat assembly.
+  evidence:
+  - reference: GO:0030118
+    notes: GO:0030118 frames clathrin coats as clathrin triskelions linked to membranes
+      through AP adaptor complexes.
+  - reference: GO:0030119
+    notes: GO:0030119 defines AP-type membrane coat adaptor complexes as membrane-coat
+      complexes that link clathrin or another coat-forming molecule to a membrane
+      surface.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-type clathrin adaptors span subtype-specific adaptor complexes
+    and related membrane/cargo linkers; this parent record keeps them broad until
+    exact family or complex boundaries are curated for each coat subtype.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has clathrin and adaptor proteins that are recruited to cortical
+    actin-based endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which fluorescently tagged clathrin and adaptor proteins
+    established the timing of clathrin recruitment to actin-based endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+functions:
+- function_id: clathrin_dependent_endocytosis
+  label: clathrin-dependent endocytosis
+  grounding: GO:0072583
+  description: Clathrin coats participate in clathrin-dependent endocytosis by organizing
+    coated pits and clathrin-coated endocytic vesicles.
+  evidence:
+  - reference: GO:0072583
+    notes: GO:0072583 denotes endocytosis through clathrin-coated pits that form clathrin-coated
+      endocytic vesicles.
+  - reference: DOI:10.1016/j.cell.2005.09.024
+    notes: Kaksonen, Toret and Drubin 2005 analyzed the modular clathrin- and actin-mediated
+      endocytic machinery in yeast.
+evidence:
+- reference: GO:0030118
+  notes: Gene Ontology cellular-component term for clathrin coats.
+- reference: GO:0030117
+  notes: Gene Ontology cellular-component parent term for membrane coats.
+- reference: GO:0030125
+  notes: Gene Ontology child term for clathrin coats found on vesicles.
+- reference: GO:0030132
+  notes: Gene Ontology child term for clathrin coats of coated pits.
+- reference: GO:0030119
+  notes: Gene Ontology cellular-component term for AP-type membrane coat adaptor complexes.
+- reference: GO:0072583
+  notes: Gene Ontology biological-process term for clathrin-dependent endocytosis.
+- reference: DOI:10.1016/j.devcel.2005.04.014
+  notes: Newpher et al. 2005, In Vivo Dynamics of Clathrin and Its Adaptor-Dependent
+    Recruitment to the Actin-Based Endocytic Machinery in Yeast, Developmental Cell.
+- reference: DOI:10.1016/j.cell.2005.09.024
+  notes: Kaksonen, Toret and Drubin 2005, A Modular Design for the Clathrin- and Actin-Mediated
+    Endocytosis Machinery, Cell.
+causal_graphs:
+- graph_id: clathrin_coat_topology
+  title: Clathrin triskelions and adaptors form a membrane coat
+  description: A clathrin coat is a clathrin triskelion lattice connected to a membrane
+    through AP-type adaptor complexes.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the parent-level clathrin/adaptor boundary without
+    asserting a complete AP subtype set, cargo-selection mechanism, vesicle-only context,
+    or coated-pit scission mechanism.
+  nodes:
+  - node_id: clathrin_triskelion_scaffold
+    label: clathrin triskelion scaffold
+    node_type: GENE_OR_PROTEIN
+    component_ref: clathrin_triskelion_scaffold
+  - node_id: ap_type_clathrin_adaptors
+    label: AP-type clathrin adaptor complexes
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap_type_clathrin_adaptors
+  - node_id: membrane_surface
+    label: membrane surface
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: clathrin_coat
+    label: clathrin coat
+    node_type: STRUCTURE
+    grounding: GO:0030118
+  - node_id: membrane_coat
+    label: membrane coat
+    node_type: STRUCTURE
+    grounding: GO:0030117
+  - node_id: clathrin_dependent_endocytosis
+    label: clathrin-dependent endocytosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0072583
+  edges:
+  - subject: clathrin_triskelion_scaffold
+    predicate: polymerizes into
+    object: clathrin_coat
+    description: Polymerized clathrin triskelions provide the protein scaffold of
+      a clathrin coat.
+    evidence:
+    - reference: GO:0030118
+      notes: GO:0030118 defines clathrin coats as membrane coats made from polymerized
+        clathrin triskelions.
+  - subject: ap_type_clathrin_adaptors
+    predicate: links scaffold to
+    object: membrane_surface
+    description: AP-type adaptor complexes link polymerized clathrin to the membrane
+      surface during clathrin-coat assembly.
+    evidence:
+    - reference: GO:0030118
+      notes: GO:0030118 defines clathrin coats as clathrin triskelions linked to membranes
+        through one of the AP adaptor complexes.
+    - reference: GO:0030119
+      notes: GO:0030119 defines AP-type membrane coat adaptor complexes.
+  - subject: ap_type_clathrin_adaptors
+    predicate: is part of
+    object: clathrin_coat
+    description: AP-type adaptor complexes are modeled as constituents that connect
+      the clathrin scaffold to membranes and cargo.
+    evidence:
+    - reference: GO:0030118
+      notes: GO:0030118 defines clathrin coats as triskelion lattices linked to the
+        membrane by AP adaptor complexes.
+  - subject: clathrin_coat
+    predicate: is a
+    object: membrane_coat
+    description: The clathrin coat is a clathrin-specific subtype of the broader membrane
+      coat class.
+    evidence:
+    - reference: GO:0030118
+      notes: GO places the clathrin coat directly under the membrane-coat parent.
+  - subject: clathrin_coat
+    predicate: participates in
+    object: clathrin_dependent_endocytosis
+    description: Clathrin coats organize coated pits and clathrin-coated vesicles
+      during clathrin-dependent endocytosis.
+    evidence:
+    - reference: GO:0072583
+      notes: GO:0072583 describes endocytosis through clathrin-coated pits that form
+        clathrin-coated endocytic vesicles.
+    - reference: DOI:10.1016/j.cell.2005.09.024
+      notes: Kaksonen, Toret and Drubin 2005 analyzed the yeast clathrin- and actin-mediated
+        endocytic machinery.
+discussions:
+- discussion_id: clathrin_coat_vesicle_coat_boundary
+  prompt: Keep clathrin coat broader than the clathrin vesicle coat.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0030118 is the clathrin-specific membrane-coat parent for clathrin
+    coats on coated pits and some coated vesicles. GO:0030125 is a narrower child
+    restricted to vesicles, so this record is a direct membrane-coat child rather
+    than a duplicate of the clathrin vesicle coat.
+  evidence:
+  - reference: GO:0030118
+    notes: GO term for the broader clathrin-coat class.
+  - reference: GO:0030125
+    notes: GO term for the clathrin vesicle coat child.
+  - reference: GO:0030132
+    notes: GO term for the clathrin coat of coated pit child.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: resolve_clathrin_coat_groundings
+  prompt: Resolve exact source-neutral groundings for clathrin triskelions and AP-type
+    clathrin adaptor complexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#clathrin_triskelion_scaffold
+  - components#ap_type_clathrin_adaptors
+  rationale: This first clathrin-coat parent record keeps the triskelion and AP adaptor
+    entries at a reviewed label level instead of forcing a subtype-specific Complex
+    Portal, InterPro, Pfam, or NCBIfam grounding onto the entire clathrin-coat class.
+  evidence:
+  - reference: GO:0030118
+    notes: GO term for the broad clathrin-coat class.
+  - reference: GO:0030119
+    notes: GO term for AP-type membrane coat adaptor complexes.
+  posed_by: codex
+  posed_date: '2026-09-16'
