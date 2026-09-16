@@ -30,6 +30,12 @@ curation_history:
   changes: Retargeted the lipid-droplet surface-protein boundary discussion to the
     surface_phospholipids component anchor.
   llm_assisted: true
+- timestamp: '2026-09-16T00:38:37Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1043 by adding an open TODO for oil-body, oleosome, spherosome,
+    and plastoglobule lipid-monolayer boundary curation.'
+  llm_assisted: true
 synonyms:
 - synonym_text: lipid storage body surface lipid monolayer
   synonym_type: EXACT_SYNONYM
@@ -177,5 +183,26 @@ discussions:
   - reference: PMID:29397034
     notes: Graef 2018 reviews distinct lipid and protein homeostasis roles on the
       budding-yeast lipid droplet.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: resolve_non_yeast_lipid_storage_body_monolayers
+  prompt: Resolve oil-body, oleosome, spherosome, and plastoglobule monolayer boundaries
+    before broadening this record beyond budding-yeast lipid droplets.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#lipid_droplet_outer_monolayer_topology
+  rationale: This first pass imports GO synonymy for the generic lipid-storage-body
+    outer monolayer but only curates Saccharomyces cerevisiae evidence. Plant/algal
+    oil bodies, oleosomes, spherosomes, and the plastoglobule half-unit membrane need
+    a separate boundary review before adding broader taxonomic rows or plastoglobule-specific
+    component claims.
+  evidence:
+  - reference: GO:0034430
+    notes: GO:0034430 lists oil-body, oleosome, and spherosome outer lipid monolayer
+      exact synonyms on the generic lipid-storage-body monolayer term.
+  - reference: DOI:10.1105/tpc.105.039859
+    notes: Austin et al. 2006 resolved plastoglobules as lipid bodies surrounded by
+      a half-unit membrane continuous with the thylakoid outer leaflet.
   posed_by: codex
   posed_date: '2026-09-16'
