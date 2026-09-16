@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dsl1_nzr_complex.yaml
+  slug: dsl1_nzr_complex
+session:
+  id: 2026-09-16T190253Z-codex-f953d8
+  timestamp: '2026-09-16T19:02:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the Dsl1/NZR complex record
+  details: Created a GO:0070939 Dsl1/NZR complex record with GO synonymy, vesicle-tethering
+    parentage, reviewed-label-only Dsl1/Tip20/Sec39-Dsl3 Saccharomyces cerevisiae subunits,
+    a Golgi-to-ER retrograde transport function, GO/DOI evidence, a nonmechanistic ER tethering
+    graph, and explicit component-grounding plus SNARE/COPI boundary curation discussions.

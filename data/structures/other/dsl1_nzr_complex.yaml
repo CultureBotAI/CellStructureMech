@@ -1,0 +1,265 @@
+identifier: GO:0070939
+label: Dsl1/NZR complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multisubunit tethering complex, i.e. a protein complex involved in mediating
+  the initial interaction between vesicles and the membranes with which they fuse,
+  that is involved in trafficking from the Golgi apparatus to the ER. In Saccharomyces
+  cerevisiae the Dsl1p complex contains Dsl1p, Tip20p, and Sec39p.
+definition_source: GO:0070939
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T19:01:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T19:02:11Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Dsl1/NZR synonymy, vesicle-tethering parentage, reviewed-label-only
+    Dsl1/Tip20/Sec39-Dsl3 yeast components, Saccharomyces scope, a Golgi-to-ER retrograde-transport
+    function, GO/DOI evidence, a nonmechanistic ER tethering graph, a subunit-grounding
+    TODO, and a resolved SNARE/COPI boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-16T19:12:05Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1120 issue #1121 by adding Kraynack et al. 2005 evidence
+    for the Sec39/Dsl3 alias and removing an unsupported alias from the taxonomic-distribution
+    summary.'
+  llm_assisted: true
+parent_structures:
+- GO:0099023
+synonyms:
+- synonym_text: Dsl1p complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0070939
+- synonym_text: NZR complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0070939
+- synonym_text: CATCHR family complex
+  synonym_type: BROAD_SYNONYM
+  source: GO:0070939
+components:
+- component_id: dsl1_dsl1_nzr_subunit
+  label: Dsl1 Dsl1/NZR subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DSL1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Dsl1 Dsl1/NZR subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this Dsl1/NZR subunit
+    class was curated in this pass.
+  role: Dsl1p-complex subunit of the Golgi-to-ER retrograde tether.
+  evidence:
+  - reference: DOI:10.1038/nsmb.1548
+    notes: Tripathi, Ren, Jeffrey and Hughson 2009 described the yeast Dsl1p vesicle
+      tethering complex as containing Dsl1p, Tip20p and Sec39p.
+- component_id: tip20_dsl1_nzr_subunit
+  label: Tip20 Dsl1/NZR subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TIP20
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Tip20 Dsl1/NZR
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this Dsl1/NZR
+    subunit class was curated in this pass.
+  role: Dsl1p-complex subunit that binds Dsl1p and ER SNARE proteins.
+  evidence:
+  - reference: DOI:10.1038/nsmb.1548
+    notes: Tripathi, Ren, Jeffrey and Hughson 2009 described the yeast Dsl1p vesicle
+      tethering complex as containing Dsl1p, Tip20p and Sec39p.
+- component_id: sec39_dsl3_dsl1_nzr_subunit
+  label: Sec39/Dsl3 Dsl1/NZR subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC39
+  - DSL3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Sec39/Dsl3 Dsl1/NZR
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this Dsl1/NZR
+    subunit class was curated in this pass.
+  role: Dsl1p-complex subunit in the yeast Golgi-to-ER retrograde tether.
+  evidence:
+  - reference: DOI:10.1038/nsmb.1548
+    notes: Tripathi, Ren, Jeffrey and Hughson 2009 described the yeast Dsl1p vesicle
+      tethering complex as containing Dsl1p, Tip20p and Sec39p.
+  - reference: DOI:10.1091/mbc.e05-01-0056
+    notes: Kraynack et al. 2005 established that budding-yeast Dsl3p is Sec39p and
+      associates with Dsl1p-complex subunits.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses a Dsl1p complex containing Dsl1p, Tip20p and Sec39p during
+    Golgi-to-endoplasmic-reticulum retrograde traffic.
+  reference: DOI:10.1038/nsmb.1548
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Dsl1p, Tip20p and Sec39p were structurally and
+    biochemically characterized as Dsl1p-complex subunits.
+  reference: DOI:10.1038/nsmb.1548
+functions:
+- function_id: retrograde_transport_golgi_to_er
+  label: retrograde vesicle-mediated transport, Golgi to endoplasmic reticulum
+  grounding: GO:0006890
+  description: Dsl1/NZR is an ER-resident tethering complex that mediates Golgi-to-endoplasmic-reticulum
+    retrograde vesicle traffic.
+  evidence:
+  - reference: GO:0006890
+    notes: GO:0006890 denotes vesicle-mediated retrograde transport from the Golgi
+      apparatus back to the endoplasmic reticulum.
+  - reference: DOI:10.1074/jbc.M110.215327
+    notes: Meiringer et al. 2011 studied the Dsl1 tethering complex during retrograde
+      vesicular transport from the Golgi to the ER.
+evidence:
+- reference: GO:0070939
+  notes: Gene Ontology cellular-component term for the Dsl1/NZR complex.
+- reference: GO:0099023
+  notes: Gene Ontology cellular-component parent term for vesicle tethering complexes.
+- reference: GO:0006890
+  notes: Gene Ontology biological-process term for Golgi-to-ER retrograde vesicle
+    transport.
+- reference: DOI:10.1038/nsmb.1548
+  notes: Tripathi, Ren, Jeffrey and Hughson 2009, Structural characterization of Tip20p
+    and Dsl1p, subunits of the Dsl1p vesicle tethering complex, Nature Structural
+    and Molecular Biology.
+- reference: DOI:10.1074/jbc.M110.215327
+  notes: Meiringer et al. 2011, The Dsl1 protein tethering complex is a resident endoplasmic
+    reticulum complex, which interacts with five soluble NSF (N-ethylmaleimide-sensitive
+    factor) attachment protein receptors (SNAREs), Journal of Biological Chemistry.
+- reference: DOI:10.1091/mbc.e05-01-0056
+  notes: Kraynack et al. 2005, Dsl1p, Tip20p, and the novel Dsl3(Sec39) protein are
+    required for the stability of the Q/t-SNARE complex at the endoplasmic reticulum
+    in yeast, Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: yeast_dsl1_er_tethering
+  title: Dsl1/NZR supports yeast Golgi-to-ER retrograde tethering
+  description: In Saccharomyces cerevisiae, Dsl1p, Tip20p and Sec39p form the Dsl1p
+    complex, an ER-resident tethering complex that supports COPI vesicle fusion with
+    the endoplasmic reticulum.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents yeast Dsl1p-complex subunit membership, ER localization
+    and Golgi-to-ER transport involvement without modeling individual SNARE contacts
+    or COPI coat-subunit contacts.
+  nodes:
+  - node_id: dsl1_dsl1_nzr_subunit
+    label: Dsl1 Dsl1/NZR subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dsl1_dsl1_nzr_subunit
+  - node_id: tip20_dsl1_nzr_subunit
+    label: Tip20 Dsl1/NZR subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tip20_dsl1_nzr_subunit
+  - node_id: sec39_dsl3_dsl1_nzr_subunit
+    label: Sec39/Dsl3 Dsl1/NZR subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec39_dsl3_dsl1_nzr_subunit
+  - node_id: dsl1_nzr_complex
+    label: Dsl1/NZR complex
+    node_type: STRUCTURE
+    grounding: GO:0070939
+  - node_id: endoplasmic_reticulum
+    label: endoplasmic reticulum
+    node_type: STRUCTURE
+    grounding: GO:0005783
+  - node_id: retrograde_transport_golgi_to_er
+    label: retrograde vesicle-mediated transport, Golgi to ER
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006890
+  edges:
+  - subject: dsl1_dsl1_nzr_subunit
+    predicate: is part of
+    object: dsl1_nzr_complex
+    description: Dsl1 Dsl1/NZR subunit is represented as a Saccharomyces cerevisiae
+      Dsl1/NZR subunit.
+    evidence:
+    - reference: DOI:10.1038/nsmb.1548
+      notes: Tripathi, Ren, Jeffrey and Hughson 2009 described the Dsl1p complex as
+        a three-subunit tether with Dsl1p, Tip20p and Sec39p.
+  - subject: tip20_dsl1_nzr_subunit
+    predicate: is part of
+    object: dsl1_nzr_complex
+    description: Tip20 Dsl1/NZR subunit is represented as a Saccharomyces cerevisiae
+      Dsl1/NZR subunit.
+    evidence:
+    - reference: DOI:10.1038/nsmb.1548
+      notes: Tripathi, Ren, Jeffrey and Hughson 2009 described the Dsl1p complex as
+        a three-subunit tether with Dsl1p, Tip20p and Sec39p.
+  - subject: sec39_dsl3_dsl1_nzr_subunit
+    predicate: is part of
+    object: dsl1_nzr_complex
+    description: Sec39/Dsl3 Dsl1/NZR subunit is represented as a Saccharomyces cerevisiae
+      Dsl1/NZR subunit.
+    evidence:
+    - reference: DOI:10.1038/nsmb.1548
+      notes: Tripathi, Ren, Jeffrey and Hughson 2009 described the Dsl1p complex as
+        a three-subunit tether with Dsl1p, Tip20p and Sec39p.
+    - reference: DOI:10.1091/mbc.e05-01-0056
+      notes: Kraynack et al. 2005 identified Dsl3p as Sec39p and found Dsl3p associated
+        with Dsl1p-complex subunits.
+  - subject: dsl1_nzr_complex
+    predicate: localizes to
+    object: endoplasmic_reticulum
+    description: The yeast Dsl1 protein tethering complex is ER-resident.
+    evidence:
+    - reference: DOI:10.1074/jbc.M110.215327
+      notes: Meiringer et al. 2011 reported that the Dsl1 complex subunits are resident
+        endoplasmic-reticulum proteins.
+  - subject: dsl1_nzr_complex
+    predicate: participates in
+    object: retrograde_transport_golgi_to_er
+    description: Dsl1/NZR is required for retrograde vesicular traffic from the Golgi
+      apparatus to the endoplasmic reticulum.
+    evidence:
+    - reference: DOI:10.1038/nsmb.1548
+      notes: Tripathi, Ren, Jeffrey and Hughson 2009 studied the Dsl1p complex as
+        an essential Golgi-to-ER trafficking tether.
+discussions:
+- discussion_id: resolve_dsl1_nzr_component_family_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, or Complex Portal groundings
+    for the three Dsl1/NZR subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dsl1_dsl1_nzr_subunit
+  - components#tip20_dsl1_nzr_subunit
+  - components#sec39_dsl3_dsl1_nzr_subunit
+  rationale: The yeast literature names Dsl1p, Tip20p and Sec39p/Dsl3p as Dsl1p complex
+    subunits, but this pass did not verify exact taxon-neutral family identifiers
+    for those subunit classes.
+  evidence:
+  - reference: DOI:10.1038/nsmb.1548
+    notes: Tripathi, Ren, Jeffrey and Hughson 2009 characterized the three named yeast
+      Dsl1p-complex subunits.
+  - reference: DOI:10.1091/mbc.e05-01-0056
+    notes: Kraynack et al. 2005 connected the Dsl3 and Sec39 names for the third Dsl1p-complex-associated
+      subunit.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: dsl1_nzr_snare_copi_boundary
+  prompt: Do not model ER SNAREs or COPI coat subunits as constituent Dsl1/NZR components.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#yeast_dsl1_er_tethering
+  rationale: The Dsl1p complex interacts with ER SNAREs and with the incoming vesicle
+    coat, but its constituent subunits are Dsl1p, Tip20p and Sec39p/Dsl3p.
+  evidence:
+  - reference: DOI:10.1074/jbc.M110.215327
+    notes: Meiringer et al. 2011 distinguished Dsl1, Dsl3 and Tip20 from the ER SNAREs
+      bound by the complex.
+  - reference: DOI:10.1091/mbc.e05-01-0056
+    notes: Kraynack et al. 2005 showed that Dsl3p is Sec39p, supporting the alternate
+      name used for the third constituent subunit.
+  posed_by: codex
+  posed_date: '2026-09-16'

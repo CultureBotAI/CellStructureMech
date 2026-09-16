@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dsl1_nzr_complex.yaml
+  slug: dsl1_nzr_complex
+session:
+  id: 2026-09-16T191229Z-codex-b915ed
+  timestamp: '2026-09-16T19:12:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1121
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1120
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Back Sec39/Dsl3 alias with primary evidence
+  details: 'Resolved PR #1120 review issue #1121 by adding DOI:10.1091/mbc.e05-01-0056 to
+    the Sec39/Dsl3 component, record-level evidence, the Sec39/Dsl3 graph edge, and both curation
+    discussions whose rationale names the Sec39/Dsl3 alias. Also removed the unsupported Dsl3
+    alias from the taxonomic-distribution summary so the Tripathi et al. citation only carries
+    the Sec39p wording it directly supports.'
