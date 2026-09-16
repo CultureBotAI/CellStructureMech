@@ -28,6 +28,13 @@ curation_history:
   changes: Shortened ESCRT-II component role text to avoid repeating each subunit's
     full label inside its role.
   llm_assisted: true
+- timestamp: '2026-09-16T16:20:19Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1108 review issue #1109 by tracking the Hierro et al. 2004
+    ESCRT-II heterotetramer architecture as an open stoichiometry curation TODO with
+    structural evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0036452
 part_of:
@@ -145,6 +152,9 @@ evidence:
     Body, Developmental Cell.
 - reference: DOI:10.1016/j.devcel.2011.05.015
   notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+- reference: DOI:10.1038/nature02914
+  notes: Hierro, Sun, Rusnak, Kim, Prag, Emr and Hurley 2004, Structure of the ESCRT-II
+    endosomal trafficking complex, Nature.
 causal_graphs:
 - graph_id: yeast_escrt_ii_mvb_escrt_iii_recruitment
   title: ESCRT-II recruits ESCRT-III during yeast MVB sorting
@@ -261,6 +271,25 @@ discussions:
   rationale: Vps4 is the AAA ATPase that acts after ESCRT-III assembly, so it is out
     of scope for the constituent ESCRT-II component list in this first record.
   evidence:
+  - reference: DOI:10.1016/S1534-5807(02)00219-8
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: review_escrt_ii_heterotetramer_stoichiometry
+  prompt: Review and curate the one Vps22, two Vps25 and one Vps36 heterotetrameric
+    ESCRT-II stoichiometry.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vps22_escrt_ii_subunit
+  - components#vps25_escrt_ii_subunit
+  - components#vps36_escrt_ii_subunit
+  rationale: Hierro et al. 2004 resolved the yeast ESCRT-II structural architecture
+    as a Y-shaped heterotetramer. This first ESCRT-II record leaves per-component
+    stoichiometry blank until the exact copy numbers and family-level component boundaries
+    are reviewed together.
+  evidence:
+  - reference: DOI:10.1038/nature02914
   - reference: DOI:10.1016/S1534-5807(02)00219-8
   - reference: DOI:10.1016/j.devcel.2011.05.015
   posed_by: codex
