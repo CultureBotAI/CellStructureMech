@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/microtubule.yaml
+  slug: microtubule
+session:
+  id: 2026-09-16T011455Z-codex-93d81e
+  timestamp: '2026-09-16T01:14:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1045
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1046
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1044
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - evidence
+  - discussion
+  summary: Fix microtubule review issues
+  details: 'Addressed PR #1044 review issues #1045 and #1046 by adding direct basal-body and
+    haptonema evidence to defer_microtubule_array_subtypes and replacing the BtubAB-only boundary
+    discussion with one that covers BtubAB, TubZ, PhuZ, CetZ and FtsZ-family division-ring
+    evidence.'

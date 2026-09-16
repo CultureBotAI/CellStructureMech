@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/microtubule.yaml
+  slug: microtubule
+session:
+  id: 2026-09-16T005810Z-codex-3dc791
+  timestamp: '2026-09-16T00:58:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - mechanism
+  - discussion
+  summary: Add microtubule record
+  details: Created a PROPOSED GO:0005874 microtubule record with GO synonymy, polymeric-cytoskeletal-fiber
+    parentage, microtubule-cytoskeleton parthood, a reviewed label-only alpha/beta tubulin
+    component, Chlamydomonas reinhardtii and Giardia intestinalis examples, GO/DOI evidence,
+    a nonmechanistic tubulin-polymer assembly graph, and curation discussions for alpha/beta
+    tubulin grounding, array-specific microtubule subtypes and BtubAB bacterial microtubule
+    boundaries.
