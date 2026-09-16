@@ -1,0 +1,188 @@
+identifier: GO:0030669
+label: clathrin-coated endocytic vesicle membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding a clathrin-coated endocytic vesicle.
+definition_source: GO:0030669
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T08:18:28Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T08:19:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parentage, clathrin-coated endocytic vesicle parthood, a reviewed-label-only
+    lipid-bilayer component, Saccharomyces endocytic-site scope, GO/DOI evidence,
+    a nonmechanistic endocytic vesicle membrane topology graph, and lipid-grounding
+    plus clathrin-coat boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-16T08:30:13Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1078 review issue #1079 by adding the endocytic clathrin
+    coat to record-level has_part.'
+  llm_assisted: true
+parent_structures:
+- GO:0030665
+- GO:0030666
+part_of:
+- GO:0045334
+components:
+- component_id: clathrin_coated_endocytic_vesicle_membrane_lipid_bilayer
+  label: clathrin-coated endocytic vesicle membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent of the clathrin-coated endocytic vesicle membrane
+    that surrounds a clathrin-coated endocytic vesicle.
+  evidence:
+  - reference: GO:0030669
+    notes: GO:0030669 identifies the membrane surrounding a clathrin-coated endocytic
+      vesicle.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030669 identifies the whole clathrin-coated endocytic vesicle
+    membrane, but no separate source-neutral CURIE was curated for the generic lipid
+    constituent of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has clathrin and adaptor proteins that are recruited to cortical
+    actin-based endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which clathrin and adaptor protein dynamics defined
+    the timing of clathrin coat assembly at cortical actin-based endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+evidence:
+- reference: GO:0030669
+  notes: Gene Ontology cellular-component term for the clathrin-coated endocytic vesicle
+    membrane.
+- reference: GO:0030665
+  notes: Gene Ontology cellular-component parent term for clathrin-coated vesicle
+    membranes.
+- reference: GO:0030666
+  notes: Gene Ontology cellular-component parent term for endocytic vesicle membranes.
+- reference: GO:0045334
+  notes: Gene Ontology cellular-component term for the whole clathrin-coated endocytic
+    vesicle bounded by GO:0030669.
+- reference: GO:0030128
+  notes: Gene Ontology cellular-component term for the clathrin coat part of GO:0030669.
+- reference: GO:0072583
+  notes: Gene Ontology biological-process term for clathrin-dependent endocytosis.
+- reference: DOI:10.1016/j.devcel.2005.04.014
+  notes: Newpher et al. 2005, In Vivo Dynamics of Clathrin and Its Adaptor-Dependent
+    Recruitment to the Actin-Based Endocytic Machinery in Yeast, Developmental Cell.
+- reference: DOI:10.1016/j.cell.2005.09.024
+  notes: Kaksonen, Toret and Drubin 2005, A Modular Design for the Clathrin- and Actin-Mediated
+    Endocytosis Machinery, Cell.
+causal_graphs:
+- graph_id: clathrin_coated_endocytic_vesicle_membrane_topology
+  title: Clathrin-coated endocytic vesicle membrane topology
+  description: The clathrin-coated endocytic vesicle membrane is the lipid-bilayer
+    boundary of a clathrin-coated endocytic vesicle carrying an endocytic clathrin
+    coat.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the endocytic vesicle membrane boundary without
+    asserting a complete clathrin-adaptor assembly mechanism, cargo cohort, or actin-driven
+    scission mechanism.
+  nodes:
+  - node_id: clathrin_coated_endocytic_vesicle_membrane
+    label: clathrin-coated endocytic vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030669
+    component_ref: clathrin_coated_endocytic_vesicle_membrane_lipid_bilayer
+  - node_id: clathrin_coat_of_endocytic_vesicle
+    label: clathrin coat of endocytic vesicle
+    node_type: STRUCTURE
+    grounding: GO:0030128
+  - node_id: clathrin_coated_endocytic_vesicle
+    label: clathrin-coated endocytic vesicle
+    node_type: ORGANELLE
+    grounding: GO:0045334
+  - node_id: clathrin_dependent_endocytosis
+    label: clathrin-dependent endocytosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0072583
+  edges:
+  - subject: clathrin_coat_of_endocytic_vesicle
+    predicate: is part of
+    object: clathrin_coated_endocytic_vesicle_membrane
+    description: The clathrin coat of an endocytic vesicle is part of the clathrin-coated
+      endocytic vesicle membrane.
+    evidence:
+    - reference: GO:0030128
+      notes: GO:0030128 is directly part of GO:0030669.
+  - subject: clathrin_coated_endocytic_vesicle_membrane
+    predicate: is part of
+    object: clathrin_coated_endocytic_vesicle
+    description: The clathrin-coated endocytic vesicle membrane is part of a clathrin-coated
+      endocytic vesicle.
+    evidence:
+    - reference: GO:0030669
+      notes: GO:0030669 identifies the membrane as part of GO:0045334.
+  - subject: clathrin_coated_endocytic_vesicle_membrane
+    predicate: bounds
+    object: clathrin_coated_endocytic_vesicle
+    description: The clathrin-coated endocytic vesicle membrane bounds a clathrin-coated
+      endocytic vesicle.
+    evidence:
+    - reference: GO:0030669
+      notes: GO:0030669 records a bounding-layer relationship to GO:0045334.
+    - reference: GO:0045334
+      notes: GO:0045334 identifies the bounded clathrin-coated endocytic vesicle.
+  - subject: clathrin_coated_endocytic_vesicle
+    predicate: participates in
+    object: clathrin_dependent_endocytosis
+    description: Clathrin-coated endocytic vesicles form during clathrin-dependent
+      endocytosis.
+    evidence:
+    - reference: GO:0072583
+      notes: GO:0072583 describes clathrin-dependent endocytosis via clathrin-coated
+        pits that form clathrin-coated endocytic vesicles.
+    - reference: DOI:10.1016/j.cell.2005.09.024
+      notes: Kaksonen, Toret and Drubin 2005 analyzed the yeast clathrin- and actin-mediated
+        endocytic machinery.
+discussions:
+- discussion_id: ground_clathrin_coated_endocytic_vesicle_membrane_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    clathrin-coated endocytic vesicle membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#clathrin_coated_endocytic_vesicle_membrane_lipid_bilayer
+  rationale: GO:0030669 exactly grounds the clathrin-coated endocytic vesicle membrane,
+    but the membrane lipid-bilayer constituent is intentionally left as reviewed-label-only
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  evidence:
+  - reference: GO:0030669
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: exclude_endocytic_clathrin_coat_from_membrane_components
+  prompt: Keep the endocytic clathrin coat as a vesicle membrane part rather than
+    a lipid-bilayer membrane component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#clathrin_coated_endocytic_vesicle_membrane_topology
+  rationale: GO:0030128 denotes the clathrin protein coat on the endocytic vesicle,
+    whereas GO:0030669 denotes the lipid bilayer surrounding that vesicle.
+  resolution_note: Represented only a reviewed-label-only lipid bilayer as a direct
+    membrane component and left the endocytic clathrin coat to the GO:0030128 record.
+  evidence:
+  - reference: GO:0030669
+    notes: GO:0030669 identifies the membrane rather than the protein coat.
+  - reference: GO:0030128
+    notes: GO:0030128 identifies the clathrin coat of an endocytic vesicle.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+has_part:
+- GO:0030128
