@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nuclear_lumen.yaml
+  slug: nuclear_lumen
+session:
+  id: 2026-09-16T000623Z-codex-14a112
+  timestamp: '2026-09-16T00:06:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1041
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1040
+events:
+- type: EDIT
+  outcome: changed
+  summary: Track remaining nuclear-lumen substructures
+  details: 'Resolved PR #1040 issue #1041 by adding an open curation TODO for nuclear-lumen
+    bodies and substructures beyond the seeded nuclear chromosome and nucleolus.'

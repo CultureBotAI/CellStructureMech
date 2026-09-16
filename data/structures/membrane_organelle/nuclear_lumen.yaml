@@ -24,6 +24,12 @@ curation_history:
   changes: Reworded the resolved nucleoplasm discussion to avoid an unsupported claim
     that nucleoplasm is narrower than GO:0031981.
   llm_assisted: true
+- timestamp: '2026-09-16T00:05:51Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1041 by adding an open TODO for remaining nuclear-lumen substructures
+    beyond the seeded nuclear chromosome and nucleolus.'
+  llm_assisted: true
 parent_structures:
 - GO:0070013
 part_of:
@@ -171,3 +177,20 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-15'
   resolved_date: '2026-09-15'
+- discussion_id: resolve_remaining_nuclear_lumen_substructures
+  prompt: Resolve remaining nuclear-lumen bodies and substructures before expanding
+    the component list.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#nuclear_lumen_topology
+  rationale: This first nuclear-lumen record grounds the nuclear chromosome and nucleolus
+    because existing CellStructureMech records already curate their GO boundaries,
+    but GO:0031981 can contain additional nuclear bodies and subregions whose exact
+    GO and literature boundaries need separate review.
+  evidence:
+  - reference: GO:0031981
+    notes: GO:0031981 covers the full volume enclosed by the nuclear inner membrane,
+      not only the chromosome and nucleolus substructures seeded here.
+  posed_by: codex
+  posed_date: '2026-09-15'
