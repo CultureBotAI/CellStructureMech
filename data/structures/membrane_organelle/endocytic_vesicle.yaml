@@ -21,6 +21,12 @@ curation_history:
     a nonmechanistic membrane/lumen topology graph, and a resolved coats-and-cargo
     boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-16T10:05:20Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved issue #1085 by adding GO:0045334 and GO:0030128 to the top-level
+    evidence list used by the clathrin-specific boundary discussion.'
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 has_part:
@@ -61,6 +67,12 @@ evidence:
   notes: Gene Ontology cellular-component term for the endocytic vesicle membrane.
 - reference: GO:0071682
   notes: Gene Ontology cellular-component term for the endocytic vesicle lumen.
+- reference: GO:0045334
+  notes: Gene Ontology cellular-component child term for clathrin-coated endocytic
+    vesicles.
+- reference: GO:0030128
+  notes: Gene Ontology cellular-component term for the clathrin coat of an endocytic
+    vesicle.
 - reference: GO:0006897
   notes: Gene Ontology biological-process term for endocytosis.
 - reference: DOI:10.1016/j.devcel.2005.04.014
