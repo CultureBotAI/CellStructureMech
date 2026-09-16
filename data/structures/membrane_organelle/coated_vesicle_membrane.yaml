@@ -1,0 +1,190 @@
+identifier: GO:0030662
+label: coated vesicle membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding a coated vesicle.
+definition_source: GO:0030662
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T03:41:02Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T03:41:51Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic-vesicle membrane parentage, coated-vesicle parthood,
+    a reviewed-label-only lipid-bilayer component, Saccharomyces scope, GO/DOI evidence,
+    a nonmechanistic membrane topology graph, and lipid grounding plus coat-boundary
+    discussions.
+  llm_assisted: true
+- timestamp: '2026-09-16T03:52:50Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1059 review issue #1060 by mirroring GO:0030120 vesicle coat
+    parthood as has_part and as an evidence-backed topology edge while keeping coat
+    proteins out of the lipid-bilayer component list.'
+  llm_assisted: true
+- timestamp: '2026-09-16T03:53:19Z'
+  curator: codex
+  action: NORMALIZED_REVIEW_FIX_YAML
+  changes: 'Moved has_part next to part_of after the PR #1059 review fix so mereology
+    fields emit in the same order as nearby records.'
+  llm_assisted: true
+parent_structures:
+- GO:0030659
+part_of:
+- GO:0030135
+has_part:
+- GO:0030120
+components:
+- component_id: coated_vesicle_membrane_lipid_bilayer
+  label: coated vesicle membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent of the coated vesicle membrane that surrounds a
+    coated vesicle.
+  evidence:
+  - reference: GO:0030662
+    notes: GO:0030662 defines the coated vesicle membrane as the lipid bilayer surrounding
+      a coated vesicle.
+  - reference: GO:0030665
+    notes: GO:0030665 identifies the clathrin-coated vesicle membrane child of the
+      coated vesicle membrane.
+  - reference: GO:0030663
+    notes: GO:0030663 identifies the COPI-coated vesicle membrane child of the coated
+      vesicle membrane.
+  - reference: GO:0012507
+    notes: GO:0012507 identifies the ER-to-Golgi transport vesicle membrane child
+      carried by COPII-coated vesicles.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030662 identifies the whole coated vesicle membrane, but no
+    separate source-neutral CURIE was curated for the generic lipid constituent of
+    that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms COPII-coated ER-to-Golgi transport vesicles from endoplasmic-reticulum
+    membranes using Sar1p, Sec23p, Sec24p, Sec13p, and Sec31p coat machinery.
+  reference: DOI:10.1016/0092-8674(94)90138-4
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast COPII reconstitution model in which Sec proteins drive coated
+    vesicle formation on chemically defined liposomes.
+  reference: DOI:10.1016/S0092-8674(00)81577-9
+evidence:
+- reference: GO:0030662
+  notes: Gene Ontology cellular-component term for the coated vesicle membrane.
+- reference: GO:0030659
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle membranes.
+- reference: GO:0030135
+  notes: Gene Ontology cellular-component term for the containing coated vesicle.
+- reference: GO:0030665
+  notes: Gene Ontology cellular-component child term for clathrin-coated vesicle membranes.
+- reference: GO:0030663
+  notes: Gene Ontology cellular-component child term for COPI-coated vesicle membranes.
+- reference: GO:0012507
+  notes: Gene Ontology cellular-component child term for ER-to-Golgi transport vesicle
+    membranes.
+- reference: GO:0030120
+  notes: Gene Ontology cellular-component term for the protein vesicle coat.
+- reference: DOI:10.1016/0092-8674(94)90138-4
+  notes: 'Barlowe et al. 1994, COPII: A membrane coat formed by Sec proteins that
+    drive vesicle budding from the endoplasmic reticulum, Cell.'
+- reference: DOI:10.1016/S0092-8674(00)81577-9
+  notes: Matsuoka et al. 1998, COPII-Coated Vesicle Formation Reconstituted with Purified
+    Coat Proteins and Chemically Defined Liposomes, Cell.
+causal_graphs:
+- graph_id: coated_vesicle_membrane_topology
+  title: Coated vesicle membrane topology
+  description: The coated vesicle membrane is the lipid-bilayer boundary of a coated
+    vesicle.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the broad coated-vesicle membrane parent without
+    asserting a clathrin, COPI, or COPII subtype, a donor membrane, or a coat assembly
+    mechanism.
+  nodes:
+  - node_id: coated_vesicle_membrane
+    label: coated vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030662
+    component_ref: coated_vesicle_membrane_lipid_bilayer
+  - node_id: coated_vesicle
+    label: coated vesicle
+    node_type: ORGANELLE
+    grounding: GO:0030135
+  - node_id: vesicle_coat
+    label: vesicle coat
+    node_type: STRUCTURE
+    grounding: GO:0030120
+  edges:
+  - subject: coated_vesicle_membrane
+    predicate: is part of
+    object: coated_vesicle
+    description: The coated vesicle membrane is the lipid-bilayer part of a coated
+      vesicle.
+    evidence:
+    - reference: GO:0030662
+      notes: GO:0030662 identifies the coated vesicle membrane.
+    - reference: GO:0030135
+      notes: GO:0030135 identifies the containing coated vesicle.
+  - subject: vesicle_coat
+    predicate: is part of
+    object: coated_vesicle_membrane
+    description: A vesicle coat is part of the coated vesicle membrane.
+    evidence:
+    - reference: GO:0030120
+      notes: GO:0030120 records vesicle coat as part of the coated vesicle membrane.
+    - reference: GO:0030662
+      notes: GO:0030662 identifies the coated vesicle membrane.
+  - subject: coated_vesicle_membrane
+    predicate: bounds
+    object: coated_vesicle
+    description: The coated vesicle membrane surrounds a coated vesicle.
+    evidence:
+    - reference: GO:0030662
+      notes: GO:0030662 defines the coated vesicle membrane as the lipid bilayer surrounding
+        a coated vesicle.
+discussions:
+- discussion_id: ground_coated_vesicle_membrane_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    coated vesicle membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#coated_vesicle_membrane_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0030662, but the coated vesicle
+    membrane lipid-bilayer constituent is intentionally left as reviewed-label-only
+    until an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: exclude_vesicle_coat_from_membrane_components
+  prompt: Keep the vesicle coat as a whole-vesicle part rather than as a lipid-bilayer
+    membrane component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#coated_vesicle_membrane_topology
+  rationale: GO:0030662 denotes the lipid bilayer surrounding a coated vesicle, whereas
+    GO:0030120 denotes the protein coat on the whole coated vesicle.
+  resolution_note: Represented only a reviewed-label-only lipid bilayer as a direct
+    molecular membrane component, mirrored GO:0030120 as a structural has_part of
+    the coated vesicle membrane, and left clathrin, COPI, and COPII proteins on subtype
+    coat or whole coated-vesicle records.
+  evidence:
+  - reference: GO:0030662
+    notes: GO:0030662 identifies the coated vesicle membrane rather than the protein
+      coat.
+  - reference: GO:0030120
+    notes: GO:0030120 identifies the vesicle coat found on a coated vesicle.
+  - reference: GO:0030135
+    notes: GO:0030135 identifies the whole coated vesicle.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'

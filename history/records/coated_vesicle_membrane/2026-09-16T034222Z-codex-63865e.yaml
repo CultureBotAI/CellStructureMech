@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/coated_vesicle_membrane.yaml
+  slug: coated_vesicle_membrane
+session:
+  id: 2026-09-16T034222Z-codex-63865e
+  timestamp: '2026-09-16T03:42:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - part_of
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added coated vesicle membrane record
+  details: Created the GO:0030662 coated vesicle membrane record with GO cytoplasmic-vesicle
+    membrane parentage, coated-vesicle parthood, a reviewed-label-only lipid-bilayer component,
+    Saccharomyces cerevisiae scope, GO and DOI evidence, a nonmechanistic coated vesicle membrane
+    topology graph, and lipid-grounding plus vesicle-coat boundary discussions.
