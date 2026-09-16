@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/trans_golgi_network_transport_vesicle_membrane.yaml
+  slug: trans_golgi_network_transport_vesicle_membrane
+session:
+  id: 2026-09-16T064653Z-codex-f3dc76
+  timestamp: '2026-09-16T06:46:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - part_of
+  - has_part
+  - synonyms
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add trans-Golgi network transport vesicle membrane record
+  details: Created the GO:0012510 trans-Golgi network transport vesicle membrane record with
+    transport-vesicle, Golgi-associated, and clathrin-coated vesicle membrane parentage, TGN
+    transport-vesicle parthood, clathrin coat has_part, GO exact synonyms, a reviewed-label-only
+    lipid-bilayer component, Saccharomyces cerevisiae TGN/endosome traffic scope, GO and DOI
+    evidence, a nonmechanistic topology graph, and lipid-grounding plus clathrin-coat boundary
+    discussions.
