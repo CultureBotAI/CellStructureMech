@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/golgi_associated_vesicle.yaml
+  slug: golgi_associated_vesicle
+session:
+  id: 2026-09-16T053640Z-codex-4d79e2
+  timestamp: '2026-09-16T05:36:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - has_part
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Golgi-associated vesicle record
+  details: Created the GO:0005798 Golgi-associated vesicle record with cytoplasmic-vesicle
+    parentage, Golgi-associated vesicle membrane parthood, a GO-grounded vesicle-membrane
+    component, Saccharomyces cerevisiae COPI scope, Golgi-associated vesicle transport evidence,
+    a nonmechanistic Golgi/COPI topology graph, and a resolved boundary discussion that keeps
+    COPI coat subunits on child coat records.
