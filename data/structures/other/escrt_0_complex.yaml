@@ -22,6 +22,12 @@ curation_history:
     evidence, a nonmechanistic yeast cargo recognition graph, a subunit-grounding
     TODO, and a resolved Vps1 boundary decision.
   llm_assisted: true
+- timestamp: '2026-09-16T16:53:45Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Constrained the Katzmann 2003 ESCRT-I recruitment edge to Vps27 instead
+    of the whole ESCRT-0 complex for PR #1110 / issue #1111.'
+  llm_assisted: true
 parent_structures:
 - GO:0036452
 part_of:
@@ -122,13 +128,13 @@ causal_graphs:
 - graph_id: yeast_escrt_0_mvb_cargo_recognition
   title: ESCRT-0 recognizes ubiquitinated yeast MVB cargo
   description: In Saccharomyces cerevisiae, Vps27 and Hse1 form ESCRT-0, which binds
-    ubiquitinated cargo and works upstream of ESCRT-I in the endosomal MVB sorting
+    ubiquitinated cargo, and Vps27 recruits ESCRT-I during the endosomal MVB sorting
     cascade.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph represents the yeast Vps27/Hse1 ESCRT-0 complex and its ESCRT-I
-    recruitment role without modeling cargo ubiquitin valency, ESCRT-I/II handoff
-    or later ESCRT-III membrane remodeling.
+  scope_notes: The graph represents the yeast Vps27/Hse1 ESCRT-0 complex, with ESCRT-I
+    recruitment kept at Vps27 granularity, without modeling cargo ubiquitin valency,
+    ESCRT-I/II handoff or later ESCRT-III membrane remodeling.
   nodes:
   - node_id: vps27_escrt_0_subunit
     label: Vps27 ESCRT-0 subunit
@@ -176,11 +182,10 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/ncb815
       notes: Bilodeau et al. 2002 showed that the Vps27p-Hse1p complex binds ubiquitin.
-  - subject: escrt_0_complex
+  - subject: vps27_escrt_0_subunit
     predicate: recruits
     object: escrt_i_complex
-    description: The Vps27-bearing ESCRT-0 complex recruits ESCRT-I during yeast MVB
-      sorting.
+    description: Vps27 recruits ESCRT-I during yeast MVB sorting.
     evidence:
     - reference: DOI:10.1083/jcb.200302136
       notes: Katzmann, Stefan, Babst and Emr 2003 found that Vps27 recruits ESCRT-I
