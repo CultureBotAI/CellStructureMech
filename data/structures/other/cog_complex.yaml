@@ -28,6 +28,13 @@ curation_history:
     and promoted the Zolov and Lupashin COPI/SNARE boundary citation to record-level
     evidence.
   llm_assisted: true
+- timestamp: '2026-09-16T19:38:30Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1122 issue #1123 by adding Ha et al. 2016 yeast evidence
+    to the Cog1-Cog8 graph parthood edges and removing the mammalian-backed COG-to-Golgi
+    localization edge from the yeast graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0099023
 synonyms:
@@ -289,10 +296,6 @@ causal_graphs:
     label: COG complex
     node_type: STRUCTURE
     grounding: GO:0017119
-  - node_id: golgi_apparatus
-    label: Golgi apparatus
-    node_type: STRUCTURE
-    grounding: GO:0005794
   - node_id: golgi_vesicle_transport
     label: Golgi vesicle transport
     node_type: BIOLOGICAL_PROCESS
@@ -305,6 +308,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1083/jcb.200202016
       notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+    - reference: DOI:10.1038/nsmb.3263
+      notes: Ha et al. 2016 purified and imaged the complete hetero-octameric COG
+        complex from Saccharomyces cerevisiae.
   - subject: cog2_cog_subunit
     predicate: is part of
     object: cog_complex
@@ -312,6 +318,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1083/jcb.200202016
       notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+    - reference: DOI:10.1038/nsmb.3263
+      notes: Ha et al. 2016 purified and imaged the complete hetero-octameric COG
+        complex from Saccharomyces cerevisiae.
   - subject: cog3_cog_subunit
     predicate: is part of
     object: cog_complex
@@ -319,6 +328,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1083/jcb.200202016
       notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+    - reference: DOI:10.1038/nsmb.3263
+      notes: Ha et al. 2016 purified and imaged the complete hetero-octameric COG
+        complex from Saccharomyces cerevisiae.
   - subject: cog4_cog_subunit
     predicate: is part of
     object: cog_complex
@@ -326,6 +338,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1083/jcb.200202016
       notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+    - reference: DOI:10.1038/nsmb.3263
+      notes: Ha et al. 2016 purified and imaged the complete hetero-octameric COG
+        complex from Saccharomyces cerevisiae.
   - subject: cog5_cog_subunit
     predicate: is part of
     object: cog_complex
@@ -333,6 +348,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1083/jcb.200202016
       notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+    - reference: DOI:10.1038/nsmb.3263
+      notes: Ha et al. 2016 purified and imaged the complete hetero-octameric COG
+        complex from Saccharomyces cerevisiae.
   - subject: cog6_cog_subunit
     predicate: is part of
     object: cog_complex
@@ -340,6 +358,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1083/jcb.200202016
       notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+    - reference: DOI:10.1038/nsmb.3263
+      notes: Ha et al. 2016 purified and imaged the complete hetero-octameric COG
+        complex from Saccharomyces cerevisiae.
   - subject: cog7_cog_subunit
     predicate: is part of
     object: cog_complex
@@ -347,6 +368,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1083/jcb.200202016
       notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+    - reference: DOI:10.1038/nsmb.3263
+      notes: Ha et al. 2016 purified and imaged the complete hetero-octameric COG
+        complex from Saccharomyces cerevisiae.
   - subject: cog8_cog_subunit
     predicate: is part of
     object: cog_complex
@@ -354,6 +378,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1083/jcb.200202016
       notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+    - reference: DOI:10.1038/nsmb.3263
+      notes: Ha et al. 2016 purified and imaged the complete hetero-octameric COG
+        complex from Saccharomyces cerevisiae.
   - subject: cog_complex
     predicate: participates in
     object: golgi_vesicle_transport
@@ -363,14 +390,6 @@ causal_graphs:
     - reference: DOI:10.1247/csf.18014
       notes: Ishii, Lupashin and Nakano 2018 studied COG as a yeast multi-subunit
         tethering complex acting in Golgi membrane trafficking.
-  - subject: cog_complex
-    predicate: localizes to
-    object: golgi_apparatus
-    description: COG is a peripheral Golgi-localized vesicle-tethering complex.
-    evidence:
-    - reference: DOI:10.1083/jcb.200202016
-      notes: Ungar et al. 2002 characterized COG as a Golgi-localized complex required
-        for normal Golgi morphology and function.
 discussions:
 - discussion_id: resolve_cog_subunit_family_groundings
   prompt: Resolve exact source-neutral family groundings for the eight COG subunits.

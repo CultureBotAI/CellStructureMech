@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cog_complex.yaml
+  slug: cog_complex
+session:
+  id: 2026-09-16T193857Z-codex-9eabb6
+  timestamp: '2026-09-16T19:38:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1123
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1122
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Back yeast COG graph edges with yeast evidence
+  details: 'Resolved PR #1122 review issue #1123 by adding DOI:10.1038/nsmb.3263 evidence
+    to each Cog1-Cog8 graph parthood edge and removing the mammalian-backed COG-to-Golgi localization
+    edge from the yeast COG graph.'
