@@ -1,0 +1,412 @@
+identifier: GO:0017119
+label: COG complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multisubunit tethering complex of the CATCHR family (complexes associated
+  with tethering containing helical rods) that has a role in tethering vesicles to
+  the Golgi prior to fusion. Composed of 8 subunits COG1-8.
+definition_source: GO:0017119
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T19:28:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T19:29:20Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added COG synonymy, vesicle-tethering parentage, reviewed-label-only Cog1-Cog8
+    components, Saccharomyces cerevisiae scope, a Golgi vesicle transport function,
+    GO/DOI evidence, a nonmechanistic yeast Golgi tethering graph, a subunit-grounding
+    TODO, and a resolved COPI/SNARE boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-16T19:30:01Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Tightened Cog1-Cog8 role text, added an explicit COG-to-Golgi graph edge,
+    and promoted the Zolov and Lupashin COPI/SNARE boundary citation to record-level
+    evidence.
+  llm_assisted: true
+parent_structures:
+- GO:0099023
+synonyms:
+- synonym_text: conserved oligomeric Golgi complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0017119
+- synonym_text: Golgi transport complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0017119
+- synonym_text: Sec34/35 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0017119
+components:
+- component_id: cog1_cog_subunit
+  label: Cog1 COG subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - COG1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named COG1 COG subunit; no exact source-neutral
+    InterPro or Pfam family identifier for this COG subunit class was curated in this
+    pass.
+  role: Lobe-A constituent of the eight-subunit COG vesicle-tethering complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.200202016
+    notes: Ungar et al. 2002 unified the mammalian Golgi transport, ldlCp and Sec34
+      complexes as the eight-subunit conserved oligomeric Golgi complex.
+  - reference: DOI:10.1074/jbc.M400662200
+    notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
+      counterparts and mapped pairwise interactions within the complex.
+- component_id: cog2_cog_subunit
+  label: Cog2 COG subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - COG2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named COG2 COG subunit; no exact source-neutral
+    InterPro or Pfam family identifier for this COG subunit class was curated in this
+    pass.
+  role: Lobe-A constituent of the eight-subunit COG vesicle-tethering complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.200202016
+    notes: Ungar et al. 2002 unified the mammalian Golgi transport, ldlCp and Sec34
+      complexes as the eight-subunit conserved oligomeric Golgi complex.
+  - reference: DOI:10.1074/jbc.M400662200
+    notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
+      counterparts and mapped pairwise interactions within the complex.
+- component_id: cog3_cog_subunit
+  label: Cog3 COG subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - COG3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named COG3 COG subunit; no exact source-neutral
+    InterPro or Pfam family identifier for this COG subunit class was curated in this
+    pass.
+  role: Lobe-A constituent of the eight-subunit COG vesicle-tethering complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.200202016
+    notes: Ungar et al. 2002 unified the mammalian Golgi transport, ldlCp and Sec34
+      complexes as the eight-subunit conserved oligomeric Golgi complex.
+  - reference: DOI:10.1074/jbc.M400662200
+    notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
+      counterparts and mapped pairwise interactions within the complex.
+- component_id: cog4_cog_subunit
+  label: Cog4 COG subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - COG4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named COG4 COG subunit; no exact source-neutral
+    InterPro or Pfam family identifier for this COG subunit class was curated in this
+    pass.
+  role: Lobe-A constituent of the eight-subunit COG vesicle-tethering complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.200202016
+    notes: Ungar et al. 2002 unified the mammalian Golgi transport, ldlCp and Sec34
+      complexes as the eight-subunit conserved oligomeric Golgi complex.
+  - reference: DOI:10.1074/jbc.M400662200
+    notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
+      counterparts and mapped pairwise interactions within the complex.
+- component_id: cog5_cog_subunit
+  label: Cog5 COG subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - COG5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named COG5 COG subunit; no exact source-neutral
+    InterPro or Pfam family identifier for this COG subunit class was curated in this
+    pass.
+  role: Lobe-B constituent of the eight-subunit COG vesicle-tethering complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.200202016
+    notes: Ungar et al. 2002 unified the mammalian Golgi transport, ldlCp and Sec34
+      complexes as the eight-subunit conserved oligomeric Golgi complex.
+  - reference: DOI:10.1074/jbc.M400662200
+    notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
+      counterparts and mapped pairwise interactions within the complex.
+- component_id: cog6_cog_subunit
+  label: Cog6 COG subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - COG6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named COG6 COG subunit; no exact source-neutral
+    InterPro or Pfam family identifier for this COG subunit class was curated in this
+    pass.
+  role: Lobe-B constituent of the eight-subunit COG vesicle-tethering complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.200202016
+    notes: Ungar et al. 2002 unified the mammalian Golgi transport, ldlCp and Sec34
+      complexes as the eight-subunit conserved oligomeric Golgi complex.
+  - reference: DOI:10.1074/jbc.M400662200
+    notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
+      counterparts and mapped pairwise interactions within the complex.
+- component_id: cog7_cog_subunit
+  label: Cog7 COG subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - COG7
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named COG7 COG subunit; no exact source-neutral
+    InterPro or Pfam family identifier for this COG subunit class was curated in this
+    pass.
+  role: Lobe-B constituent of the eight-subunit COG vesicle-tethering complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.200202016
+    notes: Ungar et al. 2002 unified the mammalian Golgi transport, ldlCp and Sec34
+      complexes as the eight-subunit conserved oligomeric Golgi complex.
+  - reference: DOI:10.1074/jbc.M400662200
+    notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
+      counterparts and mapped pairwise interactions within the complex.
+- component_id: cog8_cog_subunit
+  label: Cog8 COG subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - COG8
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named COG8 COG subunit; no exact source-neutral
+    InterPro or Pfam family identifier for this COG subunit class was curated in this
+    pass.
+  role: Lobe-B constituent of the eight-subunit COG vesicle-tethering complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.200202016
+    notes: Ungar et al. 2002 unified the mammalian Golgi transport, ldlCp and Sec34
+      complexes as the eight-subunit conserved oligomeric Golgi complex.
+  - reference: DOI:10.1074/jbc.M400662200
+    notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
+      counterparts and mapped pairwise interactions within the complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has an intact hetero-octameric COG vesicle-tethering complex
+    associated with the Golgi apparatus.
+  reference: DOI:10.1038/nsmb.3263
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which the complete hetero-octameric COG tethering complex
+    was purified and imaged by negative-stain electron microscopy.
+  reference: DOI:10.1038/nsmb.3263
+functions:
+- function_id: golgi_vesicle_transport
+  label: Golgi vesicle transport
+  grounding: GO:0048193
+  description: COG acts as a Golgi vesicle tethering complex during retrograde vesicular
+    traffic within and to the Golgi apparatus.
+  evidence:
+  - reference: GO:0048193
+    notes: GO:0048193 denotes vesicle-mediated movement into, out of or within the
+      Golgi apparatus.
+  - reference: DOI:10.1247/csf.18014
+    notes: Ishii, Lupashin and Nakano 2018 studied yeast COG subunit interactions
+      in the context of Golgi membrane trafficking.
+evidence:
+- reference: GO:0017119
+  notes: Gene Ontology cellular-component term for the COG complex.
+- reference: GO:0099023
+  notes: Gene Ontology cellular-component parent term for vesicle tethering complexes.
+- reference: GO:0048193
+  notes: Gene Ontology biological-process term for Golgi vesicle transport.
+- reference: DOI:10.1083/jcb.200202016
+  notes: Ungar et al. 2002, Characterization of a mammalian Golgi-localized protein
+    complex, COG, that is required for normal Golgi morphology and function, Journal
+    of Cell Biology.
+- reference: DOI:10.1074/jbc.M400662200
+  notes: Loh and Hong 2004, The binary interacting network of the conserved oligomeric
+    Golgi tethering complex, Journal of Biological Chemistry.
+- reference: DOI:10.1038/nsmb.3263
+  notes: Ha et al. 2016, Molecular architecture of the complete COG tethering complex,
+    Nature Structural and Molecular Biology.
+- reference: DOI:10.1247/csf.18014
+  notes: Ishii, Lupashin and Nakano 2018, Detailed Analysis of the Interaction of
+    Yeast COG Complex, Cell Structure and Function.
+- reference: DOI:10.1083/jcb.200412003
+  notes: Zolov and Lupashin 2005, Cog3p depletion blocks vesicle-mediated Golgi retrograde
+    trafficking in HeLa cells, Journal of Cell Biology.
+causal_graphs:
+- graph_id: yeast_cog_golgi_tethering
+  title: COG supports Golgi vesicle tethering
+  description: In Saccharomyces cerevisiae, Cog1 through Cog8 form a hetero-octameric
+    COG complex associated with Golgi membrane trafficking.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records COG subunit membership and Golgi vesicle-transport
+    involvement without modeling COPI coats, SNARE contacts, or a full order of lobe
+    assembly.
+  nodes:
+  - node_id: cog1_cog_subunit
+    label: Cog1 COG subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cog1_cog_subunit
+  - node_id: cog2_cog_subunit
+    label: Cog2 COG subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cog2_cog_subunit
+  - node_id: cog3_cog_subunit
+    label: Cog3 COG subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cog3_cog_subunit
+  - node_id: cog4_cog_subunit
+    label: Cog4 COG subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cog4_cog_subunit
+  - node_id: cog5_cog_subunit
+    label: Cog5 COG subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cog5_cog_subunit
+  - node_id: cog6_cog_subunit
+    label: Cog6 COG subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cog6_cog_subunit
+  - node_id: cog7_cog_subunit
+    label: Cog7 COG subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cog7_cog_subunit
+  - node_id: cog8_cog_subunit
+    label: Cog8 COG subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cog8_cog_subunit
+  - node_id: cog_complex
+    label: COG complex
+    node_type: STRUCTURE
+    grounding: GO:0017119
+  - node_id: golgi_apparatus
+    label: Golgi apparatus
+    node_type: STRUCTURE
+    grounding: GO:0005794
+  - node_id: golgi_vesicle_transport
+    label: Golgi vesicle transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0048193
+  edges:
+  - subject: cog1_cog_subunit
+    predicate: is part of
+    object: cog_complex
+    description: Cog1 COG subunit is represented as a constituent COG subunit.
+    evidence:
+    - reference: DOI:10.1083/jcb.200202016
+      notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+  - subject: cog2_cog_subunit
+    predicate: is part of
+    object: cog_complex
+    description: Cog2 COG subunit is represented as a constituent COG subunit.
+    evidence:
+    - reference: DOI:10.1083/jcb.200202016
+      notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+  - subject: cog3_cog_subunit
+    predicate: is part of
+    object: cog_complex
+    description: Cog3 COG subunit is represented as a constituent COG subunit.
+    evidence:
+    - reference: DOI:10.1083/jcb.200202016
+      notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+  - subject: cog4_cog_subunit
+    predicate: is part of
+    object: cog_complex
+    description: Cog4 COG subunit is represented as a constituent COG subunit.
+    evidence:
+    - reference: DOI:10.1083/jcb.200202016
+      notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+  - subject: cog5_cog_subunit
+    predicate: is part of
+    object: cog_complex
+    description: Cog5 COG subunit is represented as a constituent COG subunit.
+    evidence:
+    - reference: DOI:10.1083/jcb.200202016
+      notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+  - subject: cog6_cog_subunit
+    predicate: is part of
+    object: cog_complex
+    description: Cog6 COG subunit is represented as a constituent COG subunit.
+    evidence:
+    - reference: DOI:10.1083/jcb.200202016
+      notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+  - subject: cog7_cog_subunit
+    predicate: is part of
+    object: cog_complex
+    description: Cog7 COG subunit is represented as a constituent COG subunit.
+    evidence:
+    - reference: DOI:10.1083/jcb.200202016
+      notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+  - subject: cog8_cog_subunit
+    predicate: is part of
+    object: cog_complex
+    description: Cog8 COG subunit is represented as a constituent COG subunit.
+    evidence:
+    - reference: DOI:10.1083/jcb.200202016
+      notes: Ungar et al. 2002 named Cog1 through Cog8 as COG complex subunits.
+  - subject: cog_complex
+    predicate: participates in
+    object: golgi_vesicle_transport
+    description: COG is a Golgi vesicle tethering complex involved in retrograde vesicular
+      trafficking.
+    evidence:
+    - reference: DOI:10.1247/csf.18014
+      notes: Ishii, Lupashin and Nakano 2018 studied COG as a yeast multi-subunit
+        tethering complex acting in Golgi membrane trafficking.
+  - subject: cog_complex
+    predicate: localizes to
+    object: golgi_apparatus
+    description: COG is a peripheral Golgi-localized vesicle-tethering complex.
+    evidence:
+    - reference: DOI:10.1083/jcb.200202016
+      notes: Ungar et al. 2002 characterized COG as a Golgi-localized complex required
+        for normal Golgi morphology and function.
+discussions:
+- discussion_id: resolve_cog_subunit_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the eight COG subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cog1_cog_subunit
+  - components#cog2_cog_subunit
+  - components#cog3_cog_subunit
+  - components#cog4_cog_subunit
+  - components#cog5_cog_subunit
+  - components#cog6_cog_subunit
+  - components#cog7_cog_subunit
+  - components#cog8_cog_subunit
+  rationale: This first COG record names the Cog1-Cog8 constituent subunits but leaves
+    InterPro, Pfam, or Complex Portal grounding unset until exact orthology and paralogy
+    boundaries are reviewed per subunit.
+  evidence:
+  - reference: DOI:10.1074/jbc.M400662200
+    notes: Loh and Hong 2004 compared all eight COG subunits.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: cog_copi_snare_boundary
+  prompt: Do not model COPI coats or Golgi SNAREs as constituent COG components.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#yeast_cog_golgi_tethering
+  rationale: COG physically and functionally interacts with COPI coats and Golgi SNARE
+    proteins, but its constituent subunits are Cog1 through Cog8.
+  resolution_note: 'Declined: COPI and SNARE proteins are represented as COG-adjacent
+    Golgi trafficking machinery rather than constituent COG subunits.'
+  evidence:
+  - reference: DOI:10.1083/jcb.200412003
+    notes: Zolov and Lupashin 2005 found that mammalian COG physically interacts with
+      COPI and the GS28 SNARE.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'

@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cog_complex.yaml
+  slug: cog_complex
+session:
+  id: 2026-09-16T193034Z-codex-1728e4
+  timestamp: '2026-09-16T19:30:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the COG complex record
+  details: Created a GO:0017119 COG complex record with GO synonymy, vesicle-tethering parentage,
+    reviewed-label-only Cog1-Cog8 constituent subunits, Saccharomyces cerevisiae scope, a
+    Golgi vesicle transport function, GO/DOI evidence, a nonmechanistic yeast Golgi tethering
+    graph, and explicit subunit-grounding plus COPI/SNARE boundary discussions.
