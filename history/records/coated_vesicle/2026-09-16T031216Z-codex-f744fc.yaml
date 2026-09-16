@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/coated_vesicle.yaml
+  slug: coated_vesicle
+session:
+  id: 2026-09-16T031216Z-codex-f744fc
+  timestamp: '2026-09-16T03:12:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the GO coated vesicle parent record
+  details: Created data/structures/membrane_organelle/coated_vesicle.yaml for GO:0030135 using
+    GO coated-vesicle, vesicle-coat, and coated-vesicle-membrane terms, Saccharomyces cerevisiae
+    COPII evidence, broad reviewed-label-only coat-protein and lipid-bilayer components, a
+    vesicle-mediated transport function, and a nonmechanistic topology graph.

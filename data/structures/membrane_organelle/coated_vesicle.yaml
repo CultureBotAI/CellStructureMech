@@ -1,0 +1,239 @@
+identifier: GO:0030135
+label: coated vesicle
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: Small membrane-bounded organelle formed by pinching off of a coated region
+  of membrane. Some coats are made of clathrin, whereas others are made from other
+  proteins.
+definition_source: GO:0030135
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T03:10:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T03:11:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic-vesicle parentage, vesicle-coat and coated-vesicle-membrane
+    parts, broad reviewed-label-only coat-protein and lipid-bilayer components, Saccharomyces
+    scope, a vesicle-mediated transport function, GO/DOI evidence, a nonmechanistic
+    coated-vesicle topology graph, and component-boundary TODOs.
+  llm_assisted: true
+parent_structures:
+- GO:0031410
+has_part:
+- GO:0030120
+- GO:0030662
+components:
+- component_id: coat_proteins
+  label: coated vesicle coat proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Coated vesicles span clathrin, COPI, and COPII protein coats; no
+    exact source-neutral InterPro, Pfam, NCBIfam, or Complex Portal identifier was
+    curated for a universal coated-vesicle coat-protein family in this pass.
+  role: Protein constituents that assemble into the clathrin, COPI, or COPII coat
+    on a transport-vesicle membrane.
+  evidence:
+  - reference: GO:0030135
+    notes: GO:0030135 defines coated vesicles as membrane-bounded organelles that
+      bud from a coated region of membrane.
+  - reference: GO:0030120
+    notes: GO:0030120 denotes the vesicle coat found on coated vesicles.
+  - reference: GO:0030125
+    notes: GO:0030125 identifies the clathrin vesicle-coat child.
+  - reference: GO:0030126
+    notes: GO:0030126 identifies the COPI vesicle-coat child.
+  - reference: GO:0030127
+    notes: GO:0030127 identifies the COPII vesicle-coat child.
+- component_id: coated_vesicle_membrane_lipid_bilayer
+  label: coated vesicle membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030662 identifies the whole coated vesicle membrane; no separate
+    source-neutral CURIE was curated for the generic lipid constituent of that membrane.
+  role: Lipid-bilayer constituent of the coated vesicle membrane that surrounds a
+    coated vesicle.
+  evidence:
+  - reference: GO:0030662
+    notes: GO:0030662 defines the coated vesicle membrane as the lipid bilayer surrounding
+      a coated vesicle.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms COPII-coated ER-to-Golgi transport vesicles from endoplasmic-reticulum
+    membranes using Sar1p, Sec23p, Sec24p, Sec13p, and Sec31p coat machinery.
+  reference: DOI:10.1016/0092-8674(94)90138-4
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast COPII reconstitution model in which Sar1p and Sec subcomplexes
+    form a coated vesicle from endoplasmic-reticulum membranes.
+  reference: DOI:10.1016/S0092-8674(00)81577-9
+functions:
+- function_id: vesicle_mediated_transport
+  label: vesicle-mediated transport
+  grounding: GO:0016192
+  description: Coated vesicles are transport carriers whose coats and membranes package
+    cargo during vesicle budding and vesicle-mediated transport.
+  evidence:
+  - reference: GO:0016192
+    notes: GO:0016192 defines vesicle-mediated transport as membrane-bounded vesicle
+      transport that includes vesicle budding and coating.
+  - reference: GO:0030135
+    notes: GO:0030135 defines a coated vesicle as a small membrane-bounded organelle
+      pinched off from a coated region of membrane.
+evidence:
+- reference: GO:0030135
+  notes: Gene Ontology cellular-component term for coated vesicles.
+- reference: GO:0031410
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicles.
+- reference: GO:0030120
+  notes: Gene Ontology cellular-component term for the vesicle coat.
+- reference: GO:0030662
+  notes: Gene Ontology cellular-component term for the coated vesicle membrane.
+- reference: GO:0030136
+  notes: Gene Ontology cellular-component child term for clathrin-coated vesicles.
+- reference: GO:0030137
+  notes: Gene Ontology cellular-component child term for COPI-coated vesicles.
+- reference: GO:0030134
+  notes: Gene Ontology cellular-component child term for COPII-coated ER-to-Golgi
+    transport vesicles.
+- reference: GO:0016192
+  notes: Gene Ontology biological-process term for vesicle-mediated transport.
+- reference: DOI:10.1016/j.devcel.2005.04.014
+  notes: Newpher et al. 2005, In Vivo Dynamics of Clathrin and Its Adaptor-Dependent
+    Recruitment to the Actin-Based Endocytic Machinery in Yeast, Developmental Cell.
+- reference: DOI:10.1016/0092-8674(91)90176-y
+  notes: Serafini et al. 1991, ADP-Ribosylation factor is a subunit of the coat of
+    Golgi-derived COP-coated vesicles, Cell.
+- reference: DOI:10.1016/0092-8674(94)90138-4
+  notes: 'Barlowe et al. 1994, COPII: A membrane coat formed by Sec proteins that
+    drive vesicle budding from the endoplasmic reticulum, Cell.'
+- reference: DOI:10.1016/S0092-8674(00)81577-9
+  notes: Matsuoka et al. 1998, COPII-Coated Vesicle Formation Reconstituted with Purified
+    Coat Proteins and Chemically Defined Liposomes, Cell.
+causal_graphs:
+- graph_id: coated_vesicle_topology
+  title: Coated-vesicle topology
+  description: A protein coat and lipid-bilayer membrane form a coated vesicle that
+    buds from a donor membrane during vesicle-mediated transport.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the broad coated-vesicle parent, its membrane and
+    coat parts, and the transport function without asserting a universal clathrin,
+    COPI, or COPII adaptor system.
+  nodes:
+  - node_id: donor_membrane
+    label: donor membrane
+    node_type: STRUCTURE
+  - node_id: coat_proteins
+    label: coated vesicle coat proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: coat_proteins
+  - node_id: coated_vesicle_membrane
+    label: coated vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030662
+    component_ref: coated_vesicle_membrane_lipid_bilayer
+  - node_id: vesicle_coat
+    label: vesicle coat
+    node_type: STRUCTURE
+    grounding: GO:0030120
+  - node_id: coated_vesicle
+    label: coated vesicle
+    node_type: ORGANELLE
+    grounding: GO:0030135
+  - node_id: vesicle_mediated_transport
+    label: vesicle-mediated transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0016192
+  edges:
+  - subject: coat_proteins
+    predicate: assemble into
+    object: vesicle_coat
+    description: Coated-vesicle coat proteins assemble into the protein coats carried
+      by clathrin, COPI, or COPII coated vesicles.
+    evidence:
+    - reference: GO:0030125
+      notes: GO:0030125 identifies the clathrin vesicle-coat child.
+    - reference: GO:0030126
+      notes: GO:0030126 identifies the COPI vesicle-coat child.
+    - reference: GO:0030127
+      notes: GO:0030127 identifies the COPII vesicle-coat child.
+  - subject: vesicle_coat
+    predicate: is part of
+    object: coated_vesicle
+    description: A vesicle coat is the protein coat on a coated vesicle.
+    evidence:
+    - reference: GO:0030120
+      notes: GO:0030120 defines a vesicle coat as found on a coated vesicle.
+  - subject: coated_vesicle_membrane
+    predicate: is part of
+    object: coated_vesicle
+    description: The coated vesicle membrane is the lipid bilayer that surrounds a
+      coated vesicle.
+    evidence:
+    - reference: GO:0030662
+      notes: GO:0030662 defines the coated vesicle membrane as the lipid bilayer surrounding
+        a coated vesicle.
+  - subject: donor_membrane
+    predicate: evaginates into
+    object: coated_vesicle
+    description: A coated vesicle forms by pinching off from a coated region of a
+      donor membrane.
+    evidence:
+    - reference: GO:0030135
+      notes: GO:0030135 defines a coated vesicle as formed by pinching off of a coated
+        region of membrane.
+  - subject: coated_vesicle
+    predicate: participates in
+    object: vesicle_mediated_transport
+    description: Coated vesicles are membrane-bounded carriers for vesicle-mediated
+      transport.
+    evidence:
+    - reference: GO:0016192
+      notes: GO:0016192 describes membrane-bounded vesicle transport as including
+        vesicle budding and coating.
+discussions:
+- discussion_id: defer_subtype_specific_coat_composition
+  prompt: Resolve clathrin, COPI, and COPII coat-subunit families on subtype coat
+    records rather than flattening them onto the broad coated-vesicle parent.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#coat_proteins
+  - causal_graphs#coated_vesicle_topology
+  rationale: The GO coated-vesicle parent spans vesicles whose coats are made from
+    different scaffold proteins and subtype-specific adaptors. This record keeps the
+    parent coarse and leaves exact subtype composition to the GO:0030125, GO:0030126,
+    and GO:0030127 vesicle-coat records.
+  evidence:
+  - reference: GO:0030125
+  - reference: GO:0030126
+  - reference: GO:0030127
+  - reference: DOI:10.1016/j.devcel.2005.04.014
+  - reference: DOI:10.1016/0092-8674(91)90176-y
+  - reference: DOI:10.1016/0092-8674(94)90138-4
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: ground_coated_vesicle_membrane_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for coated-vesicle membrane lipids.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#coated_vesicle_membrane_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0030135 and has_part GO:0030662,
+    but the generic lipid-bilayer constituent is intentionally left reviewed-label-only
+    until an exact lipid or membrane-constituent CURIE is curated.
+  evidence:
+  - reference: GO:0030662
+  posed_by: codex
+  posed_date: '2026-09-16'
