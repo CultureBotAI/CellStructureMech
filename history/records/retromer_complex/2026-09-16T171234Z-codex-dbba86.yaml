@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/retromer_complex.yaml
+  slug: retromer_complex
+session:
+  id: 2026-09-16T171234Z-codex-dbba86
+  timestamp: '2026-09-16T17:12:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add retromer complex structure record
+  details: Created a GO:0030904 retromer complex structure record with GO membrane-protein-complex
+    parentage, GO cargo-selective and tubulation retromer subcomplex parthood, Seaman 1998
+    synonymy and evidence, reviewed-label-only Vps35, Vps29, Vps26, Vps5 and Vps17 yeast subunits,
+    Saccharomyces cerevisiae distribution and canonical evidence, retrograde transport from
+    endosome to Golgi function, a nonmechanistic yeast retrieval graph, and an open discussion
+    for exact retromer subunit family groundings.

@@ -1,0 +1,305 @@
+identifier: GO:0030904
+label: retromer complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A conserved hetero-pentameric membrane-associated complex involved in
+  retrograde transport from endosomes to the Golgi apparatus. The budding yeast retromer
+  comprises Vps35p, Vps29p, Vps26p, Vps5p, and Vps17p. The mammalian complex shows
+  slight variation in composition compared to yeast, and comprises SNX1 or SNX2, SNX5
+  or SNX6, VPS26A or VPS26B, VPS29, and VPS35.
+definition_source: GO:0030904
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T17:10:55Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T17:11:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added retromer synonymy, GO membrane-complex parentage, cargo-selective
+    and tubulation subcomplex parthood, reviewed-label-only Vps35/Vps29/Vps26/Vps5/Vps17
+    yeast components, Saccharomyces scope, endosome-to-Golgi retrieval function, GO/DOI
+    evidence, a nonmechanistic yeast retrieval graph, and a component-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0098796
+has_part:
+- GO:0030906
+- GO:0030905
+synonyms:
+- synonym_text: retromer
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1083/jcb.142.3.665
+- synonym_text: yeast retromer complex
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1083/jcb.142.3.665
+components:
+- component_id: vps35_retromer_subunit
+  label: Vps35 retromer subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS35
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps35p retromer
+    subunit; no exact source-neutral InterPro or Pfam family identifier spanning the
+    yeast Vps35 and metazoan VPS35 proteins was curated in this pass.
+  role: Cargo-selective Vps35 constituent of the yeast retromer complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.142.3.665
+    notes: Seaman, McCaffery and Emr 1998 identified Vps35p, Vps29p, Vps26p, Vps5p
+      and Vps17p as subunits of the yeast retromer complex.
+  - reference: GO:0030904
+    notes: The GO retromer-complex definition names this budding-yeast protein as
+      one of the Vps subunits.
+- component_id: vps29_retromer_subunit
+  label: Vps29 retromer subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS29
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps29p retromer
+    subunit; no exact source-neutral InterPro or Pfam family identifier spanning the
+    yeast Vps29 and metazoan VPS29 proteins was curated in this pass.
+  role: Cargo-selective Vps29 constituent of the yeast retromer complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.142.3.665
+    notes: Seaman, McCaffery and Emr 1998 identified Vps35p, Vps29p, Vps26p, Vps5p
+      and Vps17p as subunits of the yeast retromer complex.
+  - reference: GO:0030904
+    notes: The GO retromer-complex definition names this budding-yeast protein as
+      one of the Vps subunits.
+- component_id: vps26_retromer_subunit
+  label: Vps26 retromer subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS26
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps26p retromer
+    subunit; no exact source-neutral InterPro or Pfam family identifier spanning the
+    yeast Vps26 and metazoan VPS26A/VPS26B proteins was curated in this pass.
+  role: Cargo-selective Vps26 constituent of the yeast retromer complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.142.3.665
+    notes: Seaman, McCaffery and Emr 1998 identified Vps35p, Vps29p, Vps26p, Vps5p
+      and Vps17p as subunits of the yeast retromer complex.
+  - reference: GO:0030904
+    notes: The GO retromer-complex definition names this budding-yeast protein as
+      one of the Vps subunits.
+- component_id: vps5_retromer_subunit
+  label: Vps5 retromer subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps5p retromer
+    subunit; no exact source-neutral InterPro or Pfam family identifier spanning the
+    yeast Vps5 and metazoan SNX1/SNX2 sorting nexins was curated in this pass.
+  role: Tubulation-subcomplex Vps5 constituent of the yeast retromer complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.142.3.665
+    notes: Seaman, McCaffery and Emr 1998 identified Vps35p, Vps29p, Vps26p, Vps5p
+      and Vps17p as subunits of the yeast retromer complex.
+  - reference: GO:0030904
+    notes: The GO retromer-complex definition names this budding-yeast protein as
+      one of the Vps subunits.
+- component_id: vps17_retromer_subunit
+  label: Vps17 retromer subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS17
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps17p retromer
+    subunit; no exact source-neutral InterPro or Pfam family identifier spanning the
+    yeast Vps17 and metazoan SNX5/SNX6 sorting nexins was curated in this pass.
+  role: Tubulation-subcomplex Vps17 constituent of the yeast retromer complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.142.3.665
+    notes: Seaman, McCaffery and Emr 1998 identified Vps35p, Vps29p, Vps26p, Vps5p
+      and Vps17p as subunits of the yeast retromer complex.
+  - reference: GO:0030904
+    notes: The GO retromer-complex definition names this budding-yeast protein as
+      one of the Vps subunits.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast retromer contains Vps35p, Vps29p, Vps26p, Vps5p and Vps17p and
+    supports endosome-to-Golgi retrieval.
+  reference: DOI:10.1083/jcb.142.3.665
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Model in which Seaman, McCaffery and Emr defined retromer as a two-subcomplex
+    Vps35/Vps29/Vps26 plus Vps5/Vps17 membrane coat complex.
+  reference: DOI:10.1083/jcb.142.3.665
+functions:
+- function_id: endosome_to_golgi_retrograde_transport
+  label: retrograde transport, endosome to Golgi
+  grounding: GO:0042147
+  description: Retromer mediates retrieval from endosomal membranes to the Golgi apparatus.
+  evidence:
+  - reference: GO:0042147
+    notes: GO:0042147 denotes retrograde transport from endosomes back to the trans-Golgi
+      network.
+  - reference: DOI:10.1083/jcb.142.3.665
+    notes: Seaman, McCaffery and Emr 1998 described yeast retromer as a membrane-associated
+      complex required for endosome-to-Golgi retrieval.
+evidence:
+- reference: GO:0030904
+  notes: Gene Ontology cellular-component term for the retromer complex.
+- reference: GO:0098796
+  notes: Gene Ontology cellular-component parent term for membrane protein complexes.
+- reference: GO:0030906
+  notes: Gene Ontology cellular-component term for the cargo-selective retromer subcomplex.
+- reference: GO:0030905
+  notes: Gene Ontology cellular-component term for the tubulation retromer subcomplex.
+- reference: GO:0042147
+  notes: Gene Ontology biological-process term for retrograde transport from endosome
+    to Golgi.
+- reference: DOI:10.1083/jcb.142.3.665
+  notes: Seaman, McCaffery and Emr 1998, A Membrane Coat Complex Essential for Endosome-to-Golgi
+    Retrograde Transport in Yeast, Journal of Cell Biology.
+causal_graphs:
+- graph_id: yeast_retromer_retrieval
+  title: Retromer mediates yeast endosome-to-Golgi retrieval
+  description: In Saccharomyces cerevisiae, the Vps35/Vps29/Vps26 and Vps5/Vps17 subcomplexes
+    assemble the retromer complex, which mediates endosome-to-Golgi retrieval.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents yeast retromer subcomplex membership and the endosome-to-Golgi
+    retrieval role without modeling cargo selection motifs, membrane bending, or vesicle
+    scission.
+  nodes:
+  - node_id: vps35_retromer_subunit
+    label: Vps35 retromer subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps35_retromer_subunit
+  - node_id: vps29_retromer_subunit
+    label: Vps29 retromer subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps29_retromer_subunit
+  - node_id: vps26_retromer_subunit
+    label: Vps26 retromer subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps26_retromer_subunit
+  - node_id: vps5_retromer_subunit
+    label: Vps5 retromer subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps5_retromer_subunit
+  - node_id: vps17_retromer_subunit
+    label: Vps17 retromer subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps17_retromer_subunit
+  - node_id: cargo_selective_retromer
+    label: retromer, cargo-selective complex
+    node_type: STRUCTURE
+    grounding: GO:0030906
+  - node_id: tubulation_retromer
+    label: retromer, tubulation complex
+    node_type: STRUCTURE
+    grounding: GO:0030905
+  - node_id: retromer_complex
+    label: retromer complex
+    node_type: STRUCTURE
+    grounding: GO:0030904
+  - node_id: endosome_to_golgi_retrograde_transport
+    label: retrograde transport, endosome to Golgi
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042147
+  edges:
+  - subject: vps35_retromer_subunit
+    predicate: is part of
+    object: cargo_selective_retromer
+    description: Vps35 is represented in the yeast cargo-selective retromer subcomplex.
+    evidence:
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 placed Vps35p in a Vps35p/Vps29p/Vps26p
+        subcomplex.
+  - subject: vps29_retromer_subunit
+    predicate: is part of
+    object: cargo_selective_retromer
+    description: Vps29 is represented in the yeast cargo-selective retromer subcomplex.
+    evidence:
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 placed Vps29p in a Vps35p/Vps29p/Vps26p
+        subcomplex.
+  - subject: vps26_retromer_subunit
+    predicate: is part of
+    object: cargo_selective_retromer
+    description: Vps26 is represented in the yeast cargo-selective retromer subcomplex.
+    evidence:
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 placed Vps26p in a Vps35p/Vps29p/Vps26p
+        subcomplex.
+  - subject: vps5_retromer_subunit
+    predicate: is part of
+    object: tubulation_retromer
+    description: Vps5 is represented in the yeast tubulation retromer subcomplex.
+    evidence:
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 placed Vps5p in a Vps5p/Vps17p membrane-coat
+        subcomplex.
+  - subject: vps17_retromer_subunit
+    predicate: is part of
+    object: tubulation_retromer
+    description: Vps17 is represented in the yeast tubulation retromer subcomplex.
+    evidence:
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 placed Vps17p in a Vps5p/Vps17p membrane-coat
+        subcomplex.
+  - subject: cargo_selective_retromer
+    predicate: is part of
+    object: retromer_complex
+    description: The Vps35/Vps29/Vps26 cargo-selective subcomplex is part of yeast
+      retromer.
+    evidence:
+    - reference: GO:0030906
+      notes: GO:0030906 denotes the cargo-selective retromer subcomplex.
+  - subject: tubulation_retromer
+    predicate: is part of
+    object: retromer_complex
+    description: The Vps5/Vps17 tubulation subcomplex is part of yeast retromer.
+    evidence:
+    - reference: GO:0030905
+      notes: GO:0030905 denotes the tubulation retromer subcomplex.
+  - subject: retromer_complex
+    predicate: participates in
+    object: endosome_to_golgi_retrograde_transport
+    description: Yeast retromer participates in endosome-to-Golgi retrieval.
+    evidence:
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 described retromer as essential for endosome-to-Golgi
+        retrograde transport.
+discussions:
+- discussion_id: resolve_retromer_component_family_groundings
+  prompt: Resolve exact source-neutral InterPro or Pfam groundings for retromer subunit
+    classes spanning yeast Vps proteins and metazoan VPS or SNX paralogs.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vps35_retromer_subunit
+  - components#vps29_retromer_subunit
+  - components#vps26_retromer_subunit
+  - components#vps5_retromer_subunit
+  - components#vps17_retromer_subunit
+  rationale: This first retromer record records the named Saccharomyces cerevisiae
+    Vps subunits and the corresponding metazoan VPS/SNX variation in the GO definition
+    without asserting exact family groundings until those family identifiers are reviewed
+    exactly.
+  evidence:
+  - reference: GO:0030904
+  - reference: DOI:10.1083/jcb.142.3.665
+  posed_by: codex
+  posed_date: '2026-09-16'
