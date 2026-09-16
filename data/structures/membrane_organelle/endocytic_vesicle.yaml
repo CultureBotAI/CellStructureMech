@@ -1,0 +1,163 @@
+identifier: GO:0030139
+label: endocytic vesicle
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A membrane-bounded intracellular vesicle formed by invagination of the
+  plasma membrane around an extracellular substance. Endocytic vesicles fuse with
+  early endosomes to deliver the cargo for further sorting.
+definition_source: GO:0030139
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T09:52:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T09:53:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic-vesicle parentage, endocytic-vesicle membrane and lumen
+    parts, Saccharomyces endocytic-site scope, an endocytosis function, GO/DOI evidence,
+    a nonmechanistic membrane/lumen topology graph, and a resolved coats-and-cargo
+    boundary discussion.
+  llm_assisted: true
+parent_structures:
+- GO:0031410
+has_part:
+- GO:0030666
+- GO:0071682
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms clathrin- and actin-mediated endocytic vesicles at cortical
+    endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model used to resolve the ordered cortical module dynamics that
+    accompany endocytic vesicle formation.
+  reference: DOI:10.1016/j.cell.2005.09.024
+functions:
+- function_id: endocytosis
+  label: endocytosis
+  grounding: GO:0006897
+  description: Endocytic vesicles are membrane-bounded carriers produced by plasma-membrane
+    invagination during uptake of external material or membrane constituents.
+  evidence:
+  - reference: GO:0006897
+    notes: GO:0006897 defines endocytosis as uptake through plasma-membrane invagination
+      to form a new membrane-bounded vesicle.
+  - reference: GO:0030139
+    notes: GO:0030139 defines endocytic vesicles as membrane-bounded intracellular
+      vesicles produced by plasma-membrane invagination.
+evidence:
+- reference: GO:0030139
+  notes: Gene Ontology cellular-component term for endocytic vesicles.
+- reference: GO:0031410
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicles.
+- reference: GO:0030666
+  notes: Gene Ontology cellular-component term for the endocytic vesicle membrane.
+- reference: GO:0071682
+  notes: Gene Ontology cellular-component term for the endocytic vesicle lumen.
+- reference: GO:0006897
+  notes: Gene Ontology biological-process term for endocytosis.
+- reference: DOI:10.1016/j.devcel.2005.04.014
+  notes: Newpher et al. 2005, In Vivo Dynamics of Clathrin and Its Adaptor-Dependent
+    Recruitment to the Actin-Based Endocytic Machinery in Yeast, Developmental Cell.
+- reference: DOI:10.1016/j.cell.2005.09.024
+  notes: Kaksonen, Toret and Drubin 2005, A Modular Design for the Clathrin- and Actin-Mediated
+    Endocytosis Machinery, Cell.
+causal_graphs:
+- graph_id: endocytic_vesicle_topology
+  title: Endocytic vesicle topology
+  description: The endocytic vesicle membrane bounds the endocytic vesicle lumen inside
+    an endocytic vesicle that forms during endocytosis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the generic membrane-bounded endocytic carrier,
+    its membrane and lumen parts, and its endocytic transport scope without asserting
+    a clathrin coat, an adaptor system, or a stable cargo cohort.
+  nodes:
+  - node_id: endocytic_vesicle_membrane
+    label: endocytic vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030666
+  - node_id: endocytic_vesicle_lumen
+    label: endocytic vesicle lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0071682
+  - node_id: endocytic_vesicle
+    label: endocytic vesicle
+    node_type: ORGANELLE
+    grounding: GO:0030139
+  - node_id: endocytosis
+    label: endocytosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006897
+  edges:
+  - subject: endocytic_vesicle_membrane
+    predicate: is part of
+    object: endocytic_vesicle
+    description: The endocytic vesicle membrane is the lipid-bilayer boundary of an
+      endocytic vesicle.
+    evidence:
+    - reference: GO:0030666
+      notes: GO:0030666 identifies the membrane surrounding an endocytic vesicle.
+    - reference: GO:0030139
+      notes: GO:0030139 identifies the containing endocytic vesicle.
+  - subject: endocytic_vesicle_lumen
+    predicate: is part of
+    object: endocytic_vesicle
+    description: The endocytic vesicle lumen is the bounded volume inside an endocytic
+      vesicle.
+    evidence:
+    - reference: GO:0071682
+      notes: GO:0071682 identifies the volume enclosed by an endocytic vesicle membrane.
+    - reference: GO:0030139
+      notes: GO:0030139 identifies the enclosing endocytic vesicle.
+  - subject: endocytic_vesicle_membrane
+    predicate: bounds
+    object: endocytic_vesicle_lumen
+    description: The endocytic vesicle membrane bounds the endocytic vesicle lumen.
+    evidence:
+    - reference: GO:0030666
+      notes: GO:0030666 identifies the membrane surrounding an endocytic vesicle.
+    - reference: GO:0071682
+      notes: GO:0071682 defines the endocytic vesicle lumen by enclosure within the
+        vesicle membrane.
+  - subject: endocytic_vesicle
+    predicate: participates in
+    object: endocytosis
+    description: Endocytic vesicles form as membrane-bounded carriers during endocytosis.
+    evidence:
+    - reference: GO:0006897
+      notes: GO:0006897 defines endocytosis as forming a new membrane-bounded vesicle.
+    - reference: GO:0030139
+      notes: GO:0030139 defines an endocytic vesicle as produced by plasma-membrane
+        invagination.
+discussions:
+- discussion_id: keep_coats_and_cargo_on_subtype_records
+  prompt: Keep clathrin coats, subtype-specific adaptors, and internalized cargo out
+    of the generic endocytic vesicle record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#endocytic_vesicle_topology
+  rationale: GO:0030139 spans membrane-bounded endocytic carriers independent of a
+    specific coat or cargo set, while clathrin coats and clathrin-adaptor machinery
+    belong on narrower clathrin-coated endocytic-vesicle records.
+  resolution_note: Modeled only the broad membrane/lumen topology of the endocytic
+    vesicle and left clathrin coats, adaptors, and cargo to subtype records.
+  evidence:
+  - reference: GO:0030139
+    notes: GO:0030139 identifies the broad endocytic vesicle class.
+  - reference: GO:0045334
+    notes: GO:0045334 identifies the narrower clathrin-coated endocytic vesicle.
+  - reference: GO:0030128
+    notes: GO:0030128 identifies the endocytic-vesicle clathrin coat.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
