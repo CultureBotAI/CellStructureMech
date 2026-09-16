@@ -43,7 +43,89 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-chlamydomonas_chloroplast_envelope_and_import">Chloroplast envelope and thylakoids organize import <small>(FUNCTION)</small></h3>
-<p>In Chlamydomonas, two envelope membranes bound the chloroplast stroma, thylakoid membranes provide internal photosynthetic compartments, and a TOC-TIC supercomplex spans both envelope membranes during protein import.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>In Chlamydomonas, two envelope membranes bound the chloroplast stroma, thylakoid membranes provide internal photosynthetic compartments, and a TOC-TIC supercomplex spans both envelope membranes during protein import.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-01cf4d9564ca0367-scale"/><label for="graph-01cf4d9564ca0367-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-01cf4d9564ca0367-scale:checked ~ div svg {width:1228px;height:824px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-01cf4d9564ca0367-title graph-01cf4d9564ca0367-desc" width="1228" height="824" viewBox="0 0 1228 824" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-01cf4d9564ca0367-title">Chloroplast envelope and thylakoids organize import</title>
+<desc id="graph-01cf4d9564ca0367-desc">9 nodes and 8 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-01cf4d9564ca0367-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="chloroplast envelope — encloses → chloroplast; Evidence: GO:0009941" data-subject="chloroplast_envelope" data-object="chloroplast">
+<title>chloroplast envelope — encloses → chloroplast; Evidence: GO:0009941</title><path d="M712,108.0 C802.0,108.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-01cf4d9564ca0367-arrow)"/>
+<text x="802.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">encloses</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="chloroplast outer membrane — is part of → chloroplast envelope; Evidence: GO:0009707" data-subject="chloroplast_outer_membrane" data-object="chloroplast_envelope">
+<title>chloroplast outer membrane — is part of → chloroplast envelope; Evidence: GO:0009707</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-01cf4d9564ca0367-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">is part of</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="chloroplast inner membrane — is part of → chloroplast envelope; Evidence: GO:0009706" data-subject="chloroplast_inner_membrane" data-object="chloroplast_envelope">
+<title>chloroplast inner membrane — is part of → chloroplast envelope; Evidence: GO:0009706</title><path d="M296,274.0 C386.0,274.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-01cf4d9564ca0367-arrow)"/>
+<text x="386.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">is part of</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="chloroplast envelope — bounds → chloroplast stroma; Evidence: GO:0009570" data-subject="chloroplast_envelope" data-object="chloroplast_stroma">
+<title>chloroplast envelope — bounds → chloroplast stroma; Evidence: GO:0009570</title><path d="M712,108.0 C802.0,108.0 802.0,274.0 892,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-01cf4d9564ca0367-arrow)"/>
+<text x="802.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">bounds</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="chloroplast thylakoid — is embedded in → chloroplast stroma; Evidence: GO:0009507" data-subject="chloroplast_thylakoid" data-object="chloroplast_stroma">
+<title>chloroplast thylakoid — is embedded in → chloroplast stroma; Evidence: GO:0009507</title><path d="M712,274.0 C802.0,274.0 802.0,274.0 892,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-01cf4d9564ca0367-arrow)"/>
+<text x="802.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">is embedded in</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="chloroplast thylakoid membrane — bounds → chloroplast thylakoid; Evidence: GO:0009535" data-subject="chloroplast_thylakoid_membrane" data-object="chloroplast_thylakoid">
+<title>chloroplast thylakoid membrane — bounds → chloroplast thylakoid; Evidence: GO:0009535</title><path d="M296,440.0 C386.0,440.0 386.0,274.0 476,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-01cf4d9564ca0367-arrow)"/>
+<text x="386.0" y="347.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">bounds</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="TOC-TIC import supercomplex — spans → chloroplast envelope; Evidence: DOI:10.1016/j.cell.2022.10.030" data-subject="toc_tic_supercomplex" data-object="chloroplast_envelope">
+<title>TOC-TIC import supercomplex — spans → chloroplast envelope; Evidence: DOI:10.1016/j.cell.2022.10.030</title><path d="M296,606.0 C386.0,606.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-01cf4d9564ca0367-arrow)"/>
+<text x="386.0" y="347.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">spans</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="TOC-TIC import supercomplex — mediates → protein import into chloroplast stroma; Evidence: DOI:10.1016/j.cell.2022.10.030" data-subject="toc_tic_supercomplex" data-object="protein_import_into_chloroplast_stroma">
+<title>TOC-TIC import supercomplex — mediates → protein import into chloroplast stroma; Evidence: DOI:10.1016/j.cell.2022.10.030</title><path d="M296,606.0 C386.0,606.0 386.0,440.0 476,440.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-01cf4d9564ca0367-arrow)"/>
+<text x="386.0" y="513.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">mediates</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="chloroplast (STRUCTURE); chloroplast; GO:0009507" data-node-id="chloroplast"><title>chloroplast (STRUCTURE); chloroplast; GO:0009507</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="904" y="109" fill="#172033">chloroplast</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="chloroplast envelope (STRUCTURE); chloroplast_envelope; GO:0009941" data-node-id="chloroplast_envelope"><title>chloroplast envelope (STRUCTURE); chloroplast_envelope; GO:0009941</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="488" y="109" fill="#172033">chloroplast envelope</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="chloroplast outer membrane (STRUCTURE); chloroplast_outer_membrane; GO:0009707" data-node-id="chloroplast_outer_membrane"><title>chloroplast outer membrane (STRUCTURE); chloroplast_outer_membrane; GO:0009707</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="72" y="109" fill="#172033">chloroplast outer membrane</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="chloroplast inner membrane (STRUCTURE); chloroplast_inner_membrane; GO:0009706" data-node-id="chloroplast_inner_membrane"><title>chloroplast inner membrane (STRUCTURE); chloroplast_inner_membrane; GO:0009706</title>
+<rect x="60" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="255" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="72" y="275" fill="#172033">chloroplast inner membrane</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="chloroplast stroma (CELLULAR_LOCALIZATION); chloroplast_stroma; GO:0009570" data-node-id="chloroplast_stroma"><title>chloroplast stroma (CELLULAR_LOCALIZATION); chloroplast_stroma; GO:0009570</title>
+<rect x="892" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="255" fill="#075985" font-size="10">CELLULAR_LOCALIZATION</text>
+<text x="904" y="275" fill="#172033">chloroplast stroma</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="chloroplast thylakoid (STRUCTURE); chloroplast_thylakoid; GO:0009534" data-node-id="chloroplast_thylakoid"><title>chloroplast thylakoid (STRUCTURE); chloroplast_thylakoid; GO:0009534</title>
+<rect x="476" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="255" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="488" y="275" fill="#172033">chloroplast thylakoid</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="chloroplast thylakoid membrane (STRUCTURE); chloroplast_thylakoid_membrane; GO:0009535" data-node-id="chloroplast_thylakoid_membrane"><title>chloroplast thylakoid membrane (STRUCTURE); chloroplast_thylakoid_membrane; GO:0009535</title>
+<rect x="60" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="421" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="72" y="441" fill="#172033">chloroplast thylakoid</text>
+<text x="72" y="458" fill="#172033">membrane</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="TOC-TIC import supercomplex (GENE_OR_PROTEIN); toc_tic_supercomplex" data-node-id="toc_tic_supercomplex"><title>TOC-TIC import supercomplex (GENE_OR_PROTEIN); toc_tic_supercomplex</title>
+<rect x="60" y="568" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="587" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="607" fill="#172033">TOC-TIC import supercomplex</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="protein import into chloroplast stroma (BIOLOGICAL_PROCESS); protein_import_into_chloroplast_stroma; GO:0045037" data-node-id="protein_import_into_chloroplast_stroma"><title>protein import into chloroplast stroma (BIOLOGICAL_PROCESS); protein_import_into_chloroplast_stroma; GO:0045037</title>
+<rect x="476" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="421" fill="#075985" font-size="10">BIOLOGICAL_PROCESS</text>
+<text x="488" y="441" fill="#172033">protein import into</text>
+<text x="488" y="458" fill="#172033">chloroplast stroma</text>
+</g>
+</svg></div></figure>
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>chloroplast envelope</td><td>encloses</td><td>chloroplast</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009941"><code>GO:0009941</code></a> <small>GO:0009941 defines the chloroplast envelope as the double lipid bilayer enclosing the chloroplast.</small></li></ul></td></tr>
 <tr><td>chloroplast outer membrane</td><td>is part of</td><td>chloroplast envelope</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009707"><code>GO:0009707</code></a> <small>GO:0009707 places the chloroplast outer membrane in the chloroplast envelope.</small></li></ul></td></tr>
 <tr><td>chloroplast inner membrane</td><td>is part of</td><td>chloroplast envelope</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009706"><code>GO:0009706</code></a> <small>GO:0009706 places the chloroplast inner membrane in the chloroplast envelope.</small></li></ul></td></tr>

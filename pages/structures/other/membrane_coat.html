@@ -39,7 +39,49 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-membrane_coat_scaffold_assembly">Protein modules assemble a membrane coat <small>(ASSEMBLY)</small></h3>
-<p>Membrane-coat scaffold proteins and subtype-specific recruitment modules associate with a membrane to form a proteinaceous coat.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Membrane-coat scaffold proteins and subtype-specific recruitment modules associate with a membrane to form a proteinaceous coat.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-c5abd35b0ab581f9-scale"/><label for="graph-c5abd35b0ab581f9-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-c5abd35b0ab581f9-scale:checked ~ div svg {width:1228px;height:442px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-c5abd35b0ab581f9-title graph-c5abd35b0ab581f9-desc" width="1228" height="442" viewBox="0 0 1228 442" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-c5abd35b0ab581f9-title">Protein modules assemble a membrane coat</title>
+<desc id="graph-c5abd35b0ab581f9-desc">4 nodes and 3 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-c5abd35b0ab581f9-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="membrane-coat adaptor and recruitment modules — helps recruit → membrane-coat scaffold proteins; Evidence: GO:0030119; DOI:10.1016/0092-8674(91)90176-y" data-subject="membrane_coat_recruitment_modules" data-object="membrane_coat_scaffold_proteins">
+<title>membrane-coat adaptor and recruitment modules — helps recruit → membrane-coat scaffold proteins; Evidence: GO:0030119; DOI:10.1016/0092-8674(91)90176-y</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c5abd35b0ab581f9-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">helps recruit</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="membrane-coat scaffold proteins — assembles at → membrane surface; Evidence: GO:0030117" data-subject="membrane_coat_scaffold_proteins" data-object="membrane_surface">
+<title>membrane-coat scaffold proteins — assembles at → membrane surface; Evidence: GO:0030117</title><path d="M712,108.0 C802.0,108.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c5abd35b0ab581f9-arrow)"/>
+<text x="802.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">assembles at</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="membrane-coat scaffold proteins — forms → membrane coat; Evidence: GO:0030117" data-subject="membrane_coat_scaffold_proteins" data-object="membrane_coat">
+<title>membrane-coat scaffold proteins — forms → membrane coat; Evidence: GO:0030117</title><path d="M712,108.0 C802.0,108.0 802.0,274.0 892,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c5abd35b0ab581f9-arrow)"/>
+<text x="802.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">forms</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="membrane surface (CELLULAR_LOCALIZATION); membrane_surface" data-node-id="membrane_surface"><title>membrane surface (CELLULAR_LOCALIZATION); membrane_surface</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">CELLULAR_LOCALIZATION</text>
+<text x="904" y="109" fill="#172033">membrane surface</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="membrane-coat scaffold proteins (GENE_OR_PROTEIN); membrane_coat_scaffold_proteins" data-node-id="membrane_coat_scaffold_proteins"><title>membrane-coat scaffold proteins (GENE_OR_PROTEIN); membrane_coat_scaffold_proteins</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="488" y="109" fill="#172033">membrane-coat scaffold</text>
+<text x="488" y="126" fill="#172033">proteins</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="membrane-coat adaptor and recruitment modules (GENE_OR_PROTEIN); membrane_coat_recruitment_modules" data-node-id="membrane_coat_recruitment_modules"><title>membrane-coat adaptor and recruitment modules (GENE_OR_PROTEIN); membrane_coat_recruitment_modules</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="109" fill="#172033">membrane-coat adaptor and</text>
+<text x="72" y="126" fill="#172033">recruitment modules</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="membrane coat (STRUCTURE); membrane_coat; GO:0030117" data-node-id="membrane_coat"><title>membrane coat (STRUCTURE); membrane_coat; GO:0030117</title>
+<rect x="892" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="255" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="904" y="275" fill="#172033">membrane coat</text>
+</g>
+</svg></div></figure>
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>membrane-coat adaptor and recruitment modules</td><td>helps recruit</td><td>membrane-coat scaffold proteins</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030119"><code>GO:0030119</code></a> <small>GO defines AP-type membrane coat adaptor complexes as adaptors between a protein scaffold and a membrane or cargo.</small></li><li><a href="https://doi.org/10.1016/0092-8674(91)90176-y"><code>DOI:10.1016/0092-8674(91)90176-y</code></a> <small>Serafini et al. 1991 identified Arf as a COP coat subunit on Golgi-derived coated vesicles.</small></li></ul></td></tr>
 <tr><td>membrane-coat scaffold proteins</td><td>assembles at</td><td>membrane surface</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030117"><code>GO:0030117</code></a> <small>GO defines membrane coats as proteinaceous coats that can associate with membranes.</small></li></ul></td></tr>
 <tr><td>membrane-coat scaffold proteins</td><td>forms</td><td>membrane coat</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030117"><code>GO:0030117</code></a> <small>GO lists clathrin/adaptor, COPI, and COPII coats as examples of proteinaceous membrane coats.</small></li></ul></td></tr>

@@ -36,7 +36,68 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-yeast_escrt_mvb_vesicle_formation">ESCRT machinery forms intraluminal vesicles in yeast MVBs <small>(ASSEMBLY)</small></h3>
-<p>In Saccharomyces cerevisiae, ESCRT complexes sort ubiquitinated endosomal membrane cargo and remodel the multivesicular-body membrane to generate intraluminal vesicles.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>In Saccharomyces cerevisiae, ESCRT complexes sort ubiquitinated endosomal membrane cargo and remodel the multivesicular-body membrane to generate intraluminal vesicles.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-bceb924f19ca2aca-scale"/><label for="graph-bceb924f19ca2aca-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-bceb924f19ca2aca-scale:checked ~ div svg {width:2060px;height:462px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-bceb924f19ca2aca-title graph-bceb924f19ca2aca-desc" width="2060" height="462" viewBox="0 0 2060 462" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-bceb924f19ca2aca-title">ESCRT machinery forms intraluminal vesicles in yeast MVBs</title>
+<desc id="graph-bceb924f19ca2aca-desc">7 nodes and 5 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-bceb924f19ca2aca-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="ESCRT I complex — sorts → ubiquitinated membrane cargo; Evidence: DOI:10.1016/S0092-8674(01)00434-2" data-subject="escrt_i" data-object="ubiquitinated_membrane_cargo">
+<title>ESCRT I complex — sorts → ubiquitinated membrane cargo; Evidence: DOI:10.1016/S0092-8674(01)00434-2</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bceb924f19ca2aca-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">sorts</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="ESCRT II complex — recruits → ESCRT III complex; Evidence: DOI:10.1016/S1534-5807(02)00219-8" data-subject="escrt_ii" data-object="escrt_iii">
+<title>ESCRT II complex — recruits → ESCRT III complex; Evidence: DOI:10.1016/S1534-5807(02)00219-8</title><path d="M296,274.0 C386.0,274.0 386.0,274.0 476,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bceb924f19ca2aca-arrow)"/>
+<text x="386.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">recruits</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="ESCRT III complex — remodels → multivesicular body membrane; Evidence: DOI:10.1016/S1534-5807(02)00220-4; DOI:10.1016/j.devcel.2011.05.015" data-subject="escrt_iii" data-object="multivesicular_body_membrane">
+<title>ESCRT III complex — remodels → multivesicular body membrane; Evidence: DOI:10.1016/S1534-5807(02)00220-4; DOI:10.1016/j.devcel.2011.05.015</title><path d="M712,274.0 C802.0,274.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bceb924f19ca2aca-arrow)"/>
+<text x="802.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">remodels</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="multivesicular body membrane — buds inward to form → intraluminal vesicle; Evidence: GO:0005771" data-subject="multivesicular_body_membrane" data-object="intraluminal_vesicle">
+<title>multivesicular body membrane — buds inward to form → intraluminal vesicle; Evidence: GO:0005771</title><path d="M1128,108.0 C1218.0,108.0 1218.0,108.0 1308,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bceb924f19ca2aca-arrow)"/>
+<text x="1218.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">buds inward to form</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="intraluminal vesicle — is contained in → multivesicular body; Evidence: GO:0005771" data-subject="intraluminal_vesicle" data-object="multivesicular_body">
+<title>intraluminal vesicle — is contained in → multivesicular body; Evidence: GO:0005771</title><path d="M1544,108.0 C1634.0,108.0 1634.0,108.0 1724,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bceb924f19ca2aca-arrow)"/>
+<text x="1634.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">is contained in</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="multivesicular body membrane (STRUCTURE); multivesicular_body_membrane; GO:0032585" data-node-id="multivesicular_body_membrane"><title>multivesicular body membrane (STRUCTURE); multivesicular_body_membrane; GO:0032585</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="904" y="109" fill="#172033">multivesicular body membrane</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="ubiquitinated membrane cargo (STATE); ubiquitinated_membrane_cargo" data-node-id="ubiquitinated_membrane_cargo"><title>ubiquitinated membrane cargo (STATE); ubiquitinated_membrane_cargo</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">STATE</text>
+<text x="488" y="109" fill="#172033">ubiquitinated membrane cargo</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="ESCRT I complex (STRUCTURE); escrt_i; GO:0000813" data-node-id="escrt_i"><title>ESCRT I complex (STRUCTURE); escrt_i; GO:0000813</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="72" y="109" fill="#172033">ESCRT I complex</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="ESCRT II complex (STRUCTURE); escrt_ii; GO:0000814" data-node-id="escrt_ii"><title>ESCRT II complex (STRUCTURE); escrt_ii; GO:0000814</title>
+<rect x="60" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="255" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="72" y="275" fill="#172033">ESCRT II complex</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="ESCRT III complex (STRUCTURE); escrt_iii; GO:0000815" data-node-id="escrt_iii"><title>ESCRT III complex (STRUCTURE); escrt_iii; GO:0000815</title>
+<rect x="476" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="255" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="488" y="275" fill="#172033">ESCRT III complex</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="intraluminal vesicle (STRUCTURE); intraluminal_vesicle" data-node-id="intraluminal_vesicle"><title>intraluminal vesicle (STRUCTURE); intraluminal_vesicle</title>
+<rect x="1308" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="1320" y="109" fill="#172033">intraluminal vesicle</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="multivesicular body (ORGANELLE); multivesicular_body; GO:0005771" data-node-id="multivesicular_body"><title>multivesicular body (ORGANELLE); multivesicular_body; GO:0005771</title>
+<rect x="1724" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1736" y="89" fill="#075985" font-size="10">ORGANELLE</text>
+<text x="1736" y="109" fill="#172033">multivesicular body</text>
+</g>
+</svg></div></figure>
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>ESCRT I complex</td><td>sorts</td><td>ubiquitinated membrane cargo</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/S0092-8674(01)00434-2"><code>DOI:10.1016/S0092-8674(01)00434-2</code></a> <small>Katzmann, Babst and Emr 2001 showed ESCRT-I is needed for ubiquitin-dependent MVB cargo sorting.</small></li></ul></td></tr>
 <tr><td>ESCRT II complex</td><td>recruits</td><td>ESCRT III complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/S1534-5807(02)00219-8"><code>DOI:10.1016/S1534-5807(02)00219-8</code></a> <small>Babst et al. 2002 identified ESCRT-II as an endosome-associated complex upstream of ESCRT-III.</small></li></ul></td></tr>
 <tr><td>ESCRT III complex</td><td>remodels</td><td>multivesicular body membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/S1534-5807(02)00220-4"><code>DOI:10.1016/S1534-5807(02)00220-4</code></a> <small>Babst et al. 2002 characterized yeast ESCRT-III as an endosome-associated complex required for MVB sorting.</small></li><li><a href="https://doi.org/10.1016/j.devcel.2011.05.015"><code>DOI:10.1016/j.devcel.2011.05.015</code></a> <small>Henne, Buchkovich and Emr 2011 reviewed ESCRT-III as the membrane-remodeling complex in the endosomal ESCRT pathway.</small></li></ul></td></tr>

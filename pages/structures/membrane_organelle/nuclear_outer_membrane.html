@@ -40,7 +40,71 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-yeast_nuclear_outer_membrane_contacts">Yeast nuclear outer membrane forms vacuole contacts <small>(FUNCTION)</small></h3>
-<p>The nuclear outer membrane is the cytoplasm-facing nuclear envelope membrane and carries Nvj1p for yeast nucleus-vacuole junction formation.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The nuclear outer membrane is the cytoplasm-facing nuclear envelope membrane and carries Nvj1p for yeast nucleus-vacuole junction formation.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-cd86037e5797159c-scale"/><label for="graph-cd86037e5797159c-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-cd86037e5797159c-scale:checked ~ div svg {width:1228px;height:638px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-cd86037e5797159c-title graph-cd86037e5797159c-desc" width="1228" height="638" viewBox="0 0 1228 638" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-cd86037e5797159c-title">Yeast nuclear outer membrane forms vacuole contacts</title>
+<desc id="graph-cd86037e5797159c-desc">7 nodes and 6 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-cd86037e5797159c-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="nuclear outer membrane — is part of → nuclear envelope; Evidence: GO:0005640" data-subject="nuclear_outer_membrane" data-object="nuclear_envelope">
+<title>nuclear outer membrane — is part of → nuclear envelope; Evidence: GO:0005640</title><path d="M712,108.0 C802.0,108.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-cd86037e5797159c-arrow)"/>
+<text x="802.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">is part of</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="nuclear envelope lumen — lies between → nuclear outer membrane; Evidence: GO:0005641; GO:0005637; GO:0005640" data-subject="nuclear_envelope_lumen" data-object="nuclear_outer_membrane">
+<title>nuclear envelope lumen — lies between → nuclear outer membrane; Evidence: GO:0005641; GO:0005637; GO:0005640</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-cd86037e5797159c-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">lies between</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="nuclear envelope lumen — lies between → nuclear inner membrane; Evidence: GO:0005641; GO:0005637" data-subject="nuclear_envelope_lumen" data-object="nuclear_inner_membrane">
+<title>nuclear envelope lumen — lies between → nuclear inner membrane; Evidence: GO:0005641; GO:0005637</title><path d="M296,108.0 C386.0,108.0 386.0,274.0 476,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-cd86037e5797159c-arrow)"/>
+<text x="386.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">lies between</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Nvj1p — localizes to → nuclear outer membrane; Evidence: DOI:10.1091/mbc.11.7.2445" data-subject="nvj1p" data-object="nuclear_outer_membrane">
+<title>Nvj1p — localizes to → nuclear outer membrane; Evidence: DOI:10.1091/mbc.11.7.2445</title><path d="M296,274.0 C386.0,274.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-cd86037e5797159c-arrow)"/>
+<text x="386.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">localizes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Vac8p — localizes to → vacuolar membrane; Evidence: DOI:10.1091/mbc.11.7.2445" data-subject="vac8p" data-object="vacuolar_membrane">
+<title>Vac8p — localizes to → vacuolar membrane; Evidence: DOI:10.1091/mbc.11.7.2445</title><path d="M712,440.0 C802.0,440.0 802.0,274.0 892,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-cd86037e5797159c-arrow)"/>
+<text x="802.0" y="347.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">localizes to</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="Nvj1p — interacts with → Vac8p; Evidence: DOI:10.1091/mbc.11.7.2445" data-subject="nvj1p" data-object="vac8p">
+<title>Nvj1p — interacts with → Vac8p; Evidence: DOI:10.1091/mbc.11.7.2445</title><path d="M296,274.0 C386.0,274.0 386.0,440.0 476,440.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-cd86037e5797159c-arrow)"/>
+<text x="386.0" y="347.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">interacts with</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="nuclear outer membrane (STRUCTURE); nuclear_outer_membrane; GO:0005640" data-node-id="nuclear_outer_membrane"><title>nuclear outer membrane (STRUCTURE); nuclear_outer_membrane; GO:0005640</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="488" y="109" fill="#172033">nuclear outer membrane</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="nuclear envelope (STRUCTURE); nuclear_envelope; GO:0005635" data-node-id="nuclear_envelope"><title>nuclear envelope (STRUCTURE); nuclear_envelope; GO:0005635</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="904" y="109" fill="#172033">nuclear envelope</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="nuclear inner membrane (STRUCTURE); nuclear_inner_membrane; GO:0005637" data-node-id="nuclear_inner_membrane"><title>nuclear inner membrane (STRUCTURE); nuclear_inner_membrane; GO:0005637</title>
+<rect x="476" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="255" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="488" y="275" fill="#172033">nuclear inner membrane</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="nuclear envelope lumen (CELLULAR_LOCALIZATION); nuclear_envelope_lumen; GO:0005641" data-node-id="nuclear_envelope_lumen"><title>nuclear envelope lumen (CELLULAR_LOCALIZATION); nuclear_envelope_lumen; GO:0005641</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">CELLULAR_LOCALIZATION</text>
+<text x="72" y="109" fill="#172033">nuclear envelope lumen</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="vacuolar membrane (STRUCTURE); vacuolar_membrane; GO:0005774" data-node-id="vacuolar_membrane"><title>vacuolar membrane (STRUCTURE); vacuolar_membrane; GO:0005774</title>
+<rect x="892" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="255" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="904" y="275" fill="#172033">vacuolar membrane</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Nvj1p (GENE_OR_PROTEIN); nvj1p" data-node-id="nvj1p"><title>Nvj1p (GENE_OR_PROTEIN); nvj1p</title>
+<rect x="60" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="255" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="275" fill="#172033">Nvj1p</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="Vac8p (GENE_OR_PROTEIN); vac8p" data-node-id="vac8p"><title>Vac8p (GENE_OR_PROTEIN); vac8p</title>
+<rect x="476" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="421" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="488" y="441" fill="#172033">Vac8p</text>
+</g>
+</svg></div></figure>
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>nuclear outer membrane</td><td>is part of</td><td>nuclear envelope</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a> <small>GO:0005640 defines the nuclear outer membrane as the cytoplasm-facing lipid bilayer of the nuclear envelope.</small></li></ul></td></tr>
 <tr><td>nuclear envelope lumen</td><td>lies between</td><td>nuclear outer membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005641"><code>GO:0005641</code></a> <small>GO:0005641 defines the nuclear envelope lumen as the region between the two nuclear envelope bilayers.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005637"><code>GO:0005637</code></a> <small>GO:0005637 identifies the inner nuclear envelope bilayer.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a> <small>GO:0005640 identifies the outer nuclear envelope bilayer.</small></li></ul></td></tr>
 <tr><td>nuclear envelope lumen</td><td>lies between</td><td>nuclear inner membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005641"><code>GO:0005641</code></a> <small>GO:0005641 defines the nuclear envelope lumen as the region between the two nuclear envelope bilayers.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005637"><code>GO:0005637</code></a> <small>GO:0005637 identifies the inner nuclear envelope bilayer.</small></li></ul></td></tr>

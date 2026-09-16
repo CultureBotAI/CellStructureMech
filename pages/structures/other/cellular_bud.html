@@ -36,7 +36,47 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-cellular_bud_topology">Cellular bud topology <small>(FUNCTION)</small></h3>
-<p>The yeast cellular bud has a surrounding bud membrane, a distal bud tip, and a bud neck that constricts the connection between the mother and daughter cell.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The yeast cellular bud has a surrounding bud membrane, a distal bud tip, and a bud neck that constricts the connection between the mother and daughter cell.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-c070ee85c819fa20-scale"/><label for="graph-c070ee85c819fa20-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-c070ee85c819fa20-scale:checked ~ div svg {width:812px;height:608px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-c070ee85c819fa20-title graph-c070ee85c819fa20-desc" width="812" height="608" viewBox="0 0 812 608" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-c070ee85c819fa20-title">Cellular bud topology</title>
+<desc id="graph-c070ee85c819fa20-desc">4 nodes and 3 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-c070ee85c819fa20-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="cellular bud membrane — surrounds → cellular bud; Evidence: GO:0033101; uniprot.location:SL-0028" data-subject="bud_membrane" data-object="cellular_bud">
+<title>cellular bud membrane — surrounds → cellular bud; Evidence: GO:0033101; uniprot.location:SL-0028</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c070ee85c819fa20-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">surrounds</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="cellular bud neck — is part of → cellular bud; Evidence: GO:0005935; uniprot.location:SL-0029" data-subject="bud_neck" data-object="cellular_bud">
+<title>cellular bud neck — is part of → cellular bud; Evidence: GO:0005935; uniprot.location:SL-0029</title><path d="M296,274.0 C386.0,274.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c070ee85c819fa20-arrow)"/>
+<text x="386.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">is part of</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="cellular bud tip — is part of → cellular bud; Evidence: GO:0005934; uniprot.location:SL-0030" data-subject="bud_tip" data-object="cellular_bud">
+<title>cellular bud tip — is part of → cellular bud; Evidence: GO:0005934; uniprot.location:SL-0030</title><path d="M296,440.0 C386.0,440.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-c070ee85c819fa20-arrow)"/>
+<text x="386.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">is part of</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="cellular bud (STRUCTURE); cellular_bud; GO:0005933" data-node-id="cellular_bud"><title>cellular bud (STRUCTURE); cellular_bud; GO:0005933</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="488" y="109" fill="#172033">cellular bud</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="cellular bud membrane (STRUCTURE); bud_membrane; GO:0033101" data-node-id="bud_membrane"><title>cellular bud membrane (STRUCTURE); bud_membrane; GO:0033101</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="72" y="109" fill="#172033">cellular bud membrane</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="cellular bud neck (CELLULAR_LOCALIZATION); bud_neck; GO:0005935" data-node-id="bud_neck"><title>cellular bud neck (CELLULAR_LOCALIZATION); bud_neck; GO:0005935</title>
+<rect x="60" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="255" fill="#075985" font-size="10">CELLULAR_LOCALIZATION</text>
+<text x="72" y="275" fill="#172033">cellular bud neck</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="cellular bud tip (CELLULAR_LOCALIZATION); bud_tip; GO:0005934" data-node-id="bud_tip"><title>cellular bud tip (CELLULAR_LOCALIZATION); bud_tip; GO:0005934</title>
+<rect x="60" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="421" fill="#075985" font-size="10">CELLULAR_LOCALIZATION</text>
+<text x="72" y="441" fill="#172033">cellular bud tip</text>
+</g>
+</svg></div></figure>
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>cellular bud membrane</td><td>surrounds</td><td>cellular bud</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033101"><code>GO:0033101</code></a> <small>GO:0033101 identifies the membrane of the cellular bud.</small></li><li><code>uniprot.location:SL-0028</code> <small>UniProt SL-0028 places the bud membrane under the Bud location.</small></li></ul></td></tr>
 <tr><td>cellular bud neck</td><td>is part of</td><td>cellular bud</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005935"><code>GO:0005935</code></a> <small>GO:0005935 identifies the cellular bud neck.</small></li><li><code>uniprot.location:SL-0029</code> <small>UniProt SL-0029 places the bud neck under the Bud location.</small></li></ul></td></tr>
 <tr><td>cellular bud tip</td><td>is part of</td><td>cellular bud</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005934"><code>GO:0005934</code></a> <small>GO:0005934 identifies the cellular bud tip.</small></li><li><code>uniprot.location:SL-0030</code> <small>UniProt SL-0030 places the bud tip under the Bud location.</small></li></ul></td></tr>

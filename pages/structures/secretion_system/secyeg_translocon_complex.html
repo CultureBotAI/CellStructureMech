@@ -57,7 +57,74 @@ family; these are the specific entries behind it.</small></p>
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-seca_driven_preprotein_translocation">SecA drives preproteins through SecYEG <small>(FUNCTION)</small></h3>
-<p>SecY and SecE form the stabilized channel core, SecG completes the bacterial SecYEG heterotrimer, and the SecA ATPase drives unfolded preproteins through the SecY pore during post-translational secretion.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>SecY and SecE form the stabilized channel core, SecG completes the bacterial SecYEG heterotrimer, and the SecA ATPase drives unfolded preproteins through the SecY pore during post-translational secretion.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-027c3bbe3df51944-scale"/><label for="graph-027c3bbe3df51944-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-027c3bbe3df51944-scale:checked ~ div svg {width:1644px;height:638px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-027c3bbe3df51944-title graph-027c3bbe3df51944-desc" width="1644" height="638" viewBox="0 0 1644 638" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-027c3bbe3df51944-title">SecA drives preproteins through SecYEG</title>
+<desc id="graph-027c3bbe3df51944-desc">7 nodes and 6 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-027c3bbe3df51944-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="SecE clamp subunit — stabilizes → SecY protein-conducting channel subunit; Evidence: DOI:10.1146/annurev-biophys-050511-102312" data-subject="sece_clamp_subunit" data-object="secy_channel_subunit">
+<title>SecE clamp subunit — stabilizes → SecY protein-conducting channel subunit; Evidence: DOI:10.1146/annurev-biophys-050511-102312</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-027c3bbe3df51944-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">stabilizes</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="SecY protein-conducting channel subunit — forms pore of → SecYEG translocon complex; Evidence: DOI:10.1038/nature17163" data-subject="secy_channel_subunit" data-object="secyeg">
+<title>SecY protein-conducting channel subunit — forms pore of → SecYEG translocon complex; Evidence: DOI:10.1038/nature17163</title><path d="M712,108.0 C802.0,108.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-027c3bbe3df51944-arrow)"/>
+<text x="802.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">forms pore of</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="SecG accessory channel subunit — associates with → SecY protein-conducting channel subunit; Evidence: DOI:10.1093/emboj/16.10.2756" data-subject="secg_accessory_subunit" data-object="secy_channel_subunit">
+<title>SecG accessory channel subunit — associates with → SecY protein-conducting channel subunit; Evidence: DOI:10.1093/emboj/16.10.2756</title><path d="M296,274.0 C386.0,274.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-027c3bbe3df51944-arrow)"/>
+<text x="386.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">associates with</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="SecA ATPase — binds → SecYEG translocon complex; Evidence: DOI:10.1038/s41467-019-10918-2" data-subject="seca_atpase" data-object="secyeg">
+<title>SecA ATPase — binds → SecYEG translocon complex; Evidence: DOI:10.1038/s41467-019-10918-2</title><path d="M296,440.0 C594.0,440.0 594.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-027c3bbe3df51944-arrow)"/>
+<text x="594.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">binds</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="SecA ATPase — pushes → unfolded Sec preprotein; Evidence: DOI:10.1038/nrmicro.2016.161" data-subject="seca_atpase" data-object="unfolded_preprotein">
+<title>SecA ATPase — pushes → unfolded Sec preprotein; Evidence: DOI:10.1038/nrmicro.2016.161</title><path d="M296,440.0 C386.0,440.0 386.0,274.0 476,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-027c3bbe3df51944-arrow)"/>
+<text x="386.0" y="347.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">pushes</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="SecYEG translocon complex — carries out → protein transport by the Sec complex; Evidence: GO:0043952" data-subject="secyeg" data-object="sec_transport">
+<title>SecYEG translocon complex — carries out → protein transport by the Sec complex; Evidence: GO:0043952</title><path d="M1128,108.0 C1218.0,108.0 1218.0,108.0 1308,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-027c3bbe3df51944-arrow)"/>
+<text x="1218.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">carries out</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="SecY protein-conducting channel subunit (GENE_OR_PROTEIN); secy_channel_subunit" data-node-id="secy_channel_subunit"><title>SecY protein-conducting channel subunit (GENE_OR_PROTEIN); secy_channel_subunit</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="488" y="109" fill="#172033">SecY protein-conducting</text>
+<text x="488" y="126" fill="#172033">channel subunit</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="SecE clamp subunit (GENE_OR_PROTEIN); sece_clamp_subunit" data-node-id="sece_clamp_subunit"><title>SecE clamp subunit (GENE_OR_PROTEIN); sece_clamp_subunit</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="109" fill="#172033">SecE clamp subunit</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="SecG accessory channel subunit (GENE_OR_PROTEIN); secg_accessory_subunit" data-node-id="secg_accessory_subunit"><title>SecG accessory channel subunit (GENE_OR_PROTEIN); secg_accessory_subunit</title>
+<rect x="60" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="255" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="275" fill="#172033">SecG accessory channel</text>
+<text x="72" y="292" fill="#172033">subunit</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="SecA ATPase (GENE_OR_PROTEIN); seca_atpase" data-node-id="seca_atpase"><title>SecA ATPase (GENE_OR_PROTEIN); seca_atpase</title>
+<rect x="60" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="421" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="72" y="441" fill="#172033">SecA ATPase</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="unfolded Sec preprotein (GENE_OR_PROTEIN); unfolded_preprotein" data-node-id="unfolded_preprotein"><title>unfolded Sec preprotein (GENE_OR_PROTEIN); unfolded_preprotein</title>
+<rect x="476" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="255" fill="#075985" font-size="10">GENE_OR_PROTEIN</text>
+<text x="488" y="275" fill="#172033">unfolded Sec preprotein</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="SecYEG translocon complex (STRUCTURE); secyeg; cellstructuremech:secyeg_translocon_complex" data-node-id="secyeg"><title>SecYEG translocon complex (STRUCTURE); secyeg; cellstructuremech:secyeg_translocon_complex</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="904" y="109" fill="#172033">SecYEG translocon complex</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="protein transport by the Sec complex (BIOLOGICAL_PROCESS); sec_transport; GO:0043952" data-node-id="sec_transport"><title>protein transport by the Sec complex (BIOLOGICAL_PROCESS); sec_transport; GO:0043952</title>
+<rect x="1308" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="89" fill="#075985" font-size="10">BIOLOGICAL_PROCESS</text>
+<text x="1320" y="109" fill="#172033">protein transport by the Sec</text>
+<text x="1320" y="126" fill="#172033">complex</text>
+</g>
+</svg></div></figure>
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>SecE clamp subunit</td><td>stabilizes</td><td>SecY protein-conducting channel subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biophys-050511-102312"><code>DOI:10.1146/annurev-biophys-050511-102312</code></a> <small>Park and Rapoport 2012 review SecE&#39;s bracing role in the SecY/Sec61 channel.</small></li></ul></td></tr>
 <tr><td>SecY protein-conducting channel subunit</td><td>forms pore of</td><td>SecYEG translocon complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature17163"><code>DOI:10.1038/nature17163</code></a> <small>Li et al. 2016 captured a substrate-engaged SecY channel with preprotein density in the pore.</small></li></ul></td></tr>
 <tr><td>SecG accessory channel subunit</td><td>associates with</td><td>SecY protein-conducting channel subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/16.10.2756"><code>DOI:10.1093/emboj/16.10.2756</code></a> <small>Duong and Wickner 1997 characterized SecG separately from SecYE within the E. coli preprotein translocase.</small></li></ul></td></tr>
