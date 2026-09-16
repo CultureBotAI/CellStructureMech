@@ -6853,9 +6853,9 @@
           "cosine_similarity": 0.83803931
         },
         {
-          "identifier": "GO:0009529",
-          "label": "plastid intermembrane space",
-          "cosine_similarity": 0.83107923
+          "identifier": "GO:0031981",
+          "label": "nuclear lumen",
+          "cosine_similarity": 0.83557918
         }
       ]
     },
@@ -6887,6 +6887,37 @@
           "identifier": "GO:0032585",
           "label": "multivesicular body membrane",
           "cosine_similarity": 0.8439566
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031981",
+      "label": "nuclear lumen",
+      "neighbors": [
+        {
+          "identifier": "GO:0005634",
+          "label": "nucleus",
+          "cosine_similarity": 0.8683064
+        },
+        {
+          "identifier": "GO:0005641",
+          "label": "nuclear envelope lumen",
+          "cosine_similarity": 0.83557918
+        },
+        {
+          "identifier": "GO:0005635",
+          "label": "nuclear envelope",
+          "cosine_similarity": 0.83158778
+        },
+        {
+          "identifier": "GO:0005637",
+          "label": "nuclear inner membrane",
+          "cosine_similarity": 0.79225701
+        },
+        {
+          "identifier": "GO:0005640",
+          "label": "nuclear outer membrane",
+          "cosine_similarity": 0.78714477
         }
       ]
     },
@@ -6962,6 +6993,11 @@
           "cosine_similarity": 0.90519417
         },
         {
+          "identifier": "GO:0031981",
+          "label": "nuclear lumen",
+          "cosine_similarity": 0.8683064
+        },
+        {
           "identifier": "GO:0005640",
           "label": "nuclear outer membrane",
           "cosine_similarity": 0.85932832
@@ -6975,11 +7011,6 @@
           "identifier": "GO:0005641",
           "label": "nuclear envelope lumen",
           "cosine_similarity": 0.82428938
-        },
-        {
-          "identifier": "GO:0005739",
-          "label": "mitochondrion",
-          "cosine_similarity": 0.81359921
         }
       ]
     },
@@ -9395,9 +9426,9 @@
           "cosine_similarity": 0.74097936
         },
         {
-          "identifier": "GO:0000776",
-          "label": "kinetochore",
-          "cosine_similarity": 0.71445257
+          "identifier": "GO:0031981",
+          "label": "nuclear lumen",
+          "cosine_similarity": 0.73257878
         }
       ]
     },

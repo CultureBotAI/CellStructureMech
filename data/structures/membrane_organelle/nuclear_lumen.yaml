@@ -1,0 +1,173 @@
+identifier: GO:0031981
+label: nuclear lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the nuclear inner membrane.
+definition_source: GO:0031981
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-15T23:52:58Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-15T23:54:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added intracellular-organelle-lumen parentage, nucleus parthood, nuclear-chromosome
+    and nucleolus components, a nuclear-lumen topology graph, and a resolved nucleoplasm
+    boundary interpretation.
+  llm_assisted: true
+- timestamp: '2026-09-15T23:54:59Z'
+  curator: codex
+  action: TIGHTENED_BOUNDARY_DISCUSSION
+  changes: Reworded the resolved nucleoplasm discussion to avoid an unsupported claim
+    that nucleoplasm is narrower than GO:0031981.
+  llm_assisted: true
+parent_structures:
+- GO:0070013
+part_of:
+- GO:0005634
+components:
+- component_id: nuclear_chromosome
+  label: nuclear chromosome
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding: GO:0000228
+  role: Chromosome structure that encodes the eukaryotic nuclear genome inside the
+    nuclear lumen.
+  evidence:
+  - reference: GO:0000228
+    notes: GO:0000228 identifies nuclear chromosomes as chromosomes that encode the
+      nuclear genome and are part of the nuclear lumen.
+  - reference: DOI:10.1038/nature08973
+    notes: Duan et al. 2010 modeled the three-dimensional organization of the Saccharomyces
+      cerevisiae nuclear genome.
+- component_id: nucleolus
+  label: nucleolus
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding: GO:0005730
+  role: Dense nuclear body that concentrates ribosomal DNA transcription, pre-rRNA
+    processing, and early ribosomal subunit assembly in the nuclear lumen.
+  evidence:
+  - reference: GO:0005730
+    notes: GO:0005730 defines the nucleolus as part of the nuclear lumen.
+  - reference: DOI:10.1038/nrm2184
+    notes: Boisvert et al. 2007 review the nucleolus as a nuclear body organized around
+      ribosome biogenesis.
+functions:
+- function_id: nuclear_lumen_compartmentalization
+  label: nuclear lumen compartmentalization
+  description: The nuclear lumen is the nucleus-internal volume that contains nuclear
+    chromosomes and nuclear bodies such as the nucleolus.
+  evidence:
+  - reference: GO:0031981
+    notes: GO:0031981 defines the nuclear lumen as the volume enclosed by the nuclear
+      inner membrane.
+  - reference: GO:0000228
+    notes: GO places nuclear chromosomes in the nuclear lumen during cell-cycle phases
+      when the nucleus is intact.
+  - reference: GO:0005730
+    notes: GO places the nucleolus in the nuclear lumen.
+evidence:
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for nuclear lumen.
+- reference: GO:0070013
+  notes: Gene Ontology cellular-component parent term for intracellular organelle
+    lumen.
+- reference: GO:0005634
+  notes: Gene Ontology cellular-component term for the containing nucleus.
+- reference: GO:0005637
+  notes: Gene Ontology cellular-component term for the bounding nuclear inner membrane.
+- reference: GO:0000228
+  notes: Gene Ontology cellular-component term for nuclear chromosome.
+- reference: GO:0005730
+  notes: Gene Ontology cellular-component term for nucleolus.
+- reference: DOI:10.1038/nature08973
+  notes: Duan et al. 2010, A three-dimensional model of the yeast genome, Nature.
+- reference: DOI:10.1038/nrm2184
+  notes: Boisvert et al. 2007, The multifunctional nucleolus, Nature Reviews Molecular
+    Cell Biology.
+causal_graphs:
+- graph_id: nuclear_lumen_topology
+  title: The nuclear inner membrane encloses the nuclear lumen
+  description: The nuclear inner membrane delimits the nuclear lumen, and the nuclear
+    lumen contains nuclear chromosomes and the nucleolus.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures nucleus-internal topology without asserting a complete
+    nuclear matrix, chromatin, nucleolar, or nucleoplasmic protein repertoire.
+  nodes:
+  - node_id: nuclear_lumen
+    label: nuclear lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031981
+  - node_id: nuclear_inner_membrane
+    label: nuclear inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005637
+  - node_id: nucleus
+    label: nucleus
+    node_type: ORGANELLE
+    grounding: GO:0005634
+  - node_id: nuclear_chromosome
+    label: nuclear chromosome
+    node_type: STRUCTURE
+    grounding: GO:0000228
+    component_ref: nuclear_chromosome
+  - node_id: nucleolus
+    label: nucleolus
+    node_type: STRUCTURE
+    grounding: GO:0005730
+    component_ref: nucleolus
+  edges:
+  - subject: nuclear_inner_membrane
+    predicate: delimits
+    object: nuclear_lumen
+    description: The nuclear inner membrane forms the boundary that encloses the nuclear
+      lumen.
+    evidence:
+    - reference: GO:0031981
+      notes: GO:0031981 defines the nuclear lumen by the volume inside the nuclear
+        inner membrane.
+  - subject: nuclear_lumen
+    predicate: is part of
+    object: nucleus
+    description: The nuclear lumen is part of the nucleus.
+    evidence:
+    - reference: GO:0031981
+      notes: GO models the nuclear lumen as an internal compartment of the nucleus.
+  - subject: nuclear_chromosome
+    predicate: is located in
+    object: nuclear_lumen
+    description: Nuclear chromosomes reside in the nuclear lumen when the nucleus
+      is intact.
+    evidence:
+    - reference: GO:0000228
+      notes: GO:0000228 places nuclear chromosomes in the nuclear lumen.
+  - subject: nucleolus
+    predicate: is located in
+    object: nuclear_lumen
+    description: The nucleolus is a nuclear body inside the nuclear lumen.
+    evidence:
+    - reference: GO:0005730
+      notes: GO:0005730 places the nucleolus in the nuclear lumen.
+discussions:
+- discussion_id: avoid_collapsing_nuclear_lumen_to_nucleoplasm
+  prompt: Should nucleoplasm be added as an exact synonym of nuclear lumen?
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#nuclear_lumen_topology
+  rationale: This record follows GO:0031981 for the whole inner-membrane-enclosed
+    nuclear volume and grounds contained nucleolar and chromosomal substructures separately.
+    No exact synonymy between nuclear lumen and nucleoplasm was verified in this pass.
+  evidence:
+  - reference: GO:0031981
+    notes: GO:0031981 covers the volume enclosed by the nuclear inner membrane.
+  resolution_note: Kept nuclear lumen as the GO:0031981 compartment and left nucleoplasm
+    out of the synonym list.
+  posed_by: codex
+  posed_date: '2026-09-15'
+  resolved_date: '2026-09-15'
