@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ap_type_membrane_coat_adaptor_complex.yaml
+  slug: ap_type_membrane_coat_adaptor_complex
+session:
+  id: 2026-09-16T115619Z-codex-7a8c50
+  timestamp: '2026-09-16T11:56:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the AP-type membrane coat adaptor complex record
+  details: Created an evidence-backed GO:0030119 AP-type membrane coat adaptor complex record
+    with membrane-protein-complex parentage, membrane-coat parthood, the GO clathrin-adaptor
+    synonym, reviewed-label-only large/mu/sigma AP subunit components, Tetrahymena thermophila
+    AP-3 evidence, a nonmechanistic adaptor-complex topology graph, and discussions documenting
+    the part-of boundary, mucocyst AP-3 scope, and unresolved source-neutral component groundings.

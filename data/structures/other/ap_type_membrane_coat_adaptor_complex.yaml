@@ -1,0 +1,230 @@
+identifier: GO:0030119
+label: AP-type membrane coat adaptor complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Any of several heterotetrameric complexes that link clathrin (or another
+  coat-forming molecule, as hypothesized for AP-3 and AP-4) to a membrane surface;
+  they are found on coated pits and coated vesicles, and mediate sorting of cargo
+  proteins into vesicles. Each AP complex contains two large (a beta and one of either
+  an alpha, gamma, delta, or epsilon) subunits (110-130 kDa), a medium (mu) subunit
+  (approximately 50 kDa), and a small (sigma) subunit (15-20 kDa).
+definition_source: GO:0030119
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T11:54:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T11:55:35Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added membrane-protein-complex parentage, membrane-coat parthood, the GO
+    related clathrin-adaptor synonym, reviewed-label-only large/mu/sigma subunit components,
+    Tetrahymena AP-3 scope, GO/DOI evidence, a nonmechanistic AP-adaptor topology
+    graph, and mereology, mucocyst-scope and grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0098796
+part_of:
+- GO:0030117
+synonyms:
+- synonym_text: clathrin adaptor
+  synonym_type: RELATED_SYNONYM
+  source: GO:0030119
+components:
+- component_id: ap_large_subunits
+  label: AP large subunits
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Large beta and alpha-, gamma-, delta-, or epsilon-family subunits that form
+    the large-subunit pair in an AP-type adaptor complex.
+  evidence:
+  - reference: GO:0030119
+    notes: GO:0030119 defines each AP complex as containing two large subunits, one
+      beta and one alpha, gamma, delta or epsilon subunit.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP large subunits vary by AP-family subtype; no exact source-neutral
+    protein-family CURIE for the combined large-subunit class was curated in this
+    pass.
+- component_id: ap_mu_subunit
+  label: AP mu subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Medium mu subunit class present in heterotetrameric AP-type adaptor complexes.
+  evidence:
+  - reference: GO:0030119
+    notes: GO:0030119 defines each AP complex as containing a medium mu subunit of
+      approximately 50 kDa.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The mu subunit is represented across AP subtypes; no exact InterPro,
+    Pfam, or NCBIfam CURIE for this source-neutral class was curated in this pass.
+- component_id: ap_sigma_subunit
+  label: AP sigma subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Small sigma subunit class present in heterotetrameric AP-type adaptor complexes.
+  evidence:
+  - reference: GO:0030119
+    notes: GO:0030119 defines each AP complex as containing a small sigma subunit
+      of 15 to 20 kDa.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The sigma subunit is represented across AP subtypes; no exact InterPro,
+    Pfam, or NCBIfam CURIE for this source-neutral class was curated in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  presence: COMMON
+  note: Tetrahymena thermophila has an AP-3 complex required for mucocyst formation
+    and maturation.
+  reference: DOI:10.1091/mbc.e17-01-0018
+canonical_examples:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  note: Ciliate model in which AP-3 was genetically connected to formation and maturation
+    of mucocysts.
+  reference: DOI:10.1091/mbc.e17-01-0018
+evidence:
+- reference: GO:0030119
+  notes: Gene Ontology cellular-component term for AP-type membrane coat adaptor complexes.
+- reference: GO:0098796
+  notes: Gene Ontology cellular-component parent term for membrane protein complexes.
+- reference: GO:0030117
+  notes: Gene Ontology cellular-component term for the containing membrane coat.
+- reference: DOI:10.1091/mbc.e17-01-0018
+  notes: Kaur et al. 2017, An endosomal syntaxin and the AP-3 complex are required
+    for formation and maturation of candidate lysosome-related secretory organelles
+    (mucocysts) in Tetrahymena thermophila, Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: ap_adaptor_complex_topology
+  title: Large, mu and sigma subunits form an AP adaptor
+  description: AP-type membrane coat adaptor complexes are heterotetramers that connect
+    a coat-forming molecule to a membrane surface in a membrane coat.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the parent-level AP-complex topology without asserting
+    a specific AP-1, AP-2, AP-3 or AP-4 subunit set, cargo-sorting target or coat
+    subtype.
+  nodes:
+  - node_id: ap_large_subunits
+    label: AP large subunits
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap_large_subunits
+  - node_id: ap_mu_subunit
+    label: AP mu subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap_mu_subunit
+  - node_id: ap_sigma_subunit
+    label: AP sigma subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap_sigma_subunit
+  - node_id: ap_adaptor_complex
+    label: AP-type membrane coat adaptor complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0030119
+  - node_id: membrane_surface
+    label: membrane surface
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: membrane_coat
+    label: membrane coat
+    node_type: STRUCTURE
+    grounding: GO:0030117
+  edges:
+  - subject: ap_large_subunits
+    predicate: is part of
+    object: ap_adaptor_complex
+    description: Two large subunits are constituents of each heterotetrameric AP adaptor
+      complex.
+    evidence:
+    - reference: GO:0030119
+      notes: GO:0030119 defines AP complexes as containing two large subunits.
+  - subject: ap_mu_subunit
+    predicate: is part of
+    object: ap_adaptor_complex
+    description: A medium mu subunit is a constituent of each heterotetrameric AP
+      adaptor complex.
+    evidence:
+    - reference: GO:0030119
+      notes: GO:0030119 defines AP complexes as containing a medium mu subunit.
+  - subject: ap_sigma_subunit
+    predicate: is part of
+    object: ap_adaptor_complex
+    description: A small sigma subunit is a constituent of each heterotetrameric AP
+      adaptor complex.
+    evidence:
+    - reference: GO:0030119
+      notes: GO:0030119 defines AP complexes as containing a small sigma subunit.
+  - subject: ap_adaptor_complex
+    predicate: links scaffold to
+    object: membrane_surface
+    description: AP-type membrane coat adaptor complexes link a coat-forming molecule
+      such as clathrin to a membrane surface.
+    evidence:
+    - reference: GO:0030119
+      notes: GO:0030119 defines AP-type complexes as linking clathrin or another coat-forming
+        molecule to a membrane surface.
+  - subject: ap_adaptor_complex
+    predicate: is part of
+    object: membrane_coat
+    description: GO models the AP-type membrane coat adaptor complex as part of a
+      membrane coat.
+    evidence:
+    - reference: GO:0030119
+      notes: GO:0030119 has a part-of relationship to GO:0030117 membrane coat.
+discussions:
+- discussion_id: ap_adaptor_mereology_boundary
+  prompt: Represent AP-type membrane coat adaptor complex as part of membrane coat
+    rather than as a membrane-coat subtype.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - parent_structures
+  - part_of
+  rationale: GO:0030119 is a membrane protein complex that is part of GO:0030117 membrane
+    coat. This record therefore keeps GO:0098796 as its is-a parent and uses part_of
+    for GO:0030117 instead of making the AP adaptor complex a subclass of the coat
+    it helps assemble.
+  evidence:
+  - reference: GO:0030119
+    notes: GO term and relationship source for AP-type membrane coat adaptor complexes.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: mucocyst_ap3_scope
+  prompt: Use Tetrahymena AP-3 as AP-type adaptor evidence without making AP-3 a mature
+    mucocyst component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - taxonomic_distribution
+  - canonical_examples
+  rationale: Kaur et al. 2017 support the presence and upstream mucocyst-biogenesis
+    role of a Tetrahymena AP-3 complex. That evidence anchors this AP-type adaptor
+    record, while the mucocyst record continues to exclude AP-3 from mature mucocyst
+    components because the cited role is maturation rather than stable membership
+    in docked mucocysts.
+  evidence:
+  - reference: DOI:10.1091/mbc.e17-01-0018
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: resolve_ap_subunit_groundings
+  prompt: Resolve exact source-neutral groundings for AP large, mu and sigma subunit
+    classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ap_large_subunits
+  - components#ap_mu_subunit
+  - components#ap_sigma_subunit
+  rationale: The AP-type parent spans several heterotetrameric subtypes. This initial
+    record keeps its subunit classes reviewed-label-only instead of forcing subtype-specific
+    protein-family groundings onto the parent class.
+  evidence:
+  - reference: GO:0030119
+    notes: GO definition for AP-complex subunit classes.
+  posed_by: codex
+  posed_date: '2026-09-16'

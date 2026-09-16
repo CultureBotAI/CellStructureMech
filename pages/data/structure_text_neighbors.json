@@ -9247,6 +9247,37 @@
       ]
     },
     {
+      "identifier": "GO:0030119",
+      "label": "AP-type membrane coat adaptor complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030118",
+          "label": "clathrin coat",
+          "cosine_similarity": 0.68520554
+        },
+        {
+          "identifier": "GO:0030130",
+          "label": "clathrin coat of trans-Golgi network vesicle",
+          "cosine_similarity": 0.68292226
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.68075919
+        },
+        {
+          "identifier": "GO:0010006",
+          "label": "Toc complex",
+          "cosine_similarity": 0.66530697
+        },
+        {
+          "identifier": "GO:0030117",
+          "label": "membrane coat",
+          "cosine_similarity": 0.66474718
+        }
+      ]
+    },
+    {
       "identifier": "GO:0020007",
       "label": "apical complex",
       "neighbors": [
