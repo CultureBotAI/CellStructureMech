@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ap_3_adaptor_complex.yaml
+  slug: ap_3_adaptor_complex
+session:
+  id: 2026-09-16T122454Z-codex-3ade7f
+  timestamp: '2026-09-16T12:24:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the AP-3 adaptor complex record
+  details: Created an evidence-backed GO:0030123 AP-3 adaptor complex record with AP-type
+    parentage, reviewed-label-only beta3, delta, mu3 and sigma3 subunit classes, Tetrahymena
+    thermophila AP-3 evidence from Kaur et al. 2017, a nonmechanistic AP-3 topology graph,
+    and explicit boundary discussions for AP-3 versus mature mucocyst components and AP-3
+    versus universal clathrin association.
