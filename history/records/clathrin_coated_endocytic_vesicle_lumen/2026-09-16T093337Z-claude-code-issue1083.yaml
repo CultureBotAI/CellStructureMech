@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle_lumen.yaml
+  slug: clathrin_coated_endocytic_vesicle_lumen
+session:
+  id: 2026-09-16T093337Z-claude-code-issue1083
+  timestamp: '2026-09-16T09:33:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed PR #1082 parentage review for GO:0106176
+  details: >
+    Resolved issue #1083 by adding cellstructuremech:clathrin_coated_vesicle_lumen
+    as a local generic clathrin-coated-vesicle lumen parent, adding supporting GO:0030136
+    evidence, and documenting why GO:0106176 keeps both the GO endocytic-vesicle-lumen
+    parent and the local clathrin-coated-vesicle-lumen parent.

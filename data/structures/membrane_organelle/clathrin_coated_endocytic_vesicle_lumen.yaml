@@ -1,0 +1,152 @@
+identifier: GO:0106176
+label: clathrin-coated endocytic vesicle lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the membrane of a clathrin-coated endocytic vesicle.
+definition_source: GO:0106176
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T09:20:58Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T09:21:38Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO endocytic-vesicle-lumen parentage, whole-vesicle parthood, Saccharomyces
+    endocytic-site scope, GO/DOI evidence, a nonmechanistic lumen topology graph,
+    and a resolved cargo-boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-09-16T09:33:26Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved issue #1083 by adding the local generic clathrin-coated-vesicle
+    lumen parentage and supporting GO:0030136 evidence.'
+  llm_assisted: true
+parent_structures:
+- GO:0071682
+- cellstructuremech:clathrin_coated_vesicle_lumen
+part_of:
+- GO:0045334
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms clathrin-dependent endocytic vesicles at cortical actin-based
+    endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast endocytic-site model in which clathrin and adaptor protein dynamics
+    mark clathrin-coated vesicle formation.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+evidence:
+- reference: GO:0106176
+  notes: Gene Ontology cellular-component term for the clathrin-coated endocytic vesicle
+    lumen.
+- reference: GO:0071682
+  notes: Gene Ontology cellular-component parent term for endocytic vesicle lumens.
+- reference: GO:0045334
+  notes: Gene Ontology cellular-component term for the whole clathrin-coated endocytic
+    vesicle.
+- reference: GO:0030136
+  notes: Gene Ontology cellular-component term for the broader clathrin-coated vesicle
+    class.
+- reference: GO:0030669
+  notes: Gene Ontology cellular-component term for the clathrin-coated endocytic vesicle
+    membrane that bounds the lumen.
+- reference: DOI:10.1016/j.devcel.2005.04.014
+  notes: Newpher et al. 2005, In Vivo Dynamics of Clathrin and Its Adaptor-Dependent
+    Recruitment to the Actin-Based Endocytic Machinery in Yeast, Developmental Cell.
+causal_graphs:
+- graph_id: clathrin_coated_endocytic_vesicle_lumen_topology
+  title: Clathrin-coated endocytic vesicle lumen topology
+  description: The clathrin-coated endocytic vesicle membrane bounds the clathrin-coated
+    endocytic vesicle lumen inside the endocytic coated vesicle.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the mature endocytic coated-vesicle lumen boundary
+    without asserting cargo identity, coat assembly, or actin-driven scission steps.
+  nodes:
+  - node_id: clathrin_coated_endocytic_vesicle_lumen
+    label: clathrin-coated endocytic vesicle lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0106176
+  - node_id: clathrin_coated_endocytic_vesicle_membrane
+    label: clathrin-coated endocytic vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030669
+  - node_id: clathrin_coated_endocytic_vesicle
+    label: clathrin-coated endocytic vesicle
+    node_type: ORGANELLE
+    grounding: GO:0045334
+  edges:
+  - subject: clathrin_coated_endocytic_vesicle_lumen
+    predicate: is part of
+    object: clathrin_coated_endocytic_vesicle
+    description: The clathrin-coated endocytic vesicle lumen is the bounded volume
+      inside a clathrin-coated endocytic vesicle.
+    evidence:
+    - reference: GO:0106176
+      notes: GO:0106176 defines this lumen as the volume enclosed by a clathrin-coated
+        endocytic vesicle membrane.
+    - reference: GO:0045334
+      notes: GO:0045334 identifies the enclosing clathrin-coated endocytic vesicle.
+  - subject: clathrin_coated_endocytic_vesicle_membrane
+    predicate: bounds
+    object: clathrin_coated_endocytic_vesicle_lumen
+    description: The clathrin-coated endocytic vesicle membrane bounds the clathrin-coated
+      endocytic vesicle lumen.
+    evidence:
+    - reference: GO:0106176
+      notes: GO:0106176 defines the lumen by enclosure within the vesicle membrane.
+    - reference: GO:0030669
+      notes: GO:0030669 identifies the surrounding clathrin-coated endocytic vesicle
+        membrane.
+discussions:
+- discussion_id: keep_generic_clathrin_lumen_parentage
+  prompt: Link GO:0106176 under the generic clathrin-coated vesicle lumen as well
+    as the GO endocytic vesicle lumen.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  rationale: GO:0106176 names the lumen inside the clathrin-coated endocytic vesicle,
+    GO:0045334 is a subtype of GO:0030136 clathrin-coated vesicle, and this corpus
+    already has a generic cellstructuremech:clathrin_coated_vesicle_lumen parent for
+    lumen records in clathrin-coated vesicles.
+  resolution_note: Kept GO:0071682 for the GO endocytic-vesicle-lumen branch and added
+    cellstructuremech:clathrin_coated_vesicle_lumen for the local generic clathrin-coated-vesicle
+    lumen branch.
+  evidence:
+  - reference: GO:0106176
+    notes: GO:0106176 identifies the clathrin-coated endocytic vesicle lumen.
+  - reference: GO:0045334
+    notes: GO:0045334 identifies the enclosing clathrin-coated endocytic vesicle.
+  - reference: GO:0030136
+    notes: GO:0030136 identifies the broader clathrin-coated vesicle class.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: keep_endocytic_cargo_off_lumen_record
+  prompt: Keep internalized cargo out of the clathrin-coated endocytic vesicle lumen
+    record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#clathrin_coated_endocytic_vesicle_lumen_topology
+  rationale: GO:0106176 denotes the bounded lumen rather than a stable cargo cohort,
+    and clathrin-coated endocytic vesicles carry cargo that varies by endocytic event.
+  resolution_note: Modeled the lumen as the volume inside the vesicle membrane and
+    left cargo constituents unspecified.
+  evidence:
+  - reference: GO:0106176
+    notes: GO:0106176 identifies the lumenal volume.
+  - reference: GO:0045334
+    notes: GO:0045334 identifies the enclosing endocytic vesicle.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
