@@ -19,6 +19,13 @@ curation_history:
     TGN/endosome traffic scope, GO/DOI evidence, a nonmechanistic TGN clathrin-coat
     topology graph, and grounding plus scope boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-16T07:28:59Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1074 review issue #1075 by adding an evidence-backed edge
+    that makes TGN clathrin adaptor and cargo-selection factors explicit parts of
+    the TGN clathrin coat in the topology graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0030125
 part_of:
@@ -169,6 +176,20 @@ causal_graphs:
     - reference: DOI:10.1091/MBC.E06-11-1000
       notes: Copic et al. 2007 studied Ent3p/Ent5p adaptor functions in TGN-to-endosome
         protein trafficking.
+  - subject: tgn_clathrin_adaptors
+    predicate: is part of
+    object: clathrin_coat_of_tgn_vesicle
+    description: TGN clathrin adaptor and cargo-selection factors are constituent
+      parts of the protein coat assembled on a trans-Golgi-network vesicle.
+    evidence:
+    - reference: GO:0030118
+      notes: GO:0030118 defines clathrin coats as clathrin triskelions linked to membranes
+        through adaptor complexes.
+    - reference: GO:0030130
+      notes: GO:0030130 identifies the TGN vesicle-specific clathrin coat.
+    - reference: DOI:10.1091/MBC.E06-11-1000
+      notes: Copic et al. 2007 studied Ent3p/Ent5p adaptor functions in trafficking
+        between the TGN and endosomes.
   - subject: clathrin_coat_of_tgn_vesicle
     predicate: is part of
     object: tgn_transport_vesicle_membrane
