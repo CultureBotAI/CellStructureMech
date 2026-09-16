@@ -30,6 +30,12 @@ curation_history:
   changes: Retargeted the Mil1 boundary discussion from the components section to
     the four AP-1 core subunit anchors
   llm_assisted: true
+- timestamp: '2026-09-16T13:06:00Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Narrowed the AP-1 canonical example note to the Yeung-supported budding-yeast
+    AP-1 assignment; addresses PR #1096 review issue #1097.'
+  llm_assisted: true
 parent_structures:
 - GO:0030131
 part_of:
@@ -98,8 +104,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast model in which AP-1 was biochemically assigned as a clathrin-interacting
-    adaptor complex and alternate mu subunits were tied to distinct cargo-sorting
-    functions.
+    adaptor complex.
   reference: DOI:10.1091/mbc.10.11.3643
 functions:
 - function_id: ap1_late_golgi_cargo_sorting
