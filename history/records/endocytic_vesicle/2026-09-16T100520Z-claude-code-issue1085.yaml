@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endocytic_vesicle.yaml
+  slug: endocytic_vesicle
+session:
+  id: 2026-09-16T100520Z-claude-code-issue1085
+  timestamp: '2026-09-16T10:05:20Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: Added clathrin-specific GO evidence for issue 1085
+  details: >
+    Resolved issue #1085 by adding GO:0045334 clathrin-coated endocytic vesicle
+    and GO:0030128 clathrin coat of endocytic vesicle to the record-level evidence
+    list, keeping the bibliography aligned with the boundary discussion that keeps
+    clathrin coats, subtype-specific adaptors, and cargo off the generic
+    GO:0030139 endocytic vesicle parent.

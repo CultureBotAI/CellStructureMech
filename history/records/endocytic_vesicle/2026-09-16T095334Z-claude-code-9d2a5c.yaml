@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endocytic_vesicle.yaml
+  slug: endocytic_vesicle
+session:
+  id: 2026-09-16T095334Z-claude-code-9d2a5c
+  timestamp: '2026-09-16T09:53:34Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0030139 endocytic vesicle record
+  details: >
+    Created an evidence-backed GO:0030139 endocytic vesicle record with GO parentage
+    to GO:0031410, has-part links to GO:0030666 endocytic vesicle membrane and
+    GO:0071682 endocytic vesicle lumen, Saccharomyces cerevisiae endocytic-site
+    evidence from Newpher et al. 2005 and Kaksonen et al. 2005, a GO:0006897
+    endocytosis function, a nonmechanistic membrane/lumen topology graph, and a
+    resolved boundary discussion that leaves coats, subtype adaptors, and cargo
+    on narrower endocytic-vesicle subtype records.
