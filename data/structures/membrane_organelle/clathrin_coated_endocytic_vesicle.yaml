@@ -20,6 +20,12 @@ curation_history:
     a nonmechanistic endocytic vesicle topology graph, and a whole-vesicle component-boundary
     discussion.
   llm_assisted: true
+- timestamp: '2026-09-16T09:00:55Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved issue #1081 by adding a direct endocytic clathrin coat to whole
+    clathrin-coated endocytic vesicle edge to the topology graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0030136
 - GO:0030139
@@ -110,6 +116,17 @@ causal_graphs:
     evidence:
     - reference: GO:0030128
       notes: GO:0030128 records the endocytic vesicle clathrin coat as part of GO:0030669.
+  - subject: clathrin_coat_of_endocytic_vesicle
+    predicate: is part of
+    object: clathrin_coated_endocytic_vesicle
+    description: The clathrin coat of an endocytic vesicle is a coat part of the whole
+      clathrin-coated endocytic vesicle.
+    evidence:
+    - reference: GO:0045334
+      notes: GO:0045334 identifies the clathrin-coated, membrane-bounded endocytic
+        vesicle.
+    - reference: GO:0030128
+      notes: GO:0030128 identifies the clathrin coat found on an endocytic vesicle.
   - subject: clathrin_coated_endocytic_vesicle_membrane
     predicate: is part of
     object: clathrin_coated_endocytic_vesicle
