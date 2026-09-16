@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/garp_complex.yaml
+  slug: garp_complex
+session:
+  id: 2026-09-16T184729Z-codex-7404d8
+  timestamp: '2026-09-16T18:47:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1119
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1118
+events:
+- type: EDIT
+  outcome: changed
+  summary: Narrow the GARP interactor boundary
+  details: 'Addressed PR #1118 / issue #1119 by narrowing the resolved GARP interactor-boundary
+    discussion to the Vps51-Tlg1p association supported by the curated Conibear, Cleck and
+    Stevens 2003 evidence.'

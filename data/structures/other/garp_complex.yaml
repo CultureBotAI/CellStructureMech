@@ -18,7 +18,13 @@ curation_history:
   changes: Added GARP synonymy, vesicle-tethering parentage, reviewed-label-only Vps51/Vps52/Vps53/Vps54
     yeast components, Saccharomyces scope, an endosome-to-Golgi retrograde-transport
     function, GO/DOI evidence, a nonmechanistic yeast TGN tethering graph, a subunit-grounding
-    TODO, and a resolved Tlg1/Ypt6 boundary decision.
+    TODO, and a resolved Tlg1 boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-16T18:47:06Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1118 / issue #1119 by narrowing the resolved GARP interactor
+    boundary to the cited Vps51-Tlg1p association.'
   llm_assisted: true
 parent_structures:
 - GO:0099023
@@ -153,7 +159,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: The graph represents yeast GARP subunit membership, Vps51-Tlg1 association,
     TGN localization and endosome-to-Golgi transport involvement without modeling
-    Ypt6 regulation or SNARE-mediated fusion steps.
+    SNARE-mediated fusion steps.
   nodes:
   - node_id: vps51_garp_subunit
     label: Vps51 GARP subunit
@@ -267,15 +273,14 @@ discussions:
     notes: Conibear, Cleck and Stevens 2003 identified the four named yeast GARP subunits.
   posed_by: codex
   posed_date: '2026-09-16'
-- discussion_id: garp_tlg1_ypt6_interactor_boundary
-  prompt: Do not model Tlg1p or Ypt6p as constituent GARP components.
+- discussion_id: garp_tlg1_interactor_boundary
+  prompt: Do not model Tlg1p as a constituent GARP component.
   kind: CURATION_TODO
   status: RESOLVED
   attaches_to:
   - causal_graphs#yeast_garp_endosome_to_golgi_tethering
-  rationale: Tlg1p links to GARP through Vps51 and Ypt6p is an upstream Rab that interacts
-    with the complex; the canonical GARP constituent list is Vps51, Vps52, Vps53 and
-    Vps54.
+  rationale: Tlg1p links to GARP through Vps51, but the canonical GARP constituent
+    list is Vps51, Vps52, Vps53 and Vps54.
   evidence:
   - reference: DOI:10.1091/mbc.e02-10-0654
     notes: Conibear, Cleck and Stevens 2003 defined tetrameric GARP as the Vps51/Vps52/Vps53/Vps54
