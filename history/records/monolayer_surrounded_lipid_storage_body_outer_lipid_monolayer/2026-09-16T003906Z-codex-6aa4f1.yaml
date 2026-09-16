@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/monolayer_surrounded_lipid_storage_body_outer_lipid_monolayer.yaml
+  slug: monolayer_surrounded_lipid_storage_body_outer_lipid_monolayer
+session:
+  id: 2026-09-16T003906Z-codex-6aa4f1
+  timestamp: '2026-09-16T00:39:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1043
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1042
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Track lipid droplet outer monolayer boundary follow-up
+  details: 'Resolved PR review issue #1043 by adding an open TODO that defers oil-body, oleosome,
+    spherosome, and plastoglobule lipid-monolayer boundaries until a curator can add broader
+    non-yeast scope with direct evidence.'
