@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/light_harvesting_complex.yaml
+  slug: light_harvesting_complex
+session:
+  id: 2026-09-16T014513Z-codex-0117b6
+  timestamp: '2026-09-16T01:45:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1048
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1049
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1047
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - composition
+  - mechanism
+  - discussion
+  summary: Fix light-harvesting complex review issues
+  details: 'Addressed PR #1047 review issues #1048 and #1049 by broadening the generic antenna
+    apoprotein component into a photosynthetic antenna protein component that covers scaffold/linker
+    polypeptides and by adding core LH1/RC-LH1 reaction-center antennae to the lineage-specific
+    subtype boundary discussion.'
