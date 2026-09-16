@@ -1,0 +1,351 @@
+identifier: GO:0030897
+label: HOPS complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multimeric protein complex that associates with the vacuolar membrane,
+  late endosomal (multivesicular body) and lysosomal membranes. HOPS is a tethering
+  complex involved in vesicle fusion.
+definition_source: GO:0030897
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T17:36:37Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T17:38:05Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added HOPS synonymy, GO membrane-complex parentage, reviewed-label-only
+    Vps11/Vps16/Vps18/Vps33/Vps39/Vps41 yeast components, Saccharomyces scope, a homotypic
+    vacuole fusion function, GO/DOI evidence, a nonmechanistic yeast vacuole-fusion
+    graph, a subunit-grounding TODO, and a resolved SNARE/Ypt7 boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-16T17:44:52Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Replaced the broad components discussion anchor on the HOPS interactor
+    boundary with concrete anchors for all six HOPS subunit components.
+  llm_assisted: true
+parent_structures:
+- GO:0098796
+synonyms:
+- synonym_text: homotypic fusion and vacuole protein sorting complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1073/pnas.97.17.9402
+components:
+- component_id: vps11_hops_subunit
+  label: Vps11 HOPS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS11
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps11 HOPS subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this HOPS subunit
+    class was curated in this pass.
+  role: Class C Vps scaffold subunit of the yeast HOPS complex.
+  evidence:
+  - reference: DOI:10.1073/pnas.97.17.9402
+    notes: Seals et al. 2000 showed that class C Vps11p is part of the six-protein
+      yeast HOPS complex.
+- component_id: vps16_hops_subunit
+  label: Vps16 HOPS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS16
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps16 HOPS subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this HOPS subunit
+    class was curated in this pass.
+  role: Class C Vps scaffold subunit of the yeast HOPS complex.
+  evidence:
+  - reference: DOI:10.1073/pnas.97.17.9402
+    notes: Seals et al. 2000 showed that class C Vps16p is part of the six-protein
+      yeast HOPS complex.
+- component_id: vps18_hops_subunit
+  label: Vps18 HOPS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS18
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps18 HOPS subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this HOPS subunit
+    class was curated in this pass.
+  role: Class C Vps scaffold subunit of the yeast HOPS complex.
+  evidence:
+  - reference: DOI:10.1073/pnas.97.17.9402
+    notes: Seals et al. 2000 showed that class C Vps18p is part of the six-protein
+      yeast HOPS complex.
+- component_id: vps33_hops_subunit
+  label: Vps33 HOPS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS33
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps33 HOPS subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this HOPS subunit
+    class was curated in this pass.
+  role: Sec1/Munc18-family class C Vps subunit of the yeast HOPS complex.
+  evidence:
+  - reference: DOI:10.1073/pnas.97.17.9402
+    notes: Seals et al. 2000 showed that Sec1-family protein Vps33p is part of the
+      six-protein yeast HOPS complex.
+- component_id: vps39_vam6_hops_subunit
+  label: Vps39/Vam6 HOPS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS39
+  - VAM6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps39/Vam6 HOPS
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this HOPS
+    subunit class was curated in this pass.
+  role: HOPS-specific Vam6/Vps39 subunit in the yeast vacuolar tethering complex.
+  evidence:
+  - reference: DOI:10.1073/pnas.97.17.9402
+    notes: Seals et al. 2000 identified Vam6p/Vps39p as a vacuole-associated subunit
+      of yeast HOPS.
+- component_id: vps41_vam2_hops_subunit
+  label: Vps41/Vam2 HOPS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS41
+  - VAM2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps41/Vam2 HOPS
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this HOPS
+    subunit class was curated in this pass.
+  role: HOPS-specific Vam2/Vps41 subunit in the yeast vacuolar tethering complex.
+  evidence:
+  - reference: DOI:10.1073/pnas.97.17.9402
+    notes: Seals et al. 2000 identified Vam2p/Vps41p as a vacuole-associated subunit
+      of yeast HOPS.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses the Vps11/Vps16/Vps18/Vps33/Vps39/Vps41 HOPS complex in
+    homotypic vacuole fusion.
+  reference: DOI:10.1073/pnas.97.17.9402
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Model in which the HOPS complex was biochemically defined as Vam2/Vam6 plus
+    the four class C Vps proteins during vacuole fusion.
+  reference: DOI:10.1073/pnas.97.17.9402
+functions:
+- function_id: homotypic_vacuole_fusion
+  label: vacuole fusion, non-autophagic
+  grounding: GO:0042144
+  description: HOPS acts as a vacuolar tethering complex during non-autophagic homotypic
+    vacuole fusion.
+  evidence:
+  - reference: GO:0042144
+    notes: GO:0042144 denotes the fusion of two vacuole membranes to form a single
+      vacuole.
+  - reference: DOI:10.1073/pnas.97.17.9402
+    notes: Seals et al. 2000 named HOPS while testing its requirement for Saccharomyces
+      cerevisiae homotypic vacuole fusion.
+evidence:
+- reference: GO:0030897
+  notes: Gene Ontology cellular-component term for the HOPS complex.
+- reference: GO:0098796
+  notes: Gene Ontology cellular-component parent term for membrane protein complexes.
+- reference: GO:0042144
+  notes: Gene Ontology biological-process term for non-autophagic vacuole fusion.
+- reference: DOI:10.1091/mbc.8.11.2307
+  notes: Rieder and Emr 1997, A Novel RING Finger Protein Complex Essential for a
+    Late Step in Protein Transport to the Yeast Vacuole, Molecular Biology of the
+    Cell.
+- reference: DOI:10.1073/pnas.97.17.9402
+  notes: Seals, Eitzen, Margolis, Wickner and Price 2000, A Ypt/Rab effector complex
+    containing the Sec1 homolog Vps33p is required for homotypic vacuole fusion, Proceedings
+    of the National Academy of Sciences of the United States of America.
+causal_graphs:
+- graph_id: yeast_hops_vacuole_fusion
+  title: HOPS supports yeast homotypic vacuole fusion
+  description: In Saccharomyces cerevisiae, Vps11, Vps16, Vps18, Vps33, Vps39/Vam6
+    and Vps41/Vam2 form HOPS, a vacuole-associated Ypt7 effector complex required
+    for homotypic vacuole fusion.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents yeast HOPS subunit membership, Ypt7 binding, and
+    homotypic-vacuole-fusion involvement without modeling priming-dependent 65S to
+    38S remodeling or trans-SNARE pairing.
+  nodes:
+  - node_id: vps11_hops_subunit
+    label: Vps11 HOPS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps11_hops_subunit
+  - node_id: vps16_hops_subunit
+    label: Vps16 HOPS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps16_hops_subunit
+  - node_id: vps18_hops_subunit
+    label: Vps18 HOPS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps18_hops_subunit
+  - node_id: vps33_hops_subunit
+    label: Vps33 HOPS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps33_hops_subunit
+  - node_id: vps39_vam6_hops_subunit
+    label: Vps39/Vam6 HOPS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps39_vam6_hops_subunit
+  - node_id: vps41_vam2_hops_subunit
+    label: Vps41/Vam2 HOPS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps41_vam2_hops_subunit
+  - node_id: hops_complex
+    label: HOPS complex
+    node_type: STRUCTURE
+    grounding: GO:0030897
+  - node_id: fungal_type_vacuole_membrane
+    label: fungal-type vacuole membrane
+    node_type: STRUCTURE
+    grounding: GO:0000329
+  - node_id: ypt7_rab
+    label: Ypt7 Rab GTPase
+    node_type: GENE_OR_PROTEIN
+  - node_id: homotypic_vacuole_fusion
+    label: vacuole fusion, non-autophagic
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042144
+  edges:
+  - subject: vps11_hops_subunit
+    predicate: is part of
+    object: hops_complex
+    description: Vps11 HOPS subunit is represented as a Saccharomyces cerevisiae HOPS
+      subunit.
+    evidence:
+    - reference: DOI:10.1073/pnas.97.17.9402
+      notes: Seals et al. 2000 placed Vps11p, Vps16p, Vps18p, Vps33p, Vam2/Vps41p
+        and Vam6/Vps39p in the yeast HOPS complex.
+  - subject: vps16_hops_subunit
+    predicate: is part of
+    object: hops_complex
+    description: Vps16 HOPS subunit is represented as a Saccharomyces cerevisiae HOPS
+      subunit.
+    evidence:
+    - reference: DOI:10.1073/pnas.97.17.9402
+      notes: Seals et al. 2000 placed Vps11p, Vps16p, Vps18p, Vps33p, Vam2/Vps41p
+        and Vam6/Vps39p in the yeast HOPS complex.
+  - subject: vps18_hops_subunit
+    predicate: is part of
+    object: hops_complex
+    description: Vps18 HOPS subunit is represented as a Saccharomyces cerevisiae HOPS
+      subunit.
+    evidence:
+    - reference: DOI:10.1073/pnas.97.17.9402
+      notes: Seals et al. 2000 placed Vps11p, Vps16p, Vps18p, Vps33p, Vam2/Vps41p
+        and Vam6/Vps39p in the yeast HOPS complex.
+  - subject: vps33_hops_subunit
+    predicate: is part of
+    object: hops_complex
+    description: Vps33 HOPS subunit is represented as a Saccharomyces cerevisiae HOPS
+      subunit.
+    evidence:
+    - reference: DOI:10.1073/pnas.97.17.9402
+      notes: Seals et al. 2000 placed Vps11p, Vps16p, Vps18p, Vps33p, Vam2/Vps41p
+        and Vam6/Vps39p in the yeast HOPS complex.
+  - subject: vps39_vam6_hops_subunit
+    predicate: is part of
+    object: hops_complex
+    description: Vps39/Vam6 HOPS subunit is represented as a Saccharomyces cerevisiae
+      HOPS subunit.
+    evidence:
+    - reference: DOI:10.1073/pnas.97.17.9402
+      notes: Seals et al. 2000 placed Vps11p, Vps16p, Vps18p, Vps33p, Vam2/Vps41p
+        and Vam6/Vps39p in the yeast HOPS complex.
+  - subject: vps41_vam2_hops_subunit
+    predicate: is part of
+    object: hops_complex
+    description: Vps41/Vam2 HOPS subunit is represented as a Saccharomyces cerevisiae
+      HOPS subunit.
+    evidence:
+    - reference: DOI:10.1073/pnas.97.17.9402
+      notes: Seals et al. 2000 placed Vps11p, Vps16p, Vps18p, Vps33p, Vam2/Vps41p
+        and Vam6/Vps39p in the yeast HOPS complex.
+  - subject: hops_complex
+    predicate: acts on
+    object: fungal_type_vacuole_membrane
+    description: The HOPS complex is associated with yeast vacuole membranes during
+      the priming and docking sequence before homotypic vacuole fusion.
+    evidence:
+    - reference: DOI:10.1073/pnas.97.17.9402
+      notes: Seals et al. 2000 studied vacuole-associated HOPS during in vitro homotypic
+        vacuole fusion.
+  - subject: hops_complex
+    predicate: binds
+    object: ypt7_rab
+    description: Priming releases HOPS as a complex that can bind the GTP-bound Ypt7
+      Rab.
+    evidence:
+    - reference: DOI:10.1073/pnas.97.17.9402
+      notes: Seals et al. 2000 found that HOPS binds GTP-loaded Ypt7 after release
+        from the primed 65S vacuolar complex.
+  - subject: hops_complex
+    predicate: acts in
+    object: homotypic_vacuole_fusion
+    description: Antibody blockade of HOPS subunits inhibits the yeast in vitro homotypic
+      vacuole fusion reaction.
+    evidence:
+    - reference: DOI:10.1073/pnas.97.17.9402
+      notes: Seals et al. 2000 reported that antibodies to each class C Vps protein
+        block the homotypic vacuole fusion assay.
+discussions:
+- discussion_id: resolve_hops_component_family_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, or Complex Portal groundings
+    for the six HOPS subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vps11_hops_subunit
+  - components#vps16_hops_subunit
+  - components#vps18_hops_subunit
+  - components#vps33_hops_subunit
+  - components#vps39_vam6_hops_subunit
+  - components#vps41_vam2_hops_subunit
+  rationale: This first HOPS record records the named Saccharomyces cerevisiae subunits
+    without asserting paralogy boundaries or source-neutral family identifiers unless
+    those identifiers are reviewed exactly.
+  evidence:
+  - reference: DOI:10.1073/pnas.97.17.9402
+    notes: Seals et al. 2000 identified the six named yeast HOPS subunits.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: hops_interactor_boundary
+  prompt: Do not model vacuolar SNAREs, Sec17/Sec18 priming factors, or Ypt7 as constituent
+    HOPS components.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#vps11_hops_subunit
+  - components#vps16_hops_subunit
+  - components#vps18_hops_subunit
+  - components#vps33_hops_subunit
+  - components#vps39_vam6_hops_subunit
+  - components#vps41_vam2_hops_subunit
+  - causal_graphs#yeast_hops_vacuole_fusion
+  rationale: Seals et al. 2000 found HOPS associated with SNARE-containing 65S vacuolar
+    material before priming and with Ypt7 after priming, but defined the 38S HOPS
+    complex as Vam2/Vps41, Vam6/Vps39, Vps11, Vps16, Vps18 and Vps33.
+  evidence:
+  - reference: DOI:10.1073/pnas.97.17.9402
+    notes: Seals et al. 2000 separated HOPS from its priming-dependent SNARE and Ypt7
+      interactions.
+  posed_by: codex
+  posed_date: '2026-09-16'
