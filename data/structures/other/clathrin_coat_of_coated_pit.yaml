@@ -1,0 +1,217 @@
+identifier: GO:0030132
+label: clathrin coat of coated pit
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The coat found on coated pits and the coated vesicles derived from coated
+  pits; comprises clathrin and the AP-2 adaptor complex.
+definition_source: GO:0030132
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T15:07:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T15:08:28Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added clathrin-coat parentage, clathrin-coated-pit parthood, AP-2 has-part
+    topology, reviewed-label-only clathrin triskelion and GO-grounded AP-2 components,
+    GO/DOI evidence, a nonmechanistic coated-pit topology graph, and boundary and
+    grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-16T15:16:37Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1104 review issue #1105 by changing the coated-pit function
+    description so the structure forms the AP-2/clathrin coat rather than organizing
+    another AP-2/clathrin coat.'
+  llm_assisted: true
+parent_structures:
+- GO:0030118
+part_of:
+- GO:0005905
+has_part:
+- GO:0030122
+components:
+- component_id: clathrin_triskelion_scaffold
+  label: clathrin triskelion scaffold
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Polymerized clathrin triskelions that build the lattice of the coated-pit
+    clathrin coat.
+  evidence:
+  - reference: GO:0030132
+    notes: GO:0030132 defines the clathrin coat of a coated pit as comprising clathrin
+      and AP-2.
+  - reference: GO:0030118
+    notes: GO:0030118 defines clathrin coats as polymerized clathrin triskelions linked
+      to membranes by adaptor complexes.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The clathrin triskelion is represented here at the source-neutral
+    protein-complex level; no exact Complex Portal, GO, InterPro, Pfam or NCBIfam
+    CURIE was curated in this pass.
+- component_id: ap2_adaptor_complex
+  label: AP-2 adaptor complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0030122
+  essentiality: UNKNOWN
+  role: Endocytic AP-type adaptor complex that links clathrin to coated-pit membranes
+    and cargo receptors.
+  evidence:
+  - reference: GO:0030132
+    notes: GO:0030132 states that the clathrin coat of a coated pit comprises clathrin
+      and the AP-2 adaptor complex.
+  - reference: GO:0030122
+    notes: GO:0030122 has a part-of relationship to the clathrin coat of a coated
+      pit.
+  - reference: DOI:10.1016/S0092-8674(02)00735-3
+    notes: Collins, McCoy, Kent, Evans and Owen 2002 determined the molecular architecture
+      of the endocytic AP-2 complex.
+  - reference: DOI:10.1016/j.cell.2010.05.006
+    notes: Jackson et al. 2010 analyzed AP-2 membrane recruitment and cargo binding
+      by the AP-2 clathrin adaptor complex.
+functions:
+- function_id: clathrin_dependent_endocytosis
+  label: clathrin-dependent endocytosis
+  grounding: GO:0072583
+  description: The clathrin coat of coated pits participates in clathrin-dependent
+    endocytosis by forming the AP-2/clathrin coat on endocytic coated pits.
+  evidence:
+  - reference: GO:0072583
+    notes: GO:0072583 describes endocytosis through clathrin-coated pits that form
+      clathrin-coated endocytic vesicles.
+  - reference: GO:0030132
+    notes: GO:0030132 identifies the clathrin/AP-2 coat on coated pits.
+evidence:
+- reference: GO:0030132
+  notes: Gene Ontology cellular-component term for the clathrin coat of a coated pit.
+- reference: GO:0030118
+  notes: Gene Ontology cellular-component parent term for clathrin coats.
+- reference: GO:0005905
+  notes: Gene Ontology cellular-component term for the clathrin-coated pit that carries
+    GO:0030132 as a part.
+- reference: GO:0030122
+  notes: Gene Ontology cellular-component term for the AP-2 adaptor complex part of
+    GO:0030132.
+- reference: GO:0072583
+  notes: Gene Ontology biological-process term for clathrin-dependent endocytosis.
+- reference: DOI:10.1016/S0092-8674(02)00735-3
+  notes: Collins, McCoy, Kent, Evans and Owen 2002, Molecular Architecture and Functional
+    Model of the Endocytic AP2 Complex, Cell.
+- reference: DOI:10.1016/j.cell.2010.05.006
+  notes: Jackson et al. 2010, A Large-Scale Conformational Change Couples Membrane
+    Recruitment to Cargo Binding in the AP2 Clathrin Adaptor Complex, Cell.
+causal_graphs:
+- graph_id: coated_pit_clathrin_coat_topology
+  title: AP-2 and clathrin form a coated-pit clathrin coat
+  description: The clathrin coat of a coated pit is an AP-2-containing clathrin coat
+    on a clathrin-coated pit and participates in clathrin-dependent endocytosis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the GO-grounded coated-pit coat boundary without
+    asserting a complete clathrin assembly mechanism, the full coated-pit cargo cohort,
+    or vesicle scission.
+  nodes:
+  - node_id: clathrin_triskelion_scaffold
+    label: clathrin triskelion scaffold
+    node_type: GENE_OR_PROTEIN
+    component_ref: clathrin_triskelion_scaffold
+  - node_id: ap2_adaptor_complex
+    label: AP-2 adaptor complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0030122
+    component_ref: ap2_adaptor_complex
+  - node_id: clathrin_coat_of_coated_pit
+    label: clathrin coat of coated pit
+    node_type: STRUCTURE
+    grounding: GO:0030132
+  - node_id: clathrin_coated_pit
+    label: clathrin-coated pit
+    node_type: STRUCTURE
+    grounding: GO:0005905
+  - node_id: clathrin_dependent_endocytosis
+    label: clathrin-dependent endocytosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0072583
+  edges:
+  - subject: clathrin_triskelion_scaffold
+    predicate: polymerizes into
+    object: clathrin_coat_of_coated_pit
+    description: Clathrin triskelions form the polymerized clathrin scaffold in the
+      coated-pit clathrin coat.
+    evidence:
+    - reference: GO:0030118
+      notes: GO:0030118 defines clathrin coats as polymerized clathrin triskelions.
+    - reference: GO:0030132
+      notes: GO:0030132 identifies the coated-pit-specific clathrin coat.
+  - subject: ap2_adaptor_complex
+    predicate: is part of
+    object: clathrin_coat_of_coated_pit
+    description: AP-2 is a constituent adaptor complex of the clathrin coat of a coated
+      pit.
+    evidence:
+    - reference: GO:0030122
+      notes: GO:0030122 is directly part of GO:0030132.
+    - reference: DOI:10.1016/S0092-8674(02)00735-3
+      notes: Collins, McCoy, Kent, Evans and Owen 2002 determined the endocytic AP-2
+        core architecture.
+  - subject: clathrin_coat_of_coated_pit
+    predicate: is part of
+    object: clathrin_coated_pit
+    description: The clathrin/AP-2 coat is modeled by GO as part of a clathrin-coated
+      pit.
+    evidence:
+    - reference: GO:0005905
+      notes: GO:0005905 identifies GO:0030132 as a part of the clathrin-coated pit.
+  - subject: clathrin_coat_of_coated_pit
+    predicate: participates in
+    object: clathrin_dependent_endocytosis
+    description: Clathrin-coated pits mature during clathrin-dependent endocytosis.
+    evidence:
+    - reference: GO:0072583
+      notes: GO:0072583 describes endocytosis through clathrin-coated pits that form
+        clathrin-coated endocytic vesicles.
+discussions:
+- discussion_id: coated_pit_vs_endocytic_vesicle_coat_boundary
+  prompt: Keep the clathrin coat of coated pit distinct from the clathrin coat of
+    an endocytic vesicle.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - part_of
+  rationale: GO:0030132 is the AP-2-containing clathrin coat on a clathrin-coated
+    pit, whereas GO:0030128 is the clathrin coat of an endocytic vesicle. This record
+    therefore places GO:0030132 under the broader clathrin coat and models GO:0005905
+    clathrin-coated pit as the containing structure rather than treating the coated-pit
+    and endocytic-vesicle coats as interchangeable.
+  evidence:
+  - reference: GO:0030132
+    notes: GO cellular-component term for the coated-pit clathrin coat.
+  - reference: GO:0030128
+    notes: GO cellular-component term for the endocytic-vesicle clathrin coat.
+  - reference: GO:0005905
+    notes: GO cellular-component term for the clathrin-coated pit.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: resolve_coated_pit_clathrin_grounding
+  prompt: Resolve an exact source-neutral grounding for the clathrin triskelion scaffold.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#clathrin_triskelion_scaffold
+  rationale: The coated-pit coat has an exact GO identifier and AP-2 is modeled as
+    an exact GO subcomplex, but the clathrin triskelion is currently represented at
+    the source-neutral label level until an exact Complex Portal or GO grounding is
+    curated.
+  evidence:
+  - reference: GO:0030132
+    notes: GO definition source for the clathrin and AP-2 composition of the coated-pit
+      coat.
+  posed_by: codex
+  posed_date: '2026-09-16'

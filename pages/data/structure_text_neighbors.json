@@ -9685,6 +9685,11 @@
       "label": "clathrin coat",
       "neighbors": [
         {
+          "identifier": "GO:0030132",
+          "label": "clathrin coat of coated pit",
+          "cosine_similarity": 0.91354791
+        },
+        {
           "identifier": "GO:0030128",
           "label": "clathrin coat of endocytic vesicle",
           "cosine_similarity": 0.90855924
@@ -9703,11 +9708,37 @@
           "identifier": "GO:0030136",
           "label": "clathrin-coated vesicle",
           "cosine_similarity": 0.8238434
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030132",
+      "label": "clathrin coat of coated pit",
+      "neighbors": [
+        {
+          "identifier": "GO:0030118",
+          "label": "clathrin coat",
+          "cosine_similarity": 0.91354791
         },
         {
-          "identifier": "GO:0030665",
-          "label": "clathrin-coated vesicle membrane",
-          "cosine_similarity": 0.80994401
+          "identifier": "GO:0030128",
+          "label": "clathrin coat of endocytic vesicle",
+          "cosine_similarity": 0.84761148
+        },
+        {
+          "identifier": "GO:0030130",
+          "label": "clathrin coat of trans-Golgi network vesicle",
+          "cosine_similarity": 0.81685023
+        },
+        {
+          "identifier": "GO:0030125",
+          "label": "clathrin vesicle coat",
+          "cosine_similarity": 0.80946777
+        },
+        {
+          "identifier": "GO:0030117",
+          "label": "membrane coat",
+          "cosine_similarity": 0.71150144
         }
       ]
     },
