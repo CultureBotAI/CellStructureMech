@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/golgi_associated_vesicle_membrane.yaml
+  slug: golgi_associated_vesicle_membrane
+session:
+  id: 2026-09-16T062849Z-codex-399bc1
+  timestamp: '2026-09-16T06:28:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1071
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1070
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: Address Golgi-associated vesicle membrane PR review
+  details: 'Resolved PR #1070 review issue #1071 by adding GO:0012510 record-level evidence
+    and a nonmechanistic trans-Golgi network transport vesicle membrane child edge to the
+    GO:0030660 topology graph.'

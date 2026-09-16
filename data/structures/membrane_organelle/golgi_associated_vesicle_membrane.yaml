@@ -19,6 +19,13 @@ curation_history:
     Saccharomyces COPI scope, GO/DOI evidence, a nonmechanistic Golgi-associated vesicle
     membrane topology graph, and lipid-grounding plus COPI-coat boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-16T06:28:22Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1070 review issue #1071 by representing the GO:0012510 trans-Golgi
+    network transport vesicle membrane child in record-level evidence and the nonmechanistic
+    topology graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0030659
 part_of:
@@ -66,6 +73,9 @@ evidence:
     vesicle.
 - reference: GO:0030663
   notes: Gene Ontology cellular-component child term for COPI-coated vesicle membranes.
+- reference: GO:0012510
+  notes: Gene Ontology cellular-component child term for trans-Golgi network transport
+    vesicle membranes.
 - reference: GO:0030137
   notes: Gene Ontology cellular-component term for COPI-coated vesicles.
 - reference: GO:0000139
@@ -84,12 +94,14 @@ causal_graphs:
 - graph_id: golgi_associated_vesicle_membrane_topology
   title: Golgi-associated vesicle membrane topology
   description: The Golgi-associated vesicle membrane is the lipid bilayer that bounds
-    Golgi-associated vesicles, including COPI-coated Golgi-derived vesicles.
+    Golgi-associated vesicles, including COPI-coated and trans-Golgi-network transport
+    vesicles.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures the generic Golgi-associated vesicle membrane boundary
-    and a COPI child membrane without duplicating the COPI coat subunit assembly mechanism
-    or asserting that every Golgi-associated vesicle membrane is COPI coated.
+    and two direct GO child membranes without duplicating child-specific coat assembly
+    mechanisms or asserting that every Golgi-associated vesicle membrane is COPI coated
+    or a trans-Golgi-network transport vesicle membrane.
   nodes:
   - node_id: golgi_membrane
     label: Golgi membrane
@@ -108,6 +120,10 @@ causal_graphs:
     label: COPI-coated vesicle membrane
     node_type: STRUCTURE
     grounding: GO:0030663
+  - node_id: trans_golgi_network_transport_vesicle_membrane
+    label: trans-Golgi network transport vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0012510
   edges:
   - subject: golgi_associated_vesicle_membrane
     predicate: is part of
@@ -136,6 +152,17 @@ causal_graphs:
     - reference: GO:0030663
       notes: GO:0030663 identifies COPI-coated vesicle membranes as a child class
         of GO:0030660.
+    - reference: GO:0030660
+      notes: GO:0030660 denotes the parent Golgi-associated vesicle membrane class.
+  - subject: trans_golgi_network_transport_vesicle_membrane
+    predicate: is a
+    object: golgi_associated_vesicle_membrane
+    description: Trans-Golgi network transport vesicle membranes are Golgi-associated
+      vesicle membranes.
+    evidence:
+    - reference: GO:0012510
+      notes: GO:0012510 identifies trans-Golgi network transport vesicle membranes
+        as a child class of GO:0030660.
     - reference: GO:0030660
       notes: GO:0030660 denotes the parent Golgi-associated vesicle membrane class.
   - subject: golgi_membrane
