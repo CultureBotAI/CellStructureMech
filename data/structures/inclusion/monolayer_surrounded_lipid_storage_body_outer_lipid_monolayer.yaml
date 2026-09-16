@@ -1,0 +1,181 @@
+identifier: GO:0034430
+label: monolayer-surrounded lipid storage body outer lipid monolayer
+structure_category: INCLUSION
+structure_kind: MEMBRANE
+definition: The single layer of phospholipids surrounding a lipid storage body.
+definition_source: GO:0034430
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T00:25:24Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T00:26:14Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, lipid-droplet parthood, a ChEBI-grounded phospholipid
+    component, Saccharomyces scope, DOI and PMID evidence, a nonmechanistic outer-monolayer
+    topology graph, and a resolved protein-boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-09-16T00:26:50Z'
+  curator: codex
+  action: POLISH_RECORD
+  changes: Aligned the ChEBI-grounded phospholipid component label with CHEBI:16247
+    and removed redundant record-level ChEBI evidence.
+  llm_assisted: true
+- timestamp: '2026-09-16T00:32:37Z'
+  curator: codex
+  action: FIX_VALIDATION
+  changes: Retargeted the lipid-droplet surface-protein boundary discussion to the
+    surface_phospholipids component anchor.
+  llm_assisted: true
+synonyms:
+- synonym_text: lipid storage body surface lipid monolayer
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034430
+- synonym_text: oil body outer lipid monolayer
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034430
+- synonym_text: oleosome outer lipid monolayer
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034430
+- synonym_text: spherosome outer lipid monolayer
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034430
+- synonym_text: lipid droplet outer lipid monolayer
+  synonym_type: RELATED_SYNONYM
+  source: GO:0034430
+part_of:
+- GO:0005811
+components:
+- component_id: surface_phospholipids
+  label: phospholipid
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: CHEBI:16247
+  essentiality: ESSENTIAL
+  role: Phospholipid molecules that assemble into the single-leaflet surface surrounding
+    the hydrophobic lipid-storage core.
+  evidence:
+  - reference: GO:0034430
+    notes: GO:0034430 defines this structure as a single phospholipid layer surrounding
+      a lipid storage body.
+  - reference: DOI:10.1007/s00018-015-1903-5
+    notes: Wang 2015 reviews budding-yeast lipid droplets as neutral-lipid organelles
+      bounded by a phospholipid monolayer.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast lipid droplets have a phospholipid monolayer surface around
+    a neutral-lipid storage core.
+  reference: DOI:10.1007/s00018-015-1903-5
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding yeast species used to define lipid-droplet phospholipid monolayers
+    and neutral-lipid storage architecture.
+  reference: DOI:10.1016/j.bbalip.2011.07.015
+functions:
+- function_id: lipid_droplet_surface_compartmentalization
+  label: lipid-droplet surface compartmentalization
+  description: The lipid-storage-body outer monolayer separates the hydrophobic storage-lipid
+    core from the cytosol while exposing a surface for lipid-droplet proteins.
+  evidence:
+  - reference: GO:0005811
+    notes: The GO lipid-droplet definition describes coalesced lipids surrounded by
+      a phospholipid monolayer that may include associated proteins.
+  - reference: PMID:29397034
+    notes: Graef 2018 reviews budding-yeast lipid droplets as neutral-lipid storage
+      organelles with a phospholipid monolayer surface.
+evidence:
+- reference: GO:0034430
+  notes: Gene Ontology cellular-component term for the outer lipid monolayer of a
+    monolayer-surrounded lipid storage body.
+- reference: GO:0005811
+  notes: Gene Ontology cellular-component term for the containing lipid droplet.
+- reference: DOI:10.1007/s00018-015-1903-5
+  notes: Wang 2015 reviewed lipid-droplet dynamics in budding yeast.
+- reference: PMID:29397034
+  notes: Graef 2018 reviewed lipid-droplet-mediated lipid and protein homeostasis
+    in budding yeast.
+- reference: DOI:10.1016/j.bbalip.2011.07.015
+  notes: Grillitsch et al. 2011 characterized the lipidome and proteome of Saccharomyces
+    cerevisiae lipid particles/droplets.
+causal_graphs:
+- graph_id: lipid_droplet_outer_monolayer_topology
+  title: Phospholipids form the lipid-droplet outer monolayer
+  description: Phospholipids assemble into a single outer leaflet that is part of
+    the lipid droplet and surrounds its hydrophobic storage-lipid core.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures mature lipid-droplet surface topology without asserting
+    endoplasmic-reticulum budding, protein insertion, droplet growth, inheritance,
+    or lipolysis mechanisms.
+  nodes:
+  - node_id: surface_phospholipids
+    label: phospholipid
+    node_type: CHEMICAL
+    grounding: CHEBI:16247
+    component_ref: surface_phospholipids
+  - node_id: outer_lipid_monolayer
+    label: monolayer-surrounded lipid storage body outer lipid monolayer
+    node_type: STRUCTURE
+    grounding: GO:0034430
+  - node_id: lipid_droplet
+    label: lipid droplet
+    node_type: ORGANELLE
+    grounding: GO:0005811
+  - node_id: neutral_lipid_core
+    label: neutral lipid core
+    node_type: CHEMICAL
+  edges:
+  - subject: surface_phospholipids
+    predicate: assemble into
+    object: outer_lipid_monolayer
+    description: Phospholipids form the single outer monolayer of the lipid-storage
+      body.
+    evidence:
+    - reference: GO:0034430
+      notes: The GO definition identifies the outer lipid monolayer as a single layer
+        of phospholipids surrounding the lipid storage body.
+  - subject: outer_lipid_monolayer
+    predicate: is part of
+    object: lipid_droplet
+    description: The outer lipid monolayer is the single-leaflet surface of the lipid
+      droplet.
+    evidence:
+    - reference: GO:0005811
+      notes: The GO lipid-droplet definition describes a coalesced-lipid matrix surrounded
+        by a phospholipid monolayer.
+  - subject: outer_lipid_monolayer
+    predicate: surrounds
+    object: neutral_lipid_core
+    description: The outer monolayer surrounds the hydrophobic neutral-lipid core
+      of the droplet.
+    evidence:
+    - reference: PMID:29397034
+      notes: Graef 2018 reviews budding-yeast lipid droplets as neutral-lipid stores
+        bounded by a phospholipid monolayer.
+discussions:
+- discussion_id: exclude_lipid_droplet_surface_proteins
+  prompt: Should lipid-droplet surface proteins be curated as components of the outer
+    lipid monolayer record?
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#surface_phospholipids
+  - causal_graphs#lipid_droplet_outer_monolayer_topology
+  rationale: GO:0034430 denotes the lipid monolayer surrounding a lipid storage body.
+    Proteins associated with that surface can be curated on the lipid-droplet record
+    or as exact complexes after grounding, but this record's component list is limited
+    to the phospholipids that form the monolayer itself.
+  evidence:
+  - reference: GO:0034430
+    notes: The GO term definition scopes GO:0034430 to the single phospholipid layer.
+  - reference: PMID:29397034
+    notes: Graef 2018 reviews distinct lipid and protein homeostasis roles on the
+      budding-yeast lipid droplet.
+  posed_by: codex
+  posed_date: '2026-09-16'

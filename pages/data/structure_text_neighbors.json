@@ -3144,6 +3144,11 @@
       "label": "lipid droplet",
       "neighbors": [
         {
+          "identifier": "GO:0034430",
+          "label": "monolayer-surrounded lipid storage body outer lipid monolayer",
+          "cosine_similarity": 0.84444995
+        },
+        {
           "identifier": "GO:0033118",
           "label": "esterosome membrane",
           "cosine_similarity": 0.70922175
@@ -3162,11 +3167,37 @@
           "identifier": "GO:0005789",
           "label": "endoplasmic reticulum membrane",
           "cosine_similarity": 0.66413574
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0034430",
+      "label": "monolayer-surrounded lipid storage body outer lipid monolayer",
+      "neighbors": [
+        {
+          "identifier": "GO:0005811",
+          "label": "lipid droplet",
+          "cosine_similarity": 0.84444995
         },
         {
-          "identifier": "GO:0012507",
-          "label": "ER to Golgi transport vesicle membrane",
-          "cosine_similarity": 0.66168144
+          "identifier": "GO:0030663",
+          "label": "COPI-coated vesicle membrane",
+          "cosine_similarity": 0.80284942
+        },
+        {
+          "identifier": "GO:0030659",
+          "label": "cytoplasmic vesicle membrane",
+          "cosine_similarity": 0.79512909
+        },
+        {
+          "identifier": "GO:0033118",
+          "label": "esterosome membrane",
+          "cosine_similarity": 0.78693776
+        },
+        {
+          "identifier": "GO:0032585",
+          "label": "multivesicular body membrane",
+          "cosine_similarity": 0.78211296
         }
       ]
     },

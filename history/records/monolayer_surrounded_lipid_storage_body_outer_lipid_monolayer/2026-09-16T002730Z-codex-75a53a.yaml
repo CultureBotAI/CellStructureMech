@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/monolayer_surrounded_lipid_storage_body_outer_lipid_monolayer.yaml
+  slug: monolayer_surrounded_lipid_storage_body_outer_lipid_monolayer
+session:
+  id: 2026-09-16T002730Z-codex-75a53a
+  timestamp: '2026-09-16T00:27:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add lipid droplet outer monolayer record
+  details: Created a GO:0034430 monolayer-surrounded lipid storage body outer lipid monolayer
+    CellStructureMech record with lipid-droplet parthood, GO synonymy, a ChEBI-grounded phospholipid
+    constituent, Saccharomyces cerevisiae scope, a nonmechanistic outer-monolayer topology
+    graph, and a resolved interpretation that excludes lipid-droplet surface proteins from
+    the lipid-monolayer component boundary.
