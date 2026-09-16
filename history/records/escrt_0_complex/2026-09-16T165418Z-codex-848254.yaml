@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/escrt_0_complex.yaml
+  slug: escrt_0_complex
+session:
+  id: 2026-09-16T165418Z-codex-848254
+  timestamp: '2026-09-16T16:54:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1111
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1110
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Constrain ESCRT-0 ESCRT-I recruitment to Vps27
+  details: Adversarial PR review found that the ESCRT-0 graph assigned the Katzmann 2003 ESCRT-I
+    recruitment edge to the whole ESCRT-0 complex even though the cited paper and existing
+    ESCRT-I/endosome records support Vps27-dependent recruitment directly. Updated the yeast
+    ESCRT-0 graph so Vps27 is the recruits-edge subject, tightened the graph description and
+    scope notes to keep the claim at Vps27 granularity, and left the Vps27p-Hse1p ubiquitin-binding
+    complex edge unchanged.

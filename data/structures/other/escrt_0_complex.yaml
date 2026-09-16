@@ -1,0 +1,233 @@
+identifier: GO:0033565
+label: ESCRT-0 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex required for the recycling of Golgi proteins, formation
+  of lumenal membranes and sorting of ubiquitinated proteins into those membranes.
+  This complex includes Vps1p and Hse1p in yeast and the Hrs and STAM proteins in
+  mammals.
+definition_source: GO:0033565
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T16:40:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T16:41:15Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ESCRT-0 synonymy, GO parentage and endosome parthood, reviewed-label-only
+    Vps27 and Hse1 core subunits, Saccharomyces scope, an MVB sorting function, GO/DOI
+    evidence, a nonmechanistic yeast cargo recognition graph, a subunit-grounding
+    TODO, and a resolved Vps1 boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-16T16:53:45Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Constrained the Katzmann 2003 ESCRT-I recruitment edge to Vps27 instead
+    of the whole ESCRT-0 complex for PR #1110 / issue #1111.'
+  llm_assisted: true
+parent_structures:
+- GO:0036452
+part_of:
+- GO:0005768
+synonyms:
+- synonym_text: Hrs/STAM complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0033565
+- synonym_text: Vps27p-Hse1p complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/ncb815
+components:
+- component_id: vps27_escrt_0_subunit
+  label: Vps27 ESCRT-0 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS27
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps27p ESCRT-0
+    subunit; no exact source-neutral InterPro or Pfam family identifier that spans
+    the yeast Vps27 and mammalian Hrs boundary was curated in this pass.
+  role: Vps27 ubiquitin-binding constituent of the yeast Vps27p-Hse1p ESCRT-0 complex.
+  evidence:
+  - reference: DOI:10.1038/ncb815
+    notes: Bilodeau, Urbanowski, Winistorfer and Piper 2002 characterized Vps27p as
+      one member of the yeast Vps27p-Hse1p complex that binds ubiquitin and mediates
+      endosomal protein sorting.
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: Henne, Buchkovich and Emr 2011 reviewed Vps27 as the yeast ESCRT-0 cargo-recognition
+      subunit in the endosomal ESCRT pathway.
+- component_id: hse1_escrt_0_subunit
+  label: Hse1 ESCRT-0 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HSE1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Hse1p ESCRT-0 subunit;
+    no exact source-neutral InterPro or Pfam family identifier that spans the yeast
+    Hse1 and mammalian STAM boundary was curated in this pass.
+  role: Hse1 ubiquitin-binding constituent of the yeast Vps27p-Hse1p ESCRT-0 complex.
+  evidence:
+  - reference: DOI:10.1038/ncb815
+    notes: Bilodeau, Urbanowski, Winistorfer and Piper 2002 characterized Hse1p as
+      one member of the yeast Vps27p-Hse1p complex that binds ubiquitin and mediates
+      endosomal protein sorting.
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: Henne, Buchkovich and Emr 2011 reviewed Hse1 as the second yeast ESCRT-0
+      subunit in the endosomal ESCRT pathway.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses the Vps27p-Hse1p ESCRT-0 complex for ubiquitin-dependent
+    endosomal protein sorting.
+  reference: DOI:10.1038/ncb815
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Model in which Bilodeau, Urbanowski, Winistorfer and Piper characterized the
+    Vps27p-Hse1p complex as a ubiquitin-binding ESCRT-0 cargo-recognition complex.
+  reference: DOI:10.1038/ncb815
+functions:
+- function_id: multivesicular_body_sorting_pathway
+  label: multivesicular body sorting pathway
+  grounding: GO:0071985
+  description: ESCRT-0 recognizes ubiquitinated endosomal cargo and acts upstream
+    of ESCRT-I during MVB cargo sorting.
+  evidence:
+  - reference: GO:0071985
+    notes: GO:0071985 denotes the vesicle-mediated transport pathway that moves ubiquitylated
+      transmembrane proteins into multivesicular-body luminal vesicles.
+  - reference: DOI:10.1038/ncb815
+    notes: Bilodeau et al. 2002 identified the Vps27p-Hse1p complex as a ubiquitin-binding
+      endosomal sorting factor in budding yeast.
+evidence:
+- reference: GO:0033565
+  notes: Gene Ontology cellular-component term for ESCRT-0 complex.
+- reference: GO:0036452
+  notes: Gene Ontology cellular-component parent term for the ESCRT complex class.
+- reference: GO:0005768
+  notes: Gene Ontology cellular-component term for the endosome.
+- reference: GO:0071985
+  notes: Gene Ontology biological-process term for the multivesicular body sorting
+    pathway.
+- reference: DOI:10.1038/ncb815
+  notes: Bilodeau, Urbanowski, Winistorfer and Piper 2002, The Vps27p-Hse1p complex
+    binds ubiquitin and mediates endosomal protein sorting, Nature Cell Biology.
+- reference: DOI:10.1083/jcb.200302136
+  notes: Katzmann, Stefan, Babst and Emr 2003, Vps27 recruits ESCRT machinery to endosomes
+    during MVB sorting, Journal of Cell Biology.
+- reference: DOI:10.1016/j.devcel.2011.05.015
+  notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+causal_graphs:
+- graph_id: yeast_escrt_0_mvb_cargo_recognition
+  title: ESCRT-0 recognizes ubiquitinated yeast MVB cargo
+  description: In Saccharomyces cerevisiae, Vps27 and Hse1 form ESCRT-0, which binds
+    ubiquitinated cargo, and Vps27 recruits ESCRT-I during the endosomal MVB sorting
+    cascade.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents the yeast Vps27/Hse1 ESCRT-0 complex, with ESCRT-I
+    recruitment kept at Vps27 granularity, without modeling cargo ubiquitin valency,
+    ESCRT-I/II handoff or later ESCRT-III membrane remodeling.
+  nodes:
+  - node_id: vps27_escrt_0_subunit
+    label: Vps27 ESCRT-0 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps27_escrt_0_subunit
+  - node_id: hse1_escrt_0_subunit
+    label: Hse1 ESCRT-0 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hse1_escrt_0_subunit
+  - node_id: escrt_0_complex
+    label: ESCRT-0 complex
+    node_type: STRUCTURE
+    grounding: GO:0033565
+  - node_id: ubiquitinated_mvb_cargo
+    label: ubiquitinated MVB cargo
+    node_type: STATE
+  - node_id: escrt_i_complex
+    label: ESCRT I complex
+    node_type: STRUCTURE
+    grounding: GO:0000813
+  - node_id: multivesicular_body_sorting_pathway
+    label: multivesicular body sorting pathway
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071985
+  edges:
+  - subject: vps27_escrt_0_subunit
+    predicate: is part of
+    object: escrt_0_complex
+    description: Vps27 is represented as a Saccharomyces cerevisiae ESCRT-0 constituent.
+    evidence:
+    - reference: DOI:10.1038/ncb815
+      notes: Bilodeau et al. 2002 characterized Vps27p in the yeast Vps27p-Hse1p complex.
+  - subject: hse1_escrt_0_subunit
+    predicate: is part of
+    object: escrt_0_complex
+    description: Hse1 is represented as a Saccharomyces cerevisiae ESCRT-0 constituent.
+    evidence:
+    - reference: DOI:10.1038/ncb815
+      notes: Bilodeau et al. 2002 characterized Hse1p in the yeast Vps27p-Hse1p complex.
+  - subject: escrt_0_complex
+    predicate: binds
+    object: ubiquitinated_mvb_cargo
+    description: The yeast Vps27p-Hse1p ESCRT-0 complex binds ubiquitin during endosomal
+      cargo sorting.
+    evidence:
+    - reference: DOI:10.1038/ncb815
+      notes: Bilodeau et al. 2002 showed that the Vps27p-Hse1p complex binds ubiquitin.
+  - subject: vps27_escrt_0_subunit
+    predicate: recruits
+    object: escrt_i_complex
+    description: Vps27 recruits ESCRT-I during yeast MVB sorting.
+    evidence:
+    - reference: DOI:10.1083/jcb.200302136
+      notes: Katzmann, Stefan, Babst and Emr 2003 found that Vps27 recruits ESCRT-I
+        to endosomes.
+  - subject: escrt_0_complex
+    predicate: participates in
+    object: multivesicular_body_sorting_pathway
+    description: ESCRT-0 participates in ubiquitin-dependent endosomal sorting into
+      the yeast MVB pathway.
+    evidence:
+    - reference: DOI:10.1038/ncb815
+      notes: Bilodeau et al. 2002 placed the Vps27p-Hse1p complex in yeast endosomal
+        protein sorting.
+discussions:
+- discussion_id: resolve_escrt_0_family_groundings
+  prompt: Resolve exact source-neutral InterPro or Pfam groundings for the Vps27/Hrs
+    and Hse1/STAM ESCRT-0 subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vps27_escrt_0_subunit
+  - components#hse1_escrt_0_subunit
+  rationale: This first ESCRT-0 record records the named Saccharomyces cerevisiae
+    Vps27 and Hse1 subunits and the mammalian Hrs/STAM synonym without asserting exact
+    yeast-to-mammal family mappings unless those identifiers are reviewed exactly.
+  evidence:
+  - reference: GO:0033565
+  - reference: DOI:10.1038/ncb815
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: go_definition_vps1_not_curated_component
+  prompt: Do not model Vps1 as a constituent component of yeast ESCRT-0.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#vps27_escrt_0_subunit
+  rationale: The GO:0033565 definition text currently names Vps1p, but its exact Vps27p-Hse1p
+    synonym and Bilodeau et al. 2002 identify Vps27p with Hse1p as the yeast ESCRT-0
+    complex curated here.
+  evidence:
+  - reference: GO:0033565
+  - reference: DOI:10.1038/ncb815
+  posed_by: codex
+  posed_date: '2026-09-16'
