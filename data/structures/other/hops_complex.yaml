@@ -27,6 +27,12 @@ curation_history:
   changes: Replaced the broad components discussion anchor on the HOPS interactor
     boundary with concrete anchors for all six HOPS subunit components.
   llm_assisted: true
+- timestamp: '2026-09-16T17:53:48Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1114 / issue #1115 by changing the HOPS vacuole-membrane
+    graph edge from acts-on to localization.'
+  llm_assisted: true
 parent_structures:
 - GO:0098796
 synonyms:
@@ -280,10 +286,10 @@ causal_graphs:
       notes: Seals et al. 2000 placed Vps11p, Vps16p, Vps18p, Vps33p, Vam2/Vps41p
         and Vam6/Vps39p in the yeast HOPS complex.
   - subject: hops_complex
-    predicate: acts on
+    predicate: localizes to
     object: fungal_type_vacuole_membrane
-    description: The HOPS complex is associated with yeast vacuole membranes during
-      the priming and docking sequence before homotypic vacuole fusion.
+    description: The HOPS complex localizes to yeast vacuole membranes during the
+      priming and docking sequence before homotypic vacuole fusion.
     evidence:
     - reference: DOI:10.1073/pnas.97.17.9402
       notes: Seals et al. 2000 studied vacuole-associated HOPS during in vitro homotypic

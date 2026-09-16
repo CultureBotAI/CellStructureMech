@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/hops_complex.yaml
+  slug: hops_complex
+session:
+  id: 2026-09-16T175406Z-codex-5e64aa
+  timestamp: '2026-09-16T17:54:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Localize HOPS to the vacuole membrane
+  details: Replaced the HOPS-to-vacuole-membrane graph edge predicate from acts-on
+    to localization so the edge models vacuole-membrane association, leaving the
+    homotypic-vacuole-fusion process edge as the functional action; addresses PR
+    #1114 / issue #1115.
