@@ -9845,6 +9845,11 @@
           "cosine_similarity": 0.77541734
         },
         {
+          "identifier": "GO:1990070",
+          "label": "TRAPPI protein complex",
+          "cosine_similarity": 0.73121905
+        },
+        {
           "identifier": "GO:0000938",
           "label": "GARP complex",
           "cosine_similarity": 0.70273147
@@ -9858,11 +9863,6 @@
           "identifier": "GO:0070939",
           "label": "Dsl1/NZR complex",
           "cosine_similarity": 0.67662353
-        },
-        {
-          "identifier": "GO:0030130",
-          "label": "clathrin coat of trans-Golgi network vesicle",
-          "cosine_similarity": 0.66943694
         }
       ]
     },
@@ -10031,6 +10031,11 @@
           "cosine_similarity": 0.74839014
         },
         {
+          "identifier": "GO:1990070",
+          "label": "TRAPPI protein complex",
+          "cosine_similarity": 0.73273619
+        },
+        {
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.73222598
@@ -10044,11 +10049,6 @@
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.68642535
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.67886935
         }
       ]
     },
@@ -10232,9 +10232,9 @@
           "cosine_similarity": 0.70588908
         },
         {
-          "identifier": "GO:0030897",
-          "label": "HOPS complex",
-          "cosine_similarity": 0.69266619
+          "identifier": "GO:1990070",
+          "label": "TRAPPI protein complex",
+          "cosine_similarity": 0.70212787
         }
       ]
     },
@@ -10253,6 +10253,11 @@
           "cosine_similarity": 0.76159216
         },
         {
+          "identifier": "GO:1990070",
+          "label": "TRAPPI protein complex",
+          "cosine_similarity": 0.75093928
+        },
+        {
           "identifier": "GO:0070939",
           "label": "Dsl1/NZR complex",
           "cosine_similarity": 0.74839014
@@ -10261,11 +10266,6 @@
           "identifier": "GO:0005802",
           "label": "trans-Golgi network",
           "cosine_similarity": 0.73799305
-        },
-        {
-          "identifier": "GO:0030904",
-          "label": "retromer complex",
-          "cosine_similarity": 0.73663795
         }
       ]
     },
@@ -10315,6 +10315,11 @@
           "cosine_similarity": 0.78422668
         },
         {
+          "identifier": "GO:1990070",
+          "label": "TRAPPI protein complex",
+          "cosine_similarity": 0.78010634
+        },
+        {
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.75794431
@@ -10323,11 +10328,6 @@
           "identifier": "GO:0000813",
           "label": "ESCRT I complex",
           "cosine_similarity": 0.74561153
-        },
-        {
-          "identifier": "GO:0000938",
-          "label": "GARP complex",
-          "cosine_similarity": 0.72860141
         }
       ]
     },
@@ -11196,6 +11196,37 @@
           "identifier": "GO:0005643",
           "label": "nuclear pore",
           "cosine_similarity": 0.71401761
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990070",
+      "label": "TRAPPI protein complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.78010634
+        },
+        {
+          "identifier": "GO:0000938",
+          "label": "GARP complex",
+          "cosine_similarity": 0.75093928
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.73595464
+        },
+        {
+          "identifier": "GO:0030904",
+          "label": "retromer complex",
+          "cosine_similarity": 0.73395562
+        },
+        {
+          "identifier": "GO:0070939",
+          "label": "Dsl1/NZR complex",
+          "cosine_similarity": 0.73273619
         }
       ]
     },
