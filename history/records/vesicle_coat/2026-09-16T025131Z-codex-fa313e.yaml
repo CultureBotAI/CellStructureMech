@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/vesicle_coat.yaml
+  slug: vesicle_coat
+session:
+  id: 2026-09-16T025131Z-codex-fa313e
+  timestamp: '2026-09-16T02:51:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1054
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1055
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1053
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Address vesicle coat PR review issues
+  details: 'Addressed PR #1053 review issues #1054 and #1055 by adding a reviewed-label-only
+    broad component for vesicle coat recruitment and cargo-selection factors, adding AP-type
+    membrane coat adaptor, Arf-family COPI, Sar1-family COPII, and clathrin-dependent endocytosis
+    evidence, and updating the nonmechanistic assembly graph and subtype-boundary TODO so
+    the GO:0030120 parent no longer reads as scaffold-only or COPI/COPII-only.'
