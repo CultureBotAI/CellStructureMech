@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+  slug: clathrin_coat_of_endocytic_vesicle
+session:
+  id: 2026-09-16T080216Z-claude-code-bd2609
+  timestamp: '2026-09-16T08:02:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1077
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1076
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Narrowed GO:0030128 adaptor component wording
+  details: 'Resolved PR #1076 review issue #1077 by clarifying that GO:0030122 captures the
+    exact AP-2 adaptor-complex part of GO:0030128 while the reviewed-label-only endocytic_clathrin_adaptors
+    component remains a coarse bucket for additional endocytic adaptor and cargo-selection
+    factors.'

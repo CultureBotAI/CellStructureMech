@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+  slug: clathrin_coat_of_endocytic_vesicle
+session:
+  id: 2026-09-16T075122Z-claude-code-cbe641
+  timestamp: '2026-09-16T07:51:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0030128 clathrin coat of endocytic vesicle record
+  details: Created an evidence-backed GO:0030128 record with GO parentage to GO:0030125, parthood
+    in GO:0030669, AP-2 has-part topology, the GO exact synonym, Saccharomyces cerevisiae
+    endocytic-site evidence from Newpher et al. 2005 and Kaksonen et al. 2005, reviewed-label-only
+    triskelion and adaptor component classes, and boundary discussions that keep the subtype
+    distinct from broad clathrin vesicle coats.
