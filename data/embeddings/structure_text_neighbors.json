@@ -9855,14 +9855,14 @@
           "cosine_similarity": 0.78215719
         },
         {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.7510978
+        },
+        {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.72645975
-        },
-        {
-          "identifier": "GO:0044615",
-          "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.70728645
         }
       ]
     },
@@ -9991,6 +9991,37 @@
       ]
     },
     {
+      "identifier": "GO:0033565",
+      "label": "ESCRT-0 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000813",
+          "label": "ESCRT I complex",
+          "cosine_similarity": 0.91208668
+        },
+        {
+          "identifier": "GO:0000814",
+          "label": "ESCRT II complex",
+          "cosine_similarity": 0.90483787
+        },
+        {
+          "identifier": "GO:0000815",
+          "label": "ESCRT III complex",
+          "cosine_similarity": 0.88371456
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.7510978
+        },
+        {
+          "identifier": "GO:0005784",
+          "label": "Sec61 translocon complex",
+          "cosine_similarity": 0.74142332
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000813",
       "label": "ESCRT I complex",
       "neighbors": [
@@ -10005,6 +10036,11 @@
           "cosine_similarity": 0.92677998
         },
         {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.91208668
+        },
+        {
           "identifier": "GO:0030127",
           "label": "COPII vesicle coat",
           "cosine_similarity": 0.70783392
@@ -10013,11 +10049,6 @@
           "identifier": "GO:0005771",
           "label": "multivesicular body",
           "cosine_similarity": 0.7040116
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.70200702
         }
       ]
     },
@@ -10036,6 +10067,11 @@
           "cosine_similarity": 0.9433608
         },
         {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.90483787
+        },
+        {
           "identifier": "cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex",
           "label": "ESX-3 type VII secretion system membrane complex",
           "cosine_similarity": 0.69238427
@@ -10044,11 +10080,6 @@
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.68634964
-        },
-        {
-          "identifier": "GO:0030127",
-          "label": "COPII vesicle coat",
-          "cosine_similarity": 0.68415941
         }
       ]
     },
@@ -10067,6 +10098,11 @@
           "cosine_similarity": 0.92677998
         },
         {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.88371456
+        },
+        {
           "identifier": "GO:0005770",
           "label": "late endosome",
           "cosine_similarity": 0.73842871
@@ -10075,11 +10111,6 @@
           "identifier": "cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex",
           "label": "ESX-3 type VII secretion system membrane complex",
           "cosine_similarity": 0.73268973
-        },
-        {
-          "identifier": "GO:0010008",
-          "label": "endosome membrane",
-          "cosine_similarity": 0.73049953
         }
       ]
     },
@@ -10108,9 +10139,9 @@
           "cosine_similarity": 0.70588908
         },
         {
-          "identifier": "GO:0005783",
-          "label": "endoplasmic reticulum",
-          "cosine_similarity": 0.68444756
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.68469919
         }
       ]
     },
@@ -10878,14 +10909,14 @@
           "cosine_similarity": 0.77380055
         },
         {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.74142332
+        },
+        {
           "identifier": "GO:0030127",
           "label": "COPII vesicle coat",
           "cosine_similarity": 0.73096229
-        },
-        {
-          "identifier": "GO:0005788",
-          "label": "endoplasmic reticulum lumen",
-          "cosine_similarity": 0.70014854
         }
       ]
     },

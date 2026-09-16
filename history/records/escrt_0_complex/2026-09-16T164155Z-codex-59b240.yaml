@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/escrt_0_complex.yaml
+  slug: escrt_0_complex
+session:
+  id: 2026-09-16T164155Z-codex-59b240
+  timestamp: '2026-09-16T16:41:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ESCRT-0 complex structure record
+  details: Created a GO:0033565 ESCRT-0 complex structure record with Hrs/STAM and Vps27p-Hse1p
+    synonymy, GO parentage, endosome parthood, reviewed-label-only Vps27 and Hse1 yeast core
+    subunits, Saccharomyces cerevisiae distribution and canonical evidence, multivesicular
+    body sorting pathway function, Bilodeau 2002, Katzmann 2003 and Henne 2011 evidence, a
+    nonmechanistic ESCRT-I recruitment graph, and discussions documenting unresolved subunit-family
+    grounding plus the GO Vps1/Vps27 wording boundary.
