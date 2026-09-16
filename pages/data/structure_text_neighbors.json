@@ -2286,6 +2286,11 @@
           "cosine_similarity": 0.82282334
         },
         {
+          "identifier": "GO:0030076",
+          "label": "light-harvesting complex",
+          "cosine_similarity": 0.81660769
+        },
+        {
           "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
           "label": "LH2 peripheral light-harvesting antenna complex",
           "cosine_similarity": 0.77107354
@@ -2294,11 +2299,6 @@
           "identifier": "GO:0030094",
           "label": "plasma membrane-derived photosystem I",
           "cosine_similarity": 0.74441506
-        },
-        {
-          "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
-          "label": "chromatophore cytochrome bc1 complex",
-          "cosine_similarity": 0.73062741
         }
       ]
     },
@@ -2327,9 +2327,9 @@
           "cosine_similarity": 0.7494242
         },
         {
-          "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
-          "label": "chlorosome baseplate antenna complex",
-          "cosine_similarity": 0.73062741
+          "identifier": "GO:0030076",
+          "label": "light-harvesting complex",
+          "cosine_similarity": 0.73153462
         }
       ]
     },
@@ -2369,6 +2369,11 @@
       "label": "LH2 peripheral light-harvesting antenna complex",
       "neighbors": [
         {
+          "identifier": "GO:0030076",
+          "label": "light-harvesting complex",
+          "cosine_similarity": 0.8576254
+        },
+        {
           "identifier": "cellstructuremech:rc_lh1_pufx_core_complex",
           "label": "RC-LH1-PufX core complex",
           "cosine_similarity": 0.77608585
@@ -2387,11 +2392,37 @@
           "identifier": "GO:0009512",
           "label": "cytochrome b6f complex",
           "cosine_similarity": 0.7471263
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030076",
+      "label": "light-harvesting complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
+          "label": "LH2 peripheral light-harvesting antenna complex",
+          "cosine_similarity": 0.8576254
         },
         {
-          "identifier": "GO:0030096",
-          "label": "plasma membrane-derived thylakoid photosystem II",
-          "cosine_similarity": 0.73677049
+          "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
+          "label": "chlorosome baseplate antenna complex",
+          "cosine_similarity": 0.81660769
+        },
+        {
+          "identifier": "GO:0030094",
+          "label": "plasma membrane-derived photosystem I",
+          "cosine_similarity": 0.78994568
+        },
+        {
+          "identifier": "GO:0009512",
+          "label": "cytochrome b6f complex",
+          "cosine_similarity": 0.77995228
+        },
+        {
+          "identifier": "GO:0030089",
+          "label": "phycobilisome",
+          "cosine_similarity": 0.77834128
         }
       ]
     },
@@ -2399,6 +2430,11 @@
       "identifier": "GO:0030089",
       "label": "phycobilisome",
       "neighbors": [
+        {
+          "identifier": "GO:0030076",
+          "label": "light-harvesting complex",
+          "cosine_similarity": 0.77834128
+        },
         {
           "identifier": "GO:0030094",
           "label": "plasma membrane-derived photosystem I",
@@ -2418,11 +2454,6 @@
           "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
           "label": "chlorosome baseplate antenna complex",
           "cosine_similarity": 0.72989677
-        },
-        {
-          "identifier": "GO:0042651",
-          "label": "thylakoid membrane",
-          "cosine_similarity": 0.70437067
         }
       ]
     },
@@ -2544,9 +2575,9 @@
           "cosine_similarity": 0.74033259
         },
         {
-          "identifier": "GO:0030096",
-          "label": "plasma membrane-derived thylakoid photosystem II",
-          "cosine_similarity": 0.70815242
+          "identifier": "GO:0030076",
+          "label": "light-harvesting complex",
+          "cosine_similarity": 0.72942614
         }
       ]
     },

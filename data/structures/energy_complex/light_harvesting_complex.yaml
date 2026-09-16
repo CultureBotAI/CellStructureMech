@@ -1,0 +1,288 @@
+identifier: GO:0030076
+label: light-harvesting complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein-pigment complex that may be closely or peripherally associated
+  to photosynthetic reaction centers that participate in harvesting and transferring
+  radiant energy to the reaction center.
+definition_source: GO:0030076
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T01:30:43Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T01:31:46Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and parentage, label-only antenna apoprotein and pigment
+    component groups, cyanobacterial, purple-bacterial and green-bacterial scope,
+    photosynthetic light-harvesting function and evidence, a nonmechanistic excitation-transfer
+    graph, and component and subtype curation TODOs.
+  llm_assisted: true
+- timestamp: '2026-09-16T01:32:27Z'
+  curator: codex
+  action: POLISH_GRAPH
+  changes: Split the generic antenna apoprotein-pigment assembly edge so both component
+    nodes connect directly to the GO:0030076 light-harvesting complex structure node.
+  llm_assisted: true
+synonyms:
+- synonym_text: antenna complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:0030076
+parent_structures:
+- GO:0032991
+components:
+- component_id: photosynthetic_antenna_apoproteins
+  label: photosynthetic antenna apoproteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for all pigment-binding antenna apoprotein
+    families across phycobilisomes, purple-bacterial LH2 complexes and chlorosome
+    CsmA baseplates was verified in this pass.
+  role: Pigment-binding protein subunits or scaffolds that organize photosynthetic
+    antenna pigments for light absorption and excitation-energy transfer.
+  evidence:
+  - reference: GO:0030076
+    notes: GO defines a light-harvesting complex as a protein-pigment complex.
+  - reference: DOI:10.1146/annurev-biophys-062920-063657
+    notes: Sui 2021 reviewed phycobiliprotein and linker-polypeptide organization
+      in phycobilisome antennae.
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 imaged LH2 antenna complexes in native purple-bacterial
+      photosynthetic membranes.
+  - reference: DOI:10.1038/ncomms12454
+    notes: Nielsen et al. 2016 resolved the CsmA protein lattice of the chlorosome
+      baseplate antenna complex.
+- component_id: photosynthetic_antenna_pigments
+  label: photosynthetic antenna pigments
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No single ChEBI CURIE exactly covers the chlorophyll, bacteriochlorophyll
+    and phycobilin pigments bound by all microbial light-harvesting complex classes.
+  role: Light-absorbing cofactors whose tuned excitation energies support radiant-energy
+    capture and transfer to photosynthetic reaction centers.
+  evidence:
+  - reference: GO:0030076
+    notes: GO defines a light-harvesting complex as a pigment-containing protein complex.
+  - reference: DOI:10.1146/annurev-biophys-062920-063657
+    notes: Sui 2021 reviewed phycobilin chromophores covalently attached to cyanobacterial
+      phycobilisomes.
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 localized bacteriochlorophyll-containing LH2 complexes
+      in purple-bacterial chromatophores.
+  - reference: DOI:10.1038/ncomms12454
+    notes: Nielsen et al. 2016 modeled bacteriochlorophyll a pigments bound inside
+      the chlorosome CsmA baseplate.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  presence: COMMON
+  note: Cyanobacterial model whose phycobilisome rods and cores exemplify biliprotein
+    light-harvesting complexes.
+  reference: DOI:10.1038/s41467-021-25813-y
+- taxon_id: NCBITaxon:1063
+  taxon_label: Cereibacter sphaeroides
+  presence: COMMON
+  note: Purple photosynthetic bacterium whose native chromatophore membranes contain
+    peripheral LH2 light-harvesting antennae.
+  reference: DOI:10.1038/nature02823
+- taxon_id: NCBITaxon:1097
+  taxon_label: Chlorobaculum tepidum
+  presence: COMMON
+  note: Green sulfur bacterium whose chlorosome CsmA baseplate antenna complexes were
+    resolved in situ.
+  reference: DOI:10.1038/ncomms12454
+canonical_examples:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  note: Cyanobacterial phycobilisome model with cryo-EM structures in light-harvesting
+    and photoprotected states.
+  reference: DOI:10.1038/s41467-021-25813-y
+- taxon_id: NCBITaxon:1063
+  taxon_label: Cereibacter sphaeroides
+  note: Purple-bacterial chromatophore model in which LH2 complexes surround RC-LH1-PufX
+    reaction-center core arrays.
+  reference: DOI:10.1038/nature02823
+- taxon_id: NCBITaxon:1097
+  taxon_label: Chlorobaculum tepidum
+  note: Green sulfur bacterium whose chlorosomes carry a CsmA bacteriochlorophyll
+    a baseplate antenna complex.
+  reference: DOI:10.1038/ncomms12454
+functions:
+- function_id: photosynthetic_light_harvesting
+  label: photosynthesis, light harvesting
+  grounding: GO:0009765
+  description: Light-harvesting complexes absorb radiant energy in photosynthetic
+    antenna pigments and route the resulting excitation toward reaction-center complexes.
+  evidence:
+  - reference: GO:0030076
+    notes: GO defines light-harvesting complexes by radiant-energy harvest and transfer
+      to a reaction center.
+  - reference: DOI:10.1146/annurev-biophys-062920-063657
+    notes: Sui 2021 reviewed phycobilisome light capture and downhill excitation-energy
+      transfer to photosystems.
+  - reference: DOI:10.1038/ncomms12454
+    notes: Nielsen et al. 2016 modeled excitation transfer through the CsmA baseplate
+      toward downstream reaction centers.
+evidence:
+- reference: GO:0030076
+  notes: Gene Ontology cellular-component term for a light-harvesting complex.
+- reference: GO:0032991
+  notes: Gene Ontology places light-harvesting complexes under protein-containing
+    complexes.
+- reference: GO:0009765
+  notes: Gene Ontology biological-process term for photosynthesis, light harvesting.
+- reference: DOI:10.1146/annurev-biophys-062920-063657
+  notes: Sui 2021, Structure of Phycobilisomes, Annual Review of Biophysics.
+- reference: DOI:10.1038/s41467-021-25813-y
+  notes: Sauer et al. 2021, Structural insight into the mechanism of energy transfer
+    in cyanobacterial phycobilisomes, Nature Communications.
+- reference: DOI:10.1038/nature02823
+  notes: Bahatyrova et al. 2004, The native architecture of a photosynthetic membrane,
+    Nature.
+- reference: DOI:10.1038/ncomms12454
+  notes: Nielsen et al. 2016, In situ high-resolution structure of the baseplate antenna
+    complex in Chlorobaculum tepidum, Nature Communications.
+- reference: DOI:10.1007/s11120-013-9869-3
+  notes: Orf and Blankenship 2013, Chlorosome antenna complexes from green photosynthetic
+    bacteria, Photosynthesis Research.
+causal_graphs:
+- graph_id: antenna_excitation_transfer
+  title: Antenna protein-pigment complexes transfer excitation to reaction centers
+  description: Pigment-binding antenna apoproteins assemble with photosynthetic antenna
+    pigments into light-harvesting complexes that absorb radiant energy and transfer
+    excitation toward photosynthetic reaction centers.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the shared GO-backed antenna role without modeling
+    lineage-specific phycobilisome rods and cores, purple-bacterial LH2 rings, chlorosome
+    CsmA baseplates, or their detailed excitonic state transitions.
+  nodes:
+  - node_id: antenna_apoproteins
+    label: photosynthetic antenna apoproteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: photosynthetic_antenna_apoproteins
+  - node_id: antenna_pigments
+    label: photosynthetic antenna pigments
+    node_type: CHEMICAL
+    component_ref: photosynthetic_antenna_pigments
+  - node_id: light_harvesting_complex
+    label: light-harvesting complex
+    node_type: STRUCTURE
+    grounding: GO:0030076
+  - node_id: photosynthetic_reaction_center
+    label: photosynthetic reaction center
+    node_type: STRUCTURE
+  - node_id: photosynthetic_light_harvesting
+    label: photosynthesis, light harvesting
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009765
+  edges:
+  - subject: antenna_apoproteins
+    predicate: organize
+    object: antenna_pigments
+    description: Antenna apoproteins bind or scaffold pigments that tune light capture
+      and energy transfer.
+    evidence:
+    - reference: DOI:10.1146/annurev-biophys-062920-063657
+      notes: Sui 2021 reviewed phycobiliprotein-bound phycobilins and linker-mediated
+        spectral tuning in phycobilisomes.
+    - reference: DOI:10.1038/ncomms12454
+      notes: Nielsen et al. 2016 modeled bacteriochlorophyll a pigments arranged by
+        CsmA baseplate subunits.
+  - subject: antenna_apoproteins
+    predicate: assemble into
+    object: light_harvesting_complex
+    description: Pigment-binding antenna proteins form the protein scaffold of light-harvesting
+      complexes.
+    evidence:
+    - reference: GO:0030076
+      notes: GO defines a light-harvesting complex as a protein-pigment complex.
+    - reference: DOI:10.1038/ncomms12454
+      notes: Nielsen et al. 2016 resolved CsmA apoproteins as the chlorosome baseplate
+        antenna scaffold.
+  - subject: antenna_pigments
+    predicate: are bound in
+    object: light_harvesting_complex
+    description: Photosynthetic antenna pigments are bound in the protein environment
+      of the assembled light-harvesting complex.
+    evidence:
+    - reference: GO:0030076
+      notes: GO defines a light-harvesting complex as a pigment-containing protein
+        complex.
+    - reference: DOI:10.1146/annurev-biophys-062920-063657
+      notes: Sui 2021 reviewed phycobilin chromophore attachment in phycobilisome
+        antennae.
+  - subject: light_harvesting_complex
+    predicate: transfers excitation energy to
+    object: photosynthetic_reaction_center
+    description: Light-harvesting complexes route absorbed excitation energy toward
+      reaction-center complexes.
+    evidence:
+    - reference: GO:0030076
+      notes: GO defines light-harvesting complexes by participation in radiant-energy
+        transfer to the reaction center.
+    - reference: DOI:10.1038/nature02823
+      notes: Bahatyrova et al. 2004 imaged LH2 antenna complexes around RC-LH1-PufX
+        reaction-center cores.
+  - subject: light_harvesting_complex
+    predicate: contributes to
+    object: photosynthetic_light_harvesting
+    description: The protein-pigment antenna extends spectral capture for photosynthetic
+      light harvesting.
+    evidence:
+    - reference: GO:0030076
+      notes: GO defines light-harvesting complexes as cellular components that harvest
+        radiant energy.
+discussions:
+- discussion_id: resolve_antenna_component_grounding
+  prompt: Resolve exact source-neutral grounding for antenna apoprotein and pigment
+    groups before splitting the generic component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#photosynthetic_antenna_apoproteins
+  - components#photosynthetic_antenna_pigments
+  rationale: This parent record spans biliprotein, bacteriochlorophyll and chlorophyll
+    antenna systems; one broad protein-family or ChEBI accession would either be too
+    narrow for the GO:0030076 parent or too broad to denote only light-harvesting
+    constituents.
+  evidence:
+  - reference: GO:0030076
+    notes: GO defines the shared light-harvesting complex as a protein-pigment complex.
+  - reference: DOI:10.1007/s11120-013-9869-3
+    notes: Orf and Blankenship 2013 reviewed the specialized pigment chemistry and
+      antenna organization of green-bacterial chlorosomes.
+  - reference: DOI:10.1146/annurev-biophys-062920-063657
+    notes: Sui 2021 reviewed bilin-bearing cyanobacterial phycobilisomes as a distinct
+      antenna class.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: defer_lineage_specific_antenna_subtypes
+  prompt: Curate LH2, phycobilisome, chlorosome baseplate and other lineage-specific
+    antenna architectures as child records rather than components of this generic
+    GO parent.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#antenna_excitation_transfer
+  rationale: GO:0030076 covers several protein-pigment architectures with different
+    subunits, pigments, membrane contexts and excitation paths, so this parent record
+    intentionally captures only the shared antenna boundary.
+  evidence:
+  - reference: DOI:10.1038/s41467-021-25813-y
+    notes: Sauer et al. 2021 resolved a cyanobacterial phycobilisome core-and-rod
+      antenna architecture.
+  - reference: DOI:10.1038/nature02823
+    notes: Bahatyrova et al. 2004 resolved LH2 antenna complexes in purple-bacterial
+      chromatophore membranes.
+  - reference: DOI:10.1038/ncomms12454
+    notes: Nielsen et al. 2016 resolved a chlorosome CsmA baseplate antenna architecture.
+  posed_by: codex
+  posed_date: '2026-09-16'

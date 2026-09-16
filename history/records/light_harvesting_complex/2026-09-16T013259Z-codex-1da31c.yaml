@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/light_harvesting_complex.yaml
+  slug: light_harvesting_complex
+session:
+  id: 2026-09-16T013259Z-codex-1da31c
+  timestamp: '2026-09-16T01:32:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - mechanism
+  - discussion
+  summary: Add light-harvesting complex record
+  details: Created a PROPOSED GO:0030076 light-harvesting complex record with GO synonymy
+    and protein-containing-complex parentage, reviewed label-only antenna apoprotein and pigment
+    component groups, Synechocystis, Cereibacter and Chlorobaculum examples, GO/DOI evidence,
+    a nonmechanistic antenna excitation-transfer graph, and curation TODOs for broad antenna
+    component grounding and lineage-specific antenna subtype curation.
