@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ap_type_membrane_coat_adaptor_complex.yaml
+  slug: ap_type_membrane_coat_adaptor_complex
+session:
+  id: 2026-09-16T120604Z-codex-3f491f
+  timestamp: '2026-09-16T12:06:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1093
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1092
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Retype AP adaptor graph node
+  details: 'Addressed PR #1092 review issue #1093 by retyping the ap_adaptor_complex node
+    from GENE_OR_PROTEIN to STRUCTURE, matching its GO:0030119 cellular-component grounding
+    while keeping the large, mu, and sigma subunit nodes typed as GENE_OR_PROTEIN.'

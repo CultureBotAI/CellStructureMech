@@ -24,6 +24,13 @@ curation_history:
     Tetrahymena AP-3 scope, GO/DOI evidence, a nonmechanistic AP-adaptor topology
     graph, and mereology, mucocyst-scope and grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-16T12:05:30Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Retyped the AP-type adaptor topology node for the full GO:0030119 cellular-component
+    complex from GENE_OR_PROTEIN to STRUCTURE while leaving protein-subunit nodes
+    as GENE_OR_PROTEIN; addresses PR #1092 review issue #1093.'
+  llm_assisted: true
 parent_structures:
 - GO:0098796
 part_of:
@@ -123,7 +130,7 @@ causal_graphs:
     component_ref: ap_sigma_subunit
   - node_id: ap_adaptor_complex
     label: AP-type membrane coat adaptor complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0030119
   - node_id: membrane_surface
     label: membrane surface
