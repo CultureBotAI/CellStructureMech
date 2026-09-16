@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nuclear_lumen.yaml
+  slug: nuclear_lumen
+session:
+  id: 2026-09-15T235523Z-codex-7dc69a
+  timestamp: '2026-09-15T23:55:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add nuclear lumen record
+  details: Created a GO:0031981 nuclear lumen CellStructureMech record with intracellular-organelle-lumen
+    parentage, nucleus parthood, GO-grounded nuclear chromosome and nucleolus substructures,
+    a nonmechanistic topology graph, and a resolved boundary interpretation that leaves nucleoplasm
+    out of the exact synonym list.
