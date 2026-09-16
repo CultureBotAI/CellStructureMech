@@ -1325,6 +1325,11 @@
           "cosine_similarity": 0.81728717
         },
         {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.79876136
+        },
+        {
           "identifier": "GO:0020010",
           "label": "conoid",
           "cosine_similarity": 0.75006343
@@ -1333,11 +1338,6 @@
           "identifier": "GO:0005826",
           "label": "actomyosin contractile ring",
           "cosine_similarity": 0.738492
-        },
-        {
-          "identifier": "cellstructuremech:mamk_filament",
-          "label": "MamK filament",
-          "cosine_similarity": 0.73054402
         }
       ]
     },
@@ -1408,6 +1408,11 @@
       "label": "BtubAB bacterial microtubule",
       "neighbors": [
         {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.80246573
+        },
+        {
           "identifier": "cellstructuremech:tubz_filament",
           "label": "TubZ filament",
           "cosine_similarity": 0.77904971
@@ -1426,11 +1431,6 @@
           "identifier": "cellstructuremech:phuz_spindle",
           "label": "PhuZ spindle",
           "cosine_similarity": 0.72581399
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.69497616
         }
       ]
     },
@@ -1442,6 +1442,11 @@
           "identifier": "GO:0036286",
           "label": "eisosome filament",
           "cosine_similarity": 0.79110118
+        },
+        {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.78472282
         },
         {
           "identifier": "cellstructuremech:crescentin_filament",
@@ -1457,11 +1462,6 @@
           "identifier": "GO:0097596",
           "label": "ventral disc supernumerary microtubule array",
           "cosine_similarity": 0.73250967
-        },
-        {
-          "identifier": "cellstructuremech:mreb_filament",
-          "label": "MreB filament",
-          "cosine_similarity": 0.72104289
         }
       ]
     },
@@ -1469,6 +1469,11 @@
       "identifier": "GO:0036064",
       "label": "ciliary basal body",
       "neighbors": [
+        {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.83802634
+        },
         {
           "identifier": "GO:0005929",
           "label": "cilium",
@@ -1488,11 +1493,6 @@
           "identifier": "GO:0097596",
           "label": "ventral disc supernumerary microtubule array",
           "cosine_similarity": 0.73074172
-        },
-        {
-          "identifier": "GO:0020010",
-          "label": "conoid",
-          "cosine_similarity": 0.72823331
         }
       ]
     },
@@ -1547,14 +1547,14 @@
           "cosine_similarity": 0.75006343
         },
         {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.73042962
+        },
+        {
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
           "cosine_similarity": 0.72823331
-        },
-        {
-          "identifier": "GO:0070258",
-          "label": "inner membrane pellicle complex",
-          "cosine_similarity": 0.71734875
         }
       ]
     },
@@ -1710,6 +1710,37 @@
           "identifier": "GO:0036286",
           "label": "eisosome filament",
           "cosine_similarity": 0.76828963
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005874",
+      "label": "microtubule",
+      "neighbors": [
+        {
+          "identifier": "GO:0097596",
+          "label": "ventral disc supernumerary microtubule array",
+          "cosine_similarity": 0.87263055
+        },
+        {
+          "identifier": "GO:0097593",
+          "label": "ventral disc microtubule array",
+          "cosine_similarity": 0.84054335
+        },
+        {
+          "identifier": "GO:0036064",
+          "label": "ciliary basal body",
+          "cosine_similarity": 0.83802634
+        },
+        {
+          "identifier": "cellstructuremech:btubab_bacterial_microtubule",
+          "label": "BtubAB bacterial microtubule",
+          "cosine_similarity": 0.80246573
+        },
+        {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.79876136
         }
       ]
     },
@@ -1883,6 +1914,11 @@
           "cosine_similarity": 0.74113953
         },
         {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.73345395
+        },
+        {
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.72645975
@@ -1891,11 +1927,6 @@
           "identifier": "GO:0120120",
           "label": "bilobe structure",
           "cosine_similarity": 0.72502947
-        },
-        {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.72444479
         }
       ]
     },
@@ -1945,6 +1976,11 @@
           "cosine_similarity": 0.77904971
         },
         {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.76612002
+        },
+        {
           "identifier": "cellstructuremech:cetz_filament",
           "label": "CetZ filament",
           "cosine_similarity": 0.75052587
@@ -1953,11 +1989,6 @@
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.74182261
-        },
-        {
-          "identifier": "cellstructuremech:bactofilin_filament",
-          "label": "bactofilin filament",
-          "cosine_similarity": 0.73825319
         }
       ]
     },
@@ -2110,9 +2141,9 @@
           "cosine_similarity": 0.84486767
         },
         {
-          "identifier": "GO:0097591",
-          "label": "ventral disc lateral crest",
-          "cosine_similarity": 0.79563482
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.84054335
         }
       ]
     },
@@ -2157,6 +2188,11 @@
           "cosine_similarity": 0.96589434
         },
         {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.87263055
+        },
+        {
           "identifier": "GO:0097597",
           "label": "ventral disc",
           "cosine_similarity": 0.83821666
@@ -2170,11 +2206,6 @@
           "identifier": "GO:0097594",
           "label": "ventral disc dorsal microribbon",
           "cosine_similarity": 0.81710958
-        },
-        {
-          "identifier": "GO:0097591",
-          "label": "ventral disc lateral crest",
-          "cosine_similarity": 0.78363108
         }
       ]
     },

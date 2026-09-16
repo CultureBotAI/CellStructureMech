@@ -1,0 +1,224 @@
+identifier: GO:0005874
+label: microtubule
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: Any of the long, generally straight, hollow tubes of internal diameter
+  12-15 nm and external diameter 24 nm found in a wide variety of eukaryotic cells;
+  each consists (usually) of 13 protofilaments of polymeric tubulin, staggered in
+  such a manner that the tubulin monomers are arranged in a helical pattern on the
+  microtubular surface, and with the alpha/beta axes of the tubulin subunits parallel
+  to the long axis of the tubule; exist in equilibrium with pool of tubulin monomers
+  and can be rapidly assembled or disassembled in response to physiological stimuli;
+  concerned with force generation, e.g. in the spindle.
+definition_source: GO:0005874
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T00:55:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T00:56:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO microtubule synonyms, polymeric-fiber parentage and microtubule-cytoskeleton
+    parthood, a label-only alpha/beta tubulin component, Chlamydomonas and Giardia
+    scope, DOI/GO evidence, a nonmechanistic tubulin-polymer graph, and curation discussions
+    for tubulin grounding, microtubule subtypes and BtubAB boundaries.
+  llm_assisted: true
+- timestamp: '2026-09-16T01:06:47Z'
+  curator: codex
+  action: POLISH_DISCUSSION
+  changes: Clarified the array-specific microtubule subtype TODO so specialized doublet,
+    triplet, singlet and ventral-disc microtubules are deferred to exact subtype or
+    array-specific component curation rather than implied as generic microtubule components.
+  llm_assisted: true
+synonyms:
+- synonym_text: microtubuli
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005874
+- synonym_text: microtubulus
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005874
+- synonym_text: neurotubule
+  synonym_type: NARROW_SYNONYM
+  source: GO:0005874
+parent_structures:
+- GO:0099513
+part_of:
+- GO:0015630
+components:
+- component_id: alpha_beta_tubulins
+  label: alpha- and beta-tubulins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Eukaryotic tubulin subunits that co-polymerize into microtubule protofilaments.
+  evidence:
+  - reference: GO:0005874
+    notes: Gene Ontology defines microtubules as hollow tubes made from polymeric
+      tubulin protofilaments.
+  - reference: DOI:10.1126/science.1128618
+    notes: Nicastro et al. 2006 resolved alpha/beta-tubulin outer doublet microtubules
+      in Chlamydomonas axonemes by cryoelectron tomography.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the alpha- and beta-tubulin constituent
+    set of a generic GO:0005874 microtubule was verified in this pass; broad tubulin/FtsZ-domain
+    terms would also cover bacterial and archaeal tubulin-like proteins outside this
+    GO term.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagella contain axonemal microtubules that have been characterized
+    by cryoelectron tomography.
+  reference: DOI:10.1126/science.1128618
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  presence: COMMON
+  note: Giardia trophozoites contain ventral-disc microtubule arrays that have been
+    mapped by electron tomography.
+  reference: DOI:10.1371/journal.pone.0043783
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose 9+2 flagellar axoneme has been used for cryoelectron-tomographic
+    analysis of eukaryotic microtubule doublets.
+  reference: DOI:10.1126/science.1128618
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  note: Parasitic diplomonad model whose ventral-disc microtubule spiral exemplifies
+    a microbial eukaryote-specific microtubule array.
+  reference: DOI:10.1371/journal.pone.0043783
+functions:
+- function_id: microtubule_cytoskeletal_scaffold
+  label: microtubule cytoskeletal scaffold
+  description: Eukaryotic microtubules act as tubulin-polymer scaffolds for microbial
+    structures including Chlamydomonas axonemes and Giardia ventral-disc arrays.
+  evidence:
+  - reference: DOI:10.1126/science.1128618
+    notes: Nicastro et al. 2006 resolved the microtubule scaffold of Chlamydomonas
+      axonemes.
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Schwartz et al. 2012 resolved the Giardia ventral-disc microtubule spiral
+      and associated dorsal microribbons.
+evidence:
+- reference: GO:0005874
+  notes: Gene Ontology cellular-component term for the microtubule.
+- reference: GO:0099513
+  notes: Gene Ontology places microtubules under polymeric cytoskeletal fibers.
+- reference: GO:0015630
+  notes: Gene Ontology records microtubules as part of the broader microtubule cytoskeleton.
+- reference: DOI:10.1126/science.1128618
+  notes: Nicastro et al. 2006, 'The molecular architecture of axonemes revealed by
+    cryoelectron tomography', Science.
+- reference: DOI:10.1371/journal.pone.0043783
+  notes: Schwartz, Heumann, Dawson and Hoenger 2012, 'A Detailed, Hierarchical Study
+    of Giardia lamblia's Ventral Disc Reveals Novel Microtubule-Associated Protein
+    Complexes', PLOS ONE.
+- reference: DOI:10.1371/journal.pbio.1001213
+  notes: 'Pilhofer, Ladinsky, McDowall, Petroni and Jensen 2011, ''Microtubules in
+    bacteria: Ancient tubulins build a five-protofilament homolog of the eukaryotic
+    cytoskeleton'', PLoS Biology.'
+- reference: DOI:10.1073/pnas.1705062114
+  notes: Deng, Fink, Bharat, He, Kureisaite-Ciziene and Lowe 2017, 'Four-stranded
+    mini microtubules formed by Prosthecobacter BtubAB show dynamic instability',
+    PNAS.
+causal_graphs:
+- graph_id: eukaryotic_microtubule_polymer
+  title: Alpha- and beta-tubulins polymerize into microtubules
+  description: Eukaryotic alpha- and beta-tubulin subunits polymerize into microtubules,
+    the hollow cytoskeletal fibers that make up the microtubule cytoskeleton.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the GO-backed tubulin-to-microtubule polymer relationship
+    and leaves nucleation machinery, plus- and minus-end dynamics, and array-specific
+    doublet, triplet or singlet architectures for later curation.
+  nodes:
+  - node_id: alpha_beta_tubulins
+    label: alpha- and beta-tubulins
+    node_type: GENE_OR_PROTEIN
+    component_ref: alpha_beta_tubulins
+  - node_id: microtubule
+    label: microtubule
+    node_type: STRUCTURE
+    grounding: GO:0005874
+  - node_id: microtubule_cytoskeleton
+    label: microtubule cytoskeleton
+    node_type: STRUCTURE
+    grounding: GO:0015630
+  edges:
+  - subject: alpha_beta_tubulins
+    predicate: polymerize into
+    object: microtubule
+    description: Alpha- and beta-tubulin subunits polymerize into the protofilaments
+      that form eukaryotic microtubule tubes.
+    evidence:
+    - reference: GO:0005874
+      notes: GO defines microtubules as hollow tubes of polymeric tubulin protofilaments.
+  - subject: microtubule
+    predicate: is part of
+    object: microtubule_cytoskeleton
+    description: Microtubules are polymeric cytoskeletal fibers within the microtubule
+      cytoskeleton.
+    evidence:
+    - reference: GO:0005874
+      notes: GO models the microtubule as part of the microtubule cytoskeleton.
+discussions:
+- discussion_id: resolve_alpha_beta_tubulin_grounding
+  prompt: Resolve exact source-neutral grounding for the alpha- and beta-tubulins
+    that build canonical eukaryotic microtubules.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#alpha_beta_tubulins
+  rationale: This first GO:0005874 record curates broad eukaryotic tubulin constituents
+    without asserting that a general tubulin/FtsZ GTPase-domain accession exactly
+    denotes the microtubule alpha/beta-tubulin constituent set.
+  evidence:
+  - reference: GO:0005874
+    notes: GO defines microtubules as polymeric tubulin tubes in eukaryotic cells.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: defer_microtubule_array_subtypes
+  prompt: Curate axonemal doublets, basal-body triplets, haptonemal singlets and other
+    array-specific microtubule subtypes as exact subtypes or array-specific components
+    before mapping them back to GO:0005874.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#eukaryotic_microtubule_polymer
+  rationale: Microbial eukaryotes build specialized microtubule arrays; this generic
+    record records only the shared GO:0005874 polymer boundary and does not flatten
+    doublet, triplet, singlet or ventral-disc-specific morphologies into one component.
+  evidence:
+  - reference: DOI:10.1126/science.1128618
+    notes: Nicastro et al. 2006 resolved axonemal doublet microtubules in Chlamydomonas.
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Schwartz et al. 2012 mapped Giardia ventral-disc microtubule-associated
+      structures.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: exclude_btubab_bacterial_microtubules
+  prompt: Keep BtubAB bacterial microtubules separate from the GO:0005874 eukaryotic
+    microtubule record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#eukaryotic_microtubule_polymer
+  rationale: GO:0005874 denotes eukaryotic microtubules built from alpha/beta tubulin
+    into canonical hollow tubes, whereas the Prosthecobacter BtubAB structure is modeled
+    in this corpus as a distinct bacterial tubulin homolog with different subunits
+    and a different protofilament architecture.
+  evidence:
+  - reference: GO:0005874
+    notes: GO defines GO:0005874 around microtubules found in eukaryotic cells.
+  - reference: DOI:10.1371/journal.pbio.1001213
+    notes: Pilhofer et al. 2011 characterized Prosthecobacter BtubA/B tubes as bacterial
+      homologs of the eukaryotic microtubule cytoskeleton.
+  - reference: DOI:10.1073/pnas.1705062114
+    notes: Deng et al. 2017 resolved a BtubAB mini-microtubule architecture distinct
+      from canonical eukaryotic microtubules.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
