@@ -1,0 +1,258 @@
+identifier: GO:0030123
+label: AP-3 adaptor complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterotetrameric AP-type membrane coat adaptor complex that consists
+  of beta3, delta, mu3 and sigma3 subunits and is found associated with endosomal
+  membranes. AP-3 does not appear to associate with clathrin in all organisms. In
+  at least humans, the AP-3 complex can be heterogeneric due to the existence of multiple
+  subunit isoforms encoded by different genes (beta3A and beta3B, mu3A and mu3B, and
+  sigma3A and sigma3B).
+definition_source: GO:0030123
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T12:22:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T12:24:18Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added AP-type parentage, reviewed-label-only beta3/delta/mu3/sigma3 subunits,
+    Tetrahymena AP-3 distribution and function evidence, GO/DOI evidence, a nonmechanistic
+    AP-3 topology graph, and mucocyst-boundary, clathrin-scope and subunit-grounding
+    discussions.
+  llm_assisted: true
+- timestamp: '2026-09-16T12:36:39Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Retargeted the AP-3 requirement graph edge from the mature mucocyst organelle
+    to a mucocyst formation and maturation BIOLOGICAL_PROCESS node; addresses PR #1094
+    review issue #1095.'
+  llm_assisted: true
+parent_structures:
+- GO:0030119
+components:
+- component_id: ap3_beta3_subunit
+  label: AP-3 beta3 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Large beta3 subunit of the heterotetrameric AP-3 adaptor complex.
+  evidence:
+  - reference: GO:0030123
+    notes: GO:0030123 defines the AP-3 adaptor complex as consisting of beta3, delta,
+      mu3 and sigma3 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-3 beta3 subunit is a subtype-specific AP-3 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap3_delta_subunit
+  label: AP-3 delta subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Large delta subunit of the heterotetrameric AP-3 adaptor complex.
+  evidence:
+  - reference: GO:0030123
+    notes: GO:0030123 defines the AP-3 adaptor complex as consisting of beta3, delta,
+      mu3 and sigma3 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-3 delta subunit is a subtype-specific AP-3 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap3_mu3_subunit
+  label: AP-3 mu3 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Medium mu3 subunit of the heterotetrameric AP-3 adaptor complex.
+  evidence:
+  - reference: GO:0030123
+    notes: GO:0030123 defines the AP-3 adaptor complex as consisting of beta3, delta,
+      mu3 and sigma3 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-3 mu3 subunit is a subtype-specific AP-3 subunit class; no exact
+    source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap3_sigma3_subunit
+  label: AP-3 sigma3 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Small sigma3 subunit of the heterotetrameric AP-3 adaptor complex.
+  evidence:
+  - reference: GO:0030123
+    notes: GO:0030123 defines the AP-3 adaptor complex as consisting of beta3, delta,
+      mu3 and sigma3 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-3 sigma3 subunit is a subtype-specific AP-3 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  presence: COMMON
+  note: Tetrahymena thermophila has an AP-3 adaptor complex required for mucocyst
+    formation and maturation.
+  reference: DOI:10.1091/mbc.e17-01-0018
+canonical_examples:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  note: Ciliate model in which the AP-3 complex was genetically connected to formation
+    and maturation of mucocysts.
+  reference: DOI:10.1091/mbc.e17-01-0018
+functions:
+- function_id: ap3_dependent_mucocyst_biogenesis
+  label: AP-3-dependent mucocyst formation and maturation
+  description: Tetrahymena AP-3 is required for formation and maturation of mucocysts,
+    candidate lysosome-related secretory organelles.
+  evidence:
+  - reference: DOI:10.1091/mbc.e17-01-0018
+    notes: Kaur et al. 2017 identify the AP-3 complex as required for Tetrahymena
+      mucocyst formation and maturation.
+evidence:
+- reference: GO:0030123
+  notes: Gene Ontology cellular-component term for the AP-3 adaptor complex.
+- reference: GO:0030119
+  notes: Gene Ontology cellular-component parent term for AP-type membrane coat adaptor
+    complexes.
+- reference: DOI:10.1091/mbc.e17-01-0018
+  notes: Kaur et al. 2017, An endosomal syntaxin and the AP-3 complex are required
+    for formation and maturation of candidate lysosome-related secretory organelles
+    (mucocysts) in Tetrahymena thermophila, Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: ap3_adaptor_complex_topology
+  title: Beta3, delta, mu3 and sigma3 subunits form AP-3
+  description: The AP-3 adaptor complex is a heterotetramer associated with endosomal
+    membranes and required for Tetrahymena mucocyst formation and maturation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AP-3 composition and the Tetrahymena mucocyst-biogenesis
+    requirement without asserting that AP-3 is a mature mucocyst component or that
+    all AP-3 complexes carry clathrin.
+  nodes:
+  - node_id: ap3_beta3_subunit
+    label: AP-3 beta3 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap3_beta3_subunit
+  - node_id: ap3_delta_subunit
+    label: AP-3 delta subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap3_delta_subunit
+  - node_id: ap3_mu3_subunit
+    label: AP-3 mu3 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap3_mu3_subunit
+  - node_id: ap3_sigma3_subunit
+    label: AP-3 sigma3 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap3_sigma3_subunit
+  - node_id: ap3_adaptor_complex
+    label: AP-3 adaptor complex
+    node_type: STRUCTURE
+    grounding: GO:0030123
+  - node_id: endosomal_membrane
+    label: endosomal membrane
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: mucocyst_formation_and_maturation
+    label: mucocyst formation and maturation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: ap3_beta3_subunit
+    predicate: is part of
+    object: ap3_adaptor_complex
+    description: Beta3 is one of the large subunits of each heterotetrameric AP-3
+      adaptor complex.
+    evidence:
+    - reference: GO:0030123
+      notes: GO:0030123 lists beta3 as an AP-3 constituent.
+  - subject: ap3_delta_subunit
+    predicate: is part of
+    object: ap3_adaptor_complex
+    description: Delta is one of the large subunits of each heterotetrameric AP-3
+      adaptor complex.
+    evidence:
+    - reference: GO:0030123
+      notes: GO:0030123 lists delta as an AP-3 constituent.
+  - subject: ap3_mu3_subunit
+    predicate: is part of
+    object: ap3_adaptor_complex
+    description: Mu3 is the medium subunit of each heterotetrameric AP-3 adaptor complex.
+    evidence:
+    - reference: GO:0030123
+      notes: GO:0030123 lists mu3 as an AP-3 constituent.
+  - subject: ap3_sigma3_subunit
+    predicate: is part of
+    object: ap3_adaptor_complex
+    description: Sigma3 is the small subunit of each heterotetrameric AP-3 adaptor
+      complex.
+    evidence:
+    - reference: GO:0030123
+      notes: GO:0030123 lists sigma3 as an AP-3 constituent.
+  - subject: ap3_adaptor_complex
+    predicate: associates with
+    object: endosomal_membrane
+    description: GO defines the AP-3 adaptor complex as associated with endosomal
+      membranes.
+    evidence:
+    - reference: GO:0030123
+      notes: GO:0030123 describes AP-3 as found associated with endosomal membranes.
+  - subject: ap3_adaptor_complex
+    predicate: is required for
+    object: mucocyst_formation_and_maturation
+    description: Tetrahymena AP-3 is required for the formation and maturation of
+      mucocysts.
+    evidence:
+    - reference: DOI:10.1091/mbc.e17-01-0018
+      notes: Kaur et al. 2017 connect the AP-3 complex to Tetrahymena mucocyst formation
+        and maturation.
+discussions:
+- discussion_id: ap3_mucocyst_boundary
+  prompt: Use Tetrahymena AP-3 as AP-3 evidence without curating it as a mature mucocyst
+    component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - taxonomic_distribution
+  - canonical_examples
+  rationale: Kaur et al. 2017 support a required upstream role for AP-3 in Tetrahymena
+    mucocyst formation and maturation. This anchors the AP-3 adaptor-complex record,
+    while AP-3 remains outside the mucocyst component list because the cited role
+    is biogenesis rather than stable mature-organelle membership.
+  evidence:
+  - reference: DOI:10.1091/mbc.e17-01-0018
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: ap3_clathrin_scope
+  prompt: Avoid modeling every AP-3 adaptor complex as a clathrin-coat constituent.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#ap3_adaptor_complex_topology
+  rationale: The GO:0030123 definition explicitly notes that AP-3 does not appear
+    to associate with clathrin in all organisms. This record therefore keeps the parent-level
+    membrane-coat adaptor identity through GO:0030119 but avoids a universal AP-3
+    to clathrin edge.
+  evidence:
+  - reference: GO:0030123
+    notes: GO definition for AP-3 adaptor complexes.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: resolve_ap3_subunit_groundings
+  prompt: Resolve exact source-neutral groundings for the AP-3 beta3, delta, mu3 and
+    sigma3 subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ap3_beta3_subunit
+  - components#ap3_delta_subunit
+  - components#ap3_mu3_subunit
+  - components#ap3_sigma3_subunit
+  rationale: GO gives the exact AP-3 complex identity and names its subunit classes,
+    but exact source-neutral InterPro, Pfam or NCBIfam CURIEs for those AP-3-specific
+    classes were not curated in this pass.
+  evidence:
+  - reference: GO:0030123
+    notes: GO definition for AP-3-specific subunit classes.
+  posed_by: codex
+  posed_date: '2026-09-16'
