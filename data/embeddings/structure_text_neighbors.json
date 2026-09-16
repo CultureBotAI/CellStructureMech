@@ -9991,6 +9991,37 @@
       ]
     },
     {
+      "identifier": "GO:0070939",
+      "label": "Dsl1/NZR complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000938",
+          "label": "GARP complex",
+          "cosine_similarity": 0.74839014
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.73222598
+        },
+        {
+          "identifier": "GO:0000444",
+          "label": "MIS12/MIND type complex",
+          "cosine_similarity": 0.71845081
+        },
+        {
+          "identifier": "GO:0030904",
+          "label": "retromer complex",
+          "cosine_similarity": 0.68642535
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.67886935
+        }
+      ]
+    },
+    {
       "identifier": "GO:0032126",
       "label": "eisosome",
       "neighbors": [
@@ -10191,6 +10222,11 @@
           "cosine_similarity": 0.76159216
         },
         {
+          "identifier": "GO:0070939",
+          "label": "Dsl1/NZR complex",
+          "cosine_similarity": 0.74839014
+        },
+        {
           "identifier": "GO:0005802",
           "label": "trans-Golgi network",
           "cosine_similarity": 0.73799305
@@ -10199,11 +10235,6 @@
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.73663795
-        },
-        {
-          "identifier": "GO:0033263",
-          "label": "CORVET complex",
-          "cosine_similarity": 0.73615843
         }
       ]
     },
@@ -10382,14 +10413,14 @@
           "cosine_similarity": 0.78215719
         },
         {
+          "identifier": "GO:0070939",
+          "label": "Dsl1/NZR complex",
+          "cosine_similarity": 0.71845081
+        },
+        {
           "identifier": "GO:0020023",
           "label": "kinetoplast",
           "cosine_similarity": 0.67069412
-        },
-        {
-          "identifier": "GO:0000938",
-          "label": "GARP complex",
-          "cosine_similarity": 0.66351958
         }
       ]
     },
