@@ -1,0 +1,193 @@
+identifier: GO:0030117
+label: membrane coat
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Any of several different proteinaceous coats that can associate with membranes.
+  Membrane coats include those formed by clathrin plus an adaptor complex, the COPI
+  and COPII complexes, and possibly others. They are found associated with membranes
+  on many vesicles as well as other membrane features such as pits and perhaps tubules.
+definition_source: GO:0030117
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T04:36:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T04:37:38Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added membrane-protein-complex parentage, broad reviewed-label-only scaffold
+    and recruitment components, Saccharomyces scope and canonical example, GO and
+    DOI evidence, a nonmechanistic coat assembly graph, and vesicle-coat-boundary
+    plus grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0098796
+components:
+- component_id: membrane_coat_scaffold_proteins
+  label: membrane-coat scaffold proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Membrane coats are a source-neutral parent over clathrin coats,
+    vesicle coats, COPI coats, COPII coats, and possible non-vesicle coats; no exact
+    InterPro, Pfam, NCBIfam, GO, or Complex Portal CURIE denotes a universal membrane-coat
+    scaffold family.
+  role: Proteinaceous scaffold subunits or coat subcomplexes that assemble into coats
+    on membranes.
+  evidence:
+  - reference: GO:0030117
+    notes: GO defines membrane coats as proteinaceous coats that associate with membranes,
+      including clathrin/adaptor, COPI and COPII coats.
+  - reference: GO:0030118
+    notes: GO places clathrin coats under the membrane-coat parent.
+  - reference: GO:0030120
+    notes: GO places vesicle coats under the membrane-coat parent.
+- component_id: membrane_coat_recruitment_modules
+  label: membrane-coat adaptor and recruitment modules
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Membrane-coat recruitment factors span AP-type adaptor complexes,
+    COPI Arf-family GTPases, COPII Sar1-family GTPases, and additional subtype-specific
+    cargo-selection factors; no exact source-neutral protein-family or protein-complex
+    CURIE denotes that full class.
+  role: Connects coat scaffold assemblies to membranes or cargo in subtype-specific
+    membrane coats.
+  evidence:
+  - reference: GO:0030119
+    notes: GO defines AP-type membrane coat adaptor complexes as membrane-coat complexes
+      that link clathrin or another protein scaffold to membranes and selected cargo.
+  - reference: DOI:10.1016/0092-8674(91)90176-y
+    notes: Serafini et al. 1991 identified ADP-ribosylation factor as a subunit of
+      Golgi-derived COP-coated vesicle coats.
+  - reference: DOI:10.1016/0092-8674(94)90138-4
+    notes: Barlowe et al. 1994 identified Sar1p as one of the proteins that forms
+      the COPII coat on ER-derived vesicles.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has experimentally characterized clathrin, COPI, and COPII membrane-coat
+    systems.
+  reference: DOI:10.1016/0092-8674(94)90138-4
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model with curated clathrin, COPI, and COPII vesicle-coat subclasses
+    under the broader membrane-coat class.
+  reference: DOI:10.1016/0092-8674(94)90138-4
+evidence:
+- reference: GO:0030117
+  notes: Gene Ontology cellular-component term for membrane coat.
+- reference: GO:0098796
+  notes: Gene Ontology cellular-component parent term for membrane protein complexes.
+- reference: GO:0030118
+  notes: Gene Ontology child term for clathrin coats.
+- reference: GO:0030120
+  notes: Gene Ontology child term for vesicle coats.
+- reference: GO:0030119
+  notes: Gene Ontology cellular-component term for AP-type membrane coat adaptor complexes.
+- reference: DOI:10.1083/jcb.106.5.1453
+  notes: Payne et al. 1988, Protein transport to the vacuole and receptor-mediated
+    endocytosis by clathrin heavy chain-deficient yeast, Journal of Cell Biology.
+- reference: DOI:10.1016/0092-8674(91)90176-y
+  notes: Serafini et al. 1991, ADP-Ribosylation factor is a subunit of the coat of
+    Golgi-derived COP-coated vesicles, Cell.
+- reference: DOI:10.1016/0092-8674(94)90138-4
+  notes: 'Barlowe et al. 1994, COPII: A membrane coat formed by Sec proteins that
+    drive vesicle budding from the endoplasmic reticulum, Cell.'
+causal_graphs:
+- graph_id: membrane_coat_scaffold_assembly
+  title: Protein modules assemble a membrane coat
+  description: Membrane-coat scaffold proteins and subtype-specific recruitment modules
+    associate with a membrane to form a proteinaceous coat.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records a membrane-coat parent-level assembly boundary without
+    asserting clathrin triskelion geometry, AP adaptor composition, Arf or Sar1 nucleotide
+    cycling, COPI coatomer topology, COPII inner/outer coat topology, or a vesicle-only
+    membrane context.
+  nodes:
+  - node_id: membrane_surface
+    label: membrane surface
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: membrane_coat_scaffold_proteins
+    label: membrane-coat scaffold proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: membrane_coat_scaffold_proteins
+  - node_id: membrane_coat_recruitment_modules
+    label: membrane-coat adaptor and recruitment modules
+    node_type: GENE_OR_PROTEIN
+    component_ref: membrane_coat_recruitment_modules
+  - node_id: membrane_coat
+    label: membrane coat
+    node_type: STRUCTURE
+    grounding: GO:0030117
+  edges:
+  - subject: membrane_coat_recruitment_modules
+    predicate: helps recruit
+    object: membrane_coat_scaffold_proteins
+    description: Subtype-specific adaptor and recruitment factors connect proteinaceous
+      coat scaffolds to membranes or cargo.
+    evidence:
+    - reference: GO:0030119
+      notes: GO defines AP-type membrane coat adaptor complexes as adaptors between
+        a protein scaffold and a membrane or cargo.
+    - reference: DOI:10.1016/0092-8674(91)90176-y
+      notes: Serafini et al. 1991 identified Arf as a COP coat subunit on Golgi-derived
+        coated vesicles.
+  - subject: membrane_coat_scaffold_proteins
+    predicate: assembles at
+    object: membrane_surface
+    description: Proteinaceous coat modules associate with membranes to form a membrane
+      coat.
+    evidence:
+    - reference: GO:0030117
+      notes: GO defines membrane coats as proteinaceous coats that can associate with
+        membranes.
+  - subject: membrane_coat_scaffold_proteins
+    predicate: forms
+    object: membrane_coat
+    description: Proteinaceous scaffold subunits and coat subcomplexes constitute
+      the membrane coat.
+    evidence:
+    - reference: GO:0030117
+      notes: GO lists clathrin/adaptor, COPI, and COPII coats as examples of proteinaceous
+        membrane coats.
+discussions:
+- discussion_id: membrane_coat_vesicle_coat_boundary
+  prompt: Keep the membrane-coat record broader than the vesicle-coat record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0030117 covers proteinaceous coats on vesicles and other membrane
+    features such as pits and possible tubules, while GO:0030120 is the vesicle-coat
+    child restricted to coated vesicles. This record therefore represents the membrane-associated
+    coat parent rather than duplicating the existing vesicle-coat record.
+  evidence:
+  - reference: GO:0030117
+    notes: GO term for the broader membrane-coat class.
+  - reference: GO:0030120
+    notes: GO term for the vesicle-coat child class.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: resolve_membrane_coat_groundings
+  prompt: Resolve exact source-neutral groundings for membrane-coat scaffold and recruitment
+    modules.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#membrane_coat_scaffold_proteins
+  - components#membrane_coat_recruitment_modules
+  rationale: The broad membrane-coat parent spans several unrelated coat and recruitment
+    systems; this first parent record uses reviewed labels rather than forcing clathrin,
+    COPI, COPII, or AP-specific groundings onto the entire class.
+  posed_by: codex
+  posed_date: '2026-09-16'
