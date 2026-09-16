@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/late_endosome.yaml
+  slug: late_endosome
+session:
+  id: 2026-09-16T051941Z-codex-3c31ac
+  timestamp: '2026-09-16T05:19:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1066
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1065
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  summary: Disambiguated the late endosome lipid component
+  details: 'Addressed PR #1065 review issue #1066 by renaming the LIPID component from the
+    whole late endosome limiting membrane to a late-endosome limiting-membrane lipid bilayer,
+    tightening its grounding notes and role to describe a lipid-bilayer constituent, and keeping
+    the whole limiting membrane as the graph structure.'

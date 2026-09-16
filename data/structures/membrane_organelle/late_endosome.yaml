@@ -28,20 +28,29 @@ curation_history:
   changes: Aligned the expanded-record curation-history summary with the final single-component
     late-endosome record shape.
   llm_assisted: true
+- timestamp: '2026-09-16T05:19:20Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1065 review issue #1066 by renaming the LIPID component as
+    a late-endosome limiting-membrane lipid bilayer and keeping the whole limiting
+    membrane as a graph structure.'
+  llm_assisted: true
 parent_structures:
 - GO:0005768
 components:
 - component_id: late_endosome_limiting_membrane
-  label: late endosome limiting membrane
+  label: late endosome limiting-membrane lipid bilayer
   component_type: LIPID
   component_role: CONSTITUENT
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: GO:0005770 identifies the whole late endosome and GO:0010008 identifies
     the generic endosome membrane. No exact source-neutral GO or lipid-ontology CURIE
-    was curated for a late-endosome-specific limiting membrane in this pass.
-  role: Lipid boundary of the late endosome on which ESCRT machinery sorts membrane
-    cargo and generates multivesicular-body intraluminal vesicles.
+    was curated for the lipid bilayer of the late-endosome-specific limiting membrane
+    in this pass.
+  role: Lipid-bilayer constituent of the late endosome limiting membrane on which
+    ESCRT machinery sorts membrane cargo and generates multivesicular-body intraluminal
+    vesicles.
   evidence:
   - reference: GO:0005770
     notes: GO defines the late endosome as an endocytic organelle with a protein composition
