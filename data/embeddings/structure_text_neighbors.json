@@ -9836,6 +9836,37 @@
       ]
     },
     {
+      "identifier": "GO:0017119",
+      "label": "COG complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0033263",
+          "label": "CORVET complex",
+          "cosine_similarity": 0.77541734
+        },
+        {
+          "identifier": "GO:0000938",
+          "label": "GARP complex",
+          "cosine_similarity": 0.70273147
+        },
+        {
+          "identifier": "GO:0005784",
+          "label": "Sec61 translocon complex",
+          "cosine_similarity": 0.69443434
+        },
+        {
+          "identifier": "GO:0070939",
+          "label": "Dsl1/NZR complex",
+          "cosine_similarity": 0.67662353
+        },
+        {
+          "identifier": "GO:0030130",
+          "label": "clathrin coat of trans-Golgi network vesicle",
+          "cosine_similarity": 0.66943694
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000817",
       "label": "COMA complex",
       "neighbors": [
@@ -9938,6 +9969,11 @@
           "cosine_similarity": 0.81766122
         },
         {
+          "identifier": "GO:0017119",
+          "label": "COG complex",
+          "cosine_similarity": 0.77541734
+        },
+        {
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.76123904
@@ -9951,11 +9987,6 @@
           "identifier": "GO:0000938",
           "label": "GARP complex",
           "cosine_similarity": 0.73615843
-        },
-        {
-          "identifier": "GO:0000813",
-          "label": "ESCRT I complex",
-          "cosine_similarity": 0.73139023
         }
       ]
     },
