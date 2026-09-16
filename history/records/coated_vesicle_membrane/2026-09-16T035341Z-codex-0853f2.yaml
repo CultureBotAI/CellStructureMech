@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/coated_vesicle_membrane.yaml
+  slug: coated_vesicle_membrane
+session:
+  id: 2026-09-16T035341Z-codex-0853f2
+  timestamp: '2026-09-16T03:53:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1060
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1059
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - has_part
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: Addressed coated vesicle membrane review issue
+  details: 'Addressed PR #1059 issue #1060 by adding GO:0030120 vesicle coat as a structural
+    has_part of GO:0030662, adding an evidence-backed vesicle-coat topology edge, and clarifying
+    that vesicle-coat parthood is separate from the reviewed-label-only lipid-bilayer component.'
