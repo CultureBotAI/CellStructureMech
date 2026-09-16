@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle.yaml
+  slug: clathrin_coated_endocytic_vesicle
+session:
+  id: 2026-09-16T090105Z-claude-code-issue1081
+  timestamp: '2026-09-16T09:01:05Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed PR #1080 topology review for GO:0045334
+  details: >
+    Resolved issue #1081 by adding an evidence-backed direct graph edge from the
+    GO:0030128 clathrin coat of endocytic vesicle to the GO:0045334 whole clathrin-coated
+    endocytic vesicle, keeping the causal graph aligned with the top-level has_part
+    assertion.

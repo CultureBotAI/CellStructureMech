@@ -1,0 +1,184 @@
+identifier: GO:0045334
+label: clathrin-coated endocytic vesicle
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A clathrin-coated, membrane-bounded intracellular vesicle formed by invagination
+  of the plasma membrane around an extracellular substance.
+definition_source: GO:0045334
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T08:48:12Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T08:48:52Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parentage, endocytic clathrin coat and membrane parts, Saccharomyces
+    endocytic-site scope, a clathrin-dependent endocytosis function, GO/DOI evidence,
+    a nonmechanistic endocytic vesicle topology graph, and a whole-vesicle component-boundary
+    discussion.
+  llm_assisted: true
+- timestamp: '2026-09-16T09:00:55Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved issue #1081 by adding a direct endocytic clathrin coat to whole
+    clathrin-coated endocytic vesicle edge to the topology graph.'
+  llm_assisted: true
+parent_structures:
+- GO:0030136
+- GO:0030139
+has_part:
+- GO:0030128
+- GO:0030669
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has clathrin and adaptor proteins that are recruited to cortical
+    actin-based endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which clathrin and adaptor protein dynamics defined
+    the timing of clathrin coat assembly at cortical actin-based endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+functions:
+- function_id: clathrin_dependent_endocytosis
+  label: clathrin-dependent endocytosis
+  grounding: GO:0072583
+  description: Clathrin-coated endocytic vesicles form during clathrin-dependent endocytosis.
+  evidence:
+  - reference: GO:0072583
+    notes: GO:0072583 denotes endocytosis through clathrin-coated pits that form clathrin-coated
+      endocytic vesicles.
+  - reference: DOI:10.1016/j.cell.2005.09.024
+    notes: Kaksonen, Toret and Drubin 2005 analyzed the modular clathrin- and actin-mediated
+      endocytic machinery in yeast.
+evidence:
+- reference: GO:0045334
+  notes: Gene Ontology cellular-component term for the whole clathrin-coated endocytic
+    vesicle.
+- reference: GO:0030136
+  notes: Gene Ontology cellular-component parent term for clathrin-coated vesicles.
+- reference: GO:0030139
+  notes: Gene Ontology cellular-component parent term for endocytic vesicles.
+- reference: GO:0030669
+  notes: Gene Ontology cellular-component term for the membrane bounding a clathrin-coated
+    endocytic vesicle.
+- reference: GO:0030128
+  notes: Gene Ontology cellular-component term for the clathrin coat of an endocytic
+    vesicle.
+- reference: GO:0072583
+  notes: Gene Ontology biological-process term for clathrin-dependent endocytosis.
+- reference: DOI:10.1016/j.devcel.2005.04.014
+  notes: Newpher et al. 2005, In Vivo Dynamics of Clathrin and Its Adaptor-Dependent
+    Recruitment to the Actin-Based Endocytic Machinery in Yeast, Developmental Cell.
+- reference: DOI:10.1016/j.cell.2005.09.024
+  notes: Kaksonen, Toret and Drubin 2005, A Modular Design for the Clathrin- and Actin-Mediated
+    Endocytosis Machinery, Cell.
+causal_graphs:
+- graph_id: clathrin_coated_endocytic_vesicle_topology
+  title: Clathrin-coated endocytic vesicle topology
+  description: The clathrin-coated endocytic vesicle membrane and its endocytic clathrin
+    coat are parts of the clathrin-coated endocytic vesicle formed during clathrin-dependent
+    endocytosis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the endocytic coated-vesicle boundary without asserting
+    a complete clathrin-adaptor assembly mechanism, cargo cohort, or actin-driven
+    scission mechanism.
+  nodes:
+  - node_id: clathrin_coat_of_endocytic_vesicle
+    label: clathrin coat of endocytic vesicle
+    node_type: STRUCTURE
+    grounding: GO:0030128
+  - node_id: clathrin_coated_endocytic_vesicle_membrane
+    label: clathrin-coated endocytic vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030669
+  - node_id: clathrin_coated_endocytic_vesicle
+    label: clathrin-coated endocytic vesicle
+    node_type: ORGANELLE
+    grounding: GO:0045334
+  - node_id: clathrin_dependent_endocytosis
+    label: clathrin-dependent endocytosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0072583
+  edges:
+  - subject: clathrin_coat_of_endocytic_vesicle
+    predicate: is part of
+    object: clathrin_coated_endocytic_vesicle_membrane
+    description: The clathrin coat of an endocytic vesicle is a coat part on the clathrin-coated
+      endocytic vesicle membrane.
+    evidence:
+    - reference: GO:0030128
+      notes: GO:0030128 records the endocytic vesicle clathrin coat as part of GO:0030669.
+  - subject: clathrin_coat_of_endocytic_vesicle
+    predicate: is part of
+    object: clathrin_coated_endocytic_vesicle
+    description: The clathrin coat of an endocytic vesicle is a coat part of the whole
+      clathrin-coated endocytic vesicle.
+    evidence:
+    - reference: GO:0045334
+      notes: GO:0045334 identifies the clathrin-coated, membrane-bounded endocytic
+        vesicle.
+    - reference: GO:0030128
+      notes: GO:0030128 identifies the clathrin coat found on an endocytic vesicle.
+  - subject: clathrin_coated_endocytic_vesicle_membrane
+    predicate: is part of
+    object: clathrin_coated_endocytic_vesicle
+    description: The clathrin-coated endocytic vesicle membrane is part of a clathrin-coated
+      endocytic vesicle.
+    evidence:
+    - reference: GO:0030669
+      notes: GO:0030669 identifies the membrane as part of GO:0045334.
+  - subject: clathrin_coated_endocytic_vesicle_membrane
+    predicate: bounds
+    object: clathrin_coated_endocytic_vesicle
+    description: The clathrin-coated endocytic vesicle membrane bounds a clathrin-coated
+      endocytic vesicle.
+    evidence:
+    - reference: GO:0030669
+      notes: GO:0030669 records a bounding-layer relationship to GO:0045334.
+    - reference: GO:0045334
+      notes: GO:0045334 identifies the bounded clathrin-coated endocytic vesicle.
+  - subject: clathrin_coated_endocytic_vesicle
+    predicate: participates in
+    object: clathrin_dependent_endocytosis
+    description: Clathrin-coated endocytic vesicles form during clathrin-dependent
+      endocytosis.
+    evidence:
+    - reference: GO:0072583
+      notes: GO:0072583 describes clathrin-dependent endocytosis via clathrin-coated
+        pits that form clathrin-coated endocytic vesicles.
+    - reference: DOI:10.1016/j.cell.2005.09.024
+      notes: Kaksonen, Toret and Drubin 2005 analyzed the yeast clathrin- and actin-mediated
+        endocytic machinery.
+discussions:
+- discussion_id: keep_endocytic_coat_components_on_clathrin_coat
+  prompt: Keep clathrin chains and endocytic adaptor proteins on the clathrin coat
+    of endocytic vesicle record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#clathrin_coated_endocytic_vesicle_topology
+  rationale: The whole-vesicle record uses GO:0030128 and GO:0030669 for its named
+    coat and membrane substructures, and those records carry lower-level protein and
+    lipid constituents.
+  resolution_note: Added the endocytic clathrin coat and the clathrin-coated endocytic
+    vesicle membrane as vesicle parts and left clathrin chains, endocytic adaptors,
+    and membrane lipids to the substructure records.
+  evidence:
+  - reference: GO:0045334
+    notes: GO:0045334 identifies the whole clathrin-coated endocytic vesicle.
+  - reference: GO:0030128
+    notes: GO:0030128 identifies the endocytic vesicle clathrin coat.
+  - reference: GO:0030669
+    notes: GO:0030669 identifies the clathrin-coated endocytic vesicle membrane.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'

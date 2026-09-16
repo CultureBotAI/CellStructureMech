@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle.yaml
+  slug: clathrin_coated_endocytic_vesicle
+session:
+  id: 2026-09-16T084928Z-claude-code-4e790c
+  timestamp: '2026-09-16T08:49:28Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0045334 clathrin-coated endocytic vesicle record
+  details: Created an evidence-backed GO:0045334 whole-vesicle record with GO parentage to
+    GO:0030136 and GO:0030139, has-part links to the GO:0030128 endocytic clathrin coat and
+    GO:0030669 clathrin-coated endocytic vesicle membrane, Saccharomyces cerevisiae endocytic-site
+    evidence from Newpher et al. 2005 and Kaksonen et al. 2005, a clathrin-dependent endocytosis
+    function, a nonmechanistic topology graph, and a resolved boundary discussion that leaves
+    lower-level clathrin, adaptor, and membrane-lipid constituents on substructure records.
