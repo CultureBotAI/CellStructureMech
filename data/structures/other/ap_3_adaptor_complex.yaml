@@ -24,6 +24,13 @@ curation_history:
     AP-3 topology graph, and mucocyst-boundary, clathrin-scope and subunit-grounding
     discussions.
   llm_assisted: true
+- timestamp: '2026-09-16T12:36:39Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Retargeted the AP-3 requirement graph edge from the mature mucocyst organelle
+    to a mucocyst formation and maturation BIOLOGICAL_PROCESS node; addresses PR #1094
+    review issue #1095.'
+  llm_assisted: true
 parent_structures:
 - GO:0030119
 components:
@@ -145,10 +152,9 @@ causal_graphs:
   - node_id: endosomal_membrane
     label: endosomal membrane
     node_type: CELLULAR_LOCALIZATION
-  - node_id: mucocyst
-    label: mucocyst
-    node_type: ORGANELLE
-    grounding: GO:0036000
+  - node_id: mucocyst_formation_and_maturation
+    label: mucocyst formation and maturation
+    node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: ap3_beta3_subunit
     predicate: is part of
@@ -191,8 +197,9 @@ causal_graphs:
       notes: GO:0030123 describes AP-3 as found associated with endosomal membranes.
   - subject: ap3_adaptor_complex
     predicate: is required for
-    object: mucocyst
-    description: Tetrahymena AP-3 is required for formation and maturation of mucocysts.
+    object: mucocyst_formation_and_maturation
+    description: Tetrahymena AP-3 is required for the formation and maturation of
+      mucocysts.
     evidence:
     - reference: DOI:10.1091/mbc.e17-01-0018
       notes: Kaur et al. 2017 connect the AP-3 complex to Tetrahymena mucocyst formation
