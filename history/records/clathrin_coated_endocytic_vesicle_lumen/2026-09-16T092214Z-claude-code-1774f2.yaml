@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle_lumen.yaml
+  slug: clathrin_coated_endocytic_vesicle_lumen
+session:
+  id: 2026-09-16T092214Z-claude-code-1774f2
+  timestamp: '2026-09-16T09:22:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0106176 clathrin-coated endocytic vesicle lumen record
+  details: >
+    Created an evidence-backed GO:0106176 endocytic coated-vesicle lumen record with
+    GO parentage to GO:0071682, a part-of link to GO:0045334, Saccharomyces cerevisiae
+    endocytic-site evidence from Newpher et al. 2005, a nonmechanistic topology graph
+    connecting the bounded lumen to the clathrin-coated endocytic vesicle membrane and
+    whole vesicle, and a resolved cargo-boundary discussion.

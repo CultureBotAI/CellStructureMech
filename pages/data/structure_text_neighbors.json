@@ -2813,6 +2813,11 @@
           "cosine_similarity": 0.85545205
         },
         {
+          "identifier": "GO:0106176",
+          "label": "clathrin-coated endocytic vesicle lumen",
+          "cosine_similarity": 0.82795024
+        },
+        {
           "identifier": "GO:0044284",
           "label": "mitochondrial crista junction",
           "cosine_similarity": 0.82356775
@@ -2821,11 +2826,6 @@
           "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
           "label": "COPI-coated vesicle lumen",
           "cosine_similarity": 0.82264996
-        },
-        {
-          "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
-          "label": "COPII-coated vesicle lumen",
-          "cosine_similarity": 0.82076117
         }
       ]
     },
@@ -4275,14 +4275,45 @@
           "cosine_similarity": 0.93740741
         },
         {
+          "identifier": "GO:0106176",
+          "label": "clathrin-coated endocytic vesicle lumen",
+          "cosine_similarity": 0.93697928
+        },
+        {
           "identifier": "cellstructuremech:clathrin_coated_vesicle_lumen",
           "label": "clathrin-coated vesicle lumen",
           "cosine_similarity": 0.92952151
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0106176",
+      "label": "clathrin-coated endocytic vesicle lumen",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:clathrin_coated_vesicle_lumen",
+          "label": "clathrin-coated vesicle lumen",
+          "cosine_similarity": 0.96162744
         },
         {
-          "identifier": "GO:0030135",
-          "label": "coated vesicle",
-          "cosine_similarity": 0.9060667
+          "identifier": "GO:0045334",
+          "label": "clathrin-coated endocytic vesicle",
+          "cosine_similarity": 0.93697928
+        },
+        {
+          "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
+          "label": "COPI-coated vesicle lumen",
+          "cosine_similarity": 0.92261688
+        },
+        {
+          "identifier": "GO:0060205",
+          "label": "cytoplasmic vesicle lumen",
+          "cosine_similarity": 0.92123646
+        },
+        {
+          "identifier": "GO:0030669",
+          "label": "clathrin-coated endocytic vesicle membrane",
+          "cosine_similarity": 0.91928814
         }
       ]
     },
@@ -4353,6 +4384,11 @@
       "label": "clathrin-coated vesicle lumen",
       "neighbors": [
         {
+          "identifier": "GO:0106176",
+          "label": "clathrin-coated endocytic vesicle lumen",
+          "cosine_similarity": 0.96162744
+        },
+        {
           "identifier": "GO:0045334",
           "label": "clathrin-coated endocytic vesicle",
           "cosine_similarity": 0.92952151
@@ -4371,11 +4407,6 @@
           "identifier": "GO:0030665",
           "label": "clathrin-coated vesicle membrane",
           "cosine_similarity": 0.92382131
-        },
-        {
-          "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
-          "label": "COPI-coated vesicle lumen",
-          "cosine_similarity": 0.91775431
         }
       ]
     },
@@ -4606,6 +4637,11 @@
           "cosine_similarity": 0.97450435
         },
         {
+          "identifier": "GO:0106176",
+          "label": "clathrin-coated endocytic vesicle lumen",
+          "cosine_similarity": 0.92261688
+        },
+        {
           "identifier": "GO:0060205",
           "label": "cytoplasmic vesicle lumen",
           "cosine_similarity": 0.91963509
@@ -4619,11 +4655,6 @@
           "identifier": "cellstructuremech:clathrin_coated_vesicle_lumen",
           "label": "clathrin-coated vesicle lumen",
           "cosine_similarity": 0.91775431
-        },
-        {
-          "identifier": "GO:0030137",
-          "label": "COPI-coated vesicle",
-          "cosine_similarity": 0.91402647
         }
       ]
     },
@@ -4709,14 +4740,14 @@
           "cosine_similarity": 0.92206788
         },
         {
+          "identifier": "GO:0106176",
+          "label": "clathrin-coated endocytic vesicle lumen",
+          "cosine_similarity": 0.91331892
+        },
+        {
           "identifier": "GO:0060205",
           "label": "cytoplasmic vesicle lumen",
           "cosine_similarity": 0.91004594
-        },
-        {
-          "identifier": "GO:0030134",
-          "label": "COPII-coated ER to Golgi transport vesicle",
-          "cosine_similarity": 0.90687597
         }
       ]
     },
@@ -4766,6 +4797,11 @@
           "cosine_similarity": 0.91838017
         },
         {
+          "identifier": "GO:0106176",
+          "label": "clathrin-coated endocytic vesicle lumen",
+          "cosine_similarity": 0.90320041
+        },
+        {
           "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
           "label": "COPII-coated vesicle lumen",
           "cosine_similarity": 0.90201553
@@ -4774,11 +4810,6 @@
           "identifier": "cellstructuremech:clathrin_coated_vesicle_lumen",
           "label": "clathrin-coated vesicle lumen",
           "cosine_similarity": 0.88650868
-        },
-        {
-          "identifier": "GO:0005775",
-          "label": "vacuolar lumen",
-          "cosine_similarity": 0.88594529
         }
       ]
     },
@@ -5164,6 +5195,11 @@
           "cosine_similarity": 0.93462576
         },
         {
+          "identifier": "GO:0106176",
+          "label": "clathrin-coated endocytic vesicle lumen",
+          "cosine_similarity": 0.92123646
+        },
+        {
           "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
           "label": "COPI-coated vesicle lumen",
           "cosine_similarity": 0.91963509
@@ -5177,11 +5213,6 @@
           "identifier": "GO:0031410",
           "label": "cytoplasmic vesicle",
           "cosine_similarity": 0.90767463
-        },
-        {
-          "identifier": "GO:0031904",
-          "label": "endosome lumen",
-          "cosine_similarity": 0.89976564
         }
       ]
     },
@@ -5272,9 +5303,9 @@
           "cosine_similarity": 0.86483831
         },
         {
-          "identifier": "GO:0005775",
-          "label": "vacuolar lumen",
-          "cosine_similarity": 0.84383668
+          "identifier": "GO:0106176",
+          "label": "clathrin-coated endocytic vesicle lumen",
+          "cosine_similarity": 0.84429138
         }
       ]
     },
@@ -11374,14 +11405,14 @@
           "cosine_similarity": 0.82508939
         },
         {
+          "identifier": "GO:0106176",
+          "label": "clathrin-coated endocytic vesicle lumen",
+          "cosine_similarity": 0.79133802
+        },
+        {
           "identifier": "GO:0005789",
           "label": "endoplasmic reticulum membrane",
           "cosine_similarity": 0.78918749
-        },
-        {
-          "identifier": "cellstructuremech:cvt_vesicle_lumen",
-          "label": "Cvt vesicle lumen",
-          "cosine_similarity": 0.77472062
         }
       ]
     },
