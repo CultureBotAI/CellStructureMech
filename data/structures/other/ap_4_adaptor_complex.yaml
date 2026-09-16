@@ -20,6 +20,12 @@ curation_history:
     an AP-4 cargo-sorting function, GO/DOI evidence, a nonmechanistic AP-4 topology
     graph, and clathrin-scope and subunit-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-16T14:10:30Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Softened AP-4 cargo-sorting wording to match the Hirst et al. 1999 discovery
+    evidence; addresses PR #1100 review issue #1101.'
+  llm_assisted: true
 parent_structures:
 - GO:0030119
 components:
@@ -77,7 +83,7 @@ components:
     exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
 functions:
 - function_id: ap4_tgn_cargo_sorting
-  label: AP-4-dependent trans-Golgi network cargo sorting
+  label: AP-4-associated trans-Golgi network cargo sorting
   description: AP-4 is a trans-Golgi-network-associated adaptor complex implicated
     in recognition and sorting of cargo proteins with tyrosine-based motifs.
   evidence:
@@ -172,10 +178,10 @@ causal_graphs:
       notes: Hirst et al. 1999 localized AP-4 to nonclathrin-coated vesicles near
         the trans-Golgi network.
   - subject: ap4_adaptor_complex
-    predicate: supports
+    predicate: is implicated in
     object: tgn_cargo_sorting
-    description: AP-4 supports recognition and sorting of cargo proteins with tyrosine-based
-      motifs.
+    description: AP-4 is implicated in recognition and sorting of cargo proteins with
+      tyrosine-based motifs.
     evidence:
     - reference: DOI:10.1091/mbc.10.8.2787
       notes: Hirst et al. 1999 found that the AP-4 mu4 subunit specifically interacts
