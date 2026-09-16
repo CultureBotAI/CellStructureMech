@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ap_2_adaptor_complex.yaml
+  slug: ap_2_adaptor_complex
+session:
+  id: 2026-09-16T133830Z-codex-10a11e
+  timestamp: '2026-09-16T13:38:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1099
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1098
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Align AP-2 alpha isoform nomenclature
+  details: 'Addressed PR #1098 review issue #1099 by changing the AP-2 alpha isoform boundary
+    discussion from alpha1/alpha2 to the alphaA/alphaC nomenclature used by the cited GO:0030122
+    definition.'

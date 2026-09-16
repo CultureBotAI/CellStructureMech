@@ -31,6 +31,12 @@ curation_history:
   changes: Changed the GO:0072583-grounded AP-2 function label to the canonical GO
     label clathrin-dependent endocytosis
   llm_assisted: true
+- timestamp: '2026-09-16T13:38:05Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Aligned the AP-2 alpha isoform boundary discussion with GO''s alphaA/alphaC
+    nomenclature; addresses PR #1098 review issue #1099.'
+  llm_assisted: true
 parent_structures:
 - GO:0030131
 - GO:0098797
@@ -247,7 +253,7 @@ discussions:
   attaches_to:
   - components#ap2_alpha_subunit
   rationale: The GO definition notes that human AP-2 can be heterogeneric because
-    alpha1 and alpha2 isoforms are encoded by different genes. The taxon-agnostic
+    alphaA and alphaC isoforms are encoded by different genes. The taxon-agnostic
     component list therefore keeps one AP-2 alpha subunit class rather than making
     human paralogs separate core component classes.
   evidence:
