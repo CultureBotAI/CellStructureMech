@@ -20,6 +20,13 @@ curation_history:
     GO/DOI evidence, a nonmechanistic coated-pit topology graph, and boundary and
     grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-16T15:16:37Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1104 review issue #1105 by changing the coated-pit function
+    description so the structure forms the AP-2/clathrin coat rather than organizing
+    another AP-2/clathrin coat.'
+  llm_assisted: true
 parent_structures:
 - GO:0030118
 part_of:
@@ -71,7 +78,7 @@ functions:
   label: clathrin-dependent endocytosis
   grounding: GO:0072583
   description: The clathrin coat of coated pits participates in clathrin-dependent
-    endocytosis by organizing AP-2/clathrin coats on endocytic coated pits.
+    endocytosis by forming the AP-2/clathrin coat on endocytic coated pits.
   evidence:
   - reference: GO:0072583
     notes: GO:0072583 describes endocytosis through clathrin-coated pits that form

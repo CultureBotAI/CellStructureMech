@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/clathrin_coat_of_coated_pit.yaml
+  slug: clathrin_coat_of_coated_pit
+session:
+  id: 2026-09-16T151704Z-codex-07c956
+  timestamp: '2026-09-16T15:17:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1105
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1104
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Clarify coated-pit clathrin coat function wording
+  details: 'Addressed PR #1104 review issue #1105 by changing the GO:0072583 function description
+    so the clathrin coat of coated pits forms the AP-2/clathrin coat on endocytic coated pits
+    rather than organizing another AP-2/clathrin coat.'
