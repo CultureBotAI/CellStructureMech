@@ -1,0 +1,169 @@
+identifier: GO:0030666
+label: endocytic vesicle membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding an endocytic vesicle.
+definition_source: GO:0030666
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T10:25:31Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T10:25:50Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic-vesicle-membrane and bounding-membrane parentage, whole
+    endocytic vesicle parthood, a reviewed-label-only lipid-bilayer component, Saccharomyces
+    endocytic-site scope, GO/DOI evidence, a nonmechanistic endocytic-vesicle membrane
+    topology graph, and lipid-grounding plus clathrin-coat boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0030659
+- GO:0098588
+part_of:
+- GO:0030139
+components:
+- component_id: endocytic_vesicle_membrane_lipid_bilayer
+  label: endocytic vesicle membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent of the endocytic vesicle membrane that surrounds
+    an endocytic vesicle.
+  evidence:
+  - reference: GO:0030666
+    notes: GO:0030666 identifies the membrane surrounding an endocytic vesicle.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030666 identifies the whole endocytic vesicle membrane, but
+    no separate source-neutral CURIE was curated for the generic lipid constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has clathrin and adaptor proteins that are recruited to cortical
+    actin-based endocytic sites on endocytic vesicle membranes.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which cortical endocytic modules defined the timing
+    of endocytic vesicle membrane coat assembly and internalization.
+  reference: DOI:10.1016/j.cell.2005.09.024
+evidence:
+- reference: GO:0030666
+  notes: Gene Ontology cellular-component term for the endocytic vesicle membrane.
+- reference: GO:0030659
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle membranes.
+- reference: GO:0098588
+  notes: Gene Ontology cellular-component parent term for organelle bounding membranes.
+- reference: GO:0030139
+  notes: Gene Ontology cellular-component term for the whole endocytic vesicle.
+- reference: GO:0071682
+  notes: Gene Ontology cellular-component term for the endocytic vesicle lumen.
+- reference: GO:0030669
+  notes: Gene Ontology cellular-component child term for clathrin-coated endocytic
+    vesicle membranes.
+- reference: GO:0030128
+  notes: Gene Ontology cellular-component term for the clathrin coat of an endocytic
+    vesicle.
+- reference: DOI:10.1016/j.devcel.2005.04.014
+  notes: Newpher et al. 2005, In Vivo Dynamics of Clathrin and Its Adaptor-Dependent
+    Recruitment to the Actin-Based Endocytic Machinery in Yeast, Developmental Cell.
+- reference: DOI:10.1016/j.cell.2005.09.024
+  notes: Kaksonen, Toret and Drubin 2005, A Modular Design for the Clathrin- and Actin-Mediated
+    Endocytosis Machinery, Cell.
+causal_graphs:
+- graph_id: endocytic_vesicle_membrane_topology
+  title: Endocytic vesicle membrane topology
+  description: The endocytic vesicle membrane is the lipid-bilayer boundary that surrounds
+    an endocytic vesicle and encloses its lumen.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the broad endocytic vesicle membrane boundary without
+    asserting a subtype-specific coat, adaptor system, or cargo set.
+  nodes:
+  - node_id: endocytic_vesicle_membrane
+    label: endocytic vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030666
+    component_ref: endocytic_vesicle_membrane_lipid_bilayer
+  - node_id: endocytic_vesicle_lumen
+    label: endocytic vesicle lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0071682
+  - node_id: endocytic_vesicle
+    label: endocytic vesicle
+    node_type: ORGANELLE
+    grounding: GO:0030139
+  edges:
+  - subject: endocytic_vesicle_membrane
+    predicate: is part of
+    object: endocytic_vesicle
+    description: The endocytic vesicle membrane is the lipid bilayer surrounding an
+      endocytic vesicle.
+    evidence:
+    - reference: GO:0030666
+      notes: GO:0030666 records the endocytic vesicle membrane as part of GO:0030139.
+    - reference: GO:0030139
+      notes: GO:0030139 identifies the containing endocytic vesicle.
+  - subject: endocytic_vesicle_membrane
+    predicate: bounds
+    object: endocytic_vesicle
+    description: The endocytic vesicle membrane forms the bounding layer of an endocytic
+      vesicle.
+    evidence:
+    - reference: GO:0030666
+      notes: GO:0030666 records a bounding-layer relationship to GO:0030139.
+    - reference: GO:0098588
+      notes: GO:0098588 identifies organelle bounding membranes.
+  - subject: endocytic_vesicle_membrane
+    predicate: bounds
+    object: endocytic_vesicle_lumen
+    description: The endocytic vesicle membrane encloses the endocytic vesicle lumen.
+    evidence:
+    - reference: GO:0030666
+      notes: GO:0030666 identifies the membrane surrounding an endocytic vesicle.
+    - reference: GO:0071682
+      notes: GO:0071682 defines the lumen by enclosure within the endocytic vesicle
+        membrane.
+discussions:
+- discussion_id: ground_endocytic_vesicle_membrane_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for endocytic vesicle membrane
+    lipids.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#endocytic_vesicle_membrane_lipid_bilayer
+  rationale: GO:0030666 exactly grounds the endocytic vesicle membrane, but the generic
+    lipid-bilayer constituent is intentionally left reviewed-label-only until an exact
+    lipid or membrane-constituent CURIE is curated.
+  evidence:
+  - reference: GO:0030666
+    notes: GO:0030666 identifies the complete endocytic vesicle membrane.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: exclude_clathrin_coat_from_generic_endocytic_membrane
+  prompt: Keep the clathrin coat off the generic endocytic vesicle membrane record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#endocytic_vesicle_membrane_topology
+  rationale: GO:0030666 spans the membrane around endocytic vesicles, while GO:0030128
+    is a coat part of the narrower GO:0030669 clathrin-coated endocytic vesicle membrane
+    child.
+  resolution_note: Modeled only the reviewed-label-only lipid bilayer as a direct
+    component and left clathrin coats to clathrin-coated subtype membrane records.
+  evidence:
+  - reference: GO:0030666
+    notes: GO:0030666 identifies the broad endocytic vesicle membrane class.
+  - reference: GO:0030669
+    notes: GO:0030669 identifies the clathrin-coated endocytic vesicle membrane child.
+  - reference: GO:0030128
+    notes: GO:0030128 identifies the endocytic-vesicle clathrin coat.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
