@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/membrane_coat.yaml
+  slug: membrane_coat
+session:
+  id: 2026-09-16T045039Z-codex-5cd82f
+  timestamp: '2026-09-16T04:50:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1064
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1063
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - canonical_examples
+  - discussions
+  summary: Narrowed the membrane coat Saccharomyces example
+  details: 'Addressed PR #1063 review issue #1064 by narrowing the Saccharomyces cerevisiae
+    taxonomic-distribution and canonical-example notes to the COPII membrane-coat system directly
+    supported by Barlowe et al. 1994, and by adding a resolved discussion documenting why
+    the broad GO:0030117 parent record keeps this canonical example scoped to COPII.'

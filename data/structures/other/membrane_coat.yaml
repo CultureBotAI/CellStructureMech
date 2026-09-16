@@ -22,6 +22,13 @@ curation_history:
     DOI evidence, a nonmechanistic coat assembly graph, and vesicle-coat-boundary
     plus grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-16T04:50:09Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1063 review issue #1064 by narrowing the Saccharomyces taxonomic
+    and canonical-example notes to the cited COPII evidence and documenting the parent-level
+    scope boundary.'
+  llm_assisted: true
 parent_structures:
 - GO:0098796
 components:
@@ -71,14 +78,14 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Budding yeast has experimentally characterized clathrin, COPI, and COPII membrane-coat
-    systems.
+  note: Budding yeast has a COPII membrane-coat system in which Sar1p and Sec-family
+    coat proteins drive ER transport-vesicle budding.
   reference: DOI:10.1016/0092-8674(94)90138-4
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model with curated clathrin, COPI, and COPII vesicle-coat subclasses
-    under the broader membrane-coat class.
+  note: Budding-yeast COPII model in which Sar1p, Sec13p, Sec31p, Sec23p, and Sec24p
+    were identified as a membrane coat that drives ER transport-vesicle budding.
   reference: DOI:10.1016/0092-8674(94)90138-4
 evidence:
 - reference: GO:0030117
@@ -191,3 +198,24 @@ discussions:
     COPI, COPII, or AP-specific groundings onto the entire class.
   posed_by: codex
   posed_date: '2026-09-16'
+- discussion_id: saccharomyces_copii_example_scope
+  prompt: Keep the Saccharomyces canonical example scoped to the cited COPII evidence.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - taxonomic_distribution
+  - canonical_examples
+  rationale: GO:0030117 is a broad parent over clathrin/adaptor, COPI, COPII, and
+    possible additional membrane coats. The cited Barlowe et al. 1994 paper directly
+    supports a budding-yeast COPII membrane coat, so the Saccharomyces taxonomic and
+    canonical-example notes are narrowed to COPII rather than claiming one citation
+    supports all curated yeast clathrin, COPI, and COPII vesicle-coat subclasses.
+  evidence:
+  - reference: GO:0030117
+    notes: GO term for the broad membrane-coat parent class.
+  - reference: DOI:10.1016/0092-8674(94)90138-4
+    notes: Barlowe et al. 1994 identified the budding-yeast COPII Sec proteins as
+      a membrane coat for ER-derived vesicles.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
