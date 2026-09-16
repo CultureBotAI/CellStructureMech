@@ -1,0 +1,276 @@
+identifier: GO:0000813
+label: ESCRT I complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An endosomal sorting complex required for transport. It consists of the
+  class E vacuolar protein sorting (Vps) proteins and interacts with ubiquitinated
+  cargoes.
+definition_source: GO:0000813
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T15:34:02Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T15:35:04Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ESCRT-I synonymy, GO parentage and endosome membrane parthood, reviewed-label-only
+    Vps23, Vps28 and Vps37 core subunits, Saccharomyces scope, an MVB sorting function,
+    GO/DOI evidence, a nonmechanistic yeast MVB cargo-sorting graph, a subunit-grounding
+    TODO, and a resolved Vps27 boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-16T15:35:35Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Connected the ESCRT-I function graph to the endosome membrane with Katzmann
+    et al. 2003 Vps27-dependent recruitment evidence.
+  llm_assisted: true
+parent_structures:
+- GO:0036452
+part_of:
+- GO:0010008
+synonyms:
+- synonym_text: ESCRT-I complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/S0092-8674(01)00434-2
+- synonym_text: endosomal sorting complex required for transport
+  synonym_type: BROAD_SYNONYM
+  source: GO:0000813
+components:
+- component_id: vps23_escrt_i_subunit
+  label: Vps23 ESCRT-I subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS23
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps23 ESCRT-I subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this ESCRT-I subunit
+    class was curated in this pass.
+  role: Vps23 core constituent of the yeast ESCRT-I cargo-sorting complex.
+  evidence:
+  - reference: DOI:10.1016/S0092-8674(01)00434-2
+    notes: Katzmann, Babst and Emr 2001 characterized Vps23 as one of three Saccharomyces
+      cerevisiae ESCRT-I subunits in a 350 kDa complex needed for ubiquitin-dependent
+      MVB sorting.
+  - reference: DOI:10.1083/jcb.200302136
+    notes: Katzmann, Stefan, Babst and Emr 2003 described ESCRT-I as the Vps23, Vps28
+      and Vps37 complex while testing how Vps27 recruits it to yeast endosomal membranes.
+- component_id: vps28_escrt_i_subunit
+  label: Vps28 ESCRT-I subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS28
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps28 ESCRT-I subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this ESCRT-I subunit
+    class was curated in this pass.
+  role: Vps28 core constituent of the yeast ESCRT-I cargo-sorting complex.
+  evidence:
+  - reference: DOI:10.1016/S0092-8674(01)00434-2
+    notes: Katzmann, Babst and Emr 2001 characterized Vps28 as one of three Saccharomyces
+      cerevisiae ESCRT-I subunits in a 350 kDa complex needed for ubiquitin-dependent
+      MVB sorting.
+  - reference: DOI:10.1083/jcb.200302136
+    notes: Katzmann, Stefan, Babst and Emr 2003 described ESCRT-I as the Vps23, Vps28
+      and Vps37 complex while testing how Vps27 recruits it to yeast endosomal membranes.
+- component_id: vps37_escrt_i_subunit
+  label: Vps37 ESCRT-I subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS37
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps37 ESCRT-I subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this ESCRT-I subunit
+    class was curated in this pass.
+  role: Vps37 core constituent of the yeast ESCRT-I cargo-sorting complex.
+  evidence:
+  - reference: DOI:10.1016/S0092-8674(01)00434-2
+    notes: Katzmann, Babst and Emr 2001 characterized Vps37 as one of three Saccharomyces
+      cerevisiae ESCRT-I subunits in a 350 kDa complex needed for ubiquitin-dependent
+      MVB sorting.
+  - reference: DOI:10.1083/jcb.200302136
+    notes: Katzmann, Stefan, Babst and Emr 2003 described ESCRT-I as the Vps23, Vps28
+      and Vps37 complex while testing how Vps27 recruits it to yeast endosomal membranes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses Vps23, Vps28 and Vps37 as the ESCRT-I complex during ubiquitin-dependent
+    sorting into multivesicular bodies.
+  reference: DOI:10.1016/S0092-8674(01)00434-2
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Genetic and biochemical model in which Katzmann, Babst and Emr identified
+    Vps23, Vps28 and Vps37 as ESCRT-I subunits required for MVB cargo sorting.
+  reference: DOI:10.1016/S0092-8674(01)00434-2
+functions:
+- function_id: multivesicular_body_sorting_pathway
+  label: multivesicular body sorting pathway
+  grounding: GO:0071985
+  description: ESCRT-I acts early in the endosomal MVB pathway to help sort ubiquitinated
+    membrane cargo into multivesicular-body vesicles.
+  evidence:
+  - reference: GO:0071985
+    notes: GO:0071985 denotes the vesicle-mediated transport pathway that moves ubiquitylated
+      transmembrane proteins into multivesicular-body luminal vesicles.
+  - reference: DOI:10.1016/S0092-8674(01)00434-2
+    notes: Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved yeast complex
+      that recognizes ubiquitinated MVB cargo and is required for MVB-vesicle sorting.
+evidence:
+- reference: GO:0000813
+  notes: Gene Ontology cellular-component term for ESCRT I complex.
+- reference: GO:0036452
+  notes: Gene Ontology cellular-component parent term for the ESCRT complex class.
+- reference: GO:0010008
+  notes: Gene Ontology cellular-component term for the endosome membrane.
+- reference: GO:0071985
+  notes: Gene Ontology biological-process term for the multivesicular body sorting
+    pathway.
+- reference: DOI:10.1016/S0092-8674(01)00434-2
+  notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
+    Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
+    ESCRT-I, Cell.
+- reference: DOI:10.1083/jcb.200302136
+  notes: Katzmann, Stefan, Babst and Emr 2003, Vps27 recruits ESCRT machinery to endosomes
+    during MVB sorting, Journal of Cell Biology.
+- reference: DOI:10.1016/j.devcel.2011.05.015
+  notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+causal_graphs:
+- graph_id: yeast_escrt_i_mvb_cargo_sorting
+  title: ESCRT-I sorts ubiquitinated cargo in yeast MVBs
+  description: In Saccharomyces cerevisiae, Vps23, Vps28 and Vps37 form ESCRT-I, which
+    is recruited by Vps27 and acts in sorting ubiquitinated cargo into the multivesicular-body
+    pathway.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents the Vps23/Vps28/Vps37 yeast ESCRT-I core and its
+    Vps27-dependent endosomal recruitment without modeling ESCRT-II/III handoff, deubiquitination,
+    or Vps4 recycling.
+  nodes:
+  - node_id: vps23_escrt_i_subunit
+    label: Vps23 ESCRT-I subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps23_escrt_i_subunit
+  - node_id: vps28_escrt_i_subunit
+    label: Vps28 ESCRT-I subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps28_escrt_i_subunit
+  - node_id: vps37_escrt_i_subunit
+    label: Vps37 ESCRT-I subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps37_escrt_i_subunit
+  - node_id: escrt_i_complex
+    label: ESCRT I complex
+    node_type: STRUCTURE
+    grounding: GO:0000813
+  - node_id: vps27_endosomal_recruiter
+    label: Vps27 endosomal ESCRT-I recruiter
+    node_type: GENE_OR_PROTEIN
+  - node_id: endosome_membrane
+    label: endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0010008
+  - node_id: ubiquitinated_mvb_cargo
+    label: ubiquitinated MVB cargo
+    node_type: STATE
+  - node_id: multivesicular_body_sorting_pathway
+    label: multivesicular body sorting pathway
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071985
+  edges:
+  - subject: vps23_escrt_i_subunit
+    predicate: is part of
+    object: escrt_i_complex
+    description: Vps23 is represented as a Saccharomyces cerevisiae ESCRT-I constituent.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(01)00434-2
+      notes: Katzmann, Babst and Emr 2001 characterized Vps23 as a yeast ESCRT-I subunit.
+  - subject: vps28_escrt_i_subunit
+    predicate: is part of
+    object: escrt_i_complex
+    description: Vps28 is represented as a Saccharomyces cerevisiae ESCRT-I constituent.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(01)00434-2
+      notes: Katzmann, Babst and Emr 2001 characterized Vps28 as a yeast ESCRT-I subunit.
+  - subject: vps37_escrt_i_subunit
+    predicate: is part of
+    object: escrt_i_complex
+    description: Vps37 is represented as a Saccharomyces cerevisiae ESCRT-I constituent.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(01)00434-2
+      notes: Katzmann, Babst and Emr 2001 characterized Vps37 as a yeast ESCRT-I subunit.
+  - subject: vps27_endosomal_recruiter
+    predicate: recruits
+    object: escrt_i_complex
+    description: Vps27 recruits ESCRT-I to yeast endosomal membranes during MVB sorting.
+    evidence:
+    - reference: DOI:10.1083/jcb.200302136
+      notes: Katzmann, Stefan, Babst and Emr 2003 found that Vps27 recruits ESCRT-I
+        to endosomes.
+  - subject: escrt_i_complex
+    predicate: is recruited to
+    object: endosome_membrane
+    description: Vps27-dependent recruitment places yeast ESCRT-I on endosomal membranes
+      during MVB sorting.
+    evidence:
+    - reference: DOI:10.1083/jcb.200302136
+      notes: Katzmann, Stefan, Babst and Emr 2003 found that Vps27 recruits ESCRT-I
+        to yeast endosomal membranes.
+  - subject: escrt_i_complex
+    predicate: acts on
+    object: ubiquitinated_mvb_cargo
+    description: Yeast ESCRT-I recognizes ubiquitinated MVB cargo during sorting into
+      multivesicular-body vesicles.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(01)00434-2
+      notes: Katzmann, Babst and Emr 2001 characterized ESCRT-I as recognizing ubiquitinated
+        MVB cargo through the conserved UBC-like domain in Vps23.
+  - subject: escrt_i_complex
+    predicate: participates in
+    object: multivesicular_body_sorting_pathway
+    description: ESCRT-I is required for yeast ubiquitin-dependent sorting into the
+      MVB pathway.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(01)00434-2
+      notes: Katzmann, Babst and Emr 2001 showed that ESCRT-I function is required
+        for sorting cargo into MVB vesicles.
+discussions:
+- discussion_id: resolve_escrt_i_family_groundings
+  prompt: Resolve exact source-neutral InterPro or Pfam groundings for the Vps23,
+    Vps28 and Vps37 ESCRT-I subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vps23_escrt_i_subunit
+  - components#vps28_escrt_i_subunit
+  - components#vps37_escrt_i_subunit
+  rationale: This first ESCRT-I complex record records the named Saccharomyces cerevisiae
+    Vps23, Vps28 and Vps37 subunits without asserting paralogy boundaries or a single
+    InterPro/Pfam family unless those identifiers are reviewed exactly.
+  evidence:
+  - reference: DOI:10.1016/S0092-8674(01)00434-2
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: vps27_not_escrt_i_component
+  prompt: Do not model Vps27 as a constituent component of ESCRT-I.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#yeast_escrt_i_mvb_cargo_sorting
+  rationale: Vps27 recruits ESCRT-I to endosomal membranes during MVB sorting and
+    is therefore upstream of the constituent Vps23/Vps28/Vps37 ESCRT-I component list
+    in this first record.
+  evidence:
+  - reference: DOI:10.1083/jcb.200302136
+  posed_by: codex
+  posed_date: '2026-09-16'

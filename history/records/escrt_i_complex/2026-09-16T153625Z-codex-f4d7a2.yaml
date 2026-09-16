@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/escrt_i_complex.yaml
+  slug: escrt_i_complex
+session:
+  id: 2026-09-16T153625Z-codex-f4d7a2
+  timestamp: '2026-09-16T15:36:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added ESCRT I complex record
+  details: Created a GO:0000813 ESCRT I complex record for the budding-yeast Vps23/Vps28/Vps37
+    endosomal cargo-sorting complex. The record uses reviewed-label-only core subunit classes,
+    Saccharomyces cerevisiae scope, GO parentage and endosome-membrane parthood, multivesicular-body
+    sorting evidence, a nonmechanistic ESCRT-I MVB cargo-sorting graph, and explicit grounding
+    and Vps27 boundary discussions.

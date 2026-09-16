@@ -9991,9 +9991,45 @@
       ]
     },
     {
+      "identifier": "GO:0000813",
+      "label": "ESCRT I complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000815",
+          "label": "ESCRT III complex",
+          "cosine_similarity": 0.92677998
+        },
+        {
+          "identifier": "GO:0030127",
+          "label": "COPII vesicle coat",
+          "cosine_similarity": 0.70783392
+        },
+        {
+          "identifier": "GO:0005771",
+          "label": "multivesicular body",
+          "cosine_similarity": 0.7040116
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.70200702
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.7015292
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000815",
       "label": "ESCRT III complex",
       "neighbors": [
+        {
+          "identifier": "GO:0000813",
+          "label": "ESCRT I complex",
+          "cosine_similarity": 0.92677998
+        },
         {
           "identifier": "GO:0005770",
           "label": "late endosome",
@@ -10013,11 +10049,6 @@
           "identifier": "GO:0031904",
           "label": "endosome lumen",
           "cosine_similarity": 0.73001748
-        },
-        {
-          "identifier": "GO:0005771",
-          "label": "multivesicular body",
-          "cosine_similarity": 0.72013908
         }
       ]
     },
