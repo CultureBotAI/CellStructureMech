@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ap_5_adaptor_complex.yaml
+  slug: ap_5_adaptor_complex
+session:
+  id: 2026-09-16T144739Z-codex-b55027
+  timestamp: '2026-09-16T14:47:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1103
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1102
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Clarify AP-5 HeLa localization wording
+  details: Addressed the PR review finding by separating Hirst et al. 2011 support for human
+    AP-5 in HeLa cells from tagged-AP-5 localization to a late endosomal compartment.

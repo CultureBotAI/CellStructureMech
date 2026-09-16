@@ -21,6 +21,13 @@ curation_history:
     a nonmechanistic AP-5 topology graph, and clathrin-scope and subunit-grounding
     discussions.
   llm_assisted: true
+- timestamp: '2026-09-16T14:47:12Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Clarified the AP-5 human HeLa taxonomic note so AP-5 identification and
+    tagged-AP-5 localization are separate Hirst et al. 2011 findings; addresses PR
+    #1102 review issue #1103.'
+  llm_assisted: true
 parent_structures:
 - GO:0030119
 synonyms:
@@ -84,8 +91,8 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:9606
   taxon_label: Homo sapiens
   presence: COMMON
-  note: Human HeLa cells contain an AP-5 complex whose tagged subunits localize to
-    a late endosomal compartment.
+  note: Hirst et al. identified human AP-5 in HeLa cells, and tagged AP-5 localized
+    to a late endosomal compartment in that system.
   reference: DOI:10.1371/journal.pbio.1001170
 canonical_examples:
 - taxon_id: NCBITaxon:9606
