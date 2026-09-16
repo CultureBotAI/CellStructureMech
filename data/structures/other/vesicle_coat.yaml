@@ -1,0 +1,283 @@
+identifier: GO:0030120
+label: vesicle coat
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A membrane coat found on a coated vesicle.
+definition_source: GO:0030120
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T02:34:35Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T02:37:01Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added membrane-coat parentage, coated-vesicle-membrane parthood, a reviewed-label-only
+    broad scaffold component, Saccharomyces scope, vesicle-coat assembly, DOI/GO evidence,
+    a nonmechanistic coat-assembly graph, and a subtype-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-16T02:37:42Z'
+  curator: codex
+  action: REFINED_INITIAL_CURATION
+  changes: Narrowed the Saccharomyces canonical-example note to the cited COPII work
+    and generalized the broad scaffold-component wording.
+  llm_assisted: true
+- timestamp: '2026-09-16T02:42:35Z'
+  curator: codex
+  action: FIXED_ID_LABEL_CORRESPONDENCE
+  changes: Changed GO:0006901 function and graph-node labels to the canonical vesicle
+    coating label used by the id-label correspondence gate.
+  llm_assisted: true
+- timestamp: '2026-09-16T02:50:52Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1053 review issues #1054 and #1055 by adding a broad coat
+    recruitment and cargo-selection component, adding AP/Arf/Sar1 and clathrin endocytosis
+    evidence, and wiring the new component into the nonmechanistic vesicle-coat assembly
+    graph.'
+  llm_assisted: true
+parent_structures:
+- GO:0030117
+part_of:
+- GO:0030662
+components:
+- component_id: coat_scaffold_subunits
+  label: vesicle coat scaffold subunits
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Vesicle coats are a source-neutral parent over clathrin, COPI coatomer,
+    and COPII Sec-family coat systems; no exact InterPro, Pfam, NCBIfam, or Complex
+    Portal identifier was curated for a shared vesicle-coat scaffold family in this
+    pass.
+  role: Protein subunits or coat subcomplexes that build the protein scaffold on a
+    coated-vesicle membrane.
+  evidence:
+  - reference: GO:0030120
+    notes: GO:0030120 defines a vesicle coat as a membrane coat found on a coated
+      vesicle.
+  - reference: GO:0030125
+    notes: GO:0030125 places clathrin vesicle coats under the vesicle coat parent.
+  - reference: GO:0030126
+    notes: GO:0030126 places COPI vesicle coats under the vesicle coat parent.
+  - reference: GO:0030127
+    notes: GO:0030127 places COPII vesicle coats under the vesicle coat parent and
+      names the budding-yeast COPII coat subunits.
+- component_id: coat_recruitment_and_cargo_selection_factors
+  label: vesicle coat recruitment and cargo-selection factors
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Clathrin adaptors, COPI Arf-family GTPases, and COPII Sar1/Sec
+    proteins are subtype-specific coat constituents or cargo-selection factors. No
+    exact InterPro, Pfam, NCBIfam, Complex Portal, or GO identifier was curated for
+    a shared source-neutral vesicle-coat recruitment module in this pass.
+  role: Subtype-specific adaptor proteins, adaptor complexes, and small GTPases that
+    recruit or connect vesicle-coat scaffolds to donor membranes and cargo during
+    coat assembly.
+  evidence:
+  - reference: GO:0030119
+    notes: GO:0030119 places AP-type membrane coat adaptor complexes as part of the
+      broader membrane coat.
+  - reference: DOI:10.1016/j.devcel.2005.04.014
+    notes: Newpher et al. 2005 measured adaptor-dependent clathrin recruitment in
+      yeast endocytosis.
+  - reference: DOI:10.1016/0092-8674(91)90176-y
+    notes: Serafini et al. 1991 identified ADP-ribosylation factor as a subunit of
+      Golgi-derived COP-coated vesicle coats.
+  - reference: DOI:10.1016/0092-8674(94)90138-4
+    notes: Barlowe et al. 1994 identified Sar1p, Sec23p, Sec24p, Sec13p, and Sec31p
+      as COPII Sec proteins that drive ER vesicle budding.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has experimentally characterized COPII coats that assemble from
+    Sar1p, Sec23p, Sec24p, Sec13p, and Sec31p during ER transport-vesicle budding.
+  reference: DOI:10.1016/0092-8674(94)90138-4
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding yeast is an archetypal COPII vesicle-coat model in which Sar1p, Sec13p,
+    Sec31p, Sec23p, and Sec24p were identified as Sec proteins that drive ER transport-vesicle
+    budding.
+  reference: DOI:10.1016/0092-8674(94)90138-4
+functions:
+- function_id: vesicle_coat_assembly
+  label: vesicle coating
+  grounding: GO:0006901
+  description: Vesicle coats form when coat proteins assemble on donor membranes during
+    coated-transport-vesicle formation.
+  evidence:
+  - reference: GO:0006901
+    notes: GO:0006901 denotes the addition of coat proteins to a membrane during transport-vesicle
+      formation.
+  - reference: GO:0035964
+    notes: GO:0035964 defines COPI-coated vesicle budding as evagination of a Golgi
+      membrane to form a COPI-coated vesicle.
+  - reference: GO:0090114
+    notes: GO:0090114 defines COPII-coated vesicle budding as evagination of an ER
+      membrane to form a COPII-coated vesicle.
+  - reference: GO:0072583
+    notes: GO:0072583 denotes clathrin-dependent endocytic uptake through clathrin-coated
+      pits that form clathrin-coated endocytic vesicles.
+  - reference: DOI:10.1016/j.cell.2005.09.024
+    notes: Kaksonen, Toret and Drubin 2005 analyzed the modular clathrin- and actin-mediated
+      endocytic machinery in yeast.
+evidence:
+- reference: GO:0030120
+  notes: Gene Ontology cellular-component term for the vesicle coat.
+- reference: GO:0030117
+  notes: Gene Ontology cellular-component parent for membrane coats.
+- reference: GO:0030662
+  notes: Gene Ontology cellular-component term for the coated vesicle membrane that
+    carries vesicle coats.
+- reference: GO:0030125
+  notes: Gene Ontology child term for the clathrin vesicle coat.
+- reference: GO:0030126
+  notes: Gene Ontology child term for the COPI vesicle coat.
+- reference: GO:0030127
+  notes: Gene Ontology child term for the COPII vesicle coat.
+- reference: GO:0030119
+  notes: Gene Ontology cellular-component term for AP-type membrane coat adaptor complexes.
+- reference: GO:0072583
+  notes: Gene Ontology biological-process term for clathrin-dependent endocytosis.
+- reference: GO:0006901
+  notes: Gene Ontology biological-process term for vesicle coat assembly.
+- reference: DOI:10.1083/jcb.106.5.1453
+  notes: Payne et al. 1988, Protein transport to the vacuole and receptor-mediated
+    endocytosis by clathrin heavy chain-deficient yeast, Journal of Cell Biology.
+- reference: DOI:10.1016/0092-8674(91)90176-y
+  notes: Serafini et al. 1991, ADP-Ribosylation factor is a subunit of the coat of
+    Golgi-derived COP-coated vesicles, Cell.
+- reference: DOI:10.1016/0092-8674(94)90138-4
+  notes: 'Barlowe et al. 1994, COPII: A membrane coat formed by Sec proteins that
+    drive vesicle budding from the endoplasmic reticulum, Cell.'
+- reference: DOI:10.1016/j.devcel.2005.04.014
+  notes: Newpher et al. 2005, In Vivo Dynamics of Clathrin and Its Adaptor-Dependent
+    Recruitment to the Actin-Based Endocytic Machinery in Yeast, Developmental Cell.
+- reference: DOI:10.1016/j.cell.2005.09.024
+  notes: Kaksonen, Toret and Drubin 2005, A Modular Design for the Clathrin- and Actin-Mediated
+    Endocytosis Machinery, Cell.
+causal_graphs:
+- graph_id: vesicle_coat_membrane_assembly
+  title: Coat scaffold proteins assemble on nascent vesicles
+  description: Vesicle-coat scaffold proteins and subtype-specific recruitment or
+    cargo-selection factors assemble on donor membranes into protein coats that cover
+    coated vesicle membranes during transport-vesicle formation.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the shared coated-vesicle-coat boundary without
+    asserting clathrin triskelion geometry, a single universal adaptor or small-GTPase
+    module, COPI coatomer subunits, COPII Sec subcomplex topology, or subtype-specific
+    cargo adaptors.
+  nodes:
+  - node_id: donor_membrane
+    label: donor membrane
+    node_type: STRUCTURE
+  - node_id: coat_scaffold_subunits
+    label: vesicle coat scaffold subunits
+    node_type: GENE_OR_PROTEIN
+    component_ref: coat_scaffold_subunits
+  - node_id: coat_recruitment_and_cargo_selection_factors
+    label: vesicle coat recruitment and cargo-selection factors
+    node_type: GENE_OR_PROTEIN
+    component_ref: coat_recruitment_and_cargo_selection_factors
+  - node_id: vesicle_coat
+    label: vesicle coat
+    node_type: STRUCTURE
+    grounding: GO:0030120
+  - node_id: coated_vesicle_membrane
+    label: coated vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030662
+  - node_id: vesicle_coat_assembly
+    label: vesicle coating
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006901
+  edges:
+  - subject: coat_scaffold_subunits
+    predicate: assemble on
+    object: donor_membrane
+    description: Vesicle coat scaffold proteins are represented as assembling on a
+      donor membrane during vesicle coat assembly.
+    evidence:
+    - reference: GO:0006901
+      notes: GO:0006901 defines vesicle coat assembly as the addition of coat proteins
+        to a membrane during transport-vesicle formation.
+  - subject: coat_recruitment_and_cargo_selection_factors
+    predicate: helps recruit
+    object: coat_scaffold_subunits
+    description: Subtype-specific adaptors, cargo selectors, and small GTPases connect
+      clathrin, COPI, or COPII coat scaffolds to donor membranes or cargo during vesicle
+      coat assembly.
+    evidence:
+    - reference: GO:0030119
+      notes: GO:0030119 defines AP-type adaptor complexes as linking clathrin or another
+        coat-forming molecule to a membrane surface.
+    - reference: DOI:10.1016/0092-8674(91)90176-y
+      notes: Serafini et al. 1991 identified Arf as a subunit of Golgi-derived COP-coated
+        vesicle coats.
+    - reference: DOI:10.1016/0092-8674(94)90138-4
+      notes: Barlowe et al. 1994 identified Sar1p among the COPII Sec proteins that
+        drive ER vesicle budding.
+  - subject: coat_scaffold_subunits
+    predicate: is part of
+    object: vesicle_coat
+    description: Vesicle coat scaffold subunits are broad constituents of clathrin,
+      COPI, and COPII vesicle coats, whose recruitment factors and cargo-selection
+      modules differ by coat subtype.
+    evidence:
+    - reference: GO:0030125
+      notes: GO:0030125 places clathrin vesicle coats under the vesicle coat parent.
+    - reference: GO:0030126
+      notes: GO:0030126 places COPI vesicle coats under the vesicle coat parent.
+    - reference: GO:0030127
+      notes: GO:0030127 places COPII vesicle coats under the vesicle coat parent.
+  - subject: vesicle_coat
+    predicate: is part of
+    object: coated_vesicle_membrane
+    description: A vesicle coat is part of the coated vesicle membrane.
+    evidence:
+    - reference: GO:0030120
+      notes: GO:0030120 records vesicle coat as part of the coated vesicle membrane.
+  - subject: vesicle_coat
+    predicate: assembles during
+    object: vesicle_coat_assembly
+    description: The vesicle coat forms as coat proteins are added to a membrane during
+      vesicle coat assembly.
+    evidence:
+    - reference: GO:0006901
+      notes: GO:0006901 denotes addition of coat proteins to a membrane during transport-vesicle
+        formation.
+discussions:
+- discussion_id: defer_subtype_specific_coat_components
+  prompt: Resolve exact source-neutral boundaries for clathrin triskelions, COPI coatomer
+    and Arf-family GTPases, COPII Sar1 and Sec coat subcomplexes, and AP/GGA or other
+    cargo-adaptor modules without promoting a subtype-specific protein into the broad
+    vesicle-coat parent.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#coat_scaffold_subunits
+  - components#coat_recruitment_and_cargo_selection_factors
+  rationale: The broad vesicle coat parent spans clathrin, COPI, and COPII coats.
+    Those coats use different scaffold proteins, small GTPases, and cargo adaptors,
+    so this record keeps the parent coarse and leaves exact subtype composition to
+    child records.
+  evidence:
+  - reference: GO:0030125
+  - reference: GO:0030126
+  - reference: GO:0030127
+  - reference: DOI:10.1083/jcb.106.5.1453
+  - reference: DOI:10.1016/0092-8674(91)90176-y
+  - reference: DOI:10.1016/0092-8674(94)90138-4
+  - reference: GO:0030119
+  - reference: DOI:10.1016/j.devcel.2005.04.014
+  - reference: DOI:10.1016/j.cell.2005.09.024
+  posed_by: codex
+  posed_date: '2026-09-16'
