@@ -33,6 +33,13 @@ curation_history:
     triplet, singlet and ventral-disc microtubules are deferred to exact subtype or
     array-specific component curation rather than implied as generic microtubule components.
   llm_assisted: true
+- timestamp: '2026-09-16T01:14:13Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Addressed PR #1044 review issues #1045 and #1046 by adding direct basal-body
+    and haptonema evidence to the microtubule subtype TODO and broadening the BtubAB-only
+    boundary to representative bacterial, archaeal and phage tubulin-like filaments.'
+  llm_assisted: true
 synonyms:
 - synonym_text: microtubuli
   synonym_type: EXACT_SYNONYM
@@ -116,6 +123,12 @@ evidence:
   notes: Schwartz, Heumann, Dawson and Hoenger 2012, 'A Detailed, Hierarchical Study
     of Giardia lamblia's Ventral Disc Reveals Novel Microtubule-Associated Protein
     Complexes', PLOS ONE.
+- reference: DOI:10.1186/s13630-016-0039-z
+  notes: Dutcher and O'Toole 2016 reviewed Chlamydomonas reinhardtii basal-body triplet
+    microtubules.
+- reference: DOI:10.1242/bio.036590
+  notes: Nomura et al. 2019 analyzed haptophyte haptonemal microtubules during calcium-dependent
+    coiling.
 - reference: DOI:10.1371/journal.pbio.1001213
   notes: 'Pilhofer, Ladinsky, McDowall, Petroni and Jensen 2011, ''Microtubules in
     bacteria: Ancient tubulins build a five-protofilament homolog of the eukaryotic
@@ -124,6 +137,18 @@ evidence:
   notes: Deng, Fink, Bharat, He, Kureisaite-Ciziene and Lowe 2017, 'Four-stranded
     mini microtubules formed by Prosthecobacter BtubAB show dynamic instability',
     PNAS.
+- reference: DOI:10.1101/gad.1546107
+  notes: Larsen, Cusumano, Fujioka, Lim-Fong, Patterson and Pogliano 2007 characterized
+    bacterial TubZ as a treadmilling prokaryotic tubulin-like plasmid-stability protein.
+- reference: DOI:10.7554/eLife.03197
+  notes: Erb, Kraemer, Coker, Chaikeeratisak, Nonejuie, Agard and Pogliano 2014 characterized
+    PhuZ as a bacteriophage tubulin that forms dynamic filaments.
+- reference: DOI:10.1038/nature13983
+  notes: Duggin et al. 2015 characterized archaeal CetZ tubulin-like proteins as Haloferax
+    cell-shape cytoskeletal factors.
+- reference: DOI:10.1146/annurev-biophys-121219-081703
+  notes: McQuillen and Xiao 2020 reviewed FtsZ rings as tubulin-homolog organizers
+    of bacterial cytokinesis.
 causal_graphs:
 - graph_id: eukaryotic_microtubule_polymer
   title: Alpha- and beta-tubulins polymerize into microtubules
@@ -197,19 +222,26 @@ discussions:
   - reference: DOI:10.1371/journal.pone.0043783
     notes: Schwartz et al. 2012 mapped Giardia ventral-disc microtubule-associated
       structures.
+  - reference: DOI:10.1186/s13630-016-0039-z
+    notes: Dutcher and O'Toole 2016 reviewed basal-body triplet microtubules in Chlamydomonas.
+  - reference: DOI:10.1242/bio.036590
+    notes: Nomura et al. 2019 analyzed haptophyte haptonemal singlet microtubules
+      that rapidly coil.
   posed_by: codex
   posed_date: '2026-09-16'
-- discussion_id: exclude_btubab_bacterial_microtubules
-  prompt: Keep BtubAB bacterial microtubules separate from the GO:0005874 eukaryotic
-    microtubule record.
+- discussion_id: exclude_prokaryotic_phage_tubulin_like_filaments
+  prompt: Keep bacterial, archaeal and phage tubulin-like filaments separate from
+    the GO:0005874 eukaryotic microtubule record.
   kind: INTERPRETATION
   status: RESOLVED
   attaches_to:
   - causal_graphs#eukaryotic_microtubule_polymer
   rationale: GO:0005874 denotes eukaryotic microtubules built from alpha/beta tubulin
-    into canonical hollow tubes, whereas the Prosthecobacter BtubAB structure is modeled
-    in this corpus as a distinct bacterial tubulin homolog with different subunits
-    and a different protofilament architecture.
+    into canonical hollow tubes, while this corpus separately models bacterial BtubAB
+    mini-microtubules, bacterial TubZ partition filaments, phage PhuZ spindles, archaeal
+    CetZ filaments and FtsZ-family division rings as non-eukaryotic tubulin/FtsZ-superfamily
+    or tubulin-like cytoskeletal systems with different subunits, architectures or
+    cargo relationships.
   evidence:
   - reference: GO:0005874
     notes: GO defines GO:0005874 around microtubules found in eukaryotic cells.
@@ -219,6 +251,18 @@ discussions:
   - reference: DOI:10.1073/pnas.1705062114
     notes: Deng et al. 2017 resolved a BtubAB mini-microtubule architecture distinct
       from canonical eukaryotic microtubules.
+  - reference: DOI:10.1101/gad.1546107
+    notes: Larsen et al. 2007 characterized TubZ as a treadmilling prokaryotic tubulin-like
+      polymer for pBtoxis plasmid stability.
+  - reference: DOI:10.7554/eLife.03197
+    notes: Erb et al. 2014 characterized PhuZ as a bacteriophage tubulin that forms
+      dynamic filaments.
+  - reference: DOI:10.1038/nature13983
+    notes: Duggin et al. 2015 characterized archaeal CetZ1 tubulin-like proteins as
+      cell-shape cytoskeletal factors.
+  - reference: DOI:10.1146/annurev-biophys-121219-081703
+    notes: McQuillen and Xiao 2020 reviewed FtsZ rings as tubulin-homolog organizers
+      of bacterial cytokinesis.
   posed_by: codex
   posed_date: '2026-09-16'
   resolved_date: '2026-09-16'
