@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/clathrin_coat_of_coated_pit.yaml
+  slug: clathrin_coat_of_coated_pit
+session:
+  id: 2026-09-16T150858Z-codex-c08e96
+  timestamp: '2026-09-16T15:08:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add clathrin coat of coated pit record
+  details: Created an evidence-backed GO:0030132 clathrin coat of coated pit record with clathrin-coat
+    parentage, clathrin-coated-pit parthood, AP-2 has-part topology, reviewed-label-only clathrin
+    triskelion and GO-grounded AP-2 components, GO and DOI evidence, a nonmechanistic coated-pit
+    clathrin-coat topology graph, and explicit boundary and grounding discussions.
