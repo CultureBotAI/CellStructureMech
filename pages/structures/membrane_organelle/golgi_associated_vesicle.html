@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golgi-associated vesicle · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>Golgi-associated vesicle</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005798"><code>GO:0005798</code></a> · MEMBRANE_ORGANELLE · MEMBRANE_BOUNDED_ORGANELLE · <span class="status">PROPOSED</span></p>
+<p class="definition">Any vesicle associated with the Golgi complex and involved in mediating transport within the Golgi or between the Golgi and other parts of the cell. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005798"><code>GO:0005798</code></a>]</small></p>
+<p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0030660"><code>GO:0030660</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-golgi_associated_vesicle_membrane"><td>Golgi-associated vesicle membrane</td><td>LIPID</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0030660"><code>GO:0030660</code></a></td><td></td><td></td><td>ESSENTIAL</td><td>Lipid-bilayer membrane bounding Golgi-associated vesicles as they bud from or traffic near Golgi compartments.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030660"><code>GO:0030660</code></a> <small>GO:0030660 identifies the membrane surrounding a Golgi-associated vesicle.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005798"><code>GO:0005798</code></a> <small>GO:0005798 identifies the whole Golgi-associated vesicle bounded by this membrane.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> Saccharomyces cerevisiae — <strong>COMMON</strong>: Budding yeast has a COPI coatomer system that retrieves dilysine-tagged early secretory cargo to the endoplasmic reticulum. [<a href="https://doi.org/10.1016/0092-8674(94)90011-6"><code>DOI:10.1016/0092-8674(94)90011-6</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> <em>Saccharomyces cerevisiae</em> — Budding-yeast model in which coatomer mutants established COPI roles in Golgi-to-ER retrieval and early secretory trafficking. [<a href="https://doi.org/10.1016/0092-8674(94)90011-6"><code>DOI:10.1016/0092-8674(94)90011-6</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>Golgi-associated vesicle transport</strong> — Golgi-associated vesicles mediate membrane traffic within the Golgi apparatus and between the Golgi apparatus and other cellular compartments.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005798"><code>GO:0005798</code></a> <small>GO:0005798 defines Golgi-associated vesicles as vesicles that mediate transport within the Golgi or between the Golgi and other parts of the cell.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006890"><code>GO:0006890</code></a> <small>GO:0006890 denotes retrograde vesicle-mediated transport from the Golgi apparatus to the endoplasmic reticulum.</small></li><li><a href="https://doi.org/10.1016/0092-8674(94)90011-6"><code>DOI:10.1016/0092-8674(94)90011-6</code></a> <small>Letourneur et al. 1994 demonstrated that yeast coatomer mutants impair retrieval of dilysine-tagged proteins to the ER.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-golgi_associated_vesicle_topology">Golgi-associated vesicle topology <small>(FUNCTION)</small></h3>
+<p>A Golgi-associated vesicle is bounded by a vesicle membrane and includes COPI-coated vesicle children that bud from Golgi membrane for retrograde traffic.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>Golgi-associated vesicle membrane</td><td>is part of</td><td>Golgi-associated vesicle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030660"><code>GO:0030660</code></a> <small>GO:0030660 identifies the membrane surrounding a Golgi-associated vesicle.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005798"><code>GO:0005798</code></a> <small>GO:0005798 identifies the containing Golgi-associated vesicle.</small></li></ul></td></tr>
+<tr><td>Golgi membrane</td><td>evaginates into</td><td>COPI-coated vesicle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035964"><code>GO:0035964</code></a> <small>GO:0035964 defines COPI-coated vesicle budding as evagination of a Golgi membrane to form a COPI-coated vesicle.</small></li><li><a href="https://doi.org/10.1016/0092-8674(91)90176-y"><code>DOI:10.1016/0092-8674(91)90176-y</code></a> <small>Serafini et al. 1991 analyzed Arf and coat proteins on Golgi-derived COP-coated vesicles.</small></li></ul></td></tr>
+<tr><td>COPI-coated vesicle</td><td>is a</td><td>Golgi-associated vesicle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030137"><code>GO:0030137</code></a> <small>GO:0030137 identifies COPI-coated vesicles as a child class of GO:0005798 Golgi-associated vesicles.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005798"><code>GO:0005798</code></a> <small>GO:0005798 denotes the parent Golgi-associated vesicle class.</small></li></ul></td></tr>
+<tr><td>COPI-coated vesicle</td><td>participates in</td><td>retrograde vesicle-mediated transport, Golgi to endoplasmic reticulum</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0006890"><code>GO:0006890</code></a> <small>GO:0006890 denotes retrograde vesicle-mediated transport from the Golgi apparatus to the ER.</small></li><li><a href="https://doi.org/10.1016/0092-8674(94)90011-6"><code>DOI:10.1016/0092-8674(94)90011-6</code></a> <small>Letourneur et al. 1994 linked yeast coatomer function to retrieval of dilysine-tagged proteins to the ER.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep coatomer, Arf-family GTPases, and other subtype-specific coat proteins off the broad Golgi-associated vesicle record. <small>GO:0005798 is a broad Golgi-associated vesicle parent term, whereas GO:0030137 COPI-coated vesicles, GO:0030126 COPI vesicle coats, and other child or coat records carry exact coat architectures.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005798"><code>GO:0005798</code></a> <small>Gene Ontology cellular-component term for Golgi-associated vesicles.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031410"><code>GO:0031410</code></a> <small>Gene Ontology cellular-component parent term for cytoplasmic vesicles.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030660"><code>GO:0030660</code></a> <small>Gene Ontology cellular-component term for the Golgi-associated vesicle membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030137"><code>GO:0030137</code></a> <small>Gene Ontology cellular-component child term for COPI-coated vesicles.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030126"><code>GO:0030126</code></a> <small>Gene Ontology cellular-component term for the COPI vesicle coat carried by COPI-coated Golgi-associated vesicles.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0000139"><code>GO:0000139</code></a> <small>Gene Ontology cellular-component term for the Golgi membrane source of COPI-coated vesicle budding.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0035964"><code>GO:0035964</code></a> <small>Gene Ontology biological-process term for COPI-coated vesicle budding from Golgi membranes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006890"><code>GO:0006890</code></a> <small>Gene Ontology biological-process term for retrograde vesicle-mediated transport from Golgi to ER.</small></li><li><a href="https://doi.org/10.1038/349248a0"><code>DOI:10.1038/349248a0</code></a> <small>Waters, Serafini and Rothman 1991, &#39;Coatomer&#39;: a cytosolic protein complex containing subunits of non-clathrin-coated Golgi transport vesicles, Nature.</small></li><li><a href="https://doi.org/10.1016/0092-8674(91)90176-y"><code>DOI:10.1016/0092-8674(91)90176-y</code></a> <small>Serafini et al. 1991, ADP-Ribosylation factor is a subunit of the coat of Golgi-derived COP-coated vesicles, Cell.</small></li><li><a href="https://doi.org/10.1016/0092-8674(94)90011-6"><code>DOI:10.1016/0092-8674(94)90011-6</code></a> <small>Letourneur et al. 1994, Coatomer is essential for retrieval of dilysine-tagged proteins to the endoplasmic reticulum, Cell.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-16T05:34:29Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-16T05:36:04Z</code> codex · EXPANDED_RECORD — Added cytoplasmic-vesicle parentage, Golgi-associated vesicle membrane parthood, a GO-grounded vesicle-membrane component, Saccharomyces COPI scope, a Golgi-associated transport function, GO/DOI evidence, a nonmechanistic Golgi-associated vesicle topology graph, and a resolved COPI child-coat boundary discussion.</li><li><code>2026-09-16T05:47:11Z</code> codex · REFINED_INITIAL_CURATION — Aligned the Saccharomyces COPI notes with the reviewed COPI-coated vesicle record and clarified the GO:0030137 child-edge evidence note.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/golgi_associated_vesicle.yaml"><code>data/structures/membrane_organelle/golgi_associated_vesicle.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

@@ -4611,6 +4611,11 @@
           "cosine_similarity": 0.93530113
         },
         {
+          "identifier": "GO:0005798",
+          "label": "Golgi-associated vesicle",
+          "cosine_similarity": 0.91333254
+        },
+        {
           "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
           "label": "COPII-coated vesicle lumen",
           "cosine_similarity": 0.90687597
@@ -4619,11 +4624,6 @@
           "identifier": "GO:0031985",
           "label": "Golgi cisterna",
           "cosine_similarity": 0.86847695
-        },
-        {
-          "identifier": "GO:0030135",
-          "label": "coated vesicle",
-          "cosine_similarity": 0.86436036
         }
       ]
     },
@@ -5086,9 +5086,9 @@
           "cosine_similarity": 0.87953516
         },
         {
-          "identifier": "GO:0012507",
-          "label": "ER to Golgi transport vesicle membrane",
-          "cosine_similarity": 0.87703441
+          "identifier": "GO:0005798",
+          "label": "Golgi-associated vesicle",
+          "cosine_similarity": 0.87813953
         }
       ]
     },
@@ -5908,6 +5908,11 @@
           "cosine_similarity": 0.93344456
         },
         {
+          "identifier": "GO:0005798",
+          "label": "Golgi-associated vesicle",
+          "cosine_similarity": 0.91005637
+        },
+        {
           "identifier": "GO:0000139",
           "label": "Golgi membrane",
           "cosine_similarity": 0.89018686
@@ -5921,11 +5926,37 @@
           "identifier": "GO:0032580",
           "label": "Golgi cisterna membrane",
           "cosine_similarity": 0.87801235
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005798",
+      "label": "Golgi-associated vesicle",
+      "neighbors": [
+        {
+          "identifier": "GO:0012507",
+          "label": "ER to Golgi transport vesicle membrane",
+          "cosine_similarity": 0.92518097
         },
         {
-          "identifier": "GO:0005801",
-          "label": "cis-Golgi network",
-          "cosine_similarity": 0.86510715
+          "identifier": "GO:0031985",
+          "label": "Golgi cisterna",
+          "cosine_similarity": 0.91367107
+        },
+        {
+          "identifier": "GO:0030134",
+          "label": "COPII-coated ER to Golgi transport vesicle",
+          "cosine_similarity": 0.91333254
+        },
+        {
+          "identifier": "GO:0000139",
+          "label": "Golgi membrane",
+          "cosine_similarity": 0.91128993
+        },
+        {
+          "identifier": "GO:0005794",
+          "label": "Golgi apparatus",
+          "cosine_similarity": 0.91005637
         }
       ]
     },
@@ -5944,6 +5975,11 @@
           "cosine_similarity": 0.93344456
         },
         {
+          "identifier": "GO:0005798",
+          "label": "Golgi-associated vesicle",
+          "cosine_similarity": 0.91367107
+        },
+        {
           "identifier": "GO:0000139",
           "label": "Golgi membrane",
           "cosine_similarity": 0.9077535
@@ -5952,11 +5988,6 @@
           "identifier": "GO:0005801",
           "label": "cis-Golgi network",
           "cosine_similarity": 0.89610831
-        },
-        {
-          "identifier": "GO:0033106",
-          "label": "cis-Golgi network membrane",
-          "cosine_similarity": 0.88117465
         }
       ]
     },
@@ -6016,9 +6047,9 @@
           "cosine_similarity": 0.92508833
         },
         {
-          "identifier": "GO:0031985",
-          "label": "Golgi cisterna",
-          "cosine_similarity": 0.9077535
+          "identifier": "GO:0005798",
+          "label": "Golgi-associated vesicle",
+          "cosine_similarity": 0.91128993
         }
       ]
     },
@@ -8434,9 +8465,9 @@
           "cosine_similarity": 0.88112452
         },
         {
-          "identifier": "GO:0033106",
-          "label": "cis-Golgi network membrane",
-          "cosine_similarity": 0.8548527
+          "identifier": "GO:0005798",
+          "label": "Golgi-associated vesicle",
+          "cosine_similarity": 0.87363151
         }
       ]
     },
