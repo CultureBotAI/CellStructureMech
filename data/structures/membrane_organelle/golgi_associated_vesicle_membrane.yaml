@@ -1,0 +1,188 @@
+identifier: GO:0030660
+label: Golgi-associated vesicle membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding a vesicle associated with the Golgi apparatus.
+definition_source: GO:0030660
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T06:16:17Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T06:17:03Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic-vesicle-membrane parentage, Golgi-associated vesicle
+    parthood, the GO related synonym, a reviewed-label-only lipid-bilayer component,
+    Saccharomyces COPI scope, GO/DOI evidence, a nonmechanistic Golgi-associated vesicle
+    membrane topology graph, and lipid-grounding plus COPI-coat boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0030659
+part_of:
+- GO:0005798
+synonyms:
+- synonym_text: Golgi vesicle membrane
+  synonym_type: RELATED_SYNONYM
+  source: GO:0030660
+components:
+- component_id: golgi_associated_vesicle_membrane_lipid_bilayer
+  label: Golgi-associated vesicle membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent of the Golgi-associated vesicle membrane that surrounds
+    a Golgi-associated vesicle.
+  evidence:
+  - reference: GO:0030660
+    notes: GO:0030660 defines the Golgi-associated vesicle membrane as the lipid bilayer
+      surrounding a Golgi-associated vesicle.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030660 identifies the whole Golgi-associated vesicle membrane,
+    but no separate source-neutral CURIE was curated for the generic lipid constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a coatomer-dependent COPI system that retrieves dilysine-tagged
+    early secretory cargo to the endoplasmic reticulum.
+  reference: DOI:10.1016/0092-8674(94)90011-6
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which coatomer mutants established COPI roles in Golgi-to-ER
+    retrieval and early secretory trafficking.
+  reference: DOI:10.1016/0092-8674(94)90011-6
+evidence:
+- reference: GO:0030660
+  notes: Gene Ontology cellular-component term for the Golgi-associated vesicle membrane.
+- reference: GO:0030659
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicle membranes.
+- reference: GO:0005798
+  notes: Gene Ontology cellular-component term for the containing Golgi-associated
+    vesicle.
+- reference: GO:0030663
+  notes: Gene Ontology cellular-component child term for COPI-coated vesicle membranes.
+- reference: GO:0030137
+  notes: Gene Ontology cellular-component term for COPI-coated vesicles.
+- reference: GO:0000139
+  notes: Gene Ontology cellular-component term for the Golgi membrane source of COPI-coated
+    vesicle budding.
+- reference: GO:0035964
+  notes: Gene Ontology biological-process term for COPI-coated vesicle budding from
+    Golgi membranes.
+- reference: DOI:10.1016/0092-8674(91)90176-y
+  notes: Serafini et al. 1991, ADP-Ribosylation factor is a subunit of the coat of
+    Golgi-derived COP-coated vesicles, Cell.
+- reference: DOI:10.1016/0092-8674(94)90011-6
+  notes: Letourneur et al. 1994, Coatomer is essential for retrieval of dilysine-tagged
+    proteins to the endoplasmic reticulum, Cell.
+causal_graphs:
+- graph_id: golgi_associated_vesicle_membrane_topology
+  title: Golgi-associated vesicle membrane topology
+  description: The Golgi-associated vesicle membrane is the lipid bilayer that bounds
+    Golgi-associated vesicles, including COPI-coated Golgi-derived vesicles.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the generic Golgi-associated vesicle membrane boundary
+    and a COPI child membrane without duplicating the COPI coat subunit assembly mechanism
+    or asserting that every Golgi-associated vesicle membrane is COPI coated.
+  nodes:
+  - node_id: golgi_membrane
+    label: Golgi membrane
+    node_type: STRUCTURE
+    grounding: GO:0000139
+  - node_id: golgi_associated_vesicle_membrane
+    label: Golgi-associated vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030660
+    component_ref: golgi_associated_vesicle_membrane_lipid_bilayer
+  - node_id: golgi_associated_vesicle
+    label: Golgi-associated vesicle
+    node_type: ORGANELLE
+    grounding: GO:0005798
+  - node_id: copi_coated_vesicle_membrane
+    label: COPI-coated vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030663
+  edges:
+  - subject: golgi_associated_vesicle_membrane
+    predicate: is part of
+    object: golgi_associated_vesicle
+    description: The Golgi-associated vesicle membrane is the lipid-bilayer membrane
+      part of a Golgi-associated vesicle.
+    evidence:
+    - reference: GO:0030660
+      notes: GO:0030660 defines this membrane as surrounding a Golgi-associated vesicle.
+    - reference: GO:0005798
+      notes: GO:0005798 identifies the containing Golgi-associated vesicle.
+  - subject: golgi_associated_vesicle_membrane
+    predicate: bounds
+    object: golgi_associated_vesicle
+    description: The Golgi-associated vesicle membrane surrounds a Golgi-associated
+      vesicle.
+    evidence:
+    - reference: GO:0030660
+      notes: GO:0030660 defines the membrane as the lipid bilayer around a vesicle
+        associated with the Golgi apparatus.
+  - subject: copi_coated_vesicle_membrane
+    predicate: is a
+    object: golgi_associated_vesicle_membrane
+    description: COPI-coated vesicle membranes are Golgi-associated vesicle membranes.
+    evidence:
+    - reference: GO:0030663
+      notes: GO:0030663 identifies COPI-coated vesicle membranes as a child class
+        of GO:0030660.
+    - reference: GO:0030660
+      notes: GO:0030660 denotes the parent Golgi-associated vesicle membrane class.
+  - subject: golgi_membrane
+    predicate: donates membrane to
+    object: copi_coated_vesicle_membrane
+    description: Golgi membranes donate lipid bilayer to COPI-coated vesicle membranes
+      during budding.
+    evidence:
+    - reference: GO:0035964
+      notes: GO:0035964 defines COPI-coated vesicle budding as evagination of a Golgi
+        membrane to form a COPI-coated vesicle.
+    - reference: DOI:10.1016/0092-8674(91)90176-y
+      notes: Serafini et al. 1991 analyzed coat proteins on Golgi-derived COP-coated
+        vesicles.
+discussions:
+- discussion_id: ground_golgi_associated_vesicle_membrane_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    Golgi-associated vesicle membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#golgi_associated_vesicle_membrane_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0030660, but the generic lipid-bilayer
+    constituent is intentionally left reviewed-label-only until an exact lipid or
+    membrane-constituent CURIE is curated.
+  evidence:
+  - reference: GO:0030660
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: keep_coats_off_generic_golgi_vesicle_membrane
+  prompt: Keep COPI coats and coatomer subunits off the generic Golgi-associated vesicle
+    membrane record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#golgi_associated_vesicle_membrane_topology
+  rationale: GO:0030660 denotes the lipid-bilayer membrane that surrounds the vesicle,
+    whereas GO:0030126 and COPI coat records model the protein coat on the whole COPI-coated
+    vesicle.
+  resolution_note: Represented the generic membrane lipid bilayer directly and left
+    COPI coat proteins to COPI coat and COPI-coated vesicle records.
+  evidence:
+  - reference: GO:0030660
+    notes: GO:0030660 identifies the Golgi-associated vesicle membrane.
+  - reference: GO:0030126
+    notes: GO:0030126 identifies the COPI vesicle coat.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'

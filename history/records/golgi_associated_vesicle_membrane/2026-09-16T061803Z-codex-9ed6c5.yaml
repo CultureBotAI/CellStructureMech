@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/golgi_associated_vesicle_membrane.yaml
+  slug: golgi_associated_vesicle_membrane
+session:
+  id: 2026-09-16T061803Z-codex-9ed6c5
+  timestamp: '2026-09-16T06:18:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - part_of
+  - synonyms
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Golgi-associated vesicle membrane record
+  details: Created the GO:0030660 Golgi-associated vesicle membrane record with cytoplasmic-vesicle-membrane
+    parentage, Golgi-associated-vesicle parthood, the GO related synonym, a reviewed-label-only
+    lipid-bilayer component, Saccharomyces cerevisiae COPI scope, GO and DOI evidence, a nonmechanistic
+    Golgi-associated vesicle membrane topology graph, and lipid-grounding plus COPI-coat boundary
+    discussions.
