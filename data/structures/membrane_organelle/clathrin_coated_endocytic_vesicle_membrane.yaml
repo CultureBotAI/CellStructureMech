@@ -19,6 +19,12 @@ curation_history:
     a nonmechanistic endocytic vesicle membrane topology graph, and lipid-grounding
     plus clathrin-coat boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-16T08:30:13Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1078 review issue #1079 by adding the endocytic clathrin
+    coat to record-level has_part.'
+  llm_assisted: true
 parent_structures:
 - GO:0030665
 - GO:0030666
@@ -178,3 +184,5 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-16'
   resolved_date: '2026-09-16'
+has_part:
+- GO:0030128

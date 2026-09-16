@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle_membrane.yaml
+  slug: clathrin_coated_endocytic_vesicle_membrane
+session:
+  id: 2026-09-16T083111Z-claude-code-047887
+  timestamp: '2026-09-16T08:31:11Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1079
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1078
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Added GO:0030128 as a GO:0030669 has_part
+  details: 'Resolved PR #1078 review issue #1079 by adding the direct GO:0030128 endocytic-clathrin-coat
+    part relation to the GO:0030669 record-level has_part list.'
