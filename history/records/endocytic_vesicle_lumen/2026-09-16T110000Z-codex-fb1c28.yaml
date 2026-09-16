@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/endocytic_vesicle_lumen.yaml
+  slug: endocytic_vesicle_lumen
+session:
+  id: 2026-09-16T110000Z-codex-fb1c28
+  timestamp: '2026-09-16T11:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0071682 endocytic vesicle lumen record
+  details: Created an evidence-backed GO:0071682 record with cytoplasmic-vesicle-lumen parentage,
+    GO:0030139 endocytic-vesicle parthood, Saccharomyces cerevisiae endocytic-site evidence,
+    a nonmechanistic lumen topology graph, and a resolved cargo-boundary discussion.
