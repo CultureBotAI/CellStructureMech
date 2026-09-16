@@ -19,6 +19,12 @@ curation_history:
     examples, GO and DOI evidence, a nonmechanistic matrix graph, and component-grounding
     plus subclass-boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-16T04:21:11Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1061 issue #1062 by narrowing microbial glycocalyx wording
+    and adding a resolved non-microbial-subclass scope discussion.'
+  llm_assisted: true
 parent_structures:
 - GO:0030312
 components:
@@ -28,10 +34,12 @@ components:
   component_role: CONSTITUENT
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The glycocalyx extracellular matrix spans capsule and slime-layer
-    materials, including polysaccharide-rich, glycoprotein-containing, glycolipid-containing,
-    and chemically exceptional capsule polymers; no single CHEBI, sequence-family,
-    or polymer-class CURIE exactly denotes the whole source-neutral structure.
+  grounding_notes: For microbial glycocalyces, the curated extracellular matrix spans
+    organized capsule and diffuse slime-layer materials, including polysaccharide-rich,
+    glycoprotein-containing, and glycolipid-containing matrices. GO:0030112 also has
+    non-microbial subclasses such as vascular endothelial, sperm, platelet, and stereocilium
+    glycocalyces, so this broad parent component remains source-neutral and reviewed-label-only
+    rather than using a narrower CHEBI, sequence-family, or polymer-class CURIE.
   role: Forms the carbohydrate-rich extracellular layer at the outermost cell periphery.
   evidence:
   - reference: GO:0030112
@@ -46,7 +54,7 @@ components:
 canonical_examples:
 - taxon_id: NCBITaxon:287
   taxon_label: Pseudomonas aeruginosa
-  note: Classic diffuse glycocalyx example whose extracellular slime material was
+  note: Diffuse bacterial glycocalyx example whose extracellular slime material was
     chemically analyzed by Brown, Foster and Clamp.
   reference: DOI:10.1042/bj1120521
 - taxon_id: NCBITaxon:1313
@@ -70,12 +78,14 @@ causal_graphs:
 - graph_id: glycocalyx_matrix_surface_layer
   title: Extracellular matrix forms a peripheral glycocalyx
   description: Glycocalyx extracellular matrix is positioned at the outermost cell
-    periphery as either a diffuse slime layer or a more organized capsule.
+    periphery in microbial subclasses such as a diffuse slime layer or an organized
+    capsule.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records the mature extracellular layer and its subclass boundary;
-    it does not assert the secretion, retention, or release machinery used by any
-    specific glycocalyx subtype.
+  scope_notes: The graph records the mature extracellular layer and its microbial
+    subclass boundary; it does not assert the secretion, retention, or release machinery
+    used by any specific glycocalyx subtype. GO:0030112 also covers non-microbial
+    glycocalyces, which remain outside this capsule/slime-layer assembly sketch.
   nodes:
   - node_id: glycocalyx_extracellular_matrix
     label: glycocalyx extracellular matrix
@@ -141,3 +151,32 @@ discussions:
     and peptide-polymer groundings to narrower capsule or slime-layer follow-up.
   posed_by: codex
   posed_date: '2026-09-16'
+- discussion_id: non_microbial_glycocalyx_scope
+  prompt: Acknowledge non-microbial GO:0030112 subclasses while curating microbial
+    glycocalyx examples.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - components#glycocalyx_extracellular_matrix
+  rationale: GO:0030112 exactly names the broad glycocalyx class that already parents
+    the microbial capsule and slime-layer records, but its current GO children also
+    include vascular endothelial, sperm, platelet, and stereocilium glycocalyces.
+    This first CellStructureMech parent record therefore keeps the exact GO identifier
+    while limiting curated examples and assembly prose to the microbial capsule and
+    slime-layer subclasses.
+  evidence:
+  - reference: GO:0030112
+    notes: GO parent term for capsule, slime layer, and non-microbial glycocalyx subclasses.
+  - reference: GO:0120234
+    notes: GO child term for the stereocilium coat, a non-microbial glycocalyx subclass.
+  - reference: GO:0120238
+    notes: GO child term for sperm glycocalyx, a non-microbial glycocalyx subclass.
+  - reference: GO:0120239
+    notes: GO child term for vascular endothelial glycocalyx, a non-microbial glycocalyx
+      subclass.
+  - reference: GO:0120240
+    notes: GO child term for platelet glycocalyx, a non-microbial glycocalyx subclass.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
