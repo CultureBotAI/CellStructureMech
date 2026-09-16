@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glycocalyx · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>glycocalyx</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0030112"><code>GO:0030112</code></a> · ENVELOPE · ENVELOPE_LAYER · <span class="status">PROPOSED</span></p>
+<p class="definition">A carbohydrate rich layer at the outermost periphery of a cell. <small>[<a href="http://purl.obolibrary.org/obo/GO_0030112"><code>GO:0030112</code></a>]</small></p>
+
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-glycocalyx_extracellular_matrix"><td>glycocalyx extracellular matrix</td><td>OTHER</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Forms the carbohydrate-rich extracellular layer at the outermost cell periphery.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030112"><code>GO:0030112</code></a> <small>GO defines the glycocalyx as a carbohydrate-rich layer at the outermost cell periphery.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030114"><code>GO:0030114</code></a> <small>GO defines a slime layer as a diffuse glycocalyx subclass that consists mostly of exopolysaccharides, glycoproteins and glycolipids.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0042603"><code>GO:0042603</code></a> <small>GO defines capsule as a highly organized glycocalyx subclass attached outside the cell wall.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_287"><code>NCBITaxon:287</code></a> <em>Pseudomonas aeruginosa</em> — Diffuse bacterial glycocalyx example whose extracellular slime material was chemically analyzed by Brown, Foster and Clamp. [<a href="https://doi.org/10.1042/bj1120521"><code>DOI:10.1042/bj1120521</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1313"><code>NCBITaxon:1313</code></a> <em>Streptococcus pneumoniae</em> — Encapsulated pneumococci exemplify the organized capsule subclass of the glycocalyx. [<a href="https://doi.org/10.1128/IAI.00881-09"><code>DOI:10.1128/IAI.00881-09</code></a>]</li></ul>
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-glycocalyx_matrix_surface_layer">Extracellular matrix forms a peripheral glycocalyx <small>(ASSEMBLY)</small></h3>
+<p>Glycocalyx extracellular matrix is positioned at the outermost cell periphery in microbial subclasses such as a diffuse slime layer or an organized capsule.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>glycocalyx extracellular matrix</td><td>forms</td><td>glycocalyx</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030112"><code>GO:0030112</code></a> <small>The GO glycocalyx definition identifies it as a carbohydrate-rich layer.</small></li></ul></td></tr>
+<tr><td>glycocalyx</td><td>lies at</td><td>outermost cell periphery</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030112"><code>GO:0030112</code></a> <small>The GO glycocalyx definition places the layer at the outermost periphery of a cell.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (RESOLVED): Keep glycocalyx as a parent class rather than merging capsule and slime-layer records into it. <small>GO:0030112 denotes the broad carbohydrate-rich outer layer, while GO:0042603 restricts capsule to a highly organized glycocalyx and GO:0030114 restricts slime layer to a diffuse, easily removed glycocalyx. The existing capsule and slime-layer records therefore remain narrower sibling subclasses of this parent record.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for the broad glycocalyx extracellular matrix. <small>This broad parent record curates one extracellular-matrix component for the carbohydrate-rich layer while leaving exact glycan, glycoprotein, glycolipid, and peptide-polymer groundings to narrower capsule or slime-layer follow-up.</small></li><li><strong>CURATION_TODO</strong> (RESOLVED): Acknowledge non-microbial GO:0030112 subclasses while curating microbial glycocalyx examples. <small>GO:0030112 exactly names the broad glycocalyx class that already parents the microbial capsule and slime-layer records, but its current GO children also include vascular endothelial, sperm, platelet, and stereocilium glycocalyces. This first CellStructureMech parent record therefore keeps the exact GO identifier while limiting curated examples and assembly prose to the microbial capsule and slime-layer subclasses.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030112"><code>GO:0030112</code></a> <small>Gene Ontology cellular-component term for glycocalyx.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030312"><code>GO:0030312</code></a> <small>Gene Ontology parent term for external encapsulating structures.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030114"><code>GO:0030114</code></a> <small>Gene Ontology child term that places slime layer under glycocalyx.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0042603"><code>GO:0042603</code></a> <small>Gene Ontology child term that places capsule under glycocalyx.</small></li><li><a href="https://doi.org/10.1146/annurev.mi.35.100181.001503"><code>DOI:10.1146/annurev.mi.35.100181.001503</code></a> <small>Costerton, Irvin and Cheng 1981, &#39;The bacterial glycocalyx in nature and disease&#39;, Annual Review of Microbiology; Europe PMC indexes it as a non-open-access review.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-16T04:10:43Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-16T04:11:52Z</code> codex · EXPANDED_RECORD — Added external-encapsulating-structure parentage, a reviewed-label-only glycocalyx matrix component, Pseudomonas slime-layer and pneumococcal capsule examples, GO and DOI evidence, a nonmechanistic matrix graph, and component-grounding plus subclass-boundary discussions.</li><li><code>2026-09-16T04:21:11Z</code> codex · ADDRESSED_PR_REVIEW — Resolved PR #1061 issue #1062 by narrowing microbial glycocalyx wording and adding a resolved non-microbial-subclass scope discussion.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/envelope/glycocalyx.yaml"><code>data/structures/envelope/glycocalyx.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

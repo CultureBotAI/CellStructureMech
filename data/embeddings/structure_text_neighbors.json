@@ -2861,6 +2861,37 @@
       ]
     },
     {
+      "identifier": "GO:0030112",
+      "label": "glycocalyx",
+      "neighbors": [
+        {
+          "identifier": "GO:0030114",
+          "label": "slime layer",
+          "cosine_similarity": 0.79807399
+        },
+        {
+          "identifier": "GO:0009276",
+          "label": "Gram-negative-bacterium-type cell wall",
+          "cosine_similarity": 0.73244154
+        },
+        {
+          "identifier": "GO:0009274",
+          "label": "peptidoglycan-based cell wall",
+          "cosine_similarity": 0.70310255
+        },
+        {
+          "identifier": "GO:0042603",
+          "label": "capsule",
+          "cosine_similarity": 0.68011713
+        },
+        {
+          "identifier": "GO:0046860",
+          "label": "glycosome membrane",
+          "cosine_similarity": 0.67307558
+        }
+      ]
+    },
+    {
       "identifier": "GO:0009276",
       "label": "Gram-negative-bacterium-type cell wall",
       "neighbors": [
@@ -3051,6 +3082,11 @@
       "label": "slime layer",
       "neighbors": [
         {
+          "identifier": "GO:0030112",
+          "label": "glycocalyx",
+          "cosine_similarity": 0.79807399
+        },
+        {
           "identifier": "GO:0009276",
           "label": "Gram-negative-bacterium-type cell wall",
           "cosine_similarity": 0.72250379
@@ -3069,11 +3105,6 @@
           "identifier": "GO:0042603",
           "label": "capsule",
           "cosine_similarity": 0.64079681
-        },
-        {
-          "identifier": "GO:0009274",
-          "label": "peptidoglycan-based cell wall",
-          "cosine_similarity": 0.6327667
         }
       ]
     },

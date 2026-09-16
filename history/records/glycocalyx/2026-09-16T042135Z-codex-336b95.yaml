@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/glycocalyx.yaml
+  slug: glycocalyx
+session:
+  id: 2026-09-16T042135Z-codex-336b95
+  timestamp: '2026-09-16T04:21:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1062
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1061
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - components
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Resolved glycocalyx scope review issue
+  details: 'Resolved PR #1061 issue #1062 by replacing exhaustive capsule/slime wording, narrowing
+    the Pseudomonas example to a diffuse bacterial glycocalyx, and adding a resolved discussion
+    that acknowledges non-microbial GO:0030112 children while keeping the curated examples
+    and assembly graph scoped to microbial capsule and slime-layer subclasses.'
