@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/corvet_complex.yaml
+  slug: corvet_complex
+session:
+  id: 2026-09-16T182045Z-codex-6fe1dd
+  timestamp: '2026-09-16T18:20:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add the Vps21 CORVET interactor boundary
+  details: Added a resolved Vps21 boundary discussion so the yeast Rab5 homolog is
+    represented as a graph interactor rather than a canonical CORVET constituent;
+    addresses PR #1116 / issue #1117.

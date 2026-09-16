@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/corvet_complex.yaml
+  slug: corvet_complex
+session:
+  id: 2026-09-16T181251Z-codex-cc1473
+  timestamp: '2026-09-16T18:12:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add CORVET complex structure record
+  details: Created a GO:0033263 CORVET complex structure record with GO vesicle-tethering
+    parentage, Peplowska 2007 synonymy and evidence, reviewed-label-only Vps3, Vps8,
+    Vps11/Pep5, Vps16, Vps18/Pep3 and Vps33 yeast subunits, Saccharomyces cerevisiae
+    distribution and canonical evidence, endo-lysosomal biogenesis function, a
+    nonmechanistic yeast Vps21/endosomal tethering graph, and discussions for exact
+    CORVET subunit family groundings and the CORVET-HOPS conversion boundary.

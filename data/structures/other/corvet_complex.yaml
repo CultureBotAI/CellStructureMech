@@ -1,0 +1,346 @@
+identifier: GO:0033263
+label: CORVET complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multimeric protein complex that acts as an endosomal tethering complex
+  (CORVET = class C core vacuole/endosome tethering) by cooperating with Rab GTPases
+  to capture endosomal vesicles and trap them prior to the action of SNAREs; the complex
+  is involved in endo-lysosomal biogenesis and required for transport between endosome
+  and vacuole. The Saccharomyces cerevisiae complex contains Vps8p, Vps3p, Pep5p,
+  Vps16p, Pep3p, and Vps33p.
+definition_source: GO:0033263
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T18:11:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T18:12:23Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the full GO definition, vesicle-tethering parentage, CORVET synonymy,
+    reviewed-label-only Vps3/Vps8/Vps11/Vps16/Vps18/Vps33 yeast components, Saccharomyces
+    scope, an endo-lysosomal biogenesis function, GO/DOI evidence, a nonmechanistic
+    Vps21/endosomal graph, a subunit-grounding TODO, and a resolved CORVET-HOPS boundary
+    decision.
+  llm_assisted: true
+- timestamp: '2026-09-16T18:20:25Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1116 / issue #1117 by adding a resolved boundary discussion
+    that keeps Vps21 as a CORVET interactor, not a constituent.'
+  llm_assisted: true
+parent_structures:
+- GO:0099023
+synonyms:
+- synonym_text: class C core vacuole/endosome tethering complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0033263
+components:
+- component_id: vps3_corvet_subunit
+  label: Vps3 CORVET subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps3 CORVET subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this CORVET subunit
+    class was curated in this pass.
+  role: CORVET-specific Vam6/Vps39-homologous endosomal tethering subunit.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2007.03.006
+    notes: Peplowska et al. 2007 identified Vps3 as a CORVET-specific subunit.
+- component_id: vps8_corvet_subunit
+  label: Vps8 CORVET subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS8
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps8 CORVET subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this CORVET subunit
+    class was curated in this pass.
+  role: CORVET-specific Vam2/Vps41-homologous endosomal tethering subunit.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2007.03.006
+    notes: Peplowska et al. 2007 identified Vps8 as a CORVET-specific subunit.
+- component_id: vps11_pep5_corvet_subunit
+  label: Vps11/Pep5 CORVET subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS11
+  - PEP5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps11/Pep5 CORVET
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this CORVET
+    subunit class was curated in this pass.
+  role: Class C Vps subunit shared between the CORVET and HOPS complexes.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2007.03.006
+    notes: Peplowska et al. 2007 placed Vps11 in the shared class C Vps core.
+- component_id: vps16_corvet_subunit
+  label: Vps16 CORVET subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS16
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps16 CORVET subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this CORVET subunit
+    class was curated in this pass.
+  role: Class C Vps subunit shared between the CORVET and HOPS complexes.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2007.03.006
+    notes: Peplowska et al. 2007 placed Vps16 in the shared class C Vps core.
+- component_id: vps18_pep3_corvet_subunit
+  label: Vps18/Pep3 CORVET subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS18
+  - PEP3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps18/Pep3 CORVET
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this CORVET
+    subunit class was curated in this pass.
+  role: Class C Vps subunit shared between the CORVET and HOPS complexes.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2007.03.006
+    notes: Peplowska et al. 2007 placed Vps18 in the shared class C Vps core.
+- component_id: vps33_corvet_subunit
+  label: Vps33 CORVET subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS33
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps33 CORVET subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this CORVET subunit
+    class was curated in this pass.
+  role: Sec1/Munc18-family class C Vps subunit shared between CORVET and HOPS.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2007.03.006
+    notes: Peplowska et al. 2007 placed Vps33 in the shared class C Vps core.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses Vps3, Vps8 and the Vps11/Vps16/Vps18/Vps33 class C core
+    as an endosomal CORVET tethering complex.
+  reference: DOI:10.1016/j.devcel.2007.03.006
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Model in which CORVET was defined as the Vps3/Vps8-bearing endosomal homolog
+    of the Vps39/Vps41-bearing HOPS complex.
+  reference: DOI:10.1016/j.devcel.2007.03.006
+functions:
+- function_id: endolysosomal_biogenesis
+  label: endo-lysosomal biogenesis
+  description: CORVET is an endosomal Vps21-interacting tethering complex involved
+    in endo-lysosomal biogenesis.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2007.03.006
+    notes: Peplowska et al. 2007 found that CORVET interacts with Vps21 and is involved
+      in endo-lysosomal biogenesis.
+evidence:
+- reference: GO:0033263
+  notes: Gene Ontology cellular-component term for the CORVET complex.
+- reference: GO:0099023
+  notes: Gene Ontology cellular-component parent term for vesicle tethering complexes.
+- reference: DOI:10.1016/j.devcel.2007.03.006
+  notes: Peplowska, Markgraf, Ostrowicz, Bange and Ungermann 2007, The CORVET tethering
+    complex interacts with the yeast Rab5 homolog Vps21 and is involved in endo-lysosomal
+    biogenesis, Developmental Cell.
+causal_graphs:
+- graph_id: yeast_corvet_endosomal_tethering
+  title: CORVET supports yeast endosomal tethering
+  description: In Saccharomyces cerevisiae, Vps3 and Vps8 join Vps11, Vps16, Vps18
+    and Vps33 to form the CORVET complex, an endosomal tethering complex that interacts
+    with Rab5 homolog Vps21 during endo-lysosomal biogenesis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents canonical yeast CORVET subunit membership, Vps21
+    binding, and endo-lysosomal-biogenesis involvement without modeling CORVET-to-HOPS
+    conversion or SNARE-mediated fusion steps.
+  nodes:
+  - node_id: vps3_corvet_subunit
+    label: Vps3 CORVET subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps3_corvet_subunit
+  - node_id: vps8_corvet_subunit
+    label: Vps8 CORVET subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps8_corvet_subunit
+  - node_id: vps11_pep5_corvet_subunit
+    label: Vps11/Pep5 CORVET subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps11_pep5_corvet_subunit
+  - node_id: vps16_corvet_subunit
+    label: Vps16 CORVET subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps16_corvet_subunit
+  - node_id: vps18_pep3_corvet_subunit
+    label: Vps18/Pep3 CORVET subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps18_pep3_corvet_subunit
+  - node_id: vps33_corvet_subunit
+    label: Vps33 CORVET subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps33_corvet_subunit
+  - node_id: corvet_complex
+    label: CORVET complex
+    node_type: STRUCTURE
+    grounding: GO:0033263
+  - node_id: vps21_rab
+    label: Vps21 Rab5 homolog
+    node_type: GENE_OR_PROTEIN
+  - node_id: endosome_membrane
+    label: endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0010008
+  - node_id: endolysosomal_biogenesis
+    label: endo-lysosomal biogenesis
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: vps3_corvet_subunit
+    predicate: is part of
+    object: corvet_complex
+    description: Vps3 CORVET subunit is represented as a Saccharomyces cerevisiae
+      CORVET subunit.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2007.03.006
+      notes: Peplowska et al. 2007 defined yeast CORVET as Vps3, Vps8, Vps11, Vps16,
+        Vps18 and Vps33.
+  - subject: vps8_corvet_subunit
+    predicate: is part of
+    object: corvet_complex
+    description: Vps8 CORVET subunit is represented as a Saccharomyces cerevisiae
+      CORVET subunit.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2007.03.006
+      notes: Peplowska et al. 2007 defined yeast CORVET as Vps3, Vps8, Vps11, Vps16,
+        Vps18 and Vps33.
+  - subject: vps11_pep5_corvet_subunit
+    predicate: is part of
+    object: corvet_complex
+    description: Vps11/Pep5 CORVET subunit is represented as a Saccharomyces cerevisiae
+      CORVET subunit.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2007.03.006
+      notes: Peplowska et al. 2007 defined yeast CORVET as Vps3, Vps8, Vps11, Vps16,
+        Vps18 and Vps33.
+  - subject: vps16_corvet_subunit
+    predicate: is part of
+    object: corvet_complex
+    description: Vps16 CORVET subunit is represented as a Saccharomyces cerevisiae
+      CORVET subunit.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2007.03.006
+      notes: Peplowska et al. 2007 defined yeast CORVET as Vps3, Vps8, Vps11, Vps16,
+        Vps18 and Vps33.
+  - subject: vps18_pep3_corvet_subunit
+    predicate: is part of
+    object: corvet_complex
+    description: Vps18/Pep3 CORVET subunit is represented as a Saccharomyces cerevisiae
+      CORVET subunit.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2007.03.006
+      notes: Peplowska et al. 2007 defined yeast CORVET as Vps3, Vps8, Vps11, Vps16,
+        Vps18 and Vps33.
+  - subject: vps33_corvet_subunit
+    predicate: is part of
+    object: corvet_complex
+    description: Vps33 CORVET subunit is represented as a Saccharomyces cerevisiae
+      CORVET subunit.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2007.03.006
+      notes: Peplowska et al. 2007 defined yeast CORVET as Vps3, Vps8, Vps11, Vps16,
+        Vps18 and Vps33.
+  - subject: corvet_complex
+    predicate: binds
+    object: vps21_rab
+    description: Yeast CORVET interacts with the Rab5 homolog Vps21.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2007.03.006
+      notes: Peplowska et al. 2007 found that CORVET interacts with the yeast Rab5
+        homolog Vps21.
+  - subject: corvet_complex
+    predicate: localizes to
+    object: endosome_membrane
+    description: CORVET is represented as an endosomal tethering complex during endo-lysosomal
+      biogenesis.
+    evidence:
+    - reference: GO:0033263
+      notes: GO:0033263 defines CORVET as an endosomal tethering complex.
+    - reference: DOI:10.1016/j.devcel.2007.03.006
+      notes: Peplowska et al. 2007 described CORVET as a novel endosomal tethering
+        complex.
+  - subject: corvet_complex
+    predicate: participates in
+    object: endolysosomal_biogenesis
+    description: CORVET participates in yeast endo-lysosomal biogenesis.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2007.03.006
+      notes: Peplowska et al. 2007 connected CORVET to endo-lysosomal biogenesis.
+discussions:
+- discussion_id: resolve_corvet_component_family_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, or Complex Portal groundings
+    for the six CORVET subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vps3_corvet_subunit
+  - components#vps8_corvet_subunit
+  - components#vps11_pep5_corvet_subunit
+  - components#vps16_corvet_subunit
+  - components#vps18_pep3_corvet_subunit
+  - components#vps33_corvet_subunit
+  rationale: This first CORVET record records the named Saccharomyces cerevisiae subunits
+    without asserting paralogy boundaries or source-neutral family identifiers unless
+    those identifiers are reviewed exactly.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2007.03.006
+    notes: Peplowska et al. 2007 identified the six named yeast CORVET subunits.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: corvet_hops_conversion_boundary
+  prompt: Do not model Vps39/Vam6, Vps41/Vam2, or the mixed Vam6-Vps8 and Vps3-Vps41
+    complexes as canonical CORVET components.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#yeast_corvet_endosomal_tethering
+  rationale: Peplowska et al. 2007 identified HOPS-specific Vps39/Vam6 and Vps41/Vam2
+    subunits and two mixed complexes during CORVET-HOPS interconversion, but defined
+    canonical CORVET as Vps3 and Vps8 plus Vps11, Vps16, Vps18 and Vps33.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2007.03.006
+    notes: Peplowska et al. 2007 distinguished the canonical CORVET and HOPS complexes
+      from mixed intermediate assemblies.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: vps21_corvet_interactor_boundary
+  prompt: Do not model Vps21 as a constituent CORVET component.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#yeast_corvet_endosomal_tethering
+  rationale: Peplowska et al. 2007 found that CORVET interacts with the yeast Rab5
+    homolog Vps21, but defined the canonical CORVET complex as Vps3 and Vps8 plus
+    Vps11, Vps16, Vps18 and Vps33.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2007.03.006
+    notes: Peplowska et al. 2007 distinguished the Vps21-interacting CORVET complex
+      from its Rab5-family binding partner.
+  posed_by: codex
+  posed_date: '2026-09-16'

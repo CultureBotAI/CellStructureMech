@@ -9929,6 +9929,37 @@
       ]
     },
     {
+      "identifier": "GO:0033263",
+      "label": "CORVET complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.81766122
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.76123904
+        },
+        {
+          "identifier": "GO:0030904",
+          "label": "retromer complex",
+          "cosine_similarity": 0.73659425
+        },
+        {
+          "identifier": "GO:0000813",
+          "label": "ESCRT I complex",
+          "cosine_similarity": 0.73139023
+        },
+        {
+          "identifier": "GO:0000815",
+          "label": "ESCRT III complex",
+          "cosine_similarity": 0.7264477
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031910",
       "label": "cytostome",
       "neighbors": [
@@ -10015,9 +10046,9 @@
           "cosine_similarity": 0.77438259
         },
         {
-          "identifier": "GO:0030897",
-          "label": "HOPS complex",
-          "cosine_similarity": 0.75794431
+          "identifier": "GO:0033263",
+          "label": "CORVET complex",
+          "cosine_similarity": 0.76123904
         }
       ]
     },
@@ -10181,6 +10212,11 @@
       "label": "HOPS complex",
       "neighbors": [
         {
+          "identifier": "GO:0033263",
+          "label": "CORVET complex",
+          "cosine_similarity": 0.81766122
+        },
+        {
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.78422668
@@ -10199,11 +10235,6 @@
           "identifier": "GO:0000814",
           "label": "ESCRT II complex",
           "cosine_similarity": 0.72237651
-        },
-        {
-          "identifier": "GO:0000815",
-          "label": "ESCRT III complex",
-          "cosine_similarity": 0.72166022
         }
       ]
     },
@@ -10945,9 +10976,9 @@
           "cosine_similarity": 0.73949898
         },
         {
-          "identifier": "GO:0000814",
-          "label": "ESCRT II complex",
-          "cosine_similarity": 0.73405564
+          "identifier": "GO:0033263",
+          "label": "CORVET complex",
+          "cosine_similarity": 0.73659425
         }
       ]
     },
