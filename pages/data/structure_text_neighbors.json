@@ -9266,14 +9266,14 @@
           "cosine_similarity": 0.8490489
         },
         {
+          "identifier": "GO:0044599",
+          "label": "AP-5 adaptor complex",
+          "cosine_similarity": 0.84585202
+        },
+        {
           "identifier": "GO:0030124",
           "label": "AP-4 adaptor complex",
           "cosine_similarity": 0.84499422
-        },
-        {
-          "identifier": "GO:0005784",
-          "label": "Sec61 translocon complex",
-          "cosine_similarity": 0.64742373
         }
       ]
     },
@@ -9302,9 +9302,9 @@
           "cosine_similarity": 0.84083571
         },
         {
-          "identifier": "GO:0015627",
-          "label": "type II protein secretion system complex",
-          "cosine_similarity": 0.5955164
+          "identifier": "GO:0044599",
+          "label": "AP-5 adaptor complex",
+          "cosine_similarity": 0.82211557
         }
       ]
     },
@@ -9333,9 +9333,9 @@
           "cosine_similarity": 0.81808624
         },
         {
-          "identifier": "GO:0045259",
-          "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.61971787
+          "identifier": "GO:0044599",
+          "label": "AP-5 adaptor complex",
+          "cosine_similarity": 0.80988816
         }
       ]
     },
@@ -9359,14 +9359,45 @@
           "cosine_similarity": 0.84499422
         },
         {
+          "identifier": "GO:0044599",
+          "label": "AP-5 adaptor complex",
+          "cosine_similarity": 0.8303147
+        },
+        {
           "identifier": "GO:0030123",
           "label": "AP-3 adaptor complex",
           "cosine_similarity": 0.81808624
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0044599",
+      "label": "AP-5 adaptor complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030119",
+          "label": "AP-type membrane coat adaptor complex",
+          "cosine_similarity": 0.86079434
         },
         {
-          "identifier": "GO:0043684",
-          "label": "type IV secretion system complex",
-          "cosine_similarity": 0.60898233
+          "identifier": "GO:0030121",
+          "label": "AP-1 adaptor complex",
+          "cosine_similarity": 0.84585202
+        },
+        {
+          "identifier": "GO:0030124",
+          "label": "AP-4 adaptor complex",
+          "cosine_similarity": 0.8303147
+        },
+        {
+          "identifier": "GO:0030122",
+          "label": "AP-2 adaptor complex",
+          "cosine_similarity": 0.82211557
+        },
+        {
+          "identifier": "GO:0030123",
+          "label": "AP-3 adaptor complex",
+          "cosine_similarity": 0.80988816
         }
       ]
     },
@@ -9390,14 +9421,14 @@
           "cosine_similarity": 0.86241892
         },
         {
+          "identifier": "GO:0044599",
+          "label": "AP-5 adaptor complex",
+          "cosine_similarity": 0.86079434
+        },
+        {
           "identifier": "GO:0030124",
           "label": "AP-4 adaptor complex",
           "cosine_similarity": 0.85172849
-        },
-        {
-          "identifier": "GO:0030118",
-          "label": "clathrin coat",
-          "cosine_similarity": 0.68520554
         }
       ]
     },
