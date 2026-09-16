@@ -1,0 +1,143 @@
+identifier: GO:0030112
+label: glycocalyx
+structure_category: ENVELOPE
+structure_kind: ENVELOPE_LAYER
+definition: A carbohydrate rich layer at the outermost periphery of a cell.
+definition_source: GO:0030112
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T04:10:43Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T04:11:52Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added external-encapsulating-structure parentage, a reviewed-label-only
+    glycocalyx matrix component, Pseudomonas slime-layer and pneumococcal capsule
+    examples, GO and DOI evidence, a nonmechanistic matrix graph, and component-grounding
+    plus subclass-boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0030312
+components:
+- component_id: glycocalyx_extracellular_matrix
+  label: glycocalyx extracellular matrix
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The glycocalyx extracellular matrix spans capsule and slime-layer
+    materials, including polysaccharide-rich, glycoprotein-containing, glycolipid-containing,
+    and chemically exceptional capsule polymers; no single CHEBI, sequence-family,
+    or polymer-class CURIE exactly denotes the whole source-neutral structure.
+  role: Forms the carbohydrate-rich extracellular layer at the outermost cell periphery.
+  evidence:
+  - reference: GO:0030112
+    notes: GO defines the glycocalyx as a carbohydrate-rich layer at the outermost
+      cell periphery.
+  - reference: GO:0030114
+    notes: GO defines a slime layer as a diffuse glycocalyx subclass that consists
+      mostly of exopolysaccharides, glycoproteins and glycolipids.
+  - reference: GO:0042603
+    notes: GO defines capsule as a highly organized glycocalyx subclass attached outside
+      the cell wall.
+canonical_examples:
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  note: Classic diffuse glycocalyx example whose extracellular slime material was
+    chemically analyzed by Brown, Foster and Clamp.
+  reference: DOI:10.1042/bj1120521
+- taxon_id: NCBITaxon:1313
+  taxon_label: Streptococcus pneumoniae
+  note: Encapsulated pneumococci exemplify the organized capsule subclass of the glycocalyx.
+  reference: DOI:10.1128/IAI.00881-09
+evidence:
+- reference: GO:0030112
+  notes: Gene Ontology cellular-component term for glycocalyx.
+- reference: GO:0030312
+  notes: Gene Ontology parent term for external encapsulating structures.
+- reference: GO:0030114
+  notes: Gene Ontology child term that places slime layer under glycocalyx.
+- reference: GO:0042603
+  notes: Gene Ontology child term that places capsule under glycocalyx.
+- reference: DOI:10.1146/annurev.mi.35.100181.001503
+  notes: Costerton, Irvin and Cheng 1981, 'The bacterial glycocalyx in nature and
+    disease', Annual Review of Microbiology; Europe PMC indexes it as a non-open-access
+    review.
+causal_graphs:
+- graph_id: glycocalyx_matrix_surface_layer
+  title: Extracellular matrix forms a peripheral glycocalyx
+  description: Glycocalyx extracellular matrix is positioned at the outermost cell
+    periphery as either a diffuse slime layer or a more organized capsule.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the mature extracellular layer and its subclass boundary;
+    it does not assert the secretion, retention, or release machinery used by any
+    specific glycocalyx subtype.
+  nodes:
+  - node_id: glycocalyx_extracellular_matrix
+    label: glycocalyx extracellular matrix
+    node_type: CHEMICAL
+    component_ref: glycocalyx_extracellular_matrix
+  - node_id: outermost_cell_periphery
+    label: outermost cell periphery
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: glycocalyx
+    label: glycocalyx
+    node_type: STRUCTURE
+    grounding: GO:0030112
+  edges:
+  - subject: glycocalyx_extracellular_matrix
+    predicate: forms
+    object: glycocalyx
+    description: Carbohydrate-rich extracellular material constitutes the glycocalyx
+      layer.
+    evidence:
+    - reference: GO:0030112
+      notes: The GO glycocalyx definition identifies it as a carbohydrate-rich layer.
+  - subject: glycocalyx
+    predicate: lies at
+    object: outermost_cell_periphery
+    description: The glycocalyx is the carbohydrate-rich layer at the outermost periphery
+      of the cell.
+    evidence:
+    - reference: GO:0030112
+      notes: The GO glycocalyx definition places the layer at the outermost periphery
+        of a cell.
+discussions:
+- discussion_id: glycocalyx_capsule_slime_boundary
+  prompt: Keep glycocalyx as a parent class rather than merging capsule and slime-layer
+    records into it.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0030112 denotes the broad carbohydrate-rich outer layer, while GO:0042603
+    restricts capsule to a highly organized glycocalyx and GO:0030114 restricts slime
+    layer to a diffuse, easily removed glycocalyx. The existing capsule and slime-layer
+    records therefore remain narrower sibling subclasses of this parent record.
+  evidence:
+  - reference: GO:0030112
+    notes: GO parent term for the broad glycocalyx class.
+  - reference: GO:0042603
+    notes: GO child term for organized capsules.
+  - reference: GO:0030114
+    notes: GO child term for diffuse slime layers.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: resolve_glycocalyx_matrix_grounding
+  prompt: Resolve exact source-neutral groundings for the broad glycocalyx extracellular
+    matrix.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#glycocalyx_extracellular_matrix
+  rationale: This broad parent record curates one extracellular-matrix component for
+    the carbohydrate-rich layer while leaving exact glycan, glycoprotein, glycolipid,
+    and peptide-polymer groundings to narrower capsule or slime-layer follow-up.
+  posed_by: codex
+  posed_date: '2026-09-16'

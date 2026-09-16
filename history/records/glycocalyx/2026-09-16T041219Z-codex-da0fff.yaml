@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/glycocalyx.yaml
+  slug: glycocalyx
+session:
+  id: 2026-09-16T041219Z-codex-da0fff
+  timestamp: '2026-09-16T04:12:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Added the GO glycocalyx record
+  details: Created an evidence-backed GO:0030112 glycocalyx envelope-layer record with external-encapsulating-structure
+    parentage, a broad reviewed-label-only extracellular-matrix component, Pseudomonas slime-layer
+    and pneumococcal capsule examples, GO and DOI evidence, a nonmechanistic surface-layer
+    graph, and discussions for subclass boundaries and exact matrix grounding.
