@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/escrt_i_complex.yaml
+  slug: escrt_i_complex
+session:
+  id: 2026-09-16T154743Z-codex-3b9b63
+  timestamp: '2026-09-16T15:47:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1107
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1106
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Tracked additional ESCRT-I subunit curation
+  details: 'Resolved PR #1106 review issue #1107 by adding an open discussion that makes the
+    Mvb12-family and other lineage-specific ESCRT-I subunit boundary explicit. The record
+    still models the 2001 Vps23/Vps28/Vps37 core, while the new TODO cites Chu et al. 2006
+    and Curtiss et al. 2007 as primary follow-up sources for the later yeast Mvb12 subunit.'
