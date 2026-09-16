@@ -1,0 +1,218 @@
+identifier: GO:0030124
+label: AP-4 adaptor complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An AP-type membrane coat adaptor complex that consists of beta4, epsilon,
+  mu4 and sigma4 subunits and is found associated with membranes in the trans-Golgi
+  network; it is not clear whether AP-4 forms clathrin coats in vivo.
+definition_source: GO:0030124
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T13:57:07Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T13:58:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added AP-type parentage, reviewed-label-only beta4/epsilon/mu4/sigma4 subunits,
+    an AP-4 cargo-sorting function, GO/DOI evidence, a nonmechanistic AP-4 topology
+    graph, and clathrin-scope and subunit-grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0030119
+components:
+- component_id: ap4_beta4_subunit
+  label: AP-4 beta4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Large beta4 subunit of the heterotetrameric AP-4 adaptor complex.
+  evidence:
+  - reference: GO:0030124
+    notes: GO:0030124 defines the AP-4 adaptor complex as consisting of beta4, epsilon,
+      mu4 and sigma4 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-4 beta4 subunit is a subtype-specific AP-4 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap4_epsilon_subunit
+  label: AP-4 epsilon subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Large epsilon subunit of the heterotetrameric AP-4 adaptor complex.
+  evidence:
+  - reference: GO:0030124
+    notes: GO:0030124 defines the AP-4 adaptor complex as consisting of beta4, epsilon,
+      mu4 and sigma4 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-4 epsilon subunit is a subtype-specific AP-4 subunit class;
+    no exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap4_mu4_subunit
+  label: AP-4 mu4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Medium mu4 subunit of the heterotetrameric AP-4 adaptor complex.
+  evidence:
+  - reference: GO:0030124
+    notes: GO:0030124 defines the AP-4 adaptor complex as consisting of beta4, epsilon,
+      mu4 and sigma4 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-4 mu4 subunit is a subtype-specific AP-4 subunit class; no exact
+    source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap4_sigma4_subunit
+  label: AP-4 sigma4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Small sigma4 subunit of the heterotetrameric AP-4 adaptor complex.
+  evidence:
+  - reference: GO:0030124
+    notes: GO:0030124 defines the AP-4 adaptor complex as consisting of beta4, epsilon,
+      mu4 and sigma4 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-4 sigma4 subunit is a subtype-specific AP-4 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+functions:
+- function_id: ap4_tgn_cargo_sorting
+  label: AP-4-dependent trans-Golgi network cargo sorting
+  description: AP-4 is a trans-Golgi-network-associated adaptor complex implicated
+    in recognition and sorting of cargo proteins with tyrosine-based motifs.
+  evidence:
+  - reference: DOI:10.1091/mbc.10.8.2787
+    notes: Hirst et al. 1999 identified AP-4, localized it to nonclathrin-coated vesicles
+      near the trans-Golgi network, and reported that its mu4 subunit specifically
+      interacts with a tyrosine-based sorting signal.
+evidence:
+- reference: GO:0030124
+  notes: Gene Ontology cellular-component term for the AP-4 adaptor complex.
+- reference: GO:0030119
+  notes: Gene Ontology cellular-component parent term for AP-type membrane coat adaptor
+    complexes.
+- reference: DOI:10.1091/mbc.10.8.2787
+  notes: Hirst, Bright, Rous and Robinson 1999, Characterization of a Fourth Adaptor-related
+    Protein Complex, Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: ap4_adaptor_complex_topology
+  title: Beta4, epsilon, mu4 and sigma4 subunits form AP-4
+  description: The AP-4 adaptor complex is a heterotetramer associated with trans-Golgi-network
+    membranes and implicated in cargo sorting.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AP-4 composition and trans-Golgi-network association
+    without asserting a coat scaffold or a universal clathrin interaction.
+  nodes:
+  - node_id: ap4_beta4_subunit
+    label: AP-4 beta4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap4_beta4_subunit
+  - node_id: ap4_epsilon_subunit
+    label: AP-4 epsilon subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap4_epsilon_subunit
+  - node_id: ap4_mu4_subunit
+    label: AP-4 mu4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap4_mu4_subunit
+  - node_id: ap4_sigma4_subunit
+    label: AP-4 sigma4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap4_sigma4_subunit
+  - node_id: ap4_adaptor_complex
+    label: AP-4 adaptor complex
+    node_type: STRUCTURE
+    grounding: GO:0030124
+  - node_id: tgn_membrane
+    label: trans-Golgi network membrane
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: tgn_cargo_sorting
+    label: trans-Golgi network cargo sorting
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: ap4_beta4_subunit
+    predicate: is part of
+    object: ap4_adaptor_complex
+    description: Beta4 is a constituent of each heterotetrameric AP-4 adaptor complex.
+    evidence:
+    - reference: GO:0030124
+      notes: GO:0030124 lists beta4 as an AP-4 constituent.
+  - subject: ap4_epsilon_subunit
+    predicate: is part of
+    object: ap4_adaptor_complex
+    description: Epsilon is a constituent of each heterotetrameric AP-4 adaptor complex.
+    evidence:
+    - reference: GO:0030124
+      notes: GO:0030124 lists epsilon as an AP-4 constituent.
+  - subject: ap4_mu4_subunit
+    predicate: is part of
+    object: ap4_adaptor_complex
+    description: Mu4 is the medium subunit of each heterotetrameric AP-4 adaptor complex.
+    evidence:
+    - reference: GO:0030124
+      notes: GO:0030124 lists mu4 as an AP-4 constituent.
+  - subject: ap4_sigma4_subunit
+    predicate: is part of
+    object: ap4_adaptor_complex
+    description: Sigma4 is the small subunit of each heterotetrameric AP-4 adaptor
+      complex.
+    evidence:
+    - reference: GO:0030124
+      notes: GO:0030124 lists sigma4 as an AP-4 constituent.
+  - subject: ap4_adaptor_complex
+    predicate: associates with
+    object: tgn_membrane
+    description: AP-4 is found associated with membranes in the trans-Golgi network.
+    evidence:
+    - reference: GO:0030124
+      notes: GO:0030124 defines AP-4 as associated with membranes in the trans-Golgi
+        network.
+    - reference: DOI:10.1091/mbc.10.8.2787
+      notes: Hirst et al. 1999 localized AP-4 to nonclathrin-coated vesicles near
+        the trans-Golgi network.
+  - subject: ap4_adaptor_complex
+    predicate: supports
+    object: tgn_cargo_sorting
+    description: AP-4 supports recognition and sorting of cargo proteins with tyrosine-based
+      motifs.
+    evidence:
+    - reference: DOI:10.1091/mbc.10.8.2787
+      notes: Hirst et al. 1999 found that the AP-4 mu4 subunit specifically interacts
+        with a tyrosine-based sorting signal.
+discussions:
+- discussion_id: ap4_clathrin_scope
+  prompt: Avoid modeling AP-4 as a constitutive clathrin-coat adaptor.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - parent_structures
+  - causal_graphs#ap4_adaptor_complex_topology
+  rationale: GO:0030124 makes AP-4 a child of AP-type membrane coat adaptor complex
+    but explicitly notes that it is unclear whether AP-4 forms clathrin coats in vivo.
+    This record therefore keeps AP-4 under the AP-type parent while avoiding a universal
+    AP-4-to-clathrin-coat edge or a clathrin-coat part_of assertion.
+  evidence:
+  - reference: GO:0030124
+    notes: GO definition and parentage source for AP-4.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: resolve_ap4_subunit_groundings
+  prompt: Resolve exact source-neutral groundings for the AP-4 beta4, epsilon, mu4
+    and sigma4 subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ap4_beta4_subunit
+  - components#ap4_epsilon_subunit
+  - components#ap4_mu4_subunit
+  - components#ap4_sigma4_subunit
+  rationale: GO gives the exact AP-4 complex identity and names its subunit classes,
+    but exact source-neutral InterPro, Pfam or NCBIfam CURIEs for those AP-4-specific
+    classes were not curated in this pass.
+  evidence:
+  - reference: GO:0030124
+    notes: GO definition for AP-4-specific subunit classes.
+  posed_by: codex
+  posed_date: '2026-09-16'
