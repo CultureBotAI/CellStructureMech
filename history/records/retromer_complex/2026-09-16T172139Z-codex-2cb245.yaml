@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/retromer_complex.yaml
+  slug: retromer_complex
+session:
+  id: 2026-09-16T172139Z-codex-2cb245
+  timestamp: '2026-09-16T17:21:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1113
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1112
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Back retromer subcomplex graph edges with Seaman evidence
+  details: Adversarial PR review found that the retromer graph edges connecting the cargo-selective
+    and tubulation subcomplex nodes to the parent retromer complex only cited the generalized
+    GO subcomplex terms. Added DOI:10.1083/jcb.142.3.665 to both yeast subcomplex-to-retromer
+    graph edges so the yeast-specific Vps35/Vps29/Vps26 and Vps5/Vps17 parthood assertions
+    carry primary Seaman 1998 evidence.
