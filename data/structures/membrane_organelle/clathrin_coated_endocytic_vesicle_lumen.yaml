@@ -18,8 +18,15 @@ curation_history:
     endocytic-site scope, GO/DOI evidence, a nonmechanistic lumen topology graph,
     and a resolved cargo-boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-16T09:33:26Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved issue #1083 by adding the local generic clathrin-coated-vesicle
+    lumen parentage and supporting GO:0030136 evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0071682
+- cellstructuremech:clathrin_coated_vesicle_lumen
 part_of:
 - GO:0045334
 taxonomic_distribution:
@@ -44,6 +51,9 @@ evidence:
 - reference: GO:0045334
   notes: Gene Ontology cellular-component term for the whole clathrin-coated endocytic
     vesicle.
+- reference: GO:0030136
+  notes: Gene Ontology cellular-component term for the broader clathrin-coated vesicle
+    class.
 - reference: GO:0030669
   notes: Gene Ontology cellular-component term for the clathrin-coated endocytic vesicle
     membrane that bounds the lumen.
@@ -96,6 +106,30 @@ causal_graphs:
       notes: GO:0030669 identifies the surrounding clathrin-coated endocytic vesicle
         membrane.
 discussions:
+- discussion_id: keep_generic_clathrin_lumen_parentage
+  prompt: Link GO:0106176 under the generic clathrin-coated vesicle lumen as well
+    as the GO endocytic vesicle lumen.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  rationale: GO:0106176 names the lumen inside the clathrin-coated endocytic vesicle,
+    GO:0045334 is a subtype of GO:0030136 clathrin-coated vesicle, and this corpus
+    already has a generic cellstructuremech:clathrin_coated_vesicle_lumen parent for
+    lumen records in clathrin-coated vesicles.
+  resolution_note: Kept GO:0071682 for the GO endocytic-vesicle-lumen branch and added
+    cellstructuremech:clathrin_coated_vesicle_lumen for the local generic clathrin-coated-vesicle
+    lumen branch.
+  evidence:
+  - reference: GO:0106176
+    notes: GO:0106176 identifies the clathrin-coated endocytic vesicle lumen.
+  - reference: GO:0045334
+    notes: GO:0045334 identifies the enclosing clathrin-coated endocytic vesicle.
+  - reference: GO:0030136
+    notes: GO:0030136 identifies the broader clathrin-coated vesicle class.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
 - discussion_id: keep_endocytic_cargo_off_lumen_record
   prompt: Keep internalized cargo out of the clathrin-coated endocytic vesicle lumen
     record.
