@@ -22,6 +22,13 @@ curation_history:
     function, GO/DOI evidence, a nonmechanistic ER tethering graph, a subunit-grounding
     TODO, and a resolved SNARE/COPI boundary decision.
   llm_assisted: true
+- timestamp: '2026-09-16T19:12:05Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1120 issue #1121 by adding Kraynack et al. 2005 evidence
+    for the Sec39/Dsl3 alias and removing an unsupported alias from the taxonomic-distribution
+    summary.'
+  llm_assisted: true
 parent_structures:
 - GO:0099023
 synonyms:
@@ -84,12 +91,15 @@ components:
   - reference: DOI:10.1038/nsmb.1548
     notes: Tripathi, Ren, Jeffrey and Hughson 2009 described the yeast Dsl1p vesicle
       tethering complex as containing Dsl1p, Tip20p and Sec39p.
+  - reference: DOI:10.1091/mbc.e05-01-0056
+    notes: Kraynack et al. 2005 established that budding-yeast Dsl3p is Sec39p and
+      associates with Dsl1p-complex subunits.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Budding yeast uses a Dsl1p complex containing Dsl1p, Tip20p and Sec39p/Dsl3p
-    during Golgi-to-endoplasmic-reticulum retrograde traffic.
+  note: Budding yeast uses a Dsl1p complex containing Dsl1p, Tip20p and Sec39p during
+    Golgi-to-endoplasmic-reticulum retrograde traffic.
   reference: DOI:10.1038/nsmb.1548
 canonical_examples:
 - taxon_id: NCBITaxon:4932
@@ -126,6 +136,10 @@ evidence:
   notes: Meiringer et al. 2011, The Dsl1 protein tethering complex is a resident endoplasmic
     reticulum complex, which interacts with five soluble NSF (N-ethylmaleimide-sensitive
     factor) attachment protein receptors (SNAREs), Journal of Biological Chemistry.
+- reference: DOI:10.1091/mbc.e05-01-0056
+  notes: Kraynack et al. 2005, Dsl1p, Tip20p, and the novel Dsl3(Sec39) protein are
+    required for the stability of the Q/t-SNARE complex at the endoplasmic reticulum
+    in yeast, Molecular Biology of the Cell.
 causal_graphs:
 - graph_id: yeast_dsl1_er_tethering
   title: Dsl1/NZR supports yeast Golgi-to-ER retrograde tethering
@@ -190,6 +204,9 @@ causal_graphs:
     - reference: DOI:10.1038/nsmb.1548
       notes: Tripathi, Ren, Jeffrey and Hughson 2009 described the Dsl1p complex as
         a three-subunit tether with Dsl1p, Tip20p and Sec39p.
+    - reference: DOI:10.1091/mbc.e05-01-0056
+      notes: Kraynack et al. 2005 identified Dsl3p as Sec39p and found Dsl3p associated
+        with Dsl1p-complex subunits.
   - subject: dsl1_nzr_complex
     predicate: localizes to
     object: endoplasmic_reticulum
@@ -224,6 +241,9 @@ discussions:
   - reference: DOI:10.1038/nsmb.1548
     notes: Tripathi, Ren, Jeffrey and Hughson 2009 characterized the three named yeast
       Dsl1p-complex subunits.
+  - reference: DOI:10.1091/mbc.e05-01-0056
+    notes: Kraynack et al. 2005 connected the Dsl3 and Sec39 names for the third Dsl1p-complex-associated
+      subunit.
   posed_by: codex
   posed_date: '2026-09-16'
 - discussion_id: dsl1_nzr_snare_copi_boundary
@@ -238,5 +258,8 @@ discussions:
   - reference: DOI:10.1074/jbc.M110.215327
     notes: Meiringer et al. 2011 distinguished Dsl1, Dsl3 and Tip20 from the ER SNAREs
       bound by the complex.
+  - reference: DOI:10.1091/mbc.e05-01-0056
+    notes: Kraynack et al. 2005 showed that Dsl3p is Sec39p, supporting the alternate
+      name used for the third constituent subunit.
   posed_by: codex
   posed_date: '2026-09-16'
