@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ap_1_adaptor_complex.yaml
+  slug: ap_1_adaptor_complex
+session:
+  id: 2026-09-16T125336Z-codex-c716a6
+  timestamp: '2026-09-16T12:53:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the AP-1 adaptor complex record
+  details: Created an evidence-backed GO:0030121 AP-1 adaptor complex record with clathrin-adaptor
+    parentage, clathrin coat of trans-Golgi network vesicle parthood, reviewed-label-only
+    beta1, gamma, mu1 and sigma1 subunit classes, Saccharomyces cerevisiae AP-1 evidence from
+    Yeung et al. 1999, Valdivia et al. 2002 and Whitfield et al. 2016, a nonmechanistic AP-1
+    topology graph, and explicit boundary discussions for AP-1 versus the full TGN clathrin
+    coat, Mil1 regulation, and unresolved subunit groundings.

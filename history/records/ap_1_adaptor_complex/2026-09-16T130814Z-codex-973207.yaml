@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ap_1_adaptor_complex.yaml
+  slug: ap_1_adaptor_complex
+session:
+  id: 2026-09-16T130814Z-codex-973207
+  timestamp: '2026-09-16T13:08:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1097
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1096
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Narrow AP-1 canonical example evidence
+  details: 'Addressed PR #1096 review issue #1097 by narrowing the Saccharomyces cerevisiae
+    canonical example note to the Yeung 1999 biochemical AP-1/clathrin assignment and leaving
+    the Whitfield 2016 alternate mu-subunit cargo-sorting claim under function evidence.'

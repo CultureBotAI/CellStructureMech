@@ -1,0 +1,286 @@
+identifier: GO:0030121
+label: AP-1 adaptor complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterotetrameric AP-type membrane coat adaptor complex that consists
+  of beta1, gamma, mu1 and sigma1 subunits and links clathrin to the membrane surface
+  of a vesicle; vesicles with AP-1-containing coats are normally found primarily in
+  the trans-Golgi network. In at least humans, the AP-1 complex can be heterogeneric
+  due to the existence of multiple subunit isoforms encoded by different genes (gamma1
+  and gamma2, mu1A and mu1B, and sigma1A, sigma1B and sigma1C).
+definition_source: GO:0030121
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T12:52:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T12:53:09Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added clathrin-adaptor parentage, TGN clathrin-coat parthood, reviewed-label-only
+    beta1/gamma/mu1/sigma1 subunits, Saccharomyces AP-1 distribution and function
+    evidence, GO/DOI evidence, a nonmechanistic AP-1 topology graph, and TGN-coat,
+    Mil1-boundary and subunit-grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-16T12:59:31Z'
+  curator: codex
+  action: CURATED_DISCUSSION_ANCHORS
+  changes: Retargeted the Mil1 boundary discussion from the components section to
+    the four AP-1 core subunit anchors
+  llm_assisted: true
+- timestamp: '2026-09-16T13:06:00Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Narrowed the AP-1 canonical example note to the Yeung-supported budding-yeast
+    AP-1 assignment; addresses PR #1096 review issue #1097.'
+  llm_assisted: true
+parent_structures:
+- GO:0030131
+part_of:
+- GO:0030130
+components:
+- component_id: ap1_beta1_subunit
+  label: AP-1 beta1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Large beta1 subunit of the heterotetrameric AP-1 adaptor complex.
+  evidence:
+  - reference: GO:0030121
+    notes: GO:0030121 defines the AP-1 adaptor complex as consisting of beta1, gamma,
+      mu1 and sigma1 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-1 beta1 subunit is a subtype-specific AP-1 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap1_gamma_subunit
+  label: AP-1 gamma subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Large gamma subunit of the heterotetrameric AP-1 adaptor complex.
+  evidence:
+  - reference: GO:0030121
+    notes: GO:0030121 defines the AP-1 adaptor complex as consisting of beta1, gamma,
+      mu1 and sigma1 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-1 gamma subunit is a subtype-specific AP-1 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap1_mu1_subunit
+  label: AP-1 mu1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Medium mu1 subunit of the heterotetrameric AP-1 adaptor complex.
+  evidence:
+  - reference: GO:0030121
+    notes: GO:0030121 defines the AP-1 adaptor complex as consisting of beta1, gamma,
+      mu1 and sigma1 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-1 mu1 subunit is a subtype-specific AP-1 subunit class; no exact
+    source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap1_sigma1_subunit
+  label: AP-1 sigma1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Small sigma1 subunit of the heterotetrameric AP-1 adaptor complex.
+  evidence:
+  - reference: GO:0030121
+    notes: GO:0030121 defines the AP-1 adaptor complex as consisting of beta1, gamma,
+      mu1 and sigma1 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-1 sigma1 subunit is a subtype-specific AP-1 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Saccharomyces cerevisiae has an AP-1 clathrin adaptor complex whose subunit
+    composition was defined by coimmunoprecipitation.
+  reference: DOI:10.1091/mbc.10.11.3643
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which AP-1 was biochemically assigned as a clathrin-interacting
+    adaptor complex.
+  reference: DOI:10.1091/mbc.10.11.3643
+functions:
+- function_id: ap1_late_golgi_cargo_sorting
+  label: AP-1-dependent late-Golgi cargo sorting
+  description: Yeast AP-1 contributes to clathrin-associated sorting of late Golgi
+    and Golgi/early-endosome cargoes.
+  evidence:
+  - reference: DOI:10.1016/S1534-5807(02)00127-2
+    notes: Valdivia et al. 2002 connect the yeast clathrin adaptor protein complex
+      1 to efficient retention of a subset of late Golgi membrane proteins.
+  - reference: DOI:10.1091/mbc.e15-09-0621
+    notes: Whitfield et al. 2016 show that budding yeast has two AP-1 forms with alternate
+      mu chains that confer distinct cargo-sorting functions.
+evidence:
+- reference: GO:0030121
+  notes: Gene Ontology cellular-component term for the AP-1 adaptor complex.
+- reference: GO:0030131
+  notes: Gene Ontology cellular-component parent term for clathrin adaptor complexes.
+- reference: GO:0030130
+  notes: Gene Ontology cellular-component term for the containing clathrin coat of
+    trans-Golgi network vesicle.
+- reference: DOI:10.1091/mbc.10.11.3643
+  notes: Yeung, Phan and Payne 1999, Adaptor Complex-independent Clathrin Function
+    in Yeast, Molecular Biology of the Cell.
+- reference: DOI:10.1016/S1534-5807(02)00127-2
+  notes: Valdivia, Baggott, Chuang and Schekman 2002, The Yeast Clathrin Adaptor Protein
+    Complex 1 Is Required for the Efficient Retention of a Subset of Late Golgi Membrane
+    Proteins, Developmental Cell.
+- reference: DOI:10.1091/mbc.e15-09-0621
+  notes: Whitfield et al. 2016, The alternate AP-1 adaptor subunit Apm2 interacts
+    with the Mil1 regulatory protein and confers differential cargo sorting, Molecular
+    Biology of the Cell.
+causal_graphs:
+- graph_id: ap1_adaptor_complex_topology
+  title: Beta1, gamma, mu1 and sigma1 subunits form AP-1
+  description: The AP-1 adaptor complex is a clathrin adaptor and heterotetrameric
+    component of the trans-Golgi network vesicle clathrin coat.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AP-1 composition, its GO part-of placement in the
+    TGN vesicle clathrin coat and a yeast late-Golgi cargo sorting role, without asserting
+    AP-1 as the full clathrin coat or modeling Apm2 regulators as core AP-1 subunits.
+  nodes:
+  - node_id: ap1_beta1_subunit
+    label: AP-1 beta1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap1_beta1_subunit
+  - node_id: ap1_gamma_subunit
+    label: AP-1 gamma subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap1_gamma_subunit
+  - node_id: ap1_mu1_subunit
+    label: AP-1 mu1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap1_mu1_subunit
+  - node_id: ap1_sigma1_subunit
+    label: AP-1 sigma1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap1_sigma1_subunit
+  - node_id: ap1_adaptor_complex
+    label: AP-1 adaptor complex
+    node_type: STRUCTURE
+    grounding: GO:0030121
+  - node_id: clathrin_coat_of_tgn_vesicle
+    label: clathrin coat of trans-Golgi network vesicle
+    node_type: STRUCTURE
+    grounding: GO:0030130
+  - node_id: late_golgi_cargo_sorting
+    label: late Golgi cargo sorting
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: ap1_beta1_subunit
+    predicate: is part of
+    object: ap1_adaptor_complex
+    description: Beta1 is one of the large subunits of each heterotetrameric AP-1
+      adaptor complex.
+    evidence:
+    - reference: GO:0030121
+      notes: GO:0030121 lists beta1 as an AP-1 constituent.
+  - subject: ap1_gamma_subunit
+    predicate: is part of
+    object: ap1_adaptor_complex
+    description: Gamma is one of the large subunits of each heterotetrameric AP-1
+      adaptor complex.
+    evidence:
+    - reference: GO:0030121
+      notes: GO:0030121 lists gamma as an AP-1 constituent.
+  - subject: ap1_mu1_subunit
+    predicate: is part of
+    object: ap1_adaptor_complex
+    description: Mu1 is the medium subunit of each heterotetrameric AP-1 adaptor complex.
+    evidence:
+    - reference: GO:0030121
+      notes: GO:0030121 lists mu1 as an AP-1 constituent.
+  - subject: ap1_sigma1_subunit
+    predicate: is part of
+    object: ap1_adaptor_complex
+    description: Sigma1 is the small subunit of each heterotetrameric AP-1 adaptor
+      complex.
+    evidence:
+    - reference: GO:0030121
+      notes: GO:0030121 lists sigma1 as an AP-1 constituent.
+  - subject: ap1_adaptor_complex
+    predicate: is part of
+    object: clathrin_coat_of_tgn_vesicle
+    description: GO models the AP-1 adaptor complex as part of the clathrin coat of
+      a trans-Golgi network vesicle.
+    evidence:
+    - reference: GO:0030121
+      notes: GO:0030121 has a part-of relationship to GO:0030130 clathrin coat of
+        trans-Golgi network vesicle.
+  - subject: ap1_adaptor_complex
+    predicate: supports
+    object: late_golgi_cargo_sorting
+    description: Yeast AP-1 supports clathrin-associated cargo sorting at late Golgi
+      and Golgi/early-endosome membranes.
+    evidence:
+    - reference: DOI:10.1016/S1534-5807(02)00127-2
+      notes: Valdivia et al. 2002 connect yeast AP-1 to efficient retention of a subset
+        of late Golgi membrane proteins.
+    - reference: DOI:10.1091/mbc.e15-09-0621
+      notes: Whitfield et al. 2016 connect alternate AP-1 mu chains to differential
+        yeast cargo sorting.
+discussions:
+- discussion_id: ap1_tgn_coat_boundary
+  prompt: Represent AP-1 as a TGN coat adaptor, not as the complete TGN clathrin coat.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - parent_structures
+  - part_of
+  rationale: GO:0030121 is a subtype of GO:0030131 clathrin adaptor complex and part
+    of GO:0030130 clathrin coat of trans-Golgi network vesicle. This record therefore
+    represents the AP-1 adaptor heterotetramer and links it to the containing TGN
+    clathrin coat through part_of.
+  evidence:
+  - reference: GO:0030121
+    notes: GO term and relationship source for AP-1 adaptor complexes.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: mil1_not_ap1_core_subunit
+  prompt: Exclude Mil1 from core AP-1 subunits.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#ap1_beta1_subunit
+  - components#ap1_gamma_subunit
+  - components#ap1_mu1_subunit
+  - components#ap1_sigma1_subunit
+  - causal_graphs#ap1_adaptor_complex_topology
+  rationale: Whitfield et al. 2016 identify Mil1 as a conserved regulatory protein
+    that binds the Apm2 alternate mu subunit and contributes to membrane recruitment.
+    That supports a regulatory interaction, not stable beta1/gamma/mu1/sigma1 membership
+    in the core AP-1 heterotetramer.
+  evidence:
+  - reference: DOI:10.1091/mbc.e15-09-0621
+    notes: Whitfield et al. 2016 evidence for Mil1-Apm2 regulation.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: resolve_ap1_subunit_groundings
+  prompt: Resolve exact source-neutral groundings for the AP-1 beta1, gamma, mu1 and
+    sigma1 subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ap1_beta1_subunit
+  - components#ap1_gamma_subunit
+  - components#ap1_mu1_subunit
+  - components#ap1_sigma1_subunit
+  rationale: GO gives the exact AP-1 complex identity and names its subunit classes,
+    but exact source-neutral InterPro, Pfam or NCBIfam CURIEs for those AP-1-specific
+    classes were not curated in this pass.
+  evidence:
+  - reference: GO:0030121
+    notes: GO definition for AP-1-specific subunit classes.
+  posed_by: codex
+  posed_date: '2026-09-16'

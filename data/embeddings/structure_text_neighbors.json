@@ -9247,6 +9247,37 @@
       ]
     },
     {
+      "identifier": "GO:0030121",
+      "label": "AP-1 adaptor complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030119",
+          "label": "AP-type membrane coat adaptor complex",
+          "cosine_similarity": 0.86946435
+        },
+        {
+          "identifier": "GO:0030123",
+          "label": "AP-3 adaptor complex",
+          "cosine_similarity": 0.8490489
+        },
+        {
+          "identifier": "GO:0005784",
+          "label": "Sec61 translocon complex",
+          "cosine_similarity": 0.64742373
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.64048175
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.63564708
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030123",
       "label": "AP-3 adaptor complex",
       "neighbors": [
@@ -9254,6 +9285,11 @@
           "identifier": "GO:0030119",
           "label": "AP-type membrane coat adaptor complex",
           "cosine_similarity": 0.88037979
+        },
+        {
+          "identifier": "GO:0030121",
+          "label": "AP-1 adaptor complex",
+          "cosine_similarity": 0.8490489
         },
         {
           "identifier": "GO:0045259",
@@ -9269,11 +9305,6 @@
           "identifier": "cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex",
           "label": "ESX-3 type VII secretion system membrane complex",
           "cosine_similarity": 0.59690367
-        },
-        {
-          "identifier": "GO:0000815",
-          "label": "ESCRT III complex",
-          "cosine_similarity": 0.59277038
         }
       ]
     },
@@ -9285,6 +9316,11 @@
           "identifier": "GO:0030123",
           "label": "AP-3 adaptor complex",
           "cosine_similarity": 0.88037979
+        },
+        {
+          "identifier": "GO:0030121",
+          "label": "AP-1 adaptor complex",
+          "cosine_similarity": 0.86946435
         },
         {
           "identifier": "GO:0030118",
@@ -9300,11 +9336,6 @@
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.68075919
-        },
-        {
-          "identifier": "GO:0010006",
-          "label": "Toc complex",
-          "cosine_similarity": 0.66530697
         }
       ]
     },
