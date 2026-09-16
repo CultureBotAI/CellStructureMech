@@ -9309,9 +9309,45 @@
       ]
     },
     {
+      "identifier": "GO:0030130",
+      "label": "clathrin coat of trans-Golgi network vesicle",
+      "neighbors": [
+        {
+          "identifier": "GO:0030125",
+          "label": "clathrin vesicle coat",
+          "cosine_similarity": 0.92571737
+        },
+        {
+          "identifier": "GO:0030136",
+          "label": "clathrin-coated vesicle",
+          "cosine_similarity": 0.86686826
+        },
+        {
+          "identifier": "GO:0030665",
+          "label": "clathrin-coated vesicle membrane",
+          "cosine_similarity": 0.84840714
+        },
+        {
+          "identifier": "GO:0030120",
+          "label": "vesicle coat",
+          "cosine_similarity": 0.84243607
+        },
+        {
+          "identifier": "cellstructuremech:clathrin_coated_vesicle_lumen",
+          "label": "clathrin-coated vesicle lumen",
+          "cosine_similarity": 0.83587164
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030125",
       "label": "clathrin vesicle coat",
       "neighbors": [
+        {
+          "identifier": "GO:0030130",
+          "label": "clathrin coat of trans-Golgi network vesicle",
+          "cosine_similarity": 0.92571737
+        },
         {
           "identifier": "GO:0030136",
           "label": "clathrin-coated vesicle",
@@ -9331,11 +9367,6 @@
           "identifier": "GO:0030135",
           "label": "coated vesicle",
           "cosine_similarity": 0.81470579
-        },
-        {
-          "identifier": "GO:0030120",
-          "label": "vesicle coat",
-          "cosine_similarity": 0.8134053
         }
       ]
     },
@@ -10439,6 +10470,11 @@
           "cosine_similarity": 0.87527211
         },
         {
+          "identifier": "GO:0030130",
+          "label": "clathrin coat of trans-Golgi network vesicle",
+          "cosine_similarity": 0.84243607
+        },
+        {
           "identifier": "GO:0030126",
           "label": "COPI vesicle coat",
           "cosine_similarity": 0.84231894
@@ -10447,11 +10483,6 @@
           "identifier": "GO:0030662",
           "label": "coated vesicle membrane",
           "cosine_similarity": 0.84099873
-        },
-        {
-          "identifier": "GO:0030127",
-          "label": "COPII vesicle coat",
-          "cosine_similarity": 0.83269089
         }
       ]
     },

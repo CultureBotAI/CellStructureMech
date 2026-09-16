@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/clathrin_coat_of_trans_golgi_network_vesicle.yaml
+  slug: clathrin_coat_of_trans_golgi_network_vesicle
+session:
+  id: 2026-09-16T071902Z-codex-c53089
+  timestamp: '2026-09-16T07:19:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add clathrin coat of trans-Golgi network vesicle record
+  details: Created the GO:0030130 clathrin coat of trans-Golgi network vesicle record with
+    clathrin-vesicle-coat parentage, TGN transport-vesicle membrane parthood, reviewed-label-only
+    triskelion and adaptor components, Saccharomyces TGN/endosome trafficking scope, GO/DOI
+    evidence, a nonmechanistic topology graph, and explicit grounding and subtype-boundary
+    discussions.

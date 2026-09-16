@@ -1,0 +1,262 @@
+identifier: GO:0030130
+label: clathrin coat of trans-Golgi network vesicle
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A clathrin coat found on a vesicle of the trans-Golgi network.
+definition_source: GO:0030130
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T07:17:05Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T07:18:32Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added clathrin-vesicle-coat parentage, TGN transport-vesicle membrane parthood,
+    the GO exact synonym, reviewed-label-only triskelion and adaptor components, Saccharomyces
+    TGN/endosome traffic scope, GO/DOI evidence, a nonmechanistic TGN clathrin-coat
+    topology graph, and grounding plus scope boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0030125
+part_of:
+- GO:0012510
+synonyms:
+- synonym_text: clathrin coat of TGN vesicle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030130
+components:
+- component_id: clathrin_triskelion_scaffold
+  label: clathrin triskelion scaffold
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Core clathrin triskelion lattice that polymerizes into the coat on a trans-Golgi-network
+    transport vesicle.
+  evidence:
+  - reference: GO:0030130
+    notes: GO:0030130 defines this structure as a clathrin coat on a TGN vesicle.
+  - reference: GO:0030118
+    notes: GO:0030118 defines clathrin coats as polymerized clathrin triskelions linked
+      to membranes by adaptor complexes.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The clathrin triskelion is represented here at the source-neutral
+    protein-complex level; no exact Complex Portal, GO, InterPro, Pfam, or NCBIfam
+    CURIE was curated in this pass.
+- component_id: tgn_clathrin_adaptors
+  label: TGN clathrin adaptor and cargo-selection factors
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Adaptor proteins that connect TGN clathrin coat assembly to vesicle membranes
+    and cargo sorting.
+  evidence:
+  - reference: GO:0030118
+    notes: GO:0030118 frames clathrin coats as linked to membranes through adaptor
+      complexes.
+  - reference: GO:0030119
+    notes: GO:0030119 identifies AP-type membrane coat adaptor complexes as membrane-coat
+      components that link clathrin or another coat-forming molecule to a membrane
+      surface.
+  - reference: DOI:10.1091/MBC.E06-11-1000
+    notes: Copic et al. 2007 studied Ent3p/Ent5p adaptor functions in yeast trafficking
+      between the TGN and endosomes.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: TGN clathrin coats use AP-type, epsin-like, and other cargo-selection
+    factors; no exact source-neutral protein-family or complex CURIE was curated for
+    that full adaptor class.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has Ent3p and Ent5p adaptor functions in protein trafficking
+    between the trans-Golgi network and endosomes.
+  reference: DOI:10.1091/MBC.E06-11-1000
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which TGN/endosomal Ent3p and Ent5p adaptor functions
+    were dissected.
+  reference: DOI:10.1091/MBC.E06-11-1000
+evidence:
+- reference: GO:0030130
+  notes: Gene Ontology cellular-component term for the clathrin coat of a trans-Golgi
+    network vesicle.
+- reference: GO:0030125
+  notes: Gene Ontology cellular-component parent term for clathrin vesicle coats.
+- reference: GO:0030118
+  notes: Gene Ontology cellular-component term for clathrin coats.
+- reference: GO:0030119
+  notes: Gene Ontology cellular-component term for AP-type membrane coat adaptor complexes.
+- reference: GO:0012510
+  notes: Gene Ontology cellular-component term for the TGN transport vesicle membrane
+    that carries GO:0030130 as a part.
+- reference: GO:0030140
+  notes: Gene Ontology cellular-component term for the containing trans-Golgi network
+    transport vesicle.
+- reference: GO:0005802
+  notes: Gene Ontology cellular-component term for the trans-Golgi network.
+- reference: GO:0005768
+  notes: Gene Ontology cellular-component term for endosomes.
+- reference: DOI:10.1091/MBC.E06-11-1000
+  notes: Copic et al. 2007, 'Ent3p and Ent5p exhibit cargo-specific functions in trafficking
+    proteins between the trans-Golgi network and the endosomes in yeast', Molecular
+    Biology of the Cell.
+causal_graphs:
+- graph_id: tgn_clathrin_coat_topology
+  title: TGN clathrin coat is carried by a TGN vesicle membrane
+  description: The clathrin coat of a trans-Golgi-network vesicle is a clathrin/adaptor
+    protein coat on a TGN transport-vesicle membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the GO-grounded coat-to-vesicle boundary and TGN/endosome
+    trafficking context without asserting a complete TGN clathrin-adaptor assembly
+    mechanism or exact cargo cohort.
+  nodes:
+  - node_id: clathrin_triskelion_scaffold
+    label: clathrin triskelion scaffold
+    node_type: GENE_OR_PROTEIN
+    component_ref: clathrin_triskelion_scaffold
+  - node_id: tgn_clathrin_adaptors
+    label: TGN clathrin adaptor and cargo-selection factors
+    node_type: GENE_OR_PROTEIN
+    component_ref: tgn_clathrin_adaptors
+  - node_id: clathrin_coat_of_tgn_vesicle
+    label: clathrin coat of trans-Golgi network vesicle
+    node_type: STRUCTURE
+    grounding: GO:0030130
+  - node_id: tgn_transport_vesicle_membrane
+    label: trans-Golgi network transport vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0012510
+  - node_id: tgn_transport_vesicle
+    label: trans-Golgi network transport vesicle
+    node_type: ORGANELLE
+    grounding: GO:0030140
+  - node_id: trans_golgi_network
+    label: trans-Golgi network
+    node_type: ORGANELLE
+    grounding: GO:0005802
+  - node_id: endosome
+    label: endosome
+    node_type: ORGANELLE
+    grounding: GO:0005768
+  - node_id: tgn_endosomal_protein_sorting
+    label: TGN/endosomal protein sorting
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: clathrin_triskelion_scaffold
+    predicate: polymerizes into
+    object: clathrin_coat_of_tgn_vesicle
+    description: Clathrin triskelions provide the polymerized clathrin scaffold in
+      the TGN-vesicle coat.
+    evidence:
+    - reference: GO:0030118
+      notes: GO:0030118 defines clathrin coats as polymerized clathrin triskelions.
+    - reference: GO:0030130
+      notes: GO:0030130 identifies the TGN vesicle-specific clathrin coat.
+  - subject: tgn_clathrin_adaptors
+    predicate: links scaffold to
+    object: tgn_transport_vesicle_membrane
+    description: Adaptor and cargo-selection factors connect clathrin coat assembly
+      to TGN-derived transport-vesicle membranes.
+    evidence:
+    - reference: GO:0030119
+      notes: GO:0030119 defines AP-type adaptors as linking clathrin or another coat-forming
+        molecule to a membrane surface.
+    - reference: DOI:10.1091/MBC.E06-11-1000
+      notes: Copic et al. 2007 studied Ent3p/Ent5p adaptor functions in TGN-to-endosome
+        protein trafficking.
+  - subject: clathrin_coat_of_tgn_vesicle
+    predicate: is part of
+    object: tgn_transport_vesicle_membrane
+    description: The clathrin coat of a TGN vesicle is a coat part on the TGN transport-vesicle
+      membrane.
+    evidence:
+    - reference: GO:0030130
+      notes: GO:0030130 records the TGN clathrin coat as part of the GO:0012510 TGN
+        transport-vesicle membrane.
+  - subject: tgn_transport_vesicle_membrane
+    predicate: is part of
+    object: tgn_transport_vesicle
+    description: The TGN transport vesicle membrane is part of a trans-Golgi-network
+      transport vesicle.
+    evidence:
+    - reference: GO:0012510
+      notes: GO:0012510 identifies the TGN transport-vesicle membrane.
+    - reference: GO:0030140
+      notes: GO:0030140 identifies the containing TGN transport vesicle.
+  - subject: clathrin_coat_of_tgn_vesicle
+    predicate: supports
+    object: tgn_endosomal_protein_sorting
+    description: TGN clathrin coats participate in adaptor-mediated traffic between
+      the TGN and endosomes.
+    evidence:
+    - reference: DOI:10.1091/MBC.E06-11-1000
+      notes: Copic et al. 2007 framed Ent3p/Ent5p adaptor roles as cargo-specific
+        trafficking between the TGN and endosomes.
+  - subject: tgn_endosomal_protein_sorting
+    predicate: connects
+    object: trans_golgi_network
+    description: TGN/endosomal protein sorting links TGN-derived vesicle traffic to
+      the trans-Golgi network.
+    evidence:
+    - reference: GO:0030130
+      notes: GO:0030130 identifies a clathrin coat on a TGN vesicle.
+    - reference: DOI:10.1091/MBC.E06-11-1000
+      notes: Copic et al. 2007 studied adaptor functions in TGN/endosomal trafficking.
+  - subject: tgn_endosomal_protein_sorting
+    predicate: connects
+    object: endosome
+    description: TGN/endosomal protein sorting links TGN-derived vesicle traffic to
+      endosomal compartments.
+    evidence:
+    - reference: DOI:10.1091/MBC.E06-11-1000
+      notes: Copic et al. 2007 studied cargo-specific protein trafficking between
+        the TGN and endosomes.
+discussions:
+- discussion_id: resolve_tgn_clathrin_coat_component_groundings
+  prompt: Resolve exact source-neutral groundings for TGN-vesicle clathrin triskelions
+    and adaptor/cargo-selection factors.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#clathrin_triskelion_scaffold
+  - components#tgn_clathrin_adaptors
+  rationale: GO:0030130 exactly grounds the TGN-vesicle clathrin coat, but this initial
+    pass keeps its triskelion scaffold and membrane/cargo adaptor classes reviewed-label-only
+    until exact source-neutral complex or protein-family identifiers are curated.
+  evidence:
+  - reference: GO:0030130
+  - reference: GO:0030118
+  - reference: DOI:10.1091/MBC.E06-11-1000
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: keep_tgn_clathrin_coat_distinct_from_broad_clathrin_coat
+  prompt: Keep the TGN-specific clathrin-coat record distinct from the broader clathrin
+    vesicle coat record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - part_of
+  rationale: GO:0030130 is the clathrin coat on trans-Golgi-network vesicles, whereas
+    GO:0030125 is the broader clathrin vesicle coat parent over endocytic, synaptic,
+    and TGN vesicle subclasses.
+  resolution_note: Used GO:0030130 as the record identifier, asserted GO:0030125 only
+    as an is-a parent, and linked the record by part_of to the GO:0012510 TGN transport-vesicle
+    membrane.
+  evidence:
+  - reference: GO:0030130
+    notes: GO:0030130 identifies the TGN vesicle-specific clathrin coat.
+  - reference: GO:0030125
+    notes: GO:0030125 identifies the broader clathrin vesicle coat parent.
+  - reference: GO:0012510
+    notes: GO:0030130 is part of the TGN transport-vesicle membrane identified by
+      GO:0012510.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
