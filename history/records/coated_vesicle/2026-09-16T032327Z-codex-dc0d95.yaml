@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/coated_vesicle.yaml
+  slug: coated_vesicle
+session:
+  id: 2026-09-16T032327Z-codex-dc0d95
+  timestamp: '2026-09-16T03:23:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1057
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1058
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1056
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address coated vesicle PR review issues
+  details: 'Addressed PR #1056 review issues #1057 and #1058 by replacing the broad coated-vesicle
+    evagination edge with direction-neutral coated-region pinching-off wording and adding
+    GO child evidence for clathrin-coated, COPI-coated, and ER-to-Golgi coated-vesicle membranes.'

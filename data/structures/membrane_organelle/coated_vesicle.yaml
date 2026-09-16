@@ -21,6 +21,19 @@ curation_history:
     scope, a vesicle-mediated transport function, GO/DOI evidence, a nonmechanistic
     coated-vesicle topology graph, and component-boundary TODOs.
   llm_assisted: true
+- timestamp: '2026-09-16T03:22:18Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1056 review issues #1057 and #1058 by replacing the broad
+    evagination edge with direction-neutral coated-region pinching-off wording and
+    by adding clathrin, COPI, and ER-to-Golgi coated-vesicle membrane GO evidence.'
+  llm_assisted: true
+- timestamp: '2026-09-16T03:22:53Z'
+  curator: codex
+  action: NORMALIZED_REVIEW_FIX_YAML
+  changes: Copied coated-vesicle membrane evidence entries inside the topology graph
+    so the review fix emits anchor-free YAML.
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 has_part:
@@ -64,6 +77,15 @@ components:
   - reference: GO:0030662
     notes: GO:0030662 defines the coated vesicle membrane as the lipid bilayer surrounding
       a coated vesicle.
+  - reference: GO:0030665
+    notes: GO:0030665 identifies the clathrin-coated vesicle membrane child of the
+      coated vesicle membrane.
+  - reference: GO:0030663
+    notes: GO:0030663 identifies the COPI-coated vesicle membrane child of the coated
+      vesicle membrane.
+  - reference: GO:0012507
+    notes: GO:0012507 identifies the ER-to-Golgi transport vesicle membrane carried
+      by COPII-coated ER-to-Golgi transport vesicles.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -99,6 +121,12 @@ evidence:
   notes: Gene Ontology cellular-component term for the vesicle coat.
 - reference: GO:0030662
   notes: Gene Ontology cellular-component term for the coated vesicle membrane.
+- reference: GO:0030665
+  notes: Gene Ontology cellular-component term for clathrin-coated vesicle membranes.
+- reference: GO:0030663
+  notes: Gene Ontology cellular-component term for COPI-coated vesicle membranes.
+- reference: GO:0012507
+  notes: Gene Ontology cellular-component term for ER-to-Golgi transport vesicle membranes.
 - reference: GO:0030136
   notes: Gene Ontology cellular-component child term for clathrin-coated vesicles.
 - reference: GO:0030137
@@ -124,15 +152,15 @@ causal_graphs:
 - graph_id: coated_vesicle_topology
   title: Coated-vesicle topology
   description: A protein coat and lipid-bilayer membrane form a coated vesicle that
-    buds from a donor membrane during vesicle-mediated transport.
+    pinches off from a coated donor-membrane region during vesicle-mediated transport.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures the broad coated-vesicle parent, its membrane and
     coat parts, and the transport function without asserting a universal clathrin,
-    COPI, or COPII adaptor system.
+    COPI, or COPII adaptor system or a single budding direction for every donor membrane.
   nodes:
-  - node_id: donor_membrane
-    label: donor membrane
+  - node_id: coated_membrane_region
+    label: coated membrane region
     node_type: STRUCTURE
   - node_id: coat_proteins
     label: coated vesicle coat proteins
@@ -184,15 +212,27 @@ causal_graphs:
     - reference: GO:0030662
       notes: GO:0030662 defines the coated vesicle membrane as the lipid bilayer surrounding
         a coated vesicle.
-  - subject: donor_membrane
-    predicate: evaginates into
+    - reference: GO:0030665
+      notes: GO:0030665 identifies the clathrin-coated vesicle membrane child of the
+        coated vesicle membrane.
+    - reference: GO:0030663
+      notes: GO:0030663 identifies the COPI-coated vesicle membrane child of the coated
+        vesicle membrane.
+    - reference: GO:0012507
+      notes: GO:0012507 identifies the ER-to-Golgi transport vesicle membrane carried
+        by COPII-coated ER-to-Golgi transport vesicles.
+  - subject: coated_membrane_region
+    predicate: pinches off into
     object: coated_vesicle
-    description: A coated vesicle forms by pinching off from a coated region of a
-      donor membrane.
+    description: A coated vesicle forms by pinching off from a coated region of membrane,
+      without specifying the topology of clathrin, COPI, or COPII budding.
     evidence:
     - reference: GO:0030135
       notes: GO:0030135 defines a coated vesicle as formed by pinching off of a coated
         region of membrane.
+    - reference: GO:0016192
+      notes: GO:0016192 defines vesicle-mediated transport as a process that includes
+        vesicle budding and coating.
   - subject: coated_vesicle
     predicate: participates in
     object: vesicle_mediated_transport
@@ -235,5 +275,8 @@ discussions:
     until an exact lipid or membrane-constituent CURIE is curated.
   evidence:
   - reference: GO:0030662
+  - reference: GO:0030665
+  - reference: GO:0030663
+  - reference: GO:0012507
   posed_by: codex
   posed_date: '2026-09-16'
