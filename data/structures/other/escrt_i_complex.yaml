@@ -27,6 +27,13 @@ curation_history:
   changes: Connected the ESCRT-I function graph to the endosome membrane with Katzmann
     et al. 2003 Vps27-dependent recruitment evidence.
   llm_assisted: true
+- timestamp: '2026-09-16T15:47:08Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1106 review issue #1107 by adding an open TODO that explicitly
+    tracks later Mvb12-family and lineage-specific ESCRT-I subunits instead of silently
+    omitting them from the first Vps23/Vps28/Vps37 core record.'
+  llm_assisted: true
 parent_structures:
 - GO:0036452
 part_of:
@@ -259,6 +266,24 @@ discussions:
   evidence:
   - reference: DOI:10.1016/S0092-8674(01)00434-2
   - reference: DOI:10.1016/j.devcel.2011.05.015
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: review_additional_escrt_i_subunits
+  prompt: Evaluate Mvb12-family and other lineage-specific ESCRT-I subunits before
+    completing the curated component list.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vps23_escrt_i_subunit
+  - components#vps28_escrt_i_subunit
+  - components#vps37_escrt_i_subunit
+  rationale: This first record starts with the Vps23/Vps28/Vps37 core identified in
+    2001. Chu et al. 2006 and Curtiss et al. 2007 later identified Mvb12 as an additional
+    yeast ESCRT-I subunit, so Mvb12-family and other lineage-specific components need
+    a dedicated source review before they are added or excluded.
+  evidence:
+  - reference: DOI:10.1083/jcb.200608053
+  - reference: DOI:10.1091/mbc.e06-07-0588
   posed_by: codex
   posed_date: '2026-09-16'
 - discussion_id: vps27_not_escrt_i_component
