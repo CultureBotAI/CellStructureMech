@@ -1,0 +1,282 @@
+identifier: GO:0030122
+label: AP-2 adaptor complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterotetrameric AP-type membrane coat adaptor complex that consists
+  of alpha, beta2, mu2 and sigma2 subunits, and links clathrin to the membrane surface
+  of a vesicle, and the cargo receptors during receptor/clathrin mediated endocytosis.
+  Vesicles with AP-2-containing coats are normally found primarily near the plasma
+  membrane, on endocytic vesicles. In at least humans, the AP-2 complex can be heterogeneric
+  due to the existence of multiple subunit isoforms encoded by different alpha genes
+  (alphaA and alphaC).
+definition_source: GO:0030122
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T13:22:29Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T13:23:12Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added clathrin-adaptor and plasma-membrane-complex parentage, endocytic-vesicle
+    and coated-pit clathrin-coat parthood, reviewed-label-only alpha/beta2/mu2/sigma2
+    subunits, GO/DOI evidence, a nonmechanistic AP-2 topology graph, and coat-boundary,
+    alpha-isoform and subunit-grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-16T13:30:22Z'
+  curator: codex
+  action: CURATED_ID_LABEL_CORRESPONDENCE
+  changes: Changed the GO:0072583-grounded AP-2 function label to the canonical GO
+    label clathrin-dependent endocytosis
+  llm_assisted: true
+- timestamp: '2026-09-16T13:38:05Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Aligned the AP-2 alpha isoform boundary discussion with GO''s alphaA/alphaC
+    nomenclature; addresses PR #1098 review issue #1099.'
+  llm_assisted: true
+parent_structures:
+- GO:0030131
+- GO:0098797
+part_of:
+- GO:0030128
+- GO:0030132
+components:
+- component_id: ap2_alpha_subunit
+  label: AP-2 alpha subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Large alpha subunit of the heterotetrameric AP-2 adaptor complex.
+  evidence:
+  - reference: GO:0030122
+    notes: GO:0030122 defines the AP-2 adaptor complex as consisting of alpha, beta2,
+      mu2 and sigma2 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-2 alpha subunit is a subtype-specific AP-2 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap2_beta2_subunit
+  label: AP-2 beta2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Large beta2 subunit of the heterotetrameric AP-2 adaptor complex.
+  evidence:
+  - reference: GO:0030122
+    notes: GO:0030122 defines the AP-2 adaptor complex as consisting of alpha, beta2,
+      mu2 and sigma2 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-2 beta2 subunit is a subtype-specific AP-2 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap2_mu2_subunit
+  label: AP-2 mu2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Medium mu2 subunit of the heterotetrameric AP-2 adaptor complex.
+  evidence:
+  - reference: GO:0030122
+    notes: GO:0030122 defines the AP-2 adaptor complex as consisting of alpha, beta2,
+      mu2 and sigma2 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-2 mu2 subunit is a subtype-specific AP-2 subunit class; no exact
+    source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap2_sigma2_subunit
+  label: AP-2 sigma2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Small sigma2 subunit of the heterotetrameric AP-2 adaptor complex.
+  evidence:
+  - reference: GO:0030122
+    notes: GO:0030122 defines the AP-2 adaptor complex as consisting of alpha, beta2,
+      mu2 and sigma2 subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-2 sigma2 subunit is a subtype-specific AP-2 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+functions:
+- function_id: ap2_receptor_clathrin_mediated_endocytosis
+  label: clathrin-dependent endocytosis
+  grounding: GO:0072583
+  description: AP-2 links clathrin to endocytic vesicle membranes and cargo receptors
+    during clathrin-dependent endocytosis.
+  evidence:
+  - reference: GO:0030122
+    notes: GO:0030122 defines AP-2 by its clathrin-, membrane- and cargo-receptor-linking
+      role during receptor/clathrin-mediated endocytosis.
+  - reference: DOI:10.1016/j.cell.2010.05.006
+    notes: Jackson et al. 2010 analyze AP-2 membrane recruitment and cargo binding.
+evidence:
+- reference: GO:0030122
+  notes: Gene Ontology cellular-component term for the AP-2 adaptor complex.
+- reference: GO:0030131
+  notes: Gene Ontology cellular-component parent term for clathrin adaptor complexes.
+- reference: GO:0098797
+  notes: Gene Ontology cellular-component parent term for plasma membrane protein
+    complexes.
+- reference: GO:0030128
+  notes: Gene Ontology cellular-component term for the endocytic-vesicle clathrin
+    coat containing AP-2.
+- reference: GO:0030132
+  notes: Gene Ontology cellular-component term for the coated-pit clathrin coat containing
+    AP-2.
+- reference: DOI:10.1016/S0092-8674(02)00735-3
+  notes: Collins, McCoy, Kent, Evans and Owen 2002, Molecular Architecture and Functional
+    Model of the Endocytic AP2 Complex, Cell.
+- reference: DOI:10.1016/j.cell.2010.05.006
+  notes: Jackson et al. 2010, A Large-Scale Conformational Change Couples Membrane
+    Recruitment to Cargo Binding in the AP2 Clathrin Adaptor Complex, Cell.
+causal_graphs:
+- graph_id: ap2_adaptor_complex_topology
+  title: Alpha, beta2, mu2 and sigma2 subunits form AP-2
+  description: The AP-2 adaptor complex is a plasma-membrane clathrin adaptor and
+    heterotetrameric part of endocytic and coated-pit clathrin coats.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AP-2 composition and GO coat placement without modeling
+    cargo-receptor recognition, phosphoinositide regulation or the AP-2 conformational
+    cycle.
+  nodes:
+  - node_id: ap2_alpha_subunit
+    label: AP-2 alpha subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap2_alpha_subunit
+  - node_id: ap2_beta2_subunit
+    label: AP-2 beta2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap2_beta2_subunit
+  - node_id: ap2_mu2_subunit
+    label: AP-2 mu2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap2_mu2_subunit
+  - node_id: ap2_sigma2_subunit
+    label: AP-2 sigma2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap2_sigma2_subunit
+  - node_id: ap2_adaptor_complex
+    label: AP-2 adaptor complex
+    node_type: STRUCTURE
+    grounding: GO:0030122
+  - node_id: clathrin_coat_of_endocytic_vesicle
+    label: clathrin coat of endocytic vesicle
+    node_type: STRUCTURE
+    grounding: GO:0030128
+  - node_id: clathrin_coat_of_coated_pit
+    label: clathrin coat of coated pit
+    node_type: STRUCTURE
+    grounding: GO:0030132
+  - node_id: clathrin_dependent_endocytosis
+    label: clathrin-dependent endocytosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0072583
+  edges:
+  - subject: ap2_alpha_subunit
+    predicate: is part of
+    object: ap2_adaptor_complex
+    description: Alpha is a constituent of each heterotetrameric AP-2 adaptor complex.
+    evidence:
+    - reference: GO:0030122
+      notes: GO:0030122 lists Alpha as an AP-2 constituent.
+  - subject: ap2_beta2_subunit
+    predicate: is part of
+    object: ap2_adaptor_complex
+    description: Beta2 is a constituent of each heterotetrameric AP-2 adaptor complex.
+    evidence:
+    - reference: GO:0030122
+      notes: GO:0030122 lists Beta2 as an AP-2 constituent.
+  - subject: ap2_mu2_subunit
+    predicate: is part of
+    object: ap2_adaptor_complex
+    description: Mu2 is a constituent of each heterotetrameric AP-2 adaptor complex.
+    evidence:
+    - reference: GO:0030122
+      notes: GO:0030122 lists Mu2 as an AP-2 constituent.
+  - subject: ap2_sigma2_subunit
+    predicate: is part of
+    object: ap2_adaptor_complex
+    description: Sigma2 is a constituent of each heterotetrameric AP-2 adaptor complex.
+    evidence:
+    - reference: GO:0030122
+      notes: GO:0030122 lists Sigma2 as an AP-2 constituent.
+  - subject: ap2_adaptor_complex
+    predicate: is part of
+    object: clathrin_coat_of_endocytic_vesicle
+    description: GO models AP-2 as part of the clathrin coat of an endocytic vesicle.
+    evidence:
+    - reference: GO:0030122
+      notes: GO:0030122 has a part-of relationship to GO:0030128 clathrin coat of
+        endocytic vesicle.
+  - subject: ap2_adaptor_complex
+    predicate: is part of
+    object: clathrin_coat_of_coated_pit
+    description: GO models AP-2 as part of the clathrin coat of a coated pit.
+    evidence:
+    - reference: GO:0030122
+      notes: GO:0030122 has a part-of relationship to GO:0030132 clathrin coat of
+        coated pit.
+  - subject: ap2_adaptor_complex
+    predicate: supports
+    object: clathrin_dependent_endocytosis
+    description: AP-2 links clathrin to endocytic membranes and cargo receptors during
+      receptor/clathrin-mediated endocytosis.
+    evidence:
+    - reference: GO:0030122
+      notes: GO:0030122 defines AP-2 by this endocytic linking role.
+    - reference: DOI:10.1016/j.cell.2010.05.006
+      notes: Jackson et al. 2010 analyze the coupling between AP-2 membrane recruitment
+        and cargo binding.
+discussions:
+- discussion_id: ap2_coat_boundary
+  prompt: Represent AP-2 as an adaptor complex within endocytic clathrin coats, not
+    as a complete clathrin coat.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - parent_structures
+  - part_of
+  rationale: GO:0030122 is a clathrin adaptor complex and plasma membrane protein
+    complex that is part of GO:0030128 clathrin coat of endocytic vesicle and GO:0030132
+    clathrin coat of coated pit. This record therefore represents the AP-2 adaptor
+    heterotetramer and links it to those containing coats through part_of.
+  evidence:
+  - reference: GO:0030122
+    notes: GO relationship source for AP-2.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: ap2_alpha_isoform_boundary
+  prompt: Represent alphaA and alphaC as isoforms of one AP-2 alpha subunit class.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#ap2_alpha_subunit
+  rationale: The GO definition notes that human AP-2 can be heterogeneric because
+    alphaA and alphaC isoforms are encoded by different genes. The taxon-agnostic
+    component list therefore keeps one AP-2 alpha subunit class rather than making
+    human paralogs separate core component classes.
+  evidence:
+  - reference: GO:0030122
+    notes: GO definition source for AP-2 alpha subunit isoform handling.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: resolve_ap2_subunit_groundings
+  prompt: Resolve exact source-neutral groundings for the AP-2 alpha, beta2, mu2 and
+    sigma2 subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ap2_alpha_subunit
+  - components#ap2_beta2_subunit
+  - components#ap2_mu2_subunit
+  - components#ap2_sigma2_subunit
+  rationale: GO gives the exact AP-2 complex identity and names its subunit classes,
+    but exact source-neutral InterPro, Pfam or NCBIfam CURIEs for those AP-2-specific
+    classes were not curated in this pass.
+  evidence:
+  - reference: GO:0030122
+    notes: GO definition for AP-2-specific subunit classes.
+  posed_by: codex
+  posed_date: '2026-09-16'

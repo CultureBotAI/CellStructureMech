@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ap_2_adaptor_complex.yaml
+  slug: ap_2_adaptor_complex
+session:
+  id: 2026-09-16T132336Z-codex-08cc0b
+  timestamp: '2026-09-16T13:23:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the AP-2 adaptor complex record
+  details: Created an evidence-backed GO:0030122 AP-2 adaptor complex record with clathrin-adaptor
+    and plasma-membrane-complex parentage, endocytic-vesicle and coated-pit clathrin-coat
+    parthood, reviewed-label-only alpha, beta2, mu2 and sigma2 subunit classes, Collins et
+    al. 2002 and Jackson et al. 2010 AP-2 evidence, a nonmechanistic AP-2 topology graph,
+    and explicit boundary discussions for AP-2 versus containing clathrin coats, AP-2 alpha
+    isoforms, and unresolved subunit groundings.
