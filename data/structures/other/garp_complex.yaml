@@ -1,0 +1,289 @@
+identifier: GO:0000938
+label: GARP complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A quatrefoil tethering complex required for retrograde traffic from the
+  early endosome back to the late Golgi and biogenesis of cytoplasmic vesicles.
+definition_source: GO:0000938
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T18:36:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T18:37:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GARP synonymy, vesicle-tethering parentage, reviewed-label-only Vps51/Vps52/Vps53/Vps54
+    yeast components, Saccharomyces scope, an endosome-to-Golgi retrograde-transport
+    function, GO/DOI evidence, a nonmechanistic yeast TGN tethering graph, a subunit-grounding
+    TODO, and a resolved Tlg1 boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-16T18:47:06Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1118 / issue #1119 by narrowing the resolved GARP interactor
+    boundary to the cited Vps51-Tlg1p association.'
+  llm_assisted: true
+parent_structures:
+- GO:0099023
+synonyms:
+- synonym_text: Golgi associated retrograde protein complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000938
+- synonym_text: VFT tethering complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000938
+- synonym_text: Vps fifty three tethering complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000938
+components:
+- component_id: vps51_garp_subunit
+  label: Vps51 GARP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS51
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps51 GARP subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this GARP subunit
+    class was curated in this pass.
+  role: Small coiled-coil GARP subunit that links the complex to the late-Golgi t-SNARE
+    Tlg1p.
+  evidence:
+  - reference: DOI:10.1091/mbc.e02-10-0654
+    notes: Conibear, Cleck and Stevens 2003 showed that Vps51 is an additional subunit
+      of the tetrameric yeast GARP complex.
+- component_id: vps52_garp_subunit
+  label: Vps52 GARP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS52
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps52 GARP subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this GARP subunit
+    class was curated in this pass.
+  role: Constituent of the Vps52/Vps53/Vps54 core complex required for late-Golgi
+    protein sorting.
+  evidence:
+  - reference: DOI:10.1091/mbc.e02-10-0654
+    notes: Conibear, Cleck and Stevens 2003 described yeast GARP as a tetrameric Vps51/Vps52/Vps53/Vps54
+      complex.
+- component_id: vps53_garp_subunit
+  label: Vps53 GARP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS53
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps53 GARP subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this GARP subunit
+    class was curated in this pass.
+  role: Constituent of the Vps52/Vps53/Vps54 core complex required for late-Golgi
+    protein sorting.
+  evidence:
+  - reference: DOI:10.1091/mbc.e02-10-0654
+    notes: Conibear, Cleck and Stevens 2003 described yeast GARP as a tetrameric Vps51/Vps52/Vps53/Vps54
+      complex.
+- component_id: vps54_garp_subunit
+  label: Vps54 GARP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS54
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps54 GARP subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this GARP subunit
+    class was curated in this pass.
+  role: Constituent of the Vps52/Vps53/Vps54 core complex required for late-Golgi
+    protein sorting.
+  evidence:
+  - reference: DOI:10.1091/mbc.e02-10-0654
+    notes: Conibear, Cleck and Stevens 2003 described yeast GARP as a tetrameric Vps51/Vps52/Vps53/Vps54
+      complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses the Vps51/Vps52/Vps53/Vps54 GARP complex in retrograde
+    traffic from endosomes back to the trans-Golgi network.
+  reference: DOI:10.1091/mbc.e02-10-0654
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Vps51 was identified as the fourth member of
+    the Vps52/Vps53/Vps54 GARP tethering complex.
+  reference: DOI:10.1091/mbc.e02-10-0654
+functions:
+- function_id: retrograde_transport_endosome_to_golgi
+  label: retrograde transport, endosome to Golgi
+  grounding: GO:0042147
+  description: GARP is a Golgi-localized tethering complex required for retrograde
+    transport from early and late endosomes back to the trans-Golgi network.
+  evidence:
+  - reference: GO:0042147
+    notes: GO:0042147 denotes vesicle-mediated retrograde transport from endosomes
+      back to the trans-Golgi network.
+  - reference: DOI:10.1091/mbc.e02-10-0654
+    notes: Conibear, Cleck and Stevens 2003 found that all four yeast GARP members
+      are required for retrograde transport from early and late endosomes back to
+      the trans-Golgi network.
+evidence:
+- reference: GO:0000938
+  notes: Gene Ontology cellular-component term for the GARP complex.
+- reference: GO:0099023
+  notes: Gene Ontology cellular-component parent term for vesicle tethering complexes.
+- reference: GO:0042147
+  notes: Gene Ontology biological-process term for retrograde endosome-to-Golgi transport.
+- reference: DOI:10.1091/mbc.11.1.305
+  notes: Conibear and Stevens 2000, Vps52p, Vps53p, and Vps54p form a novel multisubunit
+    complex required for protein sorting at the yeast late Golgi, Molecular Biology
+    of the Cell.
+- reference: DOI:10.1091/mbc.e02-10-0654
+  notes: Conibear, Cleck and Stevens 2003, Vps51p mediates the association of the
+    GARP (Vps52/53/54) complex with the late Golgi t-SNARE Tlg1p, Molecular Biology
+    of the Cell.
+causal_graphs:
+- graph_id: yeast_garp_endosome_to_golgi_tethering
+  title: GARP supports yeast endosome-to-Golgi retrograde transport
+  description: In Saccharomyces cerevisiae, Vps51 joins Vps52, Vps53 and Vps54 to
+    form the GARP complex, a trans-Golgi-network tethering complex that links retrograde
+    endosome-to-Golgi transport to the t-SNARE Tlg1p.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents yeast GARP subunit membership, Vps51-Tlg1 association,
+    TGN localization and endosome-to-Golgi transport involvement without modeling
+    SNARE-mediated fusion steps.
+  nodes:
+  - node_id: vps51_garp_subunit
+    label: Vps51 GARP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps51_garp_subunit
+  - node_id: vps52_garp_subunit
+    label: Vps52 GARP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps52_garp_subunit
+  - node_id: vps53_garp_subunit
+    label: Vps53 GARP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps53_garp_subunit
+  - node_id: vps54_garp_subunit
+    label: Vps54 GARP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps54_garp_subunit
+  - node_id: garp_complex
+    label: GARP complex
+    node_type: STRUCTURE
+    grounding: GO:0000938
+  - node_id: trans_golgi_network
+    label: trans-Golgi network
+    node_type: STRUCTURE
+    grounding: GO:0005802
+  - node_id: tlg1_snare
+    label: Tlg1 t-SNARE
+    node_type: GENE_OR_PROTEIN
+  - node_id: retrograde_transport_endosome_to_golgi
+    label: retrograde transport, endosome to Golgi
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042147
+  edges:
+  - subject: vps51_garp_subunit
+    predicate: is part of
+    object: garp_complex
+    description: Vps51 GARP subunit is represented as a Saccharomyces cerevisiae GARP
+      subunit.
+    evidence:
+    - reference: DOI:10.1091/mbc.e02-10-0654
+      notes: Conibear, Cleck and Stevens 2003 described yeast GARP as a tetramer containing
+        Vps51, Vps52, Vps53 and Vps54.
+  - subject: vps52_garp_subunit
+    predicate: is part of
+    object: garp_complex
+    description: Vps52 GARP subunit is represented as a Saccharomyces cerevisiae GARP
+      subunit.
+    evidence:
+    - reference: DOI:10.1091/mbc.e02-10-0654
+      notes: Conibear, Cleck and Stevens 2003 described yeast GARP as a tetramer containing
+        Vps51, Vps52, Vps53 and Vps54.
+  - subject: vps53_garp_subunit
+    predicate: is part of
+    object: garp_complex
+    description: Vps53 GARP subunit is represented as a Saccharomyces cerevisiae GARP
+      subunit.
+    evidence:
+    - reference: DOI:10.1091/mbc.e02-10-0654
+      notes: Conibear, Cleck and Stevens 2003 described yeast GARP as a tetramer containing
+        Vps51, Vps52, Vps53 and Vps54.
+  - subject: vps54_garp_subunit
+    predicate: is part of
+    object: garp_complex
+    description: Vps54 GARP subunit is represented as a Saccharomyces cerevisiae GARP
+      subunit.
+    evidence:
+    - reference: DOI:10.1091/mbc.e02-10-0654
+      notes: Conibear, Cleck and Stevens 2003 described yeast GARP as a tetramer containing
+        Vps51, Vps52, Vps53 and Vps54.
+  - subject: vps51_garp_subunit
+    predicate: binds
+    object: tlg1_snare
+    description: Yeast Vps51 links GARP to the late-Golgi t-SNARE Tlg1p.
+    evidence:
+    - reference: DOI:10.1091/mbc.e02-10-0654
+      notes: Conibear, Cleck and Stevens 2003 found that Vps51 mediates the association
+        of GARP with Tlg1p.
+  - subject: garp_complex
+    predicate: localizes to
+    object: trans_golgi_network
+    description: Yeast GARP is represented as a Golgi-localized tethering complex.
+    evidence:
+    - reference: DOI:10.1091/mbc.11.1.305
+      notes: Conibear and Stevens 2000 localized the Vps52/Vps53/Vps54 complex with
+        yeast late-Golgi markers.
+  - subject: garp_complex
+    predicate: participates in
+    object: retrograde_transport_endosome_to_golgi
+    description: GARP is required for retrograde protein traffic from endosomes back
+      to the trans-Golgi network.
+    evidence:
+    - reference: DOI:10.1091/mbc.e02-10-0654
+      notes: Conibear, Cleck and Stevens 2003 showed that the four members of yeast
+        GARP are required for retrograde transport to the trans-Golgi network.
+discussions:
+- discussion_id: resolve_garp_component_family_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, or Complex Portal groundings
+    for the four GARP subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vps51_garp_subunit
+  - components#vps52_garp_subunit
+  - components#vps53_garp_subunit
+  - components#vps54_garp_subunit
+  rationale: The yeast literature names the Vps51/Vps52/Vps53/Vps54 proteins as GARP
+    subunits, but this pass did not verify exact taxon-neutral family identifiers
+    for those subunit classes.
+  evidence:
+  - reference: DOI:10.1091/mbc.e02-10-0654
+    notes: Conibear, Cleck and Stevens 2003 identified the four named yeast GARP subunits.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: garp_tlg1_interactor_boundary
+  prompt: Do not model Tlg1p as a constituent GARP component.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#yeast_garp_endosome_to_golgi_tethering
+  rationale: Tlg1p links to GARP through Vps51, but the canonical GARP constituent
+    list is Vps51, Vps52, Vps53 and Vps54.
+  evidence:
+  - reference: DOI:10.1091/mbc.e02-10-0654
+    notes: Conibear, Cleck and Stevens 2003 defined tetrameric GARP as the Vps51/Vps52/Vps53/Vps54
+      complex and described its association with Tlg1p.
+  posed_by: codex
+  posed_date: '2026-09-16'
