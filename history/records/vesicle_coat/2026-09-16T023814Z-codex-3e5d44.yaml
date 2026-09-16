@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/vesicle_coat.yaml
+  slug: vesicle_coat
+session:
+  id: 2026-09-16T023814Z-codex-3e5d44
+  timestamp: '2026-09-16T02:38:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - distribution
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the GO vesicle coat parent record
+  details: Created data/structures/other/vesicle_coat.yaml for GO:0030120 using GO vesicle-coat,
+    membrane-coat, coated-vesicle-membrane, clathrin, COPI, and COPII structure terms plus
+    representative clathrin, COPI, and COPII primary literature. Kept the component model
+    broad with a reviewed-label-only scaffold component and an open subtype-boundary TODO
+    so subtype-specific Arf, Sar1, coatomer, Sec, clathrin, and adaptor boundaries stay in
+    child records.
