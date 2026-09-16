@@ -1,0 +1,220 @@
+identifier: GO:0012510
+label: trans-Golgi network transport vesicle membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding a vesicle transporting substances between
+  the trans-Golgi network and other parts of the cell.
+definition_source: GO:0012510
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T06:45:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T06:46:24Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO transport/Golgi-associated/clathrin-coated vesicle membrane parentage,
+    TGN transport vesicle parthood, the GO exact synonyms, a reviewed-label-only lipid-bilayer
+    component, Saccharomyces TGN/endosome traffic scope, GO/DOI evidence, a nonmechanistic
+    TGN transport vesicle membrane topology graph, and lipid-grounding plus clathrin-coat
+    boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0030658
+- GO:0030660
+- GO:0030665
+part_of:
+- GO:0030140
+has_part:
+- GO:0030130
+synonyms:
+- synonym_text: TGN transport vesicle membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0012510
+- synonym_text: trans-Golgi network constitutive secretory pathway transport vesicle
+    membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0012510
+components:
+- component_id: trans_golgi_network_transport_vesicle_membrane_lipid_bilayer
+  label: trans-Golgi network transport vesicle membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent of the trans-Golgi network transport vesicle membrane
+    that surrounds a TGN transport vesicle.
+  evidence:
+  - reference: GO:0012510
+    notes: GO:0012510 defines the trans-Golgi network transport vesicle membrane as
+      the lipid bilayer surrounding a vesicle moving material between the TGN and
+      other compartments.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0012510 identifies the whole trans-Golgi network transport vesicle
+    membrane, but no separate source-neutral CURIE was curated for the generic lipid
+    constituent of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Holthuis et al. characterized Tlg1p and Tlg2p as Saccharomyces syntaxins in
+    the TGN/endosomal system.
+  reference: DOI:10.1093/emboj/17.1.113
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Ent3p and Ent5p adaptor functions in protein
+    trafficking between the trans-Golgi network and endosomes were dissected.
+  reference: DOI:10.1091/MBC.E06-11-1000
+evidence:
+- reference: GO:0012510
+  notes: Gene Ontology cellular-component term for trans-Golgi network transport vesicle
+    membranes.
+- reference: GO:0030658
+  notes: Gene Ontology cellular-component direct parent term for transport vesicle
+    membranes.
+- reference: GO:0030660
+  notes: Gene Ontology cellular-component direct parent term for Golgi-associated
+    vesicle membranes.
+- reference: GO:0030665
+  notes: Gene Ontology cellular-component direct parent term for clathrin-coated vesicle
+    membranes.
+- reference: GO:0030140
+  notes: Gene Ontology cellular-component term for the containing trans-Golgi network
+    transport vesicle.
+- reference: GO:0030130
+  notes: Gene Ontology cellular-component term for the clathrin coat of a trans-Golgi
+    network vesicle that is part of the TGN transport vesicle membrane.
+- reference: GO:0005802
+  notes: Gene Ontology cellular-component term for the trans-Golgi network.
+- reference: GO:0005768
+  notes: Gene Ontology cellular-component term for endosomes.
+- reference: DOI:10.1093/emboj/17.1.113
+  notes: Holthuis et al. 1998, 'Two syntaxin homologues in the TGN/endosomal system
+    of yeast', EMBO Journal.
+- reference: DOI:10.1091/MBC.E06-11-1000
+  notes: Copic et al. 2007, 'Ent3p and Ent5p exhibit cargo-specific functions in trafficking
+    proteins between the trans-Golgi network and the endosomes in yeast', Molecular
+    Biology of the Cell.
+causal_graphs:
+- graph_id: tgn_transport_vesicle_membrane_topology
+  title: Trans-Golgi network transport vesicle membrane topology
+  description: The trans-Golgi network transport vesicle membrane is the clathrin-coated
+    lipid-bilayer boundary of a TGN transport vesicle.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the vesicle-membrane boundary, the GO-grounded TGN
+    clathrin coat parthood, and TGN/endosome traffic without asserting the full clathrin-adaptor
+    assembly mechanism.
+  nodes:
+  - node_id: trans_golgi_network_transport_vesicle_membrane
+    label: trans-Golgi network transport vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0012510
+    component_ref: trans_golgi_network_transport_vesicle_membrane_lipid_bilayer
+  - node_id: trans_golgi_network_transport_vesicle
+    label: trans-Golgi network transport vesicle
+    node_type: ORGANELLE
+    grounding: GO:0030140
+  - node_id: tgn_clathrin_coat
+    label: clathrin coat of trans-Golgi network vesicle
+    node_type: STRUCTURE
+    grounding: GO:0030130
+  - node_id: trans_golgi_network
+    label: trans-Golgi network
+    node_type: ORGANELLE
+    grounding: GO:0005802
+  - node_id: endosome
+    label: endosome
+    node_type: ORGANELLE
+    grounding: GO:0005768
+  - node_id: tgn_endosomal_protein_sorting
+    label: TGN/endosomal protein sorting
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: trans_golgi_network_transport_vesicle_membrane
+    predicate: is part of
+    object: trans_golgi_network_transport_vesicle
+    description: The trans-Golgi network transport vesicle membrane is part of a TGN
+      transport vesicle.
+    evidence:
+    - reference: GO:0012510
+      notes: GO:0012510 identifies the TGN transport vesicle membrane.
+    - reference: GO:0030140
+      notes: GO:0030140 identifies the containing TGN transport vesicle.
+  - subject: trans_golgi_network_transport_vesicle_membrane
+    predicate: bounds
+    object: trans_golgi_network_transport_vesicle
+    description: The TGN transport vesicle membrane surrounds a vesicle that carries
+      material between the TGN and other compartments.
+    evidence:
+    - reference: GO:0012510
+      notes: GO:0012510 defines this structure as the lipid bilayer surrounding a
+        TGN transport vesicle.
+  - subject: tgn_clathrin_coat
+    predicate: is part of
+    object: trans_golgi_network_transport_vesicle_membrane
+    description: The clathrin coat of a TGN vesicle is a coat part on the TGN transport
+      vesicle membrane.
+    evidence:
+    - reference: GO:0030130
+      notes: GO:0030130 records the clathrin coat of a TGN vesicle as part of a GO:0012510
+        trans-Golgi network transport vesicle membrane.
+  - subject: trans_golgi_network_transport_vesicle_membrane
+    predicate: supports
+    object: tgn_endosomal_protein_sorting
+    description: TGN transport vesicle membranes participate in vesicular traffic
+      between the TGN and endosomes.
+    evidence:
+    - reference: GO:0012510
+      notes: GO:0012510 identifies this membrane as surrounding vesicles that move
+        material between the TGN and other compartments.
+    - reference: DOI:10.1091/MBC.E06-11-1000
+      notes: Copic et al. 2007 studied Ent3p/Ent5p functions in yeast trafficking
+        between the TGN and endosomes.
+  - subject: tgn_endosomal_protein_sorting
+    predicate: connects
+    object: endosome
+    description: TGN/endosomal protein sorting links TGN-derived transport-vesicle
+      traffic to endosomal compartments.
+    evidence:
+    - reference: DOI:10.1091/MBC.E06-11-1000
+      notes: Copic et al. 2007 framed Ent3p/Ent5p adaptor roles as cargo-specific
+        trafficking between the TGN and endosomes.
+discussions:
+- discussion_id: ground_tgn_transport_vesicle_membrane_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    trans-Golgi network transport vesicle membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#trans_golgi_network_transport_vesicle_membrane_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0012510, but the TGN transport vesicle
+    membrane lipid-bilayer constituent is intentionally left reviewed-label-only until
+    an exact source-neutral lipid or membrane-constituent CURIE is curated.
+  evidence:
+  - reference: GO:0012510
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: keep_tgn_clathrin_coat_off_lipid_components
+  prompt: Keep the clathrin coat of TGN vesicles as a structural part rather than
+    a lipid-bilayer component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#tgn_transport_vesicle_membrane_topology
+  rationale: GO:0030130 denotes the protein coat part of the membrane, whereas GO:0012510
+    denotes the vesicle-bounding lipid bilayer membrane.
+  resolution_note: Mirrored GO:0030130 as a structural has_part relation while representing
+    only the reviewed-label-only lipid bilayer as a direct membrane component.
+  evidence:
+  - reference: GO:0012510
+    notes: GO:0012510 identifies the whole TGN transport vesicle membrane.
+  - reference: GO:0030130
+    notes: GO:0030130 identifies the clathrin coat of a TGN vesicle that GO models
+      as part of GO:0012510.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
