@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ap_5_adaptor_complex.yaml
+  slug: ap_5_adaptor_complex
+session:
+  id: 2026-09-16T143549Z-codex-d86d1d
+  timestamp: '2026-09-16T14:35:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add AP-5 adaptor complex structure record
+  details: Created a GO-grounded AP-5 adaptor complex record with AP-type parentage, GO synonym
+    evidence, reviewed-label-only beta5/zeta/mu5/sigma5 subunits, Hirst et al. 2011 human
+    HeLa-cell evidence, a cautious endosomal-sorting function, and a nonmechanistic AP-5 topology
+    graph.

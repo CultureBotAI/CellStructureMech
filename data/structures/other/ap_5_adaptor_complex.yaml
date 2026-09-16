@@ -1,0 +1,242 @@
+identifier: GO:0044599
+label: AP-5 adaptor complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An AP-type membrane coat adaptor complex that in humans consists of beta5,
+  zeta, mu5 and sigma5 subunits and is found associated with membranes in the endosomes;
+  it is not clear whether AP-5 forms clathrin coats in vivo.
+definition_source: GO:0044599
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T14:33:55Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T14:35:10Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added AP-type parentage, the GO exact synonym, reviewed-label-only beta5/zeta/mu5/sigma5
+    subunits, human HeLa-cell AP-5 distribution and function evidence, GO/DOI evidence,
+    a nonmechanistic AP-5 topology graph, and clathrin-scope and subunit-grounding
+    discussions.
+  llm_assisted: true
+- timestamp: '2026-09-16T14:47:12Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Clarified the AP-5 human HeLa taxonomic note so AP-5 identification and
+    tagged-AP-5 localization are separate Hirst et al. 2011 findings; addresses PR
+    #1102 review issue #1103.'
+  llm_assisted: true
+parent_structures:
+- GO:0030119
+synonyms:
+- synonym_text: adaptor protein-5 adaptor complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0044599
+components:
+- component_id: ap5_beta5_subunit
+  label: AP-5 beta5 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Large beta5 subunit of the heterotetrameric AP-5 adaptor complex.
+  evidence:
+  - reference: GO:0044599
+    notes: GO:0044599 defines human AP-5 as consisting of beta5, zeta, mu5 and sigma5
+      subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-5 beta5 subunit is a subtype-specific AP-5 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap5_zeta_subunit
+  label: AP-5 zeta subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Large zeta subunit of the heterotetrameric AP-5 adaptor complex.
+  evidence:
+  - reference: GO:0044599
+    notes: GO:0044599 defines human AP-5 as consisting of beta5, zeta, mu5 and sigma5
+      subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-5 zeta subunit is a subtype-specific AP-5 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap5_mu5_subunit
+  label: AP-5 mu5 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Medium mu5 subunit of the heterotetrameric AP-5 adaptor complex.
+  evidence:
+  - reference: GO:0044599
+    notes: GO:0044599 defines human AP-5 as consisting of beta5, zeta, mu5 and sigma5
+      subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-5 mu5 subunit is a subtype-specific AP-5 subunit class; no exact
+    source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+- component_id: ap5_sigma5_subunit
+  label: AP-5 sigma5 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Small sigma5 subunit of the heterotetrameric AP-5 adaptor complex.
+  evidence:
+  - reference: GO:0044599
+    notes: GO:0044599 defines human AP-5 as consisting of beta5, zeta, mu5 and sigma5
+      subunits.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: AP-5 sigma5 subunit is a subtype-specific AP-5 subunit class; no
+    exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  presence: COMMON
+  note: Hirst et al. identified human AP-5 in HeLa cells, and tagged AP-5 localized
+    to a late endosomal compartment in that system.
+  reference: DOI:10.1371/journal.pbio.1001170
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: HeLa-cell model in which AP-5 was identified as a fifth heterotetrameric adaptor
+    complex and connected to late endosomal localization.
+  reference: DOI:10.1371/journal.pbio.1001170
+functions:
+- function_id: ap5_endosomal_sorting
+  label: AP-5-associated endosomal sorting
+  description: AP-5 is an endosome-associated adaptor complex implicated in sorting
+    cargo through late endosomal compartments.
+  evidence:
+  - reference: DOI:10.1371/journal.pbio.1001170
+    notes: Hirst et al. 2011 showed that tagged AP-5 localizes to a late endosomal
+      compartment in HeLa cells and that AP-5 subunit knockdown perturbs cation-independent
+      mannose 6-phosphate receptor trafficking and produces swollen endosomal structures
+      with tubules.
+evidence:
+- reference: GO:0044599
+  notes: Gene Ontology cellular-component term for the AP-5 adaptor complex.
+- reference: GO:0030119
+  notes: Gene Ontology cellular-component parent term for AP-type membrane coat adaptor
+    complexes.
+- reference: DOI:10.1371/journal.pbio.1001170
+  notes: Hirst et al. 2011, The Fifth Adaptor Protein Complex, PLoS Biology.
+causal_graphs:
+- graph_id: ap5_adaptor_complex_topology
+  title: Beta5, zeta, mu5 and sigma5 subunits form AP-5
+  description: The AP-5 adaptor complex is a heterotetramer associated with endosomal
+    membranes and implicated in endosomal cargo sorting.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AP-5 composition and endosomal association without
+    asserting a coat scaffold or a universal clathrin interaction.
+  nodes:
+  - node_id: ap5_beta5_subunit
+    label: AP-5 beta5 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap5_beta5_subunit
+  - node_id: ap5_zeta_subunit
+    label: AP-5 zeta subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap5_zeta_subunit
+  - node_id: ap5_mu5_subunit
+    label: AP-5 mu5 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap5_mu5_subunit
+  - node_id: ap5_sigma5_subunit
+    label: AP-5 sigma5 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ap5_sigma5_subunit
+  - node_id: ap5_adaptor_complex
+    label: AP-5 adaptor complex
+    node_type: STRUCTURE
+    grounding: GO:0044599
+  - node_id: late_endosomal_membrane
+    label: late endosomal membrane
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: endosomal_cargo_sorting
+    label: endosomal cargo sorting
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: ap5_beta5_subunit
+    predicate: is part of
+    object: ap5_adaptor_complex
+    description: Beta5 is a constituent of each heterotetrameric AP-5 adaptor complex.
+    evidence:
+    - reference: GO:0044599
+      notes: GO:0044599 lists beta5 as an AP-5 constituent.
+  - subject: ap5_zeta_subunit
+    predicate: is part of
+    object: ap5_adaptor_complex
+    description: Zeta is a constituent of each heterotetrameric AP-5 adaptor complex.
+    evidence:
+    - reference: GO:0044599
+      notes: GO:0044599 lists zeta as an AP-5 constituent.
+  - subject: ap5_mu5_subunit
+    predicate: is part of
+    object: ap5_adaptor_complex
+    description: Mu5 is the medium subunit of each heterotetrameric AP-5 adaptor complex.
+    evidence:
+    - reference: GO:0044599
+      notes: GO:0044599 lists mu5 as an AP-5 constituent.
+  - subject: ap5_sigma5_subunit
+    predicate: is part of
+    object: ap5_adaptor_complex
+    description: Sigma5 is the small subunit of each heterotetrameric AP-5 adaptor
+      complex.
+    evidence:
+    - reference: GO:0044599
+      notes: GO:0044599 lists sigma5 as an AP-5 constituent.
+  - subject: ap5_adaptor_complex
+    predicate: associates with
+    object: late_endosomal_membrane
+    description: AP-5 is found associated with membranes in the endosomal system.
+    evidence:
+    - reference: GO:0044599
+      notes: GO:0044599 defines human AP-5 as associated with membranes in the endosomes.
+    - reference: DOI:10.1371/journal.pbio.1001170
+      notes: Hirst et al. 2011 localized tagged AP-5 to a late endosomal compartment
+        in HeLa cells.
+  - subject: ap5_adaptor_complex
+    predicate: is implicated in
+    object: endosomal_cargo_sorting
+    description: AP-5 is implicated in sorting cargo through late endosomal compartments.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1001170
+      notes: Hirst et al. 2011 connected AP-5 subunit knockdown to altered cation-independent
+        mannose 6-phosphate receptor trafficking and swollen endosomal structures
+        with tubules.
+discussions:
+- discussion_id: ap5_clathrin_scope
+  prompt: Avoid modeling AP-5 as a constitutive clathrin-coat adaptor.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - parent_structures
+  - causal_graphs#ap5_adaptor_complex_topology
+  rationale: GO:0044599 makes AP-5 a child of AP-type membrane coat adaptor complex
+    but explicitly notes that it is unclear whether AP-5 forms clathrin coats in vivo.
+    This record therefore keeps AP-5 under the AP-type parent while avoiding a universal
+    AP-5-to-clathrin-coat edge or a clathrin-coat part_of assertion.
+  evidence:
+  - reference: GO:0044599
+    notes: GO definition and parentage source for AP-5.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: resolve_ap5_subunit_groundings
+  prompt: Resolve exact source-neutral groundings for the AP-5 beta5, zeta, mu5 and
+    sigma5 subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ap5_beta5_subunit
+  - components#ap5_zeta_subunit
+  - components#ap5_mu5_subunit
+  - components#ap5_sigma5_subunit
+  rationale: GO gives the exact AP-5 complex identity and names its subunit classes,
+    but exact source-neutral InterPro, Pfam or NCBIfam CURIEs for those AP-5-specific
+    classes were not curated in this pass.
+  evidence:
+  - reference: GO:0044599
+    notes: GO definition for AP-5-specific subunit classes.
+  posed_by: codex
+  posed_date: '2026-09-16'
