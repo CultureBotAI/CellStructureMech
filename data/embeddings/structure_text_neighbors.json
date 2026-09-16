@@ -5257,6 +5257,11 @@
           "cosine_similarity": 0.95098495
         },
         {
+          "identifier": "GO:0005770",
+          "label": "late endosome",
+          "cosine_similarity": 0.95086359
+        },
+        {
           "identifier": "GO:0031904",
           "label": "endosome lumen",
           "cosine_similarity": 0.92342496
@@ -5270,11 +5275,6 @@
           "identifier": "GO:0031410",
           "label": "cytoplasmic vesicle",
           "cosine_similarity": 0.8566053
-        },
-        {
-          "identifier": "GO:0005789",
-          "label": "endoplasmic reticulum membrane",
-          "cosine_similarity": 0.85248584
         }
       ]
     },
@@ -5286,6 +5286,11 @@
           "identifier": "GO:0005768",
           "label": "endosome",
           "cosine_similarity": 0.92342496
+        },
+        {
+          "identifier": "GO:0005770",
+          "label": "late endosome",
+          "cosine_similarity": 0.91601976
         },
         {
           "identifier": "GO:0010008",
@@ -5301,11 +5306,6 @@
           "identifier": "GO:0060205",
           "label": "cytoplasmic vesicle lumen",
           "cosine_similarity": 0.89976564
-        },
-        {
-          "identifier": "cellstructuremech:cvt_vesicle_lumen",
-          "label": "Cvt vesicle lumen",
-          "cosine_similarity": 0.879223
         }
       ]
     },
@@ -5317,6 +5317,11 @@
           "identifier": "GO:0005768",
           "label": "endosome",
           "cosine_similarity": 0.95098495
+        },
+        {
+          "identifier": "GO:0005770",
+          "label": "late endosome",
+          "cosine_similarity": 0.93892712
         },
         {
           "identifier": "GO:0031904",
@@ -5332,11 +5337,6 @@
           "identifier": "GO:0005771",
           "label": "multivesicular body",
           "cosine_similarity": 0.89386184
-        },
-        {
-          "identifier": "GO:0005789",
-          "label": "endoplasmic reticulum membrane",
-          "cosine_similarity": 0.87343921
         }
       ]
     },
@@ -6147,6 +6147,37 @@
       ]
     },
     {
+      "identifier": "GO:0005770",
+      "label": "late endosome",
+      "neighbors": [
+        {
+          "identifier": "GO:0005768",
+          "label": "endosome",
+          "cosine_similarity": 0.95086359
+        },
+        {
+          "identifier": "GO:0010008",
+          "label": "endosome membrane",
+          "cosine_similarity": 0.93892712
+        },
+        {
+          "identifier": "GO:0031904",
+          "label": "endosome lumen",
+          "cosine_similarity": 0.91601976
+        },
+        {
+          "identifier": "GO:0005771",
+          "label": "multivesicular body",
+          "cosine_similarity": 0.91450199
+        },
+        {
+          "identifier": "GO:0031410",
+          "label": "cytoplasmic vesicle",
+          "cosine_similarity": 0.84416019
+        }
+      ]
+    },
+    {
       "identifier": "GO:0110143",
       "label": "magnetosome",
       "neighbors": [
@@ -6900,6 +6931,11 @@
           "cosine_similarity": 0.9214195
         },
         {
+          "identifier": "GO:0005770",
+          "label": "late endosome",
+          "cosine_similarity": 0.91450199
+        },
+        {
           "identifier": "GO:0032585",
           "label": "multivesicular body membrane",
           "cosine_similarity": 0.90653413
@@ -6913,11 +6949,6 @@
           "identifier": "cellstructuremech:multivesicular_body_lumen",
           "label": "multivesicular body lumen",
           "cosine_similarity": 0.90263609
-        },
-        {
-          "identifier": "GO:0010008",
-          "label": "endosome membrane",
-          "cosine_similarity": 0.89386184
         }
       ]
     },
@@ -8145,6 +8176,11 @@
           "cosine_similarity": 0.78262471
         },
         {
+          "identifier": "GO:0005770",
+          "label": "late endosome",
+          "cosine_similarity": 0.77955533
+        },
+        {
           "identifier": "GO:0005771",
           "label": "multivesicular body",
           "cosine_similarity": 0.75770352
@@ -8153,11 +8189,6 @@
           "identifier": "GO:0010008",
           "label": "endosome membrane",
           "cosine_similarity": 0.7493813
-        },
-        {
-          "identifier": "GO:0005788",
-          "label": "endoplasmic reticulum lumen",
-          "cosine_similarity": 0.74181976
         }
       ]
     },
@@ -9375,6 +9406,11 @@
       "label": "ESCRT III complex",
       "neighbors": [
         {
+          "identifier": "GO:0005770",
+          "label": "late endosome",
+          "cosine_similarity": 0.73842871
+        },
+        {
           "identifier": "cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex",
           "label": "ESX-3 type VII secretion system membrane complex",
           "cosine_similarity": 0.73268973
@@ -9393,11 +9429,6 @@
           "identifier": "GO:0005771",
           "label": "multivesicular body",
           "cosine_similarity": 0.72013908
-        },
-        {
-          "identifier": "GO:0005768",
-          "label": "endosome",
-          "cosine_similarity": 0.71925118
         }
       ]
     },
