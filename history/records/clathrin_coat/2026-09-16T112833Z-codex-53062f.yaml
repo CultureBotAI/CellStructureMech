@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/clathrin_coat.yaml
+  slug: clathrin_coat
+session:
+  id: 2026-09-16T112833Z-codex-53062f
+  timestamp: '2026-09-16T11:28:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add the clathrin coat record
+  details: Created an evidence-backed GO:0030118 clathrin coat record with membrane-coat parentage,
+    clathrin cage synonymy, reviewed-label-only clathrin triskelion and AP-type adaptor components,
+    Saccharomyces cerevisiae endocytic-site evidence, clathrin-dependent endocytosis context,
+    a nonmechanistic topology graph, and discussions documenting the clathrin-versus-vesicle
+    coat boundary plus unresolved source-neutral component groundings.
