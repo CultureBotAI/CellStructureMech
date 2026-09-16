@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/clathrin_coat.yaml
+  slug: clathrin_coat
+session:
+  id: 2026-09-16T113933Z-codex-126591
+  timestamp: '2026-09-16T11:39:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1091
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1090
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Narrow the clathrin coat AP adaptor note
+  details: 'Resolved PR #1090 review issue #1091 by narrowing the ap_type_clathrin_adaptors
+    grounding note so it stays scoped to AP-family heterotetrameric adaptor complexes instead
+    of implying that non-AP cargo linkers are AP-type protein complexes.'

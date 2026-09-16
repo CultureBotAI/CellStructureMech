@@ -22,6 +22,12 @@ curation_history:
     clathrin-dependent endocytosis, GO/DOI evidence, a nonmechanistic clathrin-coat
     topology graph, and boundary plus grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-16T11:38:59Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1090 review issue #1091 by narrowing the AP-type clathrin
+    adaptor grounding note to AP-family heterotetrameric adaptor complexes.'
+  llm_assisted: true
 parent_structures:
 - GO:0030117
 synonyms:
@@ -60,9 +66,10 @@ components:
       complexes that link clathrin or another coat-forming molecule to a membrane
       surface.
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: AP-type clathrin adaptors span subtype-specific adaptor complexes
-    and related membrane/cargo linkers; this parent record keeps them broad until
-    exact family or complex boundaries are curated for each coat subtype.
+  grounding_notes: AP-type clathrin adaptors span subtype-specific heterotetrameric
+    adaptor complexes; this parent record keeps the AP-family complex boundary broad
+    until exact source-neutral complex groundings are curated for each clathrin-coat
+    subtype.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
