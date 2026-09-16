@@ -4613,7 +4613,7 @@
         {
           "identifier": "GO:0005798",
           "label": "Golgi-associated vesicle",
-          "cosine_similarity": 0.91333254
+          "cosine_similarity": 0.90798486
         },
         {
           "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
@@ -5086,9 +5086,9 @@
           "cosine_similarity": 0.87953516
         },
         {
-          "identifier": "GO:0005798",
-          "label": "Golgi-associated vesicle",
-          "cosine_similarity": 0.87813953
+          "identifier": "GO:0012507",
+          "label": "ER to Golgi transport vesicle membrane",
+          "cosine_similarity": 0.87703441
         }
       ]
     },
@@ -5910,7 +5910,7 @@
         {
           "identifier": "GO:0005798",
           "label": "Golgi-associated vesicle",
-          "cosine_similarity": 0.91005637
+          "cosine_similarity": 0.90610248
         },
         {
           "identifier": "GO:0000139",
@@ -5936,27 +5936,27 @@
         {
           "identifier": "GO:0012507",
           "label": "ER to Golgi transport vesicle membrane",
-          "cosine_similarity": 0.92518097
-        },
-        {
-          "identifier": "GO:0031985",
-          "label": "Golgi cisterna",
-          "cosine_similarity": 0.91367107
+          "cosine_similarity": 0.91994761
         },
         {
           "identifier": "GO:0030134",
           "label": "COPII-coated ER to Golgi transport vesicle",
-          "cosine_similarity": 0.91333254
-        },
-        {
-          "identifier": "GO:0000139",
-          "label": "Golgi membrane",
-          "cosine_similarity": 0.91128993
+          "cosine_similarity": 0.90798486
         },
         {
           "identifier": "GO:0005794",
           "label": "Golgi apparatus",
-          "cosine_similarity": 0.91005637
+          "cosine_similarity": 0.90610248
+        },
+        {
+          "identifier": "GO:0000139",
+          "label": "Golgi membrane",
+          "cosine_similarity": 0.90507218
+        },
+        {
+          "identifier": "GO:0031985",
+          "label": "Golgi cisterna",
+          "cosine_similarity": 0.89894018
         }
       ]
     },
@@ -5975,14 +5975,14 @@
           "cosine_similarity": 0.93344456
         },
         {
-          "identifier": "GO:0005798",
-          "label": "Golgi-associated vesicle",
-          "cosine_similarity": 0.91367107
-        },
-        {
           "identifier": "GO:0000139",
           "label": "Golgi membrane",
           "cosine_similarity": 0.9077535
+        },
+        {
+          "identifier": "GO:0005798",
+          "label": "Golgi-associated vesicle",
+          "cosine_similarity": 0.89894018
         },
         {
           "identifier": "GO:0005801",
@@ -6047,9 +6047,9 @@
           "cosine_similarity": 0.92508833
         },
         {
-          "identifier": "GO:0005798",
-          "label": "Golgi-associated vesicle",
-          "cosine_similarity": 0.91128993
+          "identifier": "GO:0031985",
+          "label": "Golgi cisterna",
+          "cosine_similarity": 0.9077535
         }
       ]
     },
@@ -8467,7 +8467,7 @@
         {
           "identifier": "GO:0005798",
           "label": "Golgi-associated vesicle",
-          "cosine_similarity": 0.87363151
+          "cosine_similarity": 0.86451915
         }
       ]
     },

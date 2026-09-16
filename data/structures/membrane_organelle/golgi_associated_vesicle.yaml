@@ -26,10 +26,21 @@ curation_history:
   changes: Aligned the Saccharomyces COPI notes with the reviewed COPI-coated vesicle
     record and clarified the GO:0030137 child-edge evidence note.
   llm_assisted: true
+- timestamp: '2026-09-16T05:59:11Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1067 review issue #1068 by adding the GO:0005798 Golgi vesicle
+    related synonym and documenting why the overbroad vesicular component related
+    synonym stays excluded.'
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 has_part:
 - GO:0030660
+synonyms:
+- synonym_text: Golgi vesicle
+  synonym_type: RELATED_SYNONYM
+  source: GO:0005798
 components:
 - component_id: golgi_associated_vesicle_membrane
   label: Golgi-associated vesicle membrane
@@ -202,6 +213,25 @@ discussions:
     notes: GO:0030137 identifies the COPI-coated vesicle child class.
   - reference: GO:0030126
     notes: GO:0030126 identifies the COPI vesicle coat part.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
+- discussion_id: exclude_vesicular_component_related_synonym
+  prompt: Add GO's useful Golgi vesicle related synonym while excluding its overbroad
+    vesicular component related synonym.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  rationale: GO:0005798 lists both 'Golgi vesicle' and 'vesicular component' as related
+    synonyms. 'Golgi vesicle' usefully recovers the same Golgi-associated vesicle
+    class, but 'vesicular component' is too generic and would conflate this record
+    with any vesicle.
+  resolution_note: Added only the GO:0005798 Golgi vesicle related synonym.
+  evidence:
+  - reference: GO:0005798
+    notes: GO:0005798 lists Golgi vesicle and vesicular component as related synonyms
+      of Golgi-associated vesicle.
   posed_by: codex
   posed_date: '2026-09-16'
   resolved_date: '2026-09-16'

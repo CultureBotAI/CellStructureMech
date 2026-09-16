@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/golgi_associated_vesicle.yaml
+  slug: golgi_associated_vesicle
+session:
+  id: 2026-09-16T055936Z-codex-b6b82b
+  timestamp: '2026-09-16T05:59:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1068
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1067
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - synonyms
+  - discussions
+  - curation_history
+  summary: Handle Golgi-associated vesicle review synonym issue
+  details: 'Linked PR #1067 review issue #1068 to the GO:0005798 Golgi-associated vesicle
+    curation by adding the GO-sourced Golgi vesicle related synonym and documenting the decision
+    to exclude GO''s overbroad vesicular component related synonym.'
