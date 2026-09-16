@@ -2907,6 +2907,15 @@
   "definition": "An endosomal sorting complex required for transport. It consists of the class E vacuolar protein sorting (Vps) proteins and interacts with ubiquitinated cargoes."
  },
  {
+  "identifier": "GO:0000814",
+  "label": "ESCRT II complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/escrt_ii_complex.html",
+  "definition": "An endosomal sorting complex required for transport and functions downstream of ESCRT I complex. It consists of the class E vacuolar protein sorting (Vps) proteins and is required for the membrane recruitment of ESCRT III complex and binds to ubiquitinated cargoes."
+ },
+ {
   "identifier": "GO:0000815",
   "label": "ESCRT III complex",
   "category": "OTHER",
