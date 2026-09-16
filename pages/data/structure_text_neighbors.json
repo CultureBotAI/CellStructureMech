@@ -10015,9 +10015,9 @@
           "cosine_similarity": 0.77438259
         },
         {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.7510978
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.75794431
         }
       ]
     },
@@ -10046,9 +10046,9 @@
           "cosine_similarity": 0.74988962
         },
         {
-          "identifier": "GO:0030127",
-          "label": "COPII vesicle coat",
-          "cosine_similarity": 0.70783392
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.74561153
         }
       ]
     },
@@ -10077,9 +10077,9 @@
           "cosine_similarity": 0.73405564
         },
         {
-          "identifier": "cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex",
-          "label": "ESX-3 type VII secretion system membrane complex",
-          "cosine_similarity": 0.69238427
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.72237651
         }
       ]
     },
@@ -10139,9 +10139,9 @@
           "cosine_similarity": 0.70588908
         },
         {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.68469919
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.69266619
         }
       ]
     },
@@ -10173,6 +10173,37 @@
           "identifier": "cellstructuremech:popz_polar_microdomain",
           "label": "PopZ polar microdomain",
           "cosine_similarity": 0.64562252
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030897",
+      "label": "HOPS complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030904",
+          "label": "retromer complex",
+          "cosine_similarity": 0.78422668
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.75794431
+        },
+        {
+          "identifier": "GO:0000813",
+          "label": "ESCRT I complex",
+          "cosine_similarity": 0.74561153
+        },
+        {
+          "identifier": "GO:0000814",
+          "label": "ESCRT II complex",
+          "cosine_similarity": 0.72237651
+        },
+        {
+          "identifier": "GO:0000815",
+          "label": "ESCRT III complex",
+          "cosine_similarity": 0.72166022
         }
       ]
     },
@@ -10894,6 +10925,11 @@
       "label": "retromer complex",
       "neighbors": [
         {
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.78422668
+        },
+        {
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.77438259
@@ -10912,11 +10948,6 @@
           "identifier": "GO:0000814",
           "label": "ESCRT II complex",
           "cosine_similarity": 0.73405564
-        },
-        {
-          "identifier": "GO:0005784",
-          "label": "Sec61 translocon complex",
-          "cosine_similarity": 0.71129152
         }
       ]
     },

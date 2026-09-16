@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/hops_complex.yaml
+  slug: hops_complex
+session:
+  id: 2026-09-16T173853Z-codex-91b0bd
+  timestamp: '2026-09-16T17:38:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add HOPS complex structure record
+  details: Created a GO:0030897 HOPS complex structure record with GO membrane-protein-complex
+    parentage, Seals 2000 synonymy and evidence, reviewed-label-only Vps11, Vps16, Vps18,
+    Vps33, Vps39/Vam6 and Vps41/Vam2 yeast subunits, Saccharomyces cerevisiae distribution
+    and canonical evidence, non-autophagic homotypic vacuole fusion function, a nonmechanistic
+    yeast vacuole-fusion graph, and discussions for exact HOPS subunit family groundings and
+    the SNARE/Ypt7 interactor boundary.
