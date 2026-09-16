@@ -25,6 +25,12 @@ curation_history:
     Vps21/endosomal graph, a subunit-grounding TODO, and a resolved CORVET-HOPS boundary
     decision.
   llm_assisted: true
+- timestamp: '2026-09-16T18:20:25Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1116 / issue #1117 by adding a resolved boundary discussion
+    that keeps Vps21 as a CORVET interactor, not a constituent.'
+  llm_assisted: true
 parent_structures:
 - GO:0099023
 synonyms:
@@ -321,5 +327,20 @@ discussions:
   - reference: DOI:10.1016/j.devcel.2007.03.006
     notes: Peplowska et al. 2007 distinguished the canonical CORVET and HOPS complexes
       from mixed intermediate assemblies.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: vps21_corvet_interactor_boundary
+  prompt: Do not model Vps21 as a constituent CORVET component.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#yeast_corvet_endosomal_tethering
+  rationale: Peplowska et al. 2007 found that CORVET interacts with the yeast Rab5
+    homolog Vps21, but defined the canonical CORVET complex as Vps3 and Vps8 plus
+    Vps11, Vps16, Vps18 and Vps33.
+  evidence:
+  - reference: DOI:10.1016/j.devcel.2007.03.006
+    notes: Peplowska et al. 2007 distinguished the Vps21-interacting CORVET complex
+      from its Rab5-family binding partner.
   posed_by: codex
   posed_date: '2026-09-16'
