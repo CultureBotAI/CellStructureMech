@@ -1,0 +1,412 @@
+identifier: GO:1990070
+label: TRAPPI protein complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: 'A complex that tethers COPII vesicles at ER-Golgi intermediate compartment.
+  Its role in this part of the vesicular transport may start at the ER exit sites.
+  Binds to a component of the COPII coat. In yeast it includes the following subunits:
+  Bet3 (as homodimer), Bet5, Trs20, Trs23, Trs31, Trs33 which are regarded as the
+  core subunits of all TRAPP complexes in yeast.'
+definition_source: GO:1990070
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-16T19:54:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-16T19:56:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added TRAPPI synonymy, TRAPP parentage, reviewed-label-only Bet3/Bet5/Trs20/Trs23/Trs31/Trs33
+    yeast components, Saccharomyces cerevisiae scope, an ER-to-Golgi vesicle transport
+    function, GO/DOI evidence, a nonmechanistic yeast TRAPPI tethering graph, a subunit-grounding
+    TODO, and a resolved boundary for TRAPPII/TRAPPIII-specific subunits.
+  llm_assisted: true
+- timestamp: '2026-09-16T19:57:05Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Made the resolved TRAPPI subtype-boundary discussion also exclude Tca17,
+    which GO:1990071 treats as a TRAPPII-specific yeast subunit.
+  llm_assisted: true
+- timestamp: '2026-09-16T20:06:32Z'
+  curator: codex
+  action: FIXED_VALIDATION_DEFECT
+  changes: Replaced the broad components discussion anchor with explicit TRAPPI component
+    anchors so corpus-integrity checks can resolve every attaches_to target.
+  llm_assisted: true
+- timestamp: '2026-09-16T20:18:21Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1124 issue #1125 by adding Sacher et al. 2000 primary subunit-identification
+    evidence to the six TRAPPI component rows and their yeast graph parthood edges.'
+  llm_assisted: true
+parent_structures:
+- GO:0030008
+synonyms:
+- synonym_text: TRAPP core complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990070
+- synonym_text: TRAPP I
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/s1097-2765(01)00190-3
+- synonym_text: TRAPP I complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/s1097-2765(01)00190-3
+components:
+- component_id: bet3_trappi_subunit
+  label: Bet3 TRAPPI subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - BET3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Bet3 TRAPPI core
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Core TRAPPI constituent present as the homodimeric Bet3 subunit class in the
+    yeast TRAPP core complex.
+  evidence:
+  - reference: GO:1990070
+    notes: GO:1990070 names Bet3 as a homodimeric yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Bet3 had been described previously as a TRAPP
+      subunit.
+  - reference: DOI:10.1016/j.cell.2006.09.029
+    notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
+      I vesicle-tethering factor.
+- component_id: bet5_trappi_subunit
+  label: Bet5 TRAPPI subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - BET5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Bet5 TRAPPI core
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Core constituent of the yeast TRAPPI vesicle-tethering complex.
+  evidence:
+  - reference: GO:1990070
+    notes: GO:1990070 names Bet5 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Bet5 had been described previously as a TRAPP
+      subunit.
+  - reference: DOI:10.1016/j.cell.2006.09.029
+    notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
+      I vesicle-tethering factor.
+- component_id: trs20_trappi_subunit
+  label: Trs20 TRAPPI subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRS20
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Trs20 TRAPPI core
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Core constituent of the yeast TRAPPI vesicle-tethering complex.
+  evidence:
+  - reference: GO:1990070
+    notes: GO:1990070 names Trs20 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Trs20 had been described previously as a
+      TRAPP subunit.
+  - reference: DOI:10.1016/j.cell.2006.09.029
+    notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
+      I vesicle-tethering factor.
+- component_id: trs23_trappi_subunit
+  label: Trs23 TRAPPI subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRS23
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Trs23 TRAPPI core
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Core constituent of the yeast TRAPPI vesicle-tethering complex.
+  evidence:
+  - reference: GO:1990070
+    notes: GO:1990070 names Trs23 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Trs23 had been described previously as a
+      TRAPP subunit.
+  - reference: DOI:10.1016/j.cell.2006.09.029
+    notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
+      I vesicle-tethering factor.
+- component_id: trs31_trappi_subunit
+  label: Trs31 TRAPPI subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRS31
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Trs31 TRAPPI core
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Core constituent of the yeast TRAPPI vesicle-tethering complex.
+  evidence:
+  - reference: GO:1990070
+    notes: GO:1990070 names Trs31 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 identified Trs31 among the additional yeast TRAPP subunits.
+  - reference: DOI:10.1016/j.cell.2006.09.029
+    notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
+      I vesicle-tethering factor.
+- component_id: trs33_trappi_subunit
+  label: Trs33 TRAPPI subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRS33
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Trs33 TRAPPI core
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Core constituent of the yeast TRAPPI vesicle-tethering complex.
+  evidence:
+  - reference: GO:1990070
+    notes: GO:1990070 names Trs33 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Trs33 had been described previously as a
+      TRAPP subunit.
+  - reference: DOI:10.1016/j.cell.2006.09.029
+    notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
+      I vesicle-tethering factor.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a TRAPPI complex that tethers COPII vesicles during endoplasmic-reticulum-to-Golgi
+    traffic.
+  reference: DOI:10.1016/s1097-2765(01)00190-3
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which purified TRAPP I was shown to tether COPII vesicles
+    specifically in vitro.
+  reference: DOI:10.1016/s1097-2765(01)00190-3
+functions:
+- function_id: er_to_golgi_vesicle_mediated_transport
+  label: endoplasmic reticulum to Golgi vesicle-mediated transport
+  grounding: GO:0006888
+  description: TRAPPI tethers COPII vesicles at the ER-Golgi interface during anterograde
+    vesicle-mediated transport toward the Golgi.
+  evidence:
+  - reference: GO:0006888
+    notes: GO:0006888 denotes COPII-vesicle-mediated transport from the endoplasmic
+      reticulum to the Golgi.
+  - reference: DOI:10.1016/s1097-2765(01)00190-3
+    notes: Sacher et al. 2001 reconstituted COPII vesicle targeting with purified
+      TRAPP I.
+evidence:
+- reference: GO:1990070
+  notes: Gene Ontology cellular-component term for the TRAPPI protein complex.
+- reference: GO:0030008
+  notes: Gene Ontology cellular-component parent term for TRAPP complexes.
+- reference: GO:0006888
+  notes: Gene Ontology biological-process term for endoplasmic-reticulum-to-Golgi
+    vesicle-mediated transport.
+- reference: DOI:10.1093/emboj/17.9.2494
+  notes: Sacher et al. 1998, TRAPP, a highly conserved novel complex on the cis-Golgi
+    that mediates vesicle docking and fusion, EMBO Journal.
+- reference: DOI:10.1078/S0171-9335(04)70009-6
+  notes: Sacher et al. 2000, Identification and characterization of five new subunits
+    of TRAPP, European Journal of Cell Biology.
+- reference: DOI:10.1016/s1097-2765(01)00190-3
+  notes: Sacher et al. 2001, TRAPP I implicated in the specificity of tethering in
+    ER-to-Golgi transport, Molecular Cell.
+- reference: DOI:10.1016/j.cell.2006.09.029
+  notes: Kim et al. 2006, The architecture of the multisubunit TRAPP I complex suggests
+    a model for vesicle tethering, Cell.
+causal_graphs:
+- graph_id: yeast_trappi_er_to_golgi_tethering
+  title: TRAPPI supports yeast ER-to-Golgi vesicle tethering
+  description: In Saccharomyces cerevisiae, Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33
+    form the TRAPPI core complex that specifically tethers COPII vesicles during ER-to-Golgi
+    traffic.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records TRAPPI core subunit membership and ER-to-Golgi transport
+    involvement without modeling the Ypt1/Rab1 guanine-nucleotide-exchange reaction,
+    COPII coat contacts, or later recruitment of other tethers.
+  nodes:
+  - node_id: bet3_trappi_subunit
+    label: Bet3 TRAPPI subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: bet3_trappi_subunit
+  - node_id: bet5_trappi_subunit
+    label: Bet5 TRAPPI subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: bet5_trappi_subunit
+  - node_id: trs20_trappi_subunit
+    label: Trs20 TRAPPI subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trs20_trappi_subunit
+  - node_id: trs23_trappi_subunit
+    label: Trs23 TRAPPI subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trs23_trappi_subunit
+  - node_id: trs31_trappi_subunit
+    label: Trs31 TRAPPI subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trs31_trappi_subunit
+  - node_id: trs33_trappi_subunit
+    label: Trs33 TRAPPI subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trs33_trappi_subunit
+  - node_id: trappi_protein_complex
+    label: TRAPPI protein complex
+    node_type: STRUCTURE
+    grounding: GO:1990070
+  - node_id: er_to_golgi_vesicle_mediated_transport
+    label: endoplasmic reticulum to Golgi vesicle-mediated transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006888
+  edges:
+  - subject: bet3_trappi_subunit
+    predicate: is part of
+    object: trappi_protein_complex
+    description: Bet3 TRAPPI subunit is represented as a constituent yeast TRAPPI
+      core subunit.
+    evidence:
+    - reference: GO:1990070
+      notes: GO:1990070 names Bet3 as a yeast TRAPPI core subunit.
+    - reference: DOI:10.1078/S0171-9335(04)70009-6
+      notes: Sacher et al. 2000 placed Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
+        yeast TRAPP subunits.
+    - reference: DOI:10.1016/j.cell.2006.09.029
+      notes: Kim et al. 2006 resolved the architecture of the yeast TRAPP I complex.
+  - subject: bet5_trappi_subunit
+    predicate: is part of
+    object: trappi_protein_complex
+    description: Bet5 TRAPPI subunit is represented as a constituent yeast TRAPPI
+      core subunit.
+    evidence:
+    - reference: GO:1990070
+      notes: GO:1990070 names Bet5 as a yeast TRAPPI core subunit.
+    - reference: DOI:10.1078/S0171-9335(04)70009-6
+      notes: Sacher et al. 2000 placed Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
+        yeast TRAPP subunits.
+    - reference: DOI:10.1016/j.cell.2006.09.029
+      notes: Kim et al. 2006 resolved the architecture of the yeast TRAPP I complex.
+  - subject: trs20_trappi_subunit
+    predicate: is part of
+    object: trappi_protein_complex
+    description: Trs20 TRAPPI subunit is represented as a constituent yeast TRAPPI
+      core subunit.
+    evidence:
+    - reference: GO:1990070
+      notes: GO:1990070 names Trs20 as a yeast TRAPPI core subunit.
+    - reference: DOI:10.1078/S0171-9335(04)70009-6
+      notes: Sacher et al. 2000 placed Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
+        yeast TRAPP subunits.
+    - reference: DOI:10.1016/j.cell.2006.09.029
+      notes: Kim et al. 2006 resolved the architecture of the yeast TRAPP I complex.
+  - subject: trs23_trappi_subunit
+    predicate: is part of
+    object: trappi_protein_complex
+    description: Trs23 TRAPPI subunit is represented as a constituent yeast TRAPPI
+      core subunit.
+    evidence:
+    - reference: GO:1990070
+      notes: GO:1990070 names Trs23 as a yeast TRAPPI core subunit.
+    - reference: DOI:10.1078/S0171-9335(04)70009-6
+      notes: Sacher et al. 2000 placed Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
+        yeast TRAPP subunits.
+    - reference: DOI:10.1016/j.cell.2006.09.029
+      notes: Kim et al. 2006 resolved the architecture of the yeast TRAPP I complex.
+  - subject: trs31_trappi_subunit
+    predicate: is part of
+    object: trappi_protein_complex
+    description: Trs31 TRAPPI subunit is represented as a constituent yeast TRAPPI
+      core subunit.
+    evidence:
+    - reference: GO:1990070
+      notes: GO:1990070 names Trs31 as a yeast TRAPPI core subunit.
+    - reference: DOI:10.1078/S0171-9335(04)70009-6
+      notes: Sacher et al. 2000 placed Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
+        yeast TRAPP subunits.
+    - reference: DOI:10.1016/j.cell.2006.09.029
+      notes: Kim et al. 2006 resolved the architecture of the yeast TRAPP I complex.
+  - subject: trs33_trappi_subunit
+    predicate: is part of
+    object: trappi_protein_complex
+    description: Trs33 TRAPPI subunit is represented as a constituent yeast TRAPPI
+      core subunit.
+    evidence:
+    - reference: GO:1990070
+      notes: GO:1990070 names Trs33 as a yeast TRAPPI core subunit.
+    - reference: DOI:10.1078/S0171-9335(04)70009-6
+      notes: Sacher et al. 2000 placed Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
+        yeast TRAPP subunits.
+    - reference: DOI:10.1016/j.cell.2006.09.029
+      notes: Kim et al. 2006 resolved the architecture of the yeast TRAPP I complex.
+  - subject: trappi_protein_complex
+    predicate: participates in
+    object: er_to_golgi_vesicle_mediated_transport
+    description: TRAPP I specifically tethers COPII vesicles during ER-to-Golgi traffic.
+    evidence:
+    - reference: DOI:10.1016/s1097-2765(01)00190-3
+      notes: Sacher et al. 2001 used chemically pure TRAPP I and COPII vesicles to
+        reconstitute specific vesicle targeting.
+discussions:
+- discussion_id: resolve_trappi_subunit_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the six yeast TRAPPI
+    core subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#bet3_trappi_subunit
+  - components#bet5_trappi_subunit
+  - components#trs20_trappi_subunit
+  - components#trs23_trappi_subunit
+  - components#trs31_trappi_subunit
+  - components#trs33_trappi_subunit
+  rationale: This first TRAPPI record names the yeast Bet3, Bet5, Trs20, Trs23, Trs31
+    and Trs33 constituent subunits but leaves InterPro, Pfam, or Complex Portal grounding
+    unset until exact orthology and paralogy boundaries are reviewed per subunit.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2006.09.029
+    notes: Kim et al. 2006 combined structural and biochemical work to analyze the
+      yeast TRAPP I architecture.
+  posed_by: codex
+  posed_date: '2026-09-16'
+- discussion_id: trappi_excludes_trappii_trappiii_specific_subunits
+  prompt: Do not model Tca17, Trs65, Trs85, Trs120 or Trs130 as constituent TRAPPI
+    core-complex components.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#bet3_trappi_subunit
+  - components#bet5_trappi_subunit
+  - components#trs20_trappi_subunit
+  - components#trs23_trappi_subunit
+  - components#trs31_trappi_subunit
+  - components#trs33_trappi_subunit
+  - causal_graphs#yeast_trappi_er_to_golgi_tethering
+  rationale: GO:0030008 is the broader TRAPP-complex parent, whereas GO:1990070 denotes
+    the TRAPPI core complex. Tca17, Trs65, Trs120 and Trs130 are TRAPPII-specific
+    subunits in the GO definition of GO:1990071; Trs85 is the defining extra yeast
+    TRAPPIII subunit in GO:1990072.
+  resolution_note: 'Declined: additional yeast TRAPP subunits belong to the TRAPPII/TRAPPIII
+    subtype boundary rather than the exact TRAPPI core complex curated here.'
+  evidence:
+  - reference: GO:1990071
+    notes: GO:1990071 lists Tca17, Trs65, Trs120 and Trs130 among the yeast TRAPPII
+      protein-complex subunits.
+  - reference: GO:1990072
+    notes: GO:1990072 lists Trs85 as a yeast TRAPPIII protein-complex subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 identified Trs65, Trs85, Trs120 and Trs130 among the
+      broader set of yeast TRAPP subunits.
+  posed_by: codex
+  posed_date: '2026-09-16'
+  resolved_date: '2026-09-16'
