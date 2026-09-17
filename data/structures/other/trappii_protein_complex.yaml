@@ -31,6 +31,12 @@ curation_history:
     role statement, and made TRAPPII graph-edge evidence notes describe the Choi et
     al. 2011 subunit boundary more directly.
   llm_assisted: true
+- timestamp: '2026-09-17T07:58:10Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1127 issue #1128 by replacing the six shared-core TRAPPII
+    component rows'' Choi et al. 2011 wording with neutral component-membership evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0030008
 synonyms:
@@ -61,8 +67,8 @@ components:
     notes: Sacher et al. 2000 named Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
       yeast TRAPP subunits later placed in the shared TRAPP core.
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
-    notes: Choi et al. 2011 described TRAPPII as a TRAPPI-derived complex with additional
-      TRAPPII-specific subunits.
+    notes: Choi et al. 2011 described TRAPPII as containing the shared TRAPP core
+      plus Trs65, Trs120, Trs130 and Tca17 as TRAPPII-specific subunits.
 - component_id: bet5_trappii_subunit
   label: Bet5 TRAPPII subunit
   component_type: PROTEIN
@@ -82,8 +88,8 @@ components:
     notes: Sacher et al. 2000 named Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
       yeast TRAPP subunits later placed in the shared TRAPP core.
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
-    notes: Choi et al. 2011 described TRAPPII as a TRAPPI-derived complex with additional
-      TRAPPII-specific subunits.
+    notes: Choi et al. 2011 described TRAPPII as containing the shared TRAPP core
+      plus Trs65, Trs120, Trs130 and Tca17 as TRAPPII-specific subunits.
 - component_id: tca17_trappii_subunit
   label: Tca17 TRAPPII subunit
   component_type: PROTEIN
@@ -124,8 +130,8 @@ components:
     notes: Sacher et al. 2000 named Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
       yeast TRAPP subunits later placed in the shared TRAPP core.
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
-    notes: Choi et al. 2011 described TRAPPII as a TRAPPI-derived complex with additional
-      TRAPPII-specific subunits.
+    notes: Choi et al. 2011 described TRAPPII as containing the shared TRAPP core
+      plus Trs65, Trs120, Trs130 and Tca17 as TRAPPII-specific subunits.
 - component_id: trs23_trappii_subunit
   label: Trs23 TRAPPII subunit
   component_type: PROTEIN
@@ -145,8 +151,8 @@ components:
     notes: Sacher et al. 2000 named Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
       yeast TRAPP subunits later placed in the shared TRAPP core.
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
-    notes: Choi et al. 2011 described TRAPPII as a TRAPPI-derived complex with additional
-      TRAPPII-specific subunits.
+    notes: Choi et al. 2011 described TRAPPII as containing the shared TRAPP core
+      plus Trs65, Trs120, Trs130 and Tca17 as TRAPPII-specific subunits.
 - component_id: trs31_trappii_subunit
   label: Trs31 TRAPPII subunit
   component_type: PROTEIN
@@ -166,8 +172,8 @@ components:
     notes: Sacher et al. 2000 named Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
       yeast TRAPP subunits later placed in the shared TRAPP core.
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
-    notes: Choi et al. 2011 described TRAPPII as a TRAPPI-derived complex with additional
-      TRAPPII-specific subunits.
+    notes: Choi et al. 2011 described TRAPPII as containing the shared TRAPP core
+      plus Trs65, Trs120, Trs130 and Tca17 as TRAPPII-specific subunits.
 - component_id: trs33_trappii_subunit
   label: Trs33 TRAPPII subunit
   component_type: PROTEIN
@@ -187,8 +193,8 @@ components:
     notes: Sacher et al. 2000 named Bet3, Bet5, Trs20, Trs23, Trs31 and Trs33 among
       yeast TRAPP subunits later placed in the shared TRAPP core.
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
-    notes: Choi et al. 2011 described TRAPPII as a TRAPPI-derived complex with additional
-      TRAPPII-specific subunits.
+    notes: Choi et al. 2011 described TRAPPII as containing the shared TRAPP core
+      plus Trs65, Trs120, Trs130 and Tca17 as TRAPPII-specific subunits.
 - component_id: trs65_trappii_subunit
   label: Trs65 TRAPPII subunit
   component_type: PROTEIN

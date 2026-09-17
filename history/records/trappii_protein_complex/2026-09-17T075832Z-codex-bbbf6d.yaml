@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/trappii_protein_complex.yaml
+  slug: trappii_protein_complex
+session:
+  id: 2026-09-17T075832Z-codex-bbbf6d
+  timestamp: '2026-09-17T07:58:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1128
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1127
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - evidence
+  - components
+  summary: Narrowed TRAPPII Choi 2011 evidence wording
+  details: 'Addressed PR #1127 issue #1128 by replacing the six shared-core TRAPPII component
+    rows'' Choi et al. 2011 notes so they describe neutral TRAPPII component membership instead
+    of calling TRAPPII a TRAPPI-derived complex.'
