@@ -10320,14 +10320,14 @@
           "cosine_similarity": 0.78010634
         },
         {
+          "identifier": "GO:1990072",
+          "label": "TRAPPIII protein complex",
+          "cosine_similarity": 0.76180138
+        },
+        {
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.75794431
-        },
-        {
-          "identifier": "GO:1990071",
-          "label": "TRAPPII protein complex",
-          "cosine_similarity": 0.7524498
         }
       ]
     },
@@ -11209,6 +11209,11 @@
           "cosine_similarity": 0.97428711
         },
         {
+          "identifier": "GO:1990072",
+          "label": "TRAPPIII protein complex",
+          "cosine_similarity": 0.9730464
+        },
+        {
           "identifier": "GO:0030897",
           "label": "HOPS complex",
           "cosine_similarity": 0.78010634
@@ -11222,11 +11227,6 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.73595464
-        },
-        {
-          "identifier": "GO:0030904",
-          "label": "retromer complex",
-          "cosine_similarity": 0.73395562
         }
       ]
     },
@@ -11234,6 +11234,11 @@
       "identifier": "GO:1990071",
       "label": "TRAPPII protein complex",
       "neighbors": [
+        {
+          "identifier": "GO:1990072",
+          "label": "TRAPPIII protein complex",
+          "cosine_similarity": 0.97797561
+        },
         {
           "identifier": "GO:1990070",
           "label": "TRAPPI protein complex",
@@ -11253,11 +11258,37 @@
           "identifier": "GO:0000938",
           "label": "GARP complex",
           "cosine_similarity": 0.7132154
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990072",
+      "label": "TRAPPIII protein complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990071",
+          "label": "TRAPPII protein complex",
+          "cosine_similarity": 0.97797561
         },
         {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.70381426
+          "identifier": "GO:1990070",
+          "label": "TRAPPI protein complex",
+          "cosine_similarity": 0.9730464
+        },
+        {
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.76180138
+        },
+        {
+          "identifier": "GO:0030904",
+          "label": "retromer complex",
+          "cosine_similarity": 0.72503184
+        },
+        {
+          "identifier": "GO:0000938",
+          "label": "GARP complex",
+          "cosine_similarity": 0.71907177
         }
       ]
     },

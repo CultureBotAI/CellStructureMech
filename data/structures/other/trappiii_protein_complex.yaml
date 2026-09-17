@@ -1,0 +1,350 @@
+identifier: GO:1990072
+label: TRAPPIII protein complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: 'A complex that functions in anterograde transport at the Golgi and also
+  regulates autophagy. In yeast it includes at least the following subunits: Bet3
+  (as homodimer), Bet5, Trs20, Trs23, Trs31, Trs33, Trs85. TRAPPIII may include further,
+  as yet undescribed, proteins.'
+definition_source: GO:1990072
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-17T08:14:01Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-17T08:15:27Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added TRAPPIII parentage, reviewed-label-only yeast components for the
+    shared core and the Trs85 TRAPPIII subunit, Saccharomyces cerevisiae scope, a
+    macroautophagy function, GO/DOI evidence, a nonmechanistic yeast TRAPPIII autophagy
+    graph, and a subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-17T08:16:09Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Narrowed Lynch-Day et al. 2010 evidence to the Trs85 TRAPPIII subunit and
+    macroautophagy statements instead of attaching it to every shared-core row.
+  llm_assisted: true
+- timestamp: '2026-09-17T08:25:43Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1129 issue #1130 by replacing the Trs85 role phrase ''Trs85-containing
+    TRAPPIII constituent'' with narrower wording for the subunit''s phagophore assembly-site
+    targeting role.'
+  llm_assisted: true
+- timestamp: '2026-09-17T08:26:33Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: 'Tightened the PR #1129 issue #1130 Trs85 role fix so Trs85 directs Ypt1
+    guanine-nucleotide-exchange activity rather than a ''Trs85-containing'' GEF activity.'
+  llm_assisted: true
+- timestamp: '2026-09-17T08:33:22Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: 'Clarified the PR #1129 issue #1130 curation-history wording so it no longer
+    exposes the intermediate Trs85-containing GEF-activity phrase.'
+  llm_assisted: true
+parent_structures:
+- GO:0030008
+components:
+- component_id: bet3_trappiii_subunit
+  label: Bet3 TRAPPIII subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - BET3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Bet3 TRAPPIII subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this TRAPP subunit
+    class was curated in this pass.
+  role: Shared TRAPP core constituent present as the homodimeric Bet3 subunit class
+    in yeast TRAPPIII.
+  evidence:
+  - reference: GO:1990072
+    notes: GO:1990072 names Bet3 among the yeast TRAPPIII protein-complex subunits.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 placed this protein among yeast TRAPP subunits.
+- component_id: bet5_trappiii_subunit
+  label: Bet5 TRAPPIII subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - BET5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Bet5 TRAPPIII subunit;
+    no exact source-neutral InterPro or Pfam family identifier for this TRAPP subunit
+    class was curated in this pass.
+  role: Shared TRAPP core constituent of the yeast TRAPPIII vesicle-tethering complex.
+  evidence:
+  - reference: GO:1990072
+    notes: GO:1990072 names Bet5 among the yeast TRAPPIII protein-complex subunits.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 placed this protein among yeast TRAPP subunits.
+- component_id: trs20_trappiii_subunit
+  label: Trs20 TRAPPIII subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRS20
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Trs20 TRAPPIII
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Shared TRAPP core constituent of the yeast TRAPPIII vesicle-tethering complex.
+  evidence:
+  - reference: GO:1990072
+    notes: GO:1990072 names Trs20 among the yeast TRAPPIII protein-complex subunits.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 placed this protein among yeast TRAPP subunits.
+- component_id: trs23_trappiii_subunit
+  label: Trs23 TRAPPIII subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRS23
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Trs23 TRAPPIII
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Shared TRAPP core constituent of the yeast TRAPPIII vesicle-tethering complex.
+  evidence:
+  - reference: GO:1990072
+    notes: GO:1990072 names Trs23 among the yeast TRAPPIII protein-complex subunits.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 placed this protein among yeast TRAPP subunits.
+- component_id: trs31_trappiii_subunit
+  label: Trs31 TRAPPIII subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRS31
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Trs31 TRAPPIII
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Shared TRAPP core constituent of the yeast TRAPPIII vesicle-tethering complex.
+  evidence:
+  - reference: GO:1990072
+    notes: GO:1990072 names Trs31 among the yeast TRAPPIII protein-complex subunits.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 placed this protein among yeast TRAPP subunits.
+- component_id: trs33_trappiii_subunit
+  label: Trs33 TRAPPIII subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRS33
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Trs33 TRAPPIII
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Shared TRAPP core constituent of the yeast TRAPPIII vesicle-tethering complex.
+  evidence:
+  - reference: GO:1990072
+    notes: GO:1990072 names Trs33 among the yeast TRAPPIII protein-complex subunits.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 placed this protein among yeast TRAPP subunits.
+- component_id: trs85_trappiii_subunit
+  label: Trs85 TRAPPIII subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRS85
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Trs85 TRAPPIII
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: TRAPPIII constituent that directs yeast Ypt1 guanine-nucleotide-exchange activity
+    to the phagophore assembly site.
+  evidence:
+  - reference: GO:1990072
+    notes: GO:1990072 names Trs85 among the yeast TRAPPIII protein-complex subunits.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 identified Trs85 among the additional yeast TRAPP subunits.
+  - reference: DOI:10.1073/pnas.1000063107
+    notes: Lynch-Day et al. 2010 described Trs85 as the TRAPPIII subunit that directs
+      Ypt1 GEF activity to the phagophore assembly site.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a Trs85-containing TRAPPIII complex implicated in phagophore
+    assembly-site targeting during autophagy.
+  reference: DOI:10.1073/pnas.1000063107
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Trs85 was shown to target TRAPPIII Ypt1 GEF activity
+    to the phagophore assembly site.
+  reference: DOI:10.1073/pnas.1000063107
+functions:
+- function_id: macroautophagy
+  label: macroautophagy
+  grounding: GO:0016236
+  description: TRAPPIII contributes to macroautophagy by targeting Ypt1 GEF activity
+    to the phagophore assembly site during autophagosome formation.
+  evidence:
+  - reference: GO:0016236
+    notes: GO:0016236 defines macroautophagy as the autophagic process that proceeds
+      through autophagosome formation.
+  - reference: DOI:10.1073/pnas.1000063107
+    notes: Lynch-Day et al. 2010 described TRAPPIII as an autophagy-specific Ypt1
+      GEF and showed that Trs85 directs it to the phagophore assembly site.
+evidence:
+- reference: GO:1990072
+  notes: Gene Ontology cellular-component term for the TRAPPIII protein complex.
+- reference: GO:0030008
+  notes: Gene Ontology cellular-component parent term for TRAPP complexes.
+- reference: GO:0016236
+  notes: Gene Ontology biological-process term for macroautophagy.
+- reference: DOI:10.1078/S0171-9335(04)70009-6
+  notes: Sacher et al. 2000, Identification and characterization of five new subunits
+    of TRAPP, European Journal of Cell Biology.
+- reference: DOI:10.1073/pnas.1000063107
+  notes: Lynch-Day et al. 2010, Trs85 directs a Ypt1 GEF, TRAPPIII, to the phagophore
+    to promote autophagy, Proceedings of the National Academy of Sciences.
+causal_graphs:
+- graph_id: yeast_trappiii_autophagy
+  title: TRAPPIII supports yeast autophagy
+  description: In Saccharomyces cerevisiae, Trs85 associates with shared TRAPP core
+    subunits to define a TRAPPIII complex that contributes to phagophore assembly-site
+    targeting in macroautophagy.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records curated yeast TRAPPIII subunit membership and macroautophagy
+    involvement without modeling the Ypt1/Rab1 guanine-nucleotide-exchange reaction.
+  nodes:
+  - node_id: bet3_trappiii_subunit
+    label: Bet3 TRAPPIII subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: bet3_trappiii_subunit
+  - node_id: bet5_trappiii_subunit
+    label: Bet5 TRAPPIII subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: bet5_trappiii_subunit
+  - node_id: trs20_trappiii_subunit
+    label: Trs20 TRAPPIII subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trs20_trappiii_subunit
+  - node_id: trs23_trappiii_subunit
+    label: Trs23 TRAPPIII subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trs23_trappiii_subunit
+  - node_id: trs31_trappiii_subunit
+    label: Trs31 TRAPPIII subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trs31_trappiii_subunit
+  - node_id: trs33_trappiii_subunit
+    label: Trs33 TRAPPIII subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trs33_trappiii_subunit
+  - node_id: trs85_trappiii_subunit
+    label: Trs85 TRAPPIII subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trs85_trappiii_subunit
+  - node_id: trappiii_protein_complex
+    label: TRAPPIII protein complex
+    node_type: STRUCTURE
+    grounding: GO:1990072
+  - node_id: macroautophagy
+    label: macroautophagy
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0016236
+  edges:
+  - subject: bet3_trappiii_subunit
+    predicate: is part of
+    object: trappiii_protein_complex
+    description: Bet3 TRAPPIII subunit is represented as a named yeast TRAPPIII subunit.
+    evidence:
+    - reference: GO:1990072
+      notes: GO:1990072 names Bet3 among the yeast TRAPPIII subunits.
+  - subject: bet5_trappiii_subunit
+    predicate: is part of
+    object: trappiii_protein_complex
+    description: Bet5 TRAPPIII subunit is represented as a named yeast TRAPPIII subunit.
+    evidence:
+    - reference: GO:1990072
+      notes: GO:1990072 names Bet5 among the yeast TRAPPIII subunits.
+  - subject: trs20_trappiii_subunit
+    predicate: is part of
+    object: trappiii_protein_complex
+    description: Trs20 TRAPPIII subunit is represented as a named yeast TRAPPIII subunit.
+    evidence:
+    - reference: GO:1990072
+      notes: GO:1990072 names Trs20 among the yeast TRAPPIII subunits.
+  - subject: trs23_trappiii_subunit
+    predicate: is part of
+    object: trappiii_protein_complex
+    description: Trs23 TRAPPIII subunit is represented as a named yeast TRAPPIII subunit.
+    evidence:
+    - reference: GO:1990072
+      notes: GO:1990072 names Trs23 among the yeast TRAPPIII subunits.
+  - subject: trs31_trappiii_subunit
+    predicate: is part of
+    object: trappiii_protein_complex
+    description: Trs31 TRAPPIII subunit is represented as a named yeast TRAPPIII subunit.
+    evidence:
+    - reference: GO:1990072
+      notes: GO:1990072 names Trs31 among the yeast TRAPPIII subunits.
+  - subject: trs33_trappiii_subunit
+    predicate: is part of
+    object: trappiii_protein_complex
+    description: Trs33 TRAPPIII subunit is represented as a named yeast TRAPPIII subunit.
+    evidence:
+    - reference: GO:1990072
+      notes: GO:1990072 names Trs33 among the yeast TRAPPIII subunits.
+  - subject: trs85_trappiii_subunit
+    predicate: is part of
+    object: trappiii_protein_complex
+    description: Trs85 TRAPPIII subunit is represented as a named yeast TRAPPIII subunit.
+    evidence:
+    - reference: GO:1990072
+      notes: GO:1990072 names Trs85 among the yeast TRAPPIII subunits.
+    - reference: DOI:10.1073/pnas.1000063107
+      notes: Lynch-Day et al. 2010 described Trs85 as the TRAPPIII subunit that directs
+        Ypt1 GEF activity to the phagophore assembly site.
+  - subject: trappiii_protein_complex
+    predicate: participates in
+    object: macroautophagy
+    description: TRAPPIII contributes to phagophore assembly-site targeting during
+      yeast macroautophagy.
+    evidence:
+    - reference: DOI:10.1073/pnas.1000063107
+      notes: Lynch-Day et al. 2010 showed that the Trs85 subunit directs TRAPPIII
+        to the phagophore assembly site to promote autophagy.
+discussions:
+- discussion_id: resolve_trappiii_subunit_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the seven curated yeast
+    TRAPPIII subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#bet3_trappiii_subunit
+  - components#bet5_trappiii_subunit
+  - components#trs20_trappiii_subunit
+  - components#trs23_trappiii_subunit
+  - components#trs31_trappiii_subunit
+  - components#trs33_trappiii_subunit
+  - components#trs85_trappiii_subunit
+  rationale: This first TRAPPIII record names the yeast Bet3, Bet5, Trs20, Trs23,
+    Trs31, Trs33 and Trs85 constituent subunits but leaves InterPro, Pfam, or Complex
+    Portal grounding unset until exact orthology and paralogy boundaries are reviewed
+    per subunit.
+  evidence:
+  - reference: GO:1990072
+    notes: GO:1990072 lists the seven curated yeast TRAPPIII subunits.
+  - reference: DOI:10.1073/pnas.1000063107
+    notes: Lynch-Day et al. 2010 analyzed the Trs85-containing TRAPPIII Ypt1 GEF in
+      yeast autophagy.
+  posed_by: codex
+  posed_date: '2026-09-17'
