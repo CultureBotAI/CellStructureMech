@@ -28,6 +28,25 @@ curation_history:
   changes: Narrowed Lynch-Day et al. 2010 evidence to the Trs85 TRAPPIII subunit and
     macroautophagy statements instead of attaching it to every shared-core row.
   llm_assisted: true
+- timestamp: '2026-09-17T08:25:43Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1129 issue #1130 by replacing the Trs85 role phrase ''Trs85-containing
+    TRAPPIII constituent'' with narrower wording for the subunit''s phagophore assembly-site
+    targeting role.'
+  llm_assisted: true
+- timestamp: '2026-09-17T08:26:33Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: 'Tightened the PR #1129 issue #1130 Trs85 role fix so Trs85 directs Ypt1
+    guanine-nucleotide-exchange activity rather than a ''Trs85-containing'' GEF activity.'
+  llm_assisted: true
+- timestamp: '2026-09-17T08:33:22Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: 'Clarified the PR #1129 issue #1130 curation-history wording so it no longer
+    exposes the intermediate Trs85-containing GEF-activity phrase.'
+  llm_assisted: true
 parent_structures:
 - GO:0030008
 components:
@@ -145,8 +164,8 @@ components:
   grounding_notes: Curated from the named Saccharomyces cerevisiae Trs85 TRAPPIII
     subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
     subunit class was curated in this pass.
-  role: Trs85-containing TRAPPIII constituent that directs the yeast Ypt1 guanine-nucleotide-exchange
-    factor to the phagophore assembly site.
+  role: TRAPPIII constituent that directs yeast Ypt1 guanine-nucleotide-exchange activity
+    to the phagophore assembly site.
   evidence:
   - reference: GO:1990072
     notes: GO:1990072 names Trs85 among the yeast TRAPPIII protein-complex subunits.
