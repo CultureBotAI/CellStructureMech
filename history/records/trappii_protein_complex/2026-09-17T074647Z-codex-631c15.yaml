@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/trappii_protein_complex.yaml
+  slug: trappii_protein_complex
+session:
+  id: 2026-09-17T074647Z-codex-631c15
+  timestamp: '2026-09-17T07:46:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - record
+  - evidence
+  - components
+  - causal_graphs
+  summary: Added TRAPPII protein complex record
+  details: Created GO:1990071 as a TRAPPII protein complex record with TRAPP parentage, TRAPP
+    II synonymy, reviewed-label-only yeast Bet3/Bet5/Tca17/Trs20/Trs23/Trs31/Trs33/Trs65/Trs120/Trs130
+    components, Saccharomyces cerevisiae scope, intra-Golgi vesicle-mediated transport function,
+    DOI-backed evidence, a nonmechanistic yeast Golgi-tethering graph, and subtype-boundary
+    curation discussions.

@@ -3258,6 +3258,15 @@
   "definition": "A complex that tethers COPII vesicles at ER-Golgi intermediate compartment. Its role in this part of the vesicular transport may start at the ER exit sites. Binds to a component of the COPII coat. In yeast it includes the following subunits: Bet3 (as homodimer), Bet5, Trs20, Trs23, Trs31, Trs33 which are regarded as the core subunits of all TRAPP complexes in yeast."
  },
  {
+  "identifier": "GO:1990071",
+  "label": "TRAPPII protein complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/trappii_protein_complex.html",
+  "definition": "A complex that mediates intra-Golgi traffic, Golgi exit, endosome-to-Golgi traffic, and the trafficking of autophagy proteins from Golgi to the phagophore assembly site. Binds to a component of the COPI coat. In yeast it includes the following subunits: Bet3 (as homodimer), Bet5, Tca17, Trs20, Trs23, Trs31, Trs33, Trs65, Trs120, Trs130. The whole complex is thought to dimerize with itself."
+ },
+ {
   "identifier": "GO:0030120",
   "label": "vesicle coat",
   "category": "OTHER",
