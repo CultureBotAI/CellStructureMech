@@ -10718,6 +10718,11 @@
           "cosine_similarity": 0.87495414
         },
         {
+          "identifier": "GO:0005744",
+          "label": "TIM23 mitochondrial import inner membrane translocase complex",
+          "cosine_similarity": 0.8624188
+        },
+        {
           "identifier": "GO:0005739",
           "label": "mitochondrion",
           "cosine_similarity": 0.8563988
@@ -10726,11 +10731,6 @@
           "identifier": "GO:0005741",
           "label": "mitochondrial outer membrane",
           "cosine_similarity": 0.85209986
-        },
-        {
-          "identifier": "GO:0005759",
-          "label": "mitochondrial matrix",
-          "cosine_similarity": 0.83629377
         }
       ]
     },
@@ -11405,14 +11405,14 @@
           "cosine_similarity": 0.81295248
         },
         {
+          "identifier": "GO:0005744",
+          "label": "TIM23 mitochondrial import inner membrane translocase complex",
+          "cosine_similarity": 0.80917718
+        },
+        {
           "identifier": "GO:0010006",
           "label": "Toc complex",
           "cosine_similarity": 0.78788455
-        },
-        {
-          "identifier": "GO:0031897",
-          "label": "Tic complex",
-          "cosine_similarity": 0.77296298
         }
       ]
     },
@@ -11537,6 +11537,37 @@
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.75465664
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005744",
+      "label": "TIM23 mitochondrial import inner membrane translocase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.8624188
+        },
+        {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.80917718
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.76258818
+        },
+        {
+          "identifier": "GO:0033281",
+          "label": "TAT protein transport complex",
+          "cosine_similarity": 0.72860054
+        },
+        {
+          "identifier": "GO:0005739",
+          "label": "mitochondrion",
+          "cosine_similarity": 0.72082787
         }
       ]
     },

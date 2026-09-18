@@ -1,0 +1,170 @@
+identifier: GO:0005744
+label: TIM23 mitochondrial import inner membrane translocase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: 'The protein transport machinery of the mitochondrial inner membrane that
+  typically transports proteins that possess a matrix-targeting N-terminal presequence.
+  The TIM23 complex contains three essential Tim proteins: Tim17 and Tim23 are thought
+  to build a preprotein translocation channel while Tim44 interacts transiently with
+  the matrix heat-shock protein Hsp70 to form an ATP-driven import motor.'
+definition_source: GO:0005744
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T17:00:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T17:01:30Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, inner-mitochondrial-membrane protein-complex parentage,
+    mitochondrial-inner-membrane parthood, Saccharomyces scope, matrix-import function
+    evidence, a nonmechanistic TOM-to-TIM23 graph, and a TIM23/PAM subunit-boundary
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Tim23 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005744
+- synonym_text: mitochondrial inner membrane pre-sequence translocase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005744
+- synonym_text: mitochondrial inner membrane presequence translocase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005744
+- synonym_text: mitochondrial inner membrane translocase complex
+  synonym_type: BROAD_SYNONYM
+  source: GO:0005744
+parent_structures:
+- GO:0098800
+part_of:
+- GO:0005743
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria contain TIM23 inner-membrane presequence translocases
+    that act downstream of TOM during matrix import.
+  reference: DOI:10.1016/j.cell.2009.08.005
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model for the TIM23 presequence translocase and its coordination
+    with TOM and PAM during mitochondrial matrix import.
+  reference: DOI:10.1016/j.cell.2009.08.005
+functions:
+- function_id: protein_import_into_mitochondrial_matrix
+  label: protein import into mitochondrial matrix
+  grounding: GO:0030150
+  description: TIM23 mediates the inner-membrane translocation step for presequence-containing
+    precursor proteins destined for the mitochondrial matrix.
+  evidence:
+  - reference: GO:0005744
+    notes: GO:0005744 defines TIM23 as mitochondrial inner-membrane protein-transport
+      machinery that typically transports proteins with matrix-targeting N-terminal
+      presequences.
+  - reference: GO:0030150
+    notes: GO:0030150 denotes protein import into the mitochondrial matrix from the
+      cytosol via TOM, TIM23 and PAM.
+  - reference: DOI:10.1016/j.cell.2009.08.005
+    notes: Chacinska et al. 2009 reviewed TOM entry and downstream TIM23-PAM presequence
+      import into the mitochondrial matrix.
+evidence:
+- reference: GO:0005744
+  notes: Gene Ontology cellular-component term for the TIM23 mitochondrial import
+    inner membrane translocase complex.
+- reference: GO:0098800
+  notes: Gene Ontology cellular-component parent term for inner mitochondrial membrane
+    protein complexes.
+- reference: GO:0005743
+  notes: Gene Ontology cellular-component term for the mitochondrial inner membrane
+    that contains TIM23.
+- reference: GO:0030150
+  notes: Gene Ontology biological-process term for protein import into the mitochondrial
+    matrix.
+- reference: DOI:10.1016/j.cell.2009.08.005
+  notes: 'Chacinska et al. 2009, ''Importing mitochondrial proteins: machineries and
+    mechanisms'', Cell.'
+- reference: DOI:10.1007/s00441-016-2486-7
+  notes: 'Demishtein-Zohary and Azem 2017, ''The TIM23 mitochondrial protein import
+    complex: function and dysfunction'', Cell and Tissue Research.'
+causal_graphs:
+- graph_id: tom_tim23_matrix_import
+  title: TIM23 mediates the inner-membrane matrix-import step
+  description: After TOM import across the mitochondrial outer membrane, TIM23 acts
+    in the inner membrane to translocate presequence-containing precursors during
+    matrix import.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures TOM-to-TIM23 topology during matrix import without
+    asserting individual Tim subunit families, PAM motor composition, or alternate
+    lateral insertion states.
+  nodes:
+  - node_id: tom_complex
+    label: mitochondrial outer membrane translocase complex
+    node_type: STRUCTURE
+    grounding: GO:0005742
+  - node_id: tim23_complex
+    label: TIM23 mitochondrial import inner membrane translocase complex
+    node_type: STRUCTURE
+    grounding: GO:0005744
+  - node_id: mitochondrial_inner_membrane
+    label: mitochondrial inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005743
+  - node_id: protein_import_into_mitochondrial_matrix
+    label: protein import into mitochondrial matrix
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030150
+  edges:
+  - subject: tim23_complex
+    predicate: is part of
+    object: mitochondrial_inner_membrane
+    description: TIM23 is a mitochondrial inner-membrane protein transport complex.
+    evidence:
+    - reference: GO:0005744
+      notes: GO:0005744 places TIM23 protein-transport machinery in the mitochondrial
+        inner membrane.
+  - subject: tom_complex
+    predicate: hands presequence precursors to
+    object: tim23_complex
+    description: TOM-mediated outer-membrane import precedes TIM23-PAM matrix import
+      of presequence-containing precursors.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2009.08.005
+      notes: Chacinska et al. 2009 reviewed TIM23-PAM as the downstream inner-membrane
+        and matrix machinery for TOM-imported presequence precursors.
+  - subject: tim23_complex
+    predicate: mediates
+    object: protein_import_into_mitochondrial_matrix
+    description: TIM23 mediates the inner-membrane translocation step of presequence
+      protein import into the matrix.
+    evidence:
+    - reference: GO:0030150
+      notes: GO:0030150 grounds the matrix-import pathway that passes through TOM,
+        TIM23 and PAM.
+    - reference: DOI:10.1007/s00441-016-2486-7
+      notes: Demishtein-Zohary and Azem 2017 reviewed the function of the TIM23 mitochondrial
+        protein import complex.
+discussions:
+- discussion_id: tim23_subunit_boundaries
+  prompt: Resolve exact source-neutral component groundings for bona fide TIM23 constituents
+    before adding Tim subunit rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#tom_tim23_matrix_import
+  rationale: GO exactly grounds the TIM23 complex itself and names Tim17, Tim23 and
+    transient Tim44/Hsp70 motor association in its definition, but this first record
+    leaves Tim17, Tim23, Tim44, Tim50, Pam17 and PAM-motor subunit rows unasserted
+    until exact family groundings and stable or transient complex boundaries are curated.
+  evidence:
+  - reference: GO:0005744
+    notes: GO:0005744 names Tim17, Tim23 and transient Tim44-Hsp70 import-motor association
+      in its definition.
+  - reference: DOI:10.1016/j.cell.2009.08.005
+    notes: Chacinska et al. 2009 reviewed multiple TIM23 and PAM factors in the mitochondrial
+      presequence import pathway.
+  posed_by: codex
+  posed_date: '2026-09-18'

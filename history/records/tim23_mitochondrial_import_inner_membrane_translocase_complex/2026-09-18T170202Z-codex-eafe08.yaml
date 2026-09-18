@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/tim23_mitochondrial_import_inner_membrane_translocase_complex.yaml
+  slug: tim23_mitochondrial_import_inner_membrane_translocase_complex
+session:
+  id: 2026-09-18T170202Z-codex-eafe08
+  timestamp: '2026-09-18T17:02:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add TIM23 mitochondrial import inner membrane translocase complex record
+  details: Created data/structures/other/tim23_mitochondrial_import_inner_membrane_translocase_complex.yaml
+    for GO:0005744 with GO exact and broad synonymy, inner-mitochondrial-membrane protein-complex
+    parentage, mitochondrial-inner-membrane parthood, Saccharomyces scope, mitochondrial matrix
+    import evidence, a nonmechanistic TOM-to-TIM23 graph, and a TIM23/PAM subunit-boundary
+    TODO.
