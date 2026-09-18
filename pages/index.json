@@ -3285,6 +3285,15 @@
   "definition": "A chloroplast outer-envelope protein translocon complex that forms the outer-membrane step of nuclear-encoded preprotein import into the chloroplast."
  },
  {
+  "identifier": "GO:0031931",
+  "label": "TORC1 complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/torc1_complex.html",
+  "definition": "A protein complex that contains at least TOR (target of rapamycin) and Raptor (regulatory-associated protein of TOR), or orthologs of, in complex with other signaling components. Mediates the phosphorylation and activation of S6K. In Saccharomyces, the complex contains Kog1p, Lst8p, Tco89p, and either Tor1p or Tor2p."
+ },
+ {
   "identifier": "GO:1990070",
   "label": "TRAPPI protein complex",
   "category": "OTHER",

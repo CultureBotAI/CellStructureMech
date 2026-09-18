@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/torc1_complex.yaml
+  slug: torc1_complex
+session:
+  id: 2026-09-18T111330Z-codex-b0d857
+  timestamp: '2026-09-18T11:13:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - data/structures/other/torc1_complex.yaml
+  summary: Add TORC1 complex record
+  details: Curated data/structures/other/torc1_complex.yaml from GO:0031931 with reviewed-label-only
+    Tor, Kog1, Lst8 and Tco89 constituent proteins, Saccharomyces cerevisiae scope, a TORC1-signaling
+    function, a nonmechanistic TORC1 subunit/function graph, and boundary decisions keeping
+    TORC2-only and Rag/GATOR/EGO subunits outside the TORC1 catalytic-complex record. The
+    draft was written through scripts/new_record.py plus temporary validated mutators and
+    checked with validate_strict for the new record.

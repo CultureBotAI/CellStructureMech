@@ -9891,9 +9891,9 @@
           "cosine_similarity": 0.7510978
         },
         {
-          "identifier": "GO:1990130",
-          "label": "GATOR1 complex",
-          "cosine_similarity": 0.74510243
+          "identifier": "GO:0031931",
+          "label": "TORC1 complex",
+          "cosine_similarity": 0.74642448
         }
       ]
     },
@@ -10315,6 +10315,11 @@
           "cosine_similarity": 0.84813074
         },
         {
+          "identifier": "GO:0031931",
+          "label": "TORC1 complex",
+          "cosine_similarity": 0.78078875
+        },
+        {
           "identifier": "GO:0000938",
           "label": "GARP complex",
           "cosine_similarity": 0.76723838
@@ -10323,11 +10328,6 @@
           "identifier": "GO:0034044",
           "label": "exomer complex",
           "cosine_similarity": 0.74955505
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.74510243
         }
       ]
     },
@@ -10356,9 +10356,9 @@
           "cosine_similarity": 0.71033094
         },
         {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.69819991
+          "identifier": "GO:0031931",
+          "label": "TORC1 complex",
+          "cosine_similarity": 0.7092113
         }
       ]
     },
@@ -10449,9 +10449,9 @@
           "cosine_similarity": 0.76180138
         },
         {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.75794431
+          "identifier": "GO:0031931",
+          "label": "TORC1 complex",
+          "cosine_similarity": 0.75845062
         }
       ]
     },
@@ -11007,9 +11007,9 @@
           "cosine_similarity": 0.70657748
         },
         {
-          "identifier": "GO:0033099",
-          "label": "attachment organelle",
-          "cosine_similarity": 0.69111065
+          "identifier": "GO:0031931",
+          "label": "TORC1 complex",
+          "cosine_similarity": 0.69771709
         }
       ]
     },
@@ -11320,6 +11320,37 @@
           "identifier": "GO:0005643",
           "label": "nuclear pore",
           "cosine_similarity": 0.71401761
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031931",
+      "label": "TORC1 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990130",
+          "label": "GATOR1 complex",
+          "cosine_similarity": 0.78078875
+        },
+        {
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.75845062
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.74642448
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.72208339
+        },
+        {
+          "identifier": "GO:1990070",
+          "label": "TRAPPI protein complex",
+          "cosine_similarity": 0.71909237
         }
       ]
     },
