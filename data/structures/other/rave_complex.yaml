@@ -1,0 +1,274 @@
+identifier: GO:0043291
+label: RAVE complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multisubunit complex that in Saccharomyces is composed of three subunits,
+  Rav1p, Rav2p and Skp1p. Acts transiently to catalyze assembly of cytoplasmic V1
+  with membrane embedded V0 to form the V-ATPase holoenzyme.
+definition_source: GO:0043291
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T20:00:12Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T20:00:57Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added RAVE synonymy, protein-complex parentage, cytoplasmic parthood, Saccharomyces
+    scope, V-type ATPase assembly evidence, a nonmechanistic RAVE V1-V0 assembly graph,
+    and a RAVE subunit-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-18T20:12:38Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1187 by adding reviewed label-only Rav1, Rav2 and Skp1 component
+    rows. Resolved #1188 by connecting the RAVE graph to the assembled V-ATPase product
+    node.'
+  llm_assisted: true
+synonyms:
+- synonym_text: regulator of the (H+)-ATPase of the vacuolar and endosomal membranes
+  synonym_type: BROAD_SYNONYM
+  source: GO:0043291
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0005737
+components:
+- component_id: rav1_subunit
+  label: Rav1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RAV1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rav1p is modeled as a budding-yeast RAVE subunit; no exact source-neutral
+    Rav1 protein-family CURIE was curated for this first record.
+  role: Named constituent of the budding-yeast RAVE complex.
+  evidence:
+  - reference: GO:0043291
+    notes: GO:0043291 names Rav1p as a Saccharomyces RAVE subunit.
+  - reference: DOI:10.1038/35070067
+    notes: Seol et al. 2001 isolated RAVE and identified Rav1p in the complex.
+- component_id: rav2_subunit
+  label: Rav2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RAV2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rav2p is modeled as a budding-yeast RAVE subunit; no exact source-neutral
+    Rav2 protein-family CURIE was curated for this first record.
+  role: Named constituent of the budding-yeast RAVE complex.
+  evidence:
+  - reference: GO:0043291
+    notes: GO:0043291 names Rav2p as a Saccharomyces RAVE subunit.
+  - reference: DOI:10.1038/35070067
+    notes: Seol et al. 2001 isolated RAVE and identified Rav2p in the complex.
+- component_id: skp1_subunit
+  label: Skp1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SKP1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Skp1p is modeled here by its role in budding-yeast RAVE; no exact
+    source-neutral CURIE was curated that separates this RAVE subunit role from other
+    Skp1 complex contexts.
+  role: Named Skp1-family constituent of the budding-yeast RAVE complex.
+  evidence:
+  - reference: GO:0043291
+    notes: GO:0043291 names Skp1p as a Saccharomyces RAVE subunit.
+  - reference: DOI:10.1038/35070067
+    notes: Seol et al. 2001 isolated RAVE and identified Skp1p in the complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses a cytoplasmic RAVE complex containing Rav1p, Rav2p and
+    Skp1p to support V-ATPase V1-V0 assembly.
+  reference: DOI:10.1038/35070067
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which RAVE was isolated as a Skp1-associated complex and connected
+    to glucose-dependent V-ATPase assembly.
+  reference: DOI:10.1038/35070067
+functions:
+- function_id: v_type_atpase_complex_assembly
+  label: proton-transporting V-type ATPase complex assembly
+  grounding: GO:0070070
+  description: RAVE helps assemble cytosolic V1 sectors with membrane V0 sectors to
+    form V-ATPase holoenzymes.
+  evidence:
+  - reference: GO:0043291
+    notes: GO:0043291 defines RAVE by its transient catalysis of V1-V0 assembly into
+      the V-ATPase holoenzyme.
+  - reference: GO:0070070
+    notes: GO:0070070 denotes proton-transporting V-type ATPase complex assembly.
+  - reference: DOI:10.1074/jbc.M200682200
+    notes: Smardon et al. 2002 provided biochemical and genetic evidence that RAVE
+      is needed for stable assembly of the yeast V-ATPase.
+evidence:
+- reference: GO:0043291
+  notes: Gene Ontology cellular-component term for the RAVE complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0005737
+  notes: Gene Ontology cellular-component term for the cytoplasm that contains RAVE.
+- reference: GO:0070070
+  notes: Gene Ontology biological-process term for proton-transporting V-type ATPase
+    complex assembly.
+- reference: GO:0033176
+  notes: Gene Ontology cellular-component term for the proton-transporting V-type
+    ATPase complex.
+- reference: GO:0033180
+  notes: Gene Ontology cellular-component term for the cytosolic V1 domain of a proton-transporting
+    V-type ATPase.
+- reference: GO:0033179
+  notes: Gene Ontology cellular-component term for the membrane V0 domain of a proton-transporting
+    V-type ATPase.
+- reference: DOI:10.1038/35070067
+  notes: Seol et al. 2001, 'Skp1 forms multiple protein complexes, including RAVE,
+    a regulator of V-ATPase assembly', Nature Cell Biology.
+- reference: DOI:10.1074/jbc.M200682200
+  notes: Smardon, Tarsio and Kane 2002, 'The RAVE Complex Is Essential for Stable
+    Assembly of the Yeast V-ATPase', Journal of Biological Chemistry.
+causal_graphs:
+- graph_id: rave_v_atpase_assembly
+  title: RAVE supports V-ATPase V1-V0 assembly
+  description: RAVE is a cytoplasmic yeast complex that helps assemble cytosolic V1
+    sectors with membrane V0 sectors into V-ATPase holoenzymes.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures reviewed label-only RAVE subunit membership, RAVE
+    localization and V1-V0 assembly support without asserting exact Rav1, Rav2 or
+    Skp1 source-neutral family groundings.
+  nodes:
+  - node_id: rav1_subunit
+    label: Rav1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rav1_subunit
+  - node_id: rav2_subunit
+    label: Rav2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rav2_subunit
+  - node_id: skp1_subunit
+    label: Skp1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: skp1_subunit
+  - node_id: rave_complex
+    label: RAVE complex
+    node_type: STRUCTURE
+    grounding: GO:0043291
+  - node_id: cytoplasm
+    label: cytoplasm
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005737
+  - node_id: v1_domain
+    label: proton-transporting V-type ATPase, V1 domain
+    node_type: STRUCTURE
+    grounding: GO:0033180
+  - node_id: v0_domain
+    label: proton-transporting V-type ATPase, V0 domain
+    node_type: STRUCTURE
+    grounding: GO:0033179
+  - node_id: v_type_atpase
+    label: proton-transporting V-type ATPase complex
+    node_type: STRUCTURE
+    grounding: GO:0033176
+  - node_id: v_type_atpase_assembly
+    label: proton-transporting V-type ATPase complex assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0070070
+  edges:
+  - subject: rav1_subunit
+    predicate: assembles into
+    object: rave_complex
+    description: Rav1p is a named constituent of the budding-yeast RAVE complex.
+    evidence:
+    - reference: GO:0043291
+      notes: GO:0043291 names Rav1p as a Saccharomyces RAVE subunit.
+  - subject: rav2_subunit
+    predicate: assembles into
+    object: rave_complex
+    description: Rav2p is a named constituent of the budding-yeast RAVE complex.
+    evidence:
+    - reference: GO:0043291
+      notes: GO:0043291 names Rav2p as a Saccharomyces RAVE subunit.
+  - subject: skp1_subunit
+    predicate: assembles into
+    object: rave_complex
+    description: Skp1p is a named constituent of the budding-yeast RAVE complex.
+    evidence:
+    - reference: GO:0043291
+      notes: GO:0043291 names Skp1p as a Saccharomyces RAVE subunit.
+  - subject: rave_complex
+    predicate: is part of
+    object: cytoplasm
+    description: RAVE is a cytoplasmic protein complex.
+    evidence:
+    - reference: GO:0043291
+      notes: GO:0043291 places RAVE part_of GO:0005737 cytoplasm.
+  - subject: rave_complex
+    predicate: acts on
+    object: v1_domain
+    description: RAVE associates with cytosolic V1 sectors during V-ATPase reassembly.
+    evidence:
+    - reference: DOI:10.1074/jbc.M200682200
+      notes: Smardon et al. 2002 found reversible association of RAVE with cytosolic
+        V1 complexes released by glucose deprivation.
+  - subject: v1_domain
+    predicate: assembles with
+    object: v0_domain
+    description: The V1 sector assembles with the membrane V0 sector to form a V-ATPase
+      holoenzyme.
+    evidence:
+    - reference: GO:0043291
+      notes: GO:0043291 defines RAVE by its role in assembly of cytoplasmic V1 with
+        membrane embedded V0.
+  - subject: v_type_atpase_assembly
+    predicate: produces
+    object: v_type_atpase
+    description: Proton-transporting V-type ATPase complex assembly produces a V-ATPase
+      holoenzyme from V1 and V0 sectors.
+    evidence:
+    - reference: GO:0043291
+      notes: GO:0043291 defines RAVE by assembly of V1 and V0 into V-ATPase holoenzyme.
+    - reference: GO:0070070
+      notes: GO:0070070 denotes proton-transporting V-type ATPase complex assembly.
+  - subject: rave_complex
+    predicate: supports
+    object: v_type_atpase_assembly
+    description: RAVE supports the assembly of V1 and V0 sectors into proton-transporting
+      V-type ATPase complexes.
+    evidence:
+    - reference: GO:0043291
+      notes: GO:0043291 defines RAVE by V-ATPase holoenzyme assembly.
+    - reference: DOI:10.1074/jbc.M200682200
+      notes: Smardon et al. 2002 connected RAVE subunits to structural and functional
+        V-ATPase assembly defects.
+discussions:
+- discussion_id: rave_subunit_family_boundaries
+  prompt: Resolve exact source-neutral RAVE subunit family groundings for the reviewed
+    label-only Rav1, Rav2 and Skp1 component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#rave_v_atpase_assembly
+  rationale: GO exactly grounds the RAVE complex and names the Saccharomyces cerevisiae
+    Rav1p, Rav2p and Skp1p subunits; this first RAVE record adds reviewed label-only
+    component rows but leaves exact taxon-agnostic family identifiers unset until
+    they are verified.
+  evidence:
+  - reference: GO:0043291
+    notes: GO:0043291 identifies Rav1p, Rav2p and Skp1p as Saccharomyces RAVE subunits.
+  - reference: DOI:10.1038/35070067
+    notes: Seol et al. 2001 isolated RAVE and identified Skp1p, Rav1p and Rav2p in
+      the complex.
+  posed_by: codex
+  posed_date: '2026-09-18'

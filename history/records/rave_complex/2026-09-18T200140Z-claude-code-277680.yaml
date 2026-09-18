@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/rave_complex.yaml
+  slug: rave_complex
+session:
+  id: 2026-09-18T200140Z-claude-code-277680
+  timestamp: '2026-09-18T20:01:40Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created RAVE complex record
+  details: Added a GO:0043291 RAVE complex record with GO synonymy and parentage, Saccharomyces
+    cerevisiae support from Seol et al. 2001 and Smardon et al. 2002, a V-type ATPase V1-V0
+    assembly graph, and an open RAVE subunit-grounding TODO.
