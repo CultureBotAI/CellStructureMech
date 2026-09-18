@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/rave_complex.yaml
+  slug: rave_complex
+session:
+  id: 2026-09-18T201259Z-claude-code-4c6648
+  timestamp: '2026-09-18T20:12:59Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1187
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1188
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1186
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address RAVE PR review findings
+  details: 'Resolved PR #1186 review issues #1187 and #1188 by adding reviewed label-only
+    Rav1, Rav2 and Skp1 components and by connecting the RAVE assembly graph to the V-ATPase
+    product node.'

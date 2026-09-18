@@ -2598,7 +2598,7 @@
         {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
-          "cosine_similarity": 0.78659457
+          "cosine_similarity": 0.74062362
         },
         {
           "identifier": "GO:0005774",
@@ -2629,7 +2629,7 @@
         {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
-          "cosine_similarity": 0.82065831
+          "cosine_similarity": 0.76538841
         },
         {
           "identifier": "GO:0005774",
@@ -2660,7 +2660,7 @@
         {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
-          "cosine_similarity": 0.81819436
+          "cosine_similarity": 0.77085794
         },
         {
           "identifier": "GO:0005774",
@@ -9614,7 +9614,7 @@
         {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
-          "cosine_similarity": 0.63141805
+          "cosine_similarity": 0.63143029
         }
       ]
     },
@@ -9669,14 +9669,14 @@
           "cosine_similarity": 0.76096872
         },
         {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.69693782
+        },
+        {
           "identifier": "GO:0071682",
           "label": "endocytic vesicle lumen",
           "cosine_similarity": 0.68723599
-        },
-        {
-          "identifier": "GO:0060205",
-          "label": "cytoplasmic vesicle lumen",
-          "cosine_similarity": 0.68723348
         }
       ]
     },
@@ -9684,11 +9684,6 @@
       "identifier": "GO:0043263",
       "label": "cellulosome",
       "neighbors": [
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.6879186
-        },
         {
           "identifier": "GO:0022624",
           "label": "proteasome accessory complex",
@@ -9698,6 +9693,11 @@
           "identifier": "GO:0000502",
           "label": "proteasome complex",
           "cosine_similarity": 0.67712533
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.67317773
         },
         {
           "identifier": "GO:0033551",
@@ -10062,6 +10062,11 @@
           "cosine_similarity": 0.7825783
         },
         {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.78200944
+        },
+        {
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.77544624
@@ -10075,11 +10080,6 @@
           "identifier": "GO:0033551",
           "label": "monopolin complex",
           "cosine_similarity": 0.75979874
-        },
-        {
-          "identifier": "GO:1990131",
-          "label": "Gtr1-Gtr2 GTPase complex",
-          "cosine_similarity": 0.75820877
         }
       ]
     },
@@ -10170,9 +10170,9 @@
           "cosine_similarity": 0.81295248
         },
         {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.80574215
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.80328178
         }
       ]
     },
@@ -10553,6 +10553,11 @@
       "label": "HOPS complex",
       "neighbors": [
         {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.820472
+        },
+        {
           "identifier": "GO:0033263",
           "label": "CORVET complex",
           "cosine_similarity": 0.81766122
@@ -10561,11 +10566,6 @@
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.78422668
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.78393189
         },
         {
           "identifier": "GO:1990070",
@@ -10837,6 +10837,11 @@
           "cosine_similarity": 0.77907078
         },
         {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.77042814
+        },
+        {
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.75999748
@@ -10845,11 +10850,6 @@
           "identifier": "GO:0042729",
           "label": "DASH complex",
           "cosine_similarity": 0.75979874
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.74807365
         },
         {
           "identifier": "GO:1990131",
@@ -11281,14 +11281,14 @@
           "cosine_similarity": 0.71955231
         },
         {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.71937722
+        },
+        {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.71279966
-        },
-        {
-          "identifier": "GO:0036286",
-          "label": "eisosome filament",
-          "cosine_similarity": 0.71007657
         }
       ]
     },
@@ -11483,29 +11483,29 @@
       "label": "RAVE complex",
       "neighbors": [
         {
-          "identifier": "GO:0032865",
-          "label": "ERMES complex",
-          "cosine_similarity": 0.83067528
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.820472
         },
         {
-          "identifier": "GO:0000220",
-          "label": "vacuolar proton-transporting V-type ATPase, V0 domain",
-          "cosine_similarity": 0.82065831
+          "identifier": "GO:0030904",
+          "label": "retromer complex",
+          "cosine_similarity": 0.78778862
         },
         {
-          "identifier": "GO:0000221",
-          "label": "vacuolar proton-transporting V-type ATPase, V1 domain",
-          "cosine_similarity": 0.81819436
+          "identifier": "GO:0042729",
+          "label": "DASH complex",
+          "cosine_similarity": 0.78200944
         },
         {
-          "identifier": "GO:0061617",
-          "label": "MICOS complex",
-          "cosine_similarity": 0.80868618
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.77963065
         },
         {
-          "identifier": "GO:0072546",
-          "label": "EMC complex",
-          "cosine_similarity": 0.80574215
+          "identifier": "GO:0031932",
+          "label": "TORC2 complex",
+          "cosine_similarity": 0.77938327
         }
       ]
     },
@@ -11513,6 +11513,11 @@
       "identifier": "GO:0030904",
       "label": "retromer complex",
       "neighbors": [
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.78778862
+        },
         {
           "identifier": "GO:0030897",
           "label": "HOPS complex",
@@ -11527,11 +11532,6 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.77438259
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.7597875
         },
         {
           "identifier": "GO:1990131",
@@ -11808,14 +11808,14 @@
           "cosine_similarity": 0.77959163
         },
         {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.76513194
+        },
+        {
           "identifier": "GO:0030897",
           "label": "HOPS complex",
           "cosine_similarity": 0.75770643
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.74497648
         }
       ]
     },
@@ -11827,6 +11827,11 @@
           "identifier": "GO:0031931",
           "label": "TORC1 complex",
           "cosine_similarity": 0.92980871
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.77938327
         },
         {
           "identifier": "GO:1990130",
@@ -11842,11 +11847,6 @@
           "identifier": "GO:0030897",
           "label": "HOPS complex",
           "cosine_similarity": 0.76432985
-        },
-        {
-          "identifier": "GO:0071986",
-          "label": "Ragulator complex",
-          "cosine_similarity": 0.75623306
         }
       ]
     },
