@@ -10487,6 +10487,37 @@
       ]
     },
     {
+      "identifier": "GO:0042765",
+      "label": "GPI-anchor transamidase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990131",
+          "label": "Gtr1-Gtr2 GTPase complex",
+          "cosine_similarity": 0.75675321
+        },
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.73156363
+        },
+        {
+          "identifier": "GO:1990130",
+          "label": "GATOR1 complex",
+          "cosine_similarity": 0.72286831
+        },
+        {
+          "identifier": "GO:1990071",
+          "label": "TRAPPII protein complex",
+          "cosine_similarity": 0.71776129
+        },
+        {
+          "identifier": "GO:0000938",
+          "label": "GARP complex",
+          "cosine_similarity": 0.71545992
+        }
+      ]
+    },
+    {
       "identifier": "GO:1990131",
       "label": "Gtr1-Gtr2 GTPase complex",
       "neighbors": [
