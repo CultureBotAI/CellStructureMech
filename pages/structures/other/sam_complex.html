@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAM complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>SAM complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0001401"><code>GO:0001401</code></a> · OTHER · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A large complex of the mitochondrial outer membrane that mediates sorting of some imported proteins to the outer membrane and their assembly in the membrane; functions after import of incoming proteins by the mitochondrial outer membrane translocase complex. <small>[<a href="http://purl.obolibrary.org/obo/GO_0001401"><code>GO:0001401</code></a>]</small></p>
+<p><strong>Synonyms:</strong> mitochondrial sorting and assembly machinery complex; TOB complex</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005741"><code>GO:0005741</code></a> </p>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> Saccharomyces cerevisiae — <strong>COMMON</strong>: Budding-yeast mitochondria contain SAM, a sorting and assembly machinery that acts after TOM in the outer-membrane protein biogenesis pathway. [<a href="https://doi.org/10.1038/nature01753"><code>DOI:10.1038/nature01753</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> <em>Saccharomyces cerevisiae</em> — Yeast model in which the mitochondrial outer membrane sorting and assembly machinery was distinguished from TOM and Mas37 was shown to be a SAM-complex constituent. [<a href="https://doi.org/10.1038/nature01753"><code>DOI:10.1038/nature01753</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>protein insertion into mitochondrial outer membrane</strong> <a href="http://purl.obolibrary.org/obo/GO_0045040"><code>GO:0045040</code></a> — The SAM complex acts after TOM to sort and assemble a subset of imported proteins into the mitochondrial outer membrane.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0001401"><code>GO:0001401</code></a> <small>GO:0001401 defines SAM as the mitochondrial outer-membrane machinery that sorts some imported proteins and assembles them into the membrane after TOM import.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0045040"><code>GO:0045040</code></a> <small>GO:0045040 defines insertion of proteins into the mitochondrial outer membrane by large outer-membrane translocase complexes.</small></li><li><a href="https://doi.org/10.1038/nature01753"><code>DOI:10.1038/nature01753</code></a> <small>Wiedemann et al. 2003 separated the SAM outer-membrane sorting and assembly step from the upstream TOM translocase step.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-tom_sam_outer_membrane_protein_insertion">SAM assembles imported outer-membrane precursors after TOM <small>(FUNCTION)</small></h3>
+<p>In the mitochondrial outer membrane, the SAM complex acts after TOM to sort and assemble imported outer-membrane precursor proteins.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>SAM complex</td><td>is part of</td><td>mitochondrial outer membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0001401"><code>GO:0001401</code></a> <small>GO:0001401 defines SAM as a large complex of the mitochondrial outer membrane.</small></li></ul></td></tr>
+<tr><td>mitochondrial outer membrane translocase complex</td><td>transfers precursors to</td><td>SAM complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0001401"><code>GO:0001401</code></a> <small>GO:0001401 defines SAM as functioning after TOM in the sorting and assembly of imported outer-membrane proteins.</small></li><li><a href="https://doi.org/10.1038/nature01753"><code>DOI:10.1038/nature01753</code></a> <small>Wiedemann et al. 2003 separated SAM-mediated outer-membrane sorting and assembly from the TOM import step.</small></li></ul></td></tr>
+<tr><td>SAM complex</td><td>assembles</td><td>protein insertion into mitochondrial outer membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0045040"><code>GO:0045040</code></a> <small>GO:0045040 grounds protein insertion into the mitochondrial outer membrane by outer-membrane translocase complexes.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral component groundings for bona fide SAM constituents before adding Sam subunit rows. <small>GO exactly grounds the SAM complex itself, but this first record does not assert InterPro, Pfam, NCBIfam, or UniProt family CURIEs for Sam50, Sam35/Tob38, Sam37/Mas37, Mdm10, or partner factors until their source-neutral family boundaries are verified.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0001401"><code>GO:0001401</code></a> <small>Gene Ontology cellular-component term for the SAM complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0098799"><code>GO:0098799</code></a> <small>Gene Ontology cellular-component parent term for outer mitochondrial membrane protein complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005741"><code>GO:0005741</code></a> <small>Gene Ontology cellular-component term for the mitochondrial outer membrane that carries SAM.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005742"><code>GO:0005742</code></a> <small>Gene Ontology cellular-component term for the upstream TOM complex named in the GO:0001401 definition.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0045040"><code>GO:0045040</code></a> <small>Gene Ontology biological-process term for protein insertion into the mitochondrial outer membrane.</small></li><li><a href="https://doi.org/10.1038/nature01753"><code>DOI:10.1038/nature01753</code></a> <small>Wiedemann et al. 2003, Machinery for protein sorting and assembly in the mitochondrial outer membrane, Nature.</small></li><li><a href="https://doi.org/10.1016/j.molcel.2023.02.020"><code>DOI:10.1016/j.molcel.2023.02.020</code></a> <small>Busch et al. 2023, Mitochondrial protein transport: Versatility of translocases and mechanisms, Molecular Cell.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-18T15:12:55Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-18T15:14:22Z</code> codex · EXPANDED_RECORD — Added GO synonymy, outer-mitochondrial-membrane protein-complex parentage, mitochondrial-outer-membrane parthood, Saccharomyces scope, TOM-SAM outer-membrane protein-insertion function evidence, a nonmechanistic TOM-to-SAM graph, and a SAM subunit-boundary TODO.</li><li><code>2026-09-18T15:18:48Z</code> codex · NARROW_FUNCTION_GROUNDING — Replaced a newer QuickGO TOM-SAM pathway grounding with the OAK-visible GO:0045040 protein insertion into mitochondrial outer membrane term while preserving the SAM-specific TOM handoff in notes.</li><li><code>2026-09-18T15:19:23Z</code> codex · NARROW_EVIDENCE_SCOPE — Removed a stale beta-barrel-only phrase from the TOM-to-SAM edge after switching to the broader GO:0045040 outer-membrane protein-insertion grounding.</li><li><code>2026-09-18T15:28:16Z</code> codex · ALIGN_HISTORY_WORDING — Updated the initial expansion summary to describe the final GO:0045040 outer-membrane protein-insertion grounding.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/sam_complex.yaml"><code>data/structures/other/sam_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

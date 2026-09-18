@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/sam_complex.yaml
+  slug: sam_complex
+session:
+  id: 2026-09-18T151507Z-codex-a5816d
+  timestamp: '2026-09-18T15:15:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added SAM complex record
+  details: Created data/structures/other/sam_complex.yaml for GO:0001401 SAM complex with
+    GO synonymy, outer mitochondrial membrane parentage and parthood, Saccharomyces cerevisiae
+    canonical scope, TOM-SAM outer-membrane protein-insertion function evidence, a
+    nonmechanistic TOM-to-SAM functional graph, and an open subunit-boundary discussion
+    for exact Sam component grounding.
