@@ -3240,6 +3240,15 @@
   "definition": "A non-membrane-bounded organelle found within the chloroplasts of algae and hornworts; responsible for carbon dioxide fixation."
  },
  {
+  "identifier": "GO:0071986",
+  "label": "Ragulator complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/ragulator_complex.html",
+  "definition": "A vacuolar membrane-anchored guanine nucleotide exchange factor (GEF) complex for the Rag GTPases (Gtr1-Gtr2 GTPase complex GO:1990131) in TORC1 signaling pathway. In human, Ragulator is comprised of the membrane anchor subunit LAMTOR1 (Meh1p in S. cerevisiae, Lam1 in S. pombe), a GEF subunit LAMTOR2 ( Slm4 in S. cerevisiae , Lam2 in S. pombe ) , LAMTOR3 (no S. cerevisiae ortholog identified, Lam3 in S. pombe) , LAMTOR4 (no S. cerevisiae ortholog identified, Lam4 in S. pombe), and LAMTOR5 (no S. cerevisiae or S. pombe ortholog identified)."
+ },
+ {
   "identifier": "GO:0030904",
   "label": "retromer complex",
   "category": "OTHER",

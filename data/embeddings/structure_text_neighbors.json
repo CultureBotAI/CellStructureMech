@@ -10315,6 +10315,11 @@
           "cosine_similarity": 0.84813074
         },
         {
+          "identifier": "GO:0071986",
+          "label": "Ragulator complex",
+          "cosine_similarity": 0.82845721
+        },
+        {
           "identifier": "GO:0031931",
           "label": "TORC1 complex",
           "cosine_similarity": 0.77959163
@@ -10323,11 +10328,6 @@
           "identifier": "GO:0000938",
           "label": "GARP complex",
           "cosine_similarity": 0.76723838
-        },
-        {
-          "identifier": "GO:0031932",
-          "label": "TORC2 complex",
-          "cosine_similarity": 0.76597658
         }
       ]
     },
@@ -10367,6 +10367,11 @@
       "label": "Gtr1-Gtr2 GTPase complex",
       "neighbors": [
         {
+          "identifier": "GO:0071986",
+          "label": "Ragulator complex",
+          "cosine_similarity": 0.88592249
+        },
+        {
           "identifier": "GO:1990130",
           "label": "GATOR1 complex",
           "cosine_similarity": 0.87180693
@@ -10385,11 +10390,6 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.7430196
-        },
-        {
-          "identifier": "GO:0033263",
-          "label": "CORVET complex",
-          "cosine_similarity": 0.74102461
         }
       ]
     },
@@ -11169,6 +11169,37 @@
       ]
     },
     {
+      "identifier": "GO:0071986",
+      "label": "Ragulator complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990131",
+          "label": "Gtr1-Gtr2 GTPase complex",
+          "cosine_similarity": 0.88592249
+        },
+        {
+          "identifier": "GO:1990130",
+          "label": "GATOR1 complex",
+          "cosine_similarity": 0.82845721
+        },
+        {
+          "identifier": "GO:0030904",
+          "label": "retromer complex",
+          "cosine_similarity": 0.7768948
+        },
+        {
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.75697316
+        },
+        {
+          "identifier": "GO:0031932",
+          "label": "TORC2 complex",
+          "cosine_similarity": 0.75623306
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030904",
       "label": "retromer complex",
       "neighbors": [
@@ -11176,6 +11207,11 @@
           "identifier": "GO:0030897",
           "label": "HOPS complex",
           "cosine_similarity": 0.78422668
+        },
+        {
+          "identifier": "GO:0071986",
+          "label": "Ragulator complex",
+          "cosine_similarity": 0.7768948
         },
         {
           "identifier": "GO:0033565",
@@ -11191,11 +11227,6 @@
           "identifier": "GO:0000813",
           "label": "ESCRT I complex",
           "cosine_similarity": 0.74988962
-        },
-        {
-          "identifier": "GO:0034044",
-          "label": "exomer complex",
-          "cosine_similarity": 0.74023911
         }
       ]
     },
@@ -11348,9 +11379,9 @@
           "cosine_similarity": 0.74497648
         },
         {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.71841716
+          "identifier": "GO:0071986",
+          "label": "Ragulator complex",
+          "cosine_similarity": 0.74168672
         }
       ]
     },
@@ -11374,14 +11405,14 @@
           "cosine_similarity": 0.76432985
         },
         {
+          "identifier": "GO:0071986",
+          "label": "Ragulator complex",
+          "cosine_similarity": 0.75623306
+        },
+        {
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.73693547
-        },
-        {
-          "identifier": "GO:1990131",
-          "label": "Gtr1-Gtr2 GTPase complex",
-          "cosine_similarity": 0.73643466
         }
       ]
     },
@@ -11441,9 +11472,9 @@
           "cosine_similarity": 0.7524498
         },
         {
-          "identifier": "GO:0030904",
-          "label": "retromer complex",
-          "cosine_similarity": 0.72661981
+          "identifier": "GO:0071986",
+          "label": "Ragulator complex",
+          "cosine_similarity": 0.72666291
         }
       ]
     },
@@ -11472,9 +11503,9 @@
           "cosine_similarity": 0.7467632
         },
         {
-          "identifier": "GO:0030904",
-          "label": "retromer complex",
-          "cosine_similarity": 0.72503184
+          "identifier": "GO:0071986",
+          "label": "Ragulator complex",
+          "cosine_similarity": 0.73701954
         }
       ]
     },

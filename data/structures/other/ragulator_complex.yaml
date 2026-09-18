@@ -1,0 +1,319 @@
+identifier: GO:0071986
+label: Ragulator complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A vacuolar membrane-anchored guanine nucleotide exchange factor (GEF)
+  complex for the Rag GTPases (Gtr1-Gtr2 GTPase complex GO:1990131) in TORC1 signaling
+  pathway. In human, Ragulator is comprised of the membrane anchor subunit LAMTOR1
+  (Meh1p in S. cerevisiae, Lam1 in S. pombe), a GEF subunit LAMTOR2 ( Slm4 in S. cerevisiae
+  , Lam2 in S. pombe ) , LAMTOR3 (no S. cerevisiae ortholog identified, Lam3 in S.
+  pombe) , LAMTOR4 (no S. cerevisiae ortholog identified, Lam4 in S. pombe), and LAMTOR5
+  (no S. cerevisiae or S. pombe ortholog identified).
+definition_source: GO:0071986
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T12:38:27Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T12:39:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Ragulator/EGO synonymy, protein-complex parentage, reviewed-label-only
+    yeast Ego1/Ego2/Ego3 components, Saccharomyces scope, a TORC1 signaling function,
+    GO/DOI evidence, a nonmechanistic Gtr1-Gtr2/TORC1 regulation graph, and subunit-grounding
+    plus Gtr1/Gtr2 boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-18T12:40:22Z'
+  curator: codex
+  action: REFORMATTED_RECORD
+  changes: Expanded shared YAML evidence aliases into plain repeated mappings.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+synonyms:
+- synonym_text: Rag GEF
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071986
+- synonym_text: MAPKSP1/ROBLD3/C11orf59 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071986
+- synonym_text: EGO complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:0071986
+- synonym_text: EGO-GSE complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:0071986
+- synonym_text: GSE complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:0071986
+- synonym_text: GTPase-containing complex for Gap1p sorting in the endosome
+  synonym_type: RELATED_SYNONYM
+  source: GO:0071986
+components:
+- component_id: ego1_ragulator_subunit
+  label: Ego1 Ragulator/EGO membrane-anchor subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - EGO1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Ego1/Meh1 Ragulator/EGO
+    subunit; no exact source-neutral InterPro, Pfam or NCBIfam family identifier for
+    this anchoring subunit class was curated in this pass.
+  role: Yeast Ragulator/EGO constituent that anchors the Ego1/Ego2/Ego3 module associated
+    with the Gtr1-Gtr2 Rag GTPase complex.
+  evidence:
+  - reference: GO:0071986
+    notes: Gene Ontology cellular-component term for the Ragulator complex, covering
+      the yeast EGO/EGO-GSE complex that acts as a vacuolar Rag GTPase GEF.
+  - reference: DOI:10.1091/mbc.E15-07-0470
+    notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly identified
+      Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2 and TORC1 on
+      yeast vacuoles and associated puncta.
+- component_id: ego2_ragulator_subunit
+  label: Ego2 Ragulator/EGO subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - EGO2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Ego2 Ragulator/EGO
+    subunit; no exact source-neutral InterPro, Pfam or NCBIfam family identifier for
+    this subunit class was curated in this pass.
+  role: Yeast Ragulator/EGO constituent required for full Gtr1-dependent TORC1 activation
+    and vacuolar Gtr1 localization.
+  evidence:
+  - reference: DOI:10.1091/mbc.E15-07-0470
+    notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly identified
+      Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2 and TORC1 on
+      yeast vacuoles and associated puncta.
+- component_id: ego3_ragulator_subunit
+  label: Ego3 Ragulator/EGO subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - EGO3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Ego3/Slm4 Ragulator/EGO
+    subunit; no exact source-neutral InterPro, Pfam or NCBIfam family identifier for
+    this subunit class was curated in this pass.
+  role: Yeast Ragulator/EGO constituent of the Ego1/Ego2/Ego3 vacuolar anchor module
+    for Rag-family GTPase signaling.
+  evidence:
+  - reference: GO:0071986
+    notes: Gene Ontology cellular-component term for the Ragulator complex, covering
+      the yeast EGO/EGO-GSE complex that acts as a vacuolar Rag GTPase GEF.
+  - reference: DOI:10.1091/mbc.E15-07-0470
+    notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly identified
+      Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2 and TORC1 on
+      yeast vacuoles and associated puncta.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: VARIABLE
+  note: Budding yeast is the curated model for the Ego1/Ego2/Ego3 Ragulator/EGO complex
+    that anchors Rag-family GTPase signaling on the vacuole.
+  reference: DOI:10.1091/mbc.E15-07-0470
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which Ego1, Ego2 and Ego3 colocalize with Gtr1/Gtr2 and TORC1
+    on the vacuole and associated puncta.
+  reference: DOI:10.1091/mbc.E15-07-0470
+functions:
+- function_id: torc1_signaling
+  label: TORC1 signaling
+  grounding: GO:0038202
+  description: The yeast Ragulator/EGO complex anchors Rag-family GTPases at the vacuole
+    during amino-acid-responsive TORC1 signaling.
+  evidence:
+  - reference: GO:0038202
+    notes: Gene Ontology biological-process term for TORC1 signaling.
+  - reference: GO:0071986
+    notes: Gene Ontology cellular-component term for the Ragulator complex, covering
+      the yeast EGO/EGO-GSE complex that acts as a vacuolar Rag GTPase GEF.
+  - reference: DOI:10.1091/mbc.E15-07-0470
+    notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly identified
+      Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2 and TORC1 on
+      yeast vacuoles and associated puncta.
+evidence:
+- reference: GO:0071986
+  notes: Gene Ontology cellular-component term for the Ragulator complex, covering
+    the yeast EGO/EGO-GSE complex that acts as a vacuolar Rag GTPase GEF.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0038202
+  notes: Gene Ontology biological-process term for TORC1 signaling.
+- reference: DOI:10.1091/mbc.E15-07-0470
+  notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly identified
+    Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2 and TORC1 on yeast
+    vacuoles and associated puncta.
+- reference: DOI:10.1038/s41594-026-01746-2
+  notes: Tafur et al. 2026 determined the yeast SEAC-EGOC supercomplex and separated
+    the Gtr1/Gtr2 heterodimer from the Ego1/Ego2/Ego3 anchor within EGOC.
+causal_graphs:
+- graph_id: yeast_ragulator_ego_torc1_regulation
+  title: Ragulator/EGO anchors yeast Gtr1-Gtr2 signaling
+  description: In Saccharomyces cerevisiae, Ego1, Ego2 and Ego3 form the Ragulator/EGO
+    anchor complex that localizes with Gtr1/Gtr2 and TORC1 on the vacuole during TORC1
+    regulation.
+  graph_kind: REGULATION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents yeast Ego1/Ego2/Ego3 subunit membership, vacuolar
+    localization and high-level Gtr1-Gtr2 regulation without modeling nucleotide exchange,
+    TORC1 recruitment dynamics or SEAC/GATOR regulation.
+  nodes:
+  - node_id: ego1_ragulator_subunit
+    label: Ego1 Ragulator/EGO membrane-anchor subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ego1_ragulator_subunit
+  - node_id: ego2_ragulator_subunit
+    label: Ego2 Ragulator/EGO subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ego2_ragulator_subunit
+  - node_id: ego3_ragulator_subunit
+    label: Ego3 Ragulator/EGO subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ego3_ragulator_subunit
+  - node_id: ragulator_complex
+    label: Ragulator complex
+    node_type: STRUCTURE
+    grounding: GO:0071986
+  - node_id: fungal_type_vacuole_membrane
+    label: fungal-type vacuole membrane
+    node_type: STRUCTURE
+    grounding: GO:0000329
+  - node_id: gtr1_gtr2_gtpase_complex
+    label: Gtr1-Gtr2 GTPase complex
+    node_type: STRUCTURE
+    grounding: GO:1990131
+  - node_id: torc1_signaling
+    label: TORC1 signaling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0038202
+  edges:
+  - subject: ego1_ragulator_subunit
+    predicate: is part of
+    object: ragulator_complex
+    description: Ego1 is represented as a yeast Ragulator/EGO constituent.
+    evidence:
+    - reference: GO:0071986
+      notes: Gene Ontology cellular-component term for the Ragulator complex, covering
+        the yeast EGO/EGO-GSE complex that acts as a vacuolar Rag GTPase GEF.
+    - reference: DOI:10.1091/mbc.E15-07-0470
+      notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly
+        identified Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2
+        and TORC1 on yeast vacuoles and associated puncta.
+  - subject: ego2_ragulator_subunit
+    predicate: is part of
+    object: ragulator_complex
+    description: Ego2 is represented as a yeast Ragulator/EGO constituent.
+    evidence:
+    - reference: DOI:10.1091/mbc.E15-07-0470
+      notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly
+        identified Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2
+        and TORC1 on yeast vacuoles and associated puncta.
+  - subject: ego3_ragulator_subunit
+    predicate: is part of
+    object: ragulator_complex
+    description: Ego3 is represented as a yeast Ragulator/EGO constituent.
+    evidence:
+    - reference: GO:0071986
+      notes: Gene Ontology cellular-component term for the Ragulator complex, covering
+        the yeast EGO/EGO-GSE complex that acts as a vacuolar Rag GTPase GEF.
+    - reference: DOI:10.1091/mbc.E15-07-0470
+      notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly
+        identified Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2
+        and TORC1 on yeast vacuoles and associated puncta.
+  - subject: ragulator_complex
+    predicate: localizes to
+    object: fungal_type_vacuole_membrane
+    description: Yeast Ragulator/EGO colocalizes with Gtr1/Gtr2 and TORC1 on the vacuolar
+      membrane and associated puncta.
+    evidence:
+    - reference: GO:0071986
+      notes: Gene Ontology cellular-component term for the Ragulator complex, covering
+        the yeast EGO/EGO-GSE complex that acts as a vacuolar Rag GTPase GEF.
+    - reference: DOI:10.1091/mbc.E15-07-0470
+      notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly
+        identified Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2
+        and TORC1 on yeast vacuoles and associated puncta.
+  - subject: ragulator_complex
+    predicate: regulates
+    object: gtr1_gtr2_gtpase_complex
+    description: Ragulator/EGO is represented as the vacuolar GEF complex for the
+      Gtr1-Gtr2 Rag-family GTPase complex.
+    evidence:
+    - reference: GO:0071986
+      notes: Gene Ontology cellular-component term for the Ragulator complex, covering
+        the yeast EGO/EGO-GSE complex that acts as a vacuolar Rag GTPase GEF.
+  - subject: ragulator_complex
+    predicate: regulates
+    object: torc1_signaling
+    description: Ragulator/EGO couples vacuolar Gtr1-Gtr2 localization to amino-acid-responsive
+      TORC1 signaling in yeast.
+    evidence:
+    - reference: GO:0038202
+      notes: Gene Ontology biological-process term for TORC1 signaling.
+    - reference: GO:0071986
+      notes: Gene Ontology cellular-component term for the Ragulator complex, covering
+        the yeast EGO/EGO-GSE complex that acts as a vacuolar Rag GTPase GEF.
+    - reference: DOI:10.1091/mbc.E15-07-0470
+      notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly
+        identified Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2
+        and TORC1 on yeast vacuoles and associated puncta.
+discussions:
+- discussion_id: resolve_ragulator_subunit_family_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, or NCBIfam groundings for the
+    three yeast Ragulator/EGO subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ego1_ragulator_subunit
+  - components#ego2_ragulator_subunit
+  - components#ego3_ragulator_subunit
+  rationale: This first Ragulator/EGO record names the yeast Ego1, Ego2 and Ego3 constituent
+    subunits but leaves family grounding unset until exact orthology and paralogy
+    boundaries are reviewed per subunit.
+  evidence:
+  - reference: GO:0071986
+    notes: Gene Ontology cellular-component term for the Ragulator complex, covering
+      the yeast EGO/EGO-GSE complex that acts as a vacuolar Rag GTPase GEF.
+  - reference: DOI:10.1091/mbc.E15-07-0470
+    notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly identified
+      Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2 and TORC1 on
+      yeast vacuoles and associated puncta.
+  posed_by: codex
+  posed_date: '2026-09-18'
+- discussion_id: gtr1_gtr2_boundary
+  prompt: Keep the Gtr1-Gtr2 Rag-family GTPase heterodimer outside this Ragulator/EGO
+    anchor record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#ego1_ragulator_subunit
+  - components#ego2_ragulator_subunit
+  - components#ego3_ragulator_subunit
+  - causal_graphs#yeast_ragulator_ego_torc1_regulation
+  rationale: GO:1990131 denotes the Gtr1-Gtr2 heterodimer, while GO:0071986 denotes
+    the vacuolar Ragulator/EGO GEF complex; the GTPase heterodimer is a regulated
+    neighbor rather than an anchor constituent.
+  resolution_note: 'Declined: Gtr1 and Gtr2 were treated as a sibling Rag-family GTPase
+    complex rather than as Ragulator/EGO constituents.'
+  evidence:
+  - reference: GO:0071986
+    notes: Gene Ontology cellular-component term for the Ragulator complex, covering
+      the yeast EGO/EGO-GSE complex that acts as a vacuolar Rag GTPase GEF.
+  - reference: GO:1990131
+    notes: Gene Ontology cellular-component term for the Gtr1-Gtr2 GTPase complex.
+  - reference: DOI:10.1038/s41594-026-01746-2
+    notes: Tafur et al. 2026 determined the yeast SEAC-EGOC supercomplex and separated
+      the Gtr1/Gtr2 heterodimer from the Ego1/Ego2/Ego3 anchor within EGOC.
+  posed_by: codex
+  posed_date: '2026-09-18'
+  resolved_date: '2026-09-18'
