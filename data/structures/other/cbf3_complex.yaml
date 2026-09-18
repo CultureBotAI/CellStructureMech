@@ -21,6 +21,13 @@ curation_history:
     function, DOI/GO evidence, a nonmechanistic CBF3 point-centromere assembly graph
     and a subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-18T14:26:48Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1154 and #1155 by narrowing the CBF3 canonical-example note
+    to the Yan et al. CBF3-centromere evidence scope and removing the CBF2 alias from
+    the Ndc10/Cbf2 gene_symbols list.'
+  llm_assisted: true
 parent_structures:
 - GO:0140513
 part_of:
@@ -86,7 +93,6 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - NDC10
-  - CBF2
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: Ndc10p/Cbf2p is modeled as a budding-yeast CBF3 subunit; no exact
@@ -108,8 +114,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Reference point-centromere yeast system used for structural analysis of CBF3
-    core assembly and the CBF3-centromere complex.
+  note: Reference point-centromere yeast system used for structural analysis of the
+    CBF3-centromere complex.
   reference: DOI:10.1038/s41594-018-0154-1
 functions:
 - function_id: centromeric_dna_dependent_kinetochore_assembly
