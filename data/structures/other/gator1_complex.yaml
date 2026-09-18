@@ -29,6 +29,13 @@ curation_history:
     signaling process, tightened the GATOR2 boundary rationale, and expanded shared
     YAML evidence aliases into plain repeated mappings.
   llm_assisted: true
+- timestamp: '2026-09-18T08:46:11Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: '#1134: Refined the resolved Rag GTPase boundary discussion to describe
+    Gtr1 as the direct GATOR1/SEACIT GAP target rather than as a loose upstream pathway
+    factor.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 synonyms:
@@ -287,12 +294,12 @@ discussions:
   - components#npr2_gator1_subunit
   - components#npr3_gator1_subunit
   - causal_graphs#yeast_gator1_torc1_regulation
-  rationale: Panchaud et al. 2013 showed that Iml1/Npr2/Npr3 acts upstream of the
-    Gtr1/Gtr2 Rag-family GTPases and that Iml1 transiently interacts with Gtr1, but
-    GO:1990130 defines the Saccharomyces cerevisiae GATOR1/SEACIT complex as Iml1p,
-    Npr2p and Npr3p.
-  resolution_note: 'Declined: Gtr1 was included as a non-component graph node for
-    GAP-target context instead of as a constituent.'
+  rationale: Panchaud et al. 2013 identified Iml1/Npr2/Npr3 as the yeast GATOR1/SEACIT
+    counterpart that acts as a GAP for the Rag-family GTPase Gtr1, while GO:1990130
+    defines the Saccharomyces cerevisiae GATOR1/SEACIT complex itself as Iml1p, Npr2p
+    and Npr3p.
+  resolution_note: 'Declined: Gtr1 was included as the non-component Rag-family GAP
+    target for graph context instead of as a constituent.'
   evidence:
   - reference: GO:1990130
     notes: Gene Ontology cellular-component term for the GATOR1 complex, including
