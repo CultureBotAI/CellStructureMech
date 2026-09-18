@@ -10728,9 +10728,9 @@
           "cosine_similarity": 0.8491105
         },
         {
-          "identifier": "GO:0005744",
-          "label": "TIM23 mitochondrial import inner membrane translocase complex",
-          "cosine_similarity": 0.8048538
+          "identifier": "GO:0035632",
+          "label": "mitochondrial prohibitin complex",
+          "cosine_similarity": 0.82552026
         }
       ]
     },
@@ -10762,6 +10762,37 @@
           "identifier": "GO:0005744",
           "label": "TIM23 mitochondrial import inner membrane translocase complex",
           "cosine_similarity": 0.8624188
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0035632",
+      "label": "mitochondrial prohibitin complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.836199
+        },
+        {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.82552026
+        },
+        {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.80379582
+        },
+        {
+          "identifier": "GO:0042721",
+          "label": "TIM22 mitochondrial import inner membrane insertion complex",
+          "cosine_similarity": 0.79607901
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.78656195
         }
       ]
     },

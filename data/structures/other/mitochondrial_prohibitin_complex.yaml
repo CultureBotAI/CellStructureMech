@@ -1,0 +1,146 @@
+identifier: GO:0035632
+label: mitochondrial prohibitin complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Inner-mitochondrial-membrane macromolecular complex composed of repeating
+  prohibitin 1 and prohibitin 2 heterodimeric subunits.
+definition_source: GO:0035632
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T19:03:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T19:04:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, inner-mitochondrial-membrane protein-complex parentage,
+    mitochondrial-inner-membrane parthood, Saccharomyces scope, mitochondrion-organization
+    function evidence, a nonmechanistic prohibitin function graph, and a prohibitin
+    subunit-boundary TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: mitochondrial inner membrane prohibitin complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0035632
+parent_structures:
+- GO:0098800
+part_of:
+- GO:0005743
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria contain a membrane-associated prohibitin supercomplex
+    built from PHB1 and PHB2 subunits.
+  reference: DOI:10.1110/ps.0212602
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model used for chemical crosslinking and mass-spectrometry evidence
+    that PHB1 and PHB2 form heterodimeric building blocks of the mitochondrial prohibitin
+    supercomplex.
+  reference: DOI:10.1110/ps.0212602
+functions:
+- function_id: mitochondrion_organization
+  label: mitochondrion organization
+  grounding: GO:0007005
+  description: The mitochondrial prohibitin complex contributes to mitochondrial biogenesis
+    and function while associated with the mitochondrial inner membrane.
+  evidence:
+  - reference: GO:0035632
+    notes: GO:0035632 defines the mitochondrial prohibitin complex as a PHB1/PHB2
+      inner-membrane supercomplex with roles in mitochondrial biogenesis and function.
+  - reference: GO:0007005
+    notes: GO:0007005 denotes mitochondrion organization and has mitochondrial biogenesis
+      as an exact synonym.
+  - reference: DOI:10.18632/aging.100246
+    notes: Artal-Sanz and Tavernarakis 2010 reviewed the eukaryotic mitochondrial
+      prohibitin complex as an inner-membrane macromolecular structure implicated
+      in mitochondrial biogenesis and function.
+evidence:
+- reference: GO:0035632
+  notes: Gene Ontology cellular-component term for the mitochondrial prohibitin complex.
+- reference: GO:0098800
+  notes: Gene Ontology cellular-component parent term for inner mitochondrial membrane
+    protein complexes.
+- reference: GO:0005743
+  notes: Gene Ontology cellular-component term for the mitochondrial inner membrane
+    with which the prohibitin complex is associated.
+- reference: GO:0007005
+  notes: Gene Ontology biological-process term for mitochondrion organization and
+    biogenesis.
+- reference: DOI:10.1110/ps.0212602
+  notes: 'Back et al. 2002, ''A structure for the yeast prohibitin complex: Structure
+    prediction and evidence from chemical crosslinking and mass spectrometry'', Protein
+    Science.'
+- reference: DOI:10.18632/aging.100246
+  notes: Artal-Sanz and Tavernarakis 2010, 'Opposing function of mitochondrial prohibitin
+    in aging', Aging.
+causal_graphs:
+- graph_id: prohibitin_inner_membrane_organization
+  title: Mitochondrial prohibitin supports inner-membrane organization
+  description: PHB1 and PHB2 build a mitochondrial inner-membrane prohibitin supercomplex
+    implicated in mitochondrial biogenesis and function.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures prohibitin-complex topology and a broad mitochondrial-organization
+    role without asserting exact PHB1 or PHB2 source-neutral family groundings.
+  nodes:
+  - node_id: prohibitin_complex
+    label: mitochondrial prohibitin complex
+    node_type: STRUCTURE
+    grounding: GO:0035632
+  - node_id: mitochondrial_inner_membrane
+    label: mitochondrial inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005743
+  - node_id: mitochondrion_organization
+    label: mitochondrion organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007005
+  edges:
+  - subject: prohibitin_complex
+    predicate: is part of
+    object: mitochondrial_inner_membrane
+    description: The mitochondrial prohibitin complex associates with the inner mitochondrial
+      membrane.
+    evidence:
+    - reference: GO:0035632
+      notes: GO:0035632 defines the complex as associated with the inner mitochondrial
+        membrane.
+  - subject: prohibitin_complex
+    predicate: supports
+    object: mitochondrion_organization
+    description: The prohibitin supercomplex supports mitochondrial biogenesis and
+      function from the inner membrane.
+    evidence:
+    - reference: GO:0035632
+      notes: GO:0035632 includes mitochondrial biogenesis and function among processes
+        involving the PHB1/PHB2 prohibitin complex.
+    - reference: DOI:10.18632/aging.100246
+      notes: Artal-Sanz and Tavernarakis 2010 reviewed the mitochondrial prohibitin
+        complex as a eukaryotic inner-membrane macromolecular structure involved in
+        mitochondrial biogenesis and function.
+discussions:
+- discussion_id: prohibitin_subunit_family_boundaries
+  prompt: Resolve exact source-neutral PHB1 and PHB2 family groundings before adding
+    mitochondrial prohibitin component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#prohibitin_inner_membrane_organization
+  rationale: GO exactly grounds the mitochondrial prohibitin complex and Back et al.
+    identify PHB1 and PHB2 as budding-yeast subunits, but this first record leaves
+    prohibitin 1 and prohibitin 2 rows unasserted until exact taxon-agnostic family
+    identifiers are verified.
+  evidence:
+  - reference: GO:0035632
+    notes: GO:0035632 defines the complex as composed of prohibitin 1 and prohibitin
+      2 heterodimeric subunits.
+  - reference: DOI:10.1110/ps.0212602
+    notes: Back et al. 2002 derived a PHB1/PHB2 structural building block for the
+      yeast mitochondrial prohibitin supercomplex.
+  posed_by: codex
+  posed_date: '2026-09-18'

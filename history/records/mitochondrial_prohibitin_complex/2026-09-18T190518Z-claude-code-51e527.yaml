@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mitochondrial_prohibitin_complex.yaml
+  slug: mitochondrial_prohibitin_complex
+session:
+  id: 2026-09-18T190518Z-claude-code-51e527
+  timestamp: '2026-09-18T19:05:18Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created mitochondrial prohibitin complex record
+  details: Added a GO:0035632 mitochondrial prohibitin complex record with GO synonymy and
+    parentage, Saccharomyces cerevisiae scope, curated yeast and review literature evidence,
+    a mitochondrion-organization function graph, and an open PHB1/PHB2 component-grounding
+    TODO.
