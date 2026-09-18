@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ragulator_complex.yaml
+  slug: ragulator_complex
+session:
+  id: 2026-09-18T124117Z-codex-19f5df
+  timestamp: '2026-09-18T12:41:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Ragulator complex structure record
+  details: Created a GO:0071986 Ragulator complex structure record with GO protein-containing-complex
+    parentage, GO Ragulator/EGO synonymy, reviewed-label-only yeast Ego1, Ego2 and Ego3 components,
+    Saccharomyces scope, a TORC1 signaling function, GO/DOI evidence, a nonmechanistic Gtr1-Gtr2/TORC1
+    regulation graph, and discussions for exact subunit family groundings and the Gtr1-Gtr2
+    boundary.
