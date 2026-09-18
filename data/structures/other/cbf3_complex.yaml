@@ -1,0 +1,239 @@
+identifier: GO:0031518
+label: CBF3 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multisubunit protein complex that binds to centromeric DNA and initiates
+  kinetochore assembly. In yeast, this complex consists of four subunits, namely Ctf13p,
+  Skp1p, Cep3p and Cbf2p.
+definition_source: GO:0031518
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T14:12:11Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T14:13:36Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO hierarchy and centromere/kinetochore parthood, four reviewed label-only
+    CBF3 subunits, Saccharomyces cerevisiae scope, centromeric-DNA-dependent assembly
+    function, DOI/GO evidence, a nonmechanistic CBF3 point-centromere assembly graph
+    and a subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-18T14:26:48Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1154 and #1155 by narrowing the CBF3 canonical-example note
+    to the Yan et al. CBF3-centromere evidence scope and removing the CBF2 alias from
+    the Ndc10/Cbf2 gene_symbols list.'
+  llm_assisted: true
+parent_structures:
+- GO:0140513
+part_of:
+- GO:0000775
+- GO:0000776
+components:
+- component_id: ctf13_subunit
+  label: Ctf13 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CTF13
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Ctf13p is modeled as a budding-yeast CBF3-complex subunit; no exact
+    source-neutral Ctf13 protein-family CURIE was curated for this first record.
+  role: F-box CBF3 constituent that complexes with Skp1 during budding-yeast CBF3
+    assembly.
+  evidence:
+  - reference: GO:0031518
+    notes: GO:0031518 defines Ctf13p as one of four yeast CBF3-complex subunits.
+  - reference: DOI:10.15252/embj.201798134
+    notes: Leber, Nans and Singleton 2018 structurally analyzed the Cep3-Skp1-Ctf13
+      core of CBF3.
+- component_id: skp1_subunit
+  label: Skp1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SKP1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Skp1p is modeled here by its role in budding-yeast CBF3; no exact
+    source-neutral CURIE was curated that separates this CBF3 subunit role from other
+    Skp1 complex contexts.
+  role: CBF3 constituent that binds the F-box protein Ctf13 during initial CBF3 assembly.
+  evidence:
+  - reference: GO:0031518
+    notes: GO:0031518 defines Skp1p as one of four yeast CBF3-complex subunits.
+  - reference: DOI:10.15252/embj.201798134
+    notes: Leber, Nans and Singleton 2018 defined the Ctf13-Skp1 interaction in a
+      core CBF3 assembly.
+- component_id: cep3_subunit
+  label: Cep3 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CEP3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Cep3p is modeled as a budding-yeast CBF3 DNA-binding subunit; no
+    exact source-neutral Cep3 protein-family CURIE was curated for this first record.
+  role: Sequence-specific DNA-binding constituent of the CBF3 complex.
+  evidence:
+  - reference: GO:0031518
+    notes: GO:0031518 defines Cep3p as one of four yeast CBF3-complex subunits.
+  - reference: DOI:10.15252/embj.201798134
+    notes: Leber, Nans and Singleton 2018 structurally analyzed Cep3 with Skp1 and
+      Ctf13 in the core CBF3 complex.
+- component_id: ndc10_cbf2_subunit
+  label: Ndc10/Cbf2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NDC10
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Ndc10p/Cbf2p is modeled as a budding-yeast CBF3 subunit; no exact
+    source-neutral Ndc10/Cbf2 protein-family CURIE was curated for this first record.
+  role: Named CBF3 constituent present in the budding-yeast CBF3-centromere complex.
+  evidence:
+  - reference: GO:0031518
+    notes: GO:0031518 defines Cbf2p as one of four yeast CBF3-complex subunits.
+  - reference: DOI:10.1038/s41594-018-0154-1
+    notes: Yan et al. 2018 structurally analyzed the budding-yeast CBF3-centromere
+      complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a four-subunit CBF3 complex that recognizes point-centromere
+    DNA and initiates kinetochore assembly.
+  reference: DOI:10.15252/embj.201798134
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference point-centromere yeast system used for structural analysis of the
+    CBF3-centromere complex.
+  reference: DOI:10.1038/s41594-018-0154-1
+functions:
+- function_id: centromeric_dna_dependent_kinetochore_assembly
+  label: centromeric DNA-dependent kinetochore assembly
+  description: CBF3 binds centromeric DNA and nucleates kinetochore assembly at the
+    budding-yeast point centromere.
+  evidence:
+  - reference: GO:0031518
+    notes: GO:0031518 defines the CBF3 complex by centromeric DNA binding and kinetochore-assembly
+      initiation.
+  - reference: DOI:10.15252/embj.201798134
+    notes: Leber, Nans and Singleton 2018 analyzed the Cep3-Skp1-Ctf13 CBF3 core involved
+      in budding-yeast kinetochore assembly.
+evidence:
+- reference: GO:0031518
+  notes: Gene Ontology cellular-component term for the CBF3 complex.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0000775
+  notes: Gene Ontology cellular-component term for the chromosome centromeric region.
+- reference: GO:0000776
+  notes: Gene Ontology cellular-component term for kinetochore.
+- reference: DOI:10.15252/embj.201798134
+  notes: Leber, Nans and Singleton 2018, Structural basis for assembly of the CBF3
+    kinetochore complex, The EMBO Journal.
+- reference: DOI:10.1038/s41594-018-0154-1
+  notes: Yan et al. 2018, Architecture of the CBF3-centromere complex of the budding
+    yeast kinetochore, Nature Structural & Molecular Biology.
+causal_graphs:
+- graph_id: cbf3_point_centromere_kinetochore_assembly
+  title: CBF3 recognizes point-centromere DNA during kinetochore assembly
+  description: The budding-yeast CBF3 complex couples sequence-specific centromeric
+    DNA recognition to the earliest steps of kinetochore assembly at point centromeres.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the curated CBF3 subunit cohort and CBF3 placement
+    at centromeric DNA without modeling every CEN-element contact, stoichiometry or
+    downstream Cse4/Mif2 inner-kinetochore recruitment step.
+  nodes:
+  - node_id: ctf13_subunit
+    label: Ctf13 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ctf13_subunit
+  - node_id: skp1_subunit
+    label: Skp1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: skp1_subunit
+  - node_id: cep3_subunit
+    label: Cep3 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cep3_subunit
+  - node_id: ndc10_cbf2_subunit
+    label: Ndc10/Cbf2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ndc10_cbf2_subunit
+  - node_id: cbf3_complex
+    label: CBF3 complex
+    node_type: STRUCTURE
+    grounding: GO:0031518
+  - node_id: centromeric_region
+    label: chromosome, centromeric region
+    node_type: STRUCTURE
+    grounding: GO:0000775
+  edges:
+  - subject: ctf13_subunit
+    predicate: assembles with
+    object: skp1_subunit
+    description: Ctf13 and Skp1 form an F-box-mediated interaction within the CBF3
+      core.
+    evidence:
+    - reference: DOI:10.15252/embj.201798134
+      notes: Leber, Nans and Singleton 2018 reported that F-box-mediated Ctf13-Skp1
+        binding is responsible for initial CBF3 assembly.
+  - subject: cep3_subunit
+    predicate: assembles into
+    object: cbf3_complex
+    description: Cep3 assembles with Ctf13 and Skp1 in the core CBF3 complex.
+    evidence:
+    - reference: DOI:10.15252/embj.201798134
+      notes: Leber, Nans and Singleton 2018 reconstructed the Cep3-Skp1-Ctf13 core
+        of CBF3.
+  - subject: ndc10_cbf2_subunit
+    predicate: assembles into
+    object: cbf3_complex
+    description: Ndc10/Cbf2 is a named constituent of the four-subunit yeast CBF3
+      complex.
+    evidence:
+    - reference: GO:0031518
+      notes: GO:0031518 names Cbf2p as a yeast CBF3-complex subunit.
+  - subject: cbf3_complex
+    predicate: binds centromeric DNA in
+    object: centromeric_region
+    description: CBF3 binds budding-yeast centromeric DNA to initiate point-centromere
+      kinetochore assembly.
+    evidence:
+    - reference: GO:0031518
+      notes: GO:0031518 defines the CBF3 complex by centromeric DNA binding and kinetochore-assembly
+        initiation.
+    - reference: DOI:10.1038/s41594-018-0154-1
+      notes: Yan et al. 2018 structurally analyzed the budding-yeast CBF3-centromere
+        complex.
+discussions:
+- discussion_id: resolve_cbf3_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings and essentiality calls for
+    Ctf13, Skp1, Cep3 and Ndc10/Cbf2 within the budding-yeast CBF3 complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ctf13_subunit
+  - components#skp1_subunit
+  - components#cep3_subunit
+  - components#ndc10_cbf2_subunit
+  rationale: This first record captures the GO-defined CBF3 subunit set but intentionally
+    leaves subunit grounding at reviewed-label-only instead of guessing InterPro,
+    Pfam or NCBIfam identifiers.
+  evidence:
+  - reference: GO:0031518
+  - reference: DOI:10.15252/embj.201798134
+  posed_by: codex
+  posed_date: '2026-09-18'

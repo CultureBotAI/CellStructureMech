@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cbf3_complex.yaml
+  slug: cbf3_complex
+session:
+  id: 2026-09-18T141409Z-codex-befadd
+  timestamp: '2026-09-18T14:14:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add CBF3 complex structure record
+  details: Created a GO:0031518 CBF3 complex record with nuclear protein-containing-complex
+    parentage, centromeric-region and kinetochore parthood, reviewed-label-only Ctf13, Skp1,
+    Cep3 and Ndc10/Cbf2 subunits, Saccharomyces cerevisiae scope, a centromeric DNA-dependent
+    kinetochore assembly function, GO/DOI evidence, a nonmechanistic point-centromere assembly
+    graph, and a TODO covering source-neutral subunit groundings.

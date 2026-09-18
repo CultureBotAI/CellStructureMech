@@ -1919,14 +1919,14 @@
           "cosine_similarity": 0.73345395
         },
         {
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.72986078
+        },
+        {
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.72645975
-        },
-        {
-          "identifier": "GO:0120120",
-          "label": "bilobe structure",
-          "cosine_similarity": 0.72502947
         }
       ]
     },
@@ -9557,6 +9557,37 @@
       ]
     },
     {
+      "identifier": "GO:0031518",
+      "label": "CBF3 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.83009728
+        },
+        {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.79191205
+        },
+        {
+          "identifier": "GO:0031262",
+          "label": "Ndc80 complex",
+          "cosine_similarity": 0.74714498
+        },
+        {
+          "identifier": "GO:0000776",
+          "label": "kinetochore",
+          "cosine_similarity": 0.7361316
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.72986078
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005933",
       "label": "cellular bud",
       "neighbors": [
@@ -9876,6 +9907,11 @@
           "cosine_similarity": 0.84987153
         },
         {
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.83009728
+        },
+        {
           "identifier": "GO:0031262",
           "label": "Ndc80 complex",
           "cosine_similarity": 0.78256706
@@ -9889,11 +9925,6 @@
           "identifier": "GO:0042729",
           "label": "DASH complex",
           "cosine_similarity": 0.77544624
-        },
-        {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.76228891
         }
       ]
     },
@@ -10274,6 +10305,11 @@
       "label": "exomer complex",
       "neighbors": [
         {
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.79191205
+        },
+        {
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.78042082
@@ -10292,11 +10328,6 @@
           "identifier": "GO:1990071",
           "label": "TRAPPII protein complex",
           "cosine_similarity": 0.75250979
-        },
-        {
-          "identifier": "GO:1990130",
-          "label": "GATOR1 complex",
-          "cosine_similarity": 0.74955505
         }
       ]
     },
@@ -10661,14 +10692,14 @@
           "cosine_similarity": 0.78256706
         },
         {
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.74714498
+        },
+        {
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.69571351
-        },
-        {
-          "identifier": "GO:0042729",
-          "label": "DASH complex",
-          "cosine_similarity": 0.69522891
         }
       ]
     },
