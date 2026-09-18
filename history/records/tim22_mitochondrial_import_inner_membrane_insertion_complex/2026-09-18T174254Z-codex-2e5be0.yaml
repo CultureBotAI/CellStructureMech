@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/tim22_mitochondrial_import_inner_membrane_insertion_complex.yaml
+  slug: tim22_mitochondrial_import_inner_membrane_insertion_complex
+session:
+  id: 2026-09-18T174254Z-codex-2e5be0
+  timestamp: '2026-09-18T17:42:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomy
+  - function
+  - causal_graphs
+  - discussion
+  summary: Added TIM22 mitochondrial import inner membrane insertion complex record
+  details: Created a GO:0042721-grounded TIM22 complex record with GO synonymy, inner-mitochondrial-membrane
+    protein-complex parentage, mitochondrial-inner-membrane parthood, Saccharomyces cerevisiae
+    scope, GO:0045039 inner-membrane protein-insertion function evidence, a nonmechanistic
+    TIM22 insertion graph, and a curation TODO for exact Tim subunit and small-TIM boundary
+    decisions.

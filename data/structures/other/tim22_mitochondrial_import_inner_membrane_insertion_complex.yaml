@@ -1,0 +1,153 @@
+identifier: GO:0042721
+label: TIM22 mitochondrial import inner membrane insertion complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multi-subunit mitochondrial inner-membrane complex that mediates insertion
+  of multi-pass inner-membrane precursor proteins carrying internal targeting elements.
+definition_source: GO:0042721
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T17:41:46Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T17:42:27Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, inner-mitochondrial-membrane protein-complex parentage,
+    mitochondrial-inner-membrane parthood, Saccharomyces scope, inner-membrane insertion
+    function evidence, a nonmechanistic TIM22 insertion graph, and a TIM22 subunit-boundary
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: mitochondrial inner membrane protein insertion complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0042721
+- synonym_text: Tim22 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0042721
+- synonym_text: mitochondrial protein translocase complex
+  synonym_type: BROAD_SYNONYM
+  source: GO:0042721
+parent_structures:
+- GO:0098800
+part_of:
+- GO:0005743
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria contain a TIM22 inner-membrane translocase that
+    inserts carrier-pathway precursors with internal targeting elements.
+  reference: DOI:10.1128/MCB.20.4.1187-1193.2000
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model for the TIM22 carrier translocase and for Tim18 function
+    in TIM22-dependent inner-membrane protein insertion.
+  reference: DOI:10.1128/MCB.20.4.1187-1193.2000
+functions:
+- function_id: protein_insertion_into_mitochondrial_inner_membrane
+  label: protein insertion into mitochondrial inner membrane
+  grounding: GO:0045039
+  description: TIM22 mediates the mitochondrial inner-membrane insertion step for
+    multi-pass carrier proteins that carry internal targeting elements.
+  evidence:
+  - reference: GO:0042721
+    notes: GO:0042721 defines TIM22 as a mitochondrial inner-membrane complex that
+      inserts multi-transmembrane proteins carrying internal targeting elements.
+  - reference: GO:0045039
+    notes: GO:0045039 denotes protein insertion into the mitochondrial inner membrane.
+  - reference: DOI:10.1016/j.cell.2009.08.005
+    notes: Chacinska et al. 2009 reviewed the TIM22 carrier pathway for hydrophobic
+      mitochondrial inner-membrane proteins with internal targeting signals.
+  - reference: DOI:10.1128/MCB.20.4.1187-1193.2000
+    notes: Koehler et al. 2000 identified Tim18 as a budding-yeast TIM22-complex subunit
+      needed for efficient insertion of imported mitochondrial inner-membrane proteins.
+evidence:
+- reference: GO:0042721
+  notes: Gene Ontology cellular-component term for the TIM22 mitochondrial import
+    inner membrane insertion complex.
+- reference: GO:0098800
+  notes: Gene Ontology cellular-component parent term for inner mitochondrial membrane
+    protein complexes.
+- reference: GO:0005743
+  notes: Gene Ontology cellular-component term for the mitochondrial inner membrane
+    that contains TIM22.
+- reference: GO:0045039
+  notes: Gene Ontology biological-process term for protein insertion into the mitochondrial
+    inner membrane.
+- reference: DOI:10.1016/j.cell.2009.08.005
+  notes: 'Chacinska et al. 2009, ''Importing mitochondrial proteins: machineries and
+    mechanisms'', Cell.'
+- reference: DOI:10.1128/MCB.20.4.1187-1193.2000
+  notes: Koehler et al. 2000, 'Tim18p, a new subunit of the TIM22 complex that mediates
+    insertion of imported proteins into the yeast mitochondrial inner membrane', Molecular
+    and Cellular Biology.
+causal_graphs:
+- graph_id: tim22_inner_membrane_insertion
+  title: TIM22 mediates carrier insertion into the inner membrane
+  description: TIM22 resides in the mitochondrial inner membrane and inserts imported
+    multi-pass carrier proteins into that membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures TIM22 topology and its inner-membrane carrier-insertion
+    role without asserting individual Tim subunit families, small-TIM chaperone membership,
+    or species-specific TIM22 assembly factors.
+  nodes:
+  - node_id: tim22_complex
+    label: TIM22 mitochondrial import inner membrane insertion complex
+    node_type: STRUCTURE
+    grounding: GO:0042721
+  - node_id: mitochondrial_inner_membrane
+    label: mitochondrial inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005743
+  - node_id: protein_insertion_into_mitochondrial_inner_membrane
+    label: protein insertion into mitochondrial inner membrane
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0045039
+  edges:
+  - subject: tim22_complex
+    predicate: is part of
+    object: mitochondrial_inner_membrane
+    description: TIM22 is embedded in the mitochondrial inner membrane.
+    evidence:
+    - reference: GO:0042721
+      notes: GO:0042721 defines TIM22 as a complex embedded in the mitochondrial inner
+        membrane.
+  - subject: tim22_complex
+    predicate: supports
+    object: protein_insertion_into_mitochondrial_inner_membrane
+    description: TIM22 supports mitochondrial inner-membrane protein insertion for
+      imported carrier-pathway substrates.
+    evidence:
+    - reference: GO:0042721
+      notes: GO:0042721 grounds TIM22 as the mitochondrial inner-membrane insertion
+        complex for multi-transmembrane proteins with internal targeting elements.
+    - reference: DOI:10.1016/j.cell.2009.08.005
+      notes: Chacinska et al. 2009 reviewed the TIM22 carrier pathway for protein
+        insertion into the mitochondrial inner membrane.
+discussions:
+- discussion_id: tim22_subunit_boundaries
+  prompt: Resolve exact source-neutral family groundings and species-specific TIM22
+    constituent boundaries before adding Tim rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#tim22_inner_membrane_insertion
+  rationale: GO exactly grounds the TIM22 complex and its broad yeast subunit roster,
+    but this first record leaves Tim22, Tim54, Tim18, Sdh3, small-TIM chaperones,
+    and human TIM22-specific factors unasserted until exact source-neutral family
+    groundings are separated from stable constituent versus carrier-pathway chaperone
+    roles.
+  evidence:
+  - reference: GO:0042721
+    notes: GO:0042721 names the yeast integral membrane subunits and the peripheral
+      small TIM complex in its definition of TIM22.
+  - reference: DOI:10.1016/j.cell.2009.08.005
+    notes: Chacinska et al. 2009 reviewed TIM22 carrier-pathway subunits and small
+      TIM chaperones.
+  posed_by: codex
+  posed_date: '2026-09-18'
