@@ -21,6 +21,12 @@ curation_history:
     function evidence, a nonmechanistic MICOS organization graph, and a MICOS subunit-boundary
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-18T19:43:23Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved PR #1184 review issue #1185 by retyping the MICOS inner-membrane-organization
+    graph as FUNCTION rather than ASSEMBLY.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Fcj1 complex
   synonym_type: EXACT_SYNONYM
@@ -100,7 +106,7 @@ causal_graphs:
   title: MICOS maintains mitochondrial inner-membrane organization
   description: MICOS resides at the mitochondrial inner membrane and helps maintain
     crista junctions and contact sites with the outer membrane.
-  graph_kind: ASSEMBLY
+  graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures MICOS topology and architecture maintenance without
     asserting individual subunit family groundings or a complete crista biogenesis
