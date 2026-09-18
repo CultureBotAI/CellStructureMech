@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gator2_complex.yaml
+  slug: gator2_complex
+session:
+  id: 2026-09-18T095543Z-codex-c357b8
+  timestamp: '2026-09-18T09:55:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1138
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1139
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1140
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1136
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - functions
+  - causal_graphs
+  - curation_history
+  summary: Address GATOR2 PR review scope
+  details: 'Addressed PR #1136 review issues #1138, #1139 and #1140 by adding Cell Cycle evidence
+    to the yeast GATOR2 TORC1 function and positive-regulation graph edge, narrowing the Saccharomyces
+    cerevisiae taxonomic-distribution qualifier from COMMON to VARIABLE, and normalizing the
+    initial creation-history section list.'

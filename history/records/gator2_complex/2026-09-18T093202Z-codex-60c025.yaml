@@ -15,8 +15,11 @@ events:
 - type: CREATE
   outcome: changed
   sections:
-  - structure
+  - identity
+  - mereology
   - components
+  - taxonomic_distribution
+  - canonical_examples
   - functions
   - evidence
   - causal_graphs

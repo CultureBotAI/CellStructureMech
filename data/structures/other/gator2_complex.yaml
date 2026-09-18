@@ -29,6 +29,13 @@ curation_history:
     DOI to the Cell Cycle DOI that explicitly names SEACAT and describes its Seh1/Sea2-4/Sec13
     membership.'
   llm_assisted: true
+- timestamp: '2026-09-18T09:55:10Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: '#1138/#1139/#1140: Added yeast SEACAT evidence to the TORC1 function and
+    graph edge, narrowed the Saccharomyces taxonomic presence qualifier, and normalized
+    the initial creation-history sections.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -146,9 +153,9 @@ components:
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  presence: COMMON
-  note: Budding yeast has a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT subcomplex in the SEA/GATOR
-    system.
+  presence: VARIABLE
+  note: Budding yeast is the curated model for the Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT
+    subcomplex in the SEA/GATOR system.
   reference: GO:0061700
 canonical_examples:
 - taxon_id: NCBITaxon:4932
@@ -160,8 +167,8 @@ functions:
 - function_id: positive_regulation_torc1_signaling
   label: positive regulation of TORC1 signaling
   grounding: GO:1904263
-  description: GATOR2/SEACAT is a SEA/GATOR subcomplex associated with Rag-family
-    GTPase control of amino-acid-sensitive TORC1 signaling.
+  description: Yeast GATOR2/SEACAT is represented as a positive TORC1-signaling regulator
+    because SEACAT antagonizes the GATOR1/SEACIT branch of the SEA/GATOR complex.
   evidence:
   - reference: GO:1904263
     notes: Gene Ontology biological-process term for positive regulation of TORC1
@@ -172,6 +179,10 @@ functions:
   - reference: DOI:10.1126/science.1232044
     notes: Bar-Peled et al. 2013 separated human GATOR into GATOR1 and GATOR2 subcomplexes
       that regulate Rag-dependent amino-acid-sensitive mTORC1 signaling.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+      subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+      that antagonizes SEACIT in TORC1 signaling.
 evidence:
 - reference: GO:0061700
   notes: Gene Ontology cellular-component term for the GATOR2 complex, including the
@@ -294,8 +305,8 @@ causal_graphs:
   - subject: gator2_complex
     predicate: positively regulates
     object: torc1_signaling
-    description: GATOR2 is represented at the GO-assigned level of positive regulation
-      of TORC1 signaling.
+    description: GATOR2/SEACAT is represented as positively regulating TORC1 signaling
+      in yeast because SEACAT antagonizes the GATOR1/SEACIT branch of SEA/GATOR.
     evidence:
     - reference: GO:1904263
       notes: Gene Ontology biological-process term for positive regulation of TORC1
@@ -306,6 +317,10 @@ causal_graphs:
     - reference: DOI:10.1126/science.1232044
       notes: Bar-Peled et al. 2013 separated human GATOR into GATOR1 and GATOR2 subcomplexes
         that regulate Rag-dependent amino-acid-sensitive mTORC1 signaling.
+    - reference: DOI:10.4161/cc.26000
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and
+        SEACAT subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+        that antagonizes SEACIT in TORC1 signaling.
 discussions:
 - discussion_id: resolve_gator2_subunit_family_groundings
   prompt: Resolve exact source-neutral InterPro, Pfam, or NCBIfam groundings for the
