@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/emc_complex.yaml
+  slug: emc_complex
+session:
+  id: 2026-09-18T164013Z-codex-bc39c2
+  timestamp: '2026-09-18T16:40:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1167
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1168
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1169
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1166
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address EMC adversarial review
+  details: 'Resolved PR #1166 review issues #1167, #1168, and #1169 by narrowing the EMC insertion
+    graph, adding top-level Sec61 GO evidence, and pairing Emc3/Kre27 and Emc5/Aim27 aliases
+    in the EMC subunit-boundary TODO.'

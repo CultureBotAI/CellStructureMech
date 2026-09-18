@@ -20,6 +20,20 @@ curation_history:
     a nonmechanistic ER transmembrane-domain insertion graph, and an EMC subunit-boundary
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-18T16:39:54Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1167 by narrowing the insertion graph edge, resolved #1168 by
+    adding top-level Sec61 GO evidence, and resolved #1169 by pairing Emc3/Kre27 and
+    Emc5/Aim27 aliases in the subunit-boundary TODO.'
+  llm_assisted: true
+- timestamp: '2026-09-18T16:43:43Z'
+  curator: codex
+  action: FIX_VALIDATION
+  changes: Removed GO:0045048 from the narrowed graph-local EMC-dependent insertion
+    node so its specific label does not misrepresent the broad GO process; kept GO:0045048
+    on the top-level exact process function.
+  llm_assisted: true
 synonyms:
 - synonym_text: endoplasmic reticulum membrane protein complex
   synonym_type: BROAD_SYNONYM
@@ -68,6 +82,8 @@ evidence:
   notes: Gene Ontology cellular-component parent term for membrane protein complexes.
 - reference: GO:0005789
   notes: Gene Ontology cellular-component term for the endoplasmic reticulum membrane.
+- reference: GO:0005784
+  notes: Gene Ontology cellular-component term for the Sec61 translocon complex.
 - reference: GO:0045048
   notes: Gene Ontology biological-process term for protein insertion into ER membrane.
 - reference: DOI:10.1126/science.aao3099
@@ -107,9 +123,8 @@ causal_graphs:
     node_type: STRUCTURE
     grounding: GO:0005784
   - node_id: er_tmd_insertion
-    label: protein insertion into ER membrane
+    label: EMC-dependent ER transmembrane-domain insertion
     node_type: BIOLOGICAL_PROCESS
-    grounding: GO:0045048
   edges:
   - subject: emc_complex
     predicate: is embedded in
@@ -123,10 +138,10 @@ causal_graphs:
       notes: Bai et al. 2020 determined the structure of Saccharomyces cerevisiae
         EMC and described the transmembrane subunits that form the membrane region.
   - subject: emc_complex
-    predicate: catalyzes
+    predicate: supports
     object: er_tmd_insertion
-    description: Purified EMC can catalyze insertion of eligible transmembrane domains
-      into membranes.
+    description: EMC supports insertion of selected tail-anchored and multipass transmembrane
+      domains into the ER membrane.
     evidence:
     - reference: DOI:10.1126/science.aao3099
       notes: Guna et al. 2018 reconstituted EMC-dependent substrate insertion with
@@ -155,9 +170,9 @@ discussions:
   - causal_graphs#emc_er_membrane_insertion
   rationale: GO exactly grounds the EMC complex and carries older Saccharomyces subunit
     text, but Bai et al. report an eight-subunit Saccharomyces cerevisiae EMC. This
-    record leaves individual EMC1/EMC2/EMC3/KRE27/EMC4/EMC5/AIM27/EMC6/EMC7/EMC10
-    rows unasserted until exact family groundings and core or accessory status are
-    curated.
+    record leaves individual Emc1, Emc2, Emc3/Kre27, Emc4, Emc5/Aim27, Emc6, Emc7
+    and Emc10 rows unasserted until exact family groundings and core or accessory
+    status are curated.
   evidence:
   - reference: GO:0072546
     notes: GO:0072546 names S. cerevisiae EMC1, EMC2, AIM27, EMC4, KRE27 and EMC6
