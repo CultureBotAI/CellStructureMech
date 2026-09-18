@@ -1955,9 +1955,9 @@
           "cosine_similarity": 0.73531074
         },
         {
-          "identifier": "GO:0120120",
-          "label": "bilobe structure",
-          "cosine_similarity": 0.7182212
+          "identifier": "GO:0042721",
+          "label": "TIM22 mitochondrial import inner membrane insertion complex",
+          "cosine_similarity": 0.72951043
         }
       ]
     },
@@ -10201,9 +10201,9 @@
           "cosine_similarity": 0.8086059
         },
         {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.77517939
+          "identifier": "GO:0042721",
+          "label": "TIM22 mitochondrial import inner membrane insertion complex",
+          "cosine_similarity": 0.80049319
         }
       ]
     },
@@ -10713,6 +10713,11 @@
           "cosine_similarity": 0.91239682
         },
         {
+          "identifier": "GO:0042721",
+          "label": "TIM22 mitochondrial import inner membrane insertion complex",
+          "cosine_similarity": 0.88807808
+        },
+        {
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.87495414
@@ -10726,11 +10731,6 @@
           "identifier": "GO:0005739",
           "label": "mitochondrion",
           "cosine_similarity": 0.8563988
-        },
-        {
-          "identifier": "GO:0005741",
-          "label": "mitochondrial outer membrane",
-          "cosine_similarity": 0.85209986
         }
       ]
     },
@@ -11400,6 +11400,11 @@
           "cosine_similarity": 0.88510127
         },
         {
+          "identifier": "GO:0042721",
+          "label": "TIM22 mitochondrial import inner membrane insertion complex",
+          "cosine_similarity": 0.8500746
+        },
+        {
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.81295248
@@ -11408,11 +11413,6 @@
           "identifier": "GO:0005744",
           "label": "TIM23 mitochondrial import inner membrane translocase complex",
           "cosine_similarity": 0.80917718
-        },
-        {
-          "identifier": "GO:0010006",
-          "label": "Toc complex",
-          "cosine_similarity": 0.78788455
         }
       ]
     },
@@ -11541,9 +11541,45 @@
       ]
     },
     {
+      "identifier": "GO:0042721",
+      "label": "TIM22 mitochondrial import inner membrane insertion complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005744",
+          "label": "TIM23 mitochondrial import inner membrane translocase complex",
+          "cosine_similarity": 0.93700708
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.88807808
+        },
+        {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.8500746
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.80049319
+        },
+        {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.77488179
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005744",
       "label": "TIM23 mitochondrial import inner membrane translocase complex",
       "neighbors": [
+        {
+          "identifier": "GO:0042721",
+          "label": "TIM22 mitochondrial import inner membrane insertion complex",
+          "cosine_similarity": 0.93700708
+        },
         {
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
@@ -11563,11 +11599,6 @@
           "identifier": "GO:0033281",
           "label": "TAT protein transport complex",
           "cosine_similarity": 0.72860054
-        },
-        {
-          "identifier": "GO:0005739",
-          "label": "mitochondrion",
-          "cosine_similarity": 0.72082787
         }
       ]
     },
@@ -12092,9 +12123,9 @@
           "cosine_similarity": 0.74046371
         },
         {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.73400128
+          "identifier": "GO:0042721",
+          "label": "TIM22 mitochondrial import inner membrane insertion complex",
+          "cosine_similarity": 0.73705778
         }
       ]
     },
