@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/seh1_associated_complex.yaml
+  slug: seh1_associated_complex
+session:
+  id: 2026-09-18T130743Z-codex-cec547
+  timestamp: '2026-09-18T13:07:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Seh1-associated complex structure record
+  details: Created a GO:0035859 Seh1-associated SEA/GATOR complex structure record with GO
+    protein-containing-complex parentage, GO SEA/GATOR synonymy, exact GO-grounded GATOR1/SEACIT
+    and GATOR2/SEACAT subcomplex components, Saccharomyces scope, a TORC1 signaling function,
+    GO/DOI evidence, a nonmechanistic SEACIT/SEACAT/TORC1 regulation graph, and a resolved
+    boundary discussion that leaves individual yeast protein components to the child GATOR1
+    and GATOR2 records.

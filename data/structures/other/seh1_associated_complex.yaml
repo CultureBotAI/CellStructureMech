@@ -1,0 +1,236 @@
+identifier: GO:0035859
+label: Seh1-associated complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A GTPase-activating protein (GAP) complex that regulates TORC1 signaling
+  by interacting with the Rag GTPase. In S. cerevisiae the complex contains Seh1p,
+  Sec13p, Npr2p, Npr3p, Iml1p, Mtc5p, Rtc1p, and Sea4p.
+definition_source: GO:0035859
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T13:04:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T13:05:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added SEA/GATOR synonymy, protein-complex parentage, GATOR1 and GATOR2
+    parthood, exact GO-grounded GATOR1/SEACIT and GATOR2/SEACAT complex components,
+    Saccharomyces scope, a TORC1 signaling function, GO/DOI evidence, a nonmechanistic
+    SEACIT/SEACAT regulation graph, and an individual-protein boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-09-18T13:06:23Z'
+  curator: codex
+  action: REFORMATTED_RECORD
+  changes: Expanded shared YAML evidence aliases into plain repeated mappings.
+  llm_assisted: true
+- timestamp: '2026-09-18T13:12:59Z'
+  curator: codex
+  action: FIX_ID_LABELS
+  changes: Aligned GATOR1 and GATOR2 component/node labels with their GO canonical
+    labels while preserving SEACIT/SEACAT terminology in the explanatory text.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+has_part:
+- GO:1990130
+- GO:0061700
+synonyms:
+- synonym_text: GATOR complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0035859
+- synonym_text: SEA complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0035859
+components:
+- component_id: gator1_seacit_subcomplex
+  label: GATOR1 complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:1990130
+  essentiality: UNKNOWN
+  role: Negative-regulatory GATOR branch corresponding to the yeast Iml1/Npr2/Npr3
+    SEACIT subcomplex.
+  evidence:
+  - reference: GO:0035859
+    notes: Gene Ontology cellular-component term for the Seh1-associated SEA/GATOR
+      complex.
+  - reference: GO:1990130
+    notes: Gene Ontology cellular-component term for the GATOR1/SEACIT subcomplex.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+      subcomplexes in the SEA/GATOR complex and connected them to Rag-family TORC1
+      regulation.
+- component_id: gator2_seacat_subcomplex
+  label: GATOR2 complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0061700
+  essentiality: UNKNOWN
+  role: Positive-regulatory GATOR branch corresponding to the yeast Seh1/Sec13/Sea2/Sea3/Sea4
+    SEACAT subcomplex.
+  evidence:
+  - reference: GO:0035859
+    notes: Gene Ontology cellular-component term for the Seh1-associated SEA/GATOR
+      complex.
+  - reference: GO:0061700
+    notes: Gene Ontology cellular-component term for the GATOR2/SEACAT subcomplex.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+      subcomplexes in the SEA/GATOR complex and connected them to Rag-family TORC1
+      regulation.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: VARIABLE
+  note: Budding yeast is the curated model for the Seh1-associated SEA/GATOR complex
+    that contains SEACIT and SEACAT branches upstream of Rag-family TORC1 regulation.
+  reference: GO:0035859
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which the SEA/GATOR complex was identified as a Seh1/Sec13-containing
+    vacuole-associated coatomer-related complex.
+  reference: DOI:10.1074/mcp.M110.006478
+functions:
+- function_id: torc1_signaling
+  label: TORC1 signaling
+  grounding: GO:0038202
+  description: The yeast SEA/GATOR complex organizes GATOR1/SEACIT and GATOR2/SEACAT
+    branches that regulate Rag-family TORC1 signaling.
+  evidence:
+  - reference: GO:0038202
+    notes: Gene Ontology biological-process term for TORC1 signaling.
+  - reference: GO:0035859
+    notes: Gene Ontology cellular-component term for the Seh1-associated SEA/GATOR
+      complex.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+      subcomplexes in the SEA/GATOR complex and connected them to Rag-family TORC1
+      regulation.
+evidence:
+- reference: GO:0035859
+  notes: Gene Ontology cellular-component term for the Seh1-associated SEA/GATOR complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:1990130
+  notes: Gene Ontology cellular-component term for the GATOR1/SEACIT subcomplex.
+- reference: GO:0061700
+  notes: Gene Ontology cellular-component term for the GATOR2/SEACAT subcomplex.
+- reference: GO:0038202
+  notes: Gene Ontology biological-process term for TORC1 signaling.
+- reference: DOI:10.1074/mcp.M110.006478
+  notes: Dokudovskaya et al. 2011 identified the conserved coatomer-related SEA complex
+    containing Sec13 and Seh1 and found that it dynamically associates with the Saccharomyces
+    cerevisiae vacuole.
+- reference: DOI:10.4161/cc.26000
+  notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+    subcomplexes in the SEA/GATOR complex and connected them to Rag-family TORC1 regulation.
+causal_graphs:
+- graph_id: yeast_sea_gator_torc1_regulation
+  title: SEA/GATOR contains SEACIT and SEACAT branches
+  description: In Saccharomyces cerevisiae, the Seh1-associated SEA/GATOR complex
+    contains GATOR1/SEACIT and GATOR2/SEACAT branches that regulate Rag-family TORC1
+    signaling.
+  graph_kind: REGULATION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents the two curated SEA/GATOR subcomplex branches
+    and their high-level TORC1-signaling link without duplicating individual SEACIT
+    or SEACAT protein subunits.
+  nodes:
+  - node_id: gator1_seacit_subcomplex
+    label: GATOR1 complex
+    node_type: STRUCTURE
+    grounding: GO:1990130
+    component_ref: gator1_seacit_subcomplex
+  - node_id: gator2_seacat_subcomplex
+    label: GATOR2 complex
+    node_type: STRUCTURE
+    grounding: GO:0061700
+    component_ref: gator2_seacat_subcomplex
+  - node_id: seh1_associated_complex
+    label: Seh1-associated complex
+    node_type: STRUCTURE
+    grounding: GO:0035859
+  - node_id: torc1_signaling
+    label: TORC1 signaling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0038202
+  edges:
+  - subject: gator1_seacit_subcomplex
+    predicate: is part of
+    object: seh1_associated_complex
+    description: GATOR1/SEACIT is represented as the Iml1/Npr2/Npr3 subcomplex branch
+      of yeast SEA/GATOR.
+    evidence:
+    - reference: GO:0035859
+      notes: Gene Ontology cellular-component term for the Seh1-associated SEA/GATOR
+        complex.
+    - reference: GO:1990130
+      notes: Gene Ontology cellular-component term for the GATOR1/SEACIT subcomplex.
+    - reference: DOI:10.4161/cc.26000
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and
+        SEACAT subcomplexes in the SEA/GATOR complex and connected them to Rag-family
+        TORC1 regulation.
+  - subject: gator2_seacat_subcomplex
+    predicate: is part of
+    object: seh1_associated_complex
+    description: GATOR2/SEACAT is represented as the Seh1/Sec13/Sea2/Sea3/Sea4 subcomplex
+      branch of yeast SEA/GATOR.
+    evidence:
+    - reference: GO:0035859
+      notes: Gene Ontology cellular-component term for the Seh1-associated SEA/GATOR
+        complex.
+    - reference: GO:0061700
+      notes: Gene Ontology cellular-component term for the GATOR2/SEACAT subcomplex.
+    - reference: DOI:10.4161/cc.26000
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and
+        SEACAT subcomplexes in the SEA/GATOR complex and connected them to Rag-family
+        TORC1 regulation.
+  - subject: seh1_associated_complex
+    predicate: regulates
+    object: torc1_signaling
+    description: The SEA/GATOR complex is represented as a vacuole-associated complex
+      with SEACIT and SEACAT branches upstream of TORC1 signaling.
+    evidence:
+    - reference: GO:0038202
+      notes: Gene Ontology biological-process term for TORC1 signaling.
+    - reference: GO:0035859
+      notes: Gene Ontology cellular-component term for the Seh1-associated SEA/GATOR
+        complex.
+    - reference: DOI:10.4161/cc.26000
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and
+        SEACAT subcomplexes in the SEA/GATOR complex and connected them to Rag-family
+        TORC1 regulation.
+discussions:
+- discussion_id: protein_subunit_boundary
+  prompt: Keep individual Iml1, Npr2, Npr3, Sea2, Sea3, Sea4, Seh1 and Sec13 protein
+    rows in the GATOR1 and GATOR2 child records.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#gator1_seacit_subcomplex
+  - components#gator2_seacat_subcomplex
+  - causal_graphs#yeast_sea_gator_torc1_regulation
+  rationale: GO already splits the SEA/GATOR complex into GATOR1/SEACIT and GATOR2/SEACAT
+    subcomplexes, and those child records curate the yeast protein constituents with
+    their own grounding discussions.
+  resolution_note: 'Declined: the parent SEA/GATOR record uses exact GO-grounded subcomplex
+    components instead of duplicating child-record protein components.'
+  evidence:
+  - reference: GO:0035859
+    notes: Gene Ontology cellular-component term for the Seh1-associated SEA/GATOR
+      complex.
+  - reference: GO:1990130
+    notes: Gene Ontology cellular-component term for the GATOR1/SEACIT subcomplex.
+  - reference: GO:0061700
+    notes: Gene Ontology cellular-component term for the GATOR2/SEACAT subcomplex.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+      subcomplexes in the SEA/GATOR complex and connected them to Rag-family TORC1
+      regulation.
+  posed_by: codex
+  posed_date: '2026-09-18'
+  resolved_date: '2026-09-18'
