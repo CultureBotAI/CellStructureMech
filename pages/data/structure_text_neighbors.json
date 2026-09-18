@@ -1745,6 +1745,37 @@
       ]
     },
     {
+      "identifier": "GO:0072686",
+      "label": "mitotic spindle",
+      "neighbors": [
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.82278098
+        },
+        {
+          "identifier": "GO:0000776",
+          "label": "kinetochore",
+          "cosine_similarity": 0.76863572
+        },
+        {
+          "identifier": "cellstructuremech:phuz_spindle",
+          "label": "PhuZ spindle",
+          "cosine_similarity": 0.71561269
+        },
+        {
+          "identifier": "GO:0120120",
+          "label": "bilobe structure",
+          "cosine_similarity": 0.68907966
+        },
+        {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.66396299
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:mreb_filament",
       "label": "MreB filament",
       "neighbors": [
@@ -1831,9 +1862,9 @@
           "cosine_similarity": 0.7256558
         },
         {
-          "identifier": "GO:0009288",
-          "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.71171633
+          "identifier": "GO:0072686",
+          "label": "mitotic spindle",
+          "cosine_similarity": 0.71561269
         }
       ]
     },
@@ -1904,6 +1935,11 @@
       "label": "spindle pole body",
       "neighbors": [
         {
+          "identifier": "GO:0072686",
+          "label": "mitotic spindle",
+          "cosine_similarity": 0.82278098
+        },
+        {
           "identifier": "GO:0000776",
           "label": "kinetochore",
           "cosine_similarity": 0.78914107
@@ -1922,11 +1958,6 @@
           "identifier": "GO:0031518",
           "label": "CBF3 complex",
           "cosine_similarity": 0.72986078
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.72645975
         }
       ]
     },

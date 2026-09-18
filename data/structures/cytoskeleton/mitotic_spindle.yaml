@@ -1,0 +1,211 @@
+identifier: GO:0072686
+label: mitotic spindle
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A spindle that forms as part of mitosis. Mitotic and meiotic spindles
+  contain distinctive complements of proteins associated with microtubules.
+definition_source: GO:0072686
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T23:15:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T23:16:16Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added spindle parentage and spindle-microtubule parthood, an alpha/beta-tubulin
+    constituent, Saccharomyces cerevisiae scope, a chromosome-segregation function,
+    GO and DOI evidence, a nonmechanistic budding-yeast spindle architecture graph,
+    and discussions on SPB/kinetochore boundaries and MAP curation.
+  llm_assisted: true
+- timestamp: '2026-09-18T23:16:44Z'
+  curator: codex
+  action: NORMALIZED_GRAPH_LABELS
+  changes: Normalized GO-grounded graph nodes to the canonical singular labels for
+    spindle pole body, spindle microtubule, and kinetochore.
+  llm_assisted: true
+- timestamp: '2026-09-18T23:26:49Z'
+  curator: codex
+  action: FIX_DISCUSSION_ANCHOR
+  changes: Pointed the spindle-associated-protein TODO at the alpha/beta-tubulin component
+    anchor so every discussion reference resolves.
+  llm_assisted: true
+parent_structures:
+- GO:0005819
+has_part:
+- GO:0005876
+components:
+- component_id: alpha_beta_tubulins
+  label: alpha- and beta-tubulins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Eukaryotic tubulin subunits that polymerize into the spindle microtubules
+    of the mitotic spindle.
+  evidence:
+  - reference: GO:0005876
+    notes: Gene Ontology defines spindle microtubules as microtubules that are part
+      of a mitotic or meiotic spindle.
+  - reference: DOI:10.1126/science.277.5325.574
+    notes: Straight et al. 1997 imaged GFP-Tub1-labeled spindle microtubules in living
+      Saccharomyces cerevisiae cells.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The mitotic spindle uses alpha- and beta-tubulin subunits that
+    are shared with other eukaryotic microtubule arrays; no exact source-neutral CURIE
+    was assigned for only the mitotic-spindle tubulin constituents.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a nuclear mitotic spindle whose microtubule organization
+    has been reconstructed by serial-section electron microscopy and imaged in living
+    cells.
+  reference: DOI:10.1083/jcb.129.6.1601
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference microbial eukaryote in which mitotic spindle microtubules were mapped
+    structurally and tracked during chromosome separation in vivo.
+  reference: DOI:10.1083/jcb.129.6.1601
+functions:
+- function_id: chromosome_segregation
+  label: chromosome segregation
+  grounding: GO:0007059
+  description: Mitotic spindles move duplicated chromosomes apart by coupling kinetochores
+    to spindle microtubules that extend from opposing spindle poles.
+  evidence:
+  - reference: GO:0005819
+    notes: Gene Ontology defines the spindle as an array of microtubules and associated
+      molecules that serves to move duplicated chromosomes apart.
+  - reference: DOI:10.1126/science.277.5325.574
+    notes: Straight et al. 1997 visualized chromosome movements and spindle dynamics
+      in living budding-yeast cells.
+evidence:
+- reference: GO:0072686
+  notes: Gene Ontology cellular-component term for the mitotic spindle.
+- reference: GO:0005819
+  notes: Gene Ontology cellular-component term for the broader spindle.
+- reference: GO:0005876
+  notes: Gene Ontology cellular-component term for the spindle microtubule.
+- reference: GO:0007059
+  notes: Gene Ontology biological-process term for chromosome segregation.
+- reference: DOI:10.1083/jcb.129.6.1601
+  notes: Winey et al. 1995, Three-dimensional ultrastructural analysis of the Saccharomyces
+    cerevisiae mitotic spindle, Journal of Cell Biology.
+- reference: DOI:10.1126/science.277.5325.574
+  notes: 'Straight et al. 1997, Mitosis in Living Budding Yeast: Anaphase A But No
+    Metaphase Plate, Science.'
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: Jaspersen and Winey 2004 reviewed spindle pole body structure, duplication,
+    and mitotic-spindle assembly in budding yeast.
+causal_graphs:
+- graph_id: budding_yeast_spindle_microtubule_architecture
+  title: Spindle microtubules bridge budding-yeast spindle poles and kinetochores
+  description: In Saccharomyces cerevisiae, spindle pole bodies organize a bipolar
+    array of spindle microtubules, and a subset of those microtubules attach to kinetochores
+    during mitosis.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph places spindle microtubules, spindle pole bodies, and kinetochores
+    in a structural budding-yeast architecture without modeling every motor, microtubule-associated
+    protein, or cell-cycle input.
+  nodes:
+  - node_id: spindle_pole_body
+    label: spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005816
+  - node_id: spindle_microtubule
+    label: spindle microtubule
+    node_type: STRUCTURE
+    grounding: GO:0005876
+  - node_id: kinetochore
+    label: kinetochore
+    node_type: STRUCTURE
+    grounding: GO:0000776
+  - node_id: mitotic_spindle
+    label: mitotic spindle
+    node_type: STRUCTURE
+    grounding: GO:0072686
+  edges:
+  - subject: spindle_pole_body
+    predicate: anchor
+    object: spindle_microtubule
+    description: Budding-yeast spindle pole bodies anchor the spindle microtubules
+      that form the mitotic spindle.
+    evidence:
+    - reference: GO:0005876
+      notes: GO:0005876 defines spindle microtubules as part of a spindle and anchored
+        at one spindle pole.
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed the budding-yeast SPB as the nuclear
+        microtubule-organizing center.
+  - subject: spindle_microtubule
+    predicate: assemble into
+    object: mitotic_spindle
+    description: Spindle microtubules form the bipolar microtubule array of the mitotic
+      spindle.
+    evidence:
+    - reference: GO:0005819
+      notes: GO:0005819 defines the spindle as an array of microtubules and associated
+        molecules between opposite poles.
+    - reference: DOI:10.1083/jcb.129.6.1601
+      notes: Winey et al. 1995 reconstructed budding-yeast mitotic spindles from serial
+        electron micrographs and classified their microtubule bundles.
+  - subject: spindle_microtubule
+    predicate: attach to
+    object: kinetochore
+    description: A subset of budding-yeast spindle microtubules forms kinetochore
+      fibers.
+    evidence:
+    - reference: GO:0000776
+      notes: GO:0000776 defines the kinetochore as a centromeric complex that provides
+        an attachment point for spindle microtubules.
+    - reference: DOI:10.1083/jcb.129.6.1601
+      notes: Winey et al. 1995 reconstructed budding-yeast spindles containing presumptive
+        kinetochore microtubules and interpolar microtubules.
+discussions:
+- discussion_id: spindle_poles_and_kinetochores_are_boundaries
+  prompt: Keep spindle pole bodies and kinetochores as adjacent structures instead
+    of molecular components of the generic mitotic-spindle record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#alpha_beta_tubulins
+  - causal_graphs#budding_yeast_spindle_microtubule_architecture
+  rationale: In budding yeast, spindle pole bodies organize spindle microtubules and
+    kinetochores provide chromosome attachment sites for them, but both are separate
+    GO-denoted structures with their own composition and curation boundaries rather
+    than taxon-agnostic molecular constituents of GO:0072686.
+  evidence:
+  - reference: GO:0005816
+    notes: GO:0005816 denotes the fungal spindle pole body.
+  - reference: GO:0000776
+    notes: GO:0000776 denotes the kinetochore.
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed the SPB as the budding-yeast microtubule-organizing
+      center.
+  posed_by: codex
+  posed_date: '2026-09-18'
+  resolved_date: '2026-09-18'
+- discussion_id: resolve_spindle_microtubule_associated_proteins
+  prompt: Resolve exact source-neutral groundings for mitotic spindle motors and microtubule-associated
+    proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#alpha_beta_tubulins
+  - causal_graphs#budding_yeast_spindle_microtubule_architecture
+  rationale: GO defines spindles as microtubules plus associated molecules; this first
+    record captures the alpha/beta-tubulin polymer boundary and defers the taxon-specific
+    motor and microtubule-associated protein set.
+  evidence:
+  - reference: GO:0072686
+    notes: GO:0072686 defines the mitotic spindle around spindle-associated microtubules
+      and proteins.
+  - reference: DOI:10.1083/jcb.129.6.1601
+    notes: Winey et al. 1995 distinguished budding-yeast kinetochore and interpolar
+      spindle microtubules structurally.
+  posed_by: codex
+  posed_date: '2026-09-18'
