@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/tim23_mitochondrial_import_inner_membrane_translocase_complex.yaml
+  slug: tim23_mitochondrial_import_inner_membrane_translocase_complex
+session:
+  id: 2026-09-18T171445Z-codex-d7ff74
+  timestamp: '2026-09-18T17:14:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1171
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1172
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1173
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1170
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address TIM23 PR review findings
+  details: 'Adversarial review of PR #1170 found three TIM23 defects: missing top-level TOM
+    evidence, an over-strong TIM23-to-matrix-import edge, and TODO wording that blurred stable
+    TIM23 constituents with transient PAM factors. Added GO:0005742 to evidence, weakened
+    the graph edge to supports, and revised the TODO to separate exact family grounding from
+    TIM23/PAM boundary decisions.'
