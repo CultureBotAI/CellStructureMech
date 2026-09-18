@@ -34,6 +34,12 @@ curation_history:
   changes: Narrowed the DASH Saccharomyces taxonomic-distribution and canonical-example
     notes so each row is directly supported by its row-level reference.
   llm_assisted: true
+- timestamp: '2026-09-18T13:53:23Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: Weakened the DASH-to-spindle-microtubule attachment graph edge from stabilization
+    to a contribution claim that matches the attached evidence.
+  llm_assisted: true
 parent_structures:
 - GO:0140513
 part_of:
@@ -306,10 +312,10 @@ causal_graphs:
       notes: GO:0000940 defines the outer kinetochore as the kinetochore region most
         external to centromeric DNA.
   - subject: dash_complex
-    predicate: stabilizes
+    predicate: contributes to
     object: spindle_microtubule_attachment
-    description: The DASH complex binds microtubules and helps maintain budding-yeast
-      kinetochore attachments to spindle microtubules.
+    description: The DASH complex binds microtubules as an outer-kinetochore module
+      and contributes to budding-yeast kinetochore-spindle attachment.
     evidence:
     - reference: GO:0042729
       notes: Gene Ontology cellular-component term for the DASH complex.
