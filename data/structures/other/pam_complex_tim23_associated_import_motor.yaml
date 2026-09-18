@@ -21,6 +21,12 @@ curation_history:
     evidence, a nonmechanistic PAM matrix-import graph, and a PAM subunit-boundary
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-18T18:20:18Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1179 by narrowing the PAM canonical example from plural J-protein
+    components to the cited J-protein component.'
+  llm_assisted: true
 synonyms:
 - synonym_text: mitochondrial import motor
   synonym_type: EXACT_SYNONYM
@@ -49,7 +55,7 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model for defining J-protein components of the TIM23-associated
+  note: Budding-yeast model for defining a J-protein component of the TIM23-associated
     PAM import motor.
   reference: DOI:10.1093/emboj/cdg485
 functions:

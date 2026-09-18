@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/pam_complex_tim23_associated_import_motor.yaml
+  slug: pam_complex_tim23_associated_import_motor
+session:
+  id: 2026-09-18T182048Z-codex-744ef4
+  timestamp: '2026-09-18T18:20:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1179
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1178
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - taxonomy
+  summary: Narrowed PAM J-protein wording
+  details: 'Addressed review issue #1179 by changing the Saccharomyces cerevisiae canonical-example
+    note from plural J-protein components to the cited single J-protein component described
+    by Mokranjac et al. 2003.'
