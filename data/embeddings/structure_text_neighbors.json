@@ -9886,14 +9886,14 @@
           "cosine_similarity": 0.78215719
         },
         {
+          "identifier": "GO:0042729",
+          "label": "DASH complex",
+          "cosine_similarity": 0.77544624
+        },
+        {
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.76228891
-        },
-        {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.7510978
         }
       ]
     },
@@ -10018,6 +10018,37 @@
           "identifier": "GO:0005933",
           "label": "cellular bud",
           "cosine_similarity": 0.66729971
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0042729",
+      "label": "DASH complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.7825783
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.77544624
+        },
+        {
+          "identifier": "GO:0071986",
+          "label": "Ragulator complex",
+          "cosine_similarity": 0.76474862
+        },
+        {
+          "identifier": "GO:1990131",
+          "label": "Gtr1-Gtr2 GTPase complex",
+          "cosine_similarity": 0.75820877
+        },
+        {
+          "identifier": "GO:0030904",
+          "label": "retromer complex",
+          "cosine_similarity": 0.74768321
         }
       ]
     },
@@ -10356,9 +10387,9 @@
           "cosine_similarity": 0.7281742
         },
         {
-          "identifier": "GO:0031932",
-          "label": "TORC2 complex",
-          "cosine_similarity": 0.72319761
+          "identifier": "GO:0042729",
+          "label": "DASH complex",
+          "cosine_similarity": 0.72340776
         }
       ]
     },
@@ -10387,9 +10418,9 @@
           "cosine_similarity": 0.76690088
         },
         {
-          "identifier": "GO:0030904",
-          "label": "retromer complex",
-          "cosine_similarity": 0.75451291
+          "identifier": "GO:0042729",
+          "label": "DASH complex",
+          "cosine_similarity": 0.75820877
         }
       ]
     },
@@ -10573,9 +10604,9 @@
           "cosine_similarity": 0.71845081
         },
         {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.70324247
+          "identifier": "GO:0042729",
+          "label": "DASH complex",
+          "cosine_similarity": 0.71491144
         }
       ]
     },
@@ -10635,9 +10666,9 @@
           "cosine_similarity": 0.69571351
         },
         {
-          "identifier": "GO:0000502",
-          "label": "proteasome complex",
-          "cosine_similarity": 0.6852607
+          "identifier": "GO:0042729",
+          "label": "DASH complex",
+          "cosine_similarity": 0.69522891
         }
       ]
     },
@@ -11193,9 +11224,9 @@
           "cosine_similarity": 0.7768948
         },
         {
-          "identifier": "GO:0030897",
-          "label": "HOPS complex",
-          "cosine_similarity": 0.75697316
+          "identifier": "GO:0042729",
+          "label": "DASH complex",
+          "cosine_similarity": 0.76474862
         }
       ]
     },

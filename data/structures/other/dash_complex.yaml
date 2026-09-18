@@ -1,0 +1,348 @@
+identifier: GO:0042729
+label: DASH complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A large protein complex, containing around 8-10 subunits in yeast, including
+  Duo1p, Dam1p, Dad1p and Ask1p. The complex forms part of the outer kinetochore,
+  associates with microtubules when the kinetochore attaches to the spindle, and plays
+  a role in spindle attachment, chromosome segregation and spindle stability.
+definition_source: GO:0042729
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T13:30:31Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T13:31:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added DASH synonymy, nuclear-complex parentage, outer-kinetochore parthood,
+    a seven-subunit reviewed-label-only yeast component set, Saccharomyces scope,
+    spindle-microtubule attachment function, GO/DOI evidence, a nonmechanistic outer-kinetochore
+    attachment graph, and a subunit-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-18T13:32:30Z'
+  curator: codex
+  action: NORMALIZED_YAML
+  changes: Rewrote the DASH record with independent evidence dictionaries so the serialized
+    YAML does not contain anchors or aliases.
+  llm_assisted: true
+parent_structures:
+- GO:0140513
+part_of:
+- GO:0000940
+- GO:0000776
+synonyms:
+- synonym_text: condensed nuclear chromosome kinetochore-associated DASH complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0042729
+- synonym_text: Dam1 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0042729
+- synonym_text: DDD complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0042729
+- synonym_text: Duo1p-Dam1p-Dad1p complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0042729
+components:
+- component_id: duo1_dash_subunit
+  label: Duo1 DASH subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DUO1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DUO1 is modeled as a named budding-yeast DASH-complex subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier was curated
+    in this first pass.
+  role: Named Saccharomyces cerevisiae constituent of the DASH complex.
+  evidence:
+  - reference: GO:0042729
+    notes: Gene Ontology cellular-component term for the DASH complex.
+  - reference: DOI:10.1083/jcb.200109063
+    notes: Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing
+      Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex
+      to outer kinetochore function.
+  - reference: DOI:10.1093/emboj/21.1.181
+    notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
+      the budding-yeast Duo1p-Dam1p-Dad1p complex.
+- component_id: dam1_dash_subunit
+  label: Dam1 DASH subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DAM1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DAM1 is modeled as a named budding-yeast DASH-complex subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier was curated
+    in this first pass.
+  role: Named Saccharomyces cerevisiae constituent of the DASH complex.
+  evidence:
+  - reference: GO:0042729
+    notes: Gene Ontology cellular-component term for the DASH complex.
+  - reference: DOI:10.1083/jcb.200109063
+    notes: Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing
+      Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex
+      to outer kinetochore function.
+  - reference: DOI:10.1093/emboj/21.1.181
+    notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
+      the budding-yeast Duo1p-Dam1p-Dad1p complex.
+- component_id: dad1_dash_subunit
+  label: Dad1 DASH subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DAD1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DAD1 is modeled as a named budding-yeast DASH-complex subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier was curated
+    in this first pass.
+  role: Named Saccharomyces cerevisiae constituent of the DASH complex.
+  evidence:
+  - reference: GO:0042729
+    notes: Gene Ontology cellular-component term for the DASH complex.
+  - reference: DOI:10.1083/jcb.200109063
+    notes: Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing
+      Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex
+      to outer kinetochore function.
+  - reference: DOI:10.1093/emboj/21.1.181
+    notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
+      the budding-yeast Duo1p-Dam1p-Dad1p complex.
+- component_id: dad2_dash_subunit
+  label: Dad2 DASH subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DAD2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DAD2 is modeled as a named budding-yeast DASH-complex subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier was curated
+    in this first pass.
+  role: Named Saccharomyces cerevisiae constituent of the DASH complex.
+  evidence:
+  - reference: GO:0042729
+    notes: Gene Ontology cellular-component term for the DASH complex.
+  - reference: DOI:10.1083/jcb.200109063
+    notes: Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing
+      Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex
+      to outer kinetochore function.
+  - reference: DOI:10.1093/emboj/21.1.181
+    notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
+      the budding-yeast Duo1p-Dam1p-Dad1p complex.
+- component_id: ask1_dash_subunit
+  label: Ask1 DASH subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ASK1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: ASK1 is modeled as a named budding-yeast DASH-complex subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier was curated
+    in this first pass.
+  role: Named Saccharomyces cerevisiae constituent of the DASH complex.
+  evidence:
+  - reference: GO:0042729
+    notes: Gene Ontology cellular-component term for the DASH complex.
+  - reference: DOI:10.1083/jcb.200109063
+    notes: Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing
+      Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex
+      to outer kinetochore function.
+  - reference: DOI:10.1093/emboj/21.1.181
+    notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
+      the budding-yeast Duo1p-Dam1p-Dad1p complex.
+- component_id: spc19_dash_subunit
+  label: Spc19 DASH subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SPC19
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SPC19 is modeled as a named budding-yeast DASH-complex subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier was curated
+    in this first pass.
+  role: Named Saccharomyces cerevisiae constituent of the DASH complex.
+  evidence:
+  - reference: GO:0042729
+    notes: Gene Ontology cellular-component term for the DASH complex.
+  - reference: DOI:10.1083/jcb.200109063
+    notes: Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing
+      Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex
+      to outer kinetochore function.
+  - reference: DOI:10.1093/emboj/21.1.181
+    notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
+      the budding-yeast Duo1p-Dam1p-Dad1p complex.
+- component_id: spc34_dash_subunit
+  label: Spc34 DASH subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SPC34
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SPC34 is modeled as a named budding-yeast DASH-complex subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier was curated
+    in this first pass.
+  role: Named Saccharomyces cerevisiae constituent of the DASH complex.
+  evidence:
+  - reference: GO:0042729
+    notes: Gene Ontology cellular-component term for the DASH complex.
+  - reference: DOI:10.1083/jcb.200109063
+    notes: Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing
+      Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex
+      to outer kinetochore function.
+  - reference: DOI:10.1093/emboj/21.1.181
+    notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
+      the budding-yeast Duo1p-Dam1p-Dad1p complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a DASH/Dam1 kinetochore complex that binds microtubules
+    at the outer kinetochore during chromosome segregation.
+  reference: GO:0042729
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference yeast system in which the Dam1p/DASH complex was purified, genetically
+    expanded, and reconstituted as a microtubule-binding ring.
+  reference: DOI:10.1083/jcb.200109063
+functions:
+- function_id: attachment_of_spindle_microtubules_to_kinetochore
+  label: attachment of spindle microtubules to kinetochore
+  grounding: GO:0008608
+  description: The budding-yeast DASH complex forms an outer-kinetochore module that
+    binds microtubules and helps chromosomes attach to spindle microtubules.
+  evidence:
+  - reference: GO:0008608
+    notes: Gene Ontology biological-process term for attachment of spindle microtubules
+      to the kinetochore.
+  - reference: GO:0042729
+    notes: Gene Ontology cellular-component term for the DASH complex.
+  - reference: DOI:10.1083/jcb.200109063
+    notes: Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing
+      Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex
+      to outer kinetochore function.
+evidence:
+- reference: GO:0042729
+  notes: Gene Ontology cellular-component term for the DASH complex.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0000940
+  notes: Gene Ontology cellular-component term for the outer kinetochore, which contains
+    the DASH complex.
+- reference: GO:0000776
+  notes: Gene Ontology cellular-component term for kinetochore.
+- reference: GO:0008608
+  notes: Gene Ontology biological-process term for spindle-microtubule attachment
+    to the kinetochore.
+- reference: DOI:10.1083/jcb.200109063
+  notes: Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing Dam1p,
+    Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex to outer
+    kinetochore function.
+- reference: DOI:10.1093/emboj/21.1.181
+  notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
+    the budding-yeast Duo1p-Dam1p-Dad1p complex.
+- reference: DOI:10.1038/nsmb896
+  notes: Miranda et al. 2005 reconstituted the yeast DASH complex and showed that
+    it can form closed rings on microtubules.
+causal_graphs:
+- graph_id: dash_outer_kinetochore_microtubule_attachment
+  title: DASH links the outer kinetochore to spindle microtubules
+  description: In budding yeast, the DASH/Dam1 complex is an outer-kinetochore multiprotein
+    complex that binds microtubules and contributes to kinetochore-spindle attachment.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph places DASH in the outer kinetochore and records the high-level
+    microtubule-attachment link without modeling ring closure, phosphorylation, or
+    force-coupling states.
+  nodes:
+  - node_id: dash_complex
+    label: DASH complex
+    node_type: STRUCTURE
+    grounding: GO:0042729
+  - node_id: outer_kinetochore
+    label: outer kinetochore
+    node_type: STRUCTURE
+    grounding: GO:0000940
+  - node_id: kinetochore
+    label: kinetochore
+    node_type: STRUCTURE
+    grounding: GO:0000776
+  - node_id: spindle_microtubule_attachment
+    label: attachment of spindle microtubules to kinetochore
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0008608
+  edges:
+  - subject: dash_complex
+    predicate: is part of
+    object: outer_kinetochore
+    description: The DASH complex is represented as a budding-yeast outer kinetochore
+      subcomplex.
+    evidence:
+    - reference: GO:0042729
+      notes: Gene Ontology cellular-component term for the DASH complex.
+  - subject: outer_kinetochore
+    predicate: is part of
+    object: kinetochore
+    description: The outer kinetochore is the centromere-distal region of the kinetochore.
+    evidence:
+    - reference: GO:0000940
+      notes: GO:0000940 defines the outer kinetochore as the kinetochore region most
+        external to centromeric DNA.
+  - subject: dash_complex
+    predicate: stabilizes
+    object: spindle_microtubule_attachment
+    description: The DASH complex binds microtubules and helps maintain budding-yeast
+      kinetochore attachments to spindle microtubules.
+    evidence:
+    - reference: GO:0042729
+      notes: Gene Ontology cellular-component term for the DASH complex.
+    - reference: DOI:10.1083/jcb.200109063
+      notes: Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing
+        Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex
+        to outer kinetochore function.
+    - reference: DOI:10.1038/nsmb896
+      notes: Miranda et al. 2005 reconstituted the yeast DASH complex and showed that
+        it can form closed rings on microtubules.
+discussions:
+- discussion_id: resolve_dash_subunit_boundaries
+  prompt: Resolve exact source-neutral family groundings for the curated DASH subunits
+    and verify the omitted Dad3, Dad4, Hsk-family microprotein boundary.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#duo1_dash_subunit
+  - components#dam1_dash_subunit
+  - components#dad1_dash_subunit
+  - components#dad2_dash_subunit
+  - components#ask1_dash_subunit
+  - components#spc19_dash_subunit
+  - components#spc34_dash_subunit
+  rationale: GO defines DASH as a yeast 8-10 subunit complex. This first pass curates
+    seven subunits directly named in GO, Cheeseman 2001, and Janke 2002, and leaves
+    tiny Dad/Hsk-family DASH subunits for a dedicated source-neutral grounding and
+    boundary review.
+  evidence:
+  - reference: GO:0042729
+    notes: Gene Ontology cellular-component term for the DASH complex.
+  - reference: DOI:10.1083/jcb.200109063
+    notes: Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing
+      Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex
+      to outer kinetochore function.
+  - reference: DOI:10.1093/emboj/21.1.181
+    notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
+      the budding-yeast Duo1p-Dam1p-Dad1p complex.
+  - reference: DOI:10.1128/MCB.25.2.767-778.2005
+    notes: Li, Li and Elledge 2005 analyzed additional small DASH subunits, including
+      Hsk3 as a helper of Ask1 association.
+  posed_by: codex
+  posed_date: '2026-09-18'
