@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ssh1_translocon_complex.yaml
+  slug: ssh1_translocon_complex
+session:
+  id: 2026-09-18T214409Z-claude-code-62e3d5
+  timestamp: '2026-09-18T21:44:09Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created Ssh1 translocon complex record
+  details: Added a GO:0071261 Ssh1 translocon complex record with narrow Ssh1p-Sss1p-Sbh2p
+    synonymy, translocon parentage, ER-membrane parthood, Saccharomyces scope, Ssh1-dependent
+    cotranslational ER translocation evidence, a nonmechanistic function graph, and an open
+    exact subunit-grounding TODO.

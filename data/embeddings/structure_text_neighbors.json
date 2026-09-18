@@ -11648,6 +11648,11 @@
           "cosine_similarity": 0.82566426
         },
         {
+          "identifier": "GO:0071261",
+          "label": "Ssh1 translocon complex",
+          "cosine_similarity": 0.807288
+        },
+        {
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.77594784
@@ -11656,11 +11661,6 @@
           "identifier": "GO:0005783",
           "label": "endoplasmic reticulum",
           "cosine_similarity": 0.77380055
-        },
-        {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.74339348
         }
       ]
     },
@@ -11723,6 +11723,37 @@
           "identifier": "GO:0071682",
           "label": "endocytic vesicle lumen",
           "cosine_similarity": 0.65783423
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0071261",
+      "label": "Ssh1 translocon complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005784",
+          "label": "Sec61 translocon complex",
+          "cosine_similarity": 0.807288
+        },
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.73328806
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.72533205
+        },
+        {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.72485959
+        },
+        {
+          "identifier": "GO:0043529",
+          "label": "GET complex",
+          "cosine_similarity": 0.71396183
         }
       ]
     },
