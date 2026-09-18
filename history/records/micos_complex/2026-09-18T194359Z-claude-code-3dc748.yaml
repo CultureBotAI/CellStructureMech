@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/micos_complex.yaml
+  slug: micos_complex
+session:
+  id: 2026-09-18T194359Z-claude-code-3dc748
+  timestamp: '2026-09-18T19:43:59Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1185
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1184
+events:
+- type: EDIT
+  outcome: changed
+  summary: Retype MICOS graph as function
+  details: 'Resolved PR #1184 review issue #1185 by changing the MICOS inner-membrane-organization
+    graph from ASSEMBLY to FUNCTION so the graph kind matches a complex-level topology and
+    maintenance activity rather than complex assembly.'

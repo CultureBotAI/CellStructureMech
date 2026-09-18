@@ -1,0 +1,180 @@
+identifier: GO:0061617
+label: MICOS complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Mitochondrial inner membrane complex involved in maintenance of crista
+  junctions, inner membrane architecture, and formation of contact sites to the outer
+  membrane.
+definition_source: GO:0061617
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T19:31:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T19:32:09Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, inner-mitochondrial-membrane protein-complex parentage,
+    mitochondrial-inner-membrane parthood, Saccharomyces scope, inner-mitochondrial-membrane-organization
+    function evidence, a nonmechanistic MICOS organization graph, and a MICOS subunit-boundary
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-18T19:43:23Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved PR #1184 review issue #1185 by retyping the MICOS inner-membrane-organization
+    graph as FUNCTION rather than ASSEMBLY.'
+  llm_assisted: true
+synonyms:
+- synonym_text: Fcj1 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0061617
+- synonym_text: MINOS complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0061617
+- synonym_text: mitochondrial contact site and cristae organizing system
+  synonym_type: EXACT_SYNONYM
+  source: GO:0061617
+- synonym_text: MitOS complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0061617
+parent_structures:
+- GO:0098800
+part_of:
+- GO:0005743
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria contain a MICOS/MitOS/MINOS inner-membrane complex
+    needed for normal crista-junction and inner-membrane organization.
+  reference: DOI:10.1083/jcb.201107053
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which MICOS was independently defined as an inner-membrane
+    organizing complex by biochemical and genetic analyses.
+  reference: DOI:10.1016/j.devcel.2011.08.026
+functions:
+- function_id: inner_mitochondrial_membrane_organization
+  label: inner mitochondrial membrane organization
+  grounding: GO:0007007
+  description: MICOS maintains crista junctions, mitochondrial inner-membrane architecture,
+    and contact sites to the outer mitochondrial membrane.
+  evidence:
+  - reference: GO:0061617
+    notes: GO:0061617 defines MICOS as a mitochondrial inner-membrane complex involved
+      in crista-junction maintenance, inner-membrane architecture, and outer membrane
+      contact-site formation.
+  - reference: GO:0007007
+    notes: GO:0007007 denotes assembly, arrangement or disassembly of the mitochondrial
+      inner membrane.
+  - reference: DOI:10.1083/jcb.201107053
+    notes: Hoppins et al. 2011 identified MitOS as a large inner-membrane-associated
+      complex that organizes the mitochondrial inner membrane in budding yeast.
+  - reference: DOI:10.1016/j.devcel.2011.08.026
+    notes: von der Malsburg et al. 2011 identified MINOS constituents needed to keep
+      crista membranes connected to the inner boundary membrane.
+evidence:
+- reference: GO:0061617
+  notes: Gene Ontology cellular-component term for the MICOS complex.
+- reference: GO:0098800
+  notes: Gene Ontology cellular-component parent term for inner mitochondrial membrane
+    protein complexes.
+- reference: GO:0005743
+  notes: Gene Ontology cellular-component term for the mitochondrial inner membrane
+    that contains MICOS.
+- reference: GO:0007007
+  notes: Gene Ontology biological-process term for inner mitochondrial membrane organization.
+- reference: DOI:10.1016/j.devcel.2011.08.026
+  notes: von der Malsburg et al. 2011, 'Dual role of mitofilin in mitochondrial membrane
+    organization and protein biogenesis', Developmental Cell.
+- reference: DOI:10.1083/jcb.201107053
+  notes: Hoppins et al. 2011, 'A mitochondrial-focused genetic interaction map reveals
+    a scaffold-like complex required for inner membrane organization in mitochondria',
+    Journal of Cell Biology.
+- reference: DOI:10.1038/emboj.2011.379
+  notes: Harner et al. 2011, 'The mitochondrial contact site complex, a determinant
+    of mitochondrial architecture', The EMBO Journal.
+- reference: DOI:10.1083/jcb.201401006
+  notes: Pfanner et al. 2014, 'Uniform nomenclature for the mitochondrial contact
+    site and cristae organizing system', Journal of Cell Biology.
+causal_graphs:
+- graph_id: micos_inner_membrane_organization
+  title: MICOS maintains mitochondrial inner-membrane organization
+  description: MICOS resides at the mitochondrial inner membrane and helps maintain
+    crista junctions and contact sites with the outer membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures MICOS topology and architecture maintenance without
+    asserting individual subunit family groundings or a complete crista biogenesis
+    pathway.
+  nodes:
+  - node_id: micos_complex
+    label: MICOS complex
+    node_type: STRUCTURE
+    grounding: GO:0061617
+  - node_id: mitochondrial_inner_membrane
+    label: mitochondrial inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005743
+  - node_id: crista_junction
+    label: mitochondrial crista junction
+    node_type: STRUCTURE
+    grounding: GO:0044284
+  - node_id: inner_mitochondrial_membrane_organization
+    label: inner mitochondrial membrane organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007007
+  edges:
+  - subject: micos_complex
+    predicate: is part of
+    object: mitochondrial_inner_membrane
+    description: MICOS is a protein complex of the mitochondrial inner membrane.
+    evidence:
+    - reference: GO:0061617
+      notes: GO:0061617 defines MICOS as a mitochondrial inner membrane complex.
+  - subject: micos_complex
+    predicate: maintains
+    object: crista_junction
+    description: MICOS maintains crista junctions and normal inner-membrane architecture.
+    evidence:
+    - reference: GO:0061617
+      notes: GO:0061617 defines MICOS by maintenance of crista junctions and inner-membrane
+        architecture.
+    - reference: DOI:10.1083/jcb.201107053
+      notes: Hoppins et al. 2011 characterized budding yeast MitOS as a conserved
+        complex that establishes normal mitochondrial internal architecture.
+  - subject: micos_complex
+    predicate: supports
+    object: inner_mitochondrial_membrane_organization
+    description: MICOS supports inner mitochondrial membrane organization by maintaining
+      crista-junction and contact-site architecture.
+    evidence:
+    - reference: GO:0061617
+      notes: GO:0061617 links MICOS to crista-junction maintenance, inner membrane
+        architecture, and outer membrane contact sites.
+    - reference: DOI:10.1016/j.devcel.2011.08.026
+      notes: von der Malsburg et al. 2011 identified mitofilin as a central MINOS
+        component that regulates mitochondrial architecture.
+discussions:
+- discussion_id: micos_subunit_family_boundaries
+  prompt: Resolve exact source-neutral MICOS subunit family groundings before adding
+    MIC10, MIC12, MIC19, MIC26, MIC27, or MIC60 component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#micos_inner_membrane_organization
+  rationale: GO exactly grounds the MICOS complex and names six Saccharomyces cerevisiae
+    subunits, but this first MICOS record leaves individual component rows unasserted
+    until exact taxon-agnostic family identifiers are verified.
+  evidence:
+  - reference: GO:0061617
+    notes: GO:0061617 identifies six budding-yeast MICOS subunits in its definition.
+  - reference: DOI:10.1083/jcb.201401006
+    notes: Pfanner et al. 2014 standardized nomenclature for the mitochondrial contact
+      site and cristae organizing system.
+  posed_by: codex
+  posed_date: '2026-09-18'
