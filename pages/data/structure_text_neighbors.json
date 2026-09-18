@@ -10196,14 +10196,14 @@
           "cosine_similarity": 0.87495414
         },
         {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.84760575
+        },
+        {
           "identifier": "GO:0022624",
           "label": "proteasome accessory complex",
           "cosine_similarity": 0.8086059
-        },
-        {
-          "identifier": "GO:0042721",
-          "label": "TIM22 mitochondrial import inner membrane insertion complex",
-          "cosine_similarity": 0.80049319
         }
       ]
     },
@@ -10704,6 +10704,37 @@
       ]
     },
     {
+      "identifier": "GO:0042720",
+      "label": "mitochondrial inner membrane peptidase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.89199653
+        },
+        {
+          "identifier": "GO:0042721",
+          "label": "TIM22 mitochondrial import inner membrane insertion complex",
+          "cosine_similarity": 0.87112595
+        },
+        {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.8556139
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.84760575
+        },
+        {
+          "identifier": "GO:0005744",
+          "label": "TIM23 mitochondrial import inner membrane translocase complex",
+          "cosine_similarity": 0.80873474
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005742",
       "label": "mitochondrial outer membrane translocase complex",
       "neighbors": [
@@ -10711,6 +10742,11 @@
           "identifier": "GO:0001401",
           "label": "SAM complex",
           "cosine_similarity": 0.91239682
+        },
+        {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.89199653
         },
         {
           "identifier": "GO:0042721",
@@ -10726,11 +10762,6 @@
           "identifier": "GO:0005744",
           "label": "TIM23 mitochondrial import inner membrane translocase complex",
           "cosine_similarity": 0.8624188
-        },
-        {
-          "identifier": "GO:0005739",
-          "label": "mitochondrion",
-          "cosine_similarity": 0.8563988
         }
       ]
     },
@@ -11100,9 +11131,9 @@
           "cosine_similarity": 0.84418791
         },
         {
-          "identifier": "GO:0032865",
-          "label": "ERMES complex",
-          "cosine_similarity": 0.7914492
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.80688903
         }
       ]
     },
@@ -11255,9 +11286,9 @@
           "cosine_similarity": 0.79396049
         },
         {
-          "identifier": "GO:0001401",
-          "label": "SAM complex",
-          "cosine_similarity": 0.75734369
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.78916071
         }
       ]
     },
@@ -11276,6 +11307,11 @@
           "cosine_similarity": 0.95322465
         },
         {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.78836886
+        },
+        {
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.76661319
@@ -11284,11 +11320,6 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.73819977
-        },
-        {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.73590218
         }
       ]
     },
@@ -11307,6 +11338,11 @@
           "cosine_similarity": 0.89614018
         },
         {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.74034755
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.71078341
@@ -11315,11 +11351,6 @@
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.69631858
-        },
-        {
-          "identifier": "GO:0005840",
-          "label": "ribosome",
-          "cosine_similarity": 0.69562868
         }
       ]
     },
@@ -11431,6 +11462,11 @@
           "cosine_similarity": 0.88510127
         },
         {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.8556139
+        },
+        {
           "identifier": "GO:0042721",
           "label": "TIM22 mitochondrial import inner membrane insertion complex",
           "cosine_similarity": 0.8500746
@@ -11439,11 +11475,6 @@
           "identifier": "GO:0001405",
           "label": "PAM complex, Tim23 associated import motor",
           "cosine_similarity": 0.84418791
-        },
-        {
-          "identifier": "GO:0072546",
-          "label": "EMC complex",
-          "cosine_similarity": 0.81295248
         }
       ]
     },
@@ -11586,6 +11617,11 @@
           "cosine_similarity": 0.88807808
         },
         {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.87112595
+        },
+        {
           "identifier": "GO:0001405",
           "label": "PAM complex, Tim23 associated import motor",
           "cosine_similarity": 0.86827079
@@ -11594,11 +11630,6 @@
           "identifier": "GO:0001401",
           "label": "SAM complex",
           "cosine_similarity": 0.8500746
-        },
-        {
-          "identifier": "GO:0032865",
-          "label": "ERMES complex",
-          "cosine_similarity": 0.80049319
         }
       ]
     },
@@ -11627,9 +11658,9 @@
           "cosine_similarity": 0.80917718
         },
         {
-          "identifier": "GO:0032865",
-          "label": "ERMES complex",
-          "cosine_similarity": 0.76258818
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.80873474
         }
       ]
     },
