@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gator2_complex.yaml
+  slug: gator2_complex
+session:
+  id: 2026-09-18T093202Z-codex-60c025
+  timestamp: '2026-09-18T09:32:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Create GATOR2 complex record
+  details: Added a GO:0061700 GATOR2/SEACAT complex record with yeast Sea2, Sea3, Sea4, Seh1,
+    and Sec13 reviewed-label-only subunits, Seh1-associated complex parthood, TORC1 signaling
+    context, sibling-boundary discussions, and GO/DOI evidence.

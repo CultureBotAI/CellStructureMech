@@ -10305,6 +10305,11 @@
       "label": "GATOR1 complex",
       "neighbors": [
         {
+          "identifier": "GO:0061700",
+          "label": "GATOR2 complex",
+          "cosine_similarity": 0.84813074
+        },
+        {
           "identifier": "GO:0000938",
           "label": "GARP complex",
           "cosine_similarity": 0.76723838
@@ -10323,11 +10328,37 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.73901254
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0061700",
+      "label": "GATOR2 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990130",
+          "label": "GATOR1 complex",
+          "cosine_similarity": 0.84813074
         },
         {
-          "identifier": "GO:0070939",
-          "label": "Dsl1/NZR complex",
-          "cosine_similarity": 0.71804104
+          "identifier": "GO:0000938",
+          "label": "GARP complex",
+          "cosine_similarity": 0.7281742
+        },
+        {
+          "identifier": "GO:0005784",
+          "label": "Sec61 translocon complex",
+          "cosine_similarity": 0.71033094
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.69819991
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.69528648
         }
       ]
     },
