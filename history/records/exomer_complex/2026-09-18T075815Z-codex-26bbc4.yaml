@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/exomer_complex.yaml
+  slug: exomer_complex
+session:
+  id: 2026-09-18T075815Z-codex-26bbc4
+  timestamp: '2026-09-18T07:58:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1132
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1131
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: Refine the exomer Arf1 recruitment edge
+  details: 'Resolved #1132 from the PR #1131 adversarial review by retargeting the Arf1 graph
+    edge from a Chs5-specific recruitment claim to whole-exomer membrane recruitment, adding
+    Wang et al. 2006 evidence for Arf1-dependent coat recruitment and membrane binding, preserving
+    Trautwein et al. 2006 as interaction evidence, and keeping Arf1 modeled as a non-component
+    context node.'

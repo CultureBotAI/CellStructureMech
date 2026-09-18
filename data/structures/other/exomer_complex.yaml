@@ -32,6 +32,13 @@ curation_history:
   changes: Retargeted the Arf1 boundary discussion from the invalid whole components
     section to the five concrete exomer component anchors.
   llm_assisted: true
+- timestamp: '2026-09-18T07:57:56Z'
+  curator: codex
+  action: REFINED_ARF1_EDGE
+  changes: '#1132: Retargeted the Arf1 graph edge from Chs5-specific recruitment to
+    whole-exomer membrane recruitment and cited Wang et al. 2006 for the Arf1-dependent
+    membrane-binding evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 synonyms:
@@ -210,8 +217,8 @@ causal_graphs:
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph represents curated yeast exomer subunit membership and Arf1-associated
-    membrane recruitment without modeling exomer coat geometry, Chs3 cargo binding,
-    or every Golgi-to-plasma-membrane trafficking step.
+    membrane binding without modeling exomer coat geometry, Chs3 cargo binding, or
+    every Golgi-to-plasma-membrane trafficking step.
   nodes:
   - node_id: chs5_exomer_scaffold
     label: Chs5 exomer scaffold subunit
@@ -250,14 +257,17 @@ causal_graphs:
     grounding: GO:0006893
   edges:
   - subject: arf1_gtpase
-    predicate: supports recruitment of
-    object: chs5_exomer_scaffold
-    description: Arf1 participates in Chs5 and ChAP recruitment at the trans-Golgi
-      network.
+    predicate: supports membrane recruitment of
+    object: exomer_complex
+    description: Arf1 supports exomer membrane association during trans-Golgi-network
+      cargo export.
     evidence:
     - reference: DOI:10.1038/sj.emboj.7601007
       notes: Trautwein et al. 2006 connected Arf1 with Chs5 and ChAP function in export
         of specialized Golgi cargo.
+    - reference: DOI:10.1083/jcb.200605106
+      notes: Wang et al. 2006 described Arf1-dependent recruitment and membrane binding
+        by the exomer coat complex.
   - subject: chs5_exomer_scaffold
     predicate: assembles with
     object: chs6_exomer_chap_subunit
@@ -387,11 +397,11 @@ discussions:
   - components#bud7_exomer_chap_subunit
   - components#bch2_exomer_chap_subunit
   - causal_graphs#yeast_exomer_tgn_export
-  rationale: Arf1 binds Chs5 and ChAPs and helps recruit the complex for Golgi export,
+  rationale: Arf1 binds ChAPs and supports exomer membrane association for Golgi export,
     but the curated exomer identity is the stable Chs5/ChAP cargo-adaptor complex
     rather than its recruiting Arf-family GTPase.
   resolution_note: 'Declined: Arf1 was included as a non-component graph node for
-    recruitment context instead of as a constituent.'
+    membrane-recruitment context instead of as a constituent.'
   evidence:
   - reference: DOI:10.1038/sj.emboj.7601007
     notes: Trautwein et al. 2006 named Chs6, Bch1, Bud7 and Bch2 as the ChAP family
