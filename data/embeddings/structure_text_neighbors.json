@@ -10506,14 +10506,14 @@
           "cosine_similarity": 0.82811917
         },
         {
-          "identifier": "GO:0071261",
-          "label": "Ssh1 translocon complex",
-          "cosine_similarity": 0.82124379
-        },
-        {
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.81313527
+        },
+        {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.79257619
         }
       ]
     },
@@ -11650,7 +11650,7 @@
         {
           "identifier": "GO:0071261",
           "label": "Ssh1 translocon complex",
-          "cosine_similarity": 0.79089685
+          "cosine_similarity": 0.807288
         },
         {
           "identifier": "GO:0072546",
@@ -11731,29 +11731,29 @@
       "label": "Ssh1 translocon complex",
       "neighbors": [
         {
-          "identifier": "GO:0043529",
-          "label": "GET complex",
-          "cosine_similarity": 0.82124379
-        },
-        {
-          "identifier": "GO:0072546",
-          "label": "EMC complex",
-          "cosine_similarity": 0.8125449
-        },
-        {
-          "identifier": "GO:0032865",
-          "label": "ERMES complex",
-          "cosine_similarity": 0.80218724
-        },
-        {
           "identifier": "GO:0005784",
           "label": "Sec61 translocon complex",
-          "cosine_similarity": 0.79089685
+          "cosine_similarity": 0.807288
         },
         {
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
-          "cosine_similarity": 0.78280692
+          "cosine_similarity": 0.73328806
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.72533205
+        },
+        {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.72485959
+        },
+        {
+          "identifier": "GO:0043529",
+          "label": "GET complex",
+          "cosine_similarity": 0.71396183
         }
       ]
     },
