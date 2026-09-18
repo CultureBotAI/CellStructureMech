@@ -3006,6 +3006,15 @@
   "definition": "A multiprotein subcomplex of the GATOR complex that regulates TORC1 signaling by interacting with the Rag GTPase. In human, this complex consists of WDR24, WDR59, MIOS, SEH1L, and SEC13. In S. cerevisiae, this complex is referred to as SEACAT and contains the Sea2p, Sea3p, Sea4p, Seh1p, Sec13p proteins."
  },
  {
+  "identifier": "GO:1990131",
+  "label": "Gtr1-Gtr2 GTPase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/gtr1_gtr2_gtpase_complex.html",
+  "definition": "A heterodimer GTPase complex. In S. cerevisiae, this complex contains Gtr1p and Gtr2p proteins."
+ },
+ {
   "identifier": "cellstructuremech:holdfast",
   "label": "holdfast",
   "category": "OTHER",

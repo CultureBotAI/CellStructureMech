@@ -1,0 +1,316 @@
+identifier: GO:1990131
+label: Gtr1-Gtr2 GTPase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterodimer GTPase complex. In S. cerevisiae, this complex contains
+  Gtr1p and Gtr2p proteins.
+definition_source: GO:1990131
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T10:19:15Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T10:20:16Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Gtr1-Gtr2 synonymy, protein-complex parentage, reviewed-label-only
+    yeast Gtr1/Gtr2 Rag-family components, Saccharomyces scope, a TORC1 signaling
+    function, GO/DOI evidence, a nonmechanistic TORC1-regulation graph, and subunit-grounding
+    plus EGO/Ragulator and GATOR/SEAC boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-18T10:20:38Z'
+  curator: codex
+  action: REFORMATTED_RECORD
+  changes: Expanded shared YAML evidence aliases into plain repeated mappings.
+  llm_assisted: true
+- timestamp: '2026-09-18T10:40:17Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: '#1142: Added a resolved Lst4-Lst7 GAP boundary discussion and Cell Reports
+    evidence so the graph''s omitted GAP cycles are explicitly out of scope.'
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+synonyms:
+- synonym_text: Gtr1p-Gtr2p complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.bbrc.2005.08.108
+- synonym_text: Rag GTPase heterodimer
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.4161/cc.26000
+components:
+- component_id: gtr1_gtpase
+  label: Gtr1 Rag-family GTPase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - GTR1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Gtr1p constituent
+    of the Gtr1-Gtr2 GTPase complex; no exact source-neutral InterPro, Pfam or NCBIfam
+    family identifier for this Rag-family subunit class was curated in this pass.
+  role: Rag-family small GTPase subunit that heterodimerizes with Gtr2 in the yeast
+    Gtr1-Gtr2 GTPase complex.
+  evidence:
+  - reference: GO:1990131
+    notes: Gene Ontology cellular-component term for the Gtr1-Gtr2 GTPase complex.
+  - reference: DOI:10.1093/genetics/152.3.853
+    notes: Nakashima, Noguchi and Nishimoto 1999 identified budding-yeast Gtr2 as
+      a novel Gtr1-interacting protein.
+  - reference: DOI:10.1016/j.bbrc.2005.08.108
+    notes: Wang et al. 2005 characterized the Saccharomyces cerevisiae Gtr1p-Gtr2p
+      GTPase complex during cell-proliferation regulation.
+- component_id: gtr2_gtpase
+  label: Gtr2 Rag-family GTPase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - GTR2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Gtr2p constituent
+    of the Gtr1-Gtr2 GTPase complex; no exact source-neutral InterPro, Pfam or NCBIfam
+    family identifier for this Rag-family subunit class was curated in this pass.
+  role: Rag-family small GTPase subunit that heterodimerizes with Gtr1 in the yeast
+    Gtr1-Gtr2 GTPase complex.
+  evidence:
+  - reference: GO:1990131
+    notes: Gene Ontology cellular-component term for the Gtr1-Gtr2 GTPase complex.
+  - reference: DOI:10.1093/genetics/152.3.853
+    notes: Nakashima, Noguchi and Nishimoto 1999 identified budding-yeast Gtr2 as
+      a novel Gtr1-interacting protein.
+  - reference: DOI:10.1016/j.bbrc.2005.08.108
+    notes: Wang et al. 2005 characterized the Saccharomyces cerevisiae Gtr1p-Gtr2p
+      GTPase complex during cell-proliferation regulation.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: VARIABLE
+  note: Budding yeast is the curated model for the Gtr1/Gtr2 Rag-family heterodimer
+    that regulates TORC1 at the vacuole-associated EGO complex.
+  reference: GO:1990131
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which Gtr1 and Gtr2 form the Rag-family GTPase heterodimer
+    associated with EGOC and TORC1 control.
+  reference: GO:1990131
+functions:
+- function_id: torc1_signaling
+  label: TORC1 signaling
+  grounding: GO:0038202
+  description: The budding-yeast Gtr1-Gtr2 heterodimer links amino acid state to TORC1
+    activity and localization with the vacuolar EGO anchor complex.
+  evidence:
+  - reference: GO:0038202
+    notes: Gene Ontology biological-process term for TORC1 signaling.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 described Gtr1-Gtr2 as the yeast
+      Rag GTPase heterodimer that associates with Ego1 and Ego3 in EGOC for amino
+      acid activation of TORC1.
+  - reference: DOI:10.1091/mbc.E15-07-0470
+    notes: Kira et al. 2016 followed the dynamic relocation of the TORC1-Gtr1/2-Ego1/2/3
+      complex between the yeast vacuolar membrane and punctate sites.
+evidence:
+- reference: GO:1990131
+  notes: Gene Ontology cellular-component term for the Gtr1-Gtr2 GTPase complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0038202
+  notes: Gene Ontology biological-process term for TORC1 signaling.
+- reference: DOI:10.1093/genetics/152.3.853
+  notes: Nakashima, Noguchi and Nishimoto 1999 identified budding-yeast Gtr2 as a
+    novel Gtr1-interacting protein.
+- reference: DOI:10.1016/j.bbrc.2005.08.108
+  notes: Wang et al. 2005 characterized the Saccharomyces cerevisiae Gtr1p-Gtr2p GTPase
+    complex during cell-proliferation regulation.
+- reference: DOI:10.4161/cc.26000
+  notes: Panchaud, Peli-Gulli and De Virgilio 2013 described Gtr1-Gtr2 as the yeast
+    Rag GTPase heterodimer that associates with Ego1 and Ego3 in EGOC for amino acid
+    activation of TORC1.
+- reference: DOI:10.1091/mbc.E15-07-0470
+  notes: Kira et al. 2016 followed the dynamic relocation of the TORC1-Gtr1/2-Ego1/2/3
+    complex between the yeast vacuolar membrane and punctate sites.
+- reference: DOI:10.1016/j.celrep.2015.08.059
+  notes: Peli-Gulli et al. 2015 identified Lst4-Lst7 as a GTPase-activating protein
+    complex for the yeast Rag-family GTPase Gtr2.
+- reference: DOI:10.1038/s41594-026-01746-2
+  notes: Tafur et al. 2026 determined the yeast SEAC-EGOC supercomplex and separated
+    the Gtr1/Gtr2 heterodimer from the Ego1/Ego2/Ego3 anchor within EGOC.
+causal_graphs:
+- graph_id: yeast_gtr1_gtr2_torc1_regulation
+  title: Gtr1-Gtr2 supports yeast TORC1 signaling
+  description: In Saccharomyces cerevisiae, Gtr1 and Gtr2 form a Rag-family GTPase
+    heterodimer that localizes with the EGO anchor on the vacuolar membrane and regulates
+    TORC1 signaling.
+  graph_kind: REGULATION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents Gtr1-Gtr2 subunit membership, high-level vacuolar
+    localization and TORC1 regulation without modeling GTP/GDP nucleotide states,
+    EGO-complex anchoring geometry, or GATOR and Lst4-Lst7 GAP cycles.
+  nodes:
+  - node_id: gtr1_gtpase
+    label: Gtr1 Rag-family GTPase
+    node_type: GENE_OR_PROTEIN
+    component_ref: gtr1_gtpase
+  - node_id: gtr2_gtpase
+    label: Gtr2 Rag-family GTPase
+    node_type: GENE_OR_PROTEIN
+    component_ref: gtr2_gtpase
+  - node_id: gtr1_gtr2_gtpase_complex
+    label: Gtr1-Gtr2 GTPase complex
+    node_type: STRUCTURE
+    grounding: GO:1990131
+  - node_id: fungal_type_vacuole_membrane
+    label: fungal-type vacuole membrane
+    node_type: STRUCTURE
+    grounding: GO:0000329
+  - node_id: torc1_signaling
+    label: TORC1 signaling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0038202
+  edges:
+  - subject: gtr1_gtpase
+    predicate: is part of
+    object: gtr1_gtr2_gtpase_complex
+    description: Gtr1 is represented as a yeast Gtr1-Gtr2 GTPase complex constituent.
+    evidence:
+    - reference: GO:1990131
+      notes: Gene Ontology cellular-component term for the Gtr1-Gtr2 GTPase complex.
+    - reference: DOI:10.1093/genetics/152.3.853
+      notes: Nakashima, Noguchi and Nishimoto 1999 identified budding-yeast Gtr2 as
+        a novel Gtr1-interacting protein.
+    - reference: DOI:10.1016/j.bbrc.2005.08.108
+      notes: Wang et al. 2005 characterized the Saccharomyces cerevisiae Gtr1p-Gtr2p
+        GTPase complex during cell-proliferation regulation.
+  - subject: gtr2_gtpase
+    predicate: is part of
+    object: gtr1_gtr2_gtpase_complex
+    description: Gtr2 is represented as a yeast Gtr1-Gtr2 GTPase complex constituent.
+    evidence:
+    - reference: GO:1990131
+      notes: Gene Ontology cellular-component term for the Gtr1-Gtr2 GTPase complex.
+    - reference: DOI:10.1093/genetics/152.3.853
+      notes: Nakashima, Noguchi and Nishimoto 1999 identified budding-yeast Gtr2 as
+        a novel Gtr1-interacting protein.
+    - reference: DOI:10.1016/j.bbrc.2005.08.108
+      notes: Wang et al. 2005 characterized the Saccharomyces cerevisiae Gtr1p-Gtr2p
+        GTPase complex during cell-proliferation regulation.
+  - subject: gtr1_gtr2_gtpase_complex
+    predicate: localizes to
+    object: fungal_type_vacuole_membrane
+    description: The Gtr1-Gtr2-containing EGOC population localizes with TORC1 to
+      the yeast vacuolar membrane and associated punctate sites.
+    evidence:
+    - reference: DOI:10.1091/mbc.E15-07-0470
+      notes: Kira et al. 2016 followed the dynamic relocation of the TORC1-Gtr1/2-Ego1/2/3
+        complex between the yeast vacuolar membrane and punctate sites.
+  - subject: gtr1_gtr2_gtpase_complex
+    predicate: regulates
+    object: torc1_signaling
+    description: Gtr1-Gtr2 is represented as the Rag-family GTPase heterodimer linking
+      amino acid state to TORC1 signaling in yeast.
+    evidence:
+    - reference: GO:0038202
+      notes: Gene Ontology biological-process term for TORC1 signaling.
+    - reference: DOI:10.4161/cc.26000
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 described Gtr1-Gtr2 as the
+        yeast Rag GTPase heterodimer that associates with Ego1 and Ego3 in EGOC for
+        amino acid activation of TORC1.
+    - reference: DOI:10.1091/mbc.E15-07-0470
+      notes: Kira et al. 2016 followed the dynamic relocation of the TORC1-Gtr1/2-Ego1/2/3
+        complex between the yeast vacuolar membrane and punctate sites.
+discussions:
+- discussion_id: resolve_gtr1_gtr2_family_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, or NCBIfam groundings for the
+    two yeast Gtr1-Gtr2 Rag-family GTPase subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#gtr1_gtpase
+  - components#gtr2_gtpase
+  rationale: This first Gtr1-Gtr2 record names the yeast Gtr1 and Gtr2 constituent
+    subunits but leaves family grounding unset until exact orthology and RagA/B versus
+    RagC/D paralogy boundaries are reviewed per subunit.
+  evidence:
+  - reference: GO:1990131
+    notes: Gene Ontology cellular-component term for the Gtr1-Gtr2 GTPase complex.
+  posed_by: codex
+  posed_date: '2026-09-18'
+- discussion_id: ego_ragulator_boundary
+  prompt: Keep Ego1, Ego2 and Ego3 Ragulator/EGO anchor subunits outside this Gtr1-Gtr2
+    heterodimer record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#gtr1_gtpase
+  - components#gtr2_gtpase
+  - causal_graphs#yeast_gtr1_gtr2_torc1_regulation
+  rationale: GO:1990131 denotes the Gtr1-Gtr2 heterodimer itself, while GO:0071986
+    denotes the vacuolar EGO/Ragulator anchor for Rag GTPases; Tafur et al. 2026 separated
+    Gtr1 and Gtr2 from the Ego1, Ego2 and Ego3 anchor subunits within the pentameric
+    EGOC.
+  resolution_note: 'Declined: Ego1, Ego2 and Ego3 were treated as associated anchor
+    subunits rather than constituents of GO:1990131.'
+  evidence:
+  - reference: GO:1990131
+    notes: Gene Ontology cellular-component term for the Gtr1-Gtr2 GTPase complex.
+  - reference: GO:0071986
+    notes: Gene Ontology cellular-component term for the Ragulator complex, covering
+      the yeast EGO/EGO-GSE complex that acts as a vacuolar Rag GTPase GEF.
+  - reference: DOI:10.1038/s41594-026-01746-2
+    notes: Tafur et al. 2026 determined the yeast SEAC-EGOC supercomplex and separated
+      the Gtr1/Gtr2 heterodimer from the Ego1/Ego2/Ego3 anchor within EGOC.
+  posed_by: codex
+  posed_date: '2026-09-18'
+  resolved_date: '2026-09-18'
+- discussion_id: gator_seac_boundary
+  prompt: Keep GATOR/SEAC regulator subcomplexes outside this Gtr1-Gtr2 heterodimer
+    record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#gtr1_gtpase
+  - components#gtr2_gtpase
+  - causal_graphs#yeast_gtr1_gtr2_torc1_regulation
+  rationale: GATOR1/SEACIT and GATOR2/SEACAT are distinct SEA/GATOR regulator branches
+    upstream of the Gtr1-Gtr2 Rag-family target and are represented by GO as complexes
+    separate from GO:1990131.
+  resolution_note: 'Declined: SEA/GATOR subunits were kept as upstream Rag-family
+    regulators instead of as Gtr1-Gtr2 constituents.'
+  evidence:
+  - reference: GO:1990130
+    notes: Gene Ontology cellular-component term for the GATOR1 complex.
+  - reference: GO:0061700
+    notes: Gene Ontology cellular-component term for the GATOR2 complex.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 described Gtr1-Gtr2 as the yeast
+      Rag GTPase heterodimer that associates with Ego1 and Ego3 in EGOC for amino
+      acid activation of TORC1.
+  posed_by: codex
+  posed_date: '2026-09-18'
+  resolved_date: '2026-09-18'
+- discussion_id: lst4_lst7_gap_boundary
+  prompt: Keep the Lst4-Lst7 GAP complex outside this Gtr1-Gtr2 heterodimer record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#gtr1_gtpase
+  - components#gtr2_gtpase
+  - causal_graphs#yeast_gtr1_gtr2_torc1_regulation
+  rationale: Lst4-Lst7 acts on the Rag-family GTPase Gtr2 as an upstream GAP regulator,
+    whereas GO:1990131 denotes the Gtr1-Gtr2 heterodimer itself.
+  resolution_note: 'Declined: Lst4-Lst7 was treated as an upstream Gtr2 GAP complex
+    rather than a constituent of GO:1990131.'
+  evidence:
+  - reference: GO:1990131
+    notes: Gene Ontology cellular-component term for the Gtr1-Gtr2 GTPase complex.
+  - reference: DOI:10.1016/j.celrep.2015.08.059
+    notes: Peli-Gulli et al. 2015 identified Lst4-Lst7 as a GTPase-activating protein
+      complex for the yeast Rag-family GTPase Gtr2.
+  posed_by: codex
+  posed_date: '2026-09-18'
+  resolved_date: '2026-09-18'

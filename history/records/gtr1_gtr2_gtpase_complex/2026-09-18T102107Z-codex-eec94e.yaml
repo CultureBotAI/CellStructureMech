@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gtr1_gtr2_gtpase_complex.yaml
+  slug: gtr1_gtr2_gtpase_complex
+session:
+  id: 2026-09-18T102107Z-codex-eec94e
+  timestamp: '2026-09-18T10:21:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - data/structures/other/gtr1_gtr2_gtpase_complex.yaml
+  summary: Add Gtr1-Gtr2 GTPase complex record
+  details: Curated data/structures/other/gtr1_gtr2_gtpase_complex.yaml from GO:1990131 with
+    Gtr1 and Gtr2 constituent proteins, Saccharomyces cerevisiae scope, a TORC1-signaling
+    function, a nonmechanistic Gtr1-Gtr2/TORC1 regulation graph, and boundary decisions keeping
+    EGO/Ragulator and GATOR/SEAC subunits outside the heterodimer record. The draft was written
+    through scripts/new_record.py plus temporary validated mutators and checked with validate_strict
+    for the new record.
