@@ -9886,14 +9886,14 @@
           "cosine_similarity": 0.70273147
         },
         {
+          "identifier": "GO:0031207",
+          "label": "Sec62/Sec63 complex",
+          "cosine_similarity": 0.69460807
+        },
+        {
           "identifier": "GO:0005784",
           "label": "Sec61 translocon complex",
           "cosine_similarity": 0.69443434
-        },
-        {
-          "identifier": "GO:0031207",
-          "label": "Sec62/Sec63 complex",
-          "cosine_similarity": 0.69384982
         }
       ]
     },
@@ -10336,14 +10336,14 @@
       "label": "exocyst",
       "neighbors": [
         {
+          "identifier": "GO:0031207",
+          "label": "Sec62/Sec63 complex",
+          "cosine_similarity": 0.82598756
+        },
+        {
           "identifier": "GO:0005784",
           "label": "Sec61 translocon complex",
           "cosine_similarity": 0.82566426
-        },
-        {
-          "identifier": "GO:0031207",
-          "label": "Sec62/Sec63 complex",
-          "cosine_similarity": 0.82509526
         },
         {
           "identifier": "GO:0034044",
@@ -11640,7 +11640,7 @@
         {
           "identifier": "GO:0031207",
           "label": "Sec62/Sec63 complex",
-          "cosine_similarity": 0.94215077
+          "cosine_similarity": 0.94281994
         },
         {
           "identifier": "cellstructuremech:secyeg_translocon_complex",
@@ -11671,27 +11671,27 @@
         {
           "identifier": "GO:0005784",
           "label": "Sec61 translocon complex",
-          "cosine_similarity": 0.94215077
+          "cosine_similarity": 0.94281994
         },
         {
           "identifier": "GO:0000145",
           "label": "exocyst",
-          "cosine_similarity": 0.82509526
+          "cosine_similarity": 0.82598756
         },
         {
           "identifier": "GO:0072546",
           "label": "EMC complex",
-          "cosine_similarity": 0.77974745
+          "cosine_similarity": 0.77820878
         },
         {
           "identifier": "cellstructuremech:secyeg_translocon_complex",
           "label": "SecYEG translocon complex",
-          "cosine_similarity": 0.77587253
+          "cosine_similarity": 0.77722666
         },
         {
-          "identifier": "GO:0005783",
-          "label": "endoplasmic reticulum",
-          "cosine_similarity": 0.76443631
+          "identifier": "GO:0071261",
+          "label": "Ssh1 translocon complex",
+          "cosine_similarity": 0.7608918
         }
       ]
     },
@@ -11769,7 +11769,7 @@
         {
           "identifier": "GO:0031207",
           "label": "Sec62/Sec63 complex",
-          "cosine_similarity": 0.76248747
+          "cosine_similarity": 0.7608918
         },
         {
           "identifier": "GO:0035859",
@@ -12363,7 +12363,7 @@
         {
           "identifier": "GO:0031207",
           "label": "Sec62/Sec63 complex",
-          "cosine_similarity": 0.77587253
+          "cosine_similarity": 0.77722666
         },
         {
           "identifier": "GO:0015627",

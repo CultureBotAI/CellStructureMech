@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/sec62_sec63_complex.yaml
+  slug: sec62_sec63_complex
+session:
+  id: 2026-09-18T225616Z-claude-code-5a1b2e
+  timestamp: '2026-09-18T22:56:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1200
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1201
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1202
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1199
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed Sec62/Sec63 review issues
+  details: 'Resolved #1200 by adding the Sec63 complex literature synonym, resolved #1201
+    by changing Sec71 and Sec72 graph predicates to accessory-subunit wording, and resolved
+    #1202 by indexing SEC66 as a Sec71 gene alias.'

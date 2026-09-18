@@ -21,6 +21,13 @@ curation_history:
     evidence, a mechanistic posttranslational ER import graph, and Sec62/Sec63 grounding
     and boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-18T22:55:50Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1200 by adding the Sec63 complex literature synonym, resolved
+    #1201 by changing Sec71 and Sec72 graph edges to accessory-subunit predicates,
+    and resolved #1202 by adding the SEC66 alias to the Sec71 component.'
+  llm_assisted: true
 synonyms:
 - synonym_text: ER protein translocation subcomplex
   synonym_type: EXACT_SYNONYM
@@ -28,6 +35,9 @@ synonyms:
 - synonym_text: Sec62/63 complex
   synonym_type: EXACT_SYNONYM
   source: GO:0031207
+- synonym_text: Sec63 complex
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1002/yea.954
 parent_structures:
 - GO:0140534
 part_of:
@@ -78,6 +88,7 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - SEC71
+  - SEC66
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: Sec71 is a yeast accessory constituent of the Sec62/Sec63 tetramer,
@@ -223,14 +234,14 @@ causal_graphs:
       notes: Willer et al. 2003 identified a specific Sec62p-Sec63p interaction at
         the cytosolic surface of the Sec63 complex.
   - subject: sec71_translocon_subunit
-    predicate: is core subunit of
+    predicate: is accessory subunit of
     object: sec62_sec63_complex
     description: Sec71p/Sec66p is an accessory subunit of the Sec62/Sec63 tetramer.
     evidence:
     - reference: GO:0031207
       notes: GO:0031207 lists Sec71p in the yeast Sec62/Sec63 tetramer.
   - subject: sec72_translocon_subunit
-    predicate: is core subunit of
+    predicate: is accessory subunit of
     object: sec62_sec63_complex
     description: Sec72p is an accessory subunit of the Sec62/Sec63 tetramer.
     evidence:
