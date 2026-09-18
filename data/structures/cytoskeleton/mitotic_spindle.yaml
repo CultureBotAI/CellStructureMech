@@ -32,6 +32,13 @@ curation_history:
   changes: Pointed the spindle-associated-protein TODO at the alpha/beta-tubulin component
     anchor so every discussion reference resolves.
   llm_assisted: true
+- timestamp: '2026-09-18T23:34:36Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1204 by reclassifying the SPB/microtubule/kinetochore graph
+    as FUNCTION, and resolved #1205 by adding GO:0005874 evidence for alpha/beta-tubulin
+    microtubule composition.'
+  llm_assisted: true
 parent_structures:
 - GO:0005819
 has_part:
@@ -48,6 +55,9 @@ components:
   - reference: GO:0005876
     notes: Gene Ontology defines spindle microtubules as microtubules that are part
       of a mitotic or meiotic spindle.
+  - reference: GO:0005874
+    notes: Gene Ontology defines microtubules as eukaryotic hollow tubes made from
+      polymeric tubulin protofilaments.
   - reference: DOI:10.1126/science.277.5325.574
     notes: Straight et al. 1997 imaged GFP-Tub1-labeled spindle microtubules in living
       Saccharomyces cerevisiae cells.
@@ -89,6 +99,8 @@ evidence:
   notes: Gene Ontology cellular-component term for the broader spindle.
 - reference: GO:0005876
   notes: Gene Ontology cellular-component term for the spindle microtubule.
+- reference: GO:0005874
+  notes: Gene Ontology cellular-component term for the microtubule.
 - reference: GO:0007059
   notes: Gene Ontology biological-process term for chromosome segregation.
 - reference: DOI:10.1083/jcb.129.6.1601
@@ -106,11 +118,11 @@ causal_graphs:
   description: In Saccharomyces cerevisiae, spindle pole bodies organize a bipolar
     array of spindle microtubules, and a subset of those microtubules attach to kinetochores
     during mitosis.
-  graph_kind: ASSEMBLY
+  graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph places spindle microtubules, spindle pole bodies, and kinetochores
-    in a structural budding-yeast architecture without modeling every motor, microtubule-associated
-    protein, or cell-cycle input.
+    in a structural budding-yeast chromosome-segregation architecture without modeling
+    every motor, microtubule-associated protein, or cell-cycle input.
   nodes:
   - node_id: spindle_pole_body
     label: spindle pole body
