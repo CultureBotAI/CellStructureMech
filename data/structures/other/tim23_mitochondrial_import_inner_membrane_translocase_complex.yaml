@@ -23,6 +23,14 @@ curation_history:
     evidence, a nonmechanistic TOM-to-TIM23 graph, and a TIM23/PAM subunit-boundary
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-18T17:13:59Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1171 by adding top-level GO:0005742 evidence for the TOM graph
+    node, resolved #1172 by weakening the TIM23-to-matrix-import edge from mediates
+    to supports, and resolved #1173 by separating source-neutral family grounding
+    from TIM23/PAM boundary decisions in the subunit TODO.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Tim23 complex
   synonym_type: EXACT_SYNONYM
@@ -80,6 +88,9 @@ evidence:
 - reference: GO:0005743
   notes: Gene Ontology cellular-component term for the mitochondrial inner membrane
     that contains TIM23.
+- reference: GO:0005742
+  notes: Gene Ontology cellular-component term for the upstream TOM complex that supplies
+    presequence precursors to TIM23.
 - reference: GO:0030150
   notes: Gene Ontology biological-process term for protein import into the mitochondrial
     matrix.
@@ -136,10 +147,10 @@ causal_graphs:
       notes: Chacinska et al. 2009 reviewed TIM23-PAM as the downstream inner-membrane
         and matrix machinery for TOM-imported presequence precursors.
   - subject: tim23_complex
-    predicate: mediates
+    predicate: supports
     object: protein_import_into_mitochondrial_matrix
-    description: TIM23 mediates the inner-membrane translocation step of presequence
-      protein import into the matrix.
+    description: TIM23 supports matrix import by forming the inner-membrane presequence
+      translocase for TOM-imported precursors.
     evidence:
     - reference: GO:0030150
       notes: GO:0030150 grounds the matrix-import pathway that passes through TOM,
@@ -149,16 +160,17 @@ causal_graphs:
         protein import complex.
 discussions:
 - discussion_id: tim23_subunit_boundaries
-  prompt: Resolve exact source-neutral component groundings for bona fide TIM23 constituents
-    before adding Tim subunit rows.
+  prompt: Resolve exact source-neutral family groundings and TIM23/PAM boundary decisions
+    before adding Tim or PAM rows.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - causal_graphs#tom_tim23_matrix_import
   rationale: GO exactly grounds the TIM23 complex itself and names Tim17, Tim23 and
     transient Tim44/Hsp70 motor association in its definition, but this first record
-    leaves Tim17, Tim23, Tim44, Tim50, Pam17 and PAM-motor subunit rows unasserted
-    until exact family groundings and stable or transient complex boundaries are curated.
+    leaves Tim17, Tim23, Tim44, Tim50, Pam17 and PAM-motor factor rows unasserted
+    until exact family groundings are separated from stable TIM23 versus transient
+    PAM/import-motor membership.
   evidence:
   - reference: GO:0005744
     notes: GO:0005744 names Tim17, Tim23 and transient Tim44-Hsp70 import-motor association
