@@ -20,6 +20,12 @@ curation_history:
     parentage, mitochondrial-inner-membrane parthood, Saccharomyces scope, mitochondrial-protein-processing
     evidence, a nonmechanistic IMP processing graph, and an IMP subunit-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-18T18:47:20Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1181 by removing the after-import qualifier from the IMP function
+    description so it does not exclude mitochondrially encoded substrates.'
+  llm_assisted: true
 synonyms:
 - synonym_text: mitochondrion inner membrane peptidase complex
   synonym_type: EXACT_SYNONYM
@@ -50,7 +56,7 @@ functions:
   label: mitochondrial protein processing
   grounding: GO:0034982
   description: IMP contributes to mitochondrial protein processing by cleaving inner-membrane
-    protease substrates targeted to the intermembrane space after mitochondrial import.
+    protease substrates that are targeted to the intermembrane space.
   evidence:
   - reference: GO:0042720
     notes: GO:0042720 defines IMP as an inner-membrane protease complex for nuclear-

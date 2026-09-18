@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+  slug: mitochondrial_inner_membrane_peptidase_complex
+session:
+  id: 2026-09-18T184800Z-codex-951250
+  timestamp: '2026-09-18T18:48:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1181
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1180
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - function
+  summary: Narrowed IMP processing wording
+  details: 'Addressed review issue #1181 by removing the after-import qualifier from the mitochondrial
+    protein processing description so the GO:0042720 record continues to cover both nuclear-encoded
+    imported substrates and mitochondrially encoded substrates targeted to the intermembrane
+    space.'
