@@ -34,7 +34,39 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-mitosome_matrix_topology">Mitosome matrix topology <small>(FUNCTION)</small></h3>
-<p>The mitosome matrix is the internal mitosome compartment enclosed by the mitosome inner membrane.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The mitosome matrix is the internal mitosome compartment enclosed by the mitosome inner membrane.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-758f14d11a24853b-scale"/><label for="graph-758f14d11a24853b-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-758f14d11a24853b-scale:checked ~ div svg {width:1228px;height:266px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-758f14d11a24853b-title graph-758f14d11a24853b-desc" width="1228" height="266" viewBox="0 0 1228 266" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-758f14d11a24853b-title">Mitosome matrix topology</title>
+<desc id="graph-758f14d11a24853b-desc">3 nodes and 2 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-758f14d11a24853b-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="mitosome matrix — is part of → mitosome; Evidence: uniprot.location:SL-0441; GO:0032047" data-subject="mitosome_matrix" data-object="mitosome">
+<title>mitosome matrix — is part of → mitosome; Evidence: uniprot.location:SL-0441; GO:0032047</title><path d="M712,108.0 C802.0,108.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-758f14d11a24853b-arrow)"/>
+<text x="802.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">is part of</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="mitosome inner membrane — encloses → mitosome matrix; Evidence: uniprot.location:SL-0441; uniprot.location:SL-0439" data-subject="mitosome_inner_membrane" data-object="mitosome_matrix">
+<title>mitosome inner membrane — encloses → mitosome matrix; Evidence: uniprot.location:SL-0441; uniprot.location:SL-0439</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-758f14d11a24853b-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">encloses</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="mitosome matrix (CELLULAR_LOCALIZATION); mitosome_matrix; cellstructuremech:mitosome_matrix" data-node-id="mitosome_matrix"><title>mitosome matrix (CELLULAR_LOCALIZATION); mitosome_matrix; cellstructuremech:mitosome_matrix</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">CELLULAR_LOCALIZATION</text>
+<text x="488" y="109" fill="#172033">mitosome matrix</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="mitosome inner membrane (STRUCTURE); mitosome_inner_membrane; cellstructuremech:mitosome_inner_membrane" data-node-id="mitosome_inner_membrane"><title>mitosome inner membrane (STRUCTURE); mitosome_inner_membrane; cellstructuremech:mitosome_inner_membrane</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">STRUCTURE</text>
+<text x="72" y="109" fill="#172033">mitosome inner membrane</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="mitosome (ORGANELLE); mitosome; GO:0032047" data-node-id="mitosome"><title>mitosome (ORGANELLE); mitosome; GO:0032047</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">ORGANELLE</text>
+<text x="904" y="109" fill="#172033">mitosome</text>
+</g>
+</svg></div></figure>
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>mitosome matrix</td><td>is part of</td><td>mitosome</td><td><ul class="evidence"><li><code>uniprot.location:SL-0441</code> <small>UniProt SL-0441 places the mitosome matrix under the mitosome subcellular location.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032047"><code>GO:0032047</code></a> <small>GO:0032047 identifies the containing mitosome.</small></li></ul></td></tr>
 <tr><td>mitosome inner membrane</td><td>encloses</td><td>mitosome matrix</td><td><ul class="evidence"><li><code>uniprot.location:SL-0441</code> <small>UniProt SL-0441 defines the mitosome matrix as the internal spaces enclosed by the inner membrane.</small></li><li><code>uniprot.location:SL-0439</code> <small>UniProt SL-0439 defines the mitosome inner membrane by its position between the matrix and the intermembrane space.</small></li></ul></td></tr>
 </tbody></table>

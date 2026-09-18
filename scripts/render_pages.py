@@ -24,6 +24,11 @@ from pathlib import Path
 from corpus import REPO_ROOT, load_records
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+if __package__:
+    from .mechanism_graph import graph_svg
+else:
+    from mechanism_graph import graph_svg
+
 TEMPLATES_DIR = REPO_ROOT / "src" / "cellstructuremech" / "templates"
 IMAGES_DIR = REPO_ROOT / "data" / "images"
 EMBEDDINGS_DIR = REPO_ROOT / "data" / "embeddings"
@@ -87,6 +92,7 @@ def render(out_dir: Path) -> None:
         trim_blocks=True,
         lstrip_blocks=True,
     )
+    env.filters["graph_svg"] = graph_svg
     env.filters["curie_url"] = curie_url
 
     records = load_records()
