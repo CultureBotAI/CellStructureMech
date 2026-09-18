@@ -20,6 +20,12 @@ curation_history:
     function evidence, a nonmechanistic TIM22 insertion graph, and a TIM22 subunit-boundary
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-18T17:52:32Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1177 by narrowing the TIM22 graph scope and subunit TODO to
+    the cited yeast integral membrane subunits and small TIM chaperone boundary.'
+  llm_assisted: true
 synonyms:
 - synonym_text: mitochondrial inner membrane protein insertion complex
   synonym_type: EXACT_SYNONYM
@@ -93,8 +99,9 @@ causal_graphs:
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures TIM22 topology and its inner-membrane carrier-insertion
-    role without asserting individual Tim subunit families, small-TIM chaperone membership,
-    or species-specific TIM22 assembly factors.
+    role without asserting individual Tim family groundings or stable constituent
+    versus carrier-pathway chaperone roles for the yeast integral membrane and small
+    TIM proteins.
   nodes:
   - node_id: tim22_complex
     label: TIM22 mitochondrial import inner membrane insertion complex
@@ -131,17 +138,17 @@ causal_graphs:
         insertion into the mitochondrial inner membrane.
 discussions:
 - discussion_id: tim22_subunit_boundaries
-  prompt: Resolve exact source-neutral family groundings and species-specific TIM22
-    constituent boundaries before adding Tim rows.
+  prompt: Resolve exact source-neutral family groundings and stable TIM22 versus small-TIM
+    carrier-pathway boundaries before adding Tim rows.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - causal_graphs#tim22_inner_membrane_insertion
-  rationale: GO exactly grounds the TIM22 complex and its broad yeast subunit roster,
-    but this first record leaves Tim22, Tim54, Tim18, Sdh3, small-TIM chaperones,
-    and human TIM22-specific factors unasserted until exact source-neutral family
-    groundings are separated from stable constituent versus carrier-pathway chaperone
-    roles.
+  rationale: GO exactly grounds the TIM22 complex itself and names the yeast integral
+    membrane subunits plus the peripheral small TIM complex in its definition, but
+    this first record leaves Tim22, Tim54, Tim18, Sdh3, and small-TIM chaperone rows
+    unasserted until exact source-neutral family groundings are separated from stable
+    TIM22 constituents versus carrier-pathway chaperone roles.
   evidence:
   - reference: GO:0042721
     notes: GO:0042721 names the yeast integral membrane subunits and the peripheral
