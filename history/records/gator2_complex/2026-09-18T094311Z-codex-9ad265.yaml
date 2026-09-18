@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gator2_complex.yaml
+  slug: gator2_complex
+session:
+  id: 2026-09-18T094311Z-codex-9ad265
+  timestamp: '2026-09-18T09:43:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1137
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1136
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Correct GATOR2 SEACAT source DOI
+  details: 'Addressed PR #1136 review issue #1137 by replacing SEACAT branch evidence that
+    pointed at DOI:10.1126/scisignal.2004112 with DOI:10.4161/cc.26000, the Cell Cycle paper
+    that explicitly names SEACIT and SEACAT and describes the Seh1/Sea2-4/Sec13 SEACAT branch.'

@@ -22,6 +22,13 @@ curation_history:
     scope, a positive TORC1-signaling function, GO/DOI evidence, a nonmechanistic
     TORC1-regulation graph, and sibling/shared-subunit boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-18T09:42:48Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: '#1137: Repointed SEACAT branch evidence from the GATOR1 Science Signaling
+    DOI to the Cell Cycle DOI that explicitly names SEACAT and describes its Seh1/Sea2-4/Sec13
+    membership.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -48,10 +55,10 @@ components:
   - reference: GO:0061700
     notes: Gene Ontology cellular-component term for the GATOR2 complex, including
       the Saccharomyces cerevisiae SEACAT counterpart.
-  - reference: DOI:10.1126/scisignal.2004112
-    notes: Panchaud, Peli-Gulli and De Virgilio 2013 separated yeast SEA/GATOR into
-      the Iml1/Npr2/Npr3 SEACIT subcomplex and a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT
-      branch in the TORC1 pathway.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+      subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+      that antagonizes SEACIT in TORC1 signaling.
 - component_id: sea3_gator2_subunit
   label: Sea3 GATOR2 subunit
   component_type: PROTEIN
@@ -69,10 +76,10 @@ components:
   - reference: GO:0061700
     notes: Gene Ontology cellular-component term for the GATOR2 complex, including
       the Saccharomyces cerevisiae SEACAT counterpart.
-  - reference: DOI:10.1126/scisignal.2004112
-    notes: Panchaud, Peli-Gulli and De Virgilio 2013 separated yeast SEA/GATOR into
-      the Iml1/Npr2/Npr3 SEACIT subcomplex and a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT
-      branch in the TORC1 pathway.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+      subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+      that antagonizes SEACIT in TORC1 signaling.
 - component_id: sea4_gator2_subunit
   label: Sea4 GATOR2 subunit
   component_type: PROTEIN
@@ -90,10 +97,10 @@ components:
   - reference: GO:0061700
     notes: Gene Ontology cellular-component term for the GATOR2 complex, including
       the Saccharomyces cerevisiae SEACAT counterpart.
-  - reference: DOI:10.1126/scisignal.2004112
-    notes: Panchaud, Peli-Gulli and De Virgilio 2013 separated yeast SEA/GATOR into
-      the Iml1/Npr2/Npr3 SEACIT subcomplex and a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT
-      branch in the TORC1 pathway.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+      subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+      that antagonizes SEACIT in TORC1 signaling.
 - component_id: seh1_gator2_subunit
   label: Seh1 GATOR2 subunit
   component_type: PROTEIN
@@ -111,10 +118,10 @@ components:
   - reference: GO:0061700
     notes: Gene Ontology cellular-component term for the GATOR2 complex, including
       the Saccharomyces cerevisiae SEACAT counterpart.
-  - reference: DOI:10.1126/scisignal.2004112
-    notes: Panchaud, Peli-Gulli and De Virgilio 2013 separated yeast SEA/GATOR into
-      the Iml1/Npr2/Npr3 SEACIT subcomplex and a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT
-      branch in the TORC1 pathway.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+      subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+      that antagonizes SEACIT in TORC1 signaling.
 - component_id: sec13_gator2_subunit
   label: Sec13 GATOR2 subunit
   component_type: PROTEIN
@@ -132,10 +139,10 @@ components:
   - reference: GO:0061700
     notes: Gene Ontology cellular-component term for the GATOR2 complex, including
       the Saccharomyces cerevisiae SEACAT counterpart.
-  - reference: DOI:10.1126/scisignal.2004112
-    notes: Panchaud, Peli-Gulli and De Virgilio 2013 separated yeast SEA/GATOR into
-      the Iml1/Npr2/Npr3 SEACIT subcomplex and a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT
-      branch in the TORC1 pathway.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+      subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+      that antagonizes SEACIT in TORC1 signaling.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -177,10 +184,10 @@ evidence:
   notes: Gene Ontology biological-process term for positive regulation of TORC1 signaling.
 - reference: GO:0038202
   notes: Gene Ontology biological-process term for TORC1 signaling.
-- reference: DOI:10.1126/scisignal.2004112
-  notes: Panchaud, Peli-Gulli and De Virgilio 2013 separated yeast SEA/GATOR into
-    the Iml1/Npr2/Npr3 SEACIT subcomplex and a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT branch
-    in the TORC1 pathway.
+- reference: DOI:10.4161/cc.26000
+  notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+    subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart that
+    antagonizes SEACIT in TORC1 signaling.
 - reference: DOI:10.1126/science.1232044
   notes: Bar-Peled et al. 2013 separated human GATOR into GATOR1 and GATOR2 subcomplexes
     that regulate Rag-dependent amino-acid-sensitive mTORC1 signaling.
@@ -232,10 +239,10 @@ causal_graphs:
     - reference: GO:0061700
       notes: Gene Ontology cellular-component term for the GATOR2 complex, including
         the Saccharomyces cerevisiae SEACAT counterpart.
-    - reference: DOI:10.1126/scisignal.2004112
-      notes: Panchaud, Peli-Gulli and De Virgilio 2013 separated yeast SEA/GATOR into
-        the Iml1/Npr2/Npr3 SEACIT subcomplex and a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT
-        branch in the TORC1 pathway.
+    - reference: DOI:10.4161/cc.26000
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and
+        SEACAT subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+        that antagonizes SEACIT in TORC1 signaling.
   - subject: sea3_gator2_subunit
     predicate: is part of
     object: gator2_complex
@@ -244,10 +251,10 @@ causal_graphs:
     - reference: GO:0061700
       notes: Gene Ontology cellular-component term for the GATOR2 complex, including
         the Saccharomyces cerevisiae SEACAT counterpart.
-    - reference: DOI:10.1126/scisignal.2004112
-      notes: Panchaud, Peli-Gulli and De Virgilio 2013 separated yeast SEA/GATOR into
-        the Iml1/Npr2/Npr3 SEACIT subcomplex and a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT
-        branch in the TORC1 pathway.
+    - reference: DOI:10.4161/cc.26000
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and
+        SEACAT subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+        that antagonizes SEACIT in TORC1 signaling.
   - subject: sea4_gator2_subunit
     predicate: is part of
     object: gator2_complex
@@ -256,10 +263,10 @@ causal_graphs:
     - reference: GO:0061700
       notes: Gene Ontology cellular-component term for the GATOR2 complex, including
         the Saccharomyces cerevisiae SEACAT counterpart.
-    - reference: DOI:10.1126/scisignal.2004112
-      notes: Panchaud, Peli-Gulli and De Virgilio 2013 separated yeast SEA/GATOR into
-        the Iml1/Npr2/Npr3 SEACIT subcomplex and a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT
-        branch in the TORC1 pathway.
+    - reference: DOI:10.4161/cc.26000
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and
+        SEACAT subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+        that antagonizes SEACIT in TORC1 signaling.
   - subject: seh1_gator2_subunit
     predicate: is part of
     object: gator2_complex
@@ -268,10 +275,10 @@ causal_graphs:
     - reference: GO:0061700
       notes: Gene Ontology cellular-component term for the GATOR2 complex, including
         the Saccharomyces cerevisiae SEACAT counterpart.
-    - reference: DOI:10.1126/scisignal.2004112
-      notes: Panchaud, Peli-Gulli and De Virgilio 2013 separated yeast SEA/GATOR into
-        the Iml1/Npr2/Npr3 SEACIT subcomplex and a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT
-        branch in the TORC1 pathway.
+    - reference: DOI:10.4161/cc.26000
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and
+        SEACAT subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+        that antagonizes SEACIT in TORC1 signaling.
   - subject: sec13_gator2_subunit
     predicate: is part of
     object: gator2_complex
@@ -280,10 +287,10 @@ causal_graphs:
     - reference: GO:0061700
       notes: Gene Ontology cellular-component term for the GATOR2 complex, including
         the Saccharomyces cerevisiae SEACAT counterpart.
-    - reference: DOI:10.1126/scisignal.2004112
-      notes: Panchaud, Peli-Gulli and De Virgilio 2013 separated yeast SEA/GATOR into
-        the Iml1/Npr2/Npr3 SEACIT subcomplex and a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT
-        branch in the TORC1 pathway.
+    - reference: DOI:10.4161/cc.26000
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and
+        SEACAT subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+        that antagonizes SEACIT in TORC1 signaling.
   - subject: gator2_complex
     predicate: positively regulates
     object: torc1_signaling
@@ -318,10 +325,10 @@ discussions:
   - reference: GO:0061700
     notes: Gene Ontology cellular-component term for the GATOR2 complex, including
       the Saccharomyces cerevisiae SEACAT counterpart.
-  - reference: DOI:10.1126/scisignal.2004112
-    notes: Panchaud, Peli-Gulli and De Virgilio 2013 separated yeast SEA/GATOR into
-      the Iml1/Npr2/Npr3 SEACIT subcomplex and a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT
-      branch in the TORC1 pathway.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+      subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+      that antagonizes SEACIT in TORC1 signaling.
   posed_by: codex
   posed_date: '2026-09-18'
 - discussion_id: gator1_seacit_boundary
@@ -368,10 +375,10 @@ discussions:
   - reference: GO:0061700
     notes: Gene Ontology cellular-component term for the GATOR2 complex, including
       the Saccharomyces cerevisiae SEACAT counterpart.
-  - reference: DOI:10.1126/scisignal.2004112
-    notes: Panchaud, Peli-Gulli and De Virgilio 2013 separated yeast SEA/GATOR into
-      the Iml1/Npr2/Npr3 SEACIT subcomplex and a Seh1/Sec13/Sea2/Sea3/Sea4 SEACAT
-      branch in the TORC1 pathway.
+  - reference: DOI:10.4161/cc.26000
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
+      subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
+      that antagonizes SEACIT in TORC1 signaling.
   posed_by: codex
   posed_date: '2026-09-18'
   resolved_date: '2026-09-18'
