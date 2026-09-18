@@ -9891,9 +9891,9 @@
           "cosine_similarity": 0.7510978
         },
         {
-          "identifier": "GO:0034044",
-          "label": "exomer complex",
-          "cosine_similarity": 0.72721795
+          "identifier": "GO:1990130",
+          "label": "GATOR1 complex",
+          "cosine_similarity": 0.74510243
         }
       ]
     },
@@ -10258,14 +10258,14 @@
           "cosine_similarity": 0.75250979
         },
         {
+          "identifier": "GO:1990130",
+          "label": "GATOR1 complex",
+          "cosine_similarity": 0.74955505
+        },
+        {
           "identifier": "GO:1990072",
           "label": "TRAPPIII protein complex",
           "cosine_similarity": 0.7467632
-        },
-        {
-          "identifier": "GO:0000938",
-          "label": "GARP complex",
-          "cosine_similarity": 0.74619981
         }
       ]
     },
@@ -10277,6 +10277,11 @@
           "identifier": "GO:0005794",
           "label": "Golgi apparatus",
           "cosine_similarity": 0.77007817
+        },
+        {
+          "identifier": "GO:1990130",
+          "label": "GATOR1 complex",
+          "cosine_similarity": 0.76723838
         },
         {
           "identifier": "GO:0033565",
@@ -10292,11 +10297,37 @@
           "identifier": "GO:0070939",
           "label": "Dsl1/NZR complex",
           "cosine_similarity": 0.74839014
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990130",
+      "label": "GATOR1 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000938",
+          "label": "GARP complex",
+          "cosine_similarity": 0.76723838
         },
         {
           "identifier": "GO:0034044",
           "label": "exomer complex",
-          "cosine_similarity": 0.74619981
+          "cosine_similarity": 0.74955505
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.74510243
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.73901254
+        },
+        {
+          "identifier": "GO:0070939",
+          "label": "Dsl1/NZR complex",
+          "cosine_similarity": 0.71804104
         }
       ]
     },
@@ -10480,9 +10511,9 @@
           "cosine_similarity": 0.71845081
         },
         {
-          "identifier": "GO:0020023",
-          "label": "kinetoplast",
-          "cosine_similarity": 0.67069412
+          "identifier": "GO:1990130",
+          "label": "GATOR1 complex",
+          "cosine_similarity": 0.69167123
         }
       ]
     },
