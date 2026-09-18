@@ -1,0 +1,143 @@
+identifier: GO:0071261
+label: Ssh1 translocon complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An endoplasmic-reticulum translocon complex with a core heterotrimer of
+  alpha, beta, and gamma subunits, represented in budding yeast by Ssh1p, Sbh2p, and
+  Sss1p, that supports cotranslational protein transport across the ER membrane.
+definition_source: GO:0071261
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T21:42:03Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T21:43:23Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Ssh1p-Sss1p-Sbh2p synonymy, translocon parentage, ER-membrane parthood,
+    Saccharomyces scope, an Ssh1-dependent cotranslational translocation function,
+    GO/PMID/DOI evidence, a nonmechanistic Ssh1 function graph, and a Ssh1 subunit-boundary
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Ssh1p-Sss1p-Sbh2p complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071261
+parent_structures:
+- GO:0071256
+part_of:
+- GO:0005789
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast contains an ER-membrane Ssh1p complex composed of Ssh1p, Sbh2p,
+    and Sss1p.
+  reference: PMID:8612571
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which the Ssh1p/Sbh2p/Sss1p trimeric ER translocon was discovered
+    and tied to protein transport.
+  reference: PMID:8612571
+functions:
+- function_id: ssh1_cotranslational_er_translocation
+  label: Ssh1-dependent cotranslational ER protein translocation
+  description: The Ssh1 translocon supports cotranslational translocation of a subset
+    of signal-sequence-bearing substrates across the endoplasmic-reticulum membrane.
+  evidence:
+  - reference: GO:0071261
+    notes: GO:0071261 defines Ssh1 as a translocon complex involved in the cotranslational
+      pathway of protein transport across the ER membrane.
+  - reference: PMID:8612571
+    notes: Finke et al. 1996 discovered the Ssh1p complex in the Saccharomyces cerevisiae
+      ER membrane and proposed that, unlike Sec61, it functions exclusively in cotranslational
+      protein transport.
+  - reference: DOI:10.1091/mbc.01-10-0518
+    notes: Wittke et al. 2002 showed that Ssh1p physically approaches the SRP receptor
+      beta subunit in vivo and recognizes a subset of ER signal sequences.
+evidence:
+- reference: GO:0071261
+  notes: Gene Ontology cellular-component term for the Ssh1 translocon complex.
+- reference: GO:0071256
+  notes: Gene Ontology cellular-component parent term for endoplasmic-reticulum translocon
+    complexes.
+- reference: GO:0005789
+  notes: Gene Ontology cellular-component term for the endoplasmic reticulum membrane.
+- reference: PMID:8612571
+  notes: Finke et al. 1996, A second trimeric complex containing homologs of the Sec61p
+    complex functions in protein transport across the ER membrane of S. cerevisiae,
+    The EMBO Journal.
+- reference: DOI:10.1091/mbc.01-10-0518
+  notes: Wittke et al. 2002, Recognition of a subset of signal sequences by Ssh1p,
+    a Sec61p-related protein in the membrane of endoplasmic reticulum of yeast Saccharomyces
+    cerevisiae, Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: ssh1_cotranslational_er_translocation
+  title: Ssh1 supports cotranslational ER protein translocation
+  description: The Ssh1 translocon is an ER-membrane complex that functions in cotranslational
+    protein translocation and recognizes a subset of signal-sequence-bearing substrates.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures structure-level localization and cotranslational
+    translocation without asserting exact Ssh1p, Sbh2p, or Sss1p family groundings.
+  nodes:
+  - node_id: ssh1_translocon_complex
+    label: Ssh1 translocon complex
+    node_type: STRUCTURE
+    grounding: GO:0071261
+  - node_id: er_membrane
+    label: endoplasmic reticulum membrane
+    node_type: STRUCTURE
+    grounding: GO:0005789
+  - node_id: cotranslational_er_translocation
+    label: Ssh1-dependent cotranslational ER protein translocation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: ssh1_translocon_complex
+    predicate: is embedded in
+    object: er_membrane
+    description: The Ssh1 translocon complex resides in the endoplasmic-reticulum
+      membrane.
+    evidence:
+    - reference: GO:0071261
+      notes: GO:0071261 identifies Ssh1 as an ER translocon complex.
+    - reference: PMID:8612571
+      notes: Finke et al. 1996 reported the Ssh1p/Sbh2p/Sss1p trimeric complex in
+        the Saccharomyces cerevisiae ER membrane.
+  - subject: ssh1_translocon_complex
+    predicate: supports
+    object: cotranslational_er_translocation
+    description: Ssh1 supports cotranslational protein transport across the ER membrane
+      for a subset of signal-sequence-bearing substrates.
+    evidence:
+    - reference: PMID:8612571
+      notes: Finke et al. 1996 found that the Ssh1p complex interacts with membrane-bound
+        ribosomes.
+    - reference: DOI:10.1091/mbc.01-10-0518
+      notes: Wittke et al. 2002 confirmed proximity between Ssh1p and the SRP receptor
+        beta subunit in vivo.
+discussions:
+- discussion_id: ssh1_subunit_boundaries
+  prompt: Resolve exact source-neutral groundings for the Ssh1 alpha subunit, Sbh2
+    beta subunit, Sss1 gamma subunit, and any Ssh1-associated TRAPs before adding
+    component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#ssh1_cotranslational_er_translocation
+  rationale: GO exactly grounds the Ssh1 translocon complex and Finke et al. established
+    the budding-yeast Ssh1p/Sbh2p/Sss1p core, but exact source-neutral family CURIEs
+    and the boundary of any additional translocon-associated proteins were not curated
+    in this pass.
+  evidence:
+  - reference: GO:0071261
+    notes: GO:0071261 names Ssh1p, Sbh2p, and Sss1p as the budding-yeast Ssh1 core
+      proteins.
+  - reference: PMID:8612571
+    notes: Finke et al. 1996 identified Ssh1p, Sbh2p, and Sss1p in a second yeast
+      trimeric complex related to Sec61.
+  posed_by: codex
+  posed_date: '2026-09-18'
