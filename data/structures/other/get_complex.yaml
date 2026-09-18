@@ -1,0 +1,141 @@
+identifier: GO:0043529
+label: GET complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An endoplasmic reticulum protein-containing complex that is conserved
+  in eukaryotes and mediates the insertion of tail-anchored proteins into the ER membrane.
+definition_source: GO:0043529
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T21:14:47Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T21:15:26Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ER-protein-complex parentage, Saccharomyces scope, a GET-dependent
+    tail-anchored insertion function, GO/DOI evidence, a nonmechanistic insertion
+    graph, and a GET subunit-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-18T21:26:05Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1193 by clarifying Get3 versus Get1/Get2 receptor wording and
+    resolved #1194 by adding ER membrane grounding and a function-graph ER membrane
+    target node.'
+  llm_assisted: true
+parent_structures:
+- GO:0140534
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast contains the GET complex, with Get3 coupling tail-anchored substrates
+    to the Get1/Get2 ER receptor during ER-membrane insertion.
+  reference: DOI:10.1016/j.cell.2008.06.025
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Get3 recognition of secretory-pathway tail anchors,
+    Get1/Get2 receptor recruitment to the ER, and direct Get-mediated insertion were
+    connected experimentally.
+  reference: DOI:10.1016/j.cell.2008.06.025
+functions:
+- function_id: get_dependent_tail_anchor_insertion
+  label: tail-anchored membrane protein insertion into ER membrane
+  grounding: GO:0071816
+  description: GET mediates post-translational delivery and insertion of newly synthesized
+    tail-anchored proteins into the endoplasmic-reticulum membrane.
+  evidence:
+  - reference: GO:0071816
+    notes: GO:0071816 denotes tail-anchored membrane protein insertion into the endoplasmic-reticulum
+      membrane.
+  - reference: DOI:10.1016/j.cell.2008.06.025
+    notes: Schuldiner et al. 2008 showed in budding yeast that Get3 recognizes secretory-pathway
+      tail-anchored protein transmembrane domains, that Get1/Get2 recruits Get3-TA
+      complexes to the ER, and that purified Get proteins directly mediate insertion
+      in vitro.
+evidence:
+- reference: GO:0043529
+  notes: Gene Ontology cellular-component term for the GET complex.
+- reference: GO:0140534
+  notes: Gene Ontology parent term for endoplasmic reticulum protein-containing complexes.
+- reference: GO:0071816
+  notes: Gene Ontology biological-process term for tail-anchored membrane protein
+    insertion into the ER membrane.
+- reference: GO:0005789
+  notes: Gene Ontology cellular-component term for the endoplasmic reticulum membrane,
+    the target membrane in GO:0071816.
+- reference: DOI:10.1016/j.cell.2008.06.025
+  notes: Schuldiner et al. 2008, The GET complex mediates insertion of tail-anchored
+    proteins into the ER membrane, Cell.
+causal_graphs:
+- graph_id: get_tail_anchor_insertion
+  title: GET mediates tail-anchored ER insertion
+  description: The GET complex is an endoplasmic-reticulum protein complex that recognizes
+    tail-anchored substrates and mediates their insertion into the ER membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures structure-level GET function without asserting exact
+    Get1/Get2/Get3 family groundings or the complete pretargeting cycle.
+  nodes:
+  - node_id: get_complex
+    label: GET complex
+    node_type: STRUCTURE
+    grounding: GO:0043529
+  - node_id: tail_anchor_er_insertion
+    label: tail-anchored membrane protein insertion into ER membrane
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071816
+  - node_id: er_membrane
+    label: endoplasmic reticulum membrane
+    node_type: STRUCTURE
+    grounding: GO:0005789
+  edges:
+  - subject: get_complex
+    predicate: supports
+    object: tail_anchor_er_insertion
+    description: GET mediates insertion of newly synthesized tail-anchored proteins
+      into the ER membrane.
+    evidence:
+    - reference: GO:0043529
+      notes: GO:0043529 defines GET by its mediation of tail-anchored protein insertion
+        into the ER membrane.
+    - reference: DOI:10.1016/j.cell.2008.06.025
+      notes: Schuldiner et al. 2008 reconstituted Get-dependent insertion of newly
+        synthesized tail-anchored proteins into ER membranes.
+  - subject: get_complex
+    predicate: inserts substrates into
+    object: er_membrane
+    description: GET-mediated insertion places newly synthesized tail-anchored proteins
+      into the ER membrane.
+    evidence:
+    - reference: GO:0071816
+      notes: GO:0071816 denotes tail-anchored membrane protein insertion specifically
+        into the ER membrane.
+    - reference: DOI:10.1016/j.cell.2008.06.025
+      notes: Schuldiner et al. 2008 linked Get1/Get2 receptor recruitment to in vitro
+        insertion of tail-anchored proteins into ER membranes.
+discussions:
+- discussion_id: get_subunit_boundaries
+  prompt: Resolve exact source-neutral GET subunit groundings and the boundary between
+    the Get1/Get2 receptor, the Get3 targeting factor, and upstream pretargeting factors
+    before adding component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#get_tail_anchor_insertion
+  rationale: GO exactly grounds the GET complex and names yeast Get1p, Get2p and Get3p
+    in its definition, but exact source-neutral families and the membership boundary
+    for cytosolic pretargeting factors were not curated in this pass.
+  evidence:
+  - reference: GO:0043529
+    notes: GO:0043529 defines the GET complex and states that in yeast it includes
+      Get1p, Get2p and Get3p proteins.
+  - reference: DOI:10.1016/j.cell.2008.06.025
+    notes: Schuldiner et al. 2008 experimentally linked yeast Get3 and the Get1/Get2
+      receptor to ER insertion of tail-anchored proteins.
+  posed_by: codex
+  posed_date: '2026-09-18'

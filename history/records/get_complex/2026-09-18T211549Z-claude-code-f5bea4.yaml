@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/get_complex.yaml
+  slug: get_complex
+session:
+  id: 2026-09-18T211549Z-claude-code-f5bea4
+  timestamp: '2026-09-18T21:15:49Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created GET complex record
+  details: Added a GO:0043529 GET complex record with ER-protein-complex parentage, Saccharomyces
+    scope, GET-dependent tail-anchored ER insertion function, GO/DOI evidence, a nonmechanistic
+    insertion graph, and an open exact subunit-grounding TODO.
