@@ -3213,6 +3213,15 @@
   "definition": "A dense, non-membrane-bounded body in the eukaryotic nuclear lumen that concentrates ribosomal DNA transcription, pre-rRNA processing, and early ribosomal subunit assembly."
  },
  {
+  "identifier": "GO:0001405",
+  "label": "PAM complex, Tim23 associated import motor",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/pam_complex_tim23_associated_import_motor.html",
+  "definition": "A mitochondrial matrix-side protein complex associated with the TIM23 inner-membrane translocase that uses ATPase motor activity to drive protein import into the mitochondrial matrix."
+ },
+ {
   "identifier": "cellstructuremech:phage_nucleus",
   "label": "phage nucleus",
   "category": "OTHER",

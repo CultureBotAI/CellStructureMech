@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/pam_complex_tim23_associated_import_motor.yaml
+  slug: pam_complex_tim23_associated_import_motor
+session:
+  id: 2026-09-18T181014Z-codex-1078d8
+  timestamp: '2026-09-18T18:10:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomy
+  - function
+  - causal_graphs
+  - discussion
+  summary: Added PAM complex import motor record
+  details: Created a GO:0001405-grounded PAM complex, Tim23 associated import motor record
+    with GO synonymy, inner-mitochondrial-membrane protein-complex parentage, TIM23 and mitochondrial-matrix
+    parthood, Saccharomyces cerevisiae scope, GO:0030150 matrix-import function evidence,
+    a nonmechanistic PAM matrix-import graph, and a curation TODO for exact Pam and Hsp70-cycle
+    subunit boundaries.

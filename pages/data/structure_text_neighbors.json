@@ -11076,6 +11076,37 @@
       ]
     },
     {
+      "identifier": "GO:0001405",
+      "label": "PAM complex, Tim23 associated import motor",
+      "neighbors": [
+        {
+          "identifier": "GO:0005744",
+          "label": "TIM23 mitochondrial import inner membrane translocase complex",
+          "cosine_similarity": 0.9065738
+        },
+        {
+          "identifier": "GO:0042721",
+          "label": "TIM22 mitochondrial import inner membrane insertion complex",
+          "cosine_similarity": 0.86827079
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.84983451
+        },
+        {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.84418791
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.7914492
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:phage_nucleus",
       "label": "phage nucleus",
       "neighbors": [
@@ -11405,14 +11436,14 @@
           "cosine_similarity": 0.8500746
         },
         {
+          "identifier": "GO:0001405",
+          "label": "PAM complex, Tim23 associated import motor",
+          "cosine_similarity": 0.84418791
+        },
+        {
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.81295248
-        },
-        {
-          "identifier": "GO:0005744",
-          "label": "TIM23 mitochondrial import inner membrane translocase complex",
-          "cosine_similarity": 0.80917718
         }
       ]
     },
@@ -11555,6 +11586,11 @@
           "cosine_similarity": 0.88807808
         },
         {
+          "identifier": "GO:0001405",
+          "label": "PAM complex, Tim23 associated import motor",
+          "cosine_similarity": 0.86827079
+        },
+        {
           "identifier": "GO:0001401",
           "label": "SAM complex",
           "cosine_similarity": 0.8500746
@@ -11563,11 +11599,6 @@
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.80049319
-        },
-        {
-          "identifier": "GO:0072546",
-          "label": "EMC complex",
-          "cosine_similarity": 0.77488179
         }
       ]
     },
@@ -11579,6 +11610,11 @@
           "identifier": "GO:0042721",
           "label": "TIM22 mitochondrial import inner membrane insertion complex",
           "cosine_similarity": 0.93700708
+        },
+        {
+          "identifier": "GO:0001405",
+          "label": "PAM complex, Tim23 associated import motor",
+          "cosine_similarity": 0.9065738
         },
         {
           "identifier": "GO:0005742",
@@ -11594,11 +11630,6 @@
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.76258818
-        },
-        {
-          "identifier": "GO:0033281",
-          "label": "TAT protein transport complex",
-          "cosine_similarity": 0.72860054
         }
       ]
     },
