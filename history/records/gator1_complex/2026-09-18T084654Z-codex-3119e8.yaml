@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gator1_complex.yaml
+  slug: gator1_complex
+session:
+  id: 2026-09-18T084654Z-codex-3119e8
+  timestamp: '2026-09-18T08:46:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1134
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1133
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: Refine GATOR1 Rag GTPase boundary
+  details: 'Addressed PR #1133 review issue #1134 by changing the Gtr1/Gtr2 boundary rationale
+    to describe Gtr1 as the direct Rag-family GAP target of GATOR1/SEACIT instead of using
+    loose upstream-pathway wording.'

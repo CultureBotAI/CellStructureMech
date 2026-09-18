@@ -1,0 +1,346 @@
+identifier: GO:1990130
+label: GATOR1 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A GTPase-activating protein (GAP) complex that regulates TORC1 signaling
+  by interacting with the Rag GTPase. In human, the GATOR1 complex consists of DEPDC5,
+  NPRL2, and NPRL3. In S. cerevisiae, this complex is referred to as SEACIT and contains
+  the Iml1p, Npr2p, and Npr3p proteins.
+definition_source: GO:1990130
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T08:20:10Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T08:21:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GATOR1 synonymy, protein-complex parentage, reviewed-label-only yeast
+    Iml1/Npr2/Npr3 SEACIT components, Saccharomyces scope, a negative TORC1-signaling
+    function, GO/DOI evidence, a nonmechanistic Gtr1/TORC1 regulation graph, and subunit-grounding
+    plus Gtr1/Gtr2 and GATOR2/SEACAT boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-18T08:22:11Z'
+  curator: codex
+  action: REFINED_TORC1_GRAPH
+  changes: Retargeted the GATOR1 negative-regulation graph edge to the regulated TORC1
+    signaling process, tightened the GATOR2 boundary rationale, and expanded shared
+    YAML evidence aliases into plain repeated mappings.
+  llm_assisted: true
+- timestamp: '2026-09-18T08:46:11Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: '#1134: Refined the resolved Rag GTPase boundary discussion to describe
+    Gtr1 as the direct GATOR1/SEACIT GAP target rather than as a loose upstream pathway
+    factor.'
+  llm_assisted: true
+- timestamp: '2026-09-18T09:04:24Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: '#1135: Added GO:0035859 as the source-defined Seh1-associated complex
+    part_of container for GATOR1/SEACIT.'
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0035859
+synonyms:
+- synonym_text: IML1 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990130
+- synonym_text: SEACIT complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990130
+components:
+- component_id: iml1_gator1_subunit
+  label: Iml1 GATOR1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - IML1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Iml1/SEACIT subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: GATOR1/SEACIT subunit that functions with Npr2 and Npr3 in the Gtr1-directed
+    GAP complex upstream of TORC1.
+  evidence:
+  - reference: GO:1990130
+    notes: Gene Ontology cellular-component term for the GATOR1 complex, including
+      the Saccharomyces cerevisiae SEACIT counterpart.
+  - reference: DOI:10.1126/scisignal.2004112
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex with
+      Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino acid
+      deprivation.
+- component_id: npr2_gator1_subunit
+  label: Npr2 GATOR1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NPR2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Npr2/SEACIT subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: GATOR1/SEACIT subunit that joins Iml1 and Npr3 in the amino-acid-sensitive
+    yeast Gtr1 GAP complex.
+  evidence:
+  - reference: GO:1990130
+    notes: Gene Ontology cellular-component term for the GATOR1 complex, including
+      the Saccharomyces cerevisiae SEACIT counterpart.
+  - reference: DOI:10.1126/scisignal.2004112
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex with
+      Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino acid
+      deprivation.
+- component_id: npr3_gator1_subunit
+  label: Npr3 GATOR1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NPR3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Npr3/SEACIT subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: GATOR1/SEACIT subunit that joins Iml1 and Npr2 in the amino-acid-sensitive
+    yeast Gtr1 GAP complex.
+  evidence:
+  - reference: GO:1990130
+    notes: Gene Ontology cellular-component term for the GATOR1 complex, including
+      the Saccharomyces cerevisiae SEACIT counterpart.
+  - reference: DOI:10.1126/scisignal.2004112
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex with
+      Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino acid
+      deprivation.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has an Iml1/Npr2/Npr3 SEACIT complex that functions upstream
+    of Gtr1 and TORC1 during amino acid deprivation.
+  reference: DOI:10.1126/scisignal.2004112
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which Iml1, Npr2 and Npr3 were assigned to the Gtr1-directed
+    GAP complex now represented by GO as GATOR1/SEACIT.
+  reference: DOI:10.1126/scisignal.2004112
+functions:
+- function_id: negative_regulation_torc1_signaling
+  label: negative regulation of TORC1 signaling
+  grounding: GO:1904262
+  description: GATOR1/SEACIT stimulates GTP hydrolysis by the yeast Rag-family GTPase
+    Gtr1 and decreases TORC1 activity during amino acid deprivation.
+  evidence:
+  - reference: GO:1904262
+    notes: Gene Ontology biological-process term for negative regulation of TORC1
+      signaling.
+  - reference: DOI:10.1126/scisignal.2004112
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex with
+      Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino acid
+      deprivation.
+evidence:
+- reference: GO:1990130
+  notes: Gene Ontology cellular-component term for the GATOR1 complex, including the
+    Saccharomyces cerevisiae SEACIT counterpart.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0035859
+  notes: Gene Ontology cellular-component term for the Seh1-associated complex; GO
+    places GATOR1 as part_of this SEA/GATOR parent assembly.
+- reference: GO:1904262
+  notes: Gene Ontology biological-process term for negative regulation of TORC1 signaling.
+- reference: GO:0038202
+  notes: Gene Ontology biological-process term for TORC1 signaling.
+- reference: DOI:10.1126/scisignal.2004112
+  notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex with
+    Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino acid
+    deprivation.
+- reference: DOI:10.1126/science.1232044
+  notes: Bar-Peled et al. 2013 named GATOR1 as the GAP subcomplex that negatively
+    regulates amino-acid-sensitive mTORC1 signaling through Rag GTPases.
+causal_graphs:
+- graph_id: yeast_gator1_torc1_regulation
+  title: GATOR1/SEACIT inhibits yeast TORC1 signaling
+  description: In Saccharomyces cerevisiae, Iml1, Npr2 and Npr3 form a GATOR1 counterpart
+    that acts on the Rag-family GTPase Gtr1 and decreases TORC1 activity during amino
+    acid deprivation.
+  graph_kind: REGULATION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents yeast GATOR1/SEACIT subunit membership, Gtr1 interaction,
+    and TORC1-signal inhibition without modeling GTP/GDP nucleotide-state cycling
+    or parallel GATOR2/SEACAT regulation.
+  nodes:
+  - node_id: iml1_gator1_subunit
+    label: Iml1 GATOR1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: iml1_gator1_subunit
+  - node_id: npr2_gator1_subunit
+    label: Npr2 GATOR1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: npr2_gator1_subunit
+  - node_id: npr3_gator1_subunit
+    label: Npr3 GATOR1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: npr3_gator1_subunit
+  - node_id: gator1_complex
+    label: GATOR1 complex
+    node_type: STRUCTURE
+    grounding: GO:1990130
+  - node_id: gtr1_rag_gtpase
+    label: Gtr1 Rag-family GTPase
+    node_type: GENE_OR_PROTEIN
+  - node_id: fungal_type_vacuole_membrane
+    label: fungal-type vacuole membrane
+    node_type: STRUCTURE
+    grounding: GO:0000329
+  - node_id: torc1_signaling
+    label: TORC1 signaling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0038202
+  edges:
+  - subject: iml1_gator1_subunit
+    predicate: is part of
+    object: gator1_complex
+    description: Iml1 is represented as a yeast GATOR1/SEACIT subunit.
+    evidence:
+    - reference: GO:1990130
+      notes: Gene Ontology cellular-component term for the GATOR1 complex, including
+        the Saccharomyces cerevisiae SEACIT counterpart.
+    - reference: DOI:10.1126/scisignal.2004112
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex
+        with Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino
+        acid deprivation.
+  - subject: npr2_gator1_subunit
+    predicate: is part of
+    object: gator1_complex
+    description: Npr2 is represented as a yeast GATOR1/SEACIT subunit.
+    evidence:
+    - reference: GO:1990130
+      notes: Gene Ontology cellular-component term for the GATOR1 complex, including
+        the Saccharomyces cerevisiae SEACIT counterpart.
+    - reference: DOI:10.1126/scisignal.2004112
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex
+        with Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino
+        acid deprivation.
+  - subject: npr3_gator1_subunit
+    predicate: is part of
+    object: gator1_complex
+    description: Npr3 is represented as a yeast GATOR1/SEACIT subunit.
+    evidence:
+    - reference: GO:1990130
+      notes: Gene Ontology cellular-component term for the GATOR1 complex, including
+        the Saccharomyces cerevisiae SEACIT counterpart.
+    - reference: DOI:10.1126/scisignal.2004112
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex
+        with Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino
+        acid deprivation.
+  - subject: iml1_gator1_subunit
+    predicate: interacts with
+    object: gtr1_rag_gtpase
+    description: Iml1 transiently interacts with the Rag-family GTPase Gtr1 at the
+      vacuolar membrane during amino acid deprivation.
+    evidence:
+    - reference: DOI:10.1126/scisignal.2004112
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex
+        with Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino
+        acid deprivation.
+  - subject: iml1_gator1_subunit
+    predicate: localizes to
+    object: fungal_type_vacuole_membrane
+    description: Iml1 transiently associates with Gtr1 at the yeast vacuolar membrane
+      during the amino acid deprivation response.
+    evidence:
+    - reference: DOI:10.1126/scisignal.2004112
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex
+        with Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino
+        acid deprivation.
+  - subject: gator1_complex
+    predicate: negatively regulates
+    object: torc1_signaling
+    description: The Iml1/Npr2/Npr3 GATOR1 counterpart promotes Gtr1 GTPase activity
+      to reduce TORC1 signaling.
+    evidence:
+    - reference: GO:0038202
+      notes: Gene Ontology biological-process term for TORC1 signaling.
+    - reference: DOI:10.1126/scisignal.2004112
+      notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified the Iml1/Npr2/Npr3
+        complex as a yeast GAP that reduces TORC1 activity through the Rag-family
+        GTPase Gtr1.
+discussions:
+- discussion_id: resolve_gator1_subunit_family_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, or NCBIfam groundings for the
+    three yeast GATOR1/SEACIT subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#iml1_gator1_subunit
+  - components#npr2_gator1_subunit
+  - components#npr3_gator1_subunit
+  rationale: This first GATOR1 record names the yeast Iml1, Npr2 and Npr3 constituent
+    subunits but leaves InterPro, Pfam, or NCBIfam grounding unset until exact orthology
+    and paralogy boundaries are reviewed per subunit.
+  evidence:
+  - reference: GO:1990130
+    notes: Gene Ontology cellular-component term for the GATOR1 complex, including
+      the Saccharomyces cerevisiae SEACIT counterpart.
+  - reference: DOI:10.1126/scisignal.2004112
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex with
+      Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino acid
+      deprivation.
+  posed_by: codex
+  posed_date: '2026-09-18'
+- discussion_id: gtr1_gtr2_not_gator1_components
+  prompt: Do not model the Gtr1/Gtr2 Rag-family GTPases as constituent GATOR1/SEACIT
+    subunits.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#iml1_gator1_subunit
+  - components#npr2_gator1_subunit
+  - components#npr3_gator1_subunit
+  - causal_graphs#yeast_gator1_torc1_regulation
+  rationale: Panchaud et al. 2013 identified Iml1/Npr2/Npr3 as the yeast GATOR1/SEACIT
+    counterpart that acts as a GAP for the Rag-family GTPase Gtr1, while GO:1990130
+    defines the Saccharomyces cerevisiae GATOR1/SEACIT complex itself as Iml1p, Npr2p
+    and Npr3p.
+  resolution_note: 'Declined: Gtr1 was included as the non-component Rag-family GAP
+    target for graph context instead of as a constituent.'
+  evidence:
+  - reference: GO:1990130
+    notes: Gene Ontology cellular-component term for the GATOR1 complex, including
+      the Saccharomyces cerevisiae SEACIT counterpart.
+  - reference: DOI:10.1126/scisignal.2004112
+    notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex with
+      Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino acid
+      deprivation.
+  posed_by: codex
+  posed_date: '2026-09-18'
+  resolved_date: '2026-09-18'
+- discussion_id: gator2_seacat_boundary
+  prompt: Keep the GATOR2/SEACAT subcomplex outside this GATOR1 record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#iml1_gator1_subunit
+  - components#npr2_gator1_subunit
+  - components#npr3_gator1_subunit
+  - causal_graphs#yeast_gator1_torc1_regulation
+  rationale: GO separates GATOR1/SEACIT from GATOR2/SEACAT, and Bar-Peled et al. 2013
+    separated human GATOR into two subcomplexes; GATOR2/SEACAT therefore belongs in
+    a separate record rather than this Iml1/Npr2/Npr3 GAP complex.
+  evidence:
+  - reference: GO:1990130
+    notes: Gene Ontology cellular-component term for the GATOR1 complex.
+  - reference: GO:0061700
+    notes: Gene Ontology cellular-component term for the GATOR2 complex.
+  - reference: DOI:10.1126/science.1232044
+    notes: Bar-Peled et al. 2013 separated GATOR into GATOR1 and GATOR2 subcomplexes.
+  posed_by: codex
+  posed_date: '2026-09-18'
+  resolved_date: '2026-09-18'

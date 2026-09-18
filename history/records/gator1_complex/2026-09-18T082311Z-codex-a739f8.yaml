@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gator1_complex.yaml
+  slug: gator1_complex
+session:
+  id: 2026-09-18T082311Z-codex-a739f8
+  timestamp: '2026-09-18T08:23:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add GATOR1 complex record
+  details: Added a GO-grounded GATOR1/SEACIT complex record with yeast Iml1/Npr2/Npr3 components,
+    Saccharomyces cerevisiae scope, negative TORC1-signaling function, Panchaud and Bar-Peled
+    evidence, a nonmechanistic Gtr1/TORC1 regulation graph, and boundary discussions for Rag
+    GTPases and GATOR2/SEACAT.
