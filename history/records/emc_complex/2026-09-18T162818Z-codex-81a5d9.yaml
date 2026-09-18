@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/emc_complex.yaml
+  slug: emc_complex
+session:
+  id: 2026-09-18T162818Z-codex-81a5d9
+  timestamp: '2026-09-18T16:28:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add EMC complex record
+  details: Added a GO:0072546 EMC complex record with broad GO synonymy, membrane-protein-complex
+    parentage, endoplasmic-reticulum-membrane parthood, Saccharomyces cerevisiae distribution
+    and example evidence, EMC-dependent ER transmembrane-domain insertion evidence from GO
+    and primary literature, a nonmechanistic insertion graph, and a subunit-boundary curation
+    TODO.

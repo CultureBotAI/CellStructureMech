@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EMC complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>EMC complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0072546"><code>GO:0072546</code></a> · OTHER · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A transmembrane protein complex in the endoplasmic reticulum membrane that promotes insertion of newly synthesized proteins into the ER membrane. <small>[<a href="http://purl.obolibrary.org/obo/GO_0072546"><code>GO:0072546</code></a>]</small></p>
+<p><strong>Synonyms:</strong> endoplasmic reticulum membrane protein complex; ER membrane protein complex</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005789"><code>GO:0005789</code></a> </p>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> Saccharomyces cerevisiae — <strong>COMMON</strong>: Budding yeast contains an ER-membrane EMC complex; Bai et al. determined a Saccharomyces cerevisiae cryo-EM structure and reported eight EMC subunits. [<a href="https://doi.org/10.1038/s41586-020-2389-3"><code>DOI:10.1038/s41586-020-2389-3</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> <em>Saccharomyces cerevisiae</em> — Budding-yeast model in which cryo-EM resolved the EMC transmembrane-domain insertase architecture. [<a href="https://doi.org/10.1038/s41586-020-2389-3"><code>DOI:10.1038/s41586-020-2389-3</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>protein insertion into ER membrane</strong> <a href="http://purl.obolibrary.org/obo/GO_0045048"><code>GO:0045048</code></a> — EMC promotes insertion and correct topogenesis of selected tail-anchored and multipass transmembrane domains in the ER membrane.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0045048"><code>GO:0045048</code></a> <small>GO:0045048 denotes incorporation of a protein into the endoplasmic-reticulum membrane with proper topogenic orientation.</small></li><li><a href="https://doi.org/10.1126/science.aao3099"><code>DOI:10.1126/science.aao3099</code></a> <small>Guna et al. 2018 showed that purified EMC catalyzes transmembrane-domain insertion of eligible substrates in a reconstituted liposome system.</small></li><li><a href="https://doi.org/10.1016/j.cell.2018.10.009"><code>DOI:10.1016/j.cell.2018.10.009</code></a> <small>Chitwood et al. 2018 found that EMC initiates cotranslational insertion of the first transmembrane domain of tested GPCR substrates and cooperates with Sec61 for later transmembrane-domain insertion.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-emc_er_membrane_insertion">EMC inserts transmembrane domains into the ER membrane <small>(FUNCTION)</small></h3>
+<p>EMC is embedded in the endoplasmic-reticulum membrane, directly inserts selected transmembrane domains, and can cooperate with the Sec61 translocon during cotranslational topogenesis.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>EMC complex</td><td>is embedded in</td><td>endoplasmic reticulum membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0072546"><code>GO:0072546</code></a> <small>GO:0072546 defines EMC as a transmembrane protein complex located in the endoplasmic reticulum.</small></li><li><a href="https://doi.org/10.1038/s41586-020-2389-3"><code>DOI:10.1038/s41586-020-2389-3</code></a> <small>Bai et al. 2020 determined the structure of Saccharomyces cerevisiae EMC and described the transmembrane subunits that form the membrane region.</small></li></ul></td></tr>
+<tr><td>EMC complex</td><td>supports</td><td>EMC-dependent ER transmembrane-domain insertion</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.aao3099"><code>DOI:10.1126/science.aao3099</code></a> <small>Guna et al. 2018 reconstituted EMC-dependent substrate insertion with purified EMC in synthetic liposomes.</small></li><li><a href="https://doi.org/10.7554/eLife.57887"><code>DOI:10.7554/eLife.57887</code></a> <small>O&#39;Donnell et al. 2020 resolved human EMC architecture that suggested a path for energy-independent membrane insertion of transmembrane domains.</small></li></ul></td></tr>
+<tr><td>EMC complex</td><td>cooperates with</td><td>Sec61 translocon complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2018.10.009"><code>DOI:10.1016/j.cell.2018.10.009</code></a> <small>Chitwood et al. 2018 found that purified EMC and SRP receptor were sufficient for correctly oriented first-transmembrane-domain insertion for beta1-adrenergic receptor, whereas Sec61 was required for insertion of the next transmembrane domain.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral component groundings and species-specific subunit boundaries for EMC before adding component rows. <small>GO exactly grounds the EMC complex and carries older Saccharomyces subunit text, but Bai et al. report an eight-subunit Saccharomyces cerevisiae EMC. This record leaves individual Emc1, Emc2, Emc3/Kre27, Emc4, Emc5/Aim27, Emc6, Emc7 and Emc10 rows unasserted until exact family groundings and core or accessory status are curated.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0072546"><code>GO:0072546</code></a> <small>Gene Ontology cellular-component term for the EMC complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0098796"><code>GO:0098796</code></a> <small>Gene Ontology cellular-component parent term for membrane protein complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005789"><code>GO:0005789</code></a> <small>Gene Ontology cellular-component term for the endoplasmic reticulum membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a> <small>Gene Ontology cellular-component term for the Sec61 translocon complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0045048"><code>GO:0045048</code></a> <small>Gene Ontology biological-process term for protein insertion into ER membrane.</small></li><li><a href="https://doi.org/10.1126/science.aao3099"><code>DOI:10.1126/science.aao3099</code></a> <small>Guna, Volkmar, Christianson and Hegde 2018, The ER membrane protein complex is a transmembrane domain insertase, Science.</small></li><li><a href="https://doi.org/10.1016/j.cell.2018.10.009"><code>DOI:10.1016/j.cell.2018.10.009</code></a> <small>Chitwood, Juszkiewicz, Guna, Shao and Hegde 2018, EMC Is Required to Initiate Accurate Membrane Protein Topogenesis, Cell.</small></li><li><a href="https://doi.org/10.7554/eLife.57887"><code>DOI:10.7554/eLife.57887</code></a> <small>O&#39;Donnell et al. 2020, The architecture of EMC reveals a path for membrane protein insertion, eLife.</small></li><li><a href="https://doi.org/10.1038/s41586-020-2389-3"><code>DOI:10.1038/s41586-020-2389-3</code></a> <small>Bai, You, Feng, Kovach and Li 2020, Structure of the ER membrane complex, a transmembrane-domain insertase, Nature.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-18T16:25:54Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-18T16:26:47Z</code> codex · EXPANDED_RECORD — Added broad GO synonymy, membrane-complex parentage, ER-membrane parthood, Saccharomyces scope, an EMC-dependent membrane-insertion function, GO/DOI evidence, a nonmechanistic ER transmembrane-domain insertion graph, and an EMC subunit-boundary TODO.</li><li><code>2026-09-18T16:39:54Z</code> codex · ADDRESS_REVIEW — Resolved #1167 by narrowing the insertion graph edge, resolved #1168 by adding top-level Sec61 GO evidence, and resolved #1169 by pairing Emc3/Kre27 and Emc5/Aim27 aliases in the subunit-boundary TODO.</li><li><code>2026-09-18T16:43:43Z</code> codex · FIX_VALIDATION — Removed GO:0045048 from the narrowed graph-local EMC-dependent insertion node so its specific label does not misrepresent the broad GO process; kept GO:0045048 on the top-level exact process function.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/emc_complex.yaml"><code>data/structures/other/emc_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
