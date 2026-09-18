@@ -41,6 +41,19 @@ curation_history:
   changes: Updated the initial expansion summary to describe the final GO:0045040
     outer-membrane protein-insertion grounding.
   llm_assisted: true
+- timestamp: '2026-09-18T15:34:05Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1161 and #1162 by removing an unattached review citation and
+    rephrasing the SAM-to-protein-insertion graph edge so the complex mediates a process
+    rather than assembling a process node.'
+  llm_assisted: true
+- timestamp: '2026-09-18T15:39:55Z'
+  curator: codex
+  action: ALIGN_REVIEW_HISTORY
+  changes: 'Removed #1160 from the review-fix curation summary after re-checking that
+    it was not an active PR #1159 defect.'
+  llm_assisted: true
 synonyms:
 - synonym_text: mitochondrial sorting and assembly machinery complex
   synonym_type: EXACT_SYNONYM
@@ -100,9 +113,6 @@ evidence:
 - reference: DOI:10.1038/nature01753
   notes: Wiedemann et al. 2003, Machinery for protein sorting and assembly in the
     mitochondrial outer membrane, Nature.
-- reference: DOI:10.1016/j.molcel.2023.02.020
-  notes: 'Busch et al. 2023, Mitochondrial protein transport: Versatility of translocases
-    and mechanisms, Molecular Cell.'
 causal_graphs:
 - graph_id: tom_sam_outer_membrane_protein_insertion
   title: SAM assembles imported outer-membrane precursors after TOM
@@ -151,14 +161,14 @@ causal_graphs:
       notes: Wiedemann et al. 2003 separated SAM-mediated outer-membrane sorting and
         assembly from the TOM import step.
   - subject: sam_complex
-    predicate: assembles
+    predicate: mediates
     object: protein_insertion
-    description: SAM carries out the assembly step for imported precursors that are
-      inserted into the mitochondrial outer membrane.
+    description: SAM mediates the assembly step for imported precursors that are inserted
+      into the mitochondrial outer membrane.
     evidence:
     - reference: GO:0045040
-      notes: GO:0045040 grounds protein insertion into the mitochondrial outer membrane
-        by outer-membrane translocase complexes.
+      notes: GO:0045040 grounds the protein-insertion process that places imported
+        proteins into the mitochondrial outer membrane.
 discussions:
 - discussion_id: sam_subunit_boundaries
   prompt: Resolve exact source-neutral component groundings for bona fide SAM constituents
