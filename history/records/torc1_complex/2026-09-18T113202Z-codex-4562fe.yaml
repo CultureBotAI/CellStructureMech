@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/torc1_complex.yaml
+  slug: torc1_complex
+session:
+  id: 2026-09-18T113202Z-codex-4562fe
+  timestamp: '2026-09-18T11:32:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1144
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1143
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - data/structures/other/torc1_complex.yaml
+  summary: Use mediator edge for TORC1 signaling
+  details: 'Addressed PR #1143 review issue #1144 by changing the TORC1 complex to TORC1 signaling
+    graph edge from upstream-style regulation to mediation and tightening the graph title,
+    description and scope notes around GO:0038202.'

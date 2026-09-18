@@ -28,6 +28,13 @@ curation_history:
   action: REFORMATTED_RECORD
   changes: Expanded shared YAML evidence aliases into plain repeated mappings.
   llm_assisted: true
+- timestamp: '2026-09-18T11:31:37Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: '#1144: Changed the TORC1-to-TORC1-signaling graph edge from an upstream-regulation
+    predicate to a mediator predicate and tightened the graph wording around the GO:0038202
+    process.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 synonyms:
@@ -161,14 +168,14 @@ evidence:
     component.
 causal_graphs:
 - graph_id: yeast_torc1_subunit_signaling
-  title: Yeast TORC1 complex supports TORC1 signaling
+  title: Yeast TORC1 complex mediates TORC1 signaling
   description: In Saccharomyces cerevisiae, Kog1, Lst8, Tco89 and an alternate Tor1/Tor2
-    catalytic subunit form the rapamycin-sensitive TORC1 complex linked to TORC1 signaling.
+    catalytic subunit form the rapamycin-sensitive complex that mediates TORC1 signaling.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph represents curated TORC1 subunit membership and the high-level
-    signaling output without modeling nutrient inputs, Gtr1/Gtr2 nucleotide states,
-    or downstream phosphorylation targets.
+    signaling output mediated by the complex without modeling nutrient inputs, Gtr1/Gtr2
+    nucleotide states, or downstream phosphorylation targets.
   nodes:
   - node_id: tor_kinase_torc1_subunit
     label: TOR kinase TORC1 subunit
@@ -238,10 +245,9 @@ causal_graphs:
       notes: Reinke et al. 2004 identified Tco89p as a Saccharomyces cerevisiae TORC1
         component.
   - subject: torc1_complex
-    predicate: regulates
+    predicate: mediates
     object: torc1_signaling
-    description: TORC1 is represented as the rapamycin-sensitive TOR complex that
-      mediates TORC1 signaling.
+    description: TORC1 is represented as mediating TORC1 signaling.
     evidence:
     - reference: GO:0038202
       notes: Gene Ontology biological-process term for TORC1 signaling.
