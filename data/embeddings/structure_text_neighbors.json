@@ -10150,6 +10150,11 @@
       "label": "EMC complex",
       "neighbors": [
         {
+          "identifier": "GO:0043529",
+          "label": "GET complex",
+          "cosine_similarity": 0.92921724
+        },
+        {
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.89335621
@@ -10168,11 +10173,6 @@
           "identifier": "GO:0001401",
           "label": "SAM complex",
           "cosine_similarity": 0.81295248
-        },
-        {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.80328178
         }
       ]
     },
@@ -10180,6 +10180,11 @@
       "identifier": "GO:0032865",
       "label": "ERMES complex",
       "neighbors": [
+        {
+          "identifier": "GO:0043529",
+          "label": "GET complex",
+          "cosine_similarity": 0.89880806
+        },
         {
           "identifier": "GO:0072546",
           "label": "EMC complex",
@@ -10199,11 +10204,6 @@
           "identifier": "GO:0061617",
           "label": "MICOS complex",
           "cosine_similarity": 0.85741768
-        },
-        {
-          "identifier": "GO:0042720",
-          "label": "mitochondrial inner membrane peptidase complex",
-          "cosine_similarity": 0.8491105
         }
       ]
     },
@@ -10232,9 +10232,9 @@
           "cosine_similarity": 0.80328178
         },
         {
-          "identifier": "GO:0034044",
-          "label": "exomer complex",
-          "cosine_similarity": 0.78042082
+          "identifier": "GO:0043529",
+          "label": "GET complex",
+          "cosine_similarity": 0.78135393
         }
       ]
     },
@@ -10377,6 +10377,11 @@
           "cosine_similarity": 0.78042082
         },
         {
+          "identifier": "GO:0043529",
+          "label": "GET complex",
+          "cosine_similarity": 0.77029066
+        },
+        {
           "identifier": "GO:1990070",
           "label": "TRAPPI protein complex",
           "cosine_similarity": 0.76915127
@@ -10385,11 +10390,6 @@
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.76447618
-        },
-        {
-          "identifier": "GO:0072546",
-          "label": "EMC complex",
-          "cosine_similarity": 0.75980232
         }
       ]
     },
@@ -10483,6 +10483,37 @@
           "identifier": "GO:0042729",
           "label": "DASH complex",
           "cosine_similarity": 0.72340776
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0043529",
+      "label": "GET complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.92921724
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.89880806
+        },
+        {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.82811917
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.81313527
+        },
+        {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.79257619
         }
       ]
     },
@@ -11720,9 +11751,9 @@
           "cosine_similarity": 0.7671792
         },
         {
-          "identifier": "GO:0072546",
-          "label": "EMC complex",
-          "cosine_similarity": 0.75465664
+          "identifier": "GO:0043529",
+          "label": "GET complex",
+          "cosine_similarity": 0.75670509
         }
       ]
     },
@@ -11813,9 +11844,9 @@
           "cosine_similarity": 0.77023081
         },
         {
-          "identifier": "GO:0072546",
-          "label": "EMC complex",
-          "cosine_similarity": 0.75419179
+          "identifier": "GO:0043529",
+          "label": "GET complex",
+          "cosine_similarity": 0.76833509
         }
       ]
     },
