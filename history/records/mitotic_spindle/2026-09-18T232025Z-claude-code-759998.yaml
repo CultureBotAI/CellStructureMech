@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mitotic_spindle.yaml
+  slug: mitotic_spindle
+session:
+  id: 2026-09-18T232025Z-claude-code-759998
+  timestamp: '2026-09-18T23:20:25Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created mitotic spindle record
+  details: Added a GO:0072686 mitotic spindle record with GO spindle parentage and spindle-microtubule
+    parthood, a reviewed-label-only alpha/beta-tubulin constituent, Saccharomyces cerevisiae
+    scope, GO/DOI evidence, a budding-yeast spindle architecture graph, and explicit SPB/kinetochore-boundary
+    and microtubule-associated protein grounding discussions.

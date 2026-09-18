@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mitotic spindle · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>mitotic spindle</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0072686"><code>GO:0072686</code></a> · CYTOSKELETON · OTHER · <span class="status">PROPOSED</span></p>
+<p class="definition">A spindle that forms as part of mitosis. Mitotic and meiotic spindles contain distinctive complements of proteins associated with microtubules. <small>[<a href="http://purl.obolibrary.org/obo/GO_0072686"><code>GO:0072686</code></a>]</small></p>
+<p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-alpha_beta_tubulins"><td>alpha- and beta-tubulins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Eukaryotic tubulin subunits that polymerize into the spindle microtubules of the mitotic spindle.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a> <small>Gene Ontology defines spindle microtubules as microtubules that are part of a mitotic or meiotic spindle.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005874"><code>GO:0005874</code></a> <small>Gene Ontology defines microtubules as eukaryotic hollow tubes made from polymeric tubulin protofilaments.</small></li><li><a href="https://doi.org/10.1126/science.277.5325.574"><code>DOI:10.1126/science.277.5325.574</code></a> <small>Straight et al. 1997 imaged GFP-Tub1-labeled spindle microtubules in living Saccharomyces cerevisiae cells.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> Saccharomyces cerevisiae — <strong>COMMON</strong>: Budding yeast has a nuclear mitotic spindle whose microtubule organization has been reconstructed by serial-section electron microscopy and imaged in living cells. [<a href="https://doi.org/10.1083/jcb.129.6.1601"><code>DOI:10.1083/jcb.129.6.1601</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> <em>Saccharomyces cerevisiae</em> — Reference microbial eukaryote in which mitotic spindle microtubules were mapped structurally and tracked during chromosome separation in vivo. [<a href="https://doi.org/10.1083/jcb.129.6.1601"><code>DOI:10.1083/jcb.129.6.1601</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>chromosome segregation</strong> <a href="http://purl.obolibrary.org/obo/GO_0007059"><code>GO:0007059</code></a> — Mitotic spindles move duplicated chromosomes apart by coupling kinetochores to spindle microtubules that extend from opposing spindle poles.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005819"><code>GO:0005819</code></a> <small>Gene Ontology defines the spindle as an array of microtubules and associated molecules that serves to move duplicated chromosomes apart.</small></li><li><a href="https://doi.org/10.1126/science.277.5325.574"><code>DOI:10.1126/science.277.5325.574</code></a> <small>Straight et al. 1997 visualized chromosome movements and spindle dynamics in living budding-yeast cells.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-budding_yeast_spindle_microtubule_architecture">Spindle microtubules bridge budding-yeast spindle poles and kinetochores <small>(FUNCTION)</small></h3>
+<p>In Saccharomyces cerevisiae, spindle pole bodies organize a bipolar array of spindle microtubules, and a subset of those microtubules attach to kinetochores during mitosis.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>spindle pole body</td><td>anchor</td><td>spindle microtubule</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a> <small>GO:0005876 defines spindle microtubules as part of a spindle and anchored at one spindle pole.</small></li><li><a href="https://doi.org/10.1146/annurev.cellbio.20.022003.114106"><code>DOI:10.1146/annurev.cellbio.20.022003.114106</code></a> <small>Jaspersen and Winey 2004 reviewed the budding-yeast SPB as the nuclear microtubule-organizing center.</small></li></ul></td></tr>
+<tr><td>spindle microtubule</td><td>assemble into</td><td>mitotic spindle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005819"><code>GO:0005819</code></a> <small>GO:0005819 defines the spindle as an array of microtubules and associated molecules between opposite poles.</small></li><li><a href="https://doi.org/10.1083/jcb.129.6.1601"><code>DOI:10.1083/jcb.129.6.1601</code></a> <small>Winey et al. 1995 reconstructed budding-yeast mitotic spindles from serial electron micrographs and classified their microtubule bundles.</small></li></ul></td></tr>
+<tr><td>spindle microtubule</td><td>attach to</td><td>kinetochore</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000776"><code>GO:0000776</code></a> <small>GO:0000776 defines the kinetochore as a centromeric complex that provides an attachment point for spindle microtubules.</small></li><li><a href="https://doi.org/10.1083/jcb.129.6.1601"><code>DOI:10.1083/jcb.129.6.1601</code></a> <small>Winey et al. 1995 reconstructed budding-yeast spindles containing presumptive kinetochore microtubules and interpolar microtubules.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep spindle pole bodies and kinetochores as adjacent structures instead of molecular components of the generic mitotic-spindle record. <small>In budding yeast, spindle pole bodies organize spindle microtubules and kinetochores provide chromosome attachment sites for them, but both are separate GO-denoted structures with their own composition and curation boundaries rather than taxon-agnostic molecular constituents of GO:0072686.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for mitotic spindle motors and microtubule-associated proteins. <small>GO defines spindles as microtubules plus associated molecules; this first record captures the alpha/beta-tubulin polymer boundary and defers the taxon-specific motor and microtubule-associated protein set.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0072686"><code>GO:0072686</code></a> <small>Gene Ontology cellular-component term for the mitotic spindle.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005819"><code>GO:0005819</code></a> <small>Gene Ontology cellular-component term for the broader spindle.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a> <small>Gene Ontology cellular-component term for the spindle microtubule.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005874"><code>GO:0005874</code></a> <small>Gene Ontology cellular-component term for the microtubule.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0007059"><code>GO:0007059</code></a> <small>Gene Ontology biological-process term for chromosome segregation.</small></li><li><a href="https://doi.org/10.1083/jcb.129.6.1601"><code>DOI:10.1083/jcb.129.6.1601</code></a> <small>Winey et al. 1995, Three-dimensional ultrastructural analysis of the Saccharomyces cerevisiae mitotic spindle, Journal of Cell Biology.</small></li><li><a href="https://doi.org/10.1126/science.277.5325.574"><code>DOI:10.1126/science.277.5325.574</code></a> <small>Straight et al. 1997, Mitosis in Living Budding Yeast: Anaphase A But No Metaphase Plate, Science.</small></li><li><a href="https://doi.org/10.1146/annurev.cellbio.20.022003.114106"><code>DOI:10.1146/annurev.cellbio.20.022003.114106</code></a> <small>Jaspersen and Winey 2004 reviewed spindle pole body structure, duplication, and mitotic-spindle assembly in budding yeast.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-18T23:15:22Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-18T23:16:16Z</code> codex · EXPANDED_RECORD — Added spindle parentage and spindle-microtubule parthood, an alpha/beta-tubulin constituent, Saccharomyces cerevisiae scope, a chromosome-segregation function, GO and DOI evidence, a nonmechanistic budding-yeast spindle architecture graph, and discussions on SPB/kinetochore boundaries and MAP curation.</li><li><code>2026-09-18T23:16:44Z</code> codex · NORMALIZED_GRAPH_LABELS — Normalized GO-grounded graph nodes to the canonical singular labels for spindle pole body, spindle microtubule, and kinetochore.</li><li><code>2026-09-18T23:26:49Z</code> codex · FIX_DISCUSSION_ANCHOR — Pointed the spindle-associated-protein TODO at the alpha/beta-tubulin component anchor so every discussion reference resolves.</li><li><code>2026-09-18T23:34:36Z</code> codex · ADDRESS_REVIEW — Resolved #1204 by reclassifying the SPB/microtubule/kinetochore graph as FUNCTION, and resolved #1205 by adding GO:0005874 evidence for alpha/beta-tubulin microtubule composition.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/mitotic_spindle.yaml"><code>data/structures/cytoskeleton/mitotic_spindle.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
