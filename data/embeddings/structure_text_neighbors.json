@@ -9891,9 +9891,9 @@
           "cosine_similarity": 0.7510978
         },
         {
-          "identifier": "GO:0005816",
-          "label": "spindle pole body",
-          "cosine_similarity": 0.72645975
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.72721795
         }
       ]
     },
@@ -10031,6 +10031,11 @@
           "cosine_similarity": 0.74839014
         },
         {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.73942404
+        },
+        {
           "identifier": "GO:1990070",
           "label": "TRAPPI protein complex",
           "cosine_similarity": 0.73273619
@@ -10044,11 +10049,6 @@
           "identifier": "GO:0000444",
           "label": "MIS12/MIND type complex",
           "cosine_similarity": 0.71845081
-        },
-        {
-          "identifier": "GO:1990071",
-          "label": "TRAPPII protein complex",
-          "cosine_similarity": 0.69277542
         }
       ]
     },
@@ -10103,14 +10103,14 @@
           "cosine_similarity": 0.88371456
         },
         {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.78042082
+        },
+        {
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.77438259
-        },
-        {
-          "identifier": "GO:0000938",
-          "label": "GARP complex",
-          "cosine_similarity": 0.76159216
         }
       ]
     },
@@ -10217,6 +10217,11 @@
           "cosine_similarity": 0.82566426
         },
         {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.72738924
+        },
+        {
           "identifier": "cellstructuremech:secyeg_translocon_complex",
           "label": "SecYEG translocon complex",
           "cosine_similarity": 0.72024481
@@ -10230,11 +10235,37 @@
           "identifier": "GO:0030127",
           "label": "COPII vesicle coat",
           "cosine_similarity": 0.70588908
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0034044",
+      "label": "exomer complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.78042082
         },
         {
           "identifier": "GO:1990070",
           "label": "TRAPPI protein complex",
-          "cosine_similarity": 0.70212787
+          "cosine_similarity": 0.76915127
+        },
+        {
+          "identifier": "GO:1990071",
+          "label": "TRAPPII protein complex",
+          "cosine_similarity": 0.75250979
+        },
+        {
+          "identifier": "GO:1990072",
+          "label": "TRAPPIII protein complex",
+          "cosine_similarity": 0.7467632
+        },
+        {
+          "identifier": "GO:0000938",
+          "label": "GARP complex",
+          "cosine_similarity": 0.74619981
         }
       ]
     },
@@ -10263,9 +10294,9 @@
           "cosine_similarity": 0.74839014
         },
         {
-          "identifier": "GO:0005802",
-          "label": "trans-Golgi network",
-          "cosine_similarity": 0.73799305
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.74619981
         }
       ]
     },
@@ -11064,14 +11095,14 @@
           "cosine_similarity": 0.74988962
         },
         {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.74023911
+        },
+        {
           "identifier": "GO:0000815",
           "label": "ESCRT III complex",
           "cosine_similarity": 0.73949898
-        },
-        {
-          "identifier": "GO:0000938",
-          "label": "GARP complex",
-          "cosine_similarity": 0.73663795
         }
       ]
     },
@@ -11219,14 +11250,14 @@
           "cosine_similarity": 0.78010634
         },
         {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.76915127
+        },
+        {
           "identifier": "GO:0000938",
           "label": "GARP complex",
           "cosine_similarity": 0.75093928
-        },
-        {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.73595464
         }
       ]
     },
@@ -11245,6 +11276,11 @@
           "cosine_similarity": 0.97428711
         },
         {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.75250979
+        },
+        {
           "identifier": "GO:0030897",
           "label": "HOPS complex",
           "cosine_similarity": 0.7524498
@@ -11253,11 +11289,6 @@
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.72661981
-        },
-        {
-          "identifier": "GO:0000938",
-          "label": "GARP complex",
-          "cosine_similarity": 0.7132154
         }
       ]
     },
@@ -11281,14 +11312,14 @@
           "cosine_similarity": 0.76180138
         },
         {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.7467632
+        },
+        {
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.72503184
-        },
-        {
-          "identifier": "GO:0000938",
-          "label": "GARP complex",
-          "cosine_similarity": 0.71907177
         }
       ]
     },

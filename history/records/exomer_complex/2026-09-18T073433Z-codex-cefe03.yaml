@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/exomer_complex.yaml
+  slug: exomer_complex
+session:
+  id: 2026-09-18T073433Z-codex-cefe03
+  timestamp: '2026-09-18T07:34:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add exomer complex record
+  details: Created a GO:0034044 exomer complex record with Chs5 and ChAP constituent subunits,
+    Saccharomyces cerevisiae scope, Golgi-to-plasma-membrane transport function, a source-bounded
+    yeast exomer assembly graph, GO/DOI evidence from Trautwein 2006, Wang 2006, Sanchatjate
+    and Schekman 2006, and Huranova 2016, plus open subunit-grounding and resolved Arf1-boundary
+    discussions.

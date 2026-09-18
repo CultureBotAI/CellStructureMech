@@ -1,0 +1,414 @@
+identifier: GO:0034044
+label: exomer complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that acts as a selective cargo adaptor mediating the
+  selective transport of specific membrane proteins from the trans-Golgi network (TGN)
+  to the plasma membrane.
+definition_source: GO:0034044
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T07:32:14Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T07:33:22Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added exomer protein-complex parentage, the Chs5/6 synonym, reviewed-label-only
+    yeast Chs5 and ChAP components, Saccharomyces scope, a Golgi-to-plasma-membrane
+    transport function, GO/DOI evidence, a nonmechanistic exomer assembly graph, and
+    subunit grounding plus Arf1-boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-18T07:33:55Z'
+  curator: codex
+  action: REFORMATTED_RECORD
+  changes: Expanded shared YAML evidence aliases into plain repeated mappings.
+  llm_assisted: true
+- timestamp: '2026-09-18T07:47:07Z'
+  curator: codex
+  action: FIXED_DISCUSSION_ANCHOR
+  changes: Retargeted the Arf1 boundary discussion from the invalid whole components
+    section to the five concrete exomer component anchors.
+  llm_assisted: true
+- timestamp: '2026-09-18T07:57:56Z'
+  curator: codex
+  action: REFINED_ARF1_EDGE
+  changes: '#1132: Retargeted the Arf1 graph edge from Chs5-specific recruitment to
+    whole-exomer membrane recruitment and cited Wang et al. 2006 for the Arf1-dependent
+    membrane-binding evidence.'
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+synonyms:
+- synonym_text: Chs5/6 complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1091/mbc.e06-03-0210
+components:
+- component_id: chs5_exomer_scaffold
+  label: Chs5 exomer scaffold subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CHS5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae CHS5 exomer subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: Scaffold subunit that assembles with Chs6-family ChAP cargo-binding subunits
+    to form the yeast exomer complex.
+  evidence:
+  - reference: GO:0034044
+    notes: GO:0034044 defines the exomer complex as the cargo adaptor that mediates
+      selected trans-Golgi-network-to-plasma-membrane transport.
+  - reference: DOI:10.1091/mbc.e06-03-0210
+    notes: Sanchatjate and Schekman 2006 described Chs5, Chs6, Bch1, Bud7 and Bch2
+      in the yeast Chs5/6 exomer complex.
+  - reference: DOI:10.15252/embr.201540795
+    notes: Huranova et al. 2016 showed that yeast exomer assembles at the trans-Golgi
+      network by recruiting Chs5 before the ChAP cargo-binding subunits.
+- component_id: chs6_exomer_chap_subunit
+  label: Chs6 exomer ChAP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CHS6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae CHS6 exomer subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: Chs5-Arf1-binding protein and cargo-binding subunit that helps select Chs3
+    for exomer-mediated export.
+  evidence:
+  - reference: GO:0034044
+    notes: GO:0034044 defines the exomer complex as the cargo adaptor that mediates
+      selected trans-Golgi-network-to-plasma-membrane transport.
+  - reference: DOI:10.1091/mbc.e06-03-0210
+    notes: Sanchatjate and Schekman 2006 described Chs5, Chs6, Bch1, Bud7 and Bch2
+      in the yeast Chs5/6 exomer complex.
+  - reference: DOI:10.1038/sj.emboj.7601007
+    notes: Trautwein et al. 2006 named Chs6, Bch1, Bud7 and Bch2 as the ChAP family
+      that interacts with Chs5 and Arf1 during specialized Golgi export.
+- component_id: bch1_exomer_chap_subunit
+  label: Bch1 exomer ChAP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - BCH1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae BCH1 exomer subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: Chs5-Arf1-binding protein that redundantly supports Chs3 association with
+    Bud7 in the yeast exomer complex.
+  evidence:
+  - reference: GO:0034044
+    notes: GO:0034044 defines the exomer complex as the cargo adaptor that mediates
+      selected trans-Golgi-network-to-plasma-membrane transport.
+  - reference: DOI:10.1091/mbc.e06-03-0210
+    notes: Sanchatjate and Schekman 2006 described Chs5, Chs6, Bch1, Bud7 and Bch2
+      in the yeast Chs5/6 exomer complex.
+  - reference: DOI:10.1038/sj.emboj.7601007
+    notes: Trautwein et al. 2006 named Chs6, Bch1, Bud7 and Bch2 as the ChAP family
+      that interacts with Chs5 and Arf1 during specialized Golgi export.
+- component_id: bud7_exomer_chap_subunit
+  label: Bud7 exomer ChAP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - BUD7
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae BUD7 exomer subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: Chs5-Arf1-binding protein that redundantly supports Chs3 association with
+    Bch1 in the yeast exomer complex.
+  evidence:
+  - reference: GO:0034044
+    notes: GO:0034044 defines the exomer complex as the cargo adaptor that mediates
+      selected trans-Golgi-network-to-plasma-membrane transport.
+  - reference: DOI:10.1091/mbc.e06-03-0210
+    notes: Sanchatjate and Schekman 2006 described Chs5, Chs6, Bch1, Bud7 and Bch2
+      in the yeast Chs5/6 exomer complex.
+  - reference: DOI:10.1038/sj.emboj.7601007
+    notes: Trautwein et al. 2006 named Chs6, Bch1, Bud7 and Bch2 as the ChAP family
+      that interacts with Chs5 and Arf1 during specialized Golgi export.
+- component_id: bch2_exomer_chap_subunit
+  label: Bch2 exomer ChAP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - BCH2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae BCH2 exomer subunit;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: Chs5-Arf1-binding protein represented among the ChAP cargo-binding subunits
+    of yeast exomer.
+  evidence:
+  - reference: GO:0034044
+    notes: GO:0034044 defines the exomer complex as the cargo adaptor that mediates
+      selected trans-Golgi-network-to-plasma-membrane transport.
+  - reference: DOI:10.1091/mbc.e06-03-0210
+    notes: Sanchatjate and Schekman 2006 described Chs5, Chs6, Bch1, Bud7 and Bch2
+      in the yeast Chs5/6 exomer complex.
+  - reference: DOI:10.1038/sj.emboj.7601007
+    notes: Trautwein et al. 2006 named Chs6, Bch1, Bud7 and Bch2 as the ChAP family
+      that interacts with Chs5 and Arf1 during specialized Golgi export.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a Chs5/ChAP exomer complex that mediates selected cargo
+    export from the trans-Golgi network to the plasma membrane.
+  reference: DOI:10.1083/jcb.200605106
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Chs5 and the ChAP subunits were assigned to the
+    exomer cargo-adaptor complex.
+  reference: DOI:10.1091/mbc.e06-03-0210
+functions:
+- function_id: golgi_to_plasma_membrane_transport
+  label: Golgi to plasma membrane transport
+  grounding: GO:0006893
+  description: Exomer mediates selective export of specific membrane-protein cargoes
+    from the trans-Golgi network to the plasma membrane.
+  evidence:
+  - reference: GO:0006893
+    notes: GO:0006893 denotes vesicle-mediated transport from the trans-Golgi network
+      to the plasma membrane.
+  - reference: DOI:10.1083/jcb.200605106
+    notes: Wang et al. 2006 named exomer as a yeast coat complex for select trans-Golgi-network-to-plasma-membrane
+      transport.
+evidence:
+- reference: GO:0034044
+  notes: Gene Ontology cellular-component term for the exomer complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0006893
+  notes: Gene Ontology biological-process term for Golgi-to-plasma-membrane transport.
+- reference: DOI:10.1038/sj.emboj.7601007
+  notes: Trautwein et al. 2006, Arf1p, Chs5p and the ChAPs are required for export
+    of specialized cargo from the Golgi, The EMBO Journal.
+- reference: DOI:10.1083/jcb.200605106
+  notes: 'Wang, Hamamoto, Orci and Schekman 2006, Exomer: a coat complex for transport
+    of select membrane proteins from the trans-Golgi network to the plasma membrane
+    in yeast, Journal of Cell Biology.'
+- reference: DOI:10.1091/mbc.e06-03-0210
+  notes: 'Sanchatjate and Schekman 2006, Chs5/6 complex: a multiprotein complex that
+    interacts with and conveys chitin synthase III from the trans-Golgi network to
+    the cell surface, Molecular Biology of the Cell.'
+- reference: DOI:10.15252/embr.201540795
+  notes: Huranova, Muruganandam, Weiss and Spang 2016, Dynamic assembly of the exomer
+    secretory vesicle cargo adaptor subunits, EMBO Reports.
+causal_graphs:
+- graph_id: yeast_exomer_tgn_export
+  title: Chs5 and ChAP subunits assemble exomer for TGN export
+  description: In Saccharomyces cerevisiae, the Chs5 scaffold assembles with Chs6-family
+    ChAP cargo-binding subunits to form exomer, which supports selected export from
+    the trans-Golgi network to the plasma membrane.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents curated yeast exomer subunit membership and Arf1-associated
+    membrane binding without modeling exomer coat geometry, Chs3 cargo binding, or
+    every Golgi-to-plasma-membrane trafficking step.
+  nodes:
+  - node_id: chs5_exomer_scaffold
+    label: Chs5 exomer scaffold subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: chs5_exomer_scaffold
+  - node_id: chs6_exomer_chap_subunit
+    label: Chs6 exomer ChAP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: chs6_exomer_chap_subunit
+  - node_id: bch1_exomer_chap_subunit
+    label: Bch1 exomer ChAP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: bch1_exomer_chap_subunit
+  - node_id: bud7_exomer_chap_subunit
+    label: Bud7 exomer ChAP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: bud7_exomer_chap_subunit
+  - node_id: bch2_exomer_chap_subunit
+    label: Bch2 exomer ChAP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: bch2_exomer_chap_subunit
+  - node_id: arf1_gtpase
+    label: Arf1 GTPase
+    node_type: GENE_OR_PROTEIN
+  - node_id: trans_golgi_network
+    label: trans-Golgi network
+    node_type: STRUCTURE
+    grounding: GO:0005802
+  - node_id: exomer_complex
+    label: exomer complex
+    node_type: STRUCTURE
+    grounding: GO:0034044
+  - node_id: golgi_to_plasma_membrane_transport
+    label: Golgi to plasma membrane transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006893
+  edges:
+  - subject: arf1_gtpase
+    predicate: supports membrane recruitment of
+    object: exomer_complex
+    description: Arf1 supports exomer membrane association during trans-Golgi-network
+      cargo export.
+    evidence:
+    - reference: DOI:10.1038/sj.emboj.7601007
+      notes: Trautwein et al. 2006 connected Arf1 with Chs5 and ChAP function in export
+        of specialized Golgi cargo.
+    - reference: DOI:10.1083/jcb.200605106
+      notes: Wang et al. 2006 described Arf1-dependent recruitment and membrane binding
+        by the exomer coat complex.
+  - subject: chs5_exomer_scaffold
+    predicate: assembles with
+    object: chs6_exomer_chap_subunit
+    description: Chs5 assembles with Chs6 during formation of exomer cargo-adaptor
+      complexes.
+    evidence:
+    - reference: DOI:10.15252/embr.201540795
+      notes: Huranova et al. 2016 showed that yeast exomer assembles at the trans-Golgi
+        network by recruiting Chs5 before the ChAP cargo-binding subunits.
+  - subject: chs5_exomer_scaffold
+    predicate: assembles with
+    object: bch1_exomer_chap_subunit
+    description: Chs5 assembles with the ChAP Bch1 during formation of yeast exomer
+      complexes.
+    evidence:
+    - reference: DOI:10.15252/embr.201540795
+      notes: Huranova et al. 2016 showed that yeast exomer assembles at the trans-Golgi
+        network by recruiting Chs5 before the ChAP cargo-binding subunits.
+  - subject: chs5_exomer_scaffold
+    predicate: assembles with
+    object: bud7_exomer_chap_subunit
+    description: Chs5 assembles with the ChAP Bud7 during formation of yeast exomer
+      complexes.
+    evidence:
+    - reference: DOI:10.15252/embr.201540795
+      notes: Huranova et al. 2016 showed that yeast exomer assembles at the trans-Golgi
+        network by recruiting Chs5 before the ChAP cargo-binding subunits.
+  - subject: chs5_exomer_scaffold
+    predicate: assembles with
+    object: bch2_exomer_chap_subunit
+    description: Chs5 assembles with the ChAP Bch2 during formation of yeast exomer
+      complexes.
+    evidence:
+    - reference: DOI:10.15252/embr.201540795
+      notes: Huranova et al. 2016 showed that yeast exomer assembles at the trans-Golgi
+        network by recruiting Chs5 before the ChAP cargo-binding subunits.
+  - subject: chs5_exomer_scaffold
+    predicate: localizes to
+    object: trans_golgi_network
+    description: Chs5 is recruited to trans-Golgi-network membranes during exomer
+      assembly.
+    evidence:
+    - reference: DOI:10.15252/embr.201540795
+      notes: Huranova et al. 2016 showed that yeast exomer assembles at the trans-Golgi
+        network by recruiting Chs5 before the ChAP cargo-binding subunits.
+  - subject: chs5_exomer_scaffold
+    predicate: is part of
+    object: exomer_complex
+    description: Chs5 is represented as the exomer scaffold subunit.
+    evidence:
+    - reference: DOI:10.1091/mbc.e06-03-0210
+      notes: Sanchatjate and Schekman 2006 described Chs5, Chs6, Bch1, Bud7 and Bch2
+        in the yeast Chs5/6 exomer complex.
+  - subject: chs6_exomer_chap_subunit
+    predicate: is part of
+    object: exomer_complex
+    description: Chs6 is represented as a ChAP subunit of exomer.
+    evidence:
+    - reference: DOI:10.1091/mbc.e06-03-0210
+      notes: Sanchatjate and Schekman 2006 described Chs5, Chs6, Bch1, Bud7 and Bch2
+        in the yeast Chs5/6 exomer complex.
+  - subject: bch1_exomer_chap_subunit
+    predicate: is part of
+    object: exomer_complex
+    description: Bch1 is represented as a ChAP subunit of exomer.
+    evidence:
+    - reference: DOI:10.1091/mbc.e06-03-0210
+      notes: Sanchatjate and Schekman 2006 described Chs5, Chs6, Bch1, Bud7 and Bch2
+        in the yeast Chs5/6 exomer complex.
+  - subject: bud7_exomer_chap_subunit
+    predicate: is part of
+    object: exomer_complex
+    description: Bud7 is represented as a ChAP subunit of exomer.
+    evidence:
+    - reference: DOI:10.1091/mbc.e06-03-0210
+      notes: Sanchatjate and Schekman 2006 described Chs5, Chs6, Bch1, Bud7 and Bch2
+        in the yeast Chs5/6 exomer complex.
+  - subject: bch2_exomer_chap_subunit
+    predicate: is part of
+    object: exomer_complex
+    description: Bch2 is represented as a ChAP subunit of exomer.
+    evidence:
+    - reference: DOI:10.1091/mbc.e06-03-0210
+      notes: Sanchatjate and Schekman 2006 described Chs5, Chs6, Bch1, Bud7 and Bch2
+        in the yeast Chs5/6 exomer complex.
+  - subject: exomer_complex
+    predicate: participates in
+    object: golgi_to_plasma_membrane_transport
+    description: Exomer participates in selected Golgi-to-plasma-membrane transport
+      of yeast membrane-protein cargoes.
+    evidence:
+    - reference: DOI:10.1083/jcb.200605106
+      notes: Wang et al. 2006 named exomer as the complex that transports select membrane
+        proteins from the trans-Golgi network to the plasma membrane.
+discussions:
+- discussion_id: resolve_exomer_subunit_family_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, or NCBIfam groundings for the
+    five yeast exomer subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#chs5_exomer_scaffold
+  - components#chs6_exomer_chap_subunit
+  - components#bch1_exomer_chap_subunit
+  - components#bud7_exomer_chap_subunit
+  - components#bch2_exomer_chap_subunit
+  rationale: This first exomer record names the yeast Chs5, Chs6, Bch1, Bud7 and Bch2
+    constituent subunits but leaves InterPro, Pfam, or NCBIfam grounding unset until
+    exact orthology and paralogy boundaries are reviewed per subunit.
+  evidence:
+  - reference: DOI:10.1091/mbc.e06-03-0210
+    notes: Sanchatjate and Schekman 2006 described Chs5, Chs6, Bch1, Bud7 and Bch2
+      in the yeast Chs5/6 exomer complex.
+  - reference: DOI:10.15252/embr.201540795
+    notes: Huranova et al. 2016 showed that yeast exomer assembles at the trans-Golgi
+      network by recruiting Chs5 before the ChAP cargo-binding subunits.
+  posed_by: codex
+  posed_date: '2026-09-18'
+- discussion_id: arf1_not_exomer_component
+  prompt: Do not model Arf1 as a constituent exomer subunit.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#chs5_exomer_scaffold
+  - components#chs6_exomer_chap_subunit
+  - components#bch1_exomer_chap_subunit
+  - components#bud7_exomer_chap_subunit
+  - components#bch2_exomer_chap_subunit
+  - causal_graphs#yeast_exomer_tgn_export
+  rationale: Arf1 binds ChAPs and supports exomer membrane association for Golgi export,
+    but the curated exomer identity is the stable Chs5/ChAP cargo-adaptor complex
+    rather than its recruiting Arf-family GTPase.
+  resolution_note: 'Declined: Arf1 was included as a non-component graph node for
+    membrane-recruitment context instead of as a constituent.'
+  evidence:
+  - reference: DOI:10.1038/sj.emboj.7601007
+    notes: Trautwein et al. 2006 named Chs6, Bch1, Bud7 and Bch2 as the ChAP family
+      that interacts with Chs5 and Arf1 during specialized Golgi export.
+  - reference: DOI:10.1083/jcb.200605106
+    notes: Wang et al. 2006 described Arf1-dependent recruitment of the exomer coat
+      complex.
+  posed_by: codex
+  posed_date: '2026-09-18'
+  resolved_date: '2026-09-18'
