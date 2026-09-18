@@ -1,0 +1,189 @@
+identifier: GO:0001401
+label: SAM complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A large complex of the mitochondrial outer membrane that mediates sorting
+  of some imported proteins to the outer membrane and their assembly in the membrane;
+  functions after import of incoming proteins by the mitochondrial outer membrane
+  translocase complex.
+definition_source: GO:0001401
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T15:12:55Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T15:14:22Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, outer-mitochondrial-membrane protein-complex parentage,
+    mitochondrial-outer-membrane parthood, Saccharomyces scope, TOM-SAM outer-membrane
+    protein-insertion function evidence, a nonmechanistic TOM-to-SAM graph, and a
+    SAM subunit-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-18T15:18:48Z'
+  curator: codex
+  action: NARROW_FUNCTION_GROUNDING
+  changes: Replaced a newer QuickGO TOM-SAM pathway grounding with the OAK-visible
+    GO:0045040 protein insertion into mitochondrial outer membrane term while preserving
+    the SAM-specific TOM handoff in notes.
+  llm_assisted: true
+- timestamp: '2026-09-18T15:19:23Z'
+  curator: codex
+  action: NARROW_EVIDENCE_SCOPE
+  changes: Removed a stale beta-barrel-only phrase from the TOM-to-SAM edge after
+    switching to the broader GO:0045040 outer-membrane protein-insertion grounding.
+  llm_assisted: true
+- timestamp: '2026-09-18T15:28:16Z'
+  curator: codex
+  action: ALIGN_HISTORY_WORDING
+  changes: Updated the initial expansion summary to describe the final GO:0045040
+    outer-membrane protein-insertion grounding.
+  llm_assisted: true
+- timestamp: '2026-09-18T15:34:05Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1161 and #1162 by removing an unattached review citation and
+    rephrasing the SAM-to-protein-insertion graph edge so the complex mediates a process
+    rather than assembling a process node.'
+  llm_assisted: true
+- timestamp: '2026-09-18T15:39:55Z'
+  curator: codex
+  action: ALIGN_REVIEW_HISTORY
+  changes: 'Removed #1160 from the review-fix curation summary after re-checking that
+    it was not an active PR #1159 defect.'
+  llm_assisted: true
+synonyms:
+- synonym_text: mitochondrial sorting and assembly machinery complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0001401
+- synonym_text: TOB complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0001401
+parent_structures:
+- GO:0098799
+part_of:
+- GO:0005741
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria contain SAM, a sorting and assembly machinery that
+    acts after TOM in the outer-membrane protein biogenesis pathway.
+  reference: DOI:10.1038/nature01753
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which the mitochondrial outer membrane sorting and assembly
+    machinery was distinguished from TOM and Mas37 was shown to be a SAM-complex constituent.
+  reference: DOI:10.1038/nature01753
+functions:
+- function_id: protein_insertion_into_mitochondrial_outer_membrane
+  label: protein insertion into mitochondrial outer membrane
+  grounding: GO:0045040
+  description: The SAM complex acts after TOM to sort and assemble a subset of imported
+    proteins into the mitochondrial outer membrane.
+  evidence:
+  - reference: GO:0001401
+    notes: GO:0001401 defines SAM as the mitochondrial outer-membrane machinery that
+      sorts some imported proteins and assembles them into the membrane after TOM
+      import.
+  - reference: GO:0045040
+    notes: GO:0045040 defines insertion of proteins into the mitochondrial outer membrane
+      by large outer-membrane translocase complexes.
+  - reference: DOI:10.1038/nature01753
+    notes: Wiedemann et al. 2003 separated the SAM outer-membrane sorting and assembly
+      step from the upstream TOM translocase step.
+evidence:
+- reference: GO:0001401
+  notes: Gene Ontology cellular-component term for the SAM complex.
+- reference: GO:0098799
+  notes: Gene Ontology cellular-component parent term for outer mitochondrial membrane
+    protein complexes.
+- reference: GO:0005741
+  notes: Gene Ontology cellular-component term for the mitochondrial outer membrane
+    that carries SAM.
+- reference: GO:0005742
+  notes: Gene Ontology cellular-component term for the upstream TOM complex named
+    in the GO:0001401 definition.
+- reference: GO:0045040
+  notes: Gene Ontology biological-process term for protein insertion into the mitochondrial
+    outer membrane.
+- reference: DOI:10.1038/nature01753
+  notes: Wiedemann et al. 2003, Machinery for protein sorting and assembly in the
+    mitochondrial outer membrane, Nature.
+causal_graphs:
+- graph_id: tom_sam_outer_membrane_protein_insertion
+  title: SAM assembles imported outer-membrane precursors after TOM
+  description: In the mitochondrial outer membrane, the SAM complex acts after TOM
+    to sort and assemble imported outer-membrane precursor proteins.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the TOM-to-SAM handoff at structure level without
+    asserting individual Sam subunit family boundaries.
+  nodes:
+  - node_id: tom_complex
+    label: mitochondrial outer membrane translocase complex
+    node_type: STRUCTURE
+    grounding: GO:0005742
+  - node_id: sam_complex
+    label: SAM complex
+    node_type: STRUCTURE
+    grounding: GO:0001401
+  - node_id: mitochondrial_outer_membrane
+    label: mitochondrial outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0005741
+  - node_id: protein_insertion
+    label: protein insertion into mitochondrial outer membrane
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0045040
+  edges:
+  - subject: sam_complex
+    predicate: is part of
+    object: mitochondrial_outer_membrane
+    description: SAM is a protein complex of the mitochondrial outer membrane.
+    evidence:
+    - reference: GO:0001401
+      notes: GO:0001401 defines SAM as a large complex of the mitochondrial outer
+        membrane.
+  - subject: tom_complex
+    predicate: transfers precursors to
+    object: sam_complex
+    description: TOM provides the upstream import step before SAM sorts and assembles
+      outer-membrane protein precursors.
+    evidence:
+    - reference: GO:0001401
+      notes: GO:0001401 defines SAM as functioning after TOM in the sorting and assembly
+        of imported outer-membrane proteins.
+    - reference: DOI:10.1038/nature01753
+      notes: Wiedemann et al. 2003 separated SAM-mediated outer-membrane sorting and
+        assembly from the TOM import step.
+  - subject: sam_complex
+    predicate: mediates
+    object: protein_insertion
+    description: SAM mediates the assembly step for imported precursors that are inserted
+      into the mitochondrial outer membrane.
+    evidence:
+    - reference: GO:0045040
+      notes: GO:0045040 grounds the protein-insertion process that places imported
+        proteins into the mitochondrial outer membrane.
+discussions:
+- discussion_id: sam_subunit_boundaries
+  prompt: Resolve exact source-neutral component groundings for bona fide SAM constituents
+    before adding Sam subunit rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#tom_sam_outer_membrane_protein_insertion
+  rationale: GO exactly grounds the SAM complex itself, but this first record does
+    not assert InterPro, Pfam, NCBIfam, or UniProt family CURIEs for Sam50, Sam35/Tob38,
+    Sam37/Mas37, Mdm10, or partner factors until their source-neutral family boundaries
+    are verified.
+  evidence:
+  - reference: DOI:10.1038/nature01753
+    notes: Wiedemann et al. 2003 identified the outer-membrane SAM machinery and Mas37
+      as a SAM-complex constituent.
+  posed_by: codex
+  posed_date: '2026-09-18'

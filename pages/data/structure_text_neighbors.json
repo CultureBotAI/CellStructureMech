@@ -9535,6 +9535,11 @@
           "cosine_similarity": 0.70066013
         },
         {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.6941095
+        },
+        {
           "identifier": "GO:0120101",
           "label": "bacterial-type flagellum stator complex",
           "cosine_similarity": 0.67230618
@@ -9548,11 +9553,6 @@
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.66383864
-        },
-        {
-          "identifier": "GO:0030256",
-          "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.64345707
         }
       ]
     },
@@ -10646,6 +10646,11 @@
       "label": "mitochondrial outer membrane translocase complex",
       "neighbors": [
         {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.91239682
+        },
+        {
           "identifier": "GO:0005739",
           "label": "mitochondrion",
           "cosine_similarity": 0.8563988
@@ -10664,11 +10669,6 @@
           "identifier": "GO:0005758",
           "label": "mitochondrial intermembrane space",
           "cosine_similarity": 0.83548655
-        },
-        {
-          "identifier": "GO:0031966",
-          "label": "mitochondrial membrane",
-          "cosine_similarity": 0.82299873
         }
       ]
     },
@@ -11157,14 +11157,14 @@
           "cosine_similarity": 0.79396049
         },
         {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.75734369
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.74081512
-        },
-        {
-          "identifier": "GO:0010006",
-          "label": "Toc complex",
-          "cosine_similarity": 0.73865753
         }
       ]
     },
@@ -11193,9 +11193,9 @@
           "cosine_similarity": 0.73590218
         },
         {
-          "identifier": "GO:0005816",
-          "label": "spindle pole body",
-          "cosine_similarity": 0.70930877
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.71311423
         }
       ]
     },
@@ -11324,6 +11324,37 @@
       ]
     },
     {
+      "identifier": "GO:0001401",
+      "label": "SAM complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.91239682
+        },
+        {
+          "identifier": "GO:0010006",
+          "label": "Toc complex",
+          "cosine_similarity": 0.78788455
+        },
+        {
+          "identifier": "GO:0031897",
+          "label": "Tic complex",
+          "cosine_similarity": 0.77296298
+        },
+        {
+          "identifier": "GO:0022624",
+          "label": "proteasome accessory complex",
+          "cosine_similarity": 0.75734369
+        },
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.75230204
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005784",
       "label": "Sec61 translocon complex",
       "neighbors": [
@@ -11426,6 +11457,11 @@
           "cosine_similarity": 0.90921986
         },
         {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.77296298
+        },
+        {
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.7671792
@@ -11439,11 +11475,6 @@
           "identifier": "GO:0009512",
           "label": "cytochrome b6f complex",
           "cosine_similarity": 0.72819173
-        },
-        {
-          "identifier": "GO:0009941",
-          "label": "chloroplast envelope",
-          "cosine_similarity": 0.7276129
         }
       ]
     },
@@ -11455,6 +11486,11 @@
           "identifier": "GO:0031897",
           "label": "Tic complex",
           "cosine_similarity": 0.90921986
+        },
+        {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.78788455
         },
         {
           "identifier": "GO:0005742",
@@ -11470,11 +11506,6 @@
           "identifier": "GO:0022624",
           "label": "proteasome accessory complex",
           "cosine_similarity": 0.73865753
-        },
-        {
-          "identifier": "GO:0005643",
-          "label": "nuclear pore",
-          "cosine_similarity": 0.71401761
         }
       ]
     },

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/sam_complex.yaml
+  slug: sam_complex
+session:
+  id: 2026-09-18T153421Z-codex-2a8d84
+  timestamp: '2026-09-18T15:34:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1161
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1162
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1159
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed SAM complex PR review findings
+  details: 'Resolved adversarial review findings from PR #1159 by removing the unattached
+    Busch et al. 2023 top-level evidence row and rephrasing the SAM graph edge so the
+    complex mediates the protein-insertion process rather than assembling a biological-process
+    node.'
