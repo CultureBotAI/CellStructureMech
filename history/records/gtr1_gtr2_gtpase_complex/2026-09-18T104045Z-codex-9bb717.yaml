@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gtr1_gtr2_gtpase_complex.yaml
+  slug: gtr1_gtr2_gtpase_complex
+session:
+  id: 2026-09-18T104045Z-codex-9bb717
+  timestamp: '2026-09-18T10:40:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1142
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1141
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - data/structures/other/gtr1_gtr2_gtpase_complex.yaml
+  summary: Add Lst4-Lst7 boundary
+  details: 'Addressed PR #1141 review issue #1142 by adding Cell Reports evidence for the
+    Lst4-Lst7 GAP complex that acts on Gtr2 and a resolved boundary discussion keeping Lst4/Lst7
+    out of the GO:1990131 Gtr1-Gtr2 heterodimer record.'

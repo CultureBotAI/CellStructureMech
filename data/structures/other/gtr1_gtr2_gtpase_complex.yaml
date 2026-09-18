@@ -25,6 +25,12 @@ curation_history:
   action: REFORMATTED_RECORD
   changes: Expanded shared YAML evidence aliases into plain repeated mappings.
   llm_assisted: true
+- timestamp: '2026-09-18T10:40:17Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: '#1142: Added a resolved Lst4-Lst7 GAP boundary discussion and Cell Reports
+    evidence so the graph''s omitted GAP cycles are explicitly out of scope.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 synonyms:
@@ -128,6 +134,9 @@ evidence:
 - reference: DOI:10.1091/mbc.E15-07-0470
   notes: Kira et al. 2016 followed the dynamic relocation of the TORC1-Gtr1/2-Ego1/2/3
     complex between the yeast vacuolar membrane and punctate sites.
+- reference: DOI:10.1016/j.celrep.2015.08.059
+  notes: Peli-Gulli et al. 2015 identified Lst4-Lst7 as a GTPase-activating protein
+    complex for the yeast Rag-family GTPase Gtr2.
 - reference: DOI:10.1038/s41594-026-01746-2
   notes: Tafur et al. 2026 determined the yeast SEAC-EGOC supercomplex and separated
     the Gtr1/Gtr2 heterodimer from the Ego1/Ego2/Ego3 anchor within EGOC.
@@ -281,6 +290,27 @@ discussions:
     notes: Panchaud, Peli-Gulli and De Virgilio 2013 described Gtr1-Gtr2 as the yeast
       Rag GTPase heterodimer that associates with Ego1 and Ego3 in EGOC for amino
       acid activation of TORC1.
+  posed_by: codex
+  posed_date: '2026-09-18'
+  resolved_date: '2026-09-18'
+- discussion_id: lst4_lst7_gap_boundary
+  prompt: Keep the Lst4-Lst7 GAP complex outside this Gtr1-Gtr2 heterodimer record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#gtr1_gtpase
+  - components#gtr2_gtpase
+  - causal_graphs#yeast_gtr1_gtr2_torc1_regulation
+  rationale: Lst4-Lst7 acts on the Rag-family GTPase Gtr2 as an upstream GAP regulator,
+    whereas GO:1990131 denotes the Gtr1-Gtr2 heterodimer itself.
+  resolution_note: 'Declined: Lst4-Lst7 was treated as an upstream Gtr2 GAP complex
+    rather than a constituent of GO:1990131.'
+  evidence:
+  - reference: GO:1990131
+    notes: Gene Ontology cellular-component term for the Gtr1-Gtr2 GTPase complex.
+  - reference: DOI:10.1016/j.celrep.2015.08.059
+    notes: Peli-Gulli et al. 2015 identified Lst4-Lst7 as a GTPase-activating protein
+      complex for the yeast Rag-family GTPase Gtr2.
   posed_by: codex
   posed_date: '2026-09-18'
   resolved_date: '2026-09-18'
