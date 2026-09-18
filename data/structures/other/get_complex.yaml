@@ -19,20 +19,28 @@ curation_history:
     tail-anchored insertion function, GO/DOI evidence, a nonmechanistic insertion
     graph, and a GET subunit-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-18T21:26:05Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1193 by clarifying Get3 versus Get1/Get2 receptor wording and
+    resolved #1194 by adding ER membrane grounding and a function-graph ER membrane
+    target node.'
+  llm_assisted: true
 parent_structures:
 - GO:0140534
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Budding yeast carries a Get1p/Get2p/Get3p GET complex that inserts newly synthesized
-    tail-anchored proteins into the endoplasmic-reticulum membrane.
+  note: Budding yeast contains the GET complex, with Get3 coupling tail-anchored substrates
+    to the Get1/Get2 ER receptor during ER-membrane insertion.
   reference: DOI:10.1016/j.cell.2008.06.025
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Yeast model in which Get3-TA substrate complexes and the Get1/Get2 ER receptor
-    were shown to directly mediate tail-anchored protein insertion.
+  note: Budding-yeast model in which Get3 recognition of secretory-pathway tail anchors,
+    Get1/Get2 receptor recruitment to the ER, and direct Get-mediated insertion were
+    connected experimentally.
   reference: DOI:10.1016/j.cell.2008.06.025
 functions:
 - function_id: get_dependent_tail_anchor_insertion
@@ -57,6 +65,9 @@ evidence:
 - reference: GO:0071816
   notes: Gene Ontology biological-process term for tail-anchored membrane protein
     insertion into the ER membrane.
+- reference: GO:0005789
+  notes: Gene Ontology cellular-component term for the endoplasmic reticulum membrane,
+    the target membrane in GO:0071816.
 - reference: DOI:10.1016/j.cell.2008.06.025
   notes: Schuldiner et al. 2008, The GET complex mediates insertion of tail-anchored
     proteins into the ER membrane, Cell.
@@ -78,6 +89,10 @@ causal_graphs:
     label: tail-anchored membrane protein insertion into ER membrane
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0071816
+  - node_id: er_membrane
+    label: endoplasmic reticulum membrane
+    node_type: STRUCTURE
+    grounding: GO:0005789
   edges:
   - subject: get_complex
     predicate: supports
@@ -91,6 +106,18 @@ causal_graphs:
     - reference: DOI:10.1016/j.cell.2008.06.025
       notes: Schuldiner et al. 2008 reconstituted Get-dependent insertion of newly
         synthesized tail-anchored proteins into ER membranes.
+  - subject: get_complex
+    predicate: inserts substrates into
+    object: er_membrane
+    description: GET-mediated insertion places newly synthesized tail-anchored proteins
+      into the ER membrane.
+    evidence:
+    - reference: GO:0071816
+      notes: GO:0071816 denotes tail-anchored membrane protein insertion specifically
+        into the ER membrane.
+    - reference: DOI:10.1016/j.cell.2008.06.025
+      notes: Schuldiner et al. 2008 linked Get1/Get2 receptor recruitment to in vitro
+        insertion of tail-anchored proteins into ER membranes.
 discussions:
 - discussion_id: get_subunit_boundaries
   prompt: Resolve exact source-neutral GET subunit groundings and the boundary between

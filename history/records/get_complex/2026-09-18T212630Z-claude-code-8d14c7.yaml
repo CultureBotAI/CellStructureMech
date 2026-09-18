@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/get_complex.yaml
+  slug: get_complex
+session:
+  id: 2026-09-18T212630Z-claude-code-8d14c7
+  timestamp: '2026-09-18T21:26:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1193
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1194
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1192
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed GET complex PR review findings
+  details: 'Resolved PR #1192 review issues #1193 and #1194 by clarifying the Get3 versus
+    Get1/Get2 receptor wording and adding an explicit endoplasmic-reticulum membrane node,
+    edge, and GO:0005789 evidence to the GET function graph.'
