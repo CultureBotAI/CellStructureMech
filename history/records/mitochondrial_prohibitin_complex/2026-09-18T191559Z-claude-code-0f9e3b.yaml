@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mitochondrial_prohibitin_complex.yaml
+  slug: mitochondrial_prohibitin_complex
+session:
+  id: 2026-09-18T191559Z-claude-code-0f9e3b
+  timestamp: '2026-09-18T19:15:59Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1183
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1182
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Narrowed mitochondrial prohibitin GO:0007005 prose
+  details: 'Resolved PR #1182 review issue #1183 by narrowing the mitochondrial prohibitin
+    function and graph prose from a broad mitochondrial biogenesis and function claim to the
+    GO:0007005 mitochondrial biogenesis/organization claim.'

@@ -20,6 +20,12 @@ curation_history:
     function evidence, a nonmechanistic prohibitin function graph, and a prohibitin
     subunit-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-18T19:15:29Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1183 by narrowing the GO:0007005 function and graph prose from
+    mitochondrial biogenesis and function to mitochondrial biogenesis.'
+  llm_assisted: true
 synonyms:
 - synonym_text: mitochondrial inner membrane prohibitin complex
   synonym_type: EXACT_SYNONYM
@@ -47,18 +53,18 @@ functions:
   label: mitochondrion organization
   grounding: GO:0007005
   description: The mitochondrial prohibitin complex contributes to mitochondrial biogenesis
-    and function while associated with the mitochondrial inner membrane.
+    while associated with the mitochondrial inner membrane.
   evidence:
   - reference: GO:0035632
     notes: GO:0035632 defines the mitochondrial prohibitin complex as a PHB1/PHB2
-      inner-membrane supercomplex with roles in mitochondrial biogenesis and function.
+      inner-membrane supercomplex with a role in mitochondrial biogenesis.
   - reference: GO:0007005
     notes: GO:0007005 denotes mitochondrion organization and has mitochondrial biogenesis
       as an exact synonym.
   - reference: DOI:10.18632/aging.100246
     notes: Artal-Sanz and Tavernarakis 2010 reviewed the eukaryotic mitochondrial
       prohibitin complex as an inner-membrane macromolecular structure implicated
-      in mitochondrial biogenesis and function.
+      in mitochondrial biogenesis among several cellular processes.
 evidence:
 - reference: GO:0035632
   notes: Gene Ontology cellular-component term for the mitochondrial prohibitin complex.
@@ -80,9 +86,9 @@ evidence:
     in aging', Aging.
 causal_graphs:
 - graph_id: prohibitin_inner_membrane_organization
-  title: Mitochondrial prohibitin supports inner-membrane organization
+  title: Mitochondrial prohibitin supports biogenesis
   description: PHB1 and PHB2 build a mitochondrial inner-membrane prohibitin supercomplex
-    implicated in mitochondrial biogenesis and function.
+    implicated in mitochondrial biogenesis.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures prohibitin-complex topology and a broad mitochondrial-organization
@@ -113,16 +119,16 @@ causal_graphs:
   - subject: prohibitin_complex
     predicate: supports
     object: mitochondrion_organization
-    description: The prohibitin supercomplex supports mitochondrial biogenesis and
-      function from the inner membrane.
+    description: The prohibitin supercomplex supports mitochondrial biogenesis from
+      the inner membrane.
     evidence:
     - reference: GO:0035632
-      notes: GO:0035632 includes mitochondrial biogenesis and function among processes
-        involving the PHB1/PHB2 prohibitin complex.
+      notes: GO:0035632 includes mitochondrial biogenesis among processes involving
+        the PHB1/PHB2 prohibitin complex.
     - reference: DOI:10.18632/aging.100246
       notes: Artal-Sanz and Tavernarakis 2010 reviewed the mitochondrial prohibitin
         complex as a eukaryotic inner-membrane macromolecular structure involved in
-        mitochondrial biogenesis and function.
+        mitochondrial biogenesis among several cellular processes.
 discussions:
 - discussion_id: prohibitin_subunit_family_boundaries
   prompt: Resolve exact source-neutral PHB1 and PHB2 family groundings before adding
