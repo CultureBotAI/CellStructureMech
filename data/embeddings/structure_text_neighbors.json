@@ -9695,6 +9695,11 @@
           "cosine_similarity": 0.67712533
         },
         {
+          "identifier": "GO:0033551",
+          "label": "monopolin complex",
+          "cosine_similarity": 0.66652336
+        },
+        {
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.66517752
@@ -9703,11 +9708,6 @@
           "identifier": "GO:0030117",
           "label": "membrane coat",
           "cosine_similarity": 0.658359
-        },
-        {
-          "identifier": "GO:0009277",
-          "label": "fungal-type cell wall",
-          "cosine_similarity": 0.65666356
         }
       ]
     },
@@ -9912,6 +9912,11 @@
           "cosine_similarity": 0.83009728
         },
         {
+          "identifier": "GO:0033551",
+          "label": "monopolin complex",
+          "cosine_similarity": 0.78515691
+        },
+        {
           "identifier": "GO:0031262",
           "label": "Ndc80 complex",
           "cosine_similarity": 0.78256706
@@ -9920,11 +9925,6 @@
           "identifier": "GO:0000444",
           "label": "MIS12/MIND type complex",
           "cosine_similarity": 0.78215719
-        },
-        {
-          "identifier": "GO:0042729",
-          "label": "DASH complex",
-          "cosine_similarity": 0.77544624
         }
       ]
     },
@@ -10072,14 +10072,14 @@
           "cosine_similarity": 0.76474862
         },
         {
+          "identifier": "GO:0033551",
+          "label": "monopolin complex",
+          "cosine_similarity": 0.76153486
+        },
+        {
           "identifier": "GO:1990131",
           "label": "Gtr1-Gtr2 GTPase complex",
           "cosine_similarity": 0.75820877
-        },
-        {
-          "identifier": "GO:0030904",
-          "label": "retromer complex",
-          "cosine_similarity": 0.74768321
         }
       ]
     },
@@ -10673,6 +10673,37 @@
       ]
     },
     {
+      "identifier": "GO:0033551",
+      "label": "monopolin complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.78515691
+        },
+        {
+          "identifier": "GO:0042729",
+          "label": "DASH complex",
+          "cosine_similarity": 0.76153486
+        },
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.75882386
+        },
+        {
+          "identifier": "GO:1990131",
+          "label": "Gtr1-Gtr2 GTPase complex",
+          "cosine_similarity": 0.73750166
+        },
+        {
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.72943067
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031262",
       "label": "Ndc80 complex",
       "neighbors": [
@@ -11054,6 +11085,11 @@
           "cosine_similarity": 0.73511693
         },
         {
+          "identifier": "GO:0033551",
+          "label": "monopolin complex",
+          "cosine_similarity": 0.72238966
+        },
+        {
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.71955231
@@ -11067,11 +11103,6 @@
           "identifier": "GO:0036286",
           "label": "eisosome filament",
           "cosine_similarity": 0.71007657
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.70657748
         }
       ]
     },

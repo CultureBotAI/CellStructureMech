@@ -1,0 +1,308 @@
+identifier: GO:0033551
+label: monopolin complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex required for clamping microtubule binding sites, ensuring
+  orientation of sister kinetochores to the same pole (mono-orientation) during meiosis
+  I. In the yeast S. cerevisiae this complex consists of Csm1p, Lrs4p, Hrr25p and
+  Mam1p; in S. pombe Pcs1 and Mde4 have been identified as subunits.
+definition_source: GO:0033551
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T14:43:04Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T14:43:52Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO hierarchy, kinetochore parthood, GO monopolin synonymy, four reviewed
+    label-only budding-yeast subunits, Saccharomyces scope, sister-kinetochore mono-orientation
+    function, DOI/GO evidence, a nonmechanistic function graph and subunit-grounding
+    plus fission-boundary TODOs.
+  llm_assisted: true
+- timestamp: '2026-09-18T14:44:17Z'
+  curator: codex
+  action: NARROW_EVIDENCE_SCOPE
+  changes: Narrowed the Saccharomyces canonical-example note to the Corbett et al.
+    Csm1/Lrs4 structural evidence supported by its row-level reference.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0000776
+synonyms:
+- synonym_text: monopolin subcomplex Csm1/Lrs4
+  synonym_type: NARROW_SYNONYM
+  source: GO:0033551
+- synonym_text: Pcs1/Mde4 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0033551
+components:
+- component_id: csm1_monopolin_subunit
+  label: Csm1 monopolin subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CSM1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Csm1p is modeled as a named Saccharomyces cerevisiae monopolin
+    subunit; no exact source-neutral Csm1 protein-family CURIE was curated for this
+    first complex record.
+  role: Named Csm1/Lrs4 core constituent of the budding-yeast monopolin complex.
+  evidence:
+  - reference: GO:0033551
+    notes: GO:0033551 defines Csm1p as a Saccharomyces cerevisiae monopolin-complex
+      subunit.
+  - reference: DOI:10.1016/s1534-5807(03)00086-8
+    notes: Rabitsch et al. 2003 identified Csm1p among the nucleolar proteins recruited
+      to kinetochores during meiosis I.
+  - reference: DOI:10.1016/j.cell.2010.07.017
+    notes: Corbett et al. 2010 structurally analyzed monopolin crosslinking of kinetochore
+      components.
+- component_id: lrs4_monopolin_subunit
+  label: Lrs4 monopolin subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - LRS4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Lrs4p is modeled as a named Saccharomyces cerevisiae monopolin
+    subunit; no exact source-neutral Lrs4 protein-family CURIE was curated for this
+    first complex record.
+  role: Named Csm1/Lrs4 core constituent of the budding-yeast monopolin complex.
+  evidence:
+  - reference: GO:0033551
+    notes: GO:0033551 defines Lrs4p as a Saccharomyces cerevisiae monopolin-complex
+      subunit.
+  - reference: DOI:10.1016/s1534-5807(03)00086-8
+    notes: Rabitsch et al. 2003 identified Lrs4p among the nucleolar proteins recruited
+      to kinetochores during meiosis I.
+  - reference: DOI:10.1016/j.cell.2010.07.017
+    notes: Corbett et al. 2010 structurally analyzed monopolin crosslinking of kinetochore
+      components.
+- component_id: hrr25_monopolin_subunit
+  label: Hrr25 monopolin subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HRR25
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Hrr25p is modeled by its Saccharomyces cerevisiae casein-kinase-1
+    role in the GO-defined monopolin complex; no exact source-neutral CURIE was curated
+    that separates this monopolin subunit role from other Hrr25 contexts.
+  role: Casein kinase 1 constituent of the budding-yeast monopolin complex.
+  evidence:
+  - reference: GO:0033551
+    notes: GO:0033551 defines Hrr25p as a Saccharomyces cerevisiae monopolin-complex
+      subunit.
+  - reference: DOI:10.1016/j.cell.2006.07.029
+    notes: Petronczki et al. 2006 linked budding-yeast casein kinase 1 to monopolar
+      attachment of sister kinetochores in meiosis I.
+- component_id: mam1_monopolin_subunit
+  label: Mam1 monopolin subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MAM1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Mam1p is modeled as a named Saccharomyces cerevisiae monopolin
+    subunit; no exact source-neutral Mam1 protein-family CURIE was curated for this
+    first complex record.
+  role: Named budding-yeast monopolin constituent tied genetically to homolog segregation
+    during meiosis I.
+  evidence:
+  - reference: GO:0033551
+    notes: GO:0033551 defines Mam1p as a Saccharomyces cerevisiae monopolin-complex
+      subunit.
+  - reference: DOI:10.1016/s0092-8674(00)00217-8
+    notes: Toth et al. 2000 identified monopolin as a kinetochore factor required
+      for segregation of homologs in yeast meiosis I.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a Csm1p/Lrs4p/Hrr25p/Mam1p monopolin complex that promotes
+    sister-kinetochore mono-orientation during meiosis I.
+  reference: GO:0033551
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference yeast system in which the Csm1/Lrs4 monopolin core was structurally
+    analyzed as a kinetochore-component crosslinking assembly.
+  reference: DOI:10.1016/j.cell.2010.07.017
+functions:
+- function_id: sister_kinetochore_mono_orientation
+  label: sister kinetochore mono-orientation
+  description: Monopolin clamps kinetochore microtubule-binding sites so sister kinetochores
+    orient to the same spindle pole during meiosis I.
+  evidence:
+  - reference: GO:0033551
+    notes: GO:0033551 defines the monopolin complex by sister kinetochore mono-orientation
+      during meiosis I.
+  - reference: DOI:10.1016/s0092-8674(00)00217-8
+    notes: Toth et al. 2000 linked budding-yeast monopolin to homolog segregation
+      during meiosis I.
+  - reference: DOI:10.1016/j.cell.2006.12.040
+    notes: Monje-Casas et al. 2007 analyzed monopolin control of kinetochore orientation
+      during budding-yeast meiosis.
+evidence:
+- reference: GO:0033551
+  notes: Gene Ontology cellular-component term for the monopolin complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0000776
+  notes: Gene Ontology cellular-component term for the kinetochore, which contains
+    the monopolin complex.
+- reference: DOI:10.1016/s0092-8674(00)00217-8
+  notes: 'Toth et al. 2000, Functional genomics identifies monopolin: a kinetochore
+    protein required for segregation of homologs during meiosis I, Cell.'
+- reference: DOI:10.1016/s1534-5807(03)00086-8
+  notes: Rabitsch et al. 2003, Kinetochore recruitment of two nucleolar proteins is
+    required for homolog segregation in meiosis I, Developmental Cell.
+- reference: DOI:10.1016/j.cell.2006.07.029
+  notes: Petronczki et al. 2006, Monopolar attachment of sister kinetochores at meiosis
+    I requires casein kinase 1, Cell.
+- reference: DOI:10.1016/j.cell.2006.12.040
+  notes: Monje-Casas et al. 2007, Kinetochore orientation during meiosis is controlled
+    by Aurora B and the monopolin complex, Cell.
+- reference: DOI:10.1016/j.cub.2007.06.044
+  notes: Gregan et al. 2007, The kinetochore proteins Pcs1 and Mde4 and heterochromatin
+    are required to prevent merotelic orientation, Current Biology.
+- reference: DOI:10.1016/j.cell.2010.07.017
+  notes: Corbett et al. 2010, The monopolin complex crosslinks kinetochore components
+    to regulate chromosome-microtubule attachments, Cell.
+causal_graphs:
+- graph_id: monopolin_sister_kinetochore_mono_orientation
+  title: Monopolin orients sister kinetochores during meiosis I
+  description: The budding-yeast Csm1p/Lrs4p/Hrr25p/Mam1p monopolin complex acts at
+    kinetochores to coorient sister kinetochores toward the same spindle pole during
+    meiosis I.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-defined Saccharomyces cerevisiae monopolin
+    subunit cohort and the high-level mono-orientation role without modeling Spo13,
+    Aurora B/Ipl1, cohesin, or every fission-yeast Pcs1/Mde4 analogy.
+  nodes:
+  - node_id: csm1_monopolin_subunit
+    label: Csm1 monopolin subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: csm1_monopolin_subunit
+  - node_id: lrs4_monopolin_subunit
+    label: Lrs4 monopolin subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: lrs4_monopolin_subunit
+  - node_id: hrr25_monopolin_subunit
+    label: Hrr25 monopolin subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hrr25_monopolin_subunit
+  - node_id: mam1_monopolin_subunit
+    label: Mam1 monopolin subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: mam1_monopolin_subunit
+  - node_id: monopolin_complex
+    label: monopolin complex
+    node_type: STRUCTURE
+    grounding: GO:0033551
+  - node_id: kinetochore
+    label: kinetochore
+    node_type: STRUCTURE
+    grounding: GO:0000776
+  - node_id: sister_kinetochore_mono_orientation
+    label: sister kinetochore mono-orientation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: csm1_monopolin_subunit
+    predicate: assembles into
+    object: monopolin_complex
+    description: Csm1p is represented as a constituent of the budding-yeast monopolin
+      complex.
+    evidence:
+    - reference: GO:0033551
+      notes: GO:0033551 names Csm1p among the Saccharomyces cerevisiae monopolin subunits.
+  - subject: lrs4_monopolin_subunit
+    predicate: assembles into
+    object: monopolin_complex
+    description: Lrs4p is represented as a constituent of the budding-yeast monopolin
+      complex.
+    evidence:
+    - reference: GO:0033551
+      notes: GO:0033551 names Lrs4p among the Saccharomyces cerevisiae monopolin subunits.
+  - subject: hrr25_monopolin_subunit
+    predicate: assembles into
+    object: monopolin_complex
+    description: Hrr25p is represented as a constituent of the budding-yeast monopolin
+      complex.
+    evidence:
+    - reference: GO:0033551
+      notes: GO:0033551 names Hrr25p among the Saccharomyces cerevisiae monopolin
+        subunits.
+  - subject: mam1_monopolin_subunit
+    predicate: assembles into
+    object: monopolin_complex
+    description: Mam1p is represented as a constituent of the budding-yeast monopolin
+      complex.
+    evidence:
+    - reference: GO:0033551
+      notes: GO:0033551 names Mam1p among the Saccharomyces cerevisiae monopolin subunits.
+  - subject: monopolin_complex
+    predicate: is part of
+    object: kinetochore
+    description: The monopolin complex is a kinetochore-associated protein complex.
+    evidence:
+    - reference: GO:0033551
+      notes: GO places the monopolin complex under the kinetochore cellular-component
+        branch.
+  - subject: monopolin_complex
+    predicate: promotes
+    object: sister_kinetochore_mono_orientation
+    description: Monopolin promotes mono-orientation of sister kinetochores during
+      meiosis I.
+    evidence:
+    - reference: GO:0033551
+      notes: GO:0033551 defines monopolin by the orientation of sister kinetochores
+        to the same pole during meiosis I.
+    - reference: DOI:10.1016/s0092-8674(00)00217-8
+      notes: Toth et al. 2000 identified monopolin as a kinetochore factor required
+        for homolog segregation in yeast meiosis I.
+discussions:
+- discussion_id: resolve_monopolin_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings and essentiality calls for
+    Csm1, Lrs4, Hrr25 and Mam1 within the budding-yeast monopolin complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#csm1_monopolin_subunit
+  - components#lrs4_monopolin_subunit
+  - components#hrr25_monopolin_subunit
+  - components#mam1_monopolin_subunit
+  rationale: This first record captures the GO-defined budding-yeast subunit set but
+    leaves subunit grounding at reviewed-label-only instead of guessing InterPro,
+    Pfam, NCBIfam or UniProtKB family identifiers.
+  evidence:
+  - reference: GO:0033551
+  - reference: DOI:10.1016/j.cell.2010.07.017
+  posed_by: codex
+  posed_date: '2026-09-18'
+- discussion_id: pcs1_mde4_fission_boundary
+  prompt: Review whether and how the Schizosaccharomyces pombe Pcs1/Mde4 complex should
+    be represented as an orthologous monopolin branch.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - synonyms
+  - components#csm1_monopolin_subunit
+  - components#lrs4_monopolin_subunit
+  rationale: GO:0033551 names the Pcs1/Mde4 complex as a narrow synonym of monopolin,
+    but this first record curates the budding-yeast Csm1p/Lrs4p/Hrr25p/Mam1p cohort
+    and leaves the fission-yeast subunit mapping for a focused orthology review.
+  evidence:
+  - reference: GO:0033551
+  - reference: DOI:10.1016/j.cub.2007.06.044
+  posed_by: codex
+  posed_date: '2026-09-18'
