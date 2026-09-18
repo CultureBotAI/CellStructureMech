@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+  slug: mitochondrial_inner_membrane_peptidase_complex
+session:
+  id: 2026-09-18T183706Z-codex-6d9f62
+  timestamp: '2026-09-18T18:37:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomy
+  - function
+  - causal_graphs
+  - discussion
+  summary: Added mitochondrial inner membrane peptidase complex record
+  details: Created a GO:0042720-grounded mitochondrial inner membrane peptidase complex record
+    with GO synonymy, inner-mitochondrial-membrane and serine-type endopeptidase parentage,
+    mitochondrial-inner-membrane parthood, Saccharomyces cerevisiae scope, GO:0034982 mitochondrial-protein-processing
+    evidence, a nonmechanistic IMP processing graph, and a curation TODO for exact Imp subunit
+    family groundings.

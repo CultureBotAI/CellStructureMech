@@ -1,0 +1,154 @@
+identifier: GO:0042720
+label: mitochondrial inner membrane peptidase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Protease complex of the mitochondrial inner membrane, consisting of at
+  least two subunits, involved in processing of both nuclear- and mitochondrially-encoded
+  proteins targeted to the intermembrane space.
+definition_source: GO:0042720
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T18:35:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T18:36:29Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, inner-mitochondrial-membrane and serine-type endopeptidase
+    parentage, mitochondrial-inner-membrane parthood, Saccharomyces scope, mitochondrial-protein-processing
+    evidence, a nonmechanistic IMP processing graph, and an IMP subunit-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-18T18:47:20Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1181 by removing the after-import qualifier from the IMP function
+    description so it does not exclude mitochondrially encoded substrates.'
+  llm_assisted: true
+synonyms:
+- synonym_text: mitochondrion inner membrane peptidase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0042720
+- synonym_text: IMP
+  synonym_type: NARROW_SYNONYM
+  source: GO:0042720
+parent_structures:
+- GO:0098800
+- GO:1905370
+part_of:
+- GO:0005743
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondria contain an inner-membrane peptidase complex whose
+    Imp1 and Som1 proteins physically interact.
+  reference: DOI:10.1007/s004380051192
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model used to identify Som1 as a third IMP peptidase-complex
+    subunit alongside Imp1 and Imp2.
+  reference: DOI:10.1007/s004380051192
+functions:
+- function_id: mitochondrial_protein_processing
+  label: mitochondrial protein processing
+  grounding: GO:0034982
+  description: IMP contributes to mitochondrial protein processing by cleaving inner-membrane
+    protease substrates that are targeted to the intermembrane space.
+  evidence:
+  - reference: GO:0042720
+    notes: GO:0042720 defines IMP as an inner-membrane protease complex for nuclear-
+      and mitochondrially encoded proteins targeted to the intermembrane space.
+  - reference: GO:0034982
+    notes: GO:0034982 denotes peptide cleavage of mitochondrial proteins, including
+      cleavage contributing to import.
+  - reference: DOI:10.1016/s0167-4889(02)00265-3
+    notes: Gakh et al. 2002 reviewed inner membrane peptidase as one of the conserved
+      mitochondrial peptidases that processes specific precursor-polypeptide subsets.
+evidence:
+- reference: GO:0042720
+  notes: Gene Ontology cellular-component term for the mitochondrial inner membrane
+    peptidase complex.
+- reference: GO:0098800
+  notes: Gene Ontology cellular-component parent term for inner mitochondrial membrane
+    protein complexes.
+- reference: GO:1905370
+  notes: Gene Ontology cellular-component parent term for serine-type endopeptidase
+    complexes.
+- reference: GO:0005743
+  notes: Gene Ontology cellular-component term for the mitochondrial inner membrane
+    that contains IMP.
+- reference: GO:0034982
+  notes: Gene Ontology biological-process term for mitochondrial protein processing.
+- reference: DOI:10.1007/s004380051192
+  notes: Jan et al. 2000, 'Som1, a third component of the yeast mitochondrial inner
+    membrane peptidase complex that contains Imp1 and Imp2', Molecular and General
+    Genetics.
+- reference: DOI:10.1016/s0167-4889(02)00265-3
+  notes: Gakh et al. 2002, 'Mitochondrial processing peptidases', Biochimica et Biophysica
+    Acta.
+causal_graphs:
+- graph_id: imp_mitochondrial_processing
+  title: IMP supports inner-membrane proteolytic processing
+  description: IMP resides at the mitochondrial inner membrane and cleaves selected
+    imported and mitochondrially encoded substrates that are targeted to the intermembrane
+    space.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures IMP topology and its mitochondrial-protein processing
+    role without asserting individual Imp-family groundings.
+  nodes:
+  - node_id: imp_complex
+    label: mitochondrial inner membrane peptidase complex
+    node_type: STRUCTURE
+    grounding: GO:0042720
+  - node_id: mitochondrial_inner_membrane
+    label: mitochondrial inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005743
+  - node_id: mitochondrial_protein_processing
+    label: mitochondrial protein processing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0034982
+  edges:
+  - subject: imp_complex
+    predicate: is part of
+    object: mitochondrial_inner_membrane
+    description: IMP is a protease complex of the mitochondrial inner membrane.
+    evidence:
+    - reference: GO:0042720
+      notes: GO:0042720 defines IMP as a protease complex of the mitochondrial inner
+        membrane.
+  - subject: imp_complex
+    predicate: supports
+    object: mitochondrial_protein_processing
+    description: IMP supports mitochondrial protein processing by cleaving specific
+      inner-membrane protease substrates.
+    evidence:
+    - reference: GO:0042720
+      notes: GO:0042720 grounds IMP as the complex that processes nuclear- and mitochondrially
+        encoded proteins targeted to the intermembrane space.
+    - reference: DOI:10.1016/s0167-4889(02)00265-3
+      notes: Gakh et al. 2002 reviewed inner membrane peptidase as a conserved mitochondrial
+        peptidase for specific precursor-polypeptide subsets.
+discussions:
+- discussion_id: imp_subunit_family_boundaries
+  prompt: Resolve exact source-neutral Imp1, Imp2, and Som1 family groundings before
+    adding IMP component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#imp_mitochondrial_processing
+  rationale: GO exactly grounds the IMP complex and Jan et al. identify Som1 as a
+    third budding-yeast subunit, but this first record leaves Imp1, Imp2, and Som1
+    rows unasserted until exact taxon-agnostic family identifiers are verified.
+  evidence:
+  - reference: GO:0042720
+    notes: GO:0042720 defines the IMP complex as consisting of at least two subunits.
+  - reference: DOI:10.1007/s004380051192
+    notes: Jan et al. 2000 identified Som1 as a third component of the yeast IMP peptidase
+      complex that contains Imp1 and Imp2.
+  posed_by: codex
+  posed_date: '2026-09-18'
