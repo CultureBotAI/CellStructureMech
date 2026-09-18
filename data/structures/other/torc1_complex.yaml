@@ -1,0 +1,323 @@
+identifier: GO:0031931
+label: TORC1 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that contains at least TOR (target of rapamycin) and
+  Raptor (regulatory-associated protein of TOR), or orthologs of, in complex with
+  other signaling components. Mediates the phosphorylation and activation of S6K.
+  In Saccharomyces, the complex contains Kog1p, Lst8p, Tco89p, and either Tor1p or
+  Tor2p.
+definition_source: GO:0031931
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T11:09:46Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T11:11:30Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added TORC1 synonymy, protein-complex parentage, reviewed-label-only yeast
+    Tor/Kog1/Lst8/Tco89 components, Saccharomyces scope, a TORC1 signaling function,
+    GO/DOI evidence, a nonmechanistic TORC1 function graph, and subunit-grounding
+    plus TORC2 and Rag/GATOR/EGO boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-18T11:11:54Z'
+  curator: codex
+  action: REFORMATTED_RECORD
+  changes: Expanded shared YAML evidence aliases into plain repeated mappings.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+synonyms:
+- synonym_text: TORC1
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031931
+- synonym_text: TOR complex 1
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031931
+- synonym_text: rapamycin and nutrient-sensitive TOR complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031931
+- synonym_text: nutrient sensitive complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031931
+components:
+- component_id: tor_kinase_torc1_subunit
+  label: TOR kinase TORC1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TOR1
+  - TOR2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Tor1p or Tor2p
+    TORC1 catalytic subunit; no exact source-neutral InterPro, Pfam or NCBIfam family
+    identifier for the TORC1-specific kinase-subunit role was curated in this pass.
+  role: Alternate catalytic TOR kinase subunit supplied by Tor1 or Tor2 in the budding-yeast
+    TORC1 complex.
+  evidence:
+  - reference: GO:0031931
+    notes: Gene Ontology cellular-component term for the TORC1 complex.
+  - reference: DOI:10.1016/s1097-2765(02)00636-6
+    notes: Loewith et al. 2002 separated budding-yeast TOR into two complexes and
+      assigned TORC1 to the rapamycin-sensitive growth-control branch.
+- component_id: kog1_raptor_torc1_subunit
+  label: Kog1 Raptor-family TORC1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - KOG1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Kog1p/Raptor ortholog
+    in TORC1; no exact source-neutral InterPro, Pfam or NCBIfam family identifier
+    for this subunit class was curated in this pass.
+  role: Raptor-family TORC1 constituent that joins the TOR kinase, Lst8 and Tco89
+    in budding-yeast TORC1.
+  evidence:
+  - reference: GO:0031931
+    notes: Gene Ontology cellular-component term for the TORC1 complex.
+  - reference: DOI:10.1016/s1097-2765(02)00636-6
+    notes: Loewith et al. 2002 separated budding-yeast TOR into two complexes and
+      assigned TORC1 to the rapamycin-sensitive growth-control branch.
+- component_id: lst8_torc1_subunit
+  label: Lst8 TORC1/TORC2 beta-propeller subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - LST8
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Lst8p constituent
+    shared by TORC1 and TORC2; no exact source-neutral InterPro, Pfam or NCBIfam family
+    identifier for the TOR-associated Lst8 class was curated in this pass.
+  role: Beta-propeller subunit represented here in its TORC1 constituent context.
+  evidence:
+  - reference: GO:0031931
+    notes: Gene Ontology cellular-component term for the TORC1 complex.
+  - reference: DOI:10.1016/s1097-2765(02)00636-6
+    notes: Loewith et al. 2002 separated budding-yeast TOR into two complexes and
+      assigned TORC1 to the rapamycin-sensitive growth-control branch.
+- component_id: tco89_torc1_subunit
+  label: Tco89 TORC1-specific subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TCO89
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Tco89p TORC1 constituent;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this fungal
+    TORC1-specific subunit class was curated in this pass.
+  role: Budding-yeast TORC1 component associated with the Kog1/Lst8/Tor complex.
+  evidence:
+  - reference: GO:0031931
+    notes: Gene Ontology cellular-component term for the TORC1 complex.
+  - reference: DOI:10.1074/jbc.M313062200
+    notes: Reinke et al. 2004 identified Tco89p as a Saccharomyces cerevisiae TORC1
+      component.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the curated model for TORC1 complexes containing Kog1, Lst8,
+    Tco89 and either Tor1 or Tor2.
+  reference: GO:0031931
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which the rapamycin-sensitive TORC1 complex was separated from
+    TORC2.
+  reference: DOI:10.1016/s1097-2765(02)00636-6
+functions:
+- function_id: torc1_signaling
+  label: TORC1 signaling
+  grounding: GO:0038202
+  description: The TORC1 complex mediates nutrient- and rapamycin-sensitive growth-control
+    signaling in budding yeast.
+  evidence:
+  - reference: GO:0038202
+    notes: Gene Ontology biological-process term for TORC1 signaling.
+  - reference: GO:0031931
+    notes: Gene Ontology cellular-component term for the TORC1 complex.
+  - reference: DOI:10.1016/s1097-2765(02)00636-6
+    notes: Loewith et al. 2002 separated budding-yeast TOR into two complexes and
+      assigned TORC1 to the rapamycin-sensitive growth-control branch.
+evidence:
+- reference: GO:0031931
+  notes: Gene Ontology cellular-component term for the TORC1 complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0038202
+  notes: Gene Ontology biological-process term for TORC1 signaling.
+- reference: DOI:10.1016/s1097-2765(02)00636-6
+  notes: Loewith et al. 2002 separated budding-yeast TOR into two complexes and assigned
+    TORC1 to the rapamycin-sensitive growth-control branch.
+- reference: DOI:10.1074/jbc.M313062200
+  notes: Reinke et al. 2004 identified Tco89p as a Saccharomyces cerevisiae TORC1
+    component.
+causal_graphs:
+- graph_id: yeast_torc1_subunit_signaling
+  title: Yeast TORC1 complex supports TORC1 signaling
+  description: In Saccharomyces cerevisiae, Kog1, Lst8, Tco89 and an alternate Tor1/Tor2
+    catalytic subunit form the rapamycin-sensitive TORC1 complex linked to TORC1 signaling.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents curated TORC1 subunit membership and the high-level
+    signaling output without modeling nutrient inputs, Gtr1/Gtr2 nucleotide states,
+    or downstream phosphorylation targets.
+  nodes:
+  - node_id: tor_kinase_torc1_subunit
+    label: TOR kinase TORC1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tor_kinase_torc1_subunit
+  - node_id: kog1_raptor_torc1_subunit
+    label: Kog1 Raptor-family TORC1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: kog1_raptor_torc1_subunit
+  - node_id: lst8_torc1_subunit
+    label: Lst8 TORC1/TORC2 beta-propeller subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: lst8_torc1_subunit
+  - node_id: tco89_torc1_subunit
+    label: Tco89 TORC1-specific subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tco89_torc1_subunit
+  - node_id: torc1_complex
+    label: TORC1 complex
+    node_type: STRUCTURE
+    grounding: GO:0031931
+  - node_id: torc1_signaling
+    label: TORC1 signaling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0038202
+  edges:
+  - subject: tor_kinase_torc1_subunit
+    predicate: is part of
+    object: torc1_complex
+    description: Tor1 or Tor2 supplies the catalytic TOR kinase constituent of budding-yeast
+      TORC1.
+    evidence:
+    - reference: GO:0031931
+      notes: Gene Ontology cellular-component term for the TORC1 complex.
+    - reference: DOI:10.1016/s1097-2765(02)00636-6
+      notes: Loewith et al. 2002 separated budding-yeast TOR into two complexes and
+        assigned TORC1 to the rapamycin-sensitive growth-control branch.
+  - subject: kog1_raptor_torc1_subunit
+    predicate: is part of
+    object: torc1_complex
+    description: Kog1 is represented as a budding-yeast TORC1 constituent.
+    evidence:
+    - reference: GO:0031931
+      notes: Gene Ontology cellular-component term for the TORC1 complex.
+    - reference: DOI:10.1016/s1097-2765(02)00636-6
+      notes: Loewith et al. 2002 separated budding-yeast TOR into two complexes and
+        assigned TORC1 to the rapamycin-sensitive growth-control branch.
+  - subject: lst8_torc1_subunit
+    predicate: is part of
+    object: torc1_complex
+    description: Lst8 is represented as a shared TOR-complex subunit in its budding-yeast
+      TORC1 context.
+    evidence:
+    - reference: GO:0031931
+      notes: Gene Ontology cellular-component term for the TORC1 complex.
+    - reference: DOI:10.1016/s1097-2765(02)00636-6
+      notes: Loewith et al. 2002 separated budding-yeast TOR into two complexes and
+        assigned TORC1 to the rapamycin-sensitive growth-control branch.
+  - subject: tco89_torc1_subunit
+    predicate: is part of
+    object: torc1_complex
+    description: Tco89 is represented as a budding-yeast TORC1 constituent.
+    evidence:
+    - reference: GO:0031931
+      notes: Gene Ontology cellular-component term for the TORC1 complex.
+    - reference: DOI:10.1074/jbc.M313062200
+      notes: Reinke et al. 2004 identified Tco89p as a Saccharomyces cerevisiae TORC1
+        component.
+  - subject: torc1_complex
+    predicate: regulates
+    object: torc1_signaling
+    description: TORC1 is represented as the rapamycin-sensitive TOR complex that
+      mediates TORC1 signaling.
+    evidence:
+    - reference: GO:0038202
+      notes: Gene Ontology biological-process term for TORC1 signaling.
+    - reference: GO:0031931
+      notes: Gene Ontology cellular-component term for the TORC1 complex.
+    - reference: DOI:10.1016/s1097-2765(02)00636-6
+      notes: Loewith et al. 2002 separated budding-yeast TOR into two complexes and
+        assigned TORC1 to the rapamycin-sensitive growth-control branch.
+discussions:
+- discussion_id: resolve_torc1_subunit_family_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, or NCBIfam groundings for the
+    yeast TORC1 Tor, Kog1, Lst8 and Tco89 subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#tor_kinase_torc1_subunit
+  - components#kog1_raptor_torc1_subunit
+  - components#lst8_torc1_subunit
+  - components#tco89_torc1_subunit
+  rationale: This first TORC1 record names the yeast protein constituents but leaves
+    family grounding unset until exact source-neutral boundaries for shared TOR/Lst8
+    classes and Kog1/Tco89 orthology are reviewed.
+  evidence:
+  - reference: GO:0031931
+    notes: Gene Ontology cellular-component term for the TORC1 complex.
+  posed_by: codex
+  posed_date: '2026-09-18'
+- discussion_id: torc2_boundary
+  prompt: Keep TORC2-specific Avo1, Avo2, Avo3/Tsc11, Bit61, Slm1 and Slm2 outside
+    this TORC1 record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#tor_kinase_torc1_subunit
+  - components#lst8_torc1_subunit
+  - causal_graphs#yeast_torc1_subunit_signaling
+  rationale: GO separates rapamycin-sensitive TORC1 from TORC2 as sibling complexes.
+    Tor2 and Lst8 can occur in yeast TORC2, but Avo1, Avo2, Avo3/Tsc11, Bit61, Slm1
+    and Slm2 are TORC2-side subunits outside GO:0031931.
+  resolution_note: 'Declined: TORC2-only subunits were treated as constituents of
+    GO:0031932 rather than GO:0031931.'
+  evidence:
+  - reference: GO:0031931
+    notes: Gene Ontology cellular-component term for the TORC1 complex.
+  - reference: GO:0031932
+    notes: Gene Ontology cellular-component term for the TORC2 complex.
+  - reference: DOI:10.1016/s1097-2765(02)00636-6
+    notes: Loewith et al. 2002 separated budding-yeast TOR into two complexes and
+      assigned TORC1 to the rapamycin-sensitive growth-control branch.
+  posed_by: codex
+  posed_date: '2026-09-18'
+  resolved_date: '2026-09-18'
+- discussion_id: rag_gator_ego_boundary
+  prompt: Keep Gtr1-Gtr2, GATOR1/SEACIT, GATOR2/SEACAT and Ragulator/EGO outside this
+    TORC1 constituent record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#tor_kinase_torc1_subunit
+  - causal_graphs#yeast_torc1_subunit_signaling
+  rationale: Gtr1-Gtr2 and its GATOR and Ragulator/EGO control complexes are upstream
+    TORC1-pathway regulators or anchors with their own GO cellular-component identities,
+    not constituents of the TORC1 catalytic complex.
+  resolution_note: 'Declined: Rag-family and SEA/GATOR/EGO neighbors were left as
+    separate complexes outside GO:0031931.'
+  evidence:
+  - reference: GO:0031931
+    notes: Gene Ontology cellular-component term for the TORC1 complex.
+  - reference: GO:1990131
+    notes: Gene Ontology cellular-component term for the Gtr1-Gtr2 GTPase complex.
+  - reference: GO:1990130
+    notes: Gene Ontology cellular-component term for the GATOR1 complex.
+  - reference: GO:0061700
+    notes: Gene Ontology cellular-component term for the GATOR2 complex.
+  - reference: GO:0071986
+    notes: Gene Ontology cellular-component term for the Ragulator/EGO complex.
+  posed_by: codex
+  posed_date: '2026-09-18'
+  resolved_date: '2026-09-18'
