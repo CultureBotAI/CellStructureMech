@@ -10196,14 +10196,14 @@
           "cosine_similarity": 0.87495414
         },
         {
+          "identifier": "GO:0061617",
+          "label": "MICOS complex",
+          "cosine_similarity": 0.85741768
+        },
+        {
           "identifier": "GO:0042720",
           "label": "mitochondrial inner membrane peptidase complex",
           "cosine_similarity": 0.8491105
-        },
-        {
-          "identifier": "GO:0022624",
-          "label": "proteasome accessory complex",
-          "cosine_similarity": 0.8086059
         }
       ]
     },
@@ -10673,6 +10673,37 @@
       ]
     },
     {
+      "identifier": "GO:0061617",
+      "label": "MICOS complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.85900494
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.85761079
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.85741768
+        },
+        {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.85098372
+        },
+        {
+          "identifier": "GO:0030061",
+          "label": "mitochondrial crista",
+          "cosine_similarity": 0.82719245
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000444",
       "label": "MIS12/MIND type complex",
       "neighbors": [
@@ -10723,14 +10754,14 @@
           "cosine_similarity": 0.85471663
         },
         {
+          "identifier": "GO:0061617",
+          "label": "MICOS complex",
+          "cosine_similarity": 0.85098372
+        },
+        {
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.8491105
-        },
-        {
-          "identifier": "GO:0035632",
-          "label": "mitochondrial prohibitin complex",
-          "cosine_similarity": 0.82364651
         }
       ]
     },
@@ -11493,6 +11524,11 @@
           "cosine_similarity": 0.88510127
         },
         {
+          "identifier": "GO:0061617",
+          "label": "MICOS complex",
+          "cosine_similarity": 0.85900494
+        },
+        {
           "identifier": "GO:0042720",
           "label": "mitochondrial inner membrane peptidase complex",
           "cosine_similarity": 0.85471663
@@ -11501,11 +11537,6 @@
           "identifier": "GO:0042721",
           "label": "TIM22 mitochondrial import inner membrane insertion complex",
           "cosine_similarity": 0.8500746
-        },
-        {
-          "identifier": "GO:0001405",
-          "label": "PAM complex, Tim23 associated import motor",
-          "cosine_similarity": 0.84418791
         }
       ]
     },

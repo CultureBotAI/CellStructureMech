@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/micos_complex.yaml
+  slug: micos_complex
+session:
+  id: 2026-09-18T193249Z-claude-code-63b3ad
+  timestamp: '2026-09-18T19:32:49Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created MICOS complex record
+  details: Added a GO:0061617 MICOS complex record with GO synonymy and parentage, Saccharomyces
+    cerevisiae support from early MINOS/MitOS/MICOS literature, an inner-mitochondrial-membrane-organization
+    graph, and an open MICOS subunit-grounding TODO.
