@@ -5355,6 +5355,11 @@
           "cosine_similarity": 0.8982166
         },
         {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.8377442
+        },
+        {
           "identifier": "GO:0012507",
           "label": "ER to Golgi transport vesicle membrane",
           "cosine_similarity": 0.81854325
@@ -5363,11 +5368,6 @@
           "identifier": "GO:0030134",
           "label": "COPII-coated ER to Golgi transport vesicle",
           "cosine_similarity": 0.81838805
-        },
-        {
-          "identifier": "GO:0005768",
-          "label": "endosome",
-          "cosine_similarity": 0.81244318
         }
       ]
     },
@@ -9540,6 +9540,11 @@
           "cosine_similarity": 0.6941095
         },
         {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.67379117
+        },
+        {
           "identifier": "GO:0120101",
           "label": "bacterial-type flagellum stator complex",
           "cosine_similarity": 0.67230618
@@ -9548,11 +9553,6 @@
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
           "cosine_similarity": 0.66422698
-        },
-        {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.66383864
         }
       ]
     },
@@ -10098,6 +10098,11 @@
           "cosine_similarity": 0.74458476
         },
         {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.74102287
+        },
+        {
           "identifier": "GO:0034044",
           "label": "exomer complex",
           "cosine_similarity": 0.73942404
@@ -10106,11 +10111,6 @@
           "identifier": "GO:1990070",
           "label": "TRAPPI protein complex",
           "cosine_similarity": 0.73273619
-        },
-        {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.73222598
         }
       ]
     },
@@ -10134,14 +10134,45 @@
           "cosine_similarity": 0.71244196
         },
         {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.71109316
+        },
+        {
           "identifier": "GO:0044284",
           "label": "mitochondrial crista junction",
           "cosine_similarity": 0.70492224
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0072546",
+      "label": "EMC complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.89335621
         },
         {
-          "identifier": "GO:0005641",
-          "label": "nuclear envelope lumen",
-          "cosine_similarity": 0.70364413
+          "identifier": "GO:0005783",
+          "label": "endoplasmic reticulum",
+          "cosine_similarity": 0.8377442
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.81654268
+        },
+        {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.81295248
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.80328178
         }
       ]
     },
@@ -10149,6 +10180,11 @@
       "identifier": "GO:0032865",
       "label": "ERMES complex",
       "neighbors": [
+        {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.89335621
+        },
         {
           "identifier": "GO:0001401",
           "label": "SAM complex",
@@ -10168,11 +10204,6 @@
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.77517939
-        },
-        {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.77503584
         }
       ]
     },
@@ -10196,14 +10227,14 @@
           "cosine_similarity": 0.88371456
         },
         {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.80328178
+        },
+        {
           "identifier": "GO:0034044",
           "label": "exomer complex",
           "cosine_similarity": 0.78042082
-        },
-        {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.77603179
         }
       ]
     },
@@ -10227,14 +10258,14 @@
           "cosine_similarity": 0.91208668
         },
         {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.76188366
+        },
+        {
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.74988962
-        },
-        {
-          "identifier": "GO:0030897",
-          "label": "HOPS complex",
-          "cosine_similarity": 0.74561153
         }
       ]
     },
@@ -10258,14 +10289,14 @@
           "cosine_similarity": 0.90483787
         },
         {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.73450185
+        },
+        {
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.73405564
-        },
-        {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.72375675
         }
       ]
     },
@@ -10289,14 +10320,14 @@
           "cosine_similarity": 0.88371456
         },
         {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.7671045
+        },
+        {
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.73949898
-        },
-        {
-          "identifier": "GO:0005770",
-          "label": "late endosome",
-          "cosine_similarity": 0.73842871
         }
       ]
     },
@@ -10356,9 +10387,9 @@
           "cosine_similarity": 0.76447618
         },
         {
-          "identifier": "GO:1990071",
-          "label": "TRAPPII protein complex",
-          "cosine_similarity": 0.75250979
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.75980232
         }
       ]
     },
@@ -11369,6 +11400,11 @@
           "cosine_similarity": 0.88510127
         },
         {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.81295248
+        },
+        {
           "identifier": "GO:0010006",
           "label": "Toc complex",
           "cosine_similarity": 0.78788455
@@ -11377,11 +11413,6 @@
           "identifier": "GO:0031897",
           "label": "Tic complex",
           "cosine_similarity": 0.77296298
-        },
-        {
-          "identifier": "GO:0022624",
-          "label": "proteasome accessory complex",
-          "cosine_similarity": 0.75734369
         }
       ]
     },
@@ -11400,6 +11431,11 @@
           "cosine_similarity": 0.82566426
         },
         {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.77594784
+        },
+        {
           "identifier": "GO:0005783",
           "label": "endoplasmic reticulum",
           "cosine_similarity": 0.77380055
@@ -11408,11 +11444,6 @@
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.74339348
-        },
-        {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.74142332
         }
       ]
     },
@@ -11503,9 +11534,9 @@
           "cosine_similarity": 0.7671792
         },
         {
-          "identifier": "GO:0022624",
-          "label": "proteasome accessory complex",
-          "cosine_similarity": 0.72980628
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.75465664
         }
       ]
     },
@@ -11534,9 +11565,9 @@
           "cosine_similarity": 0.77023081
         },
         {
-          "identifier": "GO:0009941",
-          "label": "chloroplast envelope",
-          "cosine_similarity": 0.73927839
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.75419179
         }
       ]
     },
