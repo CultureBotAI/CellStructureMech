@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gpi_anchor_transamidase_complex.yaml
+  slug: gpi_anchor_transamidase_complex
+session:
+  id: 2026-09-18T205724Z-claude-code-1b8668
+  timestamp: '2026-09-18T20:57:24Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1191
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1190
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1189
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed GPI-anchor transamidase PR review findings
+  details: 'Resolved PR #1189 review issues #1191 and #1190 by adding the GO-backed GPIT complex
+    exact synonym, preserving the Cdc91 alias on the Gab1 GPI transamidase subunit, and carrying
+    the alias into the nonmechanistic graph and subunit-family grounding TODO.'

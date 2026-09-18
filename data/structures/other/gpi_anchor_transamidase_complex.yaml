@@ -26,10 +26,20 @@ curation_history:
   changes: Narrowed the Gpi17 component evidence to the exact GO term rather than
     using the Fraering Saccharomyces complex citation on every subunit row.
   llm_assisted: true
+- timestamp: '2026-09-18T20:57:04Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1191 by adding the GPIT exact synonym and resolved #1190 by
+    carrying the Cdc91 alias on the Gab1 subunit, graph node, edge evidence, and subunit-boundary
+    TODO.'
+  llm_assisted: true
 synonyms:
 - synonym_text: GPI transamidase complex
   synonym_type: EXACT_SYNONYM
   source: DOI:10.1091/mbc.12.10.3295
+- synonym_text: GPIT complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0042765
 parent_structures:
 - GO:0032991
 part_of:
@@ -103,28 +113,31 @@ components:
   - reference: GO:0042765
     notes: GO:0042765 names Gpi17p as a Saccharomyces GPI-anchor transamidase subunit.
 - component_id: gab1_subunit
-  label: Gab1 subunit
+  label: Gab1/Cdc91 subunit
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
   - GAB1
+  - CDC91
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: Gab1p is modeled as a budding-yeast GPI-anchor transamidase subunit;
-    no exact source-neutral Gab1 protein-family CURIE was curated for this first record.
-  role: Named constituent of the budding-yeast GPI-anchor transamidase complex.
+  grounding_notes: Gab1p/Cdc91p is modeled as a budding-yeast GPI-anchor transamidase
+    subunit; no exact source-neutral Gab1 or Cdc91 protein-family CURIE was curated
+    for this first record.
+  role: Named Gab1p/Cdc91p constituent of the budding-yeast GPI-anchor transamidase
+    complex.
   evidence:
   - reference: GO:0042765
     notes: GO:0042765 names Gab1p as a Saccharomyces GPI-anchor transamidase subunit.
   - reference: DOI:10.1091/mbc.e02-12-0794
-    notes: Primary Saccharomyces biochemical evidence for this GPI-anchor transamidase
-      constituent.
+    notes: Hong et al. 2003 connected Cdc91p/Gab1p with the yeast GPI-anchor transamidase
+      complex as the fifth subunit.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
   note: Budding yeast contains a GPI-anchor transamidase complex with Gaa1p, Gpi8p,
-    Gpi16p, Gpi17p and Gab1p subunits.
+    Gpi16p, Gpi17p and Gab1p/Cdc91p subunits.
   reference: GO:0042765
 canonical_examples:
 - taxon_id: NCBITaxon:4932
@@ -187,7 +200,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     component_ref: gpi17_subunit
   - node_id: gab1_subunit
-    label: Gab1 subunit
+    label: Gab1/Cdc91 subunit
     node_type: GENE_OR_PROTEIN
     component_ref: gab1_subunit
   - node_id: gpi_anchor_transamidase_complex
@@ -238,11 +251,14 @@ causal_graphs:
   - subject: gab1_subunit
     predicate: assembles into
     object: gpi_anchor_transamidase_complex
-    description: Gab1p is a named constituent of the budding-yeast GPI-anchor transamidase
-      complex.
+    description: Gab1p/Cdc91p is a named constituent of the budding-yeast GPI-anchor
+      transamidase complex.
     evidence:
     - reference: GO:0042765
       notes: GO:0042765 names Gab1p as a Saccharomyces GPI-anchor transamidase subunit.
+    - reference: DOI:10.1091/mbc.e02-12-0794
+      notes: Hong et al. 2003 connected Cdc91p/Gab1p with GPI transamidase as the
+        fifth subunit.
   - subject: gpi_anchor_transamidase_complex
     predicate: is embedded in
     object: er_membrane
@@ -264,18 +280,22 @@ causal_graphs:
 discussions:
 - discussion_id: gpit_subunit_family_boundaries
   prompt: Resolve exact source-neutral GPI-anchor transamidase subunit family groundings
-    for the reviewed label-only Gaa1, Gpi8, Gpi16, Gpi17 and Gab1 component rows.
+    for the reviewed label-only Gaa1, Gpi8, Gpi16, Gpi17 and Gab1/Cdc91 component
+    rows.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - causal_graphs#gpit_gpi_anchor_attachment
   rationale: GO exactly grounds the GPI-anchor transamidase complex and names the
-    Saccharomyces cerevisiae Gaa1p, Gpi8p, Gpi16p, Gpi17p and Gab1p subunits; this
-    first record adds reviewed label-only component rows but leaves exact taxon-agnostic
+    Saccharomyces cerevisiae Gaa1p, Gpi8p, Gpi16p, Gpi17p and Gab1p/Cdc91p subunits;
+    this first record adds reviewed label-only component rows but leaves exact taxon-agnostic
     family identifiers unset until they are verified.
   evidence:
   - reference: GO:0042765
     notes: GO:0042765 identifies Gaa1p, Gab1p, Gpi8p, Gpi16p and Gpi17p as Saccharomyces
       GPI-anchor transamidase subunits.
+  - reference: DOI:10.1091/mbc.e02-12-0794
+    notes: Hong et al. 2003 identifies Cdc91p as the yeast Gab1p GPI transamidase
+      subunit.
   posed_by: codex
   posed_date: '2026-09-18'
