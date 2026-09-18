@@ -28,6 +28,12 @@ curation_history:
   changes: Rewrote the DASH record with independent evidence dictionaries so the serialized
     YAML does not contain anchors or aliases.
   llm_assisted: true
+- timestamp: '2026-09-18T13:46:24Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: Narrowed the DASH Saccharomyces taxonomic-distribution and canonical-example
+    notes so each row is directly supported by its row-level reference.
+  llm_assisted: true
 parent_structures:
 - GO:0140513
 part_of:
@@ -205,14 +211,15 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Budding yeast has a DASH/Dam1 kinetochore complex that binds microtubules
-    at the outer kinetochore during chromosome segregation.
-  reference: GO:0042729
+  note: Cheeseman et al. purified a Saccharomyces cerevisiae Dam1p outer-kinetochore
+    complex that contains several DASH subunits and directly binds microtubules.
+  reference: DOI:10.1083/jcb.200109063
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Reference yeast system in which the Dam1p/DASH complex was purified, genetically
-    expanded, and reconstituted as a microtubule-binding ring.
+  note: Reference budding-yeast system in which a Dam1p complex containing Dam1p,
+    Duo1p, Dad1p, Spc19p, Spc34p, Dad2p, and Ask1p was purified and linked to outer-kinetochore
+    function.
   reference: DOI:10.1083/jcb.200109063
 functions:
 - function_id: attachment_of_spindle_microtubules_to_kinetochore
