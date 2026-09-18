@@ -3294,6 +3294,15 @@
   "definition": "A protein complex that contains at least TOR (target of rapamycin) and Raptor (regulatory-associated protein of TOR), or orthologs of, in complex with other signaling components. Mediates the phosphorylation and activation of S6K. In Saccharomyces, the complex contains Kog1p, Lst8p, Tco89p, and either Tor1p or Tor2p."
  },
  {
+  "identifier": "GO:0031932",
+  "label": "TORC2 complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/torc2_complex.html",
+  "definition": "A protein complex that contains at least TOR (target of rapamycin) and Rictor (rapamycin-insensitive companion of TOR), or orthologs of, in complex with other signaling components. Mediates the phosphorylation and activation of PKB (also called AKT). In Saccharomyces, the complex contains Avo1p, Avo2p, Tsc11p, Lst8p, Bit61p, Slm1p, Slm2p, and Tor2p."
+ },
+ {
   "identifier": "GO:1990070",
   "label": "TRAPPI protein complex",
   "category": "OTHER",

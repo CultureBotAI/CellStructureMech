@@ -10325,9 +10325,9 @@
           "cosine_similarity": 0.76723838
         },
         {
-          "identifier": "GO:0034044",
-          "label": "exomer complex",
-          "cosine_similarity": 0.74955505
+          "identifier": "GO:0031932",
+          "label": "TORC2 complex",
+          "cosine_similarity": 0.76597658
         }
       ]
     },
@@ -10351,14 +10351,14 @@
           "cosine_similarity": 0.7281742
         },
         {
+          "identifier": "GO:0031932",
+          "label": "TORC2 complex",
+          "cosine_similarity": 0.72319761
+        },
+        {
           "identifier": "GO:0005784",
           "label": "Sec61 translocon complex",
           "cosine_similarity": 0.71033094
-        },
-        {
-          "identifier": "GO:0031931",
-          "label": "TORC1 complex",
-          "cosine_similarity": 0.71016023
         }
       ]
     },
@@ -10444,14 +10444,14 @@
           "cosine_similarity": 0.78010634
         },
         {
+          "identifier": "GO:0031932",
+          "label": "TORC2 complex",
+          "cosine_similarity": 0.76432985
+        },
+        {
           "identifier": "GO:1990072",
           "label": "TRAPPIII protein complex",
           "cosine_similarity": 0.76180138
-        },
-        {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.75794431
         }
       ]
     },
@@ -11328,6 +11328,11 @@
       "label": "TORC1 complex",
       "neighbors": [
         {
+          "identifier": "GO:0031932",
+          "label": "TORC2 complex",
+          "cosine_similarity": 0.92980871
+        },
+        {
           "identifier": "GO:1990130",
           "label": "GATOR1 complex",
           "cosine_similarity": 0.77959163
@@ -11346,11 +11351,37 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.71841716
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031932",
+      "label": "TORC2 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031931",
+          "label": "TORC1 complex",
+          "cosine_similarity": 0.92980871
         },
         {
-          "identifier": "GO:1990070",
-          "label": "TRAPPI protein complex",
-          "cosine_similarity": 0.71802156
+          "identifier": "GO:1990130",
+          "label": "GATOR1 complex",
+          "cosine_similarity": 0.76597658
+        },
+        {
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.76432985
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.73693547
+        },
+        {
+          "identifier": "GO:1990131",
+          "label": "Gtr1-Gtr2 GTPase complex",
+          "cosine_similarity": 0.73643466
         }
       ]
     },

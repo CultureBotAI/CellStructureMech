@@ -1,0 +1,420 @@
+identifier: GO:0031932
+label: TORC2 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that contains at least TOR (target of rapamycin) and
+  Rictor (rapamycin-insensitive companion of TOR), or orthologs of, in complex with
+  other signaling components. Mediates the phosphorylation and activation of PKB (also
+  called AKT). In Saccharomyces, the complex contains Avo1p, Avo2p, Tsc11p, Lst8p,
+  Bit61p, Slm1p, Slm2p, and Tor2p.
+definition_source: GO:0031932
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T12:12:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T12:13:32Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added TORC2 synonymy, protein-complex parentage, reviewed-label-only yeast
+    Tor2/Avo1/Avo2/Tsc11/Lst8/Bit61/Slm1/Slm2 components, Saccharomyces scope, a TORC2
+    signaling function, GO/DOI evidence, a nonmechanistic TORC2 function graph, and
+    subunit-grounding plus TORC1 boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-18T12:14:02Z'
+  curator: codex
+  action: REFORMATTED_RECORD
+  changes: Expanded shared YAML evidence aliases into plain repeated mappings.
+  llm_assisted: true
+- timestamp: '2026-09-18T12:15:05Z'
+  curator: codex
+  action: REFINED_EVIDENCE
+  changes: Kept Slm1 and Slm2 as GO:0031932-curated Saccharomyces TORC2 constituents
+    but removed the Wullschleger 2005 DOI from their component and graph-edge evidence
+    to avoid overextending one molecular-organization paper.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+synonyms:
+- synonym_text: TORC2
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031932
+- synonym_text: TOR complex 2
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031932
+- synonym_text: TORC 2 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031932
+- synonym_text: rapamycin and nutrient-insensitive TOR complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031932
+components:
+- component_id: tor2_torc2_kinase_subunit
+  label: Tor2 TORC2 kinase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TOR2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae TOR2 TORC2 constituent;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: Catalytic TOR kinase subunit represented in its budding-yeast TORC2 context.
+  evidence:
+  - reference: GO:0031932
+    notes: Gene Ontology cellular-component term for the TORC2 complex.
+  - reference: DOI:10.1074/jbc.M505553200
+    notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+      TORC2 complex.
+- component_id: avo1_torc2_subunit
+  label: Avo1 TORC2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - AVO1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae AVO1 TORC2 constituent;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: Budding-yeast TORC2 constituent named in the GO:0031932 Saccharomyces composition.
+  evidence:
+  - reference: GO:0031932
+    notes: Gene Ontology cellular-component term for the TORC2 complex.
+  - reference: DOI:10.1074/jbc.M505553200
+    notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+      TORC2 complex.
+- component_id: avo2_torc2_subunit
+  label: Avo2 TORC2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - AVO2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae AVO2 TORC2 constituent;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: Budding-yeast TORC2 constituent named in the GO:0031932 Saccharomyces composition.
+  evidence:
+  - reference: GO:0031932
+    notes: Gene Ontology cellular-component term for the TORC2 complex.
+  - reference: DOI:10.1074/jbc.M505553200
+    notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+      TORC2 complex.
+- component_id: tsc11_avo3_torc2_subunit
+  label: Tsc11/Avo3 TORC2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TSC11
+  - AVO3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae TSC11/AVO3 TORC2
+    constituent; no exact source-neutral InterPro, Pfam or NCBIfam family identifier
+    for this subunit class was curated in this pass.
+  role: Rictor-family budding-yeast TORC2 constituent named as Tsc11p in the GO definition.
+  evidence:
+  - reference: GO:0031932
+    notes: Gene Ontology cellular-component term for the TORC2 complex.
+  - reference: DOI:10.1074/jbc.M505553200
+    notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+      TORC2 complex.
+- component_id: lst8_torc2_subunit
+  label: Lst8 TORC1/TORC2 beta-propeller subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - LST8
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae LST8 TORC2 constituent;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: Shared beta-propeller TOR-complex subunit represented in its TORC2 constituent
+    context.
+  evidence:
+  - reference: GO:0031932
+    notes: Gene Ontology cellular-component term for the TORC2 complex.
+  - reference: DOI:10.1074/jbc.M505553200
+    notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+      TORC2 complex.
+- component_id: bit61_torc2_subunit
+  label: Bit61 TORC2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - BIT61
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae BIT61 TORC2 constituent;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: Budding-yeast TORC2 constituent named in the GO:0031932 Saccharomyces composition.
+  evidence:
+  - reference: GO:0031932
+    notes: Gene Ontology cellular-component term for the TORC2 complex.
+  - reference: DOI:10.1074/jbc.M505553200
+    notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+      TORC2 complex.
+- component_id: slm1_torc2_subunit
+  label: Slm1 TORC2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SLM1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae SLM1 TORC2 constituent;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: Budding-yeast TORC2 constituent named in the GO:0031932 Saccharomyces composition.
+  evidence:
+  - reference: GO:0031932
+    notes: Gene Ontology cellular-component term for the TORC2 complex.
+- component_id: slm2_torc2_subunit
+  label: Slm2 TORC2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SLM2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae SLM2 TORC2 constituent;
+    no exact source-neutral InterPro, Pfam or NCBIfam family identifier for this subunit
+    class was curated in this pass.
+  role: Budding-yeast TORC2 constituent named in the GO:0031932 Saccharomyces composition.
+  evidence:
+  - reference: GO:0031932
+    notes: Gene Ontology cellular-component term for the TORC2 complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: VARIABLE
+  note: Budding yeast is the curated model for TORC2 complexes containing Tor2, Avo1,
+    Avo2, Tsc11, Lst8, Bit61, Slm1 and Slm2.
+  reference: GO:0031932
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which GO separates rapamycin-insensitive TORC2 from TORC1.
+  reference: GO:0031932
+functions:
+- function_id: torc2_signaling
+  label: TORC2 signaling
+  grounding: GO:0038203
+  description: The TORC2 complex mediates rapamycin-insensitive signaling represented
+    by the GO:0038203 TORC2 signaling process.
+  evidence:
+  - reference: GO:0038203
+    notes: Gene Ontology biological-process term for TORC2 signaling.
+  - reference: GO:0031932
+    notes: Gene Ontology cellular-component term for the TORC2 complex.
+  - reference: DOI:10.1074/jbc.M505553200
+    notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+      TORC2 complex.
+evidence:
+- reference: GO:0031932
+  notes: Gene Ontology cellular-component term for the TORC2 complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0038203
+  notes: Gene Ontology biological-process term for TORC2 signaling.
+- reference: DOI:10.1074/jbc.M505553200
+  notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+    TORC2 complex.
+- reference: DOI:10.1016/s1097-2765(02)00636-6
+  notes: Loewith et al. 2002 separated budding-yeast TOR into two complexes and assigned
+    TORC2 to the rapamycin-insensitive branch.
+causal_graphs:
+- graph_id: yeast_torc2_subunit_signaling
+  title: Yeast TORC2 complex mediates TORC2 signaling
+  description: In Saccharomyces cerevisiae, Tor2, Avo1, Avo2, Tsc11, Lst8, Bit61,
+    Slm1 and Slm2 form the rapamycin-insensitive complex that mediates TORC2 signaling.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents curated TORC2 subunit membership and the high-level
+    signaling output mediated by the complex without modeling downstream phosphorylation
+    targets or plasma-membrane recruitment.
+  nodes:
+  - node_id: tor2_torc2_kinase_subunit
+    label: Tor2 TORC2 kinase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tor2_torc2_kinase_subunit
+  - node_id: avo1_torc2_subunit
+    label: Avo1 TORC2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: avo1_torc2_subunit
+  - node_id: avo2_torc2_subunit
+    label: Avo2 TORC2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: avo2_torc2_subunit
+  - node_id: tsc11_avo3_torc2_subunit
+    label: Tsc11/Avo3 TORC2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tsc11_avo3_torc2_subunit
+  - node_id: lst8_torc2_subunit
+    label: Lst8 TORC1/TORC2 beta-propeller subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: lst8_torc2_subunit
+  - node_id: bit61_torc2_subunit
+    label: Bit61 TORC2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: bit61_torc2_subunit
+  - node_id: slm1_torc2_subunit
+    label: Slm1 TORC2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: slm1_torc2_subunit
+  - node_id: slm2_torc2_subunit
+    label: Slm2 TORC2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: slm2_torc2_subunit
+  - node_id: torc2_complex
+    label: TORC2 complex
+    node_type: STRUCTURE
+    grounding: GO:0031932
+  - node_id: torc2_signaling
+    label: TORC2 signaling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0038203
+  edges:
+  - subject: tor2_torc2_kinase_subunit
+    predicate: is part of
+    object: torc2_complex
+    description: Tor2 TORC2 kinase subunit is represented as a budding-yeast TORC2
+      constituent.
+    evidence:
+    - reference: GO:0031932
+      notes: Gene Ontology cellular-component term for the TORC2 complex.
+    - reference: DOI:10.1074/jbc.M505553200
+      notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+        TORC2 complex.
+  - subject: avo1_torc2_subunit
+    predicate: is part of
+    object: torc2_complex
+    description: Avo1 TORC2 subunit is represented as a budding-yeast TORC2 constituent.
+    evidence:
+    - reference: GO:0031932
+      notes: Gene Ontology cellular-component term for the TORC2 complex.
+    - reference: DOI:10.1074/jbc.M505553200
+      notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+        TORC2 complex.
+  - subject: avo2_torc2_subunit
+    predicate: is part of
+    object: torc2_complex
+    description: Avo2 TORC2 subunit is represented as a budding-yeast TORC2 constituent.
+    evidence:
+    - reference: GO:0031932
+      notes: Gene Ontology cellular-component term for the TORC2 complex.
+    - reference: DOI:10.1074/jbc.M505553200
+      notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+        TORC2 complex.
+  - subject: tsc11_avo3_torc2_subunit
+    predicate: is part of
+    object: torc2_complex
+    description: Tsc11/Avo3 TORC2 subunit is represented as a budding-yeast TORC2
+      constituent.
+    evidence:
+    - reference: GO:0031932
+      notes: Gene Ontology cellular-component term for the TORC2 complex.
+    - reference: DOI:10.1074/jbc.M505553200
+      notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+        TORC2 complex.
+  - subject: lst8_torc2_subunit
+    predicate: is part of
+    object: torc2_complex
+    description: Lst8 TORC1/TORC2 beta-propeller subunit is represented as a budding-yeast
+      TORC2 constituent.
+    evidence:
+    - reference: GO:0031932
+      notes: Gene Ontology cellular-component term for the TORC2 complex.
+    - reference: DOI:10.1074/jbc.M505553200
+      notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+        TORC2 complex.
+  - subject: bit61_torc2_subunit
+    predicate: is part of
+    object: torc2_complex
+    description: Bit61 TORC2 subunit is represented as a budding-yeast TORC2 constituent.
+    evidence:
+    - reference: GO:0031932
+      notes: Gene Ontology cellular-component term for the TORC2 complex.
+    - reference: DOI:10.1074/jbc.M505553200
+      notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+        TORC2 complex.
+  - subject: slm1_torc2_subunit
+    predicate: is part of
+    object: torc2_complex
+    description: Slm1 TORC2 subunit is represented as a budding-yeast TORC2 constituent.
+    evidence:
+    - reference: GO:0031932
+      notes: Gene Ontology cellular-component term for the TORC2 complex.
+  - subject: slm2_torc2_subunit
+    predicate: is part of
+    object: torc2_complex
+    description: Slm2 TORC2 subunit is represented as a budding-yeast TORC2 constituent.
+    evidence:
+    - reference: GO:0031932
+      notes: Gene Ontology cellular-component term for the TORC2 complex.
+  - subject: torc2_complex
+    predicate: mediates
+    object: torc2_signaling
+    description: TORC2 is represented as mediating TORC2 signaling.
+    evidence:
+    - reference: GO:0038203
+      notes: Gene Ontology biological-process term for TORC2 signaling.
+    - reference: GO:0031932
+      notes: Gene Ontology cellular-component term for the TORC2 complex.
+    - reference: DOI:10.1074/jbc.M505553200
+      notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
+        TORC2 complex.
+discussions:
+- discussion_id: resolve_torc2_subunit_family_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, or NCBIfam groundings for the
+    yeast TORC2 Tor2, Avo1, Avo2, Tsc11/Avo3, Lst8, Bit61, Slm1 and Slm2 subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#tor2_torc2_kinase_subunit
+  - components#avo1_torc2_subunit
+  - components#avo2_torc2_subunit
+  - components#tsc11_avo3_torc2_subunit
+  - components#lst8_torc2_subunit
+  - components#bit61_torc2_subunit
+  - components#slm1_torc2_subunit
+  - components#slm2_torc2_subunit
+  rationale: This first TORC2 record names the yeast protein constituents but leaves
+    family grounding unset until exact source-neutral boundaries for shared TOR/Lst8
+    classes and TORC2-specific classes are reviewed.
+  evidence:
+  - reference: GO:0031932
+    notes: Gene Ontology cellular-component term for the TORC2 complex.
+  posed_by: codex
+  posed_date: '2026-09-18'
+- discussion_id: torc1_boundary
+  prompt: Keep TORC1-specific Kog1, Tco89 and Tor1 outside this TORC2 record.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - components#tor2_torc2_kinase_subunit
+  - components#lst8_torc2_subunit
+  - causal_graphs#yeast_torc2_subunit_signaling
+  rationale: GO separates rapamycin-sensitive TORC1 from TORC2 as sibling complexes.
+    Tor2 and Lst8 can occur in both yeast TOR complexes, but Kog1, Tco89 and Tor1
+    are outside GO:0031932.
+  resolution_note: 'Declined: TORC1-side subunits were treated as constituents of
+    GO:0031931 rather than GO:0031932.'
+  evidence:
+  - reference: GO:0031932
+    notes: Gene Ontology cellular-component term for the TORC2 complex.
+  - reference: GO:0031931
+    notes: Gene Ontology cellular-component term for the TORC1 complex.
+  - reference: DOI:10.1016/s1097-2765(02)00636-6
+    notes: Loewith et al. 2002 separated budding-yeast TOR into two complexes and
+      assigned TORC2 to the rapamycin-insensitive branch.
+  posed_by: codex
+  posed_date: '2026-09-18'
+  resolved_date: '2026-09-18'

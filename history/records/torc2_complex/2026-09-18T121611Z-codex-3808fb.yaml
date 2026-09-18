@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/torc2_complex.yaml
+  slug: torc2_complex
+session:
+  id: 2026-09-18T121611Z-codex-3808fb
+  timestamp: '2026-09-18T12:16:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add TORC2 complex record
+  details: Curated data/structures/other/torc2_complex.yaml from GO:0031932 with reviewed-label-only
+    Tor2, Avo1, Avo2, Tsc11/Avo3, Lst8, Bit61, Slm1 and Slm2 constituent proteins, Saccharomyces
+    cerevisiae scope, a TORC2-signaling function, a nonmechanistic TORC2 subunit/function
+    graph, and a boundary decision keeping TORC1-side Kog1, Tco89 and Tor1 outside the TORC2
+    record. The draft was written through scripts/new_record.py plus temporary validated mutators
+    and checked with validate_strict for the new record.
