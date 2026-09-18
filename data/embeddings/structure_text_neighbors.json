@@ -2596,6 +2596,11 @@
           "cosine_similarity": 0.95011351
         },
         {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.78659457
+        },
+        {
           "identifier": "GO:0005774",
           "label": "vacuolar membrane",
           "cosine_similarity": 0.73846875
@@ -2604,11 +2609,6 @@
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
           "cosine_similarity": 0.7360547
-        },
-        {
-          "identifier": "GO:0030061",
-          "label": "mitochondrial crista",
-          "cosine_similarity": 0.70337651
         }
       ]
     },
@@ -2627,6 +2627,11 @@
           "cosine_similarity": 0.95011351
         },
         {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.82065831
+        },
+        {
           "identifier": "GO:0005774",
           "label": "vacuolar membrane",
           "cosine_similarity": 0.75122643
@@ -2635,11 +2640,6 @@
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
           "cosine_similarity": 0.71857001
-        },
-        {
-          "identifier": "GO:0000329",
-          "label": "fungal-type vacuole membrane",
-          "cosine_similarity": 0.71164914
         }
       ]
     },
@@ -2658,6 +2658,11 @@
           "cosine_similarity": 0.95051084
         },
         {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.81819436
+        },
+        {
           "identifier": "GO:0005774",
           "label": "vacuolar membrane",
           "cosine_similarity": 0.72411219
@@ -2666,11 +2671,6 @@
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
           "cosine_similarity": 0.71656157
-        },
-        {
-          "identifier": "GO:0030061",
-          "label": "mitochondrial crista",
-          "cosine_similarity": 0.69942629
         }
       ]
     },
@@ -9612,9 +9612,9 @@
           "cosine_similarity": 0.66729971
         },
         {
-          "identifier": "GO:0020007",
-          "label": "apical complex",
-          "cosine_similarity": 0.62928874
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.63141805
         }
       ]
     },
@@ -9685,6 +9685,11 @@
       "label": "cellulosome",
       "neighbors": [
         {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.6879186
+        },
+        {
           "identifier": "GO:0022624",
           "label": "proteasome accessory complex",
           "cosine_similarity": 0.68146083
@@ -9703,11 +9708,6 @@
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.66517752
-        },
-        {
-          "identifier": "GO:0030117",
-          "label": "membrane coat",
-          "cosine_similarity": 0.658359
         }
       ]
     },
@@ -10170,9 +10170,9 @@
           "cosine_similarity": 0.81295248
         },
         {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.80328178
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.80574215
         }
       ]
     },
@@ -10563,6 +10563,11 @@
           "cosine_similarity": 0.78422668
         },
         {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.78393189
+        },
+        {
           "identifier": "GO:1990070",
           "label": "TRAPPI protein complex",
           "cosine_similarity": 0.78010634
@@ -10571,11 +10576,6 @@
           "identifier": "GO:0031932",
           "label": "TORC2 complex",
           "cosine_similarity": 0.76432985
-        },
-        {
-          "identifier": "GO:1990072",
-          "label": "TRAPPIII protein complex",
-          "cosine_similarity": 0.76180138
         }
       ]
     },
@@ -10847,14 +10847,14 @@
           "cosine_similarity": 0.75979874
         },
         {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.74807365
+        },
+        {
           "identifier": "GO:1990131",
           "label": "Gtr1-Gtr2 GTPase complex",
           "cosine_similarity": 0.73470566
-        },
-        {
-          "identifier": "GO:0005816",
-          "label": "spindle pole body",
-          "cosine_similarity": 0.72471378
         }
       ]
     },
@@ -11479,6 +11479,37 @@
       ]
     },
     {
+      "identifier": "GO:0043291",
+      "label": "RAVE complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.83067528
+        },
+        {
+          "identifier": "GO:0000220",
+          "label": "vacuolar proton-transporting V-type ATPase, V0 domain",
+          "cosine_similarity": 0.82065831
+        },
+        {
+          "identifier": "GO:0000221",
+          "label": "vacuolar proton-transporting V-type ATPase, V1 domain",
+          "cosine_similarity": 0.81819436
+        },
+        {
+          "identifier": "GO:0061617",
+          "label": "MICOS complex",
+          "cosine_similarity": 0.80868618
+        },
+        {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.80574215
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030904",
       "label": "retromer complex",
       "neighbors": [
@@ -11498,14 +11529,14 @@
           "cosine_similarity": 0.77438259
         },
         {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.7597875
+        },
+        {
           "identifier": "GO:1990131",
           "label": "Gtr1-Gtr2 GTPase complex",
           "cosine_similarity": 0.75451291
-        },
-        {
-          "identifier": "GO:0000813",
-          "label": "ESCRT I complex",
-          "cosine_similarity": 0.74988962
         }
       ]
     },
