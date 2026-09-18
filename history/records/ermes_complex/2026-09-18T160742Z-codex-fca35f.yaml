@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ermes_complex.yaml
+  slug: ermes_complex
+session:
+  id: 2026-09-18T160742Z-codex-fca35f
+  timestamp: '2026-09-18T16:07:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1164
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1165
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1163
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address ERMES adversarial review
+  details: 'Resolved adversarial review findings from PR #1163 by removing an over-assertive
+    top-level ERMES lipid-exchange function, deleting the broad mitochondrion graph node and
+    duplicate tethering edge, focusing the graph on the ERMES complex, endoplasmic reticulum,
+    mitochondrial outer membrane, and cautious Mmm1-Mdm12 lipid-transfer process, and regenerating
+    text embeddings, rendered pages, and generated corpus statistics.'
