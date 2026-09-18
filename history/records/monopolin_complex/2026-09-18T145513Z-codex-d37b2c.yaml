@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/monopolin_complex.yaml
+  slug: monopolin_complex
+session:
+  id: 2026-09-18T145513Z-codex-d37b2c
+  timestamp: '2026-09-18T14:55:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1157
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1158
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1156
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - canonical_examples
+  summary: Address monopolin PR review findings
+  details: 'Resolved PR #1156 review issues #1157 and #1158 by narrowing the GO-backed definition
+    to the directly quoted mono-orientation sentence and replacing the Corbett Csm1/Lrs4 structural-core
+    canonical example with the Rabitsch et al. budding-yeast monopolin-complex evidence.'

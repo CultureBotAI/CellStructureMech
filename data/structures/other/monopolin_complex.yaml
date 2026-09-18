@@ -4,8 +4,7 @@ structure_category: OTHER
 structure_kind: MULTIPROTEIN_COMPLEX
 definition: A protein complex required for clamping microtubule binding sites, ensuring
   orientation of sister kinetochores to the same pole (mono-orientation) during meiosis
-  I. In the yeast S. cerevisiae this complex consists of Csm1p, Lrs4p, Hrr25p and
-  Mam1p; in S. pombe Pcs1 and Mde4 have been identified as subunits.
+  I.
 definition_source: GO:0033551
 mapping_status: PROPOSED
 curation_history:
@@ -27,6 +26,14 @@ curation_history:
   action: NARROW_EVIDENCE_SCOPE
   changes: Narrowed the Saccharomyces canonical-example note to the Corbett et al.
     Csm1/Lrs4 structural evidence supported by its row-level reference.
+  llm_assisted: true
+- timestamp: '2026-09-18T14:54:47Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1157 and #1158 by narrowing the GO-backed definition to the
+    directly quoted mono-orientation sentence and replacing the Corbett Csm1/Lrs4
+    structural-core canonical example with the Rabitsch et al. budding-yeast monopolin-complex
+    evidence.'
   llm_assisted: true
 parent_structures:
 - GO:0032991
@@ -133,9 +140,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Reference yeast system in which the Csm1/Lrs4 monopolin core was structurally
-    analyzed as a kinetochore-component crosslinking assembly.
-  reference: DOI:10.1016/j.cell.2010.07.017
+  note: Reference budding-yeast meiosis system in which Csm1p and Lrs4p were identified
+    as forming a monopolin complex with Mam1p at kinetochores.
+  reference: DOI:10.1016/s1534-5807(03)00086-8
 functions:
 - function_id: sister_kinetochore_mono_orientation
   label: sister kinetochore mono-orientation
