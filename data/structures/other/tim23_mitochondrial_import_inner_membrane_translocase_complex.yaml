@@ -27,9 +27,15 @@ curation_history:
   curator: codex
   action: ADDRESS_REVIEW
   changes: 'Resolved #1171 by adding top-level GO:0005742 evidence for the TOM graph
-    node, resolved #1172 by weakening the TIM23-to-matrix-import edge from mediates
-    to supports, and resolved #1173 by separating source-neutral family grounding
-    from TIM23/PAM boundary decisions in the subunit TODO.'
+    node, resolved #1172 by separating source-neutral family grounding from TIM23/PAM
+    boundary decisions in the subunit TODO, and resolved #1173 by weakening the TIM23-to-matrix-import
+    edge from mediates to supports.'
+  llm_assisted: true
+- timestamp: '2026-09-18T17:28:18Z'
+  curator: codex
+  action: FIX_REVIEW_HISTORY
+  changes: 'Resolved #1174 by correcting swapped #1172 and #1173 references in the
+    prior ADDRESS_REVIEW curation-history entry.'
   llm_assisted: true
 synonyms:
 - synonym_text: Tim23 complex

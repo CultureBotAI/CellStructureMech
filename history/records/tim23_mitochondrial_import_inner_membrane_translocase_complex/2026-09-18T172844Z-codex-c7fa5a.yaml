@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/tim23_mitochondrial_import_inner_membrane_translocase_complex.yaml
+  slug: tim23_mitochondrial_import_inner_membrane_translocase_complex
+session:
+  id: 2026-09-18T172844Z-codex-c7fa5a
+  timestamp: '2026-09-18T17:28:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1174
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Correct TIM23 review issue references
+  details: 'Fixed the TIM23 ADDRESS_REVIEW curation-history sentence that had swapped #1172
+    and #1173. #1172 now maps to the TIM23/PAM TODO correction and #1173 maps to the TIM23-to-matrix-import
+    edge correction.'
