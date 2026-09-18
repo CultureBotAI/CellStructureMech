@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dash_complex.yaml
+  slug: dash_complex
+session:
+  id: 2026-09-18T134657Z-codex-ec971f
+  timestamp: '2026-09-18T13:46:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1151
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1150
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Tighten DASH Saccharomyces evidence rows
+  details: Addressed issue 1151 by narrowing the Saccharomyces cerevisiae taxonomic-distribution
+    and canonical-example notes so each row is directly supported by its row-level Cheeseman
+    2001 reference.

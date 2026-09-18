@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dash_complex.yaml
+  slug: dash_complex
+session:
+  id: 2026-09-18T133334Z-codex-fb9bec
+  timestamp: '2026-09-18T13:33:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add DASH complex structure record
+  details: Created a GO:0042729 DASH complex record with exact GO synonymy, nuclear protein-containing-complex
+    parentage, outer-kinetochore parthood, reviewed-label-only budding-yeast subunits, Saccharomyces
+    cerevisiae scope, spindle-microtubule attachment function, GO/DOI evidence, a nonmechanistic
+    outer-kinetochore microtubule-attachment graph, and a TODO covering source-neutral subunit
+    groundings and omitted Dad3/Dad4/Hsk-family microprotein boundary review.
