@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/sec62_sec63_complex.yaml
+  slug: sec62_sec63_complex
+session:
+  id: 2026-09-18T224627Z-claude-code-92228f
+  timestamp: '2026-09-18T22:46:27Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created Sec62/Sec63 complex record
+  details: Added a GO:0031207 Sec62/Sec63 complex record with GO exact synonyms, ER-protein-complex
+    parentage, Sec-complex and ER-membrane parthood, reviewed-label-only Sec62/Sec63/Sec71/Sec72
+    constituent rows, Saccharomyces scope, GO/DOI evidence, a mechanistic posttranslational
+    ER import graph, and explicit subunit-grounding and Sec61/Kar2 boundary discussions.

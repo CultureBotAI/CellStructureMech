@@ -9891,9 +9891,9 @@
           "cosine_similarity": 0.69443434
         },
         {
-          "identifier": "GO:1990071",
-          "label": "TRAPPII protein complex",
-          "cosine_similarity": 0.68509811
+          "identifier": "GO:0031207",
+          "label": "Sec62/Sec63 complex",
+          "cosine_similarity": 0.69384982
         }
       ]
     },
@@ -10341,6 +10341,11 @@
           "cosine_similarity": 0.82566426
         },
         {
+          "identifier": "GO:0031207",
+          "label": "Sec62/Sec63 complex",
+          "cosine_similarity": 0.82509526
+        },
+        {
           "identifier": "GO:0034044",
           "label": "exomer complex",
           "cosine_similarity": 0.72738924
@@ -10354,11 +10359,6 @@
           "identifier": "GO:0000815",
           "label": "ESCRT III complex",
           "cosine_similarity": 0.7062583
-        },
-        {
-          "identifier": "GO:0030127",
-          "label": "COPII vesicle coat",
-          "cosine_similarity": 0.70588908
         }
       ]
     },
@@ -11638,6 +11638,11 @@
       "label": "Sec61 translocon complex",
       "neighbors": [
         {
+          "identifier": "GO:0031207",
+          "label": "Sec62/Sec63 complex",
+          "cosine_similarity": 0.94215077
+        },
+        {
           "identifier": "cellstructuremech:secyeg_translocon_complex",
           "label": "SecYEG translocon complex",
           "cosine_similarity": 0.83747343
@@ -11656,11 +11661,37 @@
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.77594784
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031207",
+      "label": "Sec62/Sec63 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005784",
+          "label": "Sec61 translocon complex",
+          "cosine_similarity": 0.94215077
+        },
+        {
+          "identifier": "GO:0000145",
+          "label": "exocyst",
+          "cosine_similarity": 0.82509526
+        },
+        {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.77974745
+        },
+        {
+          "identifier": "cellstructuremech:secyeg_translocon_complex",
+          "label": "SecYEG translocon complex",
+          "cosine_similarity": 0.77587253
         },
         {
           "identifier": "GO:0005783",
           "label": "endoplasmic reticulum",
-          "cosine_similarity": 0.77380055
+          "cosine_similarity": 0.76443631
         }
       ]
     },
@@ -11736,6 +11767,11 @@
           "cosine_similarity": 0.807288
         },
         {
+          "identifier": "GO:0031207",
+          "label": "Sec62/Sec63 complex",
+          "cosine_similarity": 0.76248747
+        },
+        {
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.73328806
@@ -11749,11 +11785,6 @@
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.72485959
-        },
-        {
-          "identifier": "GO:0043529",
-          "label": "GET complex",
-          "cosine_similarity": 0.71396183
         }
       ]
     },
@@ -12330,6 +12361,11 @@
           "cosine_similarity": 0.77951765
         },
         {
+          "identifier": "GO:0031207",
+          "label": "Sec62/Sec63 complex",
+          "cosine_similarity": 0.77587253
+        },
+        {
           "identifier": "GO:0015627",
           "label": "type II protein secretion system complex",
           "cosine_similarity": 0.76590226
@@ -12338,11 +12374,6 @@
           "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
           "label": "type IX protein secretion system complex",
           "cosine_similarity": 0.7616451
-        },
-        {
-          "identifier": "GO:0033104",
-          "label": "type VI protein secretion system complex",
-          "cosine_similarity": 0.72768818
         }
       ]
     },

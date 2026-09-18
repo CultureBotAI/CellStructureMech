@@ -1,0 +1,317 @@
+identifier: GO:0031207
+label: Sec62/Sec63 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An endoplasmic-reticulum protein complex that supports posttranslational
+  targeting of proteins to the ER and is represented in yeast by a Sec62p, Sec63p,
+  Sec71p, and Sec72p tetramer.
+definition_source: GO:0031207
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T22:44:27Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T22:45:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonyms, ER-protein-complex parentage, Sec-complex and ER-membrane
+    parthood, Sec62/Sec63/Sec71/Sec72 component rows, Saccharomyces scope, GO/DOI
+    evidence, a mechanistic posttranslational ER import graph, and Sec62/Sec63 grounding
+    and boundary discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: ER protein translocation subcomplex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031207
+- synonym_text: Sec62/63 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031207
+parent_structures:
+- GO:0140534
+part_of:
+- GO:0031205
+- GO:0005789
+components:
+- component_id: sec62_translocon_subunit
+  label: Sec62 translocon subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC62
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Sec62 is a multi-pass eukaryotic ER membrane component of the Sec62/Sec63
+    tetramer; no exact source-neutral family CURIE was curated.
+  role: Membrane subunit of the Sec62/Sec63 tetramer that participates in signal-sequence
+    recognition during posttranslational ER import.
+  evidence:
+  - reference: GO:0031207
+    notes: GO:0031207 defines the yeast Sec62/Sec63 complex as a tetramer containing
+      Sec62p.
+  - reference: DOI:10.1002/yea.954
+    notes: Willer et al. 2003 studied Sec62p and Sec63p as the two essential proteins
+      of the yeast tetrameric Sec62/Sec63 complex.
+- component_id: sec63_translocon_subunit
+  label: Sec63 translocon subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC63
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Sec63 is a conserved ER membrane component of the Sec62/Sec63 tetramer
+    that carries a lumenal J-domain; no exact source-neutral family CURIE was curated.
+  role: Core Sec62/Sec63 subunit that engages Sec62p at the cytosolic face and links
+    posttranslational substrates to lumenal Kar2/BiP cycling.
+  evidence:
+  - reference: GO:0031207
+    notes: GO:0031207 defines the yeast Sec62/Sec63 complex as a tetramer containing
+      Sec63p.
+  - reference: DOI:10.1002/yea.954
+    notes: Willer et al. 2003 demonstrated a specific Sec62p-Sec63p interaction in
+      the yeast ER Sec63 complex.
+- component_id: sec71_translocon_subunit
+  label: Sec71 translocon subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC71
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Sec71 is a yeast accessory constituent of the Sec62/Sec63 tetramer,
+    also called Sec66; no exact source-neutral family CURIE was curated.
+  role: Accessory subunit of the yeast Sec62/Sec63 tetramer within the ER posttranslational
+    translocation machinery.
+  evidence:
+  - reference: GO:0031207
+    notes: GO:0031207 defines the yeast Sec62/Sec63 complex as a tetramer containing
+      Sec71p.
+  - reference: DOI:10.1038/s41586-018-0856-x
+    notes: Wu et al. 2019 structurally resolved Sec71/Sec66 with Sec62p, Sec63p, and
+      Sec72p in the yeast post-translational ER translocation machinery.
+- component_id: sec72_translocon_subunit
+  label: Sec72 translocon subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SEC72
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Sec72 is a yeast accessory constituent of the Sec62/Sec63 tetramer;
+    no exact source-neutral family CURIE was curated.
+  role: Accessory subunit of the yeast Sec62/Sec63 tetramer that helps organize the
+    cytosolic face of the complex.
+  evidence:
+  - reference: GO:0031207
+    notes: GO:0031207 defines the yeast Sec62/Sec63 complex as a tetramer containing
+      Sec72p.
+  - reference: DOI:10.1002/yea.954
+    notes: Willer et al. 2003 assayed Sec72p interactions at the cytosolic surface
+      of the yeast Sec63 complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast contains an ER-membrane Sec62/Sec63 tetramer with Sec62p, Sec63p,
+    Sec71p, and Sec72p.
+  reference: GO:0031207
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which the tetrameric Sec62/Sec63 complex was defined as part
+    of the posttranslational ER import machinery.
+  reference: DOI:10.1002/yea.954
+functions:
+- function_id: sec62_sec63_posttranslational_er_targeting
+  label: Sec62/Sec63-dependent posttranslational ER protein targeting
+  description: The Sec62/Sec63 complex cooperates with the Sec61 channel and Kar2/BiP
+    machinery during SRP-independent posttranslational protein import into the endoplasmic
+    reticulum.
+  evidence:
+  - reference: GO:0031207
+    notes: GO:0031207 defines the Sec62/Sec63 complex by its involvement in posttranslational
+      targeting of proteins to the ER.
+  - reference: DOI:10.1091/mbc.e03-06-0390
+    notes: Plath et al. 2004 photo-crosslinked prepro-alpha-factor to Sec62p and Sec61p
+      in the yeast Sec complex during posttranslational ER import.
+  - reference: DOI:10.1038/s41586-018-0856-x
+    notes: Wu et al. 2019 determined a structure of the yeast ER post-translational
+      protein translocation machinery.
+evidence:
+- reference: GO:0031207
+  notes: Gene Ontology cellular-component term for the Sec62/Sec63 complex.
+- reference: GO:0140534
+  notes: Gene Ontology parent term for endoplasmic-reticulum protein-containing complexes.
+- reference: GO:0031205
+  notes: Gene Ontology cellular-component term for the broader endoplasmic reticulum
+    Sec complex.
+- reference: GO:0005789
+  notes: Gene Ontology cellular-component term for the endoplasmic reticulum membrane.
+- reference: DOI:10.1002/yea.954
+  notes: Willer et al. 2003, Identification of novel protein-protein interactions
+    at the cytosolic surface of the Sec63 complex in the yeast ER membrane, Yeast.
+- reference: DOI:10.1091/mbc.e03-06-0390
+  notes: Plath et al. 2004, Interactions between Sec complex and prepro-alpha-factor
+    during posttranslational protein transport into the endoplasmic reticulum, Molecular
+    Biology of the Cell.
+- reference: DOI:10.1038/s41586-018-0856-x
+  notes: Wu, Cabanos and Rapoport 2019, Structure of the post-translational protein
+    translocation machinery of the ER membrane, Nature.
+- reference: DOI:10.1016/0092-8674(95)90077-2
+  notes: Panzner et al. 1995, Posttranslational protein transport in yeast reconstituted
+    with a purified complex of Sec proteins and Kar2p, Cell.
+causal_graphs:
+- graph_id: sec62_sec63_posttranslational_er_import
+  title: Sec62/Sec63 organizes posttranslational ER import
+  description: The Sec62/Sec63 tetramer forms the ER Sec complex with the Sec61 channel
+    and supports posttranslational protein import into the endoplasmic reticulum.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: The graph captures the yeast Sec62p/Sec63p/Sec71p/Sec72p tetramer and
+    its placement in the broader ER Sec complex without modeling the Sec61 heterotrimer
+    or Kar2/BiP as constituents of this subcomplex.
+  nodes:
+  - node_id: sec62_translocon_subunit
+    label: Sec62 translocon subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec62_translocon_subunit
+  - node_id: sec63_translocon_subunit
+    label: Sec63 translocon subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec63_translocon_subunit
+  - node_id: sec71_translocon_subunit
+    label: Sec71 translocon subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec71_translocon_subunit
+  - node_id: sec72_translocon_subunit
+    label: Sec72 translocon subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec72_translocon_subunit
+  - node_id: sec62_sec63_complex
+    label: Sec62/Sec63 complex
+    node_type: STRUCTURE
+    grounding: GO:0031207
+  - node_id: er_sec_complex
+    label: endoplasmic reticulum Sec complex
+    node_type: STRUCTURE
+    grounding: GO:0031205
+  - node_id: er_membrane
+    label: endoplasmic reticulum membrane
+    node_type: STRUCTURE
+    grounding: GO:0005789
+  - node_id: posttranslational_er_targeting
+    label: Sec62/Sec63-dependent posttranslational ER protein targeting
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: sec62_translocon_subunit
+    predicate: is core subunit of
+    object: sec62_sec63_complex
+    description: Sec62p is a membrane subunit of the yeast Sec62p/Sec63p/Sec71p/Sec72p
+      tetramer.
+    evidence:
+    - reference: GO:0031207
+      notes: GO:0031207 lists Sec62p in the yeast Sec62/Sec63 tetramer.
+  - subject: sec63_translocon_subunit
+    predicate: is core subunit of
+    object: sec62_sec63_complex
+    description: Sec63p is a membrane subunit of the yeast Sec62p/Sec63p/Sec71p/Sec72p
+      tetramer.
+    evidence:
+    - reference: DOI:10.1002/yea.954
+      notes: Willer et al. 2003 identified a specific Sec62p-Sec63p interaction at
+        the cytosolic surface of the Sec63 complex.
+  - subject: sec71_translocon_subunit
+    predicate: is core subunit of
+    object: sec62_sec63_complex
+    description: Sec71p/Sec66p is an accessory subunit of the Sec62/Sec63 tetramer.
+    evidence:
+    - reference: GO:0031207
+      notes: GO:0031207 lists Sec71p in the yeast Sec62/Sec63 tetramer.
+  - subject: sec72_translocon_subunit
+    predicate: is core subunit of
+    object: sec62_sec63_complex
+    description: Sec72p is an accessory subunit of the Sec62/Sec63 tetramer.
+    evidence:
+    - reference: GO:0031207
+      notes: GO:0031207 lists Sec72p in the yeast Sec62/Sec63 tetramer.
+  - subject: sec62_sec63_complex
+    predicate: is subcomplex of
+    object: er_sec_complex
+    description: The Sec62/Sec63 tetramer is a subcomplex of the ER Sec complex.
+    evidence:
+    - reference: GO:0031205
+      notes: GO:0031205 defines the yeast ER Sec complex as containing the Sec61 and
+        Sec62/Sec63 subcomplexes.
+  - subject: sec62_sec63_complex
+    predicate: is embedded in
+    object: er_membrane
+    description: The Sec62/Sec63 complex is part of the endoplasmic-reticulum membrane
+      translocation machinery.
+    evidence:
+    - reference: DOI:10.1002/yea.954
+      notes: Willer et al. 2003 studied the Sec63 complex in the yeast ER membrane.
+  - subject: sec62_sec63_complex
+    predicate: supports
+    object: posttranslational_er_targeting
+    description: Sec62/Sec63 cooperates with the Sec61 channel during posttranslational
+      import of secretory precursors into the ER.
+    evidence:
+    - reference: DOI:10.1091/mbc.e03-06-0390
+      notes: Plath et al. 2004 showed that a posttranslational signal sequence contacts
+        Sec62p and Sec61p in the yeast Sec complex.
+    - reference: DOI:10.1038/s41586-018-0856-x
+      notes: Wu et al. 2019 resolved a yeast post-translational ER translocation assembly
+        containing Sec61 and the Sec62/Sec63 subcomplex.
+discussions:
+- discussion_id: sec62_sec63_subunit_groundings
+  prompt: Resolve exact source-neutral groundings for Sec62, Sec63, Sec71/Sec66, and
+    Sec72 before changing these component rows from reviewed labels to grounded families.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sec62_translocon_subunit
+  - components#sec63_translocon_subunit
+  - components#sec71_translocon_subunit
+  - components#sec72_translocon_subunit
+  rationale: GO exactly grounds the Sec62/Sec63 complex and its yeast Sec62p, Sec63p,
+    Sec71p, and Sec72p constituents, but exact source-neutral family CURIEs were not
+    curated in this pass.
+  evidence:
+  - reference: GO:0031207
+    notes: GO:0031207 defines the yeast Sec62/Sec63 complex as a Sec62p/Sec63p/Sec71p/Sec72p
+      tetramer.
+  - reference: DOI:10.1038/s41586-018-0856-x
+    notes: Wu et al. 2019 structurally modeled the post-translational ER translocation
+      machinery with its yeast Sec62, Sec63, Sec71/Sec66, and Sec72 subunits.
+  posed_by: codex
+  posed_date: '2026-09-18'
+- discussion_id: sec62_sec63_complex_boundary
+  prompt: Should Sec61-channel subunits or Kar2/BiP be included as Sec62/Sec63 complex
+    components?
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#sec62_translocon_subunit
+  - components#sec63_translocon_subunit
+  - components#sec71_translocon_subunit
+  - components#sec72_translocon_subunit
+  - causal_graphs#sec62_sec63_posttranslational_er_import
+  rationale: GO:0031207 denotes the Sec62p/Sec63p/Sec71p/Sec72p subcomplex. The Sec61
+    heterotrimer combines with it in the broader ER Sec complex, and Kar2/BiP powers
+    posttranslational import from the lumen, but neither is part of the Sec62/Sec63
+    tetramer.
+  evidence:
+  - reference: GO:0031207
+    notes: GO:0031207 defines the Sec62/Sec63 complex as a four-subunit yeast subcomplex.
+  - reference: GO:0031205
+    notes: GO:0031205 places Sec62/Sec63 with Sec61 in the broader endoplasmic reticulum
+      Sec complex.
+  - reference: DOI:10.1016/0092-8674(95)90077-2
+    notes: Panzner et al. 1995 used the purified Sec complex together with Kar2p to
+      reconstitute posttranslational protein transport.
+  resolution_note: Modeled Sec62p, Sec63p, Sec71p, and Sec72p as constituents and
+    left Sec61-channel subunits and Kar2/BiP outside this subcomplex record.
+  posed_by: codex
+  posed_date: '2026-09-18'
