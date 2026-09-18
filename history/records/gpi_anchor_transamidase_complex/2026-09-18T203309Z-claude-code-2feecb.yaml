@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gpi_anchor_transamidase_complex.yaml
+  slug: gpi_anchor_transamidase_complex
+session:
+  id: 2026-09-18T203309Z-claude-code-2feecb
+  timestamp: '2026-09-18T20:33:09Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created GPI-anchor transamidase complex record
+  details: Added a GO:0042765 GPI-anchor transamidase complex record with GPI transamidase
+    synonymy, ER-membrane placement, reviewed label-only Saccharomyces Gaa1/Gpi8/Gpi16/Gpi17/Gab1
+    subunits, GPI-anchor attachment function, a nonmechanistic GPIT graph, and an open exact
+    subunit-grounding TODO.
