@@ -35,6 +35,13 @@ curation_history:
     predicate to a mediator predicate and tightened the graph wording around the GO:0038202
     process.'
   llm_assisted: true
+- timestamp: '2026-09-18T11:45:00Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: '#1145: Narrowed the Saccharomyces cerevisiae TORC1 taxonomic-presence
+    qualifier from COMMON to VARIABLE to avoid overclaiming strain-level prevalence
+    from a yeast model annotation.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 synonyms:
@@ -129,7 +136,7 @@ components:
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  presence: COMMON
+  presence: VARIABLE
   note: Budding yeast is the curated model for TORC1 complexes containing Kog1, Lst8,
     Tco89 and either Tor1 or Tor2.
   reference: GO:0031931

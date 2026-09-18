@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/torc1_complex.yaml
+  slug: torc1_complex
+session:
+  id: 2026-09-18T114552Z-codex-e365ce
+  timestamp: '2026-09-18T11:45:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1145
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1143
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - data/structures/other/torc1_complex.yaml
+  summary: Narrow TORC1 Saccharomyces presence
+  details: 'Addressed PR #1143 review issue #1145 by changing the Saccharomyces cerevisiae
+    TORC1 taxonomic_distribution presence from COMMON to VARIABLE so the yeast model annotation
+    is not overread as strain-level prevalence evidence.'
