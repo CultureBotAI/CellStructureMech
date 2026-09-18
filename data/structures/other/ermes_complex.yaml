@@ -1,0 +1,178 @@
+identifier: GO:0032865
+label: ERMES complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that links the endoplasmic reticulum with mitochondria
+  and may have a role in promoting exchange of calcium and phospholipids between the
+  two organelles.
+definition_source: GO:0032865
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-18T15:54:21Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-18T15:55:15Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, outer-mitochondrial-membrane protein-complex parentage,
+    mitochondrial-outer-membrane parthood, Saccharomyces scope, ER-mitochondria tethering
+    and lipid-exchange evidence, a nonmechanistic ERMES graph, and an ERMES subunit-boundary
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: ER-mitochondria encounter structure
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032865
+- synonym_text: Mdm10/Mdm12/Mmm1 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032865
+- synonym_text: mitochore
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032865
+- synonym_text: MMM1 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032865
+parent_structures:
+- GO:0098799
+part_of:
+- GO:0005741
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast contains ERMES at ER-mitochondria junctions; Kornmann et al.
+    identified the Mmm1/Mdm10/Mdm12/Mdm34 complex as an ER-mitochondria tether.
+  reference: DOI:10.1126/science.1175088
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which a synthetic tether screen identified Mmm1, Mdm10,
+    Mdm12, and Mdm34 as an ER-mitochondria tethering complex.
+  reference: DOI:10.1126/science.1175088
+functions:
+- function_id: er_mitochondria_lipid_exchange
+  label: ER-mitochondria lipid exchange
+  description: ERMES physically links ER and mitochondrial membranes and its Mmm1-Mdm12
+    module can mediate direct lipid transfer between membranes.
+  evidence:
+  - reference: GO:0032865
+    notes: GO:0032865 defines ERMES as linking the ER with mitochondria and potentially
+      promoting calcium and phospholipid exchange between those organelles.
+  - reference: DOI:10.1083/jcb.201704119
+    notes: Kawano et al. 2018 found that the Mmm1-Mdm12 module of ERMES could transfer
+      lipids between membranes in vitro.
+evidence:
+- reference: GO:0032865
+  notes: Gene Ontology cellular-component term for the ERMES complex.
+- reference: GO:0098799
+  notes: Gene Ontology cellular-component parent term for outer mitochondrial membrane
+    protein complexes.
+- reference: GO:0005783
+  notes: Gene Ontology cellular-component term for the endoplasmic reticulum.
+- reference: GO:0005739
+  notes: Gene Ontology cellular-component term for mitochondrion.
+- reference: GO:0005741
+  notes: Gene Ontology cellular-component term for the mitochondrial outer membrane.
+- reference: DOI:10.1126/science.1175088
+  notes: Kornmann et al. 2009, An ER-mitochondria tethering complex revealed by a
+    synthetic biology screen, Science.
+- reference: DOI:10.1083/jcb.201704119
+  notes: Kawano et al. 2018, Structure-function insights into direct lipid transfer
+    between membranes by Mmm1-Mdm12 of ERMES, Journal of Cell Biology.
+causal_graphs:
+- graph_id: ermes_er_mitochondria_tethering
+  title: ERMES links the ER with mitochondria
+  description: ERMES localizes at ER-mitochondria junctions, links the endoplasmic
+    reticulum with mitochondria, and contains an Mmm1-Mdm12 module that can transfer
+    lipids between membranes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures ERMES at structure level without asserting individual
+    Mmm1, Mdm10, Mdm12, or Mdm34 family groundings.
+  nodes:
+  - node_id: ermes_complex
+    label: ERMES complex
+    node_type: STRUCTURE
+    grounding: GO:0032865
+  - node_id: endoplasmic_reticulum
+    label: endoplasmic reticulum
+    node_type: STRUCTURE
+    grounding: GO:0005783
+  - node_id: mitochondrion
+    label: mitochondrion
+    node_type: STRUCTURE
+    grounding: GO:0005739
+  - node_id: mitochondrial_outer_membrane
+    label: mitochondrial outer membrane
+    node_type: STRUCTURE
+    grounding: GO:0005741
+  - node_id: lipid_exchange
+    label: ER-mitochondria lipid exchange
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: ermes_complex
+    predicate: is part of
+    object: mitochondrial_outer_membrane
+    description: ERMES is classified as an outer-mitochondrial-membrane protein complex.
+    evidence:
+    - reference: GO:0098799
+      notes: GO places ERMES under the class of protein complexes that are part of
+        the mitochondrial outer membrane.
+  - subject: ermes_complex
+    predicate: links
+    object: endoplasmic_reticulum
+    description: ERMES links the endoplasmic reticulum with mitochondria at membrane
+      contact sites.
+    evidence:
+    - reference: GO:0032865
+      notes: GO:0032865 defines ERMES as a protein complex that links the ER with
+        mitochondria.
+    - reference: DOI:10.1126/science.1175088
+      notes: Kornmann et al. 2009 identified the Mmm1/Mdm10/Mdm12/Mdm34 complex as
+        a molecular tether between ER and mitochondria.
+  - subject: ermes_complex
+    predicate: links
+    object: mitochondrion
+    description: ERMES links the endoplasmic reticulum with mitochondria at membrane
+      contact sites.
+    evidence:
+    - reference: GO:0032865
+      notes: GO:0032865 defines ERMES as a protein complex that links the ER with
+        mitochondria.
+    - reference: DOI:10.1126/science.1175088
+      notes: Kornmann et al. 2009 identified ERMES as an ER-mitochondria tethering
+        complex.
+  - subject: ermes_complex
+    predicate: may facilitate
+    object: lipid_exchange
+    description: ERMES is associated with lipid exchange between ER and mitochondrial
+      membranes, and Mmm1-Mdm12 can transfer lipids between membranes in vitro.
+    evidence:
+    - reference: GO:0032865
+      notes: GO:0032865 notes a possible role for ERMES in calcium and phospholipid
+        exchange between the linked organelles.
+    - reference: DOI:10.1083/jcb.201704119
+      notes: Kawano et al. 2018 found that the Mmm1-Mdm12 complex mediated efficient
+        lipid transfer between liposomes.
+discussions:
+- discussion_id: ermes_subunit_boundaries
+  prompt: Resolve exact source-neutral component groundings for Mmm1, Mdm10, Mdm12,
+    and Mdm34 before adding ERMES subunit rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#ermes_er_mitochondria_tethering
+  rationale: GO exactly grounds the ERMES complex itself, but this first record does
+    not assert InterPro, Pfam, NCBIfam, or UniProt family CURIEs for Mmm1, Mdm10,
+    Mdm12, or Mdm34 until source-neutral family boundaries are verified.
+  evidence:
+  - reference: DOI:10.1126/science.1175088
+    notes: Kornmann et al. 2009 identified Mmm1, Mdm10, Mdm12, and Mdm34 as a molecular
+      tether between ER and mitochondria.
+  - reference: DOI:10.1083/jcb.201704119
+    notes: Kawano et al. 2018 focused on the Mmm1-Mdm12 subcomplex when testing direct
+      lipid transfer by ERMES components.
+  posed_by: codex
+  posed_date: '2026-09-18'

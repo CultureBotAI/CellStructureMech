@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ermes_complex.yaml
+  slug: ermes_complex
+session:
+  id: 2026-09-18T155742Z-codex-788991
+  timestamp: '2026-09-18T15:57:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ERMES complex record
+  details: Added a GO:0032865 ERMES complex record with exact GO synonymy, outer-mitochondrial-membrane
+    protein-complex parentage, mitochondrial-outer-membrane parthood, Saccharomyces cerevisiae
+    distribution and example evidence, ERMES tethering and lipid-exchange evidence from Kornmann
+    et al. 2009 and Kawano et al. 2018, a nonmechanistic ER-mitochondria tethering graph,
+    and an open TODO for exact source-neutral Mmm1/Mdm10/Mdm12/Mdm34 component boundaries.
