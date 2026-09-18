@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gator1_complex.yaml
+  slug: gator1_complex
+session:
+  id: 2026-09-18T090457Z-codex-c0ade9
+  timestamp: '2026-09-18T09:04:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1135
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1133
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - structure
+  summary: Add GATOR1 Seh1-associated complex parthood
+  details: 'Addressed PR #1133 review issue #1135 by adding GO:0035859 as the source-defined
+    Seh1-associated complex part_of container for the GO:1990130 GATOR1/SEACIT complex.'

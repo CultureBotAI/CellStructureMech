@@ -36,8 +36,16 @@ curation_history:
     Gtr1 as the direct GATOR1/SEACIT GAP target rather than as a loose upstream pathway
     factor.'
   llm_assisted: true
+- timestamp: '2026-09-18T09:04:24Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: '#1135: Added GO:0035859 as the source-defined Seh1-associated complex
+    part_of container for GATOR1/SEACIT.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
+part_of:
+- GO:0035859
 synonyms:
 - synonym_text: IML1 complex
   synonym_type: EXACT_SYNONYM
@@ -142,6 +150,9 @@ evidence:
     Saccharomyces cerevisiae SEACIT counterpart.
 - reference: GO:0032991
   notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0035859
+  notes: Gene Ontology cellular-component term for the Seh1-associated complex; GO
+    places GATOR1 as part_of this SEA/GATOR parent assembly.
 - reference: GO:1904262
   notes: Gene Ontology biological-process term for negative regulation of TORC1 signaling.
 - reference: GO:0038202
