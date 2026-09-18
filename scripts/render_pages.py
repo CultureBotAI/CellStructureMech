@@ -24,6 +24,8 @@ from pathlib import Path
 from corpus import REPO_ROOT, load_records
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from cellstructuremech.text_map_site import PreparedTextMap, prepare_text_map
+
 TEMPLATES_DIR = REPO_ROOT / "src" / "cellstructuremech" / "templates"
 IMAGES_DIR = REPO_ROOT / "data" / "images"
 EMBEDDINGS_DIR = REPO_ROOT / "data" / "embeddings"
@@ -80,13 +82,25 @@ def page_name(path: Path, records_root: Path) -> str:
     return "/".join(rel.parts)
 
 
-def render(out_dir: Path) -> None:
+def render(out_dir: Path, *, replace: bool = False) -> None:
+    # Validate enablement, current checksums and fresh full inputs before
+    # an ordinary site build can remove or replace existing pages.
+    with prepare_text_map(REPO_ROOT) as text_map:
+        if replace and out_dir.exists():
+            shutil.rmtree(out_dir)
+        _render(out_dir, text_map)
+
+
+def _render(out_dir: Path, text_map: PreparedTextMap | None) -> None:
+    if text_map is not None:
+        text_map.stage(out_dir)
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATES_DIR)),
         autoescape=select_autoescape(["html"]),
         trim_blocks=True,
         lstrip_blocks=True,
     )
+    env.globals["text_map_enabled"] = text_map is not None
     env.filters["curie_url"] = curie_url
 
     records = load_records()
@@ -226,9 +240,7 @@ def main() -> int:
         print("pages/ is current")
         return 0
 
-    if args.out.exists():
-        shutil.rmtree(args.out)
-    render(args.out)
+    render(args.out, replace=True)
     print(f"rendered site under {args.out}")
     return 0
 
