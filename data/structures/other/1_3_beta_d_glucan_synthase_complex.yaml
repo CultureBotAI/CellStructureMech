@@ -26,6 +26,14 @@ curation_history:
   changes: Updated the GO:0071970 function label to the canonical Gene Ontology label
     used by the id-label correspondence audit.
   llm_assisted: true
+- timestamp: '2026-09-19T00:05:21Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Addressed PR #1206 review issues #1207, #1208, and #1209 by narrowing
+    the row-level Saccharomyces notes to their Qadota Fks1/Rho1 citation, constraining
+    Fks/Rho1 grounding language to the curated Saccharomyces boundary, and correcting
+    the Mazur and Baginsky JBC title.'
+  llm_assisted: true
 synonyms:
 - synonym_text: 1,3-beta-glucan synthase complex
   synonym_type: EXACT_SYNONYM
@@ -44,8 +52,8 @@ components:
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: Curated as the Saccharomyces Fks1/Fks2 catalytic paralogue pair;
-    no exact source-neutral family CURIE that cleanly denotes fungal 1,3-beta-D-glucan
-    synthase catalytic subunits was assigned.
+    no exact source-neutral family CURIE that cleanly denotes this catalytic-subunit
+    pair was assigned.
   role: Integral membrane catalytic subunits of the budding-yeast 1,3-beta-D-glucan
     synthase enzyme complex.
   evidence:
@@ -64,8 +72,8 @@ components:
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: Curated from the Saccharomyces cerevisiae Rho1p regulatory subunit;
-    no exact source-neutral family CURIE was assigned for the glucan-synthase-associated
-    Rho1 GTPase cohort.
+    no exact source-neutral family CURIE was assigned for this glucan-synthase-associated
+    regulatory subunit.
   role: Regulatory GTPase subunit that stimulates the Fks-containing 1,3-beta-D-glucan
     synthase complex.
   evidence:
@@ -79,15 +87,15 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Fks1, Fks2, and Rho1 were characterized as subunits or functional requirements
-    of the budding-yeast 1,3-beta-D-glucan synthase complex; broader fungal distribution
-    was left unasserted in this first record.
+  note: Qadota et al. identified Rho1p as a regulatory subunit and connected it with
+    Fks1p in the budding-yeast 1,3-beta-D-glucan synthase complex; broader fungal
+    distribution was left unasserted in this first record.
   reference: DOI:10.1126/science.272.5259.279
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model in which the Fks catalytic subunits and the Rho1 regulatory
-    GTPase were connected to 1,3-beta-D-glucan synthase.
+  note: Budding-yeast model in which Rho1p was identified as a regulatory GTPase that
+    associates with Fks1p in the 1,3-beta-D-glucan synthase complex.
   reference: DOI:10.1126/science.272.5259.279
 functions:
 - function_id: beta_1_3_glucan_synthase_activity
@@ -137,8 +145,8 @@ evidence:
   notes: Qadota et al. 1996, 'Identification of yeast Rho1p GTPase as a regulatory
     subunit of 1,3-beta-glucan synthase', Science.
 - reference: DOI:10.1074/jbc.271.24.14604
-  notes: Mazur and Baginsky 1996, 'In vitro activity of 1,3-beta-D-glucan synthase
-    requires the GTP-binding protein Rho1', Journal of Biological Chemistry.
+  notes: Mazur and Baginsky 1996, 'Activity of 1,3-beta-D-Glucan Synthase Requires
+    the GTP-binding Protein Rho1', Journal of Biological Chemistry.
 causal_graphs:
 - graph_id: rho1_fks_glucan_synthase_function
   title: Rho1 stimulates Fks-dependent 1,3-beta-glucan synthesis
@@ -227,16 +235,16 @@ causal_graphs:
       notes: GO:0071970 covers formation of 1,3-beta-D-glucans in fungal cell walls.
 discussions:
 - discussion_id: resolve_fks_rho1_family_groundings
-  prompt: Resolve exact source-neutral groundings for the fungal Fks catalytic subunits
-    and glucan-synthase-associated Rho1 GTPases.
+  prompt: Resolve exact source-neutral groundings for the Saccharomyces Fks1/Fks2
+    catalytic pair and the Rho1 regulatory subunit.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#fks_catalytic_subunits
   - components#rho1_gtpase_regulatory_subunit
   rationale: The initial record follows experimentally named Saccharomyces proteins
-    and avoids guessing InterPro, Pfam, NCBIfam, or UniProtKB family accessions for
-    source-neutral component identities.
+    and avoids guessing InterPro, Pfam, NCBIfam, or UniProtKB accessions that would
+    broaden component identities beyond the curated Fks1/Fks2 and Rho1 boundary.
   evidence:
   - reference: DOI:10.1073/pnas.91.26.12907
   - reference: DOI:10.1126/science.272.5259.279
