@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/exosome_rnase_complex.yaml
+  slug: exosome_rnase_complex
+session:
+  id: 2026-09-19T072457Z-codex-42e207
+  timestamp: '2026-09-19T07:24:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1214
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1215
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1213
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_structures
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Address exosome PR review findings
+  details: 'Resolved review defects from PR #1213 by replacing the generic GO:0032991 parent
+    with GO:1905354 exoribonuclease complex and by removing the nuclear Rrp6 nuclease from
+    the generic GO:0000178 component list and RNA-decay graph while leaving Rrp6 as a variant
+    boundary for future nuclear-exosome curation.'

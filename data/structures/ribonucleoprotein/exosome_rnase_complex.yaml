@@ -20,6 +20,13 @@ curation_history:
     functions, GO/DOI/PDB evidence, a nonmechanistic RNA-decay graph and a component-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-19T07:24:34Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1213 findings #1214 and #1215 by replacing the generic protein-containing-complex
+    parent with GO:1905354 exoribonuclease complex and removing the nuclear Rrp6 nuclease
+    from the generic GO:0000178 component list and functional graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: exosome multienzyme ribonuclease complex
   synonym_type: EXACT_SYNONYM
@@ -28,7 +35,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: DOI:10.1016/j.cell.2006.10.037
 parent_structures:
-- GO:0032991
+- GO:1905354
 components:
 - component_id: nine_subunit_exosome_core
   label: nine-subunit exosome core
@@ -70,23 +77,6 @@ components:
   - reference: DOI:10.1016/j.cell.2006.10.037
     notes: Liu et al. 2006 compared yeast 9-, 10- and 11-subunit exosomes and assigned
       processive hydrolytic activity to Rrp44 and to the yeast 10-subunit exosome.
-- component_id: rrp6_rnase
-  label: Rrp6 catalytic nuclease
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  gene_symbols:
-  - RRP6
-  essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: Rrp6 is modeled as the additional catalytic nuclease of yeast 11-subunit
-    exosomes; no exact source-neutral protein family CURIE for this exosome-bound
-    role was curated.
-  role: Distributive hydrolytic 3-prime-to-5-prime exoribonuclease that associates
-    with nuclear exosomes.
-  evidence:
-  - reference: DOI:10.1016/j.cell.2006.10.037
-    notes: Liu et al. 2006 reconstituted yeast 11-subunit exosomes that included Rrp6
-      and measured distributive hydrolytic activity for Rrp6.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -128,8 +118,8 @@ evidence:
 - reference: GO:0000178
   notes: Gene Ontology cellular-component term for the exosome RNase complex and its
     exact synonym.
-- reference: GO:0032991
-  notes: Gene Ontology cellular-component term for protein-containing complex.
+- reference: GO:1905354
+  notes: Gene Ontology cellular-component term for exoribonuclease complex.
 - reference: GO:0006401
   notes: Gene Ontology biological-process term for RNA catabolic process.
 - reference: GO:0006396
@@ -146,12 +136,13 @@ evidence:
 causal_graphs:
 - graph_id: rna_exosome_decay
   title: RNA exosome catalytic subunits degrade RNA
-  description: The conserved nine-subunit RNA exosome core and associated catalytic
-    nucleases form yeast 10- and 11-subunit exosomes that act on RNA substrates.
+  description: The conserved nine-subunit RNA exosome core and associated Rrp44/Dis3
+    catalytic nuclease form a yeast 10-subunit exosome that acts on RNA substrates.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: This graph records the Liu et al. reconstituted yeast exosome activities
-    without modeling the substrate channel, catalytic-site geometry or nuclear cofactors.
+  scope_notes: This graph records the Liu et al. reconstituted yeast 10-subunit exosome
+    activity without modeling the substrate channel, catalytic-site geometry, Rrp6-containing
+    nuclear variants or nuclear cofactors.
   nodes:
   - node_id: nine_subunit_exosome_core
     label: nine-subunit exosome core
@@ -161,10 +152,6 @@ causal_graphs:
     label: Rrp44/Dis3 catalytic nuclease
     node_type: GENE_OR_PROTEIN
     component_ref: rrp44_dis3_rnase
-  - node_id: rrp6_rnase
-    label: Rrp6 catalytic nuclease
-    node_type: GENE_OR_PROTEIN
-    component_ref: rrp6_rnase
   - node_id: exosome_rnase_complex
     label: exosome (RNase complex)
     node_type: STRUCTURE
@@ -191,15 +178,6 @@ causal_graphs:
     - reference: DOI:10.1016/j.cell.2006.10.037
       notes: Liu et al. 2006 assigned processive hydrolytic activity to yeast Rrp44
         and to the yeast 10-subunit exosome.
-  - subject: rrp6_rnase
-    predicate: provides hydrolytic activity for
-    object: exosome_rnase_complex
-    description: Rrp6 contributes distributive hydrolytic nuclease activity to the
-      yeast 11-subunit exosome.
-    evidence:
-    - reference: DOI:10.1016/j.cell.2006.10.037
-      notes: Liu et al. 2006 measured distributive hydrolytic activity for Rrp6 and
-        additional activity in reconstituted 11-subunit yeast exosomes.
   - subject: exosome_rnase_complex
     predicate: supports
     object: rna_catabolic_process
@@ -211,18 +189,18 @@ causal_graphs:
 discussions:
 - discussion_id: resolve_exosome_component_groundings
   prompt: Resolve exact source-neutral InterPro, Pfam, GO or Complex Portal groundings
-    for the RNA exosome core, Dis3/Rrp44 nuclease and Rrp6 nuclease; split the nine
-    core protein families when exact cross-taxon boundaries are justified.
+    for the RNA exosome core and Dis3/Rrp44 nuclease; split the nine core protein
+    families and decide whether Rrp6 belongs only on a nuclear-exosome child record
+    when exact cross-taxon boundaries are justified.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#nine_subunit_exosome_core
   - components#rrp44_dis3_rnase
-  - components#rrp6_rnase
-  rationale: The first RNase exosome record captures the conserved core and two major
-    catalytic subunits as reviewed, label-only components. A follow-up curation pass
-    should map exact family boundaries and separate cytoplasmic, nuclear and archaeal
-    exosome variants.
+  rationale: The first RNase exosome record captures the conserved core and Dis3/Rrp44
+    catalytic subunit as reviewed, label-only components. A follow-up curation pass
+    should map exact family boundaries and separate cytoplasmic, nuclear, Rrp6-containing
+    and archaeal exosome variants.
   evidence:
   - reference: DOI:10.1016/j.cell.2006.10.037
   - reference: RCSB_PDB:2NN6
