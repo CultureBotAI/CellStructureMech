@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/chaperonin_containing_t_complex.yaml
+  slug: chaperonin_containing_t_complex
+session:
+  id: 2026-09-19T002757Z-codex-102024
+  timestamp: '2026-09-19T00:27:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add chaperonin-containing T-complex record
+  details: Added the GO:0005832 CCT/TRiC record with CCT1-CCT8 component rows, eukaryotic
+    taxonomic scope, cytosolic protein-folding function, PMID/DOI evidence, a nonmechanistic
+    folding graph, and a subunit-grounding TODO.
