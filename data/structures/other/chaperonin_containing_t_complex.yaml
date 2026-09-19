@@ -1,0 +1,404 @@
+identifier: GO:0005832
+label: chaperonin-containing T-complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multisubunit ring-shaped complex that mediates protein folding in the
+  cytosol without a cofactor.
+definition_source: GO:0005832
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-19T00:26:36Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-19T00:27:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added CCT/TRiC synonymy, protein-complex parentage, cytosolic parthood,
+    CCT1-CCT8 component rows, eukaryotic scope, a protein-folding function, GO/PMID/DOI
+    evidence, a nonmechanistic CCT folding graph, and a CCT subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: TRiC
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1006/jsbi.2001.4380
+- synonym_text: TCP-1 ring complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1006/jsbi.2001.4380
+- synonym_text: CCT complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/emboj.2011.208
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0005829
+components:
+- component_id: cct1_alpha_subunit
+  label: CCT alpha subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CCT1
+  stoichiometry: one copy per hetero-octameric ring
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: CCT alpha subunit is modeled as one of the eight paralogous CCT
+    ring subunits; no exact source-neutral protein-family CURIE was curated for this
+    first record.
+  role: One of the eight paralogous subunits that forms each hetero-octameric chaperonin-containing
+    T-complex ring.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.208
+    notes: Dekker et al. 2011 solved the Saccharomyces cerevisiae CCT crystal structure
+      and assigned Cct1p through Cct8p within its hetero-oligomeric rings.
+  - reference: PMID:8771707
+    notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
+      related yeasts.
+- component_id: cct2_beta_subunit
+  label: CCT beta subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CCT2
+  stoichiometry: one copy per hetero-octameric ring
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: CCT beta subunit is modeled as one of the eight paralogous CCT
+    ring subunits; no exact source-neutral protein-family CURIE was curated for this
+    first record.
+  role: One of the eight paralogous subunits that forms each hetero-octameric chaperonin-containing
+    T-complex ring.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.208
+    notes: Dekker et al. 2011 solved the Saccharomyces cerevisiae CCT crystal structure
+      and assigned Cct1p through Cct8p within its hetero-oligomeric rings.
+  - reference: PMID:8771707
+    notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
+      related yeasts.
+- component_id: cct3_gamma_subunit
+  label: CCT gamma subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CCT3
+  stoichiometry: one copy per hetero-octameric ring
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: CCT gamma subunit is modeled as one of the eight paralogous CCT
+    ring subunits; no exact source-neutral protein-family CURIE was curated for this
+    first record.
+  role: One of the eight paralogous subunits that forms each hetero-octameric chaperonin-containing
+    T-complex ring.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.208
+    notes: Dekker et al. 2011 solved the Saccharomyces cerevisiae CCT crystal structure
+      and assigned Cct1p through Cct8p within its hetero-oligomeric rings.
+  - reference: PMID:8771707
+    notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
+      related yeasts.
+- component_id: cct4_delta_subunit
+  label: CCT delta subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CCT4
+  stoichiometry: one copy per hetero-octameric ring
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: CCT delta subunit is modeled as one of the eight paralogous CCT
+    ring subunits; no exact source-neutral protein-family CURIE was curated for this
+    first record.
+  role: One of the eight paralogous subunits that forms each hetero-octameric chaperonin-containing
+    T-complex ring.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.208
+    notes: Dekker et al. 2011 solved the Saccharomyces cerevisiae CCT crystal structure
+      and assigned Cct1p through Cct8p within its hetero-oligomeric rings.
+  - reference: PMID:8771707
+    notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
+      related yeasts.
+- component_id: cct5_epsilon_subunit
+  label: CCT epsilon subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CCT5
+  stoichiometry: one copy per hetero-octameric ring
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: CCT epsilon subunit is modeled as one of the eight paralogous CCT
+    ring subunits; no exact source-neutral protein-family CURIE was curated for this
+    first record.
+  role: One of the eight paralogous subunits that forms each hetero-octameric chaperonin-containing
+    T-complex ring.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.208
+    notes: Dekker et al. 2011 solved the Saccharomyces cerevisiae CCT crystal structure
+      and assigned Cct1p through Cct8p within its hetero-oligomeric rings.
+  - reference: PMID:8771707
+    notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
+      related yeasts.
+- component_id: cct6_zeta_subunit
+  label: CCT zeta subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CCT6
+  stoichiometry: one copy per hetero-octameric ring
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: CCT zeta subunit is modeled as one of the eight paralogous CCT
+    ring subunits; no exact source-neutral protein-family CURIE was curated for this
+    first record.
+  role: One of the eight paralogous subunits that forms each hetero-octameric chaperonin-containing
+    T-complex ring.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.208
+    notes: Dekker et al. 2011 solved the Saccharomyces cerevisiae CCT crystal structure
+      and assigned Cct1p through Cct8p within its hetero-oligomeric rings.
+  - reference: PMID:8771707
+    notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
+      related yeasts.
+- component_id: cct7_eta_subunit
+  label: CCT eta subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CCT7
+  stoichiometry: one copy per hetero-octameric ring
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: CCT eta subunit is modeled as one of the eight paralogous CCT ring
+    subunits; no exact source-neutral protein-family CURIE was curated for this first
+    record.
+  role: One of the eight paralogous subunits that forms each hetero-octameric chaperonin-containing
+    T-complex ring.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.208
+    notes: Dekker et al. 2011 solved the Saccharomyces cerevisiae CCT crystal structure
+      and assigned Cct1p through Cct8p within its hetero-oligomeric rings.
+  - reference: PMID:8771707
+    notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
+      related yeasts.
+- component_id: cct8_theta_subunit
+  label: CCT theta subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CCT8
+  stoichiometry: one copy per hetero-octameric ring
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: CCT theta subunit is modeled as one of the eight paralogous CCT
+    ring subunits; no exact source-neutral protein-family CURIE was curated for this
+    first record.
+  role: One of the eight paralogous subunits that forms each hetero-octameric chaperonin-containing
+    T-complex ring.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.208
+    notes: Dekker et al. 2011 solved the Saccharomyces cerevisiae CCT crystal structure
+      and assigned Cct1p through Cct8p within its hetero-oligomeric rings.
+  - reference: PMID:8771707
+    notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
+      related yeasts.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: The chaperonin-containing T-complex is the eukaryotic cytosolic chaperonin,
+    and microbial fungi such as budding yeast encode eight distinct CCT subunits.
+  reference: PMID:8771707
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model whose CCT crystal structure resolved the positions of
+    the Cct1p through Cct8p subunits.
+  reference: DOI:10.1038/emboj.2011.208
+functions:
+- function_id: cytosolic_protein_folding
+  label: protein folding
+  grounding: GO:0006457
+  description: CCT assists ATP-dependent folding of newly synthesized cytosolic substrate
+    proteins.
+  evidence:
+  - reference: GO:0005832
+    notes: GO:0005832 defines CCT as a cytosolic complex that mediates protein folding.
+  - reference: DOI:10.1006/jsbi.2001.4380
+    notes: Dunn et al. 2001 reviewed cellular substrates of the eukaryotic chaperonin
+      TRiC/CCT.
+evidence:
+- reference: GO:0005832
+  notes: Gene Ontology cellular-component term for the chaperonin-containing T-complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0005829
+  notes: Gene Ontology cellular-component term for the cytosol, where GO locates CCT.
+- reference: GO:0006457
+  notes: Gene Ontology biological-process term for protein folding.
+- reference: PMID:8771707
+  notes: Stoldt et al. 1996, The Cct eukaryotic chaperonin subunits of Saccharomyces
+    cerevisiae and other yeasts, Yeast.
+- reference: DOI:10.1006/jsbi.2001.4380
+  notes: 'Dunn, Melville and Frydman 2001, Review: cellular substrates of the eukaryotic
+    chaperonin TRiC/CCT, Journal of Structural Biology.'
+- reference: DOI:10.1038/emboj.2011.208
+  notes: Dekker et al. 2011, The crystal structure of yeast CCT reveals intrinsic
+    asymmetry of eukaryotic cytosolic chaperonins, The EMBO Journal.
+causal_graphs:
+- graph_id: cct_substrate_folding
+  title: Eight CCT subunits form cytosolic substrate-folding rings
+  description: CCT is built from eight paralogous subunits that assemble into cytosolic
+    hetero-octameric rings and assist protein folding.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the CCT subunit set, cytosolic location and folding
+    role without asserting exact paralogue-family CURIEs or a substrate-specific folding
+    cycle.
+  nodes:
+  - node_id: cct1_alpha_subunit
+    label: CCT alpha subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cct1_alpha_subunit
+  - node_id: cct2_beta_subunit
+    label: CCT beta subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cct2_beta_subunit
+  - node_id: cct3_gamma_subunit
+    label: CCT gamma subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cct3_gamma_subunit
+  - node_id: cct4_delta_subunit
+    label: CCT delta subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cct4_delta_subunit
+  - node_id: cct5_epsilon_subunit
+    label: CCT epsilon subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cct5_epsilon_subunit
+  - node_id: cct6_zeta_subunit
+    label: CCT zeta subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cct6_zeta_subunit
+  - node_id: cct7_eta_subunit
+    label: CCT eta subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cct7_eta_subunit
+  - node_id: cct8_theta_subunit
+    label: CCT theta subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cct8_theta_subunit
+  - node_id: cct_complex
+    label: chaperonin-containing T-complex
+    node_type: STRUCTURE
+    grounding: GO:0005832
+  - node_id: cytosol
+    label: cytosol
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005829
+  - node_id: protein_folding
+    label: protein folding
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006457
+  edges:
+  - subject: cct1_alpha_subunit
+    predicate: assembles into
+    object: cct_complex
+    description: CCT alpha subunit is a constituent of CCT rings.
+    evidence:
+    - reference: DOI:10.1038/emboj.2011.208
+      notes: Dekker et al. 2011 assigned the eight Cct1p-Cct8p subunits in the yeast
+        CCT structure.
+  - subject: cct2_beta_subunit
+    predicate: assembles into
+    object: cct_complex
+    description: CCT beta subunit is a constituent of CCT rings.
+    evidence:
+    - reference: DOI:10.1038/emboj.2011.208
+      notes: Dekker et al. 2011 assigned the eight Cct1p-Cct8p subunits in the yeast
+        CCT structure.
+  - subject: cct3_gamma_subunit
+    predicate: assembles into
+    object: cct_complex
+    description: CCT gamma subunit is a constituent of CCT rings.
+    evidence:
+    - reference: DOI:10.1038/emboj.2011.208
+      notes: Dekker et al. 2011 assigned the eight Cct1p-Cct8p subunits in the yeast
+        CCT structure.
+  - subject: cct4_delta_subunit
+    predicate: assembles into
+    object: cct_complex
+    description: CCT delta subunit is a constituent of CCT rings.
+    evidence:
+    - reference: DOI:10.1038/emboj.2011.208
+      notes: Dekker et al. 2011 assigned the eight Cct1p-Cct8p subunits in the yeast
+        CCT structure.
+  - subject: cct5_epsilon_subunit
+    predicate: assembles into
+    object: cct_complex
+    description: CCT epsilon subunit is a constituent of CCT rings.
+    evidence:
+    - reference: DOI:10.1038/emboj.2011.208
+      notes: Dekker et al. 2011 assigned the eight Cct1p-Cct8p subunits in the yeast
+        CCT structure.
+  - subject: cct6_zeta_subunit
+    predicate: assembles into
+    object: cct_complex
+    description: CCT zeta subunit is a constituent of CCT rings.
+    evidence:
+    - reference: DOI:10.1038/emboj.2011.208
+      notes: Dekker et al. 2011 assigned the eight Cct1p-Cct8p subunits in the yeast
+        CCT structure.
+  - subject: cct7_eta_subunit
+    predicate: assembles into
+    object: cct_complex
+    description: CCT eta subunit is a constituent of CCT rings.
+    evidence:
+    - reference: DOI:10.1038/emboj.2011.208
+      notes: Dekker et al. 2011 assigned the eight Cct1p-Cct8p subunits in the yeast
+        CCT structure.
+  - subject: cct8_theta_subunit
+    predicate: assembles into
+    object: cct_complex
+    description: CCT theta subunit is a constituent of CCT rings.
+    evidence:
+    - reference: DOI:10.1038/emboj.2011.208
+      notes: Dekker et al. 2011 assigned the eight Cct1p-Cct8p subunits in the yeast
+        CCT structure.
+  - subject: cct_complex
+    predicate: is part of
+    object: cytosol
+    description: CCT is a protein-folding complex of the cytosol.
+    evidence:
+    - reference: GO:0005832
+      notes: GO:0005832 defines CCT as mediating protein folding in the cytosol.
+  - subject: cct_complex
+    predicate: supports
+    object: protein_folding
+    description: CCT mediates folding of cytosolic protein substrates.
+    evidence:
+    - reference: GO:0005832
+      notes: GO:0005832 defines CCT by its protein folding role.
+    - reference: DOI:10.1006/jsbi.2001.4380
+      notes: Dunn et al. 2001 reviewed substrate classes folded by the eukaryotic
+        chaperonin TRiC/CCT.
+discussions:
+- discussion_id: cct_subunit_family_boundaries
+  prompt: Resolve exact source-neutral CCT1-CCT8 paralogue family groundings for the
+    reviewed label-only component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#cct_substrate_folding
+  rationale: GO exactly grounds the chaperonin-containing T-complex and yeast structures
+    assign the eight paralogous Cct1p through Cct8p constituents, but exact taxon-agnostic
+    family identifiers for each subunit were not curated in this pass.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.208
+    notes: Dekker et al. 2011 assigned the eight budding-yeast CCT subunits in the
+      crystal structure.
+  - reference: PMID:8771707
+    notes: Stoldt et al. 1996 reviewed the CCT subunits of S. cerevisiae and other
+      yeasts.
+  posed_by: codex
+  posed_date: '2026-09-19'
