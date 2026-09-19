@@ -19,6 +19,13 @@ curation_history:
     CCT1-CCT8 component rows, eukaryotic scope, a protein-folding function, GO/PMID/DOI
     evidence, a nonmechanistic CCT folding graph, and a CCT subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-19T00:39:13Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1211 by narrowing the taxonomic distribution to Saccharomyces
+    cerevisiae and resolved #1212 by expressing CCT1-CCT8 stoichiometry per complete
+    double-ring complex.'
+  llm_assisted: true
 synonyms:
 - synonym_text: TRiC
   synonym_type: EXACT_SYNONYM
@@ -40,7 +47,7 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - CCT1
-  stoichiometry: one copy per hetero-octameric ring
+  stoichiometry: two copies per double-ring complex
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: CCT alpha subunit is modeled as one of the eight paralogous CCT
@@ -61,7 +68,7 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - CCT2
-  stoichiometry: one copy per hetero-octameric ring
+  stoichiometry: two copies per double-ring complex
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: CCT beta subunit is modeled as one of the eight paralogous CCT
@@ -82,7 +89,7 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - CCT3
-  stoichiometry: one copy per hetero-octameric ring
+  stoichiometry: two copies per double-ring complex
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: CCT gamma subunit is modeled as one of the eight paralogous CCT
@@ -103,7 +110,7 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - CCT4
-  stoichiometry: one copy per hetero-octameric ring
+  stoichiometry: two copies per double-ring complex
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: CCT delta subunit is modeled as one of the eight paralogous CCT
@@ -124,7 +131,7 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - CCT5
-  stoichiometry: one copy per hetero-octameric ring
+  stoichiometry: two copies per double-ring complex
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: CCT epsilon subunit is modeled as one of the eight paralogous CCT
@@ -145,7 +152,7 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - CCT6
-  stoichiometry: one copy per hetero-octameric ring
+  stoichiometry: two copies per double-ring complex
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: CCT zeta subunit is modeled as one of the eight paralogous CCT
@@ -166,7 +173,7 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - CCT7
-  stoichiometry: one copy per hetero-octameric ring
+  stoichiometry: two copies per double-ring complex
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: CCT eta subunit is modeled as one of the eight paralogous CCT ring
@@ -187,7 +194,7 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - CCT8
-  stoichiometry: one copy per hetero-octameric ring
+  stoichiometry: two copies per double-ring complex
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: CCT theta subunit is modeled as one of the eight paralogous CCT
@@ -203,12 +210,12 @@ components:
     notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
       related yeasts.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:2759
-  taxon_label: Eukaryota
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: The chaperonin-containing T-complex is the eukaryotic cytosolic chaperonin,
-    and microbial fungi such as budding yeast encode eight distinct CCT subunits.
-  reference: PMID:8771707
+  note: Budding yeast contains a cytosolic CCT complex with Cct1p through Cct8p assigned
+    in its double-ring crystal structure.
+  reference: DOI:10.1038/emboj.2011.208
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

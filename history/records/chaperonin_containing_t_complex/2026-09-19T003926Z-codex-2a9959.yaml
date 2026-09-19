@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/chaperonin_containing_t_complex.yaml
+  slug: chaperonin_containing_t_complex
+session:
+  id: 2026-09-19T003926Z-codex-2a9959
+  timestamp: '2026-09-19T00:39:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1211
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1212
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1210
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address CCT PR review findings
+  details: 'Resolved review defects from PR #1210 by narrowing the CCT taxonomic distribution
+    to Saccharomyces cerevisiae and expressing every CCT1-CCT8 subunit stoichiometry per complete
+    double-ring complex.'
