@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+  slug: 1_3_beta_d_glucan_synthase_complex
+session:
+  id: 2026-09-18T235453Z-claude-code-53f052
+  timestamp: '2026-09-18T23:54:53Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the 1,3-beta-D-glucan synthase complex record
+  details: Created an evidence-backed GO:0000148 1,3-beta-D-glucan synthase complex record
+    with GO exact synonyms, reviewed-label-only Fks catalytic and Rho1 regulatory components,
+    Saccharomyces cerevisiae scope, GO-grounded synthase and fungal cell-wall biosynthesis
+    functions, primary PMID/DOI evidence, a nonmechanistic Rho1/Fks function graph, and grounding
+    and upstream-regulator boundary discussions. Regenerated the text embedding artifacts,
+    rendered site pages, and refreshed the README corpus index.

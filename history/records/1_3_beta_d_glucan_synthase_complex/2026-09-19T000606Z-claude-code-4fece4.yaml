@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+  slug: 1_3_beta_d_glucan_synthase_complex
+session:
+  id: 2026-09-19T000606Z-claude-code-4fece4
+  timestamp: '2026-09-19T00:06:06Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1207
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1208
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1209
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1206
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed beta-glucan synthase PR review issues
+  details: 'Addressed PR #1206 review issues #1207, #1208, and #1209 by narrowing the Saccharomyces
+    distribution and canonical-example notes to the cited Qadota Fks1/Rho1 evidence, rewriting
+    the Fks/Rho1 reviewed-label-only grounding notes and TODO to avoid fungal-wide overclaiming,
+    correcting the Mazur and Baginsky JBC title, and rerendering the generated structure page.'
