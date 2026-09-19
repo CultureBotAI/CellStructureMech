@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/exosome_rnase_complex.yaml
+  slug: exosome_rnase_complex
+session:
+  id: 2026-09-19T071603Z-codex-373a5f
+  timestamp: '2026-09-19T07:16:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - synonyms
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add exosome RNase complex record
+  details: Added the GO:0000178 exosome (RNase complex) record with GO and DOI synonymy, a
+    protein-containing-complex parent, reviewed-label-only nine-subunit core/Rrp44/Rrp6 component
+    rows, Saccharomyces cerevisiae scope, RNA catabolic process and RNA processing functions,
+    GO/DOI/RCSB PDB evidence, a nonmechanistic RNA-decay graph, and a component-grounding
+    TODO.

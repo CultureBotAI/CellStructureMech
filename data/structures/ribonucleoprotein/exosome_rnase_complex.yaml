@@ -1,0 +1,208 @@
+identifier: GO:0000178
+label: exosome (RNase complex)
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A ribonuclease complex with 3'-to-5' exoribonuclease activity that participates
+  in RNA processing and degradation.
+definition_source: GO:0000178
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-19T07:09:07Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-19T07:10:18Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added exosome synonymy, a protein-containing-complex parent, reviewed-label-only
+    core/Rrp44/Rrp6 components, budding-yeast scope, RNA processing and catabolic
+    functions, GO/DOI/PDB evidence, a nonmechanistic RNA-decay graph and a component-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-19T07:24:34Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1213 findings #1214 and #1215 by replacing the generic protein-containing-complex
+    parent with GO:1905354 exoribonuclease complex and removing the nuclear Rrp6 nuclease
+    from the generic GO:0000178 component list and functional graph.'
+  llm_assisted: true
+synonyms:
+- synonym_text: exosome multienzyme ribonuclease complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000178
+- synonym_text: RNA exosome
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.cell.2006.10.037
+parent_structures:
+- GO:1905354
+components:
+- component_id: nine_subunit_exosome_core
+  label: nine-subunit exosome core
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  stoichiometry: 9 subunits
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The conserved RNA exosome core is a nine-protein assembly built
+    from RNase PH-like ring and S1/KH cap subunits; no exact source-neutral GO or
+    Complex Portal term for the eukaryotic nine-subunit core was assigned in this
+    pass.
+  role: Protein barrel and cap that form the conserved scaffold of eukaryotic RNA
+    exosome complexes.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2006.10.037
+    notes: Liu et al. 2006 reconstituted nine-subunit yeast and human exosomes and
+      determined the crystal structure of a human nine-subunit exosome.
+  - reference: RCSB_PDB:2NN6
+    notes: RCSB PDB 2NN6 records the Liu et al. human RNA exosome structure with Rrp41,
+      Rrp45, Rrp46, Rrp43, Mtr3, Rrp42, Csl4, Rrp4 and Rrp40.
+- component_id: rrp44_dis3_rnase
+  label: Rrp44/Dis3 catalytic nuclease
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RRP44
+  - DIS3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rrp44/Dis3 is modeled as the hydrolytic nuclease component of core-plus-Rrp44
+    yeast exosomes; no exact source-neutral protein family CURIE for this exosome-bound
+    role was curated.
+  role: Catalytic 3-prime-to-5-prime exoribonuclease associated with the yeast exosome.
+  evidence:
+  - reference: DOI:10.1016/s0092-8674(00)80432-8
+    notes: Mitchell et al. 1997 identified Rrp44/Dis3 among the original Saccharomyces
+      cerevisiae exosome proteins.
+  - reference: DOI:10.1016/j.cell.2006.10.037
+    notes: Liu et al. 2006 compared yeast 9-, 10- and 11-subunit exosomes and assigned
+      processive hydrolytic activity to Rrp44 and to the yeast 10-subunit exosome.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: The RNase exosome is directly evidenced in budding yeast; broader archaeal
+    and eukaryotic distributions are left for follow-up curation.
+  reference: DOI:10.1016/s0092-8674(00)80432-8
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Model eukaryote in which the RNA exosome was identified and in which 9-, 10-
+    and 11-subunit exosome assemblies were reconstituted.
+  reference: DOI:10.1016/j.cell.2006.10.037
+functions:
+- function_id: rna_catabolic_process
+  label: RNA catabolic process
+  grounding: GO:0006401
+  description: The RNA exosome participates in 3-prime-to-5-prime degradation of cellular
+    RNA substrates.
+  evidence:
+  - reference: GO:0006401
+    notes: GO:0006401 is the Gene Ontology biological-process term for RNA catabolic
+      process.
+  - reference: DOI:10.1016/j.cell.2006.10.037
+    notes: Liu et al. 2006 analyzed reconstituted RNA exosome activities on generic,
+      structured, AU-rich and polyadenylated RNA substrates.
+- function_id: rna_processing
+  label: RNA processing
+  grounding: GO:0006396
+  description: The RNA exosome participates in processing RNA precursors into mature
+    products.
+  evidence:
+  - reference: GO:0006396
+    notes: GO:0006396 is the Gene Ontology biological-process term for RNA processing.
+  - reference: DOI:10.1016/s0092-8674(00)80432-8
+    notes: Mitchell et al. 1997 showed that S. cerevisiae exosome components are required
+      for 5.8S rRNA 3-prime processing.
+evidence:
+- reference: GO:0000178
+  notes: Gene Ontology cellular-component term for the exosome RNase complex and its
+    exact synonym.
+- reference: GO:1905354
+  notes: Gene Ontology cellular-component term for exoribonuclease complex.
+- reference: GO:0006401
+  notes: Gene Ontology biological-process term for RNA catabolic process.
+- reference: GO:0006396
+  notes: Gene Ontology biological-process term for RNA processing.
+- reference: DOI:10.1016/s0092-8674(00)80432-8
+  notes: 'Mitchell et al. 1997, The exosome: a conserved eukaryotic RNA processing
+    complex containing multiple 3''-5'' exoribonucleases, Cell.'
+- reference: DOI:10.1016/j.cell.2006.10.037
+  notes: Liu, Greimann and Lima 2006, Reconstitution, Activities, and Structure of
+    the Eukaryotic RNA Exosome, Cell.
+- reference: RCSB_PDB:2NN6
+  notes: RCSB Protein Data Bank entry for the Liu et al. 2006 human nine-subunit RNA
+    exosome crystal structure.
+causal_graphs:
+- graph_id: rna_exosome_decay
+  title: RNA exosome catalytic subunits degrade RNA
+  description: The conserved nine-subunit RNA exosome core and associated Rrp44/Dis3
+    catalytic nuclease form a yeast 10-subunit exosome that acts on RNA substrates.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the Liu et al. reconstituted yeast 10-subunit exosome
+    activity without modeling the substrate channel, catalytic-site geometry, Rrp6-containing
+    nuclear variants or nuclear cofactors.
+  nodes:
+  - node_id: nine_subunit_exosome_core
+    label: nine-subunit exosome core
+    node_type: GENE_OR_PROTEIN
+    component_ref: nine_subunit_exosome_core
+  - node_id: rrp44_dis3_rnase
+    label: Rrp44/Dis3 catalytic nuclease
+    node_type: GENE_OR_PROTEIN
+    component_ref: rrp44_dis3_rnase
+  - node_id: exosome_rnase_complex
+    label: exosome (RNase complex)
+    node_type: STRUCTURE
+    grounding: GO:0000178
+  - node_id: rna_catabolic_process
+    label: RNA catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006401
+  edges:
+  - subject: nine_subunit_exosome_core
+    predicate: scaffolds
+    object: exosome_rnase_complex
+    description: The eukaryotic RNA exosome contains a conserved nine-subunit core
+      scaffold.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.10.037
+      notes: Liu et al. 2006 reconstituted yeast and human nine-subunit exosomes.
+  - subject: rrp44_dis3_rnase
+    predicate: provides hydrolytic activity for
+    object: exosome_rnase_complex
+    description: Rrp44/Dis3 provides processive hydrolytic nuclease activity in the
+      yeast 10-subunit exosome.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.10.037
+      notes: Liu et al. 2006 assigned processive hydrolytic activity to yeast Rrp44
+        and to the yeast 10-subunit exosome.
+  - subject: exosome_rnase_complex
+    predicate: supports
+    object: rna_catabolic_process
+    description: The RNA exosome participates in 3-prime-to-5-prime RNA degradation.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.10.037
+      notes: Liu et al. 2006 reconstituted yeast exosomes and analyzed their RNA-degradation
+        activities.
+discussions:
+- discussion_id: resolve_exosome_component_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, GO or Complex Portal groundings
+    for the RNA exosome core and Dis3/Rrp44 nuclease; split the nine core protein
+    families and decide whether Rrp6 belongs only on a nuclear-exosome child record
+    when exact cross-taxon boundaries are justified.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#nine_subunit_exosome_core
+  - components#rrp44_dis3_rnase
+  rationale: The first RNase exosome record captures the conserved core and Dis3/Rrp44
+    catalytic subunit as reviewed, label-only components. A follow-up curation pass
+    should map exact family boundaries and separate cytoplasmic, nuclear, Rrp6-containing
+    and archaeal exosome variants.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2006.10.037
+  - reference: RCSB_PDB:2NN6
+  posed_by: codex
+  posed_date: '2026-09-19'
