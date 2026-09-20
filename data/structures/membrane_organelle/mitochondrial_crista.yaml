@@ -30,6 +30,11 @@ curation_history:
     architecture machinery and adding a GO:0097002 inner boundary membrane node plus
     crista-junction graph edge.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:55:39Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the MICOS and ATP synthase graph nodes as STRUCTURE.
+  llm_assisted: true
 synonyms:
 - synonym_text: mitochondrial cristae
   synonym_type: EXACT_SYNONYM
@@ -181,12 +186,12 @@ causal_graphs:
     grounding: GO:0097002
   - node_id: micos_complex
     label: MICOS complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0061617
     component_ref: micos_complex
   - node_id: atp_synthase
     label: proton-transporting ATP synthase complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0045259
     component_ref: atp_synthase
   - node_id: cristae_formation

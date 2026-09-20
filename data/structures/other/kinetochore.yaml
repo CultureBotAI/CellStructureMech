@@ -27,6 +27,12 @@ curation_history:
     process edge with an Ndc80-to-kinetochore assembly edge and narrowing the Cse4,
     MIS12/MIND and Ndc80 components from ESSENTIAL to UNKNOWN.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:51:49Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped exact protein-complex graph nodes for COMA, MIS12/MIND, and Ndc80
+    from GENE_OR_PROTEIN to STRUCTURE.
+  llm_assisted: true
 synonyms:
 - synonym_text: condensed chromosome kinetochore
   synonym_type: EXACT_SYNONYM
@@ -181,17 +187,17 @@ causal_graphs:
     component_ref: centromeric_cse4_nucleosome
   - node_id: coma_complex
     label: COMA complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0000817
     component_ref: coma_complex
   - node_id: mis12_mind_type_complex
     label: MIS12/MIND type complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0000444
     component_ref: mis12_mind_type_complex
   - node_id: ndc80_complex
     label: Ndc80 complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0031262
     component_ref: ndc80_complex
   - node_id: kinetochore

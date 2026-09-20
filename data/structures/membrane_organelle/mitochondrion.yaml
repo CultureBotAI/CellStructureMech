@@ -33,6 +33,11 @@ curation_history:
   changes: Kept the TOM graph process on adapter-backed GO:0030150 and clarified that
     TOM provides the outer-membrane entry step for matrix import.
   llm_assisted: true
+- timestamp: '2026-09-20T21:55:39Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the TOM complex graph node from GENE_OR_PROTEIN to STRUCTURE.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 has_part:
@@ -191,7 +196,7 @@ causal_graphs:
     grounding: GO:0005759
   - node_id: tom_complex
     label: mitochondrial outer membrane translocase complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0005742
     component_ref: tom_complex
   - node_id: mitochondrial_matrix_protein_import

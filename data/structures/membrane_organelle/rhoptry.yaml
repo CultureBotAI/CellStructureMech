@@ -44,6 +44,11 @@ curation_history:
   changes: Connected the grounded rhoptry-lumen node to the rhoptry in the rhoptry
     discharge graph.
   llm_assisted: true
+- timestamp: '2026-09-20T21:58:46Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the rhoptry lumen graph node as CELLULAR_LOCALIZATION.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -176,7 +181,7 @@ causal_graphs:
     node_type: STRUCTURE
   - node_id: rhoptry_lumen
     label: rhoptry lumen
-    node_type: STRUCTURE
+    node_type: CELLULAR_LOCALIZATION
     grounding: GO:0034591
   - node_id: rhoptry
     label: rhoptry

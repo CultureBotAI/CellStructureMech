@@ -27,6 +27,11 @@ curation_history:
     membrane origin wording, qualifying Kinetoplastea taxonomic scope, and modeling
     glycolysis compartmentation as flux control instead of direct metabolite sequestration.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:58:45Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the glycosome lumen graph node as CELLULAR_LOCALIZATION.
+  llm_assisted: true
 parent_structures:
 - GO:0005777
 has_part:
@@ -159,7 +164,7 @@ causal_graphs:
     component_ref: glycolytic_enzymes
   - node_id: glycosome_lumen
     label: glycosome lumen
-    node_type: STRUCTURE
+    node_type: CELLULAR_LOCALIZATION
     grounding: GO:0034468
   - node_id: glycolytic_flux_control
     label: controlled glycolytic flux

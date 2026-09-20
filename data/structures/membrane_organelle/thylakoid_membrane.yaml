@@ -43,6 +43,12 @@ curation_history:
   changes: '#756: marked the split_photosystem_records discussion resolved after the
     standalone PSI, PSII, and cytochrome b6f records were added.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:55:39Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the photosystem II, cytochrome b6f, photosystem I, and ATP synthase
+    graph nodes from GENE_OR_PROTEIN to STRUCTURE.
+  llm_assisted: true
 synonyms:
 - synonym_text: TM
   synonym_type: RELATED_SYNONYM
@@ -186,7 +192,7 @@ causal_graphs:
   nodes:
   - node_id: psii
     label: photosystem II
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: photosystem_ii
     grounding: GO:0009523
   - node_id: plastoquinone
@@ -195,12 +201,12 @@ causal_graphs:
     component_ref: plastoquinone_pool
   - node_id: cytb6f
     label: cytochrome b6f complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: cytochrome_b6f
     grounding: GO:0009512
   - node_id: psi
     label: photosystem I
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: photosystem_i
     grounding: GO:0009522
   - node_id: proton_gradient
@@ -208,7 +214,7 @@ causal_graphs:
     node_type: STATE
   - node_id: atp_synthase
     label: proton-transporting ATP synthase complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: atp_synthase
     grounding: GO:0045259
   - node_id: electron_transport

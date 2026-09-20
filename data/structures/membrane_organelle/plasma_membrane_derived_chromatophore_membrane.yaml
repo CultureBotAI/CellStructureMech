@@ -51,6 +51,12 @@ curation_history:
   changes: '#762: changed the proactive chromatophore cytochrome bc1 link-back event
     from ADDRESS_REVIEW to REFINED_RECORD.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:55:39Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the locally grounded RC-LH1-PufX and cytochrome bc1 complex graph
+    nodes as STRUCTURE.
+  llm_assisted: true
 synonyms:
 - synonym_text: cellular chromatophore membrane
   synonym_type: EXACT_SYNONYM
@@ -231,7 +237,7 @@ causal_graphs:
     component_ref: lh2_antenna_complexes
   - node_id: rc_lh1_pufx
     label: RC-LH1-PufX core complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: rc_lh1_pufx_core_complex
   - node_id: quinone_pool
     label: quinone pool
@@ -240,7 +246,7 @@ causal_graphs:
       centers and cytochrome bc1 in purple-bacterial chromatophores.
   - node_id: cytochrome_bc1
     label: cytochrome bc1 complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: cytochrome_bc1_complex
   - node_id: proton_motive_force
     label: chromatophore transmembrane proton motive force

@@ -33,6 +33,11 @@ curation_history:
   changes: 'Addressed PR #602 review issues #603 and #604 by retargeting lumen acidification
     to the intact V-ATPase and adding V0/V1 sector edges to the whole GO:0016471 complex.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:55:38Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the vacuolar V-ATPase V1 and V0 domain graph nodes as STRUCTURE.
+  llm_assisted: true
 parent_structures:
 - GO:0033176
 part_of:
@@ -162,12 +167,12 @@ causal_graphs:
     grounding: GO:0016471
   - node_id: v1_domain
     label: vacuolar proton-transporting V-type ATPase, V1 domain
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0000221
     component_ref: v1_domain
   - node_id: v0_domain
     label: vacuolar proton-transporting V-type ATPase, V0 domain
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0000220
     component_ref: v0_domain
   - node_id: vacuolar_membrane

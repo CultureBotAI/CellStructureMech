@@ -38,6 +38,11 @@ curation_history:
   changes: Narrowed the microneme secretion signal node to PKG-dependent signaling
     and cited broad review evidence on the generic microneme-adhesin invasion edge.
   llm_assisted: true
+- timestamp: '2026-09-20T21:58:46Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the microneme lumen graph node as CELLULAR_LOCALIZATION.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -175,7 +180,7 @@ causal_graphs:
     component_ref: microneme_membrane
   - node_id: microneme_lumen
     label: microneme lumen
-    node_type: STRUCTURE
+    node_type: CELLULAR_LOCALIZATION
     grounding: GO:0034494
   - node_id: microneme
     label: microneme

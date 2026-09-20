@@ -27,6 +27,12 @@ curation_history:
   changes: 'Resolved #864 by reciting the Synechocystis canonical example to the Huokko
     et al. 2021 de novo thylakoid membrane formation claim.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:55:39Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the PSII, cytochrome b6f, and PSI graph nodes from GENE_OR_PROTEIN
+    to STRUCTURE.
+  llm_assisted: true
 synonyms:
 - synonym_text: plasma membrane thylakoid membrane
   synonym_type: EXACT_SYNONYM
@@ -197,17 +203,17 @@ causal_graphs:
     grounding: GO:0031979
   - node_id: psii
     label: plasma membrane-derived thylakoid photosystem II
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0030096
     component_ref: plasma_membrane_derived_photosystem_ii
   - node_id: cytb6f
     label: cytochrome b6f complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0009512
     component_ref: cytochrome_b6f
   - node_id: psi
     label: plasma membrane-derived photosystem I
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0030094
     component_ref: plasma_membrane_derived_photosystem_i
   - node_id: electron_transport

@@ -27,6 +27,11 @@ curation_history:
     inner- and outer-membrane essentiality assertions to UNKNOWN and adding the mitochondrion
     node plus GO:0005740 envelope topology edge to the graph.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:55:39Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the TOM complex graph node from GENE_OR_PROTEIN to STRUCTURE.
+  llm_assisted: true
 parent_structures:
 - GO:0031967
 part_of:
@@ -181,7 +186,7 @@ causal_graphs:
     grounding: GO:0005758
   - node_id: tom_complex
     label: mitochondrial outer membrane translocase complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0005742
     component_ref: tom_complex
   - node_id: protein_import_into_mitochondrial_matrix

@@ -40,6 +40,12 @@ curation_history:
     introduced while addressing #690; kept the ungrounded stroma topology node and
     GO:0070115 intermembrane-space grounding.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:58:46Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the organellar chromatophore intermembrane-space graph node as
+    CELLULAR_LOCALIZATION.
+  llm_assisted: true
 synonyms:
 - synonym_text: Paulinella-type chromatophore inner membrane
   synonym_type: EXACT_SYNONYM
@@ -117,7 +123,7 @@ causal_graphs:
     node_type: STRUCTURE
   - node_id: organellar_chromatophore_intermembrane_space
     label: organellar chromatophore intermembrane space
-    node_type: STRUCTURE
+    node_type: CELLULAR_LOCALIZATION
     grounding: GO:0070115
   edges:
   - subject: organellar_chromatophore_inner_membrane

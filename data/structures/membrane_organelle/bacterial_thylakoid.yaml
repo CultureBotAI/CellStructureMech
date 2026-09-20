@@ -34,6 +34,12 @@ curation_history:
     b6f; resolved #575 by changing structure_kind to OTHER and documenting the non-organelle
     thylakoid boundary.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:55:39Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the PSII, cytochrome b6f, PSI, and ATP synthase graph nodes from
+    GENE_OR_PROTEIN to STRUCTURE.
+  llm_assisted: true
 synonyms:
 - synonym_text: plasma membrane-derived thylakoid
   synonym_type: EXACT_SYNONYM
@@ -201,7 +207,7 @@ causal_graphs:
     grounding: GO:0031979
   - node_id: psii
     label: plasma membrane-derived thylakoid photosystem II
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0030096
     component_ref: plasma_membrane_derived_photosystem_ii
   - node_id: plastoquinone_pool
@@ -211,12 +217,12 @@ causal_graphs:
       cytochrome b6f in the bacterial thylakoid membrane.
   - node_id: cytb6f
     label: cytochrome b6f complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0009512
     component_ref: cytochrome_b6f
   - node_id: psi
     label: plasma membrane-derived photosystem I
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0030094
     component_ref: plasma_membrane_derived_photosystem_i
   - node_id: proton_gradient
@@ -224,7 +230,7 @@ causal_graphs:
     node_type: STATE
   - node_id: atp_synthase
     label: proton-transporting ATP synthase complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0045259
     component_ref: atp_synthase
   - node_id: atp_synthesis
