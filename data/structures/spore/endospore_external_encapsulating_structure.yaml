@@ -258,7 +258,6 @@ causal_graphs:
     label: endospore cortex
     node_type: STRUCTURE
     grounding: GO:0043595
-    component_ref: cortex
   - node_id: coat
     label: endospore coat proteins
     node_type: GENE_OR_PROTEIN
@@ -374,3 +373,9 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-09-20T21:51:50Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Removed the endospore cortex graph node's component_ref so the GO:0043595
+    structure node no longer points at the narrower peptidoglycan component.
+  llm_assisted: true

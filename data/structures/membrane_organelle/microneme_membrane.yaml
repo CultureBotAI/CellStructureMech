@@ -19,6 +19,11 @@ curation_history:
     function, GO/DOI evidence, a nonmechanistic microneme-membrane topology graph,
     and a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-20T21:58:46Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the microneme lumen graph node as CELLULAR_LOCALIZATION.
+  llm_assisted: true
 parent_structures:
 - GO:0031090
 part_of:
@@ -103,7 +108,7 @@ causal_graphs:
     grounding: GO:0020009
   - node_id: microneme_lumen
     label: microneme lumen
-    node_type: STRUCTURE
+    node_type: CELLULAR_LOCALIZATION
     grounding: GO:0034494
   - node_id: microneme_exocytosis
     label: microneme exocytosis

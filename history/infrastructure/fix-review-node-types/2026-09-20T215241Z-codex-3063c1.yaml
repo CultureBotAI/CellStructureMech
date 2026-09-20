@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/fix_review_node_types.py
+  slug: fix-review-node-types
+session:
+  id: 2026-09-20T215241Z-codex-3063c1
+  timestamp: '2026-09-20T21:52:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - xrefs
+  - discussions
+  - curation_history
+  summary: Fix review-reported graph node types and invalid xref
+  details: 'Ran scripts/fix_review_node_types.py to correct the all-record review''s
+    explicit graph-boundary findings and its mechanically resolvable rollup examples:
+    retyped 47 protein-complex component nodes from GENE_OR_PROTEIN to STRUCTURE across
+    kinetochore, nucleolus, pyrenoid, V-ATPase, bacterial/chromatophore/thylakoid photosynthetic
+    complexes, chloroplast TOC/TIC complexes, mitochondrial MICOS/TOM complexes, AP-2,
+    type I/II/III/IV/VI/IX secretion, and prospore records; retyped 8 GO-grounded
+    lumen/intermembrane-space nodes from STRUCTURE to CELLULAR_LOCALIZATION; removed
+    GO:0009288 from type III secretion system xrefs while keeping the open flagellum_homology
+    discussion for explicit shared-ancestry modeling; and removed component_ref: cortex
+    from the endospore external structure''s GO:0043595 graph node. The script asserts
+    target identifiers, graph IDs, and old node/component/xref text before writing through
+    write_validated_structure.'

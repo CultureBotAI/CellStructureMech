@@ -31,6 +31,11 @@ curation_history:
   changes: 'Resolved review issues #952 and #953 by adding the GO exact synonym and
     representing the spore-nucleus spatial relation in the graph.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:51:50Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the leading-edge protein coat graph node as STRUCTURE.
+  llm_assisted: true
 parent_structures:
 - GO:0016020
 part_of:
@@ -107,7 +112,7 @@ causal_graphs:
   nodes:
   - node_id: leading_edge_protein_coat
     label: prospore membrane leading edge protein coat
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: leading_edge_protein_coat
   - node_id: prospore_membrane_leading_edge
     label: prospore membrane leading edge

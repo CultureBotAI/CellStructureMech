@@ -36,6 +36,12 @@ curation_history:
     and resolved #589 by narrowing the RNA polymerase I graph edge to rDNA within
     nucleolar chromatin.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:51:50Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the RNA polymerase I complex graph node from GENE_OR_PROTEIN to
+    STRUCTURE.
+  llm_assisted: true
 part_of:
 - GO:0031981
 components:
@@ -191,7 +197,7 @@ causal_graphs:
     component_ref: nucleolar_chromatin
   - node_id: rna_polymerase_i_complex
     label: RNA polymerase I complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0005736
     component_ref: rna_polymerase_i_complex
   - node_id: pre_rrna

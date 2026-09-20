@@ -19,6 +19,11 @@ curation_history:
     scope, a matrix-import boundary function, GO/UniProt/DOI evidence, a nonmechanistic
     glycosome-membrane topology graph, and a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-20T21:58:46Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the glycosome lumen graph node as CELLULAR_LOCALIZATION.
+  llm_assisted: true
 synonyms:
 - synonym_text: glycosomal membrane
   synonym_type: EXACT_SYNONYM
@@ -113,7 +118,7 @@ causal_graphs:
     grounding: GO:0020015
   - node_id: glycosome_lumen
     label: glycosome lumen
-    node_type: STRUCTURE
+    node_type: CELLULAR_LOCALIZATION
     grounding: GO:0034468
   - node_id: pex14_import_docking
     label: PEX14 import docking machinery

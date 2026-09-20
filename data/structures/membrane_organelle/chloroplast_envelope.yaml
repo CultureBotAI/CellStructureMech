@@ -27,6 +27,11 @@ curation_history:
     self-corrections and adding a GO:0009570 chloroplast stroma node plus envelope-boundary
     graph edge.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:55:39Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the chloroplast Toc and Tic graph nodes as STRUCTURE.
+  llm_assisted: true
 parent_structures:
 - GO:0009526
 part_of:
@@ -191,12 +196,12 @@ causal_graphs:
     grounding: GO:0009570
   - node_id: toc_complex
     label: Toc complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0010006
     component_ref: toc_complex
   - node_id: tic_complex
     label: Tic complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0031897
     component_ref: tic_complex
   - node_id: protein_import_into_chloroplast_stroma

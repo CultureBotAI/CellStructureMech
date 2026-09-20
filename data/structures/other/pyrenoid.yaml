@@ -33,6 +33,12 @@ curation_history:
     assertion; resolved #332 by removing the assembly-stage Rubisco matrix phase-separation
     item from top-level functions.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:51:50Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the GO-grounded ribulose bisphosphate carboxylase complex graph
+    node from GENE_OR_PROTEIN to STRUCTURE.
+  llm_assisted: true
 parent_structures:
 - GO:0043232
 part_of:
@@ -136,7 +142,7 @@ causal_graphs:
     component_ref: epyc1_rubisco_linker
   - node_id: rubisco_holoenzyme
     label: ribulose bisphosphate carboxylase complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0048492
     component_ref: rubisco_holoenzyme
   - node_id: multivalent_epyc1_rubisco_network

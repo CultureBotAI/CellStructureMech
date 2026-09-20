@@ -27,6 +27,11 @@ curation_history:
     description so the structure forms the AP-2/clathrin coat rather than organizing
     another AP-2/clathrin coat.'
   llm_assisted: true
+- timestamp: '2026-09-20T21:55:39Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: Retyped the AP-2 adaptor complex graph node as STRUCTURE.
+  llm_assisted: true
 parent_structures:
 - GO:0030118
 part_of:
@@ -121,7 +126,7 @@ causal_graphs:
     component_ref: clathrin_triskelion_scaffold
   - node_id: ap2_adaptor_complex
     label: AP-2 adaptor complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0030122
     component_ref: ap2_adaptor_complex
   - node_id: clathrin_coat_of_coated_pit
