@@ -25,6 +25,12 @@ curation_history:
   changes: 'Addressed #704 by adding GO:0036014 cyanelle intermembrane-space evidence
     and a bounded intermembrane-space node to the outer-membrane topology graph.'
   llm_assisted: true
+- timestamp: '2026-09-21T10:04:10Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable
+    cyanelle evidence for #1231.'
+  llm_assisted: true
 parent_structures:
 - GO:0009527
 - GO:0033113
@@ -58,9 +64,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:38254
   taxon_label: Glaucocystophyceae
   presence: COMMON
-  note: Glaucophytes carry cyanelles with double envelopes whose outer boundary is
-    a cyanelle outer membrane.
-  reference: DOI:10.5586/asbp.2015.020
+  note: The cyanelle outer membrane is the cytoplasm-facing envelope boundary of glaucophyte
+    cyanelles.
+  reference: uniprot.location:SL-0482
 - taxon_id: NCBITaxon:2762
   taxon_label: Cyanophora paradoxa
   presence: COMMON
@@ -94,9 +100,6 @@ evidence:
   notes: Kojima, Muramoto and Kusano 2016, Outer Membrane Proteins Derived from Non-cyanobacterial
     Lineage Cover the Peptidoglycan of Cyanophora paradoxa Cyanelles and Serve as
     a Cyanelle Diffusion Channel, Journal of Biological Chemistry.
-- reference: DOI:10.5586/asbp.2015.020
-  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
-    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
 causal_graphs:
 - graph_id: cyanelle_outer_membrane_topology
   title: Cyanelle outer membrane topology

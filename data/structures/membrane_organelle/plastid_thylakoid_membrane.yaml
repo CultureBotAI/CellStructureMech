@@ -19,6 +19,12 @@ curation_history:
     example, a photosynthesis light-reaction function, a nonmechanistic topology graph,
     a lipid-grounding TODO, and a resolved generic-versus-child interpretation.
   llm_assisted: true
+- timestamp: '2026-09-21T10:04:10Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable
+    cyanelle evidence for #1231.'
+  llm_assisted: true
 parent_structures:
 - GO:0042651
 part_of:
@@ -55,8 +61,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:38254
   taxon_label: Glaucocystophyceae
   presence: COMMON
-  note: Glaucophyte cyanelles are plastids with internal thylakoid membranes.
-  reference: DOI:10.5586/asbp.2015.020
+  note: Glaucophyte cyanelles contain cyanelle thylakoid membranes, the cyanelle subtype
+    of plastid thylakoid membrane.
+  reference: GO:0033115
 canonical_examples:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
@@ -94,9 +101,9 @@ evidence:
 - reference: DOI:10.7554/eLife.04889
   notes: Engel et al. 2015, Native architecture of the Chlamydomonas chloroplast revealed
     by in situ cryo-electron tomography, eLife.
-- reference: DOI:10.5586/asbp.2015.020
-  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
-    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
+- reference: GO:0033115
+  notes: Gene Ontology cellular-component term for cyanelle thylakoid membrane, the
+    cyanelle subtype of plastid thylakoid membrane.
 causal_graphs:
 - graph_id: plastid_thylakoid_membrane_topology
   title: Plastid thylakoid membrane topology

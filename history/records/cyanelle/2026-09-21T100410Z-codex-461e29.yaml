@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cyanelle.yaml
+  slug: cyanelle
+session:
+  id: 2026-09-21T100410Z-codex-461e29
+  timestamp: '2026-09-21T10:04:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1231
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - taxonomic_distribution
+  - evidence
+  summary: Replace unreadable Glaucophyta cyanelle evidence
+  details: 'Replaced the dead Jackson et al. 2015 Glaucophyta DOI with reachable PubMed,
+    GO, or UniProt evidence while preserving the record''s Glaucocystophyceae taxonomic-distribution
+    intent; removed the stale Jackson bibliography row; and recorded the #1231 cleanup
+    in curation_history.'
