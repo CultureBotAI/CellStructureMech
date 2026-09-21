@@ -34,6 +34,13 @@ curation_history:
     the coatomer component label, and removing misplaced Sandmann cargo-motif evidence
     from the Arf component.'
   llm_assisted: true
+- timestamp: '2026-09-21T11:01:21Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1235 by replacing unreadable Serafini and Letourneur COPI citations
+    with reachable Yu et al. 2012 Arf1-coatomer and Sandmann et al. 2003 Golgi-to-ER
+    retrieval evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0030120
 part_of:
@@ -59,10 +66,9 @@ components:
   - reference: DOI:10.1038/349248a0
     notes: Waters, Serafini and Rothman 1991 named coatomer as a cytosolic protein
       complex containing non-clathrin Golgi vesicle coat subunits.
-  - reference: DOI:10.1016/0092-8674(94)90011-6
-    notes: Letourneur et al. 1994 used Saccharomyces cerevisiae coatomer mutants to
-      show that coatomer is required for retrieval of dilysine-tagged cargo to the
-      ER.
+  - reference: DOI:10.1091/mbc.e02-11-0736
+    notes: Sandmann et al. 2003 described COPI retrograde vesicles and direct binding
+      of a KKXX ER-retrieval motif by coatomer in Saccharomyces cerevisiae.
 - component_id: arf_gtpase
   label: Arf-family COPI GTPase
   component_type: PROTEIN
@@ -75,22 +81,22 @@ components:
   role: Small GTPase coat constituent that associates with Golgi-derived COP-coated
     vesicles and promotes coat assembly on membranes.
   evidence:
-  - reference: DOI:10.1016/0092-8674(91)90176-y
-    notes: Serafini et al. 1991 identified ADP-ribosylation factor as a subunit of
-      Golgi-derived COP-coated vesicles.
+  - reference: DOI:10.1016/j.cell.2012.01.015
+    notes: Yu et al. 2012 showed that Arf1-GTP binds two coatomer subcomplexes during
+      COPI coatomer recruitment to membranes.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
   note: Budding yeast has a COPI coatomer system that retrieves dilysine-tagged early
     secretory cargo to the endoplasmic reticulum.
-  reference: DOI:10.1016/0092-8674(94)90011-6
+  reference: DOI:10.1091/mbc.e02-11-0736
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast model in which coatomer mutants established COPI roles in Golgi-to-ER
     retrieval and early secretory trafficking.
-  reference: DOI:10.1016/0092-8674(94)90011-6
+  reference: DOI:10.1091/mbc.e02-11-0736
 functions:
 - function_id: copi_coated_vesicle_budding
   label: COPI-coated vesicle budding
@@ -101,9 +107,9 @@ functions:
   - reference: GO:0035964
     notes: GO:0035964 denotes evagination of a Golgi membrane to form a COPI-coated
       vesicle.
-  - reference: DOI:10.1016/0092-8674(91)90176-y
-    notes: Serafini et al. 1991 analyzed coat subunits on Golgi-derived COP-coated
-      vesicles.
+  - reference: DOI:10.1016/j.cell.2012.01.015
+    notes: Yu et al. 2012 analyzed Arf1-GTP binding to coatomer subcomplexes during
+      COPI coat recruitment to membranes.
 - function_id: golgi_to_er_retrieval
   label: retrograde vesicle-mediated transport, Golgi to endoplasmic reticulum
   description: In budding yeast, coatomer-dependent COPI traffic returns dilysine-tagged
@@ -112,9 +118,9 @@ functions:
   - reference: GO:0006890
     notes: GO:0006890 denotes retrograde vesicle-mediated transport from the Golgi
       apparatus to the endoplasmic reticulum.
-  - reference: DOI:10.1016/0092-8674(94)90011-6
-    notes: Letourneur et al. 1994 demonstrated that yeast coatomer mutants impair
-      retrieval of dilysine-tagged proteins to the ER.
+  - reference: DOI:10.1091/mbc.e02-11-0736
+    notes: Sandmann et al. 2003 described COPI retrograde vesicles and direct binding
+      of a KKXX ER-retrieval motif by coatomer in Saccharomyces cerevisiae.
   grounding: GO:0006890
 evidence:
 - reference: GO:0030126
@@ -131,12 +137,9 @@ evidence:
 - reference: DOI:10.1038/349248a0
   notes: 'Waters, Serafini and Rothman 1991, ''Coatomer'': a cytosolic protein complex
     containing subunits of non-clathrin-coated Golgi transport vesicles, Nature.'
-- reference: DOI:10.1016/0092-8674(91)90176-y
-  notes: Serafini et al. 1991, ADP-Ribosylation factor is a subunit of the coat of
-    Golgi-derived COP-coated vesicles, Cell.
-- reference: DOI:10.1016/0092-8674(94)90011-6
-  notes: Letourneur et al. 1994, Coatomer is essential for retrieval of dilysine-tagged
-    proteins to the endoplasmic reticulum, Cell.
+- reference: DOI:10.1016/j.cell.2012.01.015
+  notes: Yu et al. 2012, A Structure-Based Mechanism for Arf1-Dependent Recruitment
+    of Coatomer to Membranes, Cell.
 - reference: DOI:10.1091/mbc.e02-11-0736
   notes: Sandmann et al. 2003, Suppression of Coatomer Mutants by a New Protein Family
     with COPI and COPII Binding Motifs in Saccharomyces cerevisiae, Molecular Biology
@@ -188,18 +191,18 @@ causal_graphs:
     description: Arf-family GTPases associate with Golgi membranes during COPI coat
       assembly.
     evidence:
-    - reference: DOI:10.1016/0092-8674(91)90176-y
-      notes: Serafini et al. 1991 studied ADP-ribosylation factor in the coat of Golgi-derived
-        COP-coated vesicles.
+    - reference: DOI:10.1016/j.cell.2012.01.015
+      notes: Yu et al. 2012 showed that Arf1-GTP binds coatomer and drives its recruitment
+        to membranes.
   - subject: coatomer
     predicate: assembles with
     object: arf_gtpase
     description: Coatomer and Arf-family GTPase together form the protein coat on
       COP-coated vesicles.
     evidence:
-    - reference: DOI:10.1016/0092-8674(91)90176-y
-      notes: Serafini et al. 1991 identified Arf in Golgi-derived COP-coated vesicle
-        coats.
+    - reference: DOI:10.1016/j.cell.2012.01.015
+      notes: Yu et al. 2012 showed that two Arf1-GTP molecules interact with distinct
+        coatomer subcomplexes.
   - subject: coatomer
     predicate: is part of
     object: copi_vesicle_coat
@@ -213,9 +216,9 @@ causal_graphs:
     object: copi_vesicle_coat
     description: Arf-family GTPase is represented as a COPI vesicle coat constituent.
     evidence:
-    - reference: DOI:10.1016/0092-8674(91)90176-y
-      notes: Serafini et al. 1991 identified ADP-ribosylation factor as a subunit
-        of the Golgi-derived COP-coated vesicle coat.
+    - reference: DOI:10.1016/j.cell.2012.01.015
+      notes: Yu et al. 2012 showed that Arf1-GTP interacts with COPI coatomer during
+        membrane recruitment.
   - subject: copi_vesicle_coat
     predicate: assembles on
     object: golgi_membrane
@@ -250,9 +253,9 @@ causal_graphs:
     - reference: GO:0006890
       notes: GO:0006890 covers retrograde vesicle-mediated transport from the Golgi
         to the endoplasmic reticulum.
-    - reference: DOI:10.1016/0092-8674(94)90011-6
-      notes: Letourneur et al. 1994 demonstrated coatomer-dependent retrieval of dilysine-tagged
-        proteins to the ER.
+    - reference: DOI:10.1091/mbc.e02-11-0736
+      notes: Sandmann et al. 2003 described COPI retrograde vesicles and direct binding
+        of a KKXX ER-retrieval motif by coatomer.
 discussions:
 - discussion_id: resolve_coatomer_subunits_and_arf_paralogs
   prompt: Resolve exact source-neutral groundings for individual coatomer subunit
@@ -266,7 +269,6 @@ discussions:
     Individual coatomer subunit families and the Saccharomyces Arf paralogues need
     exact family boundaries before adding subunit-level components or protein examples.
   evidence:
-  - reference: DOI:10.1016/0092-8674(94)90011-6
   - reference: DOI:10.1091/mbc.e02-11-0736
   posed_by: codex
   posed_date: '2026-09-12'

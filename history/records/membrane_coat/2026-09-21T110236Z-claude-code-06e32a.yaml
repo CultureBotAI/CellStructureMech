@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/membrane_coat.yaml
+  slug: membrane_coat
+session:
+  id: 2026-09-21T110236Z-claude-code-06e32a
+  timestamp: '2026-09-21T11:02:36Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1235
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: Replace unreadable COPI ARF evidence
+  details: Replaced unreadable Serafini et al. 1991 COPI ARF citations with reachable Yu et
+    al. 2012 Arf1-coatomer evidence while preserving the existing clathrin and COPII sources.

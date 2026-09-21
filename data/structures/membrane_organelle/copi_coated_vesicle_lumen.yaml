@@ -19,6 +19,12 @@ curation_history:
     the UniProt SL-0321 xref, Saccharomyces scope, GO/UniProt/DOI evidence, and a
     nonmechanistic COPI-coated-vesicle lumen topology graph.
   llm_assisted: true
+- timestamp: '2026-09-21T11:01:21Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1235 by replacing unreadable Letourneur COPI evidence with reachable
+    Sandmann et al. 2003 Golgi-to-ER retrieval evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0060205
 part_of:
@@ -31,13 +37,13 @@ taxonomic_distribution:
   presence: COMMON
   note: Budding yeast has coatomer-dependent COPI-coated vesicles that carry early
     secretory cargo for retrograde retrieval.
-  reference: DOI:10.1016/0092-8674(94)90011-6
+  reference: DOI:10.1091/mbc.e02-11-0736
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast model in which coatomer mutants established COPI roles in Golgi-to-ER
     retrieval and early secretory trafficking.
-  reference: DOI:10.1016/0092-8674(94)90011-6
+  reference: DOI:10.1091/mbc.e02-11-0736
 evidence:
 - reference: uniprot.location:SL-0321
   notes: UniProt Subcellular Location entry SL-0321 identifies the COPI-coated vesicle
@@ -50,9 +56,10 @@ evidence:
 - reference: GO:0030663
   notes: Gene Ontology cellular-component term for the COPI-coated vesicle membrane
     bounding the lumen.
-- reference: DOI:10.1016/0092-8674(94)90011-6
-  notes: Letourneur et al. 1994, Coatomer is essential for retrieval of dilysine-tagged
-    proteins to the endoplasmic reticulum, Cell.
+- reference: DOI:10.1091/mbc.e02-11-0736
+  notes: Sandmann et al. 2003, Suppression of Coatomer Mutants by a New Protein Family
+    with COPI and COPII Binding Motifs in Saccharomyces cerevisiae, Molecular Biology
+    of the Cell.
 causal_graphs:
 - graph_id: copi_coated_vesicle_lumen_topology
   title: COPI-coated vesicle lumen topology

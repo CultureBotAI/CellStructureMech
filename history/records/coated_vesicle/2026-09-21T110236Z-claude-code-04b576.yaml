@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/coated_vesicle.yaml
+  slug: coated_vesicle
+session:
+  id: 2026-09-21T110236Z-claude-code-04b576
+  timestamp: '2026-09-21T11:02:36Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1235
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - discussions
+  - curation_history
+  summary: Replace unreadable coated-vesicle COPI evidence
+  details: Replaced the broad coated-vesicle Serafini et al. 1991 COPI ARF citation with reachable
+    Yu et al. 2012 Arf1-coatomer evidence and deliberately left the COPII-only unreadable
+    Matsuoka citation for the separate COPII batch.

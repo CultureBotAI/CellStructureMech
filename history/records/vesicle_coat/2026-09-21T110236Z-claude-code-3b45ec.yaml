@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/vesicle_coat.yaml
+  slug: vesicle_coat
+session:
+  id: 2026-09-21T110236Z-claude-code-3b45ec
+  timestamp: '2026-09-21T11:02:36Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1235
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: Replace unreadable vesicle-coat COPI ARF evidence
+  details: Replaced unreadable Serafini et al. 1991 COPI ARF citations with reachable Yu et
+    al. 2012 evidence for Arf1-dependent coatomer recruitment while leaving the broad clathrin
+    and COPII evidence intact.
