@@ -34,6 +34,12 @@ curation_history:
     component to antenna proteins and adding core LH1/RC-LH1 reaction-center antennae
     to the lineage-specific subtype boundary.'
   llm_assisted: true
+- timestamp: '2026-09-21T17:38:10Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: '#1251: Replaced unreadable Bahatyrova 2004 and Comayras 2005 purple-bacterial
+    light-harvesting citations with readable Olsen 2008 and Frese 2004 support.'
+  llm_assisted: true
 synonyms:
 - synonym_text: antenna complex
   synonym_type: RELATED_SYNONYM
@@ -59,9 +65,9 @@ components:
   - reference: DOI:10.1146/annurev-biophys-062920-063657
     notes: Sui 2021 reviewed phycobiliprotein and linker-polypeptide organization
       in phycobilisome antennae.
-  - reference: DOI:10.1038/nature02823
-    notes: Bahatyrova et al. 2004 imaged LH2 antenna complexes in native purple-bacterial
-      photosynthetic membranes.
+  - reference: DOI:10.1074/jbc.M804824200
+    notes: Olsen et al. 2008 imaged LH2 antenna organization in Rhodobacter sphaeroides
+      DPF2G intracytoplasmic membranes.
   - reference: DOI:10.1038/ncomms12454
     notes: Nielsen et al. 2016 resolved the CsmA protein lattice of the chlorosome
       baseplate antenna complex.
@@ -81,9 +87,9 @@ components:
   - reference: DOI:10.1146/annurev-biophys-062920-063657
     notes: Sui 2021 reviewed phycobilin chromophores covalently attached to cyanobacterial
       phycobilisomes.
-  - reference: DOI:10.1038/nature02823
-    notes: Bahatyrova et al. 2004 localized bacteriochlorophyll-containing LH2 complexes
-      in purple-bacterial chromatophores.
+  - reference: DOI:10.1074/jbc.M804824200
+    notes: Olsen et al. 2008 mapped bacteriochlorophyll-containing LH2 complexes in
+      Rhodobacter sphaeroides DPF2G intracytoplasmic membranes.
   - reference: DOI:10.1038/ncomms12454
     notes: Nielsen et al. 2016 modeled bacteriochlorophyll a pigments bound inside
       the chlorosome CsmA baseplate.
@@ -97,9 +103,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:1063
   taxon_label: Cereibacter sphaeroides
   presence: COMMON
-  note: Purple photosynthetic bacterium whose native chromatophore membranes contain
-    peripheral LH2 light-harvesting antennae.
-  reference: DOI:10.1038/nature02823
+  note: Purple photosynthetic bacterium whose native photosynthetic membranes contain
+    LH2 as a major light-harvesting antenna.
+  reference: DOI:10.1073/pnas.0407295102
 - taxon_id: NCBITaxon:1097
   taxon_label: Chlorobaculum tepidum
   presence: COMMON
@@ -114,9 +120,9 @@ canonical_examples:
   reference: DOI:10.1038/s41467-021-25813-y
 - taxon_id: NCBITaxon:1063
   taxon_label: Cereibacter sphaeroides
-  note: Purple-bacterial chromatophore model in which LH2 complexes surround RC-LH1-PufX
-    reaction-center core arrays.
-  reference: DOI:10.1038/nature02823
+  note: Purple-bacterial photosynthetic-membrane model with organized RC-LH1-PufX
+    core domains, interspersed LH2 complexes, and some separate LH2 antenna domains.
+  reference: DOI:10.1073/pnas.0407295102
 - taxon_id: NCBITaxon:1097
   taxon_label: Chlorobaculum tepidum
   note: Green sulfur bacterium whose chlorosomes carry a CsmA bacteriochlorophyll
@@ -151,19 +157,18 @@ evidence:
 - reference: DOI:10.1038/s41467-021-25813-y
   notes: Sauer et al. 2021, Structural insight into the mechanism of energy transfer
     in cyanobacterial phycobilisomes, Nature Communications.
-- reference: DOI:10.1038/nature02823
-  notes: Bahatyrova et al. 2004, The native architecture of a photosynthetic membrane,
-    Nature.
+- reference: DOI:10.1074/jbc.M804824200
+  notes: Olsen et al. 2008, The Organization of LH2 Complexes in Membranes from Rhodobacter
+    sphaeroides, Journal of Biological Chemistry.
 - reference: DOI:10.1038/ncomms12454
   notes: Nielsen et al. 2016, In situ high-resolution structure of the baseplate antenna
     complex in Chlorobaculum tepidum, Nature Communications.
 - reference: DOI:10.1007/s11120-013-9869-3
   notes: Orf and Blankenship 2013, Chlorosome antenna complexes from green photosynthetic
     bacteria, Photosynthesis Research.
-- reference: DOI:10.1074/jbc.M412088200
-  notes: Comayras, Jungas and Lavergne 2005, Functional Consequences of the Organization
-    of the Photosynthetic Apparatus in Rhodobacter sphaeroides, Journal of Biological
-    Chemistry.
+- reference: DOI:10.1073/pnas.0407295102
+  notes: Frese et al. 2004, The long-range organization of a native photosynthetic
+    membrane, Proceedings of the National Academy of Sciences.
 causal_graphs:
 - graph_id: antenna_excitation_transfer
   title: Antenna protein-pigment complexes transfer excitation to reaction centers
@@ -241,9 +246,9 @@ causal_graphs:
     - reference: GO:0030076
       notes: GO defines light-harvesting complexes by participation in radiant-energy
         transfer to the reaction center.
-    - reference: DOI:10.1038/nature02823
-      notes: Bahatyrova et al. 2004 imaged LH2 antenna complexes around RC-LH1-PufX
-        reaction-center cores.
+    - reference: DOI:10.1073/pnas.0407295102
+      notes: Frese et al. 2004 modeled native Rhodobacter sphaeroides photosynthetic
+        membranes that contain RC-LH1-PufX complexes interspersed with LH2 antennae.
   - subject: light_harvesting_complex
     predicate: contributes to
     object: photosynthetic_light_harvesting
@@ -293,13 +298,13 @@ discussions:
   - reference: DOI:10.1038/s41467-021-25813-y
     notes: Sauer et al. 2021 resolved a cyanobacterial phycobilisome core-and-rod
       antenna architecture.
-  - reference: DOI:10.1038/nature02823
-    notes: Bahatyrova et al. 2004 resolved LH2 antenna complexes in purple-bacterial
-      chromatophore membranes.
+  - reference: DOI:10.1074/jbc.M804824200
+    notes: Olsen et al. 2008 mapped LH2-only antenna organization in a Rhodobacter
+      sphaeroides intracytoplasmic membrane model.
   - reference: DOI:10.1038/ncomms12454
     notes: Nielsen et al. 2016 resolved a chlorosome CsmA baseplate antenna architecture.
-  - reference: DOI:10.1074/jbc.M412088200
-    notes: Comayras et al. 2005 modeled Rhodobacter reaction-center antenna complexes
-      as LH2-fed core antenna systems with quinone-linked electron-transfer behavior.
+  - reference: DOI:10.1073/pnas.0407295102
+    notes: Frese et al. 2004 modeled RC-LH1-PufX core organization with LH2-rich domains
+      in native purple-bacterial photosynthetic membranes.
   posed_by: codex
   posed_date: '2026-09-16'

@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/light_harvesting_complex.yaml
+  slug: light_harvesting_complex
+session:
+  id: 2026-09-21T173810Z-codex-9f2c1a
+  timestamp: '2026-09-21T17:38:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1251
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Replace unreadable light-harvesting evidence
+  details: '#1251: replaced unreadable purple-bacterial light-harvesting citations
+    with readable Olsen 2008 and Frese 2004 support while preserving the LH2 and
+    RC-LH1-PufX subtype-boundary claims.'
