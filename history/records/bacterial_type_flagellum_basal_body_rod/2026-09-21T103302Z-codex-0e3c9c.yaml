@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_rod.yaml
+  slug: bacterial_type_flagellum_basal_body_rod
+session:
+  id: 2026-09-21T103302Z-codex-0e3c9c
+  timestamp: '2026-09-21T10:33:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1233
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - components
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  summary: Replace unreadable basal-body rod evidence
+  details: 'Replaced unreadable Homma 1990, Kubori 1992, and Macnab 2003 whole-rod evidence
+    with reachable Saijo-Hamano 2004, Tan 2021, and Johnson 2021 references; removed stale
+    bibliography rows; and recorded the #1233 cleanup in curation_history.'

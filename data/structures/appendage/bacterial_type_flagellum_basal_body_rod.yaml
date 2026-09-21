@@ -40,6 +40,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-09-21T10:33:02Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1233: replaced unreadable Homma, Kubori, and Macnab whole-rod evidence
+    with reachable Saijo-Hamano, Tan, and Johnson evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, rod
   synonym_type: EXACT_SYNONYM
@@ -145,9 +151,9 @@ components:
   essentiality: ESSENTIAL
   role: Contributes to the segmented proximal rod with FlgB and FlgF.
   evidence:
-  - reference: DOI:10.1016/0022-2836(90)90365-S
-    notes: Homma et al. 1990 identified FlgC as a Salmonella rod protein related to
-      FlgB, FlgF and FlgG.
+  - reference: DOI:10.1038/s41564-021-00895-y
+    notes: Johnson et al. 2021 described FlgC as one of the Salmonella proximal-rod
+      proteins.
   - reference: PMID:15136044
     notes: Saijo-Hamano et al. 2004 characterized purified Salmonella FlgC in vitro.
   protein_examples:
@@ -181,8 +187,9 @@ components:
   essentiality: ESSENTIAL
   role: Completes the proximal rod segment before the distal FlgG rod is assembled.
   evidence:
-  - reference: DOI:10.1016/0022-2836(90)90365-S
-    notes: Homma et al. 1990 assigned FlgF to the segmented Salmonella proximal rod.
+  - reference: DOI:10.1038/s41564-021-00895-y
+    notes: Johnson et al. 2021 described FlgF as one of the Salmonella proximal-rod
+      proteins.
   - reference: PMID:15136044
     notes: Saijo-Hamano et al. 2004 characterized purified Salmonella FlgF in vitro.
   protein_examples:
@@ -213,9 +220,9 @@ components:
   essentiality: ESSENTIAL
   role: Polymerizes into the distal rod that passes through the P and L ring bushings.
   evidence:
-  - reference: DOI:10.1016/0022-2836(90)90365-S
-    notes: Homma et al. 1990 localized FlgG to the distal rod next to the rod-hook
-      junction in Salmonella.
+  - reference: PMID:15136044
+    notes: Saijo-Hamano et al. 2004 purified Salmonella FlgG with the other flagellar
+      rod proteins for in vitro characterization.
   - reference: DOI:10.1038/s41564-021-00895-y
     notes: Johnson et al. 2021 modeled the distal Salmonella rod as a FlgG polymer.
   protein_examples:
@@ -252,9 +259,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:90371
   taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
-  note: Classical genetic and biochemical model for bacterial basal-body rod composition
-    and segment order.
-  reference: DOI:10.1016/0022-2836(90)90365-S
+  note: Intact-basal-body cryo-EM reference strain in a study that summarizes the
+    mature FliE/FlgB/FlgC/FlgF proximal rod and FlgG distal rod composition.
+  reference: DOI:10.1038/s41564-021-00895-y
 functions:
 - function_id: axial_drive_shaft
   label: axial drive-shaft torque transmission
@@ -279,15 +286,6 @@ functions:
     notes: Yamaguchi et al. 2021 resolved the Salmonella LP-ring bushing surrounding
       the distal rod.
 evidence:
-- reference: DOI:10.1146/annurev.micro.57.030502.090832
-  notes: Macnab RM 2003, How bacteria assemble flagella.
-- reference: DOI:10.1016/0022-2836(90)90365-S
-  notes: Homma M, Kutsukake K, Hasebe M, Iino T and Macnab RM 1990, FlgB, FlgC, FlgF
-    and FlgG. A family of structurally related proteins in the flagellar basal body
-    of Salmonella typhimurium.
-- reference: DOI:10.1016/0022-2836(92)90958-m
-  notes: Kubori T, Shimamoto N, Yamaguchi S, Namba K and Aizawa S 1992, Morphological
-    pathway of flagellar assembly in Salmonella typhimurium.
 - reference: PMID:15136044
   notes: Saijo-Hamano Y, Uchida N, Namba K and Oosawa K 2004, In vitro characterization
     of FlgB, FlgC, FlgF, FlgG, and FliE, flagellar basal body proteins of Salmonella.
@@ -369,31 +367,33 @@ causal_graphs:
     object: proximal_rod
     description: FlgC is part of the proximal basal-body rod.
     evidence:
-    - reference: DOI:10.1016/0022-2836(90)90365-S
-      notes: Homma et al. 1990 assigned FlgC to the Salmonella basal-body rod.
+    - reference: DOI:10.1038/s41564-021-00895-y
+      notes: Johnson et al. 2021 described FlgC as one of the Salmonella proximal-rod
+        proteins.
   - subject: flgf
     predicate: builds
     object: proximal_rod
     description: FlgF is part of the proximal basal-body rod.
     evidence:
-    - reference: DOI:10.1016/0022-2836(90)90365-S
-      notes: Homma et al. 1990 assigned FlgF to the Salmonella basal-body rod.
+    - reference: DOI:10.1038/s41564-021-00895-y
+      notes: Johnson et al. 2021 described FlgF as one of the Salmonella proximal-rod
+        proteins.
   - subject: flgg
     predicate: builds
     object: distal_rod
     description: FlgG forms the distal rod, next to the rod-hook junction.
     evidence:
-    - reference: DOI:10.1016/0022-2836(90)90365-S
-      notes: Homma et al. 1990 localized FlgG to the distal Salmonella rod.
+    - reference: DOI:10.1038/s41564-021-00895-y
+      notes: Johnson et al. 2021 modeled the distal Salmonella rod as a FlgG polymer.
   - subject: proximal_rod
     predicate: combines with
     object: distal_rod
     description: The proximal and distal rod segments form the continuous central
       basal-body rod.
     evidence:
-    - reference: DOI:10.1016/0022-2836(90)90365-S
-      notes: Homma et al. 1990 model the Salmonella rod as sequential FlgB/FlgC/FlgF
-        proximal segments followed by the FlgG distal segment.
+    - reference: DOI:10.1038/s41564-021-00895-y
+      notes: Johnson et al. 2021 described the Salmonella proximal rod as FliE, FlgB,
+        FlgC, and FlgF and the distal rod as FlgG.
   - subject: distal_rod
     predicate: completes
     object: rod
