@@ -41,6 +41,13 @@ curation_history:
   changes: 'Addressed issue #923 by adding the standalone cellstructuremech:multivesicular_body_lumen
     record to the parent GO:0005771 has_part list and adding UniProt SL-0340 evidence.'
   llm_assisted: true
+- timestamp: '2026-09-21T08:16:18Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1222 by replacing unreadable Babst et al. 2002 ESCRT-II evidence
+    with reachable Teo et al. 2004 support for the ESCRT-II to ESCRT-III handoff in
+    the yeast MVB sorting pathway.'
+  llm_assisted: true
 parent_structures:
 - GO:0005770
 has_part:
@@ -121,10 +128,10 @@ evidence:
   notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
     Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
     ESCRT-I, Cell.
-- reference: DOI:10.1016/S1534-5807(02)00219-8
-  notes: Babst, Katzmann, Snyder, Wendland and Emr 2002, Endosome-Associated Complex,
-    ESCRT-II, Recruits Transport Machinery for Protein Sorting at the Multivesicular
-    Body, Developmental Cell.
+- reference: DOI:10.1016/j.devcel.2004.09.003
+  notes: Teo et al. 2004 described ESCRT-II as part of the sequentially recruited
+    endosomal ESCRT machinery and mapped direct ESCRT-II binding to the Vps20 subunit
+    of ESCRT-III.
 - reference: DOI:10.1016/S1534-5807(02)00220-4
   notes: Babst, Katzmann, Estepa-Sabal, Meerloo and Emr 2002, Escrt-III, Developmental
     Cell.
@@ -184,9 +191,10 @@ causal_graphs:
     description: ESCRT-II recruits downstream ESCRT machinery needed for MVB cargo
       sorting.
     evidence:
-    - reference: DOI:10.1016/S1534-5807(02)00219-8
-      notes: Babst et al. 2002 identified ESCRT-II as an endosome-associated complex
-        upstream of ESCRT-III.
+    - reference: DOI:10.1016/j.devcel.2004.09.003
+      notes: Teo et al. 2004 described ESCRT-II as part of the sequentially recruited
+        endosomal ESCRT machinery and mapped direct ESCRT-II binding to the Vps20
+        subunit of ESCRT-III.
   - subject: escrt_iii
     predicate: remodels
     object: multivesicular_body_membrane

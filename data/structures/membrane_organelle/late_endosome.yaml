@@ -35,6 +35,13 @@ curation_history:
     a late-endosome limiting-membrane lipid bilayer and keeping the whole limiting
     membrane as a graph structure.'
   llm_assisted: true
+- timestamp: '2026-09-21T08:16:18Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1222 by replacing unreadable Babst et al. 2002 ESCRT-II evidence
+    with reachable Teo et al. 2004 support for the ESCRT-II to ESCRT-III handoff in
+    the yeast MVB sorting pathway.'
+  llm_assisted: true
 parent_structures:
 - GO:0005768
 components:
@@ -116,8 +123,10 @@ evidence:
 - reference: DOI:10.1083/jcb.200302136
   notes: Katzmann, Stefan, Babst and Emr 2003, Vps27 recruits ESCRT machinery to endosomes
     during MVB sorting, Journal of Cell Biology.
-- reference: DOI:10.1016/S1534-5807(02)00219-8
-  notes: Babst, Katzmann, Snyder, Wendland and Emr 2002, ESCRT-II, Developmental Cell.
+- reference: DOI:10.1016/j.devcel.2004.09.003
+  notes: Teo et al. 2004 described ESCRT-II as part of the sequentially recruited
+    endosomal ESCRT machinery and mapped direct ESCRT-II binding to the Vps20 subunit
+    of ESCRT-III.
 - reference: DOI:10.1016/S1534-5807(02)00220-4
   notes: Babst et al. 2002, ESCRT-III, Developmental Cell.
 - reference: DOI:10.1016/j.devcel.2011.05.015
@@ -188,9 +197,10 @@ causal_graphs:
     description: ESCRT-II recruits downstream ESCRT machinery needed for MVB cargo
       sorting.
     evidence:
-    - reference: DOI:10.1016/S1534-5807(02)00219-8
-      notes: Babst et al. 2002 identified ESCRT-II as an endosome-associated complex
-        upstream of ESCRT-III.
+    - reference: DOI:10.1016/j.devcel.2004.09.003
+      notes: Teo et al. 2004 described ESCRT-II as part of the sequentially recruited
+        endosomal ESCRT machinery and mapped direct ESCRT-II binding to the Vps20
+        subunit of ESCRT-III.
   - subject: escrt_iii
     predicate: remodels
     object: late_endosome_limiting_membrane
