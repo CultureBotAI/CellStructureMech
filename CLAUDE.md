@@ -25,6 +25,10 @@ Read before changing domain content:
   `curate-yaml-record` skill
   (`.claude/skills/curate-yaml-record/SKILL.md`). Audit requests are read-only;
   mutation requires an explicit curation request and the guarded writer.
+- Category or cohort review: the `review-yaml-category` skill
+  (`.claude/skills/review-yaml-category/SKILL.md`) audits a coherent set of
+  structure records, including membership and lump/split boundaries, without
+  editing records.
 
 Sibling repositories use the same conventions: TraitMech, ProteinTraitsMech,
 HabitatMech, CultureMech, MediaIngredientMech, CommunityMech. The upstream
