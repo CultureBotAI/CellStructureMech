@@ -48,6 +48,12 @@ curation_history:
     with reachable Teo et al. 2004 support for the ESCRT-II to ESCRT-III handoff in
     the yeast MVB sorting pathway.'
   llm_assisted: true
+- timestamp: '2026-09-21T08:41:49Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1224 by routing Katzmann, Babst and Emr 2001 ESCRT-I evidence
+    through reachable PMID:11511343 instead of the unreadable Cell DOI.'
+  llm_assisted: true
 parent_structures:
 - GO:0005770
 has_part:
@@ -77,13 +83,13 @@ taxonomic_distribution:
   presence: COMMON
   note: Budding yeast forms multivesicular bodies when ESCRT machinery sorts ubiquitinated
     endosomal membrane cargo into intraluminal vesicles destined for vacuolar delivery.
-  reference: DOI:10.1016/S0092-8674(01)00434-2
+  reference: PMID:11511343
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Genetic and cell-biological model for ESCRT-dependent sorting of ubiquitinated
     membrane proteins into yeast multivesicular bodies.
-  reference: DOI:10.1016/S0092-8674(01)00434-2
+  reference: PMID:11511343
 functions:
 - function_id: multivesicular_body_sorting_pathway
   label: multivesicular body sorting pathway
@@ -94,7 +100,7 @@ functions:
   - reference: GO:0071985
     notes: GO:0071985 denotes the multivesicular body sorting pathway that targets
       ubiquitylated transmembrane proteins into luminal vesicles.
-  - reference: DOI:10.1016/S0092-8674(01)00434-2
+  - reference: PMID:11511343
     notes: Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved yeast endosomal
       protein-sorting complex needed for MVB cargo sorting.
 - function_id: vacuolar_cargo_delivery
@@ -124,7 +130,7 @@ evidence:
 - reference: uniprot.location:SL-0340
   notes: UniProt Subcellular Location entry SL-0340 identifies the multivesicular
     body lumen and places it under multivesicular body.
-- reference: DOI:10.1016/S0092-8674(01)00434-2
+- reference: PMID:11511343
   notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
     Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
     ESCRT-I, Cell.
@@ -182,7 +188,7 @@ causal_graphs:
     description: ESCRT-I participates in sorting ubiquitinated membrane cargo into
       the yeast MVB pathway.
     evidence:
-    - reference: DOI:10.1016/S0092-8674(01)00434-2
+    - reference: PMID:11511343
       notes: Katzmann, Babst and Emr 2001 showed ESCRT-I is needed for ubiquitin-dependent
         MVB cargo sorting.
   - subject: escrt_ii
@@ -250,7 +256,7 @@ discussions:
     MVB formation, so these complexes are modeled as assembly graph actors rather
     than stable constituents of the assembled multivesicular body.
   evidence:
-  - reference: DOI:10.1016/S0092-8674(01)00434-2
+  - reference: PMID:11511343
   - reference: DOI:10.1016/S1534-5807(02)00220-4
   - reference: DOI:10.1016/j.devcel.2011.05.015
   posed_by: codex

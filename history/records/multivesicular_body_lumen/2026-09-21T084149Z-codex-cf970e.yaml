@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/multivesicular_body_lumen.yaml
+  slug: multivesicular_body_lumen
+session:
+  id: 2026-09-21T084149Z-codex-cf970e
+  timestamp: '2026-09-21T08:41:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1224
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - functions
+  - evidence
+  summary: Replace unreadable ESCRT-I evidence
+  details: 'Resolved issue #1224 for multivesicular_body_lumen by routing Katzmann, Babst
+    and Emr 2001 ESCRT-I citations through reachable PMID:11511343 instead of the unreadable
+    Cell DOI.'
