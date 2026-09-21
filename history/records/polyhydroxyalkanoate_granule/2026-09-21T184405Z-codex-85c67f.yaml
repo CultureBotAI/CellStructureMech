@@ -14,6 +14,7 @@ session:
 links:
   issues:
   - https://github.com/CultureBotAI/CellStructureMech/issues/1257
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1259
 events:
 - type: EDIT
   outcome: changed
@@ -26,5 +27,6 @@ events:
   - evidence
   - causal_graphs
   summary: Replace unreadable polyhydroxyalkanoate granule evidence
-  details: '#1257: replaced unreadable Jendrossek 2009 support with readable Fukala
-    and Kucera 2024, Kelly 2024, Bresan 2016, and Pfeiffer and Jendrossek 2012 support.'
+  details: '#1257/#1259: replaced unreadable Jendrossek 2009 support with readable
+    Fukala and Kucera 2024, Kelly 2024, Bresan 2016, and Pfeiffer and Jendrossek 2012
+    support.'

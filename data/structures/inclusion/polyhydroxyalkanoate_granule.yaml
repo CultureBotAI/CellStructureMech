@@ -37,8 +37,9 @@ curation_history:
 - timestamp: '2026-09-21T18:44:05Z'
   curator: codex
   action: REPLACED_UNREADABLE_EVIDENCE
-  changes: '#1257: Replaced unreadable Jendrossek 2009 citations with readable Fukala
-    and Kucera 2024, Kelly 2024, Bresan 2016, and Pfeiffer and Jendrossek 2012 support.'
+  changes: '#1257/#1259: Replaced unreadable Jendrossek 2009 citations with readable
+    Fukala and Kucera 2024, Kelly 2024, Bresan 2016, and Pfeiffer and Jendrossek 2012
+    support.'
   llm_assisted: true
 synonyms:
 - synonym_text: PHA granule
@@ -177,9 +178,9 @@ causal_graphs:
     description: PHA synthases extend hydroxyacyl-CoA substrates into granule PHA
       polyester.
     evidence:
-    - reference: DOI:10.1128/JB.00779-12
-      notes: Pfeiffer and Jendrossek 2012 localized PhaC variants with PHB granules
-        during Cupriavidus necator PHB accumulation.
+    - reference: DOI:10.3390/molecules29102293
+      notes: Fukala and Kucera 2024 review the PHB synthesis pathway in which PhaA
+        and PhaB form activated monomers that PhaC polymerizes into PHB.
   - subject: pha_polymer_core
     predicate: forms core of
     object: polyhydroxyalkanoate_granule
