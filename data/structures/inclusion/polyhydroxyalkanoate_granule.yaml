@@ -5,7 +5,7 @@ structure_kind: INCLUSION_BODY
 definition: A cytoplasmic prokaryotic inclusion body in which polyhydroxyalkanoate
   storage polymers condense with granule-associated proteins, including PHA synthases
   and phasins, to form hydrophobic carbon- and reducing-power storage granules.
-definition_source: DOI:10.1128/JB.01723-08
+definition_source: DOI:10.1016/j.mcpro.2024.100765
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-10T08:36:23Z'
@@ -34,6 +34,13 @@ curation_history:
   changes: Re-sourced the narrower PHB granule related synonym from GO:0070088 to
     a Cupriavidus necator H16 PHB-granule primary paper.
   llm_assisted: true
+- timestamp: '2026-09-21T18:44:05Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: '#1257/#1259: Replaced unreadable Jendrossek 2009 citations with readable
+    Fukala and Kucera 2024, Kelly 2024, Bresan 2016, and Pfeiffer and Jendrossek 2012
+    support.'
+  llm_assisted: true
 synonyms:
 - synonym_text: PHA granule
   synonym_type: EXACT_SYNONYM
@@ -54,9 +61,9 @@ components:
   role: Hydrophobic polyester storage material that forms the granule core and stores
     carbon plus reducing power.
   evidence:
-  - reference: DOI:10.1128/JB.01723-08
-    notes: Jendrossek 2009 reviews PHA granules as intracellular inclusions whose
-      core consists of polyhydroxyalkanoate storage polyester.
+  - reference: DOI:10.1016/j.mcpro.2024.100765
+    notes: Kelly et al. 2024 describe Pseudomonas putida PHA as a polymeric carbon-rich
+      storage material sequestered in carbonosomes.
   - reference: DOI:10.1038/srep26612
     notes: Bresan et al. 2016 analyzed isolated PHA granules and found PHA polymer
       plus protein, with no detectable phospholipid monolayer.
@@ -77,9 +84,9 @@ components:
   - reference: DOI:10.1128/JB.00779-12
     notes: Pfeiffer and Jendrossek 2012 localized PHB synthase PhaC1 to nascent and
       mature PHB granules in Cupriavidus necator H16.
-  - reference: DOI:10.1128/JB.01723-08
-    notes: Jendrossek 2009 summarizes PHA synthase as a core PHA granule-associated
-      protein.
+  - reference: DOI:10.1016/j.mcpro.2024.100765
+    notes: Kelly et al. 2024 describe PHA synthases among the broad classes of PHA
+      granule-associated proteins.
 - component_id: phasins
   label: phasins
   component_type: PROTEIN
@@ -92,9 +99,6 @@ components:
   role: Amphipathic granule-surface proteins that bind the PHA core and influence
     granule size, number and surface coverage.
   evidence:
-  - reference: DOI:10.1128/AEM.01161-16
-    notes: Mezzina and Pettinari 2016 review phasins as the major PHA granule-associated
-      surface proteins.
   - reference: DOI:10.1128/JB.00779-12
     notes: Pfeiffer and Jendrossek 2012 localized multiple Cupriavidus necator H16
       phasins to PHB granules.
@@ -102,9 +106,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
   presence: VARIABLE
-  note: PHA granules occur in phylogenetically diverse bacteria that encode PHA synthesis
-    systems, but are absent from many other bacterial lineages.
-  reference: DOI:10.1128/JB.01723-08
+  note: PHA granules are bacterial intracellular inclusions whose production is distributed
+    across heterotrophic, methylotrophic, and autotrophic producer strains.
+  reference: DOI:10.3390/molecules29102293
 canonical_examples:
 - taxon_id: NCBITaxon:381666
   taxon_label: Cupriavidus necator H16
@@ -117,19 +121,16 @@ functions:
   description: PHA granules store excess carbon and reducing equivalents as intracellular
     polyester inclusions that can be mobilized when external nutrients become limiting.
   evidence:
-  - reference: DOI:10.1128/JB.01723-08
-    notes: Jendrossek 2009 reviews bacterial PHA granules as carbon and energy storage
-      inclusions.
-  - reference: DOI:10.1128/AEM.01161-16
-    notes: Mezzina and Pettinari 2016 describe the role of PHA granules as intracellular
-      carbon and reducing-power stores.
+  - reference: DOI:10.3390/molecules29102293
+    notes: Fukala and Kucera 2024 review PHAs as intracellular biopolymers used by
+      microorganisms for energy and carbon storage.
 evidence:
-- reference: DOI:10.1128/JB.01723-08
-  notes: Jendrossek 2009, Polyhydroxyalkanoate granules are complex subcellular organelles
-    (carbonosomes), Journal of Bacteriology.
-- reference: DOI:10.1128/AEM.01161-16
-  notes: Mezzina and Pettinari 2016, Phasins, multifaceted polyhydroxyalkanoate granule-associated
-    proteins, Applied and Environmental Microbiology.
+- reference: DOI:10.1016/j.mcpro.2024.100765
+  notes: Kelly et al. 2024, Comprehensive Proteomics Analysis of Polyhydroxyalkanoate
+    (PHA) Biology in Pseudomonas putida KT2440, Molecular & Cellular Proteomics.
+- reference: DOI:10.3390/molecules29102293
+  notes: Fukala and Kucera 2024, Natural Polyhydroxyalkanoates-An Overview of Bacterial
+    Production Methods, Molecules.
 - reference: DOI:10.1038/srep26612
   notes: Bresan et al. 2016, Polyhydroxyalkanoate (PHA) granules have no phospholipids,
     Scientific Reports.
@@ -177,8 +178,9 @@ causal_graphs:
     description: PHA synthases extend hydroxyacyl-CoA substrates into granule PHA
       polyester.
     evidence:
-    - reference: DOI:10.1128/JB.01723-08
-      notes: Jendrossek 2009 summarizes PHA synthase-catalyzed PHA formation at granules.
+    - reference: DOI:10.3390/molecules29102293
+      notes: Fukala and Kucera 2024 review the PHB synthesis pathway in which PhaA
+        and PhaB form activated monomers that PhaC polymerizes into PHB.
   - subject: pha_polymer_core
     predicate: forms core of
     object: polyhydroxyalkanoate_granule
@@ -193,8 +195,6 @@ causal_graphs:
     description: Phasins bind to the PHA granule surface and are the major granule-associated
       surface proteins.
     evidence:
-    - reference: DOI:10.1128/AEM.01161-16
-      notes: Mezzina and Pettinari 2016 review phasin binding to the PHA granule surface.
     - reference: DOI:10.1128/JB.00779-12
       notes: Pfeiffer and Jendrossek 2012 localized multiple phasins to PHB granules
         in Cupriavidus necator H16.
@@ -204,8 +204,9 @@ causal_graphs:
     description: The assembled granule holds carbon and reducing power in polyester
       form for later mobilization.
     evidence:
-    - reference: DOI:10.1128/JB.01723-08
-      notes: Jendrossek 2009 reviews PHA granules as bacterial storage inclusions.
+    - reference: DOI:10.1016/j.mcpro.2024.100765
+      notes: Kelly et al. 2024 describe Pseudomonas putida PHA as a polymeric carbon-rich
+        storage material sequestered in carbonosomes.
 discussions:
 - discussion_id: exclude_phospholipid_monolayer
   prompt: Should a phospholipid monolayer be curated as a PHA granule component?

@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/polyhydroxyalkanoate_granule.yaml
+  slug: polyhydroxyalkanoate_granule
+session:
+  id: 2026-09-21T184405Z-codex-85c67f
+  timestamp: '2026-09-21T18:44:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1257
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1259
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - definition_source
+  - components
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Replace unreadable polyhydroxyalkanoate granule evidence
+  details: '#1257/#1259: replaced unreadable Jendrossek 2009 support with readable
+    Fukala and Kucera 2024, Kelly 2024, Bresan 2016, and Pfeiffer and Jendrossek 2012
+    support.'
