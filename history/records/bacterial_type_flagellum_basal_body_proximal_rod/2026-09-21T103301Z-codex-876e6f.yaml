@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_proximal_rod.yaml
+  slug: bacterial_type_flagellum_basal_body_proximal_rod
+session:
+  id: 2026-09-21T103301Z-codex-876e6f
+  timestamp: '2026-09-21T10:33:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1233
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - components
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Replace unreadable basal-body proximal-rod evidence
+  details: 'Replaced unreadable Homma 1990, Kubori 1992, Macnab 1999, and Boyd/Gober
+    2001 evidence with reachable Johnson 2021, Tan 2021, Saijo-Hamano 2004, and GO
+    references; removed stale bibliography rows; and recorded the #1233 cleanup in
+    curation_history.'

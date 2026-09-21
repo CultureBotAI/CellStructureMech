@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod.yaml
+  slug: bacterial_type_flagellum_basal_body_distal_rod
+session:
+  id: 2026-09-21T103300Z-codex-66b756
+  timestamp: '2026-09-21T10:33:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1233
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - components
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Replace unreadable basal-body distal-rod evidence
+  details: 'Replaced unreadable Homma 1990 and Macnab 1999 evidence with reachable Saijo-Hamano
+    2004, Johnson 2021, and Yamaguchi 2021 references; removed stale bibliography rows; and
+    recorded the #1233 cleanup in curation_history.'
