@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_ring.yaml
+  slug: septin_ring
+session:
+  id: 2026-09-21T194446Z-codex-33e819
+  timestamp: '2026-09-21T19:44:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1262
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - curation_history
+  summary: Replace unreadable septin-ring evidence
+  details: Replaced unreadable Douglas et al. 2005 support with readable Vargas-Muniz, Juvvadi,
+    and Steinbach 2016 support for fungal septin higher-order organization; Bridges
+    and Gladfelter 2014 support for fungal septin scaffolding; and existing Glomb and
+    Gronemeyer 2016 support for budding-yeast cytokinesis-site scaffolding.

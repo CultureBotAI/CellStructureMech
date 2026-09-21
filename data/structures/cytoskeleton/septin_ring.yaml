@@ -28,6 +28,14 @@ curation_history:
     Iwase-supported bud-neck septin ring, scoping the hetero-octamer assembly graph
     to budding yeast, and typing the hetero-octamer and filament graph nodes as structures.'
   llm_assisted: true
+- timestamp: '2026-09-21T19:44:46Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1262 by replacing unreadable Douglas et al. 2005 evidence with
+    readable Vargas-Muniz et al. 2016 support for higher-order fungal septin organization
+    and Bridges and Gladfelter 2014 plus existing Glomb and Gronemeyer 2016 support
+    for fungal cytokinesis-site scaffolding.'
+  llm_assisted: true
 parent_structures:
 - GO:0032156
 part_of:
@@ -56,10 +64,10 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4751
   taxon_label: Fungi
   presence: COMMON
-  note: Fungal septins assemble into rings, collars, bands, and caps at division or
-    polarized-growth sites, with exact architectures varying between budding yeast
-    and filamentous fungi.
-  reference: DOI:10.1128/EC.4.9.1503-1512.2005
+  note: Fungal septins organize into higher-order structures during morphology, septation,
+    and virulence programs, with assembly context varying across budding, filamentous,
+    and pathogenic fungi.
+  reference: DOI:10.1099/mic.0.000359
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -75,9 +83,9 @@ functions:
   - reference: DOI:10.3389/fcell.2016.00123
     notes: Glomb and Gronemeyer 2016 review septin organization and cytokinesis functions
       at the budding-yeast bud neck.
-  - reference: DOI:10.1128/EC.4.9.1503-1512.2005
-    notes: Douglas et al. 2005 review septin functions in yeast model systems and
-      pathogenic fungi.
+  - reference: DOI:10.1016/j.mib.2014.04.004
+    notes: Bridges and Gladfelter 2014 review fungal septins as scaffolds in division
+      and polarity, including pathogenic-fungus models.
 evidence:
 - reference: GO:0005940
   notes: Gene Ontology cellular-component term for the septin ring.
@@ -94,9 +102,12 @@ evidence:
 - reference: DOI:10.3389/fcell.2016.00123
   notes: Glomb and Gronemeyer 2016, 'Septin Organization and Functions in Budding
     Yeast', Frontiers in Cell and Developmental Biology.
-- reference: DOI:10.1128/EC.4.9.1503-1512.2005
-  notes: Douglas et al. 2005, 'Septin Function in Yeast Model Systems and Pathogenic
-    Fungi', Eukaryotic Cell.
+- reference: DOI:10.1016/j.mib.2014.04.004
+  notes: Bridges and Gladfelter 2014 review fungal septins as filament-forming scaffolds
+    in cell division, polarity, and membrane-remodeling functions.
+- reference: DOI:10.1099/mic.0.000359
+  notes: Vargas-Muniz, Juvvadi, and Steinbach 2016 review fungal septin organization
+    in higher-order structures across morphology, septation, and virulence contexts.
 causal_graphs:
 - graph_id: septin_oligomer_filament_ring_assembly
   title: Budding-yeast septin hetero-octamers polymerize into a cortical ring
