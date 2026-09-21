@@ -34,6 +34,12 @@ curation_history:
   changes: Copied coated-vesicle membrane evidence entries inside the topology graph
     so the review fix emits anchor-free YAML.
   llm_assisted: true
+- timestamp: '2026-09-21T09:25:14Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1229 by routing Barlowe et al. 1994 COPII evidence through reachable
+    PMID:8004676 instead of the unreadable Cell DOI.'
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 has_part:
@@ -92,7 +98,7 @@ taxonomic_distribution:
   presence: COMMON
   note: Budding yeast forms COPII-coated ER-to-Golgi transport vesicles from endoplasmic-reticulum
     membranes using Sar1p, Sec23p, Sec24p, Sec13p, and Sec31p coat machinery.
-  reference: DOI:10.1016/0092-8674(94)90138-4
+  reference: PMID:8004676
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -142,7 +148,7 @@ evidence:
 - reference: DOI:10.1016/0092-8674(91)90176-y
   notes: Serafini et al. 1991, ADP-Ribosylation factor is a subunit of the coat of
     Golgi-derived COP-coated vesicles, Cell.
-- reference: DOI:10.1016/0092-8674(94)90138-4
+- reference: PMID:8004676
   notes: 'Barlowe et al. 1994, COPII: A membrane coat formed by Sec proteins that
     drive vesicle budding from the endoplasmic reticulum, Cell.'
 - reference: DOI:10.1016/S0092-8674(00)81577-9
@@ -261,7 +267,7 @@ discussions:
   - reference: GO:0030127
   - reference: DOI:10.1016/j.devcel.2005.04.014
   - reference: DOI:10.1016/0092-8674(91)90176-y
-  - reference: DOI:10.1016/0092-8674(94)90138-4
+  - reference: PMID:8004676
   posed_by: codex
   posed_date: '2026-09-16'
 - discussion_id: ground_coated_vesicle_membrane_lipid_bilayer

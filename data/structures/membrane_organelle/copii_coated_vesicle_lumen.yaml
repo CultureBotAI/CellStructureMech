@@ -19,6 +19,12 @@ curation_history:
     parthood, the UniProt SL-0322 xref, Saccharomyces scope, GO/UniProt/DOI evidence,
     and a nonmechanistic COPII-coated-vesicle lumen topology graph.
   llm_assisted: true
+- timestamp: '2026-09-21T09:25:14Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1229 by routing Barlowe et al. 1994 COPII evidence through reachable
+    PMID:8004676 instead of the unreadable Cell DOI.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Coat protein complexes II lumen
   synonym_type: EXACT_SYNONYM
@@ -38,13 +44,13 @@ taxonomic_distribution:
   presence: COMMON
   note: Budding yeast forms COPII-coated ER-to-Golgi transport vesicles from endoplasmic-reticulum
     membranes.
-  reference: DOI:10.1016/0092-8674(94)90138-4
+  reference: PMID:8004676
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast model in which Sec proteins were identified as COPII coat machinery
     that drives ER-derived vesicle budding.
-  reference: DOI:10.1016/0092-8674(94)90138-4
+  reference: PMID:8004676
 evidence:
 - reference: uniprot.location:SL-0322
   notes: UniProt Subcellular Location entry SL-0322 identifies the COPII-coated vesicle
@@ -58,7 +64,7 @@ evidence:
 - reference: GO:0012507
   notes: Gene Ontology cellular-component term for the ER to Golgi transport vesicle
     membrane bounding the lumen.
-- reference: DOI:10.1016/0092-8674(94)90138-4
+- reference: PMID:8004676
   notes: 'Barlowe et al. 1994, COPII: A membrane coat formed by Sec proteins that
     drive vesicle budding from the endoplasmic reticulum, Cell.'
 causal_graphs:
