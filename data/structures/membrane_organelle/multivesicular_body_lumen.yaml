@@ -19,6 +19,12 @@ curation_history:
     parthood, budding-yeast scope, GO/UniProt/DOI evidence, an MVB sorting function,
     a nonmechanistic MVB lumen topology graph, and a resolved lumen-boundary interpretation.
   llm_assisted: true
+- timestamp: '2026-09-21T08:41:49Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1224 by routing Katzmann, Babst and Emr 2001 ESCRT-I evidence
+    through reachable PMID:11511343 instead of the unreadable Cell DOI.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Corpuscula multivesicularis lumen
   synonym_type: EXACT_SYNONYM
@@ -47,7 +53,7 @@ taxonomic_distribution:
   presence: COMMON
   note: Budding yeast forms multivesicular bodies with lumens that receive intraluminal
     vesicles during ESCRT-dependent cargo sorting.
-  reference: DOI:10.1016/S0092-8674(01)00434-2
+  reference: PMID:11511343
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -64,7 +70,7 @@ functions:
   - reference: GO:0071985
     notes: GO:0071985 denotes the multivesicular body sorting pathway that targets
       ubiquitylated transmembrane proteins into luminal vesicles.
-  - reference: DOI:10.1016/S0092-8674(01)00434-2
+  - reference: PMID:11511343
     notes: Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved yeast endosomal
       protein-sorting complex needed for MVB cargo sorting.
 evidence:
@@ -82,7 +88,7 @@ evidence:
 - reference: GO:0071985
   notes: Gene Ontology biological-process term for the multivesicular body sorting
     pathway.
-- reference: DOI:10.1016/S0092-8674(01)00434-2
+- reference: PMID:11511343
   notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
     Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
     ESCRT-I, Cell.

@@ -33,6 +33,12 @@ curation_history:
     with reachable Teo et al. 2004 support for the ESCRT-II to ESCRT-III handoff in
     the yeast MVB sorting pathway.'
   llm_assisted: true
+- timestamp: '2026-09-21T08:41:49Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1224 by routing Katzmann, Babst and Emr 2001 ESCRT-I evidence
+    through reachable PMID:11511343 instead of the unreadable Cell DOI.'
+  llm_assisted: true
 has_part:
 - GO:0010008
 - GO:0031904
@@ -58,7 +64,7 @@ taxonomic_distribution:
   presence: COMMON
   note: Budding yeast uses endosomes for endocytic and vacuolar protein sorting, including
     ESCRT-dependent multivesicular-body traffic.
-  reference: DOI:10.1016/S0092-8674(01)00434-2
+  reference: PMID:11511343
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -83,7 +89,7 @@ functions:
   description: Endosomal sorting machinery recognizes ubiquitinated membrane cargo
     and packages it into intraluminal vesicles of multivesicular bodies.
   evidence:
-  - reference: DOI:10.1016/S0092-8674(01)00434-2
+  - reference: PMID:11511343
     notes: Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved endosomal
       protein-sorting complex needed for yeast MVB sorting.
   - reference: DOI:10.1016/j.devcel.2004.09.003
@@ -103,7 +109,7 @@ evidence:
   notes: Gene Ontology biological-process term for endosomal transport.
 - reference: DOI:10.1016/j.devcel.2011.05.015
   notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
-- reference: DOI:10.1016/S0092-8674(01)00434-2
+- reference: PMID:11511343
   notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
     Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
     ESCRT-I, Cell.
@@ -184,7 +190,7 @@ causal_graphs:
     description: ESCRT-I participates in sorting ubiquitinated membrane cargo into
       the yeast MVB pathway.
     evidence:
-    - reference: DOI:10.1016/S0092-8674(01)00434-2
+    - reference: PMID:11511343
       notes: Katzmann, Babst and Emr 2001 showed ESCRT-I is needed for ubiquitin-dependent
         MVB cargo sorting.
   - subject: escrt_ii
