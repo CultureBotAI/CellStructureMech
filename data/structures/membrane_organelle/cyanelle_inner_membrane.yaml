@@ -27,6 +27,12 @@ curation_history:
     inner/outer cyanelle envelope membranes directly supported by Giddings et al.
     1983.'
   llm_assisted: true
+- timestamp: '2026-09-21T10:04:10Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable
+    cyanelle evidence for #1231.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cyanelle inner envelope membrane
   synonym_type: EXACT_SYNONYM
@@ -61,9 +67,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:38254
   taxon_label: Glaucocystophyceae
   presence: COMMON
-  note: Glaucophytes carry cyanelles with double envelopes whose inner boundary is
-    a cyanelle inner membrane.
-  reference: DOI:10.5586/asbp.2015.020
+  note: The cyanelle inner membrane is the stroma-facing envelope boundary of glaucophyte
+    cyanelles.
+  reference: uniprot.location:SL-0480
 - taxon_id: NCBITaxon:2762
   taxon_label: Cyanophora paradoxa
   presence: COMMON
@@ -99,9 +105,6 @@ evidence:
   notes: 'Pfanzagl et al. 1996, Primary structure of cyanelle peptidoglycan of Cyanophora
     paradoxa: a prokaryotic cell wall as part of an organelle envelope, Journal of
     Bacteriology.'
-- reference: DOI:10.5586/asbp.2015.020
-  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
-    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
 causal_graphs:
 - graph_id: cyanelle_inner_membrane_topology
   title: Cyanelle inner membrane topology

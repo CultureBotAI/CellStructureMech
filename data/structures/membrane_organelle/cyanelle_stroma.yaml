@@ -25,6 +25,12 @@ curation_history:
   changes: 'Addressed #710 by citing GO:0034060 on the inner-membrane boundary edge
     that points to the cyanelle stroma.'
   llm_assisted: true
+- timestamp: '2026-09-21T10:04:10Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable
+    cyanelle evidence for #1231.'
+  llm_assisted: true
 parent_structures:
 - GO:0009532
 part_of:
@@ -35,9 +41,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:38254
   taxon_label: Glaucocystophyceae
   presence: COMMON
-  note: Glaucophyte cyanelles retain plastid stromal compartments enclosed by the
-    cyanelle envelope and distinct from the thylakoid lumen.
-  reference: DOI:10.5586/asbp.2015.020
+  note: The cyanelle stroma is the internal matrix-filled compartment of glaucophyte
+    cyanelles, excluding the thylakoid space.
+  reference: uniprot.location:SL-0350
 - taxon_id: NCBITaxon:2762
   taxon_label: Cyanophora paradoxa
   presence: COMMON
@@ -78,9 +84,6 @@ evidence:
 - reference: DOI:10.1104/pp.71.2.409
   notes: Giddings, Wasmann and Staehelin 1983, Structure of the Thylakoids and Envelope
     Membranes of the Cyanelles of Cyanophora paradoxa, Plant Physiology.
-- reference: DOI:10.5586/asbp.2015.020
-  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
-    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
 causal_graphs:
 - graph_id: cyanelle_stroma_topology
   title: Cyanelle stroma topology

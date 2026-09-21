@@ -27,6 +27,12 @@ curation_history:
     MEMBRANE_BOUNDED_ORGANELLE while keeping GO:0033115 cyanelle thylakoid membrane
     as the exact membrane component.'
   llm_assisted: true
+- timestamp: '2026-09-21T10:04:10Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable
+    cyanelle evidence for #1231.'
+  llm_assisted: true
 parent_structures:
 - GO:0009579
 - GO:0031976
@@ -57,9 +63,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:38254
   taxon_label: Glaucocystophyceae
   presence: COMMON
-  note: Glaucophyte cyanelles contain internal thylakoids that house photosynthetic
-    membranes.
-  reference: DOI:10.5586/asbp.2015.020
+  note: The cyanelle thylakoid is the internal photosynthetic membrane system of glaucophyte
+    cyanelles.
+  reference: uniprot.location:SL-0277
 - taxon_id: NCBITaxon:2762
   taxon_label: Cyanophora paradoxa
   presence: COMMON
@@ -114,9 +120,6 @@ evidence:
 - reference: DOI:10.1104/pp.71.2.409
   notes: Giddings, Wasmann and Staehelin 1983, Structure of the Thylakoids and Envelope
     Membranes of the Cyanelles of Cyanophora paradoxa, Plant Physiology.
-- reference: DOI:10.5586/asbp.2015.020
-  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
-    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
 causal_graphs:
 - graph_id: cyanelle_thylakoid_topology
   title: Cyanelle thylakoid topology

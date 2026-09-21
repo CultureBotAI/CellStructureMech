@@ -27,6 +27,12 @@ curation_history:
   changes: 'Resolved #702 by demoting UniProt SL-0083 from an exact xref to broader
     fallback evidence and caveating notes that mention its scope.'
   llm_assisted: true
+- timestamp: '2026-09-21T10:04:10Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable
+    cyanelle evidence for #1231.'
+  llm_assisted: true
 parent_structures:
 - GO:0042170
 part_of:
@@ -54,9 +60,8 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:38254
   taxon_label: Glaucocystophyceae
   presence: COMMON
-  note: Glaucophytes carry cyanelles, also called muroplasts, whose envelopes are
-    bounded by cyanelle membranes.
-  reference: DOI:10.5586/asbp.2015.020
+  note: Cyanelle membranes are envelope lipid bilayers of glaucophyte cyanelles.
+  reference: GO:0033113
 - taxon_id: NCBITaxon:2762
   taxon_label: Cyanophora paradoxa
   presence: COMMON
@@ -94,9 +99,6 @@ evidence:
   notes: 'Pfanzagl et al. 1996, Primary structure of cyanelle peptidoglycan of Cyanophora
     paradoxa: a prokaryotic cell wall as part of an organelle envelope, Journal of
     Bacteriology.'
-- reference: DOI:10.5586/asbp.2015.020
-  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
-    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
 causal_graphs:
 - graph_id: cyanelle_membrane_scope
   title: Cyanelle membrane scope

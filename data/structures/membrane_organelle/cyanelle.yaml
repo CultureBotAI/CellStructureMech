@@ -29,6 +29,12 @@ curation_history:
     boundary edge to the stroma. Resolved #669 by replacing ultrastructure-only photosynthesis
     evidence with GO and Jackson et al. 2015 support.'
   llm_assisted: true
+- timestamp: '2026-09-21T10:04:10Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable
+    cyanelle evidence for #1231.'
+  llm_assisted: true
 parent_structures:
 - GO:0009536
 has_part:
@@ -111,9 +117,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:38254
   taxon_label: Glaucocystophyceae
   presence: COMMON
-  note: Glaucophytes carry cyanelles, also called muroplasts, as photosynthetic plastids
-    with phycobilisomes and a vestigial peptidoglycan wall.
-  reference: DOI:10.5586/asbp.2015.020
+  note: Glaucophytes are Archaeplastida whose plastids retain cyanobacteria-associated
+    traits including peptidoglycan and phycobilisomes.
+  reference: PMID:31098614
 - taxon_id: NCBITaxon:2762
   taxon_label: Cyanophora paradoxa
   presence: COMMON
@@ -136,9 +142,9 @@ functions:
   - reference: GO:0009842
     notes: GO:0009842 defines the cyanelle as a plastid with phycobilisome-bearing
       thylakoid membranes.
-  - reference: DOI:10.5586/asbp.2015.020
-    notes: Jackson et al. 2015 review glaucophyte plastids as cyanelles or muroplasts
-      that retain cyanobacterial phycobilisome antennae.
+  - reference: PMID:31098614
+    notes: Price et al. 2019 describe peptidoglycan and phycobilisomes as retained
+      cyanobacterial plastid traits in glaucophytes.
 evidence:
 - reference: GO:0009842
   notes: Gene Ontology cellular-component term for cyanelle.
@@ -173,9 +179,9 @@ evidence:
   notes: Kojima, Muramoto and Kusano 2016, Outer Membrane Proteins Derived from Non-cyanobacterial
     Lineage Cover the Peptidoglycan of Cyanophora paradoxa Cyanelles and Serve as
     a Cyanelle Diffusion Channel, Journal of Biological Chemistry.
-- reference: DOI:10.5586/asbp.2015.020
-  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
-    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
+- reference: PMID:31098614
+  notes: Price et al. 2019, Analysis of an improved Cyanophora paradoxa genome assembly,
+    DNA Research.
 causal_graphs:
 - graph_id: cyanelle_envelope_thylakoid_topology
   title: Cyanelle envelope and thylakoid topology
@@ -275,9 +281,9 @@ causal_graphs:
     - reference: GO:0009842
       notes: GO:0009842 defines cyanelles as plastids with phycobilisome-bearing thylakoid
         membranes.
-    - reference: DOI:10.5586/asbp.2015.020
-      notes: Jackson et al. 2015 review phycobilisome antennae as a retained cyanobacterial
-        feature of glaucophyte plastids.
+    - reference: PMID:31098614
+      notes: Price et al. 2019 describe peptidoglycan and phycobilisomes as retained
+        cyanobacterial plastid traits in glaucophytes.
 discussions:
 - discussion_id: resolve_cyanelle_peptidoglycan_layer
   prompt: Resolve an exact source-neutral grounding for the peptidoglycan layer in

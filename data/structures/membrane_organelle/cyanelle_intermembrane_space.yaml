@@ -27,6 +27,12 @@ curation_history:
   changes: 'Addressed #708 by adding UniProt SL-0480 record-level evidence and citing
     it on the inner-membrane boundary edge in the intermembrane-space topology graph.'
   llm_assisted: true
+- timestamp: '2026-09-21T10:04:10Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable
+    cyanelle evidence for #1231.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cyanelle envelope lumen
   synonym_type: EXACT_SYNONYM
@@ -66,9 +72,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:38254
   taxon_label: Glaucocystophyceae
   presence: COMMON
-  note: Glaucophyte cyanelles have double envelopes with an intermembrane space that
-    includes vestigial peptidoglycan.
-  reference: DOI:10.5586/asbp.2015.020
+  note: Glaucocystophyte algae including Glaucocystis, Cyanoptyche, and Cyanophora
+    retain cyanelle peptidoglycan in the envelope compartment.
+  reference: PMID:8955325
 - taxon_id: NCBITaxon:2762
   taxon_label: Cyanophora paradoxa
   presence: COMMON
@@ -107,9 +113,9 @@ evidence:
   notes: 'Pfanzagl et al. 1996, Primary structure of cyanelle peptidoglycan of Cyanophora
     paradoxa: a prokaryotic cell wall as part of an organelle envelope, Journal of
     Bacteriology.'
-- reference: DOI:10.5586/asbp.2015.020
-  notes: 'Jackson, Clayden and Reyes-Prieto 2015, The Glaucophyta: the blue-green
-    plants in a nutshell, Acta Societatis Botanicorum Poloniae.'
+- reference: PMID:8955325
+  notes: Pfanzagl et al. 1996, N-acetylputrescine as a characteristic constituent
+    of cyanelle peptidoglycan in glaucocystophyte algae, Journal of Bacteriology.
 causal_graphs:
 - graph_id: cyanelle_intermembrane_space_topology
   title: Cyanelle intermembrane-space topology
