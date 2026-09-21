@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/carboxysome.yaml
+  slug: carboxysome
+session:
+  id: 2026-09-21T123404Z-claude-code-b7c913
+  timestamp: '2026-09-21T12:34:04Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1241
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: Replace unreadable Rae carboxysome evidence
+  details: Replaced unreadable Rae et al. 2013 carboxysome review DOI citations with
+    reachable PMID:24006469 while preserving the broad carboxysome review evidence
+    intent.
