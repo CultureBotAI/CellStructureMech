@@ -26,6 +26,13 @@ curation_history:
     node from the topology graph while retaining GO:0035964 as edge evidence for Golgi
     membrane donation.'
   llm_assisted: true
+- timestamp: '2026-09-21T11:01:21Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1235 by replacing unreadable COPI citations with reachable Sandmann
+    et al. 2003 Golgi-to-ER retrieval evidence and removing redundant Serafini Golgi-budding
+    citations already covered by GO evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0030660
 - GO:0030662
@@ -57,13 +64,13 @@ taxonomic_distribution:
   presence: COMMON
   note: Budding yeast has a coatomer-dependent COPI system that retrieves dilysine-tagged
     early secretory cargo to the endoplasmic reticulum.
-  reference: DOI:10.1016/0092-8674(94)90011-6
+  reference: DOI:10.1091/mbc.e02-11-0736
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast model in which coatomer mutants established COPI roles in Golgi-to-ER
     retrieval and early secretory trafficking.
-  reference: DOI:10.1016/0092-8674(94)90011-6
+  reference: DOI:10.1091/mbc.e02-11-0736
 evidence:
 - reference: GO:0030663
   notes: Gene Ontology cellular-component term for the COPI-coated vesicle membrane.
@@ -82,12 +89,10 @@ evidence:
 - reference: GO:0030126
   notes: Gene Ontology cellular-component term for the COPI vesicle coat that surrounds
     COPI-coated vesicles.
-- reference: DOI:10.1016/0092-8674(91)90176-y
-  notes: Serafini et al. 1991, ADP-Ribosylation factor is a subunit of the coat of
-    Golgi-derived COP-coated vesicles, Cell.
-- reference: DOI:10.1016/0092-8674(94)90011-6
-  notes: Letourneur et al. 1994, Coatomer is essential for retrieval of dilysine-tagged
-    proteins to the endoplasmic reticulum, Cell.
+- reference: DOI:10.1091/mbc.e02-11-0736
+  notes: Sandmann et al. 2003, Suppression of Coatomer Mutants by a New Protein Family
+    with COPI and COPII Binding Motifs in Saccharomyces cerevisiae, Molecular Biology
+    of the Cell.
 causal_graphs:
 - graph_id: copi_coated_vesicle_membrane_topology
   title: COPI-coated vesicle membrane topology
@@ -140,9 +145,6 @@ causal_graphs:
     - reference: GO:0035964
       notes: GO:0035964 defines COPI-coated vesicle budding as evagination of a Golgi
         membrane to form a COPI-coated vesicle.
-    - reference: DOI:10.1016/0092-8674(91)90176-y
-      notes: Serafini et al. 1991 analyzed coat proteins on Golgi-derived COP-coated
-        vesicles.
 discussions:
 - discussion_id: ground_copi_coated_vesicle_membrane_lipid_bilayer
   prompt: Resolve an exact source-neutral grounding for the lipid constituent of the

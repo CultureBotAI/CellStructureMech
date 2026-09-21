@@ -35,6 +35,12 @@ curation_history:
   changes: 'Resolved #1229 by routing Barlowe et al. 1994 COPII evidence through reachable
     PMID:8004676 instead of the unreadable Cell DOI.'
   llm_assisted: true
+- timestamp: '2026-09-21T11:01:21Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1235 by replacing unreadable COPI ARF evidence with reachable
+    Yu et al. 2012 evidence for Arf1-dependent coatomer recruitment.'
+  llm_assisted: true
 parent_structures:
 - GO:0098796
 components:
@@ -74,9 +80,9 @@ components:
   - reference: GO:0030119
     notes: GO defines AP-type membrane coat adaptor complexes as membrane-coat complexes
       that link clathrin or another protein scaffold to membranes and selected cargo.
-  - reference: DOI:10.1016/0092-8674(91)90176-y
-    notes: Serafini et al. 1991 identified ADP-ribosylation factor as a subunit of
-      Golgi-derived COP-coated vesicle coats.
+  - reference: DOI:10.1016/j.cell.2012.01.015
+    notes: Yu et al. 2012 showed that Arf1-GTP binds two coatomer subcomplexes during
+      COPI coatomer recruitment to membranes.
   - reference: PMID:8004676
     notes: Barlowe et al. 1994 identified Sar1p as one of the proteins that forms
       the COPII coat on ER-derived vesicles.
@@ -107,9 +113,9 @@ evidence:
 - reference: DOI:10.1083/jcb.106.5.1453
   notes: Payne et al. 1988, Protein transport to the vacuole and receptor-mediated
     endocytosis by clathrin heavy chain-deficient yeast, Journal of Cell Biology.
-- reference: DOI:10.1016/0092-8674(91)90176-y
-  notes: Serafini et al. 1991, ADP-Ribosylation factor is a subunit of the coat of
-    Golgi-derived COP-coated vesicles, Cell.
+- reference: DOI:10.1016/j.cell.2012.01.015
+  notes: Yu et al. 2012, A Structure-Based Mechanism for Arf1-Dependent Recruitment
+    of Coatomer to Membranes, Cell.
 - reference: PMID:8004676
   notes: 'Barlowe et al. 1994, COPII: A membrane coat formed by Sec proteins that
     drive vesicle budding from the endoplasmic reticulum, Cell.'
@@ -150,9 +156,9 @@ causal_graphs:
     - reference: GO:0030119
       notes: GO defines AP-type membrane coat adaptor complexes as adaptors between
         a protein scaffold and a membrane or cargo.
-    - reference: DOI:10.1016/0092-8674(91)90176-y
-      notes: Serafini et al. 1991 identified Arf as a COP coat subunit on Golgi-derived
-        coated vesicles.
+    - reference: DOI:10.1016/j.cell.2012.01.015
+      notes: Yu et al. 2012 showed that Arf1-GTP binds coatomer and supports its membrane
+        recruitment.
   - subject: membrane_coat_scaffold_proteins
     predicate: assembles at
     object: membrane_surface

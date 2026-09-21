@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/copi_coated_vesicle_lumen.yaml
+  slug: copi_coated_vesicle_lumen
+session:
+  id: 2026-09-21T110238Z-claude-code-72a5a5
+  timestamp: '2026-09-21T11:02:38Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1235
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - curation_history
+  summary: Replace unreadable COPI-coated vesicle lumen evidence
+  details: Replaced unreadable Letourneur Golgi-to-ER retrieval citations with reachable Sandmann
+    et al. 2003 evidence while preserving the UniProt and GO lumen topology evidence.
