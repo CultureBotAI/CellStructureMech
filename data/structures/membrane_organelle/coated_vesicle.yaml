@@ -46,6 +46,12 @@ curation_history:
   changes: 'Resolved #1235 by replacing the broad parent COPI ARF citation with reachable
     Yu et al. 2012 evidence for Arf1-dependent coatomer recruitment.'
   llm_assisted: true
+- timestamp: '2026-09-21T11:34:06Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1237 by routing Matsuoka et al. 1998 COPII liposome evidence
+    through reachable PMID:9568718 instead of the unreadable Cell DOI.'
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 has_part:
@@ -110,7 +116,7 @@ canonical_examples:
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast COPII reconstitution model in which Sar1p and Sec subcomplexes
     form a coated vesicle from endoplasmic-reticulum membranes.
-  reference: DOI:10.1016/S0092-8674(00)81577-9
+  reference: PMID:9568718
 functions:
 - function_id: vesicle_mediated_transport
   label: vesicle-mediated transport
@@ -157,7 +163,7 @@ evidence:
 - reference: PMID:8004676
   notes: 'Barlowe et al. 1994, COPII: A membrane coat formed by Sec proteins that
     drive vesicle budding from the endoplasmic reticulum, Cell.'
-- reference: DOI:10.1016/S0092-8674(00)81577-9
+- reference: PMID:9568718
   notes: Matsuoka et al. 1998, COPII-Coated Vesicle Formation Reconstituted with Purified
     Coat Proteins and Chemically Defined Liposomes, Cell.
 causal_graphs:

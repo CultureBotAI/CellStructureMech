@@ -34,6 +34,12 @@ curation_history:
   changes: 'Resolved #1229 by routing Barlowe et al. 1994 COPII evidence through reachable
     PMID:8004676 instead of the unreadable Cell DOI.'
   llm_assisted: true
+- timestamp: '2026-09-21T11:34:06Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1237 by routing Matsuoka et al. 1998 COPII liposome evidence
+    through reachable PMID:9568718 instead of the unreadable Cell DOI.'
+  llm_assisted: true
 parent_structures:
 - GO:0030120
 part_of:
@@ -124,7 +130,7 @@ functions:
   - reference: GO:0090114
     notes: GO:0090114 denotes the COPII-coated vesicle budding process that evaginates
       ER membrane into a COPII-coated vesicle.
-  - reference: DOI:10.1016/S0092-8674(00)81577-9
+  - reference: PMID:9568718
     notes: Matsuoka et al. 1998 reconstituted COPII-coated vesicle formation with
       purified coat proteins and chemically defined liposomes.
 evidence:
@@ -140,7 +146,7 @@ evidence:
 - reference: PMID:8004676
   notes: 'Barlowe et al. 1994, ''COPII: A membrane coat formed by Sec proteins that
     drive vesicle budding from the endoplasmic reticulum'', Cell.'
-- reference: DOI:10.1016/S0092-8674(00)81577-9
+- reference: PMID:9568718
   notes: Matsuoka et al. 1998, 'COPII-Coated Vesicle Formation Reconstituted with
     Purified Coat Proteins and Chemically Defined Liposomes', Cell.
 - reference: DOI:10.7554/elife.00951
@@ -200,7 +206,7 @@ causal_graphs:
     object: sec23_sec24_inner_coat
     description: Sar1-dependent assembly recruits the Sec23/Sec24 inner coat.
     evidence:
-    - reference: DOI:10.1016/S0092-8674(00)81577-9
+    - reference: PMID:9568718
       notes: Matsuoka et al. 1998 reconstituted vesicle formation with purified COPII
         coat proteins.
   - subject: sec23_sec24_inner_coat
@@ -244,7 +250,7 @@ causal_graphs:
     - reference: GO:0090114
       notes: GO:0090114 defines COPII-coated vesicle budding as evagination of an
         endoplasmic reticulum membrane to form a COPII-coated vesicle.
-    - reference: DOI:10.1016/S0092-8674(00)81577-9
+    - reference: PMID:9568718
       notes: Matsuoka et al. 1998 reconstituted COPII-coated vesicle formation with
         purified coat proteins and chemically defined liposomes.
   - subject: copii_vesicle_coat
@@ -280,7 +286,7 @@ discussions:
     unset until exact source-neutral family and subcomplex boundaries are reviewed.
   evidence:
   - reference: PMID:8004676
-  - reference: DOI:10.1016/S0092-8674(00)81577-9
+  - reference: PMID:9568718
   - reference: DOI:10.7554/elife.00951
   posed_by: codex
   posed_date: '2026-09-12'

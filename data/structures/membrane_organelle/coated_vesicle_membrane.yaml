@@ -38,6 +38,12 @@ curation_history:
   changes: 'Resolved #1229 by routing Barlowe et al. 1994 COPII evidence through reachable
     PMID:8004676 instead of the unreadable Cell DOI.'
   llm_assisted: true
+- timestamp: '2026-09-21T11:34:06Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1237 by routing Matsuoka et al. 1998 COPII liposome evidence
+    through reachable PMID:9568718 instead of the unreadable Cell DOI.'
+  llm_assisted: true
 parent_structures:
 - GO:0030659
 part_of:
@@ -81,7 +87,7 @@ canonical_examples:
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast COPII reconstitution model in which Sec proteins drive coated
     vesicle formation on chemically defined liposomes.
-  reference: DOI:10.1016/S0092-8674(00)81577-9
+  reference: PMID:9568718
 evidence:
 - reference: GO:0030662
   notes: Gene Ontology cellular-component term for the coated vesicle membrane.
@@ -101,7 +107,7 @@ evidence:
 - reference: PMID:8004676
   notes: 'Barlowe et al. 1994, COPII: A membrane coat formed by Sec proteins that
     drive vesicle budding from the endoplasmic reticulum, Cell.'
-- reference: DOI:10.1016/S0092-8674(00)81577-9
+- reference: PMID:9568718
   notes: Matsuoka et al. 1998, COPII-Coated Vesicle Formation Reconstituted with Purified
     Coat Proteins and Chemically Defined Liposomes, Cell.
 causal_graphs:

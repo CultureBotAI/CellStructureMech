@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/copii_vesicle_coat.yaml
+  slug: copii_vesicle_coat
+session:
+  id: 2026-09-21T113406Z-claude-code-cb1c45
+  timestamp: '2026-09-21T11:34:06Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1237
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: Replace unreadable Matsuoka COPII vesicle-coat evidence
+  details: Replaced unreadable Matsuoka et al. 1998 COPII liposome DOI citations with reachable
+    PMID:9568718 while preserving the purified COPII coat reconstitution evidence intent.
