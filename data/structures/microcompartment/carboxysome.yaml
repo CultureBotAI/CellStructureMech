@@ -259,7 +259,7 @@ components:
   essentiality: ESSENTIAL
   role: Encapsulated cargo; fixes CO2 into 3-phosphoglycerate.
   evidence:
-  - reference: DOI:10.1128/MMBR.00061-12
+  - reference: PMID:24006469
     notes: Rae et al. 2013 review RuBisCO packaging in both carboxysome types.
   protein_examples:
   - uniprot_id: UniProtKB:Q31NB3
@@ -365,7 +365,7 @@ components:
   essentiality: ESSENTIAL
   role: Links RuBisCO to the shell and drives cargo condensation.
   evidence:
-  - reference: DOI:10.1128/MMBR.00061-12
+  - reference: PMID:24006469
     notes: Rae et al. 2013 describe CcmM and CsoS2 as the RuBisCO-organising proteins.
   protein_examples:
   - uniprot_id: UniProtKB:Q03513
@@ -511,22 +511,22 @@ taxonomic_distribution:
   presence: UNIVERSAL
   note: Cyanobacteria. Beta-carboxysomes in most lineages; alpha-carboxysomes in marine
     Prochlorococcus and some Synechococcus.
-  reference: DOI:10.1128/MMBR.00061-12
+  reference: PMID:24006469
 - taxon_id: NCBITaxon:1224
   taxon_label: Pseudomonadota
   presence: VARIABLE
   note: Alpha-carboxysomes in many chemoautotrophs (Halothiobacillus, Thiomicrospira,
     Nitrosomonas).
-  reference: DOI:10.1128/MMBR.00061-12
+  reference: PMID:24006469
 canonical_examples:
 - taxon_id: NCBITaxon:1140
   taxon_label: Synechococcus elongatus PCC 7942
   note: Model for beta-carboxysomes.
-  reference: DOI:10.1128/MMBR.00061-12
+  reference: PMID:24006469
 - taxon_id: NCBITaxon:927
   taxon_label: Halothiobacillus neapolitanus
   note: Model for alpha-carboxysomes.
-  reference: DOI:10.1128/MMBR.00061-12
+  reference: PMID:24006469
 functions:
 - function_id: co2_concentration
   label: carbon dioxide concentrating mechanism
@@ -539,7 +539,7 @@ functions:
   label: carbon fixation
   grounding: GO:0015977
   evidence:
-  - reference: DOI:10.1128/MMBR.00061-12
+  - reference: PMID:24006469
     notes: Rae et al. 2013.
 associated_traits:
 - trait_id: traitmech:000072
@@ -587,7 +587,7 @@ evidence:
   notes: Kerfeld et al. 2018, "Bacterial microcompartments".
 - reference: DOI:10.1038/nrmicro1913
   notes: Yeates et al. 2008, "Protein-based organelles in bacteria".
-- reference: DOI:10.1128/MMBR.00061-12
+- reference: PMID:24006469
   notes: Rae et al. 2013, "Functions, compositions, and evolution of the two types
     of carboxysomes".
 causal_graphs:
@@ -642,7 +642,7 @@ causal_graphs:
     description: Carbonic anhydrase enriches CO2 inside the shell by dehydrating imported
       bicarbonate.
     evidence:
-    - reference: DOI:10.1128/MMBR.00061-12
+    - reference: PMID:24006469
       notes: Rae et al. 2013.
   - subject: shell
     predicate: prevents loss of
@@ -658,7 +658,7 @@ causal_graphs:
     description: Locally generated CO2 is the carboxylation substrate for RuBisCO
       inside the carboxysome.
     evidence:
-    - reference: DOI:10.1128/MMBR.00061-12
+    - reference: PMID:24006469
       notes: Rae et al. 2013.
   - subject: rubisco
     predicate: catalyses
@@ -666,7 +666,7 @@ causal_graphs:
     predicate_id: RO:0002327
     description: Encapsulated RuBisCO fixes CO2 into the Calvin-Benson-Bassham cycle.
     evidence:
-    - reference: DOI:10.1128/MMBR.00061-12
+    - reference: PMID:24006469
       notes: Rae et al. 2013.
 - graph_id: carboxysome_assembly
   title: Cargo condenses on a scaffold, an adaptor recruits the shell, and the shell
@@ -716,7 +716,7 @@ causal_graphs:
     description: CcmM links RuBisCO into the cargo condensate that becomes the carboxysome
       lumen.
     evidence:
-    - reference: DOI:10.1128/MMBR.00061-12
+    - reference: PMID:24006469
       notes: Rae et al. 2013 describe CcmM and CsoS2 as the RuBisCO-organising proteins
         of the two carboxysome types.
   - subject: scaffold
@@ -725,7 +725,7 @@ causal_graphs:
     description: Scaffolded RuBisCO condenses before shell recruitment to create the
       beta-carboxysome precursor.
     evidence:
-    - reference: DOI:10.1128/MMBR.00061-12
+    - reference: PMID:24006469
       notes: Rae et al. 2013 describe cargo condensation preceding shell encapsulation
         in beta-carboxysomes.
   - subject: ccmn
@@ -775,7 +775,7 @@ causal_graphs:
     object: procarboxysome
     description: Shell facets assemble around the condensed cargo to close the carboxysome.
     evidence:
-    - reference: DOI:10.1128/MMBR.00061-12
+    - reference: PMID:24006469
       notes: Rae et al. 2013 describe the shell closing around the condensed cargo.
   - subject: mcdb
     predicate: drives
@@ -894,6 +894,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-09-21T12:34:04Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1241 by routing Rae et al. 2013 carboxysome review evidence
+    through reachable PMID:24006469 instead of the unreadable MMBR DOI.'
+  llm_assisted: true
 xrefs:
 - uniprot.location:SL-0034
 discussions:
