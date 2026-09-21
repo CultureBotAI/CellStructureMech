@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+  slug: bacterial_type_flagellum_basal_body_distal_rod_l_ring
+session:
+  id: 2026-09-21T140304Z-codex-e47b5a
+  timestamp: '2026-09-21T14:03:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1245
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - evidence
+  summary: Replace unreadable L-ring Macnab evidence
+  details: '#1245: removed unreadable Macnab 1999 from the L-ring top-level bibliography;
+    Jones 1989 and Yamaguchi 2021 continue to support the specific FlgH, LP-ring bushing,
+    and mechanism-graph claims.'

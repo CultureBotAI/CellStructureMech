@@ -40,6 +40,13 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-09-21T14:03:04Z'
+  curator: codex
+  action: REPLACE_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1245 by replacing unreadable Macnab 1999 filament-cap evidence
+    with readable Postel 2016 and Einenkel 2025 support for FliD caps and cap-mediated
+    filament elongation.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar filament cap
   synonym_type: EXACT_SYNONYM
@@ -100,7 +107,7 @@ taxonomic_distribution:
   note: FliD/HAP2 filament caps occur in bacteria that assemble completed bacterial-type
     flagellar filaments and are absent from lineages that lack the rotary flagellar
     system.
-  reference: DOI:10.1128/JB.181.23.7149-7153.1999
+  reference: DOI:10.7554/eLife.18857
 - taxon_id: NCBITaxon:2157
   taxon_label: Archaea
   presence: ABSENT
@@ -123,8 +130,6 @@ functions:
   label: filament tip capping
   description: FliD/HAP2 oligomers cap the distal end of the bacterial flagellar filament.
   evidence:
-  - reference: DOI:10.1128/JB.181.23.7149-7153.1999
-    notes: Macnab 1999 reviews HAP2/FliD as the cap at the distal filament end.
   - reference: DOI:10.1038/s41564-025-02037-0
     notes: Einenkel et al. 2025 resolved FliD caps at native Salmonella filament tips.
 - function_id: flagellin_incorporation
@@ -147,9 +152,6 @@ physical_properties:
   context: FliD/HAP2 subunits in the native Salmonella filament cap
   reference: DOI:10.1038/s41564-025-02037-0
 evidence:
-- reference: DOI:10.1128/JB.181.23.7149-7153.1999
-  notes: 'Macnab 1999, The bacterial flagellum: reversible rotary propellor and type
-    III export apparatus, Journal of Bacteriology.'
 - reference: DOI:10.1099/mic.0.25948-0
   notes: Bardy, Ng and Jarrell 2003, Prokaryotic motility structures, Microbiology.
 - reference: DOI:10.1126/science.290.5499.2148
@@ -259,9 +261,9 @@ causal_graphs:
     description: Cap-mediated addition of exported flagellin elongates the bacterial
       flagellar filament.
     evidence:
-    - reference: DOI:10.1128/JB.181.23.7149-7153.1999
-      notes: Macnab 1999 reviews filament growth by exported flagellin beneath the
-        distal cap.
+    - reference: DOI:10.1038/s41564-025-02037-0
+      notes: Einenkel et al. 2025 trapped FliD-capped flagellin incorporation intermediates
+        that show FliC insertion during filament elongation.
 discussions:
 - discussion_id: exclude_filament_and_junction
   prompt: Should flagellin, FlgK, or FlgL be curated as filament-cap components?
