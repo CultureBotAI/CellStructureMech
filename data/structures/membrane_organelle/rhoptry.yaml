@@ -49,6 +49,12 @@ curation_history:
   action: ADDRESSED_REVIEW
   changes: Retyped the rhoptry lumen graph node as CELLULAR_LOCALIZATION.
   llm_assisted: true
+- timestamp: '2026-09-21T13:14:52Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: Replaced Bradley et al. 2005 DOI citations with PMID:16002398 so rhoptry
+    proteome evidence resolves through PubMed.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -80,7 +86,7 @@ components:
   role: Neck-localized rhoptry proteins secreted during host-cell invasion to form
     the moving junction.
   evidence:
-  - reference: DOI:10.1074/jbc.m504158200
+  - reference: PMID:16002398
     notes: Bradley et al. 2005 identified multiple RON proteins in the Toxoplasma
       gondii rhoptry proteome.
   - reference: DOI:10.1371/journal.ppat.0010017
@@ -98,7 +104,7 @@ components:
   role: Bulb-localized rhoptry effectors that are secreted into the host cell and
     parasitophorous vacuole interface.
   evidence:
-  - reference: DOI:10.1074/jbc.m504158200
+  - reference: PMID:16002398
     notes: Bradley et al. 2005 resolved the Toxoplasma rhoptry proteome and distinguished
       ROP and RON cohorts.
   - reference: DOI:10.1038/nrmicro1800
@@ -122,7 +128,7 @@ canonical_examples:
   taxon_label: Toxoplasma gondii
   note: Apicomplexan model in which the rhoptry proteome and moving-junction deployment
     of RON proteins have been experimentally studied.
-  reference: DOI:10.1074/jbc.m504158200
+  reference: PMID:16002398
 functions:
 - function_id: rhoptry_mediated_host_cell_invasion
   label: rhoptry-mediated host cell invasion
@@ -144,7 +150,7 @@ functions:
     notes: Boothroyd and Dubremetz 2008 review the roles of Toxoplasma rhoptry effectors
       in parasitophorous vacuole biogenesis and host-cell manipulation.
 evidence:
-- reference: DOI:10.1074/jbc.m504158200
+- reference: PMID:16002398
   notes: Bradley et al. 2005, Proteomic analysis of rhoptry organelles reveals many
     novel constituents for host-parasite interactions in Toxoplasma gondii, Journal
     of Biological Chemistry.
@@ -234,7 +240,7 @@ causal_graphs:
     object: rhoptry_neck
     description: RON proteins occupy the rhoptry-neck compartment.
     evidence:
-    - reference: DOI:10.1074/jbc.m504158200
+    - reference: PMID:16002398
       notes: Bradley et al. 2005 identified rhoptry neck proteins in purified Toxoplasma
         rhoptries.
   - subject: rhoptry_bulb_proteins
@@ -242,7 +248,7 @@ causal_graphs:
     object: rhoptry_lumen
     description: ROP proteins occupy the rhoptry bulb lumen before secretion.
     evidence:
-    - reference: DOI:10.1074/jbc.m504158200
+    - reference: PMID:16002398
       notes: Bradley et al. 2005 resolved ROP proteins as a major cohort of the rhoptry
         proteome.
   - subject: rhoptry_neck_proteins
