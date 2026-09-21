@@ -25,6 +25,13 @@ curation_history:
   changes: 'Resolved #1037 by removing unsupported ESSENTIAL from the aggregate Pil1/Lsp1
     BAR-domain component.'
   llm_assisted: true
+- timestamp: '2026-09-21T12:05:18Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1239 by routing Douglas and Konopka 2014 fungal eisosome-filament
+    evidence through reachable PMID:25002088 instead of the unreadable Annual Reviews
+    DOI.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -54,7 +61,7 @@ taxonomic_distribution:
   presence: VARIABLE
   note: BAR-domain eisosome filament scaffolds have been described in fungal MCC/eisosome
     domains, but the component set and domain architecture vary by lineage.
-  reference: DOI:10.1146/annurev-micro-091313-103507
+  reference: PMID:25002088
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
@@ -75,7 +82,7 @@ functions:
   - reference: DOI:10.1083/jcb.201104040
     notes: Karotki et al. 2011 connected Pil1/Lsp1 filament assembly to a membrane
       scaffold at eisosomes.
-  - reference: DOI:10.1146/annurev-micro-091313-103507
+  - reference: PMID:25002088
     notes: Douglas and Konopka 2014 reviewed MCC/eisosomes as stable plasma-membrane
       domains in fungi.
 evidence:
@@ -95,7 +102,7 @@ evidence:
 - reference: DOI:10.1083/jcb.201104040
   notes: Karotki et al. 2011, Eisosome proteins assemble into a membrane scaffold,
     Journal of Cell Biology.
-- reference: DOI:10.1146/annurev-micro-091313-103507
+- reference: PMID:25002088
   notes: 'Douglas and Konopka 2014, Fungal membrane organization: the eisosome concept,
     Annual Review of Microbiology.'
 causal_graphs:

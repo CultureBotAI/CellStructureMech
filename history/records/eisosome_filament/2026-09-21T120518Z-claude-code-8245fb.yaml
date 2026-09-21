@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/eisosome_filament.yaml
+  slug: eisosome_filament
+session:
+  id: 2026-09-21T120518Z-claude-code-8245fb
+  timestamp: '2026-09-21T12:05:18Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1239
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - curation_history
+  summary: Replace unreadable Douglas and Konopka eisosome-filament evidence
+  details: Replaced unreadable Douglas and Konopka 2014 fungal MCC/eisosome DOI citations
+    with reachable PMID:25002088 while preserving the fungal eisosome-filament review evidence
+    intent.
