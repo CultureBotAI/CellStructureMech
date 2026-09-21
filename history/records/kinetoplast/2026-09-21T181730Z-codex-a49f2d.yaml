@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/nucleoid/kinetoplast.yaml
+  slug: kinetoplast
+session:
+  id: 2026-09-21T181730Z-codex-a49f2d
+  timestamp: '2026-09-21T18:17:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1255
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - synonyms
+  - components
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Replace unreadable kinetoplast evidence
+  details: '#1255: replaced unreadable Lukes 2002 kinetoplast citations with readable
+    Amodeo 2023 and Cooper 2019 full-text support, narrowed broad Kinetoplastea wording,
+    and removed the uncited unreadable Shapiro and Englund 1995 reference.'

@@ -33,13 +33,20 @@ curation_history:
   changes: 'Resolved #334 by removing the arbitrary KAP1-KAP4 gene-symbol list from
     the broad kinetoplast-associated proteins component.'
   llm_assisted: true
+- timestamp: '2026-09-21T18:17:30Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: '#1255: Replaced unreadable Lukes 2002 kinetoplast citations with readable
+    Amodeo 2023 and Cooper 2019 support and removed the uncited unreadable Shapiro
+    and Englund 1995 record-level reference.'
+  llm_assisted: true
 synonyms:
 - synonym_text: kinetoplast DNA network
   synonym_type: EXACT_SYNONYM
-  source: DOI:10.1128/EC.1.4.495-502.2002
+  source: DOI:10.1093/femsre/fuac047
 - synonym_text: kDNA network
   synonym_type: EXACT_SYNONYM
-  source: DOI:10.1128/EC.1.4.495-502.2002
+  source: DOI:10.1093/femsre/fuac047
 part_of:
 - GO:0005739
 xrefs:
@@ -57,12 +64,12 @@ components:
   role: Thousands of topologically interlocked circular DNAs whose guide RNAs encode
     information needed to edit maxicircle transcripts.
   evidence:
-  - reference: DOI:10.1128/EC.1.4.495-502.2002
-    notes: Lukes et al. 2002 review kDNA as a network of thousands of topologically
-      interlocked minicircles and a few dozen maxicircles.
   - reference: DOI:10.1093/femsre/fuac047
-    notes: Amodeo et al. 2023 review Trypanosoma brucei kDNA minicircles as the abundant
-      circular DNAs of the kinetoplast network.
+    notes: Amodeo et al. 2023 review Trypanosoma brucei kDNA minicircles as 1 kb circular
+      DNAs organized in an interlocked kinetoplast network.
+  - reference: DOI:10.1093/nar/gkz928
+    notes: Cooper et al. 2019 assembled Trypanosoma brucei kDNA and describe thousands
+      of 1 kb minicircles encoding guide RNAs for maxicircle transcript editing.
 - component_id: kdna_maxicircles
   label: kinetoplast DNA maxicircles
   component_type: DNA
@@ -75,12 +82,9 @@ components:
   role: Dozens of larger circular DNAs in the kDNA network that encode mitochondrial
     genes whose transcripts are decoded by guide RNAs.
   evidence:
-  - reference: DOI:10.1128/EC.1.4.495-502.2002
-    notes: Lukes et al. 2002 review maxicircles as the coding mitochondrial DNA circles
-      interlocked with minicircles in the kinetoplast network.
-  - reference: DOI:10.1146/annurev-micro-092611-150057
-    notes: Jensen and Englund 2012 review kDNA maxicircles as the larger circular
-      DNAs present in low copy number in the kinetoplast.
+  - reference: DOI:10.1093/femsre/fuac047
+    notes: Amodeo et al. 2023 review the approximately 30 Trypanosoma brucei maxicircles
+      as 23 kb coding DNAs interwoven into the minicircle network.
 - component_id: kinetoplast_associated_proteins
   label: kinetoplast-associated proteins
   component_type: PROTEIN
@@ -103,10 +107,10 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:5653
   taxon_label: Kinetoplastea
   presence: COMMON
-  note: The kinetoplast is the mitochondrial DNA-containing structure that defines
-    kinetoplastids, although the size, shape, catenation and copy-number organization
-    of kDNA vary across the class.
-  reference: DOI:10.1128/EC.1.4.495-502.2002
+  note: Kinetoplast biology has been studied across Kinetoplastea, spanning Crithidia,
+    Leishmania, and Trypanosoma lineages, and kDNA architecture varies across that
+    comparative scope.
+  reference: DOI:10.1093/femsre/fuac047
 canonical_examples:
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei
@@ -120,19 +124,10 @@ functions:
   description: The kinetoplast packages the trypanosomatid mitochondrial genome as
     a condensed, topologically interlocked network of maxicircles and minicircles.
   evidence:
-  - reference: DOI:10.1128/EC.1.4.495-502.2002
-    notes: Lukes et al. 2002 review the kinetoplast as an improbable network architecture
-      for the kinetoplastid mitochondrial genome.
   - reference: DOI:10.1093/femsre/fuac047
-    notes: Amodeo et al. 2023 review mitochondrial genome maintenance with a focus
-      on Trypanosoma brucei kDNA.
+    notes: Amodeo et al. 2023 review Trypanosoma brucei mitochondrial genome maintenance
+      through the kinetoplast DNA disc.
 evidence:
-- reference: DOI:10.1128/EC.1.4.495-502.2002
-  notes: 'Lukes et al. 2002, Kinetoplast DNA Network: Evolution of an Improbable Structure,
-    Eukaryotic Cell.'
-- reference: DOI:10.1146/annurev.mi.49.100195.001001
-  notes: Shapiro and Englund 1995, The Structure and Replication of Kinetoplast DNA,
-    Annual Review of Microbiology.
 - reference: DOI:10.1146/annurev-micro-092611-150057
   notes: 'Jensen and Englund 2012, Network News: The Replication of Kinetoplast DNA,
     Annual Review of Microbiology.'
@@ -143,6 +138,10 @@ evidence:
 - reference: DOI:10.1093/femsre/fuac047
   notes: Amodeo et al. 2023, Mitochondrial genome maintenance - the kinetoplast story,
     FEMS Microbiology Reviews.
+- reference: DOI:10.1093/nar/gkz928
+  notes: Cooper et al. 2019, Assembly and annotation of the mitochondrial minicircle
+    genome of a differentiation-competent strain of Trypanosoma brucei, Nucleic Acids
+    Research.
 - reference: DOI:10.1371/journal.pone.0187516
   notes: de Souza et al. 2017, Expanded repertoire of kinetoplast associated proteins
     and unique mitochondrial DNA arrangement of symbiont-bearing trypanosomatids,
@@ -186,20 +185,21 @@ causal_graphs:
   - subject: kdna_minicircles
     predicate: catenate into
     object: catenated_kdna_network
-    description: Thousands of minicircles are topologically interlocked to form the
-      major repeated DNA species in the kDNA network.
+    description: Minicircles are small circular DNAs organized in the interlocked
+      kDNA network.
     evidence:
-    - reference: DOI:10.1128/EC.1.4.495-502.2002
-      notes: Lukes et al. 2002 review minicircle catenation in kinetoplast DNA networks.
+    - reference: DOI:10.1093/femsre/fuac047
+      notes: Amodeo et al. 2023 review Trypanosoma brucei minicircles as 1 kb DNAs
+        organized in the interlocked kinetoplast network.
   - subject: kdna_maxicircles
     predicate: catenate into
     object: catenated_kdna_network
     description: Dozens of maxicircles are interlocked with the minicircle network
       to carry the coding portion of the mitochondrial genome.
     evidence:
-    - reference: DOI:10.1146/annurev-micro-092611-150057
-      notes: Jensen and Englund 2012 review the network of catenated maxicircles and
-        minicircles in kDNA.
+    - reference: DOI:10.1093/femsre/fuac047
+      notes: Amodeo et al. 2023 review Trypanosoma brucei maxicircles as coding DNAs
+        interwoven into the minicircle network.
   - subject: kinetoplast_associated_proteins
     predicate: compact
     object: catenated_kdna_network
@@ -215,9 +215,9 @@ causal_graphs:
     description: The catenated mitochondrial DNA network forms the disk-shaped kinetoplast
       in the matrix of the single kinetoplastid mitochondrion.
     evidence:
-    - reference: DOI:10.1128/EC.1.4.495-502.2002
-      notes: Lukes et al. 2002 describe one kDNA network condensed into a disk-shaped
-        kinetoplast.
+    - reference: DOI:10.1093/femsre/fuac047
+      notes: Amodeo et al. 2023 review the Trypanosoma brucei kinetoplast as a disc-shaped,
+        electron-dense kDNA structure inside the cell's single mitochondrion.
 discussions:
 - discussion_id: ground_kdna_and_kap_components
   prompt: Resolve exact source-neutral groundings for kinetoplast maxicircles, minicircles
