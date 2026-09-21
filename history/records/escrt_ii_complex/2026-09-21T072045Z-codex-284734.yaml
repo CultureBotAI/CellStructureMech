@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/escrt_ii_complex.yaml
+  slug: escrt_ii_complex
+session:
+  id: 2026-09-21T072045Z-codex-284734
+  timestamp: '2026-09-21T07:20:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1219
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Replace unreadable ESCRT-II evidence
+  details: 'Resolved issue #1219 by replacing every data/structures/other/escrt_ii_complex.yaml
+    use of the unreadable Babst et al. 2002 ESCRT-II DOI with reachable Teo 2004, Im and Hurley
+    2008, Im et al. 2009, Lata et al. 2008, and Hierro et al. 2004 sources.
+    The edit kept the reviewed-label-only Vps22, Vps25, and Vps36 boundaries and kept exact
+    heterotetramer stoichiometry as an open curation TODO.'
