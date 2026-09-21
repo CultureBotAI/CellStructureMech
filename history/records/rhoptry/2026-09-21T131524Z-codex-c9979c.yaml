@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/rhoptry.yaml
+  slug: rhoptry
+session:
+  id: 2026-09-21T131524Z-codex-c9979c
+  timestamp: '2026-09-21T13:15:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1243
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: Replace unreadable Bradley rhoptry evidence
+  details: Replaced Bradley et al. 2005 DOI citations with reachable PMID:16002398 while preserving
+    the Toxoplasma rhoptry proteome evidence intent for RON and ROP cohorts.

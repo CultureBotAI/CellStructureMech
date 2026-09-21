@@ -19,6 +19,12 @@ curation_history:
     and Toxoplasma gondii scope, secretion and moving-junction functions, GO/DOI evidence,
     a nonmechanistic RON export graph, and a RON grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-21T13:14:52Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: Replaced Bradley et al. 2005 DOI citations with PMID:16002398 so rhoptry-neck
+    proteome evidence resolves through PubMed.
+  llm_assisted: true
 part_of:
 - GO:0020008
 components:
@@ -30,7 +36,7 @@ components:
   role: Rhoptry neck-localized secretory proteins that are released during host-cell
     invasion and contribute to the moving-junction interface.
   evidence:
-  - reference: DOI:10.1074/jbc.m504158200
+  - reference: PMID:16002398
     notes: Bradley et al. 2005 identified multiple RON proteins in the Toxoplasma
       gondii rhoptry proteome.
   - reference: DOI:10.1371/journal.ppat.0010017
@@ -52,7 +58,7 @@ canonical_examples:
   taxon_label: Toxoplasma gondii
   note: Apicomplexan model in which RON proteins were identified in the rhoptry proteome
     and shown to relocate toward the moving junction during invasion.
-  reference: DOI:10.1074/jbc.m504158200
+  reference: PMID:16002398
 functions:
 - function_id: rhoptry_neck_secretion
   label: rhoptry neck secretion
@@ -76,7 +82,7 @@ functions:
 evidence:
 - reference: GO:1990225
   notes: Gene Ontology cellular-component term for the rhoptry neck.
-- reference: DOI:10.1074/jbc.m504158200
+- reference: PMID:16002398
   notes: Bradley et al. 2005, Proteomic analysis of rhoptry organelles reveals many
     novel constituents for host-parasite interactions in Toxoplasma gondii, Journal
     of Biological Chemistry.
@@ -134,7 +140,7 @@ causal_graphs:
     object: rhoptry_neck
     description: RON proteins are a rhoptry-neck-localized secretory protein cohort.
     evidence:
-    - reference: DOI:10.1074/jbc.m504158200
+    - reference: PMID:16002398
       notes: Bradley et al. 2005 identified rhoptry neck proteins in purified Toxoplasma
         rhoptries.
   - subject: rhoptry_neck_proteins
@@ -164,7 +170,7 @@ discussions:
   rationale: RON proteins are grouped by rhoptry-neck localization in this first substructure
     record, but the cohort contains multiple unrelated effector families.
   evidence:
-  - reference: DOI:10.1074/jbc.m504158200
+  - reference: PMID:16002398
   - reference: DOI:10.1371/journal.ppat.0010017
   posed_by: codex
   posed_date: '2026-09-13'
