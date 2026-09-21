@@ -35,6 +35,13 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-09-21T14:03:04Z'
+  curator: codex
+  action: REPLACE_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1245 by removing or replacing unreadable Macnab 1999 MS-ring
+    evidence with readable Kawamoto 2021 support for the native Salmonella FliF MS
+    ring.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, mounting plate
   synonym_type: BROAD_SYNONYM
@@ -106,9 +113,6 @@ functions:
   description: The FliF MS ring forms the cytoplasmic-membrane platform that mounts
     the bacterial flagellar basal body.
   evidence:
-  - reference: DOI:10.1128/JB.181.23.7149-7153.1999
-    notes: Macnab 1999 reviews the MS ring as the membrane-embedded base of the bacterial
-      flagellar basal body.
   - reference: DOI:10.1038/s41467-021-24507-9
     notes: Kawamoto et al. 2021 structurally resolved the Salmonella MS ring as the
       core ring of the native basal body.
@@ -130,9 +134,6 @@ evidence:
   notes: 'Jones CJ, Homma M and Macnab RM 1989, L-, P-, and M-ring proteins of the
     flagellar basal body of Salmonella typhimurium: gene sequences and deduced protein
     sequences.'
-- reference: DOI:10.1128/JB.181.23.7149-7153.1999
-  notes: 'Macnab RM 1999, The bacterial flagellum: reversible rotary propellor and
-    type III export apparatus.'
 - reference: DOI:10.1146/annurev.micro.57.030502.090832
   notes: Macnab RM 2003, How bacteria assemble flagella.
 - reference: DOI:10.1038/s41467-021-24507-9
@@ -191,9 +192,9 @@ causal_graphs:
     object: basal_body
     description: The FliF MS ring mounts the basal body at the cytoplasmic membrane.
     evidence:
-    - reference: DOI:10.1128/JB.181.23.7149-7153.1999
-      notes: Macnab 1999 reviews the MS ring as the membrane-proximal platform of
-        the bacterial flagellar basal body.
+    - reference: DOI:10.1038/s41467-021-24507-9
+      notes: Kawamoto et al. 2021 resolved the native Salmonella FliF MS ring as the
+        core membrane ring of the basal body.
   - subject: ms_ring
     predicate: templates assembly of
     object: c_ring

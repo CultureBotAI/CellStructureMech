@@ -41,6 +41,13 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-09-21T14:03:04Z'
+  curator: codex
+  action: REPLACE_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1245 by removing unreadable Macnab 1999 top-level evidence;
+    specific P-ring composition, bushing, and graph claims remain supported by Jones
+    1989 and Yamaguchi 2021 evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, distal rod, P ring
   synonym_type: RELATED_SYNONYM
@@ -127,9 +134,6 @@ physical_properties:
   context: FlgI subunits per Salmonella P ring
   reference: DOI:10.1038/s41467-021-24715-3
 evidence:
-- reference: DOI:10.1128/JB.181.23.7149-7153.1999
-  notes: 'Macnab RM 1999, The bacterial flagellum: reversible rotary propellor and
-    type III export apparatus.'
 - reference: DOI:10.1128/jb.171.7.3890-3900.1989
   notes: 'Jones CJ, Homma M and Macnab RM 1989, L-, P-, and M-ring proteins of the
     flagellar basal body of Salmonella typhimurium: gene sequences and deduced protein
