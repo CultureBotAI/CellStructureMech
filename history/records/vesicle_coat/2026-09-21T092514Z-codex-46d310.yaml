@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/vesicle_coat.yaml
+  slug: vesicle_coat
+session:
+  id: 2026-09-21T092514Z-codex-46d310
+  timestamp: '2026-09-21T09:25:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1229
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Replace unreadable COPII evidence
+  details: 'Resolved issue #1229 for vesicle_coat by routing Barlowe et al. 1994 COPII citations
+    through reachable PMID:8004676 instead of the unreadable Cell DOI.'

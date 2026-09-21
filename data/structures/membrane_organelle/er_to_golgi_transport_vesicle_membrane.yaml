@@ -21,6 +21,12 @@ curation_history:
     ER-to-Golgi vesicle-membrane topology graph, and lipid-grounding plus COPII-coat
     boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-21T09:25:14Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1229 by routing Barlowe et al. 1994 COPII evidence through reachable
+    PMID:8004676 instead of the unreadable Cell DOI.'
+  llm_assisted: true
 parent_structures:
 - GO:0030658
 - GO:0030662
@@ -53,13 +59,13 @@ taxonomic_distribution:
   presence: COMMON
   note: Budding yeast forms COPII-coated ER-to-Golgi transport vesicles from endoplasmic-reticulum
     membranes using the Sec23/Sec24, Sec13/Sec31, and Sar1 COPII coat machinery.
-  reference: DOI:10.1016/0092-8674(94)90138-4
+  reference: PMID:8004676
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast model in which Sec proteins were identified as COPII coat machinery
     that drives ER-derived vesicle budding.
-  reference: DOI:10.1016/0092-8674(94)90138-4
+  reference: PMID:8004676
 evidence:
 - reference: GO:0012507
   notes: Gene Ontology cellular-component term for ER to Golgi transport vesicle membrane.
@@ -76,7 +82,7 @@ evidence:
   notes: Gene Ontology biological-process term for COPII-coated vesicle budding.
 - reference: GO:0030127
   notes: Gene Ontology cellular-component term for the COPII vesicle coat.
-- reference: DOI:10.1016/0092-8674(94)90138-4
+- reference: PMID:8004676
   notes: 'Barlowe et al. 1994, ''COPII: A membrane coat formed by Sec proteins that
     drive vesicle budding from the endoplasmic reticulum'', Cell.'
 - reference: DOI:10.1016/S0092-8674(00)81577-9

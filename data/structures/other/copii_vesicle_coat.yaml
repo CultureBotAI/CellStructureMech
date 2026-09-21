@@ -28,6 +28,12 @@ curation_history:
     edge from directional recruitment to linkage in the assembled coat and by adding
     an edge from the complete COPII coat to the ER membrane.'
   llm_assisted: true
+- timestamp: '2026-09-21T09:25:14Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1229 by routing Barlowe et al. 1994 COPII evidence through reachable
+    PMID:8004676 instead of the unreadable Cell DOI.'
+  llm_assisted: true
 parent_structures:
 - GO:0030120
 part_of:
@@ -50,7 +56,7 @@ components:
   - reference: GO:0030127
     notes: GO:0030127 names Sar1p among the Saccharomyces cerevisiae COPII vesicle
       coat subunits.
-  - reference: DOI:10.1016/0092-8674(94)90138-4
+  - reference: PMID:8004676
     notes: Barlowe et al. 1994 identified Sar1p with Sec13p, Sec31p, Sec23p, and Sec24p
       as Sec proteins that form the COPII coat driving ER vesicle budding.
 - component_id: sec23_sec24_inner_coat
@@ -101,13 +107,13 @@ taxonomic_distribution:
   presence: COMMON
   note: Budding yeast has a COPII vesicle coat built from Sar1p, Sec23p, Sec24p, Sec13p,
     and Sec31p that buds transport vesicles from the endoplasmic reticulum.
-  reference: DOI:10.1016/0092-8674(94)90138-4
+  reference: PMID:8004676
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast model in which Sar1p, Sec13p, Sec31p, Sec23p, and Sec24p were
     identified as the COPII coat driving ER transport-vesicle budding.
-  reference: DOI:10.1016/0092-8674(94)90138-4
+  reference: PMID:8004676
 functions:
 - function_id: copii_coated_vesicle_budding
   label: COPII-coated vesicle budding
@@ -131,7 +137,7 @@ evidence:
     vesicle that carries the COPII coat.
 - reference: GO:0090114
   notes: Gene Ontology biological-process term for COPII-coated vesicle budding.
-- reference: DOI:10.1016/0092-8674(94)90138-4
+- reference: PMID:8004676
   notes: 'Barlowe et al. 1994, ''COPII: A membrane coat formed by Sec proteins that
     drive vesicle budding from the endoplasmic reticulum'', Cell.'
 - reference: DOI:10.1016/S0092-8674(00)81577-9
@@ -186,7 +192,7 @@ causal_graphs:
     object: er_membrane
     description: Sar1 initiates COPII coat assembly at the ER membrane.
     evidence:
-    - reference: DOI:10.1016/0092-8674(94)90138-4
+    - reference: PMID:8004676
       notes: Barlowe et al. 1994 identified Sar1p as a COPII Sec protein that drives
         vesicle budding from the ER.
   - subject: sar1_gtpase
@@ -273,7 +279,7 @@ discussions:
     coat constituents, while leaving InterPro, Pfam, GO, or Complex Portal grounding
     unset until exact source-neutral family and subcomplex boundaries are reviewed.
   evidence:
-  - reference: DOI:10.1016/0092-8674(94)90138-4
+  - reference: PMID:8004676
   - reference: DOI:10.1016/S0092-8674(00)81577-9
   - reference: DOI:10.7554/elife.00951
   posed_by: codex

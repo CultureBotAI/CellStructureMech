@@ -29,6 +29,12 @@ curation_history:
     and canonical-example notes to the cited COPII evidence and documenting the parent-level
     scope boundary.'
   llm_assisted: true
+- timestamp: '2026-09-21T09:25:14Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1229 by routing Barlowe et al. 1994 COPII evidence through reachable
+    PMID:8004676 instead of the unreadable Cell DOI.'
+  llm_assisted: true
 parent_structures:
 - GO:0098796
 components:
@@ -71,7 +77,7 @@ components:
   - reference: DOI:10.1016/0092-8674(91)90176-y
     notes: Serafini et al. 1991 identified ADP-ribosylation factor as a subunit of
       Golgi-derived COP-coated vesicle coats.
-  - reference: DOI:10.1016/0092-8674(94)90138-4
+  - reference: PMID:8004676
     notes: Barlowe et al. 1994 identified Sar1p as one of the proteins that forms
       the COPII coat on ER-derived vesicles.
 taxonomic_distribution:
@@ -80,13 +86,13 @@ taxonomic_distribution:
   presence: COMMON
   note: Budding yeast has a COPII membrane-coat system in which Sar1p and Sec-family
     coat proteins drive ER transport-vesicle budding.
-  reference: DOI:10.1016/0092-8674(94)90138-4
+  reference: PMID:8004676
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast COPII model in which Sar1p, Sec13p, Sec31p, Sec23p, and Sec24p
     were identified as a membrane coat that drives ER transport-vesicle budding.
-  reference: DOI:10.1016/0092-8674(94)90138-4
+  reference: PMID:8004676
 evidence:
 - reference: GO:0030117
   notes: Gene Ontology cellular-component term for membrane coat.
@@ -104,7 +110,7 @@ evidence:
 - reference: DOI:10.1016/0092-8674(91)90176-y
   notes: Serafini et al. 1991, ADP-Ribosylation factor is a subunit of the coat of
     Golgi-derived COP-coated vesicles, Cell.
-- reference: DOI:10.1016/0092-8674(94)90138-4
+- reference: PMID:8004676
   notes: 'Barlowe et al. 1994, COPII: A membrane coat formed by Sec proteins that
     drive vesicle budding from the endoplasmic reticulum, Cell.'
 causal_graphs:
@@ -213,7 +219,7 @@ discussions:
   evidence:
   - reference: GO:0030117
     notes: GO term for the broad membrane-coat parent class.
-  - reference: DOI:10.1016/0092-8674(94)90138-4
+  - reference: PMID:8004676
     notes: Barlowe et al. 1994 identified the budding-yeast COPII Sec proteins as
       a membrane coat for ER-derived vesicles.
   posed_by: codex
