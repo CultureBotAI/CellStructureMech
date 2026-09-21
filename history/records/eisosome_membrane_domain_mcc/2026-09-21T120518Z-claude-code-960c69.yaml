@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+  slug: eisosome_membrane_domain_mcc
+session:
+  id: 2026-09-21T120518Z-claude-code-960c69
+  timestamp: '2026-09-21T12:05:18Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1239
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  - components
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - discussions
+  - curation_history
+  summary: Replace unreadable Douglas and Konopka MCC evidence
+  details: Replaced unreadable Douglas and Konopka 2014 fungal MCC/eisosome DOI citations
+    with reachable PMID:25002088 while preserving the fungal MCC/eisosome review evidence
+    intent.

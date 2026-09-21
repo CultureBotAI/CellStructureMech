@@ -30,10 +30,17 @@ curation_history:
     example to the discovery and Sur7-localization claims directly supported by Walther
     et al. 2006.'
   llm_assisted: true
+- timestamp: '2026-09-21T12:05:18Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1239 by routing Douglas and Konopka 2014 fungal MCC/eisosome
+    evidence through reachable PMID:25002088 instead of the unreadable Annual Reviews
+    DOI.'
+  llm_assisted: true
 synonyms:
 - synonym_text: MCC/eisosome
   synonym_type: RELATED_SYNONYM
-  source: DOI:10.1146/annurev-micro-091313-103507
+  source: PMID:25002088
 has_part:
 - GO:0036286
 - GO:0090512
@@ -66,7 +73,7 @@ components:
   - reference: DOI:10.1038/nature04472
     notes: Walther et al. 2006 identified the plasma-membrane protein Sur7 as an eisosome-localized
       protein.
-  - reference: DOI:10.1146/annurev-micro-091313-103507
+  - reference: PMID:25002088
     notes: Douglas and Konopka 2014 reviewed Sur7-family proteins as integral proteins
       of fungal MCC/eisosome domains.
   grounding_status: REVIEWED_LABEL_ONLY
@@ -78,7 +85,7 @@ taxonomic_distribution:
   presence: VARIABLE
   note: MCC/eisosome domains have been described across diverse fungi, but the structure
     and component set vary by lineage.
-  reference: DOI:10.1146/annurev-micro-091313-103507
+  reference: PMID:25002088
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -94,7 +101,7 @@ functions:
   - reference: DOI:10.1083/jcb.201104040
     notes: Karotki et al. 2011 connected Pil1/Lsp1 filament assembly to a membrane
       scaffold at eisosomes.
-  - reference: DOI:10.1146/annurev-micro-091313-103507
+  - reference: PMID:25002088
     notes: Douglas and Konopka 2014 reviewed MCC/eisosomes as stable plasma-membrane
       domains in fungi.
 evidence:
@@ -115,7 +122,7 @@ evidence:
 - reference: DOI:10.1083/jcb.201104040
   notes: Karotki et al. 2011, Eisosome proteins assemble into a membrane scaffold,
     Journal of Cell Biology.
-- reference: DOI:10.1146/annurev-micro-091313-103507
+- reference: PMID:25002088
   notes: 'Douglas and Konopka 2014, Fungal membrane organization: the eisosome concept,
     Annual Review of Microbiology.'
 causal_graphs:
@@ -182,6 +189,6 @@ discussions:
     proteins. Nce102 and additional MCC/eisosome residents should be added only after
     their component boundaries and exact family groundings are resolved.
   evidence:
-  - reference: DOI:10.1146/annurev-micro-091313-103507
+  - reference: PMID:25002088
   posed_by: claude
   posed_date: '2026-09-10'
