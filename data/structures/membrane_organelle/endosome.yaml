@@ -39,6 +39,12 @@ curation_history:
   changes: 'Resolved #1224 by routing Katzmann, Babst and Emr 2001 ESCRT-I evidence
     through reachable PMID:11511343 instead of the unreadable Cell DOI.'
   llm_assisted: true
+- timestamp: '2026-09-21T09:03:20Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1225 by routing Babst et al. 2002 ESCRT-III evidence through
+    reachable PMID:12194857 instead of the unreadable Developmental Cell DOI.'
+  llm_assisted: true
 has_part:
 - GO:0010008
 - GO:0031904
@@ -120,7 +126,7 @@ evidence:
   notes: Teo et al. 2004 described ESCRT-II as part of the sequentially recruited
     endosomal ESCRT machinery and mapped direct ESCRT-II binding to the Vps20 subunit
     of ESCRT-III.
-- reference: DOI:10.1016/S1534-5807(02)00220-4
+- reference: PMID:12194857
   notes: Babst et al. 2002, ESCRT-III, Developmental Cell.
 causal_graphs:
 - graph_id: yeast_escrt_mvb_sorting
@@ -209,7 +215,7 @@ causal_graphs:
     description: ESCRT-III acts on endosomal membranes during intraluminal vesicle
       formation.
     evidence:
-    - reference: DOI:10.1016/S1534-5807(02)00220-4
+    - reference: PMID:12194857
       notes: Babst et al. 2002 characterized yeast ESCRT-III as an endosome-associated
         hetero-oligomeric protein complex required for MVB sorting.
   - subject: endosome_membrane

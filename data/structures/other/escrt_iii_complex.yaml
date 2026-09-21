@@ -29,6 +29,13 @@ curation_history:
     wording from ESCRT-III subunit labels and adding Henne et al. 2011 evidence to
     the endosomal membrane-remodeling graph edge.'
   llm_assisted: true
+- timestamp: '2026-09-21T09:03:20Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1225 by routing Babst et al. 2002 ESCRT-III subunit and membrane-remodeling
+    evidence through reachable PMID:12194857 instead of the unreadable Developmental
+    Cell DOI.'
+  llm_assisted: true
 synonyms:
 - synonym_text: ESCRT-III complex
   synonym_type: EXACT_SYNONYM
@@ -50,7 +57,7 @@ components:
     subunit class was curated in this pass.
   role: Vps20 core constituent of the yeast endosome-associated ESCRT-III hetero-oligomer.
   evidence:
-  - reference: DOI:10.1016/S1534-5807(02)00220-4
+  - reference: PMID:12194857
     notes: Babst et al. 2002 characterized Vps20p as one of the Saccharomyces cerevisiae
       ESCRT-III subunits required for multivesicular-body sorting.
   - reference: DOI:10.1016/j.devcel.2011.05.015
@@ -69,7 +76,7 @@ components:
     for this ESCRT-III subunit class was curated in this pass.
   role: Snf7/Vps32 core constituent of the yeast endosomal ESCRT-III complex.
   evidence:
-  - reference: DOI:10.1016/S1534-5807(02)00220-4
+  - reference: PMID:12194857
     notes: Babst et al. 2002 characterized Snf7p/Vps32p as one of the Saccharomyces
       cerevisiae ESCRT-III subunits required for multivesicular-body sorting.
   - reference: DOI:10.1016/j.devcel.2011.05.015
@@ -88,7 +95,7 @@ components:
     subunit class was curated in this pass.
   role: Vps24 core constituent of the yeast endosome-associated ESCRT-III hetero-oligomer.
   evidence:
-  - reference: DOI:10.1016/S1534-5807(02)00220-4
+  - reference: PMID:12194857
     notes: Babst et al. 2002 characterized Vps24p as one of the Saccharomyces cerevisiae
       ESCRT-III subunits required for multivesicular-body sorting.
   - reference: DOI:10.1016/j.devcel.2011.05.015
@@ -106,7 +113,7 @@ components:
     subunit class was curated in this pass.
   role: Vps2 core constituent of the yeast endosome-associated ESCRT-III hetero-oligomer.
   evidence:
-  - reference: DOI:10.1016/S1534-5807(02)00220-4
+  - reference: PMID:12194857
     notes: Babst et al. 2002 characterized Vps2p as one of the Saccharomyces cerevisiae
       ESCRT-III subunits required for multivesicular-body sorting.
   - reference: DOI:10.1016/j.devcel.2011.05.015
@@ -117,13 +124,13 @@ taxonomic_distribution:
   presence: COMMON
   note: Budding yeast uses Vps20, Snf7/Vps32, Vps24 and Vps2 as an ESCRT-III complex
     during endosomal multivesicular-body sorting.
-  reference: DOI:10.1016/S1534-5807(02)00220-4
+  reference: PMID:12194857
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Genetic and cell-biological model in which Babst et al. identified Vps20p,
     Snf7p/Vps32p, Vps24p and Vps2p as the ESCRT-III complex required for MVB sorting.
-  reference: DOI:10.1016/S1534-5807(02)00220-4
+  reference: PMID:12194857
 functions:
 - function_id: multivesicular_body_sorting_pathway
   label: multivesicular body sorting pathway
@@ -134,7 +141,7 @@ functions:
   - reference: GO:0071985
     notes: GO:0071985 denotes the multivesicular body sorting pathway that targets
       ubiquitylated transmembrane proteins into luminal vesicles.
-  - reference: DOI:10.1016/S1534-5807(02)00220-4
+  - reference: PMID:12194857
     notes: Babst et al. 2002 identified ESCRT-III as a yeast endosome-associated complex
       required for MVB sorting.
 - function_id: membrane_fission
@@ -160,7 +167,7 @@ evidence:
     membrane scission.
 - reference: GO:0010008
   notes: Gene Ontology cellular-component term for the endosome membrane.
-- reference: DOI:10.1016/S1534-5807(02)00220-4
+- reference: PMID:12194857
   notes: Babst, Katzmann, Estepa-Sabal, Meerloo and Emr 2002, Escrt-III, Developmental
     Cell.
 - reference: DOI:10.1016/j.devcel.2011.05.015
@@ -211,7 +218,7 @@ causal_graphs:
     object: escrt_iii_complex
     description: Vps20 is represented as a Saccharomyces cerevisiae ESCRT-III constituent.
     evidence:
-    - reference: DOI:10.1016/S1534-5807(02)00220-4
+    - reference: PMID:12194857
       notes: Babst et al. 2002 characterized Vps20p as a core yeast ESCRT-III subunit.
   - subject: snf7_vps32_escrt_iii_subunit
     predicate: is part of
@@ -219,7 +226,7 @@ causal_graphs:
     description: Snf7/Vps32 is represented as a Saccharomyces cerevisiae ESCRT-III
       constituent.
     evidence:
-    - reference: DOI:10.1016/S1534-5807(02)00220-4
+    - reference: PMID:12194857
       notes: Babst et al. 2002 characterized Snf7p/Vps32p as a core yeast ESCRT-III
         subunit.
   - subject: vps24_escrt_iii_subunit
@@ -227,14 +234,14 @@ causal_graphs:
     object: escrt_iii_complex
     description: Vps24 is represented as a Saccharomyces cerevisiae ESCRT-III constituent.
     evidence:
-    - reference: DOI:10.1016/S1534-5807(02)00220-4
+    - reference: PMID:12194857
       notes: Babst et al. 2002 characterized Vps24p as a core yeast ESCRT-III subunit.
   - subject: vps2_escrt_iii_subunit
     predicate: is part of
     object: escrt_iii_complex
     description: Vps2 is represented as a Saccharomyces cerevisiae ESCRT-III constituent.
     evidence:
-    - reference: DOI:10.1016/S1534-5807(02)00220-4
+    - reference: PMID:12194857
       notes: Babst et al. 2002 characterized Vps2p as a core yeast ESCRT-III subunit.
   - subject: escrt_iii_complex
     predicate: remodels
@@ -242,7 +249,7 @@ causal_graphs:
     description: Yeast ESCRT-III acts on endosome-associated membranes during MVB
       sorting.
     evidence:
-    - reference: DOI:10.1016/S1534-5807(02)00220-4
+    - reference: PMID:12194857
       notes: Babst et al. 2002 identified yeast ESCRT-III as an endosome-associated
         hetero-oligomeric complex.
     - reference: DOI:10.1016/j.devcel.2011.05.015
@@ -253,7 +260,7 @@ causal_graphs:
     object: multivesicular_body_sorting_pathway
     description: ESCRT-III is required for the yeast MVB sorting pathway.
     evidence:
-    - reference: DOI:10.1016/S1534-5807(02)00220-4
+    - reference: PMID:12194857
       notes: Babst et al. 2002 found that the yeast ESCRT-III complex is required
         for MVB sorting.
 discussions:
@@ -271,7 +278,7 @@ discussions:
     core subunits without asserting paralogy boundaries or a single InterPro/Pfam
     family unless those identifiers are reviewed exactly.
   evidence:
-  - reference: DOI:10.1016/S1534-5807(02)00220-4
+  - reference: PMID:12194857
   - reference: DOI:10.1016/j.devcel.2011.05.015
   posed_by: codex
   posed_date: '2026-09-12'
