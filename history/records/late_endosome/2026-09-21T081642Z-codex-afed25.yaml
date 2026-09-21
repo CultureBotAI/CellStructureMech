@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/late_endosome.yaml
+  slug: late_endosome
+session:
+  id: 2026-09-21T081642Z-codex-afed25
+  timestamp: '2026-09-21T08:16:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1222
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  summary: Replace unreadable ESCRT-II evidence
+  details: 'Resolved issue #1222 for late endosome by replacing the unreadable Babst et al.
+    2002 ESCRT-II DOI with reachable Teo et al. 2004 support for the ESCRT-II to ESCRT-III
+    handoff in the yeast MVB sorting pathway.'
