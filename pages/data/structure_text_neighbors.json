@@ -8447,27 +8447,27 @@
         {
           "identifier": "GO:0031904",
           "label": "endosome lumen",
-          "cosine_similarity": 0.78824925
-        },
-        {
-          "identifier": "GO:0005768",
-          "label": "endosome",
-          "cosine_similarity": 0.78262474
+          "cosine_similarity": 0.77485145
         },
         {
           "identifier": "GO:0005770",
           "label": "late endosome",
-          "cosine_similarity": 0.77955533
+          "cosine_similarity": 0.77241108
+        },
+        {
+          "identifier": "GO:0005768",
+          "label": "endosome",
+          "cosine_similarity": 0.77230612
         },
         {
           "identifier": "GO:0030139",
           "label": "endocytic vesicle",
-          "cosine_similarity": 0.7651929
+          "cosine_similarity": 0.75321697
         },
         {
-          "identifier": "GO:0071682",
-          "label": "endocytic vesicle lumen",
-          "cosine_similarity": 0.76446488
+          "identifier": "GO:0005771",
+          "label": "multivesicular body",
+          "cosine_similarity": 0.75193883
         }
       ]
     },
@@ -10121,27 +10121,27 @@
         {
           "identifier": "GO:0032865",
           "label": "ERMES complex",
-          "cosine_similarity": 0.68258394
+          "cosine_similarity": 0.68258385
         },
         {
           "identifier": "GO:0020007",
           "label": "apical complex",
-          "cosine_similarity": 0.68069839
+          "cosine_similarity": 0.68069841
+        },
+        {
+          "identifier": "cellstructuremech:reservosome",
+          "label": "reservosome",
+          "cosine_similarity": 0.67473366
         },
         {
           "identifier": "GO:0031904",
           "label": "endosome lumen",
-          "cosine_similarity": 0.67402463
+          "cosine_similarity": 0.67402458
         },
         {
           "identifier": "GO:0120120",
           "label": "bilobe structure",
-          "cosine_similarity": 0.67334162
-        },
-        {
-          "identifier": "cellstructuremech:mitosome_matrix",
-          "label": "mitosome matrix",
-          "cosine_similarity": 0.66988092
+          "cosine_similarity": 0.67334153
         }
       ]
     },

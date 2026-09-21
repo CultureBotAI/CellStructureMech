@@ -2,10 +2,9 @@ identifier: cellstructuremech:reservosome
 label: reservosome
 structure_category: MEMBRANE_ORGANELLE
 structure_kind: MEMBRANE_BOUNDED_ORGANELLE
-definition: An acidic, membrane-bounded endocytic organelle in Trypanosoma cruzi epimastigotes
-  that stores endocytosed macromolecules and lipids and concentrates lysosomal hydrolases
-  including cruzipain.
-definition_source: DOI:10.1590/S0074-02761999000700015
+definition: A posterior, membrane-bounded endocytic organelle in Trypanosoma cruzi
+  epimastigotes that receives internalized macromolecular cargo.
+definition_source: DOI:10.1017/S0031182004005797
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-10T11:53:13Z'
@@ -35,6 +34,13 @@ curation_history:
     the reservosome''s broader parent and replacing the vague degraded-cargo terminal
     state with an explicit cargo-proteolysis process.'
   llm_assisted: true
+- timestamp: '2026-09-21T16:59:24Z'
+  curator: codex
+  action: REPLACE_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1249 by replacing unreadable reservosome review evidence with
+    readable Figueiredo 2004 and Sant''Anna 2009 support and narrowing acidic proteolysis
+    claims to hydrolase/proteome claims covered by Sant''Anna 2009.'
+  llm_assisted: true
 components:
 - component_id: reservosome_membrane
   label: reservosome membrane
@@ -56,9 +62,6 @@ components:
   - reference: DOI:10.1078/0171-9335-00112
     notes: Porto-Carreiro et al. 2000 traced endocytic cargo entering the cytostome
       and reaching reservosomes.
-  - reference: DOI:10.1590/S0074-02761999000700015
-    notes: Soares 1999 reviewed reservosomes as endocytic organelles that accumulate
-      ingested macromolecules.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The cargo pool is operationally defined by endocytic accumulation
     in reservosomes rather than by one exact molecular family.
@@ -68,8 +71,6 @@ components:
   component_role: CONSTITUENT
   role: Major lysosomal cysteine proteinase concentrated in the reservosome lumen.
   evidence:
-  - reference: DOI:10.1590/S0074-02761999000700015
-    notes: Soares 1999 reviewed cruzipain accumulation in reservosomes.
   - reference: DOI:10.1002/pmic.200800730
     notes: Sant'Anna et al. 2009 identified hydrolases, including cruzipain, in the
       reservosome proteome.
@@ -81,15 +82,15 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:5693
   taxon_label: Trypanosoma cruzi
   presence: VARIABLE
-  note: Reservosomes are stage-regulated acidic endocytic organelles characterized
-    in T. cruzi epimastigotes.
-  reference: DOI:10.1590/S0074-02761999000700015
+  note: Reservosomes are posterior membrane-bounded organelles detected in T. cruzi
+    epimastigotes and absent from amastigotes and trypomastigotes.
+  reference: DOI:10.1017/S0031182004005797
 canonical_examples:
 - taxon_id: NCBITaxon:5693
   taxon_label: Trypanosoma cruzi
-  note: Kinetoplastid parasite whose epimastigote reservosomes were defined as posterior
-    acidic endocytic compartments.
-  reference: DOI:10.1590/S0074-02761999000700015
+  note: Kinetoplastid parasite whose free-swimming epimastigotes carry posterior,
+    transferrin-labelled reservosomes.
+  reference: DOI:10.1017/S0031182004005797
 functions:
 - function_id: endocytic_cargo_storage
   label: endocytic cargo storage
@@ -102,22 +103,16 @@ functions:
   - reference: DOI:10.1017/S0031182004005797
     notes: Figueiredo et al. 2004 reviewed reservosomes as endocytic compartments
       in T. cruzi epimastigotes.
-- function_id: acidic_proteolysis
-  label: acidic proteolysis
-  description: Reservosomes concentrate lysosomal hydrolases in an acidic lumen where
-    internalized proteins can be degraded.
+- function_id: hydrolase_associated_proteolysis
+  label: reservosome hydrolase-associated proteolysis
+  description: Reservosomes concentrate lysosomal hydrolases, including cruzipain,
+    in a proteome associated with protein degradation and regulation.
   evidence:
-  - reference: DOI:10.1590/S0074-02761999000700015
-    notes: Soares 1999 reviewed reservosomes as acidic cruzipain-containing prelysosomal
-      compartments.
   - reference: DOI:10.1002/pmic.200800730
-    notes: Sant'Anna et al. 2009 profiled the reservosome proteome and recovered several
-      proteins involved in proteolysis.
+    notes: Sant'Anna et al. 2009 identified cruzipain and other lysosomal hydrolases
+      in purified reservosomes and discussed reservosomes as a major protein degradation
+      and regulation site.
 evidence:
-- reference: DOI:10.1590/S0074-02761999000700015
-  notes: 'Soares 1999, The reservosome of Trypanosoma cruzi epimastigotes: an organelle
-    of the endocytic pathway with a role on metacyclogenesis, Memorias do Instituto
-    Oswaldo Cruz.'
 - reference: DOI:10.1078/0171-9335-00112
   notes: 'Porto-Carreiro et al. 2000, Trypanosoma cruzi epimastigote endocytic pathway:
     cargo enters the cytostome and passes through an early endosomal network before
@@ -130,10 +125,10 @@ evidence:
     Proteomics.
 causal_graphs:
 - graph_id: endocytic_storage_and_proteolysis
-  title: Reservosomes store cargo and support proteolysis
+  title: Reservosomes store cargo and contain hydrolases
   description: Cargo entering through the cytostome-cytopharynx reaches the reservosome,
-    where the acidic lumen stores internalized protein and lipid cargo and a hydrolase
-    pool that includes cruzipain supports proteolysis of internalized protein cargo.
+    where internalized protein and lipid cargo is stored alongside a hydrolase pool
+    that includes cruzipain.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   nodes:
@@ -179,20 +174,19 @@ causal_graphs:
     description: The cysteine proteinase cruzipain is concentrated in the reservosome
       lumen.
     evidence:
-    - reference: DOI:10.1590/S0074-02761999000700015
-      notes: Soares 1999 reviewed reservosomes as acidic organelles containing cruzipain.
     - reference: DOI:10.1002/pmic.200800730
       notes: Sant'Anna et al. 2009 detected cruzipain and other hydrolases in purified
         reservosomes.
   - subject: cruzipain
-    predicate: supports
+    predicate: is associated with
     object: cargo_proteolysis
-    description: Reservosome hydrolases, including cruzipain, support proteolysis
-      of internalized protein cargo in the acidic compartment.
+    description: Cruzipain occurs in the reservosome hydrolase pool of a compartment
+      associated with protein degradation and regulation.
     evidence:
-    - reference: DOI:10.1590/S0074-02761999000700015
-      notes: Soares 1999 connected cruzipain-containing acidic reservosomes to intracellular
-        protein digestion while leaving the full hydrolase set unresolved.
+    - reference: DOI:10.1002/pmic.200800730
+      notes: Sant'Anna et al. 2009 detected cruzipain and other lysosomal hydrolases
+        in purified reservosomes and discussed protein degradation and regulation
+        as a reservosome role.
 discussions:
 - discussion_id: ground_reservosome_hydrolases_and_markers
   prompt: Resolve exact cruzipain isoforms, chagasin, proton pumps and other reservosome-localized
