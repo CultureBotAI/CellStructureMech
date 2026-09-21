@@ -25,6 +25,12 @@ curation_history:
   changes: 'Resolved #1224 by routing Katzmann, Babst and Emr 2001 ESCRT-I evidence
     through reachable PMID:11511343 instead of the unreadable Cell DOI.'
   llm_assisted: true
+- timestamp: '2026-09-21T09:03:20Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1225 by routing Babst et al. 2002 ESCRT-III evidence through
+    reachable PMID:12194857 instead of the unreadable Developmental Cell DOI.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Corpuscula multivesicularis lumen
   synonym_type: EXACT_SYNONYM
@@ -59,7 +65,7 @@ canonical_examples:
   taxon_label: Saccharomyces cerevisiae
   note: Genetic model for ESCRT-dependent formation of intraluminal vesicles inside
     multivesicular bodies.
-  reference: DOI:10.1016/S1534-5807(02)00220-4
+  reference: PMID:12194857
 functions:
 - function_id: multivesicular_body_sorting_pathway
   label: multivesicular body sorting pathway
@@ -92,7 +98,7 @@ evidence:
   notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
     Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
     ESCRT-I, Cell.
-- reference: DOI:10.1016/S1534-5807(02)00220-4
+- reference: PMID:12194857
   notes: Babst, Katzmann, Estepa-Sabal, Meerloo and Emr 2002, Escrt-III, Developmental
     Cell.
 - reference: DOI:10.1016/j.devcel.2011.05.015
