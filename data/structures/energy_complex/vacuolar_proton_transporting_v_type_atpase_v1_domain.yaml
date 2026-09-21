@@ -33,6 +33,13 @@ curation_history:
     rotary proton-pump graph node with ungrounded V1-sector ATP hydrolysis evidence
     and adding V0 part-of context to the V1/V0 coupling graph.'
   llm_assisted: true
+- timestamp: '2026-09-21T14:38:56Z'
+  curator: codex
+  action: REPLACE_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1247 by replacing the unreadable Zhao 2015 canonical yeast example
+    with readable Kane 2006 support and removing the redundant Zhao 2015 top-level
+    and V1/V0 coupling evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0033180
 part_of:
@@ -51,9 +58,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Yeast model in which cryo-EM resolved the intact V-ATPase with rotational
-    states of its cytosolic V1 sector.
-  reference: DOI:10.1038/nature14365
+  note: Yeast model for the V1 catalytic sector of the vacuolar V-ATPase and its coupling
+    to the V0 sector.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
 functions:
 - function_id: v1_atp_hydrolysis_sector
   label: V1-sector ATP hydrolysis
@@ -82,9 +89,6 @@ evidence:
 - reference: DOI:10.1038/nrm2272
   notes: 'Forgac 2007, Vacuolar ATPases: rotary proton pumps in physiology and pathophysiology,
     Nature Reviews Molecular Cell Biology.'
-- reference: DOI:10.1038/nature14365
-  notes: Zhao, Benlekbir and Rubinstein 2015, Electron cryomicroscopy observation
-    of rotational states in a eukaryotic V-ATPase, Nature.
 causal_graphs:
 - graph_id: yeast_v1_domain_catalytic_sector
   title: The V1 sector hydrolyzes ATP in the vacuolar V-ATPase
@@ -156,9 +160,6 @@ causal_graphs:
     - reference: DOI:10.1128/MMBR.70.1.177-191.2006
       notes: Kane 2006 reviews coupling of the ATP-hydrolyzing V1 sector to the membrane
         V0 proton-translocation sector.
-    - reference: DOI:10.1038/nature14365
-      notes: Zhao, Benlekbir and Rubinstein 2015 resolved the intact yeast enzyme
-        containing V0 and V1 rotational states.
 discussions:
 - discussion_id: v1_sector_not_standalone_pump
   prompt: Represent the V1 domain as the ATP-hydrolyzing sector of the intact vacuolar

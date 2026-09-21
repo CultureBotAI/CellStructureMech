@@ -2557,27 +2557,27 @@
         {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
-          "cosine_similarity": 0.76720677
+          "cosine_similarity": 0.7672068
         },
         {
           "identifier": "GO:0120101",
           "label": "bacterial-type flagellum stator complex",
-          "cosine_similarity": 0.7648067
+          "cosine_similarity": 0.76480671
         },
         {
           "identifier": "GO:0120100",
           "label": "bacterial-type flagellum motor",
-          "cosine_similarity": 0.75740931
-        },
-        {
-          "identifier": "GO:0016471",
-          "label": "vacuolar proton-transporting V-type ATPase complex",
-          "cosine_similarity": 0.73605472
+          "cosine_similarity": 0.75740938
         },
         {
           "identifier": "GO:0120102",
           "label": "bacterial-type flagellum secretion apparatus",
-          "cosine_similarity": 0.7355707
+          "cosine_similarity": 0.73557074
+        },
+        {
+          "identifier": "GO:0120107",
+          "label": "bacterial-type flagellum rotor complex",
+          "cosine_similarity": 0.73367415
         }
       ]
     },
@@ -2619,27 +2619,27 @@
         {
           "identifier": "GO:0000221",
           "label": "vacuolar proton-transporting V-type ATPase, V1 domain",
-          "cosine_similarity": 0.95051085
+          "cosine_similarity": 0.95148455
         },
         {
           "identifier": "GO:0000220",
           "label": "vacuolar proton-transporting V-type ATPase, V0 domain",
-          "cosine_similarity": 0.95011353
+          "cosine_similarity": 0.95024756
         },
         {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
-          "cosine_similarity": 0.74062363
+          "cosine_similarity": 0.73856927
         },
         {
           "identifier": "GO:0005774",
           "label": "vacuolar membrane",
-          "cosine_similarity": 0.73846874
+          "cosine_similarity": 0.73736084
         },
         {
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.73605472
+          "cosine_similarity": 0.72876913
         }
       ]
     },
@@ -2650,17 +2650,17 @@
         {
           "identifier": "GO:0000221",
           "label": "vacuolar proton-transporting V-type ATPase, V1 domain",
-          "cosine_similarity": 0.97588714
+          "cosine_similarity": 0.97588713
         },
         {
           "identifier": "GO:0016471",
           "label": "vacuolar proton-transporting V-type ATPase complex",
-          "cosine_similarity": 0.95011353
+          "cosine_similarity": 0.95024756
         },
         {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
-          "cosine_similarity": 0.7653884
+          "cosine_similarity": 0.76538841
         },
         {
           "identifier": "GO:0005774",
@@ -2681,12 +2681,12 @@
         {
           "identifier": "GO:0000220",
           "label": "vacuolar proton-transporting V-type ATPase, V0 domain",
-          "cosine_similarity": 0.97588714
+          "cosine_similarity": 0.97588713
         },
         {
           "identifier": "GO:0016471",
           "label": "vacuolar proton-transporting V-type ATPase complex",
-          "cosine_similarity": 0.95051085
+          "cosine_similarity": 0.95148455
         },
         {
           "identifier": "GO:0043291",
@@ -2696,12 +2696,12 @@
         {
           "identifier": "GO:0005774",
           "label": "vacuolar membrane",
-          "cosine_similarity": 0.72411218
+          "cosine_similarity": 0.72411219
         },
         {
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.71656155
+          "cosine_similarity": 0.71656157
         }
       ]
     },

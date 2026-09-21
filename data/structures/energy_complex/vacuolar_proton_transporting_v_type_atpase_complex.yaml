@@ -38,6 +38,13 @@ curation_history:
   action: ADDRESSED_REVIEW
   changes: Retyped the vacuolar V-ATPase V1 and V0 domain graph nodes as STRUCTURE.
   llm_assisted: true
+- timestamp: '2026-09-21T14:38:56Z'
+  curator: codex
+  action: REPLACE_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1247 by replacing unreadable Zhao 2015 V-ATPase evidence with
+    readable Kane 2006 support and tightening the V0 component role to the supported
+    membrane-sector claim.'
+  llm_assisted: true
 parent_structures:
 - GO:0033176
 part_of:
@@ -57,14 +64,14 @@ components:
   grounding: GO:0000220
   essentiality: ESSENTIAL
   role: Membrane-integral proton-translocation sector of the vacuolar V-ATPase that
-    rotates a c-subunit ring in the vacuolar membrane.
+    couples to the catalytic V1 sector in the vacuolar membrane.
   evidence:
   - reference: GO:0000220
     notes: GO:0000220 defines the vacuolar V0 domain as a V-ATPase domain found in
       the vacuolar membrane.
-  - reference: DOI:10.1038/nature14365
-    notes: Zhao, Benlekbir and Rubinstein 2015 resolved rotational states of a eukaryotic
-      yeast V-ATPase by cryo-electron microscopy.
+  - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+    notes: Kane 2006 reviews the yeast V-ATPase membrane V0 sector and its coupling
+      to the ATP-hydrolyzing V1 sector.
 - component_id: v1_domain
   label: vacuolar proton-transporting V-type ATPase, V1 domain
   component_type: PROTEIN_COMPLEX
@@ -90,9 +97,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Fungal model for vacuolar V-ATPase assembly, reversible disassembly, and cryo-EM
-    structures of the intact complex.
-  reference: DOI:10.1038/nature14365
+  note: Fungal model for vacuolar V-ATPase assembly, reversible disassembly, structure,
+    function, and compartment-specific regulation of acidification.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
 functions:
 - function_id: vacuolar_lumen_acidification
   label: vacuolar acidification
@@ -147,9 +154,6 @@ evidence:
 - reference: DOI:10.1016/j.bbamcr.2008.08.003
   notes: 'Li and Kane 2009, The yeast lysosome-like vacuole: Endpoint and crossroads,
     Biochimica et Biophysica Acta.'
-- reference: DOI:10.1038/nature14365
-  notes: Zhao, Benlekbir and Rubinstein 2015, Electron cryomicroscopy observation
-    of rotational states in a eukaryotic V-ATPase, Nature.
 causal_graphs:
 - graph_id: yeast_v_atpase_rotary_acidification
   title: Yeast V-ATPase couples ATP hydrolysis to vacuolar proton pumping
@@ -235,9 +239,9 @@ causal_graphs:
     evidence:
     - reference: GO:0000220
       notes: GO:0000220 identifies V0 as the membrane domain of the vacuolar V-ATPase.
-    - reference: DOI:10.1038/nature14365
-      notes: Zhao, Benlekbir and Rubinstein 2015 resolved rotational states of the
-        intact yeast enzyme containing V0 and V1.
+    - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+      notes: Kane 2006 reviews V0 as the membrane-integral sector that translocates
+        protons across organelle membranes in the intact yeast V-ATPase.
   - subject: vacuolar_v_atpase
     predicate: acidifies
     object: vacuolar_lumen

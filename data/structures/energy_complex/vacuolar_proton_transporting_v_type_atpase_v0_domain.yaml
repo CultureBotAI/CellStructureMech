@@ -26,6 +26,13 @@ curation_history:
   changes: 'Addressed PR #961 review issue #962 by adding Kane 2006 as direct V0 proton-translocation
     evidence on the membrane-transport graph edge.'
   llm_assisted: true
+- timestamp: '2026-09-21T14:38:56Z'
+  curator: codex
+  action: REPLACE_UNREADABLE_EVIDENCE
+  changes: 'Resolved #1247 by replacing the unreadable Zhao 2015 canonical yeast example
+    with readable Kane 2006 support and removing the redundant Zhao 2015 top-level
+    and graph evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0033179
 part_of:
@@ -44,9 +51,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Yeast model in which cryo-EM resolved the intact V-ATPase with rotational
-    states of its membrane V0 sector.
-  reference: DOI:10.1038/nature14365
+  note: Yeast model for the V0 membrane sector of the vacuolar V-ATPase and its coupling
+    to the V1 sector.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
 functions:
 - function_id: v0_membrane_proton_translocation_sector
   label: V0-sector membrane proton translocation
@@ -72,9 +79,6 @@ evidence:
 - reference: DOI:10.1128/MMBR.70.1.177-191.2006
   notes: Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast
     Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
-- reference: DOI:10.1038/nature14365
-  notes: Zhao, Benlekbir and Rubinstein 2015, Electron cryomicroscopy observation
-    of rotational states in a eukaryotic V-ATPase, Nature.
 causal_graphs:
 - graph_id: yeast_v0_domain_membrane_sector
   title: The V0 sector anchors proton transport in the vacuolar membrane
@@ -124,9 +128,6 @@ causal_graphs:
     description: In the intact V-ATPase, V0 forms the membrane path for rotary proton
       transport across the vacuolar membrane.
     evidence:
-    - reference: DOI:10.1038/nature14365
-      notes: Zhao, Benlekbir and Rubinstein 2015 resolved the intact yeast enzyme
-        containing V0 and V1 rotational states.
     - reference: DOI:10.1128/MMBR.70.1.177-191.2006
       notes: Kane 2006 reviews V0 as the membrane-integral sector that translocates
         protons across organelle membranes in the intact yeast V-ATPase.
