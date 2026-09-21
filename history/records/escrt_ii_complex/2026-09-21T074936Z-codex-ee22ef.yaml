@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/escrt_ii_complex.yaml
+  slug: escrt_ii_complex
+session:
+  id: 2026-09-21T074936Z-codex-ee22ef
+  timestamp: '2026-09-21T07:49:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1221
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - evidence
+  - discussions
+  summary: Remove abstract-only Henne ESCRT-II support
+  details: 'Resolved review issue #1221 by removing DOI:10.1016/j.devcel.2011.05.015 from
+    ESCRT-II component and discussion evidence where the reachable PubMed abstract does not
+    support named Vps22, Vps25, Vps36, Vps4, or stoichiometry claims. Teo 2004, Lata 2008,
+    Im and Hurley 2008, and Hierro 2004 remain as narrower inspected sources for those claims.'
