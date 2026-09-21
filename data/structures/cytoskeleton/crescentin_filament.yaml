@@ -5,7 +5,7 @@ structure_kind: FILAMENT
 definition: A bacterial intermediate filament-like cytoskeletal filament assembled
   from crescentin that localizes along the inner curvature of Caulobacter vibrioides
   cells and helps maintain their curved cell shape.
-definition_source: DOI:10.1016/S0092-8674(03)00935-8
+definition_source: DOI:10.1073/pnas.2309984121
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-11T09:50:41Z'
@@ -27,15 +27,22 @@ curation_history:
     to Caulobacter vibrioides NA1000 and correcting graph node types for the inner-curvature
     localization cue and curved morphology.'
   llm_assisted: true
+- timestamp: '2026-09-21T19:15:25Z'
+  curator: codex
+  action: REPLACED_UNREADABLE_EVIDENCE
+  changes: '#1260: Replaced unreadable Ausmees 2003 citations with readable Liu 2024,
+    Charbon 2009, and Woldemeskel and Goley 2018 support for crescentin filament structure,
+    localization, and curvature-maintenance claims.'
+  llm_assisted: true
 parent_structures:
 - GO:0005856
 synonyms:
 - synonym_text: CreS filament
   synonym_type: RELATED_SYNONYM
-  source: DOI:10.1016/S0092-8674(03)00935-8
+  source: DOI:10.1073/pnas.2309984121
 - synonym_text: bacterial intermediate filament-like crescentin filament
   synonym_type: RELATED_SYNONYM
-  source: DOI:10.1016/S0092-8674(03)00935-8
+  source: DOI:10.1073/pnas.2309984121
 components:
 - component_id: crescentin_cres
   label: crescentin
@@ -50,9 +57,9 @@ components:
   role: Intermediate filament-like coiled-coil protein that assembles into the curved
     Caulobacter crescentin filament.
   evidence:
-  - reference: DOI:10.1016/S0092-8674(03)00935-8
-    notes: Ausmees et al. 2003 identified crescentin/CreS as a Caulobacter cytoskeletal
-      protein required for crescent cell shape.
+  - reference: DOI:10.1016/j.tim.2017.03.006
+    notes: Woldemeskel and Goley 2018 review CreS/crescentin as the Caulobacter cytoskeletal
+      protein responsible for curvature.
   - reference: DOI:10.1073/pnas.2309984121
     notes: Liu et al. 2024 determined the cryo-EM structure of Caulobacter crescentin
       filaments.
@@ -60,31 +67,32 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:155892
   taxon_label: Caulobacter vibrioides
   presence: COMMON
-  note: Crescentin filaments have been directly characterized in Caulobacter crescentus,
-    now classified as Caulobacter vibrioides.
-  reference: DOI:10.1016/S0092-8674(03)00935-8
+  note: Crescentin filaments have been directly characterized in Caulobacter crescentus
+    (vibrioides).
+  reference: DOI:10.1073/pnas.2309984121
 canonical_examples:
-- taxon_id: NCBITaxon:565050
-  taxon_label: Caulobacter vibrioides NA1000
-  note: Wild-type laboratory strain, also named CB15N in Ausmees et al. 2003, used
-    to define CreS-dependent curved morphology.
-  reference: DOI:10.1016/S0092-8674(03)00935-8
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  note: Caulobacter crescentus (vibrioides) was used to resolve CreS filaments by
+    cryo-EM and localize them near the inner membrane on the concave cell side by
+    cryo-ET.
+  reference: DOI:10.1073/pnas.2309984121
 functions:
 - function_id: caulobacter_cell_curvature
   label: Caulobacter cell-curvature maintenance
   description: The crescentin filament tracks along the inner curvature of Caulobacter
     cells and maintains the vibrioid or crescent cell shape.
   evidence:
-  - reference: DOI:10.1016/S0092-8674(03)00935-8
-    notes: Ausmees et al. 2003 showed that cells lacking crescentin become straight
-      rods and that crescentin localizes to the inner cell curvature.
+  - reference: DOI:10.1016/j.tim.2017.03.006
+    notes: Woldemeskel and Goley 2018 review crescentin as the CreS-encoded Caulobacter
+      cytoskeletal protein for curvature whose deletion yields straight rods.
   - reference: DOI:10.1101/gad.1795509
     notes: Charbon et al. 2009 followed crescentin assembly, organization and dynamics
       in vivo.
 evidence:
-- reference: DOI:10.1016/S0092-8674(03)00935-8
-  notes: 'Ausmees, Kuhn and Jacobs-Wagner 2003, ''The bacterial cytoskeleton: an intermediate
-    filament-like function in cell shape'', Cell.'
+- reference: DOI:10.1016/j.tim.2017.03.006
+  notes: 'Woldemeskel and Goley 2018, ''Shapeshifting to survive: shape determination
+    and regulation in Caulobacter crescentus'', Trends in Microbiology.'
 - reference: DOI:10.1101/gad.1795509
   notes: 'Charbon, Cabeen and Jacobs-Wagner 2009, ''Bacterial intermediate filaments:
     in vivo assembly, organization, and dynamics of crescentin'', Genes & Development.'
@@ -134,18 +142,18 @@ causal_graphs:
     description: The crescentin filament is positioned along the inner curved side
       of Caulobacter cells.
     evidence:
-    - reference: DOI:10.1016/S0092-8674(03)00935-8
-      notes: Ausmees et al. 2003 localized crescentin to the inner curvature of Caulobacter
-        cells.
+    - reference: DOI:10.1073/pnas.2309984121
+      notes: Liu et al. 2024 used cryo-ET to localize crescentin filaments on the
+        concave side of curved Caulobacter cells near the inner membrane.
   - subject: crescentin_filament
     predicate: maintains
     object: curved_cell_shape
     description: Crescentin filament function is required for Caulobacter vibrioides
       to retain its curved morphology.
     evidence:
-    - reference: DOI:10.1016/S0092-8674(03)00935-8
-      notes: Ausmees et al. 2003 reported that crescentin-deficient Caulobacter cells
-        straighten.
+    - reference: DOI:10.1016/j.tim.2017.03.006
+      notes: Woldemeskel and Goley 2018 review creS deletion as producing straight
+        Caulobacter rods.
 discussions:
 - discussion_id: resolve_crescentin_family_grounding
   prompt: Resolve exact source-neutral grounding for full-length crescentin/CreS family

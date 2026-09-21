@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/crescentin_filament.yaml
+  slug: crescentin_filament
+session:
+  id: 2026-09-21T191603Z-claude-code-8a7d7a
+  timestamp: '2026-09-21T19:16:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1260
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Replace unreadable crescentin filament evidence
+  details: Replaced unreadable Ausmees 2003 citations on data/structures/cytoskeleton/crescentin_filament.yaml
+    with readable Liu 2024 full-text evidence for CreS/crescentin filament identity and inner-curvature
+    localization, Charbon 2009 evidence already covering in vivo filament assembly, and Woldemeskel
+    and Goley 2018 full-text support for crescentin-dependent Caulobacter cell curvature.
+    Narrowed the canonical example from a CB15N/NA1000 strain assertion backed only by the
+    unreadable paper to the directly supported Caulobacter vibrioides species scope.
