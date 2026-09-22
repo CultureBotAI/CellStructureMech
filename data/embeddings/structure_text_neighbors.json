@@ -5593,6 +5593,11 @@
       "label": "early endosome membrane",
       "neighbors": [
         {
+          "identifier": "GO:0031902",
+          "label": "late endosome membrane",
+          "cosine_similarity": 0.95895068
+        },
+        {
           "identifier": "GO:0005769",
           "label": "early endosome",
           "cosine_similarity": 0.94476985
@@ -5611,11 +5616,6 @@
           "identifier": "GO:0031905",
           "label": "early endosome lumen",
           "cosine_similarity": 0.90854279
-        },
-        {
-          "identifier": "GO:0005768",
-          "label": "endosome",
-          "cosine_similarity": 0.90180491
         }
       ]
     },
@@ -5872,6 +5872,11 @@
       "label": "endosome membrane",
       "neighbors": [
         {
+          "identifier": "GO:0031902",
+          "label": "late endosome membrane",
+          "cosine_similarity": 0.96496382
+        },
+        {
           "identifier": "GO:0005768",
           "label": "endosome",
           "cosine_similarity": 0.95098493
@@ -5890,11 +5895,6 @@
           "identifier": "GO:0005769",
           "label": "early endosome",
           "cosine_similarity": 0.91811731
-        },
-        {
-          "identifier": "GO:0030666",
-          "label": "endocytic vesicle membrane",
-          "cosine_similarity": 0.90811903
         }
       ]
     },
@@ -6776,6 +6776,11 @@
           "cosine_similarity": 0.95086364
         },
         {
+          "identifier": "GO:0031902",
+          "label": "late endosome membrane",
+          "cosine_similarity": 0.94901688
+        },
+        {
           "identifier": "GO:0010008",
           "label": "endosome membrane",
           "cosine_similarity": 0.93892716
@@ -6789,11 +6794,37 @@
           "identifier": "GO:0031904",
           "label": "endosome lumen",
           "cosine_similarity": 0.91601979
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031902",
+      "label": "late endosome membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0010008",
+          "label": "endosome membrane",
+          "cosine_similarity": 0.96496382
         },
         {
-          "identifier": "GO:0005771",
-          "label": "multivesicular body",
-          "cosine_similarity": 0.91450201
+          "identifier": "GO:0031901",
+          "label": "early endosome membrane",
+          "cosine_similarity": 0.95895068
+        },
+        {
+          "identifier": "GO:0005770",
+          "label": "late endosome",
+          "cosine_similarity": 0.94901688
+        },
+        {
+          "identifier": "GO:0005768",
+          "label": "endosome",
+          "cosine_similarity": 0.92109877
+        },
+        {
+          "identifier": "GO:0005769",
+          "label": "early endosome",
+          "cosine_similarity": 0.9046695
         }
       ]
     },
