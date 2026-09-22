@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/early_endosome_lumen.yaml
+  slug: early_endosome_lumen
+session:
+  id: 2026-09-22T173344Z-claude-code-da058c
+  timestamp: '2026-09-22T17:33:44Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1306
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1307
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1308
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1305
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Addressed PR #1305 early endosome lumen review issues'
+  details: 'Resolved #1306 by replacing broad GO:0070013 parentage with GO:0031904 endosome
+    lumen parentage and adding the corresponding topology edge, resolved #1307 by renaming
+    the cargo-compartment function around early endosome lumen cargo routing, and resolved
+    #1308 by making the Trypanosoma cruzi taxonomic and canonical-example notes explicitly
+    lumen-specific.'

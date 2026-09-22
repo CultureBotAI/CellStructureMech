@@ -19,8 +19,16 @@ curation_history:
     scope, a cargo-compartment function, GO/UniProt/DOI evidence, a nonmechanistic
     lumen-topology graph, and a resolved lumen-boundary interpretation.
   llm_assisted: true
+- timestamp: '2026-09-22T17:33:20Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1305 review issues #1306, #1307, and #1308 by using GO:0031904
+    endosome lumen parentage, making the Trypanosoma cruzi notes lumen-specific, renaming
+    the cargo-routing function, and adding an endosome-lumen specialization edge to
+    the topology graph.'
+  llm_assisted: true
 parent_structures:
-- GO:0070013
+- GO:0031904
 part_of:
 - GO:0005769
 synonyms:
@@ -33,18 +41,18 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:5693
   taxon_label: Trypanosoma cruzi
   presence: VARIABLE
-  note: Trypanosoma cruzi epimastigotes carry early endosomal compartments that receive
-    cargo between cytostome entry and reservosome storage.
+  note: Trypanosoma cruzi epimastigotes route endocytic cargo through membrane-enclosed
+    early endosome lumens between cytostome entry and reservosome storage.
   reference: DOI:10.1078/0171-9335-00112
 canonical_examples:
 - taxon_id: NCBITaxon:5693
   taxon_label: Trypanosoma cruzi
-  note: Kinetoplastid parasite whose epimastigote endocytic cargo passes through an
-    early endosomal network.
+  note: Kinetoplastid parasite whose epimastigote endocytic cargo traverses membrane-enclosed
+    early endosome lumens before posterior reservosome storage.
   reference: DOI:10.1078/0171-9335-00112
 functions:
-- function_id: early_endosome_lumen_cargo_compartment
-  label: early endosome lumen cargo compartment
+- function_id: early_endosome_lumen_cargo_routing
+  label: early endosome lumen cargo routing
   description: The early endosome lumen is the membrane-enclosed volume inside the
     early endosome through which newly internalized endocytic cargo is routed.
   evidence:
@@ -60,16 +68,16 @@ functions:
 evidence:
 - reference: GO:0031905
   notes: Gene Ontology cellular-component term for the early endosome lumen.
-- reference: GO:0070013
-  notes: Gene Ontology cellular-component parent term for intracellular organelle
-    lumen.
+- reference: GO:0031904
+  notes: Gene Ontology cellular-component term for the broader endosome lumen class.
 - reference: GO:0005769
   notes: Gene Ontology cellular-component term for the early endosome.
 - reference: GO:0031901
   notes: Gene Ontology cellular-component term for the early endosome membrane that
     bounds the lumen.
 - reference: uniprot.location:SL-0337
-  notes: UniProt Subcellular Location entry SL-0337 maps Early endosome lumen to GO:0031905.
+  notes: UniProt Subcellular Location entry SL-0337 maps Early endosome lumen to GO:0031905
+    and places it under Endosome lumen.
 - reference: DOI:10.1078/0171-9335-00112
   notes: 'Porto-Carreiro et al. 2000, Trypanosoma cruzi epimastigote endocytic pathway:
     cargo enters the cytostome and passes through an early endosomal network before
@@ -88,6 +96,10 @@ causal_graphs:
     label: early endosome lumen
     node_type: CELLULAR_LOCALIZATION
     grounding: GO:0031905
+  - node_id: endosome_lumen
+    label: endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031904
   - node_id: early_endosome_membrane
     label: early endosome membrane
     node_type: STRUCTURE
@@ -97,6 +109,15 @@ causal_graphs:
     node_type: ORGANELLE
     grounding: GO:0005769
   edges:
+  - subject: early_endosome_lumen
+    predicate: is a
+    object: endosome_lumen
+    description: The early endosome lumen is a specialized endosome lumen.
+    evidence:
+    - reference: uniprot.location:SL-0337
+      notes: UniProt SL-0337 places the early endosome lumen under endosome lumen.
+    - reference: GO:0031904
+      notes: GO:0031904 identifies the broader endosome lumen class.
   - subject: early_endosome_lumen
     predicate: is part of
     object: early_endosome
