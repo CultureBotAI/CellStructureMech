@@ -19,6 +19,13 @@ curation_history:
     function, GO/UniProt/PubMed evidence, a nonmechanistic lumen-topology graph, and
     a resolved lumen-boundary interpretation.
   llm_assisted: true
+- timestamp: '2026-09-22T20:57:52Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1321 review issues #1322 and #1323 by renaming the lumen
+    function from cargo routing to lumen compartmentalization and rewriting the T.
+    brucei notes so transferrin receptor is not modeled as lumenal cargo.'
+  llm_assisted: true
 parent_structures:
 - GO:0031904
 part_of:
@@ -34,30 +41,25 @@ taxonomic_distribution:
   taxon_label: Trypanosoma brucei
   presence: VARIABLE
   note: Trypanosoma brucei bloodstream and procyclic cells contain TbRAB11-positive
-    endosomal recycling compartments carrying transferrin receptor cargo.
+    membrane-enclosed endosomal recycling compartments.
   reference: PMID:11683389
 canonical_examples:
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei
-  note: Kinetoplastid parasite whose TbRAB11-positive recycling compartments instantiate
-    membrane-enclosed recycling endosome lumens around transferrin receptor cargo.
+  note: Kinetoplastid parasite whose TbRAB11-positive endosomal recycling compartments
+    instantiate lumens enclosed by recycling endosome membranes.
   reference: PMID:11683389
 functions:
-- function_id: recycling_endosome_lumen_cargo_routing
-  label: recycling endosome lumen cargo routing
-  description: The recycling endosome lumen is the bounded volume inside the recycling
-    endosome through which endocytosed cargo can be routed during plasma-membrane
-    recycling.
+- function_id: recycling_endosome_lumen_compartmentalization
+  label: recycling endosome lumen compartmentalization
+  description: The recycling endosome lumen is the bounded volume enclosed by recycling-endosome
+    membranes inside a plasma-membrane recycling compartment.
   evidence:
   - reference: GO:0034777
     notes: GO:0034777 defines the recycling endosome lumen as the volume enclosed
       by recycling-endosome membranes.
-  - reference: GO:0055037
-    notes: GO:0055037 defines the recycling endosome as targeting molecules to the
-      plasma membrane.
-  - reference: PMID:11683389
-    notes: Jeffries, Morgan and Field 2001 localized TbRAB11 to T. brucei endosomal
-      recycling compartments carrying transferrin receptor cargo.
+  - reference: GO:0055038
+    notes: GO:0055038 identifies the surrounding recycling endosome membrane.
 evidence:
 - reference: GO:0034777
   notes: Gene Ontology cellular-component term for the recycling endosome lumen.
