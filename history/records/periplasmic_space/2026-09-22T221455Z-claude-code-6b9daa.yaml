@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/periplasmic_space.yaml
+  slug: periplasmic_space
+session:
+  id: 2026-09-22T221455Z-claude-code-6b9daa
+  timestamp: '2026-09-22T22:14:55Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1328
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1327
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - record
+  summary: Fixed periplasmic space extracellular-region relation
+  details: 'Addressed PR #1327 review issue #1328 by moving GO:0005576 from parent_structures
+    to part_of in the GO:0042597 periplasmic space record, matching the Gene Ontology part_of
+    relation to extracellular region.'

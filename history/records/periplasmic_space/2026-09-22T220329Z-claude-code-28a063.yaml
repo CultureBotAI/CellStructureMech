@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/periplasmic_space.yaml
+  slug: periplasmic_space
+session:
+  id: 2026-09-22T220329Z-claude-code-28a063
+  timestamp: '2026-09-22T22:03:29Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - record
+  summary: Added the generic periplasmic space record
+  details: Created the GO:0042597 periplasmic space record as the generic parent of the existing
+    outer membrane-bounded periplasmic space record. The record adds the GO exact synonym,
+    UniProt SL-0200 xref, E. coli and S. aureus canonical examples, DOI/PMID evidence, and
+    resolved discussions documenting subtype and boundary decisions.
