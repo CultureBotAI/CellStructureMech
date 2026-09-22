@@ -6476,14 +6476,14 @@
           "cosine_similarity": 0.89018692
         },
         {
+          "identifier": "GO:0005796",
+          "label": "Golgi lumen",
+          "cosine_similarity": 0.88939941
+        },
+        {
           "identifier": "GO:0005802",
           "label": "trans-Golgi network",
           "cosine_similarity": 0.88899306
-        },
-        {
-          "identifier": "GO:0032580",
-          "label": "Golgi cisterna membrane",
-          "cosine_similarity": 0.87801243
         }
       ]
     },
@@ -6608,6 +6608,37 @@
           "identifier": "GO:0012507",
           "label": "ER to Golgi transport vesicle membrane",
           "cosine_similarity": 0.93901257
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005796",
+      "label": "Golgi lumen",
+      "neighbors": [
+        {
+          "identifier": "GO:0005794",
+          "label": "Golgi apparatus",
+          "cosine_similarity": 0.88939941
+        },
+        {
+          "identifier": "GO:0031985",
+          "label": "Golgi cisterna",
+          "cosine_similarity": 0.88800022
+        },
+        {
+          "identifier": "GO:0000139",
+          "label": "Golgi membrane",
+          "cosine_similarity": 0.85428092
+        },
+        {
+          "identifier": "GO:0005788",
+          "label": "endoplasmic reticulum lumen",
+          "cosine_similarity": 0.84975405
+        },
+        {
+          "identifier": "GO:0032580",
+          "label": "Golgi cisterna membrane",
+          "cosine_similarity": 0.83999696
         }
       ]
     },
