@@ -1,0 +1,87 @@
+identifier: GO:0042597
+label: periplasmic space
+structure_category: ENVELOPE
+structure_kind: SUBCELLULAR_REGION
+definition: The region between the inner (cytoplasmic) and outer membrane (Gram-negative
+  Bacteria) or cytoplasmic membrane and cell wall (Fungi and Gram-positive Bacteria).
+definition_source: GO:0042597
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T22:02:13Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T22:02:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym, GO extracellular-region parentage, the UniProt
+    Subcellular Location xref, E. coli and S. aureus canonical examples, source evidence,
+    and resolved modelling discussions separating the generic periplasmic space from
+    its outer membrane-bounded subtype and variable envelope boundaries.
+  llm_assisted: true
+synonyms:
+- synonym_text: periplasm
+  synonym_type: EXACT_SYNONYM
+  source: GO:0042597
+parent_structures:
+- GO:0005576
+xrefs:
+- uniprot.location:SL-0200
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Canonical Gram-negative model whose periplasm lies between the cytoplasmic
+    and outer membranes and houses the thin peptidoglycan wall.
+  reference: DOI:10.1101/cshperspect.a000414
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: Gram-positive model in which cryo-electron microscopy resolved a native periplasmic
+    space between the plasma membrane and thick wall.
+  reference: PMID:16428405
+evidence:
+- reference: GO:0042597
+  notes: Gene Ontology cellular-component term for the generic periplasmic space,
+    with the exact synonym periplasm and the UniProt Subcellular Location xref SL-0200.
+- reference: uniprot.location:SL-0200
+  notes: UniProt Subcellular Location entry for Periplasm, mapped to GO:0042597.
+- reference: DOI:10.1101/cshperspect.a000414
+  notes: Silhavy, Kahne and Walker 2010 review the Gram-negative envelope, where the
+    periplasm lies between the inner and outer membranes.
+- reference: PMID:16428405
+  notes: Matias and Beveridge 2006 used cryo-electron microscopy to visualize the
+    native cell-wall organization and periplasmic space in Staphylococcus aureus.
+discussions:
+- discussion_id: generic_periplasm_not_diderm_periplasm
+  prompt: Keep the generic periplasmic space record separate from the outer membrane-bounded
+    periplasmic space record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0042597 is the broader periplasmic-space class covering Gram-negative,
+    Gram-positive, and fungal topologies, while GO:0030288 is the narrower outer membrane-bounded
+    subclass.
+  resolution_note: Curated GO:0042597 as the parent region and left GO:0030288 represented
+    by the existing outer membrane-bounded periplasmic space record.
+  evidence:
+  - reference: GO:0042597
+    explanation: GO:0042597 denotes the generic periplasmic space.
+  - reference: GO:0030288
+    explanation: GO:0030288 denotes the outer membrane-bounded periplasmic space.
+- discussion_id: generic_boundaries_are_not_components
+  prompt: Do not list boundary membranes or walls as taxon-agnostic components of
+    the generic periplasmic space.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: The periplasmic space is the region delimited by envelope layers; the
+    delimiting layers vary across Gram-negative bacteria, Gram-positive bacteria,
+    and fungi and are not uniformly contained by the generic region.
+  resolution_note: Left the generic record component-free and reserved contained cell-wall
+    modelling for narrower records such as GO:0030288.
+  evidence:
+  - reference: GO:0042597
+    explanation: The GO definition distinguishes the membrane-to-membrane and membrane-to-wall
+      variants that the generic term covers.
+  - reference: DOI:10.1101/cshperspect.a000414
+    explanation: The Gram-negative envelope bounds the periplasm with an outer membrane.
+  - reference: PMID:16428405
+    explanation: The S. aureus periplasm is a cytoplasmic-membrane-to-wall example.
