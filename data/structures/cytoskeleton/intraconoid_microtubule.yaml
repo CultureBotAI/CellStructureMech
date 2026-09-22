@@ -1,0 +1,191 @@
+identifier: GO:0033289
+label: intraconoid microtubule
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A microtubule located such that it threads through the conoid and projects
+  through the polar ring.
+definition_source: GO:0033289
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T13:08:26Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T13:09:14Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO microtubule parentage and apical-complex parthood, a reviewed
+    label-only alpha/beta tubulin component, Toxoplasma gondii scope, GO/DOI evidence,
+    a nonmechanistic intraconoid microtubule topology graph, and curation discussions
+    for filament-end factors and the conoid-fiber boundary.
+  llm_assisted: true
+parent_structures:
+- GO:0005874
+part_of:
+- GO:0020007
+components:
+- component_id: alpha_beta_tubulins
+  label: alpha- and beta-tubulins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the apicomplexan alpha- and beta-tubulin
+    set in intraconoid microtubules was verified in this pass; broad tubulin/FtsZ-domain
+    groundings would cover unrelated bacterial, archaeal and phage tubulin-like proteins
+    outside GO:0033289.
+  role: Tubulin subunits that polymerize into the two conventional intraconoid microtubules
+    threading through the Toxoplasma conoid.
+  evidence:
+  - reference: GO:0005874
+    notes: Gene Ontology defines microtubules as polymeric tubulin tubes.
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Hu et al. 2006 grouped the two Toxoplasma intraconoid microtubules with
+      conventional alpha/beta-tubulin microtubules.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  presence: COMMON
+  note: Toxoplasma tachyzoites have two intraconoid microtubules running through the
+    center of the conoid at the apical complex.
+  reference: DOI:10.1371/journal.ppat.0020013
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model in which two conventional microtubules inside the conoid
+    were distinguished from both subpellicular microtubules and the conoid's unusual
+    tubulin polymers.
+  reference: DOI:10.1083/jcb.200112086
+functions:
+- function_id: conoid_center_microtubule_scaffold
+  label: conoid-center microtubule scaffold
+  description: The two intraconoid microtubules provide conventional microtubule filaments
+    that pass through the center of the Toxoplasma conoid and extend through the apical
+    polar ring.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Hu et al. 2006 described a pair of Toxoplasma intraconoid microtubules
+      that pass through the center of the conoid.
+evidence:
+- reference: GO:0033289
+  notes: Gene Ontology cellular-component term for the intraconoid microtubule.
+- reference: GO:0005874
+  notes: Gene Ontology places intraconoid microtubules under the microtubule class.
+- reference: GO:0020007
+  notes: Gene Ontology models intraconoid microtubules as part of the apical complex.
+- reference: DOI:10.1083/jcb.200112086
+  notes: Hu, Roos and Murray 2002, A novel polymer of tubulin forms the conoid of
+    Toxoplasma gondii, Journal of Cell Biology.
+- reference: DOI:10.1371/journal.ppat.0020013
+  notes: Hu et al. 2006, Cytoskeletal Components of an Invasion Machine--the Apical
+    Complex of Toxoplasma gondii, PLOS Pathogens.
+causal_graphs:
+- graph_id: toxoplasma_intraconoid_microtubule_topology
+  title: Two tubulin microtubules thread through the Toxoplasma conoid
+  description: Alpha- and beta-tubulins polymerize into a pair of conventional intraconoid
+    microtubules that run through the center of the Toxoplasma conoid and project
+    through the apical polar ring.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records mature intraconoid-microtubule topology. It leaves
+    filament-end organization, accessory proteins and assembly timing unresolved.
+  nodes:
+  - node_id: alpha_beta_tubulins
+    label: alpha- and beta-tubulins
+    node_type: GENE_OR_PROTEIN
+    component_ref: alpha_beta_tubulins
+  - node_id: intraconoid_microtubule
+    label: intraconoid microtubule
+    node_type: STRUCTURE
+    grounding: GO:0033289
+  - node_id: conoid
+    label: conoid
+    node_type: STRUCTURE
+    grounding: GO:0020010
+  - node_id: polar_ring_of_apical_complex
+    label: polar ring of apical complex
+    node_type: STRUCTURE
+    grounding: GO:0020031
+  - node_id: apical_complex
+    label: apical complex
+    node_type: STRUCTURE
+    grounding: GO:0020007
+  edges:
+  - subject: alpha_beta_tubulins
+    predicate: polymerize into
+    object: intraconoid_microtubule
+    description: Alpha- and beta-tubulin subunits polymerize into the two conventional
+      intraconoid microtubules in the Toxoplasma apical complex.
+    evidence:
+    - reference: GO:0005874
+      notes: Gene Ontology defines microtubules as polymeric tubulin tubes.
+    - reference: DOI:10.1371/journal.ppat.0020013
+      notes: Hu et al. 2006 distinguished Toxoplasma intraconoid microtubules as conventional
+        alpha/beta-tubulin microtubules.
+  - subject: intraconoid_microtubule
+    predicate: threads through
+    object: conoid
+    description: The pair of intraconoid microtubules passes through the center of
+      the conoid.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.0020013
+      notes: Hu et al. 2006 placed the two intraconoid microtubules inside the Toxoplasma
+        conoid.
+  - subject: intraconoid_microtubule
+    predicate: projects through
+    object: polar_ring_of_apical_complex
+    description: The distal ends of the intraconoid microtubules project through the
+      apical polar ring.
+    evidence:
+    - reference: GO:0033289
+      notes: Gene Ontology defines the intraconoid microtubule by its path through
+        the conoid and projection through the polar ring.
+  - subject: intraconoid_microtubule
+    predicate: is part of
+    object: apical_complex
+    description: Intraconoid microtubules are cytoskeletal filaments of the apicomplexan
+      apical complex.
+    evidence:
+    - reference: GO:0020007
+      notes: Gene Ontology models the intraconoid microtubule as part of the apical
+        complex.
+discussions:
+- discussion_id: resolve_intraconoid_microtubule_end_factors
+  prompt: Resolve the filament-end organizers and accessory proteins that place the
+    two intraconoid microtubules within the conoid.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#toxoplasma_intraconoid_microtubule_topology
+  rationale: This first record captures the mature topology of the two Toxoplasma
+    intraconoid microtubules but leaves candidate end-binding proteins, polar-ring
+    linkers and assembly timing out until their boundaries and direct evidence are
+    curated.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Hu et al. 2006 localized multiple candidate apical cytoskeletal proteins
+      near the Toxoplasma conoid and intraconoid microtubules.
+  posed_by: codex
+  posed_date: '2026-09-22'
+- discussion_id: distinguish_conoid_tubulin_fibers
+  prompt: Keep the conventional intraconoid microtubules distinct from the unusual
+    ribbon-like tubulin fibers that form the conoid.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#alpha_beta_tubulins
+  rationale: Hu et al. distinguished the two intraconoid microtubules from the conoid
+    fibers, whose tubulin protofilaments form a ribbon polymer rather than a closed
+    microtubule tube. This record therefore curates only the two conventional intraconoid
+    microtubules.
+  evidence:
+  - reference: DOI:10.1083/jcb.200112086
+    notes: Hu, Roos and Murray 2002 resolved the Toxoplasma conoid fibers as an unusual
+      tubulin polymer distinct from conventional microtubules.
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Hu et al. 2006 separately described the conoid fibers, the two intraconoid
+      microtubules and the subpellicular microtubules of Toxoplasma.
+  posed_by: codex
+  posed_date: '2026-09-22'
+  resolved_date: '2026-09-22'
