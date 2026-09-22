@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/endospore_forming_forespore.yaml
+  slug: endospore_forming_forespore
+session:
+  id: 2026-09-22T225046Z-codex-c97466
+  timestamp: '2026-09-22T22:50:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1330
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1331
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1329
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address forespore PR review issues
+  details: 'Resolved PR #1329 review issues #1330 and #1331 by retargeting the Bacillus subtilis
+    canonical example to the broad Bacillus endospore review and by replacing over-specific
+    SpoII protein names in the nonmechanistic asymmetric-septation graph scope note with a
+    high-level description of compartment signaling, DNA translocation, and engulfment machinery
+    left to a future mechanistic sporulation pass.'

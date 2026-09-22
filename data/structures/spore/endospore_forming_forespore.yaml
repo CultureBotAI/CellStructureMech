@@ -21,6 +21,13 @@ curation_history:
     GO/UniProt/literature evidence, a nonmechanistic asymmetric-septation graph, and
     a bacterial-versus-ascospore boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-22T22:50:32Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1330 by citing the Bacillus endospore review for the Bacillus
+    subtilis canonical example and resolved #1331 by relaxing over-specific SpoII
+    protein names in the graph scope note.'
+  llm_assisted: true
 synonyms:
 - synonym_text: forespore
   synonym_type: EXACT_SYNONYM
@@ -45,7 +52,7 @@ canonical_examples:
   taxon_label: Bacillus subtilis
   note: Classical endospore model in which an asymmetric polar septum creates a smaller
     forespore compartment and a larger mother-cell compartment.
-  reference: DOI:10.1016/j.cub.2005.02.041
+  reference: DOI:10.1038/nrmicro2921
 evidence:
 - reference: GO:0042601
   notes: Gene Ontology cellular-component term for the endospore-forming forespore.
@@ -68,8 +75,8 @@ causal_graphs:
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph records the compartment topology created by asymmetric division
-    and leaves the SpoIIE, SpoIIQ, SpoIIIA and SpoIIIE protein networks that drive
-    signaling and engulfment to a dedicated mechanistic sporulation pass.
+    and leaves the compartment-specific signaling, DNA translocation, and engulfment
+    machinery to a dedicated mechanistic sporulation pass.
   nodes:
   - node_id: asymmetric_polar_septum
     label: asymmetric polar septum
