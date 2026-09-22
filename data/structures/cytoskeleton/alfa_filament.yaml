@@ -33,6 +33,13 @@ curation_history:
     cited paper describes AlfA as a plasmid actin but does not attest that full phrase
     as an alternate filament label.
   llm_assisted: true
+- timestamp: '2026-09-22T07:01:00Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issues #1265 and #1266 by correcting the Tanaka AlfB
+    citation note and simplifying the AlfB/parN graph to a graph-scoped centromere-complex
+    adapter node.'
+  llm_assisted: true
 parent_structures:
 - GO:0005856
 components:
@@ -95,8 +102,9 @@ evidence:
     subtilis reveals the structure of a simplified actin-like filament at 3.4-A resolution,
     PNAS.
 - reference: DOI:10.1128/JB.01312-09
-  notes: Tanaka and Ogura 2010, Bacillus subtilis plasmid pBET131 is closely related
-    to pLS32 and carries a replication and partitioning region.
+  notes: Tanaka 2010, Functional analysis of the stability determinant AlfB of pBET131,
+    a miniplasmid derivative of Bacillus subtilis (natto) plasmid pLS32, Journal of
+    Bacteriology.
 causal_graphs:
 - graph_id: alfa_pls32_family_partitioning
   title: AlfA filaments support pLS32-family plasmid segregation
@@ -116,12 +124,6 @@ causal_graphs:
     label: AlfA filament
     node_type: STRUCTURE
     grounding: cellstructuremech:alfa_filament
-  - node_id: alfb
-    label: AlfB
-    node_type: GENE_OR_PROTEIN
-  - node_id: parn_centromere
-    label: parN centromere
-    node_type: GENETIC_ELEMENT
   - node_id: alfb_parn_complex
     label: AlfB-parN plasmid-centromere complex
     node_type: STRUCTURE
@@ -140,23 +142,6 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.1716424115
       notes: Szewczak-Harris and Lowe 2018 solved a high-resolution AlfA filament
         cryo-EM reconstruction.
-  - subject: alfb
-    predicate: binds
-    object: parn_centromere
-    description: AlfB binds the pLS32-family parN centromeric DNA region.
-    evidence:
-    - reference: DOI:10.1073/pnas.1304127111
-      notes: Polka et al. 2014 analyzed AlfB and parN control of the AlfA partition
-        system.
-  - subject: alfb
-    predicate: forms a centromere complex with
-    object: alfb_parn_complex
-    description: AlfB and parN form the partition adaptor complex that links plasmid
-      DNA to the AlfA filament system.
-    evidence:
-    - reference: DOI:10.1073/pnas.1304127111
-      notes: Polka et al. 2014 characterized the AlfB/parN-dependent regulation of
-        the AlfA partition filament.
   - subject: alfb_parn_complex
     predicate: regulates
     object: alfa_filament
