@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/late_endosome_membrane.yaml
+  slug: late_endosome_membrane
+session:
+  id: 2026-09-22T175709Z-claude-code-36be01
+  timestamp: '2026-09-22T17:57:09Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the late endosome membrane record
+  details: Added a GO:0031902 late endosome membrane record with endosome-membrane parentage,
+    late-endosome parthood, a late endosomal membrane synonym, a UniProt SL-0151 cross-reference,
+    a reviewed lipid-bilayer component, Saccharomyces cerevisiae late endosomal scope and
+    canonical example curation, compartmentalization and multivesicular-body-sorting functions,
+    GO/UniProt/DOI evidence, a nonmechanistic late-endosome membrane topology graph, and a
+    lipid-species curation TODO.

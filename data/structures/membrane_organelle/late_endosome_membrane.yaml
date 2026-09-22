@@ -1,0 +1,181 @@
+identifier: GO:0031902
+label: late endosome membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding a late endosome.
+definition_source: GO:0031902
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T17:56:02Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T17:56:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added endosome-membrane parentage, late-endosome parthood, a late endosomal
+    membrane synonym, UniProt SL-0151 xref, a reviewed lipid-bilayer component, Saccharomyces
+    cerevisiae scope, compartmentalization and MVB-sorting functions, GO/UniProt/DOI
+    evidence, a nonmechanistic membrane-topology graph, and a lipid-species curation
+    TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0010008
+part_of:
+- GO:0005770
+synonyms:
+- synonym_text: late endosomal membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0151
+xrefs:
+- uniprot.location:SL-0151
+components:
+- component_id: late_endosome_membrane_lipid_bilayer
+  label: late endosome membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent that forms the late endosome boundary and separates
+    its lumen from the cytosol.
+  evidence:
+  - reference: GO:0031902
+    notes: GO:0031902 defines the late endosome membrane as the lipid bilayer surrounding
+      a late endosome.
+  - reference: GO:0031906
+    notes: GO:0031906 defines the late endosome lumen by enclosure within the membrane
+      of a late endosome.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0031902 identifies the complete late endosome membrane; no narrower
+    source-neutral CURIE was curated for the lipid constituent of that bilayer.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast late endosomal/multivesicular-body membranes recruit Vps27 and
+    ESCRT-I during ESCRT-dependent sorting of ubiquitinated membrane cargo.
+  reference: DOI:10.1083/jcb.200302136
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Genetic model in which Vps27 recruits ESCRT-I to late endosomal membranes
+    during multivesicular-body cargo sorting.
+  reference: DOI:10.1083/jcb.200302136
+functions:
+- function_id: late_endosome_membrane_compartmentalization
+  label: late endosome membrane compartmentalization
+  description: The late endosome membrane compartmentalizes the late endosome lumen
+    as the lipid-bilayer boundary of late endocytic sorting compartments.
+  evidence:
+  - reference: GO:0031902
+    notes: GO:0031902 defines the late endosome membrane as the lipid bilayer surrounding
+      a late endosome.
+  - reference: GO:0031906
+    notes: GO:0031906 defines the late endosome lumen as the volume enclosed by the
+      membrane of a late endosome.
+- function_id: late_endosome_membrane_mvb_sorting
+  label: multivesicular body sorting pathway
+  grounding: GO:0071985
+  description: Late endosomal membranes provide a sorting surface for ESCRT-dependent
+    delivery of ubiquitinated membrane cargo into multivesicular-body intraluminal
+    vesicles.
+  evidence:
+  - reference: GO:0071985
+    notes: GO:0071985 denotes the multivesicular body sorting pathway that targets
+      ubiquitylated transmembrane proteins into luminal vesicles.
+  - reference: DOI:10.1083/jcb.200302136
+    notes: Katzmann et al. 2003 localized Vps27 and ESCRT-I recruitment to yeast endosomal
+      membranes during MVB sorting.
+evidence:
+- reference: GO:0031902
+  notes: Gene Ontology cellular-component term for the late endosome membrane.
+- reference: GO:0010008
+  notes: Gene Ontology cellular-component parent term for endosome membrane.
+- reference: GO:0005770
+  notes: Gene Ontology cellular-component term for the late endosome.
+- reference: GO:0031906
+  notes: Gene Ontology cellular-component term for the late endosome lumen bounded
+    by the membrane.
+- reference: uniprot.location:SL-0151
+  notes: UniProt Subcellular Location entry SL-0151 maps Late endosome membrane to
+    GO:0031902 and places it under Endosome membrane.
+- reference: GO:0071985
+  notes: Gene Ontology biological-process term for the multivesicular body sorting
+    pathway.
+- reference: DOI:10.1083/jcb.200302136
+  notes: Katzmann, Stefan, Babst and Emr 2003, Vps27 recruits ESCRT machinery to endosomes
+    during MVB sorting, Journal of Cell Biology.
+causal_graphs:
+- graph_id: late_endosome_membrane_topology
+  title: Late endosome membrane topology
+  description: The late endosome membrane is a specialized endosome membrane that
+    forms part of the late endosome and bounds its lumen.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures defining late-endosome membrane, late-endosome,
+    and lumen relationships without asserting a Rab, tethering, ESCRT, cargo recycling,
+    or vacuolar-delivery mechanism.
+  nodes:
+  - node_id: late_endosome_membrane
+    label: late endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0031902
+    component_ref: late_endosome_membrane_lipid_bilayer
+  - node_id: endosome_membrane
+    label: endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0010008
+  - node_id: late_endosome
+    label: late endosome
+    node_type: ORGANELLE
+    grounding: GO:0005770
+  - node_id: late_endosome_lumen
+    label: late endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031906
+  edges:
+  - subject: late_endosome_membrane
+    predicate: is a
+    object: endosome_membrane
+    description: The late endosome membrane is an endosome membrane specialization.
+    evidence:
+    - reference: GO:0031902
+      notes: GO:0031902 identifies late endosome membrane as an endosome-membrane
+        child.
+    - reference: GO:0010008
+      notes: GO:0010008 defines the broader endosome membrane class.
+  - subject: late_endosome_membrane
+    predicate: is part of
+    object: late_endosome
+    description: The late endosome membrane is the lipid-bilayer boundary of a late
+      endosome.
+    evidence:
+    - reference: GO:0031902
+      notes: GO:0031902 defines the late endosome membrane as surrounding a late endosome.
+  - subject: late_endosome_membrane
+    predicate: bounds
+    object: late_endosome_lumen
+    description: The late endosome membrane encloses the late endosome lumen.
+    evidence:
+    - reference: GO:0031902
+      notes: GO:0031902 identifies the late endosome membrane.
+    - reference: GO:0031906
+      notes: GO:0031906 defines the late endosome lumen by enclosure within the membrane
+        of a late endosome.
+discussions:
+- discussion_id: resolve_late_endosome_membrane_lipid_species
+  prompt: Resolve exact lipid species or lipid classes for the late endosome membrane
+    before expanding molecular composition.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#late_endosome_membrane_lipid_bilayer
+  rationale: The GO term exactly identifies the complete late endosome membrane as
+    a lipid bilayer, but this first membrane record does not curate the source-neutral
+    lipid classes or organism-specific species that make up the bilayer.
+  evidence:
+  - reference: GO:0031902
+    notes: GO:0031902 provides the whole-membrane identity, not a narrower lipid-species
+      breakdown.
+  posed_by: codex
+  posed_date: '2026-09-22'
