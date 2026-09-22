@@ -20,6 +20,13 @@ curation_history:
     a nonmechanistic intraconoid microtubule topology graph, and curation discussions
     for filament-end factors and the conoid-fiber boundary.
   llm_assisted: true
+- timestamp: '2026-09-22T13:20:34Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Addressed PR #1283 review issues #1284 and #1285 by narrowing the end-factor
+    TODO evidence note and moving the Toxoplasma canonical-example note onto direct
+    Hu et al. 2006 evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0005874
 part_of:
@@ -53,10 +60,10 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:5811
   taxon_label: Toxoplasma gondii
-  note: Apicomplexan model in which two conventional microtubules inside the conoid
-    were distinguished from both subpellicular microtubules and the conoid's unusual
-    tubulin polymers.
-  reference: DOI:10.1083/jcb.200112086
+  note: Apicomplexan model in which the conoid fibers, the two intraconoid microtubules,
+    and the subpellicular microtubules were described as distinct apical-complex cytoskeletal
+    elements.
+  reference: DOI:10.1371/journal.ppat.0020013
 functions:
 - function_id: conoid_center_microtubule_scaffold
   label: conoid-center microtubule scaffold
@@ -159,13 +166,13 @@ discussions:
   attaches_to:
   - causal_graphs#toxoplasma_intraconoid_microtubule_topology
   rationale: This first record captures the mature topology of the two Toxoplasma
-    intraconoid microtubules but leaves candidate end-binding proteins, polar-ring
-    linkers and assembly timing out until their boundaries and direct evidence are
-    curated.
+    intraconoid microtubules but leaves filament-end organizers, polar-ring linkers
+    and assembly timing out until candidate proteins are localized directly to the
+    intraconoid microtubule boundary.
   evidence:
   - reference: DOI:10.1371/journal.ppat.0020013
-    notes: Hu et al. 2006 localized multiple candidate apical cytoskeletal proteins
-      near the Toxoplasma conoid and intraconoid microtubules.
+    notes: Hu et al. 2006 localized candidate proteins to several Toxoplasma apical-cytoskeleton
+      subcompartments.
   posed_by: codex
   posed_date: '2026-09-22'
 - discussion_id: distinguish_conoid_tubulin_fibers
