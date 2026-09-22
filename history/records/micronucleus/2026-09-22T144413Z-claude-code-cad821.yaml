@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/micronucleus.yaml
+  slug: micronucleus
+session:
+  id: 2026-09-22T144413Z-claude-code-cad821
+  timestamp: '2026-09-22T14:44:13Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1290
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1291
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1289
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - evidence
+  - causal_graphs
+  summary: Resolve micronucleus PR review issues
+  details: 'Resolved PR #1289 review issues #1290 and #1291 by grounding the micronucleus
+    germline-genome transmission graph target to GO:0019953 sexual reproduction, retargeting
+    the final edge, adding GO:0019953 as supporting evidence, recording the YAML curation
+    event, and linking this append-only history record to the PR and review issues.'

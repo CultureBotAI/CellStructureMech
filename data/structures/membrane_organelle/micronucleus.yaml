@@ -1,0 +1,182 @@
+identifier: GO:0031040
+label: micronucleus
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A membrane-bounded organelle of ciliated protozoan cells that contains
+  a diploid copy of the cell's complete genome. Sections of contiguous sequence in
+  the macronucleus are often interrupted by internal eliminated sequences (IES), and
+  may be permuted, in micronuclei. Genic transcription is not found in micronuclei.
+  Some ciliate species may contain multiple micronuclei per cell.
+definition_source: GO:0031040
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T14:24:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T14:25:45Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nucleus parentage, reviewed-label-only micronuclear chromosomal DNA,
+    Tetrahymena thermophila taxonomic scope and canonical example, germline genome
+    maintenance function, DOI evidence, a nonmechanistic MIC germline genome graph,
+    and a grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-22T14:28:13Z'
+  curator: codex
+  action: REFINED_GRAPH
+  changes: Changed the micronuclear chromosomal DNA to germline genome edge from encodes
+    to constitutes.
+  llm_assisted: true
+- timestamp: '2026-09-22T14:43:32Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved PR #1289 review issue #1290 by replacing the ungrounded sexual_generation
+    graph node with grounded GO:0019953 sexual reproduction and retargeting the germline-genome
+    transmission edge.'
+  llm_assisted: true
+parent_structures:
+- GO:0005634
+components:
+- component_id: micronuclear_chromosomal_dna
+  label: micronuclear chromosomal DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000228 denotes complete eukaryotic nuclear chromosome structures;
+    no source-neutral GO or SO identifier was verified for the germline chromosomal
+    DNA molecules inside ciliate micronuclei.
+  role: Diploid germline DNA carried on micronuclear chromosomes and transmitted across
+    sexual generations.
+  evidence:
+  - reference: GO:0031040
+    notes: GO:0031040 defines the ciliate micronucleus as containing a diploid copy
+      of the complete genome.
+  - reference: DOI:10.7554/eLife.19090
+    notes: Hamilton et al. 2016 sequenced the Tetrahymena thermophila micronuclear
+      germline genome and assembled it into five chromosome-length super-assemblies.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  presence: COMMON
+  note: Tetrahymena thermophila cells carry a smaller diploid germline micronucleus
+    and a larger polyploid somatic macronucleus.
+  reference: DOI:10.7554/eLife.19090
+canonical_examples:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  note: Model ciliate whose strain SB210 micronuclear genome was sequenced from purified
+    micronuclei after validating that all five micronuclear chromosomes were intact.
+  reference: DOI:10.7554/eLife.19090
+functions:
+- function_id: germline_genome_maintenance
+  label: germline genome maintenance
+  description: The Tetrahymena micronucleus maintains the germline genome that is
+    transmitted across sexual generations.
+  evidence:
+  - reference: GO:0031040
+    notes: GO:0031040 defines the micronucleus as containing a diploid copy of the
+      complete genome.
+  - reference: DOI:10.7554/eLife.19090
+    notes: Hamilton et al. 2016 describe the Tetrahymena MIC as the transcriptionally
+      silent germline nucleus whose genetic material is transmitted across sexual
+      generations.
+evidence:
+- reference: GO:0031040
+  notes: Gene Ontology cellular-component term for micronucleus.
+- reference: GO:0005634
+  notes: Gene Ontology cellular-component ancestor term for nucleus.
+- reference: DOI:10.7554/eLife.19090
+  notes: Hamilton et al. 2016, 'Structure of the germline genome of Tetrahymena thermophila
+    and relationship to the massively rearranged somatic genome', eLife.
+- reference: GO:0019953
+  notes: Gene Ontology biological-process term for sexual reproduction.
+causal_graphs:
+- graph_id: micronuclear_dna_maintains_germline_genome
+  title: Micronuclear DNA maintains the germline genome
+  description: In Tetrahymena thermophila, diploid micronuclear chromosomal DNA is
+    carried in the transcriptionally silent micronucleus and preserves the genetic
+    material transmitted through sexual generations.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the mature Tetrahymena micronucleus as a germline
+    genome compartment without modeling meiosis, zygote formation, or micronucleus-to-macronucleus
+    genome rearrangement.
+  nodes:
+  - node_id: micronuclear_chromosomal_dna
+    label: micronuclear chromosomal DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: micronuclear_chromosomal_dna
+  - node_id: micronucleus
+    label: micronucleus
+    node_type: STRUCTURE
+    grounding: GO:0031040
+  - node_id: germline_genome
+    label: germline genome
+    node_type: GENETIC_ELEMENT
+  - node_id: sexual_reproduction
+    label: sexual reproduction
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0019953
+  edges:
+  - subject: micronuclear_chromosomal_dna
+    predicate: is housed in
+    object: micronucleus
+    description: Micronuclear chromosomal DNA resides in the Tetrahymena germline
+      micronucleus.
+    evidence:
+    - reference: DOI:10.7554/eLife.19090
+      notes: Hamilton et al. 2016 analyzed the Tetrahymena MIC as the diploid germline
+        nucleus.
+  - subject: micronuclear_chromosomal_dna
+    predicate: constitutes
+    object: germline_genome
+    description: Micronuclear chromosomal DNA constitutes a complete germline genome
+      distributed across five Tetrahymena micronuclear chromosomes.
+    evidence:
+    - reference: DOI:10.7554/eLife.19090
+      notes: Hamilton et al. 2016 sequenced the Tetrahymena MIC genome and linked
+        most larger MIC scaffolds into five chromosome-length super-assemblies.
+  - subject: micronucleus
+    predicate: preserves
+    object: germline_genome
+    description: The micronucleus functions as the germline nucleus for sexual progeny.
+    evidence:
+    - reference: DOI:10.7554/eLife.19090
+      notes: Hamilton et al. 2016 describe the Tetrahymena MIC as containing the genetic
+        material transmitted across sexual generations.
+  - subject: germline_genome
+    predicate: is transmitted during
+    object: sexual_reproduction
+    description: The micronuclear germline genome is transmitted during Tetrahymena
+      sexual reproduction.
+    evidence:
+    - reference: DOI:10.7554/eLife.19090
+      notes: Hamilton et al. 2016 describe the Tetrahymena MIC as the germline nucleus
+        whose genetic material is transmitted across sexual generations.
+    - reference: GO:0019953
+      notes: GO:0019953 grounds the final graph target as the sexual reproduction
+        process.
+discussions:
+- discussion_id: resolve_micronuclear_chromosomal_dna_grounding
+  prompt: Resolve whether a source-neutral SO identifier exactly denotes the diploid
+    germline chromosomal DNA of ciliate micronuclei.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#micronuclear_chromosomal_dna
+  - causal_graphs#micronuclear_dna_maintains_germline_genome
+  rationale: Micronuclear chromosomal DNA is the germline DNA carried inside a ciliate
+    micronucleus. Generic GO chromosome terms describe complete chromosomal structures
+    rather than this ciliate-specific DNA constituent.
+  evidence:
+  - reference: GO:0031040
+    notes: GO:0031040 defines micronuclei as ciliate organelles that contain a diploid
+      copy of the complete genome.
+  - reference: DOI:10.7554/eLife.19090
+    notes: Hamilton et al. 2016 assembled the Tetrahymena MIC genome into five chromosome-length
+      super-assemblies.
+  posed_by: codex
+  posed_date: '2026-09-22'
