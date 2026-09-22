@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/median_body.yaml
+  slug: median_body
+session:
+  id: 2026-09-22T084616Z-claude-code-00fab2
+  timestamp: '2026-09-22T08:46:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add the median body record
+  details: Created GO:0097568 median body as a PROPOSED Giardia cytoskeleton record with GO-backed
+    cytoskeleton parthood and microtubule has_part links. Added alpha/beta tubulins and Giardia
+    Kinesin-13 as label-only components, Giardia intestinalis scope, DOI evidence from median-body
+    ultrastructure and Kinesin-13 localization papers, a nonmechanistic Kinesin-13 microtubule-dynamics
+    graph, and open TODOs for unresolved component groundings and median-body function.
