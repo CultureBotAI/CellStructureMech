@@ -1,0 +1,236 @@
+identifier: GO:0055037
+label: recycling endosome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: An organelle consisting of a network of tubules that functions in targeting
+  molecules, such as receptors transporters and lipids, to the plasma membrane.
+definition_source: GO:0055037
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T19:14:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T19:15:36Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added endosome parentage, recycling-endosome membrane and lumen parts,
+    UniProt SL-0232 xref, GO synonyms, a membrane component, Trypanosoma brucei Rab11
+    recycling evidence, GO/UniProt/PubMed evidence, a nonmechanistic topology and
+    cargo-recycling graph, and a resolved TbRAB11 component-boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-09-22T19:31:49Z'
+  curator: codex
+  action: REFINED_INITIAL_CURATION
+  changes: Retargeted the TbRAB11 component-boundary discussion from a bare components
+    anchor to the whole record so discussion anchors resolve.
+  llm_assisted: true
+- timestamp: '2026-09-22T19:42:53Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1315 review issues #1316 and #1317 by renaming the function
+    from a Rab11-centric label to endocytic cargo recycling and retargeting the TbRAB11
+    graph edge from a generic cargo node to a BIOLOGICAL_PROCESS endocytic-recycling
+    node.'
+  llm_assisted: true
+parent_structures:
+- GO:0005768
+has_part:
+- GO:0034777
+- GO:0055038
+synonyms:
+- synonym_text: endosomal recycling compartment
+  synonym_type: EXACT_SYNONYM
+  source: GO:0055037
+- synonym_text: endosome recycling compartment
+  synonym_type: RELATED_SYNONYM
+  source: GO:0055037
+- synonym_text: ERC
+  synonym_type: RELATED_SYNONYM
+  source: GO:0055037
+xrefs:
+- uniprot.location:SL-0232
+components:
+- component_id: recycling_endosome_membrane
+  label: recycling endosome membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0055038
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer boundary that surrounds the recycling endosome and carries cargo
+    and trafficking machinery during plasma-membrane recycling.
+  evidence:
+  - reference: GO:0055038
+    notes: GO:0055038 identifies the lipid bilayer surrounding a recycling endosome.
+  - reference: GO:0055037
+    notes: GO:0055037 defines the recycling endosome as an organelle that targets
+      molecules back to the plasma membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  presence: VARIABLE
+  note: Trypanosoma brucei bloodstream and procyclic cells contain TbRAB11-positive
+    endosomal structures carrying recycling cargo, with stronger TbRAB11 expression
+    and a more elaborate TbRAB11 compartment in bloodstream-stage cells.
+  reference: PMID:11683389
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: African trypanosome whose Rab11-positive endosomal compartment colocalizes
+    with transferrin receptor and internalized anti-variant surface glycoprotein cargo.
+  reference: PMID:11683389
+functions:
+- function_id: endocytic_cargo_recycling
+  label: endocytic cargo recycling
+  description: Recycling endosomes return internalized cargo toward the cell surface;
+    in Trypanosoma brucei, TbRAB11-positive compartments support recycling of transferrin
+    and anti-VSG antibody cargo through the endosomal system.
+  evidence:
+  - reference: GO:0055037
+    notes: GO:0055037 defines the recycling endosome by its role in targeting molecules
+      to the plasma membrane.
+  - reference: PMID:12744719
+    notes: Pal et al. 2003 used live-cell recycling assays and Rab mutants to implicate
+      TbRAB11 in Trypanosoma brucei transferrin and anti-VSG antibody recycling.
+  - reference: PMID:29582527
+    notes: Umaer, Bush and Bangs 2018 showed that TbRab11 mediates selective recycling
+      and endocytic trafficking in Trypanosoma brucei.
+evidence:
+- reference: GO:0055037
+  notes: Gene Ontology cellular-component term for recycling endosome.
+- reference: GO:0005768
+  notes: Gene Ontology cellular-component parent term for endosomes.
+- reference: GO:0055038
+  notes: Gene Ontology cellular-component term for the recycling endosome membrane.
+- reference: GO:0034777
+  notes: Gene Ontology cellular-component term for the recycling endosome lumen.
+- reference: uniprot.location:SL-0232
+  notes: UniProt Subcellular Location entry SL-0232 maps Recycling endosome to GO:0055037
+    and places it under Endosome.
+- reference: PMID:11683389
+  notes: Jeffries, Morgan and Field 2001, A developmentally regulated rab11 homologue
+    in Trypanosoma brucei is involved in recycling processes, Journal of Cell Science.
+- reference: PMID:12744719
+  notes: Pal, Hall, Jeffries and Field 2003, Rab5 and Rab11 mediate transferrin and
+    anti-variant surface glycoprotein antibody recycling in Trypanosoma brucei, Biochemical
+    Journal.
+- reference: PMID:29582527
+  notes: Umaer, Bush and Bangs 2018, Rab11 mediates selective recycling and endocytic
+    trafficking in Trypanosoma brucei, Traffic.
+causal_graphs:
+- graph_id: trypanosome_recycling_endosome_topology
+  title: Recycling endosome topology and Rab11 cargo recycling
+  description: The recycling endosome is an endosome subtype bounded by a membrane
+    around a lumenal compartment and marked in Trypanosoma brucei by Rab11-positive
+    endosomal structures that carry recycling cargo.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GO-backed recycling-endosome topology and Rab11-associated
+    T. brucei cargo recycling without asserting a complete Rab5/Rab11 cascade or treating
+    transient Rab regulators as membrane constituents.
+  nodes:
+  - node_id: recycling_endosome
+    label: recycling endosome
+    node_type: ORGANELLE
+    grounding: GO:0055037
+  - node_id: endosome
+    label: endosome
+    node_type: ORGANELLE
+    grounding: GO:0005768
+  - node_id: recycling_endosome_membrane
+    label: recycling endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0055038
+    component_ref: recycling_endosome_membrane
+  - node_id: recycling_endosome_lumen
+    label: recycling endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034777
+  - node_id: tbrab11
+    label: TbRAB11
+    node_type: GENE_OR_PROTEIN
+  - node_id: endocytic_recycling
+    label: endocytic recycling
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: recycling_endosome
+    predicate: is a
+    object: endosome
+    description: The recycling endosome is a specialized endosome.
+    evidence:
+    - reference: GO:0055037
+      notes: GO places the recycling endosome under the endosome class.
+    - reference: GO:0005768
+      notes: GO term for the broader endosome class.
+  - subject: recycling_endosome_membrane
+    predicate: is part of
+    object: recycling_endosome
+    description: The recycling endosome membrane is the lipid-bilayer boundary of
+      a recycling endosome.
+    evidence:
+    - reference: GO:0055038
+      notes: GO identifies the recycling endosome membrane.
+  - subject: recycling_endosome_lumen
+    predicate: is part of
+    object: recycling_endosome
+    description: The recycling endosome lumen is the bounded volume inside a recycling
+      endosome.
+    evidence:
+    - reference: GO:0034777
+      notes: GO defines the recycling endosome lumen as the volume enclosed by recycling
+        endosome membranes.
+  - subject: recycling_endosome_membrane
+    predicate: bounds
+    object: recycling_endosome_lumen
+    description: The recycling endosome membrane encloses the recycling endosome lumen.
+    evidence:
+    - reference: GO:0055038
+      notes: GO identifies the membrane surrounding a recycling endosome.
+    - reference: GO:0034777
+      notes: GO defines the recycling endosome lumen by membrane enclosure.
+  - subject: tbrab11
+    predicate: localizes to
+    object: recycling_endosome
+    description: TbRAB11 marks Trypanosoma brucei endosomal structures that contain
+      recycling cargo molecules.
+    evidence:
+    - reference: PMID:11683389
+      notes: Jeffries, Morgan and Field 2001 localized TbRAB11 to T. brucei endosomal
+        structures carrying recycling cargo.
+  - subject: tbrab11
+    predicate: supports
+    object: endocytic_recycling
+    description: TbRAB11 activity supports Rab11-dependent recycling of endocytic
+      cargo in bloodstream Trypanosoma brucei.
+    evidence:
+    - reference: PMID:12744719
+      notes: Pal et al. 2003 implicated TbRAB11 in transferrin and anti-VSG antibody
+        recycling.
+    - reference: PMID:29582527
+      notes: Umaer, Bush and Bangs 2018 found that TbRab11 mediates selective recycling
+        in the T. brucei endocytic pathway.
+discussions:
+- discussion_id: tbrab11_marker_not_structural_component
+  prompt: Treat TbRAB11 as marker and regulatory evidence rather than as a recycling-endosome
+    structural component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#trypanosome_recycling_endosome_topology
+  rationale: The Trypanosoma brucei evidence uses TbRAB11 localization and perturbation
+    to identify recycling endosomal traffic, but Rab11 is a small GTPase marker/regulator
+    and not a constituent of the lipid-bounded compartment itself.
+  resolution_note: Curated the GO-grounded recycling endosome membrane as the sole
+    component in this pass and kept TbRAB11 as a non-component graph node.
+  evidence:
+  - reference: PMID:11683389
+    notes: Jeffries, Morgan and Field 2001 used TbRAB11 to mark T. brucei endosomal
+      structures carrying recycling cargo.
+  - reference: PMID:12744719
+    notes: Pal et al. 2003 used Rab mutants to test TbRAB5A- and TbRAB11-dependent
+      endocytic recycling.
+  posed_by: codex
+  posed_date: '2026-09-22'
+  resolved_date: '2026-09-22'
