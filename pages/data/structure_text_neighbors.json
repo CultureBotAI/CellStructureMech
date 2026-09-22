@@ -5872,6 +5872,11 @@
       "label": "exoneme",
       "neighbors": [
         {
+          "identifier": "GO:0070074",
+          "label": "mononeme",
+          "cosine_similarity": 0.79239976
+        },
+        {
           "identifier": "GO:0020036",
           "label": "Maurer's cleft",
           "cosine_similarity": 0.74593849
@@ -5890,11 +5895,6 @@
           "identifier": "GO:0020026",
           "label": "apicomplexan dense granule",
           "cosine_similarity": 0.70845592
-        },
-        {
-          "identifier": "GO:0020008",
-          "label": "rhoptry",
-          "cosine_similarity": 0.70329631
         }
       ]
     },
@@ -6740,6 +6740,11 @@
       "label": "Maurer's cleft",
       "neighbors": [
         {
+          "identifier": "GO:0070074",
+          "label": "mononeme",
+          "cosine_similarity": 0.78769001
+        },
+        {
           "identifier": "GO:0070258",
           "label": "inner membrane pellicle complex",
           "cosine_similarity": 0.77800141
@@ -6758,11 +6763,6 @@
           "identifier": "GO:0030668",
           "label": "apicomplexan dense granule membrane",
           "cosine_similarity": 0.69052789
-        },
-        {
-          "identifier": "GO:0033163",
-          "label": "microneme membrane",
-          "cosine_similarity": 0.68415099
         }
       ]
     },
@@ -6812,6 +6812,11 @@
           "cosine_similarity": 0.8475623
         },
         {
+          "identifier": "GO:0070074",
+          "label": "mononeme",
+          "cosine_similarity": 0.75932853
+        },
+        {
           "identifier": "GO:0070258",
           "label": "inner membrane pellicle complex",
           "cosine_similarity": 0.73300541
@@ -6820,11 +6825,6 @@
           "identifier": "cellstructuremech:mitosome_intermembrane_space",
           "label": "mitosome intermembrane space",
           "cosine_similarity": 0.72922639
-        },
-        {
-          "identifier": "GO:0032047",
-          "label": "mitosome",
-          "cosine_similarity": 0.7071439
         }
       ]
     },
@@ -7383,6 +7383,37 @@
           "identifier": "cellstructuremech:mitosome_matrix",
           "label": "mitosome matrix",
           "cosine_similarity": 0.87411713
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0070074",
+      "label": "mononeme",
+      "neighbors": [
+        {
+          "identifier": "GO:0044311",
+          "label": "exoneme",
+          "cosine_similarity": 0.79239976
+        },
+        {
+          "identifier": "GO:0020036",
+          "label": "Maurer's cleft",
+          "cosine_similarity": 0.78769001
+        },
+        {
+          "identifier": "GO:0020009",
+          "label": "microneme",
+          "cosine_similarity": 0.75932853
+        },
+        {
+          "identifier": "GO:0009536",
+          "label": "plastid",
+          "cosine_similarity": 0.74508432
+        },
+        {
+          "identifier": "GO:0034494",
+          "label": "microneme lumen",
+          "cosine_similarity": 0.7436011
         }
       ]
     },

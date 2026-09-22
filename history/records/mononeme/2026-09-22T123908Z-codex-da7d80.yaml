@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mononeme.yaml
+  slug: mononeme
+session:
+  id: 2026-09-22T123908Z-codex-da7d80
+  timestamp: '2026-09-22T12:39:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - mechanism
+  - discussion
+  summary: Add mononeme record
+  details: Created a PROPOSED GO:0070074 mononeme record with GO intracellular membrane-bounded
+    organelle parentage, apical-complex parthood, PfROM1 as a reviewed label-only component,
+    Plasmodium falciparum taxonomic scope, GO/DOI evidence, a nonmechanistic PfROM1 relocalization
+    graph, and curation discussions for unresolved mononeme boundaries and the microtubule-transport
+    restraint.
