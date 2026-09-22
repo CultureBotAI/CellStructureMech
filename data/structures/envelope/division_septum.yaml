@@ -22,6 +22,14 @@ curation_history:
     and division-plane-closure functions, GO/DOI evidence, a nonmechanistic divisome-to-septum
     assembly graph, and a resolved divisome/product boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-22T15:25:12Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1292 review issues #1293, #1294 and #1295 by removing the
+    assembly-only division-plane-closure function, narrowing the peptidoglycan component
+    to bacterial septal peptidoglycan with conditional essentiality and a fungal polymer
+    TODO, and retyping the divisome and daughter-compartment graph nodes.'
+  llm_assisted: true
 synonyms:
 - synonym_text: complete septum
   synonym_type: EXACT_SYNONYM
@@ -34,13 +42,12 @@ parent_structures:
 part_of:
 - GO:0032153
 components:
-- component_id: septal_peptidoglycan
-  label: septal peptidoglycan
+- component_id: bacterial_septal_peptidoglycan
+  label: bacterial septal peptidoglycan
   component_type: PEPTIDOGLYCAN
   component_role: CONSTITUENT
-  essentiality: ESSENTIAL
-  role: Newly synthesized peptidoglycan that closes the division plane to create the
-    daughter-cell cross-wall.
+  essentiality: CONDITIONAL
+  role: Newly synthesized peptidoglycan that closes the division plane in walled bacteria.
   evidence:
   - reference: DOI:10.1111/j.1749-6632.2012.06818.x
     notes: Egan and Vollmer 2012 review septal peptidoglycan synthesis as the peptidoglycan-building
@@ -48,6 +55,10 @@ components:
   - reference: DOI:10.1146/annurev-biophys-121219-081703
     notes: McQuillen and Xiao 2020 review how the FtsZ ring organizes septal peptidoglycan
       synthesis.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CHEBI, GO, or polymer term was identified
+    for the peptidoglycan specifically deposited at bacterial division septa; this
+    component deliberately excludes chitin- and glucan-containing fungal septal walls.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -74,14 +85,6 @@ functions:
   - reference: GO:0000935
     notes: GO:0000935 defines the division septum as a cell septum that compartmentalizes
       two daughter cells.
-- function_id: division_plane_closure
-  label: division-plane closure
-  description: Septal peptidoglycan synthesis adds cross-wall material at the division
-    plane until the septum closes.
-  evidence:
-  - reference: DOI:10.1111/j.1749-6632.2012.06818.x
-    notes: Egan and Vollmer 2012 review the bacterial cell-division physiology that
-      couples the divisome to septal wall synthesis.
 evidence:
 - reference: GO:0000935
   notes: Gene Ontology cellular-component term for the division septum.
@@ -114,19 +117,19 @@ causal_graphs:
     grounding: GO:0032153
   - node_id: divisome
     label: divisome complex
-    node_type: GENE_OR_PROTEIN
-    grounding: GO:1990586
-  - node_id: septal_peptidoglycan
-    label: septal peptidoglycan
     node_type: STRUCTURE
-    component_ref: septal_peptidoglycan
+    grounding: GO:1990586
+  - node_id: bacterial_septal_peptidoglycan
+    label: bacterial septal peptidoglycan
+    node_type: STRUCTURE
+    component_ref: bacterial_septal_peptidoglycan
   - node_id: division_septum
     label: division septum
     node_type: STRUCTURE
     grounding: GO:0000935
   - node_id: daughter_cell_compartments
     label: daughter-cell compartments
-    node_type: STRUCTURE
+    node_type: CELLULAR_LOCALIZATION
   edges:
   - subject: divisome
     predicate: localizes to
@@ -139,9 +142,9 @@ causal_graphs:
         septum assembly at the division site.
   - subject: divisome
     predicate: synthesizes
-    object: septal_peptidoglycan
+    object: bacterial_septal_peptidoglycan
     description: Septal peptidoglycan synthases organized by the divisome make new
-      cell-wall material at the closing division plane.
+      bacterial cell-wall material at the closing division plane.
     evidence:
     - reference: DOI:10.1146/annurev-biophys-121219-081703
       notes: McQuillen and Xiao 2020 review FtsZ-guided motion of septal peptidoglycan
@@ -149,11 +152,11 @@ causal_graphs:
     - reference: DOI:10.1111/j.1749-6632.2012.06818.x
       notes: Egan and Vollmer 2012 describe septal synthesis as the output of the
         division machinery.
-  - subject: septal_peptidoglycan
+  - subject: bacterial_septal_peptidoglycan
     predicate: forms
     object: division_septum
-    description: Centripetal addition of septal peptidoglycan creates the cross-wall
-      called the division septum.
+    description: Centripetal addition of bacterial septal peptidoglycan creates the
+      cross-wall called the division septum.
     evidence:
     - reference: GO:0030428
       notes: GO:0030428 defines cell septa as wall structures composed of peptidoglycan
@@ -181,3 +184,20 @@ discussions:
     notes: GO term for the physical division septum.
   - reference: GO:1990586
     notes: GO term for the divisome complex.
+- discussion_id: non_bacterial_septal_wall_polymers
+  prompt: Add chitin, glucan, or other non-peptidoglycan constituents when the generic
+    division septum record is expanded beyond bacterial examples.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#bacterial_septal_peptidoglycan
+  rationale: GO:0000935 denotes a generic division septum and GO:0030428 covers peptidoglycan-
+    and chitin-containing cell septa. This pass only read bacterial divisome and peptidoglycan
+    literature, so fungal septal wall constituents need their own evidence before
+    being modeled.
+  evidence:
+  - reference: GO:0030428
+    notes: GO:0030428 defines the broader cell septum class as a structure composed
+      of peptidoglycan and often chitin in addition to other materials.
+  posed_by: codex
+  posed_date: '2026-09-22'

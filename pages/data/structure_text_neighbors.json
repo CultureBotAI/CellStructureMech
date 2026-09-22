@@ -2451,9 +2451,9 @@
           "cosine_similarity": 0.70337527
         },
         {
-          "identifier": "GO:0000935",
-          "label": "division septum",
-          "cosine_similarity": 0.69581957
+          "identifier": "cellstructuremech:mreb_filament",
+          "label": "MreB filament",
+          "cosine_similarity": 0.69558618
         }
       ]
     },
@@ -2991,27 +2991,27 @@
         {
           "identifier": "GO:0000937",
           "label": "dolipore septum",
-          "cosine_similarity": 0.7585091
+          "cosine_similarity": 0.76186575
         },
         {
           "identifier": "GO:0009276",
           "label": "Gram-negative-bacterium-type cell wall",
-          "cosine_similarity": 0.72418668
+          "cosine_similarity": 0.72394509
+        },
+        {
+          "identifier": "GO:0042603",
+          "label": "capsule",
+          "cosine_similarity": 0.70404045
         },
         {
           "identifier": "GO:0009274",
           "label": "peptidoglycan-based cell wall",
-          "cosine_similarity": 0.70512721
-        },
-        {
-          "identifier": "GO:1990586",
-          "label": "divisome complex",
-          "cosine_similarity": 0.69581957
+          "cosine_similarity": 0.69391348
         },
         {
           "identifier": "GO:0030288",
           "label": "outer membrane-bounded periplasmic space",
-          "cosine_similarity": 0.68268578
+          "cosine_similarity": 0.68494425
         }
       ]
     },
@@ -3022,7 +3022,7 @@
         {
           "identifier": "GO:0000935",
           "label": "division septum",
-          "cosine_similarity": 0.7585091
+          "cosine_similarity": 0.76186575
         },
         {
           "identifier": "GO:0009526",
