@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ejectisome.yaml
+  slug: ejectisome
+session:
+  id: 2026-09-22T102107Z-claude-code-bf03cc
+  timestamp: '2026-09-22T10:21:07Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add the ejectisome record
+  details: Created cellstructuremech:ejectisome as a PROPOSED cryptophyte extrusive-organelle
+    record with a reviewed-label-only ejectisin component, Cryptophyceae and Chroomonas scope,
+    DOI/PMID evidence, a nonmechanistic discharged-ejectisome filament graph, and open TODOs
+    for ejectisin grounding and ejectisome boundaries.

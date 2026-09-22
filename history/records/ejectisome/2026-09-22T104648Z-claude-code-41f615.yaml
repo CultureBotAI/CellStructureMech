@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ejectisome.yaml
+  slug: ejectisome
+session:
+  id: 2026-09-22T104648Z-claude-code-41f615
+  timestamp: '2026-09-22T10:46:48Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1273
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1272
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_structures
+  - curation_history
+  summary: Add the ejectisome broader parent
+  details: 'Resolved PR #1272 review issue #1273 by adding GO:0043231 as the broader parent_structures
+    term for minted record cellstructuremech:ejectisome.'

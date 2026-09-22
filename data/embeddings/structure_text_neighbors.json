@@ -10394,6 +10394,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:ejectisome",
+      "label": "ejectisome",
+      "neighbors": [
+        {
+          "identifier": "GO:0031910",
+          "label": "cytostome",
+          "cosine_similarity": 0.6605693
+        },
+        {
+          "identifier": "GO:1990732",
+          "label": "pyrenoid",
+          "cosine_similarity": 0.62548163
+        },
+        {
+          "identifier": "GO:0032126",
+          "label": "eisosome",
+          "cosine_similarity": 0.61742677
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.594771
+        },
+        {
+          "identifier": "GO:0009532",
+          "label": "plastid stroma",
+          "cosine_similarity": 0.58869746
+        }
+      ]
+    },
+    {
       "identifier": "GO:0072546",
       "label": "EMC complex",
       "neighbors": [
