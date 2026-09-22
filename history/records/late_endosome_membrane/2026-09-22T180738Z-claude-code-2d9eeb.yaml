@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/late_endosome_membrane.yaml
+  slug: late_endosome_membrane
+session:
+  id: 2026-09-22T180738Z-claude-code-2d9eeb
+  timestamp: '2026-09-22T18:07:38Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1310
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1311
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1309
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Addressed PR #1309 late endosome membrane review issues'
+  details: 'Resolved #1310 by adding GO:0005771 and PMID:11511343 evidence to the multivesicular-body-sorting
+    function and record-level evidence, and resolved #1311 by narrowing the Saccharomyces
+    cerevisiae taxonomic and canonical-example notes to late endosome/MVB limiting membranes
+    and Vps27-dependent ESCRT-I recruitment during MVB sorting.'
