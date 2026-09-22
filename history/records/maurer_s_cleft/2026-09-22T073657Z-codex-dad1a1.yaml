@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/maurer_s_cleft.yaml
+  slug: maurer_s_cleft
+session:
+  id: 2026-09-22T073657Z-codex-dad1a1
+  timestamp: '2026-09-22T07:36:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Maurer's cleft record
+  details: Created a GO:0020036 Maurer's cleft record for Plasmodium falciparum-infected erythrocytes
+    with reviewed-label-only membrane and resident-protein components, PfEMP1 trafficking
+    literature evidence, a nonmechanistic trafficking graph, and curation discussions for
+    the host-cell boundary and unresolved protein-family groundings.

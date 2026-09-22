@@ -57,7 +57,9 @@ dev = [
     "ruff>=0.4",
 ]
 embeddings = [
-    "sentence-transformers==6.0.0",
+    "huggingface-hub==1.32.0",
+    "onnxruntime==1.23.2",
+    "tokenizers==0.23.2",
 ]
 
 [project.urls]

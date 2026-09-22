@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Build the reproducible text-embedding map and nearest-neighbour index.
 
-``--refresh`` runs a pinned sentence-transformers model locally; corpus text is
-never sent to a service (the model weights may be downloaded on first use). The
-committed vector cache makes PCA, neighbours, rendering, and CI checks offline.
+``--refresh`` runs a pinned ONNX export of a sentence-transformers model locally;
+corpus text is never sent to a service (the model weights may be downloaded on
+first use). The committed vector cache makes PCA, neighbours, rendering, and CI
+checks offline.
 A record is stale as soon as the SHA-256 of its deliberately narrow semantic
 text projection changes.
 
@@ -33,12 +34,23 @@ except ImportError:
 
 MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 MODEL_REVISION = "c9745ed1d9f207416be6d2e6f8de32d1f16199bf"
+MODEL_ONNX_FILE = "onnx/model.onnx"
+MODEL_TOKENIZER_FILE = "tokenizer.json"
 MODEL_LICENSE = "Apache-2.0"
-SENTENCE_TRANSFORMERS_VERSION = "6.0.0"
+HUGGINGFACE_HUB_VERSION = "1.32.0"
+ONNXRUNTIME_VERSION = "1.23.2"
+TOKENIZERS_VERSION = "0.23.2"
+GENERATOR_LIBRARY = (
+    f"onnxruntime {ONNXRUNTIME_VERSION}; "
+    f"tokenizers {TOKENIZERS_VERSION}; "
+    f"huggingface-hub {HUGGINGFACE_HUB_VERSION}"
+)
 PROJECTION_VERSION = 1
 EMBEDDINGS_PATH = REPO_ROOT / "data" / "embeddings" / "structure_text_embeddings.json"
 MAP_PATH = REPO_ROOT / "data" / "embeddings" / "structure_text_map.json"
 NEIGHBORS_PATH = REPO_ROOT / "data" / "embeddings" / "structure_text_neighbors.json"
+MODEL_SEQUENCE_LENGTH = 256
+MODEL_BATCH_SIZE = 32
 
 
 def clean(value: object) -> str:
@@ -97,6 +109,76 @@ def corpus_inputs() -> list[dict]:
     return records
 
 
+def _normalize_rows(matrix: np.ndarray) -> np.ndarray:
+    norms = np.linalg.norm(matrix, axis=1, keepdims=True)
+    if np.any(norms == 0):
+        raise ValueError("local model produced an all-zero embedding")
+    return matrix / norms
+
+
+def _run_onnx_model(flat_lines: list[str]) -> np.ndarray:
+    """Encode semantic lines through the pinned ONNX transformer on CPU."""
+    try:
+        import huggingface_hub
+        import onnxruntime as ort
+        import tokenizers
+        from huggingface_hub import hf_hub_download
+        from tokenizers import Tokenizer
+    except ImportError as exc:
+        raise ValueError(
+            "--refresh requires the embeddings extra: uv sync --extra embeddings"
+        ) from exc
+    if huggingface_hub.__version__ != HUGGINGFACE_HUB_VERSION:
+        raise ValueError(
+            f"refresh requires huggingface-hub {HUGGINGFACE_HUB_VERSION}, "
+            f"found {huggingface_hub.__version__}"
+        )
+    if ort.__version__ != ONNXRUNTIME_VERSION:
+        raise ValueError(
+            f"refresh requires onnxruntime {ONNXRUNTIME_VERSION}, found {ort.__version__}"
+        )
+    if tokenizers.__version__ != TOKENIZERS_VERSION:
+        raise ValueError(
+            f"refresh requires tokenizers {TOKENIZERS_VERSION}, found {tokenizers.__version__}"
+        )
+
+    tokenizer_path = hf_hub_download(
+        repo_id=MODEL,
+        filename=MODEL_TOKENIZER_FILE,
+        revision=MODEL_REVISION,
+    )
+    model_path = hf_hub_download(
+        repo_id=MODEL,
+        filename=MODEL_ONNX_FILE,
+        revision=MODEL_REVISION,
+    )
+
+    tokenizer = Tokenizer.from_file(tokenizer_path)
+    tokenizer.enable_truncation(max_length=MODEL_SEQUENCE_LENGTH)
+    tokenizer.enable_padding(pad_id=0, pad_token="[PAD]")
+    session = ort.InferenceSession(model_path, providers=["CPUExecutionProvider"])
+
+    pooled: list[np.ndarray] = []
+    for offset in range(0, len(flat_lines), MODEL_BATCH_SIZE):
+        encodings = tokenizer.encode_batch(flat_lines[offset : offset + MODEL_BATCH_SIZE])
+        attention_mask = np.asarray([item.attention_mask for item in encodings], dtype=np.int64)
+        outputs = session.run(
+            ["last_hidden_state"],
+            {
+                "input_ids": np.asarray([item.ids for item in encodings], dtype=np.int64),
+                "attention_mask": attention_mask,
+                "token_type_ids": np.asarray([item.type_ids for item in encodings], dtype=np.int64),
+            },
+        )
+        token_embeddings = outputs[0].astype(float)
+        expanded_mask = attention_mask[..., np.newaxis].astype(float)
+        pooled.append(
+            (token_embeddings * expanded_mask).sum(axis=1)
+            / np.clip(expanded_mask.sum(axis=1), 1e-9, None)
+        )
+    return _normalize_rows(np.vstack(pooled))
+
+
 def local_embeddings(texts: list[str]) -> list[list[float]]:
     """Encode every semantic line locally, then mean-pool by record.
 
@@ -104,25 +186,9 @@ def local_embeddings(texts: list[str]) -> list[list[float]]:
     line at a time ensures later components and functions are not discarded.
     No corpus text leaves the machine.
     """
-    try:
-        import sentence_transformers
-        from sentence_transformers import SentenceTransformer
-    except ImportError as exc:
-        raise ValueError(
-            "--refresh requires the embeddings extra: uv sync --extra embeddings"
-        ) from exc
-    if sentence_transformers.__version__ != SENTENCE_TRANSFORMERS_VERSION:
-        raise ValueError(
-            "refresh requires sentence-transformers "
-            f"{SENTENCE_TRANSFORMERS_VERSION}, found {sentence_transformers.__version__}"
-        )
-    model = SentenceTransformer(MODEL, revision=MODEL_REVISION, trust_remote_code=False)
     chunks = [[line for line in text.splitlines() if line] for text in texts]
     flat = [line for record_chunks in chunks for line in record_chunks]
-    encoded = np.asarray(
-        model.encode(flat, batch_size=32, normalize_embeddings=True, show_progress_bar=False),
-        dtype=float,
-    )
+    encoded = _run_onnx_model(flat)
     vectors = []
     offset = 0
     for record_chunks in chunks:
@@ -260,15 +326,15 @@ def validate_artifact(artifact: dict, inputs: list[dict]) -> None:
     actual_ids = [item.get("identifier") for item in actual_records]
     if artifact.get("format_version") != 1:
         raise ValueError("unsupported embedding artifact format_version")
-    if artifact.get("provider") != "sentence-transformers":
-        raise ValueError("embedding artifact provider must be sentence-transformers")
+    if artifact.get("provider") != "onnxruntime":
+        raise ValueError("embedding artifact provider must be onnxruntime")
     if artifact.get("model") != MODEL:
         raise ValueError(f"embedding artifact model must be pinned to {MODEL}")
     if artifact.get("model_revision") != MODEL_REVISION:
         raise ValueError(f"embedding artifact model revision must be pinned to {MODEL_REVISION}")
     if artifact.get("model_license") != MODEL_LICENSE:
         raise ValueError(f"embedding artifact model licence must be {MODEL_LICENSE}")
-    if artifact.get("generator_library") != f"sentence-transformers {SENTENCE_TRANSFORMERS_VERSION}":
+    if artifact.get("generator_library") != GENERATOR_LIBRARY:
         raise ValueError("embedding artifact generator library is not pinned")
     if artifact.get("text_projection_version") != PROJECTION_VERSION:
         raise ValueError("embedding artifact text projection version is stale")
@@ -290,11 +356,11 @@ def refresh(inputs: list[dict]) -> dict:
     dimension = validate_vectors(vectors, len(inputs))
     artifact = {
         "format_version": 1,
-        "provider": "sentence-transformers",
+        "provider": "onnxruntime",
         "model": MODEL,
         "model_revision": MODEL_REVISION,
         "model_license": MODEL_LICENSE,
-        "generator_library": f"sentence-transformers {SENTENCE_TRANSFORMERS_VERSION}",
+        "generator_library": GENERATOR_LIBRARY,
         "embedding_dimension": dimension,
         "aggregation": "mean of unit-normalized semantic-line embeddings, then unit-normalized",
         "text_projection_version": PROJECTION_VERSION,
