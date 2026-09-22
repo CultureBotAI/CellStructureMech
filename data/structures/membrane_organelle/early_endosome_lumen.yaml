@@ -1,0 +1,138 @@
+identifier: GO:0031905
+label: early endosome lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the membrane of an early endosome.
+definition_source: GO:0031905
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T17:20:24Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T17:21:08Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added intracellular-organelle-lumen parentage, early-endosome parthood,
+    an early endosomal lumen synonym, UniProt SL-0337 xref, Trypanosoma cruzi epimastigote
+    scope, a cargo-compartment function, GO/UniProt/DOI evidence, a nonmechanistic
+    lumen-topology graph, and a resolved lumen-boundary interpretation.
+  llm_assisted: true
+parent_structures:
+- GO:0070013
+part_of:
+- GO:0005769
+synonyms:
+- synonym_text: early endosomal lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0337
+xrefs:
+- uniprot.location:SL-0337
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5693
+  taxon_label: Trypanosoma cruzi
+  presence: VARIABLE
+  note: Trypanosoma cruzi epimastigotes carry early endosomal compartments that receive
+    cargo between cytostome entry and reservosome storage.
+  reference: DOI:10.1078/0171-9335-00112
+canonical_examples:
+- taxon_id: NCBITaxon:5693
+  taxon_label: Trypanosoma cruzi
+  note: Kinetoplastid parasite whose epimastigote endocytic cargo passes through an
+    early endosomal network.
+  reference: DOI:10.1078/0171-9335-00112
+functions:
+- function_id: early_endosome_lumen_cargo_compartment
+  label: early endosome lumen cargo compartment
+  description: The early endosome lumen is the membrane-enclosed volume inside the
+    early endosome through which newly internalized endocytic cargo is routed.
+  evidence:
+  - reference: GO:0031905
+    notes: GO:0031905 defines the early endosome lumen as the volume enclosed by the
+      membrane of an early endosome.
+  - reference: GO:0005769
+    notes: GO:0005769 defines early endosomes as receiving incoming material from
+      primary endocytic vesicles for sorting toward recycling or degradation pathways.
+  - reference: DOI:10.1078/0171-9335-00112
+    notes: Porto-Carreiro et al. 2000 traced T. cruzi epimastigote cargo through an
+      early endosomal network before reservosome storage.
+evidence:
+- reference: GO:0031905
+  notes: Gene Ontology cellular-component term for the early endosome lumen.
+- reference: GO:0070013
+  notes: Gene Ontology cellular-component parent term for intracellular organelle
+    lumen.
+- reference: GO:0005769
+  notes: Gene Ontology cellular-component term for the early endosome.
+- reference: GO:0031901
+  notes: Gene Ontology cellular-component term for the early endosome membrane that
+    bounds the lumen.
+- reference: uniprot.location:SL-0337
+  notes: UniProt Subcellular Location entry SL-0337 maps Early endosome lumen to GO:0031905.
+- reference: DOI:10.1078/0171-9335-00112
+  notes: 'Porto-Carreiro et al. 2000, Trypanosoma cruzi epimastigote endocytic pathway:
+    cargo enters the cytostome and passes through an early endosomal network before
+    storage in reservosomes, European Journal of Cell Biology.'
+causal_graphs:
+- graph_id: early_endosome_lumen_topology
+  title: Early endosome lumen topology
+  description: The early endosome lumen is the bounded internal volume of an early
+    endosome.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures defining early-endosome lumen topology without asserting
+    a specific Rab, tethering, coat, cargo recycling or degradation mechanism.
+  nodes:
+  - node_id: early_endosome_lumen
+    label: early endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031905
+  - node_id: early_endosome_membrane
+    label: early endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0031901
+  - node_id: early_endosome
+    label: early endosome
+    node_type: ORGANELLE
+    grounding: GO:0005769
+  edges:
+  - subject: early_endosome_lumen
+    predicate: is part of
+    object: early_endosome
+    description: The early endosome lumen is the volume enclosed inside an early endosome.
+    evidence:
+    - reference: GO:0031905
+      notes: GO:0031905 defines the early endosome lumen as the volume enclosed by
+        the membrane of an early endosome.
+  - subject: early_endosome_membrane
+    predicate: bounds
+    object: early_endosome_lumen
+    description: The early endosome membrane encloses the early endosome lumen.
+    evidence:
+    - reference: GO:0031901
+      notes: GO:0031901 identifies the early endosome membrane.
+    - reference: GO:0031905
+      notes: GO:0031905 defines the early endosome lumen by enclosure within the membrane
+        of an early endosome.
+discussions:
+- discussion_id: early_endosome_lumen_boundary_not_membrane
+  prompt: Represent the early endosome membrane as the boundary of the early endosome
+    lumen rather than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#early_endosome_lumen_topology
+  rationale: GO:0031905 denotes the volume enclosed by the membrane of an early endosome,
+    whereas GO:0031901 denotes the surrounding lipid bilayer.
+  resolution_note: Curated the early endosome membrane as a boundary node and left
+    the early endosome lumen without asserted constituent molecular components.
+  evidence:
+  - reference: GO:0031905
+    notes: GO:0031905 identifies the early endosome lumen.
+  - reference: GO:0031901
+    notes: GO:0031901 identifies the early endosome membrane that bounds the lumen.
+  posed_by: codex
+  posed_date: '2026-09-22'
+  resolved_date: '2026-09-22'

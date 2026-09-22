@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/early_endosome_lumen.yaml
+  slug: early_endosome_lumen
+session:
+  id: 2026-09-22T172144Z-claude-code-b8f168
+  timestamp: '2026-09-22T17:21:44Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the early endosome lumen record
+  details: Added a GO:0031905 early endosome lumen record with intracellular-organelle-lumen
+    parentage, early-endosome parthood, an early endosomal lumen synonym, a UniProt SL-0337
+    cross-reference, Trypanosoma cruzi epimastigote scope and canonical example curation,
+    a cargo-compartment function, GO/UniProt/DOI evidence, a nonmechanistic early-endosome
+    lumen topology graph, and a resolved boundary interpretation that keeps the early endosome
+    membrane outside lumen composition.

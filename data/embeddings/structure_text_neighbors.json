@@ -5558,6 +5558,37 @@
       ]
     },
     {
+      "identifier": "GO:0031905",
+      "label": "early endosome lumen",
+      "neighbors": [
+        {
+          "identifier": "GO:0031904",
+          "label": "endosome lumen",
+          "cosine_similarity": 0.94073638
+        },
+        {
+          "identifier": "GO:0031901",
+          "label": "early endosome membrane",
+          "cosine_similarity": 0.90741745
+        },
+        {
+          "identifier": "GO:0005769",
+          "label": "early endosome",
+          "cosine_similarity": 0.90340762
+        },
+        {
+          "identifier": "GO:0005770",
+          "label": "late endosome",
+          "cosine_similarity": 0.88570554
+        },
+        {
+          "identifier": "GO:0071682",
+          "label": "endocytic vesicle lumen",
+          "cosine_similarity": 0.87753145
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031901",
       "label": "early endosome membrane",
       "neighbors": [
@@ -5577,14 +5608,14 @@
           "cosine_similarity": 0.91113632
         },
         {
+          "identifier": "GO:0031905",
+          "label": "early endosome lumen",
+          "cosine_similarity": 0.90741745
+        },
+        {
           "identifier": "GO:0005768",
           "label": "endosome",
           "cosine_similarity": 0.90180491
-        },
-        {
-          "identifier": "GO:0030666",
-          "label": "endocytic vesicle membrane",
-          "cosine_similarity": 0.89848262
         }
       ]
     },
@@ -5810,6 +5841,11 @@
       "label": "endosome lumen",
       "neighbors": [
         {
+          "identifier": "GO:0031905",
+          "label": "early endosome lumen",
+          "cosine_similarity": 0.94073638
+        },
+        {
           "identifier": "GO:0071682",
           "label": "endocytic vesicle lumen",
           "cosine_similarity": 0.93955436
@@ -5828,11 +5864,6 @@
           "identifier": "GO:0010008",
           "label": "endosome membrane",
           "cosine_similarity": 0.90686737
-        },
-        {
-          "identifier": "GO:0005771",
-          "label": "multivesicular body",
-          "cosine_similarity": 0.9049241
         }
       ]
     },
@@ -6094,6 +6125,11 @@
           "cosine_similarity": 0.79816005
         },
         {
+          "identifier": "GO:0031905",
+          "label": "early endosome lumen",
+          "cosine_similarity": 0.75808192
+        },
+        {
           "identifier": "cellstructuremech:mitosome_intermembrane_space",
           "label": "mitosome intermembrane space",
           "cosine_similarity": 0.75387513
@@ -6107,11 +6143,6 @@
           "identifier": "GO:0031904",
           "label": "endosome lumen",
           "cosine_similarity": 0.75272356
-        },
-        {
-          "identifier": "GO:0120120",
-          "label": "bilobe structure",
-          "cosine_similarity": 0.74463014
         }
       ]
     },
@@ -6698,9 +6729,9 @@
           "cosine_similarity": 0.85021276
         },
         {
-          "identifier": "GO:0060205",
-          "label": "cytoplasmic vesicle lumen",
-          "cosine_similarity": 0.84150962
+          "identifier": "GO:0031905",
+          "label": "early endosome lumen",
+          "cosine_similarity": 0.8429912
         }
       ]
     },
@@ -8930,9 +8961,9 @@
           "cosine_similarity": 0.77230619
         },
         {
-          "identifier": "GO:0030139",
-          "label": "endocytic vesicle",
-          "cosine_similarity": 0.75321704
+          "identifier": "GO:0031905",
+          "label": "early endosome lumen",
+          "cosine_similarity": 0.76235689
         }
       ]
     },
@@ -10599,14 +10630,14 @@
           "cosine_similarity": 0.68069846
         },
         {
+          "identifier": "GO:0031905",
+          "label": "early endosome lumen",
+          "cosine_similarity": 0.67859312
+        },
+        {
           "identifier": "cellstructuremech:reservosome",
           "label": "reservosome",
           "cosine_similarity": 0.67473367
-        },
-        {
-          "identifier": "GO:0031904",
-          "label": "endosome lumen",
-          "cosine_similarity": 0.67402464
         }
       ]
     },
