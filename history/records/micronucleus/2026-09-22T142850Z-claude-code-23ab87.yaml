@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/micronucleus.yaml
+  slug: micronucleus
+session:
+  id: 2026-09-22T142850Z-claude-code-23ab87
+  timestamp: '2026-09-22T14:28:50Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add GO-grounded micronucleus record
+  details: Added a GO:0031040 micronucleus record with nucleus parentage, reviewed-label-only
+    micronuclear chromosomal DNA, Tetrahymena thermophila taxonomic scope and canonical example,
+    germline genome maintenance function, DOI-backed evidence from Hamilton et al. 2016, a
+    nonmechanistic MIC germline-genome graph, and an open grounding TODO for ciliate micronuclear
+    chromosomal DNA.

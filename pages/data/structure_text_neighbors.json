@@ -6678,6 +6678,11 @@
       "label": "macronucleus",
       "neighbors": [
         {
+          "identifier": "GO:0031040",
+          "label": "micronucleus",
+          "cosine_similarity": 0.90791289
+        },
+        {
           "identifier": "GO:0005634",
           "label": "nucleus",
           "cosine_similarity": 0.78493023
@@ -6696,11 +6701,6 @@
           "identifier": "cellstructuremech:mitosome_intermembrane_space",
           "label": "mitosome intermembrane space",
           "cosine_similarity": 0.76366044
-        },
-        {
-          "identifier": "cellstructuremech:mitosome_matrix",
-          "label": "mitosome matrix",
-          "cosine_similarity": 0.76348702
         }
       ]
     },
@@ -6949,6 +6949,37 @@
           "identifier": "GO:0070113",
           "label": "organellar chromatophore inner membrane",
           "cosine_similarity": 0.82151959
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031040",
+      "label": "micronucleus",
+      "neighbors": [
+        {
+          "identifier": "GO:0031039",
+          "label": "macronucleus",
+          "cosine_similarity": 0.90791289
+        },
+        {
+          "identifier": "GO:0009536",
+          "label": "plastid",
+          "cosine_similarity": 0.76916491
+        },
+        {
+          "identifier": "GO:0033009",
+          "label": "nucleomorph",
+          "cosine_similarity": 0.76881371
+        },
+        {
+          "identifier": "cellstructuremech:mitosome_intermembrane_space",
+          "label": "mitosome intermembrane space",
+          "cosine_similarity": 0.75236358
+        },
+        {
+          "identifier": "GO:0032047",
+          "label": "mitosome",
+          "cosine_similarity": 0.7506106
         }
       ]
     },
