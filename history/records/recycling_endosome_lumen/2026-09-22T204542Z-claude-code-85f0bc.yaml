@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/recycling_endosome_lumen.yaml
+  slug: recycling_endosome_lumen
+session:
+  id: 2026-09-22T204542Z-claude-code-85f0bc
+  timestamp: '2026-09-22T20:45:42Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added recycling endosome lumen structure record
+  details: Created the GO:0034777 recycling endosome lumen record with endosome-lumen parentage,
+    recycling-endosome parthood, the UniProt SL-0345 synonym and xref, Trypanosoma brucei
+    Rab11 compartment evidence, a cargo-routing function, and a topology graph linking the
+    lumen to the recycling endosome membrane.

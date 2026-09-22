@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/recycling_endosome_lumen.yaml
+  slug: recycling_endosome_lumen
+session:
+  id: 2026-09-22T205823Z-claude-code-9f0100
+  timestamp: '2026-09-22T20:58:23Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1322
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1323
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1321
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed recycling endosome lumen PR review
+  details: 'Resolved PR #1321 review issues #1322 and #1323 by renaming the lumen function
+    from cargo routing to lumen compartmentalization and rewriting the Trypanosoma brucei
+    notes so transferrin receptor is not modeled as lumenal cargo.'
