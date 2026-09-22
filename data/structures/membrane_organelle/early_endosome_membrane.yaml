@@ -19,6 +19,13 @@ curation_history:
     cruzi epimastigote scope, a lumen-boundary function, GO/UniProt/DOI evidence,
     a nonmechanistic membrane-topology graph, and a lipid-species curation TODO.
   llm_assisted: true
+- timestamp: '2026-09-22T16:59:58Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1302 review issues #1303 and #1304 by making the T. cruzi
+    canonical example membrane-specific and renaming the function around early-endosome
+    membrane compartmentalization.'
+  llm_assisted: true
 parent_structures:
 - GO:0010008
 part_of:
@@ -57,14 +64,14 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:5693
   taxon_label: Trypanosoma cruzi
-  note: Kinetoplastid parasite whose epimastigote endocytic cargo passes through an
-    early endosomal network.
+  note: Kinetoplastid parasite whose epimastigote endocytic cargo passes through a
+    membrane-bounded early endosomal network.
   reference: DOI:10.1078/0171-9335-00112
 functions:
-- function_id: early_endosome_lumen_boundary
-  label: early endosome lumen boundary
-  description: The early endosome membrane encloses the early endosome lumen and provides
-    the bilayer boundary of the early endocytic sorting compartment.
+- function_id: early_endosome_membrane_compartmentalization
+  label: early endosome membrane compartmentalization
+  description: The early endosome membrane compartmentalizes the early endosome lumen
+    as the bilayer boundary of the early endocytic sorting compartment.
   evidence:
   - reference: GO:0031901
     notes: GO:0031901 defines the early endosome membrane as the lipid bilayer surrounding
