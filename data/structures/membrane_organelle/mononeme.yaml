@@ -25,6 +25,19 @@ curation_history:
   action: FIXED_CITATION_METADATA
   changes: Corrected the Singh et al. 2007 mononeme citation title and journal.
   llm_assisted: true
+- timestamp: '2026-09-22T12:49:02Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Addressed PR #1280 review issues #1281 and #1282 by narrowing the P. falciparum
+    taxonomic note to pre-release segmenter mononeme evidence and adding rhoptry and
+    dense-granule distinctness edges to the PfROM1 relocalization graph.'
+  llm_assisted: true
+- timestamp: '2026-09-22T12:49:36Z'
+  curator: codex
+  action: TIGHTENED_CANONICAL_SCOPE
+  changes: 'Narrowed the Plasmodium falciparum canonical example to segmenter-stage
+    merozoites for consistency with PR #1280 review issue #1281.'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -52,16 +65,16 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:5833
   taxon_label: Plasmodium falciparum
   presence: COMMON
-  note: Mononemes are directly evidenced in mature Plasmodium falciparum segmenters
-    and released merozoites; no broader apicomplexan distribution is asserted in this
-    first record.
+  note: Mononemes are directly evidenced in mature Plasmodium falciparum segmenter-stage
+    merozoites; released merozoites are cited only as evidence for PfROM1 redistribution
+    after leaving the mononeme.
   reference: DOI:10.1073/pnas.0709999104
 canonical_examples:
 - taxon_id: NCBITaxon:5833
   taxon_label: Plasmodium falciparum
   note: Human malaria parasite in which HA-tagged PfROM1 revealed a single thread-like
-    mononeme running along one side of mature merozoites close to the subpellicular
-    microtubules.
+    mononeme running along one side of mature segmenter-stage merozoites close to
+    the subpellicular microtubules.
   reference: DOI:10.1073/pnas.0709999104
 functions:
 - function_id: rom1_compartmentalization
@@ -112,6 +125,14 @@ causal_graphs:
     label: microneme
     node_type: ORGANELLE
     grounding: GO:0020009
+  - node_id: rhoptry
+    label: rhoptry
+    node_type: ORGANELLE
+    grounding: GO:0020008
+  - node_id: apicomplexan_dense_granule
+    label: apicomplexan dense granule
+    node_type: ORGANELLE
+    grounding: GO:0020026
   - node_id: post_release_merozoite_surface
     label: post-release merozoite surface
     node_type: CELLULAR_LOCALIZATION
@@ -146,6 +167,24 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.0709999104
       notes: Singh et al. 2007 found that HA-PfROM1 did not colocalize with the AMA1
         microneme marker.
+  - subject: mononeme
+    predicate: is distinct from
+    object: rhoptry
+    description: The PfROM1-marked mononeme is spatially distinct from the rhoptry
+      neck and rhoptry bulb in mature merozoites.
+    evidence:
+    - reference: DOI:10.1073/pnas.0709999104
+      notes: Singh et al. 2007 found that HA-PfROM1 did not colocalize with rhoptry
+        neck or rhoptry bulb markers.
+  - subject: mononeme
+    predicate: is distinct from
+    object: apicomplexan_dense_granule
+    description: The PfROM1-marked mononeme is spatially distinct from dense granules
+      in mature merozoites.
+    evidence:
+    - reference: DOI:10.1073/pnas.0709999104
+      notes: Singh et al. 2007 found that HA-PfROM1 did not colocalize with a RESA
+        dense-granule marker.
   - subject: pfrom1_rhomboid_protease
     predicate: redistributes to
     object: post_release_merozoite_surface

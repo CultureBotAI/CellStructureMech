@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mononeme.yaml
+  slug: mononeme
+session:
+  id: 2026-09-22T124954Z-codex-3aec34
+  timestamp: '2026-09-22T12:49:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1281
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1282
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1280
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - taxonomy
+  - mechanism
+  summary: Address mononeme PR review
+  details: 'Addressed PR #1280 review issues #1281 and #1282 by narrowing Plasmodium falciparum
+    mononeme evidence to segmenter-stage merozoites and adding rhoptry and apicomplexan dense-granule
+    distinctness controls to the PfROM1 relocalization graph.'
