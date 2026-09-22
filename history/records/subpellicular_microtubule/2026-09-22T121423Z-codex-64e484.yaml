@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/subpellicular_microtubule.yaml
+  slug: subpellicular_microtubule
+session:
+  id: 2026-09-22T121423Z-codex-64e484
+  timestamp: '2026-09-22T12:14:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1278
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1279
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1277
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - evidence
+  - mechanism
+  - discussion
+  summary: Address subpellicular microtubule PR review
+  details: 'Addressed PR #1277 review issues #1278 and #1279 by narrowing the Toxoplasma canonical-example
+    note so DOI:10.1242/jcs.110.1.35 only supports the Morrissette 1997 lattice evidence,
+    adding DOI:10.1155/2014/893272 as direct evidence for excluded Trypanosoma brucei subpellicular-microtubule
+    naming, regenerating the text embeddings and site, and rerunning validation.'

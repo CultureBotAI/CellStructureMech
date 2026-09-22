@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/subpellicular_microtubule.yaml
+  slug: subpellicular_microtubule
+session:
+  id: 2026-09-22T120240Z-codex-7bdd77
+  timestamp: '2026-09-22T12:02:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - mechanism
+  - discussion
+  summary: Add subpellicular microtubule record
+  details: Created a PROPOSED GO:0020025 subpellicular microtubule record with GO microtubule
+    parentage, apical-complex parthood, a reviewed label-only alpha/beta tubulin component,
+    Toxoplasma gondii taxonomic scope, GO/DOI evidence, a nonmechanistic Toxoplasma cortical
+    topology graph, and curation discussions for unresolved accessory components and the Apicomplexa-specific
+    GO boundary.
