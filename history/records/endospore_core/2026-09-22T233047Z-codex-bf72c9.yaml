@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/endospore_core.yaml
+  slug: endospore_core
+session:
+  id: 2026-09-22T233047Z-codex-bf72c9
+  timestamp: '2026-09-22T23:30:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1333
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1334
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1332
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address endospore core PR review issues
+  details: 'Resolved PR #1332 review issues #1333 and #1334 by removing the generic UniProt
+    SL-0253 Spore core location from xrefs, retaining it only as scoped synonym and evidence
+    provenance, documenting that it is not a one-to-one cross-reference to GO:0070477, and
+    retitling the function graph so endospore core dehydration is assigned to the cortex rather
+    than to all surrounding layers.'

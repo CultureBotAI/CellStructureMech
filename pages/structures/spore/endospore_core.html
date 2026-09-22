@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>endospore core · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>endospore core</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0070477"><code>GO:0070477</code></a> · SPORE · SUBCELLULAR_REGION · <span class="status">PROPOSED</span></p>
+<p class="definition">An intracellular part that represents the innermost portion of an endospore; the endospore core is dehydrated, enriched in dipicolinic acid and divalent cations, and metabolically inactive. <small>[<a href="http://purl.obolibrary.org/obo/GO_0070477"><code>GO:0070477</code></a>]</small></p>
+<p><strong>Synonyms:</strong> spore core; spore matrix</p>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1239"><code>NCBITaxon:1239</code></a> Bacillota — <strong>COMMON</strong>: Endospore cores are produced by endospore-forming Bacillota lineages as the dormant innermost compartment, while many non-sporulating members of the phylum have lost the pathway. [<a href="https://doi.org/10.1038/nrmicro2921"><code>DOI:10.1038/nrmicro2921</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1423"><code>NCBITaxon:1423</code></a> <em>Bacillus subtilis</em> — Classical bacterial endospore model in which the forespore matures into a dehydrated endospore core inside cortex and coat layers. [<a href="https://doi.org/10.1038/nrmicro2921"><code>DOI:10.1038/nrmicro2921</code></a>]</li></ul>
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-endospore_core_dehydrated_interior">Cortex maintains low water in the endospore core <small>(FUNCTION)</small></h3>
+<p>The dormant endospore core is the innermost compartment and is bounded by the spore inner membrane. Outside the core, the endospore cortex helps maintain the low core water content that supports wet-heat resistance.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>spore inner membrane</td><td>surrounds</td><td>endospore core</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140549"><code>GO:0140549</code></a> <small>GO:0140549 defines the spore inner membrane as the membrane surrounding the spore core.</small></li></ul></td></tr>
+<tr><td>endospore cortex</td><td>maintains</td><td>low core water content</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/9781555819323.ch10"><code>DOI:10.1128/9781555819323.ch10</code></a> <small>Setlow 2016 reviews the cortex contribution to spore core dehydration.</small></li></ul></td></tr>
+<tr><td>low core water content</td><td>enables</td><td>wet-heat resistance</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/9781555819323.ch10"><code>DOI:10.1128/9781555819323.ch10</code></a> <small>Setlow 2016 reviews low core water content as a determinant of spore wet-heat resistance.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the endospore core separate from the surrounding spore inner membrane, cortex, coat, and external encapsulating structure. <small>GO:0070477 denotes the innermost dehydrated endospore core, whereas GO:0140549 denotes the membrane surrounding it, GO:0043595 denotes the cortex outside that membrane, and GO:0043591 denotes the broader cortex-coat external encapsulating structure.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Use UniProt SL-0253 as spore-core provenance without treating it as an exact cross-reference for the bacterial endospore core. <small>SL-0253 denotes the generic UniProt Spore core location under the broader Spore hierarchy and carries no GO mapping, so it is not a true equivalent to GO:0070477.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070477"><code>GO:0070477</code></a> <small>Gene Ontology cellular-component term for the endospore core.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0140549"><code>GO:0140549</code></a> <small>Gene Ontology cellular-component term for the spore inner membrane that surrounds the endospore core.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0043595"><code>GO:0043595</code></a> <small>Gene Ontology cellular-component term for the endospore cortex layer outside the spore inner membrane and core.</small></li><li><code>uniprot.location:SL-0253</code> <small>UniProt Subcellular Location SL-0253 identifies a generic Spore core location without a GO mapping and records spore matrix as an alternate name.</small></li><li><a href="https://doi.org/10.1128/9781555819323.ch10"><code>DOI:10.1128/9781555819323.ch10</code></a> <small>Setlow 2016, Spore Resistance Properties, in The Bacterial Spore.</small></li><li><a href="https://doi.org/10.1038/nrmicro2921"><code>DOI:10.1038/nrmicro2921</code></a> <small>McKenney, Driks and Eichenberger 2012, The Bacillus subtilis endospore: assembly and functions of the multilayered coat, Nature Reviews Microbiology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-22T23:16:24Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-22T23:17:35Z</code> codex · EXPANDED_RECORD — Added UniProt SL synonyms and cross-reference, Bacillota distribution, a Bacillus subtilis example, GO/UniProt/literature evidence, a nonmechanistic core-dehydration graph, and a surrounding-layer boundary discussion.</li><li><code>2026-09-22T23:30:30Z</code> codex · ADDRESS_REVIEW — Resolved #1333 by removing the generic UniProt SL-0253 location from xrefs while preserving it as scoped evidence, and resolved #1334 by retitling the function graph to assign core dehydration to the cortex rather than all surrounding layers.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/spore/endospore_core.yaml"><code>data/structures/spore/endospore_core.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
