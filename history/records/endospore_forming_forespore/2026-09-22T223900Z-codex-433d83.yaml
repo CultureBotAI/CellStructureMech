@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/endospore_forming_forespore.yaml
+  slug: endospore_forming_forespore
+session:
+  id: 2026-09-22T223900Z-codex-433d83
+  timestamp: '2026-09-22T22:39:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add endospore-forming forespore record
+  details: Created a GO:0042601 endospore-forming forespore structure record after a hidden
+    and ignored-file inclusive duplicate search for GO:0042601, endospore-forming forespore,
+    forespore, prespore, UniProt SL-0119, PMID:15753026, and DOI:10.1016/j.cub.2005.02.041.
+    The record adds UniProt SL-0119 cross-referencing, Bacillota and Bacillus subtilis scope,
+    GO and literature evidence, an asymmetric-septation topology graph, and a resolved boundary
+    discussion separating the bacterial forespore from the broader GO:0042763 intracellular
+    immature spore and yeast ascospore-type prospore records.

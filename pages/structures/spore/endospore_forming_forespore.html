@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>endospore-forming forespore · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>endospore-forming forespore</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0042601"><code>GO:0042601</code></a> · SPORE · SUBCELLULAR_REGION · <span class="status">PROPOSED</span></p>
+<p class="definition">Portion of the cell formed during the process of bacterial sporulation that will ultimately become the core of the endospore. An endospore is a type of dormant cell that is resistant to adverse conditions. <small>[<a href="http://purl.obolibrary.org/obo/GO_0042601"><code>GO:0042601</code></a>]</small></p>
+<p><strong>Synonyms:</strong> forespore; prespore</p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0119</code> </p>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1239"><code>NCBITaxon:1239</code></a> Bacillota — <strong>COMMON</strong>: Endospore-forming forespores occur as transient daughter compartments in endospore-forming Bacillota lineages during sporulation, with many non-sporulating members of the phylum lacking the structure. [<a href="https://doi.org/10.1038/nrmicro2921"><code>DOI:10.1038/nrmicro2921</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1423"><code>NCBITaxon:1423</code></a> <em>Bacillus subtilis</em> — Classical endospore model in which an asymmetric polar septum creates a smaller forespore compartment and a larger mother-cell compartment. [<a href="https://doi.org/10.1038/nrmicro2921"><code>DOI:10.1038/nrmicro2921</code></a>]</li></ul>
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-asymmetric_septation_creates_forespore">Asymmetric septation creates the forespore <small>(ASSEMBLY)</small></h3>
+<p>During Bacillus subtilis sporulation, polar septation partitions the developing cell into a small forespore compartment and a larger mother-cell compartment.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>asymmetric polar septum</td><td>delimits</td><td>endospore-forming forespore</td><td><ul class="evidence"><li><code>uniprot.location:SL-0119</code> <small>UniProt SL-0119 describes sporulation as forming an asymmetrically positioned septum that divides the developing cell into forespore and mother-cell compartments.</small></li><li><a href="https://doi.org/10.1016/j.cub.2005.02.041"><code>DOI:10.1016/j.cub.2005.02.041</code></a> <small>Ramamurthi and Losick 2005 review protein localization to the Bacillus subtilis forespore during sporulation.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the bacterial forespore separate from the broader intracellular immature spore and from ascospore-type prospore records. <small>GO:0042601 specifically denotes the bacterial sporulation compartment that becomes an endospore core, whereas GO:0042763 also parents fungal ascospore-type prospores and the existing GO:0005628 prospore membrane record is a yeast double-membrane structure.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042601"><code>GO:0042601</code></a> <small>Gene Ontology cellular-component term for the endospore-forming forespore.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0042763"><code>GO:0042763</code></a> <small>Gene Ontology cellular-component parent term for intracellular immature spores.</small></li><li><code>uniprot.location:SL-0119</code> <small>UniProt Subcellular Location entry SL-0119 identifies the bacterial Forespore location and maps it to GO:0042763.</small></li><li><a href="https://doi.org/10.1016/j.cub.2005.02.041"><code>DOI:10.1016/j.cub.2005.02.041</code></a> <small>Ramamurthi and Losick 2005, Protein Localization: Reach out and Touch the Forespore, Current Biology.</small></li><li><a href="https://doi.org/10.1038/nrmicro2921"><code>DOI:10.1038/nrmicro2921</code></a> <small>McKenney, Driks and Eichenberger 2012, The Bacillus subtilis endospore: assembly and functions of the multilayered coat, Nature Reviews Microbiology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-22T22:36:58Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-22T22:38:28Z</code> codex · EXPANDED_RECORD — Added forespore synonyms, the intracellular immature spore parent, the UniProt SL cross-reference, Bacillota distribution, a Bacillus subtilis example, GO/UniProt/literature evidence, a nonmechanistic asymmetric-septation graph, and a bacterial-versus-ascospore boundary discussion.</li><li><code>2026-09-22T22:50:32Z</code> codex · ADDRESS_REVIEW — Resolved #1330 by citing the Bacillus endospore review for the Bacillus subtilis canonical example and resolved #1331 by relaxing over-specific SpoII protein names in the graph scope note.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/spore/endospore_forming_forespore.yaml"><code>data/structures/spore/endospore_forming_forespore.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
