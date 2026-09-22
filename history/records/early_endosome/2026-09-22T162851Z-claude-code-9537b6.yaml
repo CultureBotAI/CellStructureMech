@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/early_endosome.yaml
+  slug: early_endosome
+session:
+  id: 2026-09-22T162851Z-claude-code-9537b6
+  timestamp: '2026-09-22T16:28:51Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Addressed PR #1299 early endosome review issues'
+  details: 'Resolved #1300 by removing the local cellstructuremech:reservosome record ID from
+    resolved-discussion evidence while leaving it as a graph-node grounding, and resolved
+    #1301 by narrowing the early-endosome graph scope note from Trypanosoma-wide wording to
+    T. cruzi-specific wording.'
