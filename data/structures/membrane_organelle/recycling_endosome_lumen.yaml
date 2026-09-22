@@ -1,0 +1,152 @@
+identifier: GO:0034777
+label: recycling endosome lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the membranes of a recycling endosome.
+definition_source: GO:0034777
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T20:44:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T20:45:02Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added endosome-lumen parentage, recycling-endosome parthood, a recycling
+    endosomal lumen synonym, UniProt SL-0345 xref, Trypanosoma brucei scope, a cargo-routing
+    function, GO/UniProt/PubMed evidence, a nonmechanistic lumen-topology graph, and
+    a resolved lumen-boundary interpretation.
+  llm_assisted: true
+parent_structures:
+- GO:0031904
+part_of:
+- GO:0055037
+synonyms:
+- synonym_text: recycling endosomal lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0345
+xrefs:
+- uniprot.location:SL-0345
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  presence: VARIABLE
+  note: Trypanosoma brucei bloodstream and procyclic cells contain TbRAB11-positive
+    endosomal recycling compartments carrying transferrin receptor cargo.
+  reference: PMID:11683389
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: Kinetoplastid parasite whose TbRAB11-positive recycling compartments instantiate
+    membrane-enclosed recycling endosome lumens around transferrin receptor cargo.
+  reference: PMID:11683389
+functions:
+- function_id: recycling_endosome_lumen_cargo_routing
+  label: recycling endosome lumen cargo routing
+  description: The recycling endosome lumen is the bounded volume inside the recycling
+    endosome through which endocytosed cargo can be routed during plasma-membrane
+    recycling.
+  evidence:
+  - reference: GO:0034777
+    notes: GO:0034777 defines the recycling endosome lumen as the volume enclosed
+      by recycling-endosome membranes.
+  - reference: GO:0055037
+    notes: GO:0055037 defines the recycling endosome as targeting molecules to the
+      plasma membrane.
+  - reference: PMID:11683389
+    notes: Jeffries, Morgan and Field 2001 localized TbRAB11 to T. brucei endosomal
+      recycling compartments carrying transferrin receptor cargo.
+evidence:
+- reference: GO:0034777
+  notes: Gene Ontology cellular-component term for the recycling endosome lumen.
+- reference: GO:0031904
+  notes: Gene Ontology cellular-component parent term for endosome lumen.
+- reference: GO:0055037
+  notes: Gene Ontology cellular-component term for the containing recycling endosome.
+- reference: GO:0055038
+  notes: Gene Ontology cellular-component term for the recycling endosome membrane
+    that bounds the lumen.
+- reference: uniprot.location:SL-0345
+  notes: UniProt Subcellular Location entry SL-0345 maps Recycling endosome lumen
+    to GO:0034777 and places it under Endosome lumen and Recycling endosome.
+- reference: PMID:11683389
+  notes: Jeffries, Morgan and Field 2001, A developmentally regulated rab11 homologue
+    in Trypanosoma brucei is involved in recycling processes, Journal of Cell Science.
+causal_graphs:
+- graph_id: recycling_endosome_lumen_topology
+  title: Recycling endosome lumen topology
+  description: The recycling endosome lumen is a specialized endosome lumen enclosed
+    by a recycling endosome membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures defining recycling-endosome lumen topology without
+    asserting a Rab11, tethering, coat, cytoskeletal or cargo-selection mechanism.
+  nodes:
+  - node_id: recycling_endosome_lumen
+    label: recycling endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0034777
+  - node_id: endosome_lumen
+    label: endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031904
+  - node_id: recycling_endosome_membrane
+    label: recycling endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0055038
+  - node_id: recycling_endosome
+    label: recycling endosome
+    node_type: ORGANELLE
+    grounding: GO:0055037
+  edges:
+  - subject: recycling_endosome_lumen
+    predicate: is a
+    object: endosome_lumen
+    description: The recycling endosome lumen is a specialized endosome lumen.
+    evidence:
+    - reference: uniprot.location:SL-0345
+      notes: UniProt SL-0345 places the recycling endosome lumen under endosome lumen.
+    - reference: GO:0031904
+      notes: GO:0031904 identifies the broader endosome lumen class.
+  - subject: recycling_endosome_lumen
+    predicate: is part of
+    object: recycling_endosome
+    description: The recycling endosome lumen is the volume enclosed inside a recycling
+      endosome.
+    evidence:
+    - reference: GO:0034777
+      notes: GO:0034777 defines the recycling endosome lumen as the volume enclosed
+        by recycling-endosome membranes.
+  - subject: recycling_endosome_membrane
+    predicate: bounds
+    object: recycling_endosome_lumen
+    description: The recycling endosome membrane encloses the recycling endosome lumen.
+    evidence:
+    - reference: GO:0055038
+      notes: GO:0055038 identifies the recycling endosome membrane.
+    - reference: GO:0034777
+      notes: GO:0034777 defines the recycling endosome lumen by enclosure within recycling-endosome
+        membranes.
+discussions:
+- discussion_id: recycling_endosome_lumen_boundary_not_membrane
+  prompt: Represent the recycling endosome membrane as the boundary of the recycling
+    endosome lumen rather than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#recycling_endosome_lumen_topology
+  rationale: GO:0034777 denotes the volume enclosed by the recycling endosome membrane,
+    whereas GO:0055038 denotes the surrounding lipid bilayer.
+  resolution_note: Curated the recycling endosome membrane as a boundary node and
+    left the recycling endosome lumen without asserted constituent molecular components.
+  evidence:
+  - reference: GO:0034777
+    notes: GO:0034777 identifies the recycling endosome lumen.
+  - reference: GO:0055038
+    notes: GO:0055038 identifies the recycling endosome membrane that bounds the lumen.
+  posed_by: codex
+  posed_date: '2026-09-22'
+  resolved_date: '2026-09-22'
