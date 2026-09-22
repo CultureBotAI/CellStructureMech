@@ -22,20 +22,27 @@ curation_history:
     function, DOI evidence, a nonmechanistic macronuclear chromosome graph, and a
     grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-22T13:59:15Z'
+  curator: codex
+  action: REVIEW_FIXES
+  changes: 'Resolved PR #1286 review issues #1287 and #1288 by renaming the macronuclear
+    chromosome component to chromosomal DNA and tightening the housed-in graph edge
+    evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0005634
 components:
-- component_id: macronuclear_chromosomes
-  label: macronuclear chromosomes
+- component_id: macronuclear_chromosomal_dna
+  label: macronuclear chromosomal DNA
   component_type: DNA
   component_role: CONSTITUENT
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000228 denotes any eukaryotic nuclear chromosome; no source-neutral
-    GO or SO identifier was verified for processed, amplified chromosomes of the ciliate
-    macronucleus.
-  role: Processed polyploid nuclear chromosomes that make up the vegetatively expressed
-    somatic genome of a ciliate.
+  grounding_notes: GO:0000228 denotes complete eukaryotic nuclear chromosome structures;
+    no source-neutral GO or SO identifier was verified for the processed, amplified
+    DNA molecules on ciliate macronuclear chromosomes.
+  role: Processed, amplified DNA molecules carried on ciliate macronuclear chromosomes
+    and vegetatively expressed from the somatic genome.
   evidence:
   - reference: GO:0031039
     notes: GO:0031039 defines the macronucleus as containing polyploid copies of part
@@ -76,20 +83,21 @@ evidence:
   notes: Eisen et al. 2006, 'Macronuclear Genome Sequence of the Ciliate Tetrahymena
     thermophila, a Model Eukaryote', PLoS Biology.
 causal_graphs:
-- graph_id: macronuclear_chromosomes_support_somatic_expression
-  title: Macronuclear chromosomes support somatic expression
-  description: In Tetrahymena thermophila, processed, amplified macronuclear chromosomes
-    reside in the somatic macronucleus and support vegetative gene expression.
+- graph_id: macronuclear_chromosomal_dna_supports_somatic_expression
+  title: Macronuclear chromosomal DNA supports somatic expression
+  description: In Tetrahymena thermophila, processed, amplified macronuclear chromosomal
+    DNA is carried on chromosomes in the somatic macronucleus and supports vegetative
+    gene expression.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures the mature Tetrahymena macronucleus as a processed-genome
     compartment without modeling micronucleus-to-macronucleus development or macronuclear
     nuclear-pore composition.
   nodes:
-  - node_id: macronuclear_chromosomes
-    label: macronuclear chromosomes
+  - node_id: macronuclear_chromosomal_dna
+    label: macronuclear chromosomal DNA
     node_type: GENETIC_ELEMENT
-    component_ref: macronuclear_chromosomes
+    component_ref: macronuclear_chromosomal_dna
   - node_id: macronucleus
     label: macronucleus
     node_type: STRUCTURE
@@ -98,16 +106,17 @@ causal_graphs:
     label: somatic gene expression
     node_type: BIOLOGICAL_PROCESS
   edges:
-  - subject: macronuclear_chromosomes
-    predicate: are housed in
+  - subject: macronuclear_chromosomal_dna
+    predicate: is carried on
     object: macronucleus
-    description: Processed, amplified macronuclear chromosomes are contained in the
-      Tetrahymena macronucleus.
+    description: Processed, amplified macronuclear chromosomal DNA is carried on chromosomes
+      in the Tetrahymena macronucleus.
     evidence:
     - reference: DOI:10.1371/journal.pbio.0040286
-      notes: Eisen et al. 2006 described the MAC genome as MIC-derived chromosomes
-        that are fragmented, telomere-capped, and amplified.
-  - subject: macronuclear_chromosomes
+      notes: Eisen et al. 2006 described each Tetrahymena cell as carrying a MAC and
+        MIC, and described the MAC genome as MIC-derived chromosomes that are fragmented,
+        telomere-capped, and amplified.
+  - subject: macronuclear_chromosomal_dna
     predicate: support
     object: somatic_gene_expression
     description: The macronuclear genome contains the genes expressed during Tetrahymena
@@ -126,16 +135,16 @@ causal_graphs:
       notes: GO:0031039 states that transcription of genes occurs in macronuclei.
 discussions:
 - discussion_id: resolve_macronuclear_chromosome_grounding
-  prompt: Resolve whether a source-neutral GO or SO identifier exactly denotes ciliate
-    macronuclear chromosomes.
+  prompt: Resolve whether a source-neutral SO identifier exactly denotes the processed,
+    amplified chromosomal DNA of ciliate macronuclei.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#macronuclear_chromosomes
-  - causal_graphs#macronuclear_chromosomes_support_somatic_expression
-  rationale: Macronuclear chromosomes are the processed, amplified chromosomes of
-    a ciliate somatic nucleus. Existing generic GO chromosome terms are broader than
-    that ciliate-specific component.
+  - components#macronuclear_chromosomal_dna
+  - causal_graphs#macronuclear_chromosomal_dna_supports_somatic_expression
+  rationale: Macronuclear chromosomal DNA is processed and amplified on the chromosomes
+    of a ciliate somatic nucleus. Generic GO chromosome terms describe complete chromosomal
+    structures rather than this ciliate-specific DNA constituent.
   evidence:
   - reference: DOI:10.1371/journal.pbio.0040286
     notes: Eisen et al. 2006 describe the macronuclear genome as MIC-derived, fragmented,

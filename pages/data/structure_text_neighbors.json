@@ -6680,27 +6680,27 @@
         {
           "identifier": "GO:0005634",
           "label": "nucleus",
-          "cosine_similarity": 0.79219788
+          "cosine_similarity": 0.78493023
         },
         {
           "identifier": "GO:0009536",
           "label": "plastid",
-          "cosine_similarity": 0.78130694
+          "cosine_similarity": 0.78404906
         },
         {
           "identifier": "GO:0033009",
           "label": "nucleomorph",
-          "cosine_similarity": 0.77709355
-        },
-        {
-          "identifier": "cellstructuremech:mitosome_matrix",
-          "label": "mitosome matrix",
-          "cosine_similarity": 0.76098814
+          "cosine_similarity": 0.77013763
         },
         {
           "identifier": "cellstructuremech:mitosome_intermembrane_space",
           "label": "mitosome intermembrane space",
-          "cosine_similarity": 0.75855454
+          "cosine_similarity": 0.76366044
+        },
+        {
+          "identifier": "cellstructuremech:mitosome_matrix",
+          "label": "mitosome matrix",
+          "cosine_similarity": 0.76348702
         }
       ]
     },
@@ -7778,14 +7778,14 @@
           "cosine_similarity": 0.78296341
         },
         {
-          "identifier": "GO:0031039",
-          "label": "macronucleus",
-          "cosine_similarity": 0.77709355
-        },
-        {
           "identifier": "GO:0009295",
           "label": "nucleoid",
           "cosine_similarity": 0.7738512
+        },
+        {
+          "identifier": "GO:0031039",
+          "label": "macronucleus",
+          "cosine_similarity": 0.77013763
         }
       ]
     },
@@ -9108,7 +9108,7 @@
         {
           "identifier": "GO:0031039",
           "label": "macronucleus",
-          "cosine_similarity": 0.75375318
+          "cosine_similarity": 0.75289356
         },
         {
           "identifier": "GO:0070258",
