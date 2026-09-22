@@ -322,10 +322,10 @@ context. It deliberately excludes identifiers, citations, images, curation
 history, taxon-specific `complex_compositions`, and protein examples so source
 verbosity does not masquerade as biological similarity.
 
-`just text-embeddings-refresh` runs the model- and library-version-pinned
-`sentence-transformers/all-MiniLM-L6-v2` model locally and commits one vector per
-record. Each labelled line is embedded independently, then the unit vectors are
-mean-pooled so the model's input-length limit cannot silently drop later
+`just text-embeddings-refresh` runs the model- and library-version-pinned ONNX
+export of `sentence-transformers/all-MiniLM-L6-v2` locally and commits one vector
+per record. Each labelled line is embedded independently, then the unit vectors
+are mean-pooled so the model's input-length limit cannot silently drop later
 components. No corpus text is sent to an external embedding service. The normal
 `just text-map` command uses the cache to rebuild a two-dimensional PCA view and
 full-vector cosine neighbours without network or model dependencies.

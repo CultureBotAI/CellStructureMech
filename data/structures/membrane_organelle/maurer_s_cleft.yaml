@@ -1,0 +1,243 @@
+identifier: GO:0020036
+label: Maurer's cleft
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A disk-like structure that appears at the periphery of a red blood cell
+  infected by an apicomplexan parasite, characterized by a translucent lumen and an
+  electron-dense coat of variable thickness; often appears to be tethered to the host
+  cell membrane by fibrous connections with the erythrocyte cytoskeleton.
+definition_source: GO:0020036
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T07:33:56Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T07:35:19Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added membrane and resident-protein components, P. falciparum taxonomic
+    scope, a PfEMP1 trafficking function, DOI evidence, a nonmechanistic Maurer's-cleft
+    trafficking graph, and discussions for host-cell boundary and protein-family grounding.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+components:
+- component_id: maurers_cleft_membrane
+  label: Maurer's cleft membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Parasite-derived membrane boundary of the flattened cleft in the infected
+    red-blood-cell cytoplasm.
+  evidence:
+  - reference: DOI:10.1016/j.ijpara.2005.10.001
+    notes: Lanzer et al. 2006 reviewed Maurer's clefts as flattened membranous organelles
+      induced by Plasmodium falciparum in infected erythrocytes.
+  - reference: DOI:10.1016/S0166-6851(00)00301-7
+    notes: Blisnick et al. 2000 localized the integral membrane protein PfSBP1 to
+      Maurer's clefts in P. falciparum-infected erythrocytes.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0020036 denotes the whole Maurer's cleft; no exact source-neutral
+    GO or membrane-lipid CURIE for only the Maurer's cleft membrane was curated.
+- component_id: maurers_cleft_resident_proteins
+  label: Maurer's cleft resident proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Plasmodium-exported proteins that reside at Maurer's clefts and participate
+    in trafficking or organizing virulence cargo in infected erythrocytes.
+  evidence:
+  - reference: DOI:10.1111/j.1365-2958.2008.06235.x
+    notes: Spycher et al. 2008 studied the Maurer's cleft protein MAHRP1 and found
+      that MAHRP1 loss prevents PfEMP1 presentation on the infected red-blood-cell
+      surface.
+  - reference: DOI:10.1083/jcb.200509122
+    notes: Cooke et al. 2006 disrupted skeleton-binding protein 1 and showed that
+      PfEMP1 still reached Maurer's clefts but was not presented on the infected red-blood-cell
+      surface.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Maurer's cleft resident proteins include unrelated Plasmodium proteins
+    such as SBP1 and MAHRP1; no exact source-neutral CURIE for the whole resident
+    cohort was curated.
+- component_id: skeleton_binding_protein_1
+  label: skeleton-binding protein 1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Integral Maurer's cleft membrane protein implicated in anchoring clefts to
+    the erythrocyte skeleton and required for efficient PfEMP1 surface display in
+    P. falciparum-infected erythrocytes.
+  evidence:
+  - reference: DOI:10.1016/S0166-6851(00)00301-7
+    notes: Blisnick et al. 2000 characterized PfSBP1 as an integral Maurer's cleft
+      membrane protein associated with the erythrocyte skeleton.
+  - reference: DOI:10.1083/jcb.200509122
+    notes: Cooke et al. 2006 found that deleting SBP1 blocked PfEMP1 expression on
+      the infected red-blood-cell surface.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from Plasmodium SBP1 evidence; no exact InterPro, Pfam,
+    or NCBIfam family identifier for the Maurer's cleft SBP1 constituent class was
+    curated.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  presence: COMMON
+  note: P. falciparum asexual blood-stage parasites induce Maurer's clefts in the
+    cytoplasm of infected human erythrocytes.
+  reference: DOI:10.1016/j.ijpara.2005.10.001
+canonical_examples:
+- taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  note: Human malaria parasite in which Maurer's cleft resident proteins such as SBP1
+    and MAHRP1 have been tested genetically for PfEMP1 trafficking.
+  reference: DOI:10.1083/jcb.200509122
+functions:
+- function_id: erythrocyte_surface_virulence_protein_trafficking
+  label: erythrocyte surface virulence-protein trafficking
+  description: Maurer's clefts act as intermediate compartments that help traffic
+    parasite virulence proteins, including PfEMP1, toward the infected erythrocyte
+    surface.
+  evidence:
+  - reference: DOI:10.1016/j.ijpara.2005.10.001
+    notes: Lanzer et al. 2006 reviewed Maurer's cleft morphology and protein-trafficking
+      roles in P. falciparum-infected erythrocytes.
+  - reference: DOI:10.1111/j.1365-2958.2008.06235.x
+    notes: Spycher et al. 2008 found that MAHRP1 loss depletes PfEMP1 from Maurer's
+      clefts and prevents PfEMP1 surface presentation.
+evidence:
+- reference: GO:0020036
+  notes: Gene Ontology cellular-component term for Maurer's cleft.
+- reference: GO:0043231
+  notes: Gene Ontology cellular-component parent for intracellular membrane-bounded
+    organelles.
+- reference: DOI:10.1016/j.ijpara.2005.10.001
+  notes: 'Lanzer et al. 2006, Maurer''s clefts: a novel multi-functional organelle
+    in the cytoplasm of Plasmodium falciparum-infected erythrocytes, International
+    Journal for Parasitology.'
+- reference: DOI:10.1016/S0166-6851(00)00301-7
+  notes: Blisnick et al. 2000, Pfsbp1, a Maurer's cleft Plasmodium falciparum protein,
+    is associated with the erythrocyte skeleton, Molecular and Biochemical Parasitology.
+- reference: DOI:10.1083/jcb.200509122
+  notes: Cooke et al. 2006, A Maurer's cleft-associated protein is essential for expression
+    of the major malaria virulence antigen on the surface of infected red blood cells,
+    Journal of Cell Biology.
+- reference: DOI:10.1111/j.1365-2958.2008.06235.x
+  notes: Spycher et al. 2008, The Maurer's cleft protein MAHRP1 is essential for trafficking
+    of PfEMP1 to the surface of Plasmodium falciparum-infected erythrocytes, Molecular
+    Microbiology.
+causal_graphs:
+- graph_id: maurers_cleft_pfemp1_trafficking
+  title: Maurer's cleft proteins support infected-cell surface cargo display
+  description: The Maurer's cleft membrane houses resident Plasmodium proteins, including
+    SBP1, that contribute to delivery of PfEMP1 toward the infected erythrocyte surface.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the cleft-to-host-surface trafficking role without
+    asserting the vesicle budding, actin-remodeling, or protein-export steps upstream
+    and downstream of the cleft.
+  nodes:
+  - node_id: maurers_cleft_membrane
+    label: Maurer's cleft membrane
+    node_type: STRUCTURE
+    component_ref: maurers_cleft_membrane
+  - node_id: maurers_cleft
+    label: Maurer's cleft
+    node_type: ORGANELLE
+    grounding: GO:0020036
+  - node_id: skeleton_binding_protein_1
+    label: skeleton-binding protein 1
+    node_type: GENE_OR_PROTEIN
+    component_ref: skeleton_binding_protein_1
+  - node_id: maurers_cleft_resident_proteins
+    label: Maurer's cleft resident proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: maurers_cleft_resident_proteins
+  - node_id: pfemp1_trafficking
+    label: PfEMP1 trafficking
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: infected_erythrocyte_surface
+    label: infected erythrocyte surface
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: maurers_cleft_membrane
+    predicate: bounds
+    object: maurers_cleft
+    description: A parasite-derived membrane bounds the flattened Maurer's cleft in
+      infected erythrocytes.
+    evidence:
+    - reference: DOI:10.1016/j.ijpara.2005.10.001
+      notes: Lanzer et al. 2006 reviewed Maurer's clefts as membranous organelles
+        in P. falciparum-infected erythrocytes.
+  - subject: skeleton_binding_protein_1
+    predicate: localizes to
+    object: maurers_cleft_membrane
+    description: PfSBP1 is an integral membrane protein of P. falciparum Maurer's
+      clefts.
+    evidence:
+    - reference: DOI:10.1016/S0166-6851(00)00301-7
+      notes: Blisnick et al. 2000 localized PfSBP1 to the Maurer's cleft membrane.
+  - subject: maurers_cleft_resident_proteins
+    predicate: localize to
+    object: maurers_cleft
+    description: Maurer's clefts contain multiple resident Plasmodium proteins that
+      participate in infected-cell remodeling.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2008.06235.x
+      notes: Spycher et al. 2008 localized MAHRP1 to Maurer's clefts and tested its
+        role in PfEMP1 trafficking.
+  - subject: maurers_cleft
+    predicate: supports
+    object: pfemp1_trafficking
+    description: PfEMP1 transits through Maurer's clefts en route to the infected
+      erythrocyte surface.
+    evidence:
+    - reference: DOI:10.1083/jcb.200509122
+      notes: Cooke et al. 2006 found that in SBP1 knockout parasites PfEMP1 still
+        reaches Maurer's clefts but no longer appears on the infected-cell surface.
+  - subject: pfemp1_trafficking
+    predicate: delivers cargo to
+    object: infected_erythrocyte_surface
+    description: Maurer's cleft-dependent trafficking helps present PfEMP1 on the
+      surface of infected red blood cells.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2008.06235.x
+      notes: Spycher et al. 2008 showed that MAHRP1 deletion depletes PfEMP1 from
+        Maurer's clefts and blocks PfEMP1 surface presentation.
+discussions:
+- discussion_id: parasite_derived_host_cytoplasm_boundary
+  prompt: Model Maurer's clefts as parasite-derived structures inside infected erythrocytes
+    rather than as a conserved host red-blood-cell organelle.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - taxonomic_distribution
+  - causal_graphs#maurers_cleft_pfemp1_trafficking
+  rationale: Maurer's clefts are induced by malaria parasites in the host erythrocyte
+    cytoplasm and are populated by parasite-exported proteins; this record therefore
+    uses Plasmodium falciparum as the canonical taxon and avoids treating the clefts
+    as normal erythrocyte organelles.
+  evidence:
+  - reference: DOI:10.1016/j.ijpara.2005.10.001
+    notes: Lanzer et al. 2006 reviewed Maurer's clefts as organelles in the cytoplasm
+      of P. falciparum-infected erythrocytes.
+  posed_by: codex
+  posed_date: '2026-09-22'
+  resolved_date: '2026-09-22'
+- discussion_id: ground_maurers_cleft_protein_families
+  prompt: Resolve exact source-neutral families for SBP1, MAHRP1, and other Maurer's
+    cleft resident protein classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#maurers_cleft_resident_proteins
+  - components#skeleton_binding_protein_1
+  rationale: The first record curates SBP1 and MAHRP1 from P. falciparum localization
+    and knockout evidence but does not assign broad domain-family CURIEs to exact
+    Maurer's cleft resident protein classes.
+  evidence:
+  - reference: DOI:10.1016/S0166-6851(00)00301-7
+  - reference: DOI:10.1111/j.1365-2958.2008.06235.x
+  posed_by: codex
+  posed_date: '2026-09-22'

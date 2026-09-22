@@ -18,12 +18,12 @@ for cosine neighbours; the page calls the two-dimensional view exploratory.
 - Revision: `c9745ed1d9f207416be6d2e6f8de32d1f16199bf`
 - Licence: Apache-2.0
 - Output: 384 dimensions
-- Execution: local with `sentence-transformers==6.0.0` through the optional
-  `embeddings` dependency
+- Execution: local ONNX Runtime over the pinned sentence-transformers ONNX
+  export through the optional `embeddings` dependency
 
 An authenticated CBorg embedding endpoint was considered, but using it would
 transmit the projected record text. The implemented refresh instead runs the
-already cached open model locally; no corpus text leaves the machine. The model
+pinned open model locally; no corpus text leaves the machine. The model
 revision, licence, dimension, aggregation rule, generation date, record paths,
 and text hashes are stored with the vectors.
 
