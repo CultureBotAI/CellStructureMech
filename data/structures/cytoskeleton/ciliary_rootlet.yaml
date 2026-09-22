@@ -1,0 +1,193 @@
+identifier: GO:0035253
+label: ciliary rootlet
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A cytoskeleton-like structure, originating from the basal body at the
+  proximal end of a cilium, and extending proximally toward the cell nucleus. Rootlets
+  are typically 80-100 nm in diameter and contain cross striae distributed at regular
+  intervals of approximately 55-70 nm.
+definition_source: GO:0035253
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T09:45:34Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T09:46:40Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonyms, an SF-assemblin homolog component, Chlamydomonas and
+    Paramecium scope, DOI evidence, a nonmechanistic ciliary-rootlet topology graph,
+    and TODOs for SF-assemblin grounding and rootlet subtype boundaries.
+  llm_assisted: true
+synonyms:
+- synonym_text: cilial rootlet
+  synonym_type: EXACT_SYNONYM
+  source: GO:0035253
+- synonym_text: cilium rootlet
+  synonym_type: EXACT_SYNONYM
+  source: GO:0035253
+- synonym_text: flagellar root
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1083/jcb.121.4.837
+- synonym_text: striated rootlet
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1186/s13630-019-0062-y
+components:
+- component_id: sf_assemblin_homologs
+  label: SF-assemblin homologs
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Segmented coiled-coil proteins that polymerize into the 2-nm filaments of
+    striated ciliary and flagellar rootlets in microbial eukaryotes.
+  evidence:
+  - reference: DOI:10.1083/jcb.121.4.837
+    notes: Weber et al. 1993 identified SF-assemblin as the structural protein of
+      2-nm filaments from striated microtubule-associated fibers of algal flagellar
+      roots.
+  - reference: DOI:10.1186/s13630-019-0062-y
+    notes: Nabi et al. 2019 found SF-Assemblin homologs in Paramecium ciliary striated
+      rootlets.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the SF-assemblin homologs that
+    build microbial eukaryotic striated ciliary rootlets was verified in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas reinhardtii carries SF-assemblin-positive noncontractile striated
+    roots in its flagellar basal apparatus.
+  reference: DOI:10.1242/jcs.115.7.1511
+- taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  presence: COMMON
+  note: Paramecium tetraurelia basal bodies carry striated ciliary rootlets containing
+    SF-Assemblin homologs.
+  reference: DOI:10.1186/s13630-019-0062-y
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model in which SF-assemblin was tagged, depleted and localized
+    to noncontractile striated roots in the flagellar basal apparatus.
+  reference: DOI:10.1242/jcs.115.7.1511
+- taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  note: Ciliate model in which SF-Assemblin paralogs and structural groups were linked
+    to ciliary striated rootlet organization by RNAi.
+  reference: DOI:10.1186/s13630-019-0062-y
+evidence:
+- reference: GO:0035253
+  notes: Gene Ontology cellular-component term for the ciliary rootlet.
+- reference: DOI:10.1083/jcb.115.3.705
+  notes: Lechtreck and Melkonian 1991 identified assemblin as a 34-kDa structural
+    protein that forms paracrystalline 2-nm filaments in striated microtubule-associated
+    fibers.
+- reference: DOI:10.1083/jcb.121.4.837
+  notes: Weber et al. 1993, SF-assemblin, the structural protein of the 2-nm filaments
+    from striated microtubule associated fibers of algal flagellar roots, forms a
+    segmented coiled coil.
+- reference: DOI:10.1242/jcs.115.7.1511
+  notes: Lechtreck, Rostmann and Grunow 2002 analyzed Chlamydomonas SF-assemblin by
+    GFP tagging and antisense constructs.
+- reference: DOI:10.1186/s13630-019-0062-y
+  notes: Nabi et al. 2019 linked Paramecium SF-Assemblin genes to ciliary striated
+    rootlets and surface organization.
+causal_graphs:
+- graph_id: sf_assemblin_ciliary_rootlet_topology
+  title: SF-assemblin homologs build striated ciliary rootlets
+  description: In microbial eukaryotes, segmented coiled-coil SF-assemblin homologs
+    assemble into striated ciliary or flagellar rootlets that originate at ciliary
+    basal bodies.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the established SF-assemblin polymer-to-rootlet and
+    rootlet-to-basal-body topology while leaving the full assembly pathway and lineage-specific
+    rootlet paralog boundaries unresolved.
+  nodes:
+  - node_id: sf_assemblin_homologs
+    label: SF-assemblin homologs
+    node_type: GENE_OR_PROTEIN
+    component_ref: sf_assemblin_homologs
+  - node_id: ciliary_rootlet
+    label: ciliary rootlet
+    node_type: STRUCTURE
+    grounding: GO:0035253
+  - node_id: ciliary_basal_body
+    label: ciliary basal body
+    node_type: STRUCTURE
+    grounding: GO:0036064
+  - node_id: flagellar_assembly
+    label: flagellar assembly
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: sf_assemblin_homologs
+    predicate: polymerize into
+    object: ciliary_rootlet
+    description: SF-assemblin homologs form segmented coiled-coil 2-nm filaments that
+      polymerize into striated microtubule-associated rootlet fibers.
+    evidence:
+    - reference: DOI:10.1083/jcb.121.4.837
+      notes: Weber et al. 1993 identified SF-assemblin as the structural protein of
+        2-nm filaments from algal flagellar-root fibers.
+    - reference: DOI:10.1242/jcs.115.7.1511
+      notes: Lechtreck et al. 2002 observed SFA-GFP assembling into striated fibers
+        in Chlamydomonas transformants.
+  - subject: ciliary_rootlet
+    predicate: originates at
+    object: ciliary_basal_body
+    description: Ciliary rootlets originate from basal bodies at the proximal end
+      of cilia or eukaryotic flagella.
+    evidence:
+    - reference: GO:0035253
+      notes: GO defines the ciliary rootlet as a cytoskeleton-like structure originating
+        from the ciliary basal body.
+  - subject: ciliary_rootlet
+    predicate: supports
+    object: flagellar_assembly
+    description: In Chlamydomonas, reducing SF-assemblin disrupts noncontractile striated
+      roots and impairs flagellar assembly.
+    evidence:
+    - reference: DOI:10.1242/jcs.115.7.1511
+      notes: Lechtreck et al. 2002 reduced SF-assemblin and observed defects in flagellar
+        assembly.
+discussions:
+- discussion_id: resolve_sf_assemblin_grounding
+  prompt: Resolve exact InterPro, Pfam or NCBIfam grounding for microbial eukaryotic
+    SF-assemblin homologs that build striated ciliary rootlets.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sf_assemblin_homologs
+  rationale: SF-assemblin homologs are established constituents of green-algal and
+    ciliate striated rootlets, but this pass did not verify one family accession that
+    exactly covers those rootlet proteins without pulling in unrelated coiled-coil
+    proteins.
+  evidence:
+  - reference: DOI:10.1083/jcb.121.4.837
+    notes: Weber et al. 1993 showed that algal SF-assemblin is a segmented coiled-coil
+      protein.
+  - reference: DOI:10.1186/s13630-019-0062-y
+    notes: Nabi et al. 2019 analyzed the expanded Paramecium SF-Assemblin homolog
+      set.
+  posed_by: codex
+  posed_date: '2026-09-22'
+- discussion_id: split_rootlet_subtypes
+  prompt: Decide whether algal rhizoplasts, Paramecium transverse, post-ciliary and
+    striated rootlets, and metazoan rootletin-based rootlets need subtype records.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#sf_assemblin_ciliary_rootlet_topology
+  rationale: The GO term names the broad ciliary rootlet class, while microbial eukaryotes
+    carry lineage-specific rootlet arrays whose geometry and molecular paralogs differ.
+  evidence:
+  - reference: DOI:10.1186/s13630-019-0062-y
+    notes: Nabi et al. 2019 distinguish the major Paramecium striated rootlet from
+      other basal-body rootlet systems.
+  - reference: DOI:10.1007/s00709-003-0016-4
+    notes: Brugerolle and Mignot 2003 describe a basal-body-to-nucleus rhizoplast
+      in chrysomonads.
+  posed_by: codex
+  posed_date: '2026-09-22'

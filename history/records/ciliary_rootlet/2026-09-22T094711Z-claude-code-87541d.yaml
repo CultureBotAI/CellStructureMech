@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ciliary_rootlet.yaml
+  slug: ciliary_rootlet
+session:
+  id: 2026-09-22T094711Z-claude-code-87541d
+  timestamp: '2026-09-22T09:47:11Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add the ciliary rootlet record
+  details: Created GO:0035253 as a PROPOSED ciliary rootlet cytoskeleton record with GO exact
+    synonyms, an SF-assemblin homolog label-only component, Chlamydomonas reinhardtii and
+    Paramecium tetraurelia scope, GO/DOI evidence, a nonmechanistic SF-assemblin rootlet topology
+    graph, and open TODOs for exact SF-assemblin grounding and ciliary-rootlet subtype boundaries.
