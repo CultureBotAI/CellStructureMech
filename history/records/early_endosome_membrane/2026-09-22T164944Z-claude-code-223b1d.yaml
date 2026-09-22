@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/early_endosome_membrane.yaml
+  slug: early_endosome_membrane
+session:
+  id: 2026-09-22T164944Z-claude-code-223b1d
+  timestamp: '2026-09-22T16:49:44Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the early endosome membrane record
+  details: Added a GO:0031901 early endosome membrane record with endosome-membrane parentage,
+    early-endosome parthood, an early endosomal membrane synonym, a UniProt SL-0093 cross-reference,
+    a reviewed lipid-bilayer component, Trypanosoma cruzi epimastigote scope and canonical
+    example curation, a lumen-boundary function, GO/UniProt/DOI evidence, a nonmechanistic
+    early-endosome membrane topology graph, and a lipid-species curation TODO.

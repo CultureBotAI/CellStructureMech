@@ -1,0 +1,172 @@
+identifier: GO:0031901
+label: early endosome membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding an early endosome.
+definition_source: GO:0031901
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T16:48:26Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T16:49:13Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added endosome-membrane parentage, early-endosome parthood, an early endosomal
+    membrane synonym, UniProt SL-0093 xref, a reviewed lipid-bilayer component, Trypanosoma
+    cruzi epimastigote scope, a lumen-boundary function, GO/UniProt/DOI evidence,
+    a nonmechanistic membrane-topology graph, and a lipid-species curation TODO.
+  llm_assisted: true
+- timestamp: '2026-09-22T16:59:58Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1302 review issues #1303 and #1304 by making the T. cruzi
+    canonical example membrane-specific and renaming the function around early-endosome
+    membrane compartmentalization.'
+  llm_assisted: true
+parent_structures:
+- GO:0010008
+part_of:
+- GO:0005769
+synonyms:
+- synonym_text: early endosomal membrane
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0093
+xrefs:
+- uniprot.location:SL-0093
+components:
+- component_id: early_endosome_membrane_lipid_bilayer
+  label: early endosome membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent that forms the boundary of an early endosome and
+    separates its lumen from the cytosol.
+  evidence:
+  - reference: GO:0031901
+    notes: GO:0031901 defines the early endosome membrane as the lipid bilayer surrounding
+      an early endosome.
+  - reference: GO:0031905
+    notes: GO:0031905 defines the early endosome lumen by enclosure within the membrane
+      of an early endosome.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0031901 identifies the complete early endosome membrane; no
+    narrower source-neutral CURIE was curated for the lipid constituent of that bilayer.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5693
+  taxon_label: Trypanosoma cruzi
+  presence: VARIABLE
+  note: Trypanosoma cruzi epimastigotes carry membrane-bounded early endosomal compartments
+    between cytostome entry and reservosome storage.
+  reference: DOI:10.1078/0171-9335-00112
+canonical_examples:
+- taxon_id: NCBITaxon:5693
+  taxon_label: Trypanosoma cruzi
+  note: Kinetoplastid parasite whose epimastigote endocytic cargo passes through a
+    membrane-bounded early endosomal network.
+  reference: DOI:10.1078/0171-9335-00112
+functions:
+- function_id: early_endosome_membrane_compartmentalization
+  label: early endosome membrane compartmentalization
+  description: The early endosome membrane compartmentalizes the early endosome lumen
+    as the bilayer boundary of the early endocytic sorting compartment.
+  evidence:
+  - reference: GO:0031901
+    notes: GO:0031901 defines the early endosome membrane as the lipid bilayer surrounding
+      an early endosome.
+  - reference: GO:0031905
+    notes: GO:0031905 defines the early endosome lumen as the volume enclosed by the
+      membrane of an early endosome.
+evidence:
+- reference: GO:0031901
+  notes: Gene Ontology cellular-component term for the early endosome membrane.
+- reference: GO:0010008
+  notes: Gene Ontology cellular-component parent term for the endosome membrane.
+- reference: GO:0005769
+  notes: Gene Ontology cellular-component term for the early endosome.
+- reference: GO:0031905
+  notes: Gene Ontology cellular-component term for the early endosome lumen.
+- reference: uniprot.location:SL-0093
+  notes: UniProt Subcellular Location entry SL-0093 maps Early endosome membrane to
+    GO:0031901.
+- reference: DOI:10.1078/0171-9335-00112
+  notes: 'Porto-Carreiro et al. 2000, Trypanosoma cruzi epimastigote endocytic pathway:
+    cargo enters the cytostome and passes through an early endosomal network before
+    storage in reservosomes, European Journal of Cell Biology.'
+causal_graphs:
+- graph_id: early_endosome_membrane_topology
+  title: Early endosome membrane topology
+  description: The early endosome membrane is a specialized endosome membrane that
+    forms part of the early endosome and bounds its lumen.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining early-endosome membrane, early-endosome
+    and lumen relationships without asserting a specific Rab, tethering, coat, recycling
+    or degradation mechanism.
+  nodes:
+  - node_id: early_endosome_membrane
+    label: early endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0031901
+    component_ref: early_endosome_membrane_lipid_bilayer
+  - node_id: endosome_membrane
+    label: endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0010008
+  - node_id: early_endosome
+    label: early endosome
+    node_type: ORGANELLE
+    grounding: GO:0005769
+  - node_id: early_endosome_lumen
+    label: early endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031905
+  edges:
+  - subject: early_endosome_membrane
+    predicate: is a
+    object: endosome_membrane
+    description: The early endosome membrane is an endosome membrane specialization.
+    evidence:
+    - reference: GO:0031901
+      notes: GO:0031901 identifies the early endosome membrane as an endosome-membrane
+        child.
+    - reference: GO:0010008
+      notes: GO:0010008 defines the broader endosome membrane class.
+  - subject: early_endosome_membrane
+    predicate: is part of
+    object: early_endosome
+    description: The early endosome membrane is the lipid-bilayer boundary of an early
+      endosome.
+    evidence:
+    - reference: GO:0031901
+      notes: GO:0031901 defines the early endosome membrane as surrounding an early
+        endosome.
+  - subject: early_endosome_membrane
+    predicate: bounds
+    object: early_endosome_lumen
+    description: The early endosome membrane encloses the early endosome lumen.
+    evidence:
+    - reference: GO:0031901
+      notes: GO:0031901 identifies the early endosome membrane.
+    - reference: GO:0031905
+      notes: GO:0031905 defines the early endosome lumen by enclosure within the membrane
+        of an early endosome.
+discussions:
+- discussion_id: resolve_early_endosome_membrane_lipid_species
+  prompt: Resolve exact lipid species or lipid classes for the early endosome membrane
+    before expanding molecular composition.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#early_endosome_membrane_lipid_bilayer
+  rationale: The GO term exactly identifies the complete early endosome membrane as
+    a lipid bilayer, but this first membrane record does not curate the source-neutral
+    lipid classes or organism-specific species that make up the bilayer.
+  evidence:
+  - reference: GO:0031901
+    notes: GO:0031901 provides the whole-membrane identity, not a narrower lipid-species
+      breakdown.
+  posed_by: codex
+  posed_date: '2026-09-22'

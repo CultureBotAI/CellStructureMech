@@ -1,0 +1,17 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/early_endosome_membrane.yaml
+  slug: early_endosome_membrane
+session:
+  id: 2026-09-22T170024Z-claude-code-54f6dd
+  timestamp: '2026-09-22T17:00:24Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Addressed PR #1302 early endosome membrane review issues'
+  details: 'Resolved #1303 by making the Trypanosoma cruzi canonical example explicitly membrane-specific
+    and resolved #1304 by renaming the sole function around early-endosome membrane compartmentalization.'
