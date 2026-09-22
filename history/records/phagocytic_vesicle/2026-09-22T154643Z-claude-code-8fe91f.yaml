@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/phagocytic_vesicle.yaml
+  slug: phagocytic_vesicle
+session:
+  id: 2026-09-22T154643Z-claude-code-8fe91f
+  timestamp: '2026-09-22T15:46:43Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the phagocytic vesicle record
+  details: Added a GO:0045335 phagocytic vesicle record with cytoplasmic-vesicle parentage,
+    phagocytic-vesicle membrane and lumen parts, GO and UniProt SL-0206 synonymy and cross-reference
+    evidence, a GO-grounded phagocytic-vesicle membrane component, Dictyostelium discoideum
+    distribution and canonical example curation, phagocytosis and phagosome-maturation functions,
+    Gotthardt et al. PubMed evidence, a nonmechanistic topology and maturation graph, and
+    a resolved boundary discussion keeping transient maturation factors out of generic components.

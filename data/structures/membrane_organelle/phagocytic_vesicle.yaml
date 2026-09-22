@@ -1,0 +1,224 @@
+identifier: GO:0045335
+label: phagocytic vesicle
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A membrane-bounded intracellular vesicle that arises from the ingestion
+  of particulate material by phagocytosis.
+definition_source: GO:0045335
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T15:45:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T15:45:52Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic-vesicle parentage, phagocytic-vesicle membrane and lumen
+    parts, phagosome synonymy and UniProt SL-0206 xref, a GO-grounded membrane component,
+    Dictyostelium discoideum scope, phagocytosis and phagosome-maturation functions,
+    GO/UniProt/PMID evidence, a nonmechanistic topology and maturation graph, and
+    a resolved transient-maturation-factor boundary discussion.
+  llm_assisted: true
+parent_structures:
+- GO:0031410
+has_part:
+- GO:0030670
+- GO:0097013
+synonyms:
+- synonym_text: phagosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0045335
+xrefs:
+- uniprot.location:SL-0206
+components:
+- component_id: phagocytic_vesicle_membrane
+  label: phagocytic vesicle membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding: GO:0030670
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer boundary that encloses phagocytosed cargo inside a phagocytic
+    vesicle and is remodeled during phagosome maturation.
+  evidence:
+  - reference: GO:0030670
+    notes: GO:0030670 identifies the phagocytic vesicle membrane as the lipid bilayer
+      surrounding a phagocytic vesicle.
+  - reference: uniprot.location:SL-0206
+    notes: UniProt Subcellular Location SL-0206 identifies the phagosome as a phagocytic
+      cell-specific membrane-bounded vesicle formed after uptake of extracellular
+      material.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  presence: COMMON
+  note: Dictyostelium discoideum forms phagosomes that undergo ordered maturation
+    after particle uptake.
+  reference: PMID:12388753
+canonical_examples:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  note: Amoebozoan model in which purified latex-bead phagosomes have been profiled
+    across maturation by microscopy, flow cytometry, biochemistry, and proteomics.
+  reference: PMID:16926386
+functions:
+- function_id: phagocytosis
+  label: phagocytosis
+  grounding: GO:0006909
+  description: Phagocytic vesicles enclose extracellular particles taken up by phagocytosis.
+  evidence:
+  - reference: GO:0006909
+    notes: GO:0006909 defines phagocytosis as vesicle-mediated transport that engulfs
+      external particulate material.
+  - reference: GO:0045335
+    notes: GO:0045335 defines phagocytic vesicles as membrane-bounded vesicles that
+      arise from ingestion by phagocytosis.
+- function_id: phagosome_maturation
+  label: phagosome maturation
+  grounding: GO:0090382
+  description: Newly formed phagocytic vesicles mature through ordered membrane-traffic
+    and luminal changes toward late digestive compartments.
+  evidence:
+  - reference: GO:0090382
+    notes: GO:0090382 defines phagosome maturation as cellular rearrangement of phagosome
+      constituent parts after early phagosome formation.
+  - reference: PMID:12388753
+    notes: Gotthardt et al. 2002 dissected the maturation of Dictyostelium phagosomes
+      into stages with distinct membrane-trafficking and luminal-acidification behavior.
+  - reference: PMID:16926386
+    notes: Gotthardt et al. 2006 used two-dimensional gel electrophoresis and mass
+      spectrometry to fingerprint Dictyostelium phagosome protein dynamics across
+      maturation.
+evidence:
+- reference: GO:0045335
+  notes: Gene Ontology cellular-component term for the phagocytic vesicle.
+- reference: GO:0031410
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicles.
+- reference: GO:0030670
+  notes: Gene Ontology cellular-component term for the phagocytic vesicle membrane.
+- reference: GO:0097013
+  notes: Gene Ontology cellular-component term for the phagocytic vesicle lumen.
+- reference: GO:0032009
+  notes: Gene Ontology cellular-component term for the early phagosome.
+- reference: GO:0032010
+  notes: Gene Ontology cellular-component term for the phagolysosome.
+- reference: GO:0006909
+  notes: Gene Ontology biological-process term for phagocytosis.
+- reference: GO:0090382
+  notes: Gene Ontology biological-process term for phagosome maturation.
+- reference: uniprot.location:SL-0206
+  notes: UniProt Subcellular Location entry SL-0206 maps Phagosome to GO:0045335.
+- reference: PMID:12388753
+  notes: Gotthardt et al. 2002, High-resolution dissection of phagosome maturation
+    reveals distinct membrane trafficking phases, Molecular Biology of the Cell.
+- reference: PMID:16926386
+  notes: Gotthardt et al. 2006, Proteomics fingerprinting of phagosome maturation
+    and evidence for the role of a Galpha during uptake, Molecular & Cellular Proteomics.
+causal_graphs:
+- graph_id: phagocytic_vesicle_topology
+  title: Phagocytic vesicle topology and maturation
+  description: A phagocytic vesicle forms when phagocytosis encloses external particulate
+    material inside a membrane-bounded compartment whose membrane and lumen are remodeled
+    during maturation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the whole-vesicle, membrane, lumen, and maturation
+    relationships without asserting a specific cargo set or treating transient Rab,
+    proton-pump, protease, or actin machinery as stable phagocytic-vesicle constituents.
+  nodes:
+  - node_id: phagocytic_vesicle
+    label: phagocytic vesicle
+    node_type: ORGANELLE
+    grounding: GO:0045335
+  - node_id: phagocytic_vesicle_membrane
+    label: phagocytic vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030670
+    component_ref: phagocytic_vesicle_membrane
+  - node_id: phagocytic_vesicle_lumen
+    label: phagocytic vesicle lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0097013
+  - node_id: phagocytosis
+    label: phagocytosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006909
+  - node_id: phagosome_maturation
+    label: phagosome maturation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0090382
+  edges:
+  - subject: phagocytic_vesicle_membrane
+    predicate: is part of
+    object: phagocytic_vesicle
+    description: The phagocytic vesicle membrane is the lipid-bilayer boundary of
+      a phagocytic vesicle.
+    evidence:
+    - reference: GO:0030670
+      notes: GO:0030670 identifies the phagocytic vesicle membrane as the lipid bilayer
+        surrounding a phagocytic vesicle.
+  - subject: phagocytic_vesicle_lumen
+    predicate: is part of
+    object: phagocytic_vesicle
+    description: The phagocytic vesicle lumen is the bounded volume inside a phagocytic
+      vesicle.
+    evidence:
+    - reference: GO:0097013
+      notes: GO:0097013 defines the phagocytic vesicle lumen as the volume enclosed
+        by a phagocytic vesicle membrane.
+  - subject: phagocytic_vesicle_membrane
+    predicate: bounds
+    object: phagocytic_vesicle_lumen
+    description: The phagocytic vesicle membrane encloses the phagocytic vesicle lumen.
+    evidence:
+    - reference: GO:0030670
+      notes: GO:0030670 identifies the phagocytic vesicle membrane.
+    - reference: GO:0097013
+      notes: GO:0097013 defines the phagocytic vesicle lumen by enclosure within a
+        phagocytic vesicle membrane.
+  - subject: phagocytosis
+    predicate: forms
+    object: phagocytic_vesicle
+    description: Phagocytosis produces a membrane-bounded phagocytic vesicle around
+      ingested particulate material.
+    evidence:
+    - reference: GO:0045335
+      notes: GO:0045335 defines phagocytic vesicles as arising from ingestion of particulate
+        material by phagocytosis.
+    - reference: GO:0006909
+      notes: GO:0006909 defines phagocytosis as vesicle-mediated engulfment of external
+        particulate material.
+  - subject: phagocytic_vesicle
+    predicate: undergoes
+    object: phagosome_maturation
+    description: Dictyostelium phagosomes move through ordered maturation states after
+      particle uptake.
+    evidence:
+    - reference: PMID:12388753
+      notes: Gotthardt et al. 2002 separated Dictyostelium phagosome maturation into
+        temporally distinct membrane-trafficking phases.
+    - reference: PMID:16926386
+      notes: Gotthardt et al. 2006 measured dynamic protein changes in purified Dictyostelium
+        phagosomes during maturation.
+discussions:
+- discussion_id: keep_transient_maturation_factors_out
+  prompt: Keep transient phagosome-maturation proteins out of the generic phagocytic
+    vesicle components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - components#phagocytic_vesicle_membrane
+  rationale: The generic phagocytic vesicle is defined by a membrane-bounded vesicle
+    made by phagocytosis. Rab GTPases, V-ATPases, proteases, and actin-associated
+    factors associate with phagosomes in maturation-stage-specific ways, so the first
+    record models only the stable membrane boundary as a constituent and leaves exact
+    trafficking machinery to narrower timing- or organism-specific curation.
+  evidence:
+  - reference: PMID:16926386
+    notes: Gotthardt et al. 2006 profiled proteins whose abundance on Dictyostelium
+      phagosomes changes during maturation.
+  posed_by: codex
+  posed_date: '2026-09-22'
+  resolved_date: '2026-09-22'
