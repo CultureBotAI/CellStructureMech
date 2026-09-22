@@ -1,0 +1,173 @@
+identifier: cellstructuremech:parasporal_crystal
+label: parasporal crystal
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: A proteinaceous Bacillus thuringiensis inclusion body that accumulates
+  Cry, Cyt, and related pesticidal crystal proteins as a parasporal crystalline deposit.
+definition_source: DOI:10.3390/toxins6123296
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T11:17:02Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T11:18:20Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO:0016234 inclusion-body parentage, parasporal-body synonyms, a
+    reviewed-label-only Cry/Cyt crystal-protein component, Bacillus thuringiensis
+    taxonomic scope, a Bti canonical example, pesticidal protein packaging function,
+    record-level evidence, a nonmechanistic Cry/Cyt crystallization graph, and follow-up
+    grounding/substructure discussions.
+  llm_assisted: true
+- timestamp: '2026-09-22T11:32:36Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: Scoped the Cry/Cyt packaging function and assembly graph to the observed
+    protein-to-crystal relationship; updated Toxins review notes after consulting
+    PubMed Central full text.
+  llm_assisted: true
+synonyms:
+- synonym_text: parasporal crystalline inclusion
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.3390/toxins6123296
+- synonym_text: parasporal body
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1007/978-94-011-5967-8_3
+parent_structures:
+- GO:0016234
+components:
+- component_id: cry_cyt_pesticidal_crystal_proteins
+  label: Cry and Cyt pesticidal crystal proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Bacillus thuringiensis parasporal crystals can contain strain-specific
+    combinations of Cry, Cyt, parasporin, and other pesticidal proteins; no single
+    InterPro, Pfam, NCBIfam, or UniProt family CURIE exactly denotes the full source-neutral
+    constituent class.
+  role: Strain-specific toxin protoxins that crystallize into the parasporal inclusion
+    and can become active against susceptible cells after solubilization and proteolytic
+    activation.
+  evidence:
+  - reference: DOI:10.3390/toxins6123296
+    notes: Palma et al. 2014 review Bacillus thuringiensis parasporal crystalline
+      inclusions as containing Cry and Cyt proteins, plus additional crystal proteins
+      of varied known or unknown activities.
+  - reference: DOI:10.3390/toxins6041222
+    notes: Ben-Dov 2014 reviews the Bacillus thuringiensis serovar israelensis toxin
+      plasmid and summarizes Cry4Aa, Cry4Ba, Cry11Aa, Cyt1Aa, Cry10Aa, and Cyt2Ba
+      as the polypeptides that form its complex parasporal crystalline body.
+  - reference: DOI:10.1128/aem.50.1.56-62.1985
+    notes: The Crossref-indexed abstract for Insell and Fitz-James 1985 reports that
+      the Bacillus thuringiensis subsp. israelensis inclusion has two electron-microscopic
+      lattice classes with distinct major polypeptides; the ASM article and PDF were
+      blocked by Cloudflare during curation, so no verbatim snippets were copied.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1428
+  taxon_label: Bacillus thuringiensis
+  presence: VARIABLE
+  note: Parasporal crystalline inclusions are characteristic of many Bacillus thuringiensis
+    isolates, but crystal protein complements are plasmid-associated and vary among
+    strains.
+  reference: DOI:10.3390/toxins6123296
+canonical_examples:
+- taxon_id: NCBITaxon:1430
+  taxon_label: Bacillus thuringiensis serovar israelensis
+  note: Serovar with a complex ovoid parasporal inclusion whose electron-microscopic
+    lattice segments and toxin polypeptide classes were resolved biochemically.
+  reference: DOI:10.1128/aem.50.1.56-62.1985
+functions:
+- function_id: pesticidal_protein_packaging
+  label: pesticidal protein packaging
+  description: Parasporal crystals package Cry, Cyt, and related pesticidal protoxins
+    as insoluble crystalline deposits.
+  evidence:
+  - reference: DOI:10.3390/toxins6123296
+    notes: Palma et al. 2014 review Cry/Cyt-containing parasporal inclusions and the
+      downstream biocidal activities of Bt crystal proteins.
+  - reference: DOI:10.1016/j.toxicon.2006.11.022
+    notes: Bravo, Gill and Soberon 2007 review Cry and Cyt toxins as Bacillus thuringiensis
+      protein families that form pores in target membranes after activation.
+evidence:
+- reference: DOI:10.1128/aem.50.1.56-62.1985
+  notes: Insell and Fitz-James 1985, Composition and Toxicity of the Inclusion of
+    Bacillus thuringiensis subsp. israelensis, Applied and Environmental Microbiology;
+    Crossref abstract consulted because the ASM full text was blocked by Cloudflare.
+- reference: DOI:10.3390/toxins6041222
+  notes: Ben-Dov 2014, Bacillus thuringiensis subsp. israelensis and Its Dipteran-Specific
+    Toxins, Toxins; PubMed Central full text and PubMed/Crossref metadata consulted;
+    the MDPI landing page returned access denied in the curation environment.
+- reference: DOI:10.3390/toxins6123296
+  notes: 'Palma et al. 2014, Bacillus thuringiensis Toxins: An Overview of Their Biocidal
+    Activity, Toxins; PubMed Central full text and PubMed/Crossref metadata consulted;
+    the MDPI landing page returned access denied in the curation environment.'
+causal_graphs:
+- graph_id: cry_cyt_crystal_packaging
+  title: Cry and Cyt proteins crystallize into parasporal toxin inclusions
+  description: A strain-specific set of Bacillus thuringiensis Cry, Cyt, or related
+    pesticidal protoxins accumulates as an insoluble parasporal crystalline body.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures the observed protein-to-crystal packaging relationship
+    without asserting the molecular nucleation mechanism or the full sporulation regulatory
+    program.
+  nodes:
+  - node_id: cry_cyt_pesticidal_crystal_proteins
+    label: Cry and Cyt pesticidal crystal proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: cry_cyt_pesticidal_crystal_proteins
+  - node_id: parasporal_crystal
+    label: parasporal crystal
+    node_type: STRUCTURE
+    grounding: cellstructuremech:parasporal_crystal
+  edges:
+  - subject: cry_cyt_pesticidal_crystal_proteins
+    predicate: crystallize into
+    object: parasporal_crystal
+    description: Strain-specific Bt pesticidal proteins accumulate as parasporal crystalline
+      inclusions.
+    evidence:
+    - reference: DOI:10.3390/toxins6123296
+      notes: Palma et al. 2014 review Bt parasporal crystalline inclusions as Cry-
+        and Cyt-containing structures.
+    - reference: DOI:10.1128/aem.50.1.56-62.1985
+      notes: Insell and Fitz-James 1985 used electron microscopy and polypeptide analysis
+        to subdivide the Bacillus thuringiensis serovar israelensis inclusion into
+        crystalline protein segments.
+discussions:
+- discussion_id: ground_crystal_toxin_families
+  prompt: Resolve exact source-neutral groundings for the pesticidal proteins that
+    build Bacillus thuringiensis parasporal crystals.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cry_cyt_pesticidal_crystal_proteins
+  rationale: This first pass intentionally models Cry, Cyt and related pesticidal
+    crystal proteins as a broad label-only component because Bt isolates can encode
+    multiple unrelated crystal-protein families. A follow-up should split exact family
+    components only where the family term matches a source-neutral parasporal-crystal
+    constituent.
+  evidence:
+  - reference: DOI:10.3390/toxins6123296
+  - reference: DOI:10.3390/toxins6041222
+  posed_by: codex
+  posed_date: '2026-09-22'
+- discussion_id: resolve_bti_inclusion_substructures
+  prompt: Decide whether Bacillus thuringiensis serovar israelensis parasporal-crystal
+    light and dark segments warrant components or child structures.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#cry_cyt_crystal_packaging
+  rationale: Insell and Fitz-James resolved two lattice classes with distinct major
+    polypeptide profiles in the Bti ovoidal inclusion. They are represented here only
+    as evidence for protein crystallization because their exact mapping to modern
+    Cry/Cyt toxin names and their suitability as source-neutral structures need a
+    dedicated review.
+  evidence:
+  - reference: DOI:10.1128/aem.50.1.56-62.1985
+  posed_by: codex
+  posed_date: '2026-09-22'

@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/parasporal_crystal.yaml
+  slug: parasporal_crystal
+session:
+  id: 2026-09-22T112841Z-claude-code-d04268
+  timestamp: '2026-09-22T11:28:41Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add the parasporal crystal record
+  details: Created cellstructuremech:parasporal_crystal as a PROPOSED Bacillus thuringiensis
+    inclusion-body record with GO:0016234 parentage, a reviewed-label-only Cry/Cyt pesticidal
+    crystal protein component, Bacillus thuringiensis and Bti taxonomic assertions, DOI evidence,
+    a nonmechanistic Cry/Cyt crystallization graph, and open TODOs for exact toxin-family
+    grounding and Bti substructure boundaries.
