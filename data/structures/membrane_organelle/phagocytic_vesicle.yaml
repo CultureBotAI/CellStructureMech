@@ -21,6 +21,13 @@ curation_history:
     GO/UniProt/PMID evidence, a nonmechanistic topology and maturation graph, and
     a resolved transient-maturation-factor boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-22T15:56:19Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1297 by narrowing the Dictyostelium canonical example to the
+    proteomics method supported by PMID:16926386 and resolved #1298 by adding GO-grounded
+    early-phagosome and phagolysosome states to the maturation graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 has_part:
@@ -59,8 +66,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:44689
   taxon_label: Dictyostelium discoideum
-  note: Amoebozoan model in which purified latex-bead phagosomes have been profiled
-    across maturation by microscopy, flow cytometry, biochemistry, and proteomics.
+  note: Amoebozoan model in which purified latex-bead phagosomes were sampled across
+    a maturation time course and profiled by two-dimensional gel electrophoresis and
+    mass spectrometry.
   reference: PMID:16926386
 functions:
 - function_id: phagocytosis
@@ -148,6 +156,14 @@ causal_graphs:
     label: phagosome maturation
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0090382
+  - node_id: early_phagosome
+    label: early phagosome
+    node_type: ORGANELLE
+    grounding: GO:0032009
+  - node_id: phagolysosome
+    label: phagolysosome
+    node_type: ORGANELLE
+    grounding: GO:0032010
   edges:
   - subject: phagocytic_vesicle_membrane
     predicate: is part of
@@ -201,6 +217,36 @@ causal_graphs:
     - reference: PMID:16926386
       notes: Gotthardt et al. 2006 measured dynamic protein changes in purified Dictyostelium
         phagosomes during maturation.
+  - subject: early_phagosome
+    predicate: is a
+    object: phagocytic_vesicle
+    description: An early phagosome is a newly formed phagocytic vesicle produced
+      after particulate material is ingested.
+    evidence:
+    - reference: GO:0032009
+      notes: GO:0032009 defines the early phagosome as the phagocytic vesicle initially
+        formed after particle ingestion.
+  - subject: phagolysosome
+    predicate: is a
+    object: phagocytic_vesicle
+    description: A phagolysosome is a matured phagocytic-vesicle subclass that has
+      acquired late endosomal and lysosomal markers.
+    evidence:
+    - reference: GO:0032010
+      notes: GO:0032010 defines the phagolysosome as a vesicle formed by maturation
+        of an early phagosome after phagocytosis.
+  - subject: early_phagosome
+    predicate: matures into
+    object: phagolysosome
+    description: Phagosome maturation begins with formation of an early phagosome
+      and ends with formation of a phagolysosome.
+    evidence:
+    - reference: GO:0090382
+      notes: GO:0090382 defines phagosome maturation as beginning with early-phagosome
+        formation and ending with phagolysosome formation.
+    - reference: GO:0032010
+      notes: GO:0032010 identifies the phagolysosome as the product of early phagosome
+        maturation.
 discussions:
 - discussion_id: keep_transient_maturation_factors_out
   prompt: Keep transient phagosome-maturation proteins out of the generic phagocytic

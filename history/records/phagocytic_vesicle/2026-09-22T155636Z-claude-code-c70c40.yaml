@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/phagocytic_vesicle.yaml
+  slug: phagocytic_vesicle
+session:
+  id: 2026-09-22T155636Z-claude-code-c70c40
+  timestamp: '2026-09-22T15:56:36Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1297
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1298
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1296
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed phagocytic vesicle PR review
+  details: 'Resolved PR #1296 review issues #1297 and #1298 by narrowing the Dictyostelium
+    discoideum canonical example to the proteomics method supported by PMID:16926386 and adding
+    GO:0032009 early-phagosome and GO:0032010 phagolysosome maturation-state nodes and GO-backed
+    edges to the phagocytic-vesicle graph.'
