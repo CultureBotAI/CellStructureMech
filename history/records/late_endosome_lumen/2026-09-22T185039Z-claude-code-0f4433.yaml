@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/late_endosome_lumen.yaml
+  slug: late_endosome_lumen
+session:
+  id: 2026-09-22T185039Z-claude-code-0f4433
+  timestamp: '2026-09-22T18:50:39Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1313
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1314
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1312
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Addressed PR #1312 late endosome lumen review issues'
+  details: 'Resolved #1313 by adding PMID:12194857 ESCRT-III evidence to the multivesicular-body-sorting
+    function and record-level evidence, and resolved #1314 by narrowing the Saccharomyces
+    cerevisiae taxonomic and canonical-example notes to multivesicular-body lumens as late-endosome
+    child-compartment examples.'
