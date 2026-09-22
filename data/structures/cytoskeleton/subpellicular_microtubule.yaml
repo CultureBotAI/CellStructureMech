@@ -1,0 +1,206 @@
+identifier: GO:0020025
+label: subpellicular microtubule
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A singlet microtubule that lies underneath the inner membrane pellicle
+  complex and emanates from the basal ring of the conoid.
+definition_source: GO:0020025
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T11:58:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T12:00:13Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO microtubule parentage and apical-complex parthood, a reviewed
+    label-only alpha/beta tubulin component, Toxoplasma gondii scope, DOI/GO evidence,
+    a nonmechanistic cortical topology graph, and curation discussions for accessory
+    components and the Apicomplexa-specific GO boundary.
+  llm_assisted: true
+parent_structures:
+- GO:0005874
+part_of:
+- GO:0020007
+components:
+- component_id: alpha_beta_tubulins
+  label: alpha- and beta-tubulins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Tubulin subunits that polymerize into the conventional singlet subpellicular
+    microtubules of Toxoplasma.
+  evidence:
+  - reference: GO:0005874
+    notes: Gene Ontology defines microtubules as polymeric tubulin tubes.
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Hu et al. 2006 described alpha/beta-tubulins in Toxoplasma conventional
+      microtubules, including the subpellicular microtubules.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the apicomplexan alpha- and beta-tubulin
+    constituent set was verified in this pass; broad tubulin/FtsZ-domain groundings
+    would also cover bacterial, archaeal and phage tubulin-like proteins outside this
+    GO term.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  presence: COMMON
+  note: Toxoplasma tachyzoites have 22 singlet subpellicular microtubules attached
+    at the polar ring of the apical complex and running beneath the inner membrane
+    complex.
+  reference: DOI:10.1371/journal.ppat.0020013
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model in which subpellicular microtubule periodicity, apical
+    attachment and IMC-adjacent placement have been studied structurally.
+  reference: DOI:10.1242/jcs.110.1.35
+functions:
+- function_id: pellicle_microtubule_scaffold
+  label: pellicle microtubule scaffold
+  description: Subpellicular microtubules form a longitudinal cortical microtubule
+    scaffold beneath the inner membrane pellicle complex and alongside the pellicular
+    intramembranous-particle lattice in Toxoplasma.
+  evidence:
+  - reference: DOI:10.1242/jcs.110.1.35
+    notes: Morrissette, Murray and Roos 1997 resolved a 32 nm periodicity in isolated
+      Toxoplasma subpellicular microtubules and the overlying pellicle particle lattice.
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Hu et al. 2006 described the Toxoplasma subpellicular microtubules as cytoskeletal
+      elements closely associated with the cytoplasmic face of the IMC.
+evidence:
+- reference: GO:0020025
+  notes: Gene Ontology cellular-component term for the apicomplexan subpellicular
+    microtubule.
+- reference: GO:0005874
+  notes: Gene Ontology places subpellicular microtubules under the microtubule class.
+- reference: GO:0020007
+  notes: Gene Ontology models subpellicular microtubules as part of the apicomplexan
+    apical complex.
+- reference: DOI:10.1242/jcs.110.1.35
+  notes: Morrissette, Murray and Roos 1997, Subpellicular microtubules associate with
+    an intramembranous particle lattice in the protozoan parasite Toxoplasma gondii,
+    Journal of Cell Science.
+- reference: DOI:10.1371/journal.ppat.0020013
+  notes: Hu et al. 2006, Cytoskeletal Components of an Invasion Machine--the Apical
+    Complex of Toxoplasma gondii, PLOS Pathogens.
+causal_graphs:
+- graph_id: toxoplasma_subpellicular_microtubule_cortex
+  title: Tubulin singlets extend from the polar ring under the Toxoplasma IMC
+  description: Alpha- and beta-tubulins polymerize into the 22 conventional subpellicular
+    microtubules that attach at the polar ring of the Toxoplasma apical complex, run
+    beneath the inner membrane pellicle complex, and align with a periodic intramembranous-particle
+    lattice.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the mature apical attachment and cortical position
+    of Toxoplasma subpellicular microtubules. It leaves basal-ring organizer identity,
+    plus-end factors, IMC particle-lattice linkers and daughter-cell assembly order
+    unresolved.
+  nodes:
+  - node_id: alpha_beta_tubulins
+    label: alpha- and beta-tubulins
+    node_type: GENE_OR_PROTEIN
+    component_ref: alpha_beta_tubulins
+  - node_id: subpellicular_microtubule
+    label: subpellicular microtubule
+    node_type: STRUCTURE
+    grounding: GO:0020025
+  - node_id: polar_ring_of_apical_complex
+    label: polar ring of apical complex
+    node_type: STRUCTURE
+    grounding: GO:0020031
+  - node_id: inner_membrane_pellicle_complex
+    label: inner membrane pellicle complex
+    node_type: ORGANELLE
+    grounding: GO:0070258
+  - node_id: intramembranous_particle_lattice
+    label: pellicular intramembranous-particle lattice
+    node_type: STRUCTURE
+  edges:
+  - subject: alpha_beta_tubulins
+    predicate: polymerize into
+    object: subpellicular_microtubule
+    description: Alpha- and beta-tubulin subunits polymerize into the conventional
+      singlet subpellicular microtubules of Toxoplasma.
+    evidence:
+    - reference: GO:0005874
+      notes: Gene Ontology defines microtubules as polymeric tubulin tubes.
+    - reference: DOI:10.1371/journal.ppat.0020013
+      notes: Hu et al. 2006 placed the Toxoplasma subpellicular microtubules among
+        the parasite's conventional alpha/beta-tubulin microtubules.
+  - subject: subpellicular_microtubule
+    predicate: attaches to
+    object: polar_ring_of_apical_complex
+    description: The minus end of each subpellicular microtubule attaches to the apical
+      polar ring.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.0020013
+      notes: Hu et al. 2006 localized EGFP-TgDLC at the sites where Toxoplasma subpellicular
+        microtubules attach to the polar ring.
+  - subject: subpellicular_microtubule
+    predicate: lies underneath
+    object: inner_membrane_pellicle_complex
+    description: Subpellicular microtubules run beneath the apicomplexan inner membrane
+      pellicle complex.
+    evidence:
+    - reference: GO:0020025
+      notes: Gene Ontology defines the subpellicular microtubule by its position under
+        the inner membrane pellicle complex.
+    - reference: DOI:10.1371/journal.ppat.0020013
+      notes: Hu et al. 2006 described the Toxoplasma subpellicular microtubules as
+        closely associated with the IMC cytoplasmic face.
+  - subject: subpellicular_microtubule
+    predicate: associates with
+    object: intramembranous_particle_lattice
+    description: The pellicular intramembranous-particle lattice overlies and shares
+      a 32 nm periodicity with isolated subpellicular microtubules.
+    evidence:
+    - reference: DOI:10.1242/jcs.110.1.35
+      notes: Morrissette, Murray and Roos 1997 found the same 32 nm repeat in isolated
+        subpellicular microtubules and in the pellicular intramembranous-particle
+        rows thought to overlie them.
+discussions:
+- discussion_id: resolve_subpellicular_accessory_components
+  prompt: Resolve exact component boundaries and source-neutral groundings for subpellicular
+    microtubule end proteins, plus-end factors, and IMC particle-lattice linkers.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#toxoplasma_subpellicular_microtubule_cortex
+  rationale: Morrissette, Murray and Roos resolved an intramembranous-particle lattice
+    aligned with Toxoplasma subpellicular microtubules, and Hu et al. localized proteins
+    such as TgDLC, TgMORN1 and TgCentrin2 near subpellicular microtubule ends or daughter
+    scaffolds. This record leaves those factors out until exact conserved constituent,
+    linker, marker or assembly-factor boundaries are curated.
+  evidence:
+  - reference: DOI:10.1242/jcs.110.1.35
+    notes: Morrissette, Murray and Roos 1997 resolved the subpellicular microtubule-associated
+      intramembranous-particle lattice.
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Hu et al. 2006 localized candidate apical cytoskeletal proteins to several
+      Toxoplasma subcompartments.
+  posed_by: codex
+  posed_date: '2026-09-22'
+- discussion_id: exclude_kinetoplastid_subpellicular_arrays
+  prompt: Keep GO:0020025 scoped to apicomplexan subpellicular microtubules rather
+    than kinetoplastid cortical microtubule arrays that share the same plain-English
+    name.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#toxoplasma_subpellicular_microtubule_cortex
+  rationale: The phrase subpellicular microtubule is also used in Trypanosoma literature,
+    but GO:0020025 is taxon-constrained to Apicomplexa and defined by apicomplexan
+    IMC and conoid topology. This record therefore curates only the apicomplexan structure.
+  evidence:
+  - reference: GO:0020025
+    notes: QuickGO reports an Apicomplexa-only taxon constraint for GO:0020025.
+  - reference: DOI:10.1242/jcs.110.1.35
+    notes: Morrissette, Murray and Roos 1997 provide Toxoplasma-specific subpellicular
+      microtubule evidence for this first record.
+  posed_by: codex
+  posed_date: '2026-09-22'
+  resolved_date: '2026-09-22'

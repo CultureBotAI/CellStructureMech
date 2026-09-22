@@ -1361,14 +1361,14 @@
           "cosine_similarity": 0.79876137
         },
         {
+          "identifier": "GO:0020025",
+          "label": "subpellicular microtubule",
+          "cosine_similarity": 0.78217562
+        },
+        {
           "identifier": "GO:0020010",
           "label": "conoid",
           "cosine_similarity": 0.75006354
-        },
-        {
-          "identifier": "GO:0005826",
-          "label": "actomyosin contractile ring",
-          "cosine_similarity": 0.73849198
         }
       ]
     },
@@ -1490,9 +1490,9 @@
           "cosine_similarity": 0.75052593
         },
         {
-          "identifier": "GO:0097596",
-          "label": "ventral disc supernumerary microtubule array",
-          "cosine_similarity": 0.73250974
+          "identifier": "GO:0020025",
+          "label": "subpellicular microtubule",
+          "cosine_similarity": 0.73892208
         }
       ]
     },
@@ -1516,14 +1516,14 @@
           "cosine_similarity": 0.83458703
         },
         {
+          "identifier": "GO:0020025",
+          "label": "subpellicular microtubule",
+          "cosine_similarity": 0.77753647
+        },
+        {
           "identifier": "GO:0035253",
           "label": "ciliary rootlet",
           "cosine_similarity": 0.76789478
-        },
-        {
-          "identifier": "GO:0035869",
-          "label": "ciliary transition zone",
-          "cosine_similarity": 0.73918838
         }
       ]
     },
@@ -1594,6 +1594,11 @@
       "label": "conoid",
       "neighbors": [
         {
+          "identifier": "GO:0020025",
+          "label": "subpellicular microtubule",
+          "cosine_similarity": 0.7912867
+        },
+        {
           "identifier": "GO:0020031",
           "label": "polar ring of apical complex",
           "cosine_similarity": 0.78421532
@@ -1612,11 +1617,6 @@
           "identifier": "GO:0005874",
           "label": "microtubule",
           "cosine_similarity": 0.73042973
-        },
-        {
-          "identifier": "GO:0036064",
-          "label": "ciliary basal body",
-          "cosine_similarity": 0.7282334
         }
       ]
     },
@@ -1847,6 +1847,11 @@
           "cosine_similarity": 0.87263058
         },
         {
+          "identifier": "GO:0020025",
+          "label": "subpellicular microtubule",
+          "cosine_similarity": 0.86313287
+        },
+        {
           "identifier": "GO:0097593",
           "label": "ventral disc microtubule array",
           "cosine_similarity": 0.84054339
@@ -1860,11 +1865,6 @@
           "identifier": "cellstructuremech:btubab_bacterial_microtubule",
           "label": "BtubAB bacterial microtubule",
           "cosine_similarity": 0.80246582
-        },
-        {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.79876137
         }
       ]
     },
@@ -2012,14 +2012,14 @@
           "cosine_similarity": 0.72520209
         },
         {
+          "identifier": "GO:0020025",
+          "label": "subpellicular microtubule",
+          "cosine_similarity": 0.68770352
+        },
+        {
           "identifier": "GO:0005826",
           "label": "actomyosin contractile ring",
           "cosine_similarity": 0.68521087
-        },
-        {
-          "identifier": "GO:1990225",
-          "label": "rhoptry neck",
-          "cosine_similarity": 0.67125491
         }
       ]
     },
@@ -2069,6 +2069,11 @@
           "cosine_similarity": 0.78914112
         },
         {
+          "identifier": "GO:0020025",
+          "label": "subpellicular microtubule",
+          "cosine_similarity": 0.74202974
+        },
+        {
           "identifier": "cellstructuremech:phuz_spindle",
           "label": "PhuZ spindle",
           "cosine_similarity": 0.74113955
@@ -2077,11 +2082,37 @@
           "identifier": "GO:0005874",
           "label": "microtubule",
           "cosine_similarity": 0.73345402
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0020025",
+      "label": "subpellicular microtubule",
+      "neighbors": [
+        {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.86313287
         },
         {
-          "identifier": "GO:0031518",
-          "label": "CBF3 complex",
-          "cosine_similarity": 0.72986083
+          "identifier": "GO:0097596",
+          "label": "ventral disc supernumerary microtubule array",
+          "cosine_similarity": 0.79575735
+        },
+        {
+          "identifier": "GO:0020010",
+          "label": "conoid",
+          "cosine_similarity": 0.7912867
+        },
+        {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.78217562
+        },
+        {
+          "identifier": "GO:0036064",
+          "label": "ciliary basal body",
+          "cosine_similarity": 0.77753647
         }
       ]
     },
