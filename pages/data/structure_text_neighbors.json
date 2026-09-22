@@ -6674,6 +6674,37 @@
       ]
     },
     {
+      "identifier": "GO:0031039",
+      "label": "macronucleus",
+      "neighbors": [
+        {
+          "identifier": "GO:0005634",
+          "label": "nucleus",
+          "cosine_similarity": 0.78493023
+        },
+        {
+          "identifier": "GO:0009536",
+          "label": "plastid",
+          "cosine_similarity": 0.78404906
+        },
+        {
+          "identifier": "GO:0033009",
+          "label": "nucleomorph",
+          "cosine_similarity": 0.77013763
+        },
+        {
+          "identifier": "cellstructuremech:mitosome_intermembrane_space",
+          "label": "mitosome intermembrane space",
+          "cosine_similarity": 0.76366044
+        },
+        {
+          "identifier": "cellstructuremech:mitosome_matrix",
+          "label": "mitosome matrix",
+          "cosine_similarity": 0.76348702
+        }
+      ]
+    },
+    {
       "identifier": "GO:0110143",
       "label": "magnetosome",
       "neighbors": [
@@ -7752,9 +7783,9 @@
           "cosine_similarity": 0.7738512
         },
         {
-          "identifier": "GO:0009536",
-          "label": "plastid",
-          "cosine_similarity": 0.76993128
+          "identifier": "GO:0031039",
+          "label": "macronucleus",
+          "cosine_similarity": 0.77013763
         }
       ]
     },
@@ -9075,6 +9106,11 @@
           "cosine_similarity": 0.75573379
         },
         {
+          "identifier": "GO:0031039",
+          "label": "macronucleus",
+          "cosine_similarity": 0.75289356
+        },
+        {
           "identifier": "GO:0070258",
           "label": "inner membrane pellicle complex",
           "cosine_similarity": 0.7436757
@@ -9083,11 +9119,6 @@
           "identifier": "cellstructuremech:mitosome_inner_membrane",
           "label": "mitosome inner membrane",
           "cosine_similarity": 0.73105563
-        },
-        {
-          "identifier": "GO:0034492",
-          "label": "hydrogenosome lumen",
-          "cosine_similarity": 0.7298011
         }
       ]
     },

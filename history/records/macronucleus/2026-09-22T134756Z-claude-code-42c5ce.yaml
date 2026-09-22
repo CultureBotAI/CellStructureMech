@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/macronucleus.yaml
+  slug: macronucleus
+session:
+  id: 2026-09-22T134756Z-claude-code-42c5ce
+  timestamp: '2026-09-22T13:47:56Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add GO-grounded macronucleus record
+  details: Added a GO:0031039 macronucleus record with nucleus parentage, reviewed-label-only
+    macronuclear chromosomes, Tetrahymena thermophila taxonomic scope and canonical example,
+    somatic gene-expression function, DOI-backed evidence from Eisen et al. 2006, a nonmechanistic
+    macronuclear-chromosome graph, and an open grounding TODO for ciliate macronuclear chromosomes.
