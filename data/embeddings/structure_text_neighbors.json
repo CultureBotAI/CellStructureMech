@@ -3278,6 +3278,11 @@
           "cosine_similarity": 0.74995545
         },
         {
+          "identifier": "cellstructuremech:parasporal_crystal",
+          "label": "parasporal crystal",
+          "cosine_similarity": 0.63657399
+        },
+        {
           "identifier": "GO:0033114",
           "label": "cyanelle thylakoid lumen",
           "cosine_similarity": 0.62870018
@@ -3286,11 +3291,6 @@
           "identifier": "cellstructuremech:r_body",
           "label": "R-body",
           "cosine_similarity": 0.62735502
-        },
-        {
-          "identifier": "GO:0042603",
-          "label": "capsule",
-          "cosine_similarity": 0.61206654
         }
       ]
     },
@@ -3450,6 +3450,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:parasporal_crystal",
+      "label": "parasporal crystal",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:cyanophycin_granule",
+          "label": "cyanophycin granule",
+          "cosine_similarity": 0.63657399
+        },
+        {
+          "identifier": "cellstructuremech:r_body",
+          "label": "R-body",
+          "cosine_similarity": 0.61705821
+        },
+        {
+          "identifier": "GO:0070088",
+          "label": "polyhydroxyalkanoate granule",
+          "cosine_similarity": 0.5876255
+        },
+        {
+          "identifier": "GO:0140737",
+          "label": "encapsulin nanocompartment",
+          "cosine_similarity": 0.57915496
+        },
+        {
+          "identifier": "cellstructuremech:tubz_filament",
+          "label": "TubZ filament",
+          "cosine_similarity": 0.57599909
+        }
+      ]
+    },
+    {
       "identifier": "GO:0010287",
       "label": "plastoglobule",
       "neighbors": [
@@ -3526,6 +3557,11 @@
           "cosine_similarity": 0.62735502
         },
         {
+          "identifier": "cellstructuremech:parasporal_crystal",
+          "label": "parasporal crystal",
+          "cosine_similarity": 0.61705821
+        },
+        {
           "identifier": "GO:0009428",
           "label": "bacterial-type flagellum basal body, distal rod, P ring",
           "cosine_similarity": 0.61191092
@@ -3534,11 +3570,6 @@
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.61000091
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.60631999
         }
       ]
     },
