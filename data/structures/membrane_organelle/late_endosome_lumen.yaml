@@ -1,0 +1,173 @@
+identifier: GO:0031906
+label: late endosome lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the membrane of a late endosome.
+definition_source: GO:0031906
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T18:29:04Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T18:30:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added endosome-lumen parentage, late-endosome parthood, a late endosomal
+    lumen synonym, UniProt SL-0336 xref, Saccharomyces cerevisiae MVB-sorting lumen
+    scope, an MVB cargo-sorting function, GO/UniProt/PMID evidence, a nonmechanistic
+    lumen topology graph, and a resolved lumen-boundary interpretation.
+  llm_assisted: true
+- timestamp: '2026-09-22T18:30:48Z'
+  curator: codex
+  action: REFINED_INITIAL_CURATION
+  changes: Narrowed the cargo-sorting function to multivesicular bodies as the late-endosome
+    child class that receives ubiquitinated membrane cargo on intraluminal vesicles.
+  llm_assisted: true
+- timestamp: '2026-09-22T18:34:41Z'
+  curator: codex
+  action: REFINED_INITIAL_CURATION
+  changes: Aligned the GO:0071985-grounded cargo-sorting function label with the canonical
+    multivesicular body sorting pathway label.
+  llm_assisted: true
+parent_structures:
+- GO:0031904
+part_of:
+- GO:0005770
+synonyms:
+- synonym_text: late endosomal lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0336
+xrefs:
+- uniprot.location:SL-0336
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast late endosome/MVB lumens receive intraluminal vesicles and ubiquitinated
+    membrane cargo during ESCRT-dependent multivesicular-body sorting.
+  reference: PMID:11511343
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Genetic model for ESCRT-dependent sorting of ubiquitinated endosomal membrane
+    cargo into the late endosome/MVB lumen.
+  reference: PMID:11511343
+functions:
+- function_id: late_endosome_mvb_lumen_cargo_sorting
+  label: multivesicular body sorting pathway
+  grounding: GO:0071985
+  description: In multivesicular bodies, a late-endosome child class, the lumen receives
+    ubiquitinated membrane cargo on intraluminal vesicles generated from the limiting
+    membrane during ESCRT-dependent MVB sorting.
+  evidence:
+  - reference: GO:0031906
+    notes: GO:0031906 defines the late endosome lumen as the volume enclosed by the
+      membrane of a late endosome.
+  - reference: GO:0005771
+    notes: GO:0005771 defines multivesicular bodies as late-endosome-class endosomes
+      with internal vesicles formed by invagination of the limiting endosomal membrane.
+  - reference: GO:0071985
+    notes: GO:0071985 denotes the multivesicular body sorting pathway that targets
+      ubiquitylated transmembrane proteins into luminal vesicles.
+  - reference: PMID:11511343
+    notes: Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved yeast endosomal
+      protein-sorting complex needed for ubiquitin-dependent MVB cargo sorting.
+evidence:
+- reference: GO:0031906
+  notes: Gene Ontology cellular-component term for the late endosome lumen.
+- reference: GO:0031904
+  notes: Gene Ontology cellular-component term for the broader endosome lumen class.
+- reference: GO:0005770
+  notes: Gene Ontology cellular-component term for the containing late endosome.
+- reference: GO:0031902
+  notes: Gene Ontology cellular-component term for the late endosome membrane that
+    bounds the lumen.
+- reference: GO:0005771
+  notes: Gene Ontology cellular-component term for the multivesicular body child class.
+- reference: uniprot.location:SL-0336
+  notes: UniProt Subcellular Location entry SL-0336 maps Late endosome lumen to GO:0031906
+    and places it under Endosome lumen.
+- reference: GO:0071985
+  notes: Gene Ontology biological-process term for the multivesicular body sorting
+    pathway.
+- reference: PMID:11511343
+  notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
+    Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
+    ESCRT-I, Cell.
+causal_graphs:
+- graph_id: late_endosome_lumen_topology
+  title: Late endosome lumen topology
+  description: The late endosome lumen is a specialized endosome lumen enclosed within
+    a late endosome.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures defining late-endosome lumen topology without asserting
+    a Rab, tethering, ESCRT, cargo recycling, or vacuolar-delivery mechanism.
+  nodes:
+  - node_id: late_endosome_lumen
+    label: late endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031906
+  - node_id: endosome_lumen
+    label: endosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031904
+  - node_id: late_endosome_membrane
+    label: late endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0031902
+  - node_id: late_endosome
+    label: late endosome
+    node_type: ORGANELLE
+    grounding: GO:0005770
+  edges:
+  - subject: late_endosome_lumen
+    predicate: is a
+    object: endosome_lumen
+    description: The late endosome lumen is a specialized endosome lumen.
+    evidence:
+    - reference: uniprot.location:SL-0336
+      notes: UniProt SL-0336 places the late endosome lumen under endosome lumen.
+    - reference: GO:0031904
+      notes: GO:0031904 identifies the broader endosome lumen class.
+  - subject: late_endosome_lumen
+    predicate: is part of
+    object: late_endosome
+    description: The late endosome lumen is the volume enclosed inside a late endosome.
+    evidence:
+    - reference: GO:0031906
+      notes: GO:0031906 defines the late endosome lumen as the volume enclosed by
+        the membrane of a late endosome.
+  - subject: late_endosome_membrane
+    predicate: bounds
+    object: late_endosome_lumen
+    description: The late endosome membrane encloses the late endosome lumen.
+    evidence:
+    - reference: GO:0031902
+      notes: GO:0031902 identifies the late endosome membrane.
+    - reference: GO:0031906
+      notes: GO:0031906 defines the late endosome lumen by enclosure within the membrane
+        of a late endosome.
+discussions:
+- discussion_id: late_endosome_lumen_boundary_not_membrane
+  prompt: Represent the late endosome membrane as the boundary of the late endosome
+    lumen rather than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#late_endosome_lumen_topology
+  rationale: GO:0031906 denotes the volume enclosed by the membrane of a late endosome,
+    whereas GO:0031902 denotes the surrounding lipid bilayer.
+  resolution_note: Curated the late endosome membrane as a boundary node and left
+    the late endosome lumen without asserted constituent molecular components.
+  evidence:
+  - reference: GO:0031906
+    notes: GO:0031906 identifies the late endosome lumen.
+  - reference: GO:0031902
+    notes: GO:0031902 identifies the late endosome membrane that bounds the lumen.
+  posed_by: codex
+  posed_date: '2026-09-22'
+  resolved_date: '2026-09-22'

@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/late_endosome_lumen.yaml
+  slug: late_endosome_lumen
+session:
+  id: 2026-09-22T183105Z-claude-code-047c9c
+  timestamp: '2026-09-22T18:31:05Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the late endosome lumen record
+  details: Added a GO:0031906 late endosome lumen record with endosome-lumen parentage, late-endosome
+    parthood, a late endosomal lumen synonym, a UniProt SL-0336 cross-reference, Saccharomyces
+    cerevisiae late endosome/MVB lumen scope and canonical example curation, a multivesicular-body
+    cargo-sorting function, GO/UniProt/PMID evidence, a nonmechanistic late-endosome lumen
+    topology graph, and a resolved lumen-boundary interpretation.
