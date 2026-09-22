@@ -1,0 +1,144 @@
+identifier: GO:0031039
+label: macronucleus
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A membrane-bounded organelle of ciliated protozoan cells that contains
+  polyploid copies of a portion of the cell's complete genome. Transcription of genes
+  occurs in macronuclei. Some ciliate species may contain multiple macronuclei per
+  cell.
+definition_source: GO:0031039
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T13:46:38Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T13:47:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nucleus parentage, reviewed-label-only macronuclear chromosomes,
+    Tetrahymena thermophila taxonomic scope and canonical example, somatic gene-expression
+    function, DOI evidence, a nonmechanistic macronuclear chromosome graph, and a
+    grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0005634
+components:
+- component_id: macronuclear_chromosomes
+  label: macronuclear chromosomes
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000228 denotes any eukaryotic nuclear chromosome; no source-neutral
+    GO or SO identifier was verified for processed, amplified chromosomes of the ciliate
+    macronucleus.
+  role: Processed polyploid nuclear chromosomes that make up the vegetatively expressed
+    somatic genome of a ciliate.
+  evidence:
+  - reference: GO:0031039
+    notes: GO:0031039 defines the macronucleus as containing polyploid copies of part
+      of the cell genome.
+  - reference: DOI:10.1371/journal.pbio.0040286
+    notes: Eisen et al. 2006 sequenced the Tetrahymena thermophila macronuclear genome
+      and described its MIC-derived, amplified chromosomes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  presence: COMMON
+  note: Tetrahymena thermophila cells carry a somatic macronucleus and a germline
+    micronucleus with distinct but closely related genomes.
+  reference: DOI:10.1371/journal.pbio.0040286
+canonical_examples:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  note: Model ciliate whose strain SB210 macronuclear genome was shotgun-sequenced
+    from purified macronuclei.
+  reference: DOI:10.1371/journal.pbio.0040286
+functions:
+- function_id: somatic_gene_expression
+  label: somatic gene expression
+  description: The Tetrahymena macronucleus is the asexual-stage somatic nucleus in
+    which vegetative gene expression occurs.
+  evidence:
+  - reference: GO:0031039
+    notes: GO:0031039 states that transcription of genes occurs in macronuclei.
+  - reference: DOI:10.1371/journal.pbio.0040286
+    notes: Eisen et al. 2006 described the Tetrahymena macronucleus as the gene-expression
+      center during asexual growth.
+evidence:
+- reference: GO:0031039
+  notes: Gene Ontology cellular-component term for macronucleus.
+- reference: GO:0005634
+  notes: Gene Ontology cellular-component ancestor term for nucleus.
+- reference: DOI:10.1371/journal.pbio.0040286
+  notes: Eisen et al. 2006, 'Macronuclear Genome Sequence of the Ciliate Tetrahymena
+    thermophila, a Model Eukaryote', PLoS Biology.
+causal_graphs:
+- graph_id: macronuclear_chromosomes_support_somatic_expression
+  title: Macronuclear chromosomes support somatic expression
+  description: In Tetrahymena thermophila, processed, amplified macronuclear chromosomes
+    reside in the somatic macronucleus and support vegetative gene expression.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the mature Tetrahymena macronucleus as a processed-genome
+    compartment without modeling micronucleus-to-macronucleus development or macronuclear
+    nuclear-pore composition.
+  nodes:
+  - node_id: macronuclear_chromosomes
+    label: macronuclear chromosomes
+    node_type: GENETIC_ELEMENT
+    component_ref: macronuclear_chromosomes
+  - node_id: macronucleus
+    label: macronucleus
+    node_type: STRUCTURE
+    grounding: GO:0031039
+  - node_id: somatic_gene_expression
+    label: somatic gene expression
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: macronuclear_chromosomes
+    predicate: are housed in
+    object: macronucleus
+    description: Processed, amplified macronuclear chromosomes are contained in the
+      Tetrahymena macronucleus.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.0040286
+      notes: Eisen et al. 2006 described the MAC genome as MIC-derived chromosomes
+        that are fragmented, telomere-capped, and amplified.
+  - subject: macronuclear_chromosomes
+    predicate: support
+    object: somatic_gene_expression
+    description: The macronuclear genome contains the genes expressed during Tetrahymena
+      asexual growth.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.0040286
+      notes: Eisen et al. 2006 state that all gene expression during asexual growth
+        occurs in the MAC.
+  - subject: macronucleus
+    predicate: enables
+    object: somatic_gene_expression
+    description: The mature macronucleus is the somatic gene-expression nucleus in
+      Tetrahymena.
+    evidence:
+    - reference: GO:0031039
+      notes: GO:0031039 states that transcription of genes occurs in macronuclei.
+discussions:
+- discussion_id: resolve_macronuclear_chromosome_grounding
+  prompt: Resolve whether a source-neutral GO or SO identifier exactly denotes ciliate
+    macronuclear chromosomes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#macronuclear_chromosomes
+  - causal_graphs#macronuclear_chromosomes_support_somatic_expression
+  rationale: Macronuclear chromosomes are the processed, amplified chromosomes of
+    a ciliate somatic nucleus. Existing generic GO chromosome terms are broader than
+    that ciliate-specific component.
+  evidence:
+  - reference: DOI:10.1371/journal.pbio.0040286
+    notes: Eisen et al. 2006 describe the macronuclear genome as MIC-derived, fragmented,
+      telomere-capped, amplified chromosomes.
+  posed_by: codex
+  posed_date: '2026-09-22'
