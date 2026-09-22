@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/early_endosome.yaml
+  slug: early_endosome
+session:
+  id: 2026-09-22T161653Z-claude-code-83d975
+  timestamp: '2026-09-22T16:16:53Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the early endosome record
+  details: Added a GO:0005769 early endosome record with endosome parentage, early-endosome
+    membrane and lumen parts, a UniProt SL-0094 cross-reference, a GO:0031901-grounded early-endosome
+    membrane component, Trypanosoma cruzi epimastigote taxonomic scope and canonical example
+    curation, an endocytic cargo-sorting function, GO/UniProt/DOI evidence, a nonmechanistic
+    topology and cytostome-to-reservosome cargo-route graph, and a resolved discussion keeping
+    the downstream reservosome outside the early-endosome boundary.
