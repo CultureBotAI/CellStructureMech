@@ -22,6 +22,13 @@ curation_history:
     scope, endocytic cargo-sorting function, GO/UniProt/DOI evidence, a nonmechanistic
     topology and cargo-route graph, and a resolved reservosome-boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-22T16:28:08Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1299 review issues #1300 and #1301 by narrowing graph scope
+    notes to T. cruzi and removing the local reservosome record ID from discussion
+    evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0005768
 has_part:
@@ -94,9 +101,8 @@ causal_graphs:
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures the early-endosome membrane and lumen and places
-    the Trypanosoma early endosomal network between cytostome entry and reservosome
-    storage without asserting a complete Rab, tethering, coat, recycling, or degradation
-    mechanism.
+    the T. cruzi early endosomal network between cytostome entry and reservosome storage
+    without asserting a complete Rab, tethering, coat, recycling, or degradation mechanism.
   nodes:
   - node_id: early_endosome
     label: early endosome
@@ -204,9 +210,6 @@ discussions:
   - reference: DOI:10.1078/0171-9335-00112
     notes: Porto-Carreiro et al. 2000 traced cargo through early endosomal compartments
       before storage in reservosomes.
-  - reference: cellstructuremech:reservosome
-    notes: The local reservosome record separately models the posterior T. cruzi storage
-      compartment.
   posed_by: codex
   posed_date: '2026-09-22'
   resolved_date: '2026-09-22'
