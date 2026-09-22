@@ -1,0 +1,202 @@
+identifier: GO:0097568
+label: median body
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A non-membrane bound, semi-organized microtubule array of unknown function
+  found in Giardia species (trophozoite stage). It is located on the dorsal side of
+  the trophozoite, slightly posterior to the ventral disc.
+definition_source: GO:0097568
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T08:43:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T08:44:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added median-body synonymy, cytoskeleton parthood, a microtubule has_part
+    link, alpha/beta tubulin and Kinesin-13 components, Giardia intestinalis scope,
+    DOI evidence, a nonmechanistic Kinesin-13 dynamics graph, and open TODOs for component
+    boundaries and median-body function.
+  llm_assisted: true
+synonyms:
+- synonym_text: parabasal body
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097568
+part_of:
+- GO:0005856
+has_part:
+- GO:0005874
+components:
+- component_id: alpha_beta_tubulins
+  label: alpha- and beta-tubulins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Tubulin constituents that polymerize into the Giardia median-body microtubule
+    array.
+  evidence:
+  - reference: GO:0005874
+    notes: Gene Ontology defines microtubules as tubes of polymeric tubulin.
+  - reference: DOI:10.1016/j.biolcel.2004.05.006
+    notes: Piva and Benchimol 2004 showed that Giardia median-body microtubules react
+      with anti-tubulin antibodies.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the alpha- and beta-tubulins
+    that build Giardia median-body microtubules was verified in this pass.
+- component_id: kinesin_13
+  label: Giardia Kinesin-13
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: UNKNOWN
+  role: Microtubule-dynamics regulator that localizes to the Giardia median body and
+    whose dominant-negative perturbation changes median-body volume.
+  evidence:
+  - reference: DOI:10.1128/EC.00128-07
+    notes: Dawson et al. 2007 localized Giardia Kinesin-13 and EB1 to the median body
+      and observed altered median-body volume after expression of a Kinesin-13 rigor
+      mutant.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Giardia has a single kinesin-13 homolog in the Dawson et al. study,
+    but no exact cross-source family CURIE specific to the Giardia Kinesin-13 regulator
+    was curated here.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  presence: COMMON
+  note: Giardia intestinalis trophozoites carry a median-body microtubule array whose
+    ultrastructure and Kinesin-13-associated dynamics have been studied experimentally.
+  reference: DOI:10.1016/j.biolcel.2004.05.006
+canonical_examples:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  note: Diplomonad parasite model in which median-body ultrastructure and Kinesin-13/EB1
+    localization to the median-body microtubule array were experimentally characterized.
+  reference: DOI:10.1128/EC.00128-07
+evidence:
+- reference: GO:0097568
+  notes: Gene Ontology cellular-component term for the Giardia median body.
+- reference: GO:0005856
+  notes: Gene Ontology places the median body under the cytoskeleton.
+- reference: GO:0005874
+  notes: Gene Ontology records microtubules as parts of the median body.
+- reference: DOI:10.1083/jcb.29.2.317
+  notes: Friend 1966, The fine structure of Giardia muris, Journal of Cell Biology.
+- reference: DOI:10.1016/j.biolcel.2004.05.006
+  notes: 'Piva and Benchimol 2004, The median body of Giardia lamblia: an ultrastructural
+    study, Biology of the Cell.'
+- reference: DOI:10.1128/EC.00128-07
+  notes: Dawson et al. 2007, Kinesin-13 regulates flagellar, interphase, and mitotic
+    microtubule dynamics in Giardia intestinalis, Eukaryotic Cell.
+- reference: DOI:10.1016/bs.apar.2019.11.001
+  notes: Microtubule organelles in Giardia, Advances in Parasitology.
+causal_graphs:
+- graph_id: giardia_median_body_microtubule_dynamics
+  title: Tubulin microtubules and Kinesin-13 shape the Giardia median body
+  description: In Giardia trophozoites, alpha- and beta-tubulins polymerize into a
+    semi-organized median-body microtubule array. Kinesin-13 and EB1 localize to the
+    median body, and dominant-negative Kinesin-13 changes median-body volume.
+  graph_kind: REGULATION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the tubulin and Kinesin-13 relationships that are
+    directly supported by median-body structural and localization evidence while leaving
+    full component composition, assembly order, and the median body's cellular function
+    unresolved.
+  nodes:
+  - node_id: alpha_beta_tubulins
+    label: alpha- and beta-tubulins
+    node_type: GENE_OR_PROTEIN
+    component_ref: alpha_beta_tubulins
+  - node_id: microtubule
+    label: microtubule
+    node_type: STRUCTURE
+    grounding: GO:0005874
+  - node_id: median_body
+    label: median body
+    node_type: STRUCTURE
+    grounding: GO:0097568
+  - node_id: kinesin_13
+    label: Giardia Kinesin-13
+    node_type: GENE_OR_PROTEIN
+    component_ref: kinesin_13
+  edges:
+  - subject: alpha_beta_tubulins
+    predicate: polymerize into
+    object: microtubule
+    description: Alpha- and beta-tubulin subunits polymerize into the microtubules
+      that make up the Giardia median body.
+    evidence:
+    - reference: GO:0005874
+      notes: Gene Ontology defines microtubules as polymeric tubulin tubes.
+  - subject: microtubule
+    predicate: assemble into
+    object: median_body
+    description: Curved microtubules form the median-body array in Giardia trophozoites.
+    evidence:
+    - reference: GO:0097568
+      notes: Gene Ontology defines the median body as a semi-organized Giardia microtubule
+        array.
+    - reference: DOI:10.1083/jcb.29.2.317
+      notes: Friend 1966 observed the Giardia median body as an aggregate of curved
+        microtubules by electron microscopy.
+  - subject: kinesin_13
+    predicate: localizes to
+    object: median_body
+    description: Giardia Kinesin-13 localizes to the median body and other microtubule
+      plus-end regions.
+    evidence:
+    - reference: DOI:10.1128/EC.00128-07
+      notes: Dawson et al. 2007 detected GFP-tagged Kinesin-13 and EB1 at the Giardia
+        median body.
+  - subject: kinesin_13
+    predicate: modulates volume of
+    object: median_body
+    description: Perturbing Giardia Kinesin-13 changes median-body volume, linking
+      the motor to regulation of the array's microtubule dynamics.
+    evidence:
+    - reference: DOI:10.1128/EC.00128-07
+      notes: Dawson et al. 2007 found decreased median-body volume after expression
+        of a Kinesin-13 S280N rigor mutant.
+discussions:
+- discussion_id: resolve_median_body_component_boundaries
+  prompt: Resolve exact component boundaries and source-neutral groundings for Giardia
+    median-body tubulins, Kinesin-13, beta-giardin-reactive material, and additional
+    median-body-associated proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#alpha_beta_tubulins
+  - components#kinesin_13
+  rationale: The median body is a tubulin microtubule array and Kinesin-13/EB1 localize
+    to it, but this pass did not curate exact protein-family boundaries for all alpha/beta
+    tubulins, beta-giardin-reactive material, or regulators associated with this Giardia-specific
+    array.
+  evidence:
+  - reference: DOI:10.1016/j.biolcel.2004.05.006
+    notes: Piva and Benchimol 2004 used anti-tubulin and anti-beta-giardin antibodies
+      on Giardia median bodies.
+  - reference: DOI:10.1128/EC.00128-07
+    notes: Dawson et al. 2007 localized Kinesin-13 and EB1 to the Giardia median body.
+  posed_by: codex
+  posed_date: '2026-09-22'
+- discussion_id: resolve_median_body_function
+  prompt: Resolve the cellular function of the Giardia median body before asserting
+    a biological-process function.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#giardia_median_body_microtubule_dynamics
+  rationale: GO:0097568 explicitly describes the median body as a Giardia microtubule
+    array of unknown function. The first record therefore captures microtubule composition
+    and Kinesin-13-associated dynamics but avoids assigning a specific physiological
+    function.
+  evidence:
+  - reference: GO:0097568
+    notes: Gene Ontology leaves the median-body function unknown.
+  - reference: DOI:10.1016/bs.apar.2019.11.001
+    notes: The 2020 Giardia microtubule-organelles review summarizes the state of
+      knowledge for specialized Giardia microtubule arrays.
+  posed_by: codex
+  posed_date: '2026-09-22'
