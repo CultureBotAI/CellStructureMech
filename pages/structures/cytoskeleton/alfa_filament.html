@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlfA filament · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>AlfA filament</h1>
+<p class="meta"><code>cellstructuremech:alfa_filament</code> · CYTOSKELETON · FILAMENT · <span class="status">PROPOSED</span></p>
+<p class="definition">A plasmid-encoded bacterial actin-like cytoskeletal filament assembled from AlfA ATPases that supports segregation of pLS32-family plasmids in Bacillus subtilis. <small>[<a href="https://doi.org/10.1038/sj.emboj.7601443"><code>DOI:10.1038/sj.emboj.7601443</code></a>]</small></p>
+
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-alfa"><td>AlfA</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>alfA</td><td></td><td>ESSENTIAL</td><td>Plasmid-encoded actin-like ATPase subunit that polymerizes into filaments for pLS32-family plasmid segregation.<ul class="evidence"><li><a href="https://doi.org/10.1038/sj.emboj.7601443"><code>DOI:10.1038/sj.emboj.7601443</code></a> <small>Becker et al. 2006 tied the Bacillus subtilis AlfA protein to actin-like filaments and active plasmid segregation.</small></li><li><a href="https://doi.org/10.1016/j.str.2009.07.008"><code>DOI:10.1016/j.str.2009.07.008</code></a> <small>Polka et al. 2009 analyzed purified AlfA polymerization and filament ultrastructure.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1423"><code>NCBITaxon:1423</code></a> Bacillus subtilis — <strong>VARIABLE</strong>: AlfA is encoded by pLS32-family plasmid partition systems characterized in Bacillus subtilis; this record does not assert the filament across all Bacillus subtilis strains. [<a href="https://doi.org/10.1038/sj.emboj.7601443"><code>DOI:10.1038/sj.emboj.7601443</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1423"><code>NCBITaxon:1423</code></a> <em>Bacillus subtilis</em> — Host species used to characterize AlfA filament formation and segregation of the pLS32-family miniplasmid pBET131. [<a href="https://doi.org/10.1038/sj.emboj.7601443"><code>DOI:10.1038/sj.emboj.7601443</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>pLS32-family plasmid segregation</strong> — AlfA filaments work with the AlfB adaptor and the parN centromere to support active segregation of pLS32-family plasmid DNA in Bacillus subtilis.<ul class="evidence"><li><a href="https://doi.org/10.1038/sj.emboj.7601443"><code>DOI:10.1038/sj.emboj.7601443</code></a> <small>Becker et al. 2006 showed that AlfA is needed for active segregation of pBET131, a pLS32 derivative.</small></li><li><a href="https://doi.org/10.1073/pnas.1304127111"><code>DOI:10.1073/pnas.1304127111</code></a> <small>Polka et al. 2014 connected AlfA dynamics to AlfB and parN-dependent plasmid positioning.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-alfa_pls32_family_partitioning">AlfA filaments support pLS32-family plasmid segregation <small>(FUNCTION)</small></h3>
+<p>AlfA polymerizes into actin-like filaments, and AlfB-parN plasmid-centromere complexes regulate filament organization to support active segregation of pLS32-family plasmids.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>AlfA</td><td>polymerizes into</td><td>AlfA filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.str.2009.07.008"><code>DOI:10.1016/j.str.2009.07.008</code></a> <small>Polka et al. 2009 purified AlfA and analyzed its assembly into actin-like filaments.</small></li><li><a href="https://doi.org/10.1073/pnas.1716424115"><code>DOI:10.1073/pnas.1716424115</code></a> <small>Szewczak-Harris and Lowe 2018 solved a high-resolution AlfA filament cryo-EM reconstruction.</small></li></ul></td></tr>
+<tr><td>AlfB</td><td>binds</td><td>parN centromere</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.1304127111"><code>DOI:10.1073/pnas.1304127111</code></a> <small>Polka et al. 2014 analyzed AlfB and parN control of the AlfA partition system.</small></li></ul></td></tr>
+<tr><td>AlfB</td><td>forms a centromere complex with</td><td>AlfB-parN plasmid-centromere complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.1304127111"><code>DOI:10.1073/pnas.1304127111</code></a> <small>Polka et al. 2014 characterized the AlfB/parN-dependent regulation of the AlfA partition filament.</small></li></ul></td></tr>
+<tr><td>AlfB-parN plasmid-centromere complex</td><td>regulates</td><td>AlfA filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.1304127111"><code>DOI:10.1073/pnas.1304127111</code></a> <small>Polka et al. 2014 connected AlfA filament dynamics to AlfB and parN.</small></li></ul></td></tr>
+<tr><td>AlfA filament</td><td>supports</td><td>pLS32-family plasmid segregation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/sj.emboj.7601443"><code>DOI:10.1038/sj.emboj.7601443</code></a> <small>Becker et al. 2006 connected AlfA filament formation to active pBET131 plasmid segregation.</small></li><li><a href="https://doi.org/10.1073/pnas.1304127111"><code>DOI:10.1073/pnas.1304127111</code></a> <small>Polka et al. 2014 characterized the AlfA-dependent plasmid-positioning system.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral grounding for pLS32-family AlfA actin-like ATPases. <small>This first record curates AlfA from the Bacillus subtilis pLS32-family partition system without asserting that a broad actin ATPase or bacterial actin-like family accession exactly denotes filament-forming AlfA proteins.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): AlfB and parN are graph-scoped centromere adaptors rather than AlfA filament constituents. <small>AlfB bound to parN centromere DNA regulates AlfA filament organization in the partition system, but the component list keeps only the AlfA polymer subunit as a constituent of the filament itself.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1038/sj.emboj.7601443"><code>DOI:10.1038/sj.emboj.7601443</code></a> <small>Becker, Moller-Jensen, Jensen and Gerdes 2006, DNA segregation by the bacterial actin AlfA during Bacillus subtilis growth and development, EMBO Journal.</small></li><li><a href="https://doi.org/10.1016/j.str.2009.07.008"><code>DOI:10.1016/j.str.2009.07.008</code></a> <small>Polka, Kollman, Agard and Mullins 2009, The Structure and Assembly Dynamics of Plasmid Actin AlfA Imply a Novel Mechanism of DNA Segregation, Structure.</small></li><li><a href="https://doi.org/10.1073/pnas.1304127111"><code>DOI:10.1073/pnas.1304127111</code></a> <small>Polka et al. 2014, Accessory factors promote AlfA-dependent plasmid segregation by regulating filament nucleation, disassembly, and bundling, PNAS.</small></li><li><a href="https://doi.org/10.1073/pnas.1716424115"><code>DOI:10.1073/pnas.1716424115</code></a> <small>Szewczak-Harris and Lowe 2018, Cryo-EM reconstruction of AlfA from Bacillus subtilis reveals the structure of a simplified actin-like filament at 3.4-A resolution, PNAS.</small></li><li><a href="https://doi.org/10.1128/JB.01312-09"><code>DOI:10.1128/JB.01312-09</code></a> <small>Tanaka and Ogura 2010, Bacillus subtilis plasmid pBET131 is closely related to pLS32 and carries a replication and partitioning region.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-22T04:22:36Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-22T04:25:05Z</code> codex · EXPANDED_RECORD — Added cytoskeleton parentage, AlfA component curation, Bacillus subtilis pLS32-family plasmid scope, a pLS32-family plasmid segregation function, DOI evidence, a nonmechanistic AlfA/AlfB/parN graph, and AlfA grounding and AlfB/parN boundary discussions.</li><li><code>2026-09-22T04:26:00Z</code> codex · FIX_CITATION_NOTE — Corrected the Polka et al. 2014 AlfB/parN citation title.</li><li><code>2026-09-22T06:44:02Z</code> codex · REMOVE_UNATTESTED_SYNONYM — Removed the paraphrased plasmid actin AlfA filament related synonym; the cited paper describes AlfA as a plasmid actin but does not attest that full phrase as an alternate filament label.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/alfa_filament.yaml"><code>data/structures/cytoskeleton/alfa_filament.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
