@@ -8317,6 +8317,37 @@
       ]
     },
     {
+      "identifier": "GO:0045335",
+      "label": "phagocytic vesicle",
+      "neighbors": [
+        {
+          "identifier": "GO:0031410",
+          "label": "cytoplasmic vesicle",
+          "cosine_similarity": 0.81471391
+        },
+        {
+          "identifier": "GO:0030659",
+          "label": "cytoplasmic vesicle membrane",
+          "cosine_similarity": 0.80603163
+        },
+        {
+          "identifier": "GO:0030666",
+          "label": "endocytic vesicle membrane",
+          "cosine_similarity": 0.79888551
+        },
+        {
+          "identifier": "GO:0012507",
+          "label": "ER to Golgi transport vesicle membrane",
+          "cosine_similarity": 0.7928637
+        },
+        {
+          "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
+          "label": "COPII-coated vesicle lumen",
+          "cosine_similarity": 0.79284227
+        }
+      ]
+    },
+    {
       "identifier": "GO:0034357",
       "label": "photosynthetic membrane",
       "neighbors": [
@@ -9297,14 +9328,14 @@
           "cosine_similarity": 0.77304989
         },
         {
+          "identifier": "GO:0045335",
+          "label": "phagocytic vesicle",
+          "cosine_similarity": 0.75846388
+        },
+        {
           "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
           "label": "COPI-coated vesicle lumen",
           "cosine_similarity": 0.75487405
-        },
-        {
-          "identifier": "GO:0012507",
-          "label": "ER to Golgi transport vesicle membrane",
-          "cosine_similarity": 0.75385179
         }
       ]
     },
