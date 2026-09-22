@@ -1361,14 +1361,14 @@
           "cosine_similarity": 0.79876137
         },
         {
+          "identifier": "GO:0033289",
+          "label": "intraconoid microtubule",
+          "cosine_similarity": 0.78815658
+        },
+        {
           "identifier": "GO:0020025",
           "label": "subpellicular microtubule",
           "cosine_similarity": 0.78217562
-        },
-        {
-          "identifier": "GO:0020010",
-          "label": "conoid",
-          "cosine_similarity": 0.75006354
         }
       ]
     },
@@ -1521,9 +1521,9 @@
           "cosine_similarity": 0.77753647
         },
         {
-          "identifier": "GO:0035253",
-          "label": "ciliary rootlet",
-          "cosine_similarity": 0.76789478
+          "identifier": "GO:0033289",
+          "label": "intraconoid microtubule",
+          "cosine_similarity": 0.77057235
         }
       ]
     },
@@ -1594,6 +1594,11 @@
       "label": "conoid",
       "neighbors": [
         {
+          "identifier": "GO:0033289",
+          "label": "intraconoid microtubule",
+          "cosine_similarity": 0.83268359
+        },
+        {
           "identifier": "GO:0020025",
           "label": "subpellicular microtubule",
           "cosine_similarity": 0.7912867
@@ -1612,11 +1617,6 @@
           "identifier": "GO:0005930",
           "label": "axoneme",
           "cosine_similarity": 0.75006354
-        },
-        {
-          "identifier": "GO:0005874",
-          "label": "microtubule",
-          "cosine_similarity": 0.73042973
         }
       ]
     },
@@ -1776,6 +1776,37 @@
       ]
     },
     {
+      "identifier": "GO:0033289",
+      "label": "intraconoid microtubule",
+      "neighbors": [
+        {
+          "identifier": "GO:0020025",
+          "label": "subpellicular microtubule",
+          "cosine_similarity": 0.93848554
+        },
+        {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.86932674
+        },
+        {
+          "identifier": "GO:0020010",
+          "label": "conoid",
+          "cosine_similarity": 0.83268359
+        },
+        {
+          "identifier": "GO:0097596",
+          "label": "ventral disc supernumerary microtubule array",
+          "cosine_similarity": 0.81149622
+        },
+        {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.78815658
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:mamk_filament",
       "label": "MamK filament",
       "neighbors": [
@@ -1847,6 +1878,11 @@
           "cosine_similarity": 0.87263058
         },
         {
+          "identifier": "GO:0033289",
+          "label": "intraconoid microtubule",
+          "cosine_similarity": 0.86932674
+        },
+        {
           "identifier": "GO:0020025",
           "label": "subpellicular microtubule",
           "cosine_similarity": 0.86313287
@@ -1860,11 +1896,6 @@
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
           "cosine_similarity": 0.83802631
-        },
-        {
-          "identifier": "cellstructuremech:btubab_bacterial_microtubule",
-          "label": "BtubAB bacterial microtubule",
-          "cosine_similarity": 0.80246582
         }
       ]
     },
@@ -2012,14 +2043,14 @@
           "cosine_similarity": 0.72520209
         },
         {
+          "identifier": "GO:0033289",
+          "label": "intraconoid microtubule",
+          "cosine_similarity": 0.70282526
+        },
+        {
           "identifier": "GO:0020025",
           "label": "subpellicular microtubule",
           "cosine_similarity": 0.68770352
-        },
-        {
-          "identifier": "GO:0005826",
-          "label": "actomyosin contractile ring",
-          "cosine_similarity": 0.68521087
         }
       ]
     },
@@ -2090,6 +2121,11 @@
       "label": "subpellicular microtubule",
       "neighbors": [
         {
+          "identifier": "GO:0033289",
+          "label": "intraconoid microtubule",
+          "cosine_similarity": 0.93848554
+        },
+        {
           "identifier": "GO:0005874",
           "label": "microtubule",
           "cosine_similarity": 0.86313287
@@ -2108,11 +2144,6 @@
           "identifier": "GO:0005930",
           "label": "axoneme",
           "cosine_similarity": 0.78217562
-        },
-        {
-          "identifier": "GO:0036064",
-          "label": "ciliary basal body",
-          "cosine_similarity": 0.77753647
         }
       ]
     },
@@ -13239,9 +13270,9 @@
           "cosine_similarity": 0.71579867
         },
         {
-          "identifier": "GO:0090641",
-          "label": "microsporidian-type endospore",
-          "cosine_similarity": 0.68263179
+          "identifier": "GO:0033289",
+          "label": "intraconoid microtubule",
+          "cosine_similarity": 0.68711513
         }
       ]
     },

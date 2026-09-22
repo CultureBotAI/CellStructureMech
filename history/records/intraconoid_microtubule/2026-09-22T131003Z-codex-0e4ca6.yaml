@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/intraconoid_microtubule.yaml
+  slug: intraconoid_microtubule
+session:
+  id: 2026-09-22T131003Z-codex-0e4ca6
+  timestamp: '2026-09-22T13:10:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - mechanism
+  - discussion
+  summary: Add intraconoid microtubule record
+  details: Created a PROPOSED GO:0033289 intraconoid microtubule record with GO microtubule
+    parentage, apical-complex parthood, a reviewed label-only alpha/beta tubulin component,
+    Toxoplasma gondii taxonomic scope, GO/DOI evidence, a nonmechanistic Toxoplasma conoid-center
+    topology graph, and curation discussions for unresolved filament-end factors and the boundary
+    with conoid tubulin fibers.
