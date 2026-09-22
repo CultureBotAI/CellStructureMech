@@ -26,6 +26,14 @@ curation_history:
   changes: Retargeted the TbRAB11 component-boundary discussion from a bare components
     anchor to the whole record so discussion anchors resolve.
   llm_assisted: true
+- timestamp: '2026-09-22T19:42:53Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1315 review issues #1316 and #1317 by renaming the function
+    from a Rab11-centric label to endocytic cargo recycling and retargeting the TbRAB11
+    graph edge from a generic cargo node to a BIOLOGICAL_PROCESS endocytic-recycling
+    node.'
+  llm_assisted: true
 parent_structures:
 - GO:0005768
 has_part:
@@ -73,10 +81,10 @@ canonical_examples:
     with transferrin receptor and internalized anti-variant surface glycoprotein cargo.
   reference: PMID:11683389
 functions:
-- function_id: rab11_dependent_cargo_recycling
-  label: Rab11-dependent endocytic recycling
-  description: Recycling endosomes target internalized cargo back toward the cell
-    surface; in Trypanosoma brucei, TbRAB11 contributes to recycling of transferrin
+- function_id: endocytic_cargo_recycling
+  label: endocytic cargo recycling
+  description: Recycling endosomes return internalized cargo toward the cell surface;
+    in Trypanosoma brucei, TbRAB11-positive compartments support recycling of transferrin
     and anti-VSG antibody cargo through the endosomal system.
   evidence:
   - reference: GO:0055037
@@ -142,9 +150,9 @@ causal_graphs:
   - node_id: tbrab11
     label: TbRAB11
     node_type: GENE_OR_PROTEIN
-  - node_id: recycling_cargo
-    label: recycling cargo
-    node_type: CHEMICAL
+  - node_id: endocytic_recycling
+    label: endocytic recycling
+    node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: recycling_endosome
     predicate: is a
@@ -192,9 +200,9 @@ causal_graphs:
         structures carrying recycling cargo.
   - subject: tbrab11
     predicate: supports
-    object: recycling_cargo
-    description: TbRAB11 activity contributes to recycling of endocytic cargo in bloodstream
-      Trypanosoma brucei.
+    object: endocytic_recycling
+    description: TbRAB11 activity supports Rab11-dependent recycling of endocytic
+      cargo in bloodstream Trypanosoma brucei.
     evidence:
     - reference: PMID:12744719
       notes: Pal et al. 2003 implicated TbRAB11 in transferrin and anti-VSG antibody
