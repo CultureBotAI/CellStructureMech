@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/ascospore_wall.yaml
+  slug: ascospore_wall
+session:
+  id: 2026-09-22T081459Z-claude-code-afca7e
+  timestamp: '2026-09-22T08:14:59Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ascospore wall record
+  details: Created GO:0005619 ascospore wall as a PROPOSED spore envelope-layer record with
+    fungal-cell-wall parentage, Saccharomyces spore-wall layer parts, reviewed-label-only
+    inner, chitosan and dityrosine-rich wall components, Saccharomyces cerevisiae scope, stress-barrier
+    function, GO and DOI evidence, a nonmechanistic Saccharomyces layer graph, and component/layer
+    grounding TODOs.

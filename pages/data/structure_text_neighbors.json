@@ -2896,6 +2896,11 @@
       "label": "fungal-type cell wall",
       "neighbors": [
         {
+          "identifier": "GO:0005619",
+          "label": "ascospore wall",
+          "cosine_similarity": 0.79713816
+        },
+        {
           "identifier": "GO:0009274",
           "label": "peptidoglycan-based cell wall",
           "cosine_similarity": 0.74098527
@@ -2914,11 +2919,6 @@
           "identifier": "GO:0009276",
           "label": "Gram-negative-bacterium-type cell wall",
           "cosine_similarity": 0.72350189
-        },
-        {
-          "identifier": "GO:0000329",
-          "label": "fungal-type vacuole membrane",
-          "cosine_similarity": 0.71287027
         }
       ]
     },
@@ -12781,6 +12781,37 @@
       ]
     },
     {
+      "identifier": "GO:0005619",
+      "label": "ascospore wall",
+      "neighbors": [
+        {
+          "identifier": "GO:0043591",
+          "label": "endospore external encapsulating structure",
+          "cosine_similarity": 0.82265796
+        },
+        {
+          "identifier": "GO:0090641",
+          "label": "microsporidian-type endospore",
+          "cosine_similarity": 0.81826077
+        },
+        {
+          "identifier": "GO:0090642",
+          "label": "microsporidian-type exospore",
+          "cosine_similarity": 0.81350699
+        },
+        {
+          "identifier": "GO:0043595",
+          "label": "endospore cortex",
+          "cosine_similarity": 0.81328569
+        },
+        {
+          "identifier": "GO:0005628",
+          "label": "prospore membrane",
+          "cosine_similarity": 0.80484314
+        }
+      ]
+    },
+    {
       "identifier": "GO:0043593",
       "label": "endospore coat",
       "neighbors": [
@@ -12805,9 +12836,9 @@
           "cosine_similarity": 0.79903313
         },
         {
-          "identifier": "GO:0090641",
-          "label": "microsporidian-type endospore",
-          "cosine_similarity": 0.7826591
+          "identifier": "GO:0005619",
+          "label": "ascospore wall",
+          "cosine_similarity": 0.79815662
         }
       ]
     },
@@ -12867,9 +12898,9 @@
           "cosine_similarity": 0.82876078
         },
         {
-          "identifier": "GO:0090641",
-          "label": "microsporidian-type endospore",
-          "cosine_similarity": 0.8025757
+          "identifier": "GO:0005619",
+          "label": "ascospore wall",
+          "cosine_similarity": 0.82265796
         }
       ]
     },
@@ -12881,6 +12912,11 @@
           "identifier": "GO:0090642",
           "label": "microsporidian-type exospore",
           "cosine_similarity": 0.93376752
+        },
+        {
+          "identifier": "GO:0005619",
+          "label": "ascospore wall",
+          "cosine_similarity": 0.81826077
         },
         {
           "identifier": "GO:0043595",
@@ -12896,11 +12932,6 @@
           "identifier": "GO:0043593",
           "label": "endospore coat",
           "cosine_similarity": 0.7826591
-        },
-        {
-          "identifier": "GO:0043594",
-          "label": "outer endospore membrane",
-          "cosine_similarity": 0.7761213
         }
       ]
     },
@@ -12924,14 +12955,14 @@
           "cosine_similarity": 0.82164717
         },
         {
+          "identifier": "GO:0005619",
+          "label": "ascospore wall",
+          "cosine_similarity": 0.81350699
+        },
+        {
           "identifier": "GO:0043593",
           "label": "endospore coat",
           "cosine_similarity": 0.79903313
-        },
-        {
-          "identifier": "cellstructuremech:microsporidian_posterior_vacuole",
-          "label": "microsporidian posterior vacuole",
-          "cosine_similarity": 0.79180999
         }
       ]
     },
