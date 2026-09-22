@@ -1,0 +1,193 @@
+identifier: GO:0070074
+label: mononeme
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A small, threadlike secretory organelle that forms part of the apical
+  complex and lies close to the subpellicular microtubules.
+definition_source: GO:0070074
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T12:33:57Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T12:35:28Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO apical-complex parentage, PfROM1 as a reviewed label-only component,
+    Plasmodium falciparum scope, DOI/GO evidence, a nonmechanistic PfROM1 relocalization
+    graph, and curation discussions for unresolved mononeme boundaries and microtubule-motor
+    restraint.
+  llm_assisted: true
+- timestamp: '2026-09-22T12:36:12Z'
+  curator: codex
+  action: FIXED_CITATION_METADATA
+  changes: Corrected the Singh et al. 2007 mononeme citation title and journal.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+part_of:
+- GO:0020007
+components:
+- component_id: pfrom1_rhomboid_protease
+  label: PfROM1 rhomboid-1 protease
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PfROM1 is curated as the Plasmodium falciparum rhomboid-1 protease
+    observed in the mononeme; no exact source-neutral PfROM1 or apicomplexan ROM1-family
+    CURIE was verified in this pass.
+  gene_symbols:
+  - PfROM1
+  role: Plasmodium falciparum rhomboid-1 protease that resides in the mononeme before
+    merozoite release and redistributes to the merozoite surface with apical and posterior
+    enrichment after release.
+  evidence:
+  - reference: DOI:10.1073/pnas.0709999104
+    notes: Singh et al. 2007 identified PfROM1 as a rhomboid protease in the newly
+      named mononeme and followed its redistribution after merozoite release.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  presence: COMMON
+  note: Mononemes are directly evidenced in mature Plasmodium falciparum segmenters
+    and released merozoites; no broader apicomplexan distribution is asserted in this
+    first record.
+  reference: DOI:10.1073/pnas.0709999104
+canonical_examples:
+- taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  note: Human malaria parasite in which HA-tagged PfROM1 revealed a single thread-like
+    mononeme running along one side of mature merozoites close to the subpellicular
+    microtubules.
+  reference: DOI:10.1073/pnas.0709999104
+functions:
+- function_id: rom1_compartmentalization
+  label: rhomboid-1 compartmentalization
+  description: The mononeme stores PfROM1 in a compartment distinct from micronemes,
+    rhoptries and dense granules in mature Plasmodium falciparum merozoites, before
+    PfROM1 redistributes to the merozoite surface after erythrocyte rupture.
+  evidence:
+  - reference: DOI:10.1073/pnas.0709999104
+    notes: Singh et al. 2007 separated PfROM1 from microneme, rhoptry and dense-granule
+      markers and proposed that mononeme sequestration keeps PfROM1 apart from micronemal
+      substrates before merozoite release.
+evidence:
+- reference: GO:0070074
+  notes: Gene Ontology cellular-component term for the mononeme.
+- reference: GO:0043231
+  notes: Gene Ontology places mononemes under intracellular membrane-bounded organelles.
+- reference: GO:0020007
+  notes: Gene Ontology models mononemes as part of the apical complex.
+- reference: DOI:10.1073/pnas.0709999104
+  notes: 'Singh et al. 2007, Mononeme: A new secretory organelle in Plasmodium falciparum
+    merozoites identified by localization of rhomboid-1 protease, Proceedings of the
+    National Academy of Sciences of the United States of America.'
+causal_graphs:
+- graph_id: pfrom1_mononeme_relocalization
+  title: PfROM1 marks a threadlike mononeme before merozoite release
+  description: PfROM1 resides in the single thread-like mononeme next to the subpellicular
+    microtubules in mature P. falciparum merozoites; after erythrocyte rupture, PfROM1
+    redistributes to the merozoite surface with apical and posterior enrichment.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records mononeme position and PfROM1 relocalization phenomenology.
+    It does not assert a transport motor or route.
+  nodes:
+  - node_id: pfrom1_rhomboid_protease
+    label: PfROM1 rhomboid-1 protease
+    node_type: GENE_OR_PROTEIN
+    component_ref: pfrom1_rhomboid_protease
+  - node_id: mononeme
+    label: mononeme
+    node_type: ORGANELLE
+    grounding: GO:0070074
+  - node_id: subpellicular_microtubule
+    label: subpellicular microtubule
+    node_type: STRUCTURE
+    grounding: GO:0020025
+  - node_id: microneme
+    label: microneme
+    node_type: ORGANELLE
+    grounding: GO:0020009
+  - node_id: post_release_merozoite_surface
+    label: post-release merozoite surface
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: pfrom1_rhomboid_protease
+    predicate: resides in
+    object: mononeme
+    description: HA-tagged PfROM1 occupies the single thread-like mononeme along one
+      side of the mature merozoite before release.
+    evidence:
+    - reference: DOI:10.1073/pnas.0709999104
+      notes: Singh et al. 2007 localized HA-PfROM1 to a single thread-like structure
+        in mature P. falciparum segmenters and named that organelle the mononeme.
+  - subject: mononeme
+    predicate: lies close to
+    object: subpellicular_microtubule
+    description: The PfROM1-marked mononeme runs close to the longitudinal subpellicular
+      microtubules.
+    evidence:
+    - reference: DOI:10.1073/pnas.0709999104
+      notes: Singh et al. 2007 found HA-PfROM1 in close proximity to the longitudinal
+        subpellicular microtubules.
+    - reference: GO:0070074
+      notes: Gene Ontology defines the mononeme as a thread-like apical-complex organelle
+        located close to the subpellicular microtubules.
+  - subject: mononeme
+    predicate: is distinct from
+    object: microneme
+    description: The PfROM1-marked mononeme is spatially distinct from micronemes
+      in mature merozoites.
+    evidence:
+    - reference: DOI:10.1073/pnas.0709999104
+      notes: Singh et al. 2007 found that HA-PfROM1 did not colocalize with the AMA1
+        microneme marker.
+  - subject: pfrom1_rhomboid_protease
+    predicate: redistributes to
+    object: post_release_merozoite_surface
+    description: After infected erythrocytes rupture and merozoites are released,
+      PfROM1 shifts from its lateral mononeme position to the merozoite surface with
+      apical and posterior concentrations.
+    evidence:
+    - reference: DOI:10.1073/pnas.0709999104
+      notes: Singh et al. 2007 tracked HA-PfROM1 relocalization to apical and posterior
+        poles after merozoite release.
+discussions:
+- discussion_id: resolve_mononeme_components_and_membrane
+  prompt: Resolve the mononeme membrane boundary and any conserved cargo or accessory
+    proteins beyond PfROM1.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pfrom1_rhomboid_protease
+  - causal_graphs#pfrom1_mononeme_relocalization
+  rationale: The first mononeme paper establishes PfROM1 localization in a distinct
+    thread-like apical organelle, but this record does not yet curate an exact mononeme
+    membrane, lumen, motor, or pan-apicomplexan cargo cohort.
+  evidence:
+  - reference: DOI:10.1073/pnas.0709999104
+    notes: Singh et al. 2007 used PfROM1 to identify the mononeme and excluded colocalization
+      with known microneme, rhoptry and dense-granule markers.
+  posed_by: codex
+  posed_date: '2026-09-22'
+- discussion_id: omit_unresolved_microtubule_transport_model
+  prompt: Avoid asserting a microtubule-based mononeme transport mechanism until direct
+    motor or route evidence is curated.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#pfrom1_mononeme_relocalization
+  rationale: Singh et al. noted that the mononeme might move along microtubules and
+    that testing this would require exact localization of the mononeme and candidate
+    motors. The causal graph therefore records only observed topology and PfROM1 relocalization.
+  evidence:
+  - reference: DOI:10.1073/pnas.0709999104
+    notes: Singh et al. 2007 observed proximity to subpellicular microtubules while
+      leaving the transport mechanism unresolved.
+  posed_by: codex
+  posed_date: '2026-09-22'
+  resolved_date: '2026-09-22'
