@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/alfa_filament.yaml
+  slug: alfa_filament
+session:
+  id: 2026-09-22T070127Z-codex-75e31b
+  timestamp: '2026-09-22T07:01:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1265
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1266
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1264
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  summary: Fixed AlfA PR review issues
+  details: 'Addressed PR #1264 review issues by replacing the incorrect Tanaka DOI note with
+    the actual single-author AlfB/pBET131/pLS32 Journal of Bacteriology citation and by collapsing
+    the AlfB/parN causal graph into one graph-scoped AlfB-parN plasmid-centromere adapter
+    node that regulates the AlfA filament.'

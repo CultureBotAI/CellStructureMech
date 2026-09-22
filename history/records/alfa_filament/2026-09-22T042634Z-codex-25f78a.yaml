@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/alfa_filament.yaml
+  slug: alfa_filament
+session:
+  id: 2026-09-22T042634Z-codex-25f78a
+  timestamp: '2026-09-22T04:26:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Added the AlfA filament record
+  details: Added a cellstructuremech:alfa_filament CellStructureRecord for the Bacillus subtilis
+    pLS32-family AlfA cytoskeletal filament, with GO cytoskeleton parentage, AlfA component
+    curation, DOI-backed B. subtilis taxonomy, a pLS32-family plasmid segregation function,
+    a nonmechanistic AlfA/AlfB/parN causal graph, and discussions documenting the open AlfA-family
+    grounding task and the decision to keep AlfB/parN out of the filament component list.
