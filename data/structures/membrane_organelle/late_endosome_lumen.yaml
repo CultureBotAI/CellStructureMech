@@ -31,6 +31,13 @@ curation_history:
   changes: Aligned the GO:0071985-grounded cargo-sorting function label with the canonical
     multivesicular body sorting pathway label.
   llm_assisted: true
+- timestamp: '2026-09-22T18:50:22Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1312 review issues #1313 and #1314 by adding PMID:12194857
+    ESCRT-III evidence to the MVB-sorting function and narrowing the Saccharomyces
+    cerevisiae notes to MVB lumens as late-endosome child-compartment examples.'
+  llm_assisted: true
 parent_structures:
 - GO:0031904
 part_of:
@@ -45,14 +52,14 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Budding yeast late endosome/MVB lumens receive intraluminal vesicles and ubiquitinated
-    membrane cargo during ESCRT-dependent multivesicular-body sorting.
+  note: Budding yeast multivesicular-body lumens receive intraluminal vesicles and
+    ubiquitinated membrane cargo during ESCRT-dependent sorting.
   reference: PMID:11511343
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Genetic model for ESCRT-dependent sorting of ubiquitinated endosomal membrane
-    cargo into the late endosome/MVB lumen.
+  note: Genetic model for ESCRT-dependent cargo sorting into budding-yeast multivesicular-body
+    lumens as a late-endosome child-compartment example.
   reference: PMID:11511343
 functions:
 - function_id: late_endosome_mvb_lumen_cargo_sorting
@@ -74,6 +81,9 @@ functions:
   - reference: PMID:11511343
     notes: Katzmann, Babst and Emr 2001 identified ESCRT-I as a conserved yeast endosomal
       protein-sorting complex needed for ubiquitin-dependent MVB cargo sorting.
+  - reference: PMID:12194857
+    notes: Babst et al. 2002 characterized yeast ESCRT-III as an endosome-associated
+      complex required for MVB sorting.
 evidence:
 - reference: GO:0031906
   notes: Gene Ontology cellular-component term for the late endosome lumen.
@@ -96,6 +106,9 @@ evidence:
   notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
     Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
     ESCRT-I, Cell.
+- reference: PMID:12194857
+  notes: Babst, Katzmann, Estepa-Sabal, Meerloo and Emr 2002, Escrt-III, Developmental
+    Cell.
 causal_graphs:
 - graph_id: late_endosome_lumen_topology
   title: Late endosome lumen topology
