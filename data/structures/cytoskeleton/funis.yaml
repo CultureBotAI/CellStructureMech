@@ -1,0 +1,179 @@
+identifier: cellstructuremech:funis
+label: funis
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A Giardia trophozoite cytoskeletal structure composed of short microtubule
+  arrays that emanate from the caudal flagellar axonemes, anchor to dense rods running
+  parallel to the posterior-lateral flagella, and after posterior-lateral flagellar
+  emergence anchor to the epiplasm beneath the contractile tail membrane.
+definition_source: DOI:10.1016/j.jsb.2004.01.017
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T09:17:02Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T09:18:00Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoskeleton parentage, microtubule parthood, a label-only alpha/beta
+    tubulin component, Giardia intestinalis scope, DOI evidence, a nonmechanistic
+    funis topology graph, and open TODOs for dense-rod grounding and tail-flexion
+    mechanism.
+  llm_assisted: true
+parent_structures:
+- GO:0005856
+has_part:
+- GO:0005874
+components:
+- component_id: alpha_beta_tubulins
+  label: alpha- and beta-tubulins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Tubulin constituents that polymerize into the short funis microtubule arrays
+    of Giardia trophozoites.
+  evidence:
+  - reference: GO:0005874
+    notes: Gene Ontology defines microtubules as tubes of polymeric tubulin.
+  - reference: DOI:10.1016/j.jsb.2004.01.017
+    notes: Benchimol et al. 2004 used high-resolution field-emission scanning electron
+      microscopy to show that the Giardia funis is made of short microtubule arrays.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the alpha- and beta-tubulins
+    that polymerize into Giardia funis microtubules was verified in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  presence: COMMON
+  note: Giardia intestinalis trophozoites carry funis microtubule arrays emanating
+    from the caudal flagellar axonemes in the posterior cell body.
+  reference: DOI:10.1016/j.jsb.2004.01.017
+canonical_examples:
+- taxon_id: NCBITaxon:5741
+  taxon_label: Giardia intestinalis
+  note: Parasitic diplomonad model in which the funis was characterized by high-resolution
+    field-emission scanning electron microscopy.
+  reference: DOI:10.1016/j.jsb.2004.01.017
+evidence:
+- reference: DOI:10.1016/j.jsb.2004.01.017
+  notes: 'Benchimol, Piva, Campanati and de Souza 2004, Visualization of the funis
+    of Giardia lamblia by high-resolution field emission scanning electron microscopy:
+    new insights, Journal of Structural Biology.'
+- reference: DOI:10.1016/bs.apar.2019.11.001
+  notes: Microtubule organelles in Giardia, Advances in Parasitology.
+causal_graphs:
+- graph_id: giardia_funis_microtubule_topology
+  title: Funis microtubules link Giardia flagellar axonemes to the tail cortex
+  description: In Giardia trophozoites, short funis microtubule arrays emanate from
+    the caudal flagellar axonemes, anchor to dense rods running parallel to the posterior-lateral
+    flagella, and anchor to the epiplasm beneath the contractile tail membrane after
+    posterior-lateral flagellar emergence.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records ultrastructural topology supporting the published
+    tail-flexion model while leaving dense-rod composition, epiplasm molecular identity,
+    assembly order and the tail-flexion mechanism unresolved.
+  nodes:
+  - node_id: alpha_beta_tubulins
+    label: alpha- and beta-tubulins
+    node_type: GENE_OR_PROTEIN
+    component_ref: alpha_beta_tubulins
+  - node_id: funis
+    label: funis
+    node_type: STRUCTURE
+    grounding: cellstructuremech:funis
+  - node_id: caudal_flagellar_axonemes
+    label: caudal flagellar axonemes
+    node_type: STRUCTURE
+  - node_id: dense_rods
+    label: funis-associated dense rods
+    node_type: STRUCTURE
+  - node_id: epiplasm
+    label: Giardia epiplasm
+    node_type: STRUCTURE
+  - node_id: tail_flexion
+    label: Giardia tail flexion
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: alpha_beta_tubulins
+    predicate: polymerize into
+    object: funis
+    description: Alpha- and beta-tubulin subunits polymerize into the short microtubule
+      arrays that make up the Giardia funis.
+    evidence:
+    - reference: GO:0005874
+      notes: Gene Ontology defines microtubules as polymeric tubulin tubes.
+    - reference: DOI:10.1016/j.jsb.2004.01.017
+      notes: Benchimol et al. 2004 described the funis as short arrays of microtubules.
+  - subject: funis
+    predicate: emanates from
+    object: caudal_flagellar_axonemes
+    description: Funis microtubule arrays emanate from Giardia caudal flagellar axonemes.
+    evidence:
+    - reference: DOI:10.1016/j.jsb.2004.01.017
+      notes: Benchimol et al. 2004 found funis microtubule arrays emanating from caudal
+        flagellar axonemes.
+  - subject: dense_rods
+    predicate: anchor
+    object: funis
+    description: Dense rods that run parallel to the posterior-lateral flagella anchor
+      the funis microtubule arrays.
+    evidence:
+    - reference: DOI:10.1016/j.jsb.2004.01.017
+      notes: Benchimol et al. 2004 observed funis microtubules anchored to dense rods
+        that run parallel to the posterior-lateral flagella.
+  - subject: funis
+    predicate: anchors to
+    object: epiplasm
+    description: After emergence of the posterior-lateral flagella, funis microtubules
+      anchor to the Giardia epiplasm beneath the contractile tail membrane.
+    evidence:
+    - reference: DOI:10.1016/j.jsb.2004.01.017
+      notes: Benchimol et al. 2004 placed funis microtubule anchors at the epiplasm
+        underlying the contractile membrane region after posterior-lateral flagellar
+        emergence.
+  - subject: funis
+    predicate: is proposed to support
+    object: tail_flexion
+    description: The funis topology led Benchimol et al. to propose a model for tail
+      flexion in Giardia trophozoites.
+    evidence:
+    - reference: DOI:10.1016/j.jsb.2004.01.017
+      notes: Benchimol et al. 2004 proposed a model for Giardia tail flexion based
+        on funis ultrastructure.
+discussions:
+- discussion_id: resolve_funis_component_boundaries
+  prompt: Resolve exact source-neutral groundings and boundaries for funis tubulins,
+    dense rods, epiplasm-associated anchors and any additional funis-associated proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#alpha_beta_tubulins
+  - causal_graphs#giardia_funis_microtubule_topology
+  rationale: The funis is a Giardia microtubule array associated with dense rods and
+    the epiplasm, but this pass did not identify exact molecular components for those
+    associated structures.
+  evidence:
+  - reference: DOI:10.1016/j.jsb.2004.01.017
+    notes: Benchimol et al. 2004 resolved the funis by field-emission scanning electron
+      microscopy but did not assign source-neutral protein-family CURIEs to its dense
+      rods or epiplasm anchors.
+  posed_by: codex
+  posed_date: '2026-09-22'
+- discussion_id: test_funis_tail_flexion_mechanism
+  prompt: Test the proposed role of the funis in Giardia tail flexion before asserting
+    a mature biological-process function.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#giardia_funis_microtubule_topology
+  rationale: The first funis record captures the published ultrastructural model for
+    tail flexion without overclaiming a genetic perturbation or fully resolved contractility
+    mechanism.
+  evidence:
+  - reference: DOI:10.1016/j.jsb.2004.01.017
+    notes: Benchimol et al. 2004 proposed a tail-flexion model from the funis topology.
+  posed_by: codex
+  posed_date: '2026-09-22'

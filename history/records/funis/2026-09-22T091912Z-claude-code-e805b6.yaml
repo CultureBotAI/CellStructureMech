@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/funis.yaml
+  slug: funis
+session:
+  id: 2026-09-22T091912Z-claude-code-e805b6
+  timestamp: '2026-09-22T09:19:12Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add the funis record
+  details: Created cellstructuremech:funis as a PROPOSED Giardia cytoskeleton record with
+    cytoskeleton parentage and microtubule has_part links. Added alpha/beta tubulins as a
+    label-only component, Giardia intestinalis scope, Benchimol et al. funis ultrastructure
+    evidence, a nonmechanistic funis topology graph, and open TODOs for unresolved dense-rod
+    groundings and tail-flexion mechanism.

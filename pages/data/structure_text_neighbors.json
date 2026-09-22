@@ -1714,6 +1714,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:funis",
+      "label": "funis",
+      "neighbors": [
+        {
+          "identifier": "GO:0097568",
+          "label": "median body",
+          "cosine_similarity": 0.85062556
+        },
+        {
+          "identifier": "GO:0097596",
+          "label": "ventral disc supernumerary microtubule array",
+          "cosine_similarity": 0.82003625
+        },
+        {
+          "identifier": "GO:0097595",
+          "label": "ventral disc crossbridge",
+          "cosine_similarity": 0.81229364
+        },
+        {
+          "identifier": "GO:0097593",
+          "label": "ventral disc microtubule array",
+          "cosine_similarity": 0.76670679
+        },
+        {
+          "identifier": "GO:0097591",
+          "label": "ventral disc lateral crest",
+          "cosine_similarity": 0.75913937
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:mamk_filament",
       "label": "MamK filament",
       "neighbors": [
@@ -1749,6 +1780,11 @@
       "label": "median body",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:funis",
+          "label": "funis",
+          "cosine_similarity": 0.85062556
+        },
+        {
           "identifier": "GO:0097596",
           "label": "ventral disc supernumerary microtubule array",
           "cosine_similarity": 0.85011937
@@ -1767,11 +1803,6 @@
           "identifier": "GO:0005874",
           "label": "microtubule",
           "cosine_similarity": 0.76930177
-        },
-        {
-          "identifier": "GO:0097592",
-          "label": "ventral disc overlap zone",
-          "cosine_similarity": 0.74373433
         }
       ]
     },
@@ -10212,6 +10243,11 @@
       "label": "cytostome",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:funis",
+          "label": "funis",
+          "cosine_similarity": 0.70527905
+        },
+        {
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.68258394
@@ -10230,11 +10266,6 @@
           "identifier": "GO:0031904",
           "label": "endosome lumen",
           "cosine_similarity": 0.67402464
-        },
-        {
-          "identifier": "GO:0120120",
-          "label": "bilobe structure",
-          "cosine_similarity": 0.67334164
         }
       ]
     },
