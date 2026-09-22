@@ -5546,14 +5546,14 @@
           "cosine_similarity": 0.92954802
         },
         {
+          "identifier": "GO:0055037",
+          "label": "recycling endosome",
+          "cosine_similarity": 0.92795021
+        },
+        {
           "identifier": "GO:0010008",
           "label": "endosome membrane",
           "cosine_similarity": 0.91811731
-        },
-        {
-          "identifier": "GO:0030139",
-          "label": "endocytic vesicle",
-          "cosine_similarity": 0.91157229
         }
       ]
     },
@@ -8999,9 +8999,45 @@
       ]
     },
     {
+      "identifier": "GO:0055037",
+      "label": "recycling endosome",
+      "neighbors": [
+        {
+          "identifier": "GO:0005769",
+          "label": "early endosome",
+          "cosine_similarity": 0.92795021
+        },
+        {
+          "identifier": "GO:0005768",
+          "label": "endosome",
+          "cosine_similarity": 0.89618646
+        },
+        {
+          "identifier": "GO:0005770",
+          "label": "late endosome",
+          "cosine_similarity": 0.88842703
+        },
+        {
+          "identifier": "GO:0031901",
+          "label": "early endosome membrane",
+          "cosine_similarity": 0.87310645
+        },
+        {
+          "identifier": "GO:0010008",
+          "label": "endosome membrane",
+          "cosine_similarity": 0.87010078
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:reservosome",
       "label": "reservosome",
       "neighbors": [
+        {
+          "identifier": "GO:0055037",
+          "label": "recycling endosome",
+          "cosine_similarity": 0.77778061
+        },
         {
           "identifier": "GO:0005769",
           "label": "early endosome",
@@ -9021,11 +9057,6 @@
           "identifier": "GO:0005768",
           "label": "endosome",
           "cosine_similarity": 0.77230619
-        },
-        {
-          "identifier": "GO:0031905",
-          "label": "early endosome lumen",
-          "cosine_similarity": 0.76095268
         }
       ]
     },

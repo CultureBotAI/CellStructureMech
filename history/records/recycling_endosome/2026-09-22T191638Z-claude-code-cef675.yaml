@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/recycling_endosome.yaml
+  slug: recycling_endosome
+session:
+  id: 2026-09-22T191638Z-claude-code-cef675
+  timestamp: '2026-09-22T19:16:38Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add recycling endosome structure record
+  details: Created a GO:0055037 recycling endosome record with endosome parentage, GO-backed
+    membrane and lumen parts, UniProt SL-0232 xref/synonyms, Trypanosoma brucei Rab11 recycling
+    evidence from PMID:11683389, PMID:12744719, and PMID:29582527, plus a resolved TbRAB11
+    component-boundary discussion.
