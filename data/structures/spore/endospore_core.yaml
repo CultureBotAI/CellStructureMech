@@ -20,6 +20,13 @@ curation_history:
     a Bacillus subtilis example, GO/UniProt/literature evidence, a nonmechanistic
     core-dehydration graph, and a surrounding-layer boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-22T23:30:30Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1333 by removing the generic UniProt SL-0253 location from xrefs
+    while preserving it as scoped evidence, and resolved #1334 by retitling the function
+    graph to assign core dehydration to the cortex rather than all surrounding layers.'
+  llm_assisted: true
 synonyms:
 - synonym_text: spore core
   synonym_type: EXACT_SYNONYM
@@ -27,8 +34,6 @@ synonyms:
 - synonym_text: spore matrix
   synonym_type: EXACT_SYNONYM
   source: uniprot.location:SL-0253
-xrefs:
-- uniprot.location:SL-0253
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1239
   taxon_label: Bacillota
@@ -53,8 +58,8 @@ evidence:
   notes: Gene Ontology cellular-component term for the endospore cortex layer outside
     the spore inner membrane and core.
 - reference: uniprot.location:SL-0253
-  notes: UniProt Subcellular Location SL-0253 identifies the Spore core location and
-    records spore matrix as an alternate name.
+  notes: UniProt Subcellular Location SL-0253 identifies a generic Spore core location
+    without a GO mapping and records spore matrix as an alternate name.
 - reference: DOI:10.1128/9781555819323.ch10
   notes: Setlow 2016, Spore Resistance Properties, in The Bacterial Spore.
 - reference: DOI:10.1038/nrmicro2921
@@ -62,10 +67,10 @@ evidence:
     assembly and functions of the multilayered coat, Nature Reviews Microbiology.'
 causal_graphs:
 - graph_id: endospore_core_dehydrated_interior
-  title: Surrounding layers keep the endospore core dehydrated
-  description: The dormant endospore core is the innermost compartment. It is bounded
-    by the spore inner membrane, while the surrounding cortex helps maintain the low
-    core water content that supports wet-heat resistance.
+  title: Cortex maintains low water in the endospore core
+  description: The dormant endospore core is the innermost compartment and is bounded
+    by the spore inner membrane. Outside the core, the endospore cortex helps maintain
+    the low core water content that supports wet-heat resistance.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph records high-level core topology and dehydration rather than
@@ -139,3 +144,17 @@ discussions:
     notes: GO:0043595 is the surrounding endospore cortex term.
   - reference: GO:0043591
     notes: GO:0043591 is the broader endospore external encapsulating structure term.
+- discussion_id: uniprot_spore_core_scope
+  prompt: Use UniProt SL-0253 as spore-core provenance without treating it as an exact
+    cross-reference for the bacterial endospore core.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: SL-0253 denotes the generic UniProt Spore core location under the broader
+    Spore hierarchy and carries no GO mapping, so it is not a true equivalent to GO:0070477.
+  resolution_note: Retained SL-0253 as synonym and record-level evidence provenance,
+    but removed it from xrefs.
+  evidence:
+  - reference: uniprot.location:SL-0253
+    notes: UniProt SL-0253 is the generic Spore core location.
+  - reference: GO:0070477
+    notes: GO:0070477 is the narrower bacterial endospore core term.
