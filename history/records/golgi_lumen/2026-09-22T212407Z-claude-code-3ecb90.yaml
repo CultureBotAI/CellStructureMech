@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/golgi_lumen.yaml
+  slug: golgi_lumen
+session:
+  id: 2026-09-22T212407Z-claude-code-3ecb90
+  timestamp: '2026-09-22T21:24:07Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the Golgi lumen record
+  details: Added a GO:0005796 Golgi lumen record with intracellular-organelle-lumen parentage,
+    Golgi-apparatus parthood, GO and UniProt exact synonyms, UniProt SL-0133 cross-reference,
+    Saccharomyces cerevisiae GDP-mannose transport evidence, a nonmechanistic Golgi-lumen
+    topology graph, and a resolved Golgi membrane boundary interpretation.

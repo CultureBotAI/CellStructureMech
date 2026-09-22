@@ -1,0 +1,169 @@
+identifier: GO:0005796
+label: Golgi lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the membranes of any cisterna or subcompartment
+  of the Golgi apparatus, including the cis- and trans-Golgi networks.
+definition_source: GO:0005796
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T21:22:27Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T21:23:30Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added intracellular-organelle-lumen parentage, Golgi-apparatus parthood,
+    GO/UniProt exact synonyms, UniProt SL-0133 xref, Saccharomyces scope, a Golgi-lumen
+    glycosylation function, GO/UniProt/PubMed evidence, a nonmechanistic Golgi-lumen
+    topology graph, and a resolved Golgi membrane boundary interpretation.
+  llm_assisted: true
+- timestamp: '2026-09-22T21:37:33Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1324 review issues #1325 and #1326 by making the Saccharomyces
+    Golgi-lumen notes Vrg4-specific and removing unused GDPase lumen-domain evidence
+    from the first-pass record.'
+  llm_assisted: true
+parent_structures:
+- GO:0070013
+part_of:
+- GO:0005794
+synonyms:
+- synonym_text: Golgi apparatus lumen
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005796
+- synonym_text: Golgi complex lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0133
+xrefs:
+- uniprot.location:SL-0133
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Saccharomyces cerevisiae Vrg4 is required for GDP-mannose transport across
+    Golgi membranes into the Golgi lumen.
+  reference: PMID:9395539
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding yeast whose Vrg4-dependent GDP-mannose transport supplies the Golgi
+    lumen for mannosylation reactions.
+  reference: PMID:9395539
+functions:
+- function_id: golgi_lumen_glycosylation_compartment
+  label: Golgi lumen glycosylation compartment
+  description: The Golgi lumen is the bounded volume inside Golgi cisternae and subcompartments
+    where lumen-facing glycosylation reactions access nucleotide-sugar substrates
+    imported across Golgi membranes.
+  evidence:
+  - reference: GO:0005796
+    notes: GO:0005796 defines the Golgi lumen as the volume enclosed by membranes
+      of Golgi cisternae and subcompartments.
+  - reference: PMID:9395539
+    notes: Dean, Zhang and Poster 1997 showed that VRG4 is required for GDP-mannose
+      transport into the Golgi lumen of Saccharomyces cerevisiae.
+evidence:
+- reference: GO:0005796
+  notes: Gene Ontology cellular-component term for Golgi lumen.
+- reference: GO:0070013
+  notes: Gene Ontology cellular-component parent term for intracellular organelle
+    lumen.
+- reference: GO:0005794
+  notes: Gene Ontology cellular-component term for the containing Golgi apparatus.
+- reference: GO:0000139
+  notes: Gene Ontology cellular-component term for Golgi membranes that bound Golgi
+    cisternae and subcompartments.
+- reference: uniprot.location:SL-0133
+  notes: UniProt Subcellular Location entry SL-0133 maps Golgi apparatus lumen to
+    GO:0005796 and lists Golgi complex lumen as an exact synonym.
+- reference: PMID:9395539
+  notes: Dean, Zhang and Poster 1997, The VRG4 gene is required for GDP-mannose transport
+    into the lumen of the Golgi in the yeast, Saccharomyces cerevisiae, Journal of
+    Biological Chemistry.
+causal_graphs:
+- graph_id: golgi_lumen_topology
+  title: Golgi lumen topology
+  description: The Golgi lumen is an intracellular organelle lumen enclosed by Golgi
+    membranes inside Golgi cisternae and Golgi subcompartments.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures defining Golgi-lumen topology without asserting
+    the complete set of lumenal glycosylation enzymes, nucleotide-sugar transporters,
+    or resident-retention mechanisms.
+  nodes:
+  - node_id: golgi_lumen
+    label: Golgi lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005796
+  - node_id: intracellular_organelle_lumen
+    label: intracellular organelle lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0070013
+  - node_id: golgi_apparatus
+    label: Golgi apparatus
+    node_type: ORGANELLE
+    grounding: GO:0005794
+  - node_id: golgi_membrane
+    label: Golgi membrane
+    node_type: STRUCTURE
+    grounding: GO:0000139
+  edges:
+  - subject: golgi_lumen
+    predicate: is a
+    object: intracellular_organelle_lumen
+    description: The Golgi lumen is a specialized intracellular organelle lumen.
+    evidence:
+    - reference: GO:0005796
+      notes: QuickGO places GO:0005796 directly under intracellular organelle lumen.
+    - reference: GO:0070013
+      notes: GO:0070013 identifies the broader intracellular organelle lumen class.
+  - subject: golgi_lumen
+    predicate: is part of
+    object: golgi_apparatus
+    description: The Golgi lumen is the internal volume of Golgi cisternae and Golgi
+      subcompartments.
+    evidence:
+    - reference: GO:0005796
+      notes: GO defines the Golgi lumen by enclosure within the Golgi apparatus.
+    - reference: GO:0005794
+      notes: GO:0005794 identifies the Golgi apparatus.
+  - subject: golgi_membrane
+    predicate: bounds
+    object: golgi_lumen
+    description: Golgi membranes enclose the lumenal volume of Golgi cisternae and
+      subcompartments.
+    evidence:
+    - reference: GO:0005796
+      notes: GO:0005796 defines the Golgi lumen as the volume enclosed by membranes
+        of Golgi cisternae or subcompartments.
+    - reference: GO:0000139
+      notes: GO:0000139 identifies the lipid bilayer around Golgi apparatus compartments.
+discussions:
+- discussion_id: golgi_lumen_boundary_not_membrane
+  prompt: Represent Golgi membranes and their nucleotide-sugar transporters as lumen
+    boundaries rather than Golgi lumen components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#golgi_lumen_topology
+  rationale: GO:0005796 denotes the bounded volume enclosed by Golgi membranes, whereas
+    GO:0000139 denotes the enclosing lipid bilayers and Vrg4 is a membrane GDP-mannose
+    transporter.
+  evidence:
+  - reference: GO:0005796
+    notes: GO:0005796 identifies the Golgi lumen.
+  - reference: GO:0000139
+    notes: GO:0000139 identifies the Golgi membrane that bounds Golgi compartments.
+  - reference: PMID:9395539
+    notes: Dean, Zhang and Poster 1997 studied VRG4-dependent GDP-mannose transport
+      across the Golgi boundary into the Golgi lumen.
+  resolution_note: Curated the Golgi membrane as a topology boundary and left the
+    Golgi lumen without asserted stable molecular components.
+  posed_by: codex
+  posed_date: '2026-09-22'
+  resolved_date: '2026-09-22'
