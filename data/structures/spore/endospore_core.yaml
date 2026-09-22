@@ -1,0 +1,141 @@
+identifier: GO:0070477
+label: endospore core
+structure_category: SPORE
+structure_kind: SUBCELLULAR_REGION
+definition: An intracellular part that represents the innermost portion of an endospore;
+  the endospore core is dehydrated, enriched in dipicolinic acid and divalent cations,
+  and metabolically inactive.
+definition_source: GO:0070477
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T23:16:24Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T23:17:35Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added UniProt SL synonyms and cross-reference, Bacillota distribution,
+    a Bacillus subtilis example, GO/UniProt/literature evidence, a nonmechanistic
+    core-dehydration graph, and a surrounding-layer boundary discussion.
+  llm_assisted: true
+synonyms:
+- synonym_text: spore core
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0253
+- synonym_text: spore matrix
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0253
+xrefs:
+- uniprot.location:SL-0253
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1239
+  taxon_label: Bacillota
+  presence: COMMON
+  note: Endospore cores are produced by endospore-forming Bacillota lineages as the
+    dormant innermost compartment, while many non-sporulating members of the phylum
+    have lost the pathway.
+  reference: DOI:10.1038/nrmicro2921
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: Classical bacterial endospore model in which the forespore matures into a
+    dehydrated endospore core inside cortex and coat layers.
+  reference: DOI:10.1038/nrmicro2921
+evidence:
+- reference: GO:0070477
+  notes: Gene Ontology cellular-component term for the endospore core.
+- reference: GO:0140549
+  notes: Gene Ontology cellular-component term for the spore inner membrane that surrounds
+    the endospore core.
+- reference: GO:0043595
+  notes: Gene Ontology cellular-component term for the endospore cortex layer outside
+    the spore inner membrane and core.
+- reference: uniprot.location:SL-0253
+  notes: UniProt Subcellular Location SL-0253 identifies the Spore core location and
+    records spore matrix as an alternate name.
+- reference: DOI:10.1128/9781555819323.ch10
+  notes: Setlow 2016, Spore Resistance Properties, in The Bacterial Spore.
+- reference: DOI:10.1038/nrmicro2921
+  notes: 'McKenney, Driks and Eichenberger 2012, The Bacillus subtilis endospore:
+    assembly and functions of the multilayered coat, Nature Reviews Microbiology.'
+causal_graphs:
+- graph_id: endospore_core_dehydrated_interior
+  title: Surrounding layers keep the endospore core dehydrated
+  description: The dormant endospore core is the innermost compartment. It is bounded
+    by the spore inner membrane, while the surrounding cortex helps maintain the low
+    core water content that supports wet-heat resistance.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records high-level core topology and dehydration rather than
+    the molecular mechanisms of cortex synthesis, core dehydration, or germination-specific
+    rehydration.
+  nodes:
+  - node_id: endospore_core
+    label: endospore core
+    node_type: STRUCTURE
+    grounding: GO:0070477
+  - node_id: spore_inner_membrane
+    label: spore inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0140549
+  - node_id: endospore_cortex
+    label: endospore cortex
+    node_type: STRUCTURE
+    grounding: GO:0043595
+  - node_id: low_core_water_content
+    label: low core water content
+    node_type: STATE
+  - node_id: wet_heat_resistance
+    label: wet-heat resistance
+    node_type: CAPACITY
+  edges:
+  - subject: spore_inner_membrane
+    predicate: surrounds
+    object: endospore_core
+    description: The spore inner membrane surrounds the endospore core and separates
+      it from the surrounding cortex and external environment.
+    evidence:
+    - reference: GO:0140549
+      notes: GO:0140549 defines the spore inner membrane as the membrane surrounding
+        the spore core.
+  - subject: endospore_cortex
+    predicate: maintains
+    object: low_core_water_content
+    description: Modified cortex peptidoglycan helps maintain low water content in
+      the dormant spore core.
+    evidence:
+    - reference: DOI:10.1128/9781555819323.ch10
+      notes: Setlow 2016 reviews the cortex contribution to spore core dehydration.
+  - subject: low_core_water_content
+    predicate: enables
+    object: wet_heat_resistance
+    description: Low core water content is a major determinant of mature endospore
+      resistance to wet heat.
+    evidence:
+    - reference: DOI:10.1128/9781555819323.ch10
+      notes: Setlow 2016 reviews low core water content as a determinant of spore
+        wet-heat resistance.
+discussions:
+- discussion_id: core_layer_boundary
+  prompt: Keep the endospore core separate from the surrounding spore inner membrane,
+    cortex, coat, and external encapsulating structure.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0070477 denotes the innermost dehydrated endospore core, whereas GO:0140549
+    denotes the membrane surrounding it, GO:0043595 denotes the cortex outside that
+    membrane, and GO:0043591 denotes the broader cortex-coat external encapsulating
+    structure.
+  resolution_note: Curated GO:0070477 as only the endospore core and recorded nearby
+    membrane and cortex terms as evidence and graph nodes rather than parent or part_of
+    values.
+  evidence:
+  - reference: GO:0070477
+    notes: GO:0070477 is the endospore core term.
+  - reference: GO:0140549
+    notes: GO:0140549 is the surrounding spore inner membrane term.
+  - reference: GO:0043595
+    notes: GO:0043595 is the surrounding endospore cortex term.
+  - reference: GO:0043591
+    notes: GO:0043591 is the broader endospore external encapsulating structure term.

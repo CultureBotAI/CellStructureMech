@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/endospore_core.yaml
+  slug: endospore_core
+session:
+  id: 2026-09-22T231759Z-codex-2a907a
+  timestamp: '2026-09-22T23:17:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add endospore core record
+  details: Created a GO:0070477 endospore core structure record after a hidden- and ignored-file-inclusive
+    duplicate search for GO:0070477, endospore core, spore core, spore matrix, and UniProt
+    SL-0253. The record adds UniProt SL-0253 cross-referencing and synonyms, Bacillota and
+    Bacillus subtilis scope, GO/UniProt/literature evidence, a nonmechanistic core-dehydration
+    graph using verified GO terms for the core, inner membrane, and cortex, and a resolved
+    boundary discussion separating the core from the surrounding inner membrane, cortex, coat,
+    and external encapsulating structure.
