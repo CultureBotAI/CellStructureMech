@@ -20,12 +20,16 @@ curation_history:
     and resolved modelling discussions separating the generic periplasmic space from
     its outer membrane-bounded subtype and variable envelope boundaries.
   llm_assisted: true
+- timestamp: '2026-09-22T22:14:24Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1327 review issue #1328 by moving the GO:0005576 extracellular-region
+    relation from parent_structures to part_of so it matches the Gene Ontology relationship.'
+  llm_assisted: true
 synonyms:
 - synonym_text: periplasm
   synonym_type: EXACT_SYNONYM
   source: GO:0042597
-parent_structures:
-- GO:0005576
 xrefs:
 - uniprot.location:SL-0200
 canonical_examples:
@@ -85,3 +89,5 @@ discussions:
     explanation: The Gram-negative envelope bounds the periplasm with an outer membrane.
   - reference: PMID:16428405
     explanation: The S. aureus periplasm is a cytoplasmic-membrane-to-wall example.
+part_of:
+- GO:0005576
