@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/parasporal_crystal.yaml
+  slug: parasporal_crystal
+session:
+  id: 2026-09-22T113301Z-claude-code-c6cff3
+  timestamp: '2026-09-22T11:33:01Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1275
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1276
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1274
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - functions
+  - causal_graphs
+  - evidence
+  summary: Address parasporal crystal review issues
+  details: 'Resolved PR #1274 review issues #1275 and #1276 by scoping the pesticidal protein
+    packaging function and Cry/Cyt assembly graph to the observed protein-to-crystal relationship,
+    and by updating the open Toxins evidence notes after consulting PubMed Central full text.'

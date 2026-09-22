@@ -21,6 +21,13 @@ curation_history:
     record-level evidence, a nonmechanistic Cry/Cyt crystallization graph, and follow-up
     grounding/substructure discussions.
   llm_assisted: true
+- timestamp: '2026-09-22T11:32:36Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: Scoped the Cry/Cyt packaging function and assembly graph to the observed
+    protein-to-crystal relationship; updated Toxins review notes after consulting
+    PubMed Central full text.
+  llm_assisted: true
 synonyms:
 - synonym_text: parasporal crystalline inclusion
   synonym_type: EXACT_SYNONYM
@@ -75,9 +82,8 @@ canonical_examples:
 functions:
 - function_id: pesticidal_protein_packaging
   label: pesticidal protein packaging
-  description: Parasporal crystals concentrate Cry, Cyt, and related protoxins as
-    insoluble crystalline deposits that can be solubilized and activated after susceptible
-    host cells ingest them.
+  description: Parasporal crystals package Cry, Cyt, and related pesticidal protoxins
+    as insoluble crystalline deposits.
   evidence:
   - reference: DOI:10.3390/toxins6123296
     notes: Palma et al. 2014 review Cry/Cyt-containing parasporal inclusions and the
@@ -92,18 +98,17 @@ evidence:
     Crossref abstract consulted because the ASM full text was blocked by Cloudflare.
 - reference: DOI:10.3390/toxins6041222
   notes: Ben-Dov 2014, Bacillus thuringiensis subsp. israelensis and Its Dipteran-Specific
-    Toxins, Toxins; PubMed and Crossref abstracts consulted because the MDPI page
-    returned access denied in the curation environment.
+    Toxins, Toxins; PubMed Central full text and PubMed/Crossref metadata consulted;
+    the MDPI landing page returned access denied in the curation environment.
 - reference: DOI:10.3390/toxins6123296
   notes: 'Palma et al. 2014, Bacillus thuringiensis Toxins: An Overview of Their Biocidal
-    Activity, Toxins; PubMed and Crossref abstracts consulted because the MDPI page
-    returned access denied in the curation environment.'
+    Activity, Toxins; PubMed Central full text and PubMed/Crossref metadata consulted;
+    the MDPI landing page returned access denied in the curation environment.'
 causal_graphs:
 - graph_id: cry_cyt_crystal_packaging
   title: Cry and Cyt proteins crystallize into parasporal toxin inclusions
   description: A strain-specific set of Bacillus thuringiensis Cry, Cyt, or related
-    pesticidal protoxins accumulates as an insoluble parasporal crystalline body during
-    sporulation.
+    pesticidal protoxins accumulates as an insoluble parasporal crystalline body.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: This graph captures the observed protein-to-crystal packaging relationship
@@ -122,8 +127,8 @@ causal_graphs:
   - subject: cry_cyt_pesticidal_crystal_proteins
     predicate: crystallize into
     object: parasporal_crystal
-    description: Strain-specific Bt pesticidal proteins accumulate in the sporangium
-      as parasporal crystalline inclusions.
+    description: Strain-specific Bt pesticidal proteins accumulate as parasporal crystalline
+      inclusions.
     evidence:
     - reference: DOI:10.3390/toxins6123296
       notes: Palma et al. 2014 review Bt parasporal crystalline inclusions as Cry-
