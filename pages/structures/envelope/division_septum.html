@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>division septum · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>division septum</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0000935"><code>GO:0000935</code></a> · ENVELOPE · ENVELOPE_LAYER · <span class="status">PROPOSED</span></p>
+<p class="definition">A cell septum which forms as part of the division site and functions in the compartmentalization of a cell into two daughter cells at division. A division septum spans a cell and does not allow exchange of organelles or cytoplasm between compartments. <small>[<a href="http://purl.obolibrary.org/obo/GO_0000935"><code>GO:0000935</code></a>]</small></p>
+<p><strong>Synonyms:</strong> complete septum; cell septum surface</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0032153"><code>GO:0032153</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-septal_peptidoglycan"><td>septal peptidoglycan</td><td>PEPTIDOGLYCAN</td><td>part of</td><td></td><td></td><td></td><td>ESSENTIAL</td><td>Newly synthesized peptidoglycan that closes the division plane to create the daughter-cell cross-wall.<ul class="evidence"><li><a href="https://doi.org/10.1111/j.1749-6632.2012.06818.x"><code>DOI:10.1111/j.1749-6632.2012.06818.x</code></a> <small>Egan and Vollmer 2012 review septal peptidoglycan synthesis as the peptidoglycan-building output of the bacterial divisome.</small></li><li><a href="https://doi.org/10.1146/annurev-biophys-121219-081703"><code>DOI:10.1146/annurev-biophys-121219-081703</code></a> <small>McQuillen and Xiao 2020 review how the FtsZ ring organizes septal peptidoglycan synthesis.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2"><code>NCBITaxon:2</code></a> Bacteria — <strong>COMMON</strong>: Walled FtsZ-dividing bacteria close the division plane with septal peptidoglycan, while wall-less lineages and bacteria using other division modes are outside this broad row. [<a href="https://doi.org/10.1146/annurev-biophys-121219-081703"><code>DOI:10.1146/annurev-biophys-121219-081703</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code>NCBITaxon:83333</code></a> <em>Escherichia coli K-12</em> — Rod-shaped diderm model for divisome-directed septal peptidoglycan synthesis. [<a href="https://doi.org/10.1146/annurev-biophys-121219-081703"><code>DOI:10.1146/annurev-biophys-121219-081703</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1423"><code>NCBITaxon:1423</code></a> <em>Bacillus subtilis</em> — Gram-positive model for FtsZ-guided septal synthesis and division-plane closure. [<a href="https://doi.org/10.1146/annurev-biophys-121219-081703"><code>DOI:10.1146/annurev-biophys-121219-081703</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>daughter-cell compartmentalization</strong> — The completed division septum spans the division site and blocks cytoplasmic and organellar exchange between nascent daughter cells.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000935"><code>GO:0000935</code></a> <small>GO:0000935 defines the division septum as a cell septum that compartmentalizes two daughter cells.</small></li></ul></li><li><strong>division-plane closure</strong> — Septal peptidoglycan synthesis adds cross-wall material at the division plane until the septum closes.<ul class="evidence"><li><a href="https://doi.org/10.1111/j.1749-6632.2012.06818.x"><code>DOI:10.1111/j.1749-6632.2012.06818.x</code></a> <small>Egan and Vollmer 2012 review the bacterial cell-division physiology that couples the divisome to septal wall synthesis.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-divisome_builds_cross_wall">The divisome builds a closing septal cross-wall <small>(ASSEMBLY)</small></h3>
+<p>At the cell division site, FtsZ-guided septal synthases polymerize new peptidoglycan into a cross-wall; when this septal layer spans the division plane it compartmentalizes the two nascent daughter cells.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>divisome complex</td><td>localizes to</td><td>cell division site</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990586"><code>GO:1990586</code></a> <small>GO:1990586 defines the divisome as the complex that carries out division septum assembly at the division site.</small></li></ul></td></tr>
+<tr><td>divisome complex</td><td>synthesizes</td><td>septal peptidoglycan</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biophys-121219-081703"><code>DOI:10.1146/annurev-biophys-121219-081703</code></a> <small>McQuillen and Xiao 2020 review FtsZ-guided motion of septal peptidoglycan synthases.</small></li><li><a href="https://doi.org/10.1111/j.1749-6632.2012.06818.x"><code>DOI:10.1111/j.1749-6632.2012.06818.x</code></a> <small>Egan and Vollmer 2012 describe septal synthesis as the output of the division machinery.</small></li></ul></td></tr>
+<tr><td>septal peptidoglycan</td><td>forms</td><td>division septum</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030428"><code>GO:0030428</code></a> <small>GO:0030428 defines cell septa as wall structures composed of peptidoglycan and/or chitin that grow inward from the cell wall.</small></li></ul></td></tr>
+<tr><td>division septum</td><td>compartmentalizes</td><td>daughter-cell compartments</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000935"><code>GO:0000935</code></a> <small>GO:0000935 defines the division septum by daughter-cell compartmentalization.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the division septum record scoped to the septal cross-wall rather than merging it with the divisome complex. <small>GO:0000935 denotes the physical septum that spans the cell, whereas GO:1990586 denotes the protein machine that builds septal wall material at the division site.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000935"><code>GO:0000935</code></a> <small>Gene Ontology cellular-component term for the division septum.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030428"><code>GO:0030428</code></a> <small>Gene Ontology cellular-component term for the broader cell septum class.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032153"><code>GO:0032153</code></a> <small>Gene Ontology cellular-component term for the cell division site that contains division septum structures.</small></li><li><a href="https://doi.org/10.1146/annurev-biophys-121219-081703"><code>DOI:10.1146/annurev-biophys-121219-081703</code></a> <small>McQuillen and Xiao 2020, Insights into the Structure, Function, and Dynamics of the Bacterial Cytokinetic FtsZ-Ring, Annual Review of Biophysics.</small></li><li><a href="https://doi.org/10.1111/j.1749-6632.2012.06818.x"><code>DOI:10.1111/j.1749-6632.2012.06818.x</code></a> <small>Egan and Vollmer 2012, The physiology of bacterial cell division, Annals of the New York Academy of Sciences.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-22T15:10:43Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-22T15:12:34Z</code> codex · EXPANDED_RECORD — Added GO synonymy, cell-septum parentage, division-site parthood, septal-peptidoglycan composition, bacterial distribution, E. coli and B. subtilis examples, barrier and division-plane-closure functions, GO/DOI evidence, a nonmechanistic divisome-to-septum assembly graph, and a resolved divisome/product boundary discussion.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/envelope/division_septum.yaml"><code>data/structures/envelope/division_septum.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
