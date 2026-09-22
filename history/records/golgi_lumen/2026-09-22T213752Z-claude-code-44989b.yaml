@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/golgi_lumen.yaml
+  slug: golgi_lumen
+session:
+  id: 2026-09-22T213752Z-claude-code-44989b
+  timestamp: '2026-09-22T21:37:52Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1325
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1326
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1324
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed Golgi lumen PR review
+  details: 'Resolved PR #1324 review issues #1325 and #1326 by making the Saccharomyces cerevisiae
+    Golgi-lumen notes Vrg4-specific and removing unused GDPase lumen-domain evidence from
+    the first-pass record.'

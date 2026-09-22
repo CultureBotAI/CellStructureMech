@@ -20,6 +20,13 @@ curation_history:
     glycosylation function, GO/UniProt/PubMed evidence, a nonmechanistic Golgi-lumen
     topology graph, and a resolved Golgi membrane boundary interpretation.
   llm_assisted: true
+- timestamp: '2026-09-22T21:37:33Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1324 review issues #1325 and #1326 by making the Saccharomyces
+    Golgi-lumen notes Vrg4-specific and removing unused GDPase lumen-domain evidence
+    from the first-pass record.'
+  llm_assisted: true
 parent_structures:
 - GO:0070013
 part_of:
@@ -37,14 +44,14 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Budding-yeast Golgi compartments import GDP-mannose into the Golgi lumen for
-    lumenal mannosylation reactions.
+  note: Saccharomyces cerevisiae Vrg4 is required for GDP-mannose transport across
+    Golgi membranes into the Golgi lumen.
   reference: PMID:9395539
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding yeast whose Vrg4-dependent GDP-mannose transport supports Golgi-lumen
-    mannosylation.
+  note: Budding yeast whose Vrg4-dependent GDP-mannose transport supplies the Golgi
+    lumen for mannosylation reactions.
   reference: PMID:9395539
 functions:
 - function_id: golgi_lumen_glycosylation_compartment
@@ -77,10 +84,6 @@ evidence:
   notes: Dean, Zhang and Poster 1997, The VRG4 gene is required for GDP-mannose transport
     into the lumen of the Golgi in the yeast, Saccharomyces cerevisiae, Journal of
     Biological Chemistry.
-- reference: PMID:9614179
-  notes: Vowels and Payne 1998, A role for the lumenal domain in Golgi localization
-    of the Saccharomyces cerevisiae guanosine diphosphatase, Molecular Biology of
-    the Cell.
 causal_graphs:
 - graph_id: golgi_lumen_topology
   title: Golgi lumen topology
