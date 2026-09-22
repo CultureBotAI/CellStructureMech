@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/recycling_endosome_membrane.yaml
+  slug: recycling_endosome_membrane
+session:
+  id: 2026-09-22T200838Z-claude-code-dbe1b7
+  timestamp: '2026-09-22T20:08:38Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added recycling endosome membrane structure record
+  details: Created the GO:0055038 recycling endosome membrane record with endosome-membrane
+    parentage, recycling-endosome parthood, the UniProt SL-0231 synonym and xref, a reviewed
+    lipid-bilayer component, Trypanosoma brucei Rab11 compartment evidence, a compartmentalization
+    function, and a topology graph linking the membrane to the recycling endosome lumen.

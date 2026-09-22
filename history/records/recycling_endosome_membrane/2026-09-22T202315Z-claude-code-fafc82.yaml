@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/recycling_endosome_membrane.yaml
+  slug: recycling_endosome_membrane
+session:
+  id: 2026-09-22T202315Z-claude-code-fafc82
+  timestamp: '2026-09-22T20:23:15Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1319
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1320
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1318
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed recycling endosome membrane PR review
+  details: 'Resolved PR #1318 review issues #1319 and #1320 by narrowing the PMID:11683389-backed
+    Trypanosoma brucei notes to TbRAB11/transferrin evidence and rewriting the canonical example
+    so it names the recycling-endosome limiting membrane rather than only the parent organelle.'
