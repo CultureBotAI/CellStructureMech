@@ -1,0 +1,144 @@
+identifier: cellstructuremech:ejectisome
+label: ejectisome
+structure_category: OTHER
+structure_kind: OTHER
+definition: A cryptophyte extrusive organelle that discharges proteinaceous paracrystalline
+  ribbons or filaments built in part from small ejectisin polypeptides.
+definition_source: DOI:10.1007/s00709-012-0440-4
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-22T10:18:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-22T10:20:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added a label-only ejectisin component, Cryptophyceae and Chroomonas scope,
+    DOI and PMID evidence, a nonmechanistic discharged-ejectisome filament graph,
+    and TODOs for ejectisin grounding and ejectisome boundaries.
+  llm_assisted: true
+components:
+- component_id: ejectisin_polypeptides
+  label: ejectisin polypeptides
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Small, approximately 6-kDa polypeptides that make up a major component of
+    cryptophycean ejectisomes.
+  evidence:
+  - reference: DOI:10.1007/s00709-012-0440-4
+    notes: Ammermann et al. 2013 found 6-kDa polypeptides dominating isolated and
+      reconstituted cryptophyte ejectisome fragments, and introduced the name ejectisins
+      for those major ejectisome components.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam or NCBIfam accession for
+    the cryptophyte 6-kDa ejectisin structural polypeptides was verified in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3027
+  taxon_label: Cryptophyceae
+  presence: VARIABLE
+  note: Ejectisomes were isolated from Chroomonas and Cryptomonas species, and ejectisin
+    components are described as cryptophycean; this record does not assert that every
+    Cryptophyceae species carries ejectisomes.
+  reference: DOI:10.1007/s00709-012-0440-4
+canonical_examples:
+- taxon_id: NCBITaxon:3028
+  taxon_label: Chroomonas
+  note: Cryptophyte genus represented among the cultures used to isolate and characterize
+    discharged ejectisomes and ejectisin-rich ejectisome filaments.
+  reference: PMID:22868567
+evidence:
+- reference: DOI:10.1007/s00709-011-0267-4
+  notes: Rhiel and Westermann 2012 isolated discharged ejectisomes from pigmented
+    cryptophytes and characterized their tubular paracrystalline fragments by transmission
+    electron microscopy.
+- reference: DOI:10.1007/s00709-012-0440-4
+  notes: Ammermann et al. 2013 purified Chroomonas and Cryptomonas ejectisome fragments
+    and identified ejectisins as major cryptophycean ejectisome polypeptides.
+- reference: PMID:21336864
+  notes: PubMed record for the Rhiel and Westermann 2012 discharged ejectisome ultrastructure
+    study.
+- reference: PMID:22868567
+  notes: PubMed record for the Ammermann et al. 2013 ejectisin component study.
+causal_graphs:
+- graph_id: ejectisins_build_discharged_ejectisome_filaments
+  title: Ejectisins are major components of discharged ejectisomes
+  description: Cryptophyte ejectisomes contain small ejectisin polypeptides and discharge
+    as tubular or filamentous proteinaceous structures with a paracrystalline lattice.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the observed proteinaceous lattice of discharged
+    ejectisomes and the major ejectisin component class; it leaves the full membrane
+    context, undischarged ribbon architecture and discharge trigger unresolved.
+  nodes:
+  - node_id: ejectisin_polypeptides
+    label: ejectisin polypeptides
+    node_type: GENE_OR_PROTEIN
+    component_ref: ejectisin_polypeptides
+  - node_id: ejectisome
+    label: ejectisome
+    node_type: STRUCTURE
+    grounding: cellstructuremech:ejectisome
+  - node_id: discharged_ejectisome_filaments
+    label: discharged ejectisome filaments
+    node_type: STRUCTURE
+  edges:
+  - subject: ejectisin_polypeptides
+    predicate: are major component of
+    object: ejectisome
+    description: Approximately 6-kDa ejectisin polypeptides dominate isolated cryptophyte
+      ejectisome fragments and reconstituted ejectisome-like filaments.
+    evidence:
+    - reference: DOI:10.1007/s00709-012-0440-4
+      notes: Ammermann et al. 2013 found the isolated ejectisome-fragment protein
+        pattern was dominated by 6-kDa polypeptides and named those major components
+        ejectisins.
+  - subject: ejectisome
+    predicate: discharges as
+    object: discharged_ejectisome_filaments
+    description: Discharged cryptophyte ejectisomes form tubular paracrystalline proteinaceous
+      filaments.
+    evidence:
+    - reference: DOI:10.1007/s00709-011-0267-4
+      notes: Rhiel and Westermann 2012 purified discharged ejectisomes from Chroomonas
+        and Cryptomonas species and measured paracrystalline periodicity in tubular
+        fragments.
+discussions:
+- discussion_id: resolve_ejectisin_grounding
+  prompt: Resolve exact source-neutral InterPro, Pfam or NCBIfam grounding for the
+    cryptophyte 6-kDa ejectisin polypeptides.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ejectisin_polypeptides
+  rationale: Ejectisins were identified as major cryptophycean ejectisome components,
+    but this pass did not verify a curated family accession that exactly denotes those
+    small structural polypeptides.
+  evidence:
+  - reference: DOI:10.1007/s00709-012-0440-4
+    notes: Ammermann et al. 2013 matched N-terminal amino-acid sequence from isolated
+      ejectisome polypeptides to Guillardia theta cDNA-deduced polypeptides.
+  posed_by: codex
+  posed_date: '2026-09-22'
+- discussion_id: resolve_ejectisome_boundary
+  prompt: Resolve the undischarged ejectisome membrane context, ribbon substructure
+    names and species-level cryptophyte culture boundaries.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#ejectisins_build_discharged_ejectisome_filaments
+  rationale: The current graph is limited to isolated discharged ejectisome fragments
+    from a Chroomonas and two Cryptomonas species; the mature resting architecture,
+    membrane boundary and exact culture species need further curation before adding
+    substructures.
+  evidence:
+  - reference: DOI:10.1007/s00709-011-0267-4
+    notes: Rhiel and Westermann 2012 characterized discharged ejectisome fragments
+      rather than a complete conserved assembly pathway for resting ejectisomes.
+  - reference: DOI:10.1007/s00709-012-0440-4
+    notes: Ammermann et al. 2013 isolated fragments from two Cryptomonas and one Chroomonas
+      species.
+  posed_by: codex
+  posed_date: '2026-09-22'
