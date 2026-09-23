@@ -14944,9 +14944,9 @@
           "cosine_similarity": 0.80730365
         },
         {
-          "identifier": "GO:0043591",
-          "label": "endospore external encapsulating structure",
-          "cosine_similarity": 0.8025757
+          "identifier": "GO:0031160",
+          "label": "spore wall",
+          "cosine_similarity": 0.80273449
         }
       ]
     },
@@ -14958,6 +14958,11 @@
           "identifier": "GO:0090641",
           "label": "microsporidian-type endospore",
           "cosine_similarity": 0.93376752
+        },
+        {
+          "identifier": "GO:0031160",
+          "label": "spore wall",
+          "cosine_similarity": 0.8573394
         },
         {
           "identifier": "GO:0043592",
@@ -14973,11 +14978,6 @@
           "identifier": "GO:0043595",
           "label": "endospore cortex",
           "cosine_similarity": 0.82164717
-        },
-        {
-          "identifier": "GO:0005619",
-          "label": "ascospore wall",
-          "cosine_similarity": 0.81041352
         }
       ]
     },
@@ -15058,6 +15058,11 @@
           "cosine_similarity": 0.69439852
         },
         {
+          "identifier": "GO:0031160",
+          "label": "spore wall",
+          "cosine_similarity": 0.68615688
+        },
+        {
           "identifier": "cellstructuremech:microsporidian_posterior_vacuole",
           "label": "microsporidian posterior vacuole",
           "cosine_similarity": 0.68082708
@@ -15066,11 +15071,6 @@
           "identifier": "GO:0160201",
           "label": "polaroplast",
           "cosine_similarity": 0.66891037
-        },
-        {
-          "identifier": "GO:0070477",
-          "label": "endospore core",
-          "cosine_similarity": 0.66312469
         }
       ]
     },
@@ -15187,14 +15187,45 @@
           "cosine_similarity": 0.85913049
         },
         {
+          "identifier": "GO:0031160",
+          "label": "spore wall",
+          "cosine_similarity": 0.84466297
+        },
+        {
           "identifier": "GO:0043595",
           "label": "endospore cortex",
           "cosine_similarity": 0.84277638
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031160",
+      "label": "spore wall",
+      "neighbors": [
+        {
+          "identifier": "GO:0090642",
+          "label": "microsporidian-type exospore",
+          "cosine_similarity": 0.8573394
         },
         {
-          "identifier": "GO:0042601",
-          "label": "endospore-forming forespore",
-          "cosine_similarity": 0.82440803
+          "identifier": "GO:0140549",
+          "label": "spore inner membrane",
+          "cosine_similarity": 0.84466297
+        },
+        {
+          "identifier": "GO:0043591",
+          "label": "endospore external encapsulating structure",
+          "cosine_similarity": 0.83046673
+        },
+        {
+          "identifier": "GO:0043595",
+          "label": "endospore cortex",
+          "cosine_similarity": 0.82241997
+        },
+        {
+          "identifier": "GO:0090641",
+          "label": "microsporidian-type endospore",
+          "cosine_similarity": 0.80273449
         }
       ]
     }
