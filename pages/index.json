@@ -3960,6 +3960,15 @@
   "definition": "A bacterial type VI secretion system subassembly in which TssB/VipA- and TssC/VipB-family proteins polymerize into a metastable sheath around the Hcp tube and contract to drive Hcp/VgrG/PAAR spike ejection."
  },
  {
+  "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
+  "label": "type VI secretion system membrane complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/type_vi_secretion_system_membrane_complex.html",
+  "definition": "A bacterial type VI secretion system subassembly in which TssJ-, TssL-, and TssM-family proteins form an envelope-spanning membrane core of the secretion apparatus."
+ },
+ {
   "identifier": "GO:0005619",
   "label": "ascospore wall",
   "category": "SPORE",

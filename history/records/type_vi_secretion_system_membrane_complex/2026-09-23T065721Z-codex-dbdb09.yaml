@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_secretion_system_membrane_complex.yaml
+  slug: type_vi_secretion_system_membrane_complex
+session:
+  id: 2026-09-23T065721Z-codex-dbdb09
+  timestamp: '2026-09-23T06:57:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added type VI secretion system membrane complex record
+  details: Created a dedicated CellStructureMech record for the TssJ/TssL/TssM type VI secretion
+    system membrane complex, with reviewed label-only TssJ, TssL and TssM constituent components,
+    GO whole-system parthood, bacterial distribution, an Escherichia coli canonical example,
+    DOI-backed TssJLM membrane-core anchoring, a membrane-core assembly graph, and a curation
+    TODO for exact source-neutral protein-family grounding.
