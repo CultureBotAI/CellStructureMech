@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml
+  slug: axonemal_a_tubule_inner_sheath
+session:
+  id: 2026-09-23T180248Z-claude-code-a0814f
+  timestamp: '2026-09-23T18:02:48Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add axonemal A tubule inner sheath record
+  details: Added GO:0160111 as its own axonemal A tubule inner sheath record with GO:0160110
+    and GO:0097649 parthood, Chlamydomonas evidence, a coarse A-tubule luminal stabilization
+    graph, and an A-tubule MIP-family TODO. Narrowed the parent GO:0160110 child-record TODO
+    to leave GO:0160112 for later curation.
