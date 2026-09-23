@@ -1,0 +1,194 @@
+identifier: GO:0043592
+label: exosporium
+structure_category: SPORE
+structure_kind: ENVELOPE_LAYER
+definition: The outermost layer of a bacterial endospore, which is loosely attached
+  and located outside of the endospore coat. It is generally composed of protein,
+  carbohydrate, and perhaps lipid.
+definition_source: GO:0043592
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T00:28:48Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T00:30:10Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exosporium synonyms, cell-wall parthood, a label-only Bacillus
+    exosporium protein cohort, Bacillota distribution, a Bacillus anthracis example,
+    surface-interface function, GO/UniProt/DOI evidence, a nonmechanistic topology
+    graph, and a boundary discussion separating the bacterial exosporium from microsporidian
+    exospores and generic perispore locations.
+  llm_assisted: true
+synonyms:
+- synonym_text: epispore
+  synonym_type: EXACT_SYNONYM
+  source: GO:0043592
+- synonym_text: exospore
+  synonym_type: EXACT_SYNONYM
+  source: GO:0043592
+- synonym_text: perispore
+  synonym_type: EXACT_SYNONYM
+  source: GO:0043592
+part_of:
+- GO:0005618
+components:
+- component_id: exosporium_protein_cohort
+  label: exosporium proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - bclA
+  - bxpB
+  - exsY
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Bacillus cereus-group exosporium is a basal-layer shell plus
+    a BclA-rich external nap built from multiple unrelated proteins; no single source-neutral
+    InterPro, Pfam, NCBIfam, GO, or Complex Portal term was curated that denotes the
+    whole exosporium protein cohort.
+  role: Protein constituents of the crystalline basal layer and external hairlike
+    nap that make up the Bacillus exosporium surface.
+  evidence:
+  - reference: DOI:10.1128/MMBR.00050-15
+    notes: Stewart 2015 reviews the Bacillus cereus-group exosporium as a basal shell
+      carrying an external nap whose principal collagen-like glycoprotein is BclA,
+      and discusses BxpB and ExsY as exosporium structural proteins.
+  - reference: DOI:10.1111/mmi.13650
+    notes: Terry et al. 2017 biochemically dissected Bacillus cereus exosporium architecture
+      and related ExsY, BclA, and ExsFA/BxpB to basal-layer and nap assembly.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1239
+  taxon_label: Bacillota
+  presence: VARIABLE
+  note: Bacterial exosporia are a patchy outer-spore layer best characterized in Bacillus
+    cereus-group species, present in selected spore-forming Bacillota and absent from
+    Bacillus subtilis spores.
+  reference: DOI:10.1128/MMBR.00050-15
+canonical_examples:
+- taxon_id: NCBITaxon:1392
+  taxon_label: Bacillus anthracis
+  note: Bacillus cereus-group model whose mature spores carry a loose basal-layer
+    and nap exosporium used for exosporium assembly and surface-architecture studies.
+  reference: DOI:10.1128/MMBR.00050-15
+functions:
+- function_id: spore_surface_interface
+  label: outer spore surface interface
+  description: The exosporium forms the outermost surface of exosporium-bearing bacterial
+    endospores and presents a semipermeable layer for environmental and host interactions.
+  evidence:
+  - reference: DOI:10.1128/MMBR.00050-15
+    notes: Stewart 2015 reviews the bacterial exosporium as the outer spore layer
+      that interacts with the environment and, in pathogens, host innate-immune surfaces.
+  - reference: DOI:10.1111/mmi.13650
+    notes: Terry et al. 2017 connect Bacillus cereus-group exosporium basal-layer
+      architecture with surface exposure, semipermeability, and channels through the
+      layer.
+evidence:
+- reference: GO:0043592
+  notes: Gene Ontology cellular-component term for the bacterial endospore exosporium.
+- reference: GO:0005618
+  notes: Gene Ontology cellular-component term for cell wall; GO places the exosporium
+    as part of a cell wall.
+- reference: GO:0043593
+  notes: Gene Ontology cellular-component term for the endospore coat beneath the
+    exosporium.
+- reference: GO:0090642
+  notes: Gene Ontology cellular-component term for the distinct microsporidian-type
+    exospore.
+- reference: uniprot.location:SL-0367
+  notes: UniProt Subcellular Location SL-0367 is a generic Perispore location spanning
+    bacterial and eukaryotic spores; it is retained as record-level boundary evidence,
+    not as an exact xref.
+- reference: DOI:10.1128/MMBR.00050-15
+  notes: 'Stewart 2015, The Exosporium Layer of Bacterial Spores: a Connection to
+    the Environment and the Infected Host, Microbiology and Molecular Biology Reviews.'
+- reference: DOI:10.1111/mmi.13650
+  notes: Terry et al. 2017, Molecular tiling on the surface of a bacterial spore -
+    the exosporium of the Bacillus anthracis/cereus/thuringiensis group, Molecular
+    Microbiology.
+causal_graphs:
+- graph_id: exosporium_surface_layering
+  title: Exosporium proteins build the external spore surface
+  description: The bacterial exosporium is a loose outer layer outside the endospore
+    coat. Bacillus cereus-group exosporia combine a protein basal layer with a BclA-rich
+    external nap to form a surface that faces host and environmental contacts.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records mature-layer topology and selected protein cohort
+    composition rather than the temporal bottle-cap assembly pathway.
+  nodes:
+  - node_id: exosporium_proteins
+    label: exosporium proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: exosporium_protein_cohort
+  - node_id: exosporium
+    label: exosporium
+    node_type: STRUCTURE
+    grounding: GO:0043592
+  - node_id: endospore_coat
+    label: endospore coat
+    node_type: STRUCTURE
+    grounding: GO:0043593
+  - node_id: host_environment_surface
+    label: host or environmental surface
+    node_type: ENVIRONMENTAL_FACTOR
+  edges:
+  - subject: exosporium_proteins
+    predicate: assemble into
+    object: exosporium
+    description: BclA-rich nap proteins and basal-layer proteins are represented as
+      an aggregate cohort that builds the Bacillus exosporium.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00050-15
+      notes: Stewart 2015 reviews the Bacillus cereus-group exosporium as a basal
+        layer surrounded by an external BclA-rich hairlike nap.
+    - reference: DOI:10.1111/mmi.13650
+      notes: Terry et al. 2017 relate ExsY, BclA, and ExsFA/BxpB to the Bacillus cereus-group
+        exosporium structure.
+  - subject: exosporium
+    predicate: lies outside
+    object: endospore_coat
+    description: The exosporium is the loose outermost layer outside the bacterial
+      endospore coat.
+    evidence:
+    - reference: GO:0043592
+      notes: GO:0043592 defines the exosporium as the bacterial endospore outermost
+        layer outside the endospore coat.
+  - subject: exosporium
+    predicate: faces
+    object: host_environment_surface
+    description: As the outside of exosporium-bearing spores, the exosporium is the
+      first layer presented to host or environmental contacts.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00050-15
+      notes: Stewart 2015 reviews exosporium-mediated contacts with environmental
+        and host surfaces.
+discussions:
+- discussion_id: bacterial_exosporium_boundary
+  prompt: Keep the bacterial exosporium separate from the microsporidian-type exospore
+    and generic UniProt Perispore location.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - synonyms
+  rationale: GO:0043592 explicitly denotes the bacterial endospore exosporium, whereas
+    GO:0090642 denotes a microsporidian spore-wall exospore and UniProt SL-0367 uses
+    Perispore generically for bacterial and eukaryotic outer spore surfaces.
+  resolution_note: Curated GO:0043592 as bacterial exosporium, kept the GO epispore,
+    exospore, and perispore synonyms, and retained UniProt SL-0367 only as record-level
+    boundary evidence.
+  evidence:
+  - reference: GO:0043592
+    notes: GO:0043592 identifies exosporium as a bacterial endospore component.
+  - reference: GO:0090642
+    notes: GO:0090642 identifies microsporidian-type exospore as a separate spore-wall
+      component.
+  - reference: uniprot.location:SL-0367
+    notes: SL-0367 is a broader Perispore location with Exosporium and Perine synonyms.
+  posed_by: codex
+  posed_date: '2026-09-23'
+  resolved_date: '2026-09-23'
