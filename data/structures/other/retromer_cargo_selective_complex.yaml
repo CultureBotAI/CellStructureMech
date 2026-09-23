@@ -1,0 +1,215 @@
+identifier: GO:0030906
+label: retromer, cargo-selective complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: 'The trimeric subcomplex of the retromer, believed to be closely associated
+  with the membrane. This trimeric complex is responsible for recognizing and binding
+  to cargo molecules. The complex comprises three Vps proteins in both yeast and mammalian
+  cells: Vps35p, Vps29p, and Vps26p in yeast, and VPS35, VPS29 and VPS26A or VPS26B
+  in mammals.'
+definition_source: GO:0030906
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T20:26:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T20:27:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO membrane-complex parentage and retromer parthood, reviewed-label-only
+    Vps35/Vps29/Vps26 yeast components, Saccharomyces scope, GO/DOI evidence, a nonmechanistic
+    cargo-selective assembly graph, and a component-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-23T20:38:03Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Replaced PR #1424 / issue #1425 synonym curation with the exact GO:0030906
+    aliases and removed an unlisted word-order variant.'
+  llm_assisted: true
+parent_structures:
+- GO:0098796
+part_of:
+- GO:0030904
+synonyms:
+- synonym_text: cargo-selective retromer subcomplex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030906
+- synonym_text: retromer CSC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030906
+- synonym_text: retromer complex, inner shell
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030906
+- synonym_text: retromer, CRC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030906
+- synonym_text: retromer, cargo recognition complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030906
+components:
+- component_id: vps35_retromer_subunit
+  label: Vps35 retromer subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS35
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps35p retromer
+    subunit; no exact source-neutral InterPro or Pfam family identifier spanning the
+    yeast Vps35 and metazoan VPS35 proteins was curated in this pass.
+  role: Vps35 constituent of the yeast cargo-selective retromer subcomplex.
+  evidence:
+  - reference: DOI:10.1083/jcb.142.3.665
+    notes: Seaman, McCaffery and Emr 1998 placed Vps35p in the Vps35p/Vps29p/Vps26p
+      retromer subcomplex.
+  - reference: GO:0030906
+    notes: The GO cargo-selective retromer-complex definition names Vps35p as a yeast
+      constituent.
+- component_id: vps29_retromer_subunit
+  label: Vps29 retromer subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS29
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps29p retromer
+    subunit; no exact source-neutral InterPro or Pfam family identifier spanning the
+    yeast Vps29 and metazoan VPS29 proteins was curated in this pass.
+  role: Vps29 constituent of the yeast cargo-selective retromer subcomplex.
+  evidence:
+  - reference: DOI:10.1083/jcb.142.3.665
+    notes: Seaman, McCaffery and Emr 1998 placed Vps29p in the Vps35p/Vps29p/Vps26p
+      retromer subcomplex.
+  - reference: GO:0030906
+    notes: The GO cargo-selective retromer-complex definition names Vps29p as a yeast
+      constituent.
+- component_id: vps26_retromer_subunit
+  label: Vps26 retromer subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS26
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps26p retromer
+    subunit; no exact source-neutral InterPro or Pfam family identifier spanning the
+    yeast Vps26 and metazoan VPS26A/VPS26B proteins was curated in this pass.
+  role: Vps26 constituent of the yeast cargo-selective retromer subcomplex.
+  evidence:
+  - reference: DOI:10.1083/jcb.142.3.665
+    notes: Seaman, McCaffery and Emr 1998 placed Vps26p in the Vps35p/Vps29p/Vps26p
+      retromer subcomplex.
+  - reference: GO:0030906
+    notes: The GO cargo-selective retromer-complex definition names Vps26p as a yeast
+      constituent.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a Vps35p/Vps29p/Vps26p cargo-selective retromer subcomplex.
+  reference: DOI:10.1083/jcb.142.3.665
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Model in which Seaman, McCaffery and Emr defined the cargo-selective branch
+    of retromer as a Vps35p/Vps29p/Vps26p subcomplex.
+  reference: DOI:10.1083/jcb.142.3.665
+evidence:
+- reference: GO:0030906
+  notes: Gene Ontology cellular-component term for the cargo-selective retromer subcomplex.
+- reference: GO:0098796
+  notes: Gene Ontology cellular-component parent term for membrane protein complexes.
+- reference: GO:0030904
+  notes: Gene Ontology cellular-component term for the parent retromer complex.
+- reference: DOI:10.1083/jcb.142.3.665
+  notes: Seaman, McCaffery and Emr 1998, A Membrane Coat Complex Essential for Endosome-to-Golgi
+    Retrograde Transport in Yeast, Journal of Cell Biology.
+causal_graphs:
+- graph_id: yeast_cargo_selective_retromer_assembly
+  title: Vps35/Vps29/Vps26 assemble the yeast cargo-selective retromer subcomplex
+  description: In Saccharomyces cerevisiae, Vps35p, Vps29p and Vps26p constitute the
+    cargo-selective retromer subcomplex that is part of the larger retromer complex.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents yeast cargo-selective subcomplex membership without
+    modeling the molecular interface between the three Vps proteins.
+  nodes:
+  - node_id: vps35_retromer_subunit
+    label: Vps35 retromer subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps35_retromer_subunit
+  - node_id: vps29_retromer_subunit
+    label: Vps29 retromer subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps29_retromer_subunit
+  - node_id: vps26_retromer_subunit
+    label: Vps26 retromer subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps26_retromer_subunit
+  - node_id: cargo_selective_retromer
+    label: retromer, cargo-selective complex
+    node_type: STRUCTURE
+    grounding: GO:0030906
+  - node_id: retromer_complex
+    label: retromer complex
+    node_type: STRUCTURE
+    grounding: GO:0030904
+  edges:
+  - subject: vps35_retromer_subunit
+    predicate: is part of
+    object: cargo_selective_retromer
+    description: Vps35 is represented in the yeast cargo-selective retromer subcomplex.
+    evidence:
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 placed Vps35p in a Vps35p/Vps29p/Vps26p
+        subcomplex.
+  - subject: vps29_retromer_subunit
+    predicate: is part of
+    object: cargo_selective_retromer
+    description: Vps29 is represented in the yeast cargo-selective retromer subcomplex.
+    evidence:
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 placed Vps29p in a Vps35p/Vps29p/Vps26p
+        subcomplex.
+  - subject: vps26_retromer_subunit
+    predicate: is part of
+    object: cargo_selective_retromer
+    description: Vps26 is represented in the yeast cargo-selective retromer subcomplex.
+    evidence:
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 placed Vps26p in a Vps35p/Vps29p/Vps26p
+        subcomplex.
+  - subject: cargo_selective_retromer
+    predicate: is part of
+    object: retromer_complex
+    description: The Vps35/Vps29/Vps26 cargo-selective subcomplex is part of yeast
+      retromer.
+    evidence:
+    - reference: GO:0030906
+      notes: GO:0030906 denotes the cargo-selective retromer subcomplex.
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 described yeast retromer as assembling
+        from Vps35p/Vps29p/Vps26p and Vps5p/Vps17p subcomplexes.
+discussions:
+- discussion_id: resolve_cargo_selective_retromer_family_groundings
+  prompt: Resolve exact source-neutral InterPro or Pfam groundings for cargo-selective
+    retromer Vps35, Vps29 and Vps26 subunit classes spanning yeast and metazoan proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vps35_retromer_subunit
+  - components#vps29_retromer_subunit
+  - components#vps26_retromer_subunit
+  rationale: This record preserves the named Saccharomyces cerevisiae Vps35p, Vps29p
+    and Vps26p subunits and the metazoan VPS35/VPS29/VPS26A-or-VPS26B variation in
+    the GO definition without asserting exact family groundings until those family
+    identifiers are reviewed exactly.
+  evidence:
+  - reference: GO:0030906
+  - reference: DOI:10.1083/jcb.142.3.665
+  posed_by: codex
+  posed_date: '2026-09-23'

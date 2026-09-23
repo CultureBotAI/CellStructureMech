@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/retromer_cargo_selective_complex.yaml
+  slug: retromer_cargo_selective_complex
+session:
+  id: 2026-09-23T203819Z-claude-code-4e8bf8
+  timestamp: '2026-09-23T20:38:19Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1425
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1424
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Correct cargo-selective retromer GO synonyms
+  details: 'Adversarial review of PR #1424 found that the first cargo-selective retromer record
+    marked one GO:0030906 exact synonym as related, omitted other GO exact aliases, and added
+    an unlisted word-order variant. Replaced the synonym list with the GO:0030906 exact aliases
+    and regenerated derived artifacts.'
