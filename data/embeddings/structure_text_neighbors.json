@@ -777,9 +777,9 @@
           "cosine_similarity": 0.69646197
         },
         {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.68938251
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.6904987
         }
       ]
     },
@@ -805,7 +805,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.82004536
+          "cosine_similarity": 0.81991382
         },
         {
           "identifier": "GO:0035253",
@@ -912,6 +912,11 @@
       "label": "mastigoneme",
       "neighbors": [
         {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.72833501
+        },
+        {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
           "cosine_similarity": 0.70396293
@@ -920,11 +925,6 @@
           "identifier": "GO:0009421",
           "label": "bacterial-type flagellum filament cap",
           "cosine_similarity": 0.7036767
-        },
-        {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.70281489
         },
         {
           "identifier": "GO:0009428",
@@ -1410,7 +1410,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.85470725
+          "cosine_similarity": 0.83551304
         },
         {
           "identifier": "GO:0033289",
@@ -1439,29 +1439,29 @@
       "label": "axoneme",
       "neighbors": [
         {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.85470725
-        },
-        {
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
-          "cosine_similarity": 0.84839087
+          "cosine_similarity": 0.8478583
+        },
+        {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.83551304
         },
         {
           "identifier": "GO:0005874",
           "label": "microtubule",
-          "cosine_similarity": 0.82934941
+          "cosine_similarity": 0.83238754
         },
         {
-          "identifier": "GO:0036157",
-          "label": "outer dynein arm",
-          "cosine_similarity": 0.82150949
+          "identifier": "GO:0036156",
+          "label": "inner dynein arm",
+          "cosine_similarity": 0.82886961
         },
         {
           "identifier": "GO:0005929",
           "label": "cilium",
-          "cosine_similarity": 0.82004536
+          "cosine_similarity": 0.81991382
         }
       ]
     },
@@ -1583,9 +1583,9 @@
           "cosine_similarity": 0.75052593
         },
         {
-          "identifier": "GO:0020025",
-          "label": "subpellicular microtubule",
-          "cosine_similarity": 0.73892208
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.7457977
         }
       ]
     },
@@ -1596,7 +1596,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.84839087
+          "cosine_similarity": 0.8478583
         },
         {
           "identifier": "GO:0005874",
@@ -1661,14 +1661,14 @@
           "cosine_similarity": 0.76789478
         },
         {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.76467026
+        },
+        {
           "identifier": "GO:0005929",
           "label": "cilium",
           "cosine_similarity": 0.76390865
-        },
-        {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.73465206
         },
         {
           "identifier": "GO:0060170",
@@ -1709,7 +1709,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.75652275
+          "cosine_similarity": 0.75964845
         }
       ]
     },
@@ -1823,7 +1823,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.69986752
+          "cosine_similarity": 0.70880794
         },
         {
           "identifier": "GO:0036286",
@@ -1865,6 +1865,37 @@
           "identifier": "GO:0097591",
           "label": "ventral disc lateral crest",
           "cosine_similarity": 0.75913937
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0036156",
+      "label": "inner dynein arm",
+      "neighbors": [
+        {
+          "identifier": "GO:0036157",
+          "label": "outer dynein arm",
+          "cosine_similarity": 0.97062767
+        },
+        {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.82886961
+        },
+        {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.73359778
+        },
+        {
+          "identifier": "GO:0036064",
+          "label": "ciliary basal body",
+          "cosine_similarity": 0.72655375
+        },
+        {
+          "identifier": "GO:0005929",
+          "label": "cilium",
+          "cosine_similarity": 0.70650079
         }
       ]
     },
@@ -2059,9 +2090,14 @@
       "label": "outer dynein arm",
       "neighbors": [
         {
+          "identifier": "GO:0036156",
+          "label": "inner dynein arm",
+          "cosine_similarity": 0.97062767
+        },
+        {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.82150949
+          "cosine_similarity": 0.77192137
         },
         {
           "identifier": "GO:1990716",
@@ -2077,11 +2113,6 @@
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
           "cosine_similarity": 0.65255706
-        },
-        {
-          "identifier": "GO:0020010",
-          "label": "conoid",
-          "cosine_similarity": 0.6373738
         }
       ]
     },
@@ -2190,7 +2221,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.71594222
+          "cosine_similarity": 0.71317389
         },
         {
           "identifier": "GO:0036064",
@@ -2234,9 +2265,9 @@
           "cosine_similarity": 0.7114328
         },
         {
-          "identifier": "GO:0090512",
-          "label": "eisosome membrane domain/MCC",
-          "cosine_similarity": 0.70063033
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.70248683
         }
       ]
     },
@@ -2596,14 +2627,14 @@
           "cosine_similarity": 0.72273141
         },
         {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.71379215
+        },
+        {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
           "cosine_similarity": 0.70337527
-        },
-        {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.70060923
         },
         {
           "identifier": "cellstructuremech:mreb_filament",
