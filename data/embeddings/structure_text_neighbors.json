@@ -1410,27 +1410,27 @@
         {
           "identifier": "GO:1990718",
           "label": "axonemal central pair projection",
-          "cosine_similarity": 0.9094423
+          "cosine_similarity": 0.89081146
         },
         {
-          "identifier": "GO:0097545",
-          "label": "axonemal doublet microtubule",
-          "cosine_similarity": 0.8854288
+          "identifier": "GO:0097540",
+          "label": "axonemal central pair",
+          "cosine_similarity": 0.87271435
         },
         {
           "identifier": "GO:0160113",
           "label": "axonemal microtubule doublet inner junction",
-          "cosine_similarity": 0.88488326
+          "cosine_similarity": 0.86617953
         },
         {
-          "identifier": "GO:1990717",
-          "label": "axonemal central bridge",
-          "cosine_similarity": 0.88393221
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.8584932
         },
         {
-          "identifier": "GO:0160110",
-          "label": "axonemal microtubule doublet inner sheath",
-          "cosine_similarity": 0.88127259
+          "identifier": "GO:0005931",
+          "label": "axonemal nexin link",
+          "cosine_similarity": 0.85316688
         }
       ]
     },
@@ -1439,9 +1439,14 @@
       "label": "axonemal central bridge",
       "neighbors": [
         {
+          "identifier": "GO:0097540",
+          "label": "axonemal central pair",
+          "cosine_similarity": 0.8530871
+        },
+        {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
-          "cosine_similarity": 0.88393221
+          "cosine_similarity": 0.84868841
         },
         {
           "identifier": "GO:0160113",
@@ -1457,11 +1462,37 @@
           "identifier": "GO:0005931",
           "label": "axonemal nexin link",
           "cosine_similarity": 0.80697229
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097540",
+      "label": "axonemal central pair",
+      "neighbors": [
+        {
+          "identifier": "GO:0097545",
+          "label": "axonemal doublet microtubule",
+          "cosine_similarity": 0.89554054
         },
         {
-          "identifier": "GO:0160110",
-          "label": "axonemal microtubule doublet inner sheath",
-          "cosine_similarity": 0.79001825
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.87271435
+        },
+        {
+          "identifier": "GO:1990718",
+          "label": "axonemal central pair projection",
+          "cosine_similarity": 0.86695696
+        },
+        {
+          "identifier": "GO:1990717",
+          "label": "axonemal central bridge",
+          "cosine_similarity": 0.8530871
+        },
+        {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.84064333
         }
       ]
     },
@@ -1472,7 +1503,12 @@
         {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
-          "cosine_similarity": 0.9094423
+          "cosine_similarity": 0.89081146
+        },
+        {
+          "identifier": "GO:0097540",
+          "label": "axonemal central pair",
+          "cosine_similarity": 0.86695696
         },
         {
           "identifier": "GO:0160113",
@@ -1488,11 +1524,6 @@
           "identifier": "GO:0160110",
           "label": "axonemal microtubule doublet inner sheath",
           "cosine_similarity": 0.82812528
-        },
-        {
-          "identifier": "GO:0097545",
-          "label": "axonemal doublet microtubule",
-          "cosine_similarity": 0.79818951
         }
       ]
     },
@@ -1501,14 +1532,14 @@
       "label": "axonemal doublet microtubule",
       "neighbors": [
         {
+          "identifier": "GO:0097540",
+          "label": "axonemal central pair",
+          "cosine_similarity": 0.89554054
+        },
+        {
           "identifier": "GO:0160110",
           "label": "axonemal microtubule doublet inner sheath",
           "cosine_similarity": 0.89100543
-        },
-        {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.8854288
         },
         {
           "identifier": "GO:0160115",
@@ -1542,14 +1573,14 @@
           "cosine_similarity": 0.91998282
         },
         {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.88488326
-        },
-        {
           "identifier": "GO:0097545",
           "label": "axonemal doublet microtubule",
           "cosine_similarity": 0.8785699
+        },
+        {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.86617953
         },
         {
           "identifier": "GO:0160115",
@@ -1573,11 +1604,6 @@
           "cosine_similarity": 0.89100543
         },
         {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.88127259
-        },
-        {
           "identifier": "GO:0160115",
           "label": "axonemal microtubule doublet ribbon",
           "cosine_similarity": 0.87916192
@@ -1586,6 +1612,11 @@
           "identifier": "GO:0160114",
           "label": "axonemal microtubule doublet outer junction",
           "cosine_similarity": 0.87488262
+        },
+        {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.85071718
         }
       ]
     },
@@ -1609,14 +1640,14 @@
           "cosine_similarity": 0.84129168
         },
         {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.83869869
-        },
-        {
           "identifier": "GO:0097545",
           "label": "axonemal doublet microtubule",
           "cosine_similarity": 0.83125191
+        },
+        {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.80153702
         }
       ]
     },
@@ -1645,9 +1676,9 @@
           "cosine_similarity": 0.84129168
         },
         {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.83970824
+          "identifier": "GO:0097540",
+          "label": "axonemal central pair",
+          "cosine_similarity": 0.83882329
         }
       ]
     },
@@ -1656,14 +1687,14 @@
       "label": "axonemal nexin link",
       "neighbors": [
         {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.85316688
+        },
+        {
           "identifier": "GO:0160113",
           "label": "axonemal microtubule doublet inner junction",
           "cosine_similarity": 0.84074083
-        },
-        {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.83530913
         },
         {
           "identifier": "GO:0005930",
@@ -1692,24 +1723,24 @@
           "cosine_similarity": 0.86766855
         },
         {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.8584932
+        },
+        {
           "identifier": "GO:0005874",
           "label": "microtubule",
           "cosine_similarity": 0.842829
         },
         {
+          "identifier": "GO:0097540",
+          "label": "axonemal central pair",
+          "cosine_similarity": 0.84064333
+        },
+        {
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
           "cosine_similarity": 0.83977117
-        },
-        {
-          "identifier": "GO:0005931",
-          "label": "axonemal nexin link",
-          "cosine_similarity": 0.82034302
-        },
-        {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.81123553
         }
       ]
     },
@@ -1862,9 +1893,9 @@
           "cosine_similarity": 0.81419949
         },
         {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.80017643
+          "identifier": "GO:0097540",
+          "label": "axonemal central pair",
+          "cosine_similarity": 0.79548566
         }
       ]
     },
@@ -1924,9 +1955,9 @@
           "cosine_similarity": 0.73118209
         },
         {
-          "identifier": "GO:0097268",
-          "label": "cytoophidium",
-          "cosine_similarity": 0.71943857
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.72241537
         }
       ]
     },
@@ -2131,6 +2162,11 @@
           "cosine_similarity": 0.81761865
         },
         {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.81301625
+        },
+        {
           "identifier": "GO:0160113",
           "label": "axonemal microtubule doublet inner junction",
           "cosine_similarity": 0.78413515
@@ -2139,11 +2175,6 @@
           "identifier": "GO:0005930",
           "label": "axoneme",
           "cosine_similarity": 0.78226575
-        },
-        {
-          "identifier": "GO:0160110",
-          "label": "axonemal microtubule doublet inner sheath",
-          "cosine_similarity": 0.77409694
         }
       ]
     },
@@ -2348,6 +2379,11 @@
           "cosine_similarity": 0.79183311
         },
         {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.74572278
+        },
+        {
           "identifier": "GO:0160113",
           "label": "axonemal microtubule doublet inner junction",
           "cosine_similarity": 0.73122722
@@ -2356,11 +2392,6 @@
           "identifier": "GO:0160110",
           "label": "axonemal microtubule doublet inner sheath",
           "cosine_similarity": 0.71897825
-        },
-        {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.71749709
         }
       ]
     },
@@ -2462,14 +2493,19 @@
       "label": "radial spoke",
       "neighbors": [
         {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.77061307
+        },
+        {
           "identifier": "GO:1990718",
           "label": "axonemal central pair projection",
           "cosine_similarity": 0.75183334
         },
         {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.73985703
+          "identifier": "GO:0097540",
+          "label": "axonemal central pair",
+          "cosine_similarity": 0.71520148
         },
         {
           "identifier": "GO:0160113",
@@ -2480,11 +2516,6 @@
           "identifier": "GO:0005930",
           "label": "axoneme",
           "cosine_similarity": 0.69178352
-        },
-        {
-          "identifier": "GO:0036064",
-          "label": "ciliary basal body",
-          "cosine_similarity": 0.69131257
         }
       ]
     },
@@ -2870,6 +2901,11 @@
           "cosine_similarity": 0.72624247
         },
         {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.72537978
+        },
+        {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
           "cosine_similarity": 0.72273141
@@ -2883,11 +2919,6 @@
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
           "cosine_similarity": 0.70337527
-        },
-        {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.70213829
         }
       ]
     },

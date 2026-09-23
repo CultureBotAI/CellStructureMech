@@ -1,0 +1,192 @@
+identifier: GO:0097540
+label: axonemal central pair
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A pair of asymmetric C1 and C2 singlet microtubules at the center of the
+  9+2 axonemal central apparatus.
+definition_source: GO:0097540
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T15:49:11Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T15:50:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonyms, central-apparatus parthood, exact C1 and C2 has_part
+    links, Chlamydomonas scope, GO and DOI evidence, a nonmechanistic central-pair
+    architecture graph, and a C1/C2 child record TODO.
+  llm_assisted: true
+- timestamp: '2026-09-23T16:00:55Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1406 review issue #1407 by keeping exact named projection
+    subcomplex boundaries in the central-pair graph scope note.'
+  llm_assisted: true
+synonyms:
+- synonym_text: axonemal microtubule central pair
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097540
+- synonym_text: axoneme central pair
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097540
+- synonym_text: axoneme microtubule central pair
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097540
+- synonym_text: central pair
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097540
+- synonym_text: central-pair microtubules
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097540
+part_of:
+- GO:1990716
+has_part:
+- GO:1990719
+- GO:1990720
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar axonemes contain a central pair complex with C1 and
+    C2 singlet microtubules, associated projections and a central bridge.
+  reference: DOI:10.1002/cm.21094
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose flagellar central pair complex has been resolved in
+    situ by cryoelectron tomography and subtomogram averaging.
+  reference: DOI:10.1002/cm.21094
+functions:
+- function_id: c1_c2_central_core
+  label: C1/C2 central microtubule core
+  description: The axonemal central pair supplies the asymmetric C1/C2 singlet-microtubule
+    core from which central-pair projections extend and around which the bridge network
+    is organized.
+  evidence:
+  - reference: GO:0097540
+    notes: GO defines the axonemal central pair as the inner microtubule pair of the
+      9+2 axoneme.
+  - reference: DOI:10.1002/cm.21094
+    notes: Carbajal-Gonzalez et al. 2013 resolved the Chlamydomonas central pair complex
+      with asymmetric C1 and C2 microtubules, bridges and projections.
+evidence:
+- reference: GO:0097540
+  notes: Gene Ontology cellular-component term for the axonemal central pair.
+- reference: GO:1990716
+  notes: Gene Ontology places the axonemal central pair within the axonemal central
+    apparatus.
+- reference: GO:1990719
+  notes: Gene Ontology cellular-component term for the C1 axonemal microtubule.
+- reference: GO:1990720
+  notes: Gene Ontology cellular-component term for the C2 axonemal microtubule.
+- reference: DOI:10.1002/cm.21094
+  notes: Carbajal-Gonzalez et al. 2013, 'Conserved structural motifs in the central
+    pair complex of eukaryotic flagella', Cytoskeleton.
+causal_graphs:
+- graph_id: chlamydomonas_central_pair_architecture
+  title: C1 and C2 form the axonemal central pair
+  description: In Chlamydomonas, asymmetric C1 and C2 singlet microtubules form the
+    axonemal central pair that carries projections and is bridged within the central
+    apparatus.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records coarse C1/C2 microtubule, bridge and projection
+    parthood and leaves exact C1/C2 child records, named projection subcomplex boundaries,
+    microtubule-specific components and copy-number geometry for later curation.
+  nodes:
+  - node_id: c1_axonemal_microtubule
+    label: C1 axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:1990719
+  - node_id: c2_axonemal_microtubule
+    label: C2 axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:1990720
+  - node_id: axonemal_central_pair
+    label: axonemal central pair
+    node_type: STRUCTURE
+    grounding: GO:0097540
+  - node_id: axonemal_central_pair_projection
+    label: axonemal central pair projection
+    node_type: STRUCTURE
+    grounding: GO:1990718
+  - node_id: axonemal_central_bridge
+    label: axonemal central bridge
+    node_type: STRUCTURE
+    grounding: GO:1990717
+  - node_id: axonemal_central_apparatus
+    label: axonemal central apparatus
+    node_type: STRUCTURE
+    grounding: GO:1990716
+  edges:
+  - subject: c1_axonemal_microtubule
+    predicate: is part of
+    object: axonemal_central_pair
+    description: The C1 axonemal microtubule is one member of the axonemal central
+      pair.
+    evidence:
+    - reference: GO:1990719
+      notes: GO places the C1 axonemal microtubule within the axonemal central pair.
+  - subject: c2_axonemal_microtubule
+    predicate: is part of
+    object: axonemal_central_pair
+    description: The C2 axonemal microtubule is the second member of the axonemal
+      central pair.
+    evidence:
+    - reference: GO:1990720
+      notes: GO places the C2 axonemal microtubule within the axonemal central pair.
+  - subject: axonemal_central_bridge
+    predicate: connects to
+    object: c1_axonemal_microtubule
+    description: The central bridge connects to the C1 microtubule of the axonemal
+      central pair.
+    evidence:
+    - reference: GO:1990717
+      notes: GO defines the axonemal central bridge as connecting the central pair
+        of single microtubules.
+  - subject: axonemal_central_bridge
+    predicate: connects to
+    object: c2_axonemal_microtubule
+    description: The central bridge connects to the C2 microtubule of the axonemal
+      central pair.
+    evidence:
+    - reference: GO:1990717
+      notes: GO defines the axonemal central bridge as two bridges linking the two
+        central-pair microtubules.
+  - subject: axonemal_central_pair_projection
+    predicate: projects from
+    object: axonemal_central_pair
+    description: Axonemal central pair projections extend from the central pair of
+      singlet microtubules.
+    evidence:
+    - reference: GO:1990718
+      notes: GO defines axonemal central pair projections as projections off the central
+        pair of single microtubules.
+  - subject: axonemal_central_pair
+    predicate: is part of
+    object: axonemal_central_apparatus
+    description: The axonemal central pair is part of the axonemal central apparatus.
+    evidence:
+    - reference: GO:0097540
+      notes: GO places the axonemal central pair within the axonemal central apparatus.
+discussions:
+- discussion_id: resolve_c1_c2_microtubule_children
+  prompt: Add exact C1 and C2 axonemal microtubule child records and resolve their
+    microtubule-specific component boundaries.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#chlamydomonas_central_pair_architecture
+  rationale: GO exactly identifies the C1 and C2 axonemal microtubules, but this pass
+    only curates their parent GO:0097540 central pair and leaves the individual asymmetric
+    microtubules for later records.
+  evidence:
+  - reference: GO:1990719
+    notes: GO exactly identifies the C1 axonemal microtubule.
+  - reference: GO:1990720
+    notes: GO exactly identifies the C2 axonemal microtubule.
+  posed_by: codex
+  posed_date: '2026-09-23'
