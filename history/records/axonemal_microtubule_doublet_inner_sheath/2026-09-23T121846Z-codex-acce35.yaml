@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_sheath.yaml
+  slug: axonemal_microtubule_doublet_inner_sheath
+session:
+  id: 2026-09-23T121846Z-codex-acce35
+  timestamp: '2026-09-23T12:18:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add axonemal microtubule doublet inner sheath record
+  details: Created the GO:0160110 axonemal microtubule doublet inner sheath record, linked
+    it from GO:0097545 axonemal doublet microtubule with has_part, moved the parent record's
+    label-only microtubule-inner-protein graph node into a GO-backed child structure, and
+    preserved A- and B-tubule inner-sheath GO child terms as unresolved follow-up. Duplicate
+    checking used rg --no-ignore --hidden before creation and found no existing data/structures
+    axonemal microtubule doublet inner sheath or GO:0160110 record.

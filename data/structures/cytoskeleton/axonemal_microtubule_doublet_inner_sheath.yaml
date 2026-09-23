@@ -1,0 +1,202 @@
+identifier: GO:0160110
+label: axonemal microtubule doublet inner sheath
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A structural network of microtubule inner proteins located inside the
+  lumens of the A and B tubules of the axonemal microtubule doublet that helps stabilize
+  the doublet microtubule.
+definition_source: GO:0160110
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T12:16:07Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T12:17:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added doublet parthood, A- and B-tubule inner-sheath child GO terms, a
+    reviewed-label-only MIP component, Chlamydomonas scope, stabilization function,
+    GO and DOI evidence, a nonmechanistic inner-sheath graph, and MIP/child-boundary
+    TODOs.
+  llm_assisted: true
+part_of:
+- GO:0097545
+has_part:
+- GO:0160111
+- GO:0160112
+components:
+- component_id: inner_sheath_mips
+  label: inner-sheath microtubule inner proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Globular and filamentous luminal MIPs that build the axonemal doublet inner
+    sheath along A- and B-tubule protofilaments.
+  evidence:
+  - reference: GO:0160110
+    notes: GO defines the axonemal microtubule doublet inner sheath as a structural
+      network of MIPs in the A- and B-tubule lumens.
+  - reference: DOI:10.1038/ncomms15035
+    notes: Ichikawa et al. 2017 resolved globular and filamentous MIP densities inside
+      Tetrahymena axonemal doublet microtubules.
+  - reference: DOI:10.1016/j.cell.2019.09.030
+    notes: Ma et al. 2019 resolved interconnected MIP networks in native Chlamydomonas
+      axonemal doublets.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the complete A- and B-tubule
+    inner-sheath MIP family set was verified in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas axonemal doublets contain luminal MIP networks in their A and
+    B tubules.
+  reference: DOI:10.1016/j.cell.2019.09.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose native axonemal doublet microtubules have been structurally
+    resolved with luminal microtubule inner proteins.
+  reference: DOI:10.1016/j.cell.2019.09.030
+functions:
+- function_id: doublet_microtubule_stabilization
+  label: doublet microtubule stabilization
+  description: Inner-sheath MIPs bind the luminal surfaces of axonemal doublets and
+    help stabilize A- and B-tubule protofilament lattices against bending stress.
+  evidence:
+  - reference: GO:0160110
+    notes: GO defines the inner sheath as an A/B-tubule MIP network that helps stabilize
+      the doublet microtubule.
+  - reference: DOI:10.1038/s41467-019-09051-x
+    notes: Owa et al. 2019 found that Chlamydomonas FAP45 and FAP52 are B-tubule luminal
+      MIPs whose loss destabilizes axonemal doublet B tubules.
+evidence:
+- reference: GO:0160110
+  notes: Gene Ontology cellular-component term for the axonemal microtubule doublet
+    inner sheath.
+- reference: GO:0160111
+  notes: Gene Ontology cellular-component term for the axonemal A tubule inner sheath.
+- reference: GO:0160112
+  notes: Gene Ontology cellular-component term for the axonemal B tubule inner sheath.
+- reference: GO:0097545
+  notes: GO places the axonemal microtubule doublet inner sheath within the axonemal
+    doublet microtubule.
+- reference: DOI:10.1038/ncomms15035
+  notes: Ichikawa et al. 2017, 'Subnanometre-resolution structure of the doublet microtubule
+    reveals new classes of microtubule-associated proteins', Nature Communications.
+- reference: DOI:10.1038/s41467-019-09051-x
+  notes: Owa et al. 2019, 'Inner lumen proteins stabilize doublet microtubules in
+    cilia and flagella', Nature Communications.
+- reference: DOI:10.1016/j.cell.2019.09.030
+  notes: Ma et al. 2019, 'Structure of the Decorated Ciliary Doublet Microtubule',
+    Cell.
+causal_graphs:
+- graph_id: axonemal_inner_sheath_stabilization
+  title: A- and B-tubule MIPs form the inner sheath
+  description: Luminal microtubule inner proteins form A- and B-tubule inner sheaths
+    that are part of the axonemal doublet and help stabilize the doublet lattice.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the coarse A/B inner-sheath architecture and leaves
+    exact conserved MIP family groundings and copy numbers for later component-level
+    curation.
+  nodes:
+  - node_id: inner_sheath_mips
+    label: inner-sheath microtubule inner proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: inner_sheath_mips
+  - node_id: axonemal_a_tubule_inner_sheath
+    label: axonemal A tubule inner sheath
+    node_type: STRUCTURE
+    grounding: GO:0160111
+  - node_id: axonemal_b_tubule_inner_sheath
+    label: axonemal B tubule inner sheath
+    node_type: STRUCTURE
+    grounding: GO:0160112
+  - node_id: axonemal_microtubule_doublet_inner_sheath
+    label: axonemal microtubule doublet inner sheath
+    node_type: STRUCTURE
+    grounding: GO:0160110
+  - node_id: axonemal_doublet_microtubule
+    label: axonemal doublet microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097545
+  edges:
+  - subject: inner_sheath_mips
+    predicate: form
+    object: axonemal_microtubule_doublet_inner_sheath
+    description: Globular and filamentous MIPs assemble into the axonemal doublet
+      inner sheath.
+    evidence:
+    - reference: GO:0160110
+      notes: GO defines the inner sheath as a structural network of MIPs.
+  - subject: axonemal_a_tubule_inner_sheath
+    predicate: is part of
+    object: axonemal_microtubule_doublet_inner_sheath
+    description: The A-tubule inner sheath is one half of the axonemal doublet inner
+      sheath.
+    evidence:
+    - reference: GO:0160111
+      notes: GO places the axonemal A tubule inner sheath within the axonemal microtubule
+        doublet inner sheath.
+  - subject: axonemal_b_tubule_inner_sheath
+    predicate: is part of
+    object: axonemal_microtubule_doublet_inner_sheath
+    description: The B-tubule inner sheath is one half of the axonemal doublet inner
+      sheath.
+    evidence:
+    - reference: GO:0160112
+      notes: GO places the axonemal B tubule inner sheath within the axonemal microtubule
+        doublet inner sheath.
+  - subject: axonemal_microtubule_doublet_inner_sheath
+    predicate: stabilizes
+    object: axonemal_doublet_microtubule
+    description: The inner-sheath MIP network reinforces the axonemal doublet microtubule
+      lattice.
+    evidence:
+    - reference: GO:0160110
+      notes: GO defines the inner sheath as helping to stabilize the doublet microtubule.
+    - reference: DOI:10.1038/s41467-019-09051-x
+      notes: Owa et al. 2019 identified Chlamydomonas B-tubule MIPs that bind inside
+        doublet microtubules and stabilize the B-tubule wall.
+discussions:
+- discussion_id: resolve_inner_sheath_mip_groundings
+  prompt: Resolve exact source-neutral groundings, memberships, and copy numbers for
+    A- and B-tubule inner-sheath MIP families.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#inner_sheath_mips
+  - causal_graphs#axonemal_inner_sheath_stabilization
+  rationale: GO exactly identifies the inner-sheath network, but this pass did not
+    verify InterPro, Pfam or other source-neutral family groundings for its individual
+    globular and filamentous MIP constituents.
+  evidence:
+  - reference: DOI:10.1038/ncomms15035
+    notes: Ichikawa et al. 2017 resolved Tetrahymena globular and filamentous MIP
+      densities in the A- and B-tubule lumens.
+  - reference: DOI:10.1038/s41467-019-09051-x
+    notes: Owa et al. 2019 identified Chlamydomonas FAP45 and FAP52 as B-tubule luminal
+      MIPs.
+  - reference: DOI:10.1016/j.cell.2019.09.030
+    notes: Ma et al. 2019 assigned many Chlamydomonas MIP densities but this pass
+      did not verify source-neutral family groundings for each one.
+  posed_by: codex
+  posed_date: '2026-09-23'
+- discussion_id: resolve_a_b_inner_sheath_children
+  prompt: Decide whether GO:0160111 and GO:0160112 should become separate A- and B-tubule
+    inner-sheath child records after their conserved MIP sets are reviewed.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO exactly identifies the A- and B-tubule inner sheaths, but the present
+    GO:0160110 record keeps them as child GO terms while their component boundaries
+    and taxon-general MIP family identities remain unresolved.
+  evidence:
+  - reference: GO:0160111
+    notes: Gene Ontology cellular-component term for the axonemal A tubule inner sheath.
+  - reference: GO:0160112
+    notes: Gene Ontology cellular-component term for the axonemal B tubule inner sheath.
+  posed_by: codex
+  posed_date: '2026-09-23'

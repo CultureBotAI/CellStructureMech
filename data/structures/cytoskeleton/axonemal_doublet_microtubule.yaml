@@ -32,6 +32,20 @@ curation_history:
   action: FIX_REVIEW_YAML_ALIASES
   changes: Removed YAML aliases from duplicated doublet-substructure TODO evidence.
   llm_assisted: true
+- timestamp: '2026-09-23T12:17:31Z'
+  curator: codex
+  action: ADD_AXONEMAL_INNER_SHEATH_PART
+  changes: Linked GO:0160110 as an axonemal doublet substructure, replaced the label-only
+    microtubule-inner-protein graph node with the GO-grounded inner sheath, and narrowed
+    the doublet-substructure TODO.
+  llm_assisted: true
+- timestamp: '2026-09-23T12:17:57Z'
+  curator: codex
+  action: FIX_INNER_SHEATH_TODO_ATTACHMENT
+  changes: Removed the stale microtubule-inner-protein component attachment from the
+    parent doublet-substructure TODO after moving MIP curation into the GO:0160110
+    child record.
+  llm_assisted: true
 synonyms:
 - synonym_text: axonemal outer doublet
   synonym_type: EXACT_SYNONYM
@@ -53,6 +67,7 @@ part_of:
 has_part:
 - GO:0097649
 - GO:0097650
+- GO:0160110
 components:
 - component_id: axonemal_tubulins
   label: axonemal alpha- and beta-tubulins
@@ -74,24 +89,6 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE for the axonemal alpha/beta-tubulin
     constituent set of GO:0097545 was verified in this pass.
-- component_id: microtubule_inner_proteins
-  label: microtubule inner proteins
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  essentiality: UNKNOWN
-  role: Non-tubulin proteins bound on luminal surfaces of axonemal doublets that help
-    stabilize the doublet microtubule lattice.
-  evidence:
-  - reference: DOI:10.1038/s41467-019-09051-x
-    notes: Owa et al. 2019 identified Chlamydomonas FAP45 and FAP52 as microtubule
-      inner proteins in doublet microtubules.
-  - reference: DOI:10.1016/j.cell.2019.09.030
-    notes: Ma et al. 2019 resolved many Chlamydomonas microtubule inner proteins in
-      decorated native axonemal doublets.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO has exact cellular-component terms for MIP-rich doublet substructures,
-    but no exact source-neutral identifier for the full taxon-agnostic microtubule-inner-protein
-    constituent class was verified in this pass.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
@@ -151,22 +148,20 @@ causal_graphs:
 - graph_id: chlamydomonas_doublet_scaffold
   title: A- and B-tubules form axonemal doublets
   description: In Chlamydomonas flagella, A- and B-tubules form axonemal doublet microtubules
-    whose tubulin walls and luminal microtubule inner proteins stabilize the 9+2 axonemal
-    scaffold.
+    whose tubulin walls and inner sheath stabilize the 9+2 axonemal scaffold.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: This graph records the coarse A/B doublet boundary and leaves microtubule
-    inner protein families, junction substructures, the ribbon, and doublet-specific
-    accessory patterns for later curation.
+  scope_notes: This graph records the coarse A/B doublet boundary and leaves junction
+    substructures, the ribbon, and doublet-specific accessory patterns for later curation.
   nodes:
   - node_id: axonemal_tubulins
     label: axonemal alpha- and beta-tubulins
     node_type: GENE_OR_PROTEIN
     component_ref: axonemal_tubulins
-  - node_id: microtubule_inner_proteins
-    label: microtubule inner proteins
-    node_type: GENE_OR_PROTEIN
-    component_ref: microtubule_inner_proteins
+  - node_id: axonemal_microtubule_doublet_inner_sheath
+    label: axonemal microtubule doublet inner sheath
+    node_type: STRUCTURE
+    grounding: GO:0160110
   - node_id: a_axonemal_microtubule
     label: A axonemal microtubule
     node_type: STRUCTURE
@@ -210,18 +205,18 @@ causal_graphs:
       notes: GO identifies the A tubule as a complete 13-protofilament microtubule.
     - reference: GO:0097650
       notes: GO identifies the B tubule as an incomplete 10-protofilament microtubule.
-  - subject: microtubule_inner_proteins
-    predicate: stabilize
+  - subject: axonemal_microtubule_doublet_inner_sheath
+    predicate: stabilizes
     object: axonemal_doublet_microtubule
-    description: Microtubule inner proteins bind the inner surfaces of doublet microtubules
-      and reinforce the lattice against flagellar beating stresses.
+    description: The inner-sheath MIP network reinforces the A- and B-tubule lattice
+      of axonemal doublet microtubules.
     evidence:
+    - reference: GO:0160110
+      notes: GO defines the axonemal microtubule doublet inner sheath as a MIP network
+        that helps stabilize the doublet microtubule.
     - reference: DOI:10.1038/s41467-019-09051-x
       notes: Owa et al. 2019 found that Chlamydomonas FAP45 and FAP52 bind the inside
         of B tubules and stabilize ciliary axonemes.
-    - reference: DOI:10.1016/j.cell.2019.09.030
-      notes: Ma et al. 2019 resolved interconnected MIP networks on Chlamydomonas
-        native axonemal doublets.
   - subject: axonemal_doublet_microtubule
     predicate: is part of
     object: axoneme
@@ -235,21 +230,16 @@ causal_graphs:
         the Chlamydomonas 9+2 axoneme by cryoelectron tomography.
 discussions:
 - discussion_id: resolve_mip_and_doublet_substructure_boundaries
-  prompt: Resolve exact source-neutral groundings for individual microtubule inner
-    protein families and decide whether the inner sheath, inner and outer junctions,
-    ribbon and doublet-specific accessory structures need child records.
+  prompt: Resolve exact source-neutral groundings and decide whether the inner and
+    outer junctions, ribbon and doublet-specific accessory structures need child records.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#microtubule_inner_proteins
   - causal_graphs#chlamydomonas_doublet_scaffold
-  rationale: GO now identifies multiple named doublet substructures, and cryo-EM has
-    mapped many Chlamydomonas MIPs, but this first GO:0097545 pass curates only the
-    coarse A/B doublet scaffold.
+  rationale: GO still identifies named inner-junction, outer-junction and ribbon substructures,
+    and cryo-EM has mapped many Chlamydomonas doublet-associated proteins, but this
+    GO:0097545 pass leaves those finer child records for later curation.
   evidence:
-  - reference: GO:0160110
-    notes: Gene Ontology cellular-component term for the MIP network of the axonemal
-      microtubule doublet inner sheath.
   - reference: GO:0160113
     notes: Gene Ontology cellular-component term for the inner junction that links
       the B10 and A1 protofilaments of an axonemal doublet.
