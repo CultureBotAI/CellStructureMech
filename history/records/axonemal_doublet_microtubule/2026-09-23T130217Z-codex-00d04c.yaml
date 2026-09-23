@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_doublet_microtubule.yaml
+  slug: axonemal_doublet_microtubule
+session:
+  id: 2026-09-23T130217Z-codex-00d04c
+  timestamp: '2026-09-23T13:02:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1397
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1396
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Address axonemal inner junction PR review
+  details: 'Resolved PR #1396 review issue #1397 by narrowing the GO:0097545 parent doublet
+    graph scope note after GO:0160113 became a curated inner-junction child record.'
