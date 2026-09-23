@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/archaeal_type_flagellum_filament.yaml
+  slug: archaeal_type_flagellum_filament
+session:
+  id: 2026-09-23T045457Z-codex-9349a2
+  timestamp: '2026-09-23T04:54:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Created archaeal-type flagellum filament record
+  details: Scaffolded and expanded the archaeal-type flagellum filament as a local CellStructureMech
+    appendage filament record. The curation keeps the component set to archaellin filament
+    subunits, places the filament as part of GO:0097589, cites Albers and Jarrell 2015 for
+    broad archaellum assembly and motility and Gambelli et al. 2022 for the Methanocaldococcus
+    villosus ArlB1/ArlB2 filament structure, and leaves exact archaellin family grounding
+    as a follow-up TODO.

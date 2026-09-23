@@ -1,0 +1,195 @@
+identifier: cellstructuremech:archaeal_type_flagellum_filament
+label: archaeal-type flagellum filament
+structure_category: APPENDAGE
+structure_kind: FILAMENT
+definition: An extracellular helical archaellum filament assembled from glycosylated
+  type-IV-pilin-like archaellin subunits and rotated by the archaeal-type flagellum
+  motor to propel archaeal cells.
+definition_source: DOI:10.3389/fmicb.2015.00023
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T04:53:14Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T04:54:09Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added archaellum-filament synonymy, parentage, part_of the complete archaeal-type
+    flagellum, label-only archaellin component curation, archaeal scope, Methanocaldococcus
+    villosus example, swimming-motility function, DOI evidence, a nonmechanistic maturation-to-rotation
+    graph, and grounding and motor-boundary discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: archaellum filament
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41467-022-28337-1
+parent_structures:
+- GO:0042995
+part_of:
+- GO:0097589
+components:
+- component_id: archaellins
+  label: archaellin filament subunits
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - arlA
+  - arlB
+  - flaA
+  - flaB
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Archaellins are type-IV-pilin-like proteins with lineage-specific
+    subunit names and paralogues; no exact source-neutral family CURIE for the full
+    filament-forming archaellin class was verified in this pass.
+  role: Glycosylated type-IV-pilin-like subunits that polymerize into the extracellular
+    helical filament of the archaeal-type flagellum.
+  evidence:
+  - reference: DOI:10.3389/fmicb.2015.00023
+    notes: Albers and Jarrell 2015 review archaellin maturation, N-glycosylation,
+      and assembly into the rotating archaellum filament.
+  - reference: DOI:10.1038/s41467-022-28337-1
+    notes: Gambelli et al. 2022 resolved the Methanocaldococcus villosus archaellum
+      filament as a polymer of alternating ArlB1 and ArlB2 archaellins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: VARIABLE
+  note: Archaellum filaments occur in archaeal lineages that encode the archaeal-type
+    flagellum; archaellum operons are patchily distributed across Archaea.
+  reference: DOI:10.3389/fmicb.2015.00023
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: ABSENT
+  note: Bacteria lack archaellin-based archaellum filaments and instead use non-homologous
+    bacterial flagellin filaments or type IV pili.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:667126
+  taxon_label: Methanocaldococcus villosus
+  note: Source archaeon for a high-resolution heteropolymeric archaellum filament
+    structure built from alternating ArlB1 and ArlB2 subunits.
+  reference: DOI:10.1038/s41467-022-28337-1
+functions:
+- function_id: archaeal_swimming_motility
+  label: archaeal-type flagellum-dependent cell motility
+  grounding: GO:0097590
+  description: Rotation of the assembled archaellum filament propels archaeal cells
+    through liquid or across semi-solid surfaces.
+  evidence:
+  - reference: DOI:10.3389/fmicb.2015.00023
+    notes: Albers and Jarrell 2015 review archaellum rotation as the archaeal swimming
+      mechanism.
+evidence:
+- reference: DOI:10.3389/fmicb.2015.00023
+  notes: 'Albers SV and Jarrell KF 2015, The archaellum: how Archaea swim, Frontiers
+    in Microbiology.'
+- reference: DOI:10.1038/s41467-022-28337-1
+  notes: Gambelli L et al. 2022, An archaellum filament composed of two alternating
+    subunits, Nature Communications.
+causal_graphs:
+- graph_id: archaellin_filament_rotation
+  title: Archaellins assemble into a rotating motility filament
+  description: Prearchaellins are matured and glycosylated before archaellin subunits
+    assemble into a helical extracellular filament that is rotated by the basal archaellum
+    motor to generate archaeal swimming motility.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records prearchaellin maturation, filament assembly, and
+    motor-driven rotation without asserting the full basal motor, envelope anchor,
+    or chemotaxis-control architecture.
+  nodes:
+  - node_id: prearchaellin
+    label: prearchaellins
+    node_type: GENE_OR_PROTEIN
+  - node_id: arlk_pibd
+    label: PibD/FlaK prepilin peptidase
+    node_type: GENE_OR_PROTEIN
+  - node_id: archaellins
+    label: mature archaellins
+    node_type: GENE_OR_PROTEIN
+    component_ref: archaellins
+  - node_id: archaellum_filament
+    label: archaeal-type flagellum filament
+    node_type: STRUCTURE
+    grounding: cellstructuremech:archaeal_type_flagellum_filament
+  - node_id: arli_arlj_motor
+    label: ArlI/ArlJ motor core
+    node_type: GENE_OR_PROTEIN
+  - node_id: motility
+    label: archaeal-type flagellum-dependent cell motility
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0097590
+  edges:
+  - subject: arlk_pibd
+    predicate: matures
+    object: prearchaellin
+    description: A type-IV-prepilin-peptidase-like enzyme cleaves prearchaellins before
+      they assemble into the filament.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2015.00023
+      notes: Albers and Jarrell 2015 review class-3 signal-peptide processing of prearchaellins
+        by PibD or FlaK-like enzymes.
+  - subject: archaellins
+    predicate: polymerize into
+    object: archaellum_filament
+    description: Mature archaellin subunits assemble into the helical extracellular
+      filament.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-28337-1
+      notes: Gambelli et al. 2022 solved a Methanocaldococcus villosus filament made
+        from alternating ArlB1 and ArlB2 subunits.
+  - subject: arli_arlj_motor
+    predicate: assembles and rotates
+    object: archaellum_filament
+    description: The basal ArlI/ArlJ motor core powers filament assembly and rotation
+      by ATP hydrolysis.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2015.00023
+      notes: Albers and Jarrell 2015 review FlaI/ArlI as the ATPase that powers archaellum
+        assembly and rotation.
+  - subject: archaellum_filament
+    predicate: drives
+    object: motility
+    description: Rotation of the assembled external filament propels archaeal cells.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2015.00023
+      notes: Albers and Jarrell 2015 describe filament rotation as the basis of archaellum-dependent
+        swimming.
+discussions:
+- discussion_id: resolve_archaellin_family_grounding
+  prompt: Resolve exact source-neutral grounding for filament-forming archaellins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#archaellins
+  rationale: This first filament record follows reviewed Arl/Fla nomenclature but
+    leaves the full archaellin subunit class label-only rather than asserting a broad
+    type-IV pilin family or a lineage-specific archaellin accession as an exact source-neutral
+    grounding.
+  evidence:
+  - reference: DOI:10.1038/s41467-022-28337-1
+    notes: Gambelli et al. 2022 resolved one filament with alternating ArlB1 and ArlB2
+      archaellins.
+  posed_by: codex
+  posed_date: '2026-09-23'
+- discussion_id: exclude_motor_from_filament_components
+  prompt: ArlI/ArlJ motor proteins are associated assembly and rotation machinery
+    rather than archaellum filament constituents.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#archaellins
+  - causal_graphs#archaellin_filament_rotation
+  rationale: The filament is the extracellular polymer of archaellin subunits. The
+    basal motor powers assembly and rotates the polymer but is not itself part of
+    the filament.
+  evidence:
+  - reference: DOI:10.3389/fmicb.2015.00023
+    notes: Albers and Jarrell 2015 distinguish the external archaellin filament from
+      the basal assembly and rotation machinery.
+  posed_by: codex
+  posed_date: '2026-09-23'
+  resolved_date: '2026-09-23'
