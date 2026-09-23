@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_secretion_system_contractile_sheath.yaml
+  slug: type_vi_secretion_system_contractile_sheath
+session:
+  id: 2026-09-23T062724Z-codex-7e24b0
+  timestamp: '2026-09-23T06:27:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added type VI secretion system contractile sheath record
+  details: Created a PROPOSED cellstructuremech:type_vi_secretion_system_contractile_sheath
+    record for the TssB/TssC sheath, with GO whole-system parthood, TssB and TssC constituent
+    rows, ClpV-associated recycling machinery, bacterial taxonomic scope, a Vibrio cholerae
+    canonical example, a contractile firing function, a DOI-backed sheath extension/contraction/recycling
+    graph, and a curation discussion for ungrounded protein families.
