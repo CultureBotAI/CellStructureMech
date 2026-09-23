@@ -33,6 +33,14 @@ curation_history:
   changes: Replaced the invalid bare components discussion anchor with the concrete
     bacterial SRP targeting graph anchor.
   llm_assisted: true
+- timestamp: '2026-09-23T04:32:49Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #1353 by narrowing the SRP RNA role to RNA scaffold and SRP-FtsY
+    receptor handoff, and resolved #1354 by rewording the protein targeting function
+    so ribosome-nascent-chain complexes carry rather than encode membrane-protein
+    substrates.'
+  llm_assisted: true
 synonyms:
 - synonym_text: SRP
   synonym_type: EXACT_SYNONYM
@@ -51,8 +59,8 @@ components:
   component_role: CONSTITUENT
   grounding: SO:0000590
   essentiality: UNKNOWN
-  role: RNA scaffold that binds the SRP54/Ffh GTPase and contributes to signal-sequence
-    recognition and receptor handoff.
+  role: RNA scaffold that binds the SRP54/Ffh GTPase and promotes bacterial SRP-FtsY
+    receptor handoff.
   evidence:
   - reference: SO:0000590
     notes: SO:0000590 is the Sequence Ontology term for signal-recognition-particle
@@ -98,8 +106,8 @@ functions:
 - function_id: protein_targeting_to_membrane
   label: protein targeting to membrane
   grounding: GO:0006612
-  description: The bacterial SRP targets ribosome-nascent-chain complexes encoding
-    inner-membrane proteins to the cytoplasmic-membrane translocon.
+  description: The bacterial SRP targets ribosome-nascent-chain complexes carrying
+    inner-membrane protein substrates to the cytoplasmic-membrane translocon.
   evidence:
   - reference: GO:0006612
     notes: GO:0006612 is the Gene Ontology biological-process term for protein targeting
