@@ -26,6 +26,12 @@ curation_history:
   changes: Corrected expansion-history wording to describe the single curated heavy-chain
     component and narrowed graph scope notes to avoid unsupported subcomplex classes.
   llm_assisted: true
+- timestamp: '2026-09-23T10:55:55Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1384 review issue #1385 by changing the inner-arm heavy-chain
+    graph edge from assembly to static parthood.'
+  llm_assisted: true
 parent_structures:
 - GO:0005858
 part_of:
@@ -110,9 +116,10 @@ causal_graphs:
     grounding: GO:0051012
   edges:
   - subject: inner_arm_dynein_heavy_chains
-    predicate: assemble into
+    predicate: are part of
     object: inner_dynein_arm
-    description: Dynein heavy chains are constituent chains of the inner dynein arm.
+    description: Inner-arm dynein heavy chains are motor-chain constituents of the
+      inner dynein arm.
     evidence:
     - reference: GO:0036156
       notes: GO describes inner dynein arms as containing a set of dynein heavy chains

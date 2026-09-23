@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/inner_dynein_arm.yaml
+  slug: inner_dynein_arm
+session:
+  id: 2026-09-23T105609Z-codex-ca8b08
+  timestamp: '2026-09-23T10:56:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1385
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1386
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1384
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  summary: Address inner dynein arm PR review
+  details: 'Resolved PR #1384 review issues #1385 and #1386 by narrowing the heavy-chain graph
+    edge to static parthood and by moving inner-arm isoform follow-up from the parent axoneme
+    TODO to the new GO:0036156 child record.'
