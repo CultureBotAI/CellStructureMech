@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/archaeal_type_flagellum_motor.yaml
+  slug: archaeal_type_flagellum_motor
+session:
+  id: 2026-09-23T052726Z-codex-48afce
+  timestamp: '2026-09-23T05:27:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added archaeal-type flagellum motor record
+  details: Created a PROPOSED cellstructuremech:archaeal_type_flagellum_motor record for the
+    ATP-powered basal motor of the archaeal-type flagellum, with ArlI-ArlJ, ArlH, ArlF-ArlG,
+    and ArlX-ArlCDE components, archaeal and bacterial taxonomic scope, Sulfolobus and Pyrococcus
+    examples, ATP-powered assembly and rotation functions, a DOI-backed assembly graph, and
+    curation discussions for ungrounded families and the filament boundary.
