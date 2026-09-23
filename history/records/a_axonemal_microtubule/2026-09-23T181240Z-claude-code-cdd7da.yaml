@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+  slug: a_axonemal_microtubule
+session:
+  id: 2026-09-23T181240Z-claude-code-cdd7da
+  timestamp: '2026-09-23T18:12:40Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1415
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1414
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address A-tubule inner-sheath review
+  details: 'Resolved PR #1414 review issue #1415 by adding GO:0160111 as an explicit child
+    of the A axonemal microtubule and narrowing the remaining A-tubule TODO to non-inner-sheath
+    MIP positions plus unresolved protofilament and attachment geometry.'

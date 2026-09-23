@@ -24,6 +24,12 @@ curation_history:
   changes: 'Resolved PR #1411 issue #1412 by adding radial-spoke, inner-dynein-arm
     and outer-dynein-arm A-tubule attachment nodes and edges.'
   llm_assisted: true
+- timestamp: '2026-09-23T18:12:28Z'
+  curator: codex
+  action: ADD_A_TUBULE_INNER_SHEATH_CHILD
+  changes: 'Resolved PR #1414 issue #1415 by linking GO:0160111 from the A-tubule
+    parent and narrowing the remaining A-tubule MIP TODO.'
+  llm_assisted: true
 synonyms:
 - synonym_text: A tubule
   synonym_type: BROAD_SYNONYM
@@ -32,6 +38,8 @@ parent_structures:
 - GO:0005879
 part_of:
 - GO:0097545
+has_part:
+- GO:0160111
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
@@ -83,8 +91,9 @@ causal_graphs:
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: This graph records coarse A-tubule parthood and leaves exact A1-A13
-    protofilament boundaries, A-tubule MIP positions, radial-spoke and dynein-arm
-    attachment geometry, tubulin-family groundings and copy numbers for later curation.
+    protofilament boundaries, non-inner-sheath A-tubule MIP positions, radial-spoke
+    and dynein-arm attachment geometry, tubulin-family groundings and copy numbers
+    for later curation.
   nodes:
   - node_id: a_axonemal_microtubule
     label: A axonemal microtubule
@@ -193,16 +202,17 @@ causal_graphs:
         doublets.
 discussions:
 - discussion_id: resolve_a_tubule_protofilaments_and_mips
-  prompt: Resolve exact A1-A13 protofilament boundaries, A-tubule MIP positions, radial-spoke
-    and dynein-arm attachment geometry, source-neutral tubulin-family groundings and
-    copy numbers for the A axonemal microtubule.
+  prompt: Resolve exact A1-A13 protofilament boundaries, non-inner-sheath A-tubule
+    MIP positions, radial-spoke and dynein-arm attachment geometry, source-neutral
+    tubulin-family groundings and copy numbers for the A axonemal microtubule.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - causal_graphs#chlamydomonas_a_tubule_doublet_scaffold
-  rationale: GO exactly identifies the A axonemal microtubule, but this pass curates
-    only its coarse role in the outer doublet and leaves exact protofilament, MIP,
-    radial-spoke and dynein-arm attachment placement unresolved.
+  rationale: GO exactly identifies the A axonemal microtubule and GO:0160111 now captures
+    the A-tubule inner sheath, but this pass curates only the A tubule's coarse role
+    in the outer doublet and leaves exact protofilament, non-inner-sheath MIP, radial-spoke
+    and dynein-arm attachment placement unresolved.
   evidence:
   - reference: DOI:10.1016/j.cell.2019.09.030
     notes: Ma et al. 2019 resolved the Chlamydomonas doublet lattice and several A-tubule-associated

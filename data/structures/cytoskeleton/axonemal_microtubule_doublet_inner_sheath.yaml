@@ -27,6 +27,12 @@ curation_history:
   changes: 'Resolved PR #1393 review issue #1395 by replacing unsupported one-half
     descriptions on A- and B-tubule inner-sheath graph edges.'
   llm_assisted: true
+- timestamp: '2026-09-23T18:02:19Z'
+  curator: codex
+  action: ADD_A_TUBULE_INNER_SHEATH_CHILD
+  changes: Linked GO:0160111 to its own child record and narrowed the remaining inner-sheath
+    child-record TODO to GO:0160112.
+  llm_assisted: true
 part_of:
 - GO:0097545
 has_part:
@@ -191,17 +197,15 @@ discussions:
       did not verify source-neutral family groundings for each one.
   posed_by: codex
   posed_date: '2026-09-23'
-- discussion_id: resolve_a_b_inner_sheath_children
-  prompt: Decide whether GO:0160111 and GO:0160112 should become separate A- and B-tubule
-    inner-sheath child records after their conserved MIP sets are reviewed.
+- discussion_id: resolve_b_inner_sheath_child_record
+  prompt: Decide whether GO:0160112 should become a separate B-tubule inner-sheath
+    child record after its conserved MIP set is reviewed.
   kind: CURATION_TODO
   status: OPEN
-  rationale: GO exactly identifies the A- and B-tubule inner sheaths, but the present
-    GO:0160110 record keeps them as child GO terms while their component boundaries
-    and taxon-general MIP family identities remain unresolved.
+  rationale: GO exactly identifies the B-tubule inner sheath, but the present GO:0160110
+    record keeps it as a child GO term while its component boundaries and taxon-general
+    MIP family identities remain unresolved.
   evidence:
-  - reference: GO:0160111
-    notes: Gene Ontology cellular-component term for the axonemal A tubule inner sheath.
   - reference: GO:0160112
     notes: Gene Ontology cellular-component term for the axonemal B tubule inner sheath.
   posed_by: codex
