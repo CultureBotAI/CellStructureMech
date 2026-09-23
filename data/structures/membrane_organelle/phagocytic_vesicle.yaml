@@ -28,6 +28,19 @@ curation_history:
     proteomics method supported by PMID:16926386 and resolved #1298 by adding GO-grounded
     early-phagosome and phagolysosome states to the maturation graph.'
   llm_assisted: true
+- timestamp: '2026-09-23T18:55:49Z'
+  curator: codex
+  action: ADD_PHAGOCYTIC_VESICLE_MEMBRANE_CHILD
+  changes: Linked GO:0030670 to its own phagocytic vesicle membrane child record while
+    leaving phagocytic vesicle topology and maturation relationships on the parent.
+  llm_assisted: true
+- timestamp: '2026-09-23T19:06:30Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1418 review issue #1419 by renaming the parent phagocytic
+    vesicle lipid component, marking it reviewed-label-only, and leaving GO:0030670
+    as the exact child membrane structure.'
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 has_part:
@@ -40,22 +53,25 @@ synonyms:
 xrefs:
 - uniprot.location:SL-0206
 components:
-- component_id: phagocytic_vesicle_membrane
-  label: phagocytic vesicle membrane
+- component_id: phagocytic_vesicle_lipid_bilayer
+  label: phagocytic vesicle lipid bilayer
   component_type: LIPID
   component_role: CONSTITUENT
-  grounding: GO:0030670
   essentiality: ESSENTIAL
-  role: Lipid-bilayer boundary that encloses phagocytosed cargo inside a phagocytic
-    vesicle and is remodeled during phagosome maturation.
+  role: Lipid-bilayer material that forms the phagocytic vesicle membrane boundary
+    around ingested particulate cargo.
   evidence:
   - reference: GO:0030670
-    notes: GO:0030670 identifies the phagocytic vesicle membrane as the lipid bilayer
-      surrounding a phagocytic vesicle.
+    notes: GO:0030670 identifies the phagocytic vesicle membrane surrounding a phagocytic
+      vesicle.
   - reference: uniprot.location:SL-0206
     notes: UniProt Subcellular Location SL-0206 identifies the phagosome as a phagocytic
       cell-specific membrane-bounded vesicle formed after uptake of extracellular
       material.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030670 identifies the whole phagocytic vesicle membrane; no
+    separate source-neutral CURIE was curated for the generic lipid constituent of
+    that membrane.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:44689
   taxon_label: Dictyostelium discoideum
@@ -143,7 +159,6 @@ causal_graphs:
     label: phagocytic vesicle membrane
     node_type: STRUCTURE
     grounding: GO:0030670
-    component_ref: phagocytic_vesicle_membrane
   - node_id: phagocytic_vesicle_lumen
     label: phagocytic vesicle lumen
     node_type: CELLULAR_LOCALIZATION
@@ -255,7 +270,7 @@ discussions:
   status: RESOLVED
   attaches_to:
   - record
-  - components#phagocytic_vesicle_membrane
+  - components#phagocytic_vesicle_lipid_bilayer
   rationale: The generic phagocytic vesicle is defined by a membrane-bounded vesicle
     made by phagocytosis. Rab GTPases, V-ATPases, proteases, and actin-associated
     factors associate with phagosomes in maturation-stage-specific ways, so the first

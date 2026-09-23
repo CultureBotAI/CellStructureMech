@@ -8450,6 +8450,11 @@
           "cosine_similarity": 0.7932537
         },
         {
+          "identifier": "GO:0030670",
+          "label": "phagocytic vesicle membrane",
+          "cosine_similarity": 0.76383189
+        },
+        {
           "identifier": "GO:0030668",
           "label": "apicomplexan dense granule membrane",
           "cosine_similarity": 0.75943737
@@ -8463,11 +8468,6 @@
           "identifier": "GO:0020026",
           "label": "apicomplexan dense granule",
           "cosine_similarity": 0.75926637
-        },
-        {
-          "identifier": "GO:0031410",
-          "label": "cytoplasmic vesicle",
-          "cosine_similarity": 0.75718938
         }
       ]
     },
@@ -9251,29 +9251,60 @@
       "label": "phagocytic vesicle",
       "neighbors": [
         {
+          "identifier": "GO:0030670",
+          "label": "phagocytic vesicle membrane",
+          "cosine_similarity": 0.96836723
+        },
+        {
           "identifier": "GO:0031410",
           "label": "cytoplasmic vesicle",
-          "cosine_similarity": 0.81471391
+          "cosine_similarity": 0.81760261
         },
         {
           "identifier": "GO:0030659",
           "label": "cytoplasmic vesicle membrane",
-          "cosine_similarity": 0.80603163
+          "cosine_similarity": 0.81139143
         },
         {
           "identifier": "GO:0030666",
           "label": "endocytic vesicle membrane",
-          "cosine_similarity": 0.79888551
+          "cosine_similarity": 0.8050466
         },
         {
           "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
           "label": "multivesicular body intraluminal vesicle",
-          "cosine_similarity": 0.79774388
+          "cosine_similarity": 0.8029908
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030670",
+      "label": "phagocytic vesicle membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0045335",
+          "label": "phagocytic vesicle",
+          "cosine_similarity": 0.96836723
+        },
+        {
+          "identifier": "GO:0030659",
+          "label": "cytoplasmic vesicle membrane",
+          "cosine_similarity": 0.87511607
+        },
+        {
+          "identifier": "GO:0030662",
+          "label": "coated vesicle membrane",
+          "cosine_similarity": 0.87298576
+        },
+        {
+          "identifier": "GO:0030666",
+          "label": "endocytic vesicle membrane",
+          "cosine_similarity": 0.86890394
         },
         {
           "identifier": "GO:0012507",
           "label": "ER to Golgi transport vesicle membrane",
-          "cosine_similarity": 0.7928637
+          "cosine_similarity": 0.86400416
         }
       ]
     },
@@ -10341,6 +10372,11 @@
           "cosine_similarity": 0.78141624
         },
         {
+          "identifier": "GO:0030670",
+          "label": "phagocytic vesicle membrane",
+          "cosine_similarity": 0.77791593
+        },
+        {
           "identifier": "GO:0031410",
           "label": "cytoplasmic vesicle",
           "cosine_similarity": 0.77369477
@@ -10353,12 +10389,7 @@
         {
           "identifier": "GO:0045335",
           "label": "phagocytic vesicle",
-          "cosine_similarity": 0.75846388
-        },
-        {
-          "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
-          "label": "multivesicular body intraluminal vesicle",
-          "cosine_similarity": 0.7581437
+          "cosine_similarity": 0.76369774
         }
       ]
     },
