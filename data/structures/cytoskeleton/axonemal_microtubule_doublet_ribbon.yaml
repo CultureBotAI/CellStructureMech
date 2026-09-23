@@ -20,6 +20,12 @@ curation_history:
     scope, A-tubule ribbon stabilization function, GO and DOI evidence, a nonmechanistic
     ribbon graph, and a ribbon MIP-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-23T13:34:46Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Addressed PR #1398 review issue #1399 by adding an evidence-backed stabilizes
+    edge to the axonemal doublet ribbon graph.'
+  llm_assisted: true
 part_of:
 - GO:0097545
 components:
@@ -158,6 +164,18 @@ causal_graphs:
     - reference: GO:0160115
       notes: GO places the axonemal microtubule doublet ribbon within the axonemal
         doublet microtubule.
+  - subject: axonemal_microtubule_doublet_ribbon
+    predicate: stabilizes
+    object: axonemal_doublet_microtubule
+    description: The A11-A13 ribbon and its associated MIPs stabilize the axonemal
+      doublet at the boundary between the A- and B-tubule lumens.
+    evidence:
+    - reference: GO:0160115
+      notes: GO defines the ribbon as A11-A13 plus associated MIPs that stabilize
+        those protofilaments within the axonemal doublet.
+    - reference: DOI:10.1242/jcs.20.2.405
+      notes: Linck 1976 found that biochemical extraction of flagellar doublets leaves
+        stable three-protofilament ribbons with 16-nm axial repeats.
 discussions:
 - discussion_id: resolve_ribbon_mip_groundings
   prompt: Resolve exact Rib72 and other axonemal doublet ribbon MIP family groundings,
