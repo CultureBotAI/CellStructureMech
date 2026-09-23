@@ -26,6 +26,19 @@ curation_history:
   changes: Generalized the projection-subcomplex TODO so it does not name Chlamydomonas
     C1/C2 projection classes left unsupported by the current evidence set.
   llm_assisted: true
+- timestamp: '2026-09-23T10:24:59Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1380 review issues #1381 and #1382 by narrowing the central-pair
+    projection edge to static parthood and splitting the bridge edge into explicit
+    C1 and C2 endpoints.'
+  llm_assisted: true
+- timestamp: '2026-09-23T10:27:25Z'
+  curator: codex
+  action: FIX_REVIEW_YAML_ALIASES
+  changes: 'Resolved PR #1380 review issue #1383 by removing YAML anchors from duplicated
+    central-pair bridge evidence.'
+  llm_assisted: true
 part_of:
 - GO:0005930
 components:
@@ -180,10 +193,10 @@ causal_graphs:
     - reference: GO:1990720
       notes: GO places the C2 axonemal microtubule within the axonemal central pair.
   - subject: central_pair_projections
-    predicate: decorate
-    object: axonemal_central_pair
-    description: Central-pair projections are associated structures of the C1 and
-      C2 axonemal microtubules.
+    predicate: are part of
+    object: axonemal_central_apparatus
+    description: Central-pair projections are associated structures of the axonemal
+      central apparatus.
     evidence:
     - reference: GO:1990716
       notes: GO identifies central pair projections as associated structures of the
@@ -192,9 +205,19 @@ causal_graphs:
       notes: Nicastro et al. 2006 resolved asymmetric central-pair densities in Chlamydomonas
         axonemes.
   - subject: central_pair_bridges
-    predicate: link
-    object: axonemal_central_pair
-    description: Central-pair bridges connect the two central microtubules.
+    predicate: connect to
+    object: c1_axonemal_microtubule
+    description: Central-pair bridges link the C1 axonemal microtubule to the C2 axonemal
+      microtubule.
+    evidence:
+    - reference: GO:1990716
+      notes: GO includes bridges linking the two central pair tubules in the axonemal
+        central apparatus.
+  - subject: central_pair_bridges
+    predicate: connect to
+    object: c2_axonemal_microtubule
+    description: Central-pair bridges link the C2 axonemal microtubule to the C1 axonemal
+      microtubule.
     evidence:
     - reference: GO:1990716
       notes: GO includes bridges linking the two central pair tubules in the axonemal
