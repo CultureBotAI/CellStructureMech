@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>spore inner membrane · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>spore inner membrane</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0140549"><code>GO:0140549</code></a> · SPORE · MEMBRANE · <span class="status">PROPOSED</span></p>
+<p class="definition">The membrane surrounding the spore core (endospore core) that separates it from its external environment. <small>[<a href="http://purl.obolibrary.org/obo/GO_0140549"><code>GO:0140549</code></a>]</small></p>
+<p><strong>Synonyms:</strong> spore membrane</p>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1239"><code>NCBITaxon:1239</code></a> Bacillota — <strong>COMMON</strong>: Spore inner membranes surround the dormant core in endospore-forming Bacillota lineages, while many non-sporulating Bacillota lack the endospore pathway. [<a href="https://doi.org/10.1038/nrmicro2921"><code>DOI:10.1038/nrmicro2921</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1423"><code>NCBITaxon:1423</code></a> <em>Bacillus subtilis</em> — Classical bacterial endospore model in which the mature core is surrounded by the spore inner membrane and external cortex and coat layers. [<a href="https://doi.org/10.1038/nrmicro2921"><code>DOI:10.1038/nrmicro2921</code></a>]</li></ul>
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-spore_inner_membrane_core_boundary">Spore inner membrane separates the endospore core <small>(FUNCTION)</small></h3>
+<p>The spore inner membrane surrounds the endospore core and separates that dormant interior from the mature-spore exterior.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>spore inner membrane</td><td>surrounds</td><td>endospore core</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140549"><code>GO:0140549</code></a> <small>GO:0140549 defines the spore inner membrane by its position around the endospore core.</small></li></ul></td></tr>
+<tr><td>spore inner membrane</td><td>separates endospore core from</td><td>mature-spore exterior</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140549"><code>GO:0140549</code></a> <small>GO:0140549 defines the spore inner membrane as the membrane that separates the endospore core from its external environment.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the spore inner membrane separate from the generic UniProt Spore membrane location, the forespore membrane, the outer endospore membrane, and non-bacterial prospore membranes. <small>GO:0140549 denotes the bacterial membrane surrounding the endospore core, GO:0043594 denotes the separate outer endospore membrane between cortex and coat, GO:0005628 denotes a fungal ascospore-type prospore membrane, and UniProt SL-0363 is a broader spore membrane location without a GO mapping.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140549"><code>GO:0140549</code></a> <small>Gene Ontology cellular-component term for the spore inner membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0016020"><code>GO:0016020</code></a> <small>Gene Ontology cellular-component term for membrane parentage.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0070477"><code>GO:0070477</code></a> <small>Gene Ontology cellular-component term for the endospore core surrounded by the spore inner membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0043595"><code>GO:0043595</code></a> <small>Gene Ontology cellular-component term for the surrounding endospore cortex.</small></li><li><code>uniprot.location:SL-0363</code> <small>UniProt Subcellular Location SL-0363 identifies a generic Spore membrane location, records spore inner membrane as an alternate name, and does not map the location to GO.</small></li><li><a href="https://doi.org/10.1038/nrmicro2921"><code>DOI:10.1038/nrmicro2921</code></a> <small>McKenney, Driks and Eichenberger 2012, The Bacillus subtilis endospore: assembly and functions of the multilayered coat, Nature Reviews Microbiology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-22T23:52:12Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-22T23:52:56Z</code> codex · EXPANDED_RECORD — Added the broad GO synonym, membrane parentage, Bacillota distribution, a Bacillus subtilis example, GO/UniProt/literature evidence, a nonmechanistic mature-spore topology graph, and an inner-membrane boundary discussion.</li><li><code>2026-09-23T00:05:28Z</code> codex · ADDRESS_REVIEW — Resolved #1336 by correcting the UniProt SL-0363 scope note to leave broad-synonym provenance on GO:0140549, and resolved #1337 by narrowing the causal graph to inner-membrane topology.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/spore/spore_inner_membrane.yaml"><code>data/structures/spore/spore_inner_membrane.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

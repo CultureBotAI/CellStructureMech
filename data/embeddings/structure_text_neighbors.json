@@ -7256,9 +7256,9 @@
           "cosine_similarity": 0.76920508
         },
         {
-          "identifier": "GO:0043594",
-          "label": "outer endospore membrane",
-          "cosine_similarity": 0.76254451
+          "identifier": "GO:0140549",
+          "label": "spore inner membrane",
+          "cosine_similarity": 0.76255876
         }
       ]
     },
@@ -13544,14 +13544,14 @@
           "cosine_similarity": 0.86368714
         },
         {
+          "identifier": "GO:0140549",
+          "label": "spore inner membrane",
+          "cosine_similarity": 0.85913049
+        },
+        {
           "identifier": "GO:0043594",
           "label": "outer endospore membrane",
           "cosine_similarity": 0.8459686
-        },
-        {
-          "identifier": "GO:0090642",
-          "label": "microsporidian-type exospore",
-          "cosine_similarity": 0.80334632
         }
       ]
     },
@@ -13632,6 +13632,11 @@
           "cosine_similarity": 0.84423622
         },
         {
+          "identifier": "GO:0140549",
+          "label": "spore inner membrane",
+          "cosine_similarity": 0.82440803
+        },
+        {
           "identifier": "GO:0043591",
           "label": "endospore external encapsulating structure",
           "cosine_similarity": 0.82001717
@@ -13640,11 +13645,6 @@
           "identifier": "GO:0043594",
           "label": "outer endospore membrane",
           "cosine_similarity": 0.81413116
-        },
-        {
-          "identifier": "GO:0070056",
-          "label": "prospore membrane leading edge",
-          "cosine_similarity": 0.78630105
         }
       ]
     },
@@ -13704,9 +13704,9 @@
           "cosine_similarity": 0.81350699
         },
         {
-          "identifier": "GO:0070477",
-          "label": "endospore core",
-          "cosine_similarity": 0.80334632
+          "identifier": "GO:0140549",
+          "label": "spore inner membrane",
+          "cosine_similarity": 0.8056402
         }
       ]
     },
@@ -13714,6 +13714,11 @@
       "identifier": "GO:0043594",
       "label": "outer endospore membrane",
       "neighbors": [
+        {
+          "identifier": "GO:0140549",
+          "label": "spore inner membrane",
+          "cosine_similarity": 0.94384212
+        },
         {
           "identifier": "GO:0005628",
           "label": "prospore membrane",
@@ -13733,11 +13738,6 @@
           "identifier": "GO:0043591",
           "label": "endospore external encapsulating structure",
           "cosine_similarity": 0.84506728
-        },
-        {
-          "identifier": "GO:0030666",
-          "label": "endocytic vesicle membrane",
-          "cosine_similarity": 0.83198595
         }
       ]
     },
@@ -13818,6 +13818,11 @@
           "cosine_similarity": 0.87075837
         },
         {
+          "identifier": "GO:0140549",
+          "label": "spore inner membrane",
+          "cosine_similarity": 0.86130935
+        },
+        {
           "identifier": "GO:0030662",
           "label": "coated vesicle membrane",
           "cosine_similarity": 0.80973192
@@ -13826,11 +13831,6 @@
           "identifier": "GO:0030666",
           "label": "endocytic vesicle membrane",
           "cosine_similarity": 0.80841307
-        },
-        {
-          "identifier": "GO:0030659",
-          "label": "cytoplasmic vesicle membrane",
-          "cosine_similarity": 0.80597604
         }
       ]
     },
@@ -13854,14 +13854,14 @@
           "cosine_similarity": 0.82508943
         },
         {
+          "identifier": "GO:0140549",
+          "label": "spore inner membrane",
+          "cosine_similarity": 0.81465162
+        },
+        {
           "identifier": "GO:0071682",
           "label": "endocytic vesicle lumen",
           "cosine_similarity": 0.79572236
-        },
-        {
-          "identifier": "GO:0106176",
-          "label": "clathrin-coated endocytic vesicle lumen",
-          "cosine_similarity": 0.79133812
         }
       ]
     },
@@ -13890,9 +13890,40 @@
           "cosine_similarity": 0.72967393
         },
         {
-          "identifier": "GO:0030659",
-          "label": "cytoplasmic vesicle membrane",
-          "cosine_similarity": 0.72427792
+          "identifier": "GO:0140549",
+          "label": "spore inner membrane",
+          "cosine_similarity": 0.72543467
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0140549",
+      "label": "spore inner membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0043594",
+          "label": "outer endospore membrane",
+          "cosine_similarity": 0.94384212
+        },
+        {
+          "identifier": "GO:0005628",
+          "label": "prospore membrane",
+          "cosine_similarity": 0.86130935
+        },
+        {
+          "identifier": "GO:0070477",
+          "label": "endospore core",
+          "cosine_similarity": 0.85913049
+        },
+        {
+          "identifier": "GO:0043595",
+          "label": "endospore cortex",
+          "cosine_similarity": 0.84277638
+        },
+        {
+          "identifier": "GO:0042601",
+          "label": "endospore-forming forespore",
+          "cosine_similarity": 0.82440803
         }
       ]
     }
