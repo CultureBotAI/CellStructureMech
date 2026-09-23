@@ -1926,7 +1926,7 @@
         {
           "identifier": "GO:0000940",
           "label": "outer kinetochore",
-          "cosine_similarity": 0.74256461
+          "cosine_similarity": 0.73594954
         }
       ]
     },
@@ -2503,14 +2503,14 @@
           "cosine_similarity": 0.82278094
         },
         {
-          "identifier": "GO:0000940",
-          "label": "outer kinetochore",
-          "cosine_similarity": 0.77771378
-        },
-        {
           "identifier": "GO:0000776",
           "label": "kinetochore",
           "cosine_similarity": 0.76863575
+        },
+        {
+          "identifier": "GO:0000940",
+          "label": "outer kinetochore",
+          "cosine_similarity": 0.76276885
         },
         {
           "identifier": "cellstructuremech:phuz_spindle",
@@ -2761,9 +2761,9 @@
           "cosine_similarity": 0.81657475
         },
         {
-          "identifier": "GO:0000940",
-          "label": "outer kinetochore",
-          "cosine_similarity": 0.80187489
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.80151561
         }
       ]
     },
@@ -2782,14 +2782,14 @@
           "cosine_similarity": 0.82278094
         },
         {
-          "identifier": "GO:0000940",
-          "label": "outer kinetochore",
-          "cosine_similarity": 0.79236535
-        },
-        {
           "identifier": "GO:0000776",
           "label": "kinetochore",
           "cosine_similarity": 0.78914112
+        },
+        {
+          "identifier": "GO:0000940",
+          "label": "outer kinetochore",
+          "cosine_similarity": 0.76622201
         },
         {
           "identifier": "GO:0160113",
@@ -10677,14 +10677,14 @@
       "label": "kinetoplast",
       "neighbors": [
         {
+          "identifier": "GO:0000940",
+          "label": "outer kinetochore",
+          "cosine_similarity": 0.79890323
+        },
+        {
           "identifier": "GO:0000776",
           "label": "kinetochore",
           "cosine_similarity": 0.79700616
-        },
-        {
-          "identifier": "GO:0000940",
-          "label": "outer kinetochore",
-          "cosine_similarity": 0.78545464
         },
         {
           "identifier": "GO:0120121",
@@ -11524,11 +11524,6 @@
           "cosine_similarity": 0.83009733
         },
         {
-          "identifier": "GO:0000940",
-          "label": "outer kinetochore",
-          "cosine_similarity": 0.78299185
-        },
-        {
           "identifier": "GO:0031262",
           "label": "Ndc80 complex",
           "cosine_similarity": 0.7825671
@@ -11537,6 +11532,11 @@
           "identifier": "GO:0000444",
           "label": "MIS12/MIND type complex",
           "cosine_similarity": 0.78215721
+        },
+        {
+          "identifier": "GO:0033551",
+          "label": "monopolin complex",
+          "cosine_similarity": 0.7790708
         }
       ]
     },
@@ -12291,7 +12291,7 @@
         {
           "identifier": "GO:0000940",
           "label": "outer kinetochore",
-          "cosine_similarity": 0.9390381
+          "cosine_similarity": 0.9309768
         },
         {
           "identifier": "GO:0000444",
@@ -12420,7 +12420,7 @@
         {
           "identifier": "GO:0000940",
           "label": "outer kinetochore",
-          "cosine_similarity": 0.82468898
+          "cosine_similarity": 0.82069473
         },
         {
           "identifier": "GO:0031262",
@@ -12583,14 +12583,14 @@
           "cosine_similarity": 0.7825671
         },
         {
-          "identifier": "GO:0000940",
-          "label": "outer kinetochore",
-          "cosine_similarity": 0.75890681
-        },
-        {
           "identifier": "GO:0031518",
           "label": "CBF3 complex",
           "cosine_similarity": 0.74714497
+        },
+        {
+          "identifier": "GO:0000940",
+          "label": "outer kinetochore",
+          "cosine_similarity": 0.74424125
         }
       ]
     },
@@ -12880,27 +12880,27 @@
         {
           "identifier": "GO:0000776",
           "label": "kinetochore",
-          "cosine_similarity": 0.9390381
+          "cosine_similarity": 0.9309768
         },
         {
           "identifier": "GO:0000444",
           "label": "MIS12/MIND type complex",
-          "cosine_similarity": 0.82468898
-        },
-        {
-          "identifier": "GO:0005876",
-          "label": "spindle microtubule",
-          "cosine_similarity": 0.80187489
-        },
-        {
-          "identifier": "GO:0005816",
-          "label": "spindle pole body",
-          "cosine_similarity": 0.79236535
+          "cosine_similarity": 0.82069473
         },
         {
           "identifier": "GO:0020023",
           "label": "kinetoplast",
-          "cosine_similarity": 0.78545464
+          "cosine_similarity": 0.79890323
+        },
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.78392566
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.76622201
         }
       ]
     },
