@@ -1,0 +1,175 @@
+identifier: GO:1990916
+label: Isp3 layer of spore wall
+structure_category: SPORE
+structure_kind: ENVELOPE_LAYER
+definition: The outermost layers of the spore wall, as described in Schizosaccharomyces
+  pombe.
+definition_source: GO:1990916
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T01:08:07Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T01:09:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ascospore-wall parthood, a reviewed-label-only Isp3 protein component,
+    Schizosaccharomyces pombe scope, a stress barrier function, GO/DOI evidence, a
+    nonmechanistic Isp3 layer topology graph, and boundary discussions for Isp3 component
+    grounding and Saccharomyces layer separation.
+  llm_assisted: true
+part_of:
+- GO:0005619
+components:
+- component_id: isp3_spore_wall_protein
+  label: Isp3 spore wall protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - isp3
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Isp3/Meu4 is a fission-yeast spore-wall protein needed for the
+    Isp3 layer, but no exact source-neutral InterPro, Pfam, NCBIfam, or GO protein-family
+    term was curated.
+  role: Major proteinaceous constituent of the outermost fission-yeast ascospore wall
+    layer.
+  evidence:
+  - reference: DOI:10.1091/mbc.E13-12-0731
+    notes: Fukunishi et al. 2014 identified p23 as the Isp3/Meu4 protein, found that
+      Isp3 remains firmly associated with the spore-wall fraction, and localized Isp3
+      to the outermost electron-dense layer by immunoelectron microscopy.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: The Isp3 layer is the outermost spore-wall layer directly characterized in
+    fission yeast; no broader fungal distribution is asserted in this first standalone
+    layer record.
+  reference: DOI:10.1091/mbc.E13-12-0731
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Fission-yeast model in which electron microscopy and immunoelectron microscopy
+    show Isp3 in the outermost spore-wall layer.
+  reference: DOI:10.1091/mbc.E13-12-0731
+functions:
+- function_id: outer_spore_wall_stress_barrier
+  label: outer spore-wall stress barrier
+  description: The Isp3-rich outer layer of the fission-yeast spore wall contributes
+    to resistance against heat, digestive-enzyme, and ethanol stress.
+  evidence:
+  - reference: DOI:10.1091/mbc.E13-12-0731
+    notes: Fukunishi et al. 2014 found decreased heat, digestive-enzyme, and ethanol
+      tolerance in isp3-deletion spores.
+evidence:
+- reference: GO:1990916
+  notes: Gene Ontology cellular-component term for the Schizosaccharomyces pombe Isp3
+    layer of the spore wall.
+- reference: GO:0005619
+  notes: Gene Ontology cellular-component term for the broader ascospore wall that
+    contains GO:1990916.
+- reference: DOI:10.1091/mbc.E13-12-0731
+  notes: Fukunishi et al. 2014, The fission yeast spore is coated by a proteinaceous
+    surface layer comprising mainly Isp3, Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: isp3_outer_spore_wall_layer
+  title: Isp3 builds the outer fission-yeast spore-wall layer
+  description: In Schizosaccharomyces pombe, the Isp3 spore-wall protein localizes
+    to and forms the outermost electron-dense layer of the ascospore wall, where the
+    layer contributes to spore stress resistance.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records mature-layer topology and Isp3 dependence, not upstream
+    regulation of isp3 expression or transport of Isp3 to the spore surface.
+  nodes:
+  - node_id: isp3_spore_wall_protein
+    label: Isp3 spore wall protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: isp3_spore_wall_protein
+  - node_id: isp3_layer
+    label: Isp3 layer of spore wall
+    node_type: STRUCTURE
+    grounding: GO:1990916
+  - node_id: ascospore_wall
+    label: ascospore wall
+    node_type: STRUCTURE
+    grounding: GO:0005619
+  - node_id: environmental_stress_resistance
+    label: spore environmental stress resistance
+    node_type: CAPACITY
+  edges:
+  - subject: isp3_spore_wall_protein
+    predicate: forms
+    object: isp3_layer
+    description: Isp3 is the main proteinaceous constituent of the fission-yeast spore-wall
+      layer and is required for the outer electron-dense layer to appear.
+    evidence:
+    - reference: DOI:10.1091/mbc.E13-12-0731
+      notes: Fukunishi et al. 2014 identified Isp3/Meu4 as the p23 spore-wall protein
+        and showed that the outermost electron-dense layer is absent from isp3-deletion
+        spores.
+  - subject: isp3_layer
+    predicate: is outermost layer of
+    object: ascospore_wall
+    description: GO defines the Isp3 layer as the outermost layers of the Schizosaccharomyces
+      pombe spore wall.
+    evidence:
+    - reference: GO:1990916
+      notes: GO:1990916 defines the Isp3 layer as the outermost layers of the Schizosaccharomyces
+        pombe spore wall.
+    - reference: GO:0005619
+      notes: GO places GO:1990916 as part of the ascospore wall.
+  - subject: isp3_layer
+    predicate: contributes to
+    object: environmental_stress_resistance
+    description: The Isp3-containing layer contributes to resistance of mature fission-yeast
+      spores to external stresses.
+    evidence:
+    - reference: DOI:10.1091/mbc.E13-12-0731
+      notes: Fukunishi et al. 2014 measured decreased heat, digestive-enzyme, and
+        ethanol tolerance when isp3 was deleted.
+discussions:
+- discussion_id: isp3_component_family_grounding
+  prompt: Resolve whether Isp3 has an exact source-neutral protein-family grounding
+    suitable for the component.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#isp3_spore_wall_protein
+  rationale: The component is curated as reviewed-label-only because this pass verified
+    the GO layer and Isp3 spore-wall role but did not find an exact InterPro, Pfam,
+    NCBIfam, or GO protein-family identifier for fission-yeast Isp3/Meu4.
+  evidence:
+  - reference: DOI:10.1091/mbc.E13-12-0731
+    notes: Fukunishi et al. 2014 identify Isp3/Meu4 as the major proteinaceous constituent
+      of the fission-yeast spore surface.
+  posed_by: codex
+  posed_date: '2026-09-23'
+- discussion_id: schizosaccharomyces_layer_boundary
+  prompt: Keep the Schizosaccharomyces Isp3 layer separate from the Saccharomyces
+    chitosan and dityrosine-rich ascospore-wall layers.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  - causal_graphs#isp3_outer_spore_wall_layer
+  rationale: GO:1990916 denotes the Schizosaccharomyces pombe Isp3 layer, whereas
+    GO:0005631 and GO:0005630 denote Saccharomyces chitosan and dityrosine spore-wall
+    layers.
+  resolution_note: Curated GO:1990916 as its own Schizosaccharomyces-focused record,
+    linked it to the broad ascospore wall by part_of, and left the Saccharomyces layers
+    for separate records.
+  evidence:
+  - reference: GO:1990916
+    notes: GO:1990916 identifies the Schizosaccharomyces pombe Isp3 layer.
+  - reference: GO:0005631
+    notes: GO:0005631 identifies the Saccharomyces spore-wall chitosan layer.
+  - reference: GO:0005630
+    notes: GO:0005630 identifies the Saccharomyces spore-wall dityrosine layer.
+  posed_by: codex
+  posed_date: '2026-09-23'
+  resolved_date: '2026-09-23'
