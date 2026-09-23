@@ -3816,6 +3816,15 @@
   "definition": "The ribonucleoprotein particle that translates mRNA into protein. The bacterial and archaeal 70S ribosome comprises a small (30S) subunit built on 16S rRNA, which decodes the mRNA, and a large (50S) subunit built on 23S and 5S rRNA, whose 23S rRNA catalyses peptide bond formation. This record details that 70S form and the functional core shared with the larger eukaryotic cytosolic 80S ribosome; it does not enumerate 80S-specific components."
  },
  {
+  "identifier": "GO:0048500",
+  "label": "signal recognition particle",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/signal_recognition_particle.html",
+  "definition": "A complex of protein and RNA which facilitates translocation of proteins across membranes."
+ },
+ {
   "identifier": "GO:0015935",
   "label": "small ribosomal subunit",
   "category": "RIBONUCLEOPROTEIN",

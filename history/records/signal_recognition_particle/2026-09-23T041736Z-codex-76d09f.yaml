@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/signal_recognition_particle.yaml
+  slug: signal_recognition_particle
+session:
+  id: 2026-09-23T041736Z-codex-76d09f
+  timestamp: '2026-09-23T04:17:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add signal recognition particle record
+  details: Added the GO:0048500 signal recognition particle record with GO/SO/DOI-backed SRP
+    RNA and Ffh/SRP54 core components, bacterial distribution, an Escherichia coli exemplar,
+    a protein-targeting function, a bacterial delivery graph, and recorded curation TODOs
+    for exact SRP family groundings and non-component FtsY/SecYEG boundary handling.
