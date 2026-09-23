@@ -26,6 +26,13 @@ curation_history:
     in so the structure points at the cilium-movement regulation process without regulating
     the regulation node itself.
   llm_assisted: true
+- timestamp: '2026-09-23T11:26:04Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1387 review issues #1388 and #1389 by renaming the graph
+    title so it does not say GO:0005931 regulates doublets and broadening the subunit-grounding
+    TODO to the complete 11-or-more-member N-DRC cohort.'
+  llm_assisted: true
 synonyms:
 - synonym_text: axonemal interdoublet link
   synonym_type: EXACT_SYNONYM
@@ -95,7 +102,7 @@ evidence:
     the Chlamydomonas ciliary nexin-dynein regulatory complex', PNAS.
 causal_graphs:
 - graph_id: chlamydomonas_axonemal_nexin_link_regulation
-  title: The axonemal nexin link connects and regulates doublets
+  title: The axonemal nexin link connects doublets
   description: In Chlamydomonas flagella, N-DRC subunits form an axonemal nexin link
     that connects neighboring outer doublet microtubules and contributes to dynein
     regulation.
@@ -154,19 +161,19 @@ causal_graphs:
         beat regulation.
 discussions:
 - discussion_id: resolve_axonemal_nexin_link_subunit_groundings
-  prompt: Resolve exact source-neutral groundings for DRC1/2/4 scaffold subunits and
-    DRC3/5-8/11 associated subunits.
+  prompt: Resolve exact source-neutral groundings for the full 11-or-more-member axonemal
+    N-DRC subunit cohort.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#axonemal_nexin_link_subunits
   rationale: GO exactly identifies the axonemal nexin link as a protein complex, but
     this curation pass did not verify exact InterPro, Pfam or other source-neutral
-    accessions for the Chlamydomonas DRC subunit families or their conserved ortholog
-    groups.
+    accessions for the complete 11-or-more-member Chlamydomonas N-DRC subunit set
+    or its conserved ortholog groups.
   evidence:
   - reference: DOI:10.1073/pnas.1910960116
-    notes: Gui et al. 2019 split the N-DRC into DRC1/2/4 core scaffold subunits and
-      DRC3/5-8/11 associated subunits.
+    notes: Gui et al. 2019 described the N-DRC as containing 11 or more subunits and
+      refined several scaffold and associated subunit positions.
   posed_by: codex
   posed_date: '2026-09-23'
