@@ -20,6 +20,12 @@ curation_history:
     GO and DOI evidence, a nonmechanistic budding-yeast spindle-microtubule architecture
     graph, and boundary and MAP curation discussions.
   llm_assisted: true
+- timestamp: '2026-09-23T20:11:05Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1423 by narrowing the canonical Saccharomyces cerevisiae example
+    to the serial-section electron-microscopy reconstruction supported by DOI:10.1083/jcb.129.6.1601.'
+  llm_assisted: true
 parent_structures:
 - GO:0005874
 part_of:
@@ -57,8 +63,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   note: Reference microbial eukaryote in which kinetochore and interpolar spindle
-    microtubules were reconstructed by serial-section electron microscopy and followed
-    in living cells.
+    microtubules were reconstructed by serial-section electron microscopy.
   reference: DOI:10.1083/jcb.129.6.1601
 functions:
 - function_id: chromosome_segregation
