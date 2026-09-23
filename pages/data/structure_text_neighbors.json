@@ -13467,6 +13467,11 @@
       "label": "ascospore wall",
       "neighbors": [
         {
+          "identifier": "GO:0005630",
+          "label": "dityrosine layer of spore wall",
+          "cosine_similarity": 0.9305905
+        },
+        {
           "identifier": "GO:1990916",
           "label": "Isp3 layer of spore wall",
           "cosine_similarity": 0.85093456
@@ -13485,11 +13490,37 @@
           "identifier": "GO:0090642",
           "label": "microsporidian-type exospore",
           "cosine_similarity": 0.81350699
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005630",
+      "label": "dityrosine layer of spore wall",
+      "neighbors": [
+        {
+          "identifier": "GO:0005619",
+          "label": "ascospore wall",
+          "cosine_similarity": 0.9305905
+        },
+        {
+          "identifier": "GO:1990916",
+          "label": "Isp3 layer of spore wall",
+          "cosine_similarity": 0.89086146
+        },
+        {
+          "identifier": "GO:0043591",
+          "label": "endospore external encapsulating structure",
+          "cosine_similarity": 0.8392116
+        },
+        {
+          "identifier": "GO:0043593",
+          "label": "endospore coat",
+          "cosine_similarity": 0.81209011
         },
         {
           "identifier": "GO:0043595",
           "label": "endospore cortex",
-          "cosine_similarity": 0.81328569
+          "cosine_similarity": 0.80666327
         }
       ]
     },
@@ -13518,9 +13549,9 @@
           "cosine_similarity": 0.82543772
         },
         {
-          "identifier": "GO:0090642",
-          "label": "microsporidian-type exospore",
-          "cosine_similarity": 0.79903313
+          "identifier": "GO:0005630",
+          "label": "dityrosine layer of spore wall",
+          "cosine_similarity": 0.81209011
         }
       ]
     },
@@ -13684,6 +13715,11 @@
       "label": "Isp3 layer of spore wall",
       "neighbors": [
         {
+          "identifier": "GO:0005630",
+          "label": "dityrosine layer of spore wall",
+          "cosine_similarity": 0.89086146
+        },
+        {
           "identifier": "GO:0005619",
           "label": "ascospore wall",
           "cosine_similarity": 0.85093456
@@ -13702,11 +13738,6 @@
           "identifier": "GO:0043595",
           "label": "endospore cortex",
           "cosine_similarity": 0.78409544
-        },
-        {
-          "identifier": "GO:0043593",
-          "label": "endospore coat",
-          "cosine_similarity": 0.77222745
         }
       ]
     },

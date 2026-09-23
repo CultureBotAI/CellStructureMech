@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/dityrosine_layer_of_spore_wall.yaml
+  slug: dityrosine_layer_of_spore_wall
+session:
+  id: 2026-09-23T014227Z-codex-dfc8bf
+  timestamp: '2026-09-23T01:42:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added dityrosine layer of spore wall
+  details: Created a standalone GO:0005630 dityrosine layer of spore wall record with ascospore-wall
+    parthood, a reviewed-label-only dityrosine-containing macromolecule component, Saccharomyces
+    cerevisiae scope, a stress-barrier function, GO and DOI evidence, a nonmechanistic topology
+    graph, and boundary discussions for macromolecule grounding and DIT1/DIT2 precursor enzymes.
+    Narrowed the parent GO:0005619 ascospore_wall open layer-splitting TODO to the remaining
+    Saccharomyces inner and chitosan layer records after splitting GO:0005630 into its own
+    YAML record.
