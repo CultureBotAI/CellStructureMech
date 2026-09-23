@@ -19,6 +19,13 @@ curation_history:
     GO/DOI evidence, a nonmechanistic layer topology graph, and boundary discussions
     for macromolecule grounding and precursor enzymes.
   llm_assisted: true
+- timestamp: '2026-09-23T01:52:35Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1342 review issue #1343 by tightening DOI:10.1073/pnas.91.10.4524
+    evidence notes so canonical-example and stress-resistance claims match the cited
+    literature.'
+  llm_assisted: true
 part_of:
 - GO:0005619
 components:
@@ -51,9 +58,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model in which biochemical and genetic studies defined the dityrosine-containing
-    macromolecule and its sporulation-specific biosynthetic precursors.
-  reference: DOI:10.1073/pnas.91.10.4524
+  note: Budding-yeast model in which a DL-dityrosine-containing macromolecule was
+    biochemically characterized from isolated ascospore walls.
+  reference: DOI:10.1016/S0021-9258(18)77231-1
 functions:
 - function_id: outer_ascospore_wall_stress_barrier
   label: outer ascospore-wall stress barrier
@@ -61,8 +68,9 @@ functions:
     Saccharomyces ascospore surface that resists adverse environmental conditions.
   evidence:
   - reference: DOI:10.1073/pnas.91.10.4524
-    notes: Briza et al. 1994 studied sporulation-specific DIT1 and DIT2 enzymes that
-      produce soluble LL-dityrosine-containing precursors of the yeast spore wall.
+    notes: Briza et al. 1994 describe dityrosine as a sporulation-specific yeast ascospore-wall
+      component essential for spore resistance to adverse environmental conditions
+      while defining DIT1/DIT2-dependent LL-dityrosine precursor synthesis.
   - reference: DOI:10.1128/MMBR.69.4.565-584.2005
     notes: Neiman 2005 reviews dityrosine as an outer spore-wall component needed
       for the resistant mature spore surface.

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/dityrosine_layer_of_spore_wall.yaml
+  slug: dityrosine_layer_of_spore_wall
+session:
+  id: 2026-09-23T015248Z-codex-4c83b0
+  timestamp: '2026-09-23T01:52:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1343
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1342
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Tightened dityrosine PNAS evidence notes
+  details: 'Addressed PR #1342 review issue #1343 by aligning DOI:10.1073/pnas.91.10.4524
+    notes with the specific claims they support. The canonical Saccharomyces cerevisiae example
+    now cites the 1990 DL-dityrosine-containing macromolecule characterization directly, while
+    the function evidence note explicitly ties the 1994 DIT1/DIT2 precursor paper to dityrosine
+    and spore resistance under adverse conditions.'
