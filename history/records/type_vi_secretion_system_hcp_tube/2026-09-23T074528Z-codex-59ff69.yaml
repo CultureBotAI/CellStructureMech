@@ -1,0 +1,17 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_secretion_system_hcp_tube.yaml
+  slug: type_vi_secretion_system_hcp_tube
+session:
+  id: 2026-09-23T074528Z-codex-59ff69
+  timestamp: '2026-09-23T07:45:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Grounded the Hcp graph spike node
+  details: Linked the Hcp tube causal graph spike node to cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex
+    so the Hcp-tube record points at the newly split VgrG/PAAR spike-complex record.

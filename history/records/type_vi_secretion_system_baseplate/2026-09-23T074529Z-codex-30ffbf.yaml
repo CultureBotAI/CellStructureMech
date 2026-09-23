@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_secretion_system_baseplate.yaml
+  slug: type_vi_secretion_system_baseplate
+session:
+  id: 2026-09-23T074529Z-codex-30ffbf
+  timestamp: '2026-09-23T07:45:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Resolved the T6SS spike-baseplate boundary note
+  details: Grounded the baseplate graph contractile-sheath node to cellstructuremech:type_vi_secretion_system_contractile_sheath
+    and resolved the future VgrG/PAAR spike boundary TODO now that the mature spike complex
+    has a separate record from the baseplate-localized VgrG constituent.
