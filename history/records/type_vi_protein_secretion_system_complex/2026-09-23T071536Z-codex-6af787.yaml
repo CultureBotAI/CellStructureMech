@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_protein_secretion_system_complex.yaml
+  slug: type_vi_protein_secretion_system_complex
+session:
+  id: 2026-09-23T071536Z-codex-6af787
+  timestamp: '2026-09-23T07:15:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Grounded the T6SS Hcp tube component
+  details: Linked the whole type VI secretion system component row for the Hcp inner tube
+    to cellstructuremech:type_vi_secretion_system_hcp_tube, converted that component from
+    a protein to a protein complex, retyped the corresponding graph node as a structure, added
+    the reciprocal has_part relation, and narrowed the subassembly-splitting TODO so it now
+    tracks only the VgrG/PAAR spike.
