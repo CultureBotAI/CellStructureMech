@@ -1,0 +1,204 @@
+identifier: GO:0036157
+label: outer dynein arm
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An axonemal dynein complex that forms the outer dynein arm on ciliary
+  and flagellar outer doublet microtubules and contains dynein heavy, intermediate
+  and light chains.
+definition_source: GO:0036157
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T08:54:33Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T08:55:37Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added axonemal dynein parentage and axoneme parthood, Chlamydomonas scope,
+    label-only outer-arm dynein chain components, microtubule-sliding function, GO
+    and DOI evidence, a nonmechanistic outer-arm motility graph, and a component-grounding
+    TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0005858
+part_of:
+- GO:0005930
+components:
+- component_id: outer_arm_dynein_heavy_chains
+  label: outer-arm dynein heavy chains
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the ciliary outer dynein arm
+    heavy-chain set was verified; broader dynein heavy-chain terms would also cover
+    dyneins outside GO:0036157.
+  role: Force-generating motor chains in the axonemal outer dynein arm.
+  evidence:
+  - reference: GO:0036157
+    notes: GO defines outer dynein arms as ciliary and flagellar outer-arm structures
+      that contain two to three heavy chains.
+  - reference: DOI:10.1126/science.1128618
+    notes: Nicastro et al. 2006 resolved dynein arms attached to Chlamydomonas outer
+      doublet microtubules by cryoelectron tomography.
+- component_id: outer_arm_dynein_intermediate_chains
+  label: outer-arm dynein intermediate chains
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the outer-arm dynein intermediate-chain
+    class was verified.
+  role: Intermediate chains in the axonemal outer dynein arm protein complex.
+  evidence:
+  - reference: GO:0036157
+    notes: GO defines outer dynein arms as complexes that contain two or more intermediate
+      chains.
+- component_id: outer_arm_dynein_light_chains
+  label: outer-arm dynein light chains
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the outer-arm dynein light-chain
+    cluster was verified.
+  role: Light-chain cohort of the axonemal outer dynein arm protein complex.
+  evidence:
+  - reference: GO:0036157
+    notes: GO defines outer dynein arms as complexes that contain a cluster of four
+      to eight light chains.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar axonemes carry outer dynein arms that have been structurally
+    characterized by cryoelectron tomography.
+  reference: DOI:10.1126/science.1128618
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose demembranated flagellar axonemes show outer dynein
+    arms attached to outer doublet microtubules.
+  reference: DOI:10.1126/science.1128618
+functions:
+- function_id: microtubule_sliding
+  label: microtubule sliding
+  grounding: GO:0051012
+  description: Outer dynein arms on Chlamydomonas axonemal doublets generate sliding
+    forces that are converted into flagellar bends.
+  evidence:
+  - reference: DOI:10.1126/science.1128618
+    notes: Nicastro et al. 2006 modeled how axonemal dynein arrangement on outer doublets
+      can generate microtubule sliding forces.
+evidence:
+- reference: GO:0036157
+  notes: Gene Ontology cellular-component term for the outer dynein arm.
+- reference: GO:0005858
+  notes: Gene Ontology places the outer dynein arm under the axonemal dynein complex.
+- reference: GO:0005930
+  notes: Gene Ontology cellular-component term for the axoneme.
+- reference: DOI:10.1126/science.1128618
+  notes: Nicastro et al. 2006, 'The molecular architecture of axonemes revealed by
+    cryoelectron tomography', Science.
+causal_graphs:
+- graph_id: chlamydomonas_outer_dynein_arm_motility
+  title: Outer dynein arms drive Chlamydomonas axonemal sliding
+  description: Outer-arm heavy, intermediate and light chains assemble into an outer
+    dynein arm that projects from Chlamydomonas axonemal outer doublet microtubules
+    and contributes to sliding force generation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the coarse outer-arm dynein complex boundary and
+    leaves chain-specific Chlamydomonas subunit identities, docking complexes and
+    beat-cycle regulation unresolved.
+  nodes:
+  - node_id: outer_arm_dynein_heavy_chains
+    label: outer-arm dynein heavy chains
+    node_type: GENE_OR_PROTEIN
+    component_ref: outer_arm_dynein_heavy_chains
+  - node_id: outer_arm_dynein_intermediate_chains
+    label: outer-arm dynein intermediate chains
+    node_type: GENE_OR_PROTEIN
+    component_ref: outer_arm_dynein_intermediate_chains
+  - node_id: outer_arm_dynein_light_chains
+    label: outer-arm dynein light chains
+    node_type: GENE_OR_PROTEIN
+    component_ref: outer_arm_dynein_light_chains
+  - node_id: outer_dynein_arm
+    label: outer dynein arm
+    node_type: STRUCTURE
+    grounding: GO:0036157
+  - node_id: outer_doublet_microtubules
+    label: outer doublet microtubules
+    node_type: STRUCTURE
+  - node_id: microtubule_sliding
+    label: microtubule sliding
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051012
+  edges:
+  - subject: outer_arm_dynein_heavy_chains
+    predicate: assemble into
+    object: outer_dynein_arm
+    description: Dynein heavy chains are constituent chains of the outer dynein arm.
+    evidence:
+    - reference: GO:0036157
+      notes: GO describes outer dynein arms as containing two to three dynein heavy
+        chains.
+  - subject: outer_arm_dynein_intermediate_chains
+    predicate: assemble into
+    object: outer_dynein_arm
+    description: Dynein intermediate chains are constituent chains of the outer dynein
+      arm.
+    evidence:
+    - reference: GO:0036157
+      notes: GO describes outer dynein arms as containing two or more intermediate
+        chains.
+  - subject: outer_arm_dynein_light_chains
+    predicate: assemble into
+    object: outer_dynein_arm
+    description: Dynein light chains are constituent chains of the outer dynein arm.
+    evidence:
+    - reference: GO:0036157
+      notes: GO describes outer dynein arms as containing a cluster of four to eight
+        light chains.
+  - subject: outer_dynein_arm
+    predicate: projects from
+    object: outer_doublet_microtubules
+    description: The outer dynein arm is attached to axonemal outer doublet microtubules.
+    evidence:
+    - reference: DOI:10.1126/science.1128618
+      notes: Nicastro et al. 2006 resolved the arrangement of dynein arms on Chlamydomonas
+        outer doublet microtubules.
+  - subject: outer_dynein_arm
+    predicate: drives
+    object: microtubule_sliding
+    description: Outer dynein arms are axonemal motor complexes that help generate
+      microtubule sliding.
+    evidence:
+    - reference: GO:0036157
+      notes: GO distinguishes inner and outer dynein arms as having different functions
+        in microtubule-based motility.
+    - reference: DOI:10.1126/science.1128618
+      notes: Nicastro et al. 2006 interpreted the axonemal dynein arrangement in a
+        microtubule-sliding model.
+discussions:
+- discussion_id: resolve_outer_dynein_arm_component_groundings
+  prompt: Resolve exact source-neutral groundings for the outer-arm dynein heavy-chain,
+    intermediate-chain and light-chain component classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#outer_arm_dynein_heavy_chains
+  - components#outer_arm_dynein_intermediate_chains
+  - components#outer_arm_dynein_light_chains
+  rationale: GO exactly identifies the outer dynein arm as a complex, but this curation
+    pass did not verify exact InterPro, Pfam or other source-neutral accessions for
+    the cross-taxon outer-arm chain classes.
+  evidence:
+  - reference: GO:0036157
+    notes: GO identifies outer dynein arms by their heavy-chain, intermediate-chain
+      and light-chain composition.
+  posed_by: codex
+  posed_date: '2026-09-23'

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axoneme.yaml
+  slug: axoneme
+session:
+  id: 2026-09-23T091322Z-codex-0a7cb9
+  timestamp: '2026-09-23T09:13:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1375
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1374
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  - discussions
+  summary: Fix inner dynein arm GO label
+  details: 'Fixed the GO:0036156 axoneme component and graph node from plural inner dynein
+    arms to the canonical inner dynein arm label after the id-label gate flagged the PR #1374
+    review fix for issue #1375.'

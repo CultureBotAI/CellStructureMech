@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axoneme.yaml
+  slug: axoneme
+session:
+  id: 2026-09-23T090844Z-codex-20d48d
+  timestamp: '2026-09-23T09:08:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1375
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1376
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1374
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Address outer dynein arm PR review
+  details: 'Resolved PR #1374 review issues #1375 and #1376 by adding GO:0036157 evidence
+    for the axoneme has_part assertion and narrowing the old axonemal dynein arms placeholder
+    to GO:0036156 inner dynein arms, leaving GO:0036157 outer dynein arm as a separate has_part
+    child.'
