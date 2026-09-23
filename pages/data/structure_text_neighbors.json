@@ -1423,14 +1423,14 @@
           "cosine_similarity": 0.86142443
         },
         {
+          "identifier": "GO:0160114",
+          "label": "axonemal microtubule doublet outer junction",
+          "cosine_similarity": 0.84142425
+        },
+        {
           "identifier": "GO:0160115",
           "label": "axonemal microtubule doublet ribbon",
           "cosine_similarity": 0.84026046
-        },
-        {
-          "identifier": "GO:0033289",
-          "label": "intraconoid microtubule",
-          "cosine_similarity": 0.80497087
         }
       ]
     },
@@ -1470,6 +1470,11 @@
       "label": "axonemal microtubule doublet inner junction",
       "neighbors": [
         {
+          "identifier": "GO:0160114",
+          "label": "axonemal microtubule doublet outer junction",
+          "cosine_similarity": 0.95877316
+        },
+        {
           "identifier": "GO:0160110",
           "label": "axonemal microtubule doublet inner sheath",
           "cosine_similarity": 0.91998282
@@ -1488,11 +1493,6 @@
           "identifier": "GO:0160115",
           "label": "axonemal microtubule doublet ribbon",
           "cosine_similarity": 0.86542662
-        },
-        {
-          "identifier": "GO:0005931",
-          "label": "axonemal nexin link",
-          "cosine_similarity": 0.84074083
         }
       ]
     },
@@ -1521,9 +1521,40 @@
           "cosine_similarity": 0.87916192
         },
         {
-          "identifier": "GO:0005874",
-          "label": "microtubule",
-          "cosine_similarity": 0.81721934
+          "identifier": "GO:0160114",
+          "label": "axonemal microtubule doublet outer junction",
+          "cosine_similarity": 0.87488262
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0160114",
+      "label": "axonemal microtubule doublet outer junction",
+      "neighbors": [
+        {
+          "identifier": "GO:0160113",
+          "label": "axonemal microtubule doublet inner junction",
+          "cosine_similarity": 0.95877316
+        },
+        {
+          "identifier": "GO:0160110",
+          "label": "axonemal microtubule doublet inner sheath",
+          "cosine_similarity": 0.87488262
+        },
+        {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.84142425
+        },
+        {
+          "identifier": "GO:0160115",
+          "label": "axonemal microtubule doublet ribbon",
+          "cosine_similarity": 0.84129168
+        },
+        {
+          "identifier": "GO:0097545",
+          "label": "axonemal doublet microtubule",
+          "cosine_similarity": 0.83125191
         }
       ]
     },
@@ -1547,14 +1578,14 @@
           "cosine_similarity": 0.86542662
         },
         {
+          "identifier": "GO:0160114",
+          "label": "axonemal microtubule doublet outer junction",
+          "cosine_similarity": 0.84129168
+        },
+        {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.84026046
-        },
-        {
-          "identifier": "GO:0005874",
-          "label": "microtubule",
-          "cosine_similarity": 0.82728346
         }
       ]
     },
@@ -2451,9 +2482,9 @@
           "cosine_similarity": 0.75628005
         },
         {
-          "identifier": "GO:0020025",
-          "label": "subpellicular microtubule",
-          "cosine_similarity": 0.74202974
+          "identifier": "GO:0160114",
+          "label": "axonemal microtubule doublet outer junction",
+          "cosine_similarity": 0.74477542
         }
       ]
     },
