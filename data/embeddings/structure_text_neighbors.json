@@ -44,6 +44,11 @@
       "label": "archaeal-type flagellum",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:archaeal_type_flagellum_motor",
+          "label": "archaeal-type flagellum motor",
+          "cosine_similarity": 0.94095477
+        },
+        {
           "identifier": "cellstructuremech:archaeal_type_flagellum_filament",
           "label": "archaeal-type flagellum filament",
           "cosine_similarity": 0.87984253
@@ -62,11 +67,6 @@
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
           "cosine_similarity": 0.76528736
-        },
-        {
-          "identifier": "GO:0009428",
-          "label": "bacterial-type flagellum basal body, distal rod, P ring",
-          "cosine_similarity": 0.76128805
         }
       ]
     },
@@ -90,14 +90,45 @@
           "cosine_similarity": 0.81513772
         },
         {
+          "identifier": "cellstructuremech:archaeal_type_flagellum_motor",
+          "label": "archaeal-type flagellum motor",
+          "cosine_similarity": 0.80213115
+        },
+        {
           "identifier": "GO:0009421",
           "label": "bacterial-type flagellum filament cap",
           "cosine_similarity": 0.80079547
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:archaeal_type_flagellum_motor",
+      "label": "archaeal-type flagellum motor",
+      "neighbors": [
+        {
+          "identifier": "GO:0097589",
+          "label": "archaeal-type flagellum",
+          "cosine_similarity": 0.94095477
+        },
+        {
+          "identifier": "GO:0120100",
+          "label": "bacterial-type flagellum motor",
+          "cosine_similarity": 0.82970728
+        },
+        {
+          "identifier": "GO:0120101",
+          "label": "bacterial-type flagellum stator complex",
+          "cosine_similarity": 0.82429081
+        },
+        {
+          "identifier": "cellstructuremech:archaeal_type_flagellum_filament",
+          "label": "archaeal-type flagellum filament",
+          "cosine_similarity": 0.80213115
         },
         {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.7894669
+          "cosine_similarity": 0.79528125
         }
       ]
     },
@@ -2772,6 +2803,11 @@
       "label": "proton-transporting ATP synthase complex",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:archaeal_type_flagellum_motor",
+          "label": "archaeal-type flagellum motor",
+          "cosine_similarity": 0.77811681
+        },
+        {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
           "cosine_similarity": 0.7672068
@@ -2790,11 +2826,6 @@
           "identifier": "GO:0120102",
           "label": "bacterial-type flagellum secretion apparatus",
           "cosine_similarity": 0.73557074
-        },
-        {
-          "identifier": "GO:0120107",
-          "label": "bacterial-type flagellum rotor complex",
-          "cosine_similarity": 0.7336742
         }
       ]
     },

@@ -1,0 +1,321 @@
+identifier: cellstructuremech:archaeal_type_flagellum_motor
+label: archaeal-type flagellum motor
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A membrane-associated ATP-powered motor complex of the archaeal-type flagellum
+  that assembles and rotates the external archaellin filament.
+definition_source: DOI:10.3389/fmicb.2015.00023
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T05:25:01Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T05:26:02Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added archaellum motor synonymy, GO parentage and archaellum parthood,
+    ArlI/ArlJ, ArlH, ArlF/ArlG, and ArlX/ArlCDE components, archaeal and bacterial
+    taxonomic scope, Sulfolobus and Pyrococcus examples, ATP-powered assembly and
+    rotation functions, DOI evidence, a motor assembly causal graph, and grounding
+    and filament-boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-23T05:26:46Z'
+  curator: codex
+  action: FIX_DISCUSSION_ANCHORS
+  changes: Reanchored the motor/filament boundary discussion to concrete component
+    ids and the motor assembly graph.
+  llm_assisted: true
+- timestamp: '2026-09-23T05:37:04Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issue #1359 by narrowing the Sulfolobus canonical-example
+    note to the cited FlaX/FlaI scaffold evidence.'
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0097589
+synonyms:
+- synonym_text: archaellum motor
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1111/mmi.13260
+- synonym_text: archaeal flagellum motor
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3389/fmicb.2015.00023
+components:
+- component_id: arli_arlj_motor
+  label: ArlI/ArlJ motor core
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - arlI
+  - arlJ
+  - flaI
+  - flaJ
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The ATPase and membrane-platform pair spans distinct protein families
+    and the historical Arl/Fla naming systems; no exact source-neutral CURIE for the
+    core subcomplex was verified.
+  role: Cytosolic ATPase and polytopic membrane-platform core that couple ATP hydrolysis
+    to archaellum assembly and filament rotation.
+  evidence:
+  - reference: DOI:10.3389/fmicb.2015.00023
+    notes: Albers and Jarrell 2015 review FlaI/ArlI as the ATPase and FlaJ/ArlJ as
+      the conserved polytopic membrane protein of archaellum operons.
+  - reference: DOI:10.7554/eLife.27470
+    notes: Daum et al. 2017 resolved the in situ Pyrococcus furiosus archaellum machinery
+      and placed the motor complex at the cell envelope.
+- component_id: arlh_regulator
+  label: ArlH motor regulator
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - arlH
+  - flaH
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: ArlH/FlaH is an archaellum-specific P-loop ATPase; no exact family
+    CURIE was verified for the full regulator class in this pass.
+  role: Nucleotide-dependent regulator that interacts with ArlI/FlaI and is required
+    for motor assembly and function in the studied Sulfolobus motor.
+  evidence:
+  - reference: DOI:10.1111/mmi.13260
+    notes: Chaudhury et al. tested the nucleotide-dependent FlaH-FlaI interaction
+      and showed that it is required for archaellum motor assembly and function.
+- component_id: arlfg_anchor
+  label: ArlF/ArlG S-layer anchor
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - arlF
+  - arlG
+  - flaF
+  - flaG
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: ArlF/FlaF and ArlG/FlaG are envelope-side archaellum anchor proteins
+    with lineage-specific conservation; no exact CURIE for the two-protein anchor
+    module was verified.
+  role: Pseudo-periplasmic envelope module that connects the archaeal-type flagellum
+    motor to the archaeal cell envelope and S-layer in characterized lineages.
+  evidence:
+  - reference: DOI:10.1016/j.str.2015.03.001
+    notes: Banerjee et al. 2015 showed that Sulfolobus acidocaldarius FlaF binds the
+      S-layer protein and anchors the archaellum in the cell envelope.
+  - reference: DOI:10.7554/eLife.27470
+    notes: Daum et al. 2017 placed the Pyrococcus furiosus archaellum basal machinery
+      at the cell envelope by in situ cryo-electron tomography.
+- component_id: cytosolic_scaffold
+  label: ArlX/ArlCDE cytosolic scaffold
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - arlX
+  - arlC
+  - arlD
+  - arlE
+  - flaX
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Crenarchaeal ArlX/FlaX and euryarchaeal ArlCDE occupy analogous
+    cytosolic scaffold or switch positions but are not one homologous protein family
+    or an exactly grounded universal subcomplex.
+  role: Lineage-specific cytosolic ring or switch module that organizes the ArlI/ArlJ
+    motor core and links the motor to chemotaxis control.
+  evidence:
+  - reference: DOI:10.1074/jbc.M112.414383
+    notes: Banerjee et al. showed that the crenarchaeal FlaX protein forms ring-shaped
+      assemblies and interacts with the motor ATPase FlaI.
+  - reference: DOI:10.1038/s41467-022-28337-1
+    notes: Gambelli et al. 2022 summarize ArlX in Crenarchaeota and ArlCDE in Euryarchaeota
+      as cytosolic ring modules surrounding ArlI/ArlJ.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: VARIABLE
+  note: Archaellum motors occur in archaeal lineages that encode the archaeal-type
+    flagellum and are absent from archaea that lack the motility operon.
+  reference: DOI:10.3389/fmicb.2015.00023
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: ABSENT
+  note: Bacterial flagellar motors are non-homologous rotary machines built from FliF/FliG/FliM/FliN
+    rotors and Mot/Pom stators rather than archaellum Arl/Fla subassemblies.
+  reference: DOI:10.3389/fmicb.2015.00023
+canonical_examples:
+- taxon_id: NCBITaxon:2285
+  taxon_label: Sulfolobus acidocaldarius
+  note: Crenarchaeal source for biochemical analysis of FlaX scaffold ring formation
+    and interaction with the motor ATPase FlaI.
+  reference: DOI:10.1074/jbc.M112.414383
+- taxon_id: NCBITaxon:2261
+  taxon_label: Pyrococcus furiosus
+  note: Euryarchaeal source for in situ cryo-ET of basal archaellum machinery at the
+    archaeal cell envelope.
+  reference: DOI:10.7554/eLife.27470
+functions:
+- function_id: atp_powered_archaellum_assembly
+  label: ATP-powered archaellum assembly
+  description: The motor uses ATP hydrolysis by ArlI/FlaI to assemble archaellin subunits
+    at the base of the growing archaeal-type flagellum filament.
+  evidence:
+  - reference: DOI:10.3389/fmicb.2015.00023
+    notes: Albers and Jarrell 2015 review ATP-powered archaellum filament assembly
+      by the basal motor.
+- function_id: atp_powered_archaellum_rotation
+  label: ATP-powered archaellum rotation
+  description: The motor rotates the assembled archaellin filament to drive archaeal-type
+    flagellum-dependent motility.
+  evidence:
+  - reference: DOI:10.3389/fmicb.2015.00023
+    notes: Albers and Jarrell 2015 review ATP-powered rotation of the archaellum as
+      the basis of archaeal swimming.
+evidence:
+- reference: DOI:10.3389/fmicb.2015.00023
+  notes: 'Albers SV and Jarrell KF 2015, The archaellum: how archaea swim, Frontiers
+    in Microbiology.'
+- reference: DOI:10.1074/jbc.M112.414383
+  notes: Banerjee et al., FlaX, A Unique Component of the Crenarchaeal Archaellum,
+    Forms Oligomeric Ring-shaped Structures and Interacts with the Motor ATPase FlaI,
+    Journal of Biological Chemistry.
+- reference: DOI:10.1016/j.str.2015.03.001
+  notes: Banerjee et al. 2015, FlaF Is a beta-Sandwich Protein that Anchors the Archaellum
+    in the Archaeal Cell Envelope by Binding the S-Layer Protein, Structure.
+- reference: DOI:10.1111/mmi.13260
+  notes: Chaudhury et al., The nucleotide-dependent interaction of FlaH and FlaI is
+    essential for assembly and function of the archaellum motor, Molecular Microbiology.
+- reference: DOI:10.7554/eLife.27470
+  notes: Daum et al. 2017, Structure and in situ organisation of the Pyrococcus furiosus
+    archaellum machinery, eLife.
+- reference: DOI:10.1038/s41467-022-28337-1
+  notes: Gambelli et al. 2022, An archaellum filament composed of two alternating
+    subunits, Nature Communications.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+causal_graphs:
+- graph_id: archaellum_motor_assembly_rotation
+  title: Arl modules build an ATP-powered archaellum motor
+  description: Cytosolic scaffold and regulatory proteins organize an ArlI/ArlJ basal
+    core, envelope-side anchor proteins couple that motor to the cell surface, and
+    the ATP-powered motor assembles and rotates the archaellin filament.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: arli_arlj_motor
+    label: ArlI/ArlJ motor core
+    node_type: STRUCTURE
+    component_ref: arli_arlj_motor
+  - node_id: arlh_regulator
+    label: ArlH motor regulator
+    node_type: GENE_OR_PROTEIN
+    component_ref: arlh_regulator
+  - node_id: cytosolic_scaffold
+    label: ArlX/ArlCDE cytosolic scaffold
+    node_type: STRUCTURE
+    component_ref: cytosolic_scaffold
+  - node_id: arlfg_anchor
+    label: ArlF/ArlG S-layer anchor
+    node_type: STRUCTURE
+    component_ref: arlfg_anchor
+  - node_id: motor
+    label: archaeal-type flagellum motor
+    node_type: STRUCTURE
+    grounding: cellstructuremech:archaeal_type_flagellum_motor
+  - node_id: filament
+    label: archaeal-type flagellum filament
+    node_type: STRUCTURE
+    grounding: cellstructuremech:archaeal_type_flagellum_filament
+  edges:
+  - subject: cytosolic_scaffold
+    predicate: organizes
+    object: arli_arlj_motor
+    description: Lineage-specific cytosolic scaffold modules organize the ATPase-containing
+      motor core.
+    evidence:
+    - reference: DOI:10.1074/jbc.M112.414383
+      notes: Banerjee et al. showed that FlaX forms oligomeric rings and interacts
+        with FlaI in the Sulfolobus motor.
+    - reference: DOI:10.1038/s41467-022-28337-1
+      notes: Gambelli et al. 2022 summarize the cytosolic ArlX or ArlCDE ring modules
+        that surround ArlI/ArlJ motors.
+  - subject: arlh_regulator
+    predicate: regulates
+    object: arli_arlj_motor
+    description: ArlH/FlaH controls its interaction with the ArlI/FlaI ATPase through
+      nucleotide state.
+    evidence:
+    - reference: DOI:10.1111/mmi.13260
+      notes: Chaudhury et al. tested the nucleotide-dependent FlaH-FlaI interaction
+        and its role in motor assembly and function.
+  - subject: arlfg_anchor
+    predicate: anchors
+    object: motor
+    description: Envelope-side ArlF/ArlG or FlaF/FlaG-family proteins connect the
+      motor to the archaeal cell envelope and S-layer.
+    evidence:
+    - reference: DOI:10.1016/j.str.2015.03.001
+      notes: Banerjee et al. 2015 showed that FlaF binds the Sulfolobus S-layer protein
+        and anchors the archaellum in the cell envelope.
+  - subject: arli_arlj_motor
+    predicate: forms ATP-powered core of
+    object: motor
+    description: The ArlI/FlaI ATPase and ArlJ/FlaJ membrane platform form the conserved
+      ATP-powered core of the archaellum motor.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2015.00023
+      notes: Albers and Jarrell 2015 review ArlI and ArlJ as conserved basal machinery
+        for ATP-powered archaellum assembly and rotation.
+  - subject: motor
+    predicate: assembles and rotates
+    object: filament
+    description: The assembled basal motor powers both growth and rotation of the
+      extracellular archaellin filament.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2015.00023
+      notes: Albers and Jarrell 2015 review the basal ATP-powered machinery that assembles
+        and rotates the archaellum filament.
+discussions:
+- discussion_id: resolve_archaellum_motor_grounding
+  prompt: Resolve exact source-neutral family or complex CURIEs for the archaellum
+    motor components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#arli_arlj_motor
+  - components#arlh_regulator
+  - components#arlfg_anchor
+  - components#cytosolic_scaffold
+  rationale: This first motor record follows Arl/Fla nomenclature and intentionally
+    leaves the ATPase/membrane core, ArlH/FlaH regulator, envelope anchor, and cytosolic
+    scaffold modules label-only until exact family or complex identifiers can be verified.
+  evidence:
+  - reference: DOI:10.3389/fmicb.2015.00023
+    notes: Albers and Jarrell 2015 review historical Fla and Arl nomenclature for
+      the archaellum system.
+  posed_by: codex
+  posed_date: '2026-09-23'
+- discussion_id: exclude_filament_and_processing
+  prompt: Archaellins and prearchaellin maturation enzymes are out of scope for the
+    motor record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#arli_arlj_motor
+  - components#arlh_regulator
+  - components#arlfg_anchor
+  - components#cytosolic_scaffold
+  - causal_graphs#archaellum_motor_assembly_rotation
+  rationale: The archaellum motor is the basal ATP-powered machine. Archaellins are
+    the polymerized filament subunits, and PibD/FlaK-like prepilin peptidases act
+    on archaellin precursors before filament assembly rather than forming part of
+    the basal motor.
+  evidence:
+  - reference: DOI:10.3389/fmicb.2015.00023
+    notes: Albers and Jarrell 2015 distinguish prearchaellin processing and the external
+      filament from the basal motor machinery.
+  posed_by: codex
+  posed_date: '2026-09-23'
+  resolved_date: '2026-09-23'
