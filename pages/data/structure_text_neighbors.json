@@ -13286,6 +13286,11 @@
           "cosine_similarity": 0.9070854
         },
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
+          "label": "type VI secretion system membrane complex",
+          "cosine_similarity": 0.76491051
+        },
+        {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.76114701
@@ -13299,11 +13304,6 @@
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
           "cosine_similarity": 0.73080676
-        },
-        {
-          "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
-          "label": "type IX protein secretion system complex",
-          "cosine_similarity": 0.72858998
         }
       ]
     },
@@ -13327,14 +13327,14 @@
           "cosine_similarity": 0.75270999
         },
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
+          "label": "type VI secretion system membrane complex",
+          "cosine_similarity": 0.75044849
+        },
+        {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
           "cosine_similarity": 0.74917453
-        },
-        {
-          "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
-          "label": "type IX protein secretion system complex",
-          "cosine_similarity": 0.74461502
         }
       ]
     },
@@ -13379,6 +13379,11 @@
           "cosine_similarity": 0.79326406
         },
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
+          "label": "type VI secretion system membrane complex",
+          "cosine_similarity": 0.76869399
+        },
+        {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
           "cosine_similarity": 0.7519137
@@ -13392,11 +13397,6 @@
           "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
           "label": "type IX protein secretion system complex",
           "cosine_similarity": 0.74046378
-        },
-        {
-          "identifier": "GO:0042721",
-          "label": "TIM22 mitochondrial import inner membrane insertion complex",
-          "cosine_similarity": 0.73705779
         }
       ]
     },
@@ -13415,6 +13415,11 @@
           "cosine_similarity": 0.88792616
         },
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
+          "label": "type VI secretion system membrane complex",
+          "cosine_similarity": 0.84315747
+        },
+        {
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
           "cosine_similarity": 0.82742586
@@ -13423,11 +13428,6 @@
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
           "cosine_similarity": 0.82698709
-        },
-        {
-          "identifier": "GO:0043684",
-          "label": "type IV secretion system complex",
-          "cosine_similarity": 0.82481249
         }
       ]
     },
@@ -13446,6 +13446,11 @@
           "cosine_similarity": 0.85618251
         },
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
+          "label": "type VI secretion system membrane complex",
+          "cosine_similarity": 0.83084878
+        },
+        {
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
           "cosine_similarity": 0.82935155
@@ -13454,11 +13459,6 @@
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
           "cosine_similarity": 0.81364109
-        },
-        {
-          "identifier": "GO:0043684",
-          "label": "type IV secretion system complex",
-          "cosine_similarity": 0.80307723
         }
       ]
     },
@@ -13513,14 +13513,14 @@
           "cosine_similarity": 0.81668043
         },
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
+          "label": "type VI secretion system membrane complex",
+          "cosine_similarity": 0.8094424
+        },
+        {
           "identifier": "GO:0015627",
           "label": "type II protein secretion system complex",
           "cosine_similarity": 0.80307723
-        },
-        {
-          "identifier": "GO:0030257",
-          "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.77147714
         }
       ]
     },
@@ -13539,6 +13539,11 @@
           "cosine_similarity": 0.85618251
         },
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
+          "label": "type VI secretion system membrane complex",
+          "cosine_similarity": 0.82074622
+        },
+        {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
           "cosine_similarity": 0.81668043
@@ -13547,11 +13552,6 @@
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
           "cosine_similarity": 0.79912649
-        },
-        {
-          "identifier": "GO:0030257",
-          "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.79899983
         }
       ]
     },
@@ -13601,6 +13601,11 @@
           "cosine_similarity": 0.82244779
         },
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
+          "label": "type VI secretion system membrane complex",
+          "cosine_similarity": 0.81310208
+        },
+        {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
           "cosine_similarity": 0.76762552
@@ -13609,11 +13614,6 @@
           "identifier": "GO:0015627",
           "label": "type II protein secretion system complex",
           "cosine_similarity": 0.75489753
-        },
-        {
-          "identifier": "GO:0030256",
-          "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.71641908
         }
       ]
     },
@@ -13637,14 +13637,45 @@
           "cosine_similarity": 0.76255282
         },
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
+          "label": "type VI secretion system membrane complex",
+          "cosine_similarity": 0.75786951
+        },
+        {
           "identifier": "GO:0015627",
           "label": "type II protein secretion system complex",
           "cosine_similarity": 0.72664185
-        },
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
+      "label": "type VI secretion system membrane complex",
+      "neighbors": [
         {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.72297967
+          "cosine_similarity": 0.84315747
+        },
+        {
+          "identifier": "GO:0015627",
+          "label": "type II protein secretion system complex",
+          "cosine_similarity": 0.83084878
+        },
+        {
+          "identifier": "GO:0033104",
+          "label": "type VI protein secretion system complex",
+          "cosine_similarity": 0.82615582
+        },
+        {
+          "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
+          "label": "type IX protein secretion system complex",
+          "cosine_similarity": 0.82074622
+        },
+        {
+          "identifier": "cellstructuremech:type_vi_secretion_system_baseplate",
+          "label": "type VI secretion system baseplate",
+          "cosine_similarity": 0.81310208
         }
       ]
     },
