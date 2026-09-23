@@ -1,0 +1,127 @@
+identifier: GO:0160112
+label: axonemal B tubule inner sheath
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The microtubule-inner-protein network inside the lumen of the B tubule
+  of the axonemal doublet microtubule.
+definition_source: GO:0160112
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T18:29:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T18:30:46Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added inner-sheath and B-tubule parthood, Chlamydomonas scope, GO and DOI
+    evidence, a nonmechanistic B-tubule inner-sheath graph, and a B-tubule MIP-family
+    TODO.
+  llm_assisted: true
+part_of:
+- GO:0160110
+- GO:0097650
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas axonemal B tubules contain a luminal inner-sheath MIP network
+    within native doublet microtubules.
+  reference: DOI:10.1016/j.cell.2019.09.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose B-tubule luminal MIP densities were resolved in decorated
+    axonemal doublets.
+  reference: DOI:10.1016/j.cell.2019.09.030
+functions:
+- function_id: b_tubule_luminal_stabilization
+  label: B-tubule luminal stabilization
+  description: The axonemal B tubule inner sheath is a luminal MIP network that helps
+    stabilize the B tubule of the axonemal doublet.
+  evidence:
+  - reference: GO:0160112
+    notes: GO defines the axonemal B tubule inner sheath as a MIP network inside the
+      B-tubule lumen that helps stabilize the B tubule.
+  - reference: DOI:10.1016/j.cell.2019.09.030
+    notes: Ma et al. 2019 resolved interconnected MIP densities inside native Chlamydomonas
+      B tubules.
+evidence:
+- reference: GO:0160112
+  notes: Gene Ontology cellular-component term for the axonemal B tubule inner sheath.
+- reference: GO:0160110
+  notes: Gene Ontology places the axonemal B tubule inner sheath within the axonemal
+    microtubule doublet inner sheath.
+- reference: GO:0097650
+  notes: Gene Ontology places the axonemal B tubule inner sheath inside the B axonemal
+    microtubule.
+- reference: DOI:10.1016/j.cell.2019.09.030
+  notes: Ma et al. 2019, 'Structure of the Decorated Ciliary Doublet Microtubule',
+    Cell.
+causal_graphs:
+- graph_id: chlamydomonas_b_tubule_inner_sheath
+  title: B-tubule MIPs form a luminal inner sheath
+  description: In Chlamydomonas axonemal doublets, the B-tubule inner sheath is the
+    MIP network inside the B-tubule lumen and is part of the doublet inner sheath.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records coarse B-tubule inner-sheath parthood and leaves
+    exact conserved B-tubule MIP family groundings, positions and copy numbers for
+    later curation.
+  nodes:
+  - node_id: axonemal_b_tubule_inner_sheath
+    label: axonemal B tubule inner sheath
+    node_type: STRUCTURE
+    grounding: GO:0160112
+  - node_id: b_axonemal_microtubule
+    label: B axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097650
+  - node_id: axonemal_microtubule_doublet_inner_sheath
+    label: axonemal microtubule doublet inner sheath
+    node_type: STRUCTURE
+    grounding: GO:0160110
+  edges:
+  - subject: axonemal_b_tubule_inner_sheath
+    predicate: is part of
+    object: axonemal_microtubule_doublet_inner_sheath
+    description: The B-tubule inner sheath is the B-lumen part of the axonemal microtubule
+      doublet inner sheath.
+    evidence:
+    - reference: GO:0160112
+      notes: GO places the axonemal B tubule inner sheath within the axonemal microtubule
+        doublet inner sheath.
+  - subject: axonemal_b_tubule_inner_sheath
+    predicate: occupies lumen of
+    object: b_axonemal_microtubule
+    description: The B-tubule inner sheath is located inside the lumen of the B axonemal
+      microtubule.
+    evidence:
+    - reference: GO:0160112
+      notes: GO defines the B-tubule inner sheath as a MIP network inside the B-tubule
+        lumen.
+  - subject: axonemal_b_tubule_inner_sheath
+    predicate: stabilizes
+    object: b_axonemal_microtubule
+    description: The B-tubule inner sheath helps stabilize the B tubule of the axonemal
+      doublet.
+    evidence:
+    - reference: GO:0160112
+      notes: GO defines the B-tubule inner sheath by its B-tubule-stabilizing function.
+discussions:
+- discussion_id: resolve_b_tubule_inner_sheath_mips
+  prompt: Resolve exact conserved B-tubule MIP family groundings, positions and copy
+    numbers for the axonemal B tubule inner sheath.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#chlamydomonas_b_tubule_inner_sheath
+  rationale: GO exactly identifies the B-tubule inner sheath, but this pass does not
+    assign individual B-lumen MIP families, positions or copy numbers.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2019.09.030
+    notes: Ma et al. 2019 resolved B-tubule MIP densities in native Chlamydomonas
+      axonemal doublets.
+  posed_by: codex
+  posed_date: '2026-09-23'

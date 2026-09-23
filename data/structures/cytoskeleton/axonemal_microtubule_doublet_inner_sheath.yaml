@@ -33,6 +33,12 @@ curation_history:
   changes: Linked GO:0160111 to its own child record and narrowed the remaining inner-sheath
     child-record TODO to GO:0160112.
   llm_assisted: true
+- timestamp: '2026-09-23T18:30:46Z'
+  curator: codex
+  action: ADD_B_TUBULE_INNER_SHEATH_CHILD
+  changes: Linked GO:0160112 to its own child record and resolved the remaining inner-sheath
+    child-record TODO.
+  llm_assisted: true
 part_of:
 - GO:0097545
 has_part:
@@ -201,7 +207,7 @@ discussions:
   prompt: Decide whether GO:0160112 should become a separate B-tubule inner-sheath
     child record after its conserved MIP set is reviewed.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   rationale: GO exactly identifies the B-tubule inner sheath, but the present GO:0160110
     record keeps it as a child GO term while its component boundaries and taxon-general
     MIP family identities remain unresolved.
@@ -210,3 +216,6 @@ discussions:
     notes: Gene Ontology cellular-component term for the axonemal B tubule inner sheath.
   posed_by: codex
   posed_date: '2026-09-23'
+  resolved_date: '2026-09-23'
+  resolution_note: GO:0160112 was promoted to its own axonemal B tubule inner sheath
+    record and linked from the B axonemal microtubule parent.
