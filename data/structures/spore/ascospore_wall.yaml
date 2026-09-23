@@ -66,6 +66,13 @@ curation_history:
     GO:0005632 inner layer record and rewired parent topology edges to an explicit
     inner spore-wall layer structure node.
   llm_assisted: true
+- timestamp: '2026-09-23T03:10:48Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1347 review issue #1348 by adding GO:0005632 and Neiman 2005
+    support to the parent polymer-grounding TODO that tracks the unresolved inner-wall
+    mannan/beta-glucan component.'
+  llm_assisted: true
 synonyms:
 - synonym_text: fungal-type spore wall
   synonym_type: BROAD_SYNONYM
@@ -355,3 +362,8 @@ discussions:
       defining source-neutral polymer CURIEs for every ascospore-wall material.
   - reference: CHEBI:16261
     notes: ChEBI term for the chitosan polymer.
+  - reference: GO:0005632
+    notes: GO:0005632 identifies the two innermost Saccharomyces spore-wall layers.
+  - reference: DOI:10.1128/MMBR.69.4.565-584.2005
+    notes: Neiman 2005 reviews the Saccharomyces ascospore wall as a multilaminar
+      structure with inner mannan and beta-glucan layers.
