@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_microtubule_doublet_ribbon.yaml
+  slug: axonemal_microtubule_doublet_ribbon
+session:
+  id: 2026-09-23T132326Z-codex-7453db
+  timestamp: '2026-09-23T13:23:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add axonemal microtubule doublet ribbon record
+  details: Created the GO:0160115 axonemal microtubule doublet ribbon record, linked it from
+    GO:0097545 axonemal doublet microtubule with has_part, grounded the A11-A13 tubulin ribbon
+    and ribbon-associated MIPs in Linck 1976 and Chlamydomonas Rib72 literature, and left
+    exact Rib72/ribbon MIP family groundings as an unresolved follow-up. Duplicate checking
+    used rg --no-ignore --hidden before creation and found no existing data/structures axonemal
+    doublet ribbon or GO:0160115 record.
