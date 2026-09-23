@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_secretion_system_contractile_sheath.yaml
+  slug: type_vi_secretion_system_contractile_sheath
+session:
+  id: 2026-09-23T063814Z-codex-f15fc7
+  timestamp: '2026-09-23T06:38:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1364
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1363
+events:
+- type: REVIEW
+  outcome: changed
+  summary: 'Resolved PR #1363 T6SS sheath graph review'
+  details: Rerouted the T6SS contractile-sheath graph edge so the extended sheath contracts
+    into the contracted sheath state instead of pointing directly to the Hcp tube. This keeps
+    tube ejection represented in the firing function text and makes the contracted_sheath
+    graph node reachable before ClpV-mediated recycling.

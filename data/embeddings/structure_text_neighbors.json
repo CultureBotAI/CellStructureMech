@@ -13560,6 +13560,11 @@
       "label": "type VI protein secretion system complex",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_contractile_sheath",
+          "label": "type VI secretion system contractile sheath",
+          "cosine_similarity": 0.88307883
+        },
+        {
           "identifier": "cellstructuremech:type_vi_secretion_system_baseplate",
           "label": "type VI secretion system baseplate",
           "cosine_similarity": 0.86931709
@@ -13578,11 +13583,6 @@
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.82742586
-        },
-        {
-          "identifier": "GO:0030257",
-          "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.82407989
         }
       ]
     },
@@ -13594,6 +13594,11 @@
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
           "cosine_similarity": 0.86931709
+        },
+        {
+          "identifier": "cellstructuremech:type_vi_secretion_system_contractile_sheath",
+          "label": "type VI secretion system contractile sheath",
+          "cosine_similarity": 0.82244779
         },
         {
           "identifier": "GO:0043684",
@@ -13609,11 +13614,37 @@
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.71641908
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:type_vi_secretion_system_contractile_sheath",
+      "label": "type VI secretion system contractile sheath",
+      "neighbors": [
+        {
+          "identifier": "GO:0033104",
+          "label": "type VI protein secretion system complex",
+          "cosine_similarity": 0.88307883
         },
         {
-          "identifier": "GO:0030257",
-          "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.70461042
+          "identifier": "cellstructuremech:type_vi_secretion_system_baseplate",
+          "label": "type VI secretion system baseplate",
+          "cosine_similarity": 0.82244779
+        },
+        {
+          "identifier": "GO:0043684",
+          "label": "type IV secretion system complex",
+          "cosine_similarity": 0.76255282
+        },
+        {
+          "identifier": "GO:0015627",
+          "label": "type II protein secretion system complex",
+          "cosine_similarity": 0.72664185
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.72297967
         }
       ]
     },

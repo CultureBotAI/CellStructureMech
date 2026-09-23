@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_protein_secretion_system_complex.yaml
+  slug: type_vi_protein_secretion_system_complex
+session:
+  id: 2026-09-23T062725Z-codex-97a758
+  timestamp: '2026-09-23T06:27:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Linked type VI secretion system contractile sheath record
+  details: Grounded the whole type VI secretion system's contractile-sheath component to cellstructuremech:type_vi_secretion_system_contractile_sheath,
+    added a reciprocal has_part link, and narrowed the open T6SS subassembly-splitting discussion
+    to the unsplit membrane core, Hcp tube and VgrG/PAAR spike.

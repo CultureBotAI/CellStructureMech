@@ -3951,6 +3951,15 @@
   "definition": "A bacterial type VI secretion system subassembly in which TssE-, TssF-, TssG-, and TssK-family proteins form a phage-baseplate-like platform that docks to the TssJ/TssL/TssM membrane complex and initiates Hcp tube and contractile-sheath assembly."
  },
  {
+  "identifier": "cellstructuremech:type_vi_secretion_system_contractile_sheath",
+  "label": "type VI secretion system contractile sheath",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/type_vi_secretion_system_contractile_sheath.html",
+  "definition": "A bacterial type VI secretion system subassembly in which TssB/VipA- and TssC/VipB-family proteins polymerize into a metastable sheath around the Hcp tube and contract to drive Hcp/VgrG/PAAR spike ejection."
+ },
+ {
   "identifier": "GO:0005619",
   "label": "ascospore wall",
   "category": "SPORE",
