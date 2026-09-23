@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/spore_inner_membrane.yaml
+  slug: spore_inner_membrane
+session:
+  id: 2026-09-22T235328Z-codex-cc31c6
+  timestamp: '2026-09-22T23:53:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add spore inner membrane record
+  details: Created a GO:0140549 spore inner membrane structure record after a hidden- and
+    ignored-file-inclusive duplicate search for GO:0140549, spore inner membrane, spore membrane,
+    spore core membrane, forespore inner membrane, prespore inner membrane, and UniProt SL-0363.
+    The record adds membrane parentage, a broad spore membrane synonym, Bacillota and Bacillus
+    subtilis scope, GO/UniProt/literature evidence, a nonmechanistic mature-spore topology
+    graph, and a resolved boundary discussion separating the bacterial spore inner membrane
+    from generic UniProt Spore membrane, outer endospore membrane, forespore membrane, and
+    ascospore-type prospore membrane terms.
