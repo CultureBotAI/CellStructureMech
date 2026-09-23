@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_central_bridge.yaml
+  slug: axonemal_central_bridge
+session:
+  id: 2026-09-23T143210Z-codex-eb30b7
+  timestamp: '2026-09-23T14:32:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add axonemal central bridge record
+  details: Created the GO:1990717 axonemal central bridge record, linked it from GO:1990716
+    axonemal central apparatus with has_part, replaced the parent label-only central-pair
+    bridge component with a GO-grounded child structure, grounded the parent broad central-pair
+    projection component to GO:1990718, grounded the C1-C2 bridge network in Chlamydomonas
+    cryo-ET literature, and left exact central-bridge constituent family groundings as unresolved
+    follow-up. Duplicate checking used rg --no-ignore --hidden before creation and found no
+    existing data/structures axonemal central bridge or GO:1990717 record.

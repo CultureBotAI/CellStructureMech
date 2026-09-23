@@ -1,0 +1,160 @@
+identifier: GO:1990717
+label: axonemal central bridge
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A bridge network that connects the C1 and C2 singlet microtubules of the
+  9+2 axonemal central apparatus.
+definition_source: GO:1990717
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T14:29:12Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T14:30:12Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added central-apparatus parthood, a reviewed-label-only central-bridge
+    protein component, Chlamydomonas scope, a C1-C2 linkage function, GO and DOI evidence,
+    a nonmechanistic bridge linkage graph, and a central-bridge composition TODO.
+  llm_assisted: true
+part_of:
+- GO:1990716
+components:
+- component_id: central_bridge_proteins
+  label: axonemal central-bridge proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Protein constituents of the bridge network that links C1 and C2 microtubules
+    in the central pair complex.
+  evidence:
+  - reference: GO:1990717
+    notes: GO identifies the axonemal central bridge as the structure connecting the
+      central-pair single microtubules.
+  - reference: DOI:10.1002/cm.21094
+    notes: Carbajal-Gonzalez et al. 2013 resolved a complex Chlamydomonas bridge density
+      network linking the C1 and C2 central-pair microtubules.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the axonemal central-bridge protein
+    set was verified in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar central pair complexes contain a 16 nm-periodic bridge
+    network between the C1 and C2 microtubules.
+  reference: DOI:10.1002/cm.21094
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose central pair complex bridge was resolved by cryoelectron
+    tomography and subtomogram averaging.
+  reference: DOI:10.1002/cm.21094
+functions:
+- function_id: c1_c2_microtubule_linkage
+  label: C1-C2 microtubule linkage
+  description: The axonemal central bridge connects the C1 and C2 singlet microtubules
+    within the central pair complex.
+  evidence:
+  - reference: GO:1990717
+    notes: GO defines the axonemal central bridge as the bridge structures connecting
+      the central pair of single microtubules.
+  - reference: DOI:10.1002/cm.21094
+    notes: Carbajal-Gonzalez et al. 2013 showed that the Chlamydomonas and Strongylocentrotus
+      bridge is a complex network that links C1 and C2.
+evidence:
+- reference: GO:1990717
+  notes: Gene Ontology cellular-component term for the axonemal central bridge.
+- reference: GO:1990716
+  notes: Gene Ontology places the axonemal central bridge within the axonemal central
+    apparatus.
+- reference: DOI:10.1002/cm.21094
+  notes: Carbajal-Gonzalez et al. 2013, 'Conserved structural motifs in the central
+    pair complex of eukaryotic flagella', Cytoskeleton.
+causal_graphs:
+- graph_id: chlamydomonas_central_bridge_c1_c2_linkage
+  title: Central bridges link C1 and C2
+  description: Axonemal central-bridge proteins form the bridge network that connects
+    the C1 and C2 microtubules of the Chlamydomonas central pair complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records coarse C1/C2 bridge parthood and leaves exact PF20/PF16
+    family groundings, additional bridge constituents, copy numbers and 16 nm rung
+    geometry for later curation.
+  nodes:
+  - node_id: central_bridge_proteins
+    label: axonemal central-bridge proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: central_bridge_proteins
+  - node_id: axonemal_central_bridge
+    label: axonemal central bridge
+    node_type: STRUCTURE
+    grounding: GO:1990717
+  - node_id: c1_axonemal_microtubule
+    label: C1 axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:1990719
+  - node_id: c2_axonemal_microtubule
+    label: C2 axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:1990720
+  - node_id: axonemal_central_apparatus
+    label: axonemal central apparatus
+    node_type: STRUCTURE
+    grounding: GO:1990716
+  edges:
+  - subject: central_bridge_proteins
+    predicate: form
+    object: axonemal_central_bridge
+    description: Central-bridge proteins form the 16 nm-periodic bridge density network
+      in the Chlamydomonas central pair complex.
+    evidence:
+    - reference: DOI:10.1002/cm.21094
+      notes: Carbajal-Gonzalez et al. 2013 resolved the Chlamydomonas central bridge
+        by cryo-ET and noted that PF20 was the only protein then localized unambiguously
+        to the bridge.
+  - subject: axonemal_central_bridge
+    predicate: connects to
+    object: c1_axonemal_microtubule
+    description: The central bridge connects to the C1 microtubule of the axonemal
+      central pair.
+    evidence:
+    - reference: GO:1990717
+      notes: GO defines the axonemal central bridge as connecting the central pair
+        of single microtubules.
+  - subject: axonemal_central_bridge
+    predicate: connects to
+    object: c2_axonemal_microtubule
+    description: The central bridge connects to the C2 microtubule of the axonemal
+      central pair.
+    evidence:
+    - reference: GO:1990717
+      notes: GO defines the axonemal central bridge as two bridges linking the two
+        central-pair microtubules.
+  - subject: axonemal_central_bridge
+    predicate: is part of
+    object: axonemal_central_apparatus
+    description: The axonemal central bridge is part of the central apparatus.
+    evidence:
+    - reference: GO:1990717
+      notes: GO places the axonemal central bridge within the axonemal central apparatus.
+discussions:
+- discussion_id: resolve_central_bridge_composition
+  prompt: Resolve exact source-neutral groundings for PF20, PF16 and other axonemal
+    central-bridge constituent families, bridge membership and copy numbers.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#central_bridge_proteins
+  - causal_graphs#chlamydomonas_central_bridge_c1_c2_linkage
+  rationale: Carbajal-Gonzalez et al. 2013 described the bridge density network but
+    also noted that central-bridge protein composition was limited and only PF20 had
+    then been localized unambiguously to the bridge.
+  evidence:
+  - reference: DOI:10.1002/cm.21094
+    notes: Carbajal-Gonzalez et al. 2013 discussed PF20 localization and the limited
+      protein composition known for the bridge.
+  posed_by: codex
+  posed_date: '2026-09-23'
