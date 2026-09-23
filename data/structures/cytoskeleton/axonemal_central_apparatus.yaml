@@ -39,8 +39,36 @@ curation_history:
   changes: 'Resolved PR #1380 review issue #1383 by removing YAML anchors from duplicated
     central-pair bridge evidence.'
   llm_assisted: true
+- timestamp: '2026-09-23T14:31:05Z'
+  curator: codex
+  action: ADD_AXONEMAL_CENTRAL_BRIDGE_PART
+  changes: Linked GO:1990717 as an axonemal central-apparatus substructure, replaced
+    the label-only central-pair bridge component with a GO-grounded graph structure,
+    and narrowed the remaining projection/cap TODO.
+  llm_assisted: true
+- timestamp: '2026-09-23T14:31:44Z'
+  curator: codex
+  action: FIX_CENTRAL_BRIDGE_TEXT
+  changes: Fixed singular central-bridge edge descriptions and kept GO:1990717 has_part
+    adjacent to central-apparatus parthood.
+  llm_assisted: true
+- timestamp: '2026-09-23T14:32:58Z'
+  curator: codex
+  action: GROUND_CENTRAL_PAIR_PROJECTIONS
+  changes: Grounded the broad central-pair projections component to GO:1990718 and
+    narrowed the residual central-apparatus TODO to central-pair caps and named projection
+    subcomplexes.
+  llm_assisted: true
+- timestamp: '2026-09-23T14:36:51Z'
+  curator: codex
+  action: FIX_CENTRAL_PAIR_PROJECTION_GO_LABEL
+  changes: Changed the GO:1990718 component and graph node label to the canonical
+    axonemal central pair projection label and singularized the matching graph edge.
+  llm_assisted: true
 part_of:
 - GO:0005930
+has_part:
+- GO:1990717
 components:
 - component_id: c1_axonemal_microtubule
   label: C1 axonemal microtubule
@@ -73,35 +101,19 @@ components:
     notes: Nicastro et al. 2006 resolved Chlamydomonas central-pair microtubules and
       their associated densities.
 - component_id: central_pair_projections
-  label: central pair projections
+  label: axonemal central pair projection
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO exactly identifies the whole axonemal central apparatus and
-    the C1 and C2 axonemal microtubules, but no exact source-neutral term for the
-    central-pair projection class was verified in this pass.
   role: Protein-dense projections attached to the central-pair microtubules.
   evidence:
-  - reference: GO:1990716
-    notes: GO includes central pair projections among the associated structures of
-      the axonemal central apparatus.
+  - reference: GO:1990718
+    notes: GO identifies axonemal central pair projections as projection structures
+      off the central pair of single microtubules.
   - reference: DOI:10.1126/science.1128618
     notes: Nicastro et al. 2006 resolved asymmetric densities in the Chlamydomonas
       central-pair region.
-- component_id: central_pair_bridges
-  label: central pair bridges
-  component_type: PROTEIN_COMPLEX
-  component_role: CONSTITUENT
-  essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact source-neutral CURIE for the cross-bridge structures that
-    link C1 and C2 was verified in this pass.
-  role: Bridge structures that link the two central-pair microtubules.
-  evidence:
-  - reference: GO:1990716
-    notes: GO includes bridges linking the two central-pair tubules among the axonemal
-      central apparatus associated structures.
+  grounding: GO:1990718
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
@@ -120,6 +132,11 @@ evidence:
   notes: Gene Ontology cellular-component term for the axonemal central apparatus.
 - reference: GO:0097540
   notes: Gene Ontology cellular-component term for the axonemal central pair.
+- reference: GO:1990717
+  notes: Gene Ontology cellular-component term for the axonemal central bridge.
+- reference: GO:1990718
+  notes: Gene Ontology cellular-component term for axonemal central pair projection
+    structures.
 - reference: GO:1990719
   notes: Gene Ontology cellular-component term for the C1 axonemal microtubule.
 - reference: GO:1990720
@@ -131,15 +148,15 @@ evidence:
     cryoelectron tomography', Science.
 causal_graphs:
 - graph_id: chlamydomonas_central_apparatus_architecture
-  title: C1, C2 and projections organize the central apparatus
+  title: C1, C2, bridges and projections organize the central apparatus
   description: The Chlamydomonas axonemal central apparatus contains asymmetric C1
     and C2 singlet microtubules, bridges between them, and central-pair projections
     that face the radial spokes.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: This graph records the coarse C1/C2 central-pair, bridge and projection
-    architecture and leaves exact central-pair projection, bridge and cap subcomplex
-    boundaries for later curation.
+    architecture and leaves exact central-pair projection and cap subcomplex boundaries
+    for later curation.
   nodes:
   - node_id: c1_axonemal_microtubule
     label: C1 axonemal microtubule
@@ -152,13 +169,14 @@ causal_graphs:
     grounding: GO:1990720
     component_ref: c2_axonemal_microtubule
   - node_id: central_pair_projections
-    label: central pair projections
+    label: axonemal central pair projection
     node_type: GENE_OR_PROTEIN
     component_ref: central_pair_projections
-  - node_id: central_pair_bridges
-    label: central pair bridges
-    node_type: GENE_OR_PROTEIN
-    component_ref: central_pair_bridges
+    grounding: GO:1990718
+  - node_id: axonemal_central_bridge
+    label: axonemal central bridge
+    node_type: STRUCTURE
+    grounding: GO:1990717
   - node_id: axonemal_central_apparatus
     label: axonemal central apparatus
     node_type: STRUCTURE
@@ -193,10 +211,10 @@ causal_graphs:
     - reference: GO:1990720
       notes: GO places the C2 axonemal microtubule within the axonemal central pair.
   - subject: central_pair_projections
-    predicate: are part of
+    predicate: is part of
     object: axonemal_central_apparatus
-    description: Central-pair projections are associated structures of the axonemal
-      central apparatus.
+    description: Axonemal central pair projections are associated structures of the
+      axonemal central apparatus.
     evidence:
     - reference: GO:1990716
       notes: GO identifies central pair projections as associated structures of the
@@ -204,42 +222,42 @@ causal_graphs:
     - reference: DOI:10.1126/science.1128618
       notes: Nicastro et al. 2006 resolved asymmetric central-pair densities in Chlamydomonas
         axonemes.
-  - subject: central_pair_bridges
+  - subject: axonemal_central_bridge
     predicate: connect to
     object: c1_axonemal_microtubule
-    description: Central-pair bridges link the C1 axonemal microtubule to the C2 axonemal
-      microtubule.
+    description: The axonemal central bridge links the C1 axonemal microtubule to
+      the C2 axonemal microtubule.
     evidence:
-    - reference: GO:1990716
-      notes: GO includes bridges linking the two central pair tubules in the axonemal
-        central apparatus.
-  - subject: central_pair_bridges
+    - reference: GO:1990717
+      notes: GO identifies the axonemal central bridge as the central apparatus structure
+        that connects the central-pair microtubules.
+  - subject: axonemal_central_bridge
     predicate: connect to
     object: c2_axonemal_microtubule
-    description: Central-pair bridges link the C2 axonemal microtubule to the C1 axonemal
-      microtubule.
+    description: The axonemal central bridge links the C2 axonemal microtubule to
+      the C1 axonemal microtubule.
     evidence:
-    - reference: GO:1990716
-      notes: GO includes bridges linking the two central pair tubules in the axonemal
-        central apparatus.
+    - reference: GO:1990717
+      notes: GO identifies the axonemal central bridge as the central apparatus structure
+        that connects the central-pair microtubules.
 discussions:
 - discussion_id: resolve_central_pair_projection_groundings
-  prompt: Resolve exact source-neutral groundings for central-pair projection, bridge
-    and cap subcomplex classes.
+  prompt: Resolve exact source-neutral groundings for central-pair cap and named projection
+    subcomplex classes.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#central_pair_projections
-  - components#central_pair_bridges
-  rationale: GO exactly identifies the axonemal central apparatus and the C1 and C2
-    axonemal microtubules, but no exact source-neutral term was verified for the broader
-    central projection or bridge classes, central-pair caps, or named projection subcomplexes.
+  rationale: GO exactly identifies the axonemal central apparatus, axonemal central
+    bridge, broad axonemal central-pair projection structures, and C1/C2 microtubules,
+    but this pass leaves exact central-pair cap structures and named projection subcomplex
+    boundaries for later curation.
   evidence:
+  - reference: GO:1990718
+    notes: GO exactly identifies axonemal central pair projection structures that
+      remain to be curated as a separate record.
   - reference: GO:1990716
-    notes: GO includes central pair projections, bridges and caps in the axonemal
-      central apparatus boundary.
-  - reference: DOI:10.1126/science.1128618
-    notes: Nicastro et al. 2006 resolved repeated and asymmetric central-pair densities
-      in Chlamydomonas axonemes.
+    notes: GO includes central pair projections and caps in the axonemal central apparatus
+      boundary.
   posed_by: codex
   posed_date: '2026-09-23'
