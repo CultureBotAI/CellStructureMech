@@ -41,6 +41,12 @@ curation_history:
     vesicle lipid component, marking it reviewed-label-only, and leaving GO:0030670
     as the exact child membrane structure.'
   llm_assisted: true
+- timestamp: '2026-09-23T19:32:06Z'
+  curator: codex
+  action: ADD_PHAGOCYTIC_VESICLE_LUMEN_CHILD
+  changes: Linked GO:0097013 to its own phagocytic vesicle lumen child record while
+    preserving the phagocytic vesicle topology graph on the parent.
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 has_part:

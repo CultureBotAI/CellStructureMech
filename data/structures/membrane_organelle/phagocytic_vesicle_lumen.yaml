@@ -1,0 +1,189 @@
+identifier: GO:0097013
+label: phagocytic vesicle lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by a phagocytic vesicle membrane.
+definition_source: GO:0097013
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T19:30:37Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T19:32:06Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added UniProt SL-0342 synonymy and xref, cytoplasmic-vesicle-lumen parentage,
+    phagocytic-vesicle parthood, Dictyostelium scope, GO/UniProt/PMID evidence, a
+    phagosome-acidification function, a nonmechanistic phagocytic-vesicle lumen topology
+    graph, and resolved lumen boundary and cargo-scope discussions.
+  llm_assisted: true
+- timestamp: '2026-09-23T19:42:39Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1421 by retargeting the phagosome-acidification graph edge from
+    a process-as-agent acidifies edge to a lumen-undergoes-process edge.'
+  llm_assisted: true
+synonyms:
+- synonym_text: Phagosome lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0342
+- synonym_text: Phagosomal lumen
+  synonym_type: EXACT_SYNONYM
+  source: uniprot.location:SL-0342
+parent_structures:
+- GO:0060205
+part_of:
+- GO:0045335
+xrefs:
+- uniprot.location:SL-0342
+taxonomic_distribution:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  presence: COMMON
+  note: Dictyostelium discoideum phagosomes have lumens that acidify and mature after
+    particle uptake.
+  reference: PMID:12388753
+canonical_examples:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  note: Amoebozoan model in which luminal phagosome maturation was resolved across
+    temporally distinct membrane-trafficking and acidification phases.
+  reference: PMID:12388753
+functions:
+- function_id: phagosome_acidification
+  label: phagosome acidification
+  grounding: GO:0090383
+  description: The phagocytic vesicle lumen acidifies as newly formed phagosomes mature
+    toward late digestive compartments.
+  evidence:
+  - reference: GO:0090383
+    notes: GO:0090383 defines phagosome acidification as the reduction of phagosome
+      pH.
+  - reference: PMID:12388753
+    notes: Gotthardt et al. 2002 dissected Dictyostelium phagosome maturation into
+      stages with distinct luminal-acidification behavior.
+evidence:
+- reference: GO:0097013
+  notes: Gene Ontology cellular-component term for the phagocytic vesicle lumen.
+- reference: GO:0060205
+  notes: Gene Ontology cellular-component term for the broader cytoplasmic vesicle
+    lumen class.
+- reference: GO:0045335
+  notes: Gene Ontology cellular-component term for the enclosing phagocytic vesicle.
+- reference: GO:0030670
+  notes: Gene Ontology cellular-component term for the membrane that bounds the phagocytic
+    vesicle lumen.
+- reference: GO:0090383
+  notes: Gene Ontology biological-process term for phagosome acidification.
+- reference: uniprot.location:SL-0342
+  notes: UniProt Subcellular Location entry SL-0342 identifies Phagosome lumen, lists
+    Phagocytic vesicle lumen and Phagosomal lumen as synonyms, places it under cytoplasmic
+    vesicle lumen, and names Phagosome as the parent.
+- reference: PMID:12388753
+  notes: Gotthardt et al. 2002, High-resolution dissection of phagosome maturation
+    reveals distinct membrane trafficking phases, Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: phagocytic_vesicle_lumen_topology
+  title: Phagocytic vesicle lumen topology
+  description: The phagocytic vesicle membrane bounds the phagocytic vesicle lumen
+    inside the phagocytic vesicle as newly formed phagosomes acidify during maturation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the defining lumenal boundary and acidification
+    outcome without asserting specific V-ATPase, protease, Rab, or cargo mechanisms.
+  nodes:
+  - node_id: phagocytic_vesicle_lumen
+    label: phagocytic vesicle lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0097013
+  - node_id: phagocytic_vesicle_membrane
+    label: phagocytic vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0030670
+  - node_id: phagocytic_vesicle
+    label: phagocytic vesicle
+    node_type: ORGANELLE
+    grounding: GO:0045335
+  - node_id: phagosome_acidification
+    label: phagosome acidification
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0090383
+  edges:
+  - subject: phagocytic_vesicle_lumen
+    predicate: is part of
+    object: phagocytic_vesicle
+    description: The phagocytic vesicle lumen is the bounded volume inside a phagocytic
+      vesicle.
+    evidence:
+    - reference: GO:0097013
+      notes: GO:0097013 identifies the phagocytic vesicle lumen.
+    - reference: uniprot.location:SL-0342
+      notes: UniProt SL-0342 places Phagosome lumen under Phagosome.
+  - subject: phagocytic_vesicle_membrane
+    predicate: bounds
+    object: phagocytic_vesicle_lumen
+    description: The phagocytic vesicle membrane bounds the phagocytic vesicle lumen.
+    evidence:
+    - reference: GO:0030670
+      notes: GO:0030670 identifies the membrane surrounding a phagocytic vesicle.
+    - reference: GO:0097013
+      notes: GO:0097013 defines the lumen by enclosure within the phagocytic vesicle
+        membrane.
+  - subject: phagocytic_vesicle_lumen
+    predicate: undergoes
+    object: phagosome_acidification
+    description: The phagocytic vesicle lumen undergoes acidification during phagosome
+      maturation.
+    evidence:
+    - reference: GO:0090383
+      notes: GO:0090383 defines phagosome acidification as the reduction of phagosome
+        pH.
+    - reference: PMID:12388753
+      notes: Gotthardt et al. 2002 resolved ordered Dictyostelium phagosome acidification
+        during maturation.
+discussions:
+- discussion_id: boundary_membrane_not_lumen_component
+  prompt: Represent the phagocytic vesicle membrane as the boundary of the lumen rather
+    than as a lumen component.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#phagocytic_vesicle_lumen_topology
+  rationale: GO:0097013 denotes the lumenal volume enclosed by the phagocytic vesicle
+    membrane, not a stable molecular constituent table. The membrane is therefore
+    modeled as a boundary node in the topology graph.
+  resolution_note: Curated the membrane as a boundary node and left the lumen record
+    without constituent components.
+  evidence:
+  - reference: GO:0097013
+    notes: GO:0097013 identifies the phagocytic vesicle lumen.
+  - reference: GO:0030670
+    notes: GO:0030670 identifies the membrane that bounds the lumen.
+  posed_by: codex
+  posed_date: '2026-09-23'
+  resolved_date: '2026-09-23'
+- discussion_id: keep_variable_cargo_out
+  prompt: Keep variable phagocytosed cargo and maturation enzymes out of the generic
+    phagocytic vesicle lumen components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#phagocytic_vesicle_lumen_topology
+  rationale: The phagocytic vesicle lumen is the bounded volume inside the vesicle.
+    The ingested particle and soluble hydrolases depend on phagosome cargo and maturation
+    stage, so this generic lumen record does not assert a stable cargo or enzyme component.
+  resolution_note: Modeled only the lumenal volume and its acidification during maturation.
+  evidence:
+  - reference: GO:0045335
+    notes: GO:0045335 identifies phagocytic vesicles as formed by ingestion of particulate
+      material.
+  - reference: PMID:12388753
+    notes: Gotthardt et al. 2002 separated Dictyostelium phagosome maturation into
+      temporally distinct stages.
+  posed_by: codex
+  posed_date: '2026-09-23'
+  resolved_date: '2026-09-23'

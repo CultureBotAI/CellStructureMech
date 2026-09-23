@@ -9256,6 +9256,11 @@
           "cosine_similarity": 0.96836723
         },
         {
+          "identifier": "GO:0097013",
+          "label": "phagocytic vesicle lumen",
+          "cosine_similarity": 0.92941685
+        },
+        {
           "identifier": "GO:0031410",
           "label": "cytoplasmic vesicle",
           "cosine_similarity": 0.81760261
@@ -9269,11 +9274,37 @@
           "identifier": "GO:0030666",
           "label": "endocytic vesicle membrane",
           "cosine_similarity": 0.8050466
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097013",
+      "label": "phagocytic vesicle lumen",
+      "neighbors": [
+        {
+          "identifier": "GO:0045335",
+          "label": "phagocytic vesicle",
+          "cosine_similarity": 0.92941685
         },
         {
-          "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
-          "label": "multivesicular body intraluminal vesicle",
-          "cosine_similarity": 0.8029908
+          "identifier": "GO:0030670",
+          "label": "phagocytic vesicle membrane",
+          "cosine_similarity": 0.90553511
+        },
+        {
+          "identifier": "GO:0071682",
+          "label": "endocytic vesicle lumen",
+          "cosine_similarity": 0.85183776
+        },
+        {
+          "identifier": "GO:0060205",
+          "label": "cytoplasmic vesicle lumen",
+          "cosine_similarity": 0.85090542
+        },
+        {
+          "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
+          "label": "COPII-coated vesicle lumen",
+          "cosine_similarity": 0.84444071
         }
       ]
     },
@@ -9285,6 +9316,11 @@
           "identifier": "GO:0045335",
           "label": "phagocytic vesicle",
           "cosine_similarity": 0.96836723
+        },
+        {
+          "identifier": "GO:0097013",
+          "label": "phagocytic vesicle lumen",
+          "cosine_similarity": 0.90553511
         },
         {
           "identifier": "GO:0030659",
@@ -9300,11 +9336,6 @@
           "identifier": "GO:0030666",
           "label": "endocytic vesicle membrane",
           "cosine_similarity": 0.86890394
-        },
-        {
-          "identifier": "GO:0012507",
-          "label": "ER to Golgi transport vesicle membrane",
-          "cosine_similarity": 0.86400416
         }
       ]
     },

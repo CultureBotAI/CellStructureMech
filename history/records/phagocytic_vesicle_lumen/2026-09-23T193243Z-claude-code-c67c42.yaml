@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+  slug: phagocytic_vesicle_lumen
+session:
+  id: 2026-09-23T193243Z-claude-code-c67c42
+  timestamp: '2026-09-23T19:32:43Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add phagocytic vesicle lumen
+  details: Created a GO:0097013 phagocytic vesicle lumen record with UniProt SL-0342 synonymy
+    and xref, cytoplasmic vesicle lumen parentage, phagocytic vesicle parthood, Dictyostelium
+    discoideum evidence from PMID:12388753, a phagosome acidification function, and a nonmechanistic
+    topology graph that keeps the phagocytic vesicle membrane as a boundary of the lumen rather
+    than a lumen component.
