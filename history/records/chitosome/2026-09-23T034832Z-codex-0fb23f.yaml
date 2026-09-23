@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/chitosome.yaml
+  slug: chitosome
+session:
+  id: 2026-09-23T034832Z-codex-0fb23f
+  timestamp: '2026-09-23T03:48:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1350
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1351
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1349
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address chitosome PR review
+  details: 'Resolved PR #1349 review issues #1350 and #1351 for data/structures/membrane_organelle/chitosome.yaml.
+    Removed unsupported paraphrase synonyms whose source fields did not demonstrate exact
+    synonym provenance, narrowed the Saccharomyces cerevisiae canonical example to the Ziman
+    et al. Chs3p chitosome-to-plasma-membrane transport claim, regenerated derived artifacts,
+    and reran validation in the same branch.'

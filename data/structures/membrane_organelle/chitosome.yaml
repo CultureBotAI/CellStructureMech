@@ -1,0 +1,270 @@
+identifier: GO:0045009
+label: chitosome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: An intracellular membrane-bounded particle found in fungi and containing
+  chitin synthase; it synthesizes chitin microfibrils. Chitin synthase activity exists
+  in chitosomes and they are proposed to act as a reservoir for regulated transport
+  of chitin synthase enzymes to the division septum.
+definition_source: GO:0045009
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T03:32:33Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T03:34:19Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic-vesicle parentage, chitosome membrane and reviewed-label-only
+    chitin synthase components, chitosome synonymy, fungal scope, a Saccharomyces
+    example, chitin-synthase delivery functions, DOI/GO evidence, a nonmechanistic
+    delivery graph, and component-grounding and chitin product-boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-23T03:39:02Z'
+  curator: codex
+  action: NORMALIZED_GRAPH_LABELS
+  changes: Aligned grounded chitosome graph node labels with GO:0030428 and CHEBI:17029
+    canonical labels for the id-label correspondence gate.
+  llm_assisted: true
+- timestamp: '2026-09-23T03:48:15Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1349 review issues #1350 and #1351 by removing unsupported
+    paraphrase synonyms and narrowing the Saccharomyces canonical example to the Ziman
+    et al. Chs3p transport claim.'
+  llm_assisted: true
+parent_structures:
+- GO:0031410
+components:
+- component_id: chitosome_membrane
+  label: chitosome membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact GO cellular-component term for the membrane of a chitosome
+    was found during this pass.
+  role: Lipid-bilayer boundary of the intracellular chitosome microvesicle that carries
+    latent fungal chitin synthase.
+  evidence:
+  - reference: GO:0045009
+    notes: GO:0045009 defines the chitosome as an intracellular membrane-bounded fungal
+      particle.
+  - reference: DOI:10.1073/pnas.85.22.8516
+    notes: Leal-Morales et al. 1988 separated low-density Saccharomyces chitosome
+      microvesicles from plasma membrane vesicles in cell-free homogenates.
+- component_id: fungal_chitin_synthases
+  label: fungal chitin synthases
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Fungal chitosomes can contain different chitin synthase isoenzymes;
+    no single exact source-neutral protein-family CURIE was verified for the whole
+    cargo class.
+  role: Latent membrane-enzyme cargo that is stored in chitosomes and delivered to
+    the fungal cell surface for localized chitin microfibril synthesis.
+  evidence:
+  - reference: GO:0045009
+    notes: GO:0045009 defines chitosomes as fungal membrane-bounded particles containing
+      chitin synthase and synthesizing chitin microfibrils.
+  - reference: DOI:10.1091/mbc.9.6.1565
+    notes: Ziman et al. 1998 analyzed regulated Chs3p anterograde transport from the
+      chitosome to the plasma membrane in Saccharomyces cerevisiae.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: VARIABLE
+  note: Chitosome evidence spans multiple fungal lineages, but this first record treats
+    them as documented fungal chitin-synthase vesicles rather than asserting a universal
+    organelle across all fungi.
+  reference: DOI:10.1111/j.1567-1364.2006.00158.x
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Chs6p-dependent Chs3p traffic from the chitosome
+    to the plasma membrane was genetically dissected.
+  reference: DOI:10.1091/mbc.9.6.1565
+functions:
+- function_id: chitin_synthase_storage_and_delivery
+  label: chitin synthase storage and delivery
+  description: Chitosomes act as intracellular membrane-bounded carriers that store
+    latent fungal chitin synthase and deliver it to cell-surface sites for localized
+    chitin microfibril synthesis.
+  evidence:
+  - reference: GO:0045009
+    notes: GO:0045009 describes chitosomes as proposed reservoirs for regulated chitin-synthase
+      transport to the division septum.
+  - reference: DOI:10.1091/mbc.9.6.1565
+    notes: Ziman et al. 1998 tested Chs6p-dependent anterograde transport of Saccharomyces
+      Chs3p from the chitosome to the plasma membrane.
+- function_id: fungal_wall_chitin_microfibril_synthesis
+  label: fungal wall chitin microfibril synthesis
+  description: The chitosome-associated synthase pool supports synthesis of chitin
+    microfibrils used in the fungal cell-wall matrix after enzyme delivery to the
+    cell surface.
+  evidence:
+  - reference: DOI:10.1111/j.1567-1364.2006.00158.x
+    notes: Bartnicki-Garcia 2006 reviews chitosomes as microvesicular carriers of
+      chitin-synthetase activity for fungal wall chitin microfibril construction.
+  - reference: DOI:10.1083/jcb.136.1.95
+    notes: Santos and Snyder 1997 linked Chs3p localization to polarized chitin synthesis
+      sites in Saccharomyces vegetative and mating cells.
+evidence:
+- reference: GO:0045009
+  notes: Gene Ontology cellular-component term for the chitosome.
+- reference: GO:0031410
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicles.
+- reference: DOI:10.1111/j.1567-1364.2006.00158.x
+  notes: 'Bartnicki-Garcia S 2006, Chitosomes: past, present and future, FEMS Yeast
+    Research.'
+- reference: DOI:10.1073/pnas.85.22.8516
+  notes: 'Leal-Morales CA, Bracker CE and Bartnicki-Garcia S 1988, Localization of
+    chitin synthetase in cell-free homogenates of Saccharomyces cerevisiae: chitosomes
+    and plasma membrane, Proceedings of the National Academy of Sciences.'
+- reference: DOI:10.1083/jcb.136.1.95
+  notes: Santos B and Snyder M 1997, Targeting of Chitin Synthase 3 to Polarized Growth
+    Sites in Yeast Requires Chs5p and Myo2p, Journal of Cell Biology.
+- reference: DOI:10.1091/mbc.9.6.1565
+  notes: Ziman M, Chuang JS, Tsung M, Hamamoto S and Schekman R 1998, Chs6p-dependent
+    anterograde transport of Chs3p from the chitosome to the plasma membrane in Saccharomyces
+    cerevisiae, Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: chitosome_chitin_synthase_delivery
+  title: Chitosomes store and deliver chitin synthase
+  description: A chitosome is a fungal cytoplasmic vesicle that carries latent chitin
+    synthase. In Saccharomyces, Chs3p traffics from the chitosome to the plasma membrane,
+    where localized synthase activity contributes to chitin microfibril synthesis
+    for the fungal cell wall.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the chitosome storage and delivery role without asserting
+    complete biogenesis machinery, Chs6p/Chs5p/exomer requirements, or the activation
+    state of every fungal chitin synthase isoenzyme.
+  nodes:
+  - node_id: chitosome_membrane
+    label: chitosome membrane
+    node_type: STRUCTURE
+    component_ref: chitosome_membrane
+  - node_id: chitosome
+    label: chitosome
+    node_type: ORGANELLE
+    grounding: GO:0045009
+  - node_id: fungal_chitin_synthases
+    label: fungal chitin synthases
+    node_type: GENE_OR_PROTEIN
+    component_ref: fungal_chitin_synthases
+  - node_id: plasma_membrane
+    label: plasma membrane
+    node_type: STRUCTURE
+    grounding: GO:0005886
+  - node_id: division_septum
+    label: cell septum
+    node_type: STRUCTURE
+    grounding: GO:0030428
+  - node_id: chitin_microfibril
+    label: chitin
+    node_type: CHEMICAL
+    grounding: CHEBI:17029
+  edges:
+  - subject: chitosome_membrane
+    predicate: bounds
+    object: chitosome
+    description: The chitosome is bounded by a membrane as a fungal cytoplasmic microvesicle.
+    evidence:
+    - reference: GO:0045009
+      notes: GO:0045009 defines chitosomes as intracellular membrane-bounded particles.
+    - reference: DOI:10.1073/pnas.85.22.8516
+      notes: Leal-Morales et al. 1988 resolved Saccharomyces chitosomes as low-density
+        microvesicles distinct from plasma membrane vesicles.
+  - subject: fungal_chitin_synthases
+    predicate: are stored in
+    object: chitosome
+    description: Chitosomes contain a latent pool of fungal chitin-synthesizing membrane
+      enzymes.
+    evidence:
+    - reference: GO:0045009
+      notes: GO:0045009 defines chitosomes by their chitin synthase cargo and chitin-microfibril
+        synthesis activity.
+    - reference: DOI:10.1111/j.1567-1364.2006.00158.x
+      notes: Bartnicki-Garcia 2006 reviews chitosomes as fungal reservoirs for latent
+        chitin synthetase.
+  - subject: chitosome
+    predicate: delivers
+    object: fungal_chitin_synthases
+    description: Chitosomes transport chitin synthase toward the plasma membrane before
+      localized cell-surface chitin synthesis.
+    evidence:
+    - reference: DOI:10.1091/mbc.9.6.1565
+      notes: Ziman et al. 1998 tested Chs6p-dependent movement of Chs3p from the Saccharomyces
+        chitosome to the plasma membrane.
+    - reference: DOI:10.1083/jcb.136.1.95
+      notes: Santos and Snyder 1997 showed that polarized Chs3p targeting requires
+        Chs5p and Myo2p.
+  - subject: chitosome
+    predicate: targets cargo to
+    object: division_septum
+    description: The chitosome cargo pool is proposed to supply regulated chitin synthase
+      delivery to the division septum.
+    evidence:
+    - reference: GO:0045009
+      notes: GO:0045009 names regulated transport of chitin synthase enzymes to the
+        division septum in the chitosome definition.
+  - subject: fungal_chitin_synthases
+    predicate: synthesize
+    object: chitin_microfibril
+    description: Fungal chitin synthases delivered from chitosomes polymerize chitin
+      microfibrils for the cell-wall matrix.
+    evidence:
+    - reference: GO:0045009
+      notes: GO:0045009 states that chitosomes synthesize chitin microfibrils.
+    - reference: DOI:10.1111/j.1567-1364.2006.00158.x
+      notes: Bartnicki-Garcia 2006 reviews chitosomes as vehicles for cell-surface
+        construction of fungal chitin microfibrils.
+discussions:
+- discussion_id: ground_chitosome_components
+  prompt: Resolve exact source-neutral identifiers for the fungal chitin synthase
+    cargo class and for any chitosome-specific membrane term before grounding these
+    reviewed labels.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#chitosome_membrane
+  - components#fungal_chitin_synthases
+  rationale: GO provides an exact whole-chitosome term but no exact chitosome-membrane
+    child term, and the chitosome literature spans several chitin synthase isoenzymes
+    rather than one curated universal cargo family.
+  evidence:
+  - reference: GO:0045009
+    notes: GO:0045009 identifies the whole fungal chitosome.
+  - reference: DOI:10.1111/j.1567-1364.2006.00158.x
+    notes: Bartnicki-Garcia 2006 highlights chitosome ontogeny and the relationship
+      of reported chitin synthetase genes to chitosome structure/function as unresolved
+      work.
+  posed_by: codex
+  posed_date: '2026-09-23'
+- discussion_id: chitin_product_boundary
+  prompt: Keep chitin microfibrils as the synthesis product, not as resident chitosome
+    components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#fungal_chitin_synthases
+  - causal_graphs#chitosome_chitin_synthase_delivery
+  rationale: Chitosomes are vesicular carriers for chitin synthase activity; chitin
+    microfibrils are synthesized after that activity is deployed for fungal wall construction.
+  resolution_note: Modeled chitin synthases and the chitosome membrane as components,
+    and modeled chitin microfibrils only as the chemical output of chitosome-supported
+    synthase activity.
+  evidence:
+  - reference: GO:0045009
+    notes: GO:0045009 defines the chitosome by its chitin-synthase cargo and microfibril
+      synthesis activity, not by resident chitin polymers.
+  - reference: DOI:10.1091/mbc.9.6.1565
+    notes: Ziman et al. 1998 focused on chitin synthase traffic from the chitosome
+      to the plasma membrane.
+  posed_by: codex
+  posed_date: '2026-09-23'
+  resolved_date: '2026-09-23'
