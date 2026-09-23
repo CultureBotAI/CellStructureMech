@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_secretion_system_hcp_tube.yaml
+  slug: type_vi_secretion_system_hcp_tube
+session:
+  id: 2026-09-23T072420Z-codex-a3b7db
+  timestamp: '2026-09-23T07:24:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1367
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1366
+events:
+- type: REVIEW
+  outcome: changed
+  summary: 'Resolved PR #1366 Hcp graph-kind review'
+  details: Reclassified the Hcp tube polymerization-and-ejection graph from ASSEMBLY to FUNCTION
+    because the graph includes the contractile-sheath ejection edge and describes the Hcp
+    tube firing endpoint, matching the same assembly-to-firing graph pattern used by the whole
+    T6SS and contractile-sheath records.
