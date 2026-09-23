@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/clathrin_coated_pit.yaml
+  slug: clathrin_coated_pit
+session:
+  id: 2026-09-23T223605Z-claude-code-2f1ca7
+  timestamp: '2026-09-23T22:36:05Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added clathrin-coated pit
+  details: Created a GO:0005905 clathrin-coated pit record with GO synonymy, membrane parentage,
+    a clathrin coat has_part link, Saccharomyces endocytosis scope, GO and DOI evidence, a
+    nonmechanistic pit-to-vesicle topology graph, and a resolved boundary discussion keeping
+    clathrin/AP-2 molecular components on the coated-pit coat record.

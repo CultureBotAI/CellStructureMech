@@ -11400,6 +11400,11 @@
           "cosine_similarity": 0.84761151
         },
         {
+          "identifier": "GO:0005905",
+          "label": "clathrin-coated pit",
+          "cosine_similarity": 0.82336473
+        },
+        {
           "identifier": "GO:0030130",
           "label": "clathrin coat of trans-Golgi network vesicle",
           "cosine_similarity": 0.81685026
@@ -11408,11 +11413,6 @@
           "identifier": "GO:0030125",
           "label": "clathrin vesicle coat",
           "cosine_similarity": 0.80946781
-        },
-        {
-          "identifier": "GO:0030117",
-          "label": "membrane coat",
-          "cosine_similarity": 0.71150135
         }
       ]
     },
@@ -11475,6 +11475,37 @@
           "identifier": "GO:0030665",
           "label": "clathrin-coated vesicle membrane",
           "cosine_similarity": 0.84840719
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005905",
+      "label": "clathrin-coated pit",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:clathrin_coated_vesicle_lumen",
+          "label": "clathrin-coated vesicle lumen",
+          "cosine_similarity": 0.82490956
+        },
+        {
+          "identifier": "GO:0030132",
+          "label": "clathrin coat of coated pit",
+          "cosine_similarity": 0.82336473
+        },
+        {
+          "identifier": "GO:0030128",
+          "label": "clathrin coat of endocytic vesicle",
+          "cosine_similarity": 0.82116821
+        },
+        {
+          "identifier": "GO:0106176",
+          "label": "clathrin-coated endocytic vesicle lumen",
+          "cosine_similarity": 0.81943277
+        },
+        {
+          "identifier": "GO:0030118",
+          "label": "clathrin coat",
+          "cosine_similarity": 0.80574811
         }
       ]
     },
