@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_central_bridge.yaml
+  slug: axonemal_central_bridge
+session:
+  id: 2026-09-23T144916Z-codex-079323
+  timestamp: '2026-09-23T14:49:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1403
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1402
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Address axonemal central bridge PR review title
+  details: 'Resolved PR #1402 review issue #1403 by singularizing the GO:1990717 C1/C2 graph
+    title so the rendered page names the curated axonemal central bridge class rather than
+    plural central bridges.'

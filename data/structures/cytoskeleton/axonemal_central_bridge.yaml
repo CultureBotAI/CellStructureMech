@@ -19,6 +19,12 @@ curation_history:
     protein component, Chlamydomonas scope, a C1-C2 linkage function, GO and DOI evidence,
     a nonmechanistic bridge linkage graph, and a central-bridge composition TODO.
   llm_assisted: true
+- timestamp: '2026-09-23T14:49:00Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1402 review issue #1403 by singularizing the central-bridge
+    graph title to match GO:1990717.'
+  llm_assisted: true
 part_of:
 - GO:1990716
 components:
@@ -75,7 +81,7 @@ evidence:
     pair complex of eukaryotic flagella', Cytoskeleton.
 causal_graphs:
 - graph_id: chlamydomonas_central_bridge_c1_c2_linkage
-  title: Central bridges link C1 and C2
+  title: Axonemal central bridge links C1 and C2
   description: Axonemal central-bridge proteins form the bridge network that connects
     the C1 and C2 microtubules of the Chlamydomonas central pair complex.
   graph_kind: FUNCTION
