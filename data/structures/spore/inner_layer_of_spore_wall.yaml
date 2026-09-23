@@ -1,0 +1,192 @@
+identifier: GO:0005632
+label: inner layer of spore wall
+structure_category: SPORE
+structure_kind: ENVELOPE_LAYER
+definition: Either of the two innermost layers of the spore wall, as described in
+  Saccharomyces.
+definition_source: GO:0005632
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T02:55:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T02:56:26Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ascospore-wall parthood, a reviewed-label-only inner mannan/beta-glucan
+    polysaccharide component, Saccharomyces cerevisiae scope, a basal-wall scaffold
+    function, GO/DOI evidence, a nonmechanistic inner-layer topology graph, and a
+    component-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-23T02:57:01Z'
+  curator: codex
+  action: EXPANDED_EVIDENCE
+  changes: Added GO:0005630 record-level evidence for the dityrosine layer node in
+    the Saccharomyces inner-layer topology graph.
+  llm_assisted: true
+part_of:
+- GO:0005619
+components:
+- component_id: inner_wall_polysaccharides
+  label: ascospore inner-wall mannan and beta-glucan polymers
+  component_type: POLYSACCHARIDE
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005632 denotes the inner spore-wall layer structure, but no
+    exact source-neutral CHEBI term was curated for the Saccharomyces-specific mixture
+    of inner mannan and beta-glucan polymers.
+  role: Mannan- and beta-glucan-rich polysaccharide material that forms the two innermost
+    layers of the Saccharomyces ascospore wall.
+  evidence:
+  - reference: GO:0005632
+    notes: GO:0005632 identifies either of the two innermost Saccharomyces spore-wall
+      layers.
+  - reference: DOI:10.1128/MMBR.69.4.565-584.2005
+    notes: Neiman 2005 reviews the mannan- and glucan-rich inner layers of the Saccharomyces
+      cerevisiae ascospore wall.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast builds inner mannan- and glucan-rich layers under the chitosan
+    and dityrosine layers during ascospore-wall maturation; this standalone record
+    does not assert identical inner-layer chemistry throughout ascospore-forming fungi.
+  reference: DOI:10.1128/MMBR.69.4.565-584.2005
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which the inner mannan- and beta-glucan-rich layers
+    are deposited beneath the outer chitosan and dityrosine layers.
+  reference: DOI:10.1128/EC.3.6.1464-1475.2004
+functions:
+- function_id: basal_ascospore_wall_scaffold
+  label: basal ascospore-wall scaffold
+  description: The inner spore-wall layers form the basal Saccharomyces ascospore
+    wall beneath the chitosan and dityrosine outer layers during maturation.
+  evidence:
+  - reference: DOI:10.1128/EC.3.6.1464-1475.2004
+    notes: Coluccio et al. 2004 analyzed the morphogenetic pathway of Saccharomyces
+      spore-wall assembly.
+  - reference: DOI:10.1128/MMBR.69.4.565-584.2005
+    notes: Neiman 2005 reviews deposition of the multilaminar Saccharomyces ascospore
+      wall after prospore-membrane closure.
+evidence:
+- reference: GO:0005632
+  notes: Gene Ontology cellular-component term for the Saccharomyces inner spore-wall
+    layer.
+- reference: GO:0005619
+  notes: Gene Ontology cellular-component term for the broader ascospore wall that
+    contains the inner spore-wall layers.
+- reference: GO:0005631
+  notes: Gene Ontology cellular-component term for the chitosan layer outside the
+    Saccharomyces inner spore-wall layers.
+- reference: GO:0005630
+  notes: Gene Ontology cellular-component term for the dityrosine layer outside the
+    Saccharomyces chitosan layer.
+- reference: DOI:10.1128/EC.3.6.1464-1475.2004
+  notes: Coluccio et al. 2004, Morphogenetic pathway of spore wall assembly in Saccharomyces
+    cerevisiae, Eukaryotic Cell.
+- reference: DOI:10.1128/MMBR.69.4.565-584.2005
+  notes: Neiman 2005, Ascospore Formation in the Yeast Saccharomyces cerevisiae, Microbiology
+    and Molecular Biology Reviews.
+causal_graphs:
+- graph_id: saccharomyces_inner_spore_wall_layering
+  title: Mannan and beta-glucan polymers form the inner Saccharomyces ascospore-wall
+    layers
+  description: In Saccharomyces cerevisiae, mannan- and beta-glucan-rich polysaccharide
+    material forms the two inner ascospore-wall layers beneath the chitosan and dityrosine
+    outer layers.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records inner-layer composition and topology without asserting
+    the full temporal network that regulates spore-wall polymer deposition.
+  nodes:
+  - node_id: inner_wall_polysaccharides
+    label: ascospore inner-wall mannan and beta-glucan polymers
+    node_type: CHEMICAL
+    component_ref: inner_wall_polysaccharides
+  - node_id: inner_spore_wall_layer
+    label: inner layer of spore wall
+    node_type: STRUCTURE
+    grounding: GO:0005632
+  - node_id: chitosan_layer
+    label: chitosan layer of spore wall
+    node_type: STRUCTURE
+    grounding: GO:0005631
+  - node_id: dityrosine_layer
+    label: dityrosine layer of spore wall
+    node_type: STRUCTURE
+    grounding: GO:0005630
+  - node_id: ascospore_wall
+    label: ascospore wall
+    node_type: STRUCTURE
+    grounding: GO:0005619
+  edges:
+  - subject: inner_wall_polysaccharides
+    predicate: forms
+    object: inner_spore_wall_layer
+    description: Mannan- and beta-glucan-rich polysaccharide material forms the two
+      innermost Saccharomyces spore-wall layers.
+    evidence:
+    - reference: GO:0005632
+      notes: GO:0005632 identifies either of the two innermost Saccharomyces spore-wall
+        layers.
+    - reference: DOI:10.1128/MMBR.69.4.565-584.2005
+      notes: Neiman 2005 reviews the inner mannan- and glucan-rich Saccharomyces ascospore-wall
+        layers.
+  - subject: inner_spore_wall_layer
+    predicate: is layer of
+    object: ascospore_wall
+    description: GO places the Saccharomyces inner spore-wall layers as part of the
+      broader ascospore wall.
+    evidence:
+    - reference: GO:0005632
+      notes: GO:0005632 defines the inner spore-wall layer as part of the Saccharomyces
+        spore wall.
+    - reference: GO:0005619
+      notes: GO places GO:0005632 as part of the ascospore wall.
+  - subject: chitosan_layer
+    predicate: overlies
+    object: inner_spore_wall_layer
+    description: The chitosan layer is positioned outside the two inner Saccharomyces
+      spore-wall layers.
+    evidence:
+    - reference: GO:0005631
+      notes: GO:0005631 defines the chitosan layer as the second outermost Saccharomyces
+        spore-wall layer.
+    - reference: GO:0005632
+      notes: GO:0005632 defines the inner layers as the two innermost Saccharomyces
+        spore-wall layers.
+  - subject: dityrosine_layer
+    predicate: overlies
+    object: chitosan_layer
+    description: The dityrosine layer sits outside the chitosan layer as the surface
+      of the Saccharomyces ascospore wall.
+    evidence:
+    - reference: GO:0005630
+      notes: GO:0005630 defines the dityrosine layer as the outermost Saccharomyces
+        spore-wall layer.
+    - reference: GO:0005631
+      notes: GO:0005631 places the chitosan layer immediately beneath the dityrosine
+        layer.
+discussions:
+- discussion_id: inner_wall_polysaccharide_grounding
+  prompt: Resolve exact source-neutral groundings for the inner ascospore-wall mannan
+    and beta-glucan polymers.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#inner_wall_polysaccharides
+  rationale: GO:0005632 identifies the complete inner spore-wall layer structure,
+    while the record's molecular component names Saccharomyces inner-wall mannan and
+    beta-glucan polymers without mapping that mixture to exact source-neutral CHEBI
+    identifiers.
+  evidence:
+  - reference: DOI:10.1128/MMBR.69.4.565-584.2005
+    notes: Neiman 2005 reviews the inner Saccharomyces ascospore-wall layers as mannan-
+      and glucan-rich.
+  posed_by: codex
+  posed_date: '2026-09-23'
