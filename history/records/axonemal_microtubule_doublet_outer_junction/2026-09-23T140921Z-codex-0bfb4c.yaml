@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+  slug: axonemal_microtubule_doublet_outer_junction
+session:
+  id: 2026-09-23T140921Z-codex-0bfb4c
+  timestamp: '2026-09-23T14:09:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1401
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1400
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - functions
+  - causal_graphs
+  - canonical_examples
+  summary: Address CFAP77 outer-junction review wording
+  details: 'Addressed PR #1400 review issue #1401 by narrowing the GO:0160114 Tetrahymena
+    evidence wording. The function and graph now attribute direct B1-B2 dissociation to molecular
+    dynamics simulations omitting both TtCFAP77 and OJ2, while describing CFAP77A/B knockout
+    as a mild motility and occasional doublet-damage phenotype.'

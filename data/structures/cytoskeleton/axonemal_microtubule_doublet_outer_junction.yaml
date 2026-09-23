@@ -19,6 +19,13 @@ curation_history:
     Tetrahymena scope, B-tubule stabilization function, GO and DOI evidence, a nonmechanistic
     outer-junction graph, and an outer-junction protein-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-23T14:08:32Z'
+  curator: codex
+  action: ADDRESS_CFAP77_REVIEW
+  changes: '#1401: narrowed TtCFAP77/OJ2 simulation and CFAP77 knockout wording to
+    avoid treating CFAP77 loss alone as a direct full-outer-junction destabilization
+    assay.'
+  llm_assisted: true
 part_of:
 - GO:0097545
 components:
@@ -50,7 +57,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:5911
   taxon_label: Tetrahymena thermophila
   note: Ciliate model used to identify CFAP77, OJ2 and OJ3 outer-junction proteins
-    and test CFAP77 outer-junction stabilization by knockout.
+    and test CFAP77 loss in ciliary motility and doublet-integrity assays.
   reference: DOI:10.1038/s41467-023-37868-0
 functions:
 - function_id: outer_junction_b_tubule_stabilization
@@ -63,9 +70,8 @@ functions:
     notes: GO defines the outer junction as the structure joining B1 to A10 and A11
       in the axonemal doublet.
   - reference: DOI:10.1038/s41467-023-37868-0
-    notes: Kubo et al. 2023 used Tetrahymena CFAP77/OJ2 structural modeling and CFAP77
-      knockout tomograms to connect the outer-junction proteins to outer-junction
-      stability.
+    notes: Kubo et al. 2023 modeled TtCFAP77 and OJ2 across A10-A12/B1-B2 protofilaments
+      and found B1-B2 dissociation without both proteins in molecular dynamics simulations.
 evidence:
 - reference: GO:0160114
   notes: Gene Ontology cellular-component term for the axonemal microtubule doublet
@@ -83,7 +89,7 @@ causal_graphs:
 - graph_id: axonemal_outer_junction_stabilization
   title: Outer-junction proteins link A- and B-tubules
   description: Outer-junction proteins occupy the B1-A10/A11 boundary of the axonemal
-    doublet and stabilize the outer side of the B-tubule attachment site.
+    doublet and help stabilize the outer side of the B-tubule attachment site.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: This graph records the coarse B1-A10/A11 outer-junction architecture
@@ -144,12 +150,13 @@ causal_graphs:
   - subject: axonemal_microtubule_doublet_outer_junction
     predicate: stabilizes
     object: axonemal_doublet_microtubule
-    description: Outer-junction proteins stabilize the outer attachment between the
-      incomplete B-tubule and the A-tubule of the axonemal doublet.
+    description: Molecular dynamics of the Tetrahymena A10-A12/B1-B2 outer-junction
+      patch implicate TtCFAP77 and OJ2 in stable B-tubule-to-A-tubule attachment.
     evidence:
     - reference: DOI:10.1038/s41467-023-37868-0
-      notes: Kubo et al. 2023 found that removing Tetrahymena CFAP77 destabilizes
-        the outer junction and reduces ciliary motility.
+      notes: Kubo et al. 2023 found B1-B2 protofilaments dissociated from A10-A12
+        when TtCFAP77 and OJ2 were omitted from molecular dynamics simulations; CFAP77A/B
+        knockout mildly reduced motility with occasional doublet damage.
 discussions:
 - discussion_id: resolve_outer_junction_protein_groundings
   prompt: Resolve exact CFAP77, OJ2, OJ3, FAP127, FAP53, FAP141 and other axonemal
