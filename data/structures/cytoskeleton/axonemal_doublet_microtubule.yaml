@@ -52,6 +52,13 @@ curation_history:
   changes: 'Resolved PR #1393 review issue #1394 by removing broad inner-sheath MIP
     DOI evidence from the remaining parent doublet-substructure TODO.'
   llm_assisted: true
+- timestamp: '2026-09-23T12:51:03Z'
+  curator: codex
+  action: ADD_AXONEMAL_INNER_JUNCTION_PART
+  changes: Linked GO:0160113 as an axonemal doublet substructure and narrowed the
+    remaining doublet-substructure TODO to the outer junction, ribbon and other doublet-specific
+    accessories.
+  llm_assisted: true
 synonyms:
 - synonym_text: axonemal outer doublet
   synonym_type: EXACT_SYNONYM
@@ -74,6 +81,7 @@ has_part:
 - GO:0097649
 - GO:0097650
 - GO:0160110
+- GO:0160113
 components:
 - component_id: axonemal_tubulins
   label: axonemal alpha- and beta-tubulins
@@ -236,19 +244,16 @@ causal_graphs:
         the Chlamydomonas 9+2 axoneme by cryoelectron tomography.
 discussions:
 - discussion_id: resolve_mip_and_doublet_substructure_boundaries
-  prompt: Resolve exact source-neutral groundings for remaining doublet substructures
-    and decide whether the inner and outer junctions, ribbon, and doublet-specific
-    accessory structures need child records.
+  prompt: Resolve exact source-neutral groundings for remaining outer-junction, ribbon
+    and doublet-specific accessory structures, and decide which ones need child records.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - causal_graphs#chlamydomonas_doublet_scaffold
-  rationale: GO still identifies named inner-junction, outer-junction and ribbon substructures,
-    but this GO:0097545 pass leaves those finer child records for later curation.
+  rationale: GO still identifies named outer-junction and ribbon substructures, but
+    this GO:0097545 pass leaves those finer child records and other doublet-specific
+    accessory structures for later curation.
   evidence:
-  - reference: GO:0160113
-    notes: Gene Ontology cellular-component term for the inner junction that links
-      the B10 and A1 protofilaments of an axonemal doublet.
   - reference: GO:0160114
     notes: Gene Ontology cellular-component term for the outer junction that links
       the B1 protofilament to A10/A11 in an axonemal doublet.
