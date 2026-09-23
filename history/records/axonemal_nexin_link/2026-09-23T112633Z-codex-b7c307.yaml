@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_nexin_link.yaml
+  slug: axonemal_nexin_link
+session:
+  id: 2026-09-23T112633Z-codex-b7c307
+  timestamp: '2026-09-23T11:26:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1388
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1389
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1387
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  summary: Address axonemal nexin link PR review
+  details: 'Resolved PR #1387 review issues #1388 and #1389 by renaming the GO:0005931 graph
+    title so it does not claim that the axonemal nexin link regulates doublets and by broadening
+    the subunit-grounding TODO to the complete 11-or-more-member Chlamydomonas N-DRC cohort.'

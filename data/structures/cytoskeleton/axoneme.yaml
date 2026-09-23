@@ -85,8 +85,16 @@ curation_history:
   changes: 'Resolved PR #1384 review issue #1386 by moving inner-arm isoform follow-up
     to the new GO:0036156 child record and narrowing the axoneme subcomplex TODO.'
   llm_assisted: true
+- timestamp: '2026-09-23T11:15:38Z'
+  curator: codex
+  action: ADD_AXONEMAL_NEXIN_LINK_PART
+  changes: Linked GO:0005931 as an axoneme substructure, replaced the label-only nexin-dynein
+    regulatory complex component with a GO-grounded graph structure, and narrowed
+    the axoneme subcomplex TODO.
+  llm_assisted: true
 has_part:
 - GO:0001534
+- GO:0005931
 - GO:1990716
 - GO:0036156
 - GO:0036157
@@ -106,21 +114,6 @@ components:
   - reference: DOI:10.1126/science.1128618
     notes: Nicastro et al. 2006 resolved the 9+2 microtubule arrangement in rapidly
       frozen Chlamydomonas axonemes by cryoelectron tomography.
-- component_id: nexin_dynein_regulatory_complex
-  label: nexin-dynein regulatory complex
-  component_type: PROTEIN_COMPLEX
-  component_role: CONSTITUENT
-  essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: This first Chlamydomonas axoneme record keeps broad axonemal substructure
-    labels until exact source-neutral groundings for the corresponding ciliary complexes
-    are reviewed.
-  role: Interdoublet linker and dynein-regulatory complex that connects neighboring
-    doublets in the motile axoneme.
-  evidence:
-  - reference: DOI:10.1083/jcb.200908067
-    notes: Heuser et al. 2009 identified the Chlamydomonas dynein regulatory complex
-      as the nexin link.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
@@ -152,6 +145,8 @@ evidence:
   notes: Gene Ontology cellular-component term for the axoneme.
 - reference: GO:0001534
   notes: Gene Ontology cellular-component term for the radial spoke.
+- reference: GO:0005931
+  notes: Gene Ontology cellular-component term for the axonemal nexin link.
 - reference: GO:1990716
   notes: Gene Ontology cellular-component term for the axonemal central apparatus.
 - reference: GO:0036156
@@ -168,8 +163,8 @@ causal_graphs:
 - graph_id: chlamydomonas_axonemal_motility
   title: Dynein and regulatory complexes bend Chlamydomonas axonemes
   description: In Chlamydomonas, dynein arms connect outer doublet microtubules to
-    generate sliding forces; radial spokes, central-pair structures, and nexin-dynein
-    regulatory links organize and coordinate the 9+2 flagellar axoneme.
+    generate sliding forces; radial spokes, central-pair structures, and axonemal
+    nexin links organize and coordinate the 9+2 flagellar axoneme.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: This graph summarizes major structural couplings and leaves dynein
@@ -195,10 +190,10 @@ causal_graphs:
     label: axonemal central apparatus
     node_type: STRUCTURE
     grounding: GO:1990716
-  - node_id: nexin_dynein_regulatory_complex
-    label: nexin-dynein regulatory complex
-    node_type: GENE_OR_PROTEIN
-    component_ref: nexin_dynein_regulatory_complex
+  - node_id: axonemal_nexin_link
+    label: axonemal nexin link
+    node_type: STRUCTURE
+    grounding: GO:0005931
   - node_id: axoneme
     label: axoneme
     node_type: STRUCTURE
@@ -252,11 +247,14 @@ causal_graphs:
     - reference: DOI:10.1126/science.1128618
       notes: Nicastro et al. 2006 identified radial spokes and the central-pair region
         in the Chlamydomonas axoneme.
-  - subject: nexin_dynein_regulatory_complex
+  - subject: axonemal_nexin_link
     predicate: links
     object: outer_doublet_microtubules
-    description: The nexin-dynein regulatory complex links neighboring outer doublets.
+    description: The axonemal nexin link connects neighboring outer doublet microtubules.
     evidence:
+    - reference: GO:0005931
+      notes: GO identifies the axonemal nexin link as an axonemal complex that interconnects
+        outer doublet microtubules.
     - reference: DOI:10.1083/jcb.200908067
       notes: Heuser et al. 2009 identified the dynein regulatory complex as the axonemal
         nexin link.
@@ -284,23 +282,18 @@ causal_graphs:
         model for microtubule sliding force.
 discussions:
 - discussion_id: resolve_chlamydomonas_axoneme_subcomplex_boundaries
-  prompt: Resolve exact source-neutral groundings and boundaries for nexin-dynein
-    regulatory complex, microtubule inner proteins, and additional Chlamydomonas axoneme
-    subcomplexes.
+  prompt: Resolve exact source-neutral groundings and boundaries for microtubule inner
+    proteins and additional Chlamydomonas axoneme subcomplexes.
   kind: CURATION_TODO
   status: OPEN
-  attaches_to:
-  - components#nexin_dynein_regulatory_complex
-  rationale: The radial spoke, axonemal central apparatus, and outer and inner dynein
-    arm classes now have GO-backed child-record boundaries. The Chlamydomonas axoneme
-    has additional named regulatory and microtubule-associated complexes whose exact
-    source-neutral groundings and record boundaries still need review.
+  rationale: The radial spoke, axonemal central apparatus, outer and inner dynein
+    arms, and axonemal nexin link now have GO-backed child-record boundaries. The
+    Chlamydomonas axoneme has additional named regulatory and microtubule-associated
+    complexes whose exact source-neutral groundings and record boundaries still need
+    review.
   evidence:
   - reference: DOI:10.1126/science.1128618
     notes: Nicastro et al. 2006 resolved repeated and asymmetric axonemal densities
       beyond the coarse substructure classes modeled here.
-  - reference: DOI:10.1083/jcb.200908067
-    notes: Heuser et al. 2009 refined the DRC/nexin-link substructure in Chlamydomonas
-      flagella.
   posed_by: codex
   posed_date: '2026-09-11'
