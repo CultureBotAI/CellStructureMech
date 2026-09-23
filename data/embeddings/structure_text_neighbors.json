@@ -13503,6 +13503,11 @@
           "cosine_similarity": 0.91650813
         },
         {
+          "identifier": "GO:0043592",
+          "label": "exosporium",
+          "cosine_similarity": 0.88806506
+        },
+        {
           "identifier": "GO:0043595",
           "label": "endospore cortex",
           "cosine_similarity": 0.87224275
@@ -13516,11 +13521,6 @@
           "identifier": "GO:0090642",
           "label": "microsporidian-type exospore",
           "cosine_similarity": 0.79903313
-        },
-        {
-          "identifier": "GO:0005619",
-          "label": "ascospore wall",
-          "cosine_similarity": 0.79815662
         }
       ]
     },
@@ -13580,9 +13580,9 @@
           "cosine_similarity": 0.85923204
         },
         {
-          "identifier": "GO:0042601",
-          "label": "endospore-forming forespore",
-          "cosine_similarity": 0.84423622
+          "identifier": "GO:0043592",
+          "label": "exosporium",
+          "cosine_similarity": 0.85622635
         }
       ]
     },
@@ -13601,6 +13601,11 @@
           "cosine_similarity": 0.91650813
         },
         {
+          "identifier": "GO:0043592",
+          "label": "exosporium",
+          "cosine_similarity": 0.90125747
+        },
+        {
           "identifier": "GO:0070477",
           "label": "endospore core",
           "cosine_similarity": 0.86368714
@@ -13609,11 +13614,6 @@
           "identifier": "GO:0043594",
           "label": "outer endospore membrane",
           "cosine_similarity": 0.84506728
-        },
-        {
-          "identifier": "GO:0090642",
-          "label": "microsporidian-type exospore",
-          "cosine_similarity": 0.82876078
         }
       ]
     },
@@ -13637,14 +13637,45 @@
           "cosine_similarity": 0.82440803
         },
         {
+          "identifier": "GO:0043592",
+          "label": "exosporium",
+          "cosine_similarity": 0.82228896
+        },
+        {
           "identifier": "GO:0043591",
           "label": "endospore external encapsulating structure",
           "cosine_similarity": 0.82001717
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0043592",
+      "label": "exosporium",
+      "neighbors": [
+        {
+          "identifier": "GO:0043591",
+          "label": "endospore external encapsulating structure",
+          "cosine_similarity": 0.90125747
         },
         {
-          "identifier": "GO:0043594",
-          "label": "outer endospore membrane",
-          "cosine_similarity": 0.81413116
+          "identifier": "GO:0043593",
+          "label": "endospore coat",
+          "cosine_similarity": 0.88806506
+        },
+        {
+          "identifier": "GO:0043595",
+          "label": "endospore cortex",
+          "cosine_similarity": 0.85622635
+        },
+        {
+          "identifier": "GO:0090642",
+          "label": "microsporidian-type exospore",
+          "cosine_similarity": 0.83716443
+        },
+        {
+          "identifier": "GO:0070477",
+          "label": "endospore core",
+          "cosine_similarity": 0.83211716
         }
       ]
     },
@@ -13673,9 +13704,9 @@
           "cosine_similarity": 0.8025757
         },
         {
-          "identifier": "GO:0043593",
-          "label": "endospore coat",
-          "cosine_similarity": 0.7826591
+          "identifier": "GO:0043592",
+          "label": "exosporium",
+          "cosine_similarity": 0.79438328
         }
       ]
     },
@@ -13687,6 +13718,11 @@
           "identifier": "GO:0090641",
           "label": "microsporidian-type endospore",
           "cosine_similarity": 0.93376752
+        },
+        {
+          "identifier": "GO:0043592",
+          "label": "exosporium",
+          "cosine_similarity": 0.83716443
         },
         {
           "identifier": "GO:0043591",
@@ -13702,11 +13738,6 @@
           "identifier": "GO:0005619",
           "label": "ascospore wall",
           "cosine_similarity": 0.81350699
-        },
-        {
-          "identifier": "GO:0140549",
-          "label": "spore inner membrane",
-          "cosine_similarity": 0.8056402
         }
       ]
     },
