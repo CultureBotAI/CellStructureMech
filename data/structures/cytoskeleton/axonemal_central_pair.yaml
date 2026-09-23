@@ -19,6 +19,12 @@ curation_history:
     links, Chlamydomonas scope, GO and DOI evidence, a nonmechanistic central-pair
     architecture graph, and a C1/C2 child record TODO.
   llm_assisted: true
+- timestamp: '2026-09-23T16:00:55Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1406 review issue #1407 by keeping exact named projection
+    subcomplex boundaries in the central-pair graph scope note.'
+  llm_assisted: true
 synonyms:
 - synonym_text: axonemal microtubule central pair
   synonym_type: EXACT_SYNONYM
@@ -87,9 +93,9 @@ causal_graphs:
     apparatus.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: This graph records coarse C1/C2 microtubule and central-pair substructure
-    parthood and leaves exact C1/C2 child records, microtubule-specific components
-    and copy-number geometry for later curation.
+  scope_notes: This graph records coarse C1/C2 microtubule, bridge and projection
+    parthood and leaves exact C1/C2 child records, named projection subcomplex boundaries,
+    microtubule-specific components and copy-number geometry for later curation.
   nodes:
   - node_id: c1_axonemal_microtubule
     label: C1 axonemal microtubule

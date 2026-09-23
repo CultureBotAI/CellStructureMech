@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_central_pair.yaml
+  slug: axonemal_central_pair
+session:
+  id: 2026-09-23T160107Z-codex-3b56f6
+  timestamp: '2026-09-23T16:01:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1407
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1406
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address axonemal central pair PR review scope note
+  details: 'Resolved PR #1406 review issue #1407 by expanding the GO:0097540 central-pair
+    graph scope note so it leaves exact named C1/C2 projection subcomplex boundaries unresolved
+    alongside the C1/C2 child records, microtubule-specific components and copy-number geometry.'
