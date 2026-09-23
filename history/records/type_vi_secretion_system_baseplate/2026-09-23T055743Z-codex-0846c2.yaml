@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_secretion_system_baseplate.yaml
+  slug: type_vi_secretion_system_baseplate
+session:
+  id: 2026-09-23T055743Z-codex-0846c2
+  timestamp: '2026-09-23T05:57:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added type VI secretion system baseplate record
+  details: Created a PROPOSED cellstructuremech:type_vi_secretion_system_baseplate record
+    for the phage-like TssEFGK-VgrG baseplate, with GO whole-system parthood, five reviewed
+    label-only component rows, bacterial taxonomic scope, a Vibrio cholerae canonical example,
+    a baseplate assembly-platform function, a DOI-backed TssEFGK-VgrG assembly graph, and
+    curation discussions for ungrounded families and the future VgrG/PAAR spike boundary.

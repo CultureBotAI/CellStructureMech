@@ -12206,6 +12206,11 @@
           "cosine_similarity": 0.67977506
         },
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_baseplate",
+          "label": "type VI secretion system baseplate",
+          "cosine_similarity": 0.66742643
+        },
+        {
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
           "cosine_similarity": 0.66682134
@@ -12214,11 +12219,6 @@
           "identifier": "GO:0031469",
           "label": "bacterial microcompartment",
           "cosine_similarity": 0.66574051
-        },
-        {
-          "identifier": "GO:0140737",
-          "label": "encapsulin nanocompartment",
-          "cosine_similarity": 0.66007515
         }
       ]
     },
@@ -13560,6 +13560,11 @@
       "label": "type VI protein secretion system complex",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_baseplate",
+          "label": "type VI secretion system baseplate",
+          "cosine_similarity": 0.86931709
+        },
+        {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
           "cosine_similarity": 0.84609597
@@ -13578,11 +13583,37 @@
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
           "cosine_similarity": 0.82407989
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:type_vi_secretion_system_baseplate",
+      "label": "type VI secretion system baseplate",
+      "neighbors": [
+        {
+          "identifier": "GO:0033104",
+          "label": "type VI protein secretion system complex",
+          "cosine_similarity": 0.86931709
         },
         {
-          "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
-          "label": "type IX protein secretion system complex",
-          "cosine_similarity": 0.79912649
+          "identifier": "GO:0043684",
+          "label": "type IV secretion system complex",
+          "cosine_similarity": 0.76762552
+        },
+        {
+          "identifier": "GO:0015627",
+          "label": "type II protein secretion system complex",
+          "cosine_similarity": 0.75489753
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.71641908
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.70461042
         }
       ]
     },
