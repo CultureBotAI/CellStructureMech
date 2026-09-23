@@ -1,0 +1,147 @@
+identifier: GO:0097650
+label: B axonemal microtubule
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: The incomplete 10-protofilament B tubule of the axonemal doublet microtubule.
+definition_source: GO:0097650
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T17:42:23Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T17:43:10Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the B tubule synonym, axonemal-microtubule parentage, doublet parthood,
+    Chlamydomonas scope, GO and DOI evidence, a nonmechanistic B-tubule graph, and
+    a B-tubule protofilament/MIP TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: B tubule
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097650
+parent_structures:
+- GO:0005879
+part_of:
+- GO:0097545
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar doublets contain an incomplete 10-protofilament B-tubule
+    that fuses with the complete A-tubule through inner and outer junctions.
+  reference: DOI:10.1016/j.cell.2019.09.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose native B-tubule protofilament lattice and junctional
+    contacts were resolved in axonemal doublets.
+  reference: DOI:10.1016/j.cell.2019.09.030
+functions:
+- function_id: b_tubule_doublet_scaffold
+  label: B-tubule doublet scaffold
+  description: The incomplete B axonemal microtubule contributes ten protofilaments
+    to the axonemal outer-doublet wall and fuses with the A tubule at the inner and
+    outer junctions.
+  evidence:
+  - reference: GO:0097650
+    notes: GO defines the B axonemal microtubule as the incomplete 10-protofilament
+      tubule of the axonemal outer doublet.
+  - reference: DOI:10.1016/j.cell.2019.09.030
+    notes: Ma et al. 2019 resolved the native Chlamydomonas doublet microtubule lattice,
+      including B-tubule protofilaments and the inner- and outer-junction regions.
+evidence:
+- reference: GO:0097650
+  notes: Gene Ontology cellular-component term for the B axonemal microtubule.
+- reference: GO:0005879
+  notes: Gene Ontology places the B axonemal microtubule under the axonemal microtubule
+    class.
+- reference: GO:0097545
+  notes: Gene Ontology places the B axonemal microtubule within the axonemal doublet
+    microtubule.
+- reference: DOI:10.1016/j.cell.2019.09.030
+  notes: Ma et al. 2019, 'Structure of the Decorated Ciliary Doublet Microtubule',
+    Cell.
+causal_graphs:
+- graph_id: chlamydomonas_b_tubule_doublet_scaffold
+  title: B axonemal microtubule completes the outer doublet
+  description: In Chlamydomonas, the incomplete B tubule fuses with the complete A
+    tubule and contacts inner- and outer-junction structures at the B10 and B1 protofilaments.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records coarse B-tubule parthood and junction contact, and
+    leaves exact B1-B10 protofilament boundaries, B-tubule MIP positions, tubulin-family
+    groundings and copy numbers for later curation.
+  nodes:
+  - node_id: b_axonemal_microtubule
+    label: B axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097650
+  - node_id: a_axonemal_microtubule
+    label: A axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097649
+  - node_id: axonemal_microtubule_doublet_inner_junction
+    label: axonemal microtubule doublet inner junction
+    node_type: STRUCTURE
+    grounding: GO:0160113
+  - node_id: axonemal_microtubule_doublet_outer_junction
+    label: axonemal microtubule doublet outer junction
+    node_type: STRUCTURE
+    grounding: GO:0160114
+  - node_id: axonemal_doublet_microtubule
+    label: axonemal doublet microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097545
+  edges:
+  - subject: b_axonemal_microtubule
+    predicate: is part of
+    object: axonemal_doublet_microtubule
+    description: The B axonemal microtubule is the incomplete 10-protofilament tubule
+      of the axonemal outer doublet.
+    evidence:
+    - reference: GO:0097650
+      notes: GO places the B axonemal microtubule within the axonemal doublet microtubule.
+  - subject: b_axonemal_microtubule
+    predicate: fuses with
+    object: a_axonemal_microtubule
+    description: The incomplete B tubule fuses with the complete A tubule to form
+      an axonemal outer doublet.
+    evidence:
+    - reference: GO:0097650
+      notes: GO defines the B tubule as an incomplete microtubule that fuses with
+        the complete A tubule.
+  - subject: axonemal_microtubule_doublet_inner_junction
+    predicate: contacts
+    object: b_axonemal_microtubule
+    description: The inner junction contacts the B-tubule B10 protofilament.
+    evidence:
+    - reference: GO:0160113
+      notes: GO defines the inner junction as joining B10 to A1 within an axonemal
+        doublet.
+  - subject: axonemal_microtubule_doublet_outer_junction
+    predicate: contacts
+    object: b_axonemal_microtubule
+    description: The outer junction contacts the B-tubule B1 protofilament.
+    evidence:
+    - reference: GO:0160114
+      notes: GO defines the outer junction as the site where B1 joins A10 and A11.
+discussions:
+- discussion_id: resolve_b_tubule_protofilaments_and_mips
+  prompt: Resolve exact B1-B10 protofilament boundaries, B-tubule MIP positions, source-neutral
+    tubulin-family groundings and copy numbers for the B axonemal microtubule.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#chlamydomonas_b_tubule_doublet_scaffold
+  rationale: GO exactly identifies the B axonemal microtubule, but this pass curates
+    only its coarse role in the outer doublet and leaves exact protofilament and MIP
+    placement unresolved.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2019.09.030
+    notes: Ma et al. 2019 resolved the Chlamydomonas doublet lattice and several B-tubule-associated
+      microtubule inner proteins.
+  posed_by: codex
+  posed_date: '2026-09-23'

@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/b_axonemal_microtubule.yaml
+  slug: b_axonemal_microtubule
+session:
+  id: 2026-09-23T174334Z-claude-code-a53df0
+  timestamp: '2026-09-23T17:43:34Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add B axonemal microtubule record
+  details: Added GO:0097650 as its own B axonemal microtubule record with the GO B-tubule
+    synonym, axonemal-microtubule parentage, doublet parthood, Chlamydomonas evidence, a coarse
+    B-tubule doublet graph, and an open B1-B10 protofilament/MIP curation TODO.
