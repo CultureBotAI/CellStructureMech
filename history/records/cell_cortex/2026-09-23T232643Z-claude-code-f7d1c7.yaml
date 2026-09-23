@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cell_cortex.yaml
+  slug: cell_cortex
+session:
+  id: 2026-09-23T232643Z-claude-code-f7d1c7
+  timestamp: '2026-09-23T23:26:43Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added cell cortex record
+  details: Created GO:0005938 for the cell cortex with cytoplasm parentage, Saccharomyces
+    scope, GO and primary DOI evidence, a nonmechanistic topology graph that places actin
+    cortical patches and septin rings at the cortex, and a resolved boundary discussion that
+    keeps actin, Arp2/3, and septin proteins on lower-level structure records.

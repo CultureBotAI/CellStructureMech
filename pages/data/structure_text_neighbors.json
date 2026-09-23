@@ -1351,6 +1351,11 @@
           "cosine_similarity": 0.81972396
         },
         {
+          "identifier": "GO:0005938",
+          "label": "cell cortex",
+          "cosine_similarity": 0.76180847
+        },
+        {
           "identifier": "cellstructuremech:mamk_filament",
           "label": "MamK filament",
           "cosine_similarity": 0.74816704
@@ -1364,11 +1369,6 @@
           "identifier": "GO:0000133",
           "label": "polarisome",
           "cosine_similarity": 0.73511698
-        },
-        {
-          "identifier": "cellstructuremech:mreb_filament",
-          "label": "MreB filament",
-          "cosine_similarity": 0.72485078
         }
       ]
     },
@@ -2720,6 +2720,11 @@
           "cosine_similarity": 0.75589341
         },
         {
+          "identifier": "GO:0005938",
+          "label": "cell cortex",
+          "cosine_similarity": 0.73388092
+        },
+        {
           "identifier": "GO:0030479",
           "label": "actin cortical patch",
           "cosine_similarity": 0.71678243
@@ -2728,11 +2733,6 @@
           "identifier": "GO:0009277",
           "label": "fungal-type cell wall",
           "cosine_similarity": 0.7114328
-        },
-        {
-          "identifier": "GO:0090512",
-          "label": "eisosome membrane domain/MCC",
-          "cosine_similarity": 0.70063033
         }
       ]
     },
@@ -11200,6 +11200,37 @@
       ]
     },
     {
+      "identifier": "GO:0005938",
+      "label": "cell cortex",
+      "neighbors": [
+        {
+          "identifier": "GO:0060205",
+          "label": "cytoplasmic vesicle lumen",
+          "cosine_similarity": 0.81664522
+        },
+        {
+          "identifier": "GO:0071682",
+          "label": "endocytic vesicle lumen",
+          "cosine_similarity": 0.81379936
+        },
+        {
+          "identifier": "GO:0106176",
+          "label": "clathrin-coated endocytic vesicle lumen",
+          "cosine_similarity": 0.78821309
+        },
+        {
+          "identifier": "GO:0031904",
+          "label": "endosome lumen",
+          "cosine_similarity": 0.78386657
+        },
+        {
+          "identifier": "GO:0005775",
+          "label": "vacuolar lumen",
+          "cosine_similarity": 0.78034817
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005933",
       "label": "cellular bud",
       "neighbors": [
@@ -11224,9 +11255,9 @@
           "cosine_similarity": 0.66729967
         },
         {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.63143023
+          "identifier": "GO:0005938",
+          "label": "cell cortex",
+          "cosine_similarity": 0.66066482
         }
       ]
     },
@@ -11245,6 +11276,11 @@
           "cosine_similarity": 0.81415825
         },
         {
+          "identifier": "GO:0005938",
+          "label": "cell cortex",
+          "cosine_similarity": 0.77139622
+        },
+        {
           "identifier": "GO:0033101",
           "label": "cellular bud membrane",
           "cosine_similarity": 0.76778664
@@ -11253,11 +11289,6 @@
           "identifier": "GO:0060205",
           "label": "cytoplasmic vesicle lumen",
           "cosine_similarity": 0.69680659
-        },
-        {
-          "identifier": "GO:0044284",
-          "label": "mitochondrial crista junction",
-          "cosine_similarity": 0.68446232
         }
       ]
     },
@@ -11281,14 +11312,14 @@
           "cosine_similarity": 0.76096882
         },
         {
+          "identifier": "GO:0005938",
+          "label": "cell cortex",
+          "cosine_similarity": 0.74309243
+        },
+        {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.69693786
-        },
-        {
-          "identifier": "GO:0071682",
-          "label": "endocytic vesicle lumen",
-          "cosine_similarity": 0.68723603
         }
       ]
     },
@@ -13074,6 +13105,11 @@
           "cosine_similarity": 0.75054688
         },
         {
+          "identifier": "GO:0005938",
+          "label": "cell cortex",
+          "cosine_similarity": 0.71724588
+        },
+        {
           "identifier": "GO:0000421",
           "label": "autophagosome membrane",
           "cosine_similarity": 0.71433615
@@ -13082,11 +13118,6 @@
           "identifier": "GO:0070056",
           "label": "prospore membrane leading edge",
           "cosine_similarity": 0.70257629
-        },
-        {
-          "identifier": "GO:0060205",
-          "label": "cytoplasmic vesicle lumen",
-          "cosine_similarity": 0.70102586
         }
       ]
     },
@@ -13580,9 +13611,9 @@
           "cosine_similarity": 0.66425832
         },
         {
-          "identifier": "GO:0071682",
-          "label": "endocytic vesicle lumen",
-          "cosine_similarity": 0.65783433
+          "identifier": "GO:0005938",
+          "label": "cell cortex",
+          "cosine_similarity": 0.66372764
         }
       ]
     },

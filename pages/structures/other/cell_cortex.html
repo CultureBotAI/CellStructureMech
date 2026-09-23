@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cell cortex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>cell cortex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005938"><code>GO:0005938</code></a> · OTHER · SUBCELLULAR_REGION · <span class="status">PROPOSED</span></p>
+<p class="definition">The region of a cell that lies just beneath the plasma membrane and often, but not always, contains a network of actin filaments and associated proteins. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005938"><code>GO:0005938</code></a>]</small></p>
+
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> Saccharomyces cerevisiae — <strong>COMMON</strong>: Budding yeast has a cell cortex beneath the plasma membrane where actin cortical patches assemble during endocytosis. [<a href="https://doi.org/10.1016/S0092-8674(03)00883-3"><code>DOI:10.1016/S0092-8674(03)00883-3</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code>NCBITaxon:4932</code></a> <em>Saccharomyces cerevisiae</em> — Budding-yeast model in which cortical endocytic actin patches assemble at the cell cortex during receptor internalization. [<a href="https://doi.org/10.1016/S0092-8674(03)00883-3"><code>DOI:10.1016/S0092-8674(03)00883-3</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>cortical cytoskeletal organization</strong> — The budding-yeast cell cortex localizes actin cortical patches during endocytic internalization and septin rings at the division plane.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005938"><code>GO:0005938</code></a> <small>GO:0005938 defines the cell cortex as the sub-plasma-membrane region that can contain actin filaments and associated proteins.</small></li><li><a href="https://doi.org/10.1016/S0092-8674(03)00883-3"><code>DOI:10.1016/S0092-8674(03)00883-3</code></a> <small>Kaksonen, Sun and Drubin 2003 followed yeast endocytic internalization at cortical actin-patch sites.</small></li><li><a href="https://doi.org/10.3389/fcell.2016.00123"><code>DOI:10.3389/fcell.2016.00123</code></a> <small>Glomb and Gronemeyer 2016 review septin-ring organization and cytokinesis functions at the budding-yeast cortex.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-yeast_cell_cortex_substructure_topology">Yeast cell cortex hosts actin patches and septin rings <small>(FUNCTION)</small></h3>
+<p>The Saccharomyces cell cortex is the sub-plasma-membrane region where actin cortical patches assemble for endocytosis and the septin ring organizes at the division plane.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>cell cortex</td><td>lies beneath</td><td>plasma membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005938"><code>GO:0005938</code></a> <small>GO:0005938 defines the cell cortex as the region just beneath the plasma membrane.</small></li></ul></td></tr>
+<tr><td>actin cortical patch</td><td>assembles at</td><td>cell cortex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/S0092-8674(03)00883-3"><code>DOI:10.1016/S0092-8674(03)00883-3</code></a> <small>Kaksonen, Sun and Drubin 2003 followed actin recruitment at cortical endocytic sites.</small></li><li><a href="https://doi.org/10.1083/jcb.200404159"><code>DOI:10.1083/jcb.200404159</code></a> <small>Young, Cooper and Bridgman 2004 examined branched actin filaments in yeast actin patches.</small></li></ul></td></tr>
+<tr><td>septin ring</td><td>assembles at</td><td>cell cortex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005940"><code>GO:0005940</code></a> <small>GO:0005940 defines the septin ring as a ring-shaped structure at the cell cortex in the division plane.</small></li><li><a href="https://doi.org/10.3389/fcell.2016.00123"><code>DOI:10.3389/fcell.2016.00123</code></a> <small>Glomb and Gronemeyer 2016 review cortical septin-ring organization in budding yeast.</small></li></ul></td></tr>
+<tr><td>actin cortical patch</td><td>supports</td><td>endocytic internalization</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/S0092-8674(03)00883-3"><code>DOI:10.1016/S0092-8674(03)00883-3</code></a> <small>Kaksonen, Sun and Drubin 2003 followed receptors, adaptors and actin during yeast endocytic internalization.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Should actin, Arp2/3, or septin proteins be duplicated as direct cell cortex components? <small>GO:0005938 denotes the sub-plasma-membrane region. Actin cortical patches and septin rings are cortex-localized substructures that already have their own structure records, so actin, Arp2/3, and septin constituents remain on those lower-level records instead of being duplicated as molecular components of the parent region.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005938"><code>GO:0005938</code></a> <small>Gene Ontology cellular-component term for the cell cortex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005737"><code>GO:0005737</code></a> <small>Gene Ontology cellular-component parent term for the cytoplasm.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005886"><code>GO:0005886</code></a> <small>Gene Ontology cellular-component term for the plasma membrane that bounds the cell cortex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030479"><code>GO:0030479</code></a> <small>Gene Ontology cellular-component term for actin cortical patches, which are part of the cell cortex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005940"><code>GO:0005940</code></a> <small>Gene Ontology cellular-component term for the septin ring, another cortex-localized cytoskeletal structure.</small></li><li><a href="https://doi.org/10.1016/S0092-8674(03)00883-3"><code>DOI:10.1016/S0092-8674(03)00883-3</code></a> <small>Kaksonen, Sun and Drubin 2003, A Pathway for Association of Receptors, Adaptors, and Actin during Endocytic Internalization, Cell.</small></li><li><a href="https://doi.org/10.1083/jcb.200404159"><code>DOI:10.1083/jcb.200404159</code></a> <small>Young, Cooper and Bridgman 2004, Yeast actin patches are networks of branched actin filaments, Journal of Cell Biology.</small></li><li><a href="https://doi.org/10.3389/fcell.2016.00123"><code>DOI:10.3389/fcell.2016.00123</code></a> <small>Glomb and Gronemeyer 2016, Septin Organization and Functions in Budding Yeast, Frontiers in Cell and Developmental Biology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-23T23:24:31Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-23T23:25:15Z</code> codex · EXPANDED_RECORD — Added cytoplasm parentage, Saccharomyces scope, GO/DOI evidence, a nonmechanistic cortex-substructure topology graph, and a resolved boundary discussion for actin-patch and septin-ring components.</li><li><code>2026-09-23T23:26:19Z</code> codex · NARROWED_TAXONOMIC_SCOPE — Narrowed the Saccharomyces taxonomic row to the cortical actin-patch claim directly supported by the Kaksonen et al. endocytosis evidence.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/cell_cortex.yaml"><code>data/structures/other/cell_cortex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
