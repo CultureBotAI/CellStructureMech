@@ -28,6 +28,12 @@ curation_history:
     proteomics method supported by PMID:16926386 and resolved #1298 by adding GO-grounded
     early-phagosome and phagolysosome states to the maturation graph.'
   llm_assisted: true
+- timestamp: '2026-09-23T18:55:49Z'
+  curator: codex
+  action: ADD_PHAGOCYTIC_VESICLE_MEMBRANE_CHILD
+  changes: Linked GO:0030670 to its own phagocytic vesicle membrane child record while
+    leaving phagocytic vesicle topology and maturation relationships on the parent.
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 has_part:

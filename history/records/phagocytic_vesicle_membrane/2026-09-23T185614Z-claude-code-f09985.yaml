@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+  slug: phagocytic_vesicle_membrane
+session:
+  id: 2026-09-23T185614Z-claude-code-f09985
+  timestamp: '2026-09-23T18:56:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add phagocytic vesicle membrane record
+  details: Added GO:0030670 as its own phagocytic vesicle membrane record with cytoplasmic-vesicle
+    membrane parentage, GO:0045335 phagocytic vesicle parthood, UniProt SL-0205 synonyms and
+    xref, Dictyostelium PMID-backed scope, a coarse membrane topology graph, and an unresolved
+    generic lipid-bilayer grounding TODO. Appended an audit event to the phagocytic vesicle
+    parent noting the new child record.
