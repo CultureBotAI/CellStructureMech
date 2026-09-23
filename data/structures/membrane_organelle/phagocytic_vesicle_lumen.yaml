@@ -19,6 +19,12 @@ curation_history:
     phagosome-acidification function, a nonmechanistic phagocytic-vesicle lumen topology
     graph, and resolved lumen boundary and cargo-scope discussions.
   llm_assisted: true
+- timestamp: '2026-09-23T19:42:39Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1421 by retargeting the phagosome-acidification graph edge from
+    a process-as-agent acidifies edge to a lumen-undergoes-process edge.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Phagosome lumen
   synonym_type: EXACT_SYNONYM
@@ -125,11 +131,11 @@ causal_graphs:
     - reference: GO:0097013
       notes: GO:0097013 defines the lumen by enclosure within the phagocytic vesicle
         membrane.
-  - subject: phagosome_acidification
-    predicate: acidifies
-    object: phagocytic_vesicle_lumen
-    description: Phagosome acidification lowers the pH of the phagocytic vesicle lumen
-      during phagosome maturation.
+  - subject: phagocytic_vesicle_lumen
+    predicate: undergoes
+    object: phagosome_acidification
+    description: The phagocytic vesicle lumen undergoes acidification during phagosome
+      maturation.
     evidence:
     - reference: GO:0090383
       notes: GO:0090383 defines phagosome acidification as the reduction of phagosome
