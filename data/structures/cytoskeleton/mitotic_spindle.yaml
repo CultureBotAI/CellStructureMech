@@ -39,6 +39,12 @@ curation_history:
     as FUNCTION, and resolved #1205 by adding GO:0005874 evidence for alpha/beta-tubulin
     microtubule composition.'
   llm_assisted: true
+- timestamp: '2026-09-23T20:01:52Z'
+  curator: codex
+  action: ADD_SPINDLE_MICROTUBULE_CHILD
+  changes: Linked GO:0005876 to its own spindle microtubule child record while preserving
+    the budding-yeast spindle architecture graph on the parent.
+  llm_assisted: true
 parent_structures:
 - GO:0005819
 has_part:
