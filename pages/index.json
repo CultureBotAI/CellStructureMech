@@ -3942,6 +3942,15 @@
   "definition": "A bacterial contractile injection machine whose envelope-spanning membrane complex anchors a baseplate and sheath-wrapped Hcp tube; sheath contraction propels the Hcp/VgrG/PAAR spike and associated effectors out of the cell into target cells."
  },
  {
+  "identifier": "cellstructuremech:type_vi_secretion_system_baseplate",
+  "label": "type VI secretion system baseplate",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/type_vi_secretion_system_baseplate.html",
+  "definition": "A bacterial type VI secretion system subassembly in which TssE-, TssF-, TssG-, and TssK-family proteins form a phage-baseplate-like platform that docks to the TssJ/TssL/TssM membrane complex and initiates Hcp tube and contractile-sheath assembly."
+ },
+ {
   "identifier": "GO:0005619",
   "label": "ascospore wall",
   "category": "SPORE",

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_secretion_system_baseplate.yaml
+  slug: type_vi_secretion_system_baseplate
+session:
+  id: 2026-09-23T060708Z-codex-96c4ff
+  timestamp: '2026-09-23T06:07:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1362
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1360
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed type VI secretion system baseplate PR review
+  details: 'Resolved PR #1360 review issue #1362 by aligning the TssK graph edge evidence
+    note with the edge''s direct baseplate assembly assertion.'
