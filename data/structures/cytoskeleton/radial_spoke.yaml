@@ -27,6 +27,12 @@ curation_history:
     narrowed the Chlamydomonas distribution note to cryoelectron tomography evidence,
     and clarified the regulation graph predicate.
   llm_assisted: true
+- timestamp: '2026-09-23T09:55:27Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1377 review issues #1378 and #1379 by changing the radial-spoke-head
+    edge to static parthood and adding the missing neck-to-stalk edge.'
+  llm_assisted: true
 part_of:
 - GO:0005930
 components:
@@ -159,7 +165,7 @@ causal_graphs:
     grounding: GO:0003352
   edges:
   - subject: radial_spoke_head
-    predicate: assembles into
+    predicate: is part of
     object: radial_spoke
     description: The radial spoke head is a named terminal subcomplex of the radial
       spoke.
@@ -167,9 +173,18 @@ causal_graphs:
     - reference: GO:0001535
       notes: GO places the radial spoke head as part of the radial spoke.
   - subject: radial_spoke_neck
-    predicate: connects
+    predicate: connects to
     object: radial_spoke_head
-    description: The radial spoke neck connects the radial-spoke stalk to the head.
+    description: The radial spoke neck connects to the radial-spoke head.
+    evidence:
+    - reference: GO:0120343
+      notes: GO defines the radial spoke neck by its connection between the stalk
+        and head.
+  - subject: radial_spoke_neck
+    predicate: connects to
+    object: radial_spoke_stalk
+    description: The radial spoke neck connects the spoke head to the radial-spoke
+      stalk.
     evidence:
     - reference: GO:0120343
       notes: GO defines the radial spoke neck by its connection between the stalk
