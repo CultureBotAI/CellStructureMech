@@ -1,0 +1,254 @@
+identifier: GO:0048500
+label: signal recognition particle
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A complex of protein and RNA which facilitates translocation of proteins
+  across membranes.
+definition_source: GO:0048500
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T04:11:05Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T04:13:05Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added SRP synonymy, GO ribonucleoprotein parentage, cytoplasm parthood,
+    SRP RNA and Ffh/SRP54 core components, bacterial distribution, an Escherichia
+    coli canonical example, protein-targeting function, GO/SO/DOI evidence, a bacterial
+    SRP delivery graph and component-boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-23T04:15:06Z'
+  curator: codex
+  action: FIX_ID_LABEL
+  changes: Changed the GO:0048500 causal-graph node label from the narrowed bacterial
+    signal recognition particle phrase to the exact signal recognition particle GO
+    label.
+  llm_assisted: true
+- timestamp: '2026-09-23T04:24:08Z'
+  curator: codex
+  action: FIX_DISCUSSION_ANCHOR
+  changes: Replaced the invalid bare components discussion anchor with the concrete
+    bacterial SRP targeting graph anchor.
+  llm_assisted: true
+- timestamp: '2026-09-23T04:32:49Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #1353 by narrowing the SRP RNA role to RNA scaffold and SRP-FtsY
+    receptor handoff, and resolved #1354 by rewording the protein targeting function
+    so ribosome-nascent-chain complexes carry rather than encode membrane-protein
+    substrates.'
+  llm_assisted: true
+synonyms:
+- synonym_text: SRP
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1146/annurev-biochem-072711-164732
+- synonym_text: bacterial signal recognition particle
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1016/j.bbamcr.2013.10.013
+parent_structures:
+- GO:1990904
+part_of:
+- GO:0005737
+components:
+- component_id: srp_rna
+  label: SRP RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000590
+  essentiality: UNKNOWN
+  role: RNA scaffold that binds the SRP54/Ffh GTPase and promotes bacterial SRP-FtsY
+    receptor handoff.
+  evidence:
+  - reference: SO:0000590
+    notes: SO:0000590 is the Sequence Ontology term for signal-recognition-particle
+      RNA.
+  - reference: DOI:10.1016/j.bbamcr.2013.10.013
+    notes: Saraogi and Shan 2014 reviewed the bacterial SRP as a minimal ribonucleoprotein
+      containing 4.5S RNA and Ffh.
+- component_id: ffh_srp54_gtpase
+  label: Ffh/SRP54 GTPase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ffh
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Ffh is the bacterial SRP54 homolog and the conserved signal-sequence-binding
+    SRP GTPase; no exact source-neutral InterPro, Pfam or NCBIfam family CURIE was
+    assigned in this pass.
+  role: Signal-sequence-binding SRP GTPase that recognizes ribosome-nascent-chain
+    complexes and pairs with the FtsY receptor GTPase during delivery to the membrane
+    translocon.
+  evidence:
+  - reference: DOI:10.1016/j.bbamcr.2013.10.013
+    notes: Saraogi and Shan 2014 reviewed Ffh as the conserved bacterial SRP protein
+      subunit.
+  - reference: DOI:10.1093/emboj/16.16.4880
+    notes: Powers and Walter 1997 reconstituted Escherichia coli SRP-dependent targeting
+      from Ffh, 4.5S RNA, FtsY and a ribosome-nascent-chain substrate.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: This row captures the bacterial Ffh plus 4.5S RNA SRP particle; the archaeal
+    and eukaryotic SRP expansions are left for follow-up curation.
+  reference: DOI:10.1016/j.bbamcr.2013.10.013
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Model bacterium in which purified Ffh, 4.5S RNA and FtsY were reconstituted
+    as a cotranslational targeting system.
+  reference: DOI:10.1093/emboj/16.16.4880
+functions:
+- function_id: protein_targeting_to_membrane
+  label: protein targeting to membrane
+  grounding: GO:0006612
+  description: The bacterial SRP targets ribosome-nascent-chain complexes carrying
+    inner-membrane protein substrates to the cytoplasmic-membrane translocon.
+  evidence:
+  - reference: GO:0006612
+    notes: GO:0006612 is the Gene Ontology biological-process term for protein targeting
+      to membrane.
+  - reference: DOI:10.1093/emboj/16.16.4880
+    notes: Powers and Walter 1997 showed that Escherichia coli Ffh, 4.5S RNA and FtsY
+      catalyze cotranslational targeting of a ribosome-nascent-chain complex.
+evidence:
+- reference: GO:0048500
+  notes: Gene Ontology cellular-component term for the signal recognition particle.
+- reference: GO:1990904
+  notes: Gene Ontology cellular-component term for ribonucleoprotein complex.
+- reference: GO:0005737
+  notes: Gene Ontology cellular-component term for cytoplasm, the direct part_of parent
+    asserted on GO:0048500.
+- reference: GO:0006612
+  notes: Gene Ontology biological-process term for protein targeting to membrane.
+- reference: SO:0000590
+  notes: Sequence Ontology term for SRP RNA.
+- reference: DOI:10.1016/j.bbamcr.2013.10.013
+  notes: Saraogi and Shan 2014, Co-translational protein targeting to the bacterial
+    membrane, Biochimica et Biophysica Acta.
+- reference: DOI:10.1093/emboj/16.16.4880
+  notes: Powers and Walter 1997, Co-translational protein targeting catalyzed by the
+    Escherichia coli signal recognition particle and its receptor, EMBO Journal.
+- reference: DOI:10.1146/annurev-biochem-072711-164732
+  notes: 'Akopian, Shen, Zhang and Shan 2013, Signal Recognition Particle: An Essential
+    Protein-Targeting Machine, Annual Review of Biochemistry.'
+causal_graphs:
+- graph_id: bacterial_srp_membrane_targeting
+  title: Bacterial SRP delivers nascent membrane proteins to SecYEG
+  description: In bacteria, the Ffh/SRP RNA particle binds ribosome-nascent-chain
+    complexes carrying hydrophobic signal sequences and hands them to the FtsY receptor
+    for delivery to the SecYEG translocon.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the core bacterial targeting route without modeling
+    SRP conformational rearrangements, GTP hydrolysis kinetics, the translating ribosome
+    or species-specific accessory factors as SRP components.
+  nodes:
+  - node_id: srp_rna
+    label: SRP RNA
+    node_type: RNA
+    component_ref: srp_rna
+    grounding: SO:0000590
+  - node_id: ffh_srp54_gtpase
+    label: Ffh/SRP54 GTPase
+    node_type: GENE_OR_PROTEIN
+    component_ref: ffh_srp54_gtpase
+  - node_id: bacterial_srp
+    label: signal recognition particle
+    node_type: STRUCTURE
+    grounding: GO:0048500
+  - node_id: ribosome_nascent_chain
+    label: ribosome-nascent-chain complex
+    node_type: STRUCTURE
+  - node_id: ftsy_receptor
+    label: FtsY SRP receptor
+    node_type: GENE_OR_PROTEIN
+  - node_id: secyeg_translocon
+    label: SecYEG translocon complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:secyeg_translocon_complex
+  - node_id: protein_targeting_to_membrane
+    label: protein targeting to membrane
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006612
+  edges:
+  - subject: srp_rna
+    predicate: assembles with
+    object: ffh_srp54_gtpase
+    description: Bacterial 4.5S RNA forms the minimal SRP ribonucleoprotein with Ffh.
+    evidence:
+    - reference: DOI:10.1016/j.bbamcr.2013.10.013
+      notes: Saraogi and Shan 2014 reviewed the bacterial signal recognition particle
+        as an Ffh and 4.5S RNA ribonucleoprotein.
+  - subject: ffh_srp54_gtpase
+    predicate: recognizes
+    object: ribosome_nascent_chain
+    description: Ffh binds hydrophobic signal sequences as they emerge from translating
+      ribosomes.
+    evidence:
+    - reference: DOI:10.1016/j.bbamcr.2013.10.013
+      notes: Saraogi and Shan 2014 reviewed Ffh/SRP54 recognition of signal sequences
+        on ribosome-nascent-chain complexes.
+  - subject: bacterial_srp
+    predicate: docks with
+    object: ftsy_receptor
+    description: The SRP-FtsY GTPase pair forms a receptor-bound targeting complex
+      during delivery to the bacterial membrane.
+    evidence:
+    - reference: DOI:10.1093/emboj/16.16.4880
+      notes: Powers and Walter 1997 reconstituted targeting with Escherichia coli
+        SRP and the FtsY receptor.
+  - subject: ftsy_receptor
+    predicate: delivers cargo to
+    object: secyeg_translocon
+    description: The receptor-bound SRP route targets ribosome-nascent-chain complexes
+      to the membrane translocon.
+    evidence:
+    - reference: DOI:10.1016/j.bbamcr.2013.10.013
+      notes: Saraogi and Shan 2014 reviewed bacterial SRP delivery of membrane-protein
+        substrates to the membrane translocation machinery through FtsY.
+  - subject: bacterial_srp
+    predicate: supports
+    object: protein_targeting_to_membrane
+    description: SRP carries hydrophobic nascent chains from the ribosome to the membrane
+      targeting pathway.
+    evidence:
+    - reference: DOI:10.1093/emboj/16.16.4880
+      notes: Powers and Walter 1997 reconstituted E. coli SRP-dependent cotranslational
+        targeting.
+discussions:
+- discussion_id: resolve_srp_component_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam or NCBIfam groundings for Ffh/SRP54
+    and decide how to represent archaeal and eukaryotic SRP proteins such as SRP19,
+    SRP9 and SRP14.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ffh_srp54_gtpase
+  - causal_graphs#bacterial_srp_membrane_targeting
+  rationale: The first SRP record captures the conserved Ffh/SRP54 plus SRP RNA core
+    and the bacterial Ffh-4.5S RNA system. Archaeal and eukaryotic SRPs have expanded
+    protein compositions that should be curated as exact grounded components or child
+    records only after their source-neutral family boundaries are verified.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-072711-164732
+  posed_by: codex
+  posed_date: '2026-09-23'
+- discussion_id: exclude_ftsy_and_translocon_as_components
+  prompt: Exclude the bacterial FtsY SRP receptor and SecYEG translocon from the signal
+    recognition particle component list.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#bacterial_srp_membrane_targeting
+  rationale: FtsY and SecYEG are receptor or destination machinery for SRP-mediated
+    targeting, not constituents of the SRP ribonucleoprotein.
+  evidence:
+  - reference: DOI:10.1093/emboj/16.16.4880
+  - reference: DOI:10.1016/j.bbamcr.2013.10.013
+  posed_by: codex
+  posed_date: '2026-09-23'

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/signal_recognition_particle.yaml
+  slug: signal_recognition_particle
+session:
+  id: 2026-09-23T043416Z-codex-8e2f29
+  timestamp: '2026-09-23T04:34:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1353
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1352
+  urls:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1354
+events:
+- type: EDIT
+  outcome: changed
+  summary: Resolve signal recognition particle PR review findings
+  details: 'Resolved PR #1352 adversarial review findings by narrowing the SRP RNA component
+    role so Ffh/SRP54 remains the signal-sequence-recognition component, and by rewording
+    the protein targeting function so ribosome-nascent-chain complexes carry rather than encode
+    membrane-protein substrates.'
