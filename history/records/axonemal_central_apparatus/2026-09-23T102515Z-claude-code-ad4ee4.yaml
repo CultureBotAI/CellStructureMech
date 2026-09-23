@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_central_apparatus.yaml
+  slug: axonemal_central_apparatus
+session:
+  id: 2026-09-23T102515Z-claude-code-ad4ee4
+  timestamp: '2026-09-23T10:25:15Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1381
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1382
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1380
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - data/structures/cytoskeleton/axonemal_central_apparatus.yaml
+  summary: Addressed axonemal-central-apparatus PR review findings
+  details: 'Resolved PR #1380 review issues #1381 and #1382 by replacing the central-pair
+    projection edge with GO-backed static parthood and splitting the central-pair bridge edge
+    into explicit C1 and C2 endpoints.'

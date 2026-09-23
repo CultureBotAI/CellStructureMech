@@ -59,8 +59,16 @@ curation_history:
   changes: Changed the radial-spoke graph predicate from 'project toward' to 'projects
     toward' after the graph node became singular.
   llm_assisted: true
+- timestamp: '2026-09-23T10:14:58Z'
+  curator: codex
+  action: ADD_AXONEMAL_CENTRAL_APPARATUS_PART
+  changes: Linked GO:1990716 as an axoneme substructure, replaced the label-only central-pair-apparatus
+    component with a GO-grounded graph structure, and narrowed the subcomplex-boundary
+    TODO.
+  llm_assisted: true
 has_part:
 - GO:0001534
+- GO:1990716
 - GO:0036157
 components:
 - component_id: outer_doublet_microtubules
@@ -78,21 +86,6 @@ components:
   - reference: DOI:10.1126/science.1128618
     notes: Nicastro et al. 2006 resolved the 9+2 microtubule arrangement in rapidly
       frozen Chlamydomonas axonemes by cryoelectron tomography.
-- component_id: central_pair_apparatus
-  label: central pair apparatus
-  component_type: PROTEIN_COMPLEX
-  component_role: CONSTITUENT
-  essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: This first Chlamydomonas axoneme record keeps broad axonemal substructure
-    labels until exact source-neutral groundings for the corresponding ciliary complexes
-    are reviewed.
-  role: Central singlet microtubules and projections that lie inside the ring of outer
-    doublet microtubules.
-  evidence:
-  - reference: DOI:10.1126/science.1128618
-    notes: Nicastro et al. 2006 visualized the central-pair region of the 9+2 Chlamydomonas
-      axoneme.
 - component_id: inner_dynein_arm
   label: inner dynein arm
   component_type: PROTEIN_COMPLEX
@@ -154,6 +147,8 @@ evidence:
   notes: Gene Ontology cellular-component term for the axoneme.
 - reference: GO:0001534
   notes: Gene Ontology cellular-component term for the radial spoke.
+- reference: GO:1990716
+  notes: Gene Ontology cellular-component term for the axonemal central apparatus.
 - reference: GO:0036156
   notes: Gene Ontology cellular-component term for the inner dynein arm.
 - reference: GO:0036157
@@ -192,10 +187,10 @@ causal_graphs:
     label: radial spoke
     node_type: STRUCTURE
     grounding: GO:0001534
-  - node_id: central_pair_apparatus
-    label: central pair apparatus
-    node_type: GENE_OR_PROTEIN
-    component_ref: central_pair_apparatus
+  - node_id: axonemal_central_apparatus
+    label: axonemal central apparatus
+    node_type: STRUCTURE
+    grounding: GO:1990716
   - node_id: nexin_dynein_regulatory_complex
     label: nexin-dynein regulatory complex
     node_type: GENE_OR_PROTEIN
@@ -241,10 +236,12 @@ causal_graphs:
         9+2 axonemes.
   - subject: radial_spoke
     predicate: projects toward
-    object: central_pair_apparatus
-    description: Radial spokes extend from doublet microtubules toward the central
-      pair apparatus.
+    object: axonemal_central_apparatus
+    description: Radial spokes extend from doublet microtubules toward the axonemal
+      central apparatus.
     evidence:
+    - reference: GO:1990716
+      notes: GO places the axonemal central apparatus within the 9+2 axoneme.
     - reference: GO:0001534
       notes: GO defines the radial spoke as an axonemal complex that links outer doublets
         to the central-pair sheath.
@@ -284,18 +281,18 @@ causal_graphs:
 discussions:
 - discussion_id: resolve_chlamydomonas_axoneme_subcomplex_boundaries
   prompt: Resolve exact source-neutral groundings and boundaries for inner-dynein-arm
-    isoforms, central-pair projections, nexin-dynein regulatory complex, microtubule
-    inner proteins, and additional Chlamydomonas axoneme subcomplexes.
+    isoforms, nexin-dynein regulatory complex, microtubule inner proteins, and additional
+    Chlamydomonas axoneme subcomplexes.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#inner_dynein_arm
-  - components#central_pair_apparatus
   - components#nexin_dynein_regulatory_complex
-  rationale: The radial spoke and outer and inner dynein arm classes now have GO-backed
-    boundaries in this axoneme record. The Chlamydomonas axoneme has additional named
-    regulatory, projection, inner-arm isoform, and microtubule-associated complexes
-    whose exact source-neutral groundings and record boundaries still need review.
+  rationale: The radial spoke, axonemal central apparatus, and outer and inner dynein
+    arm classes now have GO-backed boundaries in this axoneme record. The Chlamydomonas
+    axoneme has additional named regulatory, inner-arm isoform, and microtubule-associated
+    complexes whose exact source-neutral groundings and record boundaries still need
+    review.
   evidence:
   - reference: DOI:10.1126/science.1128618
     notes: Nicastro et al. 2006 resolved repeated and asymmetric axonemal densities

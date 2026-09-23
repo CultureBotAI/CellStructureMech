@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_central_apparatus.yaml
+  slug: axonemal_central_apparatus
+session:
+  id: 2026-09-23T101605Z-claude-code-c7757e
+  timestamp: '2026-09-23T10:16:05Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - data/structures/cytoskeleton/axonemal_central_apparatus.yaml
+  - data/structures/cytoskeleton/axoneme.yaml
+  summary: Added a GO-grounded axonemal central apparatus record
+  details: Created data/structures/cytoskeleton/axonemal_central_apparatus.yaml for GO:1990716
+    with GO-grounded C1 and C2 axonemal microtubule components, Chlamydomonas evidence, a
+    central-apparatus architecture graph, and an axoneme has_part link replacing the previous
+    label-only central-pair-apparatus component.

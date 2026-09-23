@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_central_apparatus.yaml
+  slug: axonemal_central_apparatus
+session:
+  id: 2026-09-23T102748Z-claude-code-5af749
+  timestamp: '2026-09-23T10:27:48Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1383
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1380
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - data/structures/cytoskeleton/axonemal_central_apparatus.yaml
+  summary: Removed axonemal-central-apparatus YAML aliases
+  details: 'Resolved PR #1380 review issue #1383 by duplicating central-pair bridge graph
+    evidence explicitly instead of sharing one YAML alias-backed evidence list between two
+    edges.'
