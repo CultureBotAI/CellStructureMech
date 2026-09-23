@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/c2_axonemal_microtubule.yaml
+  slug: c2_axonemal_microtubule
+session:
+  id: 2026-09-23T165408Z-claude-code-16a186
+  timestamp: '2026-09-23T16:54:08Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add C2 axonemal microtubule record
+  details: Created the GO:1990720 C2 axonemal microtubule record, linked it to the GO:0097540
+    axonemal central pair, captured C2-specific projection architecture from Carbajal-Gonzalez
+    et al. 2013 as a nonmechanistic graph, and removed the now-resolved C2 child TODO from
+    the parent central-pair record. Duplicate checks used rg --no-ignore --hidden across data/structures,
+    history/records, research, docs, pages, README.md, build and reports plus a file-name
+    search across data/structures, history, pages, reports and build, finding no existing
+    data/structures C2 axonemal microtubule or GO:1990720 record.
