@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_doublet_microtubule.yaml
+  slug: axonemal_doublet_microtubule
+session:
+  id: 2026-09-23T115733Z-codex-808f57
+  timestamp: '2026-09-23T11:57:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1391
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1392
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1390
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Address axonemal doublet microtubule PR review
+  details: 'Resolved PR #1390 review issues #1391 and #1392 by preserving exact GO inner-sheath,
+    inner-junction, outer-junction and ribbon identifiers in the unresolved doublet-substructure
+    TODO and by changing the singular GO:0097545 axoneme graph predicate to forms scaffold
+    of. Removed YAML aliases from the duplicated GO substructure evidence before regenerating
+    derived pages.'

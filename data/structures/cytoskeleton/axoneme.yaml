@@ -106,6 +106,12 @@ curation_history:
     process and changed the outer-dynein-arm doublet edge from bridges to projects
     from.
   llm_assisted: true
+- timestamp: '2026-09-23T11:56:16Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1390 review issue #1392 by changing the singular axonemal
+    doublet microtubule graph predicate to forms scaffold of.'
+  llm_assisted: true
 has_part:
 - GO:0001534
 - GO:0005931
@@ -204,7 +210,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: axonemal_doublet_microtubule
-    predicate: form scaffold of
+    predicate: forms scaffold of
     object: axoneme
     description: Nine axonemal doublet microtubules form the cylindrical scaffold
       of the Chlamydomonas 9+2 axoneme.
