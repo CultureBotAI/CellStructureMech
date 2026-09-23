@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+  slug: a_axonemal_microtubule
+session:
+  id: 2026-09-23T171258Z-claude-code-e68e55
+  timestamp: '2026-09-23T17:12:58Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add A axonemal microtubule record
+  details: Created the GO:0097649 A axonemal microtubule record, linked it to the GO:0097545
+    axonemal doublet microtubule, and captured coarse A-tubule outer-doublet architecture
+    from Gene Ontology and Ma et al. 2019 as a nonmechanistic graph. Duplicate checks used
+    rg --no-ignore --hidden across data/structures, history/records, research, docs, pages,
+    README.md, build and reports plus a file-name search across data/structures, history,
+    pages, reports and build, finding no existing data/structures A axonemal microtubule or
+    GO:0097649 record.
