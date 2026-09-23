@@ -33,6 +33,12 @@ curation_history:
   changes: 'Resolved PR #1340 review issue #1341 by adding GO:1990916 record-level
     evidence to support the new ascospore wall has_part link to the Isp3 layer.'
   llm_assisted: true
+- timestamp: '2026-09-23T01:41:48Z'
+  curator: codex
+  action: UPDATED_CHILD_RECORD_BOUNDARY
+  changes: Removed GO:0005630 from the open ascospore layer-splitting TODO after creating
+    a standalone dityrosine layer record.
+  llm_assisted: true
 synonyms:
 - synonym_text: fungal-type spore wall
   synonym_type: BROAD_SYNONYM
@@ -258,17 +264,15 @@ discussions:
   attaches_to:
   - has_part
   - causal_graphs#saccharomyces_ascospore_wall_layers
-  rationale: GO has exact cellular-component terms for the Saccharomyces inner, chitosan,
-    and dityrosine spore-wall layers. GO:1990916 now has a standalone Schizosaccharomyces
-    Isp3 layer record; the exact Saccharomyces layer terms remain linked here by has_part
-    but await separate focused curation.
+  rationale: GO has exact cellular-component terms for the Saccharomyces inner and
+    chitosan spore-wall layers. GO:1990916 and GO:0005630 now have standalone records;
+    the remaining exact Saccharomyces layer terms remain linked here by has_part but
+    await separate focused curation.
   evidence:
   - reference: GO:0005632
     notes: GO:0005632 denotes the inner layer of the Saccharomyces spore wall.
   - reference: GO:0005631
     notes: GO:0005631 denotes the Saccharomyces spore-wall chitosan layer.
-  - reference: GO:0005630
-    notes: GO:0005630 denotes the Saccharomyces spore-wall dityrosine layer.
 - discussion_id: ascospore_wall_polymer_grounding
   prompt: Resolve exact source-neutral component groundings for the ascospore-wall
     polysaccharides and dityrosine-rich outer material.
