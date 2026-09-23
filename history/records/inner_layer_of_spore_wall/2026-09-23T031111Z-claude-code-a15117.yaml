@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/inner_layer_of_spore_wall.yaml
+  slug: inner_layer_of_spore_wall
+session:
+  id: 2026-09-23T031111Z-claude-code-a15117
+  timestamp: '2026-09-23T03:11:11Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1348
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1347
+events:
+- type: REVIEW
+  outcome: changed
+  summary: 'Address PR #1347 polymer-grounding review'
+  details: 'Resolved issue #1348 by adding GO:0005632 and Neiman 2005 evidence to the parent
+    ascospore_wall polymer-grounding TODO so the unresolved inner-wall mannan/beta-glucan
+    component is directly supported.'

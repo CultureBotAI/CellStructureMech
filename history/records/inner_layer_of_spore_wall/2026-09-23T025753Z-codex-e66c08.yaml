@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/inner_layer_of_spore_wall.yaml
+  slug: inner_layer_of_spore_wall
+session:
+  id: 2026-09-23T025753Z-codex-e66c08
+  timestamp: '2026-09-23T02:57:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added inner layer of spore wall
+  details: Created a standalone GO:0005632 inner layer of spore wall record with ascospore-wall
+    parthood, a reviewed-label-only Saccharomyces inner-wall mannan/beta-glucan polysaccharide
+    component, Saccharomyces cerevisiae scope, a basal-wall scaffold function, GO/DOI evidence,
+    a nonmechanistic inner-layer topology graph, and a component-grounding TODO. Resolved
+    the parent GO:0005619 ascospore_wall layer-splitting TODO and rewired parent topology
+    edges to an explicit GO:0005632 inner-layer structure node.
