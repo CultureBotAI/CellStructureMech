@@ -1,0 +1,162 @@
+identifier: GO:0036156
+label: inner dynein arm
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An axonemal dynein complex that forms an inner dynein arm on ciliary and
+  flagellar outer doublet microtubules.
+definition_source: GO:0036156
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T10:45:33Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T10:46:20Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added axonemal dynein parentage and axoneme parthood, Chlamydomonas scope,
+    a label-only inner-arm dynein heavy-chain component, microtubule-sliding function,
+    GO and DOI evidence, a nonmechanistic inner-arm motility graph, and a component-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-23T10:47:12Z'
+  curator: codex
+  action: REFINE_INNER_DYNEIN_ARM_SCOPE
+  changes: Corrected expansion-history wording to describe the single curated heavy-chain
+    component and narrowed graph scope notes to avoid unsupported subcomplex classes.
+  llm_assisted: true
+parent_structures:
+- GO:0005858
+part_of:
+- GO:0005930
+components:
+- component_id: inner_arm_dynein_heavy_chains
+  label: inner-arm dynein heavy chains
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the ciliary inner dynein arm
+    heavy-chain set was verified; broader dynein heavy-chain terms would also cover
+    dyneins outside GO:0036156.
+  role: Force-generating motor chains in axonemal inner dynein arms.
+  evidence:
+  - reference: GO:0036156
+    notes: GO defines inner dynein arms as ciliary and flagellar inner-arm structures
+      that include multiple dynein heavy chains.
+  - reference: DOI:10.1126/science.1128618
+    notes: Nicastro et al. 2006 resolved the arrangement of inner and outer dynein
+      arms attached to Chlamydomonas axonemal outer doublets by cryoelectron tomography.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar axonemes carry inner dynein arms that have been structurally
+    characterized by cryoelectron tomography.
+  reference: DOI:10.1126/science.1128618
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose demembranated flagellar axonemes show inner dynein
+    arms attached to outer doublet microtubules.
+  reference: DOI:10.1126/science.1128618
+functions:
+- function_id: microtubule_sliding
+  label: microtubule sliding
+  grounding: GO:0051012
+  description: Inner dynein arms on Chlamydomonas axonemal doublets generate sliding
+    forces that are converted into flagellar bends.
+  evidence:
+  - reference: DOI:10.1126/science.1128618
+    notes: Nicastro et al. 2006 modeled axonemal dynein organization on outer doublets
+      as a basis for microtubule sliding forces.
+evidence:
+- reference: GO:0036156
+  notes: Gene Ontology cellular-component term for the inner dynein arm.
+- reference: GO:0005858
+  notes: Gene Ontology places the inner dynein arm under the axonemal dynein complex.
+- reference: GO:0005930
+  notes: Gene Ontology places the inner dynein arm within the axoneme.
+- reference: DOI:10.1126/science.1128618
+  notes: Nicastro et al. 2006, 'The molecular architecture of axonemes revealed by
+    cryoelectron tomography', Science.
+causal_graphs:
+- graph_id: chlamydomonas_inner_dynein_arm_motility
+  title: Inner dynein arms drive Chlamydomonas axonemal sliding
+  description: Inner-arm dynein heavy chains assemble into inner dynein arms that
+    project from Chlamydomonas axonemal outer doublet microtubules and contribute
+    to sliding force generation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the coarse inner-arm dynein complex boundary and
+    leaves Chlamydomonas heavy-chain isoforms, accessory subunits and beat-cycle regulation
+    unresolved.
+  nodes:
+  - node_id: inner_arm_dynein_heavy_chains
+    label: inner-arm dynein heavy chains
+    node_type: GENE_OR_PROTEIN
+    component_ref: inner_arm_dynein_heavy_chains
+  - node_id: inner_dynein_arm
+    label: inner dynein arm
+    node_type: STRUCTURE
+    grounding: GO:0036156
+  - node_id: outer_doublet_microtubules
+    label: outer doublet microtubules
+    node_type: STRUCTURE
+  - node_id: microtubule_sliding
+    label: microtubule sliding
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051012
+  edges:
+  - subject: inner_arm_dynein_heavy_chains
+    predicate: assemble into
+    object: inner_dynein_arm
+    description: Dynein heavy chains are constituent chains of the inner dynein arm.
+    evidence:
+    - reference: GO:0036156
+      notes: GO describes inner dynein arms as containing a set of dynein heavy chains
+        plus other subunits.
+  - subject: inner_dynein_arm
+    predicate: projects from
+    object: outer_doublet_microtubules
+    description: The inner dynein arm is attached to axonemal outer doublet microtubules.
+    evidence:
+    - reference: GO:0036156
+      notes: GO defines inner dynein arms as axonemal structures on ciliary and flagellar
+        outer doublets.
+    - reference: DOI:10.1126/science.1128618
+      notes: Nicastro et al. 2006 resolved the arrangement of dynein arms on Chlamydomonas
+        outer doublet microtubules.
+  - subject: inner_dynein_arm
+    predicate: drives
+    object: microtubule_sliding
+    description: Inner dynein arms are axonemal motor complexes that help generate
+      microtubule sliding.
+    evidence:
+    - reference: GO:0036156
+      notes: GO distinguishes inner and outer dynein arms as having different functions
+        in microtubule-based motility.
+    - reference: DOI:10.1126/science.1128618
+      notes: Nicastro et al. 2006 interpreted the axonemal dynein arrangement in a
+        microtubule-sliding model.
+discussions:
+- discussion_id: resolve_inner_dynein_arm_component_groundings
+  prompt: Resolve exact source-neutral groundings for inner-arm dynein heavy-chain
+    isoforms and accessory subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#inner_arm_dynein_heavy_chains
+  rationale: GO exactly identifies the inner dynein arm as a complex, but this curation
+    pass did not verify exact InterPro, Pfam or other source-neutral accessions for
+    the cross-taxon inner-arm chain classes or the Chlamydomonas heavy-chain isoforms.
+  evidence:
+  - reference: GO:0036156
+    notes: GO identifies inner dynein arms by their multiple dynein heavy chains and
+      additional subunits.
+  - reference: DOI:10.1126/science.1128618
+    notes: Nicastro et al. 2006 resolved repeated inner-arm densities in Chlamydomonas
+      axonemes.
+  posed_by: codex
+  posed_date: '2026-09-23'

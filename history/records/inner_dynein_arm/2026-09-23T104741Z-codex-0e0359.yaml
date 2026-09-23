@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/inner_dynein_arm.yaml
+  slug: inner_dynein_arm
+session:
+  id: 2026-09-23T104741Z-codex-0e0359
+  timestamp: '2026-09-23T10:47:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add inner dynein arm record
+  details: Created the GO:0036156 inner dynein arm record, linked it from GO:0005930 axoneme
+    with has_part, and moved the old axoneme inner-dynein-arm component to a GO-backed structure
+    node. Kept the inner-arm heavy-chain cohort as reviewed label-only because no exact source-neutral
+    chain-class grounding was verified. Duplicate checking used rg --no-ignore --hidden before
+    creation and found GO:0036156 only in the axoneme component model plus generated, report,
+    cache, and history text, not as an existing data/structures record.
