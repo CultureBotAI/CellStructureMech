@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_central_apparatus.yaml
+  slug: axonemal_central_apparatus
+session:
+  id: 2026-09-23T153102Z-codex-fcde11
+  timestamp: '2026-09-23T15:31:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1405
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1404
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Address central-apparatus projection scope review
+  details: 'Resolved PR #1404 review issue #1405 by keeping named central-pair projection
+    subcomplex boundaries in the GO:1990716 architecture graph scope note after the broad
+    GO:1990718 projection node was split to a child record.'

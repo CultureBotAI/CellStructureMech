@@ -1,0 +1,173 @@
+identifier: GO:1990718
+label: axonemal central pair projection
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A projection structure that extends from the C1 or C2 singlet microtubule
+  of the 9+2 axonemal central apparatus.
+definition_source: GO:1990718
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T15:11:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T15:12:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added central-apparatus parthood, a reviewed-label-only central-pair projection
+    protein component, Chlamydomonas scope, GO and DOI evidence, a nonmechanistic
+    projection architecture graph, and a named-projection subcomplex TODO.
+  llm_assisted: true
+- timestamp: '2026-09-23T15:15:02Z'
+  curator: codex
+  action: FIX_CENTRAL_PAIR_PROJECTION_TODO
+  changes: Added C2e to the named central-pair projection subcomplexes left for later
+    curation.
+  llm_assisted: true
+- timestamp: '2026-09-23T15:18:40Z'
+  curator: codex
+  action: SINGULARIZE_GRAPH_TITLE
+  changes: Singularized the central-pair projection graph title to match GO:1990718.
+  llm_assisted: true
+part_of:
+- GO:1990716
+components:
+- component_id: central_pair_projection_proteins
+  label: axonemal central-pair projection proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Protein constituents of projection structures that extend from the axonemal
+    C1 and C2 central-pair microtubules.
+  evidence:
+  - reference: GO:1990718
+    notes: GO identifies axonemal central pair projections as projection structures
+      off the central pair of single microtubules.
+  - reference: DOI:10.1002/cm.21094
+    notes: Carbajal-Gonzalez et al. 2013 resolved C1 and C2 central-pair projections
+      in Chlamydomonas and Strongylocentrotus by cryo-ET and subtomogram averaging.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the broad axonemal central-pair
+    projection protein set was verified in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar central pair complexes contain C1 and C2 projections
+    that extend from the central singlet microtubules.
+  reference: DOI:10.1002/cm.21094
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose central pair projections were resolved as asymmetric
+    C1 and C2 densities by cryoelectron tomography.
+  reference: DOI:10.1002/cm.21094
+functions:
+- function_id: central_pair_microtubule_projection
+  label: central-pair microtubule projection
+  description: Axonemal central pair projections extend from the C1 or C2 singlet
+    microtubule toward the surrounding radial-spoke and outer-doublet ring.
+  evidence:
+  - reference: GO:1990718
+    notes: GO defines axonemal central pair projections as projections off the central
+      pair of single microtubules.
+  - reference: DOI:10.1002/cm.21094
+    notes: Carbajal-Gonzalez et al. 2013 modeled Chlamydomonas C1 and C2 central-pair
+      projections extending from the central microtubules toward radial spokes and
+      outer doublets.
+evidence:
+- reference: GO:1990718
+  notes: Gene Ontology cellular-component term for the axonemal central pair projection.
+- reference: GO:1990716
+  notes: Gene Ontology places axonemal central pair projections within the axonemal
+    central apparatus.
+- reference: DOI:10.1002/cm.21094
+  notes: Carbajal-Gonzalez et al. 2013, 'Conserved structural motifs in the central
+    pair complex of eukaryotic flagella', Cytoskeleton.
+causal_graphs:
+- graph_id: chlamydomonas_central_pair_projection_architecture
+  title: Axonemal central pair projection extends from C1 or C2
+  description: Axonemal central-pair projection proteins form C1 and C2 projection
+    structures within the Chlamydomonas central pair complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records coarse central-pair projection parthood and leaves
+    exact C1/C2 projection subcomplex boundaries, copy numbers, repeat periods and
+    family groundings for later curation.
+  nodes:
+  - node_id: central_pair_projection_proteins
+    label: axonemal central-pair projection proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: central_pair_projection_proteins
+  - node_id: axonemal_central_pair_projection
+    label: axonemal central pair projection
+    node_type: STRUCTURE
+    grounding: GO:1990718
+  - node_id: axonemal_central_pair
+    label: axonemal central pair
+    node_type: STRUCTURE
+    grounding: GO:0097540
+  - node_id: radial_spoke
+    label: radial spoke
+    node_type: STRUCTURE
+    grounding: GO:0001534
+  - node_id: axonemal_central_apparatus
+    label: axonemal central apparatus
+    node_type: STRUCTURE
+    grounding: GO:1990716
+  edges:
+  - subject: central_pair_projection_proteins
+    predicate: form
+    object: axonemal_central_pair_projection
+    description: Central-pair projection proteins form the projection densities of
+      the axonemal central pair complex.
+    evidence:
+    - reference: DOI:10.1002/cm.21094
+      notes: Carbajal-Gonzalez et al. 2013 resolved a connected projection network
+        on the Chlamydomonas C1 and C2 microtubules.
+  - subject: axonemal_central_pair_projection
+    predicate: projects from
+    object: axonemal_central_pair
+    description: Axonemal central pair projections extend from the central pair of
+      singlet microtubules.
+    evidence:
+    - reference: GO:1990718
+      notes: GO defines axonemal central pair projections as projections off the central
+        pair of single microtubules.
+  - subject: axonemal_central_pair_projection
+    predicate: projects toward
+    object: radial_spoke
+    description: Central-pair projections extend outward toward radial spokes in the
+      9+2 axoneme.
+    evidence:
+    - reference: DOI:10.1002/cm.21094
+      notes: Carbajal-Gonzalez et al. 2013 describe central pair projections that
+        extend toward radial spokes and doublet microtubules.
+  - subject: axonemal_central_pair_projection
+    predicate: is part of
+    object: axonemal_central_apparatus
+    description: The axonemal central pair projection is part of the central apparatus.
+    evidence:
+    - reference: GO:1990718
+      notes: GO places the axonemal central pair projection within the axonemal central
+        apparatus.
+discussions:
+- discussion_id: resolve_named_central_pair_projection_subcomplexes
+  prompt: Resolve exact source-neutral groundings, record boundaries and copy numbers
+    for C1a/C1b/C1c/C1d/C1e/C1f and C2a/C2b/C2c/C2d/C2e axonemal central pair projection
+    subcomplexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#central_pair_projection_proteins
+  - causal_graphs#chlamydomonas_central_pair_projection_architecture
+  rationale: Carbajal-Gonzalez et al. 2013 resolved named C1 and C2 projection densities,
+    but this pass only curates the broad GO:1990718 projection class and leaves exact
+    named projection subcomplexes and their protein-family groundings unresolved.
+  evidence:
+  - reference: DOI:10.1002/cm.21094
+    notes: Carbajal-Gonzalez et al. 2013 compared the 3D C1 and C2 projection architecture
+      of Chlamydomonas and Strongylocentrotus.
+  posed_by: codex
+  posed_date: '2026-09-23'
