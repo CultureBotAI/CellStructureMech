@@ -27,6 +27,12 @@ curation_history:
     Isp3 layer record and narrowed the open layer-splitting TODO to the remaining
     Saccharomyces spore-wall layers.
   llm_assisted: true
+- timestamp: '2026-09-23T01:20:29Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1340 review issue #1341 by adding GO:1990916 record-level
+    evidence to support the new ascospore wall has_part link to the Isp3 layer.'
+  llm_assisted: true
 synonyms:
 - synonym_text: fungal-type spore wall
   synonym_type: BROAD_SYNONYM
@@ -132,6 +138,9 @@ evidence:
 - reference: GO:0005630
   notes: Gene Ontology cellular-component term for the Saccharomyces spore-wall dityrosine
     layer.
+- reference: GO:1990916
+  notes: Gene Ontology cellular-component term for the Schizosaccharomyces pombe Isp3
+    spore-wall layer.
 - reference: DOI:10.1128/MMBR.69.4.565-584.2005
   notes: Neiman 2005, Ascospore Formation in the Yeast Saccharomyces cerevisiae, Microbiology
     and Molecular Biology Reviews.
