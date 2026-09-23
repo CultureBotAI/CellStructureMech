@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_microtubule.yaml
+  slug: axonemal_microtubule
+session:
+  id: 2026-09-23T235052Z-claude-code-51692b
+  timestamp: '2026-09-23T23:50:52Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added axonemal microtubule record
+  details: Created GO:0005879 for the axonemal microtubule with cytoplasmic-microtubule parentage,
+    axoneme parthood, Chlamydomonas scope, GO and DOI evidence, a nonmechanistic topology
+    graph that relates A, B, C1 and C2 axonemal microtubule subtypes to outer-doublet and
+    central-pair scaffolds, and a resolved boundary discussion that keeps tubulin, MIP and
+    projection details on lower-level records.

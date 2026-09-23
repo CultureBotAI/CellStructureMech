@@ -1,0 +1,226 @@
+identifier: GO:0005879
+label: axonemal microtubule
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A microtubule in the axoneme of a eukaryotic cilium or flagellum; an axoneme
+  contains nine modified doublet microtubules, which may or may not surround a pair
+  of single microtubules.
+definition_source: GO:0005879
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T23:48:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T23:49:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic-microtubule parentage, axoneme parthood, Chlamydomonas
+    scope, GO/DOI evidence, a nonmechanistic axonemal-microtubule topology graph,
+    and a resolved child-boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-09-23T23:50:22Z'
+  curator: codex
+  action: FIXED_CHLAMYDOMONAS_SCOPE_EVIDENCE
+  changes: Replaced the outer-doublet-only Chlamydomonas taxonomy/example citation
+    with Nicastro et al. 2006 evidence for the whole 9+2 axonemal microtubule scaffold.
+  llm_assisted: true
+parent_structures:
+- GO:0005881
+part_of:
+- GO:0005930
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar axonemes contain a 9+2 axonemal microtubule scaffold
+    with nine outer doublets and a central-pair region.
+  reference: DOI:10.1126/science.1128618
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose 9+2 flagellar axonemal microtubule scaffold was resolved
+    by cryoelectron tomography.
+  reference: DOI:10.1126/science.1128618
+functions:
+- function_id: axonemal_microtubule_scaffold
+  label: axonemal microtubule scaffold
+  description: In Chlamydomonas, specialized axonemal microtubules form the A/B outer
+    doublets and C1/C2 central-pair singlets of the 9+2 flagellar axoneme.
+  evidence:
+  - reference: GO:0005879
+    notes: GO:0005879 defines axonemal microtubules as microtubules in the axoneme
+      of a eukaryotic cilium or flagellum.
+  - reference: DOI:10.1016/j.cell.2019.09.030
+    notes: Ma et al. 2019 resolved native Chlamydomonas axonemal doublet microtubules
+      with A- and B-tubule protofilament walls.
+  - reference: DOI:10.1002/cm.21094
+    notes: Carbajal-Gonzalez et al. 2013 resolved the Chlamydomonas axonemal central
+      pair with asymmetric C1 and C2 singlet microtubules.
+evidence:
+- reference: GO:0005879
+  notes: Gene Ontology cellular-component term for the axonemal microtubule.
+- reference: GO:0005881
+  notes: Gene Ontology cellular-component parent term for cytoplasmic microtubules.
+- reference: GO:0005930
+  notes: Gene Ontology places axonemal microtubules within the axoneme.
+- reference: GO:0097545
+  notes: Gene Ontology cellular-component term for the axonemal doublet microtubule.
+- reference: GO:0097649
+  notes: Gene Ontology cellular-component term for the A axonemal microtubule.
+- reference: GO:0097650
+  notes: Gene Ontology cellular-component term for the B axonemal microtubule.
+- reference: GO:0097540
+  notes: Gene Ontology cellular-component term for the axonemal central pair.
+- reference: GO:1990719
+  notes: Gene Ontology cellular-component term for the C1 axonemal microtubule.
+- reference: GO:1990720
+  notes: Gene Ontology cellular-component term for the C2 axonemal microtubule.
+- reference: DOI:10.1126/science.1128618
+  notes: Nicastro et al. 2006, 'The molecular architecture of axonemes revealed by
+    cryoelectron tomography', Science.
+- reference: DOI:10.1016/j.cell.2019.09.030
+  notes: Ma et al. 2019, 'Structure of the Decorated Ciliary Doublet Microtubule',
+    Cell.
+- reference: DOI:10.1002/cm.21094
+  notes: Carbajal-Gonzalez et al. 2013, 'Conserved structural motifs in the central
+    pair complex of eukaryotic flagella', Cytoskeleton.
+causal_graphs:
+- graph_id: chlamydomonas_axonemal_microtubule_topology
+  title: Axonemal microtubules build Chlamydomonas 9+2 axonemes
+  description: Chlamydomonas 9+2 flagellar axonemes contain A and B axonemal microtubules
+    in each outer doublet and C1 and C2 axonemal microtubules in the central pair.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records how named A, B, C1 and C2 axonemal microtubule subtypes
+    map onto outer-doublet and central-pair scaffolds without duplicating the child
+    records' protofilament, MIP or projection details.
+  nodes:
+  - node_id: axonemal_microtubule
+    label: axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:0005879
+  - node_id: a_axonemal_microtubule
+    label: A axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097649
+  - node_id: b_axonemal_microtubule
+    label: B axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097650
+  - node_id: axonemal_doublet_microtubule
+    label: axonemal doublet microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097545
+  - node_id: c1_axonemal_microtubule
+    label: C1 axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:1990719
+  - node_id: c2_axonemal_microtubule
+    label: C2 axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:1990720
+  - node_id: axonemal_central_pair
+    label: axonemal central pair
+    node_type: STRUCTURE
+    grounding: GO:0097540
+  - node_id: axoneme
+    label: axoneme
+    node_type: STRUCTURE
+    grounding: GO:0005930
+  edges:
+  - subject: a_axonemal_microtubule
+    predicate: is subtype of
+    object: axonemal_microtubule
+    description: The A axonemal microtubule is a complete microtubule subtype of the
+      axonemal outer doublet.
+    evidence:
+    - reference: GO:0097649
+      notes: GO places the A axonemal microtubule under the axonemal microtubule class.
+  - subject: b_axonemal_microtubule
+    predicate: is subtype of
+    object: axonemal_microtubule
+    description: The B axonemal microtubule is an incomplete microtubule subtype of
+      the axonemal outer doublet.
+    evidence:
+    - reference: GO:0097650
+      notes: GO places the B axonemal microtubule under the axonemal microtubule class.
+  - subject: c1_axonemal_microtubule
+    predicate: is subtype of
+    object: axonemal_microtubule
+    description: The C1 axonemal microtubule is one singlet microtubule of the central
+      pair.
+    evidence:
+    - reference: GO:1990719
+      notes: GO places the C1 axonemal microtubule under the axonemal microtubule
+        class.
+  - subject: c2_axonemal_microtubule
+    predicate: is subtype of
+    object: axonemal_microtubule
+    description: The C2 axonemal microtubule is the second singlet microtubule of
+      the central pair.
+    evidence:
+    - reference: GO:1990720
+      notes: GO places the C2 axonemal microtubule under the axonemal microtubule
+        class.
+  - subject: a_axonemal_microtubule
+    predicate: is part of
+    object: axonemal_doublet_microtubule
+    description: The A axonemal microtubule forms the complete tubule of an axonemal
+      doublet.
+    evidence:
+    - reference: GO:0097649
+      notes: GO places the A axonemal microtubule within the axonemal doublet microtubule.
+  - subject: b_axonemal_microtubule
+    predicate: is part of
+    object: axonemal_doublet_microtubule
+    description: The B axonemal microtubule forms the incomplete tubule of an axonemal
+      doublet.
+    evidence:
+    - reference: GO:0097650
+      notes: GO places the B axonemal microtubule within the axonemal doublet microtubule.
+  - subject: c1_axonemal_microtubule
+    predicate: is part of
+    object: axonemal_central_pair
+    description: The C1 axonemal microtubule is one member of the axonemal central
+      pair.
+    evidence:
+    - reference: GO:1990719
+      notes: GO places the C1 axonemal microtubule within the axonemal central pair.
+  - subject: c2_axonemal_microtubule
+    predicate: is part of
+    object: axonemal_central_pair
+    description: The C2 axonemal microtubule is the second member of the axonemal
+      central pair.
+    evidence:
+    - reference: GO:1990720
+      notes: GO places the C2 axonemal microtubule within the axonemal central pair.
+  - subject: axonemal_microtubule
+    predicate: is part of
+    object: axoneme
+    description: Axonemal microtubules lie within the axoneme of a eukaryotic cilium
+      or flagellum.
+    evidence:
+    - reference: GO:0005879
+      notes: GO defines axonemal microtubules as microtubules in the axoneme.
+discussions:
+- discussion_id: axonemal_microtubule_child_boundary
+  prompt: Should tubulin protofilaments, MIPs or central-pair projections be duplicated
+    as direct axonemal microtubule components?
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#chlamydomonas_axonemal_microtubule_topology
+  rationale: GO:0005879 denotes the shared axonemal microtubule class. Tubulin constituents
+    are curated on the generic microtubule and axonemal-doublet records, while A/B-tubule,
+    C1/C2, MIP and projection details remain on child records so this parent record
+    does not collapse subtype-specific geometry.
+  evidence:
+  - reference: GO:0005879
+    notes: GO:0005879 identifies the shared axonemal microtubule class.
+  - reference: GO:0097545
+    notes: GO:0097545 identifies the axonemal outer-doublet subtype.
+  - reference: GO:0097540
+    notes: GO:0097540 identifies the C1/C2 axonemal central-pair subtype.
