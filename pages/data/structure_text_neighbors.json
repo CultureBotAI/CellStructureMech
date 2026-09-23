@@ -1924,9 +1924,9 @@
           "cosine_similarity": 0.74463014
         },
         {
-          "identifier": "GO:0030694",
-          "label": "bacterial-type flagellum basal body, rod",
-          "cosine_similarity": 0.72899269
+          "identifier": "GO:0000940",
+          "label": "outer kinetochore",
+          "cosine_similarity": 0.73594954
         }
       ]
     },
@@ -2508,14 +2508,14 @@
           "cosine_similarity": 0.76863575
         },
         {
+          "identifier": "GO:0000940",
+          "label": "outer kinetochore",
+          "cosine_similarity": 0.76276885
+        },
+        {
           "identifier": "cellstructuremech:phuz_spindle",
           "label": "PhuZ spindle",
           "cosine_similarity": 0.71561269
-        },
-        {
-          "identifier": "GO:0120120",
-          "label": "bilobe structure",
-          "cosine_similarity": 0.68907963
         }
       ]
     },
@@ -2787,14 +2787,14 @@
           "cosine_similarity": 0.78914112
         },
         {
+          "identifier": "GO:0000940",
+          "label": "outer kinetochore",
+          "cosine_similarity": 0.76622201
+        },
+        {
           "identifier": "GO:0160113",
           "label": "axonemal microtubule doublet inner junction",
           "cosine_similarity": 0.75628005
-        },
-        {
-          "identifier": "GO:0160114",
-          "label": "axonemal microtubule doublet outer junction",
-          "cosine_similarity": 0.74477542
         }
       ]
     },
@@ -10677,6 +10677,11 @@
       "label": "kinetoplast",
       "neighbors": [
         {
+          "identifier": "GO:0000940",
+          "label": "outer kinetochore",
+          "cosine_similarity": 0.79890323
+        },
+        {
           "identifier": "GO:0000776",
           "label": "kinetochore",
           "cosine_similarity": 0.79700616
@@ -10695,11 +10700,6 @@
           "identifier": "GO:0042646",
           "label": "plastid nucleoid",
           "cosine_similarity": 0.7278067
-        },
-        {
-          "identifier": "GO:0120120",
-          "label": "bilobe structure",
-          "cosine_similarity": 0.70249985
         }
       ]
     },
@@ -12289,6 +12289,11 @@
       "label": "kinetochore",
       "neighbors": [
         {
+          "identifier": "GO:0000940",
+          "label": "outer kinetochore",
+          "cosine_similarity": 0.9309768
+        },
+        {
           "identifier": "GO:0000444",
           "label": "MIS12/MIND type complex",
           "cosine_similarity": 0.85967834
@@ -12307,11 +12312,6 @@
           "identifier": "GO:0031262",
           "label": "Ndc80 complex",
           "cosine_similarity": 0.7944841
-        },
-        {
-          "identifier": "GO:0005816",
-          "label": "spindle pole body",
-          "cosine_similarity": 0.78914112
         }
       ]
     },
@@ -12418,6 +12418,11 @@
           "cosine_similarity": 0.85967834
         },
         {
+          "identifier": "GO:0000940",
+          "label": "outer kinetochore",
+          "cosine_similarity": 0.82069473
+        },
+        {
           "identifier": "GO:0031262",
           "label": "Ndc80 complex",
           "cosine_similarity": 0.78490996
@@ -12431,11 +12436,6 @@
           "identifier": "GO:0070939",
           "label": "Dsl1/NZR complex",
           "cosine_similarity": 0.71845081
-        },
-        {
-          "identifier": "GO:0042729",
-          "label": "DASH complex",
-          "cosine_similarity": 0.71491145
         }
       ]
     },
@@ -12588,9 +12588,9 @@
           "cosine_similarity": 0.74714497
         },
         {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.69571348
+          "identifier": "GO:0000940",
+          "label": "outer kinetochore",
+          "cosine_similarity": 0.74424125
         }
       ]
     },
@@ -12870,6 +12870,37 @@
           "identifier": "GO:0000228",
           "label": "nuclear chromosome",
           "cosine_similarity": 0.71349214
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000940",
+      "label": "outer kinetochore",
+      "neighbors": [
+        {
+          "identifier": "GO:0000776",
+          "label": "kinetochore",
+          "cosine_similarity": 0.9309768
+        },
+        {
+          "identifier": "GO:0000444",
+          "label": "MIS12/MIND type complex",
+          "cosine_similarity": 0.82069473
+        },
+        {
+          "identifier": "GO:0020023",
+          "label": "kinetoplast",
+          "cosine_similarity": 0.79890323
+        },
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.78392566
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.76622201
         }
       ]
     },

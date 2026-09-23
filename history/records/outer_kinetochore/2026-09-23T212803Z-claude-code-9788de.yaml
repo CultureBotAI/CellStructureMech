@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/outer_kinetochore.yaml
+  slug: outer_kinetochore
+session:
+  id: 2026-09-23T212803Z-claude-code-9788de
+  timestamp: '2026-09-23T21:28:03Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1428
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1427
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed outer kinetochore DASH review
+  details: 'Resolved PR #1427 review issue #1428 by keeping the yeast-specific DASH complex
+    in its own part_of record and removing it from the generic GO:0000940 outer kinetochore
+    has_part list, component list, mechanism graph, and DASH-only evidence.'
