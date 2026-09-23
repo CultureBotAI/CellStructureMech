@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_sheath.yaml
+  slug: axonemal_microtubule_doublet_inner_sheath
+session:
+  id: 2026-09-23T183922Z-claude-code-a73c42
+  timestamp: '2026-09-23T18:39:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1417
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1416
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address B inner-sheath split review
+  details: 'Resolved PR #1416 review issue #1417 by clarifying that the GO:0160112 child-record
+    split was completed while exact B-lumen MIP family groundings, positions, and copy numbers
+    remain open on the new axonemal B tubule inner sheath record.'
