@@ -3978,6 +3978,15 @@
   "definition": "A bacterial type VI secretion system subassembly in which TssJ-, TssL-, and TssM-family proteins form an envelope-spanning membrane core of the secretion apparatus."
  },
  {
+  "identifier": "cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex",
+  "label": "type VI secretion system VgrG/PAAR spike complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/type_vi_secretion_system_vgrg_paar_spike_complex.html",
+  "definition": "A bacterial type VI secretion system tip subassembly in which trimeric VgrG proteins cap the Hcp tube and associate with PAAR-repeat proteins to sharpen the puncturing spike."
+ },
+ {
   "identifier": "GO:0005619",
   "label": "ascospore wall",
   "category": "SPORE",

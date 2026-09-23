@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_secretion_system_vgrg_paar_spike_complex.yaml
+  slug: type_vi_secretion_system_vgrg_paar_spike_complex
+session:
+  id: 2026-09-23T075442Z-codex-ddfd1c
+  timestamp: '2026-09-23T07:54:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1369
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1370
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1368
+events:
+- type: EDIT
+  outcome: changed
+  summary: Resolve VgrG/PAAR spike PR review findings
+  details: 'Resolved PR #1368 adversarial review findings by fixing the T6SS spike-mediated
+    puncturing sentence and adding Cherrak et al. 2019 evidence to the function row so its
+    Hcp-capping clause is supported at the point of use.'

@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_secretion_system_vgrg_paar_spike_complex.yaml
+  slug: type_vi_secretion_system_vgrg_paar_spike_complex
+session:
+  id: 2026-09-23T074528Z-codex-24fb74
+  timestamp: '2026-09-23T07:45:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the T6SS VgrG/PAAR spike complex
+  details: Created a dedicated CellStructureRecord for the type VI secretion system VgrG/PAAR
+    spike complex, including VgrG and PAAR constituent rows, bacterial distribution, a Vibrio
+    cholerae canonical example, literature-backed puncturing-tip function, a VgrG/PAAR assembly
+    graph, and a grounding TODO for exact protein-family CURIEs.

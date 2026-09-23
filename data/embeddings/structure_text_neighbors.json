@@ -13575,14 +13575,14 @@
           "cosine_similarity": 0.86931709
         },
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex",
+          "label": "type VI secretion system VgrG/PAAR spike complex",
+          "cosine_similarity": 0.86371383
+        },
+        {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
           "cosine_similarity": 0.84609597
-        },
-        {
-          "identifier": "GO:0015627",
-          "label": "type II protein secretion system complex",
-          "cosine_similarity": 0.82935155
         }
       ]
     },
@@ -13606,14 +13606,14 @@
           "cosine_similarity": 0.81310208
         },
         {
+          "identifier": "cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex",
+          "label": "type VI secretion system VgrG/PAAR spike complex",
+          "cosine_similarity": 0.79550318
+        },
+        {
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
           "cosine_similarity": 0.76762552
-        },
-        {
-          "identifier": "GO:0015627",
-          "label": "type II protein secretion system complex",
-          "cosine_similarity": 0.75489753
         }
       ]
     },
@@ -13642,9 +13642,9 @@
           "cosine_similarity": 0.76255282
         },
         {
-          "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
-          "label": "type VI secretion system membrane complex",
-          "cosine_similarity": 0.75786951
+          "identifier": "cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex",
+          "label": "type VI secretion system VgrG/PAAR spike complex",
+          "cosine_similarity": 0.76175751
         }
       ]
     },
@@ -13656,6 +13656,11 @@
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
           "cosine_similarity": 0.87260613
+        },
+        {
+          "identifier": "cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex",
+          "label": "type VI secretion system VgrG/PAAR spike complex",
+          "cosine_similarity": 0.79151886
         },
         {
           "identifier": "cellstructuremech:type_vi_secretion_system_contractile_sheath",
@@ -13671,11 +13676,6 @@
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
           "cosine_similarity": 0.73649935
-        },
-        {
-          "identifier": "GO:0030256",
-          "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.73220002
         }
       ]
     },
@@ -13707,6 +13707,37 @@
           "identifier": "cellstructuremech:type_vi_secretion_system_baseplate",
           "label": "type VI secretion system baseplate",
           "cosine_similarity": 0.81310208
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex",
+      "label": "type VI secretion system VgrG/PAAR spike complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0033104",
+          "label": "type VI protein secretion system complex",
+          "cosine_similarity": 0.86371383
+        },
+        {
+          "identifier": "cellstructuremech:type_vi_secretion_system_baseplate",
+          "label": "type VI secretion system baseplate",
+          "cosine_similarity": 0.79550318
+        },
+        {
+          "identifier": "cellstructuremech:type_vi_secretion_system_hcp_tube",
+          "label": "type VI secretion system Hcp tube",
+          "cosine_similarity": 0.79151886
+        },
+        {
+          "identifier": "cellstructuremech:type_vi_secretion_system_contractile_sheath",
+          "label": "type VI secretion system contractile sheath",
+          "cosine_similarity": 0.76175751
+        },
+        {
+          "identifier": "GO:0043684",
+          "label": "type IV secretion system complex",
+          "cosine_similarity": 0.73183285
         }
       ]
     },
