@@ -1,0 +1,211 @@
+identifier: GO:0097649
+label: A axonemal microtubule
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: The complete 13-protofilament A tubule of the axonemal doublet microtubule.
+definition_source: GO:0097649
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T17:12:02Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T17:12:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the A tubule synonym, axonemal-microtubule parentage, doublet parthood,
+    Chlamydomonas scope, GO and DOI evidence, a nonmechanistic A-tubule graph, and
+    an A-tubule protofilament/MIP TODO.
+  llm_assisted: true
+- timestamp: '2026-09-23T17:23:44Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1411 issue #1412 by adding radial-spoke, inner-dynein-arm
+    and outer-dynein-arm A-tubule attachment nodes and edges.'
+  llm_assisted: true
+synonyms:
+- synonym_text: A tubule
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097649
+parent_structures:
+- GO:0005879
+part_of:
+- GO:0097545
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar doublets contain a complete 13-protofilament A-tubule
+    that adjoins the incomplete B-tubule and carries doublet-associated axonemal complexes.
+  reference: DOI:10.1016/j.cell.2019.09.030
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose A-tubule protofilament lattice and associated axonemal
+    doublet proteins were resolved in native cilia.
+  reference: DOI:10.1016/j.cell.2019.09.030
+functions:
+- function_id: a_tubule_doublet_scaffold
+  label: A-tubule doublet scaffold
+  description: The complete A axonemal microtubule forms the 13-protofilament microtubule
+    wall that supports B-tubule attachment, inner- and outer-junction contact, radial-spoke
+    anchoring, and dynein-arm attachment.
+  evidence:
+  - reference: GO:0097649
+    notes: GO defines the A axonemal microtubule as the complete 13-protofilament
+      tubule of the axonemal outer doublet.
+  - reference: DOI:10.1016/j.cell.2019.09.030
+    notes: Ma et al. 2019 resolved the native Chlamydomonas doublet microtubule lattice
+      with A-tubule-associated inner-sheath, inner-junction, outer-junction, ribbon
+      and external densities.
+evidence:
+- reference: GO:0097649
+  notes: Gene Ontology cellular-component term for the A axonemal microtubule.
+- reference: GO:0005879
+  notes: Gene Ontology places the A axonemal microtubule under the axonemal microtubule
+    class.
+- reference: GO:0097545
+  notes: Gene Ontology places the A axonemal microtubule within the axonemal doublet
+    microtubule.
+- reference: DOI:10.1016/j.cell.2019.09.030
+  notes: Ma et al. 2019, 'Structure of the Decorated Ciliary Doublet Microtubule',
+    Cell.
+- reference: DOI:10.1126/science.1128618
+  notes: Nicastro et al. 2006 resolved Chlamydomonas radial spokes and dynein arms
+    on the axonemal outer doublets.
+causal_graphs:
+- graph_id: chlamydomonas_a_tubule_doublet_scaffold
+  title: A axonemal microtubule supports the outer doublet
+  description: In Chlamydomonas, the complete A tubule is the 13-protofilament microtubule
+    of the axonemal outer doublet, connects to the incomplete B tubule through inner
+    and outer junction structures, and carries radial-spoke and dynein-arm attachments.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records coarse A-tubule parthood and leaves exact A1-A13
+    protofilament boundaries, A-tubule MIP positions, radial-spoke and dynein-arm
+    attachment geometry, tubulin-family groundings and copy numbers for later curation.
+  nodes:
+  - node_id: a_axonemal_microtubule
+    label: A axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097649
+  - node_id: b_axonemal_microtubule
+    label: B axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097650
+  - node_id: axonemal_microtubule_doublet_inner_junction
+    label: axonemal microtubule doublet inner junction
+    node_type: STRUCTURE
+    grounding: GO:0160113
+  - node_id: axonemal_microtubule_doublet_outer_junction
+    label: axonemal microtubule doublet outer junction
+    node_type: STRUCTURE
+    grounding: GO:0160114
+  - node_id: axonemal_doublet_microtubule
+    label: axonemal doublet microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097545
+  - node_id: radial_spoke
+    label: radial spoke
+    node_type: STRUCTURE
+    grounding: GO:0001534
+  - node_id: inner_dynein_arm
+    label: inner dynein arm
+    node_type: STRUCTURE
+    grounding: GO:0036156
+  - node_id: outer_dynein_arm
+    label: outer dynein arm
+    node_type: STRUCTURE
+    grounding: GO:0036157
+  edges:
+  - subject: a_axonemal_microtubule
+    predicate: is part of
+    object: axonemal_doublet_microtubule
+    description: The A axonemal microtubule is the complete tubule of the axonemal
+      outer doublet.
+    evidence:
+    - reference: GO:0097649
+      notes: GO places the A axonemal microtubule within the axonemal doublet microtubule.
+  - subject: b_axonemal_microtubule
+    predicate: fuses with
+    object: a_axonemal_microtubule
+    description: The incomplete B tubule fuses with the complete A tubule to form
+      an axonemal outer doublet.
+    evidence:
+    - reference: GO:0097649
+      notes: GO defines the A tubule as a complete microtubule that fuses with the
+        incomplete B tubule.
+  - subject: axonemal_microtubule_doublet_inner_junction
+    predicate: contacts
+    object: a_axonemal_microtubule
+    description: The inner junction contacts the A-tubule A1 protofilament.
+    evidence:
+    - reference: GO:0160113
+      notes: GO defines the inner junction as joining the B10 protofilament to the
+        A1 protofilament.
+  - subject: axonemal_microtubule_doublet_outer_junction
+    predicate: contacts
+    object: a_axonemal_microtubule
+    description: The outer junction contacts A-tubule protofilaments A10 and A11.
+    evidence:
+    - reference: GO:0160114
+      notes: GO defines the outer junction as joining B1 to A10 and A11 within an
+        axonemal doublet.
+  - subject: radial_spoke
+    predicate: attaches to
+    object: a_axonemal_microtubule
+    description: Radial spokes attach to the A tubule of axonemal outer doublets.
+    evidence:
+    - reference: GO:0097649
+      notes: GO defines the A axonemal microtubule as the doublet microtubule that
+        carries attached radial spokes.
+    - reference: DOI:10.1126/science.1128618
+      notes: Nicastro et al. 2006 identified radial spokes on Chlamydomonas outer
+        doublets.
+  - subject: inner_dynein_arm
+    predicate: attaches to
+    object: a_axonemal_microtubule
+    description: Inner dynein arms attach to the A tubule of axonemal outer doublets.
+    evidence:
+    - reference: GO:0097649
+      notes: GO defines the A axonemal microtubule as the doublet microtubule that
+        carries attached inner dynein arms.
+    - reference: GO:0036156
+      notes: GO identifies the inner dynein arm as an axonemal structure on ciliary
+        and flagellar outer doublets.
+    - reference: DOI:10.1126/science.1128618
+      notes: Nicastro et al. 2006 resolved inner dynein arms on Chlamydomonas outer
+        doublets.
+  - subject: outer_dynein_arm
+    predicate: attaches to
+    object: a_axonemal_microtubule
+    description: Outer dynein arms attach to the A tubule of axonemal outer doublets.
+    evidence:
+    - reference: GO:0097649
+      notes: GO defines the A axonemal microtubule as the doublet microtubule that
+        carries attached outer dynein arms.
+    - reference: GO:0036157
+      notes: GO identifies the outer dynein arm as an axonemal structure on ciliary
+        and flagellar outer doublets.
+    - reference: DOI:10.1126/science.1128618
+      notes: Nicastro et al. 2006 resolved outer dynein arms on Chlamydomonas outer
+        doublets.
+discussions:
+- discussion_id: resolve_a_tubule_protofilaments_and_mips
+  prompt: Resolve exact A1-A13 protofilament boundaries, A-tubule MIP positions, radial-spoke
+    and dynein-arm attachment geometry, source-neutral tubulin-family groundings and
+    copy numbers for the A axonemal microtubule.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#chlamydomonas_a_tubule_doublet_scaffold
+  rationale: GO exactly identifies the A axonemal microtubule, but this pass curates
+    only its coarse role in the outer doublet and leaves exact protofilament, MIP,
+    radial-spoke and dynein-arm attachment placement unresolved.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2019.09.030
+    notes: Ma et al. 2019 resolved the Chlamydomonas doublet lattice and several A-tubule-associated
+      microtubule inner proteins.
+  posed_by: codex
+  posed_date: '2026-09-23'

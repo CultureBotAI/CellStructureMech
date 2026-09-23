@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+  slug: a_axonemal_microtubule
+session:
+  id: 2026-09-23T172416Z-claude-code-55b697
+  timestamp: '2026-09-23T17:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1412
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1411
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address A-tubule attachment review
+  details: 'Added radial-spoke, inner-dynein-arm, and outer-dynein-arm nodes plus A-tubule
+    attachment edges to keep the GO:0097649 attachment scope explicit. Linked PR #1411 review
+    issue #1412 and left exact attachment geometry for later curation.'

@@ -1311,6 +1311,37 @@
       ]
     },
     {
+      "identifier": "GO:0097649",
+      "label": "A axonemal microtubule",
+      "neighbors": [
+        {
+          "identifier": "GO:0097545",
+          "label": "axonemal doublet microtubule",
+          "cosine_similarity": 0.93708924
+        },
+        {
+          "identifier": "GO:1990720",
+          "label": "C2 axonemal microtubule",
+          "cosine_similarity": 0.93171674
+        },
+        {
+          "identifier": "GO:1990719",
+          "label": "C1 axonemal microtubule",
+          "cosine_similarity": 0.91695678
+        },
+        {
+          "identifier": "GO:0160115",
+          "label": "axonemal microtubule doublet ribbon",
+          "cosine_similarity": 0.90076768
+        },
+        {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.89994172
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030479",
       "label": "actin cortical patch",
       "neighbors": [
@@ -1485,14 +1516,14 @@
           "cosine_similarity": 0.89554054
         },
         {
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.87727153
+        },
+        {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.87271435
-        },
-        {
-          "identifier": "GO:1990718",
-          "label": "axonemal central pair projection",
-          "cosine_similarity": 0.86695696
         }
       ]
     },
@@ -1532,6 +1563,11 @@
       "label": "axonemal doublet microtubule",
       "neighbors": [
         {
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.93708924
+        },
+        {
           "identifier": "GO:1990720",
           "label": "C2 axonemal microtubule",
           "cosine_similarity": 0.90538815
@@ -1550,11 +1586,6 @@
           "identifier": "GO:0160115",
           "label": "axonemal microtubule doublet ribbon",
           "cosine_similarity": 0.88370123
-        },
-        {
-          "identifier": "GO:1990719",
-          "label": "C1 axonemal microtubule",
-          "cosine_similarity": 0.88280143
         }
       ]
     },
@@ -1614,9 +1645,9 @@
           "cosine_similarity": 0.87488262
         },
         {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.85071718
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.86071187
         }
       ]
     },
@@ -1645,9 +1676,9 @@
           "cosine_similarity": 0.83125191
         },
         {
-          "identifier": "GO:1990720",
-          "label": "C2 axonemal microtubule",
-          "cosine_similarity": 0.80376275
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.81478074
         }
       ]
     },
@@ -1655,6 +1686,11 @@
       "identifier": "GO:0160115",
       "label": "axonemal microtubule doublet ribbon",
       "neighbors": [
+        {
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.90076768
+        },
         {
           "identifier": "GO:0097545",
           "label": "axonemal doublet microtubule",
@@ -1674,11 +1710,6 @@
           "identifier": "GO:0160113",
           "label": "axonemal microtubule doublet inner junction",
           "cosine_similarity": 0.86542662
-        },
-        {
-          "identifier": "GO:1990719",
-          "label": "C1 axonemal microtubule",
-          "cosine_similarity": 0.86053868
         }
       ]
     },
@@ -1723,6 +1754,11 @@
           "cosine_similarity": 0.86766855
         },
         {
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.86157242
+        },
+        {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.8584932
@@ -1736,11 +1772,6 @@
           "identifier": "GO:0097540",
           "label": "axonemal central pair",
           "cosine_similarity": 0.84064333
-        },
-        {
-          "identifier": "GO:0036064",
-          "label": "ciliary basal body",
-          "cosine_similarity": 0.83977117
         }
       ]
     },
@@ -1831,9 +1862,9 @@
           "cosine_similarity": 0.73306107
         },
         {
-          "identifier": "cellstructuremech:phuz_spindle",
-          "label": "PhuZ spindle",
-          "cosine_similarity": 0.72581406
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.72920471
         }
       ]
     },
@@ -1852,6 +1883,11 @@
           "cosine_similarity": 0.92776122
         },
         {
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.91695678
+        },
+        {
           "identifier": "GO:0097545",
           "label": "axonemal doublet microtubule",
           "cosine_similarity": 0.88280143
@@ -1860,11 +1896,6 @@
           "identifier": "GO:0160115",
           "label": "axonemal microtubule doublet ribbon",
           "cosine_similarity": 0.86053868
-        },
-        {
-          "identifier": "GO:0005874",
-          "label": "microtubule",
-          "cosine_similarity": 0.85541703
         }
       ]
     },
@@ -1883,6 +1914,11 @@
           "cosine_similarity": 0.93429141
         },
         {
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.93171674
+        },
+        {
           "identifier": "GO:0097545",
           "label": "axonemal doublet microtubule",
           "cosine_similarity": 0.90538815
@@ -1891,11 +1927,6 @@
           "identifier": "GO:0160115",
           "label": "axonemal microtubule doublet ribbon",
           "cosine_similarity": 0.87679176
-        },
-        {
-          "identifier": "GO:0160110",
-          "label": "axonemal microtubule doublet inner sheath",
-          "cosine_similarity": 0.85059
         }
       ]
     },
@@ -1950,14 +1981,14 @@
           "cosine_similarity": 0.8348756
         },
         {
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.81745739
+        },
+        {
           "identifier": "GO:1990719",
           "label": "C1 axonemal microtubule",
           "cosine_similarity": 0.81559797
-        },
-        {
-          "identifier": "GO:0097545",
-          "label": "axonemal doublet microtubule",
-          "cosine_similarity": 0.81419949
         }
       ]
     },
@@ -2255,6 +2286,11 @@
           "cosine_similarity": 0.86932674
         },
         {
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.84907673
+        },
+        {
           "identifier": "GO:0020010",
           "label": "conoid",
           "cosine_similarity": 0.83268359
@@ -2263,11 +2299,6 @@
           "identifier": "GO:0097545",
           "label": "axonemal doublet microtubule",
           "cosine_similarity": 0.82020517
-        },
-        {
-          "identifier": "GO:1990720",
-          "label": "C2 axonemal microtubule",
-          "cosine_similarity": 0.81904842
         }
       ]
     },
@@ -2338,6 +2369,11 @@
       "label": "microtubule",
       "neighbors": [
         {
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.89994172
+        },
+        {
           "identifier": "GO:0097596",
           "label": "ventral disc supernumerary microtubule array",
           "cosine_similarity": 0.87263058
@@ -2356,11 +2392,6 @@
           "identifier": "GO:1990719",
           "label": "C1 axonemal microtubule",
           "cosine_similarity": 0.85541703
-        },
-        {
-          "identifier": "GO:1990720",
-          "label": "C2 axonemal microtubule",
-          "cosine_similarity": 0.84403305
         }
       ]
     },
@@ -2658,6 +2689,11 @@
           "cosine_similarity": 0.86313287
         },
         {
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.85101028
+        },
+        {
           "identifier": "GO:0097545",
           "label": "axonemal doublet microtubule",
           "cosine_similarity": 0.82548462
@@ -2666,11 +2702,6 @@
           "identifier": "GO:1990720",
           "label": "C2 axonemal microtubule",
           "cosine_similarity": 0.81695903
-        },
-        {
-          "identifier": "GO:0160110",
-          "label": "axonemal microtubule doublet inner sheath",
-          "cosine_similarity": 0.81586193
         }
       ]
     },
