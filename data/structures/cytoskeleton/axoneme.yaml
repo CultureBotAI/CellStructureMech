@@ -32,6 +32,20 @@ curation_history:
   changes: Linked GO:0036157 as an axoneme substructure and narrowed the subcomplex-boundary
     TODO to the remaining unresolved Chlamydomonas axoneme complexes.
   llm_assisted: true
+- timestamp: '2026-09-23T09:07:56Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1374 review issues #1375 and #1376 by narrowing the coarse
+    axonemal dynein component to GO:0036156 inner dynein arms, adding GO:0036156 and
+    GO:0036157 axoneme evidence, and keeping the outer dynein arm as a GO:0036157
+    has_part child.'
+  llm_assisted: true
+- timestamp: '2026-09-23T09:11:59Z'
+  curator: codex
+  action: FIX_ID_LABEL
+  changes: Changed the GO:0036156 axoneme component and graph node label from 'inner
+    dynein arms' to the canonical 'inner dynein arm'.
+  llm_assisted: true
 has_part:
 - GO:0036157
 components:
@@ -65,24 +79,21 @@ components:
   - reference: DOI:10.1126/science.1128618
     notes: Nicastro et al. 2006 visualized the central-pair region of the 9+2 Chlamydomonas
       axoneme.
-- component_id: axonemal_dynein_arms
-  label: axonemal dynein arms
+- component_id: inner_dynein_arm
+  label: inner dynein arm
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: This first Chlamydomonas axoneme record keeps broad axonemal substructure
-    labels until exact source-neutral groundings for the corresponding ciliary complexes
-    are reviewed.
-  role: Motor complexes attached to axonemal doublets that generate microtubule sliding
-    forces.
+  role: Axonemal inner-arm motor complexes attached to outer doublets that contribute
+    to microtubule sliding forces.
   evidence:
+  - reference: GO:0036156
+    notes: GO identifies inner dynein arms as axonemal inner-arm structures on outer
+      doublet microtubules.
   - reference: DOI:10.1126/science.1128618
     notes: Nicastro et al. 2006 focused on dynein-arm organization within Chlamydomonas
       and sea-urchin axonemes.
-  - reference: DOI:10.1083/jcb.200908067
-    notes: Heuser et al. 2009 localized axonemal dyneins and regulatory structures
-      in Chlamydomonas flagella by cryoelectron tomography.
+  grounding: GO:0036156
 - component_id: radial_spokes
   label: radial spokes
   component_type: PROTEIN_COMPLEX
@@ -142,6 +153,10 @@ functions:
 evidence:
 - reference: GO:0005930
   notes: Gene Ontology cellular-component term for the axoneme.
+- reference: GO:0036156
+  notes: Gene Ontology cellular-component term for the inner dynein arm.
+- reference: GO:0036157
+  notes: Gene Ontology cellular-component term for the outer dynein arm.
 - reference: DOI:10.1126/science.1128618
   notes: Nicastro et al. 2006, 'The molecular architecture of axonemes revealed by
     cryoelectron tomography', Science.
@@ -159,10 +174,15 @@ causal_graphs:
   scope_notes: This graph summarizes major structural couplings and leaves dynein
     heavy-chain diversity, doublet-specific asymmetry, and beat-cycle regulation unresolved.
   nodes:
-  - node_id: axonemal_dynein_arms
-    label: axonemal dynein arms
+  - node_id: inner_dynein_arm
+    label: inner dynein arm
     node_type: GENE_OR_PROTEIN
-    component_ref: axonemal_dynein_arms
+    grounding: GO:0036156
+    component_ref: inner_dynein_arm
+  - node_id: outer_dynein_arm
+    label: outer dynein arm
+    node_type: STRUCTURE
+    grounding: GO:0036157
   - node_id: outer_doublet_microtubules
     label: outer doublet microtubules
     node_type: GENE_OR_PROTEIN
@@ -196,15 +216,28 @@ causal_graphs:
     - reference: DOI:10.1126/science.1128618
       notes: Nicastro et al. 2006 resolved the outer doublet microtubules of the Chlamydomonas
         axoneme by cryoelectron tomography.
-  - subject: axonemal_dynein_arms
+  - subject: inner_dynein_arm
     predicate: bridge
     object: outer_doublet_microtubules
-    description: Axonemal dynein arms project from one outer doublet toward the neighboring
+    description: Inner dynein arms project from one outer doublet toward the neighboring
       doublet.
     evidence:
+    - reference: GO:0036156
+      notes: GO identifies inner dynein arms as axonemal inner-arm structures on ciliary
+        and flagellar outer doublets.
     - reference: DOI:10.1126/science.1128618
-      notes: Nicastro et al. 2006 visualized dynein-microtubule organization in 9+2
-        axonemes.
+      notes: Nicastro et al. 2006 visualized dynein-arm organization in 9+2 axonemes.
+  - subject: outer_dynein_arm
+    predicate: bridges
+    object: outer_doublet_microtubules
+    description: Outer dynein arms project from outer doublets in Chlamydomonas axonemes.
+    evidence:
+    - reference: GO:0036157
+      notes: GO identifies the outer dynein arm as an axonemal outer-arm structure
+        on ciliary and flagellar outer doublet microtubules.
+    - reference: DOI:10.1126/science.1128618
+      notes: Nicastro et al. 2006 visualized dynein-microtubule organization in Chlamydomonas
+        9+2 axonemes.
   - subject: radial_spokes
     predicate: project toward
     object: central_pair_apparatus
@@ -222,31 +255,44 @@ causal_graphs:
     - reference: DOI:10.1083/jcb.200908067
       notes: Heuser et al. 2009 identified the dynein regulatory complex as the axonemal
         nexin link.
-  - subject: axonemal_dynein_arms
+  - subject: inner_dynein_arm
     predicate: drives
     object: flagellar_bending
-    description: Dynein force generation on the Chlamydomonas doublet-microtubule
-      scaffold drives flagellar bending.
+    description: Inner dynein arms help drive Chlamydomonas flagellar bending.
     evidence:
+    - reference: GO:0036156
+      notes: GO states that inner and outer dynein arms have different functions in
+        the generation of microtubule-based motility.
     - reference: DOI:10.1126/science.1128618
       notes: Nicastro et al. 2006 interpreted the cryo-ET arrangement of axonemal
         dynein in a model for microtubule sliding force.
+  - subject: outer_dynein_arm
+    predicate: drives
+    object: flagellar_bending
+    description: Outer dynein arms help drive Chlamydomonas flagellar bending.
+    evidence:
+    - reference: GO:0036157
+      notes: GO states that inner and outer dynein arms have different functions in
+        the generation of microtubule-based motility.
+    - reference: DOI:10.1126/science.1128618
+      notes: Nicastro et al. 2006 interpreted the axonemal dynein arrangement in a
+        model for microtubule sliding force.
 discussions:
 - discussion_id: resolve_chlamydomonas_axoneme_subcomplex_boundaries
-  prompt: Resolve exact source-neutral groundings and boundaries for inner dynein
-    arms, central-pair projections, radial spokes, nexin-dynein regulatory complex,
+  prompt: Resolve exact source-neutral groundings and boundaries for inner-dynein-arm
+    isoforms, central-pair projections, radial spokes, nexin-dynein regulatory complex,
     microtubule inner proteins, and additional Chlamydomonas axoneme subcomplexes.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#axonemal_dynein_arms
+  - components#inner_dynein_arm
   - components#central_pair_apparatus
   - components#nexin_dynein_regulatory_complex
   - components#radial_spokes
-  rationale: The outer dynein arm now has its own GO:0036157 record. The Chlamydomonas
-    axoneme has additional named regulatory, projection and microtubule-associated
-    complexes whose exact source-neutral groundings and record boundaries still need
-    review.
+  rationale: The outer and inner dynein arm classes now have GO-backed boundaries
+    in this axoneme record. The Chlamydomonas axoneme has additional named regulatory,
+    projection, inner-arm isoform, and microtubule-associated complexes whose exact
+    source-neutral groundings and record boundaries still need review.
   evidence:
   - reference: DOI:10.1126/science.1128618
     notes: Nicastro et al. 2006 resolved repeated and asymmetric axonemal densities

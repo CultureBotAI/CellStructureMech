@@ -779,7 +779,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.68583001
+          "cosine_similarity": 0.68757867
         }
       ]
     },
@@ -805,7 +805,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.81728717
+          "cosine_similarity": 0.81666868
         },
         {
           "identifier": "GO:0035253",
@@ -1368,7 +1368,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.73849198
+          "cosine_similarity": 0.73620917
         }
       ]
     },
@@ -1410,27 +1410,27 @@
         {
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
-          "cosine_similarity": 0.83458703
+          "cosine_similarity": 0.83826183
         },
         {
           "identifier": "GO:0005929",
           "label": "cilium",
-          "cosine_similarity": 0.81728717
+          "cosine_similarity": 0.81666868
         },
         {
           "identifier": "GO:0005874",
           "label": "microtubule",
-          "cosine_similarity": 0.79876137
+          "cosine_similarity": 0.80299078
         },
         {
           "identifier": "GO:0036157",
           "label": "outer dynein arm",
-          "cosine_similarity": 0.79566269
+          "cosine_similarity": 0.80101736
         },
         {
           "identifier": "GO:0033289",
           "label": "intraconoid microtubule",
-          "cosine_similarity": 0.78815658
+          "cosine_similarity": 0.79302766
         }
       ]
     },
@@ -1563,6 +1563,11 @@
       "label": "ciliary basal body",
       "neighbors": [
         {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.83826183
+        },
+        {
           "identifier": "GO:0005874",
           "label": "microtubule",
           "cosine_similarity": 0.83802631
@@ -1571,11 +1576,6 @@
           "identifier": "GO:0005929",
           "label": "cilium",
           "cosine_similarity": 0.8348756
-        },
-        {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.83458703
         },
         {
           "identifier": "GO:0020025",
@@ -1678,7 +1678,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.75006354
+          "cosine_similarity": 0.75172748
         }
       ]
     },
@@ -1792,7 +1792,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.69710874
+          "cosine_similarity": 0.69561938
         },
         {
           "identifier": "GO:0036286",
@@ -1864,7 +1864,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.78815658
+          "cosine_similarity": 0.79302766
         }
       ]
     },
@@ -2030,7 +2030,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.79566269
+          "cosine_similarity": 0.80101736
         },
         {
           "identifier": "GO:0005929",
@@ -2236,7 +2236,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.78217562
+          "cosine_similarity": 0.78602459
         }
       ]
     },
@@ -2536,7 +2536,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.70885215
+          "cosine_similarity": 0.70986344
         },
         {
           "identifier": "GO:0009288",
