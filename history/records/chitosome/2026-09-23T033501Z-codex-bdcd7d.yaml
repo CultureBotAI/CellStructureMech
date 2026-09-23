@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/chitosome.yaml
+  slug: chitosome
+session:
+  id: 2026-09-23T033501Z-codex-bdcd7d
+  timestamp: '2026-09-23T03:35:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add chitosome structure record
+  details: Created data/structures/membrane_organelle/chitosome.yaml for GO:0045009 from GO
+    and primary/review chitosome literature. Added cytoplasmic-vesicle parentage, reviewed-label-only
+    chitosome membrane and fungal chitin synthase components, fungal and Saccharomyces scope,
+    DOI evidence for chitin-synthase vesicle storage and transport, a nonmechanistic chitin-synthase
+    delivery graph, and open grounding TODOs for exact source-neutral component identifiers.
+    Validated the record through write_validated_structure and regenerated derived artifacts
+    plus full QC in the same branch.
