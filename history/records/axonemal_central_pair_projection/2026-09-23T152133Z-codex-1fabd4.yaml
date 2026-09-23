@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+  slug: axonemal_central_pair_projection
+session:
+  id: 2026-09-23T152133Z-codex-1fabd4
+  timestamp: '2026-09-23T15:21:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Singularize axonemal central pair projection graph title
+  details: Singularized the GO:1990718 Chlamydomonas projection architecture graph title so
+    the rendered page names the curated axonemal central pair projection class directly.

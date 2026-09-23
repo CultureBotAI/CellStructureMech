@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+  slug: axonemal_central_pair_projection
+session:
+  id: 2026-09-23T151553Z-codex-976e2a
+  timestamp: '2026-09-23T15:15:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add axonemal central pair projection record
+  details: Created the GO:1990718 axonemal central pair projection record, linked it from
+    GO:1990716 axonemal central apparatus with has_part, replaced the parent broad central-pair
+    projection component with a GO-grounded child structure node, grounded the Chlamydomonas
+    C1/C2 projection architecture in Carbajal-Gonzalez et al. cryo-ET evidence, and left named
+    C1/C2 projection subcomplex boundaries and protein-family groundings as unresolved follow-up.
+    Duplicate checking used rg --no-ignore --hidden before creation and found no existing
+    data/structures axonemal central pair projection or GO:1990718 record.
