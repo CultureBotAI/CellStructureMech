@@ -3092,14 +3092,14 @@
           "cosine_similarity": 0.76327028
         },
         {
+          "identifier": "GO:0045009",
+          "label": "chitosome",
+          "cosine_similarity": 0.75365807
+        },
+        {
           "identifier": "GO:0005632",
           "label": "inner layer of spore wall",
           "cosine_similarity": 0.74379234
-        },
-        {
-          "identifier": "GO:0045009",
-          "label": "chitosome",
-          "cosine_similarity": 0.74324816
         },
         {
           "identifier": "GO:0009274",
@@ -4138,27 +4138,27 @@
         {
           "identifier": "GO:0009277",
           "label": "fungal-type cell wall",
-          "cosine_similarity": 0.74324816
+          "cosine_similarity": 0.75365807
         },
         {
           "identifier": "GO:0005631",
           "label": "chitosan layer of spore wall",
-          "cosine_similarity": 0.72703154
-        },
-        {
-          "identifier": "GO:0000324",
-          "label": "fungal-type vacuole",
-          "cosine_similarity": 0.69824201
+          "cosine_similarity": 0.73252374
         },
         {
           "identifier": "GO:0000328",
           "label": "fungal-type vacuole lumen",
-          "cosine_similarity": 0.69521142
+          "cosine_similarity": 0.70431184
         },
         {
           "identifier": "GO:0000329",
           "label": "fungal-type vacuole membrane",
-          "cosine_similarity": 0.69222867
+          "cosine_similarity": 0.70397764
+        },
+        {
+          "identifier": "GO:0000324",
+          "label": "fungal-type vacuole",
+          "cosine_similarity": 0.70193843
         }
       ]
     },

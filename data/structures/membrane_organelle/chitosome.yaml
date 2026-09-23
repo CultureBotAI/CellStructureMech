@@ -28,15 +28,15 @@ curation_history:
   changes: Aligned grounded chitosome graph node labels with GO:0030428 and CHEBI:17029
     canonical labels for the id-label correspondence gate.
   llm_assisted: true
+- timestamp: '2026-09-23T03:48:15Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1349 review issues #1350 and #1351 by removing unsupported
+    paraphrase synonyms and narrowing the Saccharomyces canonical example to the Ziman
+    et al. Chs3p transport claim.'
+  llm_assisted: true
 parent_structures:
 - GO:0031410
-synonyms:
-- synonym_text: chitin synthase vesicle
-  synonym_type: RELATED_SYNONYM
-  source: GO:0045009
-- synonym_text: chitin synthetase microvesicle
-  synonym_type: RELATED_SYNONYM
-  source: DOI:10.1111/j.1567-1364.2006.00158.x
 components:
 - component_id: chitosome_membrane
   label: chitosome membrane
@@ -84,9 +84,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model in which chitosome-localized chitin synthase is separated
-    biochemically from plasma membrane activity and Chs3p traffic from the chitosome
-    to the plasma membrane is genetically dissected.
+  note: Budding-yeast model in which Chs6p-dependent Chs3p traffic from the chitosome
+    to the plasma membrane was genetically dissected.
   reference: DOI:10.1091/mbc.9.6.1565
 functions:
 - function_id: chitin_synthase_storage_and_delivery
