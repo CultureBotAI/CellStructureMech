@@ -1,0 +1,170 @@
+identifier: GO:0030905
+label: retromer, tubulation complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The dimeric subcomplex of the retromer, believed to be peripherally associated
+  with the membrane. This dimeric complex is responsible for remodeling endosomal
+  membranes to form a tube-structure to which cargo molecules are selected for recycling.
+  The budding yeast complex comprises Vps5p and Vps17p, and may contain multiple copies
+  of a Vps5p/Vps17p dimer. The mammalian complex contains SNX1 or SNX2 dimerized with
+  SNX5 or SNX6.
+definition_source: GO:0030905
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T20:57:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T20:57:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO membrane-complex parentage and retromer parthood, exact GO aliases,
+    reviewed-label-only Vps5/Vps17 yeast components, Saccharomyces scope, GO/DOI evidence,
+    a nonmechanistic tubulation assembly graph, and a component-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0098796
+part_of:
+- GO:0030904
+synonyms:
+- synonym_text: SNX-BAR dimer
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030905
+- synonym_text: heterodimeric membrane-deforming retromer subcomplex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030905
+- synonym_text: retromer complex, outer shell
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030905
+components:
+- component_id: vps5_retromer_subunit
+  label: Vps5 retromer subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps5p retromer
+    subunit; no exact source-neutral InterPro or Pfam family identifier spanning the
+    yeast Vps5 and metazoan SNX1/SNX2 sorting nexins was curated in this pass.
+  role: Vps5 constituent of the yeast tubulation retromer subcomplex.
+  evidence:
+  - reference: DOI:10.1083/jcb.142.3.665
+    notes: Seaman, McCaffery and Emr 1998 placed Vps5p in the Vps5p/Vps17p membrane-coat
+      retromer subcomplex.
+  - reference: GO:0030905
+    notes: The GO tubulation retromer-complex definition names Vps5p as a yeast constituent.
+- component_id: vps17_retromer_subunit
+  label: Vps17 retromer subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS17
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps17p retromer
+    subunit; no exact source-neutral InterPro or Pfam family identifier spanning the
+    yeast Vps17 and metazoan SNX5/SNX6 sorting nexins was curated in this pass.
+  role: Vps17 constituent of the yeast tubulation retromer subcomplex.
+  evidence:
+  - reference: DOI:10.1083/jcb.142.3.665
+    notes: Seaman, McCaffery and Emr 1998 placed Vps17p in the Vps5p/Vps17p membrane-coat
+      retromer subcomplex.
+  - reference: GO:0030905
+    notes: The GO tubulation retromer-complex definition names Vps17p as a yeast constituent.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a Vps5p/Vps17p membrane-coat subcomplex corresponding to
+    the tubulation branch of retromer.
+  reference: DOI:10.1083/jcb.142.3.665
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Model in which Seaman, McCaffery and Emr defined the tubulation branch of
+    retromer as a Vps5p/Vps17p membrane-coat subcomplex.
+  reference: DOI:10.1083/jcb.142.3.665
+evidence:
+- reference: GO:0030905
+  notes: Gene Ontology cellular-component term for the tubulation retromer subcomplex.
+- reference: GO:0098796
+  notes: Gene Ontology cellular-component parent term for membrane protein complexes.
+- reference: GO:0030904
+  notes: Gene Ontology cellular-component term for the parent retromer complex.
+- reference: DOI:10.1083/jcb.142.3.665
+  notes: Seaman, McCaffery and Emr 1998, A Membrane Coat Complex Essential for Endosome-to-Golgi
+    Retrograde Transport in Yeast, Journal of Cell Biology.
+causal_graphs:
+- graph_id: yeast_tubulation_retromer_assembly
+  title: Vps5/Vps17 assemble the yeast tubulation retromer subcomplex
+  description: In Saccharomyces cerevisiae, Vps5p and Vps17p constitute the tubulation
+    retromer subcomplex that is part of the larger retromer complex.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph represents yeast tubulation subcomplex membership without
+    modeling the molecular interface between Vps5p and Vps17p.
+  nodes:
+  - node_id: vps5_retromer_subunit
+    label: Vps5 retromer subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps5_retromer_subunit
+  - node_id: vps17_retromer_subunit
+    label: Vps17 retromer subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps17_retromer_subunit
+  - node_id: tubulation_retromer
+    label: retromer, tubulation complex
+    node_type: STRUCTURE
+    grounding: GO:0030905
+  - node_id: retromer_complex
+    label: retromer complex
+    node_type: STRUCTURE
+    grounding: GO:0030904
+  edges:
+  - subject: vps5_retromer_subunit
+    predicate: is part of
+    object: tubulation_retromer
+    description: Vps5 is represented in the yeast tubulation retromer subcomplex.
+    evidence:
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 placed Vps5p in a Vps5p/Vps17p membrane-coat
+        subcomplex.
+  - subject: vps17_retromer_subunit
+    predicate: is part of
+    object: tubulation_retromer
+    description: Vps17 is represented in the yeast tubulation retromer subcomplex.
+    evidence:
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 placed Vps17p in a Vps5p/Vps17p membrane-coat
+        subcomplex.
+  - subject: tubulation_retromer
+    predicate: is part of
+    object: retromer_complex
+    description: The Vps5/Vps17 tubulation subcomplex is part of yeast retromer.
+    evidence:
+    - reference: GO:0030905
+      notes: GO:0030905 denotes the tubulation retromer subcomplex.
+    - reference: DOI:10.1083/jcb.142.3.665
+      notes: Seaman, McCaffery and Emr 1998 described yeast retromer as assembling
+        from Vps35p/Vps29p/Vps26p and Vps5p/Vps17p subcomplexes.
+discussions:
+- discussion_id: resolve_tubulation_retromer_family_groundings
+  prompt: Resolve exact source-neutral InterPro or Pfam groundings for tubulation
+    retromer Vps5 and Vps17 subunit classes spanning yeast and metazoan sorting nexins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vps5_retromer_subunit
+  - components#vps17_retromer_subunit
+  rationale: This record preserves the named Saccharomyces cerevisiae Vps5p and Vps17p
+    subunits and the metazoan SNX1-or-SNX2/SNX5-or-SNX6 variation in the GO definition
+    without asserting exact family groundings until those family identifiers are reviewed
+    exactly.
+  evidence:
+  - reference: GO:0030905
+  - reference: DOI:10.1083/jcb.142.3.665
+  posed_by: codex
+  posed_date: '2026-09-23'
