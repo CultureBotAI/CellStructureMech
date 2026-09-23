@@ -3960,6 +3960,15 @@
   "definition": "A bacterial type VI secretion system subassembly in which TssB/VipA- and TssC/VipB-family proteins polymerize into a metastable sheath around the Hcp tube and contract to drive Hcp/VgrG/PAAR spike ejection."
  },
  {
+  "identifier": "cellstructuremech:type_vi_secretion_system_hcp_tube",
+  "label": "type VI secretion system Hcp tube",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/type_vi_secretion_system_hcp_tube.html",
+  "definition": "A bacterial type VI secretion system tail-tube subassembly in which Hcp-family proteins stack into hexameric rings that form the inner tube expelled by contractile-sheath firing."
+ },
+ {
   "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
   "label": "type VI secretion system membrane complex",
   "category": "SECRETION_SYSTEM",
