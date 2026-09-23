@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/archaeal_type_flagellum_filament.yaml
+  slug: archaeal_type_flagellum_filament
+session:
+  id: 2026-09-23T050528Z-codex-821c8c
+  timestamp: '2026-09-23T05:05:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1356
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1357
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1355
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Addressed archaellum filament PR review issues
+  details: 'Resolved PR #1355 review issues #1356 and #1357 by connecting the prearchaellin
+    precursor node to the mature archaellin subunit node in the assembly graph and by retyping
+    the graph-scoped ArlI/ArlJ motor-core node as STRUCTURE rather than GENE_OR_PROTEIN.'

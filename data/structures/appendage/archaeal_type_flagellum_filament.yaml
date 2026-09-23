@@ -21,6 +21,13 @@ curation_history:
     villosus example, swimming-motility function, DOI evidence, a nonmechanistic maturation-to-rotation
     graph, and grounding and motor-boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-23T05:05:13Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Addressed PR review issues #1356 and #1357 by connecting prearchaellin
+    processing to the mature archaellin node and retyping the ArlI/ArlJ motor-core
+    graph node from GENE_OR_PROTEIN to STRUCTURE.'
+  llm_assisted: true
 synonyms:
 - synonym_text: archaellum filament
   synonym_type: EXACT_SYNONYM
@@ -117,7 +124,7 @@ causal_graphs:
     grounding: cellstructuremech:archaeal_type_flagellum_filament
   - node_id: arli_arlj_motor
     label: ArlI/ArlJ motor core
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
   - node_id: motility
     label: archaeal-type flagellum-dependent cell motility
     node_type: BIOLOGICAL_PROCESS
@@ -132,6 +139,15 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2015.00023
       notes: Albers and Jarrell 2015 review class-3 signal-peptide processing of prearchaellins
         by PibD or FlaK-like enzymes.
+  - subject: prearchaellin
+    predicate: is processed into
+    object: archaellins
+    description: Cleaved and modified prearchaellins become mature archaellin subunits
+      that can assemble into the extracellular filament.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2015.00023
+      notes: Albers and Jarrell 2015 review prearchaellin processing and N-glycosylation
+        before archaellin filament assembly.
   - subject: archaellins
     predicate: polymerize into
     object: archaellum_filament
