@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/radial_spoke.yaml
+  slug: radial_spoke
+session:
+  id: 2026-09-23T093704Z-claude-code-f34960
+  timestamp: '2026-09-23T09:37:04Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - data/structures/cytoskeleton/radial_spoke.yaml
+  - data/structures/cytoskeleton/axoneme.yaml
+  summary: Added a GO-grounded radial spoke record
+  details: Created data/structures/cytoskeleton/radial_spoke.yaml for GO:0001534 with Chlamydomonas
+    literature evidence, GO-grounded head, neck and stalk components, a cilium-movement regulation
+    graph, and an axoneme has_part link replacing the previous label-only radial-spoke component.
