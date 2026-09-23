@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+  slug: contractile_vacuole_complex
+session:
+  id: 2026-09-23T214704Z-claude-code-8f0ba5
+  timestamp: '2026-09-23T21:47:04Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO contractile vacuole complex record
+  details: Created a GO:0062159 contractile vacuole complex record with GO synonymy, membraneless-organelle
+    parentage, contractile vacuole and spongiome has_part links, Dictyostelium and Paramecium
+    examples, an osmoregulatory water-expulsion function, DOI/PMID/GO evidence, a nonmechanistic
+    contractile-vacuole-complex graph, and a child-boundary decision.

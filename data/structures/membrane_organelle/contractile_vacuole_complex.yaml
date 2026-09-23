@@ -1,0 +1,162 @@
+identifier: GO:0062159
+label: contractile vacuole complex
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: OTHER
+definition: A non-membrane-bounded organelle of eukaryotic cells, especially Protozoa,
+  that fills with water from the cytoplasm and then discharges this externally. One
+  of its functions is osmoregulatory.
+definition_source: GO:0062159
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T21:46:07Z'
+  curator: claude-code
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T21:46:49Z'
+  curator: claude-code
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, membraneless-organelle parentage, contractile vacuole
+    and spongiome has_part links, Dictyostelium and Paramecium examples, an osmoregulatory
+    function, DOI/PMID/GO evidence, a nonmechanistic contractile-vacuole-complex graph,
+    and a child-boundary decision.
+  llm_assisted: true
+synonyms:
+- synonym_text: CVC
+  synonym_type: RELATED_SYNONYM
+  source: GO:0062159
+parent_structures:
+- GO:0043232
+has_part:
+- GO:0000331
+- GO:0062160
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: RARE
+  note: Contractile vacuole complexes occur patchily in unicellular eukaryotes, especially
+    freshwater and soil protists, rather than throughout Eukaryota.
+  reference: DOI:10.1016/j.ejop.2024.126078
+canonical_examples:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  note: Amoebozoan model in which the contractile-vacuole complex was biochemically
+    resolved into bladder and spongiome membranes.
+  reference: PMID:8294479
+- taxon_id: NCBITaxon:44030
+  taxon_label: Paramecium multimicronucleatum
+  note: Ciliate model in which the decorated-spongiome radial arms of the contractile-vacuole
+    complex were connected to fluid segregation.
+  reference: DOI:10.1242/jeb.205.20.3261
+functions:
+- function_id: osmoregulatory_water_expulsion
+  label: osmoregulatory water expulsion
+  description: The contractile vacuole complex collects excess cytosolic water and
+    periodically discharges it outside the cell to maintain osmotic balance.
+  evidence:
+  - reference: GO:0062159
+    notes: GO:0062159 defines the contractile vacuole complex as an organelle that
+      fills with cytoplasmic water, discharges it externally, and functions in osmoregulation.
+  - reference: DOI:10.1016/B978-0-12-407695-2.00002-0
+    notes: Docampo et al. 2013 review acidocalcisome and contractile-vacuole osmoregulation
+      in protists.
+evidence:
+- reference: GO:0062159
+  notes: Gene Ontology cellular-component term for the contractile vacuole complex.
+- reference: GO:0000331
+  notes: Gene Ontology cellular-component term for the contractile vacuole.
+- reference: GO:0062160
+  notes: Gene Ontology cellular-component term for spongiome.
+- reference: GO:0043232
+  notes: Gene Ontology cellular-component parent term for intracellular membraneless
+    organelles.
+- reference: PMID:8294479
+  notes: Nolta and Steck 1994, Isolation and initial characterization of the bipartite
+    contractile vacuole complex from Dictyostelium discoideum, Journal of Biological
+    Chemistry.
+- reference: DOI:10.1242/jeb.205.20.3261
+  notes: Gronlien et al. 2002, Relationship between the membrane potential of the
+    contractile vacuole complex and its osmoregulatory activity in Paramecium multimicronucleatum,
+    Journal of Experimental Biology.
+- reference: DOI:10.1016/B978-0-12-407695-2.00002-0
+  notes: Docampo et al. 2013 review acidocalcisome and contractile-vacuole osmoregulation
+    in protists.
+- reference: DOI:10.1016/j.ejop.2024.126078
+  notes: 'More et al. 2024, Contractile vacuoles: a rapidly expanding (and occasionally
+    diminishing?) understanding, European Journal of Protistology.'
+causal_graphs:
+- graph_id: contractile_vacuole_complex_water_expulsion
+  title: Contractile vacuole complex coordinates water collection and discharge
+  description: The contractile vacuole complex includes a central contractile vacuole
+    and a tubular or vesicular spongiome subnetwork that together drive osmoregulatory
+    water expulsion.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the organelle-level contractile vacuole and spongiome
+    organization without duplicating the V-ATPase, aquaporin, or radial-arm electrophysiology
+    details curated on the child records.
+  nodes:
+  - node_id: contractile_vacuole_complex
+    label: contractile vacuole complex
+    node_type: STRUCTURE
+    grounding: GO:0062159
+  - node_id: contractile_vacuole
+    label: contractile vacuole
+    node_type: STRUCTURE
+    grounding: GO:0000331
+  - node_id: spongiome
+    label: spongiome
+    node_type: STRUCTURE
+    grounding: GO:0062160
+  - node_id: water_expulsion
+    label: osmoregulatory water expulsion
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: contractile_vacuole
+    predicate: is part of
+    object: contractile_vacuole_complex
+    description: The central contractile vacuole is the filling and discharging vacuole
+      within the contractile vacuole complex.
+    evidence:
+    - reference: GO:0000331
+      notes: GO:0000331 is part_of GO:0062159 contractile vacuole complex.
+  - subject: spongiome
+    predicate: is part of
+    object: contractile_vacuole_complex
+    description: The spongiome is a tubular or vesicular membrane subnetwork of the
+      contractile vacuole complex.
+    evidence:
+    - reference: GO:0062160
+      notes: GO:0062160 defines the spongiome as part of the contractile vacuole complex.
+    - reference: PMID:8294479
+      notes: Nolta and Steck 1994 purified a bipartite Dictyostelium contractile-vacuole
+        complex with separable bladder and spongiome membranes.
+  - subject: contractile_vacuole_complex
+    predicate: carries out
+    object: water_expulsion
+    description: The contractile vacuole complex fills with excess water and discharges
+      externally during osmoregulation.
+    evidence:
+    - reference: GO:0062159
+      notes: GO:0062159 defines the contractile vacuole complex by water filling,
+        external discharge, and osmoregulatory function.
+    - reference: DOI:10.1016/B978-0-12-407695-2.00002-0
+      notes: Docampo et al. 2013 review contractile vacuole complex osmoregulation
+        in protists.
+discussions:
+- discussion_id: contractile_vacuole_complex_child_boundaries
+  prompt: Keep V-ATPase and aquaporin molecular components on the contractile vacuole
+    and spongiome child records instead of duplicating them on this complex parent.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#contractile_vacuole_complex_water_expulsion
+  rationale: This record represents the contractile vacuole complex as a parent organelle
+    with a central vacuole and spongiome; pump, channel, and V-ATPase localization
+    details are more precisely curated on those substructure records.
+  evidence:
+  - reference: GO:0000331
+  - reference: GO:0062160
+  - reference: PMID:8294479
+  posed_by: claude-code
+  posed_date: '2026-09-23'
