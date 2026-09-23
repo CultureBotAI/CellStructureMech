@@ -1,0 +1,172 @@
+identifier: GO:0005938
+label: cell cortex
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: The region of a cell that lies just beneath the plasma membrane and often,
+  but not always, contains a network of actin filaments and associated proteins.
+definition_source: GO:0005938
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T23:24:31Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T23:25:15Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasm parentage, Saccharomyces scope, GO/DOI evidence, a nonmechanistic
+    cortex-substructure topology graph, and a resolved boundary discussion for actin-patch
+    and septin-ring components.
+  llm_assisted: true
+- timestamp: '2026-09-23T23:26:19Z'
+  curator: codex
+  action: NARROWED_TAXONOMIC_SCOPE
+  changes: Narrowed the Saccharomyces taxonomic row to the cortical actin-patch claim
+    directly supported by the Kaksonen et al. endocytosis evidence.
+  llm_assisted: true
+parent_structures:
+- GO:0005737
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a cell cortex beneath the plasma membrane where actin cortical
+    patches assemble during endocytosis.
+  reference: DOI:10.1016/S0092-8674(03)00883-3
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which cortical endocytic actin patches assemble at
+    the cell cortex during receptor internalization.
+  reference: DOI:10.1016/S0092-8674(03)00883-3
+functions:
+- function_id: cortical_cytoskeletal_organization
+  label: cortical cytoskeletal organization
+  description: The budding-yeast cell cortex localizes actin cortical patches during
+    endocytic internalization and septin rings at the division plane.
+  evidence:
+  - reference: GO:0005938
+    notes: GO:0005938 defines the cell cortex as the sub-plasma-membrane region that
+      can contain actin filaments and associated proteins.
+  - reference: DOI:10.1016/S0092-8674(03)00883-3
+    notes: Kaksonen, Sun and Drubin 2003 followed yeast endocytic internalization
+      at cortical actin-patch sites.
+  - reference: DOI:10.3389/fcell.2016.00123
+    notes: Glomb and Gronemeyer 2016 review septin-ring organization and cytokinesis
+      functions at the budding-yeast cortex.
+evidence:
+- reference: GO:0005938
+  notes: Gene Ontology cellular-component term for the cell cortex.
+- reference: GO:0005737
+  notes: Gene Ontology cellular-component parent term for the cytoplasm.
+- reference: GO:0005886
+  notes: Gene Ontology cellular-component term for the plasma membrane that bounds
+    the cell cortex.
+- reference: GO:0030479
+  notes: Gene Ontology cellular-component term for actin cortical patches, which are
+    part of the cell cortex.
+- reference: GO:0005940
+  notes: Gene Ontology cellular-component term for the septin ring, another cortex-localized
+    cytoskeletal structure.
+- reference: DOI:10.1016/S0092-8674(03)00883-3
+  notes: Kaksonen, Sun and Drubin 2003, A Pathway for Association of Receptors, Adaptors,
+    and Actin during Endocytic Internalization, Cell.
+- reference: DOI:10.1083/jcb.200404159
+  notes: Young, Cooper and Bridgman 2004, Yeast actin patches are networks of branched
+    actin filaments, Journal of Cell Biology.
+- reference: DOI:10.3389/fcell.2016.00123
+  notes: Glomb and Gronemeyer 2016, Septin Organization and Functions in Budding Yeast,
+    Frontiers in Cell and Developmental Biology.
+causal_graphs:
+- graph_id: yeast_cell_cortex_substructure_topology
+  title: Yeast cell cortex hosts actin patches and septin rings
+  description: The Saccharomyces cell cortex is the sub-plasma-membrane region where
+    actin cortical patches assemble for endocytosis and the septin ring organizes
+    at the division plane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records regional placement of cortex-localized structures
+    without duplicating the assembly mechanisms or protein constituents curated on
+    the actin cortical patch and septin ring records.
+  nodes:
+  - node_id: plasma_membrane
+    label: plasma membrane
+    node_type: STRUCTURE
+    grounding: GO:0005886
+  - node_id: cell_cortex
+    label: cell cortex
+    node_type: STRUCTURE
+    grounding: GO:0005938
+  - node_id: actin_cortical_patch
+    label: actin cortical patch
+    node_type: STRUCTURE
+    grounding: GO:0030479
+  - node_id: septin_ring
+    label: septin ring
+    node_type: STRUCTURE
+    grounding: GO:0005940
+  - node_id: endocytic_internalization
+    label: endocytic internalization
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: cell_cortex
+    predicate: lies beneath
+    object: plasma_membrane
+    description: The cell cortex is the region immediately beneath the plasma membrane.
+    evidence:
+    - reference: GO:0005938
+      notes: GO:0005938 defines the cell cortex as the region just beneath the plasma
+        membrane.
+  - subject: actin_cortical_patch
+    predicate: assembles at
+    object: cell_cortex
+    description: Yeast actin cortical patches assemble at cortical endocytic sites
+      during receptor internalization.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(03)00883-3
+      notes: Kaksonen, Sun and Drubin 2003 followed actin recruitment at cortical
+        endocytic sites.
+    - reference: DOI:10.1083/jcb.200404159
+      notes: Young, Cooper and Bridgman 2004 examined branched actin filaments in
+        yeast actin patches.
+  - subject: septin_ring
+    predicate: assembles at
+    object: cell_cortex
+    description: Budding-yeast septins organize a cortical ring at the division plane.
+    evidence:
+    - reference: GO:0005940
+      notes: GO:0005940 defines the septin ring as a ring-shaped structure at the
+        cell cortex in the division plane.
+    - reference: DOI:10.3389/fcell.2016.00123
+      notes: Glomb and Gronemeyer 2016 review cortical septin-ring organization in
+        budding yeast.
+  - subject: actin_cortical_patch
+    predicate: supports
+    object: endocytic_internalization
+    description: Actin cortical patches move inward from the cortex as endocytic internalization
+      proceeds.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(03)00883-3
+      notes: Kaksonen, Sun and Drubin 2003 followed receptors, adaptors and actin
+        during yeast endocytic internalization.
+discussions:
+- discussion_id: cell_cortex_substructure_boundary
+  prompt: Should actin, Arp2/3, or septin proteins be duplicated as direct cell cortex
+    components?
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#yeast_cell_cortex_substructure_topology
+  rationale: GO:0005938 denotes the sub-plasma-membrane region. Actin cortical patches
+    and septin rings are cortex-localized substructures that already have their own
+    structure records, so actin, Arp2/3, and septin constituents remain on those lower-level
+    records instead of being duplicated as molecular components of the parent region.
+  evidence:
+  - reference: GO:0005938
+    notes: GO:0005938 identifies the cell-cortex region.
+  - reference: GO:0030479
+    notes: GO:0030479 identifies the actin cortical patch as a cortex-localized structure.
+  - reference: GO:0005940
+    notes: GO:0005940 identifies the septin ring at the cell cortex.
