@@ -1,0 +1,169 @@
+identifier: GO:0005905
+label: clathrin-coated pit
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: A part of the endomembrane system in the form of an invagination of a
+  membrane upon which a clathrin coat forms, and that can be converted by vesicle
+  budding into a clathrin-coated vesicle. Coated pits form on the plasma membrane,
+  where they are involved in receptor-mediated selective transport of many proteins
+  and other macromolecules across the cell membrane, in the trans-Golgi network, and
+  on some endosomes.
+definition_source: GO:0005905
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T22:34:01Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T22:35:22Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, membrane parentage, coated-pit clathrin-coat parthood,
+    Saccharomyces scope, a clathrin-dependent endocytosis function, GO/DOI evidence,
+    a nonmechanistic pit-budding graph, and a resolved coat-component boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-09-23T22:44:25Z'
+  curator: codex
+  action: ADDRESSED_LOCAL_QC
+  changes: Changed the clathrin/AP-2 boundary discussion from a bare components anchor
+    to the coated-pit has_part field and the pit-budding graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: coated pit
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005905
+parent_structures:
+- GO:0016020
+has_part:
+- GO:0030132
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms cortical, clathrin-containing endocytic sites whose coat,
+    membrane-invagination and vesicle-scission modules have been resolved by live-cell
+    imaging.
+  reference: DOI:10.1016/j.cell.2005.09.024
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Model fungus for live-cell analysis of clathrin/adaptor recruitment to cortical
+    actin-based endocytic sites.
+  reference: DOI:10.1016/j.devcel.2005.04.014
+functions:
+- function_id: clathrin_dependent_endocytosis
+  label: clathrin-dependent endocytosis
+  grounding: GO:0072583
+  description: Clathrin-coated pits internalize material by forming a coated membrane
+    invagination that pinches off as a clathrin-coated endocytic vesicle.
+  evidence:
+  - reference: GO:0072583
+    notes: GO:0072583 defines clathrin-dependent endocytosis as uptake through clathrin-coated
+      pits that pinch off into clathrin-coated endocytic vesicles.
+  - reference: DOI:10.1016/j.cell.2005.09.024
+    notes: Kaksonen, Toret and Drubin 2005 analyzed coat formation, membrane invagination
+      and vesicle scission during clathrin/actin-mediated endocytosis in budding yeast.
+evidence:
+- reference: GO:0005905
+  notes: Gene Ontology cellular-component term for the clathrin-coated pit.
+- reference: GO:0016020
+  notes: Gene Ontology cellular-component parent term for the membrane class that
+    contains the clathrin-coated pit.
+- reference: GO:0030132
+  notes: Gene Ontology cellular-component term for the clathrin coat found on a clathrin-coated
+    pit.
+- reference: GO:0072583
+  notes: Gene Ontology biological-process term for clathrin-dependent endocytosis.
+- reference: DOI:10.1016/j.devcel.2005.04.014
+  notes: Newpher, Smith, Lemmon and Lemmon 2005, In Vivo Dynamics of Clathrin and
+    Its Adaptor-Dependent Recruitment to the Actin-Based Endocytic Machinery in Yeast,
+    Developmental Cell.
+- reference: DOI:10.1016/j.cell.2005.09.024
+  notes: Kaksonen, Toret and Drubin 2005, A Modular Design for the Clathrin- and Actin-Mediated
+    Endocytosis Machinery, Cell.
+causal_graphs:
+- graph_id: yeast_clathrin_coated_pit_budding
+  title: Clathrin-coated pits bud into endocytic vesicles
+  description: A clathrin coat forms on an invaginating clathrin-coated pit; during
+    clathrin-dependent endocytosis, the pit can bud into a clathrin-coated endocytic
+    vesicle.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-grounded pit, coat and endocytic-vesicle topology
+    without enumerating the yeast cargo cohort, actin nucleation order, or the scission
+    machinery.
+  nodes:
+  - node_id: clathrin_coat_of_coated_pit
+    label: clathrin coat of coated pit
+    node_type: STRUCTURE
+    grounding: GO:0030132
+  - node_id: clathrin_coated_pit
+    label: clathrin-coated pit
+    node_type: STRUCTURE
+    grounding: GO:0005905
+  - node_id: clathrin_coated_endocytic_vesicle
+    label: clathrin-coated endocytic vesicle
+    node_type: STRUCTURE
+    grounding: GO:0045334
+  - node_id: clathrin_dependent_endocytosis
+    label: clathrin-dependent endocytosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0072583
+  edges:
+  - subject: clathrin_coat_of_coated_pit
+    predicate: is part of
+    object: clathrin_coated_pit
+    description: The clathrin coat of a coated pit is the clathrin/AP-2 coat on a
+      clathrin-coated pit.
+    evidence:
+    - reference: GO:0005905
+      notes: GO:0005905 identifies the invaginating pit that carries a clathrin coat.
+    - reference: GO:0030132
+      notes: GO:0030132 identifies the clathrin coat found on coated pits.
+  - subject: clathrin_coated_pit
+    predicate: buds into
+    object: clathrin_coated_endocytic_vesicle
+    description: A clathrin-coated pit is converted by vesicle budding into a clathrin-coated
+      endocytic vesicle.
+    evidence:
+    - reference: GO:0005905
+      notes: GO:0005905 defines a clathrin-coated pit as a membrane invagination that
+        can be converted by vesicle budding into a clathrin-coated vesicle.
+    - reference: GO:0072583
+      notes: GO:0072583 describes clathrin-coated pits pinching off to form clathrin-coated
+        endocytic vesicles.
+  - subject: clathrin_coated_pit
+    predicate: participates in
+    object: clathrin_dependent_endocytosis
+    description: Clathrin-coated pits are the membrane invaginations that internalize
+      material during clathrin-dependent endocytosis.
+    evidence:
+    - reference: GO:0072583
+      notes: GO:0072583 defines clathrin-dependent endocytosis as uptake through clathrin-coated
+        pits.
+    - reference: DOI:10.1016/j.cell.2005.09.024
+      notes: Kaksonen, Toret and Drubin 2005 resolved the coat formation, membrane
+        invagination and vesicle scission modules of budding-yeast clathrin/actin-mediated
+        endocytosis.
+discussions:
+- discussion_id: leave_clathrin_ap2_on_coated_pit_coat
+  prompt: Keep clathrin and AP-2 molecular components on the clathrin coat of coated
+    pit record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - has_part
+  - causal_graphs#yeast_clathrin_coated_pit_budding
+  rationale: GO:0005905 denotes the coated membrane invagination, while GO:0030132
+    denotes the coat substructure that comprises clathrin and AP-2. The whole-pit
+    record therefore links GO:0030132 through has_part and leaves the coat protein
+    constituents on that substructure record.
+  evidence:
+  - reference: GO:0005905
+    notes: GO cellular-component term for the clathrin-coated pit.
+  - reference: GO:0030132
+    notes: GO cellular-component term for the clathrin/AP-2 coat of a coated pit.
+  posed_by: codex
+  posed_date: '2026-09-23'
+  resolved_date: '2026-09-23'
