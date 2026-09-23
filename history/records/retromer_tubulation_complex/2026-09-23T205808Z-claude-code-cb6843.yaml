@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/retromer_tubulation_complex.yaml
+  slug: retromer_tubulation_complex
+session:
+  id: 2026-09-23T205808Z-claude-code-cb6843
+  timestamp: '2026-09-23T20:58:08Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add tubulation retromer complex structure record
+  details: Created a GO:0030905 tubulation retromer complex record with GO membrane-protein-complex
+    parentage, GO retromer-complex parthood, exact GO aliases, Vps5/Vps17 reviewed-label-only
+    yeast components, Saccharomyces cerevisiae taxonomic and canonical rows, GO and DOI evidence,
+    a nonmechanistic tubulation assembly graph, and a TODO for exact SNX/Vps subunit family
+    groundings.

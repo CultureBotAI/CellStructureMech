@@ -3852,6 +3852,15 @@
   "definition": "A conserved hetero-pentameric membrane-associated complex involved in retrograde transport from endosomes to the Golgi apparatus. The budding yeast retromer comprises Vps35p, Vps29p, Vps26p, Vps5p, and Vps17p. The mammalian complex shows slight variation in composition compared to yeast, and comprises SNX1 or SNX2, SNX5 or SNX6, VPS26A or VPS26B, VPS29, and VPS35."
  },
  {
+  "identifier": "GO:0030905",
+  "label": "retromer, tubulation complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/retromer_tubulation_complex.html",
+  "definition": "The dimeric subcomplex of the retromer, believed to be peripherally associated with the membrane. This dimeric complex is responsible for remodeling endosomal membranes to form a tube-structure to which cargo molecules are selected for recycling. The budding yeast complex comprises Vps5p and Vps17p, and may contain multiple copies of a Vps5p/Vps17p dimer. The mammalian complex contains SNX1 or SNX2 dimerized with SNX5 or SNX6."
+ },
+ {
   "identifier": "GO:0001401",
   "label": "SAM complex",
   "category": "OTHER",

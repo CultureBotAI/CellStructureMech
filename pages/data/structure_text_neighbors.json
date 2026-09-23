@@ -11622,14 +11622,14 @@
           "cosine_similarity": 0.76123898
         },
         {
+          "identifier": "GO:0030905",
+          "label": "retromer, tubulation complex",
+          "cosine_similarity": 0.74847138
+        },
+        {
           "identifier": "GO:0030906",
           "label": "retromer, cargo-selective complex",
           "cosine_similarity": 0.74374229
-        },
-        {
-          "identifier": "GO:1990131",
-          "label": "Gtr1-Gtr2 GTPase complex",
-          "cosine_similarity": 0.74102457
         }
       ]
     },
@@ -11684,14 +11684,14 @@
           "cosine_similarity": 0.77544625
         },
         {
+          "identifier": "GO:0030905",
+          "label": "retromer, tubulation complex",
+          "cosine_similarity": 0.76546534
+        },
+        {
           "identifier": "GO:0071986",
           "label": "Ragulator complex",
           "cosine_similarity": 0.76474861
-        },
-        {
-          "identifier": "GO:0033551",
-          "label": "monopolin complex",
-          "cosine_similarity": 0.75979873
         }
       ]
     },
@@ -12268,6 +12268,11 @@
           "cosine_similarity": 0.81766115
         },
         {
+          "identifier": "GO:0030905",
+          "label": "retromer, tubulation complex",
+          "cosine_similarity": 0.79444649
+        },
+        {
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.78422664
@@ -12276,11 +12281,6 @@
           "identifier": "GO:1990070",
           "label": "TRAPPI protein complex",
           "cosine_similarity": 0.78010636
-        },
-        {
-          "identifier": "GO:0030906",
-          "label": "retromer, cargo-selective complex",
-          "cosine_similarity": 0.77016523
         }
       ]
     },
@@ -12557,9 +12557,9 @@
           "cosine_similarity": 0.75979873
         },
         {
-          "identifier": "GO:1990131",
-          "label": "Gtr1-Gtr2 GTPase complex",
-          "cosine_similarity": 0.73470564
+          "identifier": "GO:0030905",
+          "label": "retromer, tubulation complex",
+          "cosine_similarity": 0.74385883
         }
       ]
     },
@@ -13177,9 +13177,9 @@
           "cosine_similarity": 0.7768948
         },
         {
-          "identifier": "GO:0042729",
-          "label": "DASH complex",
-          "cosine_similarity": 0.76474861
+          "identifier": "GO:0030905",
+          "label": "retromer, tubulation complex",
+          "cosine_similarity": 0.77355936
         }
       ]
     },
@@ -13191,6 +13191,11 @@
           "identifier": "GO:0030897",
           "label": "HOPS complex",
           "cosine_similarity": 0.82047206
+        },
+        {
+          "identifier": "GO:0030905",
+          "label": "retromer, tubulation complex",
+          "cosine_similarity": 0.80189927
         },
         {
           "identifier": "GO:0030904",
@@ -13206,11 +13211,6 @@
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.77963066
-        },
-        {
-          "identifier": "GO:0031932",
-          "label": "TORC2 complex",
-          "cosine_similarity": 0.77938334
         }
       ]
     },
@@ -13222,6 +13222,11 @@
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.94798507
+        },
+        {
+          "identifier": "GO:0030905",
+          "label": "retromer, tubulation complex",
+          "cosine_similarity": 0.93538818
         },
         {
           "identifier": "GO:0033565",
@@ -13237,11 +13242,6 @@
           "identifier": "GO:0030897",
           "label": "HOPS complex",
           "cosine_similarity": 0.77016523
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.76520969
         }
       ]
     },
@@ -13249,6 +13249,11 @@
       "identifier": "GO:0030904",
       "label": "retromer complex",
       "neighbors": [
+        {
+          "identifier": "GO:0030905",
+          "label": "retromer, tubulation complex",
+          "cosine_similarity": 0.94855796
+        },
         {
           "identifier": "GO:0030906",
           "label": "retromer, cargo-selective complex",
@@ -13268,11 +13273,37 @@
           "identifier": "GO:0071986",
           "label": "Ragulator complex",
           "cosine_similarity": 0.7768948
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030905",
+      "label": "retromer, tubulation complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030904",
+          "label": "retromer complex",
+          "cosine_similarity": 0.94855796
+        },
+        {
+          "identifier": "GO:0030906",
+          "label": "retromer, cargo-selective complex",
+          "cosine_similarity": 0.93538818
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.80189927
+        },
+        {
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.79444649
         },
         {
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.77438255
+          "cosine_similarity": 0.77474493
         }
       ]
     },
