@@ -39,6 +39,12 @@ curation_history:
   changes: Linked GO:0160112 to its own child record and resolved the remaining inner-sheath
     child-record TODO.
   llm_assisted: true
+- timestamp: '2026-09-23T18:39:04Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1416 issue #1417 by clarifying that the GO:0160112 child
+    split leaves exact B-tubule MIP-family curation open on the child record.'
+  llm_assisted: true
 part_of:
 - GO:0097545
 has_part:
@@ -218,4 +224,6 @@ discussions:
   posed_date: '2026-09-23'
   resolved_date: '2026-09-23'
   resolution_note: GO:0160112 was promoted to its own axonemal B tubule inner sheath
-    record and linked from the B axonemal microtubule parent.
+    record and linked from the B axonemal microtubule parent. Exact B-lumen MIP-family
+    groundings, positions and copy numbers remain open on the child record's resolve_b_tubule_inner_sheath_mips
+    TODO.
