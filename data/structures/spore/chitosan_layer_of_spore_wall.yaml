@@ -19,6 +19,12 @@ curation_history:
     chitosan-layer assembly graph, and boundary discussions for the chitosan polymer
     and Chs3/Cda1/Cda2 enzymes.
   llm_assisted: true
+- timestamp: '2026-09-23T02:32:50Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1344 review issue #1345 by adding direct Saccharomyces literature
+    evidence to the chitosan-to-chitosan-layer formation edge.'
+  llm_assisted: true
 part_of:
 - GO:0005619
 components:
@@ -144,14 +150,17 @@ causal_graphs:
   - subject: chitosan
     predicate: forms
     object: chitosan_layer
-    description: Chitosan is the polysaccharide constituent used to build the Saccharomyces
-      spore-wall chitosan layer.
+    description: Chitosan is the deacetylated chitin polymer material used to build
+      the Saccharomyces spore-wall chitosan layer.
     evidence:
     - reference: GO:0005631
       notes: GO:0005631 identifies the complete chitosan layer as a Saccharomyces
         spore-wall structure.
     - reference: CHEBI:16261
       notes: ChEBI:16261 identifies the chitosan polymer.
+    - reference: DOI:10.1128/MMBR.69.4.565-584.2005
+      notes: Neiman 2005 reviews chitosan deposition as the Saccharomyces ascospore-wall
+        layer between the inner wall and dityrosine layer.
   - subject: chitosan_layer
     predicate: overlies
     object: inner_spore_wall_layer

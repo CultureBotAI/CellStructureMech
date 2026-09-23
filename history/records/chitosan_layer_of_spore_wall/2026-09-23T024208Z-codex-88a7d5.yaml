@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/chitosan_layer_of_spore_wall.yaml
+  slug: chitosan_layer_of_spore_wall
+session:
+  id: 2026-09-23T024208Z-codex-88a7d5
+  timestamp: '2026-09-23T02:42:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1345
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1346
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1344
+events:
+- type: REVIEW
+  outcome: changed
+  summary: 'Addressed PR #1344 chitosan layer review issues'
+  details: 'Resolved PR #1344 review issues #1345 and #1346 by adding direct DOI support to
+    the GO:0005631 chitosan formation edge and rewiring the parent GO:0005619 graph so spatial
+    topology edges target a GO:0005631 layer node rather than the CHEBI:16261 chitosan polymer
+    node.'
