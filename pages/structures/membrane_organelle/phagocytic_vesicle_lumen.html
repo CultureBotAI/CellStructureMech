@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>phagocytic vesicle lumen · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>phagocytic vesicle lumen</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0097013"><code>GO:0097013</code></a> · MEMBRANE_ORGANELLE · SUBCELLULAR_REGION · <span class="status">PROPOSED</span></p>
+<p class="definition">The volume enclosed by a phagocytic vesicle membrane. <small>[<a href="http://purl.obolibrary.org/obo/GO_0097013"><code>GO:0097013</code></a>]</small></p>
+<p><strong>Synonyms:</strong> Phagosome lumen; Phagosomal lumen</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0045335"><code>GO:0045335</code></a> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0342</code> </p>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_44689"><code>NCBITaxon:44689</code></a> Dictyostelium discoideum — <strong>COMMON</strong>: Dictyostelium discoideum phagosomes have lumens that acidify and mature after particle uptake. [<a href="https://pubmed.ncbi.nlm.nih.gov/12388753"><code>PMID:12388753</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_44689"><code>NCBITaxon:44689</code></a> <em>Dictyostelium discoideum</em> — Amoebozoan model in which luminal phagosome maturation was resolved across temporally distinct membrane-trafficking and acidification phases. [<a href="https://pubmed.ncbi.nlm.nih.gov/12388753"><code>PMID:12388753</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>phagosome acidification</strong> <a href="http://purl.obolibrary.org/obo/GO_0090383"><code>GO:0090383</code></a> — The phagocytic vesicle lumen acidifies as newly formed phagosomes mature toward late digestive compartments.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0090383"><code>GO:0090383</code></a> <small>GO:0090383 defines phagosome acidification as the reduction of phagosome pH.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/12388753"><code>PMID:12388753</code></a> <small>Gotthardt et al. 2002 dissected Dictyostelium phagosome maturation into stages with distinct luminal-acidification behavior.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-phagocytic_vesicle_lumen_topology">Phagocytic vesicle lumen topology <small>(FUNCTION)</small></h3>
+<p>The phagocytic vesicle membrane bounds the phagocytic vesicle lumen inside the phagocytic vesicle as newly formed phagosomes acidify during maturation.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>phagocytic vesicle lumen</td><td>is part of</td><td>phagocytic vesicle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097013"><code>GO:0097013</code></a> <small>GO:0097013 identifies the phagocytic vesicle lumen.</small></li><li><code>uniprot.location:SL-0342</code> <small>UniProt SL-0342 places Phagosome lumen under Phagosome.</small></li></ul></td></tr>
+<tr><td>phagocytic vesicle membrane</td><td>bounds</td><td>phagocytic vesicle lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030670"><code>GO:0030670</code></a> <small>GO:0030670 identifies the membrane surrounding a phagocytic vesicle.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0097013"><code>GO:0097013</code></a> <small>GO:0097013 defines the lumen by enclosure within the phagocytic vesicle membrane.</small></li></ul></td></tr>
+<tr><td>phagosome acidification</td><td>acidifies</td><td>phagocytic vesicle lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0090383"><code>GO:0090383</code></a> <small>GO:0090383 defines phagosome acidification as the reduction of phagosome pH.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/12388753"><code>PMID:12388753</code></a> <small>Gotthardt et al. 2002 resolved ordered Dictyostelium phagosome acidification during maturation.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Represent the phagocytic vesicle membrane as the boundary of the lumen rather than as a lumen component. <small>GO:0097013 denotes the lumenal volume enclosed by the phagocytic vesicle membrane, not a stable molecular constituent table. The membrane is therefore modeled as a boundary node in the topology graph.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Keep variable phagocytosed cargo and maturation enzymes out of the generic phagocytic vesicle lumen components. <small>The phagocytic vesicle lumen is the bounded volume inside the vesicle. The ingested particle and soluble hydrolases depend on phagosome cargo and maturation stage, so this generic lumen record does not assert a stable cargo or enzyme component.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097013"><code>GO:0097013</code></a> <small>Gene Ontology cellular-component term for the phagocytic vesicle lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0060205"><code>GO:0060205</code></a> <small>Gene Ontology cellular-component term for the broader cytoplasmic vesicle lumen class.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0045335"><code>GO:0045335</code></a> <small>Gene Ontology cellular-component term for the enclosing phagocytic vesicle.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030670"><code>GO:0030670</code></a> <small>Gene Ontology cellular-component term for the membrane that bounds the phagocytic vesicle lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0090383"><code>GO:0090383</code></a> <small>Gene Ontology biological-process term for phagosome acidification.</small></li><li><code>uniprot.location:SL-0342</code> <small>UniProt Subcellular Location entry SL-0342 identifies Phagosome lumen, lists Phagocytic vesicle lumen and Phagosomal lumen as synonyms, places it under cytoplasmic vesicle lumen, and names Phagosome as the parent.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/12388753"><code>PMID:12388753</code></a> <small>Gotthardt et al. 2002, High-resolution dissection of phagosome maturation reveals distinct membrane trafficking phases, Molecular Biology of the Cell.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-23T19:30:37Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-23T19:32:06Z</code> codex · EXPANDED_RECORD — Added UniProt SL-0342 synonymy and xref, cytoplasmic-vesicle-lumen parentage, phagocytic-vesicle parthood, Dictyostelium scope, GO/UniProt/PMID evidence, a phagosome-acidification function, a nonmechanistic phagocytic-vesicle lumen topology graph, and resolved lumen boundary and cargo-scope discussions.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml"><code>data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
