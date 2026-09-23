@@ -22,16 +22,31 @@ curation_history:
     Vps35/Vps29/Vps26 yeast components, Saccharomyces scope, GO/DOI evidence, a nonmechanistic
     cargo-selective assembly graph, and a component-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-23T20:38:03Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Replaced PR #1424 / issue #1425 synonym curation with the exact GO:0030906
+    aliases and removed an unlisted word-order variant.'
+  llm_assisted: true
 parent_structures:
 - GO:0098796
 part_of:
 - GO:0030904
 synonyms:
 - synonym_text: cargo-selective retromer subcomplex
-  synonym_type: RELATED_SYNONYM
+  synonym_type: EXACT_SYNONYM
   source: GO:0030906
-- synonym_text: retromer cargo-selective complex
-  synonym_type: RELATED_SYNONYM
+- synonym_text: retromer CSC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030906
+- synonym_text: retromer complex, inner shell
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030906
+- synonym_text: retromer, CRC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030906
+- synonym_text: retromer, cargo recognition complex
+  synonym_type: EXACT_SYNONYM
   source: GO:0030906
 components:
 - component_id: vps35_retromer_subunit
