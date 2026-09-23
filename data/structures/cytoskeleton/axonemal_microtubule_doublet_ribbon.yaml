@@ -1,0 +1,183 @@
+identifier: GO:0160115
+label: axonemal microtubule doublet ribbon
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A three-protofilament ribbon formed by A-tubule protofilaments A11, A12
+  and A13 plus associated microtubule inner proteins that separates the A- and B-tubule
+  lumens within an axonemal doublet microtubule.
+definition_source: GO:0160115
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T13:21:56Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T13:22:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added doublet parthood, label-only ribbon tubulin and MIP components, Chlamydomonas
+    scope, A-tubule ribbon stabilization function, GO and DOI evidence, a nonmechanistic
+    ribbon graph, and a ribbon MIP-grounding TODO.
+  llm_assisted: true
+part_of:
+- GO:0097545
+components:
+- component_id: a11_a13_ribbon_tubulins
+  label: A11-A13 ribbon tubulins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Alpha- and beta-tubulin subunits that form protofilaments A11, A12 and A13
+    of the axonemal A-tubule ribbon.
+  evidence:
+  - reference: GO:0160115
+    notes: GO defines the axonemal doublet ribbon as A-tubule protofilaments A11,
+      A12 and A13 plus associated MIPs.
+  - reference: DOI:10.1242/jcs.20.2.405
+    notes: Linck 1976 biochemically isolated detergent-resistant flagellar doublet
+      ribbons with three protofilaments and minor non-tubulin proteins.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the A11-A13 axonemal ribbon tubulin
+    constituent set was verified in this pass.
+- component_id: ribbon_associated_mips
+  label: ribbon-associated microtubule inner proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Microtubule inner proteins associated with the axonemal doublet ribbon and
+    its periodic accessory densities.
+  evidence:
+  - reference: GO:0160115
+    notes: GO includes associated MIPs in the axonemal microtubule doublet ribbon
+      boundary.
+  - reference: DOI:10.1074/jbc.M210751200
+    notes: Ikeda et al. 2003 identified Chlamydomonas Rib72 as a conserved protein
+      associated with the flagellar A-microtubule ribbon compartment.
+  - reference: DOI:10.1002/bies.201700209
+    notes: Ichikawa and Bui 2018 reviewed MIP densities, including MIPs associated
+      with the A-tubule ribbon region of axonemal doublets.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the complete set of ribbon-associated
+    MIP families was verified in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar A-microtubules contain a ribbon compartment marked
+    by the conserved Rib72 protein.
+  reference: DOI:10.1074/jbc.M210751200
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model used to identify Rib72 as a conserved axonemal A-microtubule
+    ribbon-compartment protein.
+  reference: DOI:10.1074/jbc.M210751200
+functions:
+- function_id: a_tubule_ribbon_stabilization
+  label: A-tubule ribbon stabilization
+  description: The A11-A13 protofilament ribbon and its associated MIPs form a stable
+    axonemal doublet substructure that separates the A- and B-tubule lumens.
+  evidence:
+  - reference: GO:0160115
+    notes: GO defines the ribbon by A11-A13 protofilaments and associated MIPs that
+      stabilize those protofilaments within the axonemal doublet.
+  - reference: DOI:10.1242/jcs.20.2.405
+    notes: Linck 1976 found that flagellar doublet extraction leaves stable ribbons
+      of three protofilaments with 16-nm axial repeats.
+evidence:
+- reference: GO:0160115
+  notes: Gene Ontology cellular-component term for the axonemal doublet ribbon.
+- reference: GO:0097545
+  notes: GO places the axonemal microtubule doublet ribbon within the axonemal doublet
+    microtubule.
+- reference: DOI:10.1242/jcs.20.2.405
+  notes: 'Linck 1976, ''Flagellar doublet microtubules: fractionation of minor components
+    and alpha-tubulin from specific regions of the A-tubule'', Journal of Cell Science.'
+- reference: DOI:10.1074/jbc.M210751200
+  notes: Ikeda et al. 2003, 'Rib72, a conserved protein associated with the ribbon
+    compartment of flagellar A-microtubules and potentially involved in the linkage
+    between outer doublet microtubules', Journal of Biological Chemistry.
+- reference: DOI:10.1002/bies.201700209
+  notes: 'Ichikawa and Bui 2018, ''Microtubule Inner Proteins: A Meshwork of Luminal
+    Proteins Stabilizing the Doublet Microtubule'', BioEssays.'
+causal_graphs:
+- graph_id: axonemal_doublet_ribbon_stabilization
+  title: Tubulin and MIPs form the A-tubule ribbon
+  description: The A11-A13 tubulin protofilaments and ribbon-associated MIPs form
+    a stable ribbon along the A-tubule side of the axonemal doublet.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the coarse A11-A13 ribbon architecture and leaves
+    exact Rib72 and other ribbon-associated MIP family groundings and copy numbers
+    for later curation.
+  nodes:
+  - node_id: a11_a13_ribbon_tubulins
+    label: A11-A13 ribbon tubulins
+    node_type: GENE_OR_PROTEIN
+    component_ref: a11_a13_ribbon_tubulins
+  - node_id: ribbon_associated_mips
+    label: ribbon-associated microtubule inner proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: ribbon_associated_mips
+  - node_id: axonemal_microtubule_doublet_ribbon
+    label: axonemal microtubule doublet ribbon
+    node_type: STRUCTURE
+    grounding: GO:0160115
+  - node_id: axonemal_doublet_microtubule
+    label: axonemal doublet microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097545
+  edges:
+  - subject: a11_a13_ribbon_tubulins
+    predicate: form
+    object: axonemal_microtubule_doublet_ribbon
+    description: A-tubule protofilaments A11, A12 and A13 form the tubulin backbone
+      of the doublet ribbon.
+    evidence:
+    - reference: GO:0160115
+      notes: GO identifies A11, A12 and A13 as the ribbon protofilaments.
+  - subject: ribbon_associated_mips
+    predicate: bind
+    object: axonemal_microtubule_doublet_ribbon
+    description: Rib72 and other ribbon-associated MIPs bind the axonemal A-tubule
+      ribbon region.
+    evidence:
+    - reference: DOI:10.1074/jbc.M210751200
+      notes: Ikeda et al. 2003 localized Chlamydomonas Rib72 to the flagellar A-microtubule
+        ribbon compartment.
+    - reference: DOI:10.1002/bies.201700209
+      notes: Ichikawa and Bui 2018 reviewed MIPs that decorate the stable axonemal
+        doublet ribbon.
+  - subject: axonemal_microtubule_doublet_ribbon
+    predicate: is part of
+    object: axonemal_doublet_microtubule
+    description: The A11-A13 ribbon is a named substructure of the axonemal doublet
+      microtubule.
+    evidence:
+    - reference: GO:0160115
+      notes: GO places the axonemal microtubule doublet ribbon within the axonemal
+        doublet microtubule.
+discussions:
+- discussion_id: resolve_ribbon_mip_groundings
+  prompt: Resolve exact Rib72 and other axonemal doublet ribbon MIP family groundings,
+    memberships and copy numbers.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ribbon_associated_mips
+  - causal_graphs#axonemal_doublet_ribbon_stabilization
+  rationale: Linck 1976 biochemically identified stable three-protofilament ribbons
+    and Ikeda et al. 2003 localized Rib72 to the Chlamydomonas ribbon compartment,
+    but this pass did not verify source-neutral CURIEs for ribbon-associated MIP families.
+  evidence:
+  - reference: DOI:10.1242/jcs.20.2.405
+    notes: Linck 1976 isolated stable flagellar doublet ribbons.
+  - reference: DOI:10.1074/jbc.M210751200
+    notes: Ikeda et al. 2003 identified Chlamydomonas Rib72 as a ribbon-compartment
+      protein.
+  - reference: DOI:10.1002/bies.201700209
+    notes: Ichikawa and Bui 2018 reviewed ribbon-associated MIPs in the broader axonemal
+      doublet MIP meshwork.
+  posed_by: codex
+  posed_date: '2026-09-23'
