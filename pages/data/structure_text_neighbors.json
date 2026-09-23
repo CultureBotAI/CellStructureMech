@@ -6507,14 +6507,14 @@
           "cosine_similarity": 0.83774434
         },
         {
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.82620063
+        },
+        {
           "identifier": "GO:0012507",
           "label": "ER to Golgi transport vesicle membrane",
           "cosine_similarity": 0.81854331
-        },
-        {
-          "identifier": "GO:0030134",
-          "label": "COPII-coated ER to Golgi transport vesicle",
-          "cosine_similarity": 0.81838812
         }
       ]
     },
@@ -10852,9 +10852,9 @@
           "cosine_similarity": 0.67657728
         },
         {
-          "identifier": "GO:0042720",
-          "label": "mitochondrial inner membrane peptidase complex",
-          "cosine_similarity": 0.67036009
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.67539666
         }
       ]
     },
@@ -11782,9 +11782,9 @@
           "cosine_similarity": 0.73942406
         },
         {
-          "identifier": "GO:1990070",
-          "label": "TRAPPI protein complex",
-          "cosine_similarity": 0.7327362
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.73920094
         }
       ]
     },
@@ -11860,6 +11860,11 @@
           "cosine_similarity": 0.92921726
         },
         {
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.91641414
+        },
+        {
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.8933562
@@ -11873,11 +11878,37 @@
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.81654269
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031205",
+      "label": "endoplasmic reticulum Sec complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0043529",
+          "label": "GET complex",
+          "cosine_similarity": 0.91860143
         },
         {
-          "identifier": "GO:0001401",
-          "label": "SAM complex",
-          "cosine_similarity": 0.81295242
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.91641414
+        },
+        {
+          "identifier": "GO:0031207",
+          "label": "Sec62/Sec63 complex",
+          "cosine_similarity": 0.90189439
+        },
+        {
+          "identifier": "GO:0005784",
+          "label": "Sec61 translocon complex",
+          "cosine_similarity": 0.87830229
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.87567906
         }
       ]
     },
@@ -11901,14 +11932,14 @@
           "cosine_similarity": 0.88510123
         },
         {
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.87567906
+        },
+        {
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.87495416
-        },
-        {
-          "identifier": "GO:0061617",
-          "label": "MICOS complex",
-          "cosine_similarity": 0.85741765
         }
       ]
     },
@@ -11937,9 +11968,9 @@
           "cosine_similarity": 0.80328179
         },
         {
-          "identifier": "GO:0030906",
-          "label": "retromer, cargo-selective complex",
-          "cosine_similarity": 0.78403119
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.80088008
         }
       ]
     },
@@ -11999,9 +12030,9 @@
           "cosine_similarity": 0.75315942
         },
         {
-          "identifier": "GO:0072546",
-          "label": "EMC complex",
-          "cosine_similarity": 0.73450191
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.7357579
         }
       ]
     },
@@ -12030,9 +12061,9 @@
           "cosine_similarity": 0.76710456
         },
         {
-          "identifier": "GO:0030904",
-          "label": "retromer complex",
-          "cosine_similarity": 0.73949893
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.76280933
         }
       ]
     },
@@ -12051,6 +12082,11 @@
           "cosine_similarity": 0.82566428
         },
         {
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.78729253
+        },
+        {
           "identifier": "GO:0034044",
           "label": "exomer complex",
           "cosine_similarity": 0.72738926
@@ -12059,11 +12095,6 @@
           "identifier": "cellstructuremech:secyeg_translocon_complex",
           "label": "SecYEG translocon complex",
           "cosine_similarity": 0.72024485
-        },
-        {
-          "identifier": "GO:0000815",
-          "label": "ESCRT III complex",
-          "cosine_similarity": 0.70625827
         }
       ]
     },
@@ -12075,6 +12106,11 @@
           "identifier": "GO:0031518",
           "label": "CBF3 complex",
           "cosine_similarity": 0.7919121
+        },
+        {
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.78700432
         },
         {
           "identifier": "GO:0033565",
@@ -12090,11 +12126,6 @@
           "identifier": "GO:1990070",
           "label": "TRAPPI protein complex",
           "cosine_similarity": 0.76915128
-        },
-        {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.76447621
         }
       ]
     },
@@ -12123,9 +12154,9 @@
           "cosine_similarity": 0.76690089
         },
         {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.76159218
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.76446408
         }
       ]
     },
@@ -12201,6 +12232,11 @@
           "cosine_similarity": 0.92921726
         },
         {
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.91860143
+        },
+        {
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.89880808
@@ -12214,11 +12250,6 @@
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.81313529
-        },
-        {
-          "identifier": "GO:0042720",
-          "label": "mitochondrial inner membrane peptidase complex",
-          "cosine_similarity": 0.79257622
         }
       ]
     },
@@ -13301,9 +13332,9 @@
           "cosine_similarity": 0.78200944
         },
         {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.77963066
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.78069783
         }
       ]
     },
@@ -13394,9 +13425,9 @@
           "cosine_similarity": 0.79444649
         },
         {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.77474493
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.78332542
         }
       ]
     },
@@ -13441,6 +13472,11 @@
           "cosine_similarity": 0.94281995
         },
         {
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.87830229
+        },
+        {
           "identifier": "cellstructuremech:secyeg_translocon_complex",
           "label": "SecYEG translocon complex",
           "cosine_similarity": 0.83747342
@@ -13454,11 +13490,6 @@
           "identifier": "GO:0071261",
           "label": "Ssh1 translocon complex",
           "cosine_similarity": 0.80728805
-        },
-        {
-          "identifier": "GO:0072546",
-          "label": "EMC complex",
-          "cosine_similarity": 0.77594785
         }
       ]
     },
@@ -13470,6 +13501,11 @@
           "identifier": "GO:0005784",
           "label": "Sec61 translocon complex",
           "cosine_similarity": 0.94281995
+        },
+        {
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.90189439
         },
         {
           "identifier": "GO:0000145",
@@ -13485,11 +13521,6 @@
           "identifier": "cellstructuremech:secyeg_translocon_complex",
           "label": "SecYEG translocon complex",
           "cosine_similarity": 0.77722667
-        },
-        {
-          "identifier": "GO:0071261",
-          "label": "Ssh1 translocon complex",
-          "cosine_similarity": 0.76089186
         }
       ]
     },
@@ -13518,9 +13549,9 @@
           "cosine_similarity": 0.82102723
         },
         {
-          "identifier": "GO:0031931",
-          "label": "TORC1 complex",
-          "cosine_similarity": 0.78918465
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.79810308
         }
       ]
     },
@@ -13565,6 +13596,11 @@
           "cosine_similarity": 0.80728805
         },
         {
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.7649004
+        },
+        {
           "identifier": "GO:0031207",
           "label": "Sec62/Sec63 complex",
           "cosine_similarity": 0.76089186
@@ -13578,11 +13614,6 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.72533206
-        },
-        {
-          "identifier": "GO:0072546",
-          "label": "EMC complex",
-          "cosine_similarity": 0.72485961
         }
       ]
     },

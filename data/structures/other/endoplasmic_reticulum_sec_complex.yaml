@@ -1,0 +1,183 @@
+identifier: GO:0031205
+label: endoplasmic reticulum Sec complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An endoplasmic reticulum membrane-associated complex involved in the translocation
+  of proteins that are targeted to the ER. In yeast, this complex consists of two
+  subcomplexes, namely, the Sec61 complex and the Sec62/Sec63 complex.
+definition_source: GO:0031205
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T23:03:15Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T23:04:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ER-protein-complex parentage, ER-membrane parthood, Sec61 and Sec62/Sec63
+    has-part subcomplexes, Saccharomyces scope, GO/DOI evidence, a nonmechanistic
+    ER Sec topology graph, and a resolved subcomplex-boundary discussion.
+  llm_assisted: true
+parent_structures:
+- GO:0140534
+part_of:
+- GO:0005789
+has_part:
+- GO:0005784
+- GO:0031207
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast contains an ER-membrane Sec complex assembled from the Sec61
+    heterotrimer and the Sec62/Sec63 subcomplex for posttranslational protein import.
+  reference: DOI:10.1016/0092-8674(95)90077-2
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model in which purified Sec proteins and Kar2p reconstituted posttranslational
+    ER protein transport.
+  reference: DOI:10.1016/0092-8674(95)90077-2
+functions:
+- function_id: posttranslational_er_protein_import
+  label: posttranslational ER protein import
+  description: The ER Sec complex brings the Sec61 protein-conducting channel and
+    the Sec62/Sec63 subcomplex together at the ER membrane to support Kar2/BiP-coupled
+    posttranslational import of substrate proteins into the endoplasmic reticulum.
+  evidence:
+  - reference: GO:0031205
+    notes: GO:0031205 defines the ER Sec complex as an ER-membrane complex involved
+      in protein translocation into the ER.
+  - reference: DOI:10.1016/0092-8674(95)90077-2
+    notes: Panzner et al. 1995 reconstituted yeast posttranslational protein transport
+      with a purified Sec-protein complex and Kar2p.
+  - reference: DOI:10.1091/mbc.e03-06-0390
+    notes: Plath et al. 2004 photo-crosslinked a substrate precursor to Sec62p and
+      Sec61p in the yeast Sec complex during posttranslational ER import.
+  - reference: DOI:10.1038/s41586-018-0856-x
+    notes: Wu, Cabanos and Rapoport 2019 determined the structure of the yeast ER
+      post-translational protein translocation machinery.
+evidence:
+- reference: GO:0031205
+  notes: Gene Ontology cellular-component term for the endoplasmic reticulum Sec complex.
+- reference: GO:0140534
+  notes: Gene Ontology parent term for endoplasmic-reticulum protein-containing complexes.
+- reference: GO:0005789
+  notes: Gene Ontology cellular-component term for the endoplasmic reticulum membrane.
+- reference: GO:0005784
+  notes: Gene Ontology cellular-component term for the Sec61 translocon subcomplex
+    of the yeast ER Sec complex.
+- reference: GO:0031207
+  notes: Gene Ontology cellular-component term for the Sec62/Sec63 subcomplex of the
+    yeast ER Sec complex.
+- reference: DOI:10.1016/0092-8674(95)90077-2
+  notes: Panzner et al. 1995, Posttranslational protein transport in yeast reconstituted
+    with a purified complex of Sec proteins and Kar2p, Cell.
+- reference: DOI:10.1091/mbc.e03-06-0390
+  notes: Plath et al. 2004, Interactions between Sec complex and prepro-alpha-factor
+    during posttranslational protein transport into the endoplasmic reticulum, Molecular
+    Biology of the Cell.
+- reference: DOI:10.1038/s41586-018-0856-x
+  notes: Wu, Cabanos and Rapoport 2019, Structure of the post-translational protein
+    translocation machinery of the ER membrane, Nature.
+causal_graphs:
+- graph_id: yeast_er_sec_complex_posttranslational_import
+  title: ER Sec complex links Sec61 with Sec62/Sec63
+  description: The yeast ER Sec complex contains the Sec61 translocon and Sec62/Sec63
+    subcomplexes at the endoplasmic-reticulum membrane and supports posttranslational
+    ER protein import.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records subcomplex topology and ER-membrane placement of
+    the parent complex without duplicating individual Sec subunit edges already modeled
+    on the Sec61 and Sec62/Sec63 records.
+  nodes:
+  - node_id: sec61_translocon_complex
+    label: Sec61 translocon complex
+    node_type: STRUCTURE
+    grounding: GO:0005784
+  - node_id: sec62_sec63_complex
+    label: Sec62/Sec63 complex
+    node_type: STRUCTURE
+    grounding: GO:0031207
+  - node_id: er_sec_complex
+    label: endoplasmic reticulum Sec complex
+    node_type: STRUCTURE
+    grounding: GO:0031205
+  - node_id: er_membrane
+    label: endoplasmic reticulum membrane
+    node_type: STRUCTURE
+    grounding: GO:0005789
+  - node_id: posttranslational_er_protein_import
+    label: posttranslational ER protein import
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: sec61_translocon_complex
+    predicate: is subcomplex of
+    object: er_sec_complex
+    description: The Sec61 protein-conducting channel is one of the two subcomplexes
+      in the yeast ER Sec complex.
+    evidence:
+    - reference: GO:0031205
+      notes: GO:0031205 defines the yeast ER Sec complex as containing the Sec61 and
+        Sec62/Sec63 subcomplexes.
+  - subject: sec62_sec63_complex
+    predicate: is subcomplex of
+    object: er_sec_complex
+    description: The Sec62/Sec63 tetramer is one of the two subcomplexes in the yeast
+      ER Sec complex.
+    evidence:
+    - reference: GO:0031205
+      notes: GO:0031205 defines the yeast ER Sec complex as containing the Sec61 and
+        Sec62/Sec63 subcomplexes.
+    - reference: DOI:10.1038/s41586-018-0856-x
+      notes: Wu, Cabanos and Rapoport 2019 structurally resolved the Sec62/Sec63 subcomplex
+        with Sec61 in the yeast post-translational ER translocation machinery.
+  - subject: er_sec_complex
+    predicate: is embedded in
+    object: er_membrane
+    description: The ER Sec complex is an endoplasmic-reticulum membrane assembly.
+    evidence:
+    - reference: GO:0031205
+      notes: GO:0031205 defines the complex as endoplasmic-reticulum membrane associated.
+    - reference: GO:0005789
+      notes: GO:0005789 identifies the endoplasmic reticulum membrane.
+  - subject: er_sec_complex
+    predicate: supports
+    object: posttranslational_er_protein_import
+    description: The Sec61 and Sec62/Sec63 subcomplexes cooperate with Kar2/BiP during
+      posttranslational substrate import into the ER.
+    evidence:
+    - reference: DOI:10.1016/0092-8674(95)90077-2
+      notes: Panzner et al. 1995 reconstituted posttranslational transport using purified
+        Sec proteins and Kar2p.
+    - reference: DOI:10.1091/mbc.e03-06-0390
+      notes: Plath et al. 2004 detected interactions between prepro-alpha-factor and
+        Sec complex components during posttranslational transport.
+discussions:
+- discussion_id: er_sec_subcomplex_boundary
+  prompt: Should individual Sec61p, Sbh1p, Sss1p, Sec62p, Sec63p, Sec71p, or Sec72p
+    subunits be duplicated as direct ER Sec complex components?
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - has_part#GO:0005784
+  - has_part#GO:0031207
+  - causal_graphs#yeast_er_sec_complex_posttranslational_import
+  rationale: GO:0031205 is the parent ER Sec complex made from Sec61 and Sec62/Sec63
+    subcomplexes in yeast. The individual Sec61p/Sbh1p/Sss1p and Sec62p/Sec63p/Sec71p/Sec72p
+    proteins belong on those lower-level subcomplex records, so this parent record
+    uses has_part links to avoid duplicating the same components at two hierarchy
+    levels.
+  evidence:
+  - reference: GO:0031205
+    notes: GO:0031205 defines the yeast ER Sec complex by its Sec61 and Sec62/Sec63
+      subcomplexes.
+  - reference: GO:0005784
+    notes: GO:0005784 defines the Sec61 heterotrimeric channel, whose constituents
+      are curated on the Sec61 translocon complex record.
+  - reference: GO:0031207
+    notes: GO:0031207 defines the Sec62/Sec63 tetramer, whose constituents are curated
+      on the Sec62/Sec63 complex record.
