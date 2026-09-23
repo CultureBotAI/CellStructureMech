@@ -19,6 +19,13 @@ curation_history:
     a Bacillus subtilis example, GO/UniProt/literature evidence, a nonmechanistic
     mature-spore topology graph, and an inner-membrane boundary discussion.
   llm_assisted: true
+- timestamp: '2026-09-23T00:05:28Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1336 by correcting the UniProt SL-0363 scope note to leave broad-synonym
+    provenance on GO:0140549, and resolved #1337 by narrowing the causal graph to
+    inner-membrane topology.'
+  llm_assisted: true
 synonyms:
 - synonym_text: spore membrane
   synonym_type: BROAD_SYNONYM
@@ -52,22 +59,18 @@ evidence:
   notes: UniProt Subcellular Location SL-0363 identifies a generic Spore membrane
     location, records spore inner membrane as an alternate name, and does not map
     the location to GO.
-- reference: DOI:10.1128/9781555819323.ch10
-  notes: Setlow 2016, Spore Resistance Properties, in The Bacterial Spore.
 - reference: DOI:10.1038/nrmicro2921
   notes: 'McKenney, Driks and Eichenberger 2012, The Bacillus subtilis endospore:
     assembly and functions of the multilayered coat, Nature Reviews Microbiology.'
 causal_graphs:
 - graph_id: spore_inner_membrane_core_boundary
-  title: Spore inner membrane bounds the endospore core
-  description: The spore inner membrane encloses the dormant endospore core. The endospore
-    cortex lies outside that inner membrane and helps maintain low water content in
-    the core.
+  title: Spore inner membrane separates the endospore core
+  description: The spore inner membrane surrounds the endospore core and separates
+    that dormant interior from the mature-spore exterior.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records mature-spore layer topology and dehydration context
-    rather than the developmental membrane remodeling that produces the final inner
-    and outer spore membranes.
+  scope_notes: The graph records the GO-supported inner-membrane boundary and leaves
+    cortex-driven core dehydration to the dedicated endospore cortex record.
   nodes:
   - node_id: spore_inner_membrane
     label: spore inner membrane
@@ -77,40 +80,27 @@ causal_graphs:
     label: endospore core
     node_type: STRUCTURE
     grounding: GO:0070477
-  - node_id: endospore_cortex
-    label: endospore cortex
-    node_type: STRUCTURE
-    grounding: GO:0043595
-  - node_id: low_core_water_content
-    label: low core water content
-    node_type: STATE
+  - node_id: mature_spore_exterior
+    label: mature-spore exterior
+    node_type: ENVIRONMENTAL_FACTOR
   edges:
   - subject: spore_inner_membrane
     predicate: surrounds
     object: endospore_core
-    description: The spore inner membrane surrounds the endospore core and separates
-      it from the mature-spore exterior.
+    description: The spore inner membrane surrounds the endospore core.
     evidence:
     - reference: GO:0140549
       notes: GO:0140549 defines the spore inner membrane by its position around the
         endospore core.
-  - subject: endospore_cortex
-    predicate: lies outside
-    object: spore_inner_membrane
-    description: The endospore cortex is a layer outside the spore inner membrane
-      in the mature Bacillus endospore.
+  - subject: spore_inner_membrane
+    predicate: separates endospore core from
+    object: mature_spore_exterior
+    description: The spore inner membrane separates the endospore core from the exterior
+      of the mature spore.
     evidence:
-    - reference: DOI:10.1038/nrmicro2921
-      notes: McKenney, Driks and Eichenberger 2012 review the Bacillus subtilis endospore
-        as a layered core, cortex, and coat structure.
-  - subject: endospore_cortex
-    predicate: maintains
-    object: low_core_water_content
-    description: Modified cortex peptidoglycan helps maintain low water content in
-      the dormant spore core enclosed by the inner membrane.
-    evidence:
-    - reference: DOI:10.1128/9781555819323.ch10
-      notes: Setlow 2016 reviews the cortex contribution to spore core dehydration.
+    - reference: GO:0140549
+      notes: GO:0140549 defines the spore inner membrane as the membrane that separates
+        the endospore core from its external environment.
 discussions:
 - discussion_id: inner_membrane_scope
   prompt: Keep the spore inner membrane separate from the generic UniProt Spore membrane
@@ -123,8 +113,8 @@ discussions:
     GO:0005628 denotes a fungal ascospore-type prospore membrane, and UniProt SL-0363
     is a broader spore membrane location without a GO mapping.
   resolution_note: Curated the exact GO:0140549 spore inner membrane record, used
-    GO:0016020 as its membrane parent, and retained SL-0363 only as broad synonym
-    and record-level evidence provenance.
+    GO:0016020 as its membrane parent, retained the GO broad synonym, and kept SL-0363
+    only as record-level evidence provenance.
   evidence:
   - reference: GO:0140549
     notes: GO:0140549 is the bacterial spore inner membrane term.

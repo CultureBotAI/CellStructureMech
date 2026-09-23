@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/spore_inner_membrane.yaml
+  slug: spore_inner_membrane
+session:
+  id: 2026-09-23T000545Z-codex-464254
+  timestamp: '2026-09-23T00:05:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1336
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1337
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1335
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address spore inner membrane PR review issues
+  details: 'Resolved PR #1335 review issues #1336 and #1337 by correcting the SL-0363 scope
+    note so the broad spore membrane synonym remains sourced only to GO:0140549, retaining
+    UniProt SL-0363 only as record-level evidence provenance for a generic Spore membrane
+    location, and narrowing the causal graph to inner-membrane topology supported by GO:0140549.'
