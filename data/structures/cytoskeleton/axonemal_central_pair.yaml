@@ -31,6 +31,13 @@ curation_history:
   changes: Narrowed the axonemal central-pair TODO and graph scope note after splitting
     GO:1990719 into a C1 axonemal microtubule child record.
   llm_assisted: true
+- timestamp: '2026-09-23T16:53:43Z'
+  curator: codex
+  action: ADD_C2_AXONEMAL_MICROTUBULE_CHILD
+  changes: Removed the axonemal central-pair C2 child TODO and narrowed the parent
+    graph scope note after splitting GO:1990720 into a C2 axonemal microtubule child
+    record.
+  llm_assisted: true
 synonyms:
 - synonym_text: axonemal microtubule central pair
   synonym_type: EXACT_SYNONYM
@@ -100,8 +107,8 @@ causal_graphs:
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: This graph records coarse C1/C2 microtubule, bridge and projection
-    parthood and leaves the exact C2 child record, named projection subcomplex boundaries,
-    microtubule-specific components and copy-number geometry for later curation.
+    parthood and leaves named projection subcomplex boundaries, microtubule-specific
+    components and copy-number geometry to child and projection records.
   nodes:
   - node_id: c1_axonemal_microtubule
     label: C1 axonemal microtubule
@@ -178,18 +185,3 @@ causal_graphs:
     evidence:
     - reference: GO:0097540
       notes: GO places the axonemal central pair within the axonemal central apparatus.
-discussions:
-- discussion_id: resolve_c2_microtubule_child
-  prompt: Add an exact C2 axonemal microtubule child record and resolve microtubule-specific
-    component boundaries.
-  kind: CURATION_TODO
-  status: OPEN
-  attaches_to:
-  - causal_graphs#chlamydomonas_central_pair_architecture
-  rationale: GO exactly identifies the C2 axonemal microtubule, but this pass leaves
-    the second asymmetric microtubule of GO:0097540 for a later record.
-  evidence:
-  - reference: GO:1990720
-    notes: GO exactly identifies the C2 axonemal microtubule.
-  posed_by: codex
-  posed_date: '2026-09-23'
