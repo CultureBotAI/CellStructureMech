@@ -11622,14 +11622,14 @@
           "cosine_similarity": 0.76123898
         },
         {
+          "identifier": "GO:0030906",
+          "label": "retromer, cargo-selective complex",
+          "cosine_similarity": 0.74440243
+        },
+        {
           "identifier": "GO:1990131",
           "label": "Gtr1-Gtr2 GTPase complex",
           "cosine_similarity": 0.74102457
-        },
-        {
-          "identifier": "GO:0030904",
-          "label": "retromer complex",
-          "cosine_similarity": 0.73659422
         }
       ]
     },
@@ -11875,9 +11875,9 @@
           "cosine_similarity": 0.80328179
         },
         {
-          "identifier": "GO:0043529",
-          "label": "GET complex",
-          "cosine_similarity": 0.78135389
+          "identifier": "GO:0030906",
+          "label": "retromer, cargo-selective complex",
+          "cosine_similarity": 0.78551033
         }
       ]
     },
@@ -11901,14 +11901,14 @@
           "cosine_similarity": 0.91208671
         },
         {
+          "identifier": "GO:0030906",
+          "label": "retromer, cargo-selective complex",
+          "cosine_similarity": 0.78174331
+        },
+        {
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.7618837
-        },
-        {
-          "identifier": "GO:0030904",
-          "label": "retromer complex",
-          "cosine_similarity": 0.74988961
         }
       ]
     },
@@ -11932,14 +11932,14 @@
           "cosine_similarity": 0.90483792
         },
         {
+          "identifier": "GO:0030906",
+          "label": "retromer, cargo-selective complex",
+          "cosine_similarity": 0.75539179
+        },
+        {
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.73450191
-        },
-        {
-          "identifier": "GO:0030904",
-          "label": "retromer complex",
-          "cosine_similarity": 0.73405567
         }
       ]
     },
@@ -12278,9 +12278,9 @@
           "cosine_similarity": 0.78010636
         },
         {
-          "identifier": "GO:0031932",
-          "label": "TORC2 complex",
-          "cosine_similarity": 0.76432984
+          "identifier": "GO:0030906",
+          "label": "retromer, cargo-selective complex",
+          "cosine_similarity": 0.7714785
         }
       ]
     },
@@ -13215,9 +13215,45 @@
       ]
     },
     {
+      "identifier": "GO:0030906",
+      "label": "retromer, cargo-selective complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030904",
+          "label": "retromer complex",
+          "cosine_similarity": 0.94778625
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.78551033
+        },
+        {
+          "identifier": "GO:0000813",
+          "label": "ESCRT I complex",
+          "cosine_similarity": 0.78174331
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.77267002
+        },
+        {
+          "identifier": "GO:0030897",
+          "label": "HOPS complex",
+          "cosine_similarity": 0.7714785
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030904",
       "label": "retromer complex",
       "neighbors": [
+        {
+          "identifier": "GO:0030906",
+          "label": "retromer, cargo-selective complex",
+          "cosine_similarity": 0.94778625
+        },
         {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
@@ -13237,11 +13273,6 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.77438255
-        },
-        {
-          "identifier": "GO:1990131",
-          "label": "Gtr1-Gtr2 GTPase complex",
-          "cosine_similarity": 0.75451285
         }
       ]
     },

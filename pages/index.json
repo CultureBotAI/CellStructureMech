@@ -3834,6 +3834,15 @@
   "definition": "A multisubunit complex that in Saccharomyces is composed of three subunits, Rav1p, Rav2p and Skp1p. Acts transiently to catalyze assembly of cytoplasmic V1 with membrane embedded V0 to form the V-ATPase holoenzyme."
  },
  {
+  "identifier": "GO:0030906",
+  "label": "retromer, cargo-selective complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/retromer_cargo_selective_complex.html",
+  "definition": "The trimeric subcomplex of the retromer, believed to be closely associated with the membrane. This trimeric complex is responsible for recognizing and binding to cargo molecules. The complex comprises three Vps proteins in both yeast and mammalian cells: Vps35p, Vps29p, and Vps26p in yeast, and VPS35, VPS29 and VPS26A or VPS26B in mammals."
+ },
+ {
   "identifier": "GO:0030904",
   "label": "retromer complex",
   "category": "OTHER",
