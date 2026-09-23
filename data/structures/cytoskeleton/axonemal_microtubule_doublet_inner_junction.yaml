@@ -1,0 +1,192 @@
+identifier: GO:0160113
+label: axonemal microtubule doublet inner junction
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A structure that joins the B10 protofilament of the B tubule to the A1
+  protofilament of the A tubule within an axonemal microtubule doublet.
+definition_source: GO:0160113
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T12:48:43Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T12:51:03Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added doublet parthood, a reviewed-label-only inner-junction protein component,
+    Chlamydomonas scope, A/B-junction stability function, GO and DOI evidence, a nonmechanistic
+    inner-junction bridge graph, and an inner-junction protein-grounding TODO.
+  llm_assisted: true
+part_of:
+- GO:0097545
+components:
+- component_id: inner_junction_proteins
+  label: inner-junction proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Protein families that build the inner-junction bridge between the A- and B-tubules
+    of an axonemal doublet.
+  evidence:
+  - reference: GO:0160113
+    notes: GO defines the axonemal microtubule doublet inner junction by its position
+      between the B-tubule B10 protofilament and the A-tubule A1 protofilament.
+  - reference: DOI:10.1091/mbc.E13-08-0464
+    notes: Yanagisawa et al. 2014 identified Chlamydomonas FAP20 as an inner-junction
+      component by mutant electron microscopy and cryo-ET localization.
+  - reference: DOI:10.1091/mbc.E19-01-0063
+    notes: Dymek et al. 2019 used Chlamydomonas pacrg and fap20 mutants to show that
+      PACRG and FAP20 form the inner-junction bridge along all nine ciliary doublets.
+  - reference: DOI:10.7554/eLife.52760
+    notes: Khalifa et al. 2020 combined Chlamydomonas and Tetrahymena structural and
+      proteomic evidence to assign FAP276, FAP106 and FAP126 to inner-junction or
+      inner-junction-associated positions.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the complete inner-junction protein-family
+    set was verified in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar doublets contain an inner-junction bridge whose FAP20
+    and PACRG constituents were localized by mutant and cryo-electron tomography studies.
+  reference: DOI:10.1091/mbc.E19-01-0063
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model in which FAP20, PACRG and additional inner-junction-associated
+    proteins have been localized within axonemal doublet microtubules.
+  reference: DOI:10.7554/eLife.52760
+functions:
+- function_id: a_b_tubule_junction_stability
+  label: A/B-tubule junction stability
+  description: The inner-junction protein bridge connects the B-tubule B10 protofilament
+    to the A-tubule A1 protofilament and helps stabilize the axonemal doublet for
+    ciliary and flagellar motility.
+  evidence:
+  - reference: GO:0160113
+    notes: GO defines the inner junction as the structure that joins the B10 protofilament
+      to A1 within an axonemal doublet.
+  - reference: DOI:10.1091/mbc.E13-08-0464
+    notes: Yanagisawa et al. 2014 reported that Chlamydomonas fap20 axonemes lack
+      the inner junction and are liable to disintegrate during beating.
+  - reference: DOI:10.1091/mbc.E19-01-0063
+    notes: Dymek et al. 2019 found that loss of PACRG and FAP20 removes the inner-junction
+      bridge and reduces dynein-driven microtubule sliding.
+evidence:
+- reference: GO:0160113
+  notes: Gene Ontology cellular-component term for the axonemal microtubule doublet
+    inner junction.
+- reference: GO:0097545
+  notes: GO places the axonemal microtubule doublet inner junction within the axonemal
+    doublet microtubule.
+- reference: DOI:10.1091/mbc.E13-08-0464
+  notes: Yanagisawa et al. 2014, 'FAP20 is an inner junction protein of doublet microtubules
+    essential for both the planar asymmetrical waveform and stability of flagella
+    in Chlamydomonas', Molecular Biology of the Cell.
+- reference: DOI:10.1091/mbc.E19-01-0063
+  notes: Dymek et al. 2019, 'PACRG and FAP20 form the inner junction of axonemal doublet
+    microtubules and regulate ciliary motility', Molecular Biology of the Cell.
+- reference: DOI:10.7554/eLife.52760
+  notes: Khalifa et al. 2020, 'The inner junction complex of the cilia is an interaction
+    hub that involves tubulin post-translational modifications', eLife.
+causal_graphs:
+- graph_id: axonemal_inner_junction_bridge
+  title: Inner-junction proteins bridge A- and B-tubules
+  description: In Chlamydomonas flagella, inner-junction proteins form the bridge
+    that links B10 to A1 within each axonemal doublet and helps stabilize the doublet
+    during motility.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the coarse inner-junction bridge and leaves exact
+    FAP20, PACRG, tektin, FAP106, FAP126 and FAP276 family groundings and copy numbers
+    for later curation.
+  nodes:
+  - node_id: inner_junction_proteins
+    label: inner-junction proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: inner_junction_proteins
+  - node_id: axonemal_microtubule_doublet_inner_junction
+    label: axonemal microtubule doublet inner junction
+    node_type: STRUCTURE
+    grounding: GO:0160113
+  - node_id: a_axonemal_microtubule
+    label: A axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097649
+  - node_id: b_axonemal_microtubule
+    label: B axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097650
+  - node_id: axonemal_doublet_microtubule
+    label: axonemal doublet microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097545
+  edges:
+  - subject: inner_junction_proteins
+    predicate: form
+    object: axonemal_microtubule_doublet_inner_junction
+    description: FAP20, PACRG and other inner-junction proteins form the bridge between
+      the A- and B-tubules.
+    evidence:
+    - reference: DOI:10.1091/mbc.E19-01-0063
+      notes: Dymek et al. 2019 localized PACRG and FAP20 to the inner-junction bridge
+        of Chlamydomonas axonemal doublets.
+    - reference: DOI:10.7554/eLife.52760
+      notes: Khalifa et al. 2020 extended the inner-junction map with FAP276, FAP106
+        and FAP126 assignments.
+  - subject: axonemal_microtubule_doublet_inner_junction
+    predicate: contacts
+    object: a_axonemal_microtubule
+    description: The inner junction contacts the A-tubule A1 protofilament at the
+      A/B inner-junction site.
+    evidence:
+    - reference: GO:0160113
+      notes: GO defines the inner junction as joining the B10 protofilament to the
+        A1 protofilament.
+  - subject: axonemal_microtubule_doublet_inner_junction
+    predicate: contacts
+    object: b_axonemal_microtubule
+    description: The inner junction contacts the B-tubule B10 protofilament at the
+      A/B inner-junction site.
+    evidence:
+    - reference: GO:0160113
+      notes: GO defines the inner junction as joining the B10 protofilament to the
+        A1 protofilament.
+  - subject: axonemal_microtubule_doublet_inner_junction
+    predicate: stabilizes
+    object: axonemal_doublet_microtubule
+    description: The inner-junction bridge reinforces the axonemal doublet where the
+      incomplete B-tubule meets the complete A-tubule.
+    evidence:
+    - reference: DOI:10.1091/mbc.E13-08-0464
+      notes: Yanagisawa et al. 2014 found that fap20 mutant axonemes lack the inner
+        junction and are structurally unstable during beating.
+    - reference: DOI:10.1091/mbc.E19-01-0063
+      notes: Dymek et al. 2019 showed that Chlamydomonas pacrg/fap20 defects remove
+        the inner-junction bridge and perturb ciliary motility.
+discussions:
+- discussion_id: resolve_inner_junction_protein_groundings
+  prompt: Resolve exact FAP20, PACRG, tektin and other inner-junction protein-family
+    groundings, memberships and copy numbers.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#inner_junction_proteins
+  - causal_graphs#axonemal_inner_junction_bridge
+  rationale: Primary Chlamydomonas and Tetrahymena studies identify specific inner-junction
+    and inner-junction-associated proteins, but this pass did not verify source-neutral
+    family CURIEs for those constituents.
+  evidence:
+  - reference: DOI:10.1091/mbc.E13-08-0464
+    notes: Yanagisawa et al. 2014 identified FAP20 as an inner-junction protein.
+  - reference: DOI:10.1091/mbc.E19-01-0063
+    notes: Dymek et al. 2019 identified PACRG and FAP20 as constituents of the inner-junction
+      bridge.
+  - reference: DOI:10.7554/eLife.52760
+    notes: Khalifa et al. 2020 assigned FAP276, FAP106 and FAP126 to inner-junction
+      or inner-junction-adjacent densities.
+  posed_by: codex
+  posed_date: '2026-09-23'
