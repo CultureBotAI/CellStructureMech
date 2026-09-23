@@ -20,6 +20,19 @@ curation_history:
     function, a nonmechanistic layer topology graph, DOI/GO evidence, and layer/component
     grounding TODOs.
   llm_assisted: true
+- timestamp: '2026-09-23T01:10:09Z'
+  curator: codex
+  action: UPDATED_PARENT_RELATION
+  changes: Added GO:1990916 to ascospore wall has_part after creating a standalone
+    Isp3 layer record and narrowed the open layer-splitting TODO to the remaining
+    Saccharomyces spore-wall layers.
+  llm_assisted: true
+- timestamp: '2026-09-23T01:20:29Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1340 review issue #1341 by adding GO:1990916 record-level
+    evidence to support the new ascospore wall has_part link to the Isp3 layer.'
+  llm_assisted: true
 synonyms:
 - synonym_text: fungal-type spore wall
   synonym_type: BROAD_SYNONYM
@@ -30,6 +43,7 @@ has_part:
 - GO:0005632
 - GO:0005631
 - GO:0005630
+- GO:1990916
 components:
 - component_id: inner_wall_polysaccharides
   label: ascospore inner-wall mannan and beta-glucan layers
@@ -124,6 +138,9 @@ evidence:
 - reference: GO:0005630
   notes: Gene Ontology cellular-component term for the Saccharomyces spore-wall dityrosine
     layer.
+- reference: GO:1990916
+  notes: Gene Ontology cellular-component term for the Schizosaccharomyces pombe Isp3
+    spore-wall layer.
 - reference: DOI:10.1128/MMBR.69.4.565-584.2005
   notes: Neiman 2005, Ascospore Formation in the Yeast Saccharomyces cerevisiae, Microbiology
     and Molecular Biology Reviews.
@@ -234,17 +251,17 @@ causal_graphs:
         through the Drosophila digestive tract.
 discussions:
 - discussion_id: ascospore_layer_record_boundary
-  prompt: Decide when to split Saccharomyces and Schizosaccharomyces ascospore-wall
-    layers into standalone records.
+  prompt: Decide when to split Saccharomyces ascospore-wall layers into standalone
+    records.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - has_part
   - causal_graphs#saccharomyces_ascospore_wall_layers
   rationale: GO has exact cellular-component terms for the Saccharomyces inner, chitosan,
-    and dityrosine spore-wall layers, and for the Schizosaccharomyces Isp3 layer.
-    This pass records the Saccharomyces layers with has_part links but leaves separate
-    layer records for future curation.
+    and dityrosine spore-wall layers. GO:1990916 now has a standalone Schizosaccharomyces
+    Isp3 layer record; the exact Saccharomyces layer terms remain linked here by has_part
+    but await separate focused curation.
   evidence:
   - reference: GO:0005632
     notes: GO:0005632 denotes the inner layer of the Saccharomyces spore wall.
@@ -252,8 +269,6 @@ discussions:
     notes: GO:0005631 denotes the Saccharomyces spore-wall chitosan layer.
   - reference: GO:0005630
     notes: GO:0005630 denotes the Saccharomyces spore-wall dityrosine layer.
-  - reference: GO:1990916
-    notes: GO:1990916 denotes the Schizosaccharomyces pombe Isp3 layer.
 - discussion_id: ascospore_wall_polymer_grounding
   prompt: Resolve exact source-neutral component groundings for the ascospore-wall
     polysaccharides and dityrosine-rich outer material.

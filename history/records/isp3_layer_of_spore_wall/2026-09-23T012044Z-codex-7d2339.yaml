@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/isp3_layer_of_spore_wall.yaml
+  slug: isp3_layer_of_spore_wall
+session:
+  id: 2026-09-23T012044Z-codex-7d2339
+  timestamp: '2026-09-23T01:20:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1341
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1340
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address Isp3 layer PR review
+  details: 'Addressed PR #1340 adversarial review issue #1341 by adding GO:1990916 as record-level
+    evidence on the broad ascospore wall parent after adding GO:1990916 to its has_part list.
+    This mirrors the parent record evidence already present for the other child layer GO terms
+    and keeps the new reciprocal parent link explicitly evidence-backed.'
