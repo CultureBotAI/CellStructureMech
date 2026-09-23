@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/archaeal_type_flagellum_motor.yaml
+  slug: archaeal_type_flagellum_motor
+session:
+  id: 2026-09-23T053720Z-codex-db54a4
+  timestamp: '2026-09-23T05:37:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1359
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1358
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed archaeal-type flagellum motor PR review
+  details: 'Addressed PR #1358 adversarial review issue #1359 by narrowing the Sulfolobus
+    acidocaldarius canonical-example note to the FlaX scaffold formation and FlaX-FlaI interaction
+    claims directly supported by DOI:10.1074/jbc.M112.414383.'
