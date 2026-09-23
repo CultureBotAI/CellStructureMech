@@ -72,6 +72,12 @@ curation_history:
     remaining doublet-substructure TODO to the outer junction and other doublet-specific
     accessories.
   llm_assisted: true
+- timestamp: '2026-09-23T13:56:28Z'
+  curator: codex
+  action: ADD_AXONEMAL_OUTER_JUNCTION_PART
+  changes: Linked GO:0160114 as an axonemal doublet substructure and narrowed the
+    remaining doublet-substructure TODO to other doublet-specific accessories.
+  llm_assisted: true
 synonyms:
 - synonym_text: axonemal outer doublet
   synonym_type: EXACT_SYNONYM
@@ -95,6 +101,7 @@ has_part:
 - GO:0097650
 - GO:0160110
 - GO:0160113
+- GO:0160114
 - GO:0160115
 components:
 - component_id: axonemal_tubulins
@@ -179,8 +186,9 @@ causal_graphs:
     whose tubulin walls and inner sheath stabilize the 9+2 axonemal scaffold.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: This graph records the coarse A/B doublet boundary and leaves the outer
-    junction and doublet-specific accessory patterns for later curation.
+  scope_notes: This graph records the coarse A/B doublet boundary and leaves doublet-specific
+    accessory patterns outside the GO-curated inner sheath, inner junction, outer
+    junction and ribbon for later curation.
   nodes:
   - node_id: axonemal_tubulins
     label: axonemal alpha- and beta-tubulins
@@ -258,18 +266,18 @@ causal_graphs:
         the Chlamydomonas 9+2 axoneme by cryoelectron tomography.
 discussions:
 - discussion_id: resolve_mip_and_doublet_substructure_boundaries
-  prompt: Resolve exact source-neutral groundings for remaining outer-junction and
-    doublet-specific accessory structures, and decide which ones need child records.
+  prompt: Resolve exact source-neutral groundings for remaining doublet-specific accessory
+    structures, and decide which ones need child records.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - causal_graphs#chlamydomonas_doublet_scaffold
-  rationale: GO still identifies the named outer-junction substructure, but this GO:0097545
-    pass leaves that finer child record and other doublet-specific accessory structures
-    for later curation.
+  rationale: GO:0160110 inner sheath, GO:0160113 inner junction, GO:0160114 outer
+    junction and GO:0160115 ribbon now have child records, but this GO:0097545 pass
+    leaves any other doublet-specific accessory structures for later curation.
   evidence:
-  - reference: GO:0160114
-    notes: Gene Ontology cellular-component term for the outer junction that links
-      the B1 protofilament to A10/A11 in an axonemal doublet.
+  - reference: DOI:10.1016/j.cell.2019.09.030
+    notes: Ma et al. 2019 resolved Chlamydomonas microtubule-inner proteins and axonemal
+      proteins associated with several doublet microtubule regions.
   posed_by: codex
   posed_date: '2026-09-23'

@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+  slug: axonemal_microtubule_doublet_outer_junction
+session:
+  id: 2026-09-23T135659Z-codex-3d822a
+  timestamp: '2026-09-23T13:56:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add axonemal microtubule doublet outer junction record
+  details: Created the GO:0160114 axonemal microtubule doublet outer junction record, linked
+    it from GO:0097545 axonemal doublet microtubule with has_part, grounded the B1-A10/A11
+    outer-junction protein set in Chlamydomonas and Tetrahymena cryo-EM literature, and left
+    exact CFAP77, OJ2, OJ3, FAP127, FAP53 and FAP141 family groundings as unresolved follow-up.
+    Duplicate checking used rg --no-ignore --hidden before creation and found no existing
+    data/structures axonemal doublet outer-junction or GO:0160114 record.

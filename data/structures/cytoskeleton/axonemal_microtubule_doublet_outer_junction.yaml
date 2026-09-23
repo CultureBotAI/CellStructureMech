@@ -1,0 +1,173 @@
+identifier: GO:0160114
+label: axonemal microtubule doublet outer junction
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A junctional axonemal doublet substructure that links the B-tubule B1
+  protofilament to A-tubule protofilaments A10 and A11.
+definition_source: GO:0160114
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T13:55:40Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T13:56:28Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added doublet parthood, a reviewed-label-only outer-junction protein component,
+    Tetrahymena scope, B-tubule stabilization function, GO and DOI evidence, a nonmechanistic
+    outer-junction graph, and an outer-junction protein-grounding TODO.
+  llm_assisted: true
+part_of:
+- GO:0097545
+components:
+- component_id: outer_junction_proteins
+  label: outer-junction proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Microtubule inner proteins and wedge-associated proteins that span the B1-A10/A11
+    outer junction and reinforce B-tubule attachment to the A-tubule.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2019.09.030
+    notes: Ma et al. 2019 localized Chlamydomonas FAP127, FAP53 and FAP141 helices
+      across the B1-to-A10/A11 outer-junction cleft.
+  - reference: DOI:10.1038/s41467-023-37868-0
+    notes: Kubo et al. 2023 modeled Tetrahymena CFAP77, OJ2 and OJ3 proteins at the
+      axonemal doublet outer junction.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the mixed conserved and species-specific
+    axonemal outer-junction protein set was verified in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  presence: COMMON
+  note: Tetrahymena ciliary axonemal doublets contain CFAP77, OJ2 and OJ3 at the outer
+    junction in native doublet cryo-EM structures.
+  reference: DOI:10.1038/s41467-023-37868-0
+canonical_examples:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  note: Ciliate model used to identify CFAP77, OJ2 and OJ3 outer-junction proteins
+    and test CFAP77 outer-junction stabilization by knockout.
+  reference: DOI:10.1038/s41467-023-37868-0
+functions:
+- function_id: outer_junction_b_tubule_stabilization
+  label: outer-junction B-tubule stabilization
+  description: Outer-junction proteins span the A10, A11, B1 and B2 protofilaments
+    of the axonemal doublet and help keep the incomplete B-tubule stably attached
+    to the A-tubule.
+  evidence:
+  - reference: GO:0160114
+    notes: GO defines the outer junction as the structure joining B1 to A10 and A11
+      in the axonemal doublet.
+  - reference: DOI:10.1038/s41467-023-37868-0
+    notes: Kubo et al. 2023 used Tetrahymena CFAP77/OJ2 structural modeling and CFAP77
+      knockout tomograms to connect the outer-junction proteins to outer-junction
+      stability.
+evidence:
+- reference: GO:0160114
+  notes: Gene Ontology cellular-component term for the axonemal microtubule doublet
+    outer junction.
+- reference: GO:0097545
+  notes: GO places the axonemal microtubule doublet outer junction within the axonemal
+    doublet microtubule.
+- reference: DOI:10.1016/j.cell.2019.09.030
+  notes: Ma et al. 2019, 'Structure of the Decorated Ciliary Doublet Microtubule',
+    Cell.
+- reference: DOI:10.1038/s41467-023-37868-0
+  notes: Kubo et al. 2023, 'Native doublet microtubules from Tetrahymena thermophila
+    reveal the importance of outer junction proteins', Nature Communications.
+causal_graphs:
+- graph_id: axonemal_outer_junction_stabilization
+  title: Outer-junction proteins link A- and B-tubules
+  description: Outer-junction proteins occupy the B1-A10/A11 boundary of the axonemal
+    doublet and stabilize the outer side of the B-tubule attachment site.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the coarse B1-A10/A11 outer-junction architecture
+    and leaves exact CFAP77, OJ2, OJ3, FAP127, FAP53 and FAP141 family groundings
+    and copy numbers for later curation.
+  nodes:
+  - node_id: outer_junction_proteins
+    label: outer-junction proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: outer_junction_proteins
+  - node_id: axonemal_microtubule_doublet_outer_junction
+    label: axonemal microtubule doublet outer junction
+    node_type: STRUCTURE
+    grounding: GO:0160114
+  - node_id: a_axonemal_microtubule
+    label: A axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097649
+  - node_id: b_axonemal_microtubule
+    label: B axonemal microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097650
+  - node_id: axonemal_doublet_microtubule
+    label: axonemal doublet microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097545
+  edges:
+  - subject: outer_junction_proteins
+    predicate: form
+    object: axonemal_microtubule_doublet_outer_junction
+    description: Chlamydomonas and Tetrahymena outer-junction proteins span the B1-A10/A11
+      junctional region.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2019.09.030
+      notes: Ma et al. 2019 mapped FAP127, FAP53 and FAP141 across the Chlamydomonas
+        outer-junction cleft.
+    - reference: DOI:10.1038/s41467-023-37868-0
+      notes: Kubo et al. 2023 identified CFAP77, OJ2 and OJ3 at the Tetrahymena outer
+        junction.
+  - subject: axonemal_microtubule_doublet_outer_junction
+    predicate: contacts
+    object: a_axonemal_microtubule
+    description: The outer junction contacts A-tubule protofilaments A10 and A11 at
+      the outer A/B-tubule boundary.
+    evidence:
+    - reference: GO:0160114
+      notes: GO defines the outer junction as joining B1 to A10 and A11 within an
+        axonemal doublet.
+  - subject: axonemal_microtubule_doublet_outer_junction
+    predicate: contacts
+    object: b_axonemal_microtubule
+    description: The outer junction contacts the B-tubule B1 protofilament at the
+      outer A/B-tubule boundary.
+    evidence:
+    - reference: GO:0160114
+      notes: GO defines the outer junction as the site where B1 joins the A-tubule
+        protofilaments A10 and A11.
+  - subject: axonemal_microtubule_doublet_outer_junction
+    predicate: stabilizes
+    object: axonemal_doublet_microtubule
+    description: Outer-junction proteins stabilize the outer attachment between the
+      incomplete B-tubule and the A-tubule of the axonemal doublet.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-37868-0
+      notes: Kubo et al. 2023 found that removing Tetrahymena CFAP77 destabilizes
+        the outer junction and reduces ciliary motility.
+discussions:
+- discussion_id: resolve_outer_junction_protein_groundings
+  prompt: Resolve exact CFAP77, OJ2, OJ3, FAP127, FAP53, FAP141 and other axonemal
+    doublet outer-junction protein-family groundings, memberships and copy numbers.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#outer_junction_proteins
+  - causal_graphs#axonemal_outer_junction_stabilization
+  rationale: Primary Chlamydomonas and Tetrahymena doublet structures identify outer-junction
+    protein classes, but this pass did not verify source-neutral family CURIEs for
+    the mixed conserved and species-specific constituents.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2019.09.030
+    notes: Ma et al. 2019 localized FAP127, FAP53 and FAP141 at the Chlamydomonas
+      outer junction.
+  - reference: DOI:10.1038/s41467-023-37868-0
+    notes: Kubo et al. 2023 localized conserved CFAP77 and Tetrahymena-specific OJ2
+      and OJ3 at the outer-junction region.
+  posed_by: codex
+  posed_date: '2026-09-23'
