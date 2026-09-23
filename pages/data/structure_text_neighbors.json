@@ -5577,14 +5577,14 @@
           "cosine_similarity": 0.90767469
         },
         {
+          "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
+          "label": "multivesicular body intraluminal vesicle",
+          "cosine_similarity": 0.90474463
+        },
+        {
           "identifier": "GO:0030666",
           "label": "endocytic vesicle membrane",
           "cosine_similarity": 0.89316015
-        },
-        {
-          "identifier": "GO:0030137",
-          "label": "COPI-coated vesicle",
-          "cosine_similarity": 0.88419691
         }
       ]
     },
@@ -7887,6 +7887,11 @@
       "label": "multivesicular body",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
+          "label": "multivesicular body intraluminal vesicle",
+          "cosine_similarity": 0.93131285
+        },
+        {
           "identifier": "GO:0005768",
           "label": "endosome",
           "cosine_similarity": 0.92141956
@@ -7905,11 +7910,37 @@
           "identifier": "GO:0031904",
           "label": "endosome lumen",
           "cosine_similarity": 0.9049241
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
+      "label": "multivesicular body intraluminal vesicle",
+      "neighbors": [
+        {
+          "identifier": "GO:0032585",
+          "label": "multivesicular body membrane",
+          "cosine_similarity": 0.94115413
         },
         {
-          "identifier": "cellstructuremech:multivesicular_body_lumen",
-          "label": "multivesicular body lumen",
-          "cosine_similarity": 0.90263609
+          "identifier": "GO:0005771",
+          "label": "multivesicular body",
+          "cosine_similarity": 0.93131285
+        },
+        {
+          "identifier": "GO:0031410",
+          "label": "cytoplasmic vesicle",
+          "cosine_similarity": 0.90474463
+        },
+        {
+          "identifier": "GO:0010008",
+          "label": "endosome membrane",
+          "cosine_similarity": 0.903229
+        },
+        {
+          "identifier": "GO:0030139",
+          "label": "endocytic vesicle",
+          "cosine_similarity": 0.90196077
         }
       ]
     },
@@ -7928,6 +7959,11 @@
           "cosine_similarity": 0.87701237
         },
         {
+          "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
+          "label": "multivesicular body intraluminal vesicle",
+          "cosine_similarity": 0.87443319
+        },
+        {
           "identifier": "GO:0032585",
           "label": "multivesicular body membrane",
           "cosine_similarity": 0.8672435
@@ -7936,11 +7972,6 @@
           "identifier": "GO:0031906",
           "label": "late endosome lumen",
           "cosine_similarity": 0.86642608
-        },
-        {
-          "identifier": "GO:0071682",
-          "label": "endocytic vesicle lumen",
-          "cosine_similarity": 0.83929695
         }
       ]
     },
@@ -7948,6 +7979,11 @@
       "identifier": "GO:0032585",
       "label": "multivesicular body membrane",
       "neighbors": [
+        {
+          "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
+          "label": "multivesicular body intraluminal vesicle",
+          "cosine_similarity": 0.94115413
+        },
         {
           "identifier": "GO:0005771",
           "label": "multivesicular body",
@@ -7967,11 +8003,6 @@
           "identifier": "GO:0030659",
           "label": "cytoplasmic vesicle membrane",
           "cosine_similarity": 0.88563224
-        },
-        {
-          "identifier": "GO:0030662",
-          "label": "coated vesicle membrane",
-          "cosine_similarity": 0.88007024
         }
       ]
     },
@@ -8646,14 +8677,14 @@
           "cosine_similarity": 0.79888551
         },
         {
+          "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
+          "label": "multivesicular body intraluminal vesicle",
+          "cosine_similarity": 0.79774388
+        },
+        {
           "identifier": "GO:0012507",
           "label": "ER to Golgi transport vesicle membrane",
           "cosine_similarity": 0.7928637
-        },
-        {
-          "identifier": "cellstructuremech:copii_coated_vesicle_lumen",
-          "label": "COPII-coated vesicle lumen",
-          "cosine_similarity": 0.79284227
         }
       ]
     },
@@ -9612,9 +9643,9 @@
           "cosine_similarity": 0.7436757
         },
         {
-          "identifier": "cellstructuremech:mitosome_inner_membrane",
-          "label": "mitosome inner membrane",
-          "cosine_similarity": 0.73105563
+          "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
+          "label": "multivesicular body intraluminal vesicle",
+          "cosine_similarity": 0.7333913
         }
       ]
     },
@@ -9736,9 +9767,9 @@
           "cosine_similarity": 0.75846388
         },
         {
-          "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
-          "label": "COPI-coated vesicle lumen",
-          "cosine_similarity": 0.75487405
+          "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
+          "label": "multivesicular body intraluminal vesicle",
+          "cosine_similarity": 0.7581437
         }
       ]
     },

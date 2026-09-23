@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+  slug: multivesicular_body_intraluminal_vesicle
+session:
+  id: 2026-09-23T081536Z-codex-801e15
+  timestamp: '2026-09-23T08:15:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added a multivesicular body intraluminal vesicle record
+  details: Added cellstructuremech:multivesicular_body_intraluminal_vesicle as a locally minted
+    vesicle record for MVB intraluminal vesicles because GO has a generic vesicle term and
+    defines the complete MVB by its internal vesicles but does not provide an exact ILV cellular-component
+    term. The record captures vesicle parentage, MVB parthood, a reviewed-label lipid-bilayer
+    constituent, Saccharomyces cerevisiae ESCRT-dependent MVB sorting evidence, an ILV formation
+    graph, and component-boundary discussions. The parent MVB record now lists the ILV as
+    a part, resolves its ILV grounding TODO, and the pre-existing MVB/endosome/late-endosome
+    intraluminal-vesicle graph nodes are grounded to the new local identifier.

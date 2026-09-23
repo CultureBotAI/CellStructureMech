@@ -45,6 +45,11 @@ curation_history:
   changes: 'Resolved #1225 by routing Babst et al. 2002 ESCRT-III evidence through
     reachable PMID:12194857 instead of the unreadable Developmental Cell DOI.'
   llm_assisted: true
+- timestamp: '2026-09-23T08:14:39Z'
+  curator: codex
+  action: LINKED_INTRALUMINAL_VESICLE_RECORD
+  changes: Grounded the multivesicular-body intraluminal vesicle graph node to cellstructuremech:multivesicular_body_intraluminal_vesicle.
+  llm_assisted: true
 parent_structures:
 - GO:0016020
 part_of:
@@ -171,8 +176,9 @@ causal_graphs:
     label: ubiquitinated membrane cargo
     node_type: STATE
   - node_id: intraluminal_vesicle
-    label: multivesicular-body intraluminal vesicle
+    label: multivesicular body intraluminal vesicle
     node_type: STRUCTURE
+    grounding: cellstructuremech:multivesicular_body_intraluminal_vesicle
   - node_id: multivesicular_body
     label: multivesicular body
     node_type: ORGANELLE
