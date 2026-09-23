@@ -39,6 +39,26 @@ curation_history:
   changes: Removed GO:0005630 from the open ascospore layer-splitting TODO after creating
     a standalone dityrosine layer record.
   llm_assisted: true
+- timestamp: '2026-09-23T02:13:19Z'
+  curator: codex
+  action: UPDATED_CHILD_RECORD_BOUNDARY
+  changes: Removed GO:0005631 from the open ascospore layer-splitting TODO after creating
+    a standalone chitosan layer record and grounded the parent chitosan polymer component
+    to CHEBI:16261.
+  llm_assisted: true
+- timestamp: '2026-09-23T02:22:03Z'
+  curator: codex
+  action: NORMALIZED_COMPONENT_LABEL
+  changes: Renamed the parent ascospore-wall chitosan component to the CHEBI:16261
+    canonical label after grounding it to chitosan during standalone GO:0005631 curation.
+  llm_assisted: true
+- timestamp: '2026-09-23T02:32:50Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1344 review issue #1346 by adding an explicit GO:0005631
+    structure node to the ascospore wall layer graph and rewiring topology edges to
+    the chitosan layer rather than the CHEBI-grounded polymer node.'
+  llm_assisted: true
 synonyms:
 - synonym_text: fungal-type spore wall
   synonym_type: BROAD_SYNONYM
@@ -69,23 +89,22 @@ components:
     notes: Neiman 2005 reviews assembly of the multilaminar Saccharomyces cerevisiae
       ascospore wall.
 - component_id: chitosan_outer_layer
-  label: ascospore wall chitosan layer
+  label: chitosan
   component_type: POLYSACCHARIDE
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0005631 denotes the complete chitosan layer of the Saccharomyces
-    spore wall, but no exact CHEBI term for the ascospore-wall chitosan polymer layer
-    was curated.
-  role: Second-outermost polysaccharide layer of the Saccharomyces ascospore wall
-    that sits below the dityrosine-rich surface.
+  role: Chitosan polymer material in the Saccharomyces ascospore wall, positioned
+    below the dityrosine-rich surface.
   evidence:
+  - reference: CHEBI:16261
+    notes: ChEBI term for chitosan.
   - reference: GO:0005631
-    notes: GO:0005631 identifies the chitosan layer as the second outermost Saccharomyces
-      spore-wall layer.
-  - reference: DOI:10.1371/journal.pgen.1003700
-    notes: Lin et al. 2013 tested redundant genes that control assembly of the Saccharomyces
-      outer spore wall.
+    notes: GO:0005631 identifies the complete chitosan layer as the second outermost
+      Saccharomyces spore-wall layer.
+  - reference: DOI:10.1016/S0014-5793(99)01334-4
+    notes: Christodoulidou et al. 1999 studied Saccharomyces Cda1/Cda2 chitin deacetylases
+      and their role in ascospore-wall assembly.
+  grounding: CHEBI:16261
 - component_id: dityrosine_rich_outer_layer
   label: ascospore wall dityrosine-rich outer layer
   component_type: OTHER
@@ -163,8 +182,9 @@ causal_graphs:
 - graph_id: saccharomyces_ascospore_wall_layers
   title: Inner polysaccharides and outer layers build a resistant ascospore wall
   description: In budding yeast, mannan- and glucan-rich inner layers are covered
-    by chitosan and dityrosine-rich outer layers to build a multilaminar ascospore
-    wall that surrounds the spore plasma membrane and protects the dormant spore.
+    by a chitosan layer and a dityrosine-rich outer layer to build a multilaminar
+    ascospore wall that surrounds the spore plasma membrane and protects the dormant
+    spore.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph records established Saccharomyces layer topology and stress-barrier
@@ -180,9 +200,13 @@ causal_graphs:
     node_type: CHEMICAL
     component_ref: inner_wall_polysaccharides
   - node_id: chitosan_outer_layer
-    label: ascospore wall chitosan layer
+    label: chitosan
     node_type: CHEMICAL
     component_ref: chitosan_outer_layer
+  - node_id: chitosan_layer
+    label: chitosan layer of spore wall
+    node_type: STRUCTURE
+    grounding: GO:0005631
   - node_id: dityrosine_rich_outer_layer
     label: ascospore wall dityrosine-rich outer layer
     node_type: CHEMICAL
@@ -217,6 +241,20 @@ causal_graphs:
       notes: Neiman 2005 reviews Saccharomyces ascospore-wall layers and their deposition
         after prospore-membrane closure.
   - subject: chitosan_outer_layer
+    predicate: forms
+    object: chitosan_layer
+    description: Chitosan polymer material forms the second outermost Saccharomyces
+      ascospore-wall layer.
+    evidence:
+    - reference: CHEBI:16261
+      notes: ChEBI term for chitosan.
+    - reference: GO:0005631
+      notes: GO:0005631 identifies the complete chitosan layer as the second outermost
+        Saccharomyces spore-wall layer.
+    - reference: DOI:10.1128/MMBR.69.4.565-584.2005
+      notes: Neiman 2005 reviews chitosan as the Saccharomyces ascospore-wall layer
+        beneath the dityrosine layer.
+  - subject: chitosan_layer
     predicate: overlies
     object: inner_wall_polysaccharides
     description: The chitosan layer is positioned outside the two inner Saccharomyces
@@ -230,7 +268,7 @@ causal_graphs:
         spore-wall layers.
   - subject: dityrosine_rich_outer_layer
     predicate: overlies
-    object: chitosan_outer_layer
+    object: chitosan_layer
     description: The dityrosine-rich layer forms the outermost layer over the chitosan
       layer in the Saccharomyces ascospore wall.
     evidence:
@@ -264,15 +302,13 @@ discussions:
   attaches_to:
   - has_part
   - causal_graphs#saccharomyces_ascospore_wall_layers
-  rationale: GO has exact cellular-component terms for the Saccharomyces inner and
-    chitosan spore-wall layers. GO:1990916 and GO:0005630 now have standalone records;
-    the remaining exact Saccharomyces layer terms remain linked here by has_part but
-    await separate focused curation.
+  rationale: GO has an exact cellular-component term for the Saccharomyces inner spore-wall
+    layers. GO:1990916, GO:0005630, and GO:0005631 now have standalone records; the
+    remaining exact Saccharomyces layer term remains linked here by has_part but awaits
+    separate focused curation.
   evidence:
   - reference: GO:0005632
     notes: GO:0005632 denotes the inner layer of the Saccharomyces spore wall.
-  - reference: GO:0005631
-    notes: GO:0005631 denotes the Saccharomyces spore-wall chitosan layer.
 - discussion_id: ascospore_wall_polymer_grounding
   prompt: Resolve exact source-neutral component groundings for the ascospore-wall
     polysaccharides and dityrosine-rich outer material.
@@ -280,13 +316,13 @@ discussions:
   status: OPEN
   attaches_to:
   - components#inner_wall_polysaccharides
-  - components#chitosan_outer_layer
   - components#dityrosine_rich_outer_layer
-  rationale: The GO layer terms identify structures rather than molecular constituents.
-    This pass therefore keeps the mannan/glucan, chitosan, and dityrosine-rich material
-    labels reviewed but ungrounded until exact CHEBI or polymer identifiers can be
-    confirmed.
+  rationale: The remaining ungrounded mannan/glucan and dityrosine-rich material labels
+    are reviewed but ungrounded until exact CHEBI or polymer identifiers can be confirmed;
+    the chitosan polymer component is now grounded to CHEBI:16261.
   evidence:
   - reference: DOI:10.1371/journal.pgen.1003700
     notes: Lin et al. 2013 studied Saccharomyces outer spore-wall assembly without
-      defining source-neutral polymer CURIEs.
+      defining source-neutral polymer CURIEs for every ascospore-wall material.
+  - reference: CHEBI:16261
+    notes: ChEBI term for the chitosan polymer.

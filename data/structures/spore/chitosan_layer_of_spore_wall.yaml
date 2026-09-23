@@ -1,0 +1,245 @@
+identifier: GO:0005631
+label: chitosan layer of spore wall
+structure_category: SPORE
+structure_kind: ENVELOPE_LAYER
+definition: The second outermost layer of the spore wall, as described in Saccharomyces.
+definition_source: GO:0005631
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T02:11:55Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T02:13:19Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ascospore-wall parthood, a CHEBI-grounded chitosan component, Saccharomyces
+    cerevisiae scope, an outer-wall maturation function, GO/DOI evidence, a nonmechanistic
+    chitosan-layer assembly graph, and boundary discussions for the chitosan polymer
+    and Chs3/Cda1/Cda2 enzymes.
+  llm_assisted: true
+- timestamp: '2026-09-23T02:32:50Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1344 review issue #1345 by adding direct Saccharomyces literature
+    evidence to the chitosan-to-chitosan-layer formation edge.'
+  llm_assisted: true
+part_of:
+- GO:0005619
+components:
+- component_id: chitosan
+  label: chitosan
+  component_type: POLYSACCHARIDE
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding: CHEBI:16261
+  role: Deacetylated chitin polymer material that forms the Saccharomyces ascospore-wall
+    layer between the inner mannan/glucan layers and the outer dityrosine layer.
+  evidence:
+  - reference: DOI:10.1016/S0014-5793(99)01334-4
+    notes: Christodoulidou et al. 1999 studied Cda1 and Cda2 chitin deacetylases and
+      how their elimination affects Saccharomyces ascospore-wall assembly.
+  - reference: DOI:10.1128/MMBR.69.4.565-584.2005
+    notes: Neiman 2005 reviews chitosan as the second outer Saccharomyces ascospore-wall
+      layer.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast builds a chitosan layer during ascospore-wall maturation; this
+    first standalone record does not assert an identical layer throughout ascospore-forming
+    fungi.
+  reference: DOI:10.1128/MMBR.69.4.565-584.2005
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Cda1/Cda2-dependent chitin deacetylation is tied
+    to ascospore-wall assembly and rigidity.
+  reference: DOI:10.1016/S0014-5793(99)01334-4
+functions:
+- function_id: outer_ascospore_wall_maturation
+  label: outer ascospore-wall maturation
+  description: The chitosan layer forms the deacetylated chitin-containing surface
+    beneath the dityrosine layer and contributes to construction of a rigid mature
+    Saccharomyces ascospore wall.
+  evidence:
+  - reference: DOI:10.1074/jbc.271.49.31420
+    notes: Christodoulidou et al. 1996 identified two sporulation-specific chitin
+      deacetylase genes required for Saccharomyces ascospore-wall rigidity.
+  - reference: DOI:10.1371/journal.pgen.1003700
+    notes: Lin et al. 2013 tested the redundant Saccharomyces gene network that controls
+      outer spore-wall assembly.
+evidence:
+- reference: GO:0005631
+  notes: Gene Ontology cellular-component term for the Saccharomyces spore-wall chitosan
+    layer.
+- reference: GO:0005619
+  notes: Gene Ontology cellular-component term for the broader ascospore wall that
+    contains the chitosan layer.
+- reference: GO:0005632
+  notes: Gene Ontology cellular-component term for the inner layers below the Saccharomyces
+    chitosan layer.
+- reference: GO:0005630
+  notes: Gene Ontology cellular-component term for the dityrosine layer above the
+    Saccharomyces chitosan layer.
+- reference: CHEBI:16261
+  notes: ChEBI term for chitosan.
+- reference: DOI:10.1074/jbc.271.49.31420
+  notes: Christodoulidou et al. 1996, Two Sporulation-specific Chitin Deacetylase-encoding
+    Genes Are Required for the Ascospore Wall Rigidity of Saccharomyces cerevisiae,
+    Journal of Biological Chemistry.
+- reference: DOI:10.1016/S0014-5793(99)01334-4
+  notes: Christodoulidou et al. 1999, Yeast Ascospore Wall Assembly Requires Two Chitin
+    Deacetylase Isozymes, FEBS Letters.
+- reference: DOI:10.1128/EC.3.6.1464-1475.2004
+  notes: Coluccio et al. 2004, Morphogenetic Pathway of Spore Wall Assembly in Saccharomyces
+    cerevisiae, Eukaryotic Cell.
+- reference: DOI:10.1128/MMBR.69.4.565-584.2005
+  notes: Neiman 2005, Ascospore Formation in the Yeast Saccharomyces cerevisiae, Microbiology
+    and Molecular Biology Reviews.
+- reference: DOI:10.1371/journal.pgen.1003700
+  notes: Lin et al. 2013, A Highly Redundant Gene Network Controls Assembly of the
+    Outer Spore Wall in S. cerevisiae, PLOS Genetics.
+causal_graphs:
+- graph_id: saccharomyces_chitosan_layer_assembly
+  title: Chitin deacetylation produces the chitosan layer of the ascospore wall
+  description: In Saccharomyces cerevisiae, chitin deacetylases convert spore-wall
+    chitin into chitosan, which forms the second outermost ascospore-wall layer between
+    the inner layers and the dityrosine surface.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records chitosan-layer composition, its topology, and the
+    placement of Cda1/Cda2 in precursor modification without treating Chs3, Cda1,
+    or Cda2 as mature-layer constituents.
+  nodes:
+  - node_id: cda_chitin_deacetylases
+    label: Cda1/Cda2 chitin deacetylases
+    node_type: GENE_OR_PROTEIN
+  - node_id: chitosan
+    label: chitosan
+    node_type: CHEMICAL
+    grounding: CHEBI:16261
+    component_ref: chitosan
+  - node_id: chitosan_layer
+    label: chitosan layer of spore wall
+    node_type: STRUCTURE
+    grounding: GO:0005631
+  - node_id: inner_spore_wall_layer
+    label: inner layer of spore wall
+    node_type: STRUCTURE
+    grounding: GO:0005632
+  - node_id: dityrosine_layer
+    label: dityrosine layer of spore wall
+    node_type: STRUCTURE
+    grounding: GO:0005630
+  - node_id: ascospore_wall
+    label: ascospore wall
+    node_type: STRUCTURE
+    grounding: GO:0005619
+  edges:
+  - subject: cda_chitin_deacetylases
+    predicate: produce
+    object: chitosan
+    description: Cda1 and Cda2 are sporulation-specific chitin deacetylases implicated
+      in converting chitinous spore-wall material into chitosan.
+    evidence:
+    - reference: DOI:10.1016/S0014-5793(99)01334-4
+      notes: Christodoulidou et al. 1999 studied the Cda1 and Cda2 chitin deacetylases
+        and their effects on Saccharomyces ascospore-wall assembly.
+  - subject: chitosan
+    predicate: forms
+    object: chitosan_layer
+    description: Chitosan is the deacetylated chitin polymer material used to build
+      the Saccharomyces spore-wall chitosan layer.
+    evidence:
+    - reference: GO:0005631
+      notes: GO:0005631 identifies the complete chitosan layer as a Saccharomyces
+        spore-wall structure.
+    - reference: CHEBI:16261
+      notes: ChEBI:16261 identifies the chitosan polymer.
+    - reference: DOI:10.1128/MMBR.69.4.565-584.2005
+      notes: Neiman 2005 reviews chitosan deposition as the Saccharomyces ascospore-wall
+        layer between the inner wall and dityrosine layer.
+  - subject: chitosan_layer
+    predicate: overlies
+    object: inner_spore_wall_layer
+    description: The chitosan layer lies outside the two inner layers of the Saccharomyces
+      ascospore wall.
+    evidence:
+    - reference: GO:0005631
+      notes: GO:0005631 defines the chitosan layer as the second outermost Saccharomyces
+        spore-wall layer.
+    - reference: GO:0005632
+      notes: GO:0005632 defines the inner layers as the two innermost Saccharomyces
+        spore-wall layers.
+  - subject: dityrosine_layer
+    predicate: overlies
+    object: chitosan_layer
+    description: The dityrosine layer sits outside the chitosan layer as the surface
+      of the Saccharomyces ascospore wall.
+    evidence:
+    - reference: GO:0005630
+      notes: GO:0005630 defines the dityrosine layer as the outermost Saccharomyces
+        spore-wall layer.
+    - reference: GO:0005631
+      notes: GO:0005631 places the chitosan layer immediately beneath the dityrosine
+        layer.
+    - reference: DOI:10.1371/journal.pgen.1003700
+      notes: Lin et al. 2013 studied genes controlling Saccharomyces outer spore-wall
+        assembly.
+  - subject: chitosan_layer
+    predicate: is layer of
+    object: ascospore_wall
+    description: GO places the Saccharomyces chitosan layer as part of the broader
+      ascospore wall.
+    evidence:
+    - reference: GO:0005631
+      notes: GO:0005631 defines the chitosan layer as part of the Saccharomyces spore
+        wall.
+    - reference: GO:0005619
+      notes: GO places GO:0005631 as part of the ascospore wall.
+discussions:
+- discussion_id: chitosan_chebi_scope
+  prompt: Use CHEBI:16261 for the chitosan polymer constituent, not for the complete
+    chitosan layer structure.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#chitosan
+  rationale: CHEBI:16261 denotes the source-neutral chitosan polymer, whereas GO:0005631
+    denotes the full Saccharomyces spore-wall layer made from chitosan.
+  resolution_note: Grounded only the polysaccharide component to CHEBI:16261 and kept
+    the record identity grounded to GO:0005631.
+  evidence:
+  - reference: CHEBI:16261
+    notes: ChEBI term for the chitosan aminoglycan.
+  - reference: GO:0005631
+    notes: GO:0005631 identifies the complete chitosan layer of the Saccharomyces
+      spore wall.
+  posed_by: codex
+  posed_date: '2026-09-23'
+  resolved_date: '2026-09-23'
+- discussion_id: chitin_modification_enzyme_boundary
+  prompt: Treat Chs3, Cda1, and Cda2 as chitosan-layer biosynthetic machinery rather
+    than mature-layer constituents.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#chitosan
+  - causal_graphs#saccharomyces_chitosan_layer_assembly
+  rationale: Chs3 synthesizes chitin and Cda1/Cda2 modify chitin into chitosan for
+    wall assembly, but the curated constituent is the resulting chitosan polymer rather
+    than its biosynthetic enzymes.
+  resolution_note: Left Chs3, Cda1, and Cda2 out of components and represented Cda1/Cda2
+    only as upstream assembly machinery in the graph.
+  evidence:
+  - reference: DOI:10.1016/S0014-5793(99)01334-4
+    notes: Christodoulidou et al. 1999 studied the Cda1 and Cda2 chitin deacetylase
+      enzymes in ascospore-wall assembly.
+  - reference: DOI:10.1128/MMBR.69.4.565-584.2005
+    notes: Neiman 2005 reviews Chs3-dependent chitin synthesis followed by deacetylation
+      to make the chitosan layer.
+  posed_by: codex
+  posed_date: '2026-09-23'
+  resolved_date: '2026-09-23'

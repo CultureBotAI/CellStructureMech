@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/chitosan_layer_of_spore_wall.yaml
+  slug: chitosan_layer_of_spore_wall
+session:
+  id: 2026-09-23T021403Z-codex-ccf48d
+  timestamp: '2026-09-23T02:14:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added chitosan layer of spore wall
+  details: Created a standalone GO:0005631 chitosan layer of spore wall record with ascospore-wall
+    parthood, a CHEBI:16261 chitosan component, Saccharomyces cerevisiae scope, an outer-wall
+    maturation function, GO/CHEBI/DOI evidence, a nonmechanistic chitosan-layer assembly graph,
+    and resolved boundary discussions for the chitosan polymer and Chs3/Cda1/Cda2 enzymes.
+    Narrowed the parent GO:0005619 ascospore_wall open layer-splitting TODO to the remaining
+    Saccharomyces inner spore-wall layer record and grounded the parent chitosan polymer component
+    to CHEBI:16261.

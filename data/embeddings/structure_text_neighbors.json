@@ -3084,7 +3084,12 @@
         {
           "identifier": "GO:0005619",
           "label": "ascospore wall",
-          "cosine_similarity": 0.79713816
+          "cosine_similarity": 0.79673728
+        },
+        {
+          "identifier": "GO:0005631",
+          "label": "chitosan layer of spore wall",
+          "cosine_similarity": 0.76327028
         },
         {
           "identifier": "GO:0009274",
@@ -3100,11 +3105,6 @@
           "identifier": "GO:0000328",
           "label": "fungal-type vacuole lumen",
           "cosine_similarity": 0.73005357
-        },
-        {
-          "identifier": "GO:0009276",
-          "label": "Gram-negative-bacterium-type cell wall",
-          "cosine_similarity": 0.72350189
         }
       ]
     },
@@ -13469,27 +13469,58 @@
         {
           "identifier": "GO:0005630",
           "label": "dityrosine layer of spore wall",
-          "cosine_similarity": 0.9305905
+          "cosine_similarity": 0.92838883
+        },
+        {
+          "identifier": "GO:0005631",
+          "label": "chitosan layer of spore wall",
+          "cosine_similarity": 0.91752341
         },
         {
           "identifier": "GO:1990916",
           "label": "Isp3 layer of spore wall",
-          "cosine_similarity": 0.85093456
-        },
-        {
-          "identifier": "GO:0043591",
-          "label": "endospore external encapsulating structure",
-          "cosine_similarity": 0.82265796
+          "cosine_similarity": 0.84760066
         },
         {
           "identifier": "GO:0090641",
           "label": "microsporidian-type endospore",
-          "cosine_similarity": 0.81826077
+          "cosine_similarity": 0.82246189
         },
         {
-          "identifier": "GO:0090642",
-          "label": "microsporidian-type exospore",
-          "cosine_similarity": 0.81350699
+          "identifier": "GO:0043591",
+          "label": "endospore external encapsulating structure",
+          "cosine_similarity": 0.81976553
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005631",
+      "label": "chitosan layer of spore wall",
+      "neighbors": [
+        {
+          "identifier": "GO:0005630",
+          "label": "dityrosine layer of spore wall",
+          "cosine_similarity": 0.91851995
+        },
+        {
+          "identifier": "GO:0005619",
+          "label": "ascospore wall",
+          "cosine_similarity": 0.91752341
+        },
+        {
+          "identifier": "GO:1990916",
+          "label": "Isp3 layer of spore wall",
+          "cosine_similarity": 0.85035658
+        },
+        {
+          "identifier": "GO:0090641",
+          "label": "microsporidian-type endospore",
+          "cosine_similarity": 0.80730365
+        },
+        {
+          "identifier": "GO:0043591",
+          "label": "endospore external encapsulating structure",
+          "cosine_similarity": 0.79824276
         }
       ]
     },
@@ -13500,7 +13531,12 @@
         {
           "identifier": "GO:0005619",
           "label": "ascospore wall",
-          "cosine_similarity": 0.9305905
+          "cosine_similarity": 0.92838883
+        },
+        {
+          "identifier": "GO:0005631",
+          "label": "chitosan layer of spore wall",
+          "cosine_similarity": 0.91851995
         },
         {
           "identifier": "GO:1990916",
@@ -13516,11 +13552,6 @@
           "identifier": "GO:0043593",
           "label": "endospore coat",
           "cosine_similarity": 0.81209011
-        },
-        {
-          "identifier": "GO:0043595",
-          "label": "endospore cortex",
-          "cosine_similarity": 0.80666327
         }
       ]
     },
@@ -13720,9 +13751,14 @@
           "cosine_similarity": 0.89086146
         },
         {
+          "identifier": "GO:0005631",
+          "label": "chitosan layer of spore wall",
+          "cosine_similarity": 0.85035658
+        },
+        {
           "identifier": "GO:0005619",
           "label": "ascospore wall",
-          "cosine_similarity": 0.85093456
+          "cosine_similarity": 0.84760066
         },
         {
           "identifier": "GO:0043591",
@@ -13733,11 +13769,6 @@
           "identifier": "GO:0090642",
           "label": "microsporidian-type exospore",
           "cosine_similarity": 0.7906978
-        },
-        {
-          "identifier": "GO:0043595",
-          "label": "endospore cortex",
-          "cosine_similarity": 0.78409544
         }
       ]
     },
@@ -13753,7 +13784,7 @@
         {
           "identifier": "GO:0005619",
           "label": "ascospore wall",
-          "cosine_similarity": 0.81826077
+          "cosine_similarity": 0.82246189
         },
         {
           "identifier": "GO:0043595",
@@ -13761,14 +13792,14 @@
           "cosine_similarity": 0.8135034
         },
         {
+          "identifier": "GO:0005631",
+          "label": "chitosan layer of spore wall",
+          "cosine_similarity": 0.80730365
+        },
+        {
           "identifier": "GO:0043591",
           "label": "endospore external encapsulating structure",
           "cosine_similarity": 0.8025757
-        },
-        {
-          "identifier": "GO:0043592",
-          "label": "exosporium",
-          "cosine_similarity": 0.79438328
         }
       ]
     },
@@ -13799,7 +13830,7 @@
         {
           "identifier": "GO:0005619",
           "label": "ascospore wall",
-          "cosine_similarity": 0.81350699
+          "cosine_similarity": 0.81323984
         }
       ]
     },
@@ -13921,9 +13952,9 @@
           "cosine_similarity": 0.80973192
         },
         {
-          "identifier": "GO:0030666",
-          "label": "endocytic vesicle membrane",
-          "cosine_similarity": 0.80841307
+          "identifier": "GO:0005619",
+          "label": "ascospore wall",
+          "cosine_similarity": 0.80874784
         }
       ]
     },
