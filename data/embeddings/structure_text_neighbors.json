@@ -1955,9 +1955,9 @@
           "cosine_similarity": 0.7668843
         },
         {
-          "identifier": "cellstructuremech:bactofilin_filament",
-          "label": "bactofilin filament",
-          "cosine_similarity": 0.73306107
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.73509392
         }
       ]
     },
@@ -2493,6 +2493,11 @@
       "label": "mitotic spindle",
       "neighbors": [
         {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.90478656
+        },
+        {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.82278094
@@ -2511,11 +2516,6 @@
           "identifier": "GO:0120120",
           "label": "bilobe structure",
           "cosine_similarity": 0.68907963
-        },
-        {
-          "identifier": "GO:0005874",
-          "label": "microtubule",
-          "cosine_similarity": 0.66396302
         }
       ]
     },
@@ -2622,6 +2622,11 @@
           "cosine_similarity": 0.8123127
         },
         {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.76344403
+        },
+        {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.74113955
@@ -2635,11 +2640,6 @@
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.72565586
-        },
-        {
-          "identifier": "GO:0072686",
-          "label": "mitotic spindle",
-          "cosine_similarity": 0.71561269
         }
       ]
     },
@@ -2737,9 +2737,45 @@
       ]
     },
     {
+      "identifier": "GO:0005876",
+      "label": "spindle microtubule",
+      "neighbors": [
+        {
+          "identifier": "GO:0072686",
+          "label": "mitotic spindle",
+          "cosine_similarity": 0.90478656
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.85885332
+        },
+        {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.84796281
+        },
+        {
+          "identifier": "GO:0033289",
+          "label": "intraconoid microtubule",
+          "cosine_similarity": 0.81657475
+        },
+        {
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.80151561
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005816",
       "label": "spindle pole body",
       "neighbors": [
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.85885332
+        },
         {
           "identifier": "GO:0072686",
           "label": "mitotic spindle",
@@ -2759,11 +2795,6 @@
           "identifier": "GO:0160114",
           "label": "axonemal microtubule doublet outer junction",
           "cosine_similarity": 0.74477542
-        },
-        {
-          "identifier": "GO:0020025",
-          "label": "subpellicular microtubule",
-          "cosine_similarity": 0.74202974
         }
       ]
     },
