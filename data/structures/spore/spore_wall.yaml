@@ -1,0 +1,200 @@
+identifier: GO:0031160
+label: spore wall
+structure_category: SPORE
+structure_kind: ENVELOPE_LAYER
+definition: The specialized envelope lying outside the cell membrane of a spore.
+definition_source: GO:0031160
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T22:10:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T22:12:03Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, cell-wall parentage, Microsporidia and Bacillota taxonomic
+    scope, Saccharomyces, Encephalitozoon, and Bacillus examples, a spore-wall protection
+    function, GO/DOI evidence, a nonmechanistic microsporidian endospore/exospore
+    wall graph, and resolved boundary decisions for lineage-specific child layers
+    and the broad spore-coat synonym.
+  llm_assisted: true
+synonyms:
+- synonym_text: spore coat
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031160
+parent_structures:
+- GO:0005618
+taxonomic_distribution:
+- taxon_id: NCBITaxon:6029
+  taxon_label: Microsporidia
+  presence: COMMON
+  note: Infectious microsporidian spores are enclosed by a thick wall with exospore
+    and chitin-rich endospore layers.
+  reference: DOI:10.1016/j.ijpara.2005.10.005
+- taxon_id: NCBITaxon:1239
+  taxon_label: Bacillota
+  presence: COMMON
+  note: Bacterial endospore-forming lineages build an external spore wall with cortex,
+    coat, and sometimes exosporium layers, while many Bacillota lineages have lost
+    endospore formation.
+  reference: DOI:10.1038/nrmicro2921
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which the ascospore wall forms as a multilaminar envelope
+    around each meiotic spore.
+  reference: DOI:10.1128/MMBR.69.4.565-584.2005
+- taxon_id: NCBITaxon:6035
+  taxon_label: Encephalitozoon cuniculi
+  note: Microsporidian model in which the spore wall contains an outer exospore and
+    an inner, chitin-rich endospore.
+  reference: DOI:10.1016/j.ijpara.2005.10.005
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: Bacterial model for morphogenesis of the multilayered coat and cortex surrounding
+    the dormant endospore.
+  reference: DOI:10.1038/nrmicro2921
+functions:
+- function_id: spore_wall_protection
+  label: spore wall protection
+  description: The spore wall surrounds dormant or infectious spores with a specialized
+    envelope that contributes to resistance during dispersal or host-to-host transmission.
+  evidence:
+  - reference: DOI:10.1002/pmic.200700584
+    notes: Wu et al. 2008 describe Nosema bombycis spores as protected by a thick
+      wall containing a glycoprotein-rich exospore and chitin-rich endospore.
+  - reference: DOI:10.1038/nrmicro2921
+    notes: McKenney, Driks and Eichenberger 2012 review the cortex and coat layers
+      that protect bacterial endospores.
+evidence:
+- reference: GO:0031160
+  notes: Gene Ontology cellular-component term for the spore wall.
+- reference: GO:0005618
+  notes: Gene Ontology cellular-component parent term for cell walls.
+- reference: GO:0005619
+  notes: Gene Ontology cellular-component child term for the fungal ascospore wall.
+- reference: GO:0043591
+  notes: Gene Ontology cellular-component descendant for the bacterial endospore external
+    encapsulating structure.
+- reference: GO:0090641
+  notes: Gene Ontology cellular-component part term for the microsporidian-type endospore.
+- reference: GO:0090642
+  notes: Gene Ontology cellular-component part term for the microsporidian-type exospore.
+- reference: DOI:10.1016/j.ijpara.2005.10.005
+  notes: Peuvel-Fanget et al. 2006 studied Encephalitozoon cuniculi spore-wall proteins
+    associated with the mature-spore endospore.
+- reference: DOI:10.1002/pmic.200700584
+  notes: Wu et al. 2008, Proteomic analysis of spore wall proteins and identification
+    of two spore wall proteins from Nosema bombycis (Microsporidia), Proteomics.
+- reference: DOI:10.1128/MMBR.69.4.565-584.2005
+  notes: Neiman 2005 reviews Saccharomyces cerevisiae ascospore wall assembly and
+    mature wall layering.
+- reference: DOI:10.1038/nrmicro2921
+  notes: McKenney, Driks and Eichenberger 2012 review the Bacillus subtilis endospore
+    coat and surrounding envelope layers.
+causal_graphs:
+- graph_id: microsporidian_endospore_exospore_wall_layering
+  title: Microsporidian endospore and exospore form a protective wall
+  description: Microsporidian spores carry a chitin-rich endospore underneath a protein-rich
+    exospore; together those envelope layers form the thick spore wall around the
+    infectious spore.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph scopes the generic spore-wall parent to a curated Microsporidia
+    example and does not assert that endospore or exospore layers are universal across
+    fungal or bacterial spore walls.
+  nodes:
+  - node_id: spore_wall
+    label: spore wall
+    node_type: STRUCTURE
+    grounding: GO:0031160
+  - node_id: endospore
+    label: microsporidian-type endospore
+    node_type: STRUCTURE
+    grounding: GO:0090641
+  - node_id: exospore
+    label: microsporidian-type exospore
+    node_type: STRUCTURE
+    grounding: GO:0090642
+  - node_id: spore_wall_protection
+    label: spore wall protection
+    node_type: CAPACITY
+  edges:
+  - subject: endospore
+    predicate: is part of
+    object: spore_wall
+    description: The chitin-rich microsporidian endospore is an inner layer of the
+      spore wall.
+    evidence:
+    - reference: GO:0090641
+      notes: GO:0090641 places the microsporidian-type endospore as part of GO:0031160
+        spore wall.
+    - reference: DOI:10.1016/j.ijpara.2005.10.005
+      notes: Peuvel-Fanget et al. 2006 assigned Encephalitozoon EnP1 and EnP2 proteins
+        to the mature-spore endospore.
+  - subject: exospore
+    predicate: is part of
+    object: spore_wall
+    description: The dense, protein-rich microsporidian exospore is the outer layer
+      of the spore wall.
+    evidence:
+    - reference: GO:0090642
+      notes: GO:0090642 places the microsporidian-type exospore as part of GO:0031160
+        spore wall.
+    - reference: DOI:10.1002/pmic.200700584
+      notes: Wu et al. 2008 localized Nosema bombycis SWP32 to the exospore by immunofluorescence
+        and immunoelectron microscopy.
+  - subject: exospore
+    predicate: overlies
+    object: endospore
+    description: In the microsporidian wall, the exospore lies outside the endospore.
+    evidence:
+    - reference: GO:0090642
+      notes: GO:0090642 defines the exospore as the outermost microsporidian spore-wall
+        layer above the endospore.
+  - subject: spore_wall
+    predicate: provides
+    object: spore_wall_protection
+    description: The microsporidian spore wall is a thick envelope that protects the
+      infectious spore.
+    evidence:
+    - reference: DOI:10.1002/pmic.200700584
+      notes: Wu et al. 2008 describe the microsporidian spore wall as a thick wall
+        with a glycoprotein-rich exospore and chitin-rich endospore.
+    - reference: DOI:10.1128/IAI.68.4.2268-2275.2000
+      notes: Bohne et al. 2000 describe the Encephalitozoon cuniculi wall as a rigid
+        spore wall that provides mechanical resistance.
+discussions:
+- discussion_id: taxon_specific_child_layers
+  prompt: Do not add every lineage-specific spore-wall layer directly to the generic
+    spore-wall has_part list.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#microsporidian_endospore_exospore_wall_layering
+  rationale: GO places the microsporidian endospore and exospore as parts of spore
+    wall, but those layers are specific to microsporidian spores. Fungal ascospore
+    layers remain under GO:0005619 ascospore wall and bacterial endospore layers remain
+    under GO:0043591 endospore external encapsulating structure.
+  evidence:
+  - reference: GO:0090641
+  - reference: GO:0090642
+  - reference: GO:0005619
+  - reference: GO:0043591
+  posed_by: codex
+  posed_date: '2026-09-23'
+- discussion_id: spore_coat_synonym_boundary
+  prompt: Keep the GO:0031160 spore coat synonym separate from the bacterial endospore
+    coat record.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0031160 uses spore coat as an exact synonym for the broad spore wall
+    class, whereas GO:0043593 denotes the specific bacterial endospore coat layer
+    curated separately.
+  evidence:
+  - reference: GO:0031160
+  - reference: GO:0043593
+  posed_by: codex
+  posed_date: '2026-09-23'
