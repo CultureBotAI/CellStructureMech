@@ -21,6 +21,13 @@ curation_history:
     ESCRT intraluminal-vesicle formation graph, and lipid and ESCRT component-boundary
     discussions.
   llm_assisted: true
+- timestamp: '2026-09-23T08:26:33Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1372 by adding UniProt SL-0340 evidence to the MVB-lumen containment
+    edge and resolved #1373 by removing the over-specific completed-vesicle cargo
+    containment edge from the ILV assembly graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0031982
 part_of:
@@ -86,6 +93,9 @@ evidence:
 - reference: GO:0071985
   notes: Gene Ontology biological-process term for the multivesicular body sorting
     pathway.
+- reference: uniprot.location:SL-0340
+  notes: UniProt Subcellular Location entry SL-0340 identifies the multivesicular
+    body lumen as the compartment bounded by the multivesicular body membrane.
 - reference: PMID:11511343
   notes: Katzmann, Babst and Emr 2001, Ubiquitin-Dependent Sorting into the Multivesicular
     Body Pathway Requires the Function of a Conserved Endosomal Protein Sorting Complex,
@@ -115,9 +125,6 @@ causal_graphs:
     label: ESCRT III complex
     node_type: STRUCTURE
     grounding: GO:0000815
-  - node_id: ubiquitinated_membrane_cargo
-    label: ubiquitinated membrane cargo
-    node_type: STATE
   - node_id: intraluminal_vesicle
     label: multivesicular body intraluminal vesicle
     node_type: STRUCTURE
@@ -153,18 +160,6 @@ causal_graphs:
       notes: GO:0005771 defines multivesicular bodies as endosomes with internal vesicles
         formed by invagination of the limiting endosomal membrane.
   - subject: intraluminal_vesicle
-    predicate: contains
-    object: ubiquitinated_membrane_cargo
-    description: Intraluminal vesicles receive ubiquitinated transmembrane cargo from
-      the limiting membrane during ESCRT-dependent MVB sorting.
-    evidence:
-    - reference: GO:0071985
-      notes: GO:0071985 denotes sorting of ubiquitylated transmembrane proteins into
-        luminal vesicles.
-    - reference: PMID:11511343
-      notes: Katzmann, Babst and Emr 2001 showed ESCRT-I is needed for ubiquitin-dependent
-        MVB cargo sorting.
-  - subject: intraluminal_vesicle
     predicate: is contained in
     object: multivesicular_body_lumen
     description: The multivesicular-body lumen contains intraluminal vesicles formed
@@ -173,6 +168,8 @@ causal_graphs:
     - reference: GO:0005771
       notes: GO:0005771 defines the multivesicular body by the presence of internal
         vesicles.
+    - reference: uniprot.location:SL-0340
+      notes: UniProt SL-0340 identifies the internal multivesicular body lumen.
 discussions:
 - discussion_id: ground_intraluminal_vesicle_lipid_bilayer
   prompt: Resolve an exact source-neutral grounding for the lipid bilayer of multivesicular-body

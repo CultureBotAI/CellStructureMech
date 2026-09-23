@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+  slug: multivesicular_body_intraluminal_vesicle
+session:
+  id: 2026-09-23T082646Z-codex-65ae18
+  timestamp: '2026-09-23T08:26:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1372
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1373
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1371
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Addressed multivesicular body intraluminal vesicle PR review
+  details: 'Addressed PR #1371 review issues by tightening the new ILV record after adversarial
+    review. Issue #1372 was resolved by adding UniProt SL-0340 to the record evidence and
+    to the ILV-to-MVB-lumen containment edge, so the local multivesicular body lumen node
+    carries direct support. Issue #1373 was resolved by removing the ubiquitinated_membrane_cargo
+    node and completed-vesicle cargo containment edge from the ILV assembly graph, leaving
+    the graph focused on ESCRT-III remodeling, inward budding from the multivesicular body
+    membrane, and containment in the MVB lumen.'
