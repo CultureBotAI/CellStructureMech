@@ -46,6 +46,12 @@ curation_history:
     parent doublet-substructure TODO after moving MIP curation into the GO:0160110
     child record.
   llm_assisted: true
+- timestamp: '2026-09-23T12:29:50Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1393 review issue #1394 by removing broad inner-sheath MIP
+    DOI evidence from the remaining parent doublet-substructure TODO.'
+  llm_assisted: true
 synonyms:
 - synonym_text: axonemal outer doublet
   synonym_type: EXACT_SYNONYM
@@ -230,15 +236,15 @@ causal_graphs:
         the Chlamydomonas 9+2 axoneme by cryoelectron tomography.
 discussions:
 - discussion_id: resolve_mip_and_doublet_substructure_boundaries
-  prompt: Resolve exact source-neutral groundings and decide whether the inner and
-    outer junctions, ribbon and doublet-specific accessory structures need child records.
+  prompt: Resolve exact source-neutral groundings for remaining doublet substructures
+    and decide whether the inner and outer junctions, ribbon, and doublet-specific
+    accessory structures need child records.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - causal_graphs#chlamydomonas_doublet_scaffold
   rationale: GO still identifies named inner-junction, outer-junction and ribbon substructures,
-    and cryo-EM has mapped many Chlamydomonas doublet-associated proteins, but this
-    GO:0097545 pass leaves those finer child records for later curation.
+    but this GO:0097545 pass leaves those finer child records for later curation.
   evidence:
   - reference: GO:0160113
     notes: Gene Ontology cellular-component term for the inner junction that links
@@ -249,11 +255,5 @@ discussions:
   - reference: GO:0160115
     notes: Gene Ontology cellular-component term for the axonemal doublet ribbon made
       from protofilaments A11, A12 and A13 plus associated MIPs.
-  - reference: DOI:10.1038/s41467-019-09051-x
-    notes: Owa et al. 2019 identified Chlamydomonas FAP45 and FAP52 as doublet-stabilizing
-      B-tubule MIPs.
-  - reference: DOI:10.1016/j.cell.2019.09.030
-    notes: Ma et al. 2019 assigned dozens of Chlamydomonas doublet-associated proteins,
-      including many MIPs.
   posed_by: codex
   posed_date: '2026-09-23'

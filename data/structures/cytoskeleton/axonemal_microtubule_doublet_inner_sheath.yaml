@@ -21,6 +21,12 @@ curation_history:
     GO and DOI evidence, a nonmechanistic inner-sheath graph, and MIP/child-boundary
     TODOs.
   llm_assisted: true
+- timestamp: '2026-09-23T12:29:50Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1393 review issue #1395 by replacing unsupported one-half
+    descriptions on A- and B-tubule inner-sheath graph edges.'
+  llm_assisted: true
 part_of:
 - GO:0097545
 has_part:
@@ -135,8 +141,8 @@ causal_graphs:
   - subject: axonemal_a_tubule_inner_sheath
     predicate: is part of
     object: axonemal_microtubule_doublet_inner_sheath
-    description: The A-tubule inner sheath is one half of the axonemal doublet inner
-      sheath.
+    description: The A-tubule inner sheath is the luminal inner-sheath network inside
+      the A tubule of the axonemal doublet.
     evidence:
     - reference: GO:0160111
       notes: GO places the axonemal A tubule inner sheath within the axonemal microtubule
@@ -144,8 +150,8 @@ causal_graphs:
   - subject: axonemal_b_tubule_inner_sheath
     predicate: is part of
     object: axonemal_microtubule_doublet_inner_sheath
-    description: The B-tubule inner sheath is one half of the axonemal doublet inner
-      sheath.
+    description: The B-tubule inner sheath is the luminal inner-sheath network inside
+      the B tubule of the axonemal doublet.
     evidence:
     - reference: GO:0160112
       notes: GO places the axonemal B tubule inner sheath within the axonemal microtubule

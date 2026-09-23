@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_sheath.yaml
+  slug: axonemal_microtubule_doublet_inner_sheath
+session:
+  id: 2026-09-23T123012Z-codex-62ab82
+  timestamp: '2026-09-23T12:30:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1394
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1395
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1393
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  - evidence
+  summary: Address axonemal inner sheath PR review
+  details: 'Resolved PR #1393 review issues #1394 and #1395 by removing broad inner-sheath
+    MIP DOI evidence from the remaining GO:0097545 parent doublet-substructure TODO and by
+    replacing unsupported one-half wording on GO:0160111 and GO:0160112 child-edge descriptions.'
