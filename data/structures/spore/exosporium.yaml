@@ -22,6 +22,13 @@ curation_history:
     graph, and a boundary discussion separating the bacterial exosporium from microsporidian
     exospores and generic perispore locations.
   llm_assisted: true
+- timestamp: '2026-09-23T00:45:02Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1338 review issue #1339 by linking the exosporium to the
+    endospore external encapsulating structure in part_of, record evidence, the topology
+    graph, and the bacterial exosporium boundary discussion.'
+  llm_assisted: true
 synonyms:
 - synonym_text: epispore
   synonym_type: EXACT_SYNONYM
@@ -33,6 +40,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: GO:0043592
 part_of:
+- GO:0043591
 - GO:0005618
 components:
 - component_id: exosporium_protein_cohort
@@ -92,6 +100,9 @@ evidence:
 - reference: GO:0005618
   notes: Gene Ontology cellular-component term for cell wall; GO places the exosporium
     as part of a cell wall.
+- reference: GO:0043591
+  notes: Gene Ontology cellular-component term for the endospore external encapsulating
+    structure, whose definition includes an exosporium in species that build one.
 - reference: GO:0043593
   notes: Gene Ontology cellular-component term for the endospore coat beneath the
     exosporium.
@@ -132,6 +143,10 @@ causal_graphs:
     label: endospore coat
     node_type: STRUCTURE
     grounding: GO:0043593
+  - node_id: external_encapsulating_structure
+    label: endospore external encapsulating structure
+    node_type: STRUCTURE
+    grounding: GO:0043591
   - node_id: host_environment_surface
     label: host or environmental surface
     node_type: ENVIRONMENTAL_FACTOR
@@ -158,6 +173,18 @@ causal_graphs:
       notes: GO:0043592 defines the exosporium as the bacterial endospore outermost
         layer outside the endospore coat.
   - subject: exosporium
+    predicate: is optional outer layer of
+    object: external_encapsulating_structure
+    description: In species that build an exosporium, the layer is part of the larger
+      external encapsulating structure surrounding the mature bacterial endospore.
+    evidence:
+    - reference: GO:0043591
+      notes: GO:0043591 defines the endospore external encapsulating structure as
+        including an exosporium in some species.
+    - reference: GO:0043592
+      notes: GO:0043592 identifies the exosporium as a bacterial endospore component
+        outside the coat.
+  - subject: exosporium
     predicate: faces
     object: host_environment_surface
     description: As the outside of exosporium-bearing spores, the exosporium is the
@@ -174,16 +201,20 @@ discussions:
   status: RESOLVED
   attaches_to:
   - identifier
+  - part_of
   - synonyms
   rationale: GO:0043592 explicitly denotes the bacterial endospore exosporium, whereas
     GO:0090642 denotes a microsporidian spore-wall exospore and UniProt SL-0367 uses
     Perispore generically for bacterial and eukaryotic outer spore surfaces.
-  resolution_note: Curated GO:0043592 as bacterial exosporium, kept the GO epispore,
-    exospore, and perispore synonyms, and retained UniProt SL-0367 only as record-level
-    boundary evidence.
+  resolution_note: Curated GO:0043592 as bacterial exosporium, linked it to GO:0043591
+    and GO:0005618, kept the GO epispore, exospore, and perispore synonyms, and retained
+    UniProt SL-0367 only as record-level boundary evidence.
   evidence:
   - reference: GO:0043592
     notes: GO:0043592 identifies exosporium as a bacterial endospore component.
+  - reference: GO:0043591
+    notes: GO:0043591 is the broader endospore external encapsulating structure that
+      contains the exosporium in exosporium-bearing species.
   - reference: GO:0090642
     notes: GO:0090642 identifies microsporidian-type exospore as a separate spore-wall
       component.

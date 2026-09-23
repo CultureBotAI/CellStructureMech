@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/exosporium.yaml
+  slug: exosporium
+session:
+  id: 2026-09-23T004527Z-codex-286ced
+  timestamp: '2026-09-23T00:45:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1339
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1338
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address exosporium PR review
+  details: 'Resolved PR #1338 review issue #1339 by linking GO:0043592 exosporium to GO:0043591
+    endospore external encapsulating structure in part_of, record evidence, the topology graph,
+    and the bacterial exosporium boundary discussion.'
