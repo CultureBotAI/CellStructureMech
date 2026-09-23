@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/phagocytic_vesicle.yaml
+  slug: phagocytic_vesicle
+session:
+  id: 2026-09-23T190646Z-claude-code-1ca7bc
+  timestamp: '2026-09-23T19:06:46Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1419
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1418
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address phagocytic vesicle membrane review
+  details: 'Resolved PR #1418 review issue #1419 by renaming the parent phagocytic vesicle
+    lipid component to phagocytic_vesicle_lipid_bilayer, marking it reviewed-label-only instead
+    of grounding it directly to GO:0030670, removing the parent graph component_ref so GO:0030670
+    remains modeled as the child membrane structure, and retargeting the resolved component-boundary
+    discussion.'
