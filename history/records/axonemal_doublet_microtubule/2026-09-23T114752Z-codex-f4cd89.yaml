@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_doublet_microtubule.yaml
+  slug: axonemal_doublet_microtubule
+session:
+  id: 2026-09-23T114752Z-codex-f4cd89
+  timestamp: '2026-09-23T11:47:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add axonemal doublet microtubule record
+  details: Created the GO:0097545 axonemal doublet microtubule record, linked it from GO:0005930
+    axoneme with has_part, replaced the old axoneme outer-doublet label-only component with
+    a GO-backed structure node, and moved unresolved microtubule inner protein and doublet-substructure
+    boundaries into a child-record TODO. Duplicate checking used rg --no-ignore --hidden before
+    creation and found no existing data/structures axonemal doublet microtubule, axonemal
+    outer doublet or GO:0097545 record.

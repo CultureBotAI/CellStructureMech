@@ -805,7 +805,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.79239573
+          "cosine_similarity": 0.78568751
         },
         {
           "identifier": "GO:0005931",
@@ -914,7 +914,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.73832444
+          "cosine_similarity": 0.73739479
         },
         {
           "identifier": "GO:0055040",
@@ -1408,9 +1408,9 @@
       "label": "axonemal central apparatus",
       "neighbors": [
         {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.80926781
+          "identifier": "GO:0097545",
+          "label": "axonemal doublet microtubule",
+          "cosine_similarity": 0.8692965
         },
         {
           "identifier": "GO:0033289",
@@ -1435,13 +1435,44 @@
       ]
     },
     {
+      "identifier": "GO:0097545",
+      "label": "axonemal doublet microtubule",
+      "neighbors": [
+        {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.8692965
+        },
+        {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.8380343
+        },
+        {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.82946106
+        },
+        {
+          "identifier": "GO:0020025",
+          "label": "subpellicular microtubule",
+          "cosine_similarity": 0.82210182
+        },
+        {
+          "identifier": "GO:0033289",
+          "label": "intraconoid microtubule",
+          "cosine_similarity": 0.81642703
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005931",
       "label": "axonemal nexin link",
       "neighbors": [
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.8203165
+          "cosine_similarity": 0.82034302
         },
         {
           "identifier": "GO:0036156",
@@ -1472,27 +1503,27 @@
         {
           "identifier": "GO:0005874",
           "label": "microtubule",
-          "cosine_similarity": 0.8571633
+          "cosine_similarity": 0.842829
         },
         {
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
-          "cosine_similarity": 0.85449792
+          "cosine_similarity": 0.83977117
+        },
+        {
+          "identifier": "GO:0097545",
+          "label": "axonemal doublet microtubule",
+          "cosine_similarity": 0.8380343
         },
         {
           "identifier": "GO:0005931",
           "label": "axonemal nexin link",
-          "cosine_similarity": 0.8203165
+          "cosine_similarity": 0.82034302
         },
         {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.80926781
-        },
-        {
-          "identifier": "GO:0005929",
-          "label": "cilium",
-          "cosine_similarity": 0.79239573
+          "identifier": "GO:0035253",
+          "label": "ciliary rootlet",
+          "cosine_similarity": 0.79591152
         }
       ]
     },
@@ -1606,7 +1637,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.7651513
+          "cosine_similarity": 0.76980226
         },
         {
           "identifier": "cellstructuremech:crescentin_filament",
@@ -1627,7 +1658,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.85449792
+          "cosine_similarity": 0.83977117
         },
         {
           "identifier": "GO:0005874",
@@ -1640,14 +1671,14 @@
           "cosine_similarity": 0.8348756
         },
         {
+          "identifier": "GO:0097545",
+          "label": "axonemal doublet microtubule",
+          "cosine_similarity": 0.80127567
+        },
+        {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.80116924
-        },
-        {
-          "identifier": "GO:0020025",
-          "label": "subpellicular microtubule",
-          "cosine_similarity": 0.77753647
         }
       ]
     },
@@ -1689,7 +1720,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.77553139
+          "cosine_similarity": 0.79591152
         },
         {
           "identifier": "GO:0036064",
@@ -1740,7 +1771,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.74871123
+          "cosine_similarity": 0.75357345
         }
       ]
     },
@@ -1854,7 +1885,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.68815465
+          "cosine_similarity": 0.69500643
         },
         {
           "identifier": "GO:0036286",
@@ -1916,17 +1947,17 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.78427438
+          "cosine_similarity": 0.78226575
+        },
+        {
+          "identifier": "GO:0097545",
+          "label": "axonemal doublet microtubule",
+          "cosine_similarity": 0.75060768
         },
         {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.73359778
-        },
-        {
-          "identifier": "GO:0036064",
-          "label": "ciliary basal body",
-          "cosine_similarity": 0.72655375
         }
       ]
     },
@@ -1950,14 +1981,14 @@
           "cosine_similarity": 0.83268359
         },
         {
+          "identifier": "GO:0097545",
+          "label": "axonemal doublet microtubule",
+          "cosine_similarity": 0.81642703
+        },
+        {
           "identifier": "GO:0097596",
           "label": "ventral disc supernumerary microtubule array",
           "cosine_similarity": 0.81149622
-        },
-        {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.80497087
         }
       ]
     },
@@ -1986,9 +2017,9 @@
           "cosine_similarity": 0.78370473
         },
         {
-          "identifier": "GO:0036286",
-          "label": "eisosome filament",
-          "cosine_similarity": 0.76828966
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.77197937
         }
       ]
     },
@@ -2045,7 +2076,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.8571633
+          "cosine_similarity": 0.842829
         },
         {
           "identifier": "GO:0097593",
@@ -2133,17 +2164,17 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.70916605
+          "cosine_similarity": 0.70268877
+        },
+        {
+          "identifier": "GO:0097545",
+          "label": "axonemal doublet microtubule",
+          "cosine_similarity": 0.69649288
         },
         {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.68868412
-        },
-        {
-          "identifier": "GO:0005929",
-          "label": "cilium",
-          "cosine_similarity": 0.65720316
         }
       ]
     },
@@ -2252,7 +2283,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.69430514
+          "cosine_similarity": 0.69178352
         },
         {
           "identifier": "GO:0036064",
@@ -2348,6 +2379,11 @@
           "cosine_similarity": 0.86313287
         },
         {
+          "identifier": "GO:0097545",
+          "label": "axonemal doublet microtubule",
+          "cosine_similarity": 0.82210182
+        },
+        {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.80110974
@@ -2356,11 +2392,6 @@
           "identifier": "GO:0097596",
           "label": "ventral disc supernumerary microtubule array",
           "cosine_similarity": 0.79575735
-        },
-        {
-          "identifier": "GO:0020010",
-          "label": "conoid",
-          "cosine_similarity": 0.7912867
         }
       ]
     },
@@ -2665,7 +2696,7 @@
         {
           "identifier": "GO:0005930",
           "label": "axoneme",
-          "cosine_similarity": 0.69946785
+          "cosine_similarity": 0.70213829
         },
         {
           "identifier": "cellstructuremech:mreb_filament",

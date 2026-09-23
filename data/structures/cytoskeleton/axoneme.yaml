@@ -92,28 +92,33 @@ curation_history:
     regulatory complex component with a GO-grounded graph structure, and narrowed
     the axoneme subcomplex TODO.
   llm_assisted: true
+- timestamp: '2026-09-23T11:46:26Z'
+  curator: codex
+  action: ADD_AXONEMAL_DOUBLET_MICROTUBULE_PART
+  changes: Linked GO:0097545 as an axoneme substructure, replaced the label-only outer-doublet
+    component with a GO-grounded graph structure, and narrowed the axoneme subcomplex
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-23T11:47:13Z'
+  curator: codex
+  action: REFINE_AXONEMAL_DOUBLET_GRAPH
+  changes: Restored inner- and outer-arm dynein drive edges to the flagellar bending
+    process and changed the outer-dynein-arm doublet edge from bridges to projects
+    from.
+  llm_assisted: true
+- timestamp: '2026-09-23T11:56:16Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1390 review issue #1392 by changing the singular axonemal
+    doublet microtubule graph predicate to forms scaffold of.'
+  llm_assisted: true
 has_part:
 - GO:0001534
 - GO:0005931
 - GO:1990716
 - GO:0036156
 - GO:0036157
-components:
-- component_id: outer_doublet_microtubules
-  label: outer doublet microtubules
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: This first Chlamydomonas axoneme record keeps broad axonemal substructure
-    labels until exact source-neutral groundings for the corresponding ciliary complexes
-    are reviewed.
-  role: Nine doublet microtubules that form the cylindrical backbone of the Chlamydomonas
-    axoneme.
-  evidence:
-  - reference: DOI:10.1126/science.1128618
-    notes: Nicastro et al. 2006 resolved the 9+2 microtubule arrangement in rapidly
-      frozen Chlamydomonas axonemes by cryoelectron tomography.
+- GO:0097545
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
@@ -153,6 +158,8 @@ evidence:
   notes: Gene Ontology cellular-component term for the inner dynein arm.
 - reference: GO:0036157
   notes: Gene Ontology cellular-component term for the outer dynein arm.
+- reference: GO:0097545
+  notes: Gene Ontology cellular-component term for the axonemal doublet microtubule.
 - reference: DOI:10.1126/science.1128618
   notes: Nicastro et al. 2006, 'The molecular architecture of axonemes revealed by
     cryoelectron tomography', Science.
@@ -178,10 +185,10 @@ causal_graphs:
     label: outer dynein arm
     node_type: STRUCTURE
     grounding: GO:0036157
-  - node_id: outer_doublet_microtubules
-    label: outer doublet microtubules
-    node_type: GENE_OR_PROTEIN
-    component_ref: outer_doublet_microtubules
+  - node_id: axonemal_doublet_microtubule
+    label: axonemal doublet microtubule
+    node_type: STRUCTURE
+    grounding: GO:0097545
   - node_id: radial_spoke
     label: radial spoke
     node_type: STRUCTURE
@@ -202,18 +209,20 @@ causal_graphs:
     label: Chlamydomonas flagellar bending
     node_type: BIOLOGICAL_PROCESS
   edges:
-  - subject: outer_doublet_microtubules
-    predicate: form scaffold of
+  - subject: axonemal_doublet_microtubule
+    predicate: forms scaffold of
     object: axoneme
-    description: Nine outer doublet microtubules form the cylindrical scaffold of
-      the Chlamydomonas 9+2 axoneme.
+    description: Nine axonemal doublet microtubules form the cylindrical scaffold
+      of the Chlamydomonas 9+2 axoneme.
     evidence:
+    - reference: GO:0097545
+      notes: GO defines the axonemal doublet microtubule as part of an axoneme.
     - reference: DOI:10.1126/science.1128618
       notes: Nicastro et al. 2006 resolved the outer doublet microtubules of the Chlamydomonas
         axoneme by cryoelectron tomography.
   - subject: inner_dynein_arm
     predicate: projects from
-    object: outer_doublet_microtubules
+    object: axonemal_doublet_microtubule
     description: Inner dynein arms project from outer doublet microtubules in Chlamydomonas
       axonemes.
     evidence:
@@ -223,8 +232,8 @@ causal_graphs:
     - reference: DOI:10.1126/science.1128618
       notes: Nicastro et al. 2006 visualized dynein-arm organization in 9+2 axonemes.
   - subject: outer_dynein_arm
-    predicate: bridges
-    object: outer_doublet_microtubules
+    predicate: projects from
+    object: axonemal_doublet_microtubule
     description: Outer dynein arms project from outer doublets in Chlamydomonas axonemes.
     evidence:
     - reference: GO:0036157
@@ -249,7 +258,7 @@ causal_graphs:
         in the Chlamydomonas axoneme.
   - subject: axonemal_nexin_link
     predicate: links
-    object: outer_doublet_microtubules
+    object: axonemal_doublet_microtubule
     description: The axonemal nexin link connects neighboring outer doublet microtubules.
     evidence:
     - reference: GO:0005931
@@ -282,13 +291,13 @@ causal_graphs:
         model for microtubule sliding force.
 discussions:
 - discussion_id: resolve_chlamydomonas_axoneme_subcomplex_boundaries
-  prompt: Resolve exact source-neutral groundings and boundaries for microtubule inner
-    proteins and additional Chlamydomonas axoneme subcomplexes.
+  prompt: Resolve exact source-neutral groundings and boundaries for additional Chlamydomonas
+    axoneme subcomplexes.
   kind: CURATION_TODO
   status: OPEN
-  rationale: The radial spoke, axonemal central apparatus, outer and inner dynein
-    arms, and axonemal nexin link now have GO-backed child-record boundaries. The
-    Chlamydomonas axoneme has additional named regulatory and microtubule-associated
+  rationale: The axonemal doublet microtubule, radial spoke, axonemal central apparatus,
+    outer and inner dynein arms, and axonemal nexin link now have GO-backed child-record
+    boundaries. The Chlamydomonas axoneme has additional named regulatory and microtubule-associated
     complexes whose exact source-neutral groundings and record boundaries still need
     review.
   evidence:
