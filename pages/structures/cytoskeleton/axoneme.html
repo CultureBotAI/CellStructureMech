@@ -20,7 +20,7 @@
 <h1>axoneme</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005930"><code>GO:0005930</code></a> · CYTOSKELETON · FILAMENT · <span class="status">PROPOSED</span></p>
 <p class="definition">A microtubule-based bundle with associated proteins that forms the core of a eukaryotic cilium or flagellum. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005930"><code>GO:0005930</code></a>]</small></p>
-
+<p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0036157"><code>GO:0036157</code></a> </p>
 <h2>Components</h2>
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-outer_doublet_microtubules"><td>outer doublet microtubules</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Nine doublet microtubules that form the cylindrical backbone of the Chlamydomonas axoneme.<ul class="evidence"><li><a href="https://doi.org/10.1126/science.1128618"><code>DOI:10.1126/science.1128618</code></a> <small>Nicastro et al. 2006 resolved the 9+2 microtubule arrangement in rapidly frozen Chlamydomonas axonemes by cryoelectron tomography.</small></li></ul></td></tr>
@@ -53,14 +53,14 @@
 </tbody></table>
 
 <h2>Discussions</h2>
-<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings and boundaries for outer dynein arms, inner dynein arms, central-pair projections, radial spokes, nexin-dynein regulatory complex, microtubule inner proteins, and additional Chlamydomonas axoneme subcomplexes. <small>The Chlamydomonas axoneme has many named regulatory, projection, and microtubule-associated complexes. This first record curates coarse substructure classes until their exact complex-level boundaries can be reviewed.</small></li></ul>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings and boundaries for inner dynein arms, central-pair projections, radial spokes, nexin-dynein regulatory complex, microtubule inner proteins, and additional Chlamydomonas axoneme subcomplexes. <small>The outer dynein arm now has its own GO:0036157 record. The Chlamydomonas axoneme has additional named regulatory, projection and microtubule-associated complexes whose exact source-neutral groundings and record boundaries still need review.</small></li></ul>
 
 
 <h2>Evidence</h2>
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005930"><code>GO:0005930</code></a> <small>Gene Ontology cellular-component term for the axoneme.</small></li><li><a href="https://doi.org/10.1126/science.1128618"><code>DOI:10.1126/science.1128618</code></a> <small>Nicastro et al. 2006, &#39;The molecular architecture of axonemes revealed by cryoelectron tomography&#39;, Science.</small></li><li><a href="https://doi.org/10.1083/jcb.200908067"><code>DOI:10.1083/jcb.200908067</code></a> <small>Heuser et al. 2009, &#39;The dynein regulatory complex is the nexin link and a major regulatory node in cilia and flagella&#39;, Journal of Cell Biology.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-11T09:32:19Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T09:33:06Z</code> codex · EXPANDED_RECORD — Added Chlamydomonas axoneme substructures, species-level taxonomic scope, a motility function, GO and DOI evidence, a nonmechanistic axonemal motility graph, and a subcomplex-boundary TODO.</li><li><code>2026-09-11T09:41:19Z</code> codex · ADDRESSED_REVIEW — Resolved PR #452 review issues #453 and #454 by broadening the GO:0005930 definition beyond motile 9+2 axonemes and narrowing motility function and graph text to Chlamydomonas flagellar evidence.</li></ul>
+<ul class="history"><li><code>2026-09-11T09:32:19Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T09:33:06Z</code> codex · EXPANDED_RECORD — Added Chlamydomonas axoneme substructures, species-level taxonomic scope, a motility function, GO and DOI evidence, a nonmechanistic axonemal motility graph, and a subcomplex-boundary TODO.</li><li><code>2026-09-11T09:41:19Z</code> codex · ADDRESSED_REVIEW — Resolved PR #452 review issues #453 and #454 by broadening the GO:0005930 definition beyond motile 9+2 axonemes and narrowing motility function and graph text to Chlamydomonas flagellar evidence.</li><li><code>2026-09-23T08:55:37Z</code> codex · ADD_OUTER_DYNEIN_ARM_PART — Linked GO:0036157 as an axoneme substructure and narrowed the subcomplex-boundary TODO to the remaining unresolved Chlamydomonas axoneme complexes.</li></ul>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/axoneme.yaml"><code>data/structures/cytoskeleton/axoneme.yaml</code></a></p>
 </main>
 <footer>

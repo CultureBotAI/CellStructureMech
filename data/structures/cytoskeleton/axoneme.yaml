@@ -26,6 +26,14 @@ curation_history:
     definition beyond motile 9+2 axonemes and narrowing motility function and graph
     text to Chlamydomonas flagellar evidence.'
   llm_assisted: true
+- timestamp: '2026-09-23T08:55:37Z'
+  curator: codex
+  action: ADD_OUTER_DYNEIN_ARM_PART
+  changes: Linked GO:0036157 as an axoneme substructure and narrowed the subcomplex-boundary
+    TODO to the remaining unresolved Chlamydomonas axoneme complexes.
+  llm_assisted: true
+has_part:
+- GO:0036157
 components:
 - component_id: outer_doublet_microtubules
   label: outer doublet microtubules
@@ -225,10 +233,9 @@ causal_graphs:
         dynein in a model for microtubule sliding force.
 discussions:
 - discussion_id: resolve_chlamydomonas_axoneme_subcomplex_boundaries
-  prompt: Resolve exact source-neutral groundings and boundaries for outer dynein
-    arms, inner dynein arms, central-pair projections, radial spokes, nexin-dynein
-    regulatory complex, microtubule inner proteins, and additional Chlamydomonas axoneme
-    subcomplexes.
+  prompt: Resolve exact source-neutral groundings and boundaries for inner dynein
+    arms, central-pair projections, radial spokes, nexin-dynein regulatory complex,
+    microtubule inner proteins, and additional Chlamydomonas axoneme subcomplexes.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
@@ -236,9 +243,10 @@ discussions:
   - components#central_pair_apparatus
   - components#nexin_dynein_regulatory_complex
   - components#radial_spokes
-  rationale: The Chlamydomonas axoneme has many named regulatory, projection, and
-    microtubule-associated complexes. This first record curates coarse substructure
-    classes until their exact complex-level boundaries can be reviewed.
+  rationale: The outer dynein arm now has its own GO:0036157 record. The Chlamydomonas
+    axoneme has additional named regulatory, projection and microtubule-associated
+    complexes whose exact source-neutral groundings and record boundaries still need
+    review.
   evidence:
   - reference: DOI:10.1126/science.1128618
     notes: Nicastro et al. 2006 resolved repeated and asymmetric axonemal densities

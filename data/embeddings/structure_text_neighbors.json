@@ -1423,14 +1423,14 @@
           "cosine_similarity": 0.79876137
         },
         {
+          "identifier": "GO:0036157",
+          "label": "outer dynein arm",
+          "cosine_similarity": 0.79566269
+        },
+        {
           "identifier": "GO:0033289",
           "label": "intraconoid microtubule",
           "cosine_similarity": 0.78815658
-        },
-        {
-          "identifier": "GO:0020025",
-          "label": "subpellicular microtubule",
-          "cosine_similarity": 0.78217562
         }
       ]
     },
@@ -2020,6 +2020,37 @@
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
           "cosine_similarity": 0.79860145
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0036157",
+      "label": "outer dynein arm",
+      "neighbors": [
+        {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.79566269
+        },
+        {
+          "identifier": "GO:0005929",
+          "label": "cilium",
+          "cosine_similarity": 0.65720316
+        },
+        {
+          "identifier": "GO:0036064",
+          "label": "ciliary basal body",
+          "cosine_similarity": 0.65255706
+        },
+        {
+          "identifier": "GO:0020010",
+          "label": "conoid",
+          "cosine_similarity": 0.6373738
+        },
+        {
+          "identifier": "GO:0005826",
+          "label": "actomyosin contractile ring",
+          "cosine_similarity": 0.63632757
         }
       ]
     },

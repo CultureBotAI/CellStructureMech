@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/outer_dynein_arm.yaml
+  slug: outer_dynein_arm
+session:
+  id: 2026-09-23T085622Z-codex-3c5935
+  timestamp: '2026-09-23T08:56:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add outer dynein arm record
+  details: Created the GO:0036157 outer dynein arm record, linked it from GO:0005930 axoneme
+    with has_part, and left outer-arm heavy-chain, intermediate-chain and light-chain component
+    groundings as reviewed label-only with a CURATION_TODO. Verified GO:0036157, GO:0005858
+    and GO:0051012 with local OAK, verified no existing outer dynein arm duplicate with rg
+    --no-ignore --hidden across data/structures, history, curation, research, docs and README.md,
+    and validated both edited records with LinkML plus strict closed-schema validation.
