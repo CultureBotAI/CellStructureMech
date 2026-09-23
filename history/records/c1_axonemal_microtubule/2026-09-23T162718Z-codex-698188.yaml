@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+  slug: c1_axonemal_microtubule
+session:
+  id: 2026-09-23T162718Z-codex-698188
+  timestamp: '2026-09-23T16:27:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1409
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1408
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address C1 axonemal microtubule PR review TODO
+  details: 'Resolved PR #1408 review issue #1409 by expanding the GO:1990719 C1 graph scope
+    note and TODO to leave exact C1 microtubule-wall constituents unresolved alongside the
+    C1a/C1b/C1c/C1d/C1e/C1f projection subcomplexes, protein-family groundings and copy numbers.'

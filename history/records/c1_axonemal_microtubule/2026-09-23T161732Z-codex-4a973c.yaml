@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+  slug: c1_axonemal_microtubule
+session:
+  id: 2026-09-23T161732Z-codex-4a973c
+  timestamp: '2026-09-23T16:17:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add C1 axonemal microtubule record
+  details: Created the GO:1990719 C1 axonemal microtubule record, linked it to the GO:0097540
+    axonemal central pair, captured C1-specific projection architecture from Carbajal-Gonzalez
+    et al. 2013 as a nonmechanistic graph, and narrowed the central-pair TODO to the remaining
+    exact C2 axonemal microtubule child record. Duplicate checks used rg --no-ignore --hidden
+    across data/structures, history/records, research, docs, pages, README.md and build plus
+    a file-name search across data/structures, history, pages, reports and build, finding
+    no existing data/structures C1 axonemal microtubule or GO:1990719 record.

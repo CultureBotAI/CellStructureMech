@@ -25,6 +25,12 @@ curation_history:
   changes: 'Resolved PR #1406 review issue #1407 by keeping exact named projection
     subcomplex boundaries in the central-pair graph scope note.'
   llm_assisted: true
+- timestamp: '2026-09-23T16:16:58Z'
+  curator: codex
+  action: ADD_C1_AXONEMAL_MICROTUBULE_CHILD
+  changes: Narrowed the axonemal central-pair TODO and graph scope note after splitting
+    GO:1990719 into a C1 axonemal microtubule child record.
+  llm_assisted: true
 synonyms:
 - synonym_text: axonemal microtubule central pair
   synonym_type: EXACT_SYNONYM
@@ -94,7 +100,7 @@ causal_graphs:
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: This graph records coarse C1/C2 microtubule, bridge and projection
-    parthood and leaves exact C1/C2 child records, named projection subcomplex boundaries,
+    parthood and leaves the exact C2 child record, named projection subcomplex boundaries,
     microtubule-specific components and copy-number geometry for later curation.
   nodes:
   - node_id: c1_axonemal_microtubule
@@ -173,19 +179,16 @@ causal_graphs:
     - reference: GO:0097540
       notes: GO places the axonemal central pair within the axonemal central apparatus.
 discussions:
-- discussion_id: resolve_c1_c2_microtubule_children
-  prompt: Add exact C1 and C2 axonemal microtubule child records and resolve their
-    microtubule-specific component boundaries.
+- discussion_id: resolve_c2_microtubule_child
+  prompt: Add an exact C2 axonemal microtubule child record and resolve microtubule-specific
+    component boundaries.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - causal_graphs#chlamydomonas_central_pair_architecture
-  rationale: GO exactly identifies the C1 and C2 axonemal microtubules, but this pass
-    only curates their parent GO:0097540 central pair and leaves the individual asymmetric
-    microtubules for later records.
+  rationale: GO exactly identifies the C2 axonemal microtubule, but this pass leaves
+    the second asymmetric microtubule of GO:0097540 for a later record.
   evidence:
-  - reference: GO:1990719
-    notes: GO exactly identifies the C1 axonemal microtubule.
   - reference: GO:1990720
     notes: GO exactly identifies the C2 axonemal microtubule.
   posed_by: codex
