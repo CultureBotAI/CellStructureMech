@@ -1,0 +1,172 @@
+identifier: GO:0005931
+label: axonemal nexin link
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex in ciliary and flagellar axonemes that interconnects
+  neighboring outer doublet microtubules.
+definition_source: GO:0005931
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-23T11:14:29Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-23T11:15:38Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added axoneme parthood, N-DRC synonymy, a reviewed-label-only N-DRC subunit
+    component, Chlamydomonas scope, cilium-movement regulation function, GO and DOI
+    evidence, a nonmechanistic N-DRC graph, and a component-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-23T11:16:02Z'
+  curator: codex
+  action: REFINE_AXONEMAL_NEXIN_LINK_GRAPH
+  changes: Changed the axonemal nexin-link graph edge from regulates to participates
+    in so the structure points at the cilium-movement regulation process without regulating
+    the regulation node itself.
+  llm_assisted: true
+synonyms:
+- synonym_text: axonemal interdoublet link
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005931
+- synonym_text: nexin-dynein regulatory complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1083/jcb.200908067
+- synonym_text: N-DRC
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1073/pnas.1910960116
+part_of:
+- GO:0005930
+components:
+- component_id: axonemal_nexin_link_subunits
+  label: axonemal nexin-link subunits
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE for the complete N-DRC subunit set
+    was verified; individual DRC subunit families need separate InterPro, Pfam or
+    equivalent review.
+  role: Protein subunits that build the axonemal nexin-link complex.
+  evidence:
+  - reference: GO:0005931
+    notes: GO identifies the axonemal nexin link as a protein complex.
+  - reference: DOI:10.1073/pnas.1910960116
+    notes: Gui et al. 2019 used Chlamydomonas N-DRC mutants and tagged subunits to
+      localize scaffold and associated subunits in the axonemal nexin-dynein regulatory
+      complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar axonemes carry axonemal nexin links that have been
+    resolved by cryoelectron tomography.
+  reference: DOI:10.1083/jcb.200908067
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose wild-type and N-DRC mutant flagellar axonemes were
+    compared by cryoelectron tomography.
+  reference: DOI:10.1083/jcb.200908067
+functions:
+- function_id: regulation_of_cilium_movement
+  label: regulation of cilium movement
+  grounding: GO:0003352
+  description: The Chlamydomonas axonemal nexin link connects neighboring outer doublets
+    and forms part of the dynein-regulatory network that coordinates flagellar beating.
+  evidence:
+  - reference: DOI:10.1083/jcb.200908067
+    notes: Heuser et al. 2009 identified the dynein regulatory complex as the axonemal
+      nexin link in Chlamydomonas.
+  - reference: DOI:10.1073/pnas.1910960116
+    notes: Gui et al. 2019 refined Chlamydomonas N-DRC subunit positions and connections
+      to neighboring axonemal structures.
+evidence:
+- reference: GO:0005931
+  notes: Gene Ontology cellular-component term for the axonemal nexin link.
+- reference: GO:0005930
+  notes: Gene Ontology places the axonemal nexin link within the axoneme.
+- reference: DOI:10.1083/jcb.200908067
+  notes: Heuser et al. 2009, 'The dynein regulatory complex is the nexin link and
+    a major regulatory node in cilia and flagella', Journal of Cell Biology.
+- reference: DOI:10.1073/pnas.1910960116
+  notes: Gui et al. 2019, 'Scaffold subunits support associated subunit assembly in
+    the Chlamydomonas ciliary nexin-dynein regulatory complex', PNAS.
+causal_graphs:
+- graph_id: chlamydomonas_axonemal_nexin_link_regulation
+  title: The axonemal nexin link connects and regulates doublets
+  description: In Chlamydomonas flagella, N-DRC subunits form an axonemal nexin link
+    that connects neighboring outer doublet microtubules and contributes to dynein
+    regulation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the coarse GO:0005931 complex boundary and leaves
+    the exact family groundings and subcomplex memberships of individual DRC proteins
+    unresolved.
+  nodes:
+  - node_id: axonemal_nexin_link_subunits
+    label: axonemal nexin-link subunits
+    node_type: GENE_OR_PROTEIN
+    component_ref: axonemal_nexin_link_subunits
+  - node_id: axonemal_nexin_link
+    label: axonemal nexin link
+    node_type: STRUCTURE
+    grounding: GO:0005931
+  - node_id: outer_doublet_microtubules
+    label: outer doublet microtubules
+    node_type: STRUCTURE
+  - node_id: regulation_of_cilium_movement
+    label: regulation of cilium movement
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0003352
+  edges:
+  - subject: axonemal_nexin_link_subunits
+    predicate: are part of
+    object: axonemal_nexin_link
+    description: N-DRC subunits are constituents of the axonemal nexin link.
+    evidence:
+    - reference: DOI:10.1073/pnas.1910960116
+      notes: Gui et al. 2019 structurally localized scaffold and associated subunits
+        within the Chlamydomonas N-DRC.
+  - subject: axonemal_nexin_link
+    predicate: links
+    object: outer_doublet_microtubules
+    description: The axonemal nexin link interconnects neighboring outer doublet microtubules.
+    evidence:
+    - reference: GO:0005931
+      notes: GO defines the axonemal nexin link by its interconnections between axonemal
+        outer doublets.
+    - reference: DOI:10.1083/jcb.200908067
+      notes: Heuser et al. 2009 identified the Chlamydomonas dynein regulatory complex
+        as the nexin link.
+  - subject: axonemal_nexin_link
+    predicate: participates in
+    object: regulation_of_cilium_movement
+    description: The axonemal nexin link forms part of the regulatory network for
+      Chlamydomonas flagellar motility.
+    evidence:
+    - reference: DOI:10.1083/jcb.200908067
+      notes: Heuser et al. 2009 described the DRC/nexin link as a regulatory node
+        in cilia and flagella.
+    - reference: DOI:10.1073/pnas.1910960116
+      notes: Gui et al. 2019 analyzed N-DRC structural connections implicated in flagellar
+        beat regulation.
+discussions:
+- discussion_id: resolve_axonemal_nexin_link_subunit_groundings
+  prompt: Resolve exact source-neutral groundings for DRC1/2/4 scaffold subunits and
+    DRC3/5-8/11 associated subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#axonemal_nexin_link_subunits
+  rationale: GO exactly identifies the axonemal nexin link as a protein complex, but
+    this curation pass did not verify exact InterPro, Pfam or other source-neutral
+    accessions for the Chlamydomonas DRC subunit families or their conserved ortholog
+    groups.
+  evidence:
+  - reference: DOI:10.1073/pnas.1910960116
+    notes: Gui et al. 2019 split the N-DRC into DRC1/2/4 core scaffold subunits and
+      DRC3/5-8/11 associated subunits.
+  posed_by: codex
+  posed_date: '2026-09-23'

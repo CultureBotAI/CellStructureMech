@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_nexin_link.yaml
+  slug: axonemal_nexin_link
+session:
+  id: 2026-09-23T111635Z-codex-02727a
+  timestamp: '2026-09-23T11:16:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add axonemal nexin link record
+  details: Created the GO:0005931 axonemal nexin link record, linked it from GO:0005930 axoneme
+    with has_part, and moved the old axoneme nexin-dynein regulatory complex component to
+    a GO-backed structure node. Kept the N-DRC subunit cohort as reviewed label-only because
+    no exact source-neutral subunit-family grounding was verified. Duplicate checking used
+    rg --no-ignore --hidden before creation and found no existing data/structures axonemal
+    nexin link or nexin-dynein regulatory complex record.
