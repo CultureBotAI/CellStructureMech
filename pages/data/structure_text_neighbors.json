@@ -12227,6 +12227,11 @@
       "label": "DNA gyrase complex",
       "neighbors": [
         {
+          "identifier": "GO:0009340",
+          "label": "DNA topoisomerase IV complex",
+          "cosine_similarity": 0.69423383
+        },
+        {
           "identifier": "GO:0000148",
           "label": "1,3-beta-D-glucan synthase complex",
           "cosine_similarity": 0.67564253
@@ -12245,11 +12250,37 @@
           "identifier": "GO:0022624",
           "label": "proteasome accessory complex",
           "cosine_similarity": 0.6571678
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009340",
+      "label": "DNA topoisomerase IV complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0120217",
+          "label": "DNA gyrase complex",
+          "cosine_similarity": 0.69423383
         },
         {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.64915521
+          "identifier": "GO:0005839",
+          "label": "proteasome core complex",
+          "cosine_similarity": 0.63678036
+        },
+        {
+          "identifier": "GO:0031080",
+          "label": "nuclear pore outer ring",
+          "cosine_similarity": 0.62817232
+        },
+        {
+          "identifier": "GO:0022624",
+          "label": "proteasome accessory complex",
+          "cosine_similarity": 0.62556293
+        },
+        {
+          "identifier": "GO:0000502",
+          "label": "proteasome complex",
+          "cosine_similarity": 0.62293694
         }
       ]
     },

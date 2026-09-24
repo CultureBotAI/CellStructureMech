@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_topoisomerase_iv_complex.yaml
+  slug: dna_topoisomerase_iv_complex
+session:
+  id: 2026-09-24T104547Z-codex-e0158e
+  timestamp: '2026-09-24T10:45:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1479
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1478
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  - curation_history
+  summary: Remove unsupported Topo IV synonym
+  details: 'Addressed review issue #1479 from PR #1478 by removing the Topo IV exact synonym
+    because PMID:8227000 was verified as primary E. coli topoisomerase IV evidence but not
+    as direct evidence for that abbreviation. Revalidated the DNA topoisomerase IV YAML with
+    targeted LinkML and strict validation before regenerating derived artifacts.'
