@@ -36,6 +36,12 @@ curation_history:
     evidence through reachable PMID:12194857 instead of the unreadable Developmental
     Cell DOI.'
   llm_assisted: true
+- timestamp: '2026-09-24T00:44:10Z'
+  curator: codex
+  action: ADD_ESCRT_PARENT
+  changes: 'Resolved PR #1436 review issue #1437 by linking GO:0000815 ESCRT III complex
+    to its GO:0036452 ESCRT complex parent.'
+  llm_assisted: true
 synonyms:
 - synonym_text: ESCRT-III complex
   synonym_type: EXACT_SYNONYM
@@ -159,6 +165,8 @@ functions:
 evidence:
 - reference: GO:0000815
   notes: Gene Ontology cellular-component term for ESCRT III complex.
+- reference: GO:0036452
+  notes: Gene Ontology cellular-component parent term for the ESCRT complex class.
 - reference: GO:0071985
   notes: Gene Ontology biological-process term for the multivesicular body sorting
     pathway.
@@ -295,3 +303,5 @@ discussions:
   - reference: DOI:10.1016/j.devcel.2011.05.015
   posed_by: codex
   posed_date: '2026-09-12'
+parent_structures:
+- GO:0036452

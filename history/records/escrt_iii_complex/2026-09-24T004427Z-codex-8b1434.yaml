@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/escrt_iii_complex.yaml
+  slug: escrt_iii_complex
+session:
+  id: 2026-09-24T004427Z-codex-8b1434
+  timestamp: '2026-09-24T00:44:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1437
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1436
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - mereology
+  - evidence
+  summary: Link ESCRT III complex to ESCRT parent
+  details: 'Resolved PR #1436 review issue #1437 by adding GO:0036452 ESCRT complex as the
+    parent_structures value for GO:0000815 ESCRT III complex and adding record-level GO:0036452
+    evidence, matching the direct QuickGO is_a child relationship and the parent links already
+    present on the ESCRT-0, ESCRT-I and ESCRT-II child records.'
