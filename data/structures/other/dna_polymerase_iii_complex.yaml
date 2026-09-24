@@ -1,0 +1,232 @@
+identifier: GO:0009360
+label: DNA polymerase III complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A DNA polymerase III holoenzyme complex organized into a Pol III core,
+  a beta sliding-clamp processivity factor, and a clamp-loader complex that together
+  support processive DNA replication.
+definition_source: GO:0009360
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T11:03:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T11:05:01Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added DNA polymerase complex parentage, the GO-backed holoenzyme synonym,
+    GO-grounded Pol III core, beta-clamp, and clamp-loader subcomplex components,
+    an Escherichia coli K-12 canonical example, DNA-directed DNA polymerase function
+    evidence, and a compact processive DNA synthesis graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: DNA polymerase III holoenzyme complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009360
+parent_structures:
+- GO:0042575
+components:
+- component_id: pol_iii_core
+  label: DNA polymerase III, core complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0044776
+  role: Polymerase and proofreading-exonuclease subassembly of the DNA polymerase
+    III holoenzyme.
+  evidence:
+  - reference: GO:0044776
+    notes: GO:0044776 defines the DNA polymerase III core complex as the alpha-, epsilon-,
+      and theta-subunit assembly that carries out polymerase and 3'-5' exonuclease
+      proofreading activities.
+  - reference: GO:0009360
+    notes: GO:0009360 lists the Pol III core as one of the three functionally essential
+      DNA polymerase III holoenzyme subassemblies.
+- component_id: beta_sliding_clamp
+  label: DNA polymerase III, beta sliding clamp processivity factor complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0044775
+  role: Sliding-clamp processivity factor that tethers the Pol III core to template
+    DNA during high-speed replication.
+  evidence:
+  - reference: GO:0044775
+    notes: GO:0044775 defines the beta sliding-clamp processivity factor as the DNA
+      polymerase III holoenzyme subcomplex that tethers the catalytic polymerase subunit
+      to DNA.
+  - reference: GO:0009360
+    notes: GO:0009360 lists the beta sliding-clamp processivity factor as one of the
+      three functionally essential DNA polymerase III holoenzyme subassemblies.
+- component_id: clamp_loader
+  label: DNA polymerase III, clamp loader complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0043846
+  role: Clamp-loading subassembly that places the beta processivity factor on the
+    primer-template and helps organize leading- and lagging-strand replication.
+  evidence:
+  - reference: GO:0043846
+    notes: GO:0043846 defines the DNA polymerase III clamp-loader complex as a heptamer
+      that includes DnaX tau and gamma products plus the chi/psi subcomplex.
+  - reference: GO:0009360
+    notes: GO:0009360 states that the clamp-loading complex assembles the beta processivity
+      factor onto the primer template.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference strain for the reviewed UniProtKB DnaX tau/gamma subunit accession
+    cited by the GO:0009360 definition.
+  reference: UniProtKB:P06710
+functions:
+- function_id: dna_directed_dna_polymerase_activity
+  label: DNA-directed DNA polymerase activity
+  grounding: GO:0003887
+  description: The DNA polymerase III holoenzyme carries out template-directed DNA
+    strand extension while its clamp-loader and beta-clamp subassemblies support processivity
+    at the replication fork.
+  evidence:
+  - reference: GO:0003887
+    notes: GO:0003887 defines DNA-directed DNA polymerase activity as DNA-template-directed
+      extension of the 3'-end of a DNA strand.
+  - reference: GO:0009360
+    notes: GO:0009360 defines the DNA polymerase III holoenzyme as a Pol III core,
+      beta sliding-clamp, and clamp-loader assembly that functions at the replication
+      fork.
+evidence:
+- reference: GO:0009360
+  notes: Gene Ontology cellular-component term for the DNA polymerase III complex.
+- reference: GO:0042575
+  notes: Gene Ontology cellular-component term for DNA polymerase complexes, the broader
+    class that includes the DNA polymerase III complex.
+- reference: GO:0044776
+  notes: Gene Ontology cellular-component term for the DNA polymerase III core complex.
+- reference: GO:0044775
+  notes: Gene Ontology cellular-component term for the DNA polymerase III beta sliding-clamp
+    processivity factor complex.
+- reference: GO:0043846
+  notes: Gene Ontology cellular-component term for the DNA polymerase III clamp-loader
+    complex.
+- reference: GO:0003887
+  notes: Gene Ontology molecular-function term for DNA-directed DNA polymerase activity.
+- reference: GO:0006260
+  notes: Gene Ontology biological-process term for DNA replication.
+- reference: GO:0003689
+  notes: Gene Ontology molecular-function term for DNA clamp-loader activity.
+- reference: UniProtKB:P06710
+  notes: UniProtKB reviewed Escherichia coli K-12 entry for DnaX, the DNA polymerase
+    III tau/gamma subunit referenced by the GO:0009360 definition.
+- reference: PMID:11525729
+  notes: PubMed identifier for Jeruzalmi, O'Donnell, and Kuriyan 2001, Crystal structure
+    of the processivity clamp loader gamma complex of E. coli DNA polymerase III.
+- reference: DOI:10.1016/s0092-8674(01)00463-9
+  notes: DOI for Jeruzalmi, O'Donnell, and Kuriyan 2001 as reported by PubMed.
+- reference: PMID:12940977
+  notes: 'PubMed identifier for McHenry 2003, Chromosomal replicases as asymmetric
+    dimers: studies of subunit arrangement and functional consequences.'
+- reference: DOI:10.1046/j.1365-2958.2003.03645.x
+  notes: DOI for McHenry 2003 as reported by PubMed.
+causal_graphs:
+- graph_id: pol_iii_processive_dna_synthesis
+  title: DNA polymerase III carries out processive DNA synthesis
+  description: The DNA polymerase III holoenzyme combines the Pol III core, beta sliding
+    clamp, and clamp-loader subassemblies to support DNA-template-directed primer
+    extension.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-supported subassembly contributions and primer-template
+    engagement without resolving ATPase cycling, clamp-ring opening, polymerase exchange,
+    or leading- versus lagging-strand coordination.
+  nodes:
+  - node_id: dna_polymerase_iii_complex
+    label: DNA polymerase III complex
+    node_type: STRUCTURE
+    grounding: GO:0009360
+  - node_id: pol_iii_core
+    label: DNA polymerase III, core complex
+    node_type: STRUCTURE
+    grounding: GO:0044776
+    component_ref: pol_iii_core
+  - node_id: beta_sliding_clamp
+    label: DNA polymerase III, beta sliding clamp processivity factor complex
+    node_type: STRUCTURE
+    grounding: GO:0044775
+    component_ref: beta_sliding_clamp
+  - node_id: clamp_loader
+    label: DNA polymerase III, clamp loader complex
+    node_type: STRUCTURE
+    grounding: GO:0043846
+    component_ref: clamp_loader
+  - node_id: primer_template_dna
+    label: primer-template DNA
+    node_type: GENETIC_ELEMENT
+  - node_id: dna_directed_dna_polymerase_activity
+    label: DNA-directed DNA polymerase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0003887
+  - node_id: dna_replication
+    label: DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+  edges:
+  - subject: dna_polymerase_iii_complex
+    predicate: enables
+    object: dna_directed_dna_polymerase_activity
+    description: The DNA polymerase III holoenzyme carries out DNA-template-directed
+      DNA polymerase activity.
+    evidence:
+    - reference: GO:0009360
+      notes: GO:0009360 defines the DNA polymerase III holoenzyme around the Pol III
+        core that carries out DNA polymerase activity.
+    - reference: GO:0003887
+      notes: GO:0003887 defines DNA-directed DNA polymerase activity.
+  - subject: pol_iii_core
+    predicate: contributes to
+    object: dna_directed_dna_polymerase_activity
+    description: The Pol III core is the holoenzyme subassembly that carries out polymerase
+      activity.
+    evidence:
+    - reference: GO:0044776
+      notes: GO:0044776 defines the core as the DNA polymerase III subcomplex that
+        carries out polymerase and 3'-5' exonuclease proofreading activities.
+  - subject: beta_sliding_clamp
+    predicate: tethers
+    object: pol_iii_core
+    description: The beta sliding clamp processivity factor tethers the catalytic
+      polymerase subunit to DNA.
+    evidence:
+    - reference: GO:0044775
+      notes: GO:0044775 defines the beta sliding-clamp complex by its responsibility
+        for tethering the catalytic subunit of DNA polymerase to DNA during high-speed
+        replication.
+  - subject: clamp_loader
+    predicate: loads
+    object: beta_sliding_clamp
+    description: The clamp-loader complex assembles the beta processivity factor onto
+      the primer template.
+    evidence:
+    - reference: GO:0009360
+      notes: GO:0009360 states that the DNA polymerase III clamp-loading complex assembles
+        the beta processivity factor onto the primer template.
+    - reference: GO:0003689
+      notes: GO:0003689 defines DNA clamp-loader activity.
+  - subject: dna_directed_dna_polymerase_activity
+    predicate: extends
+    object: primer_template_dna
+    description: DNA-directed DNA polymerase activity extends the 3'-end of a DNA
+      strand one nucleotide at a time using DNA as template.
+    evidence:
+    - reference: GO:0003887
+      notes: GO:0003887 defines DNA-directed DNA polymerase activity as template-directed
+        extension of the 3'-end of a DNA strand.
+  - subject: dna_polymerase_iii_complex
+    predicate: supports
+    object: dna_replication
+    description: The DNA polymerase III complex supports DNA replication at the replication
+      fork.
+    evidence:
+    - reference: GO:0009360
+      notes: GO:0009360 defines the DNA polymerase III holoenzyme as a replication-fork
+        complex.
+    - reference: GO:0006260
+      notes: GO:0006260 is the biological-process term for DNA replication.
