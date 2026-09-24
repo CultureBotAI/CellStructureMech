@@ -12254,6 +12254,37 @@
       ]
     },
     {
+      "identifier": "GO:0009360",
+      "label": "DNA polymerase III complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0044777",
+          "label": "single-stranded DNA-binding protein complex",
+          "cosine_similarity": 0.69125267
+        },
+        {
+          "identifier": "GO:0120217",
+          "label": "DNA gyrase complex",
+          "cosine_similarity": 0.65628115
+        },
+        {
+          "identifier": "GO:0009340",
+          "label": "DNA topoisomerase IV complex",
+          "cosine_similarity": 0.63940843
+        },
+        {
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.62206563
+        },
+        {
+          "identifier": "GO:0000776",
+          "label": "kinetochore",
+          "cosine_similarity": 0.62114046
+        }
+      ]
+    },
+    {
       "identifier": "GO:0009340",
       "label": "DNA topoisomerase IV complex",
       "neighbors": [
@@ -12261,6 +12292,11 @@
           "identifier": "GO:0120217",
           "label": "DNA gyrase complex",
           "cosine_similarity": 0.69423383
+        },
+        {
+          "identifier": "GO:0009360",
+          "label": "DNA polymerase III complex",
+          "cosine_similarity": 0.63940843
         },
         {
           "identifier": "GO:0005839",
@@ -12276,11 +12312,6 @@
           "identifier": "GO:0022624",
           "label": "proteasome accessory complex",
           "cosine_similarity": 0.62556293
-        },
-        {
-          "identifier": "GO:0000502",
-          "label": "proteasome complex",
-          "cosine_similarity": 0.62293694
         }
       ]
     },
@@ -14185,6 +14216,11 @@
           "cosine_similarity": 0.69349766
         },
         {
+          "identifier": "GO:0009360",
+          "label": "DNA polymerase III complex",
+          "cosine_similarity": 0.69125267
+        },
+        {
           "identifier": "GO:0001401",
           "label": "SAM complex",
           "cosine_similarity": 0.68946453
@@ -14198,11 +14234,6 @@
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.68132805
-        },
-        {
-          "identifier": "GO:0070939",
-          "label": "Dsl1/NZR complex",
-          "cosine_similarity": 0.67685662
         }
       ]
     },

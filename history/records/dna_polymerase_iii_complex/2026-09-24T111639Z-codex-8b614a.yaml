@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_polymerase_iii_complex.yaml
+  slug: dna_polymerase_iii_complex
+session:
+  id: 2026-09-24T111639Z-codex-8b614a
+  timestamp: '2026-09-24T11:16:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1481
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1480
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - evidence
+  summary: Address DNA polymerase III review
+  details: 'Addressed PR #1480 review issue #1481 by replacing the too-indirect Escherichia
+    coli K-12 canonical example sourced only to UniProtKB:P06710 with an Escherichia coli
+    species-level example sourced to PMID:3283127, the PubMed-verified DNA polymerase III
+    holoenzyme reconstitution study. Added PMID:3283127 to record evidence and revalidated
+    the YAML with targeted LinkML and strict validation before appending this history record.'
