@@ -14727,9 +14727,9 @@
           "cosine_similarity": 0.75481966
         },
         {
-          "identifier": "GO:0005730",
-          "label": "nucleolus",
-          "cosine_similarity": 0.74627663
+          "identifier": "GO:0071006",
+          "label": "U2-type catalytic step 1 spliceosome",
+          "cosine_similarity": 0.75396001
         }
       ]
     },
@@ -14982,9 +14982,45 @@
       ]
     },
     {
+      "identifier": "GO:0071006",
+      "label": "U2-type catalytic step 1 spliceosome",
+      "neighbors": [
+        {
+          "identifier": "GO:0071005",
+          "label": "U2-type precatalytic spliceosome",
+          "cosine_similarity": 0.95788987
+        },
+        {
+          "identifier": "GO:0005686",
+          "label": "U2 snRNP",
+          "cosine_similarity": 0.84015904
+        },
+        {
+          "identifier": "GO:0046540",
+          "label": "U4/U6 x U5 tri-snRNP complex",
+          "cosine_similarity": 0.83497062
+        },
+        {
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.820642
+        },
+        {
+          "identifier": "GO:0071001",
+          "label": "U4/U6 snRNP",
+          "cosine_similarity": 0.81931089
+        }
+      ]
+    },
+    {
       "identifier": "GO:0071005",
       "label": "U2-type precatalytic spliceosome",
       "neighbors": [
+        {
+          "identifier": "GO:0071006",
+          "label": "U2-type catalytic step 1 spliceosome",
+          "cosine_similarity": 0.95788987
+        },
         {
           "identifier": "GO:0046540",
           "label": "U4/U6 x U5 tri-snRNP complex",
@@ -15004,11 +15040,6 @@
           "identifier": "GO:0005686",
           "label": "U2 snRNP",
           "cosine_similarity": 0.78062216
-        },
-        {
-          "identifier": "GO:0005685",
-          "label": "U1 snRNP",
-          "cosine_similarity": 0.77005061
         }
       ]
     },

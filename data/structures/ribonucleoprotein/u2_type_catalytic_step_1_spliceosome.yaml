@@ -1,0 +1,209 @@
+identifier: GO:0071006
+label: U2-type catalytic step 1 spliceosome
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A spliceosomal complex that is formed by the displacement of the U1 and
+  U4 snRNPs from the precatalytic spliceosome; the U2, U5 and U6 snRNPs remain associated
+  with the mRNA. This complex, sometimes called the activated spliceosome, is the
+  catalytically active form of the spliceosome, and includes many proteins in addition
+  to those found in the U2, and U5 and U6 snRNPs.
+definition_source: GO:0071006
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T17:24:29Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T17:25:12Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, U2-type parentage, GO-grounded U2, U5 and U6 snRNP components,
+    Rauhut budding-yeast activated-spliceosome evidence, a minimal remodeling graph
+    and a protein-component grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: major catalytic step 1 spliceosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071006
+- synonym_text: U2-type activated spliceosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071006
+- synonym_text: GT-AG catalytic step 1 spliceosome
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071006
+- synonym_text: mammalian U2-type spliceosomal complex B*
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071006
+- synonym_text: mammalian U2-type spliceosomal complex B2
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071006
+- synonym_text: yeast U2-type spliceosomal complex A1
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071006
+parent_structures:
+- GO:0005684
+components:
+- component_id: u2_snrnp
+  label: U2 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005686
+  role: Small nuclear ribonucleoprotein that remains associated with mRNA in the U2-type
+    catalytic step 1 spliceosome.
+  evidence:
+  - reference: GO:0071006
+    notes: GO:0071006 defines this catalytic step 1 spliceosome as retaining U2 snRNP
+      after U1 and U4 snRNP displacement.
+  - reference: GO:0005686
+    notes: GO:0005686 is the Gene Ontology cellular-component term for the U2 snRNP.
+- component_id: u5_snrnp
+  label: U5 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005682
+  role: Small nuclear ribonucleoprotein that remains associated with mRNA in the U2-type
+    catalytic step 1 spliceosome.
+  evidence:
+  - reference: GO:0071006
+    notes: GO:0071006 defines this catalytic step 1 spliceosome as retaining U5 snRNP
+      after U1 and U4 snRNP displacement.
+  - reference: GO:0005682
+    notes: GO:0005682 is the Gene Ontology cellular-component term for the U5 snRNP.
+- component_id: u6_snrnp
+  label: U6 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005688
+  role: Small nuclear ribonucleoprotein that remains associated with mRNA in the U2-type
+    catalytic step 1 spliceosome.
+  evidence:
+  - reference: GO:0071006
+    notes: GO:0071006 defines this catalytic step 1 spliceosome as retaining U6 snRNP
+      after U1 and U4 snRNP displacement.
+  - reference: GO:0005688
+    notes: GO:0005688 is the Gene Ontology cellular-component term for the U6 snRNP.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: A Saccharomyces cerevisiae activated spliceosome was structurally characterized
+    by Rauhut, Fabrizio, Dybkov and colleagues; broader eukaryotic distribution is
+    left for follow-up curation.
+  reference: DOI:10.1126/science.aag1906
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model whose activated spliceosome was analyzed by Rauhut, Fabrizio,
+    Dybkov and colleagues.
+  reference: DOI:10.1126/science.aag1906
+evidence:
+- reference: GO:0071006
+  notes: Gene Ontology cellular-component term for the U2-type catalytic step 1 spliceosome
+    and its GO synonyms.
+- reference: GO:0005684
+  notes: Gene Ontology cellular-component parent term for U2-type spliceosomal complex.
+- reference: GO:0005686
+  notes: Gene Ontology cellular-component term for the U2 snRNP.
+- reference: GO:0005682
+  notes: Gene Ontology cellular-component term for the U5 snRNP.
+- reference: GO:0005688
+  notes: Gene Ontology cellular-component term for the U6 snRNP.
+- reference: DOI:10.1126/science.aag1906
+  notes: Rauhut, Fabrizio, Dybkov and colleagues 2016, Molecular architecture of the
+    Saccharomyces cerevisiae activated spliceosome, Science.
+- reference: PMID:27562955
+  notes: PubMed identifier for Rauhut, Fabrizio, Dybkov and colleagues 2016 as reported
+    by PubMed.
+causal_graphs:
+- graph_id: u2_type_step1_spliceosome_remodeling
+  title: U2, U5 and U6 snRNPs remain in the catalytic step 1 spliceosome
+  description: The U2-type catalytic step 1 spliceosome forms from the precatalytic
+    spliceosome after U1 and U4 snRNP displacement while U2, U5 and U6 snRNPs remain
+    associated with the mRNA.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined U2, U5 and U6 snRNP retention
+    that distinguishes the catalytic step 1 spliceosome without modeling helicase
+    remodeling or individual Bact protein-family boundaries.
+  nodes:
+  - node_id: u2_snrnp
+    label: U2 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005686
+    component_ref: u2_snrnp
+  - node_id: u5_snrnp
+    label: U5 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005682
+    component_ref: u5_snrnp
+  - node_id: u6_snrnp
+    label: U6 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005688
+    component_ref: u6_snrnp
+  - node_id: u2_type_precatalytic_spliceosome
+    label: U2-type precatalytic spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071005
+  - node_id: u2_type_catalytic_step_1_spliceosome
+    label: U2-type catalytic step 1 spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071006
+  edges:
+  - subject: u2_snrnp
+    predicate: remains associated in
+    object: u2_type_catalytic_step_1_spliceosome
+    description: The U2 snRNP remains associated with mRNA in the catalytic step 1
+      spliceosome.
+    evidence:
+    - reference: GO:0071006
+      notes: GO:0071006 names U2 as one of the snRNPs that remain associated with
+        the mRNA.
+  - subject: u5_snrnp
+    predicate: remains associated in
+    object: u2_type_catalytic_step_1_spliceosome
+    description: The U5 snRNP remains associated with mRNA in the catalytic step 1
+      spliceosome.
+    evidence:
+    - reference: GO:0071006
+      notes: GO:0071006 names U5 as one of the snRNPs that remain associated with
+        the mRNA.
+  - subject: u6_snrnp
+    predicate: remains associated in
+    object: u2_type_catalytic_step_1_spliceosome
+    description: The U6 snRNP remains associated with mRNA in the catalytic step 1
+      spliceosome.
+    evidence:
+    - reference: GO:0071006
+      notes: GO:0071006 names U6 as one of the snRNPs that remain associated with
+        the mRNA.
+  - subject: u2_type_precatalytic_spliceosome
+    predicate: is remodeled to form
+    object: u2_type_catalytic_step_1_spliceosome
+    description: U1 and U4 snRNP displacement from the U2-type precatalytic spliceosome
+      yields the catalytic step 1 spliceosome.
+    evidence:
+    - reference: GO:0071006
+      notes: GO:0071006 defines the U2-type catalytic step 1 spliceosome as formed
+        by displacement of U1 and U4 snRNPs from the precatalytic spliceosome.
+discussions:
+- discussion_id: resolve_step1_spliceosome_protein_components
+  prompt: Resolve exact source-neutral component boundaries for activated-spliceosome
+    protein complexes and factors beyond the GO-defined U2, U5 and U6 snRNP subcomplexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u2_snrnp
+  - components#u5_snrnp
+  - components#u6_snrnp
+  - causal_graphs#u2_type_step1_spliceosome_remodeling
+  rationale: The first GO:0071006 record captures the defining U2, U5 and U6 snRNP
+    subcomplexes. The Rauhut yeast structure establishes a protein-rich activated
+    spliceosome, but the individual protein-family and subcomplex boundaries should
+    be resolved before expanding this component list.
+  evidence:
+  - reference: GO:0071006
+  - reference: DOI:10.1126/science.aag1906
+  posed_by: codex
+  posed_date: '2026-09-24'
