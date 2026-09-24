@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_dynein_complex.yaml
+  slug: axonemal_dynein_complex
+session:
+  id: 2026-09-24T001012Z-codex-756f6f
+  timestamp: '2026-09-24T00:10:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add axonemal dynein complex record
+  details: Created the GO:0005858 axonemal dynein complex record as a generic dynein-complex
+    parent for GO:0036156 inner dynein arm and GO:0036157 outer dynein arm records. Verified
+    the canonical GO:0005858 label and definition with QuickGO, verified the direct GO:0030286
+    is_a parent and GO:0005930 part_of target with OLS, verified GO child, parthood and microtubule-sliding
+    references against QuickGO and OLS, and confirmed no exact existing GO:0005858 or axonemal
+    dynein complex record in data/structures with rg --no-ignore --hidden before adding Chlamydomonas
+    DOI evidence, a nonmechanistic microtubule-sliding graph and a resolved child-boundary
+    discussion.
