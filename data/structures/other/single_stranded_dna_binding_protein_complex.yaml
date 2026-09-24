@@ -1,0 +1,177 @@
+identifier: GO:0044777
+label: single-stranded DNA-binding protein complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A homotetrameric single-stranded DNA-binding protein assembly that binds
+  and stabilizes single-stranded DNA during DNA replication, recombination, and repair.
+definition_source: GO:0044777
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T10:00:36Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T10:01:32Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added SSB synonymy, protein-complex parentage and nucleoid parthood, an
+    InterPro-grounded SSB component with UniProt and PDB evidence, an Escherichia
+    coli canonical example, single-stranded-DNA-binding function evidence, and a compact
+    function graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: SSB complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0044777
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0009295
+components:
+- component_id: ssb_protein
+  label: single-stranded DNA-binding protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR011344
+  gene_symbols:
+  - ssb
+  stoichiometry: 4 copies per homotetrameric SSB complex
+  role: SSB subunit family that oligomerizes into the homotetrameric single-stranded
+    DNA-binding complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AGE0
+    protein_label: Single-stranded DNA-binding protein
+    gene_symbol: ssb
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-24'
+    role: Reviewed E. coli K-12 SSB accession mapped by RCSB to the four protein chains
+      in PDB:1KAW.
+    evidence:
+    - reference: UniProtKB:P0AGE0
+      notes: UniProtKB P0AGE0 is the reviewed Escherichia coli K-12 SSB entry for
+        gene ssb.
+    - reference: PDB:1KAW
+      notes: RCSB maps PDB:1KAW polymer entity 1 to UniProtKB:P0AGE0.
+  evidence:
+  - reference: GO:0044777
+    notes: GO:0044777 defines the single-stranded DNA-binding protein complex as homotetrameric.
+  - reference: InterPro:IPR011344
+    notes: InterPro IPR011344 is a family entry named Single-stranded DNA-binding
+      protein and is annotated to GO:0003697 and GO:0006260.
+  - reference: PDB:1KAW
+    notes: RCSB PDB:1KAW assembly 1 is an author-defined E. coli SSB homo-4-mer, and
+      polymer entity 1 contains four SSB chains.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Bacterial source of the SSB DNA-binding-domain tetramer crystallized as PDB:1KAW
+    and of the SSB-DNA crystal structure deposited as PDB:1EYG.
+  reference: PDB:1KAW
+functions:
+- function_id: single_stranded_dna_binding
+  label: single-stranded DNA binding
+  grounding: GO:0003697
+  description: The SSB complex binds exposed single-stranded DNA, including ssDNA
+    generated during DNA replication.
+  evidence:
+  - reference: GO:0003697
+    notes: GO:0003697 is the molecular-function term for binding to single-stranded
+      DNA.
+  - reference: PDB:1EYG
+    notes: PDB:1EYG contains E. coli SSB DNA-binding-domain chains with 35-mer single-stranded
+      DNA polymers.
+evidence:
+- reference: GO:0044777
+  notes: Gene Ontology cellular-component term for the single-stranded DNA-binding
+    protein complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component term for protein-containing complexes.
+- reference: GO:0009295
+  notes: Gene Ontology cellular-component term for the nucleoid; GO:0044777 is part_of
+    this term.
+- reference: GO:0003697
+  notes: Gene Ontology molecular-function term for single-stranded DNA binding.
+- reference: GO:0006260
+  notes: Gene Ontology biological-process term for DNA replication.
+- reference: InterPro:IPR011344
+  notes: InterPro family for single-stranded DNA-binding proteins.
+- reference: UniProtKB:P0AGE0
+  notes: UniProtKB reviewed Escherichia coli K-12 SSB entry.
+- reference: DOI:10.1073/pnas.94.13.6652
+  notes: Raghunathan et al. 1997, Crystal structure of the homo-tetrameric DNA binding
+    domain of Escherichia coli single-stranded DNA-binding protein, PNAS.
+- reference: PMID:9192620
+  notes: PubMed identifier for Raghunathan et al. 1997 as reported by RCSB PDB:1KAW.
+- reference: DOI:10.1038/77943
+  notes: Raghunathan et al. 2000, Structure of the DNA binding domain of E. coli SSB
+    bound to ssDNA, Nature Structural Biology.
+- reference: PMID:10932248
+  notes: PubMed identifier for Raghunathan et al. 2000 as reported by RCSB PDB:1EYG.
+- reference: PDB:1KAW
+  notes: RCSB Protein Data Bank entry for the E. coli SSB DNA-binding-domain homo-4-mer
+    from Raghunathan et al. 1997.
+- reference: PDB:1EYG
+  notes: RCSB Protein Data Bank entry for E. coli SSB DNA-binding-domain chains bound
+    to single-stranded DNA from Raghunathan et al. 2000.
+causal_graphs:
+- graph_id: ssb_ssdna_binding
+  title: SSB binds single-stranded DNA
+  description: The homotetrameric SSB complex uses its SSB protein subunits to form
+    a DNA-binding complex that binds single-stranded DNA.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records SSB tetramerization and single-stranded-DNA engagement
+    without resolving the alternative SSB-DNA binding modes or partner-protein exchange.
+  nodes:
+  - node_id: ssb_complex
+    label: single-stranded DNA-binding protein complex
+    node_type: STRUCTURE
+    grounding: GO:0044777
+  - node_id: ssb_protein
+    label: single-stranded DNA-binding protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: ssb_protein
+  - node_id: single_stranded_dna
+    label: single-stranded DNA
+    node_type: GENETIC_ELEMENT
+  - node_id: single_stranded_dna_binding
+    label: single-stranded DNA binding
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0003697
+  edges:
+  - subject: ssb_protein
+    predicate: oligomerizes into
+    object: ssb_complex
+    description: Four SSB protein chains form the homotetrameric single-stranded DNA-binding
+      protein complex.
+    evidence:
+    - reference: GO:0044777
+      notes: GO:0044777 defines the SSB complex as homotetrameric.
+    - reference: PDB:1KAW
+      notes: PDB:1KAW assembly 1 is an author-defined homo-4-mer with four copies
+        of polymer entity 1.
+  - subject: ssb_complex
+    predicate: binds
+    object: single_stranded_dna
+    description: The SSB complex binds single-stranded DNA.
+    evidence:
+    - reference: GO:0003697
+      notes: GO:0003697 defines single-stranded DNA binding as binding to single-stranded
+        DNA.
+    - reference: PDB:1EYG
+      notes: PDB:1EYG resolves E. coli SSB DNA-binding-domain chains bound to single-stranded
+        DNA polymers.
+  - subject: ssb_complex
+    predicate: enables
+    object: single_stranded_dna_binding
+    description: The single-stranded DNA-binding protein complex carries out single-stranded
+      DNA binding.
+    evidence:
+    - reference: GO:0044777
+      notes: GO:0044777 defines the SSB complex by its single-stranded DNA-binding
+        activity.
+    - reference: GO:0003697
+      notes: GO:0003697 is the molecular-function term for single-stranded DNA binding.

@@ -12237,6 +12237,11 @@
           "cosine_similarity": 0.6609752
         },
         {
+          "identifier": "GO:0044777",
+          "label": "single-stranded DNA-binding protein complex",
+          "cosine_similarity": 0.65870725
+        },
+        {
           "identifier": "GO:0022624",
           "label": "proteasome accessory complex",
           "cosine_similarity": 0.6571678
@@ -12245,11 +12250,6 @@
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.64915521
-        },
-        {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.6490633
         }
       ]
     },
@@ -14141,6 +14141,37 @@
           "identifier": "GO:0031205",
           "label": "endoplasmic reticulum Sec complex",
           "cosine_similarity": 0.79810308
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0044777",
+      "label": "single-stranded DNA-binding protein complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.69456557
+        },
+        {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.68808523
+        },
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.68758406
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.68009328
+        },
+        {
+          "identifier": "GO:0070939",
+          "label": "Dsl1/NZR complex",
+          "cosine_similarity": 0.67759139
         }
       ]
     },

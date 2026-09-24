@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/single_stranded_dna_binding_protein_complex.yaml
+  slug: single_stranded_dna_binding_protein_complex
+session:
+  id: 2026-09-24T100225Z-codex-7f047d
+  timestamp: '2026-09-24T10:02:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - components
+  - functions
+  - causal_graphs
+  - evidence
+  summary: Added single-stranded DNA-binding protein complex
+  details: Created GO:0044777 single-stranded DNA-binding protein complex with protein-complex
+    parentage, nucleoid parthood, SSB complex synonymy, an InterPro:IPR011344-grounded SSB
+    component with E. coli UniProtKB:P0AGE0 and PDB:1KAW evidence, a PDB-backed E. coli canonical
+    example, GO:0003697 single-stranded-DNA-binding function evidence, and a compact nonmechanistic
+    function graph.
