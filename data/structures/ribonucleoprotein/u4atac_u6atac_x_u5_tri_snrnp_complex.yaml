@@ -1,0 +1,159 @@
+identifier: GO:0071009
+label: U4atac/U6atac x U5 tri-snRNP complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A spliceosomal snRNP complex that is formed by the association of the
+  U4atac/U6atac and U5 snRNPs.
+definition_source: GO:0071009
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T19:32:17Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T19:32:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym, spliceosomal tri-snRNP parentage, GO-grounded
+    U4atac/U6atac and U5 snRNP components, human Schneider/Will/Makarova tri-snRNP
+    evidence, an assembly graph and a protein-component grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T19:43:06Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1519: narrowed the minor tri-snRNP TODO from broad U4/U6.U5 conservation
+    to human U4/U6.U5 composition similarity.'
+  llm_assisted: true
+synonyms:
+- synonym_text: U4atac/U6atac.U5 snRNP complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071009
+parent_structures:
+- GO:0097526
+components:
+- component_id: u4atac_u6atac_snrnp
+  label: U4atac/U6atac snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0071002
+  role: Base-paired minor-spliceosome snRNP subcomplex that associates with U5 snRNP
+    to form the U4atac/U6atac x U5 tri-snRNP complex.
+  evidence:
+  - reference: GO:0071009
+    notes: GO:0071009 defines the U4atac/U6atac x U5 tri-snRNP complex as formed by
+      the association of U4atac/U6atac and U5 snRNPs.
+  - reference: GO:0071002
+    notes: GO:0071002 is the Gene Ontology cellular-component term for the U4atac/U6atac
+      snRNP.
+- component_id: u5_snrnp
+  label: U5 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005682
+  role: U5 small nuclear ribonucleoprotein subcomplex that associates with U4atac/U6atac
+    snRNP in the minor spliceosomal tri-snRNP.
+  evidence:
+  - reference: GO:0071009
+    notes: GO:0071009 defines the U4atac/U6atac x U5 tri-snRNP complex as formed by
+      the association of U4atac/U6atac and U5 snRNPs.
+  - reference: GO:0005682
+    notes: GO:0005682 is the Gene Ontology cellular-component term for the U5 snRNP.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  presence: COMMON
+  note: Human U4atac/U6atac.U5 tri-snRNPs were analyzed biochemically by Schneider,
+    Will, Makarova and colleagues; broader eukaryotic distribution is left for follow-up
+    curation.
+  reference: DOI:10.1128/MCB.22.10.3219-3229.2002
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: Human minor spliceosomal tri-snRNP analyzed in a comparative U4/U6.U5 and
+    U4atac/U6atac.U5 tri-snRNP composition study.
+  reference: DOI:10.1128/MCB.22.10.3219-3229.2002
+evidence:
+- reference: GO:0071009
+  notes: Gene Ontology cellular-component term for the U4atac/U6atac x U5 tri-snRNP
+    complex and its GO exact synonym.
+- reference: GO:0097526
+  notes: Gene Ontology cellular-component parent term for spliceosomal tri-snRNP complex.
+- reference: GO:0071002
+  notes: Gene Ontology cellular-component term for the U4atac/U6atac snRNP.
+- reference: GO:0005682
+  notes: Gene Ontology cellular-component term for the U5 snRNP.
+- reference: DOI:10.1128/MCB.22.10.3219-3229.2002
+  notes: Schneider, Will, Makarova and colleagues 2002, Human U4/U6.U5 and U4atac/U6atac.U5
+    tri-snRNPs exhibit similar protein compositions, Molecular and Cellular Biology.
+- reference: PMID:11971955
+  notes: PubMed identifier for Schneider, Will, Makarova and colleagues 2002 as reported
+    by NCBI E-utilities.
+- reference: DOI:10.1515/BC.2005.084
+  notes: Will and Luehrmann 2005, Splicing of a rare class of introns by the U12-dependent
+    spliceosome, Biological Chemistry.
+- reference: PMID:16201866
+  notes: PubMed identifier for Will and Luehrmann 2005 as reported by NCBI E-utilities.
+causal_graphs:
+- graph_id: u4atac_u6atac_u5_tri_snrnp_assembly
+  title: U4atac/U6atac and U5 snRNPs assemble into the minor spliceosomal tri-snRNP
+  description: The U4atac/U6atac x U5 tri-snRNP complex forms when the U4atac/U6atac
+    snRNP associates with the U5 snRNP.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the defining GO subcomplex association without modeling
+    minor-tri-snRNP protein-specific bridges, RNA-RNA contacts or subunit copy numbers.
+  nodes:
+  - node_id: u4atac_u6atac_snrnp
+    label: U4atac/U6atac snRNP
+    node_type: STRUCTURE
+    grounding: GO:0071002
+    component_ref: u4atac_u6atac_snrnp
+  - node_id: u5_snrnp
+    label: U5 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005682
+    component_ref: u5_snrnp
+  - node_id: u4atac_u6atac_u5_tri_snrnp
+    label: U4atac/U6atac x U5 tri-snRNP complex
+    node_type: STRUCTURE
+    grounding: GO:0071009
+  edges:
+  - subject: u4atac_u6atac_snrnp
+    predicate: contributes to assembly of
+    object: u4atac_u6atac_u5_tri_snrnp
+    description: The U4atac/U6atac snRNP is one of the two defining snRNP subcomplexes
+      that associate to form the U4atac/U6atac x U5 tri-snRNP.
+    evidence:
+    - reference: GO:0071009
+      notes: GO:0071009 defines the complex as the product of U4atac/U6atac snRNP
+        and U5 snRNP association.
+  - subject: u5_snrnp
+    predicate: contributes to assembly of
+    object: u4atac_u6atac_u5_tri_snrnp
+    description: The U5 snRNP is one of the two defining snRNP subcomplexes that associate
+      to form the U4atac/U6atac x U5 tri-snRNP.
+    evidence:
+    - reference: GO:0071009
+      notes: GO:0071009 defines the complex as the product of U4atac/U6atac snRNP
+        and U5 snRNP association.
+discussions:
+- discussion_id: resolve_u4atac_u6atac_u5_tri_snrnp_components
+  prompt: Resolve exact source-neutral groundings for individual U4atac/U6atac.U5
+    tri-snRNP protein families observed in human minor spliceosomal tri-snRNPs.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u4atac_u6atac_snrnp
+  - components#u5_snrnp
+  - causal_graphs#u4atac_u6atac_u5_tri_snrnp_assembly
+  rationale: The first GO:0071009 record captures the GO-grounded U4atac/U6atac and
+    U5 snRNP subcomplexes that define the minor tri-snRNP. Individual protein family
+    boundaries, source-neutral groundings and similarity to human U4/U6.U5 tri-snRNP
+    composition should be resolved before splitting the protein inventory.
+  evidence:
+  - reference: GO:0071009
+  - reference: DOI:10.1128/MCB.22.10.3219-3229.2002
+  - reference: DOI:10.1515/BC.2005.084
+  posed_by: codex
+  posed_date: '2026-09-24'
