@@ -11798,6 +11798,11 @@
           "cosine_similarity": 0.70527905
         },
         {
+          "identifier": "GO:0036452",
+          "label": "ESCRT complex",
+          "cosine_similarity": 0.6987681
+        },
+        {
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.68258394
@@ -11811,11 +11816,6 @@
           "identifier": "GO:0020007",
           "label": "apical complex",
           "cosine_similarity": 0.68069846
-        },
-        {
-          "identifier": "cellstructuremech:reservosome",
-          "label": "reservosome",
-          "cosine_similarity": 0.67473367
         }
       ]
     },
@@ -12056,14 +12056,45 @@
           "cosine_similarity": 0.88371459
         },
         {
+          "identifier": "GO:0036452",
+          "label": "ESCRT complex",
+          "cosine_similarity": 0.81920655
+        },
+        {
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.80328179
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0036452",
+      "label": "ESCRT complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000813",
+          "label": "ESCRT I complex",
+          "cosine_similarity": 0.90076585
         },
         {
-          "identifier": "GO:0031205",
-          "label": "endoplasmic reticulum Sec complex",
-          "cosine_similarity": 0.80088008
+          "identifier": "GO:0000814",
+          "label": "ESCRT II complex",
+          "cosine_similarity": 0.87568252
+        },
+        {
+          "identifier": "GO:0000815",
+          "label": "ESCRT III complex",
+          "cosine_similarity": 0.85812299
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.83156771
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.81920655
         }
       ]
     },
@@ -12087,14 +12118,14 @@
           "cosine_similarity": 0.91208671
         },
         {
+          "identifier": "GO:0036452",
+          "label": "ESCRT complex",
+          "cosine_similarity": 0.90076585
+        },
+        {
           "identifier": "GO:0030906",
           "label": "retromer, cargo-selective complex",
           "cosine_similarity": 0.77956885
-        },
-        {
-          "identifier": "GO:0072546",
-          "label": "EMC complex",
-          "cosine_similarity": 0.7618837
         }
       ]
     },
@@ -12118,14 +12149,14 @@
           "cosine_similarity": 0.90483792
         },
         {
+          "identifier": "GO:0036452",
+          "label": "ESCRT complex",
+          "cosine_similarity": 0.87568252
+        },
+        {
           "identifier": "GO:0030906",
           "label": "retromer, cargo-selective complex",
           "cosine_similarity": 0.75315942
-        },
-        {
-          "identifier": "GO:0031205",
-          "label": "endoplasmic reticulum Sec complex",
-          "cosine_similarity": 0.7357579
         }
       ]
     },
@@ -12149,14 +12180,14 @@
           "cosine_similarity": 0.88371459
         },
         {
+          "identifier": "GO:0036452",
+          "label": "ESCRT complex",
+          "cosine_similarity": 0.85812299
+        },
+        {
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.76710456
-        },
-        {
-          "identifier": "GO:0031205",
-          "label": "endoplasmic reticulum Sec complex",
-          "cosine_similarity": 0.76280933
         }
       ]
     },

@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/escrt_complex.yaml
+  slug: escrt_complex
+session:
+  id: 2026-09-24T003330Z-codex-8d1daf
+  timestamp: '2026-09-24T00:33:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomic_distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add ESCRT complex record
+  details: Created the GO:0036452 ESCRT complex record as a generic parent for ESCRT-0, ESCRT-I,
+    ESCRT-II, ESCRT-III and ESCRT-IV complexes. Verified the canonical GO:0036452 label, exact
+    synonym, definition and child terms with QuickGO, verified the direct GO:0032991 is_a
+    parent and GO:0005768 part_of target with OLS, confirmed no exact existing GO:0036452
+    or ESCRT complex record in data/structures with rg --no-ignore --hidden, and added Saccharomyces
+    cerevisiae MVB-sorting evidence, a nonmechanistic ESCRT cascade graph and a resolved child-boundary
+    discussion.

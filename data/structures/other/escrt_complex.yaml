@@ -1,0 +1,212 @@
+identifier: GO:0036452
+label: ESCRT complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An endosomal sorting complex involved in membrane fission processes related
+  to sorting of multivesicular bodies (MVB) in the endocytic pathway, cytokinesis
+  and viral budding among other processes.
+definition_source: GO:0036452
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T00:31:28Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T00:32:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, protein-complex parentage and endosome parthood, Saccharomyces
+    scope, an MVB-sorting function, GO and DOI evidence, a nonmechanistic ESCRT cascade
+    graph, and a resolved child-complex component-boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-09-24T00:33:12Z'
+  curator: codex
+  action: REFINE_ESCRT_IV_SCOPE
+  changes: Clarified that ESCRT-specific subunits and stoichiometry remain on dedicated
+    child records or future ESCRT-IV curation because the ESCRT IV GO child does not
+    yet have a CellStructureMech record.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0005768
+synonyms:
+- synonym_text: endosomal sorting complex required for transport
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036452
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses ESCRT complexes to sort ubiquitinated cargo and remodel
+    membranes during multivesicular-body sorting.
+  reference: DOI:10.1016/j.devcel.2011.05.015
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Model eukaryote in which ESCRT-0, ESCRT-I, ESCRT-II and ESCRT-III complexes
+    act in the endosomal MVB sorting pathway.
+  reference: DOI:10.1016/j.devcel.2011.05.015
+functions:
+- function_id: multivesicular_body_sorting_pathway
+  label: multivesicular body sorting pathway
+  grounding: GO:0071985
+  description: ESCRT complexes sort ubiquitinated endosomal cargo and remodel endosomal
+    membranes to form multivesicular-body intraluminal vesicles.
+  evidence:
+  - reference: GO:0036452
+    notes: GO defines ESCRT complexes as endosomal sorting complexes involved in MVB
+      sorting and related membrane-fission processes.
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: Henne, Buchkovich and Emr 2011 reviewed the ESCRT pathway as conserved
+      machinery for endosomal cargo sorting and membrane remodeling.
+evidence:
+- reference: GO:0036452
+  notes: Gene Ontology cellular-component term for the ESCRT complex class.
+- reference: GO:0032991
+  notes: OLS places the ESCRT complex under the protein-containing complex.
+- reference: GO:0005768
+  notes: OLS places the ESCRT complex within the endosome.
+- reference: GO:0033565
+  notes: Gene Ontology places the ESCRT-0 complex under the ESCRT complex.
+- reference: GO:0000813
+  notes: Gene Ontology places ESCRT I complex under the ESCRT complex.
+- reference: GO:0000814
+  notes: Gene Ontology places ESCRT II complex under the ESCRT complex.
+- reference: GO:0000815
+  notes: Gene Ontology places ESCRT III complex under the ESCRT complex.
+- reference: GO:1990621
+  notes: Gene Ontology places ESCRT IV complex under the ESCRT complex.
+- reference: GO:0071985
+  notes: Gene Ontology biological-process term for the multivesicular body sorting
+    pathway.
+- reference: DOI:10.1016/j.devcel.2011.05.015
+  notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+causal_graphs:
+- graph_id: yeast_escrt_mvb_sorting_cascade
+  title: ESCRT complexes drive yeast MVB sorting
+  description: In Saccharomyces cerevisiae, ESCRT-0, ESCRT-I, ESCRT-II and ESCRT-III
+    complexes act as endosomal sorting machinery during multivesicular-body cargo
+    sorting and membrane remodeling.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the shared ESCRT complex parent boundary and a coarse
+    ESCRT cascade, leaving child-complex subunits, ESCRT-III polymerization, Vps4
+    recycling and deubiquitination on dedicated child or future records.
+  nodes:
+  - node_id: escrt_0_complex
+    label: ESCRT-0 complex
+    node_type: STRUCTURE
+    grounding: GO:0033565
+  - node_id: escrt_i_complex
+    label: ESCRT I complex
+    node_type: STRUCTURE
+    grounding: GO:0000813
+  - node_id: escrt_ii_complex
+    label: ESCRT II complex
+    node_type: STRUCTURE
+    grounding: GO:0000814
+  - node_id: escrt_iii_complex
+    label: ESCRT III complex
+    node_type: STRUCTURE
+    grounding: GO:0000815
+  - node_id: escrt_iv_complex
+    label: ESCRT IV complex
+    node_type: STRUCTURE
+    grounding: GO:1990621
+  - node_id: escrt_complex
+    label: ESCRT complex
+    node_type: STRUCTURE
+    grounding: GO:0036452
+  - node_id: endosome
+    label: endosome
+    node_type: STRUCTURE
+    grounding: GO:0005768
+  - node_id: multivesicular_body_sorting_pathway
+    label: multivesicular body sorting pathway
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071985
+  edges:
+  - subject: escrt_0_complex
+    predicate: is a
+    object: escrt_complex
+    description: ESCRT-0 is a cargo-recognition ESCRT complex.
+    evidence:
+    - reference: GO:0036452
+      notes: QuickGO lists GO:0033565 ESCRT-0 complex as an is_a child of GO:0036452.
+  - subject: escrt_i_complex
+    predicate: is a
+    object: escrt_complex
+    description: ESCRT-I is an ESCRT complex involved in MVB cargo sorting.
+    evidence:
+    - reference: GO:0036452
+      notes: QuickGO lists GO:0000813 ESCRT I complex as an is_a child of GO:0036452.
+  - subject: escrt_ii_complex
+    predicate: is a
+    object: escrt_complex
+    description: ESCRT-II is an ESCRT complex that acts downstream of ESCRT-I.
+    evidence:
+    - reference: GO:0036452
+      notes: QuickGO lists GO:0000814 ESCRT II complex as an is_a child of GO:0036452.
+  - subject: escrt_iii_complex
+    predicate: is a
+    object: escrt_complex
+    description: ESCRT-III is a membrane-scission ESCRT complex that remodels membranes
+      late in the pathway.
+    evidence:
+    - reference: GO:0036452
+      notes: QuickGO lists GO:0000815 ESCRT III complex as an is_a child of GO:0036452.
+  - subject: escrt_iv_complex
+    predicate: is a
+    object: escrt_complex
+    description: ESCRT-IV is the Vps4/Vta1 ESCRT complex that disassembles ESCRT-III
+      filaments.
+    evidence:
+    - reference: GO:1990621
+      notes: GO defines ESCRT IV as an ESCRT complex with AAA-ATPase activity that
+        catalyzes ESCRT-III disassembly.
+  - subject: escrt_complex
+    predicate: is part of
+    object: endosome
+    description: GO places ESCRT complexes in the endosome, where ESCRT machinery
+      sorts ubiquitinated membrane cargo.
+    evidence:
+    - reference: GO:0036452
+      notes: OLS returns a direct part_of relation from GO:0036452 to GO:0005768.
+  - subject: escrt_complex
+    predicate: participates in
+    object: multivesicular_body_sorting_pathway
+    description: ESCRT complexes act together in the endosomal MVB sorting pathway.
+    evidence:
+    - reference: GO:0036452
+      notes: GO defines ESCRT complexes by their involvement in MVB sorting and related
+        membrane fission processes.
+    - reference: DOI:10.1016/j.devcel.2011.05.015
+      notes: Henne, Buchkovich and Emr 2011 reviewed ESCRT complexes as sequential
+        machinery for endosomal MVB sorting.
+discussions:
+- discussion_id: child_records_hold_escrt_subunits
+  prompt: Should individual ESCRT-0, ESCRT-I, ESCRT-II, ESCRT-III and ESCRT-IV subunits
+    be curated on the generic ESCRT complex record?
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0036452 is the generic ESCRT complex parent for several distinct ESCRT
+    complexes. The ESCRT-0, ESCRT-I, ESCRT-II, ESCRT-III and ESCRT-IV child terms
+    carry different subunit and assembly boundaries that should not be merged into
+    a single parent component table.
+  resolution_note: Kept this record focused on the GO:0036452 parent and left ESCRT-specific
+    subunits and stoichiometry on dedicated child records or future ESCRT-IV curation.
+  evidence:
+  - reference: GO:0036452
+    notes: QuickGO lists the named ESCRT child complexes as is_a children of the ESCRT
+      complex.
+  - reference: GO:1990621
+    notes: ESCRT IV has a distinct GO child term from ESCRT-0, ESCRT-I, ESCRT-II and
+      ESCRT-III.
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: Henne, Buchkovich and Emr 2011 reviewed the ESCRT pathway as a set of distinct
+      complexes and associated factors.
+  posed_by: codex
+  posed_date: '2026-09-24'
+  resolved_date: '2026-09-24'
