@@ -24,6 +24,12 @@ curation_history:
     function, GO/PubMed evidence, a PSII water-oxidation graph, and a component-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T02:29:24Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1442: updated the NCBITaxon:32053 canonical-example label from the accepted
+    Thermosynechococcus vulcanus synonym to the current NCBI label Thermostichus vulcanus.'
+  llm_assisted: true
 parent_structures:
 - GO:0009521
 components:
@@ -85,7 +91,7 @@ taxonomic_distribution:
   reference: GO:0009523
 canonical_examples:
 - taxon_id: NCBITaxon:32053
-  taxon_label: Thermosynechococcus vulcanus
+  taxon_label: Thermostichus vulcanus
   note: Thermophilic cyanobacterial source used by Umena et al. to solve the 1.9 A
     oxygen-evolving PSII crystal structure.
   reference: PMID:21499260

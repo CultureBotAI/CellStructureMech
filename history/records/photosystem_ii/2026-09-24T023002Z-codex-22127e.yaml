@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/photosystem_ii.yaml
+  slug: photosystem_ii
+session:
+  id: 2026-09-24T023002Z-codex-22127e
+  timestamp: '2026-09-24T02:30:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1442
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1441
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomy
+  summary: Addressed photosystem II review issue 1442
+  details: 'Addressed adversarial review issue #1442 from PR #1441 by updating the GO:0009523
+    photosystem II canonical example for NCBITaxon:32053 from the accepted Thermosynechococcus
+    vulcanus synonym to NCBI''s current Thermostichus vulcanus label. Revalidated the record
+    with just validate and just validate-strict before writing this history entry.'
