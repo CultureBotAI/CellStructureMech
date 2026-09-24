@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/sodium_translocating_nadh_quinone_reductase_complex.yaml
+  slug: sodium_translocating_nadh_quinone_reductase_complex
+session:
+  id: 2026-09-24T074303Z-codex-84d8bf
+  timestamp: '2026-09-24T07:43:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Add sodium-translocating NADH:quinone reductase complex
+  details: Created GO:0160292 as an ENERGY_COMPLEX record for the six-subunit bacterial Na+-NQR
+    respiratory complex. Added GO synonymy and respiratory-chain parentage, exact InterPro
+    family groundings for NqrA, NqrB, NqrC, NqrD, NqrE, and NqrF, PDB:7XK3 evidence tying
+    those components to Vibrio cholerae O395 polymer entities, a Vibrio O395 canonical example,
+    sodium-pumping NADH:quinone oxidoreductase function evidence from GO, RCSB, and Kishikawa
+    et al. 2022, and a compact nonmechanistic redox-to-sodium coupling graph. Verified with
+    targeted LinkML and closed-schema validation before writing this history entry.
