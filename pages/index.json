@@ -1116,6 +1116,15 @@
   "definition": "Respiratory chain complex IV is a membrane-bound cytochrome c oxidase complex that transfers electrons from reduced cytochrome c to dioxygen and couples oxygen reduction to proton translocation across a respiratory membrane."
  },
  {
+  "identifier": "GO:0160292",
+  "label": "sodium-translocating NADH:quinone reductase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/sodium_translocating_nadh_quinone_reductase_complex.html",
+  "definition": "Sodium-translocating NADH:quinone reductase complex is a bacterial respiratory-chain protein complex composed of NqrA, NqrB, NqrC, NqrD, NqrE, and NqrF that transfers electrons from NADH to ubiquinone while exporting sodium ions across the cytoplasmic membrane."
+ },
+ {
   "identifier": "GO:0016471",
   "label": "vacuolar proton-transporting V-type ATPase complex",
   "category": "ENERGY_COMPLEX",

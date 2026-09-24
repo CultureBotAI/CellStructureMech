@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/sodium_translocating_nadh_quinone_reductase_complex.yaml
+  slug: sodium_translocating_nadh_quinone_reductase_complex
+session:
+  id: 2026-09-24T075617Z-codex-1ee4b7
+  timestamp: '2026-09-24T07:56:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1466
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1467
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1465
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  summary: Address sodium-translocating NADH:quinone reductase PR review
+  details: 'Addressed PR #1465 review issues #1466 and #1467 by moving the sodium-motive-force
+    graph edge from the exported sodium ion node to the sodium-pumping NADH:quinone oxidoreductase
+    activity node, and by expanding the NqrF InterPro:IPR010205 component evidence note so
+    its FAD-binding and 2Fe-2S-binding claims are directly tied to InterPro GO annotations.'
