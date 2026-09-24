@@ -1,0 +1,195 @@
+identifier: GO:0120217
+label: DNA gyrase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: DNA gyrase complex is a bacterial GyrA2-GyrB2 type IIA topoisomerase complex
+  that uses ATP hydrolysis to introduce negative supercoils into DNA and can also
+  relax positive supercoils.
+definition_source: GO:0120217
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T09:27:04Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T09:28:11Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added DNA topoisomerase II parentage, GyrA/GyrB components grounded to
+    exact InterPro families and PDB:6RKU polymer entities, an Escherichia coli K-12
+    canonical example, DNA negative supercoiling function evidence, and a compact
+    function graph.
+  llm_assisted: true
+- timestamp: '2026-09-24T09:38:54Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1475: added structured stoichiometry to the GyrA and GyrB component rows
+    to capture the A2B2 DNA gyrase protein assembly described by GO:0120217 and PDB:6RKU.'
+  llm_assisted: true
+parent_structures:
+- GO:0009330
+components:
+- component_id: gyrase_subunit_a
+  label: DNA gyrase subunit A
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR005743
+  gene_symbols:
+  - gyrA
+  role: GyrA catalytic subunit of bacterial DNA gyrase, represented twice in the GyrA2-GyrB2
+    enzyme core.
+  evidence:
+  - reference: InterPro:IPR005743
+    notes: InterPro IPR005743 is a family entry named DNA gyrase, subunit A and is
+      cross-referenced to EC:5.6.2.2.
+  - reference: PDB:6RKU
+    notes: RCSB maps PDB:6RKU polymer entity 1 to Escherichia coli K-12 DNA gyrase
+      subunit A, UniProtKB:P0AES4.
+  stoichiometry: 2 copies per GyrA2-GyrB2 complex
+- component_id: gyrase_subunit_b
+  label: DNA gyrase subunit B
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR011557
+  gene_symbols:
+  - gyrB
+  role: GyrB subunit of bacterial DNA gyrase, represented twice in the GyrA2-GyrB2
+    enzyme core.
+  evidence:
+  - reference: InterPro:IPR011557
+    notes: InterPro IPR011557 is a family entry named DNA gyrase, subunit B and is
+      cross-referenced to EC:5.6.2.2.
+  - reference: PDB:6RKU
+    notes: RCSB maps PDB:6RKU polymer entity 2 to Escherichia coli K-12 DNA gyrase
+      subunit B, UniProtKB:P0AES6.
+  stoichiometry: 2 copies per GyrA2-GyrB2 complex
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: The source strain for the GyrA and GyrB chains in the complete GyrA2-GyrB2
+    DNA gyrase-DNA cryo-EM assembly deposited as PDB:6RKU.
+  reference: PDB:6RKU
+functions:
+- function_id: dna_negative_supercoiling_activity
+  label: DNA negative supercoiling activity
+  grounding: GO:0034335
+  description: DNA gyrase introduces negative supercoils into DNA and couples DNA
+    topological transformation to ATP hydrolysis.
+  evidence:
+  - reference: GO:0034335
+    notes: GO:0034335 defines DNA negative supercoiling activity as the catalytic
+      introduction of negative supercoils into DNA.
+  - reference: GO:0120217
+    notes: GO:0120217 defines the DNA gyrase complex as a bacterial type IIA topoisomerase
+      that introduces negative supercoils at the expense of ATP hydrolysis.
+  - reference: PDB:6RKU
+    notes: PDB:6RKU contains two GyrA chains, two GyrB chains, and DNA polymer entities
+      in the Escherichia coli gyrase-DNA nucleoprotein complex.
+evidence:
+- reference: GO:0120217
+  notes: Gene Ontology cellular-component term for the DNA gyrase complex.
+- reference: GO:0009330
+  notes: Gene Ontology cellular-component term for ATP-hydrolyzing DNA topoisomerase
+    type II complexes, the broader class that includes DNA gyrase.
+- reference: GO:0034335
+  notes: Gene Ontology molecular-function term for DNA negative supercoiling activity.
+- reference: GO:0003918
+  notes: Gene Ontology molecular-function term for ATP-hydrolyzing DNA topoisomerase
+    type II activity.
+- reference: InterPro:IPR005743
+  notes: InterPro family for DNA gyrase subunit A.
+- reference: InterPro:IPR011557
+  notes: InterPro family for DNA gyrase subunit B.
+- reference: UniProtKB:P0AES4
+  notes: UniProtKB reviewed Escherichia coli K-12 entry for DNA gyrase subunit A,
+    GyrA.
+- reference: UniProtKB:P0AES6
+  notes: UniProtKB reviewed Escherichia coli K-12 entry for DNA gyrase subunit B,
+    GyrB.
+- reference: DOI:10.1038/s41467-019-12914-y
+  notes: Vanden Broeck et al. 2019, Cryo-EM structure of the complete E. coli DNA
+    gyrase nucleoprotein complex, Nature Communications.
+- reference: PMID:31666516
+  notes: PubMed identifier for Vanden Broeck et al. 2019 as reported by RCSB PDB:6RKU.
+- reference: PDB:6RKU
+  notes: RCSB Protein Data Bank entry for an Escherichia coli GyrA2-GyrB2 DNA gyrase-DNA
+    cryo-EM structure from Vanden Broeck et al. 2019.
+causal_graphs:
+- graph_id: dna_gyrase_negative_supercoiling
+  title: DNA gyrase introduces negative DNA supercoils
+  description: The DNA gyrase complex uses its GyrA and GyrB subunits to bind DNA
+    and carry out ATP-dependent negative supercoiling.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures subunit contribution and DNA engagement without
+    resolving gate opening, strand passage, ATPase cycling, or strand-religation states.
+  nodes:
+  - node_id: dna_gyrase_complex
+    label: DNA gyrase complex
+    node_type: STRUCTURE
+    grounding: GO:0120217
+  - node_id: gyrase_subunit_a
+    label: DNA gyrase subunit A
+    node_type: GENE_OR_PROTEIN
+    component_ref: gyrase_subunit_a
+  - node_id: gyrase_subunit_b
+    label: DNA gyrase subunit B
+    node_type: GENE_OR_PROTEIN
+    component_ref: gyrase_subunit_b
+  - node_id: dna_segment
+    label: DNA segment
+    node_type: GENETIC_ELEMENT
+  - node_id: dna_negative_supercoiling_activity
+    label: DNA negative supercoiling activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0034335
+  edges:
+  - subject: dna_gyrase_complex
+    predicate: enables
+    object: dna_negative_supercoiling_activity
+    description: The DNA gyrase complex introduces negative supercoils into DNA through
+      ATP-dependent type IIA topoisomerase activity.
+    evidence:
+    - reference: GO:0120217
+      notes: GO:0120217 defines the DNA gyrase complex by its ATP-dependent negative-supercoiling
+        activity.
+    - reference: GO:0034335
+      notes: GO:0034335 is the molecular-function term for DNA negative supercoiling
+        activity.
+  - subject: gyrase_subunit_a
+    predicate: contributes to
+    object: dna_negative_supercoiling_activity
+    description: GyrA is one of the two protein families in the DNA gyrase enzyme
+      core.
+    evidence:
+    - reference: InterPro:IPR005743
+      notes: InterPro IPR005743 identifies the DNA gyrase subunit A family.
+    - reference: PDB:6RKU
+      notes: PDB:6RKU resolves two GyrA chains with two GyrB chains.
+  - subject: gyrase_subunit_b
+    predicate: contributes to
+    object: dna_negative_supercoiling_activity
+    description: GyrB is one of the two protein families in the DNA gyrase enzyme
+      core.
+    evidence:
+    - reference: InterPro:IPR011557
+      notes: InterPro IPR011557 identifies the DNA gyrase subunit B family.
+    - reference: PDB:6RKU
+      notes: PDB:6RKU resolves two GyrB chains with two GyrA chains.
+  - subject: dna_gyrase_complex
+    predicate: binds
+    object: dna_segment
+    description: The DNA gyrase complex binds DNA.
+    evidence:
+    - reference: PDB:6RKU
+      notes: PDB:6RKU resolves the Escherichia coli GyrA2-GyrB2 protein assembly with
+        DNA polymer entities.
+  - subject: dna_segment
+    predicate: is supercoiled by
+    object: dna_negative_supercoiling_activity
+    description: DNA is the substrate whose topology is changed by DNA gyrase.
+    evidence:
+    - reference: GO:0034335
+      notes: GO:0034335 defines DNA negative supercoiling as the catalytic introduction
+        of negative supercoils into a DNA molecule or region.
