@@ -963,6 +963,15 @@
   "definition": "A thylakoid membrane protein complex that oxidizes plastoquinol, reduces a downstream soluble electron carrier for photosystem I, and contributes to proton translocation during oxygenic photosynthetic electron transport."
  },
  {
+  "identifier": "cellstructuremech:cytochrome_bd_i_ubiquinol_oxidase_complex",
+  "label": "cytochrome bd-I ubiquinol oxidase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/cytochrome_bd_i_ubiquinol_oxidase_complex.html",
+  "definition": "Cytochrome bd-I ubiquinol oxidase complex is a membrane-bound CydAB respiratory terminal oxidase with small bd-I accessory subunits that oxidizes ubiquinol, reduces molecular oxygen to water, and contributes to the respiratory proton motive force."
+ },
+ {
   "identifier": "GO:0009319",
   "label": "cytochrome o ubiquinol oxidase complex",
   "category": "ENERGY_COMPLEX",

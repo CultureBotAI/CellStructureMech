@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/cytochrome_bd_i_ubiquinol_oxidase_complex.yaml
+  slug: cytochrome_bd_i_ubiquinol_oxidase_complex
+session:
+  id: 2026-09-24T070341Z-codex-535682
+  timestamp: '2026-09-24T07:03:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add cytochrome bd-I ubiquinol oxidase complex
+  details: Created cellstructuremech:cytochrome_bd_i_ubiquinol_oxidase_complex as an ENERGY_COMPLEX
+    record for the E. coli four-subunit bd-I terminal oxidase. Added respiratory-chain and
+    cytochrome-complex parents, PDB:6RKO-backed CydA, CydB, CydX/YbgT, and YnhF/CydH components
+    with InterPro family groundings, an E. coli canonical example, a PMID:31604309-backed
+    terminal ubiquinol:oxygen oxidase function, top-level GO/InterPro/DOI/PMID/PDB evidence,
+    a compact nonmechanistic function graph, and an open small-subunit-scope discussion that
+    keeps the E. coli bd-I accessory-subunit model distinct from two-subunit bd-type oxidases
+    such as PDB:7NKZ. Verified that no exact GO cellular-component or molecular-function term
+    existed for this bd-I complex before minting a CellStructureMech identifier.
