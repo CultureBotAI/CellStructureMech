@@ -21,6 +21,12 @@ curation_history:
     snRNA and Sm-ring components, human Will/Schneider/Hossbach 12S U11 snRNP evidence,
     a minimal U11 snRNP constituent graph and a protein-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T21:49:36Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1527: clarified the Will/Schneider/Hossbach 2004 evidence note so it
+    states the paper affinity purified 12S U11 snRNPs as well as 18S U11/U12 snRNPs.'
+  llm_assisted: true
 synonyms:
 - synonym_text: snRNP U11
   synonym_type: EXACT_SYNONYM
@@ -78,8 +84,8 @@ evidence:
 - reference: SO:0000398
   notes: Sequence Ontology term for U11 snRNA.
 - reference: DOI:10.1261/rna.7320604
-  notes: Will, Schneider, Hossbach and colleagues 2004, The human 18S U11/U12 snRNP
-    contains a set of novel proteins not found in the U2-dependent spliceosome, RNA.
+  notes: Will, Schneider, Hossbach and colleagues 2004 affinity purified human 18S
+    U11/U12 and 12S U11 snRNPs and identified their protein components by mass spectrometry.
 - reference: DOI:10.1515/BC.2005.084
   notes: Will and Luehrmann 2005, Splicing of a rare class of introns by the U12-dependent
     spliceosome, Biological Chemistry.
