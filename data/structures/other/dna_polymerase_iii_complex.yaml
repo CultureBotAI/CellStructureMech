@@ -21,6 +21,13 @@ curation_history:
     an Escherichia coli K-12 canonical example, DNA-directed DNA polymerase function
     evidence, and a compact processive DNA synthesis graph.
   llm_assisted: true
+- timestamp: '2026-09-24T11:16:13Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1481: replaced the UniProtKB-backed E. coli K-12 canonical example with
+    an E. coli example directly supported by PMID:3283127, a whole-holoenzyme reconstitution
+    study.'
+  llm_assisted: true
 synonyms:
 - synonym_text: DNA polymerase III holoenzyme complex
   synonym_type: EXACT_SYNONYM
@@ -73,11 +80,11 @@ components:
     notes: GO:0009360 states that the clamp-loading complex assembles the beta processivity
       factor onto the primer template.
 canonical_examples:
-- taxon_id: NCBITaxon:83333
-  taxon_label: Escherichia coli K-12
-  note: Reference strain for the reviewed UniProtKB DnaX tau/gamma subunit accession
-    cited by the GO:0009360 definition.
-  reference: UniProtKB:P06710
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Source species for a DNA polymerase III holoenzyme reconstitution from purified
+    subunits.
+  reference: PMID:3283127
 functions:
 - function_id: dna_directed_dna_polymerase_activity
   label: DNA-directed DNA polymerase activity
@@ -126,6 +133,10 @@ evidence:
     dimers: studies of subunit arrangement and functional consequences.'
 - reference: DOI:10.1046/j.1365-2958.2003.03645.x
   notes: DOI for McHenry 2003 as reported by PubMed.
+- reference: PMID:3283127
+  notes: PubMed identifier for Maki and Kornberg 1988, DNA polymerase III holoenzyme
+    of Escherichia coli. III. Distinctive processive polymerases reconstituted from
+    purified subunits.
 causal_graphs:
 - graph_id: pol_iii_processive_dna_synthesis
   title: DNA polymerase III carries out processive DNA synthesis
