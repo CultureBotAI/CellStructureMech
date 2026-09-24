@@ -23,6 +23,14 @@ curation_history:
     budding-yeast distribution, Nguyen/Galej/Nagai yeast U4/U6.U5 tri-snRNP cryo-EM
     evidence, a minimal U4/U6 assembly graph and a protein-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T14:16:41Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1495: reworded the U4/U6 graph from a subcomplex assembly transition
+    to GO-defined constituent contributions; #1496: trimmed record-level GO evidence
+    notes for U4 and U6 snRNP so component exact synonyms are not implied to be U4/U6
+    snRNP aliases.'
+  llm_assisted: true
 parent_structures:
 - GO:0097525
 components:
@@ -71,9 +79,9 @@ evidence:
 - reference: GO:0097525
   notes: Gene Ontology cellular-component parent term for spliceosomal snRNP complex.
 - reference: GO:0005687
-  notes: Gene Ontology cellular-component term for the U4 snRNP and its exact synonym.
+  notes: Gene Ontology cellular-component term for the U4 snRNP.
 - reference: GO:0005688
-  notes: Gene Ontology cellular-component term for the U6 snRNP and its exact synonym.
+  notes: Gene Ontology cellular-component term for the U6 snRNP.
 - reference: DOI:10.1038/nature14548
   notes: Nguyen, Galej, Bai and colleagues 2015, The architecture of the spliceosomal
     U4/U6.U5 tri-snRNP, Nature.
@@ -87,15 +95,15 @@ evidence:
   notes: PubMed identifier for Nguyen, Galej, Bai and colleagues 2016 as reported
     by PubMed.
 causal_graphs:
-- graph_id: u4_u6_snrnp_assembly
-  title: U4 and U6 snRNPs form the base-paired U4/U6 snRNP
+- graph_id: u4_u6_snrnp_constituents
+  title: U4 and U6 snRNP constituents define the U4/U6 snRNP
   description: The U4/U6 snRNP contains extensively base-paired U4 and U6 small nuclear
     RNAs together with the U4-associated Sm ring, the U6-associated Lsm2-8 ring and
     U4/U6-associated proteins.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
-  scope_notes: This graph records the defining U4 and U6 snRNP subcomplexes without
-    modeling individual protein bridges, snRNA base-pairing geometry or spliceosomal
+  scope_notes: This graph records GO-defined U4 and U6 snRNP constituent contributions
+    without modeling individual protein bridges, snRNA base-pairing geometry or spliceosomal
     remodeling.
   nodes:
   - node_id: u4_snrnp
@@ -114,19 +122,19 @@ causal_graphs:
     grounding: GO:0071001
   edges:
   - subject: u4_snrnp
-    predicate: contributes to assembly of
+    predicate: contributes constituents to
     object: u4_u6_snrnp
-    description: The U4 snRNP contributes U4 snRNA and its associated Sm protein ring
-      to the U4/U6 snRNP.
+    description: The U4 snRNP contributes the U4 snRNA and U4-associated Sm ring represented
+      in the U4/U6 snRNP definition.
     evidence:
     - reference: GO:0071001
       notes: GO:0071001 defines the U4/U6 snRNP as containing small nuclear RNA U4
         and a heptameric ring of Sm proteins associated with U4.
   - subject: u6_snrnp
-    predicate: contributes to assembly of
+    predicate: contributes constituents to
     object: u4_u6_snrnp
-    description: The U6 snRNP contributes U6 snRNA and its associated Lsm2-8 ring
-      to the U4/U6 snRNP.
+    description: The U6 snRNP contributes the U6 snRNA and U6-associated Lsm2-8 ring
+      represented in the U4/U6 snRNP definition.
     evidence:
     - reference: GO:0071001
       notes: GO:0071001 defines the U4/U6 snRNP as containing small nuclear RNA U6
@@ -140,7 +148,7 @@ discussions:
   attaches_to:
   - components#u4_snrnp
   - components#u6_snrnp
-  - causal_graphs#u4_u6_snrnp_assembly
+  - causal_graphs#u4_u6_snrnp_constituents
   rationale: The first GO:0071001 record captures the U4 and U6 snRNP subcomplexes
     at GO-grounded granularity. Individual ribonucleoprotein rings and U4/U6-specific
     protein-family boundaries should be resolved before splitting this inventory.
