@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u4_u6_x_u5_tri_snrnp_complex.yaml
+  slug: u4_u6_x_u5_tri_snrnp_complex
+session:
+  id: 2026-09-24T132214Z-codex-34c8cb
+  timestamp: '2026-09-24T13:22:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add U4/U6 x U5 tri-snRNP complex record
+  details: Added a GO:0046540 U4/U6 x U5 tri-snRNP complex record with the GO exact synonym,
+    spliceosomal tri-snRNP parentage, GO-grounded U4/U6 and U5 snRNP components, Saccharomyces
+    cerevisiae primary cryo-EM evidence, a minimal assembly graph, and a follow-up discussion
+    for individual protein-family component grounding.
