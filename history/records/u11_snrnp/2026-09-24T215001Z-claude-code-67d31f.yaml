@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u11_snrnp.yaml
+  slug: u11_snrnp
+session:
+  id: 2026-09-24T215001Z-claude-code-67d31f
+  timestamp: '2026-09-24T21:50:01Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1527
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1526
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - evidence
+  summary: 'Address PR #1526 U11 review issue'
+  details: 'Addressed review issue #1527 by clarifying the DOI:10.1261/rna.7320604 evidence
+    note for the GO:0005692 U11 snRNP record. The note now states that Will, Schneider, Hossbach
+    et al. 2004 affinity purified human 12S U11 snRNPs as well as 18S U11/U12 snRNPs, making
+    the paper support for the standalone U11 record explicit.'
