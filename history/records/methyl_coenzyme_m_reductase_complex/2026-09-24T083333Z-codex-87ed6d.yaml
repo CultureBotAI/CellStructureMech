@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+  slug: methyl_coenzyme_m_reductase_complex
+session:
+  id: 2026-09-24T083333Z-codex-87ed6d
+  timestamp: '2026-09-24T08:33:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1469
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1470
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1468
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - curation_history
+  summary: Address methyl coenzyme M reductase review issues
+  details: 'Resolved PR #1468 adversarial review issues #1469 and #1470. Removed unsupported
+    broad archaeal wording from the current MCR definition, canonical-example note, and subunit
+    role prose, while keeping the strain-specific Methanothermobacter marburgensis PDB:1MRO
+    canonical example. Added the verified InterPro:IPR003179 and InterPro:IPR003178 GO:0050524
+    annotations to the coenzyme-B sulfoethylthiotransferase function evidence so all three
+    grounded MCR subunit families are represented.'
