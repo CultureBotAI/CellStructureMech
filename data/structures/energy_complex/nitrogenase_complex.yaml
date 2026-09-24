@@ -1,0 +1,248 @@
+identifier: GO:0016610
+label: nitrogenase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A nitrogenase enzyme complex composed of tetrameric dinitrogenase and
+  homodimeric nitrogenase reductase subcomplexes that together catalyze ATP-dependent
+  reduction of dinitrogen to ammonia.
+definition_source: GO:0016610
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T04:40:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T04:41:30Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added oxidoreductase-complex parentage, reviewed-label-only dinitrogenase
+    and nitrogenase reductase components, an Azotobacter PDB:1N2C canonical example,
+    GO nitrogenase activity, primary Schindelin et al. literature/PDB evidence, a
+    compact nitrogenase function graph, and a component-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T04:42:10Z'
+  curator: codex
+  action: NARROWED_GRAPH_EDGE
+  changes: Replaced the under-supported nitrogenase reductase-to-dinitrogenase electron-transfer
+    edge with GO:0016610-supported contribution edges from both required nitrogenase
+    subcomplexes to nitrogenase activity.
+  llm_assisted: true
+- timestamp: '2026-09-24T04:42:50Z'
+  curator: codex
+  action: TIGHTENED_GRAPH_WORDING
+  changes: Tightened generic nitrogenase component and graph wording to required subcomplex
+    contribution claims and duplicated the shared GO evidence list to avoid YAML anchors.
+  llm_assisted: true
+- timestamp: '2026-09-24T04:53:24Z'
+  curator: codex
+  action: RESOLVED_REVIEW_ISSUE
+  changes: 'Resolved issue #1450 by aligning the GO:0016163-backed nitrogenase activity
+    product wording with ammonium in the function description and causal graph node/edge.'
+  llm_assisted: true
+parent_structures:
+- GO:0140535
+- GO:1990204
+components:
+- component_id: dinitrogenase
+  label: dinitrogenase
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Tetrameric metal-cluster subcomplex required with nitrogenase reductase for
+    nitrogenase activity.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE was asserted for the generic dinitrogenase
+    subcomplex across molybdenum-iron, vanadium-iron, and iron-iron nitrogenase subclasses;
+    available InterPro families split the Mo-specific NifD/NifK chains from other
+    variant alpha and beta chains.
+  evidence:
+  - reference: GO:0016610
+    notes: GO:0016610 defines nitrogenase as containing a tetrameric dinitrogenase
+      protein component.
+  - reference: PDB:1N2C
+    notes: The PDB:1N2C deposition maps two polymer entities to the Azotobacter vinelandii
+      molybdenum-iron dinitrogenase alpha and beta chains.
+- component_id: nitrogenase_reductase
+  label: nitrogenase reductase
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Homodimeric ATP-dependent reductase subcomplex required with dinitrogenase
+    for nitrogenase activity.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CURIE was asserted for all nitrogenase
+    reductase families; InterPro IPR005977 exactly covers NifH for molybdenum nitrogenase,
+    while broader NifH/frxC signatures include non-nitrogenase chlorophyll biosynthesis
+    proteins.
+  evidence:
+  - reference: GO:0016610
+    notes: GO:0016610 defines nitrogenase as containing a homodimeric nitrogenase
+      reductase protein component.
+  - reference: PDB:1N2C
+    notes: The PDB:1N2C deposition maps polymer entity 3 to Azotobacter vinelandii
+      NifH1, the molybdenum nitrogenase iron protein.
+canonical_examples:
+- taxon_id: NCBITaxon:354
+  taxon_label: Azotobacter vinelandii
+  note: Bacterial source of the molybdenum-iron dinitrogenase and iron-protein reductase
+    assembly deposited as PDB:1N2C.
+  reference: PDB:1N2C
+functions:
+- function_id: nitrogenase_activity
+  label: nitrogenase activity
+  grounding: GO:0016163
+  description: Nitrogenase couples ATP hydrolysis and reduced-ferredoxin oxidation
+    to reduction of dinitrogen, producing ammonium and dihydrogen.
+  evidence:
+  - reference: GO:0016163
+    notes: GO:0016163 defines nitrogenase activity as the ATP-dependent reduced-ferredoxin:dinitrogen
+      oxidoreductase reaction.
+  - reference: DOI:10.1038/387370a0
+    notes: Schindelin et al. 1997 reported an Azotobacter vinelandii nitrogenase complex
+      stabilized in a state containing the MoFe protein and Fe protein.
+evidence:
+- reference: GO:0016610
+  notes: Gene Ontology cellular-component term for the generic nitrogenase complex.
+- reference: GO:0140535
+  notes: Gene Ontology cellular-component term for intracellular protein-containing
+    complexes.
+- reference: GO:1990204
+  notes: Gene Ontology cellular-component term for oxidoreductase complexes.
+- reference: GO:0016163
+  notes: Gene Ontology molecular-function term for nitrogenase activity.
+- reference: DOI:10.1038/387370a0
+  notes: Schindelin et al. 1997, Structure of ADP x AlF4(-)-stabilized nitrogenase
+    complex and its implications for signal transduction, Nature.
+- reference: PMID:9163420
+  notes: PubMed identifier for Schindelin et al. 1997 as reported by the RCSB PDB:1N2C
+    primary citation.
+- reference: PDB:1N2C
+  notes: RCSB Protein Data Bank entry for the Azotobacter vinelandii nitrogenase complex
+    structure from Schindelin et al. 1997.
+causal_graphs:
+- graph_id: nitrogenase_ferredoxin_dinitrogen_reduction
+  title: Nitrogenase couples ATP to dinitrogen reduction
+  description: The nitrogenase complex couples ATP hydrolysis and reduced-ferredoxin
+    oxidation to dinitrogen reduction through required dinitrogenase and nitrogenase
+    reductase subcomplexes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the two-component enzyme layout and GO-level net
+    reaction without resolving ferredoxin/flavodoxin choice, Fe-protein docking geometry,
+    P-cluster electron relay, FeMo-cofactor intermediates, or Mo/V/Fe-only variant
+    chemistry.
+  nodes:
+  - node_id: reduced_ferredoxin
+    label: reduced ferredoxin
+    node_type: GENE_OR_PROTEIN
+  - node_id: nitrogenase_reductase
+    label: nitrogenase reductase
+    node_type: GENE_OR_PROTEIN
+    component_ref: nitrogenase_reductase
+  - node_id: dinitrogenase
+    label: dinitrogenase
+    node_type: GENE_OR_PROTEIN
+    component_ref: dinitrogenase
+  - node_id: dinitrogen
+    label: dinitrogen
+    node_type: CHEMICAL
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+  - node_id: ammonium
+    label: ammonium
+    node_type: CHEMICAL
+  - node_id: dihydrogen
+    label: dihydrogen
+    node_type: CHEMICAL
+  - node_id: nitrogenase_activity
+    label: nitrogenase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0016163
+  edges:
+  - subject: reduced_ferredoxin
+    predicate: donates electrons to
+    object: nitrogenase_activity
+    description: Reduced ferredoxin supplies the electrons used by the nitrogenase
+      reaction.
+    evidence:
+    - reference: GO:0016163
+      notes: GO:0016163 records reduced ferredoxin as the electron donor oxidized
+        during nitrogenase activity.
+  - subject: atp
+    predicate: is hydrolyzed by
+    object: nitrogenase_activity
+    description: Nitrogenase activity consumes ATP during electron transfer and dinitrogen
+      reduction.
+    evidence:
+    - reference: GO:0016163
+      notes: GO:0016163 defines the nitrogenase reaction as consuming ATP and water
+        and producing ADP and phosphate.
+  - subject: nitrogenase_reductase
+    predicate: docks with
+    object: dinitrogenase
+    description: The nitrogenase reductase homodimer associates with the dinitrogenase
+      tetramer in the assembled nitrogenase complex.
+    evidence:
+    - reference: PDB:1N2C
+      notes: PDB:1N2C captures A. vinelandii nitrogenase reductase chains bound to
+        the MoFe dinitrogenase protein.
+  - subject: nitrogenase_reductase
+    predicate: contributes to
+    object: nitrogenase_activity
+    description: The nitrogenase reductase homodimer is required for the assembled
+      nitrogenase complex to carry out nitrogenase activity.
+    evidence:
+    - reference: GO:0016610
+      notes: GO:0016610 defines both dinitrogenase and nitrogenase reductase as required
+        for nitrogenase complex enzyme activity.
+  - subject: dinitrogenase
+    predicate: contributes to
+    object: nitrogenase_activity
+    description: The dinitrogenase tetramer is required for the assembled nitrogenase
+      complex to carry out nitrogenase activity.
+    evidence:
+    - reference: GO:0016610
+      notes: GO:0016610 defines both dinitrogenase and nitrogenase reductase as required
+        for nitrogenase complex enzyme activity.
+  - subject: dinitrogen
+    predicate: accepts electrons in
+    object: nitrogenase_activity
+    description: Dinitrogen is the terminal acceptor reduced by nitrogenase activity.
+    evidence:
+    - reference: GO:0016163
+      notes: GO:0016163 records dinitrogen as the acceptor in nitrogenase activity.
+  - subject: nitrogenase_activity
+    predicate: produces
+    object: ammonium
+    description: Nitrogenase activity reduces dinitrogen to ammonium.
+    evidence:
+    - reference: GO:0016163
+      notes: GO:0016163 records two ammonium products in the nitrogenase reaction.
+  - subject: nitrogenase_activity
+    predicate: produces
+    object: dihydrogen
+    description: The nitrogenase reaction releases dihydrogen as a coupled product.
+    evidence:
+    - reference: GO:0016163
+      notes: GO:0016163 records H2 as a product of nitrogenase activity.
+discussions:
+- discussion_id: nitrogenase_variant_component_groundings
+  prompt: Resolve variant-specific Mo-Fe, V-Fe, and Fe-Fe dinitrogenase and reductase
+    groundings before replacing the generic reviewed-label-only component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dinitrogenase
+  - components#nitrogenase_reductase
+  rationale: GO:0016610 exactly grounds the complete nitrogenase complex across multiple
+    metal variants; the verified InterPro terms cover narrower molybdenum-iron NifD,
+    NifK, and NifH families or broader families that also include non-nitrogenase
+    proteins.
+  evidence:
+  - reference: GO:0016610
+    notes: GO:0016610 subsumes the molybdenum-iron, vanadium-iron, and iron-iron nitrogenase
+      complex subclasses.
+  posed_by: codex
+  posed_date: '2026-09-24'
