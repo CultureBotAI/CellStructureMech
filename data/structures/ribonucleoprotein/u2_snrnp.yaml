@@ -1,0 +1,139 @@
+identifier: GO:0005686
+label: U2 snRNP
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex that contains small nuclear RNA U2, a heptameric
+  ring of Sm proteins, as well as several proteins that are unique to the U2 snRNP,
+  most of which remain associated with the U2 snRNA both while the U2 snRNP is free
+  or assembled into a series of spliceosomal complexes.
+definition_source: GO:0005686
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T16:53:28Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T16:54:32Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym, spliceosomal snRNP parentage, U2 snRNA and
+    Sm-ring components, budding-yeast B-complex evidence, a minimal U2 snRNP constituent
+    graph and a protein-component grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: snRNP U2
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005686
+parent_structures:
+- GO:0097525
+components:
+- component_id: u2_snrna
+  label: U2 snRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000392
+  role: U2 small nuclear RNA constituent named in the U2 snRNP definition and grounded
+    to the U2 snRNA Sequence Ontology term.
+  evidence:
+  - reference: GO:0005686
+    notes: GO:0005686 defines the U2 snRNP as containing small nuclear RNA U2.
+  - reference: SO:0000392
+    notes: SO:0000392 is the Sequence Ontology term for U2 snRNA.
+- component_id: sm_protein_ring
+  label: Sm protein ring
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: An exact source-neutral CURIE for the spliceosomal heptameric Sm
+    protein ring is left unresolved in this first U2 snRNP record; GO:0005686 directly
+    supports this label-level constituent.
+  role: Heptameric Sm protein-ring constituent named in the U2 snRNP definition.
+  evidence:
+  - reference: GO:0005686
+    notes: GO:0005686 defines the U2 snRNP as containing a heptameric ring of Sm proteins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: The U2 snRNP subcomplex is represented in a budding-yeast pre-catalytic B-complex
+    spliceosome cryo-EM structure; broader eukaryotic distribution is left for follow-up
+    curation.
+  reference: DOI:10.1038/nature22799
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model whose U2 snRNP subcomplex is represented inside a pre-catalytic
+    B-complex spliceosome cryo-EM structure.
+  reference: DOI:10.1038/nature22799
+evidence:
+- reference: GO:0005686
+  notes: Gene Ontology cellular-component term for the U2 snRNP and its exact synonym.
+- reference: GO:0097525
+  notes: Gene Ontology cellular-component parent term for spliceosomal snRNP complex.
+- reference: SO:0000392
+  notes: Sequence Ontology term for U2 snRNA.
+- reference: DOI:10.1038/nature22799
+  notes: Plaschka, Lin and Nagai 2017, Structure of a pre-catalytic spliceosome, Nature.
+- reference: PMID:28530653
+  notes: PubMed identifier for Plaschka, Lin and Nagai 2017 as reported by PubMed.
+causal_graphs:
+- graph_id: u2_snrnp_constituents
+  title: U2 snRNA and the Sm ring are U2 snRNP constituents
+  description: The U2 snRNP contains U2 small nuclear RNA and a heptameric Sm protein
+    ring; GO:0005686 also names additional U2-specific proteins whose exact family
+    boundaries remain to be resolved.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records GO-defined U2 snRNA and Sm-ring constituent
+    contributions without modeling individual Sm, SF3a, SF3b or U2-specific protein-family
+    boundaries.
+  nodes:
+  - node_id: u2_snrna
+    label: U2 snRNA
+    node_type: RNA
+    grounding: SO:0000392
+    component_ref: u2_snrna
+  - node_id: sm_protein_ring
+    label: Sm protein ring
+    node_type: STRUCTURE
+    component_ref: sm_protein_ring
+  - node_id: u2_snrnp
+    label: U2 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005686
+  edges:
+  - subject: u2_snrna
+    predicate: contributes constituents to
+    object: u2_snrnp
+    description: The U2 snRNA is the small nuclear RNA constituent represented in
+      the U2 snRNP definition.
+    evidence:
+    - reference: GO:0005686
+      notes: GO:0005686 defines the U2 snRNP as containing small nuclear RNA U2.
+  - subject: sm_protein_ring
+    predicate: contributes constituents to
+    object: u2_snrnp
+    description: The Sm protein ring is the heptameric protein-ring constituent represented
+      in the U2 snRNP definition.
+    evidence:
+    - reference: GO:0005686
+      notes: GO:0005686 defines the U2 snRNP as containing a heptameric ring of Sm
+        proteins.
+discussions:
+- discussion_id: resolve_u2_snrnp_protein_components
+  prompt: Resolve exact source-neutral groundings for the Sm ring, SF3a, SF3b and
+    U2-specific protein families that form the U2 snRNP.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sm_protein_ring
+  - causal_graphs#u2_snrnp_constituents
+  rationale: The first GO:0005686 record captures U2 snRNA and the GO-defined Sm ring
+    at coarse granularity. Individual spliceosomal Sm proteins, SF3a, SF3b and U2-specific
+    protein-family boundaries should be resolved before splitting this inventory.
+  evidence:
+  - reference: GO:0005686
+  - reference: DOI:10.1038/nature22799
+  posed_by: codex
+  posed_date: '2026-09-24'
