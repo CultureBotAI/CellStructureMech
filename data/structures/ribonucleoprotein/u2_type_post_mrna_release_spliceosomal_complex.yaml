@@ -20,6 +20,12 @@ curation_history:
     U2, U5 and U6 snRNP components, Wan budding-yeast ILS evidence, a minimal snRNP-retention
     graph and a protein/RNA-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T19:11:29Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1517: removed unverified protein-rich wording from the post-mRNA release
+    spliceosome component-boundary TODO.'
+  llm_assisted: true
 synonyms:
 - synonym_text: major post-mRNA release spliceosomal complex
   synonym_type: EXACT_SYNONYM
@@ -190,7 +196,7 @@ discussions:
   - components#u6_snrnp
   - causal_graphs#u2_type_post_mrna_release_ils_retention
   rationale: GO:0071008 defines the post-mRNA release state by the excised intron
-    and U2, U5 and U6 snRNPs. The Wan yeast ILS structure establishes a protein-rich
+    and U2, U5 and U6 snRNPs. The Wan yeast ILS paper directly supports a budding-yeast
     intron lariat spliceosome, but individual protein families and the RNA substrate
     boundary should be resolved before expanding this component list.
   evidence:
