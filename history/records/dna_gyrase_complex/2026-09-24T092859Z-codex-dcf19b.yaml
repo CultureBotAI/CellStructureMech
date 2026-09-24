@@ -1,0 +1,17 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_gyrase_complex.yaml
+  slug: dna_gyrase_complex
+session:
+  id: 2026-09-24T092859Z-codex-dcf19b
+  timestamp: '2026-09-24T09:28:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added DNA gyrase complex
+  details: Created GO:0120217 DNA gyrase complex with GyrA/GyrB InterPro components, E. coli
+    K-12 PDB:6RKU evidence, and a DNA negative-supercoiling function graph.

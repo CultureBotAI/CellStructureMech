@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DNA gyrase complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>DNA gyrase complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0120217"><code>GO:0120217</code></a> · OTHER · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">DNA gyrase complex is a bacterial GyrA2-GyrB2 type IIA topoisomerase complex that uses ATP hydrolysis to introduce negative supercoils into DNA and can also relax positive supercoils. <small>[<a href="http://purl.obolibrary.org/obo/GO_0120217"><code>GO:0120217</code></a>]</small></p>
+
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-gyrase_subunit_a"><td>DNA gyrase subunit A</td><td>PROTEIN</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR005743"><code>InterPro:IPR005743</code></a></td><td>gyrA</td><td></td><td></td><td>GyrA catalytic subunit of bacterial DNA gyrase, represented twice in the GyrA2-GyrB2 enzyme core.<ul class="evidence"><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR005743"><code>InterPro:IPR005743</code></a> <small>InterPro IPR005743 is a family entry named DNA gyrase, subunit A and is cross-referenced to EC:5.6.2.2.</small></li><li><a href="https://www.rcsb.org/structure/6RKU"><code>PDB:6RKU</code></a> <small>RCSB maps PDB:6RKU polymer entity 1 to Escherichia coli K-12 DNA gyrase subunit A, UniProtKB:P0AES4.</small></li></ul></td></tr>
+<tr id="components-gyrase_subunit_b"><td>DNA gyrase subunit B</td><td>PROTEIN</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR011557"><code>InterPro:IPR011557</code></a></td><td>gyrB</td><td></td><td></td><td>GyrB subunit of bacterial DNA gyrase, represented twice in the GyrA2-GyrB2 enzyme core.<ul class="evidence"><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR011557"><code>InterPro:IPR011557</code></a> <small>InterPro IPR011557 is a family entry named DNA gyrase, subunit B and is cross-referenced to EC:5.6.2.2.</small></li><li><a href="https://www.rcsb.org/structure/6RKU"><code>PDB:6RKU</code></a> <small>RCSB maps PDB:6RKU polymer entity 2 to Escherichia coli K-12 DNA gyrase subunit B, UniProtKB:P0AES6.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code>NCBITaxon:83333</code></a> <em>Escherichia coli K-12</em> — The source strain for the GyrA and GyrB chains in the complete GyrA2-GyrB2 DNA gyrase-DNA cryo-EM assembly deposited as PDB:6RKU. [<a href="https://www.rcsb.org/structure/6RKU"><code>PDB:6RKU</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>DNA negative supercoiling activity</strong> <a href="http://purl.obolibrary.org/obo/GO_0034335"><code>GO:0034335</code></a> — DNA gyrase introduces negative supercoils into DNA and couples DNA topological transformation to ATP hydrolysis.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0034335"><code>GO:0034335</code></a> <small>GO:0034335 defines DNA negative supercoiling activity as the catalytic introduction of negative supercoils into DNA.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0120217"><code>GO:0120217</code></a> <small>GO:0120217 defines the DNA gyrase complex as a bacterial type IIA topoisomerase that introduces negative supercoils at the expense of ATP hydrolysis.</small></li><li><a href="https://www.rcsb.org/structure/6RKU"><code>PDB:6RKU</code></a> <small>PDB:6RKU contains two GyrA chains, two GyrB chains, and DNA polymer entities in the Escherichia coli gyrase-DNA nucleoprotein complex.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-dna_gyrase_negative_supercoiling">DNA gyrase introduces negative DNA supercoils <small>(FUNCTION)</small></h3>
+<p>The DNA gyrase complex uses its GyrA and GyrB subunits to bind DNA and carry out ATP-dependent negative supercoiling.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>DNA gyrase complex</td><td>enables</td><td>DNA negative supercoiling activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0120217"><code>GO:0120217</code></a> <small>GO:0120217 defines the DNA gyrase complex by its ATP-dependent negative-supercoiling activity.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0034335"><code>GO:0034335</code></a> <small>GO:0034335 is the molecular-function term for DNA negative supercoiling activity.</small></li></ul></td></tr>
+<tr><td>DNA gyrase subunit A</td><td>contributes to</td><td>DNA negative supercoiling activity</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR005743"><code>InterPro:IPR005743</code></a> <small>InterPro IPR005743 identifies the DNA gyrase subunit A family.</small></li><li><a href="https://www.rcsb.org/structure/6RKU"><code>PDB:6RKU</code></a> <small>PDB:6RKU resolves two GyrA chains with two GyrB chains.</small></li></ul></td></tr>
+<tr><td>DNA gyrase subunit B</td><td>contributes to</td><td>DNA negative supercoiling activity</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR011557"><code>InterPro:IPR011557</code></a> <small>InterPro IPR011557 identifies the DNA gyrase subunit B family.</small></li><li><a href="https://www.rcsb.org/structure/6RKU"><code>PDB:6RKU</code></a> <small>PDB:6RKU resolves two GyrB chains with two GyrA chains.</small></li></ul></td></tr>
+<tr><td>DNA gyrase complex</td><td>binds</td><td>DNA segment</td><td><ul class="evidence"><li><a href="https://www.rcsb.org/structure/6RKU"><code>PDB:6RKU</code></a> <small>PDB:6RKU resolves the Escherichia coli GyrA2-GyrB2 protein assembly with DNA polymer entities.</small></li></ul></td></tr>
+<tr><td>DNA segment</td><td>is supercoiled by</td><td>DNA negative supercoiling activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0034335"><code>GO:0034335</code></a> <small>GO:0034335 defines DNA negative supercoiling as the catalytic introduction of negative supercoils into a DNA molecule or region.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0120217"><code>GO:0120217</code></a> <small>Gene Ontology cellular-component term for the DNA gyrase complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0009330"><code>GO:0009330</code></a> <small>Gene Ontology cellular-component term for ATP-hydrolyzing DNA topoisomerase type II complexes, the broader class that includes DNA gyrase.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0034335"><code>GO:0034335</code></a> <small>Gene Ontology molecular-function term for DNA negative supercoiling activity.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0003918"><code>GO:0003918</code></a> <small>Gene Ontology molecular-function term for ATP-hydrolyzing DNA topoisomerase type II activity.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR005743"><code>InterPro:IPR005743</code></a> <small>InterPro family for DNA gyrase subunit A.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR011557"><code>InterPro:IPR011557</code></a> <small>InterPro family for DNA gyrase subunit B.</small></li><li><a href="https://www.uniprot.org/uniprotkb/P0AES4"><code>UniProtKB:P0AES4</code></a> <small>UniProtKB reviewed Escherichia coli K-12 entry for DNA gyrase subunit A, GyrA.</small></li><li><a href="https://www.uniprot.org/uniprotkb/P0AES6"><code>UniProtKB:P0AES6</code></a> <small>UniProtKB reviewed Escherichia coli K-12 entry for DNA gyrase subunit B, GyrB.</small></li><li><a href="https://doi.org/10.1038/s41467-019-12914-y"><code>DOI:10.1038/s41467-019-12914-y</code></a> <small>Vanden Broeck et al. 2019, Cryo-EM structure of the complete E. coli DNA gyrase nucleoprotein complex, Nature Communications.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/31666516"><code>PMID:31666516</code></a> <small>PubMed identifier for Vanden Broeck et al. 2019 as reported by RCSB PDB:6RKU.</small></li><li><a href="https://www.rcsb.org/structure/6RKU"><code>PDB:6RKU</code></a> <small>RCSB Protein Data Bank entry for an Escherichia coli GyrA2-GyrB2 DNA gyrase-DNA cryo-EM structure from Vanden Broeck et al. 2019.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-24T09:27:04Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-24T09:28:11Z</code> codex · EXPANDED_RECORD — Added DNA topoisomerase II parentage, GyrA/GyrB components grounded to exact InterPro families and PDB:6RKU polymer entities, an Escherichia coli K-12 canonical example, DNA negative supercoiling function evidence, and a compact function graph.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/dna_gyrase_complex.yaml"><code>data/structures/other/dna_gyrase_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
