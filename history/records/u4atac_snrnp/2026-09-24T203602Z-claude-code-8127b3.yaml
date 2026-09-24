@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u4atac_snrnp.yaml
+  slug: u4atac_snrnp
+session:
+  id: 2026-09-24T203602Z-claude-code-8127b3
+  timestamp: '2026-09-24T20:36:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add U4atac snRNP
+  details: Added a new GO:0005690 U4atac snRNP record with the GO exact synonym; GO:0097525
+    parentage; SO-grounded U4atac snRNA and label-only Sm-ring components; Homo sapiens distribution
+    and canonical-example evidence from Schneider, Will, Makarova et al. 2002 Molecular and
+    Cellular Biology; a conservative U4atac snRNP constituent graph; and a curation TODO for
+    unresolved Sm-ring and U4atac-specific protein-family boundaries. Validated the new record
+    with targeted LinkML closed-schema and validate_strict gates.
