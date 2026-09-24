@@ -21,6 +21,12 @@ curation_history:
     canonical example, DNA negative supercoiling function evidence, and a compact
     function graph.
   llm_assisted: true
+- timestamp: '2026-09-24T09:38:54Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1475: added structured stoichiometry to the GyrA and GyrB component rows
+    to capture the A2B2 DNA gyrase protein assembly described by GO:0120217 and PDB:6RKU.'
+  llm_assisted: true
 parent_structures:
 - GO:0009330
 components:
@@ -40,6 +46,7 @@ components:
   - reference: PDB:6RKU
     notes: RCSB maps PDB:6RKU polymer entity 1 to Escherichia coli K-12 DNA gyrase
       subunit A, UniProtKB:P0AES4.
+  stoichiometry: 2 copies per GyrA2-GyrB2 complex
 - component_id: gyrase_subunit_b
   label: DNA gyrase subunit B
   component_type: PROTEIN
@@ -56,6 +63,7 @@ components:
   - reference: PDB:6RKU
     notes: RCSB maps PDB:6RKU polymer entity 2 to Escherichia coli K-12 DNA gyrase
       subunit B, UniProtKB:P0AES6.
+  stoichiometry: 2 copies per GyrA2-GyrB2 complex
 canonical_examples:
 - taxon_id: NCBITaxon:83333
   taxon_label: Escherichia coli K-12

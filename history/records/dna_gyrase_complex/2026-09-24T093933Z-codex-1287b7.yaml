@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_gyrase_complex.yaml
+  slug: dna_gyrase_complex
+session:
+  id: 2026-09-24T093933Z-codex-1287b7
+  timestamp: '2026-09-24T09:39:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1475
+events:
+- type: EDIT
+  outcome: changed
+  summary: Added DNA gyrase stoichiometry
+  details: 'Addressed #1475 by adding structured stoichiometry to the GyrA and GyrB component
+    rows.'
