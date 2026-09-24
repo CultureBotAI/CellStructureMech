@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/respiratory_chain_complex_iii.yaml
+  slug: respiratory_chain_complex_iii
+session:
+  id: 2026-09-24T055642Z-codex-001a22
+  timestamp: '2026-09-24T05:56:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Add respiratory chain complex III
+  details: 'Created GO:0045275 respiratory chain complex III as an ENERGY_COMPLEX record.
+    Grounded the complete complex to GO, added GO synonymy and GO:0098803 parentage, InterPro-grounded
+    cytochrome b/Rieske/cytochrome c1 core components, a Cereibacter sphaeroides PDB:2QJP
+    canonical example, GO:0008121 quinol-cytochrome-c reductase activity, DOI/PMID/PDB evidence
+    for Esser et al. 2008, and a compact nonmechanistic function graph. Verified GO terms
+    with QuickGO, NCBITaxon:1063 with NCBI Taxonomy, PDB:2QJP and its polymer entities with
+    RCSB, InterPro:IPR030689/IPR006317/IPR002326 with InterPro, and DOI/PMID metadata through
+    RCSB/PubMed. Regenerated text embeddings, pages, and README stats. Local validation passed:
+    build_text_embedding_map --check, render_pages --check, check_docs --check, LinkML validation
+    of the new record, strict validation of all 506 records, fetch_snippets --verify --check,
+    check_trait_links --check, check_curies --check, validate_id_label_correspondence, and
+    git diff --check.'

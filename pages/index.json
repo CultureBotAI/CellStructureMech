@@ -1089,6 +1089,15 @@
   "definition": "Respiratory chain complex II (succinate dehydrogenase) is a respiratory-chain enzyme complex that oxidizes succinate, passes electrons through flavin and iron-sulfur centers to membrane quinone, and thereby connects tricarboxylic-acid-cycle electron flow with the respiratory quinone pool."
  },
  {
+  "identifier": "GO:0045275",
+  "label": "respiratory chain complex III",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/respiratory_chain_complex_iii.html",
+  "definition": "Respiratory chain complex III is a membrane-bound cytochrome bc1 oxidoreductase complex that uses a cytochrome b, Rieske iron-sulfur protein, and cytochrome c1 catalytic core to transfer electrons from quinol to cytochrome c while translocating protons."
+ },
+ {
   "identifier": "GO:0016471",
   "label": "vacuolar proton-transporting V-type ATPase complex",
   "category": "ENERGY_COMPLEX",
