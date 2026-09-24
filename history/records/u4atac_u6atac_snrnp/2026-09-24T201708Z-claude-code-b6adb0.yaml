@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u4atac_u6atac_snrnp.yaml
+  slug: u4atac_u6atac_snrnp
+session:
+  id: 2026-09-24T201708Z-claude-code-b6adb0
+  timestamp: '2026-09-24T20:17:08Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1521
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1520
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - discussions
+  summary: 'Address PR #1520 U4atac/U6atac review issue'
+  details: 'Addressed review issue #1521 by narrowing the GO:0071002 protein-component TODO
+    so it no longer described the already GO:0120115-grounded Lsm2-8 complex as lacking source-neutral
+    grounding. Added GO:0120115 as discussion evidence and left the open work focused on direct
+    nested component modeling plus unresolved U4atac/U6atac-specific protein-family boundaries.'
