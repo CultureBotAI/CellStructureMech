@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u4atac_snrnp.yaml
+  slug: u4atac_snrnp
+session:
+  id: 2026-09-24T204546Z-claude-code-8ecbad
+  timestamp: '2026-09-24T20:45:46Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1523
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1522
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - causal_graphs
+  summary: 'Address PR #1522 U4atac review issue'
+  details: 'Addressed review issue #1523 by rewording the GO:0005690 U4atac snRNP constituent
+    graph description so it no longer implied the GO definition enumerates individual U4atac-specific
+    proteins. The graph now says the GO term states additional U4atac-specific proteins are
+    present while leaving their exact family boundaries unresolved.'

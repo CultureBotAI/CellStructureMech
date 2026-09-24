@@ -22,6 +22,12 @@ curation_history:
     and Sm-ring components, human Schneider/Will/Makarova tri-snRNP evidence, a minimal
     U4atac snRNP constituent graph and a protein-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T20:45:24Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1523: reworded the U4atac graph description so it no longer implies GO:0005690
+    enumerates individual U4atac-specific proteins.'
+  llm_assisted: true
 synonyms:
 - synonym_text: snRNP U4atac
   synonym_type: EXACT_SYNONYM
@@ -91,8 +97,8 @@ causal_graphs:
 - graph_id: u4atac_snrnp_constituents
   title: U4atac snRNA and the Sm ring are U4atac snRNP constituents
   description: The U4atac snRNP contains U4atac small nuclear RNA and a heptameric
-    Sm protein ring; GO:0005690 also names additional U4atac-specific proteins whose
-    exact family boundaries remain to be resolved.
+    Sm protein ring; GO:0005690 also states that additional U4atac-specific proteins
+    are present, with exact family boundaries still to be resolved.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: This partial graph records GO-defined U4atac snRNA and Sm-ring constituent
