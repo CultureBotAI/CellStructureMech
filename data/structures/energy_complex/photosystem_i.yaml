@@ -1,0 +1,209 @@
+identifier: GO:0009522
+label: photosystem I
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A photosystem that contains an iron-sulfur reaction center associated
+  with accessory pigments and electron carriers. In cyanobacteria and chloroplasts,
+  photosystem I functions as a light-dependent plastocyanin-ferredoxin oxidoreductase,
+  transferring electrons from plastocyanin to ferredoxin; in photosynthetic bacteria
+  that have only a single type I photosystem, such as the green sulfur bacteria, electrons
+  can go either to ferredoxin (Fd) -> NAD+ or to menaquinone (MK) -> Cytb/FeS -> Cytc555
+  -> photosystem I (cyclic photophosphorylation).
+definition_source: GO:0009522
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T01:37:28Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T01:39:06Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO photosystem parentage, reviewed-label-only PSI component classes,
+    cyanobacterial distribution and Synechococcus example, photosynthetic electron-transfer
+    function, GO/PubMed evidence, a PSI electron-transfer graph, and a component-grounding
+    TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0009521
+components:
+- component_id: type_i_reaction_center_core
+  label: type I reaction center core
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  role: Large transmembrane core polypeptides that bind the primary donor and early
+    electron-transfer cofactors of the type I photosystem.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, or NCBIfam CURIE was verified
+    for the full set of type-I photosystem reaction-center cores; cyanobacterial PsaA/PsaB
+    and bacterial Psc cores were not collapsed.
+  essentiality: ESSENTIAL
+  evidence:
+  - reference: GO:0009522
+    notes: GO:0009522 defines PSI as an iron-sulfur reaction-center photosystem associated
+      with accessory pigments and electron carriers.
+  - reference: PMID:11418848
+    notes: Jordan et al. 2001 resolved the cyanobacterial PSI structure including
+      the PsaA/PsaB reaction-center core.
+- component_id: terminal_iron_sulfur_acceptors
+  label: terminal iron-sulfur electron acceptors
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  role: Iron-sulfur proteins or domains that receive electrons from the PSI reaction-center
+    core for transfer toward ferredoxin.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family CURIE was verified for the terminal
+    PSI iron-sulfur acceptors across cyanobacterial, chloroplast, and bacterial type-I
+    photosystems.
+  essentiality: ESSENTIAL
+  evidence:
+  - reference: GO:0009522
+    notes: GO:0009522 defines PSI as an iron-sulfur reaction-center photosystem that
+      transfers electrons toward ferredoxin.
+  - reference: PMID:11418848
+    notes: Jordan et al. 2001 located the Fe4S4 clusters in the cyanobacterial PSI
+      structural model.
+- component_id: psi_bound_pigments
+  label: PSI chlorophyll and carotenoid cofactors
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  role: Accessory chlorophyll and carotenoid cofactors that capture excitation energy
+    and couple it to reaction-center charge separation.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This row groups PSI-bound pigments and avoids asserting one CHEBI
+    term for a mixed chlorophyll/carotenoid cofactor set.
+  essentiality: ESSENTIAL
+  evidence:
+  - reference: GO:0009522
+    notes: GO:0009522 defines PSI as a photosystem with accessory pigments.
+  - reference: PMID:11418848
+    notes: Jordan et al. 2001 modeled the chlorophylls and carotenoids bound by the
+      cyanobacterial PSI complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteriota
+  presence: COMMON
+  note: Cyanobacteria use PSI as a major photosynthetic-membrane complex that receives
+    electrons from plastocyanin or cytochrome c6 and passes them toward ferredoxin.
+  reference: GO:0009522
+canonical_examples:
+- taxon_id: NCBITaxon:32046
+  taxon_label: Synechococcus elongatus
+  note: Thermophilic cyanobacterial source used by Jordan et al. to solve the 2.5
+    A crystal structure of PSI.
+  reference: PMID:11418848
+functions:
+- function_id: photosynthetic_electron_transport
+  label: photosynthetic electron transport chain
+  grounding: GO:0009767
+  description: PSI accepts electrons from an upstream soluble carrier, oxidizes the
+    P700 special pair after light absorption, and transfers electrons through iron-sulfur
+    centers toward ferredoxin.
+  evidence:
+  - reference: GO:0009522
+    notes: GO:0009522 defines PSI as a light-dependent plastocyanin-ferredoxin oxidoreductase
+      in cyanobacteria and chloroplasts.
+  - reference: PMID:11418848
+    notes: Jordan et al. 2001 connected the cyanobacterial PSI structure to light
+      capture and electron transfer.
+evidence:
+- reference: GO:0009522
+  notes: Gene Ontology cellular-component term for photosystem I.
+- reference: GO:0009521
+  notes: Gene Ontology cellular-component term for photosystems.
+- reference: GO:0009767
+  notes: Gene Ontology biological-process term for the photosynthetic electron transport
+    chain.
+- reference: PMID:11418848
+  notes: Jordan et al. 2001, Three-dimensional structure of cyanobacterial photosystem
+    I at 2.5 A resolution, Nature.
+causal_graphs:
+- graph_id: psi_light_driven_electron_transfer
+  title: PSI drives light-dependent electron transfer toward ferredoxin
+  description: In cyanobacterial PSI, bound pigments feed excitation to the P700 reaction
+    center, and electrons move through internal iron-sulfur acceptors toward soluble
+    ferredoxin.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the PSI input and output carriers without resolving
+    individual Psa/Psc subfamilies, cofactors, or alternate cyclic type-I photosystem
+    electron paths.
+  nodes:
+  - node_id: pigments
+    label: PSI chlorophyll and carotenoid cofactors
+    node_type: CHEMICAL
+    component_ref: psi_bound_pigments
+  - node_id: reaction_center
+    label: type I reaction center core
+    node_type: GENE_OR_PROTEIN
+    component_ref: type_i_reaction_center_core
+  - node_id: fe_s_acceptors
+    label: terminal iron-sulfur electron acceptors
+    node_type: GENE_OR_PROTEIN
+    component_ref: terminal_iron_sulfur_acceptors
+  - node_id: ferredoxin
+    label: ferredoxin
+    node_type: GENE_OR_PROTEIN
+  - node_id: electron_transport
+    label: photosynthetic electron transport chain
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009767
+  edges:
+  - subject: pigments
+    predicate: feed excitation to
+    object: reaction_center
+    description: Accessory pigments transfer captured light energy into the PSI reaction
+      center.
+    evidence:
+    - reference: PMID:11418848
+      notes: Jordan et al. 2001 modeled PSI pigments and discussed how their arrangement
+        supports efficient light capture and electron transfer.
+  - subject: reaction_center
+    predicate: passes electrons through
+    object: fe_s_acceptors
+    description: Excited PSI moves electrons from the reaction-center core to terminal
+      iron-sulfur centers.
+    evidence:
+    - reference: GO:0009522
+      notes: GO:0009522 defines PSI as an iron-sulfur reaction center with electron
+        carriers.
+  - subject: fe_s_acceptors
+    predicate: reduce
+    object: ferredoxin
+    description: Terminal PSI iron-sulfur acceptors deliver electrons toward ferredoxin.
+    evidence:
+    - reference: GO:0009522
+      notes: GO:0009522 describes cyanobacterial PSI as transferring electrons from
+        plastocyanin to ferredoxin.
+  - subject: reaction_center
+    predicate: contributes to
+    object: electron_transport
+    description: PSI is a light-driven photosynthetic electron-transfer complex.
+    evidence:
+    - reference: PMID:11418848
+      notes: Jordan et al. 2001 present PSI as one of the large protein-cofactor complexes
+        driving photosynthesis in cyanobacteria.
+discussions:
+- discussion_id: psi_component_groundings
+  prompt: Resolve exact source-neutral component groundings for Psa, Psc, iron-sulfur,
+    and species-specific accessory subfamilies before replacing reviewed-label-only
+    PSI components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#type_i_reaction_center_core
+  - components#terminal_iron_sulfur_acceptors
+  - components#psi_bound_pigments
+  rationale: GO exactly grounds the generic PSI complex, but cyanobacterial PsaA/PsaB,
+    chloroplast accessory subunits, and bacterial Psc subfamilies should not be conflated
+    in source-neutral protein family rows.
+  evidence:
+  - reference: GO:0009522
+    notes: GO:0009522 spans cyanobacterial/chloroplast PSI and bacterial single type-I
+      photosystems.
+  - reference: PMID:11418848
+    notes: Jordan et al. 2001 resolved one cyanobacterial PSI composition, providing
+      useful but not universal subunit boundaries.
+  posed_by: codex
+  posed_date: '2026-09-24'

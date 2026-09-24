@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/photosystem_i.yaml
+  slug: photosystem_i
+session:
+  id: 2026-09-24T014002Z-codex-748ad4
+  timestamp: '2026-09-24T01:40:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added GO:0009522 photosystem I
+  details: Added the GO:0009522 photosystem I ENERGY_COMPLEX record with GO:0009521 parentage,
+    reviewed-label-only component classes for the type I reaction-center core, terminal iron-sulfur
+    acceptors, and PSI-bound pigments, Cyanobacteriota distribution, a Synechococcus elongatus
+    structural example from PMID:11418848, photosynthetic electron-transport evidence, a compact
+    PSI light-driven electron-transfer graph, and an open component-grounding TODO. Verified
+    the new record with just validate and just validate-strict before writing this history
+    entry.
