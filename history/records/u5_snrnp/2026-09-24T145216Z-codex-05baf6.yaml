@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u5_snrnp.yaml
+  slug: u5_snrnp
+session:
+  id: 2026-09-24T145216Z-codex-05baf6
+  timestamp: '2026-09-24T14:52:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1498
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1499
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1497
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  summary: 'Address PR #1497 U5 snRNP review issues'
+  details: 'Addressed the adversarial review of PR #1497 by rewording the U5 constituent graph
+    as explicitly partial for #1498 and narrowing the U5 snRNA component role to its GO containment
+    and SO grounding for #1499.'
