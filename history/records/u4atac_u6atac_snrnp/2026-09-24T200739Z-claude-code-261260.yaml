@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u4atac_u6atac_snrnp.yaml
+  slug: u4atac_u6atac_snrnp
+session:
+  id: 2026-09-24T200739Z-claude-code-261260
+  timestamp: '2026-09-24T20:07:39Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add U4atac/U6atac snRNP
+  details: Added a new GO:0071002 U4atac/U6atac snRNP record with GO:0097525 parentage; GO-grounded
+    U4atac and U6atac snRNP components; Homo sapiens distribution and canonical-example evidence
+    from Schneider, Will, Makarova et al. 2002 Molecular and Cellular Biology; a conservative
+    U4atac/U6atac constituent graph; and a curation TODO for unresolved minor-snRNP protein-family
+    component boundaries. Validated the new record with targeted LinkML closed-schema and
+    validate_strict gates.

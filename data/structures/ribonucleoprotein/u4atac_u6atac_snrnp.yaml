@@ -1,0 +1,157 @@
+identifier: GO:0071002
+label: U4atac/U6atac snRNP
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex that contains the extensively base paired
+  small nuclear RNAs U4atac and U6atac, a heptameric ring of Sm proteins associated
+  with U4atac, the Lsm2-8 heptameric ring complex associated with U6atac, as well
+  as several proteins that are unique to the U4atac snRNP or U6atac snRNPs, some of
+  which remain associated with the U4atac/U6atac snRNA both while the U4atac snRNP
+  is free or assembled into a series of spliceosomal complexes.
+definition_source: GO:0071002
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T20:06:05Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T20:07:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added spliceosomal snRNP parentage, GO-grounded U4atac and U6atac snRNP
+    components, human Schneider/Will/Makarova tri-snRNP evidence, a minimal U4atac/U6atac
+    constituent graph and a protein-component grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0097525
+components:
+- component_id: u4atac_snrnp
+  label: U4atac snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005690
+  role: U4atac small nuclear ribonucleoprotein subcomplex that contributes U4atac
+    snRNA, a Sm protein ring and U4atac-associated proteins to the U4atac/U6atac snRNP.
+  evidence:
+  - reference: GO:0071002
+    notes: GO:0071002 defines the U4atac/U6atac snRNP as containing small nuclear
+      RNA U4atac, a U4atac-associated heptameric Sm ring and U4atac- or U6atac-specific
+      proteins.
+  - reference: GO:0005690
+    notes: GO:0005690 is the Gene Ontology cellular-component term for the U4atac
+      snRNP.
+- component_id: u6atac_snrnp
+  label: U6atac snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005691
+  role: U6atac small nuclear ribonucleoprotein subcomplex that contributes U6atac
+    snRNA, the Lsm2-8 ring and U6atac-associated proteins to the U4atac/U6atac snRNP.
+  evidence:
+  - reference: GO:0071002
+    notes: GO:0071002 defines the U4atac/U6atac snRNP as containing small nuclear
+      RNA U6atac, a U6atac-associated Lsm2-8 heptameric ring and U4atac- or U6atac-specific
+      proteins.
+  - reference: GO:0005691
+    notes: GO:0005691 is the Gene Ontology cellular-component term for the U6atac
+      snRNP.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  presence: COMMON
+  note: The U4atac/U6atac snRNP subcomplex is represented in human U4atac/U6atac.U5
+    tri-snRNPs analyzed biochemically by Schneider, Will, Makarova and colleagues;
+    broader eukaryotic distribution is left for follow-up curation.
+  reference: DOI:10.1128/MCB.22.10.3219-3229.2002
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: Human minor-spliceosome U4atac/U6atac snRNP represented inside U4atac/U6atac.U5
+    tri-snRNPs in the Schneider, Will and Makarova comparative composition study.
+  reference: DOI:10.1128/MCB.22.10.3219-3229.2002
+evidence:
+- reference: GO:0071002
+  notes: Gene Ontology cellular-component term for the U4atac/U6atac snRNP.
+- reference: GO:0097525
+  notes: Gene Ontology cellular-component parent term for spliceosomal snRNP complex.
+- reference: GO:0005690
+  notes: Gene Ontology cellular-component term for the U4atac snRNP.
+- reference: GO:0005691
+  notes: Gene Ontology cellular-component term for the U6atac snRNP.
+- reference: DOI:10.1128/MCB.22.10.3219-3229.2002
+  notes: Schneider, Will, Makarova and colleagues 2002, Human U4/U6.U5 and U4atac/U6atac.U5
+    tri-snRNPs exhibit similar protein compositions, Molecular and Cellular Biology.
+- reference: PMID:11971955
+  notes: PubMed identifier for Schneider, Will, Makarova and colleagues 2002 as reported
+    by NCBI E-utilities.
+- reference: DOI:10.1515/BC.2005.084
+  notes: Will and Luehrmann 2005, Splicing of a rare class of introns by the U12-dependent
+    spliceosome, Biological Chemistry.
+- reference: PMID:16201866
+  notes: PubMed identifier for Will and Luehrmann 2005 as reported by NCBI E-utilities.
+causal_graphs:
+- graph_id: u4atac_u6atac_snrnp_constituents
+  title: U4atac and U6atac snRNP constituents define the U4atac/U6atac snRNP
+  description: The U4atac/U6atac snRNP contains extensively base-paired U4atac and
+    U6atac small nuclear RNAs together with the U4atac-associated Sm ring, the U6atac-associated
+    Lsm2-8 ring and U4atac/U6atac-associated proteins.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-defined U4atac and U6atac snRNP constituent contributions
+    without modeling individual protein bridges, snRNA base-pairing geometry or spliceosomal
+    remodeling.
+  nodes:
+  - node_id: u4atac_snrnp
+    label: U4atac snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005690
+    component_ref: u4atac_snrnp
+  - node_id: u6atac_snrnp
+    label: U6atac snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005691
+    component_ref: u6atac_snrnp
+  - node_id: u4atac_u6atac_snrnp
+    label: U4atac/U6atac snRNP
+    node_type: STRUCTURE
+    grounding: GO:0071002
+  edges:
+  - subject: u4atac_snrnp
+    predicate: contributes constituents to
+    object: u4atac_u6atac_snrnp
+    description: The U4atac snRNP contributes the U4atac snRNA and U4atac-associated
+      Sm ring represented in the U4atac/U6atac snRNP definition.
+    evidence:
+    - reference: GO:0071002
+      notes: GO:0071002 defines the U4atac/U6atac snRNP as containing small nuclear
+        RNA U4atac and a heptameric ring of Sm proteins associated with U4atac.
+  - subject: u6atac_snrnp
+    predicate: contributes constituents to
+    object: u4atac_u6atac_snrnp
+    description: The U6atac snRNP contributes the U6atac snRNA and U6atac-associated
+      Lsm2-8 ring represented in the U4atac/U6atac snRNP definition.
+    evidence:
+    - reference: GO:0071002
+      notes: GO:0071002 defines the U4atac/U6atac snRNP as containing small nuclear
+        RNA U6atac and the Lsm2-8 heptameric ring associated with U6atac.
+discussions:
+- discussion_id: resolve_u4atac_u6atac_snrnp_protein_components
+  prompt: Resolve exact source-neutral groundings for the Sm ring, Lsm2-8 ring and
+    U4atac/U6atac-specific protein families that form the U4atac/U6atac snRNP.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u4atac_snrnp
+  - components#u6atac_snrnp
+  - causal_graphs#u4atac_u6atac_snrnp_constituents
+  rationale: The first GO:0071002 record captures the U4atac and U6atac snRNP subcomplexes
+    at GO-grounded granularity. Individual ribonucleoprotein rings and U4atac/U6atac-specific
+    protein-family boundaries should be resolved before splitting this inventory.
+  evidence:
+  - reference: GO:0071002
+  - reference: GO:0005690
+  - reference: GO:0005691
+  - reference: DOI:10.1128/MCB.22.10.3219-3229.2002
+  posed_by: codex
+  posed_date: '2026-09-24'
