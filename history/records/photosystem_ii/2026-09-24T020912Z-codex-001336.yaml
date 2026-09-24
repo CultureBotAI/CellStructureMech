@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/photosystem_ii.yaml
+  slug: photosystem_ii
+session:
+  id: 2026-09-24T020912Z-codex-001336
+  timestamp: '2026-09-24T02:09:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added GO:0009523 photosystem II
+  details: Added the GO:0009523 photosystem II ENERGY_COMPLEX record with GO:0009521 parentage,
+    reviewed-label-only component classes for the pheophytin-quinone reaction center core,
+    the oxygen-evolving manganese-calcium cluster, and PSII-bound pigments, Cyanobacteriota
+    distribution, a Thermosynechococcus vulcanus structural example from PMID:21499260, photosynthetic
+    electron-transport evidence, a compact PSII water-oxidation graph, and an open component-grounding
+    TODO. Verified the new record with just validate and just validate-strict before writing
+    this history entry.

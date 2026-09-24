@@ -1,0 +1,216 @@
+identifier: GO:0009523
+label: photosystem II
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A photosystem that contains a pheophytin-quinone reaction center with
+  associated accessory pigments and electron carriers. In cyanobacteria and chloroplasts,
+  in the presence of light, PSII functions as a water-plastoquinone oxidoreductase,
+  transferring electrons from water to plastoquinone, whereas other photosynthetic
+  bacteria carry out anoxygenic photosynthesis and oxidize other compounds to re-reduce
+  the photoreaction center.
+definition_source: GO:0009523
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T02:08:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T02:08:46Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO photosystem parentage, reviewed-label-only PSII component classes,
+    cyanobacterial distribution and Thermosynechococcus example, photosynthetic electron-transfer
+    function, GO/PubMed evidence, a PSII water-oxidation graph, and a component-grounding
+    TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0009521
+components:
+- component_id: pheophytin_quinone_reaction_center_core
+  label: pheophytin-quinone reaction center core
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  role: Central PSII reaction-center proteins that couple P680 charge separation to
+    pheophytin and plastoquinone electron transfer.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, or NCBIfam CURIE was verified
+    for the complete pheophytin-quinone PSII reaction-center core without collapsing
+    D1, D2, cytochrome b559, and antenna subfamilies.
+  essentiality: ESSENTIAL
+  evidence:
+  - reference: GO:0009523
+    notes: GO:0009523 defines PSII as a pheophytin-quinone reaction center photosystem
+      with associated pigments and electron carriers.
+  - reference: PMID:21499260
+    notes: Umena et al. 2011 resolved the oxygen-evolving PSII structure, including
+      protein subunits and cofactors.
+- component_id: oxygen_evolving_manganese_calcium_cluster
+  label: oxygen-evolving manganese-calcium cluster
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  role: Catalytic metal-oxo cofactor cluster that accumulates oxidizing equivalents
+    for water splitting in oxygenic PSII.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This row denotes the complete PSII water-oxidizing Mn4CaO5-type
+    cluster and does not assert a broad manganese, calcium, or oxide CHEBI identifier
+    as its exact identity.
+  essentiality: ESSENTIAL
+  evidence:
+  - reference: PMID:21499260
+    notes: Umena et al. 2011 located all metal atoms in the oxygen-evolving Mn4CaO5
+      cluster in high-resolution PSII.
+- component_id: psii_bound_pigments
+  label: PSII chlorophyll and carotenoid cofactors
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  role: Reaction-center and accessory pigments that absorb excitation energy and enable
+    P680 charge separation.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This row groups PSII-bound pigments and avoids asserting one CHEBI
+    term for a mixed chlorophyll, pheophytin, and carotenoid cofactor set.
+  essentiality: ESSENTIAL
+  evidence:
+  - reference: GO:0009523
+    notes: GO:0009523 defines PSII as a photosystem with associated accessory pigments
+      and electron carriers.
+  - reference: PMID:21499260
+    notes: Umena et al. 2011 modeled cofactors bound by the oxygen-evolving PSII complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteriota
+  presence: COMMON
+  note: Cyanobacteria use PSII as a thylakoid water-plastoquinone oxidoreductase that
+    supplies electrons from water into the photosynthetic electron-transport chain.
+  reference: GO:0009523
+canonical_examples:
+- taxon_id: NCBITaxon:32053
+  taxon_label: Thermosynechococcus vulcanus
+  note: Thermophilic cyanobacterial source used by Umena et al. to solve the 1.9 A
+    oxygen-evolving PSII crystal structure.
+  reference: PMID:21499260
+functions:
+- function_id: photosynthetic_electron_transport
+  label: photosynthetic electron transport chain
+  grounding: GO:0009767
+  description: PSII captures light energy, extracts electrons from water through its
+    oxygen-evolving metal cluster, and reduces plastoquinone to start oxygenic photosynthetic
+    electron transport.
+  evidence:
+  - reference: GO:0009523
+    notes: GO:0009523 defines PSII as a water-plastoquinone oxidoreductase in cyanobacteria
+      and chloroplasts.
+  - reference: PMID:21499260
+    notes: Umena et al. 2011 resolved the catalytic metal cluster of oxygen-evolving
+      PSII.
+evidence:
+- reference: GO:0009523
+  notes: Gene Ontology cellular-component term for photosystem II.
+- reference: GO:0009521
+  notes: Gene Ontology cellular-component term for photosystems.
+- reference: GO:0009767
+  notes: Gene Ontology biological-process term for the photosynthetic electron transport
+    chain.
+- reference: PMID:21499260
+  notes: Umena et al. 2011, Crystal structure of oxygen-evolving photosystem II at
+    a resolution of 1.9 A, Nature.
+causal_graphs:
+- graph_id: psii_light_driven_water_oxidation
+  title: PSII couples light capture to water oxidation
+  description: In cyanobacterial PSII, bound pigments feed excitation into the reaction
+    center, the manganese-calcium cluster extracts electrons from water, and plastoquinone
+    accepts electrons on the reducing side.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the water-to-plastoquinone electron-transfer logic
+    without resolving individual D1/D2 redox cofactors, extrinsic oxygen-evolving
+    proteins, or repair-cycle factors.
+  nodes:
+  - node_id: pigments
+    label: PSII chlorophyll and carotenoid cofactors
+    node_type: CHEMICAL
+    component_ref: psii_bound_pigments
+  - node_id: reaction_center
+    label: pheophytin-quinone reaction center core
+    node_type: GENE_OR_PROTEIN
+    component_ref: pheophytin_quinone_reaction_center_core
+  - node_id: mn_ca_cluster
+    label: oxygen-evolving manganese-calcium cluster
+    node_type: CHEMICAL
+    component_ref: oxygen_evolving_manganese_calcium_cluster
+  - node_id: water
+    label: water
+    node_type: CHEMICAL
+  - node_id: plastoquinone_pool
+    label: plastoquinone pool
+    node_type: CHEMICAL
+    description: Mobile quinone carrier reduced by PSII in the thylakoid membrane.
+  - node_id: electron_transport
+    label: photosynthetic electron transport chain
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009767
+  edges:
+  - subject: pigments
+    predicate: feed excitation to
+    object: reaction_center
+    description: PSII pigments capture light energy and couple it to P680 charge separation
+      in the reaction center.
+    evidence:
+    - reference: GO:0009523
+      notes: GO:0009523 defines PSII as a photosystem with associated accessory pigments.
+  - subject: mn_ca_cluster
+    predicate: extracts electrons from
+    object: water
+    description: The oxygen-evolving manganese-calcium cluster is the catalytic site
+      of photosynthetic water oxidation.
+    evidence:
+    - reference: PMID:21499260
+      notes: Umena et al. 2011 resolved the Mn4CaO5 cluster that catalyzes water splitting
+        in PSII.
+  - subject: mn_ca_cluster
+    predicate: feeds electrons to
+    object: reaction_center
+    description: Water oxidation supplies electrons that re-reduce the photo-oxidized
+      PSII reaction center.
+    evidence:
+    - reference: GO:0009523
+      notes: GO:0009523 defines PSII by electron transfer from water to plastoquinone
+        in cyanobacteria and chloroplasts.
+  - subject: reaction_center
+    predicate: reduces
+    object: plastoquinone_pool
+    description: The PSII reaction center passes electrons to bound quinones and ultimately
+      to plastoquinone.
+    evidence:
+    - reference: GO:0009523
+      notes: GO:0009523 defines PSII as a water-plastoquinone oxidoreductase.
+  - subject: reaction_center
+    predicate: initiates
+    object: electron_transport
+    description: PSII supplies water-derived electrons to the oxygenic photosynthetic
+      electron-transport chain.
+    evidence:
+    - reference: GO:0009523
+      notes: GO:0009523 places PSII at the water-to-plastoquinone step of light-dependent
+        photosynthesis.
+discussions:
+- discussion_id: psii_component_groundings
+  prompt: Resolve exact source-neutral component groundings for D1/D2 core, cytochrome
+    b559, antenna, oxygen-evolving and extrinsic PSII families before replacing reviewed-label-only
+    PSII components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pheophytin_quinone_reaction_center_core
+  - components#oxygen_evolving_manganese_calcium_cluster
+  - components#psii_bound_pigments
+  rationale: GO exactly grounds the complete PSII complex, but the first component
+    boundary should not flatten D1, D2, cytochrome b559, antenna, and oxygen-evolving
+    subfamilies into unsupported broad protein-family rows.
+  evidence:
+  - reference: GO:0009523
+    notes: GO:0009523 identifies the complete pheophytin-quinone reaction-center photosystem.
+  - reference: PMID:21499260
+    notes: Umena et al. 2011 resolved one oxygen-evolving cyanobacterial PSII composition.
+  posed_by: codex
+  posed_date: '2026-09-24'

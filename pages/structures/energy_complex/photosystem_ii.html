@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>photosystem II · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>photosystem II</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a> · ENERGY_COMPLEX · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A photosystem that contains a pheophytin-quinone reaction center with associated accessory pigments and electron carriers. In cyanobacteria and chloroplasts, in the presence of light, PSII functions as a water-plastoquinone oxidoreductase, transferring electrons from water to plastoquinone, whereas other photosynthetic bacteria carry out anoxygenic photosynthesis and oxidize other compounds to re-reduce the photoreaction center. <small>[<a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a>]</small></p>
+
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-pheophytin_quinone_reaction_center_core"><td>pheophytin-quinone reaction center core</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Central PSII reaction-center proteins that couple P680 charge separation to pheophytin and plastoquinone electron transfer.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a> <small>GO:0009523 defines PSII as a pheophytin-quinone reaction center photosystem with associated pigments and electron carriers.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/21499260"><code>PMID:21499260</code></a> <small>Umena et al. 2011 resolved the oxygen-evolving PSII structure, including protein subunits and cofactors.</small></li></ul></td></tr>
+<tr id="components-oxygen_evolving_manganese_calcium_cluster"><td>oxygen-evolving manganese-calcium cluster</td><td>SMALL_MOLECULE</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Catalytic metal-oxo cofactor cluster that accumulates oxidizing equivalents for water splitting in oxygenic PSII.<ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/21499260"><code>PMID:21499260</code></a> <small>Umena et al. 2011 located all metal atoms in the oxygen-evolving Mn4CaO5 cluster in high-resolution PSII.</small></li></ul></td></tr>
+<tr id="components-psii_bound_pigments"><td>PSII chlorophyll and carotenoid cofactors</td><td>SMALL_MOLECULE</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Reaction-center and accessory pigments that absorb excitation energy and enable P680 charge separation.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a> <small>GO:0009523 defines PSII as a photosystem with associated accessory pigments and electron carriers.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/21499260"><code>PMID:21499260</code></a> <small>Umena et al. 2011 modeled cofactors bound by the oxygen-evolving PSII complex.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_1117"><code>NCBITaxon:1117</code></a> Cyanobacteriota — <strong>COMMON</strong>: Cyanobacteria use PSII as a thylakoid water-plastoquinone oxidoreductase that supplies electrons from water into the photosynthetic electron-transport chain. [<a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_32053"><code>NCBITaxon:32053</code></a> <em>Thermosynechococcus vulcanus</em> — Thermophilic cyanobacterial source used by Umena et al. to solve the 1.9 A oxygen-evolving PSII crystal structure. [<a href="https://pubmed.ncbi.nlm.nih.gov/21499260"><code>PMID:21499260</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>photosynthetic electron transport chain</strong> <a href="http://purl.obolibrary.org/obo/GO_0009767"><code>GO:0009767</code></a> — PSII captures light energy, extracts electrons from water through its oxygen-evolving metal cluster, and reduces plastoquinone to start oxygenic photosynthetic electron transport.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a> <small>GO:0009523 defines PSII as a water-plastoquinone oxidoreductase in cyanobacteria and chloroplasts.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/21499260"><code>PMID:21499260</code></a> <small>Umena et al. 2011 resolved the catalytic metal cluster of oxygen-evolving PSII.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-psii_light_driven_water_oxidation">PSII couples light capture to water oxidation <small>(FUNCTION)</small></h3>
+<p>In cyanobacterial PSII, bound pigments feed excitation into the reaction center, the manganese-calcium cluster extracts electrons from water, and plastoquinone accepts electrons on the reducing side.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>PSII chlorophyll and carotenoid cofactors</td><td>feed excitation to</td><td>pheophytin-quinone reaction center core</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a> <small>GO:0009523 defines PSII as a photosystem with associated accessory pigments.</small></li></ul></td></tr>
+<tr><td>oxygen-evolving manganese-calcium cluster</td><td>extracts electrons from</td><td>water</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/21499260"><code>PMID:21499260</code></a> <small>Umena et al. 2011 resolved the Mn4CaO5 cluster that catalyzes water splitting in PSII.</small></li></ul></td></tr>
+<tr><td>oxygen-evolving manganese-calcium cluster</td><td>feeds electrons to</td><td>pheophytin-quinone reaction center core</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a> <small>GO:0009523 defines PSII by electron transfer from water to plastoquinone in cyanobacteria and chloroplasts.</small></li></ul></td></tr>
+<tr><td>pheophytin-quinone reaction center core</td><td>reduces</td><td>plastoquinone pool</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a> <small>GO:0009523 defines PSII as a water-plastoquinone oxidoreductase.</small></li></ul></td></tr>
+<tr><td>pheophytin-quinone reaction center core</td><td>initiates</td><td>photosynthetic electron transport chain</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a> <small>GO:0009523 places PSII at the water-to-plastoquinone step of light-dependent photosynthesis.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral component groundings for D1/D2 core, cytochrome b559, antenna, oxygen-evolving and extrinsic PSII families before replacing reviewed-label-only PSII components. <small>GO exactly grounds the complete PSII complex, but the first component boundary should not flatten D1, D2, cytochrome b559, antenna, and oxygen-evolving subfamilies into unsupported broad protein-family rows.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a> <small>Gene Ontology cellular-component term for photosystem II.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0009521"><code>GO:0009521</code></a> <small>Gene Ontology cellular-component term for photosystems.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0009767"><code>GO:0009767</code></a> <small>Gene Ontology biological-process term for the photosynthetic electron transport chain.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/21499260"><code>PMID:21499260</code></a> <small>Umena et al. 2011, Crystal structure of oxygen-evolving photosystem II at a resolution of 1.9 A, Nature.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-24T02:08:00Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-24T02:08:46Z</code> codex · EXPANDED_RECORD — Added GO photosystem parentage, reviewed-label-only PSII component classes, cyanobacterial distribution and Thermosynechococcus example, photosynthetic electron-transfer function, GO/PubMed evidence, a PSII water-oxidation graph, and a component-grounding TODO.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/energy_complex/photosystem_ii.yaml"><code>data/structures/energy_complex/photosystem_ii.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
