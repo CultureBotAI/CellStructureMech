@@ -3412,9 +3412,9 @@
           "cosine_similarity": 0.67971608
         },
         {
-          "identifier": "GO:0045259",
-          "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.64737316
+          "identifier": "GO:0009338",
+          "label": "exodeoxyribonuclease V complex",
+          "cosine_similarity": 0.65318301
         }
       ]
     },
@@ -12622,6 +12622,37 @@
           "identifier": "cellstructuremech:secyeg_translocon_complex",
           "label": "SecYEG translocon complex",
           "cosine_similarity": 0.72024485
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009338",
+      "label": "exodeoxyribonuclease V complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.69079389
+        },
+        {
+          "identifier": "GO:1990621",
+          "label": "ESCRT IV complex",
+          "cosine_similarity": 0.67184694
+        },
+        {
+          "identifier": "GO:0000178",
+          "label": "exosome (RNase complex)",
+          "cosine_similarity": 0.66755603
+        },
+        {
+          "identifier": "GO:0045275",
+          "label": "respiratory chain complex III",
+          "cosine_similarity": 0.66657971
+        },
+        {
+          "identifier": "GO:0045277",
+          "label": "respiratory chain complex IV",
+          "cosine_similarity": 0.65590124
         }
       ]
     },
