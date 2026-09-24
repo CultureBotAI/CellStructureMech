@@ -22,6 +22,13 @@ curation_history:
     tri-snRNP cryo-EM evidence, a minimal U4 snRNP constituent graph and a protein-component
     grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T15:24:10Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1501: narrowed the Sm-ring component role to the GO-supported heptameric
+    ring constituent; #1502: reworded the canonical example to make the yeast evidence
+    explicitly tri-snRNP-derived.'
+  llm_assisted: true
 synonyms:
 - synonym_text: snRNP U4
   synonym_type: EXACT_SYNONYM
@@ -49,7 +56,7 @@ components:
   grounding_notes: An exact source-neutral CURIE for the spliceosomal heptameric Sm
     protein ring is left unresolved in this first U4 snRNP record; GO:0005687 directly
     supports this label-level constituent.
-  role: Heptameric Sm protein ring associated with U4 snRNA in the U4 snRNP.
+  role: Heptameric Sm protein-ring constituent named in the U4 snRNP definition.
   evidence:
   - reference: GO:0005687
     notes: GO:0005687 defines the U4 snRNP as containing a heptameric ring of Sm proteins.
@@ -63,8 +70,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model whose U4 snRNA and associated U4 snRNP proteins were resolved
-    inside U4/U6.U5 tri-snRNP cryo-EM structures.
+  note: Budding-yeast model whose U4 snRNP subcomplex is represented inside U4/U6.U5
+    tri-snRNP cryo-EM structures.
   reference: DOI:10.1038/nature16940
 evidence:
 - reference: GO:0005687
