@@ -1,0 +1,173 @@
+identifier: GO:0071016
+label: U12-type precatalytic spliceosome
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A spliceosomal complex that is formed by the recruitment of the preassembled
+  U4atac/U6atac.U5 tri-snRNP to the U12-type prespliceosome. Although all 5 snRNPs
+  are present, the precatalytic spliceosome is catalytically inactive. The precatalytic
+  spliceosome includes many proteins in addition to those found in the U11, U12 and
+  U4atac/U6atac.U5 snRNPs.
+definition_source: GO:0071016
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T23:45:07Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T23:45:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact and narrow synonyms, precatalytic and U12-type spliceosomal-complex
+    parentage, GO-grounded U11/U12 and U4atac/U6atac x U5 snRNP components, Will/Luehrmann
+    U12-spliceosome evidence, a conservative tri-snRNP recruitment graph and a protein-component
+    grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: minor precatalytic spliceosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071016
+- synonym_text: AT-AC precatalytic spliceosome
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071016
+- synonym_text: mammalian U12-type spliceosomal complex B
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071016
+- synonym_text: mammalian U12-type spliceosomal complex B1
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071016
+- synonym_text: yeast U12-type spliceosomal complex A2-1
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071016
+parent_structures:
+- GO:0071011
+- GO:0005689
+components:
+- component_id: u11_u12_snrnp
+  label: U11/U12 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0034693
+  role: Heterodimeric minor-spliceosome snRNP subcomplex present when U4atac/U6atac.U5
+    tri-snRNP is recruited to the U12-type prespliceosome.
+  evidence:
+  - reference: GO:0071016
+    notes: GO:0071016 defines the U12-type precatalytic spliceosome as containing
+      all five minor-spliceosome snRNPs and as formed by tri-snRNP recruitment to
+      the U12-type prespliceosome.
+  - reference: GO:0034693
+    notes: GO:0034693 is the Gene Ontology cellular-component term for the U11/U12
+      snRNP.
+  - reference: GO:0071015
+    notes: GO:0071015 defines the U12-type prespliceosome state that precedes U4atac/U6atac.U5
+      tri-snRNP recruitment.
+- component_id: u4atac_u6atac_u5_tri_snrnp
+  label: U4atac/U6atac x U5 tri-snRNP complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0071009
+  role: Preassembled minor-spliceosome tri-snRNP subcomplex recruited to the U12-type
+    prespliceosome to form the U12-type precatalytic spliceosome.
+  evidence:
+  - reference: GO:0071016
+    notes: GO:0071016 defines the U12-type precatalytic spliceosome as formed by recruitment
+      of preassembled U4atac/U6atac.U5 tri-snRNP to the U12-type prespliceosome.
+  - reference: GO:0071009
+    notes: GO:0071009 is the Gene Ontology cellular-component term for the U4atac/U6atac
+      x U5 tri-snRNP complex.
+evidence:
+- reference: GO:0071016
+  notes: Gene Ontology cellular-component term for the U12-type precatalytic spliceosome
+    and its GO synonyms.
+- reference: GO:0071011
+  notes: Gene Ontology cellular-component parent term for precatalytic spliceosome.
+- reference: GO:0005689
+  notes: Gene Ontology cellular-component parent term for U12-type spliceosomal complex.
+- reference: GO:0071015
+  notes: Gene Ontology cellular-component term for the U12-type prespliceosome.
+- reference: GO:0034693
+  notes: Gene Ontology cellular-component term for the U11/U12 snRNP.
+- reference: GO:0071009
+  notes: Gene Ontology cellular-component term for the U4atac/U6atac x U5 tri-snRNP
+    complex.
+- reference: DOI:10.1515/BC.2005.084
+  notes: Will and Luehrmann 2005, Splicing of a rare class of introns by the U12-dependent
+    spliceosome, Biological Chemistry.
+causal_graphs:
+- graph_id: u12_type_precatalytic_spliceosome_assembly
+  title: U4atac/U6atac.U5 tri-snRNP recruitment forms the U12-type precatalytic spliceosome
+  description: The U12-type precatalytic spliceosome forms when preassembled U4atac/U6atac.U5
+    tri-snRNP joins the U11/U12-containing prespliceosome on pre-mRNA.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the defining minor-spliceosome snRNP assemblies
+    without modeling pre-mRNA splice-site RNA nodes, U11/U12 handoff or all U12-type
+    precatalytic protein factors.
+  nodes:
+  - node_id: u11_u12_snrnp
+    label: U11/U12 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0034693
+    component_ref: u11_u12_snrnp
+  - node_id: u4atac_u6atac_u5_tri_snrnp
+    label: U4atac/U6atac x U5 tri-snRNP complex
+    node_type: STRUCTURE
+    grounding: GO:0071009
+    component_ref: u4atac_u6atac_u5_tri_snrnp
+  - node_id: u12_type_prespliceosome
+    label: U12-type prespliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071015
+  - node_id: u12_type_precatalytic_spliceosome
+    label: U12-type precatalytic spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071016
+  edges:
+  - subject: u11_u12_snrnp
+    predicate: defines
+    object: u12_type_prespliceosome
+    description: The U12-type prespliceosome contains heterodimeric U11/U12 snRNP
+      bound to the 5-prime splice site and branch point sequence before tri-snRNP
+      recruitment.
+    evidence:
+    - reference: GO:0071015
+      notes: GO:0071015 defines the U12-type prespliceosome by U11/U12 snRNP binding
+        to the 5-prime splice site and branch point sequence.
+  - subject: u4atac_u6atac_u5_tri_snrnp
+    predicate: is recruited to form
+    object: u12_type_precatalytic_spliceosome
+    description: Recruitment of preassembled U4atac/U6atac.U5 tri-snRNP to the U12-type
+      prespliceosome forms the U12-type precatalytic spliceosome.
+    evidence:
+    - reference: GO:0071016
+      notes: GO:0071016 defines the U12-type precatalytic spliceosome as the state
+        formed by recruitment of U4atac/U6atac.U5 tri-snRNP to the U12-type prespliceosome.
+  - subject: u12_type_prespliceosome
+    predicate: receives
+    object: u4atac_u6atac_u5_tri_snrnp
+    description: The U11/U12-containing prespliceosome receives U4atac/U6atac.U5 tri-snRNP
+      to become the U12-type precatalytic spliceosome.
+    evidence:
+    - reference: GO:0071016
+      notes: GO:0071016 defines the U12-type precatalytic spliceosome as formed by
+        tri-snRNP recruitment to the U12-type prespliceosome.
+discussions:
+- discussion_id: resolve_u12_type_precatalytic_spliceosome_protein_components
+  prompt: Resolve exact source-neutral component boundaries for U12-type precatalytic
+    spliceosome proteins beyond the GO-defined U11/U12 and U4atac/U6atac.U5 snRNP
+    subcomplexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u11_u12_snrnp
+  - components#u4atac_u6atac_u5_tri_snrnp
+  - causal_graphs#u12_type_precatalytic_spliceosome_assembly
+  rationale: The first GO:0071016 record captures the defining minor-spliceosome snRNP
+    subcomplexes. Additional U12-type precatalytic spliceosome proteins should be
+    resolved into exact source-neutral families or subcomplexes before expanding the
+    component list.
+  evidence:
+  - reference: GO:0071016
+  - reference: DOI:10.1515/BC.2005.084
+  posed_by: codex
+  posed_date: '2026-09-24'
