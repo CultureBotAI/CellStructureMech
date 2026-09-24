@@ -1,0 +1,154 @@
+identifier: GO:0034693
+label: U11/U12 snRNP
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex that is formed by the association of the U11
+  and U12 small nuclear ribonucleoproteins.
+definition_source: GO:0034693
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T22:41:14Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T22:42:05Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact and narrow synonyms, spliceosomal snRNP parentage, GO-grounded
+    U11 and U12 snRNP components, human Will/Schneider/Hossbach 18S U11/U12 snRNP
+    evidence, a minimal association graph and a protein-component grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T22:54:42Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1531: clarified the U11/U12 snRNP protein-boundary TODO so it asks for
+    proteins present in human 18S U11/U12 snRNPs rather than proteins forming affinity-purified
+    particles.'
+  llm_assisted: true
+synonyms:
+- synonym_text: snRNP U11/U12
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034693
+- synonym_text: 18S U11/U12 snRNP
+  synonym_type: NARROW_SYNONYM
+  source: GO:0034693
+parent_structures:
+- GO:0097525
+components:
+- component_id: u11_snrnp
+  label: U11 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005692
+  role: U11 small nuclear ribonucleoprotein subparticle that associates with the U12
+    snRNP to form the U11/U12 snRNP.
+  evidence:
+  - reference: GO:0034693
+    notes: GO:0034693 defines the U11/U12 snRNP as formed by the association of the
+      U11 and U12 snRNPs.
+  - reference: GO:0005692
+    notes: GO:0005692 is the Gene Ontology cellular-component term for the U11 snRNP.
+- component_id: u12_snrnp
+  label: U12 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005693
+  role: U12 small nuclear ribonucleoprotein subparticle that associates with the U11
+    snRNP to form the U11/U12 snRNP.
+  evidence:
+  - reference: GO:0034693
+    notes: GO:0034693 defines the U11/U12 snRNP as formed by the association of the
+      U11 and U12 snRNPs.
+  - reference: GO:0005693
+    notes: GO:0005693 is the Gene Ontology cellular-component term for the U12 snRNP.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  presence: COMMON
+  note: Human 18S U11/U12 snRNPs were affinity purified and analyzed by mass spectrometry
+    by Will, Schneider, Hossbach and colleagues; broader eukaryotic distribution is
+    left for follow-up curation.
+  reference: DOI:10.1261/rna.7320604
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: Human minor-spliceosome 18S U11/U12 snRNPs affinity purified for compositional
+    analysis by Will, Schneider and Hossbach.
+  reference: DOI:10.1261/rna.7320604
+evidence:
+- reference: GO:0034693
+  notes: Gene Ontology cellular-component term for the U11/U12 snRNP and its synonyms.
+- reference: GO:0097525
+  notes: Gene Ontology cellular-component parent term for spliceosomal snRNP complex.
+- reference: GO:0005692
+  notes: Gene Ontology cellular-component term for the U11 snRNP.
+- reference: GO:0005693
+  notes: Gene Ontology cellular-component term for the U12 snRNP.
+- reference: DOI:10.1261/rna.7320604
+  notes: Will, Schneider, Hossbach and colleagues 2004 affinity purified human 18S
+    U11/U12 and 12S U11 snRNPs and identified their protein components by mass spectrometry.
+- reference: DOI:10.1515/BC.2005.084
+  notes: Will and Luehrmann 2005, Splicing of a rare class of introns by the U12-dependent
+    spliceosome, Biological Chemistry.
+causal_graphs:
+- graph_id: u11_u12_snrnp_association
+  title: U11 and U12 snRNPs associate to form U11/U12 snRNP
+  description: The U11/U12 snRNP forms from U11 and U12 small nuclear ribonucleoprotein
+    subparticles.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-defined U11 and U12 snRNP subparticles without
+    modeling the 18S-specific protein-family contacts that stabilize the di-snRNP.
+  nodes:
+  - node_id: u11_snrnp
+    label: U11 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005692
+    component_ref: u11_snrnp
+  - node_id: u12_snrnp
+    label: U12 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005693
+    component_ref: u12_snrnp
+  - node_id: u11_u12_snrnp
+    label: U11/U12 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0034693
+  edges:
+  - subject: u11_snrnp
+    predicate: contributes constituents to
+    object: u11_u12_snrnp
+    description: The U11 snRNP is one of the two small nuclear ribonucleoprotein subparticles
+      that form U11/U12 snRNP.
+    evidence:
+    - reference: GO:0034693
+      notes: GO:0034693 defines the U11/U12 snRNP as formed by the association of
+        U11 and U12 snRNPs.
+  - subject: u12_snrnp
+    predicate: contributes constituents to
+    object: u11_u12_snrnp
+    description: The U12 snRNP is one of the two small nuclear ribonucleoprotein subparticles
+      that form U11/U12 snRNP.
+    evidence:
+    - reference: GO:0034693
+      notes: GO:0034693 defines the U11/U12 snRNP as formed by the association of
+        U11 and U12 snRNPs.
+discussions:
+- discussion_id: resolve_u11_u12_snrnp_protein_components
+  prompt: Resolve exact source-neutral component boundaries for the proteins present
+    in human 18S U11/U12 snRNPs.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u11_snrnp
+  - components#u12_snrnp
+  - causal_graphs#u11_u12_snrnp_association
+  rationale: The first GO:0034693 record captures the GO-grounded U11 and U12 snRNP
+    subparticles. Will, Schneider, Hossbach and colleagues identified multiple 18S
+    U11/U12 proteins by mass spectrometry; their source-neutral family boundaries
+    should be resolved before splitting that protein inventory.
+  evidence:
+  - reference: DOI:10.1261/rna.7320604
+  posed_by: codex
+  posed_date: '2026-09-24'
