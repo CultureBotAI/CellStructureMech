@@ -3419,6 +3419,37 @@
       ]
     },
     {
+      "identifier": "GO:0016610",
+      "label": "nitrogenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.67682062
+        },
+        {
+          "identifier": "GO:0031262",
+          "label": "Ndc80 complex",
+          "cosine_similarity": 0.64995861
+        },
+        {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.64152295
+        },
+        {
+          "identifier": "GO:0045273",
+          "label": "respiratory chain complex II (succinate dehydrogenase)",
+          "cosine_similarity": 0.62524301
+        },
+        {
+          "identifier": "GO:0009512",
+          "label": "cytochrome b6f complex",
+          "cosine_similarity": 0.6176251
+        }
+      ]
+    },
+    {
       "identifier": "GO:0009522",
       "label": "photosystem I",
       "neighbors": [

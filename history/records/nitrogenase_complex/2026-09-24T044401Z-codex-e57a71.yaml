@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/nitrogenase_complex.yaml
+  slug: nitrogenase_complex
+session:
+  id: 2026-09-24T044401Z-codex-e57a71
+  timestamp: '2026-09-24T04:44:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added GO:0016610 nitrogenase complex
+  details: Added the GO:0016610 nitrogenase complex ENERGY_COMPLEX record with oxidoreductase-complex
+    parentage, reviewed-label-only dinitrogenase and nitrogenase reductase component rows,
+    an Azotobacter vinelandii PDB:1N2C structural example, GO:0016163 nitrogenase activity,
+    Schindelin et al. 1997 DOI/PMID/PDB evidence, a compact dinitrogen-reduction function
+    graph, and an open variant-component-grounding TODO. Verified the new record with single-record
+    strict validation before writing this history entry.

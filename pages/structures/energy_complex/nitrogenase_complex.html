@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nitrogenase complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>nitrogenase complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0016610"><code>GO:0016610</code></a> · ENERGY_COMPLEX · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A nitrogenase enzyme complex composed of tetrameric dinitrogenase and homodimeric nitrogenase reductase subcomplexes that together catalyze ATP-dependent reduction of dinitrogen to ammonia. <small>[<a href="http://purl.obolibrary.org/obo/GO_0016610"><code>GO:0016610</code></a>]</small></p>
+
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-dinitrogenase"><td>dinitrogenase</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Tetrameric metal-cluster subcomplex required with nitrogenase reductase for nitrogenase activity.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016610"><code>GO:0016610</code></a> <small>GO:0016610 defines nitrogenase as containing a tetrameric dinitrogenase protein component.</small></li><li><a href="https://www.rcsb.org/structure/1N2C"><code>PDB:1N2C</code></a> <small>The PDB:1N2C deposition maps two polymer entities to the Azotobacter vinelandii molybdenum-iron dinitrogenase alpha and beta chains.</small></li></ul></td></tr>
+<tr id="components-nitrogenase_reductase"><td>nitrogenase reductase</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Homodimeric ATP-dependent reductase subcomplex required with dinitrogenase for nitrogenase activity.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016610"><code>GO:0016610</code></a> <small>GO:0016610 defines nitrogenase as containing a homodimeric nitrogenase reductase protein component.</small></li><li><a href="https://www.rcsb.org/structure/1N2C"><code>PDB:1N2C</code></a> <small>The PDB:1N2C deposition maps polymer entity 3 to Azotobacter vinelandii NifH1, the molybdenum nitrogenase iron protein.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_354"><code>NCBITaxon:354</code></a> <em>Azotobacter vinelandii</em> — Bacterial source of the molybdenum-iron dinitrogenase and iron-protein reductase assembly deposited as PDB:1N2C. [<a href="https://www.rcsb.org/structure/1N2C"><code>PDB:1N2C</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>nitrogenase activity</strong> <a href="http://purl.obolibrary.org/obo/GO_0016163"><code>GO:0016163</code></a> — Nitrogenase couples ATP hydrolysis and reduced-ferredoxin oxidation to reduction of dinitrogen, producing ammonia and dihydrogen.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016163"><code>GO:0016163</code></a> <small>GO:0016163 defines nitrogenase activity as the ATP-dependent reduced-ferredoxin:dinitrogen oxidoreductase reaction.</small></li><li><a href="https://doi.org/10.1038/387370a0"><code>DOI:10.1038/387370a0</code></a> <small>Schindelin et al. 1997 reported an Azotobacter vinelandii nitrogenase complex stabilized in a state containing the MoFe protein and Fe protein.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-nitrogenase_ferredoxin_dinitrogen_reduction">Nitrogenase couples ATP to dinitrogen reduction <small>(FUNCTION)</small></h3>
+<p>The nitrogenase complex couples ATP hydrolysis and reduced-ferredoxin oxidation to dinitrogen reduction through required dinitrogenase and nitrogenase reductase subcomplexes.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>reduced ferredoxin</td><td>donates electrons to</td><td>nitrogenase activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016163"><code>GO:0016163</code></a> <small>GO:0016163 records reduced ferredoxin as the electron donor oxidized during nitrogenase activity.</small></li></ul></td></tr>
+<tr><td>ATP</td><td>is hydrolyzed by</td><td>nitrogenase activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016163"><code>GO:0016163</code></a> <small>GO:0016163 defines the nitrogenase reaction as consuming ATP and water and producing ADP and phosphate.</small></li></ul></td></tr>
+<tr><td>nitrogenase reductase</td><td>docks with</td><td>dinitrogenase</td><td><ul class="evidence"><li><a href="https://www.rcsb.org/structure/1N2C"><code>PDB:1N2C</code></a> <small>PDB:1N2C captures A. vinelandii nitrogenase reductase chains bound to the MoFe dinitrogenase protein.</small></li></ul></td></tr>
+<tr><td>nitrogenase reductase</td><td>contributes to</td><td>nitrogenase activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016610"><code>GO:0016610</code></a> <small>GO:0016610 defines both dinitrogenase and nitrogenase reductase as required for nitrogenase complex enzyme activity.</small></li></ul></td></tr>
+<tr><td>dinitrogenase</td><td>contributes to</td><td>nitrogenase activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016610"><code>GO:0016610</code></a> <small>GO:0016610 defines both dinitrogenase and nitrogenase reductase as required for nitrogenase complex enzyme activity.</small></li></ul></td></tr>
+<tr><td>dinitrogen</td><td>accepts electrons in</td><td>nitrogenase activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016163"><code>GO:0016163</code></a> <small>GO:0016163 records dinitrogen as the acceptor in nitrogenase activity.</small></li></ul></td></tr>
+<tr><td>nitrogenase activity</td><td>produces</td><td>ammonia</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016163"><code>GO:0016163</code></a> <small>GO:0016163 records two ammonium products in the nitrogenase reaction.</small></li></ul></td></tr>
+<tr><td>nitrogenase activity</td><td>produces</td><td>dihydrogen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016163"><code>GO:0016163</code></a> <small>GO:0016163 records H2 as a product of nitrogenase activity.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve variant-specific Mo-Fe, V-Fe, and Fe-Fe dinitrogenase and reductase groundings before replacing the generic reviewed-label-only component rows. <small>GO:0016610 exactly grounds the complete nitrogenase complex across multiple metal variants; the verified InterPro terms cover narrower molybdenum-iron NifD, NifK, and NifH families or broader families that also include non-nitrogenase proteins.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016610"><code>GO:0016610</code></a> <small>Gene Ontology cellular-component term for the generic nitrogenase complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0140535"><code>GO:0140535</code></a> <small>Gene Ontology cellular-component term for intracellular protein-containing complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990204"><code>GO:1990204</code></a> <small>Gene Ontology cellular-component term for oxidoreductase complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0016163"><code>GO:0016163</code></a> <small>Gene Ontology molecular-function term for nitrogenase activity.</small></li><li><a href="https://doi.org/10.1038/387370a0"><code>DOI:10.1038/387370a0</code></a> <small>Schindelin et al. 1997, Structure of ADP x AlF4(-)-stabilized nitrogenase complex and its implications for signal transduction, Nature.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/9163420"><code>PMID:9163420</code></a> <small>PubMed identifier for Schindelin et al. 1997 as reported by the RCSB PDB:1N2C primary citation.</small></li><li><a href="https://www.rcsb.org/structure/1N2C"><code>PDB:1N2C</code></a> <small>RCSB Protein Data Bank entry for the Azotobacter vinelandii nitrogenase complex structure from Schindelin et al. 1997.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-24T04:40:50Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-24T04:41:30Z</code> codex · EXPANDED_RECORD — Added oxidoreductase-complex parentage, reviewed-label-only dinitrogenase and nitrogenase reductase components, an Azotobacter PDB:1N2C canonical example, GO nitrogenase activity, primary Schindelin et al. literature/PDB evidence, a compact nitrogenase function graph, and a component-grounding TODO.</li><li><code>2026-09-24T04:42:10Z</code> codex · NARROWED_GRAPH_EDGE — Replaced the under-supported nitrogenase reductase-to-dinitrogenase electron-transfer edge with GO:0016610-supported contribution edges from both required nitrogenase subcomplexes to nitrogenase activity.</li><li><code>2026-09-24T04:42:50Z</code> codex · TIGHTENED_GRAPH_WORDING — Tightened generic nitrogenase component and graph wording to required subcomplex contribution claims and duplicated the shared GO evidence list to avoid YAML anchors.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/energy_complex/nitrogenase_complex.yaml"><code>data/structures/energy_complex/nitrogenase_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
