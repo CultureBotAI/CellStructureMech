@@ -20,6 +20,25 @@ curation_history:
     coli canonical example, single-stranded-DNA-binding function evidence, and a compact
     function graph.
   llm_assisted: true
+- timestamp: '2026-09-24T10:12:22Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1477: replaced a dynamic SSB oligomerization graph edge with a static
+    component-contribution claim supported by GO:0044777, InterPro:IPR011344, and
+    PDB:1KAW.'
+  llm_assisted: true
+- timestamp: '2026-09-24T10:13:01Z'
+  curator: codex
+  action: TIGHTEN_REVIEW_WORDING
+  changes: '#1477: tightened SSB component prose to avoid phrasing the tetrameric
+    stoichiometry evidence as a dynamic oligomerization claim.'
+  llm_assisted: true
+- timestamp: '2026-09-24T10:13:38Z'
+  curator: codex
+  action: TIGHTEN_REVIEW_WORDING
+  changes: '#1477: tightened the SSB graph scope note to describe tetrameric composition
+    rather than tetramerization.'
+  llm_assisted: true
 synonyms:
 - synonym_text: SSB complex
   synonym_type: EXACT_SYNONYM
@@ -37,8 +56,8 @@ components:
   gene_symbols:
   - ssb
   stoichiometry: 4 copies per homotetrameric SSB complex
-  role: SSB subunit family that oligomerizes into the homotetrameric single-stranded
-    DNA-binding complex.
+  role: SSB subunit family that forms the homotetrameric single-stranded DNA-binding
+    complex.
   protein_examples:
   - uniprot_id: UniProtKB:P0AGE0
     protein_label: Single-stranded DNA-binding protein
@@ -123,8 +142,9 @@ causal_graphs:
     a DNA-binding complex that binds single-stranded DNA.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records SSB tetramerization and single-stranded-DNA engagement
-    without resolving the alternative SSB-DNA binding modes or partner-protein exchange.
+  scope_notes: The graph records SSB tetrameric composition and single-stranded-DNA
+    engagement without resolving the alternative SSB-DNA binding modes or partner-protein
+    exchange.
   nodes:
   - node_id: ssb_complex
     label: single-stranded DNA-binding protein complex
@@ -143,13 +163,17 @@ causal_graphs:
     grounding: GO:0003697
   edges:
   - subject: ssb_protein
-    predicate: oligomerizes into
-    object: ssb_complex
-    description: Four SSB protein chains form the homotetrameric single-stranded DNA-binding
-      protein complex.
+    predicate: contributes to
+    object: single_stranded_dna_binding
+    description: SSB subunits form the homotetrameric complex that binds single-stranded
+      DNA.
     evidence:
     - reference: GO:0044777
-      notes: GO:0044777 defines the SSB complex as homotetrameric.
+      notes: GO:0044777 defines the SSB complex as a homotetrameric single-stranded
+        DNA-binding protein complex.
+    - reference: InterPro:IPR011344
+      notes: InterPro IPR011344 is a single-stranded DNA-binding protein family annotated
+        to GO:0003697.
     - reference: PDB:1KAW
       notes: PDB:1KAW assembly 1 is an author-defined homo-4-mer with four copies
         of polymer entity 1.
