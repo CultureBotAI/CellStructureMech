@@ -20,6 +20,14 @@ curation_history:
     coli canonical example, GO function terms, GO/SO/InterPro/UniProt/PubMed/DOI evidence,
     a compact pre-tRNA cleavage graph and a scope TODO for non-dimeric RNase P variants.
   llm_assisted: true
+- timestamp: '2026-09-24T11:50:21Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1483: added GO:0030680 and DOI:10.1038/nrmicro1491 to the RNase P tRNA
+    5-prime leader-removal graph edge so the edge evidence supports the subject structure
+    as well as the biological-process node; #1484: removed the broad Bacteria COMMON
+    taxonomic-distribution row until a source directly supports that clade-level frequency.'
+  llm_assisted: true
 synonyms:
 - synonym_text: dimeric RNase P complex
   synonym_type: EXACT_SYNONYM
@@ -82,13 +90,6 @@ components:
   - reference: DOI:10.1038/nrmicro1491
     notes: Kazantsev and Pace 2006 reviewed bacterial RNase P as a two-component holoenzyme
       with an RNA subunit and an RnpA protein subunit.
-taxonomic_distribution:
-- taxon_id: NCBITaxon:2
-  taxon_label: Bacteria
-  presence: COMMON
-  note: The dimeric RNase P holoenzyme captures the widespread bacterial form built
-    from one RNase P RNA and one RnpA protein.
-  reference: DOI:10.1038/nrmicro1491
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
@@ -219,6 +220,12 @@ causal_graphs:
     description: Dimeric RNase P activity generates mature bacterial tRNA 5-prime
       ends.
     evidence:
+    - reference: GO:0030680
+      notes: GO:0030680 defines the ribonuclease P complex by its cleavage of pre-tRNA
+        leader sequences.
+    - reference: DOI:10.1038/nrmicro1491
+      notes: Kazantsev and Pace 2006 reviewed bacterial RNase P as an RNA-plus-protein
+        particle that catalyzes tRNA 5-prime maturation.
     - reference: GO:0001682
       notes: GO:0001682 is the biological-process term for tRNA 5'-leader removal.
 discussions:
