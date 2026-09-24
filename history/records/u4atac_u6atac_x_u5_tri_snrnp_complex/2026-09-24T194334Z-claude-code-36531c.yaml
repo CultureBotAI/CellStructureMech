@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u4atac_u6atac_x_u5_tri_snrnp_complex.yaml
+  slug: u4atac_u6atac_x_u5_tri_snrnp_complex
+session:
+  id: 2026-09-24T194334Z-claude-code-36531c
+  timestamp: '2026-09-24T19:43:34Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1519
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1518
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: 'Address PR #1518 U4atac/U6atac review issue'
+  details: 'Addressed review issue #1519 by replacing broad conservation wording in the GO:0071009
+    protein-component TODO with narrower similarity-to-human-U4/U6.U5-composition wording.
+    The record now keeps the Schneider, Will, Makarova et al. 2002 evidence scoped to a human
+    comparative tri-snRNP composition study.'

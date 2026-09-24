@@ -19,6 +19,12 @@ curation_history:
     U4atac/U6atac and U5 snRNP components, human Schneider/Will/Makarova tri-snRNP
     evidence, an assembly graph and a protein-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T19:43:06Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1519: narrowed the minor tri-snRNP TODO from broad U4/U6.U5 conservation
+    to human U4/U6.U5 composition similarity.'
+  llm_assisted: true
 synonyms:
 - synonym_text: U4atac/U6atac.U5 snRNP complex
   synonym_type: EXACT_SYNONYM
@@ -143,8 +149,8 @@ discussions:
   - causal_graphs#u4atac_u6atac_u5_tri_snrnp_assembly
   rationale: The first GO:0071009 record captures the GO-grounded U4atac/U6atac and
     U5 snRNP subcomplexes that define the minor tri-snRNP. Individual protein family
-    boundaries, source-neutral groundings and conservation with the U4/U6.U5 tri-snRNP
-    should be resolved before splitting the protein inventory.
+    boundaries, source-neutral groundings and similarity to human U4/U6.U5 tri-snRNP
+    composition should be resolved before splitting the protein inventory.
   evidence:
   - reference: GO:0071009
   - reference: DOI:10.1128/MCB.22.10.3219-3229.2002
