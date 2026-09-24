@@ -27,13 +27,12 @@ curation_history:
   changes: Removed broad bacterial wording from RecB, RecC, and RecD role prose while
     retaining the Escherichia coli canonical example.
   llm_assisted: true
-synonyms:
-- synonym_text: RecBCD enzyme
-  synonym_type: EXACT_SYNONYM
-  source: InterPro:IPR006697
-- synonym_text: RecBCD complex
-  synonym_type: EXACT_SYNONYM
-  source: DOI:10.1038/nature02988
+- timestamp: '2026-09-24T09:05:42Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1472/#1473: removed weak RecBCD exact synonymy and removed unsupported
+    assembly-essentiality assertions from the RecB, RecC, and RecD component rows.'
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 - GO:1902494
@@ -45,7 +44,6 @@ components:
   grounding: InterPro:IPR004586
   gene_symbols:
   - recB
-  essentiality: ESSENTIAL
   role: RecB helicase-nuclease subunit of the exodeoxyribonuclease V complex.
   evidence:
   - reference: InterPro:IPR004586
@@ -61,7 +59,6 @@ components:
   grounding: InterPro:IPR006697
   gene_symbols:
   - recC
-  essentiality: ESSENTIAL
   role: RecC subunit of the exodeoxyribonuclease V complex.
   evidence:
   - reference: InterPro:IPR006697
@@ -77,7 +74,6 @@ components:
   grounding: InterPro:IPR006344
   gene_symbols:
   - recD
-  essentiality: ESSENTIAL
   role: RecD helicase subunit of the exodeoxyribonuclease V complex.
   evidence:
   - reference: InterPro:IPR006344
