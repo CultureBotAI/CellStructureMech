@@ -21,9 +21,18 @@ curation_history:
     Sm-ring components, budding-yeast B-complex evidence, a minimal U2 snRNP constituent
     graph and a protein-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T17:04:27Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1509: added the 17S U2 snRNP narrow synonym exposed by GO:0005686 and
+    broadened the GO evidence note to cover exact and narrow GO synonymy.'
+  llm_assisted: true
 synonyms:
 - synonym_text: snRNP U2
   synonym_type: EXACT_SYNONYM
+  source: GO:0005686
+- synonym_text: 17S U2 snRNP
+  synonym_type: NARROW_SYNONYM
   source: GO:0005686
 parent_structures:
 - GO:0097525
@@ -68,7 +77,7 @@ canonical_examples:
   reference: DOI:10.1038/nature22799
 evidence:
 - reference: GO:0005686
-  notes: Gene Ontology cellular-component term for the U2 snRNP and its exact synonym.
+  notes: Gene Ontology cellular-component term for the U2 snRNP and its synonyms.
 - reference: GO:0097525
   notes: Gene Ontology cellular-component parent term for spliceosomal snRNP complex.
 - reference: SO:0000392
