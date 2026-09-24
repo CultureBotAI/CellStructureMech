@@ -1,0 +1,295 @@
+identifier: GO:0045283
+label: fumarate reductase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A membrane-bound four-subunit respiratory quinol:fumarate reductase complex
+  whose extrinsic catalytic module and membrane-anchor module couple fumarate reduction
+  to quinol oxidation.
+definition_source: GO:0045283
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T05:14:44Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T05:15:37Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added respiratory-chain parentage, FrdA/FrdB/FrdC/FrdD component rows,
+    an E. coli PDB:1KF6 canonical example, quinol:fumarate reductase activity, GO/InterPro/DOI/PMID/PDB
+    evidence, a compact quinol-coupling function graph, and an FrdB family-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T05:16:23Z'
+  curator: codex
+  action: NARROWED_GRAPH_EDGE
+  changes: Narrowed FrdC and FrdD graph edges from anchoring FrdA specifically to
+    evidence-backed constituent contributions to the complete fumarate reductase complex.
+  llm_assisted: true
+- timestamp: '2026-09-24T05:27:24Z'
+  curator: codex
+  action: RESOLVED_REVIEW_ISSUE
+  changes: 'Resolved issue #1452 by adding source-attested quinol-fumarate reductase
+    synonymy from the PDB:1KF6 primary citation title.'
+  llm_assisted: true
+synonyms:
+- synonym_text: quinol-fumarate reductase
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1074/jbc.M200815200
+parent_structures:
+- GO:0098803
+components:
+- component_id: frda_flavoprotein
+  label: Fumarate reductase, flavoprotein subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR005884
+  gene_symbols:
+  - frdA
+  essentiality: ESSENTIAL
+  role: FAD-binding flavoprotein subunit in the membrane-extrinsic catalytic domain
+    of the fumarate reductase complex.
+  evidence:
+  - reference: InterPro:IPR005884
+    notes: InterPro IPR005884 is the source-neutral family for the fumarate reductase
+      flavoprotein subunit.
+  - reference: PDB:1KF6
+    notes: RCSB maps PDB:1KF6 polymer entity 1 to the E. coli FrdA flavoprotein subunit,
+      UniProtKB:P00363.
+- component_id: frdb_iron_sulfur_subunit
+  label: fumarate reductase iron-sulfur subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - frdB
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, or NCBIfam CURIE was asserted
+    for fumarate reductase subunit B; the verified InterPro IPR004489 family intentionally
+    spans both succinate dehydrogenase and fumarate reductase iron-sulfur proteins.
+  role: Iron-sulfur subunit in the membrane-extrinsic catalytic domain that links
+    the flavoprotein to the FrdC/FrdD membrane anchor.
+  evidence:
+  - reference: GO:0045283
+    notes: GO:0045283 defines subunits A and B as the fumarate reductase membrane-extrinsic
+      catalytic domain.
+  - reference: PDB:1KF6
+    notes: RCSB maps PDB:1KF6 polymer entity 2 to the E. coli FrdB iron-sulfur subunit,
+      UniProtKB:P0AC47.
+- component_id: frdc_hydrophobic_subunit
+  label: Fumarate reductase, subunit C
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR003510
+  gene_symbols:
+  - frdC
+  essentiality: ESSENTIAL
+  role: Fifteen-kilodalton hydrophobic membrane-anchor subunit that helps link the
+    catalytic centers of fumarate reductase to the respiratory electron-transfer chain.
+  evidence:
+  - reference: InterPro:IPR003510
+    notes: InterPro IPR003510 is the source-neutral family for Fumarate reductase,
+      subunit C.
+  - reference: PDB:1KF6
+    notes: RCSB maps PDB:1KF6 polymer entity 3 to the E. coli FrdC hydrophobic subunit,
+      UniProtKB:P0A8Q0.
+- component_id: frdd_hydrophobic_subunit
+  label: Fumarate reductase, subunit D
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR003418
+  gene_symbols:
+  - frdD
+  essentiality: ESSENTIAL
+  role: Thirteen-kilodalton hydrophobic membrane-anchor subunit that helps anchor
+    the fumarate reductase catalytic module to the cytoplasmic membrane.
+  evidence:
+  - reference: InterPro:IPR003418
+    notes: InterPro IPR003418 is the source-neutral family for Fumarate reductase,
+      subunit D.
+  - reference: PDB:1KF6
+    notes: RCSB maps PDB:1KF6 polymer entity 4 to the E. coli FrdD hydrophobic subunit,
+      UniProtKB:P0A8Q3.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Bacterial source of the four-subunit quinol:fumarate reductase structure deposited
+    as PDB:1KF6.
+  reference: PDB:1KF6
+functions:
+- function_id: quinol_fumarate_reductase_activity
+  label: quinol:fumarate reductase activity
+  description: Fumarate reductase oxidizes quinol to quinone while reducing fumarate
+    to succinate during anaerobic respiratory electron transport.
+  evidence:
+  - reference: GO:0045283
+    notes: GO:0045283 defines fumarate reductase by the quinol-to-quinone and fumarate-to-succinate
+      reaction opposite to respiratory complex II.
+  - reference: DOI:10.1126/science.284.5422.1961
+    notes: Iverson et al. 1999 solved the structure of the E. coli fumarate reductase
+      respiratory complex.
+evidence:
+- reference: GO:0045283
+  notes: Gene Ontology cellular-component term for the fumarate reductase complex.
+- reference: GO:0098803
+  notes: Gene Ontology cellular-component term for respiratory-chain protein complexes.
+- reference: InterPro:IPR005884
+  notes: InterPro family for the fumarate reductase FrdA flavoprotein subunit.
+- reference: InterPro:IPR003510
+  notes: InterPro family for fumarate reductase subunit C.
+- reference: InterPro:IPR003418
+  notes: InterPro family for fumarate reductase subunit D.
+- reference: DOI:10.1126/science.284.5422.1961
+  notes: Iverson et al. 1999, Structure of the Escherichia coli Fumarate reductase
+    respiratory complex, Science.
+- reference: PMID:10373108
+  notes: PubMed identifier for the Iverson et al. 1999 E. coli fumarate reductase
+    respiratory-complex structure paper as reported by InterPro.
+- reference: DOI:10.1074/jbc.M200815200
+  notes: Iverson et al. 2002, Crystallographic studies of the Escherichia coli quinol-fumarate
+    reductase with inhibitors bound to the quinol-binding site, Journal of Biological
+    Chemistry.
+- reference: PMID:11850430
+  notes: PubMed identifier for Iverson et al. 2002 as reported by the RCSB PDB:1KF6
+    primary citation.
+- reference: PDB:1KF6
+  notes: RCSB Protein Data Bank entry for the E. coli quinol:fumarate reductase structure
+    from Iverson et al. 2002.
+causal_graphs:
+- graph_id: fumarate_reductase_quinol_coupling
+  title: Fumarate reductase couples quinol oxidation to fumarate reduction
+  description: The fumarate reductase FrdAB catalytic domain and FrdCD membrane anchor
+    form a respiratory complex that oxidizes quinol and reduces fumarate during anaerobic
+    electron transport.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GO-level substrates, products, and subunit layout
+    without resolving individual flavin, iron-sulfur, quinone-site, or inhibitor-bound
+    conformational states.
+  nodes:
+  - node_id: fumarate_reductase
+    label: fumarate reductase complex
+    node_type: STRUCTURE
+    grounding: GO:0045283
+  - node_id: frda_flavoprotein
+    label: Fumarate reductase, flavoprotein subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR005884
+    component_ref: frda_flavoprotein
+  - node_id: frdb_iron_sulfur_subunit
+    label: fumarate reductase iron-sulfur subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: frdb_iron_sulfur_subunit
+  - node_id: frdc_hydrophobic_subunit
+    label: Fumarate reductase, subunit C
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR003510
+    component_ref: frdc_hydrophobic_subunit
+  - node_id: frdd_hydrophobic_subunit
+    label: Fumarate reductase, subunit D
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR003418
+    component_ref: frdd_hydrophobic_subunit
+  - node_id: quinol
+    label: quinol
+    node_type: CHEMICAL
+  - node_id: quinone
+    label: quinone
+    node_type: CHEMICAL
+  - node_id: fumarate
+    label: fumarate
+    node_type: CHEMICAL
+  - node_id: succinate
+    label: succinate
+    node_type: CHEMICAL
+  - node_id: quinol_fumarate_reductase_activity
+    label: quinol:fumarate reductase activity
+    node_type: MOLECULAR_FUNCTION
+  edges:
+  - subject: fumarate_reductase
+    predicate: enables
+    object: quinol_fumarate_reductase_activity
+    description: The complete FrdABCD complex carries out quinol:fumarate reductase
+      activity.
+    evidence:
+    - reference: GO:0045283
+      notes: GO:0045283 defines the four-subunit fumarate reductase complex by quinol
+        oxidation coupled to fumarate reduction.
+  - subject: frda_flavoprotein
+    predicate: assembles with
+    object: frdb_iron_sulfur_subunit
+    description: FrdA and FrdB comprise the extrinsic catalytic domain of the membrane-bound
+      fumarate reductase complex.
+    evidence:
+    - reference: GO:0045283
+      notes: GO:0045283 states that subunits A and B comprise the fumarate reductase
+        membrane-extrinsic catalytic domain.
+  - subject: frdc_hydrophobic_subunit
+    predicate: contributes to
+    object: fumarate_reductase
+    description: FrdC is one of the two hydrophobic membrane-anchor subunits in the
+      four-subunit fumarate reductase complex.
+    evidence:
+    - reference: InterPro:IPR003510
+      notes: InterPro IPR003510 defines Fumarate reductase, subunit C as a 15 kDa
+        hydrophobic subunit of the four-subunit complex.
+  - subject: frdd_hydrophobic_subunit
+    predicate: contributes to
+    object: fumarate_reductase
+    description: FrdD is the second hydrophobic membrane-anchor subunit of the four-subunit
+      fumarate reductase complex.
+    evidence:
+    - reference: InterPro:IPR003418
+      notes: InterPro IPR003418 defines fumarate reductase subunit D as the 13 kDa
+        hydrophobic subunit.
+  - subject: quinol
+    predicate: donates electrons to
+    object: quinol_fumarate_reductase_activity
+    description: Quinol is oxidized to quinone during fumarate reductase activity.
+    evidence:
+    - reference: GO:0045283
+      notes: GO:0045283 records quinol oxidation as coupled to fumarate reduction
+        by the complex.
+  - subject: fumarate
+    predicate: accepts electrons in
+    object: quinol_fumarate_reductase_activity
+    description: Fumarate is the acceptor reduced to succinate by the fumarate reductase
+      complex.
+    evidence:
+    - reference: GO:0045283
+      notes: GO:0045283 records fumarate reduction to succinate as part of the complex's
+        reaction.
+  - subject: quinol_fumarate_reductase_activity
+    predicate: produces
+    object: quinone
+    description: The fumarate reductase reaction oxidizes quinol to quinone.
+    evidence:
+    - reference: GO:0045283
+      notes: GO:0045283 records quinone production as the oxidized side of the quinol:fumarate
+        reaction.
+  - subject: quinol_fumarate_reductase_activity
+    predicate: produces
+    object: succinate
+    description: The fumarate reductase reaction reduces fumarate to succinate.
+    evidence:
+    - reference: GO:0045283
+      notes: GO:0045283 records succinate production as the reduced side of the quinol:fumarate
+        reaction.
+discussions:
+- discussion_id: frdb_family_grounding
+  prompt: Resolve an exact source-neutral protein-family identifier for fumarate reductase
+    subunit B before replacing its reviewed-label-only component row.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#frdb_iron_sulfur_subunit
+  rationale: InterPro IPR004489 covers succinate dehydrogenase and fumarate reductase
+    iron-sulfur proteins, so this record grounds exact FrdA, FrdC, and FrdD families
+    while leaving FrdB ungrounded until a FrdB-specific family is verified.
+  evidence:
+  - reference: InterPro:IPR004489
+    notes: InterPro names IPR004489 as a succinate dehydrogenase/fumarate reductase
+      iron-sulfur protein family.
+  posed_by: codex
+  posed_date: '2026-09-24'

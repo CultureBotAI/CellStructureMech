@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/fumarate_reductase_complex.yaml
+  slug: fumarate_reductase_complex
+session:
+  id: 2026-09-24T052800Z-codex-17494d
+  timestamp: '2026-09-24T05:28:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1452
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1453
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1451
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  - history
+  summary: Resolved fumarate reductase PR review issues
+  details: 'Resolved PR #1451 adversarial review issues #1452 and #1453 by adding the source-attested
+    quinol-fumarate reductase synonym and linking the creation history to PR #1451. Verified
+    the updated record with single-record LinkML and strict validation and verified the updated
+    creation history against the history schema before writing this history entry.'

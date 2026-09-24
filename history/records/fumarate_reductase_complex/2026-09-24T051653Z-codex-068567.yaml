@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/fumarate_reductase_complex.yaml
+  slug: fumarate_reductase_complex
+session:
+  id: 2026-09-24T051653Z-codex-068567
+  timestamp: '2026-09-24T05:16:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1451
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added GO:0045283 fumarate reductase complex
+  details: Added the GO:0045283 fumarate reductase complex ENERGY_COMPLEX record with respiratory-chain
+    parentage, FrdA/FrdB/FrdC/FrdD component rows, an Escherichia coli PDB:1KF6 structural
+    example, quinol:fumarate reductase activity, GO/InterPro/DOI/PMID/PDB evidence, a compact
+    quinol-coupled fumarate-reduction graph, and an open FrdB family-grounding TODO. Verified
+    the new record with single-record LinkML and strict validation before writing this history
+    entry.
