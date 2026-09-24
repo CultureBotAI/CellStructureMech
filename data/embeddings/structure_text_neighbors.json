@@ -3350,9 +3350,40 @@
           "cosine_similarity": 0.61689402
         },
         {
+          "identifier": "GO:0045283",
+          "label": "fumarate reductase complex",
+          "cosine_similarity": 0.60994867
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0045283",
+      "label": "fumarate reductase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0045273",
+          "label": "respiratory chain complex II (succinate dehydrogenase)",
+          "cosine_similarity": 0.71917125
+        },
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.69698684
+        },
+        {
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.56473578
+          "cosine_similarity": 0.66007692
+        },
+        {
+          "identifier": "GO:0016610",
+          "label": "nitrogenase complex",
+          "cosine_similarity": 0.62673728
+        },
+        {
+          "identifier": "GO:0009512",
+          "label": "cytochrome b6f complex",
+          "cosine_similarity": 0.62235191
         }
       ]
     },
@@ -3438,14 +3469,14 @@
           "cosine_similarity": 0.64462418
         },
         {
+          "identifier": "GO:0045283",
+          "label": "fumarate reductase complex",
+          "cosine_similarity": 0.62673728
+        },
+        {
           "identifier": "GO:0045273",
           "label": "respiratory chain complex II (succinate dehydrogenase)",
           "cosine_similarity": 0.62612226
-        },
-        {
-          "identifier": "GO:0009512",
-          "label": "cytochrome b6f complex",
-          "cosine_similarity": 0.61849151
         }
       ]
     },
@@ -3707,6 +3738,11 @@
           "cosine_similarity": 0.83130559
         },
         {
+          "identifier": "GO:0045283",
+          "label": "fumarate reductase complex",
+          "cosine_similarity": 0.71917125
+        },
+        {
           "identifier": "GO:0009512",
           "label": "cytochrome b6f complex",
           "cosine_similarity": 0.70550756
@@ -3720,11 +3756,6 @@
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.67793625
-        },
-        {
-          "identifier": "cellstructuremech:rc_lh1_pufx_core_complex",
-          "label": "RC-LH1-PufX core complex",
-          "cosine_similarity": 0.67728524
         }
       ]
     },
