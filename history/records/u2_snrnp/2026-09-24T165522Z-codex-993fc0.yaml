@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u2_snrnp.yaml
+  slug: u2_snrnp
+session:
+  id: 2026-09-24T165522Z-codex-993fc0
+  timestamp: '2026-09-24T16:55:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - causal_graphs
+  - discussions
+  summary: Add U2 snRNP
+  details: Added a new GO:0005686 U2 snRNP structure record with the GO exact synonym, spliceosomal
+    snRNP parentage, U2 snRNA and Sm-ring components, Saccharomyces cerevisiae pre-catalytic
+    B-complex cryo-EM evidence, a minimal constituent graph and an open protein-family grounding
+    TODO.
