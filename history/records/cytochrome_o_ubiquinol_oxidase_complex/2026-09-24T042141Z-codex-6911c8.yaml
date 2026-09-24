@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml
+  slug: cytochrome_o_ubiquinol_oxidase_complex
+session:
+  id: 2026-09-24T042141Z-codex-6911c8
+  timestamp: '2026-09-24T04:21:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Added GO:0009319 cytochrome o ubiquinol oxidase complex
+  details: Added the GO:0009319 cytochrome o ubiquinol oxidase complex ENERGY_COMPLEX record
+    with GO:0098803 parentage, four InterPro-grounded Cyo component rows, an Escherichia coli
+    PDB:1FFT structural example, GO:0009486 cytochrome bo3 ubiquinol oxidase activity, Abramson
+    et al. 2000 DOI/PMID/PDB evidence, and a compact ubiquinol-to-oxygen function graph. Verified
+    the new record with single-record strict validation before writing this history entry.

@@ -1,0 +1,215 @@
+identifier: GO:0009319
+label: cytochrome o ubiquinol oxidase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A four-polypeptide respiratory-chain protein complex that possesses cytochrome
+  o ubiquinol oxidase activity and contains associated prosthetic groups.
+definition_source: GO:0009319
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T04:18:51Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T04:21:10Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO respiratory-chain parentage, four InterPro-grounded Cyo subunits,
+    the E. coli PDB:1FFT canonical example, cytochrome bo3 ubiquinol oxidase activity,
+    primary Abramson et al. literature/PDB evidence, and a compact terminal-oxidase
+    function graph.
+  llm_assisted: true
+parent_structures:
+- GO:0098803
+components:
+- component_id: cyo_subunit_i
+  label: Cytochrome o ubiquinol oxidase, subunit I
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR014207
+  gene_symbols:
+  - cyoB
+  essentiality: UNKNOWN
+  role: Large membrane-embedded subunit of cytochrome bo3 terminal oxidase.
+  evidence:
+  - reference: InterPro:IPR014207
+    notes: InterPro IPR014207 is the source-neutral family for CyoB, subunit I of
+      cytochrome o ubiquinol oxidase.
+  - reference: PDB:1FFT
+    notes: The PDB:1FFT deposition maps polymer entity 1 of the E. coli ubiquinol
+      oxidase structure to UniProtKB:P0ABI8/CYOB_ECOLI.
+- component_id: cyo_subunit_ii
+  label: Cytochrome o ubiquinol oxidase subunit II
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR006333
+  gene_symbols:
+  - cyoA
+  essentiality: UNKNOWN
+  role: Quinol-side subunit of the cytochrome o ubiquinol oxidase terminal oxidase.
+  evidence:
+  - reference: InterPro:IPR006333
+    notes: InterPro IPR006333 is the source-neutral family for cytochrome o ubiquinol
+      oxidase subunit II.
+  - reference: PDB:1FFT
+    notes: The PDB:1FFT deposition maps polymer entity 2 of the E. coli ubiquinol
+      oxidase structure to UniProtKB:P0ABJ1/CYOA_ECOLI.
+- component_id: cyo_subunit_iii
+  label: Cytochrome o ubiquinol oxidase, subunit III
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR014206
+  gene_symbols:
+  - cyoC
+  essentiality: UNKNOWN
+  role: Membrane subunit of the cytochrome o ubiquinol oxidase terminal oxidase.
+  evidence:
+  - reference: InterPro:IPR014206
+    notes: InterPro IPR014206 is the source-neutral family for CyoC, subunit III of
+      cytochrome o ubiquinol oxidase.
+  - reference: PDB:1FFT
+    notes: The PDB:1FFT deposition maps polymer entity 3 of the E. coli ubiquinol
+      oxidase structure to UniProtKB:P0ABJ3/CYOC_ECOLI.
+- component_id: cyo_subunit_iv
+  label: Cytochrome o ubiquinol oxidase subunit IV
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR014210
+  gene_symbols:
+  - cyoD
+  essentiality: UNKNOWN
+  role: Small fourth membrane subunit of the cytochrome o ubiquinol oxidase terminal
+    oxidase.
+  evidence:
+  - reference: InterPro:IPR014210
+    notes: InterPro IPR014210 is the source-neutral family for CyoD, subunit IV of
+      cytochrome o ubiquinol oxidase.
+  - reference: UniProtKB:P0ABJ6
+    notes: Reviewed UniProtKB entry P0ABJ6 records E. coli cyoD as cytochrome bo3
+      ubiquinol oxidase subunit 4.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Bacterial source of the four-polypeptide cytochrome bo3 ubiquinol oxidase
+    structure deposited as PDB:1FFT.
+  reference: PDB:1FFT
+functions:
+- function_id: cytochrome_bo3_ubiquinol_oxidase_activity
+  label: cytochrome bo3 ubiquinol oxidase activity
+  grounding: GO:0009486
+  description: Cytochrome bo3 ubiquinol oxidase oxidizes ubiquinol, reduces molecular
+    oxygen to water, and moves protons to the periplasmic side of the respiratory
+    membrane.
+  evidence:
+  - reference: GO:0009486
+    notes: GO:0009486 defines the cytochrome bo3 ubiquinol oxidase reaction with ubiquinol
+      as donor, oxygen as acceptor, and proton release on the periplasmic side.
+  - reference: DOI:10.1038/82824
+    notes: Abramson et al. 2000 solved the E. coli ubiquinol oxidase structure and
+      its ubiquinone binding site.
+evidence:
+- reference: GO:0009319
+  notes: Gene Ontology cellular-component term for cytochrome o ubiquinol oxidase
+    complex.
+- reference: GO:0098803
+  notes: Gene Ontology cellular-component term for respiratory chain complexes.
+- reference: GO:0009486
+  notes: Gene Ontology molecular-function term for cytochrome bo3 ubiquinol oxidase
+    activity.
+- reference: DOI:10.1038/82824
+  notes: Abramson et al. 2000, The structure of the ubiquinol oxidase from Escherichia
+    coli and its ubiquinone binding site, Nature Structural Biology.
+- reference: PMID:11017202
+  notes: PubMed identifier for Abramson et al. 2000 as reported by the RCSB PDB:1FFT
+    primary citation.
+- reference: PDB:1FFT
+  notes: RCSB Protein Data Bank entry for the E. coli cytochrome bo3 ubiquinol oxidase
+    structure from Abramson et al. 2000.
+causal_graphs:
+- graph_id: cytochrome_o_ubiquinol_terminal_oxidase
+  title: Cytochrome bo3 oxidizes ubiquinol with oxygen
+  description: Cytochrome o ubiquinol oxidase is a terminal respiratory oxidase that
+    converts ubiquinol and oxygen to ubiquinone and water while contributing to the
+    proton motive force.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the GO-level terminal oxidase reaction without resolving
+    heme, copper, ubiquinone-site, or proton-channel chemistry.
+  nodes:
+  - node_id: cytochrome_o_oxidase
+    label: cytochrome o ubiquinol oxidase complex
+    node_type: STRUCTURE
+    grounding: GO:0009319
+  - node_id: ubiquinol
+    label: ubiquinol
+    node_type: CHEMICAL
+  - node_id: oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+  - node_id: ubiquinone
+    label: ubiquinone
+    node_type: CHEMICAL
+  - node_id: water
+    label: water
+    node_type: CHEMICAL
+  - node_id: proton_motive_force
+    label: transmembrane proton motive force
+    node_type: STATE
+  - node_id: bo3_activity
+    label: cytochrome bo3 ubiquinol oxidase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0009486
+  edges:
+  - subject: cytochrome_o_oxidase
+    predicate: enables
+    object: bo3_activity
+    description: The cytochrome o ubiquinol oxidase complex carries the GO:0009486
+      terminal oxidase molecular function.
+    evidence:
+    - reference: GO:0009319
+      notes: GO:0009319 defines the complex by possession of cytochrome o ubiquinol
+        oxidase activity.
+  - subject: ubiquinol
+    predicate: donates electrons to
+    object: bo3_activity
+    description: Ubiquinol is oxidized during the cytochrome bo3 terminal oxidase
+      reaction.
+    evidence:
+    - reference: GO:0009486
+      notes: GO:0009486 records ubiquinol as the electron donor in this terminal oxidase
+        reaction.
+  - subject: oxygen
+    predicate: accepts electrons in
+    object: bo3_activity
+    description: Oxygen is the terminal electron acceptor reduced by the cytochrome
+      bo3 ubiquinol oxidase reaction.
+    evidence:
+    - reference: GO:0009486
+      notes: GO:0009486 records molecular oxygen as the acceptor that is reduced to
+        water.
+  - subject: bo3_activity
+    predicate: produces
+    object: ubiquinone
+    description: The oxidase reaction regenerates ubiquinone from ubiquinol.
+    evidence:
+    - reference: GO:0009486
+      notes: GO:0009486 records ubiquinone as a product of the cytochrome bo3 ubiquinol
+        oxidase reaction.
+  - subject: bo3_activity
+    predicate: produces
+    object: water
+    description: The oxidase reaction reduces molecular oxygen to water.
+    evidence:
+    - reference: GO:0009486
+      notes: GO:0009486 records water as a product of oxygen reduction by cytochrome
+        bo3 ubiquinol oxidase.
+  - subject: bo3_activity
+    predicate: contributes to
+    object: proton_motive_force
+    description: The terminal oxidase reaction translocates protons to the periplasmic
+      side, strengthening the proton motive force.
+    evidence:
+    - reference: GO:0009486
+      notes: The GO:0009486 reaction accounts for protons moved to the periplasmic
+        side during cytochrome bo3 ubiquinol oxidase activity.
