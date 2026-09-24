@@ -990,6 +990,15 @@
   "definition": "A photosystem that contains an iron-sulfur reaction center associated with accessory pigments and electron carriers. In cyanobacteria and chloroplasts, photosystem I functions as a light-dependent plastocyanin-ferredoxin oxidoreductase, transferring electrons from plastocyanin to ferredoxin; in photosynthetic bacteria that have only a single type I photosystem, such as the green sulfur bacteria, electrons can go either to ferredoxin (Fd) -> NAD+ or to menaquinone (MK) -> Cytb/FeS -> Cytc555 -> photosystem I (cyclic photophosphorylation)."
  },
  {
+  "identifier": "GO:0009523",
+  "label": "photosystem II",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/photosystem_ii.html",
+  "definition": "A photosystem that contains a pheophytin-quinone reaction center with associated accessory pigments and electron carriers. In cyanobacteria and chloroplasts, in the presence of light, PSII functions as a water-plastoquinone oxidoreductase, transferring electrons from water to plastoquinone, whereas other photosynthetic bacteria carry out anoxygenic photosynthesis and oxidize other compounds to re-reduce the photoreaction center."
+ },
+ {
   "identifier": "GO:0030089",
   "label": "phycobilisome",
   "category": "ENERGY_COMPLEX",

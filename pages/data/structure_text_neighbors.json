@@ -3314,14 +3314,14 @@
           "cosine_similarity": 0.87016635
         },
         {
+          "identifier": "GO:0009523",
+          "label": "photosystem II",
+          "cosine_similarity": 0.83414466
+        },
+        {
           "identifier": "GO:0009522",
           "label": "photosystem I",
           "cosine_similarity": 0.82120004
-        },
-        {
-          "identifier": "GO:0042651",
-          "label": "thylakoid membrane",
-          "cosine_similarity": 0.80564845
         }
       ]
     },
@@ -3392,6 +3392,11 @@
       "label": "photosystem I",
       "neighbors": [
         {
+          "identifier": "GO:0009523",
+          "label": "photosystem II",
+          "cosine_similarity": 0.90788322
+        },
+        {
           "identifier": "GO:0030094",
           "label": "plasma membrane-derived photosystem I",
           "cosine_similarity": 0.8509529
@@ -3410,11 +3415,37 @@
           "identifier": "GO:0030076",
           "label": "light-harvesting complex",
           "cosine_similarity": 0.78156305
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009523",
+      "label": "photosystem II",
+      "neighbors": [
+        {
+          "identifier": "GO:0009522",
+          "label": "photosystem I",
+          "cosine_similarity": 0.90788322
         },
         {
-          "identifier": "GO:0034357",
-          "label": "photosynthetic membrane",
-          "cosine_similarity": 0.77953748
+          "identifier": "GO:0030096",
+          "label": "plasma membrane-derived thylakoid photosystem II",
+          "cosine_similarity": 0.85718387
+        },
+        {
+          "identifier": "GO:0030094",
+          "label": "plasma membrane-derived photosystem I",
+          "cosine_similarity": 0.83579958
+        },
+        {
+          "identifier": "GO:0009512",
+          "label": "cytochrome b6f complex",
+          "cosine_similarity": 0.83414466
+        },
+        {
+          "identifier": "GO:0042651",
+          "label": "thylakoid membrane",
+          "cosine_similarity": 0.76942026
         }
       ]
     },
@@ -3443,9 +3474,9 @@
           "cosine_similarity": 0.75271565
         },
         {
-          "identifier": "GO:0009512",
-          "label": "cytochrome b6f complex",
-          "cosine_similarity": 0.73516047
+          "identifier": "GO:0009523",
+          "label": "photosystem II",
+          "cosine_similarity": 0.7441601
         }
       ]
     },
@@ -3469,14 +3500,14 @@
           "cosine_similarity": 0.8509529
         },
         {
+          "identifier": "GO:0009523",
+          "label": "photosystem II",
+          "cosine_similarity": 0.83579958
+        },
+        {
           "identifier": "GO:0030075",
           "label": "bacterial thylakoid",
           "cosine_similarity": 0.82395968
-        },
-        {
-          "identifier": "GO:0042651",
-          "label": "thylakoid membrane",
-          "cosine_similarity": 0.82023117
         }
       ]
     },
@@ -3495,6 +3526,11 @@
           "cosine_similarity": 0.89211226
         },
         {
+          "identifier": "GO:0009523",
+          "label": "photosystem II",
+          "cosine_similarity": 0.85718387
+        },
+        {
           "identifier": "GO:0030075",
           "label": "bacterial thylakoid",
           "cosine_similarity": 0.84464104
@@ -3503,11 +3539,6 @@
           "identifier": "GO:0009522",
           "label": "photosystem I",
           "cosine_similarity": 0.83431321
-        },
-        {
-          "identifier": "GO:0042651",
-          "label": "thylakoid membrane",
-          "cosine_similarity": 0.82987185
         }
       ]
     },
