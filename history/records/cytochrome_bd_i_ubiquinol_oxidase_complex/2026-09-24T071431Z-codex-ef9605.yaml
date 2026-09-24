@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/cytochrome_bd_i_ubiquinol_oxidase_complex.yaml
+  slug: cytochrome_bd_i_ubiquinol_oxidase_complex
+session:
+  id: 2026-09-24T071431Z-codex-ef9605
+  timestamp: '2026-09-24T07:14:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1462
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1463
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1464
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1461
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - components
+  - functions
+  - causal_graphs
+  summary: Address cytochrome bd-I PR review
+  details: 'Addressed PR #1461 review issues #1462, #1463, and #1464 by adding ubiquinone
+    as a bd-I terminal-oxidase graph product, narrowing the YnhF/CydH component role to the
+    E. coli-resolved YnhF-like subunit scope, and expanding the PMID:31604309 function evidence
+    note so the bd-type structural divergence claim is directly supported.'

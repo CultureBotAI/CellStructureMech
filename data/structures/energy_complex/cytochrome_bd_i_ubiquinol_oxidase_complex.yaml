@@ -28,6 +28,13 @@ curation_history:
   changes: Replaced the orphan CydAB graph node with direct CydA and CydB contribution
     edges and grounded water production in PMID:31604309.
   llm_assisted: true
+- timestamp: '2026-09-24T07:13:46Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Addressed review issues #1462, #1463, and #1464 by adding a ubiquinone
+    product node and edge, narrowing the YnhF/CydH role wording, and tying the heme-copper
+    divergence claim to PMID:31604309.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cytochrome bd-I oxidase
   synonym_type: EXACT_SYNONYM
@@ -94,8 +101,8 @@ components:
   gene_symbols:
   - ynhF
   essentiality: UNKNOWN
-  role: Gammaproteobacterial small single-pass membrane component resolved with the
-    E. coli bd-I oxidase.
+  role: YnhF-like single-pass membrane subunit resolved with the E. coli bd-I oxidase
+    and associated with a CydH NCBIfam model.
   evidence:
   - reference: InterPro:IPR047743
     notes: InterPro IPR047743 is the YnhF-like membrane-protein family and includes
@@ -112,7 +119,8 @@ functions:
 - function_id: ubiquinol_oxygen_terminal_oxidase_activity
   label: ubiquinol:oxygen terminal oxidase activity
   description: Cytochrome bd-I oxidizes ubiquinol, reduces molecular oxygen to water,
-    and conserves respiratory-chain energy without using the heme-copper oxidase fold.
+    and conserves respiratory-chain energy through a bd-type architecture distinct
+    from heme-copper cytochrome c oxidases.
   evidence:
   - reference: InterPro:IPR002585
     notes: InterPro describes CydA-family proteins as alternative oxidases that oxidize
@@ -123,7 +131,8 @@ functions:
   - reference: PMID:31604309
     notes: The PubMed abstract for Safarian et al. 2019 describes cytochrome bd-type
       quinol oxidases as respiratory-chain enzymes that catalyze molecular-oxygen
-      reduction to water.
+      reduction to water and are structurally unrelated to mitochondrial cytochrome
+      c oxidases.
 evidence:
 - reference: GO:0098803
   notes: Gene Ontology cellular-component term for respiratory-chain protein complexes.
@@ -153,8 +162,9 @@ evidence:
 causal_graphs:
 - graph_id: cytochrome_bd_i_quinol_oxygen_coupling
   title: Cytochrome bd-I reduces oxygen with ubiquinol electrons
-  description: Cytochrome bd-I oxidase passes electrons from ubiquinol through its
-    CydA and CydB large subunits to oxygen and contributes to respiratory energy conservation.
+  description: Cytochrome bd-I oxidase converts ubiquinol and oxygen to ubiquinone
+    and water through its CydA and CydB large subunits and contributes to respiratory
+    energy conservation.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures the terminal oxidase reaction and the two large
@@ -167,6 +177,9 @@ causal_graphs:
     grounding: cellstructuremech:cytochrome_bd_i_ubiquinol_oxidase_complex
   - node_id: ubiquinol
     label: ubiquinol
+    node_type: CHEMICAL
+  - node_id: ubiquinone
+    label: ubiquinone
     node_type: CHEMICAL
   - node_id: cydA
     label: cytochrome bd-I ubiquinol oxidase subunit I
@@ -233,6 +246,14 @@ causal_graphs:
     - reference: InterPro:IPR002585
       notes: InterPro IPR002585 describes the family as reducing oxygen while oxidizing
         ubiquinol.
+  - subject: bd_i_terminal_oxidase_activity
+    predicate: produces
+    object: ubiquinone
+    description: The terminal oxidase reaction oxidizes ubiquinol to ubiquinone.
+    evidence:
+    - reference: InterPro:IPR002585
+      notes: InterPro IPR002585 describes CydA-family oxidases as oxidizing ubiquinol
+        as part of an electron transport chain.
   - subject: bd_i_terminal_oxidase_activity
     predicate: produces
     object: water
