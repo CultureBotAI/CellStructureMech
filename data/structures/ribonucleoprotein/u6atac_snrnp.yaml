@@ -22,6 +22,18 @@ curation_history:
     and Lsm2-8 components, human Schneider/Will/Makarova tri-snRNP evidence, a minimal
     U6atac snRNP constituent graph and a protein-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T21:16:33Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1525: narrowed the U6atac snRNP protein-component TODO so it frames the
+    already GO:0120115-grounded Lsm2-8 complex as a possible split target rather than
+    an ungrounded component.'
+  llm_assisted: true
+- timestamp: '2026-09-24T21:17:04Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1525: tightened grammar in the Lsm2-8 split rationale.'
+  llm_assisted: true
 synonyms:
 - synonym_text: snRNP U6atac
   synonym_type: EXACT_SYNONYM
@@ -138,16 +150,20 @@ causal_graphs:
         complex.
 discussions:
 - discussion_id: resolve_u6atac_snrnp_protein_components
-  prompt: Resolve exact source-neutral groundings for individual Lsm proteins and
-    U6atac-specific protein families that form the U6atac snRNP.
+  prompt: Review whether the GO:0120115 Lsm2-8 complex should be split into individual
+    Lsm family components, and resolve exact source-neutral groundings for U6atac-specific
+    protein families that form the U6atac snRNP.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#lsm2_8_ring
   - causal_graphs#u6atac_snrnp_constituents
   rationale: The first GO:0005691 record captures U6atac snRNA and the GO-defined
-    Lsm2-8 complex at coarse granularity. Individual Lsm proteins and U6atac-specific
-    protein-family boundaries should be resolved before splitting this inventory.
+    Lsm2-8 complex at coarse granularity. GO:0120115 already grounds the Lsm2-8 complex,
+    so follow-up curation should decide whether the Lsm2-8 ring should remain one
+    complex component or be split into individual Lsm-family components and should
+    resolve U6atac-specific protein-family boundaries before splitting that protein
+    inventory.
   evidence:
   - reference: GO:0005691
   - reference: SO:0000397
