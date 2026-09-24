@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u2_type_catalytic_step_1_spliceosome.yaml
+  slug: u2_type_catalytic_step_1_spliceosome
+session:
+  id: 2026-09-24T172543Z-codex-58d94c
+  timestamp: '2026-09-24T17:25:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - causal_graphs
+  - discussions
+  summary: Add U2-type catalytic step 1 spliceosome
+  details: Added a new GO:0071006 U2-type catalytic step 1 spliceosome record with GO exact
+    and narrow synonyms, U2-type parentage, GO-grounded U2, U5 and U6 snRNP components, Saccharomyces
+    cerevisiae activated-spliceosome evidence from Rauhut and colleagues 2016, a minimal remodeling
+    graph and an open protein-family grounding TODO.

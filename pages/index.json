@@ -4347,6 +4347,15 @@
   "definition": "A ribonucleoprotein complex that contains small nuclear RNA U2, a heptameric ring of Sm proteins, as well as several proteins that are unique to the U2 snRNP, most of which remain associated with the U2 snRNA both while the U2 snRNP is free or assembled into a series of spliceosomal complexes."
  },
  {
+  "identifier": "GO:0071006",
+  "label": "U2-type catalytic step 1 spliceosome",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/u2_type_catalytic_step_1_spliceosome.html",
+  "definition": "A spliceosomal complex that is formed by the displacement of the U1 and U4 snRNPs from the precatalytic spliceosome; the U2, U5 and U6 snRNPs remain associated with the mRNA. This complex, sometimes called the activated spliceosome, is the catalytically active form of the spliceosome, and includes many proteins in addition to those found in the U2, and U5 and U6 snRNPs."
+ },
+ {
   "identifier": "GO:0071005",
   "label": "U2-type precatalytic spliceosome",
   "category": "RIBONUCLEOPROTEIN",
