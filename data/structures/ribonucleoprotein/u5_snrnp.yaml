@@ -22,6 +22,13 @@ curation_history:
     tri-snRNP cryo-EM evidence, a minimal U5 snRNP constituent graph and a protein-component
     grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T14:51:49Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1498: reworded the U5 graph so U5 snRNA and Sm ring constituents are
+    explicitly partial; #1499: narrowed the U5 snRNA component role to its GO containment
+    and SO grounding.'
+  llm_assisted: true
 synonyms:
 - synonym_text: snRNP U5
   synonym_type: EXACT_SYNONYM
@@ -34,8 +41,8 @@ components:
   component_type: RNA
   component_role: CONSTITUENT
   grounding: SO:0000395
-  role: U5 small nuclear RNA constituent of the U5 snRNP and RNA scaffold for U5-associated
-    Sm and U5-specific proteins.
+  role: U5 small nuclear RNA constituent named in the U5 snRNP definition and grounded
+    to the U5 snRNA Sequence Ontology term.
   evidence:
   - reference: GO:0005682
     notes: GO:0005682 defines the U5 snRNP as containing small nuclear RNA U5.
@@ -87,13 +94,14 @@ evidence:
     by PubMed.
 causal_graphs:
 - graph_id: u5_snrnp_constituents
-  title: U5 snRNA and Sm proteins define the U5 snRNP
-  description: The U5 snRNP contains U5 small nuclear RNA, a heptameric Sm protein
-    ring and additional U5-specific proteins.
+  title: U5 snRNA and the Sm ring are U5 snRNP constituents
+  description: The U5 snRNP contains U5 small nuclear RNA and a heptameric Sm protein
+    ring; GO:0005682 also names additional U5-specific proteins whose exact family
+    boundaries remain to be resolved.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
-  scope_notes: This graph records GO-defined U5 snRNA and Sm-ring constituent contributions
-    without modeling individual Sm or U5-specific protein-family boundaries.
+  scope_notes: This partial graph records GO-defined U5 snRNA and Sm-ring constituent
+    contributions without modeling individual Sm or U5-specific protein-family boundaries.
   nodes:
   - node_id: u5_snrna
     label: U5 snRNA
