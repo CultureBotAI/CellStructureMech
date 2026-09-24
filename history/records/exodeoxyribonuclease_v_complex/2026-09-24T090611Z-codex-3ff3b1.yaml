@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/exodeoxyribonuclease_v_complex.yaml
+  slug: exodeoxyribonuclease_v_complex
+session:
+  id: 2026-09-24T090611Z-codex-3ff3b1
+  timestamp: '2026-09-24T09:06:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1472
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1473
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1471
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - curation_history
+  summary: Address exodeoxyribonuclease V review issues
+  details: 'Resolved PR #1471 adversarial review issues #1472 and #1473. Removed the weak
+    exact RecBCD synonym block and removed assembly-essentiality assertions from the RecB,
+    RecC, and RecD component rows while preserving their exact InterPro family groundings
+    and PDB:1W36 constituent evidence.'

@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/exodeoxyribonuclease_v_complex.yaml
+  slug: exodeoxyribonuclease_v_complex
+session:
+  id: 2026-09-24T085551Z-codex-139c40
+  timestamp: '2026-09-24T08:55:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Add exodeoxyribonuclease V complex
+  details: Created GO:0009338 as an OTHER multi-protein-complex record for the RecBCD exodeoxyribonuclease
+    V enzyme. Added GO parentage, RecBCD synonymy, exact InterPro family groundings for RecB,
+    RecC, and RecD, PDB:1W36 evidence tying the components to Escherichia coli polymer entities
+    in a RecBCD:DNA crystal structure, an Escherichia coli canonical example, GO:0008854 exodeoxyribonuclease
+    V activity evidence, and a compact nonmechanistic DNA-processing function graph. Verified
+    with targeted LinkML and closed-schema validation before writing this history entry.

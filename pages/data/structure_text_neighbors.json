@@ -12626,6 +12626,37 @@
       ]
     },
     {
+      "identifier": "GO:0009338",
+      "label": "exodeoxyribonuclease V complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.67948136
+        },
+        {
+          "identifier": "GO:1990621",
+          "label": "ESCRT IV complex",
+          "cosine_similarity": 0.66201679
+        },
+        {
+          "identifier": "GO:0000178",
+          "label": "exosome (RNase complex)",
+          "cosine_similarity": 0.66122292
+        },
+        {
+          "identifier": "GO:0045275",
+          "label": "respiratory chain complex III",
+          "cosine_similarity": 0.65223
+        },
+        {
+          "identifier": "GO:0045277",
+          "label": "respiratory chain complex IV",
+          "cosine_similarity": 0.64655004
+        }
+      ]
+    },
+    {
       "identifier": "GO:0034044",
       "label": "exomer complex",
       "neighbors": [

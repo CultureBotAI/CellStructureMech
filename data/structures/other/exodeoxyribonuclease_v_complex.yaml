@@ -1,0 +1,234 @@
+identifier: GO:0009338
+label: exodeoxyribonuclease V complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Exodeoxyribonuclease V complex is a RecB-RecC-RecD enzyme complex that
+  combines ATP-dependent DNA unwinding with exonucleolytic cleavage of DNA to produce
+  5'-phosphooligonucleotides.
+definition_source: GO:0009338
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T08:53:21Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T08:54:37Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added RecBCD synonymy and GO catalytic-complex parentage, RecB/C/D components
+    grounded to exact InterPro families and PDB:1W36 polymer entities, an Escherichia
+    coli canonical example, exodeoxyribonuclease V activity evidence, and a compact
+    DNA-processing function graph.
+  llm_assisted: true
+- timestamp: '2026-09-24T08:55:19Z'
+  curator: codex
+  action: TIGHTENED_WORDING
+  changes: Removed broad bacterial wording from RecB, RecC, and RecD role prose while
+    retaining the Escherichia coli canonical example.
+  llm_assisted: true
+- timestamp: '2026-09-24T09:05:42Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1472/#1473: removed weak RecBCD exact synonymy and removed unsupported
+    assembly-essentiality assertions from the RecB, RecC, and RecD component rows.'
+  llm_assisted: true
+parent_structures:
+- GO:0140535
+- GO:1902494
+components:
+- component_id: recb_subunit
+  label: RecBCD enzyme subunit RecB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR004586
+  gene_symbols:
+  - recB
+  role: RecB helicase-nuclease subunit of the exodeoxyribonuclease V complex.
+  evidence:
+  - reference: InterPro:IPR004586
+    notes: InterPro IPR004586 is a family entry named RecBCD enzyme subunit RecB and
+      is annotated to exodeoxyribonuclease V activity.
+  - reference: PDB:1W36
+    notes: RCSB maps PDB:1W36 polymer entity 1 to Escherichia coli exodeoxyribonuclease
+      V beta chain RecB, UniProtKB:P08394.
+- component_id: recc_subunit
+  label: RecBCD enzyme subunit RecC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR006697
+  gene_symbols:
+  - recC
+  role: RecC subunit of the exodeoxyribonuclease V complex.
+  evidence:
+  - reference: InterPro:IPR006697
+    notes: InterPro IPR006697 is a family entry named RecBCD enzyme subunit RecC and
+      is annotated to exodeoxyribonuclease V activity.
+  - reference: PDB:1W36
+    notes: RCSB maps PDB:1W36 polymer entity 2 to Escherichia coli exodeoxyribonuclease
+      V gamma chain RecC, UniProtKB:P07648.
+- component_id: recd_subunit
+  label: RecBCD enzyme subunit RecD
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR006344
+  gene_symbols:
+  - recD
+  role: RecD helicase subunit of the exodeoxyribonuclease V complex.
+  evidence:
+  - reference: InterPro:IPR006344
+    notes: InterPro IPR006344 is a family entry named RecBCD enzyme subunit RecD and
+      is annotated to exodeoxyribonuclease V activity.
+  - reference: PDB:1W36
+    notes: RCSB maps PDB:1W36 polymer entity 3 to Escherichia coli exodeoxyribonuclease
+      V alpha chain RecD, UniProtKB:P04993.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Bacterial source of the RecB, RecC, and RecD subunits in the RecBCD:DNA crystal
+    structure deposited as PDB:1W36.
+  reference: PDB:1W36
+functions:
+- function_id: exodeoxyribonuclease_v_activity
+  label: exodeoxyribonuclease V activity
+  grounding: GO:0008854
+  description: RecBCD catalyzes ATP-dependent exonucleolytic cleavage of DNA to yield
+    5'-phosphooligonucleotides.
+  evidence:
+  - reference: GO:0008854
+    notes: GO:0008854 defines exodeoxyribonuclease V activity as ATP-dependent exonucleolytic
+      DNA cleavage in either polarity to yield 5'-phosphooligonucleotides.
+  - reference: InterPro:IPR006697
+    notes: InterPro describes the RecBCD enzyme as a multisubunit enzyme composed
+      of RecB, RecC, and RecD.
+  - reference: PDB:1W36
+    notes: PDB:1W36 contains the E. coli RecB, RecC, and RecD subunits bound to a
+      DNA hairpin polymer entity.
+evidence:
+- reference: GO:0009338
+  notes: Gene Ontology cellular-component term for the exodeoxyribonuclease V complex.
+- reference: GO:0140535
+  notes: Gene Ontology cellular-component term for intracellular protein-containing
+    complexes.
+- reference: GO:1902494
+  notes: Gene Ontology cellular-component term for catalytic complexes.
+- reference: GO:0008854
+  notes: Gene Ontology molecular-function term for exodeoxyribonuclease V activity.
+- reference: InterPro:IPR004586
+  notes: InterPro family for RecBCD enzyme subunit RecB.
+- reference: InterPro:IPR006697
+  notes: InterPro family for RecBCD enzyme subunit RecC.
+- reference: InterPro:IPR006344
+  notes: InterPro family for RecBCD enzyme subunit RecD.
+- reference: DOI:10.1038/nature02988
+  notes: Singleton et al. 2004, Crystal structure of RecBCD enzyme reveals a machine
+    for processing DNA breaks, Nature.
+- reference: PMID:15538360
+  notes: PubMed identifier for Singleton et al. 2004 as reported by RCSB PDB:1W36
+    and NCBI ESummary.
+- reference: PMID:1618858
+  notes: PubMed identifier for Masterson et al. 1992, the reconstitution study cited
+    by the GO:0009338 definition.
+- reference: PDB:1W36
+  notes: RCSB Protein Data Bank entry for the Escherichia coli RecBCD:DNA crystal
+    structure from Singleton et al. 2004.
+causal_graphs:
+- graph_id: recbcd_dna_break_processing
+  title: RecBCD processes DNA ends
+  description: The RecBCD complex uses its RecB, RecC, and RecD subunits to bind DNA
+    and carry out the ATP-dependent exodeoxyribonuclease V reaction.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the whole-enzyme nuclease activity and PDB-observed
+    DNA engagement without resolving Chi-site recognition, relative RecB/RecD motor
+    speeds, nuclease gating, or RecA-loading states.
+  nodes:
+  - node_id: recbcd_complex
+    label: exodeoxyribonuclease V complex
+    node_type: STRUCTURE
+    grounding: GO:0009338
+  - node_id: recb_subunit
+    label: RecBCD enzyme subunit RecB
+    node_type: GENE_OR_PROTEIN
+    component_ref: recb_subunit
+  - node_id: recc_subunit
+    label: RecBCD enzyme subunit RecC
+    node_type: GENE_OR_PROTEIN
+    component_ref: recc_subunit
+  - node_id: recd_subunit
+    label: RecBCD enzyme subunit RecD
+    node_type: GENE_OR_PROTEIN
+    component_ref: recd_subunit
+  - node_id: dna_end
+    label: DNA end
+    node_type: GENETIC_ELEMENT
+  - node_id: five_prime_phosphooligonucleotides
+    label: 5'-phosphooligonucleotides
+    node_type: CHEMICAL
+  - node_id: exodeoxyribonuclease_v_activity
+    label: exodeoxyribonuclease V activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008854
+  edges:
+  - subject: recbcd_complex
+    predicate: enables
+    object: exodeoxyribonuclease_v_activity
+    description: The RecBCD exodeoxyribonuclease V complex carries out the ATP-dependent
+      DNA cleavage reaction.
+    evidence:
+    - reference: GO:0009338
+      notes: GO:0009338 defines the exodeoxyribonuclease V complex by its ATP-dependent
+        DNA cleavage activity.
+    - reference: GO:0008854
+      notes: GO:0008854 defines the exodeoxyribonuclease V molecular function.
+  - subject: recb_subunit
+    predicate: contributes to
+    object: exodeoxyribonuclease_v_activity
+    description: RecB is one of the three protein subunits of the RecBCD enzyme.
+    evidence:
+    - reference: InterPro:IPR004586
+      notes: InterPro IPR004586 identifies the RecB family and annotates it to GO:0008854.
+    - reference: PDB:1W36
+      notes: PDB:1W36 resolves RecB with RecC and RecD.
+  - subject: recc_subunit
+    predicate: contributes to
+    object: exodeoxyribonuclease_v_activity
+    description: RecC is one of the three protein subunits of the RecBCD enzyme.
+    evidence:
+    - reference: InterPro:IPR006697
+      notes: InterPro IPR006697 identifies the RecC family and annotates it to GO:0008854.
+    - reference: PDB:1W36
+      notes: PDB:1W36 resolves RecC with RecB and RecD.
+  - subject: recd_subunit
+    predicate: contributes to
+    object: exodeoxyribonuclease_v_activity
+    description: RecD is one of the three protein subunits of the RecBCD enzyme.
+    evidence:
+    - reference: InterPro:IPR006344
+      notes: InterPro IPR006344 identifies the RecD family and annotates it to GO:0008854.
+    - reference: PDB:1W36
+      notes: PDB:1W36 resolves RecD with RecB and RecC.
+  - subject: recbcd_complex
+    predicate: binds
+    object: dna_end
+    description: The RecBCD enzyme binds DNA ends.
+    evidence:
+    - reference: PDB:1W36
+      notes: PDB:1W36 resolves E. coli RecBCD in complex with a DNA hairpin polymer
+        entity.
+  - subject: dna_end
+    predicate: is cleaved by
+    object: exodeoxyribonuclease_v_activity
+    description: DNA is the polymer substrate cleaved by exodeoxyribonuclease V.
+    evidence:
+    - reference: GO:0008854
+      notes: GO:0008854 defines exodeoxyribonuclease V activity as ATP-dependent exonucleolytic
+        cleavage of DNA.
+  - subject: exodeoxyribonuclease_v_activity
+    predicate: produces
+    object: five_prime_phosphooligonucleotides
+    description: The RecBCD nuclease reaction yields 5'-phosphooligonucleotide products.
+    evidence:
+    - reference: GO:0008854
+      notes: GO:0008854 records 5'-phosphooligonucleotides as the products of exodeoxyribonuclease
+        V activity.
