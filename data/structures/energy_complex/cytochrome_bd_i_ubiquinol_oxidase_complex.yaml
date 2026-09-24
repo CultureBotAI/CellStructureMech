@@ -1,0 +1,294 @@
+identifier: cellstructuremech:cytochrome_bd_i_ubiquinol_oxidase_complex
+label: cytochrome bd-I ubiquinol oxidase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Cytochrome bd-I ubiquinol oxidase complex is a membrane-bound CydAB respiratory
+  terminal oxidase with small bd-I accessory subunits that oxidizes ubiquinol, reduces
+  molecular oxygen to water, and contributes to the respiratory proton motive force.
+definition_source: DOI:10.1126/science.aay0967
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T06:59:35Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T07:00:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added respiratory-chain and cytochrome-complex parentage, PDB:6RKO E. coli
+    cytochrome bd-I oxidase components with InterPro CydA, CydB, CydX, and YnhF-like
+    family groundings, UniProtKB-backed gene aliases, terminal ubiquinol:oxygen oxidase
+    function, literature/PDB evidence, a compact bd-I function graph, and a small-subunit
+    scope TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T07:02:54Z'
+  curator: codex
+  action: REFINED_GRAPH
+  changes: Replaced the orphan CydAB graph node with direct CydA and CydB contribution
+    edges and grounded water production in PMID:31604309.
+  llm_assisted: true
+- timestamp: '2026-09-24T07:13:46Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Addressed review issues #1462, #1463, and #1464 by adding a ubiquinone
+    product node and edge, narrowing the YnhF/CydH role wording, and tying the heme-copper
+    divergence claim to PMID:31604309.'
+  llm_assisted: true
+synonyms:
+- synonym_text: cytochrome bd-I oxidase
+  synonym_type: EXACT_SYNONYM
+  source: PDB:6RKO
+parent_structures:
+- GO:0098803
+- GO:0070069
+components:
+- component_id: cytochrome_bd_i_subunit_i
+  label: cytochrome bd-I ubiquinol oxidase subunit I
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002585
+  gene_symbols:
+  - cydA
+  essentiality: ESSENTIAL
+  role: Large membrane subunit of the cytochrome bd-I terminal oxidase core that houses
+    heme cofactors used for ubiquinol-to-oxygen electron flow.
+  evidence:
+  - reference: InterPro:IPR002585
+    notes: InterPro IPR002585 is the cytochrome ubiquinol oxidase subunit-1 family
+      and includes the E. coli CydA example.
+  - reference: PDB:6RKO
+    notes: RCSB maps PDB:6RKO polymer entity 2 to E. coli K-12 cytochrome bd-I ubiquinol
+      oxidase subunit 1, UniProtKB:P0ABJ9.
+- component_id: cytochrome_bd_i_subunit_ii
+  label: cytochrome bd-I ubiquinol oxidase subunit II
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR003317
+  gene_symbols:
+  - cydB
+  essentiality: ESSENTIAL
+  role: Second large membrane subunit of the CydAB cytochrome bd-I oxidase core.
+  evidence:
+  - reference: InterPro:IPR003317
+    notes: InterPro IPR003317 is the cytochrome ubiquinol oxidase subunit-2 family
+      and includes the E. coli CydB example.
+  - reference: PDB:6RKO
+    notes: RCSB maps PDB:6RKO polymer entity 1 to E. coli K-12 cytochrome bd-I ubiquinol
+      oxidase subunit 2, UniProtKB:P0ABK2.
+- component_id: cydx_small_subunit
+  label: cytochrome bd-I ubiquinol oxidase CydX small subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR011724
+  gene_symbols:
+  - cydX
+  - ybgT
+  essentiality: UNKNOWN
+  role: Small single-pass membrane subunit resolved in the E. coli bd-I oxidase.
+  evidence:
+  - reference: InterPro:IPR011724
+    notes: InterPro IPR011724 is the Cyd operon protein YbgT family, including the
+      E. coli CydX/YbgT subunit.
+  - reference: PDB:6RKO
+    notes: RCSB maps PDB:6RKO polymer entity 4 to E. coli K-12 cytochrome bd-I ubiquinol
+      oxidase subunit X, UniProtKB:P56100.
+- component_id: ynhf_like_cydh_subunit
+  label: YnhF-like cytochrome bd-I small subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR047743
+  gene_symbols:
+  - ynhF
+  essentiality: UNKNOWN
+  role: YnhF-like single-pass membrane subunit resolved with the E. coli bd-I oxidase
+    and associated with a CydH NCBIfam model.
+  evidence:
+  - reference: InterPro:IPR047743
+    notes: InterPro IPR047743 is the YnhF-like membrane-protein family and includes
+      an NCBIfam model for cytochrome bd-I oxidase CydH.
+  - reference: PDB:6RKO
+    notes: RCSB maps PDB:6RKO polymer entity 3 to E. coli K-12 YnhF, UniProtKB:A5A618.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Bacterial species used for the four-subunit cytochrome bd-I oxidase structure
+    deposited as PDB:6RKO.
+  reference: PDB:6RKO
+functions:
+- function_id: ubiquinol_oxygen_terminal_oxidase_activity
+  label: ubiquinol:oxygen terminal oxidase activity
+  description: Cytochrome bd-I oxidizes ubiquinol, reduces molecular oxygen to water,
+    and conserves respiratory-chain energy through a bd-type architecture distinct
+    from heme-copper cytochrome c oxidases.
+  evidence:
+  - reference: InterPro:IPR002585
+    notes: InterPro describes CydA-family proteins as alternative oxidases that oxidize
+      ubiquinol and reduce oxygen as part of the electron transport chain.
+  - reference: DOI:10.1126/science.aay0967
+    notes: Safarian et al. 2019 solved the E. coli cytochrome bd-I oxidase structure
+      deposited as PDB:6RKO.
+  - reference: PMID:31604309
+    notes: The PubMed abstract for Safarian et al. 2019 describes cytochrome bd-type
+      quinol oxidases as respiratory-chain enzymes that catalyze molecular-oxygen
+      reduction to water and are structurally unrelated to mitochondrial cytochrome
+      c oxidases.
+evidence:
+- reference: GO:0098803
+  notes: Gene Ontology cellular-component term for respiratory-chain protein complexes.
+- reference: GO:0070069
+  notes: Gene Ontology cellular-component term for cytochrome complexes.
+- reference: GO:0016682
+  notes: Gene Ontology molecular-function term for oxidoreductase activity with a
+    diphenol-related donor and oxygen as acceptor; no exact cytochrome bd ubiquinol
+    oxidase activity term was found.
+- reference: InterPro:IPR002585
+  notes: InterPro family for cytochrome ubiquinol oxidase subunit 1.
+- reference: InterPro:IPR003317
+  notes: InterPro family for cytochrome ubiquinol oxidase subunit 2.
+- reference: InterPro:IPR011724
+  notes: InterPro family for the CydX/YbgT small subunit.
+- reference: InterPro:IPR047743
+  notes: InterPro family for the YnhF-like CydH small subunit.
+- reference: DOI:10.1126/science.aay0967
+  notes: Safarian et al. 2019, Active site rearrangement and structural divergence
+    in prokaryotic respiratory oxidases, Science.
+- reference: PMID:31604309
+  notes: PubMed identifier for Safarian et al. 2019 as reported by the RCSB PDB:6RKO
+    primary citation.
+- reference: PDB:6RKO
+  notes: RCSB Protein Data Bank entry for the E. coli cytochrome bd-I oxidase structure
+    from Safarian et al. 2019.
+causal_graphs:
+- graph_id: cytochrome_bd_i_quinol_oxygen_coupling
+  title: Cytochrome bd-I reduces oxygen with ubiquinol electrons
+  description: Cytochrome bd-I oxidase converts ubiquinol and oxygen to ubiquinone
+    and water through its CydA and CydB large subunits and contributes to respiratory
+    energy conservation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the terminal oxidase reaction and the two large
+    CydAB subunits without resolving heme b558, heme b595, heme d, or quinone-channel
+    chemistry.
+  nodes:
+  - node_id: bd_i_oxidase
+    label: cytochrome bd-I ubiquinol oxidase complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:cytochrome_bd_i_ubiquinol_oxidase_complex
+  - node_id: ubiquinol
+    label: ubiquinol
+    node_type: CHEMICAL
+  - node_id: ubiquinone
+    label: ubiquinone
+    node_type: CHEMICAL
+  - node_id: cydA
+    label: cytochrome bd-I ubiquinol oxidase subunit I
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002585
+    component_ref: cytochrome_bd_i_subunit_i
+  - node_id: cydB
+    label: cytochrome bd-I ubiquinol oxidase subunit II
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR003317
+    component_ref: cytochrome_bd_i_subunit_ii
+  - node_id: oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+  - node_id: water
+    label: water
+    node_type: CHEMICAL
+  - node_id: proton_motive_force
+    label: transmembrane proton motive force
+    node_type: STATE
+  - node_id: bd_i_terminal_oxidase_activity
+    label: ubiquinol:oxygen terminal oxidase activity
+    node_type: MOLECULAR_FUNCTION
+  edges:
+  - subject: bd_i_oxidase
+    predicate: enables
+    object: bd_i_terminal_oxidase_activity
+    description: The cytochrome bd-I ubiquinol oxidase complex carries out the terminal
+      ubiquinol-to-oxygen oxidase reaction.
+    evidence:
+    - reference: PDB:6RKO
+      notes: PDB:6RKO resolves the four-subunit E. coli cytochrome bd-I oxidase structure.
+  - subject: cydA
+    predicate: contributes to
+    object: bd_i_terminal_oxidase_activity
+    description: The CydA subunit contributes the large membrane subunit that houses
+      bd-I heme cofactors used for ubiquinol-to-oxygen electron flow.
+    evidence:
+    - reference: PDB:6RKO
+      notes: PDB:6RKO resolves E. coli CydA in the four-subunit cytochrome bd-I oxidase
+        structure.
+  - subject: cydB
+    predicate: contributes to
+    object: bd_i_terminal_oxidase_activity
+    description: The CydB subunit contributes the second large membrane subunit of
+      the cytochrome bd-I oxidase core.
+    evidence:
+    - reference: PDB:6RKO
+      notes: PDB:6RKO resolves E. coli CydB in the four-subunit cytochrome bd-I oxidase
+        structure.
+  - subject: ubiquinol
+    predicate: donates electrons to
+    object: bd_i_terminal_oxidase_activity
+    description: Ubiquinol is the electron donor oxidized by CydA-family oxidases.
+    evidence:
+    - reference: InterPro:IPR002585
+      notes: InterPro IPR002585 describes CydA-family oxidases as oxidizing ubiquinol
+        as part of an electron transport chain.
+  - subject: oxygen
+    predicate: accepts electrons in
+    object: bd_i_terminal_oxidase_activity
+    description: Molecular oxygen is the terminal acceptor reduced by bd oxidases.
+    evidence:
+    - reference: InterPro:IPR002585
+      notes: InterPro IPR002585 describes the family as reducing oxygen while oxidizing
+        ubiquinol.
+  - subject: bd_i_terminal_oxidase_activity
+    predicate: produces
+    object: ubiquinone
+    description: The terminal oxidase reaction oxidizes ubiquinol to ubiquinone.
+    evidence:
+    - reference: InterPro:IPR002585
+      notes: InterPro IPR002585 describes CydA-family oxidases as oxidizing ubiquinol
+        as part of an electron transport chain.
+  - subject: bd_i_terminal_oxidase_activity
+    predicate: produces
+    object: water
+    description: The terminal oxidase reaction reduces oxygen to water.
+    evidence:
+    - reference: PMID:31604309
+      notes: The PubMed abstract for Safarian et al. 2019 states that bd-type quinol
+        oxidases catalyze molecular-oxygen reduction to water.
+  - subject: bd_i_terminal_oxidase_activity
+    predicate: contributes to
+    object: proton_motive_force
+    description: Cytochrome bd-I quinol oxidation and oxygen reduction contribute
+      to respiratory proton-motive-force generation.
+    evidence:
+    - reference: PDB:6RKO
+      notes: RCSB annotates the PDB:6RKO CydA, CydB, and CydX entities with EC 7.1.1.7,
+        quinol oxidase (electrogenic, proton-motive force generating).
+discussions:
+- discussion_id: bd_i_small_subunit_scope
+  prompt: Resolve how CydX/YbgT and YnhF-like small subunits should be split across
+    cytochrome bd-I, bd-II, and two-subunit CydAB oxidases.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cydx_small_subunit
+  - components#ynhf_like_cydh_subunit
+  rationale: PDB:6RKO supports a four-subunit E. coli bd-I oxidase with CydX and YnhF,
+    while PDB:7NKZ supports a two-subunit Mycobacterium tuberculosis bd oxidase; this
+    record should not project E. coli bd-I small subunits onto every bd-type oxidase.
+  evidence:
+  - reference: PDB:6RKO
+    notes: PDB:6RKO resolves CydA, CydB, YnhF, and CydX polymer entities in E. coli
+      cytochrome bd-I oxidase.
+  - reference: PDB:7NKZ
+    notes: PDB:7NKZ resolves a two-polymer-entity Mycobacterium tuberculosis cytochrome
+      bd oxidase.
+  posed_by: codex
+  posed_date: '2026-09-24'
