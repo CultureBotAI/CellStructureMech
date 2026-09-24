@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u2_type_catalytic_step_1_spliceosome.yaml
+  slug: u2_type_catalytic_step_1_spliceosome
+session:
+  id: 2026-09-24T173633Z-codex-492a9d
+  timestamp: '2026-09-24T17:36:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1511
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1510
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  summary: 'Address PR #1510 U2-type catalytic step 1 spliceosome review issue'
+  details: 'Addressed the adversarial review of PR #1510 by adding record-level GO:0071005
+    evidence for the U2-type precatalytic spliceosome precursor node used in the remodeling
+    graph for #1511.'

@@ -22,6 +22,12 @@ curation_history:
     Rauhut budding-yeast activated-spliceosome evidence, a minimal remodeling graph
     and a protein-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T17:36:02Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1511: added record-level GO:0071005 evidence for the U2-type precatalytic
+    spliceosome node used in the remodeling graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: major catalytic step 1 spliceosome
   synonym_type: EXACT_SYNONYM
@@ -103,6 +109,9 @@ evidence:
     and its GO synonyms.
 - reference: GO:0005684
   notes: Gene Ontology cellular-component parent term for U2-type spliceosomal complex.
+- reference: GO:0071005
+  notes: Gene Ontology cellular-component term for the U2-type precatalytic spliceosome
+    that is remodeled to form the U2-type catalytic step 1 spliceosome.
 - reference: GO:0005686
   notes: Gene Ontology cellular-component term for the U2 snRNP.
 - reference: GO:0005682
