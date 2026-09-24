@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/ribonuclease_mrp_complex.yaml
+  slug: ribonuclease_mrp_complex
+session:
+  id: 2026-09-24T122728Z-codex-b4fc6a
+  timestamp: '2026-09-24T12:27:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1486
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1487
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1485
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address RNase MRP PR review findings
+  details: 'Addressed PR #1485 review findings by softening the RNase MRP RNA component role
+    and graph edge so the catalytic mechanism remains grounded on GO:0000171, and by rewording
+    the Snm1p/Rmp1p graph edge to avoid self-referential wording for the grouped MRP-specific
+    protein cohort.'
