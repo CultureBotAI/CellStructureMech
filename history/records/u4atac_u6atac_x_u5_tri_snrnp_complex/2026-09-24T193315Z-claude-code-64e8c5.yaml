@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u4atac_u6atac_x_u5_tri_snrnp_complex.yaml
+  slug: u4atac_u6atac_x_u5_tri_snrnp_complex
+session:
+  id: 2026-09-24T193315Z-claude-code-64e8c5
+  timestamp: '2026-09-24T19:33:15Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add U4atac/U6atac x U5 tri-snRNP complex
+  details: Added a new GO:0071009 U4atac/U6atac x U5 tri-snRNP complex record with the GO
+    exact synonym; GO:0097526 parentage; GO-grounded U4atac/U6atac and U5 snRNP components;
+    Homo sapiens distribution and canonical-example evidence from Schneider, Will, Makarova
+    et al. 2002 Molecular and Cellular Biology; a conservative U4atac/U6atac plus U5 assembly
+    graph; and a curation TODO for unresolved minor-tri-snRNP protein-family component boundaries.
+    Validated the new record with targeted LinkML closed-schema and validate_strict gates.
