@@ -1,0 +1,252 @@
+identifier: GO:0009340
+label: DNA topoisomerase IV complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A bacterial type IIA topoisomerase complex composed of ParC and ParE subunits
+  that can relax supercoiled DNA and supports chromosome segregation.
+definition_source: GO:0009340
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T10:33:14Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T10:34:02Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added topoisomerase-II parentage, ParC/ParE reviewed-label-only components
+    with E. coli K-12 UniProt examples, an E. coli canonical example, type-II DNA
+    topoisomerase function evidence, InterPro boundary discussion, and a compact function
+    graph.
+  llm_assisted: true
+synonyms:
+- synonym_text: topoisomerase IV
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009340
+- synonym_text: Topo IV
+  synonym_type: EXACT_SYNONYM
+  source: PMID:8227000
+parent_structures:
+- GO:0009330
+- GO:0032991
+components:
+- component_id: topoisomerase_iv_subunit_a
+  label: DNA topoisomerase IV subunit A
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - parC
+  role: ParC subunit class that, together with the ParE subunit class, forms bacterial
+    DNA topoisomerase IV.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AFI2
+    protein_label: DNA topoisomerase 4 subunit A
+    gene_symbol: parC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-24'
+    role: Reviewed E. coli K-12 ParC accession for topoisomerase IV subunit A.
+    evidence:
+    - reference: UniProtKB:P0AFI2
+      notes: UniProtKB P0AFI2 is the reviewed Escherichia coli K-12 entry for gene
+        parC, DNA topoisomerase 4 subunit A.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro IPR005742 is a narrower Gram-negative ParC family, while
+    IPR050220 and the other P0AFI2 family matches also include DNA gyrase subunits
+    or both type-II-topoisomerase subunit classes; no exact source-neutral family
+    term was found for all bacterial ParC proteins.
+  evidence:
+  - reference: GO:0009340
+    notes: GO:0009340 defines DNA topoisomerase IV as containing ParC and ParE.
+  - reference: PMID:8227000
+    notes: Peng and Marians 1993 purified and characterized the E. coli topoisomerase
+      IV subunits and their interactions.
+  - reference: UniProtKB:P0AFI2
+    notes: UniProtKB P0AFI2 is the reviewed Escherichia coli K-12 ParC entry and cross-references
+      GO:0009330 with experimental evidence.
+- component_id: topoisomerase_iv_subunit_b
+  label: DNA topoisomerase IV subunit B
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - parE
+  role: ParE subunit class that, together with the ParC subunit class, forms bacterial
+    DNA topoisomerase IV.
+  protein_examples:
+  - uniprot_id: UniProtKB:P20083
+    protein_label: DNA topoisomerase 4 subunit B
+    gene_symbol: parE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-24'
+    role: Reviewed E. coli K-12 ParE accession for topoisomerase IV subunit B.
+    evidence:
+    - reference: UniProtKB:P20083
+      notes: UniProtKB P20083 is the reviewed Escherichia coli K-12 entry for gene
+        parE, DNA topoisomerase 4 subunit B.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro IPR005737 is a narrower Gram-negative ParE family, while
+    IPR001241 and the other P20083 family matches also include DNA gyrase subunits
+    or both type-II-topoisomerase subunit classes; no exact source-neutral family
+    term was found for all bacterial ParE proteins.
+  evidence:
+  - reference: GO:0009340
+    notes: GO:0009340 defines DNA topoisomerase IV as containing ParC and ParE.
+  - reference: PMID:8227000
+    notes: Peng and Marians 1993 purified and characterized the E. coli topoisomerase
+      IV subunits and their interactions.
+  - reference: UniProtKB:P20083
+    notes: UniProtKB P20083 is the reviewed Escherichia coli K-12 ParE entry for DNA
+      topoisomerase 4 subunit B.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Source species in the original purification and subunit-interaction study
+    of bacterial DNA topoisomerase IV.
+  reference: PMID:8227000
+functions:
+- function_id: dna_topoisomerase_type_ii_activity
+  label: DNA topoisomerase type II activity
+  grounding: GO:0003918
+  description: DNA topoisomerase IV performs ATP-dependent type IIA topological transformations
+    on double-stranded DNA.
+  evidence:
+  - reference: GO:0003918
+    notes: GO:0003918 defines ATP-driven DNA topoisomerase type II activity.
+  - reference: PMID:8227000
+    notes: Peng and Marians 1993 purified and characterized E. coli topoisomerase
+      IV and its subunits.
+evidence:
+- reference: GO:0009340
+  notes: Gene Ontology cellular-component term for DNA topoisomerase IV complex.
+- reference: GO:0009330
+  notes: Gene Ontology cellular-component term for ATP-hydrolyzing DNA topoisomerase
+    type II complexes, the broader class that includes DNA topoisomerase IV.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component term for protein-containing complexes.
+- reference: GO:0003918
+  notes: Gene Ontology molecular-function term for ATP-hydrolyzing DNA topoisomerase
+    type II activity.
+- reference: UniProtKB:P0AFI2
+  notes: UniProtKB reviewed Escherichia coli K-12 ParC entry.
+- reference: UniProtKB:P20083
+  notes: UniProtKB reviewed Escherichia coli K-12 ParE entry.
+- reference: InterPro:IPR005742
+  notes: InterPro family for Gram-negative DNA topoisomerase IV subunit A proteins.
+- reference: InterPro:IPR005737
+  notes: InterPro family for Gram-negative DNA topoisomerase IV subunit B proteins.
+- reference: InterPro:IPR050220
+  notes: InterPro type-II DNA topoisomerase family observed on the E. coli ParC example;
+    broader than the ParC component.
+- reference: InterPro:IPR001241
+  notes: InterPro type-IIA DNA topoisomerase family observed on the E. coli ParE example;
+    broader than the ParE component.
+- reference: PMID:8227000
+  notes: Peng and Marians 1993, Escherichia coli topoisomerase IV. Purification, characterization,
+    subunit structure, and subunit interactions.
+- reference: PMID:7783632
+  notes: PubMed identifier for Luttinger 1995, a review cited by the GO:0009340 term
+    definition.
+causal_graphs:
+- graph_id: topoisomerase_iv_type_ii_activity
+  title: DNA topoisomerase IV changes DNA topology
+  description: DNA topoisomerase IV uses ParC and ParE subunits to carry out ATP-dependent
+    type II DNA topoisomerase activity.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records subunit contribution and the topoisomerase reaction
+    class without resolving DNA-gate cleavage, strand passage, ATPase cycling, or
+    religation states.
+  nodes:
+  - node_id: topoisomerase_iv_complex
+    label: DNA topoisomerase IV complex
+    node_type: STRUCTURE
+    grounding: GO:0009340
+  - node_id: topoisomerase_iv_subunit_a
+    label: DNA topoisomerase IV subunit A
+    node_type: GENE_OR_PROTEIN
+    component_ref: topoisomerase_iv_subunit_a
+  - node_id: topoisomerase_iv_subunit_b
+    label: DNA topoisomerase IV subunit B
+    node_type: GENE_OR_PROTEIN
+    component_ref: topoisomerase_iv_subunit_b
+  - node_id: dna_segment
+    label: DNA segment
+    node_type: GENETIC_ELEMENT
+  - node_id: dna_topoisomerase_type_ii_activity
+    label: DNA topoisomerase type II activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0003918
+  edges:
+  - subject: topoisomerase_iv_complex
+    predicate: enables
+    object: dna_topoisomerase_type_ii_activity
+    description: The DNA topoisomerase IV complex is a bacterial type IIA topoisomerase
+      that performs ATP-dependent type II DNA topoisomerase activity.
+    evidence:
+    - reference: GO:0009340
+      notes: GO:0009340 defines the DNA topoisomerase IV complex as a type-II topoisomerase
+        that can relax supercoiled DNA and functions in chromosome segregation.
+    - reference: GO:0003918
+      notes: GO:0003918 is the molecular-function term for ATP-hydrolyzing DNA topoisomerase
+        type II activity.
+  - subject: topoisomerase_iv_subunit_a
+    predicate: contributes to
+    object: dna_topoisomerase_type_ii_activity
+    description: ParC is one of the two protein subunit classes that form bacterial
+      DNA topoisomerase IV.
+    evidence:
+    - reference: GO:0009340
+      notes: GO:0009340 defines topoisomerase IV as containing ParC and ParE.
+    - reference: UniProtKB:P0AFI2
+      notes: UniProtKB P0AFI2 is the reviewed E. coli K-12 ParC entry.
+  - subject: topoisomerase_iv_subunit_b
+    predicate: contributes to
+    object: dna_topoisomerase_type_ii_activity
+    description: ParE is one of the two protein subunit classes that form bacterial
+      DNA topoisomerase IV.
+    evidence:
+    - reference: GO:0009340
+      notes: GO:0009340 defines topoisomerase IV as containing ParC and ParE.
+    - reference: UniProtKB:P20083
+      notes: UniProtKB P20083 is the reviewed E. coli K-12 ParE entry.
+  - subject: dna_topoisomerase_type_ii_activity
+    predicate: changes topology of
+    object: dna_segment
+    description: Type II DNA topoisomerase activity changes DNA topology through ATP-driven
+      double-stranded DNA strand passage.
+    evidence:
+    - reference: GO:0003918
+      notes: GO:0003918 defines a DNA topological transformation driven by ATP hydrolysis
+        and transient cleavage of both strands of one DNA duplex.
+discussions:
+- discussion_id: topoisomerase_iv_component_groundings
+  prompt: Resolve exact source-neutral ParC and ParE family groundings before replacing
+    the reviewed-label-only component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#topoisomerase_iv_subunit_a
+  - components#topoisomerase_iv_subunit_b
+  rationale: GO:0009340 exactly grounds the complete DNA topoisomerase IV complex;
+    the verified InterPro ParC and ParE families IPR005742 and IPR005737 are restricted
+    to Gram-negative proteins, while the other candidate families on the E. coli K-12
+    examples also cover DNA gyrase or multiple type-II-topoisomerase subunit classes.
+  evidence:
+  - reference: InterPro:IPR005742
+    notes: InterPro IPR005742 is the Gram-negative DNA topoisomerase IV subunit A
+      family assigned to the E. coli K-12 ParC example.
+  - reference: InterPro:IPR005737
+    notes: InterPro IPR005737 is the Gram-negative DNA topoisomerase IV subunit B
+      family assigned to the E. coli K-12 ParE example.
+  - reference: InterPro:IPR050220
+    notes: InterPro IPR050220 is a type-II DNA topoisomerase family and therefore
+      broader than topoisomerase IV subunit A.
+  - reference: InterPro:IPR001241
+    notes: InterPro IPR001241 is a type-IIA DNA topoisomerase family and therefore
+      broader than topoisomerase IV subunit B.
+  posed_by: codex
+  posed_date: '2026-09-24'
