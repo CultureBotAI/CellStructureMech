@@ -22,6 +22,12 @@ curation_history:
     U2, U5 and U6 snRNP components, Yan budding-yeast C* spliceosome evidence, a minimal
     remodeling graph and a protein-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T18:07:22Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1513: removed uncurated Prp16, Yju2 and Cwc25 names from the C* protein-boundary
+    TODO and graph scope note.'
+  llm_assisted: true
 synonyms:
 - synonym_text: major catalytic step 2 spliceosome
   synonym_type: EXACT_SYNONYM
@@ -127,8 +133,8 @@ causal_graphs:
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: This partial graph records the GO-defined U2, U5 and U6 snRNP retention
-    that distinguishes the catalytic step 2 spliceosome without modeling Prp16-dependent
-    remodeling or individual C* protein-family boundaries.
+    that distinguishes the catalytic step 2 spliceosome without modeling helicase-dependent
+    remodeling or individual step-2 protein-family boundaries.
   nodes:
   - node_id: u2_snrnp
     label: U2 snRNP
@@ -190,8 +196,8 @@ causal_graphs:
         catalytic cleavage having occurred.
 discussions:
 - discussion_id: resolve_step2_spliceosome_protein_components
-  prompt: Resolve exact source-neutral component boundaries for C* and catalytic step
-    2 spliceosome proteins beyond the GO-defined U2, U5 and U6 snRNP subcomplexes.
+  prompt: Resolve exact source-neutral component boundaries for catalytic step 2 spliceosome
+    proteins beyond the GO-defined U2, U5 and U6 snRNP subcomplexes.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
@@ -200,9 +206,9 @@ discussions:
   - components#u6_snrnp
   - causal_graphs#u2_type_step2_spliceosome_remodeling
   rationale: The first GO:0071007 record captures the defining U2, U5 and U6 snRNP
-    subcomplexes. The Yan yeast structure establishes a protein-rich C* spliceosome,
-    but Prp16, Yju2, Cwc25 and other step-2 protein-family boundaries should be resolved
-    before expanding this component list.
+    subcomplexes. The Yan yeast structure establishes a protein-rich step II catalytically
+    activated spliceosome, but individual protein-family and subcomplex boundaries
+    beyond the snRNPs should be resolved before expanding this component list.
   evidence:
   - reference: GO:0071007
   - reference: DOI:10.1126/science.aak9979

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u2_type_catalytic_step_2_spliceosome.yaml
+  slug: u2_type_catalytic_step_2_spliceosome
+session:
+  id: 2026-09-24T180747Z-claude-code-c36b74
+  timestamp: '2026-09-24T18:07:47Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1513
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1512
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - causal_graphs
+  - curation_history
+  summary: 'Address PR #1512 U2-type catalytic step 2 spliceosome review issue'
+  details: 'Addressed review issue #1513 by replacing uncurated named step-2 protein factors
+    in the GO:0071007 C* protein-boundary TODO and graph scope note with generic wording.
+    The record remains limited to the GO-defined U2, U5 and U6 snRNP subcomplexes while deferring
+    exact C* / catalytic-step-2 protein-family curation to a future evidence-backed pass.'
