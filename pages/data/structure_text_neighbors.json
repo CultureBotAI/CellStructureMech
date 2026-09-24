@@ -14929,6 +14929,11 @@
           "cosine_similarity": 0.97509064
         },
         {
+          "identifier": "GO:0034693",
+          "label": "U11/U12 snRNP",
+          "cosine_similarity": 0.95236026
+        },
+        {
           "identifier": "GO:0005685",
           "label": "U1 snRNP",
           "cosine_similarity": 0.93936048
@@ -14942,11 +14947,37 @@
           "identifier": "GO:0005691",
           "label": "U6atac snRNP",
           "cosine_similarity": 0.93162796
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0034693",
+      "label": "U11/U12 snRNP",
+      "neighbors": [
+        {
+          "identifier": "GO:0005692",
+          "label": "U11 snRNP",
+          "cosine_similarity": 0.95236026
         },
         {
-          "identifier": "GO:0005687",
-          "label": "U4 snRNP",
-          "cosine_similarity": 0.92970046
+          "identifier": "GO:0005693",
+          "label": "U12 snRNP",
+          "cosine_similarity": 0.95080335
+        },
+        {
+          "identifier": "GO:0046540",
+          "label": "U4/U6 x U5 tri-snRNP complex",
+          "cosine_similarity": 0.90240796
+        },
+        {
+          "identifier": "GO:0005688",
+          "label": "U6 snRNP",
+          "cosine_similarity": 0.90146694
+        },
+        {
+          "identifier": "GO:0005691",
+          "label": "U6atac snRNP",
+          "cosine_similarity": 0.89827315
         }
       ]
     },
@@ -14958,6 +14989,11 @@
           "identifier": "GO:0005692",
           "label": "U11 snRNP",
           "cosine_similarity": 0.97509064
+        },
+        {
+          "identifier": "GO:0034693",
+          "label": "U11/U12 snRNP",
+          "cosine_similarity": 0.95080335
         },
         {
           "identifier": "GO:0005685",
@@ -14973,11 +15009,6 @@
           "identifier": "GO:0005691",
           "label": "U6atac snRNP",
           "cosine_similarity": 0.92991749
-        },
-        {
-          "identifier": "GO:0005687",
-          "label": "U4 snRNP",
-          "cosine_similarity": 0.9285044
         }
       ]
     },
