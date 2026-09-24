@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/respiratory_chain_complex_ii_succinate_dehydrogenase.yaml
+  slug: respiratory_chain_complex_ii_succinate_dehydrogenase
+session:
+  id: 2026-09-24T034954Z-codex-ed7742
+  timestamp: '2026-09-24T03:49:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added GO:0045273 respiratory chain complex II
+  details: Added the GO:0045273 respiratory chain complex II (succinate dehydrogenase) ENERGY_COMPLEX
+    record with GO:0098803 parentage, GO related synonymy, reviewed-label-only SdhA, SdhB,
+    and SdhCD component rows, an Escherichia coli structural example from DOI:10.1126/science.1079605
+    and PDB:1NEK, succinate dehydrogenase quinone activity evidence, a compact complex II
+    succinate-to-quinone coupling graph, and an open component-grounding TODO. Verified the
+    new record with single-record strict validation before writing this history entry.
