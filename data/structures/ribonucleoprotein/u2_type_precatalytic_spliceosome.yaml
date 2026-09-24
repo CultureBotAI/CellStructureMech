@@ -1,0 +1,220 @@
+identifier: GO:0071005
+label: U2-type precatalytic spliceosome
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A spliceosomal complex that is formed by the recruitment of the preassembled
+  U4/U6.U5 tri-snRNP to the prespliceosome. Although all 5 snRNPs are present, the
+  precatalytic spliceosome is catalytically inactive. The precatalytic spliceosome
+  includes many proteins in addition to those found in the U1, U2 and U4/U6.U5 snRNPs.
+definition_source: GO:0071005
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T12:44:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T12:46:01Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, U2/precatalytic parentage, GO-grounded U1, U2 and U4/U6
+    x U5 snRNP components, budding-yeast distribution, Plaschka/Will evidence, a conservative
+    preactivation function, a U4/U6.U5 recruitment graph and a B-complex protein-component
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T12:46:34Z'
+  curator: codex
+  action: REFINED_GRAPH
+  changes: Removed the redundant U2/U6 helix II standalone node and left the helix-II
+    evidence on the U2 snRNP to U4/U6 x U5 tri-snRNP edge.
+  llm_assisted: true
+- timestamp: '2026-09-24T12:58:09Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1489: removed the passive preactivation state from functions; #1490:
+    connected the assembly graph to the GO:0071005 structure node.'
+  llm_assisted: true
+synonyms:
+- synonym_text: major precatalytic spliceosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071005
+parent_structures:
+- GO:0071011
+- GO:0005684
+components:
+- component_id: u1_snrnp
+  label: U1 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005685
+  role: Small nuclear ribonucleoprotein present in the U2-type precatalytic spliceosome
+    before U1 release during activation.
+  evidence:
+  - reference: GO:0071005
+    notes: GO:0071005 defines the U2-type precatalytic spliceosome as a complex in
+      which the U1 snRNP is present.
+  - reference: GO:0005685
+    notes: GO:0005685 is the Gene Ontology cellular-component term for the U1 snRNP.
+- component_id: u2_snrnp
+  label: U2 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005686
+  role: Small nuclear ribonucleoprotein that recognizes the branch-point region and
+    interfaces with U4/U6.U5 tri-snRNP in the precatalytic spliceosome.
+  evidence:
+  - reference: GO:0071005
+    notes: GO:0071005 defines the U2-type precatalytic spliceosome as a complex in
+      which the U2 snRNP is present.
+  - reference: GO:0005686
+    notes: GO:0005686 is the Gene Ontology cellular-component term for the U2 snRNP.
+  - reference: DOI:10.1038/nature22799
+    notes: Plaschka, Lin and Nagai 2017 solved a yeast precatalytic B-complex structure
+      and modeled contacts between U2 snRNP and U4/U6.U5 tri-snRNP.
+- component_id: u4_u6_u5_tri_snrnp
+  label: U4/U6 x U5 tri-snRNP complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0046540
+  role: Preassembled tri-snRNP subcomplex recruited to the prespliceosome to form
+    the U2-type precatalytic spliceosome.
+  evidence:
+  - reference: GO:0071005
+    notes: GO:0071005 defines the U2-type precatalytic spliceosome as formed by recruitment
+      of preassembled U4/U6.U5 tri-snRNP to the prespliceosome.
+  - reference: GO:0046540
+    notes: GO:0046540 is the Gene Ontology cellular-component term for the U4/U6 x
+      U5 tri-snRNP complex.
+  - reference: DOI:10.1038/nature22799
+    notes: Plaschka, Lin and Nagai 2017 reported a near-atomic cryo-EM structure of
+      the Saccharomyces cerevisiae pre-catalytic B-complex spliceosome.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: The U2-type precatalytic B-complex spliceosome is directly evidenced in budding
+    yeast; broader eukaryotic distribution is left for follow-up curation.
+  reference: DOI:10.1038/nature22799
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model whose pre-catalytic B-complex spliceosome was resolved
+    by cryo-electron microscopy at near-atomic resolution.
+  reference: DOI:10.1038/nature22799
+evidence:
+- reference: GO:0071005
+  notes: Gene Ontology cellular-component term for the U2-type precatalytic spliceosome
+    and its exact synonym.
+- reference: GO:0071011
+  notes: Gene Ontology cellular-component parent term for precatalytic spliceosome.
+- reference: GO:0005684
+  notes: Gene Ontology cellular-component parent term for U2-type spliceosomal complex.
+- reference: GO:0005685
+  notes: Gene Ontology cellular-component term for the U1 snRNP.
+- reference: GO:0005686
+  notes: Gene Ontology cellular-component term for the U2 snRNP.
+- reference: GO:0046540
+  notes: Gene Ontology cellular-component term for the U4/U6 x U5 tri-snRNP complex.
+- reference: GO:0071004
+  notes: Gene Ontology cellular-component term for the U2-type prespliceosome.
+- reference: DOI:10.1038/nature22799
+  notes: Plaschka, Lin and Nagai 2017, Structure of a pre-catalytic spliceosome, Nature.
+- reference: PMID:28530653
+  notes: PubMed identifier for Plaschka, Lin and Nagai 2017 as reported by PubMed.
+- reference: DOI:10.1101/cshperspect.a003707
+  notes: Will and Luehrmann 2011, Spliceosome structure and function, Cold Spring
+    Harbor Perspectives in Biology.
+- reference: PMID:21441581
+  notes: PubMed identifier for Will and Luehrmann 2011 as reported by PubMed.
+causal_graphs:
+- graph_id: u2_type_b_complex_assembly
+  title: U4/U6.U5 tri-snRNP recruitment forms the precatalytic B complex
+  description: The U2-type precatalytic spliceosome forms when preassembled U4/U6.U5
+    tri-snRNP joins the U1- and U2-containing prespliceosome on pre-mRNA, creating
+    a catalytically inactive complex poised for RNA-RNA remodeling.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the defining snRNP assemblies and the U2/U6 interface
+    observed in a yeast B-complex structure without modeling U1 handoff, Prp28-dependent
+    remodeling, Brr2 helicase activation or all B-complex protein factors.
+  nodes:
+  - node_id: u1_snrnp
+    label: U1 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005685
+    component_ref: u1_snrnp
+  - node_id: u2_snrnp
+    label: U2 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005686
+    component_ref: u2_snrnp
+  - node_id: u4_u6_u5_tri_snrnp
+    label: U4/U6 x U5 tri-snRNP complex
+    node_type: STRUCTURE
+    grounding: GO:0046540
+    component_ref: u4_u6_u5_tri_snrnp
+  - node_id: u2_type_prespliceosome
+    label: U2-type prespliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071004
+  - node_id: u2_type_precatalytic_spliceosome
+    label: U2-type precatalytic spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071005
+  edges:
+  - subject: u1_snrnp
+    predicate: associates with
+    object: u2_type_prespliceosome
+    description: The U2-type prespliceosome contains U1 snRNP at the 5-prime splice
+      site and U2 snRNP at the branch-point sequence.
+    evidence:
+    - reference: GO:0071004
+      notes: GO:0071004 defines the U2-type prespliceosome by 5-prime splice-site
+        association with U1 snRNP and branch-point recognition by U2 snRNP.
+  - subject: u4_u6_u5_tri_snrnp
+    predicate: is recruited to form
+    object: u2_type_precatalytic_spliceosome
+    description: Recruitment of preassembled U4/U6.U5 tri-snRNP to the U2-type prespliceosome
+      forms the U2-type precatalytic spliceosome.
+    evidence:
+    - reference: GO:0071005
+      notes: GO:0071005 defines the U2-type precatalytic spliceosome as the state
+        formed by recruitment of U4/U6.U5 tri-snRNP to the prespliceosome.
+  - subject: u2_type_prespliceosome
+    predicate: receives
+    object: u4_u6_u5_tri_snrnp
+    description: The U1- and U2-containing prespliceosome receives U4/U6.U5 tri-snRNP
+      to become the U2-type precatalytic spliceosome.
+    evidence:
+    - reference: GO:0071005
+      notes: GO:0071005 defines the U2-type precatalytic spliceosome as formed by
+        tri-snRNP recruitment to the prespliceosome.
+  - subject: u2_snrnp
+    predicate: interfaces with
+    object: u4_u6_u5_tri_snrnp
+    description: In the yeast B complex, the U2 snRNP contacts U4/U6.U5 tri-snRNP
+      through U2/U6 helix II and an SF3b to U4/U6 di-snRNP interface.
+    evidence:
+    - reference: DOI:10.1038/nature22799
+      notes: Plaschka, Lin and Nagai 2017 modeled the yeast B-complex U2/U6 helix
+        II and U2 SF3b to U4/U6 di-snRNP contacts.
+discussions:
+- discussion_id: resolve_b_complex_protein_components
+  prompt: Resolve exact source-neutral component boundaries for Prp38, Snu23, Spp381,
+    Prp8/Brr2/Snu114 and other proteins observed in U2-type precatalytic B complexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u1_snrnp
+  - components#u2_snrnp
+  - components#u4_u6_u5_tri_snrnp
+  - causal_graphs#u2_type_b_complex_assembly
+  rationale: GO grounds the snRNP subcomplexes that define this assembly state. The
+    first record does not split the many B-complex proteins into orthologous source-neutral
+    families or distinguish Saccharomyces and metazoan accessory factors.
+  evidence:
+  - reference: GO:0071005
+  - reference: DOI:10.1038/nature22799
+  - reference: DOI:10.1101/cshperspect.a003707
+  posed_by: codex
+  posed_date: '2026-09-24'

@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u2_type_precatalytic_spliceosome.yaml
+  slug: u2_type_precatalytic_spliceosome
+session:
+  id: 2026-09-24T124719Z-codex-aea11a
+  timestamp: '2026-09-24T12:47:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add GO:0071005 U2-type precatalytic spliceosome
+  details: Created a GO:0071005 U2-type precatalytic spliceosome record with exact GO parentage,
+    exact GO-grounded U1, U2, and U4/U6 x U5 snRNP subcomplexes, Saccharomyces cerevisiae
+    canonical evidence from the Plaschka, Lin, and Nagai yeast cryo-EM structure, Will and
+    Luehrmann review evidence, a conservative preactivation organization function, a nonmechanistic
+    assembly graph, and an open B-complex protein-component grounding TODO. Verified the candidate
+    and obvious synonyms with ignored and hidden files included before adding the record,
+    verified GO terms through QuickGO and OLS, verified Plaschka and Will PubMed/DOI metadata
+    through NCBI E-utilities, and ran targeted LinkML plus strict validation after guarded
+    YAML writes.
