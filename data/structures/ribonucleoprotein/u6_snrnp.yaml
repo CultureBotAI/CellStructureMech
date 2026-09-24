@@ -1,0 +1,148 @@
+identifier: GO:0005688
+label: U6 snRNP
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex that contains small nuclear RNA U6, the Lsm2-8
+  heptameric ring complex, as well as several proteins that are unique to the U6 snRNP,
+  most of which remain associated with the U6 snRNA both while the U6 snRNP is free
+  or assembled into the U4/U6 snRNP or into a series of spliceosomal complexes.
+definition_source: GO:0005688
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T16:19:14Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T16:19:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym, spliceosomal snRNP parentage, U6 snRNA and
+    Lsm2-8-ring components, budding-yeast distribution, Nguyen/Galej/Nagai yeast U4/U6.U5
+    tri-snRNP cryo-EM evidence, a minimal U6 snRNP constituent graph and a protein-component
+    grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: snRNP U6
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005688
+parent_structures:
+- GO:0097525
+components:
+- component_id: u6_snrna
+  label: U6 snRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000396
+  role: U6 small nuclear RNA constituent named in the U6 snRNP definition and grounded
+    to the U6 snRNA Sequence Ontology term.
+  evidence:
+  - reference: GO:0005688
+    notes: GO:0005688 defines the U6 snRNP as containing small nuclear RNA U6.
+  - reference: SO:0000396
+    notes: SO:0000396 is the Sequence Ontology term for U6 snRNA.
+- component_id: lsm2_8_ring
+  label: Lsm2-8 ring
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: An exact source-neutral CURIE for the spliceosomal Lsm2-8 heptameric
+    ring complex is left unresolved in this first U6 snRNP record; GO:0005688 directly
+    supports this label-level constituent.
+  role: Lsm2-8 heptameric ring constituent named in the U6 snRNP definition.
+  evidence:
+  - reference: GO:0005688
+    notes: GO:0005688 defines the U6 snRNP as containing the Lsm2-8 heptameric ring
+      complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: The U6 snRNP subcomplex is represented in budding-yeast U4/U6.U5 tri-snRNP
+    cryo-EM structures; broader eukaryotic distribution is left for follow-up curation.
+  reference: DOI:10.1038/nature16940
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model whose U6 snRNP subcomplex is represented inside U4/U6.U5
+    tri-snRNP cryo-EM structures.
+  reference: DOI:10.1038/nature16940
+evidence:
+- reference: GO:0005688
+  notes: Gene Ontology cellular-component term for the U6 snRNP and its exact synonym.
+- reference: GO:0097525
+  notes: Gene Ontology cellular-component parent term for spliceosomal snRNP complex.
+- reference: SO:0000396
+  notes: Sequence Ontology term for U6 snRNA.
+- reference: DOI:10.1038/nature14548
+  notes: Nguyen, Galej, Bai and colleagues 2015, The architecture of the spliceosomal
+    U4/U6.U5 tri-snRNP, Nature.
+- reference: PMID:26106855
+  notes: PubMed identifier for Nguyen, Galej, Bai and colleagues 2015 as reported
+    by PubMed.
+- reference: DOI:10.1038/nature16940
+  notes: Nguyen, Galej, Bai and colleagues 2016, Cryo-EM structure of the yeast U4/U6.U5
+    tri-snRNP at 3.7 Angstrom resolution, Nature.
+- reference: PMID:26829225
+  notes: PubMed identifier for Nguyen, Galej, Bai and colleagues 2016 as reported
+    by PubMed.
+causal_graphs:
+- graph_id: u6_snrnp_constituents
+  title: U6 snRNA and the Lsm2-8 ring are U6 snRNP constituents
+  description: The U6 snRNP contains U6 small nuclear RNA and the Lsm2-8 heptameric
+    ring complex; GO:0005688 also states that additional U6-specific proteins are
+    present, with exact family boundaries still to be resolved.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records GO-defined U6 snRNA and Lsm2-8-ring constituent
+    contributions without modeling individual Lsm or U6-specific protein-family boundaries.
+  nodes:
+  - node_id: u6_snrna
+    label: U6 snRNA
+    node_type: RNA
+    grounding: SO:0000396
+    component_ref: u6_snrna
+  - node_id: lsm2_8_ring
+    label: Lsm2-8 ring
+    node_type: STRUCTURE
+    component_ref: lsm2_8_ring
+  - node_id: u6_snrnp
+    label: U6 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005688
+  edges:
+  - subject: u6_snrna
+    predicate: contributes constituents to
+    object: u6_snrnp
+    description: The U6 snRNA is the small nuclear RNA constituent represented in
+      the U6 snRNP definition.
+    evidence:
+    - reference: GO:0005688
+      notes: GO:0005688 defines the U6 snRNP as containing small nuclear RNA U6.
+  - subject: lsm2_8_ring
+    predicate: contributes constituents to
+    object: u6_snrnp
+    description: The Lsm2-8 ring is the heptameric protein-ring constituent represented
+      in the U6 snRNP definition.
+    evidence:
+    - reference: GO:0005688
+      notes: GO:0005688 defines the U6 snRNP as containing the Lsm2-8 heptameric ring
+        complex.
+discussions:
+- discussion_id: resolve_u6_snrnp_protein_components
+  prompt: Resolve exact source-neutral groundings for the Lsm2-8 ring and U6-specific
+    protein families that form the U6 snRNP.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#lsm2_8_ring
+  - causal_graphs#u6_snrnp_constituents
+  rationale: The first GO:0005688 record captures U6 snRNA and the GO-defined Lsm2-8
+    ring at coarse granularity. Individual Lsm proteins and U6-specific protein-family
+    boundaries should be resolved before splitting this inventory.
+  evidence:
+  - reference: GO:0005688
+  - reference: DOI:10.1038/nature14548
+  - reference: DOI:10.1038/nature16940
+  posed_by: codex
+  posed_date: '2026-09-24'

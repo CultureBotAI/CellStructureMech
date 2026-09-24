@@ -14934,6 +14934,11 @@
           "cosine_similarity": 0.93582697
         },
         {
+          "identifier": "GO:0005688",
+          "label": "U6 snRNP",
+          "cosine_similarity": 0.93305431
+        },
+        {
           "identifier": "GO:0071001",
           "label": "U4/U6 snRNP",
           "cosine_similarity": 0.91236393
@@ -14942,11 +14947,6 @@
           "identifier": "GO:0046540",
           "label": "U4/U6 x U5 tri-snRNP complex",
           "cosine_similarity": 0.89934363
-        },
-        {
-          "identifier": "GO:0071005",
-          "label": "U2-type precatalytic spliceosome",
-          "cosine_similarity": 0.77005061
         }
       ]
     },
@@ -14975,9 +14975,9 @@
           "cosine_similarity": 0.77005061
         },
         {
-          "identifier": "GO:0005682",
-          "label": "U5 snRNP",
-          "cosine_similarity": 0.76754174
+          "identifier": "GO:0005688",
+          "label": "U6 snRNP",
+          "cosine_similarity": 0.76804457
         }
       ]
     },
@@ -15001,14 +15001,14 @@
           "cosine_similarity": 0.93982519
         },
         {
+          "identifier": "GO:0005688",
+          "label": "U6 snRNP",
+          "cosine_similarity": 0.93609484
+        },
+        {
           "identifier": "GO:0046540",
           "label": "U4/U6 x U5 tri-snRNP complex",
           "cosine_similarity": 0.93412732
-        },
-        {
-          "identifier": "GO:0071005",
-          "label": "U2-type precatalytic spliceosome",
-          "cosine_similarity": 0.78246086
         }
       ]
     },
@@ -15027,6 +15027,11 @@
           "cosine_similarity": 0.94238039
         },
         {
+          "identifier": "GO:0005688",
+          "label": "U6 snRNP",
+          "cosine_similarity": 0.93861154
+        },
+        {
           "identifier": "GO:0005685",
           "label": "U1 snRNP",
           "cosine_similarity": 0.91236393
@@ -15035,11 +15040,6 @@
           "identifier": "GO:0005682",
           "label": "U5 snRNP",
           "cosine_similarity": 0.90591346
-        },
-        {
-          "identifier": "GO:0071005",
-          "label": "U2-type precatalytic spliceosome",
-          "cosine_similarity": 0.7958955
         }
       ]
     },
@@ -15051,6 +15051,11 @@
           "identifier": "GO:0071001",
           "label": "U4/U6 snRNP",
           "cosine_similarity": 0.95085903
+        },
+        {
+          "identifier": "GO:0005688",
+          "label": "U6 snRNP",
+          "cosine_similarity": 0.93647436
         },
         {
           "identifier": "GO:0005687",
@@ -15066,11 +15071,6 @@
           "identifier": "GO:0005685",
           "label": "U1 snRNP",
           "cosine_similarity": 0.89934363
-        },
-        {
-          "identifier": "GO:0071005",
-          "label": "U2-type precatalytic spliceosome",
-          "cosine_similarity": 0.81666358
         }
       ]
     },
@@ -15089,6 +15089,11 @@
           "cosine_similarity": 0.93582697
         },
         {
+          "identifier": "GO:0005688",
+          "label": "U6 snRNP",
+          "cosine_similarity": 0.92948733
+        },
+        {
           "identifier": "GO:0046540",
           "label": "U4/U6 x U5 tri-snRNP complex",
           "cosine_similarity": 0.92685097
@@ -15097,11 +15102,37 @@
           "identifier": "GO:0071001",
           "label": "U4/U6 snRNP",
           "cosine_similarity": 0.90591346
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005688",
+      "label": "U6 snRNP",
+      "neighbors": [
+        {
+          "identifier": "GO:0071001",
+          "label": "U4/U6 snRNP",
+          "cosine_similarity": 0.93861154
         },
         {
-          "identifier": "GO:0071005",
-          "label": "U2-type precatalytic spliceosome",
-          "cosine_similarity": 0.76754174
+          "identifier": "GO:0046540",
+          "label": "U4/U6 x U5 tri-snRNP complex",
+          "cosine_similarity": 0.93647436
+        },
+        {
+          "identifier": "GO:0005687",
+          "label": "U4 snRNP",
+          "cosine_similarity": 0.93609484
+        },
+        {
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.93305431
+        },
+        {
+          "identifier": "GO:0005682",
+          "label": "U5 snRNP",
+          "cosine_similarity": 0.92948733
         }
       ]
     },
