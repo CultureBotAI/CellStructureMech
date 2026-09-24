@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/nitrogenase_complex.yaml
+  slug: nitrogenase_complex
+session:
+  id: 2026-09-24T045353Z-codex-3c4b28
+  timestamp: '2026-09-24T04:53:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1450
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1449
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - functions
+  - causal_graphs
+  summary: Resolved nitrogenase ammonium review issue
+  details: 'Resolved the PR #1449 adversarial review issue #1450 by aligning the GO:0016163-backed
+    nitrogenase activity product wording with ammonium in the function description and causal
+    graph product node/edge. Verified the fixed record with single-record LinkML and strict
+    validation before writing this history entry.'

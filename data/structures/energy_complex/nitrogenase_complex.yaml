@@ -34,6 +34,12 @@ curation_history:
   changes: Tightened generic nitrogenase component and graph wording to required subcomplex
     contribution claims and duplicated the shared GO evidence list to avoid YAML anchors.
   llm_assisted: true
+- timestamp: '2026-09-24T04:53:24Z'
+  curator: codex
+  action: RESOLVED_REVIEW_ISSUE
+  changes: 'Resolved issue #1450 by aligning the GO:0016163-backed nitrogenase activity
+    product wording with ammonium in the function description and causal graph node/edge.'
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 - GO:1990204
@@ -87,7 +93,7 @@ functions:
   label: nitrogenase activity
   grounding: GO:0016163
   description: Nitrogenase couples ATP hydrolysis and reduced-ferredoxin oxidation
-    to reduction of dinitrogen, producing ammonia and dihydrogen.
+    to reduction of dinitrogen, producing ammonium and dihydrogen.
   evidence:
   - reference: GO:0016163
     notes: GO:0016163 defines nitrogenase activity as the ATP-dependent reduced-ferredoxin:dinitrogen
@@ -144,8 +150,8 @@ causal_graphs:
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
-  - node_id: ammonia
-    label: ammonia
+  - node_id: ammonium
+    label: ammonium
     node_type: CHEMICAL
   - node_id: dihydrogen
     label: dihydrogen
@@ -209,8 +215,8 @@ causal_graphs:
       notes: GO:0016163 records dinitrogen as the acceptor in nitrogenase activity.
   - subject: nitrogenase_activity
     predicate: produces
-    object: ammonia
-    description: Nitrogenase activity reduces dinitrogen to ammonia.
+    object: ammonium
+    description: Nitrogenase activity reduces dinitrogen to ammonium.
     evidence:
     - reference: GO:0016163
       notes: GO:0016163 records two ammonium products in the nitrogenase reaction.
