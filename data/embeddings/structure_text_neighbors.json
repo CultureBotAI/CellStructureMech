@@ -14996,6 +14996,11 @@
           "cosine_similarity": 0.95788987
         },
         {
+          "identifier": "GO:0071008",
+          "label": "U2-type post-mRNA release spliceosomal complex",
+          "cosine_similarity": 0.93461829
+        },
+        {
           "identifier": "GO:0071004",
           "label": "U2-type prespliceosome",
           "cosine_similarity": 0.93340798
@@ -15004,11 +15009,6 @@
           "identifier": "GO:0005686",
           "label": "U2 snRNP",
           "cosine_similarity": 0.84015904
-        },
-        {
-          "identifier": "GO:0046540",
-          "label": "U4/U6 x U5 tri-snRNP complex",
-          "cosine_similarity": 0.83497062
         }
       ]
     },
@@ -15027,6 +15027,11 @@
           "cosine_similarity": 0.95541189
         },
         {
+          "identifier": "GO:0071008",
+          "label": "U2-type post-mRNA release spliceosomal complex",
+          "cosine_similarity": 0.91966707
+        },
+        {
           "identifier": "GO:0071004",
           "label": "U2-type prespliceosome",
           "cosine_similarity": 0.91676665
@@ -15035,11 +15040,37 @@
           "identifier": "GO:0046540",
           "label": "U4/U6 x U5 tri-snRNP complex",
           "cosine_similarity": 0.80220577
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0071008",
+      "label": "U2-type post-mRNA release spliceosomal complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0071006",
+          "label": "U2-type catalytic step 1 spliceosome",
+          "cosine_similarity": 0.93461829
         },
         {
-          "identifier": "GO:0005686",
-          "label": "U2 snRNP",
-          "cosine_similarity": 0.7994817
+          "identifier": "GO:0071007",
+          "label": "U2-type catalytic step 2 spliceosome",
+          "cosine_similarity": 0.91966707
+        },
+        {
+          "identifier": "GO:0071004",
+          "label": "U2-type prespliceosome",
+          "cosine_similarity": 0.91127798
+        },
+        {
+          "identifier": "GO:0071005",
+          "label": "U2-type precatalytic spliceosome",
+          "cosine_similarity": 0.89728406
+        },
+        {
+          "identifier": "GO:0046540",
+          "label": "U4/U6 x U5 tri-snRNP complex",
+          "cosine_similarity": 0.85309464
         }
       ]
     },
@@ -15063,14 +15094,14 @@
           "cosine_similarity": 0.93415601
         },
         {
+          "identifier": "GO:0071008",
+          "label": "U2-type post-mRNA release spliceosomal complex",
+          "cosine_similarity": 0.89728406
+        },
+        {
           "identifier": "GO:0046540",
           "label": "U4/U6 x U5 tri-snRNP complex",
           "cosine_similarity": 0.81666358
-        },
-        {
-          "identifier": "GO:0071001",
-          "label": "U4/U6 snRNP",
-          "cosine_similarity": 0.7958955
         }
       ]
     },
@@ -15094,14 +15125,14 @@
           "cosine_similarity": 0.91676665
         },
         {
+          "identifier": "GO:0071008",
+          "label": "U2-type post-mRNA release spliceosomal complex",
+          "cosine_similarity": 0.91127798
+        },
+        {
           "identifier": "GO:0046540",
           "label": "U4/U6 x U5 tri-snRNP complex",
           "cosine_similarity": 0.83011544
-        },
-        {
-          "identifier": "GO:0005686",
-          "label": "U2 snRNP",
-          "cosine_similarity": 0.82795096
         }
       ]
     },

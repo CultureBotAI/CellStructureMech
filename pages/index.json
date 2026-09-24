@@ -4365,6 +4365,15 @@
   "definition": "A spliceosomal complex that contains the U2, U5 and U6 snRNPs bound to a splicing intermediate in which the first catalytic cleavage of the 5' splice site has occurred. The precise subunit composition differs significantly from that of the catalytic step 1, or activated, spliceosome, and includes many proteins in addition to those found in the U2, U5 and U6 snRNPs."
  },
  {
+  "identifier": "GO:0071008",
+  "label": "U2-type post-mRNA release spliceosomal complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/u2_type_post_mrna_release_spliceosomal_complex.html",
+  "definition": "A spliceosomal complex that is formed following the release of the spliced product from the post-spliceosomal complex and contains the excised intron and the U2, U5 and U6 snRNPs."
+ },
+ {
   "identifier": "GO:0071005",
   "label": "U2-type precatalytic spliceosome",
   "category": "RIBONUCLEOPROTEIN",
