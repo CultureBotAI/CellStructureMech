@@ -23,6 +23,12 @@ curation_history:
     components, human Schneider/Will/Makarova tri-snRNP evidence, a minimal U4atac/U6atac
     constituent graph and a protein-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T20:16:50Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1521: narrowed the U4atac/U6atac protein-component TODO so it no longer
+    frames the already GO:0120115-grounded Lsm2-8 complex as ungrounded.'
+  llm_assisted: true
 parent_structures:
 - GO:0097525
 components:
@@ -137,8 +143,9 @@ causal_graphs:
         RNA U6atac and the Lsm2-8 heptameric ring associated with U6atac.
 discussions:
 - discussion_id: resolve_u4atac_u6atac_snrnp_protein_components
-  prompt: Resolve exact source-neutral groundings for the Sm ring, Lsm2-8 ring and
-    U4atac/U6atac-specific protein families that form the U4atac/U6atac snRNP.
+  prompt: Review whether the Sm ring and GO:0120115 Lsm2-8 complex should be promoted
+    as direct nested components, and resolve exact source-neutral groundings for individual
+    U4atac/U6atac-specific protein families.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
@@ -146,12 +153,15 @@ discussions:
   - components#u6atac_snrnp
   - causal_graphs#u4atac_u6atac_snrnp_constituents
   rationale: The first GO:0071002 record captures the U4atac and U6atac snRNP subcomplexes
-    at GO-grounded granularity. Individual ribonucleoprotein rings and U4atac/U6atac-specific
-    protein-family boundaries should be resolved before splitting this inventory.
+    at GO-grounded granularity. GO:0120115 already grounds the Lsm2-8 complex, so
+    follow-up curation should decide whether the Sm and Lsm2-8 rings belong as direct
+    nested components here and should resolve U4atac/U6atac-specific protein-family
+    boundaries before splitting the protein inventory.
   evidence:
   - reference: GO:0071002
   - reference: GO:0005690
   - reference: GO:0005691
+  - reference: GO:0120115
   - reference: DOI:10.1128/MCB.22.10.3219-3229.2002
   posed_by: codex
   posed_date: '2026-09-24'
