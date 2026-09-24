@@ -19,6 +19,13 @@ curation_history:
     U11 and U12 snRNP components, human Will/Schneider/Hossbach 18S U11/U12 snRNP
     evidence, a minimal association graph and a protein-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T22:54:42Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1531: clarified the U11/U12 snRNP protein-boundary TODO so it asks for
+    proteins present in human 18S U11/U12 snRNPs rather than proteins forming affinity-purified
+    particles.'
+  llm_assisted: true
 synonyms:
 - synonym_text: snRNP U11/U12
   synonym_type: EXACT_SYNONYM
@@ -129,8 +136,8 @@ causal_graphs:
         U11 and U12 snRNPs.
 discussions:
 - discussion_id: resolve_u11_u12_snrnp_protein_components
-  prompt: Resolve exact source-neutral component boundaries for the proteins that
-    form affinity-purified 18S U11/U12 snRNPs.
+  prompt: Resolve exact source-neutral component boundaries for the proteins present
+    in human 18S U11/U12 snRNPs.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:

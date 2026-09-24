@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u11_u12_snrnp.yaml
+  slug: u11_u12_snrnp
+session:
+  id: 2026-09-24T225459Z-claude-code-55b8d9
+  timestamp: '2026-09-24T22:54:59Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1531
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1530
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Clarify U11/U12 snRNP TODO wording
+  details: '#1531: Reworded the resolve_u11_u12_snrnp_protein_components prompt so it asks
+    for proteins present in human 18S U11/U12 snRNPs rather than proteins forming affinity-purified
+    particles.'
