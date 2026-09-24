@@ -2,8 +2,8 @@ identifier: GO:0044674
 label: methyl coenzyme M reductase complex
 structure_category: ENERGY_COMPLEX
 structure_kind: MULTIPROTEIN_COMPLEX
-definition: Methyl coenzyme M reductase complex is a hexameric archaeal alpha2 beta2
-  gamma2 enzyme complex that catalyzes coenzyme B-dependent reduction of methyl-coenzyme
+definition: Methyl coenzyme M reductase complex is a hexameric alpha2 beta2 gamma2
+  enzyme complex that catalyzes coenzyme B-dependent reduction of methyl-coenzyme
   M to methane during the terminal step of methanogenesis.
 definition_source: GO:0044674
 mapping_status: PROPOSED
@@ -28,6 +28,13 @@ curation_history:
     the direct transferase-complex parent of GO:0044674 in GO basic, and narrowed
     the definition to avoid asserting oxidoreductase-class parentage.
   llm_assisted: true
+- timestamp: '2026-09-24T08:33:06Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1469/#1470: removed unsupported broad archaeal wording from current definition
+    and component prose, and added beta/gamma InterPro support to the coenzyme-B sulfoethylthiotransferase
+    function evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:1990234
 components:
@@ -40,8 +47,8 @@ components:
   - mcrA
   stoichiometry: '2'
   essentiality: ESSENTIAL
-  role: Alpha subunit family present as two copies in the archaeal alpha2 beta2 gamma2
-    methyl coenzyme M reductase complex.
+  role: Alpha subunit family present as two copies in the alpha2 beta2 gamma2 methyl
+    coenzyme M reductase complex.
   evidence:
   - reference: InterPro:IPR016212
     notes: InterPro IPR016212 is a family entry named Methyl coenzyme M reductase,
@@ -59,8 +66,8 @@ components:
   - mcrB
   stoichiometry: '2'
   essentiality: ESSENTIAL
-  role: Beta subunit family present as two copies in the archaeal alpha2 beta2 gamma2
-    methyl coenzyme M reductase complex.
+  role: Beta subunit family present as two copies in the alpha2 beta2 gamma2 methyl
+    coenzyme M reductase complex.
   evidence:
   - reference: InterPro:IPR003179
     notes: InterPro IPR003179 is a family entry named Methyl-coenzyme M reductase,
@@ -78,8 +85,8 @@ components:
   - mcrG
   stoichiometry: '2'
   essentiality: ESSENTIAL
-  role: Gamma subunit family present as two copies in the archaeal alpha2 beta2 gamma2
-    methyl coenzyme M reductase complex.
+  role: Gamma subunit family present as two copies in the alpha2 beta2 gamma2 methyl
+    coenzyme M reductase complex.
   evidence:
   - reference: InterPro:IPR003178
     notes: InterPro IPR003178 is a family entry named Methyl-coenzyme M reductase,
@@ -91,8 +98,8 @@ components:
 canonical_examples:
 - taxon_id: NCBITaxon:79929
   taxon_label: Methanothermobacter marburgensis str. Marburg
-  note: Archaeal strain that supplied all three alpha, beta, and gamma MCR polymer
-    entities in the crystal structure deposited as PDB:1MRO.
+  note: Methanothermobacter strain that supplied all three alpha, beta, and gamma
+    MCR polymer entities in the crystal structure deposited as PDB:1MRO.
   reference: PDB:1MRO
 functions:
 - function_id: coenzyme_b_sulfoethylthiotransferase_activity
@@ -107,6 +114,12 @@ functions:
       B heterodisulfide.
   - reference: InterPro:IPR016212
     notes: InterPro annotates the methyl coenzyme M reductase alpha-subunit family
+      to GO:0050524.
+  - reference: InterPro:IPR003179
+    notes: InterPro annotates the methyl-coenzyme M reductase beta-subunit family
+      to GO:0050524.
+  - reference: InterPro:IPR003178
+    notes: InterPro annotates the methyl-coenzyme M reductase gamma-subunit family
       to GO:0050524.
 evidence:
 - reference: GO:0044674
