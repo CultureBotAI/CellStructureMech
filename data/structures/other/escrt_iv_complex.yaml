@@ -1,0 +1,271 @@
+identifier: GO:1990621
+label: ESCRT IV complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An ESCRT complex that has AAA-ATPase activity and is involved in ESCRT-mediated
+  intralumenal vesicle formation and the final stages of cytokinesis. The complex
+  catalyzes disassembly of the ESCRT III filament around the neck of the budding vesicle
+  in an ATP-driven reaction, resulting in membrane scission and recycling of the ESCRT
+  III components back to the cytosol. In yeast, it is formed by the AAA ATPase Vps4
+  and its cofactor Vta1.
+definition_source: GO:1990621
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T01:07:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T01:09:27Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ESCRT-IV synonymy and GO parentage, reviewed-label-only Vps4 and
+    Vta1 components, Saccharomyces scope, intralumenal-vesicle formation and ATPase
+    functions, GO/PMID/DOI evidence, a yeast ESCRT-III recycling graph, and a regulator-boundary
+    discussion.
+  llm_assisted: true
+- timestamp: '2026-09-24T01:18:49Z'
+  curator: codex
+  action: FIX_DISCUSSION_ANCHOR
+  changes: Removed the invalid section-level attaches_to value from the ESCRT-IV accessory-factor
+    boundary discussion.
+  llm_assisted: true
+parent_structures:
+- GO:0036452
+synonyms:
+- synonym_text: ESCRT-IV
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990621
+- synonym_text: Vps4-Vta1 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990621
+- synonym_text: Vps4 complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:1990621
+components:
+- component_id: vps4_aaa_atpase
+  label: Vps4 AAA ATPase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VPS4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vps4 AAA ATPase
+    in the Vps4-Vta1 ESCRT-IV complex; no exact source-neutral InterPro or Pfam family
+    identifier for this Vps4 component class was curated in this pass.
+  role: ATPase constituent that assembles with Vta1 and powers ESCRT-III disassembly
+    and recycling.
+  evidence:
+  - reference: PMID:20696398
+    notes: Yang and Hurley 2010 solved a yeast Vta1/Vps4 interface structure and modeled
+      Vta1 with Vps4 during ESCRT-III disassembly.
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: Henne, Buchkovich and Emr 2011 reviewed Vps4 as the AAA ATPase that disassembles
+      ESCRT-III during ESCRT recycling.
+- component_id: vta1_vps4_cofactor
+  label: Vta1 Vps4 cofactor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - VTA1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Vta1 cofactor of
+    Vps4; no exact source-neutral InterPro or Pfam family identifier for this Vta1
+    component class was curated in this pass.
+  role: Vps4 cofactor that binds the Vps4 beta domain and stabilizes Vps4-Vta1 assemblies
+    used for ESCRT-III disassembly.
+  evidence:
+  - reference: PMID:20696398
+    notes: Yang and Hurley 2010 determined the dimeric Vta1 VSL domain bound to Vps4
+      domains and modeled the Vps4-Vta1 ESCRT recycling assembly.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast uses a Vps4 AAA ATPase and Vta1 cofactor complex to recycle
+    ESCRT-III from endosomal membranes.
+  reference: PMID:20696398
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Structural model in which Yang and Hurley solved the Vta1-Vps4 interface used
+    by the ESCRT recycling ATPase.
+  reference: PMID:20696398
+functions:
+- function_id: intralumenal_vesicle_formation
+  label: intralumenal vesicle formation
+  grounding: GO:0070676
+  description: ESCRT-IV recycles ESCRT-III from endosomal membranes as ESCRT machinery
+    drives intralumenal-vesicle formation.
+  evidence:
+  - reference: GO:1990621
+    notes: GO defines ESCRT IV as an ESCRT complex involved in ESCRT-mediated intralumenal
+      vesicle formation.
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: Henne, Buchkovich and Emr 2011 reviewed Vps4-mediated disassembly as the
+      ESCRT recycling step in MVB sorting.
+- function_id: atp_hydrolysis_activity
+  label: ATP hydrolysis activity
+  grounding: GO:0016887
+  description: The Vps4 ATPase subunit hydrolyzes ATP to remodel and recycle ESCRT-III
+    assemblies.
+  evidence:
+  - reference: GO:1990621
+    notes: GO defines ESCRT IV as an ESCRT complex with AAA-ATPase activity.
+  - reference: PMID:20696398
+    notes: Yang and Hurley 2010 modeled Vta1-stabilized Vps4 assemblies that use ATPase
+      activity for ESCRT-III disassembly.
+evidence:
+- reference: GO:1990621
+  notes: Gene Ontology cellular-component term for ESCRT IV complex.
+- reference: GO:0036452
+  notes: OLS places ESCRT IV complex under the ESCRT complex.
+- reference: GO:0070676
+  notes: Gene Ontology biological-process term for intralumenal vesicle formation
+    at endosomal membranes.
+- reference: GO:0016887
+  notes: Gene Ontology molecular-function term for ATP hydrolysis activity.
+- reference: PMID:20696398
+  notes: Yang and Hurley 2010, Structural role of the Vps4-Vta1 interface in ESCRT-III
+    recycling, Structure.
+- reference: DOI:10.1016/j.devcel.2011.05.015
+  notes: Henne, Buchkovich and Emr 2011, The ESCRT Pathway, Developmental Cell.
+causal_graphs:
+- graph_id: yeast_escrt_iv_vps4_recycling
+  title: Vps4-Vta1 recycles ESCRT-III in yeast
+  description: In Saccharomyces cerevisiae, Vta1 binds Vps4 in the ESCRT-IV complex,
+    which disassembles ESCRT-III assemblies after membrane remodeling in the MVB pathway.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the Vps4/Vta1 ESCRT-IV boundary and its ESCRT-III
+    recycling role without modeling hexamer geometry or the accessory Did2, Ist1,
+    Vps60 and Doa4 regulation network.
+  nodes:
+  - node_id: vps4_aaa_atpase
+    label: Vps4 AAA ATPase
+    node_type: GENE_OR_PROTEIN
+    component_ref: vps4_aaa_atpase
+  - node_id: vta1_vps4_cofactor
+    label: Vta1 Vps4 cofactor
+    node_type: GENE_OR_PROTEIN
+    component_ref: vta1_vps4_cofactor
+  - node_id: escrt_iv_complex
+    label: ESCRT IV complex
+    node_type: STRUCTURE
+    grounding: GO:1990621
+  - node_id: escrt_iii_complex
+    label: ESCRT III complex
+    node_type: STRUCTURE
+    grounding: GO:0000815
+  - node_id: endosome_membrane
+    label: endosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0010008
+  - node_id: cytosolic_escrt_iii_subunits
+    label: cytosolic ESCRT-III subunits
+    node_type: STATE
+  - node_id: intralumenal_vesicle_formation
+    label: intralumenal vesicle formation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0070676
+  edges:
+  - subject: vps4_aaa_atpase
+    predicate: is part of
+    object: escrt_iv_complex
+    description: Vps4 is represented as the Saccharomyces cerevisiae AAA-ATPase constituent
+      of ESCRT IV.
+    evidence:
+    - reference: GO:1990621
+      notes: GO defines yeast ESCRT IV as formed by Vps4 and Vta1.
+    - reference: PMID:20696398
+      notes: Yang and Hurley 2010 crystallized yeast Vps4 domains with Vta1.
+  - subject: vta1_vps4_cofactor
+    predicate: is part of
+    object: escrt_iv_complex
+    description: Vta1 is represented as the Saccharomyces cerevisiae Vps4 cofactor
+      constituent of ESCRT IV.
+    evidence:
+    - reference: GO:1990621
+      notes: GO defines yeast ESCRT IV as formed by Vps4 and Vta1.
+    - reference: PMID:20696398
+      notes: Yang and Hurley 2010 crystallized yeast Vta1 with Vps4 domains.
+  - subject: vta1_vps4_cofactor
+    predicate: stabilizes
+    object: vps4_aaa_atpase
+    description: Vta1 binds Vps4 and stabilizes Vps4-Vta1 arrays proposed to act during
+      ESCRT-III disassembly.
+    evidence:
+    - reference: PMID:20696398
+      notes: Yang and Hurley 2010 modeled Vta1 as a stabilizing component of Vps4-Vta1
+        complexes.
+  - subject: escrt_iv_complex
+    predicate: disassembles
+    object: escrt_iii_complex
+    description: Vps4 ATPase activity in ESCRT IV disassembles ESCRT-III assemblies
+      after membrane remodeling.
+    evidence:
+    - reference: GO:1990621
+      notes: GO defines ESCRT IV as catalyzing ESCRT III filament disassembly.
+    - reference: DOI:10.1016/j.devcel.2011.05.015
+      notes: Henne, Buchkovich and Emr 2011 reviewed Vps4 recycling of ESCRT-III as
+        the late ESCRT step.
+  - subject: escrt_iv_complex
+    predicate: releases
+    object: cytosolic_escrt_iii_subunits
+    description: ATP-driven ESCRT-III disassembly recycles ESCRT-III components back
+      to the cytosol.
+    evidence:
+    - reference: GO:1990621
+      notes: GO defines ESCRT IV as recycling ESCRT III components back to the cytosol.
+  - subject: escrt_iv_complex
+    predicate: participates in
+    object: intralumenal_vesicle_formation
+    description: ESCRT-IV activity recycles ESCRT-III from endosomal membranes in
+      the MVB pathway.
+    evidence:
+    - reference: GO:1990621
+      notes: GO defines ESCRT IV as involved in ESCRT-mediated intralumenal vesicle
+        formation.
+    - reference: PMID:20696398
+      notes: Yang and Hurley 2010 studied Vps4 and Vta1 in the context of ESCRT-III
+        recycling.
+discussions:
+- discussion_id: resolve_escrt_iv_family_groundings
+  prompt: Resolve exact source-neutral InterPro or Pfam groundings for the Vps4 AAA
+    ATPase and Vta1 cofactor component classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#vps4_aaa_atpase
+  - components#vta1_vps4_cofactor
+  rationale: This first ESCRT IV complex record records the named budding-yeast Vps4
+    and Vta1 proteins without asserting paralogy boundaries or family accessions that
+    have not been reviewed exactly.
+  evidence:
+  - reference: PMID:20696398
+    notes: ''
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: ''
+  posed_by: codex
+  posed_date: '2026-09-24'
+- discussion_id: accessory_recycling_factors_out_of_first_record
+  prompt: Keep Did2, Ist1, Vps60 and Doa4 regulation outside the first ESCRT IV component
+    boundary.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: The GO ESCRT IV definition identifies Vps4 and Vta1 as the yeast complex
+    boundary. Henne, Buchkovich and Emr 2011 review additional regulators that modulate
+    ESCRT-III disassembly or deubiquitination, but they are not asserted here as stable
+    ESCRT IV constituents.
+  resolution_note: Curated Vps4 and Vta1 as ESCRT IV constituents and left auxiliary
+    ESCRT recycling and deubiquitination factors for later boundary review.
+  evidence:
+  - reference: GO:1990621
+    notes: ''
+  - reference: DOI:10.1016/j.devcel.2011.05.015
+    notes: ''
+  posed_by: codex
+  posed_date: '2026-09-24'
+  resolved_date: '2026-09-24'
