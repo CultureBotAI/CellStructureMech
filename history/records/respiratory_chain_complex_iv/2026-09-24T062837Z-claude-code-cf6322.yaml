@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+  slug: respiratory_chain_complex_iv
+session:
+  id: 2026-09-24T062837Z-claude-code-cf6322
+  timestamp: '2026-09-24T06:28:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add respiratory chain complex IV
+  details: Created GO:0045277 respiratory chain complex IV as an ENERGY_COMPLEX record with
+    GO:0098803 parentage, GO:0045277 synonyms, a Paracoccus denitrificans PDB:1QLE canonical
+    example, four aa3 cytochrome c oxidase component rows with exact InterPro groundings where
+    available and reviewed-label-only placeholders where the verified families are broad or
+    domain-only, GO:0004129 cytochrome-c oxidase activity, primary Harrenga and Michel 1999
+    literature/PDB evidence, a compact nonmechanistic function graph, and an open component-grounding
+    discussion for lineage-specific complex IV subunits.

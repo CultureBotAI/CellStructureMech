@@ -1098,6 +1098,15 @@
   "definition": "Respiratory chain complex III is a membrane-bound cytochrome bc1 oxidoreductase complex that uses a cytochrome b, Rieske iron-sulfur protein, and cytochrome c1 catalytic core to transfer electrons from quinol to cytochrome c while translocating protons."
  },
  {
+  "identifier": "GO:0045277",
+  "label": "respiratory chain complex IV",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/respiratory_chain_complex_iv.html",
+  "definition": "Respiratory chain complex IV is a membrane-bound cytochrome c oxidase complex that transfers electrons from reduced cytochrome c to dioxygen and couples oxygen reduction to proton translocation across a respiratory membrane."
+ },
+ {
   "identifier": "GO:0016471",
   "label": "vacuolar proton-transporting V-type ATPase complex",
   "category": "ENERGY_COMPLEX",
