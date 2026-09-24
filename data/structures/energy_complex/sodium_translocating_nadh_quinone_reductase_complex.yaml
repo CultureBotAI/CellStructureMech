@@ -22,6 +22,13 @@ curation_history:
     a Vibrio cholerae O395 canonical example, Na+-pumping NADH:quinone oxidoreductase
     function evidence, and a compact whole-enzyme redox-to-sodium coupling graph.
   llm_assisted: true
+- timestamp: '2026-09-24T07:55:48Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1466/#1467: moved the sodium-motive-force graph edge from the exported
+    sodium ion to the sodium-pumping activity and expanded the InterPro:IPR010205
+    NqrF evidence note to cite its FAD-binding and 2Fe-2S-binding GO annotations.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Na+-NQR complex
   synonym_type: EXACT_SYNONYM
@@ -125,7 +132,8 @@ components:
   evidence:
   - reference: InterPro:IPR010205
     notes: InterPro IPR010205 is a family entry named Na(+)-translocating NADH-quinone
-      reductase subunit F.
+      reductase subunit F; its GO annotations include FAD binding and 2 iron, 2 sulfur
+      cluster binding, matching the NqrF cofactor role.
   - reference: PDB:7XK3
     notes: RCSB maps PDB:7XK3 polymer entity 6 to Vibrio cholerae O395 Na(+)-translocating
       NADH-quinone reductase subunit F, UniProtKB:A5F5Y4.
@@ -256,10 +264,10 @@ causal_graphs:
     - reference: GO:0160292
       notes: GO:0160292 states that electron transfer is coupled to transport of sodium
         ions from the cytoplasm to the periplasm.
-  - subject: sodium_ion
+  - subject: sodium_pumping_nadh_quinone_activity
     predicate: contributes to
     object: sodium_motive_force
-    description: Na+-NQR sodium export contributes to the transmembrane electrochemical
+    description: Na+-NQR-coupled sodium export contributes to the transmembrane electrochemical
       sodium gradient.
     evidence:
     - reference: DOI:10.1038/s41467-022-31718-1
