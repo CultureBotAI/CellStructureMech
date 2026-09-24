@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+  slug: respiratory_chain_complex_iv
+session:
+  id: 2026-09-24T064021Z-claude-code-0690ce
+  timestamp: '2026-09-24T06:40:21Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1459
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1460
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1458
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address respiratory chain complex IV PR review
+  details: 'Resolved #1459 by qualifying the InterPro:IPR014241-grounded subunit I component
+    as bacterial, and resolved #1460 by adding InterPro:IPR014222 as cytochrome-c-specific
+    subunit-II domain evidence for the complex IV function graph while leaving the whole subunit
+    II component at REVIEWED_LABEL_ONLY.'

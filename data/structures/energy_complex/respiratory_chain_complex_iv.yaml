@@ -29,6 +29,13 @@ curation_history:
     ctaDII, ctaB, coiI, and coiII verified against the PDB:1QLE UniProtKB component
     accessions.
   llm_assisted: true
+- timestamp: '2026-09-24T06:39:50Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1459/#1460: qualified the InterPro-grounded subunit I component as bacterial
+    and replaced broad subunit-II graph evidence with the cytochrome-c-specific InterPro
+    subunit-II domain entry.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cytochrome c oxidase complex
   synonym_type: EXACT_SYNONYM
@@ -39,8 +46,8 @@ synonyms:
 parent_structures:
 - GO:0098803
 components:
-- component_id: cytochrome_c_oxidase_subunit_i
-  label: cytochrome c oxidase subunit I
+- component_id: bacterial_cytochrome_c_oxidase_subunit_i
+  label: bacterial cytochrome c oxidase subunit I
   component_type: PROTEIN
   component_role: CONSTITUENT
   grounding: InterPro:IPR014241
@@ -79,6 +86,10 @@ components:
   - reference: InterPro:IPR045187
     notes: InterPro IPR045187 describes the broader cytochrome c/quinol oxidase subunit
       II family and its electron transfer role.
+  - reference: InterPro:IPR014222
+    notes: InterPro IPR014222 is the cytochrome c oxidase subunit-II domain entry,
+      supporting the cytochrome-c-specific acceptor-side role without serving as an
+      exact whole-protein grounding.
   - reference: PDB:1QLE
     notes: RCSB maps PDB:1QLE polymer entity 2 to Paracoccus denitrificans cytochrome
       c oxidase subunit 2, UniProtKB:P08306.
@@ -150,6 +161,8 @@ evidence:
   notes: InterPro family for bacterial cytochrome c oxidase subunit I.
 - reference: InterPro:IPR045187
   notes: InterPro family for cytochrome c/quinol oxidase subunit II.
+- reference: InterPro:IPR014222
+  notes: InterPro domain entry for cytochrome c oxidase subunit II.
 - reference: InterPro:IPR024791
   notes: InterPro family for cytochrome c oxidase subunit III.
 - reference: InterPro:IPR012422
@@ -183,10 +196,10 @@ causal_graphs:
     label: reduced cytochrome c
     node_type: GENE_OR_PROTEIN
   - node_id: subunit_i
-    label: cytochrome c oxidase subunit I
+    label: bacterial cytochrome c oxidase subunit I
     node_type: GENE_OR_PROTEIN
     grounding: InterPro:IPR014241
-    component_ref: cytochrome_c_oxidase_subunit_i
+    component_ref: bacterial_cytochrome_c_oxidase_subunit_i
   - node_id: subunit_ii
     label: cytochrome c oxidase subunit II
     node_type: GENE_OR_PROTEIN
@@ -238,9 +251,9 @@ causal_graphs:
     description: Subunit II contributes the CuA electron-accepting side of the cytochrome
       c oxidase core.
     evidence:
-    - reference: InterPro:IPR045187
-      notes: InterPro IPR045187 describes cytochrome c oxidase subunit II as the copper-A-containing
-        subunit that transfers electrons from cytochrome c toward subunit I.
+    - reference: InterPro:IPR014222
+      notes: InterPro IPR014222 describes the cytochrome c oxidase subunit-II domain
+        that forms the cytochrome-c electron-entry side of complex IV.
   - subject: oxygen
     predicate: accepts electrons in
     object: cytochrome_c_oxidase_activity
