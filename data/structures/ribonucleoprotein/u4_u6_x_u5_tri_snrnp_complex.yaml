@@ -19,10 +19,20 @@ curation_history:
     U4/U6 and U5 snRNP components, budding-yeast distribution, Nguyen/Galej/Nagai
     yeast cryo-EM evidence, an assembly graph and a protein-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T13:34:36Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1492: added the DOI-backed U4/U6.U5 tri-snRNP literature synonym; #1493:
+    reworded the assembly graph scope note so it no longer makes a cryo-EM-specific
+    claim backed only by GO edge evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: U4/U6.U5 snRNP complex
   synonym_type: EXACT_SYNONYM
   source: GO:0046540
+- synonym_text: U4/U6.U5 tri-snRNP
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/nature14548
 parent_structures:
 - GO:0097526
 components:
@@ -95,8 +105,7 @@ causal_graphs:
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: This graph records the defining GO subcomplex association without modeling
-    the protein-specific bridges, copy numbers or RNA-RNA contacts observed in yeast
-    cryo-EM structures.
+    protein-specific bridges, subunit copy numbers or RNA-RNA contacts.
   nodes:
   - node_id: u4_u6_snrnp
     label: U4/U6 snRNP

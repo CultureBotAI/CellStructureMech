@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u4_u6_x_u5_tri_snrnp_complex.yaml
+  slug: u4_u6_x_u5_tri_snrnp_complex
+session:
+  id: 2026-09-24T133518Z-codex-9858ca
+  timestamp: '2026-09-24T13:35:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1492
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1493
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1491
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - synonyms
+  - causal_graphs
+  summary: 'Address PR #1491 U4/U6 x U5 tri-snRNP review issues'
+  details: 'Addressed adversarial review issues from PR #1491 by adding the missing DOI-backed
+    U4/U6.U5 tri-snRNP exact literature synonym and rewording the assembly graph scope note
+    so it no longer makes a cryo-EM-specific claim backed only by GO edge evidence.'
