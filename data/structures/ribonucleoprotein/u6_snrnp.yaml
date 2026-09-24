@@ -22,6 +22,12 @@ curation_history:
     tri-snRNP cryo-EM evidence, a minimal U6 snRNP constituent graph and a protein-component
     grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T16:32:25Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1507: replaced the label-only Lsm2-8-ring component with the GO:0120115-grounded
+    Lsm2-8 complex and propagated that grounding to the constituent graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: snRNP U6
   synonym_type: EXACT_SYNONYM
@@ -42,18 +48,18 @@ components:
   - reference: SO:0000396
     notes: SO:0000396 is the Sequence Ontology term for U6 snRNA.
 - component_id: lsm2_8_ring
-  label: Lsm2-8 ring
+  label: Lsm2-8 complex
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: An exact source-neutral CURIE for the spliceosomal Lsm2-8 heptameric
-    ring complex is left unresolved in this first U6 snRNP record; GO:0005688 directly
-    supports this label-level constituent.
-  role: Lsm2-8 heptameric ring constituent named in the U6 snRNP definition.
+  role: Lsm2-8 heptameric ring complex constituent named in the U6 snRNP definition.
   evidence:
   - reference: GO:0005688
     notes: GO:0005688 defines the U6 snRNP as containing the Lsm2-8 heptameric ring
       complex.
+  - reference: GO:0120115
+    notes: GO:0120115 defines the Lsm2-8 complex as the heteroheptameric complex composed
+      of Lsm2, Lsm3, Lsm4, Lsm5, Lsm6, Lsm7 and Lsm8 or their orthologs.
+  grounding: GO:0120115
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -74,6 +80,8 @@ evidence:
   notes: Gene Ontology cellular-component parent term for spliceosomal snRNP complex.
 - reference: SO:0000396
   notes: Sequence Ontology term for U6 snRNA.
+- reference: GO:0120115
+  notes: Gene Ontology cellular-component term for the Lsm2-8 complex.
 - reference: DOI:10.1038/nature14548
   notes: Nguyen, Galej, Bai and colleagues 2015, The architecture of the spliceosomal
     U4/U6.U5 tri-snRNP, Nature.
@@ -88,13 +96,13 @@ evidence:
     by PubMed.
 causal_graphs:
 - graph_id: u6_snrnp_constituents
-  title: U6 snRNA and the Lsm2-8 ring are U6 snRNP constituents
-  description: The U6 snRNP contains U6 small nuclear RNA and the Lsm2-8 heptameric
-    ring complex; GO:0005688 also states that additional U6-specific proteins are
-    present, with exact family boundaries still to be resolved.
+  title: U6 snRNA and the Lsm2-8 complex are U6 snRNP constituents
+  description: The U6 snRNP contains U6 small nuclear RNA and the GO-grounded Lsm2-8
+    heptameric ring complex; GO:0005688 also states that additional U6-specific proteins
+    are present, with exact family boundaries still to be resolved.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
-  scope_notes: This partial graph records GO-defined U6 snRNA and Lsm2-8-ring constituent
+  scope_notes: This partial graph records GO-defined U6 snRNA and Lsm2-8 complex constituent
     contributions without modeling individual Lsm or U6-specific protein-family boundaries.
   nodes:
   - node_id: u6_snrna
@@ -103,9 +111,10 @@ causal_graphs:
     grounding: SO:0000396
     component_ref: u6_snrna
   - node_id: lsm2_8_ring
-    label: Lsm2-8 ring
+    label: Lsm2-8 complex
     node_type: STRUCTURE
     component_ref: lsm2_8_ring
+    grounding: GO:0120115
   - node_id: u6_snrnp
     label: U6 snRNP
     node_type: STRUCTURE
@@ -122,26 +131,30 @@ causal_graphs:
   - subject: lsm2_8_ring
     predicate: contributes constituents to
     object: u6_snrnp
-    description: The Lsm2-8 ring is the heptameric protein-ring constituent represented
+    description: The Lsm2-8 complex is the heptameric protein-ring constituent represented
       in the U6 snRNP definition.
     evidence:
     - reference: GO:0005688
       notes: GO:0005688 defines the U6 snRNP as containing the Lsm2-8 heptameric ring
         complex.
+    - reference: GO:0120115
+      notes: GO:0120115 is the Gene Ontology cellular-component term for the Lsm2-8
+        complex.
 discussions:
 - discussion_id: resolve_u6_snrnp_protein_components
-  prompt: Resolve exact source-neutral groundings for the Lsm2-8 ring and U6-specific
-    protein families that form the U6 snRNP.
+  prompt: Resolve exact source-neutral groundings for individual Lsm proteins and
+    U6-specific protein families that form the U6 snRNP.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#lsm2_8_ring
   - causal_graphs#u6_snrnp_constituents
   rationale: The first GO:0005688 record captures U6 snRNA and the GO-defined Lsm2-8
-    ring at coarse granularity. Individual Lsm proteins and U6-specific protein-family
+    complex at coarse granularity. Individual Lsm proteins and U6-specific protein-family
     boundaries should be resolved before splitting this inventory.
   evidence:
   - reference: GO:0005688
+  - reference: GO:0120115
   - reference: DOI:10.1038/nature14548
   - reference: DOI:10.1038/nature16940
   posed_by: codex
