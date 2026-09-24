@@ -1,0 +1,239 @@
+identifier: GO:0030680
+label: dimeric ribonuclease P complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonuclease P complex that contains a single RNA molecule that is necessary
+  and usually sufficient for catalysis, and a single protein molecule.
+definition_source: GO:0030680
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T11:36:39Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T11:37:53Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added RNase P synonymy, ribonuclease P parentage, SO-grounded RNase P RNA
+    and InterPro-grounded RnpA components, bacterial distribution, an Escherichia
+    coli canonical example, GO function terms, GO/SO/InterPro/UniProt/PubMed/DOI evidence,
+    a compact pre-tRNA cleavage graph and a scope TODO for non-dimeric RNase P variants.
+  llm_assisted: true
+synonyms:
+- synonym_text: dimeric RNase P complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030680
+parent_structures:
+- GO:0030677
+components:
+- component_id: rnase_p_rna
+  label: RNase P RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000386
+  gene_symbols:
+  - rnpB
+  stoichiometry: 1 RNA molecule
+  essentiality: ESSENTIAL
+  role: Catalytic RNA subunit that forms the bacterial RNase P ribozyme core.
+  evidence:
+  - reference: GO:0030680
+    notes: GO:0030680 defines the dimeric ribonuclease P complex as containing a single
+      RNA molecule that is necessary and usually sufficient for catalysis.
+  - reference: SO:0000386
+    notes: SO:0000386 is the Sequence Ontology term for RNase P RNA.
+  - reference: PMID:6197186
+    notes: Guerrier-Takada et al. 1983 showed that the RNA moiety of bacterial RNase
+      P is the catalytic subunit.
+- component_id: rnpa_protein
+  label: Ribonuclease P protein component
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR000100
+  gene_symbols:
+  - rnpA
+  stoichiometry: 1 protein molecule
+  essentiality: ESSENTIAL
+  role: Small RnpA protein constituent that associates with RNase P RNA in the bacterial
+    dimeric holoenzyme.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A7Y8
+    protein_label: Ribonuclease P protein component
+    gene_symbol: rnpA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-24'
+    role: Reviewed E. coli K-12 RnpA entry mapped by UniProtKB to InterPro:IPR000100.
+    evidence:
+    - reference: UniProtKB:P0A7Y8
+      notes: UniProtKB P0A7Y8 is the reviewed Escherichia coli K-12 RNase P protein
+        component entry for gene rnpA.
+    - reference: InterPro:IPR000100
+      notes: UniProtKB maps the E. coli K-12 RnpA entry to InterPro family IPR000100.
+  evidence:
+  - reference: GO:0030680
+    notes: GO:0030680 defines the dimeric ribonuclease P complex as containing a single
+      protein molecule.
+  - reference: InterPro:IPR000100
+    notes: InterPro IPR000100 is a family entry for RNase P protein components that
+      includes the bacterial rnpA HAMAP and NCBIfam member models.
+  - reference: DOI:10.1038/nrmicro1491
+    notes: Kazantsev and Pace 2006 reviewed bacterial RNase P as a two-component holoenzyme
+      with an RNA subunit and an RnpA protein subunit.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: The dimeric RNase P holoenzyme captures the widespread bacterial form built
+    from one RNase P RNA and one RnpA protein.
+  reference: DOI:10.1038/nrmicro1491
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Model bacterium whose RNase P M1 RNA established the RNA moiety as a catalytic
+    subunit.
+  reference: PMID:6197186
+functions:
+- function_id: ribonuclease_p_activity
+  label: ribonuclease P activity
+  grounding: GO:0004526
+  description: The bacterial dimeric RNase P complex cleaves RNA endonucleolytically
+    to remove 5-prime extra nucleotides from precursor tRNA.
+  evidence:
+  - reference: GO:0004526
+    notes: GO:0004526 is the Gene Ontology molecular-function term for ribonuclease
+      P activity.
+  - reference: PMID:6197186
+    notes: Guerrier-Takada et al. 1983 assayed bacterial RNase P RNA cleavage of precursor
+      RNA substrates.
+- function_id: trna_5_leader_removal
+  label: tRNA 5'-leader removal
+  grounding: GO:0001682
+  description: The RNase P complex generates mature tRNA 5-prime ends by cleaving
+    5-prime leader sequences from pre-tRNAs.
+  evidence:
+  - reference: GO:0001682
+    notes: GO:0001682 is the Gene Ontology biological-process term for tRNA 5'-leader
+      removal.
+  - reference: DOI:10.1038/nrmicro1491
+    notes: Kazantsev and Pace 2006 reviewed tRNA 5-prime leader removal as the canonical
+      bacterial RNase P activity.
+evidence:
+- reference: GO:0030680
+  notes: Gene Ontology cellular-component term for the dimeric ribonuclease P complex.
+- reference: GO:0030677
+  notes: Gene Ontology cellular-component term for the broader ribonuclease P complex
+    parent.
+- reference: GO:0004526
+  notes: Gene Ontology molecular-function term for ribonuclease P activity.
+- reference: GO:0001682
+  notes: Gene Ontology biological-process term for tRNA 5'-leader removal.
+- reference: SO:0000386
+  notes: Sequence Ontology term for RNase P RNA.
+- reference: InterPro:IPR000100
+  notes: InterPro family for RNase P protein components.
+- reference: UniProtKB:P0A7Y8
+  notes: UniProtKB reviewed Escherichia coli K-12 RnpA protein entry.
+- reference: PMID:6197186
+  notes: Guerrier-Takada et al. 1983, The RNA moiety of ribonuclease P is the catalytic
+    subunit of the enzyme, Cell.
+- reference: DOI:10.1038/nrmicro1491
+  notes: 'Kazantsev and Pace 2006, Bacterial RNase P: a new view of an ancient enzyme,
+    Nature Reviews Microbiology.'
+- reference: PMID:16980936
+  notes: PubMed identifier for Kazantsev and Pace 2006 as reported by PubMed.
+causal_graphs:
+- graph_id: bacterial_rnase_p_pre_trna_cleavage
+  title: Dimeric RNase P cleaves pre-tRNA leaders
+  description: In bacterial dimeric RNase P, the RNase P RNA and RnpA protein form
+    a ribonucleoprotein holoenzyme that cleaves 5-prime leaders from precursor tRNAs.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the bacterial RNA-plus-protein RNase P holoenzyme
+    and its pre-tRNA cleavage function without modeling substrate recognition kinetics,
+    metal-ion chemistry or the multimeric archaeal and eukaryotic RNase P assemblies.
+  nodes:
+  - node_id: rnase_p_rna
+    label: RNase P RNA
+    node_type: RNA
+    component_ref: rnase_p_rna
+    grounding: SO:0000386
+  - node_id: rnpa_protein
+    label: Ribonuclease P protein component
+    node_type: GENE_OR_PROTEIN
+    component_ref: rnpa_protein
+    grounding: InterPro:IPR000100
+  - node_id: dimeric_rnase_p
+    label: dimeric ribonuclease P complex
+    node_type: STRUCTURE
+    grounding: GO:0030680
+  - node_id: pre_trna
+    label: precursor tRNA
+    node_type: GENETIC_ELEMENT
+  - node_id: ribonuclease_p_activity
+    label: ribonuclease P activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004526
+  - node_id: trna_5_leader_removal
+    label: tRNA 5'-leader removal
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0001682
+  edges:
+  - subject: rnase_p_rna
+    predicate: assembles with
+    object: rnpa_protein
+    description: Bacterial dimeric RNase P contains one RNase P RNA molecule and one
+      RnpA protein molecule.
+    evidence:
+    - reference: GO:0030680
+      notes: GO:0030680 defines the dimeric ribonuclease P complex by one RNA molecule
+        and one protein molecule.
+    - reference: DOI:10.1038/nrmicro1491
+      notes: Kazantsev and Pace 2006 reviewed the two-component bacterial RNase P
+        holoenzyme.
+  - subject: rnase_p_rna
+    predicate: contributes to
+    object: ribonuclease_p_activity
+    description: RNase P RNA provides the ribozyme core of the bacterial dimeric complex.
+    evidence:
+    - reference: PMID:6197186
+      notes: Guerrier-Takada et al. 1983 established bacterial RNase P RNA as a catalytic
+        subunit.
+  - subject: dimeric_rnase_p
+    predicate: cleaves
+    object: pre_trna
+    description: The dimeric RNase P holoenzyme cleaves 5-prime leaders from precursor
+      tRNAs.
+    evidence:
+    - reference: GO:0004526
+      notes: GO:0004526 defines ribonuclease P activity as endonucleolytic removal
+        of 5-prime extra nucleotides from tRNA precursor.
+    - reference: DOI:10.1038/nrmicro1491
+      notes: Kazantsev and Pace 2006 reviewed pre-tRNA leader cleavage as the canonical
+        bacterial RNase P reaction.
+  - subject: dimeric_rnase_p
+    predicate: supports
+    object: trna_5_leader_removal
+    description: Dimeric RNase P activity generates mature bacterial tRNA 5-prime
+      ends.
+    evidence:
+    - reference: GO:0001682
+      notes: GO:0001682 is the biological-process term for tRNA 5'-leader removal.
+discussions:
+- discussion_id: rnase_p_scope_limited_to_bacterial_dimeric_complex
+  prompt: Keep this record scoped to the bacterial dimeric RNase P complex and curate
+    multimeric archaeal, nucleolar and mitochondrial RNase P complexes separately.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - parent_structures#GO:0030677
+  rationale: GO separates the single-RNA/single-protein dimeric complex from multimeric
+    and organellar RNase P variants. This first record intentionally models only GO:0030680.
+  evidence:
+  - reference: GO:0030680
+  - reference: GO:0030681
+  - reference: GO:0030678
+  posed_by: codex
+  posed_date: '2026-09-24'

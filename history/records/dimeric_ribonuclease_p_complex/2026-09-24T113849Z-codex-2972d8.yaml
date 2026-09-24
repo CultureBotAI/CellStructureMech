@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/dimeric_ribonuclease_p_complex.yaml
+  slug: dimeric_ribonuclease_p_complex
+session:
+  id: 2026-09-24T113849Z-codex-2972d8
+  timestamp: '2026-09-24T11:38:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add dimeric ribonuclease P complex
+  details: Created a GO:0030680 dimeric ribonuclease P complex record with an SO:0000386 RNase
+    P RNA constituent, an InterPro:IPR000100 RnpA constituent, a reviewed Escherichia coli
+    K-12 UniProtKB:P0A7Y8 protein example, bacterial distribution, an Escherichia coli canonical
+    example, GO:0004526 and GO:0001682 function assertions, GO/SO/InterPro/UniProt/PubMed/DOI
+    evidence, a compact pre-tRNA cleavage graph and a scope TODO for non-dimeric RNase P variants.
+    Validated the new YAML with targeted LinkML and strict validation before appending this
+    history record.

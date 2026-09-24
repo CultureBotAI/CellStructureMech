@@ -13601,6 +13601,11 @@
           "cosine_similarity": 0.78832846
         },
         {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.78631573
+        },
+        {
           "identifier": "GO:0005840",
           "label": "ribosome",
           "cosine_similarity": 0.77848286
@@ -13609,11 +13614,6 @@
           "identifier": "GO:0000178",
           "label": "exosome (RNase complex)",
           "cosine_similarity": 0.74627663
-        },
-        {
-          "identifier": "GO:0000228",
-          "label": "nuclear chromosome",
-          "cosine_similarity": 0.71349214
         }
       ]
     },
@@ -14624,6 +14624,11 @@
           "cosine_similarity": 0.73396788
         },
         {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.7196902
+        },
+        {
           "identifier": "GO:0000932",
           "label": "P-body",
           "cosine_similarity": 0.7128217
@@ -14632,11 +14637,6 @@
           "identifier": "GO:0015935",
           "label": "small ribosomal subunit",
           "cosine_similarity": 0.70589019
-        },
-        {
-          "identifier": "GO:0048500",
-          "label": "signal recognition particle",
-          "cosine_similarity": 0.69080916
         }
       ]
     },
@@ -14672,6 +14672,37 @@
       ]
     },
     {
+      "identifier": "GO:0030680",
+      "label": "dimeric ribonuclease P complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005840",
+          "label": "ribosome",
+          "cosine_similarity": 0.8155631
+        },
+        {
+          "identifier": "GO:0015935",
+          "label": "small ribosomal subunit",
+          "cosine_similarity": 0.8122919
+        },
+        {
+          "identifier": "GO:0015934",
+          "label": "large ribosomal subunit",
+          "cosine_similarity": 0.80574248
+        },
+        {
+          "identifier": "GO:0005730",
+          "label": "nucleolus",
+          "cosine_similarity": 0.78631573
+        },
+        {
+          "identifier": "GO:0000178",
+          "label": "exosome (RNase complex)",
+          "cosine_similarity": 0.78548445
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000178",
       "label": "exosome (RNase complex)",
       "neighbors": [
@@ -14679,6 +14710,11 @@
           "identifier": "GO:1990061",
           "label": "bacterial degradosome",
           "cosine_similarity": 0.82050269
+        },
+        {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.78548445
         },
         {
           "identifier": "GO:0015935",
@@ -14694,11 +14730,6 @@
           "identifier": "GO:0015934",
           "label": "large ribosomal subunit",
           "cosine_similarity": 0.74324699
-        },
-        {
-          "identifier": "GO:0005840",
-          "label": "ribosome",
-          "cosine_similarity": 0.72855478
         }
       ]
     },
@@ -14717,6 +14748,11 @@
           "cosine_similarity": 0.869417
         },
         {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.80574248
+        },
+        {
           "identifier": "GO:0005730",
           "label": "nucleolus",
           "cosine_similarity": 0.78832846
@@ -14725,11 +14761,6 @@
           "identifier": "GO:0000178",
           "label": "exosome (RNase complex)",
           "cosine_similarity": 0.74324699
-        },
-        {
-          "identifier": "GO:0048500",
-          "label": "signal recognition particle",
-          "cosine_similarity": 0.73306301
         }
       ]
     },
@@ -14737,6 +14768,11 @@
       "identifier": "GO:0000932",
       "label": "P-body",
       "neighbors": [
+        {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.72835051
+        },
         {
           "identifier": "GO:0010494",
           "label": "cytoplasmic stress granule",
@@ -14756,11 +14792,6 @@
           "identifier": "GO:0048500",
           "label": "signal recognition particle",
           "cosine_similarity": 0.69477777
-        },
-        {
-          "identifier": "GO:0000178",
-          "label": "exosome (RNase complex)",
-          "cosine_similarity": 0.69315284
         }
       ]
     },
@@ -14779,6 +14810,11 @@
           "cosine_similarity": 0.869417
         },
         {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.8155631
+        },
+        {
           "identifier": "GO:0048500",
           "label": "signal recognition particle",
           "cosine_similarity": 0.79338868
@@ -14787,11 +14823,6 @@
           "identifier": "GO:0005730",
           "label": "nucleolus",
           "cosine_similarity": 0.77848286
-        },
-        {
-          "identifier": "GO:1990061",
-          "label": "bacterial degradosome",
-          "cosine_similarity": 0.73396788
         }
       ]
     },
@@ -14803,6 +14834,11 @@
           "identifier": "GO:0005840",
           "label": "ribosome",
           "cosine_similarity": 0.79338868
+        },
+        {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.76832617
         },
         {
           "identifier": "GO:0015935",
@@ -14818,11 +14854,6 @@
           "identifier": "GO:0000178",
           "label": "exosome (RNase complex)",
           "cosine_similarity": 0.69939921
-        },
-        {
-          "identifier": "GO:0033104",
-          "label": "type VI protein secretion system complex",
-          "cosine_similarity": 0.69751823
         }
       ]
     },
@@ -14841,6 +14872,11 @@
           "cosine_similarity": 0.8784845
         },
         {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.8122919
+        },
+        {
           "identifier": "GO:0005730",
           "label": "nucleolus",
           "cosine_similarity": 0.80255104
@@ -14849,11 +14885,6 @@
           "identifier": "GO:0000178",
           "label": "exosome (RNase complex)",
           "cosine_similarity": 0.75481966
-        },
-        {
-          "identifier": "GO:0048500",
-          "label": "signal recognition particle",
-          "cosine_similarity": 0.74867015
         }
       ]
     },
