@@ -27,6 +27,16 @@ curation_history:
   changes: Narrowed FrdC and FrdD graph edges from anchoring FrdA specifically to
     evidence-backed constituent contributions to the complete fumarate reductase complex.
   llm_assisted: true
+- timestamp: '2026-09-24T05:27:24Z'
+  curator: codex
+  action: RESOLVED_REVIEW_ISSUE
+  changes: 'Resolved issue #1452 by adding source-attested quinol-fumarate reductase
+    synonymy from the PDB:1KF6 primary citation title.'
+  llm_assisted: true
+synonyms:
+- synonym_text: quinol-fumarate reductase
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1074/jbc.M200815200
 parent_structures:
 - GO:0098803
 components:
