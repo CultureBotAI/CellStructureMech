@@ -3275,7 +3275,7 @@
         {
           "identifier": "GO:0045275",
           "label": "respiratory chain complex III",
-          "cosine_similarity": 0.85367835
+          "cosine_similarity": 0.85369527
         },
         {
           "identifier": "GO:0030094",
@@ -3332,7 +3332,7 @@
         {
           "identifier": "GO:0045275",
           "label": "respiratory chain complex III",
-          "cosine_similarity": 0.74751687
+          "cosine_similarity": 0.74646071
         },
         {
           "identifier": "GO:0045271",
@@ -3373,7 +3373,7 @@
         {
           "identifier": "GO:0045275",
           "label": "respiratory chain complex III",
-          "cosine_similarity": 0.68112402
+          "cosine_similarity": 0.67971608
         },
         {
           "identifier": "GO:0045259",
@@ -3704,7 +3704,7 @@
         {
           "identifier": "GO:0045275",
           "label": "respiratory chain complex III",
-          "cosine_similarity": 0.85394452
+          "cosine_similarity": 0.85249225
         },
         {
           "identifier": "GO:0045273",
@@ -3740,7 +3740,7 @@
         {
           "identifier": "GO:0045275",
           "label": "respiratory chain complex III",
-          "cosine_similarity": 0.77823663
+          "cosine_similarity": 0.77700758
         },
         {
           "identifier": "GO:0045283",
@@ -3764,29 +3764,29 @@
       "label": "respiratory chain complex III",
       "neighbors": [
         {
-          "identifier": "GO:0045271",
-          "label": "respiratory chain complex I",
-          "cosine_similarity": 0.85394452
-        },
-        {
           "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
           "label": "chromatophore cytochrome bc1 complex",
-          "cosine_similarity": 0.85367835
+          "cosine_similarity": 0.85369527
+        },
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.85249225
         },
         {
           "identifier": "GO:0009512",
           "label": "cytochrome b6f complex",
-          "cosine_similarity": 0.79271729
+          "cosine_similarity": 0.79122757
         },
         {
           "identifier": "GO:0045273",
           "label": "respiratory chain complex II (succinate dehydrogenase)",
-          "cosine_similarity": 0.77823663
+          "cosine_similarity": 0.77700758
         },
         {
           "identifier": "GO:0009319",
           "label": "cytochrome o ubiquinol oxidase complex",
-          "cosine_similarity": 0.74751687
+          "cosine_similarity": 0.74646071
         }
       ]
     },

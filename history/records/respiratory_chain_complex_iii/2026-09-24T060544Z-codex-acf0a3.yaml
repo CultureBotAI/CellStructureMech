@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/respiratory_chain_complex_iii.yaml
+  slug: respiratory_chain_complex_iii
+session:
+  id: 2026-09-24T060544Z-codex-acf0a3
+  timestamp: '2026-09-24T06:05:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1455
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1456
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1457
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1454
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  - components
+  - curation_history
+  - history_links
+  summary: Address respiratory chain complex III PR review
+  details: 'Addressed PR #1454 adversarial review follow-ups for GO:0045275 respiratory chain
+    complex III. Resolved #1455 by adding PDB:2QJP source-gene aliases petB for cytochrome
+    b and petA for the Rieske iron-sulfur subunit; resolved #1457 by adding the GO exact synonym
+    cytochrome bc(1) complex; resolved #1456 by appending this linked history record with
+    PR #1454 and review issues #1455, #1456, and #1457.'

@@ -28,11 +28,20 @@ curation_history:
   changes: Replaced a too-directional cytochrome b-to-Rieske edge with component contribution
     edges around the GO-level quinol-cytochrome-c reductase activity.
   llm_assisted: true
+- timestamp: '2026-09-24T06:03:53Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1455/#1457: added the PDB:2QJP petB and petA gene-symbol aliases and
+    the GO exact cytochrome bc(1) complex synonym.'
+  llm_assisted: true
 synonyms:
 - synonym_text: complex III
   synonym_type: EXACT_SYNONYM
   source: GO:0045275
 - synonym_text: cytochrome bc1 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0045275
+- synonym_text: cytochrome bc(1) complex
   synonym_type: EXACT_SYNONYM
   source: GO:0045275
 - synonym_text: ubiquinol-cytochrome c oxidoreductase complex
@@ -57,6 +66,7 @@ components:
   grounding: InterPro:IPR030689
   gene_symbols:
   - fbcB
+  - petB
   essentiality: ESSENTIAL
   role: Central membrane cytochrome that binds the quinol redox sites and carries
     low- and high-potential b-type hemes.
@@ -77,6 +87,7 @@ components:
   grounding: InterPro:IPR006317
   gene_symbols:
   - fbcF
+  - petA
   essentiality: ESSENTIAL
   role: 2Fe-2S protein that accepts electrons from the quinol-oxidation site and transfers
     them toward cytochrome c1.
