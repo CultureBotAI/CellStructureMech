@@ -1,0 +1,146 @@
+identifier: GO:0005682
+label: U5 snRNP
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex that contains small nuclear RNA U5, a heptameric
+  ring of Sm proteins, as well as several proteins that are unique to the U5 snRNP,
+  most of which remain associated with the U5 snRNA both while the U5 snRNP is free
+  or assembled into a series of spliceosomal complexes.
+definition_source: GO:0005682
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T14:38:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T14:39:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym, spliceosomal snRNP parentage, U5 snRNA and
+    Sm-ring components, budding-yeast distribution, Nguyen/Galej/Nagai yeast U4/U6.U5
+    tri-snRNP cryo-EM evidence, a minimal U5 snRNP constituent graph and a protein-component
+    grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: snRNP U5
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005682
+parent_structures:
+- GO:0097525
+components:
+- component_id: u5_snrna
+  label: U5 snRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000395
+  role: U5 small nuclear RNA constituent of the U5 snRNP and RNA scaffold for U5-associated
+    Sm and U5-specific proteins.
+  evidence:
+  - reference: GO:0005682
+    notes: GO:0005682 defines the U5 snRNP as containing small nuclear RNA U5.
+  - reference: SO:0000395
+    notes: SO:0000395 is the Sequence Ontology term for U5 snRNA.
+- component_id: sm_protein_ring
+  label: Sm protein ring
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: An exact source-neutral CURIE for the spliceosomal heptameric Sm
+    protein ring is left unresolved in this first U5 snRNP record; GO:0005682 directly
+    supports this label-level constituent.
+  role: Heptameric Sm protein ring associated with U5 snRNA in the U5 snRNP.
+  evidence:
+  - reference: GO:0005682
+    notes: GO:0005682 defines the U5 snRNP as containing a heptameric ring of Sm proteins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: The U5 snRNP subcomplex is represented in budding-yeast U4/U6.U5 tri-snRNP
+    cryo-EM structures; broader eukaryotic distribution is left for follow-up curation.
+  reference: DOI:10.1038/nature16940
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model whose U5 snRNA and associated U5 snRNP proteins were resolved
+    inside U4/U6.U5 tri-snRNP cryo-EM structures.
+  reference: DOI:10.1038/nature16940
+evidence:
+- reference: GO:0005682
+  notes: Gene Ontology cellular-component term for the U5 snRNP and its exact synonym.
+- reference: GO:0097525
+  notes: Gene Ontology cellular-component parent term for spliceosomal snRNP complex.
+- reference: SO:0000395
+  notes: Sequence Ontology term for U5 snRNA.
+- reference: DOI:10.1038/nature14548
+  notes: Nguyen, Galej, Bai and colleagues 2015, The architecture of the spliceosomal
+    U4/U6.U5 tri-snRNP, Nature.
+- reference: PMID:26106855
+  notes: PubMed identifier for Nguyen, Galej, Bai and colleagues 2015 as reported
+    by PubMed.
+- reference: DOI:10.1038/nature16940
+  notes: Nguyen, Galej, Bai and colleagues 2016, Cryo-EM structure of the yeast U4/U6.U5
+    tri-snRNP at 3.7 Angstrom resolution, Nature.
+- reference: PMID:26829225
+  notes: PubMed identifier for Nguyen, Galej, Bai and colleagues 2016 as reported
+    by PubMed.
+causal_graphs:
+- graph_id: u5_snrnp_constituents
+  title: U5 snRNA and Sm proteins define the U5 snRNP
+  description: The U5 snRNP contains U5 small nuclear RNA, a heptameric Sm protein
+    ring and additional U5-specific proteins.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-defined U5 snRNA and Sm-ring constituent contributions
+    without modeling individual Sm or U5-specific protein-family boundaries.
+  nodes:
+  - node_id: u5_snrna
+    label: U5 snRNA
+    node_type: RNA
+    grounding: SO:0000395
+    component_ref: u5_snrna
+  - node_id: sm_protein_ring
+    label: Sm protein ring
+    node_type: STRUCTURE
+    component_ref: sm_protein_ring
+  - node_id: u5_snrnp
+    label: U5 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005682
+  edges:
+  - subject: u5_snrna
+    predicate: contributes constituents to
+    object: u5_snrnp
+    description: The U5 snRNA is the small nuclear RNA constituent represented in
+      the U5 snRNP definition.
+    evidence:
+    - reference: GO:0005682
+      notes: GO:0005682 defines the U5 snRNP as containing small nuclear RNA U5.
+  - subject: sm_protein_ring
+    predicate: contributes constituents to
+    object: u5_snrnp
+    description: The Sm protein ring is the heptameric protein-ring constituent represented
+      in the U5 snRNP definition.
+    evidence:
+    - reference: GO:0005682
+      notes: GO:0005682 defines the U5 snRNP as containing a heptameric ring of Sm
+        proteins.
+discussions:
+- discussion_id: resolve_u5_snrnp_protein_components
+  prompt: Resolve exact source-neutral groundings for the Sm ring, Prp8, Brr2, Snu114,
+    Prp6 and other U5-specific protein families that form the U5 snRNP.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sm_protein_ring
+  - causal_graphs#u5_snrnp_constituents
+  rationale: The first GO:0005682 record captures U5 snRNA and the GO-defined Sm ring
+    at coarse granularity. Individual spliceosomal Sm proteins and U5-specific protein-family
+    boundaries should be resolved before splitting this inventory.
+  evidence:
+  - reference: GO:0005682
+  - reference: DOI:10.1038/nature14548
+  - reference: DOI:10.1038/nature16940
+  posed_by: codex
+  posed_date: '2026-09-24'

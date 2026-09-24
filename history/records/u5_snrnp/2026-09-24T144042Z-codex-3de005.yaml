@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u5_snrnp.yaml
+  slug: u5_snrnp
+session:
+  id: 2026-09-24T144042Z-codex-3de005
+  timestamp: '2026-09-24T14:40:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add U5 snRNP record
+  details: Added a GO:0005682 U5 snRNP record with the GO exact synonym, spliceosomal snRNP
+    parentage, an SO-grounded U5 snRNA component, a label-level Sm protein ring component,
+    Saccharomyces cerevisiae U4/U6.U5 tri-snRNP cryo-EM evidence, a minimal U5 snRNP constituent
+    graph, and a follow-up discussion for individual U5 protein-family component grounding.
