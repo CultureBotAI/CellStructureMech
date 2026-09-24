@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u4_u6_snrnp.yaml
+  slug: u4_u6_snrnp
+session:
+  id: 2026-09-24T140246Z-codex-22ec9b
+  timestamp: '2026-09-24T14:02:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add U4/U6 snRNP record
+  details: Added a GO:0071001 U4/U6 snRNP record with spliceosomal snRNP parentage, GO-grounded
+    U4 and U6 snRNP components, Saccharomyces cerevisiae U4/U6.U5 tri-snRNP cryo-EM evidence,
+    a minimal U4/U6 assembly graph, and a follow-up discussion for individual U4/U6 protein-family
+    component grounding.

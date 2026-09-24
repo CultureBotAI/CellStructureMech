@@ -1,0 +1,161 @@
+identifier: GO:0071001
+label: U4/U6 snRNP
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex that contains the extensively base paired
+  small nuclear RNAs U4 and U6, a heptameric ring of Sm proteins associated with U4,
+  the Lsm2-8 heptameric ring complex associated with U6, as well as several proteins
+  that are unique to the U4 snRNP or U6 snRNPs, some of which remain associated with
+  the U4/U6 snRNA both while the U4 snRNP is free or assembled into a series of spliceosomal
+  complexes.
+definition_source: GO:0071001
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T14:00:48Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T14:01:43Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added spliceosomal snRNP parentage, GO-grounded U4 and U6 snRNP components,
+    budding-yeast distribution, Nguyen/Galej/Nagai yeast U4/U6.U5 tri-snRNP cryo-EM
+    evidence, a minimal U4/U6 assembly graph and a protein-component grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T14:16:41Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1495: reworded the U4/U6 graph from a subcomplex assembly transition
+    to GO-defined constituent contributions; #1496: trimmed record-level GO evidence
+    notes for U4 and U6 snRNP so component exact synonyms are not implied to be U4/U6
+    snRNP aliases.'
+  llm_assisted: true
+parent_structures:
+- GO:0097525
+components:
+- component_id: u4_snrnp
+  label: U4 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005687
+  role: U4 small nuclear ribonucleoprotein subcomplex that contributes U4 snRNA, its
+    Sm protein ring and U4-associated proteins to U4/U6 snRNP.
+  evidence:
+  - reference: GO:0071001
+    notes: GO:0071001 defines the U4/U6 snRNP as containing small nuclear RNA U4,
+      a U4-associated heptameric Sm ring and U4- or U6-specific proteins.
+  - reference: GO:0005687
+    notes: GO:0005687 is the Gene Ontology cellular-component term for the U4 snRNP.
+- component_id: u6_snrnp
+  label: U6 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005688
+  role: U6 small nuclear ribonucleoprotein subcomplex that contributes U6 snRNA, its
+    Lsm2-8 ring and U6-associated proteins to U4/U6 snRNP.
+  evidence:
+  - reference: GO:0071001
+    notes: GO:0071001 defines the U4/U6 snRNP as containing small nuclear RNA U6,
+      a U6-associated Lsm2-8 heptameric ring and U4- or U6-specific proteins.
+  - reference: GO:0005688
+    notes: GO:0005688 is the Gene Ontology cellular-component term for the U6 snRNP.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: The U4/U6 snRNP subcomplex is represented in budding-yeast U4/U6.U5 tri-snRNP
+    cryo-EM structures; broader eukaryotic distribution is left for follow-up curation.
+  reference: DOI:10.1038/nature16940
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model whose U4/U6 small nuclear RNAs and associated U4/U6 snRNP
+    proteins were resolved inside U4/U6.U5 tri-snRNP cryo-EM structures.
+  reference: DOI:10.1038/nature16940
+evidence:
+- reference: GO:0071001
+  notes: Gene Ontology cellular-component term for the U4/U6 snRNP.
+- reference: GO:0097525
+  notes: Gene Ontology cellular-component parent term for spliceosomal snRNP complex.
+- reference: GO:0005687
+  notes: Gene Ontology cellular-component term for the U4 snRNP.
+- reference: GO:0005688
+  notes: Gene Ontology cellular-component term for the U6 snRNP.
+- reference: DOI:10.1038/nature14548
+  notes: Nguyen, Galej, Bai and colleagues 2015, The architecture of the spliceosomal
+    U4/U6.U5 tri-snRNP, Nature.
+- reference: PMID:26106855
+  notes: PubMed identifier for Nguyen, Galej, Bai and colleagues 2015 as reported
+    by PubMed.
+- reference: DOI:10.1038/nature16940
+  notes: Nguyen, Galej, Bai and colleagues 2016, Cryo-EM structure of the yeast U4/U6.U5
+    tri-snRNP at 3.7 Angstrom resolution, Nature.
+- reference: PMID:26829225
+  notes: PubMed identifier for Nguyen, Galej, Bai and colleagues 2016 as reported
+    by PubMed.
+causal_graphs:
+- graph_id: u4_u6_snrnp_constituents
+  title: U4 and U6 snRNP constituents define the U4/U6 snRNP
+  description: The U4/U6 snRNP contains extensively base-paired U4 and U6 small nuclear
+    RNAs together with the U4-associated Sm ring, the U6-associated Lsm2-8 ring and
+    U4/U6-associated proteins.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-defined U4 and U6 snRNP constituent contributions
+    without modeling individual protein bridges, snRNA base-pairing geometry or spliceosomal
+    remodeling.
+  nodes:
+  - node_id: u4_snrnp
+    label: U4 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005687
+    component_ref: u4_snrnp
+  - node_id: u6_snrnp
+    label: U6 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005688
+    component_ref: u6_snrnp
+  - node_id: u4_u6_snrnp
+    label: U4/U6 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0071001
+  edges:
+  - subject: u4_snrnp
+    predicate: contributes constituents to
+    object: u4_u6_snrnp
+    description: The U4 snRNP contributes the U4 snRNA and U4-associated Sm ring represented
+      in the U4/U6 snRNP definition.
+    evidence:
+    - reference: GO:0071001
+      notes: GO:0071001 defines the U4/U6 snRNP as containing small nuclear RNA U4
+        and a heptameric ring of Sm proteins associated with U4.
+  - subject: u6_snrnp
+    predicate: contributes constituents to
+    object: u4_u6_snrnp
+    description: The U6 snRNP contributes the U6 snRNA and U6-associated Lsm2-8 ring
+      represented in the U4/U6 snRNP definition.
+    evidence:
+    - reference: GO:0071001
+      notes: GO:0071001 defines the U4/U6 snRNP as containing small nuclear RNA U6
+        and the Lsm2-8 heptameric ring associated with U6.
+discussions:
+- discussion_id: resolve_u4_u6_snrnp_protein_components
+  prompt: Resolve exact source-neutral groundings for the Sm ring, Lsm2-8 ring, Prp3,
+    Prp4, Prp31 and other protein families that form the U4/U6 snRNP.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u4_snrnp
+  - components#u6_snrnp
+  - causal_graphs#u4_u6_snrnp_constituents
+  rationale: The first GO:0071001 record captures the U4 and U6 snRNP subcomplexes
+    at GO-grounded granularity. Individual ribonucleoprotein rings and U4/U6-specific
+    protein-family boundaries should be resolved before splitting this inventory.
+  evidence:
+  - reference: GO:0071001
+  - reference: GO:0005687
+  - reference: GO:0005688
+  - reference: DOI:10.1038/nature16940
+  posed_by: codex
+  posed_date: '2026-09-24'
