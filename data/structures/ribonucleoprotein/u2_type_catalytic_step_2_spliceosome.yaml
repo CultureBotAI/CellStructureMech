@@ -1,0 +1,216 @@
+identifier: GO:0071007
+label: U2-type catalytic step 2 spliceosome
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A spliceosomal complex that contains the U2, U5 and U6 snRNPs bound to
+  a splicing intermediate in which the first catalytic cleavage of the 5' splice site
+  has occurred. The precise subunit composition differs significantly from that of
+  the catalytic step 1, or activated, spliceosome, and includes many proteins in addition
+  to those found in the U2, U5 and U6 snRNPs.
+definition_source: GO:0071007
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T17:56:20Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T17:57:25Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, catalytic step 2 and U2-type parentage, GO-grounded
+    U2, U5 and U6 snRNP components, Yan budding-yeast C* spliceosome evidence, a minimal
+    remodeling graph and a protein-component grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T18:07:22Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1513: removed uncurated Prp16, Yju2 and Cwc25 names from the C* protein-boundary
+    TODO and graph scope note.'
+  llm_assisted: true
+synonyms:
+- synonym_text: major catalytic step 2 spliceosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071007
+- synonym_text: GT-AG catalytic step 2 spliceosome
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071007
+- synonym_text: mammalian U2-type spliceosomal complex C
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071007
+- synonym_text: mammalian U2-type spliceosomal complex C1
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071007
+- synonym_text: yeast U2-type spliceosomal complex A2-2
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071007
+parent_structures:
+- GO:0071013
+- GO:0005684
+components:
+- component_id: u2_snrnp
+  label: U2 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005686
+  role: Small nuclear ribonucleoprotein bound to the splicing intermediate in the
+    U2-type catalytic step 2 spliceosome.
+  evidence:
+  - reference: GO:0071007
+    notes: GO:0071007 defines the catalytic step 2 spliceosome as containing U2 snRNP
+      bound to the splicing intermediate.
+  - reference: GO:0005686
+    notes: GO:0005686 is the Gene Ontology cellular-component term for the U2 snRNP.
+- component_id: u5_snrnp
+  label: U5 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005682
+  role: Small nuclear ribonucleoprotein bound to the splicing intermediate in the
+    U2-type catalytic step 2 spliceosome.
+  evidence:
+  - reference: GO:0071007
+    notes: GO:0071007 defines the catalytic step 2 spliceosome as containing U5 snRNP
+      bound to the splicing intermediate.
+  - reference: GO:0005682
+    notes: GO:0005682 is the Gene Ontology cellular-component term for the U5 snRNP.
+- component_id: u6_snrnp
+  label: U6 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005688
+  role: Small nuclear ribonucleoprotein bound to the splicing intermediate in the
+    U2-type catalytic step 2 spliceosome.
+  evidence:
+  - reference: GO:0071007
+    notes: GO:0071007 defines the catalytic step 2 spliceosome as containing U6 snRNP
+      bound to the splicing intermediate.
+  - reference: GO:0005688
+    notes: GO:0005688 is the Gene Ontology cellular-component term for the U6 snRNP.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: A Saccharomyces cerevisiae step II catalytically activated spliceosome was
+    structurally characterized by Yan, Wan, Bai and colleagues; broader eukaryotic
+    distribution is left for follow-up curation.
+  reference: DOI:10.1126/science.aak9979
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model whose step II catalytically activated spliceosome was
+    analyzed by cryo-electron microscopy.
+  reference: DOI:10.1126/science.aak9979
+evidence:
+- reference: GO:0071007
+  notes: Gene Ontology cellular-component term for the U2-type catalytic step 2 spliceosome
+    and its GO synonyms.
+- reference: GO:0071013
+  notes: Gene Ontology cellular-component parent term for catalytic step 2 spliceosome.
+- reference: GO:0005684
+  notes: Gene Ontology cellular-component parent term for U2-type spliceosomal complex.
+- reference: GO:0071006
+  notes: Gene Ontology cellular-component term for the U2-type catalytic step 1 spliceosome,
+    the preceding U2-type spliceosome state.
+- reference: GO:0005686
+  notes: Gene Ontology cellular-component term for the U2 snRNP.
+- reference: GO:0005682
+  notes: Gene Ontology cellular-component term for the U5 snRNP.
+- reference: GO:0005688
+  notes: Gene Ontology cellular-component term for the U6 snRNP.
+- reference: DOI:10.1126/science.aak9979
+  notes: Yan, Wan, Bai and colleagues 2017, Structure of a yeast step II catalytically
+    activated spliceosome, Science.
+- reference: PMID:27980089
+  notes: PubMed identifier for Yan, Wan, Bai and colleagues 2017 as reported by NCBI
+    E-utilities.
+causal_graphs:
+- graph_id: u2_type_step2_spliceosome_remodeling
+  title: U2, U5 and U6 snRNPs remain in the catalytic step 2 spliceosome
+  description: The U2-type catalytic step 2 spliceosome contains U2, U5 and U6 snRNPs
+    bound to the splicing intermediate after the first catalytic cleavage of the 5-prime
+    splice site.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined U2, U5 and U6 snRNP retention
+    that distinguishes the catalytic step 2 spliceosome without modeling helicase-dependent
+    remodeling or individual step-2 protein-family boundaries.
+  nodes:
+  - node_id: u2_snrnp
+    label: U2 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005686
+    component_ref: u2_snrnp
+  - node_id: u5_snrnp
+    label: U5 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005682
+    component_ref: u5_snrnp
+  - node_id: u6_snrnp
+    label: U6 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005688
+    component_ref: u6_snrnp
+  - node_id: u2_type_catalytic_step_1_spliceosome
+    label: U2-type catalytic step 1 spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071006
+  - node_id: u2_type_catalytic_step_2_spliceosome
+    label: U2-type catalytic step 2 spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071007
+  edges:
+  - subject: u2_snrnp
+    predicate: remains associated in
+    object: u2_type_catalytic_step_2_spliceosome
+    description: The U2 snRNP remains associated with the splicing intermediate in
+      the catalytic step 2 spliceosome.
+    evidence:
+    - reference: GO:0071007
+      notes: GO:0071007 names U2 as one of the snRNPs bound to the splicing intermediate.
+  - subject: u5_snrnp
+    predicate: remains associated in
+    object: u2_type_catalytic_step_2_spliceosome
+    description: The U5 snRNP remains associated with the splicing intermediate in
+      the catalytic step 2 spliceosome.
+    evidence:
+    - reference: GO:0071007
+      notes: GO:0071007 names U5 as one of the snRNPs bound to the splicing intermediate.
+  - subject: u6_snrnp
+    predicate: remains associated in
+    object: u2_type_catalytic_step_2_spliceosome
+    description: The U6 snRNP remains associated with the splicing intermediate in
+      the catalytic step 2 spliceosome.
+    evidence:
+    - reference: GO:0071007
+      notes: GO:0071007 names U6 as one of the snRNPs bound to the splicing intermediate.
+  - subject: u2_type_catalytic_step_1_spliceosome
+    predicate: is remodeled after first catalytic cleavage to form
+    object: u2_type_catalytic_step_2_spliceosome
+    description: After the first catalytic cleavage of the 5-prime splice site, the
+      U2, U5 and U6 snRNPs are bound to a splicing intermediate in the catalytic step
+      2 spliceosome.
+    evidence:
+    - reference: GO:0071007
+      notes: GO:0071007 defines the U2-type catalytic step 2 spliceosome by the first
+        catalytic cleavage having occurred.
+discussions:
+- discussion_id: resolve_step2_spliceosome_protein_components
+  prompt: Resolve exact source-neutral component boundaries for catalytic step 2 spliceosome
+    proteins beyond the GO-defined U2, U5 and U6 snRNP subcomplexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u2_snrnp
+  - components#u5_snrnp
+  - components#u6_snrnp
+  - causal_graphs#u2_type_step2_spliceosome_remodeling
+  rationale: The first GO:0071007 record captures the defining U2, U5 and U6 snRNP
+    subcomplexes. The Yan yeast structure establishes a protein-rich step II catalytically
+    activated spliceosome, but individual protein-family and subcomplex boundaries
+    beyond the snRNPs should be resolved before expanding this component list.
+  evidence:
+  - reference: GO:0071007
+  - reference: DOI:10.1126/science.aak9979
+  posed_by: codex
+  posed_date: '2026-09-24'
