@@ -1,0 +1,294 @@
+identifier: GO:0045277
+label: respiratory chain complex IV
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Respiratory chain complex IV is a membrane-bound cytochrome c oxidase
+  complex that transfers electrons from reduced cytochrome c to dioxygen and couples
+  oxygen reduction to proton translocation across a respiratory membrane.
+definition_source: GO:0045277
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T06:25:40Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T06:26:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO respiratory-chain parentage and synonymy, PDB:1QLE Paracoccus
+    denitrificans cytochrome c oxidase components, InterPro-grounded subunit I and
+    IV entries, reviewed-label-only subunit II and III entries, cytochrome-c oxidase
+    activity, literature/PDB evidence, a compact complex IV function graph, and a
+    component-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T06:27:58Z'
+  curator: codex
+  action: REVISED_COMPONENTS
+  changes: Added Paracoccus denitrificans cytochrome c oxidase gene-symbol aliases
+    ctaDII, ctaB, coiI, and coiII verified against the PDB:1QLE UniProtKB component
+    accessions.
+  llm_assisted: true
+synonyms:
+- synonym_text: cytochrome c oxidase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0045277
+- synonym_text: electron transport complex IV
+  synonym_type: RELATED_SYNONYM
+  source: GO:0045277
+parent_structures:
+- GO:0098803
+components:
+- component_id: cytochrome_c_oxidase_subunit_i
+  label: cytochrome c oxidase subunit I
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR014241
+  gene_symbols:
+  - ctaD
+  - ctaDII
+  - coxA
+  - caaA
+  essentiality: ESSENTIAL
+  role: Catalytic core subunit that binds the heme-copper binuclear center where dioxygen
+    is reduced.
+  evidence:
+  - reference: InterPro:IPR014241
+    notes: InterPro IPR014241 is the source-neutral family for bacterial cytochrome
+      c oxidase subunit I proteins.
+  - reference: PDB:1QLE
+    notes: RCSB maps PDB:1QLE polymer entity 1 to Paracoccus denitrificans cytochrome
+      c oxidase subunit 1-beta, UniProtKB:P98002.
+- component_id: cytochrome_c_oxidase_subunit_ii
+  label: cytochrome c oxidase subunit II
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, or NCBIfam family was verified
+    for the complete cytochrome c oxidase subunit II without also including quinol-oxidase
+    homologs; InterPro:IPR014222 covers the cytochrome c oxidase subunit-II domain
+    rather than an entire protein family.
+  gene_symbols:
+  - ctaC
+  - ctaB
+  - coiI
+  - coxB
+  essentiality: ESSENTIAL
+  role: CuA-bearing subunit on the cytochrome-c acceptor side of the terminal oxidase.
+  evidence:
+  - reference: InterPro:IPR045187
+    notes: InterPro IPR045187 describes the broader cytochrome c/quinol oxidase subunit
+      II family and its electron transfer role.
+  - reference: PDB:1QLE
+    notes: RCSB maps PDB:1QLE polymer entity 2 to Paracoccus denitrificans cytochrome
+      c oxidase subunit 2, UniProtKB:P08306.
+- component_id: cytochrome_c_oxidase_subunit_iii
+  label: cytochrome c oxidase subunit III
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, or NCBIfam family was verified
+    for cytochrome-c-specific subunit III; InterPro:IPR024791 also contains quinol
+    oxidase subunit III child families.
+  gene_symbols:
+  - ctaE
+  - coiII
+  - coxC
+  essentiality: UNKNOWN
+  role: Membrane core subunit of the aa3 cytochrome c oxidase complex.
+  evidence:
+  - reference: InterPro:IPR024791
+    notes: InterPro IPR024791 covers cytochrome c oxidase subunit III and related
+      heme-copper oxidase subunit-III proteins.
+  - reference: PDB:1QLE
+    notes: RCSB maps PDB:1QLE polymer entity 3 to Paracoccus denitrificans cytochrome
+      c oxidase subunit 3, UniProtKB:P06030.
+- component_id: bacterial_aa3_subunit_iv
+  label: bacterial aa3-type cytochrome c oxidase subunit IV
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR012422
+  gene_symbols:
+  - ctaH
+  essentiality: UNKNOWN
+  role: Small single-pass membrane subunit present in bacterial aa3 cytochrome c oxidases
+    such as the Paracoccus complex.
+  evidence:
+  - reference: InterPro:IPR012422
+    notes: InterPro IPR012422 is the source-neutral entry for bacterial aa3-type cytochrome
+      c oxidase subunit IV.
+  - reference: PDB:1QLE
+    notes: RCSB maps PDB:1QLE polymer entity 4 to Paracoccus denitrificans cytochrome
+      c oxidase subunit 4, UniProtKB:P77921.
+canonical_examples:
+- taxon_id: NCBITaxon:266
+  taxon_label: Paracoccus denitrificans
+  note: Bacterial source of the four-subunit aa3 cytochrome c oxidase structure deposited
+    as PDB:1QLE.
+  reference: PDB:1QLE
+functions:
+- function_id: cytochrome_c_oxidase_activity
+  label: cytochrome-c oxidase activity
+  grounding: GO:0004129
+  description: Complex IV oxidizes reduced cytochrome c, reduces molecular oxygen
+    to water, and moves protons across the respiratory membrane.
+  evidence:
+  - reference: GO:0004129
+    notes: GO:0004129 defines the cytochrome-c oxidase reaction as cytochrome c oxidation
+      and oxygen reduction coupled to proton translocation.
+  - reference: DOI:10.1074/jbc.274.47.33296
+    notes: Harrenga and Michel 1999 solved the four-subunit Paracoccus denitrificans
+      cytochrome c oxidase structure deposited as PDB:1QLE.
+evidence:
+- reference: GO:0045277
+  notes: Gene Ontology cellular-component term for respiratory chain complex IV.
+- reference: GO:0098803
+  notes: Gene Ontology cellular-component term for respiratory-chain protein complexes.
+- reference: GO:0004129
+  notes: Gene Ontology molecular-function term for cytochrome-c oxidase activity.
+- reference: InterPro:IPR014241
+  notes: InterPro family for bacterial cytochrome c oxidase subunit I.
+- reference: InterPro:IPR045187
+  notes: InterPro family for cytochrome c/quinol oxidase subunit II.
+- reference: InterPro:IPR024791
+  notes: InterPro family for cytochrome c oxidase subunit III.
+- reference: InterPro:IPR012422
+  notes: InterPro entry for bacterial aa3-type cytochrome c oxidase subunit IV.
+- reference: DOI:10.1074/jbc.274.47.33296
+  notes: Harrenga and Michel 1999, The Cytochrome C Oxidase from Paracoccus Denitrificans
+    Does not Change the Metal Center Ligation Upon Reduction, Journal of Biological
+    Chemistry.
+- reference: PMID:10559205
+  notes: PubMed identifier for Harrenga and Michel 1999 as reported by the RCSB PDB:1QLE
+    primary citation.
+- reference: PDB:1QLE
+  notes: RCSB Protein Data Bank entry for the Paracoccus denitrificans four-subunit
+    cytochrome c oxidase structure from Harrenga and Michel 1999.
+causal_graphs:
+- graph_id: complex_iv_cytochrome_c_oxygen_coupling
+  title: Complex IV reduces oxygen with cytochrome c electrons
+  description: Respiratory complex IV oxidizes reduced cytochrome c, reduces oxygen
+    to water, and contributes to a proton motive force across the respiratory membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the GO-level cytochrome-c oxidase reaction and the
+    two catalytic core subunits without resolving heme a, heme a3, CuA, CuB, proton-channel,
+    or metal-ligation chemistry.
+  nodes:
+  - node_id: complex_iv
+    label: respiratory chain complex IV
+    node_type: STRUCTURE
+    grounding: GO:0045277
+  - node_id: reduced_cytochrome_c
+    label: reduced cytochrome c
+    node_type: GENE_OR_PROTEIN
+  - node_id: subunit_i
+    label: cytochrome c oxidase subunit I
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR014241
+    component_ref: cytochrome_c_oxidase_subunit_i
+  - node_id: subunit_ii
+    label: cytochrome c oxidase subunit II
+    node_type: GENE_OR_PROTEIN
+    component_ref: cytochrome_c_oxidase_subunit_ii
+  - node_id: oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+  - node_id: water
+    label: water
+    node_type: CHEMICAL
+  - node_id: proton_motive_force
+    label: transmembrane proton motive force
+    node_type: STATE
+  - node_id: cytochrome_c_oxidase_activity
+    label: cytochrome-c oxidase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004129
+  edges:
+  - subject: complex_iv
+    predicate: enables
+    object: cytochrome_c_oxidase_activity
+    description: Respiratory chain complex IV carries the cytochrome-c oxidase molecular
+      function.
+    evidence:
+    - reference: GO:0045277
+      notes: GO:0045277 defines complex IV as the respiratory chain cytochrome c oxidase
+        complex.
+  - subject: reduced_cytochrome_c
+    predicate: donates electrons to
+    object: cytochrome_c_oxidase_activity
+    description: Reduced cytochrome c is the electron donor oxidized by the complex
+      IV terminal oxidase reaction.
+    evidence:
+    - reference: GO:0004129
+      notes: GO:0004129 defines the reaction with reduced cytochrome c as the electron
+        donor.
+  - subject: subunit_i
+    predicate: contributes to
+    object: cytochrome_c_oxidase_activity
+    description: Subunit I is the catalytic core subunit of bacterial cytochrome c
+      oxidase.
+    evidence:
+    - reference: InterPro:IPR014241
+      notes: InterPro IPR014241 describes bacterial cytochrome c oxidase subunit I
+        as the catalytic subunit containing the heme-copper binuclear center.
+  - subject: subunit_ii
+    predicate: contributes to
+    object: cytochrome_c_oxidase_activity
+    description: Subunit II contributes the CuA electron-accepting side of the cytochrome
+      c oxidase core.
+    evidence:
+    - reference: InterPro:IPR045187
+      notes: InterPro IPR045187 describes cytochrome c oxidase subunit II as the copper-A-containing
+        subunit that transfers electrons from cytochrome c toward subunit I.
+  - subject: oxygen
+    predicate: accepts electrons in
+    object: cytochrome_c_oxidase_activity
+    description: Molecular oxygen is reduced during cytochrome-c oxidase activity.
+    evidence:
+    - reference: GO:0004129
+      notes: GO:0004129 records oxygen as the acceptor in the cytochrome-c oxidase
+        reaction.
+  - subject: cytochrome_c_oxidase_activity
+    predicate: produces
+    object: water
+    description: The terminal oxidase reaction reduces oxygen to water.
+    evidence:
+    - reference: GO:0004129
+      notes: GO:0004129 records water as the product of oxygen reduction by cytochrome-c
+        oxidase.
+  - subject: cytochrome_c_oxidase_activity
+    predicate: contributes to
+    object: proton_motive_force
+    description: Complex IV translocates protons while reducing oxygen, adding to
+      the respiratory proton motive force.
+    evidence:
+    - reference: GO:0004129
+      notes: GO:0004129 defines cytochrome-c oxidase activity as oxygen reduction
+        coupled to proton movement.
+discussions:
+- discussion_id: complex_iv_component_groundings
+  prompt: Resolve exact source-neutral families for cytochrome c oxidase subunits
+    II and III, and add lineage-specific mitochondrial, cbb3, ba3, and caa3 accessory
+    subunits without collapsing them into the Paracoccus aa3 four-subunit model.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cytochrome_c_oxidase_subunit_ii
+  - components#cytochrome_c_oxidase_subunit_iii
+  rationale: GO exactly grounds respiratory chain complex IV across mitochondrial
+    and bacterial cytochrome c oxidases, but the first component model is anchored
+    to the PDB:1QLE Paracoccus aa3 complex and should not invent exact family CURIEs
+    for subunits whose InterPro entries are broad or domain-only.
+  evidence:
+  - reference: PDB:1QLE
+    notes: PDB:1QLE resolves the four-subunit Paracoccus denitrificans aa3 cytochrome
+      c oxidase.
+  - reference: InterPro:IPR045187
+    notes: IPR045187 is a family that spans cytochrome c and quinol oxidase subunit
+      II proteins.
+  - reference: InterPro:IPR024791
+    notes: IPR024791 is a family that includes cytochrome c oxidase subunit III plus
+      quinol oxidase subunit III child families.
+  posed_by: codex
+  posed_date: '2026-09-24'
