@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/photosystem_i.yaml
+  slug: photosystem_i
+session:
+  id: 2026-09-24T014905Z-codex-87460b
+  timestamp: '2026-09-24T01:49:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1440
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomy
+  - evidence
+  summary: Addressed photosystem I review issue 1440
+  details: 'Addressed adversarial review issue #1440 by narrowing the Cyanobacteriota distribution
+    note in the GO:0009522 photosystem I record to the plastocyanin-to-ferredoxin electron-transfer
+    path supported by GO:0009522. Removed the uncited cytochrome c6 alternate-donor wording
+    and revalidated the record with just validate and just validate-strict.'

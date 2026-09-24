@@ -25,6 +25,12 @@ curation_history:
     function, GO/PubMed evidence, a PSI electron-transfer graph, and a component-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T01:48:37Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1440: removed an uncited cytochrome c6 alternate-donor claim from the
+    Cyanobacteriota distribution note.'
+  llm_assisted: true
 parent_structures:
 - GO:0009521
 components:
@@ -85,7 +91,7 @@ taxonomic_distribution:
   taxon_label: Cyanobacteriota
   presence: COMMON
   note: Cyanobacteria use PSI as a major photosynthetic-membrane complex that receives
-    electrons from plastocyanin or cytochrome c6 and passes them toward ferredoxin.
+    electrons from plastocyanin and passes them toward ferredoxin.
   reference: GO:0009522
 canonical_examples:
 - taxon_id: NCBITaxon:32046
