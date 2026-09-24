@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/dimeric_ribonuclease_p_complex.yaml
+  slug: dimeric_ribonuclease_p_complex
+session:
+  id: 2026-09-24T115103Z-codex-42e6c5
+  timestamp: '2026-09-24T11:51:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1483
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1484
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1482
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - causal_graphs
+  - evidence
+  - curation_history
+  summary: Address dimeric ribonuclease P review
+  details: 'Resolved PR #1482 review findings by deleting the over-broad NCBITaxon:2 Bacteria
+    COMMON taxonomic-distribution assertion and by adding GO:0030680 plus DOI:10.1038/nrmicro1491
+    evidence to the dimeric_rnase_p to trna_5_leader_removal graph edge so the edge is grounded
+    on the subject complex, not only on the biological-process label.'
