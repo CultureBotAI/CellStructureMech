@@ -1,0 +1,302 @@
+identifier: GO:0000172
+label: ribonuclease MRP complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: 'A ribonucleoprotein complex that contains an RNA molecule of the snoRNA
+  family, and cleaves the rRNA precursor as part of rRNA transcript processing. It
+  also has other roles: In S. cerevisiae it is involved in cell cycle-regulated degradation
+  of daughter cell-specific mRNAs, while in mammalian cells it also enters the mitochondria
+  and processes RNAs to create RNA primers for DNA replication.'
+definition_source: GO:0000172
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T12:13:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T12:15:30Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added RNase MRP synonymy, an endoribonuclease-complex parent, SO-grounded
+    RNase MRP RNA plus label-only shared and MRP-specific protein cohorts, budding-yeast
+    distribution, GO ribonuclease MRP and rRNA-cleavage functions, GO/SO/PubMed/DOI
+    evidence, a yeast RNA-cleavage graph and a component-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: RNase MRP complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000172
+- synonym_text: ribonuclease mitochondrial RNA processing complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000172
+parent_structures:
+- GO:1902555
+components:
+- component_id: rnase_mrp_rna
+  label: RNase MRP RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000385
+  gene_symbols:
+  - NME1
+  - RMRP
+  essentiality: ESSENTIAL
+  role: Catalytic and scaffold RNA molecule that distinguishes RNase MRP from RNase
+    P.
+  evidence:
+  - reference: GO:0000172
+    notes: GO:0000172 defines the ribonuclease MRP complex as a ribonucleoprotein
+      complex containing an RNA molecule of the snoRNA family.
+  - reference: SO:0000385
+    notes: SO:0000385 is the Sequence Ontology term for RNase MRP RNA.
+  - reference: DOI:10.1128/MCB.24.3.945-953.2004
+    notes: Gill et al. 2004 describe NME1 as the Saccharomyces cerevisiae gene for
+      MRP RNA.
+- component_id: shared_rnase_p_mrp_protein_subunits
+  label: shared RNase P/MRP protein subunits
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - POP1
+  - POP3
+  - POP4
+  - POP5
+  - POP6
+  - POP7
+  - POP8
+  - RPP1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The shared S. cerevisiae RNase P/MRP subunits are a heterogeneous
+    eight-protein cohort. No single exact InterPro, Pfam, NCBIfam, GO or Complex Portal
+    term was asserted for the source-neutral cohort in this pass.
+  role: Protein constituents shared by the yeast RNase MRP and nuclear RNase P ribonucleoproteins
+    that form the protein-rich eukaryotic catalytic architecture.
+  evidence:
+  - reference: DOI:10.1093/nar/gkm553
+    notes: Aspinall et al. 2007 analyzed all ten known S. cerevisiae RNase MRP protein
+      subunits and reported direct protein-protein and protein-RNA interactions among
+      them.
+  - reference: DOI:10.1261/rna.2214510
+    notes: Esakova and Krasilnikov 2010 reviewed the shared eukaryotic RNase P/MRP
+      proteins and the evolutionarily related RNase P/MRP architecture.
+- component_id: mrp_specific_protein_subunits
+  label: RNase MRP-specific protein subunits
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SNM1
+  - RMP1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Snm1p and Rmp1p were kept as a small S. cerevisiae RNase MRP-specific
+    protein cohort. No exact source-neutral family or complex CURIE was curated for
+    the pair in this pass.
+  role: Protein constituents that distinguish budding-yeast RNase MRP from the related
+    nuclear RNase P complex.
+  evidence:
+  - reference: DOI:10.1093/nar/gkm553
+    notes: Aspinall et al. 2007 describe Snm1p and Rmp1p as S. cerevisiae RNase MRP
+      protein subunits outside the eight proteins shared with RNase P.
+  - reference: DOI:10.1128/MCB.24.3.945-953.2004
+    notes: Gill et al. 2004 describe SNM1 as encoding an RNA-binding protein associated
+      with RNase MRP RNA but not RNase P RNA.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: The RNase MRP complex is directly evidenced in budding yeast; broader eukaryotic
+    distribution is left for follow-up curation.
+  reference: DOI:10.1093/nar/gkm553
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Model eukaryote in which RNase MRP NME1 RNA, Snm1p and shared RNase P/MRP
+    proteins have been studied as constituents of the RNase MRP ribonucleoprotein.
+  reference: DOI:10.1093/nar/gkm553
+functions:
+- function_id: ribonuclease_mrp_activity
+  label: ribonuclease MRP activity
+  grounding: GO:0000171
+  description: The ribonuclease MRP complex cleaves RNA substrates by a catalytic
+    RNA-mediated endoribonuclease mechanism.
+  evidence:
+  - reference: GO:0000171
+    notes: GO:0000171 is the Gene Ontology molecular-function term for ribonuclease
+      MRP activity.
+  - reference: DOI:10.1093/nar/gkm553
+    notes: Aspinall et al. 2007 studied yeast RNase MRP as an endonuclease complex
+      and mapped interactions between protein subunits, MRP RNA and pre-rRNA.
+- function_id: tricistronic_rrna_cleavage
+  label: endonucleolytic cleavage of tricistronic rRNA transcript (SSU-rRNA, 5.8S
+    rRNA, LSU-rRNA)
+  grounding: GO:0000479
+  description: Budding-yeast RNase MRP cleaves the internal transcribed spacer 1 of
+    pre-rRNA at the A3 site to promote formation of the mature 5-prime end of 5.8S
+    rRNA.
+  evidence:
+  - reference: GO:0000479
+    notes: GO:0000479 covers endonucleolytic cleavage of tricistronic rRNA transcripts
+      during rRNA processing.
+  - reference: DOI:10.1128/mcb.13.12.7935-7941.1993
+    notes: Schmitt and Clayton 1993 connected nuclear RNase MRP to pre-5.8S rRNA processing
+      in S. cerevisiae.
+  - reference: DOI:10.1073/pnas.91.2.659
+    notes: Chu et al. 1994 showed that the NME1-encoded RNase MRP RNA is required
+      for normal yeast rRNA processing.
+evidence:
+- reference: GO:0000172
+  notes: Gene Ontology cellular-component term for the ribonuclease MRP complex and
+    its exact synonyms.
+- reference: GO:1902555
+  notes: Gene Ontology cellular-component parent term for endoribonuclease complex.
+- reference: GO:0000171
+  notes: Gene Ontology molecular-function term for ribonuclease MRP activity.
+- reference: GO:0000479
+  notes: Gene Ontology biological-process term for endonucleolytic cleavage of tricistronic
+    rRNA transcript.
+- reference: SO:0000385
+  notes: Sequence Ontology term for RNase MRP RNA.
+- reference: DOI:10.1093/nar/gkm553
+  notes: Aspinall et al. 2007, Interactions between subunits of Saccharomyces cerevisiae
+    RNase MRP support a conserved eukaryotic RNase P/MRP architecture, Nucleic Acids
+    Research.
+- reference: DOI:10.1261/rna.2214510
+  notes: 'Esakova and Krasilnikov 2010, Of proteins and RNA: the RNase P/MRP family,
+    RNA.'
+- reference: DOI:10.1128/mcb.13.12.7935-7941.1993
+  notes: Schmitt and Clayton 1993, Nuclear RNase MRP is required for correct processing
+    of pre-5.8S rRNA in Saccharomyces cerevisiae, Molecular and Cellular Biology.
+- reference: DOI:10.1073/pnas.91.2.659
+  notes: Chu et al. 1994, The RNA of RNase MRP is required for normal processing of
+    ribosomal RNA, Proceedings of the National Academy of Sciences.
+- reference: DOI:10.1128/MCB.24.3.945-953.2004
+  notes: Gill et al. 2004, RNase MRP cleaves the CLB2 mRNA to promote cell cycle progression,
+    Molecular and Cellular Biology.
+causal_graphs:
+- graph_id: yeast_rnase_mrp_rna_cleavage
+  title: Yeast RNase MRP cleaves pre-rRNA and CLB2 mRNA
+  description: In Saccharomyces cerevisiae, MRP RNA assembles with shared RNase P/MRP
+    proteins and MRP-specific proteins into an RNase MRP ribonucleoprotein that cleaves
+    pre-rRNA and CLB2 mRNA substrates.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the S. cerevisiae RNase MRP composition and two
+    supported RNA-cleavage outputs without modeling the full eukaryotic component
+    inventory, subunit copy numbers, substrate-recognition geometry or mammalian mitochondrial
+    substrates.
+  nodes:
+  - node_id: rnase_mrp_rna
+    label: RNase MRP RNA
+    node_type: RNA
+    component_ref: rnase_mrp_rna
+    grounding: SO:0000385
+  - node_id: shared_rnase_p_mrp_protein_subunits
+    label: shared RNase P/MRP protein subunits
+    node_type: GENE_OR_PROTEIN
+    component_ref: shared_rnase_p_mrp_protein_subunits
+  - node_id: mrp_specific_protein_subunits
+    label: RNase MRP-specific protein subunits
+    node_type: GENE_OR_PROTEIN
+    component_ref: mrp_specific_protein_subunits
+  - node_id: ribonuclease_mrp_complex
+    label: ribonuclease MRP complex
+    node_type: STRUCTURE
+    grounding: GO:0000172
+  - node_id: ribonuclease_mrp_activity
+    label: ribonuclease MRP activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0000171
+  - node_id: pre_rrna
+    label: pre-rRNA
+    node_type: RNA
+  - node_id: clb2_mrna
+    label: CLB2 mRNA
+    node_type: RNA
+  - node_id: tricistronic_rrna_cleavage
+    label: endonucleolytic cleavage of tricistronic rRNA transcript (SSU-rRNA, 5.8S
+      rRNA, LSU-rRNA)
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000479
+  edges:
+  - subject: rnase_mrp_rna
+    predicate: assembles with
+    object: shared_rnase_p_mrp_protein_subunits
+    description: The MRP RNA and the shared RNase P/MRP protein cohort are constituent
+      parts of yeast RNase MRP.
+    evidence:
+    - reference: DOI:10.1093/nar/gkm553
+      notes: Aspinall et al. 2007 mapped direct interactions among the yeast RNase
+        MRP proteins and MRP RNA.
+  - subject: mrp_specific_protein_subunits
+    predicate: assembles with
+    object: rnase_mrp_rna
+    description: Snm1p and Rmp1p are budding-yeast RNase MRP protein constituents
+      associated with MRP RNA and Snm1p.
+    evidence:
+    - reference: DOI:10.1093/nar/gkm553
+      notes: Aspinall et al. 2007 confirmed Rmp1p as an integral S. cerevisiae RNase
+        MRP subunit and analyzed its interactions with Snm1p and MRP RNA.
+  - subject: rnase_mrp_rna
+    predicate: contributes to
+    object: ribonuclease_mrp_activity
+    description: The RNase MRP RNA is the distinguishing RNA component of the RNase
+      MRP endoribonuclease.
+    evidence:
+    - reference: GO:0000172
+      notes: GO:0000172 defines the complex as an RNA-containing ribonucleoprotein.
+    - reference: DOI:10.1261/rna.2214510
+      notes: Esakova and Krasilnikov 2010 reviewed eukaryotic RNase P/MRP RNA components
+        as the ribonucleoprotein catalytic cores.
+  - subject: ribonuclease_mrp_complex
+    predicate: cleaves
+    object: pre_rrna
+    description: Yeast RNase MRP cleaves pre-rRNA in internal transcribed spacer 1
+      at the A3 site.
+    evidence:
+    - reference: DOI:10.1128/mcb.13.12.7935-7941.1993
+      notes: Schmitt and Clayton 1993 implicated nuclear RNase MRP in pre-5.8S rRNA
+        processing.
+    - reference: DOI:10.1073/pnas.91.2.659
+      notes: Chu et al. 1994 connected the NME1 RNase MRP RNA to normal ribosomal
+        RNA processing.
+  - subject: ribonuclease_mrp_complex
+    predicate: cleaves
+    object: clb2_mrna
+    description: Yeast RNase MRP cleaves the 5-prime UTR of CLB2 mRNA to promote its
+      degradation.
+    evidence:
+    - reference: DOI:10.1128/MCB.24.3.945-953.2004
+      notes: Gill et al. 2004 assayed RNase MRP-dependent CLB2 mRNA cleavage in vitro
+        and in vivo.
+  - subject: ribonuclease_mrp_complex
+    predicate: supports
+    object: tricistronic_rrna_cleavage
+    description: Pre-rRNA cleavage by RNase MRP contributes to mature 5.8S rRNA biogenesis.
+    evidence:
+    - reference: GO:0000479
+      notes: GO:0000479 covers endonucleolytic cleavage of the eukaryotic tricistronic
+        rRNA precursor.
+    - reference: DOI:10.1128/mcb.13.12.7935-7941.1993
+      notes: Schmitt and Clayton 1993 showed that nuclear RNase MRP is required for
+        correct pre-5.8S rRNA processing in S. cerevisiae.
+discussions:
+- discussion_id: resolve_rnase_mrp_protein_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, NCBIfam, GO or Complex Portal
+    groundings for individual RNase MRP protein families; decide whether Snm1p and
+    Rmp1p should remain a yeast-specific cohort or be split.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#shared_rnase_p_mrp_protein_subunits
+  - components#mrp_specific_protein_subunits
+  rationale: The initial GO:0000172 record captures the MRP RNA, the eight budding-yeast
+    proteins shared with nuclear RNase P and the Snm1p/Rmp1p MRP-specific proteins
+    at cohort granularity. Exact family boundaries and cross-eukaryotic orthology
+    should be resolved before assigning protein groundings.
+  evidence:
+  - reference: DOI:10.1093/nar/gkm553
+  - reference: DOI:10.1261/rna.2214510
+  posed_by: codex
+  posed_date: '2026-09-24'

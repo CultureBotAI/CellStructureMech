@@ -4293,6 +4293,15 @@
   "definition": "A focus in the cytoplasm where mRNAs may become inactivated by decapping or some other mechanism. Protein and RNA localized to these foci are involved in mRNA degradation, nonsense-mediated mRNA decay (NMD), translational repression, and RNA-mediated gene silencing."
  },
  {
+  "identifier": "GO:0000172",
+  "label": "ribonuclease MRP complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/ribonuclease_mrp_complex.html",
+  "definition": "A ribonucleoprotein complex that contains an RNA molecule of the snoRNA family, and cleaves the rRNA precursor as part of rRNA transcript processing. It also has other roles: In S. cerevisiae it is involved in cell cycle-regulated degradation of daughter cell-specific mRNAs, while in mammalian cells it also enters the mitochondria and processes RNAs to create RNA primers for DNA replication."
+ },
+ {
   "identifier": "GO:0005840",
   "label": "ribosome",
   "category": "RIBONUCLEOPROTEIN",

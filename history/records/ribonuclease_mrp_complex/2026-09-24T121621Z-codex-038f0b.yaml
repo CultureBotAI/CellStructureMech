@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/ribonuclease_mrp_complex.yaml
+  slug: ribonuclease_mrp_complex
+session:
+  id: 2026-09-24T121621Z-codex-038f0b
+  timestamp: '2026-09-24T12:16:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ribonuclease MRP complex record
+  details: Added a GO:0000172 ribonuclease MRP complex record with GO and SO identity checks,
+    budding-yeast RNase MRP RNA and protein-cohort components, Saccharomyces cerevisiae distribution,
+    ribonuclease MRP and pre-rRNA cleavage functions, PubMed/DOI-backed evidence, a nonmechanistic
+    RNA-cleavage causal graph, and a follow-up TODO for exact protein-family groundings.
