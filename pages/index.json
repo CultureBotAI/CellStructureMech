@@ -1044,6 +1044,15 @@
   "definition": "A purple-bacterial chromatophore membrane protein complex that contains a photochemical reaction center, LH1 antenna proteins and PufX, receives excitation from surrounding LH2 antennae, and reduces quinone during cyclic photosynthetic electron transport."
  },
  {
+  "identifier": "GO:0045271",
+  "label": "respiratory chain complex I",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/respiratory_chain_complex_i.html",
+  "definition": "Respiratory chain complex I is an L-shaped enzyme of the respiratory chain that oxidizes NADH, routes electrons through a hydrophilic peripheral arm to quinone, and couples quinone reduction to proton translocation through a membrane arm."
+ },
+ {
   "identifier": "GO:0016471",
   "label": "vacuolar proton-transporting V-type ATPase complex",
   "category": "ENERGY_COMPLEX",

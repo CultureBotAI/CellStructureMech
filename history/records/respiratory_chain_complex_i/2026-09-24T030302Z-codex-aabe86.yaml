@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/respiratory_chain_complex_i.yaml
+  slug: respiratory_chain_complex_i
+session:
+  id: 2026-09-24T030302Z-codex-aabe86
+  timestamp: '2026-09-24T03:03:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1444
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1443
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  - curation_history
+  summary: Narrow respiratory chain complex I review edges
+  details: 'Addressed review issue #1444 by replacing GO-only evidence on the NADH-to-peripheral-arm
+    graph edge with Baradaran et al. 2013 structural evidence, weakening the peripheral-arm-to-quinone
+    edge predicate to avoid claiming complete reduction of the membrane quinone pool, and
+    rewriting the quinone-coupling edge so NADH:ubiquinone oxidoreductase activity is coupled
+    to the membrane arm rather than modeling free quinone as the causal actor.'

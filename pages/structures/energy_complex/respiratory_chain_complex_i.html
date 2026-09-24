@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>respiratory chain complex I · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>respiratory chain complex I</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0045271"><code>GO:0045271</code></a> · ENERGY_COMPLEX · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">Respiratory chain complex I is an L-shaped enzyme of the respiratory chain that oxidizes NADH, routes electrons through a hydrophilic peripheral arm to quinone, and couples quinone reduction to proton translocation through a membrane arm. <small>[<a href="http://purl.obolibrary.org/obo/GO_0045271"><code>GO:0045271</code></a>]</small></p>
+<p><strong>Synonyms:</strong> NADH dehydrogenase (ubiquinone) complex; NADH-Q oxidoreductase complex</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-peripheral_electron_transfer_arm"><td>peripheral electron-transfer arm</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Hydrophilic arm that binds the NADH-oxidizing module and an iron-sulfur relay, accepting electrons for delivery toward the quinone site.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0045271"><code>GO:0045271</code></a> <small>GO:0045271 defines complex I as an L-shaped respiratory-chain enzyme with an arm that projects from the membrane and receives NADH-derived electrons.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/23417064"><code>PMID:23417064</code></a> <small>Baradaran et al. 2013 resolved the Thermus thermophilus complex I structure, including the hydrophilic electron-transfer domain and its iron-sulfur clusters.</small></li></ul></td></tr>
+<tr id="components-membrane_proton_pumping_arm"><td>membrane proton-pumping arm</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Membrane-embedded antiporter-like arm that converts quinone-site redox chemistry into proton translocation across the membrane.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0045271"><code>GO:0045271</code></a> <small>GO:0045271 defines respiratory complex I as L-shaped, with one arm lying in the membrane.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/23417064"><code>PMID:23417064</code></a> <small>Baradaran et al. 2013 resolved the T. thermophilus membrane arm and described antiporter-like domains linked to proton translocation.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_274"><code>NCBITaxon:274</code></a> <em>Thermus thermophilus</em> — Thermophilic bacterium used by Baradaran et al. to solve the 3.3 A crystal structure of the entire respiratory complex I. [<a href="https://pubmed.ncbi.nlm.nih.gov/23417064"><code>PMID:23417064</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>NADH dehydrogenase (ubiquinone) activity</strong> <a href="http://purl.obolibrary.org/obo/GO_0008137"><code>GO:0008137</code></a> — Complex I oxidizes NADH, passes electrons through its peripheral arm to the quinone site, reduces quinone, and couples that redox reaction to proton translocation by the membrane arm.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0008137"><code>GO:0008137</code></a> <small>GO:0008137 defines the complex I molecular function as NADH-dependent ubiquinone reduction coupled to proton translocation.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/23417064"><code>PMID:23417064</code></a> <small>Baradaran et al. 2013 connected the intact bacterial complex I structure to electron transfer, quinone reduction, and coupled proton translocation.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-complex_i_nadh_quinone_proton_coupling">Complex I couples NADH oxidation to proton pumping <small>(FUNCTION)</small></h3>
+<p>Respiratory complex I uses a peripheral electron-transfer arm to route NADH-derived electrons to quinone and a membrane arm to couple quinone reduction to proton translocation.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>NADH</td><td>donates electrons to</td><td>peripheral electron-transfer arm</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/23417064"><code>PMID:23417064</code></a> <small>Baradaran et al. 2013 resolved the hydrophilic electron-transfer domain and iron-sulfur relay in the intact Thermus thermophilus complex I structure.</small></li></ul></td></tr>
+<tr><td>peripheral electron-transfer arm</td><td>feeds electrons toward</td><td>quinone pool</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/23417064"><code>PMID:23417064</code></a> <small>Baradaran et al. 2013 resolved the complete bacterial electron-transfer route leading toward the enclosed quinone-binding chamber.</small></li></ul></td></tr>
+<tr><td>NADH dehydrogenase (ubiquinone) activity</td><td>couples quinone reduction to</td><td>membrane proton-pumping arm</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/23417064"><code>PMID:23417064</code></a> <small>Baradaran et al. 2013 proposed that redox energy from quinone reduction drives long-range conformational changes in antiporter-like membrane domains.</small></li></ul></td></tr>
+<tr><td>membrane proton-pumping arm</td><td>contributes to</td><td>transmembrane proton motive force</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/23417064"><code>PMID:23417064</code></a> <small>Baradaran et al. 2013 resolved the antiporter-like membrane-arm domains and proposed that long-range conformational changes in those domains drive proton translocation.</small></li></ul></td></tr>
+<tr><td>membrane proton-pumping arm</td><td>contributes to</td><td>NADH dehydrogenase (ubiquinone) activity</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/23417064"><code>PMID:23417064</code></a> <small>Baradaran et al. 2013 resolved the intact enzyme that couples NADH:ubiquinone electron transfer to proton translocation.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for the conserved Nuo/Nqo NADH-dehydrogenase, iron-sulfur, quinone-site and antiporter-like complex I subfamilies before replacing arm-level reviewed-label-only components. <small>GO exactly grounds the complete respiratory chain complex I, but a first generic record should not collapse bacterial Nuo/Nqo subunits, core mitochondrial homologs, iron-sulfur proteins, and accessory eukaryotic subunits into unsupported protein-family rows.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0045271"><code>GO:0045271</code></a> <small>Gene Ontology cellular-component term for respiratory chain complex I.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0098803"><code>GO:0098803</code></a> <small>Gene Ontology cellular-component term for respiratory-chain protein complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0008137"><code>GO:0008137</code></a> <small>Gene Ontology molecular-function term for NADH dehydrogenase (ubiquinone) activity.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/23417064"><code>PMID:23417064</code></a> <small>Baradaran et al. 2013, Crystal structure of the entire respiratory complex I, Nature.</small></li><li><a href="https://www.rcsb.org/structure/4HEA"><code>PDB:4HEA</code></a> <small>RCSB Protein Data Bank entry for the complete Thermus thermophilus respiratory complex I structure reported by Baradaran et al.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-24T02:49:13Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-24T02:49:58Z</code> codex · EXPANDED_RECORD — Added GO respiratory-chain parentage, GO synonymy, reviewed-label-only complex I arm components, a Thermus structural example, NADH:ubiquinone activity evidence, a compact complex I coupling graph, and a component-grounding TODO.</li><li><code>2026-09-24T02:52:35Z</code> codex · REVISED_GRAPH — Retyped the NADH dehydrogenase ubiquinone activity graph node from BIOLOGICAL_PROCESS to MOLECULAR_FUNCTION to match GO:0008137.</li><li><code>2026-09-24T03:02:34Z</code> codex · ADDRESS_REVIEW — #1444: narrowed the NADH-to-peripheral-arm edge evidence to Baradaran et al. 2013 and rewrote quinone coupling so the NADH:ubiquinone molecular function, not free quinone, drives the membrane-arm edge.</li><li><code>2026-09-24T03:20:19Z</code> codex · ADDRESS_REVIEW — #1445/#1446: generalized the definition to remove mitochondrial matrix wording and cited Baradaran et al. 2013 on the membrane-arm proton-pumping edge.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/energy_complex/respiratory_chain_complex_i.yaml"><code>data/structures/energy_complex/respiratory_chain_complex_i.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
