@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/respiratory_chain_complex_i.yaml
+  slug: respiratory_chain_complex_i
+session:
+  id: 2026-09-24T025048Z-codex-075755
+  timestamp: '2026-09-24T02:50:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added GO:0045271 respiratory chain complex I
+  details: Added the GO:0045271 respiratory chain complex I ENERGY_COMPLEX record with GO:0098803
+    parentage, exact GO synonymy, reviewed-label-only arm components for the peripheral electron-transfer
+    arm and the membrane proton-pumping arm, a Thermus thermophilus structural example from
+    PMID:23417064 and PDB:4HEA, NADH dehydrogenase ubiquinone activity evidence, a compact
+    complex I proton-coupling graph, and an open component-grounding TODO. Verified the new
+    record with just validate and just validate-strict before writing this history entry.

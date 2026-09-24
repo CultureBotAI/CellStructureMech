@@ -1,0 +1,208 @@
+identifier: GO:0045271
+label: respiratory chain complex I
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Respiratory chain complex I is an enzyme of the respiratory chain. It
+  consists of several polypeptide chains and is L-shaped, with a horizontal arm lying
+  in the membrane and a vertical arm that projects into the matrix. The electrons
+  of NADH enter the chain at this complex.
+definition_source: GO:0045271
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T02:49:13Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T02:49:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO respiratory-chain parentage, GO synonymy, reviewed-label-only
+    complex I arm components, a Thermus structural example, NADH:ubiquinone activity
+    evidence, a compact complex I coupling graph, and a component-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T02:52:35Z'
+  curator: codex
+  action: REVISED_GRAPH
+  changes: Retyped the NADH dehydrogenase ubiquinone activity graph node from BIOLOGICAL_PROCESS
+    to MOLECULAR_FUNCTION to match GO:0008137.
+  llm_assisted: true
+synonyms:
+- synonym_text: NADH dehydrogenase (ubiquinone) complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0045271
+- synonym_text: NADH-Q oxidoreductase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0045271
+parent_structures:
+- GO:0098803
+components:
+- component_id: peripheral_electron_transfer_arm
+  label: peripheral electron-transfer arm
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  role: Hydrophilic arm that binds the NADH-oxidizing module and an iron-sulfur relay,
+    accepting electrons for delivery toward the quinone site.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral GO, Complex Portal, InterPro, Pfam, or
+    NCBIfam CURIE was verified for the complete soluble electron-transfer arm without
+    collapsing bacterial Nuo/Nqo and mitochondrial conserved core nomenclature.
+  essentiality: ESSENTIAL
+  evidence:
+  - reference: GO:0045271
+    notes: GO:0045271 defines complex I as an L-shaped respiratory-chain enzyme with
+      an arm that projects from the membrane and receives NADH-derived electrons.
+  - reference: PMID:23417064
+    notes: Baradaran et al. 2013 resolved the Thermus thermophilus complex I structure,
+      including the hydrophilic electron-transfer domain and its iron-sulfur clusters.
+- component_id: membrane_proton_pumping_arm
+  label: membrane proton-pumping arm
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  role: Membrane-embedded antiporter-like arm that converts quinone-site redox chemistry
+    into proton translocation across the membrane.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This row denotes the complete membrane arm shared by bacterial
+    and mitochondrial complex I enzymes; no exact source-neutral family CURIE was
+    curated for that multi-subunit arm.
+  essentiality: ESSENTIAL
+  evidence:
+  - reference: GO:0045271
+    notes: GO:0045271 defines respiratory complex I as L-shaped, with one arm lying
+      in the membrane.
+  - reference: PMID:23417064
+    notes: Baradaran et al. 2013 resolved the T. thermophilus membrane arm and described
+      antiporter-like domains linked to proton translocation.
+canonical_examples:
+- taxon_id: NCBITaxon:274
+  taxon_label: Thermus thermophilus
+  note: Thermophilic bacterium used by Baradaran et al. to solve the 3.3 A crystal
+    structure of the entire respiratory complex I.
+  reference: PMID:23417064
+functions:
+- function_id: nadh_ubiquinone_oxidoreductase
+  label: NADH dehydrogenase (ubiquinone) activity
+  grounding: GO:0008137
+  description: Complex I oxidizes NADH, passes electrons through its peripheral arm
+    to the quinone site, reduces quinone, and couples that redox reaction to proton
+    translocation by the membrane arm.
+  evidence:
+  - reference: GO:0008137
+    notes: GO:0008137 defines the complex I molecular function as NADH-dependent ubiquinone
+      reduction coupled to proton translocation.
+  - reference: PMID:23417064
+    notes: Baradaran et al. 2013 connected the intact bacterial complex I structure
+      to electron transfer, quinone reduction, and coupled proton translocation.
+evidence:
+- reference: GO:0045271
+  notes: Gene Ontology cellular-component term for respiratory chain complex I.
+- reference: GO:0098803
+  notes: Gene Ontology cellular-component term for respiratory-chain protein complexes.
+- reference: GO:0008137
+  notes: Gene Ontology molecular-function term for NADH dehydrogenase (ubiquinone)
+    activity.
+- reference: PMID:23417064
+  notes: Baradaran et al. 2013, Crystal structure of the entire respiratory complex
+    I, Nature.
+- reference: PDB:4HEA
+  notes: RCSB Protein Data Bank entry for the complete Thermus thermophilus respiratory
+    complex I structure reported by Baradaran et al.
+causal_graphs:
+- graph_id: complex_i_nadh_quinone_proton_coupling
+  title: Complex I couples NADH oxidation to proton pumping
+  description: Respiratory complex I uses a peripheral electron-transfer arm to route
+    NADH-derived electrons to quinone and a membrane arm to couple quinone reduction
+    to proton translocation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the NADH-to-quinone and proton-coupling layout without
+    resolving individual Nuo/Nqo subunits, iron-sulfur centers, quinone-channel conformational
+    changes, or accessory mitochondrial subunits.
+  nodes:
+  - node_id: nadh
+    label: NADH
+    node_type: CHEMICAL
+  - node_id: peripheral_arm
+    label: peripheral electron-transfer arm
+    node_type: GENE_OR_PROTEIN
+    component_ref: peripheral_electron_transfer_arm
+  - node_id: quinone_pool
+    label: quinone pool
+    node_type: CHEMICAL
+    description: Membrane quinone/quinol carriers reduced by complex I.
+  - node_id: membrane_arm
+    label: membrane proton-pumping arm
+    node_type: GENE_OR_PROTEIN
+    component_ref: membrane_proton_pumping_arm
+  - node_id: proton_gradient
+    label: transmembrane proton motive force
+    node_type: STATE
+  - node_id: nadh_ubiquinone_activity
+    label: NADH dehydrogenase (ubiquinone) activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008137
+  edges:
+  - subject: nadh
+    predicate: donates electrons to
+    object: peripheral_arm
+    description: NADH-derived electrons enter the complex I peripheral arm before
+      passing through its internal redox cofactors.
+    evidence:
+    - reference: GO:0045271
+      notes: GO:0045271 defines respiratory complex I as the respiratory-chain complex
+        where electrons of NADH enter.
+  - subject: peripheral_arm
+    predicate: reduces
+    object: quinone_pool
+    description: Electrons move through iron-sulfur cofactors in the peripheral arm
+      toward a quinone-binding chamber.
+    evidence:
+    - reference: PMID:23417064
+      notes: Baradaran et al. 2013 resolved the complete bacterial electron-transfer
+        route to the quinone-binding site.
+  - subject: quinone_pool
+    predicate: activates proton pumping by
+    object: membrane_arm
+    description: Quinone reduction is coupled across the L-shaped enzyme to proton-translocation
+      pathways in the membrane arm.
+    evidence:
+    - reference: PMID:23417064
+      notes: Baradaran et al. 2013 proposed that redox energy from quinone reduction
+        drives long-range conformational changes in antiporter-like membrane domains.
+  - subject: membrane_arm
+    predicate: contributes to
+    object: proton_gradient
+    description: The membrane arm translocates protons while complex I reduces quinone,
+      adding to the respiratory proton motive force.
+    evidence:
+    - reference: GO:0008137
+      notes: GO:0008137 defines ubiquinone reduction by complex I as coupled to vectorial
+        proton translocation.
+  - subject: membrane_arm
+    predicate: contributes to
+    object: nadh_ubiquinone_activity
+    description: The proton-pumping membrane arm is the membrane-coupling sector of
+      the NADH:quinone oxidoreductase.
+    evidence:
+    - reference: PMID:23417064
+      notes: Baradaran et al. 2013 resolved the intact enzyme that couples NADH:ubiquinone
+        electron transfer to proton translocation.
+discussions:
+- discussion_id: complex_i_component_groundings
+  prompt: Resolve exact source-neutral groundings for the conserved Nuo/Nqo NADH-dehydrogenase,
+    iron-sulfur, quinone-site and antiporter-like complex I subfamilies before replacing
+    arm-level reviewed-label-only components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#peripheral_electron_transfer_arm
+  - components#membrane_proton_pumping_arm
+  rationale: GO exactly grounds the complete respiratory chain complex I, but a first
+    generic record should not collapse bacterial Nuo/Nqo subunits, core mitochondrial
+    homologs, iron-sulfur proteins, and accessory eukaryotic subunits into unsupported
+    protein-family rows.
+  evidence:
+  - reference: PMID:23417064
+    notes: Baradaran et al. 2013 resolved one 16-subunit bacterial complex I composition.
+  posed_by: codex
+  posed_date: '2026-09-24'
