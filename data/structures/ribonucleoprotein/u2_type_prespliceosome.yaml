@@ -1,0 +1,145 @@
+identifier: GO:0071004
+label: U2-type prespliceosome
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A spliceosomal complex that is formed by association of the 5' splice
+  site with the U1 snRNP, while the branch point sequence is recognized by the U2
+  snRNP. The prespliceosome includes many proteins in addition to those found in the
+  U1 and U2 snRNPs. Commitment to a given pair of 5' and 3' splice sites occurs at
+  the time of prespliceosome formation.
+definition_source: GO:0071004
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T18:26:07Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T18:26:50Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, prespliceosome and U2-type parentage, GO-grounded U1
+    and U2 snRNP components, a minimal snRNP assembly graph and a protein-component
+    grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T18:37:38Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1515: replaced narrow A-complex wording with generic prespliceosome wording.'
+  llm_assisted: true
+synonyms:
+- synonym_text: major prespliceosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071004
+- synonym_text: GT-AG prespliceosome
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071004
+- synonym_text: mammalian U2-type spliceosomal complex A
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071004
+- synonym_text: yeast U2-type spliceosomal complex B
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071004
+parent_structures:
+- GO:0071010
+- GO:0005684
+components:
+- component_id: u1_snrnp
+  label: U1 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005685
+  role: Small nuclear ribonucleoprotein associated with the 5-prime splice site in
+    the U2-type prespliceosome.
+  evidence:
+  - reference: GO:0071004
+    notes: GO:0071004 defines the U2-type prespliceosome as formed by association
+      of the 5-prime splice site with U1 snRNP.
+  - reference: GO:0005685
+    notes: GO:0005685 is the Gene Ontology cellular-component term for the U1 snRNP.
+- component_id: u2_snrnp
+  label: U2 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005686
+  role: Small nuclear ribonucleoprotein that recognizes the branch point sequence
+    in the U2-type prespliceosome.
+  evidence:
+  - reference: GO:0071004
+    notes: GO:0071004 defines the U2-type prespliceosome by branch-point-sequence
+      recognition by the U2 snRNP.
+  - reference: GO:0005686
+    notes: GO:0005686 is the Gene Ontology cellular-component term for the U2 snRNP.
+evidence:
+- reference: GO:0071004
+  notes: Gene Ontology cellular-component term for the U2-type prespliceosome and
+    its GO synonyms.
+- reference: GO:0071010
+  notes: Gene Ontology cellular-component parent term for prespliceosome.
+- reference: GO:0005684
+  notes: Gene Ontology cellular-component parent term for U2-type spliceosomal complex.
+- reference: GO:0005685
+  notes: Gene Ontology cellular-component term for the U1 snRNP.
+- reference: GO:0005686
+  notes: Gene Ontology cellular-component term for the U2 snRNP.
+causal_graphs:
+- graph_id: u2_type_prespliceosome_snRNP_assembly
+  title: U1 and U2 snRNPs define the U2-type prespliceosome
+  description: The U2-type prespliceosome forms when U1 snRNP associates with the
+    5-prime splice site while U2 snRNP recognizes the branch-point sequence.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined U1 and U2 snRNP subcomplexes
+    without modeling pre-mRNA splice-site RNA nodes or additional prespliceosome protein-family
+    boundaries.
+  nodes:
+  - node_id: u1_snrnp
+    label: U1 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005685
+    component_ref: u1_snrnp
+  - node_id: u2_snrnp
+    label: U2 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005686
+    component_ref: u2_snrnp
+  - node_id: u2_type_prespliceosome
+    label: U2-type prespliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071004
+  edges:
+  - subject: u1_snrnp
+    predicate: associates with splice site in
+    object: u2_type_prespliceosome
+    description: The U1 snRNP is associated with the 5-prime splice site in the U2-type
+      prespliceosome.
+    evidence:
+    - reference: GO:0071004
+      notes: GO:0071004 defines this prespliceosome by 5-prime splice-site association
+        with U1 snRNP.
+  - subject: u2_snrnp
+    predicate: recognizes branch point in
+    object: u2_type_prespliceosome
+    description: The U2 snRNP recognizes the branch-point sequence in the U2-type
+      prespliceosome.
+    evidence:
+    - reference: GO:0071004
+      notes: GO:0071004 defines this prespliceosome by branch-point-sequence recognition
+        by U2 snRNP.
+discussions:
+- discussion_id: resolve_prespliceosome_protein_components
+  prompt: Resolve exact source-neutral component boundaries for U2-type prespliceosome
+    proteins beyond the GO-defined U1 and U2 snRNP subcomplexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u1_snrnp
+  - components#u2_snrnp
+  - causal_graphs#u2_type_prespliceosome_snRNP_assembly
+  rationale: The first GO:0071004 record captures the defining U1 and U2 snRNP subcomplexes.
+    Additional prespliceosome proteins should be resolved into exact source-neutral
+    families or subcomplexes before expanding the component list.
+  evidence:
+  - reference: GO:0071004
+  posed_by: codex
+  posed_date: '2026-09-24'

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u2_type_prespliceosome.yaml
+  slug: u2_type_prespliceosome
+session:
+  id: 2026-09-24T182720Z-claude-code-6ac20d
+  timestamp: '2026-09-24T18:27:20Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add U2-type prespliceosome
+  details: Added a new GO:0071004 U2-type prespliceosome record with GO exact and narrow synonyms;
+    GO:0071010 and GO:0005684 parentage; GO-grounded U1 and U2 snRNP components; a conservative
+    U1/U2 snRNP assembly graph; and a curation TODO for unresolved prespliceosome protein-family
+    component boundaries. Validated the new record with targeted LinkML closed-schema and
+    validate_strict gates.
