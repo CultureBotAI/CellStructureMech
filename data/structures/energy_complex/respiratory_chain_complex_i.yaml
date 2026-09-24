@@ -2,10 +2,9 @@ identifier: GO:0045271
 label: respiratory chain complex I
 structure_category: ENERGY_COMPLEX
 structure_kind: MULTIPROTEIN_COMPLEX
-definition: Respiratory chain complex I is an enzyme of the respiratory chain. It
-  consists of several polypeptide chains and is L-shaped, with a horizontal arm lying
-  in the membrane and a vertical arm that projects into the matrix. The electrons
-  of NADH enter the chain at this complex.
+definition: Respiratory chain complex I is an L-shaped enzyme of the respiratory chain
+  that oxidizes NADH, routes electrons through a hydrophilic peripheral arm to quinone,
+  and couples quinone reduction to proton translocation through a membrane arm.
 definition_source: GO:0045271
 mapping_status: PROPOSED
 curation_history:
@@ -33,6 +32,12 @@ curation_history:
   changes: '#1444: narrowed the NADH-to-peripheral-arm edge evidence to Baradaran
     et al. 2013 and rewrote quinone coupling so the NADH:ubiquinone molecular function,
     not free quinone, drives the membrane-arm edge.'
+  llm_assisted: true
+- timestamp: '2026-09-24T03:20:19Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1445/#1446: generalized the definition to remove mitochondrial matrix
+    wording and cited Baradaran et al. 2013 on the membrane-arm proton-pumping edge.'
   llm_assisted: true
 synonyms:
 - synonym_text: NADH dehydrogenase (ubiquinone) complex
@@ -182,8 +187,9 @@ causal_graphs:
     description: The membrane arm translocates protons while complex I reduces quinone,
       adding to the respiratory proton motive force.
     evidence:
-    - reference: GO:0008137
-      notes: GO:0008137 defines ubiquinone reduction by complex I as coupled to vectorial
+    - reference: PMID:23417064
+      notes: Baradaran et al. 2013 resolved the antiporter-like membrane-arm domains
+        and proposed that long-range conformational changes in those domains drive
         proton translocation.
   - subject: membrane_arm
     predicate: contributes to

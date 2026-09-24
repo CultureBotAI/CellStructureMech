@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/respiratory_chain_complex_i.yaml
+  slug: respiratory_chain_complex_i
+session:
+  id: 2026-09-24T032031Z-codex-074f62
+  timestamp: '2026-09-24T03:20:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1445
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1446
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1443
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - causal_graphs
+  - evidence
+  - curation_history
+  summary: Generalize respiratory chain complex I review evidence
+  details: 'Addressed review issues #1445 and #1446 by replacing mitochondrion-specific matrix
+    wording in the GO:0045271 definition with a generic L-shaped complex I description and
+    by switching the membrane-arm-to-proton-gradient graph edge from whole-enzyme GO:0008137
+    support to direct Baradaran et al. 2013 evidence for antiporter-like membrane-arm proton
+    translocation domains.'
