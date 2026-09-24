@@ -23,6 +23,13 @@ curation_history:
     U12-spliceosome evidence, a minimal U11/U12 binding graph and a protein-component
     grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T23:26:03Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1533: clarified the Frilander/Steitz evidence note so the U11 5-prime-splice-site
+    interaction and U12 branch-point interaction are spelled out instead of compressed
+    into slash shorthand.'
+  llm_assisted: true
 synonyms:
 - synonym_text: minor prespliceosome
   synonym_type: EXACT_SYNONYM
@@ -66,8 +73,9 @@ evidence:
 - reference: GO:0034693
   notes: Gene Ontology cellular-component term for the U11/U12 snRNP.
 - reference: DOI:10.1101/gad.13.7.851
-  notes: Frilander and Steitz 1999, Initial recognition of U12-dependent introns requires
-    both U11/5-prime splice-site and U12/branchpoint interactions, Genes & Development.
+  notes: Frilander and Steitz 1999, a Genes & Development study of the U11 interaction
+    with the 5-prime splice site and the U12 interaction with the branch point during
+    initial recognition of U12-dependent introns.
 - reference: DOI:10.1515/BC.2005.084
   notes: Will and Luehrmann 2005, Splicing of a rare class of introns by the U12-dependent
     spliceosome, Biological Chemistry.
