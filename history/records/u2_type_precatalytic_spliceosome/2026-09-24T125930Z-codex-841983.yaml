@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u2_type_precatalytic_spliceosome.yaml
+  slug: u2_type_precatalytic_spliceosome
+session:
+  id: 2026-09-24T125930Z-codex-841983
+  timestamp: '2026-09-24T12:59:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1489
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1490
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1488
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - causal_graphs
+  - functions
+  summary: 'Address PR #1488 U2-type precatalytic spliceosome review issues'
+  details: 'Addressed adversarial review issues from PR #1488 by removing the passive preactivation
+    state from functions and rewiring the assembly graph so tri-snRNP recruitment forms the
+    GO:0071005 U2-type precatalytic spliceosome node; linked fixes for #1489 and #1490.'

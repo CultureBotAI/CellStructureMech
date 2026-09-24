@@ -28,6 +28,12 @@ curation_history:
   changes: Removed the redundant U2/U6 helix II standalone node and left the helix-II
     evidence on the U2 snRNP to U4/U6 x U5 tri-snRNP edge.
   llm_assisted: true
+- timestamp: '2026-09-24T12:58:09Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1489: removed the passive preactivation state from functions; #1490:
+    connected the assembly graph to the GO:0071005 structure node.'
+  llm_assisted: true
 synonyms:
 - synonym_text: major precatalytic spliceosome
   synonym_type: EXACT_SYNONYM
@@ -95,19 +101,6 @@ canonical_examples:
   note: Budding-yeast model whose pre-catalytic B-complex spliceosome was resolved
     by cryo-electron microscopy at near-atomic resolution.
   reference: DOI:10.1038/nature22799
-functions:
-- function_id: preactivation_snrnp_organization
-  label: preactivation snRNP and pre-mRNA organization
-  description: The precatalytic B complex holds U2 snRNP, U4/U6.U5 tri-snRNP and pre-mRNA
-    in the spliceosomal assembly state that precedes active-site formation and first-step
-    catalysis.
-  evidence:
-  - reference: GO:0071005
-    notes: GO:0071005 identifies this complex as a catalytically inactive spliceosomal
-      state containing all five snRNPs.
-  - reference: DOI:10.1038/nature22799
-    notes: Plaschka, Lin and Nagai 2017 structurally analyzed the yeast pre-catalytic
-      B complex and inferred events leading to spliceosomal active-site formation.
 evidence:
 - reference: GO:0071005
   notes: Gene Ontology cellular-component term for the U2-type precatalytic spliceosome
@@ -179,14 +172,23 @@ causal_graphs:
       notes: GO:0071004 defines the U2-type prespliceosome by 5-prime splice-site
         association with U1 snRNP and branch-point recognition by U2 snRNP.
   - subject: u4_u6_u5_tri_snrnp
-    predicate: is recruited to
-    object: u2_type_prespliceosome
-    description: The preassembled U4/U6.U5 tri-snRNP joins the prespliceosome to create
-      the U2-type precatalytic spliceosome.
+    predicate: is recruited to form
+    object: u2_type_precatalytic_spliceosome
+    description: Recruitment of preassembled U4/U6.U5 tri-snRNP to the U2-type prespliceosome
+      forms the U2-type precatalytic spliceosome.
     evidence:
     - reference: GO:0071005
       notes: GO:0071005 defines the U2-type precatalytic spliceosome as the state
         formed by recruitment of U4/U6.U5 tri-snRNP to the prespliceosome.
+  - subject: u2_type_prespliceosome
+    predicate: receives
+    object: u4_u6_u5_tri_snrnp
+    description: The U1- and U2-containing prespliceosome receives U4/U6.U5 tri-snRNP
+      to become the U2-type precatalytic spliceosome.
+    evidence:
+    - reference: GO:0071005
+      notes: GO:0071005 defines the U2-type precatalytic spliceosome as formed by
+        tri-snRNP recruitment to the prespliceosome.
   - subject: u2_snrnp
     predicate: interfaces with
     object: u4_u6_u5_tri_snrnp
