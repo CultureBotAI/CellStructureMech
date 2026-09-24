@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u6_snrnp.yaml
+  slug: u6_snrnp
+session:
+  id: 2026-09-24T162037Z-codex-53ddab
+  timestamp: '2026-09-24T16:20:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add U6 snRNP
+  details: Added a new GO:0005688 U6 snRNP structure record with the GO exact synonym, spliceosomal
+    snRNP parentage, U6 snRNA and Lsm2-8-ring components, Saccharomyces cerevisiae U4/U6.U5
+    tri-snRNP cryo-EM evidence, a minimal constituent graph and an open protein-family grounding
+    TODO.
