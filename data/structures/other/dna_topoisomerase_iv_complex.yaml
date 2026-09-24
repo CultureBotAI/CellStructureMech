@@ -20,13 +20,16 @@ curation_history:
     topoisomerase function evidence, InterPro boundary discussion, and a compact function
     graph.
   llm_assisted: true
+- timestamp: '2026-09-24T10:45:16Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1479: removed the unsupported Topo IV exact synonym while leaving the
+    GO-backed topoisomerase IV synonym in place.'
+  llm_assisted: true
 synonyms:
 - synonym_text: topoisomerase IV
   synonym_type: EXACT_SYNONYM
   source: GO:0009340
-- synonym_text: Topo IV
-  synonym_type: EXACT_SYNONYM
-  source: PMID:8227000
 parent_structures:
 - GO:0009330
 - GO:0032991
