@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u2_type_post_mrna_release_spliceosomal_complex.yaml
+  slug: u2_type_post_mrna_release_spliceosomal_complex
+session:
+  id: 2026-09-24T191202Z-claude-code-4163fb
+  timestamp: '2026-09-24T19:12:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1517
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1516
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: 'Address PR #1516 post-mRNA release spliceosome review issue'
+  details: 'Addressed review issue #1517 by replacing unverified protein-rich wording in the
+    GO:0071008 component-boundary TODO with narrower wording that says the Wan yeast ILS paper
+    directly supports a budding-yeast intron lariat spliceosome. The record still leaves individual
+    ILS protein-family boundaries and excised-intron RNA representation for follow-up curation.'

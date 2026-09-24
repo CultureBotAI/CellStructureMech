@@ -1,0 +1,206 @@
+identifier: GO:0071008
+label: U2-type post-mRNA release spliceosomal complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A spliceosomal complex that is formed following the release of the spliced
+  product from the post-spliceosomal complex and contains the excised intron and the
+  U2, U5 and U6 snRNPs.
+definition_source: GO:0071008
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T18:59:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T19:00:40Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, post-mRNA-release and U2-type parentage, GO-grounded
+    U2, U5 and U6 snRNP components, Wan budding-yeast ILS evidence, a minimal snRNP-retention
+    graph and a protein/RNA-component grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T19:11:29Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1517: removed unverified protein-rich wording from the post-mRNA release
+    spliceosome component-boundary TODO.'
+  llm_assisted: true
+synonyms:
+- synonym_text: major post-mRNA release spliceosomal complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071008
+- synonym_text: U2/U5/U6 snRNP complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071008
+- synonym_text: U2/U5/U6 tri-snRNP complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071008
+- synonym_text: GT-AG post-mRNA release spliceosomal complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071008
+- synonym_text: mammalian U2-type spliceosomal complex I
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071008
+parent_structures:
+- GO:0071014
+- GO:0005684
+components:
+- component_id: u2_snrnp
+  label: U2 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005686
+  role: Small nuclear ribonucleoprotein retained with the excised intron in the U2-type
+    post-mRNA release spliceosomal complex.
+  evidence:
+  - reference: GO:0071008
+    notes: GO:0071008 defines the U2-type post-mRNA release spliceosomal complex as
+      containing U2 snRNP.
+  - reference: GO:0005686
+    notes: GO:0005686 is the Gene Ontology cellular-component term for the U2 snRNP.
+- component_id: u5_snrnp
+  label: U5 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005682
+  role: Small nuclear ribonucleoprotein retained with the excised intron in the U2-type
+    post-mRNA release spliceosomal complex.
+  evidence:
+  - reference: GO:0071008
+    notes: GO:0071008 defines the U2-type post-mRNA release spliceosomal complex as
+      containing U5 snRNP.
+  - reference: GO:0005682
+    notes: GO:0005682 is the Gene Ontology cellular-component term for the U5 snRNP.
+- component_id: u6_snrnp
+  label: U6 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005688
+  role: Small nuclear ribonucleoprotein retained with the excised intron in the U2-type
+    post-mRNA release spliceosomal complex.
+  evidence:
+  - reference: GO:0071008
+    notes: GO:0071008 defines the U2-type post-mRNA release spliceosomal complex as
+      containing U6 snRNP.
+  - reference: GO:0005688
+    notes: GO:0005688 is the Gene Ontology cellular-component term for the U6 snRNP.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: A Saccharomyces cerevisiae intron lariat spliceosome was structurally characterized
+    by Wan, Yan, Bai and colleagues; broader eukaryotic distribution is left for follow-up
+    curation.
+  reference: DOI:10.1016/j.cell.2017.08.029
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model whose intron lariat spliceosome was analyzed by cryo-electron
+    microscopy.
+  reference: DOI:10.1016/j.cell.2017.08.029
+evidence:
+- reference: GO:0071008
+  notes: Gene Ontology cellular-component term for the U2-type post-mRNA release spliceosomal
+    complex and its GO synonyms.
+- reference: GO:0071014
+  notes: Gene Ontology cellular-component parent term for post-mRNA release spliceosomal
+    complex.
+- reference: GO:0005684
+  notes: Gene Ontology cellular-component parent term for U2-type spliceosomal complex.
+- reference: GO:0005686
+  notes: Gene Ontology cellular-component term for the U2 snRNP.
+- reference: GO:0005682
+  notes: Gene Ontology cellular-component term for the U5 snRNP.
+- reference: GO:0005688
+  notes: Gene Ontology cellular-component term for the U6 snRNP.
+- reference: DOI:10.1016/j.cell.2017.08.029
+  notes: Wan, Yan, Bai and colleagues 2017, Structure of an Intron Lariat Spliceosome
+    from Saccharomyces cerevisiae, Cell.
+- reference: PMID:28919079
+  notes: PubMed identifier for Wan, Yan, Bai and colleagues 2017 as reported by NCBI
+    E-utilities.
+- reference: DOI:10.1016/j.cell.2009.02.009
+  notes: 'Wahl, Will and Luehrmann 2009, The spliceosome: design principles of a dynamic
+    RNP machine, Cell.'
+- reference: PMID:19239890
+  notes: PubMed identifier for Wahl, Will and Luehrmann 2009 as reported by NCBI E-utilities.
+causal_graphs:
+- graph_id: u2_type_post_mrna_release_ils_retention
+  title: U2, U5 and U6 snRNPs remain in the intron lariat spliceosome
+  description: The U2-type post-mRNA release spliceosomal complex contains the excised
+    intron and U2, U5 and U6 snRNPs after the spliced mRNA has been released.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined U2, U5 and U6 snRNP retention
+    of the post-mRNA release complex without modeling mRNA release, intron lariat
+    geometry or individual ILS protein-family boundaries.
+  nodes:
+  - node_id: u2_snrnp
+    label: U2 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005686
+    component_ref: u2_snrnp
+  - node_id: u5_snrnp
+    label: U5 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005682
+    component_ref: u5_snrnp
+  - node_id: u6_snrnp
+    label: U6 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005688
+    component_ref: u6_snrnp
+  - node_id: u2_type_post_mrna_release_spliceosome
+    label: U2-type post-mRNA release spliceosomal complex
+    node_type: STRUCTURE
+    grounding: GO:0071008
+  edges:
+  - subject: u2_snrnp
+    predicate: remains associated in
+    object: u2_type_post_mrna_release_spliceosome
+    description: The U2 snRNP remains associated with the excised intron in the U2-type
+      post-mRNA release spliceosomal complex.
+    evidence:
+    - reference: GO:0071008
+      notes: GO:0071008 names U2 as one of the snRNPs in the post-mRNA release spliceosomal
+        complex.
+  - subject: u5_snrnp
+    predicate: remains associated in
+    object: u2_type_post_mrna_release_spliceosome
+    description: The U5 snRNP remains associated with the excised intron in the U2-type
+      post-mRNA release spliceosomal complex.
+    evidence:
+    - reference: GO:0071008
+      notes: GO:0071008 names U5 as one of the snRNPs in the post-mRNA release spliceosomal
+        complex.
+  - subject: u6_snrnp
+    predicate: remains associated in
+    object: u2_type_post_mrna_release_spliceosome
+    description: The U6 snRNP remains associated with the excised intron in the U2-type
+      post-mRNA release spliceosomal complex.
+    evidence:
+    - reference: GO:0071008
+      notes: GO:0071008 names U6 as one of the snRNPs in the post-mRNA release spliceosomal
+        complex.
+discussions:
+- discussion_id: resolve_post_mrna_release_spliceosome_components
+  prompt: Resolve exact source-neutral component boundaries for post-mRNA release
+    spliceosomal complex proteins beyond the GO-defined U2, U5 and U6 snRNP subcomplexes,
+    and decide how to represent the excised intron RNA.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u2_snrnp
+  - components#u5_snrnp
+  - components#u6_snrnp
+  - causal_graphs#u2_type_post_mrna_release_ils_retention
+  rationale: GO:0071008 defines the post-mRNA release state by the excised intron
+    and U2, U5 and U6 snRNPs. The Wan yeast ILS paper directly supports a budding-yeast
+    intron lariat spliceosome, but individual protein families and the RNA substrate
+    boundary should be resolved before expanding this component list.
+  evidence:
+  - reference: GO:0071008
+  - reference: DOI:10.1016/j.cell.2017.08.029
+  posed_by: codex
+  posed_date: '2026-09-24'
