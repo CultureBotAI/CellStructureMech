@@ -1,0 +1,148 @@
+identifier: GO:0005693
+label: U12 snRNP
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex that contains small nuclear RNA U12, a heptameric
+  ring of Sm proteins, as well as several proteins that are unique to the U12 snRNP,
+  most of which remain associated with the U12 snRNA both while the U12 snRNP is free
+  or assembled into a series of spliceosomal complexes.
+definition_source: GO:0005693
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T22:08:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T22:11:08Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym, spliceosomal snRNP parentage, U12 snRNA and
+    Sm-ring components, human Will/Schneider/Hossbach 18S U11/U12 snRNP evidence,
+    a minimal U12 snRNP constituent graph and a protein-component grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T22:21:10Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1529: removed SO:0000399 from the protein-component TODO evidence because
+    the SO U12 snRNA term does not support Sm-ring or U12-specific protein-family
+    boundary curation.'
+  llm_assisted: true
+synonyms:
+- synonym_text: snRNP U12
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005693
+parent_structures:
+- GO:0097525
+components:
+- component_id: u12_snrna
+  label: U12 snRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000399
+  role: U12 small nuclear RNA constituent named in the U12 snRNP definition and grounded
+    to the U12 snRNA Sequence Ontology term.
+  evidence:
+  - reference: GO:0005693
+    notes: GO:0005693 defines the U12 snRNP as containing small nuclear RNA U12.
+  - reference: SO:0000399
+    notes: SO:0000399 is the Sequence Ontology term for U12 snRNA.
+- component_id: sm_protein_ring
+  label: Sm protein ring
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: An exact source-neutral CURIE for the spliceosomal heptameric Sm
+    protein ring is left unresolved in this first U12 snRNP record; GO:0005693 directly
+    supports this label-level constituent.
+  role: Heptameric Sm protein-ring constituent named in the U12 snRNP definition.
+  evidence:
+  - reference: GO:0005693
+    notes: GO:0005693 defines the U12 snRNP as containing a heptameric ring of Sm
+      proteins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  presence: COMMON
+  note: The U12 snRNP subcomplex is represented in human 18S U11/U12 snRNPs affinity
+    purified and analyzed by mass spectrometry by Will, Schneider, Hossbach and colleagues;
+    broader eukaryotic distribution is left for follow-up curation.
+  reference: DOI:10.1261/rna.7320604
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: Human minor-spliceosome U12 snRNP represented inside affinity-purified 18S
+    U11/U12 snRNPs in the Will, Schneider and Hossbach composition study.
+  reference: DOI:10.1261/rna.7320604
+evidence:
+- reference: GO:0005693
+  notes: Gene Ontology cellular-component term for the U12 snRNP and its exact synonym.
+- reference: GO:0097525
+  notes: Gene Ontology cellular-component parent term for spliceosomal snRNP complex.
+- reference: SO:0000399
+  notes: Sequence Ontology term for U12 snRNA.
+- reference: DOI:10.1261/rna.7320604
+  notes: Will, Schneider, Hossbach and colleagues 2004 affinity purified human 18S
+    U11/U12 snRNPs and identified their protein components by mass spectrometry.
+- reference: DOI:10.1515/BC.2005.084
+  notes: Will and Luehrmann 2005, Splicing of a rare class of introns by the U12-dependent
+    spliceosome, Biological Chemistry.
+causal_graphs:
+- graph_id: u12_snrnp_constituents
+  title: U12 snRNA and the Sm ring are U12 snRNP constituents
+  description: The U12 snRNP contains U12 small nuclear RNA and a heptameric Sm protein
+    ring; GO:0005693 also states that additional U12-specific proteins are present,
+    with exact family boundaries still to be resolved.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records GO-defined U12 snRNA and Sm-ring constituent
+    contributions without modeling individual Sm or U12-specific protein-family boundaries.
+  nodes:
+  - node_id: u12_snrna
+    label: U12 snRNA
+    node_type: RNA
+    grounding: SO:0000399
+    component_ref: u12_snrna
+  - node_id: sm_protein_ring
+    label: Sm protein ring
+    node_type: STRUCTURE
+    component_ref: sm_protein_ring
+  - node_id: u12_snrnp
+    label: U12 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005693
+  edges:
+  - subject: u12_snrna
+    predicate: contributes constituents to
+    object: u12_snrnp
+    description: The U12 snRNA is the small nuclear RNA constituent represented in
+      the U12 snRNP definition.
+    evidence:
+    - reference: GO:0005693
+      notes: GO:0005693 defines the U12 snRNP as containing small nuclear RNA U12.
+  - subject: sm_protein_ring
+    predicate: contributes constituents to
+    object: u12_snrnp
+    description: The Sm protein ring is the heptameric protein-ring constituent represented
+      in the U12 snRNP definition.
+    evidence:
+    - reference: GO:0005693
+      notes: GO:0005693 defines the U12 snRNP as containing a heptameric ring of Sm
+        proteins.
+discussions:
+- discussion_id: resolve_u12_snrnp_protein_components
+  prompt: Resolve exact source-neutral groundings for the Sm ring and U12-specific
+    protein families that form the U12 snRNP.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sm_protein_ring
+  - causal_graphs#u12_snrnp_constituents
+  rationale: The first GO:0005693 record captures U12 snRNA and the GO-defined Sm
+    ring at coarse granularity. Individual spliceosomal Sm proteins and U12-specific
+    protein-family boundaries should be resolved before splitting this inventory.
+  evidence:
+  - reference: GO:0005693
+  - reference: DOI:10.1261/rna.7320604
+  posed_by: codex
+  posed_date: '2026-09-24'

@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u12_snrnp.yaml
+  slug: u12_snrnp
+session:
+  id: 2026-09-24T221127Z-claude-code-1fbc77
+  timestamp: '2026-09-24T22:11:27Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add U12 snRNP
+  details: Added a new GO:0005693 U12 snRNP record with the GO exact synonym; GO:0097525 parentage;
+    an SO-grounded U12 snRNA component and reviewed-label-only Sm-ring component; Homo sapiens
+    distribution and canonical-example evidence from Will, Schneider, Hossbach et al. 2004
+    RNA; a conservative U12 snRNP constituent graph; and a curation TODO for unresolved Sm-ring
+    and U12-specific protein-family boundaries. Validated the new record with targeted LinkML
+    closed-schema and validate_strict gates.

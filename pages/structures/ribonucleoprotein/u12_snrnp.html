@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U12 snRNP · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>U12 snRNP</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005693"><code>GO:0005693</code></a> · RIBONUCLEOPROTEIN · RIBONUCLEOPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A ribonucleoprotein complex that contains small nuclear RNA U12, a heptameric ring of Sm proteins, as well as several proteins that are unique to the U12 snRNP, most of which remain associated with the U12 snRNA both while the U12 snRNP is free or assembled into a series of spliceosomal complexes. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005693"><code>GO:0005693</code></a>]</small></p>
+<p><strong>Synonyms:</strong> snRNP U12</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-u12_snrna"><td>U12 snRNA</td><td>RNA</td><td>part of</td><td><code>SO:0000399</code></td><td></td><td></td><td></td><td>U12 small nuclear RNA constituent named in the U12 snRNP definition and grounded to the U12 snRNA Sequence Ontology term.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005693"><code>GO:0005693</code></a> <small>GO:0005693 defines the U12 snRNP as containing small nuclear RNA U12.</small></li><li><code>SO:0000399</code> <small>SO:0000399 is the Sequence Ontology term for U12 snRNA.</small></li></ul></td></tr>
+<tr id="components-sm_protein_ring"><td>Sm protein ring</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td></td><td>Heptameric Sm protein-ring constituent named in the U12 snRNP definition.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005693"><code>GO:0005693</code></a> <small>GO:0005693 defines the U12 snRNP as containing a heptameric ring of Sm proteins.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_9606"><code>NCBITaxon:9606</code></a> Homo sapiens — <strong>COMMON</strong>: The U12 snRNP subcomplex is represented in human 18S U11/U12 snRNPs affinity purified and analyzed by mass spectrometry by Will, Schneider, Hossbach and colleagues; broader eukaryotic distribution is left for follow-up curation. [<a href="https://doi.org/10.1261/rna.7320604"><code>DOI:10.1261/rna.7320604</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_9606"><code>NCBITaxon:9606</code></a> <em>Homo sapiens</em> — Human minor-spliceosome U12 snRNP represented inside affinity-purified 18S U11/U12 snRNPs in the Will, Schneider and Hossbach composition study. [<a href="https://doi.org/10.1261/rna.7320604"><code>DOI:10.1261/rna.7320604</code></a>]</li></ul>
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-u12_snrnp_constituents">U12 snRNA and the Sm ring are U12 snRNP constituents <small>(ASSEMBLY)</small></h3>
+<p>The U12 snRNP contains U12 small nuclear RNA and a heptameric Sm protein ring; GO:0005693 also states that additional U12-specific proteins are present, with exact family boundaries still to be resolved.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>U12 snRNA</td><td>contributes constituents to</td><td>U12 snRNP</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005693"><code>GO:0005693</code></a> <small>GO:0005693 defines the U12 snRNP as containing small nuclear RNA U12.</small></li></ul></td></tr>
+<tr><td>Sm protein ring</td><td>contributes constituents to</td><td>U12 snRNP</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005693"><code>GO:0005693</code></a> <small>GO:0005693 defines the U12 snRNP as containing a heptameric ring of Sm proteins.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for the Sm ring and U12-specific protein families that form the U12 snRNP. <small>The first GO:0005693 record captures U12 snRNA and the GO-defined Sm ring at coarse granularity. Individual spliceosomal Sm proteins and U12-specific protein-family boundaries should be resolved before splitting this inventory.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005693"><code>GO:0005693</code></a> <small>Gene Ontology cellular-component term for the U12 snRNP and its exact synonym.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0097525"><code>GO:0097525</code></a> <small>Gene Ontology cellular-component parent term for spliceosomal snRNP complex.</small></li><li><code>SO:0000399</code> <small>Sequence Ontology term for U12 snRNA.</small></li><li><a href="https://doi.org/10.1261/rna.7320604"><code>DOI:10.1261/rna.7320604</code></a> <small>Will, Schneider, Hossbach and colleagues 2004 affinity purified human 18S U11/U12 snRNPs and identified their protein components by mass spectrometry.</small></li><li><a href="https://doi.org/10.1515/BC.2005.084"><code>DOI:10.1515/BC.2005.084</code></a> <small>Will and Luehrmann 2005, Splicing of a rare class of introns by the U12-dependent spliceosome, Biological Chemistry.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-24T22:08:42Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-24T22:11:08Z</code> codex · EXPANDED_RECORD — Added the GO exact synonym, spliceosomal snRNP parentage, U12 snRNA and Sm-ring components, human Will/Schneider/Hossbach 18S U11/U12 snRNP evidence, a minimal U12 snRNP constituent graph and a protein-component grounding TODO.</li><li><code>2026-09-24T22:21:10Z</code> codex · ADDRESS_REVIEW — #1529: removed SO:0000399 from the protein-component TODO evidence because the SO U12 snRNA term does not support Sm-ring or U12-specific protein-family boundary curation.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/u12_snrnp.yaml"><code>data/structures/ribonucleoprotein/u12_snrnp.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

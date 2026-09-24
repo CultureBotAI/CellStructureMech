@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u12_snrnp.yaml
+  slug: u12_snrnp
+session:
+  id: 2026-09-24T222134Z-claude-code-affd49
+  timestamp: '2026-09-24T22:21:34Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1529
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1528
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Narrow U12 snRNP TODO evidence
+  details: '#1529: Removed SO:0000399 from the resolve_u12_snrnp_protein_components TODO evidence
+    because SO grounds the U12 snRNA component but not the Sm-ring or U12-specific protein-family
+    boundary review question.'
