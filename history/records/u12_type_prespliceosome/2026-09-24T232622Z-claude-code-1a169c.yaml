@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u12_type_prespliceosome.yaml
+  slug: u12_type_prespliceosome
+session:
+  id: 2026-09-24T232622Z-claude-code-1a169c
+  timestamp: '2026-09-24T23:26:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1533
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1532
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Clarify Frilander-Steitz evidence wording
+  details: '#1533: Reworded the DOI:10.1101/gad.13.7.851 evidence note to spell out U11 interaction
+    with the 5-prime splice site and U12 interaction with the branch point instead of compressing
+    them into U11/5-prime and U12/branchpoint slash shorthand.'
