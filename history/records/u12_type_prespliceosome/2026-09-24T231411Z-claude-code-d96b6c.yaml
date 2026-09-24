@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u12_type_prespliceosome.yaml
+  slug: u12_type_prespliceosome
+session:
+  id: 2026-09-24T231411Z-claude-code-d96b6c
+  timestamp: '2026-09-24T23:14:11Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add U12-type prespliceosome
+  details: Added a new GO:0071015 U12-type prespliceosome record with the GO exact and narrow
+    synonyms; GO:0071010 and GO:0005689 parentage; the GO-grounded U11/U12 snRNP component;
+    Frilander and Steitz 1999 Genes & Development plus Will and Luehrmann 2005 Biological
+    Chemistry U12-spliceosome evidence; a conservative U11/U12 snRNP binding graph; and a
+    curation TODO for unresolved U12-type prespliceosome protein-family boundaries. Validated
+    the new record with targeted LinkML closed-schema and validate_strict gates.
