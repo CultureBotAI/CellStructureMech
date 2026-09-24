@@ -14920,6 +14920,37 @@
       ]
     },
     {
+      "identifier": "GO:0005685",
+      "label": "U1 snRNP",
+      "neighbors": [
+        {
+          "identifier": "GO:0005687",
+          "label": "U4 snRNP",
+          "cosine_similarity": 0.95463284
+        },
+        {
+          "identifier": "GO:0005682",
+          "label": "U5 snRNP",
+          "cosine_similarity": 0.93582697
+        },
+        {
+          "identifier": "GO:0071001",
+          "label": "U4/U6 snRNP",
+          "cosine_similarity": 0.91236393
+        },
+        {
+          "identifier": "GO:0046540",
+          "label": "U4/U6 x U5 tri-snRNP complex",
+          "cosine_similarity": 0.89934363
+        },
+        {
+          "identifier": "GO:0071005",
+          "label": "U2-type precatalytic spliceosome",
+          "cosine_similarity": 0.77005061
+        }
+      ]
+    },
+    {
       "identifier": "GO:0071005",
       "label": "U2-type precatalytic spliceosome",
       "neighbors": [
@@ -14939,14 +14970,14 @@
           "cosine_similarity": 0.78246086
         },
         {
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.77005061
+        },
+        {
           "identifier": "GO:0005682",
           "label": "U5 snRNP",
           "cosine_similarity": 0.76754174
-        },
-        {
-          "identifier": "GO:0000178",
-          "label": "exosome (RNase complex)",
-          "cosine_similarity": 0.72624967
         }
       ]
     },
@@ -14954,6 +14985,11 @@
       "identifier": "GO:0005687",
       "label": "U4 snRNP",
       "neighbors": [
+        {
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.95463284
+        },
         {
           "identifier": "GO:0071001",
           "label": "U4/U6 snRNP",
@@ -14973,11 +15009,6 @@
           "identifier": "GO:0071005",
           "label": "U2-type precatalytic spliceosome",
           "cosine_similarity": 0.78246086
-        },
-        {
-          "identifier": "GO:0000172",
-          "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.76126926
         }
       ]
     },
@@ -14996,6 +15027,11 @@
           "cosine_similarity": 0.94238039
         },
         {
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.91236393
+        },
+        {
           "identifier": "GO:0005682",
           "label": "U5 snRNP",
           "cosine_similarity": 0.90591346
@@ -15004,11 +15040,6 @@
           "identifier": "GO:0071005",
           "label": "U2-type precatalytic spliceosome",
           "cosine_similarity": 0.7958955
-        },
-        {
-          "identifier": "GO:0000172",
-          "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.76795431
         }
       ]
     },
@@ -15032,14 +15063,14 @@
           "cosine_similarity": 0.92685097
         },
         {
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.89934363
+        },
+        {
           "identifier": "GO:0071005",
           "label": "U2-type precatalytic spliceosome",
           "cosine_similarity": 0.81666358
-        },
-        {
-          "identifier": "GO:0000172",
-          "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.76096287
         }
       ]
     },
@@ -15051,6 +15082,11 @@
           "identifier": "GO:0005687",
           "label": "U4 snRNP",
           "cosine_similarity": 0.93982519
+        },
+        {
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.93582697
         },
         {
           "identifier": "GO:0046540",
@@ -15066,11 +15102,6 @@
           "identifier": "GO:0071005",
           "label": "U2-type precatalytic spliceosome",
           "cosine_similarity": 0.76754174
-        },
-        {
-          "identifier": "GO:0000172",
-          "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.76101128
         }
       ]
     },

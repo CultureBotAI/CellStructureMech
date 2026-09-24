@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u1_snrnp.yaml
+  slug: u1_snrnp
+session:
+  id: 2026-09-24T154531Z-codex-153bda
+  timestamp: '2026-09-24T15:45:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add U1 snRNP
+  details: Added a new GO:0005685 U1 snRNP structure record with the GO exact synonym, spliceosomal
+    snRNP parentage, U1 snRNA and Sm-ring components, Saccharomyces cerevisiae U1 cryo-EM
+    evidence, a minimal constituent graph and an open protein-family grounding TODO.

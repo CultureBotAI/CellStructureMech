@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u1_snrnp.yaml
+  slug: u1_snrnp
+session:
+  id: 2026-09-24T155650Z-codex-e5ce15
+  timestamp: '2026-09-24T15:56:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1504
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1505
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1503
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - canonical_examples
+  - causal_graphs
+  summary: 'Address PR #1503 U1 snRNP review issues'
+  details: 'Addressed the adversarial review of PR #1503 by rewording the constituent graph
+    so GO:0005685 supports the presence, not the identities, of additional U1-specific proteins
+    for #1504 and narrowing the Saccharomyces cerevisiae cryo-EM notes for #1505.'
