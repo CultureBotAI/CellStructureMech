@@ -27,6 +27,13 @@ curation_history:
   changes: Retyped the NADH dehydrogenase ubiquinone activity graph node from BIOLOGICAL_PROCESS
     to MOLECULAR_FUNCTION to match GO:0008137.
   llm_assisted: true
+- timestamp: '2026-09-24T03:02:34Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1444: narrowed the NADH-to-peripheral-arm edge evidence to Baradaran
+    et al. 2013 and rewrote quinone coupling so the NADH:ubiquinone molecular function,
+    not free quinone, drives the membrane-arm edge.'
+  llm_assisted: true
 synonyms:
 - synonym_text: NADH dehydrogenase (ubiquinone) complex
   synonym_type: EXACT_SYNONYM
@@ -148,22 +155,22 @@ causal_graphs:
     description: NADH-derived electrons enter the complex I peripheral arm before
       passing through its internal redox cofactors.
     evidence:
-    - reference: GO:0045271
-      notes: GO:0045271 defines respiratory complex I as the respiratory-chain complex
-        where electrons of NADH enter.
+    - reference: PMID:23417064
+      notes: Baradaran et al. 2013 resolved the hydrophilic electron-transfer domain
+        and iron-sulfur relay in the intact Thermus thermophilus complex I structure.
   - subject: peripheral_arm
-    predicate: reduces
+    predicate: feeds electrons toward
     object: quinone_pool
     description: Electrons move through iron-sulfur cofactors in the peripheral arm
-      toward a quinone-binding chamber.
+      toward a quinone-binding chamber at the arm interface.
     evidence:
     - reference: PMID:23417064
       notes: Baradaran et al. 2013 resolved the complete bacterial electron-transfer
-        route to the quinone-binding site.
-  - subject: quinone_pool
-    predicate: activates proton pumping by
+        route leading toward the enclosed quinone-binding chamber.
+  - subject: nadh_ubiquinone_activity
+    predicate: couples quinone reduction to
     object: membrane_arm
-    description: Quinone reduction is coupled across the L-shaped enzyme to proton-translocation
+    description: Quinone reduction by the intact enzyme is coupled to proton-translocation
       pathways in the membrane arm.
     evidence:
     - reference: PMID:23417064
