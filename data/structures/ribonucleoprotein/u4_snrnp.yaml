@@ -1,0 +1,147 @@
+identifier: GO:0005687
+label: U4 snRNP
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex that contains small nuclear RNA U4, a heptameric
+  ring of Sm proteins, as well as several proteins that are unique to the U4 snRNP,
+  most of which remain associated with the U4 snRNA both while the U4 snRNP is free
+  or assembled into the U4/U6 snRNP or into a series of spliceosomal complexes.
+definition_source: GO:0005687
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T15:11:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T15:12:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym, spliceosomal snRNP parentage, U4 snRNA and
+    Sm-ring components, budding-yeast distribution, Nguyen/Galej/Nagai yeast U4/U6.U5
+    tri-snRNP cryo-EM evidence, a minimal U4 snRNP constituent graph and a protein-component
+    grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: snRNP U4
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005687
+parent_structures:
+- GO:0097525
+components:
+- component_id: u4_snrna
+  label: U4 snRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000393
+  role: U4 small nuclear RNA constituent named in the U4 snRNP definition and grounded
+    to the U4 snRNA Sequence Ontology term.
+  evidence:
+  - reference: GO:0005687
+    notes: GO:0005687 defines the U4 snRNP as containing small nuclear RNA U4.
+  - reference: SO:0000393
+    notes: SO:0000393 is the Sequence Ontology term for U4 snRNA.
+- component_id: sm_protein_ring
+  label: Sm protein ring
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: An exact source-neutral CURIE for the spliceosomal heptameric Sm
+    protein ring is left unresolved in this first U4 snRNP record; GO:0005687 directly
+    supports this label-level constituent.
+  role: Heptameric Sm protein ring associated with U4 snRNA in the U4 snRNP.
+  evidence:
+  - reference: GO:0005687
+    notes: GO:0005687 defines the U4 snRNP as containing a heptameric ring of Sm proteins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: The U4 snRNP subcomplex is represented in budding-yeast U4/U6.U5 tri-snRNP
+    cryo-EM structures; broader eukaryotic distribution is left for follow-up curation.
+  reference: DOI:10.1038/nature16940
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model whose U4 snRNA and associated U4 snRNP proteins were resolved
+    inside U4/U6.U5 tri-snRNP cryo-EM structures.
+  reference: DOI:10.1038/nature16940
+evidence:
+- reference: GO:0005687
+  notes: Gene Ontology cellular-component term for the U4 snRNP and its exact synonym.
+- reference: GO:0097525
+  notes: Gene Ontology cellular-component parent term for spliceosomal snRNP complex.
+- reference: SO:0000393
+  notes: Sequence Ontology term for U4 snRNA.
+- reference: DOI:10.1038/nature14548
+  notes: Nguyen, Galej, Bai and colleagues 2015, The architecture of the spliceosomal
+    U4/U6.U5 tri-snRNP, Nature.
+- reference: PMID:26106855
+  notes: PubMed identifier for Nguyen, Galej, Bai and colleagues 2015 as reported
+    by PubMed.
+- reference: DOI:10.1038/nature16940
+  notes: Nguyen, Galej, Bai and colleagues 2016, Cryo-EM structure of the yeast U4/U6.U5
+    tri-snRNP at 3.7 Angstrom resolution, Nature.
+- reference: PMID:26829225
+  notes: PubMed identifier for Nguyen, Galej, Bai and colleagues 2016 as reported
+    by PubMed.
+causal_graphs:
+- graph_id: u4_snrnp_constituents
+  title: U4 snRNA and the Sm ring are U4 snRNP constituents
+  description: The U4 snRNP contains U4 small nuclear RNA and a heptameric Sm protein
+    ring; GO:0005687 also names additional U4-specific proteins whose exact family
+    boundaries remain to be resolved.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records GO-defined U4 snRNA and Sm-ring constituent
+    contributions without modeling individual Sm or U4-specific protein-family boundaries.
+  nodes:
+  - node_id: u4_snrna
+    label: U4 snRNA
+    node_type: RNA
+    grounding: SO:0000393
+    component_ref: u4_snrna
+  - node_id: sm_protein_ring
+    label: Sm protein ring
+    node_type: STRUCTURE
+    component_ref: sm_protein_ring
+  - node_id: u4_snrnp
+    label: U4 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005687
+  edges:
+  - subject: u4_snrna
+    predicate: contributes constituents to
+    object: u4_snrnp
+    description: The U4 snRNA is the small nuclear RNA constituent represented in
+      the U4 snRNP definition.
+    evidence:
+    - reference: GO:0005687
+      notes: GO:0005687 defines the U4 snRNP as containing small nuclear RNA U4.
+  - subject: sm_protein_ring
+    predicate: contributes constituents to
+    object: u4_snrnp
+    description: The Sm protein ring is the heptameric protein-ring constituent represented
+      in the U4 snRNP definition.
+    evidence:
+    - reference: GO:0005687
+      notes: GO:0005687 defines the U4 snRNP as containing a heptameric ring of Sm
+        proteins.
+discussions:
+- discussion_id: resolve_u4_snrnp_protein_components
+  prompt: Resolve exact source-neutral groundings for the Sm ring, Prp3, Prp4, Prp31
+    and other U4-specific protein families that form the U4 snRNP.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sm_protein_ring
+  - causal_graphs#u4_snrnp_constituents
+  rationale: The first GO:0005687 record captures U4 snRNA and the GO-defined Sm ring
+    at coarse granularity. Individual spliceosomal Sm proteins and U4-specific protein-family
+    boundaries should be resolved before splitting this inventory.
+  evidence:
+  - reference: GO:0005687
+  - reference: DOI:10.1038/nature14548
+  - reference: DOI:10.1038/nature16940
+  posed_by: codex
+  posed_date: '2026-09-24'

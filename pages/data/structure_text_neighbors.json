@@ -14934,6 +14934,11 @@
           "cosine_similarity": 0.7958955
         },
         {
+          "identifier": "GO:0005687",
+          "label": "U4 snRNP",
+          "cosine_similarity": 0.78204298
+        },
+        {
           "identifier": "GO:0005682",
           "label": "U5 snRNP",
           "cosine_similarity": 0.76754174
@@ -14942,11 +14947,37 @@
           "identifier": "GO:0000178",
           "label": "exosome (RNase complex)",
           "cosine_similarity": 0.72624967
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005687",
+      "label": "U4 snRNP",
+      "neighbors": [
+        {
+          "identifier": "GO:0071001",
+          "label": "U4/U6 snRNP",
+          "cosine_similarity": 0.94626549
+        },
+        {
+          "identifier": "GO:0005682",
+          "label": "U5 snRNP",
+          "cosine_similarity": 0.93788989
+        },
+        {
+          "identifier": "GO:0046540",
+          "label": "U4/U6 x U5 tri-snRNP complex",
+          "cosine_similarity": 0.93509584
+        },
+        {
+          "identifier": "GO:0071005",
+          "label": "U2-type precatalytic spliceosome",
+          "cosine_similarity": 0.78204298
         },
         {
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.70182575
+          "cosine_similarity": 0.7594799
         }
       ]
     },
@@ -14958,6 +14989,11 @@
           "identifier": "GO:0046540",
           "label": "U4/U6 x U5 tri-snRNP complex",
           "cosine_similarity": 0.95085903
+        },
+        {
+          "identifier": "GO:0005687",
+          "label": "U4 snRNP",
+          "cosine_similarity": 0.94626549
         },
         {
           "identifier": "GO:0005682",
@@ -14973,11 +15009,6 @@
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.76795431
-        },
-        {
-          "identifier": "GO:0015935",
-          "label": "small ribosomal subunit",
-          "cosine_similarity": 0.72852004
         }
       ]
     },
@@ -14989,6 +15020,11 @@
           "identifier": "GO:0071001",
           "label": "U4/U6 snRNP",
           "cosine_similarity": 0.95085903
+        },
+        {
+          "identifier": "GO:0005687",
+          "label": "U4 snRNP",
+          "cosine_similarity": 0.93509584
         },
         {
           "identifier": "GO:0005682",
@@ -15004,11 +15040,6 @@
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.76096287
-        },
-        {
-          "identifier": "GO:0030680",
-          "label": "dimeric ribonuclease P complex",
-          "cosine_similarity": 0.73044252
         }
       ]
     },
@@ -15016,6 +15047,11 @@
       "identifier": "GO:0005682",
       "label": "U5 snRNP",
       "neighbors": [
+        {
+          "identifier": "GO:0005687",
+          "label": "U4 snRNP",
+          "cosine_similarity": 0.93788989
+        },
         {
           "identifier": "GO:0046540",
           "label": "U4/U6 x U5 tri-snRNP complex",
@@ -15035,11 +15071,6 @@
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.76101128
-        },
-        {
-          "identifier": "GO:0030680",
-          "label": "dimeric ribonuclease P complex",
-          "cosine_similarity": 0.70232314
         }
       ]
     },
