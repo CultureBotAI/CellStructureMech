@@ -1053,6 +1053,15 @@
   "definition": "Respiratory chain complex I is an L-shaped enzyme of the respiratory chain that oxidizes NADH, routes electrons through a hydrophilic peripheral arm to quinone, and couples quinone reduction to proton translocation through a membrane arm."
  },
  {
+  "identifier": "GO:0045273",
+  "label": "respiratory chain complex II (succinate dehydrogenase)",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/respiratory_chain_complex_ii_succinate_dehydrogenase.html",
+  "definition": "Respiratory chain complex II (succinate dehydrogenase) is a respiratory-chain enzyme complex that oxidizes succinate, passes electrons through flavin and iron-sulfur centers to membrane quinone, and thereby connects tricarboxylic-acid-cycle electron flow with the respiratory quinone pool."
+ },
+ {
   "identifier": "GO:0016471",
   "label": "vacuolar proton-transporting V-type ATPase complex",
   "category": "ENERGY_COMPLEX",

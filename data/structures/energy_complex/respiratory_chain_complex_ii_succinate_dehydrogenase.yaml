@@ -1,0 +1,255 @@
+identifier: GO:0045273
+label: respiratory chain complex II (succinate dehydrogenase)
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Respiratory chain complex II (succinate dehydrogenase) is a respiratory-chain
+  enzyme complex that oxidizes succinate, passes electrons through flavin and iron-sulfur
+  centers to membrane quinone, and thereby connects tricarboxylic-acid-cycle electron
+  flow with the respiratory quinone pool.
+definition_source: GO:0045273
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-24T03:46:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-24T03:48:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO respiratory-chain parentage, GO synonymy and molecular function,
+    three reviewed-label-only Sdh component rows, an E. coli PDB:1NEK canonical example,
+    literature/PDB evidence, a compact complex II function graph, and a component-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-24T03:49:07Z'
+  curator: codex
+  action: REVISED_GRAPH
+  changes: Retyped the terminal function edge so complete respiratory complex II,
+    not the SdhCD membrane anchor alone, enables GO:0008177.
+  llm_assisted: true
+- timestamp: '2026-09-24T03:58:25Z'
+  curator: codex
+  action: NARROWED_GRAPH_EDGE
+  changes: Weakened the SdhCD-to-quinone graph edge from quinone-pool reduction to
+    quinone-site binding and cited both PDB:1NEK and Yankovskaya et al. 2003 for the
+    membrane-anchor quinone site.
+  llm_assisted: true
+- timestamp: '2026-09-24T04:00:33Z'
+  curator: codex
+  action: NARROWED_GRAPH_EDGE
+  changes: Retyped the quinone-side graph node from a generic pool to bound ubiquinone
+    Q2 and narrowed the SdhCD edge predicate to ligand binding.
+  llm_assisted: true
+synonyms:
+- synonym_text: electron transport complex II
+  synonym_type: RELATED_SYNONYM
+  source: GO:0045273
+parent_structures:
+- GO:0098803
+components:
+- component_id: sdha_flavoprotein
+  label: succinate dehydrogenase flavoprotein subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  role: Catalytic flavoprotein subunit that oxidizes succinate at FAD and begins electron
+    transfer through the complex II soluble head.
+  gene_symbols:
+  - sdhA
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral component CURIE was asserted for the full
+    SdhA family; the PDB:1NEK structure resolves the E. coli SdhA polymer entity and
+    GO:0045273 grounds the complete four-polypeptide complex.
+  evidence:
+  - reference: GO:0045273
+    notes: GO defines respiratory chain complex II as a succinate dehydrogenase complex
+      that contains flavin-adenine dinucleotide and iron-sulfur.
+  - reference: PDB:1NEK
+    notes: RCSB maps PDB:1NEK polymer entity 1 to the E. coli SdhA flavoprotein subunit.
+- component_id: sdhb_iron_sulfur_subunit
+  label: succinate dehydrogenase iron-sulfur subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  role: Iron-sulfur subunit that relays electrons from the FAD site of SdhA toward
+    the membrane quinone-reduction site.
+  gene_symbols:
+  - sdhB
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral component CURIE was asserted for the complete
+    SdhB iron-sulfur protein family rather than individual iron-sulfur binding domains.
+  evidence:
+  - reference: DOI:10.1126/science.1079605
+    notes: Yankovskaya et al. 2003 resolved the four-subunit E. coli complex II architecture
+      with an iron-sulfur protein linking the flavoprotein to the membrane anchor.
+  - reference: PDB:1NEK
+    notes: RCSB maps PDB:1NEK polymer entity 2 to the E. coli SdhB iron-sulfur protein.
+- component_id: sdhcd_membrane_anchor
+  label: succinate dehydrogenase SdhCD membrane anchor
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  role: Membrane-anchor module that binds quinone-site cofactors and connects the
+    soluble succinate-oxidizing subunits to the respiratory membrane.
+  gene_symbols:
+  - sdhC
+  - sdhD
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This component row represents the paired SdhC/SdhD membrane-anchor
+    subcomplex in E. coli complex II; no exact taxon-neutral GO, Complex Portal, or
+    family CURIE was verified for the whole heterodimeric module.
+  evidence:
+  - reference: DOI:10.1126/science.1079605
+    notes: Yankovskaya et al. 2003 resolved the E. coli SdhC and SdhD transmembrane
+      subunits as the membrane domain of respiratory complex II.
+  - reference: PDB:1NEK
+    notes: RCSB maps PDB:1NEK polymer entities 3 and 4 to E. coli SdhC and SdhD, respectively.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Bacterial source of the four-protein succinate dehydrogenase structure deposited
+    as PDB:1NEK.
+  reference: PDB:1NEK
+functions:
+- function_id: succinate_dehydrogenase_quinone_activity
+  label: succinate dehydrogenase (quinone) activity
+  grounding: GO:0008177
+  description: Complex II oxidizes succinate to fumarate while reducing a membrane
+    quinone to quinol.
+  evidence:
+  - reference: GO:0008177
+    notes: GO:0008177 defines the overall succinate plus quinone to fumarate plus
+      quinol reaction of the entire succinate dehydrogenase complex.
+  - reference: DOI:10.1126/science.1079605
+    notes: Yankovskaya et al. 2003 structurally tied the E. coli complex II subunit
+      layout to succinate oxidation and quinone reduction.
+evidence:
+- reference: GO:0045273
+  notes: Gene Ontology cellular-component term for respiratory chain complex II, succinate
+    dehydrogenase.
+- reference: GO:0098803
+  notes: Gene Ontology cellular-component term for respiratory-chain protein complexes.
+- reference: GO:0008177
+  notes: Gene Ontology molecular-function term for the overall succinate dehydrogenase
+    quinone oxidoreductase activity.
+- reference: DOI:10.1126/science.1079605
+  notes: Yankovskaya et al. 2003, Architecture of succinate dehydrogenase and reactive
+    oxygen species generation, Science.
+- reference: PMID:12560550
+  notes: PubMed identifier for Yankovskaya et al. 2003 as reported by the RCSB PDB:1NEK
+    primary citation.
+- reference: PDB:1NEK
+  notes: RCSB Protein Data Bank entry for the E. coli respiratory complex II structure
+    from Yankovskaya et al. 2003.
+causal_graphs:
+- graph_id: complex_ii_succinate_quinone_coupling
+  title: Complex II links succinate oxidation to quinone reduction
+  description: Respiratory complex II accepts electrons from succinate at its flavoprotein,
+    relays them through iron-sulfur centers, and reduces a membrane quinone at its
+    anchor.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the structural route from the succinate/FAD side
+    to the membrane quinone side without resolving individual cofactors, quinone-channel
+    chemistry, or lineage-specific menaquinone versus ubiquinone use.
+  nodes:
+  - node_id: complex_ii
+    label: respiratory chain complex II (succinate dehydrogenase)
+    node_type: STRUCTURE
+    grounding: GO:0045273
+  - node_id: succinate
+    label: succinate
+    node_type: CHEMICAL
+  - node_id: flavoprotein
+    label: succinate dehydrogenase flavoprotein subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sdha_flavoprotein
+  - node_id: iron_sulfur_subunit
+    label: succinate dehydrogenase iron-sulfur subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sdhb_iron_sulfur_subunit
+  - node_id: membrane_anchor
+    label: succinate dehydrogenase SdhCD membrane anchor
+    node_type: GENE_OR_PROTEIN
+    component_ref: sdhcd_membrane_anchor
+  - node_id: ubiquinone_q2
+    label: ubiquinone Q2
+    node_type: CHEMICAL
+    description: Quinone ligand bound by the E. coli PDB:1NEK complex II structure.
+  - node_id: succinate_dehydrogenase_activity
+    label: succinate dehydrogenase (quinone) activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008177
+  edges:
+  - subject: succinate
+    predicate: feeds electrons to
+    object: flavoprotein
+    description: Succinate is oxidized at the flavoprotein/FAD portion of complex
+      II.
+    evidence:
+    - reference: DOI:10.1126/science.1079605
+      notes: Yankovskaya et al. 2003 resolved the E. coli complex II flavoprotein
+        subunit on the succinate-oxidizing side of the enzyme.
+  - subject: flavoprotein
+    predicate: passes electrons to
+    object: iron_sulfur_subunit
+    description: The flavoprotein is followed by the iron-sulfur subunit in the complex
+      II electron-transfer path.
+    evidence:
+    - reference: DOI:10.1126/science.1079605
+      notes: Yankovskaya et al. 2003 described the FAD-to-iron-sulfur architecture
+        of E. coli complex II.
+  - subject: iron_sulfur_subunit
+    predicate: relays electrons toward
+    object: membrane_anchor
+    description: The iron-sulfur subunit bridges the soluble flavoprotein and the
+      quinone-binding membrane anchor.
+    evidence:
+    - reference: DOI:10.1126/science.1079605
+      notes: Yankovskaya et al. 2003 placed the iron-sulfur subunit between the flavoprotein
+        and SdhC/SdhD membrane subunits in the E. coli structure.
+  - subject: membrane_anchor
+    predicate: binds
+    object: ubiquinone_q2
+    description: The SdhCD membrane domain provides a quinone-binding site in the
+      E. coli complex II structure.
+    evidence:
+    - reference: PDB:1NEK
+      notes: The RCSB PDB:1NEK deposition resolves the E. coli SdhC/SdhD transmembrane
+        subunits with bound ubiquinone Q2.
+    - reference: DOI:10.1126/science.1079605
+      notes: Yankovskaya et al. 2003 resolved the E. coli membrane anchor that carries
+        bound ubiquinone on the quinone side of the complex.
+  - subject: complex_ii
+    predicate: enables
+    object: succinate_dehydrogenase_activity
+    description: The complete SdhABCD complex carries out the overall succinate:quinone
+      oxidoreductase molecular function.
+    evidence:
+    - reference: GO:0045273
+      notes: GO:0045273 defines respiratory chain complex II as the succinate dehydrogenase
+        complex that catalyzes succinate oxidation by ubiquinone.
+    - reference: PDB:1NEK
+      notes: PDB:1NEK resolves the E. coli complex II SdhA, SdhB, SdhC, and SdhD proteins
+        in one four-polymer structure.
+discussions:
+- discussion_id: complex_ii_component_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, NCBIfam, or Complex Portal
+    groundings for respiratory complex II subunits before replacing reviewed-label-only
+    rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sdha_flavoprotein
+  - components#sdhb_iron_sulfur_subunit
+  - components#sdhcd_membrane_anchor
+  rationale: The first record deliberately models the conserved four-polypeptide architecture
+    without asserting that domain-level Pfam matches exactly ground full taxon-agnostic
+    protein families.
+  evidence:
+  - reference: PDB:1NEK
+    notes: RCSB reports complete SIFTS alignments from PDB:1NEK to four E. coli UniProt
+      entries, plus domain annotations for the individual polymer entities.
+  posed_by: codex
+  posed_date: '2026-09-24'
