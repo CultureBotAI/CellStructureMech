@@ -23,6 +23,14 @@ curation_history:
     distribution, GO ribonuclease MRP and rRNA-cleavage functions, GO/SO/PubMed/DOI
     evidence, a yeast RNA-cleavage graph and a component-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T12:27:05Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1486: reworded the Snm1p/Rmp1p causal-graph edge so the grouped MRP-specific
+    protein cohort is not described as self-associated; #1487: softened the RNase
+    MRP RNA component role and graph edge to avoid assigning an unqualified catalytic/scaffold
+    role at component granularity.'
+  llm_assisted: true
 synonyms:
 - synonym_text: RNase MRP complex
   synonym_type: EXACT_SYNONYM
@@ -42,8 +50,8 @@ components:
   - NME1
   - RMRP
   essentiality: ESSENTIAL
-  role: Catalytic and scaffold RNA molecule that distinguishes RNase MRP from RNase
-    P.
+  role: Essential RNA subunit that distinguishes RNase MRP from the related RNase
+    P ribonucleoprotein.
   evidence:
   - reference: GO:0000172
     notes: GO:0000172 defines the ribonuclease MRP complex as a ribonucleoprotein
@@ -232,17 +240,17 @@ causal_graphs:
   - subject: mrp_specific_protein_subunits
     predicate: assembles with
     object: rnase_mrp_rna
-    description: Snm1p and Rmp1p are budding-yeast RNase MRP protein constituents
-      associated with MRP RNA and Snm1p.
+    description: The Snm1p/Rmp1p cohort captures budding-yeast RNase MRP-specific
+      protein constituents that assemble with the broader MRP ribonucleoprotein.
     evidence:
     - reference: DOI:10.1093/nar/gkm553
       notes: Aspinall et al. 2007 confirmed Rmp1p as an integral S. cerevisiae RNase
-        MRP subunit and analyzed its interactions with Snm1p and MRP RNA.
+        MRP subunit through interactions with Snm1p and MRP RNA.
   - subject: rnase_mrp_rna
     predicate: contributes to
     object: ribonuclease_mrp_activity
-    description: The RNase MRP RNA is the distinguishing RNA component of the RNase
-      MRP endoribonuclease.
+    description: The RNase MRP RNA is the essential, distinguishing RNA component
+      of the RNase MRP endoribonuclease.
     evidence:
     - reference: GO:0000172
       notes: GO:0000172 defines the complex as an RNA-containing ribonucleoprotein.
