@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u2_type_catalytic_step_2_spliceosome.yaml
+  slug: u2_type_catalytic_step_2_spliceosome
+session:
+  id: 2026-09-24T175806Z-claude-code-b0bc52
+  timestamp: '2026-09-24T17:58:06Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add U2-type catalytic step 2 spliceosome
+  details: Added a new GO:0071007 U2-type catalytic step 2 spliceosome record with GO exact
+    and narrow synonyms; GO:0071013 and GO:0005684 parentage; GO-grounded U2, U5 and U6 snRNP
+    components; Saccharomyces cerevisiae distribution and canonical-example evidence from
+    Yan, Wan, Bai et al. 2017 Science; a conservative U2/U5/U6 remodeling graph; and a curation
+    TODO for unresolved C* protein-family component boundaries. Validated the new record with
+    targeted LinkML closed-schema and validate_strict gates.

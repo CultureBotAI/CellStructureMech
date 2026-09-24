@@ -14986,6 +14986,11 @@
       "label": "U2-type catalytic step 1 spliceosome",
       "neighbors": [
         {
+          "identifier": "GO:0071007",
+          "label": "U2-type catalytic step 2 spliceosome",
+          "cosine_similarity": 0.98467585
+        },
+        {
           "identifier": "GO:0071005",
           "label": "U2-type precatalytic spliceosome",
           "cosine_similarity": 0.95788987
@@ -15004,11 +15009,37 @@
           "identifier": "GO:0005685",
           "label": "U1 snRNP",
           "cosine_similarity": 0.820642
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0071007",
+      "label": "U2-type catalytic step 2 spliceosome",
+      "neighbors": [
+        {
+          "identifier": "GO:0071006",
+          "label": "U2-type catalytic step 1 spliceosome",
+          "cosine_similarity": 0.98467585
+        },
+        {
+          "identifier": "GO:0071005",
+          "label": "U2-type precatalytic spliceosome",
+          "cosine_similarity": 0.95541189
+        },
+        {
+          "identifier": "GO:0046540",
+          "label": "U4/U6 x U5 tri-snRNP complex",
+          "cosine_similarity": 0.80220577
+        },
+        {
+          "identifier": "GO:0005686",
+          "label": "U2 snRNP",
+          "cosine_similarity": 0.7994817
         },
         {
           "identifier": "GO:0071001",
           "label": "U4/U6 snRNP",
-          "cosine_similarity": 0.81931089
+          "cosine_similarity": 0.7842279
         }
       ]
     },
@@ -15020,6 +15051,11 @@
           "identifier": "GO:0071006",
           "label": "U2-type catalytic step 1 spliceosome",
           "cosine_similarity": 0.95788987
+        },
+        {
+          "identifier": "GO:0071007",
+          "label": "U2-type catalytic step 2 spliceosome",
+          "cosine_similarity": 0.95541189
         },
         {
           "identifier": "GO:0046540",
@@ -15035,11 +15071,6 @@
           "identifier": "GO:0005687",
           "label": "U4 snRNP",
           "cosine_similarity": 0.78246086
-        },
-        {
-          "identifier": "GO:0005686",
-          "label": "U2 snRNP",
-          "cosine_similarity": 0.78062216
         }
       ]
     },
