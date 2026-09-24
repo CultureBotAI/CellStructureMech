@@ -21,6 +21,13 @@ curation_history:
     Sm-ring components, human Will/Schneider/Hossbach 18S U11/U12 snRNP evidence,
     a minimal U12 snRNP constituent graph and a protein-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T22:21:10Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1529: removed SO:0000399 from the protein-component TODO evidence because
+    the SO U12 snRNA term does not support Sm-ring or U12-specific protein-family
+    boundary curation.'
+  llm_assisted: true
 synonyms:
 - synonym_text: snRNP U12
   synonym_type: EXACT_SYNONYM
@@ -136,7 +143,6 @@ discussions:
     protein-family boundaries should be resolved before splitting this inventory.
   evidence:
   - reference: GO:0005693
-  - reference: SO:0000399
   - reference: DOI:10.1261/rna.7320604
   posed_by: codex
   posed_date: '2026-09-24'
