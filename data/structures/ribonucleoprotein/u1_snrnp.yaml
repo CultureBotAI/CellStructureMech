@@ -22,6 +22,13 @@ curation_history:
     evidence, a minimal U1 snRNP constituent graph and a protein-component grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T15:56:00Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1504: reworded the U1 graph so GO:0005685 supports the presence, not
+    the identities, of additional U1-specific proteins; #1505: narrowed the yeast
+    U1 cryo-EM notes to avoid implying complete protein-boundary resolution.'
+  llm_assisted: true
 synonyms:
 - synonym_text: snRNP U1
   synonym_type: EXACT_SYNONYM
@@ -57,14 +64,15 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: The U1 snRNP was structurally resolved by cryo-EM in Saccharomyces cerevisiae;
-    broader eukaryotic distribution is left for follow-up curation.
+  note: A Saccharomyces cerevisiae U1 snRNP cryo-EM structure was reported by Li,
+    Liu, Jiang and colleagues; broader eukaryotic distribution is left for follow-up
+    curation.
   reference: DOI:10.1038/s41467-017-01241-9
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model whose U1 snRNP was structurally resolved by cryo-electron
-    microscopy.
+  note: Budding-yeast model represented in the Li, Liu, Jiang and colleagues U1 snRNP
+    cryo-EM structure.
   reference: DOI:10.1038/s41467-017-01241-9
 evidence:
 - reference: GO:0005685
@@ -82,8 +90,8 @@ causal_graphs:
 - graph_id: u1_snrnp_constituents
   title: U1 snRNA and the Sm ring are U1 snRNP constituents
   description: The U1 snRNP contains U1 small nuclear RNA and a heptameric Sm protein
-    ring; GO:0005685 also names additional U1-specific proteins whose exact family
-    boundaries remain to be resolved.
+    ring; GO:0005685 also states that additional U1-specific proteins are present,
+    with exact family boundaries still to be resolved.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: This partial graph records GO-defined U1 snRNA and Sm-ring constituent
