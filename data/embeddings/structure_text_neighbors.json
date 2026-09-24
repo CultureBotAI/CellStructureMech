@@ -1652,6 +1652,37 @@
       ]
     },
     {
+      "identifier": "GO:0005858",
+      "label": "axonemal dynein complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0036156",
+          "label": "inner dynein arm",
+          "cosine_similarity": 0.94692955
+        },
+        {
+          "identifier": "GO:0036157",
+          "label": "outer dynein arm",
+          "cosine_similarity": 0.89844946
+        },
+        {
+          "identifier": "GO:0005931",
+          "label": "axonemal nexin link",
+          "cosine_similarity": 0.8585819
+        },
+        {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.84689419
+        },
+        {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.82008867
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005879",
       "label": "axonemal microtubule",
       "neighbors": [
@@ -1811,6 +1842,11 @@
       "label": "axonemal nexin link",
       "neighbors": [
         {
+          "identifier": "GO:0005858",
+          "label": "axonemal dynein complex",
+          "cosine_similarity": 0.8585819
+        },
+        {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.85316688
@@ -1829,11 +1865,6 @@
           "identifier": "GO:0005930",
           "label": "axoneme",
           "cosine_similarity": 0.82034302
-        },
-        {
-          "identifier": "GO:0036156",
-          "label": "inner dynein arm",
-          "cosine_similarity": 0.81761865
         }
       ]
     },
@@ -2374,6 +2405,11 @@
           "cosine_similarity": 0.97062767
         },
         {
+          "identifier": "GO:0005858",
+          "label": "axonemal dynein complex",
+          "cosine_similarity": 0.94692955
+        },
+        {
           "identifier": "GO:0005931",
           "label": "axonemal nexin link",
           "cosine_similarity": 0.81761865
@@ -2387,11 +2423,6 @@
           "identifier": "GO:0160111",
           "label": "axonemal A tubule inner sheath",
           "cosine_similarity": 0.80399911
-        },
-        {
-          "identifier": "GO:0160112",
-          "label": "axonemal B tubule inner sheath",
-          "cosine_similarity": 0.79705116
         }
       ]
     },
@@ -2591,6 +2622,11 @@
           "cosine_similarity": 0.97062767
         },
         {
+          "identifier": "GO:0005858",
+          "label": "axonemal dynein complex",
+          "cosine_similarity": 0.89844946
+        },
+        {
           "identifier": "GO:0005931",
           "label": "axonemal nexin link",
           "cosine_similarity": 0.79183311
@@ -2604,11 +2640,6 @@
           "identifier": "GO:0160111",
           "label": "axonemal A tubule inner sheath",
           "cosine_similarity": 0.74426983
-        },
-        {
-          "identifier": "GO:0160112",
-          "label": "axonemal B tubule inner sheath",
-          "cosine_similarity": 0.73942435
         }
       ]
     },
