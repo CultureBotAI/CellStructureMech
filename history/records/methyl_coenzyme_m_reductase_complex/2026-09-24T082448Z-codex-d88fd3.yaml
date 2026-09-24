@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+  slug: methyl_coenzyme_m_reductase_complex
+session:
+  id: 2026-09-24T082448Z-codex-d88fd3
+  timestamp: '2026-09-24T08:24:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Add methyl coenzyme M reductase complex
+  details: Created GO:0044674 as an ENERGY_COMPLEX record for the archaeal alpha2 beta2 gamma2
+    methyl coenzyme M reductase complex. Added the direct GO transferase-complex parent, exact
+    InterPro family groundings for the McrA, McrB, and McrG subunits, PDB:1MRO evidence tying
+    those components to Methanothermobacter marburgensis str. Marburg polymer entities, a
+    Methanothermobacter canonical example, coenzyme-B sulfoethylthiotransferase activity evidence
+    from GO and InterPro, and a compact nonmechanistic graph for the net methane-forming reaction.
+    Verified with targeted LinkML and closed-schema validation before writing this history
+    entry.
