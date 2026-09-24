@@ -14924,6 +14924,11 @@
       "label": "U11 snRNP",
       "neighbors": [
         {
+          "identifier": "GO:0005693",
+          "label": "U12 snRNP",
+          "cosine_similarity": 0.97509064
+        },
+        {
           "identifier": "GO:0005685",
           "label": "U1 snRNP",
           "cosine_similarity": 0.93936048
@@ -14942,11 +14947,37 @@
           "identifier": "GO:0005687",
           "label": "U4 snRNP",
           "cosine_similarity": 0.92970046
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005693",
+      "label": "U12 snRNP",
+      "neighbors": [
+        {
+          "identifier": "GO:0005692",
+          "label": "U11 snRNP",
+          "cosine_similarity": 0.97509064
         },
         {
-          "identifier": "GO:0005690",
-          "label": "U4atac snRNP",
-          "cosine_similarity": 0.92803169
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.93514323
+        },
+        {
+          "identifier": "GO:0005688",
+          "label": "U6 snRNP",
+          "cosine_similarity": 0.9302817
+        },
+        {
+          "identifier": "GO:0005691",
+          "label": "U6atac snRNP",
+          "cosine_similarity": 0.92991749
+        },
+        {
+          "identifier": "GO:0005687",
+          "label": "U4 snRNP",
+          "cosine_similarity": 0.9285044
         }
       ]
     },
@@ -14975,9 +15006,9 @@
           "cosine_similarity": 0.93582697
         },
         {
-          "identifier": "GO:0005688",
-          "label": "U6 snRNP",
-          "cosine_similarity": 0.93139481
+          "identifier": "GO:0005693",
+          "label": "U12 snRNP",
+          "cosine_similarity": 0.93514323
         }
       ]
     },
@@ -15001,14 +15032,14 @@
           "cosine_similarity": 0.93660007
         },
         {
+          "identifier": "GO:0005693",
+          "label": "U12 snRNP",
+          "cosine_similarity": 0.92631444
+        },
+        {
           "identifier": "GO:0005682",
           "label": "U5 snRNP",
           "cosine_similarity": 0.9218614
-        },
-        {
-          "identifier": "GO:0005688",
-          "label": "U6 snRNP",
-          "cosine_similarity": 0.92085306
         }
       ]
     },
@@ -15378,9 +15409,9 @@
           "cosine_similarity": 0.92685097
         },
         {
-          "identifier": "GO:0005686",
-          "label": "U2 snRNP",
-          "cosine_similarity": 0.9218614
+          "identifier": "GO:0005693",
+          "label": "U12 snRNP",
+          "cosine_similarity": 0.92438338
         }
       ]
     },
@@ -15440,9 +15471,9 @@
           "cosine_similarity": 0.93162796
         },
         {
-          "identifier": "GO:0071009",
-          "label": "U4atac/U6atac x U5 tri-snRNP complex",
-          "cosine_similarity": 0.92803264
+          "identifier": "GO:0005693",
+          "label": "U12 snRNP",
+          "cosine_similarity": 0.92991749
         }
       ]
     },
