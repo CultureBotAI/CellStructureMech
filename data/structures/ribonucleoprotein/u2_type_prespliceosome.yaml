@@ -22,6 +22,11 @@ curation_history:
     and U2 snRNP components, a minimal snRNP assembly graph and a protein-component
     grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T18:37:38Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1515: replaced narrow A-complex wording with generic prespliceosome wording.'
+  llm_assisted: true
 synonyms:
 - synonym_text: major prespliceosome
   synonym_type: EXACT_SYNONYM
@@ -85,7 +90,7 @@ causal_graphs:
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: This partial graph records the GO-defined U1 and U2 snRNP subcomplexes
-    without modeling pre-mRNA splice-site RNA nodes or additional A-complex protein-family
+    without modeling pre-mRNA splice-site RNA nodes or additional prespliceosome protein-family
     boundaries.
   nodes:
   - node_id: u1_snrnp
