@@ -3969,6 +3969,15 @@
   "definition": "A mitochondrial matrix-side protein complex associated with the TIM23 inner-membrane translocase that uses ATPase motor activity to drive protein import into the mitochondrial matrix."
  },
  {
+  "identifier": "GO:0031251",
+  "label": "PAN complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/pan_complex.html",
+  "definition": "A complex that possesses poly(A)-specific ribonuclease activity; catalyzes the message-specific shortening of mRNA poly(A) tails. Contains at least two subunits, known as Pan2p and Pan3p in Saccharomyces."
+ },
+ {
   "identifier": "cellstructuremech:phage_nucleus",
   "label": "phage nucleus",
   "category": "OTHER",
