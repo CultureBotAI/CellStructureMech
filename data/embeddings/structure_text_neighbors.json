@@ -13277,6 +13277,37 @@
       ]
     },
     {
+      "identifier": "GO:0030678",
+      "label": "mitochondrial ribonuclease P complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005655",
+          "label": "nucleolar ribonuclease P complex",
+          "cosine_similarity": 0.82395119
+        },
+        {
+          "identifier": "GO:0030681",
+          "label": "multimeric ribonuclease P complex",
+          "cosine_similarity": 0.81292455
+        },
+        {
+          "identifier": "GO:0030679",
+          "label": "cyanelle ribonuclease P complex",
+          "cosine_similarity": 0.80654666
+        },
+        {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.80525848
+        },
+        {
+          "identifier": "GO:0032299",
+          "label": "ribonuclease H2 complex",
+          "cosine_similarity": 0.77138984
+        }
+      ]
+    },
+    {
       "identifier": "GO:0033551",
       "label": "monopolin complex",
       "neighbors": [
@@ -15068,9 +15099,9 @@
           "cosine_similarity": 0.88322698
         },
         {
-          "identifier": "GO:0101019",
-          "label": "nucleolar exosome (RNase complex)",
-          "cosine_similarity": 0.80988814
+          "identifier": "GO:0030678",
+          "label": "mitochondrial ribonuclease P complex",
+          "cosine_similarity": 0.81292455
         }
       ]
     },
