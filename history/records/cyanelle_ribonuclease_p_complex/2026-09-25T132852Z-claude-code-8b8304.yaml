@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/cyanelle_ribonuclease_p_complex.yaml
+  slug: cyanelle_ribonuclease_p_complex
+session:
+  id: 2026-09-25T132852Z-claude-code-8b8304
+  timestamp: '2026-09-25T13:28:52Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add cyanelle ribonuclease P complex record
+  details: Added a new GO:0030679 cyanelle ribonuclease P complex record with multimeric RNase
+    P parentage, cyanelle parthood, GO exact synonymy, SO-grounded RNase P RNA plus reviewed-label-only
+    cyanelle RNase P protein components, conservative RNase P function terms, an assembly
+    graph, and a curation TODO for exact Cyanophora cyanelle protein-family boundaries.

@@ -1,0 +1,172 @@
+identifier: GO:0030679
+label: cyanelle ribonuclease P complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonuclease P complex located in the cyanelle, where it catalyzes the
+  5' endonucleolytic cleavage of precursor tRNAs to yield mature tRNAs. The best characterized
+  cyanelle ribonuclease P complex, from the alga Cyanophora paradoxa, contains a single
+  RNA molecule that is necessary but not sufficient for catalysis, and several protein
+  molecules.
+definition_source: GO:0030679
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T13:27:31Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T13:28:13Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cyanelle RNase P parentage and parthood, GO exact synonymy, SO-grounded
+    RNase P RNA plus reviewed-label-only cyanelle RNase P protein components, conservative
+    function terms, an assembly graph and a TODO for exact Cyanophora cyanelle protein-family
+    boundaries.
+  llm_assisted: true
+synonyms:
+- synonym_text: cyanelle RNase P complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030679
+parent_structures:
+- GO:0030681
+part_of:
+- GO:0009842
+components:
+- component_id: rnase_p_rna
+  label: RNase P RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000386
+  role: Single RNA constituent of the Cyanophora paradoxa cyanelle RNase P complex
+    that is necessary but not sufficient for catalysis.
+  evidence:
+  - reference: GO:0030679
+    notes: GO:0030679 defines the best characterized cyanelle RNase P complex as containing
+      a single RNA molecule.
+  - reference: SO:0000386
+    notes: SO:0000386 is the Sequence Ontology term for RNase_P_RNA.
+- component_id: cyanelle_rnase_p_protein_subunits
+  label: cyanelle RNase P protein subunits
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030679 defines the best characterized cyanelle RNase P complex
+    as containing several protein molecules, but no exact source-neutral InterPro,
+    Pfam, NCBIfam, GO or Complex Portal term was assigned for that cyanelle protein
+    cohort in this first record.
+  role: Protein constituents that accompany RNase P RNA in the Cyanophora paradoxa
+    cyanelle RNase P complex.
+  evidence:
+  - reference: GO:0030679
+    notes: GO:0030679 defines the best characterized cyanelle RNase P complex as containing
+      several protein molecules.
+functions:
+- function_id: ribonuclease_p_activity
+  label: ribonuclease P activity
+  grounding: GO:0004526
+  description: The cyanelle ribonuclease P complex removes 5-prime extra nucleotides
+    from precursor tRNA by endonucleolytic RNA cleavage.
+  evidence:
+  - reference: GO:0004526
+    notes: GO:0004526 is the Gene Ontology molecular-function term for ribonuclease
+      P activity.
+  - reference: GO:0030679
+    notes: GO:0030679 defines cyanelle RNase P as catalyzing 5-prime endonucleolytic
+      cleavage of precursor tRNAs.
+- function_id: trna_5_leader_removal
+  label: tRNA 5'-leader removal
+  grounding: GO:0001682
+  description: Cyanelle RNase P complexes generate mature tRNA 5-prime ends by cleaving
+    5-prime leader sequences from pre-tRNAs.
+  evidence:
+  - reference: GO:0001682
+    notes: GO:0001682 is the Gene Ontology biological-process term for tRNA 5'-leader
+      removal.
+  - reference: GO:0030679
+    notes: GO:0030679 defines cyanelle RNase P as generating mature tRNAs by precursor-tRNA
+      cleavage.
+evidence:
+- reference: GO:0030679
+  notes: Gene Ontology cellular-component term for the cyanelle ribonuclease P complex
+    and its exact synonym.
+- reference: GO:0030681
+  notes: Gene Ontology cellular-component parent term for multimeric ribonuclease
+    P complexes.
+- reference: GO:0009842
+  notes: Gene Ontology cellular-component term for the cyanelle.
+- reference: SO:0000386
+  notes: Sequence Ontology term for RNase_P_RNA.
+- reference: GO:0004526
+  notes: Gene Ontology molecular-function term for ribonuclease P activity.
+- reference: GO:0001682
+  notes: Gene Ontology biological-process term for tRNA 5'-leader removal.
+causal_graphs:
+- graph_id: cyanelle_rnase_p_constituents
+  title: RNase P RNA and proteins form cyanelle RNase P
+  description: The best characterized cyanelle ribonuclease P complex from Cyanophora
+    paradoxa contains a single RNase P RNA and several protein molecules.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined RNA and several-protein composition
+    without resolving exact Cyanophora cyanelle protein-family boundaries.
+  nodes:
+  - node_id: rnase_p_rna
+    label: RNase P RNA
+    node_type: RNA
+    grounding: SO:0000386
+    component_ref: rnase_p_rna
+  - node_id: cyanelle_rnase_p_protein_subunits
+    label: cyanelle RNase P protein subunits
+    node_type: GENE_OR_PROTEIN
+    component_ref: cyanelle_rnase_p_protein_subunits
+  - node_id: cyanelle_ribonuclease_p_complex
+    label: cyanelle ribonuclease P complex
+    node_type: STRUCTURE
+    grounding: GO:0030679
+  - node_id: cyanelle
+    label: cyanelle
+    node_type: STRUCTURE
+    grounding: GO:0009842
+  edges:
+  - subject: rnase_p_rna
+    predicate: contributes constituents to
+    object: cyanelle_ribonuclease_p_complex
+    description: The RNase P RNA is the single RNA molecule represented in the GO:0030679
+      definition.
+    evidence:
+    - reference: GO:0030679
+      notes: GO:0030679 defines the complex as containing a single RNA molecule.
+  - subject: cyanelle_rnase_p_protein_subunits
+    predicate: contributes constituents to
+    object: cyanelle_ribonuclease_p_complex
+    description: Several protein molecules are the protein constituents represented
+      in the GO:0030679 definition.
+    evidence:
+    - reference: GO:0030679
+      notes: GO:0030679 defines the complex as containing several protein molecules.
+  - subject: cyanelle_ribonuclease_p_complex
+    predicate: localizes to
+    object: cyanelle
+    description: The cyanelle RNase P complex is located in the cyanelle.
+    evidence:
+    - reference: GO:0030679
+      notes: GO:0030679 defines this RNase P complex by its cyanelle localization.
+    - reference: GO:0009842
+      notes: GO:0009842 is the cyanelle cellular-component term.
+discussions:
+- discussion_id: resolve_cyanelle_rnase_p_protein_boundaries
+  prompt: Resolve exact source-neutral protein-family boundaries for the Cyanophora
+    paradoxa cyanelle RNase P complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cyanelle_rnase_p_protein_subunits
+  - causal_graphs#cyanelle_rnase_p_constituents
+  rationale: The first GO:0030679 record captures the GO-defined single-RNA, several-protein
+    cyanelle composition at cohort granularity. Exact source-neutral cyanelle RNase
+    P protein families should be resolved before assigning protein groundings.
+  evidence:
+  - reference: GO:0030679
+  - reference: GO:0030681
+  posed_by: codex
+  posed_date: '2026-09-25'
