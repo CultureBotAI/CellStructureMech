@@ -4320,6 +4320,15 @@
   "definition": "Any complex of pre-rRNAs, ribosomal proteins, and associated proteins formed during ribosome biogenesis."
  },
  {
+  "identifier": "GO:0071010",
+  "label": "prespliceosome",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/prespliceosome.html",
+  "definition": "A spliceosomal complex that is formed by association of the 5' splice site and the branch point sequence with specific snRNPs. The prespliceosome includes many proteins in addition to those found in the bound snRNPs. Commitment to a given pair of 5' and 3' splice sites occurs at the time of prespliceosome formation. Prespliceosome complexes are not active for splicing, but are instead an early step in the assembly of a spliceosomal complex."
+ },
+ {
   "identifier": "GO:0000172",
   "label": "ribonuclease MRP complex",
   "category": "RIBONUCLEOPROTEIN",
