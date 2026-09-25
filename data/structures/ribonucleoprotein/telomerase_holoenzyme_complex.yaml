@@ -1,0 +1,106 @@
+identifier: GO:0005697
+label: telomerase holoenzyme complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: Telomerase is a ribonucleoprotein enzyme complex, with a minimal catalytic
+  core composed of a catalytic reverse transcriptase subunit and an RNA subunit that
+  provides the template for telomeric DNA addition. In vivo, the holoenzyme complex
+  often contains additional subunits.
+definition_source: GO:0005697
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T04:16:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T04:17:28Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ribonucleoprotein parentage, the SO-grounded telomerase RNA component,
+    GO/SO/PubMed evidence, a minimal telomerase RNA constituent graph and a protein-component
+    grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-25T04:31:00Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: Added GO:1902494 catalytic complex as additional telomerase holoenzyme
+    complex parentage.
+  llm_assisted: true
+parent_structures:
+- GO:1990904
+- GO:1902494
+components:
+- component_id: telomerase_rna
+  label: telomerase RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000390
+  role: RNA subunit that provides the template for telomeric DNA addition and is grounded
+    to the telomerase_RNA Sequence Ontology term.
+  evidence:
+  - reference: GO:0005697
+    notes: GO:0005697 defines the telomerase holoenzyme complex as including an RNA
+      subunit that provides the template for telomeric DNA addition.
+  - reference: SO:0000390
+    notes: SO:0000390 is the Sequence Ontology telomerase_RNA term and lists telomerase
+      RNA as an exact synonym.
+evidence:
+- reference: GO:0005697
+  notes: Gene Ontology cellular-component term for the telomerase holoenzyme complex.
+- reference: GO:1990904
+  notes: Gene Ontology cellular-component parent term for ribonucleoprotein complex.
+- reference: GO:1902494
+  notes: Gene Ontology cellular-component parent term for catalytic complexes.
+- reference: SO:0000390
+  notes: Sequence Ontology term for telomerase_RNA and its telomerase RNA exact synonym.
+- reference: DOI:10.1128/MCB.22.7.2366-2374.2002
+  notes: DOI for Livengood, Zaug and Cech 2002 as reported by NCBI E-utilities.
+- reference: PMID:11884619
+  notes: PubMed identifier for Livengood, Zaug and Cech 2002 as reported by NCBI E-utilities.
+causal_graphs:
+- graph_id: telomerase_rna_constituent
+  title: Telomerase RNA is a telomerase holoenzyme constituent
+  description: The telomerase holoenzyme complex contains telomerase RNA.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined telomerase RNA contribution
+    without modeling telomerase reverse transcriptase or additional holoenzyme protein-family
+    boundaries.
+  nodes:
+  - node_id: telomerase_rna
+    label: telomerase RNA
+    node_type: RNA
+    grounding: SO:0000390
+    component_ref: telomerase_rna
+  - node_id: telomerase_holoenzyme_complex
+    label: telomerase holoenzyme complex
+    node_type: STRUCTURE
+    grounding: GO:0005697
+  edges:
+  - subject: telomerase_rna
+    predicate: contributes constituents to
+    object: telomerase_holoenzyme_complex
+    description: Telomerase RNA is the RNA subunit represented in the telomerase holoenzyme
+      complex definition.
+    evidence:
+    - reference: GO:0005697
+      notes: GO:0005697 defines the telomerase holoenzyme complex as including an
+        RNA subunit.
+discussions:
+- discussion_id: resolve_telomerase_holoenzyme_protein_components
+  prompt: Resolve exact source-neutral protein components that form the telomerase
+    holoenzyme complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#telomerase_rna
+  - causal_graphs#telomerase_rna_constituent
+  rationale: The first GO:0005697 record captures the SO-grounded telomerase RNA subunit
+    from the GO definition. Exact telomerase reverse transcriptase and accessory subunit
+    boundaries should be resolved before expanding this component list.
+  evidence:
+  - reference: GO:0005697
+  - reference: DOI:10.1128/MCB.22.7.2366-2374.2002
+  posed_by: codex
+  posed_date: '2026-09-25'
