@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/multimeric_ribonuclease_p_complex.yaml
+  slug: multimeric_ribonuclease_p_complex
+session:
+  id: 2026-09-25T123832Z-claude-code-d9d419
+  timestamp: '2026-09-25T12:38:32Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1575
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1574
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - history
+  summary: Link multimeric ribonuclease P complex PR
+  details: 'Resolved review issue #1575 by linking the GO:0030681 multimeric ribonuclease
+    P complex curation to PR #1574 after opening the pull request for adversarial review;
+    no semantic record changes were needed.'
