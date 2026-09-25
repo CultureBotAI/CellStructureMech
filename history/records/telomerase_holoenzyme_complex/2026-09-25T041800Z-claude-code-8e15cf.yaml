@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/telomerase_holoenzyme_complex.yaml
+  slug: telomerase_holoenzyme_complex
+session:
+  id: 2026-09-25T041800Z-claude-code-8e15cf
+  timestamp: '2026-09-25T04:18:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add telomerase holoenzyme complex
+  details: Created a GO:0005697 telomerase holoenzyme complex record after hidden and ignored-inclusive
+    duplicate searches for the GO term, labels, SO:0000390 telomerase RNA labels, and the
+    GO definition PubMed and DOI references. Added GO:1990904 ribonucleoprotein-complex parentage,
+    the SO:0000390-grounded telomerase RNA constituent, GO/SO/PubMed evidence, a minimal telomerase
+    RNA constituent graph, and an open TODO to resolve source-neutral telomerase reverse transcriptase
+    and accessory protein components.

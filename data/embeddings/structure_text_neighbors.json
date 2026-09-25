@@ -14982,6 +14982,37 @@
       ]
     },
     {
+      "identifier": "GO:0005697",
+      "label": "telomerase holoenzyme complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000243",
+          "label": "commitment complex",
+          "cosine_similarity": 0.7602014
+        },
+        {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.75862663
+        },
+        {
+          "identifier": "GO:0015935",
+          "label": "small ribosomal subunit",
+          "cosine_similarity": 0.72936702
+        },
+        {
+          "identifier": "GO:0000172",
+          "label": "ribonuclease MRP complex",
+          "cosine_similarity": 0.72376884
+        },
+        {
+          "identifier": "GO:0046540",
+          "label": "U4/U6 x U5 tri-snRNP complex",
+          "cosine_similarity": 0.72039347
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005692",
       "label": "U11 snRNP",
       "neighbors": [
