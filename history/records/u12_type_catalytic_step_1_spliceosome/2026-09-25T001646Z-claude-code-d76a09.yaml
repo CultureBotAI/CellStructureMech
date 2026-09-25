@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u12_type_catalytic_step_1_spliceosome.yaml
+  slug: u12_type_catalytic_step_1_spliceosome
+session:
+  id: 2026-09-25T001646Z-claude-code-d76a09
+  timestamp: '2026-09-25T00:16:46Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - causal_graphs
+  - discussions
+  summary: Add U12-type catalytic step 1 spliceosome
+  details: Added a new GO:0071017 U12-type catalytic step 1 spliceosome record with GO exact
+    and narrow synonyms, catalytic step 1 and U12-type spliceosomal-complex parentage, GO-grounded
+    U12, U5 and U6atac snRNP components, GO and Will/Luehrmann U12-spliceosome evidence, a
+    minimal retained-snRNP assembly graph, and a TODO for exact protein-family boundary curation.
