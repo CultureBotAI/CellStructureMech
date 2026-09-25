@@ -15757,6 +15757,37 @@
       ]
     },
     {
+      "identifier": "GO:0097526",
+      "label": "spliceosomal tri-snRNP complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0071009",
+          "label": "U4atac/U6atac x U5 tri-snRNP complex",
+          "cosine_similarity": 0.94823632
+        },
+        {
+          "identifier": "GO:0046540",
+          "label": "U4/U6 x U5 tri-snRNP complex",
+          "cosine_similarity": 0.91554525
+        },
+        {
+          "identifier": "GO:0071020",
+          "label": "post-spliceosomal complex",
+          "cosine_similarity": 0.91477625
+        },
+        {
+          "identifier": "GO:0071023",
+          "label": "trans spliceosomal complex",
+          "cosine_similarity": 0.90547425
+        },
+        {
+          "identifier": "GO:0071022",
+          "label": "U12-type post-spliceosomal complex",
+          "cosine_similarity": 0.90482512
+        }
+      ]
+    },
+    {
       "identifier": "GO:0044530",
       "label": "supraspliceosomal complex",
       "neighbors": [
@@ -16603,6 +16634,11 @@
           "cosine_similarity": 0.95314306
         },
         {
+          "identifier": "GO:0097526",
+          "label": "spliceosomal tri-snRNP complex",
+          "cosine_similarity": 0.94823632
+        },
+        {
           "identifier": "GO:0005691",
           "label": "U6atac snRNP",
           "cosine_similarity": 0.92803264
@@ -16616,11 +16652,6 @@
           "identifier": "GO:0005690",
           "label": "U4atac snRNP",
           "cosine_similarity": 0.92039797
-        },
-        {
-          "identifier": "GO:0005688",
-          "label": "U6 snRNP",
-          "cosine_similarity": 0.91090855
         }
       ]
     },

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/spliceosomal_tri_snrnp_complex.yaml
+  slug: spliceosomal_tri_snrnp_complex
+session:
+  id: 2026-09-25T184038Z-codex-80b13b
+  timestamp: '2026-09-25T18:40:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add spliceosomal tri-snRNP complex record
+  details: Added a GO:0097526 spliceosomal tri-snRNP complex record with spliceosomal snRNP
+    parentage, a reviewed-label-only U4/U6-family snRNP component, a GO-grounded U5 snRNP
+    component, yeast and human tri-snRNP examples, a generic nonmechanistic assembly graph,
+    and a follow-up discussion for keeping subtype-specific protein inventories on exact child
+    records.
