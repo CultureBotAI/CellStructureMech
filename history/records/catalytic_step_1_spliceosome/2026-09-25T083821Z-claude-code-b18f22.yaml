@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/catalytic_step_1_spliceosome.yaml
+  slug: catalytic_step_1_spliceosome
+session:
+  id: 2026-09-25T083821Z-claude-code-b18f22
+  timestamp: '2026-09-25T08:38:21Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - synonyms
+  - parent_structures
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add catalytic step 1 spliceosome record
+  details: Added a new GO:0071012 catalytic step 1 spliceosome record with GO exact and narrow
+    synonyms, spliceosomal-complex and catalytic-complex parentage, a reviewed-label-only
+    generic retained catalytic step 1 snRNP component, GO evidence for U2-type and U12-type
+    child states, a conservative snRNP-retention graph and a curation TODO for exact subtype-specific
+    snRNP boundaries. The duplicate search included hidden and ignored files before creation.

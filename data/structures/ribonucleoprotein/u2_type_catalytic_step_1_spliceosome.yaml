@@ -28,6 +28,12 @@ curation_history:
   changes: '#1511: added record-level GO:0071005 evidence for the U2-type precatalytic
     spliceosome node used in the remodeling graph.'
   llm_assisted: true
+- timestamp: '2026-09-25T08:52:48Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1563: added GO:0071012 catalytic step 1 spliceosome parentage to mirror
+    the live GO hierarchy.'
+  llm_assisted: true
 synonyms:
 - synonym_text: major catalytic step 1 spliceosome
   synonym_type: EXACT_SYNONYM
@@ -48,6 +54,7 @@ synonyms:
   synonym_type: NARROW_SYNONYM
   source: GO:0071006
 parent_structures:
+- GO:0071012
 - GO:0005684
 components:
 - component_id: u2_snrnp
@@ -107,6 +114,8 @@ evidence:
 - reference: GO:0071006
   notes: Gene Ontology cellular-component term for the U2-type catalytic step 1 spliceosome
     and its GO synonyms.
+- reference: GO:0071012
+  notes: Gene Ontology cellular-component parent term for catalytic step 1 spliceosome.
 - reference: GO:0005684
   notes: Gene Ontology cellular-component parent term for U2-type spliceosomal complex.
 - reference: GO:0071005

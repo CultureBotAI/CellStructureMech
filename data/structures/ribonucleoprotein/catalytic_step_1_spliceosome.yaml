@@ -1,0 +1,157 @@
+identifier: GO:0071012
+label: catalytic step 1 spliceosome
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A spliceosomal complex that is formed by the displacement of the two snRNPs
+  from the precatalytic spliceosome; three snRNPs including U5 remain associated with
+  the mRNA. This complex, sometimes called the activated spliceosome, is the catalytically
+  active form of the spliceosome, and includes many proteins in addition to those
+  found in the associated snRNPs.
+definition_source: GO:0071012
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T08:37:13Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T08:37:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact and narrow synonyms, spliceosomal and catalytic-complex
+    parentage, a reviewed-label-only retained catalytic step 1 snRNP component, a
+    conservative snRNP-retention graph and a TODO for exact U2-type and U12-type catalytic
+    step 1 spliceosome boundaries.
+  llm_assisted: true
+synonyms:
+- synonym_text: activated spliceosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071012
+- synonym_text: mammalian spliceosomal complex B*
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071012
+- synonym_text: mammalian spliceosomal complex B2
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071012
+- synonym_text: yeast spliceosomal complex A1
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071012
+parent_structures:
+- GO:0005681
+- GO:1902494
+components:
+- component_id: retained_step1_snrnps
+  label: retained catalytic step 1 snRNPs
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0071012 spans U2-type catalytic step 1 spliceosomes, which retain
+    U2, U5 and U6 snRNPs, and U12-type catalytic step 1 spliceosomes, which retain
+    U12, U5 and U6atac snRNPs; no single exact source-neutral CURIE was assigned for
+    this subtype-specific retained snRNP cohort.
+  role: Subtype-specific set of three snRNP constituents, including U5, that remain
+    associated with mRNA in catalytic step 1 spliceosomes.
+  evidence:
+  - reference: GO:0071012
+    notes: GO:0071012 defines the catalytic step 1 spliceosome as retaining three
+      snRNPs including U5 after displacement of two snRNPs from the precatalytic spliceosome.
+  - reference: GO:0071006
+    notes: GO:0071006 defines the U2-type catalytic step 1 spliceosome by retention
+      of U2, U5 and U6 snRNPs.
+  - reference: GO:0071017
+    notes: GO:0071017 defines the U12-type catalytic step 1 spliceosome by retention
+      of U12, U5 and U6atac snRNPs.
+evidence:
+- reference: GO:0071012
+  notes: Gene Ontology cellular-component term for catalytic step 1 spliceosome and
+    its GO synonyms.
+- reference: GO:0005681
+  notes: Gene Ontology cellular-component parent term for spliceosomal complex.
+- reference: GO:1902494
+  notes: Gene Ontology cellular-component parent term for catalytic complex.
+- reference: GO:0071011
+  notes: Gene Ontology cellular-component term for the preceding precatalytic spliceosome
+    state.
+- reference: GO:0071006
+  notes: Gene Ontology cellular-component term for the U2-type catalytic step 1 spliceosome
+    child state.
+- reference: GO:0071017
+  notes: Gene Ontology cellular-component term for the U12-type catalytic step 1 spliceosome
+    child state.
+- reference: GO:0005682
+  notes: Gene Ontology cellular-component term for the U5 snRNP.
+- reference: GO:0005686
+  notes: Gene Ontology cellular-component term for the U2 snRNP.
+- reference: GO:0005688
+  notes: Gene Ontology cellular-component term for the U6 snRNP.
+- reference: GO:0005693
+  notes: Gene Ontology cellular-component term for the U12 snRNP.
+- reference: GO:0005691
+  notes: Gene Ontology cellular-component term for the U6atac snRNP.
+causal_graphs:
+- graph_id: catalytic_step1_snrnp_retention
+  title: Three snRNPs remain in catalytic step 1 spliceosomes
+  description: Catalytic step 1 spliceosomes form when precatalytic spliceosomes are
+    remodeled by displacement of two snRNPs while U5 and two subtype-specific snRNPs
+    remain associated with mRNA.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the generic retention of three snRNPs including
+    U5 without asserting the U2/U5/U6 composition of the U2-type child state or the
+    U12/U5/U6atac composition of the U12-type child state.
+  nodes:
+  - node_id: retained_step1_snrnps
+    label: retained catalytic step 1 snRNPs
+    node_type: STRUCTURE
+    component_ref: retained_step1_snrnps
+  - node_id: precatalytic_spliceosome
+    label: precatalytic spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071011
+  - node_id: catalytic_step_1_spliceosome
+    label: catalytic step 1 spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071012
+  edges:
+  - subject: retained_step1_snrnps
+    predicate: remain associated in
+    object: catalytic_step_1_spliceosome
+    description: Three snRNPs including U5 remain associated with mRNA in catalytic
+      step 1 spliceosomes.
+    evidence:
+    - reference: GO:0071012
+      notes: GO:0071012 defines catalytic step 1 spliceosomes by retention of three
+        snRNPs including U5.
+  - subject: precatalytic_spliceosome
+    predicate: is remodeled to form
+    object: catalytic_step_1_spliceosome
+    description: Displacement of two snRNPs from the precatalytic spliceosome yields
+      the catalytic step 1 spliceosome.
+    evidence:
+    - reference: GO:0071012
+      notes: GO:0071012 defines the catalytic step 1 spliceosome as formed by displacement
+        of two snRNPs from the precatalytic spliceosome.
+discussions:
+- discussion_id: resolve_catalytic_step1_state_snrnp_boundaries
+  prompt: Resolve exact source-neutral snRNP membership and additional protein boundaries
+    for each catalytic step 1 spliceosome subtype.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#retained_step1_snrnps
+  - causal_graphs#catalytic_step1_snrnp_retention
+  rationale: The first GO:0071012 parent record captures only the generic retention
+    of three snRNPs including U5 after precatalytic remodeling. Child records for
+    U2-type and U12-type catalytic step 1 spliceosomes should carry the exact U2/U5/U6
+    and U12/U5/U6atac constituent boundaries that apply to those specific states.
+  evidence:
+  - reference: GO:0071012
+  - reference: GO:0071006
+  - reference: GO:0071017
+  - reference: GO:0005682
+  - reference: GO:0005686
+  - reference: GO:0005688
+  - reference: GO:0005693
+  - reference: GO:0005691
+  posed_by: codex
+  posed_date: '2026-09-25'

@@ -14672,6 +14672,37 @@
       ]
     },
     {
+      "identifier": "GO:0071012",
+      "label": "catalytic step 1 spliceosome",
+      "neighbors": [
+        {
+          "identifier": "GO:0071011",
+          "label": "precatalytic spliceosome",
+          "cosine_similarity": 0.96932986
+        },
+        {
+          "identifier": "GO:0071006",
+          "label": "U2-type catalytic step 1 spliceosome",
+          "cosine_similarity": 0.9492098
+        },
+        {
+          "identifier": "GO:0071017",
+          "label": "U12-type catalytic step 1 spliceosome",
+          "cosine_similarity": 0.94342353
+        },
+        {
+          "identifier": "GO:0005681",
+          "label": "spliceosomal complex",
+          "cosine_similarity": 0.93902101
+        },
+        {
+          "identifier": "GO:0071007",
+          "label": "U2-type catalytic step 2 spliceosome",
+          "cosine_similarity": 0.93605161
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000243",
       "label": "commitment complex",
       "neighbors": [
@@ -14691,14 +14722,14 @@
           "cosine_similarity": 0.9070401
         },
         {
+          "identifier": "GO:0071012",
+          "label": "catalytic step 1 spliceosome",
+          "cosine_similarity": 0.90460244
+        },
+        {
           "identifier": "GO:0071022",
           "label": "U12-type post-spliceosomal complex",
           "cosine_similarity": 0.89440939
-        },
-        {
-          "identifier": "GO:0071021",
-          "label": "U2-type post-spliceosomal complex",
-          "cosine_similarity": 0.89415054
         }
       ]
     },
@@ -14784,14 +14815,14 @@
           "cosine_similarity": 0.78266841
         },
         {
+          "identifier": "GO:0071012",
+          "label": "catalytic step 1 spliceosome",
+          "cosine_similarity": 0.75848552
+        },
+        {
           "identifier": "GO:0015935",
           "label": "small ribosomal subunit",
           "cosine_similarity": 0.75481966
-        },
-        {
-          "identifier": "GO:0071006",
-          "label": "U2-type catalytic step 1 spliceosome",
-          "cosine_similarity": 0.75396001
         }
       ]
     },
@@ -14862,6 +14893,11 @@
       "label": "precatalytic spliceosome",
       "neighbors": [
         {
+          "identifier": "GO:0071012",
+          "label": "catalytic step 1 spliceosome",
+          "cosine_similarity": 0.96932986
+        },
+        {
           "identifier": "GO:0071005",
           "label": "U2-type precatalytic spliceosome",
           "cosine_similarity": 0.95283576
@@ -14880,11 +14916,6 @@
           "identifier": "GO:0005681",
           "label": "spliceosomal complex",
           "cosine_similarity": 0.92600938
-        },
-        {
-          "identifier": "GO:0071015",
-          "label": "U12-type prespliceosome",
-          "cosine_similarity": 0.92456352
         }
       ]
     },
@@ -14944,9 +14975,9 @@
           "cosine_similarity": 0.92165319
         },
         {
-          "identifier": "GO:0005684",
-          "label": "U2-type spliceosomal complex",
-          "cosine_similarity": 0.90707006
+          "identifier": "GO:0071012",
+          "label": "catalytic step 1 spliceosome",
+          "cosine_similarity": 0.91385794
         }
       ]
     },
@@ -15115,6 +15146,11 @@
           "cosine_similarity": 0.94522551
         },
         {
+          "identifier": "GO:0071012",
+          "label": "catalytic step 1 spliceosome",
+          "cosine_similarity": 0.93902101
+        },
+        {
           "identifier": "GO:0005689",
           "label": "U12-type spliceosomal complex",
           "cosine_similarity": 0.92954649
@@ -15128,11 +15164,6 @@
           "identifier": "GO:0071010",
           "label": "prespliceosome",
           "cosine_similarity": 0.92165319
-        },
-        {
-          "identifier": "GO:0071021",
-          "label": "U2-type post-spliceosomal complex",
-          "cosine_similarity": 0.91672101
         }
       ]
     },
@@ -15285,9 +15316,9 @@
           "cosine_similarity": 0.94379288
         },
         {
-          "identifier": "GO:0071022",
-          "label": "U12-type post-spliceosomal complex",
-          "cosine_similarity": 0.93463166
+          "identifier": "GO:0071012",
+          "label": "catalytic step 1 spliceosome",
+          "cosine_similarity": 0.94342353
         }
       ]
     },
@@ -15559,14 +15590,14 @@
           "cosine_similarity": 0.95788987
         },
         {
+          "identifier": "GO:0071012",
+          "label": "catalytic step 1 spliceosome",
+          "cosine_similarity": 0.9492098
+        },
+        {
           "identifier": "GO:0071018",
           "label": "U12-type catalytic step 2 spliceosome",
           "cosine_similarity": 0.94385438
-        },
-        {
-          "identifier": "GO:0071008",
-          "label": "U2-type post-mRNA release spliceosomal complex",
-          "cosine_similarity": 0.93461829
         }
       ]
     },
@@ -15750,9 +15781,9 @@
           "cosine_similarity": 0.92936092
         },
         {
-          "identifier": "GO:0071008",
-          "label": "U2-type post-mRNA release spliceosomal complex",
-          "cosine_similarity": 0.92532594
+          "identifier": "GO:0071012",
+          "label": "catalytic step 1 spliceosome",
+          "cosine_similarity": 0.92812947
         }
       ]
     },

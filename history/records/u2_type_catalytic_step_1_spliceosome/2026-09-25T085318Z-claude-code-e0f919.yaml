@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u2_type_catalytic_step_1_spliceosome.yaml
+  slug: u2_type_catalytic_step_1_spliceosome
+session:
+  id: 2026-09-25T085318Z-claude-code-e0f919
+  timestamp: '2026-09-25T08:53:18Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1563
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1562
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_structures
+  - evidence
+  summary: Add catalytic step 1 parentage to U2-type catalytic step 1 spliceosome
+  details: 'Addressed review issue #1563 by adding GO:0071012 as the generic catalytic step
+    1 spliceosome parent of the GO:0071006 U2-type catalytic step 1 spliceosome record, alongside
+    its existing U2-type spliceosomal-complex parent, and added matching record-level GO evidence.'
