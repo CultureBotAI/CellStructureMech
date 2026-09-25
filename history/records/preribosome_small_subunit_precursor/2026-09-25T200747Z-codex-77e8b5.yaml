@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/preribosome_small_subunit_precursor.yaml
+  slug: preribosome_small_subunit_precursor
+session:
+  id: 2026-09-25T200747Z-codex-77e8b5
+  timestamp: '2026-09-25T20:07:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add GO:0030688 small-subunit preribosome precursor record
+  details: Created a GO-grounded CellStructureMech record for the preribosome, small subunit
+    precursor, including the GO 43S preribosome synonym, GO:0030684 parentage, reviewed-label-only
+    20S pre-rRNA and small-subunit preribosome protein cohort components, conservative Saccharomyces
+    cerevisiae distribution/example rows, small-subunit and ribosome-biogenesis function links,
+    GO/SO/PubMed evidence, a nonmechanistic constituent graph, and a component-boundary TODO.

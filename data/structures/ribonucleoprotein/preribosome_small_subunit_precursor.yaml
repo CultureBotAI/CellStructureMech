@@ -1,0 +1,196 @@
+identifier: GO:0030688
+label: preribosome, small subunit precursor
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A preribosomal complex consisting of 20S pre-rRNA, ribosomal proteins
+  including late-associating small subunit proteins, and associated proteins; a precursor
+  of the eukaryotic cytoplasmic small ribosomal subunit.
+definition_source: GO:0030688
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T20:04:57Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T20:05:32Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added 43S preribosome synonymy, preribosome parentage, reviewed-label-only
+    20S pre-rRNA and protein-cohort components, a conservative budding-yeast example,
+    ribosomal small-subunit biogenesis functions, GO/SO/PubMed evidence, a nonmechanistic
+    constituent graph and a TODO for exact component boundaries.
+  llm_assisted: true
+synonyms:
+- synonym_text: 43S preribosome
+  synonym_type: NARROW_SYNONYM
+  source: GO:0030688
+parent_structures:
+- GO:0030684
+components:
+- component_id: pre_20s_rrna
+  label: 20S pre-rRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral Sequence Ontology class for the 20S precursor
+    ribosomal RNA was assigned in this pass; SO:0002393 denotes the broader precursor_RNA
+    class, not 20S pre-rRNA specifically.
+  role: 20S precursor rRNA assembled into a eukaryotic cytoplasmic small-subunit preribosomal
+    precursor.
+  evidence:
+  - reference: GO:0030688
+    notes: GO:0030688 defines the small-subunit precursor preribosome as containing
+      20S pre-rRNA.
+  - reference: SO:0002393
+    notes: SO:0002393 denotes the broader precursor_RNA class, not the exact 20S precursor
+      rRNA species.
+- component_id: ssu_preribosome_protein_cohort
+  label: small-subunit preribosome protein cohort
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Small-subunit preribosome precursors contain ribosomal proteins,
+    including late-associating small-subunit ribosomal proteins, and associated proteins,
+    but exact source-neutral InterPro, Pfam, NCBIfam, Complex Portal or GO boundaries
+    for that heterogeneous protein cohort were not assigned in this first record.
+  role: Ribosomal proteins and associated assembly factors carried by eukaryotic small-subunit
+    preribosome precursors.
+  evidence:
+  - reference: GO:0030688
+    notes: GO:0030688 defines the small-subunit precursor preribosome as containing
+      ribosomal proteins, including late-associating small-subunit ribosomal proteins,
+      and associated proteins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: GO:0030688 notes that this small-subunit precursor preribosome is a 43S complex
+    in Saccharomyces; broader eukaryotic distribution is left for a follow-up curation
+    pass.
+  reference: GO:0030688
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding yeast is the model for the 43S small-subunit preribosome precursor
+    described in the GO:0030688 comment.
+  reference: GO:0030688
+functions:
+- function_id: small_ribosomal_subunit_biogenesis
+  label: ribosomal small subunit biogenesis
+  grounding: GO:0042274
+  description: As a precursor of the eukaryotic cytoplasmic small ribosomal subunit,
+    the small-subunit preribosome participates in small-subunit biogenesis.
+  evidence:
+  - reference: GO:0042274
+    notes: GO:0042274 is the Gene Ontology biological-process term for ribosomal small
+      subunit biogenesis.
+  - reference: GO:0030688
+    notes: GO:0030688 defines this preribosome as a precursor of the eukaryotic cytoplasmic
+      small ribosomal subunit.
+- function_id: ribosome_biogenesis
+  label: ribosome biogenesis
+  grounding: GO:0042254
+  description: The small-subunit preribosome is a preribosomal complex formed as part
+    of the broader ribosome-biogenesis program.
+  evidence:
+  - reference: GO:0042254
+    notes: GO:0042254 is the Gene Ontology biological-process term for ribosome biogenesis.
+  - reference: GO:0030684
+    notes: GO:0030684 defines preribosomal complexes as being formed during ribosome
+      biogenesis.
+evidence:
+- reference: GO:0030688
+  notes: Gene Ontology cellular-component term for the preribosome, small subunit
+    precursor and its 43S preribosome narrow synonym.
+- reference: GO:0030684
+  notes: Gene Ontology cellular-component parent term for preribosomal complexes.
+- reference: GO:0042274
+  notes: Gene Ontology biological-process term for ribosomal small subunit biogenesis.
+- reference: GO:0042254
+  notes: Gene Ontology biological-process term for ribosome biogenesis.
+- reference: SO:0002393
+  notes: Sequence Ontology term for the broader precursor_RNA class, which is not
+    specific to 20S pre-rRNA.
+- reference: PMID:10567516
+  notes: PubMed identifier for Kressler, Linder and de la Cruz 1999, the review publication
+    cited in the GO:0030688 definition.
+- reference: DOI:10.1128/MCB.19.12.7897
+  notes: DOI for Kressler, Linder and de la Cruz 1999, 'Protein trans-Acting Factors
+    Involved in Ribosome Biogenesis in Saccharomyces cerevisiae', verified through
+    NCBI E-utilities.
+causal_graphs:
+- graph_id: small_subunit_preribosome_constituents
+  title: 20S pre-rRNA and proteins form small-subunit preribosome precursors
+  description: GO defines the small-subunit precursor preribosome as a preribosomal
+    complex containing 20S pre-rRNA, ribosomal proteins including late-associating
+    small-subunit proteins, and associated proteins.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records GO-defined rRNA and protein cohorts without
+    resolving exact 20S, ribosomal-protein or associated-factor boundaries.
+  nodes:
+  - node_id: pre_20s_rrna
+    label: 20S pre-rRNA
+    node_type: RNA
+    component_ref: pre_20s_rrna
+  - node_id: ssu_preribosome_protein_cohort
+    label: small-subunit preribosome protein cohort
+    node_type: GENE_OR_PROTEIN
+    component_ref: ssu_preribosome_protein_cohort
+  - node_id: small_subunit_preribosome
+    label: preribosome, small subunit precursor
+    node_type: STRUCTURE
+    grounding: GO:0030688
+  - node_id: small_ribosomal_subunit_biogenesis
+    label: ribosomal small subunit biogenesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042274
+  edges:
+  - subject: pre_20s_rrna
+    predicate: contributes constituents to
+    object: small_subunit_preribosome
+    description: 20S pre-rRNA is an RNA constituent of small-subunit preribosome precursors.
+    evidence:
+    - reference: GO:0030688
+      notes: GO:0030688 defines the complex as containing 20S pre-rRNA.
+  - subject: ssu_preribosome_protein_cohort
+    predicate: contributes constituents to
+    object: small_subunit_preribosome
+    description: Small-subunit ribosomal proteins and associated proteins are protein
+      constituents of the small-subunit preribosome precursor.
+    evidence:
+    - reference: GO:0030688
+      notes: GO:0030688 defines the complex as containing ribosomal proteins and associated
+        proteins.
+  - subject: small_subunit_preribosome
+    predicate: participates in
+    object: small_ribosomal_subunit_biogenesis
+    description: Small-subunit preribosome precursors participate in biogenesis of
+      the eukaryotic cytoplasmic small ribosomal subunit.
+    evidence:
+    - reference: GO:0030688
+      notes: GO:0030688 defines this preribosome as a precursor of the eukaryotic
+        cytoplasmic small ribosomal subunit.
+    - reference: GO:0042274
+      notes: GO:0042274 is the process term for ribosomal small subunit biogenesis.
+discussions:
+- discussion_id: resolve_small_subunit_preribosome_boundaries
+  prompt: Resolve exact small-subunit preribosome precursor RNA, ribosomal-protein
+    and associated assembly-factor boundaries.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pre_20s_rrna
+  - components#ssu_preribosome_protein_cohort
+  - causal_graphs#small_subunit_preribosome_constituents
+  rationale: GO:0030688 defines a eukaryotic cytoplasmic small-subunit preribosome
+    precursor with 20S pre-rRNA, ribosomal proteins including late-associating small-subunit
+    proteins, and associated proteins. Exact source-neutral boundaries for the 20S
+    precursor rRNA and protein cohorts need narrower literature-backed curation.
+  evidence:
+  - reference: GO:0030688
+  - reference: SO:0002393
+  - reference: DOI:10.1128/MCB.19.12.7897
+  posed_by: codex
+  posed_date: '2026-09-25'
