@@ -1,0 +1,159 @@
+identifier: GO:0000177
+label: cytoplasmic exosome (RNase complex)
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A ribonuclease complex that has 3-prime to 5-prime processive hydrolytic
+  exoribonuclease activity producing 5-prime-phosphomonoesters. Participates in a
+  multitude of cellular RNA processing and degradation events preventing nuclear export
+  and/or translation of aberrant RNAs. Restricted to processing linear and circular
+  single-stranded RNAs (ssRNA) only. RNAs with complex secondary structures may have
+  to be unwound or pre-processed by co-factors prior to entering the complex, esp
+  if the 3-prime end is structured.
+definition_source: GO:0000177
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T14:57:15Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T14:57:54Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact synonymy, exosome parentage and cytoplasmic parthood, conservative
+    GO-backed RNA processing and degradation functions, GO/PubMed evidence, a nonmechanistic
+    localization/function graph and a component-boundary TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: cytoplasmic exosome (ribonuclease complex)
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000177
+- synonym_text: cytoplasmic exosome multienzyme ribonuclease complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000177
+- synonym_text: prokaryotic exosome multienzyme ribonuclease complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000177
+parent_structures:
+- GO:0000178
+part_of:
+- GO:0005737
+functions:
+- function_id: rna_catabolic_process
+  label: RNA catabolic process
+  grounding: GO:0006401
+  description: The cytoplasmic exosome participates in degradation of RNA substrates.
+  evidence:
+  - reference: GO:0006401
+    notes: GO:0006401 is the Gene Ontology biological-process term for RNA catabolic
+      process.
+  - reference: GO:0000177
+    notes: GO:0000177 defines the cytoplasmic exosome RNase complex as participating
+      in RNA degradation events.
+- function_id: rna_processing
+  label: RNA processing
+  grounding: GO:0006396
+  description: The cytoplasmic exosome participates in processing RNA transcripts.
+  evidence:
+  - reference: GO:0006396
+    notes: GO:0006396 is the Gene Ontology biological-process term for RNA processing.
+  - reference: GO:0000177
+    notes: GO:0000177 defines the cytoplasmic exosome RNase complex as participating
+      in RNA processing events.
+evidence:
+- reference: GO:0000177
+  notes: Gene Ontology cellular-component term for the cytoplasmic exosome RNase complex
+    and its exact synonyms.
+- reference: GO:0000178
+  notes: Gene Ontology cellular-component term for the broader exosome RNase complex
+    in the GO:0000177 logical definition.
+- reference: GO:0005737
+  notes: Gene Ontology cellular-component term for the cytoplasm in the GO:0000177
+    logical definition.
+- reference: GO:0006401
+  notes: Gene Ontology biological-process term for RNA catabolic process.
+- reference: GO:0006396
+  notes: Gene Ontology biological-process term for RNA processing.
+- reference: PMID:17174896
+  notes: Liu, Greimann and Lima 2006, Reconstitution, activities, and structure of
+    the eukaryotic RNA exosome, Cell; PMID cited in the GO:0000177 definition xrefs.
+- reference: PMID:20531386
+  notes: 'Tomecki et al. 2010, The human core exosome interacts with differentially
+    localized processive RNases: hDIS3 and hDIS3L, EMBO Journal; PMID cited in the
+    GO:0000177 definition xrefs.'
+- reference: PMID:26726035
+  notes: Kilchert, Wittmann and Vasiljeva 2016, The regulation and functions of the
+    nuclear RNA exosome complex, Nature Reviews Molecular Cell Biology; PMID cited
+    in the GO:0000177 definition xrefs.
+causal_graphs:
+- graph_id: cytoplasmic_exosome_rna_surveillance
+  title: Cytoplasmic exosome acts in RNA processing and decay
+  description: GO defines the cytoplasmic exosome as an exosome RNase complex located
+    in the cytoplasm that participates in RNA processing and degradation events.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-defined cytoplasmic localization and RNA
+    processing/degradation activities without resolving exact exosome core or catalytic
+    nuclease composition.
+  nodes:
+  - node_id: cytoplasmic_exosome
+    label: cytoplasmic exosome (RNase complex)
+    node_type: STRUCTURE
+    grounding: GO:0000177
+  - node_id: cytoplasm
+    label: cytoplasm
+    node_type: STRUCTURE
+    grounding: GO:0005737
+  - node_id: rna_catabolic_process
+    label: RNA catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006401
+  - node_id: rna_processing
+    label: RNA processing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006396
+  edges:
+  - subject: cytoplasmic_exosome
+    predicate: localizes to
+    object: cytoplasm
+    description: The cytoplasmic exosome RNase complex is part of the cytoplasm.
+    evidence:
+    - reference: GO:0000177
+      notes: The GO:0000177 logical definition places this exosome RNase complex in
+        the cytoplasm.
+    - reference: GO:0005737
+      notes: GO:0005737 is the Gene Ontology cellular-component term for the cytoplasm.
+  - subject: cytoplasmic_exosome
+    predicate: supports
+    object: rna_catabolic_process
+    description: The cytoplasmic exosome RNase complex participates in RNA degradation
+      events.
+    evidence:
+    - reference: GO:0000177
+      notes: GO:0000177 defines the complex as participating in RNA degradation events.
+  - subject: cytoplasmic_exosome
+    predicate: supports
+    object: rna_processing
+    description: The cytoplasmic exosome RNase complex participates in RNA processing
+      events.
+    evidence:
+    - reference: GO:0000177
+      notes: GO:0000177 defines the complex as participating in RNA processing events.
+discussions:
+- discussion_id: resolve_cytoplasmic_exosome_component_boundaries
+  prompt: Resolve exact source-neutral component boundaries for cytoplasmic exosome
+    RNase complexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#cytoplasmic_exosome_rna_surveillance
+  rationale: The first GO:0000177 record captures the GO-defined cytoplasmic exosome
+    localization and RNA processing/decay activities. Exact source-neutral boundaries
+    for the exosome core and catalytic nucleases should be curated from primary component
+    evidence before assigning constituents.
+  evidence:
+  - reference: GO:0000177
+  - reference: GO:0000178
+  - reference: GO:0005737
+  posed_by: codex
+  posed_date: '2026-09-25'
