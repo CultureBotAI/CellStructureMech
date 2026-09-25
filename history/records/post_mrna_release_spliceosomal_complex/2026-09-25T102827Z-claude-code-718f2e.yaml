@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/post_mrna_release_spliceosomal_complex.yaml
+  slug: post_mrna_release_spliceosomal_complex
+session:
+  id: 2026-09-25T102827Z-claude-code-718f2e
+  timestamp: '2026-09-25T10:28:27Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1568
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1567
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Address PR #1567 post-mRNA release spliceosome review issue'
+  details: 'Addressed review issue #1568 by narrowing the generic GO:0071014 post-mRNA release
+    graph transition from active spliced-product release to passive remodeling after spliced-product
+    release, avoiding an unsupported agentive claim while retaining the GO-backed precursor
+    and product states.'
