@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/sl_snrnp.yaml
+  slug: sl_snrnp
+session:
+  id: 2026-09-25T111244Z-claude-code-70d3fc
+  timestamp: '2026-09-25T11:12:44Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add SL snRNP record
+  details: Added a new GO:0071024 SL snRNP record with spliceosomal snRNP parentage, reviewed-label-only
+    spliced leader RNA and SL snRNP-associated protein components, a conservative constituent
+    graph, and a curation TODO for unresolved exact RNA and protein-family boundaries. Validated
+    the new record with targeted LinkML validation.

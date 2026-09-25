@@ -1,0 +1,109 @@
+identifier: GO:0071024
+label: SL snRNP
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex that contains spliced leader (SL) RNA and
+  associated proteins.
+definition_source: GO:0071024
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T11:11:37Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T11:12:11Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added spliceosomal snRNP parentage, reviewed-label-only spliced leader
+    RNA and SL snRNP-associated protein components, a conservative constituent graph
+    and a TODO for exact SL snRNP RNA and protein-family boundaries.
+  llm_assisted: true
+parent_structures:
+- GO:0097525
+components:
+- component_id: spliced_leader_rna
+  label: spliced leader RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0071024 defines the SL snRNP by its spliced leader (SL) RNA
+    content, but no exact Sequence Ontology CURIE for this RNA was assigned in this
+    first record.
+  role: Spliced leader RNA constituent of the SL snRNP.
+  evidence:
+  - reference: GO:0071024
+    notes: GO:0071024 defines the SL snRNP as containing spliced leader RNA.
+- component_id: sl_snrnp_associated_proteins
+  label: SL snRNP-associated proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0071024 defines the SL snRNP as containing associated proteins,
+    but exact source-neutral protein-family boundaries for the SL snRNP were not resolved
+    in this first record.
+  role: Protein constituents associated with the spliced leader RNA in the SL snRNP.
+  evidence:
+  - reference: GO:0071024
+    notes: GO:0071024 defines the SL snRNP as containing associated proteins in addition
+      to spliced leader RNA.
+evidence:
+- reference: GO:0071024
+  notes: Gene Ontology cellular-component term for the SL snRNP.
+- reference: GO:0097525
+  notes: Gene Ontology cellular-component parent term for spliceosomal snRNP complex.
+causal_graphs:
+- graph_id: sl_snrnp_constituents
+  title: Spliced leader RNA and associated proteins form the SL snRNP
+  description: The SL snRNP contains spliced leader RNA together with associated proteins.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined RNA and associated-protein
+    contributions without modeling individual SL snRNP protein-family boundaries.
+  nodes:
+  - node_id: spliced_leader_rna
+    label: spliced leader RNA
+    node_type: RNA
+    component_ref: spliced_leader_rna
+  - node_id: sl_snrnp_associated_proteins
+    label: SL snRNP-associated proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: sl_snrnp_associated_proteins
+  - node_id: sl_snrnp
+    label: SL snRNP
+    node_type: STRUCTURE
+    grounding: GO:0071024
+  edges:
+  - subject: spliced_leader_rna
+    predicate: contributes constituents to
+    object: sl_snrnp
+    description: Spliced leader RNA is the RNA constituent represented in the SL snRNP
+      definition.
+    evidence:
+    - reference: GO:0071024
+      notes: GO:0071024 defines the SL snRNP as containing spliced leader RNA.
+  - subject: sl_snrnp_associated_proteins
+    predicate: contributes constituents to
+    object: sl_snrnp
+    description: SL snRNP-associated proteins are protein constituents represented
+      in the SL snRNP definition.
+    evidence:
+    - reference: GO:0071024
+      notes: GO:0071024 defines the SL snRNP as containing associated proteins.
+discussions:
+- discussion_id: resolve_sl_snrnp_components
+  prompt: Resolve the exact source-neutral RNA and protein-family boundaries for SL
+    snRNP components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#spliced_leader_rna
+  - components#sl_snrnp_associated_proteins
+  - causal_graphs#sl_snrnp_constituents
+  rationale: The first GO:0071024 record captures only the GO-defined spliced leader
+    RNA and associated-protein cohorts. Exact RNA terminology and SL snRNP protein-family
+    boundaries should be resolved before expanding the component list.
+  evidence:
+  - reference: GO:0071024
+  posed_by: codex
+  posed_date: '2026-09-25'
