@@ -1,0 +1,112 @@
+identifier: GO:0000243
+label: commitment complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A spliceosomal complex that is formed by association of the U1 snRNP with
+  the 5' splice site of an unspliced intron in an RNA transcript.
+definition_source: GO:0000243
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T02:28:55Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T02:29:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO narrow synonyms, U2-type parentage, the GO-grounded U1 snRNP component,
+    Abovich/Rosbash commitment-complex evidence, a conservative U1 splice-site association
+    graph and a protein/RNA component grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: mammalian spliceosomal complex E
+  synonym_type: NARROW_SYNONYM
+  source: GO:0000243
+- synonym_text: mammalian spliceosomal E complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0000243
+- synonym_text: yeast spliceosomal complex CC
+  synonym_type: NARROW_SYNONYM
+  source: GO:0000243
+parent_structures:
+- GO:0005684
+components:
+- component_id: u1_snrnp
+  label: U1 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005685
+  role: Small nuclear ribonucleoprotein associated with the 5-prime splice site of
+    the unspliced intron in the commitment complex.
+  evidence:
+  - reference: GO:0000243
+    notes: GO:0000243 defines the commitment complex by association of U1 snRNP with
+      the 5-prime splice site.
+  - reference: GO:0005685
+    notes: GO:0005685 is the Gene Ontology cellular-component term for the U1 snRNP.
+evidence:
+- reference: GO:0000243
+  notes: Gene Ontology cellular-component term for the commitment complex and its
+    GO synonyms.
+- reference: GO:0005684
+  notes: Gene Ontology cellular-component parent term for U2-type spliceosomal complex.
+- reference: GO:0005685
+  notes: Gene Ontology cellular-component term for the U1 snRNP.
+- reference: GO:0071004
+  notes: Gene Ontology cellular-component term for the U2-type prespliceosome, a subsequent
+    U2-type spliceosome state.
+- reference: DOI:10.1016/s0092-8674(00)80221-4
+  notes: Abovich and Rosbash 1997, Cross-intron bridging interactions in the yeast
+    commitment complex are conserved in mammals, Cell.
+- reference: PMID:9150140
+  notes: PubMed identifier for Abovich and Rosbash 1997 as reported by NCBI E-utilities.
+causal_graphs:
+- graph_id: commitment_complex_u1_splice_site_association
+  title: U1 snRNP association forms the commitment complex
+  description: The commitment complex forms when U1 snRNP associates with the 5-prime
+    splice site of an unspliced intron in an RNA transcript.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined U1 snRNP association that
+    defines the commitment complex without modeling the bound pre-mRNA splice-site
+    RNA, cross-intron bridging interactions or additional protein-family boundaries.
+  nodes:
+  - node_id: u1_snrnp
+    label: U1 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005685
+    component_ref: u1_snrnp
+  - node_id: commitment_complex
+    label: commitment complex
+    node_type: STRUCTURE
+    grounding: GO:0000243
+  edges:
+  - subject: u1_snrnp
+    predicate: associates with 5-prime splice site in
+    object: commitment_complex
+    description: The U1 snRNP associates with the 5-prime splice site of an unspliced
+      intron in the commitment complex.
+    evidence:
+    - reference: GO:0000243
+      notes: GO:0000243 defines the commitment complex by U1 snRNP association with
+        the 5-prime splice site of an unspliced intron.
+discussions:
+- discussion_id: resolve_commitment_complex_components
+  prompt: Resolve exact source-neutral component boundaries for commitment complex
+    proteins beyond the GO-defined U1 snRNP subcomplex, and decide how to represent
+    the bound unspliced-intron RNA.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u1_snrnp
+  - causal_graphs#commitment_complex_u1_splice_site_association
+  rationale: The first GO:0000243 record captures the defining U1 snRNP subcomplex.
+    Additional commitment-complex proteins and the splice-site substrate RNA should
+    be resolved into exact source-neutral families, subcomplexes or RNAs before expanding
+    this component list.
+  evidence:
+  - reference: GO:0000243
+  - reference: DOI:10.1016/s0092-8674(00)80221-4
+  posed_by: codex
+  posed_date: '2026-09-25'

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/commitment_complex.yaml
+  slug: commitment_complex
+session:
+  id: 2026-09-25T024456Z-claude-code-429697
+  timestamp: '2026-09-25T02:44:56Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1544
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1543
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - history
+  summary: Link commitment complex PR history
+  details: 'Resolved PR #1543 review issue #1544 by adding append-only PR provenance for the
+    GO:0000243 commitment complex curation session.'

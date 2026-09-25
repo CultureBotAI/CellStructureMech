@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>commitment complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>commitment complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0000243"><code>GO:0000243</code></a> · RIBONUCLEOPROTEIN · RIBONUCLEOPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A spliceosomal complex that is formed by association of the U1 snRNP with the 5&#39; splice site of an unspliced intron in an RNA transcript. <small>[<a href="http://purl.obolibrary.org/obo/GO_0000243"><code>GO:0000243</code></a>]</small></p>
+<p><strong>Synonyms:</strong> mammalian spliceosomal complex E; mammalian spliceosomal E complex; yeast spliceosomal complex CC</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-u1_snrnp"><td>U1 snRNP</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0005685"><code>GO:0005685</code></a></td><td></td><td></td><td></td><td>Small nuclear ribonucleoprotein associated with the 5-prime splice site of the unspliced intron in the commitment complex.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000243"><code>GO:0000243</code></a> <small>GO:0000243 defines the commitment complex by association of U1 snRNP with the 5-prime splice site.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005685"><code>GO:0005685</code></a> <small>GO:0005685 is the Gene Ontology cellular-component term for the U1 snRNP.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-commitment_complex_u1_splice_site_association">U1 snRNP association forms the commitment complex <small>(ASSEMBLY)</small></h3>
+<p>The commitment complex forms when U1 snRNP associates with the 5-prime splice site of an unspliced intron in an RNA transcript.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>U1 snRNP</td><td>associates with 5-prime splice site in</td><td>commitment complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000243"><code>GO:0000243</code></a> <small>GO:0000243 defines the commitment complex by U1 snRNP association with the 5-prime splice site of an unspliced intron.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral component boundaries for commitment complex proteins beyond the GO-defined U1 snRNP subcomplex, and decide how to represent the bound unspliced-intron RNA. <small>The first GO:0000243 record captures the defining U1 snRNP subcomplex. Additional commitment-complex proteins and the splice-site substrate RNA should be resolved into exact source-neutral families, subcomplexes or RNAs before expanding this component list.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000243"><code>GO:0000243</code></a> <small>Gene Ontology cellular-component term for the commitment complex and its GO synonyms.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005684"><code>GO:0005684</code></a> <small>Gene Ontology cellular-component parent term for U2-type spliceosomal complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005685"><code>GO:0005685</code></a> <small>Gene Ontology cellular-component term for the U1 snRNP.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0071004"><code>GO:0071004</code></a> <small>Gene Ontology cellular-component term for the U2-type prespliceosome, a subsequent U2-type spliceosome state.</small></li><li><a href="https://doi.org/10.1016/s0092-8674(00)80221-4"><code>DOI:10.1016/s0092-8674(00)80221-4</code></a> <small>Abovich and Rosbash 1997, Cross-intron bridging interactions in the yeast commitment complex are conserved in mammals, Cell.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/9150140"><code>PMID:9150140</code></a> <small>PubMed identifier for Abovich and Rosbash 1997 as reported by NCBI E-utilities.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-25T02:28:55Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-25T02:29:39Z</code> codex · EXPANDED_RECORD — Added GO narrow synonyms, U2-type parentage, the GO-grounded U1 snRNP component, Abovich/Rosbash commitment-complex evidence, a conservative U1 splice-site association graph and a protein/RNA component grounding TODO.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/commitment_complex.yaml"><code>data/structures/ribonucleoprotein/commitment_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
