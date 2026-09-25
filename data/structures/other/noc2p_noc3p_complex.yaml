@@ -1,0 +1,209 @@
+identifier: GO:0030691
+label: Noc2p-Noc3p complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterodimer associated with 66S preribosomes; predominantly nucleoplasmic,
+  but also locates to the nucleolus; involved in ribosomal large subunit biogenesis.
+definition_source: GO:0030691
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T20:50:19Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T20:51:14Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Noc-complex parentage, large-subunit preribosome parthood, Noc2 and
+    Noc3 constituent rows, budding-yeast scope, a large-subunit biogenesis function,
+    GO/PubMed/DOI evidence, a nonmechanistic Noc2p-Noc3p graph, and a subunit-grounding
+    TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0030689
+part_of:
+- GO:0030687
+components:
+- component_id: noc2_noc_complex_subunit
+  label: Noc2 Noc-complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NOC2
+  stoichiometry: one copy per heterodimer
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term name follows Saccharomyces cerevisiae Noc2p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    the Noc2 subunit class was curated in this pass.
+  role: Protein constituent shared by the budding-yeast Noc1p-Noc2p and Noc2p-Noc3p
+    complexes.
+  evidence:
+  - reference: GO:0030691
+    notes: GO:0030691 identifies Noc2p in the Noc2p-Noc3p heterodimer associated with
+      66S preribosomes.
+  - reference: DOI:10.1016/s0092-8674(01)00358-0
+    notes: Milkereit et al. 2001 reported that Noc2p participates in two distinct
+      Noc complexes, Noc1p/Noc2p and Noc2p/Noc3p.
+- component_id: noc3_noc_complex_subunit
+  label: Noc3 Noc-complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NOC3
+  stoichiometry: one copy per heterodimer
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term name follows Saccharomyces cerevisiae Noc3p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    the Noc3 subunit class was curated in this pass.
+  role: Protein constituent that forms the budding-yeast Noc2p-Noc3p heterodimer associated
+    with 66S preribosomes.
+  evidence:
+  - reference: GO:0030691
+    notes: GO:0030691 defines the Noc2p-Noc3p complex as a heterodimer associated
+      with 66S preribosomes.
+  - reference: DOI:10.1016/s0092-8674(01)00358-0
+    notes: Milkereit et al. 2001 isolated Noc2p and Noc3p in one of two distinct Noc
+      complexes involved in pre-ribosome maturation and intranuclear transport.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which Noc2p-Noc3p was described as a heterodimeric
+    Noc complex associated with 66S preribosomes.
+  reference: DOI:10.1016/s0092-8674(01)00358-0
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Milkereit et al. 2001 isolated budding-yeast Noc2p/Noc3p as a 66S preribosome-associated
+    Noc complex enriched in the nucleoplasm.
+  reference: DOI:10.1016/s0092-8674(01)00358-0
+functions:
+- function_id: ribosomal_large_subunit_biogenesis
+  label: ribosomal large subunit biogenesis
+  grounding: GO:0042273
+  description: The Noc2p-Noc3p complex is associated with 66S preribosomes and supports
+    maturation of the eukaryotic large ribosomal subunit lineage.
+  evidence:
+  - reference: GO:0030691
+    notes: GO:0030691 defines the Noc2p-Noc3p complex as involved in ribosomal large
+      subunit biogenesis.
+  - reference: GO:0042273
+    notes: GO:0042273 is the Gene Ontology biological-process term for ribosomal large
+      subunit biogenesis.
+  - reference: DOI:10.1016/s0092-8674(01)00358-0
+    notes: Milkereit et al. 2001 connected Noc2p/Noc3p to 66S pre-ribosomes and to
+      intranuclear 60S subunit maturation and transport.
+evidence:
+- reference: GO:0030691
+  notes: Gene Ontology cellular-component term for the Noc2p-Noc3p complex.
+- reference: GO:0030689
+  notes: Gene Ontology cellular-component parent term for Noc complexes.
+- reference: GO:0030687
+  notes: Gene Ontology cellular-component term for the large-subunit preribosome precursor.
+- reference: GO:0042273
+  notes: Gene Ontology biological-process term for ribosomal large subunit biogenesis.
+- reference: PMID:11371346
+  notes: PubMed identifier for Milkereit et al. 2001, 'Maturation and intranuclear
+    transport of pre-ribosomes requires Noc proteins'.
+- reference: DOI:10.1016/s0092-8674(01)00358-0
+  notes: DOI for Milkereit et al. 2001, Cell, verified through NCBI E-utilities.
+- reference: PMID:12446671
+  notes: PubMed identifier for Milkereit et al. 2003, the Journal of Biological Chemistry
+    paper cited by the GO Noc-complex terms.
+- reference: DOI:10.1074/jbc.M208898200
+  notes: DOI for Milkereit et al. 2003, the Noc4p-Nop14p study that framed Noc4p-Nop14p
+    together with the Noc1p-Noc2p and Noc2p-Noc3p heterodimers.
+causal_graphs:
+- graph_id: yeast_noc2p_noc3p_large_subunit_biogenesis
+  title: Noc2p-Noc3p associates with large-subunit preribosomes
+  description: In Saccharomyces cerevisiae, Noc2p and Noc3p form a heterodimeric Noc
+    complex that associates with 66S pre-ribosomes during large ribosomal subunit
+    maturation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the experimentally described Noc2p/Noc3p association
+    with 66S preribosomal particles without resolving a complete mechanistic order
+    for 60S subunit maturation.
+  nodes:
+  - node_id: noc2_noc_complex_subunit
+    label: Noc2 Noc-complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: noc2_noc_complex_subunit
+  - node_id: noc3_noc_complex_subunit
+    label: Noc3 Noc-complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: noc3_noc_complex_subunit
+  - node_id: noc2p_noc3p_complex
+    label: Noc2p-Noc3p complex
+    node_type: STRUCTURE
+    grounding: GO:0030691
+  - node_id: large_subunit_preribosome
+    label: preribosome, large subunit precursor
+    node_type: STRUCTURE
+    grounding: GO:0030687
+  - node_id: ribosomal_large_subunit_biogenesis
+    label: ribosomal large subunit biogenesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042273
+  edges:
+  - subject: noc2_noc_complex_subunit
+    predicate: contributes to
+    object: noc2p_noc3p_complex
+    description: Noc2p is one constituent of the Noc2p/Noc3p heterodimer in budding
+      yeast.
+    evidence:
+    - reference: DOI:10.1016/s0092-8674(01)00358-0
+      notes: Milkereit et al. 2001 isolated Noc2p/Noc3p as a distinct Noc complex.
+  - subject: noc3_noc_complex_subunit
+    predicate: contributes to
+    object: noc2p_noc3p_complex
+    description: Noc3p is one constituent of the Noc2p/Noc3p heterodimer in budding
+      yeast.
+    evidence:
+    - reference: DOI:10.1016/s0092-8674(01)00358-0
+      notes: Milkereit et al. 2001 isolated Noc2p/Noc3p as a distinct Noc complex.
+  - subject: noc2p_noc3p_complex
+    predicate: associates with
+    object: large_subunit_preribosome
+    description: The Noc2p-Noc3p complex associates with 66S large-subunit preribosomal
+      particles.
+    evidence:
+    - reference: GO:0030691
+      notes: GO:0030691 defines the Noc2p-Noc3p complex as associated with 66S preribosomes.
+    - reference: DOI:10.1016/s0092-8674(01)00358-0
+      notes: Milkereit et al. 2001 reported Noc2p/Noc3p association with 66S pre-ribosomes.
+  - subject: noc2p_noc3p_complex
+    predicate: participates in
+    object: ribosomal_large_subunit_biogenesis
+    description: Noc2p-Noc3p functions during the pre-60S branch of ribosome assembly.
+    evidence:
+    - reference: GO:0030691
+      notes: GO:0030691 defines this complex as involved in ribosomal large subunit
+        biogenesis.
+    - reference: GO:0042273
+      notes: GO:0042273 is the process term for ribosomal large subunit biogenesis.
+discussions:
+- discussion_id: resolve_noc2_noc3_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Noc2 and Noc3 constituents
+    of the Noc2p-Noc3p complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#noc2_noc_complex_subunit
+  - components#noc3_noc_complex_subunit
+  rationale: GO:0030691 uses Saccharomyces gene-product names while noting that analogous
+    complexes in other eukaryotes can use the term. Exact cross-eukaryotic InterPro,
+    Pfam, NCBIfam or UniProt family boundaries for Noc2 and Noc3 need narrower follow-up
+    curation before these component labels can be grounded.
+  evidence:
+  - reference: GO:0030691
+    notes: The GO:0030691 comment explains that the term name uses Saccharomyces gene-product
+      names because no other names had arisen for the complex.
+  - reference: DOI:10.1016/s0092-8674(01)00358-0
+    notes: Milkereit et al. 2001 identified S. cerevisiae Noc2p and Noc3p within the
+      Noc2p/Noc3p complex.
+  posed_by: codex
+  posed_date: '2026-09-25'
