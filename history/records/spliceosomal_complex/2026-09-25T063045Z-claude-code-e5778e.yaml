@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/spliceosomal_complex.yaml
+  slug: spliceosomal_complex
+session:
+  id: 2026-09-25T063045Z-claude-code-e5778e
+  timestamp: '2026-09-25T06:30:45Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1556
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1555
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - composition
+  - causal_graphs
+  - discussions
+  summary: Fix spliceosomal complex RNA cohort anchor
+  details: 'Resolved review issue #1556 from PR #1555 by renaming the reviewed-label-only
+    RNA cohort and its causal graph/TODO anchors from substrate/product RNAs to substrate,
+    intermediate and product RNAs so the anchor includes the GO:0005681 splicing intermediates.'

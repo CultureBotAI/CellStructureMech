@@ -1,0 +1,151 @@
+identifier: GO:0005681
+label: spliceosomal complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: Any of a series of ribonucleoprotein complexes that contain snRNA(s) and
+  small nuclear ribonucleoproteins (snRNPs), and are formed sequentially during the
+  spliceosomal splicing of one or more substrate RNAs, and which also contain the
+  RNA substrate(s) from the initial target RNAs of splicing, the splicing intermediate
+  RNA(s), to the final RNA products. During cis-splicing, the initial target RNA is
+  a single, contiguous RNA transcript, whether mRNA, snoRNA, etc., and the released
+  products are a spliced RNA and an excised intron, generally as a lariat structure.
+  During trans-splicing, there are two initial substrate RNAs, the spliced leader
+  RNA and a pre-mRNA.
+definition_source: GO:0005681
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T06:14:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T06:15:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, nuclear and ribonucleoprotein parentage, a GO-grounded
+    spliceosomal snRNP component, a reviewed-label-only RNA substrate/product cohort,
+    a conservative generic assembly graph and a TODO for state-specific spliceosomal
+    component boundaries.
+  llm_assisted: true
+- timestamp: '2026-09-25T06:30:13Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: '#1556: renamed the reviewed-label-only spliceosomal RNA cohort and its
+    graph/TODO anchors so they explicitly include splicing intermediate RNAs.'
+  llm_assisted: true
+synonyms:
+- synonym_text: spliceosome complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005681
+- synonym_text: spliceosome
+  synonym_type: BROAD_SYNONYM
+  source: GO:0005681
+parent_structures:
+- GO:0140513
+- GO:1990904
+components:
+- component_id: spliceosomal_snrnp_complex
+  label: spliceosomal snRNP complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0097525
+  role: Small ribonucleoprotein complex constituent involved in formation of spliceosomal
+    complexes.
+  evidence:
+  - reference: GO:0005681
+    notes: GO:0005681 defines spliceosomal complexes as containing small nuclear ribonucleoproteins.
+  - reference: GO:0097525
+    notes: GO:0097525 is the Gene Ontology cellular-component term for spliceosomal
+      snRNP complex.
+- component_id: spliceosomal_substrate_intermediate_and_product_rnas
+  label: spliceosomal substrate, intermediate and product RNAs
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005681 spans spliceosomal complexes carrying initial target
+    RNAs, splicing intermediates and final RNA products in cis- and trans-splicing;
+    no single exact source-neutral RNA CURIE was assigned for that state-dependent
+    RNA cohort.
+  role: RNA substrates, intermediates or products carried by a spliceosomal complex
+    during the splicing cycle.
+  evidence:
+  - reference: GO:0005681
+    notes: GO:0005681 defines spliceosomal complexes as containing the RNA substrates,
+      splicing intermediates and final RNA products that distinguish states in the
+      splicing cycle.
+evidence:
+- reference: GO:0005681
+  notes: Gene Ontology cellular-component term for spliceosomal complex and its exact
+    and broad synonyms.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complex.
+- reference: GO:1990904
+  notes: Gene Ontology cellular-component parent term for ribonucleoprotein complex.
+- reference: GO:0097525
+  notes: Gene Ontology cellular-component term for spliceosomal snRNP complex.
+causal_graphs:
+- graph_id: spliceosomal_rnp_state_assembly
+  title: snRNP and state-dependent RNAs define spliceosomal complexes
+  description: Spliceosomal complexes are ribonucleoprotein states that contain spliceosomal
+    snRNP complexes and carry substrate, intermediate or product RNAs through a spliceosomal
+    splicing cycle.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the generic GO-defined spliceosomal snRNP
+    and RNA cohorts without modeling state-specific U-series snRNP membership, rearrangements
+    or protein-factor boundaries.
+  nodes:
+  - node_id: spliceosomal_snrnp_complex
+    label: spliceosomal snRNP complex
+    node_type: STRUCTURE
+    grounding: GO:0097525
+    component_ref: spliceosomal_snrnp_complex
+  - node_id: spliceosomal_substrate_intermediate_and_product_rnas
+    label: spliceosomal substrate, intermediate and product RNAs
+    node_type: RNA
+    component_ref: spliceosomal_substrate_intermediate_and_product_rnas
+  - node_id: spliceosomal_complex
+    label: spliceosomal complex
+    node_type: STRUCTURE
+    grounding: GO:0005681
+  edges:
+  - subject: spliceosomal_snrnp_complex
+    predicate: contributes constituents to
+    object: spliceosomal_complex
+    description: Spliceosomal complexes contain small nuclear ribonucleoproteins.
+    evidence:
+    - reference: GO:0005681
+      notes: GO:0005681 defines spliceosomal complexes as containing small nuclear
+        ribonucleoproteins.
+    - reference: GO:0097525
+      notes: GO:0097525 defines spliceosomal snRNP complexes as small ribonucleoprotein
+        complexes involved in spliceosome formation.
+  - subject: spliceosomal_substrate_intermediate_and_product_rnas
+    predicate: is carried by
+    object: spliceosomal_complex
+    description: Spliceosomal complexes contain the initial substrate RNAs, splicing
+      intermediate RNAs or final RNA products of the splicing cycle.
+    evidence:
+    - reference: GO:0005681
+      notes: GO:0005681 defines spliceosomal complexes as containing substrate, intermediate
+        or product RNAs.
+discussions:
+- discussion_id: resolve_spliceosomal_state_components
+  prompt: Resolve exact source-neutral component boundaries for individual spliceosomal-complex
+    states.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#spliceosomal_snrnp_complex
+  - components#spliceosomal_substrate_intermediate_and_product_rnas
+  - causal_graphs#spliceosomal_rnp_state_assembly
+  rationale: The first GO:0005681 record captures the generic GO-defined spliceosomal
+    snRNP and RNA cohorts. U2-type, U12-type and other spliceosomal states vary in
+    their U-series snRNPs, substrate or product RNAs and additional proteins, so their
+    exact constituent boundaries should be resolved on the specific state records.
+  evidence:
+  - reference: GO:0005681
+  - reference: GO:0097525
+  posed_by: codex
+  posed_date: '2026-09-25'

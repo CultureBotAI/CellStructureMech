@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/spliceosomal_complex.yaml
+  slug: spliceosomal_complex
+session:
+  id: 2026-09-25T061617Z-claude-code-1c46eb
+  timestamp: '2026-09-25T06:16:17Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add GO-grounded spliceosomal complex record
+  details: Added a GO:0005681 spliceosomal complex record with GO exact and broad synonyms,
+    nuclear protein-containing and ribonucleoprotein parentage, a GO-grounded spliceosomal
+    snRNP component, a reviewed-label-only substrate/product RNA cohort, GO evidence, a minimal
+    nonmechanistic assembly graph, and a curation TODO for exact state-specific spliceosomal
+    component boundaries.
