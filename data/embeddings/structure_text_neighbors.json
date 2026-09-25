@@ -15757,6 +15757,37 @@
       ]
     },
     {
+      "identifier": "GO:0005683",
+      "label": "U7 snRNP",
+      "neighbors": [
+        {
+          "identifier": "GO:0005688",
+          "label": "U6 snRNP",
+          "cosine_similarity": 0.92112502
+        },
+        {
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.9170661
+        },
+        {
+          "identifier": "GO:0005691",
+          "label": "U6atac snRNP",
+          "cosine_similarity": 0.91423511
+        },
+        {
+          "identifier": "GO:0005687",
+          "label": "U4 snRNP",
+          "cosine_similarity": 0.91334208
+        },
+        {
+          "identifier": "GO:0005686",
+          "label": "U2 snRNP",
+          "cosine_similarity": 0.90661967
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex",
       "label": "ESX-3 type VII secretion system membrane complex",
       "neighbors": [

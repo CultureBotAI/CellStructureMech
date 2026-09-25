@@ -1,0 +1,98 @@
+identifier: GO:0005683
+label: U7 snRNP
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex that contains the U7 snRNA and is required
+  for the 3'-end processing of replication-dependent histone pre-mRNAs.
+definition_source: GO:0005683
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T03:08:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T03:09:06Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym, small nuclear RNP parentage, the SO-grounded
+    U7 snRNA component, Dominski/Yang/Purdy/Marzluff U7 snRNA evidence, a minimal
+    U7 snRNA constituent graph and a protein-component grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: snRNP U7
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005683
+parent_structures:
+- GO:0030532
+components:
+- component_id: u7_snrna
+  label: U7 snRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0002338
+  role: U7 small nuclear RNA constituent named in the U7 snRNP definition and grounded
+    to the U7 snRNA Sequence Ontology term.
+  evidence:
+  - reference: GO:0005683
+    notes: GO:0005683 defines the U7 snRNP as containing U7 snRNA.
+  - reference: SO:0002338
+    notes: SO:0002338 is the Sequence Ontology term for U7 snRNA.
+evidence:
+- reference: GO:0005683
+  notes: Gene Ontology cellular-component term for the U7 snRNP and its exact synonym.
+- reference: GO:0030532
+  notes: Gene Ontology cellular-component parent term for small nuclear ribonucleoprotein
+    complex.
+- reference: SO:0002338
+  notes: Sequence Ontology term for U7 snRNA.
+- reference: DOI:10.1073/pnas.1533509100
+  notes: Dominski, Yang, Purdy and Marzluff 2003, Cloning and characterization of
+    the Drosophila U7 small nuclear RNA, Proceedings of the National Academy of Sciences
+    of the United States of America.
+- reference: PMID:12872004
+  notes: PubMed identifier for Dominski, Yang, Purdy and Marzluff 2003 as reported
+    by NCBI E-utilities.
+causal_graphs:
+- graph_id: u7_snrnp_constituents
+  title: U7 snRNA is a U7 snRNP constituent
+  description: The U7 snRNP contains U7 small nuclear RNA.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined U7 snRNA contribution without
+    modeling U7 snRNP protein-family boundaries.
+  nodes:
+  - node_id: u7_snrna
+    label: U7 snRNA
+    node_type: RNA
+    grounding: SO:0002338
+    component_ref: u7_snrna
+  - node_id: u7_snrnp
+    label: U7 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005683
+  edges:
+  - subject: u7_snrna
+    predicate: contributes constituents to
+    object: u7_snrnp
+    description: U7 snRNA is the small nuclear RNA constituent represented in the
+      U7 snRNP definition.
+    evidence:
+    - reference: GO:0005683
+      notes: GO:0005683 defines the U7 snRNP as containing U7 snRNA.
+discussions:
+- discussion_id: resolve_u7_snrnp_protein_components
+  prompt: Resolve exact source-neutral protein components that form the U7 snRNP.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u7_snrna
+  - causal_graphs#u7_snrnp_constituents
+  rationale: The first GO:0005683 record captures U7 snRNA, which defines the U7 snRNP
+    in GO. Protein-family and subcomplex boundaries should be resolved before expanding
+    this component list.
+  evidence:
+  - reference: GO:0005683
+  - reference: DOI:10.1073/pnas.1533509100
+  posed_by: codex
+  posed_date: '2026-09-25'
