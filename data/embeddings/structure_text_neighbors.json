@@ -14769,6 +14769,11 @@
       "label": "90S preribosome",
       "neighbors": [
         {
+          "identifier": "GO:0030687",
+          "label": "preribosome, large subunit precursor",
+          "cosine_similarity": 0.92781282
+        },
+        {
           "identifier": "GO:0030684",
           "label": "preribosome",
           "cosine_similarity": 0.89851558
@@ -14787,11 +14792,6 @@
           "identifier": "GO:0015935",
           "label": "small ribosomal subunit",
           "cosine_similarity": 0.79120552
-        },
-        {
-          "identifier": "GO:0071004",
-          "label": "U2-type prespliceosome",
-          "cosine_similarity": 0.78037991
         }
       ]
     },
@@ -15099,9 +15099,9 @@
           "cosine_similarity": 0.81137098
         },
         {
-          "identifier": "GO:0030680",
-          "label": "dimeric ribonuclease P complex",
-          "cosine_similarity": 0.80780588
+          "identifier": "GO:0030687",
+          "label": "preribosome, large subunit precursor",
+          "cosine_similarity": 0.80966636
         }
       ]
     },
@@ -15389,6 +15389,11 @@
       "label": "preribosome",
       "neighbors": [
         {
+          "identifier": "GO:0030687",
+          "label": "preribosome, large subunit precursor",
+          "cosine_similarity": 0.9099943
+        },
+        {
           "identifier": "GO:0030686",
           "label": "90S preribosome",
           "cosine_similarity": 0.89851558
@@ -15407,11 +15412,37 @@
           "identifier": "GO:0071010",
           "label": "prespliceosome",
           "cosine_similarity": 0.81583726
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030687",
+      "label": "preribosome, large subunit precursor",
+      "neighbors": [
+        {
+          "identifier": "GO:0030686",
+          "label": "90S preribosome",
+          "cosine_similarity": 0.92781282
+        },
+        {
+          "identifier": "GO:0030684",
+          "label": "preribosome",
+          "cosine_similarity": 0.9099943
+        },
+        {
+          "identifier": "GO:0032040",
+          "label": "small-subunit processome",
+          "cosine_similarity": 0.85313073
+        },
+        {
+          "identifier": "GO:0015935",
+          "label": "small ribosomal subunit",
+          "cosine_similarity": 0.81924369
         },
         {
           "identifier": "GO:0015934",
           "label": "large ribosomal subunit",
-          "cosine_similarity": 0.81137098
+          "cosine_similarity": 0.80966636
         }
       ]
     },
@@ -15533,9 +15564,9 @@
           "cosine_similarity": 0.79338868
         },
         {
-          "identifier": "GO:0030680",
-          "label": "dimeric ribonuclease P complex",
-          "cosine_similarity": 0.78127905
+          "identifier": "GO:0030687",
+          "label": "preribosome, large subunit precursor",
+          "cosine_similarity": 0.79009736
         }
       ]
     },
@@ -15657,9 +15688,9 @@
           "cosine_similarity": 0.82394676
         },
         {
-          "identifier": "GO:0030680",
-          "label": "dimeric ribonuclease P complex",
-          "cosine_similarity": 0.80667675
+          "identifier": "GO:0030687",
+          "label": "preribosome, large subunit precursor",
+          "cosine_similarity": 0.81924369
         }
       ]
     },
@@ -15678,6 +15709,11 @@
           "cosine_similarity": 0.85941122
         },
         {
+          "identifier": "GO:0030687",
+          "label": "preribosome, large subunit precursor",
+          "cosine_similarity": 0.85313073
+        },
+        {
           "identifier": "GO:0030686",
           "label": "90S preribosome",
           "cosine_similarity": 0.84652231
@@ -15686,11 +15722,6 @@
           "identifier": "GO:0030684",
           "label": "preribosome",
           "cosine_similarity": 0.83303804
-        },
-        {
-          "identifier": "GO:0000172",
-          "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.8164963
         }
       ]
     },
