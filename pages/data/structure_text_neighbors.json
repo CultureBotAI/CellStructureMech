@@ -11271,6 +11271,11 @@
           "cosine_similarity": 0.70043015
         },
         {
+          "identifier": "GO:1903095",
+          "label": "ribonuclease III complex",
+          "cosine_similarity": 0.69794601
+        },
+        {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.69489664
@@ -11284,11 +11289,6 @@
           "identifier": "GO:0042765",
           "label": "GPI-anchor transamidase complex",
           "cosine_similarity": 0.67657728
-        },
-        {
-          "identifier": "GO:0120217",
-          "label": "DNA gyrase complex",
-          "cosine_similarity": 0.67564253
         }
       ]
     },
@@ -12273,14 +12273,14 @@
           "cosine_similarity": 0.65628115
         },
         {
+          "identifier": "GO:1903095",
+          "label": "ribonuclease III complex",
+          "cosine_similarity": 0.64990873
+        },
+        {
           "identifier": "GO:0009340",
           "label": "DNA topoisomerase IV complex",
           "cosine_similarity": 0.63940843
-        },
-        {
-          "identifier": "GO:0032299",
-          "label": "ribonuclease H2 complex",
-          "cosine_similarity": 0.63488125
         }
       ]
     },
@@ -12723,6 +12723,11 @@
       "label": "exodeoxyribonuclease V complex",
       "neighbors": [
         {
+          "identifier": "GO:1903095",
+          "label": "ribonuclease III complex",
+          "cosine_similarity": 0.68501582
+        },
+        {
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.67948136
@@ -12741,11 +12746,6 @@
           "identifier": "GO:0000178",
           "label": "exosome (RNase complex)",
           "cosine_similarity": 0.66122292
-        },
-        {
-          "identifier": "GO:0120217",
-          "label": "DNA gyrase complex",
-          "cosine_similarity": 0.6609752
         }
       ]
     },
@@ -13684,6 +13684,11 @@
       "label": "PAN complex",
       "neighbors": [
         {
+          "identifier": "GO:1903095",
+          "label": "ribonuclease III complex",
+          "cosine_similarity": 0.80017753
+        },
+        {
           "identifier": "GO:0032299",
           "label": "ribonuclease H2 complex",
           "cosine_similarity": 0.77195531
@@ -13702,11 +13707,6 @@
           "identifier": "GO:0043529",
           "label": "GET complex",
           "cosine_similarity": 0.73856701
-        },
-        {
-          "identifier": "GO:0010006",
-          "label": "Toc complex",
-          "cosine_similarity": 0.73822285
         }
       ]
     },
@@ -14118,6 +14118,11 @@
       "label": "ribonuclease H2 complex",
       "neighbors": [
         {
+          "identifier": "GO:1903095",
+          "label": "ribonuclease III complex",
+          "cosine_similarity": 0.91238643
+        },
+        {
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.79144835
@@ -14136,11 +14141,37 @@
           "identifier": "GO:0031251",
           "label": "PAN complex",
           "cosine_similarity": 0.77195531
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1903095",
+      "label": "ribonuclease III complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0032299",
+          "label": "ribonuclease H2 complex",
+          "cosine_similarity": 0.91238643
+        },
+        {
+          "identifier": "GO:0031251",
+          "label": "PAN complex",
+          "cosine_similarity": 0.80017753
+        },
+        {
+          "identifier": "GO:0030681",
+          "label": "multimeric ribonuclease P complex",
+          "cosine_similarity": 0.78062912
+        },
+        {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.77512628
         },
         {
           "identifier": "GO:0000176",
           "label": "nuclear exosome (RNase complex)",
-          "cosine_similarity": 0.76976902
+          "cosine_similarity": 0.77135648
         }
       ]
     },

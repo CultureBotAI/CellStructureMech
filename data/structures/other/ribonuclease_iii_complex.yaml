@@ -1,0 +1,104 @@
+identifier: GO:1903095
+label: ribonuclease III complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex which is capable of ribonuclease III activity.
+definition_source: GO:1903095
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T16:04:23Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T16:05:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO endoribonuclease-complex parentage, a GO-backed RNase III function,
+    GO/PubMed evidence, a nonmechanistic dsRNA-cleavage graph and a component-boundary
+    TODO.
+  llm_assisted: true
+parent_structures:
+- GO:1902555
+functions:
+- function_id: ribonuclease_iii_activity
+  label: ribonuclease III activity
+  grounding: GO:0004525
+  description: The ribonuclease III complex catalyzes staggered endonucleolytic cleavage
+    of double-stranded RNA.
+  evidence:
+  - reference: GO:0004525
+    notes: GO:0004525 is the Gene Ontology molecular-function term for ribonuclease
+      III activity.
+  - reference: GO:1903095
+    notes: GO:1903095 defines the ribonuclease III complex as a protein complex capable
+      of ribonuclease III activity.
+evidence:
+- reference: GO:1903095
+  notes: Gene Ontology cellular-component term for the ribonuclease III complex.
+- reference: GO:1902555
+  notes: Gene Ontology cellular-component term for endoribonuclease complexes.
+- reference: GO:0004525
+  notes: Gene Ontology molecular-function term for ribonuclease III activity.
+- reference: PMID:22393237
+  notes: RNase III complex activity publication cited in the GO:1903095 definition
+    xrefs.
+causal_graphs:
+- graph_id: rnase_iii_ds_rna_cleavage
+  title: RNase III complex cleaves double-stranded RNA
+  description: GO defines the ribonuclease III complex as an endoribonuclease complex
+    capable of ribonuclease III activity, the staggered endonucleolytic cleavage of
+    double-stranded RNA.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-defined RNase III activity of the whole complex
+    without resolving RNase III family boundaries, organism-specific subunit composition
+    or dsRNA substrate recognition states.
+  nodes:
+  - node_id: ribonuclease_iii_complex
+    label: ribonuclease III complex
+    node_type: STRUCTURE
+    grounding: GO:1903095
+  - node_id: double_stranded_rna
+    label: double-stranded RNA
+    node_type: GENETIC_ELEMENT
+  - node_id: ribonuclease_iii_activity
+    label: ribonuclease III activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004525
+  edges:
+  - subject: ribonuclease_iii_complex
+    predicate: enables
+    object: ribonuclease_iii_activity
+    description: The ribonuclease III complex is capable of RNase III activity.
+    evidence:
+    - reference: GO:1903095
+      notes: GO:1903095 defines the complex as capable of ribonuclease III activity.
+    - reference: GO:0004525
+      notes: GO:0004525 is the molecular-function term for ribonuclease III activity.
+  - subject: double_stranded_rna
+    predicate: is cleaved by
+    object: ribonuclease_iii_activity
+    description: RNase III activity makes staggered endonucleolytic cuts in both strands
+      of double-stranded RNA.
+    evidence:
+    - reference: GO:0004525
+      notes: GO:0004525 defines ribonuclease III activity as making two staggered
+        cuts in both strands of dsRNA.
+discussions:
+- discussion_id: resolve_ribonuclease_iii_component_boundaries
+  prompt: Resolve exact source-neutral component boundaries for ribonuclease III complexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#rnase_iii_ds_rna_cleavage
+  rationale: The first GO:1903095 record captures the GO-defined RNase III complex
+    identity and RNase III molecular activity. Exact source-neutral RNase III family
+    boundaries and the correct split between generic, bacterial and eukaryotic assemblies
+    should be curated from primary component evidence before assigning constituents.
+  evidence:
+  - reference: GO:1903095
+  - reference: GO:0004525
+  - reference: PMID:22393237
+  posed_by: codex
+  posed_date: '2026-09-25'
