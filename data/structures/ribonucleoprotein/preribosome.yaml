@@ -1,0 +1,105 @@
+identifier: GO:0030684
+label: preribosome
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: Any complex of pre-rRNAs, ribosomal proteins, and associated proteins
+  formed during ribosome biogenesis.
+definition_source: GO:0030684
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T04:54:14Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T04:55:06Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ribonucleoprotein parentage, the reviewed-label-only pre-rRNA component,
+    GO/PubMed evidence, a minimal pre-rRNA constituent graph and a TODO for exact
+    preribosome component boundaries.
+  llm_assisted: true
+- timestamp: '2026-09-25T05:06:35Z'
+  curator: codex
+  action: TIGHTENED_GROUNDING
+  changes: Added SO:0002393 evidence for the reviewed-label-only pre-rRNA grounding
+    rationale.
+  llm_assisted: true
+parent_structures:
+- GO:1990904
+components:
+- component_id: pre_rrna
+  label: pre-rRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral Sequence Ontology class for precursor ribosomal
+    RNA was assigned in this pass; SO:0002393 denotes the broader precursor_RNA class,
+    not pre-rRNA specifically.
+  role: Precursor ribosomal RNA molecule incorporated into preribosomal particles
+    during ribosome biogenesis.
+  evidence:
+  - reference: GO:0030684
+    notes: GO:0030684 defines a preribosome as a complex of pre-rRNAs, ribosomal proteins
+      and associated proteins.
+evidence:
+- reference: GO:0030684
+  notes: Gene Ontology cellular-component term for preribosome.
+- reference: GO:1990904
+  notes: Gene Ontology cellular-component parent term for ribonucleoprotein complex.
+- reference: SO:0002393
+  notes: Sequence Ontology term for the broader precursor_RNA class, which covers
+    RNAs that are not yet mature products but is not specific to precursor ribosomal
+    RNA.
+- reference: DOI:10.1128/MCB.19.12.7897
+  notes: DOI for Kressler, Linder and de la Cruz 1999, 'Protein trans-Acting Factors
+    Involved in Ribosome Biogenesis in Saccharomyces cerevisiae', verified through
+    PubMed Central and NCBI E-utilities.
+- reference: PMID:10567516
+  notes: PubMed identifier for Kressler, Linder and de la Cruz 1999 as reported by
+    NCBI E-utilities.
+causal_graphs:
+- graph_id: pre_rrna_constituent
+  title: Pre-rRNA is a preribosome constituent
+  description: Preribosomes contain precursor ribosomal RNA.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined pre-rRNA contribution without
+    modeling the ribosomal-protein set, associated assembly factors or maturation-stage-specific
+    preribosomal intermediates.
+  nodes:
+  - node_id: pre_rrna
+    label: pre-rRNA
+    node_type: RNA
+    component_ref: pre_rrna
+  - node_id: preribosome
+    label: preribosome
+    node_type: STRUCTURE
+    grounding: GO:0030684
+  edges:
+  - subject: pre_rrna
+    predicate: contributes constituents to
+    object: preribosome
+    description: Pre-rRNAs are constituent RNA molecules of preribosomal complexes.
+    evidence:
+    - reference: GO:0030684
+      notes: GO:0030684 defines preribosomes as complexes that include pre-rRNAs.
+discussions:
+- discussion_id: resolve_preribosome_component_boundaries
+  prompt: Resolve exact source-neutral pre-rRNA, ribosomal-protein and associated
+    assembly-factor boundaries for preribosomes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pre_rrna
+  - causal_graphs#pre_rrna_constituent
+  rationale: The first GO:0030684 record captures only the GO-defined pre-rRNA constituent.
+    The Sequence Ontology search found SO:0002393 for the broader precursor_RNA class
+    but no exact source-neutral pre-rRNA term, and the ribosomal-protein and associated-protein
+    cohorts vary across preribosomal assembly states and need a narrower literature-backed
+    boundary pass.
+  evidence:
+  - reference: GO:0030684
+  - reference: DOI:10.1128/MCB.19.12.7897
+  posed_by: codex
+  posed_date: '2026-09-25'

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/preribosome.yaml
+  slug: preribosome
+session:
+  id: 2026-09-25T045536Z-claude-code-9da27c
+  timestamp: '2026-09-25T04:55:36Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add GO-grounded preribosome record
+  details: Added a GO:0030684 preribosome record with ribonucleoprotein parentage, a reviewed-label-only
+    pre-rRNA constituent, GO/PubMed evidence, a minimal nonmechanistic pre-rRNA constituent
+    graph, and a curation TODO for exact pre-rRNA, ribosomal-protein, and assembly-factor
+    boundaries.
