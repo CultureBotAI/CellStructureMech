@@ -4356,6 +4356,15 @@
   "definition": "A ribonucleoprotein complex that contains small nuclear RNA U12, a heptameric ring of Sm proteins, as well as several proteins that are unique to the U12 snRNP, most of which remain associated with the U12 snRNA both while the U12 snRNP is free or assembled into a series of spliceosomal complexes."
  },
  {
+  "identifier": "GO:0071017",
+  "label": "U12-type catalytic step 1 spliceosome",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/u12_type_catalytic_step_1_spliceosome.html",
+  "definition": "A spliceosomal complex that is formed by the displacement of the U11 and U4atac snRNPs from the precatalytic spliceosome; the U12, U5 and U6atac snRNPs remain associated with the mRNA. This complex, sometimes called the activated spliceosome, is the catalytically active form of the spliceosome, and includes many proteins in addition to those found in the U12, and U5 and U6atac snRNPs."
+ },
+ {
   "identifier": "GO:0071016",
   "label": "U12-type precatalytic spliceosome",
   "category": "RIBONUCLEOPROTEIN",
