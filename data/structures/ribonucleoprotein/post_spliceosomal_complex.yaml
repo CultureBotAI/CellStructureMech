@@ -1,0 +1,184 @@
+identifier: GO:0071020
+label: post-spliceosomal complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A spliceosomal complex that is formed following the second splicing event
+  and contains the spliced product, the excised intron, and three snRNPs, including
+  U5.
+definition_source: GO:0071020
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T09:51:07Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T09:51:52Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO narrow synonyms, spliceosomal-complex parentage, a GO-grounded
+    U5 component, a reviewed-label-only pair of subtype-specific non-U5 snRNP components,
+    a conservative post-second-splicing graph and a TODO for exact subtype-specific
+    post-spliceosomal snRNP, protein and RNA boundaries.
+  llm_assisted: true
+synonyms:
+- synonym_text: mammalian spliceosomal complex C2
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071020
+- synonym_text: yeast spliceosomal complex A2-3
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071020
+parent_structures:
+- GO:0005681
+components:
+- component_id: u5_snrnp
+  label: U5 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005682
+  role: Conserved small nuclear ribonucleoprotein bound with the spliced product and
+    excised intron in post-spliceosomal complexes.
+  evidence:
+  - reference: GO:0071020
+    notes: GO:0071020 defines the post-spliceosomal complex as containing three snRNPs
+      including U5.
+  - reference: GO:0005682
+    notes: GO:0005682 is the Gene Ontology cellular-component term for the U5 snRNP.
+  - reference: GO:0071021
+    notes: GO:0071021 names U5 as one of the U2-type post-spliceosomal complex snRNPs.
+  - reference: GO:0071022
+    notes: GO:0071022 names U5 as one of the U12-type post-spliceosomal complex snRNPs.
+- component_id: subtype_specific_partner_snrnps
+  label: post-spliceosomal subtype-specific partner snRNPs
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The two non-U5 snRNP constituents differ between GO:0071021 U2-type
+    post-spliceosomal complexes, which contain U2 and U6, and GO:0071022 U12-type
+    post-spliceosomal complexes, which contain U12 and U6atac; no single exact source-neutral
+    CURIE was assigned for this subtype-specific two-snRNP cohort.
+  role: Subtype-specific pair of non-U5 snRNP constituents bound with the spliced
+    product and excised intron in post-spliceosomal complexes.
+  evidence:
+  - reference: GO:0071020
+    notes: GO:0071020 defines the post-spliceosomal complex as containing three snRNPs
+      including U5, leaving two additional subtype-specific snRNP constituents.
+  - reference: GO:0071021
+    notes: GO:0071021 defines the U2-type post-spliceosomal complex as containing
+      U2 and U6 snRNPs alongside U5.
+  - reference: GO:0071022
+    notes: GO:0071022 defines the U12-type post-spliceosomal complex as containing
+      U12 and U6atac snRNPs alongside U5.
+evidence:
+- reference: GO:0071020
+  notes: Gene Ontology cellular-component term for post-spliceosomal complex and its
+    GO narrow synonyms.
+- reference: GO:0005681
+  notes: Gene Ontology cellular-component parent term for spliceosomal complex.
+- reference: GO:0071013
+  notes: Gene Ontology cellular-component term for the preceding catalytic step 2
+    spliceosome state.
+- reference: GO:0071021
+  notes: Gene Ontology cellular-component term for the U2-type post-spliceosomal complex
+    child state.
+- reference: GO:0071022
+  notes: Gene Ontology cellular-component term for the U12-type post-spliceosomal
+    complex child state.
+- reference: GO:0005682
+  notes: Gene Ontology cellular-component term for the U5 snRNP.
+- reference: GO:0005686
+  notes: Gene Ontology cellular-component term for the U2 snRNP.
+- reference: GO:0005688
+  notes: Gene Ontology cellular-component term for the U6 snRNP.
+- reference: GO:0005693
+  notes: Gene Ontology cellular-component term for the U12 snRNP.
+- reference: GO:0005691
+  notes: Gene Ontology cellular-component term for the U6atac snRNP.
+causal_graphs:
+- graph_id: post_spliceosomal_snrnp_product_binding
+  title: U5 and subtype-specific snRNPs bind post-splicing products
+  description: Post-spliceosomal complexes contain a conserved U5 snRNP, two subtype-specific
+    partner snRNPs, the spliced product and the excised intron after the second splicing
+    event.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records conserved U5 plus the generic presence of
+    two non-U5 subtype-specific snRNPs in the post-spliceosomal complex without asserting
+    the U2/U6 composition of the U2-type child state, the U12/U6atac composition of
+    the U12-type child state or exact spliced-product and excised-intron RNA boundaries.
+  nodes:
+  - node_id: u5_snrnp
+    label: U5 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005682
+    component_ref: u5_snrnp
+  - node_id: subtype_specific_partner_snrnps
+    label: post-spliceosomal subtype-specific partner snRNPs
+    node_type: STRUCTURE
+    component_ref: subtype_specific_partner_snrnps
+  - node_id: catalytic_step_2_spliceosome
+    label: catalytic step 2 spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071013
+  - node_id: post_spliceosomal_complex
+    label: post-spliceosomal complex
+    node_type: STRUCTURE
+    grounding: GO:0071020
+  edges:
+  - subject: u5_snrnp
+    predicate: remains associated with splicing products in
+    object: post_spliceosomal_complex
+    description: U5 is associated with the spliced product and excised intron in post-spliceosomal
+      complexes.
+    evidence:
+    - reference: GO:0071020
+      notes: GO:0071020 defines post-spliceosomal complexes as including U5 after
+        the second splicing event.
+  - subject: subtype_specific_partner_snrnps
+    predicate: remain associated with splicing products in
+    object: post_spliceosomal_complex
+    description: Two subtype-specific non-U5 snRNPs are associated with the spliced
+      product and excised intron in post-spliceosomal complexes.
+    evidence:
+    - reference: GO:0071021
+      notes: GO:0071021 defines the U2-type post-spliceosomal complex as containing
+        U2, U5 and U6 snRNPs.
+    - reference: GO:0071022
+      notes: GO:0071022 defines the U12-type post-spliceosomal complex as containing
+        U12, U5 and U6atac snRNPs.
+  - subject: catalytic_step_2_spliceosome
+    predicate: is remodeled following the second splicing event to form
+    object: post_spliceosomal_complex
+    description: After the second splicing event, the post-spliceosomal complex contains
+      the spliced product, the excised intron, U5 and subtype-specific partner snRNPs.
+    evidence:
+    - reference: GO:0071020
+      notes: GO:0071020 defines the post-spliceosomal complex as formed following
+        the second splicing event.
+discussions:
+- discussion_id: resolve_post_spliceosomal_snrnp_rna_boundaries
+  prompt: Resolve exact source-neutral non-U5 snRNP membership, spliced-product RNA,
+    excised-intron RNA and additional protein boundaries for each post-spliceosomal
+    complex subtype.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u5_snrnp
+  - components#subtype_specific_partner_snrnps
+  - causal_graphs#post_spliceosomal_snrnp_product_binding
+  rationale: The GO:0071020 parent record captures the generic presence of a conserved
+    U5 snRNP, two non-U5 snRNPs whose exact identities depend on the U2-type or U12-type
+    spliceosome subtype and RNA products of the second splicing event. Child records
+    for U2-type and U12-type post-spliceosomal complexes carry the exact U2/U6 and
+    U12/U6atac partner-snRNP boundaries that apply to those specific states, while
+    exact protein-family and RNA substrate boundaries remain to be curated.
+  evidence:
+  - reference: GO:0071020
+  - reference: GO:0071021
+  - reference: GO:0071022
+  - reference: GO:0005686
+  - reference: GO:0005688
+  - reference: GO:0005693
+  - reference: GO:0005691
+  posed_by: codex
+  posed_date: '2026-09-25'
