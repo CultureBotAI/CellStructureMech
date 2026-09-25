@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/trans_spliceosomal_complex.yaml
+  slug: trans_spliceosomal_complex
+session:
+  id: 2026-09-25T104944Z-claude-code-3ef18b
+  timestamp: '2026-09-25T10:49:44Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add trans spliceosomal complex record
+  details: Added a new GO:0071023 trans spliceosomal complex record with spliceosomal-complex
+    parentage, GO-grounded SL, U2, U4, U5 and U6 snRNP components, a conservative snRNP contribution
+    graph, and a curation TODO for unresolved trans-spliceosomal RNA and protein-family boundaries.
+    Validated the new record with targeted LinkML validation.

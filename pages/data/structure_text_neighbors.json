@@ -15292,6 +15292,37 @@
       ]
     },
     {
+      "identifier": "GO:0071023",
+      "label": "trans spliceosomal complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0071021",
+          "label": "U2-type post-spliceosomal complex",
+          "cosine_similarity": 0.95071938
+        },
+        {
+          "identifier": "GO:0071022",
+          "label": "U12-type post-spliceosomal complex",
+          "cosine_similarity": 0.9492801
+        },
+        {
+          "identifier": "GO:0071020",
+          "label": "post-spliceosomal complex",
+          "cosine_similarity": 0.93609298
+        },
+        {
+          "identifier": "GO:0005681",
+          "label": "spliceosomal complex",
+          "cosine_similarity": 0.92865048
+        },
+        {
+          "identifier": "GO:0071014",
+          "label": "post-mRNA release spliceosomal complex",
+          "cosine_similarity": 0.92529756
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005692",
       "label": "U11 snRNP",
       "neighbors": [
@@ -15502,9 +15533,9 @@
           "cosine_similarity": 0.95254335
         },
         {
-          "identifier": "GO:0071018",
-          "label": "U12-type catalytic step 2 spliceosome",
-          "cosine_similarity": 0.9392141
+          "identifier": "GO:0071023",
+          "label": "trans spliceosomal complex",
+          "cosine_similarity": 0.9492801
         }
       ]
     },
@@ -15781,9 +15812,9 @@
           "cosine_similarity": 0.95554202
         },
         {
-          "identifier": "GO:0005689",
-          "label": "U12-type spliceosomal complex",
-          "cosine_similarity": 0.93915108
+          "identifier": "GO:0071023",
+          "label": "trans spliceosomal complex",
+          "cosine_similarity": 0.95071938
         }
       ]
     },
