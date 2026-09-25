@@ -1,0 +1,169 @@
+identifier: GO:0030678
+label: mitochondrial ribonuclease P complex
+structure_category: OTHER
+structure_kind: OTHER
+definition: A ribonuclease P complex located in the mitochondrion of a eukaryotic
+  cell, where it catalyzes the 5' endonucleolytic cleavage of precursor tRNAs to yield
+  mature tRNAs. The subunit composition of mitochondrial ribonuclease P complexes
+  varies between species. The complex contains a single RNA molecule and a single
+  protein molecule in yeast (PMID:12045094), but comprises three proteins and lacks
+  an RNA component in humans.
+definition_source: GO:0030678
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T16:27:39Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T16:28:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact synonymy, RNase P and mitochondrial-complex parentage, GO-backed
+    tRNA 5-prime leader cleavage functions, GO/PubMed evidence, a nonmechanistic function
+    graph and a TODO for species-variable mitochondrial RNase P component boundaries.
+  llm_assisted: true
+synonyms:
+- synonym_text: mitochondrial RNase P complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030678
+parent_structures:
+- GO:0030677
+- GO:0098798
+functions:
+- function_id: ribonuclease_p_activity
+  label: ribonuclease P activity
+  grounding: GO:0004526
+  description: The mitochondrial ribonuclease P complex removes 5-prime extra nucleotides
+    from precursor tRNA by endonucleolytic RNA cleavage.
+  evidence:
+  - reference: GO:0004526
+    notes: GO:0004526 is the Gene Ontology molecular-function term for ribonuclease
+      P activity.
+  - reference: GO:0030678
+    notes: GO:0030678 defines mitochondrial RNase P as catalyzing 5-prime endonucleolytic
+      cleavage of precursor tRNAs.
+- function_id: trna_5_leader_removal
+  label: tRNA 5'-leader removal
+  grounding: GO:0001682
+  description: Mitochondrial RNase P complexes generate mature tRNA 5-prime ends by
+    cleaving 5-prime leader sequences from pre-tRNAs.
+  evidence:
+  - reference: GO:0001682
+    notes: GO:0001682 is the Gene Ontology biological-process term for tRNA 5'-leader
+      removal.
+  - reference: GO:0030678
+    notes: GO:0030678 defines mitochondrial RNase P as generating mature tRNAs by
+      precursor-tRNA cleavage.
+evidence:
+- reference: GO:0030678
+  notes: Gene Ontology cellular-component term for the mitochondrial ribonuclease
+    P complex and its exact synonym.
+- reference: GO:0030677
+  notes: Gene Ontology cellular-component parent term for the ribonuclease P complex.
+- reference: GO:0098798
+  notes: Gene Ontology cellular-component parent term for mitochondrial protein-containing
+    complexes.
+- reference: GO:0005739
+  notes: Gene Ontology cellular-component term for the mitochondrion.
+- reference: GO:0004526
+  notes: Gene Ontology molecular-function term for ribonuclease P activity.
+- reference: GO:0001682
+  notes: Gene Ontology biological-process term for tRNA 5'-leader removal.
+- reference: PMID:12045094
+  notes: Publication cited in GO:0030678 definition xrefs for mitochondrial RNase
+    P subunit-composition evidence.
+- reference: PMID:27187488
+  notes: Publication cited in GO:0030678 definition xrefs for mitochondrial RNase
+    P subunit-composition evidence.
+causal_graphs:
+- graph_id: mitochondrial_rnase_p_trna_leader_cleavage
+  title: Mitochondrial RNase P processes precursor tRNAs
+  description: GO defines the mitochondrial ribonuclease P complex as a mitochondrial
+    RNase P complex that catalyzes 5-prime endonucleolytic cleavage of precursor tRNAs.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-defined mitochondrial localization and tRNA
+    5-prime leader cleavage of mitochondrial RNase P without resolving yeast RNA-containing
+    and human protein-only subunit architectures or species-specific components.
+  nodes:
+  - node_id: mitochondrial_ribonuclease_p_complex
+    label: mitochondrial ribonuclease P complex
+    node_type: STRUCTURE
+    grounding: GO:0030678
+  - node_id: mitochondrion
+    label: mitochondrion
+    node_type: STRUCTURE
+    grounding: GO:0005739
+  - node_id: pre_trna
+    label: precursor tRNA
+    node_type: GENETIC_ELEMENT
+  - node_id: ribonuclease_p_activity
+    label: ribonuclease P activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004526
+  - node_id: trna_5_leader_removal
+    label: tRNA 5'-leader removal
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0001682
+  edges:
+  - subject: mitochondrial_ribonuclease_p_complex
+    predicate: localizes to
+    object: mitochondrion
+    description: The mitochondrial RNase P complex is located in the mitochondrion.
+    evidence:
+    - reference: GO:0030678
+      notes: GO:0030678 defines this RNase P complex by its mitochondrial localization.
+    - reference: GO:0098798
+      notes: GO:0098798 is the cellular-component parent for mitochondrial protein-containing
+        complexes.
+  - subject: mitochondrial_ribonuclease_p_complex
+    predicate: enables
+    object: ribonuclease_p_activity
+    description: Mitochondrial RNase P catalyzes endonucleolytic cleavage of precursor
+      tRNAs.
+    evidence:
+    - reference: GO:0030678
+      notes: GO:0030678 defines mitochondrial RNase P as catalyzing cleavage of precursor
+        tRNAs.
+    - reference: GO:0004526
+      notes: GO:0004526 is the molecular-function term for ribonuclease P activity.
+  - subject: pre_trna
+    predicate: has 5-prime leader removed by
+    object: ribonuclease_p_activity
+    description: Ribonuclease P activity removes 5-prime extra nucleotides from tRNA
+      precursors.
+    evidence:
+    - reference: GO:0004526
+      notes: GO:0004526 defines ribonuclease P activity as endonucleolytic removal
+        of 5-prime extra nucleotides from tRNA precursor.
+  - subject: mitochondrial_ribonuclease_p_complex
+    predicate: supports
+    object: trna_5_leader_removal
+    description: Mitochondrial RNase P generates mature tRNA 5-prime ends from mitochondrial
+      precursor tRNAs.
+    evidence:
+    - reference: GO:0030678
+      notes: GO:0030678 defines mitochondrial RNase P as generating mature tRNAs by
+        precursor-tRNA cleavage.
+    - reference: GO:0001682
+      notes: GO:0001682 is the biological-process term for tRNA 5'-leader removal.
+discussions:
+- discussion_id: resolve_mitochondrial_rnase_p_component_boundaries
+  prompt: Resolve RNA-containing and protein-only mitochondrial RNase P component
+    boundaries.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#mitochondrial_rnase_p_trna_leader_cleavage
+  rationale: GO:0030678 spans species-variable mitochondrial RNase P complexes, including
+    a yeast RNA-plus-protein form and a human protein-only form. Exact source-neutral
+    RNA and protein constituents should be curated from primary component evidence
+    before assigning components.
+  evidence:
+  - reference: GO:0030678
+  - reference: GO:0030677
+  - reference: PMID:12045094
+  - reference: PMID:27187488
+  posed_by: codex
+  posed_date: '2026-09-25'
