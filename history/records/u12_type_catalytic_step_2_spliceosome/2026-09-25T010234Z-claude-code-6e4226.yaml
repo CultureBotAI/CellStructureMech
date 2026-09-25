@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u12_type_catalytic_step_2_spliceosome.yaml
+  slug: u12_type_catalytic_step_2_spliceosome
+session:
+  id: 2026-09-25T010234Z-claude-code-6e4226
+  timestamp: '2026-09-25T01:02:34Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1539
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1538
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Address PR #1538 U12 step-2 scope-note review issue'
+  details: 'Addressed issue #1539 from PR #1538 by clarifying the U12-type catalytic step
+    2 spliceosome graph scope note. The graph now frames U12, U5 and U6atac snRNPs as the
+    conservative GO-defined component floor in a post-first-cleavage step-2 state instead
+    of implying that the retained snRNP set alone distinguishes step 2 from step 1.'
