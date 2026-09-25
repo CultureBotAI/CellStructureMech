@@ -1,0 +1,197 @@
+identifier: GO:0071018
+label: U12-type catalytic step 2 spliceosome
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A spliceosomal complex that contains the U12, U5 and U6atac snRNPs bound
+  to a splicing intermediate in which the first catalytic cleavage of the 5' splice
+  site has occurred. The precise subunit composition differs significantly from that
+  of the catalytic step 1, or activated, spliceosome, and includes many proteins in
+  addition to those found in the U12, U5 and U6atac snRNPs.
+definition_source: GO:0071018
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T00:47:36Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T00:49:12Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact and narrow synonyms, catalytic step 2 and U12-type parentage,
+    GO-grounded U12, U5 and U6atac snRNP components, Will/Luehrmann U12-spliceosome
+    evidence, a conservative step-2 remodeling graph and a protein-component grounding
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: minor catalytic step 2 spliceosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071018
+- synonym_text: AT-AC catalytic step 2 spliceosome
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071018
+- synonym_text: mammalian U12-type spliceosomal complex C
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071018
+- synonym_text: mammalian U12-type spliceosomal complex C1
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071018
+- synonym_text: yeast U12-type spliceosomal complex A2-2
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071018
+parent_structures:
+- GO:0071013
+- GO:0005689
+components:
+- component_id: u12_snrnp
+  label: U12 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005693
+  role: Small nuclear ribonucleoprotein bound to the splicing intermediate in the
+    U12-type catalytic step 2 spliceosome.
+  evidence:
+  - reference: GO:0071018
+    notes: GO:0071018 defines the catalytic step 2 spliceosome as containing U12 snRNP
+      bound to the splicing intermediate.
+  - reference: GO:0005693
+    notes: GO:0005693 is the Gene Ontology cellular-component term for the U12 snRNP.
+- component_id: u5_snrnp
+  label: U5 snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005682
+  role: Small nuclear ribonucleoprotein bound to the splicing intermediate in the
+    U12-type catalytic step 2 spliceosome.
+  evidence:
+  - reference: GO:0071018
+    notes: GO:0071018 defines the catalytic step 2 spliceosome as containing U5 snRNP
+      bound to the splicing intermediate.
+  - reference: GO:0005682
+    notes: GO:0005682 is the Gene Ontology cellular-component term for the U5 snRNP.
+- component_id: u6atac_snrnp
+  label: U6atac snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005691
+  role: Small nuclear ribonucleoprotein bound to the splicing intermediate in the
+    U12-type catalytic step 2 spliceosome.
+  evidence:
+  - reference: GO:0071018
+    notes: GO:0071018 defines the catalytic step 2 spliceosome as containing U6atac
+      snRNP bound to the splicing intermediate.
+  - reference: GO:0005691
+    notes: GO:0005691 is the Gene Ontology cellular-component term for the U6atac
+      snRNP.
+evidence:
+- reference: GO:0071018
+  notes: Gene Ontology cellular-component term for the U12-type catalytic step 2 spliceosome
+    and its GO synonyms.
+- reference: GO:0071013
+  notes: Gene Ontology cellular-component parent term for catalytic step 2 spliceosome.
+- reference: GO:0005689
+  notes: Gene Ontology cellular-component parent term for U12-type spliceosomal complex.
+- reference: GO:0071017
+  notes: Gene Ontology cellular-component term for the U12-type catalytic step 1 spliceosome,
+    the preceding U12-type spliceosome state.
+- reference: GO:0005693
+  notes: Gene Ontology cellular-component term for the U12 snRNP.
+- reference: GO:0005682
+  notes: Gene Ontology cellular-component term for the U5 snRNP.
+- reference: GO:0005691
+  notes: Gene Ontology cellular-component term for the U6atac snRNP.
+- reference: DOI:10.1515/BC.2005.084
+  notes: Will and Luehrmann 2005, Splicing of a rare class of introns by the U12-dependent
+    spliceosome, Biological Chemistry.
+causal_graphs:
+- graph_id: u12_type_step2_spliceosome_remodeling
+  title: U12, U5 and U6atac snRNPs remain in the U12-type catalytic step 2 spliceosome
+  description: The U12-type catalytic step 2 spliceosome contains U12, U5 and U6atac
+    snRNPs bound to the splicing intermediate after the first catalytic cleavage of
+    the 5-prime splice site.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined U12, U5 and U6atac snRNP
+    retention that distinguishes the catalytic step 2 spliceosome without modeling
+    helicase-dependent remodeling or individual U12 step-2 spliceosome protein-family
+    boundaries.
+  nodes:
+  - node_id: u12_snrnp
+    label: U12 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005693
+    component_ref: u12_snrnp
+  - node_id: u5_snrnp
+    label: U5 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005682
+    component_ref: u5_snrnp
+  - node_id: u6atac_snrnp
+    label: U6atac snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005691
+    component_ref: u6atac_snrnp
+  - node_id: u12_type_catalytic_step_1_spliceosome
+    label: U12-type catalytic step 1 spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071017
+  - node_id: u12_type_catalytic_step_2_spliceosome
+    label: U12-type catalytic step 2 spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071018
+  edges:
+  - subject: u12_snrnp
+    predicate: remains associated in
+    object: u12_type_catalytic_step_2_spliceosome
+    description: The U12 snRNP remains associated with the splicing intermediate in
+      the U12-type catalytic step 2 spliceosome.
+    evidence:
+    - reference: GO:0071018
+      notes: GO:0071018 names U12 as one of the snRNPs bound to the splicing intermediate.
+  - subject: u5_snrnp
+    predicate: remains associated in
+    object: u12_type_catalytic_step_2_spliceosome
+    description: The U5 snRNP remains associated with the splicing intermediate in
+      the U12-type catalytic step 2 spliceosome.
+    evidence:
+    - reference: GO:0071018
+      notes: GO:0071018 names U5 as one of the snRNPs bound to the splicing intermediate.
+  - subject: u6atac_snrnp
+    predicate: remains associated in
+    object: u12_type_catalytic_step_2_spliceosome
+    description: The U6atac snRNP remains associated with the splicing intermediate
+      in the U12-type catalytic step 2 spliceosome.
+    evidence:
+    - reference: GO:0071018
+      notes: GO:0071018 names U6atac as one of the snRNPs bound to the splicing intermediate.
+  - subject: u12_type_catalytic_step_1_spliceosome
+    predicate: is remodeled after first catalytic cleavage to form
+    object: u12_type_catalytic_step_2_spliceosome
+    description: After the first catalytic cleavage of the 5-prime splice site, the
+      U12, U5 and U6atac snRNPs are bound to a splicing intermediate in the catalytic
+      step 2 spliceosome.
+    evidence:
+    - reference: GO:0071018
+      notes: GO:0071018 defines the U12-type catalytic step 2 spliceosome by the first
+        catalytic cleavage having occurred.
+discussions:
+- discussion_id: resolve_u12_type_step2_spliceosome_protein_components
+  prompt: Classify literature-reported U12-type catalytic step 2 spliceosome proteins
+    beyond the GO-defined U12, U5 and U6atac snRNP subcomplexes as source-neutral
+    constituents or out-of-boundary remodeling factors.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u12_snrnp
+  - components#u5_snrnp
+  - components#u6atac_snrnp
+  - causal_graphs#u12_type_step2_spliceosome_remodeling
+  rationale: The first GO:0071018 record captures the defining U12, U5 and U6atac
+    snRNP subcomplexes. Reports of additional U12-type catalytic step 2 spliceosome
+    proteins need boundary review against transient assembly or remodeling factors
+    and exact source-neutral grounding before any constituent or subcomplex is added.
+  evidence:
+  - reference: GO:0071018
+  - reference: DOI:10.1515/BC.2005.084
+  posed_by: codex
+  posed_date: '2026-09-25'

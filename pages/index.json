@@ -4365,6 +4365,15 @@
   "definition": "A spliceosomal complex that is formed by the displacement of the U11 and U4atac snRNPs from the precatalytic spliceosome; the U12, U5 and U6atac snRNPs remain associated with the mRNA. This complex, sometimes called the activated spliceosome, is the catalytically active form of the spliceosome, and includes many proteins in addition to those found in the U12, and U5 and U6atac snRNPs."
  },
  {
+  "identifier": "GO:0071018",
+  "label": "U12-type catalytic step 2 spliceosome",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/u12_type_catalytic_step_2_spliceosome.html",
+  "definition": "A spliceosomal complex that contains the U12, U5 and U6atac snRNPs bound to a splicing intermediate in which the first catalytic cleavage of the 5' splice site has occurred. The precise subunit composition differs significantly from that of the catalytic step 1, or activated, spliceosome, and includes many proteins in addition to those found in the U12, U5 and U6atac snRNPs."
+ },
+ {
   "identifier": "GO:0071016",
   "label": "U12-type precatalytic spliceosome",
   "category": "RIBONUCLEOPROTEIN",
