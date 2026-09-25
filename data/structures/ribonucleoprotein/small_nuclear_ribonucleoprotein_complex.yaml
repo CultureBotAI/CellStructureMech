@@ -28,6 +28,12 @@ curation_history:
   changes: Smoothed the GO-derived small nuclear ribonucleoprotein complex definition
     while preserving its snRNA/protein composition and spliceosomal, 7SK and U7 scope.
   llm_assisted: true
+- timestamp: '2026-09-25T05:53:28Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Resolved #1554 by attaching the snRNP-specific boundary TODO to the generic
+    snRNA component as well as the associated-protein cohort and assembly graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: small nuclear ribonucleoprotein
   synonym_type: EXACT_SYNONYM
@@ -124,6 +130,7 @@ discussions:
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
+  - components#snrna
   - components#snrnp_associated_proteins
   - causal_graphs#snrna_associated_proteins_constituents
   rationale: The first GO:0030532 record captures only the generic SO-grounded snRNA

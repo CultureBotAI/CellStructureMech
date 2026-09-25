@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/small_nuclear_ribonucleoprotein_complex.yaml
+  slug: small_nuclear_ribonucleoprotein_complex
+session:
+  id: 2026-09-25T055350Z-claude-code-377e5e
+  timestamp: '2026-09-25T05:53:50Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1554
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1553
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Fix small nuclear RNP TODO attachments
+  details: 'Resolved review issue #1554 from PR #1553 by attaching the resolve_snrnp_specific_components
+    TODO to components#snrna as well as the reviewed-label-only associated-protein cohort
+    and nonmechanistic assembly graph.'
