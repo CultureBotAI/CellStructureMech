@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u7_snrnp.yaml
+  slug: u7_snrnp
+session:
+  id: 2026-09-25T030937Z-claude-code-3eb99f
+  timestamp: '2026-09-25T03:09:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add U7 snRNP
+  details: Added a new GO:0005683 U7 snRNP record with the GO exact synonym, small nuclear
+    ribonucleoprotein-complex parentage, a SO-grounded U7 snRNA component, GO and Dominski/Yang/Purdy/Marzluff
+    U7 small-nuclear-RNA evidence, a conservative U7 snRNA constituent graph, and a TODO for
+    exact U7 snRNP protein-family boundary curation. Validated the new record through the
+    guarded write path and targeted validate_strict.
