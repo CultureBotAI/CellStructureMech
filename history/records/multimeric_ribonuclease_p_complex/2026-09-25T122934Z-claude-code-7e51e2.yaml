@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/multimeric_ribonuclease_p_complex.yaml
+  slug: multimeric_ribonuclease_p_complex
+session:
+  id: 2026-09-25T122934Z-claude-code-7e51e2
+  timestamp: '2026-09-25T12:29:34Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add multimeric ribonuclease P complex record
+  details: Added a new GO:0030681 multimeric ribonuclease P complex record with ribonuclease-P-complex
+    parentage, GO exact synonymy, SO-grounded RNase P RNA plus reviewed-label-only multimeric
+    RNase P protein components, conservative RNase P function terms, an assembly graph, and
+    a curation TODO for exact multimeric protein-family boundaries.

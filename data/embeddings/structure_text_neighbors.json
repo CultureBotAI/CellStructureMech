@@ -14800,6 +14800,11 @@
       "label": "dimeric ribonuclease P complex",
       "neighbors": [
         {
+          "identifier": "GO:0030681",
+          "label": "multimeric ribonuclease P complex",
+          "cosine_similarity": 0.97087079
+        },
+        {
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.8898535
@@ -14818,11 +14823,6 @@
           "identifier": "GO:0005732",
           "label": "sno(s)RNA-containing ribonucleoprotein complex",
           "cosine_similarity": 0.80057346
-        },
-        {
-          "identifier": "GO:0030532",
-          "label": "small nuclear ribonucleoprotein complex",
-          "cosine_similarity": 0.79120883
         }
       ]
     },
@@ -14846,14 +14846,14 @@
           "cosine_similarity": 0.78266841
         },
         {
+          "identifier": "GO:0030681",
+          "label": "multimeric ribonuclease P complex",
+          "cosine_similarity": 0.7742154
+        },
+        {
           "identifier": "GO:0071012",
           "label": "catalytic step 1 spliceosome",
           "cosine_similarity": 0.75848552
-        },
-        {
-          "identifier": "GO:0015935",
-          "label": "small ribosomal subunit",
-          "cosine_similarity": 0.75481966
         }
       ]
     },
@@ -14889,6 +14889,37 @@
       ]
     },
     {
+      "identifier": "GO:0030681",
+      "label": "multimeric ribonuclease P complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.97087079
+        },
+        {
+          "identifier": "GO:0000172",
+          "label": "ribonuclease MRP complex",
+          "cosine_similarity": 0.88322698
+        },
+        {
+          "identifier": "GO:0005732",
+          "label": "sno(s)RNA-containing ribonucleoprotein complex",
+          "cosine_similarity": 0.80322148
+        },
+        {
+          "identifier": "GO:0030532",
+          "label": "small nuclear ribonucleoprotein complex",
+          "cosine_similarity": 0.7975594
+        },
+        {
+          "identifier": "GO:0015934",
+          "label": "large ribosomal subunit",
+          "cosine_similarity": 0.78654502
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000932",
       "label": "P-body",
       "neighbors": [
@@ -14903,6 +14934,11 @@
           "cosine_similarity": 0.72205285
         },
         {
+          "identifier": "GO:0030681",
+          "label": "multimeric ribonuclease P complex",
+          "cosine_similarity": 0.71887224
+        },
+        {
           "identifier": "GO:1990061",
           "label": "bacterial degradosome",
           "cosine_similarity": 0.7128217
@@ -14911,11 +14947,6 @@
           "identifier": "GO:0015935",
           "label": "small ribosomal subunit",
           "cosine_similarity": 0.70016493
-        },
-        {
-          "identifier": "GO:0000172",
-          "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.69681719
         }
       ]
     },
@@ -15084,6 +15115,11 @@
           "cosine_similarity": 0.8898535
         },
         {
+          "identifier": "GO:0030681",
+          "label": "multimeric ribonuclease P complex",
+          "cosine_similarity": 0.88322698
+        },
+        {
           "identifier": "GO:0005732",
           "label": "sno(s)RNA-containing ribonucleoprotein complex",
           "cosine_similarity": 0.82080178
@@ -15097,11 +15133,6 @@
           "identifier": "GO:0015934",
           "label": "large ribosomal subunit",
           "cosine_similarity": 0.80288194
-        },
-        {
-          "identifier": "GO:0030532",
-          "label": "small nuclear ribonucleoprotein complex",
-          "cosine_similarity": 0.79650764
         }
       ]
     },
@@ -15368,6 +15399,11 @@
           "cosine_similarity": 0.76698821
         },
         {
+          "identifier": "GO:0030681",
+          "label": "multimeric ribonuclease P complex",
+          "cosine_similarity": 0.76434764
+        },
+        {
           "identifier": "GO:0005732",
           "label": "sno(s)RNA-containing ribonucleoprotein complex",
           "cosine_similarity": 0.76364529
@@ -15376,11 +15412,6 @@
           "identifier": "GO:0000243",
           "label": "commitment complex",
           "cosine_similarity": 0.7602014
-        },
-        {
-          "identifier": "GO:0030680",
-          "label": "dimeric ribonuclease P complex",
-          "cosine_similarity": 0.75862663
         }
       ]
     },
