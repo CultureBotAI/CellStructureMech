@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/penta_snrnp_complex.yaml
+  slug: penta_snrnp_complex
+session:
+  id: 2026-09-25T180047Z-claude-code-0fdffc
+  timestamp: '2026-09-25T18:00:47Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add penta-snRNP complex record
+  details: Added a GO:0071003 penta-snRNP complex record with GO exact synonymy, spliceosomal
+    snRNP parentage, GO-grounded U1, U2, U4/U6 and U5 snRNP components, yeast and human penta-snRNP
+    literature evidence, a conservative nonmechanistic assembly graph, and a TODO for exact
+    penta-snRNP RNA and protein boundary curation.
