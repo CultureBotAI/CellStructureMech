@@ -1,0 +1,156 @@
+identifier: GO:0071013
+label: catalytic step 2 spliceosome
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A spliceosomal complex that contains three snRNPs, including U5, bound
+  to a splicing intermediate in which the first catalytic cleavage of the 5' splice
+  site has occurred. The precise subunit composition differs significantly from that
+  of the catalytic step 1, or activated, spliceosome, and includes many proteins in
+  addition to those found in the associated snRNPs.
+definition_source: GO:0071013
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T09:16:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T09:17:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO narrow synonyms, spliceosomal and catalytic-complex parentage,
+    a reviewed-label-only catalytic step 2 splicing-intermediate-bound snRNP component,
+    a conservative post-first-cleavage graph and a TODO for exact U2-type and U12-type
+    catalytic step 2 spliceosome boundaries.
+  llm_assisted: true
+synonyms:
+- synonym_text: mammalian spliceosomal complex C
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071013
+- synonym_text: mammalian spliceosomal complex C1
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071013
+- synonym_text: yeast spliceosomal complex A2-2
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071013
+parent_structures:
+- GO:0005681
+- GO:1902494
+components:
+- component_id: step2_splicing_intermediate_bound_snrnps
+  label: catalytic step 2 splicing-intermediate-bound snRNPs
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0071013 spans U2-type catalytic step 2 spliceosomes, which contain
+    U2, U5 and U6 snRNPs, and U12-type catalytic step 2 spliceosomes, which contain
+    U12, U5 and U6atac snRNPs; no single exact source-neutral CURIE was assigned for
+    this subtype-specific snRNP cohort.
+  role: Subtype-specific set of three snRNP constituents, including U5, bound to the
+    splicing intermediate in catalytic step 2 spliceosomes.
+  evidence:
+  - reference: GO:0071013
+    notes: GO:0071013 defines the catalytic step 2 spliceosome as containing three
+      snRNPs including U5 bound to a splicing intermediate after the first catalytic
+      cleavage of the 5-prime splice site.
+  - reference: GO:0071007
+    notes: GO:0071007 defines the U2-type catalytic step 2 spliceosome as containing
+      U2, U5 and U6 snRNPs bound to the splicing intermediate.
+  - reference: GO:0071018
+    notes: GO:0071018 defines the U12-type catalytic step 2 spliceosome as containing
+      U12, U5 and U6atac snRNPs bound to the splicing intermediate.
+evidence:
+- reference: GO:0071013
+  notes: Gene Ontology cellular-component term for catalytic step 2 spliceosome and
+    its GO synonyms.
+- reference: GO:0005681
+  notes: Gene Ontology cellular-component parent term for spliceosomal complex.
+- reference: GO:1902494
+  notes: Gene Ontology cellular-component parent term for catalytic complex.
+- reference: GO:0071012
+  notes: Gene Ontology cellular-component term for the preceding catalytic step 1
+    spliceosome state.
+- reference: GO:0071007
+  notes: Gene Ontology cellular-component term for the U2-type catalytic step 2 spliceosome
+    child state.
+- reference: GO:0071018
+  notes: Gene Ontology cellular-component term for the U12-type catalytic step 2 spliceosome
+    child state.
+- reference: GO:0005682
+  notes: Gene Ontology cellular-component term for the U5 snRNP.
+- reference: GO:0005686
+  notes: Gene Ontology cellular-component term for the U2 snRNP.
+- reference: GO:0005688
+  notes: Gene Ontology cellular-component term for the U6 snRNP.
+- reference: GO:0005693
+  notes: Gene Ontology cellular-component term for the U12 snRNP.
+- reference: GO:0005691
+  notes: Gene Ontology cellular-component term for the U6atac snRNP.
+causal_graphs:
+- graph_id: catalytic_step2_snrnp_intermediate_binding
+  title: Three snRNPs bind the catalytic step 2 splicing intermediate
+  description: Catalytic step 2 spliceosomes contain U5 and two subtype-specific snRNPs
+    bound to a splicing intermediate after first catalytic cleavage of the 5-prime
+    splice site.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the generic binding of three snRNPs, including
+    U5, to the catalytic step 2 splicing intermediate without asserting the U2/U5/U6
+    composition of the U2-type child state or the U12/U5/U6atac composition of the
+    U12-type child state.
+  nodes:
+  - node_id: step2_splicing_intermediate_bound_snrnps
+    label: catalytic step 2 splicing-intermediate-bound snRNPs
+    node_type: STRUCTURE
+    component_ref: step2_splicing_intermediate_bound_snrnps
+  - node_id: catalytic_step_1_spliceosome
+    label: catalytic step 1 spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071012
+  - node_id: catalytic_step_2_spliceosome
+    label: catalytic step 2 spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071013
+  edges:
+  - subject: step2_splicing_intermediate_bound_snrnps
+    predicate: bind splicing intermediate in
+    object: catalytic_step_2_spliceosome
+    description: Three snRNPs including U5 are bound to the splicing intermediate
+      in catalytic step 2 spliceosomes.
+    evidence:
+    - reference: GO:0071013
+      notes: GO:0071013 defines catalytic step 2 spliceosomes as containing three
+        snRNPs including U5 bound to a splicing intermediate.
+  - subject: catalytic_step_1_spliceosome
+    predicate: is remodeled after first catalytic cleavage to form
+    object: catalytic_step_2_spliceosome
+    description: After first catalytic cleavage of the 5-prime splice site, the catalytic
+      step 2 spliceosome contains subtype-specific snRNPs bound to a splicing intermediate.
+    evidence:
+    - reference: GO:0071013
+      notes: GO:0071013 defines the catalytic step 2 spliceosome by the first catalytic
+        cleavage having occurred.
+discussions:
+- discussion_id: resolve_catalytic_step2_state_snrnp_boundaries
+  prompt: Resolve exact source-neutral snRNP membership and additional protein boundaries
+    for each catalytic step 2 spliceosome subtype.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#step2_splicing_intermediate_bound_snrnps
+  - causal_graphs#catalytic_step2_snrnp_intermediate_binding
+  rationale: The first GO:0071013 parent record captures only the generic presence
+    of three splicing-intermediate-bound snRNPs including U5. Child records for U2-type
+    and U12-type catalytic step 2 spliceosomes should carry the exact U2/U5/U6 and
+    U12/U5/U6atac constituent boundaries that apply to those specific states.
+  evidence:
+  - reference: GO:0071013
+  - reference: GO:0071007
+  - reference: GO:0071018
+  - reference: GO:0005682
+  - reference: GO:0005686
+  - reference: GO:0005688
+  - reference: GO:0005693
+  - reference: GO:0005691
+  posed_by: codex
+  posed_date: '2026-09-25'

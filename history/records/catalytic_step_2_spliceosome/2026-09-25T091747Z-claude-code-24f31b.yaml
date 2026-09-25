@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/catalytic_step_2_spliceosome.yaml
+  slug: catalytic_step_2_spliceosome
+session:
+  id: 2026-09-25T091747Z-claude-code-24f31b
+  timestamp: '2026-09-25T09:17:47Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - synonyms
+  - parent_structures
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add catalytic step 2 spliceosome record
+  details: Added a new GO:0071013 catalytic step 2 spliceosome record with GO narrow synonyms,
+    spliceosomal-complex and catalytic-complex parentage, a reviewed-label-only generic catalytic
+    step 2 splicing-intermediate-bound snRNP component, GO evidence for U2-type and U12-type
+    child states, a conservative post-first-cleavage graph and a curation TODO for exact subtype-specific
+    snRNP boundaries. The duplicate search included hidden and ignored files before creation.

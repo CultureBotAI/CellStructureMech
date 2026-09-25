@@ -4266,6 +4266,15 @@
   "definition": "A spliceosomal complex that is formed by the displacement of the two snRNPs from the precatalytic spliceosome; three snRNPs including U5 remain associated with the mRNA. This complex, sometimes called the activated spliceosome, is the catalytically active form of the spliceosome, and includes many proteins in addition to those found in the associated snRNPs."
  },
  {
+  "identifier": "GO:0071013",
+  "label": "catalytic step 2 spliceosome",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/catalytic_step_2_spliceosome.html",
+  "definition": "A spliceosomal complex that contains three snRNPs, including U5, bound to a splicing intermediate in which the first catalytic cleavage of the 5' splice site has occurred. The precise subunit composition differs significantly from that of the catalytic step 1, or activated, spliceosome, and includes many proteins in addition to those found in the associated snRNPs."
+ },
+ {
   "identifier": "GO:0000243",
   "label": "commitment complex",
   "category": "RIBONUCLEOPROTEIN",
