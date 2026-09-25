@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/90s_preribosome.yaml
+  slug: 90s_preribosome
+session:
+  id: 2026-09-25T191240Z-codex-0d709d
+  timestamp: '2026-09-25T19:12:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1596
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1595
+events:
+- type: EDIT
+  outcome: changed
+  summary: Cite 90S pre-rRNA grounding rationale
+  details: 'Resolved PR #1595 review issue #1596 by adding SO:0002393 to the 90S preribosome
+    evidence and component-boundary discussion, and by rewording the 35S pre-rRNA grounding
+    note so the broader precursor_RNA comparison is self-contained.'

@@ -22,6 +22,13 @@ curation_history:
     GO/PubMed evidence, a nonmechanistic constituent graph and a TODO for exact 90S
     component boundaries.
   llm_assisted: true
+- timestamp: '2026-09-25T19:12:02Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1595 review issue #1596 by citing SO:0002393 in the 90S preribosome
+    evidence and component-boundary discussion and by making the 35S pre-rRNA grounding
+    rationale self-contained.'
+  llm_assisted: true
 parent_structures:
 - GO:0030684
 components:
@@ -31,9 +38,8 @@ components:
   component_role: CONSTITUENT
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral Sequence Ontology class for the budding-yeast
-    35S precursor ribosomal RNA was assigned in this pass; the broader preribosome
-    record already records SO:0002393 as precursor_RNA but not as an exact pre-rRNA
-    grounding.
+    35S precursor ribosomal RNA was assigned in this pass; SO:0002393 denotes the
+    broader precursor_RNA class, not 35S pre-rRNA specifically.
   role: Precursor ribosomal RNA constituent of budding-yeast 90S preribosomes.
   evidence:
   - reference: GO:0030686
@@ -112,6 +118,9 @@ evidence:
   notes: Gene Ontology cellular-component parent term for preribosomal complexes.
 - reference: GO:0042254
   notes: Gene Ontology biological-process term for ribosome biogenesis.
+- reference: SO:0002393
+  notes: Sequence Ontology term for the broader precursor_RNA class, which is not
+    specific to 35S pre-rRNA.
 - reference: PMID:12150911
   notes: PubMed identifier for Grandi et al. 2002, '90S pre-ribosomes include the
     35S pre-rRNA, the U3 snoRNP, and 40S subunit processing factors but predominantly
@@ -223,6 +232,7 @@ discussions:
   evidence:
   - reference: GO:0030686
   - reference: GO:0032040
+  - reference: SO:0002393
   - reference: DOI:10.1016/s1097-2765(02)00579-8
   posed_by: codex
   posed_date: '2026-09-25'
