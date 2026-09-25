@@ -1,0 +1,129 @@
+identifier: GO:0044530
+label: supraspliceosomal complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: Multicomponent complex of RNA and proteins that is composed of four active
+  spliceosomes, termed native spliceosomes, connected to each other by the pre-mRNA.
+  The supraspliceosome is the nuclear machine where the pre-mRNA processing takes
+  place, like the 5'-end capping, 3'-end cleavage, splicing and editing.
+definition_source: GO:0044530
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T11:32:57Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T11:33:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym, spliceosomal-complex parentage, GO-grounded
+    four-spliceosomal-complex and reviewed-label-only pre-mRNA components, a conservative
+    constituent graph and a TODO for exact native-spliceosome and pre-mRNA boundaries.
+  llm_assisted: true
+synonyms:
+- synonym_text: supraspliceosome complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0044530
+parent_structures:
+- GO:0005681
+components:
+- component_id: spliceosomal_complex
+  label: spliceosomal complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005681
+  stoichiometry: '4'
+  role: Active spliceosomal-complex substructure represented four times in the supraspliceosomal
+    complex.
+  evidence:
+  - reference: GO:0044530
+    notes: GO:0044530 defines the supraspliceosomal complex as composed of four active
+      spliceosomes, termed native spliceosomes.
+  - reference: GO:0005681
+    notes: GO:0005681 is the Gene Ontology cellular-component term for spliceosomal
+      complex.
+- component_id: pre_mrna
+  label: pre-mRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0044530 defines the supraspliceosomal complex as containing
+    pre-mRNA connecting its four active spliceosomes, but no exact Sequence Ontology
+    CURIE for that pre-mRNA constituent was assigned in this first record.
+  role: Pre-mRNA RNA constituent that connects the four active spliceosomal complexes
+    in the supraspliceosomal complex.
+  evidence:
+  - reference: GO:0044530
+    notes: GO:0044530 defines the supraspliceosomal complex as four active spliceosomes
+      connected to each other by the pre-mRNA.
+evidence:
+- reference: GO:0044530
+  notes: Gene Ontology cellular-component term for supraspliceosomal complex and its
+    exact synonym.
+- reference: GO:0005681
+  notes: Gene Ontology cellular-component parent term for spliceosomal complex.
+causal_graphs:
+- graph_id: supraspliceosomal_complex_assembly
+  title: Four spliceosomal complexes and pre-mRNA form the supraspliceosomal complex
+  description: The supraspliceosomal complex contains four active spliceosomal complexes
+    connected by pre-mRNA.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined spliceosomal-complex stoichiometry
+    and connecting pre-mRNA without modeling native spliceosome state boundaries or
+    additional protein-family composition.
+  nodes:
+  - node_id: spliceosomal_complex
+    label: spliceosomal complex
+    node_type: STRUCTURE
+    grounding: GO:0005681
+    component_ref: spliceosomal_complex
+  - node_id: pre_mrna
+    label: pre-mRNA
+    node_type: RNA
+    component_ref: pre_mrna
+  - node_id: supraspliceosomal_complex
+    label: supraspliceosomal complex
+    node_type: STRUCTURE
+    grounding: GO:0044530
+  edges:
+  - subject: spliceosomal_complex
+    predicate: contributes constituents to
+    object: supraspliceosomal_complex
+    description: Four active spliceosomal complexes are constituent subcomplexes of
+      the supraspliceosomal complex.
+    evidence:
+    - reference: GO:0044530
+      notes: GO:0044530 defines the supraspliceosomal complex as composed of four
+        active spliceosomes.
+    - reference: GO:0005681
+      notes: GO:0005681 is the parent spliceosomal-complex term.
+  - subject: pre_mrna
+    predicate: connects subcomplexes in
+    object: supraspliceosomal_complex
+    description: Pre-mRNA connects the four active spliceosomes in the supraspliceosomal
+      complex.
+    evidence:
+    - reference: GO:0044530
+      notes: GO:0044530 defines the active spliceosomes in a supraspliceosomal complex
+        as connected to each other by the pre-mRNA.
+discussions:
+- discussion_id: resolve_supraspliceosomal_native_spliceosome_boundaries
+  prompt: Resolve exact source-neutral component boundaries for the native spliceosome
+    and pre-mRNA constituents of the supraspliceosomal complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#spliceosomal_complex
+  - components#pre_mrna
+  - causal_graphs#supraspliceosomal_complex_assembly
+  rationale: The first GO:0044530 record captures only the GO-defined four active
+    spliceosomal complexes and connecting pre-mRNA. Exact native-spliceosome state
+    boundaries, substrate-RNA grounding and additional protein-family composition
+    should be resolved before expanding the component list.
+  evidence:
+  - reference: GO:0044530
+  - reference: GO:0005681
+  posed_by: codex
+  posed_date: '2026-09-25'

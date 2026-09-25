@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>supraspliceosomal complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>supraspliceosomal complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0044530"><code>GO:0044530</code></a> · RIBONUCLEOPROTEIN · RIBONUCLEOPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">Multicomponent complex of RNA and proteins that is composed of four active spliceosomes, termed native spliceosomes, connected to each other by the pre-mRNA. The supraspliceosome is the nuclear machine where the pre-mRNA processing takes place, like the 5&#39;-end capping, 3&#39;-end cleavage, splicing and editing. <small>[<a href="http://purl.obolibrary.org/obo/GO_0044530"><code>GO:0044530</code></a>]</small></p>
+<p><strong>Synonyms:</strong> supraspliceosome complex</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-spliceosomal_complex"><td>spliceosomal complex</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0005681"><code>GO:0005681</code></a></td><td></td><td>4</td><td></td><td>Active spliceosomal-complex substructure represented four times in the supraspliceosomal complex.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044530"><code>GO:0044530</code></a> <small>GO:0044530 defines the supraspliceosomal complex as composed of four active spliceosomes, termed native spliceosomes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005681"><code>GO:0005681</code></a> <small>GO:0005681 is the Gene Ontology cellular-component term for spliceosomal complex.</small></li></ul></td></tr>
+<tr id="components-pre_mrna"><td>pre-mRNA</td><td>RNA</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td></td><td>Pre-mRNA RNA constituent that connects the four active spliceosomal complexes in the supraspliceosomal complex.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044530"><code>GO:0044530</code></a> <small>GO:0044530 defines the supraspliceosomal complex as four active spliceosomes connected to each other by the pre-mRNA.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-supraspliceosomal_complex_assembly">Four spliceosomal complexes and pre-mRNA form the supraspliceosomal complex <small>(ASSEMBLY)</small></h3>
+<p>The supraspliceosomal complex contains four active spliceosomal complexes connected by pre-mRNA.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>spliceosomal complex</td><td>contributes constituents to</td><td>supraspliceosomal complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044530"><code>GO:0044530</code></a> <small>GO:0044530 defines the supraspliceosomal complex as composed of four active spliceosomes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005681"><code>GO:0005681</code></a> <small>GO:0005681 is the parent spliceosomal-complex term.</small></li></ul></td></tr>
+<tr><td>pre-mRNA</td><td>connects subcomplexes in</td><td>supraspliceosomal complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044530"><code>GO:0044530</code></a> <small>GO:0044530 defines the active spliceosomes in a supraspliceosomal complex as connected to each other by the pre-mRNA.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral component boundaries for the native spliceosome and pre-mRNA constituents of the supraspliceosomal complex. <small>The first GO:0044530 record captures only the GO-defined four active spliceosomal complexes and connecting pre-mRNA. Exact native-spliceosome state boundaries, substrate-RNA grounding and additional protein-family composition should be resolved before expanding the component list.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044530"><code>GO:0044530</code></a> <small>Gene Ontology cellular-component term for supraspliceosomal complex and its exact synonym.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005681"><code>GO:0005681</code></a> <small>Gene Ontology cellular-component parent term for spliceosomal complex.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-25T11:32:57Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-25T11:33:39Z</code> codex · EXPANDED_RECORD — Added the GO exact synonym, spliceosomal-complex parentage, GO-grounded four-spliceosomal-complex and reviewed-label-only pre-mRNA components, a conservative constituent graph and a TODO for exact native-spliceosome and pre-mRNA boundaries.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/supraspliceosomal_complex.yaml"><code>data/structures/ribonucleoprotein/supraspliceosomal_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

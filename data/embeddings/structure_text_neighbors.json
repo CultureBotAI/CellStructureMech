@@ -15292,6 +15292,37 @@
       ]
     },
     {
+      "identifier": "GO:0044530",
+      "label": "supraspliceosomal complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005681",
+          "label": "spliceosomal complex",
+          "cosine_similarity": 0.85901345
+        },
+        {
+          "identifier": "GO:0071010",
+          "label": "prespliceosome",
+          "cosine_similarity": 0.85615289
+        },
+        {
+          "identifier": "GO:0005684",
+          "label": "U2-type spliceosomal complex",
+          "cosine_similarity": 0.83798052
+        },
+        {
+          "identifier": "GO:0071011",
+          "label": "precatalytic spliceosome",
+          "cosine_similarity": 0.83796312
+        },
+        {
+          "identifier": "GO:0071020",
+          "label": "post-spliceosomal complex",
+          "cosine_similarity": 0.83264144
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005697",
       "label": "telomerase holoenzyme complex",
       "neighbors": [
