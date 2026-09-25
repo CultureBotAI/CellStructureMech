@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/utp_c_complex.yaml
+  slug: utp_c_complex
+session:
+  id: 2026-09-25T222236Z-codex-d3597f
+  timestamp: '2026-09-25T22:22:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added UTP-C complex structure record
+  details: Created the GO:0034456 UTP-C complex record with its Rrp7p-containing 90S preribosome
+    subcomplex synonym, six Saccharomyces UTP-C constituent proteins, GO/PubMed/DOI evidence,
+    a 90S preribosome assembly function, and a nonmechanistic assembly graph grounded in Perez-Fernandez
+    et al. 2007.

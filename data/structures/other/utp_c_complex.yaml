@@ -1,0 +1,310 @@
+identifier: GO:0034456
+label: UTP-C complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that forms a subcomplex of the 90S preribosome. In S.
+  cerevisiae, it is composed of Rrp7p, Utp22p, Ckb1p, Cka1p, Ckb2p and Cka2p.
+definition_source: GO:0034456
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T22:21:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T22:21:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Rrp7p-containing-subcomplex synonymy, nuclear protein-containing
+    complex parentage, nucleolar and 90S preribosome parthood, six reviewed-label-only
+    UTP-C constituent rows, budding-yeast scope, a 90S-preribosome-assembly function,
+    GO/PubMed/DOI evidence, a nonmechanistic assembly graph, and a UTP-C subunit-grounding
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Rrp7p-containing subcomplex of 90S preribosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034456
+parent_structures:
+- GO:0140513
+part_of:
+- GO:0005730
+- GO:0030686
+components:
+- component_id: rrp7_utp_c_subunit
+  label: Rrp7 UTP-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RRP7
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Rrp7p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this UTP-C subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast UTP-C complex / Rrp7p-containing
+    90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034456
+    notes: GO:0034456 defines the UTP-C complex as containing Rrp7p.
+- component_id: utp22_utp_c_subunit
+  label: Utp22 UTP-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UTP22
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Utp22p
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this UTP-C subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast UTP-C complex / Rrp7p-containing
+    90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034456
+    notes: GO:0034456 defines the UTP-C complex as containing Utp22p.
+- component_id: ckb1_utp_c_subunit
+  label: Ckb1 UTP-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CKB1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Ckb1p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this UTP-C subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast UTP-C complex / Rrp7p-containing
+    90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034456
+    notes: GO:0034456 defines the UTP-C complex as containing Ckb1p.
+- component_id: cka1_utp_c_subunit
+  label: Cka1 UTP-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CKA1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Cka1p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this UTP-C subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast UTP-C complex / Rrp7p-containing
+    90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034456
+    notes: GO:0034456 defines the UTP-C complex as containing Cka1p.
+- component_id: ckb2_utp_c_subunit
+  label: Ckb2 UTP-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CKB2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Ckb2p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this UTP-C subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast UTP-C complex / Rrp7p-containing
+    90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034456
+    notes: GO:0034456 defines the UTP-C complex as containing Ckb2p.
+- component_id: cka2_utp_c_subunit
+  label: Cka2 UTP-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CKA2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Cka2p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this UTP-C subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast UTP-C complex / Rrp7p-containing
+    90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034456
+    notes: GO:0034456 defines the UTP-C complex as containing Cka2p.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0034456 defines UTP-C as a six-protein
+    subcomplex of the 90S preribosome.
+  reference: GO:0034456
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Perez-Fernandez et al. 2007 placed UTP-C on a stepwise 90S-preribosome assembly
+    route in budding yeast.
+  reference: DOI:10.1128/MCB.00380-07
+functions:
+- function_id: 90s_preribosome_assembly
+  label: 90S preribosome assembly
+  grounding: GO:0034463
+  description: The UTP-C complex forms a subcomplex of the 90S preribosome and participates
+    in a stepwise assembly route for the yeast 90S preribosomal particle.
+  evidence:
+  - reference: GO:0034456
+    notes: GO:0034456 defines UTP-C as a subcomplex of the 90S preribosome.
+  - reference: GO:0034463
+    notes: GO:0034463 is the Gene Ontology biological-process term for 90S preribosome
+      assembly.
+  - reference: DOI:10.1128/MCB.00380-07
+    notes: Perez-Fernandez et al. 2007 placed stepwise binding of Rrp5p and UTP-C
+      on one 90S-preribosome assembly route.
+evidence:
+- reference: GO:0034456
+  notes: Gene Ontology cellular-component term for the UTP-C complex and its exact
+    Rrp7p-containing-subcomplex synonym.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0005730
+  notes: Gene Ontology cellular-component term for the nucleolus.
+- reference: GO:0030686
+  notes: Gene Ontology cellular-component term for the 90S preribosome.
+- reference: GO:0034463
+  notes: Gene Ontology biological-process term for 90S preribosome assembly.
+- reference: PMID:17515605
+  notes: PubMed identifier for Perez-Fernandez et al. 2007, the Molecular and Cellular
+    Biology paper cited by GO:0034456.
+- reference: DOI:10.1128/MCB.00380-07
+  notes: DOI for Perez-Fernandez et al. 2007, 'The 90S preribosome is a multimodular
+    structure that is assembled through a hierarchical mechanism', verified through
+    NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_utp_c_90s_preribosome_assembly
+  title: UTP-C is a 90S preribosome assembly module
+  description: In Saccharomyces cerevisiae, the six-protein UTP-C complex forms a
+    subcomplex of the 90S preribosome and joins the hierarchical assembly pathway.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the six GO-defined UTP-C constituents and the connection
+    from UTP-C to 90S preribosome assembly without resolving assembly order among
+    the six subunits.
+  nodes:
+  - node_id: rrp7_utp_c_subunit
+    label: Rrp7 UTP-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rrp7_utp_c_subunit
+  - node_id: utp22_utp_c_subunit
+    label: Utp22 UTP-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: utp22_utp_c_subunit
+  - node_id: ckb1_utp_c_subunit
+    label: Ckb1 UTP-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ckb1_utp_c_subunit
+  - node_id: cka1_utp_c_subunit
+    label: Cka1 UTP-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cka1_utp_c_subunit
+  - node_id: ckb2_utp_c_subunit
+    label: Ckb2 UTP-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ckb2_utp_c_subunit
+  - node_id: cka2_utp_c_subunit
+    label: Cka2 UTP-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cka2_utp_c_subunit
+  - node_id: utp_c_complex
+    label: UTP-C complex
+    node_type: STRUCTURE
+    grounding: GO:0034456
+  - node_id: 90s_preribosome
+    label: 90S preribosome
+    node_type: STRUCTURE
+    grounding: GO:0030686
+  - node_id: 90s_preribosome_assembly
+    label: 90S preribosome assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0034463
+  edges:
+  - subject: rrp7_utp_c_subunit
+    predicate: contributes to
+    object: utp_c_complex
+    description: Rrp7p is one constituent of the budding-yeast UTP-C complex.
+    evidence:
+    - reference: GO:0034456
+      notes: GO:0034456 defines Rrp7p as a component of the UTP-C complex.
+  - subject: utp22_utp_c_subunit
+    predicate: contributes to
+    object: utp_c_complex
+    description: Utp22p is one constituent of the budding-yeast UTP-C complex.
+    evidence:
+    - reference: GO:0034456
+      notes: GO:0034456 defines Utp22p as a component of the UTP-C complex.
+  - subject: ckb1_utp_c_subunit
+    predicate: contributes to
+    object: utp_c_complex
+    description: Ckb1p is one constituent of the budding-yeast UTP-C complex.
+    evidence:
+    - reference: GO:0034456
+      notes: GO:0034456 defines Ckb1p as a component of the UTP-C complex.
+  - subject: cka1_utp_c_subunit
+    predicate: contributes to
+    object: utp_c_complex
+    description: Cka1p is one constituent of the budding-yeast UTP-C complex.
+    evidence:
+    - reference: GO:0034456
+      notes: GO:0034456 defines Cka1p as a component of the UTP-C complex.
+  - subject: ckb2_utp_c_subunit
+    predicate: contributes to
+    object: utp_c_complex
+    description: Ckb2p is one constituent of the budding-yeast UTP-C complex.
+    evidence:
+    - reference: GO:0034456
+      notes: GO:0034456 defines Ckb2p as a component of the UTP-C complex.
+  - subject: cka2_utp_c_subunit
+    predicate: contributes to
+    object: utp_c_complex
+    description: Cka2p is one constituent of the budding-yeast UTP-C complex.
+    evidence:
+    - reference: GO:0034456
+      notes: GO:0034456 defines Cka2p as a component of the UTP-C complex.
+  - subject: utp_c_complex
+    predicate: part of
+    object: 90s_preribosome
+    description: The UTP-C complex is a protein subcomplex of the 90S preribosome.
+    evidence:
+    - reference: GO:0034456
+      notes: GO:0034456 records UTP-C as part of the 90S preribosome.
+  - subject: utp_c_complex
+    predicate: supports
+    object: 90s_preribosome_assembly
+    description: The UTP-C complex participates in the hierarchical 90S-preribosome
+      assembly pathway.
+    evidence:
+    - reference: GO:0034456
+      notes: GO:0034456 defines UTP-C as a subcomplex of the 90S preribosome.
+    - reference: GO:0034463
+      notes: GO:0034463 is the process term for 90S preribosome assembly.
+    - reference: DOI:10.1128/MCB.00380-07
+      notes: Perez-Fernandez et al. 2007 described UTP-C as a discrete assembly subunit
+        that binds during one of the 90S preribosome assembly routes.
+discussions:
+- discussion_id: resolve_utp_c_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Rrp7, Utp22, Ckb1,
+    Cka1, Ckb2 and Cka2 constituents of the UTP-C complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rrp7_utp_c_subunit
+  - components#utp22_utp_c_subunit
+  - components#ckb1_utp_c_subunit
+  - components#cka1_utp_c_subunit
+  - components#ckb2_utp_c_subunit
+  - components#cka2_utp_c_subunit
+  rationale: GO:0034456 uses Saccharomyces gene-product names while noting that analogous
+    complexes in other eukaryotes can use the term. Exact cross-eukaryotic InterPro,
+    Pfam, NCBIfam or UniProt family boundaries for the six UTP-C proteins need narrower
+    follow-up curation before these component labels can be grounded.
+  evidence:
+  - reference: GO:0034456
+    notes: The GO:0034456 comment explains that the term name uses Saccharomyces gene-product
+      names because no other names had arisen for the complex.
+  posed_by: codex
+  posed_date: '2026-09-25'
