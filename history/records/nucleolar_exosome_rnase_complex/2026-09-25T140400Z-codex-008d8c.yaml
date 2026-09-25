@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/nucleolar_exosome_rnase_complex.yaml
+  slug: nucleolar_exosome_rnase_complex
+session:
+  id: 2026-09-25T140400Z-codex-008d8c
+  timestamp: '2026-09-25T14:04:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add nucleolar exosome RNase complex record
+  details: Added a GO:0101019 nucleolar exosome (RNase complex) record with Gene Ontology
+    parentage, nucleolar parthood, RNA processing and RNA degradation function links, GO/PubMed
+    evidence, a nonmechanistic localization/function graph, and a follow-up TODO for exact
+    nucleolar exosome component boundaries.
