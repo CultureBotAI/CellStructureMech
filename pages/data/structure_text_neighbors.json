@@ -14810,6 +14810,11 @@
           "cosine_similarity": 0.869417
         },
         {
+          "identifier": "GO:0030684",
+          "label": "preribosome",
+          "cosine_similarity": 0.81137098
+        },
+        {
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.80780588
@@ -14818,11 +14823,6 @@
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.80288194
-        },
-        {
-          "identifier": "GO:0005730",
-          "label": "nucleolus",
-          "cosine_similarity": 0.78832846
         }
       ]
     },
@@ -14854,6 +14854,37 @@
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.69681719
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030684",
+      "label": "preribosome",
+      "neighbors": [
+        {
+          "identifier": "GO:0015935",
+          "label": "small ribosomal subunit",
+          "cosine_similarity": 0.82394676
+        },
+        {
+          "identifier": "GO:0015934",
+          "label": "large ribosomal subunit",
+          "cosine_similarity": 0.81137098
+        },
+        {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.77424294
+        },
+        {
+          "identifier": "GO:0005730",
+          "label": "nucleolus",
+          "cosine_similarity": 0.77422814
+        },
+        {
+          "identifier": "GO:0005840",
+          "label": "ribosome",
+          "cosine_similarity": 0.76976138
         }
       ]
     },
@@ -14965,6 +14996,11 @@
           "cosine_similarity": 0.8784845
         },
         {
+          "identifier": "GO:0030684",
+          "label": "preribosome",
+          "cosine_similarity": 0.82394676
+        },
+        {
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.80667675
@@ -14973,11 +15009,6 @@
           "identifier": "GO:0005730",
           "label": "nucleolus",
           "cosine_similarity": 0.80255104
-        },
-        {
-          "identifier": "GO:0000172",
-          "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.78571432
         }
       ]
     },
@@ -14985,6 +15016,11 @@
       "identifier": "GO:0005697",
       "label": "telomerase holoenzyme complex",
       "neighbors": [
+        {
+          "identifier": "GO:0030684",
+          "label": "preribosome",
+          "cosine_similarity": 0.76698821
+        },
         {
           "identifier": "GO:0000243",
           "label": "commitment complex",
@@ -15004,11 +15040,6 @@
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.72376884
-        },
-        {
-          "identifier": "GO:0046540",
-          "label": "U4/U6 x U5 tri-snRNP complex",
-          "cosine_similarity": 0.72039347
         }
       ]
     },
