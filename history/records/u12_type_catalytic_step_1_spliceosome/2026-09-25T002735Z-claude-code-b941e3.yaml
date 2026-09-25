@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u12_type_catalytic_step_1_spliceosome.yaml
+  slug: u12_type_catalytic_step_1_spliceosome
+session:
+  id: 2026-09-25T002735Z-claude-code-b941e3
+  timestamp: '2026-09-25T00:27:35Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1537
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1536
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: 'Address PR #1536 U12 step-1 TODO review issue'
+  details: 'Addressed issue #1537 from PR #1536 by clarifying the U12-type catalytic step
+    1 spliceosome protein-boundary TODO. The prompt and rationale now require classifying
+    literature-reported activated U12 spliceosome proteins as in-boundary source-neutral constituents
+    or out-of-boundary remodeling factors before expanding the component list.'

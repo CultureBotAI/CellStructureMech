@@ -23,6 +23,13 @@ curation_history:
     evidence, a conservative snRNP-retention graph and a protein-component grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-25T00:27:05Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1537: clarified the activated U12 spliceosome protein-boundary TODO so
+    literature-reported proteins must be classified before expanding the component
+    list.'
+  llm_assisted: true
 synonyms:
 - synonym_text: minor catalytic step 1 spliceosome
   synonym_type: EXACT_SYNONYM
@@ -181,8 +188,9 @@ causal_graphs:
         by displacement of U11 and U4atac snRNPs from the precatalytic spliceosome.
 discussions:
 - discussion_id: resolve_u12_type_step1_spliceosome_protein_components
-  prompt: Resolve exact source-neutral component boundaries for activated U12-type
-    spliceosome proteins beyond the GO-defined U12, U5 and U6atac snRNP subcomplexes.
+  prompt: Classify literature-reported activated U12-type spliceosome proteins beyond
+    the GO-defined U12, U5 and U6atac snRNP subcomplexes as source-neutral constituents
+    or out-of-boundary remodeling factors.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
@@ -191,9 +199,9 @@ discussions:
   - components#u6atac_snrnp
   - causal_graphs#u12_type_step1_spliceosome_remodeling
   rationale: The first GO:0071017 record captures the defining U12, U5 and U6atac
-    snRNP subcomplexes. Additional U12-type activated-spliceosome proteins should
-    be resolved into exact source-neutral families or subcomplexes before expanding
-    this component list.
+    snRNP subcomplexes. Reports of additional activated U12-type spliceosome proteins
+    need boundary review against transient assembly or remodeling factors and exact
+    source-neutral grounding before any constituent or subcomplex is added.
   evidence:
   - reference: GO:0071017
   - reference: DOI:10.1515/BC.2005.084
