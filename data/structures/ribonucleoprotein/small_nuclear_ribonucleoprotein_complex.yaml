@@ -1,0 +1,137 @@
+identifier: GO:0030532
+label: small nuclear ribonucleoprotein complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex that contains at least one small nuclear RNA
+  (snRNA) and associated proteins. Small nuclear ribonucleoproteins are typically
+  named for the snRNA constituents they contain, such as U1 snRNP, U4/U6 snRNP, or
+  7SK snRNP; many become part of spliceosomes, while others regulate transcription
+  elongation or replication-dependent histone pre-mRNA 3'-end processing.
+definition_source: GO:0030532
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T05:40:09Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T05:40:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact synonyms, ribonucleoprotein parentage, the SO-grounded snRNA
+    component, a reviewed-label-only associated protein cohort, GO/SO evidence, a
+    minimal snRNP assembly graph and a TODO for exact snRNP-specific component boundaries.
+  llm_assisted: true
+- timestamp: '2026-09-25T05:41:21Z'
+  curator: codex
+  action: TIGHTENED_DEFINITION
+  changes: Smoothed the GO-derived small nuclear ribonucleoprotein complex definition
+    while preserving its snRNA/protein composition and spliceosomal, 7SK and U7 scope.
+  llm_assisted: true
+synonyms:
+- synonym_text: small nuclear ribonucleoprotein
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030532
+- synonym_text: snRNP
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030532
+parent_structures:
+- GO:1990904
+components:
+- component_id: snrna
+  label: snRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000274
+  role: Small nuclear RNA constituent that gives a small nuclear ribonucleoprotein
+    complex its snRNP identity.
+  evidence:
+  - reference: GO:0030532
+    notes: GO:0030532 defines small nuclear ribonucleoprotein complexes as containing
+      at least one RNA of the small nuclear RNA class.
+  - reference: SO:0000274
+    notes: SO:0000274 is the Sequence Ontology term for snRNA and lists small nuclear
+      RNA as an exact synonym.
+- component_id: snrnp_associated_proteins
+  label: snRNP-associated proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Small nuclear ribonucleoprotein complexes contain associated proteins,
+    but the GO:0030532 parent spans heterogeneous protein families across U1, U4/U6,
+    U7, 7SK and other snRNPs; no single exact source-neutral protein-family CURIE
+    was assigned.
+  role: Protein constituents associated with the snRNA molecule in small nuclear ribonucleoprotein
+    complexes.
+  evidence:
+  - reference: GO:0030532
+    notes: GO:0030532 defines small nuclear ribonucleoprotein complexes as containing
+      associated proteins as well as snRNA.
+evidence:
+- reference: GO:0030532
+  notes: Gene Ontology cellular-component term for small nuclear ribonucleoprotein
+    complex and its exact synonyms.
+- reference: GO:1990904
+  notes: Gene Ontology cellular-component parent term for ribonucleoprotein complex.
+- reference: SO:0000274
+  notes: Sequence Ontology term for snRNA and its small nuclear RNA exact synonym.
+causal_graphs:
+- graph_id: snrna_associated_proteins_constituents
+  title: snRNA and associated proteins form snRNPs
+  description: Small nuclear ribonucleoprotein complexes contain at least one snRNA
+    molecule together with associated proteins.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined snRNA and associated protein
+    contributions without modeling individual snRNP-specific RNA or protein-family
+    boundaries.
+  nodes:
+  - node_id: snrna
+    label: snRNA
+    node_type: RNA
+    grounding: SO:0000274
+    component_ref: snrna
+  - node_id: snrnp_associated_proteins
+    label: snRNP-associated proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: snrnp_associated_proteins
+  - node_id: small_nuclear_ribonucleoprotein_complex
+    label: small nuclear ribonucleoprotein complex
+    node_type: STRUCTURE
+    grounding: GO:0030532
+  edges:
+  - subject: snrna
+    predicate: contributes constituents to
+    object: small_nuclear_ribonucleoprotein_complex
+    description: Small nuclear RNAs are RNA constituents of small nuclear ribonucleoprotein
+      complexes.
+    evidence:
+    - reference: GO:0030532
+      notes: GO:0030532 defines each snRNP as containing at least one RNA of the snRNA
+        class.
+  - subject: snrnp_associated_proteins
+    predicate: contributes constituents to
+    object: small_nuclear_ribonucleoprotein_complex
+    description: Associated proteins are protein constituents of small nuclear ribonucleoprotein
+      complexes.
+    evidence:
+    - reference: GO:0030532
+      notes: GO:0030532 defines snRNPs as containing associated proteins.
+discussions:
+- discussion_id: resolve_snrnp_specific_components
+  prompt: Resolve exact source-neutral RNA and protein boundaries for individual small
+    nuclear ribonucleoprotein complexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#snrnp_associated_proteins
+  - causal_graphs#snrna_associated_proteins_constituents
+  rationale: The first GO:0030532 record captures only the generic SO-grounded snRNA
+    class and the GO-defined associated-protein cohort. Individual U-series, 7SK,
+    U7 and other snRNP records should resolve specific RNA Sequence Ontology terms
+    and protein-family boundaries separately.
+  evidence:
+  - reference: GO:0030532
+  - reference: SO:0000274
+  posed_by: codex
+  posed_date: '2026-09-25'
