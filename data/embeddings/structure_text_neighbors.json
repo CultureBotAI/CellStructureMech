@@ -15168,6 +15168,37 @@
       ]
     },
     {
+      "identifier": "GO:0071024",
+      "label": "SL snRNP",
+      "neighbors": [
+        {
+          "identifier": "GO:0030532",
+          "label": "small nuclear ribonucleoprotein complex",
+          "cosine_similarity": 0.87679307
+        },
+        {
+          "identifier": "GO:0005686",
+          "label": "U2 snRNP",
+          "cosine_similarity": 0.86380294
+        },
+        {
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.85924427
+        },
+        {
+          "identifier": "GO:0005687",
+          "label": "U4 snRNP",
+          "cosine_similarity": 0.85105892
+        },
+        {
+          "identifier": "GO:0071023",
+          "label": "trans spliceosomal complex",
+          "cosine_similarity": 0.85105779
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030532",
       "label": "small nuclear ribonucleoprotein complex",
       "neighbors": [
