@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/preribosome_large_subunit_precursor.yaml
+  slug: preribosome_large_subunit_precursor
+session:
+  id: 2026-09-25T193626Z-codex-f15b4e
+  timestamp: '2026-09-25T19:36:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add large-subunit preribosome precursor record
+  details: Created the GO:0030687 preribosome, large subunit precursor record with 66S preribosome
+    synonymy, preribosome parentage, reviewed-label-only large-subunit pre-rRNA and protein
+    cohorts, a budding-yeast example, ribosomal large-subunit biogenesis functions, GO/SO/PubMed
+    evidence and a nonmechanistic constituent graph.
