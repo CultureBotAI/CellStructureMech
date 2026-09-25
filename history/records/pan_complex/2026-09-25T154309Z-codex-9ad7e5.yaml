@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/pan_complex.yaml
+  slug: pan_complex
+session:
+  id: 2026-09-25T154309Z-codex-9ad7e5
+  timestamp: '2026-09-25T15:43:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add PAN complex record
+  details: Added a GO:0031251 PAN complex record with Gene Ontology exact synonymy, exoribonuclease
+    parentage, cytoplasmic parthood, a poly(A)-specific ribonuclease function link, GO/PubMed
+    evidence, a nonmechanistic localization/function graph, and a follow-up TODO for exact
+    PAN component boundaries.

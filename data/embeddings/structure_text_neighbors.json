@@ -12263,6 +12263,11 @@
           "cosine_similarity": 0.69125267
         },
         {
+          "identifier": "GO:0031251",
+          "label": "PAN complex",
+          "cosine_similarity": 0.69023425
+        },
+        {
           "identifier": "GO:0120217",
           "label": "DNA gyrase complex",
           "cosine_similarity": 0.65628115
@@ -12276,11 +12281,6 @@
           "identifier": "GO:0032299",
           "label": "ribonuclease H2 complex",
           "cosine_similarity": 0.63488125
-        },
-        {
-          "identifier": "GO:0031518",
-          "label": "CBF3 complex",
-          "cosine_similarity": 0.62206563
         }
       ]
     },
@@ -12304,14 +12304,14 @@
           "cosine_similarity": 0.63678036
         },
         {
+          "identifier": "GO:0031251",
+          "label": "PAN complex",
+          "cosine_similarity": 0.63276357
+        },
+        {
           "identifier": "GO:0031080",
           "label": "nuclear pore outer ring",
           "cosine_similarity": 0.62817232
-        },
-        {
-          "identifier": "GO:0022624",
-          "label": "proteasome accessory complex",
-          "cosine_similarity": 0.62556293
         }
       ]
     },
@@ -13680,6 +13680,37 @@
       ]
     },
     {
+      "identifier": "GO:0031251",
+      "label": "PAN complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0032299",
+          "label": "ribonuclease H2 complex",
+          "cosine_similarity": 0.77195531
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.75142599
+        },
+        {
+          "identifier": "GO:0031897",
+          "label": "Tic complex",
+          "cosine_similarity": 0.74259215
+        },
+        {
+          "identifier": "GO:0043529",
+          "label": "GET complex",
+          "cosine_similarity": 0.73856701
+        },
+        {
+          "identifier": "GO:0010006",
+          "label": "Toc complex",
+          "cosine_similarity": 0.73822285
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:phage_nucleus",
       "label": "phage nucleus",
       "neighbors": [
@@ -14102,14 +14133,14 @@
           "cosine_similarity": 0.77854601
         },
         {
+          "identifier": "GO:0031251",
+          "label": "PAN complex",
+          "cosine_similarity": 0.77195531
+        },
+        {
           "identifier": "GO:0000176",
           "label": "nuclear exosome (RNase complex)",
           "cosine_similarity": 0.76976902
-        },
-        {
-          "identifier": "GO:0000172",
-          "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.76175175
         }
       ]
     },

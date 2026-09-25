@@ -1,0 +1,130 @@
+identifier: GO:0031251
+label: PAN complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A complex that possesses poly(A)-specific ribonuclease activity; catalyzes
+  the message-specific shortening of mRNA poly(A) tails. Contains at least two subunits,
+  known as Pan2p and Pan3p in Saccharomyces.
+definition_source: GO:0031251
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T15:41:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T15:42:27Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact synonymy, exoribonuclease parentage, cytoplasmic parthood,
+    a GO-backed poly(A)-specific ribonuclease function, GO/PubMed evidence, a nonmechanistic
+    function graph and a component-boundary TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: poly(A) nuclease complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031251
+parent_structures:
+- GO:1905354
+part_of:
+- GO:0005737
+functions:
+- function_id: poly_a_specific_ribonuclease_activity
+  label: poly(A)-specific ribonuclease activity
+  grounding: GO:0004535
+  description: The PAN complex catalyzes exonucleolytic cleavage of poly(A), shortening
+    mRNA poly(A) tails.
+  evidence:
+  - reference: GO:0004535
+    notes: GO:0004535 is the Gene Ontology molecular-function term for poly(A)-specific
+      ribonuclease activity.
+  - reference: GO:0031251
+    notes: GO:0031251 defines the PAN complex by message-specific shortening of mRNA
+      poly(A) tails.
+evidence:
+- reference: GO:0031251
+  notes: Gene Ontology cellular-component term for the PAN complex and its exact poly(A)
+    nuclease complex synonym.
+- reference: GO:1905354
+  notes: Gene Ontology cellular-component term for exoribonuclease complexes.
+- reference: GO:0005737
+  notes: Gene Ontology cellular-component term for the cytoplasm, where the GO:0031251
+    PAN complex is located.
+- reference: GO:0004535
+  notes: Gene Ontology molecular-function term for poly(A)-specific ribonuclease activity.
+- reference: PMID:9774670
+  notes: Primary PAN-complex publication cited in the GO:0031251 definition xrefs.
+causal_graphs:
+- graph_id: pan_poly_a_deadenylation
+  title: PAN complex shortens mRNA poly(A) tails
+  description: GO defines the PAN complex as a cytoplasmic exoribonuclease complex
+    that possesses poly(A)-specific ribonuclease activity and shortens mRNA poly(A)
+    tails.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-defined cytoplasmic PAN complex and its poly(A)-specific
+    ribonuclease activity without resolving Pan2/Pan3 component boundaries or message-specific
+    recruitment.
+  nodes:
+  - node_id: pan_complex
+    label: PAN complex
+    node_type: STRUCTURE
+    grounding: GO:0031251
+  - node_id: cytoplasm
+    label: cytoplasm
+    node_type: STRUCTURE
+    grounding: GO:0005737
+  - node_id: mrna_poly_a_tail
+    label: mRNA poly(A) tail
+    node_type: GENETIC_ELEMENT
+  - node_id: poly_a_specific_ribonuclease_activity
+    label: poly(A)-specific ribonuclease activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004535
+  edges:
+  - subject: pan_complex
+    predicate: localizes to
+    object: cytoplasm
+    description: The PAN complex is part of the cytoplasm.
+    evidence:
+    - reference: GO:0031251
+      notes: GO:0031251 places the PAN complex part_of the cytoplasm.
+    - reference: GO:0005737
+      notes: GO:0005737 is the Gene Ontology cellular-component term for the cytoplasm.
+  - subject: pan_complex
+    predicate: enables
+    object: poly_a_specific_ribonuclease_activity
+    description: The PAN complex possesses poly(A)-specific ribonuclease activity.
+    evidence:
+    - reference: GO:0031251
+      notes: GO:0031251 defines the complex by poly(A)-specific ribonuclease activity.
+    - reference: GO:0004535
+      notes: GO:0004535 is the molecular-function term for poly(A)-specific ribonuclease
+        activity.
+  - subject: mrna_poly_a_tail
+    predicate: is shortened by
+    object: poly_a_specific_ribonuclease_activity
+    description: poly(A)-specific ribonuclease activity shortens mRNA poly(A) tails.
+    evidence:
+    - reference: GO:0031251
+      notes: GO:0031251 describes the PAN complex as catalyzing message-specific shortening
+        of mRNA poly(A) tails.
+    - reference: GO:0004535
+      notes: GO:0004535 defines catalysis of exonucleolytic cleavage of poly(A) to
+        5'-AMP.
+discussions:
+- discussion_id: resolve_pan_complex_component_boundaries
+  prompt: Resolve exact source-neutral component boundaries for PAN complexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#pan_poly_a_deadenylation
+  rationale: The first GO:0031251 record captures the GO-defined PAN complex identity,
+    cytoplasmic location and poly(A)-specific activity. Exact source-neutral families
+    for Pan2/Pan3 subunits should be curated from primary component evidence before
+    assigning constituents.
+  evidence:
+  - reference: GO:0031251
+  - reference: PMID:9774670
+  posed_by: codex
+  posed_date: '2026-09-25'
