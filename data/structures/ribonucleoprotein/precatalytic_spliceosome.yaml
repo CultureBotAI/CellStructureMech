@@ -1,0 +1,140 @@
+identifier: GO:0071011
+label: precatalytic spliceosome
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A spliceosomal complex that is formed by the recruitment of a preassembled
+  U5-containing tri-snRNP to the prespliceosome. Although all 5 snRNPs are present,
+  the precatalytic spliceosome is catalytically inactive. The precatalytic spliceosome
+  includes many proteins in addition to those found in the associated snRNPs.
+definition_source: GO:0071011
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T08:15:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T08:16:24Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO narrow synonyms, spliceosomal-complex parentage, a reviewed-label-only
+    U5-containing tri-snRNP component, a conservative tri-snRNP recruitment graph
+    and a TODO for exact U2-type and U12-type precatalytic spliceosome boundaries.
+  llm_assisted: true
+synonyms:
+- synonym_text: mammalian spliceosomal complex B
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071011
+- synonym_text: mammalian spliceosomal complex B1
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071011
+- synonym_text: yeast spliceosomal complex A2-1
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071011
+parent_structures:
+- GO:0005681
+components:
+- component_id: u5_containing_tri_snrnp
+  label: U5-containing tri-snRNP
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0071011 spans U2-type precatalytic spliceosomes, which recruit
+    GO:0046540, and U12-type precatalytic spliceosomes, which recruit GO:0071009;
+    no single exact source-neutral CURIE was assigned for the generic U5-containing
+    tri-snRNP class.
+  role: Preassembled, subtype-specific U5-containing tri-snRNP subcomplex recruited
+    to the prespliceosome to form a precatalytic spliceosome.
+  evidence:
+  - reference: GO:0071011
+    notes: GO:0071011 defines the precatalytic spliceosome as formed by recruitment
+      of a preassembled U5-containing tri-snRNP to the prespliceosome.
+  - reference: GO:0071005
+    notes: GO:0071005 defines the U2-type precatalytic spliceosome by recruitment
+      of preassembled U4/U6.U5 tri-snRNP.
+  - reference: GO:0071016
+    notes: GO:0071016 defines the U12-type precatalytic spliceosome by recruitment
+      of preassembled U4atac/U6atac.U5 tri-snRNP.
+evidence:
+- reference: GO:0071011
+  notes: Gene Ontology cellular-component term for precatalytic spliceosome and its
+    GO synonyms.
+- reference: GO:0005681
+  notes: Gene Ontology cellular-component parent term for spliceosomal complex.
+- reference: GO:0071010
+  notes: Gene Ontology cellular-component term for the preceding prespliceosome state.
+- reference: GO:0071005
+  notes: Gene Ontology cellular-component term for the U2-type precatalytic spliceosome
+    child state.
+- reference: GO:0071016
+  notes: Gene Ontology cellular-component term for the U12-type precatalytic spliceosome
+    child state.
+- reference: GO:0046540
+  notes: Gene Ontology cellular-component term for the U4/U6 x U5 tri-snRNP complex.
+- reference: GO:0071009
+  notes: Gene Ontology cellular-component term for the U4atac/U6atac x U5 tri-snRNP
+    complex.
+causal_graphs:
+- graph_id: precatalytic_trisnrnp_recruitment
+  title: U5-containing tri-snRNP recruitment forms precatalytic spliceosomes
+  description: Precatalytic spliceosomes form when preassembled U5-containing tri-snRNPs
+    are recruited to prespliceosomes.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the generic U5-containing tri-snRNP recruitment
+    feature of precatalytic spliceosomes without asserting the U4/U6.U5 composition
+    of the U2-type child state or the U4atac/U6atac.U5 composition of the U12-type
+    child state.
+  nodes:
+  - node_id: u5_containing_tri_snrnp
+    label: U5-containing tri-snRNP
+    node_type: STRUCTURE
+    component_ref: u5_containing_tri_snrnp
+  - node_id: prespliceosome
+    label: prespliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071010
+  - node_id: precatalytic_spliceosome
+    label: precatalytic spliceosome
+    node_type: STRUCTURE
+    grounding: GO:0071011
+  edges:
+  - subject: u5_containing_tri_snrnp
+    predicate: is recruited to form
+    object: precatalytic_spliceosome
+    description: Recruitment of a preassembled U5-containing tri-snRNP to the prespliceosome
+      forms the precatalytic spliceosome.
+    evidence:
+    - reference: GO:0071011
+      notes: GO:0071011 defines the precatalytic spliceosome as formed by U5-containing
+        tri-snRNP recruitment.
+  - subject: prespliceosome
+    predicate: receives
+    object: u5_containing_tri_snrnp
+    description: The prespliceosome receives a preassembled U5-containing tri-snRNP
+      to become a precatalytic spliceosome.
+    evidence:
+    - reference: GO:0071011
+      notes: GO:0071011 defines the precatalytic spliceosome as formed by recruiting
+        a preassembled U5-containing tri-snRNP to the prespliceosome.
+discussions:
+- discussion_id: resolve_precatalytic_state_snrnp_boundaries
+  prompt: Resolve exact source-neutral snRNP membership and additional protein boundaries
+    for each precatalytic spliceosome subtype.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u5_containing_tri_snrnp
+  - causal_graphs#precatalytic_trisnrnp_recruitment
+  rationale: The first GO:0071011 parent record captures only the generic U5-containing
+    tri-snRNP recruitment event supported by GO. Child records for U2-type and U12-type
+    precatalytic spliceosomes should carry the exact U1/U2 and U4/U6.U5 or U11/U12
+    and U4atac/U6atac.U5 constituent boundaries that apply to those specific states.
+  evidence:
+  - reference: GO:0071011
+  - reference: GO:0071005
+  - reference: GO:0071016
+  - reference: GO:0046540
+  - reference: GO:0071009
+  posed_by: codex
+  posed_date: '2026-09-25'
