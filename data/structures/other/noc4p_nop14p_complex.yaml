@@ -1,0 +1,224 @@
+identifier: GO:0030692
+label: Noc4p-Nop14p complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterodimer associated with precursors of the eukaryotic small ribosomal
+  subunit, including the 90S preribosome; involved in small subunit biogenesis.
+definition_source: GO:0030692
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T21:09:23Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T21:10:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Noc-complex parentage, 90S and small-subunit preribosome parthood,
+    Noc4 and Nop14 constituent rows, budding-yeast scope, a small-subunit biogenesis
+    function, GO/PubMed/DOI evidence, a nonmechanistic Noc4p-Nop14p graph, and a subunit-grounding
+    TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0030689
+part_of:
+- GO:0030686
+- GO:0030688
+components:
+- component_id: noc4_noc_complex_subunit
+  label: Noc4 Noc-complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NOC4
+  stoichiometry: one copy per heterodimer
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term name follows Saccharomyces cerevisiae Noc4p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    the Noc4 subunit class was curated in this pass.
+  role: Protein constituent that forms the budding-yeast Noc4p-Nop14p heterodimer
+    associated with small-subunit preribosomal precursors.
+  evidence:
+  - reference: GO:0030692
+    notes: GO:0030692 identifies Noc4p in the Noc4p-Nop14p heterodimer associated
+      with 90S and small-subunit preribosomes.
+  - reference: DOI:10.1074/jbc.M208898200
+    notes: Milkereit et al. 2003 reported that Noc4p and Nop14p form a Noc complex
+      with a specific role in nucleolar 40S subunit formation.
+- component_id: nop14_noc_complex_subunit
+  label: Nop14 Noc-complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NOP14
+  stoichiometry: one copy per heterodimer
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term name follows Saccharomyces cerevisiae Nop14p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    the Nop14 subunit class was curated in this pass.
+  role: Nucleolar protein constituent that forms the budding-yeast Noc4p-Nop14p heterodimer.
+  evidence:
+  - reference: GO:0030692
+    notes: GO:0030692 defines the Noc4p-Nop14p complex as a heterodimer associated
+      with small-subunit preribosomal precursors.
+  - reference: DOI:10.1074/jbc.M208898200
+    notes: Milkereit et al. 2003 described Nop14p as the partner of Noc4p in a Noc
+      complex involved in 40S subunit formation.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which Noc4p-Nop14p was described as a heterodimeric
+    Noc complex involved in 40S subunit biogenesis.
+  reference: DOI:10.1074/jbc.M208898200
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Milkereit et al. 2003 reported budding-yeast Noc4p/Nop14p as a Noc complex
+    with a specific role in nucleolar 40S subunit formation and nuclear export.
+  reference: DOI:10.1074/jbc.M208898200
+functions:
+- function_id: ribosomal_small_subunit_biogenesis
+  label: ribosomal small subunit biogenesis
+  grounding: GO:0042274
+  description: The Noc4p-Nop14p complex is associated with 90S and small-subunit preribosomal
+    precursors and supports maturation of the eukaryotic small ribosomal subunit lineage.
+  evidence:
+  - reference: GO:0030692
+    notes: GO:0030692 defines the Noc4p-Nop14p complex as involved in small subunit
+      biogenesis.
+  - reference: GO:0042274
+    notes: GO:0042274 is the Gene Ontology biological-process term for ribosomal small
+      subunit biogenesis.
+  - reference: DOI:10.1074/jbc.M208898200
+    notes: Milkereit et al. 2003 connected the Noc4p/Nop14p complex to nucleolar 40S
+      subunit formation and subsequent export.
+evidence:
+- reference: GO:0030692
+  notes: Gene Ontology cellular-component term for the Noc4p-Nop14p complex.
+- reference: GO:0030689
+  notes: Gene Ontology cellular-component parent term for Noc complexes.
+- reference: GO:0030686
+  notes: Gene Ontology cellular-component term for the 90S preribosome.
+- reference: GO:0030688
+  notes: Gene Ontology cellular-component term for the small-subunit preribosome precursor.
+- reference: GO:0042274
+  notes: Gene Ontology biological-process term for ribosomal small subunit biogenesis.
+- reference: PMID:12446671
+  notes: PubMed identifier for Milkereit et al. 2003, the Journal of Biological Chemistry
+    paper cited by the GO Noc4p-Nop14p term.
+- reference: DOI:10.1074/jbc.M208898200
+  notes: DOI for Milkereit et al. 2003, 'A Noc complex specifically involved in the
+    formation and nuclear export of ribosomal 40 S subunits', verified through NCBI
+    E-utilities.
+causal_graphs:
+- graph_id: yeast_noc4p_nop14p_small_subunit_biogenesis
+  title: Noc4p-Nop14p supports small-subunit biogenesis
+  description: In Saccharomyces cerevisiae, Noc4p and Nop14p form a heterodimeric
+    Noc complex associated with precursors of the eukaryotic small ribosomal subunit,
+    including the 90S preribosome.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the experimentally described Noc4p/Nop14p association
+    with small-subunit biogenesis without resolving a complete mechanistic order for
+    40S subunit maturation.
+  nodes:
+  - node_id: noc4_noc_complex_subunit
+    label: Noc4 Noc-complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: noc4_noc_complex_subunit
+  - node_id: nop14_noc_complex_subunit
+    label: Nop14 Noc-complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: nop14_noc_complex_subunit
+  - node_id: noc4p_nop14p_complex
+    label: Noc4p-Nop14p complex
+    node_type: STRUCTURE
+    grounding: GO:0030692
+  - node_id: 90s_preribosome
+    label: 90S preribosome
+    node_type: STRUCTURE
+    grounding: GO:0030686
+  - node_id: small_subunit_preribosome
+    label: preribosome, small subunit precursor
+    node_type: STRUCTURE
+    grounding: GO:0030688
+  - node_id: ribosomal_small_subunit_biogenesis
+    label: ribosomal small subunit biogenesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042274
+  edges:
+  - subject: noc4_noc_complex_subunit
+    predicate: contributes to
+    object: noc4p_nop14p_complex
+    description: Noc4p is one constituent of the Noc4p/Nop14p heterodimer in budding
+      yeast.
+    evidence:
+    - reference: DOI:10.1074/jbc.M208898200
+      notes: Milkereit et al. 2003 identified Noc4p as a constituent of the Noc4p/Nop14p
+        Noc complex.
+  - subject: nop14_noc_complex_subunit
+    predicate: contributes to
+    object: noc4p_nop14p_complex
+    description: Nop14p is one constituent of the Noc4p/Nop14p heterodimer in budding
+      yeast.
+    evidence:
+    - reference: DOI:10.1074/jbc.M208898200
+      notes: Milkereit et al. 2003 identified Nop14p as a constituent of the Noc4p/Nop14p
+        Noc complex.
+  - subject: noc4p_nop14p_complex
+    predicate: associates with
+    object: 90s_preribosome
+    description: The Noc4p-Nop14p complex associates with precursors of the eukaryotic
+      small ribosomal subunit, including the 90S preribosome.
+    evidence:
+    - reference: GO:0030692
+      notes: GO:0030692 defines the Noc4p-Nop14p complex as associated with small-subunit
+        precursors that include the 90S preribosome.
+  - subject: noc4p_nop14p_complex
+    predicate: associates with
+    object: small_subunit_preribosome
+    description: The Noc4p-Nop14p complex is part of the eukaryotic small-subunit
+      preribosome lineage.
+    evidence:
+    - reference: GO:0030692
+      notes: GO:0030692 carries a part_of relationship to GO:0030688, the small-subunit
+        preribosome precursor.
+  - subject: noc4p_nop14p_complex
+    predicate: participates in
+    object: ribosomal_small_subunit_biogenesis
+    description: Noc4p-Nop14p functions during 40S ribosomal subunit assembly and
+      export.
+    evidence:
+    - reference: GO:0030692
+      notes: GO:0030692 defines this complex as involved in small subunit biogenesis.
+    - reference: GO:0042274
+      notes: GO:0042274 is the process term for ribosomal small subunit biogenesis.
+    - reference: DOI:10.1074/jbc.M208898200
+      notes: Milkereit et al. 2003 reported a specific role for Noc4p and Nop14p in
+        nucleolar 40S subunit formation and export.
+discussions:
+- discussion_id: resolve_noc4_nop14_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Noc4 and Nop14 constituents
+    of the Noc4p-Nop14p complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#noc4_noc_complex_subunit
+  - components#nop14_noc_complex_subunit
+  rationale: GO:0030692 uses Saccharomyces gene-product names while noting that analogous
+    complexes in other eukaryotes can use the term. Exact cross-eukaryotic InterPro,
+    Pfam, NCBIfam or UniProt family boundaries for Noc4 and Nop14 need narrower follow-up
+    curation before these component labels can be grounded.
+  evidence:
+  - reference: GO:0030692
+    notes: The GO:0030692 comment explains that the term name uses Saccharomyces gene-product
+      names because no other names had arisen for the complex.
+  - reference: DOI:10.1074/jbc.M208898200
+    notes: Milkereit et al. 2003 identified S. cerevisiae Noc4p and Nop14p within
+      the Noc4p/Nop14p complex.
+  posed_by: codex
+  posed_date: '2026-09-25'
