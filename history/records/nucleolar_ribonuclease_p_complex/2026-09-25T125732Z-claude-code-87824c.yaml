@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/nucleolar_ribonuclease_p_complex.yaml
+  slug: nucleolar_ribonuclease_p_complex
+session:
+  id: 2026-09-25T125732Z-claude-code-87824c
+  timestamp: '2026-09-25T12:57:32Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add nucleolar ribonuclease P complex record
+  details: Added a new GO:0005655 nucleolar ribonuclease P complex record with multimeric
+    RNase P and nuclear-protein-complex parentage, nucleolus parthood, GO exact synonymy,
+    SO-grounded RNase P RNA plus reviewed-label-only nucleolar RNase P protein components,
+    conservative RNase P function terms, an assembly graph, and a curation TODO for exact
+    eukaryotic protein-family boundaries.
