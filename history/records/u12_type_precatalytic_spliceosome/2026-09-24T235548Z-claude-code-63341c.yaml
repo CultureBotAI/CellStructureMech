@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u12_type_precatalytic_spliceosome.yaml
+  slug: u12_type_precatalytic_spliceosome
+session:
+  id: 2026-09-24T235548Z-claude-code-63341c
+  timestamp: '2026-09-24T23:55:48Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1535
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1534
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Clarify U12-type precatalytic graph predicate
+  details: '#1535: Replaced the generic U11/U12 snRNP -> U12-type prespliceosome predicate
+    with explicit splice-signal binding wording in the U12-type precatalytic spliceosome assembly
+    graph.'
