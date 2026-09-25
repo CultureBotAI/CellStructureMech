@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/noc2p_noc3p_complex.yaml
+  slug: noc2p_noc3p_complex
+session:
+  id: 2026-09-25T205320Z-codex-857aa9
+  timestamp: '2026-09-25T20:53:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Noc2p-Noc3p complex record
+  details: Created the GO:0030691 Noc2p-Noc3p complex record with Noc-complex parentage, large-subunit
+    preribosome parthood, reviewed-label-only Noc2 and Noc3 constituent rows, conservative
+    Saccharomyces cerevisiae distribution and example rows, a ribosomal large-subunit biogenesis
+    function link, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a component-family-grounding
+    TODO.
