@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/prespliceosome.yaml
+  slug: prespliceosome
+session:
+  id: 2026-09-25T075721Z-claude-code-ff5f44
+  timestamp: '2026-09-25T07:57:21Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - synonyms
+  - parent_structures
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add prespliceosome record
+  details: Added a new GO:0071010 prespliceosome record with GO exact and narrow synonyms,
+    spliceosomal-complex parentage, a reviewed-label-only state-specific bound snRNP cohort,
+    a conservative prespliceosome binding graph and a curation TODO for exact U2-type and
+    U12-type prespliceosome snRNP boundaries. The duplicate search included hidden and ignored
+    files before creation.
