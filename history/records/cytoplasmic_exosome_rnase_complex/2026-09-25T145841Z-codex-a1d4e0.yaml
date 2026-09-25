@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/cytoplasmic_exosome_rnase_complex.yaml
+  slug: cytoplasmic_exosome_rnase_complex
+session:
+  id: 2026-09-25T145841Z-codex-a1d4e0
+  timestamp: '2026-09-25T14:58:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add cytoplasmic exosome RNase complex record
+  details: Added a GO:0000177 cytoplasmic exosome (RNase complex) record with Gene Ontology
+    exact synonyms, generic exosome parentage, cytoplasmic parthood, RNA processing and RNA
+    degradation function links, GO/PubMed evidence, a nonmechanistic localization/function
+    graph, and a follow-up TODO for exact cytoplasmic exosome component boundaries.
