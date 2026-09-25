@@ -13591,14 +13591,14 @@
       "label": "nucleolus",
       "neighbors": [
         {
-          "identifier": "GO:0101019",
-          "label": "nucleolar exosome (RNase complex)",
-          "cosine_similarity": 0.81526958
-        },
-        {
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.80595009
+        },
+        {
+          "identifier": "GO:0101019",
+          "label": "nucleolar exosome (RNase complex)",
+          "cosine_similarity": 0.80581966
         },
         {
           "identifier": "GO:0005655",
@@ -14652,7 +14652,7 @@
         {
           "identifier": "GO:0101019",
           "label": "nucleolar exosome (RNase complex)",
-          "cosine_similarity": 0.76662964
+          "cosine_similarity": 0.78145201
         },
         {
           "identifier": "GO:0005840",
@@ -14791,7 +14791,7 @@
         {
           "identifier": "GO:0101019",
           "label": "nucleolar exosome (RNase complex)",
-          "cosine_similarity": 0.80002815
+          "cosine_similarity": 0.7822272
         }
       ]
     },
@@ -14853,7 +14853,7 @@
         {
           "identifier": "GO:0101019",
           "label": "nucleolar exosome (RNase complex)",
-          "cosine_similarity": 0.83558836
+          "cosine_similarity": 0.81621418
         }
       ]
     },
@@ -14864,7 +14864,7 @@
         {
           "identifier": "GO:0101019",
           "label": "nucleolar exosome (RNase complex)",
-          "cosine_similarity": 0.90730024
+          "cosine_similarity": 0.92686555
         },
         {
           "identifier": "GO:1990061",
@@ -14946,7 +14946,7 @@
         {
           "identifier": "GO:0101019",
           "label": "nucleolar exosome (RNase complex)",
-          "cosine_similarity": 0.82341797
+          "cosine_similarity": 0.80988814
         }
       ]
     },
@@ -14957,27 +14957,27 @@
         {
           "identifier": "GO:0000178",
           "label": "exosome (RNase complex)",
-          "cosine_similarity": 0.90730024
+          "cosine_similarity": 0.92686555
         },
         {
           "identifier": "GO:0005655",
           "label": "nucleolar ribonuclease P complex",
-          "cosine_similarity": 0.86376761
+          "cosine_similarity": 0.85246286
         },
         {
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
-          "cosine_similarity": 0.83558836
+          "cosine_similarity": 0.81621418
         },
         {
           "identifier": "GO:0030681",
           "label": "multimeric ribonuclease P complex",
-          "cosine_similarity": 0.82341797
+          "cosine_similarity": 0.80988814
         },
         {
-          "identifier": "GO:0000172",
-          "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.81842887
+          "identifier": "GO:0005730",
+          "label": "nucleolus",
+          "cosine_similarity": 0.80581966
         }
       ]
     },
@@ -15008,7 +15008,7 @@
         {
           "identifier": "GO:0101019",
           "label": "nucleolar exosome (RNase complex)",
-          "cosine_similarity": 0.86376761
+          "cosine_similarity": 0.85246286
         }
       ]
     },

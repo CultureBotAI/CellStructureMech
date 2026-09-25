@@ -1,7 +1,7 @@
 identifier: GO:0101019
 label: nucleolar exosome (RNase complex)
 structure_category: RIBONUCLEOPROTEIN
-structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
 definition: A ribonuclease complex that has 3-prime to 5-prime distributive hydrolytic
   exoribonuclease activity and in some taxa (e.g. yeast) endoribonuclease activity,
   producing 5-prime-phosphomonoesters. Participates in a multitude of cellular RNA
@@ -23,6 +23,12 @@ curation_history:
   changes: Added nucleolar exosome parentage and parthood, conservative GO-backed
     RNA processing and degradation functions, GO/PubMed evidence, a nonmechanistic
     localization/function graph and a component-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-25T14:13:42Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1581: changed the nucleolar exosome from RIBONUCLEOPROTEIN_COMPLEX to
+    MULTIPROTEIN_COMPLEX to match its GO:0000178 exosome RNase complex parent.'
   llm_assisted: true
 parent_structures:
 - GO:0000176
