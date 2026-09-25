@@ -23,6 +23,12 @@ curation_history:
     state-variable U12-type snRNP cohort, a conservative parent-level snRNP graph
     and a TODO for exact state-specific U12-type snRNP boundaries.
   llm_assisted: true
+- timestamp: '2026-09-25T07:35:13Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1559: widened the state-boundary TODO and record-level evidence to cover
+    all six GO:0005689 child states.'
+  llm_assisted: true
 synonyms:
 - synonym_text: minor (U12-type) spliceosomal complex
   synonym_type: EXACT_SYNONYM
@@ -74,6 +80,15 @@ evidence:
 - reference: GO:0071017
   notes: Gene Ontology cellular-component term for the U12-type catalytic step 1 spliceosome
     child state.
+- reference: GO:0071018
+  notes: Gene Ontology cellular-component term for the U12-type catalytic step 2 spliceosome
+    child state.
+- reference: GO:0071022
+  notes: Gene Ontology cellular-component term for the U12-type post-spliceosomal
+    complex child state.
+- reference: GO:0071019
+  notes: Gene Ontology cellular-component term for the U12-type post-mRNA release
+    spliceosomal complex child state.
 causal_graphs:
 - graph_id: u12_type_spliceosomal_snrnp_states
   title: U12-type spliceosomal complexes use state-variable snRNPs
@@ -120,12 +135,16 @@ discussions:
   - causal_graphs#u12_type_spliceosomal_snrnp_states
   rationale: The first GO:0005689 parent record captures only the state-variable minor-spliceosome
     snRNP cohort supported by GO. Child records for the U12-type prespliceosome, precatalytic
-    complex and catalytic complexes should carry the exact U11/U12, U4atac/U6atac.U5,
-    U12, U5 and U6atac constituent boundaries that apply to those specific states.
+    complex, catalytic step 1 and step 2 complexes, post-spliceosomal complex and
+    post-mRNA release complex should carry the exact U11/U12, U4atac/U6atac.U5, U12,
+    U5 and U6atac constituent boundaries that apply to those specific states.
   evidence:
   - reference: GO:0005689
   - reference: GO:0071015
   - reference: GO:0071016
   - reference: GO:0071017
+  - reference: GO:0071018
+  - reference: GO:0071022
+  - reference: GO:0071019
   posed_by: codex
   posed_date: '2026-09-25'

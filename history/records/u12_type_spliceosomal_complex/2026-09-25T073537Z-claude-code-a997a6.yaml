@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u12_type_spliceosomal_complex.yaml
+  slug: u12_type_spliceosomal_complex
+session:
+  id: 2026-09-25T073537Z-claude-code-a997a6
+  timestamp: '2026-09-25T07:35:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1559
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1558
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - discussions
+  summary: Address GO:0005689 child-state TODO review
+  details: 'Addressed PR #1558 review issue #1559 by widening the GO:0005689 parent record
+    TODO to cover all six U12-type spliceosomal child states, including U12-type catalytic
+    step 2, post-spliceosomal and post-mRNA release complexes, and by adding record-level
+    GO evidence for those later child states.'
