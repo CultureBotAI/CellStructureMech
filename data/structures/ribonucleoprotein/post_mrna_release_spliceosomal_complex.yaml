@@ -21,6 +21,12 @@ curation_history:
     a conservative post-mRNA-release graph and a TODO for exact subtype-specific post-mRNA-release
     snRNP, protein and RNA boundaries.
   llm_assisted: true
+- timestamp: '2026-09-25T10:27:59Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1568: narrowed the generic post-mRNA-release transition edge to avoid
+    modeling the post-spliceosomal complex itself as the spliced-product release agent.'
+  llm_assisted: true
 synonyms:
 - synonym_text: mammalian spliceosomal complex I
   synonym_type: NARROW_SYNONYM
@@ -148,7 +154,7 @@ causal_graphs:
       notes: GO:0071019 defines the U12-type post-mRNA release spliceosomal complex
         as containing U12, U5 and U6atac snRNPs.
   - subject: post_spliceosomal_complex
-    predicate: releases the spliced product to form
+    predicate: is remodeled after spliced-product release to form
     object: post_mrna_release_spliceosomal_complex
     description: Following release of the spliced product from the post-spliceosomal
       complex, the post-mRNA release spliceosomal complex contains the excised intron,
