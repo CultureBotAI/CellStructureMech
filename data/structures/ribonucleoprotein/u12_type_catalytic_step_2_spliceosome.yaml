@@ -23,6 +23,13 @@ curation_history:
     evidence, a conservative step-2 remodeling graph and a protein-component grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-25T01:01:58Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1539: clarified that the step-2 graph captures a conservative GO-defined
+    snRNP component floor and the post-first-cleavage transition, not that U12/U5/U6atac
+    retention alone distinguishes step 2 from step 1.'
+  llm_assisted: true
 synonyms:
 - synonym_text: minor catalytic step 2 spliceosome
   synonym_type: EXACT_SYNONYM
@@ -112,9 +119,9 @@ causal_graphs:
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: This partial graph records the GO-defined U12, U5 and U6atac snRNP
-    retention that distinguishes the catalytic step 2 spliceosome without modeling
-    helicase-dependent remodeling or individual U12 step-2 spliceosome protein-family
-    boundaries.
+    component floor and the post-first-cleavage transition that define this U12-type
+    catalytic step 2 spliceosome while deferring helicase-dependent remodeling and
+    individual U12 step-2 spliceosome protein-family boundaries.
   nodes:
   - node_id: u12_snrnp
     label: U12 snRNP
