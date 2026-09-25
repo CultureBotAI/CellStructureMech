@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/ribonuclease_p_complex.yaml
+  slug: ribonuclease_p_complex
+session:
+  id: 2026-09-25T170405Z-claude-code-f47a80
+  timestamp: '2026-09-25T17:04:05Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1589
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1588
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address RNase P chloroplast-boundary review
+  details: 'Resolved PR #1588 review issue #1589 by recording the GO:0030677 chloroplast RNase
+    P caveat in the source-neutral component-boundary TODO and record-level GO:0030677 evidence
+    note, preserving the generic GO:0030677 parent as an RNA-containing ribonucleoprotein
+    complex rather than a home for RNA-free chloroplast RNase P-like assemblies.'

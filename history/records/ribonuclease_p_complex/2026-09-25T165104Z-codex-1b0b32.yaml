@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/ribonuclease_p_complex.yaml
+  slug: ribonuclease_p_complex
+session:
+  id: 2026-09-25T165104Z-codex-1b0b32
+  timestamp: '2026-09-25T16:51:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ribonuclease P complex record
+  details: Added a GO:0030677 ribonuclease P complex record with GO exact synonymy, endoribonuclease-complex
+    and ribonucleoprotein-complex parentage, conservative GO-backed tRNA 5-prime leader cleavage
+    functions, GO/PubMed evidence, a nonmechanistic function graph, and a TODO for source-neutral
+    component boundaries across RNase P complex lineages.
