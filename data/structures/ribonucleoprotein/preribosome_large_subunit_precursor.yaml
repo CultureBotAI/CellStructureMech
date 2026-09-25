@@ -21,6 +21,13 @@ curation_history:
     example, ribosomal large-subunit biogenesis functions, GO/SO/PubMed evidence,
     a nonmechanistic constituent graph and a TODO for exact component boundaries.
   llm_assisted: true
+- timestamp: '2026-09-25T19:44:40Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1598 review issue #1599 by renaming the large-subunit preribosome
+    RNA cohort component so it no longer implies that mature 5S rRNA is a precursor
+    rRNA.'
+  llm_assisted: true
 synonyms:
 - synonym_text: 66S preribosome
   synonym_type: NARROW_SYNONYM
@@ -28,8 +35,8 @@ synonyms:
 parent_structures:
 - GO:0030684
 components:
-- component_id: lsu_precursor_rrna_cohort
-  label: large-subunit precursor rRNA cohort
+- component_id: lsu_preribosome_rna_cohort
+  label: large-subunit preribosome RNA cohort
   component_type: RNA
   component_role: CONSTITUENT
   grounding_status: REVIEWED_LABEL_ONLY
@@ -37,8 +44,8 @@ components:
     and/or 7S precursor rRNAs plus 5S rRNA present in large-subunit preribosome precursors
     was assigned in this pass; SO:0002393 denotes precursor_RNA broadly and SO:0000652
     denotes only mature 5S rRNA.
-  role: Large-subunit rRNA precursors and 5S rRNA assembled into a eukaryotic cytoplasmic
-    large-subunit preribosomal precursor.
+  role: 27SA, 27SB and/or 7S precursor rRNAs plus 5S rRNA assembled into a eukaryotic
+    cytoplasmic large-subunit preribosomal precursor.
   evidence:
   - reference: GO:0030687
     notes: GO:0030687 defines the large-subunit precursor preribosome as containing
@@ -131,13 +138,13 @@ causal_graphs:
     including late-associating large-subunit proteins, and associated proteins.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
-  scope_notes: This partial graph records GO-defined RNA and protein cohorts without
+  scope_notes: This partial graph records GO-defined rRNA and protein cohorts without
     resolving exact 27SA, 27SB, 7S, 5S, ribosomal-protein or associated-factor boundaries.
   nodes:
-  - node_id: lsu_precursor_rrna_cohort
-    label: large-subunit precursor rRNA cohort
+  - node_id: lsu_preribosome_rna_cohort
+    label: large-subunit preribosome RNA cohort
     node_type: RNA
-    component_ref: lsu_precursor_rrna_cohort
+    component_ref: lsu_preribosome_rna_cohort
   - node_id: lsu_preribosome_protein_cohort
     label: large-subunit preribosome protein cohort
     node_type: GENE_OR_PROTEIN
@@ -151,7 +158,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0042273
   edges:
-  - subject: lsu_precursor_rrna_cohort
+  - subject: lsu_preribosome_rna_cohort
     predicate: contributes constituents to
     object: large_subunit_preribosome
     description: 27SA, 27SB and/or 7S precursor rRNAs plus 5S rRNA are RNA constituents
@@ -187,7 +194,7 @@ discussions:
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#lsu_precursor_rrna_cohort
+  - components#lsu_preribosome_rna_cohort
   - components#lsu_preribosome_protein_cohort
   - causal_graphs#large_subunit_preribosome_constituents
   rationale: GO:0030687 defines a eukaryotic cytoplasmic large-subunit preribosome

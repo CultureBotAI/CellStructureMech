@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/preribosome_large_subunit_precursor.yaml
+  slug: preribosome_large_subunit_precursor
+session:
+  id: 2026-09-25T194505Z-codex-f956f2
+  timestamp: '2026-09-25T19:45:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1599
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1598
+events:
+- type: EDIT
+  outcome: changed
+  summary: Rename large-subunit preribosome RNA cohort
+  details: 'Resolved PR #1598 review issue #1599 by renaming the GO:0030687 RNA component
+    and graph node from a precursor-rRNA cohort to a broader large-subunit preribosome RNA
+    cohort so the name also covers mature 5S rRNA.'
