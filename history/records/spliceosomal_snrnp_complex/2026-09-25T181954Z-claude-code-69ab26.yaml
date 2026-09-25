@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/spliceosomal_snrnp_complex.yaml
+  slug: spliceosomal_snrnp_complex
+session:
+  id: 2026-09-25T181954Z-claude-code-69ab26
+  timestamp: '2026-09-25T18:19:54Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add spliceosomal snRNP complex record
+  details: Added a GO:0097525 spliceosomal snRNP complex record with small nuclear ribonucleoprotein
+    parentage, a SO-grounded snRNA component, a reviewed-label-only spliceosomal snRNP-associated
+    protein cohort, GO/SO evidence, a conservative nonmechanistic assembly graph, and a TODO
+    for exact U-series spliceosomal RNA and protein family boundaries.
