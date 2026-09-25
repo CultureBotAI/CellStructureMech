@@ -25,6 +25,12 @@ curation_history:
   changes: Added SO:0002393 evidence for the reviewed-label-only pre-rRNA grounding
     rationale.
   llm_assisted: true
+- timestamp: '2026-09-25T05:19:06Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Resolved #1552 by adding SO:0002393 to the preribosome component-boundary
+    TODO evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:1990904
 components:
@@ -100,6 +106,7 @@ discussions:
     boundary pass.
   evidence:
   - reference: GO:0030684
+  - reference: SO:0002393
   - reference: DOI:10.1128/MCB.19.12.7897
   posed_by: codex
   posed_date: '2026-09-25'
