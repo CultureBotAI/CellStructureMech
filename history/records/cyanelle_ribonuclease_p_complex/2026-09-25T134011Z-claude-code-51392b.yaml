@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/cyanelle_ribonuclease_p_complex.yaml
+  slug: cyanelle_ribonuclease_p_complex
+session:
+  id: 2026-09-25T134011Z-claude-code-51392b
+  timestamp: '2026-09-25T13:40:11Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1579
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1578
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - history
+  summary: Link cyanelle ribonuclease P complex PR
+  details: 'Resolved review issue #1579 by linking the GO:0030679 cyanelle ribonuclease P
+    complex curation to PR #1578 after opening the pull request for adversarial review; no
+    semantic record changes were needed.'
