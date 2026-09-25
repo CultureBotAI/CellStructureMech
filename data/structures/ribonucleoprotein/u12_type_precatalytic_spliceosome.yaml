@@ -23,6 +23,13 @@ curation_history:
     U12-spliceosome evidence, a conservative tri-snRNP recruitment graph and a protein-component
     grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-24T23:55:28Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1535: replaced the generic U11/U12 snRNP edge predicate with explicit
+    splice-signal binding wording in the U12-type precatalytic spliceosome assembly
+    graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: minor precatalytic spliceosome
   synonym_type: EXACT_SYNONYM
@@ -124,7 +131,7 @@ causal_graphs:
     grounding: GO:0071016
   edges:
   - subject: u11_u12_snrnp
-    predicate: defines
+    predicate: cooperatively binds splice signals in
     object: u12_type_prespliceosome
     description: The U12-type prespliceosome contains heterodimeric U11/U12 snRNP
       bound to the 5-prime splice site and branch point sequence before tri-snRNP
