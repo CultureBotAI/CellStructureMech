@@ -15230,6 +15230,37 @@
       ]
     },
     {
+      "identifier": "GO:0071003",
+      "label": "penta-snRNP complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0046540",
+          "label": "U4/U6 x U5 tri-snRNP complex",
+          "cosine_similarity": 0.92486095
+        },
+        {
+          "identifier": "GO:0071009",
+          "label": "U4atac/U6atac x U5 tri-snRNP complex",
+          "cosine_similarity": 0.90836001
+        },
+        {
+          "identifier": "GO:0071002",
+          "label": "U4atac/U6atac snRNP",
+          "cosine_similarity": 0.90443514
+        },
+        {
+          "identifier": "GO:0071001",
+          "label": "U4/U6 snRNP",
+          "cosine_similarity": 0.90192657
+        },
+        {
+          "identifier": "GO:0005688",
+          "label": "U6 snRNP",
+          "cosine_similarity": 0.89272578
+        }
+      ]
+    },
+    {
       "identifier": "GO:0071014",
       "label": "post-mRNA release spliceosomal complex",
       "neighbors": [
