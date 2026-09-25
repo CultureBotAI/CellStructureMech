@@ -20,6 +20,12 @@ curation_history:
     7SK RNA component, QuickGO/PubMed evidence, a minimal 7SK RNA constituent graph
     and a protein-component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-25T03:54:43Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: Tightened the SO:0002340 evidence note to attribute the 7SK RNA synonym
+    to the Sequence Ontology term rather than the OLS lookup route.
+  llm_assisted: true
 synonyms:
 - synonym_text: snRNP 7SK
   synonym_type: EXACT_SYNONYM
@@ -47,7 +53,7 @@ evidence:
   notes: Gene Ontology cellular-component parent term for small nuclear ribonucleoprotein
     complex.
 - reference: SO:0002340
-  notes: Sequence Ontology term for RNA_7SK; OLS lists 7SK RNA as an exact synonym.
+  notes: Sequence Ontology term for RNA_7SK and its 7SK RNA exact synonym.
 - reference: DOI:10.1016/j.molcel.2008.01.003
   notes: DOI for He, Jahchan, Hong, Li, Bayfield, Maraia, Luo and Zhou 2008 as reported
     by NCBI E-utilities.
