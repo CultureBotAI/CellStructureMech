@@ -1,0 +1,109 @@
+identifier: GO:0120259
+label: 7SK snRNP
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex that contains the 7SK snRNA. The 7SK snRNP
+  plays a central role in RNA polymerase II elongation control by regulating the availability
+  of active P-TEFb.
+definition_source: GO:0120259
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T03:39:26Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T03:40:06Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym, small nuclear RNP parentage, the SO-grounded
+    7SK RNA component, QuickGO/PubMed evidence, a minimal 7SK RNA constituent graph
+    and a protein-component grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-25T03:54:43Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: Tightened the SO:0002340 evidence note to attribute the 7SK RNA synonym
+    to the Sequence Ontology term rather than the OLS lookup route.
+  llm_assisted: true
+synonyms:
+- synonym_text: snRNP 7SK
+  synonym_type: EXACT_SYNONYM
+  source: GO:0120259
+parent_structures:
+- GO:0030532
+components:
+- component_id: rna_7sk
+  label: 7SK RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0002340
+  role: 7SK RNA constituent named in the 7SK snRNP definition and grounded to the
+    7SK RNA Sequence Ontology term.
+  evidence:
+  - reference: GO:0120259
+    notes: GO:0120259 defines the 7SK snRNP as containing 7SK snRNA.
+  - reference: SO:0002340
+    notes: SO:0002340 is the Sequence Ontology RNA_7SK term and lists 7SK RNA as an
+      exact synonym.
+evidence:
+- reference: GO:0120259
+  notes: Gene Ontology cellular-component term for the 7SK snRNP and its exact synonym.
+- reference: GO:0030532
+  notes: Gene Ontology cellular-component parent term for small nuclear ribonucleoprotein
+    complex.
+- reference: SO:0002340
+  notes: Sequence Ontology term for RNA_7SK and its 7SK RNA exact synonym.
+- reference: DOI:10.1016/j.molcel.2008.01.003
+  notes: DOI for He, Jahchan, Hong, Li, Bayfield, Maraia, Luo and Zhou 2008 as reported
+    by NCBI E-utilities.
+- reference: PMID:18249148
+  notes: PubMed identifier for He, Jahchan, Hong, Li, Bayfield, Maraia, Luo and Zhou
+    2008 as reported by NCBI E-utilities.
+- reference: DOI:10.1093/nar/gkx262
+  notes: DOI for Brogie and Price 2017, Reconstitution of a functional 7SK snRNP,
+    as reported by NCBI E-utilities.
+- reference: PMID:28431135
+  notes: PubMed identifier for Brogie and Price 2017 as reported by NCBI E-utilities.
+causal_graphs:
+- graph_id: rna_7sk_constituent
+  title: 7SK RNA is a 7SK snRNP constituent
+  description: The 7SK snRNP contains 7SK RNA.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined 7SK RNA contribution without
+    modeling 7SK snRNP protein-family boundaries.
+  nodes:
+  - node_id: rna_7sk
+    label: 7SK RNA
+    node_type: RNA
+    grounding: SO:0002340
+    component_ref: rna_7sk
+  - node_id: 7sk_snrnp
+    label: 7SK snRNP
+    node_type: STRUCTURE
+    grounding: GO:0120259
+  edges:
+  - subject: rna_7sk
+    predicate: contributes constituents to
+    object: 7sk_snrnp
+    description: 7SK RNA is the RNA constituent represented in the 7SK snRNP definition.
+    evidence:
+    - reference: GO:0120259
+      notes: GO:0120259 defines the 7SK snRNP as containing 7SK snRNA.
+discussions:
+- discussion_id: resolve_7sk_snrnp_protein_components
+  prompt: Resolve exact source-neutral protein components that form the 7SK snRNP.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rna_7sk
+  - causal_graphs#rna_7sk_constituent
+  rationale: The first GO:0120259 record captures 7SK RNA, which defines the 7SK snRNP
+    in GO. Protein-family and subcomplex boundaries should be resolved before expanding
+    this component list.
+  evidence:
+  - reference: GO:0120259
+  - reference: DOI:10.1093/nar/gkx262
+  posed_by: codex
+  posed_date: '2026-09-25'

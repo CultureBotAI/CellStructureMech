@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/7sk_snrnp.yaml
+  slug: 7sk_snrnp
+session:
+  id: 2026-09-25T035518Z-claude-code-f007b7
+  timestamp: '2026-09-25T03:55:18Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1548
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1547
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Fix 7SK SO evidence wording
+  details: 'Closed #1548 by replacing the OLS-specific SO:0002340 evidence note with wording
+    that attributes the 7SK RNA synonym to Sequence Ontology itself, then appended a REVIEW_FIX
+    curation event to the GO:0120259 record.'

@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/7sk_snrnp.yaml
+  slug: 7sk_snrnp
+session:
+  id: 2026-09-25T034046Z-claude-code-d8d60f
+  timestamp: '2026-09-25T03:40:46Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add 7SK snRNP record
+  details: Created a GO:0120259 7SK snRNP record after hidden and ignored-inclusive duplicate
+    searches for the GO term, labels, SO:0002340 7SK RNA labels, and GO definition PubMed
+    and DOI references. Added the GO exact synonym, GO:0030532 small nuclear ribonucleoprotein
+    parentage, the SO:0002340-grounded 7SK RNA constituent, GO/SO/PubMed evidence, a minimal
+    7SK RNA constituent graph, and an open TODO to resolve source-neutral protein components.
