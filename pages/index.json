@@ -4221,6 +4221,15 @@
   "definition": "An endoplasmic-reticulum translocon complex with a core heterotrimer of alpha, beta, and gamma subunits, represented in budding yeast by Ssh1p, Sbh2p, and Sss1p, that supports cotranslational protein transport across the ER membrane."
  },
  {
+  "identifier": "GO:0034455",
+  "label": "t-UTP complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/t_utp_complex.html",
+  "definition": "A protein complex that forms a subcomplex of the 90S preribosome and is required for the subsequent assembly of the rest of the preribosome. In S. cerevisiae, it is composed of Utp5p, Utp4p, Nan1p, Utp8p, Utp9p, Utp10 and Utp15p."
+ },
+ {
   "identifier": "GO:0031897",
   "label": "Tic complex",
   "category": "OTHER",
