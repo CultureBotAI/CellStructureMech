@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/post_spliceosomal_complex.yaml
+  slug: post_spliceosomal_complex
+session:
+  id: 2026-09-25T095228Z-claude-code-b6053e
+  timestamp: '2026-09-25T09:52:28Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - synonyms
+  - parent_structures
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add post-spliceosomal complex record
+  details: Added a new GO:0071020 post-spliceosomal complex record with GO narrow synonyms,
+    spliceosomal-complex parentage, a GO-grounded U5 component, a reviewed-label-only generic
+    pair of non-U5 subtype-specific partner snRNPs, GO evidence for U2-type and U12-type child
+    states, a conservative post-second-splicing graph and a curation TODO for exact subtype-specific
+    snRNP, protein and RNA boundaries. The duplicate search included hidden and ignored files
+    before creation.
