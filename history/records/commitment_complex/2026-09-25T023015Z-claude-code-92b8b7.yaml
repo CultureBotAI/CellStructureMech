@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/commitment_complex.yaml
+  slug: commitment_complex
+session:
+  id: 2026-09-25T023015Z-claude-code-92b8b7
+  timestamp: '2026-09-25T02:30:15Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add commitment complex
+  details: Added a new GO:0000243 commitment complex record with GO narrow synonyms, U2-type
+    spliceosomal-complex parentage, a GO-grounded U1 snRNP component, GO and Abovich/Rosbash
+    commitment-complex evidence, a conservative U1 splice-site association graph, and a TODO
+    for exact protein-family and bound unspliced-intron RNA boundary curation. Validated the
+    new record through the guarded write path and targeted validate_strict.

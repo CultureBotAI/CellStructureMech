@@ -14641,6 +14641,37 @@
       ]
     },
     {
+      "identifier": "GO:0000243",
+      "label": "commitment complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0071022",
+          "label": "U12-type post-spliceosomal complex",
+          "cosine_similarity": 0.89440939
+        },
+        {
+          "identifier": "GO:0071021",
+          "label": "U2-type post-spliceosomal complex",
+          "cosine_similarity": 0.89415054
+        },
+        {
+          "identifier": "GO:0071008",
+          "label": "U2-type post-mRNA release spliceosomal complex",
+          "cosine_similarity": 0.89169658
+        },
+        {
+          "identifier": "GO:0071019",
+          "label": "U12-type post-mRNA release spliceosomal complex",
+          "cosine_similarity": 0.88018518
+        },
+        {
+          "identifier": "GO:0071015",
+          "label": "U12-type prespliceosome",
+          "cosine_similarity": 0.86468312
+        }
+      ]
+    },
+    {
       "identifier": "GO:0010494",
       "label": "cytoplasmic stress granule",
       "neighbors": [
