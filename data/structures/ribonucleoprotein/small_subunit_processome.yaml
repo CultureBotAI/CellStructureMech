@@ -21,6 +21,12 @@ curation_history:
     SSU-processome RNA and protein cohorts, rRNA processing functions, GO/PubMed evidence,
     a conservative assembly graph and a TODO for exact SSU-processome component boundaries.
   llm_assisted: true
+- timestamp: '2026-09-25T17:39:31Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1590 review issue #1591 by rewording the GO:0030686 90S preribosome
+    as a related sibling boundary instead of a broader SSU-processome parent.'
+  llm_assisted: true
 synonyms:
 - synonym_text: small subunit processome
   synonym_type: EXACT_SYNONYM
@@ -211,8 +217,8 @@ discussions:
   rationale: GO:0032040 defines an S. cerevisiae 80S SSU processome with 35S pre-rRNA,
     U3 snoRNA, early-associating small-subunit ribosomal proteins and associated proteins.
     Exact source-neutral RNA and protein-family groundings, plus the boundary between
-    the GO:0032040 SSU processome and the broader GO:0030686 90S preribosome, need
-    a narrower literature-backed curation pass.
+    the GO:0032040 SSU processome and the related GO:0030686 90S preribosome sibling,
+    need a narrower literature-backed curation pass.
   evidence:
   - reference: GO:0032040
   - reference: GO:0030686

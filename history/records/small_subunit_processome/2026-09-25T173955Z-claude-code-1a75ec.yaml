@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/small_subunit_processome.yaml
+  slug: small_subunit_processome
+session:
+  id: 2026-09-25T173955Z-claude-code-1a75ec
+  timestamp: '2026-09-25T17:39:55Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1591
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1590
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address SSU processome 90S-boundary review
+  details: 'Resolved PR #1590 review issue #1591 by rewording the GO:0030686 90S preribosome
+    from a broader parent to a related sibling boundary in the GO:0032040 small-subunit processome
+    component-boundary TODO.'
