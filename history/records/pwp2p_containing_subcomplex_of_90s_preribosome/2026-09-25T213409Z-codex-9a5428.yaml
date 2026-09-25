@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/pwp2p_containing_subcomplex_of_90s_preribosome.yaml
+  slug: pwp2p_containing_subcomplex_of_90s_preribosome
+session:
+  id: 2026-09-25T213409Z-codex-9a5428
+  timestamp: '2026-09-25T21:34:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Pwp2p-containing 90S preribosome subcomplex record
+  details: Created the GO:0034388 Pwp2p-containing subcomplex of 90S preribosome record with
+    UTP-B exact synonymy, nuclear protein-containing complex parentage, nucleolar and 90S
+    preribosome parthood, reviewed-label-only Pwp2, Dip2, Utp21, Utp13, Utp18 and Utp6 constituent
+    rows, conservative Saccharomyces cerevisiae distribution and example rows, a 90S preribosome
+    assembly function link, GO/PubMed/DOI evidence, a nonmechanistic assembly graph, and a
+    component-family-grounding TODO.

@@ -1,0 +1,369 @@
+identifier: GO:0034388
+label: Pwp2p-containing subcomplex of 90S preribosome
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that forms a subcomplex of the 90S preribosome and can
+  interact directly with the 5' External Transcribed Spacer (ETS) of the full length
+  pre-rRNA transcript. In S. cerevisiae, it sediments at 25-30 S and is composed of
+  Pwp2p, Dip2p, Utp21p, Utp13p, Utp18p, and Utp6p.
+definition_source: GO:0034388
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T21:30:04Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T21:31:06Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added UTP-B synonymy, nuclear protein-containing complex parentage, nucleolar
+    and 90S preribosome parthood, six reviewed-label-only UTP-B constituent rows,
+    budding-yeast scope, a 90S-preribosome-assembly function, GO/PubMed/DOI evidence,
+    a nonmechanistic assembly graph, and a UTP-B subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: 25-30 S subcomplex of 90S preribosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034388
+- synonym_text: UTP-B complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034388
+parent_structures:
+- GO:0140513
+part_of:
+- GO:0005730
+- GO:0030686
+components:
+- component_id: pwp2_utp_b_subunit
+  label: Pwp2 UTP-B subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PWP2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Pwp2p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this UTP-B subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Pwp2p-containing subcomplex of 90S
+    preribosome / UTP-B complex.
+  evidence:
+  - reference: GO:0034388
+    notes: GO:0034388 defines the Pwp2p-containing subcomplex as containing Pwp2p.
+  - reference: DOI:10.1074/jbc.M404909200
+    notes: Dosil and Bustelo 2004 identified Pwp2p among the proteins associated with
+      the Pwp2 small subcomplex.
+- component_id: dip2_utp_b_subunit
+  label: Dip2 UTP-B subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DIP2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Dip2p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this UTP-B subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Pwp2p-containing subcomplex of 90S
+    preribosome / UTP-B complex.
+  evidence:
+  - reference: GO:0034388
+    notes: GO:0034388 defines the Pwp2p-containing subcomplex as containing Dip2p.
+  - reference: DOI:10.1074/jbc.M404909200
+    notes: Dosil and Bustelo 2004 identified Dip2p among the proteins associated with
+      the Pwp2 small subcomplex.
+- component_id: utp21_utp_b_subunit
+  label: Utp21 UTP-B subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UTP21
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Utp21p
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this UTP-B subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Pwp2p-containing subcomplex of 90S
+    preribosome / UTP-B complex.
+  evidence:
+  - reference: GO:0034388
+    notes: GO:0034388 defines the Pwp2p-containing subcomplex as containing Utp21p.
+  - reference: DOI:10.1074/jbc.M404909200
+    notes: Dosil and Bustelo 2004 identified Utp21p among the proteins associated
+      with the Pwp2 small subcomplex.
+- component_id: utp13_utp_b_subunit
+  label: Utp13 UTP-B subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UTP13
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Utp13p
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this UTP-B subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Pwp2p-containing subcomplex of 90S
+    preribosome / UTP-B complex.
+  evidence:
+  - reference: GO:0034388
+    notes: GO:0034388 defines the Pwp2p-containing subcomplex as containing Utp13p.
+  - reference: DOI:10.1074/jbc.M404909200
+    notes: Dosil and Bustelo 2004 identified Utp13p among the proteins associated
+      with the Pwp2 small subcomplex.
+- component_id: utp18_utp_b_subunit
+  label: Utp18 UTP-B subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UTP18
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Utp18p
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this UTP-B subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Pwp2p-containing subcomplex of 90S
+    preribosome / UTP-B complex.
+  evidence:
+  - reference: GO:0034388
+    notes: GO:0034388 defines the Pwp2p-containing subcomplex as containing Utp18p.
+  - reference: DOI:10.1074/jbc.M404909200
+    notes: Dosil and Bustelo 2004 identified Utp18p among the proteins associated
+      with the Pwp2 small subcomplex.
+- component_id: utp6_utp_b_subunit
+  label: Utp6 UTP-B subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UTP6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Utp6p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this UTP-B subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Pwp2p-containing subcomplex of 90S
+    preribosome / UTP-B complex.
+  evidence:
+  - reference: GO:0034388
+    notes: GO:0034388 defines the Pwp2p-containing subcomplex as containing Utp6p.
+  - reference: DOI:10.1074/jbc.M404909200
+    notes: Dosil and Bustelo 2004 identified Utp6p among the proteins associated with
+      the Pwp2 small subcomplex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which the Pwp2p-containing UTP-B subcomplex
+    was defined as a 25-30 S six-protein particle of the 90S preribosome.
+  reference: GO:0034388
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Dosil and Bustelo 2004 characterized budding-yeast Pwp2 as part of a stable
+    small subcomplex with Dip2, Utp6, Utp13, Utp18 and Utp21.
+  reference: DOI:10.1074/jbc.M404909200
+functions:
+- function_id: 90s_preribosome_assembly
+  label: 90S preribosome assembly
+  grounding: GO:0034463
+  description: The Pwp2p-containing UTP-B subcomplex supports early assembly of 90S
+    preribosomes and can interact directly with the 5' External Transcribed Spacer
+    of 35S pre-rRNA.
+  evidence:
+  - reference: GO:0034388
+    notes: GO:0034388 defines the Pwp2p-containing complex as a subcomplex of the
+      90S preribosome.
+  - reference: GO:0034463
+    notes: GO:0034463 is the Gene Ontology biological-process term for 90S preribosome
+      assembly.
+  - reference: DOI:10.1074/jbc.M404909200
+    notes: Dosil and Bustelo 2004 found that Pwp2 depletion blocks formation of 90S
+      preribosomes and prevents U3 snoRNP and other 90S particle components from associating
+      with 35S pre-rRNA.
+evidence:
+- reference: GO:0034388
+  notes: Gene Ontology cellular-component term for the Pwp2p-containing subcomplex
+    of the 90S preribosome and its exact UTP-B synonyms.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0005730
+  notes: Gene Ontology cellular-component term for the nucleolus.
+- reference: GO:0030686
+  notes: Gene Ontology cellular-component term for the 90S preribosome.
+- reference: GO:0034463
+  notes: Gene Ontology biological-process term for 90S preribosome assembly.
+- reference: PMID:15231838
+  notes: PubMed identifier for Dosil and Bustelo 2004, the Journal of Biological Chemistry
+    paper cited by GO:0034388.
+- reference: DOI:10.1074/jbc.M404909200
+  notes: DOI for Dosil and Bustelo 2004, 'Functional characterization of Pwp2, a WD
+    family protein essential for the assembly of the 90 S pre-ribosomal particle',
+    verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_utp_b_90s_preribosome_assembly
+  title: UTP-B subunits form a 90S preribosome subcomplex
+  description: In Saccharomyces cerevisiae, Pwp2, Dip2, Utp21, Utp13, Utp18 and Utp6
+    form a Pwp2p-containing UTP-B subcomplex that is part of the 90S preribosome.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the six GO-defined UTP-B constituents and the connection
+    from the subcomplex to 90S preribosome assembly without resolving assembly order
+    among the six subunits.
+  nodes:
+  - node_id: pwp2_utp_b_subunit
+    label: Pwp2 UTP-B subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: pwp2_utp_b_subunit
+  - node_id: dip2_utp_b_subunit
+    label: Dip2 UTP-B subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dip2_utp_b_subunit
+  - node_id: utp21_utp_b_subunit
+    label: Utp21 UTP-B subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: utp21_utp_b_subunit
+  - node_id: utp13_utp_b_subunit
+    label: Utp13 UTP-B subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: utp13_utp_b_subunit
+  - node_id: utp18_utp_b_subunit
+    label: Utp18 UTP-B subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: utp18_utp_b_subunit
+  - node_id: utp6_utp_b_subunit
+    label: Utp6 UTP-B subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: utp6_utp_b_subunit
+  - node_id: utp_b_complex
+    label: Pwp2p-containing subcomplex of 90S preribosome
+    node_type: STRUCTURE
+    grounding: GO:0034388
+  - node_id: pre_35s_rrna_ets
+    label: 35S pre-rRNA 5' External Transcribed Spacer
+    node_type: RNA
+  - node_id: 90s_preribosome
+    label: 90S preribosome
+    node_type: STRUCTURE
+    grounding: GO:0030686
+  - node_id: 90s_preribosome_assembly
+    label: 90S preribosome assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0034463
+  edges:
+  - subject: pwp2_utp_b_subunit
+    predicate: contributes to
+    object: utp_b_complex
+    description: Pwp2p is one constituent of the budding-yeast Pwp2p-containing UTP-B
+      complex.
+    evidence:
+    - reference: GO:0034388
+      notes: GO:0034388 defines Pwp2p as a component of the Pwp2p-containing subcomplex.
+    - reference: DOI:10.1074/jbc.M404909200
+      notes: Dosil and Bustelo 2004 identified Pwp2p with the Pwp2 small subcomplex.
+  - subject: dip2_utp_b_subunit
+    predicate: contributes to
+    object: utp_b_complex
+    description: Dip2p is one constituent of the budding-yeast Pwp2p-containing UTP-B
+      complex.
+    evidence:
+    - reference: GO:0034388
+      notes: GO:0034388 defines Dip2p as a component of the Pwp2p-containing subcomplex.
+    - reference: DOI:10.1074/jbc.M404909200
+      notes: Dosil and Bustelo 2004 identified Dip2p with the Pwp2 small subcomplex.
+  - subject: utp21_utp_b_subunit
+    predicate: contributes to
+    object: utp_b_complex
+    description: Utp21p is one constituent of the budding-yeast Pwp2p-containing UTP-B
+      complex.
+    evidence:
+    - reference: GO:0034388
+      notes: GO:0034388 defines Utp21p as a component of the Pwp2p-containing subcomplex.
+    - reference: DOI:10.1074/jbc.M404909200
+      notes: Dosil and Bustelo 2004 identified Utp21p with the Pwp2 small subcomplex.
+  - subject: utp13_utp_b_subunit
+    predicate: contributes to
+    object: utp_b_complex
+    description: Utp13p is one constituent of the budding-yeast Pwp2p-containing UTP-B
+      complex.
+    evidence:
+    - reference: GO:0034388
+      notes: GO:0034388 defines Utp13p as a component of the Pwp2p-containing subcomplex.
+    - reference: DOI:10.1074/jbc.M404909200
+      notes: Dosil and Bustelo 2004 identified Utp13p with the Pwp2 small subcomplex.
+  - subject: utp18_utp_b_subunit
+    predicate: contributes to
+    object: utp_b_complex
+    description: Utp18p is one constituent of the budding-yeast Pwp2p-containing UTP-B
+      complex.
+    evidence:
+    - reference: GO:0034388
+      notes: GO:0034388 defines Utp18p as a component of the Pwp2p-containing subcomplex.
+    - reference: DOI:10.1074/jbc.M404909200
+      notes: Dosil and Bustelo 2004 identified Utp18p with the Pwp2 small subcomplex.
+  - subject: utp6_utp_b_subunit
+    predicate: contributes to
+    object: utp_b_complex
+    description: Utp6p is one constituent of the budding-yeast Pwp2p-containing UTP-B
+      complex.
+    evidence:
+    - reference: GO:0034388
+      notes: GO:0034388 defines Utp6p as a component of the Pwp2p-containing subcomplex.
+    - reference: DOI:10.1074/jbc.M404909200
+      notes: Dosil and Bustelo 2004 identified Utp6p with the Pwp2 small subcomplex.
+  - subject: utp_b_complex
+    predicate: associates with
+    object: pre_35s_rrna_ets
+    description: The Pwp2p-containing subcomplex can interact directly with the 5'
+      ETS of the full-length pre-rRNA transcript.
+    evidence:
+    - reference: GO:0034388
+      notes: GO:0034388 defines the complex by its direct interaction with the 5'
+        External Transcribed Spacer of the full-length pre-rRNA transcript.
+    - reference: DOI:10.1074/jbc.M404909200
+      notes: Dosil and Bustelo 2004 reported that the Pwp2 small subcomplex can interact
+        directly with the 5' end of 35S pre-rRNA.
+  - subject: utp_b_complex
+    predicate: part of
+    object: 90s_preribosome
+    description: The Pwp2p-containing UTP-B complex is a protein subcomplex of the
+      90S preribosome.
+    evidence:
+    - reference: GO:0034388
+      notes: GO:0034388 carries a part_of relationship to GO:0030686, the 90S preribosome.
+  - subject: utp_b_complex
+    predicate: supports
+    object: 90s_preribosome_assembly
+    description: Pwp2 function is required for initial assembly of 90S pre-ribosomes.
+    evidence:
+    - reference: GO:0034463
+      notes: GO:0034463 is the process term for 90S preribosome assembly.
+    - reference: DOI:10.1074/jbc.M404909200
+      notes: Dosil and Bustelo 2004 found that Pwp2 depletion blocks 90S preribosome
+        formation.
+discussions:
+- discussion_id: resolve_utp_b_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Pwp2, Dip2, Utp21,
+    Utp13, Utp18 and Utp6 constituents of the Pwp2p-containing UTP-B complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pwp2_utp_b_subunit
+  - components#dip2_utp_b_subunit
+  - components#utp21_utp_b_subunit
+  - components#utp13_utp_b_subunit
+  - components#utp18_utp_b_subunit
+  - components#utp6_utp_b_subunit
+  rationale: GO:0034388 uses Saccharomyces gene-product names while noting that analogous
+    complexes in other eukaryotes can use the term. Exact cross-eukaryotic InterPro,
+    Pfam, NCBIfam or UniProt family boundaries for the six UTP-B proteins need narrower
+    follow-up curation before these component labels can be grounded.
+  evidence:
+  - reference: GO:0034388
+    notes: The GO:0034388 comment explains that the term name uses Saccharomyces gene-product
+      names because no other names had arisen for the complex.
+  - reference: DOI:10.1074/jbc.M404909200
+    notes: Dosil and Bustelo 2004 identified the six S. cerevisiae proteins in the
+      Pwp2 small subcomplex.
+  posed_by: codex
+  posed_date: '2026-09-25'
