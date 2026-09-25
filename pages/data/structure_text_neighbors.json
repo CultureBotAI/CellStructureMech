@@ -14676,6 +14676,11 @@
       "label": "commitment complex",
       "neighbors": [
         {
+          "identifier": "GO:0005684",
+          "label": "U2-type spliceosomal complex",
+          "cosine_similarity": 0.91169894
+        },
+        {
           "identifier": "GO:0005681",
           "label": "spliceosomal complex",
           "cosine_similarity": 0.90890034
@@ -14694,11 +14699,6 @@
           "identifier": "GO:0071008",
           "label": "U2-type post-mRNA release spliceosomal complex",
           "cosine_similarity": 0.89169658
-        },
-        {
-          "identifier": "GO:0071019",
-          "label": "U12-type post-mRNA release spliceosomal complex",
-          "cosine_similarity": 0.88018518
         }
       ]
     },
@@ -15048,6 +15048,11 @@
       "label": "spliceosomal complex",
       "neighbors": [
         {
+          "identifier": "GO:0005684",
+          "label": "U2-type spliceosomal complex",
+          "cosine_similarity": 0.94522551
+        },
+        {
           "identifier": "GO:0071021",
           "label": "U2-type post-spliceosomal complex",
           "cosine_similarity": 0.91672101
@@ -15066,11 +15071,6 @@
           "identifier": "GO:0071008",
           "label": "U2-type post-mRNA release spliceosomal complex",
           "cosine_similarity": 0.8925918
-        },
-        {
-          "identifier": "GO:0071006",
-          "label": "U2-type catalytic step 1 spliceosome",
-          "cosine_similarity": 0.88095735
         }
       ]
     },
@@ -15099,9 +15099,9 @@
           "cosine_similarity": 0.75862663
         },
         {
-          "identifier": "GO:0030532",
-          "label": "small nuclear ribonucleoprotein complex",
-          "cosine_similarity": 0.7484499
+          "identifier": "GO:0005684",
+          "label": "U2-type spliceosomal complex",
+          "cosine_similarity": 0.75423302
         }
       ]
     },
@@ -15533,9 +15533,9 @@
           "cosine_similarity": 0.93457197
         },
         {
-          "identifier": "GO:0071007",
-          "label": "U2-type catalytic step 2 spliceosome",
-          "cosine_similarity": 0.91966707
+          "identifier": "GO:0005684",
+          "label": "U2-type spliceosomal complex",
+          "cosine_similarity": 0.92532594
         }
       ]
     },
@@ -15547,6 +15547,11 @@
           "identifier": "GO:0071022",
           "label": "U12-type post-spliceosomal complex",
           "cosine_similarity": 0.96884157
+        },
+        {
+          "identifier": "GO:0005684",
+          "label": "U2-type spliceosomal complex",
+          "cosine_similarity": 0.96466617
         },
         {
           "identifier": "GO:0071008",
@@ -15562,11 +15567,6 @@
           "identifier": "GO:0071006",
           "label": "U2-type catalytic step 1 spliceosome",
           "cosine_similarity": 0.93130554
-        },
-        {
-          "identifier": "GO:0071004",
-          "label": "U2-type prespliceosome",
-          "cosine_similarity": 0.93085057
         }
       ]
     },
@@ -15629,6 +15629,37 @@
           "identifier": "GO:0071007",
           "label": "U2-type catalytic step 2 spliceosome",
           "cosine_similarity": 0.91676665
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005684",
+      "label": "U2-type spliceosomal complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0071021",
+          "label": "U2-type post-spliceosomal complex",
+          "cosine_similarity": 0.96466617
+        },
+        {
+          "identifier": "GO:0005681",
+          "label": "spliceosomal complex",
+          "cosine_similarity": 0.94522551
+        },
+        {
+          "identifier": "GO:0071022",
+          "label": "U12-type post-spliceosomal complex",
+          "cosine_similarity": 0.92936092
+        },
+        {
+          "identifier": "GO:0071008",
+          "label": "U2-type post-mRNA release spliceosomal complex",
+          "cosine_similarity": 0.92532594
+        },
+        {
+          "identifier": "GO:0071007",
+          "label": "U2-type catalytic step 2 spliceosome",
+          "cosine_similarity": 0.91322881
         }
       ]
     },

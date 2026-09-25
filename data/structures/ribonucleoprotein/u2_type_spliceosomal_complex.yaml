@@ -1,0 +1,106 @@
+identifier: GO:0005684
+label: U2-type spliceosomal complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: Any spliceosomal complex that forms during the splicing of a messenger
+  RNA primary transcript to excise an intron that has canonical consensus sequences
+  near the 5' and 3' ends.
+definition_source: GO:0005684
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T06:53:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T06:54:35Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact and narrow synonyms, spliceosomal-complex parentage, a reviewed-label-only
+    state-variable U2-type snRNP cohort, a conservative parent-level snRNP graph and
+    a TODO for exact state-specific U2-type snRNP boundaries.
+  llm_assisted: true
+synonyms:
+- synonym_text: major (U2-type) spliceosomal complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005684
+- synonym_text: major spliceosomal complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005684
+- synonym_text: GT-AG spliceosome
+  synonym_type: NARROW_SYNONYM
+  source: GO:0005684
+parent_structures:
+- GO:0005681
+components:
+- component_id: u2_type_spliceosomal_snrnps
+  label: U2-type spliceosomal snRNPs
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO:0005684 parent spans the state-variable snRNP-based complexes
+    that form during U2-type splicing, and GO notes that some U2-splicing complexes
+    do not necessarily contain the U2 snRNP itself; no single exact source-neutral
+    CURIE was assigned for the major-spliceosome snRNP cohort.
+  role: State-variable small nuclear ribonucleoprotein constituents of U2-type spliceosomal
+    complexes.
+  evidence:
+  - reference: GO:0005684
+    notes: GO:0005684 is the Gene Ontology cellular-component term for the snRNP-based
+      complexes that form during U2-type spliceosomal splicing.
+evidence:
+- reference: GO:0005684
+  notes: Gene Ontology cellular-component term for U2-type spliceosomal complex and
+    its GO synonyms.
+- reference: GO:0005681
+  notes: Gene Ontology cellular-component parent term for spliceosomal complex.
+causal_graphs:
+- graph_id: u2_type_spliceosomal_snrnp_states
+  title: U2-type spliceosomal complexes use state-variable snRNPs
+  description: U2-type spliceosomal complexes are the series of snRNP-based spliceosomal
+    complexes that form during major-spliceosome splicing of introns with canonical
+    consensus sequences.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the generic state-variable major-spliceosome
+    snRNP cohort without asserting that every U2-splicing complex contains every U-series
+    snRNP or the U2 snRNP itself.
+  nodes:
+  - node_id: u2_type_spliceosomal_snrnps
+    label: U2-type spliceosomal snRNPs
+    node_type: STRUCTURE
+    component_ref: u2_type_spliceosomal_snrnps
+  - node_id: u2_type_spliceosomal_complex
+    label: U2-type spliceosomal complex
+    node_type: STRUCTURE
+    grounding: GO:0005684
+  edges:
+  - subject: u2_type_spliceosomal_snrnps
+    predicate: contributes state-dependent constituents to
+    object: u2_type_spliceosomal_complex
+    description: U2-type spliceosomal complexes are snRNP-based complexes whose precise
+      small nuclear ribonucleoprotein constituents vary by splicing-cycle state.
+    evidence:
+    - reference: GO:0005684
+      notes: GO:0005684 describes U2-type spliceosomal complexes as the snRNP-based
+        complexes that form during U2-splicing.
+discussions:
+- discussion_id: resolve_u2_type_state_snrnp_boundaries
+  prompt: Resolve exact source-neutral snRNP membership for each U2-type spliceosomal
+    state.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u2_type_spliceosomal_snrnps
+  - causal_graphs#u2_type_spliceosomal_snrnp_states
+  rationale: The first GO:0005684 parent record captures only the state-variable snRNP
+    cohort supported by GO. Child records for the U2-type prespliceosome, precatalytic
+    complex, catalytic complexes and post-spliceosomal states should carry the exact
+    U1, U2, U4, U5 and U6 snRNP constituent boundaries that apply to those specific
+    states.
+  evidence:
+  - reference: GO:0005684
+  - reference: GO:0071004
+  - reference: GO:0071006
+  posed_by: codex
+  posed_date: '2026-09-25'
