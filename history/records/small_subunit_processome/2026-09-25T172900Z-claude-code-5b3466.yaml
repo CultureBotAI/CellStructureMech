@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/small_subunit_processome.yaml
+  slug: small_subunit_processome
+session:
+  id: 2026-09-25T172900Z-claude-code-5b3466
+  timestamp: '2026-09-25T17:29:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add small-subunit processome record
+  details: Added a GO:0032040 small-subunit processome record with GO exact synonymy, preribosome
+    parentage, nucleolar parthood, reviewed-label-only RNA and protein constituent cohorts,
+    GO-backed rRNA processing and ribosome-biogenesis functions, GO/PubMed evidence, a conservative
+    nonmechanistic assembly graph, and a TODO for exact SSU-processome RNA, ribosomal-protein,
+    associated-protein and 90S boundary curation.

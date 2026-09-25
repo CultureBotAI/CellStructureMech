@@ -13622,6 +13622,11 @@
       "label": "nucleolus",
       "neighbors": [
         {
+          "identifier": "GO:0032040",
+          "label": "small-subunit processome",
+          "cosine_similarity": 0.81147718
+        },
+        {
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.80595009
@@ -13640,11 +13645,6 @@
           "identifier": "GO:0015935",
           "label": "small ribosomal subunit",
           "cosine_similarity": 0.80255104
-        },
-        {
-          "identifier": "GO:0015934",
-          "label": "large ribosomal subunit",
-          "cosine_similarity": 0.78832846
         }
       ]
     },
@@ -15058,6 +15058,11 @@
           "cosine_similarity": 0.869417
         },
         {
+          "identifier": "GO:0032040",
+          "label": "small-subunit processome",
+          "cosine_similarity": 0.85941122
+        },
+        {
           "identifier": "GO:0030684",
           "label": "preribosome",
           "cosine_similarity": 0.81137098
@@ -15066,11 +15071,6 @@
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.80780588
-        },
-        {
-          "identifier": "GO:0000172",
-          "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.80288194
         }
       ]
     },
@@ -15327,6 +15327,11 @@
       "label": "preribosome",
       "neighbors": [
         {
+          "identifier": "GO:0032040",
+          "label": "small-subunit processome",
+          "cosine_similarity": 0.83303804
+        },
+        {
           "identifier": "GO:0015935",
           "label": "small ribosomal subunit",
           "cosine_similarity": 0.82394676
@@ -15345,11 +15350,6 @@
           "identifier": "GO:0030677",
           "label": "ribonuclease P complex",
           "cosine_similarity": 0.79641132
-        },
-        {
-          "identifier": "GO:0030532",
-          "label": "small nuclear ribonucleoprotein complex",
-          "cosine_similarity": 0.79028796
         }
       ]
     },
@@ -15461,6 +15461,11 @@
           "cosine_similarity": 0.869417
         },
         {
+          "identifier": "GO:0032040",
+          "label": "small-subunit processome",
+          "cosine_similarity": 0.8015435
+        },
+        {
           "identifier": "GO:0048500",
           "label": "signal recognition particle",
           "cosine_similarity": 0.79338868
@@ -15469,11 +15474,6 @@
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.78127905
-        },
-        {
-          "identifier": "GO:0005730",
-          "label": "nucleolus",
-          "cosine_similarity": 0.77848286
         }
       ]
     },
@@ -15585,6 +15585,11 @@
           "cosine_similarity": 0.8784845
         },
         {
+          "identifier": "GO:0032040",
+          "label": "small-subunit processome",
+          "cosine_similarity": 0.87469425
+        },
+        {
           "identifier": "GO:0030684",
           "label": "preribosome",
           "cosine_similarity": 0.82394676
@@ -15593,11 +15598,37 @@
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.80667675
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0032040",
+      "label": "small-subunit processome",
+      "neighbors": [
+        {
+          "identifier": "GO:0015935",
+          "label": "small ribosomal subunit",
+          "cosine_similarity": 0.87469425
+        },
+        {
+          "identifier": "GO:0015934",
+          "label": "large ribosomal subunit",
+          "cosine_similarity": 0.85941122
+        },
+        {
+          "identifier": "GO:0030684",
+          "label": "preribosome",
+          "cosine_similarity": 0.83303804
+        },
+        {
+          "identifier": "GO:0000172",
+          "label": "ribonuclease MRP complex",
+          "cosine_similarity": 0.8164963
         },
         {
           "identifier": "GO:0005730",
           "label": "nucleolus",
-          "cosine_similarity": 0.80255104
+          "cosine_similarity": 0.81147718
         }
       ]
     },
