@@ -19,6 +19,12 @@ curation_history:
     GO-backed tRNA 5-prime leader cleavage functions, GO/PubMed evidence, a nonmechanistic
     function graph and a TODO for source-neutral RNase P component boundaries.
   llm_assisted: true
+- timestamp: '2026-09-25T17:03:44Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1588 review issue #1589 by recording the GO:0030677 chloroplast
+    RNase P caveat in the source-neutral component-boundary TODO.'
+  llm_assisted: true
 synonyms:
 - synonym_text: RNase P complex
   synonym_type: EXACT_SYNONYM
@@ -53,8 +59,9 @@ functions:
       to generate mature 5-prime tRNA ends.
 evidence:
 - reference: GO:0030677
-  notes: Gene Ontology cellular-component term for the ribonuclease P complex and
-    its exact synonym.
+  notes: Gene Ontology cellular-component term for the ribonuclease P complex, its
+    exact synonym and its caveat that chloroplast RNase P-like complexes appear not
+    to contain RNA.
 - reference: GO:1902555
   notes: Gene Ontology cellular-component parent term for endoribonuclease complexes.
 - reference: GO:1990904
@@ -130,9 +137,12 @@ discussions:
   attaches_to:
   - causal_graphs#rnase_p_trna_leader_cleavage
   rationale: GO:0030677 captures the shared RNase P ribonucleoprotein identity and
-    pre-tRNA 5-prime leader cleavage function. Exact RNA and protein components should
-    be curated on source-specific dimeric, multimeric, nucleolar, cyanelle and organellar
-    children before assigning source-neutral constituents to this generic parent record.
+    pre-tRNA 5-prime leader cleavage function, while its term comment flags that chloroplast
+    complexes called RNase P appear not to contain RNA. Exact RNA and protein components
+    should be curated on source-specific dimeric, multimeric, nucleolar, cyanelle
+    and mitochondrial children before assigning source-neutral constituents to this
+    generic parent; chloroplast or other RNA-free RNase P-like complexes need separate
+    protein-only modeling instead of inheriting a generic RNase P RNA component.
   evidence:
   - reference: GO:0030677
   - reference: GO:0030680
