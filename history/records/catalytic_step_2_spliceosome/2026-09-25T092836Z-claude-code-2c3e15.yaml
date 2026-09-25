@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/catalytic_step_2_spliceosome.yaml
+  slug: catalytic_step_2_spliceosome
+session:
+  id: 2026-09-25T092836Z-claude-code-2c3e15
+  timestamp: '2026-09-25T09:28:36Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1565
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1564
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: 'Address PR #1564 catalytic step 2 spliceosome review issue'
+  details: 'Addressed review issue #1565 by splitting invariant U5 snRNP into its own GO:0005682-grounded
+    constituent and narrowing the reviewed-label-only component to the two non-U5 partner
+    snRNPs whose exact U2/U6 or U12/U6atac identities depend on the catalytic step 2 spliceosome
+    subtype.'
