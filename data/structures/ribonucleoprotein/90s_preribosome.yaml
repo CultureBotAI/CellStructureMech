@@ -1,0 +1,238 @@
+identifier: GO:0030686
+label: 90S preribosome
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A large ribonucleoprotein complex considered to be the earliest preribosomal
+  complex. In S. cerevisiae, it has a size of 90S and consists of the 35S pre-rRNA,
+  early-associating ribosomal proteins most of which are part of the small ribosomal
+  subunit, the U3 snoRNA and associated proteins.
+definition_source: GO:0030686
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T18:59:10Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T19:00:45Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added preribosome parentage, 35S pre-rRNA, U3 snoRNA and 90S-protein-cohort
+    components, a conservative budding-yeast example, ribosome-biogenesis function,
+    GO/PubMed evidence, a nonmechanistic constituent graph and a TODO for exact 90S
+    component boundaries.
+  llm_assisted: true
+- timestamp: '2026-09-25T19:12:02Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1595 review issue #1596 by citing SO:0002393 in the 90S preribosome
+    evidence and component-boundary discussion and by making the 35S pre-rRNA grounding
+    rationale self-contained.'
+  llm_assisted: true
+parent_structures:
+- GO:0030684
+components:
+- component_id: pre_35s_rrna
+  label: 35S pre-rRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral Sequence Ontology class for the budding-yeast
+    35S precursor ribosomal RNA was assigned in this pass; SO:0002393 denotes the
+    broader precursor_RNA class, not 35S pre-rRNA specifically.
+  role: Precursor ribosomal RNA constituent of budding-yeast 90S preribosomes.
+  evidence:
+  - reference: GO:0030686
+    notes: GO:0030686 defines the budding-yeast 90S preribosome as containing 35S
+      pre-rRNA.
+  - reference: DOI:10.1016/s1097-2765(02)00579-8
+    notes: Grandi et al. 2002 characterized early 90S pre-ribosomal particles that
+      coprecipitated 35S pre-rRNA.
+- component_id: u3_snorna
+  label: U3 snoRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral RNA ontology class for U3 snoRNA was verified
+    in this pass; GO:0030686 and the Grandi et al. 2002 PubMed record support U3 membership
+    of 90S pre-ribosomal particles.
+  role: Small nucleolar RNA constituent associated with the budding-yeast 90S preribosome
+    through the U3 snoRNP.
+  evidence:
+  - reference: GO:0030686
+    notes: GO:0030686 defines the budding-yeast 90S preribosome as containing U3 snoRNA.
+  - reference: DOI:10.1016/s1097-2765(02)00579-8
+    notes: Grandi et al. 2002 characterized 90S pre-ribosomal particles that coprecipitated
+      U3 snoRNA and included the U3 snoRNP.
+- component_id: early_90s_protein_cohort
+  label: 90S preribosome protein cohort
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The 90S preribosome contains early-associating ribosomal proteins
+    and associated processing factors, but exact source-neutral InterPro, Pfam, NCBIfam,
+    Complex Portal or GO boundaries for that heterogeneous protein cohort were not
+    assigned in this first record.
+  role: Early-associating mostly small-subunit ribosomal proteins and associated 40S
+    subunit processing factors in the 90S preribosome.
+  evidence:
+  - reference: GO:0030686
+    notes: GO:0030686 describes early-associating ribosomal proteins, most of which
+      are part of the small ribosomal subunit, and associated proteins in the budding-yeast
+      90S preribosome.
+  - reference: DOI:10.1016/s1097-2765(02)00579-8
+    notes: Grandi et al. 2002 identified non-ribosomal proteins, including U3-associated
+      proteins and other 18S-rRNA synthesis factors, in 90S pre-ribosomal particles.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: GO:0030686 defines the 90S preribosome in the budding-yeast assembly context;
+    broader eukaryotic distribution is left for a follow-up curation pass.
+  reference: GO:0030686
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding yeast is the model in which Grandi et al. 2002 characterized early
+    90S pre-ribosomes containing 35S pre-rRNA, U3 snoRNA and 40S processing factors.
+  reference: DOI:10.1016/s1097-2765(02)00579-8
+functions:
+- function_id: ribosome_biogenesis
+  label: ribosome biogenesis
+  grounding: GO:0042254
+  description: As an early preribosomal ribonucleoprotein, the 90S preribosome contributes
+    to assembly of ribosomal subunits.
+  evidence:
+  - reference: GO:0042254
+    notes: GO:0042254 is the Gene Ontology biological-process term for ribosome biogenesis.
+  - reference: GO:0030684
+    notes: GO:0030684 defines preribosomal complexes as being formed during ribosome
+      biogenesis.
+  - reference: DOI:10.1016/s1097-2765(02)00579-8
+    notes: Grandi et al. 2002 characterized early pre-ribosomal particles and their
+      association with 40S subunit assembly factors.
+evidence:
+- reference: GO:0030686
+  notes: Gene Ontology cellular-component term for the 90S preribosome.
+- reference: GO:0030684
+  notes: Gene Ontology cellular-component parent term for preribosomal complexes.
+- reference: GO:0042254
+  notes: Gene Ontology biological-process term for ribosome biogenesis.
+- reference: SO:0002393
+  notes: Sequence Ontology term for the broader precursor_RNA class, which is not
+    specific to 35S pre-rRNA.
+- reference: PMID:12150911
+  notes: PubMed identifier for Grandi et al. 2002, '90S pre-ribosomes include the
+    35S pre-rRNA, the U3 snoRNP, and 40S subunit processing factors but predominantly
+    lack 60S synthesis factors'.
+- reference: DOI:10.1016/s1097-2765(02)00579-8
+  notes: DOI for Grandi et al. 2002, Molecular Cell, verified through NCBI E-utilities.
+- reference: PMID:12957375
+  notes: Fromont-Racine et al. 2003 review publication cited in the GO:0030686 definition
+    xrefs.
+- reference: DOI:10.1016/s0378-1119(03)00629-2
+  notes: DOI for Fromont-Racine et al. 2003, 'Ribosome assembly in eukaryotes', verified
+    through NCBI E-utilities.
+- reference: PMID:15120992
+  notes: Granneman and Baserga 2004 review publication cited in the GO:0030686 definition
+    xrefs.
+- reference: DOI:10.1016/j.yexcr.2004.03.016
+  notes: 'DOI for Granneman and Baserga 2004, ''Ribosome biogenesis: of knobs and
+    RNA processing'', verified through NCBI E-utilities.'
+causal_graphs:
+- graph_id: 90s_preribosome_constituents
+  title: 35S pre-rRNA, U3 snoRNA and proteins form 90S preribosomes
+  description: GO defines the 90S preribosome as an early budding-yeast preribosomal
+    ribonucleoprotein containing 35S pre-rRNA, U3 snoRNA, early-associating mostly
+    small-subunit ribosomal proteins and associated proteins.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records GO-defined RNA and protein cohorts without
+    resolving exact ribosomal protein, U3-associated protein, 40S processing-factor
+    or SSU-processome boundaries.
+  nodes:
+  - node_id: pre_35s_rrna
+    label: 35S pre-rRNA
+    node_type: RNA
+    component_ref: pre_35s_rrna
+  - node_id: u3_snorna
+    label: U3 snoRNA
+    node_type: RNA
+    component_ref: u3_snorna
+  - node_id: early_90s_protein_cohort
+    label: 90S preribosome protein cohort
+    node_type: GENE_OR_PROTEIN
+    component_ref: early_90s_protein_cohort
+  - node_id: 90s_preribosome
+    label: 90S preribosome
+    node_type: STRUCTURE
+    grounding: GO:0030686
+  - node_id: ribosome_biogenesis
+    label: ribosome biogenesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042254
+  edges:
+  - subject: pre_35s_rrna
+    predicate: contributes constituents to
+    object: 90s_preribosome
+    description: 35S pre-rRNA is an RNA constituent of budding-yeast 90S preribosomes.
+    evidence:
+    - reference: GO:0030686
+      notes: GO:0030686 defines the 90S preribosome as containing 35S pre-rRNA.
+  - subject: u3_snorna
+    predicate: contributes constituents to
+    object: 90s_preribosome
+    description: U3 snoRNA is an RNA constituent associated with budding-yeast 90S
+      preribosomes.
+    evidence:
+    - reference: GO:0030686
+      notes: GO:0030686 defines the 90S preribosome as containing U3 snoRNA.
+    - reference: DOI:10.1016/s1097-2765(02)00579-8
+      notes: Grandi et al. 2002 characterized 90S particles that coprecipitated U3
+        snoRNA.
+  - subject: early_90s_protein_cohort
+    predicate: contributes constituents to
+    object: 90s_preribosome
+    description: Early-associating ribosomal proteins and associated proteins are
+      protein constituents of the 90S preribosome.
+    evidence:
+    - reference: GO:0030686
+      notes: GO:0030686 defines the 90S preribosome as containing early-associating
+        ribosomal proteins and associated proteins.
+    - reference: DOI:10.1016/s1097-2765(02)00579-8
+      notes: Grandi et al. 2002 identified 40S subunit processing factors in early
+        90S pre-ribosomes.
+  - subject: 90s_preribosome
+    predicate: participates in
+    object: ribosome_biogenesis
+    description: 90S preribosomes are early preribosomal particles formed during ribosome
+      biogenesis.
+    evidence:
+    - reference: GO:0030684
+      notes: GO:0030684 defines preribosomal complexes as being formed during ribosome
+        biogenesis.
+    - reference: GO:0042254
+      notes: GO:0042254 is the biological-process term for ribosome biogenesis.
+discussions:
+- discussion_id: resolve_90s_preribosome_component_boundaries
+  prompt: Resolve exact 90S preribosome RNA, ribosomal-protein, U3-associated-protein,
+    40S-processing-factor and SSU-processome boundaries.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pre_35s_rrna
+  - components#u3_snorna
+  - components#early_90s_protein_cohort
+  - causal_graphs#90s_preribosome_constituents
+  rationale: GO:0030686 defines a budding-yeast 90S preribosome with 35S pre-rRNA,
+    U3 snoRNA, early-associating ribosomal proteins and associated proteins. The exact
+    source-neutral RNA and protein-family groundings, plus the distinction between
+    the GO:0030686 90S preribosome and the related GO:0032040 small-subunit processome
+    sibling, need a narrower literature-backed curation pass.
+  evidence:
+  - reference: GO:0030686
+  - reference: GO:0032040
+  - reference: SO:0002393
+  - reference: DOI:10.1016/s1097-2765(02)00579-8
+  posed_by: codex
+  posed_date: '2026-09-25'
