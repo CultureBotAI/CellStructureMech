@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u12_type_post_mrna_release_spliceosomal_complex.yaml
+  slug: u12_type_post_mrna_release_spliceosomal_complex
+session:
+  id: 2026-09-25T012408Z-claude-code-17dea5
+  timestamp: '2026-09-25T01:24:08Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add U12-type post-mRNA release spliceosomal complex
+  details: Added a new GO:0071019 U12-type post-mRNA release spliceosomal complex record with
+    GO exact and narrow synonyms, post-mRNA-release and U12-type spliceosomal-complex parentage,
+    GO-grounded U12, U5 and U6atac snRNP components, GO and Will/Luehrmann U12-spliceosome
+    evidence, a conservative retained-snRNP assembly graph, and a TODO for exact protein-family
+    and excised-intron RNA boundary curation. Validated the new record with targeted LinkML
+    closed-schema and validate_strict gates.
