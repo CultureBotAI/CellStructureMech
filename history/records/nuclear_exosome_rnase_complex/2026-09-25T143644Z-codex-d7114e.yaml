@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/nuclear_exosome_rnase_complex.yaml
+  slug: nuclear_exosome_rnase_complex
+session:
+  id: 2026-09-25T143644Z-codex-d7114e
+  timestamp: '2026-09-25T14:36:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add nuclear exosome RNase complex record
+  details: Added a GO:0000176 nuclear exosome (RNase complex) record with Gene Ontology exact
+    synonyms, nuclear and generic exosome parentage, nuclear-lumen parthood, RNA processing
+    and RNA degradation function links, GO/PubMed evidence, a nonmechanistic localization/function
+    graph, and a follow-up TODO for exact nuclear exosome component boundaries.
