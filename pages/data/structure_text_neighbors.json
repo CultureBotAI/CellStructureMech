@@ -14765,6 +14765,37 @@
       ]
     },
     {
+      "identifier": "GO:0030679",
+      "label": "cyanelle ribonuclease P complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030681",
+          "label": "multimeric ribonuclease P complex",
+          "cosine_similarity": 0.91489641
+        },
+        {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.91434258
+        },
+        {
+          "identifier": "GO:0005655",
+          "label": "nucleolar ribonuclease P complex",
+          "cosine_similarity": 0.90599843
+        },
+        {
+          "identifier": "GO:0000172",
+          "label": "ribonuclease MRP complex",
+          "cosine_similarity": 0.84467556
+        },
+        {
+          "identifier": "GO:0015934",
+          "label": "large ribosomal subunit",
+          "cosine_similarity": 0.75892199
+        }
+      ]
+    },
+    {
       "identifier": "GO:0010494",
       "label": "cytoplasmic stress granule",
       "neighbors": [
@@ -14810,6 +14841,11 @@
           "cosine_similarity": 0.95045653
         },
         {
+          "identifier": "GO:0030679",
+          "label": "cyanelle ribonuclease P complex",
+          "cosine_similarity": 0.91434258
+        },
+        {
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.8898535
@@ -14818,11 +14854,6 @@
           "identifier": "GO:0015934",
           "label": "large ribosomal subunit",
           "cosine_similarity": 0.80780588
-        },
-        {
-          "identifier": "GO:0015935",
-          "label": "small ribosomal subunit",
-          "cosine_similarity": 0.80667675
         }
       ]
     },
@@ -14903,6 +14934,11 @@
           "cosine_similarity": 0.94558779
         },
         {
+          "identifier": "GO:0030679",
+          "label": "cyanelle ribonuclease P complex",
+          "cosine_similarity": 0.91489641
+        },
+        {
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.88322698
@@ -14911,11 +14947,6 @@
           "identifier": "GO:0005732",
           "label": "sno(s)RNA-containing ribonucleoprotein complex",
           "cosine_similarity": 0.80322148
-        },
-        {
-          "identifier": "GO:0030532",
-          "label": "small nuclear ribonucleoprotein complex",
-          "cosine_similarity": 0.7975594
         }
       ]
     },
@@ -14934,6 +14965,11 @@
           "cosine_similarity": 0.94558779
         },
         {
+          "identifier": "GO:0030679",
+          "label": "cyanelle ribonuclease P complex",
+          "cosine_similarity": 0.90599843
+        },
+        {
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.87504929
@@ -14942,11 +14978,6 @@
           "identifier": "GO:0005730",
           "label": "nucleolus",
           "cosine_similarity": 0.80416924
-        },
-        {
-          "identifier": "GO:0005732",
-          "label": "sno(s)RNA-containing ribonucleoprotein complex",
-          "cosine_similarity": 0.77865083
         }
       ]
     },
@@ -15156,14 +15187,14 @@
           "cosine_similarity": 0.87504929
         },
         {
+          "identifier": "GO:0030679",
+          "label": "cyanelle ribonuclease P complex",
+          "cosine_similarity": 0.84467556
+        },
+        {
           "identifier": "GO:0005732",
           "label": "sno(s)RNA-containing ribonucleoprotein complex",
           "cosine_similarity": 0.82080178
-        },
-        {
-          "identifier": "GO:0005730",
-          "label": "nucleolus",
-          "cosine_similarity": 0.80595009
         }
       ]
     },
