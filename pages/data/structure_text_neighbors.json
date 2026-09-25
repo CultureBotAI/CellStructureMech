@@ -13389,14 +13389,14 @@
           "cosine_similarity": 0.77005949
         },
         {
+          "identifier": "GO:0034455",
+          "label": "t-UTP complex",
+          "cosine_similarity": 0.76474233
+        },
+        {
           "identifier": "GO:0031262",
           "label": "Ndc80 complex",
           "cosine_similarity": 0.76003592
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.75810811
         }
       ]
     },
@@ -13451,14 +13451,14 @@
           "cosine_similarity": 0.75601709
         },
         {
+          "identifier": "GO:0034455",
+          "label": "t-UTP complex",
+          "cosine_similarity": 0.75185942
+        },
+        {
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.7352824
-        },
-        {
-          "identifier": "GO:0031262",
-          "label": "Ndc80 complex",
-          "cosine_similarity": 0.73239929
         }
       ]
     },
@@ -14056,6 +14056,11 @@
       "label": "Pwp2p-containing subcomplex of 90S preribosome",
       "neighbors": [
         {
+          "identifier": "GO:0034455",
+          "label": "t-UTP complex",
+          "cosine_similarity": 0.91500147
+        },
+        {
           "identifier": "GO:0030690",
           "label": "Noc1p-Noc2p complex",
           "cosine_similarity": 0.77005949
@@ -14074,11 +14079,6 @@
           "identifier": "GO:0030686",
           "label": "90S preribosome",
           "cosine_similarity": 0.74018906
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.72895032
         }
       ]
     },
@@ -14544,6 +14544,37 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.72533206
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0034455",
+      "label": "t-UTP complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0034388",
+          "label": "Pwp2p-containing subcomplex of 90S preribosome",
+          "cosine_similarity": 0.91500147
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.77427027
+        },
+        {
+          "identifier": "GO:0030690",
+          "label": "Noc1p-Noc2p complex",
+          "cosine_similarity": 0.76474233
+        },
+        {
+          "identifier": "GO:0030692",
+          "label": "Noc4p-Nop14p complex",
+          "cosine_similarity": 0.75185942
+        },
+        {
+          "identifier": "GO:0030691",
+          "label": "Noc2p-Noc3p complex",
+          "cosine_similarity": 0.73720544
         }
       ]
     },

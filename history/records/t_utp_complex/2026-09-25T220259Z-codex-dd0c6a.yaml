@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/t_utp_complex.yaml
+  slug: t_utp_complex
+session:
+  id: 2026-09-25T220259Z-codex-dd0c6a
+  timestamp: '2026-09-25T22:02:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added t-UTP complex structure record
+  details: Created the GO:0034455 t-UTP complex record with its Nan1p-containing 90S preribosome
+    subcomplex synonym, seven Saccharomyces t-UTP constituent proteins, GO/PubMed/DOI evidence,
+    a 90S preribosome assembly function, and a nonmechanistic assembly graph grounded in Perez-Fernandez
+    et al. 2007.

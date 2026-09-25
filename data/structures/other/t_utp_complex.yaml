@@ -1,0 +1,355 @@
+identifier: GO:0034455
+label: t-UTP complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that forms a subcomplex of the 90S preribosome and is
+  required for the subsequent assembly of the rest of the preribosome. In S. cerevisiae,
+  it is composed of Utp5p, Utp4p, Nan1p, Utp8p, Utp9p, Utp10 and Utp15p.
+definition_source: GO:0034455
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T21:59:40Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T22:00:40Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Nan1p-containing-subcomplex synonymy, nuclear protein-containing
+    complex parentage, nucleolar and 90S preribosome parthood, seven reviewed-label-only
+    t-UTP constituent rows, budding-yeast scope, a 90S-preribosome-assembly function,
+    GO/PubMed/DOI evidence, a nonmechanistic assembly graph, and a t-UTP subunit-grounding
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Nan1p-containing subcomplex of 90S preribosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034455
+parent_structures:
+- GO:0140513
+part_of:
+- GO:0005730
+- GO:0030686
+components:
+- component_id: utp5_t_utp_subunit
+  label: Utp5 t-UTP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UTP5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Utp5p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this t-UTP subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast t-UTP complex / Nan1p-containing
+    90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034455
+    notes: GO:0034455 defines the t-UTP complex as containing Utp5p.
+- component_id: utp4_t_utp_subunit
+  label: Utp4 t-UTP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UTP4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Utp4p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this t-UTP subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast t-UTP complex / Nan1p-containing
+    90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034455
+    notes: GO:0034455 defines the t-UTP complex as containing Utp4p.
+- component_id: nan1_t_utp_subunit
+  label: Nan1 t-UTP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NAN1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Nan1p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this t-UTP subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast t-UTP complex / Nan1p-containing
+    90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034455
+    notes: GO:0034455 defines the t-UTP complex as containing Nan1p.
+- component_id: utp8_t_utp_subunit
+  label: Utp8 t-UTP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UTP8
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Utp8p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this t-UTP subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast t-UTP complex / Nan1p-containing
+    90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034455
+    notes: GO:0034455 defines the t-UTP complex as containing Utp8p.
+- component_id: utp9_t_utp_subunit
+  label: Utp9 t-UTP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UTP9
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Utp9p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this t-UTP subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast t-UTP complex / Nan1p-containing
+    90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034455
+    notes: GO:0034455 defines the t-UTP complex as containing Utp9p.
+- component_id: utp10_t_utp_subunit
+  label: Utp10 t-UTP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UTP10
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Utp10 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this t-UTP subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast t-UTP complex / Nan1p-containing
+    90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034455
+    notes: GO:0034455 defines the t-UTP complex as containing Utp10.
+- component_id: utp15_t_utp_subunit
+  label: Utp15 t-UTP subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UTP15
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Utp15p
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this t-UTP subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast t-UTP complex / Nan1p-containing
+    90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034455
+    notes: GO:0034455 defines the t-UTP complex as containing Utp15p.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which the t-UTP complex is GO-defined as
+    a Nan1p-containing subcomplex of the 90S preribosome.
+  reference: GO:0034455
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Perez-Fernandez et al. 2007 characterized t-UTP as an early 90S-preribosome
+    assembly subunit in budding yeast.
+  reference: DOI:10.1128/MCB.00380-07
+functions:
+- function_id: 90s_preribosome_assembly
+  label: 90S preribosome assembly
+  grounding: GO:0034463
+  description: The t-UTP complex forms a subcomplex of the 90S preribosome and acts
+    as an essential early assembly subunit for later recruitment of other 90S-preribosome
+    modules.
+  evidence:
+  - reference: GO:0034455
+    notes: GO:0034455 defines t-UTP as a subcomplex required for subsequent assembly
+      of the rest of the 90S preribosome.
+  - reference: GO:0034463
+    notes: GO:0034463 is the Gene Ontology biological-process term for 90S preribosome
+      assembly.
+  - reference: DOI:10.1128/MCB.00380-07
+    notes: Perez-Fernandez et al. 2007 reported that t-UTP assembly is an essential
+      step for engagement of additional 90S subunits on the 35S pre-rRNA.
+evidence:
+- reference: GO:0034455
+  notes: Gene Ontology cellular-component term for the t-UTP complex and its exact
+    Nan1p-containing-subcomplex synonym.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0005730
+  notes: Gene Ontology cellular-component term for the nucleolus.
+- reference: GO:0030686
+  notes: Gene Ontology cellular-component term for the 90S preribosome.
+- reference: GO:0034463
+  notes: Gene Ontology biological-process term for 90S preribosome assembly.
+- reference: PMID:17515605
+  notes: PubMed identifier for Perez-Fernandez et al. 2007, the Molecular and Cellular
+    Biology paper cited by GO:0034455.
+- reference: DOI:10.1128/MCB.00380-07
+  notes: DOI for Perez-Fernandez et al. 2007, 'The 90S preribosome is a multimodular
+    structure that is assembled through a hierarchical mechanism', verified through
+    NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_t_utp_90s_preribosome_assembly
+  title: t-UTP acts as an early 90S preribosome assembly module
+  description: In Saccharomyces cerevisiae, the seven-protein t-UTP complex forms
+    a subcomplex of the 90S preribosome and acts early in the hierarchical assembly
+    pathway.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the seven GO-defined t-UTP constituents and the role
+    of t-UTP as an early 90S-preribosome assembly subunit without resolving assembly
+    order among the seven subunits.
+  nodes:
+  - node_id: utp5_t_utp_subunit
+    label: Utp5 t-UTP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: utp5_t_utp_subunit
+  - node_id: utp4_t_utp_subunit
+    label: Utp4 t-UTP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: utp4_t_utp_subunit
+  - node_id: nan1_t_utp_subunit
+    label: Nan1 t-UTP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: nan1_t_utp_subunit
+  - node_id: utp8_t_utp_subunit
+    label: Utp8 t-UTP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: utp8_t_utp_subunit
+  - node_id: utp9_t_utp_subunit
+    label: Utp9 t-UTP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: utp9_t_utp_subunit
+  - node_id: utp10_t_utp_subunit
+    label: Utp10 t-UTP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: utp10_t_utp_subunit
+  - node_id: utp15_t_utp_subunit
+    label: Utp15 t-UTP subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: utp15_t_utp_subunit
+  - node_id: t_utp_complex
+    label: t-UTP complex
+    node_type: STRUCTURE
+    grounding: GO:0034455
+  - node_id: pre_35s_rrna
+    label: 35S pre-rRNA
+    node_type: RNA
+  - node_id: 90s_preribosome
+    label: 90S preribosome
+    node_type: STRUCTURE
+    grounding: GO:0030686
+  - node_id: 90s_preribosome_assembly
+    label: 90S preribosome assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0034463
+  edges:
+  - subject: utp5_t_utp_subunit
+    predicate: contributes to
+    object: t_utp_complex
+    description: Utp5p is one constituent of the budding-yeast t-UTP complex.
+    evidence:
+    - reference: GO:0034455
+      notes: GO:0034455 defines Utp5p as a component of the t-UTP complex.
+  - subject: utp4_t_utp_subunit
+    predicate: contributes to
+    object: t_utp_complex
+    description: Utp4p is one constituent of the budding-yeast t-UTP complex.
+    evidence:
+    - reference: GO:0034455
+      notes: GO:0034455 defines Utp4p as a component of the t-UTP complex.
+  - subject: nan1_t_utp_subunit
+    predicate: contributes to
+    object: t_utp_complex
+    description: Nan1p is one constituent of the budding-yeast t-UTP complex.
+    evidence:
+    - reference: GO:0034455
+      notes: GO:0034455 defines Nan1p as a component of the t-UTP complex.
+  - subject: utp8_t_utp_subunit
+    predicate: contributes to
+    object: t_utp_complex
+    description: Utp8p is one constituent of the budding-yeast t-UTP complex.
+    evidence:
+    - reference: GO:0034455
+      notes: GO:0034455 defines Utp8p as a component of the t-UTP complex.
+  - subject: utp9_t_utp_subunit
+    predicate: contributes to
+    object: t_utp_complex
+    description: Utp9p is one constituent of the budding-yeast t-UTP complex.
+    evidence:
+    - reference: GO:0034455
+      notes: GO:0034455 defines Utp9p as a component of the t-UTP complex.
+  - subject: utp10_t_utp_subunit
+    predicate: contributes to
+    object: t_utp_complex
+    description: Utp10 is one constituent of the budding-yeast t-UTP complex.
+    evidence:
+    - reference: GO:0034455
+      notes: GO:0034455 defines Utp10 as a component of the t-UTP complex.
+  - subject: utp15_t_utp_subunit
+    predicate: contributes to
+    object: t_utp_complex
+    description: Utp15p is one constituent of the budding-yeast t-UTP complex.
+    evidence:
+    - reference: GO:0034455
+      notes: GO:0034455 defines Utp15p as a component of the t-UTP complex.
+  - subject: t_utp_complex
+    predicate: part of
+    object: 90s_preribosome
+    description: The t-UTP complex is a protein subcomplex of the 90S preribosome.
+    evidence:
+    - reference: GO:0034455
+      notes: GO:0034455 defines t-UTP as a subcomplex of the 90S preribosome.
+  - subject: t_utp_complex
+    predicate: binds
+    object: pre_35s_rrna
+    description: The t-UTP subunit binds in a defined early step to the 35S pre-rRNA.
+    evidence:
+    - reference: DOI:10.1128/MCB.00380-07
+      notes: Perez-Fernandez et al. 2007 reported that discrete protein subcomplexes
+        of the 90S preribosome bind in defined steps to the 35S pre-rRNA and that
+        t-UTP assembly is required for additional assembly routes.
+  - subject: t_utp_complex
+    predicate: supports
+    object: 90s_preribosome_assembly
+    description: The t-UTP complex is required for subsequent assembly of other 90S-preribosome
+      subcomplexes.
+    evidence:
+    - reference: GO:0034455
+      notes: GO:0034455 defines the t-UTP complex as required for subsequent assembly
+        of the rest of the 90S preribosome.
+    - reference: GO:0034463
+      notes: GO:0034463 is the process term for 90S preribosome assembly.
+    - reference: DOI:10.1128/MCB.00380-07
+      notes: Perez-Fernandez et al. 2007 found that t-UTP assembly is essential for
+        engagement of at least five additional 90S-preribosome subunits.
+discussions:
+- discussion_id: resolve_t_utp_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Utp5, Utp4, Nan1,
+    Utp8, Utp9, Utp10 and Utp15 constituents of the t-UTP complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#utp5_t_utp_subunit
+  - components#utp4_t_utp_subunit
+  - components#nan1_t_utp_subunit
+  - components#utp8_t_utp_subunit
+  - components#utp9_t_utp_subunit
+  - components#utp10_t_utp_subunit
+  - components#utp15_t_utp_subunit
+  rationale: GO:0034455 uses Saccharomyces gene-product names while noting that analogous
+    complexes in other eukaryotes can use the term. Exact cross-eukaryotic InterPro,
+    Pfam, NCBIfam or UniProt family boundaries for the seven t-UTP proteins need narrower
+    follow-up curation before these component labels can be grounded.
+  evidence:
+  - reference: GO:0034455
+    notes: The GO:0034455 comment explains that the term name uses Saccharomyces gene-product
+      names because no other names had arisen for the complex.
+  posed_by: codex
+  posed_date: '2026-09-25'
