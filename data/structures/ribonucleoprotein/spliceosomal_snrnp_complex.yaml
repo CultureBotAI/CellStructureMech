@@ -1,0 +1,123 @@
+identifier: GO:0097525
+label: spliceosomal snRNP complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A small ribonucleoprotein complex involved in formation of the spliceosome.
+definition_source: GO:0097525
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T18:17:24Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T18:18:02Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added small nuclear ribonucleoprotein parentage, a SO-grounded snRNA component,
+    a reviewed-label-only spliceosomal snRNP protein cohort, GO/SO evidence, a nonmechanistic
+    assembly graph and a TODO for exact U-series snRNP component boundaries.
+  llm_assisted: true
+parent_structures:
+- GO:0030532
+components:
+- component_id: snrna
+  label: snRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000274
+  role: Small nuclear RNA constituent of spliceosomal snRNP complexes.
+  evidence:
+  - reference: GO:0030532
+    notes: GO:0030532 defines small nuclear ribonucleoprotein complexes as containing
+      at least one RNA of the small nuclear RNA class.
+  - reference: SO:0000274
+    notes: SO:0000274 is the Sequence Ontology term for snRNA and lists small nuclear
+      RNA as an exact synonym.
+- component_id: spliceosomal_snrnp_associated_proteins
+  label: spliceosomal snRNP-associated proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0097525 spans heterogeneous U1, U2, U4, U5, U6 and minor spliceosomal
+    snRNP protein cohorts; no single exact source-neutral protein-family CURIE was
+    assigned.
+  role: Protein constituents associated with snRNAs in spliceosomal small nuclear
+    ribonucleoprotein complexes.
+  evidence:
+  - reference: GO:0030532
+    notes: GO:0030532 defines small nuclear ribonucleoprotein complexes as containing
+      associated proteins as well as snRNA.
+  - reference: GO:0097525
+    notes: GO:0097525 narrows small nuclear ribonucleoprotein complexes to the spliceosomal
+      snRNPs involved in spliceosome formation.
+evidence:
+- reference: GO:0097525
+  notes: Gene Ontology cellular-component term for spliceosomal snRNP complex.
+- reference: GO:0030532
+  notes: Gene Ontology cellular-component parent term for small nuclear ribonucleoprotein
+    complex.
+- reference: SO:0000274
+  notes: Sequence Ontology term for snRNA and its small nuclear RNA exact synonym.
+causal_graphs:
+- graph_id: snrna_protein_constituents_define_spliceosomal_snrnps
+  title: snRNA and proteins form spliceosomal snRNPs
+  description: Spliceosomal snRNP complexes are small nuclear ribonucleoproteins built
+    from snRNA and associated proteins.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the GO-defined snRNA and associated-protein
+    contributions without modeling spliceosomal-snRNP-specific RNA identities, Sm
+    or Lsm rings or protein-family boundaries.
+  nodes:
+  - node_id: snrna
+    label: snRNA
+    node_type: RNA
+    grounding: SO:0000274
+    component_ref: snrna
+  - node_id: spliceosomal_snrnp_associated_proteins
+    label: spliceosomal snRNP-associated proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: spliceosomal_snrnp_associated_proteins
+  - node_id: spliceosomal_snrnp_complex
+    label: spliceosomal snRNP complex
+    node_type: STRUCTURE
+    grounding: GO:0097525
+  edges:
+  - subject: snrna
+    predicate: contributes constituents to
+    object: spliceosomal_snrnp_complex
+    description: snRNAs are RNA constituents of spliceosomal small nuclear ribonucleoprotein
+      complexes.
+    evidence:
+    - reference: GO:0030532
+      notes: GO:0030532 defines each snRNP as containing at least one RNA of the snRNA
+        class.
+  - subject: spliceosomal_snrnp_associated_proteins
+    predicate: contributes constituents to
+    object: spliceosomal_snrnp_complex
+    description: Associated proteins are constituents of spliceosomal small nuclear
+      ribonucleoprotein complexes.
+    evidence:
+    - reference: GO:0030532
+      notes: GO:0030532 defines snRNPs as containing associated proteins.
+discussions:
+- discussion_id: resolve_spliceosomal_snrnp_specific_components
+  prompt: Resolve exact source-neutral RNA and protein boundaries for individual spliceosomal
+    snRNP complexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#snrna
+  - components#spliceosomal_snrnp_associated_proteins
+  - causal_graphs#snrna_protein_constituents_define_spliceosomal_snrnps
+  rationale: The first GO:0097525 record captures only the SO-grounded snRNA class
+    and the associated-protein cohort inherited from the small-nuclear-ribonucleoprotein
+    parent. Individual major and minor spliceosomal snRNP records should resolve specific
+    U-series RNAs, Sm or Lsm rings and snRNP-specific protein family boundaries separately.
+  evidence:
+  - reference: GO:0097525
+  - reference: GO:0030532
+  - reference: SO:0000274
+  posed_by: codex
+  posed_date: '2026-09-25'

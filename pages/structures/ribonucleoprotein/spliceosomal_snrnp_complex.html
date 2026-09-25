@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>spliceosomal snRNP complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>spliceosomal snRNP complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0097525"><code>GO:0097525</code></a> · RIBONUCLEOPROTEIN · RIBONUCLEOPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A small ribonucleoprotein complex involved in formation of the spliceosome. <small>[<a href="http://purl.obolibrary.org/obo/GO_0097525"><code>GO:0097525</code></a>]</small></p>
+
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-snrna"><td>snRNA</td><td>RNA</td><td>part of</td><td><code>SO:0000274</code></td><td></td><td></td><td></td><td>Small nuclear RNA constituent of spliceosomal snRNP complexes.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030532"><code>GO:0030532</code></a> <small>GO:0030532 defines small nuclear ribonucleoprotein complexes as containing at least one RNA of the small nuclear RNA class.</small></li><li><code>SO:0000274</code> <small>SO:0000274 is the Sequence Ontology term for snRNA and lists small nuclear RNA as an exact synonym.</small></li></ul></td></tr>
+<tr id="components-spliceosomal_snrnp_associated_proteins"><td>spliceosomal snRNP-associated proteins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td></td><td>Protein constituents associated with snRNAs in spliceosomal small nuclear ribonucleoprotein complexes.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030532"><code>GO:0030532</code></a> <small>GO:0030532 defines small nuclear ribonucleoprotein complexes as containing associated proteins as well as snRNA.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0097525"><code>GO:0097525</code></a> <small>GO:0097525 narrows small nuclear ribonucleoprotein complexes to the spliceosomal snRNPs involved in spliceosome formation.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-snrna_protein_constituents_define_spliceosomal_snrnps">snRNA and proteins form spliceosomal snRNPs <small>(ASSEMBLY)</small></h3>
+<p>Spliceosomal snRNP complexes are small nuclear ribonucleoproteins built from snRNA and associated proteins.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>snRNA</td><td>contributes constituents to</td><td>spliceosomal snRNP complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030532"><code>GO:0030532</code></a> <small>GO:0030532 defines each snRNP as containing at least one RNA of the snRNA class.</small></li></ul></td></tr>
+<tr><td>spliceosomal snRNP-associated proteins</td><td>contributes constituents to</td><td>spliceosomal snRNP complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030532"><code>GO:0030532</code></a> <small>GO:0030532 defines snRNPs as containing associated proteins.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral RNA and protein boundaries for individual spliceosomal snRNP complexes. <small>The first GO:0097525 record captures only the SO-grounded snRNA class and the associated-protein cohort inherited from the small-nuclear-ribonucleoprotein parent. Individual major and minor spliceosomal snRNP records should resolve specific U-series RNAs, Sm or Lsm rings and snRNP-specific protein family boundaries separately.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097525"><code>GO:0097525</code></a> <small>Gene Ontology cellular-component term for spliceosomal snRNP complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030532"><code>GO:0030532</code></a> <small>Gene Ontology cellular-component parent term for small nuclear ribonucleoprotein complex.</small></li><li><code>SO:0000274</code> <small>Sequence Ontology term for snRNA and its small nuclear RNA exact synonym.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-25T18:17:24Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-25T18:18:02Z</code> codex · EXPANDED_RECORD — Added small nuclear ribonucleoprotein parentage, a SO-grounded snRNA component, a reviewed-label-only spliceosomal snRNP protein cohort, GO/SO evidence, a nonmechanistic assembly graph and a TODO for exact U-series snRNP component boundaries.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/spliceosomal_snrnp_complex.yaml"><code>data/structures/ribonucleoprotein/spliceosomal_snrnp_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

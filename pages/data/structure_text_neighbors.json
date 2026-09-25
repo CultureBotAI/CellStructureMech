@@ -15544,6 +15544,11 @@
       "label": "SL snRNP",
       "neighbors": [
         {
+          "identifier": "GO:0097525",
+          "label": "spliceosomal snRNP complex",
+          "cosine_similarity": 0.89569203
+        },
+        {
           "identifier": "GO:0030532",
           "label": "small nuclear ribonucleoprotein complex",
           "cosine_similarity": 0.87679307
@@ -15562,11 +15567,6 @@
           "identifier": "GO:0005732",
           "label": "sno(s)RNA-containing ribonucleoprotein complex",
           "cosine_similarity": 0.85150657
-        },
-        {
-          "identifier": "GO:0005687",
-          "label": "U4 snRNP",
-          "cosine_similarity": 0.85105892
         }
       ]
     },
@@ -15574,6 +15574,11 @@
       "identifier": "GO:0030532",
       "label": "small nuclear ribonucleoprotein complex",
       "neighbors": [
+        {
+          "identifier": "GO:0097525",
+          "label": "spliceosomal snRNP complex",
+          "cosine_similarity": 0.916102
+        },
         {
           "identifier": "GO:0005732",
           "label": "sno(s)RNA-containing ribonucleoprotein complex",
@@ -15593,11 +15598,6 @@
           "identifier": "GO:0071002",
           "label": "U4atac/U6atac snRNP",
           "cosine_similarity": 0.88159842
-        },
-        {
-          "identifier": "GO:0071001",
-          "label": "U4/U6 snRNP",
-          "cosine_similarity": 0.87872637
         }
       ]
     },
@@ -15678,6 +15678,11 @@
           "cosine_similarity": 0.85150657
         },
         {
+          "identifier": "GO:0097525",
+          "label": "spliceosomal snRNP complex",
+          "cosine_similarity": 0.84564039
+        },
+        {
           "identifier": "GO:0005686",
           "label": "U2 snRNP",
           "cosine_similarity": 0.83505352
@@ -15686,11 +15691,6 @@
           "identifier": "GO:0005685",
           "label": "U1 snRNP",
           "cosine_similarity": 0.82473949
-        },
-        {
-          "identifier": "GO:0005683",
-          "label": "U7 snRNP",
-          "cosine_similarity": 0.82283167
         }
       ]
     },
@@ -15709,6 +15709,11 @@
           "cosine_similarity": 0.94522551
         },
         {
+          "identifier": "GO:0097525",
+          "label": "spliceosomal snRNP complex",
+          "cosine_similarity": 0.94078894
+        },
+        {
           "identifier": "GO:0071014",
           "label": "post-mRNA release spliceosomal complex",
           "cosine_similarity": 0.94048384
@@ -15717,11 +15722,37 @@
           "identifier": "GO:0071012",
           "label": "catalytic step 1 spliceosome",
           "cosine_similarity": 0.93902101
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097525",
+      "label": "spliceosomal snRNP complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0071023",
+          "label": "trans spliceosomal complex",
+          "cosine_similarity": 0.9504347
         },
         {
-          "identifier": "GO:0005689",
-          "label": "U12-type spliceosomal complex",
-          "cosine_similarity": 0.92954649
+          "identifier": "GO:0005681",
+          "label": "spliceosomal complex",
+          "cosine_similarity": 0.94078894
+        },
+        {
+          "identifier": "GO:0071020",
+          "label": "post-spliceosomal complex",
+          "cosine_similarity": 0.9190517
+        },
+        {
+          "identifier": "GO:0030532",
+          "label": "small nuclear ribonucleoprotein complex",
+          "cosine_similarity": 0.916102
+        },
+        {
+          "identifier": "GO:0071021",
+          "label": "U2-type post-spliceosomal complex",
+          "cosine_similarity": 0.91303261
         }
       ]
     },
@@ -15797,6 +15828,11 @@
           "cosine_similarity": 0.95071938
         },
         {
+          "identifier": "GO:0097525",
+          "label": "spliceosomal snRNP complex",
+          "cosine_similarity": 0.9504347
+        },
+        {
           "identifier": "GO:0071022",
           "label": "U12-type post-spliceosomal complex",
           "cosine_similarity": 0.9492801
@@ -15810,11 +15846,6 @@
           "identifier": "GO:0005681",
           "label": "spliceosomal complex",
           "cosine_similarity": 0.92865048
-        },
-        {
-          "identifier": "GO:0071014",
-          "label": "post-mRNA release spliceosomal complex",
-          "cosine_similarity": 0.92529756
         }
       ]
     },
