@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/sno_s_rna_containing_ribonucleoprotein_complex.yaml
+  slug: sno_s_rna_containing_ribonucleoprotein_complex
+session:
+  id: 2026-09-25T120751Z-claude-code-8c28d6
+  timestamp: '2026-09-25T12:07:51Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1573
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1572
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - history
+  summary: Link sno(s)RNA-containing ribonucleoprotein complex PR
+  details: 'Resolved review issue #1573 by linking the GO:0005732 sno(s)RNA-containing ribonucleoprotein
+    complex curation to PR #1572 after opening the pull request for adversarial review; no
+    semantic record changes were needed.'

@@ -14815,14 +14815,14 @@
           "cosine_similarity": 0.80667675
         },
         {
+          "identifier": "GO:0005732",
+          "label": "sno(s)RNA-containing ribonucleoprotein complex",
+          "cosine_similarity": 0.80057346
+        },
+        {
           "identifier": "GO:0030532",
           "label": "small nuclear ribonucleoprotein complex",
           "cosine_similarity": 0.79120883
-        },
-        {
-          "identifier": "GO:0000178",
-          "label": "exosome (RNase complex)",
-          "cosine_similarity": 0.78266841
         }
       ]
     },
@@ -15037,9 +15037,9 @@
           "cosine_similarity": 0.79028796
         },
         {
-          "identifier": "GO:0030680",
-          "label": "dimeric ribonuclease P complex",
-          "cosine_similarity": 0.77424294
+          "identifier": "GO:0005732",
+          "label": "sno(s)RNA-containing ribonucleoprotein complex",
+          "cosine_similarity": 0.77822549
         }
       ]
     },
@@ -15084,6 +15084,11 @@
           "cosine_similarity": 0.8898535
         },
         {
+          "identifier": "GO:0005732",
+          "label": "sno(s)RNA-containing ribonucleoprotein complex",
+          "cosine_similarity": 0.82080178
+        },
+        {
           "identifier": "GO:0005730",
           "label": "nucleolus",
           "cosine_similarity": 0.80595009
@@ -15097,11 +15102,6 @@
           "identifier": "GO:0030532",
           "label": "small nuclear ribonucleoprotein complex",
           "cosine_similarity": 0.79650764
-        },
-        {
-          "identifier": "GO:0000178",
-          "label": "exosome (RNase complex)",
-          "cosine_similarity": 0.79251001
         }
       ]
     },
@@ -15187,14 +15187,14 @@
           "cosine_similarity": 0.85924427
         },
         {
+          "identifier": "GO:0005732",
+          "label": "sno(s)RNA-containing ribonucleoprotein complex",
+          "cosine_similarity": 0.85150657
+        },
+        {
           "identifier": "GO:0005687",
           "label": "U4 snRNP",
           "cosine_similarity": 0.85105892
-        },
-        {
-          "identifier": "GO:0071023",
-          "label": "trans spliceosomal complex",
-          "cosine_similarity": 0.85105779
         }
       ]
     },
@@ -15202,6 +15202,11 @@
       "identifier": "GO:0030532",
       "label": "small nuclear ribonucleoprotein complex",
       "neighbors": [
+        {
+          "identifier": "GO:0005732",
+          "label": "sno(s)RNA-containing ribonucleoprotein complex",
+          "cosine_similarity": 0.91565821
+        },
         {
           "identifier": "GO:0005683",
           "label": "U7 snRNP",
@@ -15221,11 +15226,6 @@
           "identifier": "GO:0071001",
           "label": "U4/U6 snRNP",
           "cosine_similarity": 0.87872637
-        },
-        {
-          "identifier": "GO:0005685",
-          "label": "U1 snRNP",
-          "cosine_similarity": 0.87768977
         }
       ]
     },
@@ -15257,6 +15257,37 @@
           "identifier": "GO:0005730",
           "label": "nucleolus",
           "cosine_similarity": 0.80255104
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005732",
+      "label": "sno(s)RNA-containing ribonucleoprotein complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030532",
+          "label": "small nuclear ribonucleoprotein complex",
+          "cosine_similarity": 0.91565821
+        },
+        {
+          "identifier": "GO:0071024",
+          "label": "SL snRNP",
+          "cosine_similarity": 0.85150657
+        },
+        {
+          "identifier": "GO:0005686",
+          "label": "U2 snRNP",
+          "cosine_similarity": 0.83505352
+        },
+        {
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.82473949
+        },
+        {
+          "identifier": "GO:0005683",
+          "label": "U7 snRNP",
+          "cosine_similarity": 0.82283167
         }
       ]
     },
@@ -15337,6 +15368,11 @@
           "cosine_similarity": 0.76698821
         },
         {
+          "identifier": "GO:0005732",
+          "label": "sno(s)RNA-containing ribonucleoprotein complex",
+          "cosine_similarity": 0.76364529
+        },
+        {
           "identifier": "GO:0000243",
           "label": "commitment complex",
           "cosine_similarity": 0.7602014
@@ -15345,11 +15381,6 @@
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.75862663
-        },
-        {
-          "identifier": "GO:0005684",
-          "label": "U2-type spliceosomal complex",
-          "cosine_similarity": 0.75423302
         }
       ]
     },

@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/sno_s_rna_containing_ribonucleoprotein_complex.yaml
+  slug: sno_s_rna_containing_ribonucleoprotein_complex
+session:
+  id: 2026-09-25T115703Z-claude-code-229d50
+  timestamp: '2026-09-25T11:57:03Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add sno(s)RNA-containing ribonucleoprotein complex record
+  details: Added a new GO:0005732 sno(s)RNA-containing ribonucleoprotein complex record with
+    ribonucleoprotein-complex parentage, reviewed-label-only sno(s)RNA and sno(s)RNP-associated
+    protein components, a conservative constituent graph, and a curation TODO for exact subclass
+    RNA and protein-family boundaries. Validated the new record with targeted LinkML validation.
