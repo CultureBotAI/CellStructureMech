@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7SK snRNP · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>7SK snRNP</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0120259"><code>GO:0120259</code></a> · RIBONUCLEOPROTEIN · RIBONUCLEOPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A ribonucleoprotein complex that contains the 7SK snRNA. The 7SK snRNP plays a central role in RNA polymerase II elongation control by regulating the availability of active P-TEFb. <small>[<a href="http://purl.obolibrary.org/obo/GO_0120259"><code>GO:0120259</code></a>]</small></p>
+<p><strong>Synonyms:</strong> snRNP 7SK</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-rna_7sk"><td>7SK RNA</td><td>RNA</td><td>part of</td><td><code>SO:0002340</code></td><td></td><td></td><td></td><td>7SK RNA constituent named in the 7SK snRNP definition and grounded to the 7SK RNA Sequence Ontology term.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0120259"><code>GO:0120259</code></a> <small>GO:0120259 defines the 7SK snRNP as containing 7SK snRNA.</small></li><li><code>SO:0002340</code> <small>SO:0002340 is the Sequence Ontology RNA_7SK term and lists 7SK RNA as an exact synonym.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-rna_7sk_constituent">7SK RNA is a 7SK snRNP constituent <small>(ASSEMBLY)</small></h3>
+<p>The 7SK snRNP contains 7SK RNA.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>7SK RNA</td><td>contributes constituents to</td><td>7SK snRNP</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0120259"><code>GO:0120259</code></a> <small>GO:0120259 defines the 7SK snRNP as containing 7SK snRNA.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral protein components that form the 7SK snRNP. <small>The first GO:0120259 record captures 7SK RNA, which defines the 7SK snRNP in GO. Protein-family and subcomplex boundaries should be resolved before expanding this component list.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0120259"><code>GO:0120259</code></a> <small>Gene Ontology cellular-component term for the 7SK snRNP and its exact synonym.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030532"><code>GO:0030532</code></a> <small>Gene Ontology cellular-component parent term for small nuclear ribonucleoprotein complex.</small></li><li><code>SO:0002340</code> <small>Sequence Ontology term for RNA_7SK; OLS lists 7SK RNA as an exact synonym.</small></li><li><a href="https://doi.org/10.1016/j.molcel.2008.01.003"><code>DOI:10.1016/j.molcel.2008.01.003</code></a> <small>DOI for He, Jahchan, Hong, Li, Bayfield, Maraia, Luo and Zhou 2008 as reported by NCBI E-utilities.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/18249148"><code>PMID:18249148</code></a> <small>PubMed identifier for He, Jahchan, Hong, Li, Bayfield, Maraia, Luo and Zhou 2008 as reported by NCBI E-utilities.</small></li><li><a href="https://doi.org/10.1093/nar/gkx262"><code>DOI:10.1093/nar/gkx262</code></a> <small>DOI for Brogie and Price 2017, Reconstitution of a functional 7SK snRNP, as reported by NCBI E-utilities.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/28431135"><code>PMID:28431135</code></a> <small>PubMed identifier for Brogie and Price 2017 as reported by NCBI E-utilities.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-25T03:39:26Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-25T03:40:06Z</code> codex · EXPANDED_RECORD — Added the GO exact synonym, small nuclear RNP parentage, the SO-grounded 7SK RNA component, QuickGO/PubMed evidence, a minimal 7SK RNA constituent graph and a protein-component grounding TODO.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/7sk_snrnp.yaml"><code>data/structures/ribonucleoprotein/7sk_snrnp.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
