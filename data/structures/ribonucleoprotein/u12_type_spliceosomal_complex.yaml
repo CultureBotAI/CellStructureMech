@@ -1,0 +1,150 @@
+identifier: GO:0005689
+label: U12-type spliceosomal complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: Any spliceosomal complex that forms during the splicing of a messenger
+  RNA primary transcript to excise an intron; the series of U12-type spliceosomal
+  complexes is involved in the splicing of the majority of introns that contain atypical
+  AT-AC terminal dinucleotides, as well as other non-canonical introns. The entire
+  splice site signal, not just the terminal dinucleotides, is involved in determining
+  which spliceosome utilizes the site.
+definition_source: GO:0005689
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T07:22:36Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T07:23:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact and narrow synonyms, spliceosomal-complex parentage, a reviewed-label-only
+    state-variable U12-type snRNP cohort, a conservative parent-level snRNP graph
+    and a TODO for exact state-specific U12-type snRNP boundaries.
+  llm_assisted: true
+- timestamp: '2026-09-25T07:35:13Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1559: widened the state-boundary TODO and record-level evidence to cover
+    all six GO:0005689 child states.'
+  llm_assisted: true
+synonyms:
+- synonym_text: minor (U12-type) spliceosomal complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005689
+- synonym_text: minor spliceosomal complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005689
+- synonym_text: AT-AC spliceosomal complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0005689
+parent_structures:
+- GO:0005681
+components:
+- component_id: u12_type_spliceosomal_snrnps
+  label: U12-type spliceosomal snRNPs
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO:0005689 parent spans state-variable U11/U12, U4atac/U6atac.U5
+    and activated U12 snRNP-containing complexes; no single exact source-neutral CURIE
+    was assigned for the minor-spliceosome snRNP cohort.
+  role: State-variable small nuclear ribonucleoprotein constituents of U12-type spliceosomal
+    complexes.
+  evidence:
+  - reference: GO:0005689
+    notes: GO:0005689 is the Gene Ontology cellular-component term for the series
+      of spliceosomal complexes that form during U12-type splicing.
+  - reference: GO:0071015
+    notes: GO:0071015 defines the U12-type prespliceosome by cooperative binding of
+      heterodimeric U11/U12 snRNP.
+  - reference: GO:0071016
+    notes: GO:0071016 defines the U12-type precatalytic spliceosome by U4atac/U6atac.U5
+      tri-snRNP recruitment to the U12-type prespliceosome.
+  - reference: GO:0071017
+    notes: GO:0071017 defines the U12-type catalytic step 1 spliceosome as the state
+      that retains U12, U5 and U6atac snRNPs after U11 and U4atac snRNP displacement.
+evidence:
+- reference: GO:0005689
+  notes: Gene Ontology cellular-component term for U12-type spliceosomal complex and
+    its GO synonyms.
+- reference: GO:0005681
+  notes: Gene Ontology cellular-component parent term for spliceosomal complex.
+- reference: GO:0071015
+  notes: Gene Ontology cellular-component term for the U12-type prespliceosome child
+    state.
+- reference: GO:0071016
+  notes: Gene Ontology cellular-component term for the U12-type precatalytic spliceosome
+    child state.
+- reference: GO:0071017
+  notes: Gene Ontology cellular-component term for the U12-type catalytic step 1 spliceosome
+    child state.
+- reference: GO:0071018
+  notes: Gene Ontology cellular-component term for the U12-type catalytic step 2 spliceosome
+    child state.
+- reference: GO:0071022
+  notes: Gene Ontology cellular-component term for the U12-type post-spliceosomal
+    complex child state.
+- reference: GO:0071019
+  notes: Gene Ontology cellular-component term for the U12-type post-mRNA release
+    spliceosomal complex child state.
+causal_graphs:
+- graph_id: u12_type_spliceosomal_snrnp_states
+  title: U12-type spliceosomal complexes use state-variable snRNPs
+  description: U12-type spliceosomal complexes are the series of minor-spliceosome
+    complexes with snRNP constituents that vary by splicing-cycle state.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the generic state-variable minor-spliceosome
+    snRNP cohort without asserting that every U12-type spliceosomal complex contains
+    every U11, U12, U4atac, U5 or U6atac snRNP state-specific constituent.
+  nodes:
+  - node_id: u12_type_spliceosomal_snrnps
+    label: U12-type spliceosomal snRNPs
+    node_type: STRUCTURE
+    component_ref: u12_type_spliceosomal_snrnps
+  - node_id: u12_type_spliceosomal_complex
+    label: U12-type spliceosomal complex
+    node_type: STRUCTURE
+    grounding: GO:0005689
+  edges:
+  - subject: u12_type_spliceosomal_snrnps
+    predicate: contributes state-dependent constituents to
+    object: u12_type_spliceosomal_complex
+    description: U12-type spliceosomal complexes are snRNP-based complexes whose precise
+      small nuclear ribonucleoprotein constituents vary by splicing-cycle state.
+    evidence:
+    - reference: GO:0005689
+      notes: GO:0005689 describes U12-type spliceosomal complexes as the series of
+        spliceosomal complexes that form during U12-type splicing.
+    - reference: GO:0071015
+      notes: GO:0071015 grounds one child state with U11/U12 snRNP bound to splice
+        signals.
+    - reference: GO:0071017
+      notes: GO:0071017 grounds one downstream child state that retains U12, U5 and
+        U6atac snRNPs after U11 and U4atac displacement.
+discussions:
+- discussion_id: resolve_u12_type_state_snrnp_boundaries
+  prompt: Resolve exact source-neutral snRNP membership for each U12-type spliceosomal
+    state.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#u12_type_spliceosomal_snrnps
+  - causal_graphs#u12_type_spliceosomal_snrnp_states
+  rationale: The first GO:0005689 parent record captures only the state-variable minor-spliceosome
+    snRNP cohort supported by GO. Child records for the U12-type prespliceosome, precatalytic
+    complex, catalytic step 1 and step 2 complexes, post-spliceosomal complex and
+    post-mRNA release complex should carry the exact U11/U12, U4atac/U6atac.U5, U12,
+    U5 and U6atac constituent boundaries that apply to those specific states.
+  evidence:
+  - reference: GO:0005689
+  - reference: GO:0071015
+  - reference: GO:0071016
+  - reference: GO:0071017
+  - reference: GO:0071018
+  - reference: GO:0071022
+  - reference: GO:0071019
+  posed_by: codex
+  posed_date: '2026-09-25'

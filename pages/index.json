@@ -4464,6 +4464,15 @@
   "definition": "A spliceosomal complex that is formed by the cooperative binding of the heterodimeric U11/U12 snRNP to the 5' splice site and the branch point sequence. The U12-type prespliceosome includes many proteins in addition to those found in the U11/U12 heterodimeric snRNPs. Commitment to a given pair of 5' and 3' splice sites occurs at the time of prespliceosome formation."
  },
  {
+  "identifier": "GO:0005689",
+  "label": "U12-type spliceosomal complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/u12_type_spliceosomal_complex.html",
+  "definition": "Any spliceosomal complex that forms during the splicing of a messenger RNA primary transcript to excise an intron; the series of U12-type spliceosomal complexes is involved in the splicing of the majority of introns that contain atypical AT-AC terminal dinucleotides, as well as other non-canonical introns. The entire splice site signal, not just the terminal dinucleotides, is involved in determining which spliceosome utilizes the site."
+ },
+ {
   "identifier": "GO:0005685",
   "label": "U1 snRNP",
   "category": "RIBONUCLEOPROTEIN",
