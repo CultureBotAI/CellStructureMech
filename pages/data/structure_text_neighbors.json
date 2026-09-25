@@ -13281,6 +13281,11 @@
       "label": "mitochondrial ribonuclease P complex",
       "neighbors": [
         {
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.84659594
+        },
+        {
           "identifier": "GO:0005655",
           "label": "nucleolar ribonuclease P complex",
           "cosine_similarity": 0.82395119
@@ -13299,11 +13304,6 @@
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.80525848
-        },
-        {
-          "identifier": "GO:0032299",
-          "label": "ribonuclease H2 complex",
-          "cosine_similarity": 0.77138984
         }
       ]
     },
@@ -14154,6 +14154,11 @@
           "cosine_similarity": 0.91238643
         },
         {
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.79557174
+        },
+        {
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.79144835
@@ -14167,11 +14172,6 @@
           "identifier": "GO:0005655",
           "label": "nucleolar ribonuclease P complex",
           "cosine_similarity": 0.77854601
-        },
-        {
-          "identifier": "GO:0031251",
-          "label": "PAN complex",
-          "cosine_similarity": 0.77195531
         }
       ]
     },
@@ -14190,6 +14190,11 @@
           "cosine_similarity": 0.80017753
         },
         {
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.79891452
+        },
+        {
           "identifier": "GO:0030681",
           "label": "multimeric ribonuclease P complex",
           "cosine_similarity": 0.78062912
@@ -14198,11 +14203,6 @@
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.77512628
-        },
-        {
-          "identifier": "GO:0000176",
-          "label": "nuclear exosome (RNase complex)",
-          "cosine_similarity": 0.77135648
         }
       ]
     },
@@ -14903,6 +14903,11 @@
           "cosine_similarity": 0.91434258
         },
         {
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.91062127
+        },
+        {
           "identifier": "GO:0005655",
           "label": "nucleolar ribonuclease P complex",
           "cosine_similarity": 0.90599843
@@ -14911,11 +14916,6 @@
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.84467556
-        },
-        {
-          "identifier": "GO:0000177",
-          "label": "cytoplasmic exosome (RNase complex)",
-          "cosine_similarity": 0.80997121
         }
       ]
     },
@@ -14939,14 +14939,14 @@
           "cosine_similarity": 0.9382085
         },
         {
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.81348674
+        },
+        {
           "identifier": "GO:0030679",
           "label": "cyanelle ribonuclease P complex",
           "cosine_similarity": 0.80997121
-        },
-        {
-          "identifier": "GO:0030681",
-          "label": "multimeric ribonuclease P complex",
-          "cosine_similarity": 0.80429124
         }
       ]
     },
@@ -14991,6 +14991,11 @@
           "cosine_similarity": 0.97087079
         },
         {
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.95414449
+        },
+        {
           "identifier": "GO:0005655",
           "label": "nucleolar ribonuclease P complex",
           "cosine_similarity": 0.95045653
@@ -15004,11 +15009,6 @@
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.8898535
-        },
-        {
-          "identifier": "GO:0101019",
-          "label": "nucleolar exosome (RNase complex)",
-          "cosine_similarity": 0.81621418
         }
       ]
     },
@@ -15084,6 +15084,11 @@
           "cosine_similarity": 0.97087079
         },
         {
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.95632448
+        },
+        {
           "identifier": "GO:0005655",
           "label": "nucleolar ribonuclease P complex",
           "cosine_similarity": 0.94558779
@@ -15097,11 +15102,6 @@
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.88322698
-        },
-        {
-          "identifier": "GO:0030678",
-          "label": "mitochondrial ribonuclease P complex",
-          "cosine_similarity": 0.81292455
         }
       ]
     },
@@ -15125,14 +15125,14 @@
           "cosine_similarity": 0.94533559
         },
         {
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.82374733
+        },
+        {
           "identifier": "GO:0005655",
           "label": "nucleolar ribonuclease P complex",
           "cosine_similarity": 0.81405881
-        },
-        {
-          "identifier": "GO:0030681",
-          "label": "multimeric ribonuclease P complex",
-          "cosine_similarity": 0.80897266
         }
       ]
     },
@@ -15161,9 +15161,9 @@
           "cosine_similarity": 0.85246286
         },
         {
-          "identifier": "GO:0030680",
-          "label": "dimeric ribonuclease P complex",
-          "cosine_similarity": 0.81621418
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.82142087
         }
       ]
     },
@@ -15182,6 +15182,11 @@
           "cosine_similarity": 0.94558779
         },
         {
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.9411304
+        },
+        {
           "identifier": "GO:0030679",
           "label": "cyanelle ribonuclease P complex",
           "cosine_similarity": 0.90599843
@@ -15190,11 +15195,6 @@
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.87504929
-        },
-        {
-          "identifier": "GO:0101019",
-          "label": "nucleolar exosome (RNase complex)",
-          "cosine_similarity": 0.85246286
         }
       ]
     },
@@ -15342,14 +15342,14 @@
           "cosine_similarity": 0.81137098
         },
         {
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.79641132
+        },
+        {
           "identifier": "GO:0030532",
           "label": "small nuclear ribonucleoprotein complex",
           "cosine_similarity": 0.79028796
-        },
-        {
-          "identifier": "GO:0005732",
-          "label": "sno(s)RNA-containing ribonucleoprotein complex",
-          "cosine_similarity": 0.77822549
         }
       ]
     },
@@ -15404,14 +15404,45 @@
           "cosine_similarity": 0.87504929
         },
         {
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.8658137
+        },
+        {
           "identifier": "GO:0030679",
           "label": "cyanelle ribonuclease P complex",
           "cosine_similarity": 0.84467556
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030677",
+      "label": "ribonuclease P complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030681",
+          "label": "multimeric ribonuclease P complex",
+          "cosine_similarity": 0.95632448
         },
         {
-          "identifier": "GO:0005732",
-          "label": "sno(s)RNA-containing ribonucleoprotein complex",
-          "cosine_similarity": 0.82080178
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.95414449
+        },
+        {
+          "identifier": "GO:0005655",
+          "label": "nucleolar ribonuclease P complex",
+          "cosine_similarity": 0.9411304
+        },
+        {
+          "identifier": "GO:0030679",
+          "label": "cyanelle ribonuclease P complex",
+          "cosine_similarity": 0.91062127
+        },
+        {
+          "identifier": "GO:0000172",
+          "label": "ribonuclease MRP complex",
+          "cosine_similarity": 0.8658137
         }
       ]
     },
@@ -15668,6 +15699,11 @@
       "label": "telomerase holoenzyme complex",
       "neighbors": [
         {
+          "identifier": "GO:0030677",
+          "label": "ribonuclease P complex",
+          "cosine_similarity": 0.77970998
+        },
+        {
           "identifier": "GO:0005681",
           "label": "spliceosomal complex",
           "cosine_similarity": 0.76881265
@@ -15686,11 +15722,6 @@
           "identifier": "GO:0005732",
           "label": "sno(s)RNA-containing ribonucleoprotein complex",
           "cosine_similarity": 0.76364529
-        },
-        {
-          "identifier": "GO:0000243",
-          "label": "commitment complex",
-          "cosine_similarity": 0.7602014
         }
       ]
     },

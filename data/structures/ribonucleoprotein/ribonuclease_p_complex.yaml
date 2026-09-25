@@ -1,0 +1,144 @@
+identifier: GO:0030677
+label: ribonuclease P complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex that catalyzes cleavage of the leader sequence
+  of precursor tRNAs (pre-tRNAs), generating the mature 5' end of tRNAs.
+definition_source: GO:0030677
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T16:50:03Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T16:50:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact synonymy, endoribonuclease and ribonucleoprotein parentage,
+    GO-backed tRNA 5-prime leader cleavage functions, GO/PubMed evidence, a nonmechanistic
+    function graph and a TODO for source-neutral RNase P component boundaries.
+  llm_assisted: true
+synonyms:
+- synonym_text: RNase P complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030677
+parent_structures:
+- GO:1902555
+- GO:1990904
+functions:
+- function_id: ribonuclease_p_activity
+  label: ribonuclease P activity
+  grounding: GO:0004526
+  description: The ribonuclease P complex removes 5-prime extra nucleotides from precursor
+    tRNA by endonucleolytic RNA cleavage.
+  evidence:
+  - reference: GO:0004526
+    notes: GO:0004526 is the Gene Ontology molecular-function term for ribonuclease
+      P activity.
+  - reference: GO:0030677
+    notes: GO:0030677 defines RNase P complexes as catalyzing leader-sequence cleavage
+      of precursor tRNAs.
+- function_id: trna_5_leader_removal
+  label: tRNA 5'-leader removal
+  grounding: GO:0001682
+  description: RNase P complexes generate mature tRNA 5-prime ends by cleaving 5-prime
+    leader sequences from pre-tRNAs.
+  evidence:
+  - reference: GO:0001682
+    notes: GO:0001682 is the Gene Ontology biological-process term for tRNA 5'-leader
+      removal.
+  - reference: GO:0030677
+    notes: GO:0030677 defines RNase P complexes by their cleavage of precursor tRNAs
+      to generate mature 5-prime tRNA ends.
+evidence:
+- reference: GO:0030677
+  notes: Gene Ontology cellular-component term for the ribonuclease P complex and
+    its exact synonym.
+- reference: GO:1902555
+  notes: Gene Ontology cellular-component parent term for endoribonuclease complexes.
+- reference: GO:1990904
+  notes: Gene Ontology cellular-component parent term for ribonucleoprotein complexes.
+- reference: GO:0004526
+  notes: Gene Ontology molecular-function term for ribonuclease P activity.
+- reference: GO:0001682
+  notes: Gene Ontology biological-process term for tRNA 5'-leader removal.
+- reference: PMID:12045094
+  notes: Publication cited in GO:0030677 definition xrefs.
+causal_graphs:
+- graph_id: rnase_p_trna_leader_cleavage
+  title: RNase P processes precursor tRNAs
+  description: GO defines the ribonuclease P complex as a ribonucleoprotein complex
+    that cleaves precursor-tRNA leader sequences to generate mature tRNA 5-prime ends.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the shared GO-defined precursor-tRNA 5-prime leader
+    cleavage function of RNase P complexes without resolving bacterial, archaeal,
+    nucleolar, cyanelle or mitochondrial subunit architectures.
+  nodes:
+  - node_id: ribonuclease_p_complex
+    label: ribonuclease P complex
+    node_type: STRUCTURE
+    grounding: GO:0030677
+  - node_id: pre_trna
+    label: precursor tRNA
+    node_type: GENETIC_ELEMENT
+  - node_id: ribonuclease_p_activity
+    label: ribonuclease P activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004526
+  - node_id: trna_5_leader_removal
+    label: tRNA 5'-leader removal
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0001682
+  edges:
+  - subject: ribonuclease_p_complex
+    predicate: enables
+    object: ribonuclease_p_activity
+    description: RNase P complexes catalyze leader-sequence cleavage of precursor
+      tRNAs.
+    evidence:
+    - reference: GO:0030677
+      notes: GO:0030677 defines the complex by cleavage of precursor-tRNA leader sequences.
+    - reference: GO:0004526
+      notes: GO:0004526 is the molecular-function term for ribonuclease P activity.
+  - subject: pre_trna
+    predicate: has 5-prime leader removed by
+    object: ribonuclease_p_activity
+    description: Ribonuclease P activity removes 5-prime extra nucleotides from tRNA
+      precursors.
+    evidence:
+    - reference: GO:0004526
+      notes: GO:0004526 defines ribonuclease P activity as endonucleolytic removal
+        of 5-prime extra nucleotides from tRNA precursor.
+  - subject: ribonuclease_p_complex
+    predicate: supports
+    object: trna_5_leader_removal
+    description: RNase P complexes generate mature tRNA 5-prime ends from precursor
+      tRNAs.
+    evidence:
+    - reference: GO:0030677
+      notes: GO:0030677 defines RNase P complexes as generating mature 5-prime ends
+        of tRNAs by precursor-tRNA cleavage.
+    - reference: GO:0001682
+      notes: GO:0001682 is the biological-process term for tRNA 5'-leader removal.
+discussions:
+- discussion_id: resolve_rnase_p_component_boundaries
+  prompt: Resolve source-neutral component boundaries across RNase P complex lineages.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#rnase_p_trna_leader_cleavage
+  rationale: GO:0030677 captures the shared RNase P ribonucleoprotein identity and
+    pre-tRNA 5-prime leader cleavage function. Exact RNA and protein components should
+    be curated on source-specific dimeric, multimeric, nucleolar, cyanelle and organellar
+    children before assigning source-neutral constituents to this generic parent record.
+  evidence:
+  - reference: GO:0030677
+  - reference: GO:0030680
+  - reference: GO:0030681
+  - reference: GO:0030678
+  - reference: GO:0030679
+  - reference: GO:0005655
+  posed_by: codex
+  posed_date: '2026-09-25'
