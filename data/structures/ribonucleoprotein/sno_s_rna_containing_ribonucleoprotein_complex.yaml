@@ -1,0 +1,121 @@
+identifier: GO:0005732
+label: sno(s)RNA-containing ribonucleoprotein complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: 'A ribonucleoprotein complex that contains an RNA molecule of the snoRNA
+  family and associated proteins. Many are involved in a step of processing of rRNA
+  molecules: cleavage, 2''-O-methylation, or pseudouridylation, but other RNA types
+  can be targets as well. The majority fall into one of two classes, box C/D type
+  or box H/ACA type, which are conserved across eukaryotes and archaea. Other members
+  include the telomerase RNA and the ribonuclease MRP RNA.'
+definition_source: GO:0005732
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T11:55:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T11:56:25Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ribonucleoprotein-complex parentage, reviewed-label-only sno(s)RNA
+    and sno(s)RNP-associated protein components, a conservative constituent graph
+    and a TODO for exact sno(s)RNP subclass boundaries.
+  llm_assisted: true
+parent_structures:
+- GO:1990904
+components:
+- component_id: sno_s_rna
+  label: sno(s)RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005732 spans eukaryotic snoRNA- and archaeal sRNA-containing
+    RNPs, including box C/D and box H/ACA subclasses; no single exact Sequence Ontology
+    CURIE was assigned for this combined RNA cohort in the first record.
+  role: Small nucleolar or small RNA-family RNA constituent that defines a sno(s)RNA-containing
+    ribonucleoprotein complex.
+  evidence:
+  - reference: GO:0005732
+    notes: GO:0005732 defines sno(s)RNA-containing ribonucleoprotein complexes as
+      containing a snoRNA-family RNA molecule and associated proteins.
+- component_id: sno_s_rnp_associated_proteins
+  label: sno(s)RNP-associated proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005732 defines the complexes by associated proteins in addition
+    to a sno(s)RNA, but exact source-neutral protein-family boundaries for box C/D,
+    box H/ACA and other sno(s)RNP subclasses were not resolved in this first record.
+  role: Protein constituents associated with snoRNA-family RNAs in sno(s)RNA-containing
+    ribonucleoprotein complexes.
+  evidence:
+  - reference: GO:0005732
+    notes: GO:0005732 defines sno(s)RNA-containing ribonucleoprotein complexes as
+      containing associated proteins in addition to a snoRNA-family RNA molecule.
+evidence:
+- reference: GO:0005732
+  notes: Gene Ontology cellular-component term for sno(s)RNA-containing ribonucleoprotein
+    complex.
+- reference: GO:1990904
+  notes: Gene Ontology cellular-component parent term for ribonucleoprotein complex.
+causal_graphs:
+- graph_id: sno_s_rnp_constituents
+  title: sno(s)RNA and associated proteins form sno(s)RNPs
+  description: sno(s)RNA-containing ribonucleoprotein complexes contain an RNA of
+    the snoRNA family together with associated proteins.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the generic GO-defined RNA and associated-protein
+    cohorts without modeling exact box C/D, box H/ACA, telomerase-RNA or ribonuclease-MRP
+    component boundaries.
+  nodes:
+  - node_id: sno_s_rna
+    label: sno(s)RNA
+    node_type: RNA
+    component_ref: sno_s_rna
+  - node_id: sno_s_rnp_associated_proteins
+    label: sno(s)RNP-associated proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: sno_s_rnp_associated_proteins
+  - node_id: sno_s_rna_containing_ribonucleoprotein_complex
+    label: sno(s)RNA-containing ribonucleoprotein complex
+    node_type: STRUCTURE
+    grounding: GO:0005732
+  edges:
+  - subject: sno_s_rna
+    predicate: contributes constituents to
+    object: sno_s_rna_containing_ribonucleoprotein_complex
+    description: sno(s)RNA-family RNA is the RNA constituent represented in the GO:0005732
+      definition.
+    evidence:
+    - reference: GO:0005732
+      notes: GO:0005732 defines the complex as containing an RNA molecule of the snoRNA
+        family.
+  - subject: sno_s_rnp_associated_proteins
+    predicate: contributes constituents to
+    object: sno_s_rna_containing_ribonucleoprotein_complex
+    description: Associated proteins are the protein constituents represented in the
+      GO:0005732 definition.
+    evidence:
+    - reference: GO:0005732
+      notes: GO:0005732 defines the complex as containing associated proteins.
+discussions:
+- discussion_id: resolve_sno_s_rnp_subclass_boundaries
+  prompt: Resolve exact source-neutral RNA and protein-family boundaries for sno(s)RNA-containing
+    RNP subclasses.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sno_s_rna
+  - components#sno_s_rnp_associated_proteins
+  - causal_graphs#sno_s_rnp_constituents
+  rationale: The first GO:0005732 record captures only the GO-defined RNA and associated-protein
+    cohorts. Exact box C/D, box H/ACA, telomerase-RNA and ribonuclease-MRP subfamily
+    boundaries should be resolved before expanding the component list.
+  evidence:
+  - reference: GO:0005732
+  - reference: GO:1990904
+  posed_by: codex
+  posed_date: '2026-09-25'

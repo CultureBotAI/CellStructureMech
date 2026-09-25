@@ -4428,6 +4428,15 @@
   "definition": "The smaller of the two subunits of a ribosome."
  },
  {
+  "identifier": "GO:0005732",
+  "label": "sno(s)RNA-containing ribonucleoprotein complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/sno_s_rna_containing_ribonucleoprotein_complex.html",
+  "definition": "A ribonucleoprotein complex that contains an RNA molecule of the snoRNA family and associated proteins. Many are involved in a step of processing of rRNA molecules: cleavage, 2'-O-methylation, or pseudouridylation, but other RNA types can be targets as well. The majority fall into one of two classes, box C/D type or box H/ACA type, which are conserved across eukaryotes and archaea. Other members include the telomerase RNA and the ribonuclease MRP RNA."
+ },
+ {
   "identifier": "GO:0005681",
   "label": "spliceosomal complex",
   "category": "RIBONUCLEOPROTEIN",
