@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/90s_preribosome.yaml
+  slug: 90s_preribosome
+session:
+  id: 2026-09-25T190323Z-codex-6d78dc
+  timestamp: '2026-09-25T19:03:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add 90S preribosome record
+  details: Created the GO:0030686 90S preribosome record with preribosome parentage, label-only
+    35S pre-rRNA, U3 snoRNA and 90S protein-cohort components, a budding-yeast canonical example,
+    ribosome-biogenesis function, GO/PubMed evidence and a nonmechanistic constituent graph.
