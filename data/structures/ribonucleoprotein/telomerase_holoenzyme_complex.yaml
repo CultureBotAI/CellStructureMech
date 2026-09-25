@@ -21,8 +21,15 @@ curation_history:
     GO/SO/PubMed evidence, a minimal telomerase RNA constituent graph and a protein-component
     grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-25T04:31:00Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: Added GO:1902494 catalytic complex as additional telomerase holoenzyme
+    complex parentage.
+  llm_assisted: true
 parent_structures:
 - GO:1990904
+- GO:1902494
 components:
 - component_id: telomerase_rna
   label: telomerase RNA
@@ -43,6 +50,8 @@ evidence:
   notes: Gene Ontology cellular-component term for the telomerase holoenzyme complex.
 - reference: GO:1990904
   notes: Gene Ontology cellular-component parent term for ribonucleoprotein complex.
+- reference: GO:1902494
+  notes: Gene Ontology cellular-component parent term for catalytic complexes.
 - reference: SO:0000390
   notes: Sequence Ontology term for telomerase_RNA and its telomerase RNA exact synonym.
 - reference: DOI:10.1128/MCB.22.7.2366-2374.2002

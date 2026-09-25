@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/telomerase_holoenzyme_complex.yaml
+  slug: telomerase_holoenzyme_complex
+session:
+  id: 2026-09-25T043135Z-claude-code-810c01
+  timestamp: '2026-09-25T04:31:35Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1550
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1549
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_structures
+  - evidence
+  - curation_history
+  summary: Add telomerase catalytic-complex parent
+  details: 'Closed #1550 by adding GO:1902494 catalytic complex as additional parentage for
+    GO:0005697 telomerase holoenzyme complex, adding matching record-level evidence, and appending
+    a REVIEW_FIX curation event.'
