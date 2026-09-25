@@ -15037,9 +15037,9 @@
           "cosine_similarity": 0.94379288
         },
         {
-          "identifier": "GO:0071005",
-          "label": "U2-type precatalytic spliceosome",
-          "cosine_similarity": 0.92759607
+          "identifier": "GO:0071022",
+          "label": "U12-type post-spliceosomal complex",
+          "cosine_similarity": 0.93463166
         }
       ]
     },
@@ -15063,14 +15063,14 @@
           "cosine_similarity": 0.94385438
         },
         {
+          "identifier": "GO:0071022",
+          "label": "U12-type post-spliceosomal complex",
+          "cosine_similarity": 0.9392141
+        },
+        {
           "identifier": "GO:0071016",
           "label": "U12-type precatalytic spliceosome",
           "cosine_similarity": 0.93715518
-        },
-        {
-          "identifier": "GO:0071005",
-          "label": "U2-type precatalytic spliceosome",
-          "cosine_similarity": 0.92627513
         }
       ]
     },
@@ -15082,6 +15082,11 @@
           "identifier": "GO:0071008",
           "label": "U2-type post-mRNA release spliceosomal complex",
           "cosine_similarity": 0.95646392
+        },
+        {
+          "identifier": "GO:0071022",
+          "label": "U12-type post-spliceosomal complex",
+          "cosine_similarity": 0.95254335
         },
         {
           "identifier": "GO:0071017",
@@ -15097,11 +15102,37 @@
           "identifier": "GO:0071015",
           "label": "U12-type prespliceosome",
           "cosine_similarity": 0.89100343
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0071022",
+      "label": "U12-type post-spliceosomal complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0071019",
+          "label": "U12-type post-mRNA release spliceosomal complex",
+          "cosine_similarity": 0.95254335
         },
         {
-          "identifier": "GO:0071016",
-          "label": "U12-type precatalytic spliceosome",
-          "cosine_similarity": 0.87309541
+          "identifier": "GO:0071018",
+          "label": "U12-type catalytic step 2 spliceosome",
+          "cosine_similarity": 0.9392141
+        },
+        {
+          "identifier": "GO:0071017",
+          "label": "U12-type catalytic step 1 spliceosome",
+          "cosine_similarity": 0.93463166
+        },
+        {
+          "identifier": "GO:0071008",
+          "label": "U2-type post-mRNA release spliceosomal complex",
+          "cosine_similarity": 0.93457197
+        },
+        {
+          "identifier": "GO:0071015",
+          "label": "U12-type prespliceosome",
+          "cosine_similarity": 0.92750803
         }
       ]
     },
@@ -15151,6 +15182,11 @@
           "cosine_similarity": 0.94785788
         },
         {
+          "identifier": "GO:0071022",
+          "label": "U12-type post-spliceosomal complex",
+          "cosine_similarity": 0.92750803
+        },
+        {
           "identifier": "GO:0071017",
           "label": "U12-type catalytic step 1 spliceosome",
           "cosine_similarity": 0.92201085
@@ -15159,11 +15195,6 @@
           "identifier": "GO:0071005",
           "label": "U2-type precatalytic spliceosome",
           "cosine_similarity": 0.90928198
-        },
-        {
-          "identifier": "GO:0071018",
-          "label": "U12-type catalytic step 2 spliceosome",
-          "cosine_similarity": 0.90710556
         }
       ]
     },
@@ -15306,6 +15337,11 @@
           "cosine_similarity": 0.93461829
         },
         {
+          "identifier": "GO:0071022",
+          "label": "U12-type post-spliceosomal complex",
+          "cosine_similarity": 0.93457197
+        },
+        {
           "identifier": "GO:0071007",
           "label": "U2-type catalytic step 2 spliceosome",
           "cosine_similarity": 0.91966707
@@ -15314,11 +15350,6 @@
           "identifier": "GO:0071004",
           "label": "U2-type prespliceosome",
           "cosine_similarity": 0.91127798
-        },
-        {
-          "identifier": "GO:0071017",
-          "label": "U12-type catalytic step 1 spliceosome",
-          "cosine_similarity": 0.90610767
         }
       ]
     },

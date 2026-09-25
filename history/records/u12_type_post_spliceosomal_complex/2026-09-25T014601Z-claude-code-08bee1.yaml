@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u12_type_post_spliceosomal_complex.yaml
+  slug: u12_type_post_spliceosomal_complex
+session:
+  id: 2026-09-25T014601Z-claude-code-08bee1
+  timestamp: '2026-09-25T01:46:01Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add U12-type post-spliceosomal complex
+  details: Added a new GO:0071022 U12-type post-spliceosomal complex record with GO exact
+    and narrow synonyms, post-spliceosomal and U12-type spliceosomal-complex parentage, GO-grounded
+    U12, U5 and U6atac snRNP components, GO and Will/Luehrmann U12-spliceosome evidence, a
+    conservative retained-snRNP assembly graph, and a TODO for exact protein-family and spliced-product/excised-intron
+    RNA boundary curation. Validated the new record through the guarded write path.
