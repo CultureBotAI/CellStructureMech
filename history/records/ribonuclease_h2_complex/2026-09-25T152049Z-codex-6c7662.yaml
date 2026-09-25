@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ribonuclease_h2_complex.yaml
+  slug: ribonuclease_h2_complex
+session:
+  id: 2026-09-25T152049Z-codex-6c7662
+  timestamp: '2026-09-25T15:20:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ribonuclease H2 complex record
+  details: Added a GO:0032299 ribonuclease H2 complex record with Gene Ontology exact synonymy,
+    intracellular protein-containing and catalytic complex parentage, an RNA-DNA hybrid ribonuclease
+    function link, GO/PubMed evidence, a nonmechanistic function graph, and a follow-up TODO
+    for exact RNase H2 component boundaries.

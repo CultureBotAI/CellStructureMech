@@ -1,0 +1,115 @@
+identifier: GO:0032299
+label: ribonuclease H2 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that possesses ribonuclease H activity, in which the
+  catalytic subunit is a member of the RNase H2 (or HII) class. For example, in Saccharomyces
+  the complex contains Rnh201p, Rnh202p and Rnh203p.
+definition_source: GO:0032299
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-25T15:18:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-25T15:19:51Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact synonymy, intracellular protein-containing and catalytic
+    complex parentage, a GO-backed RNA-DNA hybrid ribonuclease function, GO/PubMed
+    evidence, a nonmechanistic function graph and a component-boundary TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: RNase H2 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032299
+parent_structures:
+- GO:0140535
+- GO:1902494
+functions:
+- function_id: rna_dna_hybrid_ribonuclease_activity
+  label: RNA-DNA hybrid ribonuclease activity
+  grounding: GO:0004523
+  description: The ribonuclease H2 complex catalyzes endonucleolytic cleavage of RNA
+    in RNA-DNA hybrids.
+  evidence:
+  - reference: GO:0004523
+    notes: GO:0004523 is the Gene Ontology molecular-function term for RNA-DNA hybrid
+      ribonuclease activity.
+  - reference: GO:0032299
+    notes: GO:0032299 defines the ribonuclease H2 complex as a protein complex that
+      possesses ribonuclease H activity.
+evidence:
+- reference: GO:0032299
+  notes: Gene Ontology cellular-component term for the ribonuclease H2 complex and
+    its exact RNase H2 complex synonym.
+- reference: GO:0140535
+  notes: Gene Ontology cellular-component term for intracellular protein-containing
+    complexes.
+- reference: GO:1902494
+  notes: Gene Ontology cellular-component term for catalytic complexes.
+- reference: GO:0004523
+  notes: Gene Ontology molecular-function term for RNA-DNA hybrid ribonuclease activity.
+- reference: PMID:14734815
+  notes: Jeong et al. 2004, Ribonuclease H2 of Saccharomyces cerevisiae is a complex
+    of three proteins, Nucleic Acids Research; PMID cited in the GO:0032299 definition
+    xrefs.
+causal_graphs:
+- graph_id: rnase_h2_rna_dna_hybrid_cleavage
+  title: RNase H2 complex enables ribonuclease H activity
+  description: GO defines the ribonuclease H2 complex as a protein complex whose catalytic
+    subunit is in the RNase H2/HII class and that possesses ribonuclease H activity.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-defined catalytic capability of the whole
+    complex without resolving RNase H2 catalytic and accessory subunit boundaries
+    or ribonucleotide-excision-repair partners.
+  nodes:
+  - node_id: ribonuclease_h2_complex
+    label: ribonuclease H2 complex
+    node_type: STRUCTURE
+    grounding: GO:0032299
+  - node_id: rna_dna_hybrid
+    label: RNA-DNA hybrid
+    node_type: GENETIC_ELEMENT
+  - node_id: rna_dna_hybrid_ribonuclease_activity
+    label: RNA-DNA hybrid ribonuclease activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004523
+  edges:
+  - subject: ribonuclease_h2_complex
+    predicate: enables
+    object: rna_dna_hybrid_ribonuclease_activity
+    description: The ribonuclease H2 complex possesses ribonuclease H activity.
+    evidence:
+    - reference: GO:0032299
+      notes: GO:0032299 defines the complex by RNase H/HII catalytic-subunit activity.
+    - reference: GO:0004523
+      notes: GO:0004523 is the molecular-function term for RNA-DNA hybrid ribonuclease
+        activity.
+  - subject: rna_dna_hybrid
+    predicate: is cleaved by
+    object: rna_dna_hybrid_ribonuclease_activity
+    description: RNA in RNA-DNA hybrids is the substrate cleaved by ribonuclease H
+      activity.
+    evidence:
+    - reference: GO:0004523
+      notes: GO:0004523 defines the activity as endonucleolytic cleavage of RNA in
+        RNA-DNA hybrids.
+discussions:
+- discussion_id: resolve_ribonuclease_h2_component_boundaries
+  prompt: Resolve exact source-neutral component boundaries for ribonuclease H2 complexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#rnase_h2_rna_dna_hybrid_cleavage
+  rationale: The first GO:0032299 record captures the GO-defined RNase H2 complex
+    identity and RNase H activity. Exact source-neutral families for the RNase H2/HII
+    catalytic and accessory subunits should be curated from primary component evidence
+    before assigning constituents.
+  evidence:
+  - reference: GO:0032299
+  - reference: PMID:14734815
+  posed_by: codex
+  posed_date: '2026-09-25'
