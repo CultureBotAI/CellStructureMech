@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/precatalytic_spliceosome.yaml
+  slug: precatalytic_spliceosome
+session:
+  id: 2026-09-25T081655Z-claude-code-fd74f0
+  timestamp: '2026-09-25T08:16:55Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - synonyms
+  - parent_structures
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add precatalytic spliceosome record
+  details: Added a new GO:0071011 precatalytic spliceosome record with GO narrow synonyms,
+    spliceosomal-complex parentage, a reviewed-label-only generic U5-containing tri-snRNP
+    component, GO evidence for U2-type and U12-type child states, a conservative tri-snRNP
+    recruitment graph and a curation TODO for exact subtype-specific snRNP boundaries. The
+    duplicate search included hidden and ignored files before creation.

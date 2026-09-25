@@ -4311,6 +4311,15 @@
   "definition": "A focus in the cytoplasm where mRNAs may become inactivated by decapping or some other mechanism. Protein and RNA localized to these foci are involved in mRNA degradation, nonsense-mediated mRNA decay (NMD), translational repression, and RNA-mediated gene silencing."
  },
  {
+  "identifier": "GO:0071011",
+  "label": "precatalytic spliceosome",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/precatalytic_spliceosome.html",
+  "definition": "A spliceosomal complex that is formed by the recruitment of a preassembled U5-containing tri-snRNP to the prespliceosome. Although all 5 snRNPs are present, the precatalytic spliceosome is catalytically inactive. The precatalytic spliceosome includes many proteins in addition to those found in the associated snRNPs."
+ },
+ {
   "identifier": "GO:0030684",
   "label": "preribosome",
   "category": "RIBONUCLEOPROTEIN",
