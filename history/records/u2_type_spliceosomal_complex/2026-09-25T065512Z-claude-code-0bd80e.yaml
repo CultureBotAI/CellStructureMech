@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/u2_type_spliceosomal_complex.yaml
+  slug: u2_type_spliceosomal_complex
+session:
+  id: 2026-09-25T065512Z-claude-code-0bd80e
+  timestamp: '2026-09-25T06:55:12Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add GO-grounded U2-type spliceosomal complex record
+  details: Added a GO:0005684 U2-type spliceosomal complex record with GO exact and narrow
+    synonyms, spliceosomal-complex parentage, a reviewed-label-only state-variable U2-type
+    snRNP cohort, GO evidence, a minimal nonmechanistic parent-level snRNP graph, and a curation
+    TODO for exact state-specific U2-type snRNP boundaries.

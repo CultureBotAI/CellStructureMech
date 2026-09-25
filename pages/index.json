@@ -4536,6 +4536,15 @@
   "definition": "A spliceosomal complex that is formed by association of the 5' splice site with the U1 snRNP, while the branch point sequence is recognized by the U2 snRNP. The prespliceosome includes many proteins in addition to those found in the U1 and U2 snRNPs. Commitment to a given pair of 5' and 3' splice sites occurs at the time of prespliceosome formation."
  },
  {
+  "identifier": "GO:0005684",
+  "label": "U2-type spliceosomal complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/u2_type_spliceosomal_complex.html",
+  "definition": "Any spliceosomal complex that forms during the splicing of a messenger RNA primary transcript to excise an intron that has canonical consensus sequences near the 5' and 3' ends."
+ },
+ {
   "identifier": "GO:0005687",
   "label": "U4 snRNP",
   "category": "RIBONUCLEOPROTEIN",
