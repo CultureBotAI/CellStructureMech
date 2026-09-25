@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>small nuclear ribonucleoprotein complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>small nuclear ribonucleoprotein complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0030532"><code>GO:0030532</code></a> · RIBONUCLEOPROTEIN · RIBONUCLEOPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A ribonucleoprotein complex that contains at least one small nuclear RNA (snRNA) and associated proteins. Small nuclear ribonucleoproteins are typically named for the snRNA constituents they contain, such as U1 snRNP, U4/U6 snRNP, or 7SK snRNP; many become part of spliceosomes, while others regulate transcription elongation or replication-dependent histone pre-mRNA 3&#39;-end processing. <small>[<a href="http://purl.obolibrary.org/obo/GO_0030532"><code>GO:0030532</code></a>]</small></p>
+<p><strong>Synonyms:</strong> small nuclear ribonucleoprotein; snRNP</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-snrna"><td>snRNA</td><td>RNA</td><td>part of</td><td><code>SO:0000274</code></td><td></td><td></td><td></td><td>Small nuclear RNA constituent that gives a small nuclear ribonucleoprotein complex its snRNP identity.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030532"><code>GO:0030532</code></a> <small>GO:0030532 defines small nuclear ribonucleoprotein complexes as containing at least one RNA of the small nuclear RNA class.</small></li><li><code>SO:0000274</code> <small>SO:0000274 is the Sequence Ontology term for snRNA and lists small nuclear RNA as an exact synonym.</small></li></ul></td></tr>
+<tr id="components-snrnp_associated_proteins"><td>snRNP-associated proteins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td></td><td>Protein constituents associated with the snRNA molecule in small nuclear ribonucleoprotein complexes.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030532"><code>GO:0030532</code></a> <small>GO:0030532 defines small nuclear ribonucleoprotein complexes as containing associated proteins as well as snRNA.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-snrna_associated_proteins_constituents">snRNA and associated proteins form snRNPs <small>(ASSEMBLY)</small></h3>
+<p>Small nuclear ribonucleoprotein complexes contain at least one snRNA molecule together with associated proteins.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>snRNA</td><td>contributes constituents to</td><td>small nuclear ribonucleoprotein complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030532"><code>GO:0030532</code></a> <small>GO:0030532 defines each snRNP as containing at least one RNA of the snRNA class.</small></li></ul></td></tr>
+<tr><td>snRNP-associated proteins</td><td>contributes constituents to</td><td>small nuclear ribonucleoprotein complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030532"><code>GO:0030532</code></a> <small>GO:0030532 defines snRNPs as containing associated proteins.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral RNA and protein boundaries for individual small nuclear ribonucleoprotein complexes. <small>The first GO:0030532 record captures only the generic SO-grounded snRNA class and the GO-defined associated-protein cohort. Individual U-series, 7SK, U7 and other snRNP records should resolve specific RNA Sequence Ontology terms and protein-family boundaries separately.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030532"><code>GO:0030532</code></a> <small>Gene Ontology cellular-component term for small nuclear ribonucleoprotein complex and its exact synonyms.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990904"><code>GO:1990904</code></a> <small>Gene Ontology cellular-component parent term for ribonucleoprotein complex.</small></li><li><code>SO:0000274</code> <small>Sequence Ontology term for snRNA and its small nuclear RNA exact synonym.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-25T05:40:09Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-25T05:40:44Z</code> codex · EXPANDED_RECORD — Added GO exact synonyms, ribonucleoprotein parentage, the SO-grounded snRNA component, a reviewed-label-only associated protein cohort, GO/SO evidence, a minimal snRNP assembly graph and a TODO for exact snRNP-specific component boundaries.</li><li><code>2026-09-25T05:41:21Z</code> codex · TIGHTENED_DEFINITION — Smoothed the GO-derived small nuclear ribonucleoprotein complex definition while preserving its snRNA/protein composition and spliceosomal, 7SK and U7 scope.</li><li><code>2026-09-25T05:53:28Z</code> codex · REVIEW_FIX — Resolved #1554 by attaching the snRNP-specific boundary TODO to the generic snRNA component as well as the associated-protein cohort and assembly graph.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/small_nuclear_ribonucleoprotein_complex.yaml"><code>data/structures/ribonucleoprotein/small_nuclear_ribonucleoprotein_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

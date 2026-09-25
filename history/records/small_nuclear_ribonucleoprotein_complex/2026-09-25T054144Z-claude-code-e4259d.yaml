@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/small_nuclear_ribonucleoprotein_complex.yaml
+  slug: small_nuclear_ribonucleoprotein_complex
+session:
+  id: 2026-09-25T054144Z-claude-code-e4259d
+  timestamp: '2026-09-25T05:41:44Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add GO-grounded small nuclear ribonucleoprotein complex record
+  details: Added a GO:0030532 small nuclear ribonucleoprotein complex record with exact GO
+    synonyms, ribonucleoprotein parentage, SO-grounded snRNA, a reviewed-label-only snRNP-associated
+    protein cohort, GO/SO evidence, a minimal nonmechanistic snRNP assembly graph, and a curation
+    TODO for exact snRNP-specific RNA and protein boundaries.
