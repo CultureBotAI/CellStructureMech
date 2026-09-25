@@ -4257,6 +4257,15 @@
   "definition": "The degradosome is a protein complex playing a key role in mRNA degradation and RNA processing. It includes a RNA helicase, a 3'-5' phosphate-dependent PNPase and a RNase E bound-enolase."
  },
  {
+  "identifier": "GO:0071012",
+  "label": "catalytic step 1 spliceosome",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/catalytic_step_1_spliceosome.html",
+  "definition": "A spliceosomal complex that is formed by the displacement of the two snRNPs from the precatalytic spliceosome; three snRNPs including U5 remain associated with the mRNA. This complex, sometimes called the activated spliceosome, is the catalytically active form of the spliceosome, and includes many proteins in addition to those found in the associated snRNPs."
+ },
+ {
   "identifier": "GO:0000243",
   "label": "commitment complex",
   "category": "RIBONUCLEOPROTEIN",
