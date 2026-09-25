@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/noc4p_nop14p_complex.yaml
+  slug: noc4p_nop14p_complex
+session:
+  id: 2026-09-25T211257Z-codex-6fbfbd
+  timestamp: '2026-09-25T21:12:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Noc4p-Nop14p complex record
+  details: Created the GO:0030692 Noc4p-Nop14p complex record with Noc-complex parentage,
+    90S and small-subunit preribosome parthood, reviewed-label-only Noc4 and Nop14 constituent
+    rows, conservative Saccharomyces cerevisiae distribution and example rows, a ribosomal
+    small-subunit biogenesis function link, GO/PubMed/DOI evidence, a nonmechanistic function
+    graph, and a component-family-grounding TODO.
