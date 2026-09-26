@@ -4266,6 +4266,15 @@
   "definition": "A histone deacetylase complex that is involved in transcriptional regulation. In S. cerevisiae, this complex consists of Set3p, Snt1p, Hos4p, Sif2p, Cpr1p, Hos2p, and Hst1p."
  },
  {
+  "identifier": "GO:0070824",
+  "label": "SHREC complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/shrec_complex.html",
+  "definition": "A histone deacetylase complex that contains a core of four proteins -- Clr1, Clr2, Clr3, and Mit1 in fission yeast -- and localizes to all heterochromatic regions in the genome as well as some euchromatic sites. The complex is involved in regulating nucleosome positioning to assemble higher-order chromatin structures."
+ },
+ {
   "identifier": "GO:0044777",
   "label": "single-stranded DNA-binding protein complex",
   "category": "OTHER",
