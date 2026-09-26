@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/natc_complex.yaml
+  slug: natc_complex
+session:
+  id: 2026-09-26T095200Z-codex-8bf424
+  timestamp: '2026-09-26T09:52:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add NatC complex record
+  details: Created the GO:0031417 NatC complex record with the GO exact synonym and N-terminal
+    protein acetyltransferase parent, three Saccharomyces cerevisiae constituent rows curated
+    from the yeast NatC literature, yeast taxonomic scope and canonical example, protein-N-terminal
+    amino-acid acetyltransferase function evidence, a nonmechanistic function graph, and an
+    open TODO for exact source-neutral subunit-family groundings.
