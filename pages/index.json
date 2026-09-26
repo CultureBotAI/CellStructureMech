@@ -3771,6 +3771,15 @@
   "definition": "A tetrameric histone deacetylase complex that contains a Class II deacetylase catalytic subunit. In S. cerevisiae it is composed of two Hda1p subunits along with Hda2p and Hda3p."
  },
  {
+  "identifier": "GO:0000417",
+  "label": "HIR complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/hir_complex.html",
+  "definition": "A protein complex proposed to be involved in replication-independent nucleosome assembly, by promoting histone deposition onto DNA. For example, in Saccharomyces, the complex contains Hir1p, Hir2p, Hir3p, and Hpc2p."
+ },
+ {
   "identifier": "cellstructuremech:holdfast",
   "label": "holdfast",
   "category": "OTHER",

@@ -12991,9 +12991,40 @@
           "cosine_similarity": 0.75097165
         },
         {
-          "identifier": "GO:0032299",
-          "label": "ribonuclease H2 complex",
-          "cosine_similarity": 0.68667485
+          "identifier": "GO:0000417",
+          "label": "HIR complex",
+          "cosine_similarity": 0.74649257
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000417",
+      "label": "HIR complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0070824",
+          "label": "SHREC complex",
+          "cosine_similarity": 0.78262689
+        },
+        {
+          "identifier": "GO:0034967",
+          "label": "Set3 complex",
+          "cosine_similarity": 0.77479537
+        },
+        {
+          "identifier": "GO:0070211",
+          "label": "Snt2C complex",
+          "cosine_similarity": 0.75858001
+        },
+        {
+          "identifier": "GO:0000812",
+          "label": "Swr1 complex",
+          "cosine_similarity": 0.74894023
+        },
+        {
+          "identifier": "GO:0070823",
+          "label": "HDA1 complex",
+          "cosine_similarity": 0.74649257
         }
       ]
     },
@@ -14567,14 +14598,14 @@
           "cosine_similarity": 0.75097165
         },
         {
+          "identifier": "GO:0000417",
+          "label": "HIR complex",
+          "cosine_similarity": 0.71187899
+        },
+        {
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.70416854
-        },
-        {
-          "identifier": "GO:0070824",
-          "label": "SHREC complex",
-          "cosine_similarity": 0.695084
         }
       ]
     },
@@ -14727,9 +14758,9 @@
           "cosine_similarity": 0.7774188
         },
         {
-          "identifier": "GO:0035267",
-          "label": "NuA4 histone acetyltransferase complex",
-          "cosine_similarity": 0.75219499
+          "identifier": "GO:0000417",
+          "label": "HIR complex",
+          "cosine_similarity": 0.77479537
         }
       ]
     },
@@ -14741,6 +14772,11 @@
           "identifier": "GO:0070211",
           "label": "Snt2C complex",
           "cosine_similarity": 0.81086628
+        },
+        {
+          "identifier": "GO:0000417",
+          "label": "HIR complex",
+          "cosine_similarity": 0.78262689
         },
         {
           "identifier": "GO:0034967",
@@ -14756,11 +14792,6 @@
           "identifier": "GO:0070823",
           "label": "HDA1 complex",
           "cosine_similarity": 0.75465546
-        },
-        {
-          "identifier": "GO:0000812",
-          "label": "Swr1 complex",
-          "cosine_similarity": 0.75338803
         }
       ]
     },
@@ -14820,9 +14851,9 @@
           "cosine_similarity": 0.79919428
         },
         {
-          "identifier": "GO:0000112",
-          "label": "nucleotide-excision repair factor 3 complex",
-          "cosine_similarity": 0.75094054
+          "identifier": "GO:0000417",
+          "label": "HIR complex",
+          "cosine_similarity": 0.75858001
         }
       ]
     },
@@ -14898,6 +14929,11 @@
           "cosine_similarity": 0.75338803
         },
         {
+          "identifier": "GO:0000417",
+          "label": "HIR complex",
+          "cosine_similarity": 0.74894023
+        },
+        {
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.74251657
@@ -14911,11 +14947,6 @@
           "identifier": "GO:0070211",
           "label": "Snt2C complex",
           "cosine_similarity": 0.70019535
-        },
-        {
-          "identifier": "GO:0034456",
-          "label": "UTP-C complex",
-          "cosine_similarity": 0.69817713
         }
       ]
     },
