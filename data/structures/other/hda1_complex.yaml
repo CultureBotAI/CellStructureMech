@@ -1,0 +1,246 @@
+identifier: GO:0070823
+label: HDA1 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A tetrameric histone deacetylase complex that contains a Class II deacetylase
+  catalytic subunit. In S. cerevisiae it is composed of two Hda1p subunits along with
+  Hda2p and Hda3p.
+definition_source: GO:0070823
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T03:20:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T03:21:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added HDA1 histone-deacetylase-complex parentage and chromatin parthood,
+    Hda1/Hda2/Hda3 constituent rows, budding-yeast scope, histone deacetylase activity,
+    GO/PubMed/DOI evidence, a nonmechanistic function graph, and a HDA1 subunit-grounding
+    TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0000118
+part_of:
+- GO:0000785
+components:
+- component_id: hda1_hda1_complex_subunit
+  label: Hda1 HDA1 catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HDA1
+  stoichiometry: '2'
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070823 follows Saccharomyces cerevisiae Hda1p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for the HDA1
+    catalytic subunit class was curated in this pass.
+  role: Class II histone deacetylase catalytic constituent present as two Hda1p copies
+    in the budding-yeast HDA1 complex.
+  evidence:
+  - reference: GO:0070823
+    notes: GO:0070823 defines the S. cerevisiae HDA1 complex as a tetrameric histone
+      deacetylase complex containing two Hda1p subunits.
+  - reference: DOI:10.1073/pnas.081560698
+    notes: Wu et al. 2001 reported HDA1 self-interaction and interaction with the
+      Hda2-Hda3 subcomplex in a likely HDA1 tetramer.
+  - reference: DOI:10.1074/jbc.271.26.15837
+    notes: Carmen et al. 1996 identified HDA1 as a subunit of the 350-kDa yeast HDA
+      histone deacetylase complex.
+- component_id: hda2_hda1_complex_subunit
+  label: Hda2 HDA1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HDA2
+  stoichiometry: '1'
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070823 follows Saccharomyces cerevisiae Hda2p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this HDA1
+    complex subunit class was curated in this pass.
+  role: Hda2p constituent of the HDA1 complex Hda2-Hda3 subcomplex that associates
+    with Hda1p and is required for histone deacetylase activity.
+  evidence:
+  - reference: GO:0070823
+    notes: GO:0070823 defines the S. cerevisiae HDA1 complex as containing Hda2p.
+  - reference: DOI:10.1073/pnas.081560698
+    notes: Wu et al. 2001 identified HDA2 in the HDA1 complex and described HDA1 interaction
+      with the Hda2-Hda3 subcomplex.
+- component_id: hda3_hda1_complex_subunit
+  label: Hda3 HDA1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HDA3
+  stoichiometry: '1'
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070823 follows Saccharomyces cerevisiae Hda3p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this HDA1
+    complex subunit class was curated in this pass.
+  role: Hda3p constituent of the HDA1 complex Hda2-Hda3 subcomplex that associates
+    with Hda1p and is required for histone deacetylase activity.
+  evidence:
+  - reference: GO:0070823
+    notes: GO:0070823 defines the S. cerevisiae HDA1 complex as containing Hda3p.
+  - reference: DOI:10.1073/pnas.081560698
+    notes: Wu et al. 2001 identified HDA3 in the HDA1 complex and described HDA1 interaction
+      with the Hda2-Hda3 subcomplex.
+  - reference: DOI:10.1074/jbc.271.26.15837
+    notes: Carmen et al. 1996 identified HDA3 as a subunit of the 350-kDa yeast HDA
+      histone deacetylase complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0070823 defines the HDA1 complex
+    as a tetramer containing Hda1p, Hda2p and Hda3p.
+  reference: GO:0070823
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Wu et al. 2001 identified Hda2p and Hda3p in the budding-yeast HDA1 complex
+    and found that Hda1p self-interacts and associates with the Hda2-Hda3 subcomplex.
+  reference: DOI:10.1073/pnas.081560698
+functions:
+- function_id: histone_deacetylase_activity
+  label: histone deacetylase activity
+  grounding: GO:0004407
+  description: The HDA1 complex removes acetyl groups from histone lysine residues
+    through the Hda1 Class II catalytic subunits together with Hda2p and Hda3p.
+  evidence:
+  - reference: GO:0070823
+    notes: GO:0070823 defines the HDA1 complex as a histone deacetylase complex.
+  - reference: GO:0004407
+    notes: GO:0004407 is the Gene Ontology molecular-function term for histone deacetylase
+      activity.
+  - reference: DOI:10.1073/pnas.081560698
+    notes: Wu et al. 2001 reported that mutations in any of HDA1, HDA2 or HDA3 disrupt
+      HDA1 complex catalytic activity in vitro and in vivo.
+  - reference: DOI:10.1074/jbc.271.26.15837
+    notes: Carmen et al. 1996 purified the 350-kDa budding-yeast HDA histone deacetylase
+      activity and assigned HDA1 and HDA3 as complex subunits.
+evidence:
+- reference: GO:0070823
+  notes: Gene Ontology cellular-component term for the HDA1 complex.
+- reference: GO:0000118
+  notes: Gene Ontology cellular-component parent term for histone deacetylase complexes.
+- reference: GO:0000785
+  notes: Gene Ontology cellular-component term for chromatin.
+- reference: GO:0004407
+  notes: Gene Ontology molecular-function term for histone deacetylase activity.
+- reference: PMID:11287668
+  notes: PubMed identifier for Wu et al. 2001, the PNAS HDA1 complex paper cited by
+    GO:0070823.
+- reference: DOI:10.1073/pnas.081560698
+  notes: DOI for Wu et al. 2001, 'HDA2 and HDA3 are related proteins that interact
+    with and are essential for the activity of the yeast histone deacetylase HDA1',
+    verified through NCBI E-utilities.
+- reference: PMID:8663039
+  notes: PubMed identifier for Carmen et al. 1996, the JBC HDA complex subunit paper
+    cited by GO:0070823.
+- reference: DOI:10.1074/jbc.271.26.15837
+  notes: DOI for Carmen et al. 1996, 'HDA1 and HDA3 are components of a yeast histone
+    deacetylase (HDA) complex', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_hda1_histone_deacetylase_activity
+  title: HDA1 complex carries yeast histone deacetylase activity
+  description: In Saccharomyces cerevisiae, two Hda1p copies and the Hda2p and Hda3p
+    proteins form the HDA1 histone deacetylase complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the GO-defined HDA1 complex constituents and their
+    connection to histone deacetylase activity without resolving catalytic-metal coordination,
+    substrate selection or promoter recruitment.
+  nodes:
+  - node_id: hda1_hda1_complex_subunit
+    label: Hda1 HDA1 catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hda1_hda1_complex_subunit
+  - node_id: hda2_hda1_complex_subunit
+    label: Hda2 HDA1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hda2_hda1_complex_subunit
+  - node_id: hda3_hda1_complex_subunit
+    label: Hda3 HDA1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hda3_hda1_complex_subunit
+  - node_id: hda1_complex
+    label: HDA1 complex
+    node_type: STRUCTURE
+    grounding: GO:0070823
+  - node_id: histone_deacetylase_activity
+    label: histone deacetylase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004407
+  edges:
+  - subject: hda1_hda1_complex_subunit
+    predicate: contributes to
+    object: hda1_complex
+    description: Hda1p is the catalytic constituent present as two copies in the budding-yeast
+      HDA1 complex.
+    evidence:
+    - reference: GO:0070823
+      notes: GO:0070823 defines the HDA1 complex as containing two Hda1p subunits.
+    - reference: DOI:10.1073/pnas.081560698
+      notes: Wu et al. 2001 reported HDA1 self-interaction and HDA1 complex membership.
+  - subject: hda2_hda1_complex_subunit
+    predicate: contributes to
+    object: hda1_complex
+    description: Hda2p is a constituent of the budding-yeast HDA1 complex Hda2-Hda3
+      subcomplex.
+    evidence:
+    - reference: GO:0070823
+      notes: GO:0070823 defines the HDA1 complex as containing Hda2p.
+    - reference: DOI:10.1073/pnas.081560698
+      notes: Wu et al. 2001 identified HDA2 in the HDA1 complex and assigned it to
+        the Hda2-Hda3 subcomplex.
+  - subject: hda3_hda1_complex_subunit
+    predicate: contributes to
+    object: hda1_complex
+    description: Hda3p is a constituent of the budding-yeast HDA1 complex Hda2-Hda3
+      subcomplex.
+    evidence:
+    - reference: GO:0070823
+      notes: GO:0070823 defines the HDA1 complex as containing Hda3p.
+    - reference: DOI:10.1073/pnas.081560698
+      notes: Wu et al. 2001 identified HDA3 in the HDA1 complex and assigned it to
+        the Hda2-Hda3 subcomplex.
+    - reference: DOI:10.1074/jbc.271.26.15837
+      notes: Carmen et al. 1996 identified HDA3 as a subunit of the 350-kDa HDA complex.
+  - subject: hda1_complex
+    predicate: supports
+    object: histone_deacetylase_activity
+    description: The HDA1 complex is a histone deacetylase complex whose activity
+      depends on Hda1p, Hda2p and Hda3p.
+    evidence:
+    - reference: GO:0070823
+      notes: GO:0070823 defines HDA1 as a histone deacetylase complex.
+    - reference: GO:0004407
+      notes: GO:0004407 is the molecular-function term for histone deacetylase activity.
+    - reference: DOI:10.1073/pnas.081560698
+      notes: Wu et al. 2001 found that mutations in HDA1, HDA2 or HDA3 disrupted HDA1
+        catalytic activity.
+discussions:
+- discussion_id: resolve_hda1_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Hda1, Hda2 and Hda3
+    constituents of the HDA1 complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#hda1_hda1_complex_subunit
+  - components#hda2_hda1_complex_subunit
+  - components#hda3_hda1_complex_subunit
+  rationale: GO:0070823 defines budding-yeast Hda1p, Hda2p and Hda3p as the HDA1 complex
+    constituents. Exact cross-eukaryotic InterPro, Pfam, NCBIfam or UniProt family
+    boundaries for these HDA subunit classes need narrower curation before the component
+    labels can be grounded.
+  evidence:
+  - reference: GO:0070823
+    notes: GO:0070823 defines the budding-yeast HDA1 complex subunits.
+  posed_by: codex
+  posed_date: '2026-09-26'
