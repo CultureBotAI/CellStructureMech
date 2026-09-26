@@ -13773,6 +13773,37 @@
       ]
     },
     {
+      "identifier": "GO:0000110",
+      "label": "nucleotide-excision repair factor 1 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.74196333
+        },
+        {
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.7319916
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.72616644
+        },
+        {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.72376595
+        },
+        {
+          "identifier": "GO:0030690",
+          "label": "Noc1p-Noc2p complex",
+          "cosine_similarity": 0.72302554
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000940",
       "label": "outer kinetochore",
       "neighbors": [
