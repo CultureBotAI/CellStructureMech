@@ -12971,6 +12971,11 @@
       "label": "HDA1 complex",
       "neighbors": [
         {
+          "identifier": "GO:0034967",
+          "label": "Set3 complex",
+          "cosine_similarity": 0.83688246
+        },
+        {
           "identifier": "GO:0032299",
           "label": "ribonuclease H2 complex",
           "cosine_similarity": 0.68667485
@@ -12989,11 +12994,6 @@
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.66746272
-        },
-        {
-          "identifier": "GO:0000111",
-          "label": "nucleotide-excision repair factor 2 complex",
-          "cosine_similarity": 0.65910673
         }
       ]
     },
@@ -14637,6 +14637,37 @@
           "identifier": "GO:0031205",
           "label": "endoplasmic reticulum Sec complex",
           "cosine_similarity": 0.79810308
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0034967",
+      "label": "Set3 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0070823",
+          "label": "HDA1 complex",
+          "cosine_similarity": 0.83688246
+        },
+        {
+          "identifier": "GO:0000112",
+          "label": "nucleotide-excision repair factor 3 complex",
+          "cosine_similarity": 0.73572027
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.73464361
+        },
+        {
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.73266807
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.70815872
         }
       ]
     },
