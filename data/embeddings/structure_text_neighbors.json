@@ -13782,6 +13782,11 @@
           "cosine_similarity": 0.95729079
         },
         {
+          "identifier": "GO:0000113",
+          "label": "nucleotide-excision repair factor 4 complex",
+          "cosine_similarity": 0.93914743
+        },
+        {
           "identifier": "GO:0000112",
           "label": "nucleotide-excision repair factor 3 complex",
           "cosine_similarity": 0.92482162
@@ -13795,11 +13800,6 @@
           "identifier": "GO:0031518",
           "label": "CBF3 complex",
           "cosine_similarity": 0.7319916
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.72616644
         }
       ]
     },
@@ -13811,6 +13811,11 @@
           "identifier": "GO:0000110",
           "label": "nucleotide-excision repair factor 1 complex",
           "cosine_similarity": 0.95729079
+        },
+        {
+          "identifier": "GO:0000113",
+          "label": "nucleotide-excision repair factor 4 complex",
+          "cosine_similarity": 0.95181432
         },
         {
           "identifier": "GO:0000112",
@@ -13826,11 +13831,6 @@
           "identifier": "GO:0030690",
           "label": "Noc1p-Noc2p complex",
           "cosine_similarity": 0.73323845
-        },
-        {
-          "identifier": "GO:0031518",
-          "label": "CBF3 complex",
-          "cosine_similarity": 0.72932262
         }
       ]
     },
@@ -13849,6 +13849,11 @@
           "cosine_similarity": 0.92482162
         },
         {
+          "identifier": "GO:0000113",
+          "label": "nucleotide-excision repair factor 4 complex",
+          "cosine_similarity": 0.91474642
+        },
+        {
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.77973442
@@ -13857,11 +13862,37 @@
           "identifier": "GO:0031518",
           "label": "CBF3 complex",
           "cosine_similarity": 0.77595911
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000113",
+      "label": "nucleotide-excision repair factor 4 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000111",
+          "label": "nucleotide-excision repair factor 2 complex",
+          "cosine_similarity": 0.95181432
         },
         {
-          "identifier": "GO:0030691",
-          "label": "Noc2p-Noc3p complex",
-          "cosine_similarity": 0.75662135
+          "identifier": "GO:0000110",
+          "label": "nucleotide-excision repair factor 1 complex",
+          "cosine_similarity": 0.93914743
+        },
+        {
+          "identifier": "GO:0000112",
+          "label": "nucleotide-excision repair factor 3 complex",
+          "cosine_similarity": 0.91474642
+        },
+        {
+          "identifier": "GO:0030692",
+          "label": "Noc4p-Nop14p complex",
+          "cosine_similarity": 0.74428058
+        },
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.72455408
         }
       ]
     },
