@@ -12981,6 +12981,11 @@
           "cosine_similarity": 0.83388535
         },
         {
+          "identifier": "GO:0070824",
+          "label": "SHREC complex",
+          "cosine_similarity": 0.75465546
+        },
+        {
           "identifier": "GO:0070210",
           "label": "Rpd3L-Expanded complex",
           "cosine_similarity": 0.75097165
@@ -12989,11 +12994,6 @@
           "identifier": "GO:0032299",
           "label": "ribonuclease H2 complex",
           "cosine_similarity": 0.68667485
-        },
-        {
-          "identifier": "GO:0000112",
-          "label": "nucleotide-excision repair factor 3 complex",
-          "cosine_similarity": 0.68242826
         }
       ]
     },
@@ -14536,14 +14536,14 @@
           "cosine_similarity": 0.75097165
         },
         {
+          "identifier": "GO:0070824",
+          "label": "SHREC complex",
+          "cosine_similarity": 0.695084
+        },
+        {
           "identifier": "GO:0000812",
           "label": "Swr1 complex",
           "cosine_similarity": 0.6760584
-        },
-        {
-          "identifier": "GO:0031518",
-          "label": "CBF3 complex",
-          "cosine_similarity": 0.6469665
         }
       ]
     },
@@ -14691,14 +14691,45 @@
           "cosine_similarity": 0.83688246
         },
         {
+          "identifier": "GO:0070824",
+          "label": "SHREC complex",
+          "cosine_similarity": 0.7774188
+        },
+        {
           "identifier": "GO:0000112",
           "label": "nucleotide-excision repair factor 3 complex",
           "cosine_similarity": 0.73572027
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0070824",
+      "label": "SHREC complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0070211",
+          "label": "Snt2C complex",
+          "cosine_similarity": 0.81086628
         },
         {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.73464361
+          "identifier": "GO:0034967",
+          "label": "Set3 complex",
+          "cosine_similarity": 0.7774188
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.76342937
+        },
+        {
+          "identifier": "GO:0070823",
+          "label": "HDA1 complex",
+          "cosine_similarity": 0.75465546
+        },
+        {
+          "identifier": "GO:0000812",
+          "label": "Swr1 complex",
+          "cosine_similarity": 0.75338803
         }
       ]
     },
@@ -14748,6 +14779,11 @@
           "cosine_similarity": 0.83388535
         },
         {
+          "identifier": "GO:0070824",
+          "label": "SHREC complex",
+          "cosine_similarity": 0.81086628
+        },
+        {
           "identifier": "GO:0070210",
           "label": "Rpd3L-Expanded complex",
           "cosine_similarity": 0.79919428
@@ -14756,11 +14792,6 @@
           "identifier": "GO:0000112",
           "label": "nucleotide-excision repair factor 3 complex",
           "cosine_similarity": 0.75094054
-        },
-        {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.74767588
         }
       ]
     },
@@ -14831,6 +14862,11 @@
       "label": "Swr1 complex",
       "neighbors": [
         {
+          "identifier": "GO:0070824",
+          "label": "SHREC complex",
+          "cosine_similarity": 0.75338803
+        },
+        {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.71532478
@@ -14849,11 +14885,6 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.69236089
-        },
-        {
-          "identifier": "GO:0030904",
-          "label": "retromer complex",
-          "cosine_similarity": 0.68490524
         }
       ]
     },
