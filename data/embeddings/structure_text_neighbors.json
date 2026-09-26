@@ -13596,6 +13596,11 @@
           "cosine_similarity": 0.80167998
         },
         {
+          "identifier": "GO:0016514",
+          "label": "SWI/SNF complex",
+          "cosine_similarity": 0.78119275
+        },
+        {
           "identifier": "GO:0000113",
           "label": "nucleotide-excision repair factor 4 complex",
           "cosine_similarity": 0.77700035
@@ -13609,11 +13614,6 @@
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.75666355
-        },
-        {
-          "identifier": "GO:0034967",
-          "label": "Set3 complex",
-          "cosine_similarity": 0.75219499
         }
       ]
     },
@@ -14660,14 +14660,14 @@
           "cosine_similarity": 0.73728001
         },
         {
+          "identifier": "GO:0016514",
+          "label": "SWI/SNF complex",
+          "cosine_similarity": 0.73717444
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.72534344
-        },
-        {
-          "identifier": "GO:0034967",
-          "label": "Set3 complex",
-          "cosine_similarity": 0.71834404
         }
       ]
     },
@@ -15013,9 +15013,45 @@
       ]
     },
     {
+      "identifier": "GO:0016514",
+      "label": "SWI/SNF complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000812",
+          "label": "Swr1 complex",
+          "cosine_similarity": 0.79266045
+        },
+        {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.78119275
+        },
+        {
+          "identifier": "GO:0000124",
+          "label": "SAGA complex",
+          "cosine_similarity": 0.73717444
+        },
+        {
+          "identifier": "GO:0048188",
+          "label": "Set1C/COMPASS complex",
+          "cosine_similarity": 0.71568909
+        },
+        {
+          "identifier": "GO:0070211",
+          "label": "Snt2C complex",
+          "cosine_similarity": 0.71092176
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000812",
       "label": "Swr1 complex",
       "neighbors": [
+        {
+          "identifier": "GO:0016514",
+          "label": "SWI/SNF complex",
+          "cosine_similarity": 0.79266045
+        },
         {
           "identifier": "GO:0048188",
           "label": "Set1C/COMPASS complex",
@@ -15035,11 +15071,6 @@
           "identifier": "GO:0000417",
           "label": "HIR complex",
           "cosine_similarity": 0.74894023
-        },
-        {
-          "identifier": "GO:0035267",
-          "label": "NuA4 histone acetyltransferase complex",
-          "cosine_similarity": 0.74251657
         }
       ]
     },

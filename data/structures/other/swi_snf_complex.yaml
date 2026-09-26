@@ -1,0 +1,417 @@
+identifier: GO:0016514
+label: SWI/SNF complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A SWI/SNF-type complex that contains 8 to 14 proteins, including both
+  conserved (core) and nonconserved components; contains the ATPase product of the
+  yeast SNF2 or mammalian SMARCA4/BAF190A/BRG1 gene, or an ortholog thereof.
+definition_source: GO:0016514
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T07:52:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T07:53:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added SWI/SNF exact synonymy, SWI/SNF-superfamily parentage, 12 budding-yeast
+    constituent rows, yeast scope, chromatin-remodeling function, GO/PubMed/DOI evidence,
+    a nonmechanistic function graph, and a subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: SWI-SNF complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0016514
+parent_structures:
+- GO:0070603
+components:
+- component_id: snf2_swi_snf_atpase_subunit
+  label: Snf2 SWI/SNF ATPase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SNF2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SWI/SNF architecture literature follows Snf2
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this SWI/SNF subunit class was curated in this pass.
+  role: ATPase-containing catalytic constituent of the budding-yeast SWI/SNF remodeler.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-17229-x
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf,
+      described the intact 12-subunit complex, and resolved the Snf2-containing base
+      and Arp-module architecture.
+  - reference: DOI:10.1016/j.celrep.2017.01.058
+    notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
+      cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
+      Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+- component_id: swi1_swi_snf_core_subunit
+  label: Swi1 SWI/SNF core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SWI1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SWI/SNF architecture literature follows Swi1
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this SWI/SNF subunit class was curated in this pass.
+  role: Conserved base-module scaffold constituent that interacts with Swi3 and other
+    core components.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-17229-x
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf,
+      described the intact 12-subunit complex, and resolved the Snf2-containing base
+      and Arp-module architecture.
+  - reference: DOI:10.1016/j.celrep.2017.01.058
+    notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
+      cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
+      Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+- component_id: swi3_swi_snf_core_subunit
+  label: Swi3 SWI/SNF core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SWI3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SWI/SNF architecture literature follows Swi3
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this SWI/SNF subunit class was curated in this pass.
+  role: Conserved base-module backbone constituent that helps form the coiled-coil
+    domain.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-17229-x
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf,
+      described the intact 12-subunit complex, and resolved the Snf2-containing base
+      and Arp-module architecture.
+  - reference: DOI:10.1016/j.celrep.2017.01.058
+    notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
+      cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
+      Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+- component_id: snf5_swi_snf_core_subunit
+  label: Snf5 SWI/SNF core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SNF5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SWI/SNF architecture literature follows Snf5
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this SWI/SNF subunit class was curated in this pass.
+  role: Nucleosome-binding-module constituent of the budding-yeast SWI/SNF base.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-17229-x
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf,
+      described the intact 12-subunit complex, and resolved the Snf2-containing base
+      and Arp-module architecture.
+  - reference: DOI:10.1016/j.celrep.2017.01.058
+    notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
+      cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
+      Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+- component_id: snf6_swi_snf_core_subunit
+  label: Snf6 SWI/SNF core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SNF6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SWI/SNF architecture literature follows Snf6
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this SWI/SNF subunit class was curated in this pass.
+  role: Yeast-specific core constituent that stabilizes Snf2 binding to the SWI/SNF
+    base module.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-17229-x
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf,
+      described the intact 12-subunit complex, and resolved the Snf2-containing base
+      and Arp-module architecture.
+  - reference: DOI:10.1016/j.celrep.2017.01.058
+    notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
+      cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
+      Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+- component_id: snf12_swi_snf_core_subunit
+  label: Snf12 SWI/SNF core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SNF12
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SWI/SNF architecture literature follows Snf12
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this SWI/SNF subunit class was curated in this pass.
+  role: Coiled-coil and core-module constituent of the budding-yeast SWI/SNF base.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-17229-x
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf,
+      described the intact 12-subunit complex, and resolved the Snf2-containing base
+      and Arp-module architecture.
+  - reference: DOI:10.1016/j.celrep.2017.01.058
+    notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
+      cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
+      Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+- component_id: swp82_swi_snf_core_subunit
+  label: Swp82 SWI/SNF core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SWP82
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SWI/SNF architecture literature follows Swp82
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this SWI/SNF subunit class was curated in this pass.
+  role: Core constituent associated with the nucleosome-binding and preHSA-stabilization
+    modules.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-17229-x
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf,
+      described the intact 12-subunit complex, and resolved the Snf2-containing base
+      and Arp-module architecture.
+  - reference: DOI:10.1016/j.celrep.2017.01.058
+    notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
+      cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
+      Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+- component_id: snf11_swi_snf_subunit
+  label: Snf11 SWI/SNF subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SNF11
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SWI/SNF architecture literature follows Snf11
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this SWI/SNF subunit class was curated in this pass.
+  role: Mobile constituent of the purified budding-yeast SWI/SNF complex.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-17229-x
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf,
+      described the intact 12-subunit complex, and resolved the Snf2-containing base
+      and Arp-module architecture.
+  - reference: DOI:10.1016/j.celrep.2017.01.058
+    notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
+      cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
+      Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+- component_id: taf14_swi_snf_subunit
+  label: Taf14 SWI/SNF subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TAF14
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SWI/SNF architecture literature follows Taf14
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this SWI/SNF subunit class was curated in this pass.
+  role: Mobile constituent of the purified budding-yeast SWI/SNF complex.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-17229-x
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf,
+      described the intact 12-subunit complex, and resolved the Snf2-containing base
+      and Arp-module architecture.
+  - reference: DOI:10.1016/j.celrep.2017.01.058
+    notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
+      cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
+      Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+- component_id: arp7_swi_snf_arp_module_subunit
+  label: Arp7 SWI/SNF Arp module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARP7
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SWI/SNF architecture literature follows Arp7
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this SWI/SNF subunit class was curated in this pass.
+  role: Actin-related-protein constituent of the SWI/SNF Arp module.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-17229-x
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf,
+      described the intact 12-subunit complex, and resolved the Snf2-containing base
+      and Arp-module architecture.
+  - reference: DOI:10.1016/j.celrep.2017.01.058
+    notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
+      cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
+      Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+- component_id: arp9_swi_snf_arp_module_subunit
+  label: Arp9 SWI/SNF Arp module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARP9
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SWI/SNF architecture literature follows Arp9
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this SWI/SNF subunit class was curated in this pass.
+  role: Actin-related-protein constituent of the SWI/SNF Arp module.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-17229-x
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf,
+      described the intact 12-subunit complex, and resolved the Snf2-containing base
+      and Arp-module architecture.
+  - reference: DOI:10.1016/j.celrep.2017.01.058
+    notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
+      cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
+      Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+- component_id: rtt102_swi_snf_arp_module_subunit
+  label: Rtt102 SWI/SNF Arp module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RTT102
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SWI/SNF architecture literature follows Rtt102
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this SWI/SNF subunit class was curated in this pass.
+  role: Constituent of the Arp module associated with Arp7 and Arp9.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-17229-x
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf,
+      described the intact 12-subunit complex, and resolved the Snf2-containing base
+      and Arp-module architecture.
+  - reference: DOI:10.1016/j.celrep.2017.01.058
+    notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
+      cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
+      Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism from which Wang et al. 2020 purified endogenous
+    intact 12-subunit Swi/Snf complexes through a tagged Snf6 subunit for cryo-EM
+    structure determination.
+  reference: DOI:10.1038/s41467-020-17229-x
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Wang et al. 2020 solved a cryo-EM structure of Saccharomyces cerevisiae Swi/Snf
+    in a nucleosome-free state and assigned the base and Arp-module organization.
+  reference: DOI:10.1038/s41467-020-17229-x
+functions:
+- function_id: chromatin_remodeling
+  label: chromatin remodeling
+  grounding: GO:0006338
+  description: ATP-dependent remodeling of histone-DNA contacts that changes chromatin
+    architecture.
+  evidence:
+  - reference: GO:0006338
+    notes: GO:0006338 is the Gene Ontology biological-process term for chromatin remodeling.
+  - reference: GO:0016514
+    notes: Gene Ontology models the SWI/SNF complex as capable of chromatin remodeling.
+  - reference: DOI:10.1016/j.celrep.2017.01.058
+    notes: Dutta et al. 2017 assayed how deletion of budding-yeast Swi/Snf subunits
+      changes Snf2 occupancy, nucleosome occupancy and gene expression.
+evidence:
+- reference: GO:0016514
+  notes: Gene Ontology cellular-component term for SWI/SNF complex and its SWI-SNF
+    complex exact synonym.
+- reference: GO:0070603
+  notes: Gene Ontology cellular-component parent term for SWI/SNF superfamily-type
+    complexes.
+- reference: GO:0006338
+  notes: Gene Ontology biological-process term for chromatin remodeling.
+- reference: PMID:12672490
+  notes: PubMed identifier for Martens and Winston 2003, the SWI/SNF review cited
+    in the GO:0016514 term definition.
+- reference: DOI:10.1016/s0959-437x(03)00022-4
+  notes: DOI for Martens and Winston 2003, verified through NCBI E-utilities.
+- reference: PMID:8127913
+  notes: PubMed identifier for Cairns et al. 1994, the yeast multisubunit SWI/SNF-complex
+    isolation paper.
+- reference: DOI:10.1073/pnas.91.5.1950
+  notes: DOI for Cairns et al. 1994, 'A multisubunit complex containing the SWI1/ADR6,
+    SWI2/SNF2, SWI3, SNF5, and SNF6 gene products isolated from yeast', verified through
+    NCBI E-utilities.
+- reference: PMID:28249159
+  notes: PubMed identifier for Dutta et al. 2017, the systematic yeast Swi/Snf complex
+    composition and mutant-function paper.
+- reference: DOI:10.1016/j.celrep.2017.01.058
+  notes: DOI for Dutta et al. 2017, 'Composition and Function of Mutant Swi/Snf Complexes',
+    verified through NCBI E-utilities.
+- reference: PMID:32636384
+  notes: PubMed identifier for Wang et al. 2020, the nucleosome-free budding-yeast
+    Swi/Snf cryo-EM structure paper.
+- reference: DOI:10.1038/s41467-020-17229-x
+  notes: DOI for Wang et al. 2020, 'Structure of the yeast Swi/Snf complex in a nucleosome
+    free state', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_swi_snf_chromatin_remodeling
+  title: SWI/SNF supports ATP-dependent chromatin remodeling
+  description: In Saccharomyces cerevisiae, the Snf2 ATPase and accessory Swi/Snf
+    subunits assemble into an ATP-dependent chromatin remodeler that changes nucleosome
+    positioning and histone-DNA contacts.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the curated Snf2 ATPase subunit and broad chromatin-remodeling
+    activity without resolving the nucleosome engagement cycle or DNA-translocation
+    steps.
+  nodes:
+  - node_id: snf2_swi_snf_atpase_subunit
+    label: Snf2 SWI/SNF ATPase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: snf2_swi_snf_atpase_subunit
+  - node_id: swi_snf_complex
+    label: SWI/SNF complex
+    node_type: STRUCTURE
+    grounding: GO:0016514
+  - node_id: chromatin_remodeling
+    label: chromatin remodeling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006338
+  edges:
+  - subject: snf2_swi_snf_atpase_subunit
+    predicate: contributes to
+    object: swi_snf_complex
+    description: Snf2 is the ATPase-containing catalytic constituent of the budding-yeast
+      Swi/Snf complex.
+    evidence:
+    - reference: GO:0016514
+      notes: GO:0016514 defines SWI/SNF complexes as containing a yeast SNF2 or orthologous
+        ATPase gene product.
+  - subject: swi_snf_complex
+    predicate: supports
+    object: chromatin_remodeling
+    description: The SWI/SNF complex carries out chromatin remodeling.
+    evidence:
+    - reference: GO:0006338
+      notes: GO:0006338 lists GO:0016514 as a cellular component capable of chromatin
+        remodeling.
+discussions:
+- discussion_id: resolve_swi_snf_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the curated budding-yeast
+    SWI/SNF constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#snf2_swi_snf_atpase_subunit
+  - components#swi1_swi_snf_core_subunit
+  - components#swi3_swi_snf_core_subunit
+  - components#snf5_swi_snf_core_subunit
+  - components#snf6_swi_snf_core_subunit
+  - components#snf12_swi_snf_core_subunit
+  - components#swp82_swi_snf_core_subunit
+  - components#snf11_swi_snf_subunit
+  - components#taf14_swi_snf_subunit
+  - components#arp7_swi_snf_arp_module_subunit
+  - components#arp9_swi_snf_arp_module_subunit
+  - components#rtt102_swi_snf_arp_module_subunit
+  notes: Several SWI/SNF constituents are shared with RSC or other transcription and
+    chromatin complexes; curate InterPro, Pfam, NCBIfam or UniProt family accessions
+    only when they denote the SWI/SNF component class rather than a broader domain
+    family.
+  evidence:
+  - reference: DOI:10.1038/s41467-020-17229-x
+    notes: Wang et al. 2020 resolved the Saccharomyces cerevisiae Swi/Snf base and
+      Arp-module architecture.
+  posed_by: codex
+  posed_date: '2026-09-26'
