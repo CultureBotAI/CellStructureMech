@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/saga_complex.yaml
+  slug: saga_complex
+session:
+  id: 2026-09-26T072204Z-codex-7f8d1e
+  timestamp: '2026-09-26T07:22:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added SAGA complex record
+  details: Created the GO:0000124 SAGA complex record with SAGA-type parentage, DUBm has-part
+    structure, 19 Saccharomyces cerevisiae constituent rows, histone acetyltransferase and
+    cysteine-type deubiquitinase functions, literature-backed yeast scope, GO/PubMed/DOI evidence,
+    a nonmechanistic function graph, and an open subunit-grounding TODO.
