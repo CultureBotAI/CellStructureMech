@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/swr1_complex.yaml
+  slug: swr1_complex
+session:
+  id: 2026-09-26T045627Z-codex-cfa53e
+  timestamp: '2026-09-26T04:56:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - distribution
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Swr1 complex record
+  details: Created the GO:0000812 Swr1 complex record with SWR-C exact synonymy, INO80-type
+    parentage, nuclear-chromosome parthood, fourteen literature-supported budding-yeast SWR-C
+    constituent rows, Saccharomyces cerevisiae scope and exemplar evidence, ATP-dependent
+    H2AZ histone chaperone and chromatin-remodeling functions, GO/PubMed/DOI record-level
+    provenance, a nonmechanistic H2AZ-exchange function graph, and an open TODO to resolve
+    exact source-neutral family groundings for the SWR-C constituents. The curation used GO:0000812,
+    GO:0097346, GO:0000228, GO:0140849, GO:0006338, PubMed metadata for PMIDs 14645854, 14690608,
+    19355820 and 19088068, and PMC full text for Wu et al. 2009 before validating the record
+    with LinkML and strict validation.
