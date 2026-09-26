@@ -12967,6 +12967,37 @@
       ]
     },
     {
+      "identifier": "GO:0070823",
+      "label": "HDA1 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0032299",
+          "label": "ribonuclease H2 complex",
+          "cosine_similarity": 0.68667485
+        },
+        {
+          "identifier": "GO:0000112",
+          "label": "nucleotide-excision repair factor 3 complex",
+          "cosine_similarity": 0.68242826
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.67178712
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.66746272
+        },
+        {
+          "identifier": "GO:0000111",
+          "label": "nucleotide-excision repair factor 2 complex",
+          "cosine_similarity": 0.65910673
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:holdfast",
       "label": "holdfast",
       "neighbors": [
