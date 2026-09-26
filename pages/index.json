@@ -4248,6 +4248,15 @@
   "definition": "A protein complex that contains a histone deacetylase and is part of the chromatin remodeling machinery. In Saccharomyces cerevisiae this complex contains the Rpd3p, Sin3p, Ume1p, Pho23p, Sap30p, Sds3p, Cti6p, Rxt2p, Rxt3p, Dep1p, Ume6p, Ash1p, Dot6p, Snt1, Sif2p, Set3p, Hos2p, Tos4p and Tod6p proteins."
  },
  {
+  "identifier": "GO:0016586",
+  "label": "RSC-type complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/rsc_type_complex.html",
+  "definition": "A SWI/SNF-type complex that contains a bromodomain containing-protein, such as yeast Rsc1 or Rsc4 or mammalian PB1/BAF180. The RSC complex is generally recruited to RNA polymerase III promoters and is specifically recruited to RNA polymerase II promoters by transcriptional activators and repressors; it is also involved in non-homologous end joining."
+ },
+ {
   "identifier": "GO:0000124",
   "label": "SAGA complex",
   "category": "OTHER",

@@ -14641,6 +14641,37 @@
       ]
     },
     {
+      "identifier": "GO:0016586",
+      "label": "RSC-type complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0016514",
+          "label": "SWI/SNF complex",
+          "cosine_similarity": 0.69995145
+        },
+        {
+          "identifier": "GO:0000124",
+          "label": "SAGA complex",
+          "cosine_similarity": 0.69932785
+        },
+        {
+          "identifier": "GO:0034456",
+          "label": "UTP-C complex",
+          "cosine_similarity": 0.69760136
+        },
+        {
+          "identifier": "GO:0031932",
+          "label": "TORC2 complex",
+          "cosine_similarity": 0.68778465
+        },
+        {
+          "identifier": "GO:0031207",
+          "label": "Sec62/Sec63 complex",
+          "cosine_similarity": 0.68233859
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000124",
       "label": "SAGA complex",
       "neighbors": [

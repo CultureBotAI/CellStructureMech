@@ -1,0 +1,436 @@
+identifier: GO:0016586
+label: RSC-type complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A SWI/SNF-type complex that contains a bromodomain containing-protein,
+  such as yeast Rsc1 or Rsc4 or mammalian PB1/BAF180. The RSC complex is generally
+  recruited to RNA polymerase III promoters and is specifically recruited to RNA polymerase
+  II promoters by transcriptional activators and repressors; it is also involved in
+  non-homologous end joining.
+definition_source: GO:0016586
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T08:20:09Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T08:20:51Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added RSC exact synonymy, SWI/SNF-superfamily parentage, 16 budding-yeast
+    constituent rows, yeast scope, chromatin-remodeling function, GO/PubMed/DOI evidence,
+    a nonmechanistic function graph, and a subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: PBAF complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0016586
+- synonym_text: Polybromo- and BAF containing complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0016586
+- synonym_text: SWI/SNF complex B
+  synonym_type: EXACT_SYNONYM
+  source: GO:0016586
+parent_structures:
+- GO:0070603
+components:
+- component_id: sth1_rsc_atpase_subunit
+  label: Sth1 RSC ATPase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - STH1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Sth1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: ATPase-containing catalytic constituent of the budding-yeast RSC chromatin
+    remodeler.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: sfh1_rsc_core_subunit
+  label: Sfh1 RSC core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SFH1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Sfh1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: Evolutionarily conserved RSC core constituent that contributes to nucleosome
+    engagement.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: rsc6_rsc_core_subunit
+  label: Rsc6 RSC core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RSC6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Rsc6 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: Evolutionarily conserved core constituent of the body lobe.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: rsc8_rsc_core_subunit
+  label: Rsc8 RSC core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RSC8
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Rsc8 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: Dimeric backbone constituent that scaffolds the RSC head, body and arm lobes.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: rsc9_rsc_core_subunit
+  label: Rsc9 RSC core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RSC9
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Rsc9 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: Core body-lobe constituent of the budding-yeast RSC complex.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: arp7_rsc_arp_module_subunit
+  label: Arp7 RSC Arp module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARP7
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Arp7 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: Actin-related-protein constituent of the RSC Arp module.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: arp9_rsc_arp_module_subunit
+  label: Arp9 RSC Arp module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARP9
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Arp9 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: Actin-related-protein constituent of the RSC Arp module.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: rtt102_rsc_arp_module_subunit
+  label: Rtt102 RSC Arp module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RTT102
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Rtt102 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: Constituent of the RSC Arp module with Arp7 and Arp9.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: npl6_rsc_arm_lobe_subunit
+  label: Npl6 RSC arm lobe subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NPL6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Npl6 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: Yeast-conserved constituent that completes the RSC arm lobe.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: htl1_rsc_subunit
+  label: Htl1 RSC subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HTL1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Htl1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: RSC-specific scaffold constituent of the body-lobe helical bundle.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: ldb7_rsc_subunit
+  label: Ldb7 RSC subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - LDB7
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Ldb7 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: RSC-specific scaffold constituent assigned in the cryo-EM core.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: rsc1_rsc2_rsc_isoform_subunit
+  label: Rsc1/Rsc2 RSC isoform subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RSC1
+  - RSC2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Rsc1/Rsc2
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this RSC subunit class was curated in this pass.
+  role: Bromodomain- and BAH-domain-containing RSC-specific paralog slot supplied
+    by either Rsc1 or Rsc2.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: rsc3_rsc_tail_subunit
+  label: Rsc3 RSC tail subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RSC3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Rsc3 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: RSC-specific tail-module constituent paired with Rsc30.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: rsc30_rsc_tail_subunit
+  label: Rsc30 RSC tail subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RSC30
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Rsc30 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: RSC-specific tail-module constituent paired with Rsc3.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: rsc4_rsc_head_subunit
+  label: Rsc4 RSC head subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RSC4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Rsc4 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: Bromodomain-containing RSC-specific constituent of the head lobe.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+- component_id: rsc58_rsc_head_body_subunit
+  label: Rsc58 RSC head/body subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RSC58
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast RSC architecture literature follows Rsc58 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this RSC subunit class was curated in this pass.
+  role: Bromodomain-containing RSC-specific constituent that spans the head and body
+    lobes.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+      Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
+      and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism from which Patel et al. 2019 purified RSC through
+    tagged Sth1 for cryo-EM and crosslinking mass-spectrometry architecture studies.
+  reference: DOI:10.7554/eLife.54449
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Patel et al. 2019 resolved Saccharomyces cerevisiae RSC into a rigid tripartite
+    core plus flexible ATPase and tail lobes.
+  reference: DOI:10.7554/eLife.54449
+functions:
+- function_id: chromatin_remodeling
+  label: chromatin remodeling
+  grounding: GO:0006338
+  description: ATP-dependent remodeling of nucleosome positions and histone-DNA contacts
+    that changes chromatin architecture.
+  evidence:
+  - reference: GO:0006338
+    notes: GO:0006338 is the Gene Ontology biological-process term for chromatin remodeling.
+  - reference: GO:0016586
+    notes: Gene Ontology models the RSC-type complex as capable of chromatin remodeling.
+  - reference: PMID:8980231
+    notes: Cairns et al. 1996 isolated RSC as an essential and abundant chromatin-remodeling
+      complex.
+evidence:
+- reference: GO:0016586
+  notes: Gene Ontology cellular-component term for RSC-type complex and its PBAF,
+    Polybromo- and BAF containing, and SWI/SNF complex B exact synonyms.
+- reference: GO:0070603
+  notes: Gene Ontology cellular-component parent term for SWI/SNF superfamily-type
+    complexes.
+- reference: GO:0006338
+  notes: Gene Ontology biological-process term for chromatin remodeling.
+- reference: PMID:8980231
+  notes: PubMed identifier for Cairns et al. 1996, the original RSC chromatin-remodeling-complex
+    paper cited by GO:0016586.
+- reference: DOI:10.1016/s0092-8674(00)81820-6
+  notes: DOI for Cairns et al. 1996, 'RSC, an essential, abundant chromatin-remodeling
+    complex', verified through NCBI E-utilities.
+- reference: PMID:31886770
+  notes: PubMed identifier for Patel et al. 2019, the budding-yeast RSC cryo-EM and
+    crosslinking mass-spectrometry architecture paper.
+- reference: DOI:10.7554/eLife.54449
+  notes: DOI for Patel et al. 2019, 'Architecture of the chromatin remodeler RSC and
+    insights into its nucleosome engagement', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_rsc_chromatin_remodeling
+  title: RSC supports ATP-dependent chromatin remodeling
+  description: In Saccharomyces cerevisiae, the Sth1 ATPase and accessory RSC subunits
+    assemble into an ATP-dependent remodeler that engages nucleosomes through the
+    core and Arp-module lobes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the curated Sth1 ATPase subunit and broad chromatin-remodeling
+    activity without resolving histone-tail reader engagement, nucleosome translocation
+    or RSC recruitment to individual loci.
+  nodes:
+  - node_id: sth1_rsc_atpase_subunit
+    label: Sth1 RSC ATPase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sth1_rsc_atpase_subunit
+  - node_id: rsc_type_complex
+    label: RSC-type complex
+    node_type: STRUCTURE
+    grounding: GO:0016586
+  - node_id: chromatin_remodeling
+    label: chromatin remodeling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006338
+  edges:
+  - subject: sth1_rsc_atpase_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: Sth1 is the ATPase-domain-containing catalytic constituent of budding-yeast
+      RSC.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 assign Sth1 to the RSC core and Arp-module architecture.
+  - subject: rsc_type_complex
+    predicate: supports
+    object: chromatin_remodeling
+    description: The RSC-type complex carries out chromatin remodeling.
+    evidence:
+    - reference: GO:0006338
+      notes: GO:0006338 lists GO:0016586 as a cellular component capable of chromatin
+        remodeling.
+discussions:
+- discussion_id: resolve_rsc_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the curated budding-yeast
+    RSC constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sth1_rsc_atpase_subunit
+  - components#sfh1_rsc_core_subunit
+  - components#rsc6_rsc_core_subunit
+  - components#rsc8_rsc_core_subunit
+  - components#rsc9_rsc_core_subunit
+  - components#arp7_rsc_arp_module_subunit
+  - components#arp9_rsc_arp_module_subunit
+  - components#rtt102_rsc_arp_module_subunit
+  - components#npl6_rsc_arm_lobe_subunit
+  - components#htl1_rsc_subunit
+  - components#ldb7_rsc_subunit
+  - components#rsc1_rsc2_rsc_isoform_subunit
+  - components#rsc3_rsc_tail_subunit
+  - components#rsc30_rsc_tail_subunit
+  - components#rsc4_rsc_head_subunit
+  - components#rsc58_rsc_head_body_subunit
+  notes: RSC shares Sth1/SNF2-superfamily, Arp and other conserved subunit classes
+    with the broader SWI/SNF remodeler family; curate InterPro, Pfam, NCBIfam or UniProt
+    family accessions only when they denote the RSC component class rather than a
+    broader domain family.
+  evidence:
+  - reference: DOI:10.7554/eLife.54449
+    notes: Patel et al. 2019 resolved the Saccharomyces cerevisiae RSC core and Arp-module
+      architecture.
+  posed_by: codex
+  posed_date: '2026-09-26'
