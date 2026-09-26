@@ -1,0 +1,352 @@
+identifier: GO:0034967
+label: Set3 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A histone deacetylase complex that is involved in transcriptional regulation.
+  In S. cerevisiae, this complex consists of Set3p, Snt1p, Hos4p, Sif2p, Cpr1p, Hos2p,
+  and Hst1p.
+definition_source: GO:0034967
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T03:40:05Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T03:40:52Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Set3 exact synonymy, histone-deacetylase-complex parentage, chromatin/nuclear-chromosome
+    parthood, Set3C constituent rows, budding-yeast scope, histone deacetylase activity,
+    GO/PubMed/DOI evidence, a nonmechanistic function graph, and a Set3C subunit-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-26T03:43:21Z'
+  curator: codex
+  action: FIX_HOS4_PRIOR_NAME
+  changes: Clarified that the Set3C primary paper identified the GO-curated Hos4p
+    subunit under its YIL112w name.
+  llm_assisted: true
+synonyms:
+- synonym_text: HDAC3 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034967
+- synonym_text: SET3C
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034967
+parent_structures:
+- GO:0000118
+part_of:
+- GO:0000228
+- GO:0000785
+components:
+- component_id: set3_set3c_subunit
+  label: Set3 SET3C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SET3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0034967 follows Saccharomyces cerevisiae Set3p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Set3
+    complex subunit class was curated in this pass.
+  role: SET/PHD-domain constituent that gives the budding-yeast Set3 histone deacetylase
+    complex its name.
+  evidence:
+  - reference: GO:0034967
+    notes: GO:0034967 defines the S. cerevisiae Set3 complex as containing Set3p.
+  - reference: DOI:10.1101/gad.207401
+    notes: Pijnappel et al. 2001 identified Set3p as a constituent of budding-yeast
+      Set3C.
+- component_id: snt1_set3c_subunit
+  label: Snt1 SET3C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SNT1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0034967 follows Saccharomyces cerevisiae Snt1p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Set3
+    complex subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Set3 histone deacetylase complex.
+  evidence:
+  - reference: GO:0034967
+    notes: GO:0034967 defines the S. cerevisiae Set3 complex as containing Snt1p.
+  - reference: DOI:10.1101/gad.207401
+    notes: Pijnappel et al. 2001 identified Snt1p as a constituent of budding-yeast
+      Set3C.
+- component_id: hos4_set3c_subunit
+  label: Hos4 SET3C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HOS4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0034967 follows Saccharomyces cerevisiae Hos4p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Set3
+    complex subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Set3 histone deacetylase complex,
+    corresponding to the YIL112w protein identified with Set3C.
+  evidence:
+  - reference: GO:0034967
+    notes: GO:0034967 defines the S. cerevisiae Set3 complex as containing Hos4p.
+  - reference: DOI:10.1101/gad.207401
+    notes: Pijnappel et al. 2001 identified YIL112w as a constituent of budding-yeast
+      Set3C; GO:0034967 curates that subunit with the Hos4p name.
+- component_id: sif2_set3c_subunit
+  label: Sif2 SET3C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SIF2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0034967 follows Saccharomyces cerevisiae Sif2p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Set3
+    complex subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Set3 histone deacetylase complex.
+  evidence:
+  - reference: GO:0034967
+    notes: GO:0034967 defines the S. cerevisiae Set3 complex as containing Sif2p.
+  - reference: DOI:10.1101/gad.207401
+    notes: Pijnappel et al. 2001 identified Sif2p as a constituent of budding-yeast
+      Set3C.
+- component_id: cpr1_set3c_subunit
+  label: Cpr1 SET3C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CPR1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0034967 follows Saccharomyces cerevisiae Cpr1p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Set3
+    complex subunit class was curated in this pass.
+  role: Cyclophilin constituent of the budding-yeast Set3 histone deacetylase complex.
+  evidence:
+  - reference: GO:0034967
+    notes: GO:0034967 defines the S. cerevisiae Set3 complex as containing Cpr1p.
+  - reference: DOI:10.1101/gad.207401
+    notes: Pijnappel et al. 2001 identified Cpr1p as a constituent of budding-yeast
+      Set3C.
+- component_id: hos2_set3c_subunit
+  label: Hos2 SET3C deacetylase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HOS2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0034967 follows Saccharomyces cerevisiae Hos2p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Set3
+    complex subunit class was curated in this pass.
+  role: Putative histone deacetylase constituent of the budding-yeast Set3 complex.
+  evidence:
+  - reference: GO:0034967
+    notes: GO:0034967 defines the S. cerevisiae Set3 complex as containing Hos2p.
+  - reference: DOI:10.1101/gad.207401
+    notes: Pijnappel et al. 2001 identified Hos2p as a constituent of budding-yeast
+      Set3C.
+- component_id: hst1_set3c_subunit
+  label: Hst1 SET3C deacetylase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HST1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0034967 follows Saccharomyces cerevisiae Hst1p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Set3
+    complex subunit class was curated in this pass.
+  role: NAD-dependent putative histone deacetylase constituent of the budding-yeast
+    Set3 complex.
+  evidence:
+  - reference: GO:0034967
+    notes: GO:0034967 defines the S. cerevisiae Set3 complex as containing Hst1p.
+  - reference: DOI:10.1101/gad.207401
+    notes: Pijnappel et al. 2001 identified Hst1p as a constituent of budding-yeast
+      Set3C.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0034967 defines the Set3 complex
+    as a seven-subunit histone deacetylase complex.
+  reference: GO:0034967
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Pijnappel et al. 2001 identified Set3C as a budding-yeast complex containing
+    Set3, Snt1, YIL112w/Hos4, Sif2, Cpr1, Hos2 and Hst1.
+  reference: DOI:10.1101/gad.207401
+functions:
+- function_id: histone_deacetylase_activity
+  label: histone deacetylase activity
+  grounding: GO:0004407
+  description: The Set3 complex is a histone deacetylase complex that contains the
+    Hos2 and Hst1 deacetylase constituents.
+  evidence:
+  - reference: GO:0034967
+    notes: GO:0034967 defines the Set3 complex as a histone deacetylase complex involved
+      in transcriptional regulation.
+  - reference: GO:0004407
+    notes: GO:0004407 is the Gene Ontology molecular-function term for histone deacetylase
+      activity.
+  - reference: DOI:10.1101/gad.207401
+    notes: Pijnappel et al. 2001 found NAD-dependent and NAD-independent deacetylase
+      activities in Set3C in vitro.
+evidence:
+- reference: GO:0034967
+  notes: Gene Ontology cellular-component term for the Set3 complex and its exact
+    HDAC3 complex and SET3C synonyms.
+- reference: GO:0000118
+  notes: Gene Ontology cellular-component parent term for histone deacetylase complexes.
+- reference: GO:0000228
+  notes: Gene Ontology cellular-component term for nuclear chromosome.
+- reference: GO:0000785
+  notes: Gene Ontology cellular-component term for chromatin.
+- reference: GO:0004407
+  notes: Gene Ontology molecular-function term for histone deacetylase activity.
+- reference: PMID:11711434
+  notes: PubMed identifier for Pijnappel et al. 2001, the Set3C Genes and Development
+    paper cited by GO:0034967.
+- reference: DOI:10.1101/gad.207401
+  notes: DOI for Pijnappel et al. 2001, 'The S. cerevisiae SET3 complex includes two
+    histone deacetylases, Hos2 and Hst1, and is a meiotic-specific repressor of the
+    sporulation gene program', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_set3c_histone_deacetylase_activity
+  title: Set3C carries yeast histone deacetylase activity
+  description: In Saccharomyces cerevisiae, Set3p, Snt1p, Hos4p, Sif2p, Cpr1p, Hos2p
+    and Hst1p form the Set3C histone deacetylase complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the GO-defined Set3 complex constituents and their
+    connection to histone deacetylase activity without resolving NAD-dependent versus
+    NAD-independent chemistry, meiotic promoter recruitment or transcription-factor
+    targets.
+  nodes:
+  - node_id: set3_set3c_subunit
+    label: Set3 SET3C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: set3_set3c_subunit
+  - node_id: snt1_set3c_subunit
+    label: Snt1 SET3C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: snt1_set3c_subunit
+  - node_id: hos4_set3c_subunit
+    label: Hos4 SET3C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hos4_set3c_subunit
+  - node_id: sif2_set3c_subunit
+    label: Sif2 SET3C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sif2_set3c_subunit
+  - node_id: cpr1_set3c_subunit
+    label: Cpr1 SET3C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cpr1_set3c_subunit
+  - node_id: hos2_set3c_subunit
+    label: Hos2 SET3C deacetylase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hos2_set3c_subunit
+  - node_id: hst1_set3c_subunit
+    label: Hst1 SET3C deacetylase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hst1_set3c_subunit
+  - node_id: set3_complex
+    label: Set3 complex
+    node_type: STRUCTURE
+    grounding: GO:0034967
+  - node_id: histone_deacetylase_activity
+    label: histone deacetylase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004407
+  edges:
+  - subject: set3_set3c_subunit
+    predicate: contributes to
+    object: set3_complex
+    description: Set3p is a constituent of the budding-yeast Set3 complex.
+    evidence:
+    - reference: GO:0034967
+      notes: GO:0034967 defines Set3p as a Set3 complex constituent.
+  - subject: snt1_set3c_subunit
+    predicate: contributes to
+    object: set3_complex
+    description: Snt1p is a constituent of the budding-yeast Set3 complex.
+    evidence:
+    - reference: GO:0034967
+      notes: GO:0034967 defines Snt1p as a Set3 complex constituent.
+  - subject: hos4_set3c_subunit
+    predicate: contributes to
+    object: set3_complex
+    description: Hos4p is a constituent of the budding-yeast Set3 complex.
+    evidence:
+    - reference: GO:0034967
+      notes: GO:0034967 defines Hos4p as a Set3 complex constituent.
+  - subject: sif2_set3c_subunit
+    predicate: contributes to
+    object: set3_complex
+    description: Sif2p is a constituent of the budding-yeast Set3 complex.
+    evidence:
+    - reference: GO:0034967
+      notes: GO:0034967 defines Sif2p as a Set3 complex constituent.
+  - subject: cpr1_set3c_subunit
+    predicate: contributes to
+    object: set3_complex
+    description: Cpr1p is a constituent of the budding-yeast Set3 complex.
+    evidence:
+    - reference: GO:0034967
+      notes: GO:0034967 defines Cpr1p as a Set3 complex constituent.
+  - subject: hos2_set3c_subunit
+    predicate: contributes to
+    object: set3_complex
+    description: Hos2p is a constituent of the budding-yeast Set3 complex.
+    evidence:
+    - reference: GO:0034967
+      notes: GO:0034967 defines Hos2p as a Set3 complex constituent.
+  - subject: hst1_set3c_subunit
+    predicate: contributes to
+    object: set3_complex
+    description: Hst1p is a constituent of the budding-yeast Set3 complex.
+    evidence:
+    - reference: GO:0034967
+      notes: GO:0034967 defines Hst1p as a Set3 complex constituent.
+  - subject: set3_complex
+    predicate: supports
+    object: histone_deacetylase_activity
+    description: Set3C supports histone deacetylase activity through its Hos2p and
+      Hst1p deacetylase constituents.
+    evidence:
+    - reference: GO:0034967
+      notes: GO:0034967 defines the Set3 complex as a histone deacetylase complex.
+    - reference: GO:0004407
+      notes: GO:0004407 is the molecular-function term for histone deacetylase activity.
+    - reference: DOI:10.1101/gad.207401
+      notes: Pijnappel et al. 2001 found in vitro NAD-dependent and NAD-independent
+        deacetylase activities in Set3C.
+discussions:
+- discussion_id: resolve_set3c_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Set3C constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#set3_set3c_subunit
+  - components#snt1_set3c_subunit
+  - components#hos4_set3c_subunit
+  - components#sif2_set3c_subunit
+  - components#cpr1_set3c_subunit
+  - components#hos2_set3c_subunit
+  - components#hst1_set3c_subunit
+  rationale: GO:0034967 defines the budding-yeast Set3p, Snt1p, Hos4p, Sif2p, Cpr1p,
+    Hos2p and Hst1p proteins as Set3 complex constituents. Exact cross-eukaryotic
+    InterPro, Pfam, NCBIfam or UniProt family boundaries for these Set3C subunit classes
+    need narrower curation before these component labels can be grounded.
+  evidence:
+  - reference: GO:0034967
+    notes: GO:0034967 defines the budding-yeast Set3 complex subunits.
+  posed_by: codex
+  posed_date: '2026-09-26'
