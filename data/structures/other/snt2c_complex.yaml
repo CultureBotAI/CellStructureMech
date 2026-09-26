@@ -1,0 +1,220 @@
+identifier: GO:0070211
+label: Snt2C complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A histone deacetylase complex that is part of the chromatin remodeling
+  machinery. In Saccharomyces cerevisiae this complex contains Snt2p, Ecm5p and Rpd3p.
+definition_source: GO:0070211
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T04:02:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T04:04:32Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Snt2 exact synonymy, histone-deacetylase-complex parentage and chromatin
+    parthood, Snt2C constituent rows, budding-yeast scope, histone deacetylase activity,
+    GO/PubMed/DOI evidence, a nonmechanistic function graph, and a Snt2C subunit-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-26T04:13:29Z'
+  curator: codex
+  action: FIX_SNT2_DOMAIN_WORDING
+  changes: Clarified that Snt2p is the SANT-domain subunit of Snt2C, leaving JmjC-domain
+    wording on Ecm5p.
+  llm_assisted: true
+synonyms:
+- synonym_text: Snt2 complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1186/gb-2008-9-11-r167
+parent_structures:
+- GO:0000118
+part_of:
+- GO:0000785
+components:
+- component_id: snt2_snt2c_subunit
+  label: Snt2 Snt2C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SNT2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070211 follows Saccharomyces cerevisiae Snt2p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Snt2C
+    subunit class was curated in this pass.
+  role: SANT-domain constituent that gives the budding-yeast Snt2C histone deacetylase
+    complex its name.
+  evidence:
+  - reference: GO:0070211
+    notes: GO:0070211 defines the S. cerevisiae Snt2C complex as containing Snt2p.
+  - reference: DOI:10.1186/gb-2008-9-11-r167
+    notes: Shevchenko et al. 2008 listed SNT2 under the Snt2 complex and reported
+      validating the three-member complex by tagging Snt2.
+- component_id: ecm5_snt2c_subunit
+  label: Ecm5 Snt2C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ECM5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070211 follows Saccharomyces cerevisiae Ecm5p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Snt2C
+    subunit class was curated in this pass.
+  role: JmjC/PHD-finger constituent of the budding-yeast Snt2C histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070211
+    notes: GO:0070211 defines the S. cerevisiae Snt2C complex as containing Ecm5p.
+  - reference: DOI:10.1186/gb-2008-9-11-r167
+    notes: Shevchenko et al. 2008 listed ECM5 under the Snt2 complex and described
+      Ecm5p as the other Snt2C subunit besides Snt2p and Rpd3p.
+- component_id: rpd3_snt2c_deacetylase_subunit
+  label: Rpd3 Snt2C deacetylase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RPD3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070211 follows Saccharomyces cerevisiae Rpd3p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3
+    complex subunit class was curated in this pass.
+  role: Histone deacetylase constituent shared with other Rpd3-containing budding-yeast
+    HDAC complexes.
+  evidence:
+  - reference: GO:0070211
+    notes: GO:0070211 defines the S. cerevisiae Snt2C complex as containing Rpd3p.
+  - reference: DOI:10.1186/gb-2008-9-11-r167
+    notes: Shevchenko et al. 2008 found Snt2C in an Rpd3-TAP pulldown and listed RPD3
+      under the Snt2 complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0070211 defines the Snt2C complex
+    as a three-subunit Rpd3-containing histone deacetylase complex.
+  reference: GO:0070211
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Shevchenko et al. 2008 found the Snt2C complex in a budding-yeast Rpd3-TAP
+    pulldown and validated the complex by tagging Snt2.
+  reference: DOI:10.1186/gb-2008-9-11-r167
+functions:
+- function_id: histone_deacetylase_activity
+  label: histone deacetylase activity
+  grounding: GO:0004407
+  description: The Snt2C complex is an Rpd3-containing histone deacetylase complex.
+  evidence:
+  - reference: GO:0070211
+    notes: GO:0070211 defines Snt2C as a histone deacetylase complex containing Rpd3p.
+  - reference: GO:0004407
+    notes: GO:0004407 is the Gene Ontology molecular-function term for histone deacetylase
+      activity.
+  - reference: DOI:10.1186/gb-2008-9-11-r167
+    notes: Shevchenko et al. 2008 found Snt2C as one of two new Rpd3-containing complexes
+      in budding yeast Chromatin Central.
+evidence:
+- reference: GO:0070211
+  notes: Gene Ontology cellular-component term for the Snt2C complex.
+- reference: GO:0000118
+  notes: Gene Ontology cellular-component parent term for histone deacetylase complexes.
+- reference: GO:0000785
+  notes: Gene Ontology cellular-component term for chromatin.
+- reference: GO:0004407
+  notes: Gene Ontology molecular-function term for histone deacetylase activity.
+- reference: PMID:19040720
+  notes: PubMed identifier for Shevchenko et al. 2008, the Genome Biology Chromatin
+    Central paper cited by GO:0070211.
+- reference: DOI:10.1186/gb-2008-9-11-r167
+  notes: 'DOI for Shevchenko et al. 2008, ''Chromatin Central: towards the comparative
+    proteome by accurate mapping of the yeast proteomic environment'', verified through
+    NCBI E-utilities.'
+causal_graphs:
+- graph_id: yeast_snt2c_histone_deacetylase_activity
+  title: Snt2C carries yeast histone deacetylase activity
+  description: In Saccharomyces cerevisiae, Snt2p, Ecm5p and Rpd3p form the Snt2C
+    histone deacetylase complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the GO-defined Snt2C complex constituents and their
+    connection to histone deacetylase activity without resolving substrate selection,
+    chromatin recruitment or catalytic chemistry.
+  nodes:
+  - node_id: snt2_snt2c_subunit
+    label: Snt2 Snt2C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: snt2_snt2c_subunit
+  - node_id: ecm5_snt2c_subunit
+    label: Ecm5 Snt2C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ecm5_snt2c_subunit
+  - node_id: rpd3_snt2c_deacetylase_subunit
+    label: Rpd3 Snt2C deacetylase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rpd3_snt2c_deacetylase_subunit
+  - node_id: snt2c_complex
+    label: Snt2C complex
+    node_type: STRUCTURE
+    grounding: GO:0070211
+  - node_id: histone_deacetylase_activity
+    label: histone deacetylase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004407
+  edges:
+  - subject: snt2_snt2c_subunit
+    predicate: contributes to
+    object: snt2c_complex
+    description: Snt2p is a constituent of the budding-yeast Snt2C complex.
+    evidence:
+    - reference: GO:0070211
+      notes: GO:0070211 defines Snt2p as an Snt2C complex constituent.
+  - subject: ecm5_snt2c_subunit
+    predicate: contributes to
+    object: snt2c_complex
+    description: Ecm5p is a constituent of the budding-yeast Snt2C complex.
+    evidence:
+    - reference: GO:0070211
+      notes: GO:0070211 defines Ecm5p as an Snt2C complex constituent.
+  - subject: rpd3_snt2c_deacetylase_subunit
+    predicate: contributes to
+    object: snt2c_complex
+    description: Rpd3p is a deacetylase constituent of the budding-yeast Snt2C complex.
+    evidence:
+    - reference: GO:0070211
+      notes: GO:0070211 defines Rpd3p as an Snt2C complex constituent.
+    - reference: DOI:10.1186/gb-2008-9-11-r167
+      notes: Shevchenko et al. 2008 found Snt2C in an Rpd3-TAP pulldown.
+  - subject: snt2c_complex
+    predicate: supports
+    object: histone_deacetylase_activity
+    description: Snt2C is an Rpd3-containing histone deacetylase complex in budding
+      yeast.
+    evidence:
+    - reference: GO:0070211
+      notes: GO:0070211 defines Snt2C as a histone deacetylase complex.
+    - reference: GO:0004407
+      notes: GO:0004407 is the molecular-function term for histone deacetylase activity.
+discussions:
+- discussion_id: resolve_snt2c_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Snt2C constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#snt2_snt2c_subunit
+  - components#ecm5_snt2c_subunit
+  - components#rpd3_snt2c_deacetylase_subunit
+  rationale: GO:0070211 defines the budding-yeast Snt2p, Ecm5p and Rpd3p proteins
+    as Snt2C complex constituents. Exact cross-eukaryotic InterPro, Pfam, NCBIfam
+    or UniProt family boundaries for these Snt2C subunit classes need narrower curation
+    before these component labels can be grounded.
+  evidence:
+  - reference: GO:0070211
+    notes: GO:0070211 defines the budding-yeast Snt2C complex subunits.
+  posed_by: codex
+  posed_date: '2026-09-26'
