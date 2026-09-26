@@ -13525,6 +13525,37 @@
       ]
     },
     {
+      "identifier": "GO:0035267",
+      "label": "NuA4 histone acetyltransferase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000113",
+          "label": "nucleotide-excision repair factor 4 complex",
+          "cosine_similarity": 0.77700035
+        },
+        {
+          "identifier": "GO:0034967",
+          "label": "Set3 complex",
+          "cosine_similarity": 0.75219499
+        },
+        {
+          "identifier": "GO:0000812",
+          "label": "Swr1 complex",
+          "cosine_similarity": 0.74251657
+        },
+        {
+          "identifier": "GO:0000110",
+          "label": "nucleotide-excision repair factor 1 complex",
+          "cosine_similarity": 0.74042638
+        },
+        {
+          "identifier": "GO:0031932",
+          "label": "TORC2 complex",
+          "cosine_similarity": 0.73718817
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000228",
       "label": "nuclear chromosome",
       "neighbors": [
@@ -13828,9 +13859,9 @@
           "cosine_similarity": 0.74196333
         },
         {
-          "identifier": "GO:0031518",
-          "label": "CBF3 complex",
-          "cosine_similarity": 0.7319916
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.74042638
         }
       ]
     },
@@ -13916,14 +13947,14 @@
           "cosine_similarity": 0.91474642
         },
         {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.77700035
+        },
+        {
           "identifier": "GO:0030692",
           "label": "Noc4p-Nop14p complex",
           "cosine_similarity": 0.74428058
-        },
-        {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.72455408
         }
       ]
     },
@@ -14536,14 +14567,14 @@
           "cosine_similarity": 0.75097165
         },
         {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.70416854
+        },
+        {
           "identifier": "GO:0070824",
           "label": "SHREC complex",
           "cosine_similarity": 0.695084
-        },
-        {
-          "identifier": "GO:0000812",
-          "label": "Swr1 complex",
-          "cosine_similarity": 0.6760584
         }
       ]
     },
@@ -14696,9 +14727,9 @@
           "cosine_similarity": 0.7774188
         },
         {
-          "identifier": "GO:0000112",
-          "label": "nucleotide-excision repair factor 3 complex",
-          "cosine_similarity": 0.73572027
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.75219499
         }
       ]
     },
@@ -14867,6 +14898,11 @@
           "cosine_similarity": 0.75338803
         },
         {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.74251657
+        },
+        {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.71532478
@@ -14880,11 +14916,6 @@
           "identifier": "GO:0034456",
           "label": "UTP-C complex",
           "cosine_similarity": 0.69817713
-        },
-        {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.69236089
         }
       ]
     },
