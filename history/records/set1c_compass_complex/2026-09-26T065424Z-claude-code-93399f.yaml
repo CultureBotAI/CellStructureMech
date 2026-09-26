@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/set1c_compass_complex.yaml
+  slug: set1c_compass_complex
+session:
+  id: 2026-09-26T065424Z-claude-code-93399f
+  timestamp: '2026-09-26T06:54:24Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the Set1C/COMPASS complex structure record
+  details: Created data/structures/other/set1c_compass_complex.yaml for GO:0048188 with COMPASS/Set1
+    exact synonymy and GO:0035097 histone-methyltransferase-complex parentage, curated the
+    eight Saccharomyces cerevisiae Set1C/COMPASS constituents named by GO, added budding-yeast
+    scope, represented histone H3K4 methyltransferase activity with GO:0042800, attached GO/PubMed/DOI
+    evidence for the original COMPASS and Set1 H3K4 methyltransferase papers, and left exact
+    source-neutral family grounding as an open component TODO. The record was written through
+    scripts/new_record.py plus guarded write_validated_structure mutators and checked with
+    targeted LinkML and strict validation.
