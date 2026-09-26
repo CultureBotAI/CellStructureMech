@@ -1,0 +1,181 @@
+identifier: GO:0000111
+label: nucleotide-excision repair factor 2 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: One of several protein complexes involved in nucleotide-excision repair;
+  possesses damaged DNA binding activity. In S. cerevisiae, it is composed of Rad4p
+  and Rad23p.
+definition_source: GO:0000111
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T02:15:16Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T02:15:16Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added NEF2 exact synonymy, nucleotide-excision repair complex parentage,
+    two reviewed-label-only Rad constituent rows, budding-yeast scope, a nucleotide-excision-repair
+    function, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a NEF2
+    subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: NEF2 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000111
+parent_structures:
+- GO:0000109
+components:
+- component_id: rad4_nef2_subunit
+  label: Rad4 NEF2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RAD4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Rad4p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this nucleotide-excision repair factor 2 subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast nucleotide-excision repair factor
+    2 / NEF2 complex.
+  evidence:
+  - reference: GO:0000111
+    notes: GO:0000111 defines the NEF2 complex as containing Rad4p.
+- component_id: rad23_nef2_subunit
+  label: Rad23 NEF2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RAD23
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Rad23p
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this nucleotide-excision repair factor 2 subunit class was curated in this
+    pass.
+  role: Protein constituent of the budding-yeast nucleotide-excision repair factor
+    2 / NEF2 complex.
+  evidence:
+  - reference: GO:0000111
+    notes: GO:0000111 defines the NEF2 complex as containing Rad23p.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0000111 defines NEF2 as a Rad4p/Rad23p
+    nucleotide-excision repair factor complex.
+  reference: GO:0000111
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Prakash and Prakash 2000 described the budding-yeast Rad4-Rad23 complex as
+    the nucleotide-excision repair subassembly called NEF2.
+  reference: DOI:10.1016/s0027-5107(00)00037-3
+functions:
+- function_id: nucleotide_excision_repair
+  label: nucleotide-excision repair
+  grounding: GO:0006289
+  description: The NEF2 complex participates in nucleotide-excision repair as a damaged-DNA-binding
+    protein complex.
+  evidence:
+  - reference: GO:0000111
+    notes: GO:0000111 defines NEF2 as a nucleotide-excision repair factor with damaged
+      DNA binding activity.
+  - reference: GO:0006289
+    notes: GO:0006289 is the Gene Ontology biological-process term for nucleotide-excision
+      repair.
+  - reference: DOI:10.1016/s0027-5107(00)00037-3
+    notes: Prakash and Prakash 2000 described the Rad4-Rad23 complex as the budding-yeast
+      NEF2 multiprotein subassembly.
+evidence:
+- reference: GO:0000111
+  notes: Gene Ontology cellular-component term for the NEF2 complex and its exact
+    NEF2 synonym.
+- reference: GO:0000109
+  notes: Gene Ontology cellular-component parent term for nucleotide-excision repair
+    complexes.
+- reference: GO:0006289
+  notes: Gene Ontology biological-process term for nucleotide-excision repair.
+- reference: PMID:10915862
+  notes: PubMed identifier for Prakash and Prakash 2000, the Mutation Research yeast
+    nucleotide-excision repair review cited by GO:0000111.
+- reference: DOI:10.1016/s0027-5107(00)00037-3
+  notes: DOI for Prakash and Prakash 2000, 'Nucleotide excision repair in yeast',
+    verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_nef2_nucleotide_excision_repair
+  title: NEF2 is a yeast nucleotide-excision repair factor
+  description: In Saccharomyces cerevisiae, Rad4p and Rad23p form the NEF2 subassembly
+    of the nucleotide-excision repair protein system.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the two GO-defined NEF2 constituents and the connection
+    from NEF2 to nucleotide-excision repair without resolving damage-recognition chemistry
+    or recruitment order.
+  nodes:
+  - node_id: rad4_nef2_subunit
+    label: Rad4 NEF2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad4_nef2_subunit
+  - node_id: rad23_nef2_subunit
+    label: Rad23 NEF2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad23_nef2_subunit
+  - node_id: nef2_complex
+    label: NEF2 complex
+    node_type: STRUCTURE
+    grounding: GO:0000111
+  - node_id: nucleotide_excision_repair
+    label: nucleotide-excision repair
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006289
+  edges:
+  - subject: rad4_nef2_subunit
+    predicate: contributes to
+    object: nef2_complex
+    description: Rad4p is one constituent of the budding-yeast NEF2 complex.
+    evidence:
+    - reference: GO:0000111
+      notes: GO:0000111 defines Rad4p as a component of the NEF2 complex.
+  - subject: rad23_nef2_subunit
+    predicate: contributes to
+    object: nef2_complex
+    description: Rad23p is one constituent of the budding-yeast NEF2 complex.
+    evidence:
+    - reference: GO:0000111
+      notes: GO:0000111 defines Rad23p as a component of the NEF2 complex.
+  - subject: nef2_complex
+    predicate: supports
+    object: nucleotide_excision_repair
+    description: The NEF2 complex is one damaged-DNA-binding multiprotein subassembly
+      of the yeast nucleotide-excision repair system.
+    evidence:
+    - reference: GO:0000111
+      notes: GO:0000111 defines NEF2 as one of several complexes involved in nucleotide-excision
+        repair.
+    - reference: GO:0006289
+      notes: GO:0006289 is the process term for nucleotide-excision repair.
+    - reference: DOI:10.1016/s0027-5107(00)00037-3
+      notes: Prakash and Prakash 2000 described NEF2 as an in-vivo multiprotein subassembly
+        of the yeast NER proteins.
+discussions:
+- discussion_id: resolve_nef2_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Rad4 and Rad23 constituents
+    of the NEF2 complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rad4_nef2_subunit
+  - components#rad23_nef2_subunit
+  rationale: GO:0000111 defines budding-yeast Rad4p and Rad23p as the NEF2 constituents.
+    Exact cross-eukaryotic InterPro, Pfam, NCBIfam or UniProt family boundaries for
+    these NER factor classes need narrower curation before these component labels
+    can be grounded.
+  evidence:
+  - reference: GO:0000111
+    notes: GO:0000111 defines the budding-yeast NEF2 subunits.
+  posed_by: codex
+  posed_date: '2026-09-26'
