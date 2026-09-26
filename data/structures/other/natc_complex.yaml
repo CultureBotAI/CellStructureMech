@@ -1,0 +1,257 @@
+identifier: GO:0031417
+label: NatC complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A conserved complex that catalyzes the transfer of an acetyl group to
+  the N-terminal residue of a protein acceptor molecule that has a Met-Ile, Met-Leu,
+  Met-Trp, or Met-Phe N-terminus. In Saccharomyces the complex includes Mak3p, Mak10p,
+  and Mak31p.
+definition_source: GO:0031417
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T09:50:13Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T09:51:13Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added NatC exact synonymy, N-terminal protein acetyltransferase parentage,
+    three budding-yeast constituent rows, yeast scope, protein-N-terminal acetyltransferase
+    function, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a subunit-grounding
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: N-terminal acetyltransferase C complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031417
+parent_structures:
+- GO:0031414
+components:
+- component_id: mak3_natc_catalytic_subunit
+  label: Mak3 NatC catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MAK3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NatC literature follows Mak3 naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this NatC
+    subunit class was curated in this pass.
+  role: Catalytic constituent of the budding-yeast NatC complex that works with Mak10
+    and Mak31 to form active NatC.
+  evidence:
+  - reference: DOI:10.1074/jbc.M011440200
+    notes: Polevoda and Sherman 2001 report that Saccharomyces cerevisiae NatC contains
+      Mak3p, Mak10p and Mak31p, and that all three subunits associate to form the
+      active complex.
+  - reference: DOI:10.1016/s0006-291x(03)01316-0
+    notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
+      complexes and describe yeast NatC as Mak3p with the Mak10 and Mak31p auxiliary
+      subunits.
+- component_id: mak10_natc_auxiliary_subunit
+  label: Mak10 NatC auxiliary subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MAK10
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NatC literature follows Mak10 naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this NatC
+    subunit class was curated in this pass.
+  role: Auxiliary constituent of the budding-yeast NatC complex that associates with
+    Mak3 and Mak31 to form active NatC.
+  evidence:
+  - reference: DOI:10.1074/jbc.M011440200
+    notes: Polevoda and Sherman 2001 report that Saccharomyces cerevisiae NatC contains
+      Mak3p, Mak10p and Mak31p, and that all three subunits associate to form the
+      active complex.
+  - reference: DOI:10.1016/s0006-291x(03)01316-0
+    notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
+      complexes and describe yeast NatC as Mak3p with the Mak10 and Mak31p auxiliary
+      subunits.
+- component_id: mak31_natc_auxiliary_subunit
+  label: Mak31 NatC auxiliary subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MAK31
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NatC literature follows Mak31 naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this NatC
+    subunit class was curated in this pass.
+  role: Auxiliary constituent of the budding-yeast NatC complex that associates with
+    Mak3 and Mak10 to form active NatC.
+  evidence:
+  - reference: DOI:10.1074/jbc.M011440200
+    notes: Polevoda and Sherman 2001 report that Saccharomyces cerevisiae NatC contains
+      Mak3p, Mak10p and Mak31p, and that all three subunits associate to form the
+      active complex.
+  - reference: DOI:10.1016/s0006-291x(03)01316-0
+    notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
+      complexes and describe yeast NatC as Mak3p with the Mak10 and Mak31p auxiliary
+      subunits.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Polevoda and Sherman 2001 characterized Mak3p, Mak10p and Mak31p as associated
+    NatC subunits in Saccharomyces cerevisiae.
+  reference: DOI:10.1074/jbc.M011440200
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding yeast is the source organism in which Mak3p, Mak10p and Mak31p were
+    shown to associate into active NatC.
+  reference: DOI:10.1074/jbc.M011440200
+functions:
+- function_id: protein_n_terminal_amino_acid_acetyltransferase_activity
+  label: protein-N-terminal amino-acid acetyltransferase activity
+  grounding: GO:0004596
+  description: Transfer of an acetyl group from acetyl-CoA to the N-terminal alpha-amino
+    group of NatC substrate proteins.
+  evidence:
+  - reference: GO:0004596
+    notes: GO:0004596 is the Gene Ontology molecular-function term for protein-N-terminal
+      amino-acid acetyltransferase activity.
+  - reference: GO:0031417
+    notes: GO:0031417 defines the NatC complex by transfer of acetyl groups to N-terminal
+      Met-Ile, Met-Leu, Met-Trp or Met-Phe protein residues.
+  - reference: DOI:10.1074/jbc.M011440200
+    notes: Polevoda and Sherman 2001 show that the Mak3p, Mak10p and Mak31p subunits
+      associate to form active yeast NatC and that deleting any one subunit disrupts
+      in vivo acetylation of a NatC substrate.
+evidence:
+- reference: GO:0031417
+  notes: Gene Ontology cellular-component term for NatC complex and its exact N-terminal
+    acetyltransferase C complex synonym.
+- reference: GO:0031414
+  notes: Gene Ontology cellular-component parent term for N-terminal protein acetyltransferase
+    complexes.
+- reference: GO:0004596
+  notes: Gene Ontology molecular-function term for protein-N-terminal amino-acid acetyltransferase
+    activity.
+- reference: PMID:11274203
+  notes: PubMed identifier for Polevoda and Sherman 2001, the budding-yeast NatC composition
+    paper.
+- reference: DOI:10.1074/jbc.M011440200
+  notes: DOI for Polevoda and Sherman 2001, 'NatC Nalpha-terminal acetyltransferase
+    of yeast contains three subunits, Mak3p, Mak10p, and Mak31p', verified through
+    NCBI E-utilities.
+- reference: PMID:12890471
+  notes: PubMed identifier for Polevoda and Sherman 2003, the eukaryotic N-terminal
+    acetyltransferase subunit review cited by GO:0031417.
+- reference: DOI:10.1016/s0006-291x(03)01316-0
+  notes: DOI for Polevoda and Sherman 2003, 'Composition and function of the eukaryotic
+    N-terminal acetyltransferase subunits', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_natc_n_terminal_acetyltransferase_activity
+  title: NatC carries yeast N-terminal acetyltransferase activity
+  description: In Saccharomyces cerevisiae, Mak3, Mak10 and Mak31 form a NatC complex
+    that supports protein-N-terminal acetyltransferase activity.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records curated budding-yeast NatC constituents and broad
+    acetyltransferase activity without resolving active-site chemistry, subunit-subunit
+    interfaces or substrate specificity.
+  nodes:
+  - node_id: mak3_natc_catalytic_subunit
+    label: Mak3 NatC catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: mak3_natc_catalytic_subunit
+  - node_id: mak10_natc_auxiliary_subunit
+    label: Mak10 NatC auxiliary subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: mak10_natc_auxiliary_subunit
+  - node_id: mak31_natc_auxiliary_subunit
+    label: Mak31 NatC auxiliary subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: mak31_natc_auxiliary_subunit
+  - node_id: natc_complex
+    label: NatC complex
+    node_type: STRUCTURE
+    grounding: GO:0031417
+  - node_id: protein_n_terminal_amino_acid_acetyltransferase_activity
+    label: protein-N-terminal amino-acid acetyltransferase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004596
+  edges:
+  - subject: mak3_natc_catalytic_subunit
+    predicate: contributes to
+    object: natc_complex
+    description: Mak3 is the catalytic subunit of budding-yeast NatC.
+    evidence:
+    - reference: DOI:10.1074/jbc.M011440200
+      notes: Polevoda and Sherman 2001 report that Saccharomyces cerevisiae NatC contains
+        Mak3p, Mak10p and Mak31p, and that all three subunits associate to form the
+        active complex.
+    - reference: DOI:10.1016/s0006-291x(03)01316-0
+      notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
+        complexes and describe yeast NatC as Mak3p with the Mak10 and Mak31p auxiliary
+        subunits.
+  - subject: mak10_natc_auxiliary_subunit
+    predicate: contributes to
+    object: natc_complex
+    description: Mak10 is an auxiliary subunit of budding-yeast NatC.
+    evidence:
+    - reference: DOI:10.1074/jbc.M011440200
+      notes: Polevoda and Sherman 2001 report that Saccharomyces cerevisiae NatC contains
+        Mak3p, Mak10p and Mak31p, and that all three subunits associate to form the
+        active complex.
+    - reference: DOI:10.1016/s0006-291x(03)01316-0
+      notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
+        complexes and describe yeast NatC as Mak3p with the Mak10 and Mak31p auxiliary
+        subunits.
+  - subject: mak31_natc_auxiliary_subunit
+    predicate: contributes to
+    object: natc_complex
+    description: Mak31 is an auxiliary subunit of budding-yeast NatC.
+    evidence:
+    - reference: DOI:10.1074/jbc.M011440200
+      notes: Polevoda and Sherman 2001 report that Saccharomyces cerevisiae NatC contains
+        Mak3p, Mak10p and Mak31p, and that all three subunits associate to form the
+        active complex.
+    - reference: DOI:10.1016/s0006-291x(03)01316-0
+      notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
+        complexes and describe yeast NatC as Mak3p with the Mak10 and Mak31p auxiliary
+        subunits.
+  - subject: natc_complex
+    predicate: supports
+    object: protein_n_terminal_amino_acid_acetyltransferase_activity
+    description: NatC catalyzes protein N-terminal amino-acid acetylation.
+    evidence:
+    - reference: GO:0004596
+      notes: GO:0004596 is the molecular-function term for protein-N-terminal amino-acid
+        acetyltransferase activity.
+    - reference: DOI:10.1074/jbc.M011440200
+      notes: Polevoda and Sherman 2001 show that Mak3p, Mak10p and Mak31p are required
+        to form active yeast NatC.
+discussions:
+- discussion_id: resolve_natc_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the curated budding-yeast
+    NatC constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mak3_natc_catalytic_subunit
+  - components#mak10_natc_auxiliary_subunit
+  - components#mak31_natc_auxiliary_subunit
+  notes: The curated budding-yeast components are Mak3, Mak10 and Mak31; curate InterPro,
+    Pfam, NCBIfam or UniProt family accessions only when they denote the exact Mak3,
+    Mak10 or Mak31 NatC component classes rather than broader N-acetyltransferase
+    or auxiliary-domain families.
+  evidence:
+  - reference: DOI:10.1074/jbc.M011440200
+    notes: Polevoda and Sherman 2001 report that Saccharomyces cerevisiae NatC contains
+      Mak3p, Mak10p and Mak31p, and that all three subunits associate to form the
+      active complex.
+  - reference: DOI:10.1016/s0006-291x(03)01316-0
+    notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
+      complexes and describe yeast NatC as Mak3p with the Mak10 and Mak31p auxiliary
+      subunits.
+  posed_by: codex
+  posed_date: '2026-09-26'

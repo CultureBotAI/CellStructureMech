@@ -13472,6 +13472,11 @@
           "cosine_similarity": 0.94789732
         },
         {
+          "identifier": "GO:0031417",
+          "label": "NatC complex",
+          "cosine_similarity": 0.91685993
+        },
+        {
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.79711346
@@ -13485,11 +13490,6 @@
           "identifier": "GO:0000112",
           "label": "nucleotide-excision repair factor 3 complex",
           "cosine_similarity": 0.74542668
-        },
-        {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.74515996
         }
       ]
     },
@@ -13501,6 +13501,11 @@
           "identifier": "GO:0031415",
           "label": "NatA complex",
           "cosine_similarity": 0.94789732
+        },
+        {
+          "identifier": "GO:0031417",
+          "label": "NatC complex",
+          "cosine_similarity": 0.93100968
         },
         {
           "identifier": "GO:0035267",
@@ -13516,11 +13521,37 @@
           "identifier": "GO:0031205",
           "label": "endoplasmic reticulum Sec complex",
           "cosine_similarity": 0.75105846
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031417",
+      "label": "NatC complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031416",
+          "label": "NatB complex",
+          "cosine_similarity": 0.93100968
         },
         {
-          "identifier": "GO:0000112",
-          "label": "nucleotide-excision repair factor 3 complex",
-          "cosine_similarity": 0.75019933
+          "identifier": "GO:0031415",
+          "label": "NatA complex",
+          "cosine_similarity": 0.91685993
+        },
+        {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.7686566
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.76519334
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.75588951
         }
       ]
     },
@@ -13673,9 +13704,9 @@
           "cosine_similarity": 0.77700035
         },
         {
-          "identifier": "GO:0048188",
-          "label": "Set1C/COMPASS complex",
-          "cosine_similarity": 0.76234391
+          "identifier": "GO:0031417",
+          "label": "NatC complex",
+          "cosine_similarity": 0.7686566
         }
       ]
     },
