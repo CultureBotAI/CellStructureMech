@@ -1,0 +1,682 @@
+identifier: GO:0070210
+label: Rpd3L-Expanded complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that contains a histone deacetylase and is part of the
+  chromatin remodeling machinery. In Saccharomyces cerevisiae this complex contains
+  the Rpd3p, Sin3p, Ume1p, Pho23p, Sap30p, Sds3p, Cti6p, Rxt2p, Rxt3p, Dep1p, Ume6p,
+  Ash1p, Dot6p, Snt1, Sif2p, Set3p, Hos2p, Tos4p and Tod6p proteins.
+definition_source: GO:0070210
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T04:32:15Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T04:32:57Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Rpd3-LE/Clr6-LE exact synonymy, histone-deacetylase-complex parentage,
+    chromatin/nuclear-chromosome parthood, nineteen Rpd3L-Expanded constituent rows,
+    budding-yeast scope, histone deacetylase activity, GO/PubMed/DOI evidence, a nonmechanistic
+    function graph, and a Rpd3L-Expanded subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Clr6-LE complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0070210
+- synonym_text: Rpd3-LE
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1186/gb-2008-9-11-r167
+parent_structures:
+- GO:0000118
+part_of:
+- GO:0000228
+- GO:0000785
+components:
+- component_id: rpd3_rpd3le_deacetylase_subunit
+  label: Rpd3 Rpd3L-Expanded deacetylase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RPD3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Rpd3p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Histone deacetylase constituent of the budding-yeast Rpd3L-Expanded complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Rpd3p.
+- component_id: sin3_rpd3le_subunit
+  label: Sin3 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SIN3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Sin3p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Sin3p.
+- component_id: ume1_rpd3le_subunit
+  label: Ume1 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UME1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Ume1p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Ume1p.
+- component_id: pho23_rpd3le_subunit
+  label: Pho23 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PHO23
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Pho23p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Pho23p.
+- component_id: sap30_rpd3le_subunit
+  label: Sap30 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SAP30
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Sap30p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Sap30p.
+- component_id: sds3_rpd3le_subunit
+  label: Sds3 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SDS3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Sds3p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Sds3p.
+- component_id: cti6_rpd3le_subunit
+  label: Cti6 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CTI6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Cti6p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Cti6p.
+- component_id: rxt2_rpd3le_subunit
+  label: Rxt2 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RXT2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Rxt2p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Rxt2p.
+- component_id: rxt3_rpd3le_subunit
+  label: Rxt3 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RXT3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Rxt3p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Rxt3p.
+- component_id: dep1_rpd3le_subunit
+  label: Dep1 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DEP1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Dep1p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Dep1p.
+- component_id: ume6_rpd3le_subunit
+  label: Ume6 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UME6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Ume6p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Ume6p.
+- component_id: ash1_rpd3le_subunit
+  label: Ash1 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ASH1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Ash1p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Ash1p.
+- component_id: dot6_rpd3le_subunit
+  label: Dot6 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DOT6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Dot6p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Dot6p.
+- component_id: snt1_rpd3le_subunit
+  label: Snt1 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SNT1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Snt1p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Snt1p.
+- component_id: sif2_rpd3le_subunit
+  label: Sif2 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SIF2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Sif2p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Sif2p.
+- component_id: set3_rpd3le_subunit
+  label: Set3 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SET3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Set3p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Set3p.
+- component_id: hos2_rpd3le_subunit
+  label: Hos2 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HOS2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Hos2p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Hos2p.
+- component_id: tos4_rpd3le_subunit
+  label: Tos4 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TOS4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Tos4p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Tos4p.
+- component_id: tod6_rpd3le_subunit
+  label: Tod6 Rpd3L-Expanded subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TOD6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070210 follows Saccharomyces cerevisiae Tod6p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3L-Expanded
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Rpd3L-Expanded histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
+      Tod6p.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0070210 defines the Rpd3L-Expanded
+    complex as a Rpd3-containing extension of the Rpd3L complex.
+  reference: GO:0070210
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Shevchenko et al. 2008 identified Rpd3-LE as an Rpd3-containing complex in
+    budding-yeast Chromatin Central and assigned it as an extension of the Rpd3L complex
+    that includes the Set3 complex core.
+  reference: DOI:10.1186/gb-2008-9-11-r167
+functions:
+- function_id: histone_deacetylase_activity
+  label: histone deacetylase activity
+  grounding: GO:0004407
+  description: The Rpd3L-Expanded complex is an Rpd3-containing histone deacetylase
+    complex.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines Rpd3L-Expanded as a histone-deacetylase-containing complex.
+  - reference: GO:0004407
+    notes: GO:0004407 is the Gene Ontology molecular-function term for histone deacetylase
+      activity.
+  - reference: DOI:10.1186/gb-2008-9-11-r167
+    notes: Shevchenko et al. 2008 assigned Rpd3-LE as one of two new Rpd3-containing
+      complexes in budding-yeast Chromatin Central.
+evidence:
+- reference: GO:0070210
+  notes: Gene Ontology cellular-component term for the Rpd3L-Expanded complex and
+    its exact Clr6-LE synonym.
+- reference: GO:0000118
+  notes: Gene Ontology cellular-component parent term for histone deacetylase complexes.
+- reference: GO:0000228
+  notes: Gene Ontology cellular-component term for the nuclear chromosome.
+- reference: GO:0000785
+  notes: Gene Ontology cellular-component term for chromatin.
+- reference: GO:0004407
+  notes: Gene Ontology molecular-function term for histone deacetylase activity.
+- reference: PMID:19040720
+  notes: PubMed identifier for Shevchenko et al. 2008, the Genome Biology Chromatin
+    Central paper cited by GO:0070210.
+- reference: DOI:10.1186/gb-2008-9-11-r167
+  notes: 'DOI for Shevchenko et al. 2008, ''Chromatin Central: towards the comparative
+    proteome by accurate mapping of the yeast proteomic environment'', verified through
+    NCBI E-utilities.'
+causal_graphs:
+- graph_id: yeast_rpd3le_histone_deacetylase_activity
+  title: Rpd3L-Expanded carries yeast histone deacetylase activity
+  description: In Saccharomyces cerevisiae, the Rpd3L-Expanded complex contains Rpd3p,
+    Sin3p, Ume1p, Pho23p, Sap30p, Sds3p, Cti6p, Rxt2p, Rxt3p, Dep1p, Ume6p, Ash1p,
+    Dot6p, Snt1, Sif2p, Set3p, Hos2p, Tos4p and Tod6p.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the GO-defined Rpd3L-Expanded complex constituents
+    and their connection to histone deacetylase activity without resolving Rpd3L recruitment,
+    Set3 core engagement or substrate selection.
+  nodes:
+  - node_id: rpd3_rpd3le_deacetylase_subunit
+    label: Rpd3 Rpd3L-Expanded deacetylase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rpd3_rpd3le_deacetylase_subunit
+  - node_id: sin3_rpd3le_subunit
+    label: Sin3 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sin3_rpd3le_subunit
+  - node_id: ume1_rpd3le_subunit
+    label: Ume1 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ume1_rpd3le_subunit
+  - node_id: pho23_rpd3le_subunit
+    label: Pho23 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: pho23_rpd3le_subunit
+  - node_id: sap30_rpd3le_subunit
+    label: Sap30 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sap30_rpd3le_subunit
+  - node_id: sds3_rpd3le_subunit
+    label: Sds3 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sds3_rpd3le_subunit
+  - node_id: cti6_rpd3le_subunit
+    label: Cti6 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cti6_rpd3le_subunit
+  - node_id: rxt2_rpd3le_subunit
+    label: Rxt2 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rxt2_rpd3le_subunit
+  - node_id: rxt3_rpd3le_subunit
+    label: Rxt3 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rxt3_rpd3le_subunit
+  - node_id: dep1_rpd3le_subunit
+    label: Dep1 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dep1_rpd3le_subunit
+  - node_id: ume6_rpd3le_subunit
+    label: Ume6 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ume6_rpd3le_subunit
+  - node_id: ash1_rpd3le_subunit
+    label: Ash1 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ash1_rpd3le_subunit
+  - node_id: dot6_rpd3le_subunit
+    label: Dot6 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dot6_rpd3le_subunit
+  - node_id: snt1_rpd3le_subunit
+    label: Snt1 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: snt1_rpd3le_subunit
+  - node_id: sif2_rpd3le_subunit
+    label: Sif2 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sif2_rpd3le_subunit
+  - node_id: set3_rpd3le_subunit
+    label: Set3 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: set3_rpd3le_subunit
+  - node_id: hos2_rpd3le_subunit
+    label: Hos2 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hos2_rpd3le_subunit
+  - node_id: tos4_rpd3le_subunit
+    label: Tos4 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tos4_rpd3le_subunit
+  - node_id: tod6_rpd3le_subunit
+    label: Tod6 Rpd3L-Expanded subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tod6_rpd3le_subunit
+  - node_id: rpd3l_expanded_complex
+    label: Rpd3L-Expanded complex
+    node_type: STRUCTURE
+    grounding: GO:0070210
+  - node_id: histone_deacetylase_activity
+    label: histone deacetylase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004407
+  edges:
+  - subject: rpd3_rpd3le_deacetylase_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Rpd3p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Rpd3p as an Rpd3L-Expanded complex constituent.
+  - subject: sin3_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Sin3p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Sin3p as an Rpd3L-Expanded complex constituent.
+  - subject: ume1_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Ume1p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Ume1p as an Rpd3L-Expanded complex constituent.
+  - subject: pho23_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Pho23p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Pho23p as an Rpd3L-Expanded complex constituent.
+  - subject: sap30_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Sap30p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Sap30p as an Rpd3L-Expanded complex constituent.
+  - subject: sds3_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Sds3p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Sds3p as an Rpd3L-Expanded complex constituent.
+  - subject: cti6_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Cti6p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Cti6p as an Rpd3L-Expanded complex constituent.
+  - subject: rxt2_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Rxt2p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Rxt2p as an Rpd3L-Expanded complex constituent.
+  - subject: rxt3_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Rxt3p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Rxt3p as an Rpd3L-Expanded complex constituent.
+  - subject: dep1_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Dep1p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Dep1p as an Rpd3L-Expanded complex constituent.
+  - subject: ume6_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Ume6p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Ume6p as an Rpd3L-Expanded complex constituent.
+  - subject: ash1_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Ash1p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Ash1p as an Rpd3L-Expanded complex constituent.
+  - subject: dot6_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Dot6p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Dot6p as an Rpd3L-Expanded complex constituent.
+  - subject: snt1_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Snt1p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Snt1p as an Rpd3L-Expanded complex constituent.
+  - subject: sif2_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Sif2p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Sif2p as an Rpd3L-Expanded complex constituent.
+  - subject: set3_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Set3p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Set3p as an Rpd3L-Expanded complex constituent.
+  - subject: hos2_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Hos2p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Hos2p as an Rpd3L-Expanded complex constituent.
+  - subject: tos4_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Tos4p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Tos4p as an Rpd3L-Expanded complex constituent.
+  - subject: tod6_rpd3le_subunit
+    predicate: contributes to
+    object: rpd3l_expanded_complex
+    description: Tod6p is a constituent of the budding-yeast Rpd3L-Expanded complex.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Tod6p as an Rpd3L-Expanded complex constituent.
+  - subject: rpd3l_expanded_complex
+    predicate: supports
+    object: histone_deacetylase_activity
+    description: Rpd3L-Expanded is an Rpd3-containing histone deacetylase complex
+      in budding yeast.
+    evidence:
+    - reference: GO:0070210
+      notes: GO:0070210 defines Rpd3L-Expanded as a histone-deacetylase-containing
+        complex.
+    - reference: GO:0004407
+      notes: GO:0004407 is the molecular-function term for histone deacetylase activity.
+discussions:
+- discussion_id: resolve_rpd3le_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Rpd3L-Expanded constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rpd3_rpd3le_deacetylase_subunit
+  - components#sin3_rpd3le_subunit
+  - components#ume1_rpd3le_subunit
+  - components#pho23_rpd3le_subunit
+  - components#sap30_rpd3le_subunit
+  - components#sds3_rpd3le_subunit
+  - components#cti6_rpd3le_subunit
+  - components#rxt2_rpd3le_subunit
+  - components#rxt3_rpd3le_subunit
+  - components#dep1_rpd3le_subunit
+  - components#ume6_rpd3le_subunit
+  - components#ash1_rpd3le_subunit
+  - components#dot6_rpd3le_subunit
+  - components#snt1_rpd3le_subunit
+  - components#sif2_rpd3le_subunit
+  - components#set3_rpd3le_subunit
+  - components#hos2_rpd3le_subunit
+  - components#tos4_rpd3le_subunit
+  - components#tod6_rpd3le_subunit
+  rationale: GO:0070210 defines 19 budding-yeast proteins as Rpd3L-Expanded complex
+    constituents. Exact cross-eukaryotic InterPro, Pfam, NCBIfam or UniProt family
+    boundaries for these Rpd3L-Expanded subunit classes need narrower curation before
+    these component labels can be grounded.
+  evidence:
+  - reference: GO:0070210
+    notes: GO:0070210 defines the budding-yeast Rpd3L-Expanded complex subunits.
+  posed_by: codex
+  posed_date: '2026-09-26'
