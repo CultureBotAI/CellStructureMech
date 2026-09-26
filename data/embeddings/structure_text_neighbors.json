@@ -11622,14 +11622,14 @@
           "cosine_similarity": 0.77595911
         },
         {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.75268254
+        },
+        {
           "identifier": "GO:0034456",
           "label": "UTP-C complex",
           "cosine_similarity": 0.75070623
-        },
-        {
-          "identifier": "GO:0031262",
-          "label": "Ndc80 complex",
-          "cosine_similarity": 0.74714497
         }
       ]
     },
@@ -12258,6 +12258,11 @@
       "label": "DNA polymerase III complex",
       "neighbors": [
         {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.70803067
+        },
+        {
           "identifier": "GO:0044777",
           "label": "single-stranded DNA-binding protein complex",
           "cosine_similarity": 0.69125267
@@ -12276,11 +12281,6 @@
           "identifier": "GO:0120217",
           "label": "DNA gyrase complex",
           "cosine_similarity": 0.65628115
-        },
-        {
-          "identifier": "GO:1903095",
-          "label": "ribonuclease III complex",
-          "cosine_similarity": 0.64990873
         }
       ]
     },
@@ -12292,6 +12292,11 @@
           "identifier": "GO:0120217",
           "label": "DNA gyrase complex",
           "cosine_similarity": 0.69423383
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.65722201
         },
         {
           "identifier": "GO:0000112",
@@ -12307,11 +12312,6 @@
           "identifier": "GO:0005839",
           "label": "proteasome core complex",
           "cosine_similarity": 0.63678036
-        },
-        {
-          "identifier": "GO:0031251",
-          "label": "PAN complex",
-          "cosine_similarity": 0.63276357
         }
       ]
     },
@@ -12781,6 +12781,37 @@
       ]
     },
     {
+      "identifier": "GO:0035101",
+      "label": "FACT complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0070824",
+          "label": "SHREC complex",
+          "cosine_similarity": 0.813178
+        },
+        {
+          "identifier": "GO:0000417",
+          "label": "HIR complex",
+          "cosine_similarity": 0.81272629
+        },
+        {
+          "identifier": "GO:0070211",
+          "label": "Snt2C complex",
+          "cosine_similarity": 0.79323154
+        },
+        {
+          "identifier": "GO:0000112",
+          "label": "nucleotide-excision repair factor 3 complex",
+          "cosine_similarity": 0.77954575
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.77613565
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000938",
       "label": "GARP complex",
       "neighbors": [
@@ -13002,6 +13033,11 @@
       "label": "HIR complex",
       "neighbors": [
         {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.81272629
+        },
+        {
           "identifier": "GO:0070824",
           "label": "SHREC complex",
           "cosine_similarity": 0.78262689
@@ -13020,11 +13056,6 @@
           "identifier": "GO:0000812",
           "label": "Swr1 complex",
           "cosine_similarity": 0.74894023
-        },
-        {
-          "identifier": "GO:0070823",
-          "label": "HDA1 complex",
-          "cosine_similarity": 0.74649257
         }
       ]
     },
@@ -13487,9 +13518,9 @@
           "cosine_similarity": 0.78009657
         },
         {
-          "identifier": "GO:0034388",
-          "label": "Pwp2p-containing subcomplex of 90S preribosome",
-          "cosine_similarity": 0.77005949
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.77083396
         }
       ]
     },
@@ -13513,14 +13544,14 @@
           "cosine_similarity": 0.76748285
         },
         {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.76340616
+        },
+        {
           "identifier": "GO:0034456",
           "label": "UTP-C complex",
           "cosine_similarity": 0.75929125
-        },
-        {
-          "identifier": "GO:0000112",
-          "label": "nucleotide-excision repair factor 3 complex",
-          "cosine_similarity": 0.75662135
         }
       ]
     },
@@ -13549,9 +13580,9 @@
           "cosine_similarity": 0.77038
         },
         {
-          "identifier": "GO:0034388",
-          "label": "Pwp2p-containing subcomplex of 90S preribosome",
-          "cosine_similarity": 0.75601709
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.76556846
         }
       ]
     },
@@ -13563,6 +13594,11 @@
           "identifier": "GO:0000113",
           "label": "nucleotide-excision repair factor 4 complex",
           "cosine_similarity": 0.77700035
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.75666355
         },
         {
           "identifier": "GO:0034967",
@@ -13578,11 +13614,6 @@
           "identifier": "GO:0000110",
           "label": "nucleotide-excision repair factor 1 complex",
           "cosine_similarity": 0.74042638
-        },
-        {
-          "identifier": "GO:0031932",
-          "label": "TORC2 complex",
-          "cosine_similarity": 0.73718817
         }
       ]
     },
@@ -13594,6 +13625,11 @@
           "identifier": "GO:0009295",
           "label": "nucleoid",
           "cosine_similarity": 0.81081038
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.76987047
         },
         {
           "identifier": "GO:0042645",
@@ -13609,11 +13645,6 @@
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
           "cosine_similarity": 0.74097934
-        },
-        {
-          "identifier": "GO:0031981",
-          "label": "nuclear lumen",
-          "cosine_similarity": 0.7325788
         }
       ]
     },
@@ -13885,14 +13916,14 @@
           "cosine_similarity": 0.92482162
         },
         {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.75713882
+        },
+        {
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.74196333
-        },
-        {
-          "identifier": "GO:0035267",
-          "label": "NuA4 histone acetyltransferase complex",
-          "cosine_similarity": 0.74042638
         }
       ]
     },
@@ -13916,14 +13947,14 @@
           "cosine_similarity": 0.94214197
         },
         {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.77281506
+        },
+        {
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.74740277
-        },
-        {
-          "identifier": "GO:0070211",
-          "label": "Snt2C complex",
-          "cosine_similarity": 0.73954172
         }
       ]
     },
@@ -13952,9 +13983,9 @@
           "cosine_similarity": 0.77973442
         },
         {
-          "identifier": "GO:0031518",
-          "label": "CBF3 complex",
-          "cosine_similarity": 0.77595911
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.77954575
         }
       ]
     },
@@ -13983,9 +14014,9 @@
           "cosine_similarity": 0.77700035
         },
         {
-          "identifier": "GO:0030692",
-          "label": "Noc4p-Nop14p complex",
-          "cosine_similarity": 0.74428058
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.76533377
         }
       ]
     },
@@ -14076,9 +14107,9 @@
           "cosine_similarity": 0.74259215
         },
         {
-          "identifier": "GO:0043529",
-          "label": "GET complex",
-          "cosine_similarity": 0.73856701
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.73989524
         }
       ]
     },
@@ -14598,14 +14629,14 @@
           "cosine_similarity": 0.75097165
         },
         {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.71567073
+        },
+        {
           "identifier": "GO:0000417",
           "label": "HIR complex",
           "cosine_similarity": 0.71187899
-        },
-        {
-          "identifier": "GO:0035267",
-          "label": "NuA4 histone acetyltransferase complex",
-          "cosine_similarity": 0.70416854
         }
       ]
     },
@@ -14769,6 +14800,11 @@
       "label": "SHREC complex",
       "neighbors": [
         {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.813178
+        },
+        {
           "identifier": "GO:0070211",
           "label": "Snt2C complex",
           "cosine_similarity": 0.81086628
@@ -14787,11 +14823,6 @@
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.76342937
-        },
-        {
-          "identifier": "GO:0070823",
-          "label": "HDA1 complex",
-          "cosine_similarity": 0.75465546
         }
       ]
     },
@@ -14799,6 +14830,11 @@
       "identifier": "GO:0044777",
       "label": "single-stranded DNA-binding protein complex",
       "neighbors": [
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.71780139
+        },
         {
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
@@ -14818,11 +14854,6 @@
           "identifier": "GO:0032299",
           "label": "ribonuclease H2 complex",
           "cosine_similarity": 0.68630641
-        },
-        {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.68610407
         }
       ]
     },
@@ -14851,9 +14882,9 @@
           "cosine_similarity": 0.79919428
         },
         {
-          "identifier": "GO:0000417",
-          "label": "HIR complex",
-          "cosine_similarity": 0.75858001
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.79323154
         }
       ]
     },
@@ -14924,6 +14955,11 @@
       "label": "Swr1 complex",
       "neighbors": [
         {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.76909423
+        },
+        {
           "identifier": "GO:0070824",
           "label": "SHREC complex",
           "cosine_similarity": 0.75338803
@@ -14942,11 +14978,6 @@
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.71532478
-        },
-        {
-          "identifier": "GO:0070211",
-          "label": "Snt2C complex",
-          "cosine_similarity": 0.70019535
         }
       ]
     },
@@ -15585,6 +15616,11 @@
           "cosine_similarity": 0.68543776
         },
         {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.68203273
+        },
+        {
           "identifier": "GO:0000177",
           "label": "cytoplasmic exosome (RNase complex)",
           "cosine_similarity": 0.68061665
@@ -15593,11 +15629,6 @@
           "identifier": "GO:0000172",
           "label": "ribonuclease MRP complex",
           "cosine_similarity": 0.67717835
-        },
-        {
-          "identifier": "GO:0000178",
-          "label": "exosome (RNase complex)",
-          "cosine_similarity": 0.66863654
         }
       ]
     },

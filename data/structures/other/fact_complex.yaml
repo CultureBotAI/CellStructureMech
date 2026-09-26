@@ -1,0 +1,230 @@
+identifier: GO:0035101
+label: FACT complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A histone chaperone complex that facilitates nucleosome disassembly and
+  reassembly upon DNA or RNA polymerase passage.
+definition_source: GO:0035101
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T06:31:20Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T06:32:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added FACT exact synonymy, transcription-elongation-factor-complex parentage,
+    two budding-yeast FACT constituent rows, yeast scope, nucleosome organization
+    and transcription elongation functions, GO/PubMed/DOI evidence, a nonmechanistic
+    function graph, a resolved Nhp6 boundary discussion, and a FACT subunit-grounding
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Facilitates chromatin transcription complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0035101
+parent_structures:
+- GO:0008023
+components:
+- component_id: spt16_fact_subunit
+  label: Spt16 FACT subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SPT16
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Yeast FACT/SPN composition literature follows Spt16 naming; no
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this FACT subunit class was curated in this pass.
+  role: Large histone-chaperone constituent of the budding-yeast Spt16-Pob3 FACT core.
+  evidence:
+  - reference: DOI:10.1093/emboj/20.13.3506
+    notes: Formosa et al. 2001 reported that the Saccharomyces cerevisiae Spt16/Cdc68
+      and Pob3 proteins form the yeast Spt16-Pob3 heterodimer.
+- component_id: pob3_fact_subunit
+  label: Pob3 FACT subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - POB3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Yeast FACT/SPN composition literature follows Pob3 naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this FACT
+    subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Spt16-Pob3 FACT core that supplies
+    the SSRP1-related middle domain.
+  evidence:
+  - reference: DOI:10.1093/emboj/20.13.3506
+    notes: Formosa et al. 2001 reported that the Saccharomyces cerevisiae Spt16/Cdc68
+      and Pob3 proteins form the yeast Spt16-Pob3 heterodimer.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which Formosa et al. 2001 characterized the
+    Spt16-Pob3 heterodimer that combines with Nhp6 to form the nucleosome-binding
+    factor SPN.
+  reference: DOI:10.1093/emboj/20.13.3506
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Formosa et al. 2001 used budding-yeast genetics and protein interaction assays
+    to show that Spt16/Cdc68 and Pob3 form a heterodimeric chromatin factor.
+  reference: DOI:10.1093/emboj/20.13.3506
+functions:
+- function_id: nucleosome_organization
+  label: nucleosome organization
+  grounding: GO:0034728
+  description: FACT reorganizes nucleosomes by facilitating disassembly and reassembly
+    during polymerase passage.
+  evidence:
+  - reference: GO:0035101
+    notes: GO:0035101 defines the FACT complex as facilitating nucleosome disassembly
+      and reassembly upon polymerase passage.
+  - reference: GO:0034728
+    notes: GO:0034728 is the Gene Ontology biological-process term for nucleosome
+      organization.
+  - reference: DOI:10.1126/science.1085703
+    notes: Belotserkovskaya et al. 2003 assayed FACT-dependent nucleosome alteration
+      and intrinsic histone chaperone activity.
+- function_id: dna_templated_transcription_elongation
+  label: DNA-templated transcription elongation
+  grounding: GO:0006354
+  description: FACT helps RNA polymerase II elongate transcripts through nucleosomal
+    DNA templates.
+  evidence:
+  - reference: GO:0006354
+    notes: GO:0006354 is the Gene Ontology biological-process term for DNA-templated
+      transcription elongation.
+  - reference: DOI:10.1126/science.1085703
+    notes: Belotserkovskaya et al. 2003 studied FACT activity in RNA polymerase II
+      transcription through nucleosomes.
+evidence:
+- reference: GO:0035101
+  notes: Gene Ontology cellular-component term for FACT complex and its Facilitates
+    chromatin transcription complex exact synonym.
+- reference: GO:0008023
+  notes: Gene Ontology cellular-component parent term for transcription elongation
+    factor complexes.
+- reference: GO:0034728
+  notes: Gene Ontology biological-process term for nucleosome organization.
+- reference: GO:0006354
+  notes: Gene Ontology biological-process term for DNA-templated transcription elongation.
+- reference: PMID:12934006
+  notes: PubMed identifier for Belotserkovskaya et al. 2003, the FACT nucleosome-alteration
+    paper cited by GO:0035101.
+- reference: DOI:10.1126/science.1085703
+  notes: DOI for Belotserkovskaya et al. 2003, 'FACT facilitates transcription-dependent
+    nucleosome alteration', verified through NCBI E-utilities.
+- reference: PMID:11432837
+  notes: PubMed identifier for Formosa et al. 2001, the budding-yeast Spt16-Pob3 and
+    Nhp6 SPN paper.
+- reference: DOI:10.1093/emboj/20.13.3506
+  notes: DOI for Formosa et al. 2001, 'Spt16-Pob3 and the HMG protein Nhp6 combine
+    to form the nucleosome-binding factor SPN', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_fact_nucleosome_reorganization
+  title: FACT supports nucleosome reorganization during transcription
+  description: In Saccharomyces cerevisiae, the Spt16-Pob3 FACT core works with Nhp6
+    to reorganize nucleosomes and supports RNA polymerase II transcription through
+    nucleosomal templates.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the curated Spt16-Pob3 FACT core and broad polymerase-passage
+    functions without resolving the structural handoff among histone dimers, Nhp6-bound
+    DNA, and FACT domains.
+  nodes:
+  - node_id: spt16_fact_subunit
+    label: Spt16 FACT subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: spt16_fact_subunit
+  - node_id: pob3_fact_subunit
+    label: Pob3 FACT subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: pob3_fact_subunit
+  - node_id: fact_complex
+    label: FACT complex
+    node_type: STRUCTURE
+    grounding: GO:0035101
+  - node_id: nucleosome_organization
+    label: nucleosome organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0034728
+  - node_id: dna_templated_transcription_elongation
+    label: DNA-templated transcription elongation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006354
+  edges:
+  - subject: spt16_fact_subunit
+    predicate: contributes to
+    object: fact_complex
+    description: Spt16/Cdc68 is a constituent of the budding-yeast Spt16-Pob3 FACT
+      core.
+    evidence:
+    - reference: DOI:10.1093/emboj/20.13.3506
+      notes: Formosa et al. 2001 reported that Spt16/Cdc68 and Pob3 form a heterodimer
+        in budding yeast.
+  - subject: pob3_fact_subunit
+    predicate: contributes to
+    object: fact_complex
+    description: Pob3 is a constituent of the budding-yeast Spt16-Pob3 FACT core.
+    evidence:
+    - reference: DOI:10.1093/emboj/20.13.3506
+      notes: Formosa et al. 2001 reported that Spt16/Cdc68 and Pob3 form a heterodimer
+        in budding yeast.
+  - subject: fact_complex
+    predicate: supports
+    object: nucleosome_organization
+    description: FACT facilitates nucleosome disassembly and reassembly during polymerase
+      passage.
+    evidence:
+    - reference: GO:0035101
+      notes: GO:0035101 defines FACT as a histone chaperone complex that facilitates
+        nucleosome disassembly and reassembly during polymerase passage.
+  - subject: fact_complex
+    predicate: supports
+    object: dna_templated_transcription_elongation
+    description: FACT helps RNA polymerase II elongate through nucleosomal templates.
+    evidence:
+    - reference: DOI:10.1126/science.1085703
+      notes: Belotserkovskaya et al. 2003 studied FACT-dependent RNA polymerase II
+        transcription through nucleosomes.
+discussions:
+- discussion_id: nhp6_not_core_fact_component
+  prompt: Do not model Nhp6 as a core FACT complex constituent.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: Formosa et al. 2001 reported that Spt16/Cdc68 and Pob3 form a yeast heterodimer
+    and that this heterodimer combines with Nhp6 to form the nucleosome-binding factor
+    SPN, supporting Nhp6 as a DNA-binding cofactor for the yeast SPN activity rather
+    than one of the two FACT core constituents.
+  resolution_note: 'Declined: Nhp6 is important for the yeast SPN nucleosome-binding
+    factor, but this record curates the FACT core as the Spt16-Pob3 complex.'
+  evidence:
+  - reference: DOI:10.1093/emboj/20.13.3506
+    notes: Formosa et al. 2001 distinguished the Spt16-Pob3 heterodimer from its combination
+      with the HMG protein Nhp6 in SPN.
+  posed_by: codex
+  posed_date: '2026-09-26'
+  resolved_date: '2026-09-26'
+- discussion_id: resolve_fact_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the FACT complex constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#spt16_fact_subunit
+  - components#pob3_fact_subunit
+  rationale: The curated FACT component labels are yeast gene-name-based classes.
+    This pass verified the gene symbols and the Spt16-Pob3 composition but did not
+    verify exact InterPro, Pfam, NCBIfam or UniProt family CURIEs that should be reused
+    across fungi.
+  evidence:
+  - reference: DOI:10.1093/emboj/20.13.3506
+    notes: Formosa et al. 2001 supplied the budding-yeast Spt16 and Pob3 component
+      evidence used for this record.
+  posed_by: codex
+  posed_date: '2026-09-26'
