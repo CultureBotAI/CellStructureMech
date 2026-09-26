@@ -1,0 +1,193 @@
+identifier: GO:0000112
+label: nucleotide-excision repair factor 3 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: One of several protein complexes involved in nucleotide-excision repair;
+  possesses endodeoxynuclease and DNA helicase activities. In S. cerevisiae, it is
+  composed of Rad2p and the core TFIIH-Ssl2p complex (core TFIIH is composed of Rad3p,
+  Tfb1p, Tfb2p, Ssl1p, Tfb4p and Tfb5p. Note that Ssl2p is also called Rad25p).
+definition_source: GO:0000112
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T02:36:48Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T02:36:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added NEF3 exact synonymy, nucleotide-excision repair complex parentage,
+    core TFIIH has-part, Rad2 and core-TFIIH constituent rows, budding-yeast scope,
+    a nucleotide-excision-repair function, GO/PubMed/DOI evidence, a nonmechanistic
+    function graph, and a Rad2 subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-26T02:40:29Z'
+  curator: codex
+  action: FIX_GO_LABEL
+  changes: Canonicalized the GO:0000440 component and graph node labels to the issuing
+    GO term label.
+  llm_assisted: true
+synonyms:
+- synonym_text: NEF3 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000112
+parent_structures:
+- GO:0000109
+has_part:
+- GO:0000440
+components:
+- component_id: rad2_nef3_subunit
+  label: Rad2 NEF3 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RAD2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Rad2p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this nucleotide-excision repair factor 3 subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast nucleotide-excision repair factor
+    3 / NEF3 complex.
+  evidence:
+  - reference: GO:0000112
+    notes: GO:0000112 defines the NEF3 complex as containing Rad2p.
+- component_id: core_tfiih_ssl2p_nef3_subcomplex
+  label: core TFIIH complex portion of NEF3 complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding: GO:0000440
+  role: Core TFIIH complex portion that is part of the budding-yeast NEF3 complex.
+  evidence:
+  - reference: GO:0000112
+    notes: GO:0000112 defines the NEF3 complex as containing the core TFIIH-Ssl2p
+      complex.
+  - reference: GO:0000440
+    notes: GO:0000440 denotes the core TFIIH complex portion when it is part of the
+      NEF3 complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0000112 defines NEF3 as a Rad2p/core-TFIIH
+    nucleotide-excision repair factor complex.
+  reference: GO:0000112
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Prakash and Prakash 2000 described budding-yeast Rad2 and TFIIH as the nucleotide-excision
+    repair subassembly called NEF3.
+  reference: DOI:10.1016/s0027-5107(00)00037-3
+functions:
+- function_id: nucleotide_excision_repair
+  label: nucleotide-excision repair
+  grounding: GO:0006289
+  description: The NEF3 complex participates in nucleotide-excision repair as an endodeoxynuclease-
+    and DNA-helicase-containing protein complex.
+  evidence:
+  - reference: GO:0000112
+    notes: GO:0000112 defines NEF3 as a nucleotide-excision repair factor with endodeoxynuclease
+      and DNA helicase activities.
+  - reference: GO:0006289
+    notes: GO:0006289 is the Gene Ontology biological-process term for nucleotide-excision
+      repair.
+  - reference: DOI:10.1016/s0027-5107(00)00037-3
+    notes: Prakash and Prakash 2000 described Rad2 and TFIIH as the budding-yeast
+      NEF3 multiprotein subassembly.
+evidence:
+- reference: GO:0000112
+  notes: Gene Ontology cellular-component term for the NEF3 complex and its exact
+    NEF3 synonym.
+- reference: GO:0000440
+  notes: Gene Ontology cellular-component term for the core TFIIH complex portion
+    that is part of the NEF3 complex.
+- reference: GO:0000109
+  notes: Gene Ontology cellular-component parent term for nucleotide-excision repair
+    complexes.
+- reference: GO:0006289
+  notes: Gene Ontology biological-process term for nucleotide-excision repair.
+- reference: PMID:10915862
+  notes: PubMed identifier for Prakash and Prakash 2000, the Mutation Research yeast
+    nucleotide-excision repair review cited by GO:0000112.
+- reference: DOI:10.1016/s0027-5107(00)00037-3
+  notes: DOI for Prakash and Prakash 2000, 'Nucleotide excision repair in yeast',
+    verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_nef3_nucleotide_excision_repair
+  title: NEF3 is a yeast nucleotide-excision repair factor
+  description: In Saccharomyces cerevisiae, Rad2p and the core TFIIH-Ssl2p complex
+    form the NEF3 subassembly of the nucleotide-excision repair protein system.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the GO-defined Rad2p and core TFIIH constituents
+    of NEF3 and the connection from NEF3 to nucleotide-excision repair without resolving
+    helicase or incision chemistry.
+  nodes:
+  - node_id: rad2_nef3_subunit
+    label: Rad2 NEF3 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad2_nef3_subunit
+  - node_id: core_tfiih_ssl2p_nef3_subcomplex
+    label: core TFIIH complex portion of NEF3 complex
+    node_type: STRUCTURE
+    grounding: GO:0000440
+    component_ref: core_tfiih_ssl2p_nef3_subcomplex
+  - node_id: nef3_complex
+    label: NEF3 complex
+    node_type: STRUCTURE
+    grounding: GO:0000112
+  - node_id: nucleotide_excision_repair
+    label: nucleotide-excision repair
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006289
+  edges:
+  - subject: rad2_nef3_subunit
+    predicate: contributes to
+    object: nef3_complex
+    description: Rad2p is one constituent of the budding-yeast NEF3 complex.
+    evidence:
+    - reference: GO:0000112
+      notes: GO:0000112 defines Rad2p as a component of the NEF3 complex.
+  - subject: core_tfiih_ssl2p_nef3_subcomplex
+    predicate: contributes to
+    object: nef3_complex
+    description: The core TFIIH-Ssl2p complex is the second constituent of the budding-yeast
+      NEF3 complex.
+    evidence:
+    - reference: GO:0000112
+      notes: GO:0000112 defines the core TFIIH-Ssl2p complex as part of NEF3.
+    - reference: GO:0000440
+      notes: GO:0000440 is the core TFIIH complex portion of the NEF3 complex.
+  - subject: nef3_complex
+    predicate: supports
+    object: nucleotide_excision_repair
+    description: The NEF3 complex is one endodeoxynuclease- and DNA-helicase-containing
+      multiprotein subassembly of the yeast nucleotide-excision repair system.
+    evidence:
+    - reference: GO:0000112
+      notes: GO:0000112 defines NEF3 as one of several complexes involved in nucleotide-excision
+        repair.
+    - reference: GO:0006289
+      notes: GO:0006289 is the process term for nucleotide-excision repair.
+    - reference: DOI:10.1016/s0027-5107(00)00037-3
+      notes: Prakash and Prakash 2000 described NEF3 as an in-vivo multiprotein subassembly
+        of the yeast NER proteins.
+discussions:
+- discussion_id: resolve_nef3_rad2_family_grounding
+  prompt: Resolve an exact source-neutral family grounding for the Rad2 constituent
+    of the NEF3 complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rad2_nef3_subunit
+  rationale: GO:0000112 defines budding-yeast Rad2p as the protein constituent paired
+    with the core TFIIH-Ssl2p subcomplex in NEF3. An exact cross-eukaryotic InterPro,
+    Pfam, NCBIfam or UniProt family boundary for this NER factor class needs narrower
+    curation before this component label can be grounded.
+  evidence:
+  - reference: GO:0000112
+    notes: GO:0000112 defines the budding-yeast Rad2p NEF3 subunit.
+  posed_by: codex
+  posed_date: '2026-09-26'
