@@ -25,6 +25,12 @@ curation_history:
   action: NORMALIZED_RECORD
   changes: Re-emitted repeated NatA evidence entries without YAML aliases.
   llm_assisted: true
+- timestamp: '2026-09-26T09:00:29Z'
+  curator: codex
+  action: EDITED_RECORD
+  changes: 'Resolved PR #1626 review issue #1627 by narrowing the NatA subunit-grounding
+    TODO so it no longer asserts unsupported Naa-family aliases.'
+  llm_assisted: true
 synonyms:
 - synonym_text: N-terminal acetyltransferase A complex
   synonym_type: EXACT_SYNONYM
@@ -188,9 +194,10 @@ discussions:
   - components#nat1_nata_auxiliary_subunit
   - components#ard1_nata_catalytic_subunit
   - components#nat5_nata_gnat_subunit
-  notes: NatA uses conserved Naa10/Ard1, Naa15/Nat1 and Naa50/Nat5-family subunits;
-    curate InterPro, Pfam, NCBIfam or UniProt family accessions only when they denote
-    these NatA component classes rather than broader GNAT or TPR domain families.
+  notes: The curated budding-yeast components include two GNAT-family proteins and
+    one TPR-containing auxiliary protein; curate InterPro, Pfam, NCBIfam or UniProt
+    family accessions only when they denote the exact Nat1, Ard1 or Nat5 NatA component
+    classes rather than broader domain families.
   evidence:
   - reference: DOI:10.1128/MCB.23.20.7403-7414.2003
     notes: Gautschi et al. 2003 purified Saccharomyces cerevisiae NatA from ribosomal

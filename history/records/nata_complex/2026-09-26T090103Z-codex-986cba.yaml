@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nata_complex.yaml
+  slug: nata_complex
+session:
+  id: 2026-09-26T090103Z-codex-986cba
+  timestamp: '2026-09-26T09:01:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1627
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1626
+events:
+- type: EDIT
+  outcome: changed
+  summary: Narrow NatA component-grounding TODO
+  details: 'Resolved PR #1626 review issue #1627 by narrowing the NatA component-grounding
+    TODO from unsupported Naa-family aliases to the directly curated Nat1, Ard1 and Nat5 budding-yeast
+    component classes.'
