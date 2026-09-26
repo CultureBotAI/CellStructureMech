@@ -1,0 +1,216 @@
+identifier: GO:0000110
+label: nucleotide-excision repair factor 1 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: One of several protein complexes involved in nucleotide-excision repair;
+  possesses DNA damage recognition and endodeoxynuclease activities. In S. cerevisiae,
+  it is composed of Rad1p, Rad10p, and Rad14p; in human the subunits are ERCC4/XPF,
+  ERCC1 and XPA, respectively.
+definition_source: GO:0000110
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T01:51:21Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T01:52:24Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added NEF1 and XPA-ERCC1-ERCC4 exact synonymy, nucleotide-excision repair
+    complex parentage, three reviewed-label-only Rad constituent rows, budding-yeast
+    scope, a nucleotide-excision-repair function, GO/PubMed/DOI evidence, a nonmechanistic
+    function graph, and a NEF1 subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: NEF1 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000110
+- synonym_text: XPA-ERCC1-ERCC4 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000110
+parent_structures:
+- GO:0000109
+components:
+- component_id: rad1_nef1_subunit
+  label: Rad1 NEF1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RAD1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Rad1p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this nucleotide-excision repair factor 1 subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast nucleotide-excision repair factor
+    1 / NEF1 complex.
+  evidence:
+  - reference: GO:0000110
+    notes: GO:0000110 defines the NEF1 complex as containing Rad1p.
+- component_id: rad10_nef1_subunit
+  label: Rad10 NEF1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RAD10
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Rad10p
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this nucleotide-excision repair factor 1 subunit class was curated in this
+    pass.
+  role: Protein constituent of the budding-yeast nucleotide-excision repair factor
+    1 / NEF1 complex.
+  evidence:
+  - reference: GO:0000110
+    notes: GO:0000110 defines the NEF1 complex as containing Rad10p.
+- component_id: rad14_nef1_subunit
+  label: Rad14 NEF1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RAD14
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Rad14p
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this nucleotide-excision repair factor 1 subunit class was curated in this
+    pass.
+  role: Protein constituent of the budding-yeast nucleotide-excision repair factor
+    1 / NEF1 complex.
+  evidence:
+  - reference: GO:0000110
+    notes: GO:0000110 defines the NEF1 complex as containing Rad14p.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0000110 defines NEF1 as a nucleotide-excision
+    repair factor complex with Rad1p, Rad10p and Rad14p constituents.
+  reference: GO:0000110
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Prakash and Prakash 2000 described budding-yeast Rad14 and Rad1-Rad10 as one
+    nucleotide-excision repair subassembly called NEF1.
+  reference: DOI:10.1016/s0027-5107(00)00037-3
+functions:
+- function_id: nucleotide_excision_repair
+  label: nucleotide-excision repair
+  grounding: GO:0006289
+  description: The NEF1 complex participates in nucleotide-excision repair as a DNA-damage-recognition
+    and endodeoxynuclease-containing protein complex.
+  evidence:
+  - reference: GO:0000110
+    notes: GO:0000110 defines NEF1 as a nucleotide-excision repair factor with DNA
+      damage recognition and endodeoxynuclease activities.
+  - reference: GO:0006289
+    notes: GO:0006289 is the Gene Ontology biological-process term for nucleotide-excision
+      repair.
+  - reference: DOI:10.1016/s0027-5107(00)00037-3
+    notes: Prakash and Prakash 2000 described Rad14 and the Rad1-Rad10 complex as
+      the budding-yeast NEF1 multiprotein subassembly.
+evidence:
+- reference: GO:0000110
+  notes: Gene Ontology cellular-component term for the NEF1 complex and its exact
+    NEF1 and XPA-ERCC1-ERCC4 synonyms.
+- reference: GO:0000109
+  notes: Gene Ontology cellular-component parent term for nucleotide-excision repair
+    complexes.
+- reference: GO:0006289
+  notes: Gene Ontology biological-process term for nucleotide-excision repair.
+- reference: PMID:10915862
+  notes: PubMed identifier for Prakash and Prakash 2000, the Mutation Research yeast
+    nucleotide-excision repair review cited by GO:0000110.
+- reference: DOI:10.1016/s0027-5107(00)00037-3
+  notes: DOI for Prakash and Prakash 2000, 'Nucleotide excision repair in yeast',
+    verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_nef1_nucleotide_excision_repair
+  title: NEF1 is a yeast nucleotide-excision repair factor
+  description: In Saccharomyces cerevisiae, Rad1p, Rad10p and Rad14p form the NEF1
+    subassembly of the nucleotide-excision repair protein system.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three GO-defined NEF1 constituents and the connection
+    from NEF1 to nucleotide-excision repair without resolving damage-recognition or
+    incision chemistry.
+  nodes:
+  - node_id: rad1_nef1_subunit
+    label: Rad1 NEF1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad1_nef1_subunit
+  - node_id: rad10_nef1_subunit
+    label: Rad10 NEF1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad10_nef1_subunit
+  - node_id: rad14_nef1_subunit
+    label: Rad14 NEF1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad14_nef1_subunit
+  - node_id: nef1_complex
+    label: NEF1 complex
+    node_type: STRUCTURE
+    grounding: GO:0000110
+  - node_id: nucleotide_excision_repair
+    label: nucleotide-excision repair
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006289
+  edges:
+  - subject: rad1_nef1_subunit
+    predicate: contributes to
+    object: nef1_complex
+    description: Rad1p is one constituent of the budding-yeast NEF1 complex.
+    evidence:
+    - reference: GO:0000110
+      notes: GO:0000110 defines Rad1p as a component of the NEF1 complex.
+  - subject: rad10_nef1_subunit
+    predicate: contributes to
+    object: nef1_complex
+    description: Rad10p is one constituent of the budding-yeast NEF1 complex.
+    evidence:
+    - reference: GO:0000110
+      notes: GO:0000110 defines Rad10p as a component of the NEF1 complex.
+  - subject: rad14_nef1_subunit
+    predicate: contributes to
+    object: nef1_complex
+    description: Rad14p is one constituent of the budding-yeast NEF1 complex.
+    evidence:
+    - reference: GO:0000110
+      notes: GO:0000110 defines Rad14p as a component of the NEF1 complex.
+  - subject: nef1_complex
+    predicate: supports
+    object: nucleotide_excision_repair
+    description: The NEF1 complex is one multiprotein subassembly of the yeast nucleotide-excision
+      repair system.
+    evidence:
+    - reference: GO:0000110
+      notes: GO:0000110 defines NEF1 as one of several complexes involved in nucleotide-excision
+        repair.
+    - reference: GO:0006289
+      notes: GO:0006289 is the process term for nucleotide-excision repair.
+    - reference: DOI:10.1016/s0027-5107(00)00037-3
+      notes: Prakash and Prakash 2000 described NEF1 as an in-vivo multiprotein subassembly
+        of the yeast NER proteins.
+discussions:
+- discussion_id: resolve_nef1_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Rad1, Rad10 and Rad14
+    constituents of the NEF1 complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rad1_nef1_subunit
+  - components#rad10_nef1_subunit
+  - components#rad14_nef1_subunit
+  rationale: GO:0000110 defines budding-yeast Rad1p, Rad10p and Rad14p constituents
+    and also maps the corresponding human subunits as ERCC4/XPF, ERCC1 and XPA. Exact
+    cross-eukaryotic InterPro, Pfam, NCBIfam or UniProt family boundaries for these
+    NER factor classes need narrower curation before these component labels can be
+    grounded.
+  evidence:
+  - reference: GO:0000110
+    notes: GO:0000110 defines both the budding-yeast NEF1 subunits and the corresponding
+      human ERCC4/XPF, ERCC1 and XPA subunits.
+  posed_by: codex
+  posed_date: '2026-09-26'

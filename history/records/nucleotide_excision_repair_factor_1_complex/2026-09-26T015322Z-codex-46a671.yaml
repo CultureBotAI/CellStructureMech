@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nucleotide_excision_repair_factor_1_complex.yaml
+  slug: nucleotide_excision_repair_factor_1_complex
+session:
+  id: 2026-09-26T015322Z-codex-46a671
+  timestamp: '2026-09-26T01:53:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added NEF1 complex record
+  details: Created an evidence-backed GO:0000110 nucleotide-excision repair factor 1 complex
+    record with GO exact synonyms, nucleotide-excision repair complex parentage, three GO-defined
+    budding-yeast protein constituents, a nucleotide-excision-repair function, GO/PubMed/DOI
+    references, a nonmechanistic function graph, and a follow-up discussion for exact component-family
+    groundings.
