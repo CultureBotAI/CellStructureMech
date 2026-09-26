@@ -2,11 +2,9 @@ identifier: GO:0000812
 label: Swr1 complex
 structure_category: OTHER
 structure_kind: MULTIPROTEIN_COMPLEX
-definition: A multisubunit protein complex that is involved in chromatin remodeling.
-  It is required for the incorporation of the histone variant H2AZ into chromatin.
-  In S. cerevisiae, the complex contains Swr1p, a Swi2/Snf2-related ATPase, and 12
-  additional subunits.
-definition_source: GO:0000812
+definition: A multisubunit INO80-type chromatin-remodeling complex that catalyzes
+  ATP-dependent exchange of nucleosomal H2A-H2B dimers for H2AZ-H2B dimers.
+definition_source: DOI:10.1126/science.1090701
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-26T04:53:53Z'
@@ -21,6 +19,14 @@ curation_history:
     fourteen SWR-C constituent rows, budding-yeast scope, H2AZ-exchange and chromatin-remodeling
     functions, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a SWR-C
     subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-26T05:04:25Z'
+  curator: codex
+  action: FIXED_REVIEW_ISSUE
+  changes: 'Resolved issue #1617 by replacing GO''s stale 13-subunit Swr1 definition
+    with a DOI-supported H2AZ-exchange definition and by rewording SWR-C component
+    grounding notes so they no longer over-attribute all fourteen subunit labels to
+    GO:0000812.'
   llm_assisted: true
 synonyms:
 - synonym_text: SWR-C
@@ -40,9 +46,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Swr1 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Swr1 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: Swi2/Snf2-related ATPase constituent and scaffold of the budding-yeast SWR-C
     chromatin remodeling complex.
   evidence:
@@ -56,9 +62,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Swc2 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Swc2 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: Protein constituent of the budding-yeast SWR-C chromatin remodeling complex.
   evidence:
   - reference: DOI:10.1074/jbc.M808830200
@@ -71,9 +77,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Bdf1 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Bdf1 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: Bromodomain-containing protein constituent of the budding-yeast SWR-C chromatin
     remodeling complex.
   evidence:
@@ -87,9 +93,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Swc3 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Swc3 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: Protein constituent of the budding-yeast SWR-C chromatin remodeling complex.
   evidence:
   - reference: DOI:10.1074/jbc.M808830200
@@ -102,9 +108,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Arp6 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Arp6 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: Actin-related protein constituent of the budding-yeast SWR-C chromatin remodeling
     complex.
   evidence:
@@ -118,9 +124,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Swc5 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Swc5 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: Protein constituent of the budding-yeast SWR-C chromatin remodeling complex.
   evidence:
   - reference: DOI:10.1074/jbc.M808830200
@@ -133,9 +139,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Yaf9 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Yaf9 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: Protein constituent of the budding-yeast SWR-C chromatin remodeling complex.
   evidence:
   - reference: DOI:10.1074/jbc.M808830200
@@ -148,9 +154,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Swc6 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Swc6 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: Protein constituent of the budding-yeast SWR-C chromatin remodeling complex.
   evidence:
   - reference: DOI:10.1074/jbc.M808830200
@@ -163,9 +169,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Swc7 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Swc7 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: Protein constituent of the budding-yeast SWR-C chromatin remodeling complex.
   evidence:
   - reference: DOI:10.1074/jbc.M808830200
@@ -178,9 +184,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Rvb1 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Rvb1 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: RuvB-like AAA+ ATPase constituent of the budding-yeast SWR-C chromatin remodeling
     complex.
   evidence:
@@ -194,9 +200,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Rvb2 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Rvb2 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: RuvB-like AAA+ ATPase constituent of the budding-yeast SWR-C chromatin remodeling
     complex.
   evidence:
@@ -210,9 +216,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Arp4 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Arp4 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: Actin-related protein constituent of the budding-yeast SWR-C chromatin remodeling
     complex.
   evidence:
@@ -226,9 +232,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Swc4 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Swc4 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: Eaf2/Swc4 constituent of the budding-yeast SWR-C chromatin remodeling complex.
   evidence:
   - reference: DOI:10.1074/jbc.M808830200
@@ -241,9 +247,9 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0000812 follows Saccharomyces cerevisiae Act1 naming; no exact
-    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C
-    subunit class was curated in this pass.
+  grounding_notes: Budding-yeast SWR-C literature follows Act1 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
   role: Actin constituent of the budding-yeast SWR-C chromatin remodeling complex.
   evidence:
   - reference: DOI:10.1074/jbc.M808830200
