@@ -13596,6 +13596,11 @@
           "cosine_similarity": 0.77700035
         },
         {
+          "identifier": "GO:0048188",
+          "label": "Set1C/COMPASS complex",
+          "cosine_similarity": 0.76234391
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.75666355
@@ -13609,11 +13614,6 @@
           "identifier": "GO:0000812",
           "label": "Swr1 complex",
           "cosine_similarity": 0.74251657
-        },
-        {
-          "identifier": "GO:0000110",
-          "label": "nucleotide-excision repair factor 1 complex",
-          "cosine_similarity": 0.74042638
         }
       ]
     },
@@ -14765,6 +14765,37 @@
       ]
     },
     {
+      "identifier": "GO:0048188",
+      "label": "Set1C/COMPASS complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000812",
+          "label": "Swr1 complex",
+          "cosine_similarity": 0.78417339
+        },
+        {
+          "identifier": "GO:0034967",
+          "label": "Set3 complex",
+          "cosine_similarity": 0.77289347
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.77066018
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.77021889
+        },
+        {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.76234391
+        }
+      ]
+    },
+    {
       "identifier": "GO:0034967",
       "label": "Set3 complex",
       "neighbors": [
@@ -14955,6 +14986,11 @@
       "label": "Swr1 complex",
       "neighbors": [
         {
+          "identifier": "GO:0048188",
+          "label": "Set1C/COMPASS complex",
+          "cosine_similarity": 0.78417339
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.76909423
@@ -14973,11 +15009,6 @@
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.74251657
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.71532478
         }
       ]
     },
