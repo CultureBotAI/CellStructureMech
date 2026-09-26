@@ -1,0 +1,529 @@
+identifier: GO:0035267
+label: NuA4 histone acetyltransferase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A complex having histone acetylase activity on chromatin, as well as ATPase,
+  DNA helicase and structural DNA binding activities. The complex is thought to be
+  involved in double-strand DNA break repair. Subunits of the human complex include
+  HTATIP/TIP60, TRRAP, RUVBL1, BUVBL2, beta-actin and BAF53/ACTL6A. In yeast, the
+  complex has 13 subunits, including the catalytic subunit Esa1 (homologous to human
+  Tip60).
+definition_source: GO:0035267
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T05:45:40Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T05:46:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added NuA4/TIP60 exact synonymy and histone-acetyltransferase-complex parentage,
+    thirteen budding-yeast NuA4 constituent rows, yeast scope, histone acetyltransferase
+    activity, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a NuA4
+    subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-26T05:48:31Z'
+  curator: codex
+  action: NARROWED_PARENT
+  changes: Replaced broad histone acetyltransferase complex parentage with the direct
+    H4/H2A histone acetyltransferase complex parent.
+  llm_assisted: true
+synonyms:
+- synonym_text: TIP60 histone acetylase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0035267
+- synonym_text: TIP60 histone acetyltransferase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0035267
+parent_structures:
+- GO:0043189
+components:
+- component_id: tra1_nua4_subunit
+  label: Tra1 NuA4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NuA4 architecture literature follows Tra1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this NuA4 subunit class was curated in this pass.
+  role: PIKK-family pseudokinase and scaffolding constituent of the budding-yeast
+    NuA4 complex.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
+      Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
+      Yaf9.
+- component_id: eaf1_nua4_scaffold_subunit
+  label: Eaf1 NuA4 scaffold subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NuA4 architecture literature follows Eaf1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this NuA4 subunit class was curated in this pass.
+  role: NuA4-specific scaffold constituent that coordinates Tra1, TINTIN, piccolo-NuA4
+    and Arp4/Act1/Swc4/Yaf9 modules.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
+      Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
+      Yaf9.
+- component_id: eaf3_nua4_tintin_subunit
+  label: Eaf3 NuA4 TINTIN subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NuA4 architecture literature follows Eaf3 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this NuA4 subunit class was curated in this pass.
+  role: Protein constituent of the Eaf5/Eaf7/Eaf3 TINTIN module in the budding-yeast
+    NuA4 complex.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
+      Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
+      Yaf9.
+- component_id: eaf5_nua4_tintin_subunit
+  label: Eaf5 NuA4 TINTIN subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NuA4 architecture literature follows Eaf5 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this NuA4 subunit class was curated in this pass.
+  role: Protein constituent of the Eaf5/Eaf7/Eaf3 TINTIN module in the budding-yeast
+    NuA4 complex.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
+      Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
+      Yaf9.
+- component_id: eaf7_nua4_tintin_subunit
+  label: Eaf7 NuA4 TINTIN subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NuA4 architecture literature follows Eaf7 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this NuA4 subunit class was curated in this pass.
+  role: Protein constituent of the Eaf5/Eaf7/Eaf3 TINTIN module in the budding-yeast
+    NuA4 complex.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
+      Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
+      Yaf9.
+- component_id: esa1_nua4_catalytic_subunit
+  label: Esa1 NuA4 catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NuA4 architecture literature follows Esa1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this NuA4 subunit class was curated in this pass.
+  role: Catalytic MYST-family histone acetyltransferase constituent of the budding-yeast
+    NuA4 complex.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
+      Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
+      Yaf9.
+- component_id: epl1_nua4_piccolo_subunit
+  label: Epl1 NuA4 piccolo subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NuA4 architecture literature follows Epl1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this NuA4 subunit class was curated in this pass.
+  role: Piccolo-NuA4 constituent that bridges Esa1 and Yng2 in the catalytic module.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
+      Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
+      Yaf9.
+- component_id: yng2_nua4_piccolo_subunit
+  label: Yng2 NuA4 piccolo subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NuA4 architecture literature follows Yng2 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this NuA4 subunit class was curated in this pass.
+  role: ING-family piccolo-NuA4 constituent of the budding-yeast NuA4 complex.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
+      Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
+      Yaf9.
+- component_id: eaf6_nua4_piccolo_subunit
+  label: Eaf6 NuA4 piccolo subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NuA4 architecture literature follows Eaf6 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this NuA4 subunit class was curated in this pass.
+  role: Piccolo-NuA4 constituent of the budding-yeast NuA4 complex.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
+      Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
+      Yaf9.
+- component_id: act1_nua4_actin_subunit
+  label: Act1 NuA4 actin constituent
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NuA4 architecture literature follows Act1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this NuA4 subunit class was curated in this pass.
+  role: Actin constituent of the budding-yeast NuA4 Arp4/Act1/Swc4/Yaf9 module.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
+      Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
+      Yaf9.
+- component_id: arp4_nua4_subunit
+  label: Arp4 NuA4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NuA4 architecture literature follows Arp4 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this NuA4 subunit class was curated in this pass.
+  role: Actin-related protein constituent of the budding-yeast NuA4 Arp4/Act1/Swc4/Yaf9
+    module.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
+      Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
+      Yaf9.
+- component_id: swc4_nua4_subunit
+  label: Swc4 NuA4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NuA4 architecture literature follows Swc4/Eaf2
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this NuA4 subunit class was curated in this pass.
+  role: Eaf2/Swc4 constituent of the budding-yeast NuA4 Arp4/Act1/Swc4/Yaf9 module.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
+      Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
+      Yaf9.
+- component_id: yaf9_nua4_subunit
+  label: Yaf9 NuA4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NuA4 architecture literature follows Yaf9 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this NuA4 subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast NuA4 Arp4/Act1/Swc4/Yaf9 module.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
+      Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
+      Yaf9.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which Wang et al. 2018 resolved the modular
+    architecture of the 13-subunit NuA4/TIP60 histone acetyltransferase complex.
+  reference: DOI:10.1038/s41467-018-03504-5
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Wang et al. 2018 purified endogenous budding-yeast NuA4 and resolved Tra1/Eaf1-centered
+    TEEAA and TEEAA-piccolo assemblies by cryo-EM.
+  reference: DOI:10.1038/s41467-018-03504-5
+functions:
+- function_id: histone_acetyltransferase_activity
+  label: histone acetyltransferase activity
+  grounding: GO:0004402
+  description: The NuA4 complex acetylates histone H4 and H2A N-terminal tails through
+    its Esa1 catalytic subunit.
+  evidence:
+  - reference: GO:0035267
+    notes: GO:0035267 defines NuA4/TIP60 as a complex having histone acetylase activity
+      on chromatin.
+  - reference: GO:0004402
+    notes: GO:0004402 is the Gene Ontology molecular-function term for histone acetyltransferase
+      activity.
+  - reference: DOI:10.1128/MCB.24.5.1884-1896.2004
+    notes: Doyon et al. 2004 describe the yeast NuA4 multisubunit complex as responsible
+      for acetylating histone H4 and H2A N-terminal tails.
+evidence:
+- reference: GO:0035267
+  notes: Gene Ontology cellular-component term for the NuA4/TIP60 histone acetyltransferase
+    complex and its exact TIP60 synonyms.
+- reference: GO:0043189
+  notes: Gene Ontology cellular-component parent term for H4/H2A histone acetyltransferase
+    complexes.
+- reference: GO:0004402
+  notes: Gene Ontology molecular-function term for histone acetyltransferase activity.
+- reference: PMID:14966270
+  notes: PubMed identifier for Doyon et al. 2004, the conserved NuA4/TIP60 paper cited
+    by GO:0035267.
+- reference: DOI:10.1128/MCB.24.5.1884-1896.2004
+  notes: DOI for Doyon et al. 2004, 'Structural and functional conservation of the
+    NuA4 histone acetyltransferase complex from yeast to humans', verified through
+    NCBI E-utilities.
+- reference: PMID:29559617
+  notes: PubMed identifier for Wang et al. 2018, the Saccharomyces cerevisiae NuA4/TIP60
+    architecture paper.
+- reference: DOI:10.1038/s41467-018-03504-5
+  notes: DOI for Wang et al. 2018, 'Architecture of the Saccharomyces cerevisiae NuA4/TIP60
+    complex', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_nua4_histone_acetyltransferase_activity
+  title: NuA4 carries yeast histone acetyltransferase activity
+  description: In Saccharomyces cerevisiae, thirteen constituents assemble into a
+    NuA4/TIP60 complex organized around Tra1 and Eaf1 and carrying Esa1-dependent
+    histone acetylation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the yeast NuA4 subunit set and its connection to
+    histone acetyltransferase activity without resolving catalytic chemistry, nucleosome
+    engagement, chromatin recruitment or DNA-repair signaling.
+  nodes:
+  - node_id: tra1_nua4_subunit
+    label: Tra1 NuA4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tra1_nua4_subunit
+  - node_id: eaf1_nua4_scaffold_subunit
+    label: Eaf1 NuA4 scaffold subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: eaf1_nua4_scaffold_subunit
+  - node_id: eaf3_nua4_tintin_subunit
+    label: Eaf3 NuA4 TINTIN subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: eaf3_nua4_tintin_subunit
+  - node_id: eaf5_nua4_tintin_subunit
+    label: Eaf5 NuA4 TINTIN subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: eaf5_nua4_tintin_subunit
+  - node_id: eaf7_nua4_tintin_subunit
+    label: Eaf7 NuA4 TINTIN subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: eaf7_nua4_tintin_subunit
+  - node_id: esa1_nua4_catalytic_subunit
+    label: Esa1 NuA4 catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: esa1_nua4_catalytic_subunit
+  - node_id: epl1_nua4_piccolo_subunit
+    label: Epl1 NuA4 piccolo subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: epl1_nua4_piccolo_subunit
+  - node_id: yng2_nua4_piccolo_subunit
+    label: Yng2 NuA4 piccolo subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: yng2_nua4_piccolo_subunit
+  - node_id: eaf6_nua4_piccolo_subunit
+    label: Eaf6 NuA4 piccolo subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: eaf6_nua4_piccolo_subunit
+  - node_id: act1_nua4_actin_subunit
+    label: Act1 NuA4 actin constituent
+    node_type: GENE_OR_PROTEIN
+    component_ref: act1_nua4_actin_subunit
+  - node_id: arp4_nua4_subunit
+    label: Arp4 NuA4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: arp4_nua4_subunit
+  - node_id: swc4_nua4_subunit
+    label: Swc4 NuA4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: swc4_nua4_subunit
+  - node_id: yaf9_nua4_subunit
+    label: Yaf9 NuA4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: yaf9_nua4_subunit
+  - node_id: nua4_histone_acetyltransferase_complex
+    label: NuA4 histone acetyltransferase complex
+    node_type: STRUCTURE
+    grounding: GO:0035267
+  - node_id: histone_acetyltransferase_activity
+    label: histone acetyltransferase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004402
+  edges:
+  - subject: tra1_nua4_subunit
+    predicate: contributes to
+    object: nua4_histone_acetyltransferase_complex
+    description: Tra1 is a constituent of the budding-yeast NuA4 histone acetyltransferase
+      complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-03504-5
+      notes: Wang et al. 2018 describe the 13-subunit modular architecture of budding-yeast
+        NuA4.
+  - subject: eaf1_nua4_scaffold_subunit
+    predicate: contributes to
+    object: nua4_histone_acetyltransferase_complex
+    description: Eaf1 is a constituent of the budding-yeast NuA4 histone acetyltransferase
+      complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-03504-5
+      notes: Wang et al. 2018 describe the 13-subunit modular architecture of budding-yeast
+        NuA4.
+  - subject: eaf3_nua4_tintin_subunit
+    predicate: contributes to
+    object: nua4_histone_acetyltransferase_complex
+    description: Eaf3 is a constituent of the budding-yeast NuA4 histone acetyltransferase
+      complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-03504-5
+      notes: Wang et al. 2018 describe the 13-subunit modular architecture of budding-yeast
+        NuA4.
+  - subject: eaf5_nua4_tintin_subunit
+    predicate: contributes to
+    object: nua4_histone_acetyltransferase_complex
+    description: Eaf5 is a constituent of the budding-yeast NuA4 histone acetyltransferase
+      complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-03504-5
+      notes: Wang et al. 2018 describe the 13-subunit modular architecture of budding-yeast
+        NuA4.
+  - subject: eaf7_nua4_tintin_subunit
+    predicate: contributes to
+    object: nua4_histone_acetyltransferase_complex
+    description: Eaf7 is a constituent of the budding-yeast NuA4 histone acetyltransferase
+      complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-03504-5
+      notes: Wang et al. 2018 describe the 13-subunit modular architecture of budding-yeast
+        NuA4.
+  - subject: esa1_nua4_catalytic_subunit
+    predicate: contributes to
+    object: nua4_histone_acetyltransferase_complex
+    description: Esa1 is a constituent of the budding-yeast NuA4 histone acetyltransferase
+      complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-03504-5
+      notes: Wang et al. 2018 describe the 13-subunit modular architecture of budding-yeast
+        NuA4.
+  - subject: epl1_nua4_piccolo_subunit
+    predicate: contributes to
+    object: nua4_histone_acetyltransferase_complex
+    description: Epl1 is a constituent of the budding-yeast NuA4 histone acetyltransferase
+      complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-03504-5
+      notes: Wang et al. 2018 describe the 13-subunit modular architecture of budding-yeast
+        NuA4.
+  - subject: yng2_nua4_piccolo_subunit
+    predicate: contributes to
+    object: nua4_histone_acetyltransferase_complex
+    description: Yng2 is a constituent of the budding-yeast NuA4 histone acetyltransferase
+      complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-03504-5
+      notes: Wang et al. 2018 describe the 13-subunit modular architecture of budding-yeast
+        NuA4.
+  - subject: eaf6_nua4_piccolo_subunit
+    predicate: contributes to
+    object: nua4_histone_acetyltransferase_complex
+    description: Eaf6 is a constituent of the budding-yeast NuA4 histone acetyltransferase
+      complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-03504-5
+      notes: Wang et al. 2018 describe the 13-subunit modular architecture of budding-yeast
+        NuA4.
+  - subject: act1_nua4_actin_subunit
+    predicate: contributes to
+    object: nua4_histone_acetyltransferase_complex
+    description: Act1 is a constituent of the budding-yeast NuA4 histone acetyltransferase
+      complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-03504-5
+      notes: Wang et al. 2018 describe the 13-subunit modular architecture of budding-yeast
+        NuA4.
+  - subject: arp4_nua4_subunit
+    predicate: contributes to
+    object: nua4_histone_acetyltransferase_complex
+    description: Arp4 is a constituent of the budding-yeast NuA4 histone acetyltransferase
+      complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-03504-5
+      notes: Wang et al. 2018 describe the 13-subunit modular architecture of budding-yeast
+        NuA4.
+  - subject: swc4_nua4_subunit
+    predicate: contributes to
+    object: nua4_histone_acetyltransferase_complex
+    description: Swc4 is a constituent of the budding-yeast NuA4 histone acetyltransferase
+      complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-03504-5
+      notes: Wang et al. 2018 describe the 13-subunit modular architecture of budding-yeast
+        NuA4.
+  - subject: yaf9_nua4_subunit
+    predicate: contributes to
+    object: nua4_histone_acetyltransferase_complex
+    description: Yaf9 is a constituent of the budding-yeast NuA4 histone acetyltransferase
+      complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-018-03504-5
+      notes: Wang et al. 2018 describe the 13-subunit modular architecture of budding-yeast
+        NuA4.
+  - subject: nua4_histone_acetyltransferase_complex
+    predicate: supports
+    object: histone_acetyltransferase_activity
+    description: NuA4 acetylates nucleosomal histone H4 and H2A through its Esa1 catalytic
+      subunit.
+    evidence:
+    - reference: GO:0035267
+      notes: GO:0035267 defines NuA4/TIP60 as a complex having histone acetylase activity
+        on chromatin.
+    - reference: GO:0004402
+      notes: GO:0004402 is the molecular-function term for histone acetyltransferase
+        activity.
+    - reference: DOI:10.1128/MCB.24.5.1884-1896.2004
+      notes: Doyon et al. 2004 describe yeast NuA4 as a histone H4/H2A acetyltransferase
+        complex.
+discussions:
+- discussion_id: resolve_nua4_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the NuA4 histone acetyltransferase
+    complex constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#tra1_nua4_subunit
+  - components#eaf1_nua4_scaffold_subunit
+  - components#eaf3_nua4_tintin_subunit
+  - components#eaf5_nua4_tintin_subunit
+  - components#eaf7_nua4_tintin_subunit
+  - components#esa1_nua4_catalytic_subunit
+  - components#epl1_nua4_piccolo_subunit
+  - components#yng2_nua4_piccolo_subunit
+  - components#eaf6_nua4_piccolo_subunit
+  - components#act1_nua4_actin_subunit
+  - components#arp4_nua4_subunit
+  - components#swc4_nua4_subunit
+  - components#yaf9_nua4_subunit
+  rationale: Wang et al. 2018 define the 13-subunit budding-yeast NuA4/TIP60 architecture.
+    Exact cross-eukaryotic InterPro, Pfam, NCBIfam or UniProt family boundaries for
+    each NuA4 subunit class need narrower curation before the component labels can
+    be grounded.
+  evidence:
+  - reference: DOI:10.1038/s41467-018-03504-5
+    notes: Wang et al. 2018 describe the 13-subunit budding-yeast NuA4 architecture.
+  posed_by: codex
+  posed_date: '2026-09-26'

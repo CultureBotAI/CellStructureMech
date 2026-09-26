@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nua4_histone_acetyltransferase_complex.yaml
+  slug: nua4_histone_acetyltransferase_complex
+session:
+  id: 2026-09-26T054917Z-codex-d4eb6d
+  timestamp: '2026-09-26T05:49:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added NuA4 histone acetyltransferase complex record
+  details: Created an evidence-backed NuA4 histone acetyltransferase complex record for GO:0035267.
+    Used GO:0035267 for the exact cellular-component identity and TIP60 exact synonyms, GO:0043189
+    for H4/H2A histone acetyltransferase-complex parentage, GO:0004402 for histone acetyltransferase
+    activity, PubMed metadata for PMID:14966270 and PMID:29559617, DOI:10.1128/MCB.24.5.1884-1896.2004
+    for Doyon et al. 2004, DOI:10.1038/s41467-018-03504-5 for Wang et al. 2018, and an NCBI
+    Taxonomy lookup confirming Saccharomyces cerevisiae as NCBITaxon:4932. Curated the GO
+    TIP60 exact synonyms, thirteen Wang et al. budding-yeast NuA4 constituents as REVIEWED_LABEL_ONLY
+    rows, budding-yeast scope and canonical example rows, histone acetyltransferase activity
+    GO:0004402, a nonmechanistic function graph, and a CURATION_TODO to resolve source-neutral
+    family groundings. Left protein family groundings empty rather than asserting broad or
+    species-specific terms for exact NuA4 subunit classes.
