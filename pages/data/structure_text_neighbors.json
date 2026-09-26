@@ -14536,14 +14536,14 @@
           "cosine_similarity": 0.75097165
         },
         {
+          "identifier": "GO:0000812",
+          "label": "Swr1 complex",
+          "cosine_similarity": 0.6760584
+        },
+        {
           "identifier": "GO:0031518",
           "label": "CBF3 complex",
           "cosine_similarity": 0.6469665
-        },
-        {
-          "identifier": "GO:0034456",
-          "label": "UTP-C complex",
-          "cosine_similarity": 0.64192629
         }
       ]
     },
@@ -14823,6 +14823,37 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.72533206
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000812",
+      "label": "Swr1 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.71532478
+        },
+        {
+          "identifier": "GO:0070211",
+          "label": "Snt2C complex",
+          "cosine_similarity": 0.70019535
+        },
+        {
+          "identifier": "GO:0034456",
+          "label": "UTP-C complex",
+          "cosine_similarity": 0.69817713
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.69236089
+        },
+        {
+          "identifier": "GO:0030904",
+          "label": "retromer complex",
+          "cosine_similarity": 0.68490524
         }
       ]
     },

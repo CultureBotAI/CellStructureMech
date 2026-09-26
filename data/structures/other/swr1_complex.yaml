@@ -1,0 +1,587 @@
+identifier: GO:0000812
+label: Swr1 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multisubunit INO80-type chromatin-remodeling complex that catalyzes
+  ATP-dependent exchange of nucleosomal H2A-H2B dimers for H2AZ-H2B dimers.
+definition_source: DOI:10.1126/science.1090701
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T04:53:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T04:55:51Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added SWR-C exact synonymy, INO80-type parentage, nuclear-chromosome parthood,
+    fourteen SWR-C constituent rows, budding-yeast scope, H2AZ-exchange and chromatin-remodeling
+    functions, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a SWR-C
+    subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-26T05:04:25Z'
+  curator: codex
+  action: FIXED_REVIEW_ISSUE
+  changes: 'Resolved issue #1617 by replacing GO''s stale 13-subunit Swr1 definition
+    with a DOI-supported H2AZ-exchange definition and by rewording SWR-C component
+    grounding notes so they no longer over-attribute all fourteen subunit labels to
+    GO:0000812.'
+  llm_assisted: true
+synonyms:
+- synonym_text: SWR-C
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000812
+- synonym_text: SWR1 complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1074/jbc.M808830200
+parent_structures:
+- GO:0097346
+part_of:
+- GO:0000228
+components:
+- component_id: swr1_swr1c_atpase_subunit
+  label: Swr1 SWR-C ATPase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Swr1 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: Swi2/Snf2-related ATPase constituent and scaffold of the budding-yeast SWR-C
+    chromatin remodeling complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+- component_id: swc2_swr1c_subunit
+  label: Swc2 SWR-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Swc2 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: Protein constituent of the budding-yeast SWR-C chromatin remodeling complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+- component_id: bdf1_swr1c_subunit
+  label: Bdf1 SWR-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Bdf1 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: Bromodomain-containing protein constituent of the budding-yeast SWR-C chromatin
+    remodeling complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+- component_id: swc3_swr1c_subunit
+  label: Swc3 SWR-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Swc3 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: Protein constituent of the budding-yeast SWR-C chromatin remodeling complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+- component_id: arp6_swr1c_subunit
+  label: Arp6 SWR-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Arp6 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: Actin-related protein constituent of the budding-yeast SWR-C chromatin remodeling
+    complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+- component_id: swc5_swr1c_subunit
+  label: Swc5 SWR-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Swc5 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: Protein constituent of the budding-yeast SWR-C chromatin remodeling complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+- component_id: yaf9_swr1c_subunit
+  label: Yaf9 SWR-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Yaf9 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: Protein constituent of the budding-yeast SWR-C chromatin remodeling complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+- component_id: swc6_swr1c_subunit
+  label: Swc6 SWR-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Swc6 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: Protein constituent of the budding-yeast SWR-C chromatin remodeling complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+- component_id: swc7_swr1c_subunit
+  label: Swc7 SWR-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Swc7 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: Protein constituent of the budding-yeast SWR-C chromatin remodeling complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+- component_id: rvb1_swr1c_subunit
+  label: Rvb1 SWR-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Rvb1 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: RuvB-like AAA+ ATPase constituent of the budding-yeast SWR-C chromatin remodeling
+    complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+- component_id: rvb2_swr1c_subunit
+  label: Rvb2 SWR-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Rvb2 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: RuvB-like AAA+ ATPase constituent of the budding-yeast SWR-C chromatin remodeling
+    complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+- component_id: arp4_swr1c_subunit
+  label: Arp4 SWR-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Arp4 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: Actin-related protein constituent of the budding-yeast SWR-C chromatin remodeling
+    complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+- component_id: swc4_swr1c_subunit
+  label: Swc4 SWR-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Swc4 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: Eaf2/Swc4 constituent of the budding-yeast SWR-C chromatin remodeling complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+- component_id: act1_swr1c_subunit
+  label: Act1 SWR-C actin constituent
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast SWR-C literature follows Act1 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SWR-C subunit class
+    was curated in this pass.
+  role: Actin constituent of the budding-yeast SWR-C chromatin remodeling complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
+      Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
+      and Act1.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0000812 defines the Swr1 complex
+    as an H2AZ-depositing chromatin remodeling complex.
+  reference: GO:0000812
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Mizuguchi et al. 2004 purified the budding-yeast SWR1 complex and showed that
+    it catalyzes ATP-dependent exchange of nucleosomal H2A-H2B for H2AZ-H2B dimers.
+  reference: DOI:10.1126/science.1090701
+functions:
+- function_id: h2az_histone_chaperone_activity
+  label: ATP-dependent H2AZ histone chaperone activity
+  grounding: GO:0140849
+  description: The SWR1 complex catalyzes ATP-dependent replacement of canonical H2A-H2B
+    dimers with H2AZ-H2B dimers in nucleosomes.
+  evidence:
+  - reference: GO:0140849
+    notes: GO:0140849 is the Gene Ontology molecular-function term for ATP-dependent
+      H2AZ histone chaperone activity.
+  - reference: DOI:10.1126/science.1090701
+    notes: Mizuguchi et al. 2004 biochemically characterized ATP-driven H2AZ exchange
+      by the budding-yeast SWR1 complex.
+- function_id: chromatin_remodeling
+  label: chromatin remodeling
+  grounding: GO:0006338
+  description: The Swr1 complex is an INO80-type chromatin-remodeling complex that
+    deposits H2AZ into chromatin.
+  evidence:
+  - reference: GO:0006338
+    notes: GO:0006338 is the Gene Ontology biological-process term for chromatin remodeling.
+  - reference: GO:0000812
+    notes: GO:0000812 defines the Swr1 complex as a multisubunit protein complex involved
+      in chromatin remodeling.
+evidence:
+- reference: GO:0000812
+  notes: Gene Ontology cellular-component term for the Swr1 complex and its exact
+    SWR-C synonym.
+- reference: GO:0097346
+  notes: Gene Ontology cellular-component parent term for INO80-type complexes.
+- reference: GO:0000228
+  notes: Gene Ontology cellular-component term for the nuclear chromosome.
+- reference: GO:0140849
+  notes: Gene Ontology molecular-function term for ATP-dependent H2AZ histone chaperone
+    activity.
+- reference: GO:0006338
+  notes: Gene Ontology biological-process term for chromatin remodeling.
+- reference: PMID:14645854
+  notes: PubMed identifier for Mizuguchi et al. 2004, the Science paper cited by GO:0000812.
+- reference: DOI:10.1126/science.1090701
+  notes: DOI for Mizuguchi et al. 2004, 'ATP-driven exchange of histone H2AZ variant
+    catalyzed by SWR1 chromatin remodeling complex', verified through NCBI E-utilities.
+- reference: PMID:14690608
+  notes: PubMed identifier for Krogan et al. 2003, the Molecular Cell SWR-C paper
+    cited by GO:0000812.
+- reference: DOI:10.1016/s1097-2765(03)00497-0
+  notes: DOI for Krogan et al. 2003, 'A Snf2 family ATPase complex required for recruitment
+    of the histone H2A variant Htz1', verified through NCBI E-utilities.
+- reference: PMID:19355820
+  notes: PubMed identifier for Clapier and Cairns 2009, the Annual Review of Biochemistry
+    chromatin-remodeling review cited by GO:0000812 and GO:0097346.
+- reference: DOI:10.1146/annurev.biochem.77.062706.153223
+  notes: DOI for Clapier and Cairns 2009, 'The biology of chromatin remodeling complexes',
+    verified through NCBI E-utilities.
+- reference: PMID:19088068
+  notes: PubMed identifier for Wu et al. 2009, the JBC paper that describes the fourteen-subunit
+    budding-yeast SWR1 enzyme.
+- reference: DOI:10.1074/jbc.M808830200
+  notes: DOI for Wu et al. 2009, 'N Terminus of Swr1 Binds to Histone H2AZ and Provides
+    a Platform for Subunit Assembly in the Chromatin Remodeling Complex', verified
+    through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_swr1_h2az_exchange
+  title: SWR-C carries yeast ATP-dependent H2AZ exchange
+  description: In Saccharomyces cerevisiae, Swr1, Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9,
+    Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4 and Act1 form the SWR-C chromatin-remodeling
+    complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the fourteen SWR-C constituent classes and their
+    connection to ATP-dependent H2AZ exchange without resolving the ordered subunit-assembly
+    pathway or nucleosome substrate-engagement cycle.
+  nodes:
+  - node_id: swr1_swr1c_atpase_subunit
+    label: Swr1 SWR-C ATPase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: swr1_swr1c_atpase_subunit
+  - node_id: swc2_swr1c_subunit
+    label: Swc2 SWR-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: swc2_swr1c_subunit
+  - node_id: bdf1_swr1c_subunit
+    label: Bdf1 SWR-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: bdf1_swr1c_subunit
+  - node_id: swc3_swr1c_subunit
+    label: Swc3 SWR-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: swc3_swr1c_subunit
+  - node_id: arp6_swr1c_subunit
+    label: Arp6 SWR-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: arp6_swr1c_subunit
+  - node_id: swc5_swr1c_subunit
+    label: Swc5 SWR-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: swc5_swr1c_subunit
+  - node_id: yaf9_swr1c_subunit
+    label: Yaf9 SWR-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: yaf9_swr1c_subunit
+  - node_id: swc6_swr1c_subunit
+    label: Swc6 SWR-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: swc6_swr1c_subunit
+  - node_id: swc7_swr1c_subunit
+    label: Swc7 SWR-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: swc7_swr1c_subunit
+  - node_id: rvb1_swr1c_subunit
+    label: Rvb1 SWR-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rvb1_swr1c_subunit
+  - node_id: rvb2_swr1c_subunit
+    label: Rvb2 SWR-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rvb2_swr1c_subunit
+  - node_id: arp4_swr1c_subunit
+    label: Arp4 SWR-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: arp4_swr1c_subunit
+  - node_id: swc4_swr1c_subunit
+    label: Swc4 SWR-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: swc4_swr1c_subunit
+  - node_id: act1_swr1c_subunit
+    label: Act1 SWR-C actin constituent
+    node_type: GENE_OR_PROTEIN
+    component_ref: act1_swr1c_subunit
+  - node_id: swr1_complex
+    label: Swr1 complex
+    node_type: STRUCTURE
+    grounding: GO:0000812
+  - node_id: h2az_histone_chaperone_activity
+    label: ATP-dependent H2AZ histone chaperone activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0140849
+  - node_id: chromatin_remodeling
+    label: chromatin remodeling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006338
+  edges:
+  - subject: swr1_swr1c_atpase_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Swr1 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: swc2_swr1c_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Swc2 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: bdf1_swr1c_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Bdf1 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: swc3_swr1c_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Swc3 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: arp6_swr1c_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Arp6 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: swc5_swr1c_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Swc5 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: yaf9_swr1c_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Yaf9 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: swc6_swr1c_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Swc6 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: swc7_swr1c_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Swc7 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: rvb1_swr1c_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Rvb1 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: rvb2_swr1c_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Rvb2 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: arp4_swr1c_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Arp4 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: swc4_swr1c_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Swc4 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: act1_swr1c_subunit
+    predicate: contributes to
+    object: swr1_complex
+    description: Act1 is a constituent of the fourteen-subunit budding-yeast SWR1
+      complex.
+    evidence:
+    - reference: DOI:10.1074/jbc.M808830200
+      notes: Wu et al. 2009 list this protein among the fourteen subunits of the yeast
+        SWR1 enzyme.
+  - subject: swr1_complex
+    predicate: supports
+    object: h2az_histone_chaperone_activity
+    description: The SWR1 complex catalyzes ATP-dependent H2AZ-H2B exchange into nucleosomes.
+    evidence:
+    - reference: DOI:10.1126/science.1090701
+      notes: Mizuguchi et al. 2004 established ATP-driven histone H2AZ exchange by
+        budding-yeast SWR1.
+    - reference: GO:0140849
+      notes: GO:0140849 denotes ATP-dependent H2AZ histone chaperone activity.
+  - subject: h2az_histone_chaperone_activity
+    predicate: contributes to
+    object: chromatin_remodeling
+    description: ATP-dependent H2AZ-H2B exchange is the Swr1 complex's chromatin-remodeling
+      activity.
+    evidence:
+    - reference: GO:0000812
+      notes: GO:0000812 defines the Swr1 complex as involved in chromatin remodeling
+        and required for H2AZ incorporation into chromatin.
+discussions:
+- discussion_id: resolve_swr1_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the SWR-C constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#swr1_swr1c_atpase_subunit
+  - components#swc2_swr1c_subunit
+  - components#bdf1_swr1c_subunit
+  - components#swc3_swr1c_subunit
+  - components#arp6_swr1c_subunit
+  - components#swc5_swr1c_subunit
+  - components#yaf9_swr1c_subunit
+  - components#swc6_swr1c_subunit
+  - components#swc7_swr1c_subunit
+  - components#rvb1_swr1c_subunit
+  - components#rvb2_swr1c_subunit
+  - components#arp4_swr1c_subunit
+  - components#swc4_swr1c_subunit
+  - components#act1_swr1c_subunit
+  rationale: Wu et al. 2009 describe the budding-yeast SWR1 enzyme as containing fourteen
+    protein subunits. Exact cross-eukaryotic InterPro, Pfam, NCBIfam or UniProt family
+    boundaries for these SWR-C subunit classes need narrower curation before these
+    component labels can be grounded.
+  evidence:
+  - reference: DOI:10.1074/jbc.M808830200
+    notes: Wu et al. 2009 enumerate the fourteen budding-yeast SWR1 enzyme subunits.
+  posed_by: codex
+  posed_date: '2026-09-26'
