@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/hir_complex.yaml
+  slug: hir_complex
+session:
+  id: 2026-09-26T061137Z-codex-58eb04
+  timestamp: '2026-09-26T06:11:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added HIR complex record
+  details: Created an evidence-backed HIR complex record for GO:0000417. Used GO:0000417 for
+    the exact cellular-component identity and HIRA exact synonym, GO:0032991 for protein-containing-complex
+    parentage, GO:0006334 for nucleosome assembly, PubMed metadata for PMID:16303565 and PMID:17180700,
+    DOI:10.1016/j.cub.2005.10.053 for Green et al. 2005, DOI:10.1007/s00412-006-0087-z for
+    Mousson et al. 2007, and an NCBI Taxonomy lookup confirming Saccharomyces cerevisiae as
+    NCBITaxon:4932. Curated Hir1/Hir2/Hir3/Hpc2 as REVIEWED_LABEL_ONLY constituents, budding-yeast
+    scope and canonical example rows, nucleosome assembly function, a nonmechanistic function
+    graph, a resolved Asf1 component-boundary decision, and a CURATION_TODO to resolve source-neutral
+    family groundings. Left protein family groundings empty rather than asserting broad or
+    species-specific terms for exact HIR subunit classes.

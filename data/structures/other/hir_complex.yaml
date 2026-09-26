@@ -1,0 +1,271 @@
+identifier: GO:0000417
+label: HIR complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex proposed to be involved in replication-independent nucleosome
+  assembly, by promoting histone deposition onto DNA. For example, in Saccharomyces,
+  the complex contains Hir1p, Hir2p, Hir3p, and Hpc2p.
+definition_source: GO:0000417
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T06:08:55Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T06:10:11Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added HIRA exact synonymy, protein-containing-complex parentage, four budding-yeast
+    HIR constituent rows, yeast scope, nucleosome assembly function, GO/PubMed/DOI
+    evidence, a nonmechanistic function graph, and a HIR subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-26T06:11:07Z'
+  curator: codex
+  action: RECORDED_BOUNDARY_DECISION
+  changes: Recorded a resolved component-boundary discussion explaining why Asf1 is
+    not curated as one of the four HIR complex constituents.
+  llm_assisted: true
+synonyms:
+- synonym_text: HIRA complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000417
+parent_structures:
+- GO:0032991
+components:
+- component_id: hir1_hir_subunit
+  label: Hir1 HIR subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HIR1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000417 follows Saccharomyces cerevisiae Hir1p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this HIR
+    complex subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast HIR histone deposition complex.
+  evidence:
+  - reference: GO:0000417
+    notes: GO:0000417 defines the Saccharomyces HIR complex as containing Hir1p.
+  - reference: DOI:10.1016/j.cub.2005.10.053
+    notes: Green et al. 2005 reported that Hir1, Hir2, Hir3 and Hpc2 comprise the
+      budding-yeast HIR complex.
+- component_id: hir2_hir_subunit
+  label: Hir2 HIR subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HIR2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000417 follows Saccharomyces cerevisiae Hir2p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this HIR
+    complex subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast HIR histone deposition complex.
+  evidence:
+  - reference: GO:0000417
+    notes: GO:0000417 defines the Saccharomyces HIR complex as containing Hir2p.
+  - reference: DOI:10.1016/j.cub.2005.10.053
+    notes: Green et al. 2005 reported that Hir1, Hir2, Hir3 and Hpc2 comprise the
+      budding-yeast HIR complex.
+- component_id: hir3_hir_subunit
+  label: Hir3 HIR subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HIR3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000417 follows Saccharomyces cerevisiae Hir3p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this HIR
+    complex subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast HIR histone deposition complex.
+  evidence:
+  - reference: GO:0000417
+    notes: GO:0000417 defines the Saccharomyces HIR complex as containing Hir3p.
+  - reference: DOI:10.1016/j.cub.2005.10.053
+    notes: Green et al. 2005 reported that Hir1, Hir2, Hir3 and Hpc2 comprise the
+      budding-yeast HIR complex.
+- component_id: hpc2_hir_subunit
+  label: Hpc2 HIR subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HPC2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000417 follows Saccharomyces cerevisiae Hpc2p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this HIR
+    complex subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast HIR histone deposition complex.
+  evidence:
+  - reference: GO:0000417
+    notes: GO:0000417 defines the Saccharomyces HIR complex as containing Hpc2p.
+  - reference: DOI:10.1016/j.cub.2005.10.053
+    notes: Green et al. 2005 reported that Hir1, Hir2, Hir3 and Hpc2 comprise the
+      budding-yeast HIR complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0000417 defines the HIR complex
+    as containing Hir1p, Hir2p, Hir3p and Hpc2p.
+  reference: GO:0000417
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Green et al. 2005 showed that Hir1, Hir2, Hir3 and Hpc2 comprise the budding-yeast
+    HIR complex that copurifies with Asf1.
+  reference: DOI:10.1016/j.cub.2005.10.053
+functions:
+- function_id: nucleosome_assembly
+  label: nucleosome assembly
+  grounding: GO:0006334
+  description: The HIR complex cooperates with Asf1 in replication-independent histone
+    deposition onto DNA.
+  evidence:
+  - reference: GO:0000417
+    notes: GO:0000417 defines the HIR complex as involved in replication-independent
+      nucleosome assembly.
+  - reference: GO:0006334
+    notes: GO:0006334 is the Gene Ontology biological-process term for nucleosome
+      assembly.
+  - reference: DOI:10.1016/j.cub.2005.10.053
+    notes: Green et al. 2005 assayed replication-independent histone deposition by
+      HIR complex and Asf1.
+evidence:
+- reference: GO:0000417
+  notes: Gene Ontology cellular-component term for the HIR complex and its exact HIRA
+    complex synonym.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0006334
+  notes: Gene Ontology biological-process term for nucleosome assembly.
+- reference: PMID:16303565
+  notes: PubMed identifier for Green et al. 2005, the HIR complex and Asf1 paper cited
+    by GO:0000417.
+- reference: DOI:10.1016/j.cub.2005.10.053
+  notes: DOI for Green et al. 2005, 'Replication-independent histone deposition by
+    the HIR complex and Asf1', verified through NCBI E-utilities.
+- reference: PMID:17180700
+  notes: PubMed identifier for Mousson et al. 2007, the Asf1 histone-chaperone review
+    cited by GO:0000417.
+- reference: DOI:10.1007/s00412-006-0087-z
+  notes: DOI for Mousson et al. 2007, 'The histone chaperone Asf1 at the crossroads
+    of chromatin and DNA checkpoint pathways', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_hir_nucleosome_assembly
+  title: HIR carries yeast replication-independent histone deposition
+  description: In Saccharomyces cerevisiae, Hir1p, Hir2p, Hir3p and Hpc2p form the
+    HIR complex that cooperates with Asf1 in replication-independent histone deposition
+    onto DNA.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the GO-defined HIR complex constituents and their
+    connection to histone deposition without resolving H3/H4 handoff from Asf1, DNA
+    engagement or nucleosome assembly chemistry.
+  nodes:
+  - node_id: hir1_hir_subunit
+    label: Hir1 HIR subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hir1_hir_subunit
+  - node_id: hir2_hir_subunit
+    label: Hir2 HIR subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hir2_hir_subunit
+  - node_id: hir3_hir_subunit
+    label: Hir3 HIR subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hir3_hir_subunit
+  - node_id: hpc2_hir_subunit
+    label: Hpc2 HIR subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hpc2_hir_subunit
+  - node_id: hir_complex
+    label: HIR complex
+    node_type: STRUCTURE
+    grounding: GO:0000417
+  - node_id: nucleosome_assembly
+    label: nucleosome assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006334
+  edges:
+  - subject: hir1_hir_subunit
+    predicate: contributes to
+    object: hir_complex
+    description: Hir1 HIR subunit is a constituent of the budding-yeast HIR complex.
+    evidence:
+    - reference: GO:0000417
+      notes: GO:0000417 defines Hir1p as a HIR complex constituent.
+  - subject: hir2_hir_subunit
+    predicate: contributes to
+    object: hir_complex
+    description: Hir2 HIR subunit is a constituent of the budding-yeast HIR complex.
+    evidence:
+    - reference: GO:0000417
+      notes: GO:0000417 defines Hir2p as a HIR complex constituent.
+  - subject: hir3_hir_subunit
+    predicate: contributes to
+    object: hir_complex
+    description: Hir3 HIR subunit is a constituent of the budding-yeast HIR complex.
+    evidence:
+    - reference: GO:0000417
+      notes: GO:0000417 defines Hir3p as a HIR complex constituent.
+  - subject: hpc2_hir_subunit
+    predicate: contributes to
+    object: hir_complex
+    description: Hpc2 HIR subunit is a constituent of the budding-yeast HIR complex.
+    evidence:
+    - reference: GO:0000417
+      notes: GO:0000417 defines Hpc2p as a HIR complex constituent.
+  - subject: hir_complex
+    predicate: supports
+    object: nucleosome_assembly
+    description: The HIR complex cooperates with Asf1 to deposit histones onto DNA
+      independently of DNA replication.
+    evidence:
+    - reference: GO:0000417
+      notes: GO:0000417 defines the HIR complex as involved in replication-independent
+        nucleosome assembly.
+    - reference: GO:0006334
+      notes: GO:0006334 is the Gene Ontology biological-process term for nucleosome
+        assembly.
+    - reference: DOI:10.1016/j.cub.2005.10.053
+      notes: Green et al. 2005 assayed replication-independent histone deposition
+        by the budding-yeast HIR complex and Asf1.
+discussions:
+- discussion_id: asf1_not_hir_component
+  prompt: Do not model Asf1 as a constituent of the HIR complex.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: Green et al. 2005 reported that Hir1, Hir2, Hir3 and Hpc2 comprise the
+    budding-yeast HIR complex and that this complex copurifies with Asf1, supporting
+    Asf1 as a histone-deposition partner rather than one of the four HIR constituents.
+  resolution_note: 'Declined: Asf1 cooperates and copurifies with HIR during histone
+    deposition, but the HIR complex itself is curated as Hir1, Hir2, Hir3 and Hpc2.'
+  evidence:
+  - reference: DOI:10.1016/j.cub.2005.10.053
+    notes: Green et al. 2005 reported that the budding-yeast HIR complex comprises
+      Hir1, Hir2, Hir3 and Hpc2 and copurifies with Asf1.
+  posed_by: codex
+  posed_date: '2026-09-26'
+  resolved_date: '2026-09-26'
+- discussion_id: resolve_hir_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the HIR complex constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#hir1_hir_subunit
+  - components#hir2_hir_subunit
+  - components#hir3_hir_subunit
+  - components#hpc2_hir_subunit
+  rationale: GO:0000417 defines the Saccharomyces Hir1p, Hir2p, Hir3p and Hpc2p proteins
+    as HIR complex constituents. Exact cross-eukaryotic InterPro, Pfam, NCBIfam or
+    UniProt family boundaries for these HIR subunit classes need narrower curation
+    before the component labels can be grounded.
+  evidence:
+  - reference: GO:0000417
+    notes: GO:0000417 defines the budding-yeast HIR complex subunits.
+  posed_by: codex
+  posed_date: '2026-09-26'
