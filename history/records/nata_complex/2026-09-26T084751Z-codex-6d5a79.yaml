@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nata_complex.yaml
+  slug: nata_complex
+session:
+  id: 2026-09-26T084751Z-codex-6d5a79
+  timestamp: '2026-09-26T08:47:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add NatA complex record
+  details: Created the GO:0031415 NatA complex record with the GO exact synonym and N-terminal
+    protein acetyltransferase parent, three Saccharomyces cerevisiae constituent rows curated
+    from the yeast ribosome-associated NatA literature, yeast taxonomic scope and canonical
+    example, protein-N-terminal amino-acid acetyltransferase function evidence, a nonmechanistic
+    function graph, and an open TODO for exact source-neutral subunit-family groundings.

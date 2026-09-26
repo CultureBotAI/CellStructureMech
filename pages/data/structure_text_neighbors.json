@@ -3526,6 +3526,11 @@
           "cosine_similarity": 0.67660632
         },
         {
+          "identifier": "GO:0031415",
+          "label": "NatA complex",
+          "cosine_similarity": 0.65079547
+        },
+        {
           "identifier": "GO:0031262",
           "label": "Ndc80 complex",
           "cosine_similarity": 0.64851979
@@ -3534,11 +3539,6 @@
           "identifier": "GO:0045259",
           "label": "proton-transporting ATP synthase complex",
           "cosine_similarity": 0.64462418
-        },
-        {
-          "identifier": "GO:0045283",
-          "label": "fumarate reductase complex",
-          "cosine_similarity": 0.62683475
         }
       ]
     },
@@ -11281,14 +11281,14 @@
           "cosine_similarity": 0.69489664
         },
         {
+          "identifier": "GO:0031415",
+          "label": "NatA complex",
+          "cosine_similarity": 0.69420243
+        },
+        {
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.68365324
-        },
-        {
-          "identifier": "GO:0042765",
-          "label": "GPI-anchor transamidase complex",
-          "cosine_similarity": 0.67657728
         }
       ]
     },
@@ -13463,6 +13463,37 @@
       ]
     },
     {
+      "identifier": "GO:0031415",
+      "label": "NatA complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.79711346
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.75393997
+        },
+        {
+          "identifier": "GO:0000112",
+          "label": "nucleotide-excision repair factor 3 complex",
+          "cosine_similarity": 0.74542668
+        },
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.74515996
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.73925471
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031262",
       "label": "Ndc80 complex",
       "neighbors": [
@@ -13596,6 +13627,11 @@
           "cosine_similarity": 0.80167998
         },
         {
+          "identifier": "GO:0031415",
+          "label": "NatA complex",
+          "cosine_similarity": 0.79711346
+        },
+        {
           "identifier": "GO:0016514",
           "label": "SWI/SNF complex",
           "cosine_similarity": 0.78119275
@@ -13609,11 +13645,6 @@
           "identifier": "GO:0048188",
           "label": "Set1C/COMPASS complex",
           "cosine_similarity": 0.76234391
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.75666355
         }
       ]
     },
@@ -14686,6 +14717,11 @@
           "cosine_similarity": 0.75108082
         },
         {
+          "identifier": "GO:0031415",
+          "label": "NatA complex",
+          "cosine_similarity": 0.738428
+        },
+        {
           "identifier": "GO:0048188",
           "label": "Set1C/COMPASS complex",
           "cosine_similarity": 0.73728001
@@ -14694,11 +14730,6 @@
           "identifier": "GO:0016514",
           "label": "SWI/SNF complex",
           "cosine_similarity": 0.73717444
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.72534344
         }
       ]
     },

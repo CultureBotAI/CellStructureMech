@@ -1,0 +1,207 @@
+identifier: GO:0031415
+label: NatA complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A conserved complex that catalyzes the transfer of an acetyl group to
+  an N-terminal Ser, Ala, Gly, or Thr residue of a protein acceptor molecule. In Saccharomyces
+  the complex includes Nat1p and Ard1p, and may contain additional proteins.
+definition_source: GO:0031415
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T08:45:47Z'
+  curator: unknown
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+- timestamp: '2026-09-26T08:46:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added NatA exact synonymy, N-terminal protein acetyltransferase parentage,
+    three budding-yeast constituent rows, yeast scope, protein-N-terminal acetyltransferase
+    function, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a subunit-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-26T08:47:18Z'
+  curator: codex
+  action: NORMALIZED_RECORD
+  changes: Re-emitted repeated NatA evidence entries without YAML aliases.
+  llm_assisted: true
+- timestamp: '2026-09-26T09:00:29Z'
+  curator: codex
+  action: EDITED_RECORD
+  changes: 'Resolved PR #1626 review issue #1627 by narrowing the NatA subunit-grounding
+    TODO so it no longer asserts unsupported Naa-family aliases.'
+  llm_assisted: true
+synonyms:
+- synonym_text: N-terminal acetyltransferase A complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031415
+parent_structures:
+- GO:0031414
+components:
+- component_id: nat1_nata_auxiliary_subunit
+  label: Nat1 NatA auxiliary subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NAT1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NatA literature follows Nat1 naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this NatA
+    subunit class was curated in this pass.
+  role: Noncatalytic auxiliary constituent that anchors budding-yeast NatA to ribosomes
+    and positions nascent polypeptides for N-terminal acetylation.
+  evidence:
+  - reference: DOI:10.1128/MCB.23.20.7403-7414.2003
+    notes: Gautschi et al. 2003 purified Saccharomyces cerevisiae NatA from ribosomal
+      salt wash, identified Nat1p, Ard1p and Nat5p in the complex, and showed that
+      Nat1p anchors the complex to ribosomes.
+- component_id: ard1_nata_catalytic_subunit
+  label: Ard1 NatA catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARD1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NatA literature follows Ard1 naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this NatA
+    subunit class was curated in this pass.
+  role: Catalytic GNAT-family constituent of the budding-yeast NatA complex.
+  evidence:
+  - reference: DOI:10.1128/MCB.23.20.7403-7414.2003
+    notes: Gautschi et al. 2003 purified Saccharomyces cerevisiae NatA from ribosomal
+      salt wash, identified Nat1p, Ard1p and Nat5p in the complex, and showed that
+      Nat1p anchors the complex to ribosomes.
+- component_id: nat5_nata_gnat_subunit
+  label: Nat5 NatA GNAT-family subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NAT5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NatA literature follows Nat5 naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this NatA
+    subunit class was curated in this pass.
+  role: GNAT-family NatA constituent that copurifies stoichiometrically with Nat1
+    and Ard1.
+  evidence:
+  - reference: DOI:10.1128/MCB.23.20.7403-7414.2003
+    notes: Gautschi et al. 2003 purified Saccharomyces cerevisiae NatA from ribosomal
+      salt wash, identified Nat1p, Ard1p and Nat5p in the complex, and showed that
+      Nat1p anchors the complex to ribosomes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Gautschi et al. 2003 purified the NatA complex from Saccharomyces cerevisiae
+    ribosomal salt wash.
+  reference: DOI:10.1128/MCB.23.20.7403-7414.2003
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding yeast is the source organism in which Nat1, Ard1 and Nat5 were shown
+    to form the ribosome-associated NatA complex.
+  reference: DOI:10.1128/MCB.23.20.7403-7414.2003
+functions:
+- function_id: protein_n_terminal_amino_acid_acetyltransferase_activity
+  label: protein-N-terminal amino-acid acetyltransferase activity
+  grounding: GO:0004596
+  description: Transfer of an acetyl group from acetyl-CoA to the N-terminal alpha-amino
+    group of NatA substrate proteins.
+  evidence:
+  - reference: GO:0004596
+    notes: GO:0004596 is the Gene Ontology molecular-function term for protein-N-terminal
+      amino-acid acetyltransferase activity.
+  - reference: GO:0031415
+    notes: GO:0031415 defines the NatA complex by transfer of acetyl groups to N-terminal
+      Ser, Ala, Gly or Thr residues of protein acceptors.
+  - reference: DOI:10.1128/MCB.23.20.7403-7414.2003
+    notes: Gautschi et al. 2003 describe yeast NatA as an N-alpha-acetyltransferase
+      that acts cotranslationally at ribosomes.
+evidence:
+- reference: GO:0031415
+  notes: Gene Ontology cellular-component term for NatA complex and its exact N-terminal
+    acetyltransferase A complex synonym.
+- reference: GO:0031414
+  notes: Gene Ontology cellular-component parent term for N-terminal protein acetyltransferase
+    complexes.
+- reference: GO:0004596
+  notes: Gene Ontology molecular-function term for protein-N-terminal amino-acid acetyltransferase
+    activity.
+- reference: PMID:12890471
+  notes: PubMed identifier for Polevoda and Sherman 2003, the eukaryotic N-terminal
+    acetyltransferase subunit review cited by GO:0031415.
+- reference: DOI:10.1016/s0006-291x(03)01316-0
+  notes: DOI for Polevoda and Sherman 2003, 'Composition and function of the eukaryotic
+    N-terminal acetyltransferase subunits', verified through NCBI E-utilities.
+- reference: PMID:14517307
+  notes: PubMed identifier for Gautschi et al. 2003, the ribosome-associated budding-yeast
+    NatA composition paper.
+- reference: DOI:10.1128/MCB.23.20.7403-7414.2003
+  notes: DOI for Gautschi et al. 2003, 'The yeast N(alpha)-acetyltransferase NatA
+    is quantitatively anchored to the ribosome and interacts with nascent polypeptides',
+    verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_nata_n_terminal_acetyltransferase_activity
+  title: NatA carries yeast N-terminal acetyltransferase activity
+  description: In Saccharomyces cerevisiae, Nat1, Ard1 and Nat5 form a ribosome-associated
+    NatA complex that supports protein-N-terminal acetyltransferase activity.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the curated budding-yeast NatA constituents and broad
+    acetyltransferase activity without resolving substrate specificity, active-site
+    chemistry or nascent-chain handoff at the ribosomal exit tunnel.
+  nodes:
+  - node_id: ard1_nata_catalytic_subunit
+    label: Ard1 NatA catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ard1_nata_catalytic_subunit
+  - node_id: nata_complex
+    label: NatA complex
+    node_type: STRUCTURE
+    grounding: GO:0031415
+  - node_id: protein_n_terminal_amino_acid_acetyltransferase_activity
+    label: protein-N-terminal amino-acid acetyltransferase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004596
+  edges:
+  - subject: ard1_nata_catalytic_subunit
+    predicate: contributes to
+    object: nata_complex
+    description: Ard1 is the catalytically active subunit of budding-yeast NatA.
+    evidence:
+    - reference: DOI:10.1128/MCB.23.20.7403-7414.2003
+      notes: Gautschi et al. 2003 purified Saccharomyces cerevisiae NatA from ribosomal
+        salt wash, identified Nat1p, Ard1p and Nat5p in the complex, and showed that
+        Nat1p anchors the complex to ribosomes.
+  - subject: nata_complex
+    predicate: supports
+    object: protein_n_terminal_amino_acid_acetyltransferase_activity
+    description: NatA catalyzes protein N-terminal amino-acid acetylation.
+    evidence:
+    - reference: GO:0004596
+      notes: GO:0004596 is the molecular-function term for protein-N-terminal amino-acid
+        acetyltransferase activity.
+discussions:
+- discussion_id: resolve_nata_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the curated budding-yeast
+    NatA constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#nat1_nata_auxiliary_subunit
+  - components#ard1_nata_catalytic_subunit
+  - components#nat5_nata_gnat_subunit
+  notes: The curated budding-yeast components include two GNAT-family proteins and
+    one TPR-containing auxiliary protein; curate InterPro, Pfam, NCBIfam or UniProt
+    family accessions only when they denote the exact Nat1, Ard1 or Nat5 NatA component
+    classes rather than broader domain families.
+  evidence:
+  - reference: DOI:10.1128/MCB.23.20.7403-7414.2003
+    notes: Gautschi et al. 2003 purified Saccharomyces cerevisiae NatA from ribosomal
+      salt wash, identified Nat1p, Ard1p and Nat5p in the complex, and showed that
+      Nat1p anchors the complex to ribosomes.
+  posed_by: codex
+  posed_date: '2026-09-26'
