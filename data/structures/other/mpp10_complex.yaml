@@ -1,0 +1,217 @@
+identifier: GO:0034457
+label: Mpp10 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that forms a subcomplex of the 90S preribosome. In S.
+  cerevisiae, it is composed of Mpp10p, Imp3p and Imp4p.
+definition_source: GO:0034457
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T01:29:27Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T01:30:15Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nuclear protein-containing complex parentage, nucleolar and 90S preribosome
+    parthood, three reviewed-label-only Mpp10-complex constituent rows, budding-yeast
+    scope, a 90S-preribosome-assembly function, GO/PubMed/DOI evidence, a nonmechanistic
+    assembly graph, and an Mpp10-complex subunit-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0140513
+part_of:
+- GO:0005730
+- GO:0030686
+components:
+- component_id: mpp10_mpp10_complex_subunit
+  label: Mpp10 Mpp10-complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MPP10
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Mpp10p
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this Mpp10-complex subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Mpp10 complex / 90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034457
+    notes: GO:0034457 defines the Mpp10 complex as containing Mpp10p.
+- component_id: imp3_mpp10_complex_subunit
+  label: Imp3 Mpp10-complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - IMP3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Imp3p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this Mpp10-complex subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Mpp10 complex / 90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034457
+    notes: GO:0034457 defines the Mpp10 complex as containing Imp3p.
+- component_id: imp4_mpp10_complex_subunit
+  label: Imp4 Mpp10-complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - IMP4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO term definition follows Saccharomyces cerevisiae Imp4p naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this Mpp10-complex subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Mpp10 complex / 90S-preribosome subcomplex.
+  evidence:
+  - reference: GO:0034457
+    notes: GO:0034457 defines the Mpp10 complex as containing Imp4p.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0034457 defines the Mpp10 complex
+    as a three-protein subcomplex of the 90S preribosome.
+  reference: GO:0034457
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Perez-Fernandez et al. 2007 placed the Mpp10 complex in the Pwp2p/UTP-B branch
+    of stepwise 90S-preribosome assembly in budding yeast.
+  reference: DOI:10.1128/MCB.00380-07
+functions:
+- function_id: 90s_preribosome_assembly
+  label: 90S preribosome assembly
+  grounding: GO:0034463
+  description: The Mpp10 complex forms a subcomplex of the 90S preribosome and participates
+    in a stepwise assembly route for the yeast 90S preribosomal particle.
+  evidence:
+  - reference: GO:0034457
+    notes: GO:0034457 defines the Mpp10 complex as a subcomplex of the 90S preribosome.
+  - reference: GO:0034463
+    notes: GO:0034463 is the Gene Ontology biological-process term for 90S preribosome
+      assembly.
+  - reference: DOI:10.1128/MCB.00380-07
+    notes: Perez-Fernandez et al. 2007 placed the Mpp10p complex with the U3 snoRNP
+      and Pwp2p/UTP-B subunit in one 90S-preribosome assembly intermediate.
+evidence:
+- reference: GO:0034457
+  notes: Gene Ontology cellular-component term for the Mpp10 complex.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0005730
+  notes: Gene Ontology cellular-component term for the nucleolus.
+- reference: GO:0030686
+  notes: Gene Ontology cellular-component term for the 90S preribosome.
+- reference: GO:0034463
+  notes: Gene Ontology biological-process term for 90S preribosome assembly.
+- reference: PMID:17515605
+  notes: PubMed identifier for Perez-Fernandez et al. 2007, the Molecular and Cellular
+    Biology paper cited by GO:0034457.
+- reference: DOI:10.1128/MCB.00380-07
+  notes: DOI for Perez-Fernandez et al. 2007, 'The 90S preribosome is a multimodular
+    structure that is assembled through a hierarchical mechanism', verified through
+    NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_mpp10_90s_preribosome_assembly
+  title: Mpp10 is a 90S preribosome assembly module
+  description: In Saccharomyces cerevisiae, the three-protein Mpp10 complex forms
+    a subcomplex of the 90S preribosome and joins the hierarchical assembly pathway.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three GO-defined Mpp10-complex constituents and
+    the connection from Mpp10 to 90S preribosome assembly without resolving assembly
+    order among the three subunits.
+  nodes:
+  - node_id: mpp10_mpp10_complex_subunit
+    label: Mpp10 Mpp10-complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: mpp10_mpp10_complex_subunit
+  - node_id: imp3_mpp10_complex_subunit
+    label: Imp3 Mpp10-complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: imp3_mpp10_complex_subunit
+  - node_id: imp4_mpp10_complex_subunit
+    label: Imp4 Mpp10-complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: imp4_mpp10_complex_subunit
+  - node_id: mpp10_complex
+    label: Mpp10 complex
+    node_type: STRUCTURE
+    grounding: GO:0034457
+  - node_id: 90s_preribosome
+    label: 90S preribosome
+    node_type: STRUCTURE
+    grounding: GO:0030686
+  - node_id: 90s_preribosome_assembly
+    label: 90S preribosome assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0034463
+  edges:
+  - subject: mpp10_mpp10_complex_subunit
+    predicate: contributes to
+    object: mpp10_complex
+    description: Mpp10p is one constituent of the budding-yeast Mpp10 complex.
+    evidence:
+    - reference: GO:0034457
+      notes: GO:0034457 defines Mpp10p as a component of the Mpp10 complex.
+  - subject: imp3_mpp10_complex_subunit
+    predicate: contributes to
+    object: mpp10_complex
+    description: Imp3p is one constituent of the budding-yeast Mpp10 complex.
+    evidence:
+    - reference: GO:0034457
+      notes: GO:0034457 defines Imp3p as a component of the Mpp10 complex.
+  - subject: imp4_mpp10_complex_subunit
+    predicate: contributes to
+    object: mpp10_complex
+    description: Imp4p is one constituent of the budding-yeast Mpp10 complex.
+    evidence:
+    - reference: GO:0034457
+      notes: GO:0034457 defines Imp4p as a component of the Mpp10 complex.
+  - subject: mpp10_complex
+    predicate: part of
+    object: 90s_preribosome
+    description: The Mpp10 complex is a protein subcomplex of the 90S preribosome.
+    evidence:
+    - reference: GO:0034457
+      notes: GO:0034457 records Mpp10 as part of the 90S preribosome.
+  - subject: mpp10_complex
+    predicate: supports
+    object: 90s_preribosome_assembly
+    description: The Mpp10 complex participates in the hierarchical 90S-preribosome
+      assembly pathway.
+    evidence:
+    - reference: GO:0034457
+      notes: GO:0034457 defines Mpp10 as a subcomplex of the 90S preribosome.
+    - reference: GO:0034463
+      notes: GO:0034463 is the process term for 90S preribosome assembly.
+    - reference: DOI:10.1128/MCB.00380-07
+      notes: Perez-Fernandez et al. 2007 described the Mpp10p complex as a discrete
+        assembly subunit that binds through the Pwp2p/UTP-B assembly route.
+discussions:
+- discussion_id: resolve_mpp10_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Mpp10, Imp3 and Imp4
+    constituents of the Mpp10 complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mpp10_mpp10_complex_subunit
+  - components#imp3_mpp10_complex_subunit
+  - components#imp4_mpp10_complex_subunit
+  rationale: GO:0034457 uses Saccharomyces gene-product names while noting that analogous
+    complexes in other eukaryotes can use the term. Exact cross-eukaryotic InterPro,
+    Pfam, NCBIfam or UniProt family boundaries for the three Mpp10-complex proteins
+    need narrower follow-up curation before these component labels can be grounded.
+  evidence:
+  - reference: GO:0034457
+    notes: The GO:0034457 comment explains that the term name uses Saccharomyces gene-product
+      names because no other names had arisen for the complex.
+  posed_by: codex
+  posed_date: '2026-09-25'

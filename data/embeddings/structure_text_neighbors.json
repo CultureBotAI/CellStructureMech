@@ -13322,6 +13322,11 @@
           "cosine_similarity": 0.77042817
         },
         {
+          "identifier": "GO:0034457",
+          "label": "Mpp10 complex",
+          "cosine_similarity": 0.76630338
+        },
+        {
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.75999748
@@ -13330,11 +13335,37 @@
           "identifier": "GO:0042729",
           "label": "DASH complex",
           "cosine_similarity": 0.75979873
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0034457",
+      "label": "Mpp10 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0034388",
+          "label": "Pwp2p-containing subcomplex of 90S preribosome",
+          "cosine_similarity": 0.83365874
         },
         {
-          "identifier": "GO:0030905",
-          "label": "retromer, tubulation complex",
-          "cosine_similarity": 0.74385883
+          "identifier": "GO:0034456",
+          "label": "UTP-C complex",
+          "cosine_similarity": 0.80241295
+        },
+        {
+          "identifier": "GO:0034455",
+          "label": "t-UTP complex",
+          "cosine_similarity": 0.79783206
+        },
+        {
+          "identifier": "GO:0030690",
+          "label": "Noc1p-Noc2p complex",
+          "cosine_similarity": 0.79173637
+        },
+        {
+          "identifier": "GO:0030692",
+          "label": "Noc4p-Nop14p complex",
+          "cosine_similarity": 0.78865522
         }
       ]
     },
@@ -13384,6 +13415,11 @@
           "cosine_similarity": 0.94943598
         },
         {
+          "identifier": "GO:0034457",
+          "label": "Mpp10 complex",
+          "cosine_similarity": 0.79173637
+        },
+        {
           "identifier": "GO:0034456",
           "label": "UTP-C complex",
           "cosine_similarity": 0.78009657
@@ -13392,11 +13428,6 @@
           "identifier": "GO:0034388",
           "label": "Pwp2p-containing subcomplex of 90S preribosome",
           "cosine_similarity": 0.77005949
-        },
-        {
-          "identifier": "GO:0034455",
-          "label": "t-UTP complex",
-          "cosine_similarity": 0.76474233
         }
       ]
     },
@@ -13415,6 +13446,11 @@
           "cosine_similarity": 0.93937557
         },
         {
+          "identifier": "GO:0034457",
+          "label": "Mpp10 complex",
+          "cosine_similarity": 0.76748285
+        },
+        {
           "identifier": "GO:0034456",
           "label": "UTP-C complex",
           "cosine_similarity": 0.75929125
@@ -13423,11 +13459,6 @@
           "identifier": "GO:0031262",
           "label": "Ndc80 complex",
           "cosine_similarity": 0.74928282
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.74628963
         }
       ]
     },
@@ -13446,6 +13477,11 @@
           "cosine_similarity": 0.93937557
         },
         {
+          "identifier": "GO:0034457",
+          "label": "Mpp10 complex",
+          "cosine_similarity": 0.78865522
+        },
+        {
           "identifier": "GO:0034456",
           "label": "UTP-C complex",
           "cosine_similarity": 0.77038
@@ -13454,11 +13490,6 @@
           "identifier": "GO:0034388",
           "label": "Pwp2p-containing subcomplex of 90S preribosome",
           "cosine_similarity": 0.75601709
-        },
-        {
-          "identifier": "GO:0034455",
-          "label": "t-UTP complex",
-          "cosine_similarity": 0.75185942
         }
       ]
     },
@@ -14066,6 +14097,11 @@
           "cosine_similarity": 0.91500147
         },
         {
+          "identifier": "GO:0034457",
+          "label": "Mpp10 complex",
+          "cosine_similarity": 0.83365874
+        },
+        {
           "identifier": "GO:0030690",
           "label": "Noc1p-Noc2p complex",
           "cosine_similarity": 0.77005949
@@ -14074,11 +14110,6 @@
           "identifier": "GO:0030692",
           "label": "Noc4p-Nop14p complex",
           "cosine_similarity": 0.75601709
-        },
-        {
-          "identifier": "GO:0030691",
-          "label": "Noc2p-Noc3p complex",
-          "cosine_similarity": 0.74364334
         }
       ]
     },
@@ -14562,6 +14593,11 @@
           "cosine_similarity": 0.90538806
         },
         {
+          "identifier": "GO:0034457",
+          "label": "Mpp10 complex",
+          "cosine_similarity": 0.79783206
+        },
+        {
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.77427027
@@ -14570,11 +14606,6 @@
           "identifier": "GO:0030690",
           "label": "Noc1p-Noc2p complex",
           "cosine_similarity": 0.76474233
-        },
-        {
-          "identifier": "GO:0030692",
-          "label": "Noc4p-Nop14p complex",
-          "cosine_similarity": 0.75185942
         }
       ]
     },
@@ -14872,6 +14903,11 @@
           "cosine_similarity": 0.90538806
         },
         {
+          "identifier": "GO:0034457",
+          "label": "Mpp10 complex",
+          "cosine_similarity": 0.80241295
+        },
+        {
           "identifier": "GO:0030690",
           "label": "Noc1p-Noc2p complex",
           "cosine_similarity": 0.78009657
@@ -14880,11 +14916,6 @@
           "identifier": "GO:0030692",
           "label": "Noc4p-Nop14p complex",
           "cosine_similarity": 0.77038
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.7625136
         }
       ]
     },

@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mpp10_complex.yaml
+  slug: mpp10_complex
+session:
+  id: 2026-09-26T013102Z-codex-550058
+  timestamp: '2026-09-26T01:31:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added Mpp10 complex record
+  details: Created an evidence-backed GO:0034457 Mpp10 complex record with nuclear-protein-complex
+    parentage, nucleolar and 90S-preribosome parthood, the three GO-defined budding-yeast
+    protein constituents, 90S-preribosome-assembly function evidence, GO/PubMed/DOI references,
+    a nonmechanistic assembly graph, and a follow-up discussion for exact component-family
+    groundings.
