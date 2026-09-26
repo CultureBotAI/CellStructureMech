@@ -4248,6 +4248,15 @@
   "definition": "A protein complex that contains a histone deacetylase and is part of the chromatin remodeling machinery. In Saccharomyces cerevisiae this complex contains the Rpd3p, Sin3p, Ume1p, Pho23p, Sap30p, Sds3p, Cti6p, Rxt2p, Rxt3p, Dep1p, Ume6p, Ash1p, Dot6p, Snt1, Sif2p, Set3p, Hos2p, Tos4p and Tod6p proteins."
  },
  {
+  "identifier": "GO:0000124",
+  "label": "SAGA complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/saga_complex.html",
+  "definition": "A SAGA-type histone acetyltransferase complex that deubiquitinates H2A and/or H2B. This complex is organized into several functional submodules: a structural core including the activator binding module and consisting of ADA1 or a homolog, members of the SPT and TAF protein families as well as promotor recruitment factor TRRAP/TRA1, a histone acetyltransferase (HAT) module consisting of GCN5/KAT2A or PCAF/KAT2B, ADA2, ADA3/NGG1, and SGF29 or homologues thereof, a histone deubiquitinase (DUB) module consisting of ATXN7/SGF73, ATXN7L3/SGF11, ENY2/SUS1 and USP22/UBP8 or homologues thereof, and in some taxa a splicing module consisting of SF3B3 and SF3B5 or homologues thereof (not in fungi). In budding yeast also contains Spt8 which distinguishes it from SAGA-like (SLIK) complex (GO:0046695)."
+ },
+ {
   "identifier": "GO:0001401",
   "label": "SAM complex",
   "category": "OTHER",

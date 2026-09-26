@@ -1,0 +1,529 @@
+identifier: GO:0000124
+label: SAGA complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: 'A SAGA-type histone acetyltransferase complex that deubiquitinates H2A
+  and/or H2B. This complex is organized into several functional submodules: a structural
+  core including the activator binding module and consisting of ADA1 or a homolog,
+  members of the SPT and TAF protein families as well as promotor recruitment factor
+  TRRAP/TRA1, a histone acetyltransferase (HAT) module consisting of GCN5/KAT2A or
+  PCAF/KAT2B, ADA2, ADA3/NGG1, and SGF29 or homologues thereof, a histone deubiquitinase
+  (DUB) module consisting of ATXN7/SGF73, ATXN7L3/SGF11, ENY2/SUS1 and USP22/UBP8
+  or homologues thereof, and in some taxa a splicing module consisting of SF3B3 and
+  SF3B5 or homologues thereof (not in fungi). In budding yeast also contains Spt8
+  which distinguishes it from SAGA-like (SLIK) complex (GO:0046695).'
+definition_source: GO:0000124
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T07:19:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T07:21:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added SAGA exact synonymy, SAGA-type-complex parentage, DUBm has-part structure,
+    19 budding-yeast constituent rows, yeast scope, histone acetyltransferase and
+    cysteine-type deubiquitinase activities, GO/PubMed/DOI evidence, a nonmechanistic
+    function graph, and a SAGA subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Spt-Ada-Gcn5-acetyltransferase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000124
+parent_structures:
+- GO:0070461
+has_part:
+- GO:0071819
+components:
+- component_id: tra1_saga_subunit
+  label: Tra1 SAGA subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRA1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Tra1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: Activator-binding module constituent of the budding-yeast SAGA coactivator
+    complex.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: taf5_saga_core_subunit
+  label: Taf5 SAGA core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TAF5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Taf5 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: WD40-propeller core-module constituent that links the octamer-like fold to
+    the SAGA core.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: taf6_saga_core_subunit
+  label: Taf6 SAGA core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TAF6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Taf6 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: Core-module constituent of the Taf6-Taf9 histone-fold pair in budding-yeast
+    SAGA.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: taf9_saga_core_subunit
+  label: Taf9 SAGA core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TAF9
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Taf9 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: Core-module constituent of the Taf6-Taf9 histone-fold pair in budding-yeast
+    SAGA.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: taf10_saga_core_subunit
+  label: Taf10 SAGA core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TAF10
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Taf10 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: Core-module constituent of the Taf10-Spt7 histone-fold pair in budding-yeast
+    SAGA.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: taf12_saga_core_subunit
+  label: Taf12 SAGA core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TAF12
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Taf12 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: Core-module constituent of the Taf12-Ada1 histone-fold pair that also tethers
+    the Tra1 module.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: spt3_saga_core_subunit
+  label: Spt3 SAGA core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SPT3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Spt3 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: TBP-interacting core-module constituent that contributes two histone-fold
+    domains.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: spt7_saga_core_subunit
+  label: Spt7 SAGA core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SPT7
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Spt7 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: Core-module constituent of the Taf10-Spt7 histone-fold pair in budding-yeast
+    SAGA.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: spt20_saga_core_subunit
+  label: Spt20 SAGA core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SPT20
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Spt20 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: Core-module constituent that stabilizes the Taf5-Taf6 submodule and tethers
+    Tra1.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: ada1_saga_core_subunit
+  label: Ada1 SAGA core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ADA1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Ada1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: Core-module constituent of the Taf12-Ada1 histone-fold pair in budding-yeast
+    SAGA.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: spt8_saga_tbp_subunit
+  label: Spt8 SAGA TBP-interacting subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SPT8
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Spt8 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: TBP-interacting budding-yeast SAGA constituent flexibly connected to the core
+    module.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: gcn5_saga_hat_subunit
+  label: Gcn5 SAGA HAT subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - GCN5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Gcn5 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: Catalytic histone acetyltransferase constituent of the SAGA HAT module.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: ada2_saga_hat_subunit
+  label: Ada2 SAGA HAT subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ADA2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Ada2 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: Adaptor constituent of the SAGA histone acetyltransferase module.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: ada3_saga_hat_subunit
+  label: Ada3 SAGA HAT subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ADA3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Ada3 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: Adaptor constituent of the SAGA histone acetyltransferase module.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: sgf29_saga_hat_subunit
+  label: Sgf29 SAGA HAT subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SGF29
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Sgf29 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: SGF-family constituent of the SAGA histone acetyltransferase module.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: ubp8_saga_dub_subunit
+  label: Ubp8 SAGA DUB subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UBP8
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Ubp8 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: Catalytic histone H2B deubiquitinase constituent of the SAGA DUB module.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: sgf11_saga_dub_subunit
+  label: Sgf11 SAGA DUB subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SGF11
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Sgf11 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: SGF-family constituent of the SAGA deubiquitinating module.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: sus1_saga_dub_subunit
+  label: Sus1 SAGA DUB subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SUS1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Sus1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: ENY2/Sus1-family constituent of the SAGA deubiquitinating module.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+- component_id: sgf73_saga_dub_subunit
+  label: Sgf73 SAGA DUB-anchor subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SGF73
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast SAGA architecture literature follows Sgf73 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this SAGA subunit class was curated in this pass.
+  role: SAGA constituent whose N-terminal region belongs to the DUB module and whose
+    central residues anchor DUBm to the core.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
+      all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism from which Wang et al. 2020 purified endogenous
+    19-subunit SAGA for cryo-EM structure determination.
+  reference: DOI:10.1038/s41586-020-1933-5
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Wang et al. 2020 purified Saccharomyces cerevisiae SAGA through tagged Spt20
+    and resolved its Tra1, core, HAT and DUB module organization.
+  reference: DOI:10.1038/s41586-020-1933-5
+functions:
+- function_id: histone_acetyltransferase_activity
+  label: histone acetyltransferase activity
+  grounding: GO:0004402
+  description: The SAGA HAT module contains the Gcn5 catalytic subunit and supports
+    histone acetylation by the complex.
+  evidence:
+  - reference: GO:0004402
+    notes: GO:0004402 is the Gene Ontology molecular-function term for histone acetyltransferase
+      activity.
+  - reference: GO:0000124
+    notes: GO:0000124 defines SAGA as a SAGA-type histone acetyltransferase complex.
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 describe the SAGA HAT module as containing the histone
+      H3 acetyltransferase Gcn5.
+- function_id: cysteine_type_deubiquitinase_activity
+  label: cysteine-type deubiquitinase activity
+  grounding: GO:0004843
+  description: The SAGA DUB module deubiquitinates histone H2B through the Ubp8 catalytic
+    subunit.
+  evidence:
+  - reference: GO:0004843
+    notes: GO:0004843 is the Gene Ontology molecular-function term for cysteine-type
+      deubiquitinase activity.
+  - reference: GO:0000124
+    notes: GO:0000124 asserts that the SAGA complex is capable of cysteine-type deubiquitinase
+      activity.
+  - reference: DOI:10.1101/gad.1144003
+    notes: Henry et al. 2003 identified SAGA-associated Ubp8 as a mediator of histone
+      H2B deubiquitylation during transcriptional activation.
+evidence:
+- reference: GO:0000124
+  notes: Gene Ontology cellular-component term for SAGA complex and its Spt-Ada-Gcn5-acetyltransferase
+    complex exact synonym.
+- reference: GO:0070461
+  notes: Gene Ontology cellular-component parent term for SAGA-type histone acetyltransferase
+    complexes.
+- reference: GO:0071819
+  notes: Gene Ontology cellular-component term for the DUBm complex that GO models
+    as a part of SAGA.
+- reference: GO:0004402
+  notes: Gene Ontology molecular-function term for histone acetyltransferase activity.
+- reference: GO:0004843
+  notes: Gene Ontology molecular-function term for cysteine-type deubiquitinase activity.
+- reference: PMID:31969703
+  notes: PubMed identifier for Wang et al. 2020, the budding-yeast SAGA cryo-EM architecture
+    paper.
+- reference: DOI:10.1038/s41586-020-1933-5
+  notes: DOI for Wang et al. 2020, 'Structure of the transcription coactivator SAGA',
+    verified through NCBI E-utilities.
+- reference: PMID:33004486
+  notes: PubMed identifier for Soffers and Workman 2020, a SAGA chromatin-modifying-complex
+    review cited by GO:0000124.
+- reference: DOI:10.1101/gad.341156.120
+  notes: DOI for Soffers and Workman 2020, the SAGA review cited by GO:0000124, verified
+    through NCBI E-utilities.
+- reference: PMID:14563679
+  notes: PubMed identifier for Henry et al. 2003, the SAGA-associated Ubp8 histone
+    H2B deubiquitylation paper.
+- reference: DOI:10.1101/gad.1144003
+  notes: DOI for Henry et al. 2003, 'Transcriptional activation via sequential histone
+    H2B ubiquitylation and deubiquitylation, mediated by SAGA-associated Ubp8', verified
+    through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_saga_histone_modification
+  title: SAGA supports histone acetylation and deubiquitination
+  description: In Saccharomyces cerevisiae, the Gcn5-containing HAT module and Ubp8-containing
+    DUB module contribute the histone acetyltransferase and H2B deubiquitinating activities
+    of the SAGA coactivator complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the curated catalytic SAGA subunits and broad activities
+    without resolving nucleosome recognition, ubiquitin positioning or lysine-acetyl
+    transfer chemistry.
+  nodes:
+  - node_id: gcn5_saga_hat_subunit
+    label: Gcn5 SAGA HAT subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: gcn5_saga_hat_subunit
+  - node_id: ubp8_saga_dub_subunit
+    label: Ubp8 SAGA DUB subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ubp8_saga_dub_subunit
+  - node_id: saga_complex
+    label: SAGA complex
+    node_type: STRUCTURE
+    grounding: GO:0000124
+  - node_id: histone_acetyltransferase_activity
+    label: histone acetyltransferase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004402
+  - node_id: cysteine_type_deubiquitinase_activity
+    label: cysteine-type deubiquitinase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004843
+  edges:
+  - subject: gcn5_saga_hat_subunit
+    predicate: contributes to
+    object: saga_complex
+    description: Gcn5 is the catalytic constituent of the SAGA HAT module.
+    evidence:
+    - reference: DOI:10.1038/s41586-020-1933-5
+      notes: Wang et al. 2020 describe the SAGA HAT module as containing the histone
+        H3 acetyltransferase Gcn5.
+  - subject: ubp8_saga_dub_subunit
+    predicate: contributes to
+    object: saga_complex
+    description: Ubp8 is the catalytic constituent of the SAGA DUB module.
+    evidence:
+    - reference: GO:0000124
+      notes: GO:0000124 lists USP22/UBP8 homologues as members of the SAGA DUB module.
+  - subject: saga_complex
+    predicate: supports
+    object: histone_acetyltransferase_activity
+    description: The Gcn5-containing SAGA HAT module supports histone acetyltransferase
+      activity.
+    evidence:
+    - reference: GO:0000124
+      notes: GO:0000124 defines SAGA as a SAGA-type histone acetyltransferase complex.
+  - subject: saga_complex
+    predicate: supports
+    object: cysteine_type_deubiquitinase_activity
+    description: The Ubp8-containing SAGA DUB module deubiquitinates histone H2B.
+    evidence:
+    - reference: DOI:10.1101/gad.1144003
+      notes: Henry et al. 2003 identified SAGA-associated Ubp8 as a mediator of histone
+        H2B deubiquitylation.
+discussions:
+- discussion_id: resolve_saga_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the curated budding-yeast
+    SAGA constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#tra1_saga_subunit
+  - components#taf5_saga_core_subunit
+  - components#taf6_saga_core_subunit
+  - components#taf9_saga_core_subunit
+  - components#taf10_saga_core_subunit
+  - components#taf12_saga_core_subunit
+  - components#spt3_saga_core_subunit
+  - components#spt7_saga_core_subunit
+  - components#spt20_saga_core_subunit
+  - components#ada1_saga_core_subunit
+  - components#spt8_saga_tbp_subunit
+  - components#gcn5_saga_hat_subunit
+  - components#ada2_saga_hat_subunit
+  - components#ada3_saga_hat_subunit
+  - components#sgf29_saga_hat_subunit
+  - components#ubp8_saga_dub_subunit
+  - components#sgf11_saga_dub_subunit
+  - components#sus1_saga_dub_subunit
+  - components#sgf73_saga_dub_subunit
+  notes: Several SAGA constituents are shared with TFIID or have metazoan paralogues;
+    curate InterPro, Pfam, NCBIfam or UniProt family accessions only when they denote
+    the component class rather than a broader domain family.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 resolved the Saccharomyces cerevisiae SAGA subunit architecture.
+  posed_by: codex
+  posed_date: '2026-09-26'
