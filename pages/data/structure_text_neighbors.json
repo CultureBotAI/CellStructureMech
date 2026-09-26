@@ -11286,9 +11286,9 @@
           "cosine_similarity": 0.69420243
         },
         {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.68365324
+          "identifier": "GO:0031416",
+          "label": "NatB complex",
+          "cosine_similarity": 0.69347697
         }
       ]
     },
@@ -13467,6 +13467,11 @@
       "label": "NatA complex",
       "neighbors": [
         {
+          "identifier": "GO:0031416",
+          "label": "NatB complex",
+          "cosine_similarity": 0.94789732
+        },
+        {
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.79711346
@@ -13485,11 +13490,37 @@
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.74515996
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031416",
+      "label": "NatB complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031415",
+          "label": "NatA complex",
+          "cosine_similarity": 0.94789732
         },
         {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.73925471
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.75299812
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.75282193
+        },
+        {
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.75105846
+        },
+        {
+          "identifier": "GO:0000112",
+          "label": "nucleotide-excision repair factor 3 complex",
+          "cosine_similarity": 0.75019933
         }
       ]
     },

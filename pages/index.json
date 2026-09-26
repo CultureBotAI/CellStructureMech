@@ -3915,6 +3915,15 @@
   "definition": "A conserved complex that catalyzes the transfer of an acetyl group to an N-terminal Ser, Ala, Gly, or Thr residue of a protein acceptor molecule. In Saccharomyces the complex includes Nat1p and Ard1p, and may contain additional proteins."
  },
  {
+  "identifier": "GO:0031416",
+  "label": "NatB complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/natb_complex.html",
+  "definition": "A conserved complex that catalyzes the transfer of an acetyl group to the N-terminal residue of a protein acceptor molecule that has a Met-Glu, Met-Asp, Met-Asn, or Met-Met N-terminus. In Saccharomyces the complex includes Nat3p and Mdm20p."
+ },
+ {
   "identifier": "GO:0031262",
   "label": "Ndc80 complex",
   "category": "OTHER",

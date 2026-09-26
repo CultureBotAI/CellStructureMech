@@ -1,0 +1,222 @@
+identifier: GO:0031416
+label: NatB complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A conserved complex that catalyzes the transfer of an acetyl group to
+  the N-terminal residue of a protein acceptor molecule that has a Met-Glu, Met-Asp,
+  Met-Asn, or Met-Met N-terminus. In Saccharomyces the complex includes Nat3p and
+  Mdm20p.
+definition_source: GO:0031416
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-26T09:23:11Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-26T09:24:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added NatB exact synonymy, N-terminal protein acetyltransferase parentage,
+    two budding-yeast constituent rows, yeast scope, protein-N-terminal acetyltransferase
+    function, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a subunit-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-26T09:25:10Z'
+  curator: codex
+  action: NORMALIZED_RECORD
+  changes: Re-emitted repeated NatB evidence entries without YAML aliases.
+  llm_assisted: true
+synonyms:
+- synonym_text: N-terminal acetyltransferase B complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031416
+parent_structures:
+- GO:0031414
+components:
+- component_id: nat3_natb_catalytic_subunit
+  label: Nat3 NatB catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NAT3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NatB literature follows Nat3 naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this NatB
+    subunit class was curated in this pass.
+  role: Catalytic constituent of the budding-yeast NatB complex that works with Mdm20
+    to provide N-terminal acetyltransferase activity.
+  evidence:
+  - reference: DOI:10.1074/jbc.M304690200
+    notes: Polevoda et al. 2003 report that Saccharomyces cerevisiae NatB is composed
+      of interacting Nat3p and Mdm20p subunits, both required for NatB acetyltransferase
+      activity.
+  - reference: DOI:10.1016/s0006-291x(03)01316-0
+    notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
+      complexes and describe yeast NatB as the Nat3p catalytic subunit with the Mdm20p
+      auxiliary subunit.
+- component_id: mdm20_natb_auxiliary_subunit
+  label: Mdm20 NatB auxiliary subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MDM20
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast NatB literature follows Mdm20 naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this NatB
+    subunit class was curated in this pass.
+  role: Auxiliary constituent of the budding-yeast NatB complex that interacts with
+    Nat3 and is required for NatB activity.
+  evidence:
+  - reference: DOI:10.1074/jbc.M304690200
+    notes: Polevoda et al. 2003 report that Saccharomyces cerevisiae NatB is composed
+      of interacting Nat3p and Mdm20p subunits, both required for NatB acetyltransferase
+      activity.
+  - reference: DOI:10.1016/s0006-291x(03)01316-0
+    notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
+      complexes and describe yeast NatB as the Nat3p catalytic subunit with the Mdm20p
+      auxiliary subunit.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Polevoda et al. 2003 characterized Nat3p and Mdm20p as interacting NatB subunits
+    in Saccharomyces cerevisiae.
+  reference: DOI:10.1074/jbc.M304690200
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding yeast is the source organism in which Nat3p and Mdm20p were shown
+    to form the NatB Nalpha-terminal acetyltransferase.
+  reference: DOI:10.1074/jbc.M304690200
+functions:
+- function_id: protein_n_terminal_amino_acid_acetyltransferase_activity
+  label: protein-N-terminal amino-acid acetyltransferase activity
+  grounding: GO:0004596
+  description: Transfer of an acetyl group from acetyl-CoA to the N-terminal alpha-amino
+    group of NatB substrate proteins.
+  evidence:
+  - reference: GO:0004596
+    notes: GO:0004596 is the Gene Ontology molecular-function term for protein-N-terminal
+      amino-acid acetyltransferase activity.
+  - reference: GO:0031416
+    notes: GO:0031416 defines the NatB complex by transfer of acetyl groups to N-terminal
+      Met-Glu, Met-Asp, Met-Asn or Met-Met protein residues.
+  - reference: DOI:10.1074/jbc.M304690200
+    notes: Polevoda et al. 2003 describe budding-yeast NatB as an Nalpha-terminal
+      acetyltransferase that acts on proteins with Met-Glu or Met-Asp N-termini and
+      subclasses with Met-Asn or Met-Met N-termini.
+evidence:
+- reference: GO:0031416
+  notes: Gene Ontology cellular-component term for NatB complex and its exact N-terminal
+    acetyltransferase B complex synonym.
+- reference: GO:0031414
+  notes: Gene Ontology cellular-component parent term for N-terminal protein acetyltransferase
+    complexes.
+- reference: GO:0004596
+  notes: Gene Ontology molecular-function term for protein-N-terminal amino-acid acetyltransferase
+    activity.
+- reference: PMID:12783868
+  notes: PubMed identifier for Polevoda et al. 2003, the budding-yeast NatB composition
+    paper.
+- reference: DOI:10.1074/jbc.M304690200
+  notes: DOI for Polevoda et al. 2003, 'Nat3p and Mdm20p are required for function
+    of yeast NatB Nalpha-terminal acetyltransferase and of actin and tropomyosin',
+    verified through NCBI E-utilities.
+- reference: PMID:12890471
+  notes: PubMed identifier for Polevoda and Sherman 2003, the eukaryotic N-terminal
+    acetyltransferase subunit review cited by GO:0031416.
+- reference: DOI:10.1016/s0006-291x(03)01316-0
+  notes: DOI for Polevoda and Sherman 2003, 'Composition and function of the eukaryotic
+    N-terminal acetyltransferase subunits', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_natb_n_terminal_acetyltransferase_activity
+  title: NatB carries yeast N-terminal acetyltransferase activity
+  description: In Saccharomyces cerevisiae, Nat3 and Mdm20 form a NatB complex that
+    supports protein-N-terminal acetyltransferase activity.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records curated budding-yeast NatB constituents and broad
+    acetyltransferase activity without resolving active-site chemistry, nascent-chain
+    recognition or substrate specificity.
+  nodes:
+  - node_id: nat3_natb_catalytic_subunit
+    label: Nat3 NatB catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: nat3_natb_catalytic_subunit
+  - node_id: mdm20_natb_auxiliary_subunit
+    label: Mdm20 NatB auxiliary subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: mdm20_natb_auxiliary_subunit
+  - node_id: natb_complex
+    label: NatB complex
+    node_type: STRUCTURE
+    grounding: GO:0031416
+  - node_id: protein_n_terminal_amino_acid_acetyltransferase_activity
+    label: protein-N-terminal amino-acid acetyltransferase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004596
+  edges:
+  - subject: nat3_natb_catalytic_subunit
+    predicate: contributes to
+    object: natb_complex
+    description: Nat3 is a catalytic subunit of budding-yeast NatB.
+    evidence:
+    - reference: DOI:10.1074/jbc.M304690200
+      notes: Polevoda et al. 2003 report that Saccharomyces cerevisiae NatB is composed
+        of interacting Nat3p and Mdm20p subunits, both required for NatB acetyltransferase
+        activity.
+    - reference: DOI:10.1016/s0006-291x(03)01316-0
+      notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
+        complexes and describe yeast NatB as the Nat3p catalytic subunit with the
+        Mdm20p auxiliary subunit.
+  - subject: mdm20_natb_auxiliary_subunit
+    predicate: contributes to
+    object: natb_complex
+    description: Mdm20 is an auxiliary subunit of budding-yeast NatB.
+    evidence:
+    - reference: DOI:10.1074/jbc.M304690200
+      notes: Polevoda et al. 2003 report that Saccharomyces cerevisiae NatB is composed
+        of interacting Nat3p and Mdm20p subunits, both required for NatB acetyltransferase
+        activity.
+    - reference: DOI:10.1016/s0006-291x(03)01316-0
+      notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
+        complexes and describe yeast NatB as the Nat3p catalytic subunit with the
+        Mdm20p auxiliary subunit.
+  - subject: natb_complex
+    predicate: supports
+    object: protein_n_terminal_amino_acid_acetyltransferase_activity
+    description: NatB catalyzes protein N-terminal amino-acid acetylation.
+    evidence:
+    - reference: GO:0004596
+      notes: GO:0004596 is the Gene Ontology molecular-function term for protein-N-terminal
+        amino-acid acetyltransferase activity.
+    - reference: DOI:10.1074/jbc.M304690200
+      notes: Polevoda et al. 2003 characterized Nat3p and Mdm20p as interacting budding-yeast
+        NatB subunits required for acetyltransferase activity.
+discussions:
+- discussion_id: resolve_natb_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the curated budding-yeast
+    NatB constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#nat3_natb_catalytic_subunit
+  - components#mdm20_natb_auxiliary_subunit
+  notes: The curated budding-yeast components are Nat3 and Mdm20; curate InterPro,
+    Pfam, NCBIfam or UniProt family accessions only when they denote the exact Nat3
+    or Mdm20 NatB component classes rather than broader N-acetyltransferase or auxiliary-domain
+    families.
+  evidence:
+  - reference: DOI:10.1074/jbc.M304690200
+    notes: Polevoda et al. 2003 report that Saccharomyces cerevisiae NatB is composed
+      of interacting Nat3p and Mdm20p subunits, both required for NatB acetyltransferase
+      activity.
+  - reference: DOI:10.1016/s0006-291x(03)01316-0
+    notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
+      complexes and describe yeast NatB as the Nat3p catalytic subunit with the Mdm20p
+      auxiliary subunit.
+  posed_by: codex
+  posed_date: '2026-09-26'
