@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nucleotide_excision_repair_factor_4_complex.yaml
+  slug: nucleotide_excision_repair_factor_4_complex
+session:
+  id: 2026-09-26T030126Z-codex-c47559
+  timestamp: '2026-09-26T03:01:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added NEF4 complex record
+  details: Created an evidence-backed GO:0000113 nucleotide-excision repair factor 4 complex
+    record covering the GO NEF4 exact synonym, the GO:0000109 parent, Rad7 and Rad16 reviewed-label-only
+    constituent rows, budding-yeast scope, a nucleotide-excision-repair function, GO/PubMed/DOI
+    evidence from PMID:10915862 / DOI:10.1016/s0027-5107(00)00037-3, a nonmechanistic function
+    graph, and an open TODO to resolve exact Rad7/Rad16 family groundings. Verified the GO
+    Basic stanza and PubMed metadata before curation, then validated the record with LinkML
+    and the strict validator.
