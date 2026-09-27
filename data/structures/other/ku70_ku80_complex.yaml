@@ -1,0 +1,271 @@
+identifier: GO:0043564
+label: Ku70:Ku80 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Heterodimeric protein complex composed of a 70 kDa and a 80 kDa subunit,
+  binds DNA through a channel formed by the heterodimer. Functions in DNA double stranded
+  break repair, chromosome maintenance, transcription regulation, V(D)J recombination,
+  and activation of DNA-PK.
+definition_source: GO:0043564
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T10:19:40Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T10:20:49Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO Ku70:Ku80 synonymy, nuclear protein-containing-complex parentage,
+    two reviewed-label-only Ku constituent rows, budding-yeast scope, DNA-end-binding
+    and nonhomologous-end-joining functions, GO/PubMed/DOI evidence, a nonmechanistic
+    function graph, and a Ku subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-27T10:21:34Z'
+  curator: codex
+  action: TIGHTEN_EVIDENCE
+  changes: Added Downs and Jackson 2004 as review evidence for Ku DNA-end binding
+    and NHEJ, and narrowed the budding-yeast canonical example to the HDF2/Ku80 two-subunit-complex
+    evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: Ku70:Ku80 heterodimer
+  synonym_type: EXACT_SYNONYM
+  source: GO:0043564
+parent_structures:
+- GO:0140513
+components:
+- component_id: ku70_subunit
+  label: Ku70 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Ku70 subunit is modeled as a named Ku70:Ku80-complex constituent;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE was
+    curated in this pass.
+  role: 70 kDa Ku-family DNA-end-binding constituent of the Ku70:Ku80 heterodimer.
+  evidence:
+  - reference: GO:0043564
+    notes: GO:0043564 defines the Ku70:Ku80 complex as a heterodimeric complex composed
+      of a 70 kDa and an 80 kDa subunit.
+  - reference: PMID:8890183
+    notes: Boulton and Jackson 1996 characterized the Saccharomyces cerevisiae Ku70
+      homologue.
+- component_id: ku80_subunit
+  label: Ku80 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Ku80 subunit is modeled as a named Ku70:Ku80-complex constituent;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE was
+    curated in this pass.
+  role: 80 kDa Ku-family DNA-end-binding constituent of the Ku70:Ku80 heterodimer.
+  evidence:
+  - reference: GO:0043564
+    notes: GO:0043564 defines the Ku70:Ku80 complex as a heterodimeric complex composed
+      of a 70 kDa and an 80 kDa subunit.
+  - reference: DOI:10.1093/nar/24.23.4639
+    notes: Boulton and Jackson 1996 identified a Saccharomyces cerevisiae Ku80 homologue.
+  - reference: DOI:10.1074/jbc.271.44.27765
+    notes: Feldmann et al. 1996 identified Hdf2 as a second subunit of the Saccharomyces
+      cerevisiae Ku homologue.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a two-subunit Ku homologue whose Hdf2/Ku80 constituent was
+    characterized as the second subunit of the complex.
+  reference: DOI:10.1074/jbc.271.44.27765
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system in which Hdf2/Ku80 evidence resolved a two-subunit
+    Ku homologue.
+  reference: DOI:10.1074/jbc.271.44.27765
+functions:
+- function_id: dna_end_binding
+  label: DNA end binding
+  grounding: GO:0045027
+  description: The Ku70:Ku80 heterodimer binds DNA through a channel formed by its
+    two subunits, including at DNA ends.
+  evidence:
+  - reference: GO:0043564
+    notes: GO:0043564 defines the Ku70:Ku80 complex as binding DNA through the heterodimer
+      channel.
+  - reference: GO:0045027
+    notes: GO:0045027 is the Gene Ontology molecular-function term for DNA end binding.
+  - reference: DOI:10.1038/nrm1367
+    notes: Downs and Jackson 2004 reviewed Ku as a Ku70-Ku80 heterodimer that binds
+      DNA ends.
+- function_id: nonhomologous_end_joining
+  label: double-strand break repair via nonhomologous end joining
+  grounding: GO:0006303
+  description: The Ku70:Ku80 complex participates in nonhomologous-end-joining repair
+    of DNA double-strand breaks.
+  evidence:
+  - reference: GO:0043564
+    notes: GO:0043564 defines the Ku70:Ku80 complex as functioning in DNA double-strand-break
+      repair.
+  - reference: GO:0006303
+    notes: GO:0006303 is the Gene Ontology biological-process term for double-strand
+      break repair via nonhomologous end joining.
+  - reference: DOI:10.1093/nar/24.23.4639
+    notes: Boulton and Jackson 1996 connected the Saccharomyces cerevisiae Ku80 homologue
+      to DNA double-strand-break rejoining.
+  - reference: DOI:10.1038/nrm1367
+    notes: Downs and Jackson 2004 reviewed Ku-mediated nonhomologous end joining.
+evidence:
+- reference: GO:0043564
+  notes: Gene Ontology cellular-component term for the Ku70:Ku80 complex.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0045027
+  notes: Gene Ontology molecular-function term for DNA end binding.
+- reference: GO:0006303
+  notes: Gene Ontology biological-process term for double-strand break repair via
+    nonhomologous end joining.
+- reference: PMID:12518983
+  notes: PubMed identifier for Koike 2002, the Journal of Radiation Research review
+    on Ku70 and Ku80 dimerization, translocation and localization.
+- reference: DOI:10.1269/jrr.43.223
+  notes: DOI for Koike 2002, verified through PubMed.
+- reference: PMID:15122350
+  notes: PubMed identifier for Downs and Jackson 2004, the Nature Reviews Molecular
+    Cell Biology review on Ku and DNA ends.
+- reference: DOI:10.1038/nrm1367
+  notes: DOI for Downs and Jackson 2004, verified through PubMed.
+- reference: PMID:8890183
+  notes: PubMed identifier for Boulton and Jackson 1996, the EMBO Journal paper on
+    Saccharomyces cerevisiae Ku70.
+- reference: PMID:8972848
+  notes: PubMed identifier for Boulton and Jackson 1996, the Nucleic Acids Research
+    paper on the Saccharomyces cerevisiae Ku80 homologue.
+- reference: DOI:10.1093/nar/24.23.4639
+  notes: DOI for Boulton and Jackson 1996 on the Saccharomyces cerevisiae Ku80 homologue,
+    verified through PubMed and PMC.
+- reference: PMID:8910371
+  notes: PubMed identifier for Feldmann et al. 1996, the Journal of Biological Chemistry
+    paper on HDF2 as the second subunit of the Saccharomyces cerevisiae Ku homologue.
+- reference: DOI:10.1074/jbc.271.44.27765
+  notes: DOI for Feldmann et al. 1996, verified through PubMed.
+causal_graphs:
+- graph_id: ku70_ku80_dna_end_joining
+  title: Ku70:Ku80 binds DNA ends for end joining
+  description: The Ku70 and Ku80 subunits form a heterodimeric complex that binds
+    DNA and participates in nonhomologous-end-joining repair.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records heterodimeric composition, DNA-end binding and end-joining
+    participation without resolving DNA-PK activation, end synapsis or downstream
+    ligation.
+  nodes:
+  - node_id: ku70_subunit
+    label: Ku70 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ku70_subunit
+  - node_id: ku80_subunit
+    label: Ku80 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ku80_subunit
+  - node_id: ku70_ku80_complex
+    label: Ku70:Ku80 complex
+    node_type: STRUCTURE
+    grounding: GO:0043564
+  - node_id: dna_end
+    label: DNA end
+    node_type: GENETIC_ELEMENT
+  - node_id: dna_end_binding
+    label: DNA end binding
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0045027
+  - node_id: nonhomologous_end_joining
+    label: double-strand break repair via nonhomologous end joining
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006303
+  edges:
+  - subject: ku70_subunit
+    predicate: contributes to
+    object: ku70_ku80_complex
+    description: Ku70 is the 70 kDa constituent of the Ku70:Ku80 heterodimer.
+    evidence:
+    - reference: GO:0043564
+      notes: GO:0043564 defines the complex as a heterodimer that includes a 70 kDa
+        subunit.
+    - reference: PMID:8890183
+      notes: Boulton and Jackson 1996 studied Saccharomyces cerevisiae Ku70.
+  - subject: ku80_subunit
+    predicate: contributes to
+    object: ku70_ku80_complex
+    description: Ku80 is the 80 kDa constituent of the Ku70:Ku80 heterodimer.
+    evidence:
+    - reference: GO:0043564
+      notes: GO:0043564 defines the complex as a heterodimer that includes an 80 kDa
+        subunit.
+    - reference: DOI:10.1093/nar/24.23.4639
+      notes: Boulton and Jackson 1996 studied the Saccharomyces cerevisiae Ku80 homologue.
+  - subject: ku70_ku80_complex
+    predicate: binds
+    object: dna_end
+    description: The Ku70:Ku80 heterodimer binds DNA through a channel formed by the
+      two-subunit complex.
+    evidence:
+    - reference: GO:0043564
+      notes: GO:0043564 defines the complex as binding DNA through a heterodimer channel.
+    - reference: GO:0045027
+      notes: GO:0045027 is the molecular-function term for DNA end binding.
+    - reference: DOI:10.1038/nrm1367
+      notes: Downs and Jackson 2004 reviewed Ku binding to DNA ends and facilitating
+        nonhomologous end joining.
+  - subject: ku70_ku80_complex
+    predicate: enables
+    object: dna_end_binding
+    description: The Ku70:Ku80 complex carries out DNA end binding.
+    evidence:
+    - reference: GO:0043564
+      notes: GO:0043564 defines the complex as a DNA-binding heterodimer.
+    - reference: GO:0045027
+      notes: GO:0045027 is the molecular-function term for DNA end binding.
+    - reference: DOI:10.1038/nrm1367
+      notes: Downs and Jackson 2004 reviewed Ku binding to DNA ends and facilitating
+        nonhomologous end joining.
+  - subject: ku70_ku80_complex
+    predicate: supports
+    object: nonhomologous_end_joining
+    description: The Ku70:Ku80 complex participates in nonhomologous-end-joining repair.
+    evidence:
+    - reference: GO:0043564
+      notes: GO:0043564 defines the complex as functioning in DNA double-strand-break
+        repair.
+    - reference: GO:0006303
+      notes: GO:0006303 is the biological-process term for double-strand break repair
+        via nonhomologous end joining.
+    - reference: DOI:10.1038/nrm1367
+      notes: Downs and Jackson 2004 reviewed Ku binding to DNA ends and facilitating
+        nonhomologous end joining.
+discussions:
+- discussion_id: resolve_ku70_ku80_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Ku70 and Ku80 constituents
+    of the Ku70:Ku80 complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ku70_subunit
+  - components#ku80_subunit
+  rationale: GO:0043564 exactly identifies the heterodimeric Ku70:Ku80 complex and
+    its 70 kDa and 80 kDa constituents, but exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family boundaries for the two Ku-family subunit classes need narrower
+    follow-up curation.
+  evidence:
+  - reference: GO:0043564
+    notes: GO:0043564 defines the Ku70:Ku80 complex as a heterodimer containing 70
+      kDa and 80 kDa subunits.
+  - reference: DOI:10.1269/jrr.43.223
+    notes: Koike 2002 reviewed Ku70 and Ku80 dimerization, translocation and localization.
+  - reference: DOI:10.1038/nrm1367
+    notes: Downs and Jackson 2004 reviewed the two Ku heterodimer constituents.
+  posed_by: codex
+  posed_date: '2026-09-27'
