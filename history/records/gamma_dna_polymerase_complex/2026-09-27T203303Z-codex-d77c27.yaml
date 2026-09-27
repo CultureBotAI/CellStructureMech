@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gamma_dna_polymerase_complex.yaml
+  slug: gamma_dna_polymerase_complex
+session:
+  id: 2026-09-27T203303Z-codex-d77c27
+  timestamp: '2026-09-27T20:33:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the gamma DNA polymerase complex record.
+  details: Created data/structures/other/gamma_dna_polymerase_complex.yaml for GO:0005760
+    with DNA-polymerase-complex and mitochondrial-protein-containing-complex parentage, mitochondrial-matrix
+    parthood, two reviewed-label-only POLG/POLG2 constituent rows, Eukaryota scope, a human
+    canonical example, mitochondrial-DNA-replication function evidence, GO/PubMed provenance,
+    a nonmechanistic Pol gamma function graph, a subunit-grounding curation TODO, and a resolved
+    interpretation for representing homodimeric Pol gamma B as one accessory-subunit component
+    class.
