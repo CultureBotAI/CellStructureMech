@@ -1,0 +1,360 @@
+identifier: GO:0005663
+label: DNA replication factor C complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A complex that loads the DNA polymerase processivity factor proliferating
+  cell nuclear antigen (PCNA) onto DNA, thereby permitting processive DNA synthesis
+  catalyzed by DNA polymerase. In eukaryotes the complex consists of five polypeptides.
+definition_source: GO:0005663
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T10:43:12Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T10:43:56Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO RFC synonymy, protein-containing-complex parentage, replication-fork
+    parthood, five reviewed-label-only budding-yeast RFC constituent rows, DNA-clamp-loader
+    and DNA-replication functions, GO/PubMed/DOI evidence, a nonmechanistic function
+    graph, and an RFC subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-27T10:44:23Z'
+  curator: codex
+  action: TIGHTEN_EVIDENCE
+  changes: Narrowed the Saccharomyces cerevisiae RFC canonical example to the five-gene
+    evidence carried by its single citation.
+  llm_assisted: true
+synonyms:
+- synonym_text: RFC complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005663
+- synonym_text: activator 1 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005663
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0005657
+components:
+- component_id: rfc1_large_subunit
+  label: Rfc1 large subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc1 large subunit is modeled as a named budding-yeast RFC-complex
+    constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family
+    CURIE was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the five-subunit DNA replication
+    factor C complex.
+  evidence:
+  - reference: GO:0005663
+    notes: GO:0005663 defines the eukaryotic DNA replication factor C complex as consisting
+      of five polypeptides.
+  - reference: DOI:10.1128/MCB.15.9.4661
+    notes: Cullmann et al. 1995 characterized the five Saccharomyces cerevisiae replication
+      factor C genes.
+- component_id: rfc2_subunit
+  label: Rfc2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc2 subunit is modeled as a named budding-yeast RFC-complex constituent;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE was
+    curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the five-subunit DNA replication
+    factor C complex.
+  evidence:
+  - reference: GO:0005663
+    notes: GO:0005663 defines the eukaryotic DNA replication factor C complex as consisting
+      of five polypeptides.
+  - reference: DOI:10.1128/MCB.15.9.4661
+    notes: Cullmann et al. 1995 characterized the five Saccharomyces cerevisiae replication
+      factor C genes.
+- component_id: rfc3_subunit
+  label: Rfc3 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc3 subunit is modeled as a named budding-yeast RFC-complex constituent;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE was
+    curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the five-subunit DNA replication
+    factor C complex.
+  evidence:
+  - reference: GO:0005663
+    notes: GO:0005663 defines the eukaryotic DNA replication factor C complex as consisting
+      of five polypeptides.
+  - reference: DOI:10.1128/MCB.15.9.4661
+    notes: Cullmann et al. 1995 characterized the five Saccharomyces cerevisiae replication
+      factor C genes.
+- component_id: rfc4_subunit
+  label: Rfc4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc4 subunit is modeled as a named budding-yeast RFC-complex constituent;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE was
+    curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the five-subunit DNA replication
+    factor C complex.
+  evidence:
+  - reference: GO:0005663
+    notes: GO:0005663 defines the eukaryotic DNA replication factor C complex as consisting
+      of five polypeptides.
+  - reference: DOI:10.1128/MCB.15.9.4661
+    notes: Cullmann et al. 1995 characterized the five Saccharomyces cerevisiae replication
+      factor C genes.
+- component_id: rfc5_subunit
+  label: Rfc5 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc5 subunit is modeled as a named budding-yeast RFC-complex constituent;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE was
+    curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the five-subunit DNA replication
+    factor C complex.
+  evidence:
+  - reference: GO:0005663
+    notes: GO:0005663 defines the eukaryotic DNA replication factor C complex as consisting
+      of five polypeptides.
+  - reference: DOI:10.1128/MCB.15.9.4661
+    notes: Cullmann et al. 1995 characterized the five Saccharomyces cerevisiae replication
+      factor C genes.
+  - reference: DOI:10.1093/nar/23.24.4986
+    notes: Gary and Burgers 1995 identified the fifth Saccharomyces cerevisiae replication
+      factor C subunit.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a DNA replication factor C complex encoded by the RFC1,
+    RFC2, RFC3, RFC4, and RFC5 genes.
+  reference: DOI:10.1128/MCB.15.9.4661
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system in which the five replication factor C genes
+    were characterized.
+  reference: DOI:10.1128/MCB.15.9.4661
+functions:
+- function_id: dna_clamp_loader_activity
+  label: DNA clamp loader activity
+  grounding: GO:0003689
+  description: DNA replication factor C loads the sliding-clamp processivity factor
+    PCNA onto DNA.
+  evidence:
+  - reference: GO:0005663
+    notes: GO:0005663 defines the RFC complex by its role in loading PCNA onto DNA.
+  - reference: GO:0003689
+    notes: GO:0003689 is the Gene Ontology molecular-function term for DNA clamp loader
+      activity.
+- function_id: dna_replication
+  label: DNA replication
+  grounding: GO:0006260
+  description: DNA replication factor C permits processive DNA synthesis by loading
+    PCNA for replicative DNA polymerases.
+  evidence:
+  - reference: GO:0005663
+    notes: GO:0005663 defines the RFC complex as permitting processive DNA synthesis
+      catalyzed by DNA polymerase.
+  - reference: GO:0006260
+    notes: GO:0006260 is the Gene Ontology biological-process term for DNA replication.
+evidence:
+- reference: GO:0005663
+  notes: Gene Ontology cellular-component term for the DNA replication factor C complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0005657
+  notes: Gene Ontology cellular-component term for the replication fork; GO:0005663
+    is part of this term.
+- reference: GO:0003689
+  notes: Gene Ontology molecular-function term for DNA clamp loader activity.
+- reference: GO:0006260
+  notes: Gene Ontology biological-process term for DNA replication.
+- reference: PMID:7651383
+  notes: PubMed identifier for Cullmann et al. 1995, the Molecular and Cellular Biology
+    paper on the five Saccharomyces cerevisiae replication factor C genes.
+- reference: DOI:10.1128/MCB.15.9.4661
+  notes: DOI for Cullmann et al. 1995, verified through PubMed and PMC.
+- reference: PMID:8559655
+  notes: PubMed identifier for Gary and Burgers 1995, the Nucleic Acids Research paper
+    on the fifth Saccharomyces cerevisiae replication factor C subunit.
+- reference: DOI:10.1093/nar/23.24.4986
+  notes: DOI for Gary and Burgers 1995, verified through PubMed and PMC.
+- reference: PMID:14614842
+  notes: PubMed identifier for Kim and MacNeill 2003, one of the GO:0005663 definition
+    sources.
+- reference: DOI:10.1016/j.cub.2003.10.048
+  notes: DOI for Kim and MacNeill 2003, verified through PubMed.
+- reference: PMID:14646196
+  notes: PubMed identifier for Kitabayashi et al. 2003, one of the GO:0005663 definition
+    sources.
+- reference: DOI:10.1271/bbb.67.2373
+  notes: DOI for Kitabayashi et al. 2003, verified through PubMed.
+- reference: PMID:16172520
+  notes: PubMed identifier for Nishida et al. 2005, one of the GO:0005663 definition
+    sources.
+- reference: DOI:10.1266/ggs.80.83
+  notes: DOI for Nishida et al. 2005, verified through PubMed.
+causal_graphs:
+- graph_id: rfc_pcna_loading
+  title: RFC loads the PCNA sliding clamp
+  description: In Saccharomyces cerevisiae, the Rfc1, Rfc2, Rfc3, Rfc4, and Rfc5 subunits
+    form the DNA replication factor C complex that loads PCNA and supports DNA replication.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records RFC composition and GO-level clamp-loader and DNA-replication
+    functions without resolving PCNA ring opening, ATPase cycling, or primer-template
+    engagement.
+  nodes:
+  - node_id: rfc1_large_subunit
+    label: Rfc1 large subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc1_large_subunit
+  - node_id: rfc2_subunit
+    label: Rfc2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc2_subunit
+  - node_id: rfc3_subunit
+    label: Rfc3 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc3_subunit
+  - node_id: rfc4_subunit
+    label: Rfc4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc4_subunit
+  - node_id: rfc5_subunit
+    label: Rfc5 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc5_subunit
+  - node_id: dna_replication_factor_c_complex
+    label: DNA replication factor C complex
+    node_type: STRUCTURE
+    grounding: GO:0005663
+  - node_id: dna_clamp_loader_activity
+    label: DNA clamp loader activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0003689
+  - node_id: dna_replication
+    label: DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+  edges:
+  - subject: rfc1_large_subunit
+    predicate: contributes to
+    object: dna_replication_factor_c_complex
+    description: Rfc1 large subunit is a constituent of the budding-yeast DNA replication
+      factor C complex.
+    evidence:
+    - reference: GO:0005663
+      notes: GO:0005663 defines eukaryotic RFC as a five-polypeptide complex.
+    - reference: DOI:10.1128/MCB.15.9.4661
+      notes: Cullmann et al. 1995 characterized the five Saccharomyces cerevisiae
+        RFC genes.
+  - subject: rfc2_subunit
+    predicate: contributes to
+    object: dna_replication_factor_c_complex
+    description: Rfc2 subunit is a constituent of the budding-yeast DNA replication
+      factor C complex.
+    evidence:
+    - reference: GO:0005663
+      notes: GO:0005663 defines eukaryotic RFC as a five-polypeptide complex.
+    - reference: DOI:10.1128/MCB.15.9.4661
+      notes: Cullmann et al. 1995 characterized the five Saccharomyces cerevisiae
+        RFC genes.
+  - subject: rfc3_subunit
+    predicate: contributes to
+    object: dna_replication_factor_c_complex
+    description: Rfc3 subunit is a constituent of the budding-yeast DNA replication
+      factor C complex.
+    evidence:
+    - reference: GO:0005663
+      notes: GO:0005663 defines eukaryotic RFC as a five-polypeptide complex.
+    - reference: DOI:10.1128/MCB.15.9.4661
+      notes: Cullmann et al. 1995 characterized the five Saccharomyces cerevisiae
+        RFC genes.
+  - subject: rfc4_subunit
+    predicate: contributes to
+    object: dna_replication_factor_c_complex
+    description: Rfc4 subunit is a constituent of the budding-yeast DNA replication
+      factor C complex.
+    evidence:
+    - reference: GO:0005663
+      notes: GO:0005663 defines eukaryotic RFC as a five-polypeptide complex.
+    - reference: DOI:10.1128/MCB.15.9.4661
+      notes: Cullmann et al. 1995 characterized the five Saccharomyces cerevisiae
+        RFC genes.
+  - subject: rfc5_subunit
+    predicate: contributes to
+    object: dna_replication_factor_c_complex
+    description: Rfc5 subunit is a constituent of the budding-yeast DNA replication
+      factor C complex.
+    evidence:
+    - reference: GO:0005663
+      notes: GO:0005663 defines eukaryotic RFC as a five-polypeptide complex.
+    - reference: DOI:10.1128/MCB.15.9.4661
+      notes: Cullmann et al. 1995 characterized the five Saccharomyces cerevisiae
+        RFC genes.
+  - subject: dna_replication_factor_c_complex
+    predicate: enables
+    object: dna_clamp_loader_activity
+    description: The RFC complex loads PCNA onto DNA.
+    evidence:
+    - reference: GO:0005663
+      notes: GO:0005663 defines RFC by PCNA loading onto DNA.
+    - reference: GO:0003689
+      notes: GO:0003689 is the molecular-function term for DNA clamp loader activity.
+  - subject: dna_replication_factor_c_complex
+    predicate: supports
+    object: dna_replication
+    description: The RFC complex supports processive DNA replication by loading PCNA
+      for DNA polymerases.
+    evidence:
+    - reference: GO:0005663
+      notes: GO:0005663 defines RFC as permitting processive DNA synthesis.
+    - reference: GO:0006260
+      notes: GO:0006260 is the biological-process term for DNA replication.
+discussions:
+- discussion_id: resolve_rfc_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Rfc1, Rfc2, Rfc3,
+    Rfc4, and Rfc5 constituents of the DNA replication factor C complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rfc1_large_subunit
+  - components#rfc2_subunit
+  - components#rfc3_subunit
+  - components#rfc4_subunit
+  - components#rfc5_subunit
+  rationale: GO:0005663 exactly identifies the DNA replication factor C complex and
+    Cullmann et al. 1995 support the five Saccharomyces cerevisiae RFC genes, but
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family boundaries for
+    the five subunit classes need narrower follow-up curation.
+  evidence:
+  - reference: GO:0005663
+    notes: GO:0005663 defines the eukaryotic DNA replication factor C complex as containing
+      five polypeptides.
+  - reference: DOI:10.1128/MCB.15.9.4661
+    notes: Cullmann et al. 1995 characterized the five Saccharomyces cerevisiae RFC
+      genes.
+  posed_by: codex
+  posed_date: '2026-09-27'

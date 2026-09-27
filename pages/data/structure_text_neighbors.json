@@ -12413,6 +12413,11 @@
       "label": "DNA polymerase III complex",
       "neighbors": [
         {
+          "identifier": "GO:0005663",
+          "label": "DNA replication factor C complex",
+          "cosine_similarity": 0.74103067
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.70803067
@@ -12431,11 +12436,37 @@
           "identifier": "GO:0000112",
           "label": "nucleotide-excision repair factor 3 complex",
           "cosine_similarity": 0.67024604
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005663",
+      "label": "DNA replication factor C complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.76211517
         },
         {
-          "identifier": "GO:0120217",
-          "label": "DNA gyrase complex",
-          "cosine_similarity": 0.65628115
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.75691225
+        },
+        {
+          "identifier": "GO:0000111",
+          "label": "nucleotide-excision repair factor 2 complex",
+          "cosine_similarity": 0.74871947
+        },
+        {
+          "identifier": "GO:0033186",
+          "label": "CAF-1 complex",
+          "cosine_similarity": 0.74158027
+        },
+        {
+          "identifier": "GO:0009360",
+          "label": "DNA polymerase III complex",
+          "cosine_similarity": 0.74103067
         }
       ]
     },
@@ -15611,6 +15642,11 @@
           "cosine_similarity": 0.71780139
         },
         {
+          "identifier": "GO:0005663",
+          "label": "DNA replication factor C complex",
+          "cosine_similarity": 0.71657589
+        },
+        {
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.69349766
@@ -15624,11 +15660,6 @@
           "identifier": "GO:0001401",
           "label": "SAM complex",
           "cosine_similarity": 0.68946453
-        },
-        {
-          "identifier": "GO:0032299",
-          "label": "ribonuclease H2 complex",
-          "cosine_similarity": 0.68630641
         }
       ]
     },
