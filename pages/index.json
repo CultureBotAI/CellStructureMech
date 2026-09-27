@@ -4689,6 +4689,15 @@
   "definition": "A protein complex that contains at least TOR (target of rapamycin) and Rictor (rapamycin-insensitive companion of TOR), or orthologs of, in complex with other signaling components. Mediates the phosphorylation and activation of PKB (also called AKT). In Saccharomyces, the complex contains Avo1p, Avo2p, Tsc11p, Lst8p, Bit61p, Slm1p, Slm2p, and Tor2p."
  },
  {
+  "identifier": "GO:0031499",
+  "label": "TRAMP complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/tramp_complex.html",
+  "definition": "A multiprotein complex having distributive polyadenylation activity of a variety of RNA substrates including hypomodified and incorrectly folded tRNAs, pre-snRNAs, pre-snoRNAs, incorrectly spliced or processed pre-mRNAs, cryptic unstable transcripts (CUTs), pre-rRNAs and rRNA fragments released as part of rRNA processing. In S. cerevisiae, the complex consists of either Pap2 (also known as Trf4) or Trf5, Air1 or Air2, and Mtr4, and is involved in RNA 3'-end processing and in RNA surveillance and quality control."
+ },
+ {
   "identifier": "GO:1990070",
   "label": "TRAPPI protein complex",
   "category": "OTHER",

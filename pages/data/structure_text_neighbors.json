@@ -12630,6 +12630,11 @@
       "label": "elongator holoenzyme complex",
       "neighbors": [
         {
+          "identifier": "GO:0031499",
+          "label": "TRAMP complex",
+          "cosine_similarity": 0.77979768
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.76689199
@@ -12648,11 +12653,6 @@
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.75304138
-        },
-        {
-          "identifier": "GO:0033698",
-          "label": "Rpd3L complex",
-          "cosine_similarity": 0.74956452
         }
       ]
     },
@@ -16160,6 +16160,37 @@
       ]
     },
     {
+      "identifier": "GO:0031499",
+      "label": "TRAMP complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.80158576
+        },
+        {
+          "identifier": "GO:0033588",
+          "label": "elongator holoenzyme complex",
+          "cosine_similarity": 0.77979768
+        },
+        {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.76671903
+        },
+        {
+          "identifier": "GO:0030905",
+          "label": "retromer, tubulation complex",
+          "cosine_similarity": 0.75583608
+        },
+        {
+          "identifier": "GO:1990070",
+          "label": "TRAPPI protein complex",
+          "cosine_similarity": 0.75508406
+        }
+      ]
+    },
+    {
       "identifier": "GO:1990070",
       "label": "TRAPPI protein complex",
       "neighbors": [
@@ -16184,9 +16215,9 @@
           "cosine_similarity": 0.76915128
         },
         {
-          "identifier": "GO:0000938",
-          "label": "GARP complex",
-          "cosine_similarity": 0.75093928
+          "identifier": "GO:0031499",
+          "label": "TRAMP complex",
+          "cosine_similarity": 0.75508406
         }
       ]
     },
@@ -16215,9 +16246,9 @@
           "cosine_similarity": 0.75244982
         },
         {
-          "identifier": "GO:0071986",
-          "label": "Ragulator complex",
-          "cosine_similarity": 0.72666296
+          "identifier": "GO:0031499",
+          "label": "TRAMP complex",
+          "cosine_similarity": 0.74611436
         }
       ]
     },
@@ -16246,9 +16277,9 @@
           "cosine_similarity": 0.74676317
         },
         {
-          "identifier": "GO:0071986",
-          "label": "Ragulator complex",
-          "cosine_similarity": 0.73701958
+          "identifier": "GO:0031499",
+          "label": "TRAMP complex",
+          "cosine_similarity": 0.74161828
         }
       ]
     },
