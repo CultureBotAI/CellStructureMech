@@ -13463,6 +13463,37 @@
       ]
     },
     {
+      "identifier": "GO:0043564",
+      "label": "Ku70:Ku80 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030690",
+          "label": "Noc1p-Noc2p complex",
+          "cosine_similarity": 0.69137652
+        },
+        {
+          "identifier": "GO:0030692",
+          "label": "Noc4p-Nop14p complex",
+          "cosine_similarity": 0.68971054
+        },
+        {
+          "identifier": "GO:0030691",
+          "label": "Noc2p-Noc3p complex",
+          "cosine_similarity": 0.68366503
+        },
+        {
+          "identifier": "GO:0031262",
+          "label": "Ndc80 complex",
+          "cosine_similarity": 0.67852523
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.66675714
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030117",
       "label": "membrane coat",
       "neighbors": [
