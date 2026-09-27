@@ -1,0 +1,254 @@
+identifier: GO:0031499
+label: TRAMP complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multiprotein complex having distributive polyadenylation activity of
+  a variety of RNA substrates including hypomodified and incorrectly folded tRNAs,
+  pre-snRNAs, pre-snoRNAs, incorrectly spliced or processed pre-mRNAs, cryptic unstable
+  transcripts (CUTs), pre-rRNAs and rRNA fragments released as part of rRNA processing.
+  In S. cerevisiae, the complex consists of either Pap2 (also known as Trf4) or Trf5,
+  Air1 or Air2, and Mtr4, and is involved in RNA 3'-end processing and in RNA surveillance
+  and quality control.
+definition_source: GO:0031499
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T12:33:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T12:34:23Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO TRAMP narrow synonymy, nuclear protein-containing-complex parentage,
+    three reviewed-label-only budding-yeast constituent rows, Saccharomyces cerevisiae
+    scope, RNA-surveillance function evidence, GO/PubMed/DOI evidence, a nonmechanistic
+    function graph, and a TRAMP subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: TRAMP4 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031499
+- synonym_text: TRAMP5 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031499
+- synonym_text: Trf4 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031499
+- synonym_text: Trf4p-Air2p-Mtr4p polyadenylation complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031499
+- synonym_text: Trf4 poly(A) polymerase complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031499
+parent_structures:
+- GO:0140513
+components:
+- component_id: trf4_trf5_poly_a_polymerase_subunit
+  label: Trf4/Trf5 poly(A) polymerase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRF4
+  - TRF5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0031499 models the catalytic TRAMP subunit as either budding-yeast
+    Pap2/Trf4 or Trf5; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Distributive poly(A) polymerase catalytic constituent of budding-yeast TRAMP4
+    or TRAMP5 complexes.
+  evidence:
+  - reference: GO:0031499
+    notes: GO:0031499 defines Saccharomyces TRAMP as containing either Pap2/Trf4 or
+      Trf5.
+  - reference: DOI:10.1371/journal.pbio.0030189
+    notes: Vanacova et al. 2005 identified Trf4p as the catalytic subunit of a yeast
+      poly(A) polymerase complex.
+- component_id: air1_air2_rna_binding_subunit
+  label: Air1/Air2 RNA-binding subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - AIR1
+  - AIR2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0031499 models the RNA-binding TRAMP subunit as either Air1
+    or Air2; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE
+    was curated in this pass.
+  role: Putative RNA-binding zinc-knuckle constituent of budding-yeast TRAMP complexes.
+  evidence:
+  - reference: GO:0031499
+    notes: GO:0031499 defines Saccharomyces TRAMP as containing Air1 or Air2.
+  - reference: DOI:10.1371/journal.pbio.0030189
+    notes: Vanacova et al. 2005 detected Air1p or Air2p as potential RNA-binding subunits
+      of the Trf4p complex.
+- component_id: mtr4_rna_helicase_subunit
+  label: Mtr4 RNA helicase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MTR4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Mtr4 is modeled as the RNA-helicase constituent of the Saccharomyces
+    TRAMP complex; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family
+    CURIE was curated in this pass.
+  role: Putative RNA helicase constituent of budding-yeast TRAMP complexes.
+  evidence:
+  - reference: GO:0031499
+    notes: GO:0031499 defines Saccharomyces TRAMP as containing Mtr4.
+  - reference: DOI:10.1371/journal.pbio.0030189
+    notes: Vanacova et al. 2005 detected Mtr4p in the Trf4p poly(A) polymerase complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has TRAMP complexes containing Pap2/Trf4 or Trf5, Air1 or Air2,
+    and Mtr4.
+  reference: GO:0031499
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system in which Vanacova et al. identified Trf4p,
+    Air1p or Air2p, and Mtr4p as constituents of a new RNA-quality-control poly(A)
+    polymerase complex.
+  reference: DOI:10.1371/journal.pbio.0030189
+functions:
+- function_id: polyadenylation_dependent_rna_catabolism
+  label: polyadenylation-dependent RNA catabolic process
+  grounding: GO:0043633
+  description: TRAMP polyadenylates RNA substrates to promote exosome-mediated RNA
+    degradation.
+  evidence:
+  - reference: GO:0031499
+    notes: GO:0031499 defines TRAMP as a distributive polyadenylation complex involved
+      in RNA surveillance.
+  - reference: GO:0043633
+    notes: GO:0043633 is the Gene Ontology biological-process term for polyadenylation-dependent
+      RNA catabolic process.
+  - reference: DOI:10.1371/journal.pbio.0030189
+    notes: Vanacova et al. 2005 connected Trf4-complex polyadenylation to nuclear
+      exosome degradation of an unmodified tRNA substrate in vitro.
+- function_id: nuclear_rna_surveillance
+  label: nuclear RNA surveillance
+  grounding: GO:0071027
+  description: TRAMP participates in nuclear RNA surveillance and quality control
+    in budding yeast.
+  evidence:
+  - reference: GO:0031499
+    notes: GO:0031499 defines TRAMP as involved in RNA surveillance and quality control.
+  - reference: GO:0071027
+    notes: GO:0071027 is the Gene Ontology biological-process term for nuclear RNA
+      surveillance.
+evidence:
+- reference: GO:0031499
+  notes: Gene Ontology cellular-component term for the TRAMP complex.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0043633
+  notes: Gene Ontology biological-process term for polyadenylation-dependent RNA catabolic
+    process.
+- reference: GO:0071027
+  notes: Gene Ontology biological-process term for nuclear RNA surveillance.
+- reference: PMID:15828860
+  notes: PubMed identifier for Vanacova et al. 2005, the PLoS Biology paper on a yeast
+    RNA-quality-control poly(A) polymerase complex.
+- reference: DOI:10.1371/journal.pbio.0030189
+  notes: DOI for Vanacova et al. 2005, verified through PubMed.
+causal_graphs:
+- graph_id: tramp_polyadenylation_rna_surveillance
+  title: TRAMP polyadenylates RNAs for surveillance
+  description: The Saccharomyces Trf4/Trf5, Air1/Air2 and Mtr4 proteins form TRAMP
+    complexes that polyadenylate RNA substrates for surveillance-linked degradation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three GO-defined constituent classes and two
+    GO-level RNA quality-control processes without resolving substrate recognition,
+    exosome recruitment or TRAMP4 versus TRAMP5 specificity.
+  nodes:
+  - node_id: trf4_trf5_poly_a_polymerase_subunit
+    label: Trf4/Trf5 poly(A) polymerase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trf4_trf5_poly_a_polymerase_subunit
+  - node_id: air1_air2_rna_binding_subunit
+    label: Air1/Air2 RNA-binding subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: air1_air2_rna_binding_subunit
+  - node_id: mtr4_rna_helicase_subunit
+    label: Mtr4 RNA helicase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: mtr4_rna_helicase_subunit
+  - node_id: tramp_complex
+    label: TRAMP complex
+    node_type: STRUCTURE
+    grounding: GO:0031499
+  - node_id: polyadenylation_dependent_rna_catabolism
+    label: polyadenylation-dependent RNA catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0043633
+  - node_id: nuclear_rna_surveillance
+    label: nuclear RNA surveillance
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071027
+  edges:
+  - subject: trf4_trf5_poly_a_polymerase_subunit
+    predicate: contributes to
+    object: tramp_complex
+    description: Pap2/Trf4 or Trf5 provides the TRAMP poly(A) polymerase constituent.
+    evidence:
+    - reference: GO:0031499
+      notes: GO:0031499 defines Saccharomyces TRAMP as containing either Pap2/Trf4
+        or Trf5.
+  - subject: air1_air2_rna_binding_subunit
+    predicate: contributes to
+    object: tramp_complex
+    description: Air1 or Air2 provides the TRAMP putative RNA-binding constituent.
+    evidence:
+    - reference: GO:0031499
+      notes: GO:0031499 defines Saccharomyces TRAMP as containing Air1 or Air2.
+  - subject: mtr4_rna_helicase_subunit
+    predicate: contributes to
+    object: tramp_complex
+    description: Mtr4 provides the TRAMP putative RNA-helicase constituent.
+    evidence:
+    - reference: GO:0031499
+      notes: GO:0031499 defines Saccharomyces TRAMP as containing Mtr4.
+  - subject: tramp_complex
+    predicate: supports
+    object: polyadenylation_dependent_rna_catabolism
+    description: TRAMP-mediated polyadenylation promotes exosome-linked RNA degradation.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.0030189
+      notes: Vanacova et al. 2005 connected Trf4-complex polyadenylation activity
+        to nuclear exosome degradation of an RNA substrate.
+  - subject: tramp_complex
+    predicate: supports
+    object: nuclear_rna_surveillance
+    description: TRAMP supports nuclear RNA surveillance and quality control.
+    evidence:
+    - reference: GO:0031499
+      notes: GO:0031499 defines TRAMP as involved in RNA surveillance and quality
+        control.
+    - reference: GO:0071027
+      notes: GO:0071027 is the biological-process term for nuclear RNA surveillance.
+discussions:
+- discussion_id: resolve_tramp_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the Trf4/Trf5, Air1/Air2
+    and Mtr4 constituents of the TRAMP complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#trf4_trf5_poly_a_polymerase_subunit
+  - components#air1_air2_rna_binding_subunit
+  - components#mtr4_rna_helicase_subunit
+  rationale: GO:0031499 exactly identifies the yeast TRAMP complex, but exact InterPro,
+    Pfam, NCBIfam or UniProtKB family boundaries for the alternating catalytic and
+    RNA-binding subunit classes need narrower follow-up curation.
+  evidence:
+  - reference: GO:0031499
+    notes: GO:0031499 defines the Saccharomyces TRAMP component alternatives.
+  posed_by: codex
+  posed_date: '2026-09-27'

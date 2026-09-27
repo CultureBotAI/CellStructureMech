@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/tramp_complex.yaml
+  slug: tramp_complex
+session:
+  id: 2026-09-27T123500Z-codex-d8fea3
+  timestamp: '2026-09-27T12:35:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add TRAMP complex record
+  details: Added a GO-grounded TRAMP complex record with nuclear protein-containing-complex
+    parentage, Saccharomyces cerevisiae Trf4/Trf5, Air1/Air2 and Mtr4 constituent rows, RNA
+    surveillance functions, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a
+    TRAMP subunit-grounding TODO.
