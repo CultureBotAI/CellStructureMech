@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/elongator_holoenzyme_complex.yaml
+  slug: elongator_holoenzyme_complex
+session:
+  id: 2026-09-27T080959Z-claude-code-b035a3
+  timestamp: '2026-09-27T08:09:59Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the elongator holoenzyme complex record.
+  details: Created a GO:0033588-grounded Elongator holoenzyme record with six Saccharomyces
+    cerevisiae Elp constituent proteins, direct Gene Ontology parentage, yeast taxonomic scope,
+    tRNA wobble-base modification function evidence, PubMed/DOI provenance, a nonmechanistic
+    function graph, and an open TODO to resolve exact source-neutral subunit family groundings.

@@ -1,0 +1,387 @@
+identifier: GO:0033588
+label: elongator holoenzyme complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterohexameric protein complex composed two discrete heterotrimeric
+  subcomplexes that is involved in modification of wobble nucleosides in tRNA.
+definition_source: GO:0033588
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T08:06:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T08:08:27Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Elongator exact synonymy, direct GO parentage, six budding-yeast
+    Elongator constituent rows, yeast scope, tRNA wobble-base modification function,
+    GO/PubMed/DOI evidence, a nonmechanistic function graph, and an Elongator subunit-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-27T08:09:10Z'
+  curator: codex
+  action: REFINED_EVIDENCE_NOTES
+  changes: Normalized Winkler et al. Elongator composition evidence notes to name
+    Saccharomyces cerevisiae explicitly.
+  llm_assisted: true
+synonyms:
+- synonym_text: holo-Elongator
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1074/jbc.M105303200
+- synonym_text: Holo-Elongator complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/MCB.21.23.8203-8212.2001
+parent_structures:
+- GO:0140535
+- GO:1902494
+components:
+- component_id: elp1_elongator_subunit
+  label: Elp1 Elongator subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ELP1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Winkler et al. 2001 and Krogan and Greenblatt 2001 follow budding-yeast
+    Elp1 naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this Elongator holoenzyme subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Elp1-Elp2-Elp3 heterotrimeric Elongator
+    subcomplex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M105303200
+    notes: Winkler et al. 2001 purified Saccharomyces cerevisiae holo-Elongator and
+      reported a six-subunit factor separable into Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+      subcomplexes.
+  - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+    notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
+      and found that tagging any one of the six Elp subunits yielded all six components.
+- component_id: elp2_elongator_subunit
+  label: Elp2 Elongator subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ELP2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Winkler et al. 2001 and Krogan and Greenblatt 2001 follow budding-yeast
+    Elp2 naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this Elongator holoenzyme subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Elp1-Elp2-Elp3 heterotrimeric Elongator
+    subcomplex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M105303200
+    notes: Winkler et al. 2001 purified Saccharomyces cerevisiae holo-Elongator and
+      reported a six-subunit factor separable into Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+      subcomplexes.
+  - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+    notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
+      and found that tagging any one of the six Elp subunits yielded all six components.
+- component_id: elp3_elongator_subunit
+  label: Elp3 Elongator subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ELP3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Winkler et al. 2001 and Krogan and Greenblatt 2001 follow budding-yeast
+    Elp3 naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this Elongator holoenzyme subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Elp1-Elp2-Elp3 heterotrimeric Elongator
+    subcomplex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M105303200
+    notes: Winkler et al. 2001 purified Saccharomyces cerevisiae holo-Elongator and
+      reported a six-subunit factor separable into Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+      subcomplexes.
+  - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+    notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
+      and found that tagging any one of the six Elp subunits yielded all six components.
+- component_id: elp4_elongator_subunit
+  label: Elp4 Elongator subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ELP4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Winkler et al. 2001 and Krogan and Greenblatt 2001 follow budding-yeast
+    Elp4 naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this Elongator holoenzyme subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Elp4-Elp5-Elp6 heterotrimeric Elongator
+    subcomplex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M105303200
+    notes: Winkler et al. 2001 purified Saccharomyces cerevisiae holo-Elongator and
+      reported a six-subunit factor separable into Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+      subcomplexes.
+  - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+    notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
+      and found that tagging any one of the six Elp subunits yielded all six components.
+- component_id: elp5_elongator_subunit
+  label: Elp5 Elongator subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ELP5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Winkler et al. 2001 and Krogan and Greenblatt 2001 follow budding-yeast
+    Elp5 naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this Elongator holoenzyme subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Elp4-Elp5-Elp6 heterotrimeric Elongator
+    subcomplex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M105303200
+    notes: Winkler et al. 2001 purified Saccharomyces cerevisiae holo-Elongator and
+      reported a six-subunit factor separable into Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+      subcomplexes.
+  - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+    notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
+      and found that tagging any one of the six Elp subunits yielded all six components.
+- component_id: elp6_elongator_subunit
+  label: Elp6 Elongator subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ELP6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Winkler et al. 2001 and Krogan and Greenblatt 2001 follow budding-yeast
+    Elp6 naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this Elongator holoenzyme subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast Elp4-Elp5-Elp6 heterotrimeric Elongator
+    subcomplex.
+  evidence:
+  - reference: DOI:10.1074/jbc.M105303200
+    notes: Winkler et al. 2001 purified Saccharomyces cerevisiae holo-Elongator and
+      reported a six-subunit factor separable into Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+      subcomplexes.
+  - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+    notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
+      and found that tagging any one of the six Elp subunits yielded all six components.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism from which Winkler et al. 2001 and Krogan and
+    Greenblatt 2001 purified the six-subunit Elongator holoenzyme.
+  reference: DOI:10.1074/jbc.M105303200
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Krogan and Greenblatt 2001 purified budding-yeast Holo-Elongator and recovered
+    the six Elp1-Elp6 constituents after tandem-affinity purification of any single
+    subunit.
+  reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+functions:
+- function_id: trna_wobble_base_modification
+  label: tRNA wobble base modification
+  grounding: GO:0002097
+  description: Elongator supports post-transcriptional modification of tRNA wobble
+    nucleosides at anticodon position 34.
+  evidence:
+  - reference: GO:0033588
+    notes: Gene Ontology annotates GO:0033588 as capable_of_part_of GO:0002097, tRNA
+      wobble base modification.
+  - reference: GO:0002097
+    notes: GO:0002097 is the Gene Ontology biological-process term for post-transcriptional
+      modification of the position-34 tRNA wobble base.
+  - reference: DOI:10.1261/rna.7247705
+    notes: Huang et al. 2005 showed that the Elongator complex is required for an
+      early step of tRNA wobble uridine modification.
+evidence:
+- reference: GO:0033588
+  notes: Gene Ontology cellular-component term for the unrestricted, non-obsolete
+    elongator holoenzyme complex.
+- reference: GO:0140535
+  notes: Gene Ontology cellular-component parent term for intracellular protein-containing
+    complexes.
+- reference: GO:1902494
+  notes: Gene Ontology cellular-component parent term for catalytic complexes.
+- reference: GO:0002097
+  notes: Gene Ontology biological-process term for tRNA wobble base modification.
+- reference: PMID:11435442
+  notes: PubMed identifier for Winkler et al. 2001, the yeast holo-Elongator purification
+    and two-subcomplex composition paper.
+- reference: DOI:10.1074/jbc.M105303200
+  notes: DOI for Winkler et al. 2001, 'RNA polymerase II elongator holoenzyme is composed
+    of two discrete subcomplexes', verified through NCBI E-utilities.
+- reference: PMID:11689709
+  notes: PubMed identifier for Krogan and Greenblatt 2001, the six-subunit budding-yeast
+    Holo-Elongator paper.
+- reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+  notes: DOI for Krogan and Greenblatt 2001, 'Characterization of a six-subunit holo-elongator
+    complex required for the regulated expression of a group of genes in Saccharomyces
+    cerevisiae', verified through NCBI E-utilities.
+- reference: PMID:15769872
+  notes: PubMed identifier for Huang et al. 2005, the Elongator tRNA wobble uridine
+    modification paper.
+- reference: DOI:10.1261/rna.7247705
+  notes: DOI for Huang et al. 2005, 'An early step in wobble uridine tRNA modification
+    requires the Elongator complex', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_elongator_trna_wobble_modification
+  title: Elongator supports yeast tRNA wobble-base modification
+  description: In Saccharomyces cerevisiae, the Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+    subcomplexes form the six-subunit Elongator holoenzyme, which supports tRNA wobble-base
+    modification.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the six curated Elongator constituents and the broad
+    tRNA wobble-base modification function without resolving Elongator conformational
+    states, Elp3 catalysis or the downstream tRNA-modification cascade.
+  nodes:
+  - node_id: elp1_elongator_subunit
+    label: Elp1 Elongator subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: elp1_elongator_subunit
+  - node_id: elp2_elongator_subunit
+    label: Elp2 Elongator subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: elp2_elongator_subunit
+  - node_id: elp3_elongator_subunit
+    label: Elp3 Elongator subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: elp3_elongator_subunit
+  - node_id: elp4_elongator_subunit
+    label: Elp4 Elongator subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: elp4_elongator_subunit
+  - node_id: elp5_elongator_subunit
+    label: Elp5 Elongator subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: elp5_elongator_subunit
+  - node_id: elp6_elongator_subunit
+    label: Elp6 Elongator subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: elp6_elongator_subunit
+  - node_id: elongator_holoenzyme_complex
+    label: elongator holoenzyme complex
+    node_type: STRUCTURE
+    grounding: GO:0033588
+  - node_id: trna_wobble_base_modification
+    label: tRNA wobble base modification
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0002097
+  edges:
+  - subject: elp1_elongator_subunit
+    predicate: contributes to
+    object: elongator_holoenzyme_complex
+    description: Elp1 is a constituent of the budding-yeast Elp1-Elp2-Elp3 subcomplex
+      within Elongator.
+    evidence:
+    - reference: DOI:10.1074/jbc.M105303200
+      notes: Winkler et al. 2001 purified Saccharomyces cerevisiae holo-Elongator
+        and reported a six-subunit factor separable into Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+        subcomplexes.
+    - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+      notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
+        and found that tagging any one of the six Elp subunits yielded all six components.
+  - subject: elp2_elongator_subunit
+    predicate: contributes to
+    object: elongator_holoenzyme_complex
+    description: Elp2 is a constituent of the budding-yeast Elp1-Elp2-Elp3 subcomplex
+      within Elongator.
+    evidence:
+    - reference: DOI:10.1074/jbc.M105303200
+      notes: Winkler et al. 2001 purified Saccharomyces cerevisiae holo-Elongator
+        and reported a six-subunit factor separable into Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+        subcomplexes.
+    - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+      notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
+        and found that tagging any one of the six Elp subunits yielded all six components.
+  - subject: elp3_elongator_subunit
+    predicate: contributes to
+    object: elongator_holoenzyme_complex
+    description: Elp3 is a constituent of the budding-yeast Elp1-Elp2-Elp3 subcomplex
+      within Elongator.
+    evidence:
+    - reference: DOI:10.1074/jbc.M105303200
+      notes: Winkler et al. 2001 purified Saccharomyces cerevisiae holo-Elongator
+        and reported a six-subunit factor separable into Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+        subcomplexes.
+    - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+      notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
+        and found that tagging any one of the six Elp subunits yielded all six components.
+  - subject: elp4_elongator_subunit
+    predicate: contributes to
+    object: elongator_holoenzyme_complex
+    description: Elp4 is a constituent of the budding-yeast Elp4-Elp5-Elp6 subcomplex
+      within Elongator.
+    evidence:
+    - reference: DOI:10.1074/jbc.M105303200
+      notes: Winkler et al. 2001 purified Saccharomyces cerevisiae holo-Elongator
+        and reported a six-subunit factor separable into Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+        subcomplexes.
+    - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+      notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
+        and found that tagging any one of the six Elp subunits yielded all six components.
+  - subject: elp5_elongator_subunit
+    predicate: contributes to
+    object: elongator_holoenzyme_complex
+    description: Elp5 is a constituent of the budding-yeast Elp4-Elp5-Elp6 subcomplex
+      within Elongator.
+    evidence:
+    - reference: DOI:10.1074/jbc.M105303200
+      notes: Winkler et al. 2001 purified Saccharomyces cerevisiae holo-Elongator
+        and reported a six-subunit factor separable into Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+        subcomplexes.
+    - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+      notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
+        and found that tagging any one of the six Elp subunits yielded all six components.
+  - subject: elp6_elongator_subunit
+    predicate: contributes to
+    object: elongator_holoenzyme_complex
+    description: Elp6 is a constituent of the budding-yeast Elp4-Elp5-Elp6 subcomplex
+      within Elongator.
+    evidence:
+    - reference: DOI:10.1074/jbc.M105303200
+      notes: Winkler et al. 2001 purified Saccharomyces cerevisiae holo-Elongator
+        and reported a six-subunit factor separable into Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+        subcomplexes.
+    - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+      notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
+        and found that tagging any one of the six Elp subunits yielded all six components.
+  - subject: elongator_holoenzyme_complex
+    predicate: supports
+    object: trna_wobble_base_modification
+    description: Elongator supports tRNA wobble-base modification at anticodon position
+      34.
+    evidence:
+    - reference: GO:0033588
+      notes: Gene Ontology annotates the Elongator holoenzyme complex as capable_of_part_of
+        tRNA wobble base modification.
+    - reference: DOI:10.1261/rna.7247705
+      notes: Huang et al. 2005 showed that Elongator is required for an early step
+        of tRNA wobble uridine modification.
+discussions:
+- discussion_id: resolve_elongator_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Elp1-Elp6 Elongator
+    holoenzyme constituent classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#elp1_elongator_subunit
+  - components#elp2_elongator_subunit
+  - components#elp3_elongator_subunit
+  - components#elp4_elongator_subunit
+  - components#elp5_elongator_subunit
+  - components#elp6_elongator_subunit
+  rationale: The budding-yeast Elp proteins participate in two heterotrimeric subcomplexes,
+    but exact InterPro, Pfam, NCBIfam or UniProt family CURIEs should only be curated
+    after verifying that they denote the full subunit class rather than a shared WD-repeat,
+    acetyltransferase or recA-like domain.
+  evidence:
+  - reference: DOI:10.1074/jbc.M105303200
+    notes: Winkler et al. 2001 purified Saccharomyces cerevisiae holo-Elongator and
+      reported a six-subunit factor separable into Elp1-Elp2-Elp3 and Elp4-Elp5-Elp6
+      subcomplexes.
+  - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
+    notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
+      and found that tagging any one of the six Elp subunits yielded all six components.
+  posed_by: codex
+  posed_date: '2026-09-27'
