@@ -13079,14 +13079,14 @@
           "cosine_similarity": 0.8072003
         },
         {
+          "identifier": "GO:0031533",
+          "label": "mRNA capping enzyme complex",
+          "cosine_similarity": 0.80363957
+        },
+        {
           "identifier": "GO:0008623",
           "label": "CHRAC",
           "cosine_similarity": 0.80315648
-        },
-        {
-          "identifier": "GO:0033186",
-          "label": "CAF-1 complex",
-          "cosine_similarity": 0.80307619
         }
       ]
     },
@@ -13924,6 +13924,37 @@
           "identifier": "GO:0034457",
           "label": "Mpp10 complex",
           "cosine_similarity": 0.76648844
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031533",
+      "label": "mRNA capping enzyme complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.80363957
+        },
+        {
+          "identifier": "GO:0031499",
+          "label": "TRAMP complex",
+          "cosine_similarity": 0.78915562
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.77104178
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.76768574
+        },
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.76758511
         }
       ]
     },
@@ -16200,6 +16231,11 @@
           "cosine_similarity": 0.80158576
         },
         {
+          "identifier": "GO:0031533",
+          "label": "mRNA capping enzyme complex",
+          "cosine_similarity": 0.78915562
+        },
+        {
           "identifier": "GO:0033588",
           "label": "elongator holoenzyme complex",
           "cosine_similarity": 0.77979768
@@ -16213,11 +16249,6 @@
           "identifier": "GO:0030905",
           "label": "retromer, tubulation complex",
           "cosine_similarity": 0.75583608
-        },
-        {
-          "identifier": "GO:1990070",
-          "label": "TRAPPI protein complex",
-          "cosine_similarity": 0.75508406
         }
       ]
     },
@@ -16634,6 +16665,11 @@
           "cosine_similarity": 0.72205285
         },
         {
+          "identifier": "GO:0031533",
+          "label": "mRNA capping enzyme complex",
+          "cosine_similarity": 0.68902927
+        },
+        {
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
           "cosine_similarity": 0.68543776
@@ -16647,11 +16683,6 @@
           "identifier": "GO:0000177",
           "label": "cytoplasmic exosome (RNase complex)",
           "cosine_similarity": 0.68061665
-        },
-        {
-          "identifier": "GO:0000172",
-          "label": "ribonuclease MRP complex",
-          "cosine_similarity": 0.67717835
         }
       ]
     },

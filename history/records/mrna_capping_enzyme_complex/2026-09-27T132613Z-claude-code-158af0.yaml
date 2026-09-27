@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mrna_capping_enzyme_complex.yaml
+  slug: mrna_capping_enzyme_complex
+session:
+  id: 2026-09-27T132613Z-claude-code-158af0
+  timestamp: '2026-09-27T13:26:13Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add mRNA capping enzyme complex record
+  details: Created the GO:0031533 mRNA capping enzyme complex record with nuclear protein-containing-complex
+    parentage, budding-yeast Cet1 and Ceg1 constituent rows left as reviewed-label-only pending
+    exact source-neutral family groundings, Saccharomyces cerevisiae scope, a 7-methylguanosine
+    mRNA capping function, GO/PubMed/DOI evidence, a nonmechanistic function graph, and an
+    open subunit-grounding discussion. Validated the record with linkml-validate and validate_strict.

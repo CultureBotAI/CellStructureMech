@@ -1,0 +1,189 @@
+identifier: GO:0031533
+label: mRNA capping enzyme complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that consists of an RNA 5' triphosphatase and a guanyl
+  transferase (Cet1p and Ceg1p in S. cerevisiae; Pct1 and Ceg1 in S. pombe) and is
+  involved in mRNA capping.
+definition_source: GO:0031533
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T13:23:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T13:24:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nuclear protein-containing-complex parentage, Cet1 and Ceg1 reviewed-label-only
+    budding-yeast constituent rows, yeast scope, mRNA-capping function evidence, GO/PubMed/DOI
+    evidence, a nonmechanistic function graph, and an mRNA-capping-enzyme subunit-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-27T13:25:17Z'
+  curator: codex
+  action: NORMALIZE_LOCAL_ID
+  changes: Renamed the mRNA-capping function_id to lowercase snake case.
+  llm_assisted: true
+parent_structures:
+- GO:0140513
+components:
+- component_id: cet1_rna_5_triphosphatase_subunit
+  label: Cet1 RNA 5'-triphosphatase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CET1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Cet1 RNA 5'-triphosphatase subunit is modeled as a named budding-yeast
+    mRNA capping enzyme constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: RNA 5'-triphosphatase constituent of the Saccharomyces cerevisiae mRNA capping
+    enzyme complex.
+  evidence:
+  - reference: GO:0031533
+    notes: GO:0031533 defines the Saccharomyces mRNA capping enzyme complex as containing
+      Cet1p RNA 5'-triphosphatase and Ceg1p guanyltransferase subunits.
+- component_id: ceg1_guanyltransferase_subunit
+  label: Ceg1 guanyltransferase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CEG1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Ceg1 guanyltransferase subunit is modeled as a named budding-yeast
+    mRNA capping enzyme constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: Guanyltransferase constituent of the Saccharomyces cerevisiae mRNA capping
+    enzyme complex.
+  evidence:
+  - reference: GO:0031533
+    notes: GO:0031533 defines the Saccharomyces mRNA capping enzyme complex as containing
+      Cet1p RNA 5'-triphosphatase and Ceg1p guanyltransferase subunits.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has an mRNA capping enzyme complex containing Cet1p RNA 5'-triphosphatase
+    and Ceg1p guanyltransferase subunits.
+  reference: GO:0031533
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system named in the GO:0031533 definition as containing
+    Cet1p and Ceg1p.
+  reference: GO:0031533
+functions:
+- function_id: mrna_capping
+  label: 7-methylguanosine mRNA capping
+  grounding: GO:0006370
+  description: The mRNA capping enzyme complex participates in mRNA capping.
+  evidence:
+  - reference: GO:0031533
+    notes: GO:0031533 defines the mRNA capping enzyme complex as involved in mRNA
+      capping.
+  - reference: GO:0006370
+    notes: GO:0006370 is the Gene Ontology biological-process term for 7-methylguanosine
+      mRNA capping.
+evidence:
+- reference: GO:0031533
+  notes: Gene Ontology cellular-component term for the mRNA capping enzyme complex.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0006370
+  notes: Gene Ontology biological-process term for 7-methylguanosine mRNA capping.
+- reference: PMID:10347220
+  notes: PubMed identifier for Saha et al. 1999, one of the GO:0031533 definition
+    sources.
+- reference: DOI:10.1074/jbc.274.23.16553
+  notes: DOI for Saha et al. 1999, verified through PubMed.
+- reference: PMID:12455993
+  notes: PubMed identifier for Takagi et al. 2002, one of the GO:0031533 definition
+    sources.
+- reference: DOI:10.1128/EC.1.3.448-457.2002
+  notes: DOI for Takagi et al. 2002, verified through PubMed and PMC.
+- reference: PMID:9345280
+  notes: PubMed identifier for Tsukamoto et al. 1997, one of the GO:0031533 definition
+    sources.
+- reference: DOI:10.1006/bbrc.1997.7439
+  notes: DOI for Tsukamoto et al. 1997, verified through PubMed.
+causal_graphs:
+- graph_id: mrna_capping_enzyme_caps_mrna
+  title: mRNA capping enzyme complex caps nascent mRNA
+  description: Cet1p and Ceg1p form the Saccharomyces cerevisiae mRNA capping enzyme
+    complex that participates in mRNA capping.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the two budding-yeast mRNA capping enzyme constituents
+    and the GO-level capping process without resolving RNA polymerase II recruitment,
+    phosphatase chemistry, GMP transfer chemistry or downstream cap methylation.
+  nodes:
+  - node_id: cet1_rna_5_triphosphatase_subunit
+    label: Cet1 RNA 5'-triphosphatase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cet1_rna_5_triphosphatase_subunit
+  - node_id: ceg1_guanyltransferase_subunit
+    label: Ceg1 guanyltransferase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ceg1_guanyltransferase_subunit
+  - node_id: mrna_capping_enzyme_complex
+    label: mRNA capping enzyme complex
+    node_type: STRUCTURE
+    grounding: GO:0031533
+  - node_id: mrna_capping
+    label: 7-methylguanosine mRNA capping
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006370
+  edges:
+  - subject: cet1_rna_5_triphosphatase_subunit
+    predicate: contributes to
+    object: mrna_capping_enzyme_complex
+    description: Cet1p is the RNA 5'-triphosphatase constituent of the budding-yeast
+      mRNA capping enzyme complex.
+    evidence:
+    - reference: GO:0031533
+      notes: GO:0031533 defines the Saccharomyces mRNA capping enzyme complex as containing
+        Cet1p and Ceg1p.
+  - subject: ceg1_guanyltransferase_subunit
+    predicate: contributes to
+    object: mrna_capping_enzyme_complex
+    description: Ceg1p is the guanyltransferase constituent of the budding-yeast mRNA
+      capping enzyme complex.
+    evidence:
+    - reference: GO:0031533
+      notes: GO:0031533 defines the Saccharomyces mRNA capping enzyme complex as containing
+        Cet1p and Ceg1p.
+  - subject: mrna_capping_enzyme_complex
+    predicate: supports
+    object: mrna_capping
+    description: The mRNA capping enzyme complex supports 7-methylguanosine mRNA capping.
+    evidence:
+    - reference: GO:0031533
+      notes: GO:0031533 defines the mRNA capping enzyme complex as involved in mRNA
+        capping.
+    - reference: GO:0006370
+      notes: GO:0006370 is the biological-process term for 7-methylguanosine mRNA
+        capping.
+discussions:
+- discussion_id: resolve_mrna_capping_enzyme_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the Cet1 and Ceg1 constituents
+    of the mRNA capping enzyme complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cet1_rna_5_triphosphatase_subunit
+  - components#ceg1_guanyltransferase_subunit
+  rationale: GO:0031533 exactly identifies the mRNA capping enzyme complex and names
+    the budding-yeast Cet1p and Ceg1p constituents, but exact source-neutral InterPro,
+    Pfam, NCBIfam or UniProtKB family CURIEs for the RNA 5'-triphosphatase and guanyltransferase
+    subunit classes were not curated in this pass.
+  evidence:
+  - reference: GO:0031533
+    notes: GO:0031533 defines the Saccharomyces mRNA capping enzyme complex as comprising
+      Cet1p and Ceg1p.
+  posed_by: codex
+  posed_date: '2026-09-27'
