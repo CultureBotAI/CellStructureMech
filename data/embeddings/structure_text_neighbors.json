@@ -16935,6 +16935,37 @@
       ]
     },
     {
+      "identifier": "GO:0015030",
+      "label": "Cajal body",
+      "neighbors": [
+        {
+          "identifier": "GO:0005686",
+          "label": "U2 snRNP",
+          "cosine_similarity": 0.76921799
+        },
+        {
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.75033602
+        },
+        {
+          "identifier": "GO:0005688",
+          "label": "U6 snRNP",
+          "cosine_similarity": 0.74929611
+        },
+        {
+          "identifier": "GO:0005682",
+          "label": "U5 snRNP",
+          "cosine_similarity": 0.74730098
+        },
+        {
+          "identifier": "GO:0120259",
+          "label": "7SK snRNP",
+          "cosine_similarity": 0.74627537
+        }
+      ]
+    },
+    {
       "identifier": "GO:0071012",
       "label": "catalytic step 1 spliceosome",
       "neighbors": [
@@ -17352,6 +17383,11 @@
           "cosine_similarity": 0.72205285
         },
         {
+          "identifier": "GO:0015030",
+          "label": "Cajal body",
+          "cosine_similarity": 0.71914305
+        },
+        {
           "identifier": "GO:0030681",
           "label": "multimeric ribonuclease P complex",
           "cosine_similarity": 0.71887224
@@ -17360,11 +17396,6 @@
           "identifier": "GO:0000177",
           "label": "cytoplasmic exosome (RNase complex)",
           "cosine_similarity": 0.7148273
-        },
-        {
-          "identifier": "GO:1990061",
-          "label": "bacterial degradosome",
-          "cosine_similarity": 0.7128217
         }
       ]
     },

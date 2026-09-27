@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/cajal_body.yaml
+  slug: cajal_body
+session:
+  id: 2026-09-27T214336Z-codex-3b4f96
+  timestamp: '2026-09-27T21:43:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Cajal body record
+  details: Added a GO:0015030 Cajal body record after a hidden and ignored-inclusive duplicate
+    search, with exact GO coiled-body synonymy, related Gems synonymy, GO:0140168 nuclear
+    ribonucleoprotein granule parentage, nuclear-lumen parthood, coilin, spliceosomal snRNP
+    complex and small Cajal body-specific RNA components, a broad Eukaryota distribution row,
+    a Homo sapiens canonical example, snRNP-biogenesis function evidence, a nonmechanistic
+    RNP-residency graph, and a component-grounding TODO.
