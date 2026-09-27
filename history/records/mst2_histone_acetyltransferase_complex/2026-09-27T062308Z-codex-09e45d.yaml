@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+  slug: mst2_histone_acetyltransferase_complex
+session:
+  id: 2026-09-27T062308Z-codex-09e45d
+  timestamp: '2026-09-27T06:23:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the Mst2 histone acetyltransferase complex record.
+  details: Created an evidence-backed GO:0036410 record for the Schizosaccharomyces pombe
+    Mst2 histone H3K14 acetyltransferase complex with GO parentage, exact Mst2 complex synonyms,
+    Mst2/Nto1/Ptf2/Ptf1/Eaf6 constituents, fission-yeast distribution and example rows, GO:0036408
+    histone H3K14 acetyltransferase activity, a nonmechanistic function graph, and GO/PubMed/DOI
+    evidence from Reddy et al. 2011. Left exact source-neutral subunit family groundings as
+    an explicit curation TODO.

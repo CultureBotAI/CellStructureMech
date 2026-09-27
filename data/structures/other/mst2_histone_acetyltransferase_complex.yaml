@@ -1,0 +1,300 @@
+identifier: GO:0036410
+label: Mst2 histone acetyltransferase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that can catalyze the acetylation of lysine at position
+  14 in histone H3, and contains Mst2 as the catalytic subunit. In fission yeast,
+  contains at least Mst2, Nto1, Ptf2, Ptf1 and Eaf6.
+definition_source: GO:0036410
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T06:20:20Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T06:22:16Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added H3K14 HAT parentage, three Mst2 complex exact synonyms, five fission-yeast
+    constituent rows, fission-yeast scope, histone H3K14 acetyltransferase activity,
+    GO/PubMed/DOI evidence, a nonmechanistic function graph, and an Mst2 complex subunit-grounding
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Mst2 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036410
+- synonym_text: Mst2 H3K14 acetyltransferase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036410
+- synonym_text: Mst2 histone H3K14 acetyltransferase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036410
+parent_structures:
+- GO:0036409
+components:
+- component_id: mst2_complex_catalytic_subunit
+  label: Mst2 complex catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - mst2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0036410, PomBase annotations and the fission-yeast Mst2 primary
+    literature follow Schizosaccharomyces pombe mst2 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this Mst2-complex subunit
+    class was curated in this pass.
+  role: MYST-family catalytic subunit of the fission-yeast Mst2 histone H3K14 acetyltransferase
+    complex.
+  evidence:
+  - reference: GO:0036410
+    notes: GO:0036410 defines Mst2 as the Mst2-complex catalytic subunit.
+  - reference: DOI:10.1101/gad.1993611
+    notes: Reddy et al. 2011 described Mst2 as the H3K14 acetyltransferase catalytic
+      subunit.
+- component_id: nto1_mst2_complex_subunit
+  label: Nto1 Mst2 complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - nto1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0036410, PomBase annotations and the fission-yeast Mst2 primary
+    literature follow Schizosaccharomyces pombe nto1 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this Mst2-complex subunit
+    class was curated in this pass.
+  role: Protein constituent required for Mst2 histone H3K14 acetyltransferase activity
+    in fission yeast.
+  evidence:
+  - reference: GO:0036410
+    notes: GO:0036410 defines Nto1 as a fission-yeast Mst2-complex constituent.
+  - reference: DOI:10.1101/gad.1993611
+    notes: Reddy et al. 2011 identified Nto1 as an activity-essential Mst2-complex
+      component.
+- component_id: ptf2_mst2_complex_subunit
+  label: Ptf2 Mst2 complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ptf2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0036410, PomBase annotations and the fission-yeast Mst2 primary
+    literature follow Schizosaccharomyces pombe ptf2 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this Mst2-complex subunit
+    class was curated in this pass.
+  role: Protein constituent required for Mst2 histone H3K14 acetyltransferase activity
+    in fission yeast.
+  evidence:
+  - reference: GO:0036410
+    notes: GO:0036410 defines Ptf2 as a fission-yeast Mst2-complex constituent.
+  - reference: DOI:10.1101/gad.1993611
+    notes: Reddy et al. 2011 identified Ptf2 as an activity-essential Mst2-complex
+      component.
+- component_id: ptf1_mst2_complex_subunit
+  label: Ptf1 Mst2 complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ptf1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0036410, PomBase annotations and the fission-yeast Mst2 primary
+    literature follow Schizosaccharomyces pombe ptf1 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this Mst2-complex subunit
+    class was curated in this pass.
+  role: Protein constituent of the fission-yeast Mst2 complex that is not required
+    for its acetyltransferase activity.
+  evidence:
+  - reference: GO:0036410
+    notes: GO:0036410 defines Ptf1 as a fission-yeast Mst2-complex constituent.
+  - reference: DOI:10.1101/gad.1993611
+    notes: Reddy et al. 2011 identified Ptf1 as an Mst2-complex component.
+- component_id: eaf6_mst2_complex_subunit
+  label: Eaf6 Mst2 complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - eaf6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0036410, PomBase annotations and the fission-yeast Mst2 primary
+    literature follow Schizosaccharomyces pombe eaf6 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this Mst2-complex subunit
+    class was curated in this pass.
+  role: Protein constituent of the fission-yeast Mst2 complex that is not required
+    for its acetyltransferase activity.
+  evidence:
+  - reference: GO:0036410
+    notes: GO:0036410 defines Eaf6 as a fission-yeast Mst2-complex constituent.
+  - reference: DOI:10.1101/gad.1993611
+    notes: Reddy et al. 2011 identified Eaf6 as an Mst2-complex component.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Fission yeast is the organism in which GO:0036410 defines the Mst2 histone
+    acetyltransferase complex as containing Mst2, Nto1, Ptf2, Ptf1 and Eaf6.
+  reference: GO:0036410
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Reddy et al. 2011 studied the fission-yeast Mst2 complex in pericentric heterochromatin
+    and distinguished Nto1/Ptf2 activity-essential subunits from Ptf1/Eaf6 subunits.
+  reference: DOI:10.1101/gad.1993611
+functions:
+- function_id: histone_h3k14_acetyltransferase_activity
+  label: histone H3K14 acetyltransferase activity
+  grounding: GO:0036408
+  description: The Mst2 complex catalyzes Mst2-dependent histone H3K14 acetylation
+    in fission yeast.
+  evidence:
+  - reference: GO:0036410
+    notes: GO:0036410 defines Mst2 as an H3K14 acetyltransferase complex.
+  - reference: GO:0036408
+    notes: GO:0036408 is the Gene Ontology molecular-function term for histone H3K14
+      acetyltransferase activity.
+  - reference: DOI:10.1101/gad.1993611
+    notes: Reddy et al. 2011 connected the Mst2 complex with fission-yeast H3K14 acetylation.
+evidence:
+- reference: GO:0036410
+  notes: Gene Ontology cellular-component term for the Mst2 histone acetyltransferase
+    complex.
+- reference: GO:0036409
+  notes: Gene Ontology cellular-component parent term for H3-K14-specific histone
+    acetyltransferase complexes.
+- reference: GO:0036408
+  notes: Gene Ontology molecular-function term for histone H3K14 acetyltransferase
+    activity.
+- reference: PMID:21289066
+  notes: PubMed identifier for Reddy et al. 2011, the Mst2 complex paper cited by
+    GO:0036410.
+- reference: DOI:10.1101/gad.1993611
+  notes: DOI for Reddy et al. 2011, 'Elimination of a specific histone H3K14 acetyltransferase
+    complex bypasses the RNAi pathway to regulate pericentric heterochromatin functions',
+    verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: spombe_mst2_histone_h3k14_acetyltransferase_activity
+  title: Mst2 complex carries fission-yeast H3K14 acetyltransferase activity
+  description: In Schizosaccharomyces pombe, Mst2, Nto1, Ptf2, Ptf1 and Eaf6 form
+    an Mst2 histone H3K14 acetyltransferase complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the GO-defined Mst2 complex constituents and their
+    connection to histone H3K14 acetyltransferase activity without resolving Mst2
+    catalysis, Nto1/Ptf2 activity support, or pericentric heterochromatin recruitment.
+  nodes:
+  - node_id: mst2_complex_catalytic_subunit
+    label: Mst2 complex catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: mst2_complex_catalytic_subunit
+  - node_id: nto1_mst2_complex_subunit
+    label: Nto1 Mst2 complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: nto1_mst2_complex_subunit
+  - node_id: ptf2_mst2_complex_subunit
+    label: Ptf2 Mst2 complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ptf2_mst2_complex_subunit
+  - node_id: ptf1_mst2_complex_subunit
+    label: Ptf1 Mst2 complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ptf1_mst2_complex_subunit
+  - node_id: eaf6_mst2_complex_subunit
+    label: Eaf6 Mst2 complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: eaf6_mst2_complex_subunit
+  - node_id: mst2_histone_acetyltransferase_complex
+    label: Mst2 histone acetyltransferase complex
+    node_type: STRUCTURE
+    grounding: GO:0036410
+  - node_id: histone_h3k14_acetyltransferase_activity
+    label: histone H3K14 acetyltransferase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0036408
+  edges:
+  - subject: mst2_complex_catalytic_subunit
+    predicate: contributes to
+    object: mst2_histone_acetyltransferase_complex
+    description: Mst2 is a constituent of the fission-yeast Mst2 complex.
+    evidence:
+    - reference: GO:0036410
+      notes: GO:0036410 defines Mst2 as the Mst2-complex catalytic subunit.
+    - reference: DOI:10.1101/gad.1993611
+      notes: Reddy et al. 2011 described Mst2 as the H3K14 acetyltransferase catalytic
+        subunit.
+  - subject: nto1_mst2_complex_subunit
+    predicate: contributes to
+    object: mst2_histone_acetyltransferase_complex
+    description: Nto1 is a constituent of the fission-yeast Mst2 complex.
+    evidence:
+    - reference: GO:0036410
+      notes: GO:0036410 defines Nto1 as a fission-yeast Mst2-complex constituent.
+    - reference: DOI:10.1101/gad.1993611
+      notes: Reddy et al. 2011 identified Nto1 as an activity-essential Mst2-complex
+        component.
+  - subject: ptf2_mst2_complex_subunit
+    predicate: contributes to
+    object: mst2_histone_acetyltransferase_complex
+    description: Ptf2 is a constituent of the fission-yeast Mst2 complex.
+    evidence:
+    - reference: GO:0036410
+      notes: GO:0036410 defines Ptf2 as a fission-yeast Mst2-complex constituent.
+    - reference: DOI:10.1101/gad.1993611
+      notes: Reddy et al. 2011 identified Ptf2 as an activity-essential Mst2-complex
+        component.
+  - subject: ptf1_mst2_complex_subunit
+    predicate: contributes to
+    object: mst2_histone_acetyltransferase_complex
+    description: Ptf1 is a constituent of the fission-yeast Mst2 complex.
+    evidence:
+    - reference: GO:0036410
+      notes: GO:0036410 defines Ptf1 as a fission-yeast Mst2-complex constituent.
+    - reference: DOI:10.1101/gad.1993611
+      notes: Reddy et al. 2011 identified Ptf1 as an Mst2-complex component.
+  - subject: eaf6_mst2_complex_subunit
+    predicate: contributes to
+    object: mst2_histone_acetyltransferase_complex
+    description: Eaf6 is a constituent of the fission-yeast Mst2 complex.
+    evidence:
+    - reference: GO:0036410
+      notes: GO:0036410 defines Eaf6 as a fission-yeast Mst2-complex constituent.
+    - reference: DOI:10.1101/gad.1993611
+      notes: Reddy et al. 2011 identified Eaf6 as an Mst2-complex component.
+  - subject: mst2_histone_acetyltransferase_complex
+    predicate: supports
+    object: histone_h3k14_acetyltransferase_activity
+    description: The Mst2 complex supports fission-yeast histone H3K14 acetyltransferase
+      activity.
+    evidence:
+    - reference: GO:0036410
+      notes: GO:0036410 defines Mst2 as an H3K14 acetyltransferase complex.
+    - reference: GO:0036408
+      notes: GO:0036408 is the molecular-function term for histone H3K14 acetyltransferase
+        activity.
+    - reference: DOI:10.1101/gad.1993611
+      notes: Reddy et al. 2011 connected the Mst2 complex with H3K14 acetylation.
+discussions:
+- discussion_id: resolve_mst2_complex_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the fission-yeast Mst2
+    complex constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mst2_complex_catalytic_subunit
+  - components#nto1_mst2_complex_subunit
+  - components#ptf2_mst2_complex_subunit
+  - components#ptf1_mst2_complex_subunit
+  - components#eaf6_mst2_complex_subunit
+  rationale: GO:0036410 defines five fission-yeast proteins as Mst2 histone acetyltransferase
+    complex constituents. Exact source-neutral InterPro, Pfam, NCBIfam or UniProt
+    family boundaries for these Mst2-complex subunit classes need narrower curation
+    before these component labels can be grounded.
+  evidence:
+  - reference: GO:0036410
+    notes: GO:0036410 defines the fission-yeast Mst2 complex subunits.
+  posed_by: codex
+  posed_date: '2026-09-27'
