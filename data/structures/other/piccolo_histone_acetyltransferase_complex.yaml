@@ -1,0 +1,231 @@
+identifier: GO:0032777
+label: piccolo histone acetyltransferase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterotrimeric H4/H2A histone acetyltransferase complex with a substrate
+  preference of chromatin over free histones. It contains a subset of the proteins
+  found in the larger NuA4 histone acetyltransferase complex; for example, the S.
+  cerevisiae complex contains Esa1p, Yng2p, and Epl1p.
+definition_source: GO:0032777
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T05:53:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T05:54:38Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added H4/H2A parentage, two Piccolo NuA4 synonyms, three budding-yeast
+    constituent rows, budding-yeast scope, histone acetyltransferase activity, GO/PubMed/DOI
+    evidence, a nonmechanistic function graph, and a piccolo NuA4 subunit-grounding
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Piccolo NuA4 complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1101/gad.1056603
+- synonym_text: picNuA4 complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1101/gad.1056603
+parent_structures:
+- GO:0043189
+components:
+- component_id: esa1_piccolo_catalytic_subunit
+  label: Esa1 piccolo NuA4 catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ESA1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0032777 and SGD annotations follow Saccharomyces cerevisiae
+    Esa1p naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for the piccolo NuA4 catalytic subunit class was curated in this pass.
+  role: Catalytic MYST-family histone acetyltransferase constituent of the budding-yeast
+    piccolo NuA4 complex.
+  evidence:
+  - reference: GO:0032777
+    notes: GO:0032777 defines the S. cerevisiae piccolo complex as containing Esa1p.
+  - reference: DOI:10.1101/gad.1056603
+    notes: Boudreault et al. 2003 identified Esa1 as a Piccolo NuA4 subunit.
+  - reference: DOI:10.1128/MCB.25.13.5535-5542.2005
+    notes: Selleck et al. 2005 reconstituted Piccolo with Esa1 and minimal Epl1/Yng2
+      segments.
+- component_id: epl1_piccolo_bridging_subunit
+  label: Epl1 piccolo NuA4 bridging subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - EPL1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0032777 and SGD annotations follow Saccharomyces cerevisiae
+    Epl1p naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for the piccolo NuA4 bridging subunit class was curated in this pass.
+  role: Piccolo NuA4 constituent whose N-terminal region links Esa1 and Yng2 in the
+    budding-yeast heterotrimer.
+  evidence:
+  - reference: GO:0032777
+    notes: GO:0032777 defines the S. cerevisiae piccolo complex as containing Epl1p.
+  - reference: DOI:10.1101/gad.1056603
+    notes: Boudreault et al. 2003 identified Epl1 as a Piccolo NuA4 subunit.
+  - reference: DOI:10.1128/MCB.25.13.5535-5542.2005
+    notes: Selleck et al. 2005 tested the Epl1 minimal region that supports Piccolo
+      nucleosome activity.
+- component_id: yng2_piccolo_subunit
+  label: Yng2 piccolo NuA4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - YNG2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0032777 and SGD annotations follow Saccharomyces cerevisiae
+    Yng2p naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for the piccolo NuA4 subunit class was curated in this pass.
+  role: ING-family constituent of the budding-yeast piccolo NuA4 complex.
+  evidence:
+  - reference: GO:0032777
+    notes: GO:0032777 defines the S. cerevisiae piccolo complex as containing Yng2p.
+  - reference: DOI:10.1101/gad.1056603
+    notes: Boudreault et al. 2003 identified Yng2 as a Piccolo NuA4 subunit.
+  - reference: DOI:10.1128/MCB.25.13.5535-5542.2005
+    notes: Selleck et al. 2005 tested the Yng2 minimal region that supports Piccolo
+      nucleosome activity.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0032777 defines the heterotrimeric
+    piccolo complex as containing Esa1p, Yng2p and Epl1p.
+  reference: GO:0032777
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Boudreault et al. 2003 isolated native and recombinant Piccolo NuA4 from budding
+    yeast as an Esa1/Epl1/Yng2 complex.
+  reference: DOI:10.1101/gad.1056603
+functions:
+- function_id: histone_acetyltransferase_activity
+  label: histone acetyltransferase activity
+  grounding: GO:0004402
+  description: Piccolo NuA4 catalyzes Esa1-dependent histone H4/H2A acetylation with
+    a preference for chromatin substrates.
+  evidence:
+  - reference: GO:0032777
+    notes: GO:0032777 defines piccolo as a H4/H2A histone acetyltransferase complex.
+  - reference: GO:0004402
+    notes: GO:0004402 is the Gene Ontology molecular-function term for histone acetyltransferase
+      activity.
+  - reference: DOI:10.1101/gad.1056603
+    notes: Boudreault et al. 2003 reported chromatin-preferring Piccolo NuA4 activity.
+evidence:
+- reference: GO:0032777
+  notes: Gene Ontology cellular-component term for the piccolo histone acetyltransferase
+    complex.
+- reference: GO:0043189
+  notes: Gene Ontology cellular-component parent term for H4/H2A histone acetyltransferase
+    complexes.
+- reference: GO:0004402
+  notes: Gene Ontology molecular-function term for histone acetyltransferase activity.
+- reference: PMID:12782659
+  notes: PubMed identifier for Boudreault et al. 2003, the Piccolo NuA4 Esa1/Epl1/Yng2
+    paper cited by GO:0032777.
+- reference: DOI:10.1101/gad.1056603
+  notes: DOI for Boudreault et al. 2003, 'Yeast enhancer of polycomb defines global
+    Esa1-dependent acetylation of chromatin', verified through NCBI E-utilities.
+- reference: PMID:15964809
+  notes: PubMed identifier for Selleck et al. 2005, the Piccolo NuA4 nucleosome substrate
+    paper cited by GO:0032777.
+- reference: DOI:10.1128/MCB.25.13.5535-5542.2005
+  notes: DOI for Selleck et al. 2005, 'The Saccharomyces cerevisiae piccolo NuA4 histone
+    acetyltransferase complex requires the enhancer of polycomb A domain and chromodomain
+    to acetylate nucleosomes', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_piccolo_histone_acetyltransferase_activity
+  title: Piccolo NuA4 carries yeast histone acetyltransferase activity
+  description: In Saccharomyces cerevisiae, Esa1p, Epl1p and Yng2p form the piccolo
+    histone acetyltransferase complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the GO-defined piccolo NuA4 constituents and their
+    connection to histone acetyltransferase activity without resolving Epl1 bridging,
+    Yng2 recognition, Esa1 catalysis or nucleosome substrate selection.
+  nodes:
+  - node_id: esa1_piccolo_catalytic_subunit
+    label: Esa1 piccolo NuA4 catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: esa1_piccolo_catalytic_subunit
+  - node_id: epl1_piccolo_bridging_subunit
+    label: Epl1 piccolo NuA4 bridging subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: epl1_piccolo_bridging_subunit
+  - node_id: yng2_piccolo_subunit
+    label: Yng2 piccolo NuA4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: yng2_piccolo_subunit
+  - node_id: piccolo_histone_acetyltransferase_complex
+    label: piccolo histone acetyltransferase complex
+    node_type: STRUCTURE
+    grounding: GO:0032777
+  - node_id: histone_acetyltransferase_activity
+    label: histone acetyltransferase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004402
+  edges:
+  - subject: esa1_piccolo_catalytic_subunit
+    predicate: contributes to
+    object: piccolo_histone_acetyltransferase_complex
+    description: Esa1p is a constituent of the budding-yeast piccolo complex.
+    evidence:
+    - reference: GO:0032777
+      notes: GO:0032777 defines Esa1p as a piccolo constituent.
+    - reference: DOI:10.1101/gad.1056603
+      notes: Boudreault et al. 2003 identified Esa1 in Piccolo NuA4.
+  - subject: epl1_piccolo_bridging_subunit
+    predicate: contributes to
+    object: piccolo_histone_acetyltransferase_complex
+    description: Epl1p is a constituent of the budding-yeast piccolo complex.
+    evidence:
+    - reference: GO:0032777
+      notes: GO:0032777 defines Epl1p as a piccolo constituent.
+    - reference: DOI:10.1101/gad.1056603
+      notes: Boudreault et al. 2003 identified Epl1 in Piccolo NuA4.
+  - subject: yng2_piccolo_subunit
+    predicate: contributes to
+    object: piccolo_histone_acetyltransferase_complex
+    description: Yng2p is a constituent of the budding-yeast piccolo complex.
+    evidence:
+    - reference: GO:0032777
+      notes: GO:0032777 defines Yng2p as a piccolo constituent.
+    - reference: DOI:10.1101/gad.1056603
+      notes: Boudreault et al. 2003 identified Yng2 in Piccolo NuA4.
+  - subject: piccolo_histone_acetyltransferase_complex
+    predicate: supports
+    object: histone_acetyltransferase_activity
+    description: Piccolo NuA4 supports Esa1-dependent histone acetyltransferase activity.
+    evidence:
+    - reference: GO:0032777
+      notes: GO:0032777 defines piccolo as a H4/H2A histone acetyltransferase complex.
+    - reference: DOI:10.1101/gad.1056603
+      notes: Boudreault et al. 2003 reported Piccolo NuA4 HAT activity.
+discussions:
+- discussion_id: resolve_piccolo_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the piccolo NuA4 constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#esa1_piccolo_catalytic_subunit
+  - components#epl1_piccolo_bridging_subunit
+  - components#yng2_piccolo_subunit
+  rationale: GO:0032777 defines three budding-yeast proteins as piccolo constituents.
+    Exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries for
+    these piccolo NuA4 subunit classes need narrower curation before these component
+    labels can be grounded.
+  evidence:
+  - reference: GO:0032777
+    notes: GO:0032777 defines the budding-yeast piccolo complex subunits.
+  posed_by: codex
+  posed_date: '2026-09-27'

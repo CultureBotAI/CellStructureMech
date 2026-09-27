@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/piccolo_histone_acetyltransferase_complex.yaml
+  slug: piccolo_histone_acetyltransferase_complex
+session:
+  id: 2026-09-27T055518Z-codex-3640be
+  timestamp: '2026-09-27T05:55:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the piccolo histone acetyltransferase complex record.
+  details: Created an evidence-backed GO:0032777 record for the Saccharomyces cerevisiae piccolo
+    NuA4 histone acetyltransferase complex with GO parentage, Piccolo NuA4 exact synonyms,
+    Esa1p/Epl1p/Yng2p constituents, budding-yeast distribution and example rows, histone acetyltransferase
+    activity, a nonmechanistic function graph, and GO/PubMed/DOI evidence from Boudreault
+    et al. 2003 and Selleck et al. 2005. Left exact source-neutral subunit family groundings
+    as an explicit curation TODO.
