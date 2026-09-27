@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/tho_complex.yaml
+  slug: tho_complex
+session:
+  id: 2026-09-27T144420Z-claude-code-849c0d
+  timestamp: '2026-09-27T14:44:20Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1662
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1661
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - mereology
+  summary: Remove overbroad THO TREX parthood
+  details: Removed the unconditional GO:0000346 transcription export complex parthood from
+    the generic GO:0000347 THO complex after adversarial review noted that GO scopes TREX
+    parthood to child term GO:0000445 rather than every GO:0000347 THO complex instance. Kept
+    GO:0000347 identity and TREX/mRNA-export functional evidence.

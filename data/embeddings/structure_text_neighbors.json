@@ -11312,14 +11312,14 @@
           "cosine_similarity": 0.87138182
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.80776807
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.8072003
-        },
-        {
-          "identifier": "GO:0000812",
-          "label": "Swr1 complex",
-          "cosine_similarity": 0.78041715
         }
       ]
     },
@@ -11684,14 +11684,14 @@
           "cosine_similarity": 0.78425148
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.78002204
+        },
+        {
           "identifier": "GO:0016590",
           "label": "ACF complex",
           "cosine_similarity": 0.77989199
-        },
-        {
-          "identifier": "GO:0032221",
-          "label": "Rpd3S complex",
-          "cosine_similarity": 0.76964997
         }
       ]
     },
@@ -11736,6 +11736,11 @@
           "cosine_similarity": 0.75245566
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.72267705
+        },
+        {
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.71004049
@@ -11749,11 +11754,6 @@
           "identifier": "GO:0008623",
           "label": "CHRAC",
           "cosine_similarity": 0.70840699
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.69659763
         }
       ]
     },
@@ -11994,14 +11994,14 @@
           "cosine_similarity": 0.87679675
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.80613211
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.80315648
-        },
-        {
-          "identifier": "GO:0000812",
-          "label": "Swr1 complex",
-          "cosine_similarity": 0.79801593
         }
       ]
     },
@@ -12237,6 +12237,11 @@
           "cosine_similarity": 0.83009733
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.80295729
+        },
+        {
           "identifier": "GO:0031262",
           "label": "Ndc80 complex",
           "cosine_similarity": 0.7825671
@@ -12245,11 +12250,6 @@
           "identifier": "GO:0000444",
           "label": "MIS12/MIND type complex",
           "cosine_similarity": 0.78215721
-        },
-        {
-          "identifier": "GO:0033551",
-          "label": "monopolin complex",
-          "cosine_similarity": 0.7790708
         }
       ]
     },
@@ -12366,14 +12366,14 @@
           "cosine_similarity": 0.75129502
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.74861391
+        },
+        {
           "identifier": "GO:0031499",
           "label": "TRAMP complex",
           "cosine_similarity": 0.72463357
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.7169022
         }
       ]
     },
@@ -12413,6 +12413,11 @@
       "label": "DASH complex",
       "neighbors": [
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.78616903
+        },
+        {
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.78257826
@@ -12431,11 +12436,6 @@
           "identifier": "GO:0030905",
           "label": "retromer, tubulation complex",
           "cosine_similarity": 0.76546534
-        },
-        {
-          "identifier": "GO:0071986",
-          "label": "Ragulator complex",
-          "cosine_similarity": 0.76474861
         }
       ]
     },
@@ -12443,6 +12443,11 @@
       "identifier": "GO:0031431",
       "label": "Dbf4-dependent protein kinase complex",
       "neighbors": [
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.80982828
+        },
         {
           "identifier": "GO:0000113",
           "label": "nucleotide-excision repair factor 4 complex",
@@ -12462,11 +12467,6 @@
           "identifier": "GO:0000111",
           "label": "nucleotide-excision repair factor 2 complex",
           "cosine_similarity": 0.74560475
-        },
-        {
-          "identifier": "GO:0016590",
-          "label": "ACF complex",
-          "cosine_similarity": 0.74349359
         }
       ]
     },
@@ -12537,6 +12537,11 @@
       "label": "DNA replication factor C complex",
       "neighbors": [
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.82208113
+        },
+        {
           "identifier": "GO:0031390",
           "label": "Ctf18 RFC-like complex",
           "cosine_similarity": 0.81936936
@@ -12555,11 +12560,6 @@
           "identifier": "GO:0031518",
           "label": "CBF3 complex",
           "cosine_similarity": 0.75691225
-        },
-        {
-          "identifier": "GO:0000111",
-          "label": "nucleotide-excision repair factor 2 complex",
-          "cosine_similarity": 0.74871947
         }
       ]
     },
@@ -12692,6 +12692,11 @@
       "label": "elongator holoenzyme complex",
       "neighbors": [
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.791679
+        },
+        {
           "identifier": "GO:0031499",
           "label": "TRAMP complex",
           "cosine_similarity": 0.77979768
@@ -12710,11 +12715,6 @@
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.76490574
-        },
-        {
-          "identifier": "GO:0035267",
-          "label": "NuA4 histone acetyltransferase complex",
-          "cosine_similarity": 0.75304138
         }
       ]
     },
@@ -13095,6 +13095,11 @@
       "label": "FACT complex",
       "neighbors": [
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.8780125
+        },
+        {
           "identifier": "GO:0070824",
           "label": "SHREC complex",
           "cosine_similarity": 0.813178
@@ -13113,11 +13118,6 @@
           "identifier": "GO:0031533",
           "label": "mRNA capping enzyme complex",
           "cosine_similarity": 0.80363957
-        },
-        {
-          "identifier": "GO:0008623",
-          "label": "CHRAC",
-          "cosine_similarity": 0.80315648
         }
       ]
     },
@@ -13250,6 +13250,11 @@
       "label": "GINS complex",
       "neighbors": [
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.77259658
+        },
+        {
           "identifier": "GO:0042729",
           "label": "DASH complex",
           "cosine_similarity": 0.76391989
@@ -13268,11 +13273,6 @@
           "identifier": "GO:0033186",
           "label": "CAF-1 complex",
           "cosine_similarity": 0.74385615
-        },
-        {
-          "identifier": "GO:0030905",
-          "label": "retromer, tubulation complex",
-          "cosine_similarity": 0.74049618
         }
       ]
     },
@@ -13389,14 +13389,14 @@
           "cosine_similarity": 0.77479537
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.7738795
+        },
+        {
           "identifier": "GO:0070211",
           "label": "Snt2C complex",
           "cosine_similarity": 0.75858001
-        },
-        {
-          "identifier": "GO:1990467",
-          "label": "NuA3a histone acetyltransferase complex",
-          "cosine_similarity": 0.75747499
         }
       ]
     },
@@ -13472,6 +13472,11 @@
           "cosine_similarity": 0.75196408
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.72900974
+        },
+        {
           "identifier": "GO:0033588",
           "label": "elongator holoenzyme complex",
           "cosine_similarity": 0.72328461
@@ -13485,11 +13490,6 @@
           "identifier": "GO:0034456",
           "label": "UTP-C complex",
           "cosine_similarity": 0.70973761
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.70380814
         }
       ]
     },
@@ -13513,14 +13513,14 @@
           "cosine_similarity": 0.87679675
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.77753928
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.7550036
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.74429711
         }
       ]
     },
@@ -13544,14 +13544,14 @@
           "cosine_similarity": 0.87138182
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.78656433
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.75741148
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.75297439
         }
       ]
     },
@@ -13611,9 +13611,9 @@
           "cosine_similarity": 0.68366503
         },
         {
-          "identifier": "GO:0031262",
-          "label": "Ndc80 complex",
-          "cosine_similarity": 0.67852523
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.68330945
         }
       ]
     },
@@ -13875,6 +13875,11 @@
           "cosine_similarity": 0.7790708
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.7769972
+        },
+        {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.77042817
@@ -13888,11 +13893,6 @@
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.75999748
-        },
-        {
-          "identifier": "GO:0042729",
-          "label": "DASH complex",
-          "cosine_similarity": 0.75979873
         }
       ]
     },
@@ -13932,6 +13932,11 @@
       "label": "Mre11 complex",
       "neighbors": [
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.7956543
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.79206907
@@ -13950,11 +13955,6 @@
           "identifier": "GO:0048188",
           "label": "Set1C/COMPASS complex",
           "cosine_similarity": 0.76867387
-        },
-        {
-          "identifier": "GO:0034457",
-          "label": "Mpp10 complex",
-          "cosine_similarity": 0.76648844
         }
       ]
     },
@@ -13962,6 +13962,11 @@
       "identifier": "GO:0031533",
       "label": "mRNA capping enzyme complex",
       "neighbors": [
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.84273627
+        },
         {
           "identifier": "GO:0035101",
           "label": "FACT complex",
@@ -13981,11 +13986,6 @@
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.76768574
-        },
-        {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.76758511
         }
       ]
     },
@@ -14009,14 +14009,14 @@
           "cosine_similarity": 0.76676489
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.756957
+        },
+        {
           "identifier": "GO:0070211",
           "label": "Snt2C complex",
           "cosine_similarity": 0.75599853
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.75316888
         }
       ]
     },
@@ -14200,9 +14200,9 @@
           "cosine_similarity": 0.78009657
         },
         {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.77083396
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.77110003
         }
       ]
     },
@@ -14231,9 +14231,9 @@
           "cosine_similarity": 0.76340616
         },
         {
-          "identifier": "GO:0034456",
-          "label": "UTP-C complex",
-          "cosine_similarity": 0.75929125
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.76336992
         }
       ]
     },
@@ -14257,14 +14257,14 @@
           "cosine_similarity": 0.78865522
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.77598275
+        },
+        {
           "identifier": "GO:0034456",
           "label": "UTP-C complex",
           "cosine_similarity": 0.77038
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.76556846
         }
       ]
     },
@@ -14350,14 +14350,14 @@
           "cosine_similarity": 0.8637805
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.8037003
+        },
+        {
           "identifier": "GO:0000124",
           "label": "SAGA complex",
           "cosine_similarity": 0.80167998
-        },
-        {
-          "identifier": "GO:0046695",
-          "label": "SLIK (SAGA-like) complex",
-          "cosine_similarity": 0.79835591
         }
       ]
     },
@@ -14665,9 +14665,9 @@
           "cosine_similarity": 0.77045933
         },
         {
-          "identifier": "GO:0016590",
-          "label": "ACF complex",
-          "cosine_similarity": 0.75998364
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.76224803
         }
       ]
     },
@@ -14691,14 +14691,14 @@
           "cosine_similarity": 0.94214197
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.78738381
+        },
+        {
           "identifier": "GO:0016590",
           "label": "ACF complex",
           "cosine_similarity": 0.77292646
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.77281506
         }
       ]
     },
@@ -14758,9 +14758,9 @@
           "cosine_similarity": 0.78432021
         },
         {
-          "identifier": "GO:0035267",
-          "label": "NuA4 histone acetyltransferase complex",
-          "cosine_similarity": 0.77700035
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.77736198
         }
       ]
     },
@@ -14939,14 +14939,14 @@
           "cosine_similarity": 0.82774195
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.80168273
+        },
+        {
           "identifier": "GO:0070211",
           "label": "Snt2C complex",
           "cosine_similarity": 0.78836518
-        },
-        {
-          "identifier": "GO:0031415",
-          "label": "NatA complex",
-          "cosine_similarity": 0.78808655
         }
       ]
     },
@@ -14975,9 +14975,9 @@
           "cosine_similarity": 0.71937728
         },
         {
-          "identifier": "GO:0005816",
-          "label": "spindle pole body",
-          "cosine_similarity": 0.7127997
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.7142458
         }
       ]
     },
@@ -15208,6 +15208,11 @@
           "cosine_similarity": 0.82047206
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.81612126
+        },
+        {
           "identifier": "GO:0030905",
           "label": "retromer, tubulation complex",
           "cosine_similarity": 0.80189927
@@ -15221,11 +15226,6 @@
           "identifier": "GO:0042729",
           "label": "DASH complex",
           "cosine_similarity": 0.78200944
-        },
-        {
-          "identifier": "GO:0031205",
-          "label": "endoplasmic reticulum Sec complex",
-          "cosine_similarity": 0.78069783
         }
       ]
     },
@@ -15595,9 +15595,9 @@
           "cosine_similarity": 0.75375608
         },
         {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.74079266
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.74795875
         }
       ]
     },
@@ -15704,6 +15704,11 @@
           "cosine_similarity": 0.78857336
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.78554664
+        },
+        {
           "identifier": "GO:0000812",
           "label": "Swr1 complex",
           "cosine_similarity": 0.78417339
@@ -15717,11 +15722,6 @@
           "identifier": "GO:0008623",
           "label": "CHRAC",
           "cosine_similarity": 0.78046599
-        },
-        {
-          "identifier": "GO:0034967",
-          "label": "Set3 complex",
-          "cosine_similarity": 0.77289347
         }
       ]
     },
@@ -15802,6 +15802,11 @@
           "cosine_similarity": 0.71657589
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.70737475
+        },
+        {
           "identifier": "GO:0032798",
           "label": "Swi5-Sfr1 complex",
           "cosine_similarity": 0.69382753
@@ -15810,11 +15815,6 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.69349766
-        },
-        {
-          "identifier": "GO:0009360",
-          "label": "DNA polymerase III complex",
-          "cosine_similarity": 0.69125267
         }
       ]
     },
@@ -15967,9 +15967,9 @@
           "cosine_similarity": 0.73772002
         },
         {
-          "identifier": "GO:0030905",
-          "label": "retromer, tubulation complex",
-          "cosine_similarity": 0.73503627
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.73616878
         }
       ]
     },
@@ -16063,6 +16063,37 @@
           "identifier": "GO:0030690",
           "label": "Noc1p-Noc2p complex",
           "cosine_similarity": 0.76474233
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000347",
+      "label": "THO complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.8780125
+        },
+        {
+          "identifier": "GO:0031533",
+          "label": "mRNA capping enzyme complex",
+          "cosine_similarity": 0.84273627
+        },
+        {
+          "identifier": "GO:0005663",
+          "label": "DNA replication factor C complex",
+          "cosine_similarity": 0.82208113
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.81612126
+        },
+        {
+          "identifier": "GO:0031431",
+          "label": "Dbf4-dependent protein kinase complex",
+          "cosine_similarity": 0.80982828
         }
       ]
     },
@@ -16262,6 +16293,11 @@
           "cosine_similarity": 0.80158576
         },
         {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.79972042
+        },
+        {
           "identifier": "GO:0031533",
           "label": "mRNA capping enzyme complex",
           "cosine_similarity": 0.78915562
@@ -16275,11 +16311,6 @@
           "identifier": "GO:0034044",
           "label": "exomer complex",
           "cosine_similarity": 0.76671903
-        },
-        {
-          "identifier": "GO:0030905",
-          "label": "retromer, tubulation complex",
-          "cosine_similarity": 0.75583608
         }
       ]
     },
