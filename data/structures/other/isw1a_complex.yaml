@@ -1,0 +1,169 @@
+identifier: GO:0036436
+label: Isw1a complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An Isw1 complex that binds DNA and has nucleosome-stimulated ATPase activity.
+  In S. cerevisiae, contains an Isw1p ATPase subunit in complex with Ioc3p.
+definition_source: GO:0036436
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T01:54:13Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T01:54:57Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ISW1a exact synonymy, Isw1-complex parentage, Isw1 and Ioc3 constituent
+    rows, yeast scope, chromatin-remodeling function, GO/PubMed/DOI evidence, a nonmechanistic
+    function graph, and a subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: ISW1a
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/MCB.23.1.80-91.2003
+parent_structures:
+- GO:0016587
+components:
+- component_id: isw1_isw1a_atpase_subunit
+  label: Isw1 Isw1a ATPase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ISW1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast Isw1a literature follows Isw1 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this Isw1a subunit class
+    was curated in this pass.
+  role: ISWI-family ATPase constituent of the budding-yeast Isw1a chromatin-remodeling
+    complex.
+  evidence:
+  - reference: DOI:10.1128/MCB.23.1.80-91.2003
+    notes: Vary et al. 2003 separated the budding-yeast Isw1a complex from Isw1b and
+      identified Isw1p as the shared ATPase subunit.
+- component_id: ioc3_isw1a_subunit
+  label: Ioc3 Isw1a subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - IOC3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast Isw1a literature follows Ioc3 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this Isw1a subunit class
+    was curated in this pass.
+  role: Ioc protein constituent specific to the budding-yeast Isw1a complex.
+  evidence:
+  - reference: DOI:10.1128/MCB.23.1.80-91.2003
+    notes: Vary et al. 2003 identified Ioc3p as the Isw1-associated protein that forms
+      the Isw1a complex with Isw1p.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the source organism in which Vary et al. separated Isw1a
+    from the related Isw1b complex.
+  reference: DOI:10.1128/MCB.23.1.80-91.2003
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Vary et al. 2003 purified Isw1p-associated complexes from Saccharomyces cerevisiae
+    and resolved the two-subunit Isw1a complex.
+  reference: DOI:10.1128/MCB.23.1.80-91.2003
+functions:
+- function_id: chromatin_remodeling
+  label: chromatin remodeling
+  grounding: GO:0006338
+  description: The Isw1a complex is an ATP-dependent chromatin-remodeling complex
+    with nucleosome-stimulated ATPase activity.
+  evidence:
+  - reference: GO:0006338
+    notes: GO:0006338 is the Gene Ontology biological-process term for chromatin remodeling.
+  - reference: GO:0036436
+    notes: GO:0036436 defines Isw1a as an Isw1 chromatin complex with nucleosome-stimulated
+      ATPase activity.
+evidence:
+- reference: GO:0036436
+  notes: Gene Ontology cellular-component term for the Isw1a complex.
+- reference: GO:0016587
+  notes: Gene Ontology cellular-component parent term for Isw1 complexes.
+- reference: GO:0006338
+  notes: Gene Ontology biological-process term for chromatin remodeling.
+- reference: PMID:12482963
+  notes: PubMed identifier for Vary et al. 2003, the Molecular and Cellular Biology
+    paper that identified the separable budding-yeast Isw1a and Isw1b complexes.
+- reference: DOI:10.1128/MCB.23.1.80-91.2003
+  notes: DOI for Vary et al. 2003, 'Yeast Isw1p forms two separable complexes in vivo',
+    verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_isw1a_chromatin_remodeling
+  title: Isw1a carries yeast chromatin remodeling
+  description: In Saccharomyces cerevisiae, Isw1 and Ioc3 form the Isw1a chromatin-remodeling
+    complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the two Isw1a constituent classes and their connection
+    to chromatin remodeling without resolving their substrate-recognition or nucleosome-sliding
+    cycle.
+  nodes:
+  - node_id: isw1_isw1a_atpase_subunit
+    label: Isw1 Isw1a ATPase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: isw1_isw1a_atpase_subunit
+  - node_id: ioc3_isw1a_subunit
+    label: Ioc3 Isw1a subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ioc3_isw1a_subunit
+  - node_id: isw1a_complex
+    label: Isw1a complex
+    node_type: STRUCTURE
+    grounding: GO:0036436
+  - node_id: chromatin_remodeling
+    label: chromatin remodeling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006338
+  edges:
+  - subject: isw1_isw1a_atpase_subunit
+    predicate: contributes to
+    object: isw1a_complex
+    description: Isw1 is the ISWI-family ATPase constituent of the budding-yeast Isw1a
+      complex.
+    evidence:
+    - reference: DOI:10.1128/MCB.23.1.80-91.2003
+      notes: Vary et al. 2003 identified Isw1p in the budding-yeast Isw1a complex.
+  - subject: ioc3_isw1a_subunit
+    predicate: contributes to
+    object: isw1a_complex
+    description: Ioc3 is the Ioc constituent that complexes with Isw1 in budding-yeast
+      Isw1a.
+    evidence:
+    - reference: DOI:10.1128/MCB.23.1.80-91.2003
+      notes: Vary et al. 2003 identified Ioc3p in the budding-yeast Isw1a complex.
+  - subject: isw1a_complex
+    predicate: enables
+    object: chromatin_remodeling
+    description: Isw1a is an ATP-dependent Isw1 chromatin-remodeling complex.
+    evidence:
+    - reference: GO:0036436
+      notes: GO:0036436 defines the Isw1a cellular component as an Isw1 chromatin
+        complex with nucleosome-stimulated ATPase activity.
+discussions:
+- discussion_id: isw1a_subunit_grounding
+  prompt: Curate exact source-neutral InterPro, Pfam, NCBIfam or UniProt family groundings
+    for the Isw1a ATPase and Ioc3 component classes when terms that denote those classes
+    can be verified.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#isw1_isw1a_atpase_subunit
+  - components#ioc3_isw1a_subunit
+  rationale: The Isw1 ATPase is shared between Isw1a and Isw1b, so exact grounding
+    should avoid broad ATPase and domain terms that do not denote this Isw1 subunit
+    class.
+  evidence:
+  - reference: DOI:10.1128/MCB.23.1.80-91.2003
+    notes: Vary et al. 2003 resolved Isw1a and Isw1b as separable Isw1 complexes.
+  posed_by: codex
+  posed_date: '2026-09-26'

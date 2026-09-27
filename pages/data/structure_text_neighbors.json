@@ -13153,6 +13153,37 @@
       ]
     },
     {
+      "identifier": "GO:0036436",
+      "label": "Isw1a complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.7550036
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.74429711
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.73487449
+        },
+        {
+          "identifier": "GO:0048188",
+          "label": "Set1C/COMPASS complex",
+          "cosine_similarity": 0.72788531
+        },
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.72447396
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000776",
       "label": "kinetochore",
       "neighbors": [
