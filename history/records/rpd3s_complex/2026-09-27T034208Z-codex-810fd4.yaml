@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/rpd3s_complex.yaml
+  slug: rpd3s_complex
+session:
+  id: 2026-09-27T034208Z-codex-810fd4
+  timestamp: '2026-09-27T03:42:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added Rpd3S complex record
+  details: Created data/structures/other/rpd3s_complex.yaml as a GO:0032221-backed Rpd3S complex
+    record with GO exact synonyms, GO:0070822 parentage, chromatin and nuclear-chromosome
+    parthood, Rpd3p/Sin3p/Ume1p/Rco1p/Eaf3 constituent rows, Saccharomyces cerevisiae scope,
+    GO:0004407 histone deacetylase activity, PubMed/DOI evidence from Carrozza et al. 2005
+    and Keogh et al. 2005, a nonmechanistic function graph, and an open family-grounding TODO.
