@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+  slug: dbf4_dependent_protein_kinase_complex
+session:
+  id: 2026-09-27T130138Z-claude-code-522841
+  timestamp: '2026-09-27T13:01:38Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add Dbf4-dependent protein kinase complex record
+  details: Created the GO:0031431 Dbf4-dependent protein kinase complex record with GO DDK
+    synonymy, nuclear protein-containing-complex parentage, budding-yeast Cdc7 and Dbf4 constituent
+    rows left as reviewed-label-only pending exact source-neutral family groundings, Saccharomyces
+    cerevisiae scope, a DNA replication initiation function, GO/PubMed/DOI evidence, a nonmechanistic
+    function graph, and an open subunit-grounding discussion. Validated the record with linkml-validate
+    and validate_strict.
