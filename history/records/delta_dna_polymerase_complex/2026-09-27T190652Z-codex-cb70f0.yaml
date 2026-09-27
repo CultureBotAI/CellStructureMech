@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/delta_dna_polymerase_complex.yaml
+  slug: delta_dna_polymerase_complex
+session:
+  id: 2026-09-27T190652Z-codex-cb70f0
+  timestamp: '2026-09-27T19:06:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the delta DNA polymerase complex record.
+  details: Created data/structures/other/delta_dna_polymerase_complex.yaml for GO:0043625
+    with GO synonymy, GO:0005659 alternate-ID cross-reference, DNA-polymerase-complex and
+    nuclear-protein-containing-complex parentage, nuclear-replisome parthood, three reviewed-label-only
+    Pol3/Pol31/Pol32 constituent rows, Eukaryota scope, a budding-yeast canonical example,
+    DNA-replication function evidence, GO/PubMed provenance, a nonmechanistic Pol delta function
+    graph, a subunit-grounding curation TODO, and a resolved interpretation for using the
+    corrected monomeric Pol delta assembly.

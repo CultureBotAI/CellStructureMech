@@ -1,0 +1,298 @@
+identifier: GO:0043625
+label: delta DNA polymerase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multimeric DNA polymerase enzyme complex whose subunit composition differs
+  among species and that functions in DNA replication, mismatch repair, and excision
+  repair; in Saccharomyces cerevisiae, DNA polymerase delta contains Pol3, Pol31,
+  and Pol32 subunits.
+definition_source: GO:0043625
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T19:03:43Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T19:05:20Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, alternate ID, DNA-polymerase-complex and nuclear-complex
+    parentage, nuclear-replisome parthood, three reviewed-label-only Saccharomyces
+    Pol delta constituent rows, Eukaryota scope, a budding-yeast canonical example,
+    DNA-replication function evidence, GO/PubMed evidence, a nonmechanistic function
+    graph, a subunit-grounding TODO, and a resolved discussion for using the corrected
+    monomeric Pol delta assembly.
+  llm_assisted: true
+- timestamp: '2026-09-27T19:12:06Z'
+  curator: codex
+  action: REMOVED_OBSOLETE_XREF
+  changes: Removed the obsolete GO alternate ID from xrefs and evidence after the
+    repository CURIE liveness gate rejected it.
+  llm_assisted: true
+- timestamp: '2026-09-27T19:12:40Z'
+  curator: codex
+  action: NORMALIZED_CURATION_HISTORY
+  changes: Removed an obsolete GO alternate ID from the previous curation-history
+    note.
+  llm_assisted: true
+synonyms:
+- synonym_text: delta-DNA polymerase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0043625
+parent_structures:
+- GO:0042575
+- GO:0140513
+part_of:
+- GO:0043601
+components:
+- component_id: pol3_catalytic_subunit
+  label: Pol3 catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - POL3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Pol3 catalytic subunit is modeled as a named Saccharomyces cerevisiae
+    DNA polymerase delta constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: Catalytic Pol3 constituent of Saccharomyces cerevisiae DNA polymerase delta.
+  evidence:
+  - reference: GO:0043625
+    notes: GO:0043625 defines the delta DNA polymerase complex as a multimeric DNA
+      polymerase enzyme complex and notes a three-subunit Saccharomyces cerevisiae
+      form.
+  - reference: PMID:9677406
+    notes: Burgers and Gerik cloned and co-overexpressed Saccharomyces cerevisiae
+      POL3, POL31 and POL32 to reconstitute Pol delta.
+  - reference: PMID:11568188
+    notes: Johansson et al. established that purified Saccharomyces cerevisiae DNA
+      polymerase delta contains Pol3, Pol31 and Pol32 at 1:1:1 stoichiometry.
+- component_id: pol31_subunit
+  label: Pol31 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - POL31
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Pol31 subunit is modeled as a named Saccharomyces cerevisiae DNA
+    polymerase delta constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: Pol31 structural constituent of Saccharomyces cerevisiae DNA polymerase delta.
+  evidence:
+  - reference: GO:0043625
+    notes: GO:0043625 defines the delta DNA polymerase complex as a multimeric DNA
+      polymerase enzyme complex and notes a three-subunit Saccharomyces cerevisiae
+      form.
+  - reference: PMID:9677406
+    notes: Burgers and Gerik cloned and co-overexpressed Saccharomyces cerevisiae
+      POL3, POL31 and POL32 to reconstitute Pol delta.
+  - reference: PMID:11568188
+    notes: Johansson et al. established that purified Saccharomyces cerevisiae DNA
+      polymerase delta contains Pol3, Pol31 and Pol32 at 1:1:1 stoichiometry.
+- component_id: pol32_subunit
+  label: Pol32 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - POL32
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Pol32 subunit is modeled as a named Saccharomyces cerevisiae DNA
+    polymerase delta constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: Pol32 structural constituent of Saccharomyces cerevisiae DNA polymerase delta.
+  evidence:
+  - reference: GO:0043625
+    notes: GO:0043625 defines the delta DNA polymerase complex as a multimeric DNA
+      polymerase enzyme complex and notes a three-subunit Saccharomyces cerevisiae
+      form.
+  - reference: PMID:9677406
+    notes: Burgers and Gerik cloned and co-overexpressed Saccharomyces cerevisiae
+      POL3, POL31 and POL32 to reconstitute Pol delta.
+  - reference: PMID:11568188
+    notes: Johansson et al. established that purified Saccharomyces cerevisiae DNA
+      polymerase delta contains Pol3, Pol31 and Pol32 at 1:1:1 stoichiometry.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: GO:0043625 defines a eukaryotic delta DNA polymerase complex and constrains
+    the cellular-component term to Eukaryota.
+  reference: GO:0043625
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system in which Pol3, Pol31 and Pol32 form a 1:1:1
+    DNA polymerase delta complex.
+  reference: PMID:11568188
+functions:
+- function_id: dna_replication
+  label: DNA replication
+  grounding: GO:0006260
+  description: The delta DNA polymerase complex participates in eukaryotic chromosomal
+    DNA replication.
+  evidence:
+  - reference: GO:0043625
+    notes: GO:0043625 defines the complex as functioning in DNA replication.
+  - reference: GO:0006260
+    notes: GO:0006260 is the Gene Ontology biological-process term for DNA replication.
+  - reference: PMID:9677406
+    notes: Burgers and Gerik reconstituted Saccharomyces cerevisiae Pol delta and
+      compared PCNA- and RFC-dependent DNA synthesis by two- and three-subunit forms.
+evidence:
+- reference: GO:0043625
+  notes: Gene Ontology cellular-component term for the delta DNA polymerase complex.
+- reference: GO:0042575
+  notes: Gene Ontology cellular-component parent term for DNA polymerase complexes.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0043601
+  notes: Gene Ontology cellular-component term for the nuclear replisome; GO:0043625
+    is part of this term.
+- reference: GO:0006260
+  notes: Gene Ontology biological-process term for DNA replication.
+- reference: PMID:9677405
+  notes: PubMed record for Gerik et al. 1998, the JBC paper characterizing the two
+    small Saccharomyces cerevisiae DNA polymerase delta subunits.
+- reference: PMID:9677406
+  notes: PubMed record for Burgers and Gerik 1998, the JBC paper that reconstituted
+    Saccharomyces cerevisiae DNA polymerase delta from POL3, POL31 and POL32.
+- reference: PMID:11568188
+  notes: PubMed record for Johansson et al. 2001, the JBC paper establishing the monomeric
+    1:1:1 Saccharomyces cerevisiae DNA polymerase delta assembly.
+causal_graphs:
+- graph_id: pol_delta_supports_dna_replication
+  title: DNA polymerase delta supports DNA replication
+  description: In Saccharomyces cerevisiae, Pol3, Pol31, and Pol32 form the delta
+    DNA polymerase complex that supports DNA replication.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records Pol delta composition and GO-level DNA-replication
+    output without resolving PCNA binding, RFC loading, strand preference, or repair-pathway
+    roles.
+  nodes:
+  - node_id: pol3_catalytic_subunit
+    label: Pol3 catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: pol3_catalytic_subunit
+  - node_id: pol31_subunit
+    label: Pol31 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: pol31_subunit
+  - node_id: pol32_subunit
+    label: Pol32 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: pol32_subunit
+  - node_id: delta_dna_polymerase_complex
+    label: delta DNA polymerase complex
+    node_type: STRUCTURE
+    grounding: GO:0043625
+  - node_id: dna_replication
+    label: DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+  edges:
+  - subject: pol3_catalytic_subunit
+    predicate: contributes to
+    object: delta_dna_polymerase_complex
+    description: Pol3 catalytic subunit is a constituent of the delta DNA polymerase
+      complex.
+    evidence:
+    - reference: GO:0043625
+      notes: GO:0043625 defines the delta DNA polymerase complex as a multimeric DNA
+        polymerase enzyme complex and notes a three-subunit Saccharomyces cerevisiae
+        form.
+    - reference: PMID:9677406
+      notes: Burgers and Gerik cloned and co-overexpressed Saccharomyces cerevisiae
+        POL3, POL31 and POL32 to reconstitute Pol delta.
+    - reference: PMID:11568188
+      notes: Johansson et al. established that purified Saccharomyces cerevisiae DNA
+        polymerase delta contains Pol3, Pol31 and Pol32 at 1:1:1 stoichiometry.
+  - subject: pol31_subunit
+    predicate: contributes to
+    object: delta_dna_polymerase_complex
+    description: Pol31 subunit is a constituent of the delta DNA polymerase complex.
+    evidence:
+    - reference: GO:0043625
+      notes: GO:0043625 defines the delta DNA polymerase complex as a multimeric DNA
+        polymerase enzyme complex and notes a three-subunit Saccharomyces cerevisiae
+        form.
+    - reference: PMID:9677406
+      notes: Burgers and Gerik cloned and co-overexpressed Saccharomyces cerevisiae
+        POL3, POL31 and POL32 to reconstitute Pol delta.
+    - reference: PMID:11568188
+      notes: Johansson et al. established that purified Saccharomyces cerevisiae DNA
+        polymerase delta contains Pol3, Pol31 and Pol32 at 1:1:1 stoichiometry.
+  - subject: pol32_subunit
+    predicate: contributes to
+    object: delta_dna_polymerase_complex
+    description: Pol32 subunit is a constituent of the delta DNA polymerase complex.
+    evidence:
+    - reference: GO:0043625
+      notes: GO:0043625 defines the delta DNA polymerase complex as a multimeric DNA
+        polymerase enzyme complex and notes a three-subunit Saccharomyces cerevisiae
+        form.
+    - reference: PMID:9677406
+      notes: Burgers and Gerik cloned and co-overexpressed Saccharomyces cerevisiae
+        POL3, POL31 and POL32 to reconstitute Pol delta.
+    - reference: PMID:11568188
+      notes: Johansson et al. established that purified Saccharomyces cerevisiae DNA
+        polymerase delta contains Pol3, Pol31 and Pol32 at 1:1:1 stoichiometry.
+  - subject: delta_dna_polymerase_complex
+    predicate: supports
+    object: dna_replication
+    description: The delta DNA polymerase complex supports chromosomal DNA replication.
+    evidence:
+    - reference: GO:0043625
+      notes: GO:0043625 defines the complex as functioning in DNA replication.
+    - reference: GO:0006260
+      notes: GO:0006260 defines DNA replication.
+discussions:
+- discussion_id: resolve_pol_delta_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the Pol3, Pol31, and
+    Pol32 subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pol3_catalytic_subunit
+  - components#pol31_subunit
+  - components#pol32_subunit
+  rationale: GO:0043625 exactly identifies the delta DNA polymerase complex and primary
+    Saccharomyces evidence directly supports the Pol3, Pol31 and Pol32 subunits, but
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIEs were not
+    curated in this pass.
+  evidence:
+  - reference: GO:0043625
+    notes: GO:0043625 defines the Saccharomyces form of the complex as having three
+      different subunits.
+  - reference: PMID:9677406
+    notes: Burgers and Gerik reconstituted Pol delta from POL3, POL31 and POL32.
+  posed_by: codex
+  posed_date: '2026-09-27'
+- discussion_id: use_monomeric_pol_delta_assembly
+  prompt: Represent Saccharomyces cerevisiae DNA polymerase delta as a monomeric Pol3/Pol31/Pol32
+    heterotrimer rather than a dimer of heterotrimers.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - GO:0043625
+  rationale: The GO definition for GO:0043625 still says that the active Saccharomyces
+    enzyme is a dimer of heterotrimers. Johansson et al. revisited that earlier gel-filtration
+    model with gel filtration, glycerol-gradient sedimentation, analytical equilibrium
+    centrifugation, and two-hybrid analyses and concluded that the Pol3/Pol31/Pol32
+    assembly is monomeric.
+  evidence:
+  - reference: PMID:9677406
+    notes: Burgers and Gerik proposed a dimer of heterotrimers for Saccharomyces cerevisiae
+      Pol delta.
+  - reference: PMID:11568188
+    notes: Johansson et al. reassessed the quaternary structure and concluded Pol
+      delta is monomeric.
+  resolution_note: The record lists Pol3, Pol31 and Pol32 once and does not curate
+    a dimeric stoichiometry row.
+  posed_by: codex
+  posed_date: '2026-09-27'

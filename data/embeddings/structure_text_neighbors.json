@@ -11364,6 +11364,11 @@
           "cosine_similarity": 0.79483778
         },
         {
+          "identifier": "GO:0043625",
+          "label": "delta DNA polymerase complex",
+          "cosine_similarity": 0.79264471
+        },
+        {
           "identifier": "GO:0008622",
           "label": "epsilon DNA polymerase complex",
           "cosine_similarity": 0.78637151
@@ -11377,11 +11382,6 @@
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.74639209
-        },
-        {
-          "identifier": "GO:0042555",
-          "label": "MCM complex",
-          "cosine_similarity": 0.72703773
         }
       ]
     },
@@ -12533,6 +12533,37 @@
       ]
     },
     {
+      "identifier": "GO:0043625",
+      "label": "delta DNA polymerase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0008622",
+          "label": "epsilon DNA polymerase complex",
+          "cosine_similarity": 0.85941313
+        },
+        {
+          "identifier": "GO:0009360",
+          "label": "DNA polymerase III complex",
+          "cosine_similarity": 0.8044557
+        },
+        {
+          "identifier": "GO:0005658",
+          "label": "alpha DNA polymerase:primase complex",
+          "cosine_similarity": 0.79264471
+        },
+        {
+          "identifier": "GO:0005663",
+          "label": "DNA replication factor C complex",
+          "cosine_similarity": 0.79018547
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.7520985
+        }
+      ]
+    },
+    {
       "identifier": "GO:0120217",
       "label": "DNA gyrase complex",
       "neighbors": [
@@ -12568,6 +12599,11 @@
       "label": "DNA polymerase III complex",
       "neighbors": [
         {
+          "identifier": "GO:0043625",
+          "label": "delta DNA polymerase complex",
+          "cosine_similarity": 0.8044557
+        },
+        {
           "identifier": "GO:0005658",
           "label": "alpha DNA polymerase:primase complex",
           "cosine_similarity": 0.79483778
@@ -12586,11 +12622,6 @@
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.70803067
-        },
-        {
-          "identifier": "GO:0044777",
-          "label": "single-stranded DNA-binding protein complex",
-          "cosine_similarity": 0.69125267
         }
       ]
     },
@@ -12614,14 +12645,14 @@
           "cosine_similarity": 0.76615367
         },
         {
+          "identifier": "GO:0043625",
+          "label": "delta DNA polymerase complex",
+          "cosine_similarity": 0.73815525
+        },
+        {
           "identifier": "GO:0005664",
           "label": "nuclear origin of replication recognition complex",
           "cosine_similarity": 0.72648071
-        },
-        {
-          "identifier": "GO:0031431",
-          "label": "Dbf4-dependent protein kinase complex",
-          "cosine_similarity": 0.72378603
         }
       ]
     },
@@ -12650,9 +12681,9 @@
           "cosine_similarity": 0.80773936
         },
         {
-          "identifier": "GO:0005664",
-          "label": "nuclear origin of replication recognition complex",
-          "cosine_similarity": 0.78901522
+          "identifier": "GO:0043625",
+          "label": "delta DNA polymerase complex",
+          "cosine_similarity": 0.79018547
         }
       ]
     },
@@ -12909,6 +12940,11 @@
       "label": "epsilon DNA polymerase complex",
       "neighbors": [
         {
+          "identifier": "GO:0043625",
+          "label": "delta DNA polymerase complex",
+          "cosine_similarity": 0.85941313
+        },
+        {
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.83717252
@@ -12927,11 +12963,6 @@
           "identifier": "GO:0005658",
           "label": "alpha DNA polymerase:primase complex",
           "cosine_similarity": 0.78637151
-        },
-        {
-          "identifier": "GO:0031533",
-          "label": "mRNA capping enzyme complex",
-          "cosine_similarity": 0.77864252
         }
       ]
     },
